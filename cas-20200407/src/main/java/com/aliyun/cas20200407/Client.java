@@ -659,8 +659,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public VerifyResponse verifyWithOptions(VerifyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.identifier)) {
-            query.put("Identifier", request.identifier);
+        if (!com.aliyun.teautil.Common.isUnset(request.certIdentifier)) {
+            query.put("CertIdentifier", request.certIdentifier);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.message)) {
