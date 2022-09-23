@@ -141,215 +141,12 @@ public class QueryItemDetailResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public static class QueryItemDetailResponseBodyModelSkuModelsGradePriceModels extends TeaModel {
-        @NameInMap("AccessUrl")
-        public String accessUrl;
-
-        @NameInMap("CanBuy")
-        public Boolean canBuy;
-
-        @NameInMap("CharacteristicCode")
-        public String characteristicCode;
-
-        @NameInMap("CharacteristicName")
-        public String characteristicName;
-
-        @NameInMap("Exclusive")
-        public Boolean exclusive;
-
-        @NameInMap("Icon")
-        public String icon;
-
-        @NameInMap("PointPrice")
-        public Long pointPrice;
-
-        @NameInMap("Points")
-        public Long points;
-
-        @NameInMap("PointsAmount")
-        public Long pointsAmount;
-
-        @NameInMap("PriceCent")
-        public Long priceCent;
-
-        @NameInMap("Recommend")
-        public Boolean recommend;
-
-        @NameInMap("ShowName")
-        public String showName;
-
-        @NameInMap("SubBizCode")
-        public String subBizCode;
-
-        @NameInMap("UserLabelList")
-        public java.util.List<String> userLabelList;
-
-        public static QueryItemDetailResponseBodyModelSkuModelsGradePriceModels build(java.util.Map<String, ?> map) throws Exception {
-            QueryItemDetailResponseBodyModelSkuModelsGradePriceModels self = new QueryItemDetailResponseBodyModelSkuModelsGradePriceModels();
-            return TeaModel.build(map, self);
-        }
-
-        public QueryItemDetailResponseBodyModelSkuModelsGradePriceModels setAccessUrl(String accessUrl) {
-            this.accessUrl = accessUrl;
-            return this;
-        }
-        public String getAccessUrl() {
-            return this.accessUrl;
-        }
-
-        public QueryItemDetailResponseBodyModelSkuModelsGradePriceModels setCanBuy(Boolean canBuy) {
-            this.canBuy = canBuy;
-            return this;
-        }
-        public Boolean getCanBuy() {
-            return this.canBuy;
-        }
-
-        public QueryItemDetailResponseBodyModelSkuModelsGradePriceModels setCharacteristicCode(String characteristicCode) {
-            this.characteristicCode = characteristicCode;
-            return this;
-        }
-        public String getCharacteristicCode() {
-            return this.characteristicCode;
-        }
-
-        public QueryItemDetailResponseBodyModelSkuModelsGradePriceModels setCharacteristicName(String characteristicName) {
-            this.characteristicName = characteristicName;
-            return this;
-        }
-        public String getCharacteristicName() {
-            return this.characteristicName;
-        }
-
-        public QueryItemDetailResponseBodyModelSkuModelsGradePriceModels setExclusive(Boolean exclusive) {
-            this.exclusive = exclusive;
-            return this;
-        }
-        public Boolean getExclusive() {
-            return this.exclusive;
-        }
-
-        public QueryItemDetailResponseBodyModelSkuModelsGradePriceModels setIcon(String icon) {
-            this.icon = icon;
-            return this;
-        }
-        public String getIcon() {
-            return this.icon;
-        }
-
-        public QueryItemDetailResponseBodyModelSkuModelsGradePriceModels setPointPrice(Long pointPrice) {
-            this.pointPrice = pointPrice;
-            return this;
-        }
-        public Long getPointPrice() {
-            return this.pointPrice;
-        }
-
-        public QueryItemDetailResponseBodyModelSkuModelsGradePriceModels setPoints(Long points) {
-            this.points = points;
-            return this;
-        }
-        public Long getPoints() {
-            return this.points;
-        }
-
-        public QueryItemDetailResponseBodyModelSkuModelsGradePriceModels setPointsAmount(Long pointsAmount) {
-            this.pointsAmount = pointsAmount;
-            return this;
-        }
-        public Long getPointsAmount() {
-            return this.pointsAmount;
-        }
-
-        public QueryItemDetailResponseBodyModelSkuModelsGradePriceModels setPriceCent(Long priceCent) {
-            this.priceCent = priceCent;
-            return this;
-        }
-        public Long getPriceCent() {
-            return this.priceCent;
-        }
-
-        public QueryItemDetailResponseBodyModelSkuModelsGradePriceModels setRecommend(Boolean recommend) {
-            this.recommend = recommend;
-            return this;
-        }
-        public Boolean getRecommend() {
-            return this.recommend;
-        }
-
-        public QueryItemDetailResponseBodyModelSkuModelsGradePriceModels setShowName(String showName) {
-            this.showName = showName;
-            return this;
-        }
-        public String getShowName() {
-            return this.showName;
-        }
-
-        public QueryItemDetailResponseBodyModelSkuModelsGradePriceModels setSubBizCode(String subBizCode) {
-            this.subBizCode = subBizCode;
-            return this;
-        }
-        public String getSubBizCode() {
-            return this.subBizCode;
-        }
-
-        public QueryItemDetailResponseBodyModelSkuModelsGradePriceModels setUserLabelList(java.util.List<String> userLabelList) {
-            this.userLabelList = userLabelList;
-            return this;
-        }
-        public java.util.List<String> getUserLabelList() {
-            return this.userLabelList;
-        }
-
-    }
-
-    public static class QueryItemDetailResponseBodyModelSkuModelsLmItemSkuStepPriceModels extends TeaModel {
-        @NameInMap("Max")
-        public Integer max;
-
-        @NameInMap("Min")
-        public Integer min;
-
-        @NameInMap("PriceCent")
-        public Long priceCent;
-
-        public static QueryItemDetailResponseBodyModelSkuModelsLmItemSkuStepPriceModels build(java.util.Map<String, ?> map) throws Exception {
-            QueryItemDetailResponseBodyModelSkuModelsLmItemSkuStepPriceModels self = new QueryItemDetailResponseBodyModelSkuModelsLmItemSkuStepPriceModels();
-            return TeaModel.build(map, self);
-        }
-
-        public QueryItemDetailResponseBodyModelSkuModelsLmItemSkuStepPriceModels setMax(Integer max) {
-            this.max = max;
-            return this;
-        }
-        public Integer getMax() {
-            return this.max;
-        }
-
-        public QueryItemDetailResponseBodyModelSkuModelsLmItemSkuStepPriceModels setMin(Integer min) {
-            this.min = min;
-            return this;
-        }
-        public Integer getMin() {
-            return this.min;
-        }
-
-        public QueryItemDetailResponseBodyModelSkuModelsLmItemSkuStepPriceModels setPriceCent(Long priceCent) {
-            this.priceCent = priceCent;
-            return this;
-        }
-        public Long getPriceCent() {
-            return this.priceCent;
-        }
-
-    }
-
     public static class QueryItemDetailResponseBodyModelSkuModels extends TeaModel {
         @NameInMap("CanNotBeSoldCode")
         public String canNotBeSoldCode;
 
-        @NameInMap("CanNotBeSoldMassage")
-        public String canNotBeSoldMassage;
+        @NameInMap("CanNotBeSoldMessage")
+        public String canNotBeSoldMessage;
 
         @NameInMap("CustomizedAttributeMap")
         public java.util.Map<String, String> customizedAttributeMap;
@@ -359,9 +156,6 @@ public class QueryItemDetailResponseBody extends TeaModel {
 
         @NameInMap("ExtJson")
         public String extJson;
-
-        @NameInMap("GradePriceModels")
-        public java.util.List<QueryItemDetailResponseBodyModelSkuModelsGradePriceModels> gradePriceModels;
 
         @NameInMap("HasQuantity")
         public Boolean hasQuantity;
@@ -375,9 +169,6 @@ public class QueryItemDetailResponseBody extends TeaModel {
         @NameInMap("LmItemId")
         public String lmItemId;
 
-        @NameInMap("LmItemSkuStepPriceModels")
-        public java.util.List<QueryItemDetailResponseBodyModelSkuModelsLmItemSkuStepPriceModels> lmItemSkuStepPriceModels;
-
         @NameInMap("LmSkuAttributeMap")
         public java.util.Map<String, String> lmSkuAttributeMap;
 
@@ -387,14 +178,11 @@ public class QueryItemDetailResponseBody extends TeaModel {
         @NameInMap("Quantity")
         public Integer quantity;
 
-        @NameInMap("ReservePrice")
-        public Long reservePrice;
+        @NameInMap("ReservedPrice")
+        public Long reservedPrice;
 
         @NameInMap("SimpleQuantity")
         public String simpleQuantity;
-
-        @NameInMap("SkuDesc")
-        public String skuDesc;
 
         @NameInMap("SkuId")
         public Long skuId;
@@ -411,9 +199,6 @@ public class QueryItemDetailResponseBody extends TeaModel {
         @NameInMap("Status")
         public Integer status;
 
-        @NameInMap("SupplierPrice")
-        public Long supplierPrice;
-
         public static QueryItemDetailResponseBodyModelSkuModels build(java.util.Map<String, ?> map) throws Exception {
             QueryItemDetailResponseBodyModelSkuModels self = new QueryItemDetailResponseBodyModelSkuModels();
             return TeaModel.build(map, self);
@@ -427,12 +212,12 @@ public class QueryItemDetailResponseBody extends TeaModel {
             return this.canNotBeSoldCode;
         }
 
-        public QueryItemDetailResponseBodyModelSkuModels setCanNotBeSoldMassage(String canNotBeSoldMassage) {
-            this.canNotBeSoldMassage = canNotBeSoldMassage;
+        public QueryItemDetailResponseBodyModelSkuModels setCanNotBeSoldMessage(String canNotBeSoldMessage) {
+            this.canNotBeSoldMessage = canNotBeSoldMessage;
             return this;
         }
-        public String getCanNotBeSoldMassage() {
-            return this.canNotBeSoldMassage;
+        public String getCanNotBeSoldMessage() {
+            return this.canNotBeSoldMessage;
         }
 
         public QueryItemDetailResponseBodyModelSkuModels setCustomizedAttributeMap(java.util.Map<String, String> customizedAttributeMap) {
@@ -457,14 +242,6 @@ public class QueryItemDetailResponseBody extends TeaModel {
         }
         public String getExtJson() {
             return this.extJson;
-        }
-
-        public QueryItemDetailResponseBodyModelSkuModels setGradePriceModels(java.util.List<QueryItemDetailResponseBodyModelSkuModelsGradePriceModels> gradePriceModels) {
-            this.gradePriceModels = gradePriceModels;
-            return this;
-        }
-        public java.util.List<QueryItemDetailResponseBodyModelSkuModelsGradePriceModels> getGradePriceModels() {
-            return this.gradePriceModels;
         }
 
         public QueryItemDetailResponseBodyModelSkuModels setHasQuantity(Boolean hasQuantity) {
@@ -499,14 +276,6 @@ public class QueryItemDetailResponseBody extends TeaModel {
             return this.lmItemId;
         }
 
-        public QueryItemDetailResponseBodyModelSkuModels setLmItemSkuStepPriceModels(java.util.List<QueryItemDetailResponseBodyModelSkuModelsLmItemSkuStepPriceModels> lmItemSkuStepPriceModels) {
-            this.lmItemSkuStepPriceModels = lmItemSkuStepPriceModels;
-            return this;
-        }
-        public java.util.List<QueryItemDetailResponseBodyModelSkuModelsLmItemSkuStepPriceModels> getLmItemSkuStepPriceModels() {
-            return this.lmItemSkuStepPriceModels;
-        }
-
         public QueryItemDetailResponseBodyModelSkuModels setLmSkuAttributeMap(java.util.Map<String, String> lmSkuAttributeMap) {
             this.lmSkuAttributeMap = lmSkuAttributeMap;
             return this;
@@ -531,12 +300,12 @@ public class QueryItemDetailResponseBody extends TeaModel {
             return this.quantity;
         }
 
-        public QueryItemDetailResponseBodyModelSkuModels setReservePrice(Long reservePrice) {
-            this.reservePrice = reservePrice;
+        public QueryItemDetailResponseBodyModelSkuModels setReservedPrice(Long reservedPrice) {
+            this.reservedPrice = reservedPrice;
             return this;
         }
-        public Long getReservePrice() {
-            return this.reservePrice;
+        public Long getReservedPrice() {
+            return this.reservedPrice;
         }
 
         public QueryItemDetailResponseBodyModelSkuModels setSimpleQuantity(String simpleQuantity) {
@@ -545,14 +314,6 @@ public class QueryItemDetailResponseBody extends TeaModel {
         }
         public String getSimpleQuantity() {
             return this.simpleQuantity;
-        }
-
-        public QueryItemDetailResponseBodyModelSkuModels setSkuDesc(String skuDesc) {
-            this.skuDesc = skuDesc;
-            return this;
-        }
-        public String getSkuDesc() {
-            return this.skuDesc;
         }
 
         public QueryItemDetailResponseBodyModelSkuModels setSkuId(Long skuId) {
@@ -593,14 +354,6 @@ public class QueryItemDetailResponseBody extends TeaModel {
         }
         public Integer getStatus() {
             return this.status;
-        }
-
-        public QueryItemDetailResponseBodyModelSkuModels setSupplierPrice(Long supplierPrice) {
-            this.supplierPrice = supplierPrice;
-            return this;
-        }
-        public Long getSupplierPrice() {
-            return this.supplierPrice;
         }
 
     }
@@ -677,23 +430,17 @@ public class QueryItemDetailResponseBody extends TeaModel {
     }
 
     public static class QueryItemDetailResponseBodyModel extends TeaModel {
-        @NameInMap("AuctionStatus")
-        public Integer auctionStatus;
-
         @NameInMap("CanNotBeSoldCode")
         public String canNotBeSoldCode;
 
-        @NameInMap("CanNotBeSoldMassage")
-        public String canNotBeSoldMassage;
+        @NameInMap("CanNotBeSoldMessage")
+        public String canNotBeSoldMessage;
 
         @NameInMap("CategoryId")
         public Long categoryId;
 
         @NameInMap("CategoryIds")
         public java.util.List<Long> categoryIds;
-
-        @NameInMap("CenterInventory")
-        public Boolean centerInventory;
 
         @NameInMap("City")
         public String city;
@@ -719,9 +466,6 @@ public class QueryItemDetailResponseBody extends TeaModel {
         @NameInMap("FirstPicUrl")
         public String firstPicUrl;
 
-        @NameInMap("GmtModified")
-        public String gmtModified;
-
         @NameInMap("HasQuantity")
         public Boolean hasQuantity;
 
@@ -737,20 +481,11 @@ public class QueryItemDetailResponseBody extends TeaModel {
         @NameInMap("IsSellerPayPostfee")
         public Boolean isSellerPayPostfee;
 
-        @NameInMap("ItemDesc")
-        public String itemDesc;
-
-        @NameInMap("ItemExtendedPropModelMap")
-        public java.util.Map<String, ModelItemExtendedPropModelMapValue> itemExtendedPropModelMap;
-
         @NameInMap("ItemId")
         public Long itemId;
 
         @NameInMap("ItemImages")
         public java.util.List<String> itemImages;
-
-        @NameInMap("ItemName")
-        public String itemName;
 
         @NameInMap("ItemTitle")
         public String itemTitle;
@@ -770,17 +505,8 @@ public class QueryItemDetailResponseBody extends TeaModel {
         @NameInMap("LmItemId")
         public String lmItemId;
 
-        @NameInMap("LmShopId")
-        public Long lmShopId;
-
         @NameInMap("MainPicUrl")
         public String mainPicUrl;
-
-        @NameInMap("Message")
-        public String message;
-
-        @NameInMap("MinPoints")
-        public Long minPoints;
 
         @NameInMap("MinPrice")
         public Long minPrice;
@@ -794,11 +520,8 @@ public class QueryItemDetailResponseBody extends TeaModel {
         @NameInMap("Quantity")
         public Integer quantity;
 
-        @NameInMap("ReservePrice")
-        public Long reservePrice;
-
-        @NameInMap("SecuredTransactions")
-        public Integer securedTransactions;
+        @NameInMap("ReservedPrice")
+        public Long reservedPrice;
 
         @NameInMap("SimpleQuantity")
         public String simpleQuantity;
@@ -815,12 +538,6 @@ public class QueryItemDetailResponseBody extends TeaModel {
         @NameInMap("ThirdPartyName")
         public String thirdPartyName;
 
-        @NameInMap("Type")
-        public Integer type;
-
-        @NameInMap("UserType")
-        public Integer userType;
-
         @NameInMap("VideoPicUrl")
         public String videoPicUrl;
 
@@ -835,14 +552,6 @@ public class QueryItemDetailResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public QueryItemDetailResponseBodyModel setAuctionStatus(Integer auctionStatus) {
-            this.auctionStatus = auctionStatus;
-            return this;
-        }
-        public Integer getAuctionStatus() {
-            return this.auctionStatus;
-        }
-
         public QueryItemDetailResponseBodyModel setCanNotBeSoldCode(String canNotBeSoldCode) {
             this.canNotBeSoldCode = canNotBeSoldCode;
             return this;
@@ -851,12 +560,12 @@ public class QueryItemDetailResponseBody extends TeaModel {
             return this.canNotBeSoldCode;
         }
 
-        public QueryItemDetailResponseBodyModel setCanNotBeSoldMassage(String canNotBeSoldMassage) {
-            this.canNotBeSoldMassage = canNotBeSoldMassage;
+        public QueryItemDetailResponseBodyModel setCanNotBeSoldMessage(String canNotBeSoldMessage) {
+            this.canNotBeSoldMessage = canNotBeSoldMessage;
             return this;
         }
-        public String getCanNotBeSoldMassage() {
-            return this.canNotBeSoldMassage;
+        public String getCanNotBeSoldMessage() {
+            return this.canNotBeSoldMessage;
         }
 
         public QueryItemDetailResponseBodyModel setCategoryId(Long categoryId) {
@@ -873,14 +582,6 @@ public class QueryItemDetailResponseBody extends TeaModel {
         }
         public java.util.List<Long> getCategoryIds() {
             return this.categoryIds;
-        }
-
-        public QueryItemDetailResponseBodyModel setCenterInventory(Boolean centerInventory) {
-            this.centerInventory = centerInventory;
-            return this;
-        }
-        public Boolean getCenterInventory() {
-            return this.centerInventory;
         }
 
         public QueryItemDetailResponseBodyModel setCity(String city) {
@@ -947,14 +648,6 @@ public class QueryItemDetailResponseBody extends TeaModel {
             return this.firstPicUrl;
         }
 
-        public QueryItemDetailResponseBodyModel setGmtModified(String gmtModified) {
-            this.gmtModified = gmtModified;
-            return this;
-        }
-        public String getGmtModified() {
-            return this.gmtModified;
-        }
-
         public QueryItemDetailResponseBodyModel setHasQuantity(Boolean hasQuantity) {
             this.hasQuantity = hasQuantity;
             return this;
@@ -995,22 +688,6 @@ public class QueryItemDetailResponseBody extends TeaModel {
             return this.isSellerPayPostfee;
         }
 
-        public QueryItemDetailResponseBodyModel setItemDesc(String itemDesc) {
-            this.itemDesc = itemDesc;
-            return this;
-        }
-        public String getItemDesc() {
-            return this.itemDesc;
-        }
-
-        public QueryItemDetailResponseBodyModel setItemExtendedPropModelMap(java.util.Map<String, ModelItemExtendedPropModelMapValue> itemExtendedPropModelMap) {
-            this.itemExtendedPropModelMap = itemExtendedPropModelMap;
-            return this;
-        }
-        public java.util.Map<String, ModelItemExtendedPropModelMapValue> getItemExtendedPropModelMap() {
-            return this.itemExtendedPropModelMap;
-        }
-
         public QueryItemDetailResponseBodyModel setItemId(Long itemId) {
             this.itemId = itemId;
             return this;
@@ -1025,14 +702,6 @@ public class QueryItemDetailResponseBody extends TeaModel {
         }
         public java.util.List<String> getItemImages() {
             return this.itemImages;
-        }
-
-        public QueryItemDetailResponseBodyModel setItemName(String itemName) {
-            this.itemName = itemName;
-            return this;
-        }
-        public String getItemName() {
-            return this.itemName;
         }
 
         public QueryItemDetailResponseBodyModel setItemTitle(String itemTitle) {
@@ -1083,36 +752,12 @@ public class QueryItemDetailResponseBody extends TeaModel {
             return this.lmItemId;
         }
 
-        public QueryItemDetailResponseBodyModel setLmShopId(Long lmShopId) {
-            this.lmShopId = lmShopId;
-            return this;
-        }
-        public Long getLmShopId() {
-            return this.lmShopId;
-        }
-
         public QueryItemDetailResponseBodyModel setMainPicUrl(String mainPicUrl) {
             this.mainPicUrl = mainPicUrl;
             return this;
         }
         public String getMainPicUrl() {
             return this.mainPicUrl;
-        }
-
-        public QueryItemDetailResponseBodyModel setMessage(String message) {
-            this.message = message;
-            return this;
-        }
-        public String getMessage() {
-            return this.message;
-        }
-
-        public QueryItemDetailResponseBodyModel setMinPoints(Long minPoints) {
-            this.minPoints = minPoints;
-            return this;
-        }
-        public Long getMinPoints() {
-            return this.minPoints;
         }
 
         public QueryItemDetailResponseBodyModel setMinPrice(Long minPrice) {
@@ -1147,20 +792,12 @@ public class QueryItemDetailResponseBody extends TeaModel {
             return this.quantity;
         }
 
-        public QueryItemDetailResponseBodyModel setReservePrice(Long reservePrice) {
-            this.reservePrice = reservePrice;
+        public QueryItemDetailResponseBodyModel setReservedPrice(Long reservedPrice) {
+            this.reservedPrice = reservedPrice;
             return this;
         }
-        public Long getReservePrice() {
-            return this.reservePrice;
-        }
-
-        public QueryItemDetailResponseBodyModel setSecuredTransactions(Integer securedTransactions) {
-            this.securedTransactions = securedTransactions;
-            return this;
-        }
-        public Integer getSecuredTransactions() {
-            return this.securedTransactions;
+        public Long getReservedPrice() {
+            return this.reservedPrice;
         }
 
         public QueryItemDetailResponseBodyModel setSimpleQuantity(String simpleQuantity) {
@@ -1201,22 +838,6 @@ public class QueryItemDetailResponseBody extends TeaModel {
         }
         public String getThirdPartyName() {
             return this.thirdPartyName;
-        }
-
-        public QueryItemDetailResponseBodyModel setType(Integer type) {
-            this.type = type;
-            return this;
-        }
-        public Integer getType() {
-            return this.type;
-        }
-
-        public QueryItemDetailResponseBodyModel setUserType(Integer userType) {
-            this.userType = userType;
-            return this;
-        }
-        public Integer getUserType() {
-            return this.userType;
         }
 
         public QueryItemDetailResponseBodyModel setVideoPicUrl(String videoPicUrl) {
