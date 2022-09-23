@@ -193,102 +193,6 @@ public class ListDistributionItemResponseBody extends TeaModel {
 
     }
 
-    public static class ListDistributionItemResponseBodyModelLmAttributeModels extends TeaModel {
-        @NameInMap("AttrId")
-        public Long attrId;
-
-        @NameInMap("Category")
-        public Integer category;
-
-        @NameInMap("DataType")
-        public String dataType;
-
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("Restriction")
-        public String restriction;
-
-        @NameInMap("ScopeList")
-        public java.util.List<String> scopeList;
-
-        @NameInMap("Value")
-        public String value;
-
-        public static ListDistributionItemResponseBodyModelLmAttributeModels build(java.util.Map<String, ?> map) throws Exception {
-            ListDistributionItemResponseBodyModelLmAttributeModels self = new ListDistributionItemResponseBodyModelLmAttributeModels();
-            return TeaModel.build(map, self);
-        }
-
-        public ListDistributionItemResponseBodyModelLmAttributeModels setAttrId(Long attrId) {
-            this.attrId = attrId;
-            return this;
-        }
-        public Long getAttrId() {
-            return this.attrId;
-        }
-
-        public ListDistributionItemResponseBodyModelLmAttributeModels setCategory(Integer category) {
-            this.category = category;
-            return this;
-        }
-        public Integer getCategory() {
-            return this.category;
-        }
-
-        public ListDistributionItemResponseBodyModelLmAttributeModels setDataType(String dataType) {
-            this.dataType = dataType;
-            return this;
-        }
-        public String getDataType() {
-            return this.dataType;
-        }
-
-        public ListDistributionItemResponseBodyModelLmAttributeModels setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public ListDistributionItemResponseBodyModelLmAttributeModels setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public ListDistributionItemResponseBodyModelLmAttributeModels setRestriction(String restriction) {
-            this.restriction = restriction;
-            return this;
-        }
-        public String getRestriction() {
-            return this.restriction;
-        }
-
-        public ListDistributionItemResponseBodyModelLmAttributeModels setScopeList(java.util.List<String> scopeList) {
-            this.scopeList = scopeList;
-            return this;
-        }
-        public java.util.List<String> getScopeList() {
-            return this.scopeList;
-        }
-
-        public ListDistributionItemResponseBodyModelLmAttributeModels setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
-    }
-
     public static class ListDistributionItemResponseBodyModelSkuListLmAttributeModels extends TeaModel {
         @NameInMap("AttrId")
         public Long attrId;
@@ -385,71 +289,12 @@ public class ListDistributionItemResponseBody extends TeaModel {
 
     }
 
-    public static class ListDistributionItemResponseBodyModelSkuListStepPrices extends TeaModel {
-        @NameInMap("Max")
-        public Integer max;
-
-        @NameInMap("Min")
-        public Integer min;
-
-        @NameInMap("PriceCent")
-        public Long priceCent;
-
-        public static ListDistributionItemResponseBodyModelSkuListStepPrices build(java.util.Map<String, ?> map) throws Exception {
-            ListDistributionItemResponseBodyModelSkuListStepPrices self = new ListDistributionItemResponseBodyModelSkuListStepPrices();
-            return TeaModel.build(map, self);
-        }
-
-        public ListDistributionItemResponseBodyModelSkuListStepPrices setMax(Integer max) {
-            this.max = max;
-            return this;
-        }
-        public Integer getMax() {
-            return this.max;
-        }
-
-        public ListDistributionItemResponseBodyModelSkuListStepPrices setMin(Integer min) {
-            this.min = min;
-            return this;
-        }
-        public Integer getMin() {
-            return this.min;
-        }
-
-        public ListDistributionItemResponseBodyModelSkuListStepPrices setPriceCent(Long priceCent) {
-            this.priceCent = priceCent;
-            return this;
-        }
-        public Long getPriceCent() {
-            return this.priceCent;
-        }
-
-    }
-
     public static class ListDistributionItemResponseBodyModelSkuList extends TeaModel {
-        @NameInMap("AdminStatus")
-        public Integer adminStatus;
-
-        @NameInMap("AliyunPriceCent")
-        public Long aliyunPriceCent;
-
-        @NameInMap("BenefitId")
-        public String benefitId;
-
         @NameInMap("CanSell")
         public Boolean canSell;
 
-        @NameInMap("CustomerStatus")
-        public Integer customerStatus;
-
         @NameInMap("CustomizedAttributeMap")
         public java.util.Map<String, String> customizedAttributeMap;
-
-        @NameInMap("DiscountRate")
-        public Double discountRate;
-
-        @NameInMap("DisparityPrice")
-        public Long disparityPrice;
 
         @NameInMap("ExtInfo")
         public String extInfo;
@@ -457,8 +302,8 @@ public class ListDistributionItemResponseBody extends TeaModel {
         @NameInMap("GmtModified")
         public String gmtModified;
 
-        @NameInMap("IcStatus")
-        public Integer icStatus;
+        @NameInMap("HasQuantity")
+        public Boolean hasQuantity;
 
         @NameInMap("ItemId")
         public Long itemId;
@@ -469,41 +314,17 @@ public class ListDistributionItemResponseBody extends TeaModel {
         @NameInMap("LmItemId")
         public String lmItemId;
 
-        @NameInMap("MainPriceCent")
-        public Long mainPriceCent;
-
-        @NameInMap("MaxAllowedCount")
-        public Integer maxAllowedCount;
-
-        @NameInMap("OriginalPriceCent")
-        public Long originalPriceCent;
-
-        @NameInMap("PointPrice")
-        public Long pointPrice;
-
-        @NameInMap("Points")
-        public Long points;
-
-        @NameInMap("PointsAmount")
-        public Long pointsAmount;
-
-        @NameInMap("PointsInfo")
-        public String pointsInfo;
-
-        @NameInMap("PointsKey")
-        public String pointsKey;
-
-        @NameInMap("PremiumRate")
-        public Double premiumRate;
-
         @NameInMap("PriceCent")
         public Long priceCent;
 
         @NameInMap("Quantity")
         public Long quantity;
 
-        @NameInMap("ReservePrice")
-        public Long reservePrice;
+        @NameInMap("ReservedPrice")
+        public Long reservedPrice;
+
+        @NameInMap("SimpleQuantity")
+        public String simpleQuantity;
 
         @NameInMap("SkuDesc")
         public String skuDesc;
@@ -526,51 +347,12 @@ public class ListDistributionItemResponseBody extends TeaModel {
         @NameInMap("Status")
         public Integer status;
 
-        @NameInMap("StepPrices")
-        public java.util.List<ListDistributionItemResponseBodyModelSkuListStepPrices> stepPrices;
-
-        @NameInMap("SupplierStatus")
-        public Integer supplierStatus;
-
-        @NameInMap("SupplyPriceCent")
-        public Long supplyPriceCent;
-
-        @NameInMap("TaoBaoCurrentPrice")
-        public Long taoBaoCurrentPrice;
-
         @NameInMap("Tips")
         public String tips;
-
-        @NameInMap("UserLabel")
-        public java.util.List<String> userLabel;
 
         public static ListDistributionItemResponseBodyModelSkuList build(java.util.Map<String, ?> map) throws Exception {
             ListDistributionItemResponseBodyModelSkuList self = new ListDistributionItemResponseBodyModelSkuList();
             return TeaModel.build(map, self);
-        }
-
-        public ListDistributionItemResponseBodyModelSkuList setAdminStatus(Integer adminStatus) {
-            this.adminStatus = adminStatus;
-            return this;
-        }
-        public Integer getAdminStatus() {
-            return this.adminStatus;
-        }
-
-        public ListDistributionItemResponseBodyModelSkuList setAliyunPriceCent(Long aliyunPriceCent) {
-            this.aliyunPriceCent = aliyunPriceCent;
-            return this;
-        }
-        public Long getAliyunPriceCent() {
-            return this.aliyunPriceCent;
-        }
-
-        public ListDistributionItemResponseBodyModelSkuList setBenefitId(String benefitId) {
-            this.benefitId = benefitId;
-            return this;
-        }
-        public String getBenefitId() {
-            return this.benefitId;
         }
 
         public ListDistributionItemResponseBodyModelSkuList setCanSell(Boolean canSell) {
@@ -581,36 +363,12 @@ public class ListDistributionItemResponseBody extends TeaModel {
             return this.canSell;
         }
 
-        public ListDistributionItemResponseBodyModelSkuList setCustomerStatus(Integer customerStatus) {
-            this.customerStatus = customerStatus;
-            return this;
-        }
-        public Integer getCustomerStatus() {
-            return this.customerStatus;
-        }
-
         public ListDistributionItemResponseBodyModelSkuList setCustomizedAttributeMap(java.util.Map<String, String> customizedAttributeMap) {
             this.customizedAttributeMap = customizedAttributeMap;
             return this;
         }
         public java.util.Map<String, String> getCustomizedAttributeMap() {
             return this.customizedAttributeMap;
-        }
-
-        public ListDistributionItemResponseBodyModelSkuList setDiscountRate(Double discountRate) {
-            this.discountRate = discountRate;
-            return this;
-        }
-        public Double getDiscountRate() {
-            return this.discountRate;
-        }
-
-        public ListDistributionItemResponseBodyModelSkuList setDisparityPrice(Long disparityPrice) {
-            this.disparityPrice = disparityPrice;
-            return this;
-        }
-        public Long getDisparityPrice() {
-            return this.disparityPrice;
         }
 
         public ListDistributionItemResponseBodyModelSkuList setExtInfo(String extInfo) {
@@ -629,12 +387,12 @@ public class ListDistributionItemResponseBody extends TeaModel {
             return this.gmtModified;
         }
 
-        public ListDistributionItemResponseBodyModelSkuList setIcStatus(Integer icStatus) {
-            this.icStatus = icStatus;
+        public ListDistributionItemResponseBodyModelSkuList setHasQuantity(Boolean hasQuantity) {
+            this.hasQuantity = hasQuantity;
             return this;
         }
-        public Integer getIcStatus() {
-            return this.icStatus;
+        public Boolean getHasQuantity() {
+            return this.hasQuantity;
         }
 
         public ListDistributionItemResponseBodyModelSkuList setItemId(Long itemId) {
@@ -661,78 +419,6 @@ public class ListDistributionItemResponseBody extends TeaModel {
             return this.lmItemId;
         }
 
-        public ListDistributionItemResponseBodyModelSkuList setMainPriceCent(Long mainPriceCent) {
-            this.mainPriceCent = mainPriceCent;
-            return this;
-        }
-        public Long getMainPriceCent() {
-            return this.mainPriceCent;
-        }
-
-        public ListDistributionItemResponseBodyModelSkuList setMaxAllowedCount(Integer maxAllowedCount) {
-            this.maxAllowedCount = maxAllowedCount;
-            return this;
-        }
-        public Integer getMaxAllowedCount() {
-            return this.maxAllowedCount;
-        }
-
-        public ListDistributionItemResponseBodyModelSkuList setOriginalPriceCent(Long originalPriceCent) {
-            this.originalPriceCent = originalPriceCent;
-            return this;
-        }
-        public Long getOriginalPriceCent() {
-            return this.originalPriceCent;
-        }
-
-        public ListDistributionItemResponseBodyModelSkuList setPointPrice(Long pointPrice) {
-            this.pointPrice = pointPrice;
-            return this;
-        }
-        public Long getPointPrice() {
-            return this.pointPrice;
-        }
-
-        public ListDistributionItemResponseBodyModelSkuList setPoints(Long points) {
-            this.points = points;
-            return this;
-        }
-        public Long getPoints() {
-            return this.points;
-        }
-
-        public ListDistributionItemResponseBodyModelSkuList setPointsAmount(Long pointsAmount) {
-            this.pointsAmount = pointsAmount;
-            return this;
-        }
-        public Long getPointsAmount() {
-            return this.pointsAmount;
-        }
-
-        public ListDistributionItemResponseBodyModelSkuList setPointsInfo(String pointsInfo) {
-            this.pointsInfo = pointsInfo;
-            return this;
-        }
-        public String getPointsInfo() {
-            return this.pointsInfo;
-        }
-
-        public ListDistributionItemResponseBodyModelSkuList setPointsKey(String pointsKey) {
-            this.pointsKey = pointsKey;
-            return this;
-        }
-        public String getPointsKey() {
-            return this.pointsKey;
-        }
-
-        public ListDistributionItemResponseBodyModelSkuList setPremiumRate(Double premiumRate) {
-            this.premiumRate = premiumRate;
-            return this;
-        }
-        public Double getPremiumRate() {
-            return this.premiumRate;
-        }
-
         public ListDistributionItemResponseBodyModelSkuList setPriceCent(Long priceCent) {
             this.priceCent = priceCent;
             return this;
@@ -749,12 +435,20 @@ public class ListDistributionItemResponseBody extends TeaModel {
             return this.quantity;
         }
 
-        public ListDistributionItemResponseBodyModelSkuList setReservePrice(Long reservePrice) {
-            this.reservePrice = reservePrice;
+        public ListDistributionItemResponseBodyModelSkuList setReservedPrice(Long reservedPrice) {
+            this.reservedPrice = reservedPrice;
             return this;
         }
-        public Long getReservePrice() {
-            return this.reservePrice;
+        public Long getReservedPrice() {
+            return this.reservedPrice;
+        }
+
+        public ListDistributionItemResponseBodyModelSkuList setSimpleQuantity(String simpleQuantity) {
+            this.simpleQuantity = simpleQuantity;
+            return this;
+        }
+        public String getSimpleQuantity() {
+            return this.simpleQuantity;
         }
 
         public ListDistributionItemResponseBodyModelSkuList setSkuDesc(String skuDesc) {
@@ -813,38 +507,6 @@ public class ListDistributionItemResponseBody extends TeaModel {
             return this.status;
         }
 
-        public ListDistributionItemResponseBodyModelSkuList setStepPrices(java.util.List<ListDistributionItemResponseBodyModelSkuListStepPrices> stepPrices) {
-            this.stepPrices = stepPrices;
-            return this;
-        }
-        public java.util.List<ListDistributionItemResponseBodyModelSkuListStepPrices> getStepPrices() {
-            return this.stepPrices;
-        }
-
-        public ListDistributionItemResponseBodyModelSkuList setSupplierStatus(Integer supplierStatus) {
-            this.supplierStatus = supplierStatus;
-            return this;
-        }
-        public Integer getSupplierStatus() {
-            return this.supplierStatus;
-        }
-
-        public ListDistributionItemResponseBodyModelSkuList setSupplyPriceCent(Long supplyPriceCent) {
-            this.supplyPriceCent = supplyPriceCent;
-            return this;
-        }
-        public Long getSupplyPriceCent() {
-            return this.supplyPriceCent;
-        }
-
-        public ListDistributionItemResponseBodyModelSkuList setTaoBaoCurrentPrice(Long taoBaoCurrentPrice) {
-            this.taoBaoCurrentPrice = taoBaoCurrentPrice;
-            return this;
-        }
-        public Long getTaoBaoCurrentPrice() {
-            return this.taoBaoCurrentPrice;
-        }
-
         public ListDistributionItemResponseBodyModelSkuList setTips(String tips) {
             this.tips = tips;
             return this;
@@ -853,26 +515,9 @@ public class ListDistributionItemResponseBody extends TeaModel {
             return this.tips;
         }
 
-        public ListDistributionItemResponseBodyModelSkuList setUserLabel(java.util.List<String> userLabel) {
-            this.userLabel = userLabel;
-            return this;
-        }
-        public java.util.List<String> getUserLabel() {
-            return this.userLabel;
-        }
-
     }
 
     public static class ListDistributionItemResponseBodyModel extends TeaModel {
-        @NameInMap("AuctionStatus")
-        public Integer auctionStatus;
-
-        @NameInMap("BizId")
-        public String bizId;
-
-        @NameInMap("BizTotalSaleNum")
-        public Long bizTotalSaleNum;
-
         @NameInMap("Category")
         public String category;
 
@@ -882,17 +527,8 @@ public class ListDistributionItemResponseBody extends TeaModel {
         @NameInMap("CategoryId")
         public Long categoryId;
 
-        @NameInMap("CumulativeSaleNum")
-        public Long cumulativeSaleNum;
-
         @NameInMap("DescOption")
         public String descOption;
-
-        @NameInMap("DiscountRateScope")
-        public String discountRateScope;
-
-        @NameInMap("DisparityPriceScope")
-        public String disparityPriceScope;
 
         @NameInMap("DistributionMallId")
         public String distributionMallId;
@@ -903,14 +539,11 @@ public class ListDistributionItemResponseBody extends TeaModel {
         @NameInMap("GmtModified")
         public String gmtModified;
 
-        @NameInMap("IcQuantity")
-        public Long icQuantity;
+        @NameInMap("HasQuantity")
+        public Boolean hasQuantity;
 
         @NameInMap("IsCanSell")
         public Boolean isCanSell;
-
-        @NameInMap("IsInventoryZero")
-        public Boolean isInventoryZero;
 
         @NameInMap("ItemDesc")
         public String itemDesc;
@@ -930,41 +563,14 @@ public class ListDistributionItemResponseBody extends TeaModel {
         @NameInMap("ItemTitle")
         public String itemTitle;
 
-        @NameInMap("LinkRatio")
-        public String linkRatio;
-
-        @NameInMap("LmAttributeModels")
-        public java.util.List<ListDistributionItemResponseBodyModelLmAttributeModels> lmAttributeModels;
-
         @NameInMap("LmItemId")
         public String lmItemId;
-
-        @NameInMap("LmShopId")
-        public Long lmShopId;
-
-        @NameInMap("MainBizStatus")
-        public Integer mainBizStatus;
-
-        @NameInMap("MainBizTotalSaleNum")
-        public Long mainBizTotalSaleNum;
 
         @NameInMap("MainPicUrl")
         public String mainPicUrl;
 
-        @NameInMap("MainPriceCentScope")
-        public String mainPriceCentScope;
-
-        @NameInMap("MaxAllowedCount")
-        public Integer maxAllowedCount;
-
-        @NameInMap("MonthSaleNum")
-        public Long monthSaleNum;
-
         @NameInMap("PicUrl")
         public String picUrl;
-
-        @NameInMap("PremiumRateScope")
-        public String premiumRateScope;
 
         @NameInMap("PriceCentScope")
         public String priceCentScope;
@@ -981,14 +587,11 @@ public class ListDistributionItemResponseBody extends TeaModel {
         @NameInMap("ReservedPriceScope")
         public String reservedPriceScope;
 
-        @NameInMap("SellerId")
-        public Long sellerId;
+        @NameInMap("SimpleQuantity")
+        public String simpleQuantity;
 
-        @NameInMap("SessionQuantity")
-        public Long sessionQuantity;
-
-        @NameInMap("ShopId")
-        public Long shopId;
+        @NameInMap("SimpleTotalSoldQuantity")
+        public String simpleTotalSoldQuantity;
 
         @NameInMap("SkuList")
         public java.util.List<ListDistributionItemResponseBodyModelSkuList> skuList;
@@ -996,54 +599,15 @@ public class ListDistributionItemResponseBody extends TeaModel {
         @NameInMap("Status")
         public Integer status;
 
-        @NameInMap("SupplyPriceCentScope")
-        public String supplyPriceCentScope;
-
-        @NameInMap("TaoBaoCurrentPriceScope")
-        public String taoBaoCurrentPriceScope;
-
-        @NameInMap("TbShopName")
-        public String tbShopName;
-
         @NameInMap("Tips")
         public String tips;
 
         @NameInMap("TotalSoldQuantity")
         public Integer totalSoldQuantity;
 
-        @NameInMap("Type")
-        public Integer type;
-
-        @NameInMap("UserCashPointsScope")
-        public String userCashPointsScope;
-
         public static ListDistributionItemResponseBodyModel build(java.util.Map<String, ?> map) throws Exception {
             ListDistributionItemResponseBodyModel self = new ListDistributionItemResponseBodyModel();
             return TeaModel.build(map, self);
-        }
-
-        public ListDistributionItemResponseBodyModel setAuctionStatus(Integer auctionStatus) {
-            this.auctionStatus = auctionStatus;
-            return this;
-        }
-        public Integer getAuctionStatus() {
-            return this.auctionStatus;
-        }
-
-        public ListDistributionItemResponseBodyModel setBizId(String bizId) {
-            this.bizId = bizId;
-            return this;
-        }
-        public String getBizId() {
-            return this.bizId;
-        }
-
-        public ListDistributionItemResponseBodyModel setBizTotalSaleNum(Long bizTotalSaleNum) {
-            this.bizTotalSaleNum = bizTotalSaleNum;
-            return this;
-        }
-        public Long getBizTotalSaleNum() {
-            return this.bizTotalSaleNum;
         }
 
         public ListDistributionItemResponseBodyModel setCategory(String category) {
@@ -1070,36 +634,12 @@ public class ListDistributionItemResponseBody extends TeaModel {
             return this.categoryId;
         }
 
-        public ListDistributionItemResponseBodyModel setCumulativeSaleNum(Long cumulativeSaleNum) {
-            this.cumulativeSaleNum = cumulativeSaleNum;
-            return this;
-        }
-        public Long getCumulativeSaleNum() {
-            return this.cumulativeSaleNum;
-        }
-
         public ListDistributionItemResponseBodyModel setDescOption(String descOption) {
             this.descOption = descOption;
             return this;
         }
         public String getDescOption() {
             return this.descOption;
-        }
-
-        public ListDistributionItemResponseBodyModel setDiscountRateScope(String discountRateScope) {
-            this.discountRateScope = discountRateScope;
-            return this;
-        }
-        public String getDiscountRateScope() {
-            return this.discountRateScope;
-        }
-
-        public ListDistributionItemResponseBodyModel setDisparityPriceScope(String disparityPriceScope) {
-            this.disparityPriceScope = disparityPriceScope;
-            return this;
-        }
-        public String getDisparityPriceScope() {
-            return this.disparityPriceScope;
         }
 
         public ListDistributionItemResponseBodyModel setDistributionMallId(String distributionMallId) {
@@ -1126,12 +666,12 @@ public class ListDistributionItemResponseBody extends TeaModel {
             return this.gmtModified;
         }
 
-        public ListDistributionItemResponseBodyModel setIcQuantity(Long icQuantity) {
-            this.icQuantity = icQuantity;
+        public ListDistributionItemResponseBodyModel setHasQuantity(Boolean hasQuantity) {
+            this.hasQuantity = hasQuantity;
             return this;
         }
-        public Long getIcQuantity() {
-            return this.icQuantity;
+        public Boolean getHasQuantity() {
+            return this.hasQuantity;
         }
 
         public ListDistributionItemResponseBodyModel setIsCanSell(Boolean isCanSell) {
@@ -1140,14 +680,6 @@ public class ListDistributionItemResponseBody extends TeaModel {
         }
         public Boolean getIsCanSell() {
             return this.isCanSell;
-        }
-
-        public ListDistributionItemResponseBodyModel setIsInventoryZero(Boolean isInventoryZero) {
-            this.isInventoryZero = isInventoryZero;
-            return this;
-        }
-        public Boolean getIsInventoryZero() {
-            return this.isInventoryZero;
         }
 
         public ListDistributionItemResponseBodyModel setItemDesc(String itemDesc) {
@@ -1198,52 +730,12 @@ public class ListDistributionItemResponseBody extends TeaModel {
             return this.itemTitle;
         }
 
-        public ListDistributionItemResponseBodyModel setLinkRatio(String linkRatio) {
-            this.linkRatio = linkRatio;
-            return this;
-        }
-        public String getLinkRatio() {
-            return this.linkRatio;
-        }
-
-        public ListDistributionItemResponseBodyModel setLmAttributeModels(java.util.List<ListDistributionItemResponseBodyModelLmAttributeModels> lmAttributeModels) {
-            this.lmAttributeModels = lmAttributeModels;
-            return this;
-        }
-        public java.util.List<ListDistributionItemResponseBodyModelLmAttributeModels> getLmAttributeModels() {
-            return this.lmAttributeModels;
-        }
-
         public ListDistributionItemResponseBodyModel setLmItemId(String lmItemId) {
             this.lmItemId = lmItemId;
             return this;
         }
         public String getLmItemId() {
             return this.lmItemId;
-        }
-
-        public ListDistributionItemResponseBodyModel setLmShopId(Long lmShopId) {
-            this.lmShopId = lmShopId;
-            return this;
-        }
-        public Long getLmShopId() {
-            return this.lmShopId;
-        }
-
-        public ListDistributionItemResponseBodyModel setMainBizStatus(Integer mainBizStatus) {
-            this.mainBizStatus = mainBizStatus;
-            return this;
-        }
-        public Integer getMainBizStatus() {
-            return this.mainBizStatus;
-        }
-
-        public ListDistributionItemResponseBodyModel setMainBizTotalSaleNum(Long mainBizTotalSaleNum) {
-            this.mainBizTotalSaleNum = mainBizTotalSaleNum;
-            return this;
-        }
-        public Long getMainBizTotalSaleNum() {
-            return this.mainBizTotalSaleNum;
         }
 
         public ListDistributionItemResponseBodyModel setMainPicUrl(String mainPicUrl) {
@@ -1254,44 +746,12 @@ public class ListDistributionItemResponseBody extends TeaModel {
             return this.mainPicUrl;
         }
 
-        public ListDistributionItemResponseBodyModel setMainPriceCentScope(String mainPriceCentScope) {
-            this.mainPriceCentScope = mainPriceCentScope;
-            return this;
-        }
-        public String getMainPriceCentScope() {
-            return this.mainPriceCentScope;
-        }
-
-        public ListDistributionItemResponseBodyModel setMaxAllowedCount(Integer maxAllowedCount) {
-            this.maxAllowedCount = maxAllowedCount;
-            return this;
-        }
-        public Integer getMaxAllowedCount() {
-            return this.maxAllowedCount;
-        }
-
-        public ListDistributionItemResponseBodyModel setMonthSaleNum(Long monthSaleNum) {
-            this.monthSaleNum = monthSaleNum;
-            return this;
-        }
-        public Long getMonthSaleNum() {
-            return this.monthSaleNum;
-        }
-
         public ListDistributionItemResponseBodyModel setPicUrl(String picUrl) {
             this.picUrl = picUrl;
             return this;
         }
         public String getPicUrl() {
             return this.picUrl;
-        }
-
-        public ListDistributionItemResponseBodyModel setPremiumRateScope(String premiumRateScope) {
-            this.premiumRateScope = premiumRateScope;
-            return this;
-        }
-        public String getPremiumRateScope() {
-            return this.premiumRateScope;
         }
 
         public ListDistributionItemResponseBodyModel setPriceCentScope(String priceCentScope) {
@@ -1334,28 +794,20 @@ public class ListDistributionItemResponseBody extends TeaModel {
             return this.reservedPriceScope;
         }
 
-        public ListDistributionItemResponseBodyModel setSellerId(Long sellerId) {
-            this.sellerId = sellerId;
+        public ListDistributionItemResponseBodyModel setSimpleQuantity(String simpleQuantity) {
+            this.simpleQuantity = simpleQuantity;
             return this;
         }
-        public Long getSellerId() {
-            return this.sellerId;
+        public String getSimpleQuantity() {
+            return this.simpleQuantity;
         }
 
-        public ListDistributionItemResponseBodyModel setSessionQuantity(Long sessionQuantity) {
-            this.sessionQuantity = sessionQuantity;
+        public ListDistributionItemResponseBodyModel setSimpleTotalSoldQuantity(String simpleTotalSoldQuantity) {
+            this.simpleTotalSoldQuantity = simpleTotalSoldQuantity;
             return this;
         }
-        public Long getSessionQuantity() {
-            return this.sessionQuantity;
-        }
-
-        public ListDistributionItemResponseBodyModel setShopId(Long shopId) {
-            this.shopId = shopId;
-            return this;
-        }
-        public Long getShopId() {
-            return this.shopId;
+        public String getSimpleTotalSoldQuantity() {
+            return this.simpleTotalSoldQuantity;
         }
 
         public ListDistributionItemResponseBodyModel setSkuList(java.util.List<ListDistributionItemResponseBodyModelSkuList> skuList) {
@@ -1374,30 +826,6 @@ public class ListDistributionItemResponseBody extends TeaModel {
             return this.status;
         }
 
-        public ListDistributionItemResponseBodyModel setSupplyPriceCentScope(String supplyPriceCentScope) {
-            this.supplyPriceCentScope = supplyPriceCentScope;
-            return this;
-        }
-        public String getSupplyPriceCentScope() {
-            return this.supplyPriceCentScope;
-        }
-
-        public ListDistributionItemResponseBodyModel setTaoBaoCurrentPriceScope(String taoBaoCurrentPriceScope) {
-            this.taoBaoCurrentPriceScope = taoBaoCurrentPriceScope;
-            return this;
-        }
-        public String getTaoBaoCurrentPriceScope() {
-            return this.taoBaoCurrentPriceScope;
-        }
-
-        public ListDistributionItemResponseBodyModel setTbShopName(String tbShopName) {
-            this.tbShopName = tbShopName;
-            return this;
-        }
-        public String getTbShopName() {
-            return this.tbShopName;
-        }
-
         public ListDistributionItemResponseBodyModel setTips(String tips) {
             this.tips = tips;
             return this;
@@ -1412,22 +840,6 @@ public class ListDistributionItemResponseBody extends TeaModel {
         }
         public Integer getTotalSoldQuantity() {
             return this.totalSoldQuantity;
-        }
-
-        public ListDistributionItemResponseBodyModel setType(Integer type) {
-            this.type = type;
-            return this;
-        }
-        public Integer getType() {
-            return this.type;
-        }
-
-        public ListDistributionItemResponseBodyModel setUserCashPointsScope(String userCashPointsScope) {
-            this.userCashPointsScope = userCashPointsScope;
-            return this;
-        }
-        public String getUserCashPointsScope() {
-            return this.userCashPointsScope;
         }
 
     }
