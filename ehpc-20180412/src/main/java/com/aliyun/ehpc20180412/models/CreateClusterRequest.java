@@ -133,6 +133,9 @@ public class CreateClusterRequest extends TeaModel {
     @NameInMap("SystemDiskType")
     public String systemDiskType;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateClusterRequestTag> tag;
+
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
@@ -510,6 +513,14 @@ public class CreateClusterRequest extends TeaModel {
     }
     public String getSystemDiskType() {
         return this.systemDiskType;
+    }
+
+    public CreateClusterRequest setTag(java.util.List<CreateClusterRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateClusterRequestTag> getTag() {
+        return this.tag;
     }
 
     public CreateClusterRequest setVSwitchId(String vSwitchId) {
@@ -908,6 +919,36 @@ public class CreateClusterRequest extends TeaModel {
         }
         public String getUrl() {
             return this.url;
+        }
+
+    }
+
+    public static class CreateClusterRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateClusterRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateClusterRequestTag self = new CreateClusterRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateClusterRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateClusterRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

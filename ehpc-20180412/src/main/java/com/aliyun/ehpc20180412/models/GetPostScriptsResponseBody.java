@@ -7,7 +7,6 @@ public class GetPostScriptsResponseBody extends TeaModel {
     @NameInMap("PostInstallScripts")
     public java.util.List<GetPostScriptsResponseBodyPostInstallScripts> postInstallScripts;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

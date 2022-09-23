@@ -10,6 +10,9 @@ public class AddLocalNodesRequest extends TeaModel {
     @NameInMap("Nodes")
     public String nodes;
 
+    @NameInMap("Queue")
+    public String queue;
+
     public static AddLocalNodesRequest build(java.util.Map<String, ?> map) throws Exception {
         AddLocalNodesRequest self = new AddLocalNodesRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class AddLocalNodesRequest extends TeaModel {
     }
     public String getNodes() {
         return this.nodes;
+    }
+
+    public AddLocalNodesRequest setQueue(String queue) {
+        this.queue = queue;
+        return this;
+    }
+    public String getQueue() {
+        return this.queue;
     }
 
 }

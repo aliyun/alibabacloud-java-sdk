@@ -238,6 +238,9 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
         @NameInMap("StorageType")
         public String storageType;
 
+        @NameInMap("VpcId")
+        public String vpcId;
+
         public static ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystems build(java.util.Map<String, ?> map) throws Exception {
             ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystems self = new ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystems();
             return TeaModel.build(map, self);
@@ -353,6 +356,14 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
         }
         public String getStorageType() {
             return this.storageType;
+        }
+
+        public ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystems setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
         }
 
     }
