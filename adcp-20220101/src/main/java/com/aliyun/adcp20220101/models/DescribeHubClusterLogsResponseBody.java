@@ -7,7 +7,6 @@ public class DescribeHubClusterLogsResponseBody extends TeaModel {
     @NameInMap("Logs")
     public java.util.List<DescribeHubClusterLogsResponseBodyLogs> logs;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

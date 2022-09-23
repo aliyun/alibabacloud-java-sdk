@@ -7,7 +7,6 @@ public class DescribeRegionsResponseBody extends TeaModel {
     @NameInMap("Regions")
     public java.util.List<DescribeRegionsResponseBodyRegions> regions;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -36,14 +35,8 @@ public class DescribeRegionsResponseBody extends TeaModel {
         @NameInMap("LocalName")
         public String localName;
 
-        @NameInMap("RegionEndpoint")
-        public String regionEndpoint;
-
         @NameInMap("RegionId")
         public String regionId;
-
-        @NameInMap("RegionVpcEndpoint")
-        public String regionVpcEndpoint;
 
         public static DescribeRegionsResponseBodyRegions build(java.util.Map<String, ?> map) throws Exception {
             DescribeRegionsResponseBodyRegions self = new DescribeRegionsResponseBodyRegions();
@@ -58,28 +51,12 @@ public class DescribeRegionsResponseBody extends TeaModel {
             return this.localName;
         }
 
-        public DescribeRegionsResponseBodyRegions setRegionEndpoint(String regionEndpoint) {
-            this.regionEndpoint = regionEndpoint;
-            return this;
-        }
-        public String getRegionEndpoint() {
-            return this.regionEndpoint;
-        }
-
         public DescribeRegionsResponseBodyRegions setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
         public String getRegionId() {
             return this.regionId;
-        }
-
-        public DescribeRegionsResponseBodyRegions setRegionVpcEndpoint(String regionVpcEndpoint) {
-            this.regionVpcEndpoint = regionVpcEndpoint;
-            return this;
-        }
-        public String getRegionVpcEndpoint() {
-            return this.regionVpcEndpoint;
         }
 
     }

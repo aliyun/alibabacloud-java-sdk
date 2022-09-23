@@ -10,28 +10,14 @@ public class CreateHubClusterRequest extends TeaModel {
     @NameInMap("AuditLogEnabled")
     public Boolean auditLogEnabled;
 
-    @NameInMap("AuditLogProject")
-    public String auditLogProject;
-
-    @NameInMap("AuditLogStoreTTL")
-    public String auditLogStoreTTL;
-
-    @NameInMap("ControlPlaneLogEnabled")
-    public Boolean controlPlaneLogEnabled;
-
-    @NameInMap("ControlPlaneLogProject")
-    public String controlPlaneLogProject;
-
-    @NameInMap("ControlPlaneLogTTL")
-    public String controlPlaneLogTTL;
-
-    // 是否企业安全组
     @NameInMap("IsEnterpriseSecurityGroup")
     public Boolean isEnterpriseSecurityGroup;
 
-    // 集群名称
     @NameInMap("Name")
     public String name;
+
+    @NameInMap("Profile")
+    public String profile;
 
     @NameInMap("RegionId")
     public String regionId;
@@ -63,46 +49,6 @@ public class CreateHubClusterRequest extends TeaModel {
         return this.auditLogEnabled;
     }
 
-    public CreateHubClusterRequest setAuditLogProject(String auditLogProject) {
-        this.auditLogProject = auditLogProject;
-        return this;
-    }
-    public String getAuditLogProject() {
-        return this.auditLogProject;
-    }
-
-    public CreateHubClusterRequest setAuditLogStoreTTL(String auditLogStoreTTL) {
-        this.auditLogStoreTTL = auditLogStoreTTL;
-        return this;
-    }
-    public String getAuditLogStoreTTL() {
-        return this.auditLogStoreTTL;
-    }
-
-    public CreateHubClusterRequest setControlPlaneLogEnabled(Boolean controlPlaneLogEnabled) {
-        this.controlPlaneLogEnabled = controlPlaneLogEnabled;
-        return this;
-    }
-    public Boolean getControlPlaneLogEnabled() {
-        return this.controlPlaneLogEnabled;
-    }
-
-    public CreateHubClusterRequest setControlPlaneLogProject(String controlPlaneLogProject) {
-        this.controlPlaneLogProject = controlPlaneLogProject;
-        return this;
-    }
-    public String getControlPlaneLogProject() {
-        return this.controlPlaneLogProject;
-    }
-
-    public CreateHubClusterRequest setControlPlaneLogTTL(String controlPlaneLogTTL) {
-        this.controlPlaneLogTTL = controlPlaneLogTTL;
-        return this;
-    }
-    public String getControlPlaneLogTTL() {
-        return this.controlPlaneLogTTL;
-    }
-
     public CreateHubClusterRequest setIsEnterpriseSecurityGroup(Boolean isEnterpriseSecurityGroup) {
         this.isEnterpriseSecurityGroup = isEnterpriseSecurityGroup;
         return this;
@@ -117,6 +63,14 @@ public class CreateHubClusterRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public CreateHubClusterRequest setProfile(String profile) {
+        this.profile = profile;
+        return this;
+    }
+    public String getProfile() {
+        return this.profile;
     }
 
     public CreateHubClusterRequest setRegionId(String regionId) {

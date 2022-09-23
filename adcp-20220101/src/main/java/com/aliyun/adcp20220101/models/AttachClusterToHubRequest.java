@@ -4,6 +4,9 @@ package com.aliyun.adcp20220101.models;
 import com.aliyun.tea.*;
 
 public class AttachClusterToHubRequest extends TeaModel {
+    @NameInMap("AttachToMesh")
+    public Boolean attachToMesh;
+
     @NameInMap("ClusterId")
     public String clusterId;
 
@@ -13,6 +16,14 @@ public class AttachClusterToHubRequest extends TeaModel {
     public static AttachClusterToHubRequest build(java.util.Map<String, ?> map) throws Exception {
         AttachClusterToHubRequest self = new AttachClusterToHubRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AttachClusterToHubRequest setAttachToMesh(Boolean attachToMesh) {
+        this.attachToMesh = attachToMesh;
+        return this;
+    }
+    public Boolean getAttachToMesh() {
+        return this.attachToMesh;
     }
 
     public AttachClusterToHubRequest setClusterId(String clusterId) {
