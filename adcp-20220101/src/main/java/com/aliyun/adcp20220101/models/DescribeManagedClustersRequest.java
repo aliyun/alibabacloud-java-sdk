@@ -4,7 +4,6 @@ package com.aliyun.adcp20220101.models;
 import com.aliyun.tea.*;
 
 public class DescribeManagedClustersRequest extends TeaModel {
-    // 集群ID
     @NameInMap("ClusterId")
     public String clusterId;
 

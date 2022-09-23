@@ -10,6 +10,9 @@ public class DetachClusterFromHubRequest extends TeaModel {
     @NameInMap("ClusterIds")
     public String clusterIds;
 
+    @NameInMap("DetachFromMesh")
+    public Boolean detachFromMesh;
+
     public static DetachClusterFromHubRequest build(java.util.Map<String, ?> map) throws Exception {
         DetachClusterFromHubRequest self = new DetachClusterFromHubRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class DetachClusterFromHubRequest extends TeaModel {
     }
     public String getClusterIds() {
         return this.clusterIds;
+    }
+
+    public DetachClusterFromHubRequest setDetachFromMesh(Boolean detachFromMesh) {
+        this.detachFromMesh = detachFromMesh;
+        return this;
+    }
+    public Boolean getDetachFromMesh() {
+        return this.detachFromMesh;
     }
 
 }

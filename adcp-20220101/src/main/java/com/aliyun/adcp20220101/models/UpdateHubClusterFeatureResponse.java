@@ -3,7 +3,7 @@ package com.aliyun.adcp20220101.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeHubClusterLogsResponse extends TeaModel {
+public class UpdateHubClusterFeatureResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class DescribeHubClusterLogsResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public DescribeHubClusterLogsResponseBody body;
+    public UpdateHubClusterFeatureResponseBody body;
 
-    public static DescribeHubClusterLogsResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeHubClusterLogsResponse self = new DescribeHubClusterLogsResponse();
+    public static UpdateHubClusterFeatureResponse build(java.util.Map<String, ?> map) throws Exception {
+        UpdateHubClusterFeatureResponse self = new UpdateHubClusterFeatureResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeHubClusterLogsResponse setHeaders(java.util.Map<String, String> headers) {
+    public UpdateHubClusterFeatureResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class DescribeHubClusterLogsResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeHubClusterLogsResponse setStatusCode(Integer statusCode) {
+    public UpdateHubClusterFeatureResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class DescribeHubClusterLogsResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DescribeHubClusterLogsResponse setBody(DescribeHubClusterLogsResponseBody body) {
+    public UpdateHubClusterFeatureResponse setBody(UpdateHubClusterFeatureResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeHubClusterLogsResponseBody getBody() {
+    public UpdateHubClusterFeatureResponseBody getBody() {
         return this.body;
     }
 

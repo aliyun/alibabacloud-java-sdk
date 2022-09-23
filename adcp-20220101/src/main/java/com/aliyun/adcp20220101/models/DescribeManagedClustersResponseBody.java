@@ -193,6 +193,25 @@ public class DescribeManagedClustersResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeManagedClustersResponseBodyClustersMeshStatus extends TeaModel {
+        @NameInMap("InMesh")
+        public Boolean inMesh;
+
+        public static DescribeManagedClustersResponseBodyClustersMeshStatus build(java.util.Map<String, ?> map) throws Exception {
+            DescribeManagedClustersResponseBodyClustersMeshStatus self = new DescribeManagedClustersResponseBodyClustersMeshStatus();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeManagedClustersResponseBodyClustersMeshStatus setInMesh(Boolean inMesh) {
+            this.inMesh = inMesh;
+            return this;
+        }
+        public Boolean getInMesh() {
+            return this.inMesh;
+        }
+
+    }
+
     public static class DescribeManagedClustersResponseBodyClustersStatus extends TeaModel {
         @NameInMap("Message")
         public String message;
@@ -227,6 +246,9 @@ public class DescribeManagedClustersResponseBody extends TeaModel {
         @NameInMap("Cluster")
         public DescribeManagedClustersResponseBodyClustersCluster cluster;
 
+        @NameInMap("MeshStatus")
+        public DescribeManagedClustersResponseBodyClustersMeshStatus meshStatus;
+
         @NameInMap("Status")
         public DescribeManagedClustersResponseBodyClustersStatus status;
 
@@ -241,6 +263,14 @@ public class DescribeManagedClustersResponseBody extends TeaModel {
         }
         public DescribeManagedClustersResponseBodyClustersCluster getCluster() {
             return this.cluster;
+        }
+
+        public DescribeManagedClustersResponseBodyClusters setMeshStatus(DescribeManagedClustersResponseBodyClustersMeshStatus meshStatus) {
+            this.meshStatus = meshStatus;
+            return this;
+        }
+        public DescribeManagedClustersResponseBodyClustersMeshStatus getMeshStatus() {
+            return this.meshStatus;
         }
 
         public DescribeManagedClustersResponseBodyClusters setStatus(DescribeManagedClustersResponseBodyClustersStatus status) {

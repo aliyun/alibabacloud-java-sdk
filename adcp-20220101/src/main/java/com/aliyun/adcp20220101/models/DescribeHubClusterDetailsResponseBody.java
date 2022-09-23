@@ -32,6 +32,9 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
     }
 
     public static class DescribeHubClusterDetailsResponseBodyClusterApiServer extends TeaModel {
+        @NameInMap("ApiServerEipId")
+        public String apiServerEipId;
+
         @NameInMap("EnabledPublic")
         public Boolean enabledPublic;
 
@@ -41,6 +44,14 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
         public static DescribeHubClusterDetailsResponseBodyClusterApiServer build(java.util.Map<String, ?> map) throws Exception {
             DescribeHubClusterDetailsResponseBodyClusterApiServer self = new DescribeHubClusterDetailsResponseBodyClusterApiServer();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeHubClusterDetailsResponseBodyClusterApiServer setApiServerEipId(String apiServerEipId) {
+            this.apiServerEipId = apiServerEipId;
+            return this;
+        }
+        public String getApiServerEipId() {
+            return this.apiServerEipId;
         }
 
         public DescribeHubClusterDetailsResponseBodyClusterApiServer setEnabledPublic(Boolean enabledPublic) {
@@ -179,6 +190,58 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeHubClusterDetailsResponseBodyClusterConditions extends TeaModel {
+        @NameInMap("Message")
+        public String message;
+
+        @NameInMap("Reason")
+        public String reason;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("Type")
+        public String type;
+
+        public static DescribeHubClusterDetailsResponseBodyClusterConditions build(java.util.Map<String, ?> map) throws Exception {
+            DescribeHubClusterDetailsResponseBodyClusterConditions self = new DescribeHubClusterDetailsResponseBodyClusterConditions();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeHubClusterDetailsResponseBodyClusterConditions setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
+        }
+
+        public DescribeHubClusterDetailsResponseBodyClusterConditions setReason(String reason) {
+            this.reason = reason;
+            return this;
+        }
+        public String getReason() {
+            return this.reason;
+        }
+
+        public DescribeHubClusterDetailsResponseBodyClusterConditions setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public DescribeHubClusterDetailsResponseBodyClusterConditions setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
     public static class DescribeHubClusterDetailsResponseBodyClusterEndpoints extends TeaModel {
         @NameInMap("IntranetApiServerEndpoint")
         public String intranetApiServerEndpoint;
@@ -205,6 +268,77 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
         }
         public String getPublicApiServerEndpoint() {
             return this.publicApiServerEndpoint;
+        }
+
+    }
+
+    public static class DescribeHubClusterDetailsResponseBodyClusterLogConfig extends TeaModel {
+        @NameInMap("EnableLog")
+        public Boolean enableLog;
+
+        @NameInMap("LogProject")
+        public String logProject;
+
+        @NameInMap("LogStoreTTL")
+        public String logStoreTTL;
+
+        public static DescribeHubClusterDetailsResponseBodyClusterLogConfig build(java.util.Map<String, ?> map) throws Exception {
+            DescribeHubClusterDetailsResponseBodyClusterLogConfig self = new DescribeHubClusterDetailsResponseBodyClusterLogConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeHubClusterDetailsResponseBodyClusterLogConfig setEnableLog(Boolean enableLog) {
+            this.enableLog = enableLog;
+            return this;
+        }
+        public Boolean getEnableLog() {
+            return this.enableLog;
+        }
+
+        public DescribeHubClusterDetailsResponseBodyClusterLogConfig setLogProject(String logProject) {
+            this.logProject = logProject;
+            return this;
+        }
+        public String getLogProject() {
+            return this.logProject;
+        }
+
+        public DescribeHubClusterDetailsResponseBodyClusterLogConfig setLogStoreTTL(String logStoreTTL) {
+            this.logStoreTTL = logStoreTTL;
+            return this;
+        }
+        public String getLogStoreTTL() {
+            return this.logStoreTTL;
+        }
+
+    }
+
+    public static class DescribeHubClusterDetailsResponseBodyClusterMeshConfig extends TeaModel {
+        @NameInMap("EnableMesh")
+        public Boolean enableMesh;
+
+        @NameInMap("MeshId")
+        public String meshId;
+
+        public static DescribeHubClusterDetailsResponseBodyClusterMeshConfig build(java.util.Map<String, ?> map) throws Exception {
+            DescribeHubClusterDetailsResponseBodyClusterMeshConfig self = new DescribeHubClusterDetailsResponseBodyClusterMeshConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeHubClusterDetailsResponseBodyClusterMeshConfig setEnableMesh(Boolean enableMesh) {
+            this.enableMesh = enableMesh;
+            return this;
+        }
+        public Boolean getEnableMesh() {
+            return this.enableMesh;
+        }
+
+        public DescribeHubClusterDetailsResponseBodyClusterMeshConfig setMeshId(String meshId) {
+            this.meshId = meshId;
+            return this;
+        }
+        public String getMeshId() {
+            return this.meshId;
         }
 
     }
@@ -279,8 +413,17 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
         @NameInMap("ClusterInfo")
         public DescribeHubClusterDetailsResponseBodyClusterClusterInfo clusterInfo;
 
+        @NameInMap("Conditions")
+        public java.util.List<DescribeHubClusterDetailsResponseBodyClusterConditions> conditions;
+
         @NameInMap("Endpoints")
         public DescribeHubClusterDetailsResponseBodyClusterEndpoints endpoints;
+
+        @NameInMap("LogConfig")
+        public DescribeHubClusterDetailsResponseBodyClusterLogConfig logConfig;
+
+        @NameInMap("MeshConfig")
+        public DescribeHubClusterDetailsResponseBodyClusterMeshConfig meshConfig;
 
         @NameInMap("Network")
         public DescribeHubClusterDetailsResponseBodyClusterNetwork network;
@@ -306,12 +449,36 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             return this.clusterInfo;
         }
 
+        public DescribeHubClusterDetailsResponseBodyCluster setConditions(java.util.List<DescribeHubClusterDetailsResponseBodyClusterConditions> conditions) {
+            this.conditions = conditions;
+            return this;
+        }
+        public java.util.List<DescribeHubClusterDetailsResponseBodyClusterConditions> getConditions() {
+            return this.conditions;
+        }
+
         public DescribeHubClusterDetailsResponseBodyCluster setEndpoints(DescribeHubClusterDetailsResponseBodyClusterEndpoints endpoints) {
             this.endpoints = endpoints;
             return this;
         }
         public DescribeHubClusterDetailsResponseBodyClusterEndpoints getEndpoints() {
             return this.endpoints;
+        }
+
+        public DescribeHubClusterDetailsResponseBodyCluster setLogConfig(DescribeHubClusterDetailsResponseBodyClusterLogConfig logConfig) {
+            this.logConfig = logConfig;
+            return this;
+        }
+        public DescribeHubClusterDetailsResponseBodyClusterLogConfig getLogConfig() {
+            return this.logConfig;
+        }
+
+        public DescribeHubClusterDetailsResponseBodyCluster setMeshConfig(DescribeHubClusterDetailsResponseBodyClusterMeshConfig meshConfig) {
+            this.meshConfig = meshConfig;
+            return this;
+        }
+        public DescribeHubClusterDetailsResponseBodyClusterMeshConfig getMeshConfig() {
+            return this.meshConfig;
         }
 
         public DescribeHubClusterDetailsResponseBodyCluster setNetwork(DescribeHubClusterDetailsResponseBodyClusterNetwork network) {

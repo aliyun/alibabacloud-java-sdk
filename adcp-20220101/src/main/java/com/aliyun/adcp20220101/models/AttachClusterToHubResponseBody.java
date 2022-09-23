@@ -13,6 +13,9 @@ public class AttachClusterToHubResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("TaskId")
+    public String taskId;
+
     public static AttachClusterToHubResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AttachClusterToHubResponseBody self = new AttachClusterToHubResponseBody();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class AttachClusterToHubResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public AttachClusterToHubResponseBody setTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public String getTaskId() {
+        return this.taskId;
     }
 
 }
