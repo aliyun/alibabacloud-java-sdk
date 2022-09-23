@@ -4,8 +4,8 @@ package com.aliyun.cas20200407.models;
 import com.aliyun.tea.*;
 
 public class VerifyRequest extends TeaModel {
-    @NameInMap("Identifier")
-    public String identifier;
+    @NameInMap("CertIdentifier")
+    public String certIdentifier;
 
     @NameInMap("Message")
     public String message;
@@ -24,12 +24,12 @@ public class VerifyRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public VerifyRequest setIdentifier(String identifier) {
-        this.identifier = identifier;
+    public VerifyRequest setCertIdentifier(String certIdentifier) {
+        this.certIdentifier = certIdentifier;
         return this;
     }
-    public String getIdentifier() {
-        return this.identifier;
+    public String getCertIdentifier() {
+        return this.certIdentifier;
     }
 
     public VerifyRequest setMessage(String message) {
