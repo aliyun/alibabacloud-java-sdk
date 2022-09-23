@@ -424,10 +424,33 @@ public class CreateHybridClusterRequest extends TeaModel {
 
     }
 
+    public static class CreateHybridClusterRequestEcsOrderManager extends TeaModel {
+        @NameInMap("InstanceType")
+        public String instanceType;
+
+        public static CreateHybridClusterRequestEcsOrderManager build(java.util.Map<String, ?> map) throws Exception {
+            CreateHybridClusterRequestEcsOrderManager self = new CreateHybridClusterRequestEcsOrderManager();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateHybridClusterRequestEcsOrderManager setInstanceType(String instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
+    }
+
     public static class CreateHybridClusterRequestEcsOrder extends TeaModel {
         @NameInMap("Compute")
         @Validation(required = true)
         public CreateHybridClusterRequestEcsOrderCompute compute;
+
+        @NameInMap("Manager")
+        @Validation(required = true)
+        public CreateHybridClusterRequestEcsOrderManager manager;
 
         public static CreateHybridClusterRequestEcsOrder build(java.util.Map<String, ?> map) throws Exception {
             CreateHybridClusterRequestEcsOrder self = new CreateHybridClusterRequestEcsOrder();
@@ -440,6 +463,14 @@ public class CreateHybridClusterRequest extends TeaModel {
         }
         public CreateHybridClusterRequestEcsOrderCompute getCompute() {
             return this.compute;
+        }
+
+        public CreateHybridClusterRequestEcsOrder setManager(CreateHybridClusterRequestEcsOrderManager manager) {
+            this.manager = manager;
+            return this;
+        }
+        public CreateHybridClusterRequestEcsOrderManager getManager() {
+            return this.manager;
         }
 
     }

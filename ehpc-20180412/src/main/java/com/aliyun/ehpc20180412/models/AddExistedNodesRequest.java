@@ -4,9 +4,6 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class AddExistedNodesRequest extends TeaModel {
-    @NameInMap("ClientToken")
-    public String clientToken;
-
     @NameInMap("ClusterId")
     public String clusterId;
 
@@ -25,14 +22,6 @@ public class AddExistedNodesRequest extends TeaModel {
     public static AddExistedNodesRequest build(java.util.Map<String, ?> map) throws Exception {
         AddExistedNodesRequest self = new AddExistedNodesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public AddExistedNodesRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
     public AddExistedNodesRequest setClusterId(String clusterId) {

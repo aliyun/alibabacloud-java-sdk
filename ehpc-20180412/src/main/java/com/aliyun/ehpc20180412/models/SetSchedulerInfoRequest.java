@@ -98,6 +98,9 @@ public class SetSchedulerInfoRequest extends TeaModel {
         @NameInMap("Cpus")
         public Integer cpus;
 
+        @NameInMap("MaxJobs")
+        public Integer maxJobs;
+
         @NameInMap("Mem")
         public String mem;
 
@@ -121,6 +124,14 @@ public class SetSchedulerInfoRequest extends TeaModel {
         }
         public Integer getCpus() {
             return this.cpus;
+        }
+
+        public SetSchedulerInfoRequestPbsInfoResourceLimit setMaxJobs(Integer maxJobs) {
+            this.maxJobs = maxJobs;
+            return this;
+        }
+        public Integer getMaxJobs() {
+            return this.maxJobs;
         }
 
         public SetSchedulerInfoRequestPbsInfoResourceLimit setMem(String mem) {
@@ -170,6 +181,12 @@ public class SetSchedulerInfoRequest extends TeaModel {
         @NameInMap("SchedInterval")
         public Integer schedInterval;
 
+        @NameInMap("SchedMaxJobs")
+        public Integer schedMaxJobs;
+
+        @NameInMap("SchedMaxQueuedJobs")
+        public Integer schedMaxQueuedJobs;
+
         public static SetSchedulerInfoRequestPbsInfo build(java.util.Map<String, ?> map) throws Exception {
             SetSchedulerInfoRequestPbsInfo self = new SetSchedulerInfoRequestPbsInfo();
             return TeaModel.build(map, self);
@@ -205,6 +222,22 @@ public class SetSchedulerInfoRequest extends TeaModel {
         }
         public Integer getSchedInterval() {
             return this.schedInterval;
+        }
+
+        public SetSchedulerInfoRequestPbsInfo setSchedMaxJobs(Integer schedMaxJobs) {
+            this.schedMaxJobs = schedMaxJobs;
+            return this;
+        }
+        public Integer getSchedMaxJobs() {
+            return this.schedMaxJobs;
+        }
+
+        public SetSchedulerInfoRequestPbsInfo setSchedMaxQueuedJobs(Integer schedMaxQueuedJobs) {
+            this.schedMaxQueuedJobs = schedMaxQueuedJobs;
+            return this;
+        }
+        public Integer getSchedMaxQueuedJobs() {
+            return this.schedMaxQueuedJobs;
         }
 
     }

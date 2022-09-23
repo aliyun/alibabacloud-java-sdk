@@ -4,27 +4,21 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class ListJobsWithFiltersResponseBody extends TeaModel {
-    // Jobs
     @NameInMap("Jobs")
     public java.util.List<ListJobsWithFiltersResponseBodyJobs> jobs;
 
-    // PageNumber
     @NameInMap("PageNumber")
     public Long pageNumber;
 
-    // PageSize
     @NameInMap("PageSize")
     public Long pageSize;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // Success
     @NameInMap("Success")
     public Boolean success;
 
-    // TotalCount本次请求条件下的数据总量，此参数为可选参数，默认可不返回
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -139,6 +133,9 @@ public class ListJobsWithFiltersResponseBody extends TeaModel {
         @NameInMap("Queue")
         public String queue;
 
+        @NameInMap("Rerunable")
+        public Boolean rerunable;
+
         @NameInMap("Resources")
         public ListJobsWithFiltersResponseBodyJobsResources resources;
 
@@ -159,6 +156,9 @@ public class ListJobsWithFiltersResponseBody extends TeaModel {
 
         @NameInMap("SubmitTime")
         public String submitTime;
+
+        @NameInMap("VariableList")
+        public String variableList;
 
         public static ListJobsWithFiltersResponseBodyJobs build(java.util.Map<String, ?> map) throws Exception {
             ListJobsWithFiltersResponseBodyJobs self = new ListJobsWithFiltersResponseBodyJobs();
@@ -237,6 +237,14 @@ public class ListJobsWithFiltersResponseBody extends TeaModel {
             return this.queue;
         }
 
+        public ListJobsWithFiltersResponseBodyJobs setRerunable(Boolean rerunable) {
+            this.rerunable = rerunable;
+            return this;
+        }
+        public Boolean getRerunable() {
+            return this.rerunable;
+        }
+
         public ListJobsWithFiltersResponseBodyJobs setResources(ListJobsWithFiltersResponseBodyJobsResources resources) {
             this.resources = resources;
             return this;
@@ -291,6 +299,14 @@ public class ListJobsWithFiltersResponseBody extends TeaModel {
         }
         public String getSubmitTime() {
             return this.submitTime;
+        }
+
+        public ListJobsWithFiltersResponseBodyJobs setVariableList(String variableList) {
+            this.variableList = variableList;
+            return this;
+        }
+        public String getVariableList() {
+            return this.variableList;
         }
 
     }
