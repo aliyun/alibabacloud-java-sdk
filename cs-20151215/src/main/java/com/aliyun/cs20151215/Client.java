@@ -397,6 +397,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("instances", request.instances);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.ipStack)) {
+            body.put("ip_stack", request.ipStack);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.isEnterpriseSecurityGroup)) {
             body.put("is_enterprise_security_group", request.isEnterpriseSecurityGroup);
         }

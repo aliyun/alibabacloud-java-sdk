@@ -73,6 +73,9 @@ public class CreateClusterRequest extends TeaModel {
     @NameInMap("instances")
     public java.util.List<String> instances;
 
+    @NameInMap("ip_stack")
+    public String ipStack;
+
     @NameInMap("is_enterprise_security_group")
     public Boolean isEnterpriseSecurityGroup;
 
@@ -452,6 +455,14 @@ public class CreateClusterRequest extends TeaModel {
     }
     public java.util.List<String> getInstances() {
         return this.instances;
+    }
+
+    public CreateClusterRequest setIpStack(String ipStack) {
+        this.ipStack = ipStack;
+        return this;
+    }
+    public String getIpStack() {
+        return this.ipStack;
     }
 
     public CreateClusterRequest setIsEnterpriseSecurityGroup(Boolean isEnterpriseSecurityGroup) {
