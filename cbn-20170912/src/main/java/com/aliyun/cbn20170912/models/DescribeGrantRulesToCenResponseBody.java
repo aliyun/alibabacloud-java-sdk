@@ -7,8 +7,17 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
     @NameInMap("GrantRules")
     public DescribeGrantRulesToCenResponseBodyGrantRules grantRules;
 
+    @NameInMap("MaxResults")
+    public Long maxResults;
+
+    @NameInMap("NextToken")
+    public String nextToken;
+
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("TotalCount")
+    public Long totalCount;
 
     public static DescribeGrantRulesToCenResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeGrantRulesToCenResponseBody self = new DescribeGrantRulesToCenResponseBody();
@@ -23,6 +32,22 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
         return this.grantRules;
     }
 
+    public DescribeGrantRulesToCenResponseBody setMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Long getMaxResults() {
+        return this.maxResults;
+    }
+
+    public DescribeGrantRulesToCenResponseBody setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
     public DescribeGrantRulesToCenResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -31,9 +56,20 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DescribeGrantRulesToCenResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
+    }
+
     public static class DescribeGrantRulesToCenResponseBodyGrantRulesGrantRule extends TeaModel {
         @NameInMap("CenId")
         public String cenId;
+
+        @NameInMap("CenOwnerId")
+        public Long cenOwnerId;
 
         @NameInMap("ChildInstanceId")
         public String childInstanceId;
@@ -61,6 +97,14 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
         }
         public String getCenId() {
             return this.cenId;
+        }
+
+        public DescribeGrantRulesToCenResponseBodyGrantRulesGrantRule setCenOwnerId(Long cenOwnerId) {
+            this.cenOwnerId = cenOwnerId;
+            return this;
+        }
+        public Long getCenOwnerId() {
+            return this.cenOwnerId;
         }
 
         public DescribeGrantRulesToCenResponseBodyGrantRulesGrantRule setChildInstanceId(String childInstanceId) {

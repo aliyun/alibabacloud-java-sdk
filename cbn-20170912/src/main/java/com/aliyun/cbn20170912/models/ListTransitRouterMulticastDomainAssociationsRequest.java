@@ -7,9 +7,6 @@ public class ListTransitRouterMulticastDomainAssociationsRequest extends TeaMode
     @NameInMap("ClientToken")
     public String clientToken;
 
-    @NameInMap("DryRun")
-    public Boolean dryRun;
-
     @NameInMap("MaxResults")
     public Long maxResults;
 
@@ -54,14 +51,6 @@ public class ListTransitRouterMulticastDomainAssociationsRequest extends TeaMode
     }
     public String getClientToken() {
         return this.clientToken;
-    }
-
-    public ListTransitRouterMulticastDomainAssociationsRequest setDryRun(Boolean dryRun) {
-        this.dryRun = dryRun;
-        return this;
-    }
-    public Boolean getDryRun() {
-        return this.dryRun;
     }
 
     public ListTransitRouterMulticastDomainAssociationsRequest setMaxResults(Long maxResults) {
