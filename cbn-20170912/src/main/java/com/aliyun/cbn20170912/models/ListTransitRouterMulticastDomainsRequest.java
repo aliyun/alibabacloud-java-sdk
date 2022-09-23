@@ -10,9 +10,6 @@ public class ListTransitRouterMulticastDomainsRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
-    @NameInMap("DryRun")
-    public Boolean dryRun;
-
     @NameInMap("MaxResults")
     public Long maxResults;
 
@@ -59,14 +56,6 @@ public class ListTransitRouterMulticastDomainsRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
-    }
-
-    public ListTransitRouterMulticastDomainsRequest setDryRun(Boolean dryRun) {
-        this.dryRun = dryRun;
-        return this;
-    }
-    public Boolean getDryRun() {
-        return this.dryRun;
     }
 
     public ListTransitRouterMulticastDomainsRequest setMaxResults(Long maxResults) {

@@ -83,6 +83,9 @@ public class ListTransitRouterPrefixListAssociationResponseBody extends TeaModel
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("TransitRouterId")
+        public String transitRouterId;
+
         @NameInMap("TransitRouterTableId")
         public String transitRouterTableId;
 
@@ -137,6 +140,14 @@ public class ListTransitRouterPrefixListAssociationResponseBody extends TeaModel
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public ListTransitRouterPrefixListAssociationResponseBodyPrefixLists setTransitRouterId(String transitRouterId) {
+            this.transitRouterId = transitRouterId;
+            return this;
+        }
+        public String getTransitRouterId() {
+            return this.transitRouterId;
         }
 
         public ListTransitRouterPrefixListAssociationResponseBodyPrefixLists setTransitRouterTableId(String transitRouterTableId) {
