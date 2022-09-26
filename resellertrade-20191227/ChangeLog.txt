@@ -1,3 +1,6 @@
+2022-09-26 Version: 1.1.7
+- Update api frequency.
+
 2022-09-22 Version: 1.1.6
 - Update api frequency.
 
