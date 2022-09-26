@@ -66,7 +66,7 @@ public class ListListenersResponseBody extends TeaModel {
 
     public static class ListListenersResponseBodyListeners extends TeaModel {
         @NameInMap("AlpnEnabled")
-        public String alpnEnabled;
+        public Boolean alpnEnabled;
 
         @NameInMap("AlpnPolicy")
         public String alpnPolicy;
@@ -111,13 +111,13 @@ public class ListListenersResponseBody extends TeaModel {
         public Integer mss;
 
         @NameInMap("ProxyProtocolEnabled")
-        public String proxyProtocolEnabled;
+        public Boolean proxyProtocolEnabled;
 
         @NameInMap("RegionId")
         public String regionId;
 
         @NameInMap("SecSensorEnabled")
-        public String secSensorEnabled;
+        public Boolean secSensorEnabled;
 
         @NameInMap("SecurityPolicyId")
         public String securityPolicyId;
@@ -133,11 +133,11 @@ public class ListListenersResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ListListenersResponseBodyListeners setAlpnEnabled(String alpnEnabled) {
+        public ListListenersResponseBodyListeners setAlpnEnabled(Boolean alpnEnabled) {
             this.alpnEnabled = alpnEnabled;
             return this;
         }
-        public String getAlpnEnabled() {
+        public Boolean getAlpnEnabled() {
             return this.alpnEnabled;
         }
 
@@ -253,11 +253,11 @@ public class ListListenersResponseBody extends TeaModel {
             return this.mss;
         }
 
-        public ListListenersResponseBodyListeners setProxyProtocolEnabled(String proxyProtocolEnabled) {
+        public ListListenersResponseBodyListeners setProxyProtocolEnabled(Boolean proxyProtocolEnabled) {
             this.proxyProtocolEnabled = proxyProtocolEnabled;
             return this;
         }
-        public String getProxyProtocolEnabled() {
+        public Boolean getProxyProtocolEnabled() {
             return this.proxyProtocolEnabled;
         }
 
@@ -269,11 +269,11 @@ public class ListListenersResponseBody extends TeaModel {
             return this.regionId;
         }
 
-        public ListListenersResponseBodyListeners setSecSensorEnabled(String secSensorEnabled) {
+        public ListListenersResponseBodyListeners setSecSensorEnabled(Boolean secSensorEnabled) {
             this.secSensorEnabled = secSensorEnabled;
             return this;
         }
-        public String getSecSensorEnabled() {
+        public Boolean getSecSensorEnabled() {
             return this.secSensorEnabled;
         }
 
