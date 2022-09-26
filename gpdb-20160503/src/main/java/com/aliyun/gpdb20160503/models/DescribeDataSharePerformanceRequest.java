@@ -13,6 +13,9 @@ public class DescribeDataSharePerformanceRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("StartTime")
     public String startTime;
 
@@ -43,6 +46,14 @@ public class DescribeDataSharePerformanceRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeDataSharePerformanceRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public DescribeDataSharePerformanceRequest setStartTime(String startTime) {
