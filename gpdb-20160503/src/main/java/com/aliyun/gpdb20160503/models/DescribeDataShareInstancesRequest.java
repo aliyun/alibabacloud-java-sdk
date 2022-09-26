@@ -16,6 +16,9 @@ public class DescribeDataShareInstancesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("SearchValue")
     public String searchValue;
 
@@ -54,6 +57,14 @@ public class DescribeDataShareInstancesRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeDataShareInstancesRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public DescribeDataShareInstancesRequest setSearchValue(String searchValue) {
