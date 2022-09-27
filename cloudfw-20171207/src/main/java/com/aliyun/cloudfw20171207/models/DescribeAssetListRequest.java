@@ -31,9 +31,6 @@ public class DescribeAssetListRequest extends TeaModel {
     @NameInMap("SgStatus")
     public String sgStatus;
 
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
     @NameInMap("Status")
     public String status;
 
@@ -118,14 +115,6 @@ public class DescribeAssetListRequest extends TeaModel {
     }
     public String getSgStatus() {
         return this.sgStatus;
-    }
-
-    public DescribeAssetListRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
     public DescribeAssetListRequest setStatus(String status) {

@@ -40,9 +40,6 @@ public class DescribeControlPolicyRequest extends TeaModel {
     @NameInMap("Source")
     public String source;
 
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
     public static DescribeControlPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeControlPolicyRequest self = new DescribeControlPolicyRequest();
         return TeaModel.build(map, self);
@@ -142,14 +139,6 @@ public class DescribeControlPolicyRequest extends TeaModel {
     }
     public String getSource() {
         return this.source;
-    }
-
-    public DescribeControlPolicyRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
 }
