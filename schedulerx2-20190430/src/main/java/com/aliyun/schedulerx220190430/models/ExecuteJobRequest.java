@@ -7,7 +7,6 @@ public class ExecuteJobRequest extends TeaModel {
     @NameInMap("CheckJobStatus")
     public Boolean checkJobStatus;
 
-    // 指定机器类型：1.workerAddr; 2. label
     @NameInMap("DesignateType")
     public Integer designateType;
 
@@ -20,7 +19,6 @@ public class ExecuteJobRequest extends TeaModel {
     @NameInMap("JobId")
     public Long jobId;
 
-    // 指定机器的标签
     @NameInMap("Label")
     public String label;
 
@@ -33,7 +31,6 @@ public class ExecuteJobRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    // 指定机器的workerAddr
     @NameInMap("Worker")
     public String worker;
 

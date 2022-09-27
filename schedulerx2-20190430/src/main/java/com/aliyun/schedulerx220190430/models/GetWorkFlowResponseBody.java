@@ -4,23 +4,18 @@ package com.aliyun.schedulerx220190430.models;
 import com.aliyun.tea.*;
 
 public class GetWorkFlowResponseBody extends TeaModel {
-    // 错误码
     @NameInMap("Code")
     public Integer code;
 
-    // 工作流的数据
     @NameInMap("Data")
     public GetWorkFlowResponseBodyData data;
 
-    // 错误信息
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 会否成功
     @NameInMap("Success")
     public Boolean success;
 
@@ -70,27 +65,21 @@ public class GetWorkFlowResponseBody extends TeaModel {
     }
 
     public static class GetWorkFlowResponseBodyDataWorkFlowInfo extends TeaModel {
-        // 工作流描述
         @NameInMap("Description")
         public String description;
 
-        // 工作流名称
         @NameInMap("Name")
         public String name;
 
-        // 工作流状态
         @NameInMap("Status")
         public String status;
 
-        // 工作流时间表达式
         @NameInMap("TimeExpression")
         public String timeExpression;
 
-        // 工作流时间类型
         @NameInMap("TimeType")
         public String timeType;
 
-        // 工作流ID
         @NameInMap("WorkflowId")
         public Long workflowId;
 
@@ -150,11 +139,9 @@ public class GetWorkFlowResponseBody extends TeaModel {
     }
 
     public static class GetWorkFlowResponseBodyDataWorkFlowNodeInfoEdges extends TeaModel {
-        // 起始任务ID
         @NameInMap("Source")
         public Long source;
 
-        // 目的任务ID
         @NameInMap("Target")
         public Long target;
 
@@ -182,15 +169,12 @@ public class GetWorkFlowResponseBody extends TeaModel {
     }
 
     public static class GetWorkFlowResponseBodyDataWorkFlowNodeInfoNodes extends TeaModel {
-        // 任务ID
         @NameInMap("Id")
         public Long id;
 
-        // 任务名称
         @NameInMap("Label")
         public String label;
 
-        // 任务状态
         @NameInMap("Status")
         public Integer status;
 
@@ -226,11 +210,9 @@ public class GetWorkFlowResponseBody extends TeaModel {
     }
 
     public static class GetWorkFlowResponseBodyDataWorkFlowNodeInfo extends TeaModel {
-        // 工作流边列表
         @NameInMap("Edges")
         public java.util.List<GetWorkFlowResponseBodyDataWorkFlowNodeInfoEdges> edges;
 
-        // 工作流节点列表
         @NameInMap("Nodes")
         public java.util.List<GetWorkFlowResponseBodyDataWorkFlowNodeInfoNodes> nodes;
 
@@ -258,11 +240,9 @@ public class GetWorkFlowResponseBody extends TeaModel {
     }
 
     public static class GetWorkFlowResponseBodyData extends TeaModel {
-        // 工作流基本信息
         @NameInMap("WorkFlowInfo")
         public GetWorkFlowResponseBodyDataWorkFlowInfo workFlowInfo;
 
-        // 工作流节点信息
         @NameInMap("WorkFlowNodeInfo")
         public GetWorkFlowResponseBodyDataWorkFlowNodeInfo workFlowNodeInfo;
 
