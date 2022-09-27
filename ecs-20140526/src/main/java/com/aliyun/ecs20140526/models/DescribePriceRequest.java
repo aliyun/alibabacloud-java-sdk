@@ -347,7 +347,7 @@ public class DescribePriceRequest extends TeaModel {
         public String performanceLevel;
 
         @NameInMap("Size")
-        public Integer size;
+        public Long size;
 
         public static DescribePriceRequestDataDisk build(java.util.Map<String, ?> map) throws Exception {
             DescribePriceRequestDataDisk self = new DescribePriceRequestDataDisk();
@@ -370,11 +370,11 @@ public class DescribePriceRequest extends TeaModel {
             return this.performanceLevel;
         }
 
-        public DescribePriceRequestDataDisk setSize(Integer size) {
+        public DescribePriceRequestDataDisk setSize(Long size) {
             this.size = size;
             return this;
         }
-        public Integer getSize() {
+        public Long getSize() {
             return this.size;
         }
 
