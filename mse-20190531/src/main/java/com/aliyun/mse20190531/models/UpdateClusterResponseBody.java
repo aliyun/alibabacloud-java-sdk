@@ -7,6 +7,9 @@ public class UpdateClusterResponseBody extends TeaModel {
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    @NameInMap("HttpStatusCode")
+    public String httpStatusCode;
+
     @NameInMap("Message")
     public String message;
 
@@ -27,6 +30,14 @@ public class UpdateClusterResponseBody extends TeaModel {
     }
     public String getErrorCode() {
         return this.errorCode;
+    }
+
+    public UpdateClusterResponseBody setHttpStatusCode(String httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public String getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public UpdateClusterResponseBody setMessage(String message) {
