@@ -103,6 +103,9 @@ public class CreateJobRequest extends TeaModel {
     @NameInMap("TimeoutKillEnable")
     public Boolean timeoutKillEnable;
 
+    @NameInMap("XAttrs")
+    public String XAttrs;
+
     public static CreateJobRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateJobRequest self = new CreateJobRequest();
         return TeaModel.build(map, self);
@@ -370,6 +373,14 @@ public class CreateJobRequest extends TeaModel {
     }
     public Boolean getTimeoutKillEnable() {
         return this.timeoutKillEnable;
+    }
+
+    public CreateJobRequest setXAttrs(String XAttrs) {
+        this.XAttrs = XAttrs;
+        return this;
+    }
+    public String getXAttrs() {
+        return this.XAttrs;
     }
 
     public static class CreateJobRequestContactInfo extends TeaModel {

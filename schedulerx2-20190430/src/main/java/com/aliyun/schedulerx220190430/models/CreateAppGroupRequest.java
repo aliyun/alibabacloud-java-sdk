@@ -10,6 +10,9 @@ public class CreateAppGroupRequest extends TeaModel {
     @NameInMap("AppName")
     public String appName;
 
+    @NameInMap("AppType")
+    public Integer appType;
+
     @NameInMap("Description")
     public String description;
 
@@ -59,6 +62,14 @@ public class CreateAppGroupRequest extends TeaModel {
     }
     public String getAppName() {
         return this.appName;
+    }
+
+    public CreateAppGroupRequest setAppType(Integer appType) {
+        this.appType = appType;
+        return this;
+    }
+    public Integer getAppType() {
+        return this.appType;
     }
 
     public CreateAppGroupRequest setDescription(String description) {

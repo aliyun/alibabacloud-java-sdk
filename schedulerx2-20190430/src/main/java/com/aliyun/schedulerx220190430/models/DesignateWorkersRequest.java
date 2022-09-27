@@ -4,38 +4,30 @@ package com.aliyun.schedulerx220190430.models;
 import com.aliyun.tea.*;
 
 public class DesignateWorkersRequest extends TeaModel {
-    // 指定机器的类型
     @NameInMap("DesignateType")
     public Integer designateType;
 
-    // 应用分组ID
     @NameInMap("GroupId")
     public String groupId;
 
-    // 任务ID
     @NameInMap("JobId")
     public Long jobId;
 
-    // 指定label列表json格式
     @NameInMap("Labels")
     public String labels;
 
-    // 命名空间UID
     @NameInMap("Namespace")
     public String namespace;
 
-    // 命名空间来源
     @NameInMap("NamespaceSource")
     public String namespaceSource;
 
     @NameInMap("RegionId")
     public String regionId;
 
-    // 是否故障转移
     @NameInMap("Transferable")
     public Boolean transferable;
 
-    // 指定机器列表json格式
     @NameInMap("Workers")
     public String workers;
 

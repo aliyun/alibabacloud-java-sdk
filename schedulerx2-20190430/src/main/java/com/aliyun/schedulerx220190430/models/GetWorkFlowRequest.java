@@ -4,22 +4,18 @@ package com.aliyun.schedulerx220190430.models;
 import com.aliyun.tea.*;
 
 public class GetWorkFlowRequest extends TeaModel {
-    // 应用分组ID
     @NameInMap("GroupId")
     public String groupId;
 
-    // 命名空间uid
     @NameInMap("Namespace")
     public String namespace;
 
-    // 命名空间来源
     @NameInMap("NamespaceSource")
     public String namespaceSource;
 
     @NameInMap("RegionId")
     public String regionId;
 
-    // 工作流ID
     @NameInMap("WorkflowId")
     public Long workflowId;
 
