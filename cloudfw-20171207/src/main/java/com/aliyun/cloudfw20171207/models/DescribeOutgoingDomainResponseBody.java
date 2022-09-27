@@ -43,6 +43,9 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
     }
 
     public static class DescribeOutgoingDomainResponseBodyDomainListTagList extends TeaModel {
+        @NameInMap("ClassId")
+        public String classId;
+
         @NameInMap("RiskLevel")
         public Integer riskLevel;
 
@@ -58,6 +61,14 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
         public static DescribeOutgoingDomainResponseBodyDomainListTagList build(java.util.Map<String, ?> map) throws Exception {
             DescribeOutgoingDomainResponseBodyDomainListTagList self = new DescribeOutgoingDomainResponseBodyDomainListTagList();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeOutgoingDomainResponseBodyDomainListTagList setClassId(String classId) {
+            this.classId = classId;
+            return this;
+        }
+        public String getClassId() {
+            return this.classId;
         }
 
         public DescribeOutgoingDomainResponseBodyDomainListTagList setRiskLevel(Integer riskLevel) {
@@ -110,6 +121,12 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
         @NameInMap("AddressGroupUUID")
         public String addressGroupUUID;
 
+        @NameInMap("Business")
+        public String business;
+
+        @NameInMap("CategoryClassId")
+        public String categoryClassId;
+
         @NameInMap("CategoryId")
         public String categoryId;
 
@@ -122,6 +139,9 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
         @NameInMap("GroupName")
         public String groupName;
 
+        @NameInMap("HasAcl")
+        public String hasAcl;
+
         @NameInMap("HasAclRecommend")
         public Boolean hasAclRecommend;
 
@@ -130,6 +150,9 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
 
         @NameInMap("IsMarkNormal")
         public Boolean isMarkNormal;
+
+        @NameInMap("Organization")
+        public String organization;
 
         @NameInMap("OutBytes")
         public Long outBytes;
@@ -140,6 +163,9 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
         @NameInMap("RuleName")
         public String ruleName;
 
+        @NameInMap("SecurityReason")
+        public String securityReason;
+
         @NameInMap("SecuritySuggest")
         public String securitySuggest;
 
@@ -148,6 +174,9 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
 
         @NameInMap("TagList")
         public java.util.List<DescribeOutgoingDomainResponseBodyDomainListTagList> tagList;
+
+        @NameInMap("TotalBytes")
+        public String totalBytes;
 
         public static DescribeOutgoingDomainResponseBodyDomainList build(java.util.Map<String, ?> map) throws Exception {
             DescribeOutgoingDomainResponseBodyDomainList self = new DescribeOutgoingDomainResponseBodyDomainList();
@@ -194,6 +223,22 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
             return this.addressGroupUUID;
         }
 
+        public DescribeOutgoingDomainResponseBodyDomainList setBusiness(String business) {
+            this.business = business;
+            return this;
+        }
+        public String getBusiness() {
+            return this.business;
+        }
+
+        public DescribeOutgoingDomainResponseBodyDomainList setCategoryClassId(String categoryClassId) {
+            this.categoryClassId = categoryClassId;
+            return this;
+        }
+        public String getCategoryClassId() {
+            return this.categoryClassId;
+        }
+
         public DescribeOutgoingDomainResponseBodyDomainList setCategoryId(String categoryId) {
             this.categoryId = categoryId;
             return this;
@@ -226,6 +271,14 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
             return this.groupName;
         }
 
+        public DescribeOutgoingDomainResponseBodyDomainList setHasAcl(String hasAcl) {
+            this.hasAcl = hasAcl;
+            return this;
+        }
+        public String getHasAcl() {
+            return this.hasAcl;
+        }
+
         public DescribeOutgoingDomainResponseBodyDomainList setHasAclRecommend(Boolean hasAclRecommend) {
             this.hasAclRecommend = hasAclRecommend;
             return this;
@@ -248,6 +301,14 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
         }
         public Boolean getIsMarkNormal() {
             return this.isMarkNormal;
+        }
+
+        public DescribeOutgoingDomainResponseBodyDomainList setOrganization(String organization) {
+            this.organization = organization;
+            return this;
+        }
+        public String getOrganization() {
+            return this.organization;
         }
 
         public DescribeOutgoingDomainResponseBodyDomainList setOutBytes(Long outBytes) {
@@ -274,6 +335,14 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
             return this.ruleName;
         }
 
+        public DescribeOutgoingDomainResponseBodyDomainList setSecurityReason(String securityReason) {
+            this.securityReason = securityReason;
+            return this;
+        }
+        public String getSecurityReason() {
+            return this.securityReason;
+        }
+
         public DescribeOutgoingDomainResponseBodyDomainList setSecuritySuggest(String securitySuggest) {
             this.securitySuggest = securitySuggest;
             return this;
@@ -296,6 +365,14 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
         }
         public java.util.List<DescribeOutgoingDomainResponseBodyDomainListTagList> getTagList() {
             return this.tagList;
+        }
+
+        public DescribeOutgoingDomainResponseBodyDomainList setTotalBytes(String totalBytes) {
+            this.totalBytes = totalBytes;
+            return this;
+        }
+        public String getTotalBytes() {
+            return this.totalBytes;
         }
 
     }

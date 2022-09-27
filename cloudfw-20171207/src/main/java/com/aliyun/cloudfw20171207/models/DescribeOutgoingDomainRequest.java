@@ -4,9 +4,6 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeOutgoingDomainRequest extends TeaModel {
-    @NameInMap("CategoryId")
-    public String categoryId;
-
     @NameInMap("CurrentPage")
     public String currentPage;
 
@@ -37,14 +34,6 @@ public class DescribeOutgoingDomainRequest extends TeaModel {
     public static DescribeOutgoingDomainRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeOutgoingDomainRequest self = new DescribeOutgoingDomainRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeOutgoingDomainRequest setCategoryId(String categoryId) {
-        this.categoryId = categoryId;
-        return this;
-    }
-    public String getCategoryId() {
-        return this.categoryId;
     }
 
     public DescribeOutgoingDomainRequest setCurrentPage(String currentPage) {
