@@ -4,9 +4,6 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListLogstashRequest extends TeaModel {
-    @NameInMap("body")
-    public String body;
-
     @NameInMap("description")
     public String description;
 
@@ -25,20 +22,15 @@ public class ListLogstashRequest extends TeaModel {
     @NameInMap("size")
     public Integer size;
 
+    @NameInMap("tags")
+    public String tags;
+
     @NameInMap("version")
     public String version;
 
     public static ListLogstashRequest build(java.util.Map<String, ?> map) throws Exception {
         ListLogstashRequest self = new ListLogstashRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListLogstashRequest setBody(String body) {
-        this.body = body;
-        return this;
-    }
-    public String getBody() {
-        return this.body;
     }
 
     public ListLogstashRequest setDescription(String description) {
@@ -87,6 +79,14 @@ public class ListLogstashRequest extends TeaModel {
     }
     public Integer getSize() {
         return this.size;
+    }
+
+    public ListLogstashRequest setTags(String tags) {
+        this.tags = tags;
+        return this;
+    }
+    public String getTags() {
+        return this.tags;
     }
 
     public ListLogstashRequest setVersion(String version) {

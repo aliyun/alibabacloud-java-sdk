@@ -7,8 +7,14 @@ public class DiagnoseInstanceRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
-    @NameInMap("body")
-    public String body;
+    @NameInMap("diagnoseItems")
+    public java.util.List<String> diagnoseItems;
+
+    @NameInMap("indices")
+    public java.util.List<String> indices;
+
+    @NameInMap("type")
+    public String type;
 
     @NameInMap("lang")
     public String lang;
@@ -26,12 +32,28 @@ public class DiagnoseInstanceRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public DiagnoseInstanceRequest setBody(String body) {
-        this.body = body;
+    public DiagnoseInstanceRequest setDiagnoseItems(java.util.List<String> diagnoseItems) {
+        this.diagnoseItems = diagnoseItems;
         return this;
     }
-    public String getBody() {
-        return this.body;
+    public java.util.List<String> getDiagnoseItems() {
+        return this.diagnoseItems;
+    }
+
+    public DiagnoseInstanceRequest setIndices(java.util.List<String> indices) {
+        this.indices = indices;
+        return this;
+    }
+    public java.util.List<String> getIndices() {
+        return this.indices;
+    }
+
+    public DiagnoseInstanceRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
     public DiagnoseInstanceRequest setLang(String lang) {

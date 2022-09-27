@@ -191,19 +191,15 @@ public class CreateLogstashRequest extends TeaModel {
     }
 
     public static class CreateLogstashRequestPaymentInfo extends TeaModel {
-        // 自动续费包月周期
         @NameInMap("autoRenewDuration")
         public Long autoRenewDuration;
 
-        // 包月周期
         @NameInMap("duration")
         public Long duration;
 
-        // 是否自动续费
         @NameInMap("isAutoRenew")
         public Boolean isAutoRenew;
 
-        // 日期单位
         @NameInMap("pricingCycle")
         public String pricingCycle;
 

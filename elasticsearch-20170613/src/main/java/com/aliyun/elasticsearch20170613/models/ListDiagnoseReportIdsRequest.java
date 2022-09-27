@@ -4,9 +4,6 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListDiagnoseReportIdsRequest extends TeaModel {
-    @NameInMap("body")
-    public String body;
-
     @NameInMap("endTime")
     public Long endTime;
 
@@ -28,14 +25,6 @@ public class ListDiagnoseReportIdsRequest extends TeaModel {
     public static ListDiagnoseReportIdsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDiagnoseReportIdsRequest self = new ListDiagnoseReportIdsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListDiagnoseReportIdsRequest setBody(String body) {
-        this.body = body;
-        return this;
-    }
-    public String getBody() {
-        return this.body;
     }
 
     public ListDiagnoseReportIdsRequest setEndTime(Long endTime) {

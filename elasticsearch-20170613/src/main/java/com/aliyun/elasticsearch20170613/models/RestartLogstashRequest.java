@@ -4,8 +4,20 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class RestartLogstashRequest extends TeaModel {
-    @NameInMap("body")
-    public String body;
+    @NameInMap("batchCount")
+    public Double batchCount;
+
+    @NameInMap("blueGreenDep")
+    public Boolean blueGreenDep;
+
+    @NameInMap("nodeTypes")
+    public java.util.List<String> nodeTypes;
+
+    @NameInMap("nodes")
+    public java.util.List<String> nodes;
+
+    @NameInMap("restartType")
+    public String restartType;
 
     @NameInMap("clientToken")
     public String clientToken;
@@ -18,12 +30,44 @@ public class RestartLogstashRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public RestartLogstashRequest setBody(String body) {
-        this.body = body;
+    public RestartLogstashRequest setBatchCount(Double batchCount) {
+        this.batchCount = batchCount;
         return this;
     }
-    public String getBody() {
-        return this.body;
+    public Double getBatchCount() {
+        return this.batchCount;
+    }
+
+    public RestartLogstashRequest setBlueGreenDep(Boolean blueGreenDep) {
+        this.blueGreenDep = blueGreenDep;
+        return this;
+    }
+    public Boolean getBlueGreenDep() {
+        return this.blueGreenDep;
+    }
+
+    public RestartLogstashRequest setNodeTypes(java.util.List<String> nodeTypes) {
+        this.nodeTypes = nodeTypes;
+        return this;
+    }
+    public java.util.List<String> getNodeTypes() {
+        return this.nodeTypes;
+    }
+
+    public RestartLogstashRequest setNodes(java.util.List<String> nodes) {
+        this.nodes = nodes;
+        return this;
+    }
+    public java.util.List<String> getNodes() {
+        return this.nodes;
+    }
+
+    public RestartLogstashRequest setRestartType(String restartType) {
+        this.restartType = restartType;
+        return this;
+    }
+    public String getRestartType() {
+        return this.restartType;
     }
 
     public RestartLogstashRequest setClientToken(String clientToken) {

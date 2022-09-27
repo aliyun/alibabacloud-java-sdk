@@ -7,8 +7,17 @@ public class UpdateXpackMonitorConfigRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
-    @NameInMap("body")
-    public String body;
+    @NameInMap("enable")
+    public Boolean enable;
+
+    @NameInMap("endpoints")
+    public java.util.List<String> endpoints;
+
+    @NameInMap("password")
+    public String password;
+
+    @NameInMap("userName")
+    public String userName;
 
     public static UpdateXpackMonitorConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateXpackMonitorConfigRequest self = new UpdateXpackMonitorConfigRequest();
@@ -23,12 +32,36 @@ public class UpdateXpackMonitorConfigRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public UpdateXpackMonitorConfigRequest setBody(String body) {
-        this.body = body;
+    public UpdateXpackMonitorConfigRequest setEnable(Boolean enable) {
+        this.enable = enable;
         return this;
     }
-    public String getBody() {
-        return this.body;
+    public Boolean getEnable() {
+        return this.enable;
+    }
+
+    public UpdateXpackMonitorConfigRequest setEndpoints(java.util.List<String> endpoints) {
+        this.endpoints = endpoints;
+        return this;
+    }
+    public java.util.List<String> getEndpoints() {
+        return this.endpoints;
+    }
+
+    public UpdateXpackMonitorConfigRequest setPassword(String password) {
+        this.password = password;
+        return this;
+    }
+    public String getPassword() {
+        return this.password;
+    }
+
+    public UpdateXpackMonitorConfigRequest setUserName(String userName) {
+        this.userName = userName;
+        return this;
+    }
+    public String getUserName() {
+        return this.userName;
     }
 
 }

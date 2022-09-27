@@ -7,7 +7,6 @@ public class DescribeDynamicSettingsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // Id of the request
     @NameInMap("Result")
     public String result;
 

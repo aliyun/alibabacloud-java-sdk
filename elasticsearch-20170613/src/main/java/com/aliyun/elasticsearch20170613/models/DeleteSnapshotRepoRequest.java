@@ -4,9 +4,6 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class DeleteSnapshotRepoRequest extends TeaModel {
-    @NameInMap("body")
-    public String body;
-
     @NameInMap("clientToken")
     public String clientToken;
 
@@ -16,14 +13,6 @@ public class DeleteSnapshotRepoRequest extends TeaModel {
     public static DeleteSnapshotRepoRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteSnapshotRepoRequest self = new DeleteSnapshotRepoRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteSnapshotRepoRequest setBody(String body) {
-        this.body = body;
-        return this;
-    }
-    public String getBody() {
-        return this.body;
     }
 
     public DeleteSnapshotRepoRequest setClientToken(String clientToken) {

@@ -8,7 +8,7 @@ public class UpgradeEngineVersionResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("Result")
-    public UpgradeEngineVersionResponseBodyResult result;
+    public java.util.List<UpgradeEngineVersionResponseBodyResult> result;
 
     public static UpgradeEngineVersionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpgradeEngineVersionResponseBody self = new UpgradeEngineVersionResponseBody();
@@ -23,11 +23,11 @@ public class UpgradeEngineVersionResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public UpgradeEngineVersionResponseBody setResult(UpgradeEngineVersionResponseBodyResult result) {
+    public UpgradeEngineVersionResponseBody setResult(java.util.List<UpgradeEngineVersionResponseBodyResult> result) {
         this.result = result;
         return this;
     }
-    public UpgradeEngineVersionResponseBodyResult getResult() {
+    public java.util.List<UpgradeEngineVersionResponseBodyResult> getResult() {
         return this.result;
     }
 
@@ -77,7 +77,7 @@ public class UpgradeEngineVersionResponseBody extends TeaModel {
         public String status;
 
         @NameInMap("validateResult")
-        public UpgradeEngineVersionResponseBodyResultValidateResult validateResult;
+        public java.util.List<UpgradeEngineVersionResponseBodyResultValidateResult> validateResult;
 
         @NameInMap("validateType")
         public String validateType;
@@ -95,11 +95,11 @@ public class UpgradeEngineVersionResponseBody extends TeaModel {
             return this.status;
         }
 
-        public UpgradeEngineVersionResponseBodyResult setValidateResult(UpgradeEngineVersionResponseBodyResultValidateResult validateResult) {
+        public UpgradeEngineVersionResponseBodyResult setValidateResult(java.util.List<UpgradeEngineVersionResponseBodyResultValidateResult> validateResult) {
             this.validateResult = validateResult;
             return this;
         }
-        public UpgradeEngineVersionResponseBodyResultValidateResult getValidateResult() {
+        public java.util.List<UpgradeEngineVersionResponseBodyResultValidateResult> getValidateResult() {
             return this.validateResult;
         }
 

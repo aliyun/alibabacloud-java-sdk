@@ -7,6 +7,9 @@ public class ValidateShrinkNodesRequest extends TeaModel {
     @NameInMap("body")
     public java.util.List<ValidateShrinkNodesRequestBody> body;
 
+    @NameInMap("count")
+    public Integer count;
+
     @NameInMap("ignoreStatus")
     public Boolean ignoreStatus;
 
@@ -24,6 +27,14 @@ public class ValidateShrinkNodesRequest extends TeaModel {
     }
     public java.util.List<ValidateShrinkNodesRequestBody> getBody() {
         return this.body;
+    }
+
+    public ValidateShrinkNodesRequest setCount(Integer count) {
+        this.count = count;
+        return this;
+    }
+    public Integer getCount() {
+        return this.count;
     }
 
     public ValidateShrinkNodesRequest setIgnoreStatus(Boolean ignoreStatus) {
@@ -46,6 +57,12 @@ public class ValidateShrinkNodesRequest extends TeaModel {
         @NameInMap("host")
         public String host;
 
+        @NameInMap("hostName")
+        public String hostName;
+
+        @NameInMap("nodeType")
+        public String nodeType;
+
         @NameInMap("port")
         public Integer port;
 
@@ -63,6 +80,22 @@ public class ValidateShrinkNodesRequest extends TeaModel {
         }
         public String getHost() {
             return this.host;
+        }
+
+        public ValidateShrinkNodesRequestBody setHostName(String hostName) {
+            this.hostName = hostName;
+            return this;
+        }
+        public String getHostName() {
+            return this.hostName;
+        }
+
+        public ValidateShrinkNodesRequestBody setNodeType(String nodeType) {
+            this.nodeType = nodeType;
+            return this;
+        }
+        public String getNodeType() {
+            return this.nodeType;
         }
 
         public ValidateShrinkNodesRequestBody setPort(Integer port) {

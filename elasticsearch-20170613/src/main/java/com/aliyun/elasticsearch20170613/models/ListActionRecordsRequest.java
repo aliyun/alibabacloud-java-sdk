@@ -7,9 +7,6 @@ public class ListActionRecordsRequest extends TeaModel {
     @NameInMap("actionNames")
     public String actionNames;
 
-    @NameInMap("body")
-    public String body;
-
     @NameInMap("endTime")
     public Long endTime;
 
@@ -42,14 +39,6 @@ public class ListActionRecordsRequest extends TeaModel {
     }
     public String getActionNames() {
         return this.actionNames;
-    }
-
-    public ListActionRecordsRequest setBody(String body) {
-        this.body = body;
-        return this;
-    }
-    public String getBody() {
-        return this.body;
     }
 
     public ListActionRecordsRequest setEndTime(Long endTime) {

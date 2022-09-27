@@ -31,31 +31,9 @@ public class DiagnoseInstanceResponseBody extends TeaModel {
         return this.result;
     }
 
-    public static class DiagnoseInstanceResponseBodyResultDiagnoseItems extends TeaModel {
-        @NameInMap("item")
-        public String item;
-
-        public static DiagnoseInstanceResponseBodyResultDiagnoseItems build(java.util.Map<String, ?> map) throws Exception {
-            DiagnoseInstanceResponseBodyResultDiagnoseItems self = new DiagnoseInstanceResponseBodyResultDiagnoseItems();
-            return TeaModel.build(map, self);
-        }
-
-        public DiagnoseInstanceResponseBodyResultDiagnoseItems setItem(String item) {
-            this.item = item;
-            return this;
-        }
-        public String getItem() {
-            return this.item;
-        }
-
-    }
-
     public static class DiagnoseInstanceResponseBodyResult extends TeaModel {
         @NameInMap("createTime")
         public Long createTime;
-
-        @NameInMap("diagnoseItems")
-        public java.util.List<DiagnoseInstanceResponseBodyResultDiagnoseItems> diagnoseItems;
 
         @NameInMap("instanceId")
         public String instanceId;
@@ -77,14 +55,6 @@ public class DiagnoseInstanceResponseBody extends TeaModel {
         }
         public Long getCreateTime() {
             return this.createTime;
-        }
-
-        public DiagnoseInstanceResponseBodyResult setDiagnoseItems(java.util.List<DiagnoseInstanceResponseBodyResultDiagnoseItems> diagnoseItems) {
-            this.diagnoseItems = diagnoseItems;
-            return this;
-        }
-        public java.util.List<DiagnoseInstanceResponseBodyResultDiagnoseItems> getDiagnoseItems() {
-            return this.diagnoseItems;
         }
 
         public DiagnoseInstanceResponseBodyResult setInstanceId(String instanceId) {

@@ -4,9 +4,6 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListEcsInstancesRequest extends TeaModel {
-    @NameInMap("body")
-    public String body;
-
     @NameInMap("ecsInstanceIds")
     public String ecsInstanceIds;
 
@@ -28,14 +25,6 @@ public class ListEcsInstancesRequest extends TeaModel {
     public static ListEcsInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListEcsInstancesRequest self = new ListEcsInstancesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListEcsInstancesRequest setBody(String body) {
-        this.body = body;
-        return this;
-    }
-    public String getBody() {
-        return this.body;
     }
 
     public ListEcsInstancesRequest setEcsInstanceIds(String ecsInstanceIds) {

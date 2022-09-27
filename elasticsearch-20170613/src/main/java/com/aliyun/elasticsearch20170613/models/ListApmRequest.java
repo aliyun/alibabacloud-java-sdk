@@ -4,9 +4,6 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListApmRequest extends TeaModel {
-    @NameInMap("body")
-    public String body;
-
     @NameInMap("description")
     public String description;
 
@@ -25,14 +22,6 @@ public class ListApmRequest extends TeaModel {
     public static ListApmRequest build(java.util.Map<String, ?> map) throws Exception {
         ListApmRequest self = new ListApmRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListApmRequest setBody(String body) {
-        this.body = body;
-        return this;
-    }
-    public String getBody() {
-        return this.body;
     }
 
     public ListApmRequest setDescription(String description) {

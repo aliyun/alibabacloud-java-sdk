@@ -4,79 +4,60 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class Logstash extends TeaModel {
-    // Config
     @NameInMap("config")
     public java.util.Map<String, String> config;
 
-    // CreatedAt
     @NameInMap("createdAt")
     public String createdAt;
 
-    // DataNode
     @NameInMap("dataNode")
     public Boolean dataNode;
 
-    // Description
     @NameInMap("description")
     public String description;
 
-    // EndTime
     @NameInMap("endTime")
     public Long endTime;
 
-    // EndpointList
     @NameInMap("endpointList")
     public java.util.List<LogstashEndpointList> endpointList;
 
-    // InstanceId
     @NameInMap("instanceId")
     public String instanceId;
 
-    // NetworkConfig
     @NameInMap("networkConfig")
     public LogstashNetworkConfig networkConfig;
 
-    // NodeAmount
     @NameInMap("nodeAmount")
     public Long nodeAmount;
 
-    // NodeSpec
     @NameInMap("nodeSpec")
     public LogstashNodeSpec nodeSpec;
 
-    // PaymentType
     @NameInMap("paymentType")
     public String paymentType;
 
-    // Protocol
     @NameInMap("protocol")
     public String protocol;
 
-    // ResourceGroupId
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
-    // Status
     @NameInMap("status")
     public String status;
 
-    // Tags
     @NameInMap("tags")
     public java.util.List<LogstashTags> tags;
 
-    // UpdatedAt
     @NameInMap("updatedAt")
     public String updatedAt;
 
-    // Version
     @NameInMap("version")
     public String version;
 
-    // ZoneCount
     @NameInMap("zoneCount")
     public Long zoneCount;
 
-    // ZoneInfos
     @NameInMap("zoneInfos")
     public java.util.List<LogstashZoneInfos> zoneInfos;
 
@@ -238,15 +219,12 @@ public class Logstash extends TeaModel {
     }
 
     public static class LogstashEndpointList extends TeaModel {
-        // Host
         @NameInMap("host")
         public String host;
 
-        // Port
         @NameInMap("port")
         public Long port;
 
-        // ZoneId
         @NameInMap("zoneId")
         public String zoneId;
 
@@ -282,19 +260,15 @@ public class Logstash extends TeaModel {
     }
 
     public static class LogstashNetworkConfig extends TeaModel {
-        // Type
         @NameInMap("type")
         public String type;
 
-        // VpcId
         @NameInMap("vpcId")
         public String vpcId;
 
-        // VsArea
         @NameInMap("vsArea")
         public String vsArea;
 
-        // VswitchId
         @NameInMap("vswitchId")
         public String vswitchId;
 
@@ -338,15 +312,12 @@ public class Logstash extends TeaModel {
     }
 
     public static class LogstashNodeSpec extends TeaModel {
-        // Disk
         @NameInMap("disk")
         public Long disk;
 
-        // DiskType
         @NameInMap("diskType")
         public String diskType;
 
-        // Spec
         @NameInMap("spec")
         public String spec;
 
@@ -382,11 +353,9 @@ public class Logstash extends TeaModel {
     }
 
     public static class LogstashTags extends TeaModel {
-        // TagKey
         @NameInMap("tagKey")
         public String tagKey;
 
-        // TagValue
         @NameInMap("tagValue")
         public String tagValue;
 
@@ -414,11 +383,9 @@ public class Logstash extends TeaModel {
     }
 
     public static class LogstashZoneInfos extends TeaModel {
-        // Status
         @NameInMap("status")
         public String status;
 
-        // ZoneId
         @NameInMap("zoneId")
         public String zoneId;
 
