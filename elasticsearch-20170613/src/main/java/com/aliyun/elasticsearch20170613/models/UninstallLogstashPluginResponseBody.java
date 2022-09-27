@@ -4,6 +4,9 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class UninstallLogstashPluginResponseBody extends TeaModel {
+    @NameInMap("Headers")
+    public java.util.Map<String, ?> headers;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -13,6 +16,14 @@ public class UninstallLogstashPluginResponseBody extends TeaModel {
     public static UninstallLogstashPluginResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UninstallLogstashPluginResponseBody self = new UninstallLogstashPluginResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public UninstallLogstashPluginResponseBody setHeaders(java.util.Map<String, ?> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, ?> getHeaders() {
+        return this.headers;
     }
 
     public UninstallLogstashPluginResponseBody setRequestId(String requestId) {

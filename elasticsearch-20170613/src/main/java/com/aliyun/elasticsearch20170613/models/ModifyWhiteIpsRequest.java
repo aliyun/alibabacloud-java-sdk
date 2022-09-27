@@ -4,29 +4,18 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ModifyWhiteIpsRequest extends TeaModel {
-    // 修改方式，取值含义如下：
-    // 
-    // Cover（默认值）：使用ips参数的值覆盖原IP白名单。
-    // 
-    // Append：在原IP白名单中增加ips参数中输入的IP地址。
-    // 
-    // Delete：Delete：在原IP白名单中删除ips参数中输入的IP地址，至少需要保留一个IP地址。
     @NameInMap("modifyMode")
     public String modifyMode;
 
-    // 网络类型。可选值：PRIVATE（私网）、PUBLIC（公网）。如果选填了whiteIpList参数，则该参数必填。
     @NameInMap("networkType")
     public String networkType;
 
-    // 节点类型。可选值：WORKER（Elasticsearch集群）、KIBANA（Kibana集群）。如果选填了whiteIpList参数，则该参数必填。
     @NameInMap("nodeType")
     public String nodeType;
 
-    // 以白名单组whiteIpGroup传参方式，更新实例白名单安全配置。仅支持更新一个白名单组。
     @NameInMap("whiteIpGroup")
     public ModifyWhiteIpsRequestWhiteIpGroup whiteIpGroup;
 
-    // 白名单列表。whiteIpGroup为空时可用，更改默认分组白名单
     @NameInMap("whiteIpList")
     public java.util.List<String> whiteIpList;
 
@@ -87,15 +76,12 @@ public class ModifyWhiteIpsRequest extends TeaModel {
     }
 
     public static class ModifyWhiteIpsRequestWhiteIpGroup extends TeaModel {
-        // 白名单组的组名。如果选填了whiteIpGroup参数，则该参数必填。
         @NameInMap("groupName")
         public String groupName;
 
-        // 白名单组中的IP列表。如果选填了whiteIpGroup参数，则该参数必填。
         @NameInMap("ips")
         public java.util.List<String> ips;
 
-        // ip白名单的类型
         @NameInMap("whiteIpType")
         public String whiteIpType;
 

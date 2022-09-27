@@ -4,7 +4,6 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class GetOpenStoreUsageResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -33,11 +32,9 @@ public class GetOpenStoreUsageResponseBody extends TeaModel {
     }
 
     public static class GetOpenStoreUsageResponseBodyResult extends TeaModel {
-        // 当前使用量
         @NameInMap("currentUsage")
         public Long currentUsage;
 
-        // 昨日使用容量
         @NameInMap("lastDayUsage")
         public Long lastDayUsage;
 

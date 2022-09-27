@@ -4,7 +4,6 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class UpdateDynamicSettingsRequest extends TeaModel {
-    // 幂等参数
     @NameInMap("ClientToken")
     public String clientToken;
 

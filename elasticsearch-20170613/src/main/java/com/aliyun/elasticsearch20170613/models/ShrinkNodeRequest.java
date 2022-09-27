@@ -10,6 +10,9 @@ public class ShrinkNodeRequest extends TeaModel {
     @NameInMap("clientToken")
     public String clientToken;
 
+    @NameInMap("count")
+    public Integer count;
+
     @NameInMap("ignoreStatus")
     public Boolean ignoreStatus;
 
@@ -37,6 +40,14 @@ public class ShrinkNodeRequest extends TeaModel {
         return this.clientToken;
     }
 
+    public ShrinkNodeRequest setCount(Integer count) {
+        this.count = count;
+        return this;
+    }
+    public Integer getCount() {
+        return this.count;
+    }
+
     public ShrinkNodeRequest setIgnoreStatus(Boolean ignoreStatus) {
         this.ignoreStatus = ignoreStatus;
         return this;
@@ -57,6 +68,12 @@ public class ShrinkNodeRequest extends TeaModel {
         @NameInMap("host")
         public String host;
 
+        @NameInMap("hostName")
+        public String hostName;
+
+        @NameInMap("nodeType")
+        public String nodeType;
+
         @NameInMap("port")
         public Integer port;
 
@@ -74,6 +91,22 @@ public class ShrinkNodeRequest extends TeaModel {
         }
         public String getHost() {
             return this.host;
+        }
+
+        public ShrinkNodeRequestBody setHostName(String hostName) {
+            this.hostName = hostName;
+            return this;
+        }
+        public String getHostName() {
+            return this.hostName;
+        }
+
+        public ShrinkNodeRequestBody setNodeType(String nodeType) {
+            this.nodeType = nodeType;
+            return this;
+        }
+        public String getNodeType() {
+            return this.nodeType;
         }
 
         public ShrinkNodeRequestBody setPort(Integer port) {

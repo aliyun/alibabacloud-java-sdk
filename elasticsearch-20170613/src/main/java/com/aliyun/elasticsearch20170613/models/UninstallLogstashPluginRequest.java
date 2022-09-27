@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UninstallLogstashPluginRequest extends TeaModel {
     @NameInMap("body")
-    public String body;
+    public java.util.List<String> body;
 
     @NameInMap("clientToken")
     public String clientToken;
@@ -15,11 +15,11 @@ public class UninstallLogstashPluginRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public UninstallLogstashPluginRequest setBody(String body) {
+    public UninstallLogstashPluginRequest setBody(java.util.List<String> body) {
         this.body = body;
         return this;
     }
-    public String getBody() {
+    public java.util.List<String> getBody() {
         return this.body;
     }
 

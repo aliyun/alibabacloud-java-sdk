@@ -7,9 +7,6 @@ public class DeletePipelinesRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
-    @NameInMap("body")
-    public String body;
-
     @NameInMap("pipelineIds")
     public String pipelineIds;
 
@@ -24,14 +21,6 @@ public class DeletePipelinesRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
-    }
-
-    public DeletePipelinesRequest setBody(String body) {
-        this.body = body;
-        return this;
-    }
-    public String getBody() {
-        return this.body;
     }
 
     public DeletePipelinesRequest setPipelineIds(String pipelineIds) {

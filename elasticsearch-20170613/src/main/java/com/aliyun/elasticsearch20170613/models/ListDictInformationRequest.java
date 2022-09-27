@@ -7,9 +7,6 @@ public class ListDictInformationRequest extends TeaModel {
     @NameInMap("analyzerType")
     public String analyzerType;
 
-    @NameInMap("body")
-    public String body;
-
     @NameInMap("bucketName")
     public String bucketName;
 
@@ -27,14 +24,6 @@ public class ListDictInformationRequest extends TeaModel {
     }
     public String getAnalyzerType() {
         return this.analyzerType;
-    }
-
-    public ListDictInformationRequest setBody(String body) {
-        this.body = body;
-        return this;
-    }
-    public String getBody() {
-        return this.body;
     }
 
     public ListDictInformationRequest setBucketName(String bucketName) {

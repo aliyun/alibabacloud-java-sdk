@@ -4,8 +4,11 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class UpdateLogstashRequest extends TeaModel {
-    @NameInMap("body")
-    public String body;
+    @NameInMap("nodeAmount")
+    public Integer nodeAmount;
+
+    @NameInMap("nodeSpec")
+    public UpdateLogstashRequestNodeSpec nodeSpec;
 
     @NameInMap("clientToken")
     public String clientToken;
@@ -15,12 +18,20 @@ public class UpdateLogstashRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public UpdateLogstashRequest setBody(String body) {
-        this.body = body;
+    public UpdateLogstashRequest setNodeAmount(Integer nodeAmount) {
+        this.nodeAmount = nodeAmount;
         return this;
     }
-    public String getBody() {
-        return this.body;
+    public Integer getNodeAmount() {
+        return this.nodeAmount;
+    }
+
+    public UpdateLogstashRequest setNodeSpec(UpdateLogstashRequestNodeSpec nodeSpec) {
+        this.nodeSpec = nodeSpec;
+        return this;
+    }
+    public UpdateLogstashRequestNodeSpec getNodeSpec() {
+        return this.nodeSpec;
     }
 
     public UpdateLogstashRequest setClientToken(String clientToken) {
@@ -29,6 +40,47 @@ public class UpdateLogstashRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public static class UpdateLogstashRequestNodeSpec extends TeaModel {
+        @NameInMap("disk")
+        public Integer disk;
+
+        @NameInMap("diskType")
+        public String diskType;
+
+        @NameInMap("spec")
+        public String spec;
+
+        public static UpdateLogstashRequestNodeSpec build(java.util.Map<String, ?> map) throws Exception {
+            UpdateLogstashRequestNodeSpec self = new UpdateLogstashRequestNodeSpec();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateLogstashRequestNodeSpec setDisk(Integer disk) {
+            this.disk = disk;
+            return this;
+        }
+        public Integer getDisk() {
+            return this.disk;
+        }
+
+        public UpdateLogstashRequestNodeSpec setDiskType(String diskType) {
+            this.diskType = diskType;
+            return this;
+        }
+        public String getDiskType() {
+            return this.diskType;
+        }
+
+        public UpdateLogstashRequestNodeSpec setSpec(String spec) {
+            this.spec = spec;
+            return this;
+        }
+        public String getSpec() {
+            return this.spec;
+        }
+
     }
 
 }

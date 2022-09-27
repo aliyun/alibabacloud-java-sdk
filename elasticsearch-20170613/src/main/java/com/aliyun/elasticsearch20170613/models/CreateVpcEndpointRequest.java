@@ -7,11 +7,9 @@ public class CreateVpcEndpointRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // 终端节点服务ID
     @NameInMap("serviceId")
     public String serviceId;
 
-    // 可用区ID
     @NameInMap("zoneId")
     public String zoneId;
 

@@ -4,23 +4,18 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class UpdateApmRequest extends TeaModel {
-    // apm实例名
     @NameInMap("description")
     public String description;
 
-    // es实例id
     @NameInMap("outputES")
     public String outputES;
 
-    // es实例密码
     @NameInMap("outputESPassword")
     public String outputESPassword;
 
-    // es实例用户名
     @NameInMap("outputESUserName")
     public String outputESUserName;
 
-    // apm server密码
     @NameInMap("token")
     public String token;
 

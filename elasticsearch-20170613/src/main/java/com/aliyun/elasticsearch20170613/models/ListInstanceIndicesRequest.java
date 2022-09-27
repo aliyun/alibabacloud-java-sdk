@@ -7,9 +7,6 @@ public class ListInstanceIndicesRequest extends TeaModel {
     @NameInMap("all")
     public Boolean all;
 
-    @NameInMap("body")
-    public String body;
-
     @NameInMap("isManaged")
     public Boolean isManaged;
 
@@ -36,14 +33,6 @@ public class ListInstanceIndicesRequest extends TeaModel {
     }
     public Boolean getAll() {
         return this.all;
-    }
-
-    public ListInstanceIndicesRequest setBody(String body) {
-        this.body = body;
-        return this;
-    }
-    public String getBody() {
-        return this.body;
     }
 
     public ListInstanceIndicesRequest setIsManaged(Boolean isManaged) {

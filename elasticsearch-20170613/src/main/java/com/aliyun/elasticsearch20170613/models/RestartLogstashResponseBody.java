@@ -7,6 +7,9 @@ public class RestartLogstashResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("Result")
+    public Logstash result;
+
     public static RestartLogstashResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RestartLogstashResponseBody self = new RestartLogstashResponseBody();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class RestartLogstashResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public RestartLogstashResponseBody setResult(Logstash result) {
+        this.result = result;
+        return this;
+    }
+    public Logstash getResult() {
+        return this.result;
     }
 
 }

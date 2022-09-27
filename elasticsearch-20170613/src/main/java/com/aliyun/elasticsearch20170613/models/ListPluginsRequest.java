@@ -4,9 +4,6 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListPluginsRequest extends TeaModel {
-    @NameInMap("body")
-    public String body;
-
     @NameInMap("name")
     public String name;
 
@@ -22,14 +19,6 @@ public class ListPluginsRequest extends TeaModel {
     public static ListPluginsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListPluginsRequest self = new ListPluginsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListPluginsRequest setBody(String body) {
-        this.body = body;
-        return this;
-    }
-    public String getBody() {
-        return this.body;
     }
 
     public ListPluginsRequest setName(String name) {
