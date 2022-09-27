@@ -42,6 +42,36 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeOutgoingDestinationIPResponseBodyDstIPListAddressGroupList extends TeaModel {
+        @NameInMap("AddressGroupName")
+        public String addressGroupName;
+
+        @NameInMap("AddressGroupUUID")
+        public String addressGroupUUID;
+
+        public static DescribeOutgoingDestinationIPResponseBodyDstIPListAddressGroupList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeOutgoingDestinationIPResponseBodyDstIPListAddressGroupList self = new DescribeOutgoingDestinationIPResponseBodyDstIPListAddressGroupList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeOutgoingDestinationIPResponseBodyDstIPListAddressGroupList setAddressGroupName(String addressGroupName) {
+            this.addressGroupName = addressGroupName;
+            return this;
+        }
+        public String getAddressGroupName() {
+            return this.addressGroupName;
+        }
+
+        public DescribeOutgoingDestinationIPResponseBodyDstIPListAddressGroupList setAddressGroupUUID(String addressGroupUUID) {
+            this.addressGroupUUID = addressGroupUUID;
+            return this;
+        }
+        public String getAddressGroupUUID() {
+            return this.addressGroupUUID;
+        }
+
+    }
+
     public static class DescribeOutgoingDestinationIPResponseBodyDstIPListApplicationPortList extends TeaModel {
         @NameInMap("ApplicationName")
         public String applicationName;
@@ -73,6 +103,9 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
     }
 
     public static class DescribeOutgoingDestinationIPResponseBodyDstIPListTagList extends TeaModel {
+        @NameInMap("ClassId")
+        public String classId;
+
         @NameInMap("RiskLevel")
         public Integer riskLevel;
 
@@ -88,6 +121,14 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
         public static DescribeOutgoingDestinationIPResponseBodyDstIPListTagList build(java.util.Map<String, ?> map) throws Exception {
             DescribeOutgoingDestinationIPResponseBodyDstIPListTagList self = new DescribeOutgoingDestinationIPResponseBodyDstIPListTagList();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeOutgoingDestinationIPResponseBodyDstIPListTagList setClassId(String classId) {
+            this.classId = classId;
+            return this;
+        }
+        public String getClassId() {
+            return this.classId;
         }
 
         public DescribeOutgoingDestinationIPResponseBodyDstIPListTagList setRiskLevel(Integer riskLevel) {
@@ -134,14 +175,14 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
         @NameInMap("AclStatus")
         public String aclStatus;
 
-        @NameInMap("AddressGroupName")
-        public String addressGroupName;
-
-        @NameInMap("AddressGroupUUID")
-        public String addressGroupUUID;
+        @NameInMap("AddressGroupList")
+        public java.util.List<DescribeOutgoingDestinationIPResponseBodyDstIPListAddressGroupList> addressGroupList;
 
         @NameInMap("ApplicationPortList")
         public java.util.List<DescribeOutgoingDestinationIPResponseBodyDstIPListApplicationPortList> applicationPortList;
+
+        @NameInMap("CategoryClassId")
+        public String categoryClassId;
 
         @NameInMap("CategoryId")
         public String categoryId;
@@ -154,6 +195,9 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
 
         @NameInMap("GroupName")
         public String groupName;
+
+        @NameInMap("HasAcl")
+        public String hasAcl;
 
         @NameInMap("HasAclRecommend")
         public Boolean hasAclRecommend;
@@ -173,6 +217,9 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
         @NameInMap("RuleName")
         public String ruleName;
 
+        @NameInMap("SecurityReason")
+        public String securityReason;
+
         @NameInMap("SecuritySuggest")
         public String securitySuggest;
 
@@ -181,6 +228,9 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
 
         @NameInMap("TagList")
         public java.util.List<DescribeOutgoingDestinationIPResponseBodyDstIPListTagList> tagList;
+
+        @NameInMap("TotalBytes")
+        public String totalBytes;
 
         public static DescribeOutgoingDestinationIPResponseBodyDstIPList build(java.util.Map<String, ?> map) throws Exception {
             DescribeOutgoingDestinationIPResponseBodyDstIPList self = new DescribeOutgoingDestinationIPResponseBodyDstIPList();
@@ -211,20 +261,12 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             return this.aclStatus;
         }
 
-        public DescribeOutgoingDestinationIPResponseBodyDstIPList setAddressGroupName(String addressGroupName) {
-            this.addressGroupName = addressGroupName;
+        public DescribeOutgoingDestinationIPResponseBodyDstIPList setAddressGroupList(java.util.List<DescribeOutgoingDestinationIPResponseBodyDstIPListAddressGroupList> addressGroupList) {
+            this.addressGroupList = addressGroupList;
             return this;
         }
-        public String getAddressGroupName() {
-            return this.addressGroupName;
-        }
-
-        public DescribeOutgoingDestinationIPResponseBodyDstIPList setAddressGroupUUID(String addressGroupUUID) {
-            this.addressGroupUUID = addressGroupUUID;
-            return this;
-        }
-        public String getAddressGroupUUID() {
-            return this.addressGroupUUID;
+        public java.util.List<DescribeOutgoingDestinationIPResponseBodyDstIPListAddressGroupList> getAddressGroupList() {
+            return this.addressGroupList;
         }
 
         public DescribeOutgoingDestinationIPResponseBodyDstIPList setApplicationPortList(java.util.List<DescribeOutgoingDestinationIPResponseBodyDstIPListApplicationPortList> applicationPortList) {
@@ -233,6 +275,14 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
         }
         public java.util.List<DescribeOutgoingDestinationIPResponseBodyDstIPListApplicationPortList> getApplicationPortList() {
             return this.applicationPortList;
+        }
+
+        public DescribeOutgoingDestinationIPResponseBodyDstIPList setCategoryClassId(String categoryClassId) {
+            this.categoryClassId = categoryClassId;
+            return this;
+        }
+        public String getCategoryClassId() {
+            return this.categoryClassId;
         }
 
         public DescribeOutgoingDestinationIPResponseBodyDstIPList setCategoryId(String categoryId) {
@@ -265,6 +315,14 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
         }
         public String getGroupName() {
             return this.groupName;
+        }
+
+        public DescribeOutgoingDestinationIPResponseBodyDstIPList setHasAcl(String hasAcl) {
+            this.hasAcl = hasAcl;
+            return this;
+        }
+        public String getHasAcl() {
+            return this.hasAcl;
         }
 
         public DescribeOutgoingDestinationIPResponseBodyDstIPList setHasAclRecommend(Boolean hasAclRecommend) {
@@ -315,6 +373,14 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             return this.ruleName;
         }
 
+        public DescribeOutgoingDestinationIPResponseBodyDstIPList setSecurityReason(String securityReason) {
+            this.securityReason = securityReason;
+            return this;
+        }
+        public String getSecurityReason() {
+            return this.securityReason;
+        }
+
         public DescribeOutgoingDestinationIPResponseBodyDstIPList setSecuritySuggest(String securitySuggest) {
             this.securitySuggest = securitySuggest;
             return this;
@@ -337,6 +403,14 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
         }
         public java.util.List<DescribeOutgoingDestinationIPResponseBodyDstIPListTagList> getTagList() {
             return this.tagList;
+        }
+
+        public DescribeOutgoingDestinationIPResponseBodyDstIPList setTotalBytes(String totalBytes) {
+            this.totalBytes = totalBytes;
+            return this;
+        }
+        public String getTotalBytes() {
+            return this.totalBytes;
         }
 
     }

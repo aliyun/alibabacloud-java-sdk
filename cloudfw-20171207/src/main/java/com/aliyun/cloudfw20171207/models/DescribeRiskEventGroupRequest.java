@@ -40,6 +40,9 @@ public class DescribeRiskEventGroupRequest extends TeaModel {
     @NameInMap("NoLocation")
     public String noLocation;
 
+    @NameInMap("Order")
+    public String order;
+
     @NameInMap("PageSize")
     public String pageSize;
 
@@ -48,6 +51,9 @@ public class DescribeRiskEventGroupRequest extends TeaModel {
 
     @NameInMap("RuleSource")
     public String ruleSource;
+
+    @NameInMap("Sort")
+    public String sort;
 
     @NameInMap("SrcIP")
     public String srcIP;
@@ -162,6 +168,14 @@ public class DescribeRiskEventGroupRequest extends TeaModel {
         return this.noLocation;
     }
 
+    public DescribeRiskEventGroupRequest setOrder(String order) {
+        this.order = order;
+        return this;
+    }
+    public String getOrder() {
+        return this.order;
+    }
+
     public DescribeRiskEventGroupRequest setPageSize(String pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -184,6 +198,14 @@ public class DescribeRiskEventGroupRequest extends TeaModel {
     }
     public String getRuleSource() {
         return this.ruleSource;
+    }
+
+    public DescribeRiskEventGroupRequest setSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    public String getSort() {
+        return this.sort;
     }
 
     public DescribeRiskEventGroupRequest setSrcIP(String srcIP) {
