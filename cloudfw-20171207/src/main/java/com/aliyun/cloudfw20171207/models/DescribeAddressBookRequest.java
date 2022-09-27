@@ -22,9 +22,6 @@ public class DescribeAddressBookRequest extends TeaModel {
     @NameInMap("Query")
     public String query;
 
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
     public static DescribeAddressBookRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAddressBookRequest self = new DescribeAddressBookRequest();
         return TeaModel.build(map, self);
@@ -76,14 +73,6 @@ public class DescribeAddressBookRequest extends TeaModel {
     }
     public String getQuery() {
         return this.query;
-    }
-
-    public DescribeAddressBookRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
 }
