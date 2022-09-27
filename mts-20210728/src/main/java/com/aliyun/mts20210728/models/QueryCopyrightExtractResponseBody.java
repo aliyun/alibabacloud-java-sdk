@@ -7,14 +7,12 @@ public class QueryCopyrightExtractResponseBody extends TeaModel {
     @NameInMap("Data")
     public QueryCopyrightExtractResponseBodyData data;
 
-    // 返回信息
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestID")
     public String requestID;
 
-    // 状态码
     @NameInMap("StatusCode")
     public Long statusCode;
 
@@ -56,7 +54,6 @@ public class QueryCopyrightExtractResponseBody extends TeaModel {
     }
 
     public static class QueryCopyrightExtractResponseBodyData extends TeaModel {
-        // 版权水印信息
         @NameInMap("Message")
         public String message;
 

@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>mts20210728</artifactId>
-  <version>3.3.7</version>
+  <version>3.3.8</version>
   <packaging>jar</packaging>
   <name>mts20210728</name>
   <description>Alibaba Cloud ApsaraVideo for Media Processing (20210728) SDK for Java
@@ -41,12 +41,12 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-util</artifactId>
-      <version>0.2.13</version>
+      <version>0.2.14</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.2.2</version>
+      <version>0.2.6</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>

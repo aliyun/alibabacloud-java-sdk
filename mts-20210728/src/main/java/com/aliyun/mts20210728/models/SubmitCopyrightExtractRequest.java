@@ -4,19 +4,15 @@ package com.aliyun.mts20210728.models;
 import com.aliyun.tea.*;
 
 public class SubmitCopyrightExtractRequest extends TeaModel {
-    // 任务完成回调
     @NameInMap("CallBack")
     public String callBack;
 
-    // 输入文件oss地址
     @NameInMap("Input")
     public String input;
 
-    // url链接
     @NameInMap("Url")
     public String url;
 
-    // 用户数据
     @NameInMap("UserData")
     public String userData;
 

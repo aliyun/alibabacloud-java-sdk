@@ -4,19 +4,15 @@ package com.aliyun.mts20210728.models;
 import com.aliyun.tea.*;
 
 public class QueryTraceAbResponseBody extends TeaModel {
-    // 返回结构
     @NameInMap("Data")
     public java.util.List<QueryTraceAbResponseBodyData> data;
 
-    // 返回信息
     @NameInMap("Message")
     public String message;
 
-    // 请求id
     @NameInMap("RequestID")
     public String requestID;
 
-    // 状态码
     @NameInMap("StatusCode")
     public Long statusCode;
 
@@ -58,51 +54,39 @@ public class QueryTraceAbResponseBody extends TeaModel {
     }
 
     public static class QueryTraceAbResponseBodyData extends TeaModel {
-        // 任务结果回调
         @NameInMap("Callback")
         public String callback;
 
-        // 创建时间
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
-        // 最后修改时间
         @NameInMap("GmtModified")
         public Long gmtModified;
 
-        // 输入oss地址
         @NameInMap("Input")
         public String input;
 
-        // 任务id
         @NameInMap("JobId")
         public String jobId;
 
-        // 水印强度
         @NameInMap("Level")
         public Long level;
 
-        // 媒体id
         @NameInMap("MediaId")
         public String mediaId;
 
-        // 输出地址
         @NameInMap("Output")
         public String output;
 
-        // 任务结果
         @NameInMap("Result")
         public String result;
 
-        // 任务状态
         @NameInMap("Status")
         public String status;
 
-        // 用户数据
         @NameInMap("UserData")
         public String userData;
 
-        // uid
         @NameInMap("UserId")
         public Long userId;
 

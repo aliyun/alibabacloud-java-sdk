@@ -3,16 +3,10 @@ package com.aliyun.mts20210728;
 
 import com.aliyun.tea.*;
 import com.aliyun.mts20210728.models.*;
-import com.aliyun.teautil.*;
-import com.aliyun.teautil.models.*;
-import com.aliyun.teaopenapi.*;
-import com.aliyun.teaopenapi.models.*;
-import com.aliyun.openapiutil.*;
-import com.aliyun.endpointutil.*;
 
 public class Client extends com.aliyun.teaopenapi.Client {
 
-    public Client(Config config) throws Exception {
+    public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
@@ -77,12 +71,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public QueryCopyrightResponse queryCopyright(QueryCopyrightRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.queryCopyrightWithOptions(request, headers, runtime);
     }
 
-    public QueryCopyrightResponse queryCopyrightWithOptions(QueryCopyrightRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public QueryCopyrightResponse queryCopyrightWithOptions(QueryCopyrightRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.createTimeEnd)) {
@@ -109,11 +103,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("PageSize", request.pageSize);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "QueryCopyright"),
             new TeaPair("version", "2021-07-28"),
             new TeaPair("protocol", "HTTPS"),
@@ -128,23 +122,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public QueryCopyrightExtractResponse queryCopyrightExtract(QueryCopyrightExtractRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.queryCopyrightExtractWithOptions(request, headers, runtime);
     }
 
-    public QueryCopyrightExtractResponse queryCopyrightExtractWithOptions(QueryCopyrightExtractRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public QueryCopyrightExtractResponse queryCopyrightExtractWithOptions(QueryCopyrightExtractRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
             body.put("JobId", request.jobId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "QueryCopyrightExtract"),
             new TeaPair("version", "2021-07-28"),
             new TeaPair("protocol", "HTTPS"),
@@ -159,12 +153,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public QueryTraceAbResponse queryTraceAb(QueryTraceAbRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.queryTraceAbWithOptions(request, headers, runtime);
     }
 
-    public QueryTraceAbResponse queryTraceAbWithOptions(QueryTraceAbRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public QueryTraceAbResponse queryTraceAbWithOptions(QueryTraceAbRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
@@ -175,11 +169,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("MediaId", request.mediaId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "QueryTraceAb"),
             new TeaPair("version", "2021-07-28"),
             new TeaPair("protocol", "HTTPS"),
@@ -194,23 +188,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public QueryTraceExtractResponse queryTraceExtract(QueryTraceExtractRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.queryTraceExtractWithOptions(request, headers, runtime);
     }
 
-    public QueryTraceExtractResponse queryTraceExtractWithOptions(QueryTraceExtractRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public QueryTraceExtractResponse queryTraceExtractWithOptions(QueryTraceExtractRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
             body.put("JobId", request.jobId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "QueryTraceExtract"),
             new TeaPair("version", "2021-07-28"),
             new TeaPair("protocol", "HTTPS"),
@@ -225,12 +219,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public QueryTraceMuResponse queryTraceMu(QueryTraceMuRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.queryTraceMuWithOptions(request, headers, runtime);
     }
 
-    public QueryTraceMuResponse queryTraceMuWithOptions(QueryTraceMuRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public QueryTraceMuResponse queryTraceMuWithOptions(QueryTraceMuRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.createTimeEnd)) {
@@ -261,11 +255,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("PageSize", request.pageSize);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "QueryTraceMu"),
             new TeaPair("version", "2021-07-28"),
             new TeaPair("protocol", "HTTPS"),
@@ -280,12 +274,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public SubmitCopyrightExtractResponse submitCopyrightExtract(SubmitCopyrightExtractRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.submitCopyrightExtractWithOptions(request, headers, runtime);
     }
 
-    public SubmitCopyrightExtractResponse submitCopyrightExtractWithOptions(SubmitCopyrightExtractRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public SubmitCopyrightExtractResponse submitCopyrightExtractWithOptions(SubmitCopyrightExtractRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.callBack)) {
@@ -304,11 +298,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("UserData", request.userData);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "SubmitCopyrightExtract"),
             new TeaPair("version", "2021-07-28"),
             new TeaPair("protocol", "HTTPS"),
@@ -323,12 +317,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public SubmitCopyrightJobResponse submitCopyrightJob(SubmitCopyrightJobRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.submitCopyrightJobWithOptions(request, headers, runtime);
     }
 
-    public SubmitCopyrightJobResponse submitCopyrightJobWithOptions(SubmitCopyrightJobRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public SubmitCopyrightJobResponse submitCopyrightJobWithOptions(SubmitCopyrightJobRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.callBack)) {
@@ -375,11 +369,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("VisibleMessage", request.visibleMessage);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "SubmitCopyrightJob"),
             new TeaPair("version", "2021-07-28"),
             new TeaPair("protocol", "HTTPS"),
@@ -394,12 +388,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public SubmitImageCopyrightResponse submitImageCopyright(SubmitImageCopyrightRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.submitImageCopyrightWithOptions(request, headers, runtime);
     }
 
-    public SubmitImageCopyrightResponse submitImageCopyrightWithOptions(SubmitImageCopyrightRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public SubmitImageCopyrightResponse submitImageCopyrightWithOptions(SubmitImageCopyrightRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.input)) {
@@ -418,15 +412,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Output", request.output);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.params)) {
+            body.put("Params", request.params);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.url)) {
             body.put("Url", request.url);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "SubmitImageCopyright"),
             new TeaPair("version", "2021-07-28"),
             new TeaPair("protocol", "HTTPS"),
@@ -441,12 +439,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public SubmitTraceAbResponse submitTraceAb(SubmitTraceAbRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.submitTraceAbWithOptions(request, headers, runtime);
     }
 
-    public SubmitTraceAbResponse submitTraceAbWithOptions(SubmitTraceAbRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public SubmitTraceAbResponse submitTraceAbWithOptions(SubmitTraceAbRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.callBack)) {
@@ -485,11 +483,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("UserData", request.userData);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "SubmitTraceAb"),
             new TeaPair("version", "2021-07-28"),
             new TeaPair("protocol", "HTTPS"),
@@ -504,12 +502,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public SubmitTraceExtractResponse submitTraceExtract(SubmitTraceExtractRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.submitTraceExtractWithOptions(request, headers, runtime);
     }
 
-    public SubmitTraceExtractResponse submitTraceExtractWithOptions(SubmitTraceExtractRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public SubmitTraceExtractResponse submitTraceExtractWithOptions(SubmitTraceExtractRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.callBack)) {
@@ -528,11 +526,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("UserData", request.userData);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "SubmitTraceExtract"),
             new TeaPair("version", "2021-07-28"),
             new TeaPair("protocol", "HTTPS"),
@@ -547,12 +545,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public SubmitTracemuResponse submitTracemu(SubmitTracemuRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.submitTracemuWithOptions(request, headers, runtime);
     }
 
-    public SubmitTracemuResponse submitTracemuWithOptions(SubmitTracemuRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public SubmitTracemuResponse submitTracemuWithOptions(SubmitTracemuRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.keyUri)) {
@@ -571,11 +569,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Trace", request.trace);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "SubmitTracemu"),
             new TeaPair("version", "2021-07-28"),
             new TeaPair("protocol", "HTTPS"),

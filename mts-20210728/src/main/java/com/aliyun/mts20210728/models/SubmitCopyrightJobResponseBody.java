@@ -4,19 +4,15 @@ package com.aliyun.mts20210728.models;
 import com.aliyun.tea.*;
 
 public class SubmitCopyrightJobResponseBody extends TeaModel {
-    // 返回数据
     @NameInMap("Data")
     public SubmitCopyrightJobResponseBodyData data;
 
-    // 返回信息
     @NameInMap("Message")
     public String message;
 
-    // 请求Id
     @NameInMap("RequestID")
     public String requestID;
 
-    // 状态码
     @NameInMap("StatusCode")
     public Long statusCode;
 
@@ -58,7 +54,6 @@ public class SubmitCopyrightJobResponseBody extends TeaModel {
     }
 
     public static class SubmitCopyrightJobResponseBodyData extends TeaModel {
-        // 任务id
         @NameInMap("JobId")
         public String jobId;
 

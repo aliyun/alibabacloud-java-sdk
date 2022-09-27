@@ -10,7 +10,6 @@ public class QueryCopyrightResponseBody extends TeaModel {
     @NameInMap("RequestID")
     public String requestID;
 
-    // 状态码
     @NameInMap("StatusCode")
     public Long statusCode;
 
@@ -44,55 +43,42 @@ public class QueryCopyrightResponseBody extends TeaModel {
     }
 
     public static class QueryCopyrightResponseBodyData extends TeaModel {
-        // 回调url
         @NameInMap("Callback")
         public String callback;
 
-        // 创建时间
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
-        // 修改时间
         @NameInMap("GmtModified")
         public Long gmtModified;
 
-        // 水印视频输入
         @NameInMap("Input")
         public String input;
 
-        // 任务id
         @NameInMap("JobId")
         public String jobId;
 
-        // 水印强度
         @NameInMap("Level")
         public Long level;
 
-        // 水印信息
         @NameInMap("Message")
         public String message;
 
-        // 水印信息id
         @NameInMap("MessageId")
         public Long messageId;
 
-        // 水印视频输出
         @NameInMap("Output")
         public String output;
 
-        // 任务结果
         @NameInMap("Result")
         public String result;
 
-        // 状态
         @NameInMap("Status")
         public String status;
 
-        // 用户数据
         @NameInMap("UserData")
         public String userData;
 
-        // 用户ID
         @NameInMap("UserId")
         public Long userId;
 

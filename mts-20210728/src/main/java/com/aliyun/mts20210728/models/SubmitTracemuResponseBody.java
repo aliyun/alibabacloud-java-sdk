@@ -4,19 +4,15 @@ package com.aliyun.mts20210728.models;
 import com.aliyun.tea.*;
 
 public class SubmitTracemuResponseBody extends TeaModel {
-    // 返回数据
     @NameInMap("Data")
     public SubmitTracemuResponseBodyData data;
 
-    // 返回信息
     @NameInMap("Message")
     public String message;
 
-    // 请求Id
     @NameInMap("RequestID")
     public String requestID;
 
-    // 状态码
     @NameInMap("StatusCode")
     public Long statusCode;
 
@@ -58,11 +54,9 @@ public class SubmitTracemuResponseBody extends TeaModel {
     }
 
     public static class SubmitTracemuResponseBodyData extends TeaModel {
-        // 生成m3u8文件的code
         @NameInMap("Code")
         public String code;
 
-        // 任务id
         @NameInMap("JobId")
         public String jobId;
 
