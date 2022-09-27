@@ -4,23 +4,21 @@ package com.aliyun.mts20210728.models;
 import com.aliyun.tea.*;
 
 public class SubmitImageCopyrightRequest extends TeaModel {
-    // 需要加水印的图片oss地址(Input和url二选一)
     @NameInMap("Input")
     public String input;
 
-    // 水印强度
     @NameInMap("Level")
     public Long level;
 
-    // 水印信息
     @NameInMap("Message")
     public String message;
 
-    // 水印图片输出oss地址
     @NameInMap("Output")
     public String output;
 
-    // 外部url链接(Input和url二选一)
+    @NameInMap("Params")
+    public String params;
+
     @NameInMap("Url")
     public String url;
 
@@ -59,6 +57,14 @@ public class SubmitImageCopyrightRequest extends TeaModel {
     }
     public String getOutput() {
         return this.output;
+    }
+
+    public SubmitImageCopyrightRequest setParams(String params) {
+        this.params = params;
+        return this;
+    }
+    public String getParams() {
+        return this.params;
     }
 
     public SubmitImageCopyrightRequest setUrl(String url) {

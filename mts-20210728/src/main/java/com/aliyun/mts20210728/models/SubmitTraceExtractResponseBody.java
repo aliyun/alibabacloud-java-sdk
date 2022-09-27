@@ -7,14 +7,12 @@ public class SubmitTraceExtractResponseBody extends TeaModel {
     @NameInMap("Data")
     public SubmitTraceExtractResponseBodyData data;
 
-    // 返回消息
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestID")
     public String requestID;
 
-    // 状态码
     @NameInMap("StatusCode")
     public Long statusCode;
 
@@ -56,7 +54,6 @@ public class SubmitTraceExtractResponseBody extends TeaModel {
     }
 
     public static class SubmitTraceExtractResponseBodyData extends TeaModel {
-        // 任务id
         @NameInMap("JobId")
         public String jobId;
 

@@ -4,19 +4,15 @@ package com.aliyun.mts20210728.models;
 import com.aliyun.tea.*;
 
 public class SubmitTracemuRequest extends TeaModel {
-    // 密钥服务器uri
     @NameInMap("KeyUri")
     public String keyUri;
 
-    // ab流处理后的媒体id
     @NameInMap("MediaId")
     public String mediaId;
 
-    // m3u8文件输出oss地址
     @NameInMap("Output")
     public String output;
 
-    // 溯源水印信息
     @NameInMap("Trace")
     public String trace;
 

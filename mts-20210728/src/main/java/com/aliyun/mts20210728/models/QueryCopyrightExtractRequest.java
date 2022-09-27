@@ -4,7 +4,6 @@ package com.aliyun.mts20210728.models;
 import com.aliyun.tea.*;
 
 public class QueryCopyrightExtractRequest extends TeaModel {
-    // 任务id
     @NameInMap("JobId")
     public String jobId;
 

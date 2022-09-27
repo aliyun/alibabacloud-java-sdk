@@ -4,11 +4,9 @@ package com.aliyun.mts20210728.models;
 import com.aliyun.tea.*;
 
 public class QueryTraceAbRequest extends TeaModel {
-    // 任务id
     @NameInMap("JobId")
     public String jobId;
 
-    // 媒体id
     @NameInMap("MediaId")
     public String mediaId;
 

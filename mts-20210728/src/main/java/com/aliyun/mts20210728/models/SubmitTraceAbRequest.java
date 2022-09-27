@@ -4,39 +4,30 @@ package com.aliyun.mts20210728.models;
 import com.aliyun.tea.*;
 
 public class SubmitTraceAbRequest extends TeaModel {
-    // 任务结果回调
     @NameInMap("CallBack")
     public String callBack;
 
-    // 密钥base64串
     @NameInMap("CipherBase64ed")
     public String cipherBase64ed;
 
-    // 溯源水印ab流处理视频输入
     @NameInMap("Input")
     public String input;
 
-    // 水印强度
     @NameInMap("Level")
     public Long level;
 
-    // 溯源水印ab流处理输出
     @NameInMap("Output")
     public String output;
 
-    // 嵌入水印开始时间
     @NameInMap("StartTime")
     public Long startTime;
 
-    // 嵌入水印总时长
     @NameInMap("TotalTime")
     public Long totalTime;
 
-    // 外部url链接(Input和url二选一)
     @NameInMap("Url")
     public String url;
 
-    // 用户自定义数据，最大长度1024个字节
     @NameInMap("UserData")
     public String userData;
 

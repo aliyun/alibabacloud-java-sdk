@@ -7,14 +7,12 @@ public class QueryTraceExtractResponseBody extends TeaModel {
     @NameInMap("Data")
     public QueryTraceExtractResponseBodyData data;
 
-    // 返回信息
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestID")
     public String requestID;
 
-    // 状态码
     @NameInMap("StatusCode")
     public Long statusCode;
 
@@ -56,7 +54,6 @@ public class QueryTraceExtractResponseBody extends TeaModel {
     }
 
     public static class QueryTraceExtractResponseBodyData extends TeaModel {
-        // 溯源水印信息
         @NameInMap("Trace")
         public String trace;
 

@@ -4,31 +4,24 @@ package com.aliyun.mts20210728.models;
 import com.aliyun.tea.*;
 
 public class QueryTraceMuRequest extends TeaModel {
-    // 创建时间起始
     @NameInMap("CreateTimeEnd")
     public Long createTimeEnd;
 
-    // 创建时间截止
     @NameInMap("CreateTimeStart")
     public Long createTimeStart;
 
-    // 任务id
     @NameInMap("JobId")
     public String jobId;
 
-    // 水印强度
     @NameInMap("Level")
     public Long level;
 
-    // 水印信息id
     @NameInMap("MessageId")
     public Long messageId;
 
-    // 页偏移
     @NameInMap("PageNumber")
     public Long pageNumber;
 
-    // 每页数量
     @NameInMap("PageSize")
     public Long pageSize;
 
