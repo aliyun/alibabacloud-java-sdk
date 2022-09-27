@@ -215,8 +215,14 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("ReservedInstanceId")
+        public String reservedInstanceId;
+
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
+
+        @NameInMap("SavingPlanId")
+        public String savingPlanId;
 
         @NameInMap("StartTime")
         public String startTime;
@@ -318,12 +324,28 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             return this.regionId;
         }
 
+        public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItem setReservedInstanceId(String reservedInstanceId) {
+            this.reservedInstanceId = reservedInstanceId;
+            return this;
+        }
+        public String getReservedInstanceId() {
+            return this.reservedInstanceId;
+        }
+
         public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItem setResourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
             return this;
         }
         public String getResourceGroupId() {
             return this.resourceGroupId;
+        }
+
+        public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItem setSavingPlanId(String savingPlanId) {
+            this.savingPlanId = savingPlanId;
+            return this;
+        }
+        public String getSavingPlanId() {
+            return this.savingPlanId;
         }
 
         public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItem setStartTime(String startTime) {
