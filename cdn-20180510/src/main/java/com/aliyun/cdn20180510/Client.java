@@ -78,6 +78,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Sources", request.sources);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.topLevelDomain)) {
             query.put("TopLevelDomain", request.topLevelDomain);
         }
