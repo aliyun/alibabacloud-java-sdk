@@ -53,6 +53,9 @@ public class DescribeDcdnWafPolicyResponseBody extends TeaModel {
         @NameInMap("PolicyType")
         public String policyType;
 
+        @NameInMap("RuleConfigs")
+        public String ruleConfigs;
+
         @NameInMap("RuleCount")
         public Long ruleCount;
 
@@ -115,6 +118,14 @@ public class DescribeDcdnWafPolicyResponseBody extends TeaModel {
         }
         public String getPolicyType() {
             return this.policyType;
+        }
+
+        public DescribeDcdnWafPolicyResponseBodyPolicy setRuleConfigs(String ruleConfigs) {
+            this.ruleConfigs = ruleConfigs;
+            return this;
+        }
+        public String getRuleConfigs() {
+            return this.ruleConfigs;
         }
 
         public DescribeDcdnWafPolicyResponseBodyPolicy setRuleCount(Long ruleCount) {

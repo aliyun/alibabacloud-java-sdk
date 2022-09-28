@@ -1,3 +1,6 @@
+2022-09-28 Version: 1.0.21
+- Update AddDcdnDomain.
+
 2022-09-16 Version: 1.0.20
 - Update DescribeDcdnReport.
 
