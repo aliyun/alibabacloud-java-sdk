@@ -8,7 +8,7 @@ public class CheckMobilesCardSupportResponseBody extends TeaModel {
     public String code;
 
     @NameInMap("Data")
-    public java.util.List<java.util.Map<String, ?>> data;
+    public CheckMobilesCardSupportResponseBodyData data;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -29,11 +29,11 @@ public class CheckMobilesCardSupportResponseBody extends TeaModel {
         return this.code;
     }
 
-    public CheckMobilesCardSupportResponseBody setData(java.util.List<java.util.Map<String, ?>> data) {
+    public CheckMobilesCardSupportResponseBody setData(CheckMobilesCardSupportResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public java.util.List<java.util.Map<String, ?>> getData() {
+    public CheckMobilesCardSupportResponseBodyData getData() {
         return this.data;
     }
 
@@ -51,6 +51,55 @@ public class CheckMobilesCardSupportResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public static class CheckMobilesCardSupportResponseBodyDataQueryResult extends TeaModel {
+        @NameInMap("mobile")
+        public String mobile;
+
+        @NameInMap("support")
+        public Boolean support;
+
+        public static CheckMobilesCardSupportResponseBodyDataQueryResult build(java.util.Map<String, ?> map) throws Exception {
+            CheckMobilesCardSupportResponseBodyDataQueryResult self = new CheckMobilesCardSupportResponseBodyDataQueryResult();
+            return TeaModel.build(map, self);
+        }
+
+        public CheckMobilesCardSupportResponseBodyDataQueryResult setMobile(String mobile) {
+            this.mobile = mobile;
+            return this;
+        }
+        public String getMobile() {
+            return this.mobile;
+        }
+
+        public CheckMobilesCardSupportResponseBodyDataQueryResult setSupport(Boolean support) {
+            this.support = support;
+            return this;
+        }
+        public Boolean getSupport() {
+            return this.support;
+        }
+
+    }
+
+    public static class CheckMobilesCardSupportResponseBodyData extends TeaModel {
+        @NameInMap("queryResult")
+        public java.util.List<CheckMobilesCardSupportResponseBodyDataQueryResult> queryResult;
+
+        public static CheckMobilesCardSupportResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            CheckMobilesCardSupportResponseBodyData self = new CheckMobilesCardSupportResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public CheckMobilesCardSupportResponseBodyData setQueryResult(java.util.List<CheckMobilesCardSupportResponseBodyDataQueryResult> queryResult) {
+            this.queryResult = queryResult;
+            return this;
+        }
+        public java.util.List<CheckMobilesCardSupportResponseBodyDataQueryResult> getQueryResult() {
+            return this.queryResult;
+        }
+
     }
 
 }
