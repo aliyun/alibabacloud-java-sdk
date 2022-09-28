@@ -161,9 +161,6 @@ public class DescribeDcdnIpaDomainDetailResponseBody extends TeaModel {
         @NameInMap("Sources")
         public DescribeDcdnIpaDomainDetailResponseBodyDomainDetailSources sources;
 
-        @NameInMap("TenantID")
-        public String tenantID;
-
         public static DescribeDcdnIpaDomainDetailResponseBodyDomainDetail build(java.util.Map<String, ?> map) throws Exception {
             DescribeDcdnIpaDomainDetailResponseBodyDomainDetail self = new DescribeDcdnIpaDomainDetailResponseBodyDomainDetail();
             return TeaModel.build(map, self);
@@ -263,14 +260,6 @@ public class DescribeDcdnIpaDomainDetailResponseBody extends TeaModel {
         }
         public DescribeDcdnIpaDomainDetailResponseBodyDomainDetailSources getSources() {
             return this.sources;
-        }
-
-        public DescribeDcdnIpaDomainDetailResponseBodyDomainDetail setTenantID(String tenantID) {
-            this.tenantID = tenantID;
-            return this;
-        }
-        public String getTenantID() {
-            return this.tenantID;
         }
 
     }

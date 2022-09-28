@@ -28,6 +28,9 @@ public class AddDcdnDomainRequest extends TeaModel {
     @NameInMap("Sources")
     public String sources;
 
+    @NameInMap("Tag")
+    public java.util.List<AddDcdnDomainRequestTag> tag;
+
     @NameInMap("TopLevelDomain")
     public String topLevelDomain;
 
@@ -100,12 +103,50 @@ public class AddDcdnDomainRequest extends TeaModel {
         return this.sources;
     }
 
+    public AddDcdnDomainRequest setTag(java.util.List<AddDcdnDomainRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<AddDcdnDomainRequestTag> getTag() {
+        return this.tag;
+    }
+
     public AddDcdnDomainRequest setTopLevelDomain(String topLevelDomain) {
         this.topLevelDomain = topLevelDomain;
         return this;
     }
     public String getTopLevelDomain() {
         return this.topLevelDomain;
+    }
+
+    public static class AddDcdnDomainRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static AddDcdnDomainRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            AddDcdnDomainRequestTag self = new AddDcdnDomainRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public AddDcdnDomainRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public AddDcdnDomainRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }
