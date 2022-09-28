@@ -4,6 +4,9 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class HotelBillSettlementQueryResponseBody extends TeaModel {
+    @NameInMap("message")
+    public String message;
+
     @NameInMap("module")
     public HotelBillSettlementQueryResponseBodyModule module;
 
@@ -12,9 +15,6 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
 
     @NameInMap("result_code")
     public Integer resultCode;
-
-    @NameInMap("result_msg")
-    public String resultMsg;
 
     @NameInMap("success")
     public Boolean success;
@@ -25,6 +25,14 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
     public static HotelBillSettlementQueryResponseBody build(java.util.Map<String, ?> map) throws Exception {
         HotelBillSettlementQueryResponseBody self = new HotelBillSettlementQueryResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public HotelBillSettlementQueryResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public HotelBillSettlementQueryResponseBody setModule(HotelBillSettlementQueryResponseBodyModule module) {
@@ -49,14 +57,6 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
     }
     public Integer getResultCode() {
         return this.resultCode;
-    }
-
-    public HotelBillSettlementQueryResponseBody setResultMsg(String resultMsg) {
-        this.resultMsg = resultMsg;
-        return this;
-    }
-    public String getResultMsg() {
-        return this.resultMsg;
     }
 
     public HotelBillSettlementQueryResponseBody setSuccess(Boolean success) {

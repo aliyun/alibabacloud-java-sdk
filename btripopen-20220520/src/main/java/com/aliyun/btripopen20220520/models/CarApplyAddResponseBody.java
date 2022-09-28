@@ -7,11 +7,11 @@ public class CarApplyAddResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("err_code")
-    public Integer errCode;
+    @NameInMap("code")
+    public Integer code;
 
-    @NameInMap("err_msg")
-    public String errMsg;
+    @NameInMap("message")
+    public String message;
 
     @NameInMap("module")
     public Long module;
@@ -35,20 +35,20 @@ public class CarApplyAddResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CarApplyAddResponseBody setErrCode(Integer errCode) {
-        this.errCode = errCode;
+    public CarApplyAddResponseBody setCode(Integer code) {
+        this.code = code;
         return this;
     }
-    public Integer getErrCode() {
-        return this.errCode;
+    public Integer getCode() {
+        return this.code;
     }
 
-    public CarApplyAddResponseBody setErrMsg(String errMsg) {
-        this.errMsg = errMsg;
+    public CarApplyAddResponseBody setMessage(String message) {
+        this.message = message;
         return this;
     }
-    public String getErrMsg() {
-        return this.errMsg;
+    public String getMessage() {
+        return this.message;
     }
 
     public CarApplyAddResponseBody setModule(Long module) {

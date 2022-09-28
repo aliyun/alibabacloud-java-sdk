@@ -7,17 +7,17 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("code")
+    public Integer code;
+
+    @NameInMap("message")
+    public String message;
+
     @NameInMap("module")
     public java.util.List<HotelOrderListQueryResponseBodyModule> module;
 
     @NameInMap("page_info")
     public HotelOrderListQueryResponseBodyPageInfo pageInfo;
-
-    @NameInMap("result_code")
-    public Integer resultCode;
-
-    @NameInMap("result_msg")
-    public String resultMsg;
 
     @NameInMap("success")
     public Boolean success;
@@ -38,6 +38,22 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public HotelOrderListQueryResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
+    }
+
+    public HotelOrderListQueryResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
     public HotelOrderListQueryResponseBody setModule(java.util.List<HotelOrderListQueryResponseBodyModule> module) {
         this.module = module;
         return this;
@@ -52,22 +68,6 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
     }
     public HotelOrderListQueryResponseBodyPageInfo getPageInfo() {
         return this.pageInfo;
-    }
-
-    public HotelOrderListQueryResponseBody setResultCode(Integer resultCode) {
-        this.resultCode = resultCode;
-        return this;
-    }
-    public Integer getResultCode() {
-        return this.resultCode;
-    }
-
-    public HotelOrderListQueryResponseBody setResultMsg(String resultMsg) {
-        this.resultMsg = resultMsg;
-        return this;
-    }
-    public String getResultMsg() {
-        return this.resultMsg;
     }
 
     public HotelOrderListQueryResponseBody setSuccess(Boolean success) {

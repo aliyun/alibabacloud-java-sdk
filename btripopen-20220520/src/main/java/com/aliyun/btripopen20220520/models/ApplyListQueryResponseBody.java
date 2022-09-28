@@ -7,14 +7,14 @@ public class ApplyListQueryResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("code")
+    public Integer code;
+
+    @NameInMap("message")
+    public String message;
+
     @NameInMap("module_list")
     public java.util.List<ApplyListQueryResponseBodyModuleList> moduleList;
-
-    @NameInMap("result_code")
-    public Integer resultCode;
-
-    @NameInMap("result_msg")
-    public String resultMsg;
 
     @NameInMap("success")
     public Boolean success;
@@ -35,28 +35,28 @@ public class ApplyListQueryResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public ApplyListQueryResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
+    }
+
+    public ApplyListQueryResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
     public ApplyListQueryResponseBody setModuleList(java.util.List<ApplyListQueryResponseBodyModuleList> moduleList) {
         this.moduleList = moduleList;
         return this;
     }
     public java.util.List<ApplyListQueryResponseBodyModuleList> getModuleList() {
         return this.moduleList;
-    }
-
-    public ApplyListQueryResponseBody setResultCode(Integer resultCode) {
-        this.resultCode = resultCode;
-        return this;
-    }
-    public Integer getResultCode() {
-        return this.resultCode;
-    }
-
-    public ApplyListQueryResponseBody setResultMsg(String resultMsg) {
-        this.resultMsg = resultMsg;
-        return this;
-    }
-    public String getResultMsg() {
-        return this.resultMsg;
     }
 
     public ApplyListQueryResponseBody setSuccess(Boolean success) {

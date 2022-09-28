@@ -7,14 +7,14 @@ public class CommonApplyQueryResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("code")
+    public Integer code;
+
+    @NameInMap("message")
+    public String message;
+
     @NameInMap("module")
     public CommonApplyQueryResponseBodyModule module;
-
-    @NameInMap("result_code")
-    public Integer resultCode;
-
-    @NameInMap("result_msg")
-    public String resultMsg;
 
     @NameInMap("success")
     public Boolean success;
@@ -35,28 +35,28 @@ public class CommonApplyQueryResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public CommonApplyQueryResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
+    }
+
+    public CommonApplyQueryResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
     public CommonApplyQueryResponseBody setModule(CommonApplyQueryResponseBodyModule module) {
         this.module = module;
         return this;
     }
     public CommonApplyQueryResponseBodyModule getModule() {
         return this.module;
-    }
-
-    public CommonApplyQueryResponseBody setResultCode(Integer resultCode) {
-        this.resultCode = resultCode;
-        return this;
-    }
-    public Integer getResultCode() {
-        return this.resultCode;
-    }
-
-    public CommonApplyQueryResponseBody setResultMsg(String resultMsg) {
-        this.resultMsg = resultMsg;
-        return this;
-    }
-    public String getResultMsg() {
-        return this.resultMsg;
     }
 
     public CommonApplyQueryResponseBody setSuccess(Boolean success) {

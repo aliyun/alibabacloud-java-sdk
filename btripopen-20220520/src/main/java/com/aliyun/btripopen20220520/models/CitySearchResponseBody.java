@@ -4,17 +4,17 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class CitySearchResponseBody extends TeaModel {
+    @NameInMap("code")
+    public Integer code;
+
+    @NameInMap("message")
+    public String message;
+
     @NameInMap("module")
     public CitySearchResponseBodyModule module;
 
     @NameInMap("requestId")
     public String requestId;
-
-    @NameInMap("result_code")
-    public Integer resultCode;
-
-    @NameInMap("result_msg")
-    public String resultMsg;
 
     @NameInMap("success")
     public Boolean success;
@@ -25,6 +25,22 @@ public class CitySearchResponseBody extends TeaModel {
     public static CitySearchResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CitySearchResponseBody self = new CitySearchResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CitySearchResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
+    }
+
+    public CitySearchResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public CitySearchResponseBody setModule(CitySearchResponseBodyModule module) {
@@ -41,22 +57,6 @@ public class CitySearchResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public CitySearchResponseBody setResultCode(Integer resultCode) {
-        this.resultCode = resultCode;
-        return this;
-    }
-    public Integer getResultCode() {
-        return this.resultCode;
-    }
-
-    public CitySearchResponseBody setResultMsg(String resultMsg) {
-        this.resultMsg = resultMsg;
-        return this;
-    }
-    public String getResultMsg() {
-        return this.resultMsg;
     }
 
     public CitySearchResponseBody setSuccess(Boolean success) {

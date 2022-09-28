@@ -7,11 +7,11 @@ public class CostCenterDeleteResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("result_code")
-    public Integer resultCode;
+    @NameInMap("code")
+    public Integer code;
 
-    @NameInMap("result_msg")
-    public String resultMsg;
+    @NameInMap("message")
+    public String message;
 
     @NameInMap("success")
     public Boolean success;
@@ -32,20 +32,20 @@ public class CostCenterDeleteResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CostCenterDeleteResponseBody setResultCode(Integer resultCode) {
-        this.resultCode = resultCode;
+    public CostCenterDeleteResponseBody setCode(Integer code) {
+        this.code = code;
         return this;
     }
-    public Integer getResultCode() {
-        return this.resultCode;
+    public Integer getCode() {
+        return this.code;
     }
 
-    public CostCenterDeleteResponseBody setResultMsg(String resultMsg) {
-        this.resultMsg = resultMsg;
+    public CostCenterDeleteResponseBody setMessage(String message) {
+        this.message = message;
         return this;
     }
-    public String getResultMsg() {
-        return this.resultMsg;
+    public String getMessage() {
+        return this.message;
     }
 
     public CostCenterDeleteResponseBody setSuccess(Boolean success) {

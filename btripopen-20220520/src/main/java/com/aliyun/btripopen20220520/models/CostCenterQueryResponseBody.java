@@ -7,17 +7,17 @@ public class CostCenterQueryResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("code")
+    public Integer code;
+
+    @NameInMap("message")
+    public String message;
+
     @NameInMap("module")
     public java.util.List<CostCenterQueryResponseBodyModule> module;
 
     @NameInMap("more_page")
     public Boolean morePage;
-
-    @NameInMap("result_code")
-    public Integer resultCode;
-
-    @NameInMap("result_msg")
-    public String resultMsg;
 
     @NameInMap("success")
     public Boolean success;
@@ -38,6 +38,22 @@ public class CostCenterQueryResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public CostCenterQueryResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
+    }
+
+    public CostCenterQueryResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
     public CostCenterQueryResponseBody setModule(java.util.List<CostCenterQueryResponseBodyModule> module) {
         this.module = module;
         return this;
@@ -52,22 +68,6 @@ public class CostCenterQueryResponseBody extends TeaModel {
     }
     public Boolean getMorePage() {
         return this.morePage;
-    }
-
-    public CostCenterQueryResponseBody setResultCode(Integer resultCode) {
-        this.resultCode = resultCode;
-        return this;
-    }
-    public Integer getResultCode() {
-        return this.resultCode;
-    }
-
-    public CostCenterQueryResponseBody setResultMsg(String resultMsg) {
-        this.resultMsg = resultMsg;
-        return this;
-    }
-    public String getResultMsg() {
-        return this.resultMsg;
     }
 
     public CostCenterQueryResponseBody setSuccess(Boolean success) {

@@ -4,6 +4,9 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
+    @NameInMap("message")
+    public String message;
+
     @NameInMap("module")
     public IeFlightBillSettlementQueryResponseBodyModule module;
 
@@ -16,9 +19,6 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
     @NameInMap("result_code")
     public Integer resultCode;
 
-    @NameInMap("result_msg")
-    public String resultMsg;
-
     @NameInMap("success")
     public Boolean success;
 
@@ -28,6 +28,14 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
     public static IeFlightBillSettlementQueryResponseBody build(java.util.Map<String, ?> map) throws Exception {
         IeFlightBillSettlementQueryResponseBody self = new IeFlightBillSettlementQueryResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public IeFlightBillSettlementQueryResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public IeFlightBillSettlementQueryResponseBody setModule(IeFlightBillSettlementQueryResponseBodyModule module) {
@@ -60,14 +68,6 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
     }
     public Integer getResultCode() {
         return this.resultCode;
-    }
-
-    public IeFlightBillSettlementQueryResponseBody setResultMsg(String resultMsg) {
-        this.resultMsg = resultMsg;
-        return this;
-    }
-    public String getResultMsg() {
-        return this.resultMsg;
     }
 
     public IeFlightBillSettlementQueryResponseBody setSuccess(Boolean success) {

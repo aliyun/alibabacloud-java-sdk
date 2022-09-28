@@ -7,11 +7,11 @@ public class InvoiceAddResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("result_code")
-    public Integer resultCode;
+    @NameInMap("code")
+    public Integer code;
 
-    @NameInMap("result_msg")
-    public String resultMsg;
+    @NameInMap("message")
+    public String message;
 
     @NameInMap("success")
     public Boolean success;
@@ -32,20 +32,20 @@ public class InvoiceAddResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public InvoiceAddResponseBody setResultCode(Integer resultCode) {
-        this.resultCode = resultCode;
+    public InvoiceAddResponseBody setCode(Integer code) {
+        this.code = code;
         return this;
     }
-    public Integer getResultCode() {
-        return this.resultCode;
+    public Integer getCode() {
+        return this.code;
     }
 
-    public InvoiceAddResponseBody setResultMsg(String resultMsg) {
-        this.resultMsg = resultMsg;
+    public InvoiceAddResponseBody setMessage(String message) {
+        this.message = message;
         return this;
     }
-    public String getResultMsg() {
-        return this.resultMsg;
+    public String getMessage() {
+        return this.message;
     }
 
     public InvoiceAddResponseBody setSuccess(Boolean success) {

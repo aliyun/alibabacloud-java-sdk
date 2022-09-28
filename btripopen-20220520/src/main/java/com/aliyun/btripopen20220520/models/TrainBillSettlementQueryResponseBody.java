@@ -7,14 +7,14 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("message")
+    public String message;
+
     @NameInMap("module")
     public TrainBillSettlementQueryResponseBodyModule module;
 
     @NameInMap("result_code")
     public Integer resultCode;
-
-    @NameInMap("result_msg")
-    public String resultMsg;
 
     @NameInMap("success")
     public Boolean success;
@@ -35,6 +35,14 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public TrainBillSettlementQueryResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
     public TrainBillSettlementQueryResponseBody setModule(TrainBillSettlementQueryResponseBodyModule module) {
         this.module = module;
         return this;
@@ -49,14 +57,6 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
     }
     public Integer getResultCode() {
         return this.resultCode;
-    }
-
-    public TrainBillSettlementQueryResponseBody setResultMsg(String resultMsg) {
-        this.resultMsg = resultMsg;
-        return this;
-    }
-    public String getResultMsg() {
-        return this.resultMsg;
     }
 
     public TrainBillSettlementQueryResponseBody setSuccess(Boolean success) {
