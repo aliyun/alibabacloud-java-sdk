@@ -7,17 +7,17 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("code")
+    public Integer code;
+
+    @NameInMap("message")
+    public String message;
+
     @NameInMap("module")
     public java.util.List<FlightOrderListQueryResponseBodyModule> module;
 
     @NameInMap("page_info")
     public FlightOrderListQueryResponseBodyPageInfo pageInfo;
-
-    @NameInMap("result_code")
-    public Integer resultCode;
-
-    @NameInMap("result_msg")
-    public String resultMsg;
 
     @NameInMap("success")
     public Boolean success;
@@ -38,6 +38,22 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public FlightOrderListQueryResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
+    }
+
+    public FlightOrderListQueryResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
     public FlightOrderListQueryResponseBody setModule(java.util.List<FlightOrderListQueryResponseBodyModule> module) {
         this.module = module;
         return this;
@@ -52,22 +68,6 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
     }
     public FlightOrderListQueryResponseBodyPageInfo getPageInfo() {
         return this.pageInfo;
-    }
-
-    public FlightOrderListQueryResponseBody setResultCode(Integer resultCode) {
-        this.resultCode = resultCode;
-        return this;
-    }
-    public Integer getResultCode() {
-        return this.resultCode;
-    }
-
-    public FlightOrderListQueryResponseBody setResultMsg(String resultMsg) {
-        this.resultMsg = resultMsg;
-        return this;
-    }
-    public String getResultMsg() {
-        return this.resultMsg;
     }
 
     public FlightOrderListQueryResponseBody setSuccess(Boolean success) {

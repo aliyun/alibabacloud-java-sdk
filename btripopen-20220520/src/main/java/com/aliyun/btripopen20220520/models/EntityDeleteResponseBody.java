@@ -4,6 +4,12 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class EntityDeleteResponseBody extends TeaModel {
+    @NameInMap("code")
+    public Integer code;
+
+    @NameInMap("message")
+    public String message;
+
     @NameInMap("module")
     public EntityDeleteResponseBodyModule module;
 
@@ -12,12 +18,6 @@ public class EntityDeleteResponseBody extends TeaModel {
 
     @NameInMap("requestId")
     public String requestId;
-
-    @NameInMap("result_code")
-    public Integer resultCode;
-
-    @NameInMap("result_msg")
-    public String resultMsg;
 
     @NameInMap("success")
     public Boolean success;
@@ -28,6 +28,22 @@ public class EntityDeleteResponseBody extends TeaModel {
     public static EntityDeleteResponseBody build(java.util.Map<String, ?> map) throws Exception {
         EntityDeleteResponseBody self = new EntityDeleteResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public EntityDeleteResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
+    }
+
+    public EntityDeleteResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public EntityDeleteResponseBody setModule(EntityDeleteResponseBodyModule module) {
@@ -52,22 +68,6 @@ public class EntityDeleteResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public EntityDeleteResponseBody setResultCode(Integer resultCode) {
-        this.resultCode = resultCode;
-        return this;
-    }
-    public Integer getResultCode() {
-        return this.resultCode;
-    }
-
-    public EntityDeleteResponseBody setResultMsg(String resultMsg) {
-        this.resultMsg = resultMsg;
-        return this;
-    }
-    public String getResultMsg() {
-        return this.resultMsg;
     }
 
     public EntityDeleteResponseBody setSuccess(Boolean success) {

@@ -7,17 +7,17 @@ public class TrainOrderListQueryResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("code")
+    public Integer code;
+
+    @NameInMap("message")
+    public String message;
+
     @NameInMap("module")
     public java.util.List<TrainOrderListQueryResponseBodyModule> module;
 
     @NameInMap("page_info")
     public TrainOrderListQueryResponseBodyPageInfo pageInfo;
-
-    @NameInMap("result_code")
-    public Integer resultCode;
-
-    @NameInMap("result_msg")
-    public String resultMsg;
 
     @NameInMap("success")
     public Boolean success;
@@ -38,6 +38,22 @@ public class TrainOrderListQueryResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public TrainOrderListQueryResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
+    }
+
+    public TrainOrderListQueryResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
     public TrainOrderListQueryResponseBody setModule(java.util.List<TrainOrderListQueryResponseBodyModule> module) {
         this.module = module;
         return this;
@@ -52,22 +68,6 @@ public class TrainOrderListQueryResponseBody extends TeaModel {
     }
     public TrainOrderListQueryResponseBodyPageInfo getPageInfo() {
         return this.pageInfo;
-    }
-
-    public TrainOrderListQueryResponseBody setResultCode(Integer resultCode) {
-        this.resultCode = resultCode;
-        return this;
-    }
-    public Integer getResultCode() {
-        return this.resultCode;
-    }
-
-    public TrainOrderListQueryResponseBody setResultMsg(String resultMsg) {
-        this.resultMsg = resultMsg;
-        return this;
-    }
-    public String getResultMsg() {
-        return this.resultMsg;
     }
 
     public TrainOrderListQueryResponseBody setSuccess(Boolean success) {

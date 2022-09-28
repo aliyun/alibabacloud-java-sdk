@@ -7,14 +7,14 @@ public class HotelExceedApplyQueryResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("code")
+    public Integer code;
+
+    @NameInMap("message")
+    public String message;
+
     @NameInMap("module")
     public HotelExceedApplyQueryResponseBodyModule module;
-
-    @NameInMap("result_code")
-    public Integer resultCode;
-
-    @NameInMap("result_msg")
-    public String resultMsg;
 
     @NameInMap("success")
     public Boolean success;
@@ -35,28 +35,28 @@ public class HotelExceedApplyQueryResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public HotelExceedApplyQueryResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
+    }
+
+    public HotelExceedApplyQueryResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
     public HotelExceedApplyQueryResponseBody setModule(HotelExceedApplyQueryResponseBodyModule module) {
         this.module = module;
         return this;
     }
     public HotelExceedApplyQueryResponseBodyModule getModule() {
         return this.module;
-    }
-
-    public HotelExceedApplyQueryResponseBody setResultCode(Integer resultCode) {
-        this.resultCode = resultCode;
-        return this;
-    }
-    public Integer getResultCode() {
-        return this.resultCode;
-    }
-
-    public HotelExceedApplyQueryResponseBody setResultMsg(String resultMsg) {
-        this.resultMsg = resultMsg;
-        return this;
-    }
-    public String getResultMsg() {
-        return this.resultMsg;
     }
 
     public HotelExceedApplyQueryResponseBody setSuccess(Boolean success) {

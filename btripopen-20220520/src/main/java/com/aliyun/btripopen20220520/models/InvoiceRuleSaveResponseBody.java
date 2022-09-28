@@ -7,14 +7,14 @@ public class InvoiceRuleSaveResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("code")
+    public Integer code;
+
+    @NameInMap("message")
+    public String message;
+
     @NameInMap("module")
     public InvoiceRuleSaveResponseBodyModule module;
-
-    @NameInMap("result_code")
-    public Integer resultCode;
-
-    @NameInMap("result_msg")
-    public String resultMsg;
 
     @NameInMap("success")
     public Boolean success;
@@ -35,28 +35,28 @@ public class InvoiceRuleSaveResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public InvoiceRuleSaveResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
+    }
+
+    public InvoiceRuleSaveResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
     public InvoiceRuleSaveResponseBody setModule(InvoiceRuleSaveResponseBodyModule module) {
         this.module = module;
         return this;
     }
     public InvoiceRuleSaveResponseBodyModule getModule() {
         return this.module;
-    }
-
-    public InvoiceRuleSaveResponseBody setResultCode(Integer resultCode) {
-        this.resultCode = resultCode;
-        return this;
-    }
-    public Integer getResultCode() {
-        return this.resultCode;
-    }
-
-    public InvoiceRuleSaveResponseBody setResultMsg(String resultMsg) {
-        this.resultMsg = resultMsg;
-        return this;
-    }
-    public String getResultMsg() {
-        return this.resultMsg;
     }
 
     public InvoiceRuleSaveResponseBody setSuccess(Boolean success) {

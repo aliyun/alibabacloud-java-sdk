@@ -7,14 +7,14 @@ public class ApplyModifyResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("code")
+    public Integer code;
+
+    @NameInMap("message")
+    public String message;
+
     @NameInMap("module")
     public ApplyModifyResponseBodyModule module;
-
-    @NameInMap("result_code")
-    public Integer resultCode;
-
-    @NameInMap("result_msg")
-    public String resultMsg;
 
     @NameInMap("success")
     public Boolean success;
@@ -35,28 +35,28 @@ public class ApplyModifyResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public ApplyModifyResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
+    }
+
+    public ApplyModifyResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
     public ApplyModifyResponseBody setModule(ApplyModifyResponseBodyModule module) {
         this.module = module;
         return this;
     }
     public ApplyModifyResponseBodyModule getModule() {
         return this.module;
-    }
-
-    public ApplyModifyResponseBody setResultCode(Integer resultCode) {
-        this.resultCode = resultCode;
-        return this;
-    }
-    public Integer getResultCode() {
-        return this.resultCode;
-    }
-
-    public ApplyModifyResponseBody setResultMsg(String resultMsg) {
-        this.resultMsg = resultMsg;
-        return this;
-    }
-    public String getResultMsg() {
-        return this.resultMsg;
     }
 
     public ApplyModifyResponseBody setSuccess(Boolean success) {

@@ -4,17 +4,17 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class TrainStationSearchResponseBody extends TeaModel {
+    @NameInMap("code")
+    public Integer code;
+
+    @NameInMap("message")
+    public String message;
+
     @NameInMap("module")
     public TrainStationSearchResponseBodyModule module;
 
     @NameInMap("requestId")
     public String requestId;
-
-    @NameInMap("result_code")
-    public Integer resultCode;
-
-    @NameInMap("result_msg")
-    public String resultMsg;
 
     @NameInMap("success")
     public Boolean success;
@@ -25,6 +25,22 @@ public class TrainStationSearchResponseBody extends TeaModel {
     public static TrainStationSearchResponseBody build(java.util.Map<String, ?> map) throws Exception {
         TrainStationSearchResponseBody self = new TrainStationSearchResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public TrainStationSearchResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
+    }
+
+    public TrainStationSearchResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public TrainStationSearchResponseBody setModule(TrainStationSearchResponseBodyModule module) {
@@ -41,22 +57,6 @@ public class TrainStationSearchResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public TrainStationSearchResponseBody setResultCode(Integer resultCode) {
-        this.resultCode = resultCode;
-        return this;
-    }
-    public Integer getResultCode() {
-        return this.resultCode;
-    }
-
-    public TrainStationSearchResponseBody setResultMsg(String resultMsg) {
-        this.resultMsg = resultMsg;
-        return this;
-    }
-    public String getResultMsg() {
-        return this.resultMsg;
     }
 
     public TrainStationSearchResponseBody setSuccess(Boolean success) {

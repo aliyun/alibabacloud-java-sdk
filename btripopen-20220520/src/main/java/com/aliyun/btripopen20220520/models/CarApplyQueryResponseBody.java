@@ -10,11 +10,11 @@ public class CarApplyQueryResponseBody extends TeaModel {
     @NameInMap("apply_list")
     public java.util.List<CarApplyQueryResponseBodyApplyList> applyList;
 
-    @NameInMap("err_code")
-    public Integer errCode;
+    @NameInMap("code")
+    public Integer code;
 
-    @NameInMap("err_msg")
-    public String errMsg;
+    @NameInMap("message")
+    public String message;
 
     @NameInMap("success")
     public Boolean success;
@@ -46,20 +46,20 @@ public class CarApplyQueryResponseBody extends TeaModel {
         return this.applyList;
     }
 
-    public CarApplyQueryResponseBody setErrCode(Integer errCode) {
-        this.errCode = errCode;
+    public CarApplyQueryResponseBody setCode(Integer code) {
+        this.code = code;
         return this;
     }
-    public Integer getErrCode() {
-        return this.errCode;
+    public Integer getCode() {
+        return this.code;
     }
 
-    public CarApplyQueryResponseBody setErrMsg(String errMsg) {
-        this.errMsg = errMsg;
+    public CarApplyQueryResponseBody setMessage(String message) {
+        this.message = message;
         return this;
     }
-    public String getErrMsg() {
-        return this.errMsg;
+    public String getMessage() {
+        return this.message;
     }
 
     public CarApplyQueryResponseBody setSuccess(Boolean success) {
