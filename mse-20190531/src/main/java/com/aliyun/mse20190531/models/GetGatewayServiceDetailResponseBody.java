@@ -105,6 +105,91 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
 
     }
 
+    public static class GetGatewayServiceDetailResponseBodyDataPortTrafficPolicyList extends TeaModel {
+        @NameInMap("GatewayUniqueId")
+        public String gatewayUniqueId;
+
+        @NameInMap("GmtCreate")
+        public String gmtCreate;
+
+        @NameInMap("GmtModified")
+        public String gmtModified;
+
+        @NameInMap("Id")
+        public Long id;
+
+        @NameInMap("ServiceId")
+        public Long serviceId;
+
+        @NameInMap("ServicePort")
+        public Integer servicePort;
+
+        @NameInMap("TrafficPolicy")
+        public TrafficPolicy trafficPolicy;
+
+        public static GetGatewayServiceDetailResponseBodyDataPortTrafficPolicyList build(java.util.Map<String, ?> map) throws Exception {
+            GetGatewayServiceDetailResponseBodyDataPortTrafficPolicyList self = new GetGatewayServiceDetailResponseBodyDataPortTrafficPolicyList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetGatewayServiceDetailResponseBodyDataPortTrafficPolicyList setGatewayUniqueId(String gatewayUniqueId) {
+            this.gatewayUniqueId = gatewayUniqueId;
+            return this;
+        }
+        public String getGatewayUniqueId() {
+            return this.gatewayUniqueId;
+        }
+
+        public GetGatewayServiceDetailResponseBodyDataPortTrafficPolicyList setGmtCreate(String gmtCreate) {
+            this.gmtCreate = gmtCreate;
+            return this;
+        }
+        public String getGmtCreate() {
+            return this.gmtCreate;
+        }
+
+        public GetGatewayServiceDetailResponseBodyDataPortTrafficPolicyList setGmtModified(String gmtModified) {
+            this.gmtModified = gmtModified;
+            return this;
+        }
+        public String getGmtModified() {
+            return this.gmtModified;
+        }
+
+        public GetGatewayServiceDetailResponseBodyDataPortTrafficPolicyList setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
+        }
+
+        public GetGatewayServiceDetailResponseBodyDataPortTrafficPolicyList setServiceId(Long serviceId) {
+            this.serviceId = serviceId;
+            return this;
+        }
+        public Long getServiceId() {
+            return this.serviceId;
+        }
+
+        public GetGatewayServiceDetailResponseBodyDataPortTrafficPolicyList setServicePort(Integer servicePort) {
+            this.servicePort = servicePort;
+            return this;
+        }
+        public Integer getServicePort() {
+            return this.servicePort;
+        }
+
+        public GetGatewayServiceDetailResponseBodyDataPortTrafficPolicyList setTrafficPolicy(TrafficPolicy trafficPolicy) {
+            this.trafficPolicy = trafficPolicy;
+            return this;
+        }
+        public TrafficPolicy getTrafficPolicy() {
+            return this.trafficPolicy;
+        }
+
+    }
+
     public static class GetGatewayServiceDetailResponseBodyDataVersionDetailsServiceVersionLabels extends TeaModel {
         @NameInMap("Key")
         public String key;
@@ -290,6 +375,12 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         @NameInMap("Namespace")
         public String namespace;
 
+        @NameInMap("PortTrafficPolicyList")
+        public java.util.List<GetGatewayServiceDetailResponseBodyDataPortTrafficPolicyList> portTrafficPolicyList;
+
+        @NameInMap("Ports")
+        public java.util.List<Integer> ports;
+
         @NameInMap("ServiceNameInRegistry")
         public String serviceNameInRegistry;
 
@@ -423,6 +514,22 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         }
         public String getNamespace() {
             return this.namespace;
+        }
+
+        public GetGatewayServiceDetailResponseBodyData setPortTrafficPolicyList(java.util.List<GetGatewayServiceDetailResponseBodyDataPortTrafficPolicyList> portTrafficPolicyList) {
+            this.portTrafficPolicyList = portTrafficPolicyList;
+            return this;
+        }
+        public java.util.List<GetGatewayServiceDetailResponseBodyDataPortTrafficPolicyList> getPortTrafficPolicyList() {
+            return this.portTrafficPolicyList;
+        }
+
+        public GetGatewayServiceDetailResponseBodyData setPorts(java.util.List<Integer> ports) {
+            this.ports = ports;
+            return this;
+        }
+        public java.util.List<Integer> getPorts() {
+            return this.ports;
         }
 
         public GetGatewayServiceDetailResponseBodyData setServiceNameInRegistry(String serviceNameInRegistry) {

@@ -171,6 +171,9 @@ public class GetGatewayResponseBody extends TeaModel {
         @NameInMap("LogConfigDetails")
         public GetGatewayResponseBodyDataLogConfigDetails logConfigDetails;
 
+        @NameInMap("MseTag")
+        public String mseTag;
+
         @NameInMap("Name")
         public String name;
 
@@ -274,6 +277,14 @@ public class GetGatewayResponseBody extends TeaModel {
         }
         public GetGatewayResponseBodyDataLogConfigDetails getLogConfigDetails() {
             return this.logConfigDetails;
+        }
+
+        public GetGatewayResponseBodyData setMseTag(String mseTag) {
+            this.mseTag = mseTag;
+            return this;
+        }
+        public String getMseTag() {
+            return this.mseTag;
         }
 
         public GetGatewayResponseBodyData setName(String name) {

@@ -146,6 +146,9 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         @NameInMap("ServiceName")
         public String serviceName;
 
+        @NameInMap("ServicePort")
+        public Integer servicePort;
+
         @NameInMap("SourceType")
         public String sourceType;
 
@@ -211,6 +214,14 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         }
         public String getServiceName() {
             return this.serviceName;
+        }
+
+        public ListGatewayRouteResponseBodyDataResultFallbackServices setServicePort(Integer servicePort) {
+            this.servicePort = servicePort;
+            return this;
+        }
+        public Integer getServicePort() {
+            return this.servicePort;
         }
 
         public ListGatewayRouteResponseBodyDataResultFallbackServices setSourceType(String sourceType) {
@@ -639,6 +650,9 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         @NameInMap("ServiceName")
         public String serviceName;
 
+        @NameInMap("ServicePort")
+        public Integer servicePort;
+
         @NameInMap("SourceType")
         public String sourceType;
 
@@ -712,6 +726,14 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         }
         public String getServiceName() {
             return this.serviceName;
+        }
+
+        public ListGatewayRouteResponseBodyDataResultRouteServices setServicePort(Integer servicePort) {
+            this.servicePort = servicePort;
+            return this;
+        }
+        public Integer getServicePort() {
+            return this.servicePort;
         }
 
         public ListGatewayRouteResponseBodyDataResultRouteServices setSourceType(String sourceType) {

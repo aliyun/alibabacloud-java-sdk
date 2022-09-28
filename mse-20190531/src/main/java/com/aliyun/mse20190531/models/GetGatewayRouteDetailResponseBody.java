@@ -223,6 +223,9 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         @NameInMap("ServiceName")
         public String serviceName;
 
+        @NameInMap("ServicePort")
+        public Integer servicePort;
+
         @NameInMap("SourceType")
         public String sourceType;
 
@@ -288,6 +291,14 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         }
         public String getServiceName() {
             return this.serviceName;
+        }
+
+        public GetGatewayRouteDetailResponseBodyDataFallbackServices setServicePort(Integer servicePort) {
+            this.servicePort = servicePort;
+            return this;
+        }
+        public Integer getServicePort() {
+            return this.servicePort;
         }
 
         public GetGatewayRouteDetailResponseBodyDataFallbackServices setSourceType(String sourceType) {
@@ -754,6 +765,9 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         @NameInMap("ServiceName")
         public String serviceName;
 
+        @NameInMap("ServicePort")
+        public Integer servicePort;
+
         @NameInMap("SourceType")
         public String sourceType;
 
@@ -819,6 +833,14 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         }
         public String getServiceName() {
             return this.serviceName;
+        }
+
+        public GetGatewayRouteDetailResponseBodyDataRouteServices setServicePort(Integer servicePort) {
+            this.servicePort = servicePort;
+            return this;
+        }
+        public Integer getServicePort() {
+            return this.servicePort;
         }
 
         public GetGatewayRouteDetailResponseBodyDataRouteServices setSourceType(String sourceType) {

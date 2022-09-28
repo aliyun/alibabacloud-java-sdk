@@ -40,6 +40,9 @@ public class AddGatewayRequest extends TeaModel {
     @NameInMap("Spec")
     public String spec;
 
+    @NameInMap("Tag")
+    public java.util.List<AddGatewayRequestTag> tag;
+
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
@@ -153,6 +156,14 @@ public class AddGatewayRequest extends TeaModel {
         return this.spec;
     }
 
+    public AddGatewayRequest setTag(java.util.List<AddGatewayRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<AddGatewayRequestTag> getTag() {
+        return this.tag;
+    }
+
     public AddGatewayRequest setVSwitchId(String vSwitchId) {
         this.vSwitchId = vSwitchId;
         return this;
@@ -183,6 +194,36 @@ public class AddGatewayRequest extends TeaModel {
     }
     public String getXtraceRatio() {
         return this.xtraceRatio;
+    }
+
+    public static class AddGatewayRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static AddGatewayRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            AddGatewayRequestTag self = new AddGatewayRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public AddGatewayRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public AddGatewayRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }
