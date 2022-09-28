@@ -4,6 +4,9 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeOutgoingDestinationIPRequest extends TeaModel {
+    @NameInMap("ApplicationName")
+    public String applicationName;
+
     @NameInMap("CurrentPage")
     public String currentPage;
 
@@ -40,6 +43,14 @@ public class DescribeOutgoingDestinationIPRequest extends TeaModel {
     public static DescribeOutgoingDestinationIPRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeOutgoingDestinationIPRequest self = new DescribeOutgoingDestinationIPRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeOutgoingDestinationIPRequest setApplicationName(String applicationName) {
+        this.applicationName = applicationName;
+        return this;
+    }
+    public String getApplicationName() {
+        return this.applicationName;
     }
 
     public DescribeOutgoingDestinationIPRequest setCurrentPage(String currentPage) {
