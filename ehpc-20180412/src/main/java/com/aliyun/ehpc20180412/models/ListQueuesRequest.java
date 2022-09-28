@@ -4,12 +4,23 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class ListQueuesRequest extends TeaModel {
+    @NameInMap("Async")
+    public Boolean async;
+
     @NameInMap("ClusterId")
     public String clusterId;
 
     public static ListQueuesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListQueuesRequest self = new ListQueuesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListQueuesRequest setAsync(Boolean async) {
+        this.async = async;
+        return this;
+    }
+    public Boolean getAsync() {
+        return this.async;
     }
 
     public ListQueuesRequest setClusterId(String clusterId) {
