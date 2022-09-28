@@ -5426,10 +5426,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Lang", request.lang);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
-            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.sourceIp)) {
             query.put("SourceIp", request.sourceIp);
         }
