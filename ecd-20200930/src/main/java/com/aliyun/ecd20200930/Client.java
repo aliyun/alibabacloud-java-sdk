@@ -3279,10 +3279,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DesktopInstanceType", request.desktopInstanceType);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.fotaChannel)) {
-            query.put("FotaChannel", request.fotaChannel);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.gpuCategory)) {
             query.put("GpuCategory", request.gpuCategory);
         }
@@ -4652,6 +4648,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetConnectionTicketResponse getConnectionTicketWithOptions(GetConnectionTicketRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.commandContent)) {
+            query.put("CommandContent", request.commandContent);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.desktopId)) {
             query.put("DesktopId", request.desktopId);
         }
