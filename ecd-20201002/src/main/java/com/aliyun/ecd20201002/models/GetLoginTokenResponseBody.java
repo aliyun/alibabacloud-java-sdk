@@ -46,6 +46,9 @@ public class GetLoginTokenResponseBody extends TeaModel {
     @NameInMap("TenantId")
     public Long tenantId;
 
+    @NameInMap("WindowDisplayMode")
+    public String windowDisplayMode;
+
     public static GetLoginTokenResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetLoginTokenResponseBody self = new GetLoginTokenResponseBody();
         return TeaModel.build(map, self);
@@ -161,6 +164,14 @@ public class GetLoginTokenResponseBody extends TeaModel {
     }
     public Long getTenantId() {
         return this.tenantId;
+    }
+
+    public GetLoginTokenResponseBody setWindowDisplayMode(String windowDisplayMode) {
+        this.windowDisplayMode = windowDisplayMode;
+        return this;
+    }
+    public String getWindowDisplayMode() {
+        return this.windowDisplayMode;
     }
 
 }
