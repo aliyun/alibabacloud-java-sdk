@@ -43,9 +43,6 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
     }
 
     public static class DescribeImageListWithBaselineNameResponseBodyImageInfos extends TeaModel {
-        @NameInMap("BaselineType")
-        public String baselineType;
-
         @NameInMap("ClusterId")
         public String clusterId;
 
@@ -124,14 +121,6 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
         public static DescribeImageListWithBaselineNameResponseBodyImageInfos build(java.util.Map<String, ?> map) throws Exception {
             DescribeImageListWithBaselineNameResponseBodyImageInfos self = new DescribeImageListWithBaselineNameResponseBodyImageInfos();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeImageListWithBaselineNameResponseBodyImageInfos setBaselineType(String baselineType) {
-            this.baselineType = baselineType;
-            return this;
-        }
-        public String getBaselineType() {
-            return this.baselineType;
         }
 
         public DescribeImageListWithBaselineNameResponseBodyImageInfos setClusterId(String clusterId) {

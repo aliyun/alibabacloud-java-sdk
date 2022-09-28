@@ -7,9 +7,6 @@ public class DescribeSummaryInfoRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
-    @NameInMap("ResourceDirectoryAccountId")
-    public String resourceDirectoryAccountId;
-
     @NameInMap("SourceIp")
     public String sourceIp;
 
@@ -24,14 +21,6 @@ public class DescribeSummaryInfoRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
-    }
-
-    public DescribeSummaryInfoRequest setResourceDirectoryAccountId(String resourceDirectoryAccountId) {
-        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
-        return this;
-    }
-    public String getResourceDirectoryAccountId() {
-        return this.resourceDirectoryAccountId;
     }
 
     public DescribeSummaryInfoRequest setSourceIp(String sourceIp) {

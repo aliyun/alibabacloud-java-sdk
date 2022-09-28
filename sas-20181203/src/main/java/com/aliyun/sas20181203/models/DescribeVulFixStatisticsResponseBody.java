@@ -7,6 +7,9 @@ public class DescribeVulFixStatisticsResponseBody extends TeaModel {
     @NameInMap("FixStat")
     public java.util.List<DescribeVulFixStatisticsResponseBodyFixStat> fixStat;
 
+    @NameInMap("FixTotal")
+    public DescribeVulFixStatisticsResponseBodyFixTotal fixTotal;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -21,6 +24,14 @@ public class DescribeVulFixStatisticsResponseBody extends TeaModel {
     }
     public java.util.List<DescribeVulFixStatisticsResponseBodyFixStat> getFixStat() {
         return this.fixStat;
+    }
+
+    public DescribeVulFixStatisticsResponseBody setFixTotal(DescribeVulFixStatisticsResponseBodyFixTotal fixTotal) {
+        this.fixTotal = fixTotal;
+        return this;
+    }
+    public DescribeVulFixStatisticsResponseBodyFixTotal getFixTotal() {
+        return this.fixTotal;
     }
 
     public DescribeVulFixStatisticsResponseBody setRequestId(String requestId) {
@@ -90,6 +101,58 @@ public class DescribeVulFixStatisticsResponseBody extends TeaModel {
         }
         public String getType() {
             return this.type;
+        }
+
+    }
+
+    public static class DescribeVulFixStatisticsResponseBodyFixTotal extends TeaModel {
+        @NameInMap("FixedTodayNum")
+        public Integer fixedTodayNum;
+
+        @NameInMap("FixedTotalNum")
+        public Integer fixedTotalNum;
+
+        @NameInMap("FixingNum")
+        public Integer fixingNum;
+
+        @NameInMap("NeedFixNum")
+        public Integer needFixNum;
+
+        public static DescribeVulFixStatisticsResponseBodyFixTotal build(java.util.Map<String, ?> map) throws Exception {
+            DescribeVulFixStatisticsResponseBodyFixTotal self = new DescribeVulFixStatisticsResponseBodyFixTotal();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeVulFixStatisticsResponseBodyFixTotal setFixedTodayNum(Integer fixedTodayNum) {
+            this.fixedTodayNum = fixedTodayNum;
+            return this;
+        }
+        public Integer getFixedTodayNum() {
+            return this.fixedTodayNum;
+        }
+
+        public DescribeVulFixStatisticsResponseBodyFixTotal setFixedTotalNum(Integer fixedTotalNum) {
+            this.fixedTotalNum = fixedTotalNum;
+            return this;
+        }
+        public Integer getFixedTotalNum() {
+            return this.fixedTotalNum;
+        }
+
+        public DescribeVulFixStatisticsResponseBodyFixTotal setFixingNum(Integer fixingNum) {
+            this.fixingNum = fixingNum;
+            return this;
+        }
+        public Integer getFixingNum() {
+            return this.fixingNum;
+        }
+
+        public DescribeVulFixStatisticsResponseBodyFixTotal setNeedFixNum(Integer needFixNum) {
+            this.needFixNum = needFixNum;
+            return this;
+        }
+        public Integer getNeedFixNum() {
+            return this.needFixNum;
         }
 
     }
