@@ -96,6 +96,9 @@ public class ListGatewayRequest extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
+        @NameInMap("MseTag")
+        public String mseTag;
+
         @NameInMap("Name")
         public String name;
 
@@ -129,6 +132,14 @@ public class ListGatewayRequest extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public ListGatewayRequestFilterParams setMseTag(String mseTag) {
+            this.mseTag = mseTag;
+            return this;
+        }
+        public String getMseTag() {
+            return this.mseTag;
         }
 
         public ListGatewayRequestFilterParams setName(String name) {

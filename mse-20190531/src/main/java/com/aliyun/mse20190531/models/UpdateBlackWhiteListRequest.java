@@ -22,6 +22,15 @@ public class UpdateBlackWhiteListRequest extends TeaModel {
     @NameInMap("MseSessionId")
     public String mseSessionId;
 
+    @NameInMap("Name")
+    public String name;
+
+    @NameInMap("Note")
+    public String note;
+
+    @NameInMap("ResourceIdJsonList")
+    public String resourceIdJsonList;
+
     @NameInMap("ResourceType")
     public String resourceType;
 
@@ -82,6 +91,30 @@ public class UpdateBlackWhiteListRequest extends TeaModel {
     }
     public String getMseSessionId() {
         return this.mseSessionId;
+    }
+
+    public UpdateBlackWhiteListRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public UpdateBlackWhiteListRequest setNote(String note) {
+        this.note = note;
+        return this;
+    }
+    public String getNote() {
+        return this.note;
+    }
+
+    public UpdateBlackWhiteListRequest setResourceIdJsonList(String resourceIdJsonList) {
+        this.resourceIdJsonList = resourceIdJsonList;
+        return this;
+    }
+    public String getResourceIdJsonList() {
+        return this.resourceIdJsonList;
     }
 
     public UpdateBlackWhiteListRequest setResourceType(String resourceType) {

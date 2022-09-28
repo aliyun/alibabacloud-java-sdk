@@ -357,6 +357,9 @@ public class ListGatewayResponseBody extends TeaModel {
         @NameInMap("LatestVersion")
         public String latestVersion;
 
+        @NameInMap("MseTag")
+        public String mseTag;
+
         @NameInMap("MustUpgrade")
         public Boolean mustUpgrade;
 
@@ -530,6 +533,14 @@ public class ListGatewayResponseBody extends TeaModel {
         }
         public String getLatestVersion() {
             return this.latestVersion;
+        }
+
+        public ListGatewayResponseBodyDataResult setMseTag(String mseTag) {
+            this.mseTag = mseTag;
+            return this;
+        }
+        public String getMseTag() {
+            return this.mseTag;
         }
 
         public ListGatewayResponseBodyDataResult setMustUpgrade(Boolean mustUpgrade) {
