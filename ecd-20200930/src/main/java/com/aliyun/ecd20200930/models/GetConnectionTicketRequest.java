@@ -4,6 +4,9 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class GetConnectionTicketRequest extends TeaModel {
+    @NameInMap("CommandContent")
+    public String commandContent;
+
     @NameInMap("DesktopId")
     public String desktopId;
 
@@ -34,6 +37,14 @@ public class GetConnectionTicketRequest extends TeaModel {
     public static GetConnectionTicketRequest build(java.util.Map<String, ?> map) throws Exception {
         GetConnectionTicketRequest self = new GetConnectionTicketRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetConnectionTicketRequest setCommandContent(String commandContent) {
+        this.commandContent = commandContent;
+        return this;
+    }
+    public String getCommandContent() {
+        return this.commandContent;
     }
 
     public GetConnectionTicketRequest setDesktopId(String desktopId) {
