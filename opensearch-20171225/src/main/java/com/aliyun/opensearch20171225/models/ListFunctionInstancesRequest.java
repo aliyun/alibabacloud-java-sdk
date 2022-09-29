@@ -4,27 +4,21 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class ListFunctionInstancesRequest extends TeaModel {
-    // 功能类型
     @NameInMap("functionType")
     public String functionType;
 
-    // 模型类型
     @NameInMap("modelType")
     public String modelType;
 
-    // 返回信息的丰富度
     @NameInMap("output")
     public String output;
 
-    // 页码
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
-    // 每页大小
     @NameInMap("pageSize")
     public Integer pageSize;
 
-    // 实例来源
     @NameInMap("source")
     public String source;
 

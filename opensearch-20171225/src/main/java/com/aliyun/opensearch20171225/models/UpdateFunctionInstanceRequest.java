@@ -4,19 +4,15 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class UpdateFunctionInstanceRequest extends TeaModel {
-    // 创建参数
     @NameInMap("createParameters")
     public java.util.List<UpdateFunctionInstanceRequestCreateParameters> createParameters;
 
-    // 周期训练
     @NameInMap("cron")
     public String cron;
 
-    // 实例描述
     @NameInMap("description")
     public String description;
 
-    // 使用参数
     @NameInMap("usageParameters")
     public java.util.List<UpdateFunctionInstanceRequestUsageParameters> usageParameters;
 
@@ -58,11 +54,9 @@ public class UpdateFunctionInstanceRequest extends TeaModel {
     }
 
     public static class UpdateFunctionInstanceRequestCreateParameters extends TeaModel {
-        // 参数名称
         @NameInMap("name")
         public String name;
 
-        // 参数值
         @NameInMap("value")
         public String value;
 

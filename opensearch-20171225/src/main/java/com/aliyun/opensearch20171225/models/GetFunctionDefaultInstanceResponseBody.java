@@ -7,14 +7,12 @@ public class GetFunctionDefaultInstanceResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    // 功能名称
     @NameInMap("FunctionName")
     public String functionName;
 
     @NameInMap("HttpCode")
     public Long httpCode;
 
-    // 实例名称
     @NameInMap("InstanceName")
     public String instanceName;
 

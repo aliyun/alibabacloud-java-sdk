@@ -72,6 +72,36 @@ public class DescribeAppGroupResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeAppGroupResponseBodyResultTags extends TeaModel {
+        @NameInMap("tagKey")
+        public String tagKey;
+
+        @NameInMap("tagValue")
+        public String tagValue;
+
+        public static DescribeAppGroupResponseBodyResultTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAppGroupResponseBodyResultTags self = new DescribeAppGroupResponseBodyResultTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAppGroupResponseBodyResultTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public DescribeAppGroupResponseBodyResultTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
     public static class DescribeAppGroupResponseBodyResult extends TeaModel {
         @NameInMap("chargeType")
         public String chargeType;
@@ -141,6 +171,9 @@ public class DescribeAppGroupResponseBody extends TeaModel {
 
         @NameInMap("switchedTime")
         public Integer switchedTime;
+
+        @NameInMap("tags")
+        public java.util.List<DescribeAppGroupResponseBodyResultTags> tags;
 
         @NameInMap("type")
         public String type;
@@ -335,6 +368,14 @@ public class DescribeAppGroupResponseBody extends TeaModel {
         }
         public Integer getSwitchedTime() {
             return this.switchedTime;
+        }
+
+        public DescribeAppGroupResponseBodyResult setTags(java.util.List<DescribeAppGroupResponseBodyResultTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<DescribeAppGroupResponseBodyResultTags> getTags() {
+            return this.tags;
         }
 
         public DescribeAppGroupResponseBodyResult setType(String type) {

@@ -4,7 +4,6 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class UpdateFunctionDefaultInstanceRequest extends TeaModel {
-    // 实例名称
     @NameInMap("instanceName")
     public String instanceName;
 
