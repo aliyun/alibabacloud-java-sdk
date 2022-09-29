@@ -44,6 +44,12 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
         @NameInMap("BehaviorReason")
         public String behaviorReason;
 
+        @NameInMap("IllegalValueByParameterConstraints")
+        public java.util.List<?> illegalValueByParameterConstraints;
+
+        @NameInMap("IllegalValueByRules")
+        public java.util.List<?> illegalValueByRules;
+
         @NameInMap("ParameterKey")
         public String parameterKey;
 
@@ -85,6 +91,22 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
         }
         public String getBehaviorReason() {
             return this.behaviorReason;
+        }
+
+        public GetTemplateParameterConstraintsResponseBodyParameterConstraints setIllegalValueByParameterConstraints(java.util.List<?> illegalValueByParameterConstraints) {
+            this.illegalValueByParameterConstraints = illegalValueByParameterConstraints;
+            return this;
+        }
+        public java.util.List<?> getIllegalValueByParameterConstraints() {
+            return this.illegalValueByParameterConstraints;
+        }
+
+        public GetTemplateParameterConstraintsResponseBodyParameterConstraints setIllegalValueByRules(java.util.List<?> illegalValueByRules) {
+            this.illegalValueByRules = illegalValueByRules;
+            return this;
+        }
+        public java.util.List<?> getIllegalValueByRules() {
+            return this.illegalValueByRules;
         }
 
         public GetTemplateParameterConstraintsResponseBodyParameterConstraints setParameterKey(String parameterKey) {
