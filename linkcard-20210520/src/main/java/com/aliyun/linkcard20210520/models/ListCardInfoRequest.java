@@ -52,6 +52,9 @@ public class ListCardInfoRequest extends TeaModel {
     @NameInMap("MaxFlow")
     public String maxFlow;
 
+    @NameInMap("MaxRestFlowPercentage")
+    public Double maxRestFlowPercentage;
+
     @NameInMap("MinFlow")
     public String minFlow;
 
@@ -219,6 +222,14 @@ public class ListCardInfoRequest extends TeaModel {
     }
     public String getMaxFlow() {
         return this.maxFlow;
+    }
+
+    public ListCardInfoRequest setMaxRestFlowPercentage(Double maxRestFlowPercentage) {
+        this.maxRestFlowPercentage = maxRestFlowPercentage;
+        return this;
+    }
+    public Double getMaxRestFlowPercentage() {
+        return this.maxRestFlowPercentage;
     }
 
     public ListCardInfoRequest setMinFlow(String minFlow) {
