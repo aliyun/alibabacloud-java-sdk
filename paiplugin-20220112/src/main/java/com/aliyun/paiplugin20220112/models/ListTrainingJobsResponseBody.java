@@ -4,19 +4,15 @@ package com.aliyun.paiplugin20220112.models;
 import com.aliyun.tea.*;
 
 public class ListTrainingJobsResponseBody extends TeaModel {
-    // 返回数据。
     @NameInMap("Data")
     public ListTrainingJobsResponseBodyData data;
 
-    // 错误码。
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
-    // 错误信息。
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 
@@ -58,47 +54,39 @@ public class ListTrainingJobsResponseBody extends TeaModel {
     }
 
     public static class ListTrainingJobsResponseBodyDataTrainingJobs extends TeaModel {
-        // 关联算法Id。
         @NameInMap("Algorithm")
         public String algorithm;
 
-        // 关联运营活动Id。
         @NameInMap("CampaignId")
         public String campaignId;
 
-        // 创建时间 (UTC+8)。
         @NameInMap("CreatedTime")
         public String createdTime;
 
-        // 训练数据路径。
         @NameInMap("DataPath")
         public String dataPath;
 
-        // 训练任务日志。
         @NameInMap("History")
         public String history;
 
-        // 训练任务Id。
         @NameInMap("Id")
         public String id;
 
-        // 训练任务名称。
         @NameInMap("Name")
         public String name;
 
-        // 备注。
         @NameInMap("Remark")
         public String remark;
 
-        // 训练任务状态。
         @NameInMap("Status")
         public Integer status;
 
-        // 更新时间 (UTC+8)。
+        @NameInMap("TrainingScheduleId")
+        public String trainingScheduleId;
+
         @NameInMap("UpdatedTime")
         public String updatedTime;
 
-        // 用户配置。
         @NameInMap("UserConfig")
         public String userConfig;
 
@@ -179,6 +167,14 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             return this.status;
         }
 
+        public ListTrainingJobsResponseBodyDataTrainingJobs setTrainingScheduleId(String trainingScheduleId) {
+            this.trainingScheduleId = trainingScheduleId;
+            return this;
+        }
+        public String getTrainingScheduleId() {
+            return this.trainingScheduleId;
+        }
+
         public ListTrainingJobsResponseBodyDataTrainingJobs setUpdatedTime(String updatedTime) {
             this.updatedTime = updatedTime;
             return this;
@@ -198,19 +194,15 @@ public class ListTrainingJobsResponseBody extends TeaModel {
     }
 
     public static class ListTrainingJobsResponseBodyData extends TeaModel {
-        // 分页数，从1开始，默认为1。
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
-        // 分页大小，默认为10。
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        // 总训练任务数量。
         @NameInMap("TotalCount")
         public Integer totalCount;
 
-        // 训练任务列表。
         @NameInMap("TrainingJobs")
         public java.util.List<ListTrainingJobsResponseBodyDataTrainingJobs> trainingJobs;
 

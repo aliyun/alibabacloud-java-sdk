@@ -4,69 +4,48 @@ package com.aliyun.paiplugin20220112.models;
 import com.aliyun.tea.*;
 
 public class ListMessagesRequest extends TeaModel {
-    // 发送日期，格式为20220101。
     @NameInMap("Datetime")
     public String datetime;
 
-    // 短信错误码过滤。
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // 关联人群Id过滤。
     @NameInMap("GroupId")
     public String groupId;
 
-    // 短信Id过滤，短信Id为SendMessage成功返回的Id。
     @NameInMap("MessageId")
     public String messageId;
 
-    // 分页数，从1开始，默认为1。
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // 分页大小，默认为10。
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 手机号码过滤。
     @NameInMap("PhoneNumber")
     public String phoneNumber;
 
-    // 短信批处理Id过滤，短信批处理Id为SendMessage成功返回的RequestId。
     @NameInMap("RequestId")
     public String requestId;
 
-    // 关联触达计划Id过滤。
     @NameInMap("ScheduleId")
     public String scheduleId;
 
-    // 签名名称过滤。
     @NameInMap("Signature")
     public String signature;
 
-    // 签名Id过滤，同时只能指定签名名称或签名Id其中之一。
     @NameInMap("SignatureId")
     public String signatureId;
 
-    // 短信发送状态过滤。
-    // - 0 : 发送中。
-    // - 1 : 发送成功。
-    // - 2 : 发送失败。
     @NameInMap("Status")
     public Integer status;
 
-    // 模板号过滤。
     @NameInMap("TemplateCode")
     public String templateCode;
 
-    // 模板Id过滤，同时只能指定模板Code或模板Id其中之一。
     @NameInMap("TemplateId")
     public String templateId;
 
-    // 模板类型过滤。
-    // - 0 : 验证码。
-    // - 1 : 短信通知。
-    // - 2 : 推广短信。
     @NameInMap("TemplateType")
     public Integer templateType;
 

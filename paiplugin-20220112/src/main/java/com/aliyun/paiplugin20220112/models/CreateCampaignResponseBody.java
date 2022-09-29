@@ -4,19 +4,15 @@ package com.aliyun.paiplugin20220112.models;
 import com.aliyun.tea.*;
 
 public class CreateCampaignResponseBody extends TeaModel {
-    // 返回数据。
     @NameInMap("Data")
     public CreateCampaignResponseBodyData data;
 
-    // 错误码。
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
-    // 错误信息。
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 
@@ -58,23 +54,18 @@ public class CreateCampaignResponseBody extends TeaModel {
     }
 
     public static class CreateCampaignResponseBodyData extends TeaModel {
-        // 创建时间 (UTC+8)。
         @NameInMap("CreatedTime")
         public String createdTime;
 
-        // 运营活动Id。
         @NameInMap("Id")
         public String id;
 
-        // 运营活动名称。
         @NameInMap("Name")
         public String name;
 
-        // 备注。
         @NameInMap("Remark")
         public String remark;
 
-        // 更新时间 (UTC+8)。
         @NameInMap("UpdatedTime")
         public String updatedTime;
 

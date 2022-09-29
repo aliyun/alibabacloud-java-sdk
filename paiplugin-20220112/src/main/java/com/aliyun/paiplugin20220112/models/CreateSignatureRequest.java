@@ -4,11 +4,9 @@ package com.aliyun.paiplugin20220112.models;
 import com.aliyun.tea.*;
 
 public class CreateSignatureRequest extends TeaModel {
-    // 申请说明。
     @NameInMap("Description")
     public String description;
 
-    // 签名名称。
     @NameInMap("Name")
     public String name;
 

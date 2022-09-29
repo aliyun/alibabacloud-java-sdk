@@ -4,19 +4,15 @@ package com.aliyun.paiplugin20220112.models;
 import com.aliyun.tea.*;
 
 public class GetUserResponseBody extends TeaModel {
-    // 返回数据。
     @NameInMap("Data")
     public GetUserResponseBodyData data;
 
-    // 错误码。
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
-    // 错误信息。
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 
@@ -58,10 +54,6 @@ public class GetUserResponseBody extends TeaModel {
     }
 
     public static class GetUserResponseBodyData extends TeaModel {
-        // 账号状态。
-        // - 0 : 正常使用。
-        // - 1 : 因欠费等原因暂时停用。
-        // - 2 : 已释放产品。
         @NameInMap("AccountStatus")
         public Integer accountStatus;
 

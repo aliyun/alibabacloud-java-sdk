@@ -4,11 +4,9 @@ package com.aliyun.paiplugin20220112.models;
 import com.aliyun.tea.*;
 
 public class SmsUpResponseBody extends TeaModel {
-    // 应答编码。
     @NameInMap("code")
     public Integer code;
 
-    // 描述信息。
     @NameInMap("msg")
     public String msg;
 

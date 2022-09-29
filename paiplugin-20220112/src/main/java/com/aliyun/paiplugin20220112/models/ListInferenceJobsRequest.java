@@ -4,34 +4,29 @@ package com.aliyun.paiplugin20220112.models;
 import com.aliyun.tea.*;
 
 public class ListInferenceJobsRequest extends TeaModel {
-    // 归属运营活动过滤。
     @NameInMap("CampaignId")
     public String campaignId;
 
-    // 预测任务名称过滤。
+    @NameInMap("CampaignName")
+    public String campaignName;
+
     @NameInMap("Name")
     public String name;
 
-    // 分页数，从1开始，默认为1。
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // 分页大小，默认为10。
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 预测任务备注过滤。
     @NameInMap("Remark")
     public String remark;
 
-    // 预测任务状态过滤。
-    // - 0: 队列中。
-    // - 1: 已提交。
-    // - 2: 运行中。
-    // - 3: 成功。
-    // - 4: 失败。
     @NameInMap("Status")
     public Integer status;
+
+    @NameInMap("TrainingJobName")
+    public String trainingJobName;
 
     public static ListInferenceJobsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListInferenceJobsRequest self = new ListInferenceJobsRequest();
@@ -44,6 +39,14 @@ public class ListInferenceJobsRequest extends TeaModel {
     }
     public String getCampaignId() {
         return this.campaignId;
+    }
+
+    public ListInferenceJobsRequest setCampaignName(String campaignName) {
+        this.campaignName = campaignName;
+        return this;
+    }
+    public String getCampaignName() {
+        return this.campaignName;
     }
 
     public ListInferenceJobsRequest setName(String name) {
@@ -84,6 +87,14 @@ public class ListInferenceJobsRequest extends TeaModel {
     }
     public Integer getStatus() {
         return this.status;
+    }
+
+    public ListInferenceJobsRequest setTrainingJobName(String trainingJobName) {
+        this.trainingJobName = trainingJobName;
+        return this;
+    }
+    public String getTrainingJobName() {
+        return this.trainingJobName;
     }
 
 }

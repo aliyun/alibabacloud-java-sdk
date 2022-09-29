@@ -4,19 +4,15 @@ package com.aliyun.paiplugin20220112.models;
 import com.aliyun.tea.*;
 
 public class GetMessageConfigResponseBody extends TeaModel {
-    // 返回数据。
     @NameInMap("Data")
     public GetMessageConfigResponseBodyData data;
 
-    // 错误码。
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
-    // 错误信息。
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 
@@ -58,11 +54,9 @@ public class GetMessageConfigResponseBody extends TeaModel {
     }
 
     public static class GetMessageConfigResponseBodyData extends TeaModel {
-        // 短信发送状态回执接收服务地址。
         @NameInMap("SmsReportUrl")
         public String smsReportUrl;
 
-        // 上行短信消息接收服务地址。
         @NameInMap("SmsUpUrl")
         public String smsUpUrl;
 

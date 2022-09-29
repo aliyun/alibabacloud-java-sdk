@@ -4,19 +4,15 @@ package com.aliyun.paiplugin20220112.models;
 import com.aliyun.tea.*;
 
 public class ListAlgorithmsResponseBody extends TeaModel {
-    // 返回数据。
     @NameInMap("Data")
     public ListAlgorithmsResponseBodyData data;
 
-    // 错误码。
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
-    // 错误信息。
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 
@@ -58,11 +54,9 @@ public class ListAlgorithmsResponseBody extends TeaModel {
     }
 
     public static class ListAlgorithmsResponseBodyDataAlgorithms extends TeaModel {
-        // 算法Id。
         @NameInMap("Id")
         public String id;
 
-        // 算法名称。
         @NameInMap("Name")
         public String name;
 
@@ -90,19 +84,15 @@ public class ListAlgorithmsResponseBody extends TeaModel {
     }
 
     public static class ListAlgorithmsResponseBodyData extends TeaModel {
-        // 算法列表。
         @NameInMap("Algorithms")
         public java.util.List<ListAlgorithmsResponseBodyDataAlgorithms> algorithms;
 
-        // 分页数，从1开始，默认为1。
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
-        // 分页大小，默认为10。
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        // 总算法数量。
         @NameInMap("TotalCount")
         public Integer totalCount;
 

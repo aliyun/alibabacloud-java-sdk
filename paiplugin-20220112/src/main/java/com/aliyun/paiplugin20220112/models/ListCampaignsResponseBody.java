@@ -4,19 +4,15 @@ package com.aliyun.paiplugin20220112.models;
 import com.aliyun.tea.*;
 
 public class ListCampaignsResponseBody extends TeaModel {
-    // 返回数据。
     @NameInMap("Data")
     public ListCampaignsResponseBodyData data;
 
-    // 错误码。
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
-    // 错误信息。
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 
@@ -58,23 +54,18 @@ public class ListCampaignsResponseBody extends TeaModel {
     }
 
     public static class ListCampaignsResponseBodyDataCampaigns extends TeaModel {
-        // 创建时间 (UTC+8)。
         @NameInMap("CreatedTime")
         public String createdTime;
 
-        // 运营活动Id。
         @NameInMap("Id")
         public String id;
 
-        // 运营活动名称。
         @NameInMap("Name")
         public String name;
 
-        // 备注。
         @NameInMap("Remark")
         public String remark;
 
-        // 更新时间 (UTC+8)。
         @NameInMap("UpdatedTime")
         public String updatedTime;
 
@@ -126,19 +117,15 @@ public class ListCampaignsResponseBody extends TeaModel {
     }
 
     public static class ListCampaignsResponseBodyData extends TeaModel {
-        // 运营活动列表。
         @NameInMap("Campaigns")
         public java.util.List<ListCampaignsResponseBodyDataCampaigns> campaigns;
 
-        // 分页数，从1开始，默认为1。
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
-        // 分页大小，默认为10。
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        // 总运营活动数量。
         @NameInMap("TotalCount")
         public Integer totalCount;
 

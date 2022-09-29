@@ -4,19 +4,15 @@ package com.aliyun.paiplugin20220112.models;
 import com.aliyun.tea.*;
 
 public class CreateTrainingJobResponseBody extends TeaModel {
-    // 返回数据。
     @NameInMap("Data")
     public CreateTrainingJobResponseBodyData data;
 
-    // 错误码。
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
-    // 错误信息。
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 
@@ -58,47 +54,36 @@ public class CreateTrainingJobResponseBody extends TeaModel {
     }
 
     public static class CreateTrainingJobResponseBodyData extends TeaModel {
-        // 关联算法Id。
         @NameInMap("Algorithm")
         public String algorithm;
 
-        // 关联运营活动Id。
         @NameInMap("CampaignId")
         public String campaignId;
 
-        // 创建时间 (UTC+8)。
         @NameInMap("CreatedTime")
         public String createdTime;
 
-        // 训练数据路径。
         @NameInMap("DataPath")
         public String dataPath;
 
-        // 训练任务日志。
         @NameInMap("History")
         public String history;
 
-        // 训练任务Id。
         @NameInMap("Id")
         public String id;
 
-        // 训练任务名称。
         @NameInMap("Name")
         public String name;
 
-        // 备注。
         @NameInMap("Remark")
         public String remark;
 
-        // 训练任务状态。
         @NameInMap("Status")
         public Integer status;
 
-        // 更新时间 (UTC+8)。
         @NameInMap("UpdatedTime")
         public String updatedTime;
 
-        // 用户配置。
         @NameInMap("UserConfig")
         public String userConfig;
 
