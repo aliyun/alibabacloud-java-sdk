@@ -13,6 +13,9 @@ public class DescribeInvocationsRequest extends TeaModel {
     @NameInMap("DesktopId")
     public String desktopId;
 
+    @NameInMap("EndUserId")
+    public String endUserId;
+
     @NameInMap("IncludeOutput")
     public Boolean includeOutput;
 
@@ -58,6 +61,14 @@ public class DescribeInvocationsRequest extends TeaModel {
     }
     public String getDesktopId() {
         return this.desktopId;
+    }
+
+    public DescribeInvocationsRequest setEndUserId(String endUserId) {
+        this.endUserId = endUserId;
+        return this;
+    }
+    public String getEndUserId() {
+        return this.endUserId;
     }
 
     public DescribeInvocationsRequest setIncludeOutput(Boolean includeOutput) {

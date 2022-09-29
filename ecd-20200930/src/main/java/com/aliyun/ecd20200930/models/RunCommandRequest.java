@@ -13,6 +13,9 @@ public class RunCommandRequest extends TeaModel {
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
+    @NameInMap("EndUserId")
+    public String endUserId;
+
     @NameInMap("RegionId")
     public String regionId;
 
@@ -49,6 +52,14 @@ public class RunCommandRequest extends TeaModel {
     }
     public java.util.List<String> getDesktopId() {
         return this.desktopId;
+    }
+
+    public RunCommandRequest setEndUserId(String endUserId) {
+        this.endUserId = endUserId;
+        return this;
+    }
+    public String getEndUserId() {
+        return this.endUserId;
     }
 
     public RunCommandRequest setRegionId(String regionId) {
