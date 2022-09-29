@@ -36,6 +36,9 @@ public class ListSyncMessagesRequest extends TeaModel {
         @NameInMap("MessageId")
         public String messageId;
 
+        @NameInMap("ProductId")
+        public String productId;
+
         @NameInMap("RobotCode")
         public String robotCode;
 
@@ -109,6 +112,14 @@ public class ListSyncMessagesRequest extends TeaModel {
         }
         public String getMessageId() {
             return this.messageId;
+        }
+
+        public ListSyncMessagesRequestMessageDTOList setProductId(String productId) {
+            this.productId = productId;
+            return this;
+        }
+        public String getProductId() {
+            return this.productId;
         }
 
         public ListSyncMessagesRequestMessageDTOList setRobotCode(String robotCode) {
