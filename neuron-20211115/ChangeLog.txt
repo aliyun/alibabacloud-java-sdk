@@ -1,3 +1,6 @@
+2022-09-29 Version: 1.0.4
+- Change aone code version.
+
 2022-09-29 Version: 1.0.3
 - Change aone code version.
 
