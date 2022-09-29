@@ -7,11 +7,11 @@ public class DeleteResourceResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
-    @NameInMap("retryTimeout")
-    public Integer retryTimeout;
-
     @NameInMap("taskId")
     public String taskId;
+
+    @NameInMap("timeout")
+    public Integer timeout;
 
     public static DeleteResourceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteResourceResponseBody self = new DeleteResourceResponseBody();
@@ -26,20 +26,20 @@ public class DeleteResourceResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DeleteResourceResponseBody setRetryTimeout(Integer retryTimeout) {
-        this.retryTimeout = retryTimeout;
-        return this;
-    }
-    public Integer getRetryTimeout() {
-        return this.retryTimeout;
-    }
-
     public DeleteResourceResponseBody setTaskId(String taskId) {
         this.taskId = taskId;
         return this;
     }
     public String getTaskId() {
         return this.taskId;
+    }
+
+    public DeleteResourceResponseBody setTimeout(Integer timeout) {
+        this.timeout = timeout;
+        return this;
+    }
+    public Integer getTimeout() {
+        return this.timeout;
     }
 
 }
