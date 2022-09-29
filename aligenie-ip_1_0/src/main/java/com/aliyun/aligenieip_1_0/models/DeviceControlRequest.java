@@ -38,12 +38,6 @@ public class DeviceControlRequest extends TeaModel {
         @NameInMap("Cmd")
         public String cmd;
 
-        @NameInMap("Current")
-        public String current;
-
-        @NameInMap("Device")
-        public String device;
-
         @NameInMap("DeviceNumber")
         public String deviceNumber;
 
@@ -75,22 +69,6 @@ public class DeviceControlRequest extends TeaModel {
         }
         public String getCmd() {
             return this.cmd;
-        }
-
-        public DeviceControlRequestPayload setCurrent(String current) {
-            this.current = current;
-            return this;
-        }
-        public String getCurrent() {
-            return this.current;
-        }
-
-        public DeviceControlRequestPayload setDevice(String device) {
-            this.device = device;
-            return this;
-        }
-        public String getDevice() {
-            return this.device;
         }
 
         public DeviceControlRequestPayload setDeviceNumber(String deviceNumber) {
