@@ -4,18 +4,15 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class UpdateFunctionInstanceResponseBody extends TeaModel {
-    // 错误码
     @NameInMap("Code")
     public String code;
 
     @NameInMap("HttpCode")
     public Long httpCode;
 
-    // 耗时
     @NameInMap("Latency")
     public Long latency;
 
-    // 错误信息
     @NameInMap("Message")
     public String message;
 

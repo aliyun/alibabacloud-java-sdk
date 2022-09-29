@@ -83,6 +83,36 @@ public class ListAppGroupsResponseBody extends TeaModel {
 
     }
 
+    public static class ListAppGroupsResponseBodyResultTags extends TeaModel {
+        @NameInMap("tagKey")
+        public String tagKey;
+
+        @NameInMap("tagValue")
+        public String tagValue;
+
+        public static ListAppGroupsResponseBodyResultTags build(java.util.Map<String, ?> map) throws Exception {
+            ListAppGroupsResponseBodyResultTags self = new ListAppGroupsResponseBodyResultTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListAppGroupsResponseBodyResultTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public ListAppGroupsResponseBodyResultTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
     public static class ListAppGroupsResponseBodyResult extends TeaModel {
         @NameInMap("chargeType")
         public String chargeType;
@@ -152,6 +182,9 @@ public class ListAppGroupsResponseBody extends TeaModel {
 
         @NameInMap("switchedTime")
         public Integer switchedTime;
+
+        @NameInMap("tags")
+        public java.util.List<ListAppGroupsResponseBodyResultTags> tags;
 
         @NameInMap("type")
         public String type;
@@ -346,6 +379,14 @@ public class ListAppGroupsResponseBody extends TeaModel {
         }
         public Integer getSwitchedTime() {
             return this.switchedTime;
+        }
+
+        public ListAppGroupsResponseBodyResult setTags(java.util.List<ListAppGroupsResponseBodyResultTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListAppGroupsResponseBodyResultTags> getTags() {
+            return this.tags;
         }
 
         public ListAppGroupsResponseBodyResult setType(String type) {

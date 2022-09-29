@@ -4,7 +4,6 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class ValidateDataSourcesResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("requestId")
     public String requestId;
 
