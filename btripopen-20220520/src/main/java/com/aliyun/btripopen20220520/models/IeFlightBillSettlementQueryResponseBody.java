@@ -4,6 +4,9 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
+    @NameInMap("code")
+    public Integer code;
+
     @NameInMap("message")
     public String message;
 
@@ -16,9 +19,6 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
-    @NameInMap("result_code")
-    public Integer resultCode;
-
     @NameInMap("success")
     public Boolean success;
 
@@ -28,6 +28,14 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
     public static IeFlightBillSettlementQueryResponseBody build(java.util.Map<String, ?> map) throws Exception {
         IeFlightBillSettlementQueryResponseBody self = new IeFlightBillSettlementQueryResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public IeFlightBillSettlementQueryResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
     }
 
     public IeFlightBillSettlementQueryResponseBody setMessage(String message) {
@@ -60,14 +68,6 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public IeFlightBillSettlementQueryResponseBody setResultCode(Integer resultCode) {
-        this.resultCode = resultCode;
-        return this;
-    }
-    public Integer getResultCode() {
-        return this.resultCode;
     }
 
     public IeFlightBillSettlementQueryResponseBody setSuccess(Boolean success) {
