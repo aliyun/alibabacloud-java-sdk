@@ -37,6 +37,9 @@ public class GetWirelessCloudConnectorResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("ServiceType")
+    public String serviceType;
+
     @NameInMap("Status")
     public String status;
 
@@ -139,6 +142,14 @@ public class GetWirelessCloudConnectorResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public GetWirelessCloudConnectorResponseBody setServiceType(String serviceType) {
+        this.serviceType = serviceType;
+        return this;
+    }
+    public String getServiceType() {
+        return this.serviceType;
+    }
+
     public GetWirelessCloudConnectorResponseBody setStatus(String status) {
         this.status = status;
         return this;
@@ -172,6 +183,9 @@ public class GetWirelessCloudConnectorResponseBody extends TeaModel {
 
         @NameInMap("Description")
         public String description;
+
+        @NameInMap("GrantAliUid")
+        public String grantAliUid;
 
         @NameInMap("ISP")
         public String ISP;
@@ -221,6 +235,14 @@ public class GetWirelessCloudConnectorResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public GetWirelessCloudConnectorResponseBodyNetLinks setGrantAliUid(String grantAliUid) {
+            this.grantAliUid = grantAliUid;
+            return this;
+        }
+        public String getGrantAliUid() {
+            return this.grantAliUid;
         }
 
         public GetWirelessCloudConnectorResponseBodyNetLinks setISP(String ISP) {
