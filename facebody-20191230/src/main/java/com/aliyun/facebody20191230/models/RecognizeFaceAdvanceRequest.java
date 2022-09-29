@@ -4,10 +4,6 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class RecognizeFaceAdvanceRequest extends TeaModel {
-    @NameInMap("ImageURLObject")
-    @Validation(required = true)
-    public java.io.InputStream imageURLObject;
-
     @NameInMap("Age")
     public Boolean age;
 
@@ -26,6 +22,9 @@ public class RecognizeFaceAdvanceRequest extends TeaModel {
     @NameInMap("Hat")
     public Boolean hat;
 
+    @NameInMap("ImageURL")
+    public java.io.InputStream imageURLObject;
+
     @NameInMap("Mask")
     public Boolean mask;
 
@@ -38,14 +37,6 @@ public class RecognizeFaceAdvanceRequest extends TeaModel {
     public static RecognizeFaceAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         RecognizeFaceAdvanceRequest self = new RecognizeFaceAdvanceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public RecognizeFaceAdvanceRequest setImageURLObject(java.io.InputStream imageURLObject) {
-        this.imageURLObject = imageURLObject;
-        return this;
-    }
-    public java.io.InputStream getImageURLObject() {
-        return this.imageURLObject;
     }
 
     public RecognizeFaceAdvanceRequest setAge(Boolean age) {
@@ -94,6 +85,14 @@ public class RecognizeFaceAdvanceRequest extends TeaModel {
     }
     public Boolean getHat() {
         return this.hat;
+    }
+
+    public RecognizeFaceAdvanceRequest setImageURLObject(java.io.InputStream imageURLObject) {
+        this.imageURLObject = imageURLObject;
+        return this;
+    }
+    public java.io.InputStream getImageURLObject() {
+        return this.imageURLObject;
     }
 
     public RecognizeFaceAdvanceRequest setMask(Boolean mask) {

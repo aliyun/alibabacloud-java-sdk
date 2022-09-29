@@ -7,7 +7,6 @@ public class MonitorExaminationRequest extends TeaModel {
     @NameInMap("ImageURL")
     public String imageURL;
 
-    // A short description of struct
     @NameInMap("Type")
     public Long type;
 

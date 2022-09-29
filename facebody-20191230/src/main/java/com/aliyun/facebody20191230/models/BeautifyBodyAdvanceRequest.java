@@ -4,10 +4,6 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class BeautifyBodyAdvanceRequest extends TeaModel {
-    @NameInMap("ImageURLObject")
-    @Validation(required = true)
-    public java.io.InputStream imageURLObject;
-
     @NameInMap("AgeRange")
     public BeautifyBodyAdvanceRequestAgeRange ageRange;
 
@@ -22,6 +18,9 @@ public class BeautifyBodyAdvanceRequest extends TeaModel {
 
     @NameInMap("FemaleLiquifyDegree")
     public Float femaleLiquifyDegree;
+
+    @NameInMap("ImageURL")
+    public java.io.InputStream imageURLObject;
 
     @NameInMap("IsPregnant")
     public Boolean isPregnant;
@@ -44,14 +43,6 @@ public class BeautifyBodyAdvanceRequest extends TeaModel {
     public static BeautifyBodyAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         BeautifyBodyAdvanceRequest self = new BeautifyBodyAdvanceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public BeautifyBodyAdvanceRequest setImageURLObject(java.io.InputStream imageURLObject) {
-        this.imageURLObject = imageURLObject;
-        return this;
-    }
-    public java.io.InputStream getImageURLObject() {
-        return this.imageURLObject;
     }
 
     public BeautifyBodyAdvanceRequest setAgeRange(BeautifyBodyAdvanceRequestAgeRange ageRange) {
@@ -92,6 +83,14 @@ public class BeautifyBodyAdvanceRequest extends TeaModel {
     }
     public Float getFemaleLiquifyDegree() {
         return this.femaleLiquifyDegree;
+    }
+
+    public BeautifyBodyAdvanceRequest setImageURLObject(java.io.InputStream imageURLObject) {
+        this.imageURLObject = imageURLObject;
+        return this;
+    }
+    public java.io.InputStream getImageURLObject() {
+        return this.imageURLObject;
     }
 
     public BeautifyBodyAdvanceRequest setIsPregnant(Boolean isPregnant) {

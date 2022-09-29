@@ -4,8 +4,7 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class RecognizeExpressionAdvanceRequest extends TeaModel {
-    @NameInMap("ImageURLObject")
-    @Validation(required = true)
+    @NameInMap("ImageURL")
     public java.io.InputStream imageURLObject;
 
     public static RecognizeExpressionAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {

@@ -4,8 +4,7 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class DetectVideoLivingFaceAdvanceRequest extends TeaModel {
-    @NameInMap("VideoUrlObject")
-    @Validation(required = true)
+    @NameInMap("VideoUrl")
     public java.io.InputStream videoUrlObject;
 
     public static DetectVideoLivingFaceAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {

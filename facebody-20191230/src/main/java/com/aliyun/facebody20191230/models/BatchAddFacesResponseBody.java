@@ -7,7 +7,6 @@ public class BatchAddFacesResponseBody extends TeaModel {
     @NameInMap("Data")
     public BatchAddFacesResponseBodyData data;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

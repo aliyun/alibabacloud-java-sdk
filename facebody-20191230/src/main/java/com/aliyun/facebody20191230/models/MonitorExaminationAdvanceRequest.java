@@ -4,11 +4,9 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class MonitorExaminationAdvanceRequest extends TeaModel {
-    @NameInMap("ImageURLObject")
-    @Validation(required = true)
+    @NameInMap("ImageURL")
     public java.io.InputStream imageURLObject;
 
-    // A short description of struct
     @NameInMap("Type")
     public Long type;
 

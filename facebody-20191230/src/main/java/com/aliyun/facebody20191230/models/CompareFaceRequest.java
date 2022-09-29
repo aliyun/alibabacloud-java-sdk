@@ -16,7 +16,6 @@ public class CompareFaceRequest extends TeaModel {
     @NameInMap("ImageURLB")
     public String imageURLB;
 
-    // 质量分阈值，取值范围 [0.0, 100.0],   0.0或空  表示不做质量分判断逻辑。
     @NameInMap("QualityScoreThreshold")
     public Float qualityScoreThreshold;
 

@@ -4,11 +4,9 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class GetBodyPersonRequest extends TeaModel {
-    // 数据库ID
     @NameInMap("DbId")
     public Long dbId;
 
-    // 人员ID
     @NameInMap("PersonId")
     public Long personId;
 

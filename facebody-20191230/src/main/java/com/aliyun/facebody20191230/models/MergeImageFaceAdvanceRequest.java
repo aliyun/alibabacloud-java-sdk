@@ -4,14 +4,12 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class MergeImageFaceAdvanceRequest extends TeaModel {
-    @NameInMap("ImageURLObject")
-    @Validation(required = true)
+    @NameInMap("ImageURL")
     public java.io.InputStream imageURLObject;
 
     @NameInMap("TemplateId")
     public String templateId;
 
-    // A short description of struct
     @NameInMap("UserId")
     public String userId;
 

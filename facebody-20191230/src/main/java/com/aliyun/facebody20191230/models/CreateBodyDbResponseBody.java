@@ -7,7 +7,6 @@ public class CreateBodyDbResponseBody extends TeaModel {
     @NameInMap("Data")
     public CreateBodyDbResponseBodyData data;
 
-    // RequestId
     @NameInMap("RequestId")
     public String requestId;
 
@@ -33,7 +32,6 @@ public class CreateBodyDbResponseBody extends TeaModel {
     }
 
     public static class CreateBodyDbResponseBodyData extends TeaModel {
-        // 数据库ID
         @NameInMap("Id")
         public Long id;
 

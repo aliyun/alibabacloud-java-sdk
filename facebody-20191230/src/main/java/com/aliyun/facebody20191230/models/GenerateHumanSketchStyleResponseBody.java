@@ -7,7 +7,6 @@ public class GenerateHumanSketchStyleResponseBody extends TeaModel {
     @NameInMap("Data")
     public GenerateHumanSketchStyleResponseBodyData data;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -33,7 +32,6 @@ public class GenerateHumanSketchStyleResponseBody extends TeaModel {
     }
 
     public static class GenerateHumanSketchStyleResponseBodyData extends TeaModel {
-        // 出参图片地址
         @NameInMap("ImageURL")
         public String imageURL;
 

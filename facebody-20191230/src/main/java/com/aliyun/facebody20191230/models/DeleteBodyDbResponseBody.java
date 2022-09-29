@@ -4,7 +4,6 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class DeleteBodyDbResponseBody extends TeaModel {
-    // RequestId
     @NameInMap("RequestId")
     public String requestId;
 

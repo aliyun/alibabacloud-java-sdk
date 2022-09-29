@@ -7,7 +7,6 @@ public class SearchBodyTraceResponseBody extends TeaModel {
     @NameInMap("Data")
     public SearchBodyTraceResponseBodyData data;
 
-    // RequestId
     @NameInMap("RequestId")
     public String requestId;
 
@@ -33,23 +32,18 @@ public class SearchBodyTraceResponseBody extends TeaModel {
     }
 
     public static class SearchBodyTraceResponseBodyDataMatchList extends TeaModel {
-        // 数据库ID
         @NameInMap("DbId")
         public Long dbId;
 
-        // 自定义数据信息
         @NameInMap("ExtraData")
         public String extraData;
 
-        // 人员ID
         @NameInMap("PersonId")
         public Long personId;
 
-        // 匹配度分值，越大越相似，取值范围[-1.0, 1.0]
         @NameInMap("Score")
         public Float score;
 
-        // TraceId
         @NameInMap("TraceId")
         public Long traceId;
 
@@ -101,7 +95,6 @@ public class SearchBodyTraceResponseBody extends TeaModel {
     }
 
     public static class SearchBodyTraceResponseBodyData extends TeaModel {
-        // 匹配的Trace列表
         @NameInMap("MatchList")
         public java.util.List<SearchBodyTraceResponseBodyDataMatchList> matchList;
 

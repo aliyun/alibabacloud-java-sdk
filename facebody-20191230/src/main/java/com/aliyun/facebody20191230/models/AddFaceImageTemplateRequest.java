@@ -7,7 +7,6 @@ public class AddFaceImageTemplateRequest extends TeaModel {
     @NameInMap("ImageURL")
     public String imageURL;
 
-    // A short description of struct
     @NameInMap("UserId")
     public String userId;
 

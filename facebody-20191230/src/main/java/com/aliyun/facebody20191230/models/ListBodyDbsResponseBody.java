@@ -7,7 +7,6 @@ public class ListBodyDbsResponseBody extends TeaModel {
     @NameInMap("Data")
     public ListBodyDbsResponseBodyData data;
 
-    // RequestId
     @NameInMap("RequestId")
     public String requestId;
 
@@ -33,11 +32,9 @@ public class ListBodyDbsResponseBody extends TeaModel {
     }
 
     public static class ListBodyDbsResponseBodyDataDbList extends TeaModel {
-        // 数据库ID
         @NameInMap("Id")
         public Long id;
 
-        // 数据库名称
         @NameInMap("Name")
         public String name;
 
@@ -68,7 +65,6 @@ public class ListBodyDbsResponseBody extends TeaModel {
         @NameInMap("DbList")
         public java.util.List<ListBodyDbsResponseBodyDataDbList> dbList;
 
-        // 数据库ID
         @NameInMap("Total")
         public Long total;
 

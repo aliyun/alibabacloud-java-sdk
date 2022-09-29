@@ -7,7 +7,6 @@ public class RetouchSkinResponseBody extends TeaModel {
     @NameInMap("Data")
     public RetouchSkinResponseBodyData data;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

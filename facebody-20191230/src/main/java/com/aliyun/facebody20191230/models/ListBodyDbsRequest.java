@@ -4,11 +4,9 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class ListBodyDbsRequest extends TeaModel {
-    // 分页数量
     @NameInMap("Limit")
     public Long limit;
 
-    // 起始位置(不含)
     @NameInMap("Offset")
     public Long offset;
 

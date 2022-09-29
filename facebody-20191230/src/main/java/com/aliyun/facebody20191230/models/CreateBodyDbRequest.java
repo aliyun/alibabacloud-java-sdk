@@ -4,7 +4,6 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class CreateBodyDbRequest extends TeaModel {
-    // 数据库名称
     @NameInMap("Name")
     public String name;
 

@@ -4,15 +4,14 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class SearchFaceAdvanceRequest extends TeaModel {
-    @NameInMap("ImageUrlObject")
-    @Validation(required = true)
-    public java.io.InputStream imageUrlObject;
-
     @NameInMap("DbName")
     public String dbName;
 
     @NameInMap("DbNames")
     public String dbNames;
+
+    @NameInMap("ImageUrl")
+    public java.io.InputStream imageUrlObject;
 
     @NameInMap("Limit")
     public Integer limit;
@@ -26,14 +25,6 @@ public class SearchFaceAdvanceRequest extends TeaModel {
     public static SearchFaceAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         SearchFaceAdvanceRequest self = new SearchFaceAdvanceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public SearchFaceAdvanceRequest setImageUrlObject(java.io.InputStream imageUrlObject) {
-        this.imageUrlObject = imageUrlObject;
-        return this;
-    }
-    public java.io.InputStream getImageUrlObject() {
-        return this.imageUrlObject;
     }
 
     public SearchFaceAdvanceRequest setDbName(String dbName) {
@@ -50,6 +41,14 @@ public class SearchFaceAdvanceRequest extends TeaModel {
     }
     public String getDbNames() {
         return this.dbNames;
+    }
+
+    public SearchFaceAdvanceRequest setImageUrlObject(java.io.InputStream imageUrlObject) {
+        this.imageUrlObject = imageUrlObject;
+        return this;
+    }
+    public java.io.InputStream getImageUrlObject() {
+        return this.imageUrlObject;
     }
 
     public SearchFaceAdvanceRequest setLimit(Integer limit) {

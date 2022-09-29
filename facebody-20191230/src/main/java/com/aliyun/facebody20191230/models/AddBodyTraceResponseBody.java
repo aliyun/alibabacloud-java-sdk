@@ -7,7 +7,6 @@ public class AddBodyTraceResponseBody extends TeaModel {
     @NameInMap("Data")
     public AddBodyTraceResponseBodyData data;
 
-    // RequestId
     @NameInMap("RequestId")
     public String requestId;
 
@@ -33,7 +32,6 @@ public class AddBodyTraceResponseBody extends TeaModel {
     }
 
     public static class AddBodyTraceResponseBodyData extends TeaModel {
-        // TraceID
         @NameInMap("Id")
         public Long id;
 

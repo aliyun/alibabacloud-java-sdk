@@ -4,7 +4,6 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class RecognizeHandGestureRequest extends TeaModel {
-    // A short description of struct
     @NameInMap("AppId")
     public String appId;
 
