@@ -7,14 +7,14 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("code")
+    public Integer code;
+
     @NameInMap("message")
     public String message;
 
     @NameInMap("module")
     public CarBillSettlementQueryResponseBodyModule module;
-
-    @NameInMap("result_code")
-    public Integer resultCode;
 
     @NameInMap("success")
     public Boolean success;
@@ -35,6 +35,14 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public CarBillSettlementQueryResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
+    }
+
     public CarBillSettlementQueryResponseBody setMessage(String message) {
         this.message = message;
         return this;
@@ -49,14 +57,6 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
     }
     public CarBillSettlementQueryResponseBodyModule getModule() {
         return this.module;
-    }
-
-    public CarBillSettlementQueryResponseBody setResultCode(Integer resultCode) {
-        this.resultCode = resultCode;
-        return this;
-    }
-    public Integer getResultCode() {
-        return this.resultCode;
     }
 
     public CarBillSettlementQueryResponseBody setSuccess(Boolean success) {

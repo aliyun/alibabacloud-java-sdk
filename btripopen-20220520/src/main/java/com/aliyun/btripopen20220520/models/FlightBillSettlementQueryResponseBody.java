@@ -7,14 +7,14 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("code")
+    public Integer code;
+
     @NameInMap("message")
     public String message;
 
     @NameInMap("module")
     public FlightBillSettlementQueryResponseBodyModule module;
-
-    @NameInMap("result_code")
-    public Integer resultCode;
 
     @NameInMap("success")
     public Boolean success;
@@ -35,6 +35,14 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public FlightBillSettlementQueryResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
+    }
+
     public FlightBillSettlementQueryResponseBody setMessage(String message) {
         this.message = message;
         return this;
@@ -49,14 +57,6 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
     }
     public FlightBillSettlementQueryResponseBodyModule getModule() {
         return this.module;
-    }
-
-    public FlightBillSettlementQueryResponseBody setResultCode(Integer resultCode) {
-        this.resultCode = resultCode;
-        return this;
-    }
-    public Integer getResultCode() {
-        return this.resultCode;
     }
 
     public FlightBillSettlementQueryResponseBody setSuccess(Boolean success) {
