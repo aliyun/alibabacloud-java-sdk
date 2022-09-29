@@ -19,6 +19,9 @@ public class ValidateTemplateResponseBody extends TeaModel {
     @NameInMap("ResourceTypes")
     public ValidateTemplateResponseBodyResourceTypes resourceTypes;
 
+    @NameInMap("Resources")
+    public java.util.List<ValidateTemplateResponseBodyResources> resources;
+
     public static ValidateTemplateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ValidateTemplateResponseBody self = new ValidateTemplateResponseBody();
         return TeaModel.build(map, self);
@@ -62,6 +65,14 @@ public class ValidateTemplateResponseBody extends TeaModel {
     }
     public ValidateTemplateResponseBodyResourceTypes getResourceTypes() {
         return this.resourceTypes;
+    }
+
+    public ValidateTemplateResponseBody setResources(java.util.List<ValidateTemplateResponseBodyResources> resources) {
+        this.resources = resources;
+        return this;
+    }
+    public java.util.List<ValidateTemplateResponseBodyResources> getResources() {
+        return this.resources;
     }
 
     public static class ValidateTemplateResponseBodyOutputs extends TeaModel {
@@ -120,6 +131,47 @@ public class ValidateTemplateResponseBody extends TeaModel {
         }
         public java.util.List<String> getResources() {
             return this.resources;
+        }
+
+    }
+
+    public static class ValidateTemplateResponseBodyResources extends TeaModel {
+        @NameInMap("LogicalResourceIdPattern")
+        public String logicalResourceIdPattern;
+
+        @NameInMap("ResourcePath")
+        public String resourcePath;
+
+        @NameInMap("ResourceType")
+        public String resourceType;
+
+        public static ValidateTemplateResponseBodyResources build(java.util.Map<String, ?> map) throws Exception {
+            ValidateTemplateResponseBodyResources self = new ValidateTemplateResponseBodyResources();
+            return TeaModel.build(map, self);
+        }
+
+        public ValidateTemplateResponseBodyResources setLogicalResourceIdPattern(String logicalResourceIdPattern) {
+            this.logicalResourceIdPattern = logicalResourceIdPattern;
+            return this;
+        }
+        public String getLogicalResourceIdPattern() {
+            return this.logicalResourceIdPattern;
+        }
+
+        public ValidateTemplateResponseBodyResources setResourcePath(String resourcePath) {
+            this.resourcePath = resourcePath;
+            return this;
+        }
+        public String getResourcePath() {
+            return this.resourcePath;
+        }
+
+        public ValidateTemplateResponseBodyResources setResourceType(String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+        public String getResourceType() {
+            return this.resourceType;
         }
 
     }
