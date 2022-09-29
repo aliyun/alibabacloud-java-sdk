@@ -1,3 +1,6 @@
+2022-09-29 Version: 1.0.4
+- Automatically generate sdk tasks.
+
 2022-05-20 Version: 1.0.3
 - Ip related APIs are changed to visiable and QPM is set as 60 .
 
