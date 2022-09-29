@@ -3360,6 +3360,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DesktopId", request.desktopId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.endUserId)) {
+            query.put("EndUserId", request.endUserId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.includeOutput)) {
             query.put("IncludeOutput", request.includeOutput);
         }
@@ -6901,6 +6905,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.desktopId)) {
             query.put("DesktopId", request.desktopId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endUserId)) {
+            query.put("EndUserId", request.endUserId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
