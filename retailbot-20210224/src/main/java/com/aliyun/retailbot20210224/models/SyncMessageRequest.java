@@ -19,6 +19,9 @@ public class SyncMessageRequest extends TeaModel {
     @NameInMap("MessageId")
     public String messageId;
 
+    @NameInMap("ProductId")
+    public String productId;
+
     @NameInMap("RobotCode")
     public String robotCode;
 
@@ -92,6 +95,14 @@ public class SyncMessageRequest extends TeaModel {
     }
     public String getMessageId() {
         return this.messageId;
+    }
+
+    public SyncMessageRequest setProductId(String productId) {
+        this.productId = productId;
+        return this;
+    }
+    public String getProductId() {
+        return this.productId;
     }
 
     public SyncMessageRequest setRobotCode(String robotCode) {
