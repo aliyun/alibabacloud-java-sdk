@@ -4,56 +4,39 @@ package com.aliyun.paiplugin20220112.models;
 import com.aliyun.tea.*;
 
 public class CreateGroupRequest extends TeaModel {
-    // 关联算法，人群来源为算法。
     @NameInMap("Algorithm")
     public String algorithm;
 
-    // 手机号列名，人群来源为CSV文件，MaxCompute，并且包含手机号时需指定。
     @NameInMap("Column")
     public String column;
 
-    // 过滤条件，人群来源为MaxCompute时可指定。
     @NameInMap("Filter")
     public String filter;
 
-    // 预测任务Id，人群来源为算法。
     @NameInMap("InferenceJobId")
     public String inferenceJobId;
 
-    // 人群名称。
     @NameInMap("Name")
     public String name;
 
-    // 是否包含手机号，包含手机号的人群可用于触达计划。
     @NameInMap("PhoneNumber")
     public Boolean phoneNumber;
 
-    // MaxCompute(ODPS)项目名，人群来源为MaxCompute时需指定。
     @NameInMap("Project")
     public String project;
 
-    // 人群备注。
     @NameInMap("Remark")
     public String remark;
 
-    // 人群来源。
-    // - 0: 文本，每行一个手机号，最多100个。
-    // - 1: 文本文件，每行一个手机号，可通过控制台上传或指定自定义OSS地址，指定自定义OSS地址前需确保已在控制台完成一键授权。
-    // - 2: CSV文件，需指定手机号列名，可通过控制台上传或指定自定义OSS地址，指定自定义OSS地址前需确保已在控制台完成一键授权。
-    // - 3: MaxCompute(ODPS)表，需指定手机号列名。
-    // - 4: 算法。
     @NameInMap("Source")
     public Integer source;
 
-    // MaxCompute(ODPS)表名，人群来源为MaxCompute时需指定。
     @NameInMap("Table")
     public String table;
 
-    // 文本，人群来源为文本时需指定。
     @NameInMap("Text")
     public String text;
 
-    // 文件地址，人群来源为文本文件，CSV文件，MaxCompute时需指定。
     @NameInMap("Uri")
     public String uri;
 

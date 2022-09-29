@@ -4,55 +4,36 @@ package com.aliyun.paiplugin20220112.models;
 import com.aliyun.tea.*;
 
 public class CreateScheduleRequest extends TeaModel {
-    // 终止时间（UTC+8）。
     @NameInMap("EndTime")
     public Integer endTime;
 
-    // 执行时间 (UTC+8)，为空立即执行。
     @NameInMap("ExecuteTime")
     public String executeTime;
 
-    // 人群Id。
     @NameInMap("GroupId")
     public String groupId;
 
-    // 触达计划名称。
     @NameInMap("Name")
     public String name;
 
-    // 重复周期，按重复周期与重复周期单位执行。
     @NameInMap("RepeatCycle")
     public Integer repeatCycle;
 
-    // 重复周期单位，若指定执行时间，则重复周期生效。
-    // - 0: 从不（默认）。
-    // - 1: 小时。
-    // - 2: 天。
-    // - 3: 周。
-    // - 4: 月。
     @NameInMap("RepeatCycleUnit")
     public Integer repeatCycleUnit;
 
-    // 重复次数。
-    // - -1: 不设终止时间（默认）。
-    // - 0: 不重复。
-    // - N: 重复N次后终止。
     @NameInMap("RepeatTimes")
     public Integer repeatTimes;
 
-    // 签名。
     @NameInMap("SignName")
     public String signName;
 
-    // 签名Id，或指定签名。
     @NameInMap("SignatureId")
     public String signatureId;
 
-    // 模板Code。
     @NameInMap("TemplateCode")
     public String templateCode;
 
-    // 模板Id，或指定模板Code。
     @NameInMap("TemplateId")
     public String templateId;
 

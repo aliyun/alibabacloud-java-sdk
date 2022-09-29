@@ -4,11 +4,9 @@ package com.aliyun.paiplugin20220112.models;
 import com.aliyun.tea.*;
 
 public class CreateCampaignRequest extends TeaModel {
-    // 运营活动名称。
     @NameInMap("Name")
     public String name;
 
-    // 备注。
     @NameInMap("Remark")
     public String remark;
 

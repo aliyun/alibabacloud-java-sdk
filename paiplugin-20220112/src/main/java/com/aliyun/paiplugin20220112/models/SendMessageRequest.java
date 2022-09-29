@@ -4,43 +4,33 @@ package com.aliyun.paiplugin20220112.models;
 import com.aliyun.tea.*;
 
 public class SendMessageRequest extends TeaModel {
-    // 人群Id，用于关联人群。
     @NameInMap("GroupId")
     public String groupId;
 
-    // 外部拓展字段，示例：["1234567890"]。
     @NameInMap("OutIds")
     public java.util.List<String> outIds;
 
-    // 手机号，每个手机号对应一个模板变量、上行拓展码和外部拓展字段，示例：["1234567890"]。
     @NameInMap("PhoneNumbers")
     public java.util.List<String> phoneNumbers;
 
-    // 触达计划Id，用于关联触达计划。
     @NameInMap("ScheduleId")
     public String scheduleId;
 
-    // 签名名称。
     @NameInMap("SignName")
     public String signName;
 
-    // 签名Id，同时只能指定签名名称或签名Id其中之一。
     @NameInMap("SignatureId")
     public String signatureId;
 
-    // 短信上行拓展码，示例：["1234567890"]。
     @NameInMap("SmsUpExtendCodes")
     public java.util.List<String> smsUpExtendCodes;
 
-    // 模板Code。
     @NameInMap("TemplateCode")
     public String templateCode;
 
-    // 模板Id，同时只能指定模板Code或模板Id其中之一。
     @NameInMap("TemplateId")
     public String templateId;
 
-    // 短信模板变量对应的实际值，JSON格式。支持传入多个参数，示例：[{"name":"张三","number":"15038****76"}]。
     @NameInMap("TemplateParams")
     public java.util.List<String> templateParams;
 

@@ -4,19 +4,15 @@ package com.aliyun.paiplugin20220112.models;
 import com.aliyun.tea.*;
 
 public class ListMessagesResponseBody extends TeaModel {
-    // 返回数据。
     @NameInMap("Data")
     public ListMessagesResponseBodyData data;
 
-    // 错误码。
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
-    // 错误信息。
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 
@@ -58,53 +54,36 @@ public class ListMessagesResponseBody extends TeaModel {
     }
 
     public static class ListMessagesResponseBodyDataMessages extends TeaModel {
-        // 短信错误码。
         @NameInMap("ErrorCode")
         public String errorCode;
 
-        // 关联人群Id，未关联则为空。
         @NameInMap("GroupId")
         public String groupId;
 
-        // 短信序列号。
         @NameInMap("Id")
         public String id;
 
-        // 外部拓展字段。
         @NameInMap("OutId")
         public String outId;
 
-        // 手机号码。
         @NameInMap("PhoneNumber")
         public String phoneNumber;
 
-        // 关联触达计划Id，未关联则为空。
         @NameInMap("ScheduleId")
         public String scheduleId;
 
-        // 签名名称。
         @NameInMap("Signature")
         public String signature;
 
-        // 短信发送状态。
-        // - 0 : 发送中。
-        // - 1 : 发送成功。
-        // - 2 : 发送失败。
         @NameInMap("Status")
         public Integer status;
 
-        // 模板号。
         @NameInMap("TemplateCode")
         public String templateCode;
 
-        // 模板参数。
         @NameInMap("TemplateParams")
         public String templateParams;
 
-        // 模板类型。
-        // - 0 : 验证码。
-        // - 1 : 短信通知。
-        // - 2 : 推广短信。
         @NameInMap("TemplateType")
         public Integer templateType;
 
@@ -204,19 +183,15 @@ public class ListMessagesResponseBody extends TeaModel {
     }
 
     public static class ListMessagesResponseBodyData extends TeaModel {
-        // 短信列表。
         @NameInMap("Messages")
         public java.util.List<ListMessagesResponseBodyDataMessages> messages;
 
-        // 分页数，从1开始，默认为1。
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
-        // 分页大小，默认为10。
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        // 短信数量。
         @NameInMap("TotalCount")
         public Integer totalCount;
 

@@ -4,19 +4,15 @@ package com.aliyun.paiplugin20220112.models;
 import com.aliyun.tea.*;
 
 public class ListInferenceJobsResponseBody extends TeaModel {
-    // 返回数据。
     @NameInMap("Data")
     public ListInferenceJobsResponseBodyData data;
 
-    // 错误码。
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
-    // 错误信息。
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 
@@ -58,59 +54,48 @@ public class ListInferenceJobsResponseBody extends TeaModel {
     }
 
     public static class ListInferenceJobsResponseBodyDataInferenceJobs extends TeaModel {
-        // 关联算法。
         @NameInMap("Algorithm")
         public String algorithm;
 
-        // 关联运营活动Id。
         @NameInMap("CampaignId")
         public String campaignId;
 
-        // 创建时间 (UTC+8)。
         @NameInMap("CreatedTime")
         public String createdTime;
 
-        // 预测数据路径。
         @NameInMap("DataPath")
         public String dataPath;
 
-        // 关联人群Id，如果任务失败则人群无效。
         @NameInMap("GroupId")
         public String groupId;
 
-        // 预测任务日志。
         @NameInMap("History")
         public String history;
 
-        // 预测任务Id。
         @NameInMap("Id")
         public String id;
 
-        // 预测任务名称。
         @NameInMap("Name")
         public String name;
 
-        // 备注。
         @NameInMap("Remark")
         public String remark;
 
-        // 预测任务状态。
         @NameInMap("Status")
         public Integer status;
 
-        // 输出数据路径，需要为空目录。
+        @NameInMap("TargetGroupId")
+        public String targetGroupId;
+
         @NameInMap("TargetPath")
         public String targetPath;
 
-        // 关联训练任务。
         @NameInMap("TrainingJobId")
         public String trainingJobId;
 
-        // 更新时间 (UTC+8)。
         @NameInMap("UpdatedTime")
         public String updatedTime;
 
-        // 用户配置。
         @NameInMap("UserConfig")
         public String userConfig;
 
@@ -199,6 +184,14 @@ public class ListInferenceJobsResponseBody extends TeaModel {
             return this.status;
         }
 
+        public ListInferenceJobsResponseBodyDataInferenceJobs setTargetGroupId(String targetGroupId) {
+            this.targetGroupId = targetGroupId;
+            return this;
+        }
+        public String getTargetGroupId() {
+            return this.targetGroupId;
+        }
+
         public ListInferenceJobsResponseBodyDataInferenceJobs setTargetPath(String targetPath) {
             this.targetPath = targetPath;
             return this;
@@ -234,19 +227,15 @@ public class ListInferenceJobsResponseBody extends TeaModel {
     }
 
     public static class ListInferenceJobsResponseBodyData extends TeaModel {
-        // 预测任务列表。
         @NameInMap("InferenceJobs")
         public java.util.List<ListInferenceJobsResponseBodyDataInferenceJobs> inferenceJobs;
 
-        // 分页数，从1开始，默认为1。
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
-        // 分页大小，默认为10。
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        // 总预测任务数量。
         @NameInMap("TotalCount")
         public Integer totalCount;
 

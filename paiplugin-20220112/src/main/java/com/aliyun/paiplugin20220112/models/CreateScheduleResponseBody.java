@@ -4,19 +4,15 @@ package com.aliyun.paiplugin20220112.models;
 import com.aliyun.tea.*;
 
 public class CreateScheduleResponseBody extends TeaModel {
-    // 返回数据。
     @NameInMap("Data")
     public CreateScheduleResponseBodyData data;
 
-    // 错误码。
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
-    // 错误信息。
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 
@@ -58,77 +54,48 @@ public class CreateScheduleResponseBody extends TeaModel {
     }
 
     public static class CreateScheduleResponseBodyData extends TeaModel {
-        // 创建时间 (UTC+8)。
         @NameInMap("CreatedTime")
         public String createdTime;
 
-        // 终止时间（UTC+8）。
         @NameInMap("EndTime")
         public Integer endTime;
 
-        // 执行时间 (UTC+8)，为空立即执行。
         @NameInMap("ExecuteTime")
         public String executeTime;
 
-        // 人群Id。
         @NameInMap("GroupId")
         public String groupId;
 
-        // 触达计划Id。
         @NameInMap("Id")
         public String id;
 
-        // 触达计划名称。
         @NameInMap("Name")
         public String name;
 
-        // 重复周期，按重复周期与重复周期单位执行。
         @NameInMap("RepeatCycle")
         public Integer repeatCycle;
 
-        // 重复周期单位，若指定执行时间，则重复周期生效。
-        // - 0: 从不（默认）。
-        // - 1: 小时。
-        // - 2: 天。
-        // - 3: 周。
-        // - 4: 月。
         @NameInMap("RepeatCycleUnit")
         public Integer repeatCycleUnit;
 
-        // 重复次数。
-        // - -1: 不设终止时间（默认）。
-        // - 0: 不重复。
-        // - N: 重复N次后终止。
         @NameInMap("RepeatTimes")
         public Integer repeatTimes;
 
-        // 签名。
         @NameInMap("SignName")
         public String signName;
 
-        // 签名Id，或指定签名。
         @NameInMap("SignatureId")
         public String signatureId;
 
-        // 状态。
-        // - 0: 检查中。
-        // - 1: 检查成功。
-        // - 2: 检查失败。
-        // - 3: 发送中。
-        // - 4: 发送成功。
-        // - 5: 发送失败。
         @NameInMap("Status")
         public Integer status;
 
-        // 模板Code。
         @NameInMap("TemplateCode")
         public String templateCode;
 
-        // 模板Id，或指定模板Code。
         @NameInMap("TemplateId")
         public String templateId;
 
-        // 更新时间 (UTC+8)。
         @NameInMap("UpdatedTime")
         public String updatedTime;
 

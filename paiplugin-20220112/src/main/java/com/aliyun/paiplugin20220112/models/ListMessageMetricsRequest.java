@@ -4,50 +4,36 @@ package com.aliyun.paiplugin20220112.models;
 import com.aliyun.tea.*;
 
 public class ListMessageMetricsRequest extends TeaModel {
-    // 结束日期，格式20220102。
     @NameInMap("EndDate")
     public String endDate;
 
-    // 关联人群Id。
     @NameInMap("GroupId")
     public String groupId;
 
-    // 分页数，从1开始，默认为1。
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // 分页大小，默认为10。
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 关联触达计划Id。
     @NameInMap("ScheduleId")
     public String scheduleId;
 
-    // 签名名称。
     @NameInMap("Signature")
     public String signature;
 
-    // 签名Id，同时只能指定签名名称或签名Id其中之一。
     @NameInMap("SignatureId")
     public String signatureId;
 
-    // 开始日期，格式20220102。
     @NameInMap("StartDate")
     public String startDate;
 
-    // 模板号。
     @NameInMap("TemplateCode")
     public String templateCode;
 
-    // 模板Id，同时只能指定模板Code或模板Id其中之一。
     @NameInMap("TemplateId")
     public String templateId;
 
-    // 模板类型。
-    // - 0 : 验证码。
-    // - 1 : 短信通知。
-    // - 2 : 推广短信。
     @NameInMap("TemplateType")
     public Integer templateType;
 

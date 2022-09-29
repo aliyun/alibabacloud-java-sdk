@@ -4,19 +4,15 @@ package com.aliyun.paiplugin20220112.models;
 import com.aliyun.tea.*;
 
 public class GetAlgorithmResponseBody extends TeaModel {
-    // 返回数据。
     @NameInMap("Data")
     public GetAlgorithmResponseBodyData data;
 
-    // 错误码。
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
-    // 错误信息。
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 
@@ -58,23 +54,18 @@ public class GetAlgorithmResponseBody extends TeaModel {
     }
 
     public static class GetAlgorithmResponseBodyData extends TeaModel {
-        // 算法说明。
         @NameInMap("Description")
         public String description;
 
-        // 算法Id。
         @NameInMap("Id")
         public String id;
 
-        // 预测所需参数名与对应的参数说明。
         @NameInMap("InferUserConfigMap")
         public String inferUserConfigMap;
 
-        // 算法名称。
         @NameInMap("Name")
         public String name;
 
-        // 训练所需参数名与对应的参数说明。
         @NameInMap("TrainUserConfigMap")
         public String trainUserConfigMap;
 

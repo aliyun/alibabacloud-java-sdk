@@ -4,19 +4,15 @@ package com.aliyun.paiplugin20220112.models;
 import com.aliyun.tea.*;
 
 public class ListGroupsResponseBody extends TeaModel {
-    // 返回数据。
     @NameInMap("Data")
     public ListGroupsResponseBodyData data;
 
-    // 错误码。
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
-    // 错误信息。
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 
@@ -58,79 +54,54 @@ public class ListGroupsResponseBody extends TeaModel {
     }
 
     public static class ListGroupsResponseBodyDataGroups extends TeaModel {
-        // 关联算法，人群来源为算法。
         @NameInMap("Algorithm")
         public String algorithm;
 
-        // 人群数量。
         @NameInMap("Amount")
         public Integer amount;
 
-        // 手机号列名，人群来源为CSV文件，MaxCompute，并且包含手机号时需指定。
         @NameInMap("Column")
         public String column;
 
-        // 创建时间 (UTC+8)。
         @NameInMap("CreatedTime")
         public String createdTime;
 
-        // 过滤条件，人群来源为MaxCompute时可指定。
         @NameInMap("Filter")
         public String filter;
 
-        // 人群Id。
         @NameInMap("Id")
         public String id;
 
-        // 预测任务Id，人群来源为算法。
         @NameInMap("InferenceJobId")
         public String inferenceJobId;
 
-        // 人群名称。
         @NameInMap("Name")
         public String name;
 
-        // 是否包含手机号，包含手机号的人群可用于触达计划。
         @NameInMap("PhoneNumber")
         public Boolean phoneNumber;
 
-        // MaxCompute(ODPS)项目名，人群来源为MaxCompute时需指定。
         @NameInMap("Project")
         public String project;
 
-        // 人群备注。
         @NameInMap("Remark")
         public String remark;
 
-        // 人群来源。
-        // - 0: 文本，每行一个手机号，最多100个。
-        // - 1: 文本文件，每行一个手机号，可通过控制台上传或指定自定义OSS地址，指定自定义OSS地址前需确保已在控制台完成一键授权。
-        // - 2: CSV文件，需指定手机号列名，可通过控制台上传或指定自定义OSS地址，指定自定义OSS地址前需确保已在控制台完成一键授权。
-        // - 3: MaxCompute(ODPS)表，需指定手机号列名。
-        // - 4: 算法。
         @NameInMap("Source")
         public Integer source;
 
-        // 人群状态。
-        // - 0: 检查中。
-        // - 1: 已通过。
-        // - 2: 未通过。
         @NameInMap("Status")
         public Integer status;
 
-        // MaxCompute(ODPS)表名，人群来源为MaxCompute时需指定。
         @NameInMap("Table")
         public String table;
 
-        // 文本，人群来源为文本时需指定。
         @NameInMap("Text")
         public String text;
 
-        // 更新时间 (UTC+8)。
         @NameInMap("UpdatedTime")
         public String updatedTime;
 
-        // 文件地址，人群来源为文本文件，CSV文件，MaxCompute时需指定。
         @NameInMap("Uri")
         public String uri;
 
@@ -278,19 +249,15 @@ public class ListGroupsResponseBody extends TeaModel {
     }
 
     public static class ListGroupsResponseBodyData extends TeaModel {
-        // 人群列表。
         @NameInMap("Groups")
         public java.util.List<ListGroupsResponseBodyDataGroups> groups;
 
-        // 分页数，从1开始，默认为1。
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
-        // 分页大小，默认为10。
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        // 总人群数量。
         @NameInMap("TotalCount")
         public Integer totalCount;
 

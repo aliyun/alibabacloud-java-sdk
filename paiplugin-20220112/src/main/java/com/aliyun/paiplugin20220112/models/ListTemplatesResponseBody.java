@@ -4,19 +4,15 @@ package com.aliyun.paiplugin20220112.models;
 import com.aliyun.tea.*;
 
 public class ListTemplatesResponseBody extends TeaModel {
-    // 返回数据。
     @NameInMap("Data")
     public ListTemplatesResponseBodyData data;
 
-    // 错误码。
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
-    // 错误信息。
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 
@@ -58,53 +54,36 @@ public class ListTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListTemplatesResponseBodyDataTemplates extends TeaModel {
-        // 模板内容。
         @NameInMap("Content")
         public String content;
 
-        // 创建时间 (UTC+8)。
         @NameInMap("CreatedTime")
         public String createdTime;
 
-        // 申请说明。
         @NameInMap("Description")
         public String description;
 
-        // 模板Id。
         @NameInMap("Id")
         public String id;
 
-        // 签名名称。
         @NameInMap("Name")
         public String name;
 
-        // 审核意见。
         @NameInMap("Reason")
         public String reason;
 
-        // 签名Id。
         @NameInMap("SignatureId")
         public String signatureId;
 
-        // 审核状态。
-        // - 0 : 审核中。
-        // - 1 : 审核通过。
-        // - 2 : 审核不通过。
         @NameInMap("Status")
         public Integer status;
 
-        // 模板Code。
         @NameInMap("TemplateCode")
         public String templateCode;
 
-        // 模板类型。
-        // - 0 : 验证码。
-        // - 1 : 短信通知。
-        // - 2 : 推广短信。
         @NameInMap("Type")
         public Integer type;
 
-        // 更新时间 (UTC+8)。
         @NameInMap("UpdatedTime")
         public String updatedTime;
 
@@ -204,19 +183,15 @@ public class ListTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListTemplatesResponseBodyData extends TeaModel {
-        // 分页数，从1开始，默认为1。
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
-        // 分页大小，默认为10。
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        // 分页返回的模板列表。
         @NameInMap("Templates")
         public java.util.List<ListTemplatesResponseBodyDataTemplates> templates;
 
-        // 全部模板注册记录数量。
         @NameInMap("TotalCount")
         public Integer totalCount;
 

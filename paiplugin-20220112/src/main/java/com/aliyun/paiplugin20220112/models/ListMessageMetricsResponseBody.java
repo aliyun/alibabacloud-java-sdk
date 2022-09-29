@@ -4,19 +4,15 @@ package com.aliyun.paiplugin20220112.models;
 import com.aliyun.tea.*;
 
 public class ListMessageMetricsResponseBody extends TeaModel {
-    // 返回数据。
     @NameInMap("Data")
     public ListMessageMetricsResponseBodyData data;
 
-    // 错误码。
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
-    // 错误信息。
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 
@@ -58,27 +54,21 @@ public class ListMessageMetricsResponseBody extends TeaModel {
     }
 
     public static class ListMessageMetricsResponseBodyDataMetrics extends TeaModel {
-        // 发送日期。
         @NameInMap("Date")
         public String date;
 
-        // 发送失败。
         @NameInMap("Fail")
         public Integer fail;
 
-        // 发送中。
         @NameInMap("Pending")
         public Integer pending;
 
-        // 发送成功率。
         @NameInMap("Rate")
         public Float rate;
 
-        // 发送成功。
         @NameInMap("Success")
         public Integer success;
 
-        // 总计短信数量。
         @NameInMap("Total")
         public Integer total;
 
@@ -138,19 +128,15 @@ public class ListMessageMetricsResponseBody extends TeaModel {
     }
 
     public static class ListMessageMetricsResponseBodyData extends TeaModel {
-        // 分页返回的统计数据条目列表。
         @NameInMap("Metrics")
         public java.util.List<ListMessageMetricsResponseBodyDataMetrics> metrics;
 
-        // 分页数，从1开始，默认为1。
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
-        // 分页大小，默认为10。
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        // 总统计数据条目数量。
         @NameInMap("TotalCount")
         public Integer totalCount;
 
