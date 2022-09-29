@@ -3458,6 +3458,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListRolesResponse());
     }
 
+    public ListRuntimeTokensResponse listRuntimeTokens(ListRuntimeTokensRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listRuntimeTokensWithOptions(request, headers, runtime);
+    }
+
+    public ListRuntimeTokensResponse listRuntimeTokensWithOptions(ListRuntimeTokensRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.enterpriseId)) {
+            query.put("enterprise_id", request.enterpriseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.env)) {
+            query.put("env", request.env);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderBy)) {
+            query.put("order_by", request.orderBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderDirection)) {
+            query.put("order_direction", request.orderDirection);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("page_number", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("page_size", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pbcId)) {
+            query.put("pbc_id", request.pbcId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceId)) {
+            query.put("service_id", request.serviceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListRuntimeTokens"),
+            new TeaPair("version", "2021-11-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/pdp-service/v1/services/env/tokens"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListRuntimeTokensResponse());
+    }
+
     public ListSubscribePbcsResponse listSubscribePbcs(String pbcName) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
