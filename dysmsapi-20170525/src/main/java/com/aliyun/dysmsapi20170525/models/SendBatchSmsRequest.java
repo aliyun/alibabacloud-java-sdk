@@ -4,6 +4,9 @@ package com.aliyun.dysmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class SendBatchSmsRequest extends TeaModel {
+    @NameInMap("OutId")
+    public String outId;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -31,6 +34,14 @@ public class SendBatchSmsRequest extends TeaModel {
     public static SendBatchSmsRequest build(java.util.Map<String, ?> map) throws Exception {
         SendBatchSmsRequest self = new SendBatchSmsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SendBatchSmsRequest setOutId(String outId) {
+        this.outId = outId;
+        return this;
+    }
+    public String getOutId() {
+        return this.outId;
     }
 
     public SendBatchSmsRequest setOwnerId(Long ownerId) {
