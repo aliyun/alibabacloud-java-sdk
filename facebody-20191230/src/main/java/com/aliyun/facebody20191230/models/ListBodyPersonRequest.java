@@ -4,15 +4,12 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class ListBodyPersonRequest extends TeaModel {
-    // 数据库ID
     @NameInMap("DbId")
     public Long dbId;
 
-    // 分页数量
     @NameInMap("Limit")
     public Long limit;
 
-    // 起始位置(不含)
     @NameInMap("Offset")
     public Long offset;
 

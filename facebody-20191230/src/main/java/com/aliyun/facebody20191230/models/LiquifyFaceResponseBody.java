@@ -7,7 +7,6 @@ public class LiquifyFaceResponseBody extends TeaModel {
     @NameInMap("Data")
     public LiquifyFaceResponseBodyData data;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

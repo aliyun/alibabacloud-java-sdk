@@ -35,15 +35,12 @@ public class CompareFaceResponseBody extends TeaModel {
         @NameInMap("Confidence")
         public Float confidence;
 
-        // 信息提示信息，纯文字描述，目前支持质量分的提示信息
         @NameInMap("MessageTips")
         public String messageTips;
 
-        // 输入图像A的质量分
         @NameInMap("QualityScoreA")
         public Float qualityScoreA;
 
-        // 输入图像A的质量分
         @NameInMap("QualityScoreB")
         public Float qualityScoreB;
 

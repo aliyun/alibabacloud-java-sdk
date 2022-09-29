@@ -7,7 +7,6 @@ public class MergeImageFaceResponseBody extends TeaModel {
     @NameInMap("Data")
     public MergeImageFaceResponseBodyData data;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

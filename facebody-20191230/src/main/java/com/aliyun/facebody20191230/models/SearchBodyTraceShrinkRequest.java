@@ -4,19 +4,15 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class SearchBodyTraceShrinkRequest extends TeaModel {
-    // 数据库ID
     @NameInMap("DbId")
     public Long dbId;
 
-    // Trace图片信息列表
     @NameInMap("Images")
     public String imagesShrink;
 
-    // 结果Trace数量上限，默认10，取值范围[1, 100]
     @NameInMap("Limit")
     public Long limit;
 
-    // score阈值，只返回大于等于该score的数据，取值范围[-1.0, 1.0]，默认为空
     @NameInMap("MinScore")
     public Float minScore;
 

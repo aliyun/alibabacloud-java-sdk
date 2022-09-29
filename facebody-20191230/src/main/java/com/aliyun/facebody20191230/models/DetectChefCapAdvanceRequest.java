@@ -4,8 +4,7 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class DetectChefCapAdvanceRequest extends TeaModel {
-    @NameInMap("ImageURLObject")
-    @Validation(required = true)
+    @NameInMap("ImageURL")
     public java.io.InputStream imageURLObject;
 
     public static DetectChefCapAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {

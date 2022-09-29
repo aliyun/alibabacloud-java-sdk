@@ -7,7 +7,6 @@ public class MonitorExaminationResponseBody extends TeaModel {
     @NameInMap("Data")
     public MonitorExaminationResponseBodyData data;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

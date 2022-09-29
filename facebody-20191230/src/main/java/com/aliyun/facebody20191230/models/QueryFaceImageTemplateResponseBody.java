@@ -7,7 +7,6 @@ public class QueryFaceImageTemplateResponseBody extends TeaModel {
     @NameInMap("Data")
     public QueryFaceImageTemplateResponseBodyData data;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

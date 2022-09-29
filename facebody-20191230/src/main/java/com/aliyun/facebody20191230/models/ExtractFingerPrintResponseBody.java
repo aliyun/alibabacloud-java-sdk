@@ -7,7 +7,6 @@ public class ExtractFingerPrintResponseBody extends TeaModel {
     @NameInMap("Data")
     public ExtractFingerPrintResponseBodyData data;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

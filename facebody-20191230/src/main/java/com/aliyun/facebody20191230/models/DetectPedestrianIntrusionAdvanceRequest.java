@@ -4,12 +4,11 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class DetectPedestrianIntrusionAdvanceRequest extends TeaModel {
-    @NameInMap("ImageURLObject")
-    @Validation(required = true)
-    public java.io.InputStream imageURLObject;
-
     @NameInMap("DetectRegion")
     public java.util.List<DetectPedestrianIntrusionAdvanceRequestDetectRegion> detectRegion;
+
+    @NameInMap("ImageURL")
+    public java.io.InputStream imageURLObject;
 
     @NameInMap("RegionType")
     public String regionType;
@@ -19,20 +18,20 @@ public class DetectPedestrianIntrusionAdvanceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DetectPedestrianIntrusionAdvanceRequest setImageURLObject(java.io.InputStream imageURLObject) {
-        this.imageURLObject = imageURLObject;
-        return this;
-    }
-    public java.io.InputStream getImageURLObject() {
-        return this.imageURLObject;
-    }
-
     public DetectPedestrianIntrusionAdvanceRequest setDetectRegion(java.util.List<DetectPedestrianIntrusionAdvanceRequestDetectRegion> detectRegion) {
         this.detectRegion = detectRegion;
         return this;
     }
     public java.util.List<DetectPedestrianIntrusionAdvanceRequestDetectRegion> getDetectRegion() {
         return this.detectRegion;
+    }
+
+    public DetectPedestrianIntrusionAdvanceRequest setImageURLObject(java.io.InputStream imageURLObject) {
+        this.imageURLObject = imageURLObject;
+        return this;
+    }
+    public java.io.InputStream getImageURLObject() {
+        return this.imageURLObject;
     }
 
     public DetectPedestrianIntrusionAdvanceRequest setRegionType(String regionType) {

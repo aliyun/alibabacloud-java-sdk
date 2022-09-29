@@ -7,7 +7,6 @@ public class RecognizeHandGestureResponseBody extends TeaModel {
     @NameInMap("Data")
     public RecognizeHandGestureResponseBodyData data;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

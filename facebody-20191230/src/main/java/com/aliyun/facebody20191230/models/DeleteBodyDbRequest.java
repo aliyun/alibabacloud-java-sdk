@@ -4,7 +4,6 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class DeleteBodyDbRequest extends TeaModel {
-    // 数据库ID
     @NameInMap("Id")
     public Long id;
 

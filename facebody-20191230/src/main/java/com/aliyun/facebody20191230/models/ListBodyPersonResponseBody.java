@@ -7,7 +7,6 @@ public class ListBodyPersonResponseBody extends TeaModel {
     @NameInMap("Data")
     public ListBodyPersonResponseBodyData data;
 
-    // RequestId
     @NameInMap("RequestId")
     public String requestId;
 
@@ -33,19 +32,15 @@ public class ListBodyPersonResponseBody extends TeaModel {
     }
 
     public static class ListBodyPersonResponseBodyDataPersonList extends TeaModel {
-        // 数据库ID
         @NameInMap("DbId")
         public Long dbId;
 
-        // 人员ID
         @NameInMap("Id")
         public Long id;
 
-        // 人员名称
         @NameInMap("Name")
         public String name;
 
-        // Trace数量
         @NameInMap("TraceCount")
         public Long traceCount;
 
@@ -92,7 +87,6 @@ public class ListBodyPersonResponseBody extends TeaModel {
         @NameInMap("PersonList")
         public java.util.List<ListBodyPersonResponseBodyDataPersonList> personList;
 
-        // 数据总量
         @NameInMap("Total")
         public Long total;
 

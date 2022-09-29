@@ -4,10 +4,6 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class AddFaceAdvanceRequest extends TeaModel {
-    @NameInMap("ImageUrlObject")
-    @Validation(required = true)
-    public java.io.InputStream imageUrlObject;
-
     @NameInMap("DbName")
     public String dbName;
 
@@ -16,6 +12,9 @@ public class AddFaceAdvanceRequest extends TeaModel {
 
     @NameInMap("ExtraData")
     public String extraData;
+
+    @NameInMap("ImageUrl")
+    public java.io.InputStream imageUrlObject;
 
     @NameInMap("QualityScoreThreshold")
     public Float qualityScoreThreshold;
@@ -29,14 +28,6 @@ public class AddFaceAdvanceRequest extends TeaModel {
     public static AddFaceAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         AddFaceAdvanceRequest self = new AddFaceAdvanceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public AddFaceAdvanceRequest setImageUrlObject(java.io.InputStream imageUrlObject) {
-        this.imageUrlObject = imageUrlObject;
-        return this;
-    }
-    public java.io.InputStream getImageUrlObject() {
-        return this.imageUrlObject;
     }
 
     public AddFaceAdvanceRequest setDbName(String dbName) {
@@ -61,6 +52,14 @@ public class AddFaceAdvanceRequest extends TeaModel {
     }
     public String getExtraData() {
         return this.extraData;
+    }
+
+    public AddFaceAdvanceRequest setImageUrlObject(java.io.InputStream imageUrlObject) {
+        this.imageUrlObject = imageUrlObject;
+        return this;
+    }
+    public java.io.InputStream getImageUrlObject() {
+        return this.imageUrlObject;
     }
 
     public AddFaceAdvanceRequest setQualityScoreThreshold(Float qualityScoreThreshold) {

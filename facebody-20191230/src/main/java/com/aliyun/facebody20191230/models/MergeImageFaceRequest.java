@@ -10,7 +10,6 @@ public class MergeImageFaceRequest extends TeaModel {
     @NameInMap("TemplateId")
     public String templateId;
 
-    // A short description of struct
     @NameInMap("UserId")
     public String userId;
 

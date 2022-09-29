@@ -4,8 +4,7 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class RetouchSkinAdvanceRequest extends TeaModel {
-    @NameInMap("ImageURLObject")
-    @Validation(required = true)
+    @NameInMap("ImageURL")
     public java.io.InputStream imageURLObject;
 
     @NameInMap("RetouchDegree")

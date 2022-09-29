@@ -7,7 +7,6 @@ public class GetBodyPersonResponseBody extends TeaModel {
     @NameInMap("Data")
     public GetBodyPersonResponseBodyData data;
 
-    // RequestId
     @NameInMap("RequestId")
     public String requestId;
 
@@ -33,11 +32,9 @@ public class GetBodyPersonResponseBody extends TeaModel {
     }
 
     public static class GetBodyPersonResponseBodyDataTraceList extends TeaModel {
-        // 自定义Trace信息
         @NameInMap("ExtraData")
         public String extraData;
 
-        // TraceId
         @NameInMap("Id")
         public Long id;
 
@@ -65,23 +62,18 @@ public class GetBodyPersonResponseBody extends TeaModel {
     }
 
     public static class GetBodyPersonResponseBodyData extends TeaModel {
-        // 数据库ID
         @NameInMap("DbId")
         public Long dbId;
 
-        // 人员ID
         @NameInMap("Id")
         public Long id;
 
-        // 人员名称
         @NameInMap("Name")
         public String name;
 
-        // Trace数量
         @NameInMap("TraceCount")
         public Long traceCount;
 
-        // Trace列表
         @NameInMap("TraceList")
         public java.util.List<GetBodyPersonResponseBodyDataTraceList> traceList;
 
