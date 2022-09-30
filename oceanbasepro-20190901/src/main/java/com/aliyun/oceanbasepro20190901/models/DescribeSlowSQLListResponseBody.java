@@ -4,15 +4,12 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeSlowSQLListResponseBody extends TeaModel {
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
-    // 慢SQL列表信息
     @NameInMap("SlowSQLList")
     public java.util.List<DescribeSlowSQLListResponseBodySlowSQLList> slowSQLList;
 
-    // 总数量
     @NameInMap("TotalCount")
     public Long totalCount;
 

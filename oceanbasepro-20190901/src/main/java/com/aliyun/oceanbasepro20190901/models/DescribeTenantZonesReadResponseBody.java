@@ -4,11 +4,9 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeTenantZonesReadResponseBody extends TeaModel {
-    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 
-    // 租户可用区信息。
     @NameInMap("TenantZones")
     public java.util.List<DescribeTenantZonesReadResponseBodyTenantZones> tenantZones;
 
@@ -34,23 +32,18 @@ public class DescribeTenantZonesReadResponseBody extends TeaModel {
     }
 
     public static class DescribeTenantZonesReadResponseBodyTenantZones extends TeaModel {
-        // 是否可选为主库。
         @NameInMap("IsElectable")
         public Boolean isElectable;
 
-        // 是否为主可用区。
         @NameInMap("IsPrimary")
         public Boolean isPrimary;
 
-        // 是否已经创建只读连接。
         @NameInMap("IsReadOnlyAddressMaster")
         public Boolean isReadOnlyAddressMaster;
 
-        // 是否可以设置为只读。
         @NameInMap("IsReadable")
         public String isReadable;
 
-        // 可用区ID。
         @NameInMap("Zone")
         public String zone;
 

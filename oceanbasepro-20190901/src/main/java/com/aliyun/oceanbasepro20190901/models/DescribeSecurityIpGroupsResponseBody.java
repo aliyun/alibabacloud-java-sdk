@@ -4,15 +4,12 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeSecurityIpGroupsResponseBody extends TeaModel {
-    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 
-    // IP白名单分组信息。
     @NameInMap("SecurityIpGroups")
     public java.util.List<DescribeSecurityIpGroupsResponseBodySecurityIpGroups> securityIpGroups;
 
-    // 查询到的白名单分组个数。
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -46,11 +43,9 @@ public class DescribeSecurityIpGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeSecurityIpGroupsResponseBodySecurityIpGroups extends TeaModel {
-        // 安全组名称。
         @NameInMap("SecurityIpGroupName")
         public String securityIpGroupName;
 
-        // IP安全白名单列表。其为一个Json格式的数组，数组中每个对象为一个IP字符串或者IP段。
         @NameInMap("SecurityIps")
         public String securityIps;
 

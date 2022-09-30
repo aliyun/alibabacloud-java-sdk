@@ -4,11 +4,9 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeOutlineBindingResponseBody extends TeaModel {
-    // 绑定信息
     @NameInMap("OutlineBinding")
     public DescribeOutlineBindingResponseBodyOutlineBinding outlineBinding;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,19 +32,15 @@ public class DescribeOutlineBindingResponseBody extends TeaModel {
     }
 
     public static class DescribeOutlineBindingResponseBodyOutlineBinding extends TeaModel {
-        // 绑定索引
         @NameInMap("BindIndex")
         public String bindIndex;
 
-        // 绑定计划
         @NameInMap("BindPlan")
         public String bindPlan;
 
-        // 最大并发
         @NameInMap("MaxConcurrent")
         public Integer maxConcurrent;
 
-        // OutlineID
         @NameInMap("OutlineId")
         public Long outlineId;
 

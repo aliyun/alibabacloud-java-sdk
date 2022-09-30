@@ -4,11 +4,9 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeSQLHistoryListResponseBody extends TeaModel {
-    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 
-    // SQL历史信息
     @NameInMap("SQLHistoryList")
     public DescribeSQLHistoryListResponseBodySQLHistoryList SQLHistoryList;
 
@@ -34,155 +32,117 @@ public class DescribeSQLHistoryListResponseBody extends TeaModel {
     }
 
     public static class DescribeSQLHistoryListResponseBodySQLHistoryListList extends TeaModel {
-        // 影响行数
         @NameInMap("AffectedRows")
         public Long affectedRows;
 
-        // 客户端等待
         @NameInMap("AppWaitTime")
         public Float appWaitTime;
 
-        // BlockCache命中次数
         @NameInMap("BlockCacheHit")
         public Long blockCacheHit;
 
-        // BlockIndexCache命中次数
         @NameInMap("BlockIndexCacheHit")
         public Long blockIndexCacheHit;
 
-        // BloomFilterCache命中次数
         @NameInMap("BloomFilterCacheHit")
         public Long bloomFilterCacheHit;
 
-        // 客户端IP
         @NameInMap("ClientIp")
         public String clientIp;
 
-        // 并发等待
         @NameInMap("ConcurrencyWaitTime")
         public Float concurrencyWaitTime;
 
-        // 平均CPU时间
         @NameInMap("CpuTime")
         public Float cpuTime;
 
-        // 数据库名
         @NameInMap("DbName")
         public String dbName;
 
-        // 解码等待
         @NameInMap("DecodeTime")
         public Float decodeTime;
 
-        // 物理读
         @NameInMap("DiskRead")
         public Long diskRead;
 
-        // 平均响应时间
         @NameInMap("ElapsedTime")
         public Float elapsedTime;
 
-        // 结束时间
         @NameInMap("EndTime")
         public Long endTime;
 
-        // 结束时间（零时区）
         @NameInMap("EndTimeUTCString")
         public String endTimeUTCString;
 
-        // 等待事件
         @NameInMap("Event")
         public String event;
 
-        // 每秒次数
         @NameInMap("ExecPerSecond")
         public Long execPerSecond;
 
-        // 内部执行时间
         @NameInMap("ExecuteTime")
         public Float executeTime;
 
-        // 执行次数
         @NameInMap("Executions")
         public Long executions;
 
-        // 失败次数
         @NameInMap("FailTimes")
         public Long failTimes;
 
-        // 硬解析时间
         @NameInMap("GetPlanTime")
         public Float getPlanTime;
 
-        // IO等待
         @NameInMap("IOWaitTime")
         public Float IOWaitTime;
 
-        // 逻辑读
         @NameInMap("LogicalRead")
         public Long logicalRead;
 
-        // 最大CPU时间
         @NameInMap("MaxCpuTime")
         public Float maxCpuTime;
 
-        // 最大响应时间
         @NameInMap("MaxElapsedTime")
         public Float maxElapsedTime;
 
-        // 读内存行数
         @NameInMap("MemstoreReadRowCount")
         public Long memstoreReadRowCount;
 
-        // 未命中计划次数
         @NameInMap("MissPlans")
         public Long missPlans;
 
-        // 网络等待
         @NameInMap("NetWaitTime")
         public Float netWaitTime;
 
-        // 节点IP
         @NameInMap("NodeIp")
         public String nodeIp;
 
-        // 队列等待
         @NameInMap("QueueTime")
         public Float queueTime;
 
-        // RPC次数
         @NameInMap("RPCCount")
         public Long RPCCount;
 
-        // 远程计划数
         @NameInMap("RemotePlans")
         public Long remotePlans;
 
-        // 重试次数
         @NameInMap("RetryCount")
         public Long retryCount;
 
-        // 返回行数
         @NameInMap("ReturnRows")
         public Long returnRows;
 
-        // RowCache命中次数
         @NameInMap("RowCacheHit")
         public Long rowCacheHit;
 
-        // 调度时间
         @NameInMap("ScheduleTime")
         public Float scheduleTime;
 
-        // 读磁盘行数
         @NameInMap("SsstoreReadRowCount")
         public Long ssstoreReadRowCount;
 
-        // 内部等待
         @NameInMap("TotalWaitTime")
         public Float totalWaitTime;
 
-        // 用户名
         @NameInMap("UserName")
         public String userName;
 
@@ -498,11 +458,9 @@ public class DescribeSQLHistoryListResponseBody extends TeaModel {
     }
 
     public static class DescribeSQLHistoryListResponseBodySQLHistoryList extends TeaModel {
-        // 数量
         @NameInMap("Count")
         public Long count;
 
-        // 列表
         @NameInMap("List")
         public java.util.List<DescribeSQLHistoryListResponseBodySQLHistoryListList> list;
 

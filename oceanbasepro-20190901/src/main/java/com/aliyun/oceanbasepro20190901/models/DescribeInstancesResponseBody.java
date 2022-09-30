@@ -4,15 +4,12 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstancesResponseBody extends TeaModel {
-    // Oceanbase集群列表。
     @NameInMap("Instances")
     public java.util.List<DescribeInstancesResponseBodyInstances> instances;
 
-    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 
-    // 查询到的Oceanbase集群个数。
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -46,15 +43,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesResourceCpu extends TeaModel {
-        // 集群总CPU，单位：核数
         @NameInMap("TotalCpu")
         public Long totalCpu;
 
-        // 集群中每个副本节点的CPU，单位：核数
         @NameInMap("UnitCpu")
         public Long unitCpu;
 
-        // 集群已使用的CPU，单位：核数
         @NameInMap("UsedCpu")
         public Long usedCpu;
 
@@ -90,15 +84,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesResourceDiskSize extends TeaModel {
-        // 集群总存储空间，单位：GB
         @NameInMap("TotalDiskSize")
         public Long totalDiskSize;
 
-        // 集群每个副本的存储空间，单位：GB
         @NameInMap("UnitDiskSize")
         public Long unitDiskSize;
 
-        // 集群已使用的存储空间，单位：GB
         @NameInMap("UsedDiskSize")
         public Long usedDiskSize;
 
@@ -134,15 +125,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesResourceMemory extends TeaModel {
-        // 集群总内存，单位：GB
         @NameInMap("TotalMemory")
         public Long totalMemory;
 
-        // 集群中每个副本的内存，单位：GB
         @NameInMap("UnitMemory")
         public Long unitMemory;
 
-        // 集群已使用的内存，单位：GB
         @NameInMap("UsedMemory")
         public Long usedMemory;
 
@@ -178,19 +166,15 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesResource extends TeaModel {
-        // 集群的CPU资源信息
         @NameInMap("Cpu")
         public DescribeInstancesResponseBodyInstancesResourceCpu cpu;
 
-        // 集群的存储资源信息
         @NameInMap("DiskSize")
         public DescribeInstancesResponseBodyInstancesResourceDiskSize diskSize;
 
-        // 集群的内存资源信息
         @NameInMap("Memory")
         public DescribeInstancesResponseBodyInstancesResourceMemory memory;
 
-        // 集群的资源Unit数量。
         @NameInMap("UnitCount")
         public Long unitCount;
 
@@ -234,103 +218,78 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstances extends TeaModel {
-        // 集群部署所在的可用区信息。
         @NameInMap("AvailableZones")
         public java.util.List<String> availableZones;
 
-        // Oceanbase集群的产品码。 - oceanbase_oceanbasepre_public_cn：国内站云数据库包年包月套餐。 - oceanbase_oceanbasepost_public_cn：国内站云数据库按小时付费套餐。 - oceanbase_obpre_public_intl：国际站云数据库包年包月套餐。
         @NameInMap("CommodityCode")
         public String commodityCode;
 
-        // 集群的CPU核数。
         @NameInMap("Cpu")
         public Integer cpu;
 
-        // 集群的创建时间，UTC时间。
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 集群的数据副本模式。 单机房为n，双机房为n-n，多机房为n-n-n，其中n为各机房的observer节点数。
         @NameInMap("DeployMode")
         public String deployMode;
 
-        // 集群的部署类型。 - multiple：多机房 - single：单机房 - dual：双机房
         @NameInMap("DeployType")
         public String deployType;
 
-        // 存储空间大小，单位GB。
         @NameInMap("DiskSize")
         public String diskSize;
 
-        // 集群部署的存储类型。默认为cloud_essd_pl1：ESSD云盘。
         @NameInMap("DiskType")
         public String diskType;
 
-        // 是否允许新增节点。
         @NameInMap("EnableUpgradeNodes")
         public Boolean enableUpgradeNodes;
 
-        // 集群已过期时间，单位：秒(s)。
         @NameInMap("ExpireSeconds")
         public Integer expireSeconds;
 
-        // 集群过期时间（UTC格式）。
         @NameInMap("ExpireTime")
         public String expireTime;
 
-        // 集群规格信息。 当前支持四种套餐： - 8C32G：8核 32GB - 14C70G：14核 70GB - 30C180G：30核 180GB - 62C400G：62核 400GB。
         @NameInMap("InstanceClass")
         public String instanceClass;
 
-        // Oceanbase集群ID。
         @NameInMap("InstanceId")
         public String instanceId;
 
-        // Oceanbase集群名称。
         @NameInMap("InstanceName")
         public String instanceName;
 
-        // 集群的每天例行维护时间，UTC时间。
         @NameInMap("MaintainTime")
         public String maintainTime;
 
-        // 实例的内存大小，单位GB。
         @NameInMap("Mem")
         public Long mem;
 
-        // Oceanbase集群的付费类型 - PREPAY：预付费 - POSTPAY：按量付费
         @NameInMap("PayType")
         public String payType;
 
-        // 集群的资源信息
         @NameInMap("Resource")
         public DescribeInstancesResponseBodyInstancesResource resource;
 
-        // 资源组ID信息。
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        // 集群的白名单信息。（待废弃）
         @NameInMap("SecurityIps")
         public java.util.List<String> securityIps;
 
-        // Oceanbase集群的系列 - NORMAL：高可用版本 - BASIC：基础版本
         @NameInMap("Series")
         public String series;
 
-        // 集群状态。 - PENDING_CREATE: 创建中 - ONLINE: 运行中 - TENANT_CREATING：租户创建中 - TENANT_SPEC_MODIFYING：租户规格修改中 - EXPANDING: 节点扩容中 - REDUCING: 节点缩容中 - SPEC_UPGRADING:套餐规格扩容中 - DISK_UPGRADING:存储规格扩容中 - WHITE_LIST_MODIFYING: 修改白名单中 - PARAMETER_MODIFYING: 修改参数中 - SSL_MODIFYING: SSL变更中 - PREPAID_EXPIRE_CLOSED: 预付费集群欠费中 - ARREARS_CLOSED: 后付费集群欠费中 - PENDING_DELETE: 删除中。 集群一般为运行中的状态（ONLINE）。
         @NameInMap("State")
         public String state;
 
-        // 已使用的存储空间，单位GB。
         @NameInMap("UsedDiskSize")
         public Long usedDiskSize;
 
-        // Observer版本信息。
         @NameInMap("Version")
         public String version;
 
-        // vpcId
         @NameInMap("VpcId")
         public String vpcId;
 

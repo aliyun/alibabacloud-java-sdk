@@ -4,11 +4,9 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceResponseBody extends TeaModel {
-    // OceanBase 集群信息。
     @NameInMap("Instance")
     public DescribeInstanceResponseBodyInstance instance;
 
-    // 请求 ID。
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,15 +32,12 @@ public class DescribeInstanceResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceResponseBodyInstanceResourceCpu extends TeaModel {
-        // 集群总CPU，单位：核数
         @NameInMap("TotalCpu")
         public Long totalCpu;
 
-        // 集群中每个副本节点的CPU，单位：核数
         @NameInMap("UnitCpu")
         public Long unitCpu;
 
-        // 集群已使用的CPU，单位：核数
         @NameInMap("UsedCpu")
         public Long usedCpu;
 
@@ -78,21 +73,51 @@ public class DescribeInstanceResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceResponseBodyInstanceResourceDiskSize extends TeaModel {
-        // 集群总存储空间，单位：GB
+        @NameInMap("DataUsedSize")
+        public Double dataUsedSize;
+
+        @NameInMap("MaxDiskUsedObServer")
+        public java.util.List<String> maxDiskUsedObServer;
+
+        @NameInMap("MaxDiskUsedPercent")
+        public Double maxDiskUsedPercent;
+
         @NameInMap("TotalDiskSize")
         public Long totalDiskSize;
 
-        // 集群每个副本的存储空间，单位：GB
         @NameInMap("UnitDiskSize")
         public Long unitDiskSize;
 
-        // 集群已使用的存储空间，单位：GB
         @NameInMap("UsedDiskSize")
         public Long usedDiskSize;
 
         public static DescribeInstanceResponseBodyInstanceResourceDiskSize build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceResponseBodyInstanceResourceDiskSize self = new DescribeInstanceResponseBodyInstanceResourceDiskSize();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceResponseBodyInstanceResourceDiskSize setDataUsedSize(Double dataUsedSize) {
+            this.dataUsedSize = dataUsedSize;
+            return this;
+        }
+        public Double getDataUsedSize() {
+            return this.dataUsedSize;
+        }
+
+        public DescribeInstanceResponseBodyInstanceResourceDiskSize setMaxDiskUsedObServer(java.util.List<String> maxDiskUsedObServer) {
+            this.maxDiskUsedObServer = maxDiskUsedObServer;
+            return this;
+        }
+        public java.util.List<String> getMaxDiskUsedObServer() {
+            return this.maxDiskUsedObServer;
+        }
+
+        public DescribeInstanceResponseBodyInstanceResourceDiskSize setMaxDiskUsedPercent(Double maxDiskUsedPercent) {
+            this.maxDiskUsedPercent = maxDiskUsedPercent;
+            return this;
+        }
+        public Double getMaxDiskUsedPercent() {
+            return this.maxDiskUsedPercent;
         }
 
         public DescribeInstanceResponseBodyInstanceResourceDiskSize setTotalDiskSize(Long totalDiskSize) {
@@ -121,16 +146,43 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeInstanceResponseBodyInstanceResourceLogDiskSize extends TeaModel {
+        @NameInMap("TotalDiskSize")
+        public Long totalDiskSize;
+
+        @NameInMap("UnitDiskSize")
+        public Long unitDiskSize;
+
+        public static DescribeInstanceResponseBodyInstanceResourceLogDiskSize build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceResponseBodyInstanceResourceLogDiskSize self = new DescribeInstanceResponseBodyInstanceResourceLogDiskSize();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceResponseBodyInstanceResourceLogDiskSize setTotalDiskSize(Long totalDiskSize) {
+            this.totalDiskSize = totalDiskSize;
+            return this;
+        }
+        public Long getTotalDiskSize() {
+            return this.totalDiskSize;
+        }
+
+        public DescribeInstanceResponseBodyInstanceResourceLogDiskSize setUnitDiskSize(Long unitDiskSize) {
+            this.unitDiskSize = unitDiskSize;
+            return this;
+        }
+        public Long getUnitDiskSize() {
+            return this.unitDiskSize;
+        }
+
+    }
+
     public static class DescribeInstanceResponseBodyInstanceResourceMemory extends TeaModel {
-        // 集群总内存，单位：GB
         @NameInMap("TotalMemory")
         public Long totalMemory;
 
-        // 集群中每个副本的内存，单位：GB
         @NameInMap("UnitMemory")
         public Long unitMemory;
 
-        // 集群已使用的内存，单位：GB
         @NameInMap("UsedMemory")
         public Long usedMemory;
 
@@ -166,19 +218,18 @@ public class DescribeInstanceResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceResponseBodyInstanceResource extends TeaModel {
-        // 集群的CPU资源信息
         @NameInMap("Cpu")
         public DescribeInstanceResponseBodyInstanceResourceCpu cpu;
 
-        // 集群的存储资源信息
         @NameInMap("DiskSize")
         public DescribeInstanceResponseBodyInstanceResourceDiskSize diskSize;
 
-        // 集群的内存资源信息
+        @NameInMap("LogDiskSize")
+        public DescribeInstanceResponseBodyInstanceResourceLogDiskSize logDiskSize;
+
         @NameInMap("Memory")
         public DescribeInstanceResponseBodyInstanceResourceMemory memory;
 
-        // 集群的资源Unit数量。
         @NameInMap("UnitCount")
         public Long unitCount;
 
@@ -203,6 +254,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
             return this.diskSize;
         }
 
+        public DescribeInstanceResponseBodyInstanceResource setLogDiskSize(DescribeInstanceResponseBodyInstanceResourceLogDiskSize logDiskSize) {
+            this.logDiskSize = logDiskSize;
+            return this;
+        }
+        public DescribeInstanceResponseBodyInstanceResourceLogDiskSize getLogDiskSize() {
+            return this.logDiskSize;
+        }
+
         public DescribeInstanceResponseBodyInstanceResource setMemory(DescribeInstanceResponseBodyInstanceResourceMemory memory) {
             this.memory = memory;
             return this;
@@ -222,87 +281,69 @@ public class DescribeInstanceResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceResponseBodyInstance extends TeaModel {
-        // 是否开启自动续费。该参数只在预付费（PREPAY）集群有意义。
         @NameInMap("AutoRenewal")
         public Boolean autoRenewal;
 
-        // 是否开启自动升级 OBServer 版本。
         @NameInMap("AutoUpgradeObVersion")
         public Boolean autoUpgradeObVersion;
 
-        // 可用区列表。
         @NameInMap("AvailableZones")
         public java.util.List<String> availableZones;
 
-        // 集群的创建时间（UTC时间）。
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 集群的数据合并时间。
         @NameInMap("DataMergeTime")
         public String dataMergeTime;
 
-        // 集群的数据副本模式。 单机房为n，双机房为n-n，多机房为n-n-n，其中n为各机房的observer节点数。
         @NameInMap("DeployMode")
         public String deployMode;
 
-        // 集群的部署类型。<br> - multiple：多机房 <br>- single：单机房 <br>- dual：双机房
         @NameInMap("DeployType")
         public String deployType;
 
-        // 集群部署的存储类型。默认为cloud_essd_pl1：ESSD云盘。
         @NameInMap("DiskType")
         public String diskType;
 
-        // 集群过期时间（UTC格式）。
+        @NameInMap("EnableUpgradeLogDisk")
+        public Boolean enableUpgradeLogDisk;
+
         @NameInMap("ExpireTime")
         public String expireTime;
 
-        // 集群规格信息。<br> 当前支持四种套餐：<br> - 8C32G：8核 32GB <br>- 14C70G：14核 70GB<br> - 30C180G：30核 180GB<br> - 62C400G：62核 400GB。
         @NameInMap("InstanceClass")
         public String instanceClass;
 
-        // OceanBase 集群 ID。
         @NameInMap("InstanceId")
         public String instanceId;
 
-        // OceanBase 集群名称。
         @NameInMap("InstanceName")
         public String instanceName;
 
-        // OBServer版本是否为最新版本。
         @NameInMap("IsLatestObVersion")
         public Boolean isLatestObVersion;
 
-        // 是否使用可信ecs
         @NameInMap("IsTrustEcs")
         public Boolean isTrustEcs;
 
-        // 集群的每天例行维护时间，UTC时间。
         @NameInMap("MaintainTime")
         public String maintainTime;
 
-        // OBServer 详细版本信息。
         @NameInMap("ObRpmVersion")
         public String obRpmVersion;
 
-        // OceanBase 集群的付费类型 <br>- PREPAY：预付费 <br>- POSTPAY：按量付费
         @NameInMap("PayType")
         public String payType;
 
-        // 集群的资源信息
         @NameInMap("Resource")
         public DescribeInstanceResponseBodyInstanceResource resource;
 
-        // OceanBase 集群的系列 <br>- NORMAL：高可用版本 <br>- BASIC：基础版本
         @NameInMap("Series")
         public String series;
 
-        // 集群状态。 <br>- PENDING_CREATE: 创建中 <br>- ONLINE: 运行中 <br>- TENANT_CREATING：租户创建中 <br>- TENANT_SPEC_MODIFYING：租户规格修改中 <br>- EXPANDING: 节点扩容中 <br>- REDUCING: 节点缩容中 <br>- SPEC_UPGRADING:套餐规格扩容中 <br>- DISK_UPGRADING:存储规格扩容中 <br>- WHITE_LIST_MODIFYING: 修改白名单中 <br>- PARAMETER_MODIFYING: 修改参数中 <br>- SSL_MODIFYING: SSL变更中 <br>- PREPAID_EXPIRE_CLOSED: 预付费集群欠费中 <br>- ARREARS_CLOSED: 后付费集群欠费中 <br>- PENDING_DELETE: 删除中。 集群一般为运行中的状态（ONLINE）。
         @NameInMap("Status")
         public String status;
 
-        // OBServer 版本信息。
         @NameInMap("Version")
         public String version;
 
@@ -373,6 +414,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
         public String getDiskType() {
             return this.diskType;
+        }
+
+        public DescribeInstanceResponseBodyInstance setEnableUpgradeLogDisk(Boolean enableUpgradeLogDisk) {
+            this.enableUpgradeLogDisk = enableUpgradeLogDisk;
+            return this;
+        }
+        public Boolean getEnableUpgradeLogDisk() {
+            return this.enableUpgradeLogDisk;
         }
 
         public DescribeInstanceResponseBodyInstance setExpireTime(String expireTime) {

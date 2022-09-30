@@ -4,15 +4,12 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeNodeMetricsResponseBody extends TeaModel {
-    // 节点指标信息
     @NameInMap("NodeMetrics")
     public String nodeMetrics;
 
-    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 
-    // 总数量
     @NameInMap("TotalCount")
     public Integer totalCount;
 

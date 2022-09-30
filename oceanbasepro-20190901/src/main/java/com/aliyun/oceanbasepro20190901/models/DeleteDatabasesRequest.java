@@ -4,15 +4,12 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DeleteDatabasesRequest extends TeaModel {
-    // 数据库名称列表。 其为Json格式的数组，数组中每个对象都为数据库名称的字符串。
     @NameInMap("DatabaseNames")
     public String databaseNames;
 
-    // Oceanbase集群ID。
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 租户ID。
     @NameInMap("TenantId")
     public String tenantId;
 

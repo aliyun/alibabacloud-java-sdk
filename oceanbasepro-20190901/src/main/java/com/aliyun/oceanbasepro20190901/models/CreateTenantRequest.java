@@ -4,51 +4,39 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class CreateTenantRequest extends TeaModel {
-    // 字符集。 详细参见：DescribeCharset。
     @NameInMap("Charset")
     public String charset;
 
-    // 租户的CPU大小，单位：核数（Cores）
     @NameInMap("Cpu")
     public Integer cpu;
 
-    // 租户描述信息。
     @NameInMap("Description")
     public String description;
 
-    // Oceanbase集群ID。
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 租户内存大小，单位GB。
     @NameInMap("Memory")
     public Integer memory;
 
-    // 租户的主可用区。 其为集群部署可用区中的一个。
     @NameInMap("PrimaryZone")
     public String primaryZone;
 
-    // 租户模式。 当前支持Oracle模式（Oracle）、MySQL模式（MySQL） 详细参见：DescribeInstanceTenantModes。
     @NameInMap("TenantMode")
     public String tenantMode;
 
-    // 租户名称。 长度为2~20 个字符，支持英文字母、数字和下划线，区分大小写，必须以字母或下划线开头。 不可设置为 sys。
     @NameInMap("TenantName")
     public String tenantName;
 
-    // 租户所在时区。 详细参见：DescribeTimeZones。
     @NameInMap("TimeZone")
     public String timeZone;
 
-    // 租户的资源分布节点数。 其与集群的部署模式相耦合，如集群模式为2-2-2，则最后分布节点数最多为2个。
     @NameInMap("UnitNum")
     public Integer unitNum;
 
-    // 虚拟交换机（VSwitch） ID。 如果没有合适的 VSwitch，请根据页面提示创建一个，详情参见 使用交换机。
     @NameInMap("UserVSwitchId")
     public String userVSwitchId;
 
-    // 专有网络（VPC） ID。 如果没有合适的 VPC，请根据页面提示创建一个 VPC，详情参见 什么是专有网络
     @NameInMap("UserVpcId")
     public String userVpcId;
 

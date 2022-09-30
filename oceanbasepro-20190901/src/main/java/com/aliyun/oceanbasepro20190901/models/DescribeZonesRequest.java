@@ -4,11 +4,9 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeZonesRequest extends TeaModel {
-    // 集群的部署类型。- multiple：多机房 - single：单机房 - dual：双机房
     @NameInMap("DeployType")
     public String deployType;
 
-    // Oceanbase集群的系列 - normal（默认）：高可用版本 - basic：基础版本
     @NameInMap("Series")
     public String series;
 

@@ -4,15 +4,12 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeParametersRequest extends TeaModel {
-    // 参数类型。 当前支持集群（CLUSTER)和租户（TENANT）
     @NameInMap("Dimension")
     public String dimension;
 
-    // 参数类型的资源标识。 如果为集群参数可以不填，若为租户的参数，则传入租户的TenantId。
     @NameInMap("DimensionValue")
     public String dimensionValue;
 
-    // Oceanbase集群ID。
     @NameInMap("InstanceId")
     public String instanceId;
 

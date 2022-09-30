@@ -4,11 +4,9 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeAvailableMemResourceResponseBody extends TeaModel {
-    // 可用的内存资源信息。
     @NameInMap("Data")
     public DescribeAvailableMemResourceResponseBodyData data;
 
-    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,15 +32,12 @@ public class DescribeAvailableMemResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableMemResourceResponseBodyData extends TeaModel {
-        // 单个unit最大可申请的内存大小，单位：GB。
         @NameInMap("MaxMem")
         public Long maxMem;
 
-        // 单个unit最小需要申请的内存大小，单位：GB。
         @NameInMap("MinMem")
         public Long minMem;
 
-        // 租户的unit个数。
         @NameInMap("UsedMem")
         public Long usedMem;
 

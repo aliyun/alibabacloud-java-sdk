@@ -4,19 +4,15 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class ModifyTenantUserStatusRequest extends TeaModel {
-    // Oceanbase集群ID。
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 租户ID。
     @NameInMap("TenantId")
     public String tenantId;
 
-    // 数据库账号名称。 不能使用某些预留关键字，如 SYS、root等。
     @NameInMap("UserName")
     public String userName;
 
-    // 数据库账号的状态。 Locked：锁定 Normal：解锁
     @NameInMap("UserStatus")
     public String userStatus;
 

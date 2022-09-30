@@ -4,11 +4,9 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceNameRequest extends TeaModel {
-    // Oceanbase集群ID。
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // Oceanbase集群名称。 长度为1~20个英文或中文字符。如果没有指定该参数，默认值为集群的InstanceId。
     @NameInMap("InstanceName")
     public String instanceName;
 

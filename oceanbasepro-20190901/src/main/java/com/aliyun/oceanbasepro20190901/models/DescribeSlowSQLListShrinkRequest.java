@@ -4,63 +4,48 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeSlowSQLListShrinkRequest extends TeaModel {
-    // 数据库名称
     @NameInMap("DbName")
     public String dbName;
 
-    // 结束时间
     @NameInMap("EndTime")
     public String endTime;
 
-    // 过滤条件
     @NameInMap("FilterCondition")
     public String filterConditionShrink;
 
-    // 节点ip
     @NameInMap("NodeIp")
     public String nodeIp;
 
-    // 页码
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // 页大小
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // SQL唯一标识
     @NameInMap("SQLId")
     public String SQLId;
 
-    // 查询关键字
     @NameInMap("SearchKeyWord")
     public String searchKeyWord;
 
-    // 查询参数
     @NameInMap("SearchParameter")
     public String searchParameter;
 
-    // 查询规则
     @NameInMap("SearchRule")
     public String searchRule;
 
-    // 查询值
     @NameInMap("SearchValue")
     public String searchValue;
 
-    // 排序列
     @NameInMap("SortColumn")
     public String sortColumn;
 
-    // 排序顺序
     @NameInMap("SortOrder")
     public String sortOrder;
 
-    // 开始时间
     @NameInMap("StartTime")
     public String startTime;
 
-    // 租户ID
     @NameInMap("TenantId")
     public String tenantId;
 

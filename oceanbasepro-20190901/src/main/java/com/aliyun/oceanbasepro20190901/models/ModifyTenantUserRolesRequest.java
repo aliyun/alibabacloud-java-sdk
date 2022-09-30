@@ -4,23 +4,18 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class ModifyTenantUserRolesRequest extends TeaModel {
-    // Oceanbase集群ID。
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 用户权限修改类型。 可支持以下几种方式： update：全量更新权限，默认值； add：新增权限； delete：删除权限。 默认值：update。
     @NameInMap("ModifyType")
     public String modifyType;
 
-    // 租户ID。
     @NameInMap("TenantId")
     public String tenantId;
 
-    // 数据库账号名称。 不能使用某些预留关键字，如 SYS、root等。
     @NameInMap("UserName")
     public String userName;
 
-    // 数据库的账号角色信息。
     @NameInMap("UserRole")
     public String userRole;
 

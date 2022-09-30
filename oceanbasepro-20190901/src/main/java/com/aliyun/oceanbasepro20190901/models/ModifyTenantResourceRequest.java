@@ -7,15 +7,12 @@ public class ModifyTenantResourceRequest extends TeaModel {
     @NameInMap("Cpu")
     public Integer cpu;
 
-    // Oceanbase集群ID。
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 租户内存大小，单位GB。
     @NameInMap("Memory")
     public Integer memory;
 
-    // 租户ID。
     @NameInMap("TenantId")
     public String tenantId;
 

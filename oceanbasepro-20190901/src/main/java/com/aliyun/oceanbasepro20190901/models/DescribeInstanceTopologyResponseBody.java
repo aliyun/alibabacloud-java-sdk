@@ -4,11 +4,9 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceTopologyResponseBody extends TeaModel {
-    // 集群的拓扑信息。
     @NameInMap("InstanceTopology")
     public DescribeInstanceTopologyResponseBodyInstanceTopology instanceTopology;
 
-    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,35 +32,30 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceTopologyResponseBodyInstanceTopologyTenantsTenantZonesUnits extends TeaModel {
-        // 是否可以取消迁移。该字段只对正在手动迁入中或手动迁出中的unit有效。
         @NameInMap("EnableCancelMigrateUnit")
         public Boolean enableCancelMigrateUnit;
 
-        // 是否可做迁移。
         @NameInMap("EnableMigrateUnit")
         public Boolean enableMigrateUnit;
 
-        // 是否为手动迁移。
         @NameInMap("ManualMigrate")
         public Boolean manualMigrate;
 
-        // 资源节点所在的observer节点ID
         @NameInMap("NodeId")
         public String nodeId;
 
-        // 资源节点CPU，单位：核。
         @NameInMap("UnitCpu")
         public Float unitCpu;
 
-        // 资源节点ID
+        @NameInMap("UnitDataSize")
+        public Long unitDataSize;
+
         @NameInMap("UnitId")
         public String unitId;
 
-        // 资源节点内存大小，单位：GB。
         @NameInMap("UnitMemory")
         public Float unitMemory;
 
-        // 资源节点的状态。 ONLINE: 运行中 IMMIGRATING 迁入中 EMIGRATING: 迁出中 CANCEL_EMIGRATING: 取消迁入中 CANCEL_EMIGRATING：取消迁出中 DELETING：删除中
         @NameInMap("UnitStatus")
         public String unitStatus;
 
@@ -111,6 +104,14 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             return this.unitCpu;
         }
 
+        public DescribeInstanceTopologyResponseBodyInstanceTopologyTenantsTenantZonesUnits setUnitDataSize(Long unitDataSize) {
+            this.unitDataSize = unitDataSize;
+            return this;
+        }
+        public Long getUnitDataSize() {
+            return this.unitDataSize;
+        }
+
         public DescribeInstanceTopologyResponseBodyInstanceTopologyTenantsTenantZonesUnits setUnitId(String unitId) {
             this.unitId = unitId;
             return this;
@@ -138,19 +139,15 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceTopologyResponseBodyInstanceTopologyTenantsTenantZones extends TeaModel {
-        // 是否为主可用区
         @NameInMap("IsPrimaryTenantZone")
         public String isPrimaryTenantZone;
 
-        // 可用区ID。
         @NameInMap("TenantZoneId")
         public String tenantZoneId;
 
-        // 可用区的访问角色。 - ReadWrite：可读可写 - ReadOnly：只读。
         @NameInMap("TenantZoneRole")
         public String tenantZoneRole;
 
-        // 资源节点信息列表
         @NameInMap("Units")
         public java.util.List<DescribeInstanceTopologyResponseBodyInstanceTopologyTenantsTenantZonesUnits> units;
 
@@ -194,45 +191,47 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceTopologyResponseBodyInstanceTopologyTenants extends TeaModel {
-        // 租户CPU，单位：核。
+        @NameInMap("PrimaryZoneDeployType")
+        public String primaryZoneDeployType;
+
         @NameInMap("TenantCpu")
         public Float tenantCpu;
 
-        // 租户的部署类型。 - multiple：多机房 - single：单机房 - dual：双机房。
         @NameInMap("TenantDeployType")
         public String tenantDeployType;
 
-        // 租户ID。
         @NameInMap("TenantId")
         public String tenantId;
 
-        // 租户内存大小，单位：GB。
         @NameInMap("TenantMemory")
         public Float tenantMemory;
 
-        // 租户模式。 - Oracle：Oracle模式 - MySQL：MySQL模式。
         @NameInMap("TenantMode")
         public String tenantMode;
 
-        // 租户名称。
         @NameInMap("TenantName")
         public String tenantName;
 
-        // 租户状态。 - PENDING_CREATE: 创建中 - RESTORE: 恢复中 - ONLINE: 运行中 - SPEC_MODIFYING: 规格修改中 - ALLOCATING_INTERNET_ADDRESS: 公网地址分配中 - PENDING_OFFLINE_INTERNET_ADDRESS: 公网地址关闭中 - PRIMARY_ZONE_MODIFYING: 切主可用区中 - PARAMETER_MODIFYING: 参数修改中 - WHITE_LIST_MODIFING: 白名单修改中
         @NameInMap("TenantStatus")
         public String tenantStatus;
 
-        // 租户的unit个数。
         @NameInMap("TenantUnitNum")
         public Integer tenantUnitNum;
 
-        // 租户的可用区信息。
         @NameInMap("TenantZones")
         public java.util.List<DescribeInstanceTopologyResponseBodyInstanceTopologyTenantsTenantZones> tenantZones;
 
         public static DescribeInstanceTopologyResponseBodyInstanceTopologyTenants build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceTopologyResponseBodyInstanceTopologyTenants self = new DescribeInstanceTopologyResponseBodyInstanceTopologyTenants();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceTopologyResponseBodyInstanceTopologyTenants setPrimaryZoneDeployType(String primaryZoneDeployType) {
+            this.primaryZoneDeployType = primaryZoneDeployType;
+            return this;
+        }
+        public String getPrimaryZoneDeployType() {
+            return this.primaryZoneDeployType;
         }
 
         public DescribeInstanceTopologyResponseBodyInstanceTopologyTenants setTenantCpu(Float tenantCpu) {
@@ -310,11 +309,9 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceTopologyResponseBodyInstanceTopologyZonesNodesNodeResourceCpu extends TeaModel {
-        // 节点总的CPU，单位：核。
         @NameInMap("TotalCpu")
         public Integer totalCpu;
 
-        // 节点已使用的CPU，单位：核。
         @NameInMap("UsedCpu")
         public Float usedCpu;
 
@@ -342,43 +339,39 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceTopologyResponseBodyInstanceTopologyZonesNodesNodeResourceDiskSize extends TeaModel {
-        // 节点总存储空间，单位：GB。
         @NameInMap("TotalDiskSize")
-        public Long totalDiskSize;
+        public Double totalDiskSize;
 
-        // 节点已使用的存储空间，单位：GB。
         @NameInMap("UsedDiskSize")
-        public Long usedDiskSize;
+        public Double usedDiskSize;
 
         public static DescribeInstanceTopologyResponseBodyInstanceTopologyZonesNodesNodeResourceDiskSize build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceTopologyResponseBodyInstanceTopologyZonesNodesNodeResourceDiskSize self = new DescribeInstanceTopologyResponseBodyInstanceTopologyZonesNodesNodeResourceDiskSize();
             return TeaModel.build(map, self);
         }
 
-        public DescribeInstanceTopologyResponseBodyInstanceTopologyZonesNodesNodeResourceDiskSize setTotalDiskSize(Long totalDiskSize) {
+        public DescribeInstanceTopologyResponseBodyInstanceTopologyZonesNodesNodeResourceDiskSize setTotalDiskSize(Double totalDiskSize) {
             this.totalDiskSize = totalDiskSize;
             return this;
         }
-        public Long getTotalDiskSize() {
+        public Double getTotalDiskSize() {
             return this.totalDiskSize;
         }
 
-        public DescribeInstanceTopologyResponseBodyInstanceTopologyZonesNodesNodeResourceDiskSize setUsedDiskSize(Long usedDiskSize) {
+        public DescribeInstanceTopologyResponseBodyInstanceTopologyZonesNodesNodeResourceDiskSize setUsedDiskSize(Double usedDiskSize) {
             this.usedDiskSize = usedDiskSize;
             return this;
         }
-        public Long getUsedDiskSize() {
+        public Double getUsedDiskSize() {
             return this.usedDiskSize;
         }
 
     }
 
     public static class DescribeInstanceTopologyResponseBodyInstanceTopologyZonesNodesNodeResourceMemory extends TeaModel {
-        // 节点的总内存，单位：GB。
         @NameInMap("TotalMemory")
         public Long totalMemory;
 
-        // 节点已使用的内存，单位：GB。
         @NameInMap("UsedMemory")
         public Float usedMemory;
 
@@ -406,15 +399,12 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceTopologyResponseBodyInstanceTopologyZonesNodesNodeResource extends TeaModel {
-        // 节点CPU资源信息。
         @NameInMap("Cpu")
         public DescribeInstanceTopologyResponseBodyInstanceTopologyZonesNodesNodeResourceCpu cpu;
 
-        // 节点存储资源信息。
         @NameInMap("DiskSize")
         public DescribeInstanceTopologyResponseBodyInstanceTopologyZonesNodesNodeResourceDiskSize diskSize;
 
-        // 节点内存资源信息。
         @NameInMap("Memory")
         public DescribeInstanceTopologyResponseBodyInstanceTopologyZonesNodesNodeResourceMemory memory;
 
@@ -450,19 +440,15 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceTopologyResponseBodyInstanceTopologyZonesNodes extends TeaModel {
-        // 节点归属的副本ID。
         @NameInMap("NodeCopyId")
         public Long nodeCopyId;
 
-        // 节点ID。
         @NameInMap("NodeId")
         public String nodeId;
 
-        // 节点资源信息。
         @NameInMap("NodeResource")
         public java.util.List<DescribeInstanceTopologyResponseBodyInstanceTopologyZonesNodesNodeResource> nodeResource;
 
-        // 节点运行状态。
         @NameInMap("NodeStatus")
         public String nodeStatus;
 
@@ -505,22 +491,70 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeInstanceTopologyResponseBodyInstanceTopologyZonesZoneResourceDiskSize extends TeaModel {
+        @NameInMap("MaxDiskUsedObServer")
+        public java.util.List<String> maxDiskUsedObServer;
+
+        @NameInMap("MaxDiskUsedPercent")
+        public Double maxDiskUsedPercent;
+
+        public static DescribeInstanceTopologyResponseBodyInstanceTopologyZonesZoneResourceDiskSize build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceTopologyResponseBodyInstanceTopologyZonesZoneResourceDiskSize self = new DescribeInstanceTopologyResponseBodyInstanceTopologyZonesZoneResourceDiskSize();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceTopologyResponseBodyInstanceTopologyZonesZoneResourceDiskSize setMaxDiskUsedObServer(java.util.List<String> maxDiskUsedObServer) {
+            this.maxDiskUsedObServer = maxDiskUsedObServer;
+            return this;
+        }
+        public java.util.List<String> getMaxDiskUsedObServer() {
+            return this.maxDiskUsedObServer;
+        }
+
+        public DescribeInstanceTopologyResponseBodyInstanceTopologyZonesZoneResourceDiskSize setMaxDiskUsedPercent(Double maxDiskUsedPercent) {
+            this.maxDiskUsedPercent = maxDiskUsedPercent;
+            return this;
+        }
+        public Double getMaxDiskUsedPercent() {
+            return this.maxDiskUsedPercent;
+        }
+
+    }
+
+    public static class DescribeInstanceTopologyResponseBodyInstanceTopologyZonesZoneResource extends TeaModel {
+        @NameInMap("DiskSize")
+        public DescribeInstanceTopologyResponseBodyInstanceTopologyZonesZoneResourceDiskSize diskSize;
+
+        public static DescribeInstanceTopologyResponseBodyInstanceTopologyZonesZoneResource build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceTopologyResponseBodyInstanceTopologyZonesZoneResource self = new DescribeInstanceTopologyResponseBodyInstanceTopologyZonesZoneResource();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceTopologyResponseBodyInstanceTopologyZonesZoneResource setDiskSize(DescribeInstanceTopologyResponseBodyInstanceTopologyZonesZoneResourceDiskSize diskSize) {
+            this.diskSize = diskSize;
+            return this;
+        }
+        public DescribeInstanceTopologyResponseBodyInstanceTopologyZonesZoneResourceDiskSize getDiskSize() {
+            return this.diskSize;
+        }
+
+    }
+
     public static class DescribeInstanceTopologyResponseBodyInstanceTopologyZones extends TeaModel {
-        // 节点信息。
         @NameInMap("Nodes")
         public java.util.List<DescribeInstanceTopologyResponseBodyInstanceTopologyZonesNodes> nodes;
 
-        // 地域ID。
         @NameInMap("Region")
         public String region;
 
-        // 可用区的存储容量。
         @NameInMap("ZoneDisk")
         public String zoneDisk;
 
-        // 可用区ID。
         @NameInMap("ZoneId")
         public String zoneId;
+
+        @NameInMap("ZoneResource")
+        public DescribeInstanceTopologyResponseBodyInstanceTopologyZonesZoneResource zoneResource;
 
         public static DescribeInstanceTopologyResponseBodyInstanceTopologyZones build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceTopologyResponseBodyInstanceTopologyZones self = new DescribeInstanceTopologyResponseBodyInstanceTopologyZones();
@@ -559,14 +593,20 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             return this.zoneId;
         }
 
+        public DescribeInstanceTopologyResponseBodyInstanceTopologyZones setZoneResource(DescribeInstanceTopologyResponseBodyInstanceTopologyZonesZoneResource zoneResource) {
+            this.zoneResource = zoneResource;
+            return this;
+        }
+        public DescribeInstanceTopologyResponseBodyInstanceTopologyZonesZoneResource getZoneResource() {
+            return this.zoneResource;
+        }
+
     }
 
     public static class DescribeInstanceTopologyResponseBodyInstanceTopology extends TeaModel {
-        // 租户信息。
         @NameInMap("Tenants")
         public java.util.List<DescribeInstanceTopologyResponseBodyInstanceTopologyTenants> tenants;
 
-        // 集群的可用区信息。
         @NameInMap("Zones")
         public java.util.List<DescribeInstanceTopologyResponseBodyInstanceTopologyZones> zones;
 

@@ -4,27 +4,24 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class CreateDatabaseRequest extends TeaModel {
-    // 保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // 数据库名称。 不能使用某些预留关键字，如 test、mysql。
+    @NameInMap("Collation")
+    public String collation;
+
     @NameInMap("DatabaseName")
     public String databaseName;
 
-    // 数据库描述信息。
     @NameInMap("Description")
     public String description;
 
-    // 数据库编码方式。 详细参见DescribeCharset返回的Charset字段。
     @NameInMap("Encoding")
     public String encoding;
 
-    // Oceanbase集群ID。
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 租户ID。
     @NameInMap("TenantId")
     public String tenantId;
 
@@ -39,6 +36,14 @@ public class CreateDatabaseRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreateDatabaseRequest setCollation(String collation) {
+        this.collation = collation;
+        return this;
+    }
+    public String getCollation() {
+        return this.collation;
     }
 
     public CreateDatabaseRequest setDatabaseName(String databaseName) {

@@ -4,11 +4,9 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeRecommendIndexResponseBody extends TeaModel {
-    // 推荐索引信息
     @NameInMap("RecommendIndex")
     public DescribeRecommendIndexResponseBodyRecommendIndex recommendIndex;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,15 +32,12 @@ public class DescribeRecommendIndexResponseBody extends TeaModel {
     }
 
     public static class DescribeRecommendIndexResponseBodyRecommendIndex extends TeaModel {
-        // 建议索引，如果是主键，就是 PRIMARY，如果不是主键，以用户取名为准
         @NameInMap("SuggestIndex")
         public String suggestIndex;
 
-        // 表信息
         @NameInMap("TableList")
         public String tableList;
 
-        // 租户模式
         @NameInMap("TenantMode")
         public String tenantMode;
 

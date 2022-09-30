@@ -4,11 +4,9 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceNameResponseBody extends TeaModel {
-    // Oceanbase集群名称。
     @NameInMap("InstanceName")
     public String instanceName;
 
-    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,11 +4,9 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeCharsetResponseBody extends TeaModel {
-    // 字符集列表。
     @NameInMap("Charset")
     public java.util.List<DescribeCharsetResponseBodyCharset> charset;
 
-    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,9 +32,11 @@ public class DescribeCharsetResponseBody extends TeaModel {
     }
 
     public static class DescribeCharsetResponseBodyCharset extends TeaModel {
-        // 字符集名称。
         @NameInMap("Charset")
         public String charset;
+
+        @NameInMap("Collations")
+        public java.util.List<String> collations;
 
         public static DescribeCharsetResponseBodyCharset build(java.util.Map<String, ?> map) throws Exception {
             DescribeCharsetResponseBodyCharset self = new DescribeCharsetResponseBodyCharset();
@@ -49,6 +49,14 @@ public class DescribeCharsetResponseBody extends TeaModel {
         }
         public String getCharset() {
             return this.charset;
+        }
+
+        public DescribeCharsetResponseBodyCharset setCollations(java.util.List<String> collations) {
+            this.collations = collations;
+            return this;
+        }
+        public java.util.List<String> getCollations() {
+            return this.collations;
         }
 
     }

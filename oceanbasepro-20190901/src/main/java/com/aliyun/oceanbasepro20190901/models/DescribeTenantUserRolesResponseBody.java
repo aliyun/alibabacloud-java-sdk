@@ -4,11 +4,9 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeTenantUserRolesResponseBody extends TeaModel {
-    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 
-    // 用户的角色列表。角色包含以下几类： 读写权限（ReadWrite）：ALL PRIVILEGES ； 只读权限（ReadOnly）：SELECT  DDL权限（DDL）：CREATE,DROP,ALTER,SHOW VIEW,CREATE VIEW  DML权限（DML）：SELECT,INSERT,UPDATE,DELETE,SHOW VIEW。
     @NameInMap("Role")
     public java.util.List<String> role;
 

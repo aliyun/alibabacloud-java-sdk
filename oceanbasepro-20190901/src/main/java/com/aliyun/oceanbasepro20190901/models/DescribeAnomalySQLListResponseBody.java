@@ -4,15 +4,12 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeAnomalySQLListResponseBody extends TeaModel {
-    // 可疑SQL列表
     @NameInMap("AnomalySQLList")
     public java.util.List<DescribeAnomalySQLListResponseBodyAnomalySQLList> anomalySQLList;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
-    // 总数量
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -46,51 +43,39 @@ public class DescribeAnomalySQLListResponseBody extends TeaModel {
     }
 
     public static class DescribeAnomalySQLListResponseBodyAnomalySQLList extends TeaModel {
-        // 平均CPU时间
         @NameInMap("CpuTime")
-        public Long cpuTime;
+        public Float cpuTime;
 
-        // 数据库名
         @NameInMap("DbName")
         public String dbName;
 
-        // 诊断信息
         @NameInMap("Diagnosis")
         public String diagnosis;
 
-        // 诊断规则
         @NameInMap("DiagnosisRule")
         public String diagnosisRule;
 
-        // 执行次数
         @NameInMap("Executions")
         public Long executions;
 
-        // 返回数据序号
         @NameInMap("Key")
         public Long key;
 
-        // 请求时间
         @NameInMap("RequestTime")
-        public Long requestTime;
+        public Float requestTime;
 
-        // 请求时间（零时区）
         @NameInMap("RequestTimeUTCString")
         public String requestTimeUTCString;
 
-        // SQLID
         @NameInMap("SQLId")
         public String SQLId;
 
-        // sql文本
         @NameInMap("SQLText")
         public String SQLText;
 
-        // 建议
         @NameInMap("Suggestion")
         public String suggestion;
 
-        // 用户名
         @NameInMap("UserName")
         public String userName;
 
@@ -99,11 +84,11 @@ public class DescribeAnomalySQLListResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeAnomalySQLListResponseBodyAnomalySQLList setCpuTime(Long cpuTime) {
+        public DescribeAnomalySQLListResponseBodyAnomalySQLList setCpuTime(Float cpuTime) {
             this.cpuTime = cpuTime;
             return this;
         }
-        public Long getCpuTime() {
+        public Float getCpuTime() {
             return this.cpuTime;
         }
 
@@ -147,11 +132,11 @@ public class DescribeAnomalySQLListResponseBody extends TeaModel {
             return this.key;
         }
 
-        public DescribeAnomalySQLListResponseBodyAnomalySQLList setRequestTime(Long requestTime) {
+        public DescribeAnomalySQLListResponseBodyAnomalySQLList setRequestTime(Float requestTime) {
             this.requestTime = requestTime;
             return this;
         }
-        public Long getRequestTime() {
+        public Float getRequestTime() {
             return this.requestTime;
         }
 

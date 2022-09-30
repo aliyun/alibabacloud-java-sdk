@@ -4,15 +4,12 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceRequest extends TeaModel {
-    // OceanBase 集群 ID。
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 分页查询的页码。<br>起始值：1， 默认值：1
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // 分页查询时设置的每页行数。<br>最大值：100，默认值：10
     @NameInMap("PageSize")
     public Integer pageSize;
 

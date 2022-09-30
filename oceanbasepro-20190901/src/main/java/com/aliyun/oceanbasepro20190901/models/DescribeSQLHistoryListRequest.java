@@ -4,27 +4,21 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeSQLHistoryListRequest extends TeaModel {
-    // 参数历史查看的结束时间。
     @NameInMap("EndTime")
     public String endTime;
 
-    // 页码
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // 每页数量
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // SQLID
     @NameInMap("SQLId")
     public String SQLId;
 
-    // 参数历史查看的起始时间。
     @NameInMap("StartTime")
     public String startTime;
 
-    // 租户ID
     @NameInMap("TenantId")
     public String tenantId;
 
