@@ -37,6 +37,12 @@ public class SendBatchCardSmsRequest extends TeaModel {
     @NameInMap("SmsUpExtendCodeJson")
     public String smsUpExtendCodeJson;
 
+    @NameInMap("TemplateCode")
+    public String templateCode;
+
+    @NameInMap("TemplateParamJson")
+    public String templateParamJson;
+
     public static SendBatchCardSmsRequest build(java.util.Map<String, ?> map) throws Exception {
         SendBatchCardSmsRequest self = new SendBatchCardSmsRequest();
         return TeaModel.build(map, self);
@@ -128,6 +134,22 @@ public class SendBatchCardSmsRequest extends TeaModel {
     }
     public String getSmsUpExtendCodeJson() {
         return this.smsUpExtendCodeJson;
+    }
+
+    public SendBatchCardSmsRequest setTemplateCode(String templateCode) {
+        this.templateCode = templateCode;
+        return this;
+    }
+    public String getTemplateCode() {
+        return this.templateCode;
+    }
+
+    public SendBatchCardSmsRequest setTemplateParamJson(String templateParamJson) {
+        this.templateParamJson = templateParamJson;
+        return this;
+    }
+    public String getTemplateParamJson() {
+        return this.templateParamJson;
     }
 
 }
