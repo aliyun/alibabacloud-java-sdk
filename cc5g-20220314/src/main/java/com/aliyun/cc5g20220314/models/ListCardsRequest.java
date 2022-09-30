@@ -22,6 +22,9 @@ public class ListCardsRequest extends TeaModel {
     @NameInMap("MaxResults")
     public Long maxResults;
 
+    @NameInMap("Msisdn")
+    public String msisdn;
+
     @NameInMap("NetLinkId")
     public String netLinkId;
 
@@ -88,6 +91,14 @@ public class ListCardsRequest extends TeaModel {
     }
     public Long getMaxResults() {
         return this.maxResults;
+    }
+
+    public ListCardsRequest setMsisdn(String msisdn) {
+        this.msisdn = msisdn;
+        return this;
+    }
+    public String getMsisdn() {
+        return this.msisdn;
     }
 
     public ListCardsRequest setNetLinkId(String netLinkId) {
