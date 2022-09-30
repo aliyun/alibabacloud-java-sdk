@@ -4,11 +4,9 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeSQLPlansRequest extends TeaModel {
-    // SQLID
     @NameInMap("SQLId")
     public String SQLId;
 
-    // 租户ID
     @NameInMap("TenantId")
     public String tenantId;
 

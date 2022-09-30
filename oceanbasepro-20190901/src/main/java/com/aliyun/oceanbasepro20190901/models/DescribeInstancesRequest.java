@@ -4,27 +4,21 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstancesRequest extends TeaModel {
-    // Oceanbase集群ID。
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // Oceanbase集群名称。 长度为1~20个英文或中文字符。如果没有指定该参数，默认值为集群的InstanceId。
     @NameInMap("InstanceName")
     public String instanceName;
 
-    // 分页查询的页码。 起始值：1 默认值：1
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // 分页查询时设置的每页行数。 最大值：100 默认值：10
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 资源组ID信息。如果不填写，返回全部资源。
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    // 查询列表的删选关键字。
     @NameInMap("SearchKey")
     public String searchKey;
 

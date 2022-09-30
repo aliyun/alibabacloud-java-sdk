@@ -4,15 +4,12 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeTenantMetricsResponseBody extends TeaModel {
-    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 
-    // 租户指标信息。
     @NameInMap("TenantMetrics")
     public String tenantMetrics;
 
-    // 总数量
     @NameInMap("TotalCount")
     public Integer totalCount;
 

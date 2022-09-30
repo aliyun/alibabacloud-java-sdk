@@ -4,11 +4,9 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class CreateDatabaseResponseBody extends TeaModel {
-    // 数据库名称。
     @NameInMap("DatabaseName")
     public String databaseName;
 
-    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 

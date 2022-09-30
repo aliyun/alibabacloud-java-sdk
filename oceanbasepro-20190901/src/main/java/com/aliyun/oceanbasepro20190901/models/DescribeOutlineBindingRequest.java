@@ -4,27 +4,21 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeOutlineBindingRequest extends TeaModel {
-    // 数据库名称
     @NameInMap("DatabaseName")
     public String databaseName;
 
-    // Oceanbase集群ID。
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 当值为True时，查询SQLID在数据库中的限流信息
     @NameInMap("IsConcurrentLimit")
     public Boolean isConcurrentLimit;
 
-    // SQLID
     @NameInMap("SQLId")
     public String SQLId;
 
-    // 租户名称。 长度为2~20 个字符，支持英文字母、数字和下划线，区分大小写，必须以字母或下划线开头。 不可设置为 sys。
     @NameInMap("TableName")
     public String tableName;
 
-    // 租户ID。
     @NameInMap("TenantId")
     public String tenantId;
 

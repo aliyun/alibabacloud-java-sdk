@@ -4,27 +4,21 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeDatabasesRequest extends TeaModel {
-    // 数据库名称。 不能使用某些预留关键字，如 test、mysql。
     @NameInMap("DatabaseName")
     public String databaseName;
 
-    // 分页查询的页码。 起始值：1 默认值：1
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // 分页查询时设置的每页行数。 最大值：100 默认值：10
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 查询列表的删选关键字。
     @NameInMap("SearchKey")
     public String searchKey;
 
-    // 租户ID。
     @NameInMap("TenantId")
     public String tenantId;
 
-    // 是否返回数据库中的表信息。 Oracle模式使用true，MySQL模式使用false。
     @NameInMap("WithTables")
     public Boolean withTables;
 

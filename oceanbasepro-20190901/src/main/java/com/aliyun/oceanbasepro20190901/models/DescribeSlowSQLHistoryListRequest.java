@@ -4,7 +4,6 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeSlowSQLHistoryListRequest extends TeaModel {
-    // 结束时间
     @NameInMap("EndTime")
     public String endTime;
 
@@ -14,15 +13,12 @@ public class DescribeSlowSQLHistoryListRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // SQL唯一标识
     @NameInMap("SQLId")
     public String SQLId;
 
-    // 开始时间
     @NameInMap("StartTime")
     public String startTime;
 
-    // 租户名
     @NameInMap("TenantId")
     public String tenantId;
 

@@ -4,19 +4,15 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class ModifyDatabaseDescriptionRequest extends TeaModel {
-    // 数据库名称。 不能使用某些预留关键字，如 test、mysql。
     @NameInMap("DatabaseName")
     public String databaseName;
 
-    // 数据库描述信息。
     @NameInMap("Description")
     public String description;
 
-    // Oceanbase集群ID。
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 租户ID。
     @NameInMap("TenantId")
     public String tenantId;
 

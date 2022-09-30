@@ -4,11 +4,9 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class ModifyTenantUserRolesResponseBody extends TeaModel {
-    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 
-    // 租户中的数据库账号信息。
     @NameInMap("TenantUser")
     public ModifyTenantUserRolesResponseBodyTenantUser tenantUser;
 
@@ -34,19 +32,15 @@ public class ModifyTenantUserRolesResponseBody extends TeaModel {
     }
 
     public static class ModifyTenantUserRolesResponseBodyTenantUserUserRole extends TeaModel {
-        // 数据库(schema)名称
         @NameInMap("Database")
         public String database;
 
-        // 是否授权成功。
         @NameInMap("IsSuccess")
         public Boolean isSuccess;
 
-        // 拥有的角色。
         @NameInMap("Role")
         public String role;
 
-        // 表的名称。
         @NameInMap("Table")
         public String table;
 
@@ -90,15 +84,12 @@ public class ModifyTenantUserRolesResponseBody extends TeaModel {
     }
 
     public static class ModifyTenantUserRolesResponseBodyTenantUser extends TeaModel {
-        // 租户ID。
         @NameInMap("TenantId")
         public String tenantId;
 
-        // 账号名称。
         @NameInMap("UserName")
         public String userName;
 
-        // 账号类型。 Admin：超级账户 Normal：普通账户
         @NameInMap("UserRole")
         public java.util.List<ModifyTenantUserRolesResponseBodyTenantUserUserRole> userRole;
 

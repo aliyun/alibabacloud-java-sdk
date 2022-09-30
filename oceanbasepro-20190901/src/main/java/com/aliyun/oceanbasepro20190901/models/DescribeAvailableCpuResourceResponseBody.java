@@ -4,11 +4,9 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeAvailableCpuResourceResponseBody extends TeaModel {
-    // 可用的CPU资源信息。
     @NameInMap("Data")
     public java.util.List<DescribeAvailableCpuResourceResponseBodyData> data;
 
-    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,15 +32,12 @@ public class DescribeAvailableCpuResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableCpuResourceResponseBodyData extends TeaModel {
-        // 单个unit最大可申请的CPU核数。
         @NameInMap("MaxCpu")
         public Long maxCpu;
 
-        // 单个unit最小需要申请的CPU核数。
         @NameInMap("MinCpu")
         public Long minCpu;
 
-        // 租户的unit个数。
         @NameInMap("UnitNum")
         public Long unitNum;
 

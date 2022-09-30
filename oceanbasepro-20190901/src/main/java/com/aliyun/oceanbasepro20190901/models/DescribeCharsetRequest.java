@@ -4,7 +4,6 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeCharsetRequest extends TeaModel {
-    // 租户模式。 当前支持Oracle模式（Oracle）、MySQL模式（MySQL） 详细参见：DescribeInstanceTenantModes。
     @NameInMap("TenantMode")
     public String tenantMode;
 

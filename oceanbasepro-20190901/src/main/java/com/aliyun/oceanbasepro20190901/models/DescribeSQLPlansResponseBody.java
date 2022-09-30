@@ -4,11 +4,9 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeSQLPlansResponseBody extends TeaModel {
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
-    // 执行计划信息
     @NameInMap("SQLPlans")
     public java.util.List<DescribeSQLPlansResponseBodySQLPlans> SQLPlans;
 
@@ -34,67 +32,51 @@ public class DescribeSQLPlansResponseBody extends TeaModel {
     }
 
     public static class DescribeSQLPlansResponseBodySQLPlans extends TeaModel {
-        // 平均执行时间 (ms)
         @NameInMap("AvgExecutionMS")
         public Float avgExecutionMS;
 
-        // 平均执行时间
         @NameInMap("AvgExecutionTimeMS")
         public Long avgExecutionTimeMS;
 
-        // 首次加载时间
         @NameInMap("FirstLoadTime")
         public Long firstLoadTime;
 
-        // 首次加载时间(零时区)
         @NameInMap("FirstLoadTimeUTCString")
         public String firstLoadTimeUTCString;
 
-        // 命中次数
         @NameInMap("HitCount")
         public Integer hitCount;
 
-        // 合并版本
         @NameInMap("MergedVersion")
         public Integer mergedVersion;
 
-        // 节点ip
         @NameInMap("NodeIp")
         public String nodeIp;
 
-        // Outline数据
         @NameInMap("OutlineData")
         public String outlineData;
 
-        // OutlineID
         @NameInMap("OutlineId")
         public Long outlineId;
 
-        // 绑定时间
         @NameInMap("OutlineTime")
         public Long outlineTime;
 
-        // 绑定时间(零时区)
         @NameInMap("OutlineTimeUTCString")
         public String outlineTimeUTCString;
 
-        // SQL的完整执行计划
         @NameInMap("PlanFull")
         public String planFull;
 
-        // SQL执行计划在数据库内部的ID
         @NameInMap("PlanId")
         public Integer planId;
 
-        // 计划信息
         @NameInMap("PlanInfo")
         public String planInfo;
 
-        // SQL执行计划在诊断系统内部的唯一标识
         @NameInMap("PlanUnionHash")
         public String planUnionHash;
 
-        // 查询sql
         @NameInMap("QuerySQL")
         public String querySQL;
 

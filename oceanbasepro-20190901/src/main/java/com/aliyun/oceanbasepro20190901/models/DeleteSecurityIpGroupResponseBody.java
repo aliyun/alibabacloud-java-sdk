@@ -4,11 +4,9 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DeleteSecurityIpGroupResponseBody extends TeaModel {
-    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 
-    // 删除的IP白名单分组信息。
     @NameInMap("SecurityIpGroup")
     public DeleteSecurityIpGroupResponseBodySecurityIpGroup securityIpGroup;
 
@@ -34,11 +32,9 @@ public class DeleteSecurityIpGroupResponseBody extends TeaModel {
     }
 
     public static class DeleteSecurityIpGroupResponseBodySecurityIpGroup extends TeaModel {
-        // Oceanbase集群ID。
         @NameInMap("InstanceId")
         public String instanceId;
 
-        // 删除的IP安全白名单组的组名。
         @NameInMap("SecurityIpGroupName")
         public String securityIpGroupName;
 

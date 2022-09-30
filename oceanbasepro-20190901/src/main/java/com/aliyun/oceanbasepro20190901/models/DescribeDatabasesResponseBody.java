@@ -4,15 +4,12 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeDatabasesResponseBody extends TeaModel {
-    // 租户中的数据库列表。
     @NameInMap("Databases")
     public java.util.List<DescribeDatabasesResponseBodyDatabases> databases;
 
-    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 
-    // 租户中的数据库总数。
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -46,7 +43,6 @@ public class DescribeDatabasesResponseBody extends TeaModel {
     }
 
     public static class DescribeDatabasesResponseBodyDatabasesTables extends TeaModel {
-        // 数据库表名
         @NameInMap("TableName")
         public String tableName;
 
@@ -66,15 +62,12 @@ public class DescribeDatabasesResponseBody extends TeaModel {
     }
 
     public static class DescribeDatabasesResponseBodyDatabasesUsers extends TeaModel {
-        // 账号赋予该库的角色权限。 对于MySQL模式，角色为数据库（Database）级别，其有以下几类： - ReadWrite：读写权限，包括ALL PRIVILEGES； - ReadOnly：只读权限，包括SELECT - DDL: DDL权限，包括CREATE,DROP,ALTER,SHOW VIEW,CREATE VIEW - DML: DML权限，包括SELECT,INSERT,UPDATE,DELETE,SHOW VIEW。
         @NameInMap("Role")
         public String role;
 
-        // 账号名称。
         @NameInMap("UserName")
         public String userName;
 
-        // 账号类型。 - Admin：超级账户 - Normal：普通账户
         @NameInMap("UserType")
         public String userType;
 
@@ -110,53 +103,53 @@ public class DescribeDatabasesResponseBody extends TeaModel {
     }
 
     public static class DescribeDatabasesResponseBodyDatabases extends TeaModel {
-        // 创建时间
+        @NameInMap("Collation")
+        public String collation;
+
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 实际数据大小
         @NameInMap("DataSize")
         public Double dataSize;
 
-        // 数据库名称。
         @NameInMap("DatabaseName")
         public String databaseName;
 
-        // 数据库类型
         @NameInMap("DbType")
         public String dbType;
 
-        // 数据库的描述信息。
         @NameInMap("Description")
         public String description;
 
-        // 数据库的编码。目前支持utf8mb4、gbk等编码。
         @NameInMap("Encoding")
         public String encoding;
 
-        // 所需容量
         @NameInMap("RequiredSize")
         public Double requiredSize;
 
-        // 数据库的状态。 - ONLINE: 运行中 - DELETING: 删除中
         @NameInMap("Status")
         public String status;
 
-        // 数据库表信息
         @NameInMap("Tables")
         public java.util.List<DescribeDatabasesResponseBodyDatabasesTables> tables;
 
-        // 租户ID。
         @NameInMap("TenantId")
         public String tenantId;
 
-        // 对该数据库赋权的账号信息。
         @NameInMap("Users")
         public java.util.List<DescribeDatabasesResponseBodyDatabasesUsers> users;
 
         public static DescribeDatabasesResponseBodyDatabases build(java.util.Map<String, ?> map) throws Exception {
             DescribeDatabasesResponseBodyDatabases self = new DescribeDatabasesResponseBodyDatabases();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDatabasesResponseBodyDatabases setCollation(String collation) {
+            this.collation = collation;
+            return this;
+        }
+        public String getCollation() {
+            return this.collation;
         }
 
         public DescribeDatabasesResponseBodyDatabases setCreateTime(String createTime) {

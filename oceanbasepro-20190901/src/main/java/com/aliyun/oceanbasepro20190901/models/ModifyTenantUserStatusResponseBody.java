@@ -4,11 +4,9 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class ModifyTenantUserStatusResponseBody extends TeaModel {
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
-    // 租户中的数据库账号信息
     @NameInMap("TenantUser")
     public java.util.List<ModifyTenantUserStatusResponseBodyTenantUser> tenantUser;
 
@@ -34,15 +32,12 @@ public class ModifyTenantUserStatusResponseBody extends TeaModel {
     }
 
     public static class ModifyTenantUserStatusResponseBodyTenantUser extends TeaModel {
-        // 租户ID。
         @NameInMap("TenantId")
         public String tenantId;
 
-        // 账号名称。
         @NameInMap("UserName")
         public String userName;
 
-        // 数据库账号的状态。 - LOCKED：锁定 - ONLINE：解锁
         @NameInMap("UserStatus")
         public String userStatus;
 

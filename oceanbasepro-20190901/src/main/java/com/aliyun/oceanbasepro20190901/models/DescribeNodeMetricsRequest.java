@@ -4,39 +4,30 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeNodeMetricsRequest extends TeaModel {
-    // 参数历史查看的结束时间。
     @NameInMap("EndTime")
     public String endTime;
 
-    // Oceanbase集群ID。
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 监控指标
     @NameInMap("Metrics")
     public String metrics;
 
-    // 节点列表
     @NameInMap("NodeIdList")
     public String nodeIdList;
 
-    // 节点名称
     @NameInMap("NodeName")
     public String nodeName;
 
-    // 分页查询的页码。 起始值：1 默认值：1
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // 分页查询时设置的每页行数。 最大值：100 默认值：10
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 参数历史查看的起始时间。
     @NameInMap("StartTime")
     public String startTime;
 
-    // 租户ID。
     @NameInMap("TenantId")
     public String tenantId;
 

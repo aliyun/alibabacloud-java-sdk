@@ -7,15 +7,12 @@ public class DescribeAvailableMemResourceRequest extends TeaModel {
     @NameInMap("CpuNum")
     public Long cpuNum;
 
-    // Oceanbase集群ID。
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 租户ID。
     @NameInMap("TenantId")
     public String tenantId;
 
-    // 租户的资源分布节点数。 其与集群的部署模式相耦合，如集群模式为2-2-2，则最后分布节点数最多为2个。
     @NameInMap("UnitNum")
     public Long unitNum;
 

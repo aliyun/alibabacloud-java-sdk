@@ -4,11 +4,9 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceCreatableZoneResponseBody extends TeaModel {
-    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 
-    // 可用区列表信息。
     @NameInMap("ZoneList")
     public java.util.List<DescribeInstanceCreatableZoneResponseBodyZoneList> zoneList;
 
@@ -34,11 +32,9 @@ public class DescribeInstanceCreatableZoneResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceCreatableZoneResponseBodyZoneList extends TeaModel {
-        // 是否是集群部署的可用区。
         @NameInMap("IsInCluster")
         public Boolean isInCluster;
 
-        // 可用区ID。
         @NameInMap("Zone")
         public String zone;
 

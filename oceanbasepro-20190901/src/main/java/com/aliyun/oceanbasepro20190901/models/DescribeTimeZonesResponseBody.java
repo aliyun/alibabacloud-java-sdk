@@ -4,11 +4,9 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeTimeZonesResponseBody extends TeaModel {
-    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 
-    // 租户允许的时区信息。
     @NameInMap("TimeZones")
     public DescribeTimeZonesResponseBodyTimeZones timeZones;
 
@@ -34,11 +32,9 @@ public class DescribeTimeZonesResponseBody extends TeaModel {
     }
 
     public static class DescribeTimeZonesResponseBodyTimeZonesList extends TeaModel {
-        // 时区描述。
         @NameInMap("Description")
         public String description;
 
-        // 时区名称。
         @NameInMap("TimeZone")
         public String timeZone;
 
@@ -66,11 +62,9 @@ public class DescribeTimeZonesResponseBody extends TeaModel {
     }
 
     public static class DescribeTimeZonesResponseBodyTimeZones extends TeaModel {
-        // 默认时区。
         @NameInMap("Default")
         public String _default;
 
-        // 时区列表信息。
         @NameInMap("List")
         public java.util.List<DescribeTimeZonesResponseBodyTimeZonesList> list;
 

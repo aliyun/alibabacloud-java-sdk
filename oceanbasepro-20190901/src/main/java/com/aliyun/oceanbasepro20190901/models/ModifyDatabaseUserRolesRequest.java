@@ -4,19 +4,15 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class ModifyDatabaseUserRolesRequest extends TeaModel {
-    // 数据库名称。 不能使用某些预留关键字，如 test、mysql。
     @NameInMap("DatabaseName")
     public String databaseName;
 
-    // Oceanbase集群ID。
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 租户ID。
     @NameInMap("TenantId")
     public String tenantId;
 
-    // 用户名及具备的角色列表。
     @NameInMap("Users")
     public String users;
 

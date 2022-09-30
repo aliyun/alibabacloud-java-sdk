@@ -4,11 +4,9 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
-    // 慢SQL历史列表
     @NameInMap("SlowSQLHistoryList")
     public DescribeSlowSQLHistoryListResponseBodySlowSQLHistoryList slowSQLHistoryList;
 

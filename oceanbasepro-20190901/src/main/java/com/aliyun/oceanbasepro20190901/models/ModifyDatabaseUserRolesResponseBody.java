@@ -4,11 +4,9 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class ModifyDatabaseUserRolesResponseBody extends TeaModel {
-    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 
-    // 账号信息。
     @NameInMap("TenantUser")
     public ModifyDatabaseUserRolesResponseBodyTenantUser tenantUser;
 
@@ -34,11 +32,9 @@ public class ModifyDatabaseUserRolesResponseBody extends TeaModel {
     }
 
     public static class ModifyDatabaseUserRolesResponseBodyTenantUserUsers extends TeaModel {
-        // 账号赋予该库的角色权限。 对于MySQL模式，角色为数据库（Database）级别，其有以下几类： - ReadWrite：读写权限，包括ALL PRIVILEGES； - ReadOnly：只读权限，包括SELECT - DDL: DDL权限，包括CREATE,DROP,ALTER,SHOW VIEW,CREATE VIEW - DML: DML权限，包括SELECT,INSERT,UPDATE,DELETE,SHOW VIEW。
         @NameInMap("Role")
         public String role;
 
-        // 账号名称。
         @NameInMap("UserName")
         public String userName;
 
@@ -66,15 +62,12 @@ public class ModifyDatabaseUserRolesResponseBody extends TeaModel {
     }
 
     public static class ModifyDatabaseUserRolesResponseBodyTenantUser extends TeaModel {
-        // 数据库名称。
         @NameInMap("DatabaseName")
         public String databaseName;
 
-        // 租户ID。
         @NameInMap("TenantId")
         public String tenantId;
 
-        // 对数据库有赋权的账户信息
         @NameInMap("Users")
         public java.util.List<ModifyDatabaseUserRolesResponseBodyTenantUserUsers> users;
 
