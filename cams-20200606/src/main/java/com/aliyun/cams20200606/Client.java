@@ -26,6 +26,136 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    public BeeBotAssociateResponse beeBotAssociateWithOptions(BeeBotAssociateRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        BeeBotAssociateShrinkRequest request = new BeeBotAssociateShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.perspective)) {
+            request.perspectiveShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.perspective, "Perspective", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.chatBotInstnaceId)) {
+            body.put("ChatBotInstnaceId", request.chatBotInstnaceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isvCode)) {
+            body.put("IsvCode", request.isvCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.perspectiveShrink)) {
+            body.put("Perspective", request.perspectiveShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recommendNum)) {
+            body.put("RecommendNum", request.recommendNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            body.put("SessionId", request.sessionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.utterance)) {
+            body.put("Utterance", request.utterance);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BeeBotAssociate"),
+            new TeaPair("version", "2020-06-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BeeBotAssociateResponse());
+    }
+
+    public BeeBotAssociateResponse beeBotAssociate(BeeBotAssociateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.beeBotAssociateWithOptions(request, runtime);
+    }
+
+    public BeeBotChatResponse beeBotChatWithOptions(BeeBotChatRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        BeeBotChatShrinkRequest request = new BeeBotChatShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.perspective)) {
+            request.perspectiveShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.perspective, "Perspective", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.vendorParam)) {
+            request.vendorParamShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.vendorParam, "VendorParam", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.chatBotInstnaceId)) {
+            body.put("ChatBotInstnaceId", request.chatBotInstnaceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.intentName)) {
+            body.put("IntentName", request.intentName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isvCode)) {
+            body.put("IsvCode", request.isvCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeId)) {
+            body.put("KnowledgeId", request.knowledgeId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.perspectiveShrink)) {
+            body.put("Perspective", request.perspectiveShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.senderId)) {
+            body.put("SenderId", request.senderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.senderNick)) {
+            body.put("SenderNick", request.senderNick);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            body.put("SessionId", request.sessionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.utterance)) {
+            body.put("Utterance", request.utterance);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vendorParamShrink)) {
+            body.put("VendorParam", request.vendorParamShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BeeBotChat"),
+            new TeaPair("version", "2020-06-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BeeBotChatResponse());
+    }
+
+    public BeeBotChatResponse beeBotChat(BeeBotChatRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.beeBotChatWithOptions(request, runtime);
+    }
+
     public CreateChatappTemplateResponse createChatappTemplateWithOptions(CreateChatappTemplateRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateChatappTemplateShrinkRequest request = new CreateChatappTemplateShrinkRequest();
@@ -224,6 +354,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListChatappTemplateResponse listChatappTemplate(ListChatappTemplateRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listChatappTemplateWithOptions(request, runtime);
+    }
+
+    public ModifyChatappTemplateResponse modifyChatappTemplateWithOptions(ModifyChatappTemplateRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ModifyChatappTemplateShrinkRequest request = new ModifyChatappTemplateShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.components)) {
+            request.componentsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.components, "Components", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.example)) {
+            request.exampleShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.example, "Example", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.componentsShrink)) {
+            body.put("Components", request.componentsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.custWabaId)) {
+            body.put("CustWabaId", request.custWabaId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.exampleShrink)) {
+            body.put("Example", request.exampleShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isvCode)) {
+            body.put("IsvCode", request.isvCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.language)) {
+            body.put("Language", request.language);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateCode)) {
+            body.put("TemplateCode", request.templateCode);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyChatappTemplate"),
+            new TeaPair("version", "2020-06-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyChatappTemplateResponse());
+    }
+
+    public ModifyChatappTemplateResponse modifyChatappTemplate(ModifyChatappTemplateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyChatappTemplateWithOptions(request, runtime);
     }
 
     public SendChatappMassMessageResponse sendChatappMassMessageWithOptions(SendChatappMassMessageRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
