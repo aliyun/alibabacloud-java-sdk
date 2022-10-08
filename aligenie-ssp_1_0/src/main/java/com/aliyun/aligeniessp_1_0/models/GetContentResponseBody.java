@@ -233,6 +233,9 @@ public class GetContentResponseBody extends TeaModel {
         @NameInMap("Lyric")
         public String lyric;
 
+        @NameInMap("RawId")
+        public String rawId;
+
         @NameInMap("Source")
         public String source;
 
@@ -363,6 +366,14 @@ public class GetContentResponseBody extends TeaModel {
         }
         public String getLyric() {
             return this.lyric;
+        }
+
+        public GetContentResponseBodyResult setRawId(String rawId) {
+            this.rawId = rawId;
+            return this;
+        }
+        public String getRawId() {
+            return this.rawId;
         }
 
         public GetContentResponseBodyResult setSource(String source) {
