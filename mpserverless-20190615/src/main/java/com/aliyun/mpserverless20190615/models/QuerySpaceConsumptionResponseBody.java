@@ -7,6 +7,12 @@ public class QuerySpaceConsumptionResponseBody extends TeaModel {
     @NameInMap("CsUsage")
     public QuerySpaceConsumptionResponseBodyCsUsage csUsage;
 
+    @NameInMap("CycleEndTime")
+    public Long cycleEndTime;
+
+    @NameInMap("CycleStartTime")
+    public Long cycleStartTime;
+
     @NameInMap("DbUsage")
     public QuerySpaceConsumptionResponseBodyDbUsage dbUsage;
 
@@ -39,6 +45,22 @@ public class QuerySpaceConsumptionResponseBody extends TeaModel {
     }
     public QuerySpaceConsumptionResponseBodyCsUsage getCsUsage() {
         return this.csUsage;
+    }
+
+    public QuerySpaceConsumptionResponseBody setCycleEndTime(Long cycleEndTime) {
+        this.cycleEndTime = cycleEndTime;
+        return this;
+    }
+    public Long getCycleEndTime() {
+        return this.cycleEndTime;
+    }
+
+    public QuerySpaceConsumptionResponseBody setCycleStartTime(Long cycleStartTime) {
+        this.cycleStartTime = cycleStartTime;
+        return this;
+    }
+    public Long getCycleStartTime() {
+        return this.cycleStartTime;
     }
 
     public QuerySpaceConsumptionResponseBody setDbUsage(QuerySpaceConsumptionResponseBodyDbUsage dbUsage) {
