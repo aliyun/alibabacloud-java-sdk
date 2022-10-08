@@ -7,9 +7,6 @@ public class ModifyDBInstanceSSLRequest extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
-    @NameInMap("DisableTlsProtocol")
-    public String disableTlsProtocol;
-
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -39,14 +36,6 @@ public class ModifyDBInstanceSSLRequest extends TeaModel {
     }
     public String getDBInstanceId() {
         return this.DBInstanceId;
-    }
-
-    public ModifyDBInstanceSSLRequest setDisableTlsProtocol(String disableTlsProtocol) {
-        this.disableTlsProtocol = disableTlsProtocol;
-        return this;
-    }
-    public String getDisableTlsProtocol() {
-        return this.disableTlsProtocol;
     }
 
     public ModifyDBInstanceSSLRequest setOwnerAccount(String ownerAccount) {
