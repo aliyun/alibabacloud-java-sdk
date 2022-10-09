@@ -945,6 +945,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("DailyNocTime", request.dailyNocTime);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.dingSignKey)) {
+            body.put("DingSignKey", request.dingSignKey);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.enableOutgoing)) {
             body.put("EnableOutgoing", request.enableOutgoing);
         }
@@ -2505,6 +2509,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.page)) {
             query.put("Page", request.page);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
+            query.put("ProductCode", request.productCode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {

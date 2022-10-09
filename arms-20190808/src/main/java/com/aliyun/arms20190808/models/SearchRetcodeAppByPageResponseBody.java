@@ -41,6 +41,9 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public Long createTime;
 
+        @NameInMap("NickName")
+        public String nickName;
+
         @NameInMap("Pid")
         public String pid;
 
@@ -86,6 +89,14 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
         }
         public Long getCreateTime() {
             return this.createTime;
+        }
+
+        public SearchRetcodeAppByPageResponseBodyPageBeanRetcodeApps setNickName(String nickName) {
+            this.nickName = nickName;
+            return this;
+        }
+        public String getNickName() {
+            return this.nickName;
         }
 
         public SearchRetcodeAppByPageResponseBodyPageBeanRetcodeApps setPid(String pid) {

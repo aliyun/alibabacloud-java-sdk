@@ -13,6 +13,9 @@ public class CreateOrUpdateIMRobotRequest extends TeaModel {
     @NameInMap("DailyNocTime")
     public String dailyNocTime;
 
+    @NameInMap("DingSignKey")
+    public String dingSignKey;
+
     @NameInMap("EnableOutgoing")
     public Boolean enableOutgoing;
 
@@ -58,6 +61,14 @@ public class CreateOrUpdateIMRobotRequest extends TeaModel {
     }
     public String getDailyNocTime() {
         return this.dailyNocTime;
+    }
+
+    public CreateOrUpdateIMRobotRequest setDingSignKey(String dingSignKey) {
+        this.dingSignKey = dingSignKey;
+        return this;
+    }
+    public String getDingSignKey() {
+        return this.dingSignKey;
     }
 
     public CreateOrUpdateIMRobotRequest setEnableOutgoing(Boolean enableOutgoing) {
