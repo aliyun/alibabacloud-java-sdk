@@ -4,9 +4,6 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class ApplyListQueryResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("code")
     public Integer code;
 
@@ -15,6 +12,9 @@ public class ApplyListQueryResponseBody extends TeaModel {
 
     @NameInMap("module_list")
     public java.util.List<ApplyListQueryResponseBodyModuleList> moduleList;
+
+    @NameInMap("requestId")
+    public String requestId;
 
     @NameInMap("success")
     public Boolean success;
@@ -25,14 +25,6 @@ public class ApplyListQueryResponseBody extends TeaModel {
     public static ApplyListQueryResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ApplyListQueryResponseBody self = new ApplyListQueryResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ApplyListQueryResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ApplyListQueryResponseBody setCode(Integer code) {
@@ -57,6 +49,14 @@ public class ApplyListQueryResponseBody extends TeaModel {
     }
     public java.util.List<ApplyListQueryResponseBodyModuleList> getModuleList() {
         return this.moduleList;
+    }
+
+    public ApplyListQueryResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ApplyListQueryResponseBody setSuccess(Boolean success) {

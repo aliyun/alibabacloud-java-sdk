@@ -13,7 +13,7 @@ public class ApplyApproveResponseBody extends TeaModel {
     @NameInMap("module")
     public String module;
 
-    @NameInMap("request_id")
+    @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("success")

@@ -4,9 +4,6 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class MonthBillGetResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("code")
     public Integer code;
 
@@ -15,6 +12,9 @@ public class MonthBillGetResponseBody extends TeaModel {
 
     @NameInMap("module")
     public java.util.List<MonthBillGetResponseBodyModule> module;
+
+    @NameInMap("requestId")
+    public String requestId;
 
     @NameInMap("success")
     public Boolean success;
@@ -25,14 +25,6 @@ public class MonthBillGetResponseBody extends TeaModel {
     public static MonthBillGetResponseBody build(java.util.Map<String, ?> map) throws Exception {
         MonthBillGetResponseBody self = new MonthBillGetResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public MonthBillGetResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public MonthBillGetResponseBody setCode(Integer code) {
@@ -57,6 +49,14 @@ public class MonthBillGetResponseBody extends TeaModel {
     }
     public java.util.List<MonthBillGetResponseBodyModule> getModule() {
         return this.module;
+    }
+
+    public MonthBillGetResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public MonthBillGetResponseBody setSuccess(Boolean success) {

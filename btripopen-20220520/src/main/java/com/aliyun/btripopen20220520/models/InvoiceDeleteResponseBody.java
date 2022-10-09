@@ -4,14 +4,14 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class InvoiceDeleteResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("code")
     public Integer code;
 
     @NameInMap("message")
     public String message;
+
+    @NameInMap("requestId")
+    public String requestId;
 
     @NameInMap("success")
     public Boolean success;
@@ -22,14 +22,6 @@ public class InvoiceDeleteResponseBody extends TeaModel {
     public static InvoiceDeleteResponseBody build(java.util.Map<String, ?> map) throws Exception {
         InvoiceDeleteResponseBody self = new InvoiceDeleteResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public InvoiceDeleteResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public InvoiceDeleteResponseBody setCode(Integer code) {
@@ -46,6 +38,14 @@ public class InvoiceDeleteResponseBody extends TeaModel {
     }
     public String getMessage() {
         return this.message;
+    }
+
+    public InvoiceDeleteResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public InvoiceDeleteResponseBody setSuccess(Boolean success) {

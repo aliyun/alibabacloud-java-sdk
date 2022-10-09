@@ -4,9 +4,6 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class HotelOrderListQueryResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("code")
     public Integer code;
 
@@ -19,6 +16,9 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
     @NameInMap("page_info")
     public HotelOrderListQueryResponseBodyPageInfo pageInfo;
 
+    @NameInMap("requestId")
+    public String requestId;
+
     @NameInMap("success")
     public Boolean success;
 
@@ -28,14 +28,6 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
     public static HotelOrderListQueryResponseBody build(java.util.Map<String, ?> map) throws Exception {
         HotelOrderListQueryResponseBody self = new HotelOrderListQueryResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public HotelOrderListQueryResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public HotelOrderListQueryResponseBody setCode(Integer code) {
@@ -68,6 +60,14 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
     }
     public HotelOrderListQueryResponseBodyPageInfo getPageInfo() {
         return this.pageInfo;
+    }
+
+    public HotelOrderListQueryResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public HotelOrderListQueryResponseBody setSuccess(Boolean success) {

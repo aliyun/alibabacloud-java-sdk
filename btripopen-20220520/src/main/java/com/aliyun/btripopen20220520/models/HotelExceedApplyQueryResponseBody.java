@@ -4,9 +4,6 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class HotelExceedApplyQueryResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("code")
     public Integer code;
 
@@ -15,6 +12,9 @@ public class HotelExceedApplyQueryResponseBody extends TeaModel {
 
     @NameInMap("module")
     public HotelExceedApplyQueryResponseBodyModule module;
+
+    @NameInMap("requestId")
+    public String requestId;
 
     @NameInMap("success")
     public Boolean success;
@@ -25,14 +25,6 @@ public class HotelExceedApplyQueryResponseBody extends TeaModel {
     public static HotelExceedApplyQueryResponseBody build(java.util.Map<String, ?> map) throws Exception {
         HotelExceedApplyQueryResponseBody self = new HotelExceedApplyQueryResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public HotelExceedApplyQueryResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public HotelExceedApplyQueryResponseBody setCode(Integer code) {
@@ -57,6 +49,14 @@ public class HotelExceedApplyQueryResponseBody extends TeaModel {
     }
     public HotelExceedApplyQueryResponseBodyModule getModule() {
         return this.module;
+    }
+
+    public HotelExceedApplyQueryResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public HotelExceedApplyQueryResponseBody setSuccess(Boolean success) {

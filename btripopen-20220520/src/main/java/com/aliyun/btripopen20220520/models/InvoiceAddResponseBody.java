@@ -4,14 +4,14 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class InvoiceAddResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("code")
     public Integer code;
 
     @NameInMap("message")
     public String message;
+
+    @NameInMap("requestId")
+    public String requestId;
 
     @NameInMap("success")
     public Boolean success;
@@ -22,14 +22,6 @@ public class InvoiceAddResponseBody extends TeaModel {
     public static InvoiceAddResponseBody build(java.util.Map<String, ?> map) throws Exception {
         InvoiceAddResponseBody self = new InvoiceAddResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public InvoiceAddResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public InvoiceAddResponseBody setCode(Integer code) {
@@ -46,6 +38,14 @@ public class InvoiceAddResponseBody extends TeaModel {
     }
     public String getMessage() {
         return this.message;
+    }
+
+    public InvoiceAddResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public InvoiceAddResponseBody setSuccess(Boolean success) {
