@@ -102,6 +102,9 @@ public class ListAlertEventsResponseBody extends TeaModel {
         @NameInMap("GeneratorURL")
         public String generatorURL;
 
+        @NameInMap("HandlerName")
+        public String handlerName;
+
         @NameInMap("IntegrationName")
         public String integrationName;
 
@@ -174,6 +177,14 @@ public class ListAlertEventsResponseBody extends TeaModel {
         }
         public String getGeneratorURL() {
             return this.generatorURL;
+        }
+
+        public ListAlertEventsResponseBodyPageBeanEvents setHandlerName(String handlerName) {
+            this.handlerName = handlerName;
+            return this;
+        }
+        public String getHandlerName() {
+            return this.handlerName;
         }
 
         public ListAlertEventsResponseBodyPageBeanEvents setIntegrationName(String integrationName) {

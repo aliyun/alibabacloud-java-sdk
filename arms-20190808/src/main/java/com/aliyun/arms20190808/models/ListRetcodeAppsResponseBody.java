@@ -38,6 +38,9 @@ public class ListRetcodeAppsResponseBody extends TeaModel {
         @NameInMap("AppName")
         public String appName;
 
+        @NameInMap("NickName")
+        public String nickName;
+
         @NameInMap("Pid")
         public String pid;
 
@@ -63,6 +66,14 @@ public class ListRetcodeAppsResponseBody extends TeaModel {
         }
         public String getAppName() {
             return this.appName;
+        }
+
+        public ListRetcodeAppsResponseBodyRetcodeApps setNickName(String nickName) {
+            this.nickName = nickName;
+            return this;
+        }
+        public String getNickName() {
+            return this.nickName;
         }
 
         public ListRetcodeAppsResponseBodyRetcodeApps setPid(String pid) {

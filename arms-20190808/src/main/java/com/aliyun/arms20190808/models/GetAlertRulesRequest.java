@@ -22,6 +22,9 @@ public class GetAlertRulesRequest extends TeaModel {
     @NameInMap("Page")
     public Long page;
 
+    @NameInMap("ProductCode")
+    public String productCode;
+
     @NameInMap("RegionId")
     public String regionId;
 
@@ -79,6 +82,14 @@ public class GetAlertRulesRequest extends TeaModel {
     }
     public Long getPage() {
         return this.page;
+    }
+
+    public GetAlertRulesRequest setProductCode(String productCode) {
+        this.productCode = productCode;
+        return this;
+    }
+    public String getProductCode() {
+        return this.productCode;
     }
 
     public GetAlertRulesRequest setRegionId(String regionId) {

@@ -38,6 +38,9 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
         @NameInMap("DailyNocTime")
         public String dailyNocTime;
 
+        @NameInMap("DingSignKey")
+        public String dingSignKey;
+
         @NameInMap("RobotAddr")
         public String robotAddr;
 
@@ -69,6 +72,14 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
         }
         public String getDailyNocTime() {
             return this.dailyNocTime;
+        }
+
+        public DescribeIMRobotsResponseBodyPageBeanAlertIMRobots setDingSignKey(String dingSignKey) {
+            this.dingSignKey = dingSignKey;
+            return this;
+        }
+        public String getDingSignKey() {
+            return this.dingSignKey;
         }
 
         public DescribeIMRobotsResponseBodyPageBeanAlertIMRobots setRobotAddr(String robotAddr) {

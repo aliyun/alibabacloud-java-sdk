@@ -31,6 +31,143 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         return this.taskDetail;
     }
 
+    public static class GetSyntheticTaskDetailResponseBodyTaskDetailCommonParamAlertList extends TeaModel {
+        @NameInMap("GeneralAlert")
+        public String generalAlert;
+
+        @NameInMap("IsCritical")
+        public String isCritical;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("SeriousAlert")
+        public String seriousAlert;
+
+        @NameInMap("Symbols")
+        public String symbols;
+
+        public static GetSyntheticTaskDetailResponseBodyTaskDetailCommonParamAlertList build(java.util.Map<String, ?> map) throws Exception {
+            GetSyntheticTaskDetailResponseBodyTaskDetailCommonParamAlertList self = new GetSyntheticTaskDetailResponseBodyTaskDetailCommonParamAlertList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetSyntheticTaskDetailResponseBodyTaskDetailCommonParamAlertList setGeneralAlert(String generalAlert) {
+            this.generalAlert = generalAlert;
+            return this;
+        }
+        public String getGeneralAlert() {
+            return this.generalAlert;
+        }
+
+        public GetSyntheticTaskDetailResponseBodyTaskDetailCommonParamAlertList setIsCritical(String isCritical) {
+            this.isCritical = isCritical;
+            return this;
+        }
+        public String getIsCritical() {
+            return this.isCritical;
+        }
+
+        public GetSyntheticTaskDetailResponseBodyTaskDetailCommonParamAlertList setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public GetSyntheticTaskDetailResponseBodyTaskDetailCommonParamAlertList setSeriousAlert(String seriousAlert) {
+            this.seriousAlert = seriousAlert;
+            return this;
+        }
+        public String getSeriousAlert() {
+            return this.seriousAlert;
+        }
+
+        public GetSyntheticTaskDetailResponseBodyTaskDetailCommonParamAlertList setSymbols(String symbols) {
+            this.symbols = symbols;
+            return this;
+        }
+        public String getSymbols() {
+            return this.symbols;
+        }
+
+    }
+
+    public static class GetSyntheticTaskDetailResponseBodyTaskDetailCommonParam extends TeaModel {
+        @NameInMap("AlarmFlag")
+        public Long alarmFlag;
+
+        @NameInMap("AlertList")
+        public java.util.List<GetSyntheticTaskDetailResponseBodyTaskDetailCommonParamAlertList> alertList;
+
+        @NameInMap("AlertNotifierId")
+        public String alertNotifierId;
+
+        @NameInMap("AlertPolicyId")
+        public String alertPolicyId;
+
+        @NameInMap("MonitorSamples")
+        public String monitorSamples;
+
+        @NameInMap("StartExecutionTime")
+        public String startExecutionTime;
+
+        public static GetSyntheticTaskDetailResponseBodyTaskDetailCommonParam build(java.util.Map<String, ?> map) throws Exception {
+            GetSyntheticTaskDetailResponseBodyTaskDetailCommonParam self = new GetSyntheticTaskDetailResponseBodyTaskDetailCommonParam();
+            return TeaModel.build(map, self);
+        }
+
+        public GetSyntheticTaskDetailResponseBodyTaskDetailCommonParam setAlarmFlag(Long alarmFlag) {
+            this.alarmFlag = alarmFlag;
+            return this;
+        }
+        public Long getAlarmFlag() {
+            return this.alarmFlag;
+        }
+
+        public GetSyntheticTaskDetailResponseBodyTaskDetailCommonParam setAlertList(java.util.List<GetSyntheticTaskDetailResponseBodyTaskDetailCommonParamAlertList> alertList) {
+            this.alertList = alertList;
+            return this;
+        }
+        public java.util.List<GetSyntheticTaskDetailResponseBodyTaskDetailCommonParamAlertList> getAlertList() {
+            return this.alertList;
+        }
+
+        public GetSyntheticTaskDetailResponseBodyTaskDetailCommonParam setAlertNotifierId(String alertNotifierId) {
+            this.alertNotifierId = alertNotifierId;
+            return this;
+        }
+        public String getAlertNotifierId() {
+            return this.alertNotifierId;
+        }
+
+        public GetSyntheticTaskDetailResponseBodyTaskDetailCommonParam setAlertPolicyId(String alertPolicyId) {
+            this.alertPolicyId = alertPolicyId;
+            return this;
+        }
+        public String getAlertPolicyId() {
+            return this.alertPolicyId;
+        }
+
+        public GetSyntheticTaskDetailResponseBodyTaskDetailCommonParam setMonitorSamples(String monitorSamples) {
+            this.monitorSamples = monitorSamples;
+            return this;
+        }
+        public String getMonitorSamples() {
+            return this.monitorSamples;
+        }
+
+        public GetSyntheticTaskDetailResponseBodyTaskDetailCommonParam setStartExecutionTime(String startExecutionTime) {
+            this.startExecutionTime = startExecutionTime;
+            return this;
+        }
+        public String getStartExecutionTime() {
+            return this.startExecutionTime;
+        }
+
+    }
+
     public static class GetSyntheticTaskDetailResponseBodyTaskDetailDownload extends TeaModel {
         @NameInMap("ConnectionTimeout")
         public Long connectionTimeout;
@@ -256,7 +393,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
 
     }
 
-    public static class GetSyntheticTaskDetailResponseBodyTaskDetailMinotorList extends TeaModel {
+    public static class GetSyntheticTaskDetailResponseBodyTaskDetailMonitorList extends TeaModel {
         @NameInMap("CityCode")
         public Long cityCode;
 
@@ -269,12 +406,12 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         @NameInMap("SendCount")
         public Long sendCount;
 
-        public static GetSyntheticTaskDetailResponseBodyTaskDetailMinotorList build(java.util.Map<String, ?> map) throws Exception {
-            GetSyntheticTaskDetailResponseBodyTaskDetailMinotorList self = new GetSyntheticTaskDetailResponseBodyTaskDetailMinotorList();
+        public static GetSyntheticTaskDetailResponseBodyTaskDetailMonitorList build(java.util.Map<String, ?> map) throws Exception {
+            GetSyntheticTaskDetailResponseBodyTaskDetailMonitorList self = new GetSyntheticTaskDetailResponseBodyTaskDetailMonitorList();
             return TeaModel.build(map, self);
         }
 
-        public GetSyntheticTaskDetailResponseBodyTaskDetailMinotorList setCityCode(Long cityCode) {
+        public GetSyntheticTaskDetailResponseBodyTaskDetailMonitorList setCityCode(Long cityCode) {
             this.cityCode = cityCode;
             return this;
         }
@@ -282,7 +419,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             return this.cityCode;
         }
 
-        public GetSyntheticTaskDetailResponseBodyTaskDetailMinotorList setMonitorType(Long monitorType) {
+        public GetSyntheticTaskDetailResponseBodyTaskDetailMonitorList setMonitorType(Long monitorType) {
             this.monitorType = monitorType;
             return this;
         }
@@ -290,7 +427,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             return this.monitorType;
         }
 
-        public GetSyntheticTaskDetailResponseBodyTaskDetailMinotorList setNetServiceId(Long netServiceId) {
+        public GetSyntheticTaskDetailResponseBodyTaskDetailMonitorList setNetServiceId(Long netServiceId) {
             this.netServiceId = netServiceId;
             return this;
         }
@@ -298,7 +435,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             return this.netServiceId;
         }
 
-        public GetSyntheticTaskDetailResponseBodyTaskDetailMinotorList setSendCount(Long sendCount) {
+        public GetSyntheticTaskDetailResponseBodyTaskDetailMonitorList setSendCount(Long sendCount) {
             this.sendCount = sendCount;
             return this;
         }
@@ -640,6 +777,9 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         @NameInMap("NetDnsSwitch")
         public Long netDnsSwitch;
 
+        @NameInMap("NetDnsTimeout")
+        public String netDnsTimeout;
+
         @NameInMap("NetIcmpActive")
         public Long netIcmpActive;
 
@@ -716,6 +856,14 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         }
         public Long getNetDnsSwitch() {
             return this.netDnsSwitch;
+        }
+
+        public GetSyntheticTaskDetailResponseBodyTaskDetailNet setNetDnsTimeout(String netDnsTimeout) {
+            this.netDnsTimeout = netDnsTimeout;
+            return this;
+        }
+        public String getNetDnsTimeout() {
+            return this.netDnsTimeout;
         }
 
         public GetSyntheticTaskDetailResponseBodyTaskDetailNet setNetIcmpActive(Long netIcmpActive) {
@@ -1110,6 +1258,9 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
     }
 
     public static class GetSyntheticTaskDetailResponseBodyTaskDetail extends TeaModel {
+        @NameInMap("CommonParam")
+        public GetSyntheticTaskDetailResponseBodyTaskDetailCommonParam commonParam;
+
         @NameInMap("Download")
         public GetSyntheticTaskDetailResponseBodyTaskDetailDownload download;
 
@@ -1125,8 +1276,11 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         @NameInMap("IpType")
         public Long ipType;
 
-        @NameInMap("MinotorList")
-        public java.util.List<GetSyntheticTaskDetailResponseBodyTaskDetailMinotorList> minotorList;
+        @NameInMap("MonitorList")
+        public java.util.List<GetSyntheticTaskDetailResponseBodyTaskDetailMonitorList> monitorList;
+
+        @NameInMap("MonitorListString")
+        public String monitorListString;
 
         @NameInMap("Nav")
         public GetSyntheticTaskDetailResponseBodyTaskDetailNav nav;
@@ -1152,6 +1306,14 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public static GetSyntheticTaskDetailResponseBodyTaskDetail build(java.util.Map<String, ?> map) throws Exception {
             GetSyntheticTaskDetailResponseBodyTaskDetail self = new GetSyntheticTaskDetailResponseBodyTaskDetail();
             return TeaModel.build(map, self);
+        }
+
+        public GetSyntheticTaskDetailResponseBodyTaskDetail setCommonParam(GetSyntheticTaskDetailResponseBodyTaskDetailCommonParam commonParam) {
+            this.commonParam = commonParam;
+            return this;
+        }
+        public GetSyntheticTaskDetailResponseBodyTaskDetailCommonParam getCommonParam() {
+            return this.commonParam;
         }
 
         public GetSyntheticTaskDetailResponseBodyTaskDetail setDownload(GetSyntheticTaskDetailResponseBodyTaskDetailDownload download) {
@@ -1194,12 +1356,20 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             return this.ipType;
         }
 
-        public GetSyntheticTaskDetailResponseBodyTaskDetail setMinotorList(java.util.List<GetSyntheticTaskDetailResponseBodyTaskDetailMinotorList> minotorList) {
-            this.minotorList = minotorList;
+        public GetSyntheticTaskDetailResponseBodyTaskDetail setMonitorList(java.util.List<GetSyntheticTaskDetailResponseBodyTaskDetailMonitorList> monitorList) {
+            this.monitorList = monitorList;
             return this;
         }
-        public java.util.List<GetSyntheticTaskDetailResponseBodyTaskDetailMinotorList> getMinotorList() {
-            return this.minotorList;
+        public java.util.List<GetSyntheticTaskDetailResponseBodyTaskDetailMonitorList> getMonitorList() {
+            return this.monitorList;
+        }
+
+        public GetSyntheticTaskDetailResponseBodyTaskDetail setMonitorListString(String monitorListString) {
+            this.monitorListString = monitorListString;
+            return this;
+        }
+        public String getMonitorListString() {
+            return this.monitorListString;
         }
 
         public GetSyntheticTaskDetailResponseBodyTaskDetail setNav(GetSyntheticTaskDetailResponseBodyTaskDetailNav nav) {
