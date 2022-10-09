@@ -4,14 +4,14 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class CostCenterDeleteResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("code")
     public Integer code;
 
     @NameInMap("message")
     public String message;
+
+    @NameInMap("requestId")
+    public String requestId;
 
     @NameInMap("success")
     public Boolean success;
@@ -22,14 +22,6 @@ public class CostCenterDeleteResponseBody extends TeaModel {
     public static CostCenterDeleteResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CostCenterDeleteResponseBody self = new CostCenterDeleteResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CostCenterDeleteResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public CostCenterDeleteResponseBody setCode(Integer code) {
@@ -46,6 +38,14 @@ public class CostCenterDeleteResponseBody extends TeaModel {
     }
     public String getMessage() {
         return this.message;
+    }
+
+    public CostCenterDeleteResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public CostCenterDeleteResponseBody setSuccess(Boolean success) {

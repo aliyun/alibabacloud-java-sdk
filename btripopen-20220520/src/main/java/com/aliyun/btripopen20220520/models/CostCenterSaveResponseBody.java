@@ -4,9 +4,6 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class CostCenterSaveResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("code")
     public Integer code;
 
@@ -15,6 +12,9 @@ public class CostCenterSaveResponseBody extends TeaModel {
 
     @NameInMap("module")
     public CostCenterSaveResponseBodyModule module;
+
+    @NameInMap("requestId")
+    public String requestId;
 
     @NameInMap("success")
     public Boolean success;
@@ -25,14 +25,6 @@ public class CostCenterSaveResponseBody extends TeaModel {
     public static CostCenterSaveResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CostCenterSaveResponseBody self = new CostCenterSaveResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CostCenterSaveResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public CostCenterSaveResponseBody setCode(Integer code) {
@@ -57,6 +49,14 @@ public class CostCenterSaveResponseBody extends TeaModel {
     }
     public CostCenterSaveResponseBodyModule getModule() {
         return this.module;
+    }
+
+    public CostCenterSaveResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public CostCenterSaveResponseBody setSuccess(Boolean success) {

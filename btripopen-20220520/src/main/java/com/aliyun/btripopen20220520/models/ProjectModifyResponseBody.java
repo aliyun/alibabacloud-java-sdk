@@ -4,9 +4,6 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class ProjectModifyResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("code")
     public Integer code;
 
@@ -15,6 +12,9 @@ public class ProjectModifyResponseBody extends TeaModel {
 
     @NameInMap("module")
     public Boolean module;
+
+    @NameInMap("requestId")
+    public String requestId;
 
     @NameInMap("success")
     public Boolean success;
@@ -25,14 +25,6 @@ public class ProjectModifyResponseBody extends TeaModel {
     public static ProjectModifyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ProjectModifyResponseBody self = new ProjectModifyResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ProjectModifyResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ProjectModifyResponseBody setCode(Integer code) {
@@ -57,6 +49,14 @@ public class ProjectModifyResponseBody extends TeaModel {
     }
     public Boolean getModule() {
         return this.module;
+    }
+
+    public ProjectModifyResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ProjectModifyResponseBody setSuccess(Boolean success) {

@@ -4,11 +4,11 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class TrainOrderQueryResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("module")
     public TrainOrderQueryResponseBodyModule module;
+
+    @NameInMap("requestId")
+    public String requestId;
 
     @NameInMap("result_code")
     public Integer resultCode;
@@ -27,20 +27,20 @@ public class TrainOrderQueryResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public TrainOrderQueryResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public TrainOrderQueryResponseBody setModule(TrainOrderQueryResponseBodyModule module) {
         this.module = module;
         return this;
     }
     public TrainOrderQueryResponseBodyModule getModule() {
         return this.module;
+    }
+
+    public TrainOrderQueryResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public TrainOrderQueryResponseBody setResultCode(Integer resultCode) {

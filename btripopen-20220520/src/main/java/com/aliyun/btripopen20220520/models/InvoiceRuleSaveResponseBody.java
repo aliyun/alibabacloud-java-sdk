@@ -4,9 +4,6 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class InvoiceRuleSaveResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("code")
     public Integer code;
 
@@ -15,6 +12,9 @@ public class InvoiceRuleSaveResponseBody extends TeaModel {
 
     @NameInMap("module")
     public InvoiceRuleSaveResponseBodyModule module;
+
+    @NameInMap("requestId")
+    public String requestId;
 
     @NameInMap("success")
     public Boolean success;
@@ -25,14 +25,6 @@ public class InvoiceRuleSaveResponseBody extends TeaModel {
     public static InvoiceRuleSaveResponseBody build(java.util.Map<String, ?> map) throws Exception {
         InvoiceRuleSaveResponseBody self = new InvoiceRuleSaveResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public InvoiceRuleSaveResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public InvoiceRuleSaveResponseBody setCode(Integer code) {
@@ -57,6 +49,14 @@ public class InvoiceRuleSaveResponseBody extends TeaModel {
     }
     public InvoiceRuleSaveResponseBodyModule getModule() {
         return this.module;
+    }
+
+    public InvoiceRuleSaveResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public InvoiceRuleSaveResponseBody setSuccess(Boolean success) {

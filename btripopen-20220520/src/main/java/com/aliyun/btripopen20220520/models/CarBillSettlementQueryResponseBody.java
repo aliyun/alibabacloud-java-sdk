@@ -4,9 +4,6 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class CarBillSettlementQueryResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("code")
     public Integer code;
 
@@ -15,6 +12,9 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
 
     @NameInMap("module")
     public CarBillSettlementQueryResponseBodyModule module;
+
+    @NameInMap("requestId")
+    public String requestId;
 
     @NameInMap("success")
     public Boolean success;
@@ -25,14 +25,6 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
     public static CarBillSettlementQueryResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CarBillSettlementQueryResponseBody self = new CarBillSettlementQueryResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CarBillSettlementQueryResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public CarBillSettlementQueryResponseBody setCode(Integer code) {
@@ -57,6 +49,14 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
     }
     public CarBillSettlementQueryResponseBodyModule getModule() {
         return this.module;
+    }
+
+    public CarBillSettlementQueryResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public CarBillSettlementQueryResponseBody setSuccess(Boolean success) {
