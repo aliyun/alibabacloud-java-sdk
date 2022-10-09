@@ -33,6 +33,9 @@ public class IsvUserSaveRequest extends TeaModel {
         @NameInMap("leave_status")
         public Integer leaveStatus;
 
+        @NameInMap("manager_user_id")
+        public String managerUserId;
+
         @NameInMap("phone")
         public String phone;
 
@@ -92,6 +95,14 @@ public class IsvUserSaveRequest extends TeaModel {
         }
         public Integer getLeaveStatus() {
             return this.leaveStatus;
+        }
+
+        public IsvUserSaveRequestUserList setManagerUserId(String managerUserId) {
+            this.managerUserId = managerUserId;
+            return this;
+        }
+        public String getManagerUserId() {
+            return this.managerUserId;
         }
 
         public IsvUserSaveRequestUserList setPhone(String phone) {
