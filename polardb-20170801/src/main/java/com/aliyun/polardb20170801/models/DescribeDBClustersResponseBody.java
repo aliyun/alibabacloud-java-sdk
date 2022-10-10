@@ -253,6 +253,9 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        @NameInMap("ServerlessType")
+        public String serverlessType;
+
         @NameInMap("StoragePayType")
         public String storagePayType;
 
@@ -426,6 +429,14 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         }
         public String getResourceGroupId() {
             return this.resourceGroupId;
+        }
+
+        public DescribeDBClustersResponseBodyItemsDBCluster setServerlessType(String serverlessType) {
+            this.serverlessType = serverlessType;
+            return this;
+        }
+        public String getServerlessType() {
+            return this.serverlessType;
         }
 
         public DescribeDBClustersResponseBodyItemsDBCluster setStoragePayType(String storagePayType) {
