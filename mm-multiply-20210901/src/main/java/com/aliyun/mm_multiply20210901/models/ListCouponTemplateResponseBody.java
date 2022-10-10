@@ -76,6 +76,9 @@ public class ListCouponTemplateResponseBody extends TeaModel {
     }
 
     public static class ListCouponTemplateResponseBodyCouponTemplates extends TeaModel {
+        @NameInMap("ActivityId")
+        public String activityId;
+
         @NameInMap("ApplyCount")
         public Long applyCount;
 
@@ -151,6 +154,14 @@ public class ListCouponTemplateResponseBody extends TeaModel {
         public static ListCouponTemplateResponseBodyCouponTemplates build(java.util.Map<String, ?> map) throws Exception {
             ListCouponTemplateResponseBodyCouponTemplates self = new ListCouponTemplateResponseBodyCouponTemplates();
             return TeaModel.build(map, self);
+        }
+
+        public ListCouponTemplateResponseBodyCouponTemplates setActivityId(String activityId) {
+            this.activityId = activityId;
+            return this;
+        }
+        public String getActivityId() {
+            return this.activityId;
         }
 
         public ListCouponTemplateResponseBodyCouponTemplates setApplyCount(Long applyCount) {

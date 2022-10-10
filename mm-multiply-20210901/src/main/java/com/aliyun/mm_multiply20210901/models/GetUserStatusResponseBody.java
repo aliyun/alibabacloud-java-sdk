@@ -4,29 +4,24 @@ package com.aliyun.mm_multiply20210901.models;
 import com.aliyun.tea.*;
 
 public class GetUserStatusResponseBody extends TeaModel {
-    // 入驻状态，0没有，1有
     @NameInMap("ApplyStatus")
     public Integer applyStatus;
 
-    // 购买状态，0没有，1有
     @NameInMap("BuyStatus")
     public Integer buyStatus;
 
     @NameInMap("Code")
     public Long code;
 
-    // 合同审核状态，0没有，1完成
     @NameInMap("ContractStatus")
     public Integer contractStatus;
 
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 购买链接
     @NameInMap("SaleLink")
     public String saleLink;
 

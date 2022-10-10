@@ -4,14 +4,12 @@ package com.aliyun.mm_multiply20210901.models;
 import com.aliyun.tea.*;
 
 public class GetBusinessAnalysisRequest extends TeaModel {
-    // 业务日期
     @NameInMap("BizDate")
     public String bizDate;
 
     @NameInMap("BizId")
     public String bizId;
 
-    // 日期类型：日、周、月
     @NameInMap("DateType")
     public String dateType;
 

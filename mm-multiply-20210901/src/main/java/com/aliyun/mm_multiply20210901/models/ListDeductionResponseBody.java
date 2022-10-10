@@ -7,14 +7,12 @@ public class ListDeductionResponseBody extends TeaModel {
     @NameInMap("Code")
     public Long code;
 
-    // 代扣协议
     @NameInMap("LmShopSupplierModels")
     public java.util.List<ListDeductionResponseBodyLmShopSupplierModels> lmShopSupplierModels;
 
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

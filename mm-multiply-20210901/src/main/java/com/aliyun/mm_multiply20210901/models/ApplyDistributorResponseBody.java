@@ -4,48 +4,39 @@ package com.aliyun.mm_multiply20210901.models;
 import com.aliyun.tea.*;
 
 public class ApplyDistributorResponseBody extends TeaModel {
-    // 渠道供应名称
     @NameInMap("ChannelSupplierName")
     public String channelSupplierName;
 
     @NameInMap("Code")
     public String code;
 
-    // 联系人
     @NameInMap("Contractor")
     public String contractor;
 
-    // 分销商ID
     @NameInMap("DistributorId")
     public String distributorId;
 
-    // 分销商名称
     @NameInMap("DistributorName")
     public String distributorName;
 
-    // 主体信息
     @NameInMap("EntityInfo")
     public String entityInfo;
 
-    // 所属行业
     @NameInMap("Industry")
     public String industry;
 
     @NameInMap("Message")
     public String message;
 
-    // 联系电话
     @NameInMap("Phone")
     public String phone;
 
-    // 客群偏好
     @NameInMap("Preference")
     public String preference;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    // 客户体量
     @NameInMap("Scale")
     public String scale;
 

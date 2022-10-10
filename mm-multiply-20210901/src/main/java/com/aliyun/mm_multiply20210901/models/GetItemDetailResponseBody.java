@@ -7,84 +7,66 @@ public class GetItemDetailResponseBody extends TeaModel {
     @NameInMap("ActivityStatus")
     public String activityStatus;
 
-    // CatagoryLeafId
     @NameInMap("CatagoryLeafId")
     public String catagoryLeafId;
 
-    // Code
     @NameInMap("Code")
     public String code;
 
     @NameInMap("DescOption")
     public String descOption;
 
-    // DescPath
     @NameInMap("DescPath")
     public String descPath;
 
-    // errorCode
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // errorMessage
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     @NameInMap("FirstPicUrl")
     public String firstPicUrl;
 
-    // Images
     @NameInMap("Images")
     public java.util.List<GetItemDetailResponseBodyImages> images;
 
-    // ItemId
     @NameInMap("ItemId")
     public String itemId;
 
-    // ItemParamsInfo
     @NameInMap("ItemParamsInfo")
     public String itemParamsInfo;
 
-    // Message
     @NameInMap("Message")
     public String message;
 
-    // PicUrl
     @NameInMap("PicUrl")
     public String picUrl;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // Skus
     @NameInMap("Skus")
     public java.util.List<GetItemDetailResponseBodySkus> skus;
 
-    // SourceChannel
     @NameInMap("SourceChannel")
     public Integer sourceChannel;
 
     @NameInMap("SourceChannelName")
     public String sourceChannelName;
 
-    // Status
     @NameInMap("Status")
     public Integer status;
 
-    // StoreId
     @NameInMap("StoreId")
     public String storeId;
 
-    // Success
     @NameInMap("Success")
     public Boolean success;
 
-    // TbItemId
     @NameInMap("TbItemId")
     public String tbItemId;
 
-    // Title
     @NameInMap("Title")
     public String title;
 
@@ -270,19 +252,15 @@ public class GetItemDetailResponseBody extends TeaModel {
     }
 
     public static class GetItemDetailResponseBodyImages extends TeaModel {
-        // IsMain
         @NameInMap("IsMain")
         public Integer isMain;
 
-        // SortOrder
         @NameInMap("SortOrder")
         public Integer sortOrder;
 
-        // Type
         @NameInMap("Type")
         public Integer type;
 
-        // Url
         @NameInMap("Url")
         public String url;
 
@@ -326,39 +304,30 @@ public class GetItemDetailResponseBody extends TeaModel {
     }
 
     public static class GetItemDetailResponseBodySkus extends TeaModel {
-        // CurrencyCode
         @NameInMap("CurrencyCode")
         public String currencyCode;
 
-        // Image
         @NameInMap("Image")
         public String image;
 
-        // ItemId
         @NameInMap("ItemId")
         public String itemId;
 
-        // MarkPrice
         @NameInMap("MarkPrice")
         public Long markPrice;
 
-        // SellableQuantity
         @NameInMap("SellableQuantity")
         public Long sellableQuantity;
 
-        // SkuDesc
         @NameInMap("SkuDesc")
         public String skuDesc;
 
-        // SkuId
         @NameInMap("SkuId")
         public String skuId;
 
-        // SkuPrice
         @NameInMap("SkuPrice")
         public Long skuPrice;
 
-        // SkuTitle
         @NameInMap("SkuTitle")
         public String skuTitle;
 

@@ -13,7 +13,6 @@ public class ListReverseOrderResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

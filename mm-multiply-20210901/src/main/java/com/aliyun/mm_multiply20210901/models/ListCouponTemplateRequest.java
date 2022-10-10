@@ -54,6 +54,9 @@ public class ListCouponTemplateRequest extends TeaModel {
     }
 
     public static class ListCouponTemplateRequestQueryCouponTemplateListDTO extends TeaModel {
+        @NameInMap("AlipayQuery")
+        public Boolean alipayQuery;
+
         @NameInMap("CouponTitle")
         public String couponTitle;
 
@@ -72,6 +75,14 @@ public class ListCouponTemplateRequest extends TeaModel {
         public static ListCouponTemplateRequestQueryCouponTemplateListDTO build(java.util.Map<String, ?> map) throws Exception {
             ListCouponTemplateRequestQueryCouponTemplateListDTO self = new ListCouponTemplateRequestQueryCouponTemplateListDTO();
             return TeaModel.build(map, self);
+        }
+
+        public ListCouponTemplateRequestQueryCouponTemplateListDTO setAlipayQuery(Boolean alipayQuery) {
+            this.alipayQuery = alipayQuery;
+            return this;
+        }
+        public Boolean getAlipayQuery() {
+            return this.alipayQuery;
         }
 
         public ListCouponTemplateRequestQueryCouponTemplateListDTO setCouponTitle(String couponTitle) {

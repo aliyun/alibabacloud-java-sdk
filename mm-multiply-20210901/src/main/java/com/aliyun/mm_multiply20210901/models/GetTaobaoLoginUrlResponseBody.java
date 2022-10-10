@@ -4,15 +4,12 @@ package com.aliyun.mm_multiply20210901.models;
 import com.aliyun.tea.*;
 
 public class GetTaobaoLoginUrlResponseBody extends TeaModel {
-    // code
     @NameInMap("Code")
     public String code;
 
-    // message
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,15 +4,12 @@ package com.aliyun.mm_multiply20210901.models;
 import com.aliyun.tea.*;
 
 public class ModifyDistributorMallRequest extends TeaModel {
-    // 商城描述
     @NameInMap("DistributorMallDescription")
     public String distributorMallDescription;
 
-    // 分销商城Id
     @NameInMap("DistributorMallId")
     public String distributorMallId;
 
-    // 商城名称
     @NameInMap("DistributorMallName")
     public String distributorMallName;
 

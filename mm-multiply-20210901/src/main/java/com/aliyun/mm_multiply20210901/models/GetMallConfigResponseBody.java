@@ -19,7 +19,6 @@ public class GetMallConfigResponseBody extends TeaModel {
     @NameInMap("Params")
     public String params;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

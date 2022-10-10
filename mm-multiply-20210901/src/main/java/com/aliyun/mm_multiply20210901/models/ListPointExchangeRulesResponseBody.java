@@ -37,7 +37,6 @@ public class ListPointExchangeRulesResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 积分兑换规则列表
     @NameInMap("PointExchangeRuleDTOList")
     public java.util.List<ListPointExchangeRulesResponseBodyPointExchangeRuleDTOList> pointExchangeRuleDTOList;
 

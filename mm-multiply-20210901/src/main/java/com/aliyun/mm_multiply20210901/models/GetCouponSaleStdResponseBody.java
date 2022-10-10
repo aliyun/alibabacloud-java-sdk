@@ -22,7 +22,6 @@ public class GetCouponSaleStdResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    // 优惠券交易累计model
     @NameInMap("Models")
     public java.util.List<GetCouponSaleStdResponseBodyModels> models;
 
@@ -110,35 +109,27 @@ public class GetCouponSaleStdResponseBody extends TeaModel {
     }
 
     public static class GetCouponSaleStdResponseBodyModels extends TeaModel {
-        // 费效比
         @NameInMap("CostEfficiencyRate")
         public String costEfficiencyRate;
 
-        // 优惠总金额 单位：0.01分
         @NameInMap("CouponAmtStd")
         public String couponAmtStd;
 
-        // 购买商品件数
         @NameInMap("CouponItemCntStd")
         public Long couponItemCntStd;
 
-        // 用券新客数
         @NameInMap("CouponNewCusCntStd")
         public Long couponNewCusCntStd;
 
-        // 用券老客数
         @NameInMap("CouponOldCusCntStd")
         public Long couponOldCusCntStd;
 
-        // 用券总成交额 单位：0.01分
         @NameInMap("CouponOrderSaleAmtStd")
         public String couponOrderSaleAmtStd;
 
-        // 卡券模板ID
         @NameInMap("CouponTemplateCd")
         public String couponTemplateCd;
 
-        // 用券笔单价
         @NameInMap("CouponUnitPrice")
         public String couponUnitPrice;
 

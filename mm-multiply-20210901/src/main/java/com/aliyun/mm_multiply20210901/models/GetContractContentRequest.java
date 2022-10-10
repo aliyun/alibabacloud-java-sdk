@@ -4,7 +4,6 @@ package com.aliyun.mm_multiply20210901.models;
 import com.aliyun.tea.*;
 
 public class GetContractContentRequest extends TeaModel {
-    // 合同ID
     @NameInMap("ContractId")
     public java.io.InputStream contractId;
 

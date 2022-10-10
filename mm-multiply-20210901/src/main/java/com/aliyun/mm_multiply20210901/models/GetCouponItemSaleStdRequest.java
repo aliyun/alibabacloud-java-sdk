@@ -4,7 +4,6 @@ package com.aliyun.mm_multiply20210901.models;
 import com.aliyun.tea.*;
 
 public class GetCouponItemSaleStdRequest extends TeaModel {
-    // 业务日期
     @NameInMap("BizDate")
     public String bizDate;
 
@@ -14,7 +13,6 @@ public class GetCouponItemSaleStdRequest extends TeaModel {
     @NameInMap("CouponPlatformType")
     public Integer couponPlatformType;
 
-    // 优惠卷模版id
     @NameInMap("CouponTemplateCd")
     public String couponTemplateCd;
 

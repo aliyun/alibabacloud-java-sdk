@@ -4,27 +4,21 @@ package com.aliyun.mm_multiply20210901.models;
 import com.aliyun.tea.*;
 
 public class UpShelfItemsResponseBody extends TeaModel {
-    // Code
     @NameInMap("Code")
     public String code;
 
-    // errorCode
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // errorMessage
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    // Message
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // Success
     @NameInMap("Success")
     public Boolean success;
 

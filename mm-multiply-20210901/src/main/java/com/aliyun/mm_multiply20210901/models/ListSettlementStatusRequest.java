@@ -4,11 +4,9 @@ package com.aliyun.mm_multiply20210901.models;
 import com.aliyun.tea.*;
 
 public class ListSettlementStatusRequest extends TeaModel {
-    // 商户类型：SUPPLIER/DISTRIBUTOR
     @NameInMap("MerchantType")
     public String merchantType;
 
-    // MERCHANT(入驻状态)
     @NameInMap("StatusType")
     public String statusType;
 

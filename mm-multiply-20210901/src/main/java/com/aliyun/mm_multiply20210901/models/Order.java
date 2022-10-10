@@ -4,43 +4,45 @@ package com.aliyun.mm_multiply20210901.models;
 import com.aliyun.tea.*;
 
 public class Order extends TeaModel {
-    // 买家名称
     @NameInMap("BuyerName")
     public String buyerName;
 
-    // 买家电话
     @NameInMap("BuyerPhone")
     public String buyerPhone;
 
-    // 支付ID
     @NameInMap("CheckoutSerialNumber")
     public String checkoutSerialNumber;
 
-    // 猫淘ID
+    @NameInMap("DiscountPrice")
+    public Double discountPrice;
+
     @NameInMap("MtBillId")
     public String mtBillId;
 
-    // 下单时间
     @NameInMap("OrderTime")
     public String orderTime;
 
-    // 来源ID，WX、H5、APP
+    @NameInMap("PaymentPromotionPrice")
+    public Double paymentPromotionPrice;
+
     @NameInMap("PlatformType")
     public String platformType;
 
-    // 价格
     @NameInMap("Price")
     public Double price;
 
-    // 订单类型，待付款(WAITING_PAY)，待发货(WAITING_SHIP)，已发货(SHIPPED)，交易成功（TRANSACTION_CLOSED），交易关闭(TRANSACTION_SUCCEEDED)
+    @NameInMap("SaleItemPrice")
+    public Double saleItemPrice;
+
+    @NameInMap("ShippingPrice")
+    public Double shippingPrice;
+
     @NameInMap("Status")
     public String status;
 
-    // 店铺ID
     @NameInMap("StoreId")
     public String storeId;
 
-    // 订单ID
     @NameInMap("orderId")
     public String orderId;
 
@@ -73,6 +75,14 @@ public class Order extends TeaModel {
         return this.checkoutSerialNumber;
     }
 
+    public Order setDiscountPrice(Double discountPrice) {
+        this.discountPrice = discountPrice;
+        return this;
+    }
+    public Double getDiscountPrice() {
+        return this.discountPrice;
+    }
+
     public Order setMtBillId(String mtBillId) {
         this.mtBillId = mtBillId;
         return this;
@@ -89,6 +99,14 @@ public class Order extends TeaModel {
         return this.orderTime;
     }
 
+    public Order setPaymentPromotionPrice(Double paymentPromotionPrice) {
+        this.paymentPromotionPrice = paymentPromotionPrice;
+        return this;
+    }
+    public Double getPaymentPromotionPrice() {
+        return this.paymentPromotionPrice;
+    }
+
     public Order setPlatformType(String platformType) {
         this.platformType = platformType;
         return this;
@@ -103,6 +121,22 @@ public class Order extends TeaModel {
     }
     public Double getPrice() {
         return this.price;
+    }
+
+    public Order setSaleItemPrice(Double saleItemPrice) {
+        this.saleItemPrice = saleItemPrice;
+        return this;
+    }
+    public Double getSaleItemPrice() {
+        return this.saleItemPrice;
+    }
+
+    public Order setShippingPrice(Double shippingPrice) {
+        this.shippingPrice = shippingPrice;
+        return this;
+    }
+    public Double getShippingPrice() {
+        return this.shippingPrice;
     }
 
     public Order setStatus(String status) {

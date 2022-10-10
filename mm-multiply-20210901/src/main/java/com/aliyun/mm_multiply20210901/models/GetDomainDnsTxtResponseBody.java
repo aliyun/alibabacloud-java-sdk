@@ -4,26 +4,21 @@ package com.aliyun.mm_multiply20210901.models;
 import com.aliyun.tea.*;
 
 public class GetDomainDnsTxtResponseBody extends TeaModel {
-    // code
     @NameInMap("Code")
     public Integer code;
 
-    // message
     @NameInMap("Message")
     public String message;
 
-    // name
     @NameInMap("Name")
     public String name;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    // value
     @NameInMap("Value")
     public String value;
 

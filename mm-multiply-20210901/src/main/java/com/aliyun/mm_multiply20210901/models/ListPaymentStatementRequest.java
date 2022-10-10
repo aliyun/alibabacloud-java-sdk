@@ -4,23 +4,18 @@ package com.aliyun.mm_multiply20210901.models;
 import com.aliyun.tea.*;
 
 public class ListPaymentStatementRequest extends TeaModel {
-    // mallId
     @NameInMap("MallId")
     public String mallId;
 
-    // pageNumber
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // pageSize
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // payDateEnd
     @NameInMap("PayDateEnd")
     public String payDateEnd;
 
-    // payDateStart
     @NameInMap("PayDateStart")
     public String payDateStart;
 

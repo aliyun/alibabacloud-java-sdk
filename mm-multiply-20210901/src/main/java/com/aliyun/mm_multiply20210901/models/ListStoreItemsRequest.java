@@ -7,43 +7,33 @@ public class ListStoreItemsRequest extends TeaModel {
     @NameInMap("ChannelOptionItemId")
     public String channelOptionItemId;
 
-    // EndEnterWarehouseTime
     @NameInMap("EndEnterWarehouseTime")
     public String endEnterWarehouseTime;
 
-    // ItemCatagoryId
     @NameInMap("ItemCatagoryId")
     public String itemCatagoryId;
 
-    // ItemGroupId
     @NameInMap("ItemGroupId")
     public String itemGroupId;
 
-    // ItemId
     @NameInMap("ItemId")
     public String itemId;
 
-    // PageNumber
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // PageSize
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // StartEnterWarehouseTime
     @NameInMap("StartEnterWarehouseTime")
     public String startEnterWarehouseTime;
 
-    // Status
     @NameInMap("Status")
     public Integer status;
 
-    // StoreId
     @NameInMap("StoreId")
     public String storeId;
 
-    // Title
     @NameInMap("Title")
     public String title;
 

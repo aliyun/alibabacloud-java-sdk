@@ -19,7 +19,6 @@ public class ListOrderRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
-    // 是否mock
     @NameInMap("Mock")
     public Boolean mock;
 
@@ -35,14 +34,12 @@ public class ListOrderRequest extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
-    // WX、H5、APP
     @NameInMap("PlatformType")
     public String platformType;
 
     @NameInMap("StartTime")
     public String startTime;
 
-    // * 订单类型，待付款(WAITING_PAY)，待发货(WAITING_SHIP)，已发货(SHIPPED)，交易成功（TRANSACTION_CLOSED），交易关闭(TRANSACTION_SUCCEEDED)
     @NameInMap("Status")
     public String status;
 

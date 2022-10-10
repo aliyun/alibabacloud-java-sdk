@@ -13,14 +13,12 @@ public class EditSkusRequest extends TeaModel {
     @NameInMap("ImageList")
     public java.util.List<EditSkusRequestImageList> imageList;
 
-    // ItemId
     @NameInMap("ItemId")
     public String itemId;
 
     @NameInMap("PicUrl")
     public String picUrl;
 
-    // Skus
     @NameInMap("Skus")
     public java.util.List<EditSkusRequestSkus> skus;
 
@@ -130,34 +128,27 @@ public class EditSkusRequest extends TeaModel {
     }
 
     public static class EditSkusRequestSkus extends TeaModel {
-        // CurrencyCode
         @NameInMap("CurrencyCode")
         public String currencyCode;
 
-        // Image
         @NameInMap("Image")
         public String image;
 
-        // MarkPrice
         @NameInMap("MarkPrice")
         public Long markPrice;
 
-        // SellableQuantity
         @NameInMap("SellableQuantity")
         public Long sellableQuantity;
 
         @NameInMap("SkuDesc")
         public String skuDesc;
 
-        // SkuId
         @NameInMap("SkuId")
         public String skuId;
 
-        // SkuPrice
         @NameInMap("SkuPrice")
         public Long skuPrice;
 
-        // SkuTitle
         @NameInMap("SkuTitle")
         public String skuTitle;
 

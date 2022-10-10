@@ -4,15 +4,12 @@ package com.aliyun.mm_multiply20210901.models;
 import com.aliyun.tea.*;
 
 public class UpdateMallConfigRequest extends TeaModel {
-    // channel
     @NameInMap("Channel")
     public String channel;
 
-    // mallId
     @NameInMap("MallId")
     public String mallId;
 
-    // params
     @NameInMap("Params")
     public String params;
 

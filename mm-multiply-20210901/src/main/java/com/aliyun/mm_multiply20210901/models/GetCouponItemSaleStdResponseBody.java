@@ -25,7 +25,6 @@ public class GetCouponItemSaleStdResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    // 优惠券交易累计model
     @NameInMap("Models")
     public java.util.List<GetCouponItemSaleStdResponseBodyModels> models;
 
@@ -209,19 +208,15 @@ public class GetCouponItemSaleStdResponseBody extends TeaModel {
     }
 
     public static class GetCouponItemSaleStdResponseBodyModels extends TeaModel {
-        // 卡券模板ID
         @NameInMap("CouponTemplateCd")
         public String couponTemplateCd;
 
-        // 付款人数
         @NameInMap("CusCntStd")
         public Long cusCntStd;
 
-        // 付款件数
         @NameInMap("ItemCntStd")
         public Long itemCntStd;
 
-        // 商品名称
         @NameInMap("MmItemName")
         public String mmItemName;
 

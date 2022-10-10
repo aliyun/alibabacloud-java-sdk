@@ -13,7 +13,6 @@ public class GetDivisionListResponseBody extends TeaModel {
     @NameInMap("RegionMap")
     public java.util.Map<String, ?> regionMap;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

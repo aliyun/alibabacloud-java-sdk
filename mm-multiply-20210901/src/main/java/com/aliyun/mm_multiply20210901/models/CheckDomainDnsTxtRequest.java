@@ -7,7 +7,6 @@ public class CheckDomainDnsTxtRequest extends TeaModel {
     @NameInMap("BusinessId")
     public String businessId;
 
-    // 域名
     @NameInMap("Domain")
     public String domain;
 

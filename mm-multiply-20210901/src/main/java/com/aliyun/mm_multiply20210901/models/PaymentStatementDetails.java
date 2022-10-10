@@ -4,63 +4,48 @@ package com.aliyun.mm_multiply20210901.models;
 import com.aliyun.tea.*;
 
 public class PaymentStatementDetails extends TeaModel {
-    // 正逆向单类型
     @NameInMap("IsForward")
     public String isForward;
 
-    // 正向交易订单金额
     @NameInMap("OrderAmt")
     public Double orderAmt;
 
-    // 商城订单编号
     @NameInMap("OrderCd")
     public String orderCd;
 
-    // 支付渠道优惠金额
     @NameInMap("OrderDiscountAmt")
     public Double orderDiscountAmt;
 
-    // 订单来源
     @NameInMap("OrderFromType")
     public String orderFromType;
 
-    // 下单时间
     @NameInMap("OrderTime")
     public String orderTime;
 
-    // 订单状态
     @NameInMap("OrderType")
     public String orderType;
 
-    // 付款方式
     @NameInMap("PayChannelType")
     public String payChannelType;
 
-    // 正向流水号
     @NameInMap("PaySerialCd")
     public String paySerialCd;
 
-    // 支付方式
     @NameInMap("PayToolType")
     public String payToolType;
 
-    // 猫淘订单编号
     @NameInMap("PlatOrderCd")
     public String platOrderCd;
 
-    // 逆向交易金额
     @NameInMap("ReturnOrderAmt")
     public Double returnOrderAmt;
 
-    // 逆向流水号
     @NameInMap("ReturnPaySerialCd")
     public String returnPaySerialCd;
 
-    // 逆向手续费
     @NameInMap("ReturnServiceAmt")
     public Double returnServiceAmt;
 
-    // 正向手续费
     @NameInMap("ServiceAmt")
     public Double serviceAmt;
 

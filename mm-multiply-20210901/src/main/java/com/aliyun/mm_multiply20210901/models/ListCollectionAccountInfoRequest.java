@@ -4,11 +4,9 @@ package com.aliyun.mm_multiply20210901.models;
 import com.aliyun.tea.*;
 
 public class ListCollectionAccountInfoRequest extends TeaModel {
-    // channel
-    @NameInMap("Channel")
-    public String channel;
+    @NameInMap("CollectionEnv")
+    public String collectionEnv;
 
-    // mallId
     @NameInMap("MallId")
     public String mallId;
 
@@ -17,12 +15,12 @@ public class ListCollectionAccountInfoRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListCollectionAccountInfoRequest setChannel(String channel) {
-        this.channel = channel;
+    public ListCollectionAccountInfoRequest setCollectionEnv(String collectionEnv) {
+        this.collectionEnv = collectionEnv;
         return this;
     }
-    public String getChannel() {
-        return this.channel;
+    public String getCollectionEnv() {
+        return this.collectionEnv;
     }
 
     public ListCollectionAccountInfoRequest setMallId(String mallId) {

@@ -16,7 +16,6 @@ public class CreateShopRequest extends TeaModel {
     @NameInMap("TbShopName")
     public String tbShopName;
 
-    // token
     @NameInMap("Token")
     public String token;
 

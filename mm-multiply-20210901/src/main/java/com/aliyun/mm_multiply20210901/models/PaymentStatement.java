@@ -4,43 +4,33 @@ package com.aliyun.mm_multiply20210901.models;
 import com.aliyun.tea.*;
 
 public class PaymentStatement extends TeaModel {
-    // 支付渠道优惠金额
     @NameInMap("DiscountAmt")
     public Double discountAmt;
 
-    // 正向交易订单总金额
     @NameInMap("OrderAmt1d")
     public Double orderAmt1d;
 
-    // 正向交易订单数
     @NameInMap("OrderCnt1d")
     public Long orderCnt1d;
 
-    // 付款方式
     @NameInMap("PayChannelType")
     public String payChannelType;
 
-    // 对账日期
     @NameInMap("PayDate")
     public String payDate;
 
-    // 逆向交易订单总金额
     @NameInMap("ReturnOrderAmt1d")
     public Double returnOrderAmt1d;
 
-    // 逆向交易订单数
     @NameInMap("ReturnOrderCnt1d")
     public Long returnOrderCnt1d;
 
-    // 逆向手续费
     @NameInMap("ReturnServiceAmt1d")
     public Double returnServiceAmt1d;
 
-    // 正向手续费
     @NameInMap("ServiceAmt1d")
     public Double serviceAmt1d;
 
-    // 结算金额
     @NameInMap("SettleAmt1d")
     public Double settleAmt1d;
 

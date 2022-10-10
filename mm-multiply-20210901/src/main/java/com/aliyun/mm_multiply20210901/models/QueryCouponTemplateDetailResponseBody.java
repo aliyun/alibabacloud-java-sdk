@@ -65,6 +65,18 @@ public class QueryCouponTemplateDetailResponseBody extends TeaModel {
     }
 
     public static class QueryCouponTemplateDetailResponseBodyCouponTemplateDTO extends TeaModel {
+        @NameInMap("AlipayImgUrl")
+        public String alipayImgUrl;
+
+        @NameInMap("AlipayJumpLabel")
+        public String alipayJumpLabel;
+
+        @NameInMap("AlipayJumpTable")
+        public String alipayJumpTable;
+
+        @NameInMap("AlipayJumpUrl")
+        public String alipayJumpUrl;
+
         @NameInMap("AlipaySendCount")
         public Long alipaySendCount;
 
@@ -106,6 +118,12 @@ public class QueryCouponTemplateDetailResponseBody extends TeaModel {
 
         @NameInMap("ItemSalePrice")
         public String itemSalePrice;
+
+        @NameInMap("JumpLabel")
+        public String jumpLabel;
+
+        @NameInMap("JumpTable")
+        public String jumpTable;
 
         @NameInMap("JumpUrl")
         public String jumpUrl;
@@ -158,6 +176,9 @@ public class QueryCouponTemplateDetailResponseBody extends TeaModel {
         @NameInMap("Status")
         public Integer status;
 
+        @NameInMap("SyncTag")
+        public Boolean syncTag;
+
         @NameInMap("Title")
         public String title;
 
@@ -176,6 +197,38 @@ public class QueryCouponTemplateDetailResponseBody extends TeaModel {
         public static QueryCouponTemplateDetailResponseBodyCouponTemplateDTO build(java.util.Map<String, ?> map) throws Exception {
             QueryCouponTemplateDetailResponseBodyCouponTemplateDTO self = new QueryCouponTemplateDetailResponseBodyCouponTemplateDTO();
             return TeaModel.build(map, self);
+        }
+
+        public QueryCouponTemplateDetailResponseBodyCouponTemplateDTO setAlipayImgUrl(String alipayImgUrl) {
+            this.alipayImgUrl = alipayImgUrl;
+            return this;
+        }
+        public String getAlipayImgUrl() {
+            return this.alipayImgUrl;
+        }
+
+        public QueryCouponTemplateDetailResponseBodyCouponTemplateDTO setAlipayJumpLabel(String alipayJumpLabel) {
+            this.alipayJumpLabel = alipayJumpLabel;
+            return this;
+        }
+        public String getAlipayJumpLabel() {
+            return this.alipayJumpLabel;
+        }
+
+        public QueryCouponTemplateDetailResponseBodyCouponTemplateDTO setAlipayJumpTable(String alipayJumpTable) {
+            this.alipayJumpTable = alipayJumpTable;
+            return this;
+        }
+        public String getAlipayJumpTable() {
+            return this.alipayJumpTable;
+        }
+
+        public QueryCouponTemplateDetailResponseBodyCouponTemplateDTO setAlipayJumpUrl(String alipayJumpUrl) {
+            this.alipayJumpUrl = alipayJumpUrl;
+            return this;
+        }
+        public String getAlipayJumpUrl() {
+            return this.alipayJumpUrl;
         }
 
         public QueryCouponTemplateDetailResponseBodyCouponTemplateDTO setAlipaySendCount(Long alipaySendCount) {
@@ -288,6 +341,22 @@ public class QueryCouponTemplateDetailResponseBody extends TeaModel {
         }
         public String getItemSalePrice() {
             return this.itemSalePrice;
+        }
+
+        public QueryCouponTemplateDetailResponseBodyCouponTemplateDTO setJumpLabel(String jumpLabel) {
+            this.jumpLabel = jumpLabel;
+            return this;
+        }
+        public String getJumpLabel() {
+            return this.jumpLabel;
+        }
+
+        public QueryCouponTemplateDetailResponseBodyCouponTemplateDTO setJumpTable(String jumpTable) {
+            this.jumpTable = jumpTable;
+            return this;
+        }
+        public String getJumpTable() {
+            return this.jumpTable;
         }
 
         public QueryCouponTemplateDetailResponseBodyCouponTemplateDTO setJumpUrl(String jumpUrl) {
@@ -424,6 +493,14 @@ public class QueryCouponTemplateDetailResponseBody extends TeaModel {
         }
         public Integer getStatus() {
             return this.status;
+        }
+
+        public QueryCouponTemplateDetailResponseBodyCouponTemplateDTO setSyncTag(Boolean syncTag) {
+            this.syncTag = syncTag;
+            return this;
+        }
+        public Boolean getSyncTag() {
+            return this.syncTag;
         }
 
         public QueryCouponTemplateDetailResponseBodyCouponTemplateDTO setTitle(String title) {

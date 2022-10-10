@@ -10,11 +10,9 @@ public class GetDeductionInfoResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    // 渠道模型
     @NameInMap("PayChannelModels")
     public java.util.List<GetDeductionInfoResponseBodyPayChannelModels> payChannelModels;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

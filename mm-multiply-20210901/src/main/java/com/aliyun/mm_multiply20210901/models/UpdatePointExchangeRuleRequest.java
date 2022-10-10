@@ -7,22 +7,18 @@ public class UpdatePointExchangeRuleRequest extends TeaModel {
     @NameInMap("BizId")
     public String bizId;
 
-    // 全部的卡券模板ID列表
     @NameInMap("CouponTemplateIdList")
     public String couponTemplateIdList;
 
-    // 积分（最多4位）
     @NameInMap("PointAmount")
     public Long pointAmount;
 
-    // 备注
     @NameInMap("Remark")
     public String remark;
 
     @NameInMap("RuleId")
     public String ruleId;
 
-    // 规则名称
     @NameInMap("RuleName")
     public String ruleName;
 

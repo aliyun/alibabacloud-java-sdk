@@ -7,7 +7,6 @@ public class UpShelfItemsRequest extends TeaModel {
     @NameInMap("ItemIds")
     public String itemIds;
 
-    // StoreId
     @NameInMap("StoreId")
     public String storeId;
 
