@@ -4,9 +4,6 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class CarApplyQueryResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("apply_list")
     public java.util.List<CarApplyQueryResponseBodyApplyList> applyList;
 
@@ -15,6 +12,9 @@ public class CarApplyQueryResponseBody extends TeaModel {
 
     @NameInMap("message")
     public String message;
+
+    @NameInMap("requestId")
+    public String requestId;
 
     @NameInMap("success")
     public Boolean success;
@@ -28,14 +28,6 @@ public class CarApplyQueryResponseBody extends TeaModel {
     public static CarApplyQueryResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CarApplyQueryResponseBody self = new CarApplyQueryResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CarApplyQueryResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public CarApplyQueryResponseBody setApplyList(java.util.List<CarApplyQueryResponseBodyApplyList> applyList) {
@@ -60,6 +52,14 @@ public class CarApplyQueryResponseBody extends TeaModel {
     }
     public String getMessage() {
         return this.message;
+    }
+
+    public CarApplyQueryResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public CarApplyQueryResponseBody setSuccess(Boolean success) {

@@ -19,7 +19,7 @@ public class ApplyApproveResponseBody extends TeaModel {
     @NameInMap("success")
     public Boolean success;
 
-    @NameInMap("trace_id")
+    @NameInMap("traceId")
     public String traceId;
 
     public static ApplyApproveResponseBody build(java.util.Map<String, ?> map) throws Exception {
