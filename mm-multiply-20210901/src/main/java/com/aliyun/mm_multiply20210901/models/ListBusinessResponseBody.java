@@ -13,7 +13,6 @@ public class ListBusinessResponseBody extends TeaModel {
     @NameInMap("RainbowUserBusinessModels")
     public java.util.List<ListBusinessResponseBodyRainbowUserBusinessModels> rainbowUserBusinessModels;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

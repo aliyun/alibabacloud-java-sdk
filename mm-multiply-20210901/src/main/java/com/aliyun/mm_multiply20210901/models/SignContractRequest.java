@@ -4,14 +4,12 @@ package com.aliyun.mm_multiply20210901.models;
 import com.aliyun.tea.*;
 
 public class SignContractRequest extends TeaModel {
-    // 合同ID
     @NameInMap("ContractId")
     public String contractId;
 
     @NameInMap("Origin")
     public String origin;
 
-    // 签约内容
     @NameInMap("SignContent")
     public String signContent;
 

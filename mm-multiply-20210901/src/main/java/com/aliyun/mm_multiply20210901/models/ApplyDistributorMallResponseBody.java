@@ -7,7 +7,6 @@ public class ApplyDistributorMallResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    // 分销商城ID
     @NameInMap("MallId")
     public String mallId;
 

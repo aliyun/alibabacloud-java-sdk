@@ -4,7 +4,6 @@ package com.aliyun.mm_multiply20210901.models;
 import com.aliyun.tea.*;
 
 public class ApplyDistributorMallRequest extends TeaModel {
-    // 店铺类型：api/saas
     @NameInMap("DistributionMallType")
     public String distributionMallType;
 

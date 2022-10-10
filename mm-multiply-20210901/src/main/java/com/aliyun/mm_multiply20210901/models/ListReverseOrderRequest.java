@@ -31,25 +31,21 @@ public class ListReverseOrderRequest extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
-    // WX、H5、APP
     @NameInMap("PlatformType")
     public String platformType;
 
     @NameInMap("ReverseOrderId")
     public String reverseOrderId;
 
-    // * 售后单状态: 已处理(PROCESSED), 待处理(PENDING), 处理中(PROCESSING), 已驳回(REJECTED), 商家同意换货（EXCHANGE）,      * 待买家退还商品(WAITING_RETURN), 买家撤销申请(REVOKE)，系统退款(SYSTEM_REFUND), 待商家收货(WAITING_STORE_RECEIPT), 已提交至淘宝 (SUBMITTED_TO_TAOBAO)      * 退款关闭(REFUND_CLOSE), 提交退款到淘宝失败(SUBMIT_TO_TAOBAO_FAILED)
     @NameInMap("ReverseOrderStatus")
     public String reverseOrderStatus;
 
     @NameInMap("StartTime")
     public String startTime;
 
-    // * 售后单类型, 退货 (RETURN), 退款(REFUND), 售后单关闭(REVERSE_TRANSACTION_CLOSE)
     @NameInMap("Status")
     public String status;
 
-    // 供应商ID
     @NameInMap("SupplierId")
     public String supplierId;
 

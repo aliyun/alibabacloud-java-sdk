@@ -7,19 +7,15 @@ public class CheckItemMarketingStatusResponseBody extends TeaModel {
     @NameInMap("ActivityStatus")
     public Boolean activityStatus;
 
-    // Code
     @NameInMap("Code")
     public String code;
 
-    // Message
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // Success
     @NameInMap("Success")
     public Boolean success;
 

@@ -4,7 +4,6 @@ package com.aliyun.mm_multiply20210901.models;
 import com.aliyun.tea.*;
 
 public class GetItemDetailRequest extends TeaModel {
-    // ItemId
     @NameInMap("ItemId")
     public String itemId;
 

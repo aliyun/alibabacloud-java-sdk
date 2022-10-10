@@ -7,7 +7,6 @@ public class DeletePointExchangeRuleRequest extends TeaModel {
     @NameInMap("BizId")
     public String bizId;
 
-    // 规则ID列表
     @NameInMap("RuleIdList")
     public String ruleIdList;
 

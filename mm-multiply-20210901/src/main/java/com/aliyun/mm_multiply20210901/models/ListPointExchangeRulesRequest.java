@@ -7,7 +7,6 @@ public class ListPointExchangeRulesRequest extends TeaModel {
     @NameInMap("BizId")
     public String bizId;
 
-    // 结束时间
     @NameInMap("EndTime")
     public String endTime;
 
@@ -23,11 +22,9 @@ public class ListPointExchangeRulesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 关键词：规则名/备注/积分
     @NameInMap("SearchKeyword")
     public String searchKeyword;
 
-    // 开始时间
     @NameInMap("StartTime")
     public String startTime;
 

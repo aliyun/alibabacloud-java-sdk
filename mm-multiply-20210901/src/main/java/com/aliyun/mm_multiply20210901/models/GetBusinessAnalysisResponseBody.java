@@ -4,14 +4,12 @@ package com.aliyun.mm_multiply20210901.models;
 import com.aliyun.tea.*;
 
 public class GetBusinessAnalysisResponseBody extends TeaModel {
-    // 业务日期
     @NameInMap("BizDate")
     public String bizDate;
 
     @NameInMap("Code")
     public String code;
 
-    // 日期类型：日、周、月
     @NameInMap("DateType")
     public String dateType;
 
@@ -30,14 +28,12 @@ public class GetBusinessAnalysisResponseBody extends TeaModel {
     @NameInMap("IndexTrendModels")
     public java.util.List<GetBusinessAnalysisResponseBodyIndexTrendModels> indexTrendModels;
 
-    // 商城id
     @NameInMap("MallId")
     public String mallId;
 
     @NameInMap("Message")
     public String message;
 
-    // 经营看板、流量看板、商品看板
     @NameInMap("RegionModels")
     public java.util.List<GetBusinessAnalysisResponseBodyRegionModels> regionModels;
 
@@ -209,15 +205,12 @@ public class GetBusinessAnalysisResponseBody extends TeaModel {
     }
 
     public static class GetBusinessAnalysisResponseBodyRegionModelsGroups extends TeaModel {
-        // 三级大类 数据列表
         @NameInMap("CurrentIndex")
         public String currentIndex;
 
-        // 二级大类 name
         @NameInMap("GroupName")
         public String groupName;
 
-        // 二级大类 tag
         @NameInMap("GroupTag")
         public String groupTag;
 
@@ -253,15 +246,12 @@ public class GetBusinessAnalysisResponseBody extends TeaModel {
     }
 
     public static class GetBusinessAnalysisResponseBodyRegionModels extends TeaModel {
-        // 二级大类数据列表
         @NameInMap("Groups")
         public java.util.List<GetBusinessAnalysisResponseBodyRegionModelsGroups> groups;
 
-        // 一级大类 name
         @NameInMap("RegionName")
         public String regionName;
 
-        // 一级大类 tag
         @NameInMap("RegionTag")
         public String regionTag;
 

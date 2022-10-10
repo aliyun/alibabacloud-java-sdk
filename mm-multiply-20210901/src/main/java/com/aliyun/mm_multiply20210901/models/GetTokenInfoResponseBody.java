@@ -4,30 +4,24 @@ package com.aliyun.mm_multiply20210901.models;
 import com.aliyun.tea.*;
 
 public class GetTokenInfoResponseBody extends TeaModel {
-    // code
     @NameInMap("Code")
     public Integer code;
 
-    // message
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    // 昵称
     @NameInMap("TbNick")
     public String tbNick;
 
-    // 淘宝店铺ID
     @NameInMap("TbShopId")
     public String tbShopId;
 
-    // 淘宝店铺名称
     @NameInMap("TbShopName")
     public String tbShopName;
 

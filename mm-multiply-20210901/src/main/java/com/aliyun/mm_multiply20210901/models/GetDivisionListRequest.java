@@ -4,7 +4,6 @@ package com.aliyun.mm_multiply20210901.models;
 import com.aliyun.tea.*;
 
 public class GetDivisionListRequest extends TeaModel {
-    // 地区编码
     @NameInMap("DivisionCode")
     public String divisionCode;
 

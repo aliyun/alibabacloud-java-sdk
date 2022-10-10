@@ -82,6 +82,9 @@ public class ListDistributorMallResponseBody extends TeaModel {
         @NameInMap("ChannelSupplierName")
         public String channelSupplierName;
 
+        @NameInMap("DistributionMallCode")
+        public String distributionMallCode;
+
         public static ListDistributorMallResponseBodyDistributorMallListChannelSupplierList build(java.util.Map<String, ?> map) throws Exception {
             ListDistributorMallResponseBodyDistributorMallListChannelSupplierList self = new ListDistributorMallResponseBodyDistributorMallListChannelSupplierList();
             return TeaModel.build(map, self);
@@ -103,37 +106,41 @@ public class ListDistributorMallResponseBody extends TeaModel {
             return this.channelSupplierName;
         }
 
+        public ListDistributorMallResponseBodyDistributorMallListChannelSupplierList setDistributionMallCode(String distributionMallCode) {
+            this.distributionMallCode = distributionMallCode;
+            return this;
+        }
+        public String getDistributionMallCode() {
+            return this.distributionMallCode;
+        }
+
     }
 
     public static class ListDistributorMallResponseBodyDistributorMallList extends TeaModel {
         @NameInMap("ChannelSupplierList")
         public java.util.List<ListDistributorMallResponseBodyDistributorMallListChannelSupplierList> channelSupplierList;
 
-        // 分销商城id
         @NameInMap("DistributionMallId")
         public String distributionMallId;
 
-        // 分销商城名称
         @NameInMap("DistributionMallName")
         public String distributionMallName;
 
-        // 商城模式
         @NameInMap("DistributionMallType")
         public String distributionMallType;
 
-        // 结束时间
+        @NameInMap("DistributorId")
+        public String distributorId;
+
         @NameInMap("EndDate")
         public String endDate;
 
-        // 备注
         @NameInMap("Remark")
         public String remark;
 
-        // 开始时间
         @NameInMap("StartDate")
         public String startDate;
 
-        // 分销商城状态
         @NameInMap("Status")
         public String status;
 
@@ -172,6 +179,14 @@ public class ListDistributorMallResponseBody extends TeaModel {
         }
         public String getDistributionMallType() {
             return this.distributionMallType;
+        }
+
+        public ListDistributorMallResponseBodyDistributorMallList setDistributorId(String distributorId) {
+            this.distributorId = distributorId;
+            return this;
+        }
+        public String getDistributorId() {
+            return this.distributorId;
         }
 
         public ListDistributorMallResponseBodyDistributorMallList setEndDate(String endDate) {

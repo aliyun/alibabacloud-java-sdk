@@ -4,43 +4,33 @@ package com.aliyun.mm_multiply20210901.models;
 import com.aliyun.tea.*;
 
 public class ListStoreItemsResponseBody extends TeaModel {
-    // Code
     @NameInMap("Code")
     public String code;
 
-    // errorCode
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // errorMessage
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    // Message
     @NameInMap("Message")
     public String message;
 
-    // PageNumber
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // PageSize
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // StoreItemsModels
     @NameInMap("StoreItemsModels")
     public java.util.List<ListStoreItemsResponseBodyStoreItemsModels> storeItemsModels;
 
-    // Success
     @NameInMap("Success")
     public Boolean success;
 
-    // TotalCount
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -130,15 +120,12 @@ public class ListStoreItemsResponseBody extends TeaModel {
     }
 
     public static class ListStoreItemsResponseBodyStoreItemsModelsItemChannelSaleModels extends TeaModel {
-        // ChannelSaleId
         @NameInMap("ChannelSaleId")
         public String channelSaleId;
 
-        // ChannelSaleName
         @NameInMap("ChannelSaleName")
         public String channelSaleName;
 
-        // ChannelSaleQuantity
         @NameInMap("ChannelSaleQuantity")
         public String channelSaleQuantity;
 
@@ -174,78 +161,60 @@ public class ListStoreItemsResponseBody extends TeaModel {
     }
 
     public static class ListStoreItemsResponseBodyStoreItemsModels extends TeaModel {
-        // CatagoryLeafId
         @NameInMap("CatagoryLeafId")
         public String catagoryLeafId;
 
-        // DescPath
         @NameInMap("DescPath")
         public String descPath;
 
-        // EnterWarehouseTime
         @NameInMap("EnterWarehouseTime")
         public String enterWarehouseTime;
 
         @NameInMap("ExceptMessage")
         public String exceptMessage;
 
-        // ItemChannelSaleModels
         @NameInMap("ItemChannelSaleModels")
         public java.util.List<ListStoreItemsResponseBodyStoreItemsModelsItemChannelSaleModels> itemChannelSaleModels;
 
-        // ItemId
         @NameInMap("ItemId")
         public String itemId;
 
-        // MaxMarkPrice
         @NameInMap("MaxMarkPrice")
         public Long maxMarkPrice;
 
-        // MaxPrice
         @NameInMap("MaxPrice")
         public Long maxPrice;
 
-        // MinMarkPrice
         @NameInMap("MinMarkPrice")
         public Long minMarkPrice;
 
-        // MinPrice
         @NameInMap("MinPrice")
         public Long minPrice;
 
-        // PicUrl
         @NameInMap("PicUrl")
         public String picUrl;
 
-        // SourceChannel
         @NameInMap("SourceChannel")
         public Integer sourceChannel;
 
-        // Status
         @NameInMap("Status")
         public Integer status;
 
-        // StockQuantity
         @NameInMap("StockQuantity")
         public Long stockQuantity;
 
-        // StoreId
         @NameInMap("StoreId")
         public String storeId;
 
-        // TbItemId
         @NameInMap("TbItemId")
         public String tbItemId;
 
-        // Title
         @NameInMap("Title")
         public String title;
 
-        // UpShelfTime
         @NameInMap("UpShelfTime")
         public String upShelfTime;
 
-        // UpdateTime
         @NameInMap("UpdateTime")
         public String updateTime;
 

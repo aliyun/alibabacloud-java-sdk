@@ -4,34 +4,27 @@ package com.aliyun.mm_multiply20210901.models;
 import com.aliyun.tea.*;
 
 public class GetDomainResponseBody extends TeaModel {
-    // code
     @NameInMap("Code")
     public Integer code;
 
     @NameInMap("CustomDomainStatus")
     public String customDomainStatus;
 
-    // CNAME 的域名
     @NameInMap("DnsCname")
     public String dnsCname;
 
-    // 域名
     @NameInMap("Domain")
     public String domain;
 
-    // 配置时间
     @NameInMap("GmtModified")
     public String gmtModified;
 
-    // 是否托管了证书
     @NameInMap("HasTls")
     public Boolean hasTls;
 
-    // message
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -41,7 +34,6 @@ public class GetDomainResponseBody extends TeaModel {
     @NameInMap("TemporaryDomainStatus")
     public String temporaryDomainStatus;
 
-    // 域名过期时间
     @NameInMap("TlsExpire")
     public Long tlsExpire;
 

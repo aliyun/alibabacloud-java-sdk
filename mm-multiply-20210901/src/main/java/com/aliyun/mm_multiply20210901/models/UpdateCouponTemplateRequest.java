@@ -32,6 +32,18 @@ public class UpdateCouponTemplateRequest extends TeaModel {
     }
 
     public static class UpdateCouponTemplateRequestCouponTemplateDTO extends TeaModel {
+        @NameInMap("AlipayImgUrl")
+        public String alipayImgUrl;
+
+        @NameInMap("AlipayJumpLabel")
+        public String alipayJumpLabel;
+
+        @NameInMap("AlipayJumpTable")
+        public String alipayJumpTable;
+
+        @NameInMap("AlipayJumpUrl")
+        public String alipayJumpUrl;
+
         @NameInMap("AlipaySendCount")
         public Long alipaySendCount;
 
@@ -74,6 +86,12 @@ public class UpdateCouponTemplateRequest extends TeaModel {
         @NameInMap("ItemSalePrice")
         public String itemSalePrice;
 
+        @NameInMap("JumpLabel")
+        public String jumpLabel;
+
+        @NameInMap("JumpTable")
+        public String jumpTable;
+
         @NameInMap("JumpUrl")
         public String jumpUrl;
 
@@ -101,6 +119,9 @@ public class UpdateCouponTemplateRequest extends TeaModel {
         @NameInMap("Remark")
         public String remark;
 
+        @NameInMap("ResourceId")
+        public String resourceId;
+
         @NameInMap("RestrictType")
         public Integer restrictType;
 
@@ -125,6 +146,9 @@ public class UpdateCouponTemplateRequest extends TeaModel {
         @NameInMap("Status")
         public Integer status;
 
+        @NameInMap("SyncTag")
+        public Boolean syncTag;
+
         @NameInMap("Title")
         public String title;
 
@@ -143,6 +167,38 @@ public class UpdateCouponTemplateRequest extends TeaModel {
         public static UpdateCouponTemplateRequestCouponTemplateDTO build(java.util.Map<String, ?> map) throws Exception {
             UpdateCouponTemplateRequestCouponTemplateDTO self = new UpdateCouponTemplateRequestCouponTemplateDTO();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateCouponTemplateRequestCouponTemplateDTO setAlipayImgUrl(String alipayImgUrl) {
+            this.alipayImgUrl = alipayImgUrl;
+            return this;
+        }
+        public String getAlipayImgUrl() {
+            return this.alipayImgUrl;
+        }
+
+        public UpdateCouponTemplateRequestCouponTemplateDTO setAlipayJumpLabel(String alipayJumpLabel) {
+            this.alipayJumpLabel = alipayJumpLabel;
+            return this;
+        }
+        public String getAlipayJumpLabel() {
+            return this.alipayJumpLabel;
+        }
+
+        public UpdateCouponTemplateRequestCouponTemplateDTO setAlipayJumpTable(String alipayJumpTable) {
+            this.alipayJumpTable = alipayJumpTable;
+            return this;
+        }
+        public String getAlipayJumpTable() {
+            return this.alipayJumpTable;
+        }
+
+        public UpdateCouponTemplateRequestCouponTemplateDTO setAlipayJumpUrl(String alipayJumpUrl) {
+            this.alipayJumpUrl = alipayJumpUrl;
+            return this;
+        }
+        public String getAlipayJumpUrl() {
+            return this.alipayJumpUrl;
         }
 
         public UpdateCouponTemplateRequestCouponTemplateDTO setAlipaySendCount(Long alipaySendCount) {
@@ -257,6 +313,22 @@ public class UpdateCouponTemplateRequest extends TeaModel {
             return this.itemSalePrice;
         }
 
+        public UpdateCouponTemplateRequestCouponTemplateDTO setJumpLabel(String jumpLabel) {
+            this.jumpLabel = jumpLabel;
+            return this;
+        }
+        public String getJumpLabel() {
+            return this.jumpLabel;
+        }
+
+        public UpdateCouponTemplateRequestCouponTemplateDTO setJumpTable(String jumpTable) {
+            this.jumpTable = jumpTable;
+            return this;
+        }
+        public String getJumpTable() {
+            return this.jumpTable;
+        }
+
         public UpdateCouponTemplateRequestCouponTemplateDTO setJumpUrl(String jumpUrl) {
             this.jumpUrl = jumpUrl;
             return this;
@@ -329,6 +401,14 @@ public class UpdateCouponTemplateRequest extends TeaModel {
             return this.remark;
         }
 
+        public UpdateCouponTemplateRequestCouponTemplateDTO setResourceId(String resourceId) {
+            this.resourceId = resourceId;
+            return this;
+        }
+        public String getResourceId() {
+            return this.resourceId;
+        }
+
         public UpdateCouponTemplateRequestCouponTemplateDTO setRestrictType(Integer restrictType) {
             this.restrictType = restrictType;
             return this;
@@ -391,6 +471,14 @@ public class UpdateCouponTemplateRequest extends TeaModel {
         }
         public Integer getStatus() {
             return this.status;
+        }
+
+        public UpdateCouponTemplateRequestCouponTemplateDTO setSyncTag(Boolean syncTag) {
+            this.syncTag = syncTag;
+            return this;
+        }
+        public Boolean getSyncTag() {
+            return this.syncTag;
         }
 
         public UpdateCouponTemplateRequestCouponTemplateDTO setTitle(String title) {

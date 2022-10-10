@@ -19,7 +19,6 @@ public class ListContractResponseBody extends TeaModel {
     @NameInMap("RecordsPerPage")
     public Integer recordsPerPage;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -133,34 +132,27 @@ public class ListContractResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 过期时间
         @NameInMap("ExpireTime")
         public String expireTime;
 
         @NameInMap("ExtInfo")
         public java.util.Map<String, ?> extInfo;
 
-        // 甲方
         @NameInMap("FirstParty")
         public String firstParty;
 
-        // 甲方id
         @NameInMap("FirstPartyId")
         public String firstPartyId;
 
-        // 乙方
         @NameInMap("SecondParty")
         public String secondParty;
 
-        // 乙方id
         @NameInMap("SecondPartyId")
         public String secondPartyId;
 
-        // 签约状态
         @NameInMap("SignStatus")
         public String signStatus;
 
-        // 开始时间
         @NameInMap("StartTime")
         public String startTime;
 

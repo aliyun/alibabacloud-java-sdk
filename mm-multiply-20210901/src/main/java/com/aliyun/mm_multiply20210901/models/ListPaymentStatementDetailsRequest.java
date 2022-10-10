@@ -4,43 +4,33 @@ package com.aliyun.mm_multiply20210901.models;
 import com.aliyun.tea.*;
 
 public class ListPaymentStatementDetailsRequest extends TeaModel {
-    // mallId
     @NameInMap("MallId")
     public String mallId;
 
-    // OrderCd
     @NameInMap("OrderCd")
     public String orderCd;
 
-    // OrderDateEnd
     @NameInMap("OrderDateEnd")
     public String orderDateEnd;
 
-    // OrderDateStart
     @NameInMap("OrderDateStart")
     public String orderDateStart;
 
-    // OrderFrom
     @NameInMap("OrderFrom")
     public String orderFrom;
 
-    // OrderType
     @NameInMap("OrderType")
     public String orderType;
 
-    // pageNumber
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // pageSize
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // payChannelType
     @NameInMap("PayChannelType")
     public String payChannelType;
 
-    // PlatOrderCd
     @NameInMap("PlatOrderCd")
     public String platOrderCd;
 

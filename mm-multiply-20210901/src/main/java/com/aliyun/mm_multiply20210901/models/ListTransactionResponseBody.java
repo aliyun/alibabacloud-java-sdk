@@ -13,7 +13,6 @@ public class ListTransactionResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -66,34 +65,27 @@ public class ListTransactionResponseBody extends TeaModel {
     }
 
     public static class ListTransactionResponseBodyList extends TeaModel {
-        // LM店铺ID
         @NameInMap("LmShopId")
         public Long lmShopId;
 
-        // 担保交易开通状态
         @NameInMap("SecurityStatus")
         public Integer securityStatus;
 
-        // 担保交易支付宝账号
         @NameInMap("TbPayAccount")
         public String tbPayAccount;
 
         @NameInMap("TbSellerId")
         public Long tbSellerId;
 
-        // 店主昵称
         @NameInMap("TbSellerNick")
         public String tbSellerNick;
 
-        // 店铺描述
         @NameInMap("TbShopDescription")
         public String tbShopDescription;
 
-        // 淘宝店铺ID
         @NameInMap("TbShopId")
         public Long tbShopId;
 
-        // 淘宝店铺名称
         @NameInMap("TbShopName")
         public String tbShopName;
 

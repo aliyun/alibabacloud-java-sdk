@@ -4,175 +4,135 @@ package com.aliyun.mm_multiply20210901.models;
 import com.aliyun.tea.*;
 
 public class CreateTransactionRequest extends TeaModel {
-    // 是否接受电子发票
     @NameInMap("AcceptElectronicInvoice")
     public Boolean acceptElectronicInvoice;
 
-    // 经营地址：详细地址
     @NameInMap("Address")
     public String address;
 
-    // 商户别名
     @NameInMap("AliasName")
     public String aliasName;
 
-    // 是否自动开发票 目前已经不开票了（发票相关信息可以不填）
     @NameInMap("AutoInvoice")
     public Boolean autoInvoice;
 
-    // 银行账号
     @NameInMap("BankAccount")
     public String bankAccount;
 
-    // 银行名称
     @NameInMap("BankName")
     public String bankName;
 
-    // 个体工商户名称(商户类型为个体工商户时，此字段必填)
     @NameInMap("CertName")
     public String certName;
 
-    // 商户证件编号
     @NameInMap("CertNo")
     public String certNo;
 
-    // 商户证件类型
     @NameInMap("CertType")
     public String certType;
 
-    // 经营地址：市
     @NameInMap("CityCode")
     public String cityCode;
 
-    // 联系人手机号
     @NameInMap("ContactMobile")
     public String contactMobile;
 
-    // 联系人名字
     @NameInMap("ContactName")
     public String contactName;
 
-    // 商户联系人业务标识
     @NameInMap("ContactTag")
     public String contactTag;
 
-    // 商户联系人类型
     @NameInMap("ContactType")
     public String contactType;
 
-    // 经营地址：市
     @NameInMap("DistrictCode")
     public String districtCode;
 
     @NameInMap("IdType")
     public String idType;
 
-    // 开票地址
     @NameInMap("InvoiceAddress")
     public String invoiceAddress;
 
-    // 开票电话
     @NameInMap("InvoiceTelephone")
     public String invoiceTelephone;
 
-    // 是否极简入驻
     @NameInMap("IsMiniStyle")
     public String isMiniStyle;
 
-    // 合法证书图片  /**      * 法人证件照片      * 外籍与港澳台法人需要传      */
     @NameInMap("LegalCertImage")
     public String legalCertImage;
 
-    // 法人证件号
     @NameInMap("LegalCertNo")
     public String legalCertNo;
 
-    // 法人证件类型
     @NameInMap("LegalCertType")
     public String legalCertType;
 
-    // 法人姓名
     @NameInMap("LegalName")
     public String legalName;
 
-    // 收件人地址：详细地址
     @NameInMap("MailAddress")
     public String mailAddress;
 
-    // 收件人地址：市
     @NameInMap("MailCityCode")
     public String mailCityCode;
 
-    // 收件人地址：县
     @NameInMap("MailDistrictCode")
     public String mailDistrictCode;
 
-    // 收件人姓名
     @NameInMap("MailName")
     public String mailName;
 
-    // 收件人地址：省
     @NameInMap("MailProvinceCode")
     public String mailProvinceCode;
 
-    // 收件人电话
     @NameInMap("MailTelephone")
     public String mailTelephone;
 
-    // 商户类型
     @NameInMap("MerchantType")
     public String merchantType;
 
-    // 商户名称
     @NameInMap("Name")
     public String name;
 
     @NameInMap("OnlyInvoiceInfo")
     public Boolean onlyInvoiceInfo;
 
-    // 门头照（已废弃）
     @NameInMap("OutDoorImages")
     public String outDoorImages;
 
     @NameInMap("OuterMerchantId")
     public String outerMerchantId;
 
-    // 商户支付宝账号
     @NameInMap("PayLoginId")
     public String payLoginId;
 
-    // 经营地址：省
     @NameInMap("ProvinceCode")
     public String provinceCode;
 
-    // 场景码
     @NameInMap("Scene")
     public String scene;
 
-    // sellerId
     @NameInMap("SellerId")
     public String sellerId;
 
-    // 客服电话
     @NameInMap("ServicePhone")
     public String servicePhone;
 
     @NameInMap("SignTimeWithIsv")
     public String signTimeWithIsv;
 
-    // 纳税人识别号
     @NameInMap("TaxNo")
     public String taxNo;
 
-    // 纳税人资格种类
     @NameInMap("TaxPayerQualification")
     public String taxPayerQualification;
 
-    // 纳税人资格开始时间
     @NameInMap("TaxPayerValidation")
     public String taxPayerValidation;
 
-    // 发票抬头
     @NameInMap("Title")
     public String title;
 

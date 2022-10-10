@@ -7,14 +7,12 @@ public class CreateShopResponseBody extends TeaModel {
     @NameInMap("Code")
     public Long code;
 
-    // LM店铺ID
     @NameInMap("LmShopId")
     public String lmShopId;
 
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

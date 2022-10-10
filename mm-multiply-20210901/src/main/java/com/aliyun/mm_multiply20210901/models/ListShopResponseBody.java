@@ -13,7 +13,6 @@ public class ListShopResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -98,7 +97,6 @@ public class ListShopResponseBody extends TeaModel {
         @NameInMap("Type")
         public String type;
 
-        // 到期时间
         @NameInMap("ValidateEndTime")
         public Long validateEndTime;
 

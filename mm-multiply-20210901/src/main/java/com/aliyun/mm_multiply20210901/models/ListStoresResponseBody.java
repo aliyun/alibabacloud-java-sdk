@@ -4,31 +4,24 @@ package com.aliyun.mm_multiply20210901.models;
 import com.aliyun.tea.*;
 
 public class ListStoresResponseBody extends TeaModel {
-    // Code
     @NameInMap("Code")
     public String code;
 
-    // errorCode
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // errorMessage
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    // Message
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // StoreModels
     @NameInMap("StoreModels")
     public java.util.List<ListStoresResponseBodyStoreModels> storeModels;
 
-    // Success
     @NameInMap("Success")
     public Boolean success;
 
@@ -94,11 +87,9 @@ public class ListStoresResponseBody extends TeaModel {
     }
 
     public static class ListStoresResponseBodyStoreModels extends TeaModel {
-        // StoreId
         @NameInMap("StoreId")
         public String storeId;
 
-        // Title
         @NameInMap("Title")
         public String title;
 

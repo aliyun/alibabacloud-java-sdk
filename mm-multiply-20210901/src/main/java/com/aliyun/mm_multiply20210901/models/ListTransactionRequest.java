@@ -4,7 +4,6 @@ package com.aliyun.mm_multiply20210901.models;
 import com.aliyun.tea.*;
 
 public class ListTransactionRequest extends TeaModel {
-    // 状态
     @NameInMap("Status")
     public Integer status;
 

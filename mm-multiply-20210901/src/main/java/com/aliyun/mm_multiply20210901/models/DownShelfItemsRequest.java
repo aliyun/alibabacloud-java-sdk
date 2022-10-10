@@ -4,11 +4,9 @@ package com.aliyun.mm_multiply20210901.models;
 import com.aliyun.tea.*;
 
 public class DownShelfItemsRequest extends TeaModel {
-    // ItemIds
     @NameInMap("ItemIds")
     public String itemIds;
 
-    // StoreId
     @NameInMap("StoreId")
     public String storeId;
 

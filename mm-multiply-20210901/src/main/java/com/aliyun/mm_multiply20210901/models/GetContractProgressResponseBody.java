@@ -7,14 +7,12 @@ public class GetContractProgressResponseBody extends TeaModel {
     @NameInMap("Code")
     public Long code;
 
-    // contractProgressModels
     @NameInMap("ContractProgressModels")
     public java.util.List<GetContractProgressResponseBodyContractProgressModels> contractProgressModels;
 
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -67,35 +65,27 @@ public class GetContractProgressResponseBody extends TeaModel {
     }
 
     public static class GetContractProgressResponseBodyContractProgressModels extends TeaModel {
-        // 行为
         @NameInMap("Action")
         public String action;
 
-        // 行为描述
         @NameInMap("ActionDescription")
         public String actionDescription;
 
-        // 合同ID
         @NameInMap("ContractId")
         public String contractId;
 
-        // 合同名称
         @NameInMap("ContractName")
         public String contractName;
 
-        // 合同状态
         @NameInMap("ContractStatus")
         public String contractStatus;
 
-        // extInfo
         @NameInMap("ExtInfo")
         public java.util.Map<String, ?> extInfo;
 
-        // id
         @NameInMap("Id")
         public String id;
 
-        // 时间
         @NameInMap("Time")
         public String time;
 

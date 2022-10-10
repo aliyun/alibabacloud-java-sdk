@@ -4,25 +4,21 @@ package com.aliyun.mm_multiply20210901.models;
 import com.aliyun.tea.*;
 
 public class GetContractContentResponseBody extends TeaModel {
-    // 类型
     @NameInMap("BaseType")
     public String baseType;
 
     @NameInMap("Code")
     public Long code;
 
-    // 下载URL
     @NameInMap("DownloadUrl")
     public String downloadUrl;
 
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 状态
     @NameInMap("Status")
     public String status;
 

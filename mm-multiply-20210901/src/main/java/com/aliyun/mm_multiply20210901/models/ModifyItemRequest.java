@@ -4,7 +4,6 @@ package com.aliyun.mm_multiply20210901.models;
 import com.aliyun.tea.*;
 
 public class ModifyItemRequest extends TeaModel {
-    // [123, 456, 789]
     @NameInMap("ItemIdsJson")
     public String itemIdsJson;
 

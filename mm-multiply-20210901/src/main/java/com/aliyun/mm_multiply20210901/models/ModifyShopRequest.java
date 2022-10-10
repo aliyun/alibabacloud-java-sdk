@@ -7,7 +7,6 @@ public class ModifyShopRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
-    // LM店铺ID
     @NameInMap("StoreId")
     public String storeId;
 

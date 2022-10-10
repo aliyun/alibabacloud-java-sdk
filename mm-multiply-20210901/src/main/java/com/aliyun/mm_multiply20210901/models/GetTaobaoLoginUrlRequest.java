@@ -4,7 +4,6 @@ package com.aliyun.mm_multiply20210901.models;
 import com.aliyun.tea.*;
 
 public class GetTaobaoLoginUrlRequest extends TeaModel {
-    // 类型
     @NameInMap("Type")
     public String type;
 
