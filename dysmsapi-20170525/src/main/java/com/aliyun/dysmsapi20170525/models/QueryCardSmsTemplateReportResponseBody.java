@@ -8,7 +8,7 @@ public class QueryCardSmsTemplateReportResponseBody extends TeaModel {
     public String code;
 
     @NameInMap("Data")
-    public java.util.List<java.util.Map<String, ?>> data;
+    public QueryCardSmsTemplateReportResponseBodyData data;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -29,11 +29,11 @@ public class QueryCardSmsTemplateReportResponseBody extends TeaModel {
         return this.code;
     }
 
-    public QueryCardSmsTemplateReportResponseBody setData(java.util.List<java.util.Map<String, ?>> data) {
+    public QueryCardSmsTemplateReportResponseBody setData(QueryCardSmsTemplateReportResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public java.util.List<java.util.Map<String, ?>> getData() {
+    public QueryCardSmsTemplateReportResponseBodyData getData() {
         return this.data;
     }
 
@@ -51,6 +51,25 @@ public class QueryCardSmsTemplateReportResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public static class QueryCardSmsTemplateReportResponseBodyData extends TeaModel {
+        @NameInMap("model")
+        public java.util.List<java.util.Map<String, ?>> model;
+
+        public static QueryCardSmsTemplateReportResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            QueryCardSmsTemplateReportResponseBodyData self = new QueryCardSmsTemplateReportResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryCardSmsTemplateReportResponseBodyData setModel(java.util.List<java.util.Map<String, ?>> model) {
+            this.model = model;
+            return this;
+        }
+        public java.util.List<java.util.Map<String, ?>> getModel() {
+            return this.model;
+        }
+
     }
 
 }
