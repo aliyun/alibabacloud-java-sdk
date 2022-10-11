@@ -17,7 +17,7 @@ public class CreateFileTransRequest extends TeaModel {
     public String audioOssPath;
 
     @NameInMap("AudioOutputEnabled")
-    public String audioOutputEnabled;
+    public Boolean audioOutputEnabled;
 
     @NameInMap("AudioOutputOssBucket")
     public String audioOutputOssBucket;
@@ -29,7 +29,7 @@ public class CreateFileTransRequest extends TeaModel {
     public String audioRoleNum;
 
     @NameInMap("AudioSegmentsEnabled")
-    public String audioSegmentsEnabled;
+    public Boolean audioSegmentsEnabled;
 
     @NameInMap("TransKey")
     public String transKey;
@@ -77,11 +77,11 @@ public class CreateFileTransRequest extends TeaModel {
         return this.audioOssPath;
     }
 
-    public CreateFileTransRequest setAudioOutputEnabled(String audioOutputEnabled) {
+    public CreateFileTransRequest setAudioOutputEnabled(Boolean audioOutputEnabled) {
         this.audioOutputEnabled = audioOutputEnabled;
         return this;
     }
-    public String getAudioOutputEnabled() {
+    public Boolean getAudioOutputEnabled() {
         return this.audioOutputEnabled;
     }
 
@@ -109,11 +109,11 @@ public class CreateFileTransRequest extends TeaModel {
         return this.audioRoleNum;
     }
 
-    public CreateFileTransRequest setAudioSegmentsEnabled(String audioSegmentsEnabled) {
+    public CreateFileTransRequest setAudioSegmentsEnabled(Boolean audioSegmentsEnabled) {
         this.audioSegmentsEnabled = audioSegmentsEnabled;
         return this;
     }
-    public String getAudioSegmentsEnabled() {
+    public Boolean getAudioSegmentsEnabled() {
         return this.audioSegmentsEnabled;
     }
 
