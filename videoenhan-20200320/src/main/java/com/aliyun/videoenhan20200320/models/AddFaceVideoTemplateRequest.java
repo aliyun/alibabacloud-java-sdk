@@ -4,7 +4,6 @@ package com.aliyun.videoenhan20200320.models;
 import com.aliyun.tea.*;
 
 public class AddFaceVideoTemplateRequest extends TeaModel {
-    // A short description of struct
     @NameInMap("UserId")
     public String userId;
 

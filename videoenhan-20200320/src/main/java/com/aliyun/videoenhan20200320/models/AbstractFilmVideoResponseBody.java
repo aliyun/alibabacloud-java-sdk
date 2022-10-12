@@ -4,23 +4,15 @@ package com.aliyun.videoenhan20200320.models;
 import com.aliyun.tea.*;
 
 public class AbstractFilmVideoResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public AbstractFilmVideoResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static AbstractFilmVideoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AbstractFilmVideoResponseBody self = new AbstractFilmVideoResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public AbstractFilmVideoResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public AbstractFilmVideoResponseBody setData(AbstractFilmVideoResponseBodyData data) {
@@ -29,6 +21,14 @@ public class AbstractFilmVideoResponseBody extends TeaModel {
     }
     public AbstractFilmVideoResponseBodyData getData() {
         return this.data;
+    }
+
+    public AbstractFilmVideoResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class AbstractFilmVideoResponseBodyData extends TeaModel {

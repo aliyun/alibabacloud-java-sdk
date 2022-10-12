@@ -4,27 +4,26 @@ package com.aliyun.videoenhan20200320.models;
 import com.aliyun.tea.*;
 
 public class InterpolateVideoFrameAdvanceRequest extends TeaModel {
-    @NameInMap("VideoURLObject")
-    @Validation(required = true)
-    public java.io.InputStream videoURLObject;
+    @NameInMap("Bitrate")
+    public Integer bitrate;
 
     @NameInMap("FrameRate")
     public Integer frameRate;
 
-    @NameInMap("Bitrate")
-    public Integer bitrate;
+    @NameInMap("VideoURL")
+    public java.io.InputStream videoURLObject;
 
     public static InterpolateVideoFrameAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         InterpolateVideoFrameAdvanceRequest self = new InterpolateVideoFrameAdvanceRequest();
         return TeaModel.build(map, self);
     }
 
-    public InterpolateVideoFrameAdvanceRequest setVideoURLObject(java.io.InputStream videoURLObject) {
-        this.videoURLObject = videoURLObject;
+    public InterpolateVideoFrameAdvanceRequest setBitrate(Integer bitrate) {
+        this.bitrate = bitrate;
         return this;
     }
-    public java.io.InputStream getVideoURLObject() {
-        return this.videoURLObject;
+    public Integer getBitrate() {
+        return this.bitrate;
     }
 
     public InterpolateVideoFrameAdvanceRequest setFrameRate(Integer frameRate) {
@@ -35,12 +34,12 @@ public class InterpolateVideoFrameAdvanceRequest extends TeaModel {
         return this.frameRate;
     }
 
-    public InterpolateVideoFrameAdvanceRequest setBitrate(Integer bitrate) {
-        this.bitrate = bitrate;
+    public InterpolateVideoFrameAdvanceRequest setVideoURLObject(java.io.InputStream videoURLObject) {
+        this.videoURLObject = videoURLObject;
         return this;
     }
-    public Integer getBitrate() {
-        return this.bitrate;
+    public java.io.InputStream getVideoURLObject() {
+        return this.videoURLObject;
     }
 
 }

@@ -4,24 +4,15 @@ package com.aliyun.videoenhan20200320.models;
 import com.aliyun.tea.*;
 
 public class SuperResolveVideoAdvanceRequest extends TeaModel {
-    @NameInMap("VideoUrlObject")
-    @Validation(required = true)
-    public java.io.InputStream videoUrlObject;
-
     @NameInMap("BitRate")
     public Integer bitRate;
+
+    @NameInMap("VideoUrl")
+    public java.io.InputStream videoUrlObject;
 
     public static SuperResolveVideoAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         SuperResolveVideoAdvanceRequest self = new SuperResolveVideoAdvanceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public SuperResolveVideoAdvanceRequest setVideoUrlObject(java.io.InputStream videoUrlObject) {
-        this.videoUrlObject = videoUrlObject;
-        return this;
-    }
-    public java.io.InputStream getVideoUrlObject() {
-        return this.videoUrlObject;
     }
 
     public SuperResolveVideoAdvanceRequest setBitRate(Integer bitRate) {
@@ -30,6 +21,14 @@ public class SuperResolveVideoAdvanceRequest extends TeaModel {
     }
     public Integer getBitRate() {
         return this.bitRate;
+    }
+
+    public SuperResolveVideoAdvanceRequest setVideoUrlObject(java.io.InputStream videoUrlObject) {
+        this.videoUrlObject = videoUrlObject;
+        return this;
+    }
+    public java.io.InputStream getVideoUrlObject() {
+        return this.videoUrlObject;
     }
 
 }

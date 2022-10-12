@@ -4,23 +4,15 @@ package com.aliyun.videoenhan20200320.models;
 import com.aliyun.tea.*;
 
 public class EraseVideoLogoResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public EraseVideoLogoResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static EraseVideoLogoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         EraseVideoLogoResponseBody self = new EraseVideoLogoResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public EraseVideoLogoResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public EraseVideoLogoResponseBody setData(EraseVideoLogoResponseBodyData data) {
@@ -29,6 +21,14 @@ public class EraseVideoLogoResponseBody extends TeaModel {
     }
     public EraseVideoLogoResponseBodyData getData() {
         return this.data;
+    }
+
+    public EraseVideoLogoResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class EraseVideoLogoResponseBodyData extends TeaModel {

@@ -4,24 +4,15 @@ package com.aliyun.videoenhan20200320.models;
 import com.aliyun.tea.*;
 
 public class DeleteFaceVideoTemplateRequest extends TeaModel {
-    // A short description of struct
-    @NameInMap("UserId")
-    public String userId;
-
     @NameInMap("TemplateId")
     public String templateId;
+
+    @NameInMap("UserId")
+    public String userId;
 
     public static DeleteFaceVideoTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteFaceVideoTemplateRequest self = new DeleteFaceVideoTemplateRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteFaceVideoTemplateRequest setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
     }
 
     public DeleteFaceVideoTemplateRequest setTemplateId(String templateId) {
@@ -30,6 +21,14 @@ public class DeleteFaceVideoTemplateRequest extends TeaModel {
     }
     public String getTemplateId() {
         return this.templateId;
+    }
+
+    public DeleteFaceVideoTemplateRequest setUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    public String getUserId() {
+        return this.userId;
     }
 
 }

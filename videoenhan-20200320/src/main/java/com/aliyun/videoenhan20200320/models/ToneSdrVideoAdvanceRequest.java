@@ -4,27 +4,18 @@ package com.aliyun.videoenhan20200320.models;
 import com.aliyun.tea.*;
 
 public class ToneSdrVideoAdvanceRequest extends TeaModel {
-    @NameInMap("VideoURLObject")
-    @Validation(required = true)
-    public java.io.InputStream videoURLObject;
-
     @NameInMap("Bitrate")
     public Integer bitrate;
 
     @NameInMap("RecolorModel")
     public String recolorModel;
 
+    @NameInMap("VideoURL")
+    public java.io.InputStream videoURLObject;
+
     public static ToneSdrVideoAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         ToneSdrVideoAdvanceRequest self = new ToneSdrVideoAdvanceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ToneSdrVideoAdvanceRequest setVideoURLObject(java.io.InputStream videoURLObject) {
-        this.videoURLObject = videoURLObject;
-        return this;
-    }
-    public java.io.InputStream getVideoURLObject() {
-        return this.videoURLObject;
     }
 
     public ToneSdrVideoAdvanceRequest setBitrate(Integer bitrate) {
@@ -41,6 +32,14 @@ public class ToneSdrVideoAdvanceRequest extends TeaModel {
     }
     public String getRecolorModel() {
         return this.recolorModel;
+    }
+
+    public ToneSdrVideoAdvanceRequest setVideoURLObject(java.io.InputStream videoURLObject) {
+        this.videoURLObject = videoURLObject;
+        return this;
+    }
+    public java.io.InputStream getVideoURLObject() {
+        return this.videoURLObject;
     }
 
 }
