@@ -4,8 +4,7 @@ package com.aliyun.imageseg20191230.models;
 import com.aliyun.tea.*;
 
 public class SegmentSkinAdvanceRequest extends TeaModel {
-    @NameInMap("URLObject")
-    @Validation(required = true)
+    @NameInMap("URL")
     public java.io.InputStream URLObject;
 
     public static SegmentSkinAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {

@@ -4,23 +4,15 @@ package com.aliyun.imageseg20191230.models;
 import com.aliyun.tea.*;
 
 public class SegmentHeadResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public SegmentHeadResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static SegmentHeadResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SegmentHeadResponseBody self = new SegmentHeadResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public SegmentHeadResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public SegmentHeadResponseBody setData(SegmentHeadResponseBodyData data) {
@@ -31,25 +23,41 @@ public class SegmentHeadResponseBody extends TeaModel {
         return this.data;
     }
 
+    public SegmentHeadResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class SegmentHeadResponseBodyDataElements extends TeaModel {
+        @NameInMap("Height")
+        public Integer height;
+
         @NameInMap("ImageURL")
         public String imageURL;
 
         @NameInMap("Width")
         public Integer width;
 
-        @NameInMap("Height")
-        public Integer height;
+        @NameInMap("X")
+        public Integer x;
 
         @NameInMap("Y")
         public Integer y;
 
-        @NameInMap("X")
-        public Integer x;
-
         public static SegmentHeadResponseBodyDataElements build(java.util.Map<String, ?> map) throws Exception {
             SegmentHeadResponseBodyDataElements self = new SegmentHeadResponseBodyDataElements();
             return TeaModel.build(map, self);
+        }
+
+        public SegmentHeadResponseBodyDataElements setHeight(Integer height) {
+            this.height = height;
+            return this;
+        }
+        public Integer getHeight() {
+            return this.height;
         }
 
         public SegmentHeadResponseBodyDataElements setImageURL(String imageURL) {
@@ -68,12 +76,12 @@ public class SegmentHeadResponseBody extends TeaModel {
             return this.width;
         }
 
-        public SegmentHeadResponseBodyDataElements setHeight(Integer height) {
-            this.height = height;
+        public SegmentHeadResponseBodyDataElements setX(Integer x) {
+            this.x = x;
             return this;
         }
-        public Integer getHeight() {
-            return this.height;
+        public Integer getX() {
+            return this.x;
         }
 
         public SegmentHeadResponseBodyDataElements setY(Integer y) {
@@ -82,14 +90,6 @@ public class SegmentHeadResponseBody extends TeaModel {
         }
         public Integer getY() {
             return this.y;
-        }
-
-        public SegmentHeadResponseBodyDataElements setX(Integer x) {
-            this.x = x;
-            return this;
-        }
-        public Integer getX() {
-            return this.x;
         }
 
     }

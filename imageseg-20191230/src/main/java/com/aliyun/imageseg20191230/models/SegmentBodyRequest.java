@@ -4,11 +4,11 @@ package com.aliyun.imageseg20191230.models;
 import com.aliyun.tea.*;
 
 public class SegmentBodyRequest extends TeaModel {
-    @NameInMap("ImageURL")
-    public String imageURL;
-
     @NameInMap("Async")
     public Boolean async;
+
+    @NameInMap("ImageURL")
+    public String imageURL;
 
     @NameInMap("ReturnForm")
     public String returnForm;
@@ -18,20 +18,20 @@ public class SegmentBodyRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public SegmentBodyRequest setImageURL(String imageURL) {
-        this.imageURL = imageURL;
-        return this;
-    }
-    public String getImageURL() {
-        return this.imageURL;
-    }
-
     public SegmentBodyRequest setAsync(Boolean async) {
         this.async = async;
         return this;
     }
     public Boolean getAsync() {
         return this.async;
+    }
+
+    public SegmentBodyRequest setImageURL(String imageURL) {
+        this.imageURL = imageURL;
+        return this;
+    }
+    public String getImageURL() {
+        return this.imageURL;
     }
 
     public SegmentBodyRequest setReturnForm(String returnForm) {

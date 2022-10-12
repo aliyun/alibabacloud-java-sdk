@@ -4,12 +4,11 @@ package com.aliyun.imageseg20191230.models;
 import com.aliyun.tea.*;
 
 public class RefineMaskAdvanceRequest extends TeaModel {
-    @NameInMap("ImageURLObject")
-    @Validation(required = true)
+    @NameInMap("ImageURL")
     public java.io.InputStream imageURLObject;
 
     @NameInMap("MaskImageURL")
-    public String maskImageURL;
+    public java.io.InputStream maskImageURLObject;
 
     public static RefineMaskAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         RefineMaskAdvanceRequest self = new RefineMaskAdvanceRequest();
@@ -24,12 +23,12 @@ public class RefineMaskAdvanceRequest extends TeaModel {
         return this.imageURLObject;
     }
 
-    public RefineMaskAdvanceRequest setMaskImageURL(String maskImageURL) {
-        this.maskImageURL = maskImageURL;
+    public RefineMaskAdvanceRequest setMaskImageURLObject(java.io.InputStream maskImageURLObject) {
+        this.maskImageURLObject = maskImageURLObject;
         return this;
     }
-    public String getMaskImageURL() {
-        return this.maskImageURL;
+    public java.io.InputStream getMaskImageURLObject() {
+        return this.maskImageURLObject;
     }
 
 }

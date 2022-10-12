@@ -4,8 +4,7 @@ package com.aliyun.imageseg20191230.models;
 import com.aliyun.tea.*;
 
 public class SegmentSkyAdvanceRequest extends TeaModel {
-    @NameInMap("ImageURLObject")
-    @Validation(required = true)
+    @NameInMap("ImageURL")
     public java.io.InputStream imageURLObject;
 
     public static SegmentSkyAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {

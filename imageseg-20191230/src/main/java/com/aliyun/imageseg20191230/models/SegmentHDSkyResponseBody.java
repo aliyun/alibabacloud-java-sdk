@@ -4,23 +4,15 @@ package com.aliyun.imageseg20191230.models;
 import com.aliyun.tea.*;
 
 public class SegmentHDSkyResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public SegmentHDSkyResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static SegmentHDSkyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SegmentHDSkyResponseBody self = new SegmentHDSkyResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public SegmentHDSkyResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public SegmentHDSkyResponseBody setData(SegmentHDSkyResponseBodyData data) {
@@ -29,6 +21,14 @@ public class SegmentHDSkyResponseBody extends TeaModel {
     }
     public SegmentHDSkyResponseBodyData getData() {
         return this.data;
+    }
+
+    public SegmentHDSkyResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class SegmentHDSkyResponseBodyData extends TeaModel {
