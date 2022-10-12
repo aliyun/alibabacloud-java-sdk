@@ -4,15 +4,14 @@ package com.aliyun.imageenhan20190930.models;
 import com.aliyun.tea.*;
 
 public class ImageBlindPicWatermarkAdvanceRequest extends TeaModel {
-    @NameInMap("OriginImageURLObject")
-    @Validation(required = true)
-    public java.io.InputStream originImageURLObject;
-
     @NameInMap("FunctionType")
     public String functionType;
 
     @NameInMap("LogoURL")
-    public String logoURL;
+    public java.io.InputStream logoURLObject;
+
+    @NameInMap("OriginImageURL")
+    public java.io.InputStream originImageURLObject;
 
     @NameInMap("OutputFileType")
     public String outputFileType;
@@ -21,19 +20,11 @@ public class ImageBlindPicWatermarkAdvanceRequest extends TeaModel {
     public Integer qualityFactor;
 
     @NameInMap("WatermarkImageURL")
-    public String watermarkImageURL;
+    public java.io.InputStream watermarkImageURLObject;
 
     public static ImageBlindPicWatermarkAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         ImageBlindPicWatermarkAdvanceRequest self = new ImageBlindPicWatermarkAdvanceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ImageBlindPicWatermarkAdvanceRequest setOriginImageURLObject(java.io.InputStream originImageURLObject) {
-        this.originImageURLObject = originImageURLObject;
-        return this;
-    }
-    public java.io.InputStream getOriginImageURLObject() {
-        return this.originImageURLObject;
     }
 
     public ImageBlindPicWatermarkAdvanceRequest setFunctionType(String functionType) {
@@ -44,12 +35,20 @@ public class ImageBlindPicWatermarkAdvanceRequest extends TeaModel {
         return this.functionType;
     }
 
-    public ImageBlindPicWatermarkAdvanceRequest setLogoURL(String logoURL) {
-        this.logoURL = logoURL;
+    public ImageBlindPicWatermarkAdvanceRequest setLogoURLObject(java.io.InputStream logoURLObject) {
+        this.logoURLObject = logoURLObject;
         return this;
     }
-    public String getLogoURL() {
-        return this.logoURL;
+    public java.io.InputStream getLogoURLObject() {
+        return this.logoURLObject;
+    }
+
+    public ImageBlindPicWatermarkAdvanceRequest setOriginImageURLObject(java.io.InputStream originImageURLObject) {
+        this.originImageURLObject = originImageURLObject;
+        return this;
+    }
+    public java.io.InputStream getOriginImageURLObject() {
+        return this.originImageURLObject;
     }
 
     public ImageBlindPicWatermarkAdvanceRequest setOutputFileType(String outputFileType) {
@@ -68,12 +67,12 @@ public class ImageBlindPicWatermarkAdvanceRequest extends TeaModel {
         return this.qualityFactor;
     }
 
-    public ImageBlindPicWatermarkAdvanceRequest setWatermarkImageURL(String watermarkImageURL) {
-        this.watermarkImageURL = watermarkImageURL;
+    public ImageBlindPicWatermarkAdvanceRequest setWatermarkImageURLObject(java.io.InputStream watermarkImageURLObject) {
+        this.watermarkImageURLObject = watermarkImageURLObject;
         return this;
     }
-    public String getWatermarkImageURL() {
-        return this.watermarkImageURL;
+    public java.io.InputStream getWatermarkImageURLObject() {
+        return this.watermarkImageURLObject;
     }
 
 }

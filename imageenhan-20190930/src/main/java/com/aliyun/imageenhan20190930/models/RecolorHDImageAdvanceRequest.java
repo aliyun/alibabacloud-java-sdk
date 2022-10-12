@@ -4,10 +4,6 @@ package com.aliyun.imageenhan20190930.models;
 import com.aliyun.tea.*;
 
 public class RecolorHDImageAdvanceRequest extends TeaModel {
-    @NameInMap("UrlObject")
-    @Validation(required = true)
-    public java.io.InputStream urlObject;
-
     @NameInMap("ColorCount")
     public Integer colorCount;
 
@@ -21,19 +17,14 @@ public class RecolorHDImageAdvanceRequest extends TeaModel {
     public String mode;
 
     @NameInMap("RefUrl")
-    public String refUrl;
+    public java.io.InputStream refUrlObject;
+
+    @NameInMap("Url")
+    public java.io.InputStream urlObject;
 
     public static RecolorHDImageAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         RecolorHDImageAdvanceRequest self = new RecolorHDImageAdvanceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public RecolorHDImageAdvanceRequest setUrlObject(java.io.InputStream urlObject) {
-        this.urlObject = urlObject;
-        return this;
-    }
-    public java.io.InputStream getUrlObject() {
-        return this.urlObject;
     }
 
     public RecolorHDImageAdvanceRequest setColorCount(Integer colorCount) {
@@ -68,12 +59,20 @@ public class RecolorHDImageAdvanceRequest extends TeaModel {
         return this.mode;
     }
 
-    public RecolorHDImageAdvanceRequest setRefUrl(String refUrl) {
-        this.refUrl = refUrl;
+    public RecolorHDImageAdvanceRequest setRefUrlObject(java.io.InputStream refUrlObject) {
+        this.refUrlObject = refUrlObject;
         return this;
     }
-    public String getRefUrl() {
-        return this.refUrl;
+    public java.io.InputStream getRefUrlObject() {
+        return this.refUrlObject;
+    }
+
+    public RecolorHDImageAdvanceRequest setUrlObject(java.io.InputStream urlObject) {
+        this.urlObject = urlObject;
+        return this;
+    }
+    public java.io.InputStream getUrlObject() {
+        return this.urlObject;
     }
 
     public static class RecolorHDImageAdvanceRequestColorTemplate extends TeaModel {

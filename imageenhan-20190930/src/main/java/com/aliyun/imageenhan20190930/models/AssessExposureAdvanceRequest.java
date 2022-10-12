@@ -4,8 +4,7 @@ package com.aliyun.imageenhan20190930.models;
 import com.aliyun.tea.*;
 
 public class AssessExposureAdvanceRequest extends TeaModel {
-    @NameInMap("ImageURLObject")
-    @Validation(required = true)
+    @NameInMap("ImageURL")
     public java.io.InputStream imageURLObject;
 
     public static AssessExposureAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
