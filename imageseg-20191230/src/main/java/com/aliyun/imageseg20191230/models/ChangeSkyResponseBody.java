@@ -4,23 +4,15 @@ package com.aliyun.imageseg20191230.models;
 import com.aliyun.tea.*;
 
 public class ChangeSkyResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public ChangeSkyResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ChangeSkyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ChangeSkyResponseBody self = new ChangeSkyResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ChangeSkyResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ChangeSkyResponseBody setData(ChangeSkyResponseBodyData data) {
@@ -29,6 +21,14 @@ public class ChangeSkyResponseBody extends TeaModel {
     }
     public ChangeSkyResponseBodyData getData() {
         return this.data;
+    }
+
+    public ChangeSkyResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class ChangeSkyResponseBodyData extends TeaModel {

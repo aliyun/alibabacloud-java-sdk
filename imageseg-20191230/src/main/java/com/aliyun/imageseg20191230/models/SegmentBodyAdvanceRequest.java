@@ -4,12 +4,11 @@ package com.aliyun.imageseg20191230.models;
 import com.aliyun.tea.*;
 
 public class SegmentBodyAdvanceRequest extends TeaModel {
-    @NameInMap("ImageURLObject")
-    @Validation(required = true)
-    public java.io.InputStream imageURLObject;
-
     @NameInMap("Async")
     public Boolean async;
+
+    @NameInMap("ImageURL")
+    public java.io.InputStream imageURLObject;
 
     @NameInMap("ReturnForm")
     public String returnForm;
@@ -19,20 +18,20 @@ public class SegmentBodyAdvanceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public SegmentBodyAdvanceRequest setImageURLObject(java.io.InputStream imageURLObject) {
-        this.imageURLObject = imageURLObject;
-        return this;
-    }
-    public java.io.InputStream getImageURLObject() {
-        return this.imageURLObject;
-    }
-
     public SegmentBodyAdvanceRequest setAsync(Boolean async) {
         this.async = async;
         return this;
     }
     public Boolean getAsync() {
         return this.async;
+    }
+
+    public SegmentBodyAdvanceRequest setImageURLObject(java.io.InputStream imageURLObject) {
+        this.imageURLObject = imageURLObject;
+        return this;
+    }
+    public java.io.InputStream getImageURLObject() {
+        return this.imageURLObject;
     }
 
     public SegmentBodyAdvanceRequest setReturnForm(String returnForm) {

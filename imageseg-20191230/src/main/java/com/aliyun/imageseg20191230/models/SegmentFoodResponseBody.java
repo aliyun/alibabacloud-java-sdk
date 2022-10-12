@@ -4,23 +4,15 @@ package com.aliyun.imageseg20191230.models;
 import com.aliyun.tea.*;
 
 public class SegmentFoodResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public SegmentFoodResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static SegmentFoodResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SegmentFoodResponseBody self = new SegmentFoodResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public SegmentFoodResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public SegmentFoodResponseBody setData(SegmentFoodResponseBodyData data) {
@@ -29,6 +21,14 @@ public class SegmentFoodResponseBody extends TeaModel {
     }
     public SegmentFoodResponseBodyData getData() {
         return this.data;
+    }
+
+    public SegmentFoodResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class SegmentFoodResponseBodyData extends TeaModel {

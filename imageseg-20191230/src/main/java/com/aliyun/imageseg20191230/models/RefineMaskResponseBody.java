@@ -4,23 +4,15 @@ package com.aliyun.imageseg20191230.models;
 import com.aliyun.tea.*;
 
 public class RefineMaskResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public RefineMaskResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static RefineMaskResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RefineMaskResponseBody self = new RefineMaskResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public RefineMaskResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public RefineMaskResponseBody setData(RefineMaskResponseBodyData data) {
@@ -29,6 +21,14 @@ public class RefineMaskResponseBody extends TeaModel {
     }
     public RefineMaskResponseBodyData getData() {
         return this.data;
+    }
+
+    public RefineMaskResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class RefineMaskResponseBodyDataElements extends TeaModel {

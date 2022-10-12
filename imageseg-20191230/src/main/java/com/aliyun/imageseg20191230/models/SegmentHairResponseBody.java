@@ -4,23 +4,15 @@ package com.aliyun.imageseg20191230.models;
 import com.aliyun.tea.*;
 
 public class SegmentHairResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public SegmentHairResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static SegmentHairResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SegmentHairResponseBody self = new SegmentHairResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public SegmentHairResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public SegmentHairResponseBody setData(SegmentHairResponseBodyData data) {
@@ -31,25 +23,41 @@ public class SegmentHairResponseBody extends TeaModel {
         return this.data;
     }
 
+    public SegmentHairResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class SegmentHairResponseBodyDataElements extends TeaModel {
+        @NameInMap("Height")
+        public Integer height;
+
         @NameInMap("ImageURL")
         public String imageURL;
 
         @NameInMap("Width")
         public Integer width;
 
-        @NameInMap("Height")
-        public Integer height;
+        @NameInMap("X")
+        public Integer x;
 
         @NameInMap("Y")
         public Integer y;
 
-        @NameInMap("X")
-        public Integer x;
-
         public static SegmentHairResponseBodyDataElements build(java.util.Map<String, ?> map) throws Exception {
             SegmentHairResponseBodyDataElements self = new SegmentHairResponseBodyDataElements();
             return TeaModel.build(map, self);
+        }
+
+        public SegmentHairResponseBodyDataElements setHeight(Integer height) {
+            this.height = height;
+            return this;
+        }
+        public Integer getHeight() {
+            return this.height;
         }
 
         public SegmentHairResponseBodyDataElements setImageURL(String imageURL) {
@@ -68,12 +76,12 @@ public class SegmentHairResponseBody extends TeaModel {
             return this.width;
         }
 
-        public SegmentHairResponseBodyDataElements setHeight(Integer height) {
-            this.height = height;
+        public SegmentHairResponseBodyDataElements setX(Integer x) {
+            this.x = x;
             return this;
         }
-        public Integer getHeight() {
-            return this.height;
+        public Integer getX() {
+            return this.x;
         }
 
         public SegmentHairResponseBodyDataElements setY(Integer y) {
@@ -82,14 +90,6 @@ public class SegmentHairResponseBody extends TeaModel {
         }
         public Integer getY() {
             return this.y;
-        }
-
-        public SegmentHairResponseBodyDataElements setX(Integer x) {
-            this.x = x;
-            return this;
-        }
-        public Integer getX() {
-            return this.x;
         }
 
     }

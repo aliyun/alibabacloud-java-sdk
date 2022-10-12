@@ -4,23 +4,15 @@ package com.aliyun.imageseg20191230.models;
 import com.aliyun.tea.*;
 
 public class ParseFaceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public ParseFaceResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ParseFaceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ParseFaceResponseBody self = new ParseFaceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ParseFaceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ParseFaceResponseBody setData(ParseFaceResponseBodyData data) {
@@ -29,6 +21,14 @@ public class ParseFaceResponseBody extends TeaModel {
     }
     public ParseFaceResponseBodyData getData() {
         return this.data;
+    }
+
+    public ParseFaceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class ParseFaceResponseBodyDataElements extends TeaModel {
