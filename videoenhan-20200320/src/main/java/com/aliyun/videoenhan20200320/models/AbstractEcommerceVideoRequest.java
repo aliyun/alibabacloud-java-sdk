@@ -4,29 +4,21 @@ package com.aliyun.videoenhan20200320.models;
 import com.aliyun.tea.*;
 
 public class AbstractEcommerceVideoRequest extends TeaModel {
-    @NameInMap("VideoUrl")
-    public String videoUrl;
-
     @NameInMap("Duration")
     public Float duration;
-
-    @NameInMap("Width")
-    public Integer width;
 
     @NameInMap("Height")
     public Integer height;
 
+    @NameInMap("VideoUrl")
+    public String videoUrl;
+
+    @NameInMap("Width")
+    public Integer width;
+
     public static AbstractEcommerceVideoRequest build(java.util.Map<String, ?> map) throws Exception {
         AbstractEcommerceVideoRequest self = new AbstractEcommerceVideoRequest();
         return TeaModel.build(map, self);
-    }
-
-    public AbstractEcommerceVideoRequest setVideoUrl(String videoUrl) {
-        this.videoUrl = videoUrl;
-        return this;
-    }
-    public String getVideoUrl() {
-        return this.videoUrl;
     }
 
     public AbstractEcommerceVideoRequest setDuration(Float duration) {
@@ -37,20 +29,28 @@ public class AbstractEcommerceVideoRequest extends TeaModel {
         return this.duration;
     }
 
-    public AbstractEcommerceVideoRequest setWidth(Integer width) {
-        this.width = width;
-        return this;
-    }
-    public Integer getWidth() {
-        return this.width;
-    }
-
     public AbstractEcommerceVideoRequest setHeight(Integer height) {
         this.height = height;
         return this;
     }
     public Integer getHeight() {
         return this.height;
+    }
+
+    public AbstractEcommerceVideoRequest setVideoUrl(String videoUrl) {
+        this.videoUrl = videoUrl;
+        return this;
+    }
+    public String getVideoUrl() {
+        return this.videoUrl;
+    }
+
+    public AbstractEcommerceVideoRequest setWidth(Integer width) {
+        this.width = width;
+        return this;
+    }
+    public Integer getWidth() {
+        return this.width;
     }
 
 }

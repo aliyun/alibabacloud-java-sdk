@@ -4,23 +4,15 @@ package com.aliyun.videoenhan20200320.models;
 import com.aliyun.tea.*;
 
 public class ConvertHdrVideoResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public ConvertHdrVideoResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ConvertHdrVideoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ConvertHdrVideoResponseBody self = new ConvertHdrVideoResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ConvertHdrVideoResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ConvertHdrVideoResponseBody setData(ConvertHdrVideoResponseBodyData data) {
@@ -29,6 +21,14 @@ public class ConvertHdrVideoResponseBody extends TeaModel {
     }
     public ConvertHdrVideoResponseBodyData getData() {
         return this.data;
+    }
+
+    public ConvertHdrVideoResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class ConvertHdrVideoResponseBodyData extends TeaModel {

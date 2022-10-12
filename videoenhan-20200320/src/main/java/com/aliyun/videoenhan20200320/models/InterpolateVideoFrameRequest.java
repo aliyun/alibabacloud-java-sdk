@@ -4,26 +4,26 @@ package com.aliyun.videoenhan20200320.models;
 import com.aliyun.tea.*;
 
 public class InterpolateVideoFrameRequest extends TeaModel {
-    @NameInMap("VideoURL")
-    public String videoURL;
+    @NameInMap("Bitrate")
+    public Integer bitrate;
 
     @NameInMap("FrameRate")
     public Integer frameRate;
 
-    @NameInMap("Bitrate")
-    public Integer bitrate;
+    @NameInMap("VideoURL")
+    public String videoURL;
 
     public static InterpolateVideoFrameRequest build(java.util.Map<String, ?> map) throws Exception {
         InterpolateVideoFrameRequest self = new InterpolateVideoFrameRequest();
         return TeaModel.build(map, self);
     }
 
-    public InterpolateVideoFrameRequest setVideoURL(String videoURL) {
-        this.videoURL = videoURL;
+    public InterpolateVideoFrameRequest setBitrate(Integer bitrate) {
+        this.bitrate = bitrate;
         return this;
     }
-    public String getVideoURL() {
-        return this.videoURL;
+    public Integer getBitrate() {
+        return this.bitrate;
     }
 
     public InterpolateVideoFrameRequest setFrameRate(Integer frameRate) {
@@ -34,12 +34,12 @@ public class InterpolateVideoFrameRequest extends TeaModel {
         return this.frameRate;
     }
 
-    public InterpolateVideoFrameRequest setBitrate(Integer bitrate) {
-        this.bitrate = bitrate;
+    public InterpolateVideoFrameRequest setVideoURL(String videoURL) {
+        this.videoURL = videoURL;
         return this;
     }
-    public Integer getBitrate() {
-        return this.bitrate;
+    public String getVideoURL() {
+        return this.videoURL;
     }
 
 }

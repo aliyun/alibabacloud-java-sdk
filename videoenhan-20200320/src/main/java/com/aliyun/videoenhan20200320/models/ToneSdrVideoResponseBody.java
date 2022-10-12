@@ -4,23 +4,15 @@ package com.aliyun.videoenhan20200320.models;
 import com.aliyun.tea.*;
 
 public class ToneSdrVideoResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public ToneSdrVideoResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ToneSdrVideoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ToneSdrVideoResponseBody self = new ToneSdrVideoResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ToneSdrVideoResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ToneSdrVideoResponseBody setData(ToneSdrVideoResponseBodyData data) {
@@ -29,6 +21,14 @@ public class ToneSdrVideoResponseBody extends TeaModel {
     }
     public ToneSdrVideoResponseBodyData getData() {
         return this.data;
+    }
+
+    public ToneSdrVideoResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class ToneSdrVideoResponseBodyData extends TeaModel {

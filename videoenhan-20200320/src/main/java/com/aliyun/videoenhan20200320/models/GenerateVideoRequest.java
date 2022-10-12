@@ -4,74 +4,42 @@ package com.aliyun.videoenhan20200320.models;
 import com.aliyun.tea.*;
 
 public class GenerateVideoRequest extends TeaModel {
-    @NameInMap("Scene")
-    public String scene;
-
-    @NameInMap("Width")
-    public Integer width;
-
-    @NameInMap("Height")
-    public Integer height;
-
-    @NameInMap("Style")
-    public String style;
-
     @NameInMap("Duration")
     public Float duration;
 
     @NameInMap("DurationAdaption")
     public Boolean durationAdaption;
 
-    @NameInMap("TransitionStyle")
-    public String transitionStyle;
+    @NameInMap("FileList")
+    public java.util.List<GenerateVideoRequestFileList> fileList;
 
-    @NameInMap("SmartEffect")
-    public Boolean smartEffect;
-
-    @NameInMap("PuzzleEffect")
-    public Boolean puzzleEffect;
+    @NameInMap("Height")
+    public Integer height;
 
     @NameInMap("Mute")
     public Boolean mute;
 
-    @NameInMap("FileList")
-    public java.util.List<GenerateVideoRequestFileList> fileList;
+    @NameInMap("PuzzleEffect")
+    public Boolean puzzleEffect;
+
+    @NameInMap("Scene")
+    public String scene;
+
+    @NameInMap("SmartEffect")
+    public Boolean smartEffect;
+
+    @NameInMap("Style")
+    public String style;
+
+    @NameInMap("TransitionStyle")
+    public String transitionStyle;
+
+    @NameInMap("Width")
+    public Integer width;
 
     public static GenerateVideoRequest build(java.util.Map<String, ?> map) throws Exception {
         GenerateVideoRequest self = new GenerateVideoRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GenerateVideoRequest setScene(String scene) {
-        this.scene = scene;
-        return this;
-    }
-    public String getScene() {
-        return this.scene;
-    }
-
-    public GenerateVideoRequest setWidth(Integer width) {
-        this.width = width;
-        return this;
-    }
-    public Integer getWidth() {
-        return this.width;
-    }
-
-    public GenerateVideoRequest setHeight(Integer height) {
-        this.height = height;
-        return this;
-    }
-    public Integer getHeight() {
-        return this.height;
-    }
-
-    public GenerateVideoRequest setStyle(String style) {
-        this.style = style;
-        return this;
-    }
-    public String getStyle() {
-        return this.style;
     }
 
     public GenerateVideoRequest setDuration(Float duration) {
@@ -90,28 +58,20 @@ public class GenerateVideoRequest extends TeaModel {
         return this.durationAdaption;
     }
 
-    public GenerateVideoRequest setTransitionStyle(String transitionStyle) {
-        this.transitionStyle = transitionStyle;
+    public GenerateVideoRequest setFileList(java.util.List<GenerateVideoRequestFileList> fileList) {
+        this.fileList = fileList;
         return this;
     }
-    public String getTransitionStyle() {
-        return this.transitionStyle;
+    public java.util.List<GenerateVideoRequestFileList> getFileList() {
+        return this.fileList;
     }
 
-    public GenerateVideoRequest setSmartEffect(Boolean smartEffect) {
-        this.smartEffect = smartEffect;
+    public GenerateVideoRequest setHeight(Integer height) {
+        this.height = height;
         return this;
     }
-    public Boolean getSmartEffect() {
-        return this.smartEffect;
-    }
-
-    public GenerateVideoRequest setPuzzleEffect(Boolean puzzleEffect) {
-        this.puzzleEffect = puzzleEffect;
-        return this;
-    }
-    public Boolean getPuzzleEffect() {
-        return this.puzzleEffect;
+    public Integer getHeight() {
+        return this.height;
     }
 
     public GenerateVideoRequest setMute(Boolean mute) {
@@ -122,35 +82,75 @@ public class GenerateVideoRequest extends TeaModel {
         return this.mute;
     }
 
-    public GenerateVideoRequest setFileList(java.util.List<GenerateVideoRequestFileList> fileList) {
-        this.fileList = fileList;
+    public GenerateVideoRequest setPuzzleEffect(Boolean puzzleEffect) {
+        this.puzzleEffect = puzzleEffect;
         return this;
     }
-    public java.util.List<GenerateVideoRequestFileList> getFileList() {
-        return this.fileList;
+    public Boolean getPuzzleEffect() {
+        return this.puzzleEffect;
+    }
+
+    public GenerateVideoRequest setScene(String scene) {
+        this.scene = scene;
+        return this;
+    }
+    public String getScene() {
+        return this.scene;
+    }
+
+    public GenerateVideoRequest setSmartEffect(Boolean smartEffect) {
+        this.smartEffect = smartEffect;
+        return this;
+    }
+    public Boolean getSmartEffect() {
+        return this.smartEffect;
+    }
+
+    public GenerateVideoRequest setStyle(String style) {
+        this.style = style;
+        return this;
+    }
+    public String getStyle() {
+        return this.style;
+    }
+
+    public GenerateVideoRequest setTransitionStyle(String transitionStyle) {
+        this.transitionStyle = transitionStyle;
+        return this;
+    }
+    public String getTransitionStyle() {
+        return this.transitionStyle;
+    }
+
+    public GenerateVideoRequest setWidth(Integer width) {
+        this.width = width;
+        return this;
+    }
+    public Integer getWidth() {
+        return this.width;
     }
 
     public static class GenerateVideoRequestFileList extends TeaModel {
-        @NameInMap("Type")
-        public String type;
+        @NameInMap("FileName")
+        public String fileName;
 
         @NameInMap("FileUrl")
         public String fileUrl;
 
-        @NameInMap("FileName")
-        public String fileName;
+        @NameInMap("Type")
+        public String type;
 
         public static GenerateVideoRequestFileList build(java.util.Map<String, ?> map) throws Exception {
             GenerateVideoRequestFileList self = new GenerateVideoRequestFileList();
             return TeaModel.build(map, self);
         }
 
-        public GenerateVideoRequestFileList setType(String type) {
-            this.type = type;
+        public GenerateVideoRequestFileList setFileName(String fileName) {
+            this.fileName = fileName;
             return this;
         }
-        public String getType() {
-            return this.type;
+        public String getFileName() {
+            return this.fileName;
         }
 
         public GenerateVideoRequestFileList setFileUrl(String fileUrl) {
@@ -161,12 +161,12 @@ public class GenerateVideoRequest extends TeaModel {
             return this.fileUrl;
         }
 
-        public GenerateVideoRequestFileList setFileName(String fileName) {
-            this.fileName = fileName;
+        public GenerateVideoRequestFileList setType(String type) {
+            this.type = type;
             return this;
         }
-        public String getFileName() {
-            return this.fileName;
+        public String getType() {
+            return this.type;
         }
 
     }

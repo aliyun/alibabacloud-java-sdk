@@ -4,8 +4,8 @@ package com.aliyun.videoenhan20200320.models;
 import com.aliyun.tea.*;
 
 public class ConvertHdrVideoRequest extends TeaModel {
-    @NameInMap("VideoURL")
-    public String videoURL;
+    @NameInMap("Bitrate")
+    public Integer bitrate;
 
     @NameInMap("HDRFormat")
     public String HDRFormat;
@@ -13,20 +13,20 @@ public class ConvertHdrVideoRequest extends TeaModel {
     @NameInMap("MaxIlluminance")
     public Integer maxIlluminance;
 
-    @NameInMap("Bitrate")
-    public Integer bitrate;
+    @NameInMap("VideoURL")
+    public String videoURL;
 
     public static ConvertHdrVideoRequest build(java.util.Map<String, ?> map) throws Exception {
         ConvertHdrVideoRequest self = new ConvertHdrVideoRequest();
         return TeaModel.build(map, self);
     }
 
-    public ConvertHdrVideoRequest setVideoURL(String videoURL) {
-        this.videoURL = videoURL;
+    public ConvertHdrVideoRequest setBitrate(Integer bitrate) {
+        this.bitrate = bitrate;
         return this;
     }
-    public String getVideoURL() {
-        return this.videoURL;
+    public Integer getBitrate() {
+        return this.bitrate;
     }
 
     public ConvertHdrVideoRequest setHDRFormat(String HDRFormat) {
@@ -45,12 +45,12 @@ public class ConvertHdrVideoRequest extends TeaModel {
         return this.maxIlluminance;
     }
 
-    public ConvertHdrVideoRequest setBitrate(Integer bitrate) {
-        this.bitrate = bitrate;
+    public ConvertHdrVideoRequest setVideoURL(String videoURL) {
+        this.videoURL = videoURL;
         return this;
     }
-    public Integer getBitrate() {
-        return this.bitrate;
+    public String getVideoURL() {
+        return this.videoURL;
     }
 
 }

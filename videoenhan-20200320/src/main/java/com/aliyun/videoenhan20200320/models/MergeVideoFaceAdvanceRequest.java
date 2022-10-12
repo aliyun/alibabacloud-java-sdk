@@ -4,19 +4,34 @@ package com.aliyun.videoenhan20200320.models;
 import com.aliyun.tea.*;
 
 public class MergeVideoFaceAdvanceRequest extends TeaModel {
-    @NameInMap("VideoURLObject")
-    @Validation(required = true)
-    public java.io.InputStream videoURLObject;
-
     @NameInMap("PostURL")
-    public String postURL;
+    public java.io.InputStream postURLObject;
 
     @NameInMap("ReferenceURL")
-    public String referenceURL;
+    public java.io.InputStream referenceURLObject;
+
+    @NameInMap("VideoURL")
+    public java.io.InputStream videoURLObject;
 
     public static MergeVideoFaceAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         MergeVideoFaceAdvanceRequest self = new MergeVideoFaceAdvanceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public MergeVideoFaceAdvanceRequest setPostURLObject(java.io.InputStream postURLObject) {
+        this.postURLObject = postURLObject;
+        return this;
+    }
+    public java.io.InputStream getPostURLObject() {
+        return this.postURLObject;
+    }
+
+    public MergeVideoFaceAdvanceRequest setReferenceURLObject(java.io.InputStream referenceURLObject) {
+        this.referenceURLObject = referenceURLObject;
+        return this;
+    }
+    public java.io.InputStream getReferenceURLObject() {
+        return this.referenceURLObject;
     }
 
     public MergeVideoFaceAdvanceRequest setVideoURLObject(java.io.InputStream videoURLObject) {
@@ -25,22 +40,6 @@ public class MergeVideoFaceAdvanceRequest extends TeaModel {
     }
     public java.io.InputStream getVideoURLObject() {
         return this.videoURLObject;
-    }
-
-    public MergeVideoFaceAdvanceRequest setPostURL(String postURL) {
-        this.postURL = postURL;
-        return this;
-    }
-    public String getPostURL() {
-        return this.postURL;
-    }
-
-    public MergeVideoFaceAdvanceRequest setReferenceURL(String referenceURL) {
-        this.referenceURL = referenceURL;
-        return this;
-    }
-    public String getReferenceURL() {
-        return this.referenceURL;
     }
 
 }

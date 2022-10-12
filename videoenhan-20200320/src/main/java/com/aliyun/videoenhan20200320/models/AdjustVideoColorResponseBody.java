@@ -4,23 +4,15 @@ package com.aliyun.videoenhan20200320.models;
 import com.aliyun.tea.*;
 
 public class AdjustVideoColorResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public AdjustVideoColorResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static AdjustVideoColorResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AdjustVideoColorResponseBody self = new AdjustVideoColorResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public AdjustVideoColorResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public AdjustVideoColorResponseBody setData(AdjustVideoColorResponseBodyData data) {
@@ -29,6 +21,14 @@ public class AdjustVideoColorResponseBody extends TeaModel {
     }
     public AdjustVideoColorResponseBodyData getData() {
         return this.data;
+    }
+
+    public AdjustVideoColorResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class AdjustVideoColorResponseBodyData extends TeaModel {

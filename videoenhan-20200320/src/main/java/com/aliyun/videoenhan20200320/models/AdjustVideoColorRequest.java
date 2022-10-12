@@ -4,8 +4,8 @@ package com.aliyun.videoenhan20200320.models;
 import com.aliyun.tea.*;
 
 public class AdjustVideoColorRequest extends TeaModel {
-    @NameInMap("VideoUrl")
-    public String videoUrl;
+    @NameInMap("Mode")
+    public String mode;
 
     @NameInMap("VideoBitrate")
     public Long videoBitrate;
@@ -16,20 +16,20 @@ public class AdjustVideoColorRequest extends TeaModel {
     @NameInMap("VideoFormat")
     public String videoFormat;
 
-    @NameInMap("Mode")
-    public String mode;
+    @NameInMap("VideoUrl")
+    public String videoUrl;
 
     public static AdjustVideoColorRequest build(java.util.Map<String, ?> map) throws Exception {
         AdjustVideoColorRequest self = new AdjustVideoColorRequest();
         return TeaModel.build(map, self);
     }
 
-    public AdjustVideoColorRequest setVideoUrl(String videoUrl) {
-        this.videoUrl = videoUrl;
+    public AdjustVideoColorRequest setMode(String mode) {
+        this.mode = mode;
         return this;
     }
-    public String getVideoUrl() {
-        return this.videoUrl;
+    public String getMode() {
+        return this.mode;
     }
 
     public AdjustVideoColorRequest setVideoBitrate(Long videoBitrate) {
@@ -56,12 +56,12 @@ public class AdjustVideoColorRequest extends TeaModel {
         return this.videoFormat;
     }
 
-    public AdjustVideoColorRequest setMode(String mode) {
-        this.mode = mode;
+    public AdjustVideoColorRequest setVideoUrl(String videoUrl) {
+        this.videoUrl = videoUrl;
         return this;
     }
-    public String getMode() {
-        return this.mode;
+    public String getVideoUrl() {
+        return this.videoUrl;
     }
 
 }

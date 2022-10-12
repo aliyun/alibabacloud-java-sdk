@@ -4,23 +4,15 @@ package com.aliyun.videoenhan20200320.models;
 import com.aliyun.tea.*;
 
 public class SuperResolveVideoResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public SuperResolveVideoResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static SuperResolveVideoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SuperResolveVideoResponseBody self = new SuperResolveVideoResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public SuperResolveVideoResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public SuperResolveVideoResponseBody setData(SuperResolveVideoResponseBodyData data) {
@@ -29,6 +21,14 @@ public class SuperResolveVideoResponseBody extends TeaModel {
     }
     public SuperResolveVideoResponseBodyData getData() {
         return this.data;
+    }
+
+    public SuperResolveVideoResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class SuperResolveVideoResponseBodyData extends TeaModel {

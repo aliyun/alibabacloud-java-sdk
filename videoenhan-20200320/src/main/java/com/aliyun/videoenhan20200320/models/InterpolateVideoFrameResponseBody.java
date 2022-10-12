@@ -4,23 +4,15 @@ package com.aliyun.videoenhan20200320.models;
 import com.aliyun.tea.*;
 
 public class InterpolateVideoFrameResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public InterpolateVideoFrameResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static InterpolateVideoFrameResponseBody build(java.util.Map<String, ?> map) throws Exception {
         InterpolateVideoFrameResponseBody self = new InterpolateVideoFrameResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public InterpolateVideoFrameResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public InterpolateVideoFrameResponseBody setData(InterpolateVideoFrameResponseBodyData data) {
@@ -29,6 +21,14 @@ public class InterpolateVideoFrameResponseBody extends TeaModel {
     }
     public InterpolateVideoFrameResponseBodyData getData() {
         return this.data;
+    }
+
+    public InterpolateVideoFrameResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class InterpolateVideoFrameResponseBodyData extends TeaModel {

@@ -4,8 +4,11 @@ package com.aliyun.videoenhan20200320.models;
 import com.aliyun.tea.*;
 
 public class EraseVideoSubtitlesRequest extends TeaModel {
-    @NameInMap("VideoUrl")
-    public String videoUrl;
+    @NameInMap("BH")
+    public Float BH;
+
+    @NameInMap("BW")
+    public Float BW;
 
     @NameInMap("BX")
     public Float BX;
@@ -13,23 +16,28 @@ public class EraseVideoSubtitlesRequest extends TeaModel {
     @NameInMap("BY")
     public Float BY;
 
-    @NameInMap("BW")
-    public Float BW;
-
-    @NameInMap("BH")
-    public Float BH;
+    @NameInMap("VideoUrl")
+    public String videoUrl;
 
     public static EraseVideoSubtitlesRequest build(java.util.Map<String, ?> map) throws Exception {
         EraseVideoSubtitlesRequest self = new EraseVideoSubtitlesRequest();
         return TeaModel.build(map, self);
     }
 
-    public EraseVideoSubtitlesRequest setVideoUrl(String videoUrl) {
-        this.videoUrl = videoUrl;
+    public EraseVideoSubtitlesRequest setBH(Float BH) {
+        this.BH = BH;
         return this;
     }
-    public String getVideoUrl() {
-        return this.videoUrl;
+    public Float getBH() {
+        return this.BH;
+    }
+
+    public EraseVideoSubtitlesRequest setBW(Float BW) {
+        this.BW = BW;
+        return this;
+    }
+    public Float getBW() {
+        return this.BW;
     }
 
     public EraseVideoSubtitlesRequest setBX(Float BX) {
@@ -48,20 +56,12 @@ public class EraseVideoSubtitlesRequest extends TeaModel {
         return this.BY;
     }
 
-    public EraseVideoSubtitlesRequest setBW(Float BW) {
-        this.BW = BW;
+    public EraseVideoSubtitlesRequest setVideoUrl(String videoUrl) {
+        this.videoUrl = videoUrl;
         return this;
     }
-    public Float getBW() {
-        return this.BW;
-    }
-
-    public EraseVideoSubtitlesRequest setBH(Float BH) {
-        this.BH = BH;
-        return this;
-    }
-    public Float getBH() {
-        return this.BH;
+    public String getVideoUrl() {
+        return this.videoUrl;
     }
 
 }

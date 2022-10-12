@@ -4,14 +4,8 @@ package com.aliyun.videoenhan20200320.models;
 import com.aliyun.tea.*;
 
 public class EnhanceVideoQualityRequest extends TeaModel {
-    @NameInMap("VideoURL")
-    public String videoURL;
-
-    @NameInMap("OutPutWidth")
-    public Integer outPutWidth;
-
-    @NameInMap("OutPutHeight")
-    public Integer outPutHeight;
+    @NameInMap("Bitrate")
+    public Integer bitrate;
 
     @NameInMap("FrameRate")
     public Integer frameRate;
@@ -22,36 +16,26 @@ public class EnhanceVideoQualityRequest extends TeaModel {
     @NameInMap("MaxIlluminance")
     public Integer maxIlluminance;
 
-    @NameInMap("Bitrate")
-    public Integer bitrate;
+    @NameInMap("OutPutHeight")
+    public Integer outPutHeight;
+
+    @NameInMap("OutPutWidth")
+    public Integer outPutWidth;
+
+    @NameInMap("VideoURL")
+    public String videoURL;
 
     public static EnhanceVideoQualityRequest build(java.util.Map<String, ?> map) throws Exception {
         EnhanceVideoQualityRequest self = new EnhanceVideoQualityRequest();
         return TeaModel.build(map, self);
     }
 
-    public EnhanceVideoQualityRequest setVideoURL(String videoURL) {
-        this.videoURL = videoURL;
+    public EnhanceVideoQualityRequest setBitrate(Integer bitrate) {
+        this.bitrate = bitrate;
         return this;
     }
-    public String getVideoURL() {
-        return this.videoURL;
-    }
-
-    public EnhanceVideoQualityRequest setOutPutWidth(Integer outPutWidth) {
-        this.outPutWidth = outPutWidth;
-        return this;
-    }
-    public Integer getOutPutWidth() {
-        return this.outPutWidth;
-    }
-
-    public EnhanceVideoQualityRequest setOutPutHeight(Integer outPutHeight) {
-        this.outPutHeight = outPutHeight;
-        return this;
-    }
-    public Integer getOutPutHeight() {
-        return this.outPutHeight;
+    public Integer getBitrate() {
+        return this.bitrate;
     }
 
     public EnhanceVideoQualityRequest setFrameRate(Integer frameRate) {
@@ -78,12 +62,28 @@ public class EnhanceVideoQualityRequest extends TeaModel {
         return this.maxIlluminance;
     }
 
-    public EnhanceVideoQualityRequest setBitrate(Integer bitrate) {
-        this.bitrate = bitrate;
+    public EnhanceVideoQualityRequest setOutPutHeight(Integer outPutHeight) {
+        this.outPutHeight = outPutHeight;
         return this;
     }
-    public Integer getBitrate() {
-        return this.bitrate;
+    public Integer getOutPutHeight() {
+        return this.outPutHeight;
+    }
+
+    public EnhanceVideoQualityRequest setOutPutWidth(Integer outPutWidth) {
+        this.outPutWidth = outPutWidth;
+        return this;
+    }
+    public Integer getOutPutWidth() {
+        return this.outPutWidth;
+    }
+
+    public EnhanceVideoQualityRequest setVideoURL(String videoURL) {
+        this.videoURL = videoURL;
+        return this;
+    }
+    public String getVideoURL() {
+        return this.videoURL;
     }
 
 }

@@ -4,23 +4,15 @@ package com.aliyun.videoenhan20200320.models;
 import com.aliyun.tea.*;
 
 public class ChangeVideoSizeResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public ChangeVideoSizeResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ChangeVideoSizeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ChangeVideoSizeResponseBody self = new ChangeVideoSizeResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ChangeVideoSizeResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ChangeVideoSizeResponseBody setData(ChangeVideoSizeResponseBodyData data) {
@@ -29,6 +21,14 @@ public class ChangeVideoSizeResponseBody extends TeaModel {
     }
     public ChangeVideoSizeResponseBodyData getData() {
         return this.data;
+    }
+
+    public ChangeVideoSizeResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class ChangeVideoSizeResponseBodyData extends TeaModel {

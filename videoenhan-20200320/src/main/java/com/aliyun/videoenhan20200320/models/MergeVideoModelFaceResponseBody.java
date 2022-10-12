@@ -4,24 +4,15 @@ package com.aliyun.videoenhan20200320.models;
 import com.aliyun.tea.*;
 
 public class MergeVideoModelFaceResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public MergeVideoModelFaceResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static MergeVideoModelFaceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         MergeVideoModelFaceResponseBody self = new MergeVideoModelFaceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public MergeVideoModelFaceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public MergeVideoModelFaceResponseBody setData(MergeVideoModelFaceResponseBodyData data) {
@@ -30,6 +21,14 @@ public class MergeVideoModelFaceResponseBody extends TeaModel {
     }
     public MergeVideoModelFaceResponseBodyData getData() {
         return this.data;
+    }
+
+    public MergeVideoModelFaceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class MergeVideoModelFaceResponseBodyData extends TeaModel {

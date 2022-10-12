@@ -4,9 +4,11 @@ package com.aliyun.videoenhan20200320.models;
 import com.aliyun.tea.*;
 
 public class EraseVideoSubtitlesAdvanceRequest extends TeaModel {
-    @NameInMap("VideoUrlObject")
-    @Validation(required = true)
-    public java.io.InputStream videoUrlObject;
+    @NameInMap("BH")
+    public Float BH;
+
+    @NameInMap("BW")
+    public Float BW;
 
     @NameInMap("BX")
     public Float BX;
@@ -14,23 +16,28 @@ public class EraseVideoSubtitlesAdvanceRequest extends TeaModel {
     @NameInMap("BY")
     public Float BY;
 
-    @NameInMap("BW")
-    public Float BW;
-
-    @NameInMap("BH")
-    public Float BH;
+    @NameInMap("VideoUrl")
+    public java.io.InputStream videoUrlObject;
 
     public static EraseVideoSubtitlesAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         EraseVideoSubtitlesAdvanceRequest self = new EraseVideoSubtitlesAdvanceRequest();
         return TeaModel.build(map, self);
     }
 
-    public EraseVideoSubtitlesAdvanceRequest setVideoUrlObject(java.io.InputStream videoUrlObject) {
-        this.videoUrlObject = videoUrlObject;
+    public EraseVideoSubtitlesAdvanceRequest setBH(Float BH) {
+        this.BH = BH;
         return this;
     }
-    public java.io.InputStream getVideoUrlObject() {
-        return this.videoUrlObject;
+    public Float getBH() {
+        return this.BH;
+    }
+
+    public EraseVideoSubtitlesAdvanceRequest setBW(Float BW) {
+        this.BW = BW;
+        return this;
+    }
+    public Float getBW() {
+        return this.BW;
     }
 
     public EraseVideoSubtitlesAdvanceRequest setBX(Float BX) {
@@ -49,20 +56,12 @@ public class EraseVideoSubtitlesAdvanceRequest extends TeaModel {
         return this.BY;
     }
 
-    public EraseVideoSubtitlesAdvanceRequest setBW(Float BW) {
-        this.BW = BW;
+    public EraseVideoSubtitlesAdvanceRequest setVideoUrlObject(java.io.InputStream videoUrlObject) {
+        this.videoUrlObject = videoUrlObject;
         return this;
     }
-    public Float getBW() {
-        return this.BW;
-    }
-
-    public EraseVideoSubtitlesAdvanceRequest setBH(Float BH) {
-        this.BH = BH;
-        return this;
-    }
-    public Float getBH() {
-        return this.BH;
+    public java.io.InputStream getVideoUrlObject() {
+        return this.videoUrlObject;
     }
 
 }

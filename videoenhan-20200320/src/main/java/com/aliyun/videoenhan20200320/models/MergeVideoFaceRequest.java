@@ -4,26 +4,18 @@ package com.aliyun.videoenhan20200320.models;
 import com.aliyun.tea.*;
 
 public class MergeVideoFaceRequest extends TeaModel {
-    @NameInMap("VideoURL")
-    public String videoURL;
-
     @NameInMap("PostURL")
     public String postURL;
 
     @NameInMap("ReferenceURL")
     public String referenceURL;
 
+    @NameInMap("VideoURL")
+    public String videoURL;
+
     public static MergeVideoFaceRequest build(java.util.Map<String, ?> map) throws Exception {
         MergeVideoFaceRequest self = new MergeVideoFaceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public MergeVideoFaceRequest setVideoURL(String videoURL) {
-        this.videoURL = videoURL;
-        return this;
-    }
-    public String getVideoURL() {
-        return this.videoURL;
     }
 
     public MergeVideoFaceRequest setPostURL(String postURL) {
@@ -40,6 +32,14 @@ public class MergeVideoFaceRequest extends TeaModel {
     }
     public String getReferenceURL() {
         return this.referenceURL;
+    }
+
+    public MergeVideoFaceRequest setVideoURL(String videoURL) {
+        this.videoURL = videoURL;
+        return this;
+    }
+    public String getVideoURL() {
+        return this.videoURL;
     }
 
 }

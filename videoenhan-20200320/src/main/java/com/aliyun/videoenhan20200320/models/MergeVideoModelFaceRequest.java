@@ -4,27 +4,26 @@ package com.aliyun.videoenhan20200320.models;
 import com.aliyun.tea.*;
 
 public class MergeVideoModelFaceRequest extends TeaModel {
-    // A short description of struct
-    @NameInMap("UserId")
-    public String userId;
+    @NameInMap("FaceImageURL")
+    public String faceImageURL;
 
     @NameInMap("TemplateId")
     public String templateId;
 
-    @NameInMap("FaceImageURL")
-    public String faceImageURL;
+    @NameInMap("UserId")
+    public String userId;
 
     public static MergeVideoModelFaceRequest build(java.util.Map<String, ?> map) throws Exception {
         MergeVideoModelFaceRequest self = new MergeVideoModelFaceRequest();
         return TeaModel.build(map, self);
     }
 
-    public MergeVideoModelFaceRequest setUserId(String userId) {
-        this.userId = userId;
+    public MergeVideoModelFaceRequest setFaceImageURL(String faceImageURL) {
+        this.faceImageURL = faceImageURL;
         return this;
     }
-    public String getUserId() {
-        return this.userId;
+    public String getFaceImageURL() {
+        return this.faceImageURL;
     }
 
     public MergeVideoModelFaceRequest setTemplateId(String templateId) {
@@ -35,12 +34,12 @@ public class MergeVideoModelFaceRequest extends TeaModel {
         return this.templateId;
     }
 
-    public MergeVideoModelFaceRequest setFaceImageURL(String faceImageURL) {
-        this.faceImageURL = faceImageURL;
+    public MergeVideoModelFaceRequest setUserId(String userId) {
+        this.userId = userId;
         return this;
     }
-    public String getFaceImageURL() {
-        return this.faceImageURL;
+    public String getUserId() {
+        return this.userId;
     }
 
 }

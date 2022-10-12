@@ -4,15 +4,8 @@ package com.aliyun.videoenhan20200320.models;
 import com.aliyun.tea.*;
 
 public class ChangeVideoSizeAdvanceRequest extends TeaModel {
-    @NameInMap("VideoUrlObject")
-    @Validation(required = true)
-    public java.io.InputStream videoUrlObject;
-
-    @NameInMap("Width")
-    public Integer width;
-
-    @NameInMap("Height")
-    public Integer height;
+    @NameInMap("B")
+    public Integer b;
 
     @NameInMap("CropType")
     public String cropType;
@@ -20,45 +13,35 @@ public class ChangeVideoSizeAdvanceRequest extends TeaModel {
     @NameInMap("FillType")
     public String fillType;
 
-    @NameInMap("Tightness")
-    public Float tightness;
+    @NameInMap("G")
+    public Integer g;
+
+    @NameInMap("Height")
+    public Integer height;
 
     @NameInMap("R")
     public Integer r;
 
-    @NameInMap("G")
-    public Integer g;
+    @NameInMap("Tightness")
+    public Float tightness;
 
-    @NameInMap("B")
-    public Integer b;
+    @NameInMap("VideoUrl")
+    public java.io.InputStream videoUrlObject;
+
+    @NameInMap("Width")
+    public Integer width;
 
     public static ChangeVideoSizeAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         ChangeVideoSizeAdvanceRequest self = new ChangeVideoSizeAdvanceRequest();
         return TeaModel.build(map, self);
     }
 
-    public ChangeVideoSizeAdvanceRequest setVideoUrlObject(java.io.InputStream videoUrlObject) {
-        this.videoUrlObject = videoUrlObject;
+    public ChangeVideoSizeAdvanceRequest setB(Integer b) {
+        this.b = b;
         return this;
     }
-    public java.io.InputStream getVideoUrlObject() {
-        return this.videoUrlObject;
-    }
-
-    public ChangeVideoSizeAdvanceRequest setWidth(Integer width) {
-        this.width = width;
-        return this;
-    }
-    public Integer getWidth() {
-        return this.width;
-    }
-
-    public ChangeVideoSizeAdvanceRequest setHeight(Integer height) {
-        this.height = height;
-        return this;
-    }
-    public Integer getHeight() {
-        return this.height;
+    public Integer getB() {
+        return this.b;
     }
 
     public ChangeVideoSizeAdvanceRequest setCropType(String cropType) {
@@ -77,12 +60,20 @@ public class ChangeVideoSizeAdvanceRequest extends TeaModel {
         return this.fillType;
     }
 
-    public ChangeVideoSizeAdvanceRequest setTightness(Float tightness) {
-        this.tightness = tightness;
+    public ChangeVideoSizeAdvanceRequest setG(Integer g) {
+        this.g = g;
         return this;
     }
-    public Float getTightness() {
-        return this.tightness;
+    public Integer getG() {
+        return this.g;
+    }
+
+    public ChangeVideoSizeAdvanceRequest setHeight(Integer height) {
+        this.height = height;
+        return this;
+    }
+    public Integer getHeight() {
+        return this.height;
     }
 
     public ChangeVideoSizeAdvanceRequest setR(Integer r) {
@@ -93,20 +84,28 @@ public class ChangeVideoSizeAdvanceRequest extends TeaModel {
         return this.r;
     }
 
-    public ChangeVideoSizeAdvanceRequest setG(Integer g) {
-        this.g = g;
+    public ChangeVideoSizeAdvanceRequest setTightness(Float tightness) {
+        this.tightness = tightness;
         return this;
     }
-    public Integer getG() {
-        return this.g;
+    public Float getTightness() {
+        return this.tightness;
     }
 
-    public ChangeVideoSizeAdvanceRequest setB(Integer b) {
-        this.b = b;
+    public ChangeVideoSizeAdvanceRequest setVideoUrlObject(java.io.InputStream videoUrlObject) {
+        this.videoUrlObject = videoUrlObject;
         return this;
     }
-    public Integer getB() {
-        return this.b;
+    public java.io.InputStream getVideoUrlObject() {
+        return this.videoUrlObject;
+    }
+
+    public ChangeVideoSizeAdvanceRequest setWidth(Integer width) {
+        this.width = width;
+        return this;
+    }
+    public Integer getWidth() {
+        return this.width;
     }
 
 }
