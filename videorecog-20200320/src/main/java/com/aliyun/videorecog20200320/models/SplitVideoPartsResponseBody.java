@@ -7,7 +7,6 @@ public class SplitVideoPartsResponseBody extends TeaModel {
     @NameInMap("Data")
     public SplitVideoPartsResponseBodyData data;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

@@ -7,7 +7,6 @@ public class UnderstandVideoContentResponseBody extends TeaModel {
     @NameInMap("Data")
     public UnderstandVideoContentResponseBodyData data;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

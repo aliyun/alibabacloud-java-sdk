@@ -4,24 +4,15 @@ package com.aliyun.videorecog20200320.models;
 import com.aliyun.tea.*;
 
 public class GenerateVideoCoverAdvanceRequest extends TeaModel {
-    @NameInMap("VideoUrlObject")
-    @Validation(required = true)
-    public java.io.InputStream videoUrlObject;
-
     @NameInMap("IsGif")
     public Boolean isGif;
+
+    @NameInMap("VideoUrl")
+    public java.io.InputStream videoUrlObject;
 
     public static GenerateVideoCoverAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         GenerateVideoCoverAdvanceRequest self = new GenerateVideoCoverAdvanceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GenerateVideoCoverAdvanceRequest setVideoUrlObject(java.io.InputStream videoUrlObject) {
-        this.videoUrlObject = videoUrlObject;
-        return this;
-    }
-    public java.io.InputStream getVideoUrlObject() {
-        return this.videoUrlObject;
     }
 
     public GenerateVideoCoverAdvanceRequest setIsGif(Boolean isGif) {
@@ -30,6 +21,14 @@ public class GenerateVideoCoverAdvanceRequest extends TeaModel {
     }
     public Boolean getIsGif() {
         return this.isGif;
+    }
+
+    public GenerateVideoCoverAdvanceRequest setVideoUrlObject(java.io.InputStream videoUrlObject) {
+        this.videoUrlObject = videoUrlObject;
+        return this;
+    }
+    public java.io.InputStream getVideoUrlObject() {
+        return this.videoUrlObject;
     }
 
 }

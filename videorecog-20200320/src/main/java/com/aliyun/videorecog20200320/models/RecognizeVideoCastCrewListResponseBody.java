@@ -7,7 +7,6 @@ public class RecognizeVideoCastCrewListResponseBody extends TeaModel {
     @NameInMap("Data")
     public RecognizeVideoCastCrewListResponseBodyData data;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -466,6 +465,12 @@ public class RecognizeVideoCastCrewListResponseBody extends TeaModel {
         @NameInMap("OcrResults")
         public java.util.List<RecognizeVideoCastCrewListResponseBodyDataOcrResults> ocrResults;
 
+        @NameInMap("OcrResultsUrl")
+        public String ocrResultsUrl;
+
+        @NameInMap("OcrVideoResultsUrl")
+        public String ocrVideoResultsUrl;
+
         @NameInMap("SubtitlesResults")
         public java.util.List<RecognizeVideoCastCrewListResponseBodyDataSubtitlesResults> subtitlesResults;
 
@@ -491,6 +496,22 @@ public class RecognizeVideoCastCrewListResponseBody extends TeaModel {
         }
         public java.util.List<RecognizeVideoCastCrewListResponseBodyDataOcrResults> getOcrResults() {
             return this.ocrResults;
+        }
+
+        public RecognizeVideoCastCrewListResponseBodyData setOcrResultsUrl(String ocrResultsUrl) {
+            this.ocrResultsUrl = ocrResultsUrl;
+            return this;
+        }
+        public String getOcrResultsUrl() {
+            return this.ocrResultsUrl;
+        }
+
+        public RecognizeVideoCastCrewListResponseBodyData setOcrVideoResultsUrl(String ocrVideoResultsUrl) {
+            this.ocrVideoResultsUrl = ocrVideoResultsUrl;
+            return this;
+        }
+        public String getOcrVideoResultsUrl() {
+            return this.ocrVideoResultsUrl;
         }
 
         public RecognizeVideoCastCrewListResponseBodyData setSubtitlesResults(java.util.List<RecognizeVideoCastCrewListResponseBodyDataSubtitlesResults> subtitlesResults) {

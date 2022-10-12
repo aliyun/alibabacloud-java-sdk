@@ -4,8 +4,7 @@ package com.aliyun.videorecog20200320.models;
 import com.aliyun.tea.*;
 
 public class UnderstandVideoContentAdvanceRequest extends TeaModel {
-    @NameInMap("VideoURLObject")
-    @Validation(required = true)
+    @NameInMap("VideoURL")
     public java.io.InputStream videoURLObject;
 
     public static UnderstandVideoContentAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
