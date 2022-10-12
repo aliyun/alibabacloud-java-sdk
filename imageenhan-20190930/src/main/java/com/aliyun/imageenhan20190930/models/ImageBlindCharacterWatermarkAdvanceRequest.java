@@ -4,12 +4,11 @@ package com.aliyun.imageenhan20190930.models;
 import com.aliyun.tea.*;
 
 public class ImageBlindCharacterWatermarkAdvanceRequest extends TeaModel {
-    @NameInMap("OriginImageURLObject")
-    @Validation(required = true)
-    public java.io.InputStream originImageURLObject;
-
     @NameInMap("FunctionType")
     public String functionType;
+
+    @NameInMap("OriginImageURL")
+    public java.io.InputStream originImageURLObject;
 
     @NameInMap("OutputFileType")
     public String outputFileType;
@@ -21,19 +20,11 @@ public class ImageBlindCharacterWatermarkAdvanceRequest extends TeaModel {
     public String text;
 
     @NameInMap("WatermarkImageURL")
-    public String watermarkImageURL;
+    public java.io.InputStream watermarkImageURLObject;
 
     public static ImageBlindCharacterWatermarkAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         ImageBlindCharacterWatermarkAdvanceRequest self = new ImageBlindCharacterWatermarkAdvanceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ImageBlindCharacterWatermarkAdvanceRequest setOriginImageURLObject(java.io.InputStream originImageURLObject) {
-        this.originImageURLObject = originImageURLObject;
-        return this;
-    }
-    public java.io.InputStream getOriginImageURLObject() {
-        return this.originImageURLObject;
     }
 
     public ImageBlindCharacterWatermarkAdvanceRequest setFunctionType(String functionType) {
@@ -42,6 +33,14 @@ public class ImageBlindCharacterWatermarkAdvanceRequest extends TeaModel {
     }
     public String getFunctionType() {
         return this.functionType;
+    }
+
+    public ImageBlindCharacterWatermarkAdvanceRequest setOriginImageURLObject(java.io.InputStream originImageURLObject) {
+        this.originImageURLObject = originImageURLObject;
+        return this;
+    }
+    public java.io.InputStream getOriginImageURLObject() {
+        return this.originImageURLObject;
     }
 
     public ImageBlindCharacterWatermarkAdvanceRequest setOutputFileType(String outputFileType) {
@@ -68,12 +67,12 @@ public class ImageBlindCharacterWatermarkAdvanceRequest extends TeaModel {
         return this.text;
     }
 
-    public ImageBlindCharacterWatermarkAdvanceRequest setWatermarkImageURL(String watermarkImageURL) {
-        this.watermarkImageURL = watermarkImageURL;
+    public ImageBlindCharacterWatermarkAdvanceRequest setWatermarkImageURLObject(java.io.InputStream watermarkImageURLObject) {
+        this.watermarkImageURLObject = watermarkImageURLObject;
         return this;
     }
-    public String getWatermarkImageURL() {
-        return this.watermarkImageURL;
+    public java.io.InputStream getWatermarkImageURLObject() {
+        return this.watermarkImageURLObject;
     }
 
 }
