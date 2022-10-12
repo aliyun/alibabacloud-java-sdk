@@ -7,7 +7,6 @@ public class DetectVehicleICongestionResponseBody extends TeaModel {
     @NameInMap("Data")
     public DetectVehicleICongestionResponseBodyData data;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

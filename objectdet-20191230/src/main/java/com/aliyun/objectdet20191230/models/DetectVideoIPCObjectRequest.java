@@ -4,15 +4,12 @@ package com.aliyun.objectdet20191230.models;
 import com.aliyun.tea.*;
 
 public class DetectVideoIPCObjectRequest extends TeaModel {
-    // 是否只有检测到物体才回调
     @NameInMap("CallbackOnlyHasObject")
     public Boolean callbackOnlyHasObject;
 
-    // 视频的开始时间戳(秒)，即UTC时间，默认为0
     @NameInMap("StartTimestamp")
     public Long startTimestamp;
 
-    // 视频文件URL地址
     @NameInMap("VideoURL")
     public String videoURL;
 

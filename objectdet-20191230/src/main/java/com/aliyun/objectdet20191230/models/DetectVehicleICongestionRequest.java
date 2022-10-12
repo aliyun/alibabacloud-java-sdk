@@ -4,7 +4,6 @@ package com.aliyun.objectdet20191230.models;
 import com.aliyun.tea.*;
 
 public class DetectVehicleICongestionRequest extends TeaModel {
-    // A short description of struct
     @NameInMap("ImageURL")
     public String imageURL;
 

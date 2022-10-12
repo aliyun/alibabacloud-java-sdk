@@ -7,7 +7,6 @@ public class DetectVehicleIllegalParkingResponseBody extends TeaModel {
     @NameInMap("Data")
     public DetectVehicleIllegalParkingResponseBodyData data;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

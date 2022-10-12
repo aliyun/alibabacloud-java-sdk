@@ -4,35 +4,27 @@ package com.aliyun.objectdet20191230.models;
 import com.aliyun.tea.*;
 
 public class DetectVideoFrameRequest extends TeaModel {
-    // 图片创建时间
     @NameInMap("CreateTime")
     public Long createTime;
 
-    // AI每个功能具体配置描述，每个AI算法配置都不一样
     @NameInMap("FeatureConfig")
     public String featureConfig;
 
-    // AI功能名称列表
     @NameInMap("Features")
     public java.util.List<String> features;
 
-    // 图像高度
     @NameInMap("Height")
     public Long height;
 
-    // 图片URL地址
     @NameInMap("ImageURL")
     public String imageURL;
 
-    // 自用拥有者pk
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // 流资源唯一描述
     @NameInMap("StreamArn")
     public String streamArn;
 
-    // 图像宽度
     @NameInMap("Width")
     public Long width;
 

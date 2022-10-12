@@ -4,7 +4,6 @@ package com.aliyun.objectdet20191230.models;
 import com.aliyun.tea.*;
 
 public class DetectIPCObjectRequest extends TeaModel {
-    // 图片URL地址
     @NameInMap("ImageURL")
     public String imageURL;
 

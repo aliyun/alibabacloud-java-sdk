@@ -4,12 +4,11 @@ package com.aliyun.objectdet20191230.models;
 import com.aliyun.tea.*;
 
 public class DetectWorkwearAdvanceRequest extends TeaModel {
-    @NameInMap("ImageUrlObject")
-    @Validation(required = true)
-    public java.io.InputStream imageUrlObject;
-
     @NameInMap("Clothes")
     public DetectWorkwearAdvanceRequestClothes clothes;
+
+    @NameInMap("ImageUrl")
+    public java.io.InputStream imageUrlObject;
 
     @NameInMap("Labels")
     public java.util.List<String> labels;
@@ -19,20 +18,20 @@ public class DetectWorkwearAdvanceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DetectWorkwearAdvanceRequest setImageUrlObject(java.io.InputStream imageUrlObject) {
-        this.imageUrlObject = imageUrlObject;
-        return this;
-    }
-    public java.io.InputStream getImageUrlObject() {
-        return this.imageUrlObject;
-    }
-
     public DetectWorkwearAdvanceRequest setClothes(DetectWorkwearAdvanceRequestClothes clothes) {
         this.clothes = clothes;
         return this;
     }
     public DetectWorkwearAdvanceRequestClothes getClothes() {
         return this.clothes;
+    }
+
+    public DetectWorkwearAdvanceRequest setImageUrlObject(java.io.InputStream imageUrlObject) {
+        this.imageUrlObject = imageUrlObject;
+        return this;
+    }
+    public java.io.InputStream getImageUrlObject() {
+        return this.imageUrlObject;
     }
 
     public DetectWorkwearAdvanceRequest setLabels(java.util.List<String> labels) {
