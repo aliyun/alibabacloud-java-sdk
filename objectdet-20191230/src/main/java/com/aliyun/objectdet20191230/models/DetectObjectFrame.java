@@ -4,11 +4,9 @@ package com.aliyun.objectdet20191230.models;
 import com.aliyun.tea.*;
 
 public class DetectObjectFrame extends TeaModel {
-    // 结果集
     @NameInMap("Elements")
     public java.util.List<DetectObjectElement> elements;
 
-    // 时间
     @NameInMap("Time")
     public Long time;
 

@@ -7,7 +7,6 @@ public class DetectVideoFrameResponseBody extends TeaModel {
     @NameInMap("Data")
     public DetectVideoFrameResponseBodyData data;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -33,7 +32,6 @@ public class DetectVideoFrameResponseBody extends TeaModel {
     }
 
     public static class DetectVideoFrameResponseBodyData extends TeaModel {
-        // Id of the request
         @NameInMap("RequestId")
         public String requestId;
 

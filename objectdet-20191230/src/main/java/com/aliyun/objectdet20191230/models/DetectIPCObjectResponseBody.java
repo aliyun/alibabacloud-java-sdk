@@ -7,7 +7,6 @@ public class DetectIPCObjectResponseBody extends TeaModel {
     @NameInMap("Data")
     public DetectIPCObjectResponseBodyData data;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

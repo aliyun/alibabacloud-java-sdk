@@ -7,7 +7,6 @@ public class DetectVideoIPCObjectResponseBody extends TeaModel {
     @NameInMap("Data")
     public DetectVideoIPCObjectResponseBodyData data;
 
-    // JobId
     @NameInMap("RequestId")
     public String requestId;
 
@@ -110,7 +109,6 @@ public class DetectVideoIPCObjectResponseBody extends TeaModel {
         @NameInMap("Elements")
         public java.util.List<DetectVideoIPCObjectResponseBodyDataFramesElements> elements;
 
-        // 视频帧时间，startTimestamp+视频帧的相对时间的值，单位毫秒，如果startTimestamp为空，则是相对时间
         @NameInMap("Time")
         public Long time;
 
@@ -138,19 +136,15 @@ public class DetectVideoIPCObjectResponseBody extends TeaModel {
     }
 
     public static class DetectVideoIPCObjectResponseBodyData extends TeaModel {
-        // 视频帧的集合，未检测到目标的帧不列出
         @NameInMap("Frames")
         public java.util.List<DetectVideoIPCObjectResponseBodyDataFrames> frames;
 
-        // 视频文件的分辨率(像素)
         @NameInMap("Height")
         public Long height;
 
-        // 输入文件信息
         @NameInMap("InputFile")
         public String inputFile;
 
-        // 视频文件的分辨率(像素)
         @NameInMap("Width")
         public Long width;
 

@@ -4,8 +4,7 @@ package com.aliyun.objectdet20191230.models;
 import com.aliyun.tea.*;
 
 public class RecognizeVehiclePartsAdvanceRequest extends TeaModel {
-    @NameInMap("ImageURLObject")
-    @Validation(required = true)
+    @NameInMap("ImageURL")
     public java.io.InputStream imageURLObject;
 
     public static RecognizeVehiclePartsAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {

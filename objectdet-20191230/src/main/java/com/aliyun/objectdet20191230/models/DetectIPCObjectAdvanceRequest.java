@@ -3,16 +3,16 @@ package com.aliyun.objectdet20191230.models;
 
 import com.aliyun.tea.*;
 
-public class DetectObjectAdvanceRequest extends TeaModel {
+public class DetectIPCObjectAdvanceRequest extends TeaModel {
     @NameInMap("ImageURL")
     public java.io.InputStream imageURLObject;
 
-    public static DetectObjectAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
-        DetectObjectAdvanceRequest self = new DetectObjectAdvanceRequest();
+    public static DetectIPCObjectAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
+        DetectIPCObjectAdvanceRequest self = new DetectIPCObjectAdvanceRequest();
         return TeaModel.build(map, self);
     }
 
-    public DetectObjectAdvanceRequest setImageURLObject(java.io.InputStream imageURLObject) {
+    public DetectIPCObjectAdvanceRequest setImageURLObject(java.io.InputStream imageURLObject) {
         this.imageURLObject = imageURLObject;
         return this;
     }

@@ -4,12 +4,11 @@ package com.aliyun.objectdet20191230.models;
 import com.aliyun.tea.*;
 
 public class DetectKitchenAnimalsAdvanceRequest extends TeaModel {
-    @NameInMap("ImageURLAObject")
-    @Validation(required = true)
+    @NameInMap("ImageURLA")
     public java.io.InputStream imageURLAObject;
 
     @NameInMap("ImageURLB")
-    public String imageURLB;
+    public java.io.InputStream imageURLBObject;
 
     public static DetectKitchenAnimalsAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         DetectKitchenAnimalsAdvanceRequest self = new DetectKitchenAnimalsAdvanceRequest();
@@ -24,12 +23,12 @@ public class DetectKitchenAnimalsAdvanceRequest extends TeaModel {
         return this.imageURLAObject;
     }
 
-    public DetectKitchenAnimalsAdvanceRequest setImageURLB(String imageURLB) {
-        this.imageURLB = imageURLB;
+    public DetectKitchenAnimalsAdvanceRequest setImageURLBObject(java.io.InputStream imageURLBObject) {
+        this.imageURLBObject = imageURLBObject;
         return this;
     }
-    public String getImageURLB() {
-        return this.imageURLB;
+    public java.io.InputStream getImageURLBObject() {
+        return this.imageURLBObject;
     }
 
 }

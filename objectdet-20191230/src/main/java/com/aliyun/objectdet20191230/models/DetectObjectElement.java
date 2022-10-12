@@ -4,27 +4,21 @@ package com.aliyun.objectdet20191230.models;
 import com.aliyun.tea.*;
 
 public class DetectObjectElement extends TeaModel {
-    // 目标高度(像素)
     @NameInMap("Height")
     public Long height;
 
-    // 目标置信度，范围为[0.0, 1.0]
     @NameInMap("Score")
     public Float score;
 
-    // 目标类型：PERSON, VEHICLE, PET
     @NameInMap("Type")
     public String type;
 
-    // 目标宽度(像素)
     @NameInMap("Width")
     public Long width;
 
-    // 左上角x坐标(像素)
     @NameInMap("X")
     public Long x;
 
-    // 左上角y坐标(像素)
     @NameInMap("Y")
     public Long y;
 
