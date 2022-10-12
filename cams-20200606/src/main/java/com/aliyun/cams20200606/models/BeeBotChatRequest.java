@@ -4,8 +4,8 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class BeeBotChatRequest extends TeaModel {
-    @NameInMap("ChatBotInstnaceId")
-    public String chatBotInstnaceId;
+    @NameInMap("ChatBotInstanceId")
+    public String chatBotInstanceId;
 
     @NameInMap("IntentName")
     public String intentName;
@@ -39,12 +39,12 @@ public class BeeBotChatRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public BeeBotChatRequest setChatBotInstnaceId(String chatBotInstnaceId) {
-        this.chatBotInstnaceId = chatBotInstnaceId;
+    public BeeBotChatRequest setChatBotInstanceId(String chatBotInstanceId) {
+        this.chatBotInstanceId = chatBotInstanceId;
         return this;
     }
-    public String getChatBotInstnaceId() {
-        return this.chatBotInstnaceId;
+    public String getChatBotInstanceId() {
+        return this.chatBotInstanceId;
     }
 
     public BeeBotChatRequest setIntentName(String intentName) {
