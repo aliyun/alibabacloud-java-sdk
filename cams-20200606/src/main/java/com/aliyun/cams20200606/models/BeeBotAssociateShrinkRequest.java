@@ -4,8 +4,8 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class BeeBotAssociateShrinkRequest extends TeaModel {
-    @NameInMap("ChatBotInstnaceId")
-    public String chatBotInstnaceId;
+    @NameInMap("ChatBotInstanceId")
+    public String chatBotInstanceId;
 
     @NameInMap("IsvCode")
     public String isvCode;
@@ -27,12 +27,12 @@ public class BeeBotAssociateShrinkRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public BeeBotAssociateShrinkRequest setChatBotInstnaceId(String chatBotInstnaceId) {
-        this.chatBotInstnaceId = chatBotInstnaceId;
+    public BeeBotAssociateShrinkRequest setChatBotInstanceId(String chatBotInstanceId) {
+        this.chatBotInstanceId = chatBotInstanceId;
         return this;
     }
-    public String getChatBotInstnaceId() {
-        return this.chatBotInstnaceId;
+    public String getChatBotInstanceId() {
+        return this.chatBotInstanceId;
     }
 
     public BeeBotAssociateShrinkRequest setIsvCode(String isvCode) {
