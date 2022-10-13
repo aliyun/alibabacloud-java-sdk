@@ -4,14 +4,8 @@ package com.aliyun.voicenavigator20180612.models;
 import com.aliyun.tea.*;
 
 public class SaveRecordingRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
-
     @NameInMap("ConversationId")
     public String conversationId;
-
-    @NameInMap("StartTime")
-    public Long startTime;
 
     @NameInMap("Duration")
     public String duration;
@@ -22,20 +16,24 @@ public class SaveRecordingRequest extends TeaModel {
     @NameInMap("FilePath")
     public String filePath;
 
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("InstanceOwnerId")
+    public Long instanceOwnerId;
+
+    @NameInMap("StartTime")
+    public Long startTime;
+
     @NameInMap("Type")
     public String type;
+
+    @NameInMap("VoiceSliceRecordingList")
+    public String voiceSliceRecordingList;
 
     public static SaveRecordingRequest build(java.util.Map<String, ?> map) throws Exception {
         SaveRecordingRequest self = new SaveRecordingRequest();
         return TeaModel.build(map, self);
-    }
-
-    public SaveRecordingRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
     }
 
     public SaveRecordingRequest setConversationId(String conversationId) {
@@ -44,14 +42,6 @@ public class SaveRecordingRequest extends TeaModel {
     }
     public String getConversationId() {
         return this.conversationId;
-    }
-
-    public SaveRecordingRequest setStartTime(Long startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public Long getStartTime() {
-        return this.startTime;
     }
 
     public SaveRecordingRequest setDuration(String duration) {
@@ -78,12 +68,44 @@ public class SaveRecordingRequest extends TeaModel {
         return this.filePath;
     }
 
+    public SaveRecordingRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public SaveRecordingRequest setInstanceOwnerId(Long instanceOwnerId) {
+        this.instanceOwnerId = instanceOwnerId;
+        return this;
+    }
+    public Long getInstanceOwnerId() {
+        return this.instanceOwnerId;
+    }
+
+    public SaveRecordingRequest setStartTime(Long startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public Long getStartTime() {
+        return this.startTime;
+    }
+
     public SaveRecordingRequest setType(String type) {
         this.type = type;
         return this;
     }
     public String getType() {
         return this.type;
+    }
+
+    public SaveRecordingRequest setVoiceSliceRecordingList(String voiceSliceRecordingList) {
+        this.voiceSliceRecordingList = voiceSliceRecordingList;
+        return this;
+    }
+    public String getVoiceSliceRecordingList() {
+        return this.voiceSliceRecordingList;
     }
 
 }

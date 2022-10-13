@@ -4,8 +4,11 @@ package com.aliyun.voicenavigator20180612.models;
 import com.aliyun.tea.*;
 
 public class ListConversationsResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Long totalCount;
+    @NameInMap("Conversations")
+    public java.util.List<ListConversationsResponseBodyConversations> conversations;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -13,23 +16,28 @@ public class ListConversationsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("Conversations")
-    public java.util.List<ListConversationsResponseBodyConversations> conversations;
+    @NameInMap("TotalCount")
+    public Long totalCount;
 
     public static ListConversationsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListConversationsResponseBody self = new ListConversationsResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ListConversationsResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
+    public ListConversationsResponseBody setConversations(java.util.List<ListConversationsResponseBodyConversations> conversations) {
+        this.conversations = conversations;
         return this;
     }
-    public Long getTotalCount() {
-        return this.totalCount;
+    public java.util.List<ListConversationsResponseBodyConversations> getConversations() {
+        return this.conversations;
+    }
+
+    public ListConversationsResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public ListConversationsResponseBody setPageSize(Integer pageSize) {
@@ -48,98 +56,59 @@ public class ListConversationsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListConversationsResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public ListConversationsResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public ListConversationsResponseBody setConversations(java.util.List<ListConversationsResponseBodyConversations> conversations) {
-        this.conversations = conversations;
-        return this;
-    }
-    public java.util.List<ListConversationsResponseBodyConversations> getConversations() {
-        return this.conversations;
+    public Long getTotalCount() {
+        return this.totalCount;
     }
 
     public static class ListConversationsResponseBodyConversations extends TeaModel {
-        @NameInMap("EndTime")
-        public Long endTime;
-
-        @NameInMap("EffectiveAnswerCount")
-        public Integer effectiveAnswerCount;
-
-        @NameInMap("TransferredToAgent")
-        public Boolean transferredToAgent;
-
-        @NameInMap("BeginTime")
-        public Long beginTime;
-
-        @NameInMap("SkillGroupId")
-        public String skillGroupId;
-
-        @NameInMap("ConversationId")
-        public String conversationId;
+        @NameInMap("CalledNumber")
+        public String calledNumber;
 
         @NameInMap("CallingNumber")
         public String callingNumber;
 
-        @NameInMap("UserUtteranceCount")
-        public Integer userUtteranceCount;
+        @NameInMap("ConversationId")
+        public String conversationId;
+
+        @NameInMap("EndReason")
+        public Integer endReason;
+
+        @NameInMap("EndTime")
+        public Long endTime;
+
+        @NameInMap("HasLastPlaybackCompleted")
+        public Boolean hasLastPlaybackCompleted;
+
+        @NameInMap("HasToAgent")
+        public Boolean hasToAgent;
+
+        @NameInMap("Rounds")
+        public Integer rounds;
+
+        @NameInMap("SandBox")
+        public Boolean sandBox;
+
+        @NameInMap("SkillGroup")
+        public String skillGroup;
+
+        @NameInMap("StartTime")
+        public Long startTime;
 
         public static ListConversationsResponseBodyConversations build(java.util.Map<String, ?> map) throws Exception {
             ListConversationsResponseBodyConversations self = new ListConversationsResponseBodyConversations();
             return TeaModel.build(map, self);
         }
 
-        public ListConversationsResponseBodyConversations setEndTime(Long endTime) {
-            this.endTime = endTime;
+        public ListConversationsResponseBodyConversations setCalledNumber(String calledNumber) {
+            this.calledNumber = calledNumber;
             return this;
         }
-        public Long getEndTime() {
-            return this.endTime;
-        }
-
-        public ListConversationsResponseBodyConversations setEffectiveAnswerCount(Integer effectiveAnswerCount) {
-            this.effectiveAnswerCount = effectiveAnswerCount;
-            return this;
-        }
-        public Integer getEffectiveAnswerCount() {
-            return this.effectiveAnswerCount;
-        }
-
-        public ListConversationsResponseBodyConversations setTransferredToAgent(Boolean transferredToAgent) {
-            this.transferredToAgent = transferredToAgent;
-            return this;
-        }
-        public Boolean getTransferredToAgent() {
-            return this.transferredToAgent;
-        }
-
-        public ListConversationsResponseBodyConversations setBeginTime(Long beginTime) {
-            this.beginTime = beginTime;
-            return this;
-        }
-        public Long getBeginTime() {
-            return this.beginTime;
-        }
-
-        public ListConversationsResponseBodyConversations setSkillGroupId(String skillGroupId) {
-            this.skillGroupId = skillGroupId;
-            return this;
-        }
-        public String getSkillGroupId() {
-            return this.skillGroupId;
-        }
-
-        public ListConversationsResponseBodyConversations setConversationId(String conversationId) {
-            this.conversationId = conversationId;
-            return this;
-        }
-        public String getConversationId() {
-            return this.conversationId;
+        public String getCalledNumber() {
+            return this.calledNumber;
         }
 
         public ListConversationsResponseBodyConversations setCallingNumber(String callingNumber) {
@@ -150,12 +119,76 @@ public class ListConversationsResponseBody extends TeaModel {
             return this.callingNumber;
         }
 
-        public ListConversationsResponseBodyConversations setUserUtteranceCount(Integer userUtteranceCount) {
-            this.userUtteranceCount = userUtteranceCount;
+        public ListConversationsResponseBodyConversations setConversationId(String conversationId) {
+            this.conversationId = conversationId;
             return this;
         }
-        public Integer getUserUtteranceCount() {
-            return this.userUtteranceCount;
+        public String getConversationId() {
+            return this.conversationId;
+        }
+
+        public ListConversationsResponseBodyConversations setEndReason(Integer endReason) {
+            this.endReason = endReason;
+            return this;
+        }
+        public Integer getEndReason() {
+            return this.endReason;
+        }
+
+        public ListConversationsResponseBodyConversations setEndTime(Long endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public Long getEndTime() {
+            return this.endTime;
+        }
+
+        public ListConversationsResponseBodyConversations setHasLastPlaybackCompleted(Boolean hasLastPlaybackCompleted) {
+            this.hasLastPlaybackCompleted = hasLastPlaybackCompleted;
+            return this;
+        }
+        public Boolean getHasLastPlaybackCompleted() {
+            return this.hasLastPlaybackCompleted;
+        }
+
+        public ListConversationsResponseBodyConversations setHasToAgent(Boolean hasToAgent) {
+            this.hasToAgent = hasToAgent;
+            return this;
+        }
+        public Boolean getHasToAgent() {
+            return this.hasToAgent;
+        }
+
+        public ListConversationsResponseBodyConversations setRounds(Integer rounds) {
+            this.rounds = rounds;
+            return this;
+        }
+        public Integer getRounds() {
+            return this.rounds;
+        }
+
+        public ListConversationsResponseBodyConversations setSandBox(Boolean sandBox) {
+            this.sandBox = sandBox;
+            return this;
+        }
+        public Boolean getSandBox() {
+            return this.sandBox;
+        }
+
+        public ListConversationsResponseBodyConversations setSkillGroup(String skillGroup) {
+            this.skillGroup = skillGroup;
+            return this;
+        }
+        public String getSkillGroup() {
+            return this.skillGroup;
+        }
+
+        public ListConversationsResponseBodyConversations setStartTime(Long startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public Long getStartTime() {
+            return this.startTime;
         }
 
     }

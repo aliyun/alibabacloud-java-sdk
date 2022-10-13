@@ -4,11 +4,14 @@ package com.aliyun.voicenavigator20180612.models;
 import com.aliyun.tea.*;
 
 public class CollectedNumberRequest extends TeaModel {
+    @NameInMap("ConversationId")
+    public String conversationId;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("ConversationId")
-    public String conversationId;
+    @NameInMap("InstanceOwnerId")
+    public Long instanceOwnerId;
 
     @NameInMap("Number")
     public String number;
@@ -16,6 +19,14 @@ public class CollectedNumberRequest extends TeaModel {
     public static CollectedNumberRequest build(java.util.Map<String, ?> map) throws Exception {
         CollectedNumberRequest self = new CollectedNumberRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CollectedNumberRequest setConversationId(String conversationId) {
+        this.conversationId = conversationId;
+        return this;
+    }
+    public String getConversationId() {
+        return this.conversationId;
     }
 
     public CollectedNumberRequest setInstanceId(String instanceId) {
@@ -26,12 +37,12 @@ public class CollectedNumberRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public CollectedNumberRequest setConversationId(String conversationId) {
-        this.conversationId = conversationId;
+    public CollectedNumberRequest setInstanceOwnerId(Long instanceOwnerId) {
+        this.instanceOwnerId = instanceOwnerId;
         return this;
     }
-    public String getConversationId() {
-        return this.conversationId;
+    public Long getInstanceOwnerId() {
+        return this.instanceOwnerId;
     }
 
     public CollectedNumberRequest setNumber(String number) {

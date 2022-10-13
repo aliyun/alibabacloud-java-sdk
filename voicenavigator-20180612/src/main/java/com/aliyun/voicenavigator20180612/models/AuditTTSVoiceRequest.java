@@ -7,14 +7,14 @@ public class AuditTTSVoiceRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("Voice")
-    public String voice;
+    @NameInMap("SpeechRate")
+    public String speechRate;
 
     @NameInMap("Text")
     public String text;
 
-    @NameInMap("SpeechRate")
-    public String speechRate;
+    @NameInMap("Voice")
+    public String voice;
 
     @NameInMap("Volume")
     public String volume;
@@ -32,12 +32,12 @@ public class AuditTTSVoiceRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public AuditTTSVoiceRequest setVoice(String voice) {
-        this.voice = voice;
+    public AuditTTSVoiceRequest setSpeechRate(String speechRate) {
+        this.speechRate = speechRate;
         return this;
     }
-    public String getVoice() {
-        return this.voice;
+    public String getSpeechRate() {
+        return this.speechRate;
     }
 
     public AuditTTSVoiceRequest setText(String text) {
@@ -48,12 +48,12 @@ public class AuditTTSVoiceRequest extends TeaModel {
         return this.text;
     }
 
-    public AuditTTSVoiceRequest setSpeechRate(String speechRate) {
-        this.speechRate = speechRate;
+    public AuditTTSVoiceRequest setVoice(String voice) {
+        this.voice = voice;
         return this;
     }
-    public String getSpeechRate() {
-        return this.speechRate;
+    public String getVoice() {
+        return this.voice;
     }
 
     public AuditTTSVoiceRequest setVolume(String volume) {

@@ -4,26 +4,26 @@ package com.aliyun.voicenavigator20180612.models;
 import com.aliyun.tea.*;
 
 public class DescribeExportProgressResponseBody extends TeaModel {
-    @NameInMap("Status")
-    public String status;
+    @NameInMap("FileHttpUrl")
+    public String fileHttpUrl;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("FileHttpUrl")
-    public String fileHttpUrl;
+    @NameInMap("Status")
+    public String status;
 
     public static DescribeExportProgressResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeExportProgressResponseBody self = new DescribeExportProgressResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeExportProgressResponseBody setStatus(String status) {
-        this.status = status;
+    public DescribeExportProgressResponseBody setFileHttpUrl(String fileHttpUrl) {
+        this.fileHttpUrl = fileHttpUrl;
         return this;
     }
-    public String getStatus() {
-        return this.status;
+    public String getFileHttpUrl() {
+        return this.fileHttpUrl;
     }
 
     public DescribeExportProgressResponseBody setRequestId(String requestId) {
@@ -34,12 +34,12 @@ public class DescribeExportProgressResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeExportProgressResponseBody setFileHttpUrl(String fileHttpUrl) {
-        this.fileHttpUrl = fileHttpUrl;
+    public DescribeExportProgressResponseBody setStatus(String status) {
+        this.status = status;
         return this;
     }
-    public String getFileHttpUrl() {
-        return this.fileHttpUrl;
+    public String getStatus() {
+        return this.status;
     }
 
 }

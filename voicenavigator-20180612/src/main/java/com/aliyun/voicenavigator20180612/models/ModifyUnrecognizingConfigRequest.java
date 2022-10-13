@@ -4,6 +4,15 @@ package com.aliyun.voicenavigator20180612.models;
 import com.aliyun.tea.*;
 
 public class ModifyUnrecognizingConfigRequest extends TeaModel {
+    @NameInMap("FinalAction")
+    public String finalAction;
+
+    @NameInMap("FinalActionParams")
+    public String finalActionParams;
+
+    @NameInMap("FinalPrompt")
+    public String finalPrompt;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -13,18 +22,33 @@ public class ModifyUnrecognizingConfigRequest extends TeaModel {
     @NameInMap("Threshold")
     public Integer threshold;
 
-    @NameInMap("FinalPrompt")
-    public String finalPrompt;
-
-    @NameInMap("FinalAction")
-    public String finalAction;
-
-    @NameInMap("FinalActionParams")
-    public String finalActionParams;
-
     public static ModifyUnrecognizingConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyUnrecognizingConfigRequest self = new ModifyUnrecognizingConfigRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyUnrecognizingConfigRequest setFinalAction(String finalAction) {
+        this.finalAction = finalAction;
+        return this;
+    }
+    public String getFinalAction() {
+        return this.finalAction;
+    }
+
+    public ModifyUnrecognizingConfigRequest setFinalActionParams(String finalActionParams) {
+        this.finalActionParams = finalActionParams;
+        return this;
+    }
+    public String getFinalActionParams() {
+        return this.finalActionParams;
+    }
+
+    public ModifyUnrecognizingConfigRequest setFinalPrompt(String finalPrompt) {
+        this.finalPrompt = finalPrompt;
+        return this;
+    }
+    public String getFinalPrompt() {
+        return this.finalPrompt;
     }
 
     public ModifyUnrecognizingConfigRequest setInstanceId(String instanceId) {
@@ -49,30 +73,6 @@ public class ModifyUnrecognizingConfigRequest extends TeaModel {
     }
     public Integer getThreshold() {
         return this.threshold;
-    }
-
-    public ModifyUnrecognizingConfigRequest setFinalPrompt(String finalPrompt) {
-        this.finalPrompt = finalPrompt;
-        return this;
-    }
-    public String getFinalPrompt() {
-        return this.finalPrompt;
-    }
-
-    public ModifyUnrecognizingConfigRequest setFinalAction(String finalAction) {
-        this.finalAction = finalAction;
-        return this;
-    }
-    public String getFinalAction() {
-        return this.finalAction;
-    }
-
-    public ModifyUnrecognizingConfigRequest setFinalActionParams(String finalActionParams) {
-        this.finalActionParams = finalActionParams;
-        return this;
-    }
-    public String getFinalActionParams() {
-        return this.finalActionParams;
     }
 
 }

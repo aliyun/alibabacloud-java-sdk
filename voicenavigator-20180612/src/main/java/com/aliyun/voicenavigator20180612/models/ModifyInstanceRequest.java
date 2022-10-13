@@ -4,37 +4,21 @@ package com.aliyun.voicenavigator20180612.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
+    @NameInMap("Concurrency")
+    public Long concurrency;
 
     @NameInMap("Description")
     public String description;
 
-    @NameInMap("Concurrency")
-    public Long concurrency;
+    @NameInMap("InstanceId")
+    public String instanceId;
 
-    @NameInMap("ChatbotInstanceId")
-    public String chatbotInstanceId;
+    @NameInMap("Name")
+    public String name;
 
     public static ModifyInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyInstanceRequest self = new ModifyInstanceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyInstanceRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public ModifyInstanceRequest setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
     }
 
     public ModifyInstanceRequest setConcurrency(Long concurrency) {
@@ -45,12 +29,28 @@ public class ModifyInstanceRequest extends TeaModel {
         return this.concurrency;
     }
 
-    public ModifyInstanceRequest setChatbotInstanceId(String chatbotInstanceId) {
-        this.chatbotInstanceId = chatbotInstanceId;
+    public ModifyInstanceRequest setDescription(String description) {
+        this.description = description;
         return this;
     }
-    public String getChatbotInstanceId() {
-        return this.chatbotInstanceId;
+    public String getDescription() {
+        return this.description;
+    }
+
+    public ModifyInstanceRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public ModifyInstanceRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
     }
 
 }

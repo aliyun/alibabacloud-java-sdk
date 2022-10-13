@@ -4,6 +4,18 @@ package com.aliyun.voicenavigator20180612.models;
 import com.aliyun.tea.*;
 
 public class DescribeStatisticalDataResponseBody extends TeaModel {
+    @NameInMap("ConversationTotalNum")
+    public Long conversationTotalNum;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("ResolvedQuestionTotalNum")
+    public Long resolvedQuestionTotalNum;
+
+    @NameInMap("StatisticalDataReports")
+    public java.util.List<DescribeStatisticalDataResponseBodyStatisticalDataReports> statisticalDataReports;
+
     @NameInMap("TotalDialoguePassRate")
     public String totalDialoguePassRate;
 
@@ -16,21 +28,41 @@ public class DescribeStatisticalDataResponseBody extends TeaModel {
     @NameInMap("TotalValidAnswerRate")
     public String totalValidAnswerRate;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("ResolvedQuestionTotalNum")
-    public Long resolvedQuestionTotalNum;
-
-    @NameInMap("ConversationTotalNum")
-    public Long conversationTotalNum;
-
-    @NameInMap("StatisticalDataReports")
-    public java.util.List<DescribeStatisticalDataResponseBodyStatisticalDataReports> statisticalDataReports;
-
     public static DescribeStatisticalDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeStatisticalDataResponseBody self = new DescribeStatisticalDataResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeStatisticalDataResponseBody setConversationTotalNum(Long conversationTotalNum) {
+        this.conversationTotalNum = conversationTotalNum;
+        return this;
+    }
+    public Long getConversationTotalNum() {
+        return this.conversationTotalNum;
+    }
+
+    public DescribeStatisticalDataResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeStatisticalDataResponseBody setResolvedQuestionTotalNum(Long resolvedQuestionTotalNum) {
+        this.resolvedQuestionTotalNum = resolvedQuestionTotalNum;
+        return this;
+    }
+    public Long getResolvedQuestionTotalNum() {
+        return this.resolvedQuestionTotalNum;
+    }
+
+    public DescribeStatisticalDataResponseBody setStatisticalDataReports(java.util.List<DescribeStatisticalDataResponseBodyStatisticalDataReports> statisticalDataReports) {
+        this.statisticalDataReports = statisticalDataReports;
+        return this;
+    }
+    public java.util.List<DescribeStatisticalDataResponseBodyStatisticalDataReports> getStatisticalDataReports() {
+        return this.statisticalDataReports;
     }
 
     public DescribeStatisticalDataResponseBody setTotalDialoguePassRate(String totalDialoguePassRate) {
@@ -65,47 +97,18 @@ public class DescribeStatisticalDataResponseBody extends TeaModel {
         return this.totalValidAnswerRate;
     }
 
-    public DescribeStatisticalDataResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeStatisticalDataResponseBody setResolvedQuestionTotalNum(Long resolvedQuestionTotalNum) {
-        this.resolvedQuestionTotalNum = resolvedQuestionTotalNum;
-        return this;
-    }
-    public Long getResolvedQuestionTotalNum() {
-        return this.resolvedQuestionTotalNum;
-    }
-
-    public DescribeStatisticalDataResponseBody setConversationTotalNum(Long conversationTotalNum) {
-        this.conversationTotalNum = conversationTotalNum;
-        return this;
-    }
-    public Long getConversationTotalNum() {
-        return this.conversationTotalNum;
-    }
-
-    public DescribeStatisticalDataResponseBody setStatisticalDataReports(java.util.List<DescribeStatisticalDataResponseBodyStatisticalDataReports> statisticalDataReports) {
-        this.statisticalDataReports = statisticalDataReports;
-        return this;
-    }
-    public java.util.List<DescribeStatisticalDataResponseBodyStatisticalDataReports> getStatisticalDataReports() {
-        return this.statisticalDataReports;
-    }
-
     public static class DescribeStatisticalDataResponseBodyStatisticalDataReports extends TeaModel {
+        @NameInMap("DialoguePassRate")
+        public String dialoguePassRate;
+
         @NameInMap("KnowledgeHitRate")
         public String knowledgeHitRate;
 
-        @NameInMap("ResolvedQuestionNum")
-        public Integer resolvedQuestionNum;
-
         @NameInMap("ResolutionRate")
         public String resolutionRate;
+
+        @NameInMap("ResolvedQuestionNum")
+        public Integer resolvedQuestionNum;
 
         @NameInMap("StatisticalDate")
         public String statisticalDate;
@@ -116,12 +119,17 @@ public class DescribeStatisticalDataResponseBody extends TeaModel {
         @NameInMap("ValidAnswerRate")
         public String validAnswerRate;
 
-        @NameInMap("DialoguePassRate")
-        public String dialoguePassRate;
-
         public static DescribeStatisticalDataResponseBodyStatisticalDataReports build(java.util.Map<String, ?> map) throws Exception {
             DescribeStatisticalDataResponseBodyStatisticalDataReports self = new DescribeStatisticalDataResponseBodyStatisticalDataReports();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeStatisticalDataResponseBodyStatisticalDataReports setDialoguePassRate(String dialoguePassRate) {
+            this.dialoguePassRate = dialoguePassRate;
+            return this;
+        }
+        public String getDialoguePassRate() {
+            return this.dialoguePassRate;
         }
 
         public DescribeStatisticalDataResponseBodyStatisticalDataReports setKnowledgeHitRate(String knowledgeHitRate) {
@@ -132,20 +140,20 @@ public class DescribeStatisticalDataResponseBody extends TeaModel {
             return this.knowledgeHitRate;
         }
 
-        public DescribeStatisticalDataResponseBodyStatisticalDataReports setResolvedQuestionNum(Integer resolvedQuestionNum) {
-            this.resolvedQuestionNum = resolvedQuestionNum;
-            return this;
-        }
-        public Integer getResolvedQuestionNum() {
-            return this.resolvedQuestionNum;
-        }
-
         public DescribeStatisticalDataResponseBodyStatisticalDataReports setResolutionRate(String resolutionRate) {
             this.resolutionRate = resolutionRate;
             return this;
         }
         public String getResolutionRate() {
             return this.resolutionRate;
+        }
+
+        public DescribeStatisticalDataResponseBodyStatisticalDataReports setResolvedQuestionNum(Integer resolvedQuestionNum) {
+            this.resolvedQuestionNum = resolvedQuestionNum;
+            return this;
+        }
+        public Integer getResolvedQuestionNum() {
+            return this.resolvedQuestionNum;
         }
 
         public DescribeStatisticalDataResponseBodyStatisticalDataReports setStatisticalDate(String statisticalDate) {
@@ -170,14 +178,6 @@ public class DescribeStatisticalDataResponseBody extends TeaModel {
         }
         public String getValidAnswerRate() {
             return this.validAnswerRate;
-        }
-
-        public DescribeStatisticalDataResponseBodyStatisticalDataReports setDialoguePassRate(String dialoguePassRate) {
-            this.dialoguePassRate = dialoguePassRate;
-            return this;
-        }
-        public String getDialoguePassRate() {
-            return this.dialoguePassRate;
         }
 
     }

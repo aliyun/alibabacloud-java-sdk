@@ -4,48 +4,24 @@ package com.aliyun.voicenavigator20180612.models;
 import com.aliyun.tea.*;
 
 public class ExportStatisticalDataRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("TimeUnit")
-    public String timeUnit;
-
-    @NameInMap("ExportType")
-    public String exportType;
-
     @NameInMap("BeginTimeLeftRange")
     public Long beginTimeLeftRange;
 
     @NameInMap("BeginTimeRightRange")
     public Long beginTimeRightRange;
 
+    @NameInMap("ExportType")
+    public String exportType;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("TimeUnit")
+    public String timeUnit;
+
     public static ExportStatisticalDataRequest build(java.util.Map<String, ?> map) throws Exception {
         ExportStatisticalDataRequest self = new ExportStatisticalDataRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ExportStatisticalDataRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public ExportStatisticalDataRequest setTimeUnit(String timeUnit) {
-        this.timeUnit = timeUnit;
-        return this;
-    }
-    public String getTimeUnit() {
-        return this.timeUnit;
-    }
-
-    public ExportStatisticalDataRequest setExportType(String exportType) {
-        this.exportType = exportType;
-        return this;
-    }
-    public String getExportType() {
-        return this.exportType;
     }
 
     public ExportStatisticalDataRequest setBeginTimeLeftRange(Long beginTimeLeftRange) {
@@ -62,6 +38,30 @@ public class ExportStatisticalDataRequest extends TeaModel {
     }
     public Long getBeginTimeRightRange() {
         return this.beginTimeRightRange;
+    }
+
+    public ExportStatisticalDataRequest setExportType(String exportType) {
+        this.exportType = exportType;
+        return this;
+    }
+    public String getExportType() {
+        return this.exportType;
+    }
+
+    public ExportStatisticalDataRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public ExportStatisticalDataRequest setTimeUnit(String timeUnit) {
+        this.timeUnit = timeUnit;
+        return this;
+    }
+    public String getTimeUnit() {
+        return this.timeUnit;
     }
 
 }

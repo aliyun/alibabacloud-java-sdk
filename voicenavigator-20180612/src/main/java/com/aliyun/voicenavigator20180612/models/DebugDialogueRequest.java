@@ -4,11 +4,11 @@ package com.aliyun.voicenavigator20180612.models;
 import com.aliyun.tea.*;
 
 public class DebugDialogueRequest extends TeaModel {
-    @NameInMap("ConversationId")
-    public String conversationId;
-
     @NameInMap("AdditionalContext")
     public String additionalContext;
+
+    @NameInMap("ConversationId")
+    public String conversationId;
 
     @NameInMap("InstanceId")
     public String instanceId;
@@ -21,20 +21,20 @@ public class DebugDialogueRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DebugDialogueRequest setConversationId(String conversationId) {
-        this.conversationId = conversationId;
-        return this;
-    }
-    public String getConversationId() {
-        return this.conversationId;
-    }
-
     public DebugDialogueRequest setAdditionalContext(String additionalContext) {
         this.additionalContext = additionalContext;
         return this;
     }
     public String getAdditionalContext() {
         return this.additionalContext;
+    }
+
+    public DebugDialogueRequest setConversationId(String conversationId) {
+        this.conversationId = conversationId;
+        return this;
+    }
+    public String getConversationId() {
+        return this.conversationId;
     }
 
     public DebugDialogueRequest setInstanceId(String instanceId) {

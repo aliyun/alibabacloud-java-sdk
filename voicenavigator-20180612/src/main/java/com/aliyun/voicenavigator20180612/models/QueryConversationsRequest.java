@@ -4,17 +4,17 @@ package com.aliyun.voicenavigator20180612.models;
 import com.aliyun.tea.*;
 
 public class QueryConversationsRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("CallingNumber")
-    public String callingNumber;
-
     @NameInMap("BeginTimeLeftRange")
     public Long beginTimeLeftRange;
 
     @NameInMap("BeginTimeRightRange")
     public Long beginTimeRightRange;
+
+    @NameInMap("CallingNumber")
+    public String callingNumber;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -25,22 +25,6 @@ public class QueryConversationsRequest extends TeaModel {
     public static QueryConversationsRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryConversationsRequest self = new QueryConversationsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public QueryConversationsRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public QueryConversationsRequest setCallingNumber(String callingNumber) {
-        this.callingNumber = callingNumber;
-        return this;
-    }
-    public String getCallingNumber() {
-        return this.callingNumber;
     }
 
     public QueryConversationsRequest setBeginTimeLeftRange(Long beginTimeLeftRange) {
@@ -57,6 +41,22 @@ public class QueryConversationsRequest extends TeaModel {
     }
     public Long getBeginTimeRightRange() {
         return this.beginTimeRightRange;
+    }
+
+    public QueryConversationsRequest setCallingNumber(String callingNumber) {
+        this.callingNumber = callingNumber;
+        return this;
+    }
+    public String getCallingNumber() {
+        return this.callingNumber;
+    }
+
+    public QueryConversationsRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public QueryConversationsRequest setPageNumber(Integer pageNumber) {

@@ -4,23 +4,15 @@ package com.aliyun.voicenavigator20180612.models;
 import com.aliyun.tea.*;
 
 public class ListConversationDetailsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ConversationDetails")
     public java.util.List<ListConversationDetailsResponseBodyConversationDetails> conversationDetails;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ListConversationDetailsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListConversationDetailsResponseBody self = new ListConversationDetailsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListConversationDetailsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListConversationDetailsResponseBody setConversationDetails(java.util.List<ListConversationDetailsResponseBodyConversationDetails> conversationDetails) {
@@ -31,24 +23,32 @@ public class ListConversationDetailsResponseBody extends TeaModel {
         return this.conversationDetails;
     }
 
+    public ListConversationDetailsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class ListConversationDetailsResponseBodyConversationDetails extends TeaModel {
         @NameInMap("Action")
         public String action;
 
-        @NameInMap("Speaker")
-        public String speaker;
-
-        @NameInMap("CreateTime")
-        public Long createTime;
+        @NameInMap("ActionParams")
+        public String actionParams;
 
         @NameInMap("ConversationId")
         public String conversationId;
 
-        @NameInMap("ActionParams")
-        public String actionParams;
+        @NameInMap("CreateTime")
+        public Long createTime;
 
         @NameInMap("SequenceId")
         public String sequenceId;
+
+        @NameInMap("Speaker")
+        public String speaker;
 
         @NameInMap("Utterance")
         public String utterance;
@@ -66,20 +66,12 @@ public class ListConversationDetailsResponseBody extends TeaModel {
             return this.action;
         }
 
-        public ListConversationDetailsResponseBodyConversationDetails setSpeaker(String speaker) {
-            this.speaker = speaker;
+        public ListConversationDetailsResponseBodyConversationDetails setActionParams(String actionParams) {
+            this.actionParams = actionParams;
             return this;
         }
-        public String getSpeaker() {
-            return this.speaker;
-        }
-
-        public ListConversationDetailsResponseBodyConversationDetails setCreateTime(Long createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public Long getCreateTime() {
-            return this.createTime;
+        public String getActionParams() {
+            return this.actionParams;
         }
 
         public ListConversationDetailsResponseBodyConversationDetails setConversationId(String conversationId) {
@@ -90,12 +82,12 @@ public class ListConversationDetailsResponseBody extends TeaModel {
             return this.conversationId;
         }
 
-        public ListConversationDetailsResponseBodyConversationDetails setActionParams(String actionParams) {
-            this.actionParams = actionParams;
+        public ListConversationDetailsResponseBodyConversationDetails setCreateTime(Long createTime) {
+            this.createTime = createTime;
             return this;
         }
-        public String getActionParams() {
-            return this.actionParams;
+        public Long getCreateTime() {
+            return this.createTime;
         }
 
         public ListConversationDetailsResponseBodyConversationDetails setSequenceId(String sequenceId) {
@@ -104,6 +96,14 @@ public class ListConversationDetailsResponseBody extends TeaModel {
         }
         public String getSequenceId() {
             return this.sequenceId;
+        }
+
+        public ListConversationDetailsResponseBodyConversationDetails setSpeaker(String speaker) {
+            this.speaker = speaker;
+            return this;
+        }
+        public String getSpeaker() {
+            return this.speaker;
         }
 
         public ListConversationDetailsResponseBodyConversationDetails setUtterance(String utterance) {
