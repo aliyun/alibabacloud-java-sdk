@@ -75,6 +75,47 @@ public class GetDeploymentResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class GetDeploymentResponseBodyDataDeployedItems extends TeaModel {
+        @NameInMap("FileId")
+        public Long fileId;
+
+        @NameInMap("FileVersion")
+        public Long fileVersion;
+
+        @NameInMap("Status")
+        public Integer status;
+
+        public static GetDeploymentResponseBodyDataDeployedItems build(java.util.Map<String, ?> map) throws Exception {
+            GetDeploymentResponseBodyDataDeployedItems self = new GetDeploymentResponseBodyDataDeployedItems();
+            return TeaModel.build(map, self);
+        }
+
+        public GetDeploymentResponseBodyDataDeployedItems setFileId(Long fileId) {
+            this.fileId = fileId;
+            return this;
+        }
+        public Long getFileId() {
+            return this.fileId;
+        }
+
+        public GetDeploymentResponseBodyDataDeployedItems setFileVersion(Long fileVersion) {
+            this.fileVersion = fileVersion;
+            return this;
+        }
+        public Long getFileVersion() {
+            return this.fileVersion;
+        }
+
+        public GetDeploymentResponseBodyDataDeployedItems setStatus(Integer status) {
+            this.status = status;
+            return this;
+        }
+        public Integer getStatus() {
+            return this.status;
+        }
+
+    }
+
     public static class GetDeploymentResponseBodyDataDeployment extends TeaModel {
         @NameInMap("CheckingStatus")
         public Integer checkingStatus;
@@ -194,12 +235,23 @@ public class GetDeploymentResponseBody extends TeaModel {
     }
 
     public static class GetDeploymentResponseBodyData extends TeaModel {
+        @NameInMap("DeployedItems")
+        public java.util.List<GetDeploymentResponseBodyDataDeployedItems> deployedItems;
+
         @NameInMap("Deployment")
         public GetDeploymentResponseBodyDataDeployment deployment;
 
         public static GetDeploymentResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetDeploymentResponseBodyData self = new GetDeploymentResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetDeploymentResponseBodyData setDeployedItems(java.util.List<GetDeploymentResponseBodyDataDeployedItems> deployedItems) {
+            this.deployedItems = deployedItems;
+            return this;
+        }
+        public java.util.List<GetDeploymentResponseBodyDataDeployedItems> getDeployedItems() {
+            return this.deployedItems;
         }
 
         public GetDeploymentResponseBodyData setDeployment(GetDeploymentResponseBodyDataDeployment deployment) {

@@ -43,6 +43,9 @@ public class GetDISyncInstanceInfoResponseBody extends TeaModel {
     }
 
     public static class GetDISyncInstanceInfoResponseBodyDataSolutionInfoStepDetail extends TeaModel {
+        @NameInMap("Info")
+        public String info;
+
         @NameInMap("Status")
         public String status;
 
@@ -55,6 +58,14 @@ public class GetDISyncInstanceInfoResponseBody extends TeaModel {
         public static GetDISyncInstanceInfoResponseBodyDataSolutionInfoStepDetail build(java.util.Map<String, ?> map) throws Exception {
             GetDISyncInstanceInfoResponseBodyDataSolutionInfoStepDetail self = new GetDISyncInstanceInfoResponseBodyDataSolutionInfoStepDetail();
             return TeaModel.build(map, self);
+        }
+
+        public GetDISyncInstanceInfoResponseBodyDataSolutionInfoStepDetail setInfo(String info) {
+            this.info = info;
+            return this;
+        }
+        public String getInfo() {
+            return this.info;
         }
 
         public GetDISyncInstanceInfoResponseBodyDataSolutionInfoStepDetail setStatus(String status) {
