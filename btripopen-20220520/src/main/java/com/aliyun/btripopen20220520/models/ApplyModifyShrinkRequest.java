@@ -55,6 +55,9 @@ public class ApplyModifyShrinkRequest extends TeaModel {
     @NameInMap("thirdpart_business_id")
     public String thirdpartBusinessId;
 
+    @NameInMap("thirdpart_depart_id")
+    public String thirdpartDepartId;
+
     @NameInMap("together_book_rule")
     public Integer togetherBookRule;
 
@@ -227,6 +230,14 @@ public class ApplyModifyShrinkRequest extends TeaModel {
     }
     public String getThirdpartBusinessId() {
         return this.thirdpartBusinessId;
+    }
+
+    public ApplyModifyShrinkRequest setThirdpartDepartId(String thirdpartDepartId) {
+        this.thirdpartDepartId = thirdpartDepartId;
+        return this;
+    }
+    public String getThirdpartDepartId() {
+        return this.thirdpartDepartId;
     }
 
     public ApplyModifyShrinkRequest setTogetherBookRule(Integer togetherBookRule) {
