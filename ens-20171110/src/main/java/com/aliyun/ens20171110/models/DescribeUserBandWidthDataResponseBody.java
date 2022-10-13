@@ -44,46 +44,46 @@ public class DescribeUserBandWidthDataResponseBody extends TeaModel {
 
     public static class DescribeUserBandWidthDataResponseBodyMonitorDataBandWidthMonitorData extends TeaModel {
         @NameInMap("DownBandWidth")
-        public Integer downBandWidth;
+        public Long downBandWidth;
 
         @NameInMap("InternetRX")
-        public Integer internetRX;
+        public Long internetRX;
 
         @NameInMap("InternetTX")
-        public Integer internetTX;
+        public Long internetTX;
 
         @NameInMap("TimeStamp")
         public String timeStamp;
 
         @NameInMap("UpBandWidth")
-        public Integer upBandWidth;
+        public Long upBandWidth;
 
         public static DescribeUserBandWidthDataResponseBodyMonitorDataBandWidthMonitorData build(java.util.Map<String, ?> map) throws Exception {
             DescribeUserBandWidthDataResponseBodyMonitorDataBandWidthMonitorData self = new DescribeUserBandWidthDataResponseBodyMonitorDataBandWidthMonitorData();
             return TeaModel.build(map, self);
         }
 
-        public DescribeUserBandWidthDataResponseBodyMonitorDataBandWidthMonitorData setDownBandWidth(Integer downBandWidth) {
+        public DescribeUserBandWidthDataResponseBodyMonitorDataBandWidthMonitorData setDownBandWidth(Long downBandWidth) {
             this.downBandWidth = downBandWidth;
             return this;
         }
-        public Integer getDownBandWidth() {
+        public Long getDownBandWidth() {
             return this.downBandWidth;
         }
 
-        public DescribeUserBandWidthDataResponseBodyMonitorDataBandWidthMonitorData setInternetRX(Integer internetRX) {
+        public DescribeUserBandWidthDataResponseBodyMonitorDataBandWidthMonitorData setInternetRX(Long internetRX) {
             this.internetRX = internetRX;
             return this;
         }
-        public Integer getInternetRX() {
+        public Long getInternetRX() {
             return this.internetRX;
         }
 
-        public DescribeUserBandWidthDataResponseBodyMonitorDataBandWidthMonitorData setInternetTX(Integer internetTX) {
+        public DescribeUserBandWidthDataResponseBodyMonitorDataBandWidthMonitorData setInternetTX(Long internetTX) {
             this.internetTX = internetTX;
             return this;
         }
-        public Integer getInternetTX() {
+        public Long getInternetTX() {
             return this.internetTX;
         }
 
@@ -95,11 +95,11 @@ public class DescribeUserBandWidthDataResponseBody extends TeaModel {
             return this.timeStamp;
         }
 
-        public DescribeUserBandWidthDataResponseBodyMonitorDataBandWidthMonitorData setUpBandWidth(Integer upBandWidth) {
+        public DescribeUserBandWidthDataResponseBodyMonitorDataBandWidthMonitorData setUpBandWidth(Long upBandWidth) {
             this.upBandWidth = upBandWidth;
             return this;
         }
-        public Integer getUpBandWidth() {
+        public Long getUpBandWidth() {
             return this.upBandWidth;
         }
 

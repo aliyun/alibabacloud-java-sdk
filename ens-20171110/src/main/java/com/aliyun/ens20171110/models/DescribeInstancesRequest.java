@@ -28,6 +28,9 @@ public class DescribeInstancesRequest extends TeaModel {
     @NameInMap("InstanceResourceType")
     public String instanceResourceType;
 
+    @NameInMap("IntranetIp")
+    public String intranetIp;
+
     @NameInMap("NetworkId")
     public String networkId;
 
@@ -119,6 +122,14 @@ public class DescribeInstancesRequest extends TeaModel {
     }
     public String getInstanceResourceType() {
         return this.instanceResourceType;
+    }
+
+    public DescribeInstancesRequest setIntranetIp(String intranetIp) {
+        this.intranetIp = intranetIp;
+        return this;
+    }
+    public String getIntranetIp() {
+        return this.intranetIp;
     }
 
     public DescribeInstancesRequest setNetworkId(String networkId) {
