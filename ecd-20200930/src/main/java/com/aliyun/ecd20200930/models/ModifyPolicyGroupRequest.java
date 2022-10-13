@@ -64,6 +64,9 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     @NameInMap("Recording")
     public String recording;
 
+    @NameInMap("RecordingDuration")
+    public Integer recordingDuration;
+
     @NameInMap("RecordingEndTime")
     public String recordingEndTime;
 
@@ -269,6 +272,14 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     }
     public String getRecording() {
         return this.recording;
+    }
+
+    public ModifyPolicyGroupRequest setRecordingDuration(Integer recordingDuration) {
+        this.recordingDuration = recordingDuration;
+        return this;
+    }
+    public Integer getRecordingDuration() {
+        return this.recordingDuration;
     }
 
     public ModifyPolicyGroupRequest setRecordingEndTime(String recordingEndTime) {

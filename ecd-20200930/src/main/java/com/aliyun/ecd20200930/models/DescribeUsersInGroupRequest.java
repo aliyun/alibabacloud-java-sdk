@@ -13,6 +13,9 @@ public class DescribeUsersInGroupRequest extends TeaModel {
     @NameInMap("EndUserId")
     public String endUserId;
 
+    @NameInMap("EndUserIds")
+    public java.util.List<String> endUserIds;
+
     @NameInMap("Filter")
     public String filter;
 
@@ -58,6 +61,14 @@ public class DescribeUsersInGroupRequest extends TeaModel {
     }
     public String getEndUserId() {
         return this.endUserId;
+    }
+
+    public DescribeUsersInGroupRequest setEndUserIds(java.util.List<String> endUserIds) {
+        this.endUserIds = endUserIds;
+        return this;
+    }
+    public java.util.List<String> getEndUserIds() {
+        return this.endUserIds;
     }
 
     public DescribeUsersInGroupRequest setFilter(String filter) {
