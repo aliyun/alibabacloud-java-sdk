@@ -4,27 +4,21 @@ package com.aliyun.unimkt20181212.models;
 import com.aliyun.tea.*;
 
 public class GetMainPartListRequest extends TeaModel {
-    // 业务类型，见接口文档枚举
     @NameInMap("AccountType")
     public String accountType;
 
-    // 主体名称，mainName
     @NameInMap("MainName")
     public String mainName;
 
-    // 主体类型：0代理商1直投2被代理品牌	1
     @NameInMap("MainType")
     public Integer mainType;
 
-    // 分页参数：页码 从1开始
     @NameInMap("PageIndex")
     public Integer pageIndex;
 
-    // 分页参数，每页大小
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 代理商主体ID
     @NameInMap("ParentMainId")
     public Long parentMainId;
 

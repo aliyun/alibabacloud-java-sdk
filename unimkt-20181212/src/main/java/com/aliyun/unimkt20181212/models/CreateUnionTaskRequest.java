@@ -4,6 +4,9 @@ package com.aliyun.unimkt20181212.models;
 import com.aliyun.tea.*;
 
 public class CreateUnionTaskRequest extends TeaModel {
+    @NameInMap("AnchorId")
+    public String anchorId;
+
     @NameInMap("BrandUserId")
     public Long brandUserId;
 
@@ -34,6 +37,15 @@ public class CreateUnionTaskRequest extends TeaModel {
     @NameInMap("IndustryLabelBagId")
     public Integer industryLabelBagId;
 
+    @NameInMap("MediaIdBlackList")
+    public java.util.List<String> mediaIdBlackList;
+
+    @NameInMap("MediaIdWhiteList")
+    public java.util.List<String> mediaIdWhiteList;
+
+    @NameInMap("MediaIndustry")
+    public String mediaIndustry;
+
     @NameInMap("Name")
     public String name;
 
@@ -61,6 +73,14 @@ public class CreateUnionTaskRequest extends TeaModel {
     public static CreateUnionTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateUnionTaskRequest self = new CreateUnionTaskRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateUnionTaskRequest setAnchorId(String anchorId) {
+        this.anchorId = anchorId;
+        return this;
+    }
+    public String getAnchorId() {
+        return this.anchorId;
     }
 
     public CreateUnionTaskRequest setBrandUserId(Long brandUserId) {
@@ -141,6 +161,30 @@ public class CreateUnionTaskRequest extends TeaModel {
     }
     public Integer getIndustryLabelBagId() {
         return this.industryLabelBagId;
+    }
+
+    public CreateUnionTaskRequest setMediaIdBlackList(java.util.List<String> mediaIdBlackList) {
+        this.mediaIdBlackList = mediaIdBlackList;
+        return this;
+    }
+    public java.util.List<String> getMediaIdBlackList() {
+        return this.mediaIdBlackList;
+    }
+
+    public CreateUnionTaskRequest setMediaIdWhiteList(java.util.List<String> mediaIdWhiteList) {
+        this.mediaIdWhiteList = mediaIdWhiteList;
+        return this;
+    }
+    public java.util.List<String> getMediaIdWhiteList() {
+        return this.mediaIdWhiteList;
+    }
+
+    public CreateUnionTaskRequest setMediaIndustry(String mediaIndustry) {
+        this.mediaIndustry = mediaIndustry;
+        return this;
+    }
+    public String getMediaIndustry() {
+        return this.mediaIndustry;
     }
 
     public CreateUnionTaskRequest setName(String name) {

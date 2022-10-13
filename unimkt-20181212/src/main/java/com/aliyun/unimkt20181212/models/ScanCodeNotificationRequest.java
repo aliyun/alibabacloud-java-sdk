@@ -76,6 +76,9 @@ public class ScanCodeNotificationRequest extends TeaModel {
     @NameInMap("TaskType")
     public String taskType;
 
+    @NameInMap("TradeTimeStr")
+    public String tradeTimeStr;
+
     @NameInMap("V")
     public String v;
 
@@ -274,6 +277,14 @@ public class ScanCodeNotificationRequest extends TeaModel {
     }
     public String getTaskType() {
         return this.taskType;
+    }
+
+    public ScanCodeNotificationRequest setTradeTimeStr(String tradeTimeStr) {
+        this.tradeTimeStr = tradeTimeStr;
+        return this;
+    }
+    public String getTradeTimeStr() {
+        return this.tradeTimeStr;
     }
 
     public ScanCodeNotificationRequest setV(String v) {
