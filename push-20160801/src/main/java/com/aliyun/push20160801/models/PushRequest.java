@@ -43,6 +43,12 @@ public class PushRequest extends TeaModel {
     @NameInMap("AndroidNotificationChannel")
     public String androidNotificationChannel;
 
+    @NameInMap("AndroidNotificationGroup")
+    public String androidNotificationGroup;
+
+    @NameInMap("AndroidNotificationHonorChannel")
+    public String androidNotificationHonorChannel;
+
     @NameInMap("AndroidNotificationHuaweiChannel")
     public String androidNotificationHuaweiChannel;
 
@@ -306,6 +312,22 @@ public class PushRequest extends TeaModel {
     }
     public String getAndroidNotificationChannel() {
         return this.androidNotificationChannel;
+    }
+
+    public PushRequest setAndroidNotificationGroup(String androidNotificationGroup) {
+        this.androidNotificationGroup = androidNotificationGroup;
+        return this;
+    }
+    public String getAndroidNotificationGroup() {
+        return this.androidNotificationGroup;
+    }
+
+    public PushRequest setAndroidNotificationHonorChannel(String androidNotificationHonorChannel) {
+        this.androidNotificationHonorChannel = androidNotificationHonorChannel;
+        return this;
+    }
+    public String getAndroidNotificationHonorChannel() {
+        return this.androidNotificationHonorChannel;
     }
 
     public PushRequest setAndroidNotificationHuaweiChannel(String androidNotificationHuaweiChannel) {
@@ -764,6 +786,12 @@ public class PushRequest extends TeaModel {
         @NameInMap("AndroidNotificationChannel")
         public String androidNotificationChannel;
 
+        @NameInMap("AndroidNotificationGroup")
+        public String androidNotificationGroup;
+
+        @NameInMap("AndroidNotificationHonorChannel")
+        public String androidNotificationHonorChannel;
+
         @NameInMap("AndroidNotificationHuaweiChannel")
         public String androidNotificationHuaweiChannel;
 
@@ -1009,6 +1037,22 @@ public class PushRequest extends TeaModel {
         }
         public String getAndroidNotificationChannel() {
             return this.androidNotificationChannel;
+        }
+
+        public MassPushRequestPushTask setAndroidNotificationGroup(String androidNotificationGroup) {
+            this.androidNotificationGroup = androidNotificationGroup;
+            return this;
+        }
+        public String getAndroidNotificationGroup() {
+            return this.androidNotificationGroup;
+        }
+
+        public MassPushRequestPushTask setAndroidNotificationHonorChannel(String androidNotificationHonorChannel) {
+            this.androidNotificationHonorChannel = androidNotificationHonorChannel;
+            return this;
+        }
+        public String getAndroidNotificationHonorChannel() {
+            return this.androidNotificationHonorChannel;
         }
 
         public MassPushRequestPushTask setAndroidNotificationHuaweiChannel(String androidNotificationHuaweiChannel) {
