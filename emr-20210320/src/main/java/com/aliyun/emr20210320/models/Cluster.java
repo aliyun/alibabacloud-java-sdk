@@ -61,9 +61,6 @@ public class Cluster extends TeaModel {
     @NameInMap("Tags")
     public java.util.List<Tag> tags;
 
-    @NameInMap("VpcId")
-    public String vpcId;
-
     public static Cluster build(java.util.Map<String, ?> map) throws Exception {
         Cluster self = new Cluster();
         return TeaModel.build(map, self);
@@ -219,14 +216,6 @@ public class Cluster extends TeaModel {
     }
     public java.util.List<Tag> getTags() {
         return this.tags;
-    }
-
-    public Cluster setVpcId(String vpcId) {
-        this.vpcId = vpcId;
-        return this;
-    }
-    public String getVpcId() {
-        return this.vpcId;
     }
 
 }

@@ -3,7 +3,7 @@ package com.aliyun.emr20210320.models;
 
 import com.aliyun.tea.*;
 
-public class ByTimeScalingRule extends TeaModel {
+public class TimeTrigger extends TeaModel {
     @NameInMap("EndTime")
     public Long endTime;
 
@@ -19,12 +19,12 @@ public class ByTimeScalingRule extends TeaModel {
     @NameInMap("RecurrenceValue")
     public String recurrenceValue;
 
-    public static ByTimeScalingRule build(java.util.Map<String, ?> map) throws Exception {
-        ByTimeScalingRule self = new ByTimeScalingRule();
+    public static TimeTrigger build(java.util.Map<String, ?> map) throws Exception {
+        TimeTrigger self = new TimeTrigger();
         return TeaModel.build(map, self);
     }
 
-    public ByTimeScalingRule setEndTime(Long endTime) {
+    public TimeTrigger setEndTime(Long endTime) {
         this.endTime = endTime;
         return this;
     }
@@ -32,7 +32,7 @@ public class ByTimeScalingRule extends TeaModel {
         return this.endTime;
     }
 
-    public ByTimeScalingRule setLaunchExpirationTime(Integer launchExpirationTime) {
+    public TimeTrigger setLaunchExpirationTime(Integer launchExpirationTime) {
         this.launchExpirationTime = launchExpirationTime;
         return this;
     }
@@ -40,7 +40,7 @@ public class ByTimeScalingRule extends TeaModel {
         return this.launchExpirationTime;
     }
 
-    public ByTimeScalingRule setLaunchTime(Long launchTime) {
+    public TimeTrigger setLaunchTime(Long launchTime) {
         this.launchTime = launchTime;
         return this;
     }
@@ -48,7 +48,7 @@ public class ByTimeScalingRule extends TeaModel {
         return this.launchTime;
     }
 
-    public ByTimeScalingRule setRecurrenceType(String recurrenceType) {
+    public TimeTrigger setRecurrenceType(String recurrenceType) {
         this.recurrenceType = recurrenceType;
         return this;
     }
@@ -56,7 +56,7 @@ public class ByTimeScalingRule extends TeaModel {
         return this.recurrenceType;
     }
 
-    public ByTimeScalingRule setRecurrenceValue(String recurrenceValue) {
+    public TimeTrigger setRecurrenceValue(String recurrenceValue) {
         this.recurrenceValue = recurrenceValue;
         return this;
     }

@@ -4,17 +4,29 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class ScalingRule extends TeaModel {
+    @NameInMap("ActivityType")
+    public String activityType;
+
+    @NameInMap("AdjustmentType")
+    public String adjustmentType;
+
     @NameInMap("AdjustmentValue")
     public Integer adjustmentValue;
 
     @NameInMap("ByLoadScalingRule")
-    public ByLoadScalingRule byLoadScalingRule;
+    public MetricsTrigger byLoadScalingRule;
 
     @NameInMap("ByTimeScalingRule")
-    public ByTimeScalingRule byTimeScalingRule;
+    public TimeTrigger byTimeScalingRule;
 
     @NameInMap("CoolDownInterval")
     public Integer coolDownInterval;
+
+    @NameInMap("MetricsTrigger")
+    public MetricsTrigger metricsTrigger;
+
+    @NameInMap("RuleName")
+    public String ruleName;
 
     @NameInMap("ScalingActivityType")
     public String scalingActivityType;
@@ -25,9 +37,31 @@ public class ScalingRule extends TeaModel {
     @NameInMap("ScalingRuleType")
     public String scalingRuleType;
 
+    @NameInMap("TimeTrigger")
+    public TimeTrigger timeTrigger;
+
+    @NameInMap("TriggerType")
+    public String triggerType;
+
     public static ScalingRule build(java.util.Map<String, ?> map) throws Exception {
         ScalingRule self = new ScalingRule();
         return TeaModel.build(map, self);
+    }
+
+    public ScalingRule setActivityType(String activityType) {
+        this.activityType = activityType;
+        return this;
+    }
+    public String getActivityType() {
+        return this.activityType;
+    }
+
+    public ScalingRule setAdjustmentType(String adjustmentType) {
+        this.adjustmentType = adjustmentType;
+        return this;
+    }
+    public String getAdjustmentType() {
+        return this.adjustmentType;
     }
 
     public ScalingRule setAdjustmentValue(Integer adjustmentValue) {
@@ -38,19 +72,19 @@ public class ScalingRule extends TeaModel {
         return this.adjustmentValue;
     }
 
-    public ScalingRule setByLoadScalingRule(ByLoadScalingRule byLoadScalingRule) {
+    public ScalingRule setByLoadScalingRule(MetricsTrigger byLoadScalingRule) {
         this.byLoadScalingRule = byLoadScalingRule;
         return this;
     }
-    public ByLoadScalingRule getByLoadScalingRule() {
+    public MetricsTrigger getByLoadScalingRule() {
         return this.byLoadScalingRule;
     }
 
-    public ScalingRule setByTimeScalingRule(ByTimeScalingRule byTimeScalingRule) {
+    public ScalingRule setByTimeScalingRule(TimeTrigger byTimeScalingRule) {
         this.byTimeScalingRule = byTimeScalingRule;
         return this;
     }
-    public ByTimeScalingRule getByTimeScalingRule() {
+    public TimeTrigger getByTimeScalingRule() {
         return this.byTimeScalingRule;
     }
 
@@ -60,6 +94,22 @@ public class ScalingRule extends TeaModel {
     }
     public Integer getCoolDownInterval() {
         return this.coolDownInterval;
+    }
+
+    public ScalingRule setMetricsTrigger(MetricsTrigger metricsTrigger) {
+        this.metricsTrigger = metricsTrigger;
+        return this;
+    }
+    public MetricsTrigger getMetricsTrigger() {
+        return this.metricsTrigger;
+    }
+
+    public ScalingRule setRuleName(String ruleName) {
+        this.ruleName = ruleName;
+        return this;
+    }
+    public String getRuleName() {
+        return this.ruleName;
     }
 
     public ScalingRule setScalingActivityType(String scalingActivityType) {
@@ -86,141 +136,20 @@ public class ScalingRule extends TeaModel {
         return this.scalingRuleType;
     }
 
-    public static class ByLoadScalingRule extends TeaModel {
-        @NameInMap("ComparisonOperator")
-        public String comparisonOperator;
-
-        @NameInMap("CoolDownInterval")
-        public Integer coolDownInterval;
-
-        @NameInMap("EvaluationCount")
-        public Integer evaluationCount;
-
-        @NameInMap("MetricName")
-        public String metricName;
-
-        @NameInMap("Statistics")
-        public String statistics;
-
-        @NameInMap("Threshold")
-        public Double threshold;
-
-        @NameInMap("TimeWindow")
-        public Integer timeWindow;
-
-        public static ByLoadScalingRule build(java.util.Map<String, ?> map) throws Exception {
-            ByLoadScalingRule self = new ByLoadScalingRule();
-            return TeaModel.build(map, self);
-        }
-
-        public ByLoadScalingRule setComparisonOperator(String comparisonOperator) {
-            this.comparisonOperator = comparisonOperator;
-            return this;
-        }
-        public String getComparisonOperator() {
-            return this.comparisonOperator;
-        }
-
-        public ByLoadScalingRule setCoolDownInterval(Integer coolDownInterval) {
-            this.coolDownInterval = coolDownInterval;
-            return this;
-        }
-        public Integer getCoolDownInterval() {
-            return this.coolDownInterval;
-        }
-
-        public ByLoadScalingRule setEvaluationCount(Integer evaluationCount) {
-            this.evaluationCount = evaluationCount;
-            return this;
-        }
-        public Integer getEvaluationCount() {
-            return this.evaluationCount;
-        }
-
-        public ByLoadScalingRule setMetricName(String metricName) {
-            this.metricName = metricName;
-            return this;
-        }
-        public String getMetricName() {
-            return this.metricName;
-        }
-
-        public ByLoadScalingRule setStatistics(String statistics) {
-            this.statistics = statistics;
-            return this;
-        }
-        public String getStatistics() {
-            return this.statistics;
-        }
-
-        public ByLoadScalingRule setThreshold(Double threshold) {
-            this.threshold = threshold;
-            return this;
-        }
-        public Double getThreshold() {
-            return this.threshold;
-        }
-
-        public ByLoadScalingRule setTimeWindow(Integer timeWindow) {
-            this.timeWindow = timeWindow;
-            return this;
-        }
-        public Integer getTimeWindow() {
-            return this.timeWindow;
-        }
-
+    public ScalingRule setTimeTrigger(TimeTrigger timeTrigger) {
+        this.timeTrigger = timeTrigger;
+        return this;
+    }
+    public TimeTrigger getTimeTrigger() {
+        return this.timeTrigger;
     }
 
-    public static class ByTimeScalingRule extends TeaModel {
-        @NameInMap("EndTime")
-        public Long endTime;
-
-        @NameInMap("LaunchTime")
-        public Long launchTime;
-
-        @NameInMap("RecurrenceType")
-        public String recurrenceType;
-
-        @NameInMap("RecurrenceValue")
-        public String recurrenceValue;
-
-        public static ByTimeScalingRule build(java.util.Map<String, ?> map) throws Exception {
-            ByTimeScalingRule self = new ByTimeScalingRule();
-            return TeaModel.build(map, self);
-        }
-
-        public ByTimeScalingRule setEndTime(Long endTime) {
-            this.endTime = endTime;
-            return this;
-        }
-        public Long getEndTime() {
-            return this.endTime;
-        }
-
-        public ByTimeScalingRule setLaunchTime(Long launchTime) {
-            this.launchTime = launchTime;
-            return this;
-        }
-        public Long getLaunchTime() {
-            return this.launchTime;
-        }
-
-        public ByTimeScalingRule setRecurrenceType(String recurrenceType) {
-            this.recurrenceType = recurrenceType;
-            return this;
-        }
-        public String getRecurrenceType() {
-            return this.recurrenceType;
-        }
-
-        public ByTimeScalingRule setRecurrenceValue(String recurrenceValue) {
-            this.recurrenceValue = recurrenceValue;
-            return this;
-        }
-        public String getRecurrenceValue() {
-            return this.recurrenceValue;
-        }
-
+    public ScalingRule setTriggerType(String triggerType) {
+        this.triggerType = triggerType;
+        return this;
+    }
+    public String getTriggerType() {
+        return this.triggerType;
     }
 
 }
