@@ -3,12 +3,9 @@ package com.aliyun.sae20190506.models;
 
 import com.aliyun.tea.*;
 
-public class CreateApplicationRequest extends TeaModel {
+public class CreateJobRequest extends TeaModel {
     @NameInMap("AcrAssumeRoleArn")
     public String acrAssumeRoleArn;
-
-    @NameInMap("AcrInstanceId")
-    public String acrInstanceId;
 
     @NameInMap("AppDescription")
     public String appDescription;
@@ -22,11 +19,17 @@ public class CreateApplicationRequest extends TeaModel {
     @NameInMap("AutoConfig")
     public Boolean autoConfig;
 
+    @NameInMap("BackoffLimit")
+    public Long backoffLimit;
+
     @NameInMap("Command")
     public String command;
 
     @NameInMap("CommandArgs")
     public String commandArgs;
+
+    @NameInMap("ConcurrencyPolicy")
+    public String concurrencyPolicy;
 
     @NameInMap("ConfigMapMountDesc")
     public String configMapMountDesc;
@@ -58,17 +61,11 @@ public class CreateApplicationRequest extends TeaModel {
     @NameInMap("Jdk")
     public String jdk;
 
-    @NameInMap("KafkaConfigs")
-    public String kafkaConfigs;
-
     @NameInMap("Liveness")
     public String liveness;
 
     @NameInMap("Memory")
     public Integer memory;
-
-    @NameInMap("MicroRegistration")
-    public String microRegistration;
 
     @NameInMap("MountDesc")
     public String mountDesc;
@@ -78,9 +75,6 @@ public class CreateApplicationRequest extends TeaModel {
 
     @NameInMap("NamespaceId")
     public String namespaceId;
-
-    @NameInMap("NasConfigs")
-    public String nasConfigs;
 
     @NameInMap("NasId")
     public String nasId;
@@ -121,11 +115,11 @@ public class CreateApplicationRequest extends TeaModel {
     @NameInMap("ProgrammingLanguage")
     public String programmingLanguage;
 
-    @NameInMap("PvtzDiscoverySvc")
-    public String pvtzDiscoverySvc;
-
     @NameInMap("Readiness")
     public String readiness;
+
+    @NameInMap("RefAppId")
+    public String refAppId;
 
     @NameInMap("Replicas")
     public Integer replicas;
@@ -133,17 +127,29 @@ public class CreateApplicationRequest extends TeaModel {
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
+    @NameInMap("Slice")
+    public Boolean slice;
+
+    @NameInMap("SliceEnvs")
+    public String sliceEnvs;
+
     @NameInMap("SlsConfigs")
     public String slsConfigs;
 
     @NameInMap("TerminationGracePeriodSeconds")
     public Integer terminationGracePeriodSeconds;
 
+    @NameInMap("Timeout")
+    public Long timeout;
+
     @NameInMap("Timezone")
     public String timezone;
 
     @NameInMap("TomcatConfig")
     public String tomcatConfig;
+
+    @NameInMap("TriggerConfig")
+    public String triggerConfig;
 
     @NameInMap("VSwitchId")
     public String vSwitchId;
@@ -157,12 +163,15 @@ public class CreateApplicationRequest extends TeaModel {
     @NameInMap("WebContainer")
     public String webContainer;
 
-    public static CreateApplicationRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateApplicationRequest self = new CreateApplicationRequest();
+    @NameInMap("Workload")
+    public String workload;
+
+    public static CreateJobRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateJobRequest self = new CreateJobRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateApplicationRequest setAcrAssumeRoleArn(String acrAssumeRoleArn) {
+    public CreateJobRequest setAcrAssumeRoleArn(String acrAssumeRoleArn) {
         this.acrAssumeRoleArn = acrAssumeRoleArn;
         return this;
     }
@@ -170,15 +179,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.acrAssumeRoleArn;
     }
 
-    public CreateApplicationRequest setAcrInstanceId(String acrInstanceId) {
-        this.acrInstanceId = acrInstanceId;
-        return this;
-    }
-    public String getAcrInstanceId() {
-        return this.acrInstanceId;
-    }
-
-    public CreateApplicationRequest setAppDescription(String appDescription) {
+    public CreateJobRequest setAppDescription(String appDescription) {
         this.appDescription = appDescription;
         return this;
     }
@@ -186,7 +187,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.appDescription;
     }
 
-    public CreateApplicationRequest setAppName(String appName) {
+    public CreateJobRequest setAppName(String appName) {
         this.appName = appName;
         return this;
     }
@@ -194,7 +195,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.appName;
     }
 
-    public CreateApplicationRequest setAssociateEip(Boolean associateEip) {
+    public CreateJobRequest setAssociateEip(Boolean associateEip) {
         this.associateEip = associateEip;
         return this;
     }
@@ -202,7 +203,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.associateEip;
     }
 
-    public CreateApplicationRequest setAutoConfig(Boolean autoConfig) {
+    public CreateJobRequest setAutoConfig(Boolean autoConfig) {
         this.autoConfig = autoConfig;
         return this;
     }
@@ -210,7 +211,15 @@ public class CreateApplicationRequest extends TeaModel {
         return this.autoConfig;
     }
 
-    public CreateApplicationRequest setCommand(String command) {
+    public CreateJobRequest setBackoffLimit(Long backoffLimit) {
+        this.backoffLimit = backoffLimit;
+        return this;
+    }
+    public Long getBackoffLimit() {
+        return this.backoffLimit;
+    }
+
+    public CreateJobRequest setCommand(String command) {
         this.command = command;
         return this;
     }
@@ -218,7 +227,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.command;
     }
 
-    public CreateApplicationRequest setCommandArgs(String commandArgs) {
+    public CreateJobRequest setCommandArgs(String commandArgs) {
         this.commandArgs = commandArgs;
         return this;
     }
@@ -226,7 +235,15 @@ public class CreateApplicationRequest extends TeaModel {
         return this.commandArgs;
     }
 
-    public CreateApplicationRequest setConfigMapMountDesc(String configMapMountDesc) {
+    public CreateJobRequest setConcurrencyPolicy(String concurrencyPolicy) {
+        this.concurrencyPolicy = concurrencyPolicy;
+        return this;
+    }
+    public String getConcurrencyPolicy() {
+        return this.concurrencyPolicy;
+    }
+
+    public CreateJobRequest setConfigMapMountDesc(String configMapMountDesc) {
         this.configMapMountDesc = configMapMountDesc;
         return this;
     }
@@ -234,7 +251,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.configMapMountDesc;
     }
 
-    public CreateApplicationRequest setCpu(Integer cpu) {
+    public CreateJobRequest setCpu(Integer cpu) {
         this.cpu = cpu;
         return this;
     }
@@ -242,7 +259,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.cpu;
     }
 
-    public CreateApplicationRequest setCustomHostAlias(String customHostAlias) {
+    public CreateJobRequest setCustomHostAlias(String customHostAlias) {
         this.customHostAlias = customHostAlias;
         return this;
     }
@@ -250,7 +267,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.customHostAlias;
     }
 
-    public CreateApplicationRequest setDeploy(Boolean deploy) {
+    public CreateJobRequest setDeploy(Boolean deploy) {
         this.deploy = deploy;
         return this;
     }
@@ -258,7 +275,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.deploy;
     }
 
-    public CreateApplicationRequest setEdasContainerVersion(String edasContainerVersion) {
+    public CreateJobRequest setEdasContainerVersion(String edasContainerVersion) {
         this.edasContainerVersion = edasContainerVersion;
         return this;
     }
@@ -266,7 +283,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.edasContainerVersion;
     }
 
-    public CreateApplicationRequest setEnvs(String envs) {
+    public CreateJobRequest setEnvs(String envs) {
         this.envs = envs;
         return this;
     }
@@ -274,7 +291,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.envs;
     }
 
-    public CreateApplicationRequest setImageUrl(String imageUrl) {
+    public CreateJobRequest setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
     }
@@ -282,7 +299,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.imageUrl;
     }
 
-    public CreateApplicationRequest setJarStartArgs(String jarStartArgs) {
+    public CreateJobRequest setJarStartArgs(String jarStartArgs) {
         this.jarStartArgs = jarStartArgs;
         return this;
     }
@@ -290,7 +307,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.jarStartArgs;
     }
 
-    public CreateApplicationRequest setJarStartOptions(String jarStartOptions) {
+    public CreateJobRequest setJarStartOptions(String jarStartOptions) {
         this.jarStartOptions = jarStartOptions;
         return this;
     }
@@ -298,7 +315,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.jarStartOptions;
     }
 
-    public CreateApplicationRequest setJdk(String jdk) {
+    public CreateJobRequest setJdk(String jdk) {
         this.jdk = jdk;
         return this;
     }
@@ -306,15 +323,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.jdk;
     }
 
-    public CreateApplicationRequest setKafkaConfigs(String kafkaConfigs) {
-        this.kafkaConfigs = kafkaConfigs;
-        return this;
-    }
-    public String getKafkaConfigs() {
-        return this.kafkaConfigs;
-    }
-
-    public CreateApplicationRequest setLiveness(String liveness) {
+    public CreateJobRequest setLiveness(String liveness) {
         this.liveness = liveness;
         return this;
     }
@@ -322,7 +331,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.liveness;
     }
 
-    public CreateApplicationRequest setMemory(Integer memory) {
+    public CreateJobRequest setMemory(Integer memory) {
         this.memory = memory;
         return this;
     }
@@ -330,15 +339,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.memory;
     }
 
-    public CreateApplicationRequest setMicroRegistration(String microRegistration) {
-        this.microRegistration = microRegistration;
-        return this;
-    }
-    public String getMicroRegistration() {
-        return this.microRegistration;
-    }
-
-    public CreateApplicationRequest setMountDesc(String mountDesc) {
+    public CreateJobRequest setMountDesc(String mountDesc) {
         this.mountDesc = mountDesc;
         return this;
     }
@@ -346,7 +347,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.mountDesc;
     }
 
-    public CreateApplicationRequest setMountHost(String mountHost) {
+    public CreateJobRequest setMountHost(String mountHost) {
         this.mountHost = mountHost;
         return this;
     }
@@ -354,7 +355,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.mountHost;
     }
 
-    public CreateApplicationRequest setNamespaceId(String namespaceId) {
+    public CreateJobRequest setNamespaceId(String namespaceId) {
         this.namespaceId = namespaceId;
         return this;
     }
@@ -362,15 +363,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.namespaceId;
     }
 
-    public CreateApplicationRequest setNasConfigs(String nasConfigs) {
-        this.nasConfigs = nasConfigs;
-        return this;
-    }
-    public String getNasConfigs() {
-        return this.nasConfigs;
-    }
-
-    public CreateApplicationRequest setNasId(String nasId) {
+    public CreateJobRequest setNasId(String nasId) {
         this.nasId = nasId;
         return this;
     }
@@ -378,7 +371,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.nasId;
     }
 
-    public CreateApplicationRequest setOssAkId(String ossAkId) {
+    public CreateJobRequest setOssAkId(String ossAkId) {
         this.ossAkId = ossAkId;
         return this;
     }
@@ -386,7 +379,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.ossAkId;
     }
 
-    public CreateApplicationRequest setOssAkSecret(String ossAkSecret) {
+    public CreateJobRequest setOssAkSecret(String ossAkSecret) {
         this.ossAkSecret = ossAkSecret;
         return this;
     }
@@ -394,7 +387,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.ossAkSecret;
     }
 
-    public CreateApplicationRequest setOssMountDescs(String ossMountDescs) {
+    public CreateJobRequest setOssMountDescs(String ossMountDescs) {
         this.ossMountDescs = ossMountDescs;
         return this;
     }
@@ -402,7 +395,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.ossMountDescs;
     }
 
-    public CreateApplicationRequest setPackageType(String packageType) {
+    public CreateJobRequest setPackageType(String packageType) {
         this.packageType = packageType;
         return this;
     }
@@ -410,7 +403,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.packageType;
     }
 
-    public CreateApplicationRequest setPackageUrl(String packageUrl) {
+    public CreateJobRequest setPackageUrl(String packageUrl) {
         this.packageUrl = packageUrl;
         return this;
     }
@@ -418,7 +411,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.packageUrl;
     }
 
-    public CreateApplicationRequest setPackageVersion(String packageVersion) {
+    public CreateJobRequest setPackageVersion(String packageVersion) {
         this.packageVersion = packageVersion;
         return this;
     }
@@ -426,7 +419,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.packageVersion;
     }
 
-    public CreateApplicationRequest setPhpArmsConfigLocation(String phpArmsConfigLocation) {
+    public CreateJobRequest setPhpArmsConfigLocation(String phpArmsConfigLocation) {
         this.phpArmsConfigLocation = phpArmsConfigLocation;
         return this;
     }
@@ -434,7 +427,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.phpArmsConfigLocation;
     }
 
-    public CreateApplicationRequest setPhpConfig(String phpConfig) {
+    public CreateJobRequest setPhpConfig(String phpConfig) {
         this.phpConfig = phpConfig;
         return this;
     }
@@ -442,7 +435,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.phpConfig;
     }
 
-    public CreateApplicationRequest setPhpConfigLocation(String phpConfigLocation) {
+    public CreateJobRequest setPhpConfigLocation(String phpConfigLocation) {
         this.phpConfigLocation = phpConfigLocation;
         return this;
     }
@@ -450,7 +443,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.phpConfigLocation;
     }
 
-    public CreateApplicationRequest setPostStart(String postStart) {
+    public CreateJobRequest setPostStart(String postStart) {
         this.postStart = postStart;
         return this;
     }
@@ -458,7 +451,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.postStart;
     }
 
-    public CreateApplicationRequest setPreStop(String preStop) {
+    public CreateJobRequest setPreStop(String preStop) {
         this.preStop = preStop;
         return this;
     }
@@ -466,7 +459,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.preStop;
     }
 
-    public CreateApplicationRequest setProgrammingLanguage(String programmingLanguage) {
+    public CreateJobRequest setProgrammingLanguage(String programmingLanguage) {
         this.programmingLanguage = programmingLanguage;
         return this;
     }
@@ -474,15 +467,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.programmingLanguage;
     }
 
-    public CreateApplicationRequest setPvtzDiscoverySvc(String pvtzDiscoverySvc) {
-        this.pvtzDiscoverySvc = pvtzDiscoverySvc;
-        return this;
-    }
-    public String getPvtzDiscoverySvc() {
-        return this.pvtzDiscoverySvc;
-    }
-
-    public CreateApplicationRequest setReadiness(String readiness) {
+    public CreateJobRequest setReadiness(String readiness) {
         this.readiness = readiness;
         return this;
     }
@@ -490,7 +475,15 @@ public class CreateApplicationRequest extends TeaModel {
         return this.readiness;
     }
 
-    public CreateApplicationRequest setReplicas(Integer replicas) {
+    public CreateJobRequest setRefAppId(String refAppId) {
+        this.refAppId = refAppId;
+        return this;
+    }
+    public String getRefAppId() {
+        return this.refAppId;
+    }
+
+    public CreateJobRequest setReplicas(Integer replicas) {
         this.replicas = replicas;
         return this;
     }
@@ -498,7 +491,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.replicas;
     }
 
-    public CreateApplicationRequest setSecurityGroupId(String securityGroupId) {
+    public CreateJobRequest setSecurityGroupId(String securityGroupId) {
         this.securityGroupId = securityGroupId;
         return this;
     }
@@ -506,7 +499,23 @@ public class CreateApplicationRequest extends TeaModel {
         return this.securityGroupId;
     }
 
-    public CreateApplicationRequest setSlsConfigs(String slsConfigs) {
+    public CreateJobRequest setSlice(Boolean slice) {
+        this.slice = slice;
+        return this;
+    }
+    public Boolean getSlice() {
+        return this.slice;
+    }
+
+    public CreateJobRequest setSliceEnvs(String sliceEnvs) {
+        this.sliceEnvs = sliceEnvs;
+        return this;
+    }
+    public String getSliceEnvs() {
+        return this.sliceEnvs;
+    }
+
+    public CreateJobRequest setSlsConfigs(String slsConfigs) {
         this.slsConfigs = slsConfigs;
         return this;
     }
@@ -514,7 +523,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.slsConfigs;
     }
 
-    public CreateApplicationRequest setTerminationGracePeriodSeconds(Integer terminationGracePeriodSeconds) {
+    public CreateJobRequest setTerminationGracePeriodSeconds(Integer terminationGracePeriodSeconds) {
         this.terminationGracePeriodSeconds = terminationGracePeriodSeconds;
         return this;
     }
@@ -522,7 +531,15 @@ public class CreateApplicationRequest extends TeaModel {
         return this.terminationGracePeriodSeconds;
     }
 
-    public CreateApplicationRequest setTimezone(String timezone) {
+    public CreateJobRequest setTimeout(Long timeout) {
+        this.timeout = timeout;
+        return this;
+    }
+    public Long getTimeout() {
+        return this.timeout;
+    }
+
+    public CreateJobRequest setTimezone(String timezone) {
         this.timezone = timezone;
         return this;
     }
@@ -530,7 +547,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.timezone;
     }
 
-    public CreateApplicationRequest setTomcatConfig(String tomcatConfig) {
+    public CreateJobRequest setTomcatConfig(String tomcatConfig) {
         this.tomcatConfig = tomcatConfig;
         return this;
     }
@@ -538,7 +555,15 @@ public class CreateApplicationRequest extends TeaModel {
         return this.tomcatConfig;
     }
 
-    public CreateApplicationRequest setVSwitchId(String vSwitchId) {
+    public CreateJobRequest setTriggerConfig(String triggerConfig) {
+        this.triggerConfig = triggerConfig;
+        return this;
+    }
+    public String getTriggerConfig() {
+        return this.triggerConfig;
+    }
+
+    public CreateJobRequest setVSwitchId(String vSwitchId) {
         this.vSwitchId = vSwitchId;
         return this;
     }
@@ -546,7 +571,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.vSwitchId;
     }
 
-    public CreateApplicationRequest setVpcId(String vpcId) {
+    public CreateJobRequest setVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
@@ -554,7 +579,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.vpcId;
     }
 
-    public CreateApplicationRequest setWarStartOptions(String warStartOptions) {
+    public CreateJobRequest setWarStartOptions(String warStartOptions) {
         this.warStartOptions = warStartOptions;
         return this;
     }
@@ -562,12 +587,20 @@ public class CreateApplicationRequest extends TeaModel {
         return this.warStartOptions;
     }
 
-    public CreateApplicationRequest setWebContainer(String webContainer) {
+    public CreateJobRequest setWebContainer(String webContainer) {
         this.webContainer = webContainer;
         return this;
     }
     public String getWebContainer() {
         return this.webContainer;
+    }
+
+    public CreateJobRequest setWorkload(String workload) {
+        this.workload = workload;
+        return this;
+    }
+    public String getWorkload() {
+        return this.workload;
     }
 
 }

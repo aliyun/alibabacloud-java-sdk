@@ -67,6 +67,9 @@ public class DeployApplicationRequest extends TeaModel {
     @NameInMap("Liveness")
     public String liveness;
 
+    @NameInMap("MicroRegistration")
+    public String microRegistration;
+
     @NameInMap("MinReadyInstanceRatio")
     public Integer minReadyInstanceRatio;
 
@@ -78,6 +81,9 @@ public class DeployApplicationRequest extends TeaModel {
 
     @NameInMap("MountHost")
     public String mountHost;
+
+    @NameInMap("NasConfigs")
+    public String nasConfigs;
 
     @NameInMap("NasId")
     public String nasId;
@@ -111,6 +117,9 @@ public class DeployApplicationRequest extends TeaModel {
 
     @NameInMap("PreStop")
     public String preStop;
+
+    @NameInMap("PvtzDiscoverySvc")
+    public String pvtzDiscoverySvc;
 
     @NameInMap("Readiness")
     public String readiness;
@@ -309,6 +318,14 @@ public class DeployApplicationRequest extends TeaModel {
         return this.liveness;
     }
 
+    public DeployApplicationRequest setMicroRegistration(String microRegistration) {
+        this.microRegistration = microRegistration;
+        return this;
+    }
+    public String getMicroRegistration() {
+        return this.microRegistration;
+    }
+
     public DeployApplicationRequest setMinReadyInstanceRatio(Integer minReadyInstanceRatio) {
         this.minReadyInstanceRatio = minReadyInstanceRatio;
         return this;
@@ -339,6 +356,14 @@ public class DeployApplicationRequest extends TeaModel {
     }
     public String getMountHost() {
         return this.mountHost;
+    }
+
+    public DeployApplicationRequest setNasConfigs(String nasConfigs) {
+        this.nasConfigs = nasConfigs;
+        return this;
+    }
+    public String getNasConfigs() {
+        return this.nasConfigs;
     }
 
     public DeployApplicationRequest setNasId(String nasId) {
@@ -427,6 +452,14 @@ public class DeployApplicationRequest extends TeaModel {
     }
     public String getPreStop() {
         return this.preStop;
+    }
+
+    public DeployApplicationRequest setPvtzDiscoverySvc(String pvtzDiscoverySvc) {
+        this.pvtzDiscoverySvc = pvtzDiscoverySvc;
+        return this;
+    }
+    public String getPvtzDiscoverySvc() {
+        return this.pvtzDiscoverySvc;
     }
 
     public DeployApplicationRequest setReadiness(String readiness) {

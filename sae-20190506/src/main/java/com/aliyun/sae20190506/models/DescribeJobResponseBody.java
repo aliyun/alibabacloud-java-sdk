@@ -3,12 +3,12 @@ package com.aliyun.sae20190506.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeApplicationConfigResponseBody extends TeaModel {
+public class DescribeJobResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
-    public DescribeApplicationConfigResponseBodyData data;
+    public DescribeJobResponseBodyData data;
 
     @NameInMap("ErrorCode")
     public String errorCode;
@@ -25,12 +25,12 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
     @NameInMap("TraceId")
     public String traceId;
 
-    public static DescribeApplicationConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DescribeApplicationConfigResponseBody self = new DescribeApplicationConfigResponseBody();
+    public static DescribeJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DescribeJobResponseBody self = new DescribeJobResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeApplicationConfigResponseBody setCode(String code) {
+    public DescribeJobResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -38,15 +38,15 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         return this.code;
     }
 
-    public DescribeApplicationConfigResponseBody setData(DescribeApplicationConfigResponseBodyData data) {
+    public DescribeJobResponseBody setData(DescribeJobResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public DescribeApplicationConfigResponseBodyData getData() {
+    public DescribeJobResponseBodyData getData() {
         return this.data;
     }
 
-    public DescribeApplicationConfigResponseBody setErrorCode(String errorCode) {
+    public DescribeJobResponseBody setErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
     }
@@ -54,7 +54,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public DescribeApplicationConfigResponseBody setMessage(String message) {
+    public DescribeJobResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -62,7 +62,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         return this.message;
     }
 
-    public DescribeApplicationConfigResponseBody setRequestId(String requestId) {
+    public DescribeJobResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -70,7 +70,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeApplicationConfigResponseBody setSuccess(Boolean success) {
+    public DescribeJobResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
@@ -78,7 +78,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         return this.success;
     }
 
-    public DescribeApplicationConfigResponseBody setTraceId(String traceId) {
+    public DescribeJobResponseBody setTraceId(String traceId) {
         this.traceId = traceId;
         return this;
     }
@@ -86,7 +86,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         return this.traceId;
     }
 
-    public static class DescribeApplicationConfigResponseBodyDataConfigMapMountDesc extends TeaModel {
+    public static class DescribeJobResponseBodyDataConfigMapMountDesc extends TeaModel {
         @NameInMap("ConfigMapId")
         public Long configMapId;
 
@@ -99,12 +99,12 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @NameInMap("MountPath")
         public String mountPath;
 
-        public static DescribeApplicationConfigResponseBodyDataConfigMapMountDesc build(java.util.Map<String, ?> map) throws Exception {
-            DescribeApplicationConfigResponseBodyDataConfigMapMountDesc self = new DescribeApplicationConfigResponseBodyDataConfigMapMountDesc();
+        public static DescribeJobResponseBodyDataConfigMapMountDesc build(java.util.Map<String, ?> map) throws Exception {
+            DescribeJobResponseBodyDataConfigMapMountDesc self = new DescribeJobResponseBodyDataConfigMapMountDesc();
             return TeaModel.build(map, self);
         }
 
-        public DescribeApplicationConfigResponseBodyDataConfigMapMountDesc setConfigMapId(Long configMapId) {
+        public DescribeJobResponseBodyDataConfigMapMountDesc setConfigMapId(Long configMapId) {
             this.configMapId = configMapId;
             return this;
         }
@@ -112,7 +112,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.configMapId;
         }
 
-        public DescribeApplicationConfigResponseBodyDataConfigMapMountDesc setConfigMapName(String configMapName) {
+        public DescribeJobResponseBodyDataConfigMapMountDesc setConfigMapName(String configMapName) {
             this.configMapName = configMapName;
             return this;
         }
@@ -120,7 +120,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.configMapName;
         }
 
-        public DescribeApplicationConfigResponseBodyDataConfigMapMountDesc setKey(String key) {
+        public DescribeJobResponseBodyDataConfigMapMountDesc setKey(String key) {
             this.key = key;
             return this;
         }
@@ -128,7 +128,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.key;
         }
 
-        public DescribeApplicationConfigResponseBodyDataConfigMapMountDesc setMountPath(String mountPath) {
+        public DescribeJobResponseBodyDataConfigMapMountDesc setMountPath(String mountPath) {
             this.mountPath = mountPath;
             return this;
         }
@@ -138,19 +138,19 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeApplicationConfigResponseBodyDataMountDesc extends TeaModel {
+    public static class DescribeJobResponseBodyDataMountDesc extends TeaModel {
         @NameInMap("MountPath")
         public String mountPath;
 
         @NameInMap("NasPath")
         public String nasPath;
 
-        public static DescribeApplicationConfigResponseBodyDataMountDesc build(java.util.Map<String, ?> map) throws Exception {
-            DescribeApplicationConfigResponseBodyDataMountDesc self = new DescribeApplicationConfigResponseBodyDataMountDesc();
+        public static DescribeJobResponseBodyDataMountDesc build(java.util.Map<String, ?> map) throws Exception {
+            DescribeJobResponseBodyDataMountDesc self = new DescribeJobResponseBodyDataMountDesc();
             return TeaModel.build(map, self);
         }
 
-        public DescribeApplicationConfigResponseBodyDataMountDesc setMountPath(String mountPath) {
+        public DescribeJobResponseBodyDataMountDesc setMountPath(String mountPath) {
             this.mountPath = mountPath;
             return this;
         }
@@ -158,7 +158,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.mountPath;
         }
 
-        public DescribeApplicationConfigResponseBodyDataMountDesc setNasPath(String nasPath) {
+        public DescribeJobResponseBodyDataMountDesc setNasPath(String nasPath) {
             this.nasPath = nasPath;
             return this;
         }
@@ -168,7 +168,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeApplicationConfigResponseBodyDataOssMountDescs extends TeaModel {
+    public static class DescribeJobResponseBodyDataOssMountDescs extends TeaModel {
         @NameInMap("bucketName")
         public String bucketName;
 
@@ -181,12 +181,12 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @NameInMap("readOnly")
         public Boolean readOnly;
 
-        public static DescribeApplicationConfigResponseBodyDataOssMountDescs build(java.util.Map<String, ?> map) throws Exception {
-            DescribeApplicationConfigResponseBodyDataOssMountDescs self = new DescribeApplicationConfigResponseBodyDataOssMountDescs();
+        public static DescribeJobResponseBodyDataOssMountDescs build(java.util.Map<String, ?> map) throws Exception {
+            DescribeJobResponseBodyDataOssMountDescs self = new DescribeJobResponseBodyDataOssMountDescs();
             return TeaModel.build(map, self);
         }
 
-        public DescribeApplicationConfigResponseBodyDataOssMountDescs setBucketName(String bucketName) {
+        public DescribeJobResponseBodyDataOssMountDescs setBucketName(String bucketName) {
             this.bucketName = bucketName;
             return this;
         }
@@ -194,7 +194,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.bucketName;
         }
 
-        public DescribeApplicationConfigResponseBodyDataOssMountDescs setBucketPath(String bucketPath) {
+        public DescribeJobResponseBodyDataOssMountDescs setBucketPath(String bucketPath) {
             this.bucketPath = bucketPath;
             return this;
         }
@@ -202,7 +202,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.bucketPath;
         }
 
-        public DescribeApplicationConfigResponseBodyDataOssMountDescs setMountPath(String mountPath) {
+        public DescribeJobResponseBodyDataOssMountDescs setMountPath(String mountPath) {
             this.mountPath = mountPath;
             return this;
         }
@@ -210,7 +210,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.mountPath;
         }
 
-        public DescribeApplicationConfigResponseBodyDataOssMountDescs setReadOnly(Boolean readOnly) {
+        public DescribeJobResponseBodyDataOssMountDescs setReadOnly(Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
         }
@@ -220,19 +220,19 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeApplicationConfigResponseBodyDataTags extends TeaModel {
+    public static class DescribeJobResponseBodyDataTags extends TeaModel {
         @NameInMap("Key")
         public String key;
 
         @NameInMap("Value")
         public String value;
 
-        public static DescribeApplicationConfigResponseBodyDataTags build(java.util.Map<String, ?> map) throws Exception {
-            DescribeApplicationConfigResponseBodyDataTags self = new DescribeApplicationConfigResponseBodyDataTags();
+        public static DescribeJobResponseBodyDataTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeJobResponseBodyDataTags self = new DescribeJobResponseBodyDataTags();
             return TeaModel.build(map, self);
         }
 
-        public DescribeApplicationConfigResponseBodyDataTags setKey(String key) {
+        public DescribeJobResponseBodyDataTags setKey(String key) {
             this.key = key;
             return this;
         }
@@ -240,7 +240,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.key;
         }
 
-        public DescribeApplicationConfigResponseBodyDataTags setValue(String value) {
+        public DescribeJobResponseBodyDataTags setValue(String value) {
             this.value = value;
             return this;
         }
@@ -250,12 +250,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeApplicationConfigResponseBodyData extends TeaModel {
+    public static class DescribeJobResponseBodyData extends TeaModel {
         @NameInMap("AcrAssumeRoleArn")
         public String acrAssumeRoleArn;
-
-        @NameInMap("AcrInstanceId")
-        public String acrInstanceId;
 
         @NameInMap("AppDescription")
         public String appDescription;
@@ -269,6 +266,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @NameInMap("AssociateEip")
         public Boolean associateEip;
 
+        @NameInMap("BackoffLimit")
+        public Long backoffLimit;
+
         @NameInMap("BatchWaitTime")
         public Integer batchWaitTime;
 
@@ -278,8 +278,11 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @NameInMap("CommandArgs")
         public String commandArgs;
 
+        @NameInMap("ConcurrencyPolicy")
+        public String concurrencyPolicy;
+
         @NameInMap("ConfigMapMountDesc")
-        public java.util.List<DescribeApplicationConfigResponseBodyDataConfigMapMountDesc> configMapMountDesc;
+        public java.util.List<DescribeJobResponseBodyDataConfigMapMountDesc> configMapMountDesc;
 
         @NameInMap("Cpu")
         public Integer cpu;
@@ -311,26 +314,17 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @NameInMap("Jdk")
         public String jdk;
 
-        @NameInMap("KafkaConfigs")
-        public String kafkaConfigs;
-
         @NameInMap("Liveness")
         public String liveness;
 
         @NameInMap("Memory")
         public Integer memory;
 
-        @NameInMap("MicroRegistration")
-        public String microRegistration;
-
-        @NameInMap("MinReadyInstanceRatio")
-        public Integer minReadyInstanceRatio;
-
         @NameInMap("MinReadyInstances")
         public Integer minReadyInstances;
 
         @NameInMap("MountDesc")
-        public java.util.List<DescribeApplicationConfigResponseBodyDataMountDesc> mountDesc;
+        public java.util.List<DescribeJobResponseBodyDataMountDesc> mountDesc;
 
         @NameInMap("MountHost")
         public String mountHost;
@@ -354,7 +348,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         public String ossAkSecret;
 
         @NameInMap("OssMountDescs")
-        public java.util.List<DescribeApplicationConfigResponseBodyDataOssMountDescs> ossMountDescs;
+        public java.util.List<DescribeJobResponseBodyDataOssMountDescs> ossMountDescs;
 
         @NameInMap("PackageType")
         public String packageType;
@@ -383,11 +377,17 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @NameInMap("ProgrammingLanguage")
         public String programmingLanguage;
 
-        @NameInMap("PvtzDiscovery")
-        public String pvtzDiscovery;
+        @NameInMap("PublicWebHookUrls")
+        public java.util.List<String> publicWebHookUrls;
 
         @NameInMap("Readiness")
         public String readiness;
+
+        @NameInMap("RefAppId")
+        public String refAppId;
+
+        @NameInMap("RefedAppIds")
+        public java.util.List<String> refedAppIds;
 
         @NameInMap("RegionId")
         public String regionId;
@@ -398,14 +398,26 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
+        @NameInMap("Slice")
+        public Boolean slice;
+
+        @NameInMap("SliceEnvs")
+        public String sliceEnvs;
+
         @NameInMap("SlsConfigs")
         public String slsConfigs;
 
+        @NameInMap("Suspend")
+        public Boolean suspend;
+
         @NameInMap("Tags")
-        public java.util.List<DescribeApplicationConfigResponseBodyDataTags> tags;
+        public java.util.List<DescribeJobResponseBodyDataTags> tags;
 
         @NameInMap("TerminationGracePeriodSeconds")
         public Integer terminationGracePeriodSeconds;
+
+        @NameInMap("Timeout")
+        public Long timeout;
 
         @NameInMap("Timezone")
         public String timezone;
@@ -413,8 +425,8 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @NameInMap("TomcatConfig")
         public String tomcatConfig;
 
-        @NameInMap("UpdateStrategy")
-        public String updateStrategy;
+        @NameInMap("TriggerConfig")
+        public String triggerConfig;
 
         @NameInMap("VSwitchId")
         public String vSwitchId;
@@ -422,18 +434,21 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @NameInMap("VpcId")
         public String vpcId;
 
+        @NameInMap("VpcWebHookUrls")
+        public java.util.List<String> vpcWebHookUrls;
+
         @NameInMap("WarStartOptions")
         public String warStartOptions;
 
         @NameInMap("WebContainer")
         public String webContainer;
 
-        public static DescribeApplicationConfigResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            DescribeApplicationConfigResponseBodyData self = new DescribeApplicationConfigResponseBodyData();
+        public static DescribeJobResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            DescribeJobResponseBodyData self = new DescribeJobResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public DescribeApplicationConfigResponseBodyData setAcrAssumeRoleArn(String acrAssumeRoleArn) {
+        public DescribeJobResponseBodyData setAcrAssumeRoleArn(String acrAssumeRoleArn) {
             this.acrAssumeRoleArn = acrAssumeRoleArn;
             return this;
         }
@@ -441,15 +456,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.acrAssumeRoleArn;
         }
 
-        public DescribeApplicationConfigResponseBodyData setAcrInstanceId(String acrInstanceId) {
-            this.acrInstanceId = acrInstanceId;
-            return this;
-        }
-        public String getAcrInstanceId() {
-            return this.acrInstanceId;
-        }
-
-        public DescribeApplicationConfigResponseBodyData setAppDescription(String appDescription) {
+        public DescribeJobResponseBodyData setAppDescription(String appDescription) {
             this.appDescription = appDescription;
             return this;
         }
@@ -457,7 +464,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.appDescription;
         }
 
-        public DescribeApplicationConfigResponseBodyData setAppId(String appId) {
+        public DescribeJobResponseBodyData setAppId(String appId) {
             this.appId = appId;
             return this;
         }
@@ -465,7 +472,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.appId;
         }
 
-        public DescribeApplicationConfigResponseBodyData setAppName(String appName) {
+        public DescribeJobResponseBodyData setAppName(String appName) {
             this.appName = appName;
             return this;
         }
@@ -473,7 +480,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.appName;
         }
 
-        public DescribeApplicationConfigResponseBodyData setAssociateEip(Boolean associateEip) {
+        public DescribeJobResponseBodyData setAssociateEip(Boolean associateEip) {
             this.associateEip = associateEip;
             return this;
         }
@@ -481,7 +488,15 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.associateEip;
         }
 
-        public DescribeApplicationConfigResponseBodyData setBatchWaitTime(Integer batchWaitTime) {
+        public DescribeJobResponseBodyData setBackoffLimit(Long backoffLimit) {
+            this.backoffLimit = backoffLimit;
+            return this;
+        }
+        public Long getBackoffLimit() {
+            return this.backoffLimit;
+        }
+
+        public DescribeJobResponseBodyData setBatchWaitTime(Integer batchWaitTime) {
             this.batchWaitTime = batchWaitTime;
             return this;
         }
@@ -489,7 +504,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.batchWaitTime;
         }
 
-        public DescribeApplicationConfigResponseBodyData setCommand(String command) {
+        public DescribeJobResponseBodyData setCommand(String command) {
             this.command = command;
             return this;
         }
@@ -497,7 +512,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.command;
         }
 
-        public DescribeApplicationConfigResponseBodyData setCommandArgs(String commandArgs) {
+        public DescribeJobResponseBodyData setCommandArgs(String commandArgs) {
             this.commandArgs = commandArgs;
             return this;
         }
@@ -505,15 +520,23 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.commandArgs;
         }
 
-        public DescribeApplicationConfigResponseBodyData setConfigMapMountDesc(java.util.List<DescribeApplicationConfigResponseBodyDataConfigMapMountDesc> configMapMountDesc) {
+        public DescribeJobResponseBodyData setConcurrencyPolicy(String concurrencyPolicy) {
+            this.concurrencyPolicy = concurrencyPolicy;
+            return this;
+        }
+        public String getConcurrencyPolicy() {
+            return this.concurrencyPolicy;
+        }
+
+        public DescribeJobResponseBodyData setConfigMapMountDesc(java.util.List<DescribeJobResponseBodyDataConfigMapMountDesc> configMapMountDesc) {
             this.configMapMountDesc = configMapMountDesc;
             return this;
         }
-        public java.util.List<DescribeApplicationConfigResponseBodyDataConfigMapMountDesc> getConfigMapMountDesc() {
+        public java.util.List<DescribeJobResponseBodyDataConfigMapMountDesc> getConfigMapMountDesc() {
             return this.configMapMountDesc;
         }
 
-        public DescribeApplicationConfigResponseBodyData setCpu(Integer cpu) {
+        public DescribeJobResponseBodyData setCpu(Integer cpu) {
             this.cpu = cpu;
             return this;
         }
@@ -521,7 +544,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.cpu;
         }
 
-        public DescribeApplicationConfigResponseBodyData setCustomHostAlias(String customHostAlias) {
+        public DescribeJobResponseBodyData setCustomHostAlias(String customHostAlias) {
             this.customHostAlias = customHostAlias;
             return this;
         }
@@ -529,7 +552,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.customHostAlias;
         }
 
-        public DescribeApplicationConfigResponseBodyData setEdasContainerVersion(String edasContainerVersion) {
+        public DescribeJobResponseBodyData setEdasContainerVersion(String edasContainerVersion) {
             this.edasContainerVersion = edasContainerVersion;
             return this;
         }
@@ -537,7 +560,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.edasContainerVersion;
         }
 
-        public DescribeApplicationConfigResponseBodyData setEnableAhas(String enableAhas) {
+        public DescribeJobResponseBodyData setEnableAhas(String enableAhas) {
             this.enableAhas = enableAhas;
             return this;
         }
@@ -545,7 +568,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.enableAhas;
         }
 
-        public DescribeApplicationConfigResponseBodyData setEnableGreyTagRoute(Boolean enableGreyTagRoute) {
+        public DescribeJobResponseBodyData setEnableGreyTagRoute(Boolean enableGreyTagRoute) {
             this.enableGreyTagRoute = enableGreyTagRoute;
             return this;
         }
@@ -553,7 +576,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.enableGreyTagRoute;
         }
 
-        public DescribeApplicationConfigResponseBodyData setEnvs(String envs) {
+        public DescribeJobResponseBodyData setEnvs(String envs) {
             this.envs = envs;
             return this;
         }
@@ -561,7 +584,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.envs;
         }
 
-        public DescribeApplicationConfigResponseBodyData setImageUrl(String imageUrl) {
+        public DescribeJobResponseBodyData setImageUrl(String imageUrl) {
             this.imageUrl = imageUrl;
             return this;
         }
@@ -569,7 +592,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.imageUrl;
         }
 
-        public DescribeApplicationConfigResponseBodyData setJarStartArgs(String jarStartArgs) {
+        public DescribeJobResponseBodyData setJarStartArgs(String jarStartArgs) {
             this.jarStartArgs = jarStartArgs;
             return this;
         }
@@ -577,7 +600,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.jarStartArgs;
         }
 
-        public DescribeApplicationConfigResponseBodyData setJarStartOptions(String jarStartOptions) {
+        public DescribeJobResponseBodyData setJarStartOptions(String jarStartOptions) {
             this.jarStartOptions = jarStartOptions;
             return this;
         }
@@ -585,7 +608,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.jarStartOptions;
         }
 
-        public DescribeApplicationConfigResponseBodyData setJdk(String jdk) {
+        public DescribeJobResponseBodyData setJdk(String jdk) {
             this.jdk = jdk;
             return this;
         }
@@ -593,15 +616,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.jdk;
         }
 
-        public DescribeApplicationConfigResponseBodyData setKafkaConfigs(String kafkaConfigs) {
-            this.kafkaConfigs = kafkaConfigs;
-            return this;
-        }
-        public String getKafkaConfigs() {
-            return this.kafkaConfigs;
-        }
-
-        public DescribeApplicationConfigResponseBodyData setLiveness(String liveness) {
+        public DescribeJobResponseBodyData setLiveness(String liveness) {
             this.liveness = liveness;
             return this;
         }
@@ -609,7 +624,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.liveness;
         }
 
-        public DescribeApplicationConfigResponseBodyData setMemory(Integer memory) {
+        public DescribeJobResponseBodyData setMemory(Integer memory) {
             this.memory = memory;
             return this;
         }
@@ -617,23 +632,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.memory;
         }
 
-        public DescribeApplicationConfigResponseBodyData setMicroRegistration(String microRegistration) {
-            this.microRegistration = microRegistration;
-            return this;
-        }
-        public String getMicroRegistration() {
-            return this.microRegistration;
-        }
-
-        public DescribeApplicationConfigResponseBodyData setMinReadyInstanceRatio(Integer minReadyInstanceRatio) {
-            this.minReadyInstanceRatio = minReadyInstanceRatio;
-            return this;
-        }
-        public Integer getMinReadyInstanceRatio() {
-            return this.minReadyInstanceRatio;
-        }
-
-        public DescribeApplicationConfigResponseBodyData setMinReadyInstances(Integer minReadyInstances) {
+        public DescribeJobResponseBodyData setMinReadyInstances(Integer minReadyInstances) {
             this.minReadyInstances = minReadyInstances;
             return this;
         }
@@ -641,15 +640,15 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.minReadyInstances;
         }
 
-        public DescribeApplicationConfigResponseBodyData setMountDesc(java.util.List<DescribeApplicationConfigResponseBodyDataMountDesc> mountDesc) {
+        public DescribeJobResponseBodyData setMountDesc(java.util.List<DescribeJobResponseBodyDataMountDesc> mountDesc) {
             this.mountDesc = mountDesc;
             return this;
         }
-        public java.util.List<DescribeApplicationConfigResponseBodyDataMountDesc> getMountDesc() {
+        public java.util.List<DescribeJobResponseBodyDataMountDesc> getMountDesc() {
             return this.mountDesc;
         }
 
-        public DescribeApplicationConfigResponseBodyData setMountHost(String mountHost) {
+        public DescribeJobResponseBodyData setMountHost(String mountHost) {
             this.mountHost = mountHost;
             return this;
         }
@@ -657,7 +656,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.mountHost;
         }
 
-        public DescribeApplicationConfigResponseBodyData setMseApplicationId(String mseApplicationId) {
+        public DescribeJobResponseBodyData setMseApplicationId(String mseApplicationId) {
             this.mseApplicationId = mseApplicationId;
             return this;
         }
@@ -665,7 +664,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.mseApplicationId;
         }
 
-        public DescribeApplicationConfigResponseBodyData setNamespaceId(String namespaceId) {
+        public DescribeJobResponseBodyData setNamespaceId(String namespaceId) {
             this.namespaceId = namespaceId;
             return this;
         }
@@ -673,7 +672,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.namespaceId;
         }
 
-        public DescribeApplicationConfigResponseBodyData setNasConfigs(String nasConfigs) {
+        public DescribeJobResponseBodyData setNasConfigs(String nasConfigs) {
             this.nasConfigs = nasConfigs;
             return this;
         }
@@ -681,7 +680,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.nasConfigs;
         }
 
-        public DescribeApplicationConfigResponseBodyData setNasId(String nasId) {
+        public DescribeJobResponseBodyData setNasId(String nasId) {
             this.nasId = nasId;
             return this;
         }
@@ -689,7 +688,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.nasId;
         }
 
-        public DescribeApplicationConfigResponseBodyData setOssAkId(String ossAkId) {
+        public DescribeJobResponseBodyData setOssAkId(String ossAkId) {
             this.ossAkId = ossAkId;
             return this;
         }
@@ -697,7 +696,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.ossAkId;
         }
 
-        public DescribeApplicationConfigResponseBodyData setOssAkSecret(String ossAkSecret) {
+        public DescribeJobResponseBodyData setOssAkSecret(String ossAkSecret) {
             this.ossAkSecret = ossAkSecret;
             return this;
         }
@@ -705,15 +704,15 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.ossAkSecret;
         }
 
-        public DescribeApplicationConfigResponseBodyData setOssMountDescs(java.util.List<DescribeApplicationConfigResponseBodyDataOssMountDescs> ossMountDescs) {
+        public DescribeJobResponseBodyData setOssMountDescs(java.util.List<DescribeJobResponseBodyDataOssMountDescs> ossMountDescs) {
             this.ossMountDescs = ossMountDescs;
             return this;
         }
-        public java.util.List<DescribeApplicationConfigResponseBodyDataOssMountDescs> getOssMountDescs() {
+        public java.util.List<DescribeJobResponseBodyDataOssMountDescs> getOssMountDescs() {
             return this.ossMountDescs;
         }
 
-        public DescribeApplicationConfigResponseBodyData setPackageType(String packageType) {
+        public DescribeJobResponseBodyData setPackageType(String packageType) {
             this.packageType = packageType;
             return this;
         }
@@ -721,7 +720,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.packageType;
         }
 
-        public DescribeApplicationConfigResponseBodyData setPackageUrl(String packageUrl) {
+        public DescribeJobResponseBodyData setPackageUrl(String packageUrl) {
             this.packageUrl = packageUrl;
             return this;
         }
@@ -729,7 +728,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.packageUrl;
         }
 
-        public DescribeApplicationConfigResponseBodyData setPackageVersion(String packageVersion) {
+        public DescribeJobResponseBodyData setPackageVersion(String packageVersion) {
             this.packageVersion = packageVersion;
             return this;
         }
@@ -737,7 +736,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.packageVersion;
         }
 
-        public DescribeApplicationConfigResponseBodyData setPhpArmsConfigLocation(String phpArmsConfigLocation) {
+        public DescribeJobResponseBodyData setPhpArmsConfigLocation(String phpArmsConfigLocation) {
             this.phpArmsConfigLocation = phpArmsConfigLocation;
             return this;
         }
@@ -745,7 +744,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.phpArmsConfigLocation;
         }
 
-        public DescribeApplicationConfigResponseBodyData setPhpConfig(String phpConfig) {
+        public DescribeJobResponseBodyData setPhpConfig(String phpConfig) {
             this.phpConfig = phpConfig;
             return this;
         }
@@ -753,7 +752,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.phpConfig;
         }
 
-        public DescribeApplicationConfigResponseBodyData setPhpConfigLocation(String phpConfigLocation) {
+        public DescribeJobResponseBodyData setPhpConfigLocation(String phpConfigLocation) {
             this.phpConfigLocation = phpConfigLocation;
             return this;
         }
@@ -761,7 +760,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.phpConfigLocation;
         }
 
-        public DescribeApplicationConfigResponseBodyData setPostStart(String postStart) {
+        public DescribeJobResponseBodyData setPostStart(String postStart) {
             this.postStart = postStart;
             return this;
         }
@@ -769,7 +768,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.postStart;
         }
 
-        public DescribeApplicationConfigResponseBodyData setPreStop(String preStop) {
+        public DescribeJobResponseBodyData setPreStop(String preStop) {
             this.preStop = preStop;
             return this;
         }
@@ -777,7 +776,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.preStop;
         }
 
-        public DescribeApplicationConfigResponseBodyData setProgrammingLanguage(String programmingLanguage) {
+        public DescribeJobResponseBodyData setProgrammingLanguage(String programmingLanguage) {
             this.programmingLanguage = programmingLanguage;
             return this;
         }
@@ -785,15 +784,15 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.programmingLanguage;
         }
 
-        public DescribeApplicationConfigResponseBodyData setPvtzDiscovery(String pvtzDiscovery) {
-            this.pvtzDiscovery = pvtzDiscovery;
+        public DescribeJobResponseBodyData setPublicWebHookUrls(java.util.List<String> publicWebHookUrls) {
+            this.publicWebHookUrls = publicWebHookUrls;
             return this;
         }
-        public String getPvtzDiscovery() {
-            return this.pvtzDiscovery;
+        public java.util.List<String> getPublicWebHookUrls() {
+            return this.publicWebHookUrls;
         }
 
-        public DescribeApplicationConfigResponseBodyData setReadiness(String readiness) {
+        public DescribeJobResponseBodyData setReadiness(String readiness) {
             this.readiness = readiness;
             return this;
         }
@@ -801,7 +800,23 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.readiness;
         }
 
-        public DescribeApplicationConfigResponseBodyData setRegionId(String regionId) {
+        public DescribeJobResponseBodyData setRefAppId(String refAppId) {
+            this.refAppId = refAppId;
+            return this;
+        }
+        public String getRefAppId() {
+            return this.refAppId;
+        }
+
+        public DescribeJobResponseBodyData setRefedAppIds(java.util.List<String> refedAppIds) {
+            this.refedAppIds = refedAppIds;
+            return this;
+        }
+        public java.util.List<String> getRefedAppIds() {
+            return this.refedAppIds;
+        }
+
+        public DescribeJobResponseBodyData setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
@@ -809,7 +824,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.regionId;
         }
 
-        public DescribeApplicationConfigResponseBodyData setReplicas(Integer replicas) {
+        public DescribeJobResponseBodyData setReplicas(Integer replicas) {
             this.replicas = replicas;
             return this;
         }
@@ -817,7 +832,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.replicas;
         }
 
-        public DescribeApplicationConfigResponseBodyData setSecurityGroupId(String securityGroupId) {
+        public DescribeJobResponseBodyData setSecurityGroupId(String securityGroupId) {
             this.securityGroupId = securityGroupId;
             return this;
         }
@@ -825,7 +840,23 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.securityGroupId;
         }
 
-        public DescribeApplicationConfigResponseBodyData setSlsConfigs(String slsConfigs) {
+        public DescribeJobResponseBodyData setSlice(Boolean slice) {
+            this.slice = slice;
+            return this;
+        }
+        public Boolean getSlice() {
+            return this.slice;
+        }
+
+        public DescribeJobResponseBodyData setSliceEnvs(String sliceEnvs) {
+            this.sliceEnvs = sliceEnvs;
+            return this;
+        }
+        public String getSliceEnvs() {
+            return this.sliceEnvs;
+        }
+
+        public DescribeJobResponseBodyData setSlsConfigs(String slsConfigs) {
             this.slsConfigs = slsConfigs;
             return this;
         }
@@ -833,15 +864,23 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.slsConfigs;
         }
 
-        public DescribeApplicationConfigResponseBodyData setTags(java.util.List<DescribeApplicationConfigResponseBodyDataTags> tags) {
+        public DescribeJobResponseBodyData setSuspend(Boolean suspend) {
+            this.suspend = suspend;
+            return this;
+        }
+        public Boolean getSuspend() {
+            return this.suspend;
+        }
+
+        public DescribeJobResponseBodyData setTags(java.util.List<DescribeJobResponseBodyDataTags> tags) {
             this.tags = tags;
             return this;
         }
-        public java.util.List<DescribeApplicationConfigResponseBodyDataTags> getTags() {
+        public java.util.List<DescribeJobResponseBodyDataTags> getTags() {
             return this.tags;
         }
 
-        public DescribeApplicationConfigResponseBodyData setTerminationGracePeriodSeconds(Integer terminationGracePeriodSeconds) {
+        public DescribeJobResponseBodyData setTerminationGracePeriodSeconds(Integer terminationGracePeriodSeconds) {
             this.terminationGracePeriodSeconds = terminationGracePeriodSeconds;
             return this;
         }
@@ -849,7 +888,15 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.terminationGracePeriodSeconds;
         }
 
-        public DescribeApplicationConfigResponseBodyData setTimezone(String timezone) {
+        public DescribeJobResponseBodyData setTimeout(Long timeout) {
+            this.timeout = timeout;
+            return this;
+        }
+        public Long getTimeout() {
+            return this.timeout;
+        }
+
+        public DescribeJobResponseBodyData setTimezone(String timezone) {
             this.timezone = timezone;
             return this;
         }
@@ -857,7 +904,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.timezone;
         }
 
-        public DescribeApplicationConfigResponseBodyData setTomcatConfig(String tomcatConfig) {
+        public DescribeJobResponseBodyData setTomcatConfig(String tomcatConfig) {
             this.tomcatConfig = tomcatConfig;
             return this;
         }
@@ -865,15 +912,15 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.tomcatConfig;
         }
 
-        public DescribeApplicationConfigResponseBodyData setUpdateStrategy(String updateStrategy) {
-            this.updateStrategy = updateStrategy;
+        public DescribeJobResponseBodyData setTriggerConfig(String triggerConfig) {
+            this.triggerConfig = triggerConfig;
             return this;
         }
-        public String getUpdateStrategy() {
-            return this.updateStrategy;
+        public String getTriggerConfig() {
+            return this.triggerConfig;
         }
 
-        public DescribeApplicationConfigResponseBodyData setVSwitchId(String vSwitchId) {
+        public DescribeJobResponseBodyData setVSwitchId(String vSwitchId) {
             this.vSwitchId = vSwitchId;
             return this;
         }
@@ -881,7 +928,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.vSwitchId;
         }
 
-        public DescribeApplicationConfigResponseBodyData setVpcId(String vpcId) {
+        public DescribeJobResponseBodyData setVpcId(String vpcId) {
             this.vpcId = vpcId;
             return this;
         }
@@ -889,7 +936,15 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.vpcId;
         }
 
-        public DescribeApplicationConfigResponseBodyData setWarStartOptions(String warStartOptions) {
+        public DescribeJobResponseBodyData setVpcWebHookUrls(java.util.List<String> vpcWebHookUrls) {
+            this.vpcWebHookUrls = vpcWebHookUrls;
+            return this;
+        }
+        public java.util.List<String> getVpcWebHookUrls() {
+            return this.vpcWebHookUrls;
+        }
+
+        public DescribeJobResponseBodyData setWarStartOptions(String warStartOptions) {
             this.warStartOptions = warStartOptions;
             return this;
         }
@@ -897,7 +952,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.warStartOptions;
         }
 
-        public DescribeApplicationConfigResponseBodyData setWebContainer(String webContainer) {
+        public DescribeJobResponseBodyData setWebContainer(String webContainer) {
             this.webContainer = webContainer;
             return this;
         }
