@@ -190,6 +190,9 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         @NameInMap("ResourceOwner")
         public Boolean resourceOwner;
 
@@ -250,6 +253,14 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
         }
         public String getModifiedTime() {
             return this.modifiedTime;
+        }
+
+        public ListVpcEndpointConnectionsResponseBodyConnections setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public ListVpcEndpointConnectionsResponseBodyConnections setResourceOwner(Boolean resourceOwner) {

@@ -13,6 +13,9 @@ public class ListVpcEndpointServicesByEndUserRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("ServiceId")
     public String serviceId;
 
@@ -52,6 +55,14 @@ public class ListVpcEndpointServicesByEndUserRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ListVpcEndpointServicesByEndUserRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public ListVpcEndpointServicesByEndUserRequest setServiceId(String serviceId) {

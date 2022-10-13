@@ -31,6 +31,9 @@ public class ListVpcEndpointConnectionsRequest extends TeaModel {
     @NameInMap("ReplacedResourceId")
     public String replacedResourceId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("ResourceId")
     public String resourceId;
 
@@ -112,6 +115,14 @@ public class ListVpcEndpointConnectionsRequest extends TeaModel {
     }
     public String getReplacedResourceId() {
         return this.replacedResourceId;
+    }
+
+    public ListVpcEndpointConnectionsRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public ListVpcEndpointConnectionsRequest setResourceId(String resourceId) {
