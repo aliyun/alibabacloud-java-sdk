@@ -4,14 +4,17 @@ package com.aliyun.voicenavigator20180612.models;
 import com.aliyun.tea.*;
 
 public class DescribeConversationResponseBody extends TeaModel {
-    @NameInMap("EffectiveAnswerCount")
-    public Integer effectiveAnswerCount;
+    @NameInMap("BeginTime")
+    public Long beginTime;
+
+    @NameInMap("CallingNumber")
+    public String callingNumber;
 
     @NameInMap("ConversationId")
     public String conversationId;
 
-    @NameInMap("TransferredToAgent")
-    public Boolean transferredToAgent;
+    @NameInMap("EffectiveAnswerCount")
+    public Integer effectiveAnswerCount;
 
     @NameInMap("EndTime")
     public Long endTime;
@@ -19,14 +22,11 @@ public class DescribeConversationResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("BeginTime")
-    public Long beginTime;
-
     @NameInMap("SkillGroupId")
     public String skillGroupId;
 
-    @NameInMap("CallingNumber")
-    public String callingNumber;
+    @NameInMap("TransferredToAgent")
+    public Boolean transferredToAgent;
 
     @NameInMap("UserUtteranceCount")
     public Integer userUtteranceCount;
@@ -36,12 +36,20 @@ public class DescribeConversationResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeConversationResponseBody setEffectiveAnswerCount(Integer effectiveAnswerCount) {
-        this.effectiveAnswerCount = effectiveAnswerCount;
+    public DescribeConversationResponseBody setBeginTime(Long beginTime) {
+        this.beginTime = beginTime;
         return this;
     }
-    public Integer getEffectiveAnswerCount() {
-        return this.effectiveAnswerCount;
+    public Long getBeginTime() {
+        return this.beginTime;
+    }
+
+    public DescribeConversationResponseBody setCallingNumber(String callingNumber) {
+        this.callingNumber = callingNumber;
+        return this;
+    }
+    public String getCallingNumber() {
+        return this.callingNumber;
     }
 
     public DescribeConversationResponseBody setConversationId(String conversationId) {
@@ -52,12 +60,12 @@ public class DescribeConversationResponseBody extends TeaModel {
         return this.conversationId;
     }
 
-    public DescribeConversationResponseBody setTransferredToAgent(Boolean transferredToAgent) {
-        this.transferredToAgent = transferredToAgent;
+    public DescribeConversationResponseBody setEffectiveAnswerCount(Integer effectiveAnswerCount) {
+        this.effectiveAnswerCount = effectiveAnswerCount;
         return this;
     }
-    public Boolean getTransferredToAgent() {
-        return this.transferredToAgent;
+    public Integer getEffectiveAnswerCount() {
+        return this.effectiveAnswerCount;
     }
 
     public DescribeConversationResponseBody setEndTime(Long endTime) {
@@ -76,14 +84,6 @@ public class DescribeConversationResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeConversationResponseBody setBeginTime(Long beginTime) {
-        this.beginTime = beginTime;
-        return this;
-    }
-    public Long getBeginTime() {
-        return this.beginTime;
-    }
-
     public DescribeConversationResponseBody setSkillGroupId(String skillGroupId) {
         this.skillGroupId = skillGroupId;
         return this;
@@ -92,12 +92,12 @@ public class DescribeConversationResponseBody extends TeaModel {
         return this.skillGroupId;
     }
 
-    public DescribeConversationResponseBody setCallingNumber(String callingNumber) {
-        this.callingNumber = callingNumber;
+    public DescribeConversationResponseBody setTransferredToAgent(Boolean transferredToAgent) {
+        this.transferredToAgent = transferredToAgent;
         return this;
     }
-    public String getCallingNumber() {
-        return this.callingNumber;
+    public Boolean getTransferredToAgent() {
+        return this.transferredToAgent;
     }
 
     public DescribeConversationResponseBody setUserUtteranceCount(Integer userUtteranceCount) {

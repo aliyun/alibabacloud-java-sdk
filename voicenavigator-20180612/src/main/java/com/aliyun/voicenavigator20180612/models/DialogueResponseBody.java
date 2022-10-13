@@ -7,14 +7,14 @@ public class DialogueResponseBody extends TeaModel {
     @NameInMap("Action")
     public String action;
 
+    @NameInMap("ActionParams")
+    public String actionParams;
+
     @NameInMap("Interruptible")
     public Boolean interruptible;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("ActionParams")
-    public String actionParams;
 
     @NameInMap("TextResponse")
     public String textResponse;
@@ -32,6 +32,14 @@ public class DialogueResponseBody extends TeaModel {
         return this.action;
     }
 
+    public DialogueResponseBody setActionParams(String actionParams) {
+        this.actionParams = actionParams;
+        return this;
+    }
+    public String getActionParams() {
+        return this.actionParams;
+    }
+
     public DialogueResponseBody setInterruptible(Boolean interruptible) {
         this.interruptible = interruptible;
         return this;
@@ -46,14 +54,6 @@ public class DialogueResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public DialogueResponseBody setActionParams(String actionParams) {
-        this.actionParams = actionParams;
-        return this;
-    }
-    public String getActionParams() {
-        return this.actionParams;
     }
 
     public DialogueResponseBody setTextResponse(String textResponse) {

@@ -7,8 +7,8 @@ public class ListInstancesResponseBody extends TeaModel {
     @NameInMap("Instances")
     public java.util.List<ListInstancesResponseBodyInstances> instances;
 
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -16,8 +16,8 @@ public class ListInstancesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static ListInstancesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListInstancesResponseBody self = new ListInstancesResponseBody();
@@ -32,12 +32,12 @@ public class ListInstancesResponseBody extends TeaModel {
         return this.instances;
     }
 
-    public ListInstancesResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public ListInstancesResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public ListInstancesResponseBody setPageSize(Integer pageSize) {
@@ -56,66 +56,42 @@ public class ListInstancesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListInstancesResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public ListInstancesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public static class ListInstancesResponseBodyInstances extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("ModifyUserName")
-        public String modifyUserName;
-
-        @NameInMap("Description")
-        public String description;
-
         @NameInMap("ApplicableOperations")
         public java.util.List<String> applicableOperations;
-
-        @NameInMap("InstanceId")
-        public String instanceId;
-
-        @NameInMap("Name")
-        public String name;
 
         @NameInMap("Concurrency")
         public Long concurrency;
 
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
+
         @NameInMap("ModifyTime")
         public Long modifyTime;
+
+        @NameInMap("ModifyUserName")
+        public String modifyUserName;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Status")
+        public String status;
 
         public static ListInstancesResponseBodyInstances build(java.util.Map<String, ?> map) throws Exception {
             ListInstancesResponseBodyInstances self = new ListInstancesResponseBodyInstances();
             return TeaModel.build(map, self);
-        }
-
-        public ListInstancesResponseBodyInstances setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public ListInstancesResponseBodyInstances setModifyUserName(String modifyUserName) {
-            this.modifyUserName = modifyUserName;
-            return this;
-        }
-        public String getModifyUserName() {
-            return this.modifyUserName;
-        }
-
-        public ListInstancesResponseBodyInstances setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
         }
 
         public ListInstancesResponseBodyInstances setApplicableOperations(java.util.List<String> applicableOperations) {
@@ -126,12 +102,44 @@ public class ListInstancesResponseBody extends TeaModel {
             return this.applicableOperations;
         }
 
+        public ListInstancesResponseBodyInstances setConcurrency(Long concurrency) {
+            this.concurrency = concurrency;
+            return this;
+        }
+        public Long getConcurrency() {
+            return this.concurrency;
+        }
+
+        public ListInstancesResponseBodyInstances setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
         public ListInstancesResponseBodyInstances setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public ListInstancesResponseBodyInstances setModifyTime(Long modifyTime) {
+            this.modifyTime = modifyTime;
+            return this;
+        }
+        public Long getModifyTime() {
+            return this.modifyTime;
+        }
+
+        public ListInstancesResponseBodyInstances setModifyUserName(String modifyUserName) {
+            this.modifyUserName = modifyUserName;
+            return this;
+        }
+        public String getModifyUserName() {
+            return this.modifyUserName;
         }
 
         public ListInstancesResponseBodyInstances setName(String name) {
@@ -142,20 +150,12 @@ public class ListInstancesResponseBody extends TeaModel {
             return this.name;
         }
 
-        public ListInstancesResponseBodyInstances setConcurrency(Long concurrency) {
-            this.concurrency = concurrency;
+        public ListInstancesResponseBodyInstances setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public Long getConcurrency() {
-            return this.concurrency;
-        }
-
-        public ListInstancesResponseBodyInstances setModifyTime(Long modifyTime) {
-            this.modifyTime = modifyTime;
-            return this;
-        }
-        public Long getModifyTime() {
-            return this.modifyTime;
+        public String getStatus() {
+            return this.status;
         }
 
     }

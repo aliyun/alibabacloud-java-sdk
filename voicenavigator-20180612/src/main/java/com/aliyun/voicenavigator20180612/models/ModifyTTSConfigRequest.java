@@ -4,14 +4,20 @@ package com.aliyun.voicenavigator20180612.models;
 import com.aliyun.tea.*;
 
 public class ModifyTTSConfigRequest extends TeaModel {
+    @NameInMap("AppKey")
+    public String appKey;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("Voice")
-    public String voice;
+    @NameInMap("NlsServiceType")
+    public String nlsServiceType;
 
     @NameInMap("SpeechRate")
     public String speechRate;
+
+    @NameInMap("Voice")
+    public String voice;
 
     @NameInMap("Volume")
     public String volume;
@@ -19,6 +25,14 @@ public class ModifyTTSConfigRequest extends TeaModel {
     public static ModifyTTSConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyTTSConfigRequest self = new ModifyTTSConfigRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyTTSConfigRequest setAppKey(String appKey) {
+        this.appKey = appKey;
+        return this;
+    }
+    public String getAppKey() {
+        return this.appKey;
     }
 
     public ModifyTTSConfigRequest setInstanceId(String instanceId) {
@@ -29,12 +43,12 @@ public class ModifyTTSConfigRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public ModifyTTSConfigRequest setVoice(String voice) {
-        this.voice = voice;
+    public ModifyTTSConfigRequest setNlsServiceType(String nlsServiceType) {
+        this.nlsServiceType = nlsServiceType;
         return this;
     }
-    public String getVoice() {
-        return this.voice;
+    public String getNlsServiceType() {
+        return this.nlsServiceType;
     }
 
     public ModifyTTSConfigRequest setSpeechRate(String speechRate) {
@@ -43,6 +57,14 @@ public class ModifyTTSConfigRequest extends TeaModel {
     }
     public String getSpeechRate() {
         return this.speechRate;
+    }
+
+    public ModifyTTSConfigRequest setVoice(String voice) {
+        this.voice = voice;
+        return this;
+    }
+    public String getVoice() {
+        return this.voice;
     }
 
     public ModifyTTSConfigRequest setVolume(String volume) {

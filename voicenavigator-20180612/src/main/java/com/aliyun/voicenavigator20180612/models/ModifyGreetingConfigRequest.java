@@ -4,29 +4,21 @@ package com.aliyun.voicenavigator20180612.models;
 import com.aliyun.tea.*;
 
 public class ModifyGreetingConfigRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
-
     @NameInMap("GreetingWords")
     public String greetingWords;
 
-    @NameInMap("SourceType")
-    public String sourceType;
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     @NameInMap("IntentTrigger")
     public String intentTrigger;
 
+    @NameInMap("SourceType")
+    public String sourceType;
+
     public static ModifyGreetingConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyGreetingConfigRequest self = new ModifyGreetingConfigRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyGreetingConfigRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
     }
 
     public ModifyGreetingConfigRequest setGreetingWords(String greetingWords) {
@@ -37,12 +29,12 @@ public class ModifyGreetingConfigRequest extends TeaModel {
         return this.greetingWords;
     }
 
-    public ModifyGreetingConfigRequest setSourceType(String sourceType) {
-        this.sourceType = sourceType;
+    public ModifyGreetingConfigRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
         return this;
     }
-    public String getSourceType() {
-        return this.sourceType;
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public ModifyGreetingConfigRequest setIntentTrigger(String intentTrigger) {
@@ -51,6 +43,14 @@ public class ModifyGreetingConfigRequest extends TeaModel {
     }
     public String getIntentTrigger() {
         return this.intentTrigger;
+    }
+
+    public ModifyGreetingConfigRequest setSourceType(String sourceType) {
+        this.sourceType = sourceType;
+        return this;
+    }
+    public String getSourceType() {
+        return this.sourceType;
     }
 
 }

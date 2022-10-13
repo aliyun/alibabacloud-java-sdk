@@ -19,6 +19,9 @@ public class BeginDialogueRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("InstanceOwnerId")
+    public Long instanceOwnerId;
+
     public static BeginDialogueRequest build(java.util.Map<String, ?> map) throws Exception {
         BeginDialogueRequest self = new BeginDialogueRequest();
         return TeaModel.build(map, self);
@@ -62,6 +65,14 @@ public class BeginDialogueRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public BeginDialogueRequest setInstanceOwnerId(Long instanceOwnerId) {
+        this.instanceOwnerId = instanceOwnerId;
+        return this;
+    }
+    public Long getInstanceOwnerId() {
+        return this.instanceOwnerId;
     }
 
 }

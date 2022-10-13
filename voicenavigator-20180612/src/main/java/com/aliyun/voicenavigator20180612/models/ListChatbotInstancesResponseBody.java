@@ -4,56 +4,24 @@ package com.aliyun.voicenavigator20180612.models;
 import com.aliyun.tea.*;
 
 public class ListChatbotInstancesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Bots")
+    public java.util.List<ListChatbotInstancesResponseBodyBots> bots;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    @NameInMap("TotalCount")
-    public Long totalCount;
-
     @NameInMap("PageSize")
     public Long pageSize;
 
-    @NameInMap("Bots")
-    public java.util.List<ListChatbotInstancesResponseBodyBots> bots;
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("TotalCount")
+    public Long totalCount;
 
     public static ListChatbotInstancesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListChatbotInstancesResponseBody self = new ListChatbotInstancesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListChatbotInstancesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public ListChatbotInstancesResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public ListChatbotInstancesResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Long getTotalCount() {
-        return this.totalCount;
-    }
-
-    public ListChatbotInstancesResponseBody setPageSize(Long pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Long getPageSize() {
-        return this.pageSize;
     }
 
     public ListChatbotInstancesResponseBody setBots(java.util.List<ListChatbotInstancesResponseBodyBots> bots) {
@@ -64,15 +32,50 @@ public class ListChatbotInstancesResponseBody extends TeaModel {
         return this.bots;
     }
 
+    public ListChatbotInstancesResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public ListChatbotInstancesResponseBody setPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Long getPageSize() {
+        return this.pageSize;
+    }
+
+    public ListChatbotInstancesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ListChatbotInstancesResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
+    }
+
     public static class ListChatbotInstancesResponseBodyBots extends TeaModel {
+        @NameInMap("Avatar")
+        public String avatar;
+
+        @NameInMap("CreateTime")
+        public String createTime;
+
         @NameInMap("InstanceId")
         public String instanceId;
 
-        @NameInMap("TimeZone")
-        public String timeZone;
-
-        @NameInMap("Avatar")
-        public String avatar;
+        @NameInMap("Introduction")
+        public String introduction;
 
         @NameInMap("LanguageCode")
         public String languageCode;
@@ -80,15 +83,28 @@ public class ListChatbotInstancesResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
-        @NameInMap("Introduction")
-        public String introduction;
-
-        @NameInMap("CreateTime")
-        public String createTime;
+        @NameInMap("TimeZone")
+        public String timeZone;
 
         public static ListChatbotInstancesResponseBodyBots build(java.util.Map<String, ?> map) throws Exception {
             ListChatbotInstancesResponseBodyBots self = new ListChatbotInstancesResponseBodyBots();
             return TeaModel.build(map, self);
+        }
+
+        public ListChatbotInstancesResponseBodyBots setAvatar(String avatar) {
+            this.avatar = avatar;
+            return this;
+        }
+        public String getAvatar() {
+            return this.avatar;
+        }
+
+        public ListChatbotInstancesResponseBodyBots setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
         }
 
         public ListChatbotInstancesResponseBodyBots setInstanceId(String instanceId) {
@@ -99,20 +115,12 @@ public class ListChatbotInstancesResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public ListChatbotInstancesResponseBodyBots setTimeZone(String timeZone) {
-            this.timeZone = timeZone;
+        public ListChatbotInstancesResponseBodyBots setIntroduction(String introduction) {
+            this.introduction = introduction;
             return this;
         }
-        public String getTimeZone() {
-            return this.timeZone;
-        }
-
-        public ListChatbotInstancesResponseBodyBots setAvatar(String avatar) {
-            this.avatar = avatar;
-            return this;
-        }
-        public String getAvatar() {
-            return this.avatar;
+        public String getIntroduction() {
+            return this.introduction;
         }
 
         public ListChatbotInstancesResponseBodyBots setLanguageCode(String languageCode) {
@@ -131,20 +139,12 @@ public class ListChatbotInstancesResponseBody extends TeaModel {
             return this.name;
         }
 
-        public ListChatbotInstancesResponseBodyBots setIntroduction(String introduction) {
-            this.introduction = introduction;
+        public ListChatbotInstancesResponseBodyBots setTimeZone(String timeZone) {
+            this.timeZone = timeZone;
             return this;
         }
-        public String getIntroduction() {
-            return this.introduction;
-        }
-
-        public ListChatbotInstancesResponseBodyBots setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
+        public String getTimeZone() {
+            return this.timeZone;
         }
 
     }
