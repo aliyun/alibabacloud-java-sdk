@@ -22,9 +22,6 @@ public class DescribeUserBandWidthDataRequest extends TeaModel {
     @NameInMap("StartTime")
     public String startTime;
 
-    @NameInMap("Version")
-    public String version;
-
     public static DescribeUserBandWidthDataRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeUserBandWidthDataRequest self = new DescribeUserBandWidthDataRequest();
         return TeaModel.build(map, self);
@@ -76,14 +73,6 @@ public class DescribeUserBandWidthDataRequest extends TeaModel {
     }
     public String getStartTime() {
         return this.startTime;
-    }
-
-    public DescribeUserBandWidthDataRequest setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
     }
 
 }

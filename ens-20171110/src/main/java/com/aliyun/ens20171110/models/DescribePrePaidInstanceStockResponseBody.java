@@ -25,6 +25,9 @@ public class DescribePrePaidInstanceStockResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("ResourceGap")
+    public String resourceGap;
+
     @NameInMap("SystemDiskSize")
     public Integer systemDiskSize;
 
@@ -87,6 +90,14 @@ public class DescribePrePaidInstanceStockResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribePrePaidInstanceStockResponseBody setResourceGap(String resourceGap) {
+        this.resourceGap = resourceGap;
+        return this;
+    }
+    public String getResourceGap() {
+        return this.resourceGap;
     }
 
     public DescribePrePaidInstanceStockResponseBody setSystemDiskSize(Integer systemDiskSize) {

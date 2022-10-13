@@ -16,9 +16,6 @@ public class DescribePrePaidInstanceStockRequest extends TeaModel {
     @NameInMap("SystemDiskSize")
     public Integer systemDiskSize;
 
-    @NameInMap("Version")
-    public String version;
-
     public static DescribePrePaidInstanceStockRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribePrePaidInstanceStockRequest self = new DescribePrePaidInstanceStockRequest();
         return TeaModel.build(map, self);
@@ -54,14 +51,6 @@ public class DescribePrePaidInstanceStockRequest extends TeaModel {
     }
     public Integer getSystemDiskSize() {
         return this.systemDiskSize;
-    }
-
-    public DescribePrePaidInstanceStockRequest setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
     }
 
 }
