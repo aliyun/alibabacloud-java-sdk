@@ -342,6 +342,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("Recording")
         public String recording;
 
+        @NameInMap("RecordingDuration")
+        public Integer recordingDuration;
+
         @NameInMap("RecordingEndTime")
         public String recordingEndTime;
 
@@ -565,6 +568,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
         public String getRecording() {
             return this.recording;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setRecordingDuration(Integer recordingDuration) {
+            this.recordingDuration = recordingDuration;
+            return this;
+        }
+        public Integer getRecordingDuration() {
+            return this.recordingDuration;
         }
 
         public DescribePolicyGroupsResponseBodyDescribePolicyGroups setRecordingEndTime(String recordingEndTime) {

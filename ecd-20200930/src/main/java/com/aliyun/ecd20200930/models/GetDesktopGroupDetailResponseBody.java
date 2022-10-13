@@ -31,6 +31,80 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class GetDesktopGroupDetailResponseBodyDesktopsScaleTimerInfos extends TeaModel {
+        @NameInMap("Cron")
+        public String cron;
+
+        @NameInMap("KeepDuration")
+        public Long keepDuration;
+
+        @NameInMap("LoadPolicy")
+        public Integer loadPolicy;
+
+        @NameInMap("MinResAmount")
+        public Integer minResAmount;
+
+        @NameInMap("RatioThreshold")
+        public Float ratioThreshold;
+
+        @NameInMap("Type")
+        public String type;
+
+        public static GetDesktopGroupDetailResponseBodyDesktopsScaleTimerInfos build(java.util.Map<String, ?> map) throws Exception {
+            GetDesktopGroupDetailResponseBodyDesktopsScaleTimerInfos self = new GetDesktopGroupDetailResponseBodyDesktopsScaleTimerInfos();
+            return TeaModel.build(map, self);
+        }
+
+        public GetDesktopGroupDetailResponseBodyDesktopsScaleTimerInfos setCron(String cron) {
+            this.cron = cron;
+            return this;
+        }
+        public String getCron() {
+            return this.cron;
+        }
+
+        public GetDesktopGroupDetailResponseBodyDesktopsScaleTimerInfos setKeepDuration(Long keepDuration) {
+            this.keepDuration = keepDuration;
+            return this;
+        }
+        public Long getKeepDuration() {
+            return this.keepDuration;
+        }
+
+        public GetDesktopGroupDetailResponseBodyDesktopsScaleTimerInfos setLoadPolicy(Integer loadPolicy) {
+            this.loadPolicy = loadPolicy;
+            return this;
+        }
+        public Integer getLoadPolicy() {
+            return this.loadPolicy;
+        }
+
+        public GetDesktopGroupDetailResponseBodyDesktopsScaleTimerInfos setMinResAmount(Integer minResAmount) {
+            this.minResAmount = minResAmount;
+            return this;
+        }
+        public Integer getMinResAmount() {
+            return this.minResAmount;
+        }
+
+        public GetDesktopGroupDetailResponseBodyDesktopsScaleTimerInfos setRatioThreshold(Float ratioThreshold) {
+            this.ratioThreshold = ratioThreshold;
+            return this;
+        }
+        public Float getRatioThreshold() {
+            return this.ratioThreshold;
+        }
+
+        public GetDesktopGroupDetailResponseBodyDesktopsScaleTimerInfos setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
     public static class GetDesktopGroupDetailResponseBodyDesktopsTimerInfos extends TeaModel {
         @NameInMap("CronExpression")
         public String cronExpression;
@@ -198,6 +272,9 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         @NameInMap("ResetType")
         public Integer resetType;
 
+        @NameInMap("ScaleTimerInfos")
+        public java.util.List<GetDesktopGroupDetailResponseBodyDesktopsScaleTimerInfos> scaleTimerInfos;
+
         @NameInMap("Status")
         public Integer status;
 
@@ -212,6 +289,9 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
 
         @NameInMap("TimerInfos")
         public java.util.List<GetDesktopGroupDetailResponseBodyDesktopsTimerInfos> timerInfos;
+
+        @NameInMap("TimingStrategyInfo")
+        public String timingStrategyInfo;
 
         @NameInMap("Version")
         public Long version;
@@ -525,6 +605,14 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             return this.resetType;
         }
 
+        public GetDesktopGroupDetailResponseBodyDesktops setScaleTimerInfos(java.util.List<GetDesktopGroupDetailResponseBodyDesktopsScaleTimerInfos> scaleTimerInfos) {
+            this.scaleTimerInfos = scaleTimerInfos;
+            return this;
+        }
+        public java.util.List<GetDesktopGroupDetailResponseBodyDesktopsScaleTimerInfos> getScaleTimerInfos() {
+            return this.scaleTimerInfos;
+        }
+
         public GetDesktopGroupDetailResponseBodyDesktops setStatus(Integer status) {
             this.status = status;
             return this;
@@ -563,6 +651,14 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         }
         public java.util.List<GetDesktopGroupDetailResponseBodyDesktopsTimerInfos> getTimerInfos() {
             return this.timerInfos;
+        }
+
+        public GetDesktopGroupDetailResponseBodyDesktops setTimingStrategyInfo(String timingStrategyInfo) {
+            this.timingStrategyInfo = timingStrategyInfo;
+            return this;
+        }
+        public String getTimingStrategyInfo() {
+            return this.timingStrategyInfo;
         }
 
         public GetDesktopGroupDetailResponseBodyDesktops setVersion(Long version) {
