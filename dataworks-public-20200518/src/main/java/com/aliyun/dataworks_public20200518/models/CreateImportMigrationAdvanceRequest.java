@@ -4,10 +4,6 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class CreateImportMigrationAdvanceRequest extends TeaModel {
-    @NameInMap("PackageFileObject")
-    @Validation(required = true)
-    public java.io.InputStream packageFileObject;
-
     @NameInMap("CalculateEngineMap")
     public String calculateEngineMap;
 
@@ -19,6 +15,9 @@ public class CreateImportMigrationAdvanceRequest extends TeaModel {
 
     @NameInMap("Name")
     public String name;
+
+    @NameInMap("PackageFile")
+    public java.io.InputStream packageFileObject;
 
     @NameInMap("PackageType")
     public String packageType;
@@ -35,14 +34,6 @@ public class CreateImportMigrationAdvanceRequest extends TeaModel {
     public static CreateImportMigrationAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateImportMigrationAdvanceRequest self = new CreateImportMigrationAdvanceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateImportMigrationAdvanceRequest setPackageFileObject(java.io.InputStream packageFileObject) {
-        this.packageFileObject = packageFileObject;
-        return this;
-    }
-    public java.io.InputStream getPackageFileObject() {
-        return this.packageFileObject;
     }
 
     public CreateImportMigrationAdvanceRequest setCalculateEngineMap(String calculateEngineMap) {
@@ -75,6 +66,14 @@ public class CreateImportMigrationAdvanceRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public CreateImportMigrationAdvanceRequest setPackageFileObject(java.io.InputStream packageFileObject) {
+        this.packageFileObject = packageFileObject;
+        return this;
+    }
+    public java.io.InputStream getPackageFileObject() {
+        return this.packageFileObject;
     }
 
     public CreateImportMigrationAdvanceRequest setPackageType(String packageType) {
