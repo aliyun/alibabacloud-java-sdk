@@ -137,6 +137,9 @@ public class CreateVpcEndpointServiceRequest extends TeaModel {
         @NameInMap("ResourceType")
         public String resourceType;
 
+        @NameInMap("ZoneId")
+        public String zoneId;
+
         public static CreateVpcEndpointServiceRequestResource build(java.util.Map<String, ?> map) throws Exception {
             CreateVpcEndpointServiceRequestResource self = new CreateVpcEndpointServiceRequestResource();
             return TeaModel.build(map, self);
@@ -156,6 +159,14 @@ public class CreateVpcEndpointServiceRequest extends TeaModel {
         }
         public String getResourceType() {
             return this.resourceType;
+        }
+
+        public CreateVpcEndpointServiceRequestResource setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
         }
 
     }
