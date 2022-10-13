@@ -25,6 +25,9 @@ public class CreateVpcEndpointRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("SecurityGroupId")
     public java.util.List<String> securityGroupId;
 
@@ -102,6 +105,14 @@ public class CreateVpcEndpointRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public CreateVpcEndpointRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public CreateVpcEndpointRequest setSecurityGroupId(java.util.List<String> securityGroupId) {

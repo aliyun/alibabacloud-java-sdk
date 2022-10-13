@@ -43,6 +43,9 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("ResourceOwner")
     public Boolean resourceOwner;
 
@@ -168,6 +171,14 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public GetVpcEndpointAttributeResponseBody setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public GetVpcEndpointAttributeResponseBody setResourceOwner(Boolean resourceOwner) {

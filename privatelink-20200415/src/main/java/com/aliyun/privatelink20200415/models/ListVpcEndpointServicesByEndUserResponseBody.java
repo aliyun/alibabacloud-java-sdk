@@ -87,6 +87,9 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
         @NameInMap("Payer")
         public String payer;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         @NameInMap("ServiceDomain")
         public String serviceDomain;
 
@@ -119,6 +122,14 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
         }
         public String getPayer() {
             return this.payer;
+        }
+
+        public ListVpcEndpointServicesByEndUserResponseBodyServices setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public ListVpcEndpointServicesByEndUserResponseBodyServices setServiceDomain(String serviceDomain) {

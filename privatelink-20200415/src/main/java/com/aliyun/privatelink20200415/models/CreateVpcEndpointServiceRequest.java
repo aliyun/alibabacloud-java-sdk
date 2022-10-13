@@ -22,6 +22,9 @@ public class CreateVpcEndpointServiceRequest extends TeaModel {
     @NameInMap("Resource")
     public java.util.List<CreateVpcEndpointServiceRequestResource> resource;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("ServiceDescription")
     public String serviceDescription;
 
@@ -85,6 +88,14 @@ public class CreateVpcEndpointServiceRequest extends TeaModel {
     }
     public java.util.List<CreateVpcEndpointServiceRequestResource> getResource() {
         return this.resource;
+    }
+
+    public CreateVpcEndpointServiceRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public CreateVpcEndpointServiceRequest setServiceDescription(String serviceDescription) {
