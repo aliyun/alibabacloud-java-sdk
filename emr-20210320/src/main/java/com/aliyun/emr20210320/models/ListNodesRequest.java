@@ -34,6 +34,9 @@ public class ListNodesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("Tags")
+    public java.util.List<Tag> tags;
+
     public static ListNodesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListNodesRequest self = new ListNodesRequest();
         return TeaModel.build(map, self);
@@ -117,6 +120,14 @@ public class ListNodesRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ListNodesRequest setTags(java.util.List<Tag> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<Tag> getTags() {
+        return this.tags;
     }
 
 }

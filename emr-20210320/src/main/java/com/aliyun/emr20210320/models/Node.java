@@ -19,6 +19,9 @@ public class Node extends TeaModel {
     @NameInMap("InstanceType")
     public String instanceType;
 
+    @NameInMap("MaintenanceStatus")
+    public String maintenanceStatus;
+
     @NameInMap("NodeGroupId")
     public String nodeGroupId;
 
@@ -86,6 +89,14 @@ public class Node extends TeaModel {
     }
     public String getInstanceType() {
         return this.instanceType;
+    }
+
+    public Node setMaintenanceStatus(String maintenanceStatus) {
+        this.maintenanceStatus = maintenanceStatus;
+        return this;
+    }
+    public String getMaintenanceStatus() {
+        return this.maintenanceStatus;
     }
 
     public Node setNodeGroupId(String nodeGroupId) {
