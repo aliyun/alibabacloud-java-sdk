@@ -7,6 +7,9 @@ public class QueryUnionTaskListRequest extends TeaModel {
     @NameInMap("BrandUserId")
     public Long brandUserId;
 
+    @NameInMap("BrandUserNick")
+    public String brandUserNick;
+
     @NameInMap("ChannelId")
     public String channelId;
 
@@ -30,6 +33,14 @@ public class QueryUnionTaskListRequest extends TeaModel {
     }
     public Long getBrandUserId() {
         return this.brandUserId;
+    }
+
+    public QueryUnionTaskListRequest setBrandUserNick(String brandUserNick) {
+        this.brandUserNick = brandUserNick;
+        return this;
+    }
+    public String getBrandUserNick() {
+        return this.brandUserNick;
     }
 
     public QueryUnionTaskListRequest setChannelId(String channelId) {
