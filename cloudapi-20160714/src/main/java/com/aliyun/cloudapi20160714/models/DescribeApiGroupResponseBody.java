@@ -398,6 +398,9 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         @NameInMap("WildcardDomainPatterns")
         public String wildcardDomainPatterns;
 
+        @NameInMap("WssEnable")
+        public String wssEnable;
+
         public static DescribeApiGroupResponseBodyCustomDomainsDomainItem build(java.util.Map<String, ?> map) throws Exception {
             DescribeApiGroupResponseBodyCustomDomainsDomainItem self = new DescribeApiGroupResponseBodyCustomDomainsDomainItem();
             return TeaModel.build(map, self);
@@ -497,6 +500,14 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         }
         public String getWildcardDomainPatterns() {
             return this.wildcardDomainPatterns;
+        }
+
+        public DescribeApiGroupResponseBodyCustomDomainsDomainItem setWssEnable(String wssEnable) {
+            this.wssEnable = wssEnable;
+            return this;
+        }
+        public String getWssEnable() {
+            return this.wssEnable;
         }
 
     }

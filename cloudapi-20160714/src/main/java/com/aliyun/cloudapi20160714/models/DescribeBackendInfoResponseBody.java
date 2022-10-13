@@ -179,6 +179,77 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigMockConfigMockHeaders extends TeaModel {
+        @NameInMap("HeaderName")
+        public String headerName;
+
+        @NameInMap("HeaderValue")
+        public String headerValue;
+
+        public static DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigMockConfigMockHeaders build(java.util.Map<String, ?> map) throws Exception {
+            DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigMockConfigMockHeaders self = new DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigMockConfigMockHeaders();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigMockConfigMockHeaders setHeaderName(String headerName) {
+            this.headerName = headerName;
+            return this;
+        }
+        public String getHeaderName() {
+            return this.headerName;
+        }
+
+        public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigMockConfigMockHeaders setHeaderValue(String headerValue) {
+            this.headerValue = headerValue;
+            return this;
+        }
+        public String getHeaderValue() {
+            return this.headerValue;
+        }
+
+    }
+
+    public static class DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigMockConfig extends TeaModel {
+        @NameInMap("MockHeaders")
+        public java.util.List<DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigMockConfigMockHeaders> mockHeaders;
+
+        @NameInMap("MockResult")
+        public String mockResult;
+
+        @NameInMap("MockStatusCode")
+        public String mockStatusCode;
+
+        public static DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigMockConfig build(java.util.Map<String, ?> map) throws Exception {
+            DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigMockConfig self = new DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigMockConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigMockConfig setMockHeaders(java.util.List<DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigMockConfigMockHeaders> mockHeaders) {
+            this.mockHeaders = mockHeaders;
+            return this;
+        }
+        public java.util.List<DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigMockConfigMockHeaders> getMockHeaders() {
+            return this.mockHeaders;
+        }
+
+        public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigMockConfig setMockResult(String mockResult) {
+            this.mockResult = mockResult;
+            return this;
+        }
+        public String getMockResult() {
+            return this.mockResult;
+        }
+
+        public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigMockConfig setMockStatusCode(String mockStatusCode) {
+            this.mockStatusCode = mockStatusCode;
+            return this;
+        }
+        public String getMockStatusCode() {
+            return this.mockStatusCode;
+        }
+
+    }
+
     public static class DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigOssConfig extends TeaModel {
         @NameInMap("BucketName")
         public String bucketName;
@@ -301,6 +372,9 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         @NameInMap("FunctionComputeConfig")
         public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigFunctionComputeConfig functionComputeConfig;
 
+        @NameInMap("MockConfig")
+        public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigMockConfig mockConfig;
+
         @NameInMap("OssConfig")
         public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigOssConfig ossConfig;
 
@@ -332,6 +406,14 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         }
         public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigFunctionComputeConfig getFunctionComputeConfig() {
             return this.functionComputeConfig;
+        }
+
+        public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfig setMockConfig(DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigMockConfig mockConfig) {
+            this.mockConfig = mockConfig;
+            return this;
+        }
+        public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigMockConfig getMockConfig() {
+            return this.mockConfig;
         }
 
         public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfig setOssConfig(DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigOssConfig ossConfig) {
