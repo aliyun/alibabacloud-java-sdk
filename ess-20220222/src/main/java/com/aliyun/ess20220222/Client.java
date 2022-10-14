@@ -3783,6 +3783,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("LifecycleHookName", request.lifecycleHookName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.lifecycleHookStatus)) {
+            query.put("LifecycleHookStatus", request.lifecycleHookStatus);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.lifecycleTransition)) {
             query.put("LifecycleTransition", request.lifecycleTransition);
         }

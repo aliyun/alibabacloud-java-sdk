@@ -77,6 +77,9 @@ public class DescribeLifecycleHooksResponseBody extends TeaModel {
         @NameInMap("LifecycleHookName")
         public String lifecycleHookName;
 
+        @NameInMap("LifecycleHookStatus")
+        public String lifecycleHookStatus;
+
         @NameInMap("LifecycleTransition")
         public String lifecycleTransition;
 
@@ -124,6 +127,14 @@ public class DescribeLifecycleHooksResponseBody extends TeaModel {
         }
         public String getLifecycleHookName() {
             return this.lifecycleHookName;
+        }
+
+        public DescribeLifecycleHooksResponseBodyLifecycleHooks setLifecycleHookStatus(String lifecycleHookStatus) {
+            this.lifecycleHookStatus = lifecycleHookStatus;
+            return this;
+        }
+        public String getLifecycleHookStatus() {
+            return this.lifecycleHookStatus;
         }
 
         public DescribeLifecycleHooksResponseBodyLifecycleHooks setLifecycleTransition(String lifecycleTransition) {
