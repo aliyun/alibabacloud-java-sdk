@@ -7,7 +7,6 @@ public class RecognizeRussiaIdentityCardResponseBody extends TeaModel {
     @NameInMap("Data")
     public RecognizeRussiaIdentityCardResponseBodyData data;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

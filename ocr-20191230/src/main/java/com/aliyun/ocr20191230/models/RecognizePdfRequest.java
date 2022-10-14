@@ -4,7 +4,6 @@ package com.aliyun.ocr20191230.models;
 import com.aliyun.tea.*;
 
 public class RecognizePdfRequest extends TeaModel {
-    // A short description of struct
     @NameInMap("FileURL")
     public String fileURL;
 

@@ -53,6 +53,9 @@ public class RecognizeVATInvoiceResponseBody extends TeaModel {
         @NameInMap("InvoiceNoes")
         public java.util.List<Float> invoiceNoes;
 
+        @NameInMap("ItemNames")
+        public java.util.List<Integer> itemNames;
+
         @NameInMap("PayeeAddresses")
         public java.util.List<Float> payeeAddresses;
 
@@ -148,6 +151,14 @@ public class RecognizeVATInvoiceResponseBody extends TeaModel {
         }
         public java.util.List<Float> getInvoiceNoes() {
             return this.invoiceNoes;
+        }
+
+        public RecognizeVATInvoiceResponseBodyDataBox setItemNames(java.util.List<Integer> itemNames) {
+            this.itemNames = itemNames;
+            return this;
+        }
+        public java.util.List<Integer> getItemNames() {
+            return this.itemNames;
         }
 
         public RecognizeVATInvoiceResponseBodyDataBox setPayeeAddresses(java.util.List<Float> payeeAddresses) {
@@ -270,6 +281,9 @@ public class RecognizeVATInvoiceResponseBody extends TeaModel {
         @NameInMap("InvoiceNo")
         public String invoiceNo;
 
+        @NameInMap("ItemName")
+        public java.util.List<String> itemName;
+
         @NameInMap("Payee")
         public String payee;
 
@@ -365,6 +379,14 @@ public class RecognizeVATInvoiceResponseBody extends TeaModel {
         }
         public String getInvoiceNo() {
             return this.invoiceNo;
+        }
+
+        public RecognizeVATInvoiceResponseBodyDataContent setItemName(java.util.List<String> itemName) {
+            this.itemName = itemName;
+            return this;
+        }
+        public java.util.List<String> getItemName() {
+            return this.itemName;
         }
 
         public RecognizeVATInvoiceResponseBodyDataContent setPayee(String payee) {

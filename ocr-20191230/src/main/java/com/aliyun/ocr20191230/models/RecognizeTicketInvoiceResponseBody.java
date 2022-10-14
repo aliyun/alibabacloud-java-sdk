@@ -7,7 +7,6 @@ public class RecognizeTicketInvoiceResponseBody extends TeaModel {
     @NameInMap("Data")
     public RecognizeTicketInvoiceResponseBodyData data;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

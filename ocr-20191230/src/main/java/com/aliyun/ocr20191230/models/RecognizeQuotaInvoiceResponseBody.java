@@ -7,7 +7,6 @@ public class RecognizeQuotaInvoiceResponseBody extends TeaModel {
     @NameInMap("Data")
     public RecognizeQuotaInvoiceResponseBodyData data;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

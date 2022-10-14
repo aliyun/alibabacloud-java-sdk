@@ -7,7 +7,6 @@ public class RecognizeVideoCharacterResponseBody extends TeaModel {
     @NameInMap("Data")
     public RecognizeVideoCharacterResponseBodyData data;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -33,23 +32,18 @@ public class RecognizeVideoCharacterResponseBody extends TeaModel {
     }
 
     public static class RecognizeVideoCharacterResponseBodyDataFramesElementsTextRectangles extends TeaModel {
-        // 文字区域角度，角度范围[0, 360]
         @NameInMap("Angle")
         public Long angle;
 
-        // 文字区域高度
         @NameInMap("Height")
         public Long height;
 
-        // 文字区域左上角x坐标
         @NameInMap("Left")
         public Long left;
 
-        // 文字区域左上角y坐标
         @NameInMap("Top")
         public Long top;
 
-        // 文字区域宽度
         @NameInMap("Width")
         public Long width;
 
@@ -101,11 +95,9 @@ public class RecognizeVideoCharacterResponseBody extends TeaModel {
     }
 
     public static class RecognizeVideoCharacterResponseBodyDataFramesElements extends TeaModel {
-        // 文字区域概率，概率值的范围为[0.0, 1.0]
         @NameInMap("Score")
         public Float score;
 
-        // 文字内容
         @NameInMap("Text")
         public String text;
 
@@ -147,7 +139,6 @@ public class RecognizeVideoCharacterResponseBody extends TeaModel {
         @NameInMap("Elements")
         public java.util.List<RecognizeVideoCharacterResponseBodyDataFramesElements> elements;
 
-        // 帧时间戳时间戳，单位秒。
         @NameInMap("Timestamp")
         public Long timestamp;
 
@@ -175,14 +166,12 @@ public class RecognizeVideoCharacterResponseBody extends TeaModel {
     }
 
     public static class RecognizeVideoCharacterResponseBodyData extends TeaModel {
-        // 视频帧的集合，空信息的帧不列出。
         @NameInMap("Frames")
         public java.util.List<RecognizeVideoCharacterResponseBodyDataFrames> frames;
 
         @NameInMap("Height")
         public Long height;
 
-        // 对应的输入OSS文件 (格式oss://{bucketName}/{object})
         @NameInMap("InputFile")
         public String inputFile;
 

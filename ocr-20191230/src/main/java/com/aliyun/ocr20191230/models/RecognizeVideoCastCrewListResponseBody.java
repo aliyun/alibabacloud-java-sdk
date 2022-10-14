@@ -7,7 +7,6 @@ public class RecognizeVideoCastCrewListResponseBody extends TeaModel {
     @NameInMap("Data")
     public RecognizeVideoCastCrewListResponseBodyData data;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

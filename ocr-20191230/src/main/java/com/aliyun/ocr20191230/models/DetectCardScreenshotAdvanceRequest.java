@@ -4,8 +4,7 @@ package com.aliyun.ocr20191230.models;
 import com.aliyun.tea.*;
 
 public class DetectCardScreenshotAdvanceRequest extends TeaModel {
-    @NameInMap("ImageURLObject")
-    @Validation(required = true)
+    @NameInMap("ImageURL")
     public java.io.InputStream imageURLObject;
 
     public static DetectCardScreenshotAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
