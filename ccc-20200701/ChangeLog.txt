@@ -1,3 +1,6 @@
+2022-10-14 Version: 2.6.8
+- Supported releaseReason for GetCallDetailRecord and ListCallDetailRecords.
+
 2022-09-07 Version: 2.6.7
 - Supported StartPrivacyCall api.
 

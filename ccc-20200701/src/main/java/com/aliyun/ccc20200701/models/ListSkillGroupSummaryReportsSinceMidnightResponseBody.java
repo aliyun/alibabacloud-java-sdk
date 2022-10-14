@@ -432,6 +432,9 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         @NameInMap("CallsDialed")
         public Long callsDialed;
 
+        @NameInMap("CallsServiceLevel30")
+        public String callsServiceLevel30;
+
         @NameInMap("MaxDialingTime")
         public Long maxDialingTime;
 
@@ -510,6 +513,14 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         }
         public Long getCallsDialed() {
             return this.callsDialed;
+        }
+
+        public ListSkillGroupSummaryReportsSinceMidnightResponseBodyPagedSkillGroupSummaryReportListOutbound setCallsServiceLevel30(String callsServiceLevel30) {
+            this.callsServiceLevel30 = callsServiceLevel30;
+            return this;
+        }
+        public String getCallsServiceLevel30() {
+            return this.callsServiceLevel30;
         }
 
         public ListSkillGroupSummaryReportsSinceMidnightResponseBodyPagedSkillGroupSummaryReportListOutbound setMaxDialingTime(Long maxDialingTime) {
