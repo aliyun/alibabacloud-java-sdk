@@ -57,6 +57,49 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new OpenapiSaveTaskStatusResponse());
     }
 
+    public OpenapiSemantemeSearchResponse openapiSemantemeSearch(OpenapiSemantemeSearchRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.openapiSemantemeSearchWithOptions(request, headers, runtime);
+    }
+
+    public OpenapiSemantemeSearchResponse openapiSemantemeSearchWithOptions(OpenapiSemantemeSearchRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.semanteme)) {
+            body.put("semanteme", request.semanteme);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantCode)) {
+            body.put("tenantCode", request.tenantCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topN)) {
+            body.put("topN", request.topN);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceCode)) {
+            body.put("workspaceCode", request.workspaceCode);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "OpenapiSemantemeSearch"),
+            new TeaPair("version", "2022-08-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/autoDrive/openapi/semantemeSearch"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new OpenapiSemantemeSearchResponse());
+    }
+
     public OpenapiSemantemeSearchSaveResponse openapiSemantemeSearchSave(OpenapiSemantemeSearchSaveRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
