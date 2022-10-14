@@ -13,6 +13,9 @@ public class AccessTokenResponseBody extends TeaModel {
     @NameInMap("message")
     public String message;
 
+    @NameInMap("module")
+    public AccessTokenResponseBodyModule module;
+
     @NameInMap("requestId")
     public String requestId;
 
@@ -46,6 +49,14 @@ public class AccessTokenResponseBody extends TeaModel {
     }
     public String getMessage() {
         return this.message;
+    }
+
+    public AccessTokenResponseBody setModule(AccessTokenResponseBodyModule module) {
+        this.module = module;
+        return this;
+    }
+    public AccessTokenResponseBodyModule getModule() {
+        return this.module;
     }
 
     public AccessTokenResponseBody setRequestId(String requestId) {
@@ -85,6 +96,47 @@ public class AccessTokenResponseBody extends TeaModel {
         }
 
         public AccessTokenResponseBodyData setToken(String token) {
+            this.token = token;
+            return this;
+        }
+        public String getToken() {
+            return this.token;
+        }
+
+    }
+
+    public static class AccessTokenResponseBodyModule extends TeaModel {
+        @NameInMap("expire")
+        public Long expire;
+
+        @NameInMap("start")
+        public Long start;
+
+        @NameInMap("token")
+        public String token;
+
+        public static AccessTokenResponseBodyModule build(java.util.Map<String, ?> map) throws Exception {
+            AccessTokenResponseBodyModule self = new AccessTokenResponseBodyModule();
+            return TeaModel.build(map, self);
+        }
+
+        public AccessTokenResponseBodyModule setExpire(Long expire) {
+            this.expire = expire;
+            return this;
+        }
+        public Long getExpire() {
+            return this.expire;
+        }
+
+        public AccessTokenResponseBodyModule setStart(Long start) {
+            this.start = start;
+            return this;
+        }
+        public Long getStart() {
+            return this.start;
+        }
+
+        public AccessTokenResponseBodyModule setToken(String token) {
             this.token = token;
             return this;
         }
