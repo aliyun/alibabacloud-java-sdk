@@ -1080,6 +1080,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ContainerGroupId", request.containerGroupId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.customPolicyARN)) {
+            query.put("CustomPolicyARN", request.customPolicyARN);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceIds)) {
             query.put("DBInstanceIds", request.DBInstanceIds);
         }
@@ -1524,6 +1528,51 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteAlarmResponse deleteAlarm(DeleteAlarmRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteAlarmWithOptions(request, runtime);
+    }
+
+    public DeleteEciScalingConfigurationResponse deleteEciScalingConfigurationWithOptions(DeleteEciScalingConfigurationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scalingConfigurationId)) {
+            query.put("ScalingConfigurationId", request.scalingConfigurationId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteEciScalingConfiguration"),
+            new TeaPair("version", "2022-02-22"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteEciScalingConfigurationResponse());
+    }
+
+    public DeleteEciScalingConfigurationResponse deleteEciScalingConfiguration(DeleteEciScalingConfigurationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteEciScalingConfigurationWithOptions(request, runtime);
     }
 
     public DeleteLifecycleHookResponse deleteLifecycleHookWithOptions(DeleteLifecycleHookRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -4122,6 +4171,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.compensateWithOnDemand)) {
             query.put("CompensateWithOnDemand", request.compensateWithOnDemand);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customPolicyARN)) {
+            query.put("CustomPolicyARN", request.customPolicyARN);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.defaultCooldown)) {

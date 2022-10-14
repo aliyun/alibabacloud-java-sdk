@@ -231,6 +231,9 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
         @NameInMap("CurrentHostName")
         public String currentHostName;
 
+        @NameInMap("CustomPolicyARN")
+        public String customPolicyARN;
+
         @NameInMap("DBInstanceIds")
         public java.util.List<String> DBInstanceIds;
 
@@ -427,6 +430,14 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
         }
         public String getCurrentHostName() {
             return this.currentHostName;
+        }
+
+        public DescribeScalingGroupsResponseBodyScalingGroups setCustomPolicyARN(String customPolicyARN) {
+            this.customPolicyARN = customPolicyARN;
+            return this;
+        }
+        public String getCustomPolicyARN() {
+            return this.customPolicyARN;
         }
 
         public DescribeScalingGroupsResponseBodyScalingGroups setDBInstanceIds(java.util.List<String> DBInstanceIds) {

@@ -16,6 +16,9 @@ public class ModifyScalingGroupRequest extends TeaModel {
     @NameInMap("CompensateWithOnDemand")
     public Boolean compensateWithOnDemand;
 
+    @NameInMap("CustomPolicyARN")
+    public String customPolicyARN;
+
     @NameInMap("DefaultCooldown")
     public Integer defaultCooldown;
 
@@ -123,6 +126,14 @@ public class ModifyScalingGroupRequest extends TeaModel {
     }
     public Boolean getCompensateWithOnDemand() {
         return this.compensateWithOnDemand;
+    }
+
+    public ModifyScalingGroupRequest setCustomPolicyARN(String customPolicyARN) {
+        this.customPolicyARN = customPolicyARN;
+        return this;
+    }
+    public String getCustomPolicyARN() {
+        return this.customPolicyARN;
     }
 
     public ModifyScalingGroupRequest setDefaultCooldown(Integer defaultCooldown) {
