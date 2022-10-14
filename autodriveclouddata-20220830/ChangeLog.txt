@@ -1,3 +1,6 @@
+2022-10-14 Version: 1.0.4
+- Add SemantemeSearch.
+
 2022-10-14 Version: 1.0.3
 - Add SaveTaskStatusQuery.
 
