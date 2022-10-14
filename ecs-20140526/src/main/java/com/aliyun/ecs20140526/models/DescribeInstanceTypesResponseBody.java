@@ -82,6 +82,9 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         @NameInMap("GPUAmount")
         public Integer GPUAmount;
 
+        @NameInMap("GPUMemorySize")
+        public Float GPUMemorySize;
+
         @NameInMap("GPUSpec")
         public String GPUSpec;
 
@@ -255,6 +258,14 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         }
         public Integer getGPUAmount() {
             return this.GPUAmount;
+        }
+
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setGPUMemorySize(Float GPUMemorySize) {
+            this.GPUMemorySize = GPUMemorySize;
+            return this;
+        }
+        public Float getGPUMemorySize() {
+            return this.GPUMemorySize;
         }
 
         public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setGPUSpec(String GPUSpec) {
