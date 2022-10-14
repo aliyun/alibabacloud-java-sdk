@@ -4,12 +4,11 @@ package com.aliyun.ocr20191230.models;
 import com.aliyun.tea.*;
 
 public class TrimDocumentAdvanceRequest extends TeaModel {
-    @NameInMap("FileURLObject")
-    @Validation(required = true)
-    public java.io.InputStream fileURLObject;
-
     @NameInMap("FileType")
     public String fileType;
+
+    @NameInMap("FileURL")
+    public java.io.InputStream fileURLObject;
 
     @NameInMap("OutputType")
     public String outputType;
@@ -19,20 +18,20 @@ public class TrimDocumentAdvanceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public TrimDocumentAdvanceRequest setFileURLObject(java.io.InputStream fileURLObject) {
-        this.fileURLObject = fileURLObject;
-        return this;
-    }
-    public java.io.InputStream getFileURLObject() {
-        return this.fileURLObject;
-    }
-
     public TrimDocumentAdvanceRequest setFileType(String fileType) {
         this.fileType = fileType;
         return this;
     }
     public String getFileType() {
         return this.fileType;
+    }
+
+    public TrimDocumentAdvanceRequest setFileURLObject(java.io.InputStream fileURLObject) {
+        this.fileURLObject = fileURLObject;
+        return this;
+    }
+    public java.io.InputStream getFileURLObject() {
+        return this.fileURLObject;
     }
 
     public TrimDocumentAdvanceRequest setOutputType(String outputType) {

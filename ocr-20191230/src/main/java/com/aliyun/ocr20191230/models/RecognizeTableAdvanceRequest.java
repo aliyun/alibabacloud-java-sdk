@@ -4,15 +4,14 @@ package com.aliyun.ocr20191230.models;
 import com.aliyun.tea.*;
 
 public class RecognizeTableAdvanceRequest extends TeaModel {
-    @NameInMap("ImageURLObject")
-    @Validation(required = true)
-    public java.io.InputStream imageURLObject;
-
     @NameInMap("AssureDirection")
     public Boolean assureDirection;
 
     @NameInMap("HasLine")
     public Boolean hasLine;
+
+    @NameInMap("ImageURL")
+    public java.io.InputStream imageURLObject;
 
     @NameInMap("OutputFormat")
     public String outputFormat;
@@ -26,14 +25,6 @@ public class RecognizeTableAdvanceRequest extends TeaModel {
     public static RecognizeTableAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         RecognizeTableAdvanceRequest self = new RecognizeTableAdvanceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public RecognizeTableAdvanceRequest setImageURLObject(java.io.InputStream imageURLObject) {
-        this.imageURLObject = imageURLObject;
-        return this;
-    }
-    public java.io.InputStream getImageURLObject() {
-        return this.imageURLObject;
     }
 
     public RecognizeTableAdvanceRequest setAssureDirection(Boolean assureDirection) {
@@ -50,6 +41,14 @@ public class RecognizeTableAdvanceRequest extends TeaModel {
     }
     public Boolean getHasLine() {
         return this.hasLine;
+    }
+
+    public RecognizeTableAdvanceRequest setImageURLObject(java.io.InputStream imageURLObject) {
+        this.imageURLObject = imageURLObject;
+        return this;
+    }
+    public java.io.InputStream getImageURLObject() {
+        return this.imageURLObject;
     }
 
     public RecognizeTableAdvanceRequest setOutputFormat(String outputFormat) {

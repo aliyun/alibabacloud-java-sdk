@@ -7,7 +7,6 @@ public class RecognizePdfResponseBody extends TeaModel {
     @NameInMap("Data")
     public RecognizePdfResponseBodyData data;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

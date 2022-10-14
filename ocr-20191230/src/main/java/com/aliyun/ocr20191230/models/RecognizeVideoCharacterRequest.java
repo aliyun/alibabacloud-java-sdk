@@ -4,7 +4,6 @@ package com.aliyun.ocr20191230.models;
 import com.aliyun.tea.*;
 
 public class RecognizeVideoCharacterRequest extends TeaModel {
-    // 视频文件地址
     @NameInMap("VideoURL")
     public String videoURL;
 

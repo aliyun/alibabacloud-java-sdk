@@ -4,8 +4,7 @@ package com.aliyun.ocr20191230.models;
 import com.aliyun.tea.*;
 
 public class RecognizePdfAdvanceRequest extends TeaModel {
-    @NameInMap("FileURLObject")
-    @Validation(required = true)
+    @NameInMap("FileURL")
     public java.io.InputStream fileURLObject;
 
     public static RecognizePdfAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {

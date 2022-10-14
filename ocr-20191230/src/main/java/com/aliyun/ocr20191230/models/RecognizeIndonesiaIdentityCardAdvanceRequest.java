@@ -4,8 +4,7 @@ package com.aliyun.ocr20191230.models;
 import com.aliyun.tea.*;
 
 public class RecognizeIndonesiaIdentityCardAdvanceRequest extends TeaModel {
-    @NameInMap("ImageUrlObject")
-    @Validation(required = true)
+    @NameInMap("ImageUrl")
     public java.io.InputStream imageUrlObject;
 
     public static RecognizeIndonesiaIdentityCardAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
