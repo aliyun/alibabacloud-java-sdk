@@ -4,6 +4,12 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class GetSwimLaneDetailResponseBody extends TeaModel {
+    @NameInMap("IngressRule")
+    public String ingressRule;
+
+    @NameInMap("IngressService")
+    public String ingressService;
+
     @NameInMap("LabelSelectorKey")
     public String labelSelectorKey;
 
@@ -14,11 +20,27 @@ public class GetSwimLaneDetailResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("ServicesList")
-    public java.util.List<byte[]> servicesList;
+    public String servicesList;
 
     public static GetSwimLaneDetailResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetSwimLaneDetailResponseBody self = new GetSwimLaneDetailResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetSwimLaneDetailResponseBody setIngressRule(String ingressRule) {
+        this.ingressRule = ingressRule;
+        return this;
+    }
+    public String getIngressRule() {
+        return this.ingressRule;
+    }
+
+    public GetSwimLaneDetailResponseBody setIngressService(String ingressService) {
+        this.ingressService = ingressService;
+        return this;
+    }
+    public String getIngressService() {
+        return this.ingressService;
     }
 
     public GetSwimLaneDetailResponseBody setLabelSelectorKey(String labelSelectorKey) {
@@ -45,11 +67,11 @@ public class GetSwimLaneDetailResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetSwimLaneDetailResponseBody setServicesList(java.util.List<byte[]> servicesList) {
+    public GetSwimLaneDetailResponseBody setServicesList(String servicesList) {
         this.servicesList = servicesList;
         return this;
     }
-    public java.util.List<byte[]> getServicesList() {
+    public String getServicesList() {
         return this.servicesList;
     }
 
