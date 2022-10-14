@@ -439,6 +439,9 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         @NameInMap("ReleaseInitiator")
         public String releaseInitiator;
 
+        @NameInMap("ReleaseReason")
+        public String releaseReason;
+
         @NameInMap("ReleaseTime")
         public Long releaseTime;
 
@@ -615,6 +618,14 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         }
         public String getReleaseInitiator() {
             return this.releaseInitiator;
+        }
+
+        public GetCallDetailRecordResponseBodyData setReleaseReason(String releaseReason) {
+            this.releaseReason = releaseReason;
+            return this;
+        }
+        public String getReleaseReason() {
+            return this.releaseReason;
         }
 
         public GetCallDetailRecordResponseBodyData setReleaseTime(Long releaseTime) {
