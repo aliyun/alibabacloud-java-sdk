@@ -10,6 +10,9 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends TeaModel {
     @NameInMap("AppIds")
     public String appIds;
 
+    @NameInMap("DbGrayEnable")
+    public Boolean dbGrayEnable;
+
     @NameInMap("Enable")
     public Boolean enable;
 
@@ -71,6 +74,14 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends TeaModel {
     }
     public String getAppIds() {
         return this.appIds;
+    }
+
+    public CreateOrUpdateSwimmingLaneGroupRequest setDbGrayEnable(Boolean dbGrayEnable) {
+        this.dbGrayEnable = dbGrayEnable;
+        return this;
+    }
+    public Boolean getDbGrayEnable() {
+        return this.dbGrayEnable;
     }
 
     public CreateOrUpdateSwimmingLaneGroupRequest setEnable(Boolean enable) {
