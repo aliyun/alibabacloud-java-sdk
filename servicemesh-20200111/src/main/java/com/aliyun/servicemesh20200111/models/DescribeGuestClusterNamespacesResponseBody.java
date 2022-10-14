@@ -4,6 +4,9 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class DescribeGuestClusterNamespacesResponseBody extends TeaModel {
+    @NameInMap("NsLabels")
+    public java.util.Map<String, ?> nsLabels;
+
     @NameInMap("NsList")
     public java.util.List<String> nsList;
 
@@ -13,6 +16,14 @@ public class DescribeGuestClusterNamespacesResponseBody extends TeaModel {
     public static DescribeGuestClusterNamespacesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeGuestClusterNamespacesResponseBody self = new DescribeGuestClusterNamespacesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeGuestClusterNamespacesResponseBody setNsLabels(java.util.Map<String, ?> nsLabels) {
+        this.nsLabels = nsLabels;
+        return this;
+    }
+    public java.util.Map<String, ?> getNsLabels() {
+        return this.nsLabels;
     }
 
     public DescribeGuestClusterNamespacesResponseBody setNsList(java.util.List<String> nsList) {

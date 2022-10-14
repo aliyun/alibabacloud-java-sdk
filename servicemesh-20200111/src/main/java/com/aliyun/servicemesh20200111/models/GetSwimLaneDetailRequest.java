@@ -4,6 +4,9 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class GetSwimLaneDetailRequest extends TeaModel {
+    @NameInMap("GroupName")
+    public String groupName;
+
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;
 
@@ -13,6 +16,14 @@ public class GetSwimLaneDetailRequest extends TeaModel {
     public static GetSwimLaneDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         GetSwimLaneDetailRequest self = new GetSwimLaneDetailRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetSwimLaneDetailRequest setGroupName(String groupName) {
+        this.groupName = groupName;
+        return this;
+    }
+    public String getGroupName() {
+        return this.groupName;
     }
 
     public GetSwimLaneDetailRequest setServiceMeshId(String serviceMeshId) {

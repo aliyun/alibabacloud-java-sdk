@@ -584,6 +584,100 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createServiceMeshWithOptions(request, runtime);
     }
 
+    public CreateSwimLaneResponse createSwimLaneWithOptions(CreateSwimLaneRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.groupName)) {
+            body.put("GroupName", request.groupName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.labelSelectorKey)) {
+            body.put("LabelSelectorKey", request.labelSelectorKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.labelSelectorValue)) {
+            body.put("LabelSelectorValue", request.labelSelectorValue);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceMeshId)) {
+            body.put("ServiceMeshId", request.serviceMeshId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.servicesList)) {
+            body.put("ServicesList", request.servicesList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.swimLaneName)) {
+            body.put("SwimLaneName", request.swimLaneName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateSwimLane"),
+            new TeaPair("version", "2020-01-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSwimLaneResponse());
+    }
+
+    public CreateSwimLaneResponse createSwimLane(CreateSwimLaneRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createSwimLaneWithOptions(request, runtime);
+    }
+
+    public CreateSwimLaneGroupResponse createSwimLaneGroupWithOptions(CreateSwimLaneGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.groupName)) {
+            body.put("GroupName", request.groupName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ingressGatewayName)) {
+            body.put("IngressGatewayName", request.ingressGatewayName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ingressType)) {
+            body.put("IngressType", request.ingressType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceMeshId)) {
+            body.put("ServiceMeshId", request.serviceMeshId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.servicesList)) {
+            body.put("ServicesList", request.servicesList);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateSwimLaneGroup"),
+            new TeaPair("version", "2020-01-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSwimLaneGroupResponse());
+    }
+
+    public CreateSwimLaneGroupResponse createSwimLaneGroup(CreateSwimLaneGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createSwimLaneGroupWithOptions(request, runtime);
+    }
+
     public DeleteGatewayRouteResponse deleteGatewayRouteWithOptions(DeleteGatewayRouteRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -742,6 +836,76 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteServiceMeshResponse deleteServiceMesh(DeleteServiceMeshRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteServiceMeshWithOptions(request, runtime);
+    }
+
+    public DeleteSwimLaneResponse deleteSwimLaneWithOptions(DeleteSwimLaneRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.groupName)) {
+            body.put("GroupName", request.groupName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceMeshId)) {
+            body.put("ServiceMeshId", request.serviceMeshId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.swimLaneName)) {
+            body.put("SwimLaneName", request.swimLaneName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteSwimLane"),
+            new TeaPair("version", "2020-01-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteSwimLaneResponse());
+    }
+
+    public DeleteSwimLaneResponse deleteSwimLane(DeleteSwimLaneRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteSwimLaneWithOptions(request, runtime);
+    }
+
+    public DeleteSwimLaneGroupResponse deleteSwimLaneGroupWithOptions(DeleteSwimLaneGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.groupName)) {
+            body.put("GroupName", request.groupName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceMeshId)) {
+            body.put("ServiceMeshId", request.serviceMeshId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteSwimLaneGroup"),
+            new TeaPair("version", "2020-01-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteSwimLaneGroupResponse());
+    }
+
+    public DeleteSwimLaneGroupResponse deleteSwimLaneGroup(DeleteSwimLaneGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteSwimLaneGroupWithOptions(request, runtime);
     }
 
     public DescribeASMGatewayImportedServicesResponse describeASMGatewayImportedServicesWithOptions(DescribeASMGatewayImportedServicesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1108,6 +1272,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.serviceMeshId)) {
             body.put("ServiceMeshId", request.serviceMeshId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.showNsLabels)) {
+            body.put("ShowNsLabels", request.showNsLabels);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -1946,6 +2114,98 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getCaCertWithOptions(request, runtime);
     }
 
+    public GetDeploymentBySelectorResponse getDeploymentBySelectorWithOptions(GetDeploymentBySelectorRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GetDeploymentBySelectorShrinkRequest request = new GetDeploymentBySelectorShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.labelSelector)) {
+            request.labelSelectorShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.labelSelector, "LabelSelector", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.guestCluster)) {
+            body.put("GuestCluster", request.guestCluster);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.labelSelectorShrink)) {
+            body.put("LabelSelector", request.labelSelectorShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
+            body.put("Limit", request.limit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mark)) {
+            body.put("Mark", request.mark);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nameSpace)) {
+            body.put("NameSpace", request.nameSpace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceMeshId)) {
+            body.put("ServiceMeshId", request.serviceMeshId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetDeploymentBySelector"),
+            new TeaPair("version", "2020-01-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDeploymentBySelectorResponse());
+    }
+
+    public GetDeploymentBySelectorResponse getDeploymentBySelector(GetDeploymentBySelectorRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getDeploymentBySelectorWithOptions(request, runtime);
+    }
+
+    public GetGrafanaDashboardUrlResponse getGrafanaDashboardUrlWithOptions(GetGrafanaDashboardUrlRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.k8sClusterId)) {
+            body.put("K8sClusterId", request.k8sClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceMeshId)) {
+            body.put("ServiceMeshId", request.serviceMeshId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.title)) {
+            body.put("Title", request.title);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetGrafanaDashboardUrl"),
+            new TeaPair("version", "2020-01-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetGrafanaDashboardUrlResponse());
+    }
+
+    public GetGrafanaDashboardUrlResponse getGrafanaDashboardUrl(GetGrafanaDashboardUrlRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getGrafanaDashboardUrlWithOptions(request, runtime);
+    }
+
     public GetRegisteredServiceEndpointsResponse getRegisteredServiceEndpointsWithOptions(GetRegisteredServiceEndpointsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -2018,6 +2278,105 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetRegisteredServiceNamespacesResponse getRegisteredServiceNamespaces(GetRegisteredServiceNamespacesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getRegisteredServiceNamespacesWithOptions(request, runtime);
+    }
+
+    public GetSwimLaneDetailResponse getSwimLaneDetailWithOptions(GetSwimLaneDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.groupName)) {
+            body.put("GroupName", request.groupName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceMeshId)) {
+            body.put("ServiceMeshId", request.serviceMeshId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.swimLaneName)) {
+            body.put("SwimLaneName", request.swimLaneName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetSwimLaneDetail"),
+            new TeaPair("version", "2020-01-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSwimLaneDetailResponse());
+    }
+
+    public GetSwimLaneDetailResponse getSwimLaneDetail(GetSwimLaneDetailRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getSwimLaneDetailWithOptions(request, runtime);
+    }
+
+    public GetSwimLaneGroupListResponse getSwimLaneGroupListWithOptions(GetSwimLaneGroupListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceMeshId)) {
+            body.put("ServiceMeshId", request.serviceMeshId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetSwimLaneGroupList"),
+            new TeaPair("version", "2020-01-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSwimLaneGroupListResponse());
+    }
+
+    public GetSwimLaneGroupListResponse getSwimLaneGroupList(GetSwimLaneGroupListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getSwimLaneGroupListWithOptions(request, runtime);
+    }
+
+    public GetSwimLaneListResponse getSwimLaneListWithOptions(GetSwimLaneListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.groupName)) {
+            body.put("GroupName", request.groupName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceMeshId)) {
+            body.put("ServiceMeshId", request.serviceMeshId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetSwimLaneList"),
+            new TeaPair("version", "2020-01-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSwimLaneListResponse());
+    }
+
+    public GetSwimLaneListResponse getSwimLaneList(GetSwimLaneListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getSwimLaneListWithOptions(request, runtime);
     }
 
     public GetVmAppMeshInfoResponse getVmAppMeshInfoWithOptions(GetVmAppMeshInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -3067,6 +3426,92 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateNamespaceScopeSidecarConfigResponse updateNamespaceScopeSidecarConfig(UpdateNamespaceScopeSidecarConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateNamespaceScopeSidecarConfigWithOptions(request, runtime);
+    }
+
+    public UpdateSwimLaneResponse updateSwimLaneWithOptions(UpdateSwimLaneRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.groupName)) {
+            body.put("GroupName", request.groupName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.labelSelectorKey)) {
+            body.put("LabelSelectorKey", request.labelSelectorKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.labelSelectorValue)) {
+            body.put("LabelSelectorValue", request.labelSelectorValue);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceMeshId)) {
+            body.put("ServiceMeshId", request.serviceMeshId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.servicesList)) {
+            body.put("ServicesList", request.servicesList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.swimLaneName)) {
+            body.put("SwimLaneName", request.swimLaneName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateSwimLane"),
+            new TeaPair("version", "2020-01-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateSwimLaneResponse());
+    }
+
+    public UpdateSwimLaneResponse updateSwimLane(UpdateSwimLaneRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateSwimLaneWithOptions(request, runtime);
+    }
+
+    public UpdateSwimLaneGroupResponse updateSwimLaneGroupWithOptions(UpdateSwimLaneGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.groupName)) {
+            body.put("GroupName", request.groupName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceMeshId)) {
+            body.put("ServiceMeshId", request.serviceMeshId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.servicesList)) {
+            body.put("ServicesList", request.servicesList);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateSwimLaneGroup"),
+            new TeaPair("version", "2020-01-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateSwimLaneGroupResponse());
+    }
+
+    public UpdateSwimLaneGroupResponse updateSwimLaneGroup(UpdateSwimLaneGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateSwimLaneGroupWithOptions(request, runtime);
     }
 
     public UpgradeMeshEditionPartiallyResponse upgradeMeshEditionPartiallyWithOptions(UpgradeMeshEditionPartiallyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {

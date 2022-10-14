@@ -3,19 +3,19 @@ package com.aliyun.servicemesh20200111.models;
 
 import com.aliyun.tea.*;
 
-public class GetSwimLaneListRequest extends TeaModel {
+public class DeleteSwimLaneGroupRequest extends TeaModel {
     @NameInMap("GroupName")
     public String groupName;
 
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;
 
-    public static GetSwimLaneListRequest build(java.util.Map<String, ?> map) throws Exception {
-        GetSwimLaneListRequest self = new GetSwimLaneListRequest();
+    public static DeleteSwimLaneGroupRequest build(java.util.Map<String, ?> map) throws Exception {
+        DeleteSwimLaneGroupRequest self = new DeleteSwimLaneGroupRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetSwimLaneListRequest setGroupName(String groupName) {
+    public DeleteSwimLaneGroupRequest setGroupName(String groupName) {
         this.groupName = groupName;
         return this;
     }
@@ -23,7 +23,7 @@ public class GetSwimLaneListRequest extends TeaModel {
         return this.groupName;
     }
 
-    public GetSwimLaneListRequest setServiceMeshId(String serviceMeshId) {
+    public DeleteSwimLaneGroupRequest setServiceMeshId(String serviceMeshId) {
         this.serviceMeshId = serviceMeshId;
         return this;
     }

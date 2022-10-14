@@ -3,7 +3,7 @@ package com.aliyun.servicemesh20200111.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateSwimLaneRequest extends TeaModel {
+public class CreateSwimLaneRequest extends TeaModel {
     @NameInMap("GroupName")
     public String groupName;
 
@@ -22,12 +22,12 @@ public class UpdateSwimLaneRequest extends TeaModel {
     @NameInMap("SwimLaneName")
     public String swimLaneName;
 
-    public static UpdateSwimLaneRequest build(java.util.Map<String, ?> map) throws Exception {
-        UpdateSwimLaneRequest self = new UpdateSwimLaneRequest();
+    public static CreateSwimLaneRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateSwimLaneRequest self = new CreateSwimLaneRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateSwimLaneRequest setGroupName(String groupName) {
+    public CreateSwimLaneRequest setGroupName(String groupName) {
         this.groupName = groupName;
         return this;
     }
@@ -35,7 +35,7 @@ public class UpdateSwimLaneRequest extends TeaModel {
         return this.groupName;
     }
 
-    public UpdateSwimLaneRequest setLabelSelectorKey(String labelSelectorKey) {
+    public CreateSwimLaneRequest setLabelSelectorKey(String labelSelectorKey) {
         this.labelSelectorKey = labelSelectorKey;
         return this;
     }
@@ -43,7 +43,7 @@ public class UpdateSwimLaneRequest extends TeaModel {
         return this.labelSelectorKey;
     }
 
-    public UpdateSwimLaneRequest setLabelSelectorValue(String labelSelectorValue) {
+    public CreateSwimLaneRequest setLabelSelectorValue(String labelSelectorValue) {
         this.labelSelectorValue = labelSelectorValue;
         return this;
     }
@@ -51,7 +51,7 @@ public class UpdateSwimLaneRequest extends TeaModel {
         return this.labelSelectorValue;
     }
 
-    public UpdateSwimLaneRequest setServiceMeshId(String serviceMeshId) {
+    public CreateSwimLaneRequest setServiceMeshId(String serviceMeshId) {
         this.serviceMeshId = serviceMeshId;
         return this;
     }
@@ -59,7 +59,7 @@ public class UpdateSwimLaneRequest extends TeaModel {
         return this.serviceMeshId;
     }
 
-    public UpdateSwimLaneRequest setServicesList(String servicesList) {
+    public CreateSwimLaneRequest setServicesList(String servicesList) {
         this.servicesList = servicesList;
         return this;
     }
@@ -67,7 +67,7 @@ public class UpdateSwimLaneRequest extends TeaModel {
         return this.servicesList;
     }
 
-    public UpdateSwimLaneRequest setSwimLaneName(String swimLaneName) {
+    public CreateSwimLaneRequest setSwimLaneName(String swimLaneName) {
         this.swimLaneName = swimLaneName;
         return this;
     }

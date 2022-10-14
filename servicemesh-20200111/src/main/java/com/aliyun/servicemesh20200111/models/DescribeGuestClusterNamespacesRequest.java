@@ -10,6 +10,9 @@ public class DescribeGuestClusterNamespacesRequest extends TeaModel {
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;
 
+    @NameInMap("ShowNsLabels")
+    public Boolean showNsLabels;
+
     public static DescribeGuestClusterNamespacesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeGuestClusterNamespacesRequest self = new DescribeGuestClusterNamespacesRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class DescribeGuestClusterNamespacesRequest extends TeaModel {
     }
     public String getServiceMeshId() {
         return this.serviceMeshId;
+    }
+
+    public DescribeGuestClusterNamespacesRequest setShowNsLabels(Boolean showNsLabels) {
+        this.showNsLabels = showNsLabels;
+        return this;
+    }
+    public Boolean getShowNsLabels() {
+        return this.showNsLabels;
     }
 
 }
