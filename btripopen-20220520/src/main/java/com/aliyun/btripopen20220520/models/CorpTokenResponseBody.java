@@ -13,6 +13,9 @@ public class CorpTokenResponseBody extends TeaModel {
     @NameInMap("message")
     public String message;
 
+    @NameInMap("module")
+    public CorpTokenResponseBodyModule module;
+
     @NameInMap("requestId")
     public String requestId;
 
@@ -46,6 +49,14 @@ public class CorpTokenResponseBody extends TeaModel {
     }
     public String getMessage() {
         return this.message;
+    }
+
+    public CorpTokenResponseBody setModule(CorpTokenResponseBodyModule module) {
+        this.module = module;
+        return this;
+    }
+    public CorpTokenResponseBodyModule getModule() {
+        return this.module;
     }
 
     public CorpTokenResponseBody setRequestId(String requestId) {
@@ -85,6 +96,47 @@ public class CorpTokenResponseBody extends TeaModel {
         }
 
         public CorpTokenResponseBodyData setToken(String token) {
+            this.token = token;
+            return this;
+        }
+        public String getToken() {
+            return this.token;
+        }
+
+    }
+
+    public static class CorpTokenResponseBodyModule extends TeaModel {
+        @NameInMap("expire")
+        public Long expire;
+
+        @NameInMap("start")
+        public Long start;
+
+        @NameInMap("token")
+        public String token;
+
+        public static CorpTokenResponseBodyModule build(java.util.Map<String, ?> map) throws Exception {
+            CorpTokenResponseBodyModule self = new CorpTokenResponseBodyModule();
+            return TeaModel.build(map, self);
+        }
+
+        public CorpTokenResponseBodyModule setExpire(Long expire) {
+            this.expire = expire;
+            return this;
+        }
+        public Long getExpire() {
+            return this.expire;
+        }
+
+        public CorpTokenResponseBodyModule setStart(Long start) {
+            this.start = start;
+            return this;
+        }
+        public Long getStart() {
+            return this.start;
+        }
+
+        public CorpTokenResponseBodyModule setToken(String token) {
             this.token = token;
             return this;
         }
