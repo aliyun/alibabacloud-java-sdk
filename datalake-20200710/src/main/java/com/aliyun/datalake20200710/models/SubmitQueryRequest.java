@@ -4,6 +4,9 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class SubmitQueryRequest extends TeaModel {
+    @NameInMap("catalogId")
+    public String catalogId;
+
     @NameInMap("sql")
     public String sql;
 
@@ -13,6 +16,14 @@ public class SubmitQueryRequest extends TeaModel {
     public static SubmitQueryRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitQueryRequest self = new SubmitQueryRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SubmitQueryRequest setCatalogId(String catalogId) {
+        this.catalogId = catalogId;
+        return this;
+    }
+    public String getCatalogId() {
+        return this.catalogId;
     }
 
     public SubmitQueryRequest setSql(String sql) {
