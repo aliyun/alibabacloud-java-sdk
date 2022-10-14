@@ -1526,6 +1526,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AppIds", request.appIds);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.dbGrayEnable)) {
+            query.put("DbGrayEnable", request.dbGrayEnable);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.enable)) {
             query.put("Enable", request.enable);
         }
