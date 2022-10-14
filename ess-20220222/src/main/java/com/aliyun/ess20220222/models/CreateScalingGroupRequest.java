@@ -22,6 +22,9 @@ public class CreateScalingGroupRequest extends TeaModel {
     @NameInMap("ContainerGroupId")
     public String containerGroupId;
 
+    @NameInMap("CustomPolicyARN")
+    public String customPolicyARN;
+
     @NameInMap("DBInstanceIds")
     public String DBInstanceIds;
 
@@ -172,6 +175,14 @@ public class CreateScalingGroupRequest extends TeaModel {
     }
     public String getContainerGroupId() {
         return this.containerGroupId;
+    }
+
+    public CreateScalingGroupRequest setCustomPolicyARN(String customPolicyARN) {
+        this.customPolicyARN = customPolicyARN;
+        return this;
+    }
+    public String getCustomPolicyARN() {
+        return this.customPolicyARN;
     }
 
     public CreateScalingGroupRequest setDBInstanceIds(String DBInstanceIds) {
