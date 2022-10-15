@@ -69,6 +69,81 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.cancelVideoTaskWithOptions(request, runtime);
     }
 
+    public DuplexDecisionResponse duplexDecisionWithOptions(DuplexDecisionRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DuplexDecisionShrinkRequest request = new DuplexDecisionShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.customKeywords)) {
+            request.customKeywordsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.customKeywords, "CustomKeywords", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.dialogContext))) {
+            request.dialogContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.dialogContext), "DialogContext", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizRequestId)) {
+            query.put("BizRequestId", request.bizRequestId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.callTime)) {
+            query.put("CallTime", request.callTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customKeywordsShrink)) {
+            query.put("CustomKeywords", request.customKeywordsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dialogContextShrink)) {
+            query.put("DialogContext", request.dialogContextShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dialogStatus)) {
+            query.put("DialogStatus", request.dialogStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.interruptType)) {
+            query.put("InterruptType", request.interruptType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            query.put("SessionId", request.sessionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("TenantId", request.tenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.text)) {
+            query.put("Text", request.text);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DuplexDecision"),
+            new TeaPair("version", "2022-01-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DuplexDecisionResponse());
+    }
+
+    public DuplexDecisionResponse duplexDecision(DuplexDecisionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.duplexDecisionWithOptions(request, runtime);
+    }
+
     public GetVideoTaskInfoResponse getVideoTaskInfoWithOptions(GetVideoTaskInfoRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         GetVideoTaskInfoShrinkRequest request = new GetVideoTaskInfoShrinkRequest();
