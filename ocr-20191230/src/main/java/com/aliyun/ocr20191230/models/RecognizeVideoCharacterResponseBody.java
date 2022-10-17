@@ -7,6 +7,9 @@ public class RecognizeVideoCharacterResponseBody extends TeaModel {
     @NameInMap("Data")
     public RecognizeVideoCharacterResponseBodyData data;
 
+    @NameInMap("Message")
+    public String message;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -21,6 +24,14 @@ public class RecognizeVideoCharacterResponseBody extends TeaModel {
     }
     public RecognizeVideoCharacterResponseBodyData getData() {
         return this.data;
+    }
+
+    public RecognizeVideoCharacterResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public RecognizeVideoCharacterResponseBody setRequestId(String requestId) {
