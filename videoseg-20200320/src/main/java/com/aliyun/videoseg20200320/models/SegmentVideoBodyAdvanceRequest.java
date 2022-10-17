@@ -4,12 +4,8 @@ package com.aliyun.videoseg20200320.models;
 import com.aliyun.tea.*;
 
 public class SegmentVideoBodyAdvanceRequest extends TeaModel {
-    @NameInMap("VideoUrlObject")
-    @Validation(required = true)
+    @NameInMap("VideoUrl")
     public java.io.InputStream videoUrlObject;
-
-    @NameInMap("Async")
-    public Boolean async;
 
     public static SegmentVideoBodyAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         SegmentVideoBodyAdvanceRequest self = new SegmentVideoBodyAdvanceRequest();
@@ -22,14 +18,6 @@ public class SegmentVideoBodyAdvanceRequest extends TeaModel {
     }
     public java.io.InputStream getVideoUrlObject() {
         return this.videoUrlObject;
-    }
-
-    public SegmentVideoBodyAdvanceRequest setAsync(Boolean async) {
-        this.async = async;
-        return this;
-    }
-    public Boolean getAsync() {
-        return this.async;
     }
 
 }

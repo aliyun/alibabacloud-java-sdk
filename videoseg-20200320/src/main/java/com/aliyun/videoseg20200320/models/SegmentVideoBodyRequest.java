@@ -7,9 +7,6 @@ public class SegmentVideoBodyRequest extends TeaModel {
     @NameInMap("VideoUrl")
     public String videoUrl;
 
-    @NameInMap("Async")
-    public Boolean async;
-
     public static SegmentVideoBodyRequest build(java.util.Map<String, ?> map) throws Exception {
         SegmentVideoBodyRequest self = new SegmentVideoBodyRequest();
         return TeaModel.build(map, self);
@@ -21,14 +18,6 @@ public class SegmentVideoBodyRequest extends TeaModel {
     }
     public String getVideoUrl() {
         return this.videoUrl;
-    }
-
-    public SegmentVideoBodyRequest setAsync(Boolean async) {
-        this.async = async;
-        return this;
-    }
-    public Boolean getAsync() {
-        return this.async;
     }
 
 }
