@@ -4,19 +4,15 @@ package com.aliyun.retailcloud20180313.models;
 import com.aliyun.tea.*;
 
 public class RestartAppInstanceResponseBody extends TeaModel {
-    // code
     @NameInMap("Code")
     public Integer code;
 
-    // errMsg
     @NameInMap("ErrMsg")
     public String errMsg;
 
-    // requestId
     @NameInMap("RequestId")
     public String requestId;
 
-    // result
     @NameInMap("Result")
     public String result;
 

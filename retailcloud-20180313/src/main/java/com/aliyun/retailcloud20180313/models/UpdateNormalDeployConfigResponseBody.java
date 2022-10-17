@@ -10,7 +10,6 @@ public class UpdateNormalDeployConfigResponseBody extends TeaModel {
     @NameInMap("ErrMsg")
     public String errMsg;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

@@ -7,7 +7,6 @@ public class OfflineAppEnvironmentRequest extends TeaModel {
     @NameInMap("AppId")
     public Long appId;
 
-    // 是否删除PVC，未传递默认不删除
     @NameInMap("DeletePvc")
     public Boolean deletePvc;
 
