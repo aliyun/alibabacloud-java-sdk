@@ -7,6 +7,9 @@ public class DetectVideoIPCObjectResponseBody extends TeaModel {
     @NameInMap("Data")
     public DetectVideoIPCObjectResponseBodyData data;
 
+    @NameInMap("Message")
+    public String message;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -21,6 +24,14 @@ public class DetectVideoIPCObjectResponseBody extends TeaModel {
     }
     public DetectVideoIPCObjectResponseBodyData getData() {
         return this.data;
+    }
+
+    public DetectVideoIPCObjectResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public DetectVideoIPCObjectResponseBody setRequestId(String requestId) {
