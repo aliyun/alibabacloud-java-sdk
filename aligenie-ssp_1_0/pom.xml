@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>aligeniessp_1_0</artifactId>
-  <version>1.0.13</version>
+  <version>1.0.14</version>
   <packaging>jar</packaging>
   <name>aligeniessp_1_0</name>
   <description>Alibaba Cloud AliGenie (ssp_1_0) SDK for Java
@@ -61,7 +61,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea</artifactId>
-      <version>1.1.14</version>
+      <version>1.2.0</version>
     </dependency>
   </dependencies>
   <build>
