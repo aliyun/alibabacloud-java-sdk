@@ -116,6 +116,9 @@ public class ListFlowRulesOfAppResponseBody extends TeaModel {
         @NameInMap("Threshold")
         public Float threshold;
 
+        @NameInMap("ThresholdMode")
+        public Integer thresholdMode;
+
         @NameInMap("WarmUpPeriodSec")
         public Integer warmUpPeriodSec;
 
@@ -258,6 +261,14 @@ public class ListFlowRulesOfAppResponseBody extends TeaModel {
         }
         public Float getThreshold() {
             return this.threshold;
+        }
+
+        public ListFlowRulesOfAppResponseBodyDataDatas setThresholdMode(Integer thresholdMode) {
+            this.thresholdMode = thresholdMode;
+            return this;
+        }
+        public Integer getThresholdMode() {
+            return this.thresholdMode;
         }
 
         public ListFlowRulesOfAppResponseBodyDataDatas setWarmUpPeriodSec(Integer warmUpPeriodSec) {
