@@ -4,8 +4,7 @@ package com.aliyun.imagerecog20190930.models;
 import com.aliyun.tea.*;
 
 public class RecognizeImageStyleAdvanceRequest extends TeaModel {
-    @NameInMap("UrlObject")
-    @Validation(required = true)
+    @NameInMap("Url")
     public java.io.InputStream urlObject;
 
     public static RecognizeImageStyleAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {

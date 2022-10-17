@@ -4,8 +4,7 @@ package com.aliyun.imagerecog20190930.models;
 import com.aliyun.tea.*;
 
 public class ClassifyingRubbishAdvanceRequest extends TeaModel {
-    @NameInMap("ImageURLObject")
-    @Validation(required = true)
+    @NameInMap("ImageURL")
     public java.io.InputStream imageURLObject;
 
     public static ClassifyingRubbishAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {

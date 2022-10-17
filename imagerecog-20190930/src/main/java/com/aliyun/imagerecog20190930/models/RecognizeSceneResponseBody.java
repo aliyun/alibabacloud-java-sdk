@@ -4,23 +4,15 @@ package com.aliyun.imagerecog20190930.models;
 import com.aliyun.tea.*;
 
 public class RecognizeSceneResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public RecognizeSceneResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static RecognizeSceneResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RecognizeSceneResponseBody self = new RecognizeSceneResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public RecognizeSceneResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public RecognizeSceneResponseBody setData(RecognizeSceneResponseBodyData data) {
@@ -31,24 +23,24 @@ public class RecognizeSceneResponseBody extends TeaModel {
         return this.data;
     }
 
-    public static class RecognizeSceneResponseBodyDataTags extends TeaModel {
-        @NameInMap("Value")
-        public String value;
+    public RecognizeSceneResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class RecognizeSceneResponseBodyDataTags extends TeaModel {
         @NameInMap("Confidence")
         public Float confidence;
+
+        @NameInMap("Value")
+        public String value;
 
         public static RecognizeSceneResponseBodyDataTags build(java.util.Map<String, ?> map) throws Exception {
             RecognizeSceneResponseBodyDataTags self = new RecognizeSceneResponseBodyDataTags();
             return TeaModel.build(map, self);
-        }
-
-        public RecognizeSceneResponseBodyDataTags setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
         }
 
         public RecognizeSceneResponseBodyDataTags setConfidence(Float confidence) {
@@ -57,6 +49,14 @@ public class RecognizeSceneResponseBody extends TeaModel {
         }
         public Float getConfidence() {
             return this.confidence;
+        }
+
+        public RecognizeSceneResponseBodyDataTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

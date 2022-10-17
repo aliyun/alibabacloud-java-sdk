@@ -4,23 +4,15 @@ package com.aliyun.imagerecog20190930.models;
 import com.aliyun.tea.*;
 
 public class DetectFruitsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public DetectFruitsResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DetectFruitsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DetectFruitsResponseBody self = new DetectFruitsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DetectFruitsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DetectFruitsResponseBody setData(DetectFruitsResponseBodyData data) {
@@ -31,27 +23,27 @@ public class DetectFruitsResponseBody extends TeaModel {
         return this.data;
     }
 
-    public static class DetectFruitsResponseBodyDataElements extends TeaModel {
-        @NameInMap("Score")
-        public Float score;
+    public DetectFruitsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class DetectFruitsResponseBodyDataElements extends TeaModel {
         @NameInMap("Box")
         public java.util.List<Float> box;
 
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("Score")
+        public Float score;
+
         public static DetectFruitsResponseBodyDataElements build(java.util.Map<String, ?> map) throws Exception {
             DetectFruitsResponseBodyDataElements self = new DetectFruitsResponseBodyDataElements();
             return TeaModel.build(map, self);
-        }
-
-        public DetectFruitsResponseBodyDataElements setScore(Float score) {
-            this.score = score;
-            return this;
-        }
-        public Float getScore() {
-            return this.score;
         }
 
         public DetectFruitsResponseBodyDataElements setBox(java.util.List<Float> box) {
@@ -68,6 +60,14 @@ public class DetectFruitsResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public DetectFruitsResponseBodyDataElements setScore(Float score) {
+            this.score = score;
+            return this;
+        }
+        public Float getScore() {
+            return this.score;
         }
 
     }

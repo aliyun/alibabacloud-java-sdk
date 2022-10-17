@@ -4,23 +4,15 @@ package com.aliyun.imagerecog20190930.models;
 import com.aliyun.tea.*;
 
 public class RecognizeImageStyleResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public RecognizeImageStyleResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static RecognizeImageStyleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RecognizeImageStyleResponseBody self = new RecognizeImageStyleResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public RecognizeImageStyleResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public RecognizeImageStyleResponseBody setData(RecognizeImageStyleResponseBodyData data) {
@@ -29,6 +21,14 @@ public class RecognizeImageStyleResponseBody extends TeaModel {
     }
     public RecognizeImageStyleResponseBodyData getData() {
         return this.data;
+    }
+
+    public RecognizeImageStyleResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class RecognizeImageStyleResponseBodyData extends TeaModel {

@@ -4,7 +4,6 @@ package com.aliyun.imagerecog20190930.models;
 import com.aliyun.tea.*;
 
 public class RecognizeFoodRequest extends TeaModel {
-    // A short description of struct
     @NameInMap("ImageURL")
     public String imageURL;
 

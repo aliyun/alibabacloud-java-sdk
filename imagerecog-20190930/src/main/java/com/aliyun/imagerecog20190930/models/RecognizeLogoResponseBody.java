@@ -4,23 +4,15 @@ package com.aliyun.imagerecog20190930.models;
 import com.aliyun.tea.*;
 
 public class RecognizeLogoResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public RecognizeLogoResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static RecognizeLogoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RecognizeLogoResponseBody self = new RecognizeLogoResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public RecognizeLogoResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public RecognizeLogoResponseBody setData(RecognizeLogoResponseBodyData data) {
@@ -31,28 +23,52 @@ public class RecognizeLogoResponseBody extends TeaModel {
         return this.data;
     }
 
+    public RecognizeLogoResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class RecognizeLogoResponseBodyDataElementsResultsLogosData extends TeaModel {
+        @NameInMap("H")
+        public Float h;
+
+        @NameInMap("Name")
+        public String name;
+
         @NameInMap("Type")
         public String type;
 
         @NameInMap("W")
         public Float w;
 
-        @NameInMap("H")
-        public Float h;
+        @NameInMap("X")
+        public Float x;
 
         @NameInMap("Y")
         public Float y;
 
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("X")
-        public Float x;
-
         public static RecognizeLogoResponseBodyDataElementsResultsLogosData build(java.util.Map<String, ?> map) throws Exception {
             RecognizeLogoResponseBodyDataElementsResultsLogosData self = new RecognizeLogoResponseBodyDataElementsResultsLogosData();
             return TeaModel.build(map, self);
+        }
+
+        public RecognizeLogoResponseBodyDataElementsResultsLogosData setH(Float h) {
+            this.h = h;
+            return this;
+        }
+        public Float getH() {
+            return this.h;
+        }
+
+        public RecognizeLogoResponseBodyDataElementsResultsLogosData setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
         public RecognizeLogoResponseBodyDataElementsResultsLogosData setType(String type) {
@@ -71,12 +87,12 @@ public class RecognizeLogoResponseBody extends TeaModel {
             return this.w;
         }
 
-        public RecognizeLogoResponseBodyDataElementsResultsLogosData setH(Float h) {
-            this.h = h;
+        public RecognizeLogoResponseBodyDataElementsResultsLogosData setX(Float x) {
+            this.x = x;
             return this;
         }
-        public Float getH() {
-            return this.h;
+        public Float getX() {
+            return this.x;
         }
 
         public RecognizeLogoResponseBodyDataElementsResultsLogosData setY(Float y) {
@@ -87,56 +103,24 @@ public class RecognizeLogoResponseBody extends TeaModel {
             return this.y;
         }
 
-        public RecognizeLogoResponseBodyDataElementsResultsLogosData setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public RecognizeLogoResponseBodyDataElementsResultsLogosData setX(Float x) {
-            this.x = x;
-            return this;
-        }
-        public Float getX() {
-            return this.x;
-        }
-
     }
 
     public static class RecognizeLogoResponseBodyDataElementsResults extends TeaModel {
-        @NameInMap("Suggestion")
-        public String suggestion;
+        @NameInMap("Label")
+        public String label;
 
         @NameInMap("LogosData")
         public java.util.List<RecognizeLogoResponseBodyDataElementsResultsLogosData> logosData;
 
-        @NameInMap("Label")
-        public String label;
-
         @NameInMap("Rate")
         public Float rate;
+
+        @NameInMap("Suggestion")
+        public String suggestion;
 
         public static RecognizeLogoResponseBodyDataElementsResults build(java.util.Map<String, ?> map) throws Exception {
             RecognizeLogoResponseBodyDataElementsResults self = new RecognizeLogoResponseBodyDataElementsResults();
             return TeaModel.build(map, self);
-        }
-
-        public RecognizeLogoResponseBodyDataElementsResults setSuggestion(String suggestion) {
-            this.suggestion = suggestion;
-            return this;
-        }
-        public String getSuggestion() {
-            return this.suggestion;
-        }
-
-        public RecognizeLogoResponseBodyDataElementsResults setLogosData(java.util.List<RecognizeLogoResponseBodyDataElementsResultsLogosData> logosData) {
-            this.logosData = logosData;
-            return this;
-        }
-        public java.util.List<RecognizeLogoResponseBodyDataElementsResultsLogosData> getLogosData() {
-            return this.logosData;
         }
 
         public RecognizeLogoResponseBodyDataElementsResults setLabel(String label) {
@@ -147,6 +131,14 @@ public class RecognizeLogoResponseBody extends TeaModel {
             return this.label;
         }
 
+        public RecognizeLogoResponseBodyDataElementsResults setLogosData(java.util.List<RecognizeLogoResponseBodyDataElementsResultsLogosData> logosData) {
+            this.logosData = logosData;
+            return this;
+        }
+        public java.util.List<RecognizeLogoResponseBodyDataElementsResultsLogosData> getLogosData() {
+            return this.logosData;
+        }
+
         public RecognizeLogoResponseBodyDataElementsResults setRate(Float rate) {
             this.rate = rate;
             return this;
@@ -155,17 +147,25 @@ public class RecognizeLogoResponseBody extends TeaModel {
             return this.rate;
         }
 
+        public RecognizeLogoResponseBodyDataElementsResults setSuggestion(String suggestion) {
+            this.suggestion = suggestion;
+            return this;
+        }
+        public String getSuggestion() {
+            return this.suggestion;
+        }
+
     }
 
     public static class RecognizeLogoResponseBodyDataElements extends TeaModel {
         @NameInMap("ImageURL")
         public String imageURL;
 
-        @NameInMap("TaskId")
-        public String taskId;
-
         @NameInMap("Results")
         public java.util.List<RecognizeLogoResponseBodyDataElementsResults> results;
+
+        @NameInMap("TaskId")
+        public String taskId;
 
         public static RecognizeLogoResponseBodyDataElements build(java.util.Map<String, ?> map) throws Exception {
             RecognizeLogoResponseBodyDataElements self = new RecognizeLogoResponseBodyDataElements();
@@ -180,20 +180,20 @@ public class RecognizeLogoResponseBody extends TeaModel {
             return this.imageURL;
         }
 
-        public RecognizeLogoResponseBodyDataElements setTaskId(String taskId) {
-            this.taskId = taskId;
-            return this;
-        }
-        public String getTaskId() {
-            return this.taskId;
-        }
-
         public RecognizeLogoResponseBodyDataElements setResults(java.util.List<RecognizeLogoResponseBodyDataElementsResults> results) {
             this.results = results;
             return this;
         }
         public java.util.List<RecognizeLogoResponseBodyDataElementsResults> getResults() {
             return this.results;
+        }
+
+        public RecognizeLogoResponseBodyDataElements setTaskId(String taskId) {
+            this.taskId = taskId;
+            return this;
+        }
+        public String getTaskId() {
+            return this.taskId;
         }
 
     }

@@ -4,23 +4,15 @@ package com.aliyun.imagerecog20190930.models;
 import com.aliyun.tea.*;
 
 public class RecognizeVehicleTypeResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public RecognizeVehicleTypeResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static RecognizeVehicleTypeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RecognizeVehicleTypeResponseBody self = new RecognizeVehicleTypeResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public RecognizeVehicleTypeResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public RecognizeVehicleTypeResponseBody setData(RecognizeVehicleTypeResponseBodyData data) {
@@ -31,24 +23,24 @@ public class RecognizeVehicleTypeResponseBody extends TeaModel {
         return this.data;
     }
 
-    public static class RecognizeVehicleTypeResponseBodyDataElements extends TeaModel {
-        @NameInMap("Score")
-        public Float score;
+    public RecognizeVehicleTypeResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class RecognizeVehicleTypeResponseBodyDataElements extends TeaModel {
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("Score")
+        public Float score;
 
         public static RecognizeVehicleTypeResponseBodyDataElements build(java.util.Map<String, ?> map) throws Exception {
             RecognizeVehicleTypeResponseBodyDataElements self = new RecognizeVehicleTypeResponseBodyDataElements();
             return TeaModel.build(map, self);
-        }
-
-        public RecognizeVehicleTypeResponseBodyDataElements setScore(Float score) {
-            this.score = score;
-            return this;
-        }
-        public Float getScore() {
-            return this.score;
         }
 
         public RecognizeVehicleTypeResponseBodyDataElements setName(String name) {
@@ -57,6 +49,14 @@ public class RecognizeVehicleTypeResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public RecognizeVehicleTypeResponseBodyDataElements setScore(Float score) {
+            this.score = score;
+            return this;
+        }
+        public Float getScore() {
+            return this.score;
         }
 
     }
