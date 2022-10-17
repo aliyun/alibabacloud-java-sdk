@@ -7,6 +7,9 @@ public class ToneSdrVideoResponseBody extends TeaModel {
     @NameInMap("Data")
     public ToneSdrVideoResponseBodyData data;
 
+    @NameInMap("Message")
+    public String message;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -21,6 +24,14 @@ public class ToneSdrVideoResponseBody extends TeaModel {
     }
     public ToneSdrVideoResponseBodyData getData() {
         return this.data;
+    }
+
+    public ToneSdrVideoResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public ToneSdrVideoResponseBody setRequestId(String requestId) {

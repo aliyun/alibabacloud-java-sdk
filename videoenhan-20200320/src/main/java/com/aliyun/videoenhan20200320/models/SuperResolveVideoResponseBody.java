@@ -7,6 +7,9 @@ public class SuperResolveVideoResponseBody extends TeaModel {
     @NameInMap("Data")
     public SuperResolveVideoResponseBodyData data;
 
+    @NameInMap("Message")
+    public String message;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -21,6 +24,14 @@ public class SuperResolveVideoResponseBody extends TeaModel {
     }
     public SuperResolveVideoResponseBodyData getData() {
         return this.data;
+    }
+
+    public SuperResolveVideoResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public SuperResolveVideoResponseBody setRequestId(String requestId) {

@@ -7,6 +7,9 @@ public class AdjustVideoColorResponseBody extends TeaModel {
     @NameInMap("Data")
     public AdjustVideoColorResponseBodyData data;
 
+    @NameInMap("Message")
+    public String message;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -21,6 +24,14 @@ public class AdjustVideoColorResponseBody extends TeaModel {
     }
     public AdjustVideoColorResponseBodyData getData() {
         return this.data;
+    }
+
+    public AdjustVideoColorResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public AdjustVideoColorResponseBody setRequestId(String requestId) {

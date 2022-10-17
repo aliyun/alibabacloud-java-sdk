@@ -7,6 +7,9 @@ public class ChangeVideoSizeResponseBody extends TeaModel {
     @NameInMap("Data")
     public ChangeVideoSizeResponseBodyData data;
 
+    @NameInMap("Message")
+    public String message;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -21,6 +24,14 @@ public class ChangeVideoSizeResponseBody extends TeaModel {
     }
     public ChangeVideoSizeResponseBodyData getData() {
         return this.data;
+    }
+
+    public ChangeVideoSizeResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public ChangeVideoSizeResponseBody setRequestId(String requestId) {

@@ -7,6 +7,9 @@ public class AbstractFilmVideoResponseBody extends TeaModel {
     @NameInMap("Data")
     public AbstractFilmVideoResponseBodyData data;
 
+    @NameInMap("Message")
+    public String message;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -21,6 +24,14 @@ public class AbstractFilmVideoResponseBody extends TeaModel {
     }
     public AbstractFilmVideoResponseBodyData getData() {
         return this.data;
+    }
+
+    public AbstractFilmVideoResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public AbstractFilmVideoResponseBody setRequestId(String requestId) {

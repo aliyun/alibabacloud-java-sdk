@@ -7,6 +7,9 @@ public class AddFaceVideoTemplateResponseBody extends TeaModel {
     @NameInMap("Date")
     public AddFaceVideoTemplateResponseBodyDate date;
 
+    @NameInMap("Message")
+    public String message;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -21,6 +24,14 @@ public class AddFaceVideoTemplateResponseBody extends TeaModel {
     }
     public AddFaceVideoTemplateResponseBodyDate getDate() {
         return this.date;
+    }
+
+    public AddFaceVideoTemplateResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public AddFaceVideoTemplateResponseBody setRequestId(String requestId) {
