@@ -4,23 +4,15 @@ package com.aliyun.imagerecog20190930.models;
 import com.aliyun.tea.*;
 
 public class TaggingImageResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public TaggingImageResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static TaggingImageResponseBody build(java.util.Map<String, ?> map) throws Exception {
         TaggingImageResponseBody self = new TaggingImageResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public TaggingImageResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public TaggingImageResponseBody setData(TaggingImageResponseBodyData data) {
@@ -31,24 +23,24 @@ public class TaggingImageResponseBody extends TeaModel {
         return this.data;
     }
 
-    public static class TaggingImageResponseBodyDataTags extends TeaModel {
-        @NameInMap("Value")
-        public String value;
+    public TaggingImageResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class TaggingImageResponseBodyDataTags extends TeaModel {
         @NameInMap("Confidence")
         public Float confidence;
+
+        @NameInMap("Value")
+        public String value;
 
         public static TaggingImageResponseBodyDataTags build(java.util.Map<String, ?> map) throws Exception {
             TaggingImageResponseBodyDataTags self = new TaggingImageResponseBodyDataTags();
             return TeaModel.build(map, self);
-        }
-
-        public TaggingImageResponseBodyDataTags setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
         }
 
         public TaggingImageResponseBodyDataTags setConfidence(Float confidence) {
@@ -57,6 +49,14 @@ public class TaggingImageResponseBody extends TeaModel {
         }
         public Float getConfidence() {
             return this.confidence;
+        }
+
+        public TaggingImageResponseBodyDataTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

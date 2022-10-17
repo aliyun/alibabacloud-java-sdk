@@ -4,8 +4,7 @@ package com.aliyun.imagerecog20190930.models;
 import com.aliyun.tea.*;
 
 public class TaggingImageAdvanceRequest extends TeaModel {
-    @NameInMap("ImageURLObject")
-    @Validation(required = true)
+    @NameInMap("ImageURL")
     public java.io.InputStream imageURLObject;
 
     public static TaggingImageAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {

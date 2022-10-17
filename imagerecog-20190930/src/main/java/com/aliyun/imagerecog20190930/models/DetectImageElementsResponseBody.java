@@ -4,23 +4,15 @@ package com.aliyun.imagerecog20190930.models;
 import com.aliyun.tea.*;
 
 public class DetectImageElementsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public DetectImageElementsResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DetectImageElementsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DetectImageElementsResponseBody self = new DetectImageElementsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DetectImageElementsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DetectImageElementsResponseBody setData(DetectImageElementsResponseBodyData data) {
@@ -31,28 +23,52 @@ public class DetectImageElementsResponseBody extends TeaModel {
         return this.data;
     }
 
+    public DetectImageElementsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DetectImageElementsResponseBodyDataElements extends TeaModel {
+        @NameInMap("Height")
+        public Integer height;
+
+        @NameInMap("Score")
+        public Float score;
+
         @NameInMap("Type")
         public String type;
 
         @NameInMap("Width")
         public Integer width;
 
-        @NameInMap("Height")
-        public Integer height;
+        @NameInMap("X")
+        public Integer x;
 
         @NameInMap("Y")
         public Integer y;
 
-        @NameInMap("Score")
-        public Float score;
-
-        @NameInMap("X")
-        public Integer x;
-
         public static DetectImageElementsResponseBodyDataElements build(java.util.Map<String, ?> map) throws Exception {
             DetectImageElementsResponseBodyDataElements self = new DetectImageElementsResponseBodyDataElements();
             return TeaModel.build(map, self);
+        }
+
+        public DetectImageElementsResponseBodyDataElements setHeight(Integer height) {
+            this.height = height;
+            return this;
+        }
+        public Integer getHeight() {
+            return this.height;
+        }
+
+        public DetectImageElementsResponseBodyDataElements setScore(Float score) {
+            this.score = score;
+            return this;
+        }
+        public Float getScore() {
+            return this.score;
         }
 
         public DetectImageElementsResponseBodyDataElements setType(String type) {
@@ -71,12 +87,12 @@ public class DetectImageElementsResponseBody extends TeaModel {
             return this.width;
         }
 
-        public DetectImageElementsResponseBodyDataElements setHeight(Integer height) {
-            this.height = height;
+        public DetectImageElementsResponseBodyDataElements setX(Integer x) {
+            this.x = x;
             return this;
         }
-        public Integer getHeight() {
-            return this.height;
+        public Integer getX() {
+            return this.x;
         }
 
         public DetectImageElementsResponseBodyDataElements setY(Integer y) {
@@ -85,22 +101,6 @@ public class DetectImageElementsResponseBody extends TeaModel {
         }
         public Integer getY() {
             return this.y;
-        }
-
-        public DetectImageElementsResponseBodyDataElements setScore(Float score) {
-            this.score = score;
-            return this;
-        }
-        public Float getScore() {
-            return this.score;
-        }
-
-        public DetectImageElementsResponseBodyDataElements setX(Integer x) {
-            this.x = x;
-            return this;
-        }
-        public Integer getX() {
-            return this.x;
         }
 
     }

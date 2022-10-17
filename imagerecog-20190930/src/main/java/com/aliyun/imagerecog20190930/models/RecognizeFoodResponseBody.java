@@ -4,24 +4,15 @@ package com.aliyun.imagerecog20190930.models;
 import com.aliyun.tea.*;
 
 public class RecognizeFoodResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public RecognizeFoodResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static RecognizeFoodResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RecognizeFoodResponseBody self = new RecognizeFoodResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public RecognizeFoodResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public RecognizeFoodResponseBody setData(RecognizeFoodResponseBodyData data) {
@@ -32,19 +23,35 @@ public class RecognizeFoodResponseBody extends TeaModel {
         return this.data;
     }
 
+    public RecognizeFoodResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class RecognizeFoodResponseBodyDataTopFives extends TeaModel {
+        @NameInMap("Calorie")
+        public String calorie;
+
         @NameInMap("Category")
         public String category;
 
         @NameInMap("Score")
         public Float score;
 
-        @NameInMap("Calorie")
-        public String calorie;
-
         public static RecognizeFoodResponseBodyDataTopFives build(java.util.Map<String, ?> map) throws Exception {
             RecognizeFoodResponseBodyDataTopFives self = new RecognizeFoodResponseBodyDataTopFives();
             return TeaModel.build(map, self);
+        }
+
+        public RecognizeFoodResponseBodyDataTopFives setCalorie(String calorie) {
+            this.calorie = calorie;
+            return this;
+        }
+        public String getCalorie() {
+            return this.calorie;
         }
 
         public RecognizeFoodResponseBodyDataTopFives setCategory(String category) {
@@ -61,14 +68,6 @@ public class RecognizeFoodResponseBody extends TeaModel {
         }
         public Float getScore() {
             return this.score;
-        }
-
-        public RecognizeFoodResponseBodyDataTopFives setCalorie(String calorie) {
-            this.calorie = calorie;
-            return this;
-        }
-        public String getCalorie() {
-            return this.calorie;
         }
 
     }

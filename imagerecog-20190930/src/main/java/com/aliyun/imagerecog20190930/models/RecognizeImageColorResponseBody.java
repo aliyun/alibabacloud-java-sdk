@@ -4,23 +4,15 @@ package com.aliyun.imagerecog20190930.models;
 import com.aliyun.tea.*;
 
 public class RecognizeImageColorResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public RecognizeImageColorResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static RecognizeImageColorResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RecognizeImageColorResponseBody self = new RecognizeImageColorResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public RecognizeImageColorResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public RecognizeImageColorResponseBody setData(RecognizeImageColorResponseBodyData data) {
@@ -31,15 +23,23 @@ public class RecognizeImageColorResponseBody extends TeaModel {
         return this.data;
     }
 
+    public RecognizeImageColorResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class RecognizeImageColorResponseBodyDataColorTemplateList extends TeaModel {
         @NameInMap("Color")
         public String color;
 
-        @NameInMap("Percentage")
-        public Float percentage;
-
         @NameInMap("Label")
         public String label;
+
+        @NameInMap("Percentage")
+        public Float percentage;
 
         public static RecognizeImageColorResponseBodyDataColorTemplateList build(java.util.Map<String, ?> map) throws Exception {
             RecognizeImageColorResponseBodyDataColorTemplateList self = new RecognizeImageColorResponseBodyDataColorTemplateList();
@@ -54,20 +54,20 @@ public class RecognizeImageColorResponseBody extends TeaModel {
             return this.color;
         }
 
-        public RecognizeImageColorResponseBodyDataColorTemplateList setPercentage(Float percentage) {
-            this.percentage = percentage;
-            return this;
-        }
-        public Float getPercentage() {
-            return this.percentage;
-        }
-
         public RecognizeImageColorResponseBodyDataColorTemplateList setLabel(String label) {
             this.label = label;
             return this;
         }
         public String getLabel() {
             return this.label;
+        }
+
+        public RecognizeImageColorResponseBodyDataColorTemplateList setPercentage(Float percentage) {
+            this.percentage = percentage;
+            return this;
+        }
+        public Float getPercentage() {
+            return this.percentage;
         }
 
     }

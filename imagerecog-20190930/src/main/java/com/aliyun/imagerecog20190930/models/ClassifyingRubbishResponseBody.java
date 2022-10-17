@@ -4,23 +4,15 @@ package com.aliyun.imagerecog20190930.models;
 import com.aliyun.tea.*;
 
 public class ClassifyingRubbishResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public ClassifyingRubbishResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ClassifyingRubbishResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ClassifyingRubbishResponseBody self = new ClassifyingRubbishResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ClassifyingRubbishResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ClassifyingRubbishResponseBody setData(ClassifyingRubbishResponseBodyData data) {
@@ -31,7 +23,18 @@ public class ClassifyingRubbishResponseBody extends TeaModel {
         return this.data;
     }
 
+    public ClassifyingRubbishResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class ClassifyingRubbishResponseBodyDataElements extends TeaModel {
+        @NameInMap("Category")
+        public String category;
+
         @NameInMap("CategoryScore")
         public Float categoryScore;
 
@@ -41,12 +44,17 @@ public class ClassifyingRubbishResponseBody extends TeaModel {
         @NameInMap("RubbishScore")
         public Float rubbishScore;
 
-        @NameInMap("Category")
-        public String category;
-
         public static ClassifyingRubbishResponseBodyDataElements build(java.util.Map<String, ?> map) throws Exception {
             ClassifyingRubbishResponseBodyDataElements self = new ClassifyingRubbishResponseBodyDataElements();
             return TeaModel.build(map, self);
+        }
+
+        public ClassifyingRubbishResponseBodyDataElements setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
         }
 
         public ClassifyingRubbishResponseBodyDataElements setCategoryScore(Float categoryScore) {
@@ -73,34 +81,18 @@ public class ClassifyingRubbishResponseBody extends TeaModel {
             return this.rubbishScore;
         }
 
-        public ClassifyingRubbishResponseBodyDataElements setCategory(String category) {
-            this.category = category;
-            return this;
-        }
-        public String getCategory() {
-            return this.category;
-        }
-
     }
 
     public static class ClassifyingRubbishResponseBodyData extends TeaModel {
-        @NameInMap("Sensitive")
-        public Boolean sensitive;
-
         @NameInMap("Elements")
         public java.util.List<ClassifyingRubbishResponseBodyDataElements> elements;
+
+        @NameInMap("Sensitive")
+        public Boolean sensitive;
 
         public static ClassifyingRubbishResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ClassifyingRubbishResponseBodyData self = new ClassifyingRubbishResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public ClassifyingRubbishResponseBodyData setSensitive(Boolean sensitive) {
-            this.sensitive = sensitive;
-            return this;
-        }
-        public Boolean getSensitive() {
-            return this.sensitive;
         }
 
         public ClassifyingRubbishResponseBodyData setElements(java.util.List<ClassifyingRubbishResponseBodyDataElements> elements) {
@@ -109,6 +101,14 @@ public class ClassifyingRubbishResponseBody extends TeaModel {
         }
         public java.util.List<ClassifyingRubbishResponseBodyDataElements> getElements() {
             return this.elements;
+        }
+
+        public ClassifyingRubbishResponseBodyData setSensitive(Boolean sensitive) {
+            this.sensitive = sensitive;
+            return this;
+        }
+        public Boolean getSensitive() {
+            return this.sensitive;
         }
 
     }

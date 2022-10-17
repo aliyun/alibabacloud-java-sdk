@@ -4,23 +4,15 @@ package com.aliyun.imagerecog20190930.models;
 import com.aliyun.tea.*;
 
 public class EvaluateCertificateQualityResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public EvaluateCertificateQualityResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static EvaluateCertificateQualityResponseBody build(java.util.Map<String, ?> map) throws Exception {
         EvaluateCertificateQualityResponseBody self = new EvaluateCertificateQualityResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public EvaluateCertificateQualityResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public EvaluateCertificateQualityResponseBody setData(EvaluateCertificateQualityResponseBodyData data) {
@@ -31,27 +23,27 @@ public class EvaluateCertificateQualityResponseBody extends TeaModel {
         return this.data;
     }
 
-    public static class EvaluateCertificateQualityResponseBodyDataElements extends TeaModel {
-        @NameInMap("Value")
-        public String value;
+    public EvaluateCertificateQualityResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class EvaluateCertificateQualityResponseBodyDataElements extends TeaModel {
         @NameInMap("Pass")
         public String pass;
 
         @NameInMap("Score")
         public String score;
 
+        @NameInMap("Value")
+        public String value;
+
         public static EvaluateCertificateQualityResponseBodyDataElements build(java.util.Map<String, ?> map) throws Exception {
             EvaluateCertificateQualityResponseBodyDataElements self = new EvaluateCertificateQualityResponseBodyDataElements();
             return TeaModel.build(map, self);
-        }
-
-        public EvaluateCertificateQualityResponseBodyDataElements setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
         }
 
         public EvaluateCertificateQualityResponseBodyDataElements setPass(String pass) {
@@ -68,6 +60,14 @@ public class EvaluateCertificateQualityResponseBody extends TeaModel {
         }
         public String getScore() {
             return this.score;
+        }
+
+        public EvaluateCertificateQualityResponseBodyDataElements setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

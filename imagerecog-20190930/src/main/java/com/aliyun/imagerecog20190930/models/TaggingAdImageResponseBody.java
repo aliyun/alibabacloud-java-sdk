@@ -4,24 +4,18 @@ package com.aliyun.imagerecog20190930.models;
 import com.aliyun.tea.*;
 
 public class TaggingAdImageResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public TaggingAdImageResponseBodyData data;
+
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static TaggingAdImageResponseBody build(java.util.Map<String, ?> map) throws Exception {
         TaggingAdImageResponseBody self = new TaggingAdImageResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public TaggingAdImageResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public TaggingAdImageResponseBody setData(TaggingAdImageResponseBodyData data) {
@@ -30,6 +24,22 @@ public class TaggingAdImageResponseBody extends TeaModel {
     }
     public TaggingAdImageResponseBodyData getData() {
         return this.data;
+    }
+
+    public TaggingAdImageResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public TaggingAdImageResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class TaggingAdImageResponseBodyData extends TeaModel {
