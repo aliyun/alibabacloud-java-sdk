@@ -4,8 +4,7 @@ package com.aliyun.threedvision20210131.models;
 import com.aliyun.tea.*;
 
 public class ReconstructBodyBySingleImageAdvanceRequest extends TeaModel {
-    @NameInMap("ImageURLObject")
-    @Validation(required = true)
+    @NameInMap("ImageURL")
     public java.io.InputStream imageURLObject;
 
     public static ReconstructBodyBySingleImageAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {

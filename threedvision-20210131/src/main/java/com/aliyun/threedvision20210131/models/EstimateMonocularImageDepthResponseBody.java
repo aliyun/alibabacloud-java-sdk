@@ -4,24 +4,15 @@ package com.aliyun.threedvision20210131.models;
 import com.aliyun.tea.*;
 
 public class EstimateMonocularImageDepthResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public EstimateMonocularImageDepthResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static EstimateMonocularImageDepthResponseBody build(java.util.Map<String, ?> map) throws Exception {
         EstimateMonocularImageDepthResponseBody self = new EstimateMonocularImageDepthResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public EstimateMonocularImageDepthResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public EstimateMonocularImageDepthResponseBody setData(EstimateMonocularImageDepthResponseBodyData data) {
@@ -30,6 +21,14 @@ public class EstimateMonocularImageDepthResponseBody extends TeaModel {
     }
     public EstimateMonocularImageDepthResponseBodyData getData() {
         return this.data;
+    }
+
+    public EstimateMonocularImageDepthResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class EstimateMonocularImageDepthResponseBodyData extends TeaModel {
