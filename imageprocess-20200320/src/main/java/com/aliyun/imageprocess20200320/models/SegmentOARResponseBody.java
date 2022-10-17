@@ -7,6 +7,9 @@ public class SegmentOARResponseBody extends TeaModel {
     @NameInMap("Data")
     public SegmentOARResponseBodyData data;
 
+    @NameInMap("Message")
+    public String message;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -21,6 +24,14 @@ public class SegmentOARResponseBody extends TeaModel {
     }
     public SegmentOARResponseBodyData getData() {
         return this.data;
+    }
+
+    public SegmentOARResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public SegmentOARResponseBody setRequestId(String requestId) {

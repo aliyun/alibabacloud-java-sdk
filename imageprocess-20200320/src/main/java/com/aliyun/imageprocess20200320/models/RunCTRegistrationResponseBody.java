@@ -7,6 +7,9 @@ public class RunCTRegistrationResponseBody extends TeaModel {
     @NameInMap("Data")
     public RunCTRegistrationResponseBodyData data;
 
+    @NameInMap("Message")
+    public String message;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -21,6 +24,14 @@ public class RunCTRegistrationResponseBody extends TeaModel {
     }
     public RunCTRegistrationResponseBodyData getData() {
         return this.data;
+    }
+
+    public RunCTRegistrationResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public RunCTRegistrationResponseBody setRequestId(String requestId) {

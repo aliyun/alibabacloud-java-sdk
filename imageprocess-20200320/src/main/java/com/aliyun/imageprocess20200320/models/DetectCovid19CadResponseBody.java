@@ -7,6 +7,9 @@ public class DetectCovid19CadResponseBody extends TeaModel {
     @NameInMap("Data")
     public DetectCovid19CadResponseBodyData data;
 
+    @NameInMap("Message")
+    public String message;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -21,6 +24,14 @@ public class DetectCovid19CadResponseBody extends TeaModel {
     }
     public DetectCovid19CadResponseBodyData getData() {
         return this.data;
+    }
+
+    public DetectCovid19CadResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public DetectCovid19CadResponseBody setRequestId(String requestId) {

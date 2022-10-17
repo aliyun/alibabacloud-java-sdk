@@ -7,6 +7,9 @@ public class AnalyzeChestVesselResponseBody extends TeaModel {
     @NameInMap("Data")
     public AnalyzeChestVesselResponseBodyData data;
 
+    @NameInMap("Message")
+    public String message;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -21,6 +24,14 @@ public class AnalyzeChestVesselResponseBody extends TeaModel {
     }
     public AnalyzeChestVesselResponseBodyData getData() {
         return this.data;
+    }
+
+    public AnalyzeChestVesselResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public AnalyzeChestVesselResponseBody setRequestId(String requestId) {
