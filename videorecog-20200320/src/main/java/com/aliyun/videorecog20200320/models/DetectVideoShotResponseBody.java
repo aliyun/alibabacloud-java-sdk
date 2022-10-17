@@ -7,6 +7,9 @@ public class DetectVideoShotResponseBody extends TeaModel {
     @NameInMap("Data")
     public DetectVideoShotResponseBodyData data;
 
+    @NameInMap("Message")
+    public String message;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -21,6 +24,14 @@ public class DetectVideoShotResponseBody extends TeaModel {
     }
     public DetectVideoShotResponseBodyData getData() {
         return this.data;
+    }
+
+    public DetectVideoShotResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public DetectVideoShotResponseBody setRequestId(String requestId) {

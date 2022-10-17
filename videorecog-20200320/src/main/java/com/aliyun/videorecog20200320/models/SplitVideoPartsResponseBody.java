@@ -7,6 +7,9 @@ public class SplitVideoPartsResponseBody extends TeaModel {
     @NameInMap("Data")
     public SplitVideoPartsResponseBodyData data;
 
+    @NameInMap("Message")
+    public String message;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -21,6 +24,14 @@ public class SplitVideoPartsResponseBody extends TeaModel {
     }
     public SplitVideoPartsResponseBodyData getData() {
         return this.data;
+    }
+
+    public SplitVideoPartsResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public SplitVideoPartsResponseBody setRequestId(String requestId) {

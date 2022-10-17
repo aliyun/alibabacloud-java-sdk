@@ -7,6 +7,9 @@ public class RecognizeVideoCastCrewListResponseBody extends TeaModel {
     @NameInMap("Data")
     public RecognizeVideoCastCrewListResponseBodyData data;
 
+    @NameInMap("Message")
+    public String message;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -21,6 +24,14 @@ public class RecognizeVideoCastCrewListResponseBody extends TeaModel {
     }
     public RecognizeVideoCastCrewListResponseBodyData getData() {
         return this.data;
+    }
+
+    public RecognizeVideoCastCrewListResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public RecognizeVideoCastCrewListResponseBody setRequestId(String requestId) {

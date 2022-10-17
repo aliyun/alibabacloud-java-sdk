@@ -7,6 +7,9 @@ public class UnderstandVideoContentResponseBody extends TeaModel {
     @NameInMap("Data")
     public UnderstandVideoContentResponseBodyData data;
 
+    @NameInMap("Message")
+    public String message;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -21,6 +24,14 @@ public class UnderstandVideoContentResponseBody extends TeaModel {
     }
     public UnderstandVideoContentResponseBodyData getData() {
         return this.data;
+    }
+
+    public UnderstandVideoContentResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public UnderstandVideoContentResponseBody setRequestId(String requestId) {
