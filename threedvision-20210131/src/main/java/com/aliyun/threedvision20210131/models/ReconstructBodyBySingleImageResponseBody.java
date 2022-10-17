@@ -4,24 +4,15 @@ package com.aliyun.threedvision20210131.models;
 import com.aliyun.tea.*;
 
 public class ReconstructBodyBySingleImageResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public ReconstructBodyBySingleImageResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ReconstructBodyBySingleImageResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ReconstructBodyBySingleImageResponseBody self = new ReconstructBodyBySingleImageResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ReconstructBodyBySingleImageResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ReconstructBodyBySingleImageResponseBody setData(ReconstructBodyBySingleImageResponseBodyData data) {
@@ -30,6 +21,14 @@ public class ReconstructBodyBySingleImageResponseBody extends TeaModel {
     }
     public ReconstructBodyBySingleImageResponseBodyData getData() {
         return this.data;
+    }
+
+    public ReconstructBodyBySingleImageResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class ReconstructBodyBySingleImageResponseBodyData extends TeaModel {

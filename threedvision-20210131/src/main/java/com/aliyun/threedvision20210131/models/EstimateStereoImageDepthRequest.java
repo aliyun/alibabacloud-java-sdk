@@ -4,7 +4,6 @@ package com.aliyun.threedvision20210131.models;
 import com.aliyun.tea.*;
 
 public class EstimateStereoImageDepthRequest extends TeaModel {
-    // A short description of struct
     @NameInMap("LeftImageURL")
     public String leftImageURL;
 

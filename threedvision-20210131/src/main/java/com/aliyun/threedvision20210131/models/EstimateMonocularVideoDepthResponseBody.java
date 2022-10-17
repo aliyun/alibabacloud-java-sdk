@@ -4,24 +4,18 @@ package com.aliyun.threedvision20210131.models;
 import com.aliyun.tea.*;
 
 public class EstimateMonocularVideoDepthResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public EstimateMonocularVideoDepthResponseBodyData data;
+
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static EstimateMonocularVideoDepthResponseBody build(java.util.Map<String, ?> map) throws Exception {
         EstimateMonocularVideoDepthResponseBody self = new EstimateMonocularVideoDepthResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public EstimateMonocularVideoDepthResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public EstimateMonocularVideoDepthResponseBody setData(EstimateMonocularVideoDepthResponseBodyData data) {
@@ -30,6 +24,22 @@ public class EstimateMonocularVideoDepthResponseBody extends TeaModel {
     }
     public EstimateMonocularVideoDepthResponseBodyData getData() {
         return this.data;
+    }
+
+    public EstimateMonocularVideoDepthResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public EstimateMonocularVideoDepthResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class EstimateMonocularVideoDepthResponseBodyData extends TeaModel {

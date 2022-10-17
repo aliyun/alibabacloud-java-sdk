@@ -4,7 +4,6 @@ package com.aliyun.threedvision20210131.models;
 import com.aliyun.tea.*;
 
 public class EstimateMonocularImageDepthRequest extends TeaModel {
-    // A short description of struct
     @NameInMap("ImageURL")
     public String imageURL;
 
