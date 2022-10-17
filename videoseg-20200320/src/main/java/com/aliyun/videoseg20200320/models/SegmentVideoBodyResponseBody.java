@@ -4,23 +4,18 @@ package com.aliyun.videoseg20200320.models;
 import com.aliyun.tea.*;
 
 public class SegmentVideoBodyResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public SegmentVideoBodyResponseBodyData data;
+
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static SegmentVideoBodyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SegmentVideoBodyResponseBody self = new SegmentVideoBodyResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public SegmentVideoBodyResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public SegmentVideoBodyResponseBody setData(SegmentVideoBodyResponseBodyData data) {
@@ -29,6 +24,22 @@ public class SegmentVideoBodyResponseBody extends TeaModel {
     }
     public SegmentVideoBodyResponseBodyData getData() {
         return this.data;
+    }
+
+    public SegmentVideoBodyResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public SegmentVideoBodyResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class SegmentVideoBodyResponseBodyData extends TeaModel {
