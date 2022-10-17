@@ -7,6 +7,9 @@ public class EraseVideoLogoResponseBody extends TeaModel {
     @NameInMap("Data")
     public EraseVideoLogoResponseBodyData data;
 
+    @NameInMap("Message")
+    public String message;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -21,6 +24,14 @@ public class EraseVideoLogoResponseBody extends TeaModel {
     }
     public EraseVideoLogoResponseBodyData getData() {
         return this.data;
+    }
+
+    public EraseVideoLogoResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public EraseVideoLogoResponseBody setRequestId(String requestId) {

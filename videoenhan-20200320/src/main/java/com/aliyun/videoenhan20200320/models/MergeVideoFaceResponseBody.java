@@ -7,6 +7,9 @@ public class MergeVideoFaceResponseBody extends TeaModel {
     @NameInMap("Data")
     public MergeVideoFaceResponseBodyData data;
 
+    @NameInMap("Message")
+    public String message;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -21,6 +24,14 @@ public class MergeVideoFaceResponseBody extends TeaModel {
     }
     public MergeVideoFaceResponseBodyData getData() {
         return this.data;
+    }
+
+    public MergeVideoFaceResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public MergeVideoFaceResponseBody setRequestId(String requestId) {

@@ -7,6 +7,9 @@ public class ConvertHdrVideoResponseBody extends TeaModel {
     @NameInMap("Data")
     public ConvertHdrVideoResponseBodyData data;
 
+    @NameInMap("Message")
+    public String message;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -21,6 +24,14 @@ public class ConvertHdrVideoResponseBody extends TeaModel {
     }
     public ConvertHdrVideoResponseBodyData getData() {
         return this.data;
+    }
+
+    public ConvertHdrVideoResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public ConvertHdrVideoResponseBody setRequestId(String requestId) {

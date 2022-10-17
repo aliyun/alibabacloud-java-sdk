@@ -7,6 +7,9 @@ public class InterpolateVideoFrameResponseBody extends TeaModel {
     @NameInMap("Data")
     public InterpolateVideoFrameResponseBodyData data;
 
+    @NameInMap("Message")
+    public String message;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -21,6 +24,14 @@ public class InterpolateVideoFrameResponseBody extends TeaModel {
     }
     public InterpolateVideoFrameResponseBodyData getData() {
         return this.data;
+    }
+
+    public InterpolateVideoFrameResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public InterpolateVideoFrameResponseBody setRequestId(String requestId) {

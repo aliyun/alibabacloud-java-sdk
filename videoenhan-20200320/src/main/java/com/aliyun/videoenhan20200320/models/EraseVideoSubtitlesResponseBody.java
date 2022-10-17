@@ -7,6 +7,9 @@ public class EraseVideoSubtitlesResponseBody extends TeaModel {
     @NameInMap("Data")
     public EraseVideoSubtitlesResponseBodyData data;
 
+    @NameInMap("Message")
+    public String message;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -21,6 +24,14 @@ public class EraseVideoSubtitlesResponseBody extends TeaModel {
     }
     public EraseVideoSubtitlesResponseBodyData getData() {
         return this.data;
+    }
+
+    public EraseVideoSubtitlesResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public EraseVideoSubtitlesResponseBody setRequestId(String requestId) {
