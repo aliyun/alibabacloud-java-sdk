@@ -54,11 +54,17 @@ public class ScanCodeBindResponseBody extends TeaModel {
     }
 
     public static class ScanCodeBindResponseBodyResult extends TeaModel {
-        @NameInMap("bizGroup")
+        @NameInMap("BizGroup")
         public String bizGroup;
 
-        @NameInMap("bizType")
+        @NameInMap("BizType")
         public String bizType;
+
+        @NameInMap("DeviceOpenId")
+        public String deviceOpenId;
+
+        @NameInMap("UserOpenId")
+        public String userOpenId;
 
         public static ScanCodeBindResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             ScanCodeBindResponseBodyResult self = new ScanCodeBindResponseBodyResult();
@@ -79,6 +85,22 @@ public class ScanCodeBindResponseBody extends TeaModel {
         }
         public String getBizType() {
             return this.bizType;
+        }
+
+        public ScanCodeBindResponseBodyResult setDeviceOpenId(String deviceOpenId) {
+            this.deviceOpenId = deviceOpenId;
+            return this;
+        }
+        public String getDeviceOpenId() {
+            return this.deviceOpenId;
+        }
+
+        public ScanCodeBindResponseBodyResult setUserOpenId(String userOpenId) {
+            this.userOpenId = userOpenId;
+            return this;
+        }
+        public String getUserOpenId() {
+            return this.userOpenId;
         }
 
     }
