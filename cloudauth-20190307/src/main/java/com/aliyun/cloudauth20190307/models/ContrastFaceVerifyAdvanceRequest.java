@@ -4,10 +4,6 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class ContrastFaceVerifyAdvanceRequest extends TeaModel {
-    @NameInMap("FaceContrastFileObject")
-    @Validation(required = true)
-    public java.io.InputStream faceContrastFileObject;
-
     @NameInMap("CertName")
     public String certName;
 
@@ -28,6 +24,9 @@ public class ContrastFaceVerifyAdvanceRequest extends TeaModel {
 
     @NameInMap("EncryptType")
     public String encryptType;
+
+    @NameInMap("FaceContrastFile")
+    public java.io.InputStream faceContrastFileObject;
 
     @NameInMap("FaceContrastPicture")
     public String faceContrastPicture;
@@ -65,14 +64,6 @@ public class ContrastFaceVerifyAdvanceRequest extends TeaModel {
     public static ContrastFaceVerifyAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         ContrastFaceVerifyAdvanceRequest self = new ContrastFaceVerifyAdvanceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ContrastFaceVerifyAdvanceRequest setFaceContrastFileObject(java.io.InputStream faceContrastFileObject) {
-        this.faceContrastFileObject = faceContrastFileObject;
-        return this;
-    }
-    public java.io.InputStream getFaceContrastFileObject() {
-        return this.faceContrastFileObject;
     }
 
     public ContrastFaceVerifyAdvanceRequest setCertName(String certName) {
@@ -129,6 +120,14 @@ public class ContrastFaceVerifyAdvanceRequest extends TeaModel {
     }
     public String getEncryptType() {
         return this.encryptType;
+    }
+
+    public ContrastFaceVerifyAdvanceRequest setFaceContrastFileObject(java.io.InputStream faceContrastFileObject) {
+        this.faceContrastFileObject = faceContrastFileObject;
+        return this;
+    }
+    public java.io.InputStream getFaceContrastFileObject() {
+        return this.faceContrastFileObject;
     }
 
     public ContrastFaceVerifyAdvanceRequest setFaceContrastPicture(String faceContrastPicture) {
