@@ -7,6 +7,9 @@ public class ScreenChestCTResponseBody extends TeaModel {
     @NameInMap("Data")
     public ScreenChestCTResponseBodyData data;
 
+    @NameInMap("Message")
+    public String message;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -21,6 +24,14 @@ public class ScreenChestCTResponseBody extends TeaModel {
     }
     public ScreenChestCTResponseBodyData getData() {
         return this.data;
+    }
+
+    public ScreenChestCTResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public ScreenChestCTResponseBody setRequestId(String requestId) {

@@ -7,6 +7,9 @@ public class CalcCACSResponseBody extends TeaModel {
     @NameInMap("Data")
     public CalcCACSResponseBodyData data;
 
+    @NameInMap("Message")
+    public String message;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -21,6 +24,14 @@ public class CalcCACSResponseBody extends TeaModel {
     }
     public CalcCACSResponseBodyData getData() {
         return this.data;
+    }
+
+    public CalcCACSResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public CalcCACSResponseBody setRequestId(String requestId) {

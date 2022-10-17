@@ -7,6 +7,9 @@ public class DetectRibFractureResponseBody extends TeaModel {
     @NameInMap("Data")
     public DetectRibFractureResponseBodyData data;
 
+    @NameInMap("Message")
+    public String message;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -21,6 +24,14 @@ public class DetectRibFractureResponseBody extends TeaModel {
     }
     public DetectRibFractureResponseBodyData getData() {
         return this.data;
+    }
+
+    public DetectRibFractureResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public DetectRibFractureResponseBody setRequestId(String requestId) {

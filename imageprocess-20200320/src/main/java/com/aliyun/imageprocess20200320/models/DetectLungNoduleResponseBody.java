@@ -7,6 +7,9 @@ public class DetectLungNoduleResponseBody extends TeaModel {
     @NameInMap("Data")
     public DetectLungNoduleResponseBodyData data;
 
+    @NameInMap("Message")
+    public String message;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -21,6 +24,14 @@ public class DetectLungNoduleResponseBody extends TeaModel {
     }
     public DetectLungNoduleResponseBodyData getData() {
         return this.data;
+    }
+
+    public DetectLungNoduleResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public DetectLungNoduleResponseBody setRequestId(String requestId) {
