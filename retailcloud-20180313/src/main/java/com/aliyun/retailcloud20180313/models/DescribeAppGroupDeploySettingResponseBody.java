@@ -4,7 +4,6 @@ package com.aliyun.retailcloud20180313.models;
 import com.aliyun.tea.*;
 
 public class DescribeAppGroupDeploySettingResponseBody extends TeaModel {
-    // CodeEnum
     @NameInMap("Code")
     public Integer code;
 
@@ -66,11 +65,9 @@ public class DescribeAppGroupDeploySettingResponseBody extends TeaModel {
     }
 
     public static class DescribeAppGroupDeploySettingResponseBodyResult extends TeaModel {
-        // 默认代码包描述
         @NameInMap("DefaultPacketComment")
         public String defaultPacketComment;
 
-        // 默认代码包id
         @NameInMap("DefaultPacketId")
         public Long defaultPacketId;
 

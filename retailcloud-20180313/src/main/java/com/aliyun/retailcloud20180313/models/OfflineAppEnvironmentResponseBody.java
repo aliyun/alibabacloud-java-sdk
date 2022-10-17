@@ -4,7 +4,6 @@ package com.aliyun.retailcloud20180313.models;
 import com.aliyun.tea.*;
 
 public class OfflineAppEnvironmentResponseBody extends TeaModel {
-    // CodeEnum
     @NameInMap("Code")
     public Integer code;
 

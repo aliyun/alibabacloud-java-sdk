@@ -4,27 +4,21 @@ package com.aliyun.retailcloud20180313.models;
 import com.aliyun.tea.*;
 
 public class CreateEciConfigRequest extends TeaModel {
-    // appEnvId
     @NameInMap("AppEnvId")
     public Long appEnvId;
 
-    // eipBandwidth
     @NameInMap("EipBandwidth")
     public Integer eipBandwidth;
 
-    // enableEciSchedulePolicy
     @NameInMap("EnableEciSchedulePolicy")
     public Boolean enableEciSchedulePolicy;
 
-    // mirrorCache
     @NameInMap("MirrorCache")
     public Boolean mirrorCache;
 
-    // normalInstanceLimit
     @NameInMap("NormalInstanceLimit")
     public Integer normalInstanceLimit;
 
-    // scheduleVirtualNode
     @NameInMap("ScheduleVirtualNode")
     public Boolean scheduleVirtualNode;
 

@@ -4,7 +4,6 @@ package com.aliyun.retailcloud20180313.models;
 import com.aliyun.tea.*;
 
 public class DescribeAppEnvDeployBaselineResponseBody extends TeaModel {
-    // CodeEnum
     @NameInMap("Code")
     public Integer code;
 
@@ -69,26 +68,21 @@ public class DescribeAppEnvDeployBaselineResponseBody extends TeaModel {
         @NameInMap("AppId")
         public Long appId;
 
-        // 创建时间
         @NameInMap("CreateTime")
         public String createTime;
 
         @NameInMap("EnvId")
         public Long envId;
 
-        // 代码包描述
         @NameInMap("PacketComment")
         public String packetComment;
 
-        // 代码包id
         @NameInMap("PacketId")
         public Long packetId;
 
-        // 指定代码包发布时，为代码包Url；纯镜像发布时，为镜像地址
         @NameInMap("PacketUrl")
         public String packetUrl;
 
-        // 部署配置schema_id
         @NameInMap("SchemaId")
         public Long schemaId;
 

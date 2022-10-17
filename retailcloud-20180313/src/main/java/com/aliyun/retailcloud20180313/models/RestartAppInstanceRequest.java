@@ -4,15 +4,12 @@ package com.aliyun.retailcloud20180313.models;
 import com.aliyun.tea.*;
 
 public class RestartAppInstanceRequest extends TeaModel {
-    // appId
     @NameInMap("AppId")
     public Long appId;
 
-    // appInstanceIdList
     @NameInMap("AppInstanceIdList")
     public java.util.List<Long> appInstanceIdList;
 
-    // envId
     @NameInMap("EnvId")
     public Long envId;
 

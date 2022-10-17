@@ -25,6 +25,9 @@ public class CreatePersistentVolumeRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("NasType")
+    public String nasType;
+
     @NameInMap("ReclaimPolicy")
     public String reclaimPolicy;
 
@@ -90,6 +93,14 @@ public class CreatePersistentVolumeRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public CreatePersistentVolumeRequest setNasType(String nasType) {
+        this.nasType = nasType;
+        return this;
+    }
+    public String getNasType() {
+        return this.nasType;
     }
 
     public CreatePersistentVolumeRequest setReclaimPolicy(String reclaimPolicy) {

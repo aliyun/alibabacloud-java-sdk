@@ -4,7 +4,6 @@ package com.aliyun.retailcloud20180313.models;
 import com.aliyun.tea.*;
 
 public class DescribeEciConfigRequest extends TeaModel {
-    // appEnvId
     @NameInMap("AppEnvId")
     public Long appEnvId;
 

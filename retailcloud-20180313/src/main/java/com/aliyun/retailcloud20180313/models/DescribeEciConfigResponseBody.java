@@ -4,19 +4,15 @@ package com.aliyun.retailcloud20180313.models;
 import com.aliyun.tea.*;
 
 public class DescribeEciConfigResponseBody extends TeaModel {
-    // code
     @NameInMap("Code")
     public Integer code;
 
-    // errMsg
     @NameInMap("ErrMsg")
     public String errMsg;
 
-    // requestId
     @NameInMap("RequestId")
     public String requestId;
 
-    // result
     @NameInMap("Result")
     public DescribeEciConfigResponseBodyResult result;
 
@@ -58,27 +54,21 @@ public class DescribeEciConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeEciConfigResponseBodyResult extends TeaModel {
-        // appEnvId
         @NameInMap("AppEnvId")
         public Long appEnvId;
 
-        // eipBandwidth
         @NameInMap("EipBandwidth")
         public Integer eipBandwidth;
 
-        // enableEciSchedulePolicy
         @NameInMap("EnableEciSchedulePolicy")
         public Boolean enableEciSchedulePolicy;
 
-        // mirrorCache
         @NameInMap("MirrorCache")
         public Boolean mirrorCache;
 
-        // normalInstanceLimit
         @NameInMap("NormalInstanceLimit")
         public Integer normalInstanceLimit;
 
-        // scheduleVirtualNode
         @NameInMap("ScheduleVirtualNode")
         public Boolean scheduleVirtualNode;
 
