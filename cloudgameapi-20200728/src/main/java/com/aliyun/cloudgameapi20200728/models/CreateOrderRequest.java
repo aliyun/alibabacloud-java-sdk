@@ -8,24 +8,31 @@ public class CreateOrderRequest extends TeaModel {
     public String accountDomain;
 
     @NameInMap("Amount")
+    @Validation(required = true)
     public Long amount;
 
     @NameInMap("BuyerAccountId")
+    @Validation(required = true)
     public String buyerAccountId;
 
     @NameInMap("IdempotentCode")
+    @Validation(required = true)
     public String idempotentCode;
 
     @NameInMap("ItemId")
+    @Validation(required = true)
     public String itemId;
 
     @NameInMap("OriginPrice")
+    @Validation(required = true)
     public Long originPrice;
 
     @NameInMap("SettlementPrice")
+    @Validation(required = true)
     public Long settlementPrice;
 
     @NameInMap("SkuId")
+    @Validation(required = true)
     public String skuId;
 
     public static CreateOrderRequest build(java.util.Map<String, ?> map) throws Exception {

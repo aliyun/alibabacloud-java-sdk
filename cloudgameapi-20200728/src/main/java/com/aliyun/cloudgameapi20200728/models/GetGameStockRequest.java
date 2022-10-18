@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetGameStockRequest extends TeaModel {
     @NameInMap("AccessKey")
+    @Validation(required = true)
     public String accessKey;
 
     @NameInMap("GameId")

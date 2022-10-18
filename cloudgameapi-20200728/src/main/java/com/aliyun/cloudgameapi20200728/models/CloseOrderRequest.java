@@ -8,9 +8,11 @@ public class CloseOrderRequest extends TeaModel {
     public String accountDomain;
 
     @NameInMap("BuyerAccountId")
+    @Validation(required = true)
     public String buyerAccountId;
 
     @NameInMap("OrderId")
+    @Validation(required = true)
     public String orderId;
 
     public static CloseOrderRequest build(java.util.Map<String, ?> map) throws Exception {

@@ -11,6 +11,7 @@ public class CreateTokenRequest extends TeaModel {
     public String currentToken;
 
     @NameInMap("Session")
+    @Validation(required = true)
     public String session;
 
     public static CreateTokenRequest build(java.util.Map<String, ?> map) throws Exception {

@@ -4,45 +4,101 @@ package com.aliyun.cloudgameapi20200728.models;
 import com.aliyun.tea.*;
 
 public class GetOutAccountBindDetailResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("statusCode")
+    @NameInMap("Data")
     @Validation(required = true)
-    public Integer statusCode;
-
-    @NameInMap("body")
-    @Validation(required = true)
-    public GetOutAccountBindDetailResponseBody body;
+    public GetOutAccountBindDetailResponseData data;
 
     public static GetOutAccountBindDetailResponse build(java.util.Map<String, ?> map) throws Exception {
         GetOutAccountBindDetailResponse self = new GetOutAccountBindDetailResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetOutAccountBindDetailResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public GetOutAccountBindDetailResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public GetOutAccountBindDetailResponse setStatusCode(Integer statusCode) {
-        this.statusCode = statusCode;
+    public GetOutAccountBindDetailResponse setData(GetOutAccountBindDetailResponseData data) {
+        this.data = data;
         return this;
     }
-    public Integer getStatusCode() {
-        return this.statusCode;
+    public GetOutAccountBindDetailResponseData getData() {
+        return this.data;
     }
 
-    public GetOutAccountBindDetailResponse setBody(GetOutAccountBindDetailResponseBody body) {
-        this.body = body;
-        return this;
-    }
-    public GetOutAccountBindDetailResponseBody getBody() {
-        return this.body;
+    public static class GetOutAccountBindDetailResponseData extends TeaModel {
+        @NameInMap("BindStatus")
+        @Validation(required = true)
+        public Integer bindStatus;
+
+        @NameInMap("OutAccountId")
+        @Validation(required = true)
+        public String outAccountId;
+
+        @NameInMap("OutAccountType")
+        @Validation(required = true)
+        public String outAccountType;
+
+        @NameInMap("Token")
+        @Validation(required = true)
+        public String token;
+
+        @NameInMap("TokenExpireTime")
+        @Validation(required = true)
+        public Long tokenExpireTime;
+
+        public static GetOutAccountBindDetailResponseData build(java.util.Map<String, ?> map) throws Exception {
+            GetOutAccountBindDetailResponseData self = new GetOutAccountBindDetailResponseData();
+            return TeaModel.build(map, self);
+        }
+
+        public GetOutAccountBindDetailResponseData setBindStatus(Integer bindStatus) {
+            this.bindStatus = bindStatus;
+            return this;
+        }
+        public Integer getBindStatus() {
+            return this.bindStatus;
+        }
+
+        public GetOutAccountBindDetailResponseData setOutAccountId(String outAccountId) {
+            this.outAccountId = outAccountId;
+            return this;
+        }
+        public String getOutAccountId() {
+            return this.outAccountId;
+        }
+
+        public GetOutAccountBindDetailResponseData setOutAccountType(String outAccountType) {
+            this.outAccountType = outAccountType;
+            return this;
+        }
+        public String getOutAccountType() {
+            return this.outAccountType;
+        }
+
+        public GetOutAccountBindDetailResponseData setToken(String token) {
+            this.token = token;
+            return this;
+        }
+        public String getToken() {
+            return this.token;
+        }
+
+        public GetOutAccountBindDetailResponseData setTokenExpireTime(Long tokenExpireTime) {
+            this.tokenExpireTime = tokenExpireTime;
+            return this;
+        }
+        public Long getTokenExpireTime() {
+            return this.tokenExpireTime;
+        }
+
     }
 
 }

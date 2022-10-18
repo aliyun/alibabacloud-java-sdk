@@ -5,18 +5,23 @@ import com.aliyun.tea.*;
 
 public class SubmitDeploymentRequest extends TeaModel {
     @NameInMap("CloudGameInstanceIds")
+    @Validation(required = true)
     public String cloudGameInstanceIds;
 
     @NameInMap("GameId")
+    @Validation(required = true)
     public String gameId;
 
     @NameInMap("OperationType")
+    @Validation(required = true)
     public String operationType;
 
     @NameInMap("ProjectId")
+    @Validation(required = true)
     public String projectId;
 
     @NameInMap("VersionId")
+    @Validation(required = true)
     public String versionId;
 
     public static SubmitDeploymentRequest build(java.util.Map<String, ?> map) throws Exception {

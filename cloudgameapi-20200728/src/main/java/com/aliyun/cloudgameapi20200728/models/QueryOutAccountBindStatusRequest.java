@@ -8,9 +8,11 @@ public class QueryOutAccountBindStatusRequest extends TeaModel {
     public String accountDomain;
 
     @NameInMap("AccountId")
+    @Validation(required = true)
     public String accountId;
 
     @NameInMap("GameId")
+    @Validation(required = true)
     public String gameId;
 
     public static QueryOutAccountBindStatusRequest build(java.util.Map<String, ?> map) throws Exception {

@@ -11,6 +11,7 @@ public class AdaptGameVersionRequest extends TeaModel {
     public String resolution;
 
     @NameInMap("VersionId")
+    @Validation(required = true)
     public String versionId;
 
     public static AdaptGameVersionRequest build(java.util.Map<String, ?> map) throws Exception {

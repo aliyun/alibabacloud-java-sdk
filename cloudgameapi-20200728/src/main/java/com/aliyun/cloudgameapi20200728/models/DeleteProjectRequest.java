@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteProjectRequest extends TeaModel {
     @NameInMap("ProjectId")
+    @Validation(required = true)
     public String projectId;
 
     public static DeleteProjectRequest build(java.util.Map<String, ?> map) throws Exception {

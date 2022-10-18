@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetGameVersionProgressRequest extends TeaModel {
     @NameInMap("TaskId")
+    @Validation(required = true)
     public String taskId;
 
     public static GetGameVersionProgressRequest build(java.util.Map<String, ?> map) throws Exception {

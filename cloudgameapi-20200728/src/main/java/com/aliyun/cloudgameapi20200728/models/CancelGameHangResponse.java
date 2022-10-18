@@ -4,45 +4,69 @@ package com.aliyun.cloudgameapi20200728.models;
 import com.aliyun.tea.*;
 
 public class CancelGameHangResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("Code")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String code;
 
-    @NameInMap("statusCode")
+    @NameInMap("GameSession")
     @Validation(required = true)
-    public Integer statusCode;
+    public String gameSession;
 
-    @NameInMap("body")
+    @NameInMap("Message")
     @Validation(required = true)
-    public CancelGameHangResponseBody body;
+    public String message;
+
+    @NameInMap("RequestId")
+    @Validation(required = true)
+    public String requestId;
+
+    @NameInMap("Success")
+    @Validation(required = true)
+    public Boolean success;
 
     public static CancelGameHangResponse build(java.util.Map<String, ?> map) throws Exception {
         CancelGameHangResponse self = new CancelGameHangResponse();
         return TeaModel.build(map, self);
     }
 
-    public CancelGameHangResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public CancelGameHangResponse setCode(String code) {
+        this.code = code;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getCode() {
+        return this.code;
     }
 
-    public CancelGameHangResponse setStatusCode(Integer statusCode) {
-        this.statusCode = statusCode;
+    public CancelGameHangResponse setGameSession(String gameSession) {
+        this.gameSession = gameSession;
         return this;
     }
-    public Integer getStatusCode() {
-        return this.statusCode;
+    public String getGameSession() {
+        return this.gameSession;
     }
 
-    public CancelGameHangResponse setBody(CancelGameHangResponseBody body) {
-        this.body = body;
+    public CancelGameHangResponse setMessage(String message) {
+        this.message = message;
         return this;
     }
-    public CancelGameHangResponseBody getBody() {
-        return this.body;
+    public String getMessage() {
+        return this.message;
+    }
+
+    public CancelGameHangResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CancelGameHangResponse setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
 }

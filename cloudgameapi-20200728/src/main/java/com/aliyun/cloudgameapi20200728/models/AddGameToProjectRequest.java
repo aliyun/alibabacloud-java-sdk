@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class AddGameToProjectRequest extends TeaModel {
     @NameInMap("GameId")
+    @Validation(required = true)
     public String gameId;
 
     @NameInMap("ProjectId")
+    @Validation(required = true)
     public String projectId;
 
     public static AddGameToProjectRequest build(java.util.Map<String, ?> map) throws Exception {

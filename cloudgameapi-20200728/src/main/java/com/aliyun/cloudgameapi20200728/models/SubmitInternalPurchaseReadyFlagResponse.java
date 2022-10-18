@@ -4,45 +4,77 @@ package com.aliyun.cloudgameapi20200728.models;
 import com.aliyun.tea.*;
 
 public class SubmitInternalPurchaseReadyFlagResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("statusCode")
+    @NameInMap("Data")
     @Validation(required = true)
-    public Integer statusCode;
-
-    @NameInMap("body")
-    @Validation(required = true)
-    public SubmitInternalPurchaseReadyFlagResponseBody body;
+    public SubmitInternalPurchaseReadyFlagResponseData data;
 
     public static SubmitInternalPurchaseReadyFlagResponse build(java.util.Map<String, ?> map) throws Exception {
         SubmitInternalPurchaseReadyFlagResponse self = new SubmitInternalPurchaseReadyFlagResponse();
         return TeaModel.build(map, self);
     }
 
-    public SubmitInternalPurchaseReadyFlagResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public SubmitInternalPurchaseReadyFlagResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public SubmitInternalPurchaseReadyFlagResponse setStatusCode(Integer statusCode) {
-        this.statusCode = statusCode;
+    public SubmitInternalPurchaseReadyFlagResponse setData(SubmitInternalPurchaseReadyFlagResponseData data) {
+        this.data = data;
         return this;
     }
-    public Integer getStatusCode() {
-        return this.statusCode;
+    public SubmitInternalPurchaseReadyFlagResponseData getData() {
+        return this.data;
     }
 
-    public SubmitInternalPurchaseReadyFlagResponse setBody(SubmitInternalPurchaseReadyFlagResponseBody body) {
-        this.body = body;
-        return this;
-    }
-    public SubmitInternalPurchaseReadyFlagResponseBody getBody() {
-        return this.body;
+    public static class SubmitInternalPurchaseReadyFlagResponseData extends TeaModel {
+        @NameInMap("Message")
+        @Validation(required = true)
+        public String message;
+
+        @NameInMap("MissingBatchNumbers")
+        @Validation(required = true)
+        public String missingBatchNumbers;
+
+        @NameInMap("Status")
+        @Validation(required = true)
+        public Integer status;
+
+        public static SubmitInternalPurchaseReadyFlagResponseData build(java.util.Map<String, ?> map) throws Exception {
+            SubmitInternalPurchaseReadyFlagResponseData self = new SubmitInternalPurchaseReadyFlagResponseData();
+            return TeaModel.build(map, self);
+        }
+
+        public SubmitInternalPurchaseReadyFlagResponseData setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
+        }
+
+        public SubmitInternalPurchaseReadyFlagResponseData setMissingBatchNumbers(String missingBatchNumbers) {
+            this.missingBatchNumbers = missingBatchNumbers;
+            return this;
+        }
+        public String getMissingBatchNumbers() {
+            return this.missingBatchNumbers;
+        }
+
+        public SubmitInternalPurchaseReadyFlagResponseData setStatus(Integer status) {
+            this.status = status;
+            return this;
+        }
+        public Integer getStatus() {
+            return this.status;
+        }
+
     }
 
 }

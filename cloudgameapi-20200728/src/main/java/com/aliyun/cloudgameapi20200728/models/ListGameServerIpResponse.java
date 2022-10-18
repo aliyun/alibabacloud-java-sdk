@@ -4,45 +4,69 @@ package com.aliyun.cloudgameapi20200728.models;
 import com.aliyun.tea.*;
 
 public class ListGameServerIpResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("PageNumber")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public Integer pageNumber;
 
-    @NameInMap("statusCode")
+    @NameInMap("PageSize")
     @Validation(required = true)
-    public Integer statusCode;
+    public Integer pageSize;
 
-    @NameInMap("body")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public ListGameServerIpResponseBody body;
+    public String requestId;
+
+    @NameInMap("TotalCount")
+    @Validation(required = true)
+    public Long totalCount;
+
+    @NameInMap("Items")
+    @Validation(required = true)
+    public java.util.List<String> items;
 
     public static ListGameServerIpResponse build(java.util.Map<String, ?> map) throws Exception {
         ListGameServerIpResponse self = new ListGameServerIpResponse();
         return TeaModel.build(map, self);
     }
 
-    public ListGameServerIpResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public ListGameServerIpResponse setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
-    public ListGameServerIpResponse setStatusCode(Integer statusCode) {
-        this.statusCode = statusCode;
+    public ListGameServerIpResponse setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
-    public Integer getStatusCode() {
-        return this.statusCode;
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
-    public ListGameServerIpResponse setBody(ListGameServerIpResponseBody body) {
-        this.body = body;
+    public ListGameServerIpResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public ListGameServerIpResponseBody getBody() {
-        return this.body;
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ListGameServerIpResponse setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
+    }
+
+    public ListGameServerIpResponse setItems(java.util.List<String> items) {
+        this.items = items;
+        return this;
+    }
+    public java.util.List<String> getItems() {
+        return this.items;
     }
 
 }

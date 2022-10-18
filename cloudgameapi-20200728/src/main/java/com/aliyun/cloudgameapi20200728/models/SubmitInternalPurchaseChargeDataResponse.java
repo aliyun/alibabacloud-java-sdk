@@ -4,45 +4,65 @@ package com.aliyun.cloudgameapi20200728.models;
 import com.aliyun.tea.*;
 
 public class SubmitInternalPurchaseChargeDataResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("statusCode")
+    @NameInMap("Data")
     @Validation(required = true)
-    public Integer statusCode;
-
-    @NameInMap("body")
-    @Validation(required = true)
-    public SubmitInternalPurchaseChargeDataResponseBody body;
+    public SubmitInternalPurchaseChargeDataResponseData data;
 
     public static SubmitInternalPurchaseChargeDataResponse build(java.util.Map<String, ?> map) throws Exception {
         SubmitInternalPurchaseChargeDataResponse self = new SubmitInternalPurchaseChargeDataResponse();
         return TeaModel.build(map, self);
     }
 
-    public SubmitInternalPurchaseChargeDataResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public SubmitInternalPurchaseChargeDataResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public SubmitInternalPurchaseChargeDataResponse setStatusCode(Integer statusCode) {
-        this.statusCode = statusCode;
+    public SubmitInternalPurchaseChargeDataResponse setData(SubmitInternalPurchaseChargeDataResponseData data) {
+        this.data = data;
         return this;
     }
-    public Integer getStatusCode() {
-        return this.statusCode;
+    public SubmitInternalPurchaseChargeDataResponseData getData() {
+        return this.data;
     }
 
-    public SubmitInternalPurchaseChargeDataResponse setBody(SubmitInternalPurchaseChargeDataResponseBody body) {
-        this.body = body;
-        return this;
-    }
-    public SubmitInternalPurchaseChargeDataResponseBody getBody() {
-        return this.body;
+    public static class SubmitInternalPurchaseChargeDataResponseData extends TeaModel {
+        @NameInMap("Message")
+        @Validation(required = true)
+        public String message;
+
+        @NameInMap("Status")
+        @Validation(required = true)
+        public Integer status;
+
+        public static SubmitInternalPurchaseChargeDataResponseData build(java.util.Map<String, ?> map) throws Exception {
+            SubmitInternalPurchaseChargeDataResponseData self = new SubmitInternalPurchaseChargeDataResponseData();
+            return TeaModel.build(map, self);
+        }
+
+        public SubmitInternalPurchaseChargeDataResponseData setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
+        }
+
+        public SubmitInternalPurchaseChargeDataResponseData setStatus(Integer status) {
+            this.status = status;
+            return this;
+        }
+        public Integer getStatus() {
+            return this.status;
+        }
+
     }
 
 }

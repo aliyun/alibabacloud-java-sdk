@@ -5,57 +5,75 @@ import com.aliyun.tea.*;
 
 public class SubmitInternalPurchaseChargeDataRequest extends TeaModel {
     @NameInMap("ActiveUserRetentionRateOneDay")
+    @Validation(required = true)
     public Float activeUserRetentionRateOneDay;
 
     @NameInMap("ActiveUserRetentionRateSevenDay")
+    @Validation(required = true)
     public Float activeUserRetentionRateSevenDay;
 
     @NameInMap("ActiveUserRetentionRateThirtyDay")
+    @Validation(required = true)
     public Float activeUserRetentionRateThirtyDay;
 
     @NameInMap("Arpu")
+    @Validation(required = true)
     public Float arpu;
 
     @NameInMap("ChargeDate")
+    @Validation(required = true)
     public String chargeDate;
 
     @NameInMap("Dau")
+    @Validation(required = true)
     public Long dau;
 
     @NameInMap("GameId")
+    @Validation(required = true)
     public String gameId;
 
     @NameInMap("Mau")
+    @Validation(required = true)
     public Long mau;
 
     @NameInMap("NewUserRetentionRateOneDay")
+    @Validation(required = true)
     public Float newUserRetentionRateOneDay;
 
     @NameInMap("NewUserRetentionRateSevenDay")
+    @Validation(required = true)
     public Float newUserRetentionRateSevenDay;
 
     @NameInMap("NewUserRetentionRateThirtyDay")
+    @Validation(required = true)
     public Float newUserRetentionRateThirtyDay;
 
     @NameInMap("PaymentConversionRate")
+    @Validation(required = true)
     public Float paymentConversionRate;
 
     @NameInMap("PlayTimeAverageOneDay")
+    @Validation(required = true)
     public Float playTimeAverageOneDay;
 
     @NameInMap("PlayTimeAverageThirtyDay")
+    @Validation(required = true)
     public Float playTimeAverageThirtyDay;
 
     @NameInMap("PlayTimeNinetyPointsOneDay")
+    @Validation(required = true)
     public Float playTimeNinetyPointsOneDay;
 
     @NameInMap("PlayTimeNinetyPointsThirtyDay")
+    @Validation(required = true)
     public Float playTimeNinetyPointsThirtyDay;
 
     @NameInMap("PlayTimeRangeOneDay")
+    @Validation(required = true)
     public String playTimeRangeOneDay;
 
     @NameInMap("PlayTimeRangeThirtyDay")
+    @Validation(required = true)
     public String playTimeRangeThirtyDay;
 
     @NameInMap("UserActivationRate")

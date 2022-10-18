@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class RemoveGameFromProjectRequest extends TeaModel {
     @NameInMap("GameId")
+    @Validation(required = true)
     public String gameId;
 
     @NameInMap("ProjectId")
+    @Validation(required = true)
     public String projectId;
 
     public static RemoveGameFromProjectRequest build(java.util.Map<String, ?> map) throws Exception {

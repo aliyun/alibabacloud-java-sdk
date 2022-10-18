@@ -4,45 +4,45 @@ package com.aliyun.cloudgameapi20200728.models;
 import com.aliyun.tea.*;
 
 public class GetQueuingSizeResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("Message")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String message;
 
-    @NameInMap("statusCode")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public Integer statusCode;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Size")
     @Validation(required = true)
-    public GetQueuingSizeResponseBody body;
+    public Long size;
 
     public static GetQueuingSizeResponse build(java.util.Map<String, ?> map) throws Exception {
         GetQueuingSizeResponse self = new GetQueuingSizeResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetQueuingSizeResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public GetQueuingSizeResponse setMessage(String message) {
+        this.message = message;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getMessage() {
+        return this.message;
     }
 
-    public GetQueuingSizeResponse setStatusCode(Integer statusCode) {
-        this.statusCode = statusCode;
+    public GetQueuingSizeResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Integer getStatusCode() {
-        return this.statusCode;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public GetQueuingSizeResponse setBody(GetQueuingSizeResponseBody body) {
-        this.body = body;
+    public GetQueuingSizeResponse setSize(Long size) {
+        this.size = size;
         return this;
     }
-    public GetQueuingSizeResponseBody getBody() {
-        return this.body;
+    public Long getSize() {
+        return this.size;
     }
 
 }

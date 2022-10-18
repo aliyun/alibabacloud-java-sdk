@@ -11,9 +11,11 @@ public class ListDeployableInstancesRequest extends TeaModel {
     public Long pageSize;
 
     @NameInMap("ProjectId")
+    @Validation(required = true)
     public String projectId;
 
     @NameInMap("VersionId")
+    @Validation(required = true)
     public String versionId;
 
     public static ListDeployableInstancesRequest build(java.util.Map<String, ?> map) throws Exception {

@@ -4,45 +4,65 @@ package com.aliyun.cloudgameapi20200728.models;
 import com.aliyun.tea.*;
 
 public class SubmitInternalPurchaseOrdersResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("statusCode")
+    @NameInMap("Data")
     @Validation(required = true)
-    public Integer statusCode;
-
-    @NameInMap("body")
-    @Validation(required = true)
-    public SubmitInternalPurchaseOrdersResponseBody body;
+    public SubmitInternalPurchaseOrdersResponseData data;
 
     public static SubmitInternalPurchaseOrdersResponse build(java.util.Map<String, ?> map) throws Exception {
         SubmitInternalPurchaseOrdersResponse self = new SubmitInternalPurchaseOrdersResponse();
         return TeaModel.build(map, self);
     }
 
-    public SubmitInternalPurchaseOrdersResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public SubmitInternalPurchaseOrdersResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public SubmitInternalPurchaseOrdersResponse setStatusCode(Integer statusCode) {
-        this.statusCode = statusCode;
+    public SubmitInternalPurchaseOrdersResponse setData(SubmitInternalPurchaseOrdersResponseData data) {
+        this.data = data;
         return this;
     }
-    public Integer getStatusCode() {
-        return this.statusCode;
+    public SubmitInternalPurchaseOrdersResponseData getData() {
+        return this.data;
     }
 
-    public SubmitInternalPurchaseOrdersResponse setBody(SubmitInternalPurchaseOrdersResponseBody body) {
-        this.body = body;
-        return this;
-    }
-    public SubmitInternalPurchaseOrdersResponseBody getBody() {
-        return this.body;
+    public static class SubmitInternalPurchaseOrdersResponseData extends TeaModel {
+        @NameInMap("Message")
+        @Validation(required = true)
+        public String message;
+
+        @NameInMap("Status")
+        @Validation(required = true)
+        public Integer status;
+
+        public static SubmitInternalPurchaseOrdersResponseData build(java.util.Map<String, ?> map) throws Exception {
+            SubmitInternalPurchaseOrdersResponseData self = new SubmitInternalPurchaseOrdersResponseData();
+            return TeaModel.build(map, self);
+        }
+
+        public SubmitInternalPurchaseOrdersResponseData setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
+        }
+
+        public SubmitInternalPurchaseOrdersResponseData setStatus(Integer status) {
+            this.status = status;
+            return this;
+        }
+        public Integer getStatus() {
+            return this.status;
+        }
+
     }
 
 }

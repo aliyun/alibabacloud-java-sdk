@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class StopGameLiveRequest extends TeaModel {
     @NameInMap("GameSession")
+    @Validation(required = true)
     public String gameSession;
 
     public static StopGameLiveRequest build(java.util.Map<String, ?> map) throws Exception {

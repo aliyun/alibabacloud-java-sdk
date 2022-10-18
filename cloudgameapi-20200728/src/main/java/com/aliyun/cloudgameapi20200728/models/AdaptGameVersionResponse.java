@@ -4,45 +4,33 @@ package com.aliyun.cloudgameapi20200728.models;
 import com.aliyun.tea.*;
 
 public class AdaptGameVersionResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("statusCode")
+    @NameInMap("TaskId")
     @Validation(required = true)
-    public Integer statusCode;
-
-    @NameInMap("body")
-    @Validation(required = true)
-    public AdaptGameVersionResponseBody body;
+    public String taskId;
 
     public static AdaptGameVersionResponse build(java.util.Map<String, ?> map) throws Exception {
         AdaptGameVersionResponse self = new AdaptGameVersionResponse();
         return TeaModel.build(map, self);
     }
 
-    public AdaptGameVersionResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public AdaptGameVersionResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public AdaptGameVersionResponse setStatusCode(Integer statusCode) {
-        this.statusCode = statusCode;
+    public AdaptGameVersionResponse setTaskId(String taskId) {
+        this.taskId = taskId;
         return this;
     }
-    public Integer getStatusCode() {
-        return this.statusCode;
-    }
-
-    public AdaptGameVersionResponse setBody(AdaptGameVersionResponseBody body) {
-        this.body = body;
-        return this;
-    }
-    public AdaptGameVersionResponseBody getBody() {
-        return this.body;
+    public String getTaskId() {
+        return this.taskId;
     }
 
 }

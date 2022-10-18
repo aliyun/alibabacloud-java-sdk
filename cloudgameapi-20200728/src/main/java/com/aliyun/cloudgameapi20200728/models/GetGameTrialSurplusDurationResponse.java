@@ -4,45 +4,45 @@ package com.aliyun.cloudgameapi20200728.models;
 import com.aliyun.tea.*;
 
 public class GetGameTrialSurplusDurationResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("statusCode")
+    @NameInMap("Status")
     @Validation(required = true)
-    public Integer statusCode;
+    public Float status;
 
-    @NameInMap("body")
+    @NameInMap("SurplusDuration")
     @Validation(required = true)
-    public GetGameTrialSurplusDurationResponseBody body;
+    public Double surplusDuration;
 
     public static GetGameTrialSurplusDurationResponse build(java.util.Map<String, ?> map) throws Exception {
         GetGameTrialSurplusDurationResponse self = new GetGameTrialSurplusDurationResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetGameTrialSurplusDurationResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public GetGameTrialSurplusDurationResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public GetGameTrialSurplusDurationResponse setStatusCode(Integer statusCode) {
-        this.statusCode = statusCode;
+    public GetGameTrialSurplusDurationResponse setStatus(Float status) {
+        this.status = status;
         return this;
     }
-    public Integer getStatusCode() {
-        return this.statusCode;
+    public Float getStatus() {
+        return this.status;
     }
 
-    public GetGameTrialSurplusDurationResponse setBody(GetGameTrialSurplusDurationResponseBody body) {
-        this.body = body;
+    public GetGameTrialSurplusDurationResponse setSurplusDuration(Double surplusDuration) {
+        this.surplusDuration = surplusDuration;
         return this;
     }
-    public GetGameTrialSurplusDurationResponseBody getBody() {
-        return this.body;
+    public Double getSurplusDuration() {
+        return this.surplusDuration;
     }
 
 }
