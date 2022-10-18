@@ -95,6 +95,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("dataSetIds", request.dataSetIds);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.morseInfoList)) {
+            body.put("morseInfoList", request.morseInfoList);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             body.put("name", request.name);
         }
