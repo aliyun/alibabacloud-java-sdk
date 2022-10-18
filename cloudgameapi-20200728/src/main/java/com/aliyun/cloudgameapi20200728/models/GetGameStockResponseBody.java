@@ -93,6 +93,9 @@ public class GetGameStockResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
+        @NameInMap("InstanceType")
+        public String instanceType;
+
         @NameInMap("QuotaSlots")
         public Long quotaSlots;
 
@@ -124,6 +127,14 @@ public class GetGameStockResponseBody extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public GetGameStockResponseBodyInstanceStockList setInstanceType(String instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public String getInstanceType() {
+            return this.instanceType;
         }
 
         public GetGameStockResponseBodyInstanceStockList setQuotaSlots(Long quotaSlots) {
