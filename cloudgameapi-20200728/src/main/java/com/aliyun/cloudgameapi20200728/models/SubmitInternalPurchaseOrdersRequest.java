@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitInternalPurchaseOrdersRequest extends TeaModel {
     @NameInMap("OrderList")
+    @Validation(required = true)
     public java.util.List<SubmitInternalPurchaseOrdersRequestOrderList> orderList;
 
     public static SubmitInternalPurchaseOrdersRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -22,24 +23,31 @@ public class SubmitInternalPurchaseOrdersRequest extends TeaModel {
 
     public static class SubmitInternalPurchaseOrdersRequestOrderList extends TeaModel {
         @NameInMap("BatchNumber")
+        @Validation(required = true)
         public String batchNumber;
 
         @NameInMap("FinalPrice")
+        @Validation(required = true)
         public Long finalPrice;
 
         @NameInMap("FinishTime")
+        @Validation(required = true)
         public Long finishTime;
 
         @NameInMap("GameId")
+        @Validation(required = true)
         public String gameId;
 
         @NameInMap("OrderId")
+        @Validation(required = true)
         public String orderId;
 
         @NameInMap("RoleId")
+        @Validation(required = true)
         public String roleId;
 
         @NameInMap("UserId")
+        @Validation(required = true)
         public String userId;
 
         public static SubmitInternalPurchaseOrdersRequestOrderList build(java.util.Map<String, ?> map) throws Exception {

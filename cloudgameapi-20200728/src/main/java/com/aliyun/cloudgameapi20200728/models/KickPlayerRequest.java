@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class KickPlayerRequest extends TeaModel {
     @NameInMap("GameSession")
+    @Validation(required = true)
     public String gameSession;
 
     @NameInMap("KickedAccountId")
+    @Validation(required = true)
     public String kickedAccountId;
 
     public static KickPlayerRequest build(java.util.Map<String, ?> map) throws Exception {

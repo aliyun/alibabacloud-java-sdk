@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteGameRequest extends TeaModel {
     @NameInMap("GameId")
+    @Validation(required = true)
     public String gameId;
 
     public static DeleteGameRequest build(java.util.Map<String, ?> map) throws Exception {

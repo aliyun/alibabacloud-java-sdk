@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class SetGameAliveRequest extends TeaModel {
     @NameInMap("AccessKey")
+    @Validation(required = true)
     public String accessKey;
 
     @NameInMap("GameSession")
+    @Validation(required = true)
     public String gameSession;
 
     @NameInMap("KeepAlive")
+    @Validation(required = true)
     public Long keepAlive;
 
     public static SetGameAliveRequest build(java.util.Map<String, ?> map) throws Exception {

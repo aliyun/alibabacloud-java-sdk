@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class SkipTrialPolicyRequest extends TeaModel {
     @NameInMap("GameSessionId")
+    @Validation(required = true)
     public String gameSessionId;
 
     public static SkipTrialPolicyRequest build(java.util.Map<String, ?> map) throws Exception {

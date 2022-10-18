@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreateGameRequest extends TeaModel {
     @NameInMap("ClientToken")
+    @Validation(required = true)
     public String clientToken;
 
     @NameInMap("GameName")
+    @Validation(required = true)
     public String gameName;
 
     @NameInMap("PlatformType")
+    @Validation(required = true)
     public Long platformType;
 
     public static CreateGameRequest build(java.util.Map<String, ?> map) throws Exception {

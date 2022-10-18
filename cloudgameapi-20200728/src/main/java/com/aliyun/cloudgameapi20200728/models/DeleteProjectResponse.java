@@ -4,45 +4,21 @@ package com.aliyun.cloudgameapi20200728.models;
 import com.aliyun.tea.*;
 
 public class DeleteProjectResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
-
-    @NameInMap("statusCode")
-    @Validation(required = true)
-    public Integer statusCode;
-
-    @NameInMap("body")
-    @Validation(required = true)
-    public DeleteProjectResponseBody body;
+    public String requestId;
 
     public static DeleteProjectResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteProjectResponse self = new DeleteProjectResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteProjectResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public DeleteProjectResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
-    }
-
-    public DeleteProjectResponse setStatusCode(Integer statusCode) {
-        this.statusCode = statusCode;
-        return this;
-    }
-    public Integer getStatusCode() {
-        return this.statusCode;
-    }
-
-    public DeleteProjectResponse setBody(DeleteProjectResponseBody body) {
-        this.body = body;
-        return this;
-    }
-    public DeleteProjectResponseBody getBody() {
-        return this.body;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

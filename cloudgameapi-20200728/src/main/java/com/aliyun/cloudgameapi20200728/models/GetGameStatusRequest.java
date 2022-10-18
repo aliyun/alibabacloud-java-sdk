@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetGameStatusRequest extends TeaModel {
     @NameInMap("GameSession")
+    @Validation(required = true)
     public String gameSession;
 
     public static GetGameStatusRequest build(java.util.Map<String, ?> map) throws Exception {

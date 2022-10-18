@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class StartGameLiveRequest extends TeaModel {
     @NameInMap("Extension")
-    public java.util.Map<String, String> extension;
+    public String extension;
 
     @NameInMap("GameSession")
+    @Validation(required = true)
     public String gameSession;
 
     @NameInMap("VideoPushAddress")
+    @Validation(required = true)
     public String videoPushAddress;
 
     public static StartGameLiveRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -18,11 +20,11 @@ public class StartGameLiveRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public StartGameLiveRequest setExtension(java.util.Map<String, String> extension) {
+    public StartGameLiveRequest setExtension(String extension) {
         this.extension = extension;
         return this;
     }
-    public java.util.Map<String, String> getExtension() {
+    public String getExtension() {
         return this.extension;
     }
 

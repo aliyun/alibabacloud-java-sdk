@@ -4,45 +4,33 @@ package com.aliyun.cloudgameapi20200728.models;
 import com.aliyun.tea.*;
 
 public class CloseOrderResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("Data")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public Boolean data;
 
-    @NameInMap("statusCode")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public Integer statusCode;
-
-    @NameInMap("body")
-    @Validation(required = true)
-    public CloseOrderResponseBody body;
+    public String requestId;
 
     public static CloseOrderResponse build(java.util.Map<String, ?> map) throws Exception {
         CloseOrderResponse self = new CloseOrderResponse();
         return TeaModel.build(map, self);
     }
 
-    public CloseOrderResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public CloseOrderResponse setData(Boolean data) {
+        this.data = data;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public Boolean getData() {
+        return this.data;
     }
 
-    public CloseOrderResponse setStatusCode(Integer statusCode) {
-        this.statusCode = statusCode;
+    public CloseOrderResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Integer getStatusCode() {
-        return this.statusCode;
-    }
-
-    public CloseOrderResponse setBody(CloseOrderResponseBody body) {
-        this.body = body;
-        return this;
-    }
-    public CloseOrderResponseBody getBody() {
-        return this.body;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

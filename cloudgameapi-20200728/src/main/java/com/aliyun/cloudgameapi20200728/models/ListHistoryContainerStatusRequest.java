@@ -5,18 +5,22 @@ import com.aliyun.tea.*;
 
 public class ListHistoryContainerStatusRequest extends TeaModel {
     @NameInMap("EndTime")
+    @Validation(required = true)
     public Long endTime;
 
     @NameInMap("LastGameSessionId")
     public String lastGameSessionId;
 
     @NameInMap("PageSize")
+    @Validation(required = true)
     public Long pageSize;
 
     @NameInMap("ProjectId")
+    @Validation(required = true)
     public String projectId;
 
     @NameInMap("StartTime")
+    @Validation(required = true)
     public Long startTime;
 
     public static ListHistoryContainerStatusRequest build(java.util.Map<String, ?> map) throws Exception {

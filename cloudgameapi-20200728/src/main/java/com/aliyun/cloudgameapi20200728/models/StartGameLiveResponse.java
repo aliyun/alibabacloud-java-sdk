@@ -4,45 +4,33 @@ package com.aliyun.cloudgameapi20200728.models;
 import com.aliyun.tea.*;
 
 public class StartGameLiveResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("Data")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public Boolean data;
 
-    @NameInMap("statusCode")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public Integer statusCode;
-
-    @NameInMap("body")
-    @Validation(required = true)
-    public StartGameLiveResponseBody body;
+    public String requestId;
 
     public static StartGameLiveResponse build(java.util.Map<String, ?> map) throws Exception {
         StartGameLiveResponse self = new StartGameLiveResponse();
         return TeaModel.build(map, self);
     }
 
-    public StartGameLiveResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public StartGameLiveResponse setData(Boolean data) {
+        this.data = data;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public Boolean getData() {
+        return this.data;
     }
 
-    public StartGameLiveResponse setStatusCode(Integer statusCode) {
-        this.statusCode = statusCode;
+    public StartGameLiveResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Integer getStatusCode() {
-        return this.statusCode;
-    }
-
-    public StartGameLiveResponse setBody(StartGameLiveResponseBody body) {
-        this.body = body;
-        return this;
-    }
-    public StartGameLiveResponseBody getBody() {
-        return this.body;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

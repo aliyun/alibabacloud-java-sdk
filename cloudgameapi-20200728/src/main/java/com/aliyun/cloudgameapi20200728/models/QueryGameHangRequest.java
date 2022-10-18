@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class QueryGameHangRequest extends TeaModel {
     @NameInMap("AccessKey")
+    @Validation(required = true)
     public String accessKey;
 
     @NameInMap("GameSession")
+    @Validation(required = true)
     public String gameSession;
 
     public static QueryGameHangRequest build(java.util.Map<String, ?> map) throws Exception {

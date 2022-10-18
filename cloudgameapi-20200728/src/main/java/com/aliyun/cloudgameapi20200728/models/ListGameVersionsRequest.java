@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListGameVersionsRequest extends TeaModel {
     @NameInMap("GameId")
+    @Validation(required = true)
     public String gameId;
 
     @NameInMap("MaxResults")

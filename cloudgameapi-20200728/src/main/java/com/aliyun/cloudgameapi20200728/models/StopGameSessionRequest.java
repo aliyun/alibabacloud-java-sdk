@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class StopGameSessionRequest extends TeaModel {
     @NameInMap("AccessKey")
+    @Validation(required = true)
     public String accessKey;
 
     @NameInMap("BizParam")
     public String bizParam;
 
     @NameInMap("GameId")
+    @Validation(required = true)
     public String gameId;
 
     @NameInMap("GameSession")
@@ -20,6 +22,7 @@ public class StopGameSessionRequest extends TeaModel {
     public String reason;
 
     @NameInMap("UserId")
+    @Validation(required = true)
     public String userId;
 
     public static StopGameSessionRequest build(java.util.Map<String, ?> map) throws Exception {

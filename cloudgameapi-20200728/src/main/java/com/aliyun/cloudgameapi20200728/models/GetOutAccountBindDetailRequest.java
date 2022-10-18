@@ -8,9 +8,11 @@ public class GetOutAccountBindDetailRequest extends TeaModel {
     public String accountDomain;
 
     @NameInMap("AccountId")
+    @Validation(required = true)
     public String accountId;
 
     @NameInMap("OutAccountType")
+    @Validation(required = true)
     public String outAccountType;
 
     public static GetOutAccountBindDetailRequest build(java.util.Map<String, ?> map) throws Exception {

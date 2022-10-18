@@ -5,15 +5,19 @@ import com.aliyun.tea.*;
 
 public class UpdateGameArchiveTagStatusRequest extends TeaModel {
     @NameInMap("AccountId")
+    @Validation(required = true)
     public String accountId;
 
     @NameInMap("ArchiveId")
+    @Validation(required = true)
     public String archiveId;
 
     @NameInMap("GameId")
+    @Validation(required = true)
     public String gameId;
 
     @NameInMap("TagStatus")
+    @Validation(required = true)
     public Integer tagStatus;
 
     public static UpdateGameArchiveTagStatusRequest build(java.util.Map<String, ?> map) throws Exception {

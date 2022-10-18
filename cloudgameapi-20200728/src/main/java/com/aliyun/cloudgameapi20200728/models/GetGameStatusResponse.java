@@ -4,45 +4,133 @@ package com.aliyun.cloudgameapi20200728.models;
 import com.aliyun.tea.*;
 
 public class GetGameStatusResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("statusCode")
+    @NameInMap("Data")
     @Validation(required = true)
-    public Integer statusCode;
-
-    @NameInMap("body")
-    @Validation(required = true)
-    public GetGameStatusResponseBody body;
+    public GetGameStatusResponseData data;
 
     public static GetGameStatusResponse build(java.util.Map<String, ?> map) throws Exception {
         GetGameStatusResponse self = new GetGameStatusResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetGameStatusResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public GetGameStatusResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public GetGameStatusResponse setStatusCode(Integer statusCode) {
-        this.statusCode = statusCode;
+    public GetGameStatusResponse setData(GetGameStatusResponseData data) {
+        this.data = data;
         return this;
     }
-    public Integer getStatusCode() {
-        return this.statusCode;
+    public GetGameStatusResponseData getData() {
+        return this.data;
     }
 
-    public GetGameStatusResponse setBody(GetGameStatusResponseBody body) {
-        this.body = body;
-        return this;
+    public static class GetGameStatusResponseDataPlayingUsers extends TeaModel {
+        @NameInMap("AccountId")
+        @Validation(required = true)
+        public String accountId;
+
+        @NameInMap("StartPlayTime")
+        @Validation(required = true)
+        public Long startPlayTime;
+
+        public static GetGameStatusResponseDataPlayingUsers build(java.util.Map<String, ?> map) throws Exception {
+            GetGameStatusResponseDataPlayingUsers self = new GetGameStatusResponseDataPlayingUsers();
+            return TeaModel.build(map, self);
+        }
+
+        public GetGameStatusResponseDataPlayingUsers setAccountId(String accountId) {
+            this.accountId = accountId;
+            return this;
+        }
+        public String getAccountId() {
+            return this.accountId;
+        }
+
+        public GetGameStatusResponseDataPlayingUsers setStartPlayTime(Long startPlayTime) {
+            this.startPlayTime = startPlayTime;
+            return this;
+        }
+        public Long getStartPlayTime() {
+            return this.startPlayTime;
+        }
+
     }
-    public GetGameStatusResponseBody getBody() {
-        return this.body;
+
+    public static class GetGameStatusResponseData extends TeaModel {
+        @NameInMap("GameId")
+        @Validation(required = true)
+        public String gameId;
+
+        @NameInMap("GameSession")
+        @Validation(required = true)
+        public String gameSession;
+
+        @NameInMap("GameStartAt")
+        @Validation(required = true)
+        public Long gameStartAt;
+
+        @NameInMap("PlayingCount")
+        @Validation(required = true)
+        public Integer playingCount;
+
+        @NameInMap("PlayingUsers")
+        @Validation(required = true)
+        public java.util.List<GetGameStatusResponseDataPlayingUsers> playingUsers;
+
+        public static GetGameStatusResponseData build(java.util.Map<String, ?> map) throws Exception {
+            GetGameStatusResponseData self = new GetGameStatusResponseData();
+            return TeaModel.build(map, self);
+        }
+
+        public GetGameStatusResponseData setGameId(String gameId) {
+            this.gameId = gameId;
+            return this;
+        }
+        public String getGameId() {
+            return this.gameId;
+        }
+
+        public GetGameStatusResponseData setGameSession(String gameSession) {
+            this.gameSession = gameSession;
+            return this;
+        }
+        public String getGameSession() {
+            return this.gameSession;
+        }
+
+        public GetGameStatusResponseData setGameStartAt(Long gameStartAt) {
+            this.gameStartAt = gameStartAt;
+            return this;
+        }
+        public Long getGameStartAt() {
+            return this.gameStartAt;
+        }
+
+        public GetGameStatusResponseData setPlayingCount(Integer playingCount) {
+            this.playingCount = playingCount;
+            return this;
+        }
+        public Integer getPlayingCount() {
+            return this.playingCount;
+        }
+
+        public GetGameStatusResponseData setPlayingUsers(java.util.List<GetGameStatusResponseDataPlayingUsers> playingUsers) {
+            this.playingUsers = playingUsers;
+            return this;
+        }
+        public java.util.List<GetGameStatusResponseDataPlayingUsers> getPlayingUsers() {
+            return this.playingUsers;
+        }
+
     }
 
 }

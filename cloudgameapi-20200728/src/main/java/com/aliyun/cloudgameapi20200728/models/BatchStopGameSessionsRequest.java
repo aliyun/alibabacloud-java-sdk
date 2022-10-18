@@ -8,6 +8,7 @@ public class BatchStopGameSessionsRequest extends TeaModel {
     public String gameId;
 
     @NameInMap("ProjectId")
+    @Validation(required = true)
     public String projectId;
 
     @NameInMap("Reason")

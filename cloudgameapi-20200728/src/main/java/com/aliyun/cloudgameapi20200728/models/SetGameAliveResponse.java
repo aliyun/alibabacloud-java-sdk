@@ -4,45 +4,69 @@ package com.aliyun.cloudgameapi20200728.models;
 import com.aliyun.tea.*;
 
 public class SetGameAliveResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("Code")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String code;
 
-    @NameInMap("statusCode")
+    @NameInMap("GameSession")
     @Validation(required = true)
-    public Integer statusCode;
+    public String gameSession;
 
-    @NameInMap("body")
+    @NameInMap("Message")
     @Validation(required = true)
-    public SetGameAliveResponseBody body;
+    public String message;
+
+    @NameInMap("RequestId")
+    @Validation(required = true)
+    public String requestId;
+
+    @NameInMap("Success")
+    @Validation(required = true)
+    public Boolean success;
 
     public static SetGameAliveResponse build(java.util.Map<String, ?> map) throws Exception {
         SetGameAliveResponse self = new SetGameAliveResponse();
         return TeaModel.build(map, self);
     }
 
-    public SetGameAliveResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public SetGameAliveResponse setCode(String code) {
+        this.code = code;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getCode() {
+        return this.code;
     }
 
-    public SetGameAliveResponse setStatusCode(Integer statusCode) {
-        this.statusCode = statusCode;
+    public SetGameAliveResponse setGameSession(String gameSession) {
+        this.gameSession = gameSession;
         return this;
     }
-    public Integer getStatusCode() {
-        return this.statusCode;
+    public String getGameSession() {
+        return this.gameSession;
     }
 
-    public SetGameAliveResponse setBody(SetGameAliveResponseBody body) {
-        this.body = body;
+    public SetGameAliveResponse setMessage(String message) {
+        this.message = message;
         return this;
     }
-    public SetGameAliveResponseBody getBody() {
-        return this.body;
+    public String getMessage() {
+        return this.message;
+    }
+
+    public SetGameAliveResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public SetGameAliveResponse setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
 }

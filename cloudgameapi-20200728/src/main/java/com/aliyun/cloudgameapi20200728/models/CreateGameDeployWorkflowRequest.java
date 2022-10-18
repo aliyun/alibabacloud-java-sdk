@@ -5,27 +5,33 @@ import com.aliyun.tea.*;
 
 public class CreateGameDeployWorkflowRequest extends TeaModel {
     @NameInMap("DownloadType")
+    @Validation(required = true)
     public String downloadType;
 
     @NameInMap("FileType")
+    @Validation(required = true)
     public String fileType;
 
     @NameInMap("FrameRate")
     public String frameRate;
 
     @NameInMap("GameId")
+    @Validation(required = true)
     public String gameId;
 
     @NameInMap("GameVersion")
     public String gameVersion;
 
     @NameInMap("Hash")
+    @Validation(required = true)
     public String hash;
 
     @NameInMap("Instance")
+    @Validation(required = true)
     public String instance;
 
     @NameInMap("ProjectId")
+    @Validation(required = true)
     public String projectId;
 
     @NameInMap("Resolution")

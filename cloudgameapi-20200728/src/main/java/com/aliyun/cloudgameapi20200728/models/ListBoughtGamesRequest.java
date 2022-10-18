@@ -8,6 +8,7 @@ public class ListBoughtGamesRequest extends TeaModel {
     public String accountDomain;
 
     @NameInMap("AccountId")
+    @Validation(required = true)
     public String accountId;
 
     @NameInMap("PageNumber")

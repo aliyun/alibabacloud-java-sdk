@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DispatchGameSlotRequest extends TeaModel {
     @NameInMap("AccessKey")
+    @Validation(required = true)
     public String accessKey;
 
     @NameInMap("BizParam")
@@ -20,6 +21,7 @@ public class DispatchGameSlotRequest extends TeaModel {
     public String gameCommand;
 
     @NameInMap("GameId")
+    @Validation(required = true)
     public String gameId;
 
     @NameInMap("GameSession")
@@ -41,6 +43,7 @@ public class DispatchGameSlotRequest extends TeaModel {
     public String tags;
 
     @NameInMap("UserId")
+    @Validation(required = true)
     public String userId;
 
     @NameInMap("UserLevel")
