@@ -97,6 +97,12 @@ public class ListHistoryContainerStatusResponseBody extends TeaModel {
         @NameInMap("ProjectId")
         public String projectId;
 
+        @NameInMap("Region")
+        public String region;
+
+        @NameInMap("ResourceLevel")
+        public Integer resourceLevel;
+
         @NameInMap("Tags")
         public String tags;
 
@@ -170,6 +176,22 @@ public class ListHistoryContainerStatusResponseBody extends TeaModel {
         }
         public String getProjectId() {
             return this.projectId;
+        }
+
+        public ListHistoryContainerStatusResponseBodyDataList setRegion(String region) {
+            this.region = region;
+            return this;
+        }
+        public String getRegion() {
+            return this.region;
+        }
+
+        public ListHistoryContainerStatusResponseBodyDataList setResourceLevel(Integer resourceLevel) {
+            this.resourceLevel = resourceLevel;
+            return this;
+        }
+        public Integer getResourceLevel() {
+            return this.resourceLevel;
         }
 
         public ListHistoryContainerStatusResponseBodyDataList setTags(String tags) {
