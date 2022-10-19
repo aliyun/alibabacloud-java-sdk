@@ -4,8 +4,8 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class UpdateAdminPasswordRequest extends TeaModel {
-    @NameInMap("body")
-    public String body;
+    @NameInMap("esAdminPassword")
+    public String esAdminPassword;
 
     @NameInMap("clientToken")
     public String clientToken;
@@ -15,12 +15,12 @@ public class UpdateAdminPasswordRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public UpdateAdminPasswordRequest setBody(String body) {
-        this.body = body;
+    public UpdateAdminPasswordRequest setEsAdminPassword(String esAdminPassword) {
+        this.esAdminPassword = esAdminPassword;
         return this;
     }
-    public String getBody() {
-        return this.body;
+    public String getEsAdminPassword() {
+        return this.esAdminPassword;
     }
 
     public UpdateAdminPasswordRequest setClientToken(String clientToken) {

@@ -269,9 +269,64 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeInstanceResponseBodyResultIkHotDicts extends TeaModel {
+        @NameInMap("fileSize")
+        public Integer fileSize;
+
+        @NameInMap("name")
+        public String name;
+
+        @NameInMap("sourceType")
+        public String sourceType;
+
+        @NameInMap("type")
+        public String type;
+
+        public static DescribeInstanceResponseBodyResultIkHotDicts build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceResponseBodyResultIkHotDicts self = new DescribeInstanceResponseBodyResultIkHotDicts();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceResponseBodyResultIkHotDicts setFileSize(Integer fileSize) {
+            this.fileSize = fileSize;
+            return this;
+        }
+        public Integer getFileSize() {
+            return this.fileSize;
+        }
+
+        public DescribeInstanceResponseBodyResultIkHotDicts setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public DescribeInstanceResponseBodyResultIkHotDicts setSourceType(String sourceType) {
+            this.sourceType = sourceType;
+            return this;
+        }
+        public String getSourceType() {
+            return this.sourceType;
+        }
+
+        public DescribeInstanceResponseBodyResultIkHotDicts setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
     public static class DescribeInstanceResponseBodyResultKibanaConfiguration extends TeaModel {
         @NameInMap("amount")
         public Integer amount;
+
+        @NameInMap("disk")
+        public Integer disk;
 
         @NameInMap("spec")
         public String spec;
@@ -287,6 +342,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
         public Integer getAmount() {
             return this.amount;
+        }
+
+        public DescribeInstanceResponseBodyResultKibanaConfiguration setDisk(Integer disk) {
+            this.disk = disk;
+            return this;
+        }
+        public Integer getDisk() {
+            return this.disk;
         }
 
         public DescribeInstanceResponseBodyResultKibanaConfiguration setSpec(String spec) {
@@ -465,6 +528,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
         @NameInMap("diskType")
         public String diskType;
 
+        @NameInMap("performanceLevel")
+        public String performanceLevel;
+
         @NameInMap("spec")
         public String spec;
 
@@ -495,6 +561,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
         public String getDiskType() {
             return this.diskType;
+        }
+
+        public DescribeInstanceResponseBodyResultNodeSpec setPerformanceLevel(String performanceLevel) {
+            this.performanceLevel = performanceLevel;
+            return this;
+        }
+        public String getPerformanceLevel() {
+            return this.performanceLevel;
         }
 
         public DescribeInstanceResponseBodyResultNodeSpec setSpec(String spec) {
@@ -742,6 +816,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
         @NameInMap("haveKibana")
         public Boolean haveKibana;
+
+        @NameInMap("ikHotDicts")
+        public java.util.List<DescribeInstanceResponseBodyResultIkHotDicts> ikHotDicts;
 
         @NameInMap("instanceId")
         public String instanceId;
@@ -996,6 +1073,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
         public Boolean getHaveKibana() {
             return this.haveKibana;
+        }
+
+        public DescribeInstanceResponseBodyResult setIkHotDicts(java.util.List<DescribeInstanceResponseBodyResultIkHotDicts> ikHotDicts) {
+            this.ikHotDicts = ikHotDicts;
+            return this;
+        }
+        public java.util.List<DescribeInstanceResponseBodyResultIkHotDicts> getIkHotDicts() {
+            return this.ikHotDicts;
         }
 
         public DescribeInstanceResponseBodyResult setInstanceId(String instanceId) {
