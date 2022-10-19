@@ -765,6 +765,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("StorageEngine", request.storageEngine);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.storageType)) {
+            query.put("StorageType", request.storageType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.vSwitchId)) {
             query.put("VSwitchId", request.vSwitchId);
         }
