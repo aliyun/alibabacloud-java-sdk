@@ -13,6 +13,9 @@ public class FigureClusterForReq extends TeaModel {
     @NameInMap("CustomLabels")
     public java.util.Map<String, ?> customLabels;
 
+    @NameInMap("MetaLockVersion")
+    public Long metaLockVersion;
+
     @NameInMap("Name")
     public String name;
 
@@ -46,6 +49,14 @@ public class FigureClusterForReq extends TeaModel {
     }
     public java.util.Map<String, ?> getCustomLabels() {
         return this.customLabels;
+    }
+
+    public FigureClusterForReq setMetaLockVersion(Long metaLockVersion) {
+        this.metaLockVersion = metaLockVersion;
+        return this;
+    }
+    public Long getMetaLockVersion() {
+        return this.metaLockVersion;
     }
 
     public FigureClusterForReq setName(String name) {

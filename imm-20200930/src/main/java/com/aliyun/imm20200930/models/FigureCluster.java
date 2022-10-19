@@ -34,6 +34,9 @@ public class FigureCluster extends TeaModel {
     @NameInMap("MaxAge")
     public Float maxAge;
 
+    @NameInMap("MetaLockVersion")
+    public Long metaLockVersion;
+
     @NameInMap("MinAge")
     public Float minAge;
 
@@ -141,6 +144,14 @@ public class FigureCluster extends TeaModel {
     }
     public Float getMaxAge() {
         return this.maxAge;
+    }
+
+    public FigureCluster setMetaLockVersion(Long metaLockVersion) {
+        this.metaLockVersion = metaLockVersion;
+        return this;
+    }
+    public Long getMetaLockVersion() {
+        return this.metaLockVersion;
     }
 
     public FigureCluster setMinAge(Float minAge) {
