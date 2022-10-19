@@ -7,6 +7,9 @@ public class UpdateAdminPasswordResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("Result")
+    public Boolean result;
+
     public static UpdateAdminPasswordResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateAdminPasswordResponseBody self = new UpdateAdminPasswordResponseBody();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class UpdateAdminPasswordResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public UpdateAdminPasswordResponseBody setResult(Boolean result) {
+        this.result = result;
+        return this;
+    }
+    public Boolean getResult() {
+        return this.result;
     }
 
 }

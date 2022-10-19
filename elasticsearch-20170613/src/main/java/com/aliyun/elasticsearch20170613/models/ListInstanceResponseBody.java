@@ -342,6 +342,9 @@ public class ListInstanceResponseBody extends TeaModel {
         @NameInMap("diskType")
         public String diskType;
 
+        @NameInMap("performanceLevel")
+        public String performanceLevel;
+
         @NameInMap("spec")
         public String spec;
 
@@ -372,6 +375,14 @@ public class ListInstanceResponseBody extends TeaModel {
         }
         public String getDiskType() {
             return this.diskType;
+        }
+
+        public ListInstanceResponseBodyResultNodeSpec setPerformanceLevel(String performanceLevel) {
+            this.performanceLevel = performanceLevel;
+            return this;
+        }
+        public String getPerformanceLevel() {
+            return this.performanceLevel;
         }
 
         public ListInstanceResponseBodyResultNodeSpec setSpec(String spec) {
@@ -480,6 +491,9 @@ public class ListInstanceResponseBody extends TeaModel {
 
         @NameInMap("updatedAt")
         public String updatedAt;
+
+        @NameInMap("vpcInstanceId")
+        public String vpcInstanceId;
 
         public static ListInstanceResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             ListInstanceResponseBodyResult self = new ListInstanceResponseBodyResult();
@@ -660,6 +674,14 @@ public class ListInstanceResponseBody extends TeaModel {
         }
         public String getUpdatedAt() {
             return this.updatedAt;
+        }
+
+        public ListInstanceResponseBodyResult setVpcInstanceId(String vpcInstanceId) {
+            this.vpcInstanceId = vpcInstanceId;
+            return this;
+        }
+        public String getVpcInstanceId() {
+            return this.vpcInstanceId;
         }
 
     }
