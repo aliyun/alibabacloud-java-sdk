@@ -22,6 +22,9 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("StorageLocationArn")
+    public String storageLocationArn;
+
     @NameInMap("Tag")
     public java.util.List<CreateAutoSnapshotPolicyRequestTag> tag;
 
@@ -94,6 +97,14 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public CreateAutoSnapshotPolicyRequest setStorageLocationArn(String storageLocationArn) {
+        this.storageLocationArn = storageLocationArn;
+        return this;
+    }
+    public String getStorageLocationArn() {
+        return this.storageLocationArn;
     }
 
     public CreateAutoSnapshotPolicyRequest setTag(java.util.List<CreateAutoSnapshotPolicyRequestTag> tag) {

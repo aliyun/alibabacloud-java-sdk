@@ -43,6 +43,9 @@ public class CreateSnapshotRequest extends TeaModel {
     @NameInMap("SnapshotName")
     public String snapshotName;
 
+    @NameInMap("StorageLocationArn")
+    public String storageLocationArn;
+
     @NameInMap("Tag")
     public java.util.List<CreateSnapshotRequestTag> tag;
 
@@ -153,6 +156,14 @@ public class CreateSnapshotRequest extends TeaModel {
     }
     public String getSnapshotName() {
         return this.snapshotName;
+    }
+
+    public CreateSnapshotRequest setStorageLocationArn(String storageLocationArn) {
+        this.storageLocationArn = storageLocationArn;
+        return this;
+    }
+    public String getStorageLocationArn() {
+        return this.storageLocationArn;
     }
 
     public CreateSnapshotRequest setTag(java.util.List<CreateSnapshotRequestTag> tag) {

@@ -43,6 +43,9 @@ public class CreateSnapshotGroupRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("StorageLocationArn")
+    public String storageLocationArn;
+
     @NameInMap("Tag")
     public java.util.List<CreateSnapshotGroupRequestTag> tag;
 
@@ -153,6 +156,14 @@ public class CreateSnapshotGroupRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public CreateSnapshotGroupRequest setStorageLocationArn(String storageLocationArn) {
+        this.storageLocationArn = storageLocationArn;
+        return this;
+    }
+    public String getStorageLocationArn() {
+        return this.storageLocationArn;
     }
 
     public CreateSnapshotGroupRequest setTag(java.util.List<CreateSnapshotGroupRequestTag> tag) {
