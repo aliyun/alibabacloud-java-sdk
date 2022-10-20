@@ -468,6 +468,12 @@ public class GetResultResponseBody extends TeaModel {
         @NameInMap("Rid")
         public String rid;
 
+        @NameInMap("SchemeId")
+        public Long schemeId;
+
+        @NameInMap("SchemeVersion")
+        public Long schemeVersion;
+
         @NameInMap("Type")
         public String type;
 
@@ -506,6 +512,22 @@ public class GetResultResponseBody extends TeaModel {
         }
         public String getRid() {
             return this.rid;
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResult setSchemeId(Long schemeId) {
+            this.schemeId = schemeId;
+            return this;
+        }
+        public Long getSchemeId() {
+            return this.schemeId;
+        }
+
+        public GetResultResponseBodyDataResultInfoHitResultHitResult setSchemeVersion(Long schemeVersion) {
+            this.schemeVersion = schemeVersion;
+            return this;
+        }
+        public Long getSchemeVersion() {
+            return this.schemeVersion;
         }
 
         public GetResultResponseBodyDataResultInfoHitResultHitResult setType(String type) {
@@ -902,6 +924,44 @@ public class GetResultResponseBody extends TeaModel {
 
     }
 
+    public static class GetResultResponseBodyDataResultInfoSchemeIdList extends TeaModel {
+        @NameInMap("SchemeIdList")
+        public java.util.List<Long> schemeIdList;
+
+        public static GetResultResponseBodyDataResultInfoSchemeIdList build(java.util.Map<String, ?> map) throws Exception {
+            GetResultResponseBodyDataResultInfoSchemeIdList self = new GetResultResponseBodyDataResultInfoSchemeIdList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetResultResponseBodyDataResultInfoSchemeIdList setSchemeIdList(java.util.List<Long> schemeIdList) {
+            this.schemeIdList = schemeIdList;
+            return this;
+        }
+        public java.util.List<Long> getSchemeIdList() {
+            return this.schemeIdList;
+        }
+
+    }
+
+    public static class GetResultResponseBodyDataResultInfoSchemeNameList extends TeaModel {
+        @NameInMap("SchemeNameList")
+        public java.util.List<String> schemeNameList;
+
+        public static GetResultResponseBodyDataResultInfoSchemeNameList build(java.util.Map<String, ?> map) throws Exception {
+            GetResultResponseBodyDataResultInfoSchemeNameList self = new GetResultResponseBodyDataResultInfoSchemeNameList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetResultResponseBodyDataResultInfoSchemeNameList setSchemeNameList(java.util.List<String> schemeNameList) {
+            this.schemeNameList = schemeNameList;
+            return this;
+        }
+        public java.util.List<String> getSchemeNameList() {
+            return this.schemeNameList;
+        }
+
+    }
+
     public static class GetResultResponseBodyDataResultInfo extends TeaModel {
         @NameInMap("Agent")
         public GetResultResponseBodyDataResultInfoAgent agent;
@@ -956,6 +1016,12 @@ public class GetResultResponseBody extends TeaModel {
 
         @NameInMap("Reviewer")
         public String reviewer;
+
+        @NameInMap("SchemeIdList")
+        public GetResultResponseBodyDataResultInfoSchemeIdList schemeIdList;
+
+        @NameInMap("SchemeNameList")
+        public GetResultResponseBodyDataResultInfoSchemeNameList schemeNameList;
 
         @NameInMap("Score")
         public Integer score;
@@ -1116,6 +1182,22 @@ public class GetResultResponseBody extends TeaModel {
         }
         public String getReviewer() {
             return this.reviewer;
+        }
+
+        public GetResultResponseBodyDataResultInfo setSchemeIdList(GetResultResponseBodyDataResultInfoSchemeIdList schemeIdList) {
+            this.schemeIdList = schemeIdList;
+            return this;
+        }
+        public GetResultResponseBodyDataResultInfoSchemeIdList getSchemeIdList() {
+            return this.schemeIdList;
+        }
+
+        public GetResultResponseBodyDataResultInfo setSchemeNameList(GetResultResponseBodyDataResultInfoSchemeNameList schemeNameList) {
+            this.schemeNameList = schemeNameList;
+            return this;
+        }
+        public GetResultResponseBodyDataResultInfoSchemeNameList getSchemeNameList() {
+            return this.schemeNameList;
         }
 
         public GetResultResponseBodyDataResultInfo setScore(Integer score) {

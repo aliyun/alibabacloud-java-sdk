@@ -306,6 +306,9 @@ public class GetResultToReviewResponseBody extends TeaModel {
         @NameInMap("Cid")
         public String cid;
 
+        @NameInMap("CustomizeCode")
+        public String customizeCode;
+
         @NameInMap("From")
         public Integer from;
 
@@ -332,6 +335,14 @@ public class GetResultToReviewResponseBody extends TeaModel {
         }
         public String getCid() {
             return this.cid;
+        }
+
+        public GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoKeyWordsKeyWord setCustomizeCode(String customizeCode) {
+            this.customizeCode = customizeCode;
+            return this;
+        }
+        public String getCustomizeCode() {
+            return this.customizeCode;
         }
 
         public GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoKeyWordsKeyWord setFrom(Integer from) {
