@@ -22,6 +22,9 @@ public class UpdateExperimentBasicInfoRequest extends TeaModel {
     @NameInMap("Tags")
     public java.util.List<String> tags;
 
+    @NameInMap("Workspaces")
+    public java.util.List<String> workspaces;
+
     public static UpdateExperimentBasicInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateExperimentBasicInfoRequest self = new UpdateExperimentBasicInfoRequest();
         return TeaModel.build(map, self);
@@ -73,6 +76,14 @@ public class UpdateExperimentBasicInfoRequest extends TeaModel {
     }
     public java.util.List<String> getTags() {
         return this.tags;
+    }
+
+    public UpdateExperimentBasicInfoRequest setWorkspaces(java.util.List<String> workspaces) {
+        this.workspaces = workspaces;
+        return this;
+    }
+    public java.util.List<String> getWorkspaces() {
+        return this.workspaces;
     }
 
 }
