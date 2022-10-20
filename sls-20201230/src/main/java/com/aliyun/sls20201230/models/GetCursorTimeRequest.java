@@ -7,9 +7,6 @@ public class GetCursorTimeRequest extends TeaModel {
     @NameInMap("cursor")
     public String cursor;
 
-    @NameInMap("type")
-    public String type;
-
     public static GetCursorTimeRequest build(java.util.Map<String, ?> map) throws Exception {
         GetCursorTimeRequest self = new GetCursorTimeRequest();
         return TeaModel.build(map, self);
@@ -21,14 +18,6 @@ public class GetCursorTimeRequest extends TeaModel {
     }
     public String getCursor() {
         return this.cursor;
-    }
-
-    public GetCursorTimeRequest setType(String type) {
-        this.type = type;
-        return this;
-    }
-    public String getType() {
-        return this.type;
     }
 
 }

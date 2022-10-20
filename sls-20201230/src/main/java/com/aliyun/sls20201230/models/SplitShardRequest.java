@@ -4,9 +4,6 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class SplitShardRequest extends TeaModel {
-    @NameInMap("action")
-    public String action;
-
     @NameInMap("key")
     public String key;
 
@@ -16,14 +13,6 @@ public class SplitShardRequest extends TeaModel {
     public static SplitShardRequest build(java.util.Map<String, ?> map) throws Exception {
         SplitShardRequest self = new SplitShardRequest();
         return TeaModel.build(map, self);
-    }
-
-    public SplitShardRequest setAction(String action) {
-        this.action = action;
-        return this;
-    }
-    public String getAction() {
-        return this.action;
     }
 
     public SplitShardRequest setKey(String key) {
