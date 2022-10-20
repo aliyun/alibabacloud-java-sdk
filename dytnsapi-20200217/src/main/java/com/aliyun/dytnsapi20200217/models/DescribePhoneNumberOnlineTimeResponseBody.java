@@ -54,12 +54,23 @@ public class DescribePhoneNumberOnlineTimeResponseBody extends TeaModel {
     }
 
     public static class DescribePhoneNumberOnlineTimeResponseBodyData extends TeaModel {
+        @NameInMap("CarrierCode")
+        public String carrierCode;
+
         @NameInMap("VerifyResult")
         public String verifyResult;
 
         public static DescribePhoneNumberOnlineTimeResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribePhoneNumberOnlineTimeResponseBodyData self = new DescribePhoneNumberOnlineTimeResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public DescribePhoneNumberOnlineTimeResponseBodyData setCarrierCode(String carrierCode) {
+            this.carrierCode = carrierCode;
+            return this;
+        }
+        public String getCarrierCode() {
+            return this.carrierCode;
         }
 
         public DescribePhoneNumberOnlineTimeResponseBodyData setVerifyResult(String verifyResult) {
