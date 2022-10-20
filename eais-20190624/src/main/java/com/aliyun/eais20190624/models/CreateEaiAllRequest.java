@@ -4,38 +4,26 @@ package com.aliyun.eais20190624.models;
 import com.aliyun.tea.*;
 
 public class CreateEaiAllRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("EaiInstanceType")
-    public String eaiInstanceType;
-
-    @NameInMap("ClientVSwitchId")
-    public String clientVSwitchId;
-
-    @NameInMap("ClientSecurityGroupId")
-    public String clientSecurityGroupId;
-
     @NameInMap("ClientImageId")
     public String clientImageId;
-
-    @NameInMap("ClientInstanceType")
-    public String clientInstanceType;
-
-    @NameInMap("ClientZoneId")
-    public String clientZoneId;
 
     @NameInMap("ClientInstanceName")
     public String clientInstanceName;
 
-    @NameInMap("ClientPassword")
-    public String clientPassword;
+    @NameInMap("ClientInstanceType")
+    public String clientInstanceType;
 
     @NameInMap("ClientInternetMaxBandwidthIn")
     public Integer clientInternetMaxBandwidthIn;
 
     @NameInMap("ClientInternetMaxBandwidthOut")
     public Integer clientInternetMaxBandwidthOut;
+
+    @NameInMap("ClientPassword")
+    public String clientPassword;
+
+    @NameInMap("ClientSecurityGroupId")
+    public String clientSecurityGroupId;
 
     @NameInMap("ClientSystemDiskCategory")
     public String clientSystemDiskCategory;
@@ -46,44 +34,24 @@ public class CreateEaiAllRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("ClientVSwitchId")
+    public String clientVSwitchId;
+
+    @NameInMap("ClientZoneId")
+    public String clientZoneId;
+
+    @NameInMap("EaiInstanceType")
+    public String eaiInstanceType;
+
     @NameInMap("InstanceName")
     public String instanceName;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static CreateEaiAllRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateEaiAllRequest self = new CreateEaiAllRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateEaiAllRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public CreateEaiAllRequest setEaiInstanceType(String eaiInstanceType) {
-        this.eaiInstanceType = eaiInstanceType;
-        return this;
-    }
-    public String getEaiInstanceType() {
-        return this.eaiInstanceType;
-    }
-
-    public CreateEaiAllRequest setClientVSwitchId(String clientVSwitchId) {
-        this.clientVSwitchId = clientVSwitchId;
-        return this;
-    }
-    public String getClientVSwitchId() {
-        return this.clientVSwitchId;
-    }
-
-    public CreateEaiAllRequest setClientSecurityGroupId(String clientSecurityGroupId) {
-        this.clientSecurityGroupId = clientSecurityGroupId;
-        return this;
-    }
-    public String getClientSecurityGroupId() {
-        return this.clientSecurityGroupId;
     }
 
     public CreateEaiAllRequest setClientImageId(String clientImageId) {
@@ -94,22 +62,6 @@ public class CreateEaiAllRequest extends TeaModel {
         return this.clientImageId;
     }
 
-    public CreateEaiAllRequest setClientInstanceType(String clientInstanceType) {
-        this.clientInstanceType = clientInstanceType;
-        return this;
-    }
-    public String getClientInstanceType() {
-        return this.clientInstanceType;
-    }
-
-    public CreateEaiAllRequest setClientZoneId(String clientZoneId) {
-        this.clientZoneId = clientZoneId;
-        return this;
-    }
-    public String getClientZoneId() {
-        return this.clientZoneId;
-    }
-
     public CreateEaiAllRequest setClientInstanceName(String clientInstanceName) {
         this.clientInstanceName = clientInstanceName;
         return this;
@@ -118,12 +70,12 @@ public class CreateEaiAllRequest extends TeaModel {
         return this.clientInstanceName;
     }
 
-    public CreateEaiAllRequest setClientPassword(String clientPassword) {
-        this.clientPassword = clientPassword;
+    public CreateEaiAllRequest setClientInstanceType(String clientInstanceType) {
+        this.clientInstanceType = clientInstanceType;
         return this;
     }
-    public String getClientPassword() {
-        return this.clientPassword;
+    public String getClientInstanceType() {
+        return this.clientInstanceType;
     }
 
     public CreateEaiAllRequest setClientInternetMaxBandwidthIn(Integer clientInternetMaxBandwidthIn) {
@@ -140,6 +92,22 @@ public class CreateEaiAllRequest extends TeaModel {
     }
     public Integer getClientInternetMaxBandwidthOut() {
         return this.clientInternetMaxBandwidthOut;
+    }
+
+    public CreateEaiAllRequest setClientPassword(String clientPassword) {
+        this.clientPassword = clientPassword;
+        return this;
+    }
+    public String getClientPassword() {
+        return this.clientPassword;
+    }
+
+    public CreateEaiAllRequest setClientSecurityGroupId(String clientSecurityGroupId) {
+        this.clientSecurityGroupId = clientSecurityGroupId;
+        return this;
+    }
+    public String getClientSecurityGroupId() {
+        return this.clientSecurityGroupId;
     }
 
     public CreateEaiAllRequest setClientSystemDiskCategory(String clientSystemDiskCategory) {
@@ -166,12 +134,44 @@ public class CreateEaiAllRequest extends TeaModel {
         return this.clientToken;
     }
 
+    public CreateEaiAllRequest setClientVSwitchId(String clientVSwitchId) {
+        this.clientVSwitchId = clientVSwitchId;
+        return this;
+    }
+    public String getClientVSwitchId() {
+        return this.clientVSwitchId;
+    }
+
+    public CreateEaiAllRequest setClientZoneId(String clientZoneId) {
+        this.clientZoneId = clientZoneId;
+        return this;
+    }
+    public String getClientZoneId() {
+        return this.clientZoneId;
+    }
+
+    public CreateEaiAllRequest setEaiInstanceType(String eaiInstanceType) {
+        this.eaiInstanceType = eaiInstanceType;
+        return this;
+    }
+    public String getEaiInstanceType() {
+        return this.eaiInstanceType;
+    }
+
     public CreateEaiAllRequest setInstanceName(String instanceName) {
         this.instanceName = instanceName;
         return this;
     }
     public String getInstanceName() {
         return this.instanceName;
+    }
+
+    public CreateEaiAllRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }
