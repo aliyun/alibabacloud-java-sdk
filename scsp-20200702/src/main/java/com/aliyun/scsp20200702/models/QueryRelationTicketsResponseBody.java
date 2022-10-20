@@ -25,7 +25,6 @@ public class QueryRelationTicketsResponseBody extends TeaModel {
     @NameInMap("NextPage")
     public Integer nextPage;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

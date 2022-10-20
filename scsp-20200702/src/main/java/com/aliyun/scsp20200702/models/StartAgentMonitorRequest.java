@@ -4,47 +4,36 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class StartAgentMonitorRequest extends TeaModel {
-    // param2
     @NameInMap("AccountName")
     public String accountName;
 
-    // param4
     @NameInMap("CallId")
     public String callId;
 
-    // callerParentId
     @NameInMap("CallerParentId")
     public Long callerParentId;
 
-    // callerType
     @NameInMap("CallerType")
     public String callerType;
 
-    // callerUid
     @NameInMap("CallerUid")
     public Long callerUid;
 
-    // clientToken
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // param6
     @NameInMap("ConnectionId")
     public String connectionId;
 
-    // param1
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // param5
     @NameInMap("JobId")
     public String jobId;
 
-    // requestId
     @NameInMap("RequestId")
     public String requestId;
 
-    // stsTokenCallerUid
     @NameInMap("StsTokenCallerUid")
     public Long stsTokenCallerUid;
 

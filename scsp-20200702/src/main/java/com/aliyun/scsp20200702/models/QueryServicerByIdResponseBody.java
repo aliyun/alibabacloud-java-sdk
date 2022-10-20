@@ -4,7 +4,6 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class QueryServicerByIdResponseBody extends TeaModel {
-    // 状态码
     @NameInMap("Code")
     public String code;
 
@@ -14,7 +13,6 @@ public class QueryServicerByIdResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -67,27 +65,21 @@ public class QueryServicerByIdResponseBody extends TeaModel {
     }
 
     public static class QueryServicerByIdResponseBodyData extends TeaModel {
-        // 登录名
         @NameInMap("AccountName")
         public String accountName;
 
-        // 部门标识
         @NameInMap("DepartmentId")
         public Long departmentId;
 
-        // 真实名称
         @NameInMap("RealName")
         public String realName;
 
-        // 坐席标识
         @NameInMap("ServicerId")
         public Long servicerId;
 
-        // 对外展示名
         @NameInMap("ShowName")
         public String showName;
 
-        // 用户状态：0正常 1冻结 2删除 -2临时冻结
         @NameInMap("UserStatus")
         public Integer userStatus;
 

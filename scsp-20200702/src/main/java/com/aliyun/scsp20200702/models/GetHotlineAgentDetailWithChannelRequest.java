@@ -4,14 +4,12 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class GetHotlineAgentDetailWithChannelRequest extends TeaModel {
-    // 坐席账号名称(唯一值)，外部账号与XP账号登录名的映射
     @NameInMap("AccountName")
     public String accountName;
 
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // AICCS实例ID，在智能联络中心控制台上可以看到
     @NameInMap("InstanceId")
     public String instanceId;
 

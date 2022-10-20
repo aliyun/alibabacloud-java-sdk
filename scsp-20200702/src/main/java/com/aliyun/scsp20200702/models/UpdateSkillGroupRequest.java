@@ -4,7 +4,6 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class UpdateSkillGroupRequest extends TeaModel {
-    // 渠道类型
     @NameInMap("ChannelType")
     public Long channelType;
 

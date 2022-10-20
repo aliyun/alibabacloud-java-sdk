@@ -4,35 +4,27 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class DApp extends TeaModel {
-    // 基础应用代码
     @NameInMap("BaseAppCode")
     public String baseAppCode;
 
-    // 代码
     @NameInMap("Code")
     public String code;
 
-    // 容器应用代码
     @NameInMap("ContainerAppCode")
     public String containerAppCode;
 
-    // 是否容器部署
     @NameInMap("ContainerDeploy")
     public Boolean containerDeploy;
 
-    // 创建时间
     @NameInMap("GmtCreate")
     public Long gmtCreate;
 
-    // id
     @NameInMap("Id")
     public String id;
 
-    // 名称
     @NameInMap("Name")
     public String name;
 
-    // 备注
     @NameInMap("Remark")
     public String remark;
 

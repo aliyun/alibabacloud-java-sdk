@@ -4,19 +4,15 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class AppMessagePushRequest extends TeaModel {
-    // 过期时间
     @NameInMap("ExpirationTime")
     public Long expirationTime;
 
-    // 实例ID
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // APP状态
     @NameInMap("Status")
     public Integer status;
 
-    // 用户编号
     @NameInMap("UserId")
     public String userId;
 

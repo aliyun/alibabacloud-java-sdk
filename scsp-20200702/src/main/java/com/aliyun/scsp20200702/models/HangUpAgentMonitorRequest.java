@@ -4,47 +4,36 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class HangUpAgentMonitorRequest extends TeaModel {
-    // AccountName
     @NameInMap("AccountName")
     public String accountName;
 
-    // CallId
     @NameInMap("CallId")
     public String callId;
 
-    // callerParentId
     @NameInMap("CallerParentId")
     public Long callerParentId;
 
-    // callerType
     @NameInMap("CallerType")
     public String callerType;
 
-    // callerUid
     @NameInMap("CallerUid")
     public Long callerUid;
 
-    // clientToken
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // ConnectionId
     @NameInMap("ConnectionId")
     public String connectionId;
 
-    // InstanceId
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // JobId
     @NameInMap("JobId")
     public String jobId;
 
-    // requestId
     @NameInMap("RequestId")
     public String requestId;
 
-    // stsTokenCallerUid
     @NameInMap("StsTokenCallerUid")
     public Long stsTokenCallerUid;
 

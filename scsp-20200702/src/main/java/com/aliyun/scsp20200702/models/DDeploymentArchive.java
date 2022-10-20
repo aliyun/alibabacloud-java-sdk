@@ -4,31 +4,24 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class DDeploymentArchive extends TeaModel {
-    // 应用数量
     @NameInMap("AppCount")
     public Integer appCount;
 
-    // 创建时间
     @NameInMap("GmtCreate")
     public Long gmtCreate;
 
-    // id
     @NameInMap("Id")
     public String id;
 
-    // 名称
     @NameInMap("Name")
     public String name;
 
-    // 资源数量
     @NameInMap("ResCount")
     public Integer resCount;
 
-    // 状态
     @NameInMap("Status")
     public DPair status;
 
-    // 版本
     @NameInMap("Version")
     public String version;
 

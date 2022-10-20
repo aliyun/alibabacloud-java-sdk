@@ -4,31 +4,24 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class QueryDeploymentArchiveResponseBody extends TeaModel {
-    // code
     @NameInMap("Code")
     public String code;
 
-    // 部署快照列表
     @NameInMap("Data")
     public java.util.List<DDeploymentArchive> data;
 
-    // httpStatusCode
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // message
     @NameInMap("Message")
     public String message;
 
-    // requestId
     @NameInMap("RequestId")
     public String requestId;
 
-    // success
     @NameInMap("Success")
     public Boolean success;
 
-    // totalCount
     @NameInMap("TotalCount")
     public Long totalCount;
 

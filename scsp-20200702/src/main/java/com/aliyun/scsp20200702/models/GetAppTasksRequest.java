@@ -4,7 +4,6 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class GetAppTasksRequest extends TeaModel {
-    // 部署任务id
     @NameInMap("deploymentTaskId")
     public String deploymentTaskId;
 

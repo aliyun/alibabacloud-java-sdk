@@ -4,19 +4,15 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class QueryDeploymentArchiveRequest extends TeaModel {
-    // 部署code
     @NameInMap("DeploymentCode")
     public String deploymentCode;
 
-    // 环境类型
     @NameInMap("EnvType")
     public Integer envType;
 
-    // 页码, 从0开始
     @NameInMap("Index")
     public Integer index;
 
-    // 页大小
     @NameInMap("Size")
     public Integer size;
 

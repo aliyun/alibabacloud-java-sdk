@@ -4,23 +4,18 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class QueryServicerByDepartmentAndMixNameRequest extends TeaModel {
-    // 页码
     @NameInMap("CurrentPageNum")
     public Long currentPageNum;
 
-    // 部门标识列表
     @NameInMap("DepartmentIdList")
     public java.util.List<Long> departmentIdList;
 
-    // AICCS实例ID，在智能联络中心控制台上可以看到
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 关键字
     @NameInMap("KeyWord")
     public String keyWord;
 
-    // 页大小
     @NameInMap("PageSize")
     public Long pageSize;
 

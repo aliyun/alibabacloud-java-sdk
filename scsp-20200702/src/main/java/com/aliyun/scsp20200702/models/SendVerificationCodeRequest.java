@@ -4,15 +4,12 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class SendVerificationCodeRequest extends TeaModel {
-    // 客户请求唯一id，用于幂等校验，可以用uuid生成
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // AICCS实例ID，在智能联络中心控制台上可以看到
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 手机号（坐席绑定手机号码）
     @NameInMap("Phone")
     public String phone;
 

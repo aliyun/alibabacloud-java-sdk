@@ -4,11 +4,9 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class QueryServicerByIdRequest extends TeaModel {
-    // AICCS实例ID，在智能联络中心控制台上可以看到
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 坐席标识
     @NameInMap("ServicerId")
     public Long servicerId;
 

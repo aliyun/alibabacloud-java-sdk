@@ -4,27 +4,21 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class GetAppArchivesResponseBody extends TeaModel {
-    // code
     @NameInMap("Code")
     public String code;
 
-    // 应用快照列表
     @NameInMap("Data")
     public java.util.List<DAppArchive> data;
 
-    // httpStatusCode
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // message
     @NameInMap("Message")
     public String message;
 
-    // requestId
     @NameInMap("RequestId")
     public String requestId;
 
-    // success
     @NameInMap("Success")
     public Boolean success;
 
