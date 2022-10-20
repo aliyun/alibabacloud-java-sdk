@@ -4,19 +4,15 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class DAppRes extends TeaModel {
-    // 代码
     @NameInMap("Code")
     public String code;
 
-    // id
     @NameInMap("Id")
     public String id;
 
-    // 名称
     @NameInMap("Name")
     public String name;
 
-    // 子类型
     @NameInMap("SubType")
     public String subType;
 

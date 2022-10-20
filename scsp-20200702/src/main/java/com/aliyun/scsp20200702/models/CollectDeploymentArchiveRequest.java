@@ -4,15 +4,12 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class CollectDeploymentArchiveRequest extends TeaModel {
-    // 部署code
     @NameInMap("DeploymentCode")
     public String deploymentCode;
 
-    // 环境类型
     @NameInMap("EnvType")
     public Integer envType;
 
-    // 部署快照名称
     @NameInMap("Name")
     public String name;
 

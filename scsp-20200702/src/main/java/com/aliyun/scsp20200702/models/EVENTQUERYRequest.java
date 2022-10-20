@@ -4,11 +4,9 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class EVENTQUERYRequest extends TeaModel {
-    // 应用名
     @NameInMap("appName")
     public String appName;
 
-    // token
     @NameInMap("token")
     public String token;
 

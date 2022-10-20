@@ -65,31 +65,24 @@ public class GetAgentWorkStatusResponseBody extends TeaModel {
     }
 
     public static class GetAgentWorkStatusResponseBodyData extends TeaModel {
-        // 坐席账号名称（坐席登录名）
         @NameInMap("AccountName")
         public String accountName;
 
-        // 小二ID
         @NameInMap("AgentId")
         public Long agentId;
 
-        // 坐席上班状态code
         @NameInMap("AgentStatusCode")
         public String agentStatusCode;
 
-        // 坐席上班状态描述
         @NameInMap("AgentStatusDesc")
         public String agentStatusDesc;
 
-        // 扩展字段
         @NameInMap("ExtAttr")
         public String extAttr;
 
-        // 租户ID
         @NameInMap("TenantId")
         public Long tenantId;
 
-        // 上班渠道，PSTN手机上班，PC电脑上班
         @NameInMap("WorkChannel")
         public String workChannel;
 

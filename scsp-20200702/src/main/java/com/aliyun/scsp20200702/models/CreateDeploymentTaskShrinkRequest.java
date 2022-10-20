@@ -4,19 +4,15 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class CreateDeploymentTaskShrinkRequest extends TeaModel {
-    // 应用快照id列表
     @NameInMap("AppArchiveIds")
     public String appArchiveIdsShrink;
 
-    // 部署快照id
     @NameInMap("DeploymentArchiveId")
     public String deploymentArchiveId;
 
-    // 部署code
     @NameInMap("DeploymentCode")
     public String deploymentCode;
 
-    // 环境类型
     @NameInMap("EnvType")
     public String envType;
 

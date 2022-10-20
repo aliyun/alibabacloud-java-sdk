@@ -4,11 +4,9 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class DAppResCount extends TeaModel {
-    // 按类型分组的资源计数
     @NameInMap("Items")
     public java.util.List<DAppResCountItems> items;
 
-    // 总数
     @NameInMap("Total")
     public Integer total;
 
@@ -34,11 +32,9 @@ public class DAppResCount extends TeaModel {
     }
 
     public static class DAppResCountItems extends TeaModel {
-        // 计数
         @NameInMap("Count")
         public Integer count;
 
-        // 类型
         @NameInMap("Type")
         public DPair type;
 

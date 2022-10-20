@@ -4,7 +4,6 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class GetAppArchivesRequest extends TeaModel {
-    // 部署快照id
     @NameInMap("DeploymentArchiveId")
     public String deploymentArchiveId;
 

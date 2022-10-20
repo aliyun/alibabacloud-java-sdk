@@ -4,35 +4,27 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class QueryHotlineDashboardRequest extends TeaModel {
-    // 当前页码
     @NameInMap("CurrentPageNum")
     public Integer currentPageNum;
 
-    // 部门标识列表
     @NameInMap("DepartmentIdList")
     public java.util.List<Long> departmentIdList;
 
-    // j结束时间
     @NameInMap("EndDate")
     public Long endDate;
 
-    // A short description of struct
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 页面大小
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 坐席标识列表
     @NameInMap("ServicerIdList")
     public java.util.List<Long> servicerIdList;
 
-    // 排序字段集合
     @NameInMap("SortFieldList")
     public java.util.List<String> sortFieldList;
 
-    // 开始时间
     @NameInMap("StartDate")
     public Long startDate;
 

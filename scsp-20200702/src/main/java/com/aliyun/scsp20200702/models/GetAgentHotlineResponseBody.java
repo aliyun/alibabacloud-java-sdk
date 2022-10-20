@@ -65,15 +65,12 @@ public class GetAgentHotlineResponseBody extends TeaModel {
     }
 
     public static class GetAgentHotlineResponseBodyDataGroupList extends TeaModel {
-        // 技能组对外显示名
         @NameInMap("DisplayName")
         public String displayName;
 
-        // 技能组名称
         @NameInMap("Name")
         public String name;
 
-        // 技能组ID
         @NameInMap("SkillGroupId")
         public Long skillGroupId;
 
@@ -109,39 +106,30 @@ public class GetAgentHotlineResponseBody extends TeaModel {
     }
 
     public static class GetAgentHotlineResponseBodyData extends TeaModel {
-        // 坐席账号名称（坐席登录名）
         @NameInMap("AccountName")
         public String accountName;
 
-        // 小二ID
         @NameInMap("AgentId")
         public Long agentId;
 
-        // 坐席绑定手机号
         @NameInMap("AgentPhone")
         public String agentPhone;
 
-        // 部门ID
         @NameInMap("DepartmentId")
         public String departmentId;
 
-        // XP账号对外展示名称
         @NameInMap("DisplayName")
         public String displayName;
 
-        // 扩展字段
         @NameInMap("ExtAttr")
         public String extAttr;
 
-        // 热线技能组
         @NameInMap("GroupList")
         public java.util.List<GetAgentHotlineResponseBodyDataGroupList> groupList;
 
-        // 热线技能组，格式："[123,456,......,789]"
         @NameInMap("SkillGroups")
         public String skillGroups;
 
-        // 租户ID
         @NameInMap("TenantId")
         public Long tenantId;
 

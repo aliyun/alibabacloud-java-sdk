@@ -4,19 +4,15 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class HangUpAgentMonitorResponseBody extends TeaModel {
-    // code
     @NameInMap("Code")
     public String code;
 
-    // message
     @NameInMap("Message")
     public String message;
 
-    // requestId
     @NameInMap("RequestId")
     public String requestId;
 
-    // success
     @NameInMap("Success")
     public Boolean success;
 

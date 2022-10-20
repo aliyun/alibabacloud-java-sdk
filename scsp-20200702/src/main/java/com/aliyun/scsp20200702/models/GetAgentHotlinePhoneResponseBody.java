@@ -7,7 +7,6 @@ public class GetAgentHotlinePhoneResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    // 手机号
     @NameInMap("Data")
     public String data;
 

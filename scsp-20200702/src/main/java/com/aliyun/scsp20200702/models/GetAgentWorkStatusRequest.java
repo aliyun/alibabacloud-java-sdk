@@ -4,15 +4,12 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class GetAgentWorkStatusRequest extends TeaModel {
-    // 坐席账号名称(唯一值)，外部账号与XP账号的映射
     @NameInMap("AccountName")
     public String accountName;
 
-    // 客户请求唯一id，用于幂等校验，可以用uuid生成
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // AICCS实例ID，在智能联络中心控制台上可以看到
     @NameInMap("InstanceId")
     public String instanceId;
 

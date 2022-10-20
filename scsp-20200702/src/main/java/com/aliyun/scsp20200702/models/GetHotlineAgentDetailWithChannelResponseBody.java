@@ -88,7 +88,6 @@ public class GetHotlineAgentDetailWithChannelResponseBody extends TeaModel {
         @NameInMap("Assigned")
         public Boolean assigned;
 
-        // 扩展字段
         @NameInMap("ExtAttr")
         public String extAttr;
 
@@ -101,7 +100,6 @@ public class GetHotlineAgentDetailWithChannelResponseBody extends TeaModel {
         @NameInMap("Token")
         public String token;
 
-        // 上班渠道，PC电脑上班，PSTN手机上班
         @NameInMap("WorkChannel")
         public String workChannel;
 

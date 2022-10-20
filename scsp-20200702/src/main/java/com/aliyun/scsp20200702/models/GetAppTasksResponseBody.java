@@ -4,27 +4,21 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class GetAppTasksResponseBody extends TeaModel {
-    // code
     @NameInMap("Code")
     public String code;
 
-    // 应用任务列表
     @NameInMap("Data")
     public java.util.List<GetAppTasksResponseBodyData> data;
 
-    // httpStatusCode
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // message
     @NameInMap("Message")
     public String message;
 
-    // requestId
     @NameInMap("RequestId")
     public String requestId;
 
-    // success
     @NameInMap("Success")
     public Boolean success;
 
@@ -82,39 +76,30 @@ public class GetAppTasksResponseBody extends TeaModel {
     }
 
     public static class GetAppTasksResponseBodyData extends TeaModel {
-        // 当前应用快照
         @NameInMap("AppArchive")
         public DAppArchive appArchive;
 
-        // 基线应用快照
         @NameInMap("BaseAppArchive")
         public DAppArchive baseAppArchive;
 
-        // 创建时间
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
-        // 更新时间
         @NameInMap("GmtModified")
         public Long gmtModified;
 
-        // id
         @NameInMap("Id")
         public String id;
 
-        // 名称
         @NameInMap("Name")
         public String name;
 
-        // 待处理资源计数
         @NameInMap("PendingResCount")
         public DAppResCount pendingResCount;
 
-        // 资源计数
         @NameInMap("ResCount")
         public DAppResCount resCount;
 
-        // 状态
         @NameInMap("Status")
         public DPair status;
 

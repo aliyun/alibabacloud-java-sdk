@@ -4,23 +4,18 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class GetAgentBasisStatusResponseBody extends TeaModel {
-    // 错误编码
     @NameInMap("Code")
     public String code;
 
-    // data
     @NameInMap("Data")
     public GetAgentBasisStatusResponseBodyData data;
 
-    // 错误描述
     @NameInMap("Message")
     public String message;
 
-    // 请求ID，用于跟踪错误原因
     @NameInMap("RequestId")
     public String requestId;
 
-    // 调用接口是否成功
     @NameInMap("Success")
     public String success;
 
@@ -70,19 +65,15 @@ public class GetAgentBasisStatusResponseBody extends TeaModel {
     }
 
     public static class GetAgentBasisStatusResponseBodyData extends TeaModel {
-        // 当前页数
         @NameInMap("PageNum")
         public Integer pageNum;
 
-        // 页大小
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        // 信息为list<map>类型的json字符串
         @NameInMap("Rows")
         public String rows;
 
-        // 总记录数
         @NameInMap("TotalNum")
         public Integer totalNum;
 

@@ -4,31 +4,24 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class QueryAppResValueResponseBody extends TeaModel {
-    // code
     @NameInMap("Code")
     public String code;
 
-    // data
     @NameInMap("Data")
     public java.util.List<QueryAppResValueResponseBodyData> data;
 
-    // httpStatusCode
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // message
     @NameInMap("Message")
     public String message;
 
-    // requestId
     @NameInMap("RequestId")
     public String requestId;
 
-    // success
     @NameInMap("Success")
     public Boolean success;
 
-    // totalCount
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -94,15 +87,12 @@ public class QueryAppResValueResponseBody extends TeaModel {
     }
 
     public static class QueryAppResValueResponseBodyData extends TeaModel {
-        // id
         @NameInMap("Id")
         public String id;
 
-        // 配置
         @NameInMap("Res")
         public DAppRes res;
 
-        // 配置值
         @NameInMap("Value")
         public String value;
 

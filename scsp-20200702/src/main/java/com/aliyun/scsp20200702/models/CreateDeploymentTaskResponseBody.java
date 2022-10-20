@@ -4,27 +4,21 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class CreateDeploymentTaskResponseBody extends TeaModel {
-    // code
     @NameInMap("Code")
     public String code;
 
-    // data
     @NameInMap("Data")
     public CreateDeploymentTaskResponseBodyData data;
 
-    // httpStatusCode
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // message
     @NameInMap("Message")
     public String message;
 
-    // requestId
     @NameInMap("RequestId")
     public String requestId;
 
-    // success
     @NameInMap("Success")
     public Boolean success;
 
@@ -82,23 +76,18 @@ public class CreateDeploymentTaskResponseBody extends TeaModel {
     }
 
     public static class CreateDeploymentTaskResponseBodyData extends TeaModel {
-        // 部署快照
         @NameInMap("DeploymentArchive")
         public DDeploymentArchive deploymentArchive;
 
-        // 创建时间
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
-        // id
         @NameInMap("Id")
         public String id;
 
-        // 名称
         @NameInMap("Name")
         public String name;
 
-        // 状态
         @NameInMap("Status")
         public DPair status;
 

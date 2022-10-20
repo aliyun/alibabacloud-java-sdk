@@ -4,22 +4,18 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class GetUserTokenResponseBody extends TeaModel {
-    // 错误码
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public GetUserTokenResponseBodyData data;
 
-    // 错误信息
     @NameInMap("Message")
     public String message;
 
-    // 鹰眼id
     @NameInMap("RequestId")
     public String requestId;
 
-    // 是否调用成功
     @NameInMap("Success")
     public Boolean success;
 

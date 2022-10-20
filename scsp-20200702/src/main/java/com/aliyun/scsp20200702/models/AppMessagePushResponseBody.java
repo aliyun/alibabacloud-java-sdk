@@ -4,23 +4,18 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class AppMessagePushResponseBody extends TeaModel {
-    // 错误码
     @NameInMap("Code")
     public String code;
 
-    // 返回数据
     @NameInMap("Data")
     public String data;
 
-    // 错误信息
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 通信码
     @NameInMap("Success")
     public Boolean success;
 

@@ -10,14 +10,12 @@ public class QueryHotlineDashboardResponseBody extends TeaModel {
     @NameInMap("Data")
     public QueryHotlineDashboardResponseBodyData data;
 
-    // http状态编码
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -78,43 +76,33 @@ public class QueryHotlineDashboardResponseBody extends TeaModel {
     }
 
     public static class QueryHotlineDashboardResponseBodyDataResults extends TeaModel {
-        // 日期
         @NameInMap("DateId")
         public String dateId;
 
-        // 部门标识
         @NameInMap("DepartmentId")
         public Long departmentId;
 
-        // 部门名称
         @NameInMap("DepartmentName")
         public String departmentName;
 
-        // 有效呼入量
         @NameInMap("EffectiveInCalls")
         public Integer effectiveInCalls;
 
-        // 有效呼入小计量
         @NameInMap("EffectiveInServiceNotes")
         public Integer effectiveInServiceNotes;
 
-        // 有效外呼量
         @NameInMap("EffectiveOutCalls")
         public Integer effectiveOutCalls;
 
-        // 有效外呼小计量
         @NameInMap("EffectiveOutServiceNotes")
         public Integer effectiveOutServiceNotes;
 
-        // 坐席标识
         @NameInMap("ServicerId")
         public Long servicerId;
 
-        // 坐席真实姓名
         @NameInMap("ServicerRealName")
         public String servicerRealName;
 
-        // 坐席对外展示名称
         @NameInMap("ServicerShowName")
         public String servicerShowName;
 
@@ -209,7 +197,6 @@ public class QueryHotlineDashboardResponseBody extends TeaModel {
         @NameInMap("Results")
         public java.util.List<QueryHotlineDashboardResponseBodyDataResults> results;
 
-        // 查询结果条数
         @NameInMap("Total")
         public Integer total;
 

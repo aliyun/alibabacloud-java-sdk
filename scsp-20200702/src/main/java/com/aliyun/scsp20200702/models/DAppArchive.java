@@ -4,31 +4,24 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class DAppArchive extends TeaModel {
-    // 部署应用
     @NameInMap("App")
     public DApp app;
 
-    // 应用fatjar版本
     @NameInMap("AppVersion")
     public String appVersion;
 
-    // 创建时间
     @NameInMap("GmtCreate")
     public Long gmtCreate;
 
-    // id
     @NameInMap("Id")
     public String id;
 
-    // 资源数量
     @NameInMap("ResCount")
     public Integer resCount;
 
-    // 状态
     @NameInMap("Status")
     public DPair status;
 
-    // 快照版本
     @NameInMap("Version")
     public String version;
 

@@ -4,31 +4,24 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class QueryAppResDiffResponseBody extends TeaModel {
-    // code
     @NameInMap("Code")
     public String code;
 
-    // 数据
     @NameInMap("Data")
     public QueryAppResDiffResponseBodyData data;
 
-    // httpStatusCode
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // message
     @NameInMap("Message")
     public String message;
 
-    // requestId
     @NameInMap("RequestId")
     public String requestId;
 
-    // success
     @NameInMap("Success")
     public Boolean success;
 
-    // 总数
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -94,11 +87,9 @@ public class QueryAppResDiffResponseBody extends TeaModel {
     }
 
     public static class QueryAppResDiffResponseBodyDataDataRow extends TeaModel {
-        // 键, 和表头key对应
         @NameInMap("Key")
         public String key;
 
-        // 内容
         @NameInMap("Value")
         public String value;
 
@@ -126,39 +117,30 @@ public class QueryAppResDiffResponseBody extends TeaModel {
     }
 
     public static class QueryAppResDiffResponseBodyDataData extends TeaModel {
-        // 过滤后前值
         @NameInMap("BaseFilteredValue")
         public String baseFilteredValue;
 
-        // 基线值
         @NameInMap("BaseValue")
         public String baseValue;
 
-        // 过滤后当前值
         @NameInMap("FilteredValue")
         public String filteredValue;
 
-        // id
         @NameInMap("Id")
         public String id;
 
-        // 应用配置
         @NameInMap("Res")
         public DAppRes res;
 
-        // 差异行
         @NameInMap("Row")
         public java.util.List<QueryAppResDiffResponseBodyDataDataRow> row;
 
-        // 差异类型
         @NameInMap("Type")
         public DPair type;
 
-        // 当前值
         @NameInMap("Value")
         public String value;
 
-        // 处理状态
         @NameInMap("status")
         public DPair status;
 
@@ -242,11 +224,9 @@ public class QueryAppResDiffResponseBody extends TeaModel {
     }
 
     public static class QueryAppResDiffResponseBodyDataHead extends TeaModel {
-        // 键
         @NameInMap("Key")
         public String key;
 
-        // 标题
         @NameInMap("Title")
         public String title;
 
@@ -274,15 +254,12 @@ public class QueryAppResDiffResponseBody extends TeaModel {
     }
 
     public static class QueryAppResDiffResponseBodyData extends TeaModel {
-        // diff列表
         @NameInMap("Data")
         public java.util.List<QueryAppResDiffResponseBodyDataData> data;
 
-        // 应用配置差异表头
         @NameInMap("Head")
         public java.util.List<QueryAppResDiffResponseBodyDataHead> head;
 
-        // 资源数量
         @NameInMap("ResCount")
         public DAppResCount resCount;
 
