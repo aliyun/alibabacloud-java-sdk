@@ -22,6 +22,9 @@ public class CreateExperimentRequest extends TeaModel {
     @NameInMap("Tags")
     public java.util.List<String> tags;
 
+    @NameInMap("Workspaces")
+    public java.util.List<String> workspaces;
+
     public static CreateExperimentRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateExperimentRequest self = new CreateExperimentRequest();
         return TeaModel.build(map, self);
@@ -73,6 +76,14 @@ public class CreateExperimentRequest extends TeaModel {
     }
     public java.util.List<String> getTags() {
         return this.tags;
+    }
+
+    public CreateExperimentRequest setWorkspaces(java.util.List<String> workspaces) {
+        this.workspaces = workspaces;
+        return this;
+    }
+    public java.util.List<String> getWorkspaces() {
+        return this.workspaces;
     }
 
 }
