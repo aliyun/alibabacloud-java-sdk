@@ -42,126 +42,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new ApplyConfigToMachineGroupResponse());
     }
 
-    public BatchCreateEtlMetaResponse batchCreateEtlMeta(String project, BatchCreateEtlMetaRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.batchCreateEtlMetaWithOptions(project, request, headers, runtime);
-    }
-
-    public BatchCreateEtlMetaResponse batchCreateEtlMetaWithOptions(String project, BatchCreateEtlMetaRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
-        hostMap.put("project", project);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.etlMetaList)) {
-            body.put("etlMetaList", request.etlMetaList);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("hostMap", hostMap),
-            new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "BatchCreateEtlMeta"),
-            new TeaPair("version", "2020-12-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/etlmetas"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "none")
-        ));
-        return TeaModel.toModel(this.execute(params, req, runtime), new BatchCreateEtlMetaResponse());
-    }
-
-    public BatchModifyEtlMetaStatusResponse batchModifyEtlMetaStatus(String project, BatchModifyEtlMetaStatusRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.batchModifyEtlMetaStatusWithOptions(project, request, headers, runtime);
-    }
-
-    public BatchModifyEtlMetaStatusResponse batchModifyEtlMetaStatusWithOptions(String project, BatchModifyEtlMetaStatusRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
-        hostMap.put("project", project);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
-            query.put("type", request.type);
-        }
-
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.etlMetaKeyList)) {
-            body.put("etlMetaKeyList", request.etlMetaKeyList);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.etlMetaName)) {
-            body.put("etlMetaName", request.etlMetaName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.etlMetaTag)) {
-            body.put("etlMetaTag", request.etlMetaTag);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.range)) {
-            body.put("range", request.range);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("hostMap", hostMap),
-            new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "BatchModifyEtlMetaStatus"),
-            new TeaPair("version", "2020-12-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/etlmetas"),
-            new TeaPair("method", "PUT"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "none")
-        ));
-        return TeaModel.toModel(this.execute(params, req, runtime), new BatchModifyEtlMetaStatusResponse());
-    }
-
-    public BatchUpdateEtlMetaResponse batchUpdateEtlMeta(String project, BatchUpdateEtlMetaRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.batchUpdateEtlMetaWithOptions(project, request, headers, runtime);
-    }
-
-    public BatchUpdateEtlMetaResponse batchUpdateEtlMetaWithOptions(String project, BatchUpdateEtlMetaRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
-        hostMap.put("project", project);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.etlMetaList))) {
-            body.put("etlMetaList", request.etlMetaList);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("hostMap", hostMap),
-            new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "BatchUpdateEtlMeta"),
-            new TeaPair("version", "2020-12-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/etlmetas"),
-            new TeaPair("method", "PUT"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "none")
-        ));
-        return TeaModel.toModel(this.execute(params, req, runtime), new BatchUpdateEtlMetaResponse());
-    }
-
     public CreateConsumerGroupResponse createConsumerGroup(String project, String logstore, CreateConsumerGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -236,114 +116,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "none")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new CreateDomainResponse());
-    }
-
-    public CreateEtlJobResponse createEtlJob(String project, CreateEtlJobRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.createEtlJobWithOptions(project, request, headers, runtime);
-    }
-
-    public CreateEtlJobResponse createEtlJobWithOptions(String project, CreateEtlJobRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
-        hostMap.put("project", project);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.enable)) {
-            body.put("enable", request.enable);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.etlJobName)) {
-            body.put("etlJobName", request.etlJobName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.functionConfig))) {
-            body.put("functionConfig", request.functionConfig);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.functionParameter)) {
-            body.put("functionParameter", request.functionParameter);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.logConfig))) {
-            body.put("logConfig", request.logConfig);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.sourceConfig))) {
-            body.put("sourceConfig", request.sourceConfig);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.triggerConfig))) {
-            body.put("triggerConfig", request.triggerConfig);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("hostMap", hostMap),
-            new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "CreateEtlJob"),
-            new TeaPair("version", "2020-12-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/etljobs"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "none")
-        ));
-        return TeaModel.toModel(this.execute(params, req, runtime), new CreateEtlJobResponse());
-    }
-
-    public CreateEtlMetaResponse createEtlMeta(String project, CreateEtlMetaRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.createEtlMetaWithOptions(project, request, headers, runtime);
-    }
-
-    public CreateEtlMetaResponse createEtlMetaWithOptions(String project, CreateEtlMetaRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
-        hostMap.put("project", project);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.enable)) {
-            body.put("enable", request.enable);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.etlMetaKey)) {
-            body.put("etlMetaKey", request.etlMetaKey);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.etlMetaName)) {
-            body.put("etlMetaName", request.etlMetaName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.etlMetaTag)) {
-            body.put("etlMetaTag", request.etlMetaTag);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.etlMetaValue)) {
-            body.put("etlMetaValue", request.etlMetaValue);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("hostMap", hostMap),
-            new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "CreateEtlMeta"),
-            new TeaPair("version", "2020-12-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/etlmetas"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "none")
-        ));
-        return TeaModel.toModel(this.execute(params, req, runtime), new CreateEtlMetaResponse());
     }
 
     public CreateIndexResponse createIndex(String project, String logstore, CreateIndexRequest request) throws Exception {
@@ -873,75 +645,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new DeleteDomainResponse());
     }
 
-    public DeleteEtlJobResponse deleteEtlJob(String project, String etlJobName) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deleteEtlJobWithOptions(project, etlJobName, headers, runtime);
-    }
-
-    public DeleteEtlJobResponse deleteEtlJobWithOptions(String project, String etlJobName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
-        hostMap.put("project", project);
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("hostMap", hostMap),
-            new TeaPair("headers", headers)
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DeleteEtlJob"),
-            new TeaPair("version", "2020-12-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/etljobs/" + etlJobName + ""),
-            new TeaPair("method", "DELETE"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "none")
-        ));
-        return TeaModel.toModel(this.execute(params, req, runtime), new DeleteEtlJobResponse());
-    }
-
-    public DeleteEtlMetaResponse deleteEtlMeta(String project, DeleteEtlMetaRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deleteEtlMetaWithOptions(project, request, headers, runtime);
-    }
-
-    public DeleteEtlMetaResponse deleteEtlMetaWithOptions(String project, DeleteEtlMetaRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
-        hostMap.put("project", project);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.etlMetaKey)) {
-            query.put("etlMetaKey", request.etlMetaKey);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.etlMetaName)) {
-            query.put("etlMetaName", request.etlMetaName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.etlMetaTag)) {
-            query.put("etlMetaTag", request.etlMetaTag);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("hostMap", hostMap),
-            new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DeleteEtlMeta"),
-            new TeaPair("version", "2020-12-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/etlmetas"),
-            new TeaPair("method", "DELETE"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "none")
-        ));
-        return TeaModel.toModel(this.execute(params, req, runtime), new DeleteEtlMetaResponse());
-    }
-
     public DeleteExternalStoreResponse deleteExternalStore(String project, String externalStoreName) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -1102,6 +805,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "none")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new DeleteProjectResponse());
+    }
+
+    public DeleteProjectPolicyResponse deleteProjectPolicy(String project) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteProjectPolicyWithOptions(project, headers, runtime);
+    }
+
+    public DeleteProjectPolicyResponse deleteProjectPolicyWithOptions(String project, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteProjectPolicy"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/policy"),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new DeleteProjectPolicyResponse());
     }
 
     public DeleteSavedSearchResponse deleteSavedSearch(String project, String savedsearchName) throws Exception {
@@ -1311,10 +1041,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("from", request.from);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
-            query.put("type", request.type);
-        }
-
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
@@ -1324,7 +1050,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "GetCursor"),
             new TeaPair("version", "2020-12-30"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/logstores/" + logstore + "/shards/" + shardId + ""),
+            new TeaPair("pathname", "/logstores/" + logstore + "/shards/" + shardId + "?type=cursor"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -1349,10 +1075,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("cursor", request.cursor);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
-            query.put("type", request.type);
-        }
-
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
@@ -1362,7 +1084,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "GetCursorTime"),
             new TeaPair("version", "2020-12-30"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/logstores/" + logstore + "/shards/" + shardId + ""),
+            new TeaPair("pathname", "/logstores/" + logstore + "/shards/" + shardId + "?type=cursor_time"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -1370,75 +1092,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new GetCursorTimeResponse());
-    }
-
-    public GetEtlJobResponse getEtlJob(String project, String etlJobName) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getEtlJobWithOptions(project, etlJobName, headers, runtime);
-    }
-
-    public GetEtlJobResponse getEtlJobWithOptions(String project, String etlJobName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
-        hostMap.put("project", project);
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("hostMap", hostMap),
-            new TeaPair("headers", headers)
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "GetEtlJob"),
-            new TeaPair("version", "2020-12-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/etljobs/" + etlJobName + ""),
-            new TeaPair("method", "GET"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.execute(params, req, runtime), new GetEtlJobResponse());
-    }
-
-    public GetEtlMetaResponse getEtlMeta(String project, GetEtlMetaRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getEtlMetaWithOptions(project, request, headers, runtime);
-    }
-
-    public GetEtlMetaResponse getEtlMetaWithOptions(String project, GetEtlMetaRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
-        hostMap.put("project", project);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.etlMetaKey)) {
-            query.put("etlMetaKey", request.etlMetaKey);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.etlMetaName)) {
-            query.put("etlMetaName", request.etlMetaName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.etlMetaTag)) {
-            query.put("etlMetaTag", request.etlMetaTag);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("hostMap", hostMap),
-            new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "GetEtlMeta"),
-            new TeaPair("version", "2020-12-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/etlmetas"),
-            new TeaPair("method", "GET"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.execute(params, req, runtime), new GetEtlMetaResponse());
     }
 
     public GetExternalStoreResponse getExternalStore(String project, String externalStoreName) throws Exception {
@@ -1749,6 +1402,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetProjectLogsResponse());
     }
 
+    public GetProjectPolicyResponse getProjectPolicy(String project) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getProjectPolicyWithOptions(project, headers, runtime);
+    }
+
+    public GetProjectPolicyResponse getProjectPolicyWithOptions(String project, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetProjectPolicy"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/policy"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new GetProjectPolicyResponse());
+    }
+
     public GetSavedSearchResponse getSavedSearch(String project, String savedsearchName) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -1774,33 +1454,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new GetSavedSearchResponse());
-    }
-
-    public GetShipperConfigResponse getShipperConfig(String project, String logstore, String shipperName) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getShipperConfigWithOptions(project, logstore, shipperName, headers, runtime);
-    }
-
-    public GetShipperConfigResponse getShipperConfigWithOptions(String project, String logstore, String shipperName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
-        hostMap.put("project", project);
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("hostMap", hostMap),
-            new TeaPair("headers", headers)
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "GetShipperConfig"),
-            new TeaPair("version", "2020-12-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/logstores/" + logstore + "/shipper/" + shipperName + ""),
-            new TeaPair("method", "GET"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.execute(params, req, runtime), new GetShipperConfigResponse());
     }
 
     public GetShipperStatusResponse getShipperStatus(String project, String logstore, String shipperName, GetShipperStatusRequest request) throws Exception {
@@ -1920,132 +1573,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new ListDomainsResponse());
-    }
-
-    public ListEtlJobResponse listEtlJob(String project, ListEtlJobRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.listEtlJobWithOptions(project, request, headers, runtime);
-    }
-
-    public ListEtlJobResponse listEtlJobWithOptions(String project, ListEtlJobRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
-        hostMap.put("project", project);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.offset)) {
-            query.put("offset", request.offset);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.size)) {
-            query.put("size", request.size);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("hostMap", hostMap),
-            new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ListEtlJob"),
-            new TeaPair("version", "2020-12-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/etljobs"),
-            new TeaPair("method", "GET"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.execute(params, req, runtime), new ListEtlJobResponse());
-    }
-
-    public ListEtlMetaResponse listEtlMeta(String project, ListEtlMetaRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.listEtlMetaWithOptions(project, request, headers, runtime);
-    }
-
-    public ListEtlMetaResponse listEtlMetaWithOptions(String project, ListEtlMetaRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
-        hostMap.put("project", project);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.etlMetaKey)) {
-            query.put("etlMetaKey", request.etlMetaKey);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.etlMetaName)) {
-            query.put("etlMetaName", request.etlMetaName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.etlMetaTag)) {
-            query.put("etlMetaTag", request.etlMetaTag);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.offset)) {
-            query.put("offset", request.offset);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.size)) {
-            query.put("size", request.size);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("hostMap", hostMap),
-            new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ListEtlMeta"),
-            new TeaPair("version", "2020-12-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/etlmetas"),
-            new TeaPair("method", "GET"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.execute(params, req, runtime), new ListEtlMetaResponse());
-    }
-
-    public ListEtlMetaNameResponse listEtlMetaName(String project, ListEtlMetaNameRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.listEtlMetaNameWithOptions(project, request, headers, runtime);
-    }
-
-    public ListEtlMetaNameResponse listEtlMetaNameWithOptions(String project, ListEtlMetaNameRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
-        hostMap.put("project", project);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.offset)) {
-            query.put("offset", request.offset);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.size)) {
-            query.put("size", request.size);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("hostMap", hostMap),
-            new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ListEtlMetaName"),
-            new TeaPair("version", "2020-12-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/etlmetanames"),
-            new TeaPair("method", "GET"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.execute(params, req, runtime), new ListEtlMetaNameResponse());
     }
 
     public ListExternalStoreResponse listExternalStore(String project, ListExternalStoreRequest request) throws Exception {
@@ -2400,19 +1927,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new ListTagResourcesResponse());
     }
 
-    public MergeShardsResponse mergeShards(String project, String logstore, String shardID, MergeShardsRequest request) throws Exception {
+    public PullDataResponse pullData(String project, String logstore, String shard, PullDataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.mergeShardsWithOptions(project, logstore, shardID, request, headers, runtime);
+        return this.pullDataWithOptions(project, logstore, shard, request, headers, runtime);
     }
 
-    public MergeShardsResponse mergeShardsWithOptions(String project, String logstore, String shardID, MergeShardsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public PullDataResponse pullDataWithOptions(String project, String logstore, String shard, PullDataRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("project", project);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.action)) {
-            query.put("action", request.action);
+        if (!com.aliyun.teautil.Common.isUnset(request.count)) {
+            query.put("count", request.count);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cursor)) {
+            query.put("cursor", request.cursor);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endCursor)) {
+            query.put("endCursor", request.endCursor);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -2421,17 +1956,92 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "MergeShards"),
+            new TeaPair("action", "PullData"),
             new TeaPair("version", "2020-12-30"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/logstores/" + logstore + "/shards/" + shardID + ""),
+            new TeaPair("pathname", "/logstores/" + logstore + "/shards/" + shard + "?type=log"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new PullDataResponse());
+    }
+
+    public PutProjectPolicyResponse putProjectPolicy(String project, PutProjectPolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.putProjectPolicyWithOptions(project, request, headers, runtime);
+    }
+
+    public PutProjectPolicyResponse putProjectPolicyWithOptions(String project, PutProjectPolicyRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers),
+            new TeaPair("body", request.body)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PutProjectPolicy"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/policy"),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "array")
+            new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.execute(params, req, runtime), new MergeShardsResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new PutProjectPolicyResponse());
+    }
+
+    public PutWebtrackingResponse putWebtracking(String project, String logstoreName, PutWebtrackingRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.putWebtrackingWithOptions(project, logstoreName, request, headers, runtime);
+    }
+
+    public PutWebtrackingResponse putWebtrackingWithOptions(String project, String logstoreName, PutWebtrackingRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.logs)) {
+            body.put("__logs__", request.logs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.source)) {
+            body.put("__source__", request.source);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
+            body.put("__tags__", request.tags);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topic)) {
+            body.put("__topic__", request.topic);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PutWebtracking"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/logstores/" + logstoreName + "/track"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new PutWebtrackingResponse());
     }
 
     public RemoveConfigFromMachineGroupResponse removeConfigFromMachineGroup(String project, String machineGroup, String configName) throws Exception {
@@ -2461,21 +2071,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new RemoveConfigFromMachineGroupResponse());
     }
 
-    public SplitShardResponse splitShard(String project, String logstore, String shardID, SplitShardRequest request) throws Exception {
+    public SplitShardResponse splitShard(String project, String logstore, String shard, SplitShardRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.splitShardWithOptions(project, logstore, shardID, request, headers, runtime);
+        return this.splitShardWithOptions(project, logstore, shard, request, headers, runtime);
     }
 
-    public SplitShardResponse splitShardWithOptions(String project, String logstore, String shardID, SplitShardRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public SplitShardResponse splitShardWithOptions(String project, String logstore, String shard, SplitShardRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("project", project);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.action)) {
-            query.put("action", request.action);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.key)) {
             query.put("key", request.key);
         }
@@ -2493,7 +2099,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "SplitShard"),
             new TeaPair("version", "2020-12-30"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/logstores/" + logstore + "/shards/" + shardID + ""),
+            new TeaPair("pathname", "/logstores/" + logstore + "/shards/" + shard + "?action=split"),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -2542,13 +2148,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new TagResourcesResponse());
     }
 
-    public UnTagResourcesResponse unTagResources(UnTagResourcesRequest request) throws Exception {
+    public UntagResourcesResponse untagResources(UntagResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.unTagResourcesWithOptions(request, headers, runtime);
+        return this.untagResourcesWithOptions(request, headers, runtime);
     }
 
-    public UnTagResourcesResponse unTagResourcesWithOptions(UnTagResourcesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public UntagResourcesResponse untagResourcesWithOptions(UntagResourcesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.all)) {
@@ -2572,7 +2178,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "UnTagResources"),
+            new TeaPair("action", "UntagResources"),
             new TeaPair("version", "2020-12-30"),
             new TeaPair("protocol", "HTTPS"),
             new TeaPair("pathname", "/untag"),
@@ -2580,61 +2186,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "none")
+            new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.execute(params, req, runtime), new UnTagResourcesResponse());
-    }
-
-    public UpdateCheckPointResponse updateCheckPoint(String project, String logstore, String consumerGroup, UpdateCheckPointRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.updateCheckPointWithOptions(project, logstore, consumerGroup, request, headers, runtime);
-    }
-
-    public UpdateCheckPointResponse updateCheckPointWithOptions(String project, String logstore, String consumerGroup, UpdateCheckPointRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
-        hostMap.put("project", project);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.consumer)) {
-            query.put("consumer", request.consumer);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.forceSuccess)) {
-            query.put("forceSuccess", request.forceSuccess);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
-            query.put("type", request.type);
-        }
-
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.checkpoint)) {
-            body.put("checkpoint", request.checkpoint);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.shard)) {
-            body.put("shard", request.shard);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("hostMap", hostMap),
-            new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "UpdateCheckPoint"),
-            new TeaPair("version", "2020-12-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/logstores/" + logstore + "/consumergroups/" + consumerGroup + ""),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "none")
-        ));
-        return TeaModel.toModel(this.execute(params, req, runtime), new UpdateCheckPointResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new UntagResourcesResponse());
     }
 
     public UpdateConsumerGroupResponse updateConsumerGroup(String project, String logstore, String consumerGroup, UpdateConsumerGroupRequest request) throws Exception {
@@ -2673,114 +2227,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "none")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new UpdateConsumerGroupResponse());
-    }
-
-    public UpdateEtlJobResponse updateEtlJob(String project, String etlJobName, UpdateEtlJobRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.updateEtlJobWithOptions(project, etlJobName, request, headers, runtime);
-    }
-
-    public UpdateEtlJobResponse updateEtlJobWithOptions(String project, String etlJobName, UpdateEtlJobRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
-        hostMap.put("project", project);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.enable)) {
-            body.put("enable", request.enable);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.etlJobName)) {
-            body.put("etlJobName", request.etlJobName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.functionConfig))) {
-            body.put("functionConfig", request.functionConfig);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.functionParameter)) {
-            body.put("functionParameter", request.functionParameter);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.logConfig))) {
-            body.put("logConfig", request.logConfig);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.sourceConfig))) {
-            body.put("sourceConfig", request.sourceConfig);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.triggerConfig))) {
-            body.put("triggerConfig", request.triggerConfig);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("hostMap", hostMap),
-            new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "UpdateEtlJob"),
-            new TeaPair("version", "2020-12-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/etljobs/" + etlJobName + ""),
-            new TeaPair("method", "PUT"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "none")
-        ));
-        return TeaModel.toModel(this.execute(params, req, runtime), new UpdateEtlJobResponse());
-    }
-
-    public UpdateEtlMetaResponse updateEtlMeta(String project, UpdateEtlMetaRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.updateEtlMetaWithOptions(project, request, headers, runtime);
-    }
-
-    public UpdateEtlMetaResponse updateEtlMetaWithOptions(String project, UpdateEtlMetaRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
-        hostMap.put("project", project);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.enable)) {
-            body.put("enable", request.enable);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.etlMetaKey)) {
-            body.put("etlMetaKey", request.etlMetaKey);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.etlMetaName)) {
-            body.put("etlMetaName", request.etlMetaName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.etlMetaTag)) {
-            body.put("etlMetaTag", request.etlMetaTag);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.etlMetaValue)) {
-            body.put("etlMetaValue", request.etlMetaValue);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("hostMap", hostMap),
-            new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "UpdateEtlMeta"),
-            new TeaPair("version", "2020-12-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/etlmetas"),
-            new TeaPair("method", "PUT"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "none")
-        ));
-        return TeaModel.toModel(this.execute(params, req, runtime), new UpdateEtlMetaResponse());
     }
 
     public UpdateIndexResponse updateIndex(String project, String logstore, UpdateIndexRequest request) throws Exception {
@@ -3001,6 +2447,41 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "none")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new UpdateMachineGroupResponse());
+    }
+
+    public UpdateMachineGroupMachineResponse updateMachineGroupMachine(String project, String machineGroup, UpdateMachineGroupMachineRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateMachineGroupMachineWithOptions(project, machineGroup, request, headers, runtime);
+    }
+
+    public UpdateMachineGroupMachineResponse updateMachineGroupMachineWithOptions(String project, String machineGroup, UpdateMachineGroupMachineRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.action)) {
+            query.put("action", request.action);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", request.body)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateMachineGroupMachine"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/machinegroups/" + machineGroup + "/machines"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new UpdateMachineGroupMachineResponse());
     }
 
     public UpdateOdpsShipperResponse updateOdpsShipper(String project, String logstore, String shipperName, UpdateOdpsShipperRequest request) throws Exception {
