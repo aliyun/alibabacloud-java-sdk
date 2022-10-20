@@ -3,15 +3,12 @@ package com.aliyun.eais20190624.models;
 
 import com.aliyun.tea.*;
 
-public class CreateEaiRequest extends TeaModel {
+public class CreateEaiJupyterRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
-    @NameInMap("InstanceName")
-    public String instanceName;
-
-    @NameInMap("InstanceType")
-    public String instanceType;
+    @NameInMap("EaisType")
+    public String eaisType;
 
     @NameInMap("RegionId")
     public String regionId;
@@ -22,12 +19,12 @@ public class CreateEaiRequest extends TeaModel {
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
-    public static CreateEaiRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateEaiRequest self = new CreateEaiRequest();
+    public static CreateEaiJupyterRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateEaiJupyterRequest self = new CreateEaiJupyterRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateEaiRequest setClientToken(String clientToken) {
+    public CreateEaiJupyterRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
@@ -35,23 +32,15 @@ public class CreateEaiRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public CreateEaiRequest setInstanceName(String instanceName) {
-        this.instanceName = instanceName;
+    public CreateEaiJupyterRequest setEaisType(String eaisType) {
+        this.eaisType = eaisType;
         return this;
     }
-    public String getInstanceName() {
-        return this.instanceName;
+    public String getEaisType() {
+        return this.eaisType;
     }
 
-    public CreateEaiRequest setInstanceType(String instanceType) {
-        this.instanceType = instanceType;
-        return this;
-    }
-    public String getInstanceType() {
-        return this.instanceType;
-    }
-
-    public CreateEaiRequest setRegionId(String regionId) {
+    public CreateEaiJupyterRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -59,7 +48,7 @@ public class CreateEaiRequest extends TeaModel {
         return this.regionId;
     }
 
-    public CreateEaiRequest setSecurityGroupId(String securityGroupId) {
+    public CreateEaiJupyterRequest setSecurityGroupId(String securityGroupId) {
         this.securityGroupId = securityGroupId;
         return this;
     }
@@ -67,7 +56,7 @@ public class CreateEaiRequest extends TeaModel {
         return this.securityGroupId;
     }
 
-    public CreateEaiRequest setVSwitchId(String vSwitchId) {
+    public CreateEaiJupyterRequest setVSwitchId(String vSwitchId) {
         this.vSwitchId = vSwitchId;
         return this;
     }

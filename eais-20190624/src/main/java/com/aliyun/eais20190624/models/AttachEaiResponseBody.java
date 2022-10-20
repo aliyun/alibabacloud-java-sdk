@@ -4,26 +4,26 @@ package com.aliyun.eais20190624.models;
 import com.aliyun.tea.*;
 
 public class AttachEaiResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("ClientInstanceId")
+    public String clientInstanceId;
 
     @NameInMap("ElasticAcceleratedInstanceId")
     public String elasticAcceleratedInstanceId;
 
-    @NameInMap("ClientInstanceId")
-    public String clientInstanceId;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static AttachEaiResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AttachEaiResponseBody self = new AttachEaiResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public AttachEaiResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public AttachEaiResponseBody setClientInstanceId(String clientInstanceId) {
+        this.clientInstanceId = clientInstanceId;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public String getClientInstanceId() {
+        return this.clientInstanceId;
     }
 
     public AttachEaiResponseBody setElasticAcceleratedInstanceId(String elasticAcceleratedInstanceId) {
@@ -34,12 +34,12 @@ public class AttachEaiResponseBody extends TeaModel {
         return this.elasticAcceleratedInstanceId;
     }
 
-    public AttachEaiResponseBody setClientInstanceId(String clientInstanceId) {
-        this.clientInstanceId = clientInstanceId;
+    public AttachEaiResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getClientInstanceId() {
-        return this.clientInstanceId;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

@@ -4,8 +4,8 @@ package com.aliyun.eais20190624.models;
 import com.aliyun.tea.*;
 
 public class DescribeEaisResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Instances")
+    public DescribeEaisResponseBodyInstances instances;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -13,23 +13,23 @@ public class DescribeEaisResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("TotalCount")
     public Integer totalCount;
-
-    @NameInMap("Instances")
-    public DescribeEaisResponseBodyInstances instances;
 
     public static DescribeEaisResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeEaisResponseBody self = new DescribeEaisResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeEaisResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeEaisResponseBody setInstances(DescribeEaisResponseBodyInstances instances) {
+        this.instances = instances;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public DescribeEaisResponseBodyInstances getInstances() {
+        return this.instances;
     }
 
     public DescribeEaisResponseBody setPageNumber(Integer pageNumber) {
@@ -48,20 +48,20 @@ public class DescribeEaisResponseBody extends TeaModel {
         return this.pageSize;
     }
 
+    public DescribeEaisResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public DescribeEaisResponseBody setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     public Integer getTotalCount() {
         return this.totalCount;
-    }
-
-    public DescribeEaisResponseBody setInstances(DescribeEaisResponseBodyInstances instances) {
-        this.instances = instances;
-        return this;
-    }
-    public DescribeEaisResponseBodyInstances getInstances() {
-        return this.instances;
     }
 
     public static class DescribeEaisResponseBodyInstancesInstanceTagsTag extends TeaModel {
@@ -114,14 +114,20 @@ public class DescribeEaisResponseBody extends TeaModel {
     }
 
     public static class DescribeEaisResponseBodyInstancesInstance extends TeaModel {
-        @NameInMap("Status")
-        public String status;
+        @NameInMap("Category")
+        public String category;
 
-        @NameInMap("CreationTime")
-        public String creationTime;
+        @NameInMap("ClientInstanceId")
+        public String clientInstanceId;
 
         @NameInMap("ClientInstanceName")
         public String clientInstanceName;
+
+        @NameInMap("ClientInstanceType")
+        public String clientInstanceType;
+
+        @NameInMap("CreationTime")
+        public String creationTime;
 
         @NameInMap("Description")
         public String description;
@@ -132,43 +138,49 @@ public class DescribeEaisResponseBody extends TeaModel {
         @NameInMap("InstanceName")
         public String instanceName;
 
-        @NameInMap("ClientInstanceType")
-        public String clientInstanceType;
-
-        @NameInMap("ClientInstanceId")
-        public String clientInstanceId;
-
-        @NameInMap("ZoneId")
-        public String zoneId;
-
         @NameInMap("InstanceType")
         public String instanceType;
+
+        @NameInMap("JupyterUrl")
+        public String jupyterUrl;
 
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("SecurityGroupId")
+        public String securityGroupId;
+
+        @NameInMap("Status")
+        public String status;
+
         @NameInMap("Tags")
         public DescribeEaisResponseBodyInstancesInstanceTags tags;
+
+        @NameInMap("VSwitchId")
+        public String vSwitchId;
+
+        @NameInMap("ZoneId")
+        public String zoneId;
 
         public static DescribeEaisResponseBodyInstancesInstance build(java.util.Map<String, ?> map) throws Exception {
             DescribeEaisResponseBodyInstancesInstance self = new DescribeEaisResponseBodyInstancesInstance();
             return TeaModel.build(map, self);
         }
 
-        public DescribeEaisResponseBodyInstancesInstance setStatus(String status) {
-            this.status = status;
+        public DescribeEaisResponseBodyInstancesInstance setCategory(String category) {
+            this.category = category;
             return this;
         }
-        public String getStatus() {
-            return this.status;
+        public String getCategory() {
+            return this.category;
         }
 
-        public DescribeEaisResponseBodyInstancesInstance setCreationTime(String creationTime) {
-            this.creationTime = creationTime;
+        public DescribeEaisResponseBodyInstancesInstance setClientInstanceId(String clientInstanceId) {
+            this.clientInstanceId = clientInstanceId;
             return this;
         }
-        public String getCreationTime() {
-            return this.creationTime;
+        public String getClientInstanceId() {
+            return this.clientInstanceId;
         }
 
         public DescribeEaisResponseBodyInstancesInstance setClientInstanceName(String clientInstanceName) {
@@ -177,6 +189,22 @@ public class DescribeEaisResponseBody extends TeaModel {
         }
         public String getClientInstanceName() {
             return this.clientInstanceName;
+        }
+
+        public DescribeEaisResponseBodyInstancesInstance setClientInstanceType(String clientInstanceType) {
+            this.clientInstanceType = clientInstanceType;
+            return this;
+        }
+        public String getClientInstanceType() {
+            return this.clientInstanceType;
+        }
+
+        public DescribeEaisResponseBodyInstancesInstance setCreationTime(String creationTime) {
+            this.creationTime = creationTime;
+            return this;
+        }
+        public String getCreationTime() {
+            return this.creationTime;
         }
 
         public DescribeEaisResponseBodyInstancesInstance setDescription(String description) {
@@ -203,36 +231,20 @@ public class DescribeEaisResponseBody extends TeaModel {
             return this.instanceName;
         }
 
-        public DescribeEaisResponseBodyInstancesInstance setClientInstanceType(String clientInstanceType) {
-            this.clientInstanceType = clientInstanceType;
-            return this;
-        }
-        public String getClientInstanceType() {
-            return this.clientInstanceType;
-        }
-
-        public DescribeEaisResponseBodyInstancesInstance setClientInstanceId(String clientInstanceId) {
-            this.clientInstanceId = clientInstanceId;
-            return this;
-        }
-        public String getClientInstanceId() {
-            return this.clientInstanceId;
-        }
-
-        public DescribeEaisResponseBodyInstancesInstance setZoneId(String zoneId) {
-            this.zoneId = zoneId;
-            return this;
-        }
-        public String getZoneId() {
-            return this.zoneId;
-        }
-
         public DescribeEaisResponseBodyInstancesInstance setInstanceType(String instanceType) {
             this.instanceType = instanceType;
             return this;
         }
         public String getInstanceType() {
             return this.instanceType;
+        }
+
+        public DescribeEaisResponseBodyInstancesInstance setJupyterUrl(String jupyterUrl) {
+            this.jupyterUrl = jupyterUrl;
+            return this;
+        }
+        public String getJupyterUrl() {
+            return this.jupyterUrl;
         }
 
         public DescribeEaisResponseBodyInstancesInstance setRegionId(String regionId) {
@@ -243,12 +255,44 @@ public class DescribeEaisResponseBody extends TeaModel {
             return this.regionId;
         }
 
+        public DescribeEaisResponseBodyInstancesInstance setSecurityGroupId(String securityGroupId) {
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        public DescribeEaisResponseBodyInstancesInstance setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
         public DescribeEaisResponseBodyInstancesInstance setTags(DescribeEaisResponseBodyInstancesInstanceTags tags) {
             this.tags = tags;
             return this;
         }
         public DescribeEaisResponseBodyInstancesInstanceTags getTags() {
             return this.tags;
+        }
+
+        public DescribeEaisResponseBodyInstancesInstance setVSwitchId(String vSwitchId) {
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        public DescribeEaisResponseBodyInstancesInstance setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
         }
 
     }
