@@ -8,7 +8,7 @@ public class CarApplyQueryResponseBody extends TeaModel {
     public java.util.List<CarApplyQueryResponseBodyApplyList> applyList;
 
     @NameInMap("code")
-    public Integer code;
+    public String code;
 
     @NameInMap("message")
     public String message;
@@ -38,11 +38,11 @@ public class CarApplyQueryResponseBody extends TeaModel {
         return this.applyList;
     }
 
-    public CarApplyQueryResponseBody setCode(Integer code) {
+    public CarApplyQueryResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
-    public Integer getCode() {
+    public String getCode() {
         return this.code;
     }
 
