@@ -8,7 +8,7 @@ public class GetRuleByIdResponseBody extends TeaModel {
     public String code;
 
     @NameInMap("Data")
-    public String data;
+    public RulesInfo data;
 
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
@@ -17,7 +17,7 @@ public class GetRuleByIdResponseBody extends TeaModel {
     public String message;
 
     @NameInMap("Messages")
-    public GetRuleByIdResponseBodyMessages messages;
+    public java.util.List<String> messages;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -38,11 +38,11 @@ public class GetRuleByIdResponseBody extends TeaModel {
         return this.code;
     }
 
-    public GetRuleByIdResponseBody setData(String data) {
+    public GetRuleByIdResponseBody setData(RulesInfo data) {
         this.data = data;
         return this;
     }
-    public String getData() {
+    public RulesInfo getData() {
         return this.data;
     }
 
@@ -62,11 +62,11 @@ public class GetRuleByIdResponseBody extends TeaModel {
         return this.message;
     }
 
-    public GetRuleByIdResponseBody setMessages(GetRuleByIdResponseBodyMessages messages) {
+    public GetRuleByIdResponseBody setMessages(java.util.List<String> messages) {
         this.messages = messages;
         return this;
     }
-    public GetRuleByIdResponseBodyMessages getMessages() {
+    public java.util.List<String> getMessages() {
         return this.messages;
     }
 
@@ -84,25 +84,6 @@ public class GetRuleByIdResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public static class GetRuleByIdResponseBodyMessages extends TeaModel {
-        @NameInMap("Message")
-        public java.util.List<String> message;
-
-        public static GetRuleByIdResponseBodyMessages build(java.util.Map<String, ?> map) throws Exception {
-            GetRuleByIdResponseBodyMessages self = new GetRuleByIdResponseBodyMessages();
-            return TeaModel.build(map, self);
-        }
-
-        public GetRuleByIdResponseBodyMessages setMessage(java.util.List<String> message) {
-            this.message = message;
-            return this;
-        }
-        public java.util.List<String> getMessage() {
-            return this.message;
-        }
-
     }
 
 }
