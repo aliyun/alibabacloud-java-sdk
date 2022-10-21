@@ -17,7 +17,7 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
     public String message;
 
     @NameInMap("Messages")
-    public GetQualityCheckSchemeResponseBodyMessages messages;
+    public java.util.List<String> messages;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -62,11 +62,11 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
         return this.message;
     }
 
-    public GetQualityCheckSchemeResponseBody setMessages(GetQualityCheckSchemeResponseBodyMessages messages) {
+    public GetQualityCheckSchemeResponseBody setMessages(java.util.List<String> messages) {
         this.messages = messages;
         return this;
     }
-    public GetQualityCheckSchemeResponseBodyMessages getMessages() {
+    public java.util.List<String> getMessages() {
         return this.messages;
     }
 
@@ -86,45 +86,7 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class GetQualityCheckSchemeResponseBodyDataRuleIds extends TeaModel {
-        @NameInMap("RuleId")
-        public java.util.List<String> ruleId;
-
-        public static GetQualityCheckSchemeResponseBodyDataRuleIds build(java.util.Map<String, ?> map) throws Exception {
-            GetQualityCheckSchemeResponseBodyDataRuleIds self = new GetQualityCheckSchemeResponseBodyDataRuleIds();
-            return TeaModel.build(map, self);
-        }
-
-        public GetQualityCheckSchemeResponseBodyDataRuleIds setRuleId(java.util.List<String> ruleId) {
-            this.ruleId = ruleId;
-            return this;
-        }
-        public java.util.List<String> getRuleId() {
-            return this.ruleId;
-        }
-
-    }
-
-    public static class GetQualityCheckSchemeResponseBodyDataRuleList extends TeaModel {
-        @NameInMap("RuleList")
-        public java.util.List<String> ruleList;
-
-        public static GetQualityCheckSchemeResponseBodyDataRuleList build(java.util.Map<String, ?> map) throws Exception {
-            GetQualityCheckSchemeResponseBodyDataRuleList self = new GetQualityCheckSchemeResponseBodyDataRuleList();
-            return TeaModel.build(map, self);
-        }
-
-        public GetQualityCheckSchemeResponseBodyDataRuleList setRuleList(java.util.List<String> ruleList) {
-            this.ruleList = ruleList;
-            return this;
-        }
-        public java.util.List<String> getRuleList() {
-            return this.ruleList;
-        }
-
-    }
-
-    public static class GetQualityCheckSchemeResponseBodyDataSchemeCheckTypeListSchemeCheckTypeList extends TeaModel {
+    public static class GetQualityCheckSchemeResponseBodyDataSchemeCheckTypeList extends TeaModel {
         @NameInMap("CheckName")
         public String checkName;
 
@@ -143,12 +105,12 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
         @NameInMap("SourceScore")
         public Integer sourceScore;
 
-        public static GetQualityCheckSchemeResponseBodyDataSchemeCheckTypeListSchemeCheckTypeList build(java.util.Map<String, ?> map) throws Exception {
-            GetQualityCheckSchemeResponseBodyDataSchemeCheckTypeListSchemeCheckTypeList self = new GetQualityCheckSchemeResponseBodyDataSchemeCheckTypeListSchemeCheckTypeList();
+        public static GetQualityCheckSchemeResponseBodyDataSchemeCheckTypeList build(java.util.Map<String, ?> map) throws Exception {
+            GetQualityCheckSchemeResponseBodyDataSchemeCheckTypeList self = new GetQualityCheckSchemeResponseBodyDataSchemeCheckTypeList();
             return TeaModel.build(map, self);
         }
 
-        public GetQualityCheckSchemeResponseBodyDataSchemeCheckTypeListSchemeCheckTypeList setCheckName(String checkName) {
+        public GetQualityCheckSchemeResponseBodyDataSchemeCheckTypeList setCheckName(String checkName) {
             this.checkName = checkName;
             return this;
         }
@@ -156,7 +118,7 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
             return this.checkName;
         }
 
-        public GetQualityCheckSchemeResponseBodyDataSchemeCheckTypeListSchemeCheckTypeList setCheckType(Long checkType) {
+        public GetQualityCheckSchemeResponseBodyDataSchemeCheckTypeList setCheckType(Long checkType) {
             this.checkType = checkType;
             return this;
         }
@@ -164,7 +126,7 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
             return this.checkType;
         }
 
-        public GetQualityCheckSchemeResponseBodyDataSchemeCheckTypeListSchemeCheckTypeList setEnable(Integer enable) {
+        public GetQualityCheckSchemeResponseBodyDataSchemeCheckTypeList setEnable(Integer enable) {
             this.enable = enable;
             return this;
         }
@@ -172,7 +134,7 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
             return this.enable;
         }
 
-        public GetQualityCheckSchemeResponseBodyDataSchemeCheckTypeListSchemeCheckTypeList setSchemeId(Long schemeId) {
+        public GetQualityCheckSchemeResponseBodyDataSchemeCheckTypeList setSchemeId(Long schemeId) {
             this.schemeId = schemeId;
             return this;
         }
@@ -180,7 +142,7 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
             return this.schemeId;
         }
 
-        public GetQualityCheckSchemeResponseBodyDataSchemeCheckTypeListSchemeCheckTypeList setScore(Integer score) {
+        public GetQualityCheckSchemeResponseBodyDataSchemeCheckTypeList setScore(Integer score) {
             this.score = score;
             return this;
         }
@@ -188,31 +150,12 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
             return this.score;
         }
 
-        public GetQualityCheckSchemeResponseBodyDataSchemeCheckTypeListSchemeCheckTypeList setSourceScore(Integer sourceScore) {
+        public GetQualityCheckSchemeResponseBodyDataSchemeCheckTypeList setSourceScore(Integer sourceScore) {
             this.sourceScore = sourceScore;
             return this;
         }
         public Integer getSourceScore() {
             return this.sourceScore;
-        }
-
-    }
-
-    public static class GetQualityCheckSchemeResponseBodyDataSchemeCheckTypeList extends TeaModel {
-        @NameInMap("SchemeCheckTypeList")
-        public java.util.List<GetQualityCheckSchemeResponseBodyDataSchemeCheckTypeListSchemeCheckTypeList> schemeCheckTypeList;
-
-        public static GetQualityCheckSchemeResponseBodyDataSchemeCheckTypeList build(java.util.Map<String, ?> map) throws Exception {
-            GetQualityCheckSchemeResponseBodyDataSchemeCheckTypeList self = new GetQualityCheckSchemeResponseBodyDataSchemeCheckTypeList();
-            return TeaModel.build(map, self);
-        }
-
-        public GetQualityCheckSchemeResponseBodyDataSchemeCheckTypeList setSchemeCheckTypeList(java.util.List<GetQualityCheckSchemeResponseBodyDataSchemeCheckTypeListSchemeCheckTypeList> schemeCheckTypeList) {
-            this.schemeCheckTypeList = schemeCheckTypeList;
-            return this;
-        }
-        public java.util.List<GetQualityCheckSchemeResponseBodyDataSchemeCheckTypeListSchemeCheckTypeList> getSchemeCheckTypeList() {
-            return this.schemeCheckTypeList;
         }
 
     }
@@ -233,17 +176,14 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
-        @NameInMap("PublishContent")
-        public String publishContent;
-
         @NameInMap("RuleIds")
-        public GetQualityCheckSchemeResponseBodyDataRuleIds ruleIds;
+        public java.util.List<String> ruleIds;
 
         @NameInMap("RuleList")
-        public GetQualityCheckSchemeResponseBodyDataRuleList ruleList;
+        public java.util.List<RulesInfo> ruleList;
 
         @NameInMap("SchemeCheckTypeList")
-        public GetQualityCheckSchemeResponseBodyDataSchemeCheckTypeList schemeCheckTypeList;
+        public java.util.List<GetQualityCheckSchemeResponseBodyDataSchemeCheckTypeList> schemeCheckTypeList;
 
         @NameInMap("SchemeId")
         public Long schemeId;
@@ -314,35 +254,27 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
             return this.name;
         }
 
-        public GetQualityCheckSchemeResponseBodyData setPublishContent(String publishContent) {
-            this.publishContent = publishContent;
-            return this;
-        }
-        public String getPublishContent() {
-            return this.publishContent;
-        }
-
-        public GetQualityCheckSchemeResponseBodyData setRuleIds(GetQualityCheckSchemeResponseBodyDataRuleIds ruleIds) {
+        public GetQualityCheckSchemeResponseBodyData setRuleIds(java.util.List<String> ruleIds) {
             this.ruleIds = ruleIds;
             return this;
         }
-        public GetQualityCheckSchemeResponseBodyDataRuleIds getRuleIds() {
+        public java.util.List<String> getRuleIds() {
             return this.ruleIds;
         }
 
-        public GetQualityCheckSchemeResponseBodyData setRuleList(GetQualityCheckSchemeResponseBodyDataRuleList ruleList) {
+        public GetQualityCheckSchemeResponseBodyData setRuleList(java.util.List<RulesInfo> ruleList) {
             this.ruleList = ruleList;
             return this;
         }
-        public GetQualityCheckSchemeResponseBodyDataRuleList getRuleList() {
+        public java.util.List<RulesInfo> getRuleList() {
             return this.ruleList;
         }
 
-        public GetQualityCheckSchemeResponseBodyData setSchemeCheckTypeList(GetQualityCheckSchemeResponseBodyDataSchemeCheckTypeList schemeCheckTypeList) {
+        public GetQualityCheckSchemeResponseBodyData setSchemeCheckTypeList(java.util.List<GetQualityCheckSchemeResponseBodyDataSchemeCheckTypeList> schemeCheckTypeList) {
             this.schemeCheckTypeList = schemeCheckTypeList;
             return this;
         }
-        public GetQualityCheckSchemeResponseBodyDataSchemeCheckTypeList getSchemeCheckTypeList() {
+        public java.util.List<GetQualityCheckSchemeResponseBodyDataSchemeCheckTypeList> getSchemeCheckTypeList() {
             return this.schemeCheckTypeList;
         }
 
@@ -408,25 +340,6 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
         }
         public Long getVersion() {
             return this.version;
-        }
-
-    }
-
-    public static class GetQualityCheckSchemeResponseBodyMessages extends TeaModel {
-        @NameInMap("Message")
-        public java.util.List<String> message;
-
-        public static GetQualityCheckSchemeResponseBodyMessages build(java.util.Map<String, ?> map) throws Exception {
-            GetQualityCheckSchemeResponseBodyMessages self = new GetQualityCheckSchemeResponseBodyMessages();
-            return TeaModel.build(map, self);
-        }
-
-        public GetQualityCheckSchemeResponseBodyMessages setMessage(java.util.List<String> message) {
-            this.message = message;
-            return this;
-        }
-        public java.util.List<String> getMessage() {
-            return this.message;
         }
 
     }
