@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ProjectAddResponseBody extends TeaModel {
     @NameInMap("code")
-    public Integer code;
+    public String code;
 
     @NameInMap("message")
     public String message;
@@ -30,11 +30,11 @@ public class ProjectAddResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ProjectAddResponseBody setCode(Integer code) {
+    public ProjectAddResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
-    public Integer getCode() {
+    public String getCode() {
         return this.code;
     }
 

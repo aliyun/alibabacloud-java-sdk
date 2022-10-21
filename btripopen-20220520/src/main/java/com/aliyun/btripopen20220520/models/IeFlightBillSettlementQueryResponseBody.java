@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
     @NameInMap("code")
-    public Integer code;
+    public String code;
 
     @NameInMap("message")
     public String message;
@@ -30,11 +30,11 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public IeFlightBillSettlementQueryResponseBody setCode(Integer code) {
+    public IeFlightBillSettlementQueryResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
-    public Integer getCode() {
+    public String getCode() {
         return this.code;
     }
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AirportSearchResponseBody extends TeaModel {
     @NameInMap("code")
-    public Integer code;
+    public String code;
 
     @NameInMap("message")
     public String message;
@@ -27,11 +27,11 @@ public class AirportSearchResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public AirportSearchResponseBody setCode(Integer code) {
+    public AirportSearchResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
-    public Integer getCode() {
+    public String getCode() {
         return this.code;
     }
 
