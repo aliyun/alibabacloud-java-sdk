@@ -4,23 +4,15 @@ package com.aliyun.imgsearch20200320.models;
 import com.aliyun.tea.*;
 
 public class ListImagesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public ListImagesResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ListImagesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListImagesResponseBody self = new ListImagesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListImagesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListImagesResponseBody setData(ListImagesResponseBodyData data) {
@@ -31,33 +23,33 @@ public class ListImagesResponseBody extends TeaModel {
         return this.data;
     }
 
-    public static class ListImagesResponseBodyDataImageList extends TeaModel {
-        @NameInMap("EntityId")
-        public String entityId;
+    public ListImagesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class ListImagesResponseBodyDataImageList extends TeaModel {
         @NameInMap("CreatedAt")
         public Long createdAt;
-
-        @NameInMap("UpdatedAt")
-        public Long updatedAt;
 
         @NameInMap("DataId")
         public String dataId;
 
+        @NameInMap("EntityId")
+        public String entityId;
+
         @NameInMap("ExtraData")
         public String extraData;
+
+        @NameInMap("UpdatedAt")
+        public Long updatedAt;
 
         public static ListImagesResponseBodyDataImageList build(java.util.Map<String, ?> map) throws Exception {
             ListImagesResponseBodyDataImageList self = new ListImagesResponseBodyDataImageList();
             return TeaModel.build(map, self);
-        }
-
-        public ListImagesResponseBodyDataImageList setEntityId(String entityId) {
-            this.entityId = entityId;
-            return this;
-        }
-        public String getEntityId() {
-            return this.entityId;
         }
 
         public ListImagesResponseBodyDataImageList setCreatedAt(Long createdAt) {
@@ -68,14 +60,6 @@ public class ListImagesResponseBody extends TeaModel {
             return this.createdAt;
         }
 
-        public ListImagesResponseBodyDataImageList setUpdatedAt(Long updatedAt) {
-            this.updatedAt = updatedAt;
-            return this;
-        }
-        public Long getUpdatedAt() {
-            return this.updatedAt;
-        }
-
         public ListImagesResponseBodyDataImageList setDataId(String dataId) {
             this.dataId = dataId;
             return this;
@@ -84,12 +68,28 @@ public class ListImagesResponseBody extends TeaModel {
             return this.dataId;
         }
 
+        public ListImagesResponseBodyDataImageList setEntityId(String entityId) {
+            this.entityId = entityId;
+            return this;
+        }
+        public String getEntityId() {
+            return this.entityId;
+        }
+
         public ListImagesResponseBodyDataImageList setExtraData(String extraData) {
             this.extraData = extraData;
             return this;
         }
         public String getExtraData() {
             return this.extraData;
+        }
+
+        public ListImagesResponseBodyDataImageList setUpdatedAt(Long updatedAt) {
+            this.updatedAt = updatedAt;
+            return this;
+        }
+        public Long getUpdatedAt() {
+            return this.updatedAt;
         }
 
     }

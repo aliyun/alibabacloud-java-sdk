@@ -4,30 +4,21 @@ package com.aliyun.imgsearch20200320.models;
 import com.aliyun.tea.*;
 
 public class AddImageAdvanceRequest extends TeaModel {
-    @NameInMap("ImageUrlObject")
-    @Validation(required = true)
-    public java.io.InputStream imageUrlObject;
-
     @NameInMap("DbName")
     public String dbName;
-
-    @NameInMap("ExtraData")
-    public String extraData;
 
     @NameInMap("EntityId")
     public String entityId;
 
+    @NameInMap("ExtraData")
+    public String extraData;
+
+    @NameInMap("ImageUrl")
+    public java.io.InputStream imageUrlObject;
+
     public static AddImageAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         AddImageAdvanceRequest self = new AddImageAdvanceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public AddImageAdvanceRequest setImageUrlObject(java.io.InputStream imageUrlObject) {
-        this.imageUrlObject = imageUrlObject;
-        return this;
-    }
-    public java.io.InputStream getImageUrlObject() {
-        return this.imageUrlObject;
     }
 
     public AddImageAdvanceRequest setDbName(String dbName) {
@@ -38,6 +29,14 @@ public class AddImageAdvanceRequest extends TeaModel {
         return this.dbName;
     }
 
+    public AddImageAdvanceRequest setEntityId(String entityId) {
+        this.entityId = entityId;
+        return this;
+    }
+    public String getEntityId() {
+        return this.entityId;
+    }
+
     public AddImageAdvanceRequest setExtraData(String extraData) {
         this.extraData = extraData;
         return this;
@@ -46,12 +45,12 @@ public class AddImageAdvanceRequest extends TeaModel {
         return this.extraData;
     }
 
-    public AddImageAdvanceRequest setEntityId(String entityId) {
-        this.entityId = entityId;
+    public AddImageAdvanceRequest setImageUrlObject(java.io.InputStream imageUrlObject) {
+        this.imageUrlObject = imageUrlObject;
         return this;
     }
-    public String getEntityId() {
-        return this.entityId;
+    public java.io.InputStream getImageUrlObject() {
+        return this.imageUrlObject;
     }
 
 }

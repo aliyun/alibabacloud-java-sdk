@@ -7,14 +7,14 @@ public class AddImageRequest extends TeaModel {
     @NameInMap("DbName")
     public String dbName;
 
-    @NameInMap("ImageUrl")
-    public String imageUrl;
+    @NameInMap("EntityId")
+    public String entityId;
 
     @NameInMap("ExtraData")
     public String extraData;
 
-    @NameInMap("EntityId")
-    public String entityId;
+    @NameInMap("ImageUrl")
+    public String imageUrl;
 
     public static AddImageRequest build(java.util.Map<String, ?> map) throws Exception {
         AddImageRequest self = new AddImageRequest();
@@ -29,12 +29,12 @@ public class AddImageRequest extends TeaModel {
         return this.dbName;
     }
 
-    public AddImageRequest setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
+    public AddImageRequest setEntityId(String entityId) {
+        this.entityId = entityId;
         return this;
     }
-    public String getImageUrl() {
-        return this.imageUrl;
+    public String getEntityId() {
+        return this.entityId;
     }
 
     public AddImageRequest setExtraData(String extraData) {
@@ -45,12 +45,12 @@ public class AddImageRequest extends TeaModel {
         return this.extraData;
     }
 
-    public AddImageRequest setEntityId(String entityId) {
-        this.entityId = entityId;
+    public AddImageRequest setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
         return this;
     }
-    public String getEntityId() {
-        return this.entityId;
+    public String getImageUrl() {
+        return this.imageUrl;
     }
 
 }

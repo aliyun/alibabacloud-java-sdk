@@ -4,23 +4,15 @@ package com.aliyun.imgsearch20200320.models;
 import com.aliyun.tea.*;
 
 public class ListImageDbsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public ListImageDbsResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ListImageDbsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListImageDbsResponseBody self = new ListImageDbsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListImageDbsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListImageDbsResponseBody setData(ListImageDbsResponseBodyData data) {
@@ -29,6 +21,14 @@ public class ListImageDbsResponseBody extends TeaModel {
     }
     public ListImageDbsResponseBodyData getData() {
         return this.data;
+    }
+
+    public ListImageDbsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class ListImageDbsResponseBodyDataDbList extends TeaModel {
