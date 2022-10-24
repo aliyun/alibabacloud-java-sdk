@@ -7,20 +7,20 @@ public class ListImagesRequest extends TeaModel {
     @NameInMap("DbName")
     public String dbName;
 
-    @NameInMap("Token")
-    public String token;
-
-    @NameInMap("Offset")
-    public Integer offset;
+    @NameInMap("EntityIdPrefix")
+    public String entityIdPrefix;
 
     @NameInMap("Limit")
     public Integer limit;
 
+    @NameInMap("Offset")
+    public Integer offset;
+
     @NameInMap("Order")
     public String order;
 
-    @NameInMap("EntityIdPrefix")
-    public String entityIdPrefix;
+    @NameInMap("Token")
+    public String token;
 
     public static ListImagesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListImagesRequest self = new ListImagesRequest();
@@ -35,20 +35,12 @@ public class ListImagesRequest extends TeaModel {
         return this.dbName;
     }
 
-    public ListImagesRequest setToken(String token) {
-        this.token = token;
+    public ListImagesRequest setEntityIdPrefix(String entityIdPrefix) {
+        this.entityIdPrefix = entityIdPrefix;
         return this;
     }
-    public String getToken() {
-        return this.token;
-    }
-
-    public ListImagesRequest setOffset(Integer offset) {
-        this.offset = offset;
-        return this;
-    }
-    public Integer getOffset() {
-        return this.offset;
+    public String getEntityIdPrefix() {
+        return this.entityIdPrefix;
     }
 
     public ListImagesRequest setLimit(Integer limit) {
@@ -59,6 +51,14 @@ public class ListImagesRequest extends TeaModel {
         return this.limit;
     }
 
+    public ListImagesRequest setOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    public Integer getOffset() {
+        return this.offset;
+    }
+
     public ListImagesRequest setOrder(String order) {
         this.order = order;
         return this;
@@ -67,12 +67,12 @@ public class ListImagesRequest extends TeaModel {
         return this.order;
     }
 
-    public ListImagesRequest setEntityIdPrefix(String entityIdPrefix) {
-        this.entityIdPrefix = entityIdPrefix;
+    public ListImagesRequest setToken(String token) {
+        this.token = token;
         return this;
     }
-    public String getEntityIdPrefix() {
-        return this.entityIdPrefix;
+    public String getToken() {
+        return this.token;
     }
 
 }
