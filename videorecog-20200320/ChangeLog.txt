@@ -1,3 +1,6 @@
+2022-10-24 Version: 1.0.4
+- Update RecognizeVideoCastCrewList.
+
 2022-10-17 Version: 1.0.3
 - Update RecognizeVideoCastCrewList.
 
