@@ -4,23 +4,15 @@ package com.aliyun.imageaudit20191230.models;
 import com.aliyun.tea.*;
 
 public class ScanImageResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public ScanImageResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ScanImageResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ScanImageResponseBody self = new ScanImageResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ScanImageResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ScanImageResponseBody setData(ScanImageResponseBodyData data) {
@@ -31,38 +23,27 @@ public class ScanImageResponseBody extends TeaModel {
         return this.data;
     }
 
-    public static class ScanImageResponseBodyDataResultsSubResultsSfaceDataListFaces extends TeaModel {
-        @NameInMap("Name")
-        public String name;
+    public ScanImageResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
-        @NameInMap("Id")
-        public String id;
-
+    public static class ScanImageResponseBodyDataResultsSubResultsFrames extends TeaModel {
         @NameInMap("Rate")
         public Float rate;
 
-        public static ScanImageResponseBodyDataResultsSubResultsSfaceDataListFaces build(java.util.Map<String, ?> map) throws Exception {
-            ScanImageResponseBodyDataResultsSubResultsSfaceDataListFaces self = new ScanImageResponseBodyDataResultsSubResultsSfaceDataListFaces();
+        @NameInMap("URL")
+        public String URL;
+
+        public static ScanImageResponseBodyDataResultsSubResultsFrames build(java.util.Map<String, ?> map) throws Exception {
+            ScanImageResponseBodyDataResultsSubResultsFrames self = new ScanImageResponseBodyDataResultsSubResultsFrames();
             return TeaModel.build(map, self);
         }
 
-        public ScanImageResponseBodyDataResultsSubResultsSfaceDataListFaces setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public ScanImageResponseBodyDataResultsSubResultsSfaceDataListFaces setId(String id) {
-            this.id = id;
-            return this;
-        }
-        public String getId() {
-            return this.id;
-        }
-
-        public ScanImageResponseBodyDataResultsSubResultsSfaceDataListFaces setRate(Float rate) {
+        public ScanImageResponseBodyDataResultsSubResultsFrames setRate(Float rate) {
             this.rate = rate;
             return this;
         }
@@ -70,67 +51,12 @@ public class ScanImageResponseBody extends TeaModel {
             return this.rate;
         }
 
-    }
-
-    public static class ScanImageResponseBodyDataResultsSubResultsSfaceDataList extends TeaModel {
-        @NameInMap("Width")
-        public Float width;
-
-        @NameInMap("Faces")
-        public java.util.List<ScanImageResponseBodyDataResultsSubResultsSfaceDataListFaces> faces;
-
-        @NameInMap("Height")
-        public Float height;
-
-        @NameInMap("Y")
-        public Float y;
-
-        @NameInMap("X")
-        public Float x;
-
-        public static ScanImageResponseBodyDataResultsSubResultsSfaceDataList build(java.util.Map<String, ?> map) throws Exception {
-            ScanImageResponseBodyDataResultsSubResultsSfaceDataList self = new ScanImageResponseBodyDataResultsSubResultsSfaceDataList();
-            return TeaModel.build(map, self);
-        }
-
-        public ScanImageResponseBodyDataResultsSubResultsSfaceDataList setWidth(Float width) {
-            this.width = width;
+        public ScanImageResponseBodyDataResultsSubResultsFrames setURL(String URL) {
+            this.URL = URL;
             return this;
         }
-        public Float getWidth() {
-            return this.width;
-        }
-
-        public ScanImageResponseBodyDataResultsSubResultsSfaceDataList setFaces(java.util.List<ScanImageResponseBodyDataResultsSubResultsSfaceDataListFaces> faces) {
-            this.faces = faces;
-            return this;
-        }
-        public java.util.List<ScanImageResponseBodyDataResultsSubResultsSfaceDataListFaces> getFaces() {
-            return this.faces;
-        }
-
-        public ScanImageResponseBodyDataResultsSubResultsSfaceDataList setHeight(Float height) {
-            this.height = height;
-            return this;
-        }
-        public Float getHeight() {
-            return this.height;
-        }
-
-        public ScanImageResponseBodyDataResultsSubResultsSfaceDataList setY(Float y) {
-            this.y = y;
-            return this;
-        }
-        public Float getY() {
-            return this.y;
-        }
-
-        public ScanImageResponseBodyDataResultsSubResultsSfaceDataList setX(Float x) {
-            this.x = x;
-            return this;
-        }
-        public Float getX() {
-            return this.x;
+        public String getURL() {
+            return this.URL;
         }
 
     }
@@ -154,33 +80,31 @@ public class ScanImageResponseBody extends TeaModel {
 
     }
 
-    public static class ScanImageResponseBodyDataResultsSubResultsProgramCodeDataList extends TeaModel {
-        @NameInMap("Width")
-        public Float width;
-
+    public static class ScanImageResponseBodyDataResultsSubResultsLogoDataList extends TeaModel {
         @NameInMap("Height")
         public Float height;
 
-        @NameInMap("Y")
-        public Float y;
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("Width")
+        public Float width;
 
         @NameInMap("X")
         public Float x;
 
-        public static ScanImageResponseBodyDataResultsSubResultsProgramCodeDataList build(java.util.Map<String, ?> map) throws Exception {
-            ScanImageResponseBodyDataResultsSubResultsProgramCodeDataList self = new ScanImageResponseBodyDataResultsSubResultsProgramCodeDataList();
+        @NameInMap("Y")
+        public Float y;
+
+        public static ScanImageResponseBodyDataResultsSubResultsLogoDataList build(java.util.Map<String, ?> map) throws Exception {
+            ScanImageResponseBodyDataResultsSubResultsLogoDataList self = new ScanImageResponseBodyDataResultsSubResultsLogoDataList();
             return TeaModel.build(map, self);
         }
 
-        public ScanImageResponseBodyDataResultsSubResultsProgramCodeDataList setWidth(Float width) {
-            this.width = width;
-            return this;
-        }
-        public Float getWidth() {
-            return this.width;
-        }
-
-        public ScanImageResponseBodyDataResultsSubResultsProgramCodeDataList setHeight(Float height) {
+        public ScanImageResponseBodyDataResultsSubResultsLogoDataList setHeight(Float height) {
             this.height = height;
             return this;
         }
@@ -188,76 +112,12 @@ public class ScanImageResponseBody extends TeaModel {
             return this.height;
         }
 
-        public ScanImageResponseBodyDataResultsSubResultsProgramCodeDataList setY(Float y) {
-            this.y = y;
+        public ScanImageResponseBodyDataResultsSubResultsLogoDataList setName(String name) {
+            this.name = name;
             return this;
         }
-        public Float getY() {
-            return this.y;
-        }
-
-        public ScanImageResponseBodyDataResultsSubResultsProgramCodeDataList setX(Float x) {
-            this.x = x;
-            return this;
-        }
-        public Float getX() {
-            return this.x;
-        }
-
-    }
-
-    public static class ScanImageResponseBodyDataResultsSubResultsFrames extends TeaModel {
-        @NameInMap("URL")
-        public String URL;
-
-        @NameInMap("Rate")
-        public Float rate;
-
-        public static ScanImageResponseBodyDataResultsSubResultsFrames build(java.util.Map<String, ?> map) throws Exception {
-            ScanImageResponseBodyDataResultsSubResultsFrames self = new ScanImageResponseBodyDataResultsSubResultsFrames();
-            return TeaModel.build(map, self);
-        }
-
-        public ScanImageResponseBodyDataResultsSubResultsFrames setURL(String URL) {
-            this.URL = URL;
-            return this;
-        }
-        public String getURL() {
-            return this.URL;
-        }
-
-        public ScanImageResponseBodyDataResultsSubResultsFrames setRate(Float rate) {
-            this.rate = rate;
-            return this;
-        }
-        public Float getRate() {
-            return this.rate;
-        }
-
-    }
-
-    public static class ScanImageResponseBodyDataResultsSubResultsLogoDataList extends TeaModel {
-        @NameInMap("Type")
-        public String type;
-
-        @NameInMap("Width")
-        public Float width;
-
-        @NameInMap("Height")
-        public Float height;
-
-        @NameInMap("Y")
-        public Float y;
-
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("X")
-        public Float x;
-
-        public static ScanImageResponseBodyDataResultsSubResultsLogoDataList build(java.util.Map<String, ?> map) throws Exception {
-            ScanImageResponseBodyDataResultsSubResultsLogoDataList self = new ScanImageResponseBodyDataResultsSubResultsLogoDataList();
-            return TeaModel.build(map, self);
+        public String getName() {
+            return this.name;
         }
 
         public ScanImageResponseBodyDataResultsSubResultsLogoDataList setType(String type) {
@@ -276,12 +136,12 @@ public class ScanImageResponseBody extends TeaModel {
             return this.width;
         }
 
-        public ScanImageResponseBodyDataResultsSubResultsLogoDataList setHeight(Float height) {
-            this.height = height;
+        public ScanImageResponseBodyDataResultsSubResultsLogoDataList setX(Float x) {
+            this.x = x;
             return this;
         }
-        public Float getHeight() {
-            return this.height;
+        public Float getX() {
+            return this.x;
         }
 
         public ScanImageResponseBodyDataResultsSubResultsLogoDataList setY(Float y) {
@@ -292,15 +152,43 @@ public class ScanImageResponseBody extends TeaModel {
             return this.y;
         }
 
-        public ScanImageResponseBodyDataResultsSubResultsLogoDataList setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
+    }
+
+    public static class ScanImageResponseBodyDataResultsSubResultsProgramCodeDataList extends TeaModel {
+        @NameInMap("Height")
+        public Float height;
+
+        @NameInMap("Width")
+        public Float width;
+
+        @NameInMap("X")
+        public Float x;
+
+        @NameInMap("Y")
+        public Float y;
+
+        public static ScanImageResponseBodyDataResultsSubResultsProgramCodeDataList build(java.util.Map<String, ?> map) throws Exception {
+            ScanImageResponseBodyDataResultsSubResultsProgramCodeDataList self = new ScanImageResponseBodyDataResultsSubResultsProgramCodeDataList();
+            return TeaModel.build(map, self);
         }
 
-        public ScanImageResponseBodyDataResultsSubResultsLogoDataList setX(Float x) {
+        public ScanImageResponseBodyDataResultsSubResultsProgramCodeDataList setHeight(Float height) {
+            this.height = height;
+            return this;
+        }
+        public Float getHeight() {
+            return this.height;
+        }
+
+        public ScanImageResponseBodyDataResultsSubResultsProgramCodeDataList setWidth(Float width) {
+            this.width = width;
+            return this;
+        }
+        public Float getWidth() {
+            return this.width;
+        }
+
+        public ScanImageResponseBodyDataResultsSubResultsProgramCodeDataList setX(Float x) {
             this.x = x;
             return this;
         }
@@ -308,82 +196,154 @@ public class ScanImageResponseBody extends TeaModel {
             return this.x;
         }
 
+        public ScanImageResponseBodyDataResultsSubResultsProgramCodeDataList setY(Float y) {
+            this.y = y;
+            return this;
+        }
+        public Float getY() {
+            return this.y;
+        }
+
     }
 
-    public static class ScanImageResponseBodyDataResultsSubResults extends TeaModel {
-        @NameInMap("SfaceDataList")
-        public java.util.List<ScanImageResponseBodyDataResultsSubResultsSfaceDataList> sfaceDataList;
+    public static class ScanImageResponseBodyDataResultsSubResultsSfaceDataListFaces extends TeaModel {
+        @NameInMap("Id")
+        public String id;
 
-        @NameInMap("HintWordsInfoList")
-        public java.util.List<ScanImageResponseBodyDataResultsSubResultsHintWordsInfoList> hintWordsInfoList;
-
-        @NameInMap("Suggestion")
-        public String suggestion;
-
-        @NameInMap("ProgramCodeDataList")
-        public java.util.List<ScanImageResponseBodyDataResultsSubResultsProgramCodeDataList> programCodeDataList;
-
-        @NameInMap("OCRDataList")
-        public java.util.List<String> OCRDataList;
-
-        @NameInMap("Frames")
-        public java.util.List<ScanImageResponseBodyDataResultsSubResultsFrames> frames;
-
-        @NameInMap("LogoDataList")
-        public java.util.List<ScanImageResponseBodyDataResultsSubResultsLogoDataList> logoDataList;
-
-        @NameInMap("Label")
-        public String label;
-
-        @NameInMap("Scene")
-        public String scene;
+        @NameInMap("Name")
+        public String name;
 
         @NameInMap("Rate")
         public Float rate;
 
-        public static ScanImageResponseBodyDataResultsSubResults build(java.util.Map<String, ?> map) throws Exception {
-            ScanImageResponseBodyDataResultsSubResults self = new ScanImageResponseBodyDataResultsSubResults();
+        public static ScanImageResponseBodyDataResultsSubResultsSfaceDataListFaces build(java.util.Map<String, ?> map) throws Exception {
+            ScanImageResponseBodyDataResultsSubResultsSfaceDataListFaces self = new ScanImageResponseBodyDataResultsSubResultsSfaceDataListFaces();
             return TeaModel.build(map, self);
         }
 
-        public ScanImageResponseBodyDataResultsSubResults setSfaceDataList(java.util.List<ScanImageResponseBodyDataResultsSubResultsSfaceDataList> sfaceDataList) {
-            this.sfaceDataList = sfaceDataList;
+        public ScanImageResponseBodyDataResultsSubResultsSfaceDataListFaces setId(String id) {
+            this.id = id;
             return this;
         }
-        public java.util.List<ScanImageResponseBodyDataResultsSubResultsSfaceDataList> getSfaceDataList() {
-            return this.sfaceDataList;
+        public String getId() {
+            return this.id;
         }
 
-        public ScanImageResponseBodyDataResultsSubResults setHintWordsInfoList(java.util.List<ScanImageResponseBodyDataResultsSubResultsHintWordsInfoList> hintWordsInfoList) {
-            this.hintWordsInfoList = hintWordsInfoList;
+        public ScanImageResponseBodyDataResultsSubResultsSfaceDataListFaces setName(String name) {
+            this.name = name;
             return this;
         }
-        public java.util.List<ScanImageResponseBodyDataResultsSubResultsHintWordsInfoList> getHintWordsInfoList() {
-            return this.hintWordsInfoList;
+        public String getName() {
+            return this.name;
         }
 
-        public ScanImageResponseBodyDataResultsSubResults setSuggestion(String suggestion) {
-            this.suggestion = suggestion;
+        public ScanImageResponseBodyDataResultsSubResultsSfaceDataListFaces setRate(Float rate) {
+            this.rate = rate;
             return this;
         }
-        public String getSuggestion() {
-            return this.suggestion;
+        public Float getRate() {
+            return this.rate;
         }
 
-        public ScanImageResponseBodyDataResultsSubResults setProgramCodeDataList(java.util.List<ScanImageResponseBodyDataResultsSubResultsProgramCodeDataList> programCodeDataList) {
-            this.programCodeDataList = programCodeDataList;
-            return this;
-        }
-        public java.util.List<ScanImageResponseBodyDataResultsSubResultsProgramCodeDataList> getProgramCodeDataList() {
-            return this.programCodeDataList;
+    }
+
+    public static class ScanImageResponseBodyDataResultsSubResultsSfaceDataList extends TeaModel {
+        @NameInMap("Faces")
+        public java.util.List<ScanImageResponseBodyDataResultsSubResultsSfaceDataListFaces> faces;
+
+        @NameInMap("Height")
+        public Float height;
+
+        @NameInMap("Width")
+        public Float width;
+
+        @NameInMap("X")
+        public Float x;
+
+        @NameInMap("Y")
+        public Float y;
+
+        public static ScanImageResponseBodyDataResultsSubResultsSfaceDataList build(java.util.Map<String, ?> map) throws Exception {
+            ScanImageResponseBodyDataResultsSubResultsSfaceDataList self = new ScanImageResponseBodyDataResultsSubResultsSfaceDataList();
+            return TeaModel.build(map, self);
         }
 
-        public ScanImageResponseBodyDataResultsSubResults setOCRDataList(java.util.List<String> OCRDataList) {
-            this.OCRDataList = OCRDataList;
+        public ScanImageResponseBodyDataResultsSubResultsSfaceDataList setFaces(java.util.List<ScanImageResponseBodyDataResultsSubResultsSfaceDataListFaces> faces) {
+            this.faces = faces;
             return this;
         }
-        public java.util.List<String> getOCRDataList() {
-            return this.OCRDataList;
+        public java.util.List<ScanImageResponseBodyDataResultsSubResultsSfaceDataListFaces> getFaces() {
+            return this.faces;
+        }
+
+        public ScanImageResponseBodyDataResultsSubResultsSfaceDataList setHeight(Float height) {
+            this.height = height;
+            return this;
+        }
+        public Float getHeight() {
+            return this.height;
+        }
+
+        public ScanImageResponseBodyDataResultsSubResultsSfaceDataList setWidth(Float width) {
+            this.width = width;
+            return this;
+        }
+        public Float getWidth() {
+            return this.width;
+        }
+
+        public ScanImageResponseBodyDataResultsSubResultsSfaceDataList setX(Float x) {
+            this.x = x;
+            return this;
+        }
+        public Float getX() {
+            return this.x;
+        }
+
+        public ScanImageResponseBodyDataResultsSubResultsSfaceDataList setY(Float y) {
+            this.y = y;
+            return this;
+        }
+        public Float getY() {
+            return this.y;
+        }
+
+    }
+
+    public static class ScanImageResponseBodyDataResultsSubResults extends TeaModel {
+        @NameInMap("Frames")
+        public java.util.List<ScanImageResponseBodyDataResultsSubResultsFrames> frames;
+
+        @NameInMap("HintWordsInfoList")
+        public java.util.List<ScanImageResponseBodyDataResultsSubResultsHintWordsInfoList> hintWordsInfoList;
+
+        @NameInMap("Label")
+        public String label;
+
+        @NameInMap("LogoDataList")
+        public java.util.List<ScanImageResponseBodyDataResultsSubResultsLogoDataList> logoDataList;
+
+        @NameInMap("OCRDataList")
+        public java.util.List<String> OCRDataList;
+
+        @NameInMap("ProgramCodeDataList")
+        public java.util.List<ScanImageResponseBodyDataResultsSubResultsProgramCodeDataList> programCodeDataList;
+
+        @NameInMap("Rate")
+        public Float rate;
+
+        @NameInMap("Scene")
+        public String scene;
+
+        @NameInMap("SfaceDataList")
+        public java.util.List<ScanImageResponseBodyDataResultsSubResultsSfaceDataList> sfaceDataList;
+
+        @NameInMap("Suggestion")
+        public String suggestion;
+
+        public static ScanImageResponseBodyDataResultsSubResults build(java.util.Map<String, ?> map) throws Exception {
+            ScanImageResponseBodyDataResultsSubResults self = new ScanImageResponseBodyDataResultsSubResults();
+            return TeaModel.build(map, self);
         }
 
         public ScanImageResponseBodyDataResultsSubResults setFrames(java.util.List<ScanImageResponseBodyDataResultsSubResultsFrames> frames) {
@@ -394,12 +354,12 @@ public class ScanImageResponseBody extends TeaModel {
             return this.frames;
         }
 
-        public ScanImageResponseBodyDataResultsSubResults setLogoDataList(java.util.List<ScanImageResponseBodyDataResultsSubResultsLogoDataList> logoDataList) {
-            this.logoDataList = logoDataList;
+        public ScanImageResponseBodyDataResultsSubResults setHintWordsInfoList(java.util.List<ScanImageResponseBodyDataResultsSubResultsHintWordsInfoList> hintWordsInfoList) {
+            this.hintWordsInfoList = hintWordsInfoList;
             return this;
         }
-        public java.util.List<ScanImageResponseBodyDataResultsSubResultsLogoDataList> getLogoDataList() {
-            return this.logoDataList;
+        public java.util.List<ScanImageResponseBodyDataResultsSubResultsHintWordsInfoList> getHintWordsInfoList() {
+            return this.hintWordsInfoList;
         }
 
         public ScanImageResponseBodyDataResultsSubResults setLabel(String label) {
@@ -410,12 +370,28 @@ public class ScanImageResponseBody extends TeaModel {
             return this.label;
         }
 
-        public ScanImageResponseBodyDataResultsSubResults setScene(String scene) {
-            this.scene = scene;
+        public ScanImageResponseBodyDataResultsSubResults setLogoDataList(java.util.List<ScanImageResponseBodyDataResultsSubResultsLogoDataList> logoDataList) {
+            this.logoDataList = logoDataList;
             return this;
         }
-        public String getScene() {
-            return this.scene;
+        public java.util.List<ScanImageResponseBodyDataResultsSubResultsLogoDataList> getLogoDataList() {
+            return this.logoDataList;
+        }
+
+        public ScanImageResponseBodyDataResultsSubResults setOCRDataList(java.util.List<String> OCRDataList) {
+            this.OCRDataList = OCRDataList;
+            return this;
+        }
+        public java.util.List<String> getOCRDataList() {
+            return this.OCRDataList;
+        }
+
+        public ScanImageResponseBodyDataResultsSubResults setProgramCodeDataList(java.util.List<ScanImageResponseBodyDataResultsSubResultsProgramCodeDataList> programCodeDataList) {
+            this.programCodeDataList = programCodeDataList;
+            return this;
+        }
+        public java.util.List<ScanImageResponseBodyDataResultsSubResultsProgramCodeDataList> getProgramCodeDataList() {
+            return this.programCodeDataList;
         }
 
         public ScanImageResponseBodyDataResultsSubResults setRate(Float rate) {
@@ -426,14 +402,38 @@ public class ScanImageResponseBody extends TeaModel {
             return this.rate;
         }
 
+        public ScanImageResponseBodyDataResultsSubResults setScene(String scene) {
+            this.scene = scene;
+            return this;
+        }
+        public String getScene() {
+            return this.scene;
+        }
+
+        public ScanImageResponseBodyDataResultsSubResults setSfaceDataList(java.util.List<ScanImageResponseBodyDataResultsSubResultsSfaceDataList> sfaceDataList) {
+            this.sfaceDataList = sfaceDataList;
+            return this;
+        }
+        public java.util.List<ScanImageResponseBodyDataResultsSubResultsSfaceDataList> getSfaceDataList() {
+            return this.sfaceDataList;
+        }
+
+        public ScanImageResponseBodyDataResultsSubResults setSuggestion(String suggestion) {
+            this.suggestion = suggestion;
+            return this;
+        }
+        public String getSuggestion() {
+            return this.suggestion;
+        }
+
     }
 
     public static class ScanImageResponseBodyDataResults extends TeaModel {
-        @NameInMap("ImageURL")
-        public String imageURL;
-
         @NameInMap("DataId")
         public String dataId;
+
+        @NameInMap("ImageURL")
+        public String imageURL;
 
         @NameInMap("SubResults")
         public java.util.List<ScanImageResponseBodyDataResultsSubResults> subResults;
@@ -446,20 +446,20 @@ public class ScanImageResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ScanImageResponseBodyDataResults setImageURL(String imageURL) {
-            this.imageURL = imageURL;
-            return this;
-        }
-        public String getImageURL() {
-            return this.imageURL;
-        }
-
         public ScanImageResponseBodyDataResults setDataId(String dataId) {
             this.dataId = dataId;
             return this;
         }
         public String getDataId() {
             return this.dataId;
+        }
+
+        public ScanImageResponseBodyDataResults setImageURL(String imageURL) {
+            this.imageURL = imageURL;
+            return this;
+        }
+        public String getImageURL() {
+            return this.imageURL;
         }
 
         public ScanImageResponseBodyDataResults setSubResults(java.util.List<ScanImageResponseBodyDataResultsSubResults> subResults) {

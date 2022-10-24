@@ -4,23 +4,15 @@ package com.aliyun.imageaudit20191230.models;
 import com.aliyun.tea.*;
 
 public class ScanTextRequest extends TeaModel {
-    @NameInMap("Tasks")
-    public java.util.List<ScanTextRequestTasks> tasks;
-
     @NameInMap("Labels")
     public java.util.List<ScanTextRequestLabels> labels;
+
+    @NameInMap("Tasks")
+    public java.util.List<ScanTextRequestTasks> tasks;
 
     public static ScanTextRequest build(java.util.Map<String, ?> map) throws Exception {
         ScanTextRequest self = new ScanTextRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ScanTextRequest setTasks(java.util.List<ScanTextRequestTasks> tasks) {
-        this.tasks = tasks;
-        return this;
-    }
-    public java.util.List<ScanTextRequestTasks> getTasks() {
-        return this.tasks;
     }
 
     public ScanTextRequest setLabels(java.util.List<ScanTextRequestLabels> labels) {
@@ -31,23 +23,12 @@ public class ScanTextRequest extends TeaModel {
         return this.labels;
     }
 
-    public static class ScanTextRequestTasks extends TeaModel {
-        @NameInMap("Content")
-        public String content;
-
-        public static ScanTextRequestTasks build(java.util.Map<String, ?> map) throws Exception {
-            ScanTextRequestTasks self = new ScanTextRequestTasks();
-            return TeaModel.build(map, self);
-        }
-
-        public ScanTextRequestTasks setContent(String content) {
-            this.content = content;
-            return this;
-        }
-        public String getContent() {
-            return this.content;
-        }
-
+    public ScanTextRequest setTasks(java.util.List<ScanTextRequestTasks> tasks) {
+        this.tasks = tasks;
+        return this;
+    }
+    public java.util.List<ScanTextRequestTasks> getTasks() {
+        return this.tasks;
     }
 
     public static class ScanTextRequestLabels extends TeaModel {
@@ -65,6 +46,25 @@ public class ScanTextRequest extends TeaModel {
         }
         public String getLabel() {
             return this.label;
+        }
+
+    }
+
+    public static class ScanTextRequestTasks extends TeaModel {
+        @NameInMap("Content")
+        public String content;
+
+        public static ScanTextRequestTasks build(java.util.Map<String, ?> map) throws Exception {
+            ScanTextRequestTasks self = new ScanTextRequestTasks();
+            return TeaModel.build(map, self);
+        }
+
+        public ScanTextRequestTasks setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
         }
 
     }

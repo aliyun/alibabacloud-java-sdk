@@ -4,23 +4,15 @@ package com.aliyun.imageaudit20191230.models;
 import com.aliyun.tea.*;
 
 public class ScanTextResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public ScanTextResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ScanTextResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ScanTextResponseBody self = new ScanTextResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ScanTextResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ScanTextResponseBody setData(ScanTextResponseBodyData data) {
@@ -29,6 +21,14 @@ public class ScanTextResponseBody extends TeaModel {
     }
     public ScanTextResponseBodyData getData() {
         return this.data;
+    }
+
+    public ScanTextResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class ScanTextResponseBodyDataElementsResultsDetailsContexts extends TeaModel {
@@ -51,23 +51,15 @@ public class ScanTextResponseBody extends TeaModel {
     }
 
     public static class ScanTextResponseBodyDataElementsResultsDetails extends TeaModel {
-        @NameInMap("Label")
-        public String label;
-
         @NameInMap("Contexts")
         public java.util.List<ScanTextResponseBodyDataElementsResultsDetailsContexts> contexts;
+
+        @NameInMap("Label")
+        public String label;
 
         public static ScanTextResponseBodyDataElementsResultsDetails build(java.util.Map<String, ?> map) throws Exception {
             ScanTextResponseBodyDataElementsResultsDetails self = new ScanTextResponseBodyDataElementsResultsDetails();
             return TeaModel.build(map, self);
-        }
-
-        public ScanTextResponseBodyDataElementsResultsDetails setLabel(String label) {
-            this.label = label;
-            return this;
-        }
-        public String getLabel() {
-            return this.label;
         }
 
         public ScanTextResponseBodyDataElementsResultsDetails setContexts(java.util.List<ScanTextResponseBodyDataElementsResultsDetailsContexts> contexts) {
@@ -78,11 +70,19 @@ public class ScanTextResponseBody extends TeaModel {
             return this.contexts;
         }
 
+        public ScanTextResponseBodyDataElementsResultsDetails setLabel(String label) {
+            this.label = label;
+            return this;
+        }
+        public String getLabel() {
+            return this.label;
+        }
+
     }
 
     public static class ScanTextResponseBodyDataElementsResults extends TeaModel {
-        @NameInMap("Suggestion")
-        public String suggestion;
+        @NameInMap("Details")
+        public java.util.List<ScanTextResponseBodyDataElementsResultsDetails> details;
 
         @NameInMap("Label")
         public String label;
@@ -90,20 +90,20 @@ public class ScanTextResponseBody extends TeaModel {
         @NameInMap("Rate")
         public Float rate;
 
-        @NameInMap("Details")
-        public java.util.List<ScanTextResponseBodyDataElementsResultsDetails> details;
+        @NameInMap("Suggestion")
+        public String suggestion;
 
         public static ScanTextResponseBodyDataElementsResults build(java.util.Map<String, ?> map) throws Exception {
             ScanTextResponseBodyDataElementsResults self = new ScanTextResponseBodyDataElementsResults();
             return TeaModel.build(map, self);
         }
 
-        public ScanTextResponseBodyDataElementsResults setSuggestion(String suggestion) {
-            this.suggestion = suggestion;
+        public ScanTextResponseBodyDataElementsResults setDetails(java.util.List<ScanTextResponseBodyDataElementsResultsDetails> details) {
+            this.details = details;
             return this;
         }
-        public String getSuggestion() {
-            return this.suggestion;
+        public java.util.List<ScanTextResponseBodyDataElementsResultsDetails> getDetails() {
+            return this.details;
         }
 
         public ScanTextResponseBodyDataElementsResults setLabel(String label) {
@@ -122,34 +122,26 @@ public class ScanTextResponseBody extends TeaModel {
             return this.rate;
         }
 
-        public ScanTextResponseBodyDataElementsResults setDetails(java.util.List<ScanTextResponseBodyDataElementsResultsDetails> details) {
-            this.details = details;
+        public ScanTextResponseBodyDataElementsResults setSuggestion(String suggestion) {
+            this.suggestion = suggestion;
             return this;
         }
-        public java.util.List<ScanTextResponseBodyDataElementsResultsDetails> getDetails() {
-            return this.details;
+        public String getSuggestion() {
+            return this.suggestion;
         }
 
     }
 
     public static class ScanTextResponseBodyDataElements extends TeaModel {
-        @NameInMap("TaskId")
-        public String taskId;
-
         @NameInMap("Results")
         public java.util.List<ScanTextResponseBodyDataElementsResults> results;
+
+        @NameInMap("TaskId")
+        public String taskId;
 
         public static ScanTextResponseBodyDataElements build(java.util.Map<String, ?> map) throws Exception {
             ScanTextResponseBodyDataElements self = new ScanTextResponseBodyDataElements();
             return TeaModel.build(map, self);
-        }
-
-        public ScanTextResponseBodyDataElements setTaskId(String taskId) {
-            this.taskId = taskId;
-            return this;
-        }
-        public String getTaskId() {
-            return this.taskId;
         }
 
         public ScanTextResponseBodyDataElements setResults(java.util.List<ScanTextResponseBodyDataElementsResults> results) {
@@ -158,6 +150,14 @@ public class ScanTextResponseBody extends TeaModel {
         }
         public java.util.List<ScanTextResponseBodyDataElementsResults> getResults() {
             return this.results;
+        }
+
+        public ScanTextResponseBodyDataElements setTaskId(String taskId) {
+            this.taskId = taskId;
+            return this;
+        }
+        public String getTaskId() {
+            return this.taskId;
         }
 
     }
