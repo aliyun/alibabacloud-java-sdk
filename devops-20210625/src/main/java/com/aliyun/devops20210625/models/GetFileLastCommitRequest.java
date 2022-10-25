@@ -16,6 +16,9 @@ public class GetFileLastCommitRequest extends TeaModel {
     @NameInMap("sha")
     public String sha;
 
+    @NameInMap("showSignature")
+    public Boolean showSignature;
+
     public static GetFileLastCommitRequest build(java.util.Map<String, ?> map) throws Exception {
         GetFileLastCommitRequest self = new GetFileLastCommitRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class GetFileLastCommitRequest extends TeaModel {
     }
     public String getSha() {
         return this.sha;
+    }
+
+    public GetFileLastCommitRequest setShowSignature(Boolean showSignature) {
+        this.showSignature = showSignature;
+        return this;
+    }
+    public Boolean getShowSignature() {
+        return this.showSignature;
     }
 
 }
