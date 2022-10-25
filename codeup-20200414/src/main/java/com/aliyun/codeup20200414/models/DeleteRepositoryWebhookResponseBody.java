@@ -4,24 +4,32 @@ package com.aliyun.codeup20200414.models;
 import com.aliyun.tea.*;
 
 public class DeleteRepositoryWebhookResponseBody extends TeaModel {
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
+    @NameInMap("Result")
+    public DeleteRepositoryWebhookResponseBodyResult result;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Result")
-    public DeleteRepositoryWebhookResponseBodyResult result;
-
     public static DeleteRepositoryWebhookResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteRepositoryWebhookResponseBody self = new DeleteRepositoryWebhookResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteRepositoryWebhookResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public DeleteRepositoryWebhookResponseBody setErrorMessage(String errorMessage) {
@@ -40,12 +48,12 @@ public class DeleteRepositoryWebhookResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DeleteRepositoryWebhookResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
+    public DeleteRepositoryWebhookResponseBody setResult(DeleteRepositoryWebhookResponseBodyResult result) {
+        this.result = result;
         return this;
     }
-    public String getErrorCode() {
-        return this.errorCode;
+    public DeleteRepositoryWebhookResponseBodyResult getResult() {
+        return this.result;
     }
 
     public DeleteRepositoryWebhookResponseBody setSuccess(Boolean success) {
@@ -56,29 +64,18 @@ public class DeleteRepositoryWebhookResponseBody extends TeaModel {
         return this.success;
     }
 
-    public DeleteRepositoryWebhookResponseBody setResult(DeleteRepositoryWebhookResponseBodyResult result) {
-        this.result = result;
-        return this;
-    }
-    public DeleteRepositoryWebhookResponseBodyResult getResult() {
-        return this.result;
-    }
-
     public static class DeleteRepositoryWebhookResponseBodyResult extends TeaModel {
-        @NameInMap("PushEvents")
-        public Boolean pushEvents;
-
-        @NameInMap("ProjectId")
-        public Long projectId;
-
         @NameInMap("CreatedAt")
         public String createdAt;
 
-        @NameInMap("Url")
-        public String url;
+        @NameInMap("Description")
+        public String description;
 
-        @NameInMap("TagPushEvents")
-        public Boolean tagPushEvents;
+        @NameInMap("EnableSslVerification")
+        public Boolean enableSslVerification;
+
+        @NameInMap("Id")
+        public Long id;
 
         @NameInMap("LastTestResult")
         public String lastTestResult;
@@ -86,40 +83,27 @@ public class DeleteRepositoryWebhookResponseBody extends TeaModel {
         @NameInMap("MergeRequestsEvents")
         public Boolean mergeRequestsEvents;
 
-        @NameInMap("Description")
-        public String description;
-
         @NameInMap("NoteEvents")
         public Boolean noteEvents;
+
+        @NameInMap("ProjectId")
+        public Long projectId;
+
+        @NameInMap("PushEvents")
+        public Boolean pushEvents;
 
         @NameInMap("SecretToken")
         public String secretToken;
 
-        @NameInMap("Id")
-        public Long id;
+        @NameInMap("TagPushEvents")
+        public Boolean tagPushEvents;
 
-        @NameInMap("EnableSslVerification")
-        public Boolean enableSslVerification;
+        @NameInMap("Url")
+        public String url;
 
         public static DeleteRepositoryWebhookResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             DeleteRepositoryWebhookResponseBodyResult self = new DeleteRepositoryWebhookResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public DeleteRepositoryWebhookResponseBodyResult setPushEvents(Boolean pushEvents) {
-            this.pushEvents = pushEvents;
-            return this;
-        }
-        public Boolean getPushEvents() {
-            return this.pushEvents;
-        }
-
-        public DeleteRepositoryWebhookResponseBodyResult setProjectId(Long projectId) {
-            this.projectId = projectId;
-            return this;
-        }
-        public Long getProjectId() {
-            return this.projectId;
         }
 
         public DeleteRepositoryWebhookResponseBodyResult setCreatedAt(String createdAt) {
@@ -130,20 +114,28 @@ public class DeleteRepositoryWebhookResponseBody extends TeaModel {
             return this.createdAt;
         }
 
-        public DeleteRepositoryWebhookResponseBodyResult setUrl(String url) {
-            this.url = url;
+        public DeleteRepositoryWebhookResponseBodyResult setDescription(String description) {
+            this.description = description;
             return this;
         }
-        public String getUrl() {
-            return this.url;
+        public String getDescription() {
+            return this.description;
         }
 
-        public DeleteRepositoryWebhookResponseBodyResult setTagPushEvents(Boolean tagPushEvents) {
-            this.tagPushEvents = tagPushEvents;
+        public DeleteRepositoryWebhookResponseBodyResult setEnableSslVerification(Boolean enableSslVerification) {
+            this.enableSslVerification = enableSslVerification;
             return this;
         }
-        public Boolean getTagPushEvents() {
-            return this.tagPushEvents;
+        public Boolean getEnableSslVerification() {
+            return this.enableSslVerification;
+        }
+
+        public DeleteRepositoryWebhookResponseBodyResult setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
         }
 
         public DeleteRepositoryWebhookResponseBodyResult setLastTestResult(String lastTestResult) {
@@ -162,20 +154,28 @@ public class DeleteRepositoryWebhookResponseBody extends TeaModel {
             return this.mergeRequestsEvents;
         }
 
-        public DeleteRepositoryWebhookResponseBodyResult setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
         public DeleteRepositoryWebhookResponseBodyResult setNoteEvents(Boolean noteEvents) {
             this.noteEvents = noteEvents;
             return this;
         }
         public Boolean getNoteEvents() {
             return this.noteEvents;
+        }
+
+        public DeleteRepositoryWebhookResponseBodyResult setProjectId(Long projectId) {
+            this.projectId = projectId;
+            return this;
+        }
+        public Long getProjectId() {
+            return this.projectId;
+        }
+
+        public DeleteRepositoryWebhookResponseBodyResult setPushEvents(Boolean pushEvents) {
+            this.pushEvents = pushEvents;
+            return this;
+        }
+        public Boolean getPushEvents() {
+            return this.pushEvents;
         }
 
         public DeleteRepositoryWebhookResponseBodyResult setSecretToken(String secretToken) {
@@ -186,20 +186,20 @@ public class DeleteRepositoryWebhookResponseBody extends TeaModel {
             return this.secretToken;
         }
 
-        public DeleteRepositoryWebhookResponseBodyResult setId(Long id) {
-            this.id = id;
+        public DeleteRepositoryWebhookResponseBodyResult setTagPushEvents(Boolean tagPushEvents) {
+            this.tagPushEvents = tagPushEvents;
             return this;
         }
-        public Long getId() {
-            return this.id;
+        public Boolean getTagPushEvents() {
+            return this.tagPushEvents;
         }
 
-        public DeleteRepositoryWebhookResponseBodyResult setEnableSslVerification(Boolean enableSslVerification) {
-            this.enableSslVerification = enableSslVerification;
+        public DeleteRepositoryWebhookResponseBodyResult setUrl(String url) {
+            this.url = url;
             return this;
         }
-        public Boolean getEnableSslVerification() {
-            return this.enableSslVerification;
+        public String getUrl() {
+            return this.url;
         }
 
     }

@@ -4,24 +4,32 @@ package com.aliyun.codeup20200414.models;
 import com.aliyun.tea.*;
 
 public class AddGroupMemberResponseBody extends TeaModel {
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
+    @NameInMap("Result")
+    public java.util.List<AddGroupMemberResponseBodyResult> result;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Result")
-    public java.util.List<AddGroupMemberResponseBodyResult> result;
-
     public static AddGroupMemberResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AddGroupMemberResponseBody self = new AddGroupMemberResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public AddGroupMemberResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public AddGroupMemberResponseBody setErrorMessage(String errorMessage) {
@@ -40,12 +48,12 @@ public class AddGroupMemberResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public AddGroupMemberResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
+    public AddGroupMemberResponseBody setResult(java.util.List<AddGroupMemberResponseBodyResult> result) {
+        this.result = result;
         return this;
     }
-    public String getErrorCode() {
-        return this.errorCode;
+    public java.util.List<AddGroupMemberResponseBodyResult> getResult() {
+        return this.result;
     }
 
     public AddGroupMemberResponseBody setSuccess(Boolean success) {
@@ -56,68 +64,28 @@ public class AddGroupMemberResponseBody extends TeaModel {
         return this.success;
     }
 
-    public AddGroupMemberResponseBody setResult(java.util.List<AddGroupMemberResponseBodyResult> result) {
-        this.result = result;
-        return this;
-    }
-    public java.util.List<AddGroupMemberResponseBodyResult> getResult() {
-        return this.result;
-    }
-
     public static class AddGroupMemberResponseBodyResult extends TeaModel {
-        @NameInMap("ExternUserId")
-        public String externUserId;
-
-        @NameInMap("Email")
-        public String email;
+        @NameInMap("AccessLevel")
+        public Integer accessLevel;
 
         @NameInMap("AvatarUrl")
         public String avatarUrl;
 
-        @NameInMap("State")
-        public String state;
+        @NameInMap("Email")
+        public String email;
 
-        @NameInMap("AccessLevel")
-        public Integer accessLevel;
+        @NameInMap("ExternUserId")
+        public String externUserId;
 
         @NameInMap("Id")
         public Long id;
 
+        @NameInMap("State")
+        public String state;
+
         public static AddGroupMemberResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             AddGroupMemberResponseBodyResult self = new AddGroupMemberResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public AddGroupMemberResponseBodyResult setExternUserId(String externUserId) {
-            this.externUserId = externUserId;
-            return this;
-        }
-        public String getExternUserId() {
-            return this.externUserId;
-        }
-
-        public AddGroupMemberResponseBodyResult setEmail(String email) {
-            this.email = email;
-            return this;
-        }
-        public String getEmail() {
-            return this.email;
-        }
-
-        public AddGroupMemberResponseBodyResult setAvatarUrl(String avatarUrl) {
-            this.avatarUrl = avatarUrl;
-            return this;
-        }
-        public String getAvatarUrl() {
-            return this.avatarUrl;
-        }
-
-        public AddGroupMemberResponseBodyResult setState(String state) {
-            this.state = state;
-            return this;
-        }
-        public String getState() {
-            return this.state;
         }
 
         public AddGroupMemberResponseBodyResult setAccessLevel(Integer accessLevel) {
@@ -128,12 +96,44 @@ public class AddGroupMemberResponseBody extends TeaModel {
             return this.accessLevel;
         }
 
+        public AddGroupMemberResponseBodyResult setAvatarUrl(String avatarUrl) {
+            this.avatarUrl = avatarUrl;
+            return this;
+        }
+        public String getAvatarUrl() {
+            return this.avatarUrl;
+        }
+
+        public AddGroupMemberResponseBodyResult setEmail(String email) {
+            this.email = email;
+            return this;
+        }
+        public String getEmail() {
+            return this.email;
+        }
+
+        public AddGroupMemberResponseBodyResult setExternUserId(String externUserId) {
+            this.externUserId = externUserId;
+            return this;
+        }
+        public String getExternUserId() {
+            return this.externUserId;
+        }
+
         public AddGroupMemberResponseBodyResult setId(Long id) {
             this.id = id;
             return this;
         }
         public Long getId() {
             return this.id;
+        }
+
+        public AddGroupMemberResponseBodyResult setState(String state) {
+            this.state = state;
+            return this;
+        }
+        public String getState() {
+            return this.state;
         }
 
     }

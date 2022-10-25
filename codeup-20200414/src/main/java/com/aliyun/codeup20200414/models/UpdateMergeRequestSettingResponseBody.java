@@ -4,24 +4,32 @@ package com.aliyun.codeup20200414.models;
 import com.aliyun.tea.*;
 
 public class UpdateMergeRequestSettingResponseBody extends TeaModel {
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Success")
-    public Boolean success;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
     @NameInMap("Result")
     public UpdateMergeRequestSettingResponseBodyResult result;
+
+    @NameInMap("Success")
+    public Boolean success;
 
     public static UpdateMergeRequestSettingResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateMergeRequestSettingResponseBody self = new UpdateMergeRequestSettingResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateMergeRequestSettingResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public UpdateMergeRequestSettingResponseBody setErrorMessage(String errorMessage) {
@@ -40,28 +48,20 @@ public class UpdateMergeRequestSettingResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public UpdateMergeRequestSettingResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public UpdateMergeRequestSettingResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
     public UpdateMergeRequestSettingResponseBody setResult(UpdateMergeRequestSettingResponseBodyResult result) {
         this.result = result;
         return this;
     }
     public UpdateMergeRequestSettingResponseBodyResult getResult() {
         return this.result;
+    }
+
+    public UpdateMergeRequestSettingResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public static class UpdateMergeRequestSettingResponseBodyResult extends TeaModel {

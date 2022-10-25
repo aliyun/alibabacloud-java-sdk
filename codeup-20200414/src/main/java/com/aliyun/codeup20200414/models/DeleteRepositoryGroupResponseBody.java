@@ -4,24 +4,32 @@ package com.aliyun.codeup20200414.models;
 import com.aliyun.tea.*;
 
 public class DeleteRepositoryGroupResponseBody extends TeaModel {
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
+    @NameInMap("Result")
+    public DeleteRepositoryGroupResponseBodyResult result;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Result")
-    public DeleteRepositoryGroupResponseBodyResult result;
-
     public static DeleteRepositoryGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteRepositoryGroupResponseBody self = new DeleteRepositoryGroupResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteRepositoryGroupResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public DeleteRepositoryGroupResponseBody setErrorMessage(String errorMessage) {
@@ -40,12 +48,12 @@ public class DeleteRepositoryGroupResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DeleteRepositoryGroupResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
+    public DeleteRepositoryGroupResponseBody setResult(DeleteRepositoryGroupResponseBodyResult result) {
+        this.result = result;
         return this;
     }
-    public String getErrorCode() {
-        return this.errorCode;
+    public DeleteRepositoryGroupResponseBodyResult getResult() {
+        return this.result;
     }
 
     public DeleteRepositoryGroupResponseBody setSuccess(Boolean success) {
@@ -54,14 +62,6 @@ public class DeleteRepositoryGroupResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public DeleteRepositoryGroupResponseBody setResult(DeleteRepositoryGroupResponseBodyResult result) {
-        this.result = result;
-        return this;
-    }
-    public DeleteRepositoryGroupResponseBodyResult getResult() {
-        return this.result;
     }
 
     public static class DeleteRepositoryGroupResponseBodyResult extends TeaModel {

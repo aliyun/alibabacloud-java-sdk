@@ -4,24 +4,32 @@ package com.aliyun.codeup20200414.models;
 import com.aliyun.tea.*;
 
 public class AddRepositoryMemberResponseBody extends TeaModel {
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
+    @NameInMap("Result")
+    public java.util.List<AddRepositoryMemberResponseBodyResult> result;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Result")
-    public java.util.List<AddRepositoryMemberResponseBodyResult> result;
-
     public static AddRepositoryMemberResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AddRepositoryMemberResponseBody self = new AddRepositoryMemberResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public AddRepositoryMemberResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public AddRepositoryMemberResponseBody setErrorMessage(String errorMessage) {
@@ -40,12 +48,12 @@ public class AddRepositoryMemberResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public AddRepositoryMemberResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
+    public AddRepositoryMemberResponseBody setResult(java.util.List<AddRepositoryMemberResponseBodyResult> result) {
+        this.result = result;
         return this;
     }
-    public String getErrorCode() {
-        return this.errorCode;
+    public java.util.List<AddRepositoryMemberResponseBodyResult> getResult() {
+        return this.result;
     }
 
     public AddRepositoryMemberResponseBody setSuccess(Boolean success) {
@@ -56,68 +64,28 @@ public class AddRepositoryMemberResponseBody extends TeaModel {
         return this.success;
     }
 
-    public AddRepositoryMemberResponseBody setResult(java.util.List<AddRepositoryMemberResponseBodyResult> result) {
-        this.result = result;
-        return this;
-    }
-    public java.util.List<AddRepositoryMemberResponseBodyResult> getResult() {
-        return this.result;
-    }
-
     public static class AddRepositoryMemberResponseBodyResult extends TeaModel {
-        @NameInMap("ExternUserId")
-        public String externUserId;
-
-        @NameInMap("Email")
-        public String email;
+        @NameInMap("AccessLevel")
+        public Integer accessLevel;
 
         @NameInMap("AvatarUrl")
         public String avatarUrl;
 
-        @NameInMap("State")
-        public String state;
+        @NameInMap("Email")
+        public String email;
 
-        @NameInMap("AccessLevel")
-        public Integer accessLevel;
+        @NameInMap("ExternUserId")
+        public String externUserId;
 
         @NameInMap("Id")
         public Long id;
 
+        @NameInMap("State")
+        public String state;
+
         public static AddRepositoryMemberResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             AddRepositoryMemberResponseBodyResult self = new AddRepositoryMemberResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public AddRepositoryMemberResponseBodyResult setExternUserId(String externUserId) {
-            this.externUserId = externUserId;
-            return this;
-        }
-        public String getExternUserId() {
-            return this.externUserId;
-        }
-
-        public AddRepositoryMemberResponseBodyResult setEmail(String email) {
-            this.email = email;
-            return this;
-        }
-        public String getEmail() {
-            return this.email;
-        }
-
-        public AddRepositoryMemberResponseBodyResult setAvatarUrl(String avatarUrl) {
-            this.avatarUrl = avatarUrl;
-            return this;
-        }
-        public String getAvatarUrl() {
-            return this.avatarUrl;
-        }
-
-        public AddRepositoryMemberResponseBodyResult setState(String state) {
-            this.state = state;
-            return this;
-        }
-        public String getState() {
-            return this.state;
         }
 
         public AddRepositoryMemberResponseBodyResult setAccessLevel(Integer accessLevel) {
@@ -128,12 +96,44 @@ public class AddRepositoryMemberResponseBody extends TeaModel {
             return this.accessLevel;
         }
 
+        public AddRepositoryMemberResponseBodyResult setAvatarUrl(String avatarUrl) {
+            this.avatarUrl = avatarUrl;
+            return this;
+        }
+        public String getAvatarUrl() {
+            return this.avatarUrl;
+        }
+
+        public AddRepositoryMemberResponseBodyResult setEmail(String email) {
+            this.email = email;
+            return this;
+        }
+        public String getEmail() {
+            return this.email;
+        }
+
+        public AddRepositoryMemberResponseBodyResult setExternUserId(String externUserId) {
+            this.externUserId = externUserId;
+            return this;
+        }
+        public String getExternUserId() {
+            return this.externUserId;
+        }
+
         public AddRepositoryMemberResponseBodyResult setId(Long id) {
             this.id = id;
             return this;
         }
         public Long getId() {
             return this.id;
+        }
+
+        public AddRepositoryMemberResponseBodyResult setState(String state) {
+            this.state = state;
+            return this;
+        }
+        public String getState() {
+            return this.state;
         }
 
     }

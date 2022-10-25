@@ -4,24 +4,32 @@ package com.aliyun.codeup20200414.models;
 import com.aliyun.tea.*;
 
 public class UpdateMergeRequestCommentResponseBody extends TeaModel {
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Success")
-    public Boolean success;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
     @NameInMap("Result")
     public UpdateMergeRequestCommentResponseBodyResult result;
+
+    @NameInMap("Success")
+    public Boolean success;
 
     public static UpdateMergeRequestCommentResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateMergeRequestCommentResponseBody self = new UpdateMergeRequestCommentResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateMergeRequestCommentResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public UpdateMergeRequestCommentResponseBody setErrorMessage(String errorMessage) {
@@ -40,28 +48,20 @@ public class UpdateMergeRequestCommentResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public UpdateMergeRequestCommentResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public UpdateMergeRequestCommentResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
     public UpdateMergeRequestCommentResponseBody setResult(UpdateMergeRequestCommentResponseBodyResult result) {
         this.result = result;
         return this;
     }
     public UpdateMergeRequestCommentResponseBodyResult getResult() {
         return this.result;
+    }
+
+    public UpdateMergeRequestCommentResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public static class UpdateMergeRequestCommentResponseBodyResult extends TeaModel {

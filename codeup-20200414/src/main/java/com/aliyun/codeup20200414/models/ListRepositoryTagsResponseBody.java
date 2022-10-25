@@ -4,27 +4,35 @@ package com.aliyun.codeup20200414.models;
 import com.aliyun.tea.*;
 
 public class ListRepositoryTagsResponseBody extends TeaModel {
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Total")
-    public Long total;
+    @NameInMap("Result")
+    public java.util.List<ListRepositoryTagsResponseBodyResult> result;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    @NameInMap("Result")
-    public java.util.List<ListRepositoryTagsResponseBodyResult> result;
+    @NameInMap("Total")
+    public Long total;
 
     public static ListRepositoryTagsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListRepositoryTagsResponseBody self = new ListRepositoryTagsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListRepositoryTagsResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public ListRepositoryTagsResponseBody setErrorMessage(String errorMessage) {
@@ -43,12 +51,12 @@ public class ListRepositoryTagsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListRepositoryTagsResponseBody setTotal(Long total) {
-        this.total = total;
+    public ListRepositoryTagsResponseBody setResult(java.util.List<ListRepositoryTagsResponseBodyResult> result) {
+        this.result = result;
         return this;
     }
-    public Long getTotal() {
-        return this.total;
+    public java.util.List<ListRepositoryTagsResponseBodyResult> getResult() {
+        return this.result;
     }
 
     public ListRepositoryTagsResponseBody setSuccess(Boolean success) {
@@ -59,40 +67,24 @@ public class ListRepositoryTagsResponseBody extends TeaModel {
         return this.success;
     }
 
-    public ListRepositoryTagsResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
+    public ListRepositoryTagsResponseBody setTotal(Long total) {
+        this.total = total;
         return this;
     }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public ListRepositoryTagsResponseBody setResult(java.util.List<ListRepositoryTagsResponseBodyResult> result) {
-        this.result = result;
-        return this;
-    }
-    public java.util.List<ListRepositoryTagsResponseBodyResult> getResult() {
-        return this.result;
+    public Long getTotal() {
+        return this.total;
     }
 
     public static class ListRepositoryTagsResponseBodyResultCommitSignature extends TeaModel {
-        @NameInMap("VerificationStatus")
-        public String verificationStatus;
-
         @NameInMap("GpgKeyId")
         public String gpgKeyId;
+
+        @NameInMap("VerificationStatus")
+        public String verificationStatus;
 
         public static ListRepositoryTagsResponseBodyResultCommitSignature build(java.util.Map<String, ?> map) throws Exception {
             ListRepositoryTagsResponseBodyResultCommitSignature self = new ListRepositoryTagsResponseBodyResultCommitSignature();
             return TeaModel.build(map, self);
-        }
-
-        public ListRepositoryTagsResponseBodyResultCommitSignature setVerificationStatus(String verificationStatus) {
-            this.verificationStatus = verificationStatus;
-            return this;
-        }
-        public String getVerificationStatus() {
-            return this.verificationStatus;
         }
 
         public ListRepositoryTagsResponseBodyResultCommitSignature setGpgKeyId(String gpgKeyId) {
@@ -103,107 +95,59 @@ public class ListRepositoryTagsResponseBody extends TeaModel {
             return this.gpgKeyId;
         }
 
+        public ListRepositoryTagsResponseBodyResultCommitSignature setVerificationStatus(String verificationStatus) {
+            this.verificationStatus = verificationStatus;
+            return this;
+        }
+        public String getVerificationStatus() {
+            return this.verificationStatus;
+        }
+
     }
 
     public static class ListRepositoryTagsResponseBodyResultCommit extends TeaModel {
-        @NameInMap("ShortId")
-        public String shortId;
+        @NameInMap("AuthorEmail")
+        public String authorEmail;
 
         @NameInMap("AuthorName")
         public String authorName;
 
-        @NameInMap("CreatedAt")
-        public String createdAt;
-
-        @NameInMap("Message")
-        public String message;
-
         @NameInMap("AuthoredDate")
         public String authoredDate;
-
-        @NameInMap("CommitterName")
-        public String committerName;
-
-        @NameInMap("Title")
-        public String title;
-
-        @NameInMap("AuthorEmail")
-        public String authorEmail;
-
-        @NameInMap("CommitterEmail")
-        public String committerEmail;
-
-        @NameInMap("Id")
-        public String id;
 
         @NameInMap("CommittedDate")
         public String committedDate;
 
+        @NameInMap("CommitterEmail")
+        public String committerEmail;
+
+        @NameInMap("CommitterName")
+        public String committerName;
+
+        @NameInMap("CreatedAt")
+        public String createdAt;
+
+        @NameInMap("Id")
+        public String id;
+
+        @NameInMap("Message")
+        public String message;
+
         @NameInMap("ParentIds")
         public java.util.List<String> parentIds;
+
+        @NameInMap("ShortId")
+        public String shortId;
 
         @NameInMap("Signature")
         public ListRepositoryTagsResponseBodyResultCommitSignature signature;
 
+        @NameInMap("Title")
+        public String title;
+
         public static ListRepositoryTagsResponseBodyResultCommit build(java.util.Map<String, ?> map) throws Exception {
             ListRepositoryTagsResponseBodyResultCommit self = new ListRepositoryTagsResponseBodyResultCommit();
             return TeaModel.build(map, self);
-        }
-
-        public ListRepositoryTagsResponseBodyResultCommit setShortId(String shortId) {
-            this.shortId = shortId;
-            return this;
-        }
-        public String getShortId() {
-            return this.shortId;
-        }
-
-        public ListRepositoryTagsResponseBodyResultCommit setAuthorName(String authorName) {
-            this.authorName = authorName;
-            return this;
-        }
-        public String getAuthorName() {
-            return this.authorName;
-        }
-
-        public ListRepositoryTagsResponseBodyResultCommit setCreatedAt(String createdAt) {
-            this.createdAt = createdAt;
-            return this;
-        }
-        public String getCreatedAt() {
-            return this.createdAt;
-        }
-
-        public ListRepositoryTagsResponseBodyResultCommit setMessage(String message) {
-            this.message = message;
-            return this;
-        }
-        public String getMessage() {
-            return this.message;
-        }
-
-        public ListRepositoryTagsResponseBodyResultCommit setAuthoredDate(String authoredDate) {
-            this.authoredDate = authoredDate;
-            return this;
-        }
-        public String getAuthoredDate() {
-            return this.authoredDate;
-        }
-
-        public ListRepositoryTagsResponseBodyResultCommit setCommitterName(String committerName) {
-            this.committerName = committerName;
-            return this;
-        }
-        public String getCommitterName() {
-            return this.committerName;
-        }
-
-        public ListRepositoryTagsResponseBodyResultCommit setTitle(String title) {
-            this.title = title;
-            return this;
-        }
-        public String getTitle() {
-            return this.title;
         }
 
         public ListRepositoryTagsResponseBodyResultCommit setAuthorEmail(String authorEmail) {
@@ -214,20 +158,20 @@ public class ListRepositoryTagsResponseBody extends TeaModel {
             return this.authorEmail;
         }
 
-        public ListRepositoryTagsResponseBodyResultCommit setCommitterEmail(String committerEmail) {
-            this.committerEmail = committerEmail;
+        public ListRepositoryTagsResponseBodyResultCommit setAuthorName(String authorName) {
+            this.authorName = authorName;
             return this;
         }
-        public String getCommitterEmail() {
-            return this.committerEmail;
+        public String getAuthorName() {
+            return this.authorName;
         }
 
-        public ListRepositoryTagsResponseBodyResultCommit setId(String id) {
-            this.id = id;
+        public ListRepositoryTagsResponseBodyResultCommit setAuthoredDate(String authoredDate) {
+            this.authoredDate = authoredDate;
             return this;
         }
-        public String getId() {
-            return this.id;
+        public String getAuthoredDate() {
+            return this.authoredDate;
         }
 
         public ListRepositoryTagsResponseBodyResultCommit setCommittedDate(String committedDate) {
@@ -238,12 +182,60 @@ public class ListRepositoryTagsResponseBody extends TeaModel {
             return this.committedDate;
         }
 
+        public ListRepositoryTagsResponseBodyResultCommit setCommitterEmail(String committerEmail) {
+            this.committerEmail = committerEmail;
+            return this;
+        }
+        public String getCommitterEmail() {
+            return this.committerEmail;
+        }
+
+        public ListRepositoryTagsResponseBodyResultCommit setCommitterName(String committerName) {
+            this.committerName = committerName;
+            return this;
+        }
+        public String getCommitterName() {
+            return this.committerName;
+        }
+
+        public ListRepositoryTagsResponseBodyResultCommit setCreatedAt(String createdAt) {
+            this.createdAt = createdAt;
+            return this;
+        }
+        public String getCreatedAt() {
+            return this.createdAt;
+        }
+
+        public ListRepositoryTagsResponseBodyResultCommit setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
+        public ListRepositoryTagsResponseBodyResultCommit setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
+        }
+
         public ListRepositoryTagsResponseBodyResultCommit setParentIds(java.util.List<String> parentIds) {
             this.parentIds = parentIds;
             return this;
         }
         public java.util.List<String> getParentIds() {
             return this.parentIds;
+        }
+
+        public ListRepositoryTagsResponseBodyResultCommit setShortId(String shortId) {
+            this.shortId = shortId;
+            return this;
+        }
+        public String getShortId() {
+            return this.shortId;
         }
 
         public ListRepositoryTagsResponseBodyResultCommit setSignature(ListRepositoryTagsResponseBodyResultCommitSignature signature) {
@@ -254,26 +246,26 @@ public class ListRepositoryTagsResponseBody extends TeaModel {
             return this.signature;
         }
 
+        public ListRepositoryTagsResponseBodyResultCommit setTitle(String title) {
+            this.title = title;
+            return this;
+        }
+        public String getTitle() {
+            return this.title;
+        }
+
     }
 
     public static class ListRepositoryTagsResponseBodyResultSignature extends TeaModel {
-        @NameInMap("VerificationStatus")
-        public String verificationStatus;
-
         @NameInMap("GpgKeyId")
         public String gpgKeyId;
+
+        @NameInMap("VerificationStatus")
+        public String verificationStatus;
 
         public static ListRepositoryTagsResponseBodyResultSignature build(java.util.Map<String, ?> map) throws Exception {
             ListRepositoryTagsResponseBodyResultSignature self = new ListRepositoryTagsResponseBodyResultSignature();
             return TeaModel.build(map, self);
-        }
-
-        public ListRepositoryTagsResponseBodyResultSignature setVerificationStatus(String verificationStatus) {
-            this.verificationStatus = verificationStatus;
-            return this;
-        }
-        public String getVerificationStatus() {
-            return this.verificationStatus;
         }
 
         public ListRepositoryTagsResponseBodyResultSignature setGpgKeyId(String gpgKeyId) {
@@ -284,20 +276,28 @@ public class ListRepositoryTagsResponseBody extends TeaModel {
             return this.gpgKeyId;
         }
 
+        public ListRepositoryTagsResponseBodyResultSignature setVerificationStatus(String verificationStatus) {
+            this.verificationStatus = verificationStatus;
+            return this;
+        }
+        public String getVerificationStatus() {
+            return this.verificationStatus;
+        }
+
     }
 
     public static class ListRepositoryTagsResponseBodyResult extends TeaModel {
+        @NameInMap("Commit")
+        public ListRepositoryTagsResponseBodyResultCommit commit;
+
+        @NameInMap("Id")
+        public String id;
+
         @NameInMap("Message")
         public String message;
 
         @NameInMap("Name")
         public String name;
-
-        @NameInMap("Id")
-        public String id;
-
-        @NameInMap("Commit")
-        public ListRepositoryTagsResponseBodyResultCommit commit;
 
         @NameInMap("Signature")
         public ListRepositoryTagsResponseBodyResultSignature signature;
@@ -305,6 +305,22 @@ public class ListRepositoryTagsResponseBody extends TeaModel {
         public static ListRepositoryTagsResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             ListRepositoryTagsResponseBodyResult self = new ListRepositoryTagsResponseBodyResult();
             return TeaModel.build(map, self);
+        }
+
+        public ListRepositoryTagsResponseBodyResult setCommit(ListRepositoryTagsResponseBodyResultCommit commit) {
+            this.commit = commit;
+            return this;
+        }
+        public ListRepositoryTagsResponseBodyResultCommit getCommit() {
+            return this.commit;
+        }
+
+        public ListRepositoryTagsResponseBodyResult setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
         }
 
         public ListRepositoryTagsResponseBodyResult setMessage(String message) {
@@ -321,22 +337,6 @@ public class ListRepositoryTagsResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
-        }
-
-        public ListRepositoryTagsResponseBodyResult setId(String id) {
-            this.id = id;
-            return this;
-        }
-        public String getId() {
-            return this.id;
-        }
-
-        public ListRepositoryTagsResponseBodyResult setCommit(ListRepositoryTagsResponseBodyResultCommit commit) {
-            this.commit = commit;
-            return this;
-        }
-        public ListRepositoryTagsResponseBodyResultCommit getCommit() {
-            return this.commit;
         }
 
         public ListRepositoryTagsResponseBodyResult setSignature(ListRepositoryTagsResponseBodyResultSignature signature) {

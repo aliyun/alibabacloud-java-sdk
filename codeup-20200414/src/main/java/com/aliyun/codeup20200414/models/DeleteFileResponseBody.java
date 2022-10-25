@@ -4,24 +4,32 @@ package com.aliyun.codeup20200414.models;
 import com.aliyun.tea.*;
 
 public class DeleteFileResponseBody extends TeaModel {
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
+    @NameInMap("Result")
+    public DeleteFileResponseBodyResult result;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Result")
-    public DeleteFileResponseBodyResult result;
-
     public static DeleteFileResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteFileResponseBody self = new DeleteFileResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteFileResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public DeleteFileResponseBody setErrorMessage(String errorMessage) {
@@ -40,12 +48,12 @@ public class DeleteFileResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DeleteFileResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
+    public DeleteFileResponseBody setResult(DeleteFileResponseBodyResult result) {
+        this.result = result;
         return this;
     }
-    public String getErrorCode() {
-        return this.errorCode;
+    public DeleteFileResponseBodyResult getResult() {
+        return this.result;
     }
 
     public DeleteFileResponseBody setSuccess(Boolean success) {
@@ -56,32 +64,16 @@ public class DeleteFileResponseBody extends TeaModel {
         return this.success;
     }
 
-    public DeleteFileResponseBody setResult(DeleteFileResponseBodyResult result) {
-        this.result = result;
-        return this;
-    }
-    public DeleteFileResponseBodyResult getResult() {
-        return this.result;
-    }
-
     public static class DeleteFileResponseBodyResult extends TeaModel {
-        @NameInMap("FilePath")
-        public String filePath;
-
         @NameInMap("BranchName")
         public String branchName;
+
+        @NameInMap("FilePath")
+        public String filePath;
 
         public static DeleteFileResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             DeleteFileResponseBodyResult self = new DeleteFileResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public DeleteFileResponseBodyResult setFilePath(String filePath) {
-            this.filePath = filePath;
-            return this;
-        }
-        public String getFilePath() {
-            return this.filePath;
         }
 
         public DeleteFileResponseBodyResult setBranchName(String branchName) {
@@ -90,6 +82,14 @@ public class DeleteFileResponseBody extends TeaModel {
         }
         public String getBranchName() {
             return this.branchName;
+        }
+
+        public DeleteFileResponseBodyResult setFilePath(String filePath) {
+            this.filePath = filePath;
+            return this;
+        }
+        public String getFilePath() {
+            return this.filePath;
         }
 
     }

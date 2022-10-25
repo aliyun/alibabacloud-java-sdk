@@ -4,24 +4,32 @@ package com.aliyun.codeup20200414.models;
 import com.aliyun.tea.*;
 
 public class GetUserInfoResponseBody extends TeaModel {
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
+    @NameInMap("Result")
+    public GetUserInfoResponseBodyResult result;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Result")
-    public GetUserInfoResponseBodyResult result;
-
     public static GetUserInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetUserInfoResponseBody self = new GetUserInfoResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetUserInfoResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public GetUserInfoResponseBody setErrorMessage(String errorMessage) {
@@ -40,12 +48,12 @@ public class GetUserInfoResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetUserInfoResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
+    public GetUserInfoResponseBody setResult(GetUserInfoResponseBodyResult result) {
+        this.result = result;
         return this;
     }
-    public String getErrorCode() {
-        return this.errorCode;
+    public GetUserInfoResponseBodyResult getResult() {
+        return this.result;
     }
 
     public GetUserInfoResponseBody setSuccess(Boolean success) {
@@ -56,29 +64,21 @@ public class GetUserInfoResponseBody extends TeaModel {
         return this.success;
     }
 
-    public GetUserInfoResponseBody setResult(GetUserInfoResponseBodyResult result) {
-        this.result = result;
-        return this;
-    }
-    public GetUserInfoResponseBodyResult getResult() {
-        return this.result;
-    }
-
     public static class GetUserInfoResponseBodyResult extends TeaModel {
-        @NameInMap("Email")
-        public String email;
-
         @NameInMap("AvatarUrl")
         public String avatarUrl;
+
+        @NameInMap("Email")
+        public String email;
 
         @NameInMap("ExternalUserId")
         public String externalUserId;
 
-        @NameInMap("Name")
-        public String name;
-
         @NameInMap("Id")
         public Long id;
+
+        @NameInMap("Name")
+        public String name;
 
         @NameInMap("Username")
         public String username;
@@ -86,14 +86,6 @@ public class GetUserInfoResponseBody extends TeaModel {
         public static GetUserInfoResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             GetUserInfoResponseBodyResult self = new GetUserInfoResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public GetUserInfoResponseBodyResult setEmail(String email) {
-            this.email = email;
-            return this;
-        }
-        public String getEmail() {
-            return this.email;
         }
 
         public GetUserInfoResponseBodyResult setAvatarUrl(String avatarUrl) {
@@ -104,6 +96,14 @@ public class GetUserInfoResponseBody extends TeaModel {
             return this.avatarUrl;
         }
 
+        public GetUserInfoResponseBodyResult setEmail(String email) {
+            this.email = email;
+            return this;
+        }
+        public String getEmail() {
+            return this.email;
+        }
+
         public GetUserInfoResponseBodyResult setExternalUserId(String externalUserId) {
             this.externalUserId = externalUserId;
             return this;
@@ -112,20 +112,20 @@ public class GetUserInfoResponseBody extends TeaModel {
             return this.externalUserId;
         }
 
-        public GetUserInfoResponseBodyResult setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
         public GetUserInfoResponseBodyResult setId(Long id) {
             this.id = id;
             return this;
         }
         public Long getId() {
             return this.id;
+        }
+
+        public GetUserInfoResponseBodyResult setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
         public GetUserInfoResponseBodyResult setUsername(String username) {

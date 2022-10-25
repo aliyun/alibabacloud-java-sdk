@@ -7,8 +7,8 @@ public class ListGroupsRequest extends TeaModel {
     @NameInMap("AccessToken")
     public String accessToken;
 
-    @NameInMap("Search")
-    public String search;
+    @NameInMap("IncludePersonal")
+    public Boolean includePersonal;
 
     @NameInMap("OrganizationId")
     public String organizationId;
@@ -19,11 +19,11 @@ public class ListGroupsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
+    @NameInMap("Search")
+    public String search;
+
     @NameInMap("SubUserId")
     public String subUserId;
-
-    @NameInMap("IncludePersonal")
-    public Boolean includePersonal;
 
     public static ListGroupsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListGroupsRequest self = new ListGroupsRequest();
@@ -38,12 +38,12 @@ public class ListGroupsRequest extends TeaModel {
         return this.accessToken;
     }
 
-    public ListGroupsRequest setSearch(String search) {
-        this.search = search;
+    public ListGroupsRequest setIncludePersonal(Boolean includePersonal) {
+        this.includePersonal = includePersonal;
         return this;
     }
-    public String getSearch() {
-        return this.search;
+    public Boolean getIncludePersonal() {
+        return this.includePersonal;
     }
 
     public ListGroupsRequest setOrganizationId(String organizationId) {
@@ -70,20 +70,20 @@ public class ListGroupsRequest extends TeaModel {
         return this.pageSize;
     }
 
+    public ListGroupsRequest setSearch(String search) {
+        this.search = search;
+        return this;
+    }
+    public String getSearch() {
+        return this.search;
+    }
+
     public ListGroupsRequest setSubUserId(String subUserId) {
         this.subUserId = subUserId;
         return this;
     }
     public String getSubUserId() {
         return this.subUserId;
-    }
-
-    public ListGroupsRequest setIncludePersonal(Boolean includePersonal) {
-        this.includePersonal = includePersonal;
-        return this;
-    }
-    public Boolean getIncludePersonal() {
-        return this.includePersonal;
     }
 
 }

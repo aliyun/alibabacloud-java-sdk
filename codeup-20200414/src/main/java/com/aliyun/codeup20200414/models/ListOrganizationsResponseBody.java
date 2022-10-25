@@ -4,24 +4,32 @@ package com.aliyun.codeup20200414.models;
 import com.aliyun.tea.*;
 
 public class ListOrganizationsResponseBody extends TeaModel {
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
+    @NameInMap("Result")
+    public java.util.List<ListOrganizationsResponseBodyResult> result;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Result")
-    public java.util.List<ListOrganizationsResponseBodyResult> result;
-
     public static ListOrganizationsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListOrganizationsResponseBody self = new ListOrganizationsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListOrganizationsResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public ListOrganizationsResponseBody setErrorMessage(String errorMessage) {
@@ -40,12 +48,12 @@ public class ListOrganizationsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListOrganizationsResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
+    public ListOrganizationsResponseBody setResult(java.util.List<ListOrganizationsResponseBodyResult> result) {
+        this.result = result;
         return this;
     }
-    public String getErrorCode() {
-        return this.errorCode;
+    public java.util.List<ListOrganizationsResponseBodyResult> getResult() {
+        return this.result;
     }
 
     public ListOrganizationsResponseBody setSuccess(Boolean success) {
@@ -56,38 +64,22 @@ public class ListOrganizationsResponseBody extends TeaModel {
         return this.success;
     }
 
-    public ListOrganizationsResponseBody setResult(java.util.List<ListOrganizationsResponseBodyResult> result) {
-        this.result = result;
-        return this;
-    }
-    public java.util.List<ListOrganizationsResponseBodyResult> getResult() {
-        return this.result;
-    }
-
     public static class ListOrganizationsResponseBodyResult extends TeaModel {
-        @NameInMap("OrganizationRole")
-        public String organizationRole;
-
         @NameInMap("AccessLevel")
         public Integer accessLevel;
-
-        @NameInMap("OrganizationName")
-        public String organizationName;
 
         @NameInMap("OrganizationId")
         public String organizationId;
 
+        @NameInMap("OrganizationName")
+        public String organizationName;
+
+        @NameInMap("OrganizationRole")
+        public String organizationRole;
+
         public static ListOrganizationsResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             ListOrganizationsResponseBodyResult self = new ListOrganizationsResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public ListOrganizationsResponseBodyResult setOrganizationRole(String organizationRole) {
-            this.organizationRole = organizationRole;
-            return this;
-        }
-        public String getOrganizationRole() {
-            return this.organizationRole;
         }
 
         public ListOrganizationsResponseBodyResult setAccessLevel(Integer accessLevel) {
@@ -98,6 +90,14 @@ public class ListOrganizationsResponseBody extends TeaModel {
             return this.accessLevel;
         }
 
+        public ListOrganizationsResponseBodyResult setOrganizationId(String organizationId) {
+            this.organizationId = organizationId;
+            return this;
+        }
+        public String getOrganizationId() {
+            return this.organizationId;
+        }
+
         public ListOrganizationsResponseBodyResult setOrganizationName(String organizationName) {
             this.organizationName = organizationName;
             return this;
@@ -106,12 +106,12 @@ public class ListOrganizationsResponseBody extends TeaModel {
             return this.organizationName;
         }
 
-        public ListOrganizationsResponseBodyResult setOrganizationId(String organizationId) {
-            this.organizationId = organizationId;
+        public ListOrganizationsResponseBodyResult setOrganizationRole(String organizationRole) {
+            this.organizationRole = organizationRole;
             return this;
         }
-        public String getOrganizationId() {
-            return this.organizationId;
+        public String getOrganizationRole() {
+            return this.organizationRole;
         }
 
     }

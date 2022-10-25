@@ -4,24 +4,32 @@ package com.aliyun.codeup20200414.models;
 import com.aliyun.tea.*;
 
 public class DeleteRepositoryMemberResponseBody extends TeaModel {
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
+    @NameInMap("Result")
+    public DeleteRepositoryMemberResponseBodyResult result;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Result")
-    public DeleteRepositoryMemberResponseBodyResult result;
-
     public static DeleteRepositoryMemberResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteRepositoryMemberResponseBody self = new DeleteRepositoryMemberResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteRepositoryMemberResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public DeleteRepositoryMemberResponseBody setErrorMessage(String errorMessage) {
@@ -40,12 +48,12 @@ public class DeleteRepositoryMemberResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DeleteRepositoryMemberResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
+    public DeleteRepositoryMemberResponseBody setResult(DeleteRepositoryMemberResponseBodyResult result) {
+        this.result = result;
         return this;
     }
-    public String getErrorCode() {
-        return this.errorCode;
+    public DeleteRepositoryMemberResponseBodyResult getResult() {
+        return this.result;
     }
 
     public DeleteRepositoryMemberResponseBody setSuccess(Boolean success) {
@@ -56,77 +64,37 @@ public class DeleteRepositoryMemberResponseBody extends TeaModel {
         return this.success;
     }
 
-    public DeleteRepositoryMemberResponseBody setResult(DeleteRepositoryMemberResponseBodyResult result) {
-        this.result = result;
-        return this;
-    }
-    public DeleteRepositoryMemberResponseBodyResult getResult() {
-        return this.result;
-    }
-
     public static class DeleteRepositoryMemberResponseBodyResult extends TeaModel {
-        @NameInMap("UserId")
-        public Long userId;
-
-        @NameInMap("SourceType")
-        public String sourceType;
+        @NameInMap("AccessLevel")
+        public Integer accessLevel;
 
         @NameInMap("CreatedAt")
         public String createdAt;
 
+        @NameInMap("Id")
+        public Long id;
+
         @NameInMap("Message")
         public String message;
-
-        @NameInMap("AccessLevel")
-        public Integer accessLevel;
-
-        @NameInMap("UpdatedAt")
-        public String updatedAt;
-
-        @NameInMap("SourceId")
-        public Long sourceId;
 
         @NameInMap("NotificationLevel")
         public Integer notificationLevel;
 
-        @NameInMap("Id")
-        public Long id;
+        @NameInMap("SourceId")
+        public Long sourceId;
+
+        @NameInMap("SourceType")
+        public String sourceType;
+
+        @NameInMap("UpdatedAt")
+        public String updatedAt;
+
+        @NameInMap("UserId")
+        public Long userId;
 
         public static DeleteRepositoryMemberResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             DeleteRepositoryMemberResponseBodyResult self = new DeleteRepositoryMemberResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public DeleteRepositoryMemberResponseBodyResult setUserId(Long userId) {
-            this.userId = userId;
-            return this;
-        }
-        public Long getUserId() {
-            return this.userId;
-        }
-
-        public DeleteRepositoryMemberResponseBodyResult setSourceType(String sourceType) {
-            this.sourceType = sourceType;
-            return this;
-        }
-        public String getSourceType() {
-            return this.sourceType;
-        }
-
-        public DeleteRepositoryMemberResponseBodyResult setCreatedAt(String createdAt) {
-            this.createdAt = createdAt;
-            return this;
-        }
-        public String getCreatedAt() {
-            return this.createdAt;
-        }
-
-        public DeleteRepositoryMemberResponseBodyResult setMessage(String message) {
-            this.message = message;
-            return this;
-        }
-        public String getMessage() {
-            return this.message;
         }
 
         public DeleteRepositoryMemberResponseBodyResult setAccessLevel(Integer accessLevel) {
@@ -137,20 +105,28 @@ public class DeleteRepositoryMemberResponseBody extends TeaModel {
             return this.accessLevel;
         }
 
-        public DeleteRepositoryMemberResponseBodyResult setUpdatedAt(String updatedAt) {
-            this.updatedAt = updatedAt;
+        public DeleteRepositoryMemberResponseBodyResult setCreatedAt(String createdAt) {
+            this.createdAt = createdAt;
             return this;
         }
-        public String getUpdatedAt() {
-            return this.updatedAt;
+        public String getCreatedAt() {
+            return this.createdAt;
         }
 
-        public DeleteRepositoryMemberResponseBodyResult setSourceId(Long sourceId) {
-            this.sourceId = sourceId;
+        public DeleteRepositoryMemberResponseBodyResult setId(Long id) {
+            this.id = id;
             return this;
         }
-        public Long getSourceId() {
-            return this.sourceId;
+        public Long getId() {
+            return this.id;
+        }
+
+        public DeleteRepositoryMemberResponseBodyResult setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
         }
 
         public DeleteRepositoryMemberResponseBodyResult setNotificationLevel(Integer notificationLevel) {
@@ -161,12 +137,36 @@ public class DeleteRepositoryMemberResponseBody extends TeaModel {
             return this.notificationLevel;
         }
 
-        public DeleteRepositoryMemberResponseBodyResult setId(Long id) {
-            this.id = id;
+        public DeleteRepositoryMemberResponseBodyResult setSourceId(Long sourceId) {
+            this.sourceId = sourceId;
             return this;
         }
-        public Long getId() {
-            return this.id;
+        public Long getSourceId() {
+            return this.sourceId;
+        }
+
+        public DeleteRepositoryMemberResponseBodyResult setSourceType(String sourceType) {
+            this.sourceType = sourceType;
+            return this;
+        }
+        public String getSourceType() {
+            return this.sourceType;
+        }
+
+        public DeleteRepositoryMemberResponseBodyResult setUpdatedAt(String updatedAt) {
+            this.updatedAt = updatedAt;
+            return this;
+        }
+        public String getUpdatedAt() {
+            return this.updatedAt;
+        }
+
+        public DeleteRepositoryMemberResponseBodyResult setUserId(Long userId) {
+            this.userId = userId;
+            return this;
+        }
+        public Long getUserId() {
+            return this.userId;
         }
 
     }

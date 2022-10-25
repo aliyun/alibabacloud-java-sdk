@@ -13,14 +13,14 @@ public class ListRepositoryTreeRequest extends TeaModel {
     @NameInMap("Path")
     public String path;
 
-    @NameInMap("Type")
-    public String type;
-
     @NameInMap("RefName")
     public String refName;
 
     @NameInMap("SubUserId")
     public String subUserId;
+
+    @NameInMap("Type")
+    public String type;
 
     public static ListRepositoryTreeRequest build(java.util.Map<String, ?> map) throws Exception {
         ListRepositoryTreeRequest self = new ListRepositoryTreeRequest();
@@ -51,14 +51,6 @@ public class ListRepositoryTreeRequest extends TeaModel {
         return this.path;
     }
 
-    public ListRepositoryTreeRequest setType(String type) {
-        this.type = type;
-        return this;
-    }
-    public String getType() {
-        return this.type;
-    }
-
     public ListRepositoryTreeRequest setRefName(String refName) {
         this.refName = refName;
         return this;
@@ -73,6 +65,14 @@ public class ListRepositoryTreeRequest extends TeaModel {
     }
     public String getSubUserId() {
         return this.subUserId;
+    }
+
+    public ListRepositoryTreeRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }

@@ -7,23 +7,23 @@ public class GetFileBlobsRequest extends TeaModel {
     @NameInMap("AccessToken")
     public String accessToken;
 
-    @NameInMap("OrganizationId")
-    public String organizationId;
-
     @NameInMap("FilePath")
     public String filePath;
-
-    @NameInMap("Ref")
-    public String ref;
 
     @NameInMap("From")
     public Long from;
 
-    @NameInMap("To")
-    public Long to;
+    @NameInMap("OrganizationId")
+    public String organizationId;
+
+    @NameInMap("Ref")
+    public String ref;
 
     @NameInMap("SubUserId")
     public String subUserId;
+
+    @NameInMap("To")
+    public Long to;
 
     public static GetFileBlobsRequest build(java.util.Map<String, ?> map) throws Exception {
         GetFileBlobsRequest self = new GetFileBlobsRequest();
@@ -38,28 +38,12 @@ public class GetFileBlobsRequest extends TeaModel {
         return this.accessToken;
     }
 
-    public GetFileBlobsRequest setOrganizationId(String organizationId) {
-        this.organizationId = organizationId;
-        return this;
-    }
-    public String getOrganizationId() {
-        return this.organizationId;
-    }
-
     public GetFileBlobsRequest setFilePath(String filePath) {
         this.filePath = filePath;
         return this;
     }
     public String getFilePath() {
         return this.filePath;
-    }
-
-    public GetFileBlobsRequest setRef(String ref) {
-        this.ref = ref;
-        return this;
-    }
-    public String getRef() {
-        return this.ref;
     }
 
     public GetFileBlobsRequest setFrom(Long from) {
@@ -70,12 +54,20 @@ public class GetFileBlobsRequest extends TeaModel {
         return this.from;
     }
 
-    public GetFileBlobsRequest setTo(Long to) {
-        this.to = to;
+    public GetFileBlobsRequest setOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
         return this;
     }
-    public Long getTo() {
-        return this.to;
+    public String getOrganizationId() {
+        return this.organizationId;
+    }
+
+    public GetFileBlobsRequest setRef(String ref) {
+        this.ref = ref;
+        return this;
+    }
+    public String getRef() {
+        return this.ref;
     }
 
     public GetFileBlobsRequest setSubUserId(String subUserId) {
@@ -84,6 +76,14 @@ public class GetFileBlobsRequest extends TeaModel {
     }
     public String getSubUserId() {
         return this.subUserId;
+    }
+
+    public GetFileBlobsRequest setTo(Long to) {
+        this.to = to;
+        return this;
+    }
+    public Long getTo() {
+        return this.to;
     }
 
 }

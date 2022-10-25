@@ -4,24 +4,32 @@ package com.aliyun.codeup20200414.models;
 import com.aliyun.tea.*;
 
 public class CreateSshKeyResponseBody extends TeaModel {
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Success")
-    public Boolean success;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
     @NameInMap("Result")
     public CreateSshKeyResponseBodyResult result;
+
+    @NameInMap("Success")
+    public Boolean success;
 
     public static CreateSshKeyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateSshKeyResponseBody self = new CreateSshKeyResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateSshKeyResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public CreateSshKeyResponseBody setErrorMessage(String errorMessage) {
@@ -40,22 +48,6 @@ public class CreateSshKeyResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateSshKeyResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public CreateSshKeyResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
     public CreateSshKeyResponseBody setResult(CreateSshKeyResponseBodyResult result) {
         this.result = result;
         return this;
@@ -64,44 +56,36 @@ public class CreateSshKeyResponseBody extends TeaModel {
         return this.result;
     }
 
+    public CreateSshKeyResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public static class CreateSshKeyResponseBodyResult extends TeaModel {
-        @NameInMap("Key")
-        public String key;
+        @NameInMap("CreatedAt")
+        public String createdAt;
 
         @NameInMap("FingerPrint")
         public String fingerPrint;
 
-        @NameInMap("CreatedAt")
-        public String createdAt;
+        @NameInMap("Id")
+        public Long id;
 
-        @NameInMap("Title")
-        public String title;
+        @NameInMap("Key")
+        public String key;
 
         @NameInMap("KeyScope")
         public String keyScope;
 
-        @NameInMap("Id")
-        public Long id;
+        @NameInMap("Title")
+        public String title;
 
         public static CreateSshKeyResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             CreateSshKeyResponseBodyResult self = new CreateSshKeyResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public CreateSshKeyResponseBodyResult setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public CreateSshKeyResponseBodyResult setFingerPrint(String fingerPrint) {
-            this.fingerPrint = fingerPrint;
-            return this;
-        }
-        public String getFingerPrint() {
-            return this.fingerPrint;
         }
 
         public CreateSshKeyResponseBodyResult setCreatedAt(String createdAt) {
@@ -112,12 +96,28 @@ public class CreateSshKeyResponseBody extends TeaModel {
             return this.createdAt;
         }
 
-        public CreateSshKeyResponseBodyResult setTitle(String title) {
-            this.title = title;
+        public CreateSshKeyResponseBodyResult setFingerPrint(String fingerPrint) {
+            this.fingerPrint = fingerPrint;
             return this;
         }
-        public String getTitle() {
-            return this.title;
+        public String getFingerPrint() {
+            return this.fingerPrint;
+        }
+
+        public CreateSshKeyResponseBodyResult setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
+        }
+
+        public CreateSshKeyResponseBodyResult setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
         }
 
         public CreateSshKeyResponseBodyResult setKeyScope(String keyScope) {
@@ -128,12 +128,12 @@ public class CreateSshKeyResponseBody extends TeaModel {
             return this.keyScope;
         }
 
-        public CreateSshKeyResponseBodyResult setId(Long id) {
-            this.id = id;
+        public CreateSshKeyResponseBodyResult setTitle(String title) {
+            this.title = title;
             return this;
         }
-        public Long getId() {
-            return this.id;
+        public String getTitle() {
+            return this.title;
         }
 
     }

@@ -4,27 +4,35 @@ package com.aliyun.codeup20200414.models;
 import com.aliyun.tea.*;
 
 public class ListRepositoryMemberResponseBody extends TeaModel {
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Total")
-    public Long total;
+    @NameInMap("Result")
+    public java.util.List<ListRepositoryMemberResponseBodyResult> result;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    @NameInMap("Result")
-    public java.util.List<ListRepositoryMemberResponseBodyResult> result;
+    @NameInMap("Total")
+    public Long total;
 
     public static ListRepositoryMemberResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListRepositoryMemberResponseBody self = new ListRepositoryMemberResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListRepositoryMemberResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public ListRepositoryMemberResponseBody setErrorMessage(String errorMessage) {
@@ -43,12 +51,12 @@ public class ListRepositoryMemberResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListRepositoryMemberResponseBody setTotal(Long total) {
-        this.total = total;
+    public ListRepositoryMemberResponseBody setResult(java.util.List<ListRepositoryMemberResponseBodyResult> result) {
+        this.result = result;
         return this;
     }
-    public Long getTotal() {
-        return this.total;
+    public java.util.List<ListRepositoryMemberResponseBodyResult> getResult() {
+        return this.result;
     }
 
     public ListRepositoryMemberResponseBody setSuccess(Boolean success) {
@@ -59,43 +67,35 @@ public class ListRepositoryMemberResponseBody extends TeaModel {
         return this.success;
     }
 
-    public ListRepositoryMemberResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
+    public ListRepositoryMemberResponseBody setTotal(Long total) {
+        this.total = total;
         return this;
     }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public ListRepositoryMemberResponseBody setResult(java.util.List<ListRepositoryMemberResponseBodyResult> result) {
-        this.result = result;
-        return this;
-    }
-    public java.util.List<ListRepositoryMemberResponseBodyResult> getResult() {
-        return this.result;
+    public Long getTotal() {
+        return this.total;
     }
 
     public static class ListRepositoryMemberResponseBodyResult extends TeaModel {
-        @NameInMap("ExternUserId")
-        public String externUserId;
-
-        @NameInMap("Email")
-        public String email;
+        @NameInMap("AccessLevel")
+        public Integer accessLevel;
 
         @NameInMap("AvatarUrl")
         public String avatarUrl;
 
-        @NameInMap("State")
-        public String state;
+        @NameInMap("Email")
+        public String email;
 
-        @NameInMap("AccessLevel")
-        public Integer accessLevel;
+        @NameInMap("ExternUserId")
+        public String externUserId;
+
+        @NameInMap("Id")
+        public Long id;
 
         @NameInMap("Name")
         public String name;
 
-        @NameInMap("Id")
-        public Long id;
+        @NameInMap("State")
+        public String state;
 
         @NameInMap("Username")
         public String username;
@@ -103,38 +103,6 @@ public class ListRepositoryMemberResponseBody extends TeaModel {
         public static ListRepositoryMemberResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             ListRepositoryMemberResponseBodyResult self = new ListRepositoryMemberResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public ListRepositoryMemberResponseBodyResult setExternUserId(String externUserId) {
-            this.externUserId = externUserId;
-            return this;
-        }
-        public String getExternUserId() {
-            return this.externUserId;
-        }
-
-        public ListRepositoryMemberResponseBodyResult setEmail(String email) {
-            this.email = email;
-            return this;
-        }
-        public String getEmail() {
-            return this.email;
-        }
-
-        public ListRepositoryMemberResponseBodyResult setAvatarUrl(String avatarUrl) {
-            this.avatarUrl = avatarUrl;
-            return this;
-        }
-        public String getAvatarUrl() {
-            return this.avatarUrl;
-        }
-
-        public ListRepositoryMemberResponseBodyResult setState(String state) {
-            this.state = state;
-            return this;
-        }
-        public String getState() {
-            return this.state;
         }
 
         public ListRepositoryMemberResponseBodyResult setAccessLevel(Integer accessLevel) {
@@ -145,12 +113,28 @@ public class ListRepositoryMemberResponseBody extends TeaModel {
             return this.accessLevel;
         }
 
-        public ListRepositoryMemberResponseBodyResult setName(String name) {
-            this.name = name;
+        public ListRepositoryMemberResponseBodyResult setAvatarUrl(String avatarUrl) {
+            this.avatarUrl = avatarUrl;
             return this;
         }
-        public String getName() {
-            return this.name;
+        public String getAvatarUrl() {
+            return this.avatarUrl;
+        }
+
+        public ListRepositoryMemberResponseBodyResult setEmail(String email) {
+            this.email = email;
+            return this;
+        }
+        public String getEmail() {
+            return this.email;
+        }
+
+        public ListRepositoryMemberResponseBodyResult setExternUserId(String externUserId) {
+            this.externUserId = externUserId;
+            return this;
+        }
+        public String getExternUserId() {
+            return this.externUserId;
         }
 
         public ListRepositoryMemberResponseBodyResult setId(Long id) {
@@ -159,6 +143,22 @@ public class ListRepositoryMemberResponseBody extends TeaModel {
         }
         public Long getId() {
             return this.id;
+        }
+
+        public ListRepositoryMemberResponseBodyResult setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public ListRepositoryMemberResponseBodyResult setState(String state) {
+            this.state = state;
+            return this;
+        }
+        public String getState() {
+            return this.state;
         }
 
         public ListRepositoryMemberResponseBodyResult setUsername(String username) {

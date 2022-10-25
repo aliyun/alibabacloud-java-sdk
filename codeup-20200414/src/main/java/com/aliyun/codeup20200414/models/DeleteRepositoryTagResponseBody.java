@@ -4,24 +4,32 @@ package com.aliyun.codeup20200414.models;
 import com.aliyun.tea.*;
 
 public class DeleteRepositoryTagResponseBody extends TeaModel {
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
+    @NameInMap("Result")
+    public DeleteRepositoryTagResponseBodyResult result;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Result")
-    public DeleteRepositoryTagResponseBodyResult result;
-
     public static DeleteRepositoryTagResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteRepositoryTagResponseBody self = new DeleteRepositoryTagResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteRepositoryTagResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public DeleteRepositoryTagResponseBody setErrorMessage(String errorMessage) {
@@ -40,12 +48,12 @@ public class DeleteRepositoryTagResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DeleteRepositoryTagResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
+    public DeleteRepositoryTagResponseBody setResult(DeleteRepositoryTagResponseBodyResult result) {
+        this.result = result;
         return this;
     }
-    public String getErrorCode() {
-        return this.errorCode;
+    public DeleteRepositoryTagResponseBodyResult getResult() {
+        return this.result;
     }
 
     public DeleteRepositoryTagResponseBody setSuccess(Boolean success) {
@@ -54,14 +62,6 @@ public class DeleteRepositoryTagResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public DeleteRepositoryTagResponseBody setResult(DeleteRepositoryTagResponseBodyResult result) {
-        this.result = result;
-        return this;
-    }
-    public DeleteRepositoryTagResponseBodyResult getResult() {
-        return this.result;
     }
 
     public static class DeleteRepositoryTagResponseBodyResult extends TeaModel {

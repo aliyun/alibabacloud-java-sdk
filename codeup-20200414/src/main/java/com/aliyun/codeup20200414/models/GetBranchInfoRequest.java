@@ -7,14 +7,14 @@ public class GetBranchInfoRequest extends TeaModel {
     @NameInMap("AccessToken")
     public String accessToken;
 
+    @NameInMap("BranchName")
+    public String branchName;
+
     @NameInMap("OrganizationId")
     public String organizationId;
 
     @NameInMap("SubUserId")
     public String subUserId;
-
-    @NameInMap("BranchName")
-    public String branchName;
 
     public static GetBranchInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         GetBranchInfoRequest self = new GetBranchInfoRequest();
@@ -27,6 +27,14 @@ public class GetBranchInfoRequest extends TeaModel {
     }
     public String getAccessToken() {
         return this.accessToken;
+    }
+
+    public GetBranchInfoRequest setBranchName(String branchName) {
+        this.branchName = branchName;
+        return this;
+    }
+    public String getBranchName() {
+        return this.branchName;
     }
 
     public GetBranchInfoRequest setOrganizationId(String organizationId) {
@@ -43,14 +51,6 @@ public class GetBranchInfoRequest extends TeaModel {
     }
     public String getSubUserId() {
         return this.subUserId;
-    }
-
-    public GetBranchInfoRequest setBranchName(String branchName) {
-        this.branchName = branchName;
-        return this;
-    }
-    public String getBranchName() {
-        return this.branchName;
     }
 
 }

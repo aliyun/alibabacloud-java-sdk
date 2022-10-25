@@ -4,24 +4,32 @@ package com.aliyun.codeup20200414.models;
 import com.aliyun.tea.*;
 
 public class CreateTagResponseBody extends TeaModel {
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
+    @NameInMap("Result")
+    public CreateTagResponseBodyResult result;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Result")
-    public CreateTagResponseBodyResult result;
-
     public static CreateTagResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateTagResponseBody self = new CreateTagResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateTagResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public CreateTagResponseBody setErrorMessage(String errorMessage) {
@@ -40,12 +48,12 @@ public class CreateTagResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateTagResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
+    public CreateTagResponseBody setResult(CreateTagResponseBodyResult result) {
+        this.result = result;
         return this;
     }
-    public String getErrorCode() {
-        return this.errorCode;
+    public CreateTagResponseBodyResult getResult() {
+        return this.result;
     }
 
     public CreateTagResponseBody setSuccess(Boolean success) {
@@ -56,110 +64,46 @@ public class CreateTagResponseBody extends TeaModel {
         return this.success;
     }
 
-    public CreateTagResponseBody setResult(CreateTagResponseBodyResult result) {
-        this.result = result;
-        return this;
-    }
-    public CreateTagResponseBodyResult getResult() {
-        return this.result;
-    }
-
     public static class CreateTagResponseBodyResultCommitInfo extends TeaModel {
-        @NameInMap("ShortId")
-        public String shortId;
+        @NameInMap("AuthorEmail")
+        public String authorEmail;
 
         @NameInMap("AuthorName")
         public String authorName;
 
-        @NameInMap("CreatedAt")
-        public String createdAt;
-
-        @NameInMap("Message")
-        public String message;
-
         @NameInMap("AuthoredDate")
         public String authoredDate;
-
-        @NameInMap("CommitterName")
-        public String committerName;
-
-        @NameInMap("Title")
-        public String title;
-
-        @NameInMap("AuthorEmail")
-        public String authorEmail;
-
-        @NameInMap("CommitterEmail")
-        public String committerEmail;
-
-        @NameInMap("Id")
-        public String id;
 
         @NameInMap("CommittedDate")
         public String committedDate;
 
+        @NameInMap("CommitterEmail")
+        public String committerEmail;
+
+        @NameInMap("CommitterName")
+        public String committerName;
+
+        @NameInMap("CreatedAt")
+        public String createdAt;
+
+        @NameInMap("Id")
+        public String id;
+
+        @NameInMap("Message")
+        public String message;
+
         @NameInMap("ParentIds")
         public java.util.List<String> parentIds;
+
+        @NameInMap("ShortId")
+        public String shortId;
+
+        @NameInMap("Title")
+        public String title;
 
         public static CreateTagResponseBodyResultCommitInfo build(java.util.Map<String, ?> map) throws Exception {
             CreateTagResponseBodyResultCommitInfo self = new CreateTagResponseBodyResultCommitInfo();
             return TeaModel.build(map, self);
-        }
-
-        public CreateTagResponseBodyResultCommitInfo setShortId(String shortId) {
-            this.shortId = shortId;
-            return this;
-        }
-        public String getShortId() {
-            return this.shortId;
-        }
-
-        public CreateTagResponseBodyResultCommitInfo setAuthorName(String authorName) {
-            this.authorName = authorName;
-            return this;
-        }
-        public String getAuthorName() {
-            return this.authorName;
-        }
-
-        public CreateTagResponseBodyResultCommitInfo setCreatedAt(String createdAt) {
-            this.createdAt = createdAt;
-            return this;
-        }
-        public String getCreatedAt() {
-            return this.createdAt;
-        }
-
-        public CreateTagResponseBodyResultCommitInfo setMessage(String message) {
-            this.message = message;
-            return this;
-        }
-        public String getMessage() {
-            return this.message;
-        }
-
-        public CreateTagResponseBodyResultCommitInfo setAuthoredDate(String authoredDate) {
-            this.authoredDate = authoredDate;
-            return this;
-        }
-        public String getAuthoredDate() {
-            return this.authoredDate;
-        }
-
-        public CreateTagResponseBodyResultCommitInfo setCommitterName(String committerName) {
-            this.committerName = committerName;
-            return this;
-        }
-        public String getCommitterName() {
-            return this.committerName;
-        }
-
-        public CreateTagResponseBodyResultCommitInfo setTitle(String title) {
-            this.title = title;
-            return this;
-        }
-        public String getTitle() {
-            return this.title;
         }
 
         public CreateTagResponseBodyResultCommitInfo setAuthorEmail(String authorEmail) {
@@ -170,20 +114,20 @@ public class CreateTagResponseBody extends TeaModel {
             return this.authorEmail;
         }
 
-        public CreateTagResponseBodyResultCommitInfo setCommitterEmail(String committerEmail) {
-            this.committerEmail = committerEmail;
+        public CreateTagResponseBodyResultCommitInfo setAuthorName(String authorName) {
+            this.authorName = authorName;
             return this;
         }
-        public String getCommitterEmail() {
-            return this.committerEmail;
+        public String getAuthorName() {
+            return this.authorName;
         }
 
-        public CreateTagResponseBodyResultCommitInfo setId(String id) {
-            this.id = id;
+        public CreateTagResponseBodyResultCommitInfo setAuthoredDate(String authoredDate) {
+            this.authoredDate = authoredDate;
             return this;
         }
-        public String getId() {
-            return this.id;
+        public String getAuthoredDate() {
+            return this.authoredDate;
         }
 
         public CreateTagResponseBodyResultCommitInfo setCommittedDate(String committedDate) {
@@ -194,12 +138,68 @@ public class CreateTagResponseBody extends TeaModel {
             return this.committedDate;
         }
 
+        public CreateTagResponseBodyResultCommitInfo setCommitterEmail(String committerEmail) {
+            this.committerEmail = committerEmail;
+            return this;
+        }
+        public String getCommitterEmail() {
+            return this.committerEmail;
+        }
+
+        public CreateTagResponseBodyResultCommitInfo setCommitterName(String committerName) {
+            this.committerName = committerName;
+            return this;
+        }
+        public String getCommitterName() {
+            return this.committerName;
+        }
+
+        public CreateTagResponseBodyResultCommitInfo setCreatedAt(String createdAt) {
+            this.createdAt = createdAt;
+            return this;
+        }
+        public String getCreatedAt() {
+            return this.createdAt;
+        }
+
+        public CreateTagResponseBodyResultCommitInfo setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
+        public CreateTagResponseBodyResultCommitInfo setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
+        }
+
         public CreateTagResponseBodyResultCommitInfo setParentIds(java.util.List<String> parentIds) {
             this.parentIds = parentIds;
             return this;
         }
         public java.util.List<String> getParentIds() {
             return this.parentIds;
+        }
+
+        public CreateTagResponseBodyResultCommitInfo setShortId(String shortId) {
+            this.shortId = shortId;
+            return this;
+        }
+        public String getShortId() {
+            return this.shortId;
+        }
+
+        public CreateTagResponseBodyResultCommitInfo setTitle(String title) {
+            this.title = title;
+            return this;
+        }
+        public String getTitle() {
+            return this.title;
         }
 
     }
@@ -235,14 +235,14 @@ public class CreateTagResponseBody extends TeaModel {
     }
 
     public static class CreateTagResponseBodyResult extends TeaModel {
-        @NameInMap("Name")
-        public String name;
+        @NameInMap("CommitInfo")
+        public CreateTagResponseBodyResultCommitInfo commitInfo;
 
         @NameInMap("Message")
         public String message;
 
-        @NameInMap("CommitInfo")
-        public CreateTagResponseBodyResultCommitInfo commitInfo;
+        @NameInMap("Name")
+        public String name;
 
         @NameInMap("Release")
         public CreateTagResponseBodyResultRelease release;
@@ -252,12 +252,12 @@ public class CreateTagResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public CreateTagResponseBodyResult setName(String name) {
-            this.name = name;
+        public CreateTagResponseBodyResult setCommitInfo(CreateTagResponseBodyResultCommitInfo commitInfo) {
+            this.commitInfo = commitInfo;
             return this;
         }
-        public String getName() {
-            return this.name;
+        public CreateTagResponseBodyResultCommitInfo getCommitInfo() {
+            return this.commitInfo;
         }
 
         public CreateTagResponseBodyResult setMessage(String message) {
@@ -268,12 +268,12 @@ public class CreateTagResponseBody extends TeaModel {
             return this.message;
         }
 
-        public CreateTagResponseBodyResult setCommitInfo(CreateTagResponseBodyResultCommitInfo commitInfo) {
-            this.commitInfo = commitInfo;
+        public CreateTagResponseBodyResult setName(String name) {
+            this.name = name;
             return this;
         }
-        public CreateTagResponseBodyResultCommitInfo getCommitInfo() {
-            return this.commitInfo;
+        public String getName() {
+            return this.name;
         }
 
         public CreateTagResponseBodyResult setRelease(CreateTagResponseBodyResultRelease release) {

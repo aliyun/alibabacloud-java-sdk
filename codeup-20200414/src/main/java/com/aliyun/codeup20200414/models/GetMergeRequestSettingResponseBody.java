@@ -4,24 +4,32 @@ package com.aliyun.codeup20200414.models;
 import com.aliyun.tea.*;
 
 public class GetMergeRequestSettingResponseBody extends TeaModel {
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Success")
-    public Boolean success;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
     @NameInMap("Result")
     public GetMergeRequestSettingResponseBodyResult result;
+
+    @NameInMap("Success")
+    public Boolean success;
 
     public static GetMergeRequestSettingResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetMergeRequestSettingResponseBody self = new GetMergeRequestSettingResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetMergeRequestSettingResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public GetMergeRequestSettingResponseBody setErrorMessage(String errorMessage) {
@@ -40,28 +48,20 @@ public class GetMergeRequestSettingResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetMergeRequestSettingResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public GetMergeRequestSettingResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
     public GetMergeRequestSettingResponseBody setResult(GetMergeRequestSettingResponseBodyResult result) {
         this.result = result;
         return this;
     }
     public GetMergeRequestSettingResponseBodyResult getResult() {
         return this.result;
+    }
+
+    public GetMergeRequestSettingResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public static class GetMergeRequestSettingResponseBodyResult extends TeaModel {

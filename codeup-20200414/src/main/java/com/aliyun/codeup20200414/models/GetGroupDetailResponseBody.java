@@ -4,24 +4,32 @@ package com.aliyun.codeup20200414.models;
 import com.aliyun.tea.*;
 
 public class GetGroupDetailResponseBody extends TeaModel {
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
+    @NameInMap("Result")
+    public GetGroupDetailResponseBodyResult result;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Result")
-    public GetGroupDetailResponseBodyResult result;
-
     public static GetGroupDetailResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetGroupDetailResponseBody self = new GetGroupDetailResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetGroupDetailResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public GetGroupDetailResponseBody setErrorMessage(String errorMessage) {
@@ -40,12 +48,12 @@ public class GetGroupDetailResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetGroupDetailResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
+    public GetGroupDetailResponseBody setResult(GetGroupDetailResponseBodyResult result) {
+        this.result = result;
         return this;
     }
-    public String getErrorCode() {
-        return this.errorCode;
+    public GetGroupDetailResponseBodyResult getResult() {
+        return this.result;
     }
 
     public GetGroupDetailResponseBody setSuccess(Boolean success) {
@@ -56,62 +64,46 @@ public class GetGroupDetailResponseBody extends TeaModel {
         return this.success;
     }
 
-    public GetGroupDetailResponseBody setResult(GetGroupDetailResponseBodyResult result) {
-        this.result = result;
-        return this;
-    }
-    public GetGroupDetailResponseBodyResult getResult() {
-        return this.result;
-    }
-
     public static class GetGroupDetailResponseBodyResult extends TeaModel {
-        @NameInMap("Type")
-        public String type;
-
         @NameInMap("AvatarUrl")
         public String avatarUrl;
-
-        @NameInMap("OwnerId")
-        public Long ownerId;
-
-        @NameInMap("WebUrl")
-        public String webUrl;
-
-        @NameInMap("ParentId")
-        public Long parentId;
 
         @NameInMap("Description")
         public String description;
 
-        @NameInMap("NameWithNamespace")
-        public String nameWithNamespace;
-
-        @NameInMap("PathWithNamespace")
-        public String pathWithNamespace;
-
-        @NameInMap("Path")
-        public String path;
-
-        @NameInMap("VisibilityLevel")
-        public String visibilityLevel;
+        @NameInMap("Id")
+        public Long id;
 
         @NameInMap("Name")
         public String name;
 
-        @NameInMap("Id")
-        public Long id;
+        @NameInMap("NameWithNamespace")
+        public String nameWithNamespace;
+
+        @NameInMap("OwnerId")
+        public Long ownerId;
+
+        @NameInMap("ParentId")
+        public Long parentId;
+
+        @NameInMap("Path")
+        public String path;
+
+        @NameInMap("PathWithNamespace")
+        public String pathWithNamespace;
+
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("VisibilityLevel")
+        public String visibilityLevel;
+
+        @NameInMap("WebUrl")
+        public String webUrl;
 
         public static GetGroupDetailResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             GetGroupDetailResponseBodyResult self = new GetGroupDetailResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public GetGroupDetailResponseBodyResult setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
         }
 
         public GetGroupDetailResponseBodyResult setAvatarUrl(String avatarUrl) {
@@ -122,30 +114,6 @@ public class GetGroupDetailResponseBody extends TeaModel {
             return this.avatarUrl;
         }
 
-        public GetGroupDetailResponseBodyResult setOwnerId(Long ownerId) {
-            this.ownerId = ownerId;
-            return this;
-        }
-        public Long getOwnerId() {
-            return this.ownerId;
-        }
-
-        public GetGroupDetailResponseBodyResult setWebUrl(String webUrl) {
-            this.webUrl = webUrl;
-            return this;
-        }
-        public String getWebUrl() {
-            return this.webUrl;
-        }
-
-        public GetGroupDetailResponseBodyResult setParentId(Long parentId) {
-            this.parentId = parentId;
-            return this;
-        }
-        public Long getParentId() {
-            return this.parentId;
-        }
-
         public GetGroupDetailResponseBodyResult setDescription(String description) {
             this.description = description;
             return this;
@@ -154,36 +122,12 @@ public class GetGroupDetailResponseBody extends TeaModel {
             return this.description;
         }
 
-        public GetGroupDetailResponseBodyResult setNameWithNamespace(String nameWithNamespace) {
-            this.nameWithNamespace = nameWithNamespace;
+        public GetGroupDetailResponseBodyResult setId(Long id) {
+            this.id = id;
             return this;
         }
-        public String getNameWithNamespace() {
-            return this.nameWithNamespace;
-        }
-
-        public GetGroupDetailResponseBodyResult setPathWithNamespace(String pathWithNamespace) {
-            this.pathWithNamespace = pathWithNamespace;
-            return this;
-        }
-        public String getPathWithNamespace() {
-            return this.pathWithNamespace;
-        }
-
-        public GetGroupDetailResponseBodyResult setPath(String path) {
-            this.path = path;
-            return this;
-        }
-        public String getPath() {
-            return this.path;
-        }
-
-        public GetGroupDetailResponseBodyResult setVisibilityLevel(String visibilityLevel) {
-            this.visibilityLevel = visibilityLevel;
-            return this;
-        }
-        public String getVisibilityLevel() {
-            return this.visibilityLevel;
+        public Long getId() {
+            return this.id;
         }
 
         public GetGroupDetailResponseBodyResult setName(String name) {
@@ -194,12 +138,68 @@ public class GetGroupDetailResponseBody extends TeaModel {
             return this.name;
         }
 
-        public GetGroupDetailResponseBodyResult setId(Long id) {
-            this.id = id;
+        public GetGroupDetailResponseBodyResult setNameWithNamespace(String nameWithNamespace) {
+            this.nameWithNamespace = nameWithNamespace;
             return this;
         }
-        public Long getId() {
-            return this.id;
+        public String getNameWithNamespace() {
+            return this.nameWithNamespace;
+        }
+
+        public GetGroupDetailResponseBodyResult setOwnerId(Long ownerId) {
+            this.ownerId = ownerId;
+            return this;
+        }
+        public Long getOwnerId() {
+            return this.ownerId;
+        }
+
+        public GetGroupDetailResponseBodyResult setParentId(Long parentId) {
+            this.parentId = parentId;
+            return this;
+        }
+        public Long getParentId() {
+            return this.parentId;
+        }
+
+        public GetGroupDetailResponseBodyResult setPath(String path) {
+            this.path = path;
+            return this;
+        }
+        public String getPath() {
+            return this.path;
+        }
+
+        public GetGroupDetailResponseBodyResult setPathWithNamespace(String pathWithNamespace) {
+            this.pathWithNamespace = pathWithNamespace;
+            return this;
+        }
+        public String getPathWithNamespace() {
+            return this.pathWithNamespace;
+        }
+
+        public GetGroupDetailResponseBodyResult setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public GetGroupDetailResponseBodyResult setVisibilityLevel(String visibilityLevel) {
+            this.visibilityLevel = visibilityLevel;
+            return this;
+        }
+        public String getVisibilityLevel() {
+            return this.visibilityLevel;
+        }
+
+        public GetGroupDetailResponseBodyResult setWebUrl(String webUrl) {
+            this.webUrl = webUrl;
+            return this;
+        }
+        public String getWebUrl() {
+            return this.webUrl;
         }
 
     }

@@ -4,24 +4,32 @@ package com.aliyun.codeup20200414.models;
 import com.aliyun.tea.*;
 
 public class DeleteBranchResponseBody extends TeaModel {
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
+    @NameInMap("Result")
+    public DeleteBranchResponseBodyResult result;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Result")
-    public DeleteBranchResponseBodyResult result;
-
     public static DeleteBranchResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteBranchResponseBody self = new DeleteBranchResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteBranchResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public DeleteBranchResponseBody setErrorMessage(String errorMessage) {
@@ -40,12 +48,12 @@ public class DeleteBranchResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DeleteBranchResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
+    public DeleteBranchResponseBody setResult(DeleteBranchResponseBodyResult result) {
+        this.result = result;
         return this;
     }
-    public String getErrorCode() {
-        return this.errorCode;
+    public DeleteBranchResponseBodyResult getResult() {
+        return this.result;
     }
 
     public DeleteBranchResponseBody setSuccess(Boolean success) {
@@ -54,14 +62,6 @@ public class DeleteBranchResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public DeleteBranchResponseBody setResult(DeleteBranchResponseBodyResult result) {
-        this.result = result;
-        return this;
-    }
-    public DeleteBranchResponseBodyResult getResult() {
-        return this.result;
     }
 
     public static class DeleteBranchResponseBodyResult extends TeaModel {

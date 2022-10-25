@@ -7,23 +7,23 @@ public class ListGroupRepositoriesRequest extends TeaModel {
     @NameInMap("AccessToken")
     public String accessToken;
 
-    @NameInMap("OrganizationId")
-    public String organizationId;
-
     @NameInMap("IsMember")
     public Boolean isMember;
 
-    @NameInMap("SubUserId")
-    public String subUserId;
-
-    @NameInMap("Search")
-    public String search;
+    @NameInMap("OrganizationId")
+    public String organizationId;
 
     @NameInMap("Page")
     public Long page;
 
     @NameInMap("PageSize")
     public Long pageSize;
+
+    @NameInMap("Search")
+    public String search;
+
+    @NameInMap("SubUserId")
+    public String subUserId;
 
     public static ListGroupRepositoriesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListGroupRepositoriesRequest self = new ListGroupRepositoriesRequest();
@@ -38,14 +38,6 @@ public class ListGroupRepositoriesRequest extends TeaModel {
         return this.accessToken;
     }
 
-    public ListGroupRepositoriesRequest setOrganizationId(String organizationId) {
-        this.organizationId = organizationId;
-        return this;
-    }
-    public String getOrganizationId() {
-        return this.organizationId;
-    }
-
     public ListGroupRepositoriesRequest setIsMember(Boolean isMember) {
         this.isMember = isMember;
         return this;
@@ -54,20 +46,12 @@ public class ListGroupRepositoriesRequest extends TeaModel {
         return this.isMember;
     }
 
-    public ListGroupRepositoriesRequest setSubUserId(String subUserId) {
-        this.subUserId = subUserId;
+    public ListGroupRepositoriesRequest setOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
         return this;
     }
-    public String getSubUserId() {
-        return this.subUserId;
-    }
-
-    public ListGroupRepositoriesRequest setSearch(String search) {
-        this.search = search;
-        return this;
-    }
-    public String getSearch() {
-        return this.search;
+    public String getOrganizationId() {
+        return this.organizationId;
     }
 
     public ListGroupRepositoriesRequest setPage(Long page) {
@@ -84,6 +68,22 @@ public class ListGroupRepositoriesRequest extends TeaModel {
     }
     public Long getPageSize() {
         return this.pageSize;
+    }
+
+    public ListGroupRepositoriesRequest setSearch(String search) {
+        this.search = search;
+        return this;
+    }
+    public String getSearch() {
+        return this.search;
+    }
+
+    public ListGroupRepositoriesRequest setSubUserId(String subUserId) {
+        this.subUserId = subUserId;
+        return this;
+    }
+    public String getSubUserId() {
+        return this.subUserId;
     }
 
 }

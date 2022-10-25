@@ -16,14 +16,14 @@ public class ListRepositoryCommitsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
-    @NameInMap("Search")
-    public String search;
-
     @NameInMap("Path")
     public String path;
 
     @NameInMap("RefName")
     public String refName;
+
+    @NameInMap("Search")
+    public String search;
 
     @NameInMap("ShowSignature")
     public Boolean showSignature;
@@ -65,14 +65,6 @@ public class ListRepositoryCommitsRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListRepositoryCommitsRequest setSearch(String search) {
-        this.search = search;
-        return this;
-    }
-    public String getSearch() {
-        return this.search;
-    }
-
     public ListRepositoryCommitsRequest setPath(String path) {
         this.path = path;
         return this;
@@ -87,6 +79,14 @@ public class ListRepositoryCommitsRequest extends TeaModel {
     }
     public String getRefName() {
         return this.refName;
+    }
+
+    public ListRepositoryCommitsRequest setSearch(String search) {
+        this.search = search;
+        return this;
+    }
+    public String getSearch() {
+        return this.search;
     }
 
     public ListRepositoryCommitsRequest setShowSignature(Boolean showSignature) {

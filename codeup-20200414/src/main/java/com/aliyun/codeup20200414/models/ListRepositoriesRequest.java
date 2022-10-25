@@ -7,6 +7,12 @@ public class ListRepositoriesRequest extends TeaModel {
     @NameInMap("AccessToken")
     public String accessToken;
 
+    @NameInMap("Archive")
+    public Boolean archive;
+
+    @NameInMap("Order")
+    public String order;
+
     @NameInMap("OrganizationId")
     public String organizationId;
 
@@ -16,17 +22,11 @@ public class ListRepositoriesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
-    @NameInMap("Order")
-    public String order;
-
-    @NameInMap("Sort")
-    public String sort;
-
     @NameInMap("Search")
     public String search;
 
-    @NameInMap("Archive")
-    public Boolean archive;
+    @NameInMap("Sort")
+    public String sort;
 
     public static ListRepositoriesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListRepositoriesRequest self = new ListRepositoriesRequest();
@@ -39,6 +39,22 @@ public class ListRepositoriesRequest extends TeaModel {
     }
     public String getAccessToken() {
         return this.accessToken;
+    }
+
+    public ListRepositoriesRequest setArchive(Boolean archive) {
+        this.archive = archive;
+        return this;
+    }
+    public Boolean getArchive() {
+        return this.archive;
+    }
+
+    public ListRepositoriesRequest setOrder(String order) {
+        this.order = order;
+        return this;
+    }
+    public String getOrder() {
+        return this.order;
     }
 
     public ListRepositoriesRequest setOrganizationId(String organizationId) {
@@ -65,22 +81,6 @@ public class ListRepositoriesRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListRepositoriesRequest setOrder(String order) {
-        this.order = order;
-        return this;
-    }
-    public String getOrder() {
-        return this.order;
-    }
-
-    public ListRepositoriesRequest setSort(String sort) {
-        this.sort = sort;
-        return this;
-    }
-    public String getSort() {
-        return this.sort;
-    }
-
     public ListRepositoriesRequest setSearch(String search) {
         this.search = search;
         return this;
@@ -89,12 +89,12 @@ public class ListRepositoriesRequest extends TeaModel {
         return this.search;
     }
 
-    public ListRepositoriesRequest setArchive(Boolean archive) {
-        this.archive = archive;
+    public ListRepositoriesRequest setSort(String sort) {
+        this.sort = sort;
         return this;
     }
-    public Boolean getArchive() {
-        return this.archive;
+    public String getSort() {
+        return this.sort;
     }
 
 }

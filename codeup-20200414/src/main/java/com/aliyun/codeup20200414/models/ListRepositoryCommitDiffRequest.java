@@ -7,11 +7,11 @@ public class ListRepositoryCommitDiffRequest extends TeaModel {
     @NameInMap("AccessToken")
     public String accessToken;
 
-    @NameInMap("OrganizationId")
-    public String organizationId;
-
     @NameInMap("ContextLine")
     public Integer contextLine;
+
+    @NameInMap("OrganizationId")
+    public String organizationId;
 
     public static ListRepositoryCommitDiffRequest build(java.util.Map<String, ?> map) throws Exception {
         ListRepositoryCommitDiffRequest self = new ListRepositoryCommitDiffRequest();
@@ -26,20 +26,20 @@ public class ListRepositoryCommitDiffRequest extends TeaModel {
         return this.accessToken;
     }
 
-    public ListRepositoryCommitDiffRequest setOrganizationId(String organizationId) {
-        this.organizationId = organizationId;
-        return this;
-    }
-    public String getOrganizationId() {
-        return this.organizationId;
-    }
-
     public ListRepositoryCommitDiffRequest setContextLine(Integer contextLine) {
         this.contextLine = contextLine;
         return this;
     }
     public Integer getContextLine() {
         return this.contextLine;
+    }
+
+    public ListRepositoryCommitDiffRequest setOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
+        return this;
+    }
+    public String getOrganizationId() {
+        return this.organizationId;
     }
 
 }

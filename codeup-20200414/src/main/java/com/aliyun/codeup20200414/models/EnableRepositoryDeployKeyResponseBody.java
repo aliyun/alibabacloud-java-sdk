@@ -4,24 +4,32 @@ package com.aliyun.codeup20200414.models;
 import com.aliyun.tea.*;
 
 public class EnableRepositoryDeployKeyResponseBody extends TeaModel {
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Success")
-    public Boolean success;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
     @NameInMap("Result")
     public EnableRepositoryDeployKeyResponseBodyResult result;
+
+    @NameInMap("Success")
+    public Boolean success;
 
     public static EnableRepositoryDeployKeyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         EnableRepositoryDeployKeyResponseBody self = new EnableRepositoryDeployKeyResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public EnableRepositoryDeployKeyResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public EnableRepositoryDeployKeyResponseBody setErrorMessage(String errorMessage) {
@@ -40,28 +48,20 @@ public class EnableRepositoryDeployKeyResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public EnableRepositoryDeployKeyResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public EnableRepositoryDeployKeyResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
     public EnableRepositoryDeployKeyResponseBody setResult(EnableRepositoryDeployKeyResponseBodyResult result) {
         this.result = result;
         return this;
     }
     public EnableRepositoryDeployKeyResponseBodyResult getResult() {
         return this.result;
+    }
+
+    public EnableRepositoryDeployKeyResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public static class EnableRepositoryDeployKeyResponseBodyResult extends TeaModel {
