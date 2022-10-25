@@ -250,8 +250,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createEaiAllWithOptions(request, runtime);
     }
 
-    public CreateEaiJupyterResponse createEaiJupyterWithOptions(CreateEaiJupyterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public CreateEaiJupyterResponse createEaiJupyterWithOptions(CreateEaiJupyterRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateEaiJupyterShrinkRequest request = new CreateEaiJupyterShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.environmentVar)) {
+            request.environmentVarShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.environmentVar, "EnvironmentVar", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             query.put("ClientToken", request.clientToken);
@@ -259,6 +265,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.eaisType)) {
             query.put("EaisType", request.eaisType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.environmentVarShrink)) {
+            query.put("EnvironmentVar", request.environmentVarShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
