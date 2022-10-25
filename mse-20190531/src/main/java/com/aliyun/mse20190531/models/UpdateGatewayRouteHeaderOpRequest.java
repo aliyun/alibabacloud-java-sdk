@@ -19,9 +19,6 @@ public class UpdateGatewayRouteHeaderOpRequest extends TeaModel {
     @NameInMap("Id")
     public Long id;
 
-    @NameInMap("MseSessionId")
-    public String mseSessionId;
-
     public static UpdateGatewayRouteHeaderOpRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateGatewayRouteHeaderOpRequest self = new UpdateGatewayRouteHeaderOpRequest();
         return TeaModel.build(map, self);
@@ -65,14 +62,6 @@ public class UpdateGatewayRouteHeaderOpRequest extends TeaModel {
     }
     public Long getId() {
         return this.id;
-    }
-
-    public UpdateGatewayRouteHeaderOpRequest setMseSessionId(String mseSessionId) {
-        this.mseSessionId = mseSessionId;
-        return this;
-    }
-    public String getMseSessionId() {
-        return this.mseSessionId;
     }
 
 }

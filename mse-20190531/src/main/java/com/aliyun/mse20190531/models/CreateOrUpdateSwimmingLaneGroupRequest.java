@@ -37,9 +37,6 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends TeaModel {
     @NameInMap("MessageQueueGrayEnable")
     public Boolean messageQueueGrayEnable;
 
-    @NameInMap("MseSessionId")
-    public String mseSessionId;
-
     @NameInMap("Name")
     public String name;
 
@@ -146,14 +143,6 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends TeaModel {
     }
     public Boolean getMessageQueueGrayEnable() {
         return this.messageQueueGrayEnable;
-    }
-
-    public CreateOrUpdateSwimmingLaneGroupRequest setMseSessionId(String mseSessionId) {
-        this.mseSessionId = mseSessionId;
-        return this;
-    }
-    public String getMseSessionId() {
-        return this.mseSessionId;
     }
 
     public CreateOrUpdateSwimmingLaneGroupRequest setName(String name) {

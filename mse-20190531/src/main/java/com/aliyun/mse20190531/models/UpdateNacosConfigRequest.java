@@ -34,9 +34,6 @@ public class UpdateNacosConfigRequest extends TeaModel {
     @NameInMap("Md5")
     public String md5;
 
-    @NameInMap("MseSessionId")
-    public String mseSessionId;
-
     @NameInMap("NamespaceId")
     public String namespaceId;
 
@@ -129,14 +126,6 @@ public class UpdateNacosConfigRequest extends TeaModel {
     }
     public String getMd5() {
         return this.md5;
-    }
-
-    public UpdateNacosConfigRequest setMseSessionId(String mseSessionId) {
-        this.mseSessionId = mseSessionId;
-        return this;
-    }
-    public String getMseSessionId() {
-        return this.mseSessionId;
     }
 
     public UpdateNacosConfigRequest setNamespaceId(String namespaceId) {

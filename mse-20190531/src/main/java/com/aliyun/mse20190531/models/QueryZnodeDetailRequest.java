@@ -13,9 +13,6 @@ public class QueryZnodeDetailRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("MseSessionId")
-    public String mseSessionId;
-
     @NameInMap("Path")
     public String path;
 
@@ -49,14 +46,6 @@ public class QueryZnodeDetailRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public QueryZnodeDetailRequest setMseSessionId(String mseSessionId) {
-        this.mseSessionId = mseSessionId;
-        return this;
-    }
-    public String getMseSessionId() {
-        return this.mseSessionId;
     }
 
     public QueryZnodeDetailRequest setPath(String path) {

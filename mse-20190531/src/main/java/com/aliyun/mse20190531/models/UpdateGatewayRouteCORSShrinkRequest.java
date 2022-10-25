@@ -19,9 +19,6 @@ public class UpdateGatewayRouteCORSShrinkRequest extends TeaModel {
     @NameInMap("Id")
     public Long id;
 
-    @NameInMap("MseSessionId")
-    public String mseSessionId;
-
     public static UpdateGatewayRouteCORSShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateGatewayRouteCORSShrinkRequest self = new UpdateGatewayRouteCORSShrinkRequest();
         return TeaModel.build(map, self);
@@ -65,14 +62,6 @@ public class UpdateGatewayRouteCORSShrinkRequest extends TeaModel {
     }
     public Long getId() {
         return this.id;
-    }
-
-    public UpdateGatewayRouteCORSShrinkRequest setMseSessionId(String mseSessionId) {
-        this.mseSessionId = mseSessionId;
-        return this;
-    }
-    public String getMseSessionId() {
-        return this.mseSessionId;
     }
 
 }

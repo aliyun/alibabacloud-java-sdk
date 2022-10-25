@@ -13,9 +13,6 @@ public class QueryClusterDetailRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("MseSessionId")
-    public String mseSessionId;
-
     @NameInMap("OrderId")
     public String orderId;
 
@@ -46,14 +43,6 @@ public class QueryClusterDetailRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public QueryClusterDetailRequest setMseSessionId(String mseSessionId) {
-        this.mseSessionId = mseSessionId;
-        return this;
-    }
-    public String getMseSessionId() {
-        return this.mseSessionId;
     }
 
     public QueryClusterDetailRequest setOrderId(String orderId) {

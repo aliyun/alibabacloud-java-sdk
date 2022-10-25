@@ -16,9 +16,6 @@ public class CreateMseServiceApplicationRequest extends TeaModel {
     @NameInMap("Language")
     public String language;
 
-    @NameInMap("MseSessionId")
-    public String mseSessionId;
-
     @NameInMap("MseVersion")
     public String mseVersion;
 
@@ -69,14 +66,6 @@ public class CreateMseServiceApplicationRequest extends TeaModel {
     }
     public String getLanguage() {
         return this.language;
-    }
-
-    public CreateMseServiceApplicationRequest setMseSessionId(String mseSessionId) {
-        this.mseSessionId = mseSessionId;
-        return this;
-    }
-    public String getMseSessionId() {
-        return this.mseSessionId;
     }
 
     public CreateMseServiceApplicationRequest setMseVersion(String mseVersion) {

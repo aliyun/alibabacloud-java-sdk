@@ -19,9 +19,6 @@ public class AddAuthResourceRequest extends TeaModel {
     @NameInMap("MatchType")
     public String matchType;
 
-    @NameInMap("MseSessionId")
-    public String mseSessionId;
-
     @NameInMap("Path")
     public String path;
 
@@ -68,14 +65,6 @@ public class AddAuthResourceRequest extends TeaModel {
     }
     public String getMatchType() {
         return this.matchType;
-    }
-
-    public AddAuthResourceRequest setMseSessionId(String mseSessionId) {
-        this.mseSessionId = mseSessionId;
-        return this;
-    }
-    public String getMseSessionId() {
-        return this.mseSessionId;
     }
 
     public AddAuthResourceRequest setPath(String path) {

@@ -13,9 +13,6 @@ public class UpdateZnodeRequest extends TeaModel {
     @NameInMap("Data")
     public String data;
 
-    @NameInMap("MseSessionId")
-    public String mseSessionId;
-
     @NameInMap("Path")
     public String path;
 
@@ -49,14 +46,6 @@ public class UpdateZnodeRequest extends TeaModel {
     }
     public String getData() {
         return this.data;
-    }
-
-    public UpdateZnodeRequest setMseSessionId(String mseSessionId) {
-        this.mseSessionId = mseSessionId;
-        return this;
-    }
-    public String getMseSessionId() {
-        return this.mseSessionId;
     }
 
     public UpdateZnodeRequest setPath(String path) {

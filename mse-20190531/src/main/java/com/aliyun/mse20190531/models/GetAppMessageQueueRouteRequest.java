@@ -10,9 +10,6 @@ public class GetAppMessageQueueRouteRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
-    @NameInMap("MseSessionId")
-    public String mseSessionId;
-
     @NameInMap("Region")
     public String region;
 
@@ -35,14 +32,6 @@ public class GetAppMessageQueueRouteRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
-    }
-
-    public GetAppMessageQueueRouteRequest setMseSessionId(String mseSessionId) {
-        this.mseSessionId = mseSessionId;
-        return this;
-    }
-    public String getMseSessionId() {
-        return this.mseSessionId;
     }
 
     public GetAppMessageQueueRouteRequest setRegion(String region) {

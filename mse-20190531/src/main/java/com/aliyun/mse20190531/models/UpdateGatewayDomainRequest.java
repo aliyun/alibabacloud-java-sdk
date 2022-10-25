@@ -19,9 +19,6 @@ public class UpdateGatewayDomainRequest extends TeaModel {
     @NameInMap("Id")
     public Long id;
 
-    @NameInMap("MseSessionId")
-    public String mseSessionId;
-
     @NameInMap("MustHttps")
     public Boolean mustHttps;
 
@@ -77,14 +74,6 @@ public class UpdateGatewayDomainRequest extends TeaModel {
     }
     public Long getId() {
         return this.id;
-    }
-
-    public UpdateGatewayDomainRequest setMseSessionId(String mseSessionId) {
-        this.mseSessionId = mseSessionId;
-        return this;
-    }
-    public String getMseSessionId() {
-        return this.mseSessionId;
     }
 
     public UpdateGatewayDomainRequest setMustHttps(Boolean mustHttps) {

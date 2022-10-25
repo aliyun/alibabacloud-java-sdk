@@ -10,9 +10,6 @@ public class GetGatewayRouteDetailRequest extends TeaModel {
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
-    @NameInMap("MseSessionId")
-    public String mseSessionId;
-
     @NameInMap("RouteId")
     public Long routeId;
 
@@ -35,14 +32,6 @@ public class GetGatewayRouteDetailRequest extends TeaModel {
     }
     public String getGatewayUniqueId() {
         return this.gatewayUniqueId;
-    }
-
-    public GetGatewayRouteDetailRequest setMseSessionId(String mseSessionId) {
-        this.mseSessionId = mseSessionId;
-        return this;
-    }
-    public String getMseSessionId() {
-        return this.mseSessionId;
     }
 
     public GetGatewayRouteDetailRequest setRouteId(Long routeId) {

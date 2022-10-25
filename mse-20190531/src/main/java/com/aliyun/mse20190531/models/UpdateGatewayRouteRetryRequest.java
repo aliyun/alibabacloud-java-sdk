@@ -16,9 +16,6 @@ public class UpdateGatewayRouteRetryRequest extends TeaModel {
     @NameInMap("Id")
     public Long id;
 
-    @NameInMap("MseSessionId")
-    public String mseSessionId;
-
     @NameInMap("RetryJSON")
     public UpdateGatewayRouteRetryRequestRetryJSON retryJSON;
 
@@ -57,14 +54,6 @@ public class UpdateGatewayRouteRetryRequest extends TeaModel {
     }
     public Long getId() {
         return this.id;
-    }
-
-    public UpdateGatewayRouteRetryRequest setMseSessionId(String mseSessionId) {
-        this.mseSessionId = mseSessionId;
-        return this;
-    }
-    public String getMseSessionId() {
-        return this.mseSessionId;
     }
 
     public UpdateGatewayRouteRetryRequest setRetryJSON(UpdateGatewayRouteRetryRequestRetryJSON retryJSON) {

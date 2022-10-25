@@ -19,9 +19,6 @@ public class AddGatewaySlbRequest extends TeaModel {
     @NameInMap("HttpsVServerGroupId")
     public String httpsVServerGroupId;
 
-    @NameInMap("MseSessionId")
-    public String mseSessionId;
-
     @NameInMap("ServiceWeight")
     public Integer serviceWeight;
 
@@ -77,14 +74,6 @@ public class AddGatewaySlbRequest extends TeaModel {
     }
     public String getHttpsVServerGroupId() {
         return this.httpsVServerGroupId;
-    }
-
-    public AddGatewaySlbRequest setMseSessionId(String mseSessionId) {
-        this.mseSessionId = mseSessionId;
-        return this;
-    }
-    public String getMseSessionId() {
-        return this.mseSessionId;
     }
 
     public AddGatewaySlbRequest setServiceWeight(Integer serviceWeight) {

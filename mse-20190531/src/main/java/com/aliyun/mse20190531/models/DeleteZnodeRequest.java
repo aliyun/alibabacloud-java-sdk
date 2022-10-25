@@ -10,9 +10,6 @@ public class DeleteZnodeRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
-    @NameInMap("MseSessionId")
-    public String mseSessionId;
-
     @NameInMap("Path")
     public String path;
 
@@ -38,14 +35,6 @@ public class DeleteZnodeRequest extends TeaModel {
     }
     public String getClusterId() {
         return this.clusterId;
-    }
-
-    public DeleteZnodeRequest setMseSessionId(String mseSessionId) {
-        this.mseSessionId = mseSessionId;
-        return this;
-    }
-    public String getMseSessionId() {
-        return this.mseSessionId;
     }
 
     public DeleteZnodeRequest setPath(String path) {

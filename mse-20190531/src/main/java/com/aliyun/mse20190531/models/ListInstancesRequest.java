@@ -7,9 +7,6 @@ public class ListInstancesRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    @NameInMap("MseSessionId")
-    public String mseSessionId;
-
     @NameInMap("Region")
     public String region;
 
@@ -27,14 +24,6 @@ public class ListInstancesRequest extends TeaModel {
     }
     public String getAcceptLanguage() {
         return this.acceptLanguage;
-    }
-
-    public ListInstancesRequest setMseSessionId(String mseSessionId) {
-        this.mseSessionId = mseSessionId;
-        return this;
-    }
-    public String getMseSessionId() {
-        return this.mseSessionId;
     }
 
     public ListInstancesRequest setRegion(String region) {

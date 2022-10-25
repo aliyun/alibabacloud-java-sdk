@@ -19,11 +19,11 @@ public class AddServiceSourceShrinkRequest extends TeaModel {
     @NameInMap("IngressOptionsRequest")
     public String ingressOptionsRequestShrink;
 
-    @NameInMap("MseSessionId")
-    public String mseSessionId;
-
     @NameInMap("Name")
     public String name;
+
+    @NameInMap("PathList")
+    public String pathListShrink;
 
     @NameInMap("Source")
     public String source;
@@ -76,20 +76,20 @@ public class AddServiceSourceShrinkRequest extends TeaModel {
         return this.ingressOptionsRequestShrink;
     }
 
-    public AddServiceSourceShrinkRequest setMseSessionId(String mseSessionId) {
-        this.mseSessionId = mseSessionId;
-        return this;
-    }
-    public String getMseSessionId() {
-        return this.mseSessionId;
-    }
-
     public AddServiceSourceShrinkRequest setName(String name) {
         this.name = name;
         return this;
     }
     public String getName() {
         return this.name;
+    }
+
+    public AddServiceSourceShrinkRequest setPathListShrink(String pathListShrink) {
+        this.pathListShrink = pathListShrink;
+        return this;
+    }
+    public String getPathListShrink() {
+        return this.pathListShrink;
     }
 
     public AddServiceSourceShrinkRequest setSource(String source) {

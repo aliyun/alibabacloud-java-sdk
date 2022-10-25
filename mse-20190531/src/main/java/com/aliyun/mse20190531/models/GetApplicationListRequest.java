@@ -16,9 +16,6 @@ public class GetApplicationListRequest extends TeaModel {
     @NameInMap("Language")
     public String language;
 
-    @NameInMap("MseSessionId")
-    public String mseSessionId;
-
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
@@ -72,14 +69,6 @@ public class GetApplicationListRequest extends TeaModel {
     }
     public String getLanguage() {
         return this.language;
-    }
-
-    public GetApplicationListRequest setMseSessionId(String mseSessionId) {
-        this.mseSessionId = mseSessionId;
-        return this;
-    }
-    public String getMseSessionId() {
-        return this.mseSessionId;
     }
 
     public GetApplicationListRequest setPageNumber(Integer pageNumber) {

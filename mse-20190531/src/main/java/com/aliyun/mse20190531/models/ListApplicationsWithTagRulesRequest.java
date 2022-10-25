@@ -13,9 +13,6 @@ public class ListApplicationsWithTagRulesRequest extends TeaModel {
     @NameInMap("AppName")
     public String appName;
 
-    @NameInMap("MseSessionId")
-    public String mseSessionId;
-
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
@@ -55,14 +52,6 @@ public class ListApplicationsWithTagRulesRequest extends TeaModel {
     }
     public String getAppName() {
         return this.appName;
-    }
-
-    public ListApplicationsWithTagRulesRequest setMseSessionId(String mseSessionId) {
-        this.mseSessionId = mseSessionId;
-        return this;
-    }
-    public String getMseSessionId() {
-        return this.mseSessionId;
     }
 
     public ListApplicationsWithTagRulesRequest setPageNumber(Integer pageNumber) {

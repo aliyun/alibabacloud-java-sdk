@@ -13,9 +13,6 @@ public class GetServiceListRequest extends TeaModel {
     @NameInMap("Ip")
     public String ip;
 
-    @NameInMap("MseSessionId")
-    public String mseSessionId;
-
     @NameInMap("Region")
     public String region;
 
@@ -52,14 +49,6 @@ public class GetServiceListRequest extends TeaModel {
     }
     public String getIp() {
         return this.ip;
-    }
-
-    public GetServiceListRequest setMseSessionId(String mseSessionId) {
-        this.mseSessionId = mseSessionId;
-        return this;
-    }
-    public String getMseSessionId() {
-        return this.mseSessionId;
     }
 
     public GetServiceListRequest setRegion(String region) {

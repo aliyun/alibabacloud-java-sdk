@@ -10,9 +10,6 @@ public class AddGatewayServiceVersionRequest extends TeaModel {
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
-    @NameInMap("MseSessionId")
-    public String mseSessionId;
-
     @NameInMap("ServiceId")
     public Long serviceId;
 
@@ -38,14 +35,6 @@ public class AddGatewayServiceVersionRequest extends TeaModel {
     }
     public String getGatewayUniqueId() {
         return this.gatewayUniqueId;
-    }
-
-    public AddGatewayServiceVersionRequest setMseSessionId(String mseSessionId) {
-        this.mseSessionId = mseSessionId;
-        return this;
-    }
-    public String getMseSessionId() {
-        return this.mseSessionId;
     }
 
     public AddGatewayServiceVersionRequest setServiceId(Long serviceId) {

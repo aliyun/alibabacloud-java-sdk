@@ -10,9 +10,6 @@ public class ListClustersRequest extends TeaModel {
     @NameInMap("ClusterAliasName")
     public String clusterAliasName;
 
-    @NameInMap("MseSessionId")
-    public String mseSessionId;
-
     @NameInMap("PageNum")
     public Integer pageNum;
 
@@ -50,14 +47,6 @@ public class ListClustersRequest extends TeaModel {
     }
     public String getClusterAliasName() {
         return this.clusterAliasName;
-    }
-
-    public ListClustersRequest setMseSessionId(String mseSessionId) {
-        this.mseSessionId = mseSessionId;
-        return this;
-    }
-    public String getMseSessionId() {
-        return this.mseSessionId;
     }
 
     public ListClustersRequest setPageNum(Integer pageNum) {

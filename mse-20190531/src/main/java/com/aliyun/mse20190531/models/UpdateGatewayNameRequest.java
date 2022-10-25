@@ -10,9 +10,6 @@ public class UpdateGatewayNameRequest extends TeaModel {
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
-    @NameInMap("MseSessionId")
-    public String mseSessionId;
-
     @NameInMap("Name")
     public String name;
 
@@ -35,14 +32,6 @@ public class UpdateGatewayNameRequest extends TeaModel {
     }
     public String getGatewayUniqueId() {
         return this.gatewayUniqueId;
-    }
-
-    public UpdateGatewayNameRequest setMseSessionId(String mseSessionId) {
-        this.mseSessionId = mseSessionId;
-        return this;
-    }
-    public String getMseSessionId() {
-        return this.mseSessionId;
     }
 
     public UpdateGatewayNameRequest setName(String name) {

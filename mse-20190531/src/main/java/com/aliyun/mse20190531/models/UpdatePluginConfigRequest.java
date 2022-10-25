@@ -31,9 +31,6 @@ public class UpdatePluginConfigRequest extends TeaModel {
     @NameInMap("Id")
     public Long id;
 
-    @NameInMap("MseSessionId")
-    public String mseSessionId;
-
     @NameInMap("PluginId")
     public Long pluginId;
 
@@ -112,14 +109,6 @@ public class UpdatePluginConfigRequest extends TeaModel {
     }
     public Long getId() {
         return this.id;
-    }
-
-    public UpdatePluginConfigRequest setMseSessionId(String mseSessionId) {
-        this.mseSessionId = mseSessionId;
-        return this;
-    }
-    public String getMseSessionId() {
-        return this.mseSessionId;
     }
 
     public UpdatePluginConfigRequest setPluginId(Long pluginId) {

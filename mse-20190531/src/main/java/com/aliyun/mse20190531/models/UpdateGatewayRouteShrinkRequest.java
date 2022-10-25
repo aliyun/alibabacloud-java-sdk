@@ -34,9 +34,6 @@ public class UpdateGatewayRouteShrinkRequest extends TeaModel {
     @NameInMap("Id")
     public Long id;
 
-    @NameInMap("MseSessionId")
-    public String mseSessionId;
-
     @NameInMap("Name")
     public String name;
 
@@ -135,14 +132,6 @@ public class UpdateGatewayRouteShrinkRequest extends TeaModel {
     }
     public Long getId() {
         return this.id;
-    }
-
-    public UpdateGatewayRouteShrinkRequest setMseSessionId(String mseSessionId) {
-        this.mseSessionId = mseSessionId;
-        return this;
-    }
-    public String getMseSessionId() {
-        return this.mseSessionId;
     }
 
     public UpdateGatewayRouteShrinkRequest setName(String name) {

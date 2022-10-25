@@ -10,9 +10,6 @@ public class ImportServicesShrinkRequest extends TeaModel {
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
-    @NameInMap("MseSessionId")
-    public String mseSessionId;
-
     @NameInMap("ServiceList")
     public String serviceListShrink;
 
@@ -41,14 +38,6 @@ public class ImportServicesShrinkRequest extends TeaModel {
     }
     public String getGatewayUniqueId() {
         return this.gatewayUniqueId;
-    }
-
-    public ImportServicesShrinkRequest setMseSessionId(String mseSessionId) {
-        this.mseSessionId = mseSessionId;
-        return this;
-    }
-    public String getMseSessionId() {
-        return this.mseSessionId;
     }
 
     public ImportServicesShrinkRequest setServiceListShrink(String serviceListShrink) {

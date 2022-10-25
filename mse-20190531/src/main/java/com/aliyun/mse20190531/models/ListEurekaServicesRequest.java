@@ -10,9 +10,6 @@ public class ListEurekaServicesRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
-    @NameInMap("MseSessionId")
-    public String mseSessionId;
-
     @NameInMap("PageNum")
     public Integer pageNum;
 
@@ -44,14 +41,6 @@ public class ListEurekaServicesRequest extends TeaModel {
     }
     public String getClusterId() {
         return this.clusterId;
-    }
-
-    public ListEurekaServicesRequest setMseSessionId(String mseSessionId) {
-        this.mseSessionId = mseSessionId;
-        return this;
-    }
-    public String getMseSessionId() {
-        return this.mseSessionId;
     }
 
     public ListEurekaServicesRequest setPageNum(Integer pageNum) {

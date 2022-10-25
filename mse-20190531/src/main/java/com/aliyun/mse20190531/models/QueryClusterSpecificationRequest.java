@@ -10,9 +10,6 @@ public class QueryClusterSpecificationRequest extends TeaModel {
     @NameInMap("ConnectType")
     public String connectType;
 
-    @NameInMap("MseSessionId")
-    public String mseSessionId;
-
     @NameInMap("MseVersion")
     public String mseVersion;
 
@@ -35,14 +32,6 @@ public class QueryClusterSpecificationRequest extends TeaModel {
     }
     public String getConnectType() {
         return this.connectType;
-    }
-
-    public QueryClusterSpecificationRequest setMseSessionId(String mseSessionId) {
-        this.mseSessionId = mseSessionId;
-        return this;
-    }
-    public String getMseSessionId() {
-        return this.mseSessionId;
     }
 
     public QueryClusterSpecificationRequest setMseVersion(String mseVersion) {

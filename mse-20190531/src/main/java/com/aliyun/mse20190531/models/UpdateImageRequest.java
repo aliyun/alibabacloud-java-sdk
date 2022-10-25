@@ -10,9 +10,6 @@ public class UpdateImageRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
-    @NameInMap("MseSessionId")
-    public String mseSessionId;
-
     @NameInMap("VersionCode")
     public String versionCode;
 
@@ -35,14 +32,6 @@ public class UpdateImageRequest extends TeaModel {
     }
     public String getClusterId() {
         return this.clusterId;
-    }
-
-    public UpdateImageRequest setMseSessionId(String mseSessionId) {
-        this.mseSessionId = mseSessionId;
-        return this;
-    }
-    public String getMseSessionId() {
-        return this.mseSessionId;
     }
 
     public UpdateImageRequest setVersionCode(String versionCode) {

@@ -46,9 +46,6 @@ public class UpdateConfigRequest extends TeaModel {
     @NameInMap("MinSessionTimeout")
     public String minSessionTimeout;
 
-    @NameInMap("MseSessionId")
-    public String mseSessionId;
-
     @NameInMap("NamingAuthEnabled")
     public Boolean namingAuthEnabled;
 
@@ -188,14 +185,6 @@ public class UpdateConfigRequest extends TeaModel {
     }
     public String getMinSessionTimeout() {
         return this.minSessionTimeout;
-    }
-
-    public UpdateConfigRequest setMseSessionId(String mseSessionId) {
-        this.mseSessionId = mseSessionId;
-        return this;
-    }
-    public String getMseSessionId() {
-        return this.mseSessionId;
     }
 
     public UpdateConfigRequest setNamingAuthEnabled(Boolean namingAuthEnabled) {

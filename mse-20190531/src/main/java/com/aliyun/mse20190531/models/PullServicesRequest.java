@@ -10,9 +10,6 @@ public class PullServicesRequest extends TeaModel {
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
-    @NameInMap("MseSessionId")
-    public String mseSessionId;
-
     @NameInMap("Namespace")
     public String namespace;
 
@@ -38,14 +35,6 @@ public class PullServicesRequest extends TeaModel {
     }
     public String getGatewayUniqueId() {
         return this.gatewayUniqueId;
-    }
-
-    public PullServicesRequest setMseSessionId(String mseSessionId) {
-        this.mseSessionId = mseSessionId;
-        return this;
-    }
-    public String getMseSessionId() {
-        return this.mseSessionId;
     }
 
     public PullServicesRequest setNamespace(String namespace) {

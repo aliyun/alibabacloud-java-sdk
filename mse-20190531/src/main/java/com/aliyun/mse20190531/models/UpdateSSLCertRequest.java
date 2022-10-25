@@ -16,9 +16,6 @@ public class UpdateSSLCertRequest extends TeaModel {
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
-    @NameInMap("MseSessionId")
-    public String mseSessionId;
-
     public static UpdateSSLCertRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateSSLCertRequest self = new UpdateSSLCertRequest();
         return TeaModel.build(map, self);
@@ -54,14 +51,6 @@ public class UpdateSSLCertRequest extends TeaModel {
     }
     public String getGatewayUniqueId() {
         return this.gatewayUniqueId;
-    }
-
-    public UpdateSSLCertRequest setMseSessionId(String mseSessionId) {
-        this.mseSessionId = mseSessionId;
-        return this;
-    }
-    public String getMseSessionId() {
-        return this.mseSessionId;
     }
 
 }

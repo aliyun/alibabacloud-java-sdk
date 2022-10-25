@@ -7,9 +7,6 @@ public class QueryGatewayTypeRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    @NameInMap("MseSessionId")
-    public String mseSessionId;
-
     public static QueryGatewayTypeRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryGatewayTypeRequest self = new QueryGatewayTypeRequest();
         return TeaModel.build(map, self);
@@ -21,14 +18,6 @@ public class QueryGatewayTypeRequest extends TeaModel {
     }
     public String getAcceptLanguage() {
         return this.acceptLanguage;
-    }
-
-    public QueryGatewayTypeRequest setMseSessionId(String mseSessionId) {
-        this.mseSessionId = mseSessionId;
-        return this;
-    }
-    public String getMseSessionId() {
-        return this.mseSessionId;
     }
 
 }

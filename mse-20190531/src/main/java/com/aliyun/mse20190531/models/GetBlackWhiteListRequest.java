@@ -13,9 +13,6 @@ public class GetBlackWhiteListRequest extends TeaModel {
     @NameInMap("IsWhite")
     public Boolean isWhite;
 
-    @NameInMap("MseSessionId")
-    public String mseSessionId;
-
     @NameInMap("ResourceType")
     public String resourceType;
 
@@ -49,14 +46,6 @@ public class GetBlackWhiteListRequest extends TeaModel {
     }
     public Boolean getIsWhite() {
         return this.isWhite;
-    }
-
-    public GetBlackWhiteListRequest setMseSessionId(String mseSessionId) {
-        this.mseSessionId = mseSessionId;
-        return this;
-    }
-    public String getMseSessionId() {
-        return this.mseSessionId;
     }
 
     public GetBlackWhiteListRequest setResourceType(String resourceType) {

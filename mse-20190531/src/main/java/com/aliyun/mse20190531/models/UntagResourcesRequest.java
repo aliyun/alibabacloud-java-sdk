@@ -10,9 +10,6 @@ public class UntagResourcesRequest extends TeaModel {
     @NameInMap("All")
     public Boolean all;
 
-    @NameInMap("MseSessionId")
-    public String mseSessionId;
-
     @NameInMap("RegionId")
     public String regionId;
 
@@ -44,14 +41,6 @@ public class UntagResourcesRequest extends TeaModel {
     }
     public Boolean getAll() {
         return this.all;
-    }
-
-    public UntagResourcesRequest setMseSessionId(String mseSessionId) {
-        this.mseSessionId = mseSessionId;
-        return this;
-    }
-    public String getMseSessionId() {
-        return this.mseSessionId;
     }
 
     public UntagResourcesRequest setRegionId(String regionId) {

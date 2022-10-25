@@ -10,9 +10,6 @@ public class UpdateGatewaySpecRequest extends TeaModel {
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
-    @NameInMap("MseSessionId")
-    public String mseSessionId;
-
     @NameInMap("Replica")
     public Integer replica;
 
@@ -38,14 +35,6 @@ public class UpdateGatewaySpecRequest extends TeaModel {
     }
     public String getGatewayUniqueId() {
         return this.gatewayUniqueId;
-    }
-
-    public UpdateGatewaySpecRequest setMseSessionId(String mseSessionId) {
-        this.mseSessionId = mseSessionId;
-        return this;
-    }
-    public String getMseSessionId() {
-        return this.mseSessionId;
     }
 
     public UpdateGatewaySpecRequest setReplica(Integer replica) {
