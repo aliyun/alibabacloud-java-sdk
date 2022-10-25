@@ -16,9 +16,6 @@ public class AddGatewayDomainRequest extends TeaModel {
     @NameInMap("Http2")
     public String http2;
 
-    @NameInMap("MseSessionId")
-    public String mseSessionId;
-
     @NameInMap("MustHttps")
     public Boolean mustHttps;
 
@@ -69,14 +66,6 @@ public class AddGatewayDomainRequest extends TeaModel {
     }
     public String getHttp2() {
         return this.http2;
-    }
-
-    public AddGatewayDomainRequest setMseSessionId(String mseSessionId) {
-        this.mseSessionId = mseSessionId;
-        return this;
-    }
-    public String getMseSessionId() {
-        return this.mseSessionId;
     }
 
     public AddGatewayDomainRequest setMustHttps(Boolean mustHttps) {

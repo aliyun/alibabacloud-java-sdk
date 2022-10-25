@@ -28,9 +28,6 @@ public class CreateNacosInstanceRequest extends TeaModel {
     @NameInMap("Metadata")
     public String metadata;
 
-    @NameInMap("MseSessionId")
-    public String mseSessionId;
-
     @NameInMap("NamespaceId")
     public String namespaceId;
 
@@ -110,14 +107,6 @@ public class CreateNacosInstanceRequest extends TeaModel {
     }
     public String getMetadata() {
         return this.metadata;
-    }
-
-    public CreateNacosInstanceRequest setMseSessionId(String mseSessionId) {
-        this.mseSessionId = mseSessionId;
-        return this;
-    }
-    public String getMseSessionId() {
-        return this.mseSessionId;
     }
 
     public CreateNacosInstanceRequest setNamespaceId(String namespaceId) {

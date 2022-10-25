@@ -10,9 +10,6 @@ public class GetPluginConfigRequest extends TeaModel {
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
-    @NameInMap("MseSessionId")
-    public String mseSessionId;
-
     @NameInMap("PluginId")
     public Long pluginId;
 
@@ -35,14 +32,6 @@ public class GetPluginConfigRequest extends TeaModel {
     }
     public String getGatewayUniqueId() {
         return this.gatewayUniqueId;
-    }
-
-    public GetPluginConfigRequest setMseSessionId(String mseSessionId) {
-        this.mseSessionId = mseSessionId;
-        return this;
-    }
-    public String getMseSessionId() {
-        return this.mseSessionId;
     }
 
     public GetPluginConfigRequest setPluginId(Long pluginId) {

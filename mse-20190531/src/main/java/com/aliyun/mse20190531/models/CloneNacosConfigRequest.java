@@ -13,9 +13,6 @@ public class CloneNacosConfigRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("MseSessionId")
-    public String mseSessionId;
-
     @NameInMap("OriginNamespaceId")
     public String originNamespaceId;
 
@@ -52,14 +49,6 @@ public class CloneNacosConfigRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public CloneNacosConfigRequest setMseSessionId(String mseSessionId) {
-        this.mseSessionId = mseSessionId;
-        return this;
-    }
-    public String getMseSessionId() {
-        return this.mseSessionId;
     }
 
     public CloneNacosConfigRequest setOriginNamespaceId(String originNamespaceId) {

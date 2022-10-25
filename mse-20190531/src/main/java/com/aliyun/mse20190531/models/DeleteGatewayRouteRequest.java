@@ -10,9 +10,6 @@ public class DeleteGatewayRouteRequest extends TeaModel {
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
-    @NameInMap("MseSessionId")
-    public String mseSessionId;
-
     @NameInMap("RouteId")
     public String routeId;
 
@@ -35,14 +32,6 @@ public class DeleteGatewayRouteRequest extends TeaModel {
     }
     public String getGatewayUniqueId() {
         return this.gatewayUniqueId;
-    }
-
-    public DeleteGatewayRouteRequest setMseSessionId(String mseSessionId) {
-        this.mseSessionId = mseSessionId;
-        return this;
-    }
-    public String getMseSessionId() {
-        return this.mseSessionId;
     }
 
     public DeleteGatewayRouteRequest setRouteId(String routeId) {

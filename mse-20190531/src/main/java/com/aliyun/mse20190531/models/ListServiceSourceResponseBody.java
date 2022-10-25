@@ -79,6 +79,9 @@ public class ListServiceSourceResponseBody extends TeaModel {
         @NameInMap("EnableIngress")
         public Boolean enableIngress;
 
+        @NameInMap("EnableStatus")
+        public Boolean enableStatus;
+
         @NameInMap("IngressClass")
         public String ingressClass;
 
@@ -96,6 +99,14 @@ public class ListServiceSourceResponseBody extends TeaModel {
         }
         public Boolean getEnableIngress() {
             return this.enableIngress;
+        }
+
+        public ListServiceSourceResponseBodyDataIngressOptions setEnableStatus(Boolean enableStatus) {
+            this.enableStatus = enableStatus;
+            return this;
+        }
+        public Boolean getEnableStatus() {
+            return this.enableStatus;
         }
 
         public ListServiceSourceResponseBodyDataIngressOptions setIngressClass(String ingressClass) {
@@ -126,11 +137,17 @@ public class ListServiceSourceResponseBody extends TeaModel {
         @NameInMap("GatewayId")
         public Long gatewayId;
 
+        @NameInMap("GatewayUniqueId")
+        public String gatewayUniqueId;
+
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         @NameInMap("GmtModified")
         public String gmtModified;
+
+        @NameInMap("GroupList")
+        public java.util.List<String> groupList;
 
         @NameInMap("Id")
         public Long id;
@@ -140,6 +157,9 @@ public class ListServiceSourceResponseBody extends TeaModel {
 
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("PathList")
+        public java.util.List<String> pathList;
 
         @NameInMap("Source")
         public String source;
@@ -179,6 +199,14 @@ public class ListServiceSourceResponseBody extends TeaModel {
             return this.gatewayId;
         }
 
+        public ListServiceSourceResponseBodyData setGatewayUniqueId(String gatewayUniqueId) {
+            this.gatewayUniqueId = gatewayUniqueId;
+            return this;
+        }
+        public String getGatewayUniqueId() {
+            return this.gatewayUniqueId;
+        }
+
         public ListServiceSourceResponseBodyData setGmtCreate(String gmtCreate) {
             this.gmtCreate = gmtCreate;
             return this;
@@ -193,6 +221,14 @@ public class ListServiceSourceResponseBody extends TeaModel {
         }
         public String getGmtModified() {
             return this.gmtModified;
+        }
+
+        public ListServiceSourceResponseBodyData setGroupList(java.util.List<String> groupList) {
+            this.groupList = groupList;
+            return this;
+        }
+        public java.util.List<String> getGroupList() {
+            return this.groupList;
         }
 
         public ListServiceSourceResponseBodyData setId(Long id) {
@@ -217,6 +253,14 @@ public class ListServiceSourceResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public ListServiceSourceResponseBodyData setPathList(java.util.List<String> pathList) {
+            this.pathList = pathList;
+            return this;
+        }
+        public java.util.List<String> getPathList() {
+            return this.pathList;
         }
 
         public ListServiceSourceResponseBodyData setSource(String source) {

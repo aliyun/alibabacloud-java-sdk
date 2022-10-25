@@ -22,9 +22,6 @@ public class AddGatewayRequest extends TeaModel {
     @NameInMap("InternetSlbSpec")
     public String internetSlbSpec;
 
-    @NameInMap("MseSessionId")
-    public String mseSessionId;
-
     @NameInMap("Name")
     public String name;
 
@@ -106,14 +103,6 @@ public class AddGatewayRequest extends TeaModel {
     }
     public String getInternetSlbSpec() {
         return this.internetSlbSpec;
-    }
-
-    public AddGatewayRequest setMseSessionId(String mseSessionId) {
-        this.mseSessionId = mseSessionId;
-        return this;
-    }
-    public String getMseSessionId() {
-        return this.mseSessionId;
     }
 
     public AddGatewayRequest setName(String name) {

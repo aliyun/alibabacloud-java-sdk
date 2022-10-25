@@ -34,9 +34,6 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
     @NameInMap("LicenseKey")
     public String licenseKey;
 
-    @NameInMap("MseSessionId")
-    public String mseSessionId;
-
     @NameInMap("Name")
     public String name;
 
@@ -138,14 +135,6 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
     }
     public String getLicenseKey() {
         return this.licenseKey;
-    }
-
-    public CreateOrUpdateSwimmingLaneRequest setMseSessionId(String mseSessionId) {
-        this.mseSessionId = mseSessionId;
-        return this;
-    }
-    public String getMseSessionId() {
-        return this.mseSessionId;
     }
 
     public CreateOrUpdateSwimmingLaneRequest setName(String name) {

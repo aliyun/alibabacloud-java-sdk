@@ -13,9 +13,6 @@ public class ListGatewayRequest extends TeaModel {
     @NameInMap("FilterParams")
     public ListGatewayRequestFilterParams filterParams;
 
-    @NameInMap("MseSessionId")
-    public String mseSessionId;
-
     @NameInMap("OrderItem")
     public String orderItem;
 
@@ -52,14 +49,6 @@ public class ListGatewayRequest extends TeaModel {
     }
     public ListGatewayRequestFilterParams getFilterParams() {
         return this.filterParams;
-    }
-
-    public ListGatewayRequest setMseSessionId(String mseSessionId) {
-        this.mseSessionId = mseSessionId;
-        return this;
-    }
-    public String getMseSessionId() {
-        return this.mseSessionId;
     }
 
     public ListGatewayRequest setOrderItem(String orderItem) {

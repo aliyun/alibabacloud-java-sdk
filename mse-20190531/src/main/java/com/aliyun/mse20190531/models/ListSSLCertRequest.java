@@ -10,9 +10,6 @@ public class ListSSLCertRequest extends TeaModel {
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
-    @NameInMap("MseSessionId")
-    public String mseSessionId;
-
     public static ListSSLCertRequest build(java.util.Map<String, ?> map) throws Exception {
         ListSSLCertRequest self = new ListSSLCertRequest();
         return TeaModel.build(map, self);
@@ -32,14 +29,6 @@ public class ListSSLCertRequest extends TeaModel {
     }
     public String getGatewayUniqueId() {
         return this.gatewayUniqueId;
-    }
-
-    public ListSSLCertRequest setMseSessionId(String mseSessionId) {
-        this.mseSessionId = mseSessionId;
-        return this;
-    }
-    public String getMseSessionId() {
-        return this.mseSessionId;
     }
 
 }

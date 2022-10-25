@@ -22,9 +22,6 @@ public class AddMockRuleRequest extends TeaModel {
     @NameInMap("MockType")
     public Long mockType;
 
-    @NameInMap("MseSessionId")
-    public String mseSessionId;
-
     @NameInMap("Name")
     public String name;
 
@@ -94,14 +91,6 @@ public class AddMockRuleRequest extends TeaModel {
     }
     public Long getMockType() {
         return this.mockType;
-    }
-
-    public AddMockRuleRequest setMseSessionId(String mseSessionId) {
-        this.mseSessionId = mseSessionId;
-        return this;
-    }
-    public String getMseSessionId() {
-        return this.mseSessionId;
     }
 
     public AddMockRuleRequest setName(String name) {

@@ -22,9 +22,6 @@ public class UpdateNacosClusterRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("MseSessionId")
-    public String mseSessionId;
-
     @NameInMap("NamespaceId")
     public String namespaceId;
 
@@ -85,14 +82,6 @@ public class UpdateNacosClusterRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public UpdateNacosClusterRequest setMseSessionId(String mseSessionId) {
-        this.mseSessionId = mseSessionId;
-        return this;
-    }
-    public String getMseSessionId() {
-        return this.mseSessionId;
     }
 
     public UpdateNacosClusterRequest setNamespaceId(String namespaceId) {

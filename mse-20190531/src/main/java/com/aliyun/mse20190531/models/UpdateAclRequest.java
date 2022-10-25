@@ -13,9 +13,6 @@ public class UpdateAclRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("MseSessionId")
-    public String mseSessionId;
-
     public static UpdateAclRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateAclRequest self = new UpdateAclRequest();
         return TeaModel.build(map, self);
@@ -43,14 +40,6 @@ public class UpdateAclRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public UpdateAclRequest setMseSessionId(String mseSessionId) {
-        this.mseSessionId = mseSessionId;
-        return this;
-    }
-    public String getMseSessionId() {
-        return this.mseSessionId;
     }
 
 }

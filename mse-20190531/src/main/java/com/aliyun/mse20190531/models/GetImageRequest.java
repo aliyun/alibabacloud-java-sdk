@@ -7,9 +7,6 @@ public class GetImageRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    @NameInMap("MseSessionId")
-    public String mseSessionId;
-
     @NameInMap("VersionCode")
     public String versionCode;
 
@@ -24,14 +21,6 @@ public class GetImageRequest extends TeaModel {
     }
     public String getAcceptLanguage() {
         return this.acceptLanguage;
-    }
-
-    public GetImageRequest setMseSessionId(String mseSessionId) {
-        this.mseSessionId = mseSessionId;
-        return this;
-    }
-    public String getMseSessionId() {
-        return this.mseSessionId;
     }
 
     public GetImageRequest setVersionCode(String versionCode) {

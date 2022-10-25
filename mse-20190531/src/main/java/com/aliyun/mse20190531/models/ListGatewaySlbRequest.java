@@ -10,9 +10,6 @@ public class ListGatewaySlbRequest extends TeaModel {
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
-    @NameInMap("MseSessionId")
-    public String mseSessionId;
-
     public static ListGatewaySlbRequest build(java.util.Map<String, ?> map) throws Exception {
         ListGatewaySlbRequest self = new ListGatewaySlbRequest();
         return TeaModel.build(map, self);
@@ -32,14 +29,6 @@ public class ListGatewaySlbRequest extends TeaModel {
     }
     public String getGatewayUniqueId() {
         return this.gatewayUniqueId;
-    }
-
-    public ListGatewaySlbRequest setMseSessionId(String mseSessionId) {
-        this.mseSessionId = mseSessionId;
-        return this;
-    }
-    public String getMseSessionId() {
-        return this.mseSessionId;
     }
 
 }

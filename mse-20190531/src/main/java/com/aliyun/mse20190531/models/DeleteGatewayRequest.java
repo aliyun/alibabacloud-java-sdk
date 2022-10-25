@@ -13,9 +13,6 @@ public class DeleteGatewayRequest extends TeaModel {
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
-    @NameInMap("MseSessionId")
-    public String mseSessionId;
-
     public static DeleteGatewayRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteGatewayRequest self = new DeleteGatewayRequest();
         return TeaModel.build(map, self);
@@ -43,14 +40,6 @@ public class DeleteGatewayRequest extends TeaModel {
     }
     public String getGatewayUniqueId() {
         return this.gatewayUniqueId;
-    }
-
-    public DeleteGatewayRequest setMseSessionId(String mseSessionId) {
-        this.mseSessionId = mseSessionId;
-        return this;
-    }
-    public String getMseSessionId() {
-        return this.mseSessionId;
     }
 
 }

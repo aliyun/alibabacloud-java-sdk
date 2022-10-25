@@ -28,9 +28,6 @@ public class CreateClusterRequest extends TeaModel {
     @NameInMap("InstanceName")
     public String instanceName;
 
-    @NameInMap("MseSessionId")
-    public String mseSessionId;
-
     @NameInMap("MseVersion")
     public String mseVersion;
 
@@ -131,14 +128,6 @@ public class CreateClusterRequest extends TeaModel {
     }
     public String getInstanceName() {
         return this.instanceName;
-    }
-
-    public CreateClusterRequest setMseSessionId(String mseSessionId) {
-        this.mseSessionId = mseSessionId;
-        return this;
-    }
-    public String getMseSessionId() {
-        return this.mseSessionId;
     }
 
     public CreateClusterRequest setMseVersion(String mseVersion) {

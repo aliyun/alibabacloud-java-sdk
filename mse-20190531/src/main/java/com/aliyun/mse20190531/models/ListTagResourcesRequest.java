@@ -7,9 +7,6 @@ public class ListTagResourcesRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    @NameInMap("MseSessionId")
-    public String mseSessionId;
-
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -36,14 +33,6 @@ public class ListTagResourcesRequest extends TeaModel {
     }
     public String getAcceptLanguage() {
         return this.acceptLanguage;
-    }
-
-    public ListTagResourcesRequest setMseSessionId(String mseSessionId) {
-        this.mseSessionId = mseSessionId;
-        return this;
-    }
-    public String getMseSessionId() {
-        return this.mseSessionId;
     }
 
     public ListTagResourcesRequest setNextToken(String nextToken) {

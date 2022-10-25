@@ -7,9 +7,6 @@ public class GetOverviewRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    @NameInMap("MseSessionId")
-    public String mseSessionId;
-
     @NameInMap("Period")
     public Integer period;
 
@@ -27,14 +24,6 @@ public class GetOverviewRequest extends TeaModel {
     }
     public String getAcceptLanguage() {
         return this.acceptLanguage;
-    }
-
-    public GetOverviewRequest setMseSessionId(String mseSessionId) {
-        this.mseSessionId = mseSessionId;
-        return this;
-    }
-    public String getMseSessionId() {
-        return this.mseSessionId;
     }
 
     public GetOverviewRequest setPeriod(Integer period) {

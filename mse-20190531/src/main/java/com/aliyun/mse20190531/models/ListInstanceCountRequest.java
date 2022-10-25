@@ -10,9 +10,6 @@ public class ListInstanceCountRequest extends TeaModel {
     @NameInMap("ClusterType")
     public String clusterType;
 
-    @NameInMap("MseSessionId")
-    public String mseSessionId;
-
     @NameInMap("MseVersion")
     public String mseVersion;
 
@@ -41,14 +38,6 @@ public class ListInstanceCountRequest extends TeaModel {
     }
     public String getClusterType() {
         return this.clusterType;
-    }
-
-    public ListInstanceCountRequest setMseSessionId(String mseSessionId) {
-        this.mseSessionId = mseSessionId;
-        return this;
-    }
-    public String getMseSessionId() {
-        return this.mseSessionId;
     }
 
     public ListInstanceCountRequest setMseVersion(String mseVersion) {

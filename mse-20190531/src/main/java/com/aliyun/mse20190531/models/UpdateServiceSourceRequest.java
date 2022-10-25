@@ -22,11 +22,11 @@ public class UpdateServiceSourceRequest extends TeaModel {
     @NameInMap("IngressOptionsRequest")
     public UpdateServiceSourceRequestIngressOptionsRequest ingressOptionsRequest;
 
-    @NameInMap("MseSessionId")
-    public String mseSessionId;
-
     @NameInMap("Name")
     public String name;
+
+    @NameInMap("PathList")
+    public java.util.List<String> pathList;
 
     @NameInMap("Source")
     public String source;
@@ -87,20 +87,20 @@ public class UpdateServiceSourceRequest extends TeaModel {
         return this.ingressOptionsRequest;
     }
 
-    public UpdateServiceSourceRequest setMseSessionId(String mseSessionId) {
-        this.mseSessionId = mseSessionId;
-        return this;
-    }
-    public String getMseSessionId() {
-        return this.mseSessionId;
-    }
-
     public UpdateServiceSourceRequest setName(String name) {
         this.name = name;
         return this;
     }
     public String getName() {
         return this.name;
+    }
+
+    public UpdateServiceSourceRequest setPathList(java.util.List<String> pathList) {
+        this.pathList = pathList;
+        return this;
+    }
+    public java.util.List<String> getPathList() {
+        return this.pathList;
     }
 
     public UpdateServiceSourceRequest setSource(String source) {
@@ -123,6 +123,9 @@ public class UpdateServiceSourceRequest extends TeaModel {
         @NameInMap("EnableIngress")
         public Boolean enableIngress;
 
+        @NameInMap("EnableStatus")
+        public Boolean enableStatus;
+
         @NameInMap("IngressClass")
         public String ingressClass;
 
@@ -140,6 +143,14 @@ public class UpdateServiceSourceRequest extends TeaModel {
         }
         public Boolean getEnableIngress() {
             return this.enableIngress;
+        }
+
+        public UpdateServiceSourceRequestIngressOptionsRequest setEnableStatus(Boolean enableStatus) {
+            this.enableStatus = enableStatus;
+            return this;
+        }
+        public Boolean getEnableStatus() {
+            return this.enableStatus;
         }
 
         public UpdateServiceSourceRequestIngressOptionsRequest setIngressClass(String ingressClass) {

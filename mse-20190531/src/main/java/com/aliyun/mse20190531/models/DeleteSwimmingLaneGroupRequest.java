@@ -10,9 +10,6 @@ public class DeleteSwimmingLaneGroupRequest extends TeaModel {
     @NameInMap("GroupId")
     public Long groupId;
 
-    @NameInMap("MseSessionId")
-    public String mseSessionId;
-
     public static DeleteSwimmingLaneGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteSwimmingLaneGroupRequest self = new DeleteSwimmingLaneGroupRequest();
         return TeaModel.build(map, self);
@@ -32,14 +29,6 @@ public class DeleteSwimmingLaneGroupRequest extends TeaModel {
     }
     public Long getGroupId() {
         return this.groupId;
-    }
-
-    public DeleteSwimmingLaneGroupRequest setMseSessionId(String mseSessionId) {
-        this.mseSessionId = mseSessionId;
-        return this;
-    }
-    public String getMseSessionId() {
-        return this.mseSessionId;
     }
 
 }

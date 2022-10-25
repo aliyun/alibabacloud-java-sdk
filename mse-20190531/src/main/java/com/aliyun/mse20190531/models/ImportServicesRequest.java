@@ -10,9 +10,6 @@ public class ImportServicesRequest extends TeaModel {
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
-    @NameInMap("MseSessionId")
-    public String mseSessionId;
-
     @NameInMap("ServiceList")
     public java.util.List<ImportServicesRequestServiceList> serviceList;
 
@@ -41,14 +38,6 @@ public class ImportServicesRequest extends TeaModel {
     }
     public String getGatewayUniqueId() {
         return this.gatewayUniqueId;
-    }
-
-    public ImportServicesRequest setMseSessionId(String mseSessionId) {
-        this.mseSessionId = mseSessionId;
-        return this;
-    }
-    public String getMseSessionId() {
-        return this.mseSessionId;
     }
 
     public ImportServicesRequest setServiceList(java.util.List<ImportServicesRequestServiceList> serviceList) {

@@ -19,9 +19,6 @@ public class UpdateClusterSpecRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("MseSessionId")
-    public String mseSessionId;
-
     public static UpdateClusterSpecRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateClusterSpecRequest self = new UpdateClusterSpecRequest();
         return TeaModel.build(map, self);
@@ -65,14 +62,6 @@ public class UpdateClusterSpecRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public UpdateClusterSpecRequest setMseSessionId(String mseSessionId) {
-        this.mseSessionId = mseSessionId;
-        return this;
-    }
-    public String getMseSessionId() {
-        return this.mseSessionId;
     }
 
 }

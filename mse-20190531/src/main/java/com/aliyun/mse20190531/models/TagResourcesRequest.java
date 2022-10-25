@@ -7,9 +7,6 @@ public class TagResourcesRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    @NameInMap("MseSessionId")
-    public String mseSessionId;
-
     @NameInMap("RegionId")
     public String regionId;
 
@@ -33,14 +30,6 @@ public class TagResourcesRequest extends TeaModel {
     }
     public String getAcceptLanguage() {
         return this.acceptLanguage;
-    }
-
-    public TagResourcesRequest setMseSessionId(String mseSessionId) {
-        this.mseSessionId = mseSessionId;
-        return this;
-    }
-    public String getMseSessionId() {
-        return this.mseSessionId;
     }
 
     public TagResourcesRequest setRegionId(String regionId) {

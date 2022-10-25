@@ -13,9 +13,6 @@ public class QueryGovernanceKubernetesClusterRequest extends TeaModel {
     @NameInMap("ClusterName")
     public String clusterName;
 
-    @NameInMap("MseSessionId")
-    public String mseSessionId;
-
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
@@ -49,14 +46,6 @@ public class QueryGovernanceKubernetesClusterRequest extends TeaModel {
     }
     public String getClusterName() {
         return this.clusterName;
-    }
-
-    public QueryGovernanceKubernetesClusterRequest setMseSessionId(String mseSessionId) {
-        this.mseSessionId = mseSessionId;
-        return this;
-    }
-    public String getMseSessionId() {
-        return this.mseSessionId;
     }
 
     public QueryGovernanceKubernetesClusterRequest setPageNumber(Integer pageNumber) {

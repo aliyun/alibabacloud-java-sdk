@@ -16,9 +16,6 @@ public class UpdateMessageQueueRouteRequest extends TeaModel {
     @NameInMap("FilterSide")
     public String filterSide;
 
-    @NameInMap("MseSessionId")
-    public String mseSessionId;
-
     @NameInMap("Region")
     public String region;
 
@@ -60,14 +57,6 @@ public class UpdateMessageQueueRouteRequest extends TeaModel {
     }
     public String getFilterSide() {
         return this.filterSide;
-    }
-
-    public UpdateMessageQueueRouteRequest setMseSessionId(String mseSessionId) {
-        this.mseSessionId = mseSessionId;
-        return this;
-    }
-    public String getMseSessionId() {
-        return this.mseSessionId;
     }
 
     public UpdateMessageQueueRouteRequest setRegion(String region) {

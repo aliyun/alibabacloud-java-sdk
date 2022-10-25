@@ -25,9 +25,6 @@ public class ModifyLosslessRuleRequest extends TeaModel {
     @NameInMap("FuncType")
     public Long funcType;
 
-    @NameInMap("MseSessionId")
-    public String mseSessionId;
-
     @NameInMap("RegionId")
     public String regionId;
 
@@ -102,14 +99,6 @@ public class ModifyLosslessRuleRequest extends TeaModel {
     }
     public Long getFuncType() {
         return this.funcType;
-    }
-
-    public ModifyLosslessRuleRequest setMseSessionId(String mseSessionId) {
-        this.mseSessionId = mseSessionId;
-        return this;
-    }
-    public String getMseSessionId() {
-        return this.mseSessionId;
     }
 
     public ModifyLosslessRuleRequest setRegionId(String regionId) {

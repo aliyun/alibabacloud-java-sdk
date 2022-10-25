@@ -16,9 +16,6 @@ public class UpdateGatewayServiceTrafficPolicyShrinkRequest extends TeaModel {
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
-    @NameInMap("MseSessionId")
-    public String mseSessionId;
-
     @NameInMap("ServiceId")
     public Long serviceId;
 
@@ -57,14 +54,6 @@ public class UpdateGatewayServiceTrafficPolicyShrinkRequest extends TeaModel {
     }
     public String getGatewayUniqueId() {
         return this.gatewayUniqueId;
-    }
-
-    public UpdateGatewayServiceTrafficPolicyShrinkRequest setMseSessionId(String mseSessionId) {
-        this.mseSessionId = mseSessionId;
-        return this;
-    }
-    public String getMseSessionId() {
-        return this.mseSessionId;
     }
 
     public UpdateGatewayServiceTrafficPolicyShrinkRequest setServiceId(Long serviceId) {
