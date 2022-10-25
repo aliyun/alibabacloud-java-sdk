@@ -10,6 +10,9 @@ public class CreateEaiJupyterRequest extends TeaModel {
     @NameInMap("EaisType")
     public String eaisType;
 
+    @NameInMap("EnvironmentVar")
+    public java.util.List<CreateEaiJupyterRequestEnvironmentVar> environmentVar;
+
     @NameInMap("RegionId")
     public String regionId;
 
@@ -40,6 +43,14 @@ public class CreateEaiJupyterRequest extends TeaModel {
         return this.eaisType;
     }
 
+    public CreateEaiJupyterRequest setEnvironmentVar(java.util.List<CreateEaiJupyterRequestEnvironmentVar> environmentVar) {
+        this.environmentVar = environmentVar;
+        return this;
+    }
+    public java.util.List<CreateEaiJupyterRequestEnvironmentVar> getEnvironmentVar() {
+        return this.environmentVar;
+    }
+
     public CreateEaiJupyterRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
@@ -62,6 +73,36 @@ public class CreateEaiJupyterRequest extends TeaModel {
     }
     public String getVSwitchId() {
         return this.vSwitchId;
+    }
+
+    public static class CreateEaiJupyterRequestEnvironmentVar extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateEaiJupyterRequestEnvironmentVar build(java.util.Map<String, ?> map) throws Exception {
+            CreateEaiJupyterRequestEnvironmentVar self = new CreateEaiJupyterRequestEnvironmentVar();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateEaiJupyterRequestEnvironmentVar setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateEaiJupyterRequestEnvironmentVar setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }
