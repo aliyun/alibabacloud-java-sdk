@@ -1,3 +1,6 @@
+2022-10-25 Version: 1.0.8
+- ADD QueryItemGuideRetailPrice .
+
 2022-09-23 Version: 1.0.7
 - ListDistributionItem DOC CHANGE.
 - QueryItemDetail DOC CHANGE.
