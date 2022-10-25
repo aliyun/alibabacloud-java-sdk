@@ -7,9 +7,6 @@ public class ListRepositoryTagsRequest extends TeaModel {
     @NameInMap("AccessToken")
     public String accessToken;
 
-    @NameInMap("Search")
-    public String search;
-
     @NameInMap("OrganizationId")
     public String organizationId;
 
@@ -19,11 +16,14 @@ public class ListRepositoryTagsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
-    @NameInMap("Sort")
-    public String sort;
+    @NameInMap("Search")
+    public String search;
 
     @NameInMap("ShowSignature")
     public Boolean showSignature;
+
+    @NameInMap("Sort")
+    public String sort;
 
     public static ListRepositoryTagsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListRepositoryTagsRequest self = new ListRepositoryTagsRequest();
@@ -36,14 +36,6 @@ public class ListRepositoryTagsRequest extends TeaModel {
     }
     public String getAccessToken() {
         return this.accessToken;
-    }
-
-    public ListRepositoryTagsRequest setSearch(String search) {
-        this.search = search;
-        return this;
-    }
-    public String getSearch() {
-        return this.search;
     }
 
     public ListRepositoryTagsRequest setOrganizationId(String organizationId) {
@@ -70,12 +62,12 @@ public class ListRepositoryTagsRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListRepositoryTagsRequest setSort(String sort) {
-        this.sort = sort;
+    public ListRepositoryTagsRequest setSearch(String search) {
+        this.search = search;
         return this;
     }
-    public String getSort() {
-        return this.sort;
+    public String getSearch() {
+        return this.search;
     }
 
     public ListRepositoryTagsRequest setShowSignature(Boolean showSignature) {
@@ -84,6 +76,14 @@ public class ListRepositoryTagsRequest extends TeaModel {
     }
     public Boolean getShowSignature() {
         return this.showSignature;
+    }
+
+    public ListRepositoryTagsRequest setSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    public String getSort() {
+        return this.sort;
     }
 
 }

@@ -4,24 +4,32 @@ package com.aliyun.codeup20200414.models;
 import com.aliyun.tea.*;
 
 public class CreateRepositoryGroupResponseBody extends TeaModel {
+    @NameInMap("ErrorCode")
+    public Integer errorCode;
+
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Success")
-    public Boolean success;
-
-    @NameInMap("ErrorCode")
-    public Integer errorCode;
-
     @NameInMap("Result")
     public CreateRepositoryGroupResponseBodyResult result;
+
+    @NameInMap("Success")
+    public Boolean success;
 
     public static CreateRepositoryGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateRepositoryGroupResponseBody self = new CreateRepositoryGroupResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateRepositoryGroupResponseBody setErrorCode(Integer errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public Integer getErrorCode() {
+        return this.errorCode;
     }
 
     public CreateRepositoryGroupResponseBody setErrorMessage(String errorMessage) {
@@ -40,22 +48,6 @@ public class CreateRepositoryGroupResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateRepositoryGroupResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public CreateRepositoryGroupResponseBody setErrorCode(Integer errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public Integer getErrorCode() {
-        return this.errorCode;
-    }
-
     public CreateRepositoryGroupResponseBody setResult(CreateRepositoryGroupResponseBodyResult result) {
         this.result = result;
         return this;
@@ -64,54 +56,54 @@ public class CreateRepositoryGroupResponseBody extends TeaModel {
         return this.result;
     }
 
-    public static class CreateRepositoryGroupResponseBodyResult extends TeaModel {
-        @NameInMap("Type")
-        public String type;
+    public CreateRepositoryGroupResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
 
+    public static class CreateRepositoryGroupResponseBodyResult extends TeaModel {
         @NameInMap("AvatarUrl")
         public String avatarUrl;
-
-        @NameInMap("OwnerId")
-        public Long ownerId;
-
-        @NameInMap("WebUrl")
-        public String webUrl;
-
-        @NameInMap("ParentId")
-        public Long parentId;
 
         @NameInMap("Description")
         public String description;
 
-        @NameInMap("NameWithNamespace")
-        public String nameWithNamespace;
-
-        @NameInMap("PathWithNamespace")
-        public String pathWithNamespace;
-
-        @NameInMap("VisibilityLevel")
-        public String visibilityLevel;
-
-        @NameInMap("Path")
-        public String path;
+        @NameInMap("Id")
+        public Long id;
 
         @NameInMap("Name")
         public String name;
 
-        @NameInMap("Id")
-        public Long id;
+        @NameInMap("NameWithNamespace")
+        public String nameWithNamespace;
+
+        @NameInMap("OwnerId")
+        public Long ownerId;
+
+        @NameInMap("ParentId")
+        public Long parentId;
+
+        @NameInMap("Path")
+        public String path;
+
+        @NameInMap("PathWithNamespace")
+        public String pathWithNamespace;
+
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("VisibilityLevel")
+        public String visibilityLevel;
+
+        @NameInMap("WebUrl")
+        public String webUrl;
 
         public static CreateRepositoryGroupResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             CreateRepositoryGroupResponseBodyResult self = new CreateRepositoryGroupResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public CreateRepositoryGroupResponseBodyResult setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
         }
 
         public CreateRepositoryGroupResponseBodyResult setAvatarUrl(String avatarUrl) {
@@ -122,30 +114,6 @@ public class CreateRepositoryGroupResponseBody extends TeaModel {
             return this.avatarUrl;
         }
 
-        public CreateRepositoryGroupResponseBodyResult setOwnerId(Long ownerId) {
-            this.ownerId = ownerId;
-            return this;
-        }
-        public Long getOwnerId() {
-            return this.ownerId;
-        }
-
-        public CreateRepositoryGroupResponseBodyResult setWebUrl(String webUrl) {
-            this.webUrl = webUrl;
-            return this;
-        }
-        public String getWebUrl() {
-            return this.webUrl;
-        }
-
-        public CreateRepositoryGroupResponseBodyResult setParentId(Long parentId) {
-            this.parentId = parentId;
-            return this;
-        }
-        public Long getParentId() {
-            return this.parentId;
-        }
-
         public CreateRepositoryGroupResponseBodyResult setDescription(String description) {
             this.description = description;
             return this;
@@ -154,36 +122,12 @@ public class CreateRepositoryGroupResponseBody extends TeaModel {
             return this.description;
         }
 
-        public CreateRepositoryGroupResponseBodyResult setNameWithNamespace(String nameWithNamespace) {
-            this.nameWithNamespace = nameWithNamespace;
+        public CreateRepositoryGroupResponseBodyResult setId(Long id) {
+            this.id = id;
             return this;
         }
-        public String getNameWithNamespace() {
-            return this.nameWithNamespace;
-        }
-
-        public CreateRepositoryGroupResponseBodyResult setPathWithNamespace(String pathWithNamespace) {
-            this.pathWithNamespace = pathWithNamespace;
-            return this;
-        }
-        public String getPathWithNamespace() {
-            return this.pathWithNamespace;
-        }
-
-        public CreateRepositoryGroupResponseBodyResult setVisibilityLevel(String visibilityLevel) {
-            this.visibilityLevel = visibilityLevel;
-            return this;
-        }
-        public String getVisibilityLevel() {
-            return this.visibilityLevel;
-        }
-
-        public CreateRepositoryGroupResponseBodyResult setPath(String path) {
-            this.path = path;
-            return this;
-        }
-        public String getPath() {
-            return this.path;
+        public Long getId() {
+            return this.id;
         }
 
         public CreateRepositoryGroupResponseBodyResult setName(String name) {
@@ -194,12 +138,68 @@ public class CreateRepositoryGroupResponseBody extends TeaModel {
             return this.name;
         }
 
-        public CreateRepositoryGroupResponseBodyResult setId(Long id) {
-            this.id = id;
+        public CreateRepositoryGroupResponseBodyResult setNameWithNamespace(String nameWithNamespace) {
+            this.nameWithNamespace = nameWithNamespace;
             return this;
         }
-        public Long getId() {
-            return this.id;
+        public String getNameWithNamespace() {
+            return this.nameWithNamespace;
+        }
+
+        public CreateRepositoryGroupResponseBodyResult setOwnerId(Long ownerId) {
+            this.ownerId = ownerId;
+            return this;
+        }
+        public Long getOwnerId() {
+            return this.ownerId;
+        }
+
+        public CreateRepositoryGroupResponseBodyResult setParentId(Long parentId) {
+            this.parentId = parentId;
+            return this;
+        }
+        public Long getParentId() {
+            return this.parentId;
+        }
+
+        public CreateRepositoryGroupResponseBodyResult setPath(String path) {
+            this.path = path;
+            return this;
+        }
+        public String getPath() {
+            return this.path;
+        }
+
+        public CreateRepositoryGroupResponseBodyResult setPathWithNamespace(String pathWithNamespace) {
+            this.pathWithNamespace = pathWithNamespace;
+            return this;
+        }
+        public String getPathWithNamespace() {
+            return this.pathWithNamespace;
+        }
+
+        public CreateRepositoryGroupResponseBodyResult setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public CreateRepositoryGroupResponseBodyResult setVisibilityLevel(String visibilityLevel) {
+            this.visibilityLevel = visibilityLevel;
+            return this;
+        }
+        public String getVisibilityLevel() {
+            return this.visibilityLevel;
+        }
+
+        public CreateRepositoryGroupResponseBodyResult setWebUrl(String webUrl) {
+            this.webUrl = webUrl;
+            return this;
+        }
+        public String getWebUrl() {
+            return this.webUrl;
         }
 
     }

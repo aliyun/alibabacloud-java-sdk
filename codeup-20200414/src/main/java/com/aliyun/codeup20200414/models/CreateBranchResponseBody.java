@@ -4,24 +4,32 @@ package com.aliyun.codeup20200414.models;
 import com.aliyun.tea.*;
 
 public class CreateBranchResponseBody extends TeaModel {
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
+    @NameInMap("Result")
+    public CreateBranchResponseBodyResult result;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Result")
-    public CreateBranchResponseBodyResult result;
-
     public static CreateBranchResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateBranchResponseBody self = new CreateBranchResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateBranchResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public CreateBranchResponseBody setErrorMessage(String errorMessage) {
@@ -40,12 +48,12 @@ public class CreateBranchResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateBranchResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
+    public CreateBranchResponseBody setResult(CreateBranchResponseBodyResult result) {
+        this.result = result;
         return this;
     }
-    public String getErrorCode() {
-        return this.errorCode;
+    public CreateBranchResponseBodyResult getResult() {
+        return this.result;
     }
 
     public CreateBranchResponseBody setSuccess(Boolean success) {
@@ -56,70 +64,46 @@ public class CreateBranchResponseBody extends TeaModel {
         return this.success;
     }
 
-    public CreateBranchResponseBody setResult(CreateBranchResponseBodyResult result) {
-        this.result = result;
-        return this;
-    }
-    public CreateBranchResponseBodyResult getResult() {
-        return this.result;
-    }
-
     public static class CreateBranchResponseBodyResultCommitInfo extends TeaModel {
-        @NameInMap("ShortId")
-        public String shortId;
-
-        @NameInMap("AuthorName")
-        public String authorName;
-
         @NameInMap("AuthorDate")
         public String authorDate;
-
-        @NameInMap("CreatedAt")
-        public String createdAt;
-
-        @NameInMap("Message")
-        public String message;
-
-        @NameInMap("CommitterName")
-        public String committerName;
-
-        @NameInMap("Title")
-        public String title;
 
         @NameInMap("AuthorEmail")
         public String authorEmail;
 
-        @NameInMap("CommitterEmail")
-        public String committerEmail;
-
-        @NameInMap("Id")
-        public String id;
+        @NameInMap("AuthorName")
+        public String authorName;
 
         @NameInMap("CommittedDate")
         public String committedDate;
 
+        @NameInMap("CommitterEmail")
+        public String committerEmail;
+
+        @NameInMap("CommitterName")
+        public String committerName;
+
+        @NameInMap("CreatedAt")
+        public String createdAt;
+
+        @NameInMap("Id")
+        public String id;
+
+        @NameInMap("Message")
+        public String message;
+
         @NameInMap("ParentIds")
         public java.util.List<String> parentIds;
+
+        @NameInMap("ShortId")
+        public String shortId;
+
+        @NameInMap("Title")
+        public String title;
 
         public static CreateBranchResponseBodyResultCommitInfo build(java.util.Map<String, ?> map) throws Exception {
             CreateBranchResponseBodyResultCommitInfo self = new CreateBranchResponseBodyResultCommitInfo();
             return TeaModel.build(map, self);
-        }
-
-        public CreateBranchResponseBodyResultCommitInfo setShortId(String shortId) {
-            this.shortId = shortId;
-            return this;
-        }
-        public String getShortId() {
-            return this.shortId;
-        }
-
-        public CreateBranchResponseBodyResultCommitInfo setAuthorName(String authorName) {
-            this.authorName = authorName;
-            return this;
-        }
-        public String getAuthorName() {
-            return this.authorName;
         }
 
         public CreateBranchResponseBodyResultCommitInfo setAuthorDate(String authorDate) {
@@ -130,38 +114,6 @@ public class CreateBranchResponseBody extends TeaModel {
             return this.authorDate;
         }
 
-        public CreateBranchResponseBodyResultCommitInfo setCreatedAt(String createdAt) {
-            this.createdAt = createdAt;
-            return this;
-        }
-        public String getCreatedAt() {
-            return this.createdAt;
-        }
-
-        public CreateBranchResponseBodyResultCommitInfo setMessage(String message) {
-            this.message = message;
-            return this;
-        }
-        public String getMessage() {
-            return this.message;
-        }
-
-        public CreateBranchResponseBodyResultCommitInfo setCommitterName(String committerName) {
-            this.committerName = committerName;
-            return this;
-        }
-        public String getCommitterName() {
-            return this.committerName;
-        }
-
-        public CreateBranchResponseBodyResultCommitInfo setTitle(String title) {
-            this.title = title;
-            return this;
-        }
-        public String getTitle() {
-            return this.title;
-        }
-
         public CreateBranchResponseBodyResultCommitInfo setAuthorEmail(String authorEmail) {
             this.authorEmail = authorEmail;
             return this;
@@ -170,20 +122,12 @@ public class CreateBranchResponseBody extends TeaModel {
             return this.authorEmail;
         }
 
-        public CreateBranchResponseBodyResultCommitInfo setCommitterEmail(String committerEmail) {
-            this.committerEmail = committerEmail;
+        public CreateBranchResponseBodyResultCommitInfo setAuthorName(String authorName) {
+            this.authorName = authorName;
             return this;
         }
-        public String getCommitterEmail() {
-            return this.committerEmail;
-        }
-
-        public CreateBranchResponseBodyResultCommitInfo setId(String id) {
-            this.id = id;
-            return this;
-        }
-        public String getId() {
-            return this.id;
+        public String getAuthorName() {
+            return this.authorName;
         }
 
         public CreateBranchResponseBodyResultCommitInfo setCommittedDate(String committedDate) {
@@ -194,6 +138,46 @@ public class CreateBranchResponseBody extends TeaModel {
             return this.committedDate;
         }
 
+        public CreateBranchResponseBodyResultCommitInfo setCommitterEmail(String committerEmail) {
+            this.committerEmail = committerEmail;
+            return this;
+        }
+        public String getCommitterEmail() {
+            return this.committerEmail;
+        }
+
+        public CreateBranchResponseBodyResultCommitInfo setCommitterName(String committerName) {
+            this.committerName = committerName;
+            return this;
+        }
+        public String getCommitterName() {
+            return this.committerName;
+        }
+
+        public CreateBranchResponseBodyResultCommitInfo setCreatedAt(String createdAt) {
+            this.createdAt = createdAt;
+            return this;
+        }
+        public String getCreatedAt() {
+            return this.createdAt;
+        }
+
+        public CreateBranchResponseBodyResultCommitInfo setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
+        public CreateBranchResponseBodyResultCommitInfo setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
+        }
+
         public CreateBranchResponseBodyResultCommitInfo setParentIds(java.util.List<String> parentIds) {
             this.parentIds = parentIds;
             return this;
@@ -202,29 +186,37 @@ public class CreateBranchResponseBody extends TeaModel {
             return this.parentIds;
         }
 
+        public CreateBranchResponseBodyResultCommitInfo setShortId(String shortId) {
+            this.shortId = shortId;
+            return this;
+        }
+        public String getShortId() {
+            return this.shortId;
+        }
+
+        public CreateBranchResponseBodyResultCommitInfo setTitle(String title) {
+            this.title = title;
+            return this;
+        }
+        public String getTitle() {
+            return this.title;
+        }
+
     }
 
     public static class CreateBranchResponseBodyResult extends TeaModel {
-        @NameInMap("ProtectedBranch")
-        public Boolean protectedBranch;
-
         @NameInMap("BranchName")
         public String branchName;
 
         @NameInMap("CommitInfo")
         public CreateBranchResponseBodyResultCommitInfo commitInfo;
 
+        @NameInMap("ProtectedBranch")
+        public Boolean protectedBranch;
+
         public static CreateBranchResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             CreateBranchResponseBodyResult self = new CreateBranchResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public CreateBranchResponseBodyResult setProtectedBranch(Boolean protectedBranch) {
-            this.protectedBranch = protectedBranch;
-            return this;
-        }
-        public Boolean getProtectedBranch() {
-            return this.protectedBranch;
         }
 
         public CreateBranchResponseBodyResult setBranchName(String branchName) {
@@ -241,6 +233,14 @@ public class CreateBranchResponseBody extends TeaModel {
         }
         public CreateBranchResponseBodyResultCommitInfo getCommitInfo() {
             return this.commitInfo;
+        }
+
+        public CreateBranchResponseBodyResult setProtectedBranch(Boolean protectedBranch) {
+            this.protectedBranch = protectedBranch;
+            return this;
+        }
+        public Boolean getProtectedBranch() {
+            return this.protectedBranch;
         }
 
     }

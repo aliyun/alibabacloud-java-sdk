@@ -4,24 +4,32 @@ package com.aliyun.codeup20200414.models;
 import com.aliyun.tea.*;
 
 public class CreateRepositoryDeployKeyResponseBody extends TeaModel {
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Success")
-    public Boolean success;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
     @NameInMap("Result")
     public CreateRepositoryDeployKeyResponseBodyResult result;
+
+    @NameInMap("Success")
+    public Boolean success;
 
     public static CreateRepositoryDeployKeyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateRepositoryDeployKeyResponseBody self = new CreateRepositoryDeployKeyResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateRepositoryDeployKeyResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public CreateRepositoryDeployKeyResponseBody setErrorMessage(String errorMessage) {
@@ -40,22 +48,6 @@ public class CreateRepositoryDeployKeyResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateRepositoryDeployKeyResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public CreateRepositoryDeployKeyResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
     public CreateRepositoryDeployKeyResponseBody setResult(CreateRepositoryDeployKeyResponseBodyResult result) {
         this.result = result;
         return this;
@@ -64,21 +56,29 @@ public class CreateRepositoryDeployKeyResponseBody extends TeaModel {
         return this.result;
     }
 
+    public CreateRepositoryDeployKeyResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public static class CreateRepositoryDeployKeyResponseBodyResult extends TeaModel {
         @NameInMap("CreatedAt")
         public String createdAt;
+
+        @NameInMap("FingerPrint")
+        public String fingerPrint;
+
+        @NameInMap("Id")
+        public Long id;
 
         @NameInMap("Key")
         public String key;
 
         @NameInMap("Title")
         public String title;
-
-        @NameInMap("Id")
-        public Long id;
-
-        @NameInMap("FingerPrint")
-        public String fingerPrint;
 
         public static CreateRepositoryDeployKeyResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             CreateRepositoryDeployKeyResponseBodyResult self = new CreateRepositoryDeployKeyResponseBodyResult();
@@ -91,6 +91,22 @@ public class CreateRepositoryDeployKeyResponseBody extends TeaModel {
         }
         public String getCreatedAt() {
             return this.createdAt;
+        }
+
+        public CreateRepositoryDeployKeyResponseBodyResult setFingerPrint(String fingerPrint) {
+            this.fingerPrint = fingerPrint;
+            return this;
+        }
+        public String getFingerPrint() {
+            return this.fingerPrint;
+        }
+
+        public CreateRepositoryDeployKeyResponseBodyResult setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
         }
 
         public CreateRepositoryDeployKeyResponseBodyResult setKey(String key) {
@@ -107,22 +123,6 @@ public class CreateRepositoryDeployKeyResponseBody extends TeaModel {
         }
         public String getTitle() {
             return this.title;
-        }
-
-        public CreateRepositoryDeployKeyResponseBodyResult setId(Long id) {
-            this.id = id;
-            return this;
-        }
-        public Long getId() {
-            return this.id;
-        }
-
-        public CreateRepositoryDeployKeyResponseBodyResult setFingerPrint(String fingerPrint) {
-            this.fingerPrint = fingerPrint;
-            return this;
-        }
-        public String getFingerPrint() {
-            return this.fingerPrint;
         }
 
     }

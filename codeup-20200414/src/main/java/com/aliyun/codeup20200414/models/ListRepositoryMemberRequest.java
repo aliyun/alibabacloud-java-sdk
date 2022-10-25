@@ -10,14 +10,14 @@ public class ListRepositoryMemberRequest extends TeaModel {
     @NameInMap("OrganizationId")
     public String organizationId;
 
-    @NameInMap("Query")
-    public String query;
-
     @NameInMap("Page")
     public Long page;
 
     @NameInMap("PageSize")
     public Long pageSize;
+
+    @NameInMap("Query")
+    public String query;
 
     @NameInMap("SubUserId")
     public String subUserId;
@@ -43,14 +43,6 @@ public class ListRepositoryMemberRequest extends TeaModel {
         return this.organizationId;
     }
 
-    public ListRepositoryMemberRequest setQuery(String query) {
-        this.query = query;
-        return this;
-    }
-    public String getQuery() {
-        return this.query;
-    }
-
     public ListRepositoryMemberRequest setPage(Long page) {
         this.page = page;
         return this;
@@ -65,6 +57,14 @@ public class ListRepositoryMemberRequest extends TeaModel {
     }
     public Long getPageSize() {
         return this.pageSize;
+    }
+
+    public ListRepositoryMemberRequest setQuery(String query) {
+        this.query = query;
+        return this;
+    }
+    public String getQuery() {
+        return this.query;
     }
 
     public ListRepositoryMemberRequest setSubUserId(String subUserId) {

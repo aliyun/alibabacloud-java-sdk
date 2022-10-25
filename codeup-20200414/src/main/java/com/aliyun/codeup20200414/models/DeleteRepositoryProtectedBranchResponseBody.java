@@ -4,24 +4,32 @@ package com.aliyun.codeup20200414.models;
 import com.aliyun.tea.*;
 
 public class DeleteRepositoryProtectedBranchResponseBody extends TeaModel {
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Success")
-    public Boolean success;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
     @NameInMap("Result")
     public DeleteRepositoryProtectedBranchResponseBodyResult result;
+
+    @NameInMap("Success")
+    public Boolean success;
 
     public static DeleteRepositoryProtectedBranchResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteRepositoryProtectedBranchResponseBody self = new DeleteRepositoryProtectedBranchResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteRepositoryProtectedBranchResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public DeleteRepositoryProtectedBranchResponseBody setErrorMessage(String errorMessage) {
@@ -40,28 +48,20 @@ public class DeleteRepositoryProtectedBranchResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DeleteRepositoryProtectedBranchResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public DeleteRepositoryProtectedBranchResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
     public DeleteRepositoryProtectedBranchResponseBody setResult(DeleteRepositoryProtectedBranchResponseBodyResult result) {
         this.result = result;
         return this;
     }
     public DeleteRepositoryProtectedBranchResponseBodyResult getResult() {
         return this.result;
+    }
+
+    public DeleteRepositoryProtectedBranchResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public static class DeleteRepositoryProtectedBranchResponseBodyResult extends TeaModel {

@@ -4,11 +4,11 @@ package com.aliyun.codeup20200414.models;
 import com.aliyun.tea.*;
 
 public class ListOrganizationsRequest extends TeaModel {
-    @NameInMap("AccessToken")
-    public String accessToken;
-
     @NameInMap("AccessLevel")
     public Integer accessLevel;
+
+    @NameInMap("AccessToken")
+    public String accessToken;
 
     @NameInMap("MinAccessLevel")
     public Integer minAccessLevel;
@@ -18,20 +18,20 @@ public class ListOrganizationsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListOrganizationsRequest setAccessToken(String accessToken) {
-        this.accessToken = accessToken;
-        return this;
-    }
-    public String getAccessToken() {
-        return this.accessToken;
-    }
-
     public ListOrganizationsRequest setAccessLevel(Integer accessLevel) {
         this.accessLevel = accessLevel;
         return this;
     }
     public Integer getAccessLevel() {
         return this.accessLevel;
+    }
+
+    public ListOrganizationsRequest setAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
+    public String getAccessToken() {
+        return this.accessToken;
     }
 
     public ListOrganizationsRequest setMinAccessLevel(Integer minAccessLevel) {

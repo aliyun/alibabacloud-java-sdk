@@ -10,9 +10,6 @@ public class ListRepositoryBranchesRequest extends TeaModel {
     @NameInMap("OrganizationId")
     public String organizationId;
 
-    @NameInMap("SubUserId")
-    public String subUserId;
-
     @NameInMap("Page")
     public Long page;
 
@@ -21,6 +18,9 @@ public class ListRepositoryBranchesRequest extends TeaModel {
 
     @NameInMap("Search")
     public String search;
+
+    @NameInMap("SubUserId")
+    public String subUserId;
 
     public static ListRepositoryBranchesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListRepositoryBranchesRequest self = new ListRepositoryBranchesRequest();
@@ -41,14 +41,6 @@ public class ListRepositoryBranchesRequest extends TeaModel {
     }
     public String getOrganizationId() {
         return this.organizationId;
-    }
-
-    public ListRepositoryBranchesRequest setSubUserId(String subUserId) {
-        this.subUserId = subUserId;
-        return this;
-    }
-    public String getSubUserId() {
-        return this.subUserId;
     }
 
     public ListRepositoryBranchesRequest setPage(Long page) {
@@ -73,6 +65,14 @@ public class ListRepositoryBranchesRequest extends TeaModel {
     }
     public String getSearch() {
         return this.search;
+    }
+
+    public ListRepositoryBranchesRequest setSubUserId(String subUserId) {
+        this.subUserId = subUserId;
+        return this;
+    }
+    public String getSubUserId() {
+        return this.subUserId;
     }
 
 }

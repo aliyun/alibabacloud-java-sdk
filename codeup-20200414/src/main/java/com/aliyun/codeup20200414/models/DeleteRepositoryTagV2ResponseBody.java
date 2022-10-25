@@ -4,24 +4,32 @@ package com.aliyun.codeup20200414.models;
 import com.aliyun.tea.*;
 
 public class DeleteRepositoryTagV2ResponseBody extends TeaModel {
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Success")
-    public Boolean success;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
     @NameInMap("Result")
     public DeleteRepositoryTagV2ResponseBodyResult result;
+
+    @NameInMap("Success")
+    public Boolean success;
 
     public static DeleteRepositoryTagV2ResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteRepositoryTagV2ResponseBody self = new DeleteRepositoryTagV2ResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteRepositoryTagV2ResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public DeleteRepositoryTagV2ResponseBody setErrorMessage(String errorMessage) {
@@ -40,28 +48,20 @@ public class DeleteRepositoryTagV2ResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DeleteRepositoryTagV2ResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public DeleteRepositoryTagV2ResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
     public DeleteRepositoryTagV2ResponseBody setResult(DeleteRepositoryTagV2ResponseBodyResult result) {
         this.result = result;
         return this;
     }
     public DeleteRepositoryTagV2ResponseBodyResult getResult() {
         return this.result;
+    }
+
+    public DeleteRepositoryTagV2ResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public static class DeleteRepositoryTagV2ResponseBodyResult extends TeaModel {

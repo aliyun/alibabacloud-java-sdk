@@ -4,24 +4,32 @@ package com.aliyun.codeup20200414.models;
 import com.aliyun.tea.*;
 
 public class GetProjectMemberResponseBody extends TeaModel {
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
+    @NameInMap("Result")
+    public GetProjectMemberResponseBodyResult result;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Result")
-    public GetProjectMemberResponseBodyResult result;
-
     public static GetProjectMemberResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetProjectMemberResponseBody self = new GetProjectMemberResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetProjectMemberResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public GetProjectMemberResponseBody setErrorMessage(String errorMessage) {
@@ -40,12 +48,12 @@ public class GetProjectMemberResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetProjectMemberResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
+    public GetProjectMemberResponseBody setResult(GetProjectMemberResponseBodyResult result) {
+        this.result = result;
         return this;
     }
-    public String getErrorCode() {
-        return this.errorCode;
+    public GetProjectMemberResponseBodyResult getResult() {
+        return this.result;
     }
 
     public GetProjectMemberResponseBody setSuccess(Boolean success) {
@@ -56,29 +64,21 @@ public class GetProjectMemberResponseBody extends TeaModel {
         return this.success;
     }
 
-    public GetProjectMemberResponseBody setResult(GetProjectMemberResponseBodyResult result) {
-        this.result = result;
-        return this;
-    }
-    public GetProjectMemberResponseBodyResult getResult() {
-        return this.result;
-    }
-
     public static class GetProjectMemberResponseBodyResult extends TeaModel {
         @NameInMap("AccessLevel")
         public Integer accessLevel;
 
-        @NameInMap("ExternUserId")
-        public String externUserId;
-
-        @NameInMap("Name")
-        public String name;
-
         @NameInMap("AvatarUrl")
         public String avatarUrl;
 
+        @NameInMap("ExternUserId")
+        public String externUserId;
+
         @NameInMap("Id")
         public Long id;
+
+        @NameInMap("Name")
+        public String name;
 
         public static GetProjectMemberResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             GetProjectMemberResponseBodyResult self = new GetProjectMemberResponseBodyResult();
@@ -93,22 +93,6 @@ public class GetProjectMemberResponseBody extends TeaModel {
             return this.accessLevel;
         }
 
-        public GetProjectMemberResponseBodyResult setExternUserId(String externUserId) {
-            this.externUserId = externUserId;
-            return this;
-        }
-        public String getExternUserId() {
-            return this.externUserId;
-        }
-
-        public GetProjectMemberResponseBodyResult setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
         public GetProjectMemberResponseBodyResult setAvatarUrl(String avatarUrl) {
             this.avatarUrl = avatarUrl;
             return this;
@@ -117,12 +101,28 @@ public class GetProjectMemberResponseBody extends TeaModel {
             return this.avatarUrl;
         }
 
+        public GetProjectMemberResponseBodyResult setExternUserId(String externUserId) {
+            this.externUserId = externUserId;
+            return this;
+        }
+        public String getExternUserId() {
+            return this.externUserId;
+        }
+
         public GetProjectMemberResponseBodyResult setId(Long id) {
             this.id = id;
             return this;
         }
         public Long getId() {
             return this.id;
+        }
+
+        public GetProjectMemberResponseBodyResult setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
     }

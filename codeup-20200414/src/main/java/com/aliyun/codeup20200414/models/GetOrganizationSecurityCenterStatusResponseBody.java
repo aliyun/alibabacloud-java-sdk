@@ -4,24 +4,32 @@ package com.aliyun.codeup20200414.models;
 import com.aliyun.tea.*;
 
 public class GetOrganizationSecurityCenterStatusResponseBody extends TeaModel {
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Success")
-    public Boolean success;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
     @NameInMap("Result")
     public GetOrganizationSecurityCenterStatusResponseBodyResult result;
+
+    @NameInMap("Success")
+    public Boolean success;
 
     public static GetOrganizationSecurityCenterStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetOrganizationSecurityCenterStatusResponseBody self = new GetOrganizationSecurityCenterStatusResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetOrganizationSecurityCenterStatusResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public GetOrganizationSecurityCenterStatusResponseBody setErrorMessage(String errorMessage) {
@@ -40,28 +48,20 @@ public class GetOrganizationSecurityCenterStatusResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetOrganizationSecurityCenterStatusResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public GetOrganizationSecurityCenterStatusResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
     public GetOrganizationSecurityCenterStatusResponseBody setResult(GetOrganizationSecurityCenterStatusResponseBodyResult result) {
         this.result = result;
         return this;
     }
     public GetOrganizationSecurityCenterStatusResponseBodyResult getResult() {
         return this.result;
+    }
+
+    public GetOrganizationSecurityCenterStatusResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public static class GetOrganizationSecurityCenterStatusResponseBodyResult extends TeaModel {

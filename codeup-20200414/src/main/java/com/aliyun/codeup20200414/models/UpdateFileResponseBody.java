@@ -4,24 +4,32 @@ package com.aliyun.codeup20200414.models;
 import com.aliyun.tea.*;
 
 public class UpdateFileResponseBody extends TeaModel {
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
+    @NameInMap("Result")
+    public UpdateFileResponseBodyResult result;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Result")
-    public UpdateFileResponseBodyResult result;
-
     public static UpdateFileResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateFileResponseBody self = new UpdateFileResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateFileResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public UpdateFileResponseBody setErrorMessage(String errorMessage) {
@@ -40,12 +48,12 @@ public class UpdateFileResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public UpdateFileResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
+    public UpdateFileResponseBody setResult(UpdateFileResponseBodyResult result) {
+        this.result = result;
         return this;
     }
-    public String getErrorCode() {
-        return this.errorCode;
+    public UpdateFileResponseBodyResult getResult() {
+        return this.result;
     }
 
     public UpdateFileResponseBody setSuccess(Boolean success) {
@@ -56,32 +64,16 @@ public class UpdateFileResponseBody extends TeaModel {
         return this.success;
     }
 
-    public UpdateFileResponseBody setResult(UpdateFileResponseBodyResult result) {
-        this.result = result;
-        return this;
-    }
-    public UpdateFileResponseBodyResult getResult() {
-        return this.result;
-    }
-
     public static class UpdateFileResponseBodyResult extends TeaModel {
-        @NameInMap("FilePath")
-        public String filePath;
-
         @NameInMap("BranchName")
         public String branchName;
+
+        @NameInMap("FilePath")
+        public String filePath;
 
         public static UpdateFileResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             UpdateFileResponseBodyResult self = new UpdateFileResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public UpdateFileResponseBodyResult setFilePath(String filePath) {
-            this.filePath = filePath;
-            return this;
-        }
-        public String getFilePath() {
-            return this.filePath;
         }
 
         public UpdateFileResponseBodyResult setBranchName(String branchName) {
@@ -90,6 +82,14 @@ public class UpdateFileResponseBody extends TeaModel {
         }
         public String getBranchName() {
             return this.branchName;
+        }
+
+        public UpdateFileResponseBodyResult setFilePath(String filePath) {
+            this.filePath = filePath;
+            return this;
+        }
+        public String getFilePath() {
+            return this.filePath;
         }
 
     }

@@ -7,17 +7,17 @@ public class DeleteFileRequest extends TeaModel {
     @NameInMap("AccessToken")
     public String accessToken;
 
-    @NameInMap("OrganizationId")
-    public String organizationId;
-
     @NameInMap("BranchName")
     public String branchName;
+
+    @NameInMap("CommitMessage")
+    public String commitMessage;
 
     @NameInMap("FilePath")
     public String filePath;
 
-    @NameInMap("CommitMessage")
-    public String commitMessage;
+    @NameInMap("OrganizationId")
+    public String organizationId;
 
     @NameInMap("SubUserId")
     public String subUserId;
@@ -35,20 +35,20 @@ public class DeleteFileRequest extends TeaModel {
         return this.accessToken;
     }
 
-    public DeleteFileRequest setOrganizationId(String organizationId) {
-        this.organizationId = organizationId;
-        return this;
-    }
-    public String getOrganizationId() {
-        return this.organizationId;
-    }
-
     public DeleteFileRequest setBranchName(String branchName) {
         this.branchName = branchName;
         return this;
     }
     public String getBranchName() {
         return this.branchName;
+    }
+
+    public DeleteFileRequest setCommitMessage(String commitMessage) {
+        this.commitMessage = commitMessage;
+        return this;
+    }
+    public String getCommitMessage() {
+        return this.commitMessage;
     }
 
     public DeleteFileRequest setFilePath(String filePath) {
@@ -59,12 +59,12 @@ public class DeleteFileRequest extends TeaModel {
         return this.filePath;
     }
 
-    public DeleteFileRequest setCommitMessage(String commitMessage) {
-        this.commitMessage = commitMessage;
+    public DeleteFileRequest setOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
         return this;
     }
-    public String getCommitMessage() {
-        return this.commitMessage;
+    public String getOrganizationId() {
+        return this.organizationId;
     }
 
     public DeleteFileRequest setSubUserId(String subUserId) {

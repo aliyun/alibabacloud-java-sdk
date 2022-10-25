@@ -13,6 +13,12 @@ public class CreateBranchRequest extends TeaModel {
     @NameInMap("SubUserId")
     public String subUserId;
 
+    @NameInMap("branchName")
+    public String branchName;
+
+    @NameInMap("ref")
+    public String ref;
+
     public static CreateBranchRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateBranchRequest self = new CreateBranchRequest();
         return TeaModel.build(map, self);
@@ -40,6 +46,22 @@ public class CreateBranchRequest extends TeaModel {
     }
     public String getSubUserId() {
         return this.subUserId;
+    }
+
+    public CreateBranchRequest setBranchName(String branchName) {
+        this.branchName = branchName;
+        return this;
+    }
+    public String getBranchName() {
+        return this.branchName;
+    }
+
+    public CreateBranchRequest setRef(String ref) {
+        this.ref = ref;
+        return this;
+    }
+    public String getRef() {
+        return this.ref;
     }
 
 }

@@ -4,24 +4,32 @@ package com.aliyun.codeup20200414.models;
 import com.aliyun.tea.*;
 
 public class DeleteRepositoryResponseBody extends TeaModel {
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
+    @NameInMap("Result")
+    public DeleteRepositoryResponseBodyResult result;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Result")
-    public DeleteRepositoryResponseBodyResult result;
-
     public static DeleteRepositoryResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteRepositoryResponseBody self = new DeleteRepositoryResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteRepositoryResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public DeleteRepositoryResponseBody setErrorMessage(String errorMessage) {
@@ -40,12 +48,12 @@ public class DeleteRepositoryResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DeleteRepositoryResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
+    public DeleteRepositoryResponseBody setResult(DeleteRepositoryResponseBodyResult result) {
+        this.result = result;
         return this;
     }
-    public String getErrorCode() {
-        return this.errorCode;
+    public DeleteRepositoryResponseBodyResult getResult() {
+        return this.result;
     }
 
     public DeleteRepositoryResponseBody setSuccess(Boolean success) {
@@ -54,14 +62,6 @@ public class DeleteRepositoryResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public DeleteRepositoryResponseBody setResult(DeleteRepositoryResponseBodyResult result) {
-        this.result = result;
-        return this;
-    }
-    public DeleteRepositoryResponseBodyResult getResult() {
-        return this.result;
     }
 
     public static class DeleteRepositoryResponseBodyResult extends TeaModel {

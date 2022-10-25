@@ -4,24 +4,32 @@ package com.aliyun.codeup20200414.models;
 import com.aliyun.tea.*;
 
 public class ListOrganizationSecurityScoresResponseBody extends TeaModel {
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Success")
-    public Boolean success;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
     @NameInMap("Result")
     public java.util.List<ListOrganizationSecurityScoresResponseBodyResult> result;
+
+    @NameInMap("Success")
+    public Boolean success;
 
     public static ListOrganizationSecurityScoresResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListOrganizationSecurityScoresResponseBody self = new ListOrganizationSecurityScoresResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListOrganizationSecurityScoresResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public ListOrganizationSecurityScoresResponseBody setErrorMessage(String errorMessage) {
@@ -40,22 +48,6 @@ public class ListOrganizationSecurityScoresResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListOrganizationSecurityScoresResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public ListOrganizationSecurityScoresResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
     public ListOrganizationSecurityScoresResponseBody setResult(java.util.List<ListOrganizationSecurityScoresResponseBodyResult> result) {
         this.result = result;
         return this;
@@ -64,38 +56,30 @@ public class ListOrganizationSecurityScoresResponseBody extends TeaModel {
         return this.result;
     }
 
+    public ListOrganizationSecurityScoresResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public static class ListOrganizationSecurityScoresResponseBodyResultOrganizationSecurityScore extends TeaModel {
-        @NameInMap("CodeContentScore")
-        public Integer codeContentScore;
-
-        @NameInMap("MemberBehaviorScore")
-        public Integer memberBehaviorScore;
-
         @NameInMap("AuthorityControlScore")
         public Integer authorityControlScore;
+
+        @NameInMap("CodeContentScore")
+        public Integer codeContentScore;
 
         @NameInMap("Level")
         public String level;
 
+        @NameInMap("MemberBehaviorScore")
+        public Integer memberBehaviorScore;
+
         public static ListOrganizationSecurityScoresResponseBodyResultOrganizationSecurityScore build(java.util.Map<String, ?> map) throws Exception {
             ListOrganizationSecurityScoresResponseBodyResultOrganizationSecurityScore self = new ListOrganizationSecurityScoresResponseBodyResultOrganizationSecurityScore();
             return TeaModel.build(map, self);
-        }
-
-        public ListOrganizationSecurityScoresResponseBodyResultOrganizationSecurityScore setCodeContentScore(Integer codeContentScore) {
-            this.codeContentScore = codeContentScore;
-            return this;
-        }
-        public Integer getCodeContentScore() {
-            return this.codeContentScore;
-        }
-
-        public ListOrganizationSecurityScoresResponseBodyResultOrganizationSecurityScore setMemberBehaviorScore(Integer memberBehaviorScore) {
-            this.memberBehaviorScore = memberBehaviorScore;
-            return this;
-        }
-        public Integer getMemberBehaviorScore() {
-            return this.memberBehaviorScore;
         }
 
         public ListOrganizationSecurityScoresResponseBodyResultOrganizationSecurityScore setAuthorityControlScore(Integer authorityControlScore) {
@@ -106,6 +90,14 @@ public class ListOrganizationSecurityScoresResponseBody extends TeaModel {
             return this.authorityControlScore;
         }
 
+        public ListOrganizationSecurityScoresResponseBodyResultOrganizationSecurityScore setCodeContentScore(Integer codeContentScore) {
+            this.codeContentScore = codeContentScore;
+            return this;
+        }
+        public Integer getCodeContentScore() {
+            return this.codeContentScore;
+        }
+
         public ListOrganizationSecurityScoresResponseBodyResultOrganizationSecurityScore setLevel(String level) {
             this.level = level;
             return this;
@@ -114,14 +106,22 @@ public class ListOrganizationSecurityScoresResponseBody extends TeaModel {
             return this.level;
         }
 
+        public ListOrganizationSecurityScoresResponseBodyResultOrganizationSecurityScore setMemberBehaviorScore(Integer memberBehaviorScore) {
+            this.memberBehaviorScore = memberBehaviorScore;
+            return this;
+        }
+        public Integer getMemberBehaviorScore() {
+            return this.memberBehaviorScore;
+        }
+
     }
 
     public static class ListOrganizationSecurityScoresResponseBodyResult extends TeaModel {
-        @NameInMap("Id")
-        public Long id;
-
         @NameInMap("Enable")
         public Boolean enable;
+
+        @NameInMap("Id")
+        public Long id;
 
         @NameInMap("OrganizationId")
         public String organizationId;
@@ -134,20 +134,20 @@ public class ListOrganizationSecurityScoresResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ListOrganizationSecurityScoresResponseBodyResult setId(Long id) {
-            this.id = id;
-            return this;
-        }
-        public Long getId() {
-            return this.id;
-        }
-
         public ListOrganizationSecurityScoresResponseBodyResult setEnable(Boolean enable) {
             this.enable = enable;
             return this;
         }
         public Boolean getEnable() {
             return this.enable;
+        }
+
+        public ListOrganizationSecurityScoresResponseBodyResult setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
         }
 
         public ListOrganizationSecurityScoresResponseBodyResult setOrganizationId(String organizationId) {

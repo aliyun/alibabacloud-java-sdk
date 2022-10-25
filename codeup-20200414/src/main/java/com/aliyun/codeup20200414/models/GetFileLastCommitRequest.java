@@ -4,21 +4,17 @@ package com.aliyun.codeup20200414.models;
 import com.aliyun.tea.*;
 
 public class GetFileLastCommitRequest extends TeaModel {
-    // 个人访问令牌
     @NameInMap("AccessToken")
     public String accessToken;
 
-    // 云效企业ID
+    @NameInMap("FilePath")
+    public String filePath;
+
     @NameInMap("OrganizationId")
     public String organizationId;
 
-    // 分支名称、标签名称或Commit ID
     @NameInMap("Sha")
     public String sha;
-
-    // 文件路径
-    @NameInMap("FilePath")
-    public String filePath;
 
     public static GetFileLastCommitRequest build(java.util.Map<String, ?> map) throws Exception {
         GetFileLastCommitRequest self = new GetFileLastCommitRequest();
@@ -31,6 +27,14 @@ public class GetFileLastCommitRequest extends TeaModel {
     }
     public String getAccessToken() {
         return this.accessToken;
+    }
+
+    public GetFileLastCommitRequest setFilePath(String filePath) {
+        this.filePath = filePath;
+        return this;
+    }
+    public String getFilePath() {
+        return this.filePath;
     }
 
     public GetFileLastCommitRequest setOrganizationId(String organizationId) {
@@ -47,14 +51,6 @@ public class GetFileLastCommitRequest extends TeaModel {
     }
     public String getSha() {
         return this.sha;
-    }
-
-    public GetFileLastCommitRequest setFilePath(String filePath) {
-        this.filePath = filePath;
-        return this;
-    }
-    public String getFilePath() {
-        return this.filePath;
     }
 
 }

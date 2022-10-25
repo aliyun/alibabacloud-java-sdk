@@ -4,24 +4,32 @@ package com.aliyun.codeup20200414.models;
 import com.aliyun.tea.*;
 
 public class GetFileBlobsResponseBody extends TeaModel {
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
+    @NameInMap("Result")
+    public GetFileBlobsResponseBodyResult result;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Result")
-    public GetFileBlobsResponseBodyResult result;
-
     public static GetFileBlobsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetFileBlobsResponseBody self = new GetFileBlobsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetFileBlobsResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public GetFileBlobsResponseBody setErrorMessage(String errorMessage) {
@@ -40,12 +48,12 @@ public class GetFileBlobsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetFileBlobsResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
+    public GetFileBlobsResponseBody setResult(GetFileBlobsResponseBodyResult result) {
+        this.result = result;
         return this;
     }
-    public String getErrorCode() {
-        return this.errorCode;
+    public GetFileBlobsResponseBodyResult getResult() {
+        return this.result;
     }
 
     public GetFileBlobsResponseBody setSuccess(Boolean success) {
@@ -56,32 +64,16 @@ public class GetFileBlobsResponseBody extends TeaModel {
         return this.success;
     }
 
-    public GetFileBlobsResponseBody setResult(GetFileBlobsResponseBodyResult result) {
-        this.result = result;
-        return this;
-    }
-    public GetFileBlobsResponseBodyResult getResult() {
-        return this.result;
-    }
-
     public static class GetFileBlobsResponseBodyResult extends TeaModel {
-        @NameInMap("TotalLines")
-        public Integer totalLines;
-
         @NameInMap("Content")
         public String content;
+
+        @NameInMap("TotalLines")
+        public Integer totalLines;
 
         public static GetFileBlobsResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             GetFileBlobsResponseBodyResult self = new GetFileBlobsResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public GetFileBlobsResponseBodyResult setTotalLines(Integer totalLines) {
-            this.totalLines = totalLines;
-            return this;
-        }
-        public Integer getTotalLines() {
-            return this.totalLines;
         }
 
         public GetFileBlobsResponseBodyResult setContent(String content) {
@@ -90,6 +82,14 @@ public class GetFileBlobsResponseBody extends TeaModel {
         }
         public String getContent() {
             return this.content;
+        }
+
+        public GetFileBlobsResponseBodyResult setTotalLines(Integer totalLines) {
+            this.totalLines = totalLines;
+            return this;
+        }
+        public Integer getTotalLines() {
+            return this.totalLines;
         }
 
     }

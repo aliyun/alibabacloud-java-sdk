@@ -7,11 +7,11 @@ public class ListMergeRequestCommentsRequest extends TeaModel {
     @NameInMap("AccessToken")
     public String accessToken;
 
-    @NameInMap("OrganizationId")
-    public String organizationId;
-
     @NameInMap("FromCommit")
     public String fromCommit;
+
+    @NameInMap("OrganizationId")
+    public String organizationId;
 
     @NameInMap("ToCommit")
     public String toCommit;
@@ -29,20 +29,20 @@ public class ListMergeRequestCommentsRequest extends TeaModel {
         return this.accessToken;
     }
 
-    public ListMergeRequestCommentsRequest setOrganizationId(String organizationId) {
-        this.organizationId = organizationId;
-        return this;
-    }
-    public String getOrganizationId() {
-        return this.organizationId;
-    }
-
     public ListMergeRequestCommentsRequest setFromCommit(String fromCommit) {
         this.fromCommit = fromCommit;
         return this;
     }
     public String getFromCommit() {
         return this.fromCommit;
+    }
+
+    public ListMergeRequestCommentsRequest setOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
+        return this;
+    }
+    public String getOrganizationId() {
+        return this.organizationId;
     }
 
     public ListMergeRequestCommentsRequest setToCommit(String toCommit) {
