@@ -4,7 +4,6 @@ package com.aliyun.eds_user20210308.models;
 import com.aliyun.tea.*;
 
 public class ResetUserPasswordResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -74,23 +73,15 @@ public class ResetUserPasswordResponseBody extends TeaModel {
     }
 
     public static class ResetUserPasswordResponseBodyResetUsersResult extends TeaModel {
-        @NameInMap("ResetUsers")
-        public java.util.List<String> resetUsers;
-
         @NameInMap("FailedUsers")
         public java.util.List<ResetUserPasswordResponseBodyResetUsersResultFailedUsers> failedUsers;
+
+        @NameInMap("ResetUsers")
+        public java.util.List<String> resetUsers;
 
         public static ResetUserPasswordResponseBodyResetUsersResult build(java.util.Map<String, ?> map) throws Exception {
             ResetUserPasswordResponseBodyResetUsersResult self = new ResetUserPasswordResponseBodyResetUsersResult();
             return TeaModel.build(map, self);
-        }
-
-        public ResetUserPasswordResponseBodyResetUsersResult setResetUsers(java.util.List<String> resetUsers) {
-            this.resetUsers = resetUsers;
-            return this;
-        }
-        public java.util.List<String> getResetUsers() {
-            return this.resetUsers;
         }
 
         public ResetUserPasswordResponseBodyResetUsersResult setFailedUsers(java.util.List<ResetUserPasswordResponseBodyResetUsersResultFailedUsers> failedUsers) {
@@ -99,6 +90,14 @@ public class ResetUserPasswordResponseBody extends TeaModel {
         }
         public java.util.List<ResetUserPasswordResponseBodyResetUsersResultFailedUsers> getFailedUsers() {
             return this.failedUsers;
+        }
+
+        public ResetUserPasswordResponseBodyResetUsersResult setResetUsers(java.util.List<String> resetUsers) {
+            this.resetUsers = resetUsers;
+            return this;
+        }
+        public java.util.List<String> getResetUsers() {
+            return this.resetUsers;
         }
 
     }

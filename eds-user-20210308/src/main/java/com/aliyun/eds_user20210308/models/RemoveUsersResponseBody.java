@@ -4,24 +4,15 @@ package com.aliyun.eds_user20210308.models;
 import com.aliyun.tea.*;
 
 public class RemoveUsersResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("RemoveUsersResult")
     public RemoveUsersResponseBodyRemoveUsersResult removeUsersResult;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static RemoveUsersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RemoveUsersResponseBody self = new RemoveUsersResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public RemoveUsersResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public RemoveUsersResponseBody setRemoveUsersResult(RemoveUsersResponseBodyRemoveUsersResult removeUsersResult) {
@@ -30,6 +21,14 @@ public class RemoveUsersResponseBody extends TeaModel {
     }
     public RemoveUsersResponseBodyRemoveUsersResult getRemoveUsersResult() {
         return this.removeUsersResult;
+    }
+
+    public RemoveUsersResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class RemoveUsersResponseBodyRemoveUsersResultFailedUsers extends TeaModel {
@@ -74,23 +73,15 @@ public class RemoveUsersResponseBody extends TeaModel {
     }
 
     public static class RemoveUsersResponseBodyRemoveUsersResult extends TeaModel {
-        @NameInMap("RemovedUsers")
-        public java.util.List<String> removedUsers;
-
         @NameInMap("FailedUsers")
         public java.util.List<RemoveUsersResponseBodyRemoveUsersResultFailedUsers> failedUsers;
+
+        @NameInMap("RemovedUsers")
+        public java.util.List<String> removedUsers;
 
         public static RemoveUsersResponseBodyRemoveUsersResult build(java.util.Map<String, ?> map) throws Exception {
             RemoveUsersResponseBodyRemoveUsersResult self = new RemoveUsersResponseBodyRemoveUsersResult();
             return TeaModel.build(map, self);
-        }
-
-        public RemoveUsersResponseBodyRemoveUsersResult setRemovedUsers(java.util.List<String> removedUsers) {
-            this.removedUsers = removedUsers;
-            return this;
-        }
-        public java.util.List<String> getRemovedUsers() {
-            return this.removedUsers;
         }
 
         public RemoveUsersResponseBodyRemoveUsersResult setFailedUsers(java.util.List<RemoveUsersResponseBodyRemoveUsersResultFailedUsers> failedUsers) {
@@ -99,6 +90,14 @@ public class RemoveUsersResponseBody extends TeaModel {
         }
         public java.util.List<RemoveUsersResponseBodyRemoveUsersResultFailedUsers> getFailedUsers() {
             return this.failedUsers;
+        }
+
+        public RemoveUsersResponseBodyRemoveUsersResult setRemovedUsers(java.util.List<String> removedUsers) {
+            this.removedUsers = removedUsers;
+            return this;
+        }
+        public java.util.List<String> getRemovedUsers() {
+            return this.removedUsers;
         }
 
     }

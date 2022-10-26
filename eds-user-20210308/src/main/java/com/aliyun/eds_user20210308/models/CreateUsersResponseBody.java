@@ -4,24 +4,15 @@ package com.aliyun.eds_user20210308.models;
 import com.aliyun.tea.*;
 
 public class CreateUsersResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("CreateResult")
     public CreateUsersResponseBodyCreateResult createResult;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static CreateUsersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateUsersResponseBody self = new CreateUsersResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateUsersResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public CreateUsersResponseBody setCreateResult(CreateUsersResponseBodyCreateResult createResult) {
@@ -32,24 +23,30 @@ public class CreateUsersResponseBody extends TeaModel {
         return this.createResult;
     }
 
+    public CreateUsersResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class CreateUsersResponseBodyCreateResultCreatedUsers extends TeaModel {
+        @NameInMap("Email")
+        public String email;
+
         @NameInMap("EndUserId")
         public String endUserId;
 
-        @NameInMap("Email")
-        public String email;
+        @NameInMap("Phone")
+        public String phone;
+
+        @NameInMap("Remark")
+        public String remark;
 
         public static CreateUsersResponseBodyCreateResultCreatedUsers build(java.util.Map<String, ?> map) throws Exception {
             CreateUsersResponseBodyCreateResultCreatedUsers self = new CreateUsersResponseBodyCreateResultCreatedUsers();
             return TeaModel.build(map, self);
-        }
-
-        public CreateUsersResponseBodyCreateResultCreatedUsers setEndUserId(String endUserId) {
-            this.endUserId = endUserId;
-            return this;
-        }
-        public String getEndUserId() {
-            return this.endUserId;
         }
 
         public CreateUsersResponseBodyCreateResultCreatedUsers setEmail(String email) {
@@ -60,14 +57,38 @@ public class CreateUsersResponseBody extends TeaModel {
             return this.email;
         }
 
+        public CreateUsersResponseBodyCreateResultCreatedUsers setEndUserId(String endUserId) {
+            this.endUserId = endUserId;
+            return this;
+        }
+        public String getEndUserId() {
+            return this.endUserId;
+        }
+
+        public CreateUsersResponseBodyCreateResultCreatedUsers setPhone(String phone) {
+            this.phone = phone;
+            return this;
+        }
+        public String getPhone() {
+            return this.phone;
+        }
+
+        public CreateUsersResponseBodyCreateResultCreatedUsers setRemark(String remark) {
+            this.remark = remark;
+            return this;
+        }
+        public String getRemark() {
+            return this.remark;
+        }
+
     }
 
     public static class CreateUsersResponseBodyCreateResultFailedUsers extends TeaModel {
-        @NameInMap("EndUserId")
-        public String endUserId;
-
         @NameInMap("Email")
         public String email;
+
+        @NameInMap("EndUserId")
+        public String endUserId;
 
         @NameInMap("ErrorCode")
         public String errorCode;
@@ -75,17 +96,12 @@ public class CreateUsersResponseBody extends TeaModel {
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        @NameInMap("Phone")
+        public String phone;
+
         public static CreateUsersResponseBodyCreateResultFailedUsers build(java.util.Map<String, ?> map) throws Exception {
             CreateUsersResponseBodyCreateResultFailedUsers self = new CreateUsersResponseBodyCreateResultFailedUsers();
             return TeaModel.build(map, self);
-        }
-
-        public CreateUsersResponseBodyCreateResultFailedUsers setEndUserId(String endUserId) {
-            this.endUserId = endUserId;
-            return this;
-        }
-        public String getEndUserId() {
-            return this.endUserId;
         }
 
         public CreateUsersResponseBodyCreateResultFailedUsers setEmail(String email) {
@@ -94,6 +110,14 @@ public class CreateUsersResponseBody extends TeaModel {
         }
         public String getEmail() {
             return this.email;
+        }
+
+        public CreateUsersResponseBodyCreateResultFailedUsers setEndUserId(String endUserId) {
+            this.endUserId = endUserId;
+            return this;
+        }
+        public String getEndUserId() {
+            return this.endUserId;
         }
 
         public CreateUsersResponseBodyCreateResultFailedUsers setErrorCode(String errorCode) {
@@ -110,6 +134,14 @@ public class CreateUsersResponseBody extends TeaModel {
         }
         public String getErrorMessage() {
             return this.errorMessage;
+        }
+
+        public CreateUsersResponseBodyCreateResultFailedUsers setPhone(String phone) {
+            this.phone = phone;
+            return this;
+        }
+        public String getPhone() {
+            return this.phone;
         }
 
     }
