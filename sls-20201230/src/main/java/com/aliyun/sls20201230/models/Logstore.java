@@ -34,6 +34,9 @@ public class Logstore extends TeaModel {
     @NameInMap("mode")
     public String mode;
 
+    @NameInMap("productType")
+    public String productType;
+
     @NameInMap("shardCount")
     public Integer shardCount;
 
@@ -126,6 +129,14 @@ public class Logstore extends TeaModel {
     }
     public String getMode() {
         return this.mode;
+    }
+
+    public Logstore setProductType(String productType) {
+        this.productType = productType;
+        return this;
+    }
+    public String getProductType() {
+        return this.productType;
     }
 
     public Logstore setShardCount(Integer shardCount) {
