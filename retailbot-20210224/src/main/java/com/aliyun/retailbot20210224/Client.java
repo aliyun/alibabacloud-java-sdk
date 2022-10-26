@@ -1490,6 +1490,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("RobotCode", request.robotCode);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            body.put("Status", request.status);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.type)) {
             body.put("Type", request.type);
         }
@@ -1664,6 +1668,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListPackageKnowledgesResponse listPackageKnowledgesWithOptions(ListPackageKnowledgesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.decoupleVersion)) {
+            body.put("DecoupleVersion", request.decoupleVersion);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.operatorId)) {
             body.put("OperatorId", request.operatorId);
         }

@@ -28,6 +28,9 @@ public class ListAgingRequest extends TeaModel {
     @NameInMap("RobotCode")
     public String robotCode;
 
+    @NameInMap("Status")
+    public String status;
+
     @NameInMap("Type")
     public String type;
 
@@ -98,6 +101,14 @@ public class ListAgingRequest extends TeaModel {
     }
     public String getRobotCode() {
         return this.robotCode;
+    }
+
+    public ListAgingRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
     public ListAgingRequest setType(String type) {

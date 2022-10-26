@@ -4,6 +4,9 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class ListPackageKnowledgesRequest extends TeaModel {
+    @NameInMap("DecoupleVersion")
+    public String decoupleVersion;
+
     @NameInMap("OperatorId")
     public String operatorId;
 
@@ -22,6 +25,14 @@ public class ListPackageKnowledgesRequest extends TeaModel {
     public static ListPackageKnowledgesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListPackageKnowledgesRequest self = new ListPackageKnowledgesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListPackageKnowledgesRequest setDecoupleVersion(String decoupleVersion) {
+        this.decoupleVersion = decoupleVersion;
+        return this;
+    }
+    public String getDecoupleVersion() {
+        return this.decoupleVersion;
     }
 
     public ListPackageKnowledgesRequest setOperatorId(String operatorId) {
