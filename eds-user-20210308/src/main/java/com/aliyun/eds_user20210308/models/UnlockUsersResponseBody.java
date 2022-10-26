@@ -4,7 +4,6 @@ package com.aliyun.eds_user20210308.models;
 import com.aliyun.tea.*;
 
 public class UnlockUsersResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -74,23 +73,15 @@ public class UnlockUsersResponseBody extends TeaModel {
     }
 
     public static class UnlockUsersResponseBodyUnlockUsersResult extends TeaModel {
-        @NameInMap("UnlockedUsers")
-        public java.util.List<String> unlockedUsers;
-
         @NameInMap("FailedUsers")
         public java.util.List<UnlockUsersResponseBodyUnlockUsersResultFailedUsers> failedUsers;
+
+        @NameInMap("UnlockedUsers")
+        public java.util.List<String> unlockedUsers;
 
         public static UnlockUsersResponseBodyUnlockUsersResult build(java.util.Map<String, ?> map) throws Exception {
             UnlockUsersResponseBodyUnlockUsersResult self = new UnlockUsersResponseBodyUnlockUsersResult();
             return TeaModel.build(map, self);
-        }
-
-        public UnlockUsersResponseBodyUnlockUsersResult setUnlockedUsers(java.util.List<String> unlockedUsers) {
-            this.unlockedUsers = unlockedUsers;
-            return this;
-        }
-        public java.util.List<String> getUnlockedUsers() {
-            return this.unlockedUsers;
         }
 
         public UnlockUsersResponseBodyUnlockUsersResult setFailedUsers(java.util.List<UnlockUsersResponseBodyUnlockUsersResultFailedUsers> failedUsers) {
@@ -99,6 +90,14 @@ public class UnlockUsersResponseBody extends TeaModel {
         }
         public java.util.List<UnlockUsersResponseBodyUnlockUsersResultFailedUsers> getFailedUsers() {
             return this.failedUsers;
+        }
+
+        public UnlockUsersResponseBodyUnlockUsersResult setUnlockedUsers(java.util.List<String> unlockedUsers) {
+            this.unlockedUsers = unlockedUsers;
+            return this;
+        }
+        public java.util.List<String> getUnlockedUsers() {
+            return this.unlockedUsers;
         }
 
     }

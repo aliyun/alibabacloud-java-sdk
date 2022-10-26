@@ -4,24 +4,15 @@ package com.aliyun.eds_user20210308.models;
 import com.aliyun.tea.*;
 
 public class LockUsersResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("LockUsersResult")
     public LockUsersResponseBodyLockUsersResult lockUsersResult;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static LockUsersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         LockUsersResponseBody self = new LockUsersResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public LockUsersResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public LockUsersResponseBody setLockUsersResult(LockUsersResponseBodyLockUsersResult lockUsersResult) {
@@ -30,6 +21,14 @@ public class LockUsersResponseBody extends TeaModel {
     }
     public LockUsersResponseBodyLockUsersResult getLockUsersResult() {
         return this.lockUsersResult;
+    }
+
+    public LockUsersResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class LockUsersResponseBodyLockUsersResultFailedUsers extends TeaModel {
@@ -74,23 +73,15 @@ public class LockUsersResponseBody extends TeaModel {
     }
 
     public static class LockUsersResponseBodyLockUsersResult extends TeaModel {
-        @NameInMap("LockedUsers")
-        public java.util.List<String> lockedUsers;
-
         @NameInMap("FailedUsers")
         public java.util.List<LockUsersResponseBodyLockUsersResultFailedUsers> failedUsers;
+
+        @NameInMap("LockedUsers")
+        public java.util.List<String> lockedUsers;
 
         public static LockUsersResponseBodyLockUsersResult build(java.util.Map<String, ?> map) throws Exception {
             LockUsersResponseBodyLockUsersResult self = new LockUsersResponseBodyLockUsersResult();
             return TeaModel.build(map, self);
-        }
-
-        public LockUsersResponseBodyLockUsersResult setLockedUsers(java.util.List<String> lockedUsers) {
-            this.lockedUsers = lockedUsers;
-            return this;
-        }
-        public java.util.List<String> getLockedUsers() {
-            return this.lockedUsers;
         }
 
         public LockUsersResponseBodyLockUsersResult setFailedUsers(java.util.List<LockUsersResponseBodyLockUsersResultFailedUsers> failedUsers) {
@@ -99,6 +90,14 @@ public class LockUsersResponseBody extends TeaModel {
         }
         public java.util.List<LockUsersResponseBodyLockUsersResultFailedUsers> getFailedUsers() {
             return this.failedUsers;
+        }
+
+        public LockUsersResponseBodyLockUsersResult setLockedUsers(java.util.List<String> lockedUsers) {
+            this.lockedUsers = lockedUsers;
+            return this;
+        }
+        public java.util.List<String> getLockedUsers() {
+            return this.lockedUsers;
         }
 
     }

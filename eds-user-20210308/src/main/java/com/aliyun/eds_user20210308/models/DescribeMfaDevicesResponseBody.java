@@ -4,36 +4,18 @@ package com.aliyun.eds_user20210308.models;
 import com.aliyun.tea.*;
 
 public class DescribeMfaDevicesResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("MfaDevices")
+    public java.util.List<DescribeMfaDevicesResponseBodyMfaDevices> mfaDevices;
 
     @NameInMap("NextToken")
     public String nextToken;
 
-    // mfa device list
-    @NameInMap("MfaDevices")
-    public java.util.List<DescribeMfaDevicesResponseBodyMfaDevices> mfaDevices;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeMfaDevicesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeMfaDevicesResponseBody self = new DescribeMfaDevicesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeMfaDevicesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeMfaDevicesResponseBody setNextToken(String nextToken) {
-        this.nextToken = nextToken;
-        return this;
-    }
-    public String getNextToken() {
-        return this.nextToken;
     }
 
     public DescribeMfaDevicesResponseBody setMfaDevices(java.util.List<DescribeMfaDevicesResponseBodyMfaDevices> mfaDevices) {
@@ -44,15 +26,34 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
         return this.mfaDevices;
     }
 
-    public static class DescribeMfaDevicesResponseBodyMfaDevices extends TeaModel {
-        @NameInMap("Id")
-        public Long id;
+    public DescribeMfaDevicesResponseBody setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
+    }
 
-        @NameInMap("EndUserId")
-        public String endUserId;
+    public DescribeMfaDevicesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public static class DescribeMfaDevicesResponseBodyMfaDevices extends TeaModel {
+        @NameInMap("ConsecutiveFails")
+        public Integer consecutiveFails;
+
+        @NameInMap("DeviceType")
+        public String deviceType;
 
         @NameInMap("Email")
         public String email;
+
+        @NameInMap("EndUserId")
+        public String endUserId;
 
         @NameInMap("GmtEnabled")
         public String gmtEnabled;
@@ -60,8 +61,8 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
         @NameInMap("GmtUnlock")
         public String gmtUnlock;
 
-        @NameInMap("ConsecutiveFails")
-        public Integer consecutiveFails;
+        @NameInMap("Id")
+        public Long id;
 
         @NameInMap("SerialNumber")
         public String serialNumber;
@@ -69,28 +70,25 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
-        @NameInMap("DeviceType")
-        public String deviceType;
-
         public static DescribeMfaDevicesResponseBodyMfaDevices build(java.util.Map<String, ?> map) throws Exception {
             DescribeMfaDevicesResponseBodyMfaDevices self = new DescribeMfaDevicesResponseBodyMfaDevices();
             return TeaModel.build(map, self);
         }
 
-        public DescribeMfaDevicesResponseBodyMfaDevices setId(Long id) {
-            this.id = id;
+        public DescribeMfaDevicesResponseBodyMfaDevices setConsecutiveFails(Integer consecutiveFails) {
+            this.consecutiveFails = consecutiveFails;
             return this;
         }
-        public Long getId() {
-            return this.id;
+        public Integer getConsecutiveFails() {
+            return this.consecutiveFails;
         }
 
-        public DescribeMfaDevicesResponseBodyMfaDevices setEndUserId(String endUserId) {
-            this.endUserId = endUserId;
+        public DescribeMfaDevicesResponseBodyMfaDevices setDeviceType(String deviceType) {
+            this.deviceType = deviceType;
             return this;
         }
-        public String getEndUserId() {
-            return this.endUserId;
+        public String getDeviceType() {
+            return this.deviceType;
         }
 
         public DescribeMfaDevicesResponseBodyMfaDevices setEmail(String email) {
@@ -99,6 +97,14 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
         }
         public String getEmail() {
             return this.email;
+        }
+
+        public DescribeMfaDevicesResponseBodyMfaDevices setEndUserId(String endUserId) {
+            this.endUserId = endUserId;
+            return this;
+        }
+        public String getEndUserId() {
+            return this.endUserId;
         }
 
         public DescribeMfaDevicesResponseBodyMfaDevices setGmtEnabled(String gmtEnabled) {
@@ -117,12 +123,12 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
             return this.gmtUnlock;
         }
 
-        public DescribeMfaDevicesResponseBodyMfaDevices setConsecutiveFails(Integer consecutiveFails) {
-            this.consecutiveFails = consecutiveFails;
+        public DescribeMfaDevicesResponseBodyMfaDevices setId(Long id) {
+            this.id = id;
             return this;
         }
-        public Integer getConsecutiveFails() {
-            return this.consecutiveFails;
+        public Long getId() {
+            return this.id;
         }
 
         public DescribeMfaDevicesResponseBodyMfaDevices setSerialNumber(String serialNumber) {
@@ -139,14 +145,6 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
-        }
-
-        public DescribeMfaDevicesResponseBodyMfaDevices setDeviceType(String deviceType) {
-            this.deviceType = deviceType;
-            return this;
-        }
-        public String getDeviceType() {
-            return this.deviceType;
         }
 
     }

@@ -4,7 +4,6 @@ package com.aliyun.eds_user20210308.models;
 import com.aliyun.tea.*;
 
 public class UnlockMfaDeviceResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
