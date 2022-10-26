@@ -1,3 +1,6 @@
+2022-10-26 Version: 1.1.0
+- Add series of interfaces for designated taobaoid trade.
+
 2022-08-11 Version: 1.0.19
 - Modify CreateOrderTransactionDetailFile.
 
