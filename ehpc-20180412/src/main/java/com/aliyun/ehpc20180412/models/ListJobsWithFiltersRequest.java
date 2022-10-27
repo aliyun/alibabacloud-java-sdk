@@ -4,6 +4,9 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class ListJobsWithFiltersRequest extends TeaModel {
+    @NameInMap("Async")
+    public Boolean async;
+
     @NameInMap("ClusterId")
     public String clusterId;
 
@@ -49,6 +52,14 @@ public class ListJobsWithFiltersRequest extends TeaModel {
     public static ListJobsWithFiltersRequest build(java.util.Map<String, ?> map) throws Exception {
         ListJobsWithFiltersRequest self = new ListJobsWithFiltersRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListJobsWithFiltersRequest setAsync(Boolean async) {
+        this.async = async;
+        return this;
+    }
+    public Boolean getAsync() {
+        return this.async;
     }
 
     public ListJobsWithFiltersRequest setClusterId(String clusterId) {
