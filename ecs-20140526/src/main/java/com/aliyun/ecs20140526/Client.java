@@ -16479,6 +16479,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Timed", request.timed);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.timeout)) {
+            query.put("Timeout", request.timeout);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.username)) {
             query.put("Username", request.username);
         }
@@ -21935,6 +21939,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Architecture", request.architecture);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.arn)) {
+            query.put("Arn", request.arn);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             query.put("ClientToken", request.clientToken);
         }
@@ -21943,12 +21951,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DiskId", request.diskId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.encryptAlgorithm)) {
+            query.put("EncryptAlgorithm", request.encryptAlgorithm);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.encrypted)) {
+            query.put("Encrypted", request.encrypted);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.imageId)) {
             query.put("ImageId", request.imageId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.KMSKeyId)) {
+            query.put("KMSKeyId", request.KMSKeyId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.keyPairName)) {
