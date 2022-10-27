@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CopySnapshotRequest extends TeaModel {
+    @NameInMap("Arn")
+    public java.util.List<CopySnapshotRequestArn> arn;
+
     @NameInMap("DestinationRegionId")
     public String destinationRegionId;
 
@@ -12,6 +15,12 @@ public class CopySnapshotRequest extends TeaModel {
 
     @NameInMap("DestinationSnapshotName")
     public String destinationSnapshotName;
+
+    @NameInMap("Encrypted")
+    public Boolean encrypted;
+
+    @NameInMap("KMSKeyId")
+    public String KMSKeyId;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -42,6 +51,14 @@ public class CopySnapshotRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CopySnapshotRequest setArn(java.util.List<CopySnapshotRequestArn> arn) {
+        this.arn = arn;
+        return this;
+    }
+    public java.util.List<CopySnapshotRequestArn> getArn() {
+        return this.arn;
+    }
+
     public CopySnapshotRequest setDestinationRegionId(String destinationRegionId) {
         this.destinationRegionId = destinationRegionId;
         return this;
@@ -64,6 +81,22 @@ public class CopySnapshotRequest extends TeaModel {
     }
     public String getDestinationSnapshotName() {
         return this.destinationSnapshotName;
+    }
+
+    public CopySnapshotRequest setEncrypted(Boolean encrypted) {
+        this.encrypted = encrypted;
+        return this;
+    }
+    public Boolean getEncrypted() {
+        return this.encrypted;
+    }
+
+    public CopySnapshotRequest setKMSKeyId(String KMSKeyId) {
+        this.KMSKeyId = KMSKeyId;
+        return this;
+    }
+    public String getKMSKeyId() {
+        return this.KMSKeyId;
     }
 
     public CopySnapshotRequest setOwnerId(Long ownerId) {
@@ -128,6 +161,47 @@ public class CopySnapshotRequest extends TeaModel {
     }
     public java.util.List<CopySnapshotRequestTag> getTag() {
         return this.tag;
+    }
+
+    public static class CopySnapshotRequestArn extends TeaModel {
+        @NameInMap("AssumeRoleFor")
+        public Long assumeRoleFor;
+
+        @NameInMap("RoleType")
+        public String roleType;
+
+        @NameInMap("Rolearn")
+        public String rolearn;
+
+        public static CopySnapshotRequestArn build(java.util.Map<String, ?> map) throws Exception {
+            CopySnapshotRequestArn self = new CopySnapshotRequestArn();
+            return TeaModel.build(map, self);
+        }
+
+        public CopySnapshotRequestArn setAssumeRoleFor(Long assumeRoleFor) {
+            this.assumeRoleFor = assumeRoleFor;
+            return this;
+        }
+        public Long getAssumeRoleFor() {
+            return this.assumeRoleFor;
+        }
+
+        public CopySnapshotRequestArn setRoleType(String roleType) {
+            this.roleType = roleType;
+            return this;
+        }
+        public String getRoleType() {
+            return this.roleType;
+        }
+
+        public CopySnapshotRequestArn setRolearn(String rolearn) {
+            this.rolearn = rolearn;
+            return this;
+        }
+        public String getRolearn() {
+            return this.rolearn;
+        }
+
     }
 
     public static class CopySnapshotRequestTag extends TeaModel {
