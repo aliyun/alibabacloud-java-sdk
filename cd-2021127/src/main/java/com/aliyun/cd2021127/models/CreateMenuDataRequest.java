@@ -224,6 +224,9 @@ public class CreateMenuDataRequest extends TeaModel {
     }
 
     public static class CreateMenuDataRequestProductCombineList extends TeaModel {
+        @NameInMap("EnglishName")
+        public String englishName;
+
         @NameInMap("Name")
         public String name;
 
@@ -236,6 +239,14 @@ public class CreateMenuDataRequest extends TeaModel {
         public static CreateMenuDataRequestProductCombineList build(java.util.Map<String, ?> map) throws Exception {
             CreateMenuDataRequestProductCombineList self = new CreateMenuDataRequestProductCombineList();
             return TeaModel.build(map, self);
+        }
+
+        public CreateMenuDataRequestProductCombineList setEnglishName(String englishName) {
+            this.englishName = englishName;
+            return this;
+        }
+        public String getEnglishName() {
+            return this.englishName;
         }
 
         public CreateMenuDataRequestProductCombineList setName(String name) {
