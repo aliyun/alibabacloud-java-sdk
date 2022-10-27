@@ -71,6 +71,9 @@ public class ListUserLevelsOfSkillGroupResponseBody extends TeaModel {
         @NameInMap("LoginName")
         public String loginName;
 
+        @NameInMap("RamId")
+        public String ramId;
+
         @NameInMap("RoleId")
         public String roleId;
 
@@ -108,6 +111,14 @@ public class ListUserLevelsOfSkillGroupResponseBody extends TeaModel {
         }
         public String getLoginName() {
             return this.loginName;
+        }
+
+        public ListUserLevelsOfSkillGroupResponseBodyDataList setRamId(String ramId) {
+            this.ramId = ramId;
+            return this;
+        }
+        public String getRamId() {
+            return this.ramId;
         }
 
         public ListUserLevelsOfSkillGroupResponseBodyDataList setRoleId(String roleId) {
