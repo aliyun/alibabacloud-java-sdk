@@ -349,6 +349,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Output", request.output);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.params)) {
+            body.put("Params", request.params);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
             body.put("StartTime", request.startTime);
         }
@@ -396,10 +400,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SubmitImageCopyrightResponse submitImageCopyrightWithOptions(SubmitImageCopyrightRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.input)) {
-            body.put("Input", request.input);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.level)) {
             body.put("Level", request.level);
         }
@@ -414,10 +414,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.params)) {
             body.put("Params", request.params);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.url)) {
-            body.put("Url", request.url);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
