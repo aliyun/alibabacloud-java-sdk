@@ -118,7 +118,6 @@ public class DescribeProductResponseBody extends TeaModel {
         @NameInMap("Order")
         public Integer order;
 
-        // HTML, LIST, JSON, SLIDER, LINK, IMG
         @NameInMap("Type")
         public String type;
 

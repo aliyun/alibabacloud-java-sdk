@@ -7,20 +7,20 @@ public class QueryImageIdRequest extends TeaModel {
     @NameInMap("CommodityCode")
     public String commodityCode;
 
+    @NameInMap("ImageVersion")
+    public String imageVersion;
+
     @NameInMap("PageIndex")
     public Integer pageIndex;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("Region")
-    public String region;
+    @NameInMap("RegionNo")
+    public String regionNo;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Version")
-    public String version;
 
     public static QueryImageIdRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryImageIdRequest self = new QueryImageIdRequest();
@@ -33,6 +33,14 @@ public class QueryImageIdRequest extends TeaModel {
     }
     public String getCommodityCode() {
         return this.commodityCode;
+    }
+
+    public QueryImageIdRequest setImageVersion(String imageVersion) {
+        this.imageVersion = imageVersion;
+        return this;
+    }
+    public String getImageVersion() {
+        return this.imageVersion;
     }
 
     public QueryImageIdRequest setPageIndex(Integer pageIndex) {
@@ -51,12 +59,12 @@ public class QueryImageIdRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public QueryImageIdRequest setRegion(String region) {
-        this.region = region;
+    public QueryImageIdRequest setRegionNo(String regionNo) {
+        this.regionNo = regionNo;
         return this;
     }
-    public String getRegion() {
-        return this.region;
+    public String getRegionNo() {
+        return this.regionNo;
     }
 
     public QueryImageIdRequest setRequestId(String requestId) {
@@ -65,14 +73,6 @@ public class QueryImageIdRequest extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public QueryImageIdRequest setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
     }
 
 }
