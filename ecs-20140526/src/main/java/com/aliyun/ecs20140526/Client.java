@@ -1838,6 +1838,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CopySnapshotResponse copySnapshotWithOptions(CopySnapshotRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.arn)) {
+            query.put("Arn", request.arn);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.destinationRegionId)) {
             query.put("DestinationRegionId", request.destinationRegionId);
         }
@@ -1848,6 +1852,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.destinationSnapshotName)) {
             query.put("DestinationSnapshotName", request.destinationSnapshotName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.encrypted)) {
+            query.put("Encrypted", request.encrypted);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.KMSKeyId)) {
+            query.put("KMSKeyId", request.KMSKeyId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
