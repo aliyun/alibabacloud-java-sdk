@@ -4,9 +4,6 @@ package com.aliyun.mts20210728.models;
 import com.aliyun.tea.*;
 
 public class SubmitImageCopyrightRequest extends TeaModel {
-    @NameInMap("Input")
-    public String input;
-
     @NameInMap("Level")
     public Long level;
 
@@ -19,20 +16,9 @@ public class SubmitImageCopyrightRequest extends TeaModel {
     @NameInMap("Params")
     public String params;
 
-    @NameInMap("Url")
-    public String url;
-
     public static SubmitImageCopyrightRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitImageCopyrightRequest self = new SubmitImageCopyrightRequest();
         return TeaModel.build(map, self);
-    }
-
-    public SubmitImageCopyrightRequest setInput(String input) {
-        this.input = input;
-        return this;
-    }
-    public String getInput() {
-        return this.input;
     }
 
     public SubmitImageCopyrightRequest setLevel(Long level) {
@@ -65,14 +51,6 @@ public class SubmitImageCopyrightRequest extends TeaModel {
     }
     public String getParams() {
         return this.params;
-    }
-
-    public SubmitImageCopyrightRequest setUrl(String url) {
-        this.url = url;
-        return this;
-    }
-    public String getUrl() {
-        return this.url;
     }
 
 }

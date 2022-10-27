@@ -22,6 +22,9 @@ public class SubmitCopyrightJobRequest extends TeaModel {
     @NameInMap("Output")
     public String output;
 
+    @NameInMap("Params")
+    public String params;
+
     @NameInMap("StartTime")
     public Long startTime;
 
@@ -88,6 +91,14 @@ public class SubmitCopyrightJobRequest extends TeaModel {
     }
     public String getOutput() {
         return this.output;
+    }
+
+    public SubmitCopyrightJobRequest setParams(String params) {
+        this.params = params;
+        return this;
+    }
+    public String getParams() {
+        return this.params;
     }
 
     public SubmitCopyrightJobRequest setStartTime(Long startTime) {
