@@ -743,6 +743,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ImageType", request.imageType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.originalFileName)) {
+            query.put("OriginalFileName", request.originalFileName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.storageLocation)) {
             query.put("StorageLocation", request.storageLocation);
         }
