@@ -19,6 +19,9 @@ public class CreateUploadImageRequest extends TeaModel {
     @NameInMap("ImageType")
     public String imageType;
 
+    @NameInMap("OriginalFileName")
+    public String originalFileName;
+
     @NameInMap("StorageLocation")
     public String storageLocation;
 
@@ -74,6 +77,14 @@ public class CreateUploadImageRequest extends TeaModel {
     }
     public String getImageType() {
         return this.imageType;
+    }
+
+    public CreateUploadImageRequest setOriginalFileName(String originalFileName) {
+        this.originalFileName = originalFileName;
+        return this;
+    }
+    public String getOriginalFileName() {
+        return this.originalFileName;
     }
 
     public CreateUploadImageRequest setStorageLocation(String storageLocation) {
