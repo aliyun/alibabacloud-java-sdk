@@ -43,6 +43,9 @@ public class InvokeCommandShrinkRequest extends TeaModel {
     @NameInMap("Timed")
     public Boolean timed;
 
+    @NameInMap("Timeout")
+    public Long timeout;
+
     @NameInMap("Username")
     public String username;
 
@@ -156,6 +159,14 @@ public class InvokeCommandShrinkRequest extends TeaModel {
     }
     public Boolean getTimed() {
         return this.timed;
+    }
+
+    public InvokeCommandShrinkRequest setTimeout(Long timeout) {
+        this.timeout = timeout;
+        return this;
+    }
+    public Long getTimeout() {
+        return this.timeout;
     }
 
     public InvokeCommandShrinkRequest setUsername(String username) {

@@ -10,17 +10,29 @@ public class ReplaceSystemDiskRequest extends TeaModel {
     @NameInMap("Architecture")
     public String architecture;
 
+    @NameInMap("Arn")
+    public java.util.List<ReplaceSystemDiskRequestArn> arn;
+
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("DiskId")
     public String diskId;
 
+    @NameInMap("EncryptAlgorithm")
+    public String encryptAlgorithm;
+
+    @NameInMap("Encrypted")
+    public Boolean encrypted;
+
     @NameInMap("ImageId")
     public String imageId;
 
     @NameInMap("InstanceId")
     public String instanceId;
+
+    @NameInMap("KMSKeyId")
+    public String KMSKeyId;
 
     @NameInMap("KeyPairName")
     public String keyPairName;
@@ -73,6 +85,14 @@ public class ReplaceSystemDiskRequest extends TeaModel {
         return this.architecture;
     }
 
+    public ReplaceSystemDiskRequest setArn(java.util.List<ReplaceSystemDiskRequestArn> arn) {
+        this.arn = arn;
+        return this;
+    }
+    public java.util.List<ReplaceSystemDiskRequestArn> getArn() {
+        return this.arn;
+    }
+
     public ReplaceSystemDiskRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -89,6 +109,22 @@ public class ReplaceSystemDiskRequest extends TeaModel {
         return this.diskId;
     }
 
+    public ReplaceSystemDiskRequest setEncryptAlgorithm(String encryptAlgorithm) {
+        this.encryptAlgorithm = encryptAlgorithm;
+        return this;
+    }
+    public String getEncryptAlgorithm() {
+        return this.encryptAlgorithm;
+    }
+
+    public ReplaceSystemDiskRequest setEncrypted(Boolean encrypted) {
+        this.encrypted = encrypted;
+        return this;
+    }
+    public Boolean getEncrypted() {
+        return this.encrypted;
+    }
+
     public ReplaceSystemDiskRequest setImageId(String imageId) {
         this.imageId = imageId;
         return this;
@@ -103,6 +139,14 @@ public class ReplaceSystemDiskRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public ReplaceSystemDiskRequest setKMSKeyId(String KMSKeyId) {
+        this.KMSKeyId = KMSKeyId;
+        return this;
+    }
+    public String getKMSKeyId() {
+        return this.KMSKeyId;
     }
 
     public ReplaceSystemDiskRequest setKeyPairName(String keyPairName) {
@@ -200,6 +244,47 @@ public class ReplaceSystemDiskRequest extends TeaModel {
         }
         public Integer getSize() {
             return this.size;
+        }
+
+    }
+
+    public static class ReplaceSystemDiskRequestArn extends TeaModel {
+        @NameInMap("AssumeRoleFor")
+        public Long assumeRoleFor;
+
+        @NameInMap("RoleType")
+        public String roleType;
+
+        @NameInMap("Rolearn")
+        public String rolearn;
+
+        public static ReplaceSystemDiskRequestArn build(java.util.Map<String, ?> map) throws Exception {
+            ReplaceSystemDiskRequestArn self = new ReplaceSystemDiskRequestArn();
+            return TeaModel.build(map, self);
+        }
+
+        public ReplaceSystemDiskRequestArn setAssumeRoleFor(Long assumeRoleFor) {
+            this.assumeRoleFor = assumeRoleFor;
+            return this;
+        }
+        public Long getAssumeRoleFor() {
+            return this.assumeRoleFor;
+        }
+
+        public ReplaceSystemDiskRequestArn setRoleType(String roleType) {
+            this.roleType = roleType;
+            return this;
+        }
+        public String getRoleType() {
+            return this.roleType;
+        }
+
+        public ReplaceSystemDiskRequestArn setRolearn(String rolearn) {
+            this.rolearn = rolearn;
+            return this;
+        }
+        public String getRolearn() {
+            return this.rolearn;
         }
 
     }
