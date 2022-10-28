@@ -4,19 +4,15 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class ListWorkspacesResponseBody extends TeaModel {
-    // 请求 id
     @NameInMap("RequestId")
     public String requestId;
 
-    // 资源限制
     @NameInMap("ResourceLimits")
     public java.util.Map<String, ?> resourceLimits;
 
-    // 符合过滤条件的作业数量
     @NameInMap("TotalCount")
     public Long totalCount;
 
-    // 工作空间列表
     @NameInMap("Workspaces")
     public java.util.List<ListWorkspacesResponseBodyWorkspaces> workspaces;
 
@@ -58,51 +54,36 @@ public class ListWorkspacesResponseBody extends TeaModel {
     }
 
     public static class ListWorkspacesResponseBodyWorkspaces extends TeaModel {
-        // 管理员名字
         @NameInMap("AdminNames")
         public java.util.List<String> adminNames;
 
-        // 创建人
         @NameInMap("Creator")
         public String creator;
 
-        // 描述
         @NameInMap("Description")
         public String description;
 
-        // 环境，用作判断简单模式还是标准模式
         @NameInMap("EnvTypes")
         public java.util.List<String> envTypes;
 
-        // 附加信息
         @NameInMap("ExtraInfos")
         public java.util.Map<String, ?> extraInfos;
 
-        // 创建 UTC 时间，日期格式 iso8601
         @NameInMap("GmtCreateTime")
         public String gmtCreateTime;
 
-        // 修改 UTC 时间，日期格式 iso8601
         @NameInMap("GmtModifiedTime")
         public String gmtModifiedTime;
 
-        // 是否为默认工作空间
         @NameInMap("IsDefault")
         public Boolean isDefault;
 
-        // 资源数目
-        @NameInMap("ResourceCount")
-        public Integer resourceCount;
-
-        // 工作空间状态
         @NameInMap("Status")
         public String status;
 
-        // 工作空间 id
         @NameInMap("WorkspaceId")
         public String workspaceId;
 
-        // 工作空间名字
         @NameInMap("WorkspaceName")
         public String workspaceName;
 
@@ -173,14 +154,6 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
         public Boolean getIsDefault() {
             return this.isDefault;
-        }
-
-        public ListWorkspacesResponseBodyWorkspaces setResourceCount(Integer resourceCount) {
-            this.resourceCount = resourceCount;
-            return this;
-        }
-        public Integer getResourceCount() {
-            return this.resourceCount;
         }
 
         public ListWorkspacesResponseBodyWorkspaces setStatus(String status) {

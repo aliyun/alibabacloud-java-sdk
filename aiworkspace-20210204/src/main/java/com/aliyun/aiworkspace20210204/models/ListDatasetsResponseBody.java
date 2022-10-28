@@ -7,7 +7,6 @@ public class ListDatasetsResponseBody extends TeaModel {
     @NameInMap("Datasets")
     public java.util.List<Dataset> datasets;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

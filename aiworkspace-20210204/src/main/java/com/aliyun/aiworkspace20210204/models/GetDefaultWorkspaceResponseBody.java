@@ -4,53 +4,41 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class GetDefaultWorkspaceResponseBody extends TeaModel {
-    // 任务详情 创建默认工作空间会有多个任务依次进行，如果一个任务未开始，不会显示在任务详情里。
     @NameInMap("Conditions")
     public java.util.List<GetDefaultWorkspaceResponseBodyConditions> conditions;
 
-    // 创建人
     @NameInMap("Creator")
     public String creator;
 
-    // 描述
     @NameInMap("Description")
     public String description;
 
-    // 显示名称
     @NameInMap("DisplayName")
     public String displayName;
 
-    // 环境，用作判断简单模式还是标准模式，含义见
     @NameInMap("EnvTypes")
     public java.util.List<String> envTypes;
 
-    // 创建 UTC 时间，日期格式 iso8601
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
-    // 修改 UTC 时间，日期格式 iso8601
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
-    // 拥有者
     @NameInMap("Owner")
     public GetDefaultWorkspaceResponseBodyOwner owner;
 
-    // 工作空间状态
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("Status")
     public String status;
 
-    // 工作空间 ID
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
-    // 项目空间名称， region 内唯一
     @NameInMap("WorkspaceName")
     public String workspaceName;
-
-    // Id of the request
-    @NameInMap("requestId")
-    public String requestId;
 
     public static GetDefaultWorkspaceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetDefaultWorkspaceResponseBody self = new GetDefaultWorkspaceResponseBody();
@@ -121,6 +109,14 @@ public class GetDefaultWorkspaceResponseBody extends TeaModel {
         return this.owner;
     }
 
+    public GetDefaultWorkspaceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public GetDefaultWorkspaceResponseBody setStatus(String status) {
         this.status = status;
         return this;
@@ -145,24 +141,13 @@ public class GetDefaultWorkspaceResponseBody extends TeaModel {
         return this.workspaceName;
     }
 
-    public GetDefaultWorkspaceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public static class GetDefaultWorkspaceResponseBodyConditions extends TeaModel {
-        // 返回码，正常是200，其他都是错误
         @NameInMap("Code")
         public Long code;
 
-        // 消息
         @NameInMap("Message")
         public String message;
 
-        // 类型
         @NameInMap("Type")
         public String type;
 
@@ -198,15 +183,12 @@ public class GetDefaultWorkspaceResponseBody extends TeaModel {
     }
 
     public static class GetDefaultWorkspaceResponseBodyOwner extends TeaModel {
-        // 用户id
         @NameInMap("UserId")
         public String userId;
 
-        // 用户kp
         @NameInMap("UserKp")
         public String userKp;
 
-        // 用户名
         @NameInMap("UserName")
         public String userName;
 

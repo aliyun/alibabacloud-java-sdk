@@ -4,7 +4,6 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class DeleteMembersRequest extends TeaModel {
-    // 需要删除的成员 Id 列表，以逗号分隔
     @NameInMap("MemberIds")
     public String memberIds;
 

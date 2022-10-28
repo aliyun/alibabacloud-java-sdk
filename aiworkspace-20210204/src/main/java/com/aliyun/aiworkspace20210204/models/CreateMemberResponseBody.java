@@ -4,11 +4,9 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class CreateMemberResponseBody extends TeaModel {
-    // 成员列表
     @NameInMap("Members")
     public java.util.List<CreateMemberResponseBodyMembers> members;
 
-    // 请求 id
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,19 +32,15 @@ public class CreateMemberResponseBody extends TeaModel {
     }
 
     public static class CreateMemberResponseBodyMembers extends TeaModel {
-        // 成员显示名
         @NameInMap("DisplayName")
         public String displayName;
 
-        // 成员 id
         @NameInMap("MemberId")
         public String memberId;
 
-        // 角色列表
         @NameInMap("Roles")
         public java.util.List<String> roles;
 
-        // 用户 id
         @NameInMap("UserId")
         public String userId;
 

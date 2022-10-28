@@ -4,51 +4,39 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class CreateDatasetRequest extends TeaModel {
-    // Accessibility
     @NameInMap("Accessibility")
     public String accessibility;
 
-    // DataSourceType
     @NameInMap("DataSourceType")
     public String dataSourceType;
 
-    // DataType
     @NameInMap("DataType")
     public String dataType;
 
-    // Description
     @NameInMap("Description")
     public String description;
 
-    // Labels
     @NameInMap("Labels")
-    public java.util.List<DatasetLabel> labels;
+    public java.util.List<Label> labels;
 
-    // Name
     @NameInMap("Name")
     public String name;
 
-    // Options
     @NameInMap("Options")
     public String options;
 
-    // Property
     @NameInMap("Property")
     public String property;
 
-    // SourceId
     @NameInMap("SourceId")
     public String sourceId;
 
-    // SourceType
     @NameInMap("SourceType")
     public String sourceType;
 
-    // Uri
     @NameInMap("Uri")
     public String uri;
 
-    // WorkspaceId
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
@@ -89,11 +77,11 @@ public class CreateDatasetRequest extends TeaModel {
         return this.description;
     }
 
-    public CreateDatasetRequest setLabels(java.util.List<DatasetLabel> labels) {
+    public CreateDatasetRequest setLabels(java.util.List<Label> labels) {
         this.labels = labels;
         return this;
     }
-    public java.util.List<DatasetLabel> getLabels() {
+    public java.util.List<Label> getLabels() {
         return this.labels;
     }
 

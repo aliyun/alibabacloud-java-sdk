@@ -4,20 +4,20 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class DeleteDatasetLabelsRequest extends TeaModel {
-    @NameInMap("Keys")
-    public String keys;
+    @NameInMap("LabelKeys")
+    public String labelKeys;
 
     public static DeleteDatasetLabelsRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteDatasetLabelsRequest self = new DeleteDatasetLabelsRequest();
         return TeaModel.build(map, self);
     }
 
-    public DeleteDatasetLabelsRequest setKeys(String keys) {
-        this.keys = keys;
+    public DeleteDatasetLabelsRequest setLabelKeys(String labelKeys) {
+        this.labelKeys = labelKeys;
         return this;
     }
-    public String getKeys() {
-        return this.keys;
+    public String getLabelKeys() {
+        return this.labelKeys;
     }
 
 }

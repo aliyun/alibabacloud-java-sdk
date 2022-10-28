@@ -4,7 +4,6 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class CreateMemberRequest extends TeaModel {
-    // 用户列表
     @NameInMap("Members")
     public java.util.List<CreateMemberRequestMembers> members;
 
@@ -22,11 +21,9 @@ public class CreateMemberRequest extends TeaModel {
     }
 
     public static class CreateMemberRequestMembers extends TeaModel {
-        // 角色列表
         @NameInMap("Roles")
         public java.util.List<String> roles;
 
-        // 用户 id
         @NameInMap("UserId")
         public String userId;
 

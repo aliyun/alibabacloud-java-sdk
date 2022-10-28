@@ -4,39 +4,30 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class CreateCodeSourceRequest extends TeaModel {
-    // 代码是否是本工作空间内公开的，可选值PRIVATE、PUBLIC
     @NameInMap("Accessibility")
     public String accessibility;
 
-    // 代码分支
     @NameInMap("CodeBranch")
     public String codeBranch;
 
-    // 代码仓库地址
     @NameInMap("CodeRepo")
     public String codeRepo;
 
-    // 代码仓库访问Token
     @NameInMap("CodeRepoAccessToken")
     public String codeRepoAccessToken;
 
-    // 代码仓库的用户名
     @NameInMap("CodeRepoUserName")
     public String codeRepoUserName;
 
-    // 代码源详细描述
     @NameInMap("Description")
     public String description;
 
-    // 代码源配置名称
     @NameInMap("DisplayName")
     public String displayName;
 
-    // 代码本地挂载目录，默认挂载到/root/code/下
     @NameInMap("MountPath")
     public String mountPath;
 
-    // 工作空间ID
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

@@ -4,17 +4,14 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class ListImagesResponseBody extends TeaModel {
-    // 镜像列表
     @NameInMap("Images")
     public java.util.List<ListImagesResponseBodyImages> images;
 
-    // 总数
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("TotalCount")
     public Long totalCount;
-
-    // Id of the request
-    @NameInMap("requestId")
-    public String requestId;
 
     public static ListImagesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListImagesResponseBody self = new ListImagesResponseBody();
@@ -29,14 +26,6 @@ public class ListImagesResponseBody extends TeaModel {
         return this.images;
     }
 
-    public ListImagesResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Long getTotalCount() {
-        return this.totalCount;
-    }
-
     public ListImagesResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -45,12 +34,18 @@ public class ListImagesResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public ListImagesResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
+    }
+
     public static class ListImagesResponseBodyImagesLabels extends TeaModel {
-        // Key
         @NameInMap("Key")
         public String key;
 
-        // Value
         @NameInMap("Value")
         public String value;
 
@@ -78,47 +73,36 @@ public class ListImagesResponseBody extends TeaModel {
     }
 
     public static class ListImagesResponseBodyImages extends TeaModel {
-        // 可见性
         @NameInMap("Accessibility")
         public String accessibility;
 
-        // 镜像描述
         @NameInMap("Description")
         public String description;
 
-        // 创建 UTC 时间，日期格式 iso8601
         @NameInMap("GmtCreateTime")
         public String gmtCreateTime;
 
-        // 修改时间
         @NameInMap("GmtModifiedTime")
         public String gmtModifiedTime;
 
-        // 镜像id
         @NameInMap("ImageId")
         public String imageId;
 
-        // 镜像地址，包含版本号
         @NameInMap("ImageUri")
         public String imageUri;
 
-        // 镜像标签，是个map
         @NameInMap("Labels")
         public java.util.List<ListImagesResponseBodyImagesLabels> labels;
 
-        // 镜像名称
         @NameInMap("Name")
         public String name;
 
-        // 创建人
-        @NameInMap("OperatorCreate")
-        public String operatorCreate;
+        @NameInMap("ParentUserId")
+        public String parentUserId;
 
-        // 父创建人
-        @NameInMap("ParentOperatorCreate")
-        public String parentOperatorCreate;
+        @NameInMap("UserId")
+        public String userId;
 
-        // 工作空间id
         @NameInMap("WorkspaceId")
         public String workspaceId;
 
@@ -191,20 +175,20 @@ public class ListImagesResponseBody extends TeaModel {
             return this.name;
         }
 
-        public ListImagesResponseBodyImages setOperatorCreate(String operatorCreate) {
-            this.operatorCreate = operatorCreate;
+        public ListImagesResponseBodyImages setParentUserId(String parentUserId) {
+            this.parentUserId = parentUserId;
             return this;
         }
-        public String getOperatorCreate() {
-            return this.operatorCreate;
+        public String getParentUserId() {
+            return this.parentUserId;
         }
 
-        public ListImagesResponseBodyImages setParentOperatorCreate(String parentOperatorCreate) {
-            this.parentOperatorCreate = parentOperatorCreate;
+        public ListImagesResponseBodyImages setUserId(String userId) {
+            this.userId = userId;
             return this;
         }
-        public String getParentOperatorCreate() {
-            return this.parentOperatorCreate;
+        public String getUserId() {
+            return this.userId;
         }
 
         public ListImagesResponseBodyImages setWorkspaceId(String workspaceId) {

@@ -4,27 +4,21 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class ListCodeSourcesRequest extends TeaModel {
-    // 代码源显示名称，支持模糊匹配
     @NameInMap("DisplayName")
     public String displayName;
 
-    // 排序顺序, 枚举值 desc 或者 asc
     @NameInMap("Order")
     public String order;
 
-    // 取第几页的数据
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // 分页大小
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 用于排序的字段名，可选字段名："DisplayName" "GmtCreateTime" "GmtModifyTime"
     @NameInMap("SortBy")
     public String sortBy;
 
-    // 工作空间ID
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

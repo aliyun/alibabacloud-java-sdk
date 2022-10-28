@@ -4,63 +4,48 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class GetCodeSourceResponseBody extends TeaModel {
-    // 代码是否是本工作空间内公开的，可选值PRIVATE、PUBLIC
     @NameInMap("Accessibility")
     public String accessibility;
 
-    // 代码仓库分支
     @NameInMap("CodeBranch")
     public String codeBranch;
 
-    // 代码Commit
     @NameInMap("CodeCommit")
     public String codeCommit;
 
-    // 代码仓库地址
     @NameInMap("CodeRepo")
     public String codeRepo;
 
-    // 访问代码仓库的token
     @NameInMap("CodeRepoAccessToken")
     public String codeRepoAccessToken;
 
-    // 代码仓库的用户名
     @NameInMap("CodeRepoUserName")
     public String codeRepoUserName;
 
-    // 代码源配置ID
     @NameInMap("CodeSourceId")
     public String codeSourceId;
 
-    // 详细描述
     @NameInMap("Description")
     public String description;
 
-    // 代码源配置名字
     @NameInMap("DisplayName")
     public String displayName;
 
-    // 创建时间
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
-    // 修改时间
     @NameInMap("GmtModifyTime")
     public String gmtModifyTime;
 
-    // 代码本地挂载目录，默认挂载到/root/code/下
     @NameInMap("MountPath")
     public String mountPath;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
-    // 代码配置源的创建者ID
     @NameInMap("UserId")
     public String userId;
 
-    // 工作空间ID
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

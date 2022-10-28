@@ -4,11 +4,9 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class CreateWorkspaceResponseBody extends TeaModel {
-    // 请求 id
     @NameInMap("RequestId")
     public String requestId;
 
-    // 工作空间 id
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

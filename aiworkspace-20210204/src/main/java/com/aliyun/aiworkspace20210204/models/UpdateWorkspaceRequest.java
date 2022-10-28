@@ -4,11 +4,9 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class UpdateWorkspaceRequest extends TeaModel {
-    // 描述
     @NameInMap("Description")
     public String description;
 
-    // 显示名称
     @NameInMap("DisplayName")
     public String displayName;
 

@@ -10,11 +10,8 @@ public class ListDatasetsRequest extends TeaModel {
     @NameInMap("DataTypes")
     public String dataTypes;
 
-    @NameInMap("LabelKeys")
-    public String labelKeys;
-
-    @NameInMap("LabelValues")
-    public String labelValues;
+    @NameInMap("Label")
+    public String label;
 
     @NameInMap("Name")
     public String name;
@@ -34,7 +31,6 @@ public class ListDatasetsRequest extends TeaModel {
     @NameInMap("SourceTypes")
     public String sourceTypes;
 
-    // Workspace Id
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
@@ -59,20 +55,12 @@ public class ListDatasetsRequest extends TeaModel {
         return this.dataTypes;
     }
 
-    public ListDatasetsRequest setLabelKeys(String labelKeys) {
-        this.labelKeys = labelKeys;
+    public ListDatasetsRequest setLabel(String label) {
+        this.label = label;
         return this;
     }
-    public String getLabelKeys() {
-        return this.labelKeys;
-    }
-
-    public ListDatasetsRequest setLabelValues(String labelValues) {
-        this.labelValues = labelValues;
-        return this;
-    }
-    public String getLabelValues() {
-        return this.labelValues;
+    public String getLabel() {
+        return this.label;
     }
 
     public ListDatasetsRequest setName(String name) {

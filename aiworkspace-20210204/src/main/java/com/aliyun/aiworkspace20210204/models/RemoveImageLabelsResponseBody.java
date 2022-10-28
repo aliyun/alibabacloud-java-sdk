@@ -4,8 +4,7 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class RemoveImageLabelsResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("requestId")
+    @NameInMap("RequestId")
     public String requestId;
 
     public static RemoveImageLabelsResponseBody build(java.util.Map<String, ?> map) throws Exception {

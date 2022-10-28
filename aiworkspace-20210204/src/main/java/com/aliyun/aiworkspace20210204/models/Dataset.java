@@ -4,71 +4,54 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class Dataset extends TeaModel {
-    // Accessibility
     @NameInMap("Accessibility")
     public String accessibility;
 
-    // DataSourceType
     @NameInMap("DataSourceType")
     public String dataSourceType;
 
-    // DataType
     @NameInMap("DataType")
     public String dataType;
 
-    // Dataset Id
     @NameInMap("DatasetId")
     public String datasetId;
 
-    // Description
     @NameInMap("Description")
     public String description;
 
-    // GmtCreateTime
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
-    // GmtModifiedTime
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
-    // Labels
     @NameInMap("Labels")
-    public java.util.List<DatasetLabel> labels;
+    public java.util.List<Label> labels;
 
-    // Name
     @NameInMap("Name")
     public String name;
 
-    // Options
     @NameInMap("Options")
     public String options;
 
-    // Owner Id
     @NameInMap("OwnerId")
     public String ownerId;
 
-    // Property
     @NameInMap("Property")
     public String property;
 
-    // SourceId
     @NameInMap("SourceId")
     public String sourceId;
 
-    // SourceType
     @NameInMap("SourceType")
     public String sourceType;
 
-    // Uri
     @NameInMap("Uri")
     public String uri;
 
-    // User Id
     @NameInMap("UserId")
     public String userId;
 
-    // WorkspaceId
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
@@ -133,11 +116,11 @@ public class Dataset extends TeaModel {
         return this.gmtModifiedTime;
     }
 
-    public Dataset setLabels(java.util.List<DatasetLabel> labels) {
+    public Dataset setLabels(java.util.List<Label> labels) {
         this.labels = labels;
         return this;
     }
-    public java.util.List<DatasetLabel> getLabels() {
+    public java.util.List<Label> getLabels() {
         return this.labels;
     }
 

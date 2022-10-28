@@ -4,12 +4,10 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class PublishImageResponseBody extends TeaModel {
-    // 镜像 id
     @NameInMap("ImageId")
     public String imageId;
 
-    // Id of the request
-    @NameInMap("requestId")
+    @NameInMap("RequestId")
     public String requestId;
 
     public static PublishImageResponseBody build(java.util.Map<String, ?> map) throws Exception {

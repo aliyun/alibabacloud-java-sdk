@@ -4,7 +4,6 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class GetMemberRequest extends TeaModel {
-    // 用户id
     @NameInMap("UserId")
     public String userId;
 

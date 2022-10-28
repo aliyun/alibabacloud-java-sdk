@@ -4,15 +4,12 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class ListWorkspaceUsersResponseBody extends TeaModel {
-    // 请求 id
     @NameInMap("RequestId")
     public String requestId;
 
-    // 符合过滤条件的用户数量
     @NameInMap("TotalCount")
     public Long totalCount;
 
-    // 用户列表
     @NameInMap("Users")
     public java.util.List<ListWorkspaceUsersResponseBodyUsers> users;
 
@@ -46,11 +43,9 @@ public class ListWorkspaceUsersResponseBody extends TeaModel {
     }
 
     public static class ListWorkspaceUsersResponseBodyUsers extends TeaModel {
-        // 用户 id
         @NameInMap("UserId")
         public String userId;
 
-        // 用户名
         @NameInMap("UserName")
         public String userName;
 

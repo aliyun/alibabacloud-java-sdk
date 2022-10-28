@@ -5,18 +5,18 @@ import com.aliyun.tea.*;
 
 public class CreateDatasetLabelsRequest extends TeaModel {
     @NameInMap("Labels")
-    public java.util.List<DatasetLabel> labels;
+    public java.util.List<Label> labels;
 
     public static CreateDatasetLabelsRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDatasetLabelsRequest self = new CreateDatasetLabelsRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateDatasetLabelsRequest setLabels(java.util.List<DatasetLabel> labels) {
+    public CreateDatasetLabelsRequest setLabels(java.util.List<Label> labels) {
         this.labels = labels;
         return this;
     }
-    public java.util.List<DatasetLabel> getLabels() {
+    public java.util.List<Label> getLabels() {
         return this.labels;
     }
 

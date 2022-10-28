@@ -26,7 +26,7 @@ public class GetDatasetResponseBody extends TeaModel {
     public String gmtModifiedTime;
 
     @NameInMap("Labels")
-    public java.util.List<DatasetLabel> labels;
+    public java.util.List<Label> labels;
 
     @NameInMap("Name")
     public String name;
@@ -40,7 +40,6 @@ public class GetDatasetResponseBody extends TeaModel {
     @NameInMap("Property")
     public String property;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -120,11 +119,11 @@ public class GetDatasetResponseBody extends TeaModel {
         return this.gmtModifiedTime;
     }
 
-    public GetDatasetResponseBody setLabels(java.util.List<DatasetLabel> labels) {
+    public GetDatasetResponseBody setLabels(java.util.List<Label> labels) {
         this.labels = labels;
         return this;
     }
-    public java.util.List<DatasetLabel> getLabels() {
+    public java.util.List<Label> getLabels() {
         return this.labels;
     }
 

@@ -4,19 +4,15 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class ListMembersRequest extends TeaModel {
-    // 成员名
     @NameInMap("MemberName")
     public String memberName;
 
-    // 分页，从1开始，默认1
     @NameInMap("PageNumber")
     public Long pageNumber;
 
-    // 页大小，默认20
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // Role 过滤列表，逗号分隔
     @NameInMap("Roles")
     public String roles;
 

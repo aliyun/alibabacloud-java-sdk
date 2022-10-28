@@ -4,11 +4,9 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class CreateCodeSourceResponseBody extends TeaModel {
-    // 创建的代码源配置的ID
     @NameInMap("CodeSourceId")
     public String codeSourceId;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 

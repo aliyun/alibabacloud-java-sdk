@@ -1,0 +1,23 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.aiworkspace20210204.models;
+
+import com.aliyun.tea.*;
+
+public class UpdateModelVersionResponseBody extends TeaModel {
+    @NameInMap("RequestId")
+    public String requestId;
+
+    public static UpdateModelVersionResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        UpdateModelVersionResponseBody self = new UpdateModelVersionResponseBody();
+        return TeaModel.build(map, self);
+    }
+
+    public UpdateModelVersionResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+}

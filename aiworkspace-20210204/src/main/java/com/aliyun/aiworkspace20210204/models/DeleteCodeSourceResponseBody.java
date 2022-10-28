@@ -4,7 +4,6 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class DeleteCodeSourceResponseBody extends TeaModel {
-    // 被删除的代码源配置ID
     @NameInMap("CodeSourceId")
     public String codeSourceId;
 
