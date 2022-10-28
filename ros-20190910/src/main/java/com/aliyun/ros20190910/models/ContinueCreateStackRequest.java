@@ -19,6 +19,9 @@ public class ContinueCreateStackRequest extends TeaModel {
     @NameInMap("RamRoleName")
     public String ramRoleName;
 
+    @NameInMap("RecreatingOptions")
+    public java.util.List<String> recreatingOptions;
+
     @NameInMap("RecreatingResources")
     public java.util.List<String> recreatingResources;
 
@@ -83,6 +86,14 @@ public class ContinueCreateStackRequest extends TeaModel {
     }
     public String getRamRoleName() {
         return this.ramRoleName;
+    }
+
+    public ContinueCreateStackRequest setRecreatingOptions(java.util.List<String> recreatingOptions) {
+        this.recreatingOptions = recreatingOptions;
+        return this;
+    }
+    public java.util.List<String> getRecreatingOptions() {
+        return this.recreatingOptions;
     }
 
     public ContinueCreateStackRequest setRecreatingResources(java.util.List<String> recreatingResources) {

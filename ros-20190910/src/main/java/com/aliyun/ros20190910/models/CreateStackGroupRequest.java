@@ -34,6 +34,9 @@ public class CreateStackGroupRequest extends TeaModel {
     @NameInMap("StackGroupName")
     public String stackGroupName;
 
+    @NameInMap("Tags")
+    public java.util.List<CreateStackGroupRequestTags> tags;
+
     @NameInMap("TemplateBody")
     public String templateBody;
 
@@ -131,6 +134,14 @@ public class CreateStackGroupRequest extends TeaModel {
         return this.stackGroupName;
     }
 
+    public CreateStackGroupRequest setTags(java.util.List<CreateStackGroupRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<CreateStackGroupRequestTags> getTags() {
+        return this.tags;
+    }
+
     public CreateStackGroupRequest setTemplateBody(String templateBody) {
         this.templateBody = templateBody;
         return this;
@@ -219,6 +230,36 @@ public class CreateStackGroupRequest extends TeaModel {
         }
         public String getParameterValue() {
             return this.parameterValue;
+        }
+
+    }
+
+    public static class CreateStackGroupRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateStackGroupRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            CreateStackGroupRequestTags self = new CreateStackGroupRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateStackGroupRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateStackGroupRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

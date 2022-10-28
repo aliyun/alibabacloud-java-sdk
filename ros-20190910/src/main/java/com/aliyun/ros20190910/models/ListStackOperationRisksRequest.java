@@ -25,6 +25,18 @@ public class ListStackOperationRisksRequest extends TeaModel {
     @NameInMap("StackId")
     public String stackId;
 
+    @NameInMap("TemplateBody")
+    public String templateBody;
+
+    @NameInMap("TemplateId")
+    public String templateId;
+
+    @NameInMap("TemplateURL")
+    public String templateURL;
+
+    @NameInMap("TemplateVersion")
+    public String templateVersion;
+
     public static ListStackOperationRisksRequest build(java.util.Map<String, ?> map) throws Exception {
         ListStackOperationRisksRequest self = new ListStackOperationRisksRequest();
         return TeaModel.build(map, self);
@@ -84,6 +96,38 @@ public class ListStackOperationRisksRequest extends TeaModel {
     }
     public String getStackId() {
         return this.stackId;
+    }
+
+    public ListStackOperationRisksRequest setTemplateBody(String templateBody) {
+        this.templateBody = templateBody;
+        return this;
+    }
+    public String getTemplateBody() {
+        return this.templateBody;
+    }
+
+    public ListStackOperationRisksRequest setTemplateId(String templateId) {
+        this.templateId = templateId;
+        return this;
+    }
+    public String getTemplateId() {
+        return this.templateId;
+    }
+
+    public ListStackOperationRisksRequest setTemplateURL(String templateURL) {
+        this.templateURL = templateURL;
+        return this;
+    }
+    public String getTemplateURL() {
+        return this.templateURL;
+    }
+
+    public ListStackOperationRisksRequest setTemplateVersion(String templateVersion) {
+        this.templateVersion = templateVersion;
+        return this;
+    }
+    public String getTemplateVersion() {
+        return this.templateVersion;
     }
 
 }

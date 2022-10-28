@@ -86,6 +86,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RamRoleName", request.ramRoleName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.recreatingOptions)) {
+            query.put("RecreatingOptions", request.recreatingOptions);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.recreatingResources)) {
             query.put("RecreatingResources", request.recreatingResources);
         }
@@ -419,6 +423,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("StackGroupName", request.stackGroupName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
+            query.put("Tags", request.tags);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.templateBody)) {
             query.put("TemplateBody", request.templateBody);
         }
@@ -553,6 +561,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
             query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
+            query.put("Tags", request.tags);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.templateBody)) {
@@ -2284,6 +2296,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.stackId)) {
             query.put("StackId", request.stackId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateBody)) {
+            query.put("TemplateBody", request.templateBody);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
+            query.put("TemplateId", request.templateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateURL)) {
+            query.put("TemplateURL", request.templateURL);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateVersion)) {
+            query.put("TemplateVersion", request.templateVersion);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

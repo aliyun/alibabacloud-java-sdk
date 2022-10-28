@@ -4,6 +4,9 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class ListStackOperationRisksResponseBody extends TeaModel {
+    @NameInMap("MissingPolicyActions")
+    public java.util.List<String> missingPolicyActions;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -13,6 +16,14 @@ public class ListStackOperationRisksResponseBody extends TeaModel {
     public static ListStackOperationRisksResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListStackOperationRisksResponseBody self = new ListStackOperationRisksResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListStackOperationRisksResponseBody setMissingPolicyActions(java.util.List<String> missingPolicyActions) {
+        this.missingPolicyActions = missingPolicyActions;
+        return this;
+    }
+    public java.util.List<String> getMissingPolicyActions() {
+        return this.missingPolicyActions;
     }
 
     public ListStackOperationRisksResponseBody setRequestId(String requestId) {
