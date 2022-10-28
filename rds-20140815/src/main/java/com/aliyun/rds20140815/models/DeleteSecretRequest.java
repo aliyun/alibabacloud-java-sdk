@@ -7,6 +7,9 @@ public class DeleteSecretRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("DbInstanceId")
+    public String dbInstanceId;
+
     @NameInMap("Engine")
     public String engine;
 
@@ -39,6 +42,14 @@ public class DeleteSecretRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public DeleteSecretRequest setDbInstanceId(String dbInstanceId) {
+        this.dbInstanceId = dbInstanceId;
+        return this;
+    }
+    public String getDbInstanceId() {
+        return this.dbInstanceId;
     }
 
     public DeleteSecretRequest setEngine(String engine) {

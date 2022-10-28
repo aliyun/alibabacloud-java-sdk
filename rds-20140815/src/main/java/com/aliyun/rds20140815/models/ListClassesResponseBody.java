@@ -52,6 +52,12 @@ public class ListClassesResponseBody extends TeaModel {
         @NameInMap("Cpu")
         public String cpu;
 
+        @NameInMap("EncryptedMemory")
+        public String encryptedMemory;
+
+        @NameInMap("InstructionSetArch")
+        public String instructionSetArch;
+
         @NameInMap("MaxConnections")
         public String maxConnections;
 
@@ -94,6 +100,22 @@ public class ListClassesResponseBody extends TeaModel {
         }
         public String getCpu() {
             return this.cpu;
+        }
+
+        public ListClassesResponseBodyItems setEncryptedMemory(String encryptedMemory) {
+            this.encryptedMemory = encryptedMemory;
+            return this;
+        }
+        public String getEncryptedMemory() {
+            return this.encryptedMemory;
+        }
+
+        public ListClassesResponseBodyItems setInstructionSetArch(String instructionSetArch) {
+            this.instructionSetArch = instructionSetArch;
+            return this;
+        }
+        public String getInstructionSetArch() {
+            return this.instructionSetArch;
         }
 
         public ListClassesResponseBodyItems setMaxConnections(String maxConnections) {

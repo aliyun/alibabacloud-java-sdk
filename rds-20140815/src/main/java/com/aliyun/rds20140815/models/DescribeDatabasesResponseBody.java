@@ -98,6 +98,15 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         @NameInMap("CharacterSetName")
         public String characterSetName;
 
+        @NameInMap("Collate")
+        public String collate;
+
+        @NameInMap("ConnLimit")
+        public String connLimit;
+
+        @NameInMap("Ctype")
+        public String ctype;
+
         @NameInMap("DBDescription")
         public String DBDescription;
 
@@ -122,6 +131,9 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        @NameInMap("Tablespace")
+        public String tablespace;
+
         @NameInMap("TotalCount")
         public Integer totalCount;
 
@@ -144,6 +156,30 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         }
         public String getCharacterSetName() {
             return this.characterSetName;
+        }
+
+        public DescribeDatabasesResponseBodyDatabasesDatabase setCollate(String collate) {
+            this.collate = collate;
+            return this;
+        }
+        public String getCollate() {
+            return this.collate;
+        }
+
+        public DescribeDatabasesResponseBodyDatabasesDatabase setConnLimit(String connLimit) {
+            this.connLimit = connLimit;
+            return this;
+        }
+        public String getConnLimit() {
+            return this.connLimit;
+        }
+
+        public DescribeDatabasesResponseBodyDatabasesDatabase setCtype(String ctype) {
+            this.ctype = ctype;
+            return this;
+        }
+        public String getCtype() {
+            return this.ctype;
         }
 
         public DescribeDatabasesResponseBodyDatabasesDatabase setDBDescription(String DBDescription) {
@@ -208,6 +244,14 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         }
         public String getResourceGroupId() {
             return this.resourceGroupId;
+        }
+
+        public DescribeDatabasesResponseBodyDatabasesDatabase setTablespace(String tablespace) {
+            this.tablespace = tablespace;
+            return this;
+        }
+        public String getTablespace() {
+            return this.tablespace;
         }
 
         public DescribeDatabasesResponseBodyDatabasesDatabase setTotalCount(Integer totalCount) {

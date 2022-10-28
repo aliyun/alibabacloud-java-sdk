@@ -25,6 +25,9 @@ public class CreateDBInstanceRequest extends TeaModel {
     @NameInMap("ConnectionMode")
     public String connectionMode;
 
+    @NameInMap("ConnectionString")
+    public String connectionString;
+
     @NameInMap("CreateStrategy")
     public String createStrategy;
 
@@ -207,6 +210,14 @@ public class CreateDBInstanceRequest extends TeaModel {
     }
     public String getConnectionMode() {
         return this.connectionMode;
+    }
+
+    public CreateDBInstanceRequest setConnectionString(String connectionString) {
+        this.connectionString = connectionString;
+        return this;
+    }
+    public String getConnectionString() {
+        return this.connectionString;
     }
 
     public CreateDBInstanceRequest setCreateStrategy(String createStrategy) {

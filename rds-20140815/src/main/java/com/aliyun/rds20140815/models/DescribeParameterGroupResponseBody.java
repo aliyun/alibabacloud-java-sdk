@@ -7,6 +7,9 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
     @NameInMap("ParamGroup")
     public DescribeParameterGroupResponseBodyParamGroup paramGroup;
 
+    @NameInMap("RelatedCustinsInfo")
+    public DescribeParameterGroupResponseBodyRelatedCustinsInfo relatedCustinsInfo;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -21,6 +24,14 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
     }
     public DescribeParameterGroupResponseBodyParamGroup getParamGroup() {
         return this.paramGroup;
+    }
+
+    public DescribeParameterGroupResponseBody setRelatedCustinsInfo(DescribeParameterGroupResponseBodyRelatedCustinsInfo relatedCustinsInfo) {
+        this.relatedCustinsInfo = relatedCustinsInfo;
+        return this;
+    }
+    public DescribeParameterGroupResponseBodyRelatedCustinsInfo getRelatedCustinsInfo() {
+        return this.relatedCustinsInfo;
     }
 
     public DescribeParameterGroupResponseBody setRequestId(String requestId) {
@@ -224,6 +235,55 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
         }
         public java.util.List<DescribeParameterGroupResponseBodyParamGroupParameterGroup> getParameterGroup() {
             return this.parameterGroup;
+        }
+
+    }
+
+    public static class DescribeParameterGroupResponseBodyRelatedCustinsInfoRelatedCustinsInfo extends TeaModel {
+        @NameInMap("AppliedTime")
+        public String appliedTime;
+
+        @NameInMap("DBInstanceName")
+        public String DBInstanceName;
+
+        public static DescribeParameterGroupResponseBodyRelatedCustinsInfoRelatedCustinsInfo build(java.util.Map<String, ?> map) throws Exception {
+            DescribeParameterGroupResponseBodyRelatedCustinsInfoRelatedCustinsInfo self = new DescribeParameterGroupResponseBodyRelatedCustinsInfoRelatedCustinsInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeParameterGroupResponseBodyRelatedCustinsInfoRelatedCustinsInfo setAppliedTime(String appliedTime) {
+            this.appliedTime = appliedTime;
+            return this;
+        }
+        public String getAppliedTime() {
+            return this.appliedTime;
+        }
+
+        public DescribeParameterGroupResponseBodyRelatedCustinsInfoRelatedCustinsInfo setDBInstanceName(String DBInstanceName) {
+            this.DBInstanceName = DBInstanceName;
+            return this;
+        }
+        public String getDBInstanceName() {
+            return this.DBInstanceName;
+        }
+
+    }
+
+    public static class DescribeParameterGroupResponseBodyRelatedCustinsInfo extends TeaModel {
+        @NameInMap("RelatedCustinsInfo")
+        public java.util.List<DescribeParameterGroupResponseBodyRelatedCustinsInfoRelatedCustinsInfo> relatedCustinsInfo;
+
+        public static DescribeParameterGroupResponseBodyRelatedCustinsInfo build(java.util.Map<String, ?> map) throws Exception {
+            DescribeParameterGroupResponseBodyRelatedCustinsInfo self = new DescribeParameterGroupResponseBodyRelatedCustinsInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeParameterGroupResponseBodyRelatedCustinsInfo setRelatedCustinsInfo(java.util.List<DescribeParameterGroupResponseBodyRelatedCustinsInfoRelatedCustinsInfo> relatedCustinsInfo) {
+            this.relatedCustinsInfo = relatedCustinsInfo;
+            return this;
+        }
+        public java.util.List<DescribeParameterGroupResponseBodyRelatedCustinsInfoRelatedCustinsInfo> getRelatedCustinsInfo() {
+            return this.relatedCustinsInfo;
         }
 
     }
