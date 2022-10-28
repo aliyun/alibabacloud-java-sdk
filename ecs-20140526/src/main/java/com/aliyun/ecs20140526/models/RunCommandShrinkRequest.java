@@ -49,6 +49,9 @@ public class RunCommandShrinkRequest extends TeaModel {
     @NameInMap("RepeatMode")
     public String repeatMode;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -199,6 +202,14 @@ public class RunCommandShrinkRequest extends TeaModel {
     }
     public String getRepeatMode() {
         return this.repeatMode;
+    }
+
+    public RunCommandShrinkRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public RunCommandShrinkRequest setResourceOwnerAccount(String resourceOwnerAccount) {
