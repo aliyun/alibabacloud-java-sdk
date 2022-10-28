@@ -95,7 +95,7 @@ public class ListTaskFlowTimeVariablesResponseBody extends TeaModel {
     }
 
     public static class ListTaskFlowTimeVariablesResponseBodyTimeVariables extends TeaModel {
-        @NameInMap("timeVariable")
+        @NameInMap("TimeVariable")
         public java.util.List<ListTaskFlowTimeVariablesResponseBodyTimeVariablesTimeVariable> timeVariable;
 
         public static ListTaskFlowTimeVariablesResponseBodyTimeVariables build(java.util.Map<String, ?> map) throws Exception {

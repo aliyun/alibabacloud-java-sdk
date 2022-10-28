@@ -25,6 +25,9 @@ public class RegisterInstanceRequest extends TeaModel {
     @NameInMap("EcsRegion")
     public String ecsRegion;
 
+    @NameInMap("EnableSellSitd")
+    public String enableSellSitd;
+
     @NameInMap("EnvType")
     public String envType;
 
@@ -60,6 +63,12 @@ public class RegisterInstanceRequest extends TeaModel {
 
     @NameInMap("SkipTest")
     public Boolean skipTest;
+
+    @NameInMap("TemplateId")
+    public Long templateId;
+
+    @NameInMap("TemplateType")
+    public String templateType;
 
     @NameInMap("Tid")
     public Long tid;
@@ -129,6 +138,14 @@ public class RegisterInstanceRequest extends TeaModel {
     }
     public String getEcsRegion() {
         return this.ecsRegion;
+    }
+
+    public RegisterInstanceRequest setEnableSellSitd(String enableSellSitd) {
+        this.enableSellSitd = enableSellSitd;
+        return this;
+    }
+    public String getEnableSellSitd() {
+        return this.enableSellSitd;
     }
 
     public RegisterInstanceRequest setEnvType(String envType) {
@@ -225,6 +242,22 @@ public class RegisterInstanceRequest extends TeaModel {
     }
     public Boolean getSkipTest() {
         return this.skipTest;
+    }
+
+    public RegisterInstanceRequest setTemplateId(Long templateId) {
+        this.templateId = templateId;
+        return this;
+    }
+    public Long getTemplateId() {
+        return this.templateId;
+    }
+
+    public RegisterInstanceRequest setTemplateType(String templateType) {
+        this.templateType = templateType;
+        return this;
+    }
+    public String getTemplateType() {
+        return this.templateType;
     }
 
     public RegisterInstanceRequest setTid(Long tid) {

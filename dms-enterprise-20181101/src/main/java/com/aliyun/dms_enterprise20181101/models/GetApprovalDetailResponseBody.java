@@ -266,6 +266,9 @@ public class GetApprovalDetailResponseBody extends TeaModel {
         @NameInMap("ReasonList")
         public GetApprovalDetailResponseBodyApprovalDetailReasonList reasonList;
 
+        @NameInMap("TemplateId")
+        public Long templateId;
+
         @NameInMap("Title")
         public String title;
 
@@ -334,6 +337,14 @@ public class GetApprovalDetailResponseBody extends TeaModel {
         }
         public GetApprovalDetailResponseBodyApprovalDetailReasonList getReasonList() {
             return this.reasonList;
+        }
+
+        public GetApprovalDetailResponseBodyApprovalDetail setTemplateId(Long templateId) {
+            this.templateId = templateId;
+            return this;
+        }
+        public Long getTemplateId() {
+            return this.templateId;
         }
 
         public GetApprovalDetailResponseBodyApprovalDetail setTitle(String title) {
