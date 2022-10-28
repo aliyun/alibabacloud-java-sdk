@@ -10,6 +10,9 @@ public class CreateTemplateRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    @NameInMap("Tags")
+    public java.util.List<CreateTemplateRequestTags> tags;
+
     @NameInMap("TemplateBody")
     public String templateBody;
 
@@ -40,6 +43,14 @@ public class CreateTemplateRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
+    public CreateTemplateRequest setTags(java.util.List<CreateTemplateRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<CreateTemplateRequestTags> getTags() {
+        return this.tags;
+    }
+
     public CreateTemplateRequest setTemplateBody(String templateBody) {
         this.templateBody = templateBody;
         return this;
@@ -62,6 +73,36 @@ public class CreateTemplateRequest extends TeaModel {
     }
     public String getTemplateURL() {
         return this.templateURL;
+    }
+
+    public static class CreateTemplateRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateTemplateRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            CreateTemplateRequestTags self = new CreateTemplateRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateTemplateRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateTemplateRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

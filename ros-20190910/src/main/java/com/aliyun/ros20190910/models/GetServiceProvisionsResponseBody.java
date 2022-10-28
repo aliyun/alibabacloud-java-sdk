@@ -31,7 +31,62 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
         return this.serviceProvisions;
     }
 
+    public static class GetServiceProvisionsResponseBodyServiceProvisionsRoleProvisionRolesApiForCreation extends TeaModel {
+        @NameInMap("ApiName")
+        public String apiName;
+
+        @NameInMap("ApiProductId")
+        public String apiProductId;
+
+        @NameInMap("ApiType")
+        public String apiType;
+
+        @NameInMap("Parameters")
+        public java.util.Map<String, ?> parameters;
+
+        public static GetServiceProvisionsResponseBodyServiceProvisionsRoleProvisionRolesApiForCreation build(java.util.Map<String, ?> map) throws Exception {
+            GetServiceProvisionsResponseBodyServiceProvisionsRoleProvisionRolesApiForCreation self = new GetServiceProvisionsResponseBodyServiceProvisionsRoleProvisionRolesApiForCreation();
+            return TeaModel.build(map, self);
+        }
+
+        public GetServiceProvisionsResponseBodyServiceProvisionsRoleProvisionRolesApiForCreation setApiName(String apiName) {
+            this.apiName = apiName;
+            return this;
+        }
+        public String getApiName() {
+            return this.apiName;
+        }
+
+        public GetServiceProvisionsResponseBodyServiceProvisionsRoleProvisionRolesApiForCreation setApiProductId(String apiProductId) {
+            this.apiProductId = apiProductId;
+            return this;
+        }
+        public String getApiProductId() {
+            return this.apiProductId;
+        }
+
+        public GetServiceProvisionsResponseBodyServiceProvisionsRoleProvisionRolesApiForCreation setApiType(String apiType) {
+            this.apiType = apiType;
+            return this;
+        }
+        public String getApiType() {
+            return this.apiType;
+        }
+
+        public GetServiceProvisionsResponseBodyServiceProvisionsRoleProvisionRolesApiForCreation setParameters(java.util.Map<String, ?> parameters) {
+            this.parameters = parameters;
+            return this;
+        }
+        public java.util.Map<String, ?> getParameters() {
+            return this.parameters;
+        }
+
+    }
+
     public static class GetServiceProvisionsResponseBodyServiceProvisionsRoleProvisionRoles extends TeaModel {
+        @NameInMap("ApiForCreation")
+        public GetServiceProvisionsResponseBodyServiceProvisionsRoleProvisionRolesApiForCreation apiForCreation;
+
         @NameInMap("Created")
         public Boolean created;
 
@@ -44,6 +99,14 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
         public static GetServiceProvisionsResponseBodyServiceProvisionsRoleProvisionRoles build(java.util.Map<String, ?> map) throws Exception {
             GetServiceProvisionsResponseBodyServiceProvisionsRoleProvisionRoles self = new GetServiceProvisionsResponseBodyServiceProvisionsRoleProvisionRoles();
             return TeaModel.build(map, self);
+        }
+
+        public GetServiceProvisionsResponseBodyServiceProvisionsRoleProvisionRoles setApiForCreation(GetServiceProvisionsResponseBodyServiceProvisionsRoleProvisionRolesApiForCreation apiForCreation) {
+            this.apiForCreation = apiForCreation;
+            return this;
+        }
+        public GetServiceProvisionsResponseBodyServiceProvisionsRoleProvisionRolesApiForCreation getApiForCreation() {
+            return this.apiForCreation;
         }
 
         public GetServiceProvisionsResponseBodyServiceProvisionsRoleProvisionRoles setCreated(Boolean created) {
