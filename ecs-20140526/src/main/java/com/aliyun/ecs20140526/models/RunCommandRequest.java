@@ -49,6 +49,9 @@ public class RunCommandRequest extends TeaModel {
     @NameInMap("RepeatMode")
     public String repeatMode;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -199,6 +202,14 @@ public class RunCommandRequest extends TeaModel {
     }
     public String getRepeatMode() {
         return this.repeatMode;
+    }
+
+    public RunCommandRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public RunCommandRequest setResourceOwnerAccount(String resourceOwnerAccount) {

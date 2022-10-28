@@ -46,6 +46,9 @@ public class DescribeInvocationsRequest extends TeaModel {
     @NameInMap("RepeatMode")
     public String repeatMode;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -173,6 +176,14 @@ public class DescribeInvocationsRequest extends TeaModel {
     }
     public String getRepeatMode() {
         return this.repeatMode;
+    }
+
+    public DescribeInvocationsRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public DescribeInvocationsRequest setResourceOwnerAccount(String resourceOwnerAccount) {

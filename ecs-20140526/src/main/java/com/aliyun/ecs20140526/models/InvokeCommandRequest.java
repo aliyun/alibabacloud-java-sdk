@@ -34,6 +34,9 @@ public class InvokeCommandRequest extends TeaModel {
     @NameInMap("RepeatMode")
     public String repeatMode;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -135,6 +138,14 @@ public class InvokeCommandRequest extends TeaModel {
     }
     public String getRepeatMode() {
         return this.repeatMode;
+    }
+
+    public InvokeCommandRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public InvokeCommandRequest setResourceOwnerAccount(String resourceOwnerAccount) {
