@@ -204,6 +204,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("SafeRuleId")
         public String safeRuleId;
 
+        @NameInMap("SellSitd")
+        public Boolean sellSitd;
+
         @NameInMap("Sid")
         public String sid;
 
@@ -382,6 +385,14 @@ public class ListInstancesResponseBody extends TeaModel {
         }
         public String getSafeRuleId() {
             return this.safeRuleId;
+        }
+
+        public ListInstancesResponseBodyInstanceListInstance setSellSitd(Boolean sellSitd) {
+            this.sellSitd = sellSitd;
+            return this;
+        }
+        public Boolean getSellSitd() {
+            return this.sellSitd;
         }
 
         public ListInstancesResponseBodyInstanceListInstance setSid(String sid) {

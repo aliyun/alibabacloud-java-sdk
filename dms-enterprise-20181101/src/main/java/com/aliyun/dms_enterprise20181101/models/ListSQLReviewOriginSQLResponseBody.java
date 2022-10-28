@@ -97,6 +97,9 @@ public class ListSQLReviewOriginSQLResponseBody extends TeaModel {
         @NameInMap("SQLId")
         public Long SQLId;
 
+        @NameInMap("SQLName")
+        public String SQLName;
+
         @NameInMap("SQLReviewQueryKey")
         public String SQLReviewQueryKey;
 
@@ -165,6 +168,14 @@ public class ListSQLReviewOriginSQLResponseBody extends TeaModel {
         }
         public Long getSQLId() {
             return this.SQLId;
+        }
+
+        public ListSQLReviewOriginSQLResponseBodyOriginSQLList setSQLName(String SQLName) {
+            this.SQLName = SQLName;
+            return this;
+        }
+        public String getSQLName() {
+            return this.SQLName;
         }
 
         public ListSQLReviewOriginSQLResponseBodyOriginSQLList setSQLReviewQueryKey(String SQLReviewQueryKey) {
