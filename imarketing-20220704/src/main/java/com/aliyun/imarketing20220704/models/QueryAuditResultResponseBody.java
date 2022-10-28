@@ -4,6 +4,9 @@ package com.aliyun.imarketing20220704.models;
 import com.aliyun.tea.*;
 
 public class QueryAuditResultResponseBody extends TeaModel {
+    @NameInMap("Message")
+    public String message;
+
     @NameInMap("Records")
     public java.util.List<QueryAuditResultResponseBodyRecords> records;
 
@@ -19,6 +22,14 @@ public class QueryAuditResultResponseBody extends TeaModel {
     public static QueryAuditResultResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryAuditResultResponseBody self = new QueryAuditResultResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryAuditResultResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public QueryAuditResultResponseBody setRecords(java.util.List<QueryAuditResultResponseBodyRecords> records) {
