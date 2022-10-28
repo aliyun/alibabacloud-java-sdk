@@ -3,9 +3,9 @@ package com.aliyun.imm20200930.models;
 
 import com.aliyun.tea.*;
 
-public class QueryFigureClustersRequest extends TeaModel {
+public class QueryFigureClustersShrinkRequest extends TeaModel {
     @NameInMap("CreateTimeRange")
-    public TimeRange createTimeRange;
+    public String createTimeRangeShrink;
 
     @NameInMap("CustomLabels")
     public String customLabels;
@@ -29,22 +29,22 @@ public class QueryFigureClustersRequest extends TeaModel {
     public String sort;
 
     @NameInMap("UpdateTimeRange")
-    public TimeRange updateTimeRange;
+    public String updateTimeRangeShrink;
 
-    public static QueryFigureClustersRequest build(java.util.Map<String, ?> map) throws Exception {
-        QueryFigureClustersRequest self = new QueryFigureClustersRequest();
+    public static QueryFigureClustersShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        QueryFigureClustersShrinkRequest self = new QueryFigureClustersShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public QueryFigureClustersRequest setCreateTimeRange(TimeRange createTimeRange) {
-        this.createTimeRange = createTimeRange;
+    public QueryFigureClustersShrinkRequest setCreateTimeRangeShrink(String createTimeRangeShrink) {
+        this.createTimeRangeShrink = createTimeRangeShrink;
         return this;
     }
-    public TimeRange getCreateTimeRange() {
-        return this.createTimeRange;
+    public String getCreateTimeRangeShrink() {
+        return this.createTimeRangeShrink;
     }
 
-    public QueryFigureClustersRequest setCustomLabels(String customLabels) {
+    public QueryFigureClustersShrinkRequest setCustomLabels(String customLabels) {
         this.customLabels = customLabels;
         return this;
     }
@@ -52,7 +52,7 @@ public class QueryFigureClustersRequest extends TeaModel {
         return this.customLabels;
     }
 
-    public QueryFigureClustersRequest setDatasetName(String datasetName) {
+    public QueryFigureClustersShrinkRequest setDatasetName(String datasetName) {
         this.datasetName = datasetName;
         return this;
     }
@@ -60,7 +60,7 @@ public class QueryFigureClustersRequest extends TeaModel {
         return this.datasetName;
     }
 
-    public QueryFigureClustersRequest setMaxResults(Long maxResults) {
+    public QueryFigureClustersShrinkRequest setMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
     }
@@ -68,7 +68,7 @@ public class QueryFigureClustersRequest extends TeaModel {
         return this.maxResults;
     }
 
-    public QueryFigureClustersRequest setNextToken(String nextToken) {
+    public QueryFigureClustersShrinkRequest setNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
@@ -76,7 +76,7 @@ public class QueryFigureClustersRequest extends TeaModel {
         return this.nextToken;
     }
 
-    public QueryFigureClustersRequest setOrder(String order) {
+    public QueryFigureClustersShrinkRequest setOrder(String order) {
         this.order = order;
         return this;
     }
@@ -84,7 +84,7 @@ public class QueryFigureClustersRequest extends TeaModel {
         return this.order;
     }
 
-    public QueryFigureClustersRequest setProjectName(String projectName) {
+    public QueryFigureClustersShrinkRequest setProjectName(String projectName) {
         this.projectName = projectName;
         return this;
     }
@@ -92,7 +92,7 @@ public class QueryFigureClustersRequest extends TeaModel {
         return this.projectName;
     }
 
-    public QueryFigureClustersRequest setSort(String sort) {
+    public QueryFigureClustersShrinkRequest setSort(String sort) {
         this.sort = sort;
         return this;
     }
@@ -100,12 +100,12 @@ public class QueryFigureClustersRequest extends TeaModel {
         return this.sort;
     }
 
-    public QueryFigureClustersRequest setUpdateTimeRange(TimeRange updateTimeRange) {
-        this.updateTimeRange = updateTimeRange;
+    public QueryFigureClustersShrinkRequest setUpdateTimeRangeShrink(String updateTimeRangeShrink) {
+        this.updateTimeRangeShrink = updateTimeRangeShrink;
         return this;
     }
-    public TimeRange getUpdateTimeRange() {
-        return this.updateTimeRange;
+    public String getUpdateTimeRangeShrink() {
+        return this.updateTimeRangeShrink;
     }
 
 }
