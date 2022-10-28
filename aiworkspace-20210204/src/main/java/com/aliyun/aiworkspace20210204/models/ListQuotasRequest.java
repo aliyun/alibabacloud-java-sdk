@@ -4,7 +4,6 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class ListQuotasRequest extends TeaModel {
-    // 名字，支持模糊搜索
     @NameInMap("Name")
     public String name;
 

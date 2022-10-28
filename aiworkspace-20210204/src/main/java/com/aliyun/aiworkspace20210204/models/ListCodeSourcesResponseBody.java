@@ -4,15 +4,12 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class ListCodeSourcesResponseBody extends TeaModel {
-    // 代码源配置列表
     @NameInMap("CodeSources")
     public java.util.List<CodeSourceItem> codeSources;
 
-    // 请求Id
     @NameInMap("RequestId")
     public String requestId;
 
-    // 符合过滤条件的代码源配置的总数量
     @NameInMap("TotalCount")
     public Long totalCount;
 

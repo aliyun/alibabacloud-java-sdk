@@ -4,15 +4,12 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class ListQuotasResponseBody extends TeaModel {
-    // 配额列表
     @NameInMap("Quotas")
     public java.util.List<ListQuotasResponseBodyQuotas> quotas;
 
-    // 请求 id
     @NameInMap("RequestId")
     public String requestId;
 
-    // 符合过滤条件的数量
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -46,15 +43,12 @@ public class ListQuotasResponseBody extends TeaModel {
     }
 
     public static class ListQuotasResponseBodyQuotasSpecs extends TeaModel {
-        // 规格名
         @NameInMap("Name")
         public String name;
 
-        // 类型，可为空
         @NameInMap("Type")
         public String type;
 
-        // 规格描述
         @NameInMap("Value")
         public String value;
 
@@ -90,33 +84,38 @@ public class ListQuotasResponseBody extends TeaModel {
     }
 
     public static class ListQuotasResponseBodyQuotas extends TeaModel {
-        // quota的id
+        @NameInMap("DisplayName")
+        public String displayName;
+
         @NameInMap("Id")
         public String id;
 
-        // 模式  isolate 预付费  share 后付费  develop 开发模式
         @NameInMap("Mode")
         public String mode;
 
-        // quota名字
         @NameInMap("Name")
         public String name;
 
-        // 产品代码
         @NameInMap("ProductCode")
         public String productCode;
 
-        // 产品类型， 支持PAI，MaxCompute
         @NameInMap("QuotaType")
         public String quotaType;
 
-        // 规格描述列表
         @NameInMap("Specs")
         public java.util.List<ListQuotasResponseBodyQuotasSpecs> specs;
 
         public static ListQuotasResponseBodyQuotas build(java.util.Map<String, ?> map) throws Exception {
             ListQuotasResponseBodyQuotas self = new ListQuotasResponseBodyQuotas();
             return TeaModel.build(map, self);
+        }
+
+        public ListQuotasResponseBodyQuotas setDisplayName(String displayName) {
+            this.displayName = displayName;
+            return this;
+        }
+        public String getDisplayName() {
+            return this.displayName;
         }
 
         public ListQuotasResponseBodyQuotas setId(String id) {

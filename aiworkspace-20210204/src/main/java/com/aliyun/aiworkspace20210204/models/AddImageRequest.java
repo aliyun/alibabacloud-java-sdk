@@ -4,27 +4,21 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class AddImageRequest extends TeaModel {
-    // 可见性 Public 公有 Private 私有
     @NameInMap("Accessibility")
     public String accessibility;
 
-    // 镜像描述
     @NameInMap("Description")
     public String description;
 
-    // 镜像地址
     @NameInMap("ImageUri")
     public String imageUri;
 
-    // 镜像标签，是个数组
     @NameInMap("Labels")
     public java.util.List<AddImageRequestLabels> labels;
 
-    // 镜像名称
     @NameInMap("Name")
     public String name;
 
-    // 工作空间id
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
@@ -82,11 +76,9 @@ public class AddImageRequest extends TeaModel {
     }
 
     public static class AddImageRequestLabels extends TeaModel {
-        // Key
         @NameInMap("Key")
         public String key;
 
-        // Value
         @NameInMap("Value")
         public String value;
 

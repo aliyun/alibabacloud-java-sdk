@@ -4,7 +4,6 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class GetImageRequest extends TeaModel {
-    // 是否显示非必要信息：Labels
     @NameInMap("Verbose")
     public Boolean verbose;
 

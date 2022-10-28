@@ -4,33 +4,26 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class GetMemberResponseBody extends TeaModel {
-    // 成员显示名
     @NameInMap("DisplayName")
     public String displayName;
 
-    // 创建 UTC 时间，日期格式 iso8601
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
-    // 成员 id
     @NameInMap("MemberId")
     public String memberId;
 
-    // 角色列表
+    @NameInMap("MemberName")
+    public String memberName;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("Roles")
     public java.util.List<String> roles;
 
-    // 用户 id
     @NameInMap("UserId")
     public String userId;
-
-    // 云账号用户名
-    @NameInMap("UserName")
-    public String userName;
-
-    // Id of the request
-    @NameInMap("requestId")
-    public String requestId;
 
     public static GetMemberResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetMemberResponseBody self = new GetMemberResponseBody();
@@ -61,6 +54,22 @@ public class GetMemberResponseBody extends TeaModel {
         return this.memberId;
     }
 
+    public GetMemberResponseBody setMemberName(String memberName) {
+        this.memberName = memberName;
+        return this;
+    }
+    public String getMemberName() {
+        return this.memberName;
+    }
+
+    public GetMemberResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public GetMemberResponseBody setRoles(java.util.List<String> roles) {
         this.roles = roles;
         return this;
@@ -75,22 +84,6 @@ public class GetMemberResponseBody extends TeaModel {
     }
     public String getUserId() {
         return this.userId;
-    }
-
-    public GetMemberResponseBody setUserName(String userName) {
-        this.userName = userName;
-        return this;
-    }
-    public String getUserName() {
-        return this.userName;
-    }
-
-    public GetMemberResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
 }

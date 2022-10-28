@@ -4,49 +4,38 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class GetImageResponseBody extends TeaModel {
-    // 可见性
     @NameInMap("Accessibility")
     public String accessibility;
 
-    // 描述
     @NameInMap("Description")
     public String description;
 
-    // 创建 UTC 时间，日期格式 iso8601
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
-    // 创建 UTC 时间，日期格式 iso8601
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
-    // 镜像地址，包含版本号
     @NameInMap("ImageUri")
     public String imageUri;
 
-    // 镜像标签
     @NameInMap("Labels")
     public java.util.List<GetImageResponseBodyLabels> labels;
 
-    // 镜像名称
     @NameInMap("Name")
     public String name;
 
-    // 创建人
-    @NameInMap("OperatorCreate")
-    public String operatorCreate;
+    @NameInMap("ParentUserId")
+    public String parentUserId;
 
-    // 创建人父账户
-    @NameInMap("ParentOperatorCreate")
-    public String parentOperatorCreate;
+    @NameInMap("RequestId")
+    public String requestId;
 
-    // 工作空间id
+    @NameInMap("UserId")
+    public String userId;
+
     @NameInMap("WorkspaceId")
     public String workspaceId;
-
-    // Id of the request
-    @NameInMap("requestId")
-    public String requestId;
 
     public static GetImageResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetImageResponseBody self = new GetImageResponseBody();
@@ -109,28 +98,12 @@ public class GetImageResponseBody extends TeaModel {
         return this.name;
     }
 
-    public GetImageResponseBody setOperatorCreate(String operatorCreate) {
-        this.operatorCreate = operatorCreate;
+    public GetImageResponseBody setParentUserId(String parentUserId) {
+        this.parentUserId = parentUserId;
         return this;
     }
-    public String getOperatorCreate() {
-        return this.operatorCreate;
-    }
-
-    public GetImageResponseBody setParentOperatorCreate(String parentOperatorCreate) {
-        this.parentOperatorCreate = parentOperatorCreate;
-        return this;
-    }
-    public String getParentOperatorCreate() {
-        return this.parentOperatorCreate;
-    }
-
-    public GetImageResponseBody setWorkspaceId(String workspaceId) {
-        this.workspaceId = workspaceId;
-        return this;
-    }
-    public String getWorkspaceId() {
-        return this.workspaceId;
+    public String getParentUserId() {
+        return this.parentUserId;
     }
 
     public GetImageResponseBody setRequestId(String requestId) {
@@ -141,12 +114,26 @@ public class GetImageResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public GetImageResponseBody setUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    public String getUserId() {
+        return this.userId;
+    }
+
+    public GetImageResponseBody setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
     public static class GetImageResponseBodyLabels extends TeaModel {
-        // Key
         @NameInMap("Key")
         public String key;
 
-        // Value
         @NameInMap("Value")
         public String value;
 

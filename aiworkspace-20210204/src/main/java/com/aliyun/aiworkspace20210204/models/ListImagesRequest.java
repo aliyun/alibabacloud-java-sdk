@@ -4,39 +4,33 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class ListImagesRequest extends TeaModel {
-    // 过滤值 以逗号分隔
     @NameInMap("Labels")
     public String labels;
 
-    // 镜像名称，支持模糊搜索
     @NameInMap("Name")
     public String name;
 
-    // 创建者
-    @NameInMap("OperatorCreate")
-    public String operatorCreate;
-
-    // 排序方向： ASC - 升序 DESC - 降序
     @NameInMap("Order")
     public String order;
 
-    // 分页，从1开始，默认1
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // 页大小，默认20
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 排序字段
+    @NameInMap("ParentUserId")
+    public String parentUserId;
+
     @NameInMap("SortBy")
     public String sortBy;
 
-    // 是否显示非必要信息：Labels
+    @NameInMap("UserId")
+    public String userId;
+
     @NameInMap("Verbose")
     public Boolean verbose;
 
-    // 工作空间id
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
@@ -59,14 +53,6 @@ public class ListImagesRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
-    }
-
-    public ListImagesRequest setOperatorCreate(String operatorCreate) {
-        this.operatorCreate = operatorCreate;
-        return this;
-    }
-    public String getOperatorCreate() {
-        return this.operatorCreate;
     }
 
     public ListImagesRequest setOrder(String order) {
@@ -93,12 +79,28 @@ public class ListImagesRequest extends TeaModel {
         return this.pageSize;
     }
 
+    public ListImagesRequest setParentUserId(String parentUserId) {
+        this.parentUserId = parentUserId;
+        return this;
+    }
+    public String getParentUserId() {
+        return this.parentUserId;
+    }
+
     public ListImagesRequest setSortBy(String sortBy) {
         this.sortBy = sortBy;
         return this;
     }
     public String getSortBy() {
         return this.sortBy;
+    }
+
+    public ListImagesRequest setUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    public String getUserId() {
+        return this.userId;
     }
 
     public ListImagesRequest setVerbose(Boolean verbose) {

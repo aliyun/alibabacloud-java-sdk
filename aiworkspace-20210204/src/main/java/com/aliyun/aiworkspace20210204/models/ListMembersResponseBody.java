@@ -4,15 +4,12 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class ListMembersResponseBody extends TeaModel {
-    // 成员列表
     @NameInMap("Members")
     public java.util.List<ListMembersResponseBodyMembers> members;
 
-    // 请求 id
     @NameInMap("RequestId")
     public String requestId;
 
-    // 符合过滤条件的数量
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -46,29 +43,23 @@ public class ListMembersResponseBody extends TeaModel {
     }
 
     public static class ListMembersResponseBodyMembers extends TeaModel {
-        // 成员显示名
         @NameInMap("DisplayName")
         public String displayName;
 
-        // 创建 UTC 时间，日期格式 iso8601
         @NameInMap("GmtCreateTime")
         public String gmtCreateTime;
 
-        // 成员 id
         @NameInMap("MemberId")
         public String memberId;
 
-        // 角色列表
+        @NameInMap("MemberName")
+        public String memberName;
+
         @NameInMap("Roles")
         public java.util.List<String> roles;
 
-        // 用户 id
         @NameInMap("UserId")
         public String userId;
-
-        // 云账号用户名
-        @NameInMap("UserName")
-        public String userName;
 
         public static ListMembersResponseBodyMembers build(java.util.Map<String, ?> map) throws Exception {
             ListMembersResponseBodyMembers self = new ListMembersResponseBodyMembers();
@@ -99,6 +90,14 @@ public class ListMembersResponseBody extends TeaModel {
             return this.memberId;
         }
 
+        public ListMembersResponseBodyMembers setMemberName(String memberName) {
+            this.memberName = memberName;
+            return this;
+        }
+        public String getMemberName() {
+            return this.memberName;
+        }
+
         public ListMembersResponseBodyMembers setRoles(java.util.List<String> roles) {
             this.roles = roles;
             return this;
@@ -113,14 +112,6 @@ public class ListMembersResponseBody extends TeaModel {
         }
         public String getUserId() {
             return this.userId;
-        }
-
-        public ListMembersResponseBodyMembers setUserName(String userName) {
-            this.userName = userName;
-            return this;
-        }
-        public String getUserName() {
-            return this.userName;
         }
 
     }

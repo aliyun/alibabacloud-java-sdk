@@ -4,15 +4,12 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class ListPermissionsResponseBody extends TeaModel {
-    // 权限列表
     @NameInMap("Permissions")
     public java.util.List<ListPermissionsResponseBodyPermissions> permissions;
 
-    // 请求 id
     @NameInMap("RequestId")
     public String requestId;
 
-    // 符合过滤条件的数量
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -46,11 +43,9 @@ public class ListPermissionsResponseBody extends TeaModel {
     }
 
     public static class ListPermissionsResponseBodyPermissionsPermissionRules extends TeaModel {
-        // 待鉴权实例的可见性 PUBLIC表示当前工作空间所有人都可以访问 PRIVATE表示只有Owner可以访问
         @NameInMap("Accessibility")
         public String accessibility;
 
-        // 存取类型 CREATOR 代表能看自已创建的 OTHERS 代表可以看别人创建的 ALL代表所有
         @NameInMap("EntityAccessType")
         public String entityAccessType;
 
@@ -78,7 +73,6 @@ public class ListPermissionsResponseBody extends TeaModel {
     }
 
     public static class ListPermissionsResponseBodyPermissions extends TeaModel {
-        // 权限 code
         @NameInMap("PermissionCode")
         public String permissionCode;
 

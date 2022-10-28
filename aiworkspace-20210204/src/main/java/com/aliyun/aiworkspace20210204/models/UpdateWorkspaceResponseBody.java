@@ -4,7 +4,6 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class UpdateWorkspaceResponseBody extends TeaModel {
-    // 请求 id
     @NameInMap("RequestId")
     public String requestId;
 

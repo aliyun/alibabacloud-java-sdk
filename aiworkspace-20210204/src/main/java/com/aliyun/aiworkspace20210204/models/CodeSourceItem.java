@@ -4,55 +4,45 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class CodeSourceItem extends TeaModel {
-    // 表示代码是否是工作空间下公开的,可选值PRIVATE,PUBLIC
     @NameInMap("Accessibility")
     public String accessibility;
 
-    // 代码分支
     @NameInMap("CodeBranch")
     public String codeBranch;
 
-    // 代码Commit ID
     @NameInMap("CodeCommit")
     public String codeCommit;
 
-    // 代码仓库地址
     @NameInMap("CodeRepo")
     public String codeRepo;
 
-    // 访问代码仓库所用的AccessToken
     @NameInMap("CodeRepoAccessToken")
     public String codeRepoAccessToken;
 
-    // 访问代码仓库的用户名
     @NameInMap("CodeRepoUserName")
     public String codeRepoUserName;
 
-    // 代码源ID
     @NameInMap("CodeSourceId")
     public String codeSourceId;
 
-    // 代码源详细描述
     @NameInMap("Description")
     public String description;
 
-    // 代码源配置的名字
     @NameInMap("DisplayName")
     public String displayName;
 
-    // 创建时间
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
-    // 修改时间
     @NameInMap("GmtModifyTime")
     public String gmtModifyTime;
 
-    // 代码源配置的用户ID
+    @NameInMap("MountPath")
+    public String mountPath;
+
     @NameInMap("UserId")
     public String userId;
 
-    // 工作空间ID
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
@@ -147,6 +137,14 @@ public class CodeSourceItem extends TeaModel {
     }
     public String getGmtModifyTime() {
         return this.gmtModifyTime;
+    }
+
+    public CodeSourceItem setMountPath(String mountPath) {
+        this.mountPath = mountPath;
+        return this;
+    }
+    public String getMountPath() {
+        return this.mountPath;
     }
 
     public CodeSourceItem setUserId(String userId) {

@@ -4,59 +4,45 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class GetWorkspaceResponseBody extends TeaModel {
-    // 管理员账户
     @NameInMap("AdminNames")
     public java.util.List<String> adminNames;
 
-    // 创建人
     @NameInMap("Creator")
     public String creator;
 
-    // 描述
     @NameInMap("Description")
     public String description;
 
-    // 显示名称
     @NameInMap("DisplayName")
     public String displayName;
 
-    // 环境，用作判断简单模式还是标准模式
     @NameInMap("EnvTypes")
     public java.util.List<String> envTypes;
 
-    // 附加信息
     @NameInMap("ExtraInfos")
     public java.util.Map<String, ?> extraInfos;
 
-    // 创建 UTC 时间，日期格式 iso8601
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
-    // 修改 UTC 时间，日期格式 iso8601
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
-    // 是否为默认工作空间
     @NameInMap("IsDefault")
     public Boolean isDefault;
 
-    // 请求 id
+    @NameInMap("Owner")
+    public GetWorkspaceResponseBodyOwner owner;
+
     @NameInMap("RequestId")
     public String requestId;
 
-    // 资源数目
-    @NameInMap("ResourceCount")
-    public Integer resourceCount;
-
-    // 工作空间状态
     @NameInMap("Status")
     public String status;
 
-    // 工作空间 id
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
-    // 项目空间名称， region 内唯一
     @NameInMap("WorkspaceName")
     public String workspaceName;
 
@@ -137,20 +123,20 @@ public class GetWorkspaceResponseBody extends TeaModel {
         return this.isDefault;
     }
 
+    public GetWorkspaceResponseBody setOwner(GetWorkspaceResponseBodyOwner owner) {
+        this.owner = owner;
+        return this;
+    }
+    public GetWorkspaceResponseBodyOwner getOwner() {
+        return this.owner;
+    }
+
     public GetWorkspaceResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public GetWorkspaceResponseBody setResourceCount(Integer resourceCount) {
-        this.resourceCount = resourceCount;
-        return this;
-    }
-    public Integer getResourceCount() {
-        return this.resourceCount;
     }
 
     public GetWorkspaceResponseBody setStatus(String status) {
@@ -175,6 +161,58 @@ public class GetWorkspaceResponseBody extends TeaModel {
     }
     public String getWorkspaceName() {
         return this.workspaceName;
+    }
+
+    public static class GetWorkspaceResponseBodyOwner extends TeaModel {
+        @NameInMap("DisplayName")
+        public String displayName;
+
+        @NameInMap("UserId")
+        public String userId;
+
+        @NameInMap("UserKp")
+        public String userKp;
+
+        @NameInMap("UserName")
+        public String userName;
+
+        public static GetWorkspaceResponseBodyOwner build(java.util.Map<String, ?> map) throws Exception {
+            GetWorkspaceResponseBodyOwner self = new GetWorkspaceResponseBodyOwner();
+            return TeaModel.build(map, self);
+        }
+
+        public GetWorkspaceResponseBodyOwner setDisplayName(String displayName) {
+            this.displayName = displayName;
+            return this;
+        }
+        public String getDisplayName() {
+            return this.displayName;
+        }
+
+        public GetWorkspaceResponseBodyOwner setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
+        }
+
+        public GetWorkspaceResponseBodyOwner setUserKp(String userKp) {
+            this.userKp = userKp;
+            return this;
+        }
+        public String getUserKp() {
+            return this.userKp;
+        }
+
+        public GetWorkspaceResponseBodyOwner setUserName(String userName) {
+            this.userName = userName;
+            return this;
+        }
+        public String getUserName() {
+            return this.userName;
+        }
+
     }
 
 }

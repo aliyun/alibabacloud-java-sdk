@@ -4,15 +4,12 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class CreateWorkspaceResourceResponseBody extends TeaModel {
-    // 请求 id
     @NameInMap("RequestId")
     public String requestId;
 
-    // 资源集合
     @NameInMap("Resources")
     public java.util.List<CreateWorkspaceResourceResponseBodyResources> resources;
 
-    // 总数
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -46,7 +43,6 @@ public class CreateWorkspaceResourceResponseBody extends TeaModel {
     }
 
     public static class CreateWorkspaceResourceResponseBodyResources extends TeaModel {
-        // 资源Id
         @NameInMap("Id")
         public String id;
 
