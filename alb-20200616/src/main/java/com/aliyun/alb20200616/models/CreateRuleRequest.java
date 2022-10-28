@@ -86,6 +86,80 @@ public class CreateRuleRequest extends TeaModel {
         return this.ruleName;
     }
 
+    public static class CreateRuleRequestRuleActionsCorsConfig extends TeaModel {
+        @NameInMap("AllowCredentials")
+        public String allowCredentials;
+
+        @NameInMap("AllowHeaders")
+        public java.util.List<String> allowHeaders;
+
+        @NameInMap("AllowMethods")
+        public java.util.List<String> allowMethods;
+
+        @NameInMap("AllowOrigin")
+        public java.util.List<String> allowOrigin;
+
+        @NameInMap("ExposeHeaders")
+        public java.util.List<String> exposeHeaders;
+
+        @NameInMap("MaxAge")
+        public Long maxAge;
+
+        public static CreateRuleRequestRuleActionsCorsConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateRuleRequestRuleActionsCorsConfig self = new CreateRuleRequestRuleActionsCorsConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateRuleRequestRuleActionsCorsConfig setAllowCredentials(String allowCredentials) {
+            this.allowCredentials = allowCredentials;
+            return this;
+        }
+        public String getAllowCredentials() {
+            return this.allowCredentials;
+        }
+
+        public CreateRuleRequestRuleActionsCorsConfig setAllowHeaders(java.util.List<String> allowHeaders) {
+            this.allowHeaders = allowHeaders;
+            return this;
+        }
+        public java.util.List<String> getAllowHeaders() {
+            return this.allowHeaders;
+        }
+
+        public CreateRuleRequestRuleActionsCorsConfig setAllowMethods(java.util.List<String> allowMethods) {
+            this.allowMethods = allowMethods;
+            return this;
+        }
+        public java.util.List<String> getAllowMethods() {
+            return this.allowMethods;
+        }
+
+        public CreateRuleRequestRuleActionsCorsConfig setAllowOrigin(java.util.List<String> allowOrigin) {
+            this.allowOrigin = allowOrigin;
+            return this;
+        }
+        public java.util.List<String> getAllowOrigin() {
+            return this.allowOrigin;
+        }
+
+        public CreateRuleRequestRuleActionsCorsConfig setExposeHeaders(java.util.List<String> exposeHeaders) {
+            this.exposeHeaders = exposeHeaders;
+            return this;
+        }
+        public java.util.List<String> getExposeHeaders() {
+            return this.exposeHeaders;
+        }
+
+        public CreateRuleRequestRuleActionsCorsConfig setMaxAge(Long maxAge) {
+            this.maxAge = maxAge;
+            return this;
+        }
+        public Long getMaxAge() {
+            return this.maxAge;
+        }
+
+    }
+
     public static class CreateRuleRequestRuleActionsFixedResponseConfig extends TeaModel {
         @NameInMap("Content")
         public String content;
@@ -472,6 +546,9 @@ public class CreateRuleRequest extends TeaModel {
     }
 
     public static class CreateRuleRequestRuleActions extends TeaModel {
+        @NameInMap("CorsConfig")
+        public CreateRuleRequestRuleActionsCorsConfig corsConfig;
+
         @NameInMap("FixedResponseConfig")
         public CreateRuleRequestRuleActionsFixedResponseConfig fixedResponseConfig;
 
@@ -502,6 +579,14 @@ public class CreateRuleRequest extends TeaModel {
         public static CreateRuleRequestRuleActions build(java.util.Map<String, ?> map) throws Exception {
             CreateRuleRequestRuleActions self = new CreateRuleRequestRuleActions();
             return TeaModel.build(map, self);
+        }
+
+        public CreateRuleRequestRuleActions setCorsConfig(CreateRuleRequestRuleActionsCorsConfig corsConfig) {
+            this.corsConfig = corsConfig;
+            return this;
+        }
+        public CreateRuleRequestRuleActionsCorsConfig getCorsConfig() {
+            return this.corsConfig;
         }
 
         public CreateRuleRequestRuleActions setFixedResponseConfig(CreateRuleRequestRuleActionsFixedResponseConfig fixedResponseConfig) {

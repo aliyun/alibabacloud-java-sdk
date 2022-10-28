@@ -64,6 +64,80 @@ public class ListRulesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListRulesResponseBodyRulesRuleActionsCorsConfig extends TeaModel {
+        @NameInMap("AllowCredentials")
+        public String allowCredentials;
+
+        @NameInMap("AllowHeaders")
+        public java.util.List<String> allowHeaders;
+
+        @NameInMap("AllowMethods")
+        public java.util.List<String> allowMethods;
+
+        @NameInMap("AllowOrigin")
+        public java.util.List<String> allowOrigin;
+
+        @NameInMap("ExposeHeaders")
+        public java.util.List<String> exposeHeaders;
+
+        @NameInMap("MaxAge")
+        public Long maxAge;
+
+        public static ListRulesResponseBodyRulesRuleActionsCorsConfig build(java.util.Map<String, ?> map) throws Exception {
+            ListRulesResponseBodyRulesRuleActionsCorsConfig self = new ListRulesResponseBodyRulesRuleActionsCorsConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public ListRulesResponseBodyRulesRuleActionsCorsConfig setAllowCredentials(String allowCredentials) {
+            this.allowCredentials = allowCredentials;
+            return this;
+        }
+        public String getAllowCredentials() {
+            return this.allowCredentials;
+        }
+
+        public ListRulesResponseBodyRulesRuleActionsCorsConfig setAllowHeaders(java.util.List<String> allowHeaders) {
+            this.allowHeaders = allowHeaders;
+            return this;
+        }
+        public java.util.List<String> getAllowHeaders() {
+            return this.allowHeaders;
+        }
+
+        public ListRulesResponseBodyRulesRuleActionsCorsConfig setAllowMethods(java.util.List<String> allowMethods) {
+            this.allowMethods = allowMethods;
+            return this;
+        }
+        public java.util.List<String> getAllowMethods() {
+            return this.allowMethods;
+        }
+
+        public ListRulesResponseBodyRulesRuleActionsCorsConfig setAllowOrigin(java.util.List<String> allowOrigin) {
+            this.allowOrigin = allowOrigin;
+            return this;
+        }
+        public java.util.List<String> getAllowOrigin() {
+            return this.allowOrigin;
+        }
+
+        public ListRulesResponseBodyRulesRuleActionsCorsConfig setExposeHeaders(java.util.List<String> exposeHeaders) {
+            this.exposeHeaders = exposeHeaders;
+            return this;
+        }
+        public java.util.List<String> getExposeHeaders() {
+            return this.exposeHeaders;
+        }
+
+        public ListRulesResponseBodyRulesRuleActionsCorsConfig setMaxAge(Long maxAge) {
+            this.maxAge = maxAge;
+            return this;
+        }
+        public Long getMaxAge() {
+            return this.maxAge;
+        }
+
+    }
+
     public static class ListRulesResponseBodyRulesRuleActionsFixedResponseConfig extends TeaModel {
         @NameInMap("Content")
         public String content;
@@ -409,6 +483,9 @@ public class ListRulesResponseBody extends TeaModel {
     }
 
     public static class ListRulesResponseBodyRulesRuleActions extends TeaModel {
+        @NameInMap("CorsConfig")
+        public ListRulesResponseBodyRulesRuleActionsCorsConfig corsConfig;
+
         @NameInMap("FixedResponseConfig")
         public ListRulesResponseBodyRulesRuleActionsFixedResponseConfig fixedResponseConfig;
 
@@ -439,6 +516,14 @@ public class ListRulesResponseBody extends TeaModel {
         public static ListRulesResponseBodyRulesRuleActions build(java.util.Map<String, ?> map) throws Exception {
             ListRulesResponseBodyRulesRuleActions self = new ListRulesResponseBodyRulesRuleActions();
             return TeaModel.build(map, self);
+        }
+
+        public ListRulesResponseBodyRulesRuleActions setCorsConfig(ListRulesResponseBodyRulesRuleActionsCorsConfig corsConfig) {
+            this.corsConfig = corsConfig;
+            return this;
+        }
+        public ListRulesResponseBodyRulesRuleActionsCorsConfig getCorsConfig() {
+            return this.corsConfig;
         }
 
         public ListRulesResponseBodyRulesRuleActions setFixedResponseConfig(ListRulesResponseBodyRulesRuleActionsFixedResponseConfig fixedResponseConfig) {

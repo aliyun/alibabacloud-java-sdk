@@ -53,6 +53,80 @@ public class CreateRulesRequest extends TeaModel {
         return this.rules;
     }
 
+    public static class CreateRulesRequestRulesRuleActionsCorsConfig extends TeaModel {
+        @NameInMap("AllowCredentials")
+        public String allowCredentials;
+
+        @NameInMap("AllowHeaders")
+        public java.util.List<String> allowHeaders;
+
+        @NameInMap("AllowMethods")
+        public java.util.List<String> allowMethods;
+
+        @NameInMap("AllowOrigin")
+        public java.util.List<String> allowOrigin;
+
+        @NameInMap("ExposeHeaders")
+        public java.util.List<String> exposeHeaders;
+
+        @NameInMap("MaxAge")
+        public Long maxAge;
+
+        public static CreateRulesRequestRulesRuleActionsCorsConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateRulesRequestRulesRuleActionsCorsConfig self = new CreateRulesRequestRulesRuleActionsCorsConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateRulesRequestRulesRuleActionsCorsConfig setAllowCredentials(String allowCredentials) {
+            this.allowCredentials = allowCredentials;
+            return this;
+        }
+        public String getAllowCredentials() {
+            return this.allowCredentials;
+        }
+
+        public CreateRulesRequestRulesRuleActionsCorsConfig setAllowHeaders(java.util.List<String> allowHeaders) {
+            this.allowHeaders = allowHeaders;
+            return this;
+        }
+        public java.util.List<String> getAllowHeaders() {
+            return this.allowHeaders;
+        }
+
+        public CreateRulesRequestRulesRuleActionsCorsConfig setAllowMethods(java.util.List<String> allowMethods) {
+            this.allowMethods = allowMethods;
+            return this;
+        }
+        public java.util.List<String> getAllowMethods() {
+            return this.allowMethods;
+        }
+
+        public CreateRulesRequestRulesRuleActionsCorsConfig setAllowOrigin(java.util.List<String> allowOrigin) {
+            this.allowOrigin = allowOrigin;
+            return this;
+        }
+        public java.util.List<String> getAllowOrigin() {
+            return this.allowOrigin;
+        }
+
+        public CreateRulesRequestRulesRuleActionsCorsConfig setExposeHeaders(java.util.List<String> exposeHeaders) {
+            this.exposeHeaders = exposeHeaders;
+            return this;
+        }
+        public java.util.List<String> getExposeHeaders() {
+            return this.exposeHeaders;
+        }
+
+        public CreateRulesRequestRulesRuleActionsCorsConfig setMaxAge(Long maxAge) {
+            this.maxAge = maxAge;
+            return this;
+        }
+        public Long getMaxAge() {
+            return this.maxAge;
+        }
+
+    }
+
     public static class CreateRulesRequestRulesRuleActionsFixedResponseConfig extends TeaModel {
         @NameInMap("Content")
         public String content;
@@ -439,6 +513,9 @@ public class CreateRulesRequest extends TeaModel {
     }
 
     public static class CreateRulesRequestRulesRuleActions extends TeaModel {
+        @NameInMap("CorsConfig")
+        public CreateRulesRequestRulesRuleActionsCorsConfig corsConfig;
+
         @NameInMap("FixedResponseConfig")
         public CreateRulesRequestRulesRuleActionsFixedResponseConfig fixedResponseConfig;
 
@@ -469,6 +546,14 @@ public class CreateRulesRequest extends TeaModel {
         public static CreateRulesRequestRulesRuleActions build(java.util.Map<String, ?> map) throws Exception {
             CreateRulesRequestRulesRuleActions self = new CreateRulesRequestRulesRuleActions();
             return TeaModel.build(map, self);
+        }
+
+        public CreateRulesRequestRulesRuleActions setCorsConfig(CreateRulesRequestRulesRuleActionsCorsConfig corsConfig) {
+            this.corsConfig = corsConfig;
+            return this;
+        }
+        public CreateRulesRequestRulesRuleActionsCorsConfig getCorsConfig() {
+            return this.corsConfig;
         }
 
         public CreateRulesRequestRulesRuleActions setFixedResponseConfig(CreateRulesRequestRulesRuleActionsFixedResponseConfig fixedResponseConfig) {
