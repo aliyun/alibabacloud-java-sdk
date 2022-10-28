@@ -148,6 +148,15 @@ public class DescribeAccountsResponseBody extends TeaModel {
         @NameInMap("AccountType")
         public String accountType;
 
+        @NameInMap("BypassRLS")
+        public String bypassRLS;
+
+        @NameInMap("CreateDB")
+        public String createDB;
+
+        @NameInMap("CreateRole")
+        public String createRole;
+
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
@@ -156,6 +165,12 @@ public class DescribeAccountsResponseBody extends TeaModel {
 
         @NameInMap("PrivExceeded")
         public String privExceeded;
+
+        @NameInMap("Replication")
+        public String replication;
+
+        @NameInMap("ValidUntil")
+        public String validUntil;
 
         public static DescribeAccountsResponseBodyAccountsDBInstanceAccount build(java.util.Map<String, ?> map) throws Exception {
             DescribeAccountsResponseBodyAccountsDBInstanceAccount self = new DescribeAccountsResponseBodyAccountsDBInstanceAccount();
@@ -194,6 +209,30 @@ public class DescribeAccountsResponseBody extends TeaModel {
             return this.accountType;
         }
 
+        public DescribeAccountsResponseBodyAccountsDBInstanceAccount setBypassRLS(String bypassRLS) {
+            this.bypassRLS = bypassRLS;
+            return this;
+        }
+        public String getBypassRLS() {
+            return this.bypassRLS;
+        }
+
+        public DescribeAccountsResponseBodyAccountsDBInstanceAccount setCreateDB(String createDB) {
+            this.createDB = createDB;
+            return this;
+        }
+        public String getCreateDB() {
+            return this.createDB;
+        }
+
+        public DescribeAccountsResponseBodyAccountsDBInstanceAccount setCreateRole(String createRole) {
+            this.createRole = createRole;
+            return this;
+        }
+        public String getCreateRole() {
+            return this.createRole;
+        }
+
         public DescribeAccountsResponseBodyAccountsDBInstanceAccount setDBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
             return this;
@@ -216,6 +255,22 @@ public class DescribeAccountsResponseBody extends TeaModel {
         }
         public String getPrivExceeded() {
             return this.privExceeded;
+        }
+
+        public DescribeAccountsResponseBodyAccountsDBInstanceAccount setReplication(String replication) {
+            this.replication = replication;
+            return this;
+        }
+        public String getReplication() {
+            return this.replication;
+        }
+
+        public DescribeAccountsResponseBodyAccountsDBInstanceAccount setValidUntil(String validUntil) {
+            this.validUntil = validUntil;
+            return this;
+        }
+        public String getValidUntil() {
+            return this.validUntil;
         }
 
     }

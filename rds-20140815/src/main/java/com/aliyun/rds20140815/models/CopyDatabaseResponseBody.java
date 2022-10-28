@@ -10,6 +10,9 @@ public class CopyDatabaseResponseBody extends TeaModel {
     @NameInMap("DBStatus")
     public String DBStatus;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("TaskId")
     public String taskId;
 
@@ -32,6 +35,14 @@ public class CopyDatabaseResponseBody extends TeaModel {
     }
     public String getDBStatus() {
         return this.DBStatus;
+    }
+
+    public CopyDatabaseResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public CopyDatabaseResponseBody setTaskId(String taskId) {

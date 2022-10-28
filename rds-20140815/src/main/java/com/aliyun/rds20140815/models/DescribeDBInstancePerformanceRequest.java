@@ -13,6 +13,9 @@ public class DescribeDBInstancePerformanceRequest extends TeaModel {
     @NameInMap("Key")
     public String key;
 
+    @NameInMap("NodeId")
+    public String nodeId;
+
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
@@ -46,6 +49,14 @@ public class DescribeDBInstancePerformanceRequest extends TeaModel {
     }
     public String getKey() {
         return this.key;
+    }
+
+    public DescribeDBInstancePerformanceRequest setNodeId(String nodeId) {
+        this.nodeId = nodeId;
+        return this;
+    }
+    public String getNodeId() {
+        return this.nodeId;
     }
 
     public DescribeDBInstancePerformanceRequest setResourceOwnerId(Long resourceOwnerId) {

@@ -333,6 +333,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("InstanceNetworkType")
         public String instanceNetworkType;
 
+        @NameInMap("InstructionSetArch")
+        public String instructionSetArch;
+
         @NameInMap("LatestKernelVersion")
         public String latestKernelVersion;
 
@@ -706,6 +709,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public String getInstanceNetworkType() {
             return this.instanceNetworkType;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setInstructionSetArch(String instructionSetArch) {
+            this.instructionSetArch = instructionSetArch;
+            return this;
+        }
+        public String getInstructionSetArch() {
+            return this.instructionSetArch;
         }
 
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setLatestKernelVersion(String latestKernelVersion) {

@@ -76,6 +76,9 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
     }
 
     public static class DescribeDBMiniEngineVersionsResponseBodyMinorVersionItems extends TeaModel {
+        @NameInMap("CommunityMinorVersion")
+        public String communityMinorVersion;
+
         @NameInMap("Engine")
         public String engine;
 
@@ -100,9 +103,20 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
         @NameInMap("StatusDesc")
         public String statusDesc;
 
+        @NameInMap("Tag")
+        public String tag;
+
         public static DescribeDBMiniEngineVersionsResponseBodyMinorVersionItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBMiniEngineVersionsResponseBodyMinorVersionItems self = new DescribeDBMiniEngineVersionsResponseBodyMinorVersionItems();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDBMiniEngineVersionsResponseBodyMinorVersionItems setCommunityMinorVersion(String communityMinorVersion) {
+            this.communityMinorVersion = communityMinorVersion;
+            return this;
+        }
+        public String getCommunityMinorVersion() {
+            return this.communityMinorVersion;
         }
 
         public DescribeDBMiniEngineVersionsResponseBodyMinorVersionItems setEngine(String engine) {
@@ -167,6 +181,14 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
         }
         public String getStatusDesc() {
             return this.statusDesc;
+        }
+
+        public DescribeDBMiniEngineVersionsResponseBodyMinorVersionItems setTag(String tag) {
+            this.tag = tag;
+            return this;
+        }
+        public String getTag() {
+            return this.tag;
         }
 
     }

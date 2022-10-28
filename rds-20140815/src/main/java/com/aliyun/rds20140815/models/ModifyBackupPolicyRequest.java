@@ -40,6 +40,9 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     @NameInMap("EnableBackupLog")
     public String enableBackupLog;
 
+    @NameInMap("EnableIncrementDataBackup")
+    public Boolean enableIncrementDataBackup;
+
     @NameInMap("HighSpaceUsageProtection")
     public String highSpaceUsageProtection;
 
@@ -178,6 +181,14 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     }
     public String getEnableBackupLog() {
         return this.enableBackupLog;
+    }
+
+    public ModifyBackupPolicyRequest setEnableIncrementDataBackup(Boolean enableIncrementDataBackup) {
+        this.enableIncrementDataBackup = enableIncrementDataBackup;
+        return this;
+    }
+    public Boolean getEnableIncrementDataBackup() {
+        return this.enableIncrementDataBackup;
     }
 
     public ModifyBackupPolicyRequest setHighSpaceUsageProtection(String highSpaceUsageProtection) {
