@@ -42,6 +42,80 @@ public class UpdateRulesAttributeRequest extends TeaModel {
         return this.rules;
     }
 
+    public static class UpdateRulesAttributeRequestRulesRuleActionsCorsConfig extends TeaModel {
+        @NameInMap("AllowCredentials")
+        public String allowCredentials;
+
+        @NameInMap("AllowHeaders")
+        public java.util.List<String> allowHeaders;
+
+        @NameInMap("AllowMethods")
+        public java.util.List<String> allowMethods;
+
+        @NameInMap("AllowOrigin")
+        public java.util.List<String> allowOrigin;
+
+        @NameInMap("ExposeHeaders")
+        public java.util.List<String> exposeHeaders;
+
+        @NameInMap("MaxAge")
+        public Long maxAge;
+
+        public static UpdateRulesAttributeRequestRulesRuleActionsCorsConfig build(java.util.Map<String, ?> map) throws Exception {
+            UpdateRulesAttributeRequestRulesRuleActionsCorsConfig self = new UpdateRulesAttributeRequestRulesRuleActionsCorsConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateRulesAttributeRequestRulesRuleActionsCorsConfig setAllowCredentials(String allowCredentials) {
+            this.allowCredentials = allowCredentials;
+            return this;
+        }
+        public String getAllowCredentials() {
+            return this.allowCredentials;
+        }
+
+        public UpdateRulesAttributeRequestRulesRuleActionsCorsConfig setAllowHeaders(java.util.List<String> allowHeaders) {
+            this.allowHeaders = allowHeaders;
+            return this;
+        }
+        public java.util.List<String> getAllowHeaders() {
+            return this.allowHeaders;
+        }
+
+        public UpdateRulesAttributeRequestRulesRuleActionsCorsConfig setAllowMethods(java.util.List<String> allowMethods) {
+            this.allowMethods = allowMethods;
+            return this;
+        }
+        public java.util.List<String> getAllowMethods() {
+            return this.allowMethods;
+        }
+
+        public UpdateRulesAttributeRequestRulesRuleActionsCorsConfig setAllowOrigin(java.util.List<String> allowOrigin) {
+            this.allowOrigin = allowOrigin;
+            return this;
+        }
+        public java.util.List<String> getAllowOrigin() {
+            return this.allowOrigin;
+        }
+
+        public UpdateRulesAttributeRequestRulesRuleActionsCorsConfig setExposeHeaders(java.util.List<String> exposeHeaders) {
+            this.exposeHeaders = exposeHeaders;
+            return this;
+        }
+        public java.util.List<String> getExposeHeaders() {
+            return this.exposeHeaders;
+        }
+
+        public UpdateRulesAttributeRequestRulesRuleActionsCorsConfig setMaxAge(Long maxAge) {
+            this.maxAge = maxAge;
+            return this;
+        }
+        public Long getMaxAge() {
+            return this.maxAge;
+        }
+
+    }
+
     public static class UpdateRulesAttributeRequestRulesRuleActionsFixedResponseConfig extends TeaModel {
         @NameInMap("Content")
         public String content;
@@ -458,6 +532,9 @@ public class UpdateRulesAttributeRequest extends TeaModel {
     }
 
     public static class UpdateRulesAttributeRequestRulesRuleActions extends TeaModel {
+        @NameInMap("CorsConfig")
+        public UpdateRulesAttributeRequestRulesRuleActionsCorsConfig corsConfig;
+
         @NameInMap("FixedResponseConfig")
         public UpdateRulesAttributeRequestRulesRuleActionsFixedResponseConfig fixedResponseConfig;
 
@@ -491,6 +568,14 @@ public class UpdateRulesAttributeRequest extends TeaModel {
         public static UpdateRulesAttributeRequestRulesRuleActions build(java.util.Map<String, ?> map) throws Exception {
             UpdateRulesAttributeRequestRulesRuleActions self = new UpdateRulesAttributeRequestRulesRuleActions();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateRulesAttributeRequestRulesRuleActions setCorsConfig(UpdateRulesAttributeRequestRulesRuleActionsCorsConfig corsConfig) {
+            this.corsConfig = corsConfig;
+            return this;
+        }
+        public UpdateRulesAttributeRequestRulesRuleActionsCorsConfig getCorsConfig() {
+            return this.corsConfig;
         }
 
         public UpdateRulesAttributeRequestRulesRuleActions setFixedResponseConfig(UpdateRulesAttributeRequestRulesRuleActionsFixedResponseConfig fixedResponseConfig) {
