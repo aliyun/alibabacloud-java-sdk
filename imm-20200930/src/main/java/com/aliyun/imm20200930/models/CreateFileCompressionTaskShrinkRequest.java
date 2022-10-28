@@ -10,9 +10,6 @@ public class CreateFileCompressionTaskShrinkRequest extends TeaModel {
     @NameInMap("CredentialConfig")
     public String credentialConfigShrink;
 
-    @NameInMap("ManifestURI")
-    public String manifestURI;
-
     @NameInMap("NotifyTopicName")
     public String notifyTopicName;
 
@@ -21,6 +18,9 @@ public class CreateFileCompressionTaskShrinkRequest extends TeaModel {
 
     @NameInMap("ProjectName")
     public String projectName;
+
+    @NameInMap("SourceManifestURI")
+    public String sourceManifestURI;
 
     @NameInMap("Sources")
     public String sourcesShrink;
@@ -52,14 +52,6 @@ public class CreateFileCompressionTaskShrinkRequest extends TeaModel {
         return this.credentialConfigShrink;
     }
 
-    public CreateFileCompressionTaskShrinkRequest setManifestURI(String manifestURI) {
-        this.manifestURI = manifestURI;
-        return this;
-    }
-    public String getManifestURI() {
-        return this.manifestURI;
-    }
-
     public CreateFileCompressionTaskShrinkRequest setNotifyTopicName(String notifyTopicName) {
         this.notifyTopicName = notifyTopicName;
         return this;
@@ -82,6 +74,14 @@ public class CreateFileCompressionTaskShrinkRequest extends TeaModel {
     }
     public String getProjectName() {
         return this.projectName;
+    }
+
+    public CreateFileCompressionTaskShrinkRequest setSourceManifestURI(String sourceManifestURI) {
+        this.sourceManifestURI = sourceManifestURI;
+        return this;
+    }
+    public String getSourceManifestURI() {
+        return this.sourceManifestURI;
     }
 
     public CreateFileCompressionTaskShrinkRequest setSourcesShrink(String sourcesShrink) {
