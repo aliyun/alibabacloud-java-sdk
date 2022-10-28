@@ -20,7 +20,7 @@ public class SyncInfoRequest extends TeaModel {
     public String createUser;
 
     @NameInMap("Id")
-    public Integer id;
+    public Long id;
 
     @NameInMap("MainId")
     public Long mainId;
@@ -94,11 +94,11 @@ public class SyncInfoRequest extends TeaModel {
         return this.createUser;
     }
 
-    public SyncInfoRequest setId(Integer id) {
+    public SyncInfoRequest setId(Long id) {
         this.id = id;
         return this;
     }
-    public Integer getId() {
+    public Long getId() {
         return this.id;
     }
 

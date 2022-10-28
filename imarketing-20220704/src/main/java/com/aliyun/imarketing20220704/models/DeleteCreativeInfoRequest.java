@@ -11,7 +11,7 @@ public class DeleteCreativeInfoRequest extends TeaModel {
     public String bizId;
 
     @NameInMap("Id")
-    public Integer id;
+    public Long id;
 
     @NameInMap("MainId")
     public Long mainId;
@@ -40,11 +40,11 @@ public class DeleteCreativeInfoRequest extends TeaModel {
         return this.bizId;
     }
 
-    public DeleteCreativeInfoRequest setId(Integer id) {
+    public DeleteCreativeInfoRequest setId(Long id) {
         this.id = id;
         return this;
     }
-    public Integer getId() {
+    public Long getId() {
         return this.id;
     }
 
