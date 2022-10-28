@@ -3058,9 +3058,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.mergeFigureClustersWithOptions(request, runtime);
     }
 
-    public QueryFigureClustersResponse queryFigureClustersWithOptions(QueryFigureClustersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public QueryFigureClustersResponse queryFigureClustersWithOptions(QueryFigureClustersRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        QueryFigureClustersShrinkRequest request = new QueryFigureClustersShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.createTimeRange))) {
+            request.createTimeRangeShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.createTimeRange), "CreateTimeRange", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.updateTimeRange))) {
+            request.updateTimeRangeShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.updateTimeRange), "UpdateTimeRange", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.createTimeRangeShrink)) {
+            query.put("CreateTimeRange", request.createTimeRangeShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.customLabels)) {
             query.put("CustomLabels", request.customLabels);
         }
@@ -3087,6 +3101,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.sort)) {
             query.put("Sort", request.sort);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.updateTimeRangeShrink)) {
+            query.put("UpdateTimeRange", request.updateTimeRangeShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
