@@ -802,10 +802,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CredentialConfig", request.credentialConfigShrink);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.manifestURI)) {
-            query.put("ManifestURI", request.manifestURI);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.notifyTopicName)) {
             query.put("NotifyTopicName", request.notifyTopicName);
         }
@@ -816,6 +812,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.projectName)) {
             query.put("ProjectName", request.projectName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceManifestURI)) {
+            query.put("SourceManifestURI", request.sourceManifestURI);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sourcesShrink)) {
