@@ -4,20 +4,20 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class SetLiveLazyPullStreamInfoConfigRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("AppName")
+    public String appName;
 
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("AppName")
-    public String appName;
-
-    @NameInMap("PullDomainName")
-    public String pullDomainName;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("PullAppName")
     public String pullAppName;
+
+    @NameInMap("PullDomainName")
+    public String pullDomainName;
 
     @NameInMap("PullProtocol")
     public String pullProtocol;
@@ -25,22 +25,6 @@ public class SetLiveLazyPullStreamInfoConfigRequest extends TeaModel {
     public static SetLiveLazyPullStreamInfoConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         SetLiveLazyPullStreamInfoConfigRequest self = new SetLiveLazyPullStreamInfoConfigRequest();
         return TeaModel.build(map, self);
-    }
-
-    public SetLiveLazyPullStreamInfoConfigRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public SetLiveLazyPullStreamInfoConfigRequest setDomainName(String domainName) {
-        this.domainName = domainName;
-        return this;
-    }
-    public String getDomainName() {
-        return this.domainName;
     }
 
     public SetLiveLazyPullStreamInfoConfigRequest setAppName(String appName) {
@@ -51,12 +35,20 @@ public class SetLiveLazyPullStreamInfoConfigRequest extends TeaModel {
         return this.appName;
     }
 
-    public SetLiveLazyPullStreamInfoConfigRequest setPullDomainName(String pullDomainName) {
-        this.pullDomainName = pullDomainName;
+    public SetLiveLazyPullStreamInfoConfigRequest setDomainName(String domainName) {
+        this.domainName = domainName;
         return this;
     }
-    public String getPullDomainName() {
-        return this.pullDomainName;
+    public String getDomainName() {
+        return this.domainName;
+    }
+
+    public SetLiveLazyPullStreamInfoConfigRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public SetLiveLazyPullStreamInfoConfigRequest setPullAppName(String pullAppName) {
@@ -65,6 +57,14 @@ public class SetLiveLazyPullStreamInfoConfigRequest extends TeaModel {
     }
     public String getPullAppName() {
         return this.pullAppName;
+    }
+
+    public SetLiveLazyPullStreamInfoConfigRequest setPullDomainName(String pullDomainName) {
+        this.pullDomainName = pullDomainName;
+        return this;
+    }
+    public String getPullDomainName() {
+        return this.pullDomainName;
     }
 
     public SetLiveLazyPullStreamInfoConfigRequest setPullProtocol(String pullProtocol) {

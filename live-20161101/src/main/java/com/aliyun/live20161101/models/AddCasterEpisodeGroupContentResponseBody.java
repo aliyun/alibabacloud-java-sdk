@@ -4,26 +4,26 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class AddCasterEpisodeGroupContentResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("ItemIds")
+    public AddCasterEpisodeGroupContentResponseBodyItemIds itemIds;
 
     @NameInMap("ProgramId")
     public String programId;
 
-    @NameInMap("ItemIds")
-    public AddCasterEpisodeGroupContentResponseBodyItemIds itemIds;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static AddCasterEpisodeGroupContentResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AddCasterEpisodeGroupContentResponseBody self = new AddCasterEpisodeGroupContentResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public AddCasterEpisodeGroupContentResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public AddCasterEpisodeGroupContentResponseBody setItemIds(AddCasterEpisodeGroupContentResponseBodyItemIds itemIds) {
+        this.itemIds = itemIds;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public AddCasterEpisodeGroupContentResponseBodyItemIds getItemIds() {
+        return this.itemIds;
     }
 
     public AddCasterEpisodeGroupContentResponseBody setProgramId(String programId) {
@@ -34,12 +34,12 @@ public class AddCasterEpisodeGroupContentResponseBody extends TeaModel {
         return this.programId;
     }
 
-    public AddCasterEpisodeGroupContentResponseBody setItemIds(AddCasterEpisodeGroupContentResponseBodyItemIds itemIds) {
-        this.itemIds = itemIds;
+    public AddCasterEpisodeGroupContentResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public AddCasterEpisodeGroupContentResponseBodyItemIds getItemIds() {
-        return this.itemIds;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class AddCasterEpisodeGroupContentResponseBodyItemIds extends TeaModel {

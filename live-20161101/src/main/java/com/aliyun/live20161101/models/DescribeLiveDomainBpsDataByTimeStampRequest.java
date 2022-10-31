@@ -4,14 +4,8 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveDomainBpsDataByTimeStampRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("DomainName")
     public String domainName;
-
-    @NameInMap("TimePoint")
-    public String timePoint;
 
     @NameInMap("IspNames")
     public String ispNames;
@@ -19,17 +13,15 @@ public class DescribeLiveDomainBpsDataByTimeStampRequest extends TeaModel {
     @NameInMap("LocationNames")
     public String locationNames;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("TimePoint")
+    public String timePoint;
+
     public static DescribeLiveDomainBpsDataByTimeStampRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveDomainBpsDataByTimeStampRequest self = new DescribeLiveDomainBpsDataByTimeStampRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeLiveDomainBpsDataByTimeStampRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeLiveDomainBpsDataByTimeStampRequest setDomainName(String domainName) {
@@ -38,14 +30,6 @@ public class DescribeLiveDomainBpsDataByTimeStampRequest extends TeaModel {
     }
     public String getDomainName() {
         return this.domainName;
-    }
-
-    public DescribeLiveDomainBpsDataByTimeStampRequest setTimePoint(String timePoint) {
-        this.timePoint = timePoint;
-        return this;
-    }
-    public String getTimePoint() {
-        return this.timePoint;
     }
 
     public DescribeLiveDomainBpsDataByTimeStampRequest setIspNames(String ispNames) {
@@ -62,6 +46,22 @@ public class DescribeLiveDomainBpsDataByTimeStampRequest extends TeaModel {
     }
     public String getLocationNames() {
         return this.locationNames;
+    }
+
+    public DescribeLiveDomainBpsDataByTimeStampRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeLiveDomainBpsDataByTimeStampRequest setTimePoint(String timePoint) {
+        this.timePoint = timePoint;
+        return this;
+    }
+    public String getTimePoint() {
+        return this.timePoint;
     }
 
 }

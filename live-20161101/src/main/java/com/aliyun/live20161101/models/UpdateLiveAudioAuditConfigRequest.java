@@ -4,17 +4,14 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class UpdateLiveAudioAuditConfigRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("DomainName")
-    public String domainName;
-
     @NameInMap("AppName")
     public String appName;
 
-    @NameInMap("StreamName")
-    public String streamName;
+    @NameInMap("BizType")
+    public String bizType;
+
+    @NameInMap("DomainName")
+    public String domainName;
 
     @NameInMap("OssBucket")
     public String ossBucket;
@@ -25,28 +22,15 @@ public class UpdateLiveAudioAuditConfigRequest extends TeaModel {
     @NameInMap("OssObject")
     public String ossObject;
 
-    @NameInMap("BizType")
-    public String bizType;
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("StreamName")
+    public String streamName;
 
     public static UpdateLiveAudioAuditConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateLiveAudioAuditConfigRequest self = new UpdateLiveAudioAuditConfigRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateLiveAudioAuditConfigRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public UpdateLiveAudioAuditConfigRequest setDomainName(String domainName) {
-        this.domainName = domainName;
-        return this;
-    }
-    public String getDomainName() {
-        return this.domainName;
     }
 
     public UpdateLiveAudioAuditConfigRequest setAppName(String appName) {
@@ -57,12 +41,20 @@ public class UpdateLiveAudioAuditConfigRequest extends TeaModel {
         return this.appName;
     }
 
-    public UpdateLiveAudioAuditConfigRequest setStreamName(String streamName) {
-        this.streamName = streamName;
+    public UpdateLiveAudioAuditConfigRequest setBizType(String bizType) {
+        this.bizType = bizType;
         return this;
     }
-    public String getStreamName() {
-        return this.streamName;
+    public String getBizType() {
+        return this.bizType;
+    }
+
+    public UpdateLiveAudioAuditConfigRequest setDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String getDomainName() {
+        return this.domainName;
     }
 
     public UpdateLiveAudioAuditConfigRequest setOssBucket(String ossBucket) {
@@ -89,12 +81,20 @@ public class UpdateLiveAudioAuditConfigRequest extends TeaModel {
         return this.ossObject;
     }
 
-    public UpdateLiveAudioAuditConfigRequest setBizType(String bizType) {
-        this.bizType = bizType;
+    public UpdateLiveAudioAuditConfigRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getBizType() {
-        return this.bizType;
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public UpdateLiveAudioAuditConfigRequest setStreamName(String streamName) {
+        this.streamName = streamName;
+        return this;
+    }
+    public String getStreamName() {
+        return this.streamName;
     }
 
 }

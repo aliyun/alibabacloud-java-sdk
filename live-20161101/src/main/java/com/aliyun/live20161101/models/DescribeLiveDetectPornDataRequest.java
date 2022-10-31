@@ -4,71 +4,39 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveDetectPornDataRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("App")
+    public String app;
 
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("StartTime")
-    public String startTime;
-
     @NameInMap("EndTime")
     public String endTime;
-
-    @NameInMap("App")
-    public String app;
-
-    @NameInMap("Stream")
-    public String stream;
 
     @NameInMap("Fee")
     public String fee;
 
-    @NameInMap("Scene")
-    public String scene;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("Region")
     public String region;
 
+    @NameInMap("Scene")
+    public String scene;
+
     @NameInMap("SplitBy")
     public String splitBy;
+
+    @NameInMap("StartTime")
+    public String startTime;
+
+    @NameInMap("Stream")
+    public String stream;
 
     public static DescribeLiveDetectPornDataRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveDetectPornDataRequest self = new DescribeLiveDetectPornDataRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeLiveDetectPornDataRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public DescribeLiveDetectPornDataRequest setDomainName(String domainName) {
-        this.domainName = domainName;
-        return this;
-    }
-    public String getDomainName() {
-        return this.domainName;
-    }
-
-    public DescribeLiveDetectPornDataRequest setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
-    public DescribeLiveDetectPornDataRequest setEndTime(String endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public String getEndTime() {
-        return this.endTime;
     }
 
     public DescribeLiveDetectPornDataRequest setApp(String app) {
@@ -79,12 +47,20 @@ public class DescribeLiveDetectPornDataRequest extends TeaModel {
         return this.app;
     }
 
-    public DescribeLiveDetectPornDataRequest setStream(String stream) {
-        this.stream = stream;
+    public DescribeLiveDetectPornDataRequest setDomainName(String domainName) {
+        this.domainName = domainName;
         return this;
     }
-    public String getStream() {
-        return this.stream;
+    public String getDomainName() {
+        return this.domainName;
+    }
+
+    public DescribeLiveDetectPornDataRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
     }
 
     public DescribeLiveDetectPornDataRequest setFee(String fee) {
@@ -95,12 +71,12 @@ public class DescribeLiveDetectPornDataRequest extends TeaModel {
         return this.fee;
     }
 
-    public DescribeLiveDetectPornDataRequest setScene(String scene) {
-        this.scene = scene;
+    public DescribeLiveDetectPornDataRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getScene() {
-        return this.scene;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeLiveDetectPornDataRequest setRegion(String region) {
@@ -111,12 +87,36 @@ public class DescribeLiveDetectPornDataRequest extends TeaModel {
         return this.region;
     }
 
+    public DescribeLiveDetectPornDataRequest setScene(String scene) {
+        this.scene = scene;
+        return this;
+    }
+    public String getScene() {
+        return this.scene;
+    }
+
     public DescribeLiveDetectPornDataRequest setSplitBy(String splitBy) {
         this.splitBy = splitBy;
         return this;
     }
     public String getSplitBy() {
         return this.splitBy;
+    }
+
+    public DescribeLiveDetectPornDataRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
+    }
+
+    public DescribeLiveDetectPornDataRequest setStream(String stream) {
+        this.stream = stream;
+        return this;
+    }
+    public String getStream() {
+        return this.stream;
     }
 
 }

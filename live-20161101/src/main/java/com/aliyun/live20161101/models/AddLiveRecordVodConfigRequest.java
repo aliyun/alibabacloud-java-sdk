@@ -4,14 +4,26 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class AddLiveRecordVodConfigRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("AppName")
+    public String appName;
+
+    @NameInMap("AutoCompose")
+    public String autoCompose;
+
+    @NameInMap("ComposeVodTranscodeGroupId")
+    public String composeVodTranscodeGroupId;
+
+    @NameInMap("CycleDuration")
+    public Integer cycleDuration;
 
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("AppName")
-    public String appName;
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("StorageLocation")
+    public String storageLocation;
 
     @NameInMap("StreamName")
     public String streamName;
@@ -19,29 +31,41 @@ public class AddLiveRecordVodConfigRequest extends TeaModel {
     @NameInMap("VodTranscodeGroupId")
     public String vodTranscodeGroupId;
 
-    @NameInMap("CycleDuration")
-    public Integer cycleDuration;
-
-    @NameInMap("AutoCompose")
-    public String autoCompose;
-
-    @NameInMap("StorageLocation")
-    public String storageLocation;
-
-    @NameInMap("ComposeVodTranscodeGroupId")
-    public String composeVodTranscodeGroupId;
-
     public static AddLiveRecordVodConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         AddLiveRecordVodConfigRequest self = new AddLiveRecordVodConfigRequest();
         return TeaModel.build(map, self);
     }
 
-    public AddLiveRecordVodConfigRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public AddLiveRecordVodConfigRequest setAppName(String appName) {
+        this.appName = appName;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public String getAppName() {
+        return this.appName;
+    }
+
+    public AddLiveRecordVodConfigRequest setAutoCompose(String autoCompose) {
+        this.autoCompose = autoCompose;
+        return this;
+    }
+    public String getAutoCompose() {
+        return this.autoCompose;
+    }
+
+    public AddLiveRecordVodConfigRequest setComposeVodTranscodeGroupId(String composeVodTranscodeGroupId) {
+        this.composeVodTranscodeGroupId = composeVodTranscodeGroupId;
+        return this;
+    }
+    public String getComposeVodTranscodeGroupId() {
+        return this.composeVodTranscodeGroupId;
+    }
+
+    public AddLiveRecordVodConfigRequest setCycleDuration(Integer cycleDuration) {
+        this.cycleDuration = cycleDuration;
+        return this;
+    }
+    public Integer getCycleDuration() {
+        return this.cycleDuration;
     }
 
     public AddLiveRecordVodConfigRequest setDomainName(String domainName) {
@@ -52,12 +76,20 @@ public class AddLiveRecordVodConfigRequest extends TeaModel {
         return this.domainName;
     }
 
-    public AddLiveRecordVodConfigRequest setAppName(String appName) {
-        this.appName = appName;
+    public AddLiveRecordVodConfigRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getAppName() {
-        return this.appName;
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public AddLiveRecordVodConfigRequest setStorageLocation(String storageLocation) {
+        this.storageLocation = storageLocation;
+        return this;
+    }
+    public String getStorageLocation() {
+        return this.storageLocation;
     }
 
     public AddLiveRecordVodConfigRequest setStreamName(String streamName) {
@@ -74,38 +106,6 @@ public class AddLiveRecordVodConfigRequest extends TeaModel {
     }
     public String getVodTranscodeGroupId() {
         return this.vodTranscodeGroupId;
-    }
-
-    public AddLiveRecordVodConfigRequest setCycleDuration(Integer cycleDuration) {
-        this.cycleDuration = cycleDuration;
-        return this;
-    }
-    public Integer getCycleDuration() {
-        return this.cycleDuration;
-    }
-
-    public AddLiveRecordVodConfigRequest setAutoCompose(String autoCompose) {
-        this.autoCompose = autoCompose;
-        return this;
-    }
-    public String getAutoCompose() {
-        return this.autoCompose;
-    }
-
-    public AddLiveRecordVodConfigRequest setStorageLocation(String storageLocation) {
-        this.storageLocation = storageLocation;
-        return this;
-    }
-    public String getStorageLocation() {
-        return this.storageLocation;
-    }
-
-    public AddLiveRecordVodConfigRequest setComposeVodTranscodeGroupId(String composeVodTranscodeGroupId) {
-        this.composeVodTranscodeGroupId = composeVodTranscodeGroupId;
-        return this;
-    }
-    public String getComposeVodTranscodeGroupId() {
-        return this.composeVodTranscodeGroupId;
     }
 
 }

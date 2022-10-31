@@ -4,23 +4,15 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveLazyPullStreamConfigResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("LiveLazyPullConfigList")
     public DescribeLiveLazyPullStreamConfigResponseBodyLiveLazyPullConfigList liveLazyPullConfigList;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeLiveLazyPullStreamConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveLazyPullStreamConfigResponseBody self = new DescribeLiveLazyPullStreamConfigResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeLiveLazyPullStreamConfigResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeLiveLazyPullStreamConfigResponseBody setLiveLazyPullConfigList(DescribeLiveLazyPullStreamConfigResponseBodyLiveLazyPullConfigList liveLazyPullConfigList) {
@@ -31,21 +23,29 @@ public class DescribeLiveLazyPullStreamConfigResponseBody extends TeaModel {
         return this.liveLazyPullConfigList;
     }
 
+    public DescribeLiveLazyPullStreamConfigResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeLiveLazyPullStreamConfigResponseBodyLiveLazyPullConfigListLiveLazyPullConfig extends TeaModel {
         @NameInMap("AppName")
         public String appName;
 
+        @NameInMap("DomainName")
+        public String domainName;
+
         @NameInMap("PullAppName")
         public String pullAppName;
-
-        @NameInMap("PullProtocol")
-        public String pullProtocol;
 
         @NameInMap("PullDomainName")
         public String pullDomainName;
 
-        @NameInMap("DomainName")
-        public String domainName;
+        @NameInMap("PullProtocol")
+        public String pullProtocol;
 
         public static DescribeLiveLazyPullStreamConfigResponseBodyLiveLazyPullConfigListLiveLazyPullConfig build(java.util.Map<String, ?> map) throws Exception {
             DescribeLiveLazyPullStreamConfigResponseBodyLiveLazyPullConfigListLiveLazyPullConfig self = new DescribeLiveLazyPullStreamConfigResponseBodyLiveLazyPullConfigListLiveLazyPullConfig();
@@ -60,20 +60,20 @@ public class DescribeLiveLazyPullStreamConfigResponseBody extends TeaModel {
             return this.appName;
         }
 
+        public DescribeLiveLazyPullStreamConfigResponseBodyLiveLazyPullConfigListLiveLazyPullConfig setDomainName(String domainName) {
+            this.domainName = domainName;
+            return this;
+        }
+        public String getDomainName() {
+            return this.domainName;
+        }
+
         public DescribeLiveLazyPullStreamConfigResponseBodyLiveLazyPullConfigListLiveLazyPullConfig setPullAppName(String pullAppName) {
             this.pullAppName = pullAppName;
             return this;
         }
         public String getPullAppName() {
             return this.pullAppName;
-        }
-
-        public DescribeLiveLazyPullStreamConfigResponseBodyLiveLazyPullConfigListLiveLazyPullConfig setPullProtocol(String pullProtocol) {
-            this.pullProtocol = pullProtocol;
-            return this;
-        }
-        public String getPullProtocol() {
-            return this.pullProtocol;
         }
 
         public DescribeLiveLazyPullStreamConfigResponseBodyLiveLazyPullConfigListLiveLazyPullConfig setPullDomainName(String pullDomainName) {
@@ -84,12 +84,12 @@ public class DescribeLiveLazyPullStreamConfigResponseBody extends TeaModel {
             return this.pullDomainName;
         }
 
-        public DescribeLiveLazyPullStreamConfigResponseBodyLiveLazyPullConfigListLiveLazyPullConfig setDomainName(String domainName) {
-            this.domainName = domainName;
+        public DescribeLiveLazyPullStreamConfigResponseBodyLiveLazyPullConfigListLiveLazyPullConfig setPullProtocol(String pullProtocol) {
+            this.pullProtocol = pullProtocol;
             return this;
         }
-        public String getDomainName() {
-            return this.domainName;
+        public String getPullProtocol() {
+            return this.pullProtocol;
         }
 
     }

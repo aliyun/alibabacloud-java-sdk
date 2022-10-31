@@ -43,47 +43,42 @@ public class DescribeCasterVideoResourcesResponseBody extends TeaModel {
     }
 
     public static class DescribeCasterVideoResourcesResponseBodyVideoResourcesVideoResource extends TeaModel {
-        @NameInMap("EndOffset")
-        public Integer endOffset;
-
         @NameInMap("BeginOffset")
         public Integer beginOffset;
 
-        @NameInMap("PtsCallbackInterval")
-        public Integer ptsCallbackInterval;
+        @NameInMap("EndOffset")
+        public Integer endOffset;
 
-        @NameInMap("MaterialId")
-        public String materialId;
-
-        @NameInMap("LocationId")
-        public String locationId;
+        @NameInMap("FlvUrl")
+        public String flvUrl;
 
         @NameInMap("LiveStreamUrl")
         public String liveStreamUrl;
 
-        @NameInMap("VodUrl")
-        public String vodUrl;
+        @NameInMap("LocationId")
+        public String locationId;
 
-        @NameInMap("ResourceId")
-        public String resourceId;
+        @NameInMap("MaterialId")
+        public String materialId;
+
+        @NameInMap("PtsCallbackInterval")
+        public Integer ptsCallbackInterval;
 
         @NameInMap("RepeatNum")
         public Integer repeatNum;
 
+        @NameInMap("ResourceId")
+        public String resourceId;
+
         @NameInMap("ResourceName")
         public String resourceName;
+
+        @NameInMap("VodUrl")
+        public String vodUrl;
 
         public static DescribeCasterVideoResourcesResponseBodyVideoResourcesVideoResource build(java.util.Map<String, ?> map) throws Exception {
             DescribeCasterVideoResourcesResponseBodyVideoResourcesVideoResource self = new DescribeCasterVideoResourcesResponseBodyVideoResourcesVideoResource();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeCasterVideoResourcesResponseBodyVideoResourcesVideoResource setEndOffset(Integer endOffset) {
-            this.endOffset = endOffset;
-            return this;
-        }
-        public Integer getEndOffset() {
-            return this.endOffset;
         }
 
         public DescribeCasterVideoResourcesResponseBodyVideoResourcesVideoResource setBeginOffset(Integer beginOffset) {
@@ -94,28 +89,20 @@ public class DescribeCasterVideoResourcesResponseBody extends TeaModel {
             return this.beginOffset;
         }
 
-        public DescribeCasterVideoResourcesResponseBodyVideoResourcesVideoResource setPtsCallbackInterval(Integer ptsCallbackInterval) {
-            this.ptsCallbackInterval = ptsCallbackInterval;
+        public DescribeCasterVideoResourcesResponseBodyVideoResourcesVideoResource setEndOffset(Integer endOffset) {
+            this.endOffset = endOffset;
             return this;
         }
-        public Integer getPtsCallbackInterval() {
-            return this.ptsCallbackInterval;
+        public Integer getEndOffset() {
+            return this.endOffset;
         }
 
-        public DescribeCasterVideoResourcesResponseBodyVideoResourcesVideoResource setMaterialId(String materialId) {
-            this.materialId = materialId;
+        public DescribeCasterVideoResourcesResponseBodyVideoResourcesVideoResource setFlvUrl(String flvUrl) {
+            this.flvUrl = flvUrl;
             return this;
         }
-        public String getMaterialId() {
-            return this.materialId;
-        }
-
-        public DescribeCasterVideoResourcesResponseBodyVideoResourcesVideoResource setLocationId(String locationId) {
-            this.locationId = locationId;
-            return this;
-        }
-        public String getLocationId() {
-            return this.locationId;
+        public String getFlvUrl() {
+            return this.flvUrl;
         }
 
         public DescribeCasterVideoResourcesResponseBodyVideoResourcesVideoResource setLiveStreamUrl(String liveStreamUrl) {
@@ -126,20 +113,28 @@ public class DescribeCasterVideoResourcesResponseBody extends TeaModel {
             return this.liveStreamUrl;
         }
 
-        public DescribeCasterVideoResourcesResponseBodyVideoResourcesVideoResource setVodUrl(String vodUrl) {
-            this.vodUrl = vodUrl;
+        public DescribeCasterVideoResourcesResponseBodyVideoResourcesVideoResource setLocationId(String locationId) {
+            this.locationId = locationId;
             return this;
         }
-        public String getVodUrl() {
-            return this.vodUrl;
+        public String getLocationId() {
+            return this.locationId;
         }
 
-        public DescribeCasterVideoResourcesResponseBodyVideoResourcesVideoResource setResourceId(String resourceId) {
-            this.resourceId = resourceId;
+        public DescribeCasterVideoResourcesResponseBodyVideoResourcesVideoResource setMaterialId(String materialId) {
+            this.materialId = materialId;
             return this;
         }
-        public String getResourceId() {
-            return this.resourceId;
+        public String getMaterialId() {
+            return this.materialId;
+        }
+
+        public DescribeCasterVideoResourcesResponseBodyVideoResourcesVideoResource setPtsCallbackInterval(Integer ptsCallbackInterval) {
+            this.ptsCallbackInterval = ptsCallbackInterval;
+            return this;
+        }
+        public Integer getPtsCallbackInterval() {
+            return this.ptsCallbackInterval;
         }
 
         public DescribeCasterVideoResourcesResponseBodyVideoResourcesVideoResource setRepeatNum(Integer repeatNum) {
@@ -150,12 +145,28 @@ public class DescribeCasterVideoResourcesResponseBody extends TeaModel {
             return this.repeatNum;
         }
 
+        public DescribeCasterVideoResourcesResponseBodyVideoResourcesVideoResource setResourceId(String resourceId) {
+            this.resourceId = resourceId;
+            return this;
+        }
+        public String getResourceId() {
+            return this.resourceId;
+        }
+
         public DescribeCasterVideoResourcesResponseBodyVideoResourcesVideoResource setResourceName(String resourceName) {
             this.resourceName = resourceName;
             return this;
         }
         public String getResourceName() {
             return this.resourceName;
+        }
+
+        public DescribeCasterVideoResourcesResponseBodyVideoResourcesVideoResource setVodUrl(String vodUrl) {
+            this.vodUrl = vodUrl;
+            return this;
+        }
+        public String getVodUrl() {
+            return this.vodUrl;
         }
 
     }

@@ -4,18 +4,26 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class StartPlaylistResponseBody extends TeaModel {
+    @NameInMap("ProgramId")
+    public String programId;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("StreamInfo")
     public StartPlaylistResponseBodyStreamInfo streamInfo;
 
-    @NameInMap("ProgramId")
-    public String programId;
-
     public static StartPlaylistResponseBody build(java.util.Map<String, ?> map) throws Exception {
         StartPlaylistResponseBody self = new StartPlaylistResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public StartPlaylistResponseBody setProgramId(String programId) {
+        this.programId = programId;
+        return this;
+    }
+    public String getProgramId() {
+        return this.programId;
     }
 
     public StartPlaylistResponseBody setRequestId(String requestId) {
@@ -34,18 +42,7 @@ public class StartPlaylistResponseBody extends TeaModel {
         return this.streamInfo;
     }
 
-    public StartPlaylistResponseBody setProgramId(String programId) {
-        this.programId = programId;
-        return this;
-    }
-    public String getProgramId() {
-        return this.programId;
-    }
-
     public static class StartPlaylistResponseBodyStreamInfoStreamsStream extends TeaModel {
-        @NameInMap("Quality")
-        public String quality;
-
         @NameInMap("PullFlvUrl")
         public String pullFlvUrl;
 
@@ -55,17 +52,12 @@ public class StartPlaylistResponseBody extends TeaModel {
         @NameInMap("PullRtmpUrl")
         public String pullRtmpUrl;
 
+        @NameInMap("Quality")
+        public String quality;
+
         public static StartPlaylistResponseBodyStreamInfoStreamsStream build(java.util.Map<String, ?> map) throws Exception {
             StartPlaylistResponseBodyStreamInfoStreamsStream self = new StartPlaylistResponseBodyStreamInfoStreamsStream();
             return TeaModel.build(map, self);
-        }
-
-        public StartPlaylistResponseBodyStreamInfoStreamsStream setQuality(String quality) {
-            this.quality = quality;
-            return this;
-        }
-        public String getQuality() {
-            return this.quality;
         }
 
         public StartPlaylistResponseBodyStreamInfoStreamsStream setPullFlvUrl(String pullFlvUrl) {
@@ -90,6 +82,14 @@ public class StartPlaylistResponseBody extends TeaModel {
         }
         public String getPullRtmpUrl() {
             return this.pullRtmpUrl;
+        }
+
+        public StartPlaylistResponseBodyStreamInfoStreamsStream setQuality(String quality) {
+            this.quality = quality;
+            return this;
+        }
+        public String getQuality() {
+            return this.quality;
         }
 
     }
@@ -117,14 +117,14 @@ public class StartPlaylistResponseBody extends TeaModel {
         @NameInMap("AppName")
         public String appName;
 
+        @NameInMap("DomainName")
+        public String domainName;
+
         @NameInMap("StreamName")
         public String streamName;
 
         @NameInMap("Streams")
         public StartPlaylistResponseBodyStreamInfoStreams streams;
-
-        @NameInMap("DomainName")
-        public String domainName;
 
         public static StartPlaylistResponseBodyStreamInfo build(java.util.Map<String, ?> map) throws Exception {
             StartPlaylistResponseBodyStreamInfo self = new StartPlaylistResponseBodyStreamInfo();
@@ -137,6 +137,14 @@ public class StartPlaylistResponseBody extends TeaModel {
         }
         public String getAppName() {
             return this.appName;
+        }
+
+        public StartPlaylistResponseBodyStreamInfo setDomainName(String domainName) {
+            this.domainName = domainName;
+            return this;
+        }
+        public String getDomainName() {
+            return this.domainName;
         }
 
         public StartPlaylistResponseBodyStreamInfo setStreamName(String streamName) {
@@ -153,14 +161,6 @@ public class StartPlaylistResponseBody extends TeaModel {
         }
         public StartPlaylistResponseBodyStreamInfoStreams getStreams() {
             return this.streams;
-        }
-
-        public StartPlaylistResponseBodyStreamInfo setDomainName(String domainName) {
-            this.domainName = domainName;
-            return this;
-        }
-        public String getDomainName() {
-            return this.domainName;
         }
 
     }

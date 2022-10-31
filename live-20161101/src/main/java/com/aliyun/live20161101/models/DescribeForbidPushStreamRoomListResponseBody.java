@@ -4,37 +4,21 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeForbidPushStreamRoomListResponseBody extends TeaModel {
-    @NameInMap("TotalNum")
-    public Integer totalNum;
-
-    @NameInMap("TotalPage")
-    public Integer totalPage;
-
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("RoomList")
     public java.util.List<DescribeForbidPushStreamRoomListResponseBodyRoomList> roomList;
 
+    @NameInMap("TotalNum")
+    public Integer totalNum;
+
+    @NameInMap("TotalPage")
+    public Integer totalPage;
+
     public static DescribeForbidPushStreamRoomListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeForbidPushStreamRoomListResponseBody self = new DescribeForbidPushStreamRoomListResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeForbidPushStreamRoomListResponseBody setTotalNum(Integer totalNum) {
-        this.totalNum = totalNum;
-        return this;
-    }
-    public Integer getTotalNum() {
-        return this.totalNum;
-    }
-
-    public DescribeForbidPushStreamRoomListResponseBody setTotalPage(Integer totalPage) {
-        this.totalPage = totalPage;
-        return this;
-    }
-    public Integer getTotalPage() {
-        return this.totalPage;
     }
 
     public DescribeForbidPushStreamRoomListResponseBody setRequestId(String requestId) {
@@ -53,12 +37,28 @@ public class DescribeForbidPushStreamRoomListResponseBody extends TeaModel {
         return this.roomList;
     }
 
-    public static class DescribeForbidPushStreamRoomListResponseBodyRoomList extends TeaModel {
-        @NameInMap("OpEndTime")
-        public String opEndTime;
+    public DescribeForbidPushStreamRoomListResponseBody setTotalNum(Integer totalNum) {
+        this.totalNum = totalNum;
+        return this;
+    }
+    public Integer getTotalNum() {
+        return this.totalNum;
+    }
 
+    public DescribeForbidPushStreamRoomListResponseBody setTotalPage(Integer totalPage) {
+        this.totalPage = totalPage;
+        return this;
+    }
+    public Integer getTotalPage() {
+        return this.totalPage;
+    }
+
+    public static class DescribeForbidPushStreamRoomListResponseBodyRoomList extends TeaModel {
         @NameInMap("AnchorId")
         public String anchorId;
+
+        @NameInMap("OpEndTime")
+        public String opEndTime;
 
         @NameInMap("OpStartTime")
         public String opStartTime;
@@ -71,20 +71,20 @@ public class DescribeForbidPushStreamRoomListResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeForbidPushStreamRoomListResponseBodyRoomList setOpEndTime(String opEndTime) {
-            this.opEndTime = opEndTime;
-            return this;
-        }
-        public String getOpEndTime() {
-            return this.opEndTime;
-        }
-
         public DescribeForbidPushStreamRoomListResponseBodyRoomList setAnchorId(String anchorId) {
             this.anchorId = anchorId;
             return this;
         }
         public String getAnchorId() {
             return this.anchorId;
+        }
+
+        public DescribeForbidPushStreamRoomListResponseBodyRoomList setOpEndTime(String opEndTime) {
+            this.opEndTime = opEndTime;
+            return this;
+        }
+        public String getOpEndTime() {
+            return this.opEndTime;
         }
 
         public DescribeForbidPushStreamRoomListResponseBodyRoomList setOpStartTime(String opStartTime) {

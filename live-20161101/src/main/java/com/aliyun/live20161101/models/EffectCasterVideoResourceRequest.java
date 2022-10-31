@@ -4,29 +4,21 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class EffectCasterVideoResourceRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("CasterId")
     public String casterId;
 
-    @NameInMap("SceneId")
-    public String sceneId;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("ResourceId")
     public String resourceId;
 
+    @NameInMap("SceneId")
+    public String sceneId;
+
     public static EffectCasterVideoResourceRequest build(java.util.Map<String, ?> map) throws Exception {
         EffectCasterVideoResourceRequest self = new EffectCasterVideoResourceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public EffectCasterVideoResourceRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public EffectCasterVideoResourceRequest setCasterId(String casterId) {
@@ -37,12 +29,12 @@ public class EffectCasterVideoResourceRequest extends TeaModel {
         return this.casterId;
     }
 
-    public EffectCasterVideoResourceRequest setSceneId(String sceneId) {
-        this.sceneId = sceneId;
+    public EffectCasterVideoResourceRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getSceneId() {
-        return this.sceneId;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public EffectCasterVideoResourceRequest setResourceId(String resourceId) {
@@ -51,6 +43,14 @@ public class EffectCasterVideoResourceRequest extends TeaModel {
     }
     public String getResourceId() {
         return this.resourceId;
+    }
+
+    public EffectCasterVideoResourceRequest setSceneId(String sceneId) {
+        this.sceneId = sceneId;
+        return this;
+    }
+    public String getSceneId() {
+        return this.sceneId;
     }
 
 }

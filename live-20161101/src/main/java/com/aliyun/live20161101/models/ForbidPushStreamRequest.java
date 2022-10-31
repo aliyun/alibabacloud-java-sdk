@@ -4,11 +4,14 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class ForbidPushStreamRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("AppId")
     public String appId;
+
+    @NameInMap("EndTime")
+    public String endTime;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("RoomId")
     public String roomId;
@@ -16,20 +19,9 @@ public class ForbidPushStreamRequest extends TeaModel {
     @NameInMap("UserData")
     public String userData;
 
-    @NameInMap("EndTime")
-    public String endTime;
-
     public static ForbidPushStreamRequest build(java.util.Map<String, ?> map) throws Exception {
         ForbidPushStreamRequest self = new ForbidPushStreamRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ForbidPushStreamRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public ForbidPushStreamRequest setAppId(String appId) {
@@ -38,6 +30,22 @@ public class ForbidPushStreamRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
+    }
+
+    public ForbidPushStreamRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    public ForbidPushStreamRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public ForbidPushStreamRequest setRoomId(String roomId) {
@@ -54,14 +62,6 @@ public class ForbidPushStreamRequest extends TeaModel {
     }
     public String getUserData() {
         return this.userData;
-    }
-
-    public ForbidPushStreamRequest setEndTime(String endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public String getEndTime() {
-        return this.endTime;
     }
 
 }

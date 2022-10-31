@@ -4,21 +4,37 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class GetMultiRateConfigListResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
+    @NameInMap("GroupInfo")
+    public GetMultiRateConfigListResponseBodyGroupInfo groupInfo;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("GroupInfo")
-    public GetMultiRateConfigListResponseBodyGroupInfo groupInfo;
-
-    @NameInMap("Code")
-    public Integer code;
-
     public static GetMultiRateConfigListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetMultiRateConfigListResponseBody self = new GetMultiRateConfigListResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetMultiRateConfigListResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
+    }
+
+    public GetMultiRateConfigListResponseBody setGroupInfo(GetMultiRateConfigListResponseBodyGroupInfo groupInfo) {
+        this.groupInfo = groupInfo;
+        return this;
+    }
+    public GetMultiRateConfigListResponseBodyGroupInfo getGroupInfo() {
+        return this.groupInfo;
     }
 
     public GetMultiRateConfigListResponseBody setMessage(String message) {
@@ -37,26 +53,7 @@ public class GetMultiRateConfigListResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetMultiRateConfigListResponseBody setGroupInfo(GetMultiRateConfigListResponseBodyGroupInfo groupInfo) {
-        this.groupInfo = groupInfo;
-        return this;
-    }
-    public GetMultiRateConfigListResponseBodyGroupInfo getGroupInfo() {
-        return this.groupInfo;
-    }
-
-    public GetMultiRateConfigListResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
-    }
-
     public static class GetMultiRateConfigListResponseBodyGroupInfoInfo extends TeaModel {
-        @NameInMap("GroupId")
-        public String groupId;
-
         @NameInMap("App")
         public String app;
 
@@ -66,17 +63,12 @@ public class GetMultiRateConfigListResponseBody extends TeaModel {
         @NameInMap("Count")
         public Integer count;
 
+        @NameInMap("GroupId")
+        public String groupId;
+
         public static GetMultiRateConfigListResponseBodyGroupInfoInfo build(java.util.Map<String, ?> map) throws Exception {
             GetMultiRateConfigListResponseBodyGroupInfoInfo self = new GetMultiRateConfigListResponseBodyGroupInfoInfo();
             return TeaModel.build(map, self);
-        }
-
-        public GetMultiRateConfigListResponseBodyGroupInfoInfo setGroupId(String groupId) {
-            this.groupId = groupId;
-            return this;
-        }
-        public String getGroupId() {
-            return this.groupId;
         }
 
         public GetMultiRateConfigListResponseBodyGroupInfoInfo setApp(String app) {
@@ -101,6 +93,14 @@ public class GetMultiRateConfigListResponseBody extends TeaModel {
         }
         public Integer getCount() {
             return this.count;
+        }
+
+        public GetMultiRateConfigListResponseBodyGroupInfoInfo setGroupId(String groupId) {
+            this.groupId = groupId;
+            return this;
+        }
+        public String getGroupId() {
+            return this.groupId;
         }
 
     }

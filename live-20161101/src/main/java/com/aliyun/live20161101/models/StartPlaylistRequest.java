@@ -4,6 +4,9 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class StartPlaylistRequest extends TeaModel {
+    @NameInMap("Offset")
+    public Integer offset;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -16,12 +19,17 @@ public class StartPlaylistRequest extends TeaModel {
     @NameInMap("StartItemId")
     public String startItemId;
 
-    @NameInMap("Offset")
-    public Integer offset;
-
     public static StartPlaylistRequest build(java.util.Map<String, ?> map) throws Exception {
         StartPlaylistRequest self = new StartPlaylistRequest();
         return TeaModel.build(map, self);
+    }
+
+    public StartPlaylistRequest setOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    public Integer getOffset() {
+        return this.offset;
     }
 
     public StartPlaylistRequest setOwnerId(Long ownerId) {
@@ -54,14 +62,6 @@ public class StartPlaylistRequest extends TeaModel {
     }
     public String getStartItemId() {
         return this.startItemId;
-    }
-
-    public StartPlaylistRequest setOffset(Integer offset) {
-        this.offset = offset;
-        return this;
-    }
-    public Integer getOffset() {
-        return this.offset;
     }
 
 }

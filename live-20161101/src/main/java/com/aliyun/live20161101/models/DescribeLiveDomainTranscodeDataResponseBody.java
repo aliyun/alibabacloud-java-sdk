@@ -35,11 +35,11 @@ public class DescribeLiveDomainTranscodeDataResponseBody extends TeaModel {
         @NameInMap("Date")
         public String date;
 
-        @NameInMap("Total")
-        public Integer total;
-
         @NameInMap("Detail")
         public String detail;
+
+        @NameInMap("Total")
+        public Integer total;
 
         public static DescribeLiveDomainTranscodeDataResponseBodyTranscodeDataInfosTranscodeDataInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeLiveDomainTranscodeDataResponseBodyTranscodeDataInfosTranscodeDataInfo self = new DescribeLiveDomainTranscodeDataResponseBodyTranscodeDataInfosTranscodeDataInfo();
@@ -54,20 +54,20 @@ public class DescribeLiveDomainTranscodeDataResponseBody extends TeaModel {
             return this.date;
         }
 
-        public DescribeLiveDomainTranscodeDataResponseBodyTranscodeDataInfosTranscodeDataInfo setTotal(Integer total) {
-            this.total = total;
-            return this;
-        }
-        public Integer getTotal() {
-            return this.total;
-        }
-
         public DescribeLiveDomainTranscodeDataResponseBodyTranscodeDataInfosTranscodeDataInfo setDetail(String detail) {
             this.detail = detail;
             return this;
         }
         public String getDetail() {
             return this.detail;
+        }
+
+        public DescribeLiveDomainTranscodeDataResponseBodyTranscodeDataInfosTranscodeDataInfo setTotal(Integer total) {
+            this.total = total;
+            return this;
+        }
+        public Integer getTotal() {
+            return this.total;
         }
 
     }

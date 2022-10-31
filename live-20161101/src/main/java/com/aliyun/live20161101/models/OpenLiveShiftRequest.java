@@ -4,20 +4,23 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class OpenLiveShiftRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("AppName")
+    public String appName;
 
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("AppName")
-    public String appName;
+    @NameInMap("Duration")
+    public Integer duration;
+
+    @NameInMap("IgnoreTranscode")
+    public Boolean ignoreTranscode;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("StreamName")
     public String streamName;
-
-    @NameInMap("Duration")
-    public Integer duration;
 
     @NameInMap("Vision")
     public Integer vision;
@@ -25,22 +28,6 @@ public class OpenLiveShiftRequest extends TeaModel {
     public static OpenLiveShiftRequest build(java.util.Map<String, ?> map) throws Exception {
         OpenLiveShiftRequest self = new OpenLiveShiftRequest();
         return TeaModel.build(map, self);
-    }
-
-    public OpenLiveShiftRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public OpenLiveShiftRequest setDomainName(String domainName) {
-        this.domainName = domainName;
-        return this;
-    }
-    public String getDomainName() {
-        return this.domainName;
     }
 
     public OpenLiveShiftRequest setAppName(String appName) {
@@ -51,12 +38,12 @@ public class OpenLiveShiftRequest extends TeaModel {
         return this.appName;
     }
 
-    public OpenLiveShiftRequest setStreamName(String streamName) {
-        this.streamName = streamName;
+    public OpenLiveShiftRequest setDomainName(String domainName) {
+        this.domainName = domainName;
         return this;
     }
-    public String getStreamName() {
-        return this.streamName;
+    public String getDomainName() {
+        return this.domainName;
     }
 
     public OpenLiveShiftRequest setDuration(Integer duration) {
@@ -65,6 +52,30 @@ public class OpenLiveShiftRequest extends TeaModel {
     }
     public Integer getDuration() {
         return this.duration;
+    }
+
+    public OpenLiveShiftRequest setIgnoreTranscode(Boolean ignoreTranscode) {
+        this.ignoreTranscode = ignoreTranscode;
+        return this;
+    }
+    public Boolean getIgnoreTranscode() {
+        return this.ignoreTranscode;
+    }
+
+    public OpenLiveShiftRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public OpenLiveShiftRequest setStreamName(String streamName) {
+        this.streamName = streamName;
+        return this;
+    }
+    public String getStreamName() {
+        return this.streamName;
     }
 
     public OpenLiveShiftRequest setVision(Integer vision) {

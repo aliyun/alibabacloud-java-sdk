@@ -4,14 +4,8 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class UpdateMixStreamRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("DomainName")
     public String domainName;
-
-    @NameInMap("MixStreamId")
-    public String mixStreamId;
 
     @NameInMap("InputStreamList")
     public String inputStreamList;
@@ -19,17 +13,15 @@ public class UpdateMixStreamRequest extends TeaModel {
     @NameInMap("LayoutId")
     public String layoutId;
 
+    @NameInMap("MixStreamId")
+    public String mixStreamId;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     public static UpdateMixStreamRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateMixStreamRequest self = new UpdateMixStreamRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateMixStreamRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public UpdateMixStreamRequest setDomainName(String domainName) {
@@ -38,14 +30,6 @@ public class UpdateMixStreamRequest extends TeaModel {
     }
     public String getDomainName() {
         return this.domainName;
-    }
-
-    public UpdateMixStreamRequest setMixStreamId(String mixStreamId) {
-        this.mixStreamId = mixStreamId;
-        return this;
-    }
-    public String getMixStreamId() {
-        return this.mixStreamId;
     }
 
     public UpdateMixStreamRequest setInputStreamList(String inputStreamList) {
@@ -62,6 +46,22 @@ public class UpdateMixStreamRequest extends TeaModel {
     }
     public String getLayoutId() {
         return this.layoutId;
+    }
+
+    public UpdateMixStreamRequest setMixStreamId(String mixStreamId) {
+        this.mixStreamId = mixStreamId;
+        return this;
+    }
+    public String getMixStreamId() {
+        return this.mixStreamId;
+    }
+
+    public UpdateMixStreamRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
 }

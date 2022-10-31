@@ -4,8 +4,8 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveCertificateDetailResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Cert")
+    public String cert;
 
     @NameInMap("CertId")
     public Long certId;
@@ -13,20 +13,20 @@ public class DescribeLiveCertificateDetailResponseBody extends TeaModel {
     @NameInMap("CertName")
     public String certName;
 
-    @NameInMap("Cert")
-    public String cert;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeLiveCertificateDetailResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveCertificateDetailResponseBody self = new DescribeLiveCertificateDetailResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeLiveCertificateDetailResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeLiveCertificateDetailResponseBody setCert(String cert) {
+        this.cert = cert;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public String getCert() {
+        return this.cert;
     }
 
     public DescribeLiveCertificateDetailResponseBody setCertId(Long certId) {
@@ -45,12 +45,12 @@ public class DescribeLiveCertificateDetailResponseBody extends TeaModel {
         return this.certName;
     }
 
-    public DescribeLiveCertificateDetailResponseBody setCert(String cert) {
-        this.cert = cert;
+    public DescribeLiveCertificateDetailResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getCert() {
-        return this.cert;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

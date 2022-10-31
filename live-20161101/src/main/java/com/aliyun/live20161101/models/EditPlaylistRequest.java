@@ -7,14 +7,14 @@ public class EditPlaylistRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("ProgramConfig")
+    public String programConfig;
+
     @NameInMap("ProgramId")
     public String programId;
 
     @NameInMap("ProgramItems")
     public String programItems;
-
-    @NameInMap("ProgramConfig")
-    public String programConfig;
 
     public static EditPlaylistRequest build(java.util.Map<String, ?> map) throws Exception {
         EditPlaylistRequest self = new EditPlaylistRequest();
@@ -27,6 +27,14 @@ public class EditPlaylistRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public EditPlaylistRequest setProgramConfig(String programConfig) {
+        this.programConfig = programConfig;
+        return this;
+    }
+    public String getProgramConfig() {
+        return this.programConfig;
     }
 
     public EditPlaylistRequest setProgramId(String programId) {
@@ -43,14 +51,6 @@ public class EditPlaylistRequest extends TeaModel {
     }
     public String getProgramItems() {
         return this.programItems;
-    }
-
-    public EditPlaylistRequest setProgramConfig(String programConfig) {
-        this.programConfig = programConfig;
-        return this;
-    }
-    public String getProgramConfig() {
-        return this.programConfig;
     }
 
 }

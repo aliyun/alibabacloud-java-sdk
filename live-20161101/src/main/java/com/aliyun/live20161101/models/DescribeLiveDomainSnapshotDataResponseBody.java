@@ -4,23 +4,15 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveDomainSnapshotDataResponseBody extends TeaModel {
-    @NameInMap("SnapshotDataInfos")
-    public DescribeLiveDomainSnapshotDataResponseBodySnapshotDataInfos snapshotDataInfos;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("SnapshotDataInfos")
+    public DescribeLiveDomainSnapshotDataResponseBodySnapshotDataInfos snapshotDataInfos;
 
     public static DescribeLiveDomainSnapshotDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveDomainSnapshotDataResponseBody self = new DescribeLiveDomainSnapshotDataResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeLiveDomainSnapshotDataResponseBody setSnapshotDataInfos(DescribeLiveDomainSnapshotDataResponseBodySnapshotDataInfos snapshotDataInfos) {
-        this.snapshotDataInfos = snapshotDataInfos;
-        return this;
-    }
-    public DescribeLiveDomainSnapshotDataResponseBodySnapshotDataInfos getSnapshotDataInfos() {
-        return this.snapshotDataInfos;
     }
 
     public DescribeLiveDomainSnapshotDataResponseBody setRequestId(String requestId) {
@@ -29,6 +21,14 @@ public class DescribeLiveDomainSnapshotDataResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeLiveDomainSnapshotDataResponseBody setSnapshotDataInfos(DescribeLiveDomainSnapshotDataResponseBodySnapshotDataInfos snapshotDataInfos) {
+        this.snapshotDataInfos = snapshotDataInfos;
+        return this;
+    }
+    public DescribeLiveDomainSnapshotDataResponseBodySnapshotDataInfos getSnapshotDataInfos() {
+        return this.snapshotDataInfos;
     }
 
     public static class DescribeLiveDomainSnapshotDataResponseBodySnapshotDataInfosSnapshotDataInfo extends TeaModel {

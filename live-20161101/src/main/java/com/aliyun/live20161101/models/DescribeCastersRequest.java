@@ -4,20 +4,26 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeCastersRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("CasterId")
     public String casterId;
 
     @NameInMap("CasterName")
     public String casterName;
 
-    @NameInMap("StartTime")
-    public String startTime;
+    @NameInMap("ChargeType")
+    public Integer chargeType;
 
     @NameInMap("EndTime")
     public String endTime;
+
+    @NameInMap("NormType")
+    public String normType;
+
+    @NameInMap("OrderByModifyAsc")
+    public String orderByModifyAsc;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("PageNum")
     public Integer pageNum;
@@ -25,20 +31,15 @@ public class DescribeCastersRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("StartTime")
+    public String startTime;
+
     @NameInMap("Status")
     public Integer status;
 
     public static DescribeCastersRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCastersRequest self = new DescribeCastersRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeCastersRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeCastersRequest setCasterId(String casterId) {
@@ -57,12 +58,12 @@ public class DescribeCastersRequest extends TeaModel {
         return this.casterName;
     }
 
-    public DescribeCastersRequest setStartTime(String startTime) {
-        this.startTime = startTime;
+    public DescribeCastersRequest setChargeType(Integer chargeType) {
+        this.chargeType = chargeType;
         return this;
     }
-    public String getStartTime() {
-        return this.startTime;
+    public Integer getChargeType() {
+        return this.chargeType;
     }
 
     public DescribeCastersRequest setEndTime(String endTime) {
@@ -71,6 +72,30 @@ public class DescribeCastersRequest extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public DescribeCastersRequest setNormType(String normType) {
+        this.normType = normType;
+        return this;
+    }
+    public String getNormType() {
+        return this.normType;
+    }
+
+    public DescribeCastersRequest setOrderByModifyAsc(String orderByModifyAsc) {
+        this.orderByModifyAsc = orderByModifyAsc;
+        return this;
+    }
+    public String getOrderByModifyAsc() {
+        return this.orderByModifyAsc;
+    }
+
+    public DescribeCastersRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeCastersRequest setPageNum(Integer pageNum) {
@@ -87,6 +112,14 @@ public class DescribeCastersRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeCastersRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
     public DescribeCastersRequest setStatus(Integer status) {

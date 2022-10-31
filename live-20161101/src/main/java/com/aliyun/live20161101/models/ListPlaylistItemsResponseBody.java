@@ -4,11 +4,11 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class ListPlaylistItemsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ProgramItems")
     public java.util.List<ListPlaylistItemsResponseBodyProgramItems> programItems;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Total")
     public Integer total;
@@ -18,20 +18,20 @@ public class ListPlaylistItemsResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListPlaylistItemsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public ListPlaylistItemsResponseBody setProgramItems(java.util.List<ListPlaylistItemsResponseBodyProgramItems> programItems) {
         this.programItems = programItems;
         return this;
     }
     public java.util.List<ListPlaylistItemsResponseBodyProgramItems> getProgramItems() {
         return this.programItems;
+    }
+
+    public ListPlaylistItemsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ListPlaylistItemsResponseBody setTotal(Integer total) {
@@ -46,17 +46,17 @@ public class ListPlaylistItemsResponseBody extends TeaModel {
         @NameInMap("Index")
         public Integer index;
 
-        @NameInMap("ResourceType")
-        public String resourceType;
+        @NameInMap("ProgramId")
+        public String programId;
 
         @NameInMap("ProgramItemId")
         public String programItemId;
 
-        @NameInMap("ProgramId")
-        public String programId;
-
         @NameInMap("ProgramItemName")
         public String programItemName;
+
+        @NameInMap("ResourceType")
+        public String resourceType;
 
         @NameInMap("ResourceValue")
         public String resourceValue;
@@ -74,12 +74,12 @@ public class ListPlaylistItemsResponseBody extends TeaModel {
             return this.index;
         }
 
-        public ListPlaylistItemsResponseBodyProgramItems setResourceType(String resourceType) {
-            this.resourceType = resourceType;
+        public ListPlaylistItemsResponseBodyProgramItems setProgramId(String programId) {
+            this.programId = programId;
             return this;
         }
-        public String getResourceType() {
-            return this.resourceType;
+        public String getProgramId() {
+            return this.programId;
         }
 
         public ListPlaylistItemsResponseBodyProgramItems setProgramItemId(String programItemId) {
@@ -90,20 +90,20 @@ public class ListPlaylistItemsResponseBody extends TeaModel {
             return this.programItemId;
         }
 
-        public ListPlaylistItemsResponseBodyProgramItems setProgramId(String programId) {
-            this.programId = programId;
-            return this;
-        }
-        public String getProgramId() {
-            return this.programId;
-        }
-
         public ListPlaylistItemsResponseBodyProgramItems setProgramItemName(String programItemName) {
             this.programItemName = programItemName;
             return this;
         }
         public String getProgramItemName() {
             return this.programItemName;
+        }
+
+        public ListPlaylistItemsResponseBodyProgramItems setResourceType(String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+        public String getResourceType() {
+            return this.resourceType;
         }
 
         public ListPlaylistItemsResponseBodyProgramItems setResourceValue(String resourceValue) {

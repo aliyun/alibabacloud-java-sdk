@@ -4,23 +4,11 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveStreamSnapshotInfoRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("DomainName")
-    public String domainName;
-
     @NameInMap("AppName")
     public String appName;
 
-    @NameInMap("StreamName")
-    public String streamName;
-
-    @NameInMap("StartTime")
-    public String startTime;
+    @NameInMap("DomainName")
+    public String domainName;
 
     @NameInMap("EndTime")
     public String endTime;
@@ -31,33 +19,21 @@ public class DescribeLiveStreamSnapshotInfoRequest extends TeaModel {
     @NameInMap("Order")
     public String order;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
+    @NameInMap("StartTime")
+    public String startTime;
+
+    @NameInMap("StreamName")
+    public String streamName;
+
     public static DescribeLiveStreamSnapshotInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveStreamSnapshotInfoRequest self = new DescribeLiveStreamSnapshotInfoRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeLiveStreamSnapshotInfoRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
-    public DescribeLiveStreamSnapshotInfoRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public DescribeLiveStreamSnapshotInfoRequest setDomainName(String domainName) {
-        this.domainName = domainName;
-        return this;
-    }
-    public String getDomainName() {
-        return this.domainName;
     }
 
     public DescribeLiveStreamSnapshotInfoRequest setAppName(String appName) {
@@ -68,20 +44,12 @@ public class DescribeLiveStreamSnapshotInfoRequest extends TeaModel {
         return this.appName;
     }
 
-    public DescribeLiveStreamSnapshotInfoRequest setStreamName(String streamName) {
-        this.streamName = streamName;
+    public DescribeLiveStreamSnapshotInfoRequest setDomainName(String domainName) {
+        this.domainName = domainName;
         return this;
     }
-    public String getStreamName() {
-        return this.streamName;
-    }
-
-    public DescribeLiveStreamSnapshotInfoRequest setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
+    public String getDomainName() {
+        return this.domainName;
     }
 
     public DescribeLiveStreamSnapshotInfoRequest setEndTime(String endTime) {
@@ -106,6 +74,38 @@ public class DescribeLiveStreamSnapshotInfoRequest extends TeaModel {
     }
     public String getOrder() {
         return this.order;
+    }
+
+    public DescribeLiveStreamSnapshotInfoRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeLiveStreamSnapshotInfoRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
+    }
+
+    public DescribeLiveStreamSnapshotInfoRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
+    }
+
+    public DescribeLiveStreamSnapshotInfoRequest setStreamName(String streamName) {
+        this.streamName = streamName;
+        return this;
+    }
+    public String getStreamName() {
+        return this.streamName;
     }
 
 }

@@ -4,14 +4,14 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class CopyCasterSceneConfigRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("CasterId")
     public String casterId;
 
     @NameInMap("FromSceneId")
     public String fromSceneId;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("ToSceneId")
     public String toSceneId;
@@ -19,14 +19,6 @@ public class CopyCasterSceneConfigRequest extends TeaModel {
     public static CopyCasterSceneConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         CopyCasterSceneConfigRequest self = new CopyCasterSceneConfigRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CopyCasterSceneConfigRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public CopyCasterSceneConfigRequest setCasterId(String casterId) {
@@ -43,6 +35,14 @@ public class CopyCasterSceneConfigRequest extends TeaModel {
     }
     public String getFromSceneId() {
         return this.fromSceneId;
+    }
+
+    public CopyCasterSceneConfigRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public CopyCasterSceneConfigRequest setToSceneId(String toSceneId) {

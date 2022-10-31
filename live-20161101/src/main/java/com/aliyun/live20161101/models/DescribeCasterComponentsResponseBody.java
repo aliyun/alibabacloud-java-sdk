@@ -42,39 +42,55 @@ public class DescribeCasterComponentsResponseBody extends TeaModel {
         return this.total;
     }
 
-    public static class DescribeCasterComponentsResponseBodyComponentsComponentTextLayerContent extends TeaModel {
-        @NameInMap("Color")
-        public String color;
-
+    public static class DescribeCasterComponentsResponseBodyComponentsComponentCaptionLayerContent extends TeaModel {
         @NameInMap("BorderColor")
         public String borderColor;
 
         @NameInMap("BorderWidthNormalized")
         public Float borderWidthNormalized;
 
-        @NameInMap("Text")
-        public String text;
-
-        @NameInMap("SizeNormalized")
-        public Float sizeNormalized;
+        @NameInMap("Color")
+        public String color;
 
         @NameInMap("FontName")
         public String fontName;
 
-        public static DescribeCasterComponentsResponseBodyComponentsComponentTextLayerContent build(java.util.Map<String, ?> map) throws Exception {
-            DescribeCasterComponentsResponseBodyComponentsComponentTextLayerContent self = new DescribeCasterComponentsResponseBodyComponentsComponentTextLayerContent();
+        @NameInMap("LineSpaceNormalized")
+        public Float lineSpaceNormalized;
+
+        @NameInMap("LocationId")
+        public String locationId;
+
+        @NameInMap("PtsOffset")
+        public Integer ptsOffset;
+
+        @NameInMap("ShowSourceLan")
+        public Boolean showSourceLan;
+
+        @NameInMap("SizeNormalized")
+        public Float sizeNormalized;
+
+        @NameInMap("SourceLan")
+        public String sourceLan;
+
+        @NameInMap("TargetLan")
+        public String targetLan;
+
+        @NameInMap("WordCountPerLine")
+        public Integer wordCountPerLine;
+
+        @NameInMap("WordSpaceNormalized")
+        public Float wordSpaceNormalized;
+
+        @NameInMap("WordsCount")
+        public Integer wordsCount;
+
+        public static DescribeCasterComponentsResponseBodyComponentsComponentCaptionLayerContent build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCasterComponentsResponseBodyComponentsComponentCaptionLayerContent self = new DescribeCasterComponentsResponseBodyComponentsComponentCaptionLayerContent();
             return TeaModel.build(map, self);
         }
 
-        public DescribeCasterComponentsResponseBodyComponentsComponentTextLayerContent setColor(String color) {
-            this.color = color;
-            return this;
-        }
-        public String getColor() {
-            return this.color;
-        }
-
-        public DescribeCasterComponentsResponseBodyComponentsComponentTextLayerContent setBorderColor(String borderColor) {
+        public DescribeCasterComponentsResponseBodyComponentsComponentCaptionLayerContent setBorderColor(String borderColor) {
             this.borderColor = borderColor;
             return this;
         }
@@ -82,7 +98,7 @@ public class DescribeCasterComponentsResponseBody extends TeaModel {
             return this.borderColor;
         }
 
-        public DescribeCasterComponentsResponseBodyComponentsComponentTextLayerContent setBorderWidthNormalized(Float borderWidthNormalized) {
+        public DescribeCasterComponentsResponseBodyComponentsComponentCaptionLayerContent setBorderWidthNormalized(Float borderWidthNormalized) {
             this.borderWidthNormalized = borderWidthNormalized;
             return this;
         }
@@ -90,15 +106,55 @@ public class DescribeCasterComponentsResponseBody extends TeaModel {
             return this.borderWidthNormalized;
         }
 
-        public DescribeCasterComponentsResponseBodyComponentsComponentTextLayerContent setText(String text) {
-            this.text = text;
+        public DescribeCasterComponentsResponseBodyComponentsComponentCaptionLayerContent setColor(String color) {
+            this.color = color;
             return this;
         }
-        public String getText() {
-            return this.text;
+        public String getColor() {
+            return this.color;
         }
 
-        public DescribeCasterComponentsResponseBodyComponentsComponentTextLayerContent setSizeNormalized(Float sizeNormalized) {
+        public DescribeCasterComponentsResponseBodyComponentsComponentCaptionLayerContent setFontName(String fontName) {
+            this.fontName = fontName;
+            return this;
+        }
+        public String getFontName() {
+            return this.fontName;
+        }
+
+        public DescribeCasterComponentsResponseBodyComponentsComponentCaptionLayerContent setLineSpaceNormalized(Float lineSpaceNormalized) {
+            this.lineSpaceNormalized = lineSpaceNormalized;
+            return this;
+        }
+        public Float getLineSpaceNormalized() {
+            return this.lineSpaceNormalized;
+        }
+
+        public DescribeCasterComponentsResponseBodyComponentsComponentCaptionLayerContent setLocationId(String locationId) {
+            this.locationId = locationId;
+            return this;
+        }
+        public String getLocationId() {
+            return this.locationId;
+        }
+
+        public DescribeCasterComponentsResponseBodyComponentsComponentCaptionLayerContent setPtsOffset(Integer ptsOffset) {
+            this.ptsOffset = ptsOffset;
+            return this;
+        }
+        public Integer getPtsOffset() {
+            return this.ptsOffset;
+        }
+
+        public DescribeCasterComponentsResponseBodyComponentsComponentCaptionLayerContent setShowSourceLan(Boolean showSourceLan) {
+            this.showSourceLan = showSourceLan;
+            return this;
+        }
+        public Boolean getShowSourceLan() {
+            return this.showSourceLan;
+        }
+
+        public DescribeCasterComponentsResponseBodyComponentsComponentCaptionLayerContent setSizeNormalized(Float sizeNormalized) {
             this.sizeNormalized = sizeNormalized;
             return this;
         }
@@ -106,12 +162,44 @@ public class DescribeCasterComponentsResponseBody extends TeaModel {
             return this.sizeNormalized;
         }
 
-        public DescribeCasterComponentsResponseBodyComponentsComponentTextLayerContent setFontName(String fontName) {
-            this.fontName = fontName;
+        public DescribeCasterComponentsResponseBodyComponentsComponentCaptionLayerContent setSourceLan(String sourceLan) {
+            this.sourceLan = sourceLan;
             return this;
         }
-        public String getFontName() {
-            return this.fontName;
+        public String getSourceLan() {
+            return this.sourceLan;
+        }
+
+        public DescribeCasterComponentsResponseBodyComponentsComponentCaptionLayerContent setTargetLan(String targetLan) {
+            this.targetLan = targetLan;
+            return this;
+        }
+        public String getTargetLan() {
+            return this.targetLan;
+        }
+
+        public DescribeCasterComponentsResponseBodyComponentsComponentCaptionLayerContent setWordCountPerLine(Integer wordCountPerLine) {
+            this.wordCountPerLine = wordCountPerLine;
+            return this;
+        }
+        public Integer getWordCountPerLine() {
+            return this.wordCountPerLine;
+        }
+
+        public DescribeCasterComponentsResponseBodyComponentsComponentCaptionLayerContent setWordSpaceNormalized(Float wordSpaceNormalized) {
+            this.wordSpaceNormalized = wordSpaceNormalized;
+            return this;
+        }
+        public Float getWordSpaceNormalized() {
+            return this.wordSpaceNormalized;
+        }
+
+        public DescribeCasterComponentsResponseBodyComponentsComponentCaptionLayerContent setWordsCount(Integer wordsCount) {
+            this.wordsCount = wordsCount;
+            return this;
+        }
+        public Integer getWordsCount() {
+            return this.wordsCount;
         }
 
     }
@@ -136,17 +224,17 @@ public class DescribeCasterComponentsResponseBody extends TeaModel {
     }
 
     public static class DescribeCasterComponentsResponseBodyComponentsComponentComponentLayer extends TeaModel {
-        @NameInMap("Transparency")
-        public Integer transparency;
+        @NameInMap("HeightNormalized")
+        public Float heightNormalized;
 
         @NameInMap("PositionNormalizeds")
         public DescribeCasterComponentsResponseBodyComponentsComponentComponentLayerPositionNormalizeds positionNormalizeds;
 
-        @NameInMap("HeightNormalized")
-        public Float heightNormalized;
-
         @NameInMap("PositionRefer")
         public String positionRefer;
+
+        @NameInMap("Transparency")
+        public Integer transparency;
 
         @NameInMap("WidthNormalized")
         public Float widthNormalized;
@@ -154,22 +242,6 @@ public class DescribeCasterComponentsResponseBody extends TeaModel {
         public static DescribeCasterComponentsResponseBodyComponentsComponentComponentLayer build(java.util.Map<String, ?> map) throws Exception {
             DescribeCasterComponentsResponseBodyComponentsComponentComponentLayer self = new DescribeCasterComponentsResponseBodyComponentsComponentComponentLayer();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeCasterComponentsResponseBodyComponentsComponentComponentLayer setTransparency(Integer transparency) {
-            this.transparency = transparency;
-            return this;
-        }
-        public Integer getTransparency() {
-            return this.transparency;
-        }
-
-        public DescribeCasterComponentsResponseBodyComponentsComponentComponentLayer setPositionNormalizeds(DescribeCasterComponentsResponseBodyComponentsComponentComponentLayerPositionNormalizeds positionNormalizeds) {
-            this.positionNormalizeds = positionNormalizeds;
-            return this;
-        }
-        public DescribeCasterComponentsResponseBodyComponentsComponentComponentLayerPositionNormalizeds getPositionNormalizeds() {
-            return this.positionNormalizeds;
         }
 
         public DescribeCasterComponentsResponseBodyComponentsComponentComponentLayer setHeightNormalized(Float heightNormalized) {
@@ -180,12 +252,28 @@ public class DescribeCasterComponentsResponseBody extends TeaModel {
             return this.heightNormalized;
         }
 
+        public DescribeCasterComponentsResponseBodyComponentsComponentComponentLayer setPositionNormalizeds(DescribeCasterComponentsResponseBodyComponentsComponentComponentLayerPositionNormalizeds positionNormalizeds) {
+            this.positionNormalizeds = positionNormalizeds;
+            return this;
+        }
+        public DescribeCasterComponentsResponseBodyComponentsComponentComponentLayerPositionNormalizeds getPositionNormalizeds() {
+            return this.positionNormalizeds;
+        }
+
         public DescribeCasterComponentsResponseBodyComponentsComponentComponentLayer setPositionRefer(String positionRefer) {
             this.positionRefer = positionRefer;
             return this;
         }
         public String getPositionRefer() {
             return this.positionRefer;
+        }
+
+        public DescribeCasterComponentsResponseBodyComponentsComponentComponentLayer setTransparency(Integer transparency) {
+            this.transparency = transparency;
+            return this;
+        }
+        public Integer getTransparency() {
+            return this.transparency;
         }
 
         public DescribeCasterComponentsResponseBodyComponentsComponentComponentLayer setWidthNormalized(Float widthNormalized) {
@@ -217,103 +305,31 @@ public class DescribeCasterComponentsResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeCasterComponentsResponseBodyComponentsComponentCaptionLayerContent extends TeaModel {
-        @NameInMap("Color")
-        public String color;
-
-        @NameInMap("WordSpaceNormalized")
-        public Float wordSpaceNormalized;
+    public static class DescribeCasterComponentsResponseBodyComponentsComponentTextLayerContent extends TeaModel {
+        @NameInMap("BorderColor")
+        public String borderColor;
 
         @NameInMap("BorderWidthNormalized")
         public Float borderWidthNormalized;
 
-        @NameInMap("SourceLan")
-        public String sourceLan;
-
-        @NameInMap("WordCountPerLine")
-        public Integer wordCountPerLine;
-
-        @NameInMap("TargetLan")
-        public String targetLan;
-
-        @NameInMap("BorderColor")
-        public String borderColor;
-
-        @NameInMap("LocationId")
-        public String locationId;
-
-        @NameInMap("LineSpaceNormalized")
-        public Float lineSpaceNormalized;
-
-        @NameInMap("SizeNormalized")
-        public Float sizeNormalized;
-
-        @NameInMap("ShowSourceLan")
-        public Boolean showSourceLan;
-
-        @NameInMap("WordsCount")
-        public Integer wordsCount;
+        @NameInMap("Color")
+        public String color;
 
         @NameInMap("FontName")
         public String fontName;
 
-        @NameInMap("PtsOffset")
-        public Integer ptsOffset;
+        @NameInMap("SizeNormalized")
+        public Float sizeNormalized;
 
-        public static DescribeCasterComponentsResponseBodyComponentsComponentCaptionLayerContent build(java.util.Map<String, ?> map) throws Exception {
-            DescribeCasterComponentsResponseBodyComponentsComponentCaptionLayerContent self = new DescribeCasterComponentsResponseBodyComponentsComponentCaptionLayerContent();
+        @NameInMap("Text")
+        public String text;
+
+        public static DescribeCasterComponentsResponseBodyComponentsComponentTextLayerContent build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCasterComponentsResponseBodyComponentsComponentTextLayerContent self = new DescribeCasterComponentsResponseBodyComponentsComponentTextLayerContent();
             return TeaModel.build(map, self);
         }
 
-        public DescribeCasterComponentsResponseBodyComponentsComponentCaptionLayerContent setColor(String color) {
-            this.color = color;
-            return this;
-        }
-        public String getColor() {
-            return this.color;
-        }
-
-        public DescribeCasterComponentsResponseBodyComponentsComponentCaptionLayerContent setWordSpaceNormalized(Float wordSpaceNormalized) {
-            this.wordSpaceNormalized = wordSpaceNormalized;
-            return this;
-        }
-        public Float getWordSpaceNormalized() {
-            return this.wordSpaceNormalized;
-        }
-
-        public DescribeCasterComponentsResponseBodyComponentsComponentCaptionLayerContent setBorderWidthNormalized(Float borderWidthNormalized) {
-            this.borderWidthNormalized = borderWidthNormalized;
-            return this;
-        }
-        public Float getBorderWidthNormalized() {
-            return this.borderWidthNormalized;
-        }
-
-        public DescribeCasterComponentsResponseBodyComponentsComponentCaptionLayerContent setSourceLan(String sourceLan) {
-            this.sourceLan = sourceLan;
-            return this;
-        }
-        public String getSourceLan() {
-            return this.sourceLan;
-        }
-
-        public DescribeCasterComponentsResponseBodyComponentsComponentCaptionLayerContent setWordCountPerLine(Integer wordCountPerLine) {
-            this.wordCountPerLine = wordCountPerLine;
-            return this;
-        }
-        public Integer getWordCountPerLine() {
-            return this.wordCountPerLine;
-        }
-
-        public DescribeCasterComponentsResponseBodyComponentsComponentCaptionLayerContent setTargetLan(String targetLan) {
-            this.targetLan = targetLan;
-            return this;
-        }
-        public String getTargetLan() {
-            return this.targetLan;
-        }
-
-        public DescribeCasterComponentsResponseBodyComponentsComponentCaptionLayerContent setBorderColor(String borderColor) {
+        public DescribeCasterComponentsResponseBodyComponentsComponentTextLayerContent setBorderColor(String borderColor) {
             this.borderColor = borderColor;
             return this;
         }
@@ -321,47 +337,23 @@ public class DescribeCasterComponentsResponseBody extends TeaModel {
             return this.borderColor;
         }
 
-        public DescribeCasterComponentsResponseBodyComponentsComponentCaptionLayerContent setLocationId(String locationId) {
-            this.locationId = locationId;
+        public DescribeCasterComponentsResponseBodyComponentsComponentTextLayerContent setBorderWidthNormalized(Float borderWidthNormalized) {
+            this.borderWidthNormalized = borderWidthNormalized;
             return this;
         }
-        public String getLocationId() {
-            return this.locationId;
+        public Float getBorderWidthNormalized() {
+            return this.borderWidthNormalized;
         }
 
-        public DescribeCasterComponentsResponseBodyComponentsComponentCaptionLayerContent setLineSpaceNormalized(Float lineSpaceNormalized) {
-            this.lineSpaceNormalized = lineSpaceNormalized;
+        public DescribeCasterComponentsResponseBodyComponentsComponentTextLayerContent setColor(String color) {
+            this.color = color;
             return this;
         }
-        public Float getLineSpaceNormalized() {
-            return this.lineSpaceNormalized;
+        public String getColor() {
+            return this.color;
         }
 
-        public DescribeCasterComponentsResponseBodyComponentsComponentCaptionLayerContent setSizeNormalized(Float sizeNormalized) {
-            this.sizeNormalized = sizeNormalized;
-            return this;
-        }
-        public Float getSizeNormalized() {
-            return this.sizeNormalized;
-        }
-
-        public DescribeCasterComponentsResponseBodyComponentsComponentCaptionLayerContent setShowSourceLan(Boolean showSourceLan) {
-            this.showSourceLan = showSourceLan;
-            return this;
-        }
-        public Boolean getShowSourceLan() {
-            return this.showSourceLan;
-        }
-
-        public DescribeCasterComponentsResponseBodyComponentsComponentCaptionLayerContent setWordsCount(Integer wordsCount) {
-            this.wordsCount = wordsCount;
-            return this;
-        }
-        public Integer getWordsCount() {
-            return this.wordsCount;
-        }
-
-        public DescribeCasterComponentsResponseBodyComponentsComponentCaptionLayerContent setFontName(String fontName) {
+        public DescribeCasterComponentsResponseBodyComponentsComponentTextLayerContent setFontName(String fontName) {
             this.fontName = fontName;
             return this;
         }
@@ -369,103 +361,55 @@ public class DescribeCasterComponentsResponseBody extends TeaModel {
             return this.fontName;
         }
 
-        public DescribeCasterComponentsResponseBodyComponentsComponentCaptionLayerContent setPtsOffset(Integer ptsOffset) {
-            this.ptsOffset = ptsOffset;
+        public DescribeCasterComponentsResponseBodyComponentsComponentTextLayerContent setSizeNormalized(Float sizeNormalized) {
+            this.sizeNormalized = sizeNormalized;
             return this;
         }
-        public Integer getPtsOffset() {
-            return this.ptsOffset;
+        public Float getSizeNormalized() {
+            return this.sizeNormalized;
+        }
+
+        public DescribeCasterComponentsResponseBodyComponentsComponentTextLayerContent setText(String text) {
+            this.text = text;
+            return this;
+        }
+        public String getText() {
+            return this.text;
         }
 
     }
 
     public static class DescribeCasterComponentsResponseBodyComponentsComponent extends TeaModel {
-        @NameInMap("TextLayerContent")
-        public DescribeCasterComponentsResponseBodyComponentsComponentTextLayerContent textLayerContent;
-
-        @NameInMap("Effect")
-        public String effect;
-
-        @NameInMap("ComponentName")
-        public String componentName;
-
-        @NameInMap("ComponentLayer")
-        public DescribeCasterComponentsResponseBodyComponentsComponentComponentLayer componentLayer;
-
-        @NameInMap("ImageLayerContent")
-        public DescribeCasterComponentsResponseBodyComponentsComponentImageLayerContent imageLayerContent;
-
-        @NameInMap("ComponentType")
-        public String componentType;
-
-        @NameInMap("LocationId")
-        public String locationId;
-
         @NameInMap("CaptionLayerContent")
         public DescribeCasterComponentsResponseBodyComponentsComponentCaptionLayerContent captionLayerContent;
 
         @NameInMap("ComponentId")
         public String componentId;
 
+        @NameInMap("ComponentLayer")
+        public DescribeCasterComponentsResponseBodyComponentsComponentComponentLayer componentLayer;
+
+        @NameInMap("ComponentName")
+        public String componentName;
+
+        @NameInMap("ComponentType")
+        public String componentType;
+
+        @NameInMap("Effect")
+        public String effect;
+
+        @NameInMap("ImageLayerContent")
+        public DescribeCasterComponentsResponseBodyComponentsComponentImageLayerContent imageLayerContent;
+
+        @NameInMap("LocationId")
+        public String locationId;
+
+        @NameInMap("TextLayerContent")
+        public DescribeCasterComponentsResponseBodyComponentsComponentTextLayerContent textLayerContent;
+
         public static DescribeCasterComponentsResponseBodyComponentsComponent build(java.util.Map<String, ?> map) throws Exception {
             DescribeCasterComponentsResponseBodyComponentsComponent self = new DescribeCasterComponentsResponseBodyComponentsComponent();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeCasterComponentsResponseBodyComponentsComponent setTextLayerContent(DescribeCasterComponentsResponseBodyComponentsComponentTextLayerContent textLayerContent) {
-            this.textLayerContent = textLayerContent;
-            return this;
-        }
-        public DescribeCasterComponentsResponseBodyComponentsComponentTextLayerContent getTextLayerContent() {
-            return this.textLayerContent;
-        }
-
-        public DescribeCasterComponentsResponseBodyComponentsComponent setEffect(String effect) {
-            this.effect = effect;
-            return this;
-        }
-        public String getEffect() {
-            return this.effect;
-        }
-
-        public DescribeCasterComponentsResponseBodyComponentsComponent setComponentName(String componentName) {
-            this.componentName = componentName;
-            return this;
-        }
-        public String getComponentName() {
-            return this.componentName;
-        }
-
-        public DescribeCasterComponentsResponseBodyComponentsComponent setComponentLayer(DescribeCasterComponentsResponseBodyComponentsComponentComponentLayer componentLayer) {
-            this.componentLayer = componentLayer;
-            return this;
-        }
-        public DescribeCasterComponentsResponseBodyComponentsComponentComponentLayer getComponentLayer() {
-            return this.componentLayer;
-        }
-
-        public DescribeCasterComponentsResponseBodyComponentsComponent setImageLayerContent(DescribeCasterComponentsResponseBodyComponentsComponentImageLayerContent imageLayerContent) {
-            this.imageLayerContent = imageLayerContent;
-            return this;
-        }
-        public DescribeCasterComponentsResponseBodyComponentsComponentImageLayerContent getImageLayerContent() {
-            return this.imageLayerContent;
-        }
-
-        public DescribeCasterComponentsResponseBodyComponentsComponent setComponentType(String componentType) {
-            this.componentType = componentType;
-            return this;
-        }
-        public String getComponentType() {
-            return this.componentType;
-        }
-
-        public DescribeCasterComponentsResponseBodyComponentsComponent setLocationId(String locationId) {
-            this.locationId = locationId;
-            return this;
-        }
-        public String getLocationId() {
-            return this.locationId;
         }
 
         public DescribeCasterComponentsResponseBodyComponentsComponent setCaptionLayerContent(DescribeCasterComponentsResponseBodyComponentsComponentCaptionLayerContent captionLayerContent) {
@@ -482,6 +426,62 @@ public class DescribeCasterComponentsResponseBody extends TeaModel {
         }
         public String getComponentId() {
             return this.componentId;
+        }
+
+        public DescribeCasterComponentsResponseBodyComponentsComponent setComponentLayer(DescribeCasterComponentsResponseBodyComponentsComponentComponentLayer componentLayer) {
+            this.componentLayer = componentLayer;
+            return this;
+        }
+        public DescribeCasterComponentsResponseBodyComponentsComponentComponentLayer getComponentLayer() {
+            return this.componentLayer;
+        }
+
+        public DescribeCasterComponentsResponseBodyComponentsComponent setComponentName(String componentName) {
+            this.componentName = componentName;
+            return this;
+        }
+        public String getComponentName() {
+            return this.componentName;
+        }
+
+        public DescribeCasterComponentsResponseBodyComponentsComponent setComponentType(String componentType) {
+            this.componentType = componentType;
+            return this;
+        }
+        public String getComponentType() {
+            return this.componentType;
+        }
+
+        public DescribeCasterComponentsResponseBodyComponentsComponent setEffect(String effect) {
+            this.effect = effect;
+            return this;
+        }
+        public String getEffect() {
+            return this.effect;
+        }
+
+        public DescribeCasterComponentsResponseBodyComponentsComponent setImageLayerContent(DescribeCasterComponentsResponseBodyComponentsComponentImageLayerContent imageLayerContent) {
+            this.imageLayerContent = imageLayerContent;
+            return this;
+        }
+        public DescribeCasterComponentsResponseBodyComponentsComponentImageLayerContent getImageLayerContent() {
+            return this.imageLayerContent;
+        }
+
+        public DescribeCasterComponentsResponseBodyComponentsComponent setLocationId(String locationId) {
+            this.locationId = locationId;
+            return this;
+        }
+        public String getLocationId() {
+            return this.locationId;
+        }
+
+        public DescribeCasterComponentsResponseBodyComponentsComponent setTextLayerContent(DescribeCasterComponentsResponseBodyComponentsComponentTextLayerContent textLayerContent) {
+            this.textLayerContent = textLayerContent;
+            return this;
+        }
+        public DescribeCasterComponentsResponseBodyComponentsComponentTextLayerContent getTextLayerContent() {
+            return this.textLayerContent;
         }
 
     }

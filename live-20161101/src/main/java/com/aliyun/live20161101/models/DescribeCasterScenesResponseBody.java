@@ -7,11 +7,11 @@ public class DescribeCasterScenesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Total")
-    public Integer total;
-
     @NameInMap("SceneList")
     public DescribeCasterScenesResponseBodySceneList sceneList;
+
+    @NameInMap("Total")
+    public Integer total;
 
     public static DescribeCasterScenesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCasterScenesResponseBody self = new DescribeCasterScenesResponseBody();
@@ -26,14 +26,6 @@ public class DescribeCasterScenesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeCasterScenesResponseBody setTotal(Integer total) {
-        this.total = total;
-        return this;
-    }
-    public Integer getTotal() {
-        return this.total;
-    }
-
     public DescribeCasterScenesResponseBody setSceneList(DescribeCasterScenesResponseBodySceneList sceneList) {
         this.sceneList = sceneList;
         return this;
@@ -42,27 +34,46 @@ public class DescribeCasterScenesResponseBody extends TeaModel {
         return this.sceneList;
     }
 
-    public static class DescribeCasterScenesResponseBodySceneListSceneStreamInfosStreamInfo extends TeaModel {
-        @NameInMap("VideoFormat")
-        public String videoFormat;
+    public DescribeCasterScenesResponseBody setTotal(Integer total) {
+        this.total = total;
+        return this;
+    }
+    public Integer getTotal() {
+        return this.total;
+    }
 
+    public static class DescribeCasterScenesResponseBodySceneListSceneComponentIds extends TeaModel {
+        @NameInMap("componentId")
+        public java.util.List<String> componentId;
+
+        public static DescribeCasterScenesResponseBodySceneListSceneComponentIds build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCasterScenesResponseBodySceneListSceneComponentIds self = new DescribeCasterScenesResponseBodySceneListSceneComponentIds();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCasterScenesResponseBodySceneListSceneComponentIds setComponentId(java.util.List<String> componentId) {
+            this.componentId = componentId;
+            return this;
+        }
+        public java.util.List<String> getComponentId() {
+            return this.componentId;
+        }
+
+    }
+
+    public static class DescribeCasterScenesResponseBodySceneListSceneStreamInfosStreamInfo extends TeaModel {
         @NameInMap("OutputStreamUrl")
         public String outputStreamUrl;
 
         @NameInMap("TranscodeConfig")
         public String transcodeConfig;
 
+        @NameInMap("VideoFormat")
+        public String videoFormat;
+
         public static DescribeCasterScenesResponseBodySceneListSceneStreamInfosStreamInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeCasterScenesResponseBodySceneListSceneStreamInfosStreamInfo self = new DescribeCasterScenesResponseBodySceneListSceneStreamInfosStreamInfo();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeCasterScenesResponseBodySceneListSceneStreamInfosStreamInfo setVideoFormat(String videoFormat) {
-            this.videoFormat = videoFormat;
-            return this;
-        }
-        public String getVideoFormat() {
-            return this.videoFormat;
         }
 
         public DescribeCasterScenesResponseBodySceneListSceneStreamInfosStreamInfo setOutputStreamUrl(String outputStreamUrl) {
@@ -79,6 +90,14 @@ public class DescribeCasterScenesResponseBody extends TeaModel {
         }
         public String getTranscodeConfig() {
             return this.transcodeConfig;
+        }
+
+        public DescribeCasterScenesResponseBodySceneListSceneStreamInfosStreamInfo setVideoFormat(String videoFormat) {
+            this.videoFormat = videoFormat;
+            return this;
+        }
+        public String getVideoFormat() {
+            return this.videoFormat;
         }
 
     }
@@ -102,28 +121,9 @@ public class DescribeCasterScenesResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeCasterScenesResponseBodySceneListSceneComponentIds extends TeaModel {
-        @NameInMap("componentId")
-        public java.util.List<String> componentId;
-
-        public static DescribeCasterScenesResponseBodySceneListSceneComponentIds build(java.util.Map<String, ?> map) throws Exception {
-            DescribeCasterScenesResponseBodySceneListSceneComponentIds self = new DescribeCasterScenesResponseBodySceneListSceneComponentIds();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeCasterScenesResponseBodySceneListSceneComponentIds setComponentId(java.util.List<String> componentId) {
-            this.componentId = componentId;
-            return this;
-        }
-        public java.util.List<String> getComponentId() {
-            return this.componentId;
-        }
-
-    }
-
     public static class DescribeCasterScenesResponseBodySceneListScene extends TeaModel {
-        @NameInMap("Status")
-        public Integer status;
+        @NameInMap("ComponentIds")
+        public DescribeCasterScenesResponseBodySceneListSceneComponentIds componentIds;
 
         @NameInMap("LayoutId")
         public String layoutId;
@@ -131,17 +131,17 @@ public class DescribeCasterScenesResponseBody extends TeaModel {
         @NameInMap("OutputType")
         public String outputType;
 
-        @NameInMap("StreamInfos")
-        public DescribeCasterScenesResponseBodySceneListSceneStreamInfos streamInfos;
-
         @NameInMap("SceneId")
         public String sceneId;
 
         @NameInMap("SceneName")
         public String sceneName;
 
-        @NameInMap("ComponentIds")
-        public DescribeCasterScenesResponseBodySceneListSceneComponentIds componentIds;
+        @NameInMap("Status")
+        public Integer status;
+
+        @NameInMap("StreamInfos")
+        public DescribeCasterScenesResponseBodySceneListSceneStreamInfos streamInfos;
 
         @NameInMap("StreamUrl")
         public String streamUrl;
@@ -151,12 +151,12 @@ public class DescribeCasterScenesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeCasterScenesResponseBodySceneListScene setStatus(Integer status) {
-            this.status = status;
+        public DescribeCasterScenesResponseBodySceneListScene setComponentIds(DescribeCasterScenesResponseBodySceneListSceneComponentIds componentIds) {
+            this.componentIds = componentIds;
             return this;
         }
-        public Integer getStatus() {
-            return this.status;
+        public DescribeCasterScenesResponseBodySceneListSceneComponentIds getComponentIds() {
+            return this.componentIds;
         }
 
         public DescribeCasterScenesResponseBodySceneListScene setLayoutId(String layoutId) {
@@ -175,14 +175,6 @@ public class DescribeCasterScenesResponseBody extends TeaModel {
             return this.outputType;
         }
 
-        public DescribeCasterScenesResponseBodySceneListScene setStreamInfos(DescribeCasterScenesResponseBodySceneListSceneStreamInfos streamInfos) {
-            this.streamInfos = streamInfos;
-            return this;
-        }
-        public DescribeCasterScenesResponseBodySceneListSceneStreamInfos getStreamInfos() {
-            return this.streamInfos;
-        }
-
         public DescribeCasterScenesResponseBodySceneListScene setSceneId(String sceneId) {
             this.sceneId = sceneId;
             return this;
@@ -199,12 +191,20 @@ public class DescribeCasterScenesResponseBody extends TeaModel {
             return this.sceneName;
         }
 
-        public DescribeCasterScenesResponseBodySceneListScene setComponentIds(DescribeCasterScenesResponseBodySceneListSceneComponentIds componentIds) {
-            this.componentIds = componentIds;
+        public DescribeCasterScenesResponseBodySceneListScene setStatus(Integer status) {
+            this.status = status;
             return this;
         }
-        public DescribeCasterScenesResponseBodySceneListSceneComponentIds getComponentIds() {
-            return this.componentIds;
+        public Integer getStatus() {
+            return this.status;
+        }
+
+        public DescribeCasterScenesResponseBodySceneListScene setStreamInfos(DescribeCasterScenesResponseBodySceneListSceneStreamInfos streamInfos) {
+            this.streamInfos = streamInfos;
+            return this;
+        }
+        public DescribeCasterScenesResponseBodySceneListSceneStreamInfos getStreamInfos() {
+            return this.streamInfos;
         }
 
         public DescribeCasterScenesResponseBodySceneListScene setStreamUrl(String streamUrl) {

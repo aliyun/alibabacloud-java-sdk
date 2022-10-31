@@ -4,17 +4,14 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class ModifyCasterVideoResourceRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("BeginOffset")
+    public Integer beginOffset;
 
     @NameInMap("CasterId")
     public String casterId;
 
-    @NameInMap("ResourceId")
-    public String resourceId;
-
-    @NameInMap("ResourceName")
-    public String resourceName;
+    @NameInMap("EndOffset")
+    public Integer endOffset;
 
     @NameInMap("LiveStreamUrl")
     public String liveStreamUrl;
@@ -22,32 +19,35 @@ public class ModifyCasterVideoResourceRequest extends TeaModel {
     @NameInMap("MaterialId")
     public String materialId;
 
-    @NameInMap("VodUrl")
-    public String vodUrl;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
-    @NameInMap("BeginOffset")
-    public Integer beginOffset;
-
-    @NameInMap("EndOffset")
-    public Integer endOffset;
+    @NameInMap("PtsCallbackInterval")
+    public Integer ptsCallbackInterval;
 
     @NameInMap("RepeatNum")
     public Integer repeatNum;
 
-    @NameInMap("PtsCallbackInterval")
-    public Integer ptsCallbackInterval;
+    @NameInMap("ResourceId")
+    public String resourceId;
+
+    @NameInMap("ResourceName")
+    public String resourceName;
+
+    @NameInMap("VodUrl")
+    public String vodUrl;
 
     public static ModifyCasterVideoResourceRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyCasterVideoResourceRequest self = new ModifyCasterVideoResourceRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyCasterVideoResourceRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public ModifyCasterVideoResourceRequest setBeginOffset(Integer beginOffset) {
+        this.beginOffset = beginOffset;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public Integer getBeginOffset() {
+        return this.beginOffset;
     }
 
     public ModifyCasterVideoResourceRequest setCasterId(String casterId) {
@@ -58,20 +58,12 @@ public class ModifyCasterVideoResourceRequest extends TeaModel {
         return this.casterId;
     }
 
-    public ModifyCasterVideoResourceRequest setResourceId(String resourceId) {
-        this.resourceId = resourceId;
+    public ModifyCasterVideoResourceRequest setEndOffset(Integer endOffset) {
+        this.endOffset = endOffset;
         return this;
     }
-    public String getResourceId() {
-        return this.resourceId;
-    }
-
-    public ModifyCasterVideoResourceRequest setResourceName(String resourceName) {
-        this.resourceName = resourceName;
-        return this;
-    }
-    public String getResourceName() {
-        return this.resourceName;
+    public Integer getEndOffset() {
+        return this.endOffset;
     }
 
     public ModifyCasterVideoResourceRequest setLiveStreamUrl(String liveStreamUrl) {
@@ -90,28 +82,20 @@ public class ModifyCasterVideoResourceRequest extends TeaModel {
         return this.materialId;
     }
 
-    public ModifyCasterVideoResourceRequest setVodUrl(String vodUrl) {
-        this.vodUrl = vodUrl;
+    public ModifyCasterVideoResourceRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getVodUrl() {
-        return this.vodUrl;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
-    public ModifyCasterVideoResourceRequest setBeginOffset(Integer beginOffset) {
-        this.beginOffset = beginOffset;
+    public ModifyCasterVideoResourceRequest setPtsCallbackInterval(Integer ptsCallbackInterval) {
+        this.ptsCallbackInterval = ptsCallbackInterval;
         return this;
     }
-    public Integer getBeginOffset() {
-        return this.beginOffset;
-    }
-
-    public ModifyCasterVideoResourceRequest setEndOffset(Integer endOffset) {
-        this.endOffset = endOffset;
-        return this;
-    }
-    public Integer getEndOffset() {
-        return this.endOffset;
+    public Integer getPtsCallbackInterval() {
+        return this.ptsCallbackInterval;
     }
 
     public ModifyCasterVideoResourceRequest setRepeatNum(Integer repeatNum) {
@@ -122,12 +106,28 @@ public class ModifyCasterVideoResourceRequest extends TeaModel {
         return this.repeatNum;
     }
 
-    public ModifyCasterVideoResourceRequest setPtsCallbackInterval(Integer ptsCallbackInterval) {
-        this.ptsCallbackInterval = ptsCallbackInterval;
+    public ModifyCasterVideoResourceRequest setResourceId(String resourceId) {
+        this.resourceId = resourceId;
         return this;
     }
-    public Integer getPtsCallbackInterval() {
-        return this.ptsCallbackInterval;
+    public String getResourceId() {
+        return this.resourceId;
+    }
+
+    public ModifyCasterVideoResourceRequest setResourceName(String resourceName) {
+        this.resourceName = resourceName;
+        return this;
+    }
+    public String getResourceName() {
+        return this.resourceName;
+    }
+
+    public ModifyCasterVideoResourceRequest setVodUrl(String vodUrl) {
+        this.vodUrl = vodUrl;
+        return this;
+    }
+    public String getVodUrl() {
+        return this.vodUrl;
     }
 
 }

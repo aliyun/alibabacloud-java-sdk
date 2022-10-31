@@ -4,23 +4,15 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveDomainMappingResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("LiveDomainModels")
     public DescribeLiveDomainMappingResponseBodyLiveDomainModels liveDomainModels;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeLiveDomainMappingResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveDomainMappingResponseBody self = new DescribeLiveDomainMappingResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeLiveDomainMappingResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeLiveDomainMappingResponseBody setLiveDomainModels(DescribeLiveDomainMappingResponseBodyLiveDomainModels liveDomainModels) {
@@ -31,24 +23,24 @@ public class DescribeLiveDomainMappingResponseBody extends TeaModel {
         return this.liveDomainModels;
     }
 
-    public static class DescribeLiveDomainMappingResponseBodyLiveDomainModelsLiveDomainModel extends TeaModel {
-        @NameInMap("Type")
-        public String type;
+    public DescribeLiveDomainMappingResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class DescribeLiveDomainMappingResponseBodyLiveDomainModelsLiveDomainModel extends TeaModel {
         @NameInMap("DomainName")
         public String domainName;
+
+        @NameInMap("Type")
+        public String type;
 
         public static DescribeLiveDomainMappingResponseBodyLiveDomainModelsLiveDomainModel build(java.util.Map<String, ?> map) throws Exception {
             DescribeLiveDomainMappingResponseBodyLiveDomainModelsLiveDomainModel self = new DescribeLiveDomainMappingResponseBodyLiveDomainModelsLiveDomainModel();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeLiveDomainMappingResponseBodyLiveDomainModelsLiveDomainModel setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
         }
 
         public DescribeLiveDomainMappingResponseBodyLiveDomainModelsLiveDomainModel setDomainName(String domainName) {
@@ -57,6 +49,14 @@ public class DescribeLiveDomainMappingResponseBody extends TeaModel {
         }
         public String getDomainName() {
             return this.domainName;
+        }
+
+        public DescribeLiveDomainMappingResponseBodyLiveDomainModelsLiveDomainModel setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }

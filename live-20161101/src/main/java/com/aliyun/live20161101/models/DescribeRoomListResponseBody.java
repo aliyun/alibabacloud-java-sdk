@@ -4,37 +4,21 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeRoomListResponseBody extends TeaModel {
-    @NameInMap("TotalNum")
-    public Integer totalNum;
-
-    @NameInMap("TotalPage")
-    public Integer totalPage;
-
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("RoomList")
     public java.util.List<DescribeRoomListResponseBodyRoomList> roomList;
 
+    @NameInMap("TotalNum")
+    public Integer totalNum;
+
+    @NameInMap("TotalPage")
+    public Integer totalPage;
+
     public static DescribeRoomListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeRoomListResponseBody self = new DescribeRoomListResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeRoomListResponseBody setTotalNum(Integer totalNum) {
-        this.totalNum = totalNum;
-        return this;
-    }
-    public Integer getTotalNum() {
-        return this.totalNum;
-    }
-
-    public DescribeRoomListResponseBody setTotalPage(Integer totalPage) {
-        this.totalPage = totalPage;
-        return this;
-    }
-    public Integer getTotalPage() {
-        return this.totalPage;
     }
 
     public DescribeRoomListResponseBody setRequestId(String requestId) {
@@ -51,6 +35,22 @@ public class DescribeRoomListResponseBody extends TeaModel {
     }
     public java.util.List<DescribeRoomListResponseBodyRoomList> getRoomList() {
         return this.roomList;
+    }
+
+    public DescribeRoomListResponseBody setTotalNum(Integer totalNum) {
+        this.totalNum = totalNum;
+        return this;
+    }
+    public Integer getTotalNum() {
+        return this.totalNum;
+    }
+
+    public DescribeRoomListResponseBody setTotalPage(Integer totalPage) {
+        this.totalPage = totalPage;
+        return this;
+    }
+    public Integer getTotalPage() {
+        return this.totalPage;
     }
 
     public static class DescribeRoomListResponseBodyRoomList extends TeaModel {

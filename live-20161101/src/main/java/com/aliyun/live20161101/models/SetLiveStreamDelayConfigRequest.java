@@ -4,11 +4,14 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class SetLiveStreamDelayConfigRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("DomainName")
     public String domainName;
+
+    @NameInMap("FlvDelay")
+    public Integer flvDelay;
+
+    @NameInMap("FlvLevel")
+    public String flvLevel;
 
     @NameInMap("HlsDelay")
     public Integer hlsDelay;
@@ -16,11 +19,8 @@ public class SetLiveStreamDelayConfigRequest extends TeaModel {
     @NameInMap("HlsLevel")
     public String hlsLevel;
 
-    @NameInMap("FlvDelay")
-    public Integer flvDelay;
-
-    @NameInMap("FlvLevel")
-    public String flvLevel;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("RtmpDelay")
     public Integer rtmpDelay;
@@ -33,20 +33,28 @@ public class SetLiveStreamDelayConfigRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public SetLiveStreamDelayConfigRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
     public SetLiveStreamDelayConfigRequest setDomainName(String domainName) {
         this.domainName = domainName;
         return this;
     }
     public String getDomainName() {
         return this.domainName;
+    }
+
+    public SetLiveStreamDelayConfigRequest setFlvDelay(Integer flvDelay) {
+        this.flvDelay = flvDelay;
+        return this;
+    }
+    public Integer getFlvDelay() {
+        return this.flvDelay;
+    }
+
+    public SetLiveStreamDelayConfigRequest setFlvLevel(String flvLevel) {
+        this.flvLevel = flvLevel;
+        return this;
+    }
+    public String getFlvLevel() {
+        return this.flvLevel;
     }
 
     public SetLiveStreamDelayConfigRequest setHlsDelay(Integer hlsDelay) {
@@ -65,20 +73,12 @@ public class SetLiveStreamDelayConfigRequest extends TeaModel {
         return this.hlsLevel;
     }
 
-    public SetLiveStreamDelayConfigRequest setFlvDelay(Integer flvDelay) {
-        this.flvDelay = flvDelay;
+    public SetLiveStreamDelayConfigRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public Integer getFlvDelay() {
-        return this.flvDelay;
-    }
-
-    public SetLiveStreamDelayConfigRequest setFlvLevel(String flvLevel) {
-        this.flvLevel = flvLevel;
-        return this;
-    }
-    public String getFlvLevel() {
-        return this.flvLevel;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public SetLiveStreamDelayConfigRequest setRtmpDelay(Integer rtmpDelay) {

@@ -4,8 +4,8 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class RealTimeSnapshotCommandRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("AppName")
+    public String appName;
 
     @NameInMap("Command")
     public String command;
@@ -13,29 +13,32 @@ public class RealTimeSnapshotCommandRequest extends TeaModel {
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("AppName")
-    public String appName;
-
-    @NameInMap("StreamName")
-    public String streamName;
+    @NameInMap("Interval")
+    public Integer interval;
 
     @NameInMap("Mode")
     public Integer mode;
 
-    @NameInMap("Interval")
-    public Integer interval;
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("Source")
+    public Integer source;
+
+    @NameInMap("StreamName")
+    public String streamName;
 
     public static RealTimeSnapshotCommandRequest build(java.util.Map<String, ?> map) throws Exception {
         RealTimeSnapshotCommandRequest self = new RealTimeSnapshotCommandRequest();
         return TeaModel.build(map, self);
     }
 
-    public RealTimeSnapshotCommandRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public RealTimeSnapshotCommandRequest setAppName(String appName) {
+        this.appName = appName;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public String getAppName() {
+        return this.appName;
     }
 
     public RealTimeSnapshotCommandRequest setCommand(String command) {
@@ -54,20 +57,12 @@ public class RealTimeSnapshotCommandRequest extends TeaModel {
         return this.domainName;
     }
 
-    public RealTimeSnapshotCommandRequest setAppName(String appName) {
-        this.appName = appName;
+    public RealTimeSnapshotCommandRequest setInterval(Integer interval) {
+        this.interval = interval;
         return this;
     }
-    public String getAppName() {
-        return this.appName;
-    }
-
-    public RealTimeSnapshotCommandRequest setStreamName(String streamName) {
-        this.streamName = streamName;
-        return this;
-    }
-    public String getStreamName() {
-        return this.streamName;
+    public Integer getInterval() {
+        return this.interval;
     }
 
     public RealTimeSnapshotCommandRequest setMode(Integer mode) {
@@ -78,12 +73,28 @@ public class RealTimeSnapshotCommandRequest extends TeaModel {
         return this.mode;
     }
 
-    public RealTimeSnapshotCommandRequest setInterval(Integer interval) {
-        this.interval = interval;
+    public RealTimeSnapshotCommandRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public Integer getInterval() {
-        return this.interval;
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public RealTimeSnapshotCommandRequest setSource(Integer source) {
+        this.source = source;
+        return this;
+    }
+    public Integer getSource() {
+        return this.source;
+    }
+
+    public RealTimeSnapshotCommandRequest setStreamName(String streamName) {
+        this.streamName = streamName;
+        return this;
+    }
+    public String getStreamName() {
+        return this.streamName;
     }
 
 }

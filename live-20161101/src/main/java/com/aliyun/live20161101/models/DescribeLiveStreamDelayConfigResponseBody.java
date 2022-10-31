@@ -7,14 +7,14 @@ public class DescribeLiveStreamDelayConfigResponseBody extends TeaModel {
     @NameInMap("LiveStreamFlvDelayConfig")
     public DescribeLiveStreamDelayConfigResponseBodyLiveStreamFlvDelayConfig liveStreamFlvDelayConfig;
 
+    @NameInMap("LiveStreamHlsDelayConfig")
+    public DescribeLiveStreamDelayConfigResponseBodyLiveStreamHlsDelayConfig liveStreamHlsDelayConfig;
+
     @NameInMap("LiveStreamRtmpDelayConfig")
     public DescribeLiveStreamDelayConfigResponseBodyLiveStreamRtmpDelayConfig liveStreamRtmpDelayConfig;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("LiveStreamHlsDelayConfig")
-    public DescribeLiveStreamDelayConfigResponseBodyLiveStreamHlsDelayConfig liveStreamHlsDelayConfig;
 
     public static DescribeLiveStreamDelayConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveStreamDelayConfigResponseBody self = new DescribeLiveStreamDelayConfigResponseBody();
@@ -27,6 +27,14 @@ public class DescribeLiveStreamDelayConfigResponseBody extends TeaModel {
     }
     public DescribeLiveStreamDelayConfigResponseBodyLiveStreamFlvDelayConfig getLiveStreamFlvDelayConfig() {
         return this.liveStreamFlvDelayConfig;
+    }
+
+    public DescribeLiveStreamDelayConfigResponseBody setLiveStreamHlsDelayConfig(DescribeLiveStreamDelayConfigResponseBodyLiveStreamHlsDelayConfig liveStreamHlsDelayConfig) {
+        this.liveStreamHlsDelayConfig = liveStreamHlsDelayConfig;
+        return this;
+    }
+    public DescribeLiveStreamDelayConfigResponseBodyLiveStreamHlsDelayConfig getLiveStreamHlsDelayConfig() {
+        return this.liveStreamHlsDelayConfig;
     }
 
     public DescribeLiveStreamDelayConfigResponseBody setLiveStreamRtmpDelayConfig(DescribeLiveStreamDelayConfigResponseBodyLiveStreamRtmpDelayConfig liveStreamRtmpDelayConfig) {
@@ -43,14 +51,6 @@ public class DescribeLiveStreamDelayConfigResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public DescribeLiveStreamDelayConfigResponseBody setLiveStreamHlsDelayConfig(DescribeLiveStreamDelayConfigResponseBodyLiveStreamHlsDelayConfig liveStreamHlsDelayConfig) {
-        this.liveStreamHlsDelayConfig = liveStreamHlsDelayConfig;
-        return this;
-    }
-    public DescribeLiveStreamDelayConfigResponseBodyLiveStreamHlsDelayConfig getLiveStreamHlsDelayConfig() {
-        return this.liveStreamHlsDelayConfig;
     }
 
     public static class DescribeLiveStreamDelayConfigResponseBodyLiveStreamFlvDelayConfig extends TeaModel {
@@ -83,36 +83,6 @@ public class DescribeLiveStreamDelayConfigResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeLiveStreamDelayConfigResponseBodyLiveStreamRtmpDelayConfig extends TeaModel {
-        @NameInMap("Delay")
-        public Integer delay;
-
-        @NameInMap("Level")
-        public String level;
-
-        public static DescribeLiveStreamDelayConfigResponseBodyLiveStreamRtmpDelayConfig build(java.util.Map<String, ?> map) throws Exception {
-            DescribeLiveStreamDelayConfigResponseBodyLiveStreamRtmpDelayConfig self = new DescribeLiveStreamDelayConfigResponseBodyLiveStreamRtmpDelayConfig();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeLiveStreamDelayConfigResponseBodyLiveStreamRtmpDelayConfig setDelay(Integer delay) {
-            this.delay = delay;
-            return this;
-        }
-        public Integer getDelay() {
-            return this.delay;
-        }
-
-        public DescribeLiveStreamDelayConfigResponseBodyLiveStreamRtmpDelayConfig setLevel(String level) {
-            this.level = level;
-            return this;
-        }
-        public String getLevel() {
-            return this.level;
-        }
-
-    }
-
     public static class DescribeLiveStreamDelayConfigResponseBodyLiveStreamHlsDelayConfig extends TeaModel {
         @NameInMap("Delay")
         public Integer delay;
@@ -134,6 +104,36 @@ public class DescribeLiveStreamDelayConfigResponseBody extends TeaModel {
         }
 
         public DescribeLiveStreamDelayConfigResponseBodyLiveStreamHlsDelayConfig setLevel(String level) {
+            this.level = level;
+            return this;
+        }
+        public String getLevel() {
+            return this.level;
+        }
+
+    }
+
+    public static class DescribeLiveStreamDelayConfigResponseBodyLiveStreamRtmpDelayConfig extends TeaModel {
+        @NameInMap("Delay")
+        public Integer delay;
+
+        @NameInMap("Level")
+        public String level;
+
+        public static DescribeLiveStreamDelayConfigResponseBodyLiveStreamRtmpDelayConfig build(java.util.Map<String, ?> map) throws Exception {
+            DescribeLiveStreamDelayConfigResponseBodyLiveStreamRtmpDelayConfig self = new DescribeLiveStreamDelayConfigResponseBodyLiveStreamRtmpDelayConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeLiveStreamDelayConfigResponseBodyLiveStreamRtmpDelayConfig setDelay(Integer delay) {
+            this.delay = delay;
+            return this;
+        }
+        public Integer getDelay() {
+            return this.delay;
+        }
+
+        public DescribeLiveStreamDelayConfigResponseBodyLiveStreamRtmpDelayConfig setLevel(String level) {
             this.level = level;
             return this;
         }

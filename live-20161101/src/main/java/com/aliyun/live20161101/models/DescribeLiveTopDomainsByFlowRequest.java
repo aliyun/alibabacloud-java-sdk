@@ -4,37 +4,21 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveTopDomainsByFlowRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("StartTime")
-    public String startTime;
-
     @NameInMap("EndTime")
     public String endTime;
 
     @NameInMap("Limit")
     public Long limit;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("StartTime")
+    public String startTime;
+
     public static DescribeLiveTopDomainsByFlowRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveTopDomainsByFlowRequest self = new DescribeLiveTopDomainsByFlowRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeLiveTopDomainsByFlowRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public DescribeLiveTopDomainsByFlowRequest setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
     }
 
     public DescribeLiveTopDomainsByFlowRequest setEndTime(String endTime) {
@@ -51,6 +35,22 @@ public class DescribeLiveTopDomainsByFlowRequest extends TeaModel {
     }
     public Long getLimit() {
         return this.limit;
+    }
+
+    public DescribeLiveTopDomainsByFlowRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeLiveTopDomainsByFlowRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
 }

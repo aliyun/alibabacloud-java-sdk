@@ -4,23 +4,15 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveAudioAuditConfigResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("LiveAudioAuditConfigList")
     public DescribeLiveAudioAuditConfigResponseBodyLiveAudioAuditConfigList liveAudioAuditConfigList;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeLiveAudioAuditConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveAudioAuditConfigResponseBody self = new DescribeLiveAudioAuditConfigResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeLiveAudioAuditConfigResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeLiveAudioAuditConfigResponseBody setLiveAudioAuditConfigList(DescribeLiveAudioAuditConfigResponseBodyLiveAudioAuditConfigList liveAudioAuditConfigList) {
@@ -29,6 +21,14 @@ public class DescribeLiveAudioAuditConfigResponseBody extends TeaModel {
     }
     public DescribeLiveAudioAuditConfigResponseBodyLiveAudioAuditConfigList getLiveAudioAuditConfigList() {
         return this.liveAudioAuditConfigList;
+    }
+
+    public DescribeLiveAudioAuditConfigResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeLiveAudioAuditConfigResponseBodyLiveAudioAuditConfigListLiveAudioAuditConfigScenes extends TeaModel {
@@ -54,17 +54,17 @@ public class DescribeLiveAudioAuditConfigResponseBody extends TeaModel {
         @NameInMap("AppName")
         public String appName;
 
-        @NameInMap("StreamName")
-        public String streamName;
-
-        @NameInMap("Scenes")
-        public DescribeLiveAudioAuditConfigResponseBodyLiveAudioAuditConfigListLiveAudioAuditConfigScenes scenes;
+        @NameInMap("BizType")
+        public String bizType;
 
         @NameInMap("DomainName")
         public String domainName;
 
-        @NameInMap("BizType")
-        public String bizType;
+        @NameInMap("Scenes")
+        public DescribeLiveAudioAuditConfigResponseBodyLiveAudioAuditConfigListLiveAudioAuditConfigScenes scenes;
+
+        @NameInMap("StreamName")
+        public String streamName;
 
         public static DescribeLiveAudioAuditConfigResponseBodyLiveAudioAuditConfigListLiveAudioAuditConfig build(java.util.Map<String, ?> map) throws Exception {
             DescribeLiveAudioAuditConfigResponseBodyLiveAudioAuditConfigListLiveAudioAuditConfig self = new DescribeLiveAudioAuditConfigResponseBodyLiveAudioAuditConfigListLiveAudioAuditConfig();
@@ -79,20 +79,12 @@ public class DescribeLiveAudioAuditConfigResponseBody extends TeaModel {
             return this.appName;
         }
 
-        public DescribeLiveAudioAuditConfigResponseBodyLiveAudioAuditConfigListLiveAudioAuditConfig setStreamName(String streamName) {
-            this.streamName = streamName;
+        public DescribeLiveAudioAuditConfigResponseBodyLiveAudioAuditConfigListLiveAudioAuditConfig setBizType(String bizType) {
+            this.bizType = bizType;
             return this;
         }
-        public String getStreamName() {
-            return this.streamName;
-        }
-
-        public DescribeLiveAudioAuditConfigResponseBodyLiveAudioAuditConfigListLiveAudioAuditConfig setScenes(DescribeLiveAudioAuditConfigResponseBodyLiveAudioAuditConfigListLiveAudioAuditConfigScenes scenes) {
-            this.scenes = scenes;
-            return this;
-        }
-        public DescribeLiveAudioAuditConfigResponseBodyLiveAudioAuditConfigListLiveAudioAuditConfigScenes getScenes() {
-            return this.scenes;
+        public String getBizType() {
+            return this.bizType;
         }
 
         public DescribeLiveAudioAuditConfigResponseBodyLiveAudioAuditConfigListLiveAudioAuditConfig setDomainName(String domainName) {
@@ -103,12 +95,20 @@ public class DescribeLiveAudioAuditConfigResponseBody extends TeaModel {
             return this.domainName;
         }
 
-        public DescribeLiveAudioAuditConfigResponseBodyLiveAudioAuditConfigListLiveAudioAuditConfig setBizType(String bizType) {
-            this.bizType = bizType;
+        public DescribeLiveAudioAuditConfigResponseBodyLiveAudioAuditConfigListLiveAudioAuditConfig setScenes(DescribeLiveAudioAuditConfigResponseBodyLiveAudioAuditConfigListLiveAudioAuditConfigScenes scenes) {
+            this.scenes = scenes;
             return this;
         }
-        public String getBizType() {
-            return this.bizType;
+        public DescribeLiveAudioAuditConfigResponseBodyLiveAudioAuditConfigListLiveAudioAuditConfigScenes getScenes() {
+            return this.scenes;
+        }
+
+        public DescribeLiveAudioAuditConfigResponseBodyLiveAudioAuditConfigListLiveAudioAuditConfig setStreamName(String streamName) {
+            this.streamName = streamName;
+            return this;
+        }
+        public String getStreamName() {
+            return this.streamName;
         }
 
     }

@@ -4,14 +4,14 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveDomainOnlineUserNumResponseBody extends TeaModel {
-    @NameInMap("StreamCount")
-    public Integer streamCount;
-
     @NameInMap("OnlineUserInfo")
     public DescribeLiveDomainOnlineUserNumResponseBodyOnlineUserInfo onlineUserInfo;
 
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("StreamCount")
+    public Integer streamCount;
 
     @NameInMap("UserCount")
     public Integer userCount;
@@ -19,14 +19,6 @@ public class DescribeLiveDomainOnlineUserNumResponseBody extends TeaModel {
     public static DescribeLiveDomainOnlineUserNumResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveDomainOnlineUserNumResponseBody self = new DescribeLiveDomainOnlineUserNumResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeLiveDomainOnlineUserNumResponseBody setStreamCount(Integer streamCount) {
-        this.streamCount = streamCount;
-        return this;
-    }
-    public Integer getStreamCount() {
-        return this.streamCount;
     }
 
     public DescribeLiveDomainOnlineUserNumResponseBody setOnlineUserInfo(DescribeLiveDomainOnlineUserNumResponseBodyOnlineUserInfo onlineUserInfo) {
@@ -43,6 +35,14 @@ public class DescribeLiveDomainOnlineUserNumResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeLiveDomainOnlineUserNumResponseBody setStreamCount(Integer streamCount) {
+        this.streamCount = streamCount;
+        return this;
+    }
+    public Integer getStreamCount() {
+        return this.streamCount;
     }
 
     public DescribeLiveDomainOnlineUserNumResponseBody setUserCount(Integer userCount) {
@@ -103,23 +103,15 @@ public class DescribeLiveDomainOnlineUserNumResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveDomainOnlineUserNumResponseBodyOnlineUserInfoLiveStreamOnlineUserNumInfo extends TeaModel {
-        @NameInMap("StreamName")
-        public String streamName;
-
         @NameInMap("Infos")
         public DescribeLiveDomainOnlineUserNumResponseBodyOnlineUserInfoLiveStreamOnlineUserNumInfoInfos infos;
+
+        @NameInMap("StreamName")
+        public String streamName;
 
         public static DescribeLiveDomainOnlineUserNumResponseBodyOnlineUserInfoLiveStreamOnlineUserNumInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeLiveDomainOnlineUserNumResponseBodyOnlineUserInfoLiveStreamOnlineUserNumInfo self = new DescribeLiveDomainOnlineUserNumResponseBodyOnlineUserInfoLiveStreamOnlineUserNumInfo();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeLiveDomainOnlineUserNumResponseBodyOnlineUserInfoLiveStreamOnlineUserNumInfo setStreamName(String streamName) {
-            this.streamName = streamName;
-            return this;
-        }
-        public String getStreamName() {
-            return this.streamName;
         }
 
         public DescribeLiveDomainOnlineUserNumResponseBodyOnlineUserInfoLiveStreamOnlineUserNumInfo setInfos(DescribeLiveDomainOnlineUserNumResponseBodyOnlineUserInfoLiveStreamOnlineUserNumInfoInfos infos) {
@@ -128,6 +120,14 @@ public class DescribeLiveDomainOnlineUserNumResponseBody extends TeaModel {
         }
         public DescribeLiveDomainOnlineUserNumResponseBodyOnlineUserInfoLiveStreamOnlineUserNumInfoInfos getInfos() {
             return this.infos;
+        }
+
+        public DescribeLiveDomainOnlineUserNumResponseBodyOnlineUserInfoLiveStreamOnlineUserNumInfo setStreamName(String streamName) {
+            this.streamName = streamName;
+            return this;
+        }
+        public String getStreamName() {
+            return this.streamName;
         }
 
     }

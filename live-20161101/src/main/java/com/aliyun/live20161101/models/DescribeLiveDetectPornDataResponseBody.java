@@ -4,23 +4,15 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveDetectPornDataResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("DetectPornData")
     public DescribeLiveDetectPornDataResponseBodyDetectPornData detectPornData;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeLiveDetectPornDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveDetectPornDataResponseBody self = new DescribeLiveDetectPornDataResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeLiveDetectPornDataResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeLiveDetectPornDataResponseBody setDetectPornData(DescribeLiveDetectPornDataResponseBodyDetectPornData detectPornData) {
@@ -31,15 +23,32 @@ public class DescribeLiveDetectPornDataResponseBody extends TeaModel {
         return this.detectPornData;
     }
 
+    public DescribeLiveDetectPornDataResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeLiveDetectPornDataResponseBodyDetectPornDataDataModule extends TeaModel {
+        @NameInMap("App")
+        public String app;
+
+        @NameInMap("Count")
+        public Long count;
+
         @NameInMap("Domain")
         public String domain;
+
+        @NameInMap("Fee")
+        public String fee;
 
         @NameInMap("Region")
         public String region;
 
-        @NameInMap("App")
-        public String app;
+        @NameInMap("Scene")
+        public String scene;
 
         @NameInMap("Stream")
         public String stream;
@@ -47,18 +56,25 @@ public class DescribeLiveDetectPornDataResponseBody extends TeaModel {
         @NameInMap("TimeStamp")
         public String timeStamp;
 
-        @NameInMap("Count")
-        public Long count;
-
-        @NameInMap("Scene")
-        public String scene;
-
-        @NameInMap("Fee")
-        public String fee;
-
         public static DescribeLiveDetectPornDataResponseBodyDetectPornDataDataModule build(java.util.Map<String, ?> map) throws Exception {
             DescribeLiveDetectPornDataResponseBodyDetectPornDataDataModule self = new DescribeLiveDetectPornDataResponseBodyDetectPornDataDataModule();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeLiveDetectPornDataResponseBodyDetectPornDataDataModule setApp(String app) {
+            this.app = app;
+            return this;
+        }
+        public String getApp() {
+            return this.app;
+        }
+
+        public DescribeLiveDetectPornDataResponseBodyDetectPornDataDataModule setCount(Long count) {
+            this.count = count;
+            return this;
+        }
+        public Long getCount() {
+            return this.count;
         }
 
         public DescribeLiveDetectPornDataResponseBodyDetectPornDataDataModule setDomain(String domain) {
@@ -69,6 +85,14 @@ public class DescribeLiveDetectPornDataResponseBody extends TeaModel {
             return this.domain;
         }
 
+        public DescribeLiveDetectPornDataResponseBodyDetectPornDataDataModule setFee(String fee) {
+            this.fee = fee;
+            return this;
+        }
+        public String getFee() {
+            return this.fee;
+        }
+
         public DescribeLiveDetectPornDataResponseBodyDetectPornDataDataModule setRegion(String region) {
             this.region = region;
             return this;
@@ -77,12 +101,12 @@ public class DescribeLiveDetectPornDataResponseBody extends TeaModel {
             return this.region;
         }
 
-        public DescribeLiveDetectPornDataResponseBodyDetectPornDataDataModule setApp(String app) {
-            this.app = app;
+        public DescribeLiveDetectPornDataResponseBodyDetectPornDataDataModule setScene(String scene) {
+            this.scene = scene;
             return this;
         }
-        public String getApp() {
-            return this.app;
+        public String getScene() {
+            return this.scene;
         }
 
         public DescribeLiveDetectPornDataResponseBodyDetectPornDataDataModule setStream(String stream) {
@@ -99,30 +123,6 @@ public class DescribeLiveDetectPornDataResponseBody extends TeaModel {
         }
         public String getTimeStamp() {
             return this.timeStamp;
-        }
-
-        public DescribeLiveDetectPornDataResponseBodyDetectPornDataDataModule setCount(Long count) {
-            this.count = count;
-            return this;
-        }
-        public Long getCount() {
-            return this.count;
-        }
-
-        public DescribeLiveDetectPornDataResponseBodyDetectPornDataDataModule setScene(String scene) {
-            this.scene = scene;
-            return this;
-        }
-        public String getScene() {
-            return this.scene;
-        }
-
-        public DescribeLiveDetectPornDataResponseBodyDetectPornDataDataModule setFee(String fee) {
-            this.fee = fee;
-            return this;
-        }
-        public String getFee() {
-            return this.fee;
         }
 
     }

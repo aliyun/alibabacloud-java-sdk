@@ -4,23 +4,15 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveDomainRecordDataResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("RecordDataInfos")
     public DescribeLiveDomainRecordDataResponseBodyRecordDataInfos recordDataInfos;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeLiveDomainRecordDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveDomainRecordDataResponseBody self = new DescribeLiveDomainRecordDataResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeLiveDomainRecordDataResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeLiveDomainRecordDataResponseBody setRecordDataInfos(DescribeLiveDomainRecordDataResponseBodyRecordDataInfos recordDataInfos) {
@@ -31,15 +23,23 @@ public class DescribeLiveDomainRecordDataResponseBody extends TeaModel {
         return this.recordDataInfos;
     }
 
+    public DescribeLiveDomainRecordDataResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeLiveDomainRecordDataResponseBodyRecordDataInfosRecordDataInfoDetail extends TeaModel {
         @NameInMap("FLV")
         public Integer FLV;
 
-        @NameInMap("TS")
-        public Integer TS;
-
         @NameInMap("MP4")
         public Integer MP4;
+
+        @NameInMap("TS")
+        public Integer TS;
 
         public static DescribeLiveDomainRecordDataResponseBodyRecordDataInfosRecordDataInfoDetail build(java.util.Map<String, ?> map) throws Exception {
             DescribeLiveDomainRecordDataResponseBodyRecordDataInfosRecordDataInfoDetail self = new DescribeLiveDomainRecordDataResponseBodyRecordDataInfosRecordDataInfoDetail();
@@ -54,14 +54,6 @@ public class DescribeLiveDomainRecordDataResponseBody extends TeaModel {
             return this.FLV;
         }
 
-        public DescribeLiveDomainRecordDataResponseBodyRecordDataInfosRecordDataInfoDetail setTS(Integer TS) {
-            this.TS = TS;
-            return this;
-        }
-        public Integer getTS() {
-            return this.TS;
-        }
-
         public DescribeLiveDomainRecordDataResponseBodyRecordDataInfosRecordDataInfoDetail setMP4(Integer MP4) {
             this.MP4 = MP4;
             return this;
@@ -70,17 +62,25 @@ public class DescribeLiveDomainRecordDataResponseBody extends TeaModel {
             return this.MP4;
         }
 
+        public DescribeLiveDomainRecordDataResponseBodyRecordDataInfosRecordDataInfoDetail setTS(Integer TS) {
+            this.TS = TS;
+            return this;
+        }
+        public Integer getTS() {
+            return this.TS;
+        }
+
     }
 
     public static class DescribeLiveDomainRecordDataResponseBodyRecordDataInfosRecordDataInfo extends TeaModel {
         @NameInMap("Date")
         public String date;
 
-        @NameInMap("Total")
-        public Integer total;
-
         @NameInMap("Detail")
         public DescribeLiveDomainRecordDataResponseBodyRecordDataInfosRecordDataInfoDetail detail;
+
+        @NameInMap("Total")
+        public Integer total;
 
         public static DescribeLiveDomainRecordDataResponseBodyRecordDataInfosRecordDataInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeLiveDomainRecordDataResponseBodyRecordDataInfosRecordDataInfo self = new DescribeLiveDomainRecordDataResponseBodyRecordDataInfosRecordDataInfo();
@@ -95,20 +95,20 @@ public class DescribeLiveDomainRecordDataResponseBody extends TeaModel {
             return this.date;
         }
 
-        public DescribeLiveDomainRecordDataResponseBodyRecordDataInfosRecordDataInfo setTotal(Integer total) {
-            this.total = total;
-            return this;
-        }
-        public Integer getTotal() {
-            return this.total;
-        }
-
         public DescribeLiveDomainRecordDataResponseBodyRecordDataInfosRecordDataInfo setDetail(DescribeLiveDomainRecordDataResponseBodyRecordDataInfosRecordDataInfoDetail detail) {
             this.detail = detail;
             return this;
         }
         public DescribeLiveDomainRecordDataResponseBodyRecordDataInfosRecordDataInfoDetail getDetail() {
             return this.detail;
+        }
+
+        public DescribeLiveDomainRecordDataResponseBodyRecordDataInfosRecordDataInfo setTotal(Integer total) {
+            this.total = total;
+            return this;
+        }
+        public Integer getTotal() {
+            return this.total;
         }
 
     }

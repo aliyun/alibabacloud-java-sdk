@@ -4,27 +4,51 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveDomainBpsDataResponseBody extends TeaModel {
+    @NameInMap("BpsDataPerInterval")
+    public DescribeLiveDomainBpsDataResponseBodyBpsDataPerInterval bpsDataPerInterval;
+
+    @NameInMap("DataInterval")
+    public String dataInterval;
+
+    @NameInMap("DomainName")
+    public String domainName;
+
     @NameInMap("EndTime")
     public String endTime;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("DomainName")
-    public String domainName;
-
     @NameInMap("StartTime")
     public String startTime;
-
-    @NameInMap("DataInterval")
-    public String dataInterval;
-
-    @NameInMap("BpsDataPerInterval")
-    public DescribeLiveDomainBpsDataResponseBodyBpsDataPerInterval bpsDataPerInterval;
 
     public static DescribeLiveDomainBpsDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveDomainBpsDataResponseBody self = new DescribeLiveDomainBpsDataResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeLiveDomainBpsDataResponseBody setBpsDataPerInterval(DescribeLiveDomainBpsDataResponseBodyBpsDataPerInterval bpsDataPerInterval) {
+        this.bpsDataPerInterval = bpsDataPerInterval;
+        return this;
+    }
+    public DescribeLiveDomainBpsDataResponseBodyBpsDataPerInterval getBpsDataPerInterval() {
+        return this.bpsDataPerInterval;
+    }
+
+    public DescribeLiveDomainBpsDataResponseBody setDataInterval(String dataInterval) {
+        this.dataInterval = dataInterval;
+        return this;
+    }
+    public String getDataInterval() {
+        return this.dataInterval;
+    }
+
+    public DescribeLiveDomainBpsDataResponseBody setDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String getDomainName() {
+        return this.domainName;
     }
 
     public DescribeLiveDomainBpsDataResponseBody setEndTime(String endTime) {
@@ -43,14 +67,6 @@ public class DescribeLiveDomainBpsDataResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeLiveDomainBpsDataResponseBody setDomainName(String domainName) {
-        this.domainName = domainName;
-        return this;
-    }
-    public String getDomainName() {
-        return this.domainName;
-    }
-
     public DescribeLiveDomainBpsDataResponseBody setStartTime(String startTime) {
         this.startTime = startTime;
         return this;
@@ -59,46 +75,22 @@ public class DescribeLiveDomainBpsDataResponseBody extends TeaModel {
         return this.startTime;
     }
 
-    public DescribeLiveDomainBpsDataResponseBody setDataInterval(String dataInterval) {
-        this.dataInterval = dataInterval;
-        return this;
-    }
-    public String getDataInterval() {
-        return this.dataInterval;
-    }
-
-    public DescribeLiveDomainBpsDataResponseBody setBpsDataPerInterval(DescribeLiveDomainBpsDataResponseBodyBpsDataPerInterval bpsDataPerInterval) {
-        this.bpsDataPerInterval = bpsDataPerInterval;
-        return this;
-    }
-    public DescribeLiveDomainBpsDataResponseBodyBpsDataPerInterval getBpsDataPerInterval() {
-        return this.bpsDataPerInterval;
-    }
-
     public static class DescribeLiveDomainBpsDataResponseBodyBpsDataPerIntervalDataModule extends TeaModel {
-        @NameInMap("HttpsBpsValue")
-        public String httpsBpsValue;
-
         @NameInMap("BpsValue")
         public String bpsValue;
-
-        @NameInMap("TimeStamp")
-        public String timeStamp;
 
         @NameInMap("HttpBpsValue")
         public String httpBpsValue;
 
+        @NameInMap("HttpsBpsValue")
+        public String httpsBpsValue;
+
+        @NameInMap("TimeStamp")
+        public String timeStamp;
+
         public static DescribeLiveDomainBpsDataResponseBodyBpsDataPerIntervalDataModule build(java.util.Map<String, ?> map) throws Exception {
             DescribeLiveDomainBpsDataResponseBodyBpsDataPerIntervalDataModule self = new DescribeLiveDomainBpsDataResponseBodyBpsDataPerIntervalDataModule();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeLiveDomainBpsDataResponseBodyBpsDataPerIntervalDataModule setHttpsBpsValue(String httpsBpsValue) {
-            this.httpsBpsValue = httpsBpsValue;
-            return this;
-        }
-        public String getHttpsBpsValue() {
-            return this.httpsBpsValue;
         }
 
         public DescribeLiveDomainBpsDataResponseBodyBpsDataPerIntervalDataModule setBpsValue(String bpsValue) {
@@ -109,20 +101,28 @@ public class DescribeLiveDomainBpsDataResponseBody extends TeaModel {
             return this.bpsValue;
         }
 
-        public DescribeLiveDomainBpsDataResponseBodyBpsDataPerIntervalDataModule setTimeStamp(String timeStamp) {
-            this.timeStamp = timeStamp;
-            return this;
-        }
-        public String getTimeStamp() {
-            return this.timeStamp;
-        }
-
         public DescribeLiveDomainBpsDataResponseBodyBpsDataPerIntervalDataModule setHttpBpsValue(String httpBpsValue) {
             this.httpBpsValue = httpBpsValue;
             return this;
         }
         public String getHttpBpsValue() {
             return this.httpBpsValue;
+        }
+
+        public DescribeLiveDomainBpsDataResponseBodyBpsDataPerIntervalDataModule setHttpsBpsValue(String httpsBpsValue) {
+            this.httpsBpsValue = httpsBpsValue;
+            return this;
+        }
+        public String getHttpsBpsValue() {
+            return this.httpsBpsValue;
+        }
+
+        public DescribeLiveDomainBpsDataResponseBodyBpsDataPerIntervalDataModule setTimeStamp(String timeStamp) {
+            this.timeStamp = timeStamp;
+            return this;
+        }
+        public String getTimeStamp() {
+            return this.timeStamp;
         }
 
     }

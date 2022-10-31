@@ -4,54 +4,30 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveStreamBitRateDataRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("AppName")
+    public String appName;
 
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("AppName")
-    public String appName;
+    @NameInMap("EndTime")
+    public String endTime;
 
-    @NameInMap("StreamName")
-    public String streamName;
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     @NameInMap("StartTime")
     public String startTime;
 
-    @NameInMap("EndTime")
-    public String endTime;
+    @NameInMap("StreamName")
+    public String streamName;
 
     public static DescribeLiveStreamBitRateDataRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveStreamBitRateDataRequest self = new DescribeLiveStreamBitRateDataRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeLiveStreamBitRateDataRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
-    public DescribeLiveStreamBitRateDataRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public DescribeLiveStreamBitRateDataRequest setDomainName(String domainName) {
-        this.domainName = domainName;
-        return this;
-    }
-    public String getDomainName() {
-        return this.domainName;
     }
 
     public DescribeLiveStreamBitRateDataRequest setAppName(String appName) {
@@ -62,12 +38,36 @@ public class DescribeLiveStreamBitRateDataRequest extends TeaModel {
         return this.appName;
     }
 
-    public DescribeLiveStreamBitRateDataRequest setStreamName(String streamName) {
-        this.streamName = streamName;
+    public DescribeLiveStreamBitRateDataRequest setDomainName(String domainName) {
+        this.domainName = domainName;
         return this;
     }
-    public String getStreamName() {
-        return this.streamName;
+    public String getDomainName() {
+        return this.domainName;
+    }
+
+    public DescribeLiveStreamBitRateDataRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    public DescribeLiveStreamBitRateDataRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeLiveStreamBitRateDataRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public DescribeLiveStreamBitRateDataRequest setStartTime(String startTime) {
@@ -78,12 +78,12 @@ public class DescribeLiveStreamBitRateDataRequest extends TeaModel {
         return this.startTime;
     }
 
-    public DescribeLiveStreamBitRateDataRequest setEndTime(String endTime) {
-        this.endTime = endTime;
+    public DescribeLiveStreamBitRateDataRequest setStreamName(String streamName) {
+        this.streamName = streamName;
         return this;
     }
-    public String getEndTime() {
-        return this.endTime;
+    public String getStreamName() {
+        return this.streamName;
     }
 
 }

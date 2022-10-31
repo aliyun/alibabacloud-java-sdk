@@ -32,23 +32,15 @@ public class DescribeLiveStreamHistoryUserNumResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveStreamHistoryUserNumResponseBodyLiveStreamUserNumInfosLiveStreamUserNumInfo extends TeaModel {
-        @NameInMap("UserNum")
-        public String userNum;
-
         @NameInMap("StreamTime")
         public String streamTime;
+
+        @NameInMap("UserNum")
+        public String userNum;
 
         public static DescribeLiveStreamHistoryUserNumResponseBodyLiveStreamUserNumInfosLiveStreamUserNumInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeLiveStreamHistoryUserNumResponseBodyLiveStreamUserNumInfosLiveStreamUserNumInfo self = new DescribeLiveStreamHistoryUserNumResponseBodyLiveStreamUserNumInfosLiveStreamUserNumInfo();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeLiveStreamHistoryUserNumResponseBodyLiveStreamUserNumInfosLiveStreamUserNumInfo setUserNum(String userNum) {
-            this.userNum = userNum;
-            return this;
-        }
-        public String getUserNum() {
-            return this.userNum;
         }
 
         public DescribeLiveStreamHistoryUserNumResponseBodyLiveStreamUserNumInfosLiveStreamUserNumInfo setStreamTime(String streamTime) {
@@ -57,6 +49,14 @@ public class DescribeLiveStreamHistoryUserNumResponseBody extends TeaModel {
         }
         public String getStreamTime() {
             return this.streamTime;
+        }
+
+        public DescribeLiveStreamHistoryUserNumResponseBodyLiveStreamUserNumInfosLiveStreamUserNumInfo setUserNum(String userNum) {
+            this.userNum = userNum;
+            return this;
+        }
+        public String getUserNum() {
+            return this.userNum;
         }
 
     }

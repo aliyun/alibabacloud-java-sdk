@@ -4,11 +4,11 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class SetCasterSyncGroupRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("CasterId")
     public String casterId;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("SyncGroup")
     public java.util.List<SetCasterSyncGroupRequestSyncGroup> syncGroup;
@@ -18,20 +18,20 @@ public class SetCasterSyncGroupRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public SetCasterSyncGroupRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
     public SetCasterSyncGroupRequest setCasterId(String casterId) {
         this.casterId = casterId;
         return this;
     }
     public String getCasterId() {
         return this.casterId;
+    }
+
+    public SetCasterSyncGroupRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public SetCasterSyncGroupRequest setSyncGroup(java.util.List<SetCasterSyncGroupRequestSyncGroup> syncGroup) {
@@ -46,14 +46,17 @@ public class SetCasterSyncGroupRequest extends TeaModel {
         @NameInMap("HostResourceId")
         public String hostResourceId;
 
+        @NameInMap("Mode")
+        public Integer mode;
+
         @NameInMap("ResourceIds")
         public java.util.List<String> resourceIds;
 
         @NameInMap("SyncDelayThreshold")
         public Long syncDelayThreshold;
 
-        @NameInMap("Mode")
-        public Integer mode;
+        @NameInMap("SyncOffsets")
+        public java.util.List<Integer> syncOffsets;
 
         public static SetCasterSyncGroupRequestSyncGroup build(java.util.Map<String, ?> map) throws Exception {
             SetCasterSyncGroupRequestSyncGroup self = new SetCasterSyncGroupRequestSyncGroup();
@@ -66,6 +69,14 @@ public class SetCasterSyncGroupRequest extends TeaModel {
         }
         public String getHostResourceId() {
             return this.hostResourceId;
+        }
+
+        public SetCasterSyncGroupRequestSyncGroup setMode(Integer mode) {
+            this.mode = mode;
+            return this;
+        }
+        public Integer getMode() {
+            return this.mode;
         }
 
         public SetCasterSyncGroupRequestSyncGroup setResourceIds(java.util.List<String> resourceIds) {
@@ -84,12 +95,12 @@ public class SetCasterSyncGroupRequest extends TeaModel {
             return this.syncDelayThreshold;
         }
 
-        public SetCasterSyncGroupRequestSyncGroup setMode(Integer mode) {
-            this.mode = mode;
+        public SetCasterSyncGroupRequestSyncGroup setSyncOffsets(java.util.List<Integer> syncOffsets) {
+            this.syncOffsets = syncOffsets;
             return this;
         }
-        public Integer getMode() {
-            return this.mode;
+        public java.util.List<Integer> getSyncOffsets() {
+            return this.syncOffsets;
         }
 
     }

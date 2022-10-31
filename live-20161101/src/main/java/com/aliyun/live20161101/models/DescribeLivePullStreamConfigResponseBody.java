@@ -4,23 +4,15 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLivePullStreamConfigResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("LiveAppRecordList")
     public DescribeLivePullStreamConfigResponseBodyLiveAppRecordList liveAppRecordList;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeLivePullStreamConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLivePullStreamConfigResponseBody self = new DescribeLivePullStreamConfigResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeLivePullStreamConfigResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeLivePullStreamConfigResponseBody setLiveAppRecordList(DescribeLivePullStreamConfigResponseBodyLiveAppRecordList liveAppRecordList) {
@@ -31,15 +23,29 @@ public class DescribeLivePullStreamConfigResponseBody extends TeaModel {
         return this.liveAppRecordList;
     }
 
-    public static class DescribeLivePullStreamConfigResponseBodyLiveAppRecordListLiveAppRecord extends TeaModel {
-        @NameInMap("EndTime")
-        public String endTime;
+    public DescribeLivePullStreamConfigResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class DescribeLivePullStreamConfigResponseBodyLiveAppRecordListLiveAppRecord extends TeaModel {
         @NameInMap("AppName")
         public String appName;
 
+        @NameInMap("DomainName")
+        public String domainName;
+
+        @NameInMap("EndTime")
+        public String endTime;
+
         @NameInMap("SourceUrl")
         public String sourceUrl;
+
+        @NameInMap("SourceUsing")
+        public String sourceUsing;
 
         @NameInMap("StartTime")
         public String startTime;
@@ -47,20 +53,9 @@ public class DescribeLivePullStreamConfigResponseBody extends TeaModel {
         @NameInMap("StreamName")
         public String streamName;
 
-        @NameInMap("DomainName")
-        public String domainName;
-
         public static DescribeLivePullStreamConfigResponseBodyLiveAppRecordListLiveAppRecord build(java.util.Map<String, ?> map) throws Exception {
             DescribeLivePullStreamConfigResponseBodyLiveAppRecordListLiveAppRecord self = new DescribeLivePullStreamConfigResponseBodyLiveAppRecordListLiveAppRecord();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeLivePullStreamConfigResponseBodyLiveAppRecordListLiveAppRecord setEndTime(String endTime) {
-            this.endTime = endTime;
-            return this;
-        }
-        public String getEndTime() {
-            return this.endTime;
         }
 
         public DescribeLivePullStreamConfigResponseBodyLiveAppRecordListLiveAppRecord setAppName(String appName) {
@@ -71,12 +66,36 @@ public class DescribeLivePullStreamConfigResponseBody extends TeaModel {
             return this.appName;
         }
 
+        public DescribeLivePullStreamConfigResponseBodyLiveAppRecordListLiveAppRecord setDomainName(String domainName) {
+            this.domainName = domainName;
+            return this;
+        }
+        public String getDomainName() {
+            return this.domainName;
+        }
+
+        public DescribeLivePullStreamConfigResponseBodyLiveAppRecordListLiveAppRecord setEndTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public String getEndTime() {
+            return this.endTime;
+        }
+
         public DescribeLivePullStreamConfigResponseBodyLiveAppRecordListLiveAppRecord setSourceUrl(String sourceUrl) {
             this.sourceUrl = sourceUrl;
             return this;
         }
         public String getSourceUrl() {
             return this.sourceUrl;
+        }
+
+        public DescribeLivePullStreamConfigResponseBodyLiveAppRecordListLiveAppRecord setSourceUsing(String sourceUsing) {
+            this.sourceUsing = sourceUsing;
+            return this;
+        }
+        public String getSourceUsing() {
+            return this.sourceUsing;
         }
 
         public DescribeLivePullStreamConfigResponseBodyLiveAppRecordListLiveAppRecord setStartTime(String startTime) {
@@ -93,14 +112,6 @@ public class DescribeLivePullStreamConfigResponseBody extends TeaModel {
         }
         public String getStreamName() {
             return this.streamName;
-        }
-
-        public DescribeLivePullStreamConfigResponseBodyLiveAppRecordListLiveAppRecord setDomainName(String domainName) {
-            this.domainName = domainName;
-            return this;
-        }
-        public String getDomainName() {
-            return this.domainName;
         }
 
     }

@@ -4,32 +4,32 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveUserDomainsRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("LiveDomainType")
-    public String liveDomainType;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
     @NameInMap("DomainName")
     public String domainName;
-
-    @NameInMap("RegionName")
-    public String regionName;
 
     @NameInMap("DomainSearchType")
     public String domainSearchType;
 
     @NameInMap("DomainStatus")
     public String domainStatus;
+
+    @NameInMap("LiveDomainType")
+    public String liveDomainType;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("RegionName")
+    public String regionName;
+
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     @NameInMap("Tag")
     public java.util.List<DescribeLiveUserDomainsRequestTag> tag;
@@ -39,60 +39,12 @@ public class DescribeLiveUserDomainsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeLiveUserDomainsRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
-    public DescribeLiveUserDomainsRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public DescribeLiveUserDomainsRequest setLiveDomainType(String liveDomainType) {
-        this.liveDomainType = liveDomainType;
-        return this;
-    }
-    public String getLiveDomainType() {
-        return this.liveDomainType;
-    }
-
-    public DescribeLiveUserDomainsRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeLiveUserDomainsRequest setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
     public DescribeLiveUserDomainsRequest setDomainName(String domainName) {
         this.domainName = domainName;
         return this;
     }
     public String getDomainName() {
         return this.domainName;
-    }
-
-    public DescribeLiveUserDomainsRequest setRegionName(String regionName) {
-        this.regionName = regionName;
-        return this;
-    }
-    public String getRegionName() {
-        return this.regionName;
     }
 
     public DescribeLiveUserDomainsRequest setDomainSearchType(String domainSearchType) {
@@ -109,6 +61,54 @@ public class DescribeLiveUserDomainsRequest extends TeaModel {
     }
     public String getDomainStatus() {
         return this.domainStatus;
+    }
+
+    public DescribeLiveUserDomainsRequest setLiveDomainType(String liveDomainType) {
+        this.liveDomainType = liveDomainType;
+        return this;
+    }
+    public String getLiveDomainType() {
+        return this.liveDomainType;
+    }
+
+    public DescribeLiveUserDomainsRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeLiveUserDomainsRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeLiveUserDomainsRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeLiveUserDomainsRequest setRegionName(String regionName) {
+        this.regionName = regionName;
+        return this;
+    }
+    public String getRegionName() {
+        return this.regionName;
+    }
+
+    public DescribeLiveUserDomainsRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public DescribeLiveUserDomainsRequest setTag(java.util.List<DescribeLiveUserDomainsRequestTag> tag) {

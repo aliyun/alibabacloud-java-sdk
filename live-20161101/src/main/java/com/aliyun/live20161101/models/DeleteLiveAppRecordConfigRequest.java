@@ -4,17 +4,17 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DeleteLiveAppRecordConfigRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("AppName")
+    public String appName;
 
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("AppName")
-    public String appName;
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     @NameInMap("StreamName")
     public String streamName;
@@ -24,20 +24,12 @@ public class DeleteLiveAppRecordConfigRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DeleteLiveAppRecordConfigRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public DeleteLiveAppRecordConfigRequest setAppName(String appName) {
+        this.appName = appName;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
-    public DeleteLiveAppRecordConfigRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public String getAppName() {
+        return this.appName;
     }
 
     public DeleteLiveAppRecordConfigRequest setDomainName(String domainName) {
@@ -48,12 +40,20 @@ public class DeleteLiveAppRecordConfigRequest extends TeaModel {
         return this.domainName;
     }
 
-    public DeleteLiveAppRecordConfigRequest setAppName(String appName) {
-        this.appName = appName;
+    public DeleteLiveAppRecordConfigRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getAppName() {
-        return this.appName;
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DeleteLiveAppRecordConfigRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public DeleteLiveAppRecordConfigRequest setStreamName(String streamName) {

@@ -4,23 +4,15 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveAudioAuditNotifyConfigResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("LiveAudioAuditNotifyConfigList")
     public DescribeLiveAudioAuditNotifyConfigResponseBodyLiveAudioAuditNotifyConfigList liveAudioAuditNotifyConfigList;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeLiveAudioAuditNotifyConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveAudioAuditNotifyConfigResponseBody self = new DescribeLiveAudioAuditNotifyConfigResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeLiveAudioAuditNotifyConfigResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeLiveAudioAuditNotifyConfigResponseBody setLiveAudioAuditNotifyConfigList(DescribeLiveAudioAuditNotifyConfigResponseBodyLiveAudioAuditNotifyConfigList liveAudioAuditNotifyConfigList) {
@@ -31,19 +23,35 @@ public class DescribeLiveAudioAuditNotifyConfigResponseBody extends TeaModel {
         return this.liveAudioAuditNotifyConfigList;
     }
 
+    public DescribeLiveAudioAuditNotifyConfigResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeLiveAudioAuditNotifyConfigResponseBodyLiveAudioAuditNotifyConfigListLiveAudioAuditNotifyConfig extends TeaModel {
+        @NameInMap("Callback")
+        public String callback;
+
         @NameInMap("CallbackTemplate")
         public String callbackTemplate;
 
         @NameInMap("DomainName")
         public String domainName;
 
-        @NameInMap("Callback")
-        public String callback;
-
         public static DescribeLiveAudioAuditNotifyConfigResponseBodyLiveAudioAuditNotifyConfigListLiveAudioAuditNotifyConfig build(java.util.Map<String, ?> map) throws Exception {
             DescribeLiveAudioAuditNotifyConfigResponseBodyLiveAudioAuditNotifyConfigListLiveAudioAuditNotifyConfig self = new DescribeLiveAudioAuditNotifyConfigResponseBodyLiveAudioAuditNotifyConfigListLiveAudioAuditNotifyConfig();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeLiveAudioAuditNotifyConfigResponseBodyLiveAudioAuditNotifyConfigListLiveAudioAuditNotifyConfig setCallback(String callback) {
+            this.callback = callback;
+            return this;
+        }
+        public String getCallback() {
+            return this.callback;
         }
 
         public DescribeLiveAudioAuditNotifyConfigResponseBodyLiveAudioAuditNotifyConfigListLiveAudioAuditNotifyConfig setCallbackTemplate(String callbackTemplate) {
@@ -60,14 +68,6 @@ public class DescribeLiveAudioAuditNotifyConfigResponseBody extends TeaModel {
         }
         public String getDomainName() {
             return this.domainName;
-        }
-
-        public DescribeLiveAudioAuditNotifyConfigResponseBodyLiveAudioAuditNotifyConfigListLiveAudioAuditNotifyConfig setCallback(String callback) {
-            this.callback = callback;
-            return this;
-        }
-        public String getCallback() {
-            return this.callback;
         }
 
     }

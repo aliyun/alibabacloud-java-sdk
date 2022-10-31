@@ -4,11 +4,11 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeCasterLayoutsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Layouts")
     public DescribeCasterLayoutsResponseBodyLayouts layouts;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Total")
     public Integer total;
@@ -18,20 +18,20 @@ public class DescribeCasterLayoutsResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeCasterLayoutsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeCasterLayoutsResponseBody setLayouts(DescribeCasterLayoutsResponseBodyLayouts layouts) {
         this.layouts = layouts;
         return this;
     }
     public DescribeCasterLayoutsResponseBodyLayouts getLayouts() {
         return this.layouts;
+    }
+
+    public DescribeCasterLayoutsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeCasterLayoutsResponseBody setTotal(Integer total) {
@@ -43,26 +43,18 @@ public class DescribeCasterLayoutsResponseBody extends TeaModel {
     }
 
     public static class DescribeCasterLayoutsResponseBodyLayoutsLayoutAudioLayersAudioLayer extends TeaModel {
-        @NameInMap("VolumeRate")
-        public Float volumeRate;
-
         @NameInMap("FixedDelayDuration")
         public Integer fixedDelayDuration;
 
         @NameInMap("ValidChannel")
         public String validChannel;
 
+        @NameInMap("VolumeRate")
+        public Float volumeRate;
+
         public static DescribeCasterLayoutsResponseBodyLayoutsLayoutAudioLayersAudioLayer build(java.util.Map<String, ?> map) throws Exception {
             DescribeCasterLayoutsResponseBodyLayoutsLayoutAudioLayersAudioLayer self = new DescribeCasterLayoutsResponseBodyLayoutsLayoutAudioLayersAudioLayer();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeCasterLayoutsResponseBodyLayoutsLayoutAudioLayersAudioLayer setVolumeRate(Float volumeRate) {
-            this.volumeRate = volumeRate;
-            return this;
-        }
-        public Float getVolumeRate() {
-            return this.volumeRate;
         }
 
         public DescribeCasterLayoutsResponseBodyLayoutsLayoutAudioLayersAudioLayer setFixedDelayDuration(Integer fixedDelayDuration) {
@@ -79,6 +71,14 @@ public class DescribeCasterLayoutsResponseBody extends TeaModel {
         }
         public String getValidChannel() {
             return this.validChannel;
+        }
+
+        public DescribeCasterLayoutsResponseBodyLayoutsLayoutAudioLayersAudioLayer setVolumeRate(Float volumeRate) {
+            this.volumeRate = volumeRate;
+            return this;
+        }
+        public Float getVolumeRate() {
+            return this.volumeRate;
         }
 
     }
@@ -98,6 +98,44 @@ public class DescribeCasterLayoutsResponseBody extends TeaModel {
         }
         public java.util.List<DescribeCasterLayoutsResponseBodyLayoutsLayoutAudioLayersAudioLayer> getAudioLayer() {
             return this.audioLayer;
+        }
+
+    }
+
+    public static class DescribeCasterLayoutsResponseBodyLayoutsLayoutBlendList extends TeaModel {
+        @NameInMap("LocationId")
+        public java.util.List<String> locationId;
+
+        public static DescribeCasterLayoutsResponseBodyLayoutsLayoutBlendList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCasterLayoutsResponseBodyLayoutsLayoutBlendList self = new DescribeCasterLayoutsResponseBodyLayoutsLayoutBlendList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCasterLayoutsResponseBodyLayoutsLayoutBlendList setLocationId(java.util.List<String> locationId) {
+            this.locationId = locationId;
+            return this;
+        }
+        public java.util.List<String> getLocationId() {
+            return this.locationId;
+        }
+
+    }
+
+    public static class DescribeCasterLayoutsResponseBodyLayoutsLayoutMixList extends TeaModel {
+        @NameInMap("LocationId")
+        public java.util.List<String> locationId;
+
+        public static DescribeCasterLayoutsResponseBodyLayoutsLayoutMixList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCasterLayoutsResponseBodyLayoutsLayoutMixList self = new DescribeCasterLayoutsResponseBodyLayoutsLayoutMixList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCasterLayoutsResponseBodyLayoutsLayoutMixList setLocationId(java.util.List<String> locationId) {
+            this.locationId = locationId;
+            return this;
+        }
+        public java.util.List<String> getLocationId() {
+            return this.locationId;
         }
 
     }
@@ -122,17 +160,17 @@ public class DescribeCasterLayoutsResponseBody extends TeaModel {
     }
 
     public static class DescribeCasterLayoutsResponseBodyLayoutsLayoutVideoLayersVideoLayer extends TeaModel {
+        @NameInMap("FillMode")
+        public String fillMode;
+
         @NameInMap("FixedDelayDuration")
         public Integer fixedDelayDuration;
-
-        @NameInMap("PositionNormalizeds")
-        public DescribeCasterLayoutsResponseBodyLayoutsLayoutVideoLayersVideoLayerPositionNormalizeds positionNormalizeds;
 
         @NameInMap("HeightNormalized")
         public Float heightNormalized;
 
-        @NameInMap("FillMode")
-        public String fillMode;
+        @NameInMap("PositionNormalizeds")
+        public DescribeCasterLayoutsResponseBodyLayoutsLayoutVideoLayersVideoLayerPositionNormalizeds positionNormalizeds;
 
         @NameInMap("PositionRefer")
         public String positionRefer;
@@ -145,20 +183,20 @@ public class DescribeCasterLayoutsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeCasterLayoutsResponseBodyLayoutsLayoutVideoLayersVideoLayer setFillMode(String fillMode) {
+            this.fillMode = fillMode;
+            return this;
+        }
+        public String getFillMode() {
+            return this.fillMode;
+        }
+
         public DescribeCasterLayoutsResponseBodyLayoutsLayoutVideoLayersVideoLayer setFixedDelayDuration(Integer fixedDelayDuration) {
             this.fixedDelayDuration = fixedDelayDuration;
             return this;
         }
         public Integer getFixedDelayDuration() {
             return this.fixedDelayDuration;
-        }
-
-        public DescribeCasterLayoutsResponseBodyLayoutsLayoutVideoLayersVideoLayer setPositionNormalizeds(DescribeCasterLayoutsResponseBodyLayoutsLayoutVideoLayersVideoLayerPositionNormalizeds positionNormalizeds) {
-            this.positionNormalizeds = positionNormalizeds;
-            return this;
-        }
-        public DescribeCasterLayoutsResponseBodyLayoutsLayoutVideoLayersVideoLayerPositionNormalizeds getPositionNormalizeds() {
-            return this.positionNormalizeds;
         }
 
         public DescribeCasterLayoutsResponseBodyLayoutsLayoutVideoLayersVideoLayer setHeightNormalized(Float heightNormalized) {
@@ -169,12 +207,12 @@ public class DescribeCasterLayoutsResponseBody extends TeaModel {
             return this.heightNormalized;
         }
 
-        public DescribeCasterLayoutsResponseBodyLayoutsLayoutVideoLayersVideoLayer setFillMode(String fillMode) {
-            this.fillMode = fillMode;
+        public DescribeCasterLayoutsResponseBodyLayoutsLayoutVideoLayersVideoLayer setPositionNormalizeds(DescribeCasterLayoutsResponseBodyLayoutsLayoutVideoLayersVideoLayerPositionNormalizeds positionNormalizeds) {
+            this.positionNormalizeds = positionNormalizeds;
             return this;
         }
-        public String getFillMode() {
-            return this.fillMode;
+        public DescribeCasterLayoutsResponseBodyLayoutsLayoutVideoLayersVideoLayerPositionNormalizeds getPositionNormalizeds() {
+            return this.positionNormalizeds;
         }
 
         public DescribeCasterLayoutsResponseBodyLayoutsLayoutVideoLayersVideoLayer setPositionRefer(String positionRefer) {
@@ -214,71 +252,25 @@ public class DescribeCasterLayoutsResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeCasterLayoutsResponseBodyLayoutsLayoutMixList extends TeaModel {
-        @NameInMap("LocationId")
-        public java.util.List<String> locationId;
-
-        public static DescribeCasterLayoutsResponseBodyLayoutsLayoutMixList build(java.util.Map<String, ?> map) throws Exception {
-            DescribeCasterLayoutsResponseBodyLayoutsLayoutMixList self = new DescribeCasterLayoutsResponseBodyLayoutsLayoutMixList();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeCasterLayoutsResponseBodyLayoutsLayoutMixList setLocationId(java.util.List<String> locationId) {
-            this.locationId = locationId;
-            return this;
-        }
-        public java.util.List<String> getLocationId() {
-            return this.locationId;
-        }
-
-    }
-
-    public static class DescribeCasterLayoutsResponseBodyLayoutsLayoutBlendList extends TeaModel {
-        @NameInMap("LocationId")
-        public java.util.List<String> locationId;
-
-        public static DescribeCasterLayoutsResponseBodyLayoutsLayoutBlendList build(java.util.Map<String, ?> map) throws Exception {
-            DescribeCasterLayoutsResponseBodyLayoutsLayoutBlendList self = new DescribeCasterLayoutsResponseBodyLayoutsLayoutBlendList();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeCasterLayoutsResponseBodyLayoutsLayoutBlendList setLocationId(java.util.List<String> locationId) {
-            this.locationId = locationId;
-            return this;
-        }
-        public java.util.List<String> getLocationId() {
-            return this.locationId;
-        }
-
-    }
-
     public static class DescribeCasterLayoutsResponseBodyLayoutsLayout extends TeaModel {
-        @NameInMap("LayoutId")
-        public String layoutId;
-
         @NameInMap("AudioLayers")
         public DescribeCasterLayoutsResponseBodyLayoutsLayoutAudioLayers audioLayers;
-
-        @NameInMap("VideoLayers")
-        public DescribeCasterLayoutsResponseBodyLayoutsLayoutVideoLayers videoLayers;
-
-        @NameInMap("MixList")
-        public DescribeCasterLayoutsResponseBodyLayoutsLayoutMixList mixList;
 
         @NameInMap("BlendList")
         public DescribeCasterLayoutsResponseBodyLayoutsLayoutBlendList blendList;
 
+        @NameInMap("LayoutId")
+        public String layoutId;
+
+        @NameInMap("MixList")
+        public DescribeCasterLayoutsResponseBodyLayoutsLayoutMixList mixList;
+
+        @NameInMap("VideoLayers")
+        public DescribeCasterLayoutsResponseBodyLayoutsLayoutVideoLayers videoLayers;
+
         public static DescribeCasterLayoutsResponseBodyLayoutsLayout build(java.util.Map<String, ?> map) throws Exception {
             DescribeCasterLayoutsResponseBodyLayoutsLayout self = new DescribeCasterLayoutsResponseBodyLayoutsLayout();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeCasterLayoutsResponseBodyLayoutsLayout setLayoutId(String layoutId) {
-            this.layoutId = layoutId;
-            return this;
-        }
-        public String getLayoutId() {
-            return this.layoutId;
         }
 
         public DescribeCasterLayoutsResponseBodyLayoutsLayout setAudioLayers(DescribeCasterLayoutsResponseBodyLayoutsLayoutAudioLayers audioLayers) {
@@ -289,12 +281,20 @@ public class DescribeCasterLayoutsResponseBody extends TeaModel {
             return this.audioLayers;
         }
 
-        public DescribeCasterLayoutsResponseBodyLayoutsLayout setVideoLayers(DescribeCasterLayoutsResponseBodyLayoutsLayoutVideoLayers videoLayers) {
-            this.videoLayers = videoLayers;
+        public DescribeCasterLayoutsResponseBodyLayoutsLayout setBlendList(DescribeCasterLayoutsResponseBodyLayoutsLayoutBlendList blendList) {
+            this.blendList = blendList;
             return this;
         }
-        public DescribeCasterLayoutsResponseBodyLayoutsLayoutVideoLayers getVideoLayers() {
-            return this.videoLayers;
+        public DescribeCasterLayoutsResponseBodyLayoutsLayoutBlendList getBlendList() {
+            return this.blendList;
+        }
+
+        public DescribeCasterLayoutsResponseBodyLayoutsLayout setLayoutId(String layoutId) {
+            this.layoutId = layoutId;
+            return this;
+        }
+        public String getLayoutId() {
+            return this.layoutId;
         }
 
         public DescribeCasterLayoutsResponseBodyLayoutsLayout setMixList(DescribeCasterLayoutsResponseBodyLayoutsLayoutMixList mixList) {
@@ -305,12 +305,12 @@ public class DescribeCasterLayoutsResponseBody extends TeaModel {
             return this.mixList;
         }
 
-        public DescribeCasterLayoutsResponseBodyLayoutsLayout setBlendList(DescribeCasterLayoutsResponseBodyLayoutsLayoutBlendList blendList) {
-            this.blendList = blendList;
+        public DescribeCasterLayoutsResponseBodyLayoutsLayout setVideoLayers(DescribeCasterLayoutsResponseBodyLayoutsLayoutVideoLayers videoLayers) {
+            this.videoLayers = videoLayers;
             return this;
         }
-        public DescribeCasterLayoutsResponseBodyLayoutsLayoutBlendList getBlendList() {
-            return this.blendList;
+        public DescribeCasterLayoutsResponseBodyLayoutsLayoutVideoLayers getVideoLayers() {
+            return this.videoLayers;
         }
 
     }

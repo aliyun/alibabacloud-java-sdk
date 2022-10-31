@@ -4,23 +4,15 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class ListLiveRealtimeLogDeliveryResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Content")
     public ListLiveRealtimeLogDeliveryResponseBodyContent content;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ListLiveRealtimeLogDeliveryResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListLiveRealtimeLogDeliveryResponseBody self = new ListLiveRealtimeLogDeliveryResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListLiveRealtimeLogDeliveryResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListLiveRealtimeLogDeliveryResponseBody setContent(ListLiveRealtimeLogDeliveryResponseBodyContent content) {
@@ -31,15 +23,20 @@ public class ListLiveRealtimeLogDeliveryResponseBody extends TeaModel {
         return this.content;
     }
 
-    public static class ListLiveRealtimeLogDeliveryResponseBodyContentRealtimeLogDeliveryInfo extends TeaModel {
-        @NameInMap("Status")
-        public String status;
+    public ListLiveRealtimeLogDeliveryResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class ListLiveRealtimeLogDeliveryResponseBodyContentRealtimeLogDeliveryInfo extends TeaModel {
         @NameInMap("DmId")
         public Integer dmId;
 
-        @NameInMap("Region")
-        public String region;
+        @NameInMap("DomainName")
+        public String domainName;
 
         @NameInMap("Logstore")
         public String logstore;
@@ -47,20 +44,15 @@ public class ListLiveRealtimeLogDeliveryResponseBody extends TeaModel {
         @NameInMap("Project")
         public String project;
 
-        @NameInMap("DomainName")
-        public String domainName;
+        @NameInMap("Region")
+        public String region;
+
+        @NameInMap("Status")
+        public String status;
 
         public static ListLiveRealtimeLogDeliveryResponseBodyContentRealtimeLogDeliveryInfo build(java.util.Map<String, ?> map) throws Exception {
             ListLiveRealtimeLogDeliveryResponseBodyContentRealtimeLogDeliveryInfo self = new ListLiveRealtimeLogDeliveryResponseBodyContentRealtimeLogDeliveryInfo();
             return TeaModel.build(map, self);
-        }
-
-        public ListLiveRealtimeLogDeliveryResponseBodyContentRealtimeLogDeliveryInfo setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
         }
 
         public ListLiveRealtimeLogDeliveryResponseBodyContentRealtimeLogDeliveryInfo setDmId(Integer dmId) {
@@ -71,12 +63,12 @@ public class ListLiveRealtimeLogDeliveryResponseBody extends TeaModel {
             return this.dmId;
         }
 
-        public ListLiveRealtimeLogDeliveryResponseBodyContentRealtimeLogDeliveryInfo setRegion(String region) {
-            this.region = region;
+        public ListLiveRealtimeLogDeliveryResponseBodyContentRealtimeLogDeliveryInfo setDomainName(String domainName) {
+            this.domainName = domainName;
             return this;
         }
-        public String getRegion() {
-            return this.region;
+        public String getDomainName() {
+            return this.domainName;
         }
 
         public ListLiveRealtimeLogDeliveryResponseBodyContentRealtimeLogDeliveryInfo setLogstore(String logstore) {
@@ -95,12 +87,20 @@ public class ListLiveRealtimeLogDeliveryResponseBody extends TeaModel {
             return this.project;
         }
 
-        public ListLiveRealtimeLogDeliveryResponseBodyContentRealtimeLogDeliveryInfo setDomainName(String domainName) {
-            this.domainName = domainName;
+        public ListLiveRealtimeLogDeliveryResponseBodyContentRealtimeLogDeliveryInfo setRegion(String region) {
+            this.region = region;
             return this;
         }
-        public String getDomainName() {
-            return this.domainName;
+        public String getRegion() {
+            return this.region;
+        }
+
+        public ListLiveRealtimeLogDeliveryResponseBodyContentRealtimeLogDeliveryInfo setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }

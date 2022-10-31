@@ -4,40 +4,24 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DeleteMixStreamRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("AppName")
+    public String appName;
 
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("AppName")
-    public String appName;
+    @NameInMap("MixStreamId")
+    public String mixStreamId;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("StreamName")
     public String streamName;
 
-    @NameInMap("MixStreamId")
-    public String mixStreamId;
-
     public static DeleteMixStreamRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteMixStreamRequest self = new DeleteMixStreamRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteMixStreamRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public DeleteMixStreamRequest setDomainName(String domainName) {
-        this.domainName = domainName;
-        return this;
-    }
-    public String getDomainName() {
-        return this.domainName;
     }
 
     public DeleteMixStreamRequest setAppName(String appName) {
@@ -48,12 +32,12 @@ public class DeleteMixStreamRequest extends TeaModel {
         return this.appName;
     }
 
-    public DeleteMixStreamRequest setStreamName(String streamName) {
-        this.streamName = streamName;
+    public DeleteMixStreamRequest setDomainName(String domainName) {
+        this.domainName = domainName;
         return this;
     }
-    public String getStreamName() {
-        return this.streamName;
+    public String getDomainName() {
+        return this.domainName;
     }
 
     public DeleteMixStreamRequest setMixStreamId(String mixStreamId) {
@@ -62,6 +46,22 @@ public class DeleteMixStreamRequest extends TeaModel {
     }
     public String getMixStreamId() {
         return this.mixStreamId;
+    }
+
+    public DeleteMixStreamRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DeleteMixStreamRequest setStreamName(String streamName) {
+        this.streamName = streamName;
+        return this;
+    }
+    public String getStreamName() {
+        return this.streamName;
     }
 
 }

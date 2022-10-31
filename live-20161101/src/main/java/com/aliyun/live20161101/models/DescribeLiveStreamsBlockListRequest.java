@@ -4,14 +4,11 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveStreamsBlockListRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("DomainName")
+    public String domainName;
 
     @NameInMap("OwnerId")
     public Long ownerId;
-
-    @NameInMap("DomainName")
-    public String domainName;
 
     @NameInMap("PageNum")
     public Integer pageNum;
@@ -19,25 +16,12 @@ public class DescribeLiveStreamsBlockListRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     public static DescribeLiveStreamsBlockListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveStreamsBlockListRequest self = new DescribeLiveStreamsBlockListRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeLiveStreamsBlockListRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
-    public DescribeLiveStreamsBlockListRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeLiveStreamsBlockListRequest setDomainName(String domainName) {
@@ -46,6 +30,14 @@ public class DescribeLiveStreamsBlockListRequest extends TeaModel {
     }
     public String getDomainName() {
         return this.domainName;
+    }
+
+    public DescribeLiveStreamsBlockListRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeLiveStreamsBlockListRequest setPageNum(Integer pageNum) {
@@ -62,6 +54,14 @@ public class DescribeLiveStreamsBlockListRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeLiveStreamsBlockListRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

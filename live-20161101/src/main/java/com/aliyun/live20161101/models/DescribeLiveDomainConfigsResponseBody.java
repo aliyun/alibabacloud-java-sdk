@@ -4,23 +4,15 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveDomainConfigsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("DomainConfigs")
     public DescribeLiveDomainConfigsResponseBodyDomainConfigs domainConfigs;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeLiveDomainConfigsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveDomainConfigsResponseBody self = new DescribeLiveDomainConfigsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeLiveDomainConfigsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeLiveDomainConfigsResponseBody setDomainConfigs(DescribeLiveDomainConfigsResponseBodyDomainConfigs domainConfigs) {
@@ -29,6 +21,14 @@ public class DescribeLiveDomainConfigsResponseBody extends TeaModel {
     }
     public DescribeLiveDomainConfigsResponseBodyDomainConfigs getDomainConfigs() {
         return this.domainConfigs;
+    }
+
+    public DescribeLiveDomainConfigsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeLiveDomainConfigsResponseBodyDomainConfigsDomainConfigFunctionArgsFunctionArg extends TeaModel {
@@ -81,29 +81,21 @@ public class DescribeLiveDomainConfigsResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveDomainConfigsResponseBodyDomainConfigsDomainConfig extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
         @NameInMap("ConfigId")
         public String configId;
-
-        @NameInMap("FunctionName")
-        public String functionName;
 
         @NameInMap("FunctionArgs")
         public DescribeLiveDomainConfigsResponseBodyDomainConfigsDomainConfigFunctionArgs functionArgs;
 
+        @NameInMap("FunctionName")
+        public String functionName;
+
+        @NameInMap("Status")
+        public String status;
+
         public static DescribeLiveDomainConfigsResponseBodyDomainConfigsDomainConfig build(java.util.Map<String, ?> map) throws Exception {
             DescribeLiveDomainConfigsResponseBodyDomainConfigsDomainConfig self = new DescribeLiveDomainConfigsResponseBodyDomainConfigsDomainConfig();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeLiveDomainConfigsResponseBodyDomainConfigsDomainConfig setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
         }
 
         public DescribeLiveDomainConfigsResponseBodyDomainConfigsDomainConfig setConfigId(String configId) {
@@ -114,6 +106,14 @@ public class DescribeLiveDomainConfigsResponseBody extends TeaModel {
             return this.configId;
         }
 
+        public DescribeLiveDomainConfigsResponseBodyDomainConfigsDomainConfig setFunctionArgs(DescribeLiveDomainConfigsResponseBodyDomainConfigsDomainConfigFunctionArgs functionArgs) {
+            this.functionArgs = functionArgs;
+            return this;
+        }
+        public DescribeLiveDomainConfigsResponseBodyDomainConfigsDomainConfigFunctionArgs getFunctionArgs() {
+            return this.functionArgs;
+        }
+
         public DescribeLiveDomainConfigsResponseBodyDomainConfigsDomainConfig setFunctionName(String functionName) {
             this.functionName = functionName;
             return this;
@@ -122,12 +122,12 @@ public class DescribeLiveDomainConfigsResponseBody extends TeaModel {
             return this.functionName;
         }
 
-        public DescribeLiveDomainConfigsResponseBodyDomainConfigsDomainConfig setFunctionArgs(DescribeLiveDomainConfigsResponseBodyDomainConfigsDomainConfigFunctionArgs functionArgs) {
-            this.functionArgs = functionArgs;
+        public DescribeLiveDomainConfigsResponseBodyDomainConfigsDomainConfig setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public DescribeLiveDomainConfigsResponseBodyDomainConfigsDomainConfigFunctionArgs getFunctionArgs() {
-            return this.functionArgs;
+        public String getStatus() {
+            return this.status;
         }
 
     }

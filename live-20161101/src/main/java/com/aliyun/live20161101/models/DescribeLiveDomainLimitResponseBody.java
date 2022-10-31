@@ -4,23 +4,15 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveDomainLimitResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("LiveDomainLimitList")
     public DescribeLiveDomainLimitResponseBodyLiveDomainLimitList liveDomainLimitList;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeLiveDomainLimitResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveDomainLimitResponseBody self = new DescribeLiveDomainLimitResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeLiveDomainLimitResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeLiveDomainLimitResponseBody setLiveDomainLimitList(DescribeLiveDomainLimitResponseBodyLiveDomainLimitList liveDomainLimitList) {
@@ -31,27 +23,38 @@ public class DescribeLiveDomainLimitResponseBody extends TeaModel {
         return this.liveDomainLimitList;
     }
 
+    public DescribeLiveDomainLimitResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeLiveDomainLimitResponseBodyLiveDomainLimitListLiveDomainLimit extends TeaModel {
-        @NameInMap("LimitTranscodeNum")
-        public Integer limitTranscodeNum;
+        @NameInMap("DomainName")
+        public String domainName;
 
         @NameInMap("LimitNum")
         public Integer limitNum;
 
-        @NameInMap("DomainName")
-        public String domainName;
+        @NameInMap("LimitTranscodeNum")
+        public Integer limitTranscodeNum;
+
+        @NameInMap("LimitTransferNum")
+        public Integer limitTransferNum;
 
         public static DescribeLiveDomainLimitResponseBodyLiveDomainLimitListLiveDomainLimit build(java.util.Map<String, ?> map) throws Exception {
             DescribeLiveDomainLimitResponseBodyLiveDomainLimitListLiveDomainLimit self = new DescribeLiveDomainLimitResponseBodyLiveDomainLimitListLiveDomainLimit();
             return TeaModel.build(map, self);
         }
 
-        public DescribeLiveDomainLimitResponseBodyLiveDomainLimitListLiveDomainLimit setLimitTranscodeNum(Integer limitTranscodeNum) {
-            this.limitTranscodeNum = limitTranscodeNum;
+        public DescribeLiveDomainLimitResponseBodyLiveDomainLimitListLiveDomainLimit setDomainName(String domainName) {
+            this.domainName = domainName;
             return this;
         }
-        public Integer getLimitTranscodeNum() {
-            return this.limitTranscodeNum;
+        public String getDomainName() {
+            return this.domainName;
         }
 
         public DescribeLiveDomainLimitResponseBodyLiveDomainLimitListLiveDomainLimit setLimitNum(Integer limitNum) {
@@ -62,12 +65,20 @@ public class DescribeLiveDomainLimitResponseBody extends TeaModel {
             return this.limitNum;
         }
 
-        public DescribeLiveDomainLimitResponseBodyLiveDomainLimitListLiveDomainLimit setDomainName(String domainName) {
-            this.domainName = domainName;
+        public DescribeLiveDomainLimitResponseBodyLiveDomainLimitListLiveDomainLimit setLimitTranscodeNum(Integer limitTranscodeNum) {
+            this.limitTranscodeNum = limitTranscodeNum;
             return this;
         }
-        public String getDomainName() {
-            return this.domainName;
+        public Integer getLimitTranscodeNum() {
+            return this.limitTranscodeNum;
+        }
+
+        public DescribeLiveDomainLimitResponseBodyLiveDomainLimitListLiveDomainLimit setLimitTransferNum(Integer limitTransferNum) {
+            this.limitTransferNum = limitTransferNum;
+            return this;
+        }
+        public Integer getLimitTransferNum() {
+            return this.limitTransferNum;
         }
 
     }

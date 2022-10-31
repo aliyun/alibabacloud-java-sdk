@@ -4,14 +4,17 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class ModifyCasterComponentRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("CaptionLayerContent")
+    public String captionLayerContent;
 
     @NameInMap("CasterId")
     public String casterId;
 
     @NameInMap("ComponentId")
     public String componentId;
+
+    @NameInMap("ComponentLayer")
+    public String componentLayer;
 
     @NameInMap("ComponentName")
     public String componentName;
@@ -22,29 +25,26 @@ public class ModifyCasterComponentRequest extends TeaModel {
     @NameInMap("Effect")
     public String effect;
 
-    @NameInMap("ComponentLayer")
-    public String componentLayer;
-
-    @NameInMap("TextLayerContent")
-    public String textLayerContent;
-
     @NameInMap("ImageLayerContent")
     public String imageLayerContent;
 
-    @NameInMap("CaptionLayerContent")
-    public String captionLayerContent;
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("TextLayerContent")
+    public String textLayerContent;
 
     public static ModifyCasterComponentRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyCasterComponentRequest self = new ModifyCasterComponentRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyCasterComponentRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public ModifyCasterComponentRequest setCaptionLayerContent(String captionLayerContent) {
+        this.captionLayerContent = captionLayerContent;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public String getCaptionLayerContent() {
+        return this.captionLayerContent;
     }
 
     public ModifyCasterComponentRequest setCasterId(String casterId) {
@@ -61,6 +61,14 @@ public class ModifyCasterComponentRequest extends TeaModel {
     }
     public String getComponentId() {
         return this.componentId;
+    }
+
+    public ModifyCasterComponentRequest setComponentLayer(String componentLayer) {
+        this.componentLayer = componentLayer;
+        return this;
+    }
+    public String getComponentLayer() {
+        return this.componentLayer;
     }
 
     public ModifyCasterComponentRequest setComponentName(String componentName) {
@@ -87,22 +95,6 @@ public class ModifyCasterComponentRequest extends TeaModel {
         return this.effect;
     }
 
-    public ModifyCasterComponentRequest setComponentLayer(String componentLayer) {
-        this.componentLayer = componentLayer;
-        return this;
-    }
-    public String getComponentLayer() {
-        return this.componentLayer;
-    }
-
-    public ModifyCasterComponentRequest setTextLayerContent(String textLayerContent) {
-        this.textLayerContent = textLayerContent;
-        return this;
-    }
-    public String getTextLayerContent() {
-        return this.textLayerContent;
-    }
-
     public ModifyCasterComponentRequest setImageLayerContent(String imageLayerContent) {
         this.imageLayerContent = imageLayerContent;
         return this;
@@ -111,12 +103,20 @@ public class ModifyCasterComponentRequest extends TeaModel {
         return this.imageLayerContent;
     }
 
-    public ModifyCasterComponentRequest setCaptionLayerContent(String captionLayerContent) {
-        this.captionLayerContent = captionLayerContent;
+    public ModifyCasterComponentRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getCaptionLayerContent() {
-        return this.captionLayerContent;
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public ModifyCasterComponentRequest setTextLayerContent(String textLayerContent) {
+        this.textLayerContent = textLayerContent;
+        return this;
+    }
+    public String getTextLayerContent() {
+        return this.textLayerContent;
     }
 
 }

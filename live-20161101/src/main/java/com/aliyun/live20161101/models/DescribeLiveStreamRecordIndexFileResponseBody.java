@@ -32,17 +32,20 @@ public class DescribeLiveStreamRecordIndexFileResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveStreamRecordIndexFileResponseBodyRecordIndexInfo extends TeaModel {
-        @NameInMap("StreamName")
-        public String streamName;
-
-        @NameInMap("RecordUrl")
-        public String recordUrl;
-
-        @NameInMap("RecordId")
-        public String recordId;
+        @NameInMap("AppName")
+        public String appName;
 
         @NameInMap("CreateTime")
         public String createTime;
+
+        @NameInMap("DomainName")
+        public String domainName;
+
+        @NameInMap("Duration")
+        public Float duration;
+
+        @NameInMap("EndTime")
+        public String endTime;
 
         @NameInMap("Height")
         public Integer height;
@@ -50,57 +53,38 @@ public class DescribeLiveStreamRecordIndexFileResponseBody extends TeaModel {
         @NameInMap("OssBucket")
         public String ossBucket;
 
-        @NameInMap("DomainName")
-        public String domainName;
-
-        @NameInMap("EndTime")
-        public String endTime;
+        @NameInMap("OssEndpoint")
+        public String ossEndpoint;
 
         @NameInMap("OssObject")
         public String ossObject;
 
+        @NameInMap("RecordId")
+        public String recordId;
+
+        @NameInMap("RecordUrl")
+        public String recordUrl;
+
         @NameInMap("StartTime")
         public String startTime;
 
-        @NameInMap("AppName")
-        public String appName;
+        @NameInMap("StreamName")
+        public String streamName;
 
         @NameInMap("Width")
         public Integer width;
-
-        @NameInMap("Duration")
-        public Float duration;
-
-        @NameInMap("OssEndpoint")
-        public String ossEndpoint;
 
         public static DescribeLiveStreamRecordIndexFileResponseBodyRecordIndexInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeLiveStreamRecordIndexFileResponseBodyRecordIndexInfo self = new DescribeLiveStreamRecordIndexFileResponseBodyRecordIndexInfo();
             return TeaModel.build(map, self);
         }
 
-        public DescribeLiveStreamRecordIndexFileResponseBodyRecordIndexInfo setStreamName(String streamName) {
-            this.streamName = streamName;
+        public DescribeLiveStreamRecordIndexFileResponseBodyRecordIndexInfo setAppName(String appName) {
+            this.appName = appName;
             return this;
         }
-        public String getStreamName() {
-            return this.streamName;
-        }
-
-        public DescribeLiveStreamRecordIndexFileResponseBodyRecordIndexInfo setRecordUrl(String recordUrl) {
-            this.recordUrl = recordUrl;
-            return this;
-        }
-        public String getRecordUrl() {
-            return this.recordUrl;
-        }
-
-        public DescribeLiveStreamRecordIndexFileResponseBodyRecordIndexInfo setRecordId(String recordId) {
-            this.recordId = recordId;
-            return this;
-        }
-        public String getRecordId() {
-            return this.recordId;
+        public String getAppName() {
+            return this.appName;
         }
 
         public DescribeLiveStreamRecordIndexFileResponseBodyRecordIndexInfo setCreateTime(String createTime) {
@@ -109,6 +93,30 @@ public class DescribeLiveStreamRecordIndexFileResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        public DescribeLiveStreamRecordIndexFileResponseBodyRecordIndexInfo setDomainName(String domainName) {
+            this.domainName = domainName;
+            return this;
+        }
+        public String getDomainName() {
+            return this.domainName;
+        }
+
+        public DescribeLiveStreamRecordIndexFileResponseBodyRecordIndexInfo setDuration(Float duration) {
+            this.duration = duration;
+            return this;
+        }
+        public Float getDuration() {
+            return this.duration;
+        }
+
+        public DescribeLiveStreamRecordIndexFileResponseBodyRecordIndexInfo setEndTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public String getEndTime() {
+            return this.endTime;
         }
 
         public DescribeLiveStreamRecordIndexFileResponseBodyRecordIndexInfo setHeight(Integer height) {
@@ -127,20 +135,12 @@ public class DescribeLiveStreamRecordIndexFileResponseBody extends TeaModel {
             return this.ossBucket;
         }
 
-        public DescribeLiveStreamRecordIndexFileResponseBodyRecordIndexInfo setDomainName(String domainName) {
-            this.domainName = domainName;
+        public DescribeLiveStreamRecordIndexFileResponseBodyRecordIndexInfo setOssEndpoint(String ossEndpoint) {
+            this.ossEndpoint = ossEndpoint;
             return this;
         }
-        public String getDomainName() {
-            return this.domainName;
-        }
-
-        public DescribeLiveStreamRecordIndexFileResponseBodyRecordIndexInfo setEndTime(String endTime) {
-            this.endTime = endTime;
-            return this;
-        }
-        public String getEndTime() {
-            return this.endTime;
+        public String getOssEndpoint() {
+            return this.ossEndpoint;
         }
 
         public DescribeLiveStreamRecordIndexFileResponseBodyRecordIndexInfo setOssObject(String ossObject) {
@@ -151,6 +151,22 @@ public class DescribeLiveStreamRecordIndexFileResponseBody extends TeaModel {
             return this.ossObject;
         }
 
+        public DescribeLiveStreamRecordIndexFileResponseBodyRecordIndexInfo setRecordId(String recordId) {
+            this.recordId = recordId;
+            return this;
+        }
+        public String getRecordId() {
+            return this.recordId;
+        }
+
+        public DescribeLiveStreamRecordIndexFileResponseBodyRecordIndexInfo setRecordUrl(String recordUrl) {
+            this.recordUrl = recordUrl;
+            return this;
+        }
+        public String getRecordUrl() {
+            return this.recordUrl;
+        }
+
         public DescribeLiveStreamRecordIndexFileResponseBodyRecordIndexInfo setStartTime(String startTime) {
             this.startTime = startTime;
             return this;
@@ -159,12 +175,12 @@ public class DescribeLiveStreamRecordIndexFileResponseBody extends TeaModel {
             return this.startTime;
         }
 
-        public DescribeLiveStreamRecordIndexFileResponseBodyRecordIndexInfo setAppName(String appName) {
-            this.appName = appName;
+        public DescribeLiveStreamRecordIndexFileResponseBodyRecordIndexInfo setStreamName(String streamName) {
+            this.streamName = streamName;
             return this;
         }
-        public String getAppName() {
-            return this.appName;
+        public String getStreamName() {
+            return this.streamName;
         }
 
         public DescribeLiveStreamRecordIndexFileResponseBodyRecordIndexInfo setWidth(Integer width) {
@@ -173,22 +189,6 @@ public class DescribeLiveStreamRecordIndexFileResponseBody extends TeaModel {
         }
         public Integer getWidth() {
             return this.width;
-        }
-
-        public DescribeLiveStreamRecordIndexFileResponseBodyRecordIndexInfo setDuration(Float duration) {
-            this.duration = duration;
-            return this;
-        }
-        public Float getDuration() {
-            return this.duration;
-        }
-
-        public DescribeLiveStreamRecordIndexFileResponseBodyRecordIndexInfo setOssEndpoint(String ossEndpoint) {
-            this.ossEndpoint = ossEndpoint;
-            return this;
-        }
-        public String getOssEndpoint() {
-            return this.ossEndpoint;
         }
 
     }

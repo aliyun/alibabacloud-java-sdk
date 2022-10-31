@@ -4,8 +4,8 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class AddCasterEpisodeGroupRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("CallbackUrl")
+    public String callbackUrl;
 
     @NameInMap("ClientToken")
     public String clientToken;
@@ -13,8 +13,11 @@ public class AddCasterEpisodeGroupRequest extends TeaModel {
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("StartTime")
-    public String startTime;
+    @NameInMap("Item")
+    public java.util.List<AddCasterEpisodeGroupRequestItem> item;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("RepeatNum")
     public Integer repeatNum;
@@ -22,23 +25,20 @@ public class AddCasterEpisodeGroupRequest extends TeaModel {
     @NameInMap("SideOutputUrl")
     public String sideOutputUrl;
 
-    @NameInMap("CallbackUrl")
-    public String callbackUrl;
-
-    @NameInMap("Item")
-    public java.util.List<AddCasterEpisodeGroupRequestItem> item;
+    @NameInMap("StartTime")
+    public String startTime;
 
     public static AddCasterEpisodeGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         AddCasterEpisodeGroupRequest self = new AddCasterEpisodeGroupRequest();
         return TeaModel.build(map, self);
     }
 
-    public AddCasterEpisodeGroupRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public AddCasterEpisodeGroupRequest setCallbackUrl(String callbackUrl) {
+        this.callbackUrl = callbackUrl;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public String getCallbackUrl() {
+        return this.callbackUrl;
     }
 
     public AddCasterEpisodeGroupRequest setClientToken(String clientToken) {
@@ -57,12 +57,20 @@ public class AddCasterEpisodeGroupRequest extends TeaModel {
         return this.domainName;
     }
 
-    public AddCasterEpisodeGroupRequest setStartTime(String startTime) {
-        this.startTime = startTime;
+    public AddCasterEpisodeGroupRequest setItem(java.util.List<AddCasterEpisodeGroupRequestItem> item) {
+        this.item = item;
         return this;
     }
-    public String getStartTime() {
-        return this.startTime;
+    public java.util.List<AddCasterEpisodeGroupRequestItem> getItem() {
+        return this.item;
+    }
+
+    public AddCasterEpisodeGroupRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public AddCasterEpisodeGroupRequest setRepeatNum(Integer repeatNum) {
@@ -81,20 +89,12 @@ public class AddCasterEpisodeGroupRequest extends TeaModel {
         return this.sideOutputUrl;
     }
 
-    public AddCasterEpisodeGroupRequest setCallbackUrl(String callbackUrl) {
-        this.callbackUrl = callbackUrl;
+    public AddCasterEpisodeGroupRequest setStartTime(String startTime) {
+        this.startTime = startTime;
         return this;
     }
-    public String getCallbackUrl() {
-        return this.callbackUrl;
-    }
-
-    public AddCasterEpisodeGroupRequest setItem(java.util.List<AddCasterEpisodeGroupRequestItem> item) {
-        this.item = item;
-        return this;
-    }
-    public java.util.List<AddCasterEpisodeGroupRequestItem> getItem() {
-        return this.item;
+    public String getStartTime() {
+        return this.startTime;
     }
 
     public static class AddCasterEpisodeGroupRequestItem extends TeaModel {

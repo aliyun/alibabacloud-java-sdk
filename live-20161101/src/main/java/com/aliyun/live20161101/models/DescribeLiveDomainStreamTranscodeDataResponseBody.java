@@ -32,38 +32,30 @@ public class DescribeLiveDomainStreamTranscodeDataResponseBody extends TeaModel 
     }
 
     public static class DescribeLiveDomainStreamTranscodeDataResponseBodyTranscodeDataListTranscodeData extends TeaModel {
-        @NameInMap("TanscodeType")
-        public String tanscodeType;
-
         @NameInMap("Domain")
         public String domain;
-
-        @NameInMap("Region")
-        public String region;
 
         @NameInMap("Duration")
         public Integer duration;
 
-        @NameInMap("TimeStamp")
-        public String timeStamp;
-
         @NameInMap("Fps")
         public String fps;
+
+        @NameInMap("Region")
+        public String region;
 
         @NameInMap("Resolution")
         public String resolution;
 
+        @NameInMap("TanscodeType")
+        public String tanscodeType;
+
+        @NameInMap("TimeStamp")
+        public String timeStamp;
+
         public static DescribeLiveDomainStreamTranscodeDataResponseBodyTranscodeDataListTranscodeData build(java.util.Map<String, ?> map) throws Exception {
             DescribeLiveDomainStreamTranscodeDataResponseBodyTranscodeDataListTranscodeData self = new DescribeLiveDomainStreamTranscodeDataResponseBodyTranscodeDataListTranscodeData();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeLiveDomainStreamTranscodeDataResponseBodyTranscodeDataListTranscodeData setTanscodeType(String tanscodeType) {
-            this.tanscodeType = tanscodeType;
-            return this;
-        }
-        public String getTanscodeType() {
-            return this.tanscodeType;
         }
 
         public DescribeLiveDomainStreamTranscodeDataResponseBodyTranscodeDataListTranscodeData setDomain(String domain) {
@@ -74,28 +66,12 @@ public class DescribeLiveDomainStreamTranscodeDataResponseBody extends TeaModel 
             return this.domain;
         }
 
-        public DescribeLiveDomainStreamTranscodeDataResponseBodyTranscodeDataListTranscodeData setRegion(String region) {
-            this.region = region;
-            return this;
-        }
-        public String getRegion() {
-            return this.region;
-        }
-
         public DescribeLiveDomainStreamTranscodeDataResponseBodyTranscodeDataListTranscodeData setDuration(Integer duration) {
             this.duration = duration;
             return this;
         }
         public Integer getDuration() {
             return this.duration;
-        }
-
-        public DescribeLiveDomainStreamTranscodeDataResponseBodyTranscodeDataListTranscodeData setTimeStamp(String timeStamp) {
-            this.timeStamp = timeStamp;
-            return this;
-        }
-        public String getTimeStamp() {
-            return this.timeStamp;
         }
 
         public DescribeLiveDomainStreamTranscodeDataResponseBodyTranscodeDataListTranscodeData setFps(String fps) {
@@ -106,12 +82,36 @@ public class DescribeLiveDomainStreamTranscodeDataResponseBody extends TeaModel 
             return this.fps;
         }
 
+        public DescribeLiveDomainStreamTranscodeDataResponseBodyTranscodeDataListTranscodeData setRegion(String region) {
+            this.region = region;
+            return this;
+        }
+        public String getRegion() {
+            return this.region;
+        }
+
         public DescribeLiveDomainStreamTranscodeDataResponseBodyTranscodeDataListTranscodeData setResolution(String resolution) {
             this.resolution = resolution;
             return this;
         }
         public String getResolution() {
             return this.resolution;
+        }
+
+        public DescribeLiveDomainStreamTranscodeDataResponseBodyTranscodeDataListTranscodeData setTanscodeType(String tanscodeType) {
+            this.tanscodeType = tanscodeType;
+            return this;
+        }
+        public String getTanscodeType() {
+            return this.tanscodeType;
+        }
+
+        public DescribeLiveDomainStreamTranscodeDataResponseBodyTranscodeDataListTranscodeData setTimeStamp(String timeStamp) {
+            this.timeStamp = timeStamp;
+            return this;
+        }
+        public String getTimeStamp() {
+            return this.timeStamp;
         }
 
     }

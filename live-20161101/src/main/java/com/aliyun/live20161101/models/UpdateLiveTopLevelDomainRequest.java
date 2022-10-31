@@ -4,11 +4,11 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class UpdateLiveTopLevelDomainRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     @NameInMap("DomainName")
     public String domainName;
+
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     @NameInMap("TopLevelDomain")
     public String topLevelDomain;
@@ -18,20 +18,20 @@ public class UpdateLiveTopLevelDomainRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public UpdateLiveTopLevelDomainRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
     public UpdateLiveTopLevelDomainRequest setDomainName(String domainName) {
         this.domainName = domainName;
         return this;
     }
     public String getDomainName() {
         return this.domainName;
+    }
+
+    public UpdateLiveTopLevelDomainRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public UpdateLiveTopLevelDomainRequest setTopLevelDomain(String topLevelDomain) {

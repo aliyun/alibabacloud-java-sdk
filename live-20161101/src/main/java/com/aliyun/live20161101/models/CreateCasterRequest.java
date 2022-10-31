@@ -4,41 +4,33 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class CreateCasterRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("CasterName")
     public String casterName;
-
-    @NameInMap("ClientToken")
-    public String clientToken;
-
-    @NameInMap("NormType")
-    public Integer normType;
-
-    @NameInMap("ChargeType")
-    public String chargeType;
-
-    @NameInMap("PurchaseTime")
-    public String purchaseTime;
-
-    @NameInMap("ExpireTime")
-    public String expireTime;
 
     @NameInMap("CasterTemplate")
     public String casterTemplate;
 
+    @NameInMap("ChargeType")
+    public String chargeType;
+
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    @NameInMap("ExpireTime")
+    public String expireTime;
+
+    @NameInMap("NormType")
+    public Integer normType;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("PurchaseTime")
+    public String purchaseTime;
+
     public static CreateCasterRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateCasterRequest self = new CreateCasterRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateCasterRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public CreateCasterRequest setCasterName(String casterName) {
@@ -49,20 +41,12 @@ public class CreateCasterRequest extends TeaModel {
         return this.casterName;
     }
 
-    public CreateCasterRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
+    public CreateCasterRequest setCasterTemplate(String casterTemplate) {
+        this.casterTemplate = casterTemplate;
         return this;
     }
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
-    public CreateCasterRequest setNormType(Integer normType) {
-        this.normType = normType;
-        return this;
-    }
-    public Integer getNormType() {
-        return this.normType;
+    public String getCasterTemplate() {
+        return this.casterTemplate;
     }
 
     public CreateCasterRequest setChargeType(String chargeType) {
@@ -73,12 +57,12 @@ public class CreateCasterRequest extends TeaModel {
         return this.chargeType;
     }
 
-    public CreateCasterRequest setPurchaseTime(String purchaseTime) {
-        this.purchaseTime = purchaseTime;
+    public CreateCasterRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public String getPurchaseTime() {
-        return this.purchaseTime;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public CreateCasterRequest setExpireTime(String expireTime) {
@@ -89,12 +73,28 @@ public class CreateCasterRequest extends TeaModel {
         return this.expireTime;
     }
 
-    public CreateCasterRequest setCasterTemplate(String casterTemplate) {
-        this.casterTemplate = casterTemplate;
+    public CreateCasterRequest setNormType(Integer normType) {
+        this.normType = normType;
         return this;
     }
-    public String getCasterTemplate() {
-        return this.casterTemplate;
+    public Integer getNormType() {
+        return this.normType;
+    }
+
+    public CreateCasterRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public CreateCasterRequest setPurchaseTime(String purchaseTime) {
+        this.purchaseTime = purchaseTime;
+        return this;
+    }
+    public String getPurchaseTime() {
+        return this.purchaseTime;
     }
 
 }

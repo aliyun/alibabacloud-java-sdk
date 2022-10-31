@@ -4,26 +4,18 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DeleteCasterComponentResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("CasterId")
     public String casterId;
 
     @NameInMap("ComponentId")
     public String componentId;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static DeleteCasterComponentResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteCasterComponentResponseBody self = new DeleteCasterComponentResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteCasterComponentResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DeleteCasterComponentResponseBody setCasterId(String casterId) {
@@ -40,6 +32,14 @@ public class DeleteCasterComponentResponseBody extends TeaModel {
     }
     public String getComponentId() {
         return this.componentId;
+    }
+
+    public DeleteCasterComponentResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

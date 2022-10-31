@@ -4,20 +4,17 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class AddTrancodeSEIRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("AppName")
+    public String appName;
+
+    @NameInMap("Delay")
+    public Integer delay;
 
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("AppName")
-    public String appName;
-
-    @NameInMap("StreamName")
-    public String streamName;
-
-    @NameInMap("Text")
-    public String text;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("Pattern")
     public String pattern;
@@ -25,28 +22,15 @@ public class AddTrancodeSEIRequest extends TeaModel {
     @NameInMap("Repeat")
     public Integer repeat;
 
-    @NameInMap("Delay")
-    public Integer delay;
+    @NameInMap("StreamName")
+    public String streamName;
+
+    @NameInMap("Text")
+    public String text;
 
     public static AddTrancodeSEIRequest build(java.util.Map<String, ?> map) throws Exception {
         AddTrancodeSEIRequest self = new AddTrancodeSEIRequest();
         return TeaModel.build(map, self);
-    }
-
-    public AddTrancodeSEIRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public AddTrancodeSEIRequest setDomainName(String domainName) {
-        this.domainName = domainName;
-        return this;
-    }
-    public String getDomainName() {
-        return this.domainName;
     }
 
     public AddTrancodeSEIRequest setAppName(String appName) {
@@ -57,20 +41,28 @@ public class AddTrancodeSEIRequest extends TeaModel {
         return this.appName;
     }
 
-    public AddTrancodeSEIRequest setStreamName(String streamName) {
-        this.streamName = streamName;
+    public AddTrancodeSEIRequest setDelay(Integer delay) {
+        this.delay = delay;
         return this;
     }
-    public String getStreamName() {
-        return this.streamName;
+    public Integer getDelay() {
+        return this.delay;
     }
 
-    public AddTrancodeSEIRequest setText(String text) {
-        this.text = text;
+    public AddTrancodeSEIRequest setDomainName(String domainName) {
+        this.domainName = domainName;
         return this;
     }
-    public String getText() {
-        return this.text;
+    public String getDomainName() {
+        return this.domainName;
+    }
+
+    public AddTrancodeSEIRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public AddTrancodeSEIRequest setPattern(String pattern) {
@@ -89,12 +81,20 @@ public class AddTrancodeSEIRequest extends TeaModel {
         return this.repeat;
     }
 
-    public AddTrancodeSEIRequest setDelay(Integer delay) {
-        this.delay = delay;
+    public AddTrancodeSEIRequest setStreamName(String streamName) {
+        this.streamName = streamName;
         return this;
     }
-    public Integer getDelay() {
-        return this.delay;
+    public String getStreamName() {
+        return this.streamName;
+    }
+
+    public AddTrancodeSEIRequest setText(String text) {
+        this.text = text;
+        return this;
+    }
+    public String getText() {
+        return this.text;
     }
 
 }

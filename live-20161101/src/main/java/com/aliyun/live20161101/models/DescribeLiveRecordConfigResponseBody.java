@@ -4,78 +4,30 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveRecordConfigResponseBody extends TeaModel {
+    @NameInMap("LiveAppRecordList")
+    public DescribeLiveRecordConfigResponseBodyLiveAppRecordList liveAppRecordList;
+
     @NameInMap("Order")
     public String order;
-
-    @NameInMap("TotalNum")
-    public Integer totalNum;
 
     @NameInMap("PageNum")
     public Integer pageNum;
 
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("TotalNum")
+    public Integer totalNum;
 
     @NameInMap("TotalPage")
     public Integer totalPage;
 
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("LiveAppRecordList")
-    public DescribeLiveRecordConfigResponseBodyLiveAppRecordList liveAppRecordList;
-
     public static DescribeLiveRecordConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveRecordConfigResponseBody self = new DescribeLiveRecordConfigResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeLiveRecordConfigResponseBody setOrder(String order) {
-        this.order = order;
-        return this;
-    }
-    public String getOrder() {
-        return this.order;
-    }
-
-    public DescribeLiveRecordConfigResponseBody setTotalNum(Integer totalNum) {
-        this.totalNum = totalNum;
-        return this;
-    }
-    public Integer getTotalNum() {
-        return this.totalNum;
-    }
-
-    public DescribeLiveRecordConfigResponseBody setPageNum(Integer pageNum) {
-        this.pageNum = pageNum;
-        return this;
-    }
-    public Integer getPageNum() {
-        return this.pageNum;
-    }
-
-    public DescribeLiveRecordConfigResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeLiveRecordConfigResponseBody setTotalPage(Integer totalPage) {
-        this.totalPage = totalPage;
-        return this;
-    }
-    public Integer getTotalPage() {
-        return this.totalPage;
-    }
-
-    public DescribeLiveRecordConfigResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
     }
 
     public DescribeLiveRecordConfigResponseBody setLiveAppRecordList(DescribeLiveRecordConfigResponseBodyLiveAppRecordList liveAppRecordList) {
@@ -86,18 +38,69 @@ public class DescribeLiveRecordConfigResponseBody extends TeaModel {
         return this.liveAppRecordList;
     }
 
+    public DescribeLiveRecordConfigResponseBody setOrder(String order) {
+        this.order = order;
+        return this;
+    }
+    public String getOrder() {
+        return this.order;
+    }
+
+    public DescribeLiveRecordConfigResponseBody setPageNum(Integer pageNum) {
+        this.pageNum = pageNum;
+        return this;
+    }
+    public Integer getPageNum() {
+        return this.pageNum;
+    }
+
+    public DescribeLiveRecordConfigResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeLiveRecordConfigResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeLiveRecordConfigResponseBody setTotalNum(Integer totalNum) {
+        this.totalNum = totalNum;
+        return this;
+    }
+    public Integer getTotalNum() {
+        return this.totalNum;
+    }
+
+    public DescribeLiveRecordConfigResponseBody setTotalPage(Integer totalPage) {
+        this.totalPage = totalPage;
+        return this;
+    }
+    public Integer getTotalPage() {
+        return this.totalPage;
+    }
+
     public static class DescribeLiveRecordConfigResponseBodyLiveAppRecordListLiveAppRecordRecordFormatListRecordFormat extends TeaModel {
         @NameInMap("CycleDuration")
         public Integer cycleDuration;
 
-        @NameInMap("SliceOssObjectPrefix")
-        public String sliceOssObjectPrefix;
+        @NameInMap("Format")
+        public String format;
 
         @NameInMap("OssObjectPrefix")
         public String ossObjectPrefix;
 
-        @NameInMap("Format")
-        public String format;
+        @NameInMap("SliceDuration")
+        public Integer sliceDuration;
+
+        @NameInMap("SliceOssObjectPrefix")
+        public String sliceOssObjectPrefix;
 
         public static DescribeLiveRecordConfigResponseBodyLiveAppRecordListLiveAppRecordRecordFormatListRecordFormat build(java.util.Map<String, ?> map) throws Exception {
             DescribeLiveRecordConfigResponseBodyLiveAppRecordListLiveAppRecordRecordFormatListRecordFormat self = new DescribeLiveRecordConfigResponseBodyLiveAppRecordListLiveAppRecordRecordFormatListRecordFormat();
@@ -112,12 +115,12 @@ public class DescribeLiveRecordConfigResponseBody extends TeaModel {
             return this.cycleDuration;
         }
 
-        public DescribeLiveRecordConfigResponseBodyLiveAppRecordListLiveAppRecordRecordFormatListRecordFormat setSliceOssObjectPrefix(String sliceOssObjectPrefix) {
-            this.sliceOssObjectPrefix = sliceOssObjectPrefix;
+        public DescribeLiveRecordConfigResponseBodyLiveAppRecordListLiveAppRecordRecordFormatListRecordFormat setFormat(String format) {
+            this.format = format;
             return this;
         }
-        public String getSliceOssObjectPrefix() {
-            return this.sliceOssObjectPrefix;
+        public String getFormat() {
+            return this.format;
         }
 
         public DescribeLiveRecordConfigResponseBodyLiveAppRecordListLiveAppRecordRecordFormatListRecordFormat setOssObjectPrefix(String ossObjectPrefix) {
@@ -128,12 +131,20 @@ public class DescribeLiveRecordConfigResponseBody extends TeaModel {
             return this.ossObjectPrefix;
         }
 
-        public DescribeLiveRecordConfigResponseBodyLiveAppRecordListLiveAppRecordRecordFormatListRecordFormat setFormat(String format) {
-            this.format = format;
+        public DescribeLiveRecordConfigResponseBodyLiveAppRecordListLiveAppRecordRecordFormatListRecordFormat setSliceDuration(Integer sliceDuration) {
+            this.sliceDuration = sliceDuration;
             return this;
         }
-        public String getFormat() {
-            return this.format;
+        public Integer getSliceDuration() {
+            return this.sliceDuration;
+        }
+
+        public DescribeLiveRecordConfigResponseBodyLiveAppRecordListLiveAppRecordRecordFormatListRecordFormat setSliceOssObjectPrefix(String sliceOssObjectPrefix) {
+            this.sliceOssObjectPrefix = sliceOssObjectPrefix;
+            return this;
+        }
+        public String getSliceOssObjectPrefix() {
+            return this.sliceOssObjectPrefix;
         }
 
     }
@@ -157,21 +168,119 @@ public class DescribeLiveRecordConfigResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeLiveRecordConfigResponseBodyLiveAppRecordListLiveAppRecordTranscodeRecordFormatListRecordFormat extends TeaModel {
+        @NameInMap("CycleDuration")
+        public Integer cycleDuration;
+
+        @NameInMap("Format")
+        public String format;
+
+        @NameInMap("OssObjectPrefix")
+        public String ossObjectPrefix;
+
+        @NameInMap("SliceDuration")
+        public Integer sliceDuration;
+
+        @NameInMap("SliceOssObjectPrefix")
+        public String sliceOssObjectPrefix;
+
+        public static DescribeLiveRecordConfigResponseBodyLiveAppRecordListLiveAppRecordTranscodeRecordFormatListRecordFormat build(java.util.Map<String, ?> map) throws Exception {
+            DescribeLiveRecordConfigResponseBodyLiveAppRecordListLiveAppRecordTranscodeRecordFormatListRecordFormat self = new DescribeLiveRecordConfigResponseBodyLiveAppRecordListLiveAppRecordTranscodeRecordFormatListRecordFormat();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeLiveRecordConfigResponseBodyLiveAppRecordListLiveAppRecordTranscodeRecordFormatListRecordFormat setCycleDuration(Integer cycleDuration) {
+            this.cycleDuration = cycleDuration;
+            return this;
+        }
+        public Integer getCycleDuration() {
+            return this.cycleDuration;
+        }
+
+        public DescribeLiveRecordConfigResponseBodyLiveAppRecordListLiveAppRecordTranscodeRecordFormatListRecordFormat setFormat(String format) {
+            this.format = format;
+            return this;
+        }
+        public String getFormat() {
+            return this.format;
+        }
+
+        public DescribeLiveRecordConfigResponseBodyLiveAppRecordListLiveAppRecordTranscodeRecordFormatListRecordFormat setOssObjectPrefix(String ossObjectPrefix) {
+            this.ossObjectPrefix = ossObjectPrefix;
+            return this;
+        }
+        public String getOssObjectPrefix() {
+            return this.ossObjectPrefix;
+        }
+
+        public DescribeLiveRecordConfigResponseBodyLiveAppRecordListLiveAppRecordTranscodeRecordFormatListRecordFormat setSliceDuration(Integer sliceDuration) {
+            this.sliceDuration = sliceDuration;
+            return this;
+        }
+        public Integer getSliceDuration() {
+            return this.sliceDuration;
+        }
+
+        public DescribeLiveRecordConfigResponseBodyLiveAppRecordListLiveAppRecordTranscodeRecordFormatListRecordFormat setSliceOssObjectPrefix(String sliceOssObjectPrefix) {
+            this.sliceOssObjectPrefix = sliceOssObjectPrefix;
+            return this;
+        }
+        public String getSliceOssObjectPrefix() {
+            return this.sliceOssObjectPrefix;
+        }
+
+    }
+
+    public static class DescribeLiveRecordConfigResponseBodyLiveAppRecordListLiveAppRecordTranscodeRecordFormatList extends TeaModel {
+        @NameInMap("RecordFormat")
+        public java.util.List<DescribeLiveRecordConfigResponseBodyLiveAppRecordListLiveAppRecordTranscodeRecordFormatListRecordFormat> recordFormat;
+
+        public static DescribeLiveRecordConfigResponseBodyLiveAppRecordListLiveAppRecordTranscodeRecordFormatList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeLiveRecordConfigResponseBodyLiveAppRecordListLiveAppRecordTranscodeRecordFormatList self = new DescribeLiveRecordConfigResponseBodyLiveAppRecordListLiveAppRecordTranscodeRecordFormatList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeLiveRecordConfigResponseBodyLiveAppRecordListLiveAppRecordTranscodeRecordFormatList setRecordFormat(java.util.List<DescribeLiveRecordConfigResponseBodyLiveAppRecordListLiveAppRecordTranscodeRecordFormatListRecordFormat> recordFormat) {
+            this.recordFormat = recordFormat;
+            return this;
+        }
+        public java.util.List<DescribeLiveRecordConfigResponseBodyLiveAppRecordListLiveAppRecordTranscodeRecordFormatListRecordFormat> getRecordFormat() {
+            return this.recordFormat;
+        }
+
+    }
+
+    public static class DescribeLiveRecordConfigResponseBodyLiveAppRecordListLiveAppRecordTranscodeTemplates extends TeaModel {
+        @NameInMap("Templates")
+        public java.util.List<String> templates;
+
+        public static DescribeLiveRecordConfigResponseBodyLiveAppRecordListLiveAppRecordTranscodeTemplates build(java.util.Map<String, ?> map) throws Exception {
+            DescribeLiveRecordConfigResponseBodyLiveAppRecordListLiveAppRecordTranscodeTemplates self = new DescribeLiveRecordConfigResponseBodyLiveAppRecordListLiveAppRecordTranscodeTemplates();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeLiveRecordConfigResponseBodyLiveAppRecordListLiveAppRecordTranscodeTemplates setTemplates(java.util.List<String> templates) {
+            this.templates = templates;
+            return this;
+        }
+        public java.util.List<String> getTemplates() {
+            return this.templates;
+        }
+
+    }
+
     public static class DescribeLiveRecordConfigResponseBodyLiveAppRecordListLiveAppRecord extends TeaModel {
-        @NameInMap("EndTime")
-        public String endTime;
-
-        @NameInMap("StartTime")
-        public String startTime;
-
         @NameInMap("AppName")
         public String appName;
 
-        @NameInMap("StreamName")
-        public String streamName;
-
         @NameInMap("CreateTime")
         public String createTime;
+
+        @NameInMap("DomainName")
+        public String domainName;
+
+        @NameInMap("EndTime")
+        public String endTime;
 
         @NameInMap("OnDemond")
         public Integer onDemond;
@@ -179,34 +288,27 @@ public class DescribeLiveRecordConfigResponseBody extends TeaModel {
         @NameInMap("OssBucket")
         public String ossBucket;
 
+        @NameInMap("OssEndpoint")
+        public String ossEndpoint;
+
         @NameInMap("RecordFormatList")
         public DescribeLiveRecordConfigResponseBodyLiveAppRecordListLiveAppRecordRecordFormatList recordFormatList;
 
-        @NameInMap("DomainName")
-        public String domainName;
+        @NameInMap("StartTime")
+        public String startTime;
 
-        @NameInMap("OssEndpoint")
-        public String ossEndpoint;
+        @NameInMap("StreamName")
+        public String streamName;
+
+        @NameInMap("TranscodeRecordFormatList")
+        public DescribeLiveRecordConfigResponseBodyLiveAppRecordListLiveAppRecordTranscodeRecordFormatList transcodeRecordFormatList;
+
+        @NameInMap("TranscodeTemplates")
+        public DescribeLiveRecordConfigResponseBodyLiveAppRecordListLiveAppRecordTranscodeTemplates transcodeTemplates;
 
         public static DescribeLiveRecordConfigResponseBodyLiveAppRecordListLiveAppRecord build(java.util.Map<String, ?> map) throws Exception {
             DescribeLiveRecordConfigResponseBodyLiveAppRecordListLiveAppRecord self = new DescribeLiveRecordConfigResponseBodyLiveAppRecordListLiveAppRecord();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeLiveRecordConfigResponseBodyLiveAppRecordListLiveAppRecord setEndTime(String endTime) {
-            this.endTime = endTime;
-            return this;
-        }
-        public String getEndTime() {
-            return this.endTime;
-        }
-
-        public DescribeLiveRecordConfigResponseBodyLiveAppRecordListLiveAppRecord setStartTime(String startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public String getStartTime() {
-            return this.startTime;
         }
 
         public DescribeLiveRecordConfigResponseBodyLiveAppRecordListLiveAppRecord setAppName(String appName) {
@@ -217,20 +319,28 @@ public class DescribeLiveRecordConfigResponseBody extends TeaModel {
             return this.appName;
         }
 
-        public DescribeLiveRecordConfigResponseBodyLiveAppRecordListLiveAppRecord setStreamName(String streamName) {
-            this.streamName = streamName;
-            return this;
-        }
-        public String getStreamName() {
-            return this.streamName;
-        }
-
         public DescribeLiveRecordConfigResponseBodyLiveAppRecordListLiveAppRecord setCreateTime(String createTime) {
             this.createTime = createTime;
             return this;
         }
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        public DescribeLiveRecordConfigResponseBodyLiveAppRecordListLiveAppRecord setDomainName(String domainName) {
+            this.domainName = domainName;
+            return this;
+        }
+        public String getDomainName() {
+            return this.domainName;
+        }
+
+        public DescribeLiveRecordConfigResponseBodyLiveAppRecordListLiveAppRecord setEndTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public String getEndTime() {
+            return this.endTime;
         }
 
         public DescribeLiveRecordConfigResponseBodyLiveAppRecordListLiveAppRecord setOnDemond(Integer onDemond) {
@@ -249,6 +359,14 @@ public class DescribeLiveRecordConfigResponseBody extends TeaModel {
             return this.ossBucket;
         }
 
+        public DescribeLiveRecordConfigResponseBodyLiveAppRecordListLiveAppRecord setOssEndpoint(String ossEndpoint) {
+            this.ossEndpoint = ossEndpoint;
+            return this;
+        }
+        public String getOssEndpoint() {
+            return this.ossEndpoint;
+        }
+
         public DescribeLiveRecordConfigResponseBodyLiveAppRecordListLiveAppRecord setRecordFormatList(DescribeLiveRecordConfigResponseBodyLiveAppRecordListLiveAppRecordRecordFormatList recordFormatList) {
             this.recordFormatList = recordFormatList;
             return this;
@@ -257,20 +375,36 @@ public class DescribeLiveRecordConfigResponseBody extends TeaModel {
             return this.recordFormatList;
         }
 
-        public DescribeLiveRecordConfigResponseBodyLiveAppRecordListLiveAppRecord setDomainName(String domainName) {
-            this.domainName = domainName;
+        public DescribeLiveRecordConfigResponseBodyLiveAppRecordListLiveAppRecord setStartTime(String startTime) {
+            this.startTime = startTime;
             return this;
         }
-        public String getDomainName() {
-            return this.domainName;
+        public String getStartTime() {
+            return this.startTime;
         }
 
-        public DescribeLiveRecordConfigResponseBodyLiveAppRecordListLiveAppRecord setOssEndpoint(String ossEndpoint) {
-            this.ossEndpoint = ossEndpoint;
+        public DescribeLiveRecordConfigResponseBodyLiveAppRecordListLiveAppRecord setStreamName(String streamName) {
+            this.streamName = streamName;
             return this;
         }
-        public String getOssEndpoint() {
-            return this.ossEndpoint;
+        public String getStreamName() {
+            return this.streamName;
+        }
+
+        public DescribeLiveRecordConfigResponseBodyLiveAppRecordListLiveAppRecord setTranscodeRecordFormatList(DescribeLiveRecordConfigResponseBodyLiveAppRecordListLiveAppRecordTranscodeRecordFormatList transcodeRecordFormatList) {
+            this.transcodeRecordFormatList = transcodeRecordFormatList;
+            return this;
+        }
+        public DescribeLiveRecordConfigResponseBodyLiveAppRecordListLiveAppRecordTranscodeRecordFormatList getTranscodeRecordFormatList() {
+            return this.transcodeRecordFormatList;
+        }
+
+        public DescribeLiveRecordConfigResponseBodyLiveAppRecordListLiveAppRecord setTranscodeTemplates(DescribeLiveRecordConfigResponseBodyLiveAppRecordListLiveAppRecordTranscodeTemplates transcodeTemplates) {
+            this.transcodeTemplates = transcodeTemplates;
+            return this;
+        }
+        public DescribeLiveRecordConfigResponseBodyLiveAppRecordListLiveAppRecordTranscodeTemplates getTranscodeTemplates() {
+            return this.transcodeTemplates;
         }
 
     }

@@ -4,23 +4,15 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveStreamBitRateDataResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("FrameRateAndBitRateInfos")
     public DescribeLiveStreamBitRateDataResponseBodyFrameRateAndBitRateInfos frameRateAndBitRateInfos;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeLiveStreamBitRateDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveStreamBitRateDataResponseBody self = new DescribeLiveStreamBitRateDataResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeLiveStreamBitRateDataResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeLiveStreamBitRateDataResponseBody setFrameRateAndBitRateInfos(DescribeLiveStreamBitRateDataResponseBodyFrameRateAndBitRateInfos frameRateAndBitRateInfos) {
@@ -31,33 +23,33 @@ public class DescribeLiveStreamBitRateDataResponseBody extends TeaModel {
         return this.frameRateAndBitRateInfos;
     }
 
-    public static class DescribeLiveStreamBitRateDataResponseBodyFrameRateAndBitRateInfosFrameRateAndBitRateInfo extends TeaModel {
-        @NameInMap("Time")
-        public String time;
+    public DescribeLiveStreamBitRateDataResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class DescribeLiveStreamBitRateDataResponseBodyFrameRateAndBitRateInfosFrameRateAndBitRateInfo extends TeaModel {
         @NameInMap("AudioFrameRate")
         public Float audioFrameRate;
-
-        @NameInMap("VideoFrameRate")
-        public Float videoFrameRate;
-
-        @NameInMap("StreamUrl")
-        public String streamUrl;
 
         @NameInMap("BitRate")
         public Float bitRate;
 
+        @NameInMap("StreamUrl")
+        public String streamUrl;
+
+        @NameInMap("Time")
+        public String time;
+
+        @NameInMap("VideoFrameRate")
+        public Float videoFrameRate;
+
         public static DescribeLiveStreamBitRateDataResponseBodyFrameRateAndBitRateInfosFrameRateAndBitRateInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeLiveStreamBitRateDataResponseBodyFrameRateAndBitRateInfosFrameRateAndBitRateInfo self = new DescribeLiveStreamBitRateDataResponseBodyFrameRateAndBitRateInfosFrameRateAndBitRateInfo();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeLiveStreamBitRateDataResponseBodyFrameRateAndBitRateInfosFrameRateAndBitRateInfo setTime(String time) {
-            this.time = time;
-            return this;
-        }
-        public String getTime() {
-            return this.time;
         }
 
         public DescribeLiveStreamBitRateDataResponseBodyFrameRateAndBitRateInfosFrameRateAndBitRateInfo setAudioFrameRate(Float audioFrameRate) {
@@ -68,12 +60,12 @@ public class DescribeLiveStreamBitRateDataResponseBody extends TeaModel {
             return this.audioFrameRate;
         }
 
-        public DescribeLiveStreamBitRateDataResponseBodyFrameRateAndBitRateInfosFrameRateAndBitRateInfo setVideoFrameRate(Float videoFrameRate) {
-            this.videoFrameRate = videoFrameRate;
+        public DescribeLiveStreamBitRateDataResponseBodyFrameRateAndBitRateInfosFrameRateAndBitRateInfo setBitRate(Float bitRate) {
+            this.bitRate = bitRate;
             return this;
         }
-        public Float getVideoFrameRate() {
-            return this.videoFrameRate;
+        public Float getBitRate() {
+            return this.bitRate;
         }
 
         public DescribeLiveStreamBitRateDataResponseBodyFrameRateAndBitRateInfosFrameRateAndBitRateInfo setStreamUrl(String streamUrl) {
@@ -84,12 +76,20 @@ public class DescribeLiveStreamBitRateDataResponseBody extends TeaModel {
             return this.streamUrl;
         }
 
-        public DescribeLiveStreamBitRateDataResponseBodyFrameRateAndBitRateInfosFrameRateAndBitRateInfo setBitRate(Float bitRate) {
-            this.bitRate = bitRate;
+        public DescribeLiveStreamBitRateDataResponseBodyFrameRateAndBitRateInfosFrameRateAndBitRateInfo setTime(String time) {
+            this.time = time;
             return this;
         }
-        public Float getBitRate() {
-            return this.bitRate;
+        public String getTime() {
+            return this.time;
+        }
+
+        public DescribeLiveStreamBitRateDataResponseBodyFrameRateAndBitRateInfosFrameRateAndBitRateInfo setVideoFrameRate(Float videoFrameRate) {
+            this.videoFrameRate = videoFrameRate;
+            return this;
+        }
+        public Float getVideoFrameRate() {
+            return this.videoFrameRate;
         }
 
     }

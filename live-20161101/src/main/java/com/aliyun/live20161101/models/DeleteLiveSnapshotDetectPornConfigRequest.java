@@ -4,37 +4,29 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DeleteLiveSnapshotDetectPornConfigRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("AppName")
+    public String appName;
 
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("AppName")
-    public String appName;
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     public static DeleteLiveSnapshotDetectPornConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteLiveSnapshotDetectPornConfigRequest self = new DeleteLiveSnapshotDetectPornConfigRequest();
         return TeaModel.build(map, self);
     }
 
-    public DeleteLiveSnapshotDetectPornConfigRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public DeleteLiveSnapshotDetectPornConfigRequest setAppName(String appName) {
+        this.appName = appName;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
-    public DeleteLiveSnapshotDetectPornConfigRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public String getAppName() {
+        return this.appName;
     }
 
     public DeleteLiveSnapshotDetectPornConfigRequest setDomainName(String domainName) {
@@ -45,12 +37,20 @@ public class DeleteLiveSnapshotDetectPornConfigRequest extends TeaModel {
         return this.domainName;
     }
 
-    public DeleteLiveSnapshotDetectPornConfigRequest setAppName(String appName) {
-        this.appName = appName;
+    public DeleteLiveSnapshotDetectPornConfigRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getAppName() {
-        return this.appName;
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DeleteLiveSnapshotDetectPornConfigRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }
