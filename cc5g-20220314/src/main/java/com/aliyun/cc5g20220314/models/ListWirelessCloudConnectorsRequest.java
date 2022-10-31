@@ -7,6 +7,9 @@ public class ListWirelessCloudConnectorsRequest extends TeaModel {
     @NameInMap("BusinessType")
     public String businessType;
 
+    @NameInMap("IsInGroup")
+    public String isInGroup;
+
     @NameInMap("MaxResults")
     public Long maxResults;
 
@@ -22,6 +25,9 @@ public class ListWirelessCloudConnectorsRequest extends TeaModel {
     @NameInMap("Statuses")
     public java.util.List<String> statuses;
 
+    @NameInMap("WirelessCloudConnectorGroupId")
+    public String wirelessCloudConnectorGroupId;
+
     @NameInMap("WirelessCloudConnectorIds")
     public java.util.List<String> wirelessCloudConnectorIds;
 
@@ -36,6 +42,14 @@ public class ListWirelessCloudConnectorsRequest extends TeaModel {
     }
     public String getBusinessType() {
         return this.businessType;
+    }
+
+    public ListWirelessCloudConnectorsRequest setIsInGroup(String isInGroup) {
+        this.isInGroup = isInGroup;
+        return this;
+    }
+    public String getIsInGroup() {
+        return this.isInGroup;
     }
 
     public ListWirelessCloudConnectorsRequest setMaxResults(Long maxResults) {
@@ -76,6 +90,14 @@ public class ListWirelessCloudConnectorsRequest extends TeaModel {
     }
     public java.util.List<String> getStatuses() {
         return this.statuses;
+    }
+
+    public ListWirelessCloudConnectorsRequest setWirelessCloudConnectorGroupId(String wirelessCloudConnectorGroupId) {
+        this.wirelessCloudConnectorGroupId = wirelessCloudConnectorGroupId;
+        return this;
+    }
+    public String getWirelessCloudConnectorGroupId() {
+        return this.wirelessCloudConnectorGroupId;
     }
 
     public ListWirelessCloudConnectorsRequest setWirelessCloudConnectorIds(java.util.List<String> wirelessCloudConnectorIds) {
