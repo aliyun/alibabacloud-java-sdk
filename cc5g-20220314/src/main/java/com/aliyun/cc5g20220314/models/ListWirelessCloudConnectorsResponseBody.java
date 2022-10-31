@@ -89,11 +89,17 @@ public class ListWirelessCloudConnectorsResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("ServiceType")
+        public String serviceType;
+
         @NameInMap("Status")
         public String status;
 
         @NameInMap("UseCase")
         public String useCase;
+
+        @NameInMap("WirelessCloudConnectorGroupId")
+        public String wirelessCloudConnectorGroupId;
 
         @NameInMap("WirelessCloudConnectorId")
         public String wirelessCloudConnectorId;
@@ -167,6 +173,14 @@ public class ListWirelessCloudConnectorsResponseBody extends TeaModel {
             return this.regionId;
         }
 
+        public ListWirelessCloudConnectorsResponseBodyWirelessCloudConnectors setServiceType(String serviceType) {
+            this.serviceType = serviceType;
+            return this;
+        }
+        public String getServiceType() {
+            return this.serviceType;
+        }
+
         public ListWirelessCloudConnectorsResponseBodyWirelessCloudConnectors setStatus(String status) {
             this.status = status;
             return this;
@@ -181,6 +195,14 @@ public class ListWirelessCloudConnectorsResponseBody extends TeaModel {
         }
         public String getUseCase() {
             return this.useCase;
+        }
+
+        public ListWirelessCloudConnectorsResponseBodyWirelessCloudConnectors setWirelessCloudConnectorGroupId(String wirelessCloudConnectorGroupId) {
+            this.wirelessCloudConnectorGroupId = wirelessCloudConnectorGroupId;
+            return this;
+        }
+        public String getWirelessCloudConnectorGroupId() {
+            return this.wirelessCloudConnectorGroupId;
         }
 
         public ListWirelessCloudConnectorsResponseBodyWirelessCloudConnectors setWirelessCloudConnectorId(String wirelessCloudConnectorId) {

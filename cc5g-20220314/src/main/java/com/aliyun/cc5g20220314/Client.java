@@ -79,6 +79,104 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.addDNSAuthorizationRuleWithOptions(request, runtime);
     }
 
+    public AddGroupDnsAuthorizationRuleResponse addGroupDnsAuthorizationRuleWithOptions(AddGroupDnsAuthorizationRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.destinationIp)) {
+            query.put("DestinationIp", request.destinationIp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceDNSIp)) {
+            query.put("SourceDNSIp", request.sourceDNSIp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.wirelessCloudConnectorGroupId)) {
+            query.put("WirelessCloudConnectorGroupId", request.wirelessCloudConnectorGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddGroupDnsAuthorizationRule"),
+            new TeaPair("version", "2022-03-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddGroupDnsAuthorizationRuleResponse());
+    }
+
+    public AddGroupDnsAuthorizationRuleResponse addGroupDnsAuthorizationRule(AddGroupDnsAuthorizationRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.addGroupDnsAuthorizationRuleWithOptions(request, runtime);
+    }
+
+    public AddWirelessCloudConnectorToGroupResponse addWirelessCloudConnectorToGroupWithOptions(AddWirelessCloudConnectorToGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.wirelessCloudConnectorGroupId)) {
+            query.put("WirelessCloudConnectorGroupId", request.wirelessCloudConnectorGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.wirelessCloudConnectorIds)) {
+            query.put("WirelessCloudConnectorIds", request.wirelessCloudConnectorIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddWirelessCloudConnectorToGroup"),
+            new TeaPair("version", "2022-03-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddWirelessCloudConnectorToGroupResponse());
+    }
+
+    public AddWirelessCloudConnectorToGroupResponse addWirelessCloudConnectorToGroup(AddWirelessCloudConnectorToGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.addWirelessCloudConnectorToGroupWithOptions(request, runtime);
+    }
+
     public AttachVpcToNetLinkResponse attachVpcToNetLinkWithOptions(AttachVpcToNetLinkRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -270,6 +368,75 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createBatchOperateCardsTaskWithOptions(request, runtime);
     }
 
+    public CreateGroupAuthorizationRuleResponse createGroupAuthorizationRuleWithOptions(CreateGroupAuthorizationRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.destination)) {
+            query.put("Destination", request.destination);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.destinationPort)) {
+            query.put("DestinationPort", request.destinationPort);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.destinationType)) {
+            query.put("DestinationType", request.destinationType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policy)) {
+            query.put("Policy", request.policy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.protocol)) {
+            query.put("Protocol", request.protocol);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceCidr)) {
+            query.put("SourceCidr", request.sourceCidr);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.wirelessCloudConnectorGroupId)) {
+            query.put("WirelessCloudConnectorGroupId", request.wirelessCloudConnectorGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateGroupAuthorizationRule"),
+            new TeaPair("version", "2022-03-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateGroupAuthorizationRuleResponse());
+    }
+
+    public CreateGroupAuthorizationRuleResponse createGroupAuthorizationRule(CreateGroupAuthorizationRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createGroupAuthorizationRuleWithOptions(request, runtime);
+    }
+
     public CreateIoTCloudConnectorBackhaulRouteResponse createIoTCloudConnectorBackhaulRouteWithOptions(CreateIoTCloudConnectorBackhaulRouteRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -372,6 +539,51 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createWirelessCloudConnectorWithOptions(request, runtime);
     }
 
+    public CreateWirelessCloudConnectorGroupResponse createWirelessCloudConnectorGroupWithOptions(CreateWirelessCloudConnectorGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateWirelessCloudConnectorGroup"),
+            new TeaPair("version", "2022-03-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateWirelessCloudConnectorGroupResponse());
+    }
+
+    public CreateWirelessCloudConnectorGroupResponse createWirelessCloudConnectorGroup(CreateWirelessCloudConnectorGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createWirelessCloudConnectorGroupWithOptions(request, runtime);
+    }
+
     public DeleteAuthorizationRuleResponse deleteAuthorizationRuleWithOptions(DeleteAuthorizationRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -454,6 +666,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteBatchOperateCardsTaskWithOptions(request, runtime);
     }
 
+    public DeleteGroupAuthorizationRuleResponse deleteGroupAuthorizationRuleWithOptions(DeleteGroupAuthorizationRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authorizationRuleId)) {
+            query.put("AuthorizationRuleId", request.authorizationRuleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.wirelessCloudConnectorGroupId)) {
+            query.put("WirelessCloudConnectorGroupId", request.wirelessCloudConnectorGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteGroupAuthorizationRule"),
+            new TeaPair("version", "2022-03-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteGroupAuthorizationRuleResponse());
+    }
+
+    public DeleteGroupAuthorizationRuleResponse deleteGroupAuthorizationRule(DeleteGroupAuthorizationRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteGroupAuthorizationRuleWithOptions(request, runtime);
+    }
+
     public DeleteIoTCloudConnectorBackhaulRouteResponse deleteIoTCloudConnectorBackhaulRouteWithOptions(DeleteIoTCloudConnectorBackhaulRouteRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -530,6 +783,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteWirelessCloudConnectorResponse deleteWirelessCloudConnector(DeleteWirelessCloudConnectorRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteWirelessCloudConnectorWithOptions(request, runtime);
+    }
+
+    public DeleteWirelessCloudConnectorGroupResponse deleteWirelessCloudConnectorGroupWithOptions(DeleteWirelessCloudConnectorGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.wirelessCloudConnectorGroupId)) {
+            query.put("WirelessCloudConnectorGroupId", request.wirelessCloudConnectorGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteWirelessCloudConnectorGroup"),
+            new TeaPair("version", "2022-03-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteWirelessCloudConnectorGroupResponse());
+    }
+
+    public DeleteWirelessCloudConnectorGroupResponse deleteWirelessCloudConnectorGroup(DeleteWirelessCloudConnectorGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteWirelessCloudConnectorGroupWithOptions(request, runtime);
     }
 
     public DetachVpcFromNetLinkResponse detachVpcFromNetLinkWithOptions(DetachVpcFromNetLinkRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -792,6 +1082,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.grantNetLinkWithOptions(request, runtime);
     }
 
+    public ListAPNsResponse listAPNsWithOptions(ListAPNsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAPNs"),
+            new TeaPair("version", "2022-03-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAPNsResponse());
+    }
+
+    public ListAPNsResponse listAPNs(ListAPNsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listAPNsWithOptions(request, runtime);
+    }
+
     public ListAuthorizationRulesResponse listAuthorizationRulesWithOptions(ListAuthorizationRulesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -945,6 +1260,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listDiagnoseInfoForSingleCardWithOptions(request, runtime);
     }
 
+    public ListGroupAuthorizationRulesResponse listGroupAuthorizationRulesWithOptions(ListGroupAuthorizationRulesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListGroupAuthorizationRules"),
+            new TeaPair("version", "2022-03-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListGroupAuthorizationRulesResponse());
+    }
+
+    public ListGroupAuthorizationRulesResponse listGroupAuthorizationRules(ListGroupAuthorizationRulesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listGroupAuthorizationRulesWithOptions(request, runtime);
+    }
+
     public ListIoTCloudConnectorBackhaulRouteResponse listIoTCloudConnectorBackhaulRouteWithOptions(ListIoTCloudConnectorBackhaulRouteRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -1018,6 +1358,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListRegionsResponse listRegions(ListRegionsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listRegionsWithOptions(request, runtime);
+    }
+
+    public ListWirelessCloudConnectorGroupsResponse listWirelessCloudConnectorGroupsWithOptions(ListWirelessCloudConnectorGroupsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListWirelessCloudConnectorGroups"),
+            new TeaPair("version", "2022-03-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListWirelessCloudConnectorGroupsResponse());
+    }
+
+    public ListWirelessCloudConnectorGroupsResponse listWirelessCloudConnectorGroups(ListWirelessCloudConnectorGroupsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listWirelessCloudConnectorGroupsWithOptions(request, runtime);
+    }
+
+    public ListWirelessCloudConnectorsResponse listWirelessCloudConnectorsWithOptions(ListWirelessCloudConnectorsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListWirelessCloudConnectors"),
+            new TeaPair("version", "2022-03-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListWirelessCloudConnectorsResponse());
+    }
+
+    public ListWirelessCloudConnectorsResponse listWirelessCloudConnectors(ListWirelessCloudConnectorsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listWirelessCloudConnectorsWithOptions(request, runtime);
     }
 
     public ListZonesResponse listZonesWithOptions(ListZonesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1158,6 +1548,51 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public OpenCc5gServiceResponse openCc5gService(OpenCc5gServiceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.openCc5gServiceWithOptions(request, runtime);
+    }
+
+    public RemoveWirelessCloudConnectorFromGroupResponse removeWirelessCloudConnectorFromGroupWithOptions(RemoveWirelessCloudConnectorFromGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.wirelessCloudConnectorGroupId)) {
+            query.put("WirelessCloudConnectorGroupId", request.wirelessCloudConnectorGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.wirelessCloudConnectorIds)) {
+            query.put("WirelessCloudConnectorIds", request.wirelessCloudConnectorIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RemoveWirelessCloudConnectorFromGroup"),
+            new TeaPair("version", "2022-03-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveWirelessCloudConnectorFromGroupResponse());
+    }
+
+    public RemoveWirelessCloudConnectorFromGroupResponse removeWirelessCloudConnectorFromGroup(RemoveWirelessCloudConnectorFromGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.removeWirelessCloudConnectorFromGroupWithOptions(request, runtime);
     }
 
     public ResumeCardsResponse resumeCardsWithOptions(ResumeCardsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1662,6 +2097,132 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateDNSAuthorizationRuleWithOptions(request, runtime);
     }
 
+    public UpdateGroupAuthorizationRuleResponse updateGroupAuthorizationRuleWithOptions(UpdateGroupAuthorizationRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authorizationRuleId)) {
+            query.put("AuthorizationRuleId", request.authorizationRuleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.destination)) {
+            query.put("Destination", request.destination);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.destinationPort)) {
+            query.put("DestinationPort", request.destinationPort);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policy)) {
+            query.put("Policy", request.policy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.protocol)) {
+            query.put("Protocol", request.protocol);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceCidr)) {
+            query.put("SourceCidr", request.sourceCidr);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.wirelessCloudConnectorGroupId)) {
+            query.put("WirelessCloudConnectorGroupId", request.wirelessCloudConnectorGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateGroupAuthorizationRule"),
+            new TeaPair("version", "2022-03-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateGroupAuthorizationRuleResponse());
+    }
+
+    public UpdateGroupAuthorizationRuleResponse updateGroupAuthorizationRule(UpdateGroupAuthorizationRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateGroupAuthorizationRuleWithOptions(request, runtime);
+    }
+
+    public UpdateGroupDnsAuthorizationRuleResponse updateGroupDnsAuthorizationRuleWithOptions(UpdateGroupDnsAuthorizationRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authorizationRuleId)) {
+            query.put("AuthorizationRuleId", request.authorizationRuleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.destinationIp)) {
+            query.put("DestinationIp", request.destinationIp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceDNSIp)) {
+            query.put("SourceDNSIp", request.sourceDNSIp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.wirelessCloudConnectorGroupId)) {
+            query.put("WirelessCloudConnectorGroupId", request.wirelessCloudConnectorGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateGroupDnsAuthorizationRule"),
+            new TeaPair("version", "2022-03-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateGroupDnsAuthorizationRuleResponse());
+    }
+
+    public UpdateGroupDnsAuthorizationRuleResponse updateGroupDnsAuthorizationRule(UpdateGroupDnsAuthorizationRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateGroupDnsAuthorizationRuleWithOptions(request, runtime);
+    }
+
     public UpdateWirelessCloudConnectorResponse updateWirelessCloudConnectorWithOptions(UpdateWirelessCloudConnectorRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1705,5 +2266,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateWirelessCloudConnectorResponse updateWirelessCloudConnector(UpdateWirelessCloudConnectorRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateWirelessCloudConnectorWithOptions(request, runtime);
+    }
+
+    public UpdateWirelessCloudConnectorGroupResponse updateWirelessCloudConnectorGroupWithOptions(UpdateWirelessCloudConnectorGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.wirelessCloudConnectorGroupId)) {
+            query.put("WirelessCloudConnectorGroupId", request.wirelessCloudConnectorGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateWirelessCloudConnectorGroup"),
+            new TeaPair("version", "2022-03-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateWirelessCloudConnectorGroupResponse());
+    }
+
+    public UpdateWirelessCloudConnectorGroupResponse updateWirelessCloudConnectorGroup(UpdateWirelessCloudConnectorGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateWirelessCloudConnectorGroupWithOptions(request, runtime);
     }
 }
