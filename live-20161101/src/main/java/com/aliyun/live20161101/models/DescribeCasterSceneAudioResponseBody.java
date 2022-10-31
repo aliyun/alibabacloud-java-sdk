@@ -4,12 +4,6 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeCasterSceneAudioResponseBody extends TeaModel {
-    @NameInMap("MixList")
-    public DescribeCasterSceneAudioResponseBodyMixList mixList;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("AudioLayers")
     public DescribeCasterSceneAudioResponseBodyAudioLayers audioLayers;
 
@@ -19,25 +13,15 @@ public class DescribeCasterSceneAudioResponseBody extends TeaModel {
     @NameInMap("FollowEnable")
     public Integer followEnable;
 
+    @NameInMap("MixList")
+    public DescribeCasterSceneAudioResponseBodyMixList mixList;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static DescribeCasterSceneAudioResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCasterSceneAudioResponseBody self = new DescribeCasterSceneAudioResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeCasterSceneAudioResponseBody setMixList(DescribeCasterSceneAudioResponseBodyMixList mixList) {
-        this.mixList = mixList;
-        return this;
-    }
-    public DescribeCasterSceneAudioResponseBodyMixList getMixList() {
-        return this.mixList;
-    }
-
-    public DescribeCasterSceneAudioResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeCasterSceneAudioResponseBody setAudioLayers(DescribeCasterSceneAudioResponseBodyAudioLayers audioLayers) {
@@ -64,46 +48,35 @@ public class DescribeCasterSceneAudioResponseBody extends TeaModel {
         return this.followEnable;
     }
 
-    public static class DescribeCasterSceneAudioResponseBodyMixList extends TeaModel {
-        @NameInMap("LocationId")
-        public java.util.List<String> locationId;
+    public DescribeCasterSceneAudioResponseBody setMixList(DescribeCasterSceneAudioResponseBodyMixList mixList) {
+        this.mixList = mixList;
+        return this;
+    }
+    public DescribeCasterSceneAudioResponseBodyMixList getMixList() {
+        return this.mixList;
+    }
 
-        public static DescribeCasterSceneAudioResponseBodyMixList build(java.util.Map<String, ?> map) throws Exception {
-            DescribeCasterSceneAudioResponseBodyMixList self = new DescribeCasterSceneAudioResponseBodyMixList();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeCasterSceneAudioResponseBodyMixList setLocationId(java.util.List<String> locationId) {
-            this.locationId = locationId;
-            return this;
-        }
-        public java.util.List<String> getLocationId() {
-            return this.locationId;
-        }
-
+    public DescribeCasterSceneAudioResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeCasterSceneAudioResponseBodyAudioLayersAudioLayer extends TeaModel {
-        @NameInMap("VolumeRate")
-        public Float volumeRate;
-
         @NameInMap("FixedDelayDuration")
         public Integer fixedDelayDuration;
 
         @NameInMap("ValidChannel")
         public String validChannel;
 
+        @NameInMap("VolumeRate")
+        public Float volumeRate;
+
         public static DescribeCasterSceneAudioResponseBodyAudioLayersAudioLayer build(java.util.Map<String, ?> map) throws Exception {
             DescribeCasterSceneAudioResponseBodyAudioLayersAudioLayer self = new DescribeCasterSceneAudioResponseBodyAudioLayersAudioLayer();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeCasterSceneAudioResponseBodyAudioLayersAudioLayer setVolumeRate(Float volumeRate) {
-            this.volumeRate = volumeRate;
-            return this;
-        }
-        public Float getVolumeRate() {
-            return this.volumeRate;
         }
 
         public DescribeCasterSceneAudioResponseBodyAudioLayersAudioLayer setFixedDelayDuration(Integer fixedDelayDuration) {
@@ -120,6 +93,14 @@ public class DescribeCasterSceneAudioResponseBody extends TeaModel {
         }
         public String getValidChannel() {
             return this.validChannel;
+        }
+
+        public DescribeCasterSceneAudioResponseBodyAudioLayersAudioLayer setVolumeRate(Float volumeRate) {
+            this.volumeRate = volumeRate;
+            return this;
+        }
+        public Float getVolumeRate() {
+            return this.volumeRate;
         }
 
     }
@@ -139,6 +120,25 @@ public class DescribeCasterSceneAudioResponseBody extends TeaModel {
         }
         public java.util.List<DescribeCasterSceneAudioResponseBodyAudioLayersAudioLayer> getAudioLayer() {
             return this.audioLayer;
+        }
+
+    }
+
+    public static class DescribeCasterSceneAudioResponseBodyMixList extends TeaModel {
+        @NameInMap("LocationId")
+        public java.util.List<String> locationId;
+
+        public static DescribeCasterSceneAudioResponseBodyMixList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCasterSceneAudioResponseBodyMixList self = new DescribeCasterSceneAudioResponseBodyMixList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCasterSceneAudioResponseBodyMixList setLocationId(java.util.List<String> locationId) {
+            this.locationId = locationId;
+            return this;
+        }
+        public java.util.List<String> getLocationId() {
+            return this.locationId;
         }
 
     }

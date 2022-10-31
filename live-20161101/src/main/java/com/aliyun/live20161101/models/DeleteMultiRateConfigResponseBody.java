@@ -4,18 +4,26 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DeleteMultiRateConfigResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Code")
-    public Integer code;
-
     public static DeleteMultiRateConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteMultiRateConfigResponseBody self = new DeleteMultiRateConfigResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteMultiRateConfigResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
     }
 
     public DeleteMultiRateConfigResponseBody setMessage(String message) {
@@ -32,14 +40,6 @@ public class DeleteMultiRateConfigResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public DeleteMultiRateConfigResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
     }
 
 }

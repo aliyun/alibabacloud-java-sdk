@@ -4,18 +4,26 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeCasterChannelsResponseBody extends TeaModel {
+    @NameInMap("Channels")
+    public DescribeCasterChannelsResponseBodyChannels channels;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Total")
     public Integer total;
 
-    @NameInMap("Channels")
-    public DescribeCasterChannelsResponseBodyChannels channels;
-
     public static DescribeCasterChannelsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCasterChannelsResponseBody self = new DescribeCasterChannelsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeCasterChannelsResponseBody setChannels(DescribeCasterChannelsResponseBodyChannels channels) {
+        this.channels = channels;
+        return this;
+    }
+    public DescribeCasterChannelsResponseBodyChannels getChannels() {
+        return this.channels;
     }
 
     public DescribeCasterChannelsResponseBody setRequestId(String requestId) {
@@ -34,23 +42,18 @@ public class DescribeCasterChannelsResponseBody extends TeaModel {
         return this.total;
     }
 
-    public DescribeCasterChannelsResponseBody setChannels(DescribeCasterChannelsResponseBodyChannels channels) {
-        this.channels = channels;
-        return this;
-    }
-    public DescribeCasterChannelsResponseBodyChannels getChannels() {
-        return this.channels;
-    }
-
     public static class DescribeCasterChannelsResponseBodyChannelsChannel extends TeaModel {
-        @NameInMap("RtmpUrl")
-        public String rtmpUrl;
-
         @NameInMap("ChannelId")
         public String channelId;
 
+        @NameInMap("FaceBeauty")
+        public String faceBeauty;
+
         @NameInMap("ResourceId")
         public String resourceId;
+
+        @NameInMap("RtmpUrl")
+        public String rtmpUrl;
 
         @NameInMap("StreamUrl")
         public String streamUrl;
@@ -58,14 +61,6 @@ public class DescribeCasterChannelsResponseBody extends TeaModel {
         public static DescribeCasterChannelsResponseBodyChannelsChannel build(java.util.Map<String, ?> map) throws Exception {
             DescribeCasterChannelsResponseBodyChannelsChannel self = new DescribeCasterChannelsResponseBodyChannelsChannel();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeCasterChannelsResponseBodyChannelsChannel setRtmpUrl(String rtmpUrl) {
-            this.rtmpUrl = rtmpUrl;
-            return this;
-        }
-        public String getRtmpUrl() {
-            return this.rtmpUrl;
         }
 
         public DescribeCasterChannelsResponseBodyChannelsChannel setChannelId(String channelId) {
@@ -76,12 +71,28 @@ public class DescribeCasterChannelsResponseBody extends TeaModel {
             return this.channelId;
         }
 
+        public DescribeCasterChannelsResponseBodyChannelsChannel setFaceBeauty(String faceBeauty) {
+            this.faceBeauty = faceBeauty;
+            return this;
+        }
+        public String getFaceBeauty() {
+            return this.faceBeauty;
+        }
+
         public DescribeCasterChannelsResponseBodyChannelsChannel setResourceId(String resourceId) {
             this.resourceId = resourceId;
             return this;
         }
         public String getResourceId() {
             return this.resourceId;
+        }
+
+        public DescribeCasterChannelsResponseBodyChannelsChannel setRtmpUrl(String rtmpUrl) {
+            this.rtmpUrl = rtmpUrl;
+            return this;
+        }
+        public String getRtmpUrl() {
+            return this.rtmpUrl;
         }
 
         public DescribeCasterChannelsResponseBodyChannelsChannel setStreamUrl(String streamUrl) {

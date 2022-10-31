@@ -4,23 +4,15 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveStreamTranscodeInfoResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("DomainTranscodeList")
     public DescribeLiveStreamTranscodeInfoResponseBodyDomainTranscodeList domainTranscodeList;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeLiveStreamTranscodeInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveStreamTranscodeInfoResponseBody self = new DescribeLiveStreamTranscodeInfoResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeLiveStreamTranscodeInfoResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeLiveStreamTranscodeInfoResponseBody setDomainTranscodeList(DescribeLiveStreamTranscodeInfoResponseBodyDomainTranscodeList domainTranscodeList) {
@@ -31,12 +23,38 @@ public class DescribeLiveStreamTranscodeInfoResponseBody extends TeaModel {
         return this.domainTranscodeList;
     }
 
-    public static class DescribeLiveStreamTranscodeInfoResponseBodyDomainTranscodeListDomainTranscodeInfoCustomTranscodeParameters extends TeaModel {
-        @NameInMap("VideoProfile")
-        public String videoProfile;
+    public DescribeLiveStreamTranscodeInfoResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class DescribeLiveStreamTranscodeInfoResponseBodyDomainTranscodeListDomainTranscodeInfoCustomTranscodeParameters extends TeaModel {
         @NameInMap("AudioBitrate")
         public Integer audioBitrate;
+
+        @NameInMap("AudioChannelNum")
+        public Integer audioChannelNum;
+
+        @NameInMap("AudioCodec")
+        public String audioCodec;
+
+        @NameInMap("AudioProfile")
+        public String audioProfile;
+
+        @NameInMap("AudioRate")
+        public Integer audioRate;
+
+        @NameInMap("Bframes")
+        public String bframes;
+
+        @NameInMap("FPS")
+        public Integer FPS;
+
+        @NameInMap("Gop")
+        public String gop;
 
         @NameInMap("Height")
         public Integer height;
@@ -47,44 +65,18 @@ public class DescribeLiveStreamTranscodeInfoResponseBody extends TeaModel {
         @NameInMap("TemplateType")
         public String templateType;
 
-        @NameInMap("Bframes")
-        public String bframes;
+        @NameInMap("VideoBitrate")
+        public Integer videoBitrate;
 
-        @NameInMap("AudioRate")
-        public Integer audioRate;
-
-        @NameInMap("AudioCodec")
-        public String audioCodec;
-
-        @NameInMap("FPS")
-        public Integer FPS;
-
-        @NameInMap("Gop")
-        public String gop;
+        @NameInMap("VideoProfile")
+        public String videoProfile;
 
         @NameInMap("Width")
         public Integer width;
 
-        @NameInMap("VideoBitrate")
-        public Integer videoBitrate;
-
-        @NameInMap("AudioChannelNum")
-        public Integer audioChannelNum;
-
-        @NameInMap("AudioProfile")
-        public String audioProfile;
-
         public static DescribeLiveStreamTranscodeInfoResponseBodyDomainTranscodeListDomainTranscodeInfoCustomTranscodeParameters build(java.util.Map<String, ?> map) throws Exception {
             DescribeLiveStreamTranscodeInfoResponseBodyDomainTranscodeListDomainTranscodeInfoCustomTranscodeParameters self = new DescribeLiveStreamTranscodeInfoResponseBodyDomainTranscodeListDomainTranscodeInfoCustomTranscodeParameters();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeLiveStreamTranscodeInfoResponseBodyDomainTranscodeListDomainTranscodeInfoCustomTranscodeParameters setVideoProfile(String videoProfile) {
-            this.videoProfile = videoProfile;
-            return this;
-        }
-        public String getVideoProfile() {
-            return this.videoProfile;
         }
 
         public DescribeLiveStreamTranscodeInfoResponseBodyDomainTranscodeListDomainTranscodeInfoCustomTranscodeParameters setAudioBitrate(Integer audioBitrate) {
@@ -93,6 +85,62 @@ public class DescribeLiveStreamTranscodeInfoResponseBody extends TeaModel {
         }
         public Integer getAudioBitrate() {
             return this.audioBitrate;
+        }
+
+        public DescribeLiveStreamTranscodeInfoResponseBodyDomainTranscodeListDomainTranscodeInfoCustomTranscodeParameters setAudioChannelNum(Integer audioChannelNum) {
+            this.audioChannelNum = audioChannelNum;
+            return this;
+        }
+        public Integer getAudioChannelNum() {
+            return this.audioChannelNum;
+        }
+
+        public DescribeLiveStreamTranscodeInfoResponseBodyDomainTranscodeListDomainTranscodeInfoCustomTranscodeParameters setAudioCodec(String audioCodec) {
+            this.audioCodec = audioCodec;
+            return this;
+        }
+        public String getAudioCodec() {
+            return this.audioCodec;
+        }
+
+        public DescribeLiveStreamTranscodeInfoResponseBodyDomainTranscodeListDomainTranscodeInfoCustomTranscodeParameters setAudioProfile(String audioProfile) {
+            this.audioProfile = audioProfile;
+            return this;
+        }
+        public String getAudioProfile() {
+            return this.audioProfile;
+        }
+
+        public DescribeLiveStreamTranscodeInfoResponseBodyDomainTranscodeListDomainTranscodeInfoCustomTranscodeParameters setAudioRate(Integer audioRate) {
+            this.audioRate = audioRate;
+            return this;
+        }
+        public Integer getAudioRate() {
+            return this.audioRate;
+        }
+
+        public DescribeLiveStreamTranscodeInfoResponseBodyDomainTranscodeListDomainTranscodeInfoCustomTranscodeParameters setBframes(String bframes) {
+            this.bframes = bframes;
+            return this;
+        }
+        public String getBframes() {
+            return this.bframes;
+        }
+
+        public DescribeLiveStreamTranscodeInfoResponseBodyDomainTranscodeListDomainTranscodeInfoCustomTranscodeParameters setFPS(Integer FPS) {
+            this.FPS = FPS;
+            return this;
+        }
+        public Integer getFPS() {
+            return this.FPS;
+        }
+
+        public DescribeLiveStreamTranscodeInfoResponseBodyDomainTranscodeListDomainTranscodeInfoCustomTranscodeParameters setGop(String gop) {
+            this.gop = gop;
+            return this;
+        }
+        public String getGop() {
+            return this.gop;
         }
 
         public DescribeLiveStreamTranscodeInfoResponseBodyDomainTranscodeListDomainTranscodeInfoCustomTranscodeParameters setHeight(Integer height) {
@@ -119,44 +167,20 @@ public class DescribeLiveStreamTranscodeInfoResponseBody extends TeaModel {
             return this.templateType;
         }
 
-        public DescribeLiveStreamTranscodeInfoResponseBodyDomainTranscodeListDomainTranscodeInfoCustomTranscodeParameters setBframes(String bframes) {
-            this.bframes = bframes;
+        public DescribeLiveStreamTranscodeInfoResponseBodyDomainTranscodeListDomainTranscodeInfoCustomTranscodeParameters setVideoBitrate(Integer videoBitrate) {
+            this.videoBitrate = videoBitrate;
             return this;
         }
-        public String getBframes() {
-            return this.bframes;
+        public Integer getVideoBitrate() {
+            return this.videoBitrate;
         }
 
-        public DescribeLiveStreamTranscodeInfoResponseBodyDomainTranscodeListDomainTranscodeInfoCustomTranscodeParameters setAudioRate(Integer audioRate) {
-            this.audioRate = audioRate;
+        public DescribeLiveStreamTranscodeInfoResponseBodyDomainTranscodeListDomainTranscodeInfoCustomTranscodeParameters setVideoProfile(String videoProfile) {
+            this.videoProfile = videoProfile;
             return this;
         }
-        public Integer getAudioRate() {
-            return this.audioRate;
-        }
-
-        public DescribeLiveStreamTranscodeInfoResponseBodyDomainTranscodeListDomainTranscodeInfoCustomTranscodeParameters setAudioCodec(String audioCodec) {
-            this.audioCodec = audioCodec;
-            return this;
-        }
-        public String getAudioCodec() {
-            return this.audioCodec;
-        }
-
-        public DescribeLiveStreamTranscodeInfoResponseBodyDomainTranscodeListDomainTranscodeInfoCustomTranscodeParameters setFPS(Integer FPS) {
-            this.FPS = FPS;
-            return this;
-        }
-        public Integer getFPS() {
-            return this.FPS;
-        }
-
-        public DescribeLiveStreamTranscodeInfoResponseBodyDomainTranscodeListDomainTranscodeInfoCustomTranscodeParameters setGop(String gop) {
-            this.gop = gop;
-            return this;
-        }
-        public String getGop() {
-            return this.gop;
+        public String getVideoProfile() {
+            return this.videoProfile;
         }
 
         public DescribeLiveStreamTranscodeInfoResponseBodyDomainTranscodeListDomainTranscodeInfoCustomTranscodeParameters setWidth(Integer width) {
@@ -167,41 +191,17 @@ public class DescribeLiveStreamTranscodeInfoResponseBody extends TeaModel {
             return this.width;
         }
 
-        public DescribeLiveStreamTranscodeInfoResponseBodyDomainTranscodeListDomainTranscodeInfoCustomTranscodeParameters setVideoBitrate(Integer videoBitrate) {
-            this.videoBitrate = videoBitrate;
-            return this;
-        }
-        public Integer getVideoBitrate() {
-            return this.videoBitrate;
-        }
-
-        public DescribeLiveStreamTranscodeInfoResponseBodyDomainTranscodeListDomainTranscodeInfoCustomTranscodeParameters setAudioChannelNum(Integer audioChannelNum) {
-            this.audioChannelNum = audioChannelNum;
-            return this;
-        }
-        public Integer getAudioChannelNum() {
-            return this.audioChannelNum;
-        }
-
-        public DescribeLiveStreamTranscodeInfoResponseBodyDomainTranscodeListDomainTranscodeInfoCustomTranscodeParameters setAudioProfile(String audioProfile) {
-            this.audioProfile = audioProfile;
-            return this;
-        }
-        public String getAudioProfile() {
-            return this.audioProfile;
-        }
-
     }
 
     public static class DescribeLiveStreamTranscodeInfoResponseBodyDomainTranscodeListDomainTranscodeInfoEncryptParameters extends TeaModel {
         @NameInMap("EncryptType")
         public String encryptType;
 
-        @NameInMap("KmsKeyID")
-        public String kmsKeyID;
-
         @NameInMap("KmsKeyExpireInterval")
         public String kmsKeyExpireInterval;
+
+        @NameInMap("KmsKeyID")
+        public String kmsKeyID;
 
         public static DescribeLiveStreamTranscodeInfoResponseBodyDomainTranscodeListDomainTranscodeInfoEncryptParameters build(java.util.Map<String, ?> map) throws Exception {
             DescribeLiveStreamTranscodeInfoResponseBodyDomainTranscodeListDomainTranscodeInfoEncryptParameters self = new DescribeLiveStreamTranscodeInfoResponseBodyDomainTranscodeListDomainTranscodeInfoEncryptParameters();
@@ -216,14 +216,6 @@ public class DescribeLiveStreamTranscodeInfoResponseBody extends TeaModel {
             return this.encryptType;
         }
 
-        public DescribeLiveStreamTranscodeInfoResponseBodyDomainTranscodeListDomainTranscodeInfoEncryptParameters setKmsKeyID(String kmsKeyID) {
-            this.kmsKeyID = kmsKeyID;
-            return this;
-        }
-        public String getKmsKeyID() {
-            return this.kmsKeyID;
-        }
-
         public DescribeLiveStreamTranscodeInfoResponseBodyDomainTranscodeListDomainTranscodeInfoEncryptParameters setKmsKeyExpireInterval(String kmsKeyExpireInterval) {
             this.kmsKeyExpireInterval = kmsKeyExpireInterval;
             return this;
@@ -232,23 +224,34 @@ public class DescribeLiveStreamTranscodeInfoResponseBody extends TeaModel {
             return this.kmsKeyExpireInterval;
         }
 
+        public DescribeLiveStreamTranscodeInfoResponseBodyDomainTranscodeListDomainTranscodeInfoEncryptParameters setKmsKeyID(String kmsKeyID) {
+            this.kmsKeyID = kmsKeyID;
+            return this;
+        }
+        public String getKmsKeyID() {
+            return this.kmsKeyID;
+        }
+
     }
 
     public static class DescribeLiveStreamTranscodeInfoResponseBodyDomainTranscodeListDomainTranscodeInfo extends TeaModel {
         @NameInMap("CustomTranscodeParameters")
         public DescribeLiveStreamTranscodeInfoResponseBodyDomainTranscodeListDomainTranscodeInfoCustomTranscodeParameters customTranscodeParameters;
 
-        @NameInMap("TranscodeApp")
-        public String transcodeApp;
-
-        @NameInMap("TranscodeTemplate")
-        public String transcodeTemplate;
-
         @NameInMap("EncryptParameters")
         public DescribeLiveStreamTranscodeInfoResponseBodyDomainTranscodeListDomainTranscodeInfoEncryptParameters encryptParameters;
 
+        @NameInMap("IsLazy")
+        public Boolean isLazy;
+
+        @NameInMap("TranscodeApp")
+        public String transcodeApp;
+
         @NameInMap("TranscodeName")
         public String transcodeName;
+
+        @NameInMap("TranscodeTemplate")
+        public String transcodeTemplate;
 
         public static DescribeLiveStreamTranscodeInfoResponseBodyDomainTranscodeListDomainTranscodeInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeLiveStreamTranscodeInfoResponseBodyDomainTranscodeListDomainTranscodeInfo self = new DescribeLiveStreamTranscodeInfoResponseBodyDomainTranscodeListDomainTranscodeInfo();
@@ -263,22 +266,6 @@ public class DescribeLiveStreamTranscodeInfoResponseBody extends TeaModel {
             return this.customTranscodeParameters;
         }
 
-        public DescribeLiveStreamTranscodeInfoResponseBodyDomainTranscodeListDomainTranscodeInfo setTranscodeApp(String transcodeApp) {
-            this.transcodeApp = transcodeApp;
-            return this;
-        }
-        public String getTranscodeApp() {
-            return this.transcodeApp;
-        }
-
-        public DescribeLiveStreamTranscodeInfoResponseBodyDomainTranscodeListDomainTranscodeInfo setTranscodeTemplate(String transcodeTemplate) {
-            this.transcodeTemplate = transcodeTemplate;
-            return this;
-        }
-        public String getTranscodeTemplate() {
-            return this.transcodeTemplate;
-        }
-
         public DescribeLiveStreamTranscodeInfoResponseBodyDomainTranscodeListDomainTranscodeInfo setEncryptParameters(DescribeLiveStreamTranscodeInfoResponseBodyDomainTranscodeListDomainTranscodeInfoEncryptParameters encryptParameters) {
             this.encryptParameters = encryptParameters;
             return this;
@@ -287,12 +274,36 @@ public class DescribeLiveStreamTranscodeInfoResponseBody extends TeaModel {
             return this.encryptParameters;
         }
 
+        public DescribeLiveStreamTranscodeInfoResponseBodyDomainTranscodeListDomainTranscodeInfo setIsLazy(Boolean isLazy) {
+            this.isLazy = isLazy;
+            return this;
+        }
+        public Boolean getIsLazy() {
+            return this.isLazy;
+        }
+
+        public DescribeLiveStreamTranscodeInfoResponseBodyDomainTranscodeListDomainTranscodeInfo setTranscodeApp(String transcodeApp) {
+            this.transcodeApp = transcodeApp;
+            return this;
+        }
+        public String getTranscodeApp() {
+            return this.transcodeApp;
+        }
+
         public DescribeLiveStreamTranscodeInfoResponseBodyDomainTranscodeListDomainTranscodeInfo setTranscodeName(String transcodeName) {
             this.transcodeName = transcodeName;
             return this;
         }
         public String getTranscodeName() {
             return this.transcodeName;
+        }
+
+        public DescribeLiveStreamTranscodeInfoResponseBodyDomainTranscodeListDomainTranscodeInfo setTranscodeTemplate(String transcodeTemplate) {
+            this.transcodeTemplate = transcodeTemplate;
+            return this;
+        }
+        public String getTranscodeTemplate() {
+            return this.transcodeTemplate;
         }
 
     }

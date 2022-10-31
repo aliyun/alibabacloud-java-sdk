@@ -43,59 +43,27 @@ public class ListPlaylistResponseBody extends TeaModel {
     }
 
     public static class ListPlaylistResponseBodyProgramList extends TeaModel {
-        @NameInMap("Status")
-        public Integer status;
-
-        @NameInMap("RepeatNumber")
-        public Integer repeatNumber;
-
-        @NameInMap("ProgramName")
-        public String programName;
-
-        @NameInMap("ProgramId")
-        public String programId;
-
         @NameInMap("CasterId")
         public String casterId;
 
         @NameInMap("DomainName")
         public String domainName;
 
+        @NameInMap("ProgramId")
+        public String programId;
+
+        @NameInMap("ProgramName")
+        public String programName;
+
+        @NameInMap("RepeatNumber")
+        public Integer repeatNumber;
+
+        @NameInMap("Status")
+        public Integer status;
+
         public static ListPlaylistResponseBodyProgramList build(java.util.Map<String, ?> map) throws Exception {
             ListPlaylistResponseBodyProgramList self = new ListPlaylistResponseBodyProgramList();
             return TeaModel.build(map, self);
-        }
-
-        public ListPlaylistResponseBodyProgramList setStatus(Integer status) {
-            this.status = status;
-            return this;
-        }
-        public Integer getStatus() {
-            return this.status;
-        }
-
-        public ListPlaylistResponseBodyProgramList setRepeatNumber(Integer repeatNumber) {
-            this.repeatNumber = repeatNumber;
-            return this;
-        }
-        public Integer getRepeatNumber() {
-            return this.repeatNumber;
-        }
-
-        public ListPlaylistResponseBodyProgramList setProgramName(String programName) {
-            this.programName = programName;
-            return this;
-        }
-        public String getProgramName() {
-            return this.programName;
-        }
-
-        public ListPlaylistResponseBodyProgramList setProgramId(String programId) {
-            this.programId = programId;
-            return this;
-        }
-        public String getProgramId() {
-            return this.programId;
         }
 
         public ListPlaylistResponseBodyProgramList setCasterId(String casterId) {
@@ -112,6 +80,38 @@ public class ListPlaylistResponseBody extends TeaModel {
         }
         public String getDomainName() {
             return this.domainName;
+        }
+
+        public ListPlaylistResponseBodyProgramList setProgramId(String programId) {
+            this.programId = programId;
+            return this;
+        }
+        public String getProgramId() {
+            return this.programId;
+        }
+
+        public ListPlaylistResponseBodyProgramList setProgramName(String programName) {
+            this.programName = programName;
+            return this;
+        }
+        public String getProgramName() {
+            return this.programName;
+        }
+
+        public ListPlaylistResponseBodyProgramList setRepeatNumber(Integer repeatNumber) {
+            this.repeatNumber = repeatNumber;
+            return this;
+        }
+        public Integer getRepeatNumber() {
+            return this.repeatNumber;
+        }
+
+        public ListPlaylistResponseBodyProgramList setStatus(Integer status) {
+            this.status = status;
+            return this;
+        }
+        public Integer getStatus() {
+            return this.status;
         }
 
     }

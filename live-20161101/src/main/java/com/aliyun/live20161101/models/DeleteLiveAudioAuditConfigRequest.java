@@ -4,14 +4,14 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DeleteLiveAudioAuditConfigRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("AppName")
+    public String appName;
 
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("AppName")
-    public String appName;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("StreamName")
     public String streamName;
@@ -21,12 +21,12 @@ public class DeleteLiveAudioAuditConfigRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DeleteLiveAudioAuditConfigRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public DeleteLiveAudioAuditConfigRequest setAppName(String appName) {
+        this.appName = appName;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public String getAppName() {
+        return this.appName;
     }
 
     public DeleteLiveAudioAuditConfigRequest setDomainName(String domainName) {
@@ -37,12 +37,12 @@ public class DeleteLiveAudioAuditConfigRequest extends TeaModel {
         return this.domainName;
     }
 
-    public DeleteLiveAudioAuditConfigRequest setAppName(String appName) {
-        this.appName = appName;
+    public DeleteLiveAudioAuditConfigRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getAppName() {
-        return this.appName;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DeleteLiveAudioAuditConfigRequest setStreamName(String streamName) {

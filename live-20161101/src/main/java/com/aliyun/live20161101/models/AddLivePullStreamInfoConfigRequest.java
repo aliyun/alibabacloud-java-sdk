@@ -4,17 +4,17 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class AddLivePullStreamInfoConfigRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("AppName")
+    public String appName;
 
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("AppName")
-    public String appName;
+    @NameInMap("EndTime")
+    public String endTime;
 
-    @NameInMap("StreamName")
-    public String streamName;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("SourceUrl")
     public String sourceUrl;
@@ -22,28 +22,12 @@ public class AddLivePullStreamInfoConfigRequest extends TeaModel {
     @NameInMap("StartTime")
     public String startTime;
 
-    @NameInMap("EndTime")
-    public String endTime;
+    @NameInMap("StreamName")
+    public String streamName;
 
     public static AddLivePullStreamInfoConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         AddLivePullStreamInfoConfigRequest self = new AddLivePullStreamInfoConfigRequest();
         return TeaModel.build(map, self);
-    }
-
-    public AddLivePullStreamInfoConfigRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public AddLivePullStreamInfoConfigRequest setDomainName(String domainName) {
-        this.domainName = domainName;
-        return this;
-    }
-    public String getDomainName() {
-        return this.domainName;
     }
 
     public AddLivePullStreamInfoConfigRequest setAppName(String appName) {
@@ -54,12 +38,28 @@ public class AddLivePullStreamInfoConfigRequest extends TeaModel {
         return this.appName;
     }
 
-    public AddLivePullStreamInfoConfigRequest setStreamName(String streamName) {
-        this.streamName = streamName;
+    public AddLivePullStreamInfoConfigRequest setDomainName(String domainName) {
+        this.domainName = domainName;
         return this;
     }
-    public String getStreamName() {
-        return this.streamName;
+    public String getDomainName() {
+        return this.domainName;
+    }
+
+    public AddLivePullStreamInfoConfigRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    public AddLivePullStreamInfoConfigRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public AddLivePullStreamInfoConfigRequest setSourceUrl(String sourceUrl) {
@@ -78,12 +78,12 @@ public class AddLivePullStreamInfoConfigRequest extends TeaModel {
         return this.startTime;
     }
 
-    public AddLivePullStreamInfoConfigRequest setEndTime(String endTime) {
-        this.endTime = endTime;
+    public AddLivePullStreamInfoConfigRequest setStreamName(String streamName) {
+        this.streamName = streamName;
         return this;
     }
-    public String getEndTime() {
-        return this.endTime;
+    public String getStreamName() {
+        return this.streamName;
     }
 
 }

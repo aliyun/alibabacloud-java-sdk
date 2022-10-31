@@ -4,11 +4,11 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeUpBpsPeakOfLineRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("DomainName")
+    public String domainName;
 
-    @NameInMap("StartTime")
-    public String startTime;
+    @NameInMap("DomainSwitch")
+    public String domainSwitch;
 
     @NameInMap("EndTime")
     public String endTime;
@@ -16,31 +16,31 @@ public class DescribeUpBpsPeakOfLineRequest extends TeaModel {
     @NameInMap("Line")
     public String line;
 
-    @NameInMap("DomainSwitch")
-    public String domainSwitch;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
-    @NameInMap("DomainName")
-    public String domainName;
+    @NameInMap("StartTime")
+    public String startTime;
 
     public static DescribeUpBpsPeakOfLineRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeUpBpsPeakOfLineRequest self = new DescribeUpBpsPeakOfLineRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeUpBpsPeakOfLineRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public DescribeUpBpsPeakOfLineRequest setDomainName(String domainName) {
+        this.domainName = domainName;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public String getDomainName() {
+        return this.domainName;
     }
 
-    public DescribeUpBpsPeakOfLineRequest setStartTime(String startTime) {
-        this.startTime = startTime;
+    public DescribeUpBpsPeakOfLineRequest setDomainSwitch(String domainSwitch) {
+        this.domainSwitch = domainSwitch;
         return this;
     }
-    public String getStartTime() {
-        return this.startTime;
+    public String getDomainSwitch() {
+        return this.domainSwitch;
     }
 
     public DescribeUpBpsPeakOfLineRequest setEndTime(String endTime) {
@@ -59,20 +59,20 @@ public class DescribeUpBpsPeakOfLineRequest extends TeaModel {
         return this.line;
     }
 
-    public DescribeUpBpsPeakOfLineRequest setDomainSwitch(String domainSwitch) {
-        this.domainSwitch = domainSwitch;
+    public DescribeUpBpsPeakOfLineRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getDomainSwitch() {
-        return this.domainSwitch;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
-    public DescribeUpBpsPeakOfLineRequest setDomainName(String domainName) {
-        this.domainName = domainName;
+    public DescribeUpBpsPeakOfLineRequest setStartTime(String startTime) {
+        this.startTime = startTime;
         return this;
     }
-    public String getDomainName() {
-        return this.domainName;
+    public String getStartTime() {
+        return this.startTime;
     }
 
 }

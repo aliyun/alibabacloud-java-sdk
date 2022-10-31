@@ -7,14 +7,14 @@ public class ListPlaylistRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("ProgramId")
-    public String programId;
-
     @NameInMap("Page")
     public Integer page;
 
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("ProgramId")
+    public String programId;
 
     public static ListPlaylistRequest build(java.util.Map<String, ?> map) throws Exception {
         ListPlaylistRequest self = new ListPlaylistRequest();
@@ -27,14 +27,6 @@ public class ListPlaylistRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    public ListPlaylistRequest setProgramId(String programId) {
-        this.programId = programId;
-        return this;
-    }
-    public String getProgramId() {
-        return this.programId;
     }
 
     public ListPlaylistRequest setPage(Integer page) {
@@ -51,6 +43,14 @@ public class ListPlaylistRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListPlaylistRequest setProgramId(String programId) {
+        this.programId = programId;
+        return this;
+    }
+    public String getProgramId() {
+        return this.programId;
     }
 
 }

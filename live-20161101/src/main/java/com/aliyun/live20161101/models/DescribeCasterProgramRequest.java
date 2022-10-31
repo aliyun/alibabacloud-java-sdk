@@ -4,11 +4,11 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeCasterProgramRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("CasterId")
     public String casterId;
+
+    @NameInMap("EndTime")
+    public String endTime;
 
     @NameInMap("EpisodeId")
     public String episodeId;
@@ -16,17 +16,17 @@ public class DescribeCasterProgramRequest extends TeaModel {
     @NameInMap("EpisodeType")
     public String episodeType;
 
-    @NameInMap("StartTime")
-    public String startTime;
-
-    @NameInMap("EndTime")
-    public String endTime;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("PageNum")
     public Integer pageNum;
 
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("StartTime")
+    public String startTime;
 
     @NameInMap("Status")
     public Integer status;
@@ -36,20 +36,20 @@ public class DescribeCasterProgramRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeCasterProgramRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
     public DescribeCasterProgramRequest setCasterId(String casterId) {
         this.casterId = casterId;
         return this;
     }
     public String getCasterId() {
         return this.casterId;
+    }
+
+    public DescribeCasterProgramRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
     }
 
     public DescribeCasterProgramRequest setEpisodeId(String episodeId) {
@@ -68,20 +68,12 @@ public class DescribeCasterProgramRequest extends TeaModel {
         return this.episodeType;
     }
 
-    public DescribeCasterProgramRequest setStartTime(String startTime) {
-        this.startTime = startTime;
+    public DescribeCasterProgramRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
-    public DescribeCasterProgramRequest setEndTime(String endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public String getEndTime() {
-        return this.endTime;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeCasterProgramRequest setPageNum(Integer pageNum) {
@@ -98,6 +90,14 @@ public class DescribeCasterProgramRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeCasterProgramRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
     public DescribeCasterProgramRequest setStatus(Integer status) {

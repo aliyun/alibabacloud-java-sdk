@@ -4,11 +4,17 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class ModifyStudioLayoutRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("BgImageConfig")
+    public String bgImageConfig;
 
     @NameInMap("CasterId")
     public String casterId;
+
+    @NameInMap("CommonConfig")
+    public String commonConfig;
+
+    @NameInMap("LayerOrderConfigList")
+    public String layerOrderConfigList;
 
     @NameInMap("LayoutId")
     public String layoutId;
@@ -16,32 +22,26 @@ public class ModifyStudioLayoutRequest extends TeaModel {
     @NameInMap("LayoutName")
     public String layoutName;
 
-    @NameInMap("CommonConfig")
-    public String commonConfig;
-
-    @NameInMap("BgImageConfig")
-    public String bgImageConfig;
-
-    @NameInMap("ScreenInputConfigList")
-    public String screenInputConfigList;
-
     @NameInMap("MediaInputConfigList")
     public String mediaInputConfigList;
 
-    @NameInMap("LayerOrderConfigList")
-    public String layerOrderConfigList;
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ScreenInputConfigList")
+    public String screenInputConfigList;
 
     public static ModifyStudioLayoutRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyStudioLayoutRequest self = new ModifyStudioLayoutRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyStudioLayoutRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public ModifyStudioLayoutRequest setBgImageConfig(String bgImageConfig) {
+        this.bgImageConfig = bgImageConfig;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public String getBgImageConfig() {
+        return this.bgImageConfig;
     }
 
     public ModifyStudioLayoutRequest setCasterId(String casterId) {
@@ -50,6 +50,22 @@ public class ModifyStudioLayoutRequest extends TeaModel {
     }
     public String getCasterId() {
         return this.casterId;
+    }
+
+    public ModifyStudioLayoutRequest setCommonConfig(String commonConfig) {
+        this.commonConfig = commonConfig;
+        return this;
+    }
+    public String getCommonConfig() {
+        return this.commonConfig;
+    }
+
+    public ModifyStudioLayoutRequest setLayerOrderConfigList(String layerOrderConfigList) {
+        this.layerOrderConfigList = layerOrderConfigList;
+        return this;
+    }
+    public String getLayerOrderConfigList() {
+        return this.layerOrderConfigList;
     }
 
     public ModifyStudioLayoutRequest setLayoutId(String layoutId) {
@@ -68,30 +84,6 @@ public class ModifyStudioLayoutRequest extends TeaModel {
         return this.layoutName;
     }
 
-    public ModifyStudioLayoutRequest setCommonConfig(String commonConfig) {
-        this.commonConfig = commonConfig;
-        return this;
-    }
-    public String getCommonConfig() {
-        return this.commonConfig;
-    }
-
-    public ModifyStudioLayoutRequest setBgImageConfig(String bgImageConfig) {
-        this.bgImageConfig = bgImageConfig;
-        return this;
-    }
-    public String getBgImageConfig() {
-        return this.bgImageConfig;
-    }
-
-    public ModifyStudioLayoutRequest setScreenInputConfigList(String screenInputConfigList) {
-        this.screenInputConfigList = screenInputConfigList;
-        return this;
-    }
-    public String getScreenInputConfigList() {
-        return this.screenInputConfigList;
-    }
-
     public ModifyStudioLayoutRequest setMediaInputConfigList(String mediaInputConfigList) {
         this.mediaInputConfigList = mediaInputConfigList;
         return this;
@@ -100,12 +92,20 @@ public class ModifyStudioLayoutRequest extends TeaModel {
         return this.mediaInputConfigList;
     }
 
-    public ModifyStudioLayoutRequest setLayerOrderConfigList(String layerOrderConfigList) {
-        this.layerOrderConfigList = layerOrderConfigList;
+    public ModifyStudioLayoutRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getLayerOrderConfigList() {
-        return this.layerOrderConfigList;
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public ModifyStudioLayoutRequest setScreenInputConfigList(String screenInputConfigList) {
+        this.screenInputConfigList = screenInputConfigList;
+        return this;
+    }
+    public String getScreenInputConfigList() {
+        return this.screenInputConfigList;
     }
 
 }

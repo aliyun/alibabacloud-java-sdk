@@ -4,26 +4,26 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DeleteLiveDetectNotifyConfigRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("DomainName")
+    public String domainName;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("DomainName")
-    public String domainName;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     public static DeleteLiveDetectNotifyConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteLiveDetectNotifyConfigRequest self = new DeleteLiveDetectNotifyConfigRequest();
         return TeaModel.build(map, self);
     }
 
-    public DeleteLiveDetectNotifyConfigRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public DeleteLiveDetectNotifyConfigRequest setDomainName(String domainName) {
+        this.domainName = domainName;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public String getDomainName() {
+        return this.domainName;
     }
 
     public DeleteLiveDetectNotifyConfigRequest setOwnerId(Long ownerId) {
@@ -34,12 +34,12 @@ public class DeleteLiveDetectNotifyConfigRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public DeleteLiveDetectNotifyConfigRequest setDomainName(String domainName) {
-        this.domainName = domainName;
+    public DeleteLiveDetectNotifyConfigRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getDomainName() {
-        return this.domainName;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

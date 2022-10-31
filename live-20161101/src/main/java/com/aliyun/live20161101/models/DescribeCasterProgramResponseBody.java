@@ -4,51 +4,35 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeCasterProgramResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("ProgramEffect")
-    public Integer programEffect;
-
-    @NameInMap("Total")
-    public Integer total;
+    @NameInMap("CasterId")
+    public String casterId;
 
     @NameInMap("Episodes")
     public DescribeCasterProgramResponseBodyEpisodes episodes;
 
+    @NameInMap("ProgramEffect")
+    public Integer programEffect;
+
     @NameInMap("ProgramName")
     public String programName;
 
-    @NameInMap("CasterId")
-    public String casterId;
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Total")
+    public Integer total;
 
     public static DescribeCasterProgramResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCasterProgramResponseBody self = new DescribeCasterProgramResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeCasterProgramResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeCasterProgramResponseBody setCasterId(String casterId) {
+        this.casterId = casterId;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeCasterProgramResponseBody setProgramEffect(Integer programEffect) {
-        this.programEffect = programEffect;
-        return this;
-    }
-    public Integer getProgramEffect() {
-        return this.programEffect;
-    }
-
-    public DescribeCasterProgramResponseBody setTotal(Integer total) {
-        this.total = total;
-        return this;
-    }
-    public Integer getTotal() {
-        return this.total;
+    public String getCasterId() {
+        return this.casterId;
     }
 
     public DescribeCasterProgramResponseBody setEpisodes(DescribeCasterProgramResponseBodyEpisodes episodes) {
@@ -59,6 +43,14 @@ public class DescribeCasterProgramResponseBody extends TeaModel {
         return this.episodes;
     }
 
+    public DescribeCasterProgramResponseBody setProgramEffect(Integer programEffect) {
+        this.programEffect = programEffect;
+        return this;
+    }
+    public Integer getProgramEffect() {
+        return this.programEffect;
+    }
+
     public DescribeCasterProgramResponseBody setProgramName(String programName) {
         this.programName = programName;
         return this;
@@ -67,12 +59,20 @@ public class DescribeCasterProgramResponseBody extends TeaModel {
         return this.programName;
     }
 
-    public DescribeCasterProgramResponseBody setCasterId(String casterId) {
-        this.casterId = casterId;
+    public DescribeCasterProgramResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getCasterId() {
-        return this.casterId;
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeCasterProgramResponseBody setTotal(Integer total) {
+        this.total = total;
+        return this;
+    }
+    public Integer getTotal() {
+        return this.total;
     }
 
     public static class DescribeCasterProgramResponseBodyEpisodesEpisodeComponentIds extends TeaModel {
@@ -95,14 +95,14 @@ public class DescribeCasterProgramResponseBody extends TeaModel {
     }
 
     public static class DescribeCasterProgramResponseBodyEpisodesEpisode extends TeaModel {
-        @NameInMap("Status")
-        public Integer status;
+        @NameInMap("ComponentIds")
+        public DescribeCasterProgramResponseBodyEpisodesEpisodeComponentIds componentIds;
 
         @NameInMap("EndTime")
         public String endTime;
 
-        @NameInMap("StartTime")
-        public String startTime;
+        @NameInMap("EpisodeId")
+        public String episodeId;
 
         @NameInMap("EpisodeName")
         public String episodeName;
@@ -110,29 +110,29 @@ public class DescribeCasterProgramResponseBody extends TeaModel {
         @NameInMap("EpisodeType")
         public String episodeType;
 
-        @NameInMap("EpisodeId")
-        public String episodeId;
-
         @NameInMap("ResourceId")
         public String resourceId;
 
+        @NameInMap("StartTime")
+        public String startTime;
+
+        @NameInMap("Status")
+        public Integer status;
+
         @NameInMap("SwitchType")
         public String switchType;
-
-        @NameInMap("ComponentIds")
-        public DescribeCasterProgramResponseBodyEpisodesEpisodeComponentIds componentIds;
 
         public static DescribeCasterProgramResponseBodyEpisodesEpisode build(java.util.Map<String, ?> map) throws Exception {
             DescribeCasterProgramResponseBodyEpisodesEpisode self = new DescribeCasterProgramResponseBodyEpisodesEpisode();
             return TeaModel.build(map, self);
         }
 
-        public DescribeCasterProgramResponseBodyEpisodesEpisode setStatus(Integer status) {
-            this.status = status;
+        public DescribeCasterProgramResponseBodyEpisodesEpisode setComponentIds(DescribeCasterProgramResponseBodyEpisodesEpisodeComponentIds componentIds) {
+            this.componentIds = componentIds;
             return this;
         }
-        public Integer getStatus() {
-            return this.status;
+        public DescribeCasterProgramResponseBodyEpisodesEpisodeComponentIds getComponentIds() {
+            return this.componentIds;
         }
 
         public DescribeCasterProgramResponseBodyEpisodesEpisode setEndTime(String endTime) {
@@ -143,12 +143,12 @@ public class DescribeCasterProgramResponseBody extends TeaModel {
             return this.endTime;
         }
 
-        public DescribeCasterProgramResponseBodyEpisodesEpisode setStartTime(String startTime) {
-            this.startTime = startTime;
+        public DescribeCasterProgramResponseBodyEpisodesEpisode setEpisodeId(String episodeId) {
+            this.episodeId = episodeId;
             return this;
         }
-        public String getStartTime() {
-            return this.startTime;
+        public String getEpisodeId() {
+            return this.episodeId;
         }
 
         public DescribeCasterProgramResponseBodyEpisodesEpisode setEpisodeName(String episodeName) {
@@ -167,14 +167,6 @@ public class DescribeCasterProgramResponseBody extends TeaModel {
             return this.episodeType;
         }
 
-        public DescribeCasterProgramResponseBodyEpisodesEpisode setEpisodeId(String episodeId) {
-            this.episodeId = episodeId;
-            return this;
-        }
-        public String getEpisodeId() {
-            return this.episodeId;
-        }
-
         public DescribeCasterProgramResponseBodyEpisodesEpisode setResourceId(String resourceId) {
             this.resourceId = resourceId;
             return this;
@@ -183,20 +175,28 @@ public class DescribeCasterProgramResponseBody extends TeaModel {
             return this.resourceId;
         }
 
+        public DescribeCasterProgramResponseBodyEpisodesEpisode setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        public DescribeCasterProgramResponseBodyEpisodesEpisode setStatus(Integer status) {
+            this.status = status;
+            return this;
+        }
+        public Integer getStatus() {
+            return this.status;
+        }
+
         public DescribeCasterProgramResponseBodyEpisodesEpisode setSwitchType(String switchType) {
             this.switchType = switchType;
             return this;
         }
         public String getSwitchType() {
             return this.switchType;
-        }
-
-        public DescribeCasterProgramResponseBodyEpisodesEpisode setComponentIds(DescribeCasterProgramResponseBodyEpisodesEpisodeComponentIds componentIds) {
-            this.componentIds = componentIds;
-            return this;
-        }
-        public DescribeCasterProgramResponseBodyEpisodesEpisodeComponentIds getComponentIds() {
-            return this.componentIds;
         }
 
     }

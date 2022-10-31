@@ -4,24 +4,40 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class CreateLiveRealTimeLogDeliveryRequest extends TeaModel {
+    @NameInMap("DomainName")
+    public String domainName;
+
+    @NameInMap("Logstore")
+    public String logstore;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
     @NameInMap("Project")
     public String project;
 
-    @NameInMap("Logstore")
-    public String logstore;
-
     @NameInMap("Region")
     public String region;
-
-    @NameInMap("DomainName")
-    public String domainName;
 
     public static CreateLiveRealTimeLogDeliveryRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateLiveRealTimeLogDeliveryRequest self = new CreateLiveRealTimeLogDeliveryRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateLiveRealTimeLogDeliveryRequest setDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String getDomainName() {
+        return this.domainName;
+    }
+
+    public CreateLiveRealTimeLogDeliveryRequest setLogstore(String logstore) {
+        this.logstore = logstore;
+        return this;
+    }
+    public String getLogstore() {
+        return this.logstore;
     }
 
     public CreateLiveRealTimeLogDeliveryRequest setOwnerId(Long ownerId) {
@@ -40,28 +56,12 @@ public class CreateLiveRealTimeLogDeliveryRequest extends TeaModel {
         return this.project;
     }
 
-    public CreateLiveRealTimeLogDeliveryRequest setLogstore(String logstore) {
-        this.logstore = logstore;
-        return this;
-    }
-    public String getLogstore() {
-        return this.logstore;
-    }
-
     public CreateLiveRealTimeLogDeliveryRequest setRegion(String region) {
         this.region = region;
         return this;
     }
     public String getRegion() {
         return this.region;
-    }
-
-    public CreateLiveRealTimeLogDeliveryRequest setDomainName(String domainName) {
-        this.domainName = domainName;
-        return this;
-    }
-    public String getDomainName() {
-        return this.domainName;
     }
 
 }

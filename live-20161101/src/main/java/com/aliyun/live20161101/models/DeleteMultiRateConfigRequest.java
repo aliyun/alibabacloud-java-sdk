@@ -4,20 +4,20 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DeleteMultiRateConfigRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("App")
+    public String app;
+
+    @NameInMap("DeleteAll")
+    public String deleteAll;
 
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("App")
-    public String app;
-
     @NameInMap("GroupId")
     public String groupId;
 
-    @NameInMap("DeleteAll")
-    public String deleteAll;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("Templates")
     public String templates;
@@ -25,22 +25,6 @@ public class DeleteMultiRateConfigRequest extends TeaModel {
     public static DeleteMultiRateConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteMultiRateConfigRequest self = new DeleteMultiRateConfigRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteMultiRateConfigRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public DeleteMultiRateConfigRequest setDomainName(String domainName) {
-        this.domainName = domainName;
-        return this;
-    }
-    public String getDomainName() {
-        return this.domainName;
     }
 
     public DeleteMultiRateConfigRequest setApp(String app) {
@@ -51,6 +35,22 @@ public class DeleteMultiRateConfigRequest extends TeaModel {
         return this.app;
     }
 
+    public DeleteMultiRateConfigRequest setDeleteAll(String deleteAll) {
+        this.deleteAll = deleteAll;
+        return this;
+    }
+    public String getDeleteAll() {
+        return this.deleteAll;
+    }
+
+    public DeleteMultiRateConfigRequest setDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String getDomainName() {
+        return this.domainName;
+    }
+
     public DeleteMultiRateConfigRequest setGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -59,12 +59,12 @@ public class DeleteMultiRateConfigRequest extends TeaModel {
         return this.groupId;
     }
 
-    public DeleteMultiRateConfigRequest setDeleteAll(String deleteAll) {
-        this.deleteAll = deleteAll;
+    public DeleteMultiRateConfigRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getDeleteAll() {
-        return this.deleteAll;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DeleteMultiRateConfigRequest setTemplates(String templates) {

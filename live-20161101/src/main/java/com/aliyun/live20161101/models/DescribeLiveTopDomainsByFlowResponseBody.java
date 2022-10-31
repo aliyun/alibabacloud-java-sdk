@@ -4,8 +4,11 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveTopDomainsByFlowResponseBody extends TeaModel {
-    @NameInMap("TopDomains")
-    public DescribeLiveTopDomainsByFlowResponseBodyTopDomains topDomains;
+    @NameInMap("DomainCount")
+    public Long domainCount;
+
+    @NameInMap("DomainOnlineCount")
+    public Long domainOnlineCount;
 
     @NameInMap("EndTime")
     public String endTime;
@@ -13,26 +16,31 @@ public class DescribeLiveTopDomainsByFlowResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("DomainOnlineCount")
-    public Long domainOnlineCount;
-
     @NameInMap("StartTime")
     public String startTime;
 
-    @NameInMap("DomainCount")
-    public Long domainCount;
+    @NameInMap("TopDomains")
+    public DescribeLiveTopDomainsByFlowResponseBodyTopDomains topDomains;
 
     public static DescribeLiveTopDomainsByFlowResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveTopDomainsByFlowResponseBody self = new DescribeLiveTopDomainsByFlowResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeLiveTopDomainsByFlowResponseBody setTopDomains(DescribeLiveTopDomainsByFlowResponseBodyTopDomains topDomains) {
-        this.topDomains = topDomains;
+    public DescribeLiveTopDomainsByFlowResponseBody setDomainCount(Long domainCount) {
+        this.domainCount = domainCount;
         return this;
     }
-    public DescribeLiveTopDomainsByFlowResponseBodyTopDomains getTopDomains() {
-        return this.topDomains;
+    public Long getDomainCount() {
+        return this.domainCount;
+    }
+
+    public DescribeLiveTopDomainsByFlowResponseBody setDomainOnlineCount(Long domainOnlineCount) {
+        this.domainOnlineCount = domainOnlineCount;
+        return this;
+    }
+    public Long getDomainOnlineCount() {
+        return this.domainOnlineCount;
     }
 
     public DescribeLiveTopDomainsByFlowResponseBody setEndTime(String endTime) {
@@ -51,14 +59,6 @@ public class DescribeLiveTopDomainsByFlowResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeLiveTopDomainsByFlowResponseBody setDomainOnlineCount(Long domainOnlineCount) {
-        this.domainOnlineCount = domainOnlineCount;
-        return this;
-    }
-    public Long getDomainOnlineCount() {
-        return this.domainOnlineCount;
-    }
-
     public DescribeLiveTopDomainsByFlowResponseBody setStartTime(String startTime) {
         this.startTime = startTime;
         return this;
@@ -67,17 +67,23 @@ public class DescribeLiveTopDomainsByFlowResponseBody extends TeaModel {
         return this.startTime;
     }
 
-    public DescribeLiveTopDomainsByFlowResponseBody setDomainCount(Long domainCount) {
-        this.domainCount = domainCount;
+    public DescribeLiveTopDomainsByFlowResponseBody setTopDomains(DescribeLiveTopDomainsByFlowResponseBodyTopDomains topDomains) {
+        this.topDomains = topDomains;
         return this;
     }
-    public Long getDomainCount() {
-        return this.domainCount;
+    public DescribeLiveTopDomainsByFlowResponseBodyTopDomains getTopDomains() {
+        return this.topDomains;
     }
 
     public static class DescribeLiveTopDomainsByFlowResponseBodyTopDomainsTopDomain extends TeaModel {
+        @NameInMap("DomainName")
+        public String domainName;
+
         @NameInMap("MaxBps")
         public Long maxBps;
+
+        @NameInMap("MaxBpsTime")
+        public String maxBpsTime;
 
         @NameInMap("Rank")
         public Long rank;
@@ -85,21 +91,23 @@ public class DescribeLiveTopDomainsByFlowResponseBody extends TeaModel {
         @NameInMap("TotalAccess")
         public Long totalAccess;
 
-        @NameInMap("TrafficPercent")
-        public String trafficPercent;
-
-        @NameInMap("DomainName")
-        public String domainName;
-
         @NameInMap("TotalTraffic")
         public String totalTraffic;
 
-        @NameInMap("MaxBpsTime")
-        public String maxBpsTime;
+        @NameInMap("TrafficPercent")
+        public String trafficPercent;
 
         public static DescribeLiveTopDomainsByFlowResponseBodyTopDomainsTopDomain build(java.util.Map<String, ?> map) throws Exception {
             DescribeLiveTopDomainsByFlowResponseBodyTopDomainsTopDomain self = new DescribeLiveTopDomainsByFlowResponseBodyTopDomainsTopDomain();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeLiveTopDomainsByFlowResponseBodyTopDomainsTopDomain setDomainName(String domainName) {
+            this.domainName = domainName;
+            return this;
+        }
+        public String getDomainName() {
+            return this.domainName;
         }
 
         public DescribeLiveTopDomainsByFlowResponseBodyTopDomainsTopDomain setMaxBps(Long maxBps) {
@@ -108,6 +116,14 @@ public class DescribeLiveTopDomainsByFlowResponseBody extends TeaModel {
         }
         public Long getMaxBps() {
             return this.maxBps;
+        }
+
+        public DescribeLiveTopDomainsByFlowResponseBodyTopDomainsTopDomain setMaxBpsTime(String maxBpsTime) {
+            this.maxBpsTime = maxBpsTime;
+            return this;
+        }
+        public String getMaxBpsTime() {
+            return this.maxBpsTime;
         }
 
         public DescribeLiveTopDomainsByFlowResponseBodyTopDomainsTopDomain setRank(Long rank) {
@@ -126,22 +142,6 @@ public class DescribeLiveTopDomainsByFlowResponseBody extends TeaModel {
             return this.totalAccess;
         }
 
-        public DescribeLiveTopDomainsByFlowResponseBodyTopDomainsTopDomain setTrafficPercent(String trafficPercent) {
-            this.trafficPercent = trafficPercent;
-            return this;
-        }
-        public String getTrafficPercent() {
-            return this.trafficPercent;
-        }
-
-        public DescribeLiveTopDomainsByFlowResponseBodyTopDomainsTopDomain setDomainName(String domainName) {
-            this.domainName = domainName;
-            return this;
-        }
-        public String getDomainName() {
-            return this.domainName;
-        }
-
         public DescribeLiveTopDomainsByFlowResponseBodyTopDomainsTopDomain setTotalTraffic(String totalTraffic) {
             this.totalTraffic = totalTraffic;
             return this;
@@ -150,12 +150,12 @@ public class DescribeLiveTopDomainsByFlowResponseBody extends TeaModel {
             return this.totalTraffic;
         }
 
-        public DescribeLiveTopDomainsByFlowResponseBodyTopDomainsTopDomain setMaxBpsTime(String maxBpsTime) {
-            this.maxBpsTime = maxBpsTime;
+        public DescribeLiveTopDomainsByFlowResponseBodyTopDomainsTopDomain setTrafficPercent(String trafficPercent) {
+            this.trafficPercent = trafficPercent;
             return this;
         }
-        public String getMaxBpsTime() {
-            return this.maxBpsTime;
+        public String getTrafficPercent() {
+            return this.trafficPercent;
         }
 
     }

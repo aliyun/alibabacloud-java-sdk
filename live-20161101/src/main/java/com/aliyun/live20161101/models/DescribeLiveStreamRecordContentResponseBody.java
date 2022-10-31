@@ -4,23 +4,15 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveStreamRecordContentResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("RecordContentInfoList")
     public DescribeLiveStreamRecordContentResponseBodyRecordContentInfoList recordContentInfoList;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeLiveStreamRecordContentResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveStreamRecordContentResponseBody self = new DescribeLiveStreamRecordContentResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeLiveStreamRecordContentResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeLiveStreamRecordContentResponseBody setRecordContentInfoList(DescribeLiveStreamRecordContentResponseBodyRecordContentInfoList recordContentInfoList) {
@@ -31,44 +23,36 @@ public class DescribeLiveStreamRecordContentResponseBody extends TeaModel {
         return this.recordContentInfoList;
     }
 
+    public DescribeLiveStreamRecordContentResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeLiveStreamRecordContentResponseBodyRecordContentInfoListRecordContentInfo extends TeaModel {
-        @NameInMap("EndTime")
-        public String endTime;
-
-        @NameInMap("StartTime")
-        public String startTime;
-
         @NameInMap("Duration")
         public Float duration;
+
+        @NameInMap("EndTime")
+        public String endTime;
 
         @NameInMap("OssBucket")
         public String ossBucket;
 
+        @NameInMap("OssEndpoint")
+        public String ossEndpoint;
+
         @NameInMap("OssObjectPrefix")
         public String ossObjectPrefix;
 
-        @NameInMap("OssEndpoint")
-        public String ossEndpoint;
+        @NameInMap("StartTime")
+        public String startTime;
 
         public static DescribeLiveStreamRecordContentResponseBodyRecordContentInfoListRecordContentInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeLiveStreamRecordContentResponseBodyRecordContentInfoListRecordContentInfo self = new DescribeLiveStreamRecordContentResponseBodyRecordContentInfoListRecordContentInfo();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeLiveStreamRecordContentResponseBodyRecordContentInfoListRecordContentInfo setEndTime(String endTime) {
-            this.endTime = endTime;
-            return this;
-        }
-        public String getEndTime() {
-            return this.endTime;
-        }
-
-        public DescribeLiveStreamRecordContentResponseBodyRecordContentInfoListRecordContentInfo setStartTime(String startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public String getStartTime() {
-            return this.startTime;
         }
 
         public DescribeLiveStreamRecordContentResponseBodyRecordContentInfoListRecordContentInfo setDuration(Float duration) {
@@ -79,12 +63,28 @@ public class DescribeLiveStreamRecordContentResponseBody extends TeaModel {
             return this.duration;
         }
 
+        public DescribeLiveStreamRecordContentResponseBodyRecordContentInfoListRecordContentInfo setEndTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public String getEndTime() {
+            return this.endTime;
+        }
+
         public DescribeLiveStreamRecordContentResponseBodyRecordContentInfoListRecordContentInfo setOssBucket(String ossBucket) {
             this.ossBucket = ossBucket;
             return this;
         }
         public String getOssBucket() {
             return this.ossBucket;
+        }
+
+        public DescribeLiveStreamRecordContentResponseBodyRecordContentInfoListRecordContentInfo setOssEndpoint(String ossEndpoint) {
+            this.ossEndpoint = ossEndpoint;
+            return this;
+        }
+        public String getOssEndpoint() {
+            return this.ossEndpoint;
         }
 
         public DescribeLiveStreamRecordContentResponseBodyRecordContentInfoListRecordContentInfo setOssObjectPrefix(String ossObjectPrefix) {
@@ -95,12 +95,12 @@ public class DescribeLiveStreamRecordContentResponseBody extends TeaModel {
             return this.ossObjectPrefix;
         }
 
-        public DescribeLiveStreamRecordContentResponseBodyRecordContentInfoListRecordContentInfo setOssEndpoint(String ossEndpoint) {
-            this.ossEndpoint = ossEndpoint;
+        public DescribeLiveStreamRecordContentResponseBodyRecordContentInfoListRecordContentInfo setStartTime(String startTime) {
+            this.startTime = startTime;
             return this;
         }
-        public String getOssEndpoint() {
-            return this.ossEndpoint;
+        public String getStartTime() {
+            return this.startTime;
         }
 
     }

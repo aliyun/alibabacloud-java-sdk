@@ -4,17 +4,17 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DeleteLiveStreamTranscodeRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("App")
+    public String app;
 
     @NameInMap("Domain")
     public String domain;
 
-    @NameInMap("App")
-    public String app;
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     @NameInMap("Template")
     public String template;
@@ -24,20 +24,12 @@ public class DeleteLiveStreamTranscodeRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DeleteLiveStreamTranscodeRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public DeleteLiveStreamTranscodeRequest setApp(String app) {
+        this.app = app;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
-    public DeleteLiveStreamTranscodeRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public String getApp() {
+        return this.app;
     }
 
     public DeleteLiveStreamTranscodeRequest setDomain(String domain) {
@@ -48,12 +40,20 @@ public class DeleteLiveStreamTranscodeRequest extends TeaModel {
         return this.domain;
     }
 
-    public DeleteLiveStreamTranscodeRequest setApp(String app) {
-        this.app = app;
+    public DeleteLiveStreamTranscodeRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getApp() {
-        return this.app;
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DeleteLiveStreamTranscodeRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public DeleteLiveStreamTranscodeRequest setTemplate(String template) {

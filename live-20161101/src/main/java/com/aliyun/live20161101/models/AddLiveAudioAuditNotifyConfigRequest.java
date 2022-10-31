@@ -4,37 +4,21 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class AddLiveAudioAuditNotifyConfigRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("DomainName")
-    public String domainName;
-
     @NameInMap("Callback")
     public String callback;
 
     @NameInMap("CallbackTemplate")
     public String callbackTemplate;
 
+    @NameInMap("DomainName")
+    public String domainName;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     public static AddLiveAudioAuditNotifyConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         AddLiveAudioAuditNotifyConfigRequest self = new AddLiveAudioAuditNotifyConfigRequest();
         return TeaModel.build(map, self);
-    }
-
-    public AddLiveAudioAuditNotifyConfigRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public AddLiveAudioAuditNotifyConfigRequest setDomainName(String domainName) {
-        this.domainName = domainName;
-        return this;
-    }
-    public String getDomainName() {
-        return this.domainName;
     }
 
     public AddLiveAudioAuditNotifyConfigRequest setCallback(String callback) {
@@ -51,6 +35,22 @@ public class AddLiveAudioAuditNotifyConfigRequest extends TeaModel {
     }
     public String getCallbackTemplate() {
         return this.callbackTemplate;
+    }
+
+    public AddLiveAudioAuditNotifyConfigRequest setDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String getDomainName() {
+        return this.domainName;
+    }
+
+    public AddLiveAudioAuditNotifyConfigRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
 }

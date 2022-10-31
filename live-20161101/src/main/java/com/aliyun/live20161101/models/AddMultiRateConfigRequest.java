@@ -4,17 +4,14 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class AddMultiRateConfigRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("DomainName")
-    public String domainName;
-
     @NameInMap("App")
     public String app;
 
     @NameInMap("AvFormat")
     public String avFormat;
+
+    @NameInMap("DomainName")
+    public String domainName;
 
     @NameInMap("GroupId")
     public String groupId;
@@ -25,28 +22,15 @@ public class AddMultiRateConfigRequest extends TeaModel {
     @NameInMap("IsTimeAlign")
     public String isTimeAlign;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("Templates")
     public String templates;
 
     public static AddMultiRateConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         AddMultiRateConfigRequest self = new AddMultiRateConfigRequest();
         return TeaModel.build(map, self);
-    }
-
-    public AddMultiRateConfigRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public AddMultiRateConfigRequest setDomainName(String domainName) {
-        this.domainName = domainName;
-        return this;
-    }
-    public String getDomainName() {
-        return this.domainName;
     }
 
     public AddMultiRateConfigRequest setApp(String app) {
@@ -63,6 +47,14 @@ public class AddMultiRateConfigRequest extends TeaModel {
     }
     public String getAvFormat() {
         return this.avFormat;
+    }
+
+    public AddMultiRateConfigRequest setDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String getDomainName() {
+        return this.domainName;
     }
 
     public AddMultiRateConfigRequest setGroupId(String groupId) {
@@ -87,6 +79,14 @@ public class AddMultiRateConfigRequest extends TeaModel {
     }
     public String getIsTimeAlign() {
         return this.isTimeAlign;
+    }
+
+    public AddMultiRateConfigRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public AddMultiRateConfigRequest setTemplates(String templates) {

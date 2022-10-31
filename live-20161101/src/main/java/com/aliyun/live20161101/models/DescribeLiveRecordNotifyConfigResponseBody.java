@@ -4,23 +4,15 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveRecordNotifyConfigResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("LiveRecordNotifyConfig")
     public DescribeLiveRecordNotifyConfigResponseBodyLiveRecordNotifyConfig liveRecordNotifyConfig;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeLiveRecordNotifyConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveRecordNotifyConfigResponseBody self = new DescribeLiveRecordNotifyConfigResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeLiveRecordNotifyConfigResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeLiveRecordNotifyConfigResponseBody setLiveRecordNotifyConfig(DescribeLiveRecordNotifyConfigResponseBodyLiveRecordNotifyConfig liveRecordNotifyConfig) {
@@ -31,22 +23,38 @@ public class DescribeLiveRecordNotifyConfigResponseBody extends TeaModel {
         return this.liveRecordNotifyConfig;
     }
 
+    public DescribeLiveRecordNotifyConfigResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeLiveRecordNotifyConfigResponseBodyLiveRecordNotifyConfig extends TeaModel {
+        @NameInMap("DomainName")
+        public String domainName;
+
         @NameInMap("NeedStatusNotify")
         public Boolean needStatusNotify;
-
-        @NameInMap("OnDemandUrl")
-        public String onDemandUrl;
 
         @NameInMap("NotifyUrl")
         public String notifyUrl;
 
-        @NameInMap("DomainName")
-        public String domainName;
+        @NameInMap("OnDemandUrl")
+        public String onDemandUrl;
 
         public static DescribeLiveRecordNotifyConfigResponseBodyLiveRecordNotifyConfig build(java.util.Map<String, ?> map) throws Exception {
             DescribeLiveRecordNotifyConfigResponseBodyLiveRecordNotifyConfig self = new DescribeLiveRecordNotifyConfigResponseBodyLiveRecordNotifyConfig();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeLiveRecordNotifyConfigResponseBodyLiveRecordNotifyConfig setDomainName(String domainName) {
+            this.domainName = domainName;
+            return this;
+        }
+        public String getDomainName() {
+            return this.domainName;
         }
 
         public DescribeLiveRecordNotifyConfigResponseBodyLiveRecordNotifyConfig setNeedStatusNotify(Boolean needStatusNotify) {
@@ -57,14 +65,6 @@ public class DescribeLiveRecordNotifyConfigResponseBody extends TeaModel {
             return this.needStatusNotify;
         }
 
-        public DescribeLiveRecordNotifyConfigResponseBodyLiveRecordNotifyConfig setOnDemandUrl(String onDemandUrl) {
-            this.onDemandUrl = onDemandUrl;
-            return this;
-        }
-        public String getOnDemandUrl() {
-            return this.onDemandUrl;
-        }
-
         public DescribeLiveRecordNotifyConfigResponseBodyLiveRecordNotifyConfig setNotifyUrl(String notifyUrl) {
             this.notifyUrl = notifyUrl;
             return this;
@@ -73,12 +73,12 @@ public class DescribeLiveRecordNotifyConfigResponseBody extends TeaModel {
             return this.notifyUrl;
         }
 
-        public DescribeLiveRecordNotifyConfigResponseBodyLiveRecordNotifyConfig setDomainName(String domainName) {
-            this.domainName = domainName;
+        public DescribeLiveRecordNotifyConfigResponseBodyLiveRecordNotifyConfig setOnDemandUrl(String onDemandUrl) {
+            this.onDemandUrl = onDemandUrl;
             return this;
         }
-        public String getDomainName() {
-            return this.domainName;
+        public String getOnDemandUrl() {
+            return this.onDemandUrl;
         }
 
     }

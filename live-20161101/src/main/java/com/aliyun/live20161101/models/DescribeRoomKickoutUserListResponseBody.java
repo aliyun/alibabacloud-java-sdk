@@ -4,14 +4,14 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeRoomKickoutUserListResponseBody extends TeaModel {
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("TotalNum")
     public Integer totalNum;
 
     @NameInMap("TotalPage")
     public Integer totalPage;
-
-    @NameInMap("RequestId")
-    public String requestId;
 
     @NameInMap("UserList")
     public java.util.List<DescribeRoomKickoutUserListResponseBodyUserList> userList;
@@ -19,6 +19,14 @@ public class DescribeRoomKickoutUserListResponseBody extends TeaModel {
     public static DescribeRoomKickoutUserListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeRoomKickoutUserListResponseBody self = new DescribeRoomKickoutUserListResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeRoomKickoutUserListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeRoomKickoutUserListResponseBody setTotalNum(Integer totalNum) {
@@ -37,14 +45,6 @@ public class DescribeRoomKickoutUserListResponseBody extends TeaModel {
         return this.totalPage;
     }
 
-    public DescribeRoomKickoutUserListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeRoomKickoutUserListResponseBody setUserList(java.util.List<DescribeRoomKickoutUserListResponseBodyUserList> userList) {
         this.userList = userList;
         return this;
@@ -54,11 +54,11 @@ public class DescribeRoomKickoutUserListResponseBody extends TeaModel {
     }
 
     public static class DescribeRoomKickoutUserListResponseBodyUserList extends TeaModel {
-        @NameInMap("OpEndTime")
-        public String opEndTime;
-
         @NameInMap("AppUid")
         public String appUid;
+
+        @NameInMap("OpEndTime")
+        public String opEndTime;
 
         @NameInMap("OpStartTime")
         public String opStartTime;
@@ -68,20 +68,20 @@ public class DescribeRoomKickoutUserListResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeRoomKickoutUserListResponseBodyUserList setOpEndTime(String opEndTime) {
-            this.opEndTime = opEndTime;
-            return this;
-        }
-        public String getOpEndTime() {
-            return this.opEndTime;
-        }
-
         public DescribeRoomKickoutUserListResponseBodyUserList setAppUid(String appUid) {
             this.appUid = appUid;
             return this;
         }
         public String getAppUid() {
             return this.appUid;
+        }
+
+        public DescribeRoomKickoutUserListResponseBodyUserList setOpEndTime(String opEndTime) {
+            this.opEndTime = opEndTime;
+            return this;
+        }
+        public String getOpEndTime() {
+            return this.opEndTime;
         }
 
         public DescribeRoomKickoutUserListResponseBodyUserList setOpStartTime(String opStartTime) {

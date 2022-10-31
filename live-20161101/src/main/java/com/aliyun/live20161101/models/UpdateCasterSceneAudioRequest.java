@@ -4,59 +4,27 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class UpdateCasterSceneAudioRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("AudioLayer")
+    public java.util.List<UpdateCasterSceneAudioRequestAudioLayer> audioLayer;
 
     @NameInMap("CasterId")
     public String casterId;
 
-    @NameInMap("SceneId")
-    public String sceneId;
-
     @NameInMap("FollowEnable")
     public Integer followEnable;
-
-    @NameInMap("AudioLayer")
-    public java.util.List<UpdateCasterSceneAudioRequestAudioLayer> audioLayer;
 
     @NameInMap("MixList")
     public java.util.List<String> mixList;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("SceneId")
+    public String sceneId;
+
     public static UpdateCasterSceneAudioRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateCasterSceneAudioRequest self = new UpdateCasterSceneAudioRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateCasterSceneAudioRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public UpdateCasterSceneAudioRequest setCasterId(String casterId) {
-        this.casterId = casterId;
-        return this;
-    }
-    public String getCasterId() {
-        return this.casterId;
-    }
-
-    public UpdateCasterSceneAudioRequest setSceneId(String sceneId) {
-        this.sceneId = sceneId;
-        return this;
-    }
-    public String getSceneId() {
-        return this.sceneId;
-    }
-
-    public UpdateCasterSceneAudioRequest setFollowEnable(Integer followEnable) {
-        this.followEnable = followEnable;
-        return this;
-    }
-    public Integer getFollowEnable() {
-        return this.followEnable;
     }
 
     public UpdateCasterSceneAudioRequest setAudioLayer(java.util.List<UpdateCasterSceneAudioRequestAudioLayer> audioLayer) {
@@ -67,6 +35,22 @@ public class UpdateCasterSceneAudioRequest extends TeaModel {
         return this.audioLayer;
     }
 
+    public UpdateCasterSceneAudioRequest setCasterId(String casterId) {
+        this.casterId = casterId;
+        return this;
+    }
+    public String getCasterId() {
+        return this.casterId;
+    }
+
+    public UpdateCasterSceneAudioRequest setFollowEnable(Integer followEnable) {
+        this.followEnable = followEnable;
+        return this;
+    }
+    public Integer getFollowEnable() {
+        return this.followEnable;
+    }
+
     public UpdateCasterSceneAudioRequest setMixList(java.util.List<String> mixList) {
         this.mixList = mixList;
         return this;
@@ -75,27 +59,35 @@ public class UpdateCasterSceneAudioRequest extends TeaModel {
         return this.mixList;
     }
 
-    public static class UpdateCasterSceneAudioRequestAudioLayer extends TeaModel {
-        @NameInMap("VolumeRate")
-        public Float volumeRate;
+    public UpdateCasterSceneAudioRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
 
+    public UpdateCasterSceneAudioRequest setSceneId(String sceneId) {
+        this.sceneId = sceneId;
+        return this;
+    }
+    public String getSceneId() {
+        return this.sceneId;
+    }
+
+    public static class UpdateCasterSceneAudioRequestAudioLayer extends TeaModel {
         @NameInMap("FixedDelayDuration")
         public Integer fixedDelayDuration;
 
         @NameInMap("ValidChannel")
         public String validChannel;
 
+        @NameInMap("VolumeRate")
+        public Float volumeRate;
+
         public static UpdateCasterSceneAudioRequestAudioLayer build(java.util.Map<String, ?> map) throws Exception {
             UpdateCasterSceneAudioRequestAudioLayer self = new UpdateCasterSceneAudioRequestAudioLayer();
             return TeaModel.build(map, self);
-        }
-
-        public UpdateCasterSceneAudioRequestAudioLayer setVolumeRate(Float volumeRate) {
-            this.volumeRate = volumeRate;
-            return this;
-        }
-        public Float getVolumeRate() {
-            return this.volumeRate;
         }
 
         public UpdateCasterSceneAudioRequestAudioLayer setFixedDelayDuration(Integer fixedDelayDuration) {
@@ -112,6 +104,14 @@ public class UpdateCasterSceneAudioRequest extends TeaModel {
         }
         public String getValidChannel() {
             return this.validChannel;
+        }
+
+        public UpdateCasterSceneAudioRequestAudioLayer setVolumeRate(Float volumeRate) {
+            this.volumeRate = volumeRate;
+            return this;
+        }
+        public Float getVolumeRate() {
+            return this.volumeRate;
         }
 
     }

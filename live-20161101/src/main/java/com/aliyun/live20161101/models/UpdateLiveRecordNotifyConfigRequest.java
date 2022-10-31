@@ -4,14 +4,11 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class UpdateLiveRecordNotifyConfigRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("DomainName")
     public String domainName;
+
+    @NameInMap("NeedStatusNotify")
+    public Boolean needStatusNotify;
 
     @NameInMap("NotifyUrl")
     public String notifyUrl;
@@ -19,28 +16,15 @@ public class UpdateLiveRecordNotifyConfigRequest extends TeaModel {
     @NameInMap("OnDemandUrl")
     public String onDemandUrl;
 
-    @NameInMap("NeedStatusNotify")
-    public Boolean needStatusNotify;
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     public static UpdateLiveRecordNotifyConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateLiveRecordNotifyConfigRequest self = new UpdateLiveRecordNotifyConfigRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateLiveRecordNotifyConfigRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
-    public UpdateLiveRecordNotifyConfigRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public UpdateLiveRecordNotifyConfigRequest setDomainName(String domainName) {
@@ -49,6 +33,14 @@ public class UpdateLiveRecordNotifyConfigRequest extends TeaModel {
     }
     public String getDomainName() {
         return this.domainName;
+    }
+
+    public UpdateLiveRecordNotifyConfigRequest setNeedStatusNotify(Boolean needStatusNotify) {
+        this.needStatusNotify = needStatusNotify;
+        return this;
+    }
+    public Boolean getNeedStatusNotify() {
+        return this.needStatusNotify;
     }
 
     public UpdateLiveRecordNotifyConfigRequest setNotifyUrl(String notifyUrl) {
@@ -67,12 +59,20 @@ public class UpdateLiveRecordNotifyConfigRequest extends TeaModel {
         return this.onDemandUrl;
     }
 
-    public UpdateLiveRecordNotifyConfigRequest setNeedStatusNotify(Boolean needStatusNotify) {
-        this.needStatusNotify = needStatusNotify;
+    public UpdateLiveRecordNotifyConfigRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public Boolean getNeedStatusNotify() {
-        return this.needStatusNotify;
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public UpdateLiveRecordNotifyConfigRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

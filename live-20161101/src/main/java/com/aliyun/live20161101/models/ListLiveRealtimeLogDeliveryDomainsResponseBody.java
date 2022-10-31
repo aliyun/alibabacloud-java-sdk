@@ -4,23 +4,15 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class ListLiveRealtimeLogDeliveryDomainsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Content")
     public ListLiveRealtimeLogDeliveryDomainsResponseBodyContent content;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ListLiveRealtimeLogDeliveryDomainsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListLiveRealtimeLogDeliveryDomainsResponseBody self = new ListLiveRealtimeLogDeliveryDomainsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListLiveRealtimeLogDeliveryDomainsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListLiveRealtimeLogDeliveryDomainsResponseBody setContent(ListLiveRealtimeLogDeliveryDomainsResponseBodyContent content) {
@@ -31,24 +23,24 @@ public class ListLiveRealtimeLogDeliveryDomainsResponseBody extends TeaModel {
         return this.content;
     }
 
-    public static class ListLiveRealtimeLogDeliveryDomainsResponseBodyContentDomains extends TeaModel {
-        @NameInMap("Status")
-        public String status;
+    public ListLiveRealtimeLogDeliveryDomainsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class ListLiveRealtimeLogDeliveryDomainsResponseBodyContentDomains extends TeaModel {
         @NameInMap("DomainName")
         public String domainName;
+
+        @NameInMap("Status")
+        public String status;
 
         public static ListLiveRealtimeLogDeliveryDomainsResponseBodyContentDomains build(java.util.Map<String, ?> map) throws Exception {
             ListLiveRealtimeLogDeliveryDomainsResponseBodyContentDomains self = new ListLiveRealtimeLogDeliveryDomainsResponseBodyContentDomains();
             return TeaModel.build(map, self);
-        }
-
-        public ListLiveRealtimeLogDeliveryDomainsResponseBodyContentDomains setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
         }
 
         public ListLiveRealtimeLogDeliveryDomainsResponseBodyContentDomains setDomainName(String domainName) {
@@ -57,6 +49,14 @@ public class ListLiveRealtimeLogDeliveryDomainsResponseBody extends TeaModel {
         }
         public String getDomainName() {
             return this.domainName;
+        }
+
+        public ListLiveRealtimeLogDeliveryDomainsResponseBodyContentDomains setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }

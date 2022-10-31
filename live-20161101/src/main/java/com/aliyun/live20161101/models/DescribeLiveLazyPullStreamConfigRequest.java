@@ -4,26 +4,26 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveLazyPullStreamConfigRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("AppName")
+    public String appName;
 
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("AppName")
-    public String appName;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     public static DescribeLiveLazyPullStreamConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveLazyPullStreamConfigRequest self = new DescribeLiveLazyPullStreamConfigRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeLiveLazyPullStreamConfigRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public DescribeLiveLazyPullStreamConfigRequest setAppName(String appName) {
+        this.appName = appName;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public String getAppName() {
+        return this.appName;
     }
 
     public DescribeLiveLazyPullStreamConfigRequest setDomainName(String domainName) {
@@ -34,12 +34,12 @@ public class DescribeLiveLazyPullStreamConfigRequest extends TeaModel {
         return this.domainName;
     }
 
-    public DescribeLiveLazyPullStreamConfigRequest setAppName(String appName) {
-        this.appName = appName;
+    public DescribeLiveLazyPullStreamConfigRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getAppName() {
-        return this.appName;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
 }

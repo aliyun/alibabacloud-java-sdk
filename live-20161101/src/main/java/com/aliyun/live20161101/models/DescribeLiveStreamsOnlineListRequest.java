@@ -4,49 +4,36 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveStreamsOnlineListRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("AppName")
+    public String appName;
 
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("AppName")
-    public String appName;
+    @NameInMap("OnlyStream")
+    public String onlyStream;
 
-    @NameInMap("StreamName")
-    public String streamName;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("PageNum")
     public Integer pageNum;
 
-    @NameInMap("StreamType")
-    public String streamType;
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     @NameInMap("QueryType")
     public String queryType;
 
+    @NameInMap("StreamName")
+    public String streamName;
+
+    @NameInMap("StreamType")
+    public String streamType;
+
     public static DescribeLiveStreamsOnlineListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveStreamsOnlineListRequest self = new DescribeLiveStreamsOnlineListRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeLiveStreamsOnlineListRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public DescribeLiveStreamsOnlineListRequest setDomainName(String domainName) {
-        this.domainName = domainName;
-        return this;
-    }
-    public String getDomainName() {
-        return this.domainName;
     }
 
     public DescribeLiveStreamsOnlineListRequest setAppName(String appName) {
@@ -57,20 +44,28 @@ public class DescribeLiveStreamsOnlineListRequest extends TeaModel {
         return this.appName;
     }
 
-    public DescribeLiveStreamsOnlineListRequest setStreamName(String streamName) {
-        this.streamName = streamName;
+    public DescribeLiveStreamsOnlineListRequest setDomainName(String domainName) {
+        this.domainName = domainName;
         return this;
     }
-    public String getStreamName() {
-        return this.streamName;
+    public String getDomainName() {
+        return this.domainName;
     }
 
-    public DescribeLiveStreamsOnlineListRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
+    public DescribeLiveStreamsOnlineListRequest setOnlyStream(String onlyStream) {
+        this.onlyStream = onlyStream;
         return this;
     }
-    public Integer getPageSize() {
-        return this.pageSize;
+    public String getOnlyStream() {
+        return this.onlyStream;
+    }
+
+    public DescribeLiveStreamsOnlineListRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeLiveStreamsOnlineListRequest setPageNum(Integer pageNum) {
@@ -81,12 +76,12 @@ public class DescribeLiveStreamsOnlineListRequest extends TeaModel {
         return this.pageNum;
     }
 
-    public DescribeLiveStreamsOnlineListRequest setStreamType(String streamType) {
-        this.streamType = streamType;
+    public DescribeLiveStreamsOnlineListRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
-    public String getStreamType() {
-        return this.streamType;
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public DescribeLiveStreamsOnlineListRequest setQueryType(String queryType) {
@@ -95,6 +90,22 @@ public class DescribeLiveStreamsOnlineListRequest extends TeaModel {
     }
     public String getQueryType() {
         return this.queryType;
+    }
+
+    public DescribeLiveStreamsOnlineListRequest setStreamName(String streamName) {
+        this.streamName = streamName;
+        return this;
+    }
+    public String getStreamName() {
+        return this.streamName;
+    }
+
+    public DescribeLiveStreamsOnlineListRequest setStreamType(String streamType) {
+        this.streamType = streamType;
+        return this;
+    }
+    public String getStreamType() {
+        return this.streamType;
     }
 
 }

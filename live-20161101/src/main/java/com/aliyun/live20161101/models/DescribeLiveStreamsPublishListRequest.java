@@ -4,58 +4,42 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveStreamsPublishListRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("AppName")
+    public String appName;
 
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("AppName")
-    public String appName;
-
-    @NameInMap("StreamName")
-    public String streamName;
-
-    @NameInMap("StartTime")
-    public String startTime;
-
     @NameInMap("EndTime")
     public String endTime;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("StreamType")
-    public String streamType;
-
-    @NameInMap("QueryType")
-    public String queryType;
 
     @NameInMap("OrderBy")
     public String orderBy;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("QueryType")
+    public String queryType;
+
+    @NameInMap("StartTime")
+    public String startTime;
+
+    @NameInMap("StreamName")
+    public String streamName;
+
+    @NameInMap("StreamType")
+    public String streamType;
+
     public static DescribeLiveStreamsPublishListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveStreamsPublishListRequest self = new DescribeLiveStreamsPublishListRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeLiveStreamsPublishListRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public DescribeLiveStreamsPublishListRequest setDomainName(String domainName) {
-        this.domainName = domainName;
-        return this;
-    }
-    public String getDomainName() {
-        return this.domainName;
     }
 
     public DescribeLiveStreamsPublishListRequest setAppName(String appName) {
@@ -66,20 +50,12 @@ public class DescribeLiveStreamsPublishListRequest extends TeaModel {
         return this.appName;
     }
 
-    public DescribeLiveStreamsPublishListRequest setStreamName(String streamName) {
-        this.streamName = streamName;
+    public DescribeLiveStreamsPublishListRequest setDomainName(String domainName) {
+        this.domainName = domainName;
         return this;
     }
-    public String getStreamName() {
-        return this.streamName;
-    }
-
-    public DescribeLiveStreamsPublishListRequest setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
+    public String getDomainName() {
+        return this.domainName;
     }
 
     public DescribeLiveStreamsPublishListRequest setEndTime(String endTime) {
@@ -90,12 +66,20 @@ public class DescribeLiveStreamsPublishListRequest extends TeaModel {
         return this.endTime;
     }
 
-    public DescribeLiveStreamsPublishListRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
+    public DescribeLiveStreamsPublishListRequest setOrderBy(String orderBy) {
+        this.orderBy = orderBy;
         return this;
     }
-    public Integer getPageSize() {
-        return this.pageSize;
+    public String getOrderBy() {
+        return this.orderBy;
+    }
+
+    public DescribeLiveStreamsPublishListRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeLiveStreamsPublishListRequest setPageNumber(Integer pageNumber) {
@@ -106,12 +90,12 @@ public class DescribeLiveStreamsPublishListRequest extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeLiveStreamsPublishListRequest setStreamType(String streamType) {
-        this.streamType = streamType;
+    public DescribeLiveStreamsPublishListRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
-    public String getStreamType() {
-        return this.streamType;
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public DescribeLiveStreamsPublishListRequest setQueryType(String queryType) {
@@ -122,12 +106,28 @@ public class DescribeLiveStreamsPublishListRequest extends TeaModel {
         return this.queryType;
     }
 
-    public DescribeLiveStreamsPublishListRequest setOrderBy(String orderBy) {
-        this.orderBy = orderBy;
+    public DescribeLiveStreamsPublishListRequest setStartTime(String startTime) {
+        this.startTime = startTime;
         return this;
     }
-    public String getOrderBy() {
-        return this.orderBy;
+    public String getStartTime() {
+        return this.startTime;
+    }
+
+    public DescribeLiveStreamsPublishListRequest setStreamName(String streamName) {
+        this.streamName = streamName;
+        return this;
+    }
+    public String getStreamName() {
+        return this.streamName;
+    }
+
+    public DescribeLiveStreamsPublishListRequest setStreamType(String streamType) {
+        this.streamType = streamType;
+        return this;
+    }
+    public String getStreamType() {
+        return this.streamType;
     }
 
 }

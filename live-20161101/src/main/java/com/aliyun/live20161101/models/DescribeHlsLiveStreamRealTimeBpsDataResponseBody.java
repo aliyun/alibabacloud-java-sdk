@@ -7,11 +7,11 @@ public class DescribeHlsLiveStreamRealTimeBpsDataResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("UsageData")
-    public java.util.List<DescribeHlsLiveStreamRealTimeBpsDataResponseBodyUsageData> usageData;
-
     @NameInMap("Time")
     public String time;
+
+    @NameInMap("UsageData")
+    public java.util.List<DescribeHlsLiveStreamRealTimeBpsDataResponseBodyUsageData> usageData;
 
     public static DescribeHlsLiveStreamRealTimeBpsDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeHlsLiveStreamRealTimeBpsDataResponseBody self = new DescribeHlsLiveStreamRealTimeBpsDataResponseBody();
@@ -26,20 +26,20 @@ public class DescribeHlsLiveStreamRealTimeBpsDataResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeHlsLiveStreamRealTimeBpsDataResponseBody setUsageData(java.util.List<DescribeHlsLiveStreamRealTimeBpsDataResponseBodyUsageData> usageData) {
-        this.usageData = usageData;
-        return this;
-    }
-    public java.util.List<DescribeHlsLiveStreamRealTimeBpsDataResponseBodyUsageData> getUsageData() {
-        return this.usageData;
-    }
-
     public DescribeHlsLiveStreamRealTimeBpsDataResponseBody setTime(String time) {
         this.time = time;
         return this;
     }
     public String getTime() {
         return this.time;
+    }
+
+    public DescribeHlsLiveStreamRealTimeBpsDataResponseBody setUsageData(java.util.List<DescribeHlsLiveStreamRealTimeBpsDataResponseBodyUsageData> usageData) {
+        this.usageData = usageData;
+        return this;
+    }
+    public java.util.List<DescribeHlsLiveStreamRealTimeBpsDataResponseBodyUsageData> getUsageData() {
+        return this.usageData;
     }
 
     public static class DescribeHlsLiveStreamRealTimeBpsDataResponseBodyUsageDataStreamInfosInfos extends TeaModel {
@@ -84,23 +84,15 @@ public class DescribeHlsLiveStreamRealTimeBpsDataResponseBody extends TeaModel {
     }
 
     public static class DescribeHlsLiveStreamRealTimeBpsDataResponseBodyUsageDataStreamInfos extends TeaModel {
-        @NameInMap("StreamName")
-        public String streamName;
-
         @NameInMap("Infos")
         public java.util.List<DescribeHlsLiveStreamRealTimeBpsDataResponseBodyUsageDataStreamInfosInfos> infos;
+
+        @NameInMap("StreamName")
+        public String streamName;
 
         public static DescribeHlsLiveStreamRealTimeBpsDataResponseBodyUsageDataStreamInfos build(java.util.Map<String, ?> map) throws Exception {
             DescribeHlsLiveStreamRealTimeBpsDataResponseBodyUsageDataStreamInfos self = new DescribeHlsLiveStreamRealTimeBpsDataResponseBodyUsageDataStreamInfos();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeHlsLiveStreamRealTimeBpsDataResponseBodyUsageDataStreamInfos setStreamName(String streamName) {
-            this.streamName = streamName;
-            return this;
-        }
-        public String getStreamName() {
-            return this.streamName;
         }
 
         public DescribeHlsLiveStreamRealTimeBpsDataResponseBodyUsageDataStreamInfos setInfos(java.util.List<DescribeHlsLiveStreamRealTimeBpsDataResponseBodyUsageDataStreamInfosInfos> infos) {
@@ -111,26 +103,26 @@ public class DescribeHlsLiveStreamRealTimeBpsDataResponseBody extends TeaModel {
             return this.infos;
         }
 
+        public DescribeHlsLiveStreamRealTimeBpsDataResponseBodyUsageDataStreamInfos setStreamName(String streamName) {
+            this.streamName = streamName;
+            return this;
+        }
+        public String getStreamName() {
+            return this.streamName;
+        }
+
     }
 
     public static class DescribeHlsLiveStreamRealTimeBpsDataResponseBodyUsageData extends TeaModel {
-        @NameInMap("StreamInfos")
-        public java.util.List<DescribeHlsLiveStreamRealTimeBpsDataResponseBodyUsageDataStreamInfos> streamInfos;
-
         @NameInMap("DomainName")
         public String domainName;
+
+        @NameInMap("StreamInfos")
+        public java.util.List<DescribeHlsLiveStreamRealTimeBpsDataResponseBodyUsageDataStreamInfos> streamInfos;
 
         public static DescribeHlsLiveStreamRealTimeBpsDataResponseBodyUsageData build(java.util.Map<String, ?> map) throws Exception {
             DescribeHlsLiveStreamRealTimeBpsDataResponseBodyUsageData self = new DescribeHlsLiveStreamRealTimeBpsDataResponseBodyUsageData();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeHlsLiveStreamRealTimeBpsDataResponseBodyUsageData setStreamInfos(java.util.List<DescribeHlsLiveStreamRealTimeBpsDataResponseBodyUsageDataStreamInfos> streamInfos) {
-            this.streamInfos = streamInfos;
-            return this;
-        }
-        public java.util.List<DescribeHlsLiveStreamRealTimeBpsDataResponseBodyUsageDataStreamInfos> getStreamInfos() {
-            return this.streamInfos;
         }
 
         public DescribeHlsLiveStreamRealTimeBpsDataResponseBodyUsageData setDomainName(String domainName) {
@@ -139,6 +131,14 @@ public class DescribeHlsLiveStreamRealTimeBpsDataResponseBody extends TeaModel {
         }
         public String getDomainName() {
             return this.domainName;
+        }
+
+        public DescribeHlsLiveStreamRealTimeBpsDataResponseBodyUsageData setStreamInfos(java.util.List<DescribeHlsLiveStreamRealTimeBpsDataResponseBodyUsageDataStreamInfos> streamInfos) {
+            this.streamInfos = streamInfos;
+            return this;
+        }
+        public java.util.List<DescribeHlsLiveStreamRealTimeBpsDataResponseBodyUsageDataStreamInfos> getStreamInfos() {
+            return this.streamInfos;
         }
 
     }

@@ -4,14 +4,8 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveDomainTimeShiftDataRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("DomainName")
     public String domainName;
-
-    @NameInMap("StartTime")
-    public String startTime;
 
     @NameInMap("EndTime")
     public String endTime;
@@ -19,17 +13,15 @@ public class DescribeLiveDomainTimeShiftDataRequest extends TeaModel {
     @NameInMap("Interval")
     public String interval;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("StartTime")
+    public String startTime;
+
     public static DescribeLiveDomainTimeShiftDataRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveDomainTimeShiftDataRequest self = new DescribeLiveDomainTimeShiftDataRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeLiveDomainTimeShiftDataRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeLiveDomainTimeShiftDataRequest setDomainName(String domainName) {
@@ -38,14 +30,6 @@ public class DescribeLiveDomainTimeShiftDataRequest extends TeaModel {
     }
     public String getDomainName() {
         return this.domainName;
-    }
-
-    public DescribeLiveDomainTimeShiftDataRequest setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
     }
 
     public DescribeLiveDomainTimeShiftDataRequest setEndTime(String endTime) {
@@ -62,6 +46,22 @@ public class DescribeLiveDomainTimeShiftDataRequest extends TeaModel {
     }
     public String getInterval() {
         return this.interval;
+    }
+
+    public DescribeLiveDomainTimeShiftDataRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeLiveDomainTimeShiftDataRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
 }

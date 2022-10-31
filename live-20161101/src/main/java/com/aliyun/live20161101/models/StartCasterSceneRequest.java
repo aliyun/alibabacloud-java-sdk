@@ -4,11 +4,11 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class StartCasterSceneRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("CasterId")
     public String casterId;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("SceneId")
     public String sceneId;
@@ -18,20 +18,20 @@ public class StartCasterSceneRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public StartCasterSceneRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
     public StartCasterSceneRequest setCasterId(String casterId) {
         this.casterId = casterId;
         return this;
     }
     public String getCasterId() {
         return this.casterId;
+    }
+
+    public StartCasterSceneRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public StartCasterSceneRequest setSceneId(String sceneId) {

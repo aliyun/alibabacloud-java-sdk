@@ -4,26 +4,18 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class ModifyCasterProgramRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("CasterId")
     public String casterId;
 
     @NameInMap("Episode")
     public java.util.List<ModifyCasterProgramRequestEpisode> episode;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     public static ModifyCasterProgramRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyCasterProgramRequest self = new ModifyCasterProgramRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyCasterProgramRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public ModifyCasterProgramRequest setCasterId(String casterId) {
@@ -42,12 +34,23 @@ public class ModifyCasterProgramRequest extends TeaModel {
         return this.episode;
     }
 
+    public ModifyCasterProgramRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
     public static class ModifyCasterProgramRequestEpisode extends TeaModel {
+        @NameInMap("ComponentId")
+        public java.util.List<String> componentId;
+
         @NameInMap("EndTime")
         public String endTime;
 
-        @NameInMap("StartTime")
-        public String startTime;
+        @NameInMap("EpisodeId")
+        public String episodeId;
 
         @NameInMap("EpisodeName")
         public String episodeName;
@@ -55,14 +58,11 @@ public class ModifyCasterProgramRequest extends TeaModel {
         @NameInMap("EpisodeType")
         public String episodeType;
 
-        @NameInMap("EpisodeId")
-        public String episodeId;
-
         @NameInMap("ResourceId")
         public String resourceId;
 
-        @NameInMap("ComponentId")
-        public java.util.List<String> componentId;
+        @NameInMap("StartTime")
+        public String startTime;
 
         @NameInMap("SwitchType")
         public String switchType;
@@ -70,6 +70,14 @@ public class ModifyCasterProgramRequest extends TeaModel {
         public static ModifyCasterProgramRequestEpisode build(java.util.Map<String, ?> map) throws Exception {
             ModifyCasterProgramRequestEpisode self = new ModifyCasterProgramRequestEpisode();
             return TeaModel.build(map, self);
+        }
+
+        public ModifyCasterProgramRequestEpisode setComponentId(java.util.List<String> componentId) {
+            this.componentId = componentId;
+            return this;
+        }
+        public java.util.List<String> getComponentId() {
+            return this.componentId;
         }
 
         public ModifyCasterProgramRequestEpisode setEndTime(String endTime) {
@@ -80,12 +88,12 @@ public class ModifyCasterProgramRequest extends TeaModel {
             return this.endTime;
         }
 
-        public ModifyCasterProgramRequestEpisode setStartTime(String startTime) {
-            this.startTime = startTime;
+        public ModifyCasterProgramRequestEpisode setEpisodeId(String episodeId) {
+            this.episodeId = episodeId;
             return this;
         }
-        public String getStartTime() {
-            return this.startTime;
+        public String getEpisodeId() {
+            return this.episodeId;
         }
 
         public ModifyCasterProgramRequestEpisode setEpisodeName(String episodeName) {
@@ -104,14 +112,6 @@ public class ModifyCasterProgramRequest extends TeaModel {
             return this.episodeType;
         }
 
-        public ModifyCasterProgramRequestEpisode setEpisodeId(String episodeId) {
-            this.episodeId = episodeId;
-            return this;
-        }
-        public String getEpisodeId() {
-            return this.episodeId;
-        }
-
         public ModifyCasterProgramRequestEpisode setResourceId(String resourceId) {
             this.resourceId = resourceId;
             return this;
@@ -120,12 +120,12 @@ public class ModifyCasterProgramRequest extends TeaModel {
             return this.resourceId;
         }
 
-        public ModifyCasterProgramRequestEpisode setComponentId(java.util.List<String> componentId) {
-            this.componentId = componentId;
+        public ModifyCasterProgramRequestEpisode setStartTime(String startTime) {
+            this.startTime = startTime;
             return this;
         }
-        public java.util.List<String> getComponentId() {
-            return this.componentId;
+        public String getStartTime() {
+            return this.startTime;
         }
 
         public ModifyCasterProgramRequestEpisode setSwitchType(String switchType) {

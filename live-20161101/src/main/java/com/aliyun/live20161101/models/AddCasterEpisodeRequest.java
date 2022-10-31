@@ -4,17 +4,23 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class AddCasterEpisodeRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("CasterId")
     public String casterId;
+
+    @NameInMap("ComponentId")
+    public java.util.List<String> componentId;
+
+    @NameInMap("EndTime")
+    public String endTime;
+
+    @NameInMap("EpisodeName")
+    public String episodeName;
 
     @NameInMap("EpisodeType")
     public String episodeType;
 
-    @NameInMap("EpisodeName")
-    public String episodeName;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("ResourceId")
     public String resourceId;
@@ -22,26 +28,12 @@ public class AddCasterEpisodeRequest extends TeaModel {
     @NameInMap("StartTime")
     public String startTime;
 
-    @NameInMap("EndTime")
-    public String endTime;
-
     @NameInMap("SwitchType")
     public String switchType;
-
-    @NameInMap("ComponentId")
-    public java.util.List<String> componentId;
 
     public static AddCasterEpisodeRequest build(java.util.Map<String, ?> map) throws Exception {
         AddCasterEpisodeRequest self = new AddCasterEpisodeRequest();
         return TeaModel.build(map, self);
-    }
-
-    public AddCasterEpisodeRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public AddCasterEpisodeRequest setCasterId(String casterId) {
@@ -52,12 +44,20 @@ public class AddCasterEpisodeRequest extends TeaModel {
         return this.casterId;
     }
 
-    public AddCasterEpisodeRequest setEpisodeType(String episodeType) {
-        this.episodeType = episodeType;
+    public AddCasterEpisodeRequest setComponentId(java.util.List<String> componentId) {
+        this.componentId = componentId;
         return this;
     }
-    public String getEpisodeType() {
-        return this.episodeType;
+    public java.util.List<String> getComponentId() {
+        return this.componentId;
+    }
+
+    public AddCasterEpisodeRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
     }
 
     public AddCasterEpisodeRequest setEpisodeName(String episodeName) {
@@ -66,6 +66,22 @@ public class AddCasterEpisodeRequest extends TeaModel {
     }
     public String getEpisodeName() {
         return this.episodeName;
+    }
+
+    public AddCasterEpisodeRequest setEpisodeType(String episodeType) {
+        this.episodeType = episodeType;
+        return this;
+    }
+    public String getEpisodeType() {
+        return this.episodeType;
+    }
+
+    public AddCasterEpisodeRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public AddCasterEpisodeRequest setResourceId(String resourceId) {
@@ -84,28 +100,12 @@ public class AddCasterEpisodeRequest extends TeaModel {
         return this.startTime;
     }
 
-    public AddCasterEpisodeRequest setEndTime(String endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public String getEndTime() {
-        return this.endTime;
-    }
-
     public AddCasterEpisodeRequest setSwitchType(String switchType) {
         this.switchType = switchType;
         return this;
     }
     public String getSwitchType() {
         return this.switchType;
-    }
-
-    public AddCasterEpisodeRequest setComponentId(java.util.List<String> componentId) {
-        this.componentId = componentId;
-        return this;
-    }
-    public java.util.List<String> getComponentId() {
-        return this.componentId;
     }
 
 }

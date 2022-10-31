@@ -4,29 +4,21 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class AddLiveDomainMappingRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     @NameInMap("OwnerId")
     public Long ownerId;
-
-    @NameInMap("PushDomain")
-    public String pushDomain;
 
     @NameInMap("PullDomain")
     public String pullDomain;
 
+    @NameInMap("PushDomain")
+    public String pushDomain;
+
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     public static AddLiveDomainMappingRequest build(java.util.Map<String, ?> map) throws Exception {
         AddLiveDomainMappingRequest self = new AddLiveDomainMappingRequest();
         return TeaModel.build(map, self);
-    }
-
-    public AddLiveDomainMappingRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
     public AddLiveDomainMappingRequest setOwnerId(Long ownerId) {
@@ -37,6 +29,14 @@ public class AddLiveDomainMappingRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public AddLiveDomainMappingRequest setPullDomain(String pullDomain) {
+        this.pullDomain = pullDomain;
+        return this;
+    }
+    public String getPullDomain() {
+        return this.pullDomain;
+    }
+
     public AddLiveDomainMappingRequest setPushDomain(String pushDomain) {
         this.pushDomain = pushDomain;
         return this;
@@ -45,12 +45,12 @@ public class AddLiveDomainMappingRequest extends TeaModel {
         return this.pushDomain;
     }
 
-    public AddLiveDomainMappingRequest setPullDomain(String pullDomain) {
-        this.pullDomain = pullDomain;
+    public AddLiveDomainMappingRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getPullDomain() {
-        return this.pullDomain;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

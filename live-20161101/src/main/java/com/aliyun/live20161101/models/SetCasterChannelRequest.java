@@ -4,14 +4,20 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class SetCasterChannelRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("CasterId")
     public String casterId;
 
     @NameInMap("ChannelId")
     public String channelId;
+
+    @NameInMap("FaceBeauty")
+    public String faceBeauty;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("PlayStatus")
+    public Integer playStatus;
 
     @NameInMap("ResourceId")
     public String resourceId;
@@ -19,20 +25,9 @@ public class SetCasterChannelRequest extends TeaModel {
     @NameInMap("SeekOffset")
     public Integer seekOffset;
 
-    @NameInMap("PlayStatus")
-    public Integer playStatus;
-
     public static SetCasterChannelRequest build(java.util.Map<String, ?> map) throws Exception {
         SetCasterChannelRequest self = new SetCasterChannelRequest();
         return TeaModel.build(map, self);
-    }
-
-    public SetCasterChannelRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public SetCasterChannelRequest setCasterId(String casterId) {
@@ -51,6 +46,30 @@ public class SetCasterChannelRequest extends TeaModel {
         return this.channelId;
     }
 
+    public SetCasterChannelRequest setFaceBeauty(String faceBeauty) {
+        this.faceBeauty = faceBeauty;
+        return this;
+    }
+    public String getFaceBeauty() {
+        return this.faceBeauty;
+    }
+
+    public SetCasterChannelRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public SetCasterChannelRequest setPlayStatus(Integer playStatus) {
+        this.playStatus = playStatus;
+        return this;
+    }
+    public Integer getPlayStatus() {
+        return this.playStatus;
+    }
+
     public SetCasterChannelRequest setResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -65,14 +84,6 @@ public class SetCasterChannelRequest extends TeaModel {
     }
     public Integer getSeekOffset() {
         return this.seekOffset;
-    }
-
-    public SetCasterChannelRequest setPlayStatus(Integer playStatus) {
-        this.playStatus = playStatus;
-        return this;
-    }
-    public Integer getPlayStatus() {
-        return this.playStatus;
     }
 
 }

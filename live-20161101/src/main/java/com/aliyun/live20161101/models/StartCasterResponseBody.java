@@ -4,26 +4,26 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class StartCasterResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("PgmSceneInfos")
+    public StartCasterResponseBodyPgmSceneInfos pgmSceneInfos;
 
     @NameInMap("PvwSceneInfos")
     public StartCasterResponseBodyPvwSceneInfos pvwSceneInfos;
 
-    @NameInMap("PgmSceneInfos")
-    public StartCasterResponseBodyPgmSceneInfos pgmSceneInfos;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static StartCasterResponseBody build(java.util.Map<String, ?> map) throws Exception {
         StartCasterResponseBody self = new StartCasterResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public StartCasterResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public StartCasterResponseBody setPgmSceneInfos(StartCasterResponseBodyPgmSceneInfos pgmSceneInfos) {
+        this.pgmSceneInfos = pgmSceneInfos;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public StartCasterResponseBodyPgmSceneInfos getPgmSceneInfos() {
+        return this.pgmSceneInfos;
     }
 
     public StartCasterResponseBody setPvwSceneInfos(StartCasterResponseBodyPvwSceneInfos pvwSceneInfos) {
@@ -34,12 +34,132 @@ public class StartCasterResponseBody extends TeaModel {
         return this.pvwSceneInfos;
     }
 
-    public StartCasterResponseBody setPgmSceneInfos(StartCasterResponseBodyPgmSceneInfos pgmSceneInfos) {
-        this.pgmSceneInfos = pgmSceneInfos;
+    public StartCasterResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public StartCasterResponseBodyPgmSceneInfos getPgmSceneInfos() {
-        return this.pgmSceneInfos;
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public static class StartCasterResponseBodyPgmSceneInfosSceneInfoStreamInfosStreamInfo extends TeaModel {
+        @NameInMap("OutputStreamUrl")
+        public String outputStreamUrl;
+
+        @NameInMap("TranscodeConfig")
+        public String transcodeConfig;
+
+        @NameInMap("VideoFormat")
+        public String videoFormat;
+
+        public static StartCasterResponseBodyPgmSceneInfosSceneInfoStreamInfosStreamInfo build(java.util.Map<String, ?> map) throws Exception {
+            StartCasterResponseBodyPgmSceneInfosSceneInfoStreamInfosStreamInfo self = new StartCasterResponseBodyPgmSceneInfosSceneInfoStreamInfosStreamInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public StartCasterResponseBodyPgmSceneInfosSceneInfoStreamInfosStreamInfo setOutputStreamUrl(String outputStreamUrl) {
+            this.outputStreamUrl = outputStreamUrl;
+            return this;
+        }
+        public String getOutputStreamUrl() {
+            return this.outputStreamUrl;
+        }
+
+        public StartCasterResponseBodyPgmSceneInfosSceneInfoStreamInfosStreamInfo setTranscodeConfig(String transcodeConfig) {
+            this.transcodeConfig = transcodeConfig;
+            return this;
+        }
+        public String getTranscodeConfig() {
+            return this.transcodeConfig;
+        }
+
+        public StartCasterResponseBodyPgmSceneInfosSceneInfoStreamInfosStreamInfo setVideoFormat(String videoFormat) {
+            this.videoFormat = videoFormat;
+            return this;
+        }
+        public String getVideoFormat() {
+            return this.videoFormat;
+        }
+
+    }
+
+    public static class StartCasterResponseBodyPgmSceneInfosSceneInfoStreamInfos extends TeaModel {
+        @NameInMap("StreamInfo")
+        public java.util.List<StartCasterResponseBodyPgmSceneInfosSceneInfoStreamInfosStreamInfo> streamInfo;
+
+        public static StartCasterResponseBodyPgmSceneInfosSceneInfoStreamInfos build(java.util.Map<String, ?> map) throws Exception {
+            StartCasterResponseBodyPgmSceneInfosSceneInfoStreamInfos self = new StartCasterResponseBodyPgmSceneInfosSceneInfoStreamInfos();
+            return TeaModel.build(map, self);
+        }
+
+        public StartCasterResponseBodyPgmSceneInfosSceneInfoStreamInfos setStreamInfo(java.util.List<StartCasterResponseBodyPgmSceneInfosSceneInfoStreamInfosStreamInfo> streamInfo) {
+            this.streamInfo = streamInfo;
+            return this;
+        }
+        public java.util.List<StartCasterResponseBodyPgmSceneInfosSceneInfoStreamInfosStreamInfo> getStreamInfo() {
+            return this.streamInfo;
+        }
+
+    }
+
+    public static class StartCasterResponseBodyPgmSceneInfosSceneInfo extends TeaModel {
+        @NameInMap("SceneId")
+        public String sceneId;
+
+        @NameInMap("StreamInfos")
+        public StartCasterResponseBodyPgmSceneInfosSceneInfoStreamInfos streamInfos;
+
+        @NameInMap("StreamUrl")
+        public String streamUrl;
+
+        public static StartCasterResponseBodyPgmSceneInfosSceneInfo build(java.util.Map<String, ?> map) throws Exception {
+            StartCasterResponseBodyPgmSceneInfosSceneInfo self = new StartCasterResponseBodyPgmSceneInfosSceneInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public StartCasterResponseBodyPgmSceneInfosSceneInfo setSceneId(String sceneId) {
+            this.sceneId = sceneId;
+            return this;
+        }
+        public String getSceneId() {
+            return this.sceneId;
+        }
+
+        public StartCasterResponseBodyPgmSceneInfosSceneInfo setStreamInfos(StartCasterResponseBodyPgmSceneInfosSceneInfoStreamInfos streamInfos) {
+            this.streamInfos = streamInfos;
+            return this;
+        }
+        public StartCasterResponseBodyPgmSceneInfosSceneInfoStreamInfos getStreamInfos() {
+            return this.streamInfos;
+        }
+
+        public StartCasterResponseBodyPgmSceneInfosSceneInfo setStreamUrl(String streamUrl) {
+            this.streamUrl = streamUrl;
+            return this;
+        }
+        public String getStreamUrl() {
+            return this.streamUrl;
+        }
+
+    }
+
+    public static class StartCasterResponseBodyPgmSceneInfos extends TeaModel {
+        @NameInMap("SceneInfo")
+        public java.util.List<StartCasterResponseBodyPgmSceneInfosSceneInfo> sceneInfo;
+
+        public static StartCasterResponseBodyPgmSceneInfos build(java.util.Map<String, ?> map) throws Exception {
+            StartCasterResponseBodyPgmSceneInfos self = new StartCasterResponseBodyPgmSceneInfos();
+            return TeaModel.build(map, self);
+        }
+
+        public StartCasterResponseBodyPgmSceneInfos setSceneInfo(java.util.List<StartCasterResponseBodyPgmSceneInfosSceneInfo> sceneInfo) {
+            this.sceneInfo = sceneInfo;
+            return this;
+        }
+        public java.util.List<StartCasterResponseBodyPgmSceneInfosSceneInfo> getSceneInfo() {
+            return this.sceneInfo;
+        }
+
     }
 
     public static class StartCasterResponseBodyPvwSceneInfosSceneInfo extends TeaModel {
@@ -86,126 +206,6 @@ public class StartCasterResponseBody extends TeaModel {
             return this;
         }
         public java.util.List<StartCasterResponseBodyPvwSceneInfosSceneInfo> getSceneInfo() {
-            return this.sceneInfo;
-        }
-
-    }
-
-    public static class StartCasterResponseBodyPgmSceneInfosSceneInfoStreamInfosStreamInfo extends TeaModel {
-        @NameInMap("VideoFormat")
-        public String videoFormat;
-
-        @NameInMap("OutputStreamUrl")
-        public String outputStreamUrl;
-
-        @NameInMap("TranscodeConfig")
-        public String transcodeConfig;
-
-        public static StartCasterResponseBodyPgmSceneInfosSceneInfoStreamInfosStreamInfo build(java.util.Map<String, ?> map) throws Exception {
-            StartCasterResponseBodyPgmSceneInfosSceneInfoStreamInfosStreamInfo self = new StartCasterResponseBodyPgmSceneInfosSceneInfoStreamInfosStreamInfo();
-            return TeaModel.build(map, self);
-        }
-
-        public StartCasterResponseBodyPgmSceneInfosSceneInfoStreamInfosStreamInfo setVideoFormat(String videoFormat) {
-            this.videoFormat = videoFormat;
-            return this;
-        }
-        public String getVideoFormat() {
-            return this.videoFormat;
-        }
-
-        public StartCasterResponseBodyPgmSceneInfosSceneInfoStreamInfosStreamInfo setOutputStreamUrl(String outputStreamUrl) {
-            this.outputStreamUrl = outputStreamUrl;
-            return this;
-        }
-        public String getOutputStreamUrl() {
-            return this.outputStreamUrl;
-        }
-
-        public StartCasterResponseBodyPgmSceneInfosSceneInfoStreamInfosStreamInfo setTranscodeConfig(String transcodeConfig) {
-            this.transcodeConfig = transcodeConfig;
-            return this;
-        }
-        public String getTranscodeConfig() {
-            return this.transcodeConfig;
-        }
-
-    }
-
-    public static class StartCasterResponseBodyPgmSceneInfosSceneInfoStreamInfos extends TeaModel {
-        @NameInMap("StreamInfo")
-        public java.util.List<StartCasterResponseBodyPgmSceneInfosSceneInfoStreamInfosStreamInfo> streamInfo;
-
-        public static StartCasterResponseBodyPgmSceneInfosSceneInfoStreamInfos build(java.util.Map<String, ?> map) throws Exception {
-            StartCasterResponseBodyPgmSceneInfosSceneInfoStreamInfos self = new StartCasterResponseBodyPgmSceneInfosSceneInfoStreamInfos();
-            return TeaModel.build(map, self);
-        }
-
-        public StartCasterResponseBodyPgmSceneInfosSceneInfoStreamInfos setStreamInfo(java.util.List<StartCasterResponseBodyPgmSceneInfosSceneInfoStreamInfosStreamInfo> streamInfo) {
-            this.streamInfo = streamInfo;
-            return this;
-        }
-        public java.util.List<StartCasterResponseBodyPgmSceneInfosSceneInfoStreamInfosStreamInfo> getStreamInfo() {
-            return this.streamInfo;
-        }
-
-    }
-
-    public static class StartCasterResponseBodyPgmSceneInfosSceneInfo extends TeaModel {
-        @NameInMap("StreamInfos")
-        public StartCasterResponseBodyPgmSceneInfosSceneInfoStreamInfos streamInfos;
-
-        @NameInMap("SceneId")
-        public String sceneId;
-
-        @NameInMap("StreamUrl")
-        public String streamUrl;
-
-        public static StartCasterResponseBodyPgmSceneInfosSceneInfo build(java.util.Map<String, ?> map) throws Exception {
-            StartCasterResponseBodyPgmSceneInfosSceneInfo self = new StartCasterResponseBodyPgmSceneInfosSceneInfo();
-            return TeaModel.build(map, self);
-        }
-
-        public StartCasterResponseBodyPgmSceneInfosSceneInfo setStreamInfos(StartCasterResponseBodyPgmSceneInfosSceneInfoStreamInfos streamInfos) {
-            this.streamInfos = streamInfos;
-            return this;
-        }
-        public StartCasterResponseBodyPgmSceneInfosSceneInfoStreamInfos getStreamInfos() {
-            return this.streamInfos;
-        }
-
-        public StartCasterResponseBodyPgmSceneInfosSceneInfo setSceneId(String sceneId) {
-            this.sceneId = sceneId;
-            return this;
-        }
-        public String getSceneId() {
-            return this.sceneId;
-        }
-
-        public StartCasterResponseBodyPgmSceneInfosSceneInfo setStreamUrl(String streamUrl) {
-            this.streamUrl = streamUrl;
-            return this;
-        }
-        public String getStreamUrl() {
-            return this.streamUrl;
-        }
-
-    }
-
-    public static class StartCasterResponseBodyPgmSceneInfos extends TeaModel {
-        @NameInMap("SceneInfo")
-        public java.util.List<StartCasterResponseBodyPgmSceneInfosSceneInfo> sceneInfo;
-
-        public static StartCasterResponseBodyPgmSceneInfos build(java.util.Map<String, ?> map) throws Exception {
-            StartCasterResponseBodyPgmSceneInfos self = new StartCasterResponseBodyPgmSceneInfos();
-            return TeaModel.build(map, self);
-        }
-
-        public StartCasterResponseBodyPgmSceneInfos setSceneInfo(java.util.List<StartCasterResponseBodyPgmSceneInfosSceneInfo> sceneInfo) {
-            this.sceneInfo = sceneInfo;
-            return this;
-        }
-        public java.util.List<StartCasterResponseBodyPgmSceneInfosSceneInfo> getSceneInfo() {
             return this.sceneInfo;
         }
 

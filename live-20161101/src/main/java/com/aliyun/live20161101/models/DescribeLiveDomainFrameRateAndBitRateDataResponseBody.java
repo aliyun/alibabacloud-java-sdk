@@ -4,23 +4,15 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveDomainFrameRateAndBitRateDataResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("FrameRateAndBitRateInfos")
     public DescribeLiveDomainFrameRateAndBitRateDataResponseBodyFrameRateAndBitRateInfos frameRateAndBitRateInfos;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeLiveDomainFrameRateAndBitRateDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveDomainFrameRateAndBitRateDataResponseBody self = new DescribeLiveDomainFrameRateAndBitRateDataResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeLiveDomainFrameRateAndBitRateDataResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeLiveDomainFrameRateAndBitRateDataResponseBody setFrameRateAndBitRateInfos(DescribeLiveDomainFrameRateAndBitRateDataResponseBodyFrameRateAndBitRateInfos frameRateAndBitRateInfos) {
@@ -31,18 +23,26 @@ public class DescribeLiveDomainFrameRateAndBitRateDataResponseBody extends TeaMo
         return this.frameRateAndBitRateInfos;
     }
 
+    public DescribeLiveDomainFrameRateAndBitRateDataResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeLiveDomainFrameRateAndBitRateDataResponseBodyFrameRateAndBitRateInfosFrameRateAndBitRateInfo extends TeaModel {
         @NameInMap("AudioFrameRate")
         public Float audioFrameRate;
 
-        @NameInMap("VideoFrameRate")
-        public Float videoFrameRate;
+        @NameInMap("BitRate")
+        public Float bitRate;
 
         @NameInMap("StreamUrl")
         public String streamUrl;
 
-        @NameInMap("BitRate")
-        public Float bitRate;
+        @NameInMap("VideoFrameRate")
+        public Float videoFrameRate;
 
         public static DescribeLiveDomainFrameRateAndBitRateDataResponseBodyFrameRateAndBitRateInfosFrameRateAndBitRateInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeLiveDomainFrameRateAndBitRateDataResponseBodyFrameRateAndBitRateInfosFrameRateAndBitRateInfo self = new DescribeLiveDomainFrameRateAndBitRateDataResponseBodyFrameRateAndBitRateInfosFrameRateAndBitRateInfo();
@@ -57,12 +57,12 @@ public class DescribeLiveDomainFrameRateAndBitRateDataResponseBody extends TeaMo
             return this.audioFrameRate;
         }
 
-        public DescribeLiveDomainFrameRateAndBitRateDataResponseBodyFrameRateAndBitRateInfosFrameRateAndBitRateInfo setVideoFrameRate(Float videoFrameRate) {
-            this.videoFrameRate = videoFrameRate;
+        public DescribeLiveDomainFrameRateAndBitRateDataResponseBodyFrameRateAndBitRateInfosFrameRateAndBitRateInfo setBitRate(Float bitRate) {
+            this.bitRate = bitRate;
             return this;
         }
-        public Float getVideoFrameRate() {
-            return this.videoFrameRate;
+        public Float getBitRate() {
+            return this.bitRate;
         }
 
         public DescribeLiveDomainFrameRateAndBitRateDataResponseBodyFrameRateAndBitRateInfosFrameRateAndBitRateInfo setStreamUrl(String streamUrl) {
@@ -73,12 +73,12 @@ public class DescribeLiveDomainFrameRateAndBitRateDataResponseBody extends TeaMo
             return this.streamUrl;
         }
 
-        public DescribeLiveDomainFrameRateAndBitRateDataResponseBodyFrameRateAndBitRateInfosFrameRateAndBitRateInfo setBitRate(Float bitRate) {
-            this.bitRate = bitRate;
+        public DescribeLiveDomainFrameRateAndBitRateDataResponseBodyFrameRateAndBitRateInfosFrameRateAndBitRateInfo setVideoFrameRate(Float videoFrameRate) {
+            this.videoFrameRate = videoFrameRate;
             return this;
         }
-        public Float getBitRate() {
-            return this.bitRate;
+        public Float getVideoFrameRate() {
+            return this.videoFrameRate;
         }
 
     }

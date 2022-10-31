@@ -4,18 +4,26 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeMixStreamListResponseBody extends TeaModel {
+    @NameInMap("MixStreamList")
+    public java.util.List<DescribeMixStreamListResponseBodyMixStreamList> mixStreamList;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Total")
     public Integer total;
 
-    @NameInMap("MixStreamList")
-    public java.util.List<DescribeMixStreamListResponseBodyMixStreamList> mixStreamList;
-
     public static DescribeMixStreamListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeMixStreamListResponseBody self = new DescribeMixStreamListResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeMixStreamListResponseBody setMixStreamList(java.util.List<DescribeMixStreamListResponseBodyMixStreamList> mixStreamList) {
+        this.mixStreamList = mixStreamList;
+        return this;
+    }
+    public java.util.List<DescribeMixStreamListResponseBodyMixStreamList> getMixStreamList() {
+        return this.mixStreamList;
     }
 
     public DescribeMixStreamListResponseBody setRequestId(String requestId) {
@@ -34,32 +42,15 @@ public class DescribeMixStreamListResponseBody extends TeaModel {
         return this.total;
     }
 
-    public DescribeMixStreamListResponseBody setMixStreamList(java.util.List<DescribeMixStreamListResponseBodyMixStreamList> mixStreamList) {
-        this.mixStreamList = mixStreamList;
-        return this;
-    }
-    public java.util.List<DescribeMixStreamListResponseBodyMixStreamList> getMixStreamList() {
-        return this.mixStreamList;
-    }
-
     public static class DescribeMixStreamListResponseBodyMixStreamList extends TeaModel {
-        @NameInMap("MixStreamTemplate")
-        public String mixStreamTemplate;
-
         @NameInMap("AppName")
         public String appName;
 
-        @NameInMap("LayoutId")
-        public String layoutId;
-
-        @NameInMap("StreamName")
-        public String streamName;
+        @NameInMap("DomainName")
+        public String domainName;
 
         @NameInMap("GmtCreate")
         public String gmtCreate;
-
-        @NameInMap("MixstreamId")
-        public String mixstreamId;
 
         @NameInMap("GmtModified")
         public String gmtModified;
@@ -67,20 +58,21 @@ public class DescribeMixStreamListResponseBody extends TeaModel {
         @NameInMap("InputStreamNumber")
         public Integer inputStreamNumber;
 
-        @NameInMap("DomainName")
-        public String domainName;
+        @NameInMap("LayoutId")
+        public String layoutId;
+
+        @NameInMap("MixStreamTemplate")
+        public String mixStreamTemplate;
+
+        @NameInMap("MixstreamId")
+        public String mixstreamId;
+
+        @NameInMap("StreamName")
+        public String streamName;
 
         public static DescribeMixStreamListResponseBodyMixStreamList build(java.util.Map<String, ?> map) throws Exception {
             DescribeMixStreamListResponseBodyMixStreamList self = new DescribeMixStreamListResponseBodyMixStreamList();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeMixStreamListResponseBodyMixStreamList setMixStreamTemplate(String mixStreamTemplate) {
-            this.mixStreamTemplate = mixStreamTemplate;
-            return this;
-        }
-        public String getMixStreamTemplate() {
-            return this.mixStreamTemplate;
         }
 
         public DescribeMixStreamListResponseBodyMixStreamList setAppName(String appName) {
@@ -91,20 +83,12 @@ public class DescribeMixStreamListResponseBody extends TeaModel {
             return this.appName;
         }
 
-        public DescribeMixStreamListResponseBodyMixStreamList setLayoutId(String layoutId) {
-            this.layoutId = layoutId;
+        public DescribeMixStreamListResponseBodyMixStreamList setDomainName(String domainName) {
+            this.domainName = domainName;
             return this;
         }
-        public String getLayoutId() {
-            return this.layoutId;
-        }
-
-        public DescribeMixStreamListResponseBodyMixStreamList setStreamName(String streamName) {
-            this.streamName = streamName;
-            return this;
-        }
-        public String getStreamName() {
-            return this.streamName;
+        public String getDomainName() {
+            return this.domainName;
         }
 
         public DescribeMixStreamListResponseBodyMixStreamList setGmtCreate(String gmtCreate) {
@@ -113,14 +97,6 @@ public class DescribeMixStreamListResponseBody extends TeaModel {
         }
         public String getGmtCreate() {
             return this.gmtCreate;
-        }
-
-        public DescribeMixStreamListResponseBodyMixStreamList setMixstreamId(String mixstreamId) {
-            this.mixstreamId = mixstreamId;
-            return this;
-        }
-        public String getMixstreamId() {
-            return this.mixstreamId;
         }
 
         public DescribeMixStreamListResponseBodyMixStreamList setGmtModified(String gmtModified) {
@@ -139,12 +115,36 @@ public class DescribeMixStreamListResponseBody extends TeaModel {
             return this.inputStreamNumber;
         }
 
-        public DescribeMixStreamListResponseBodyMixStreamList setDomainName(String domainName) {
-            this.domainName = domainName;
+        public DescribeMixStreamListResponseBodyMixStreamList setLayoutId(String layoutId) {
+            this.layoutId = layoutId;
             return this;
         }
-        public String getDomainName() {
-            return this.domainName;
+        public String getLayoutId() {
+            return this.layoutId;
+        }
+
+        public DescribeMixStreamListResponseBodyMixStreamList setMixStreamTemplate(String mixStreamTemplate) {
+            this.mixStreamTemplate = mixStreamTemplate;
+            return this;
+        }
+        public String getMixStreamTemplate() {
+            return this.mixStreamTemplate;
+        }
+
+        public DescribeMixStreamListResponseBodyMixStreamList setMixstreamId(String mixstreamId) {
+            this.mixstreamId = mixstreamId;
+            return this;
+        }
+        public String getMixstreamId() {
+            return this.mixstreamId;
+        }
+
+        public DescribeMixStreamListResponseBodyMixStreamList setStreamName(String streamName) {
+            this.streamName = streamName;
+            return this;
+        }
+        public String getStreamName() {
+            return this.streamName;
         }
 
     }

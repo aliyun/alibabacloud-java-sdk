@@ -32,21 +32,37 @@ public class DescribeUpBpsPeakOfLineResponseBody extends TeaModel {
     }
 
     public static class DescribeUpBpsPeakOfLineResponseBodyDescribeUpBpsPeakOfLinesDescribeUpBpsPeakOfLine extends TeaModel {
+        @NameInMap("BandWidth")
+        public Float bandWidth;
+
+        @NameInMap("PeakTime")
+        public String peakTime;
+
         @NameInMap("QueryTime")
         public String queryTime;
 
         @NameInMap("StatName")
         public String statName;
 
-        @NameInMap("PeakTime")
-        public String peakTime;
-
-        @NameInMap("BandWidth")
-        public Float bandWidth;
-
         public static DescribeUpBpsPeakOfLineResponseBodyDescribeUpBpsPeakOfLinesDescribeUpBpsPeakOfLine build(java.util.Map<String, ?> map) throws Exception {
             DescribeUpBpsPeakOfLineResponseBodyDescribeUpBpsPeakOfLinesDescribeUpBpsPeakOfLine self = new DescribeUpBpsPeakOfLineResponseBodyDescribeUpBpsPeakOfLinesDescribeUpBpsPeakOfLine();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeUpBpsPeakOfLineResponseBodyDescribeUpBpsPeakOfLinesDescribeUpBpsPeakOfLine setBandWidth(Float bandWidth) {
+            this.bandWidth = bandWidth;
+            return this;
+        }
+        public Float getBandWidth() {
+            return this.bandWidth;
+        }
+
+        public DescribeUpBpsPeakOfLineResponseBodyDescribeUpBpsPeakOfLinesDescribeUpBpsPeakOfLine setPeakTime(String peakTime) {
+            this.peakTime = peakTime;
+            return this;
+        }
+        public String getPeakTime() {
+            return this.peakTime;
         }
 
         public DescribeUpBpsPeakOfLineResponseBodyDescribeUpBpsPeakOfLinesDescribeUpBpsPeakOfLine setQueryTime(String queryTime) {
@@ -63,22 +79,6 @@ public class DescribeUpBpsPeakOfLineResponseBody extends TeaModel {
         }
         public String getStatName() {
             return this.statName;
-        }
-
-        public DescribeUpBpsPeakOfLineResponseBodyDescribeUpBpsPeakOfLinesDescribeUpBpsPeakOfLine setPeakTime(String peakTime) {
-            this.peakTime = peakTime;
-            return this;
-        }
-        public String getPeakTime() {
-            return this.peakTime;
-        }
-
-        public DescribeUpBpsPeakOfLineResponseBodyDescribeUpBpsPeakOfLinesDescribeUpBpsPeakOfLine setBandWidth(Float bandWidth) {
-            this.bandWidth = bandWidth;
-            return this;
-        }
-        public Float getBandWidth() {
-            return this.bandWidth;
         }
 
     }

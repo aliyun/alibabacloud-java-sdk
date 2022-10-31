@@ -4,63 +4,39 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class CreateLiveStreamRecordIndexFilesRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("AppName")
+    public String appName;
 
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("AppName")
-    public String appName;
-
-    @NameInMap("StreamName")
-    public String streamName;
-
-    @NameInMap("OssEndpoint")
-    public String ossEndpoint;
+    @NameInMap("EndTime")
+    public String endTime;
 
     @NameInMap("OssBucket")
     public String ossBucket;
 
+    @NameInMap("OssEndpoint")
+    public String ossEndpoint;
+
     @NameInMap("OssObject")
     public String ossObject;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     @NameInMap("StartTime")
     public String startTime;
 
-    @NameInMap("EndTime")
-    public String endTime;
+    @NameInMap("StreamName")
+    public String streamName;
 
     public static CreateLiveStreamRecordIndexFilesRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateLiveStreamRecordIndexFilesRequest self = new CreateLiveStreamRecordIndexFilesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateLiveStreamRecordIndexFilesRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
-    public CreateLiveStreamRecordIndexFilesRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public CreateLiveStreamRecordIndexFilesRequest setDomainName(String domainName) {
-        this.domainName = domainName;
-        return this;
-    }
-    public String getDomainName() {
-        return this.domainName;
     }
 
     public CreateLiveStreamRecordIndexFilesRequest setAppName(String appName) {
@@ -71,20 +47,20 @@ public class CreateLiveStreamRecordIndexFilesRequest extends TeaModel {
         return this.appName;
     }
 
-    public CreateLiveStreamRecordIndexFilesRequest setStreamName(String streamName) {
-        this.streamName = streamName;
+    public CreateLiveStreamRecordIndexFilesRequest setDomainName(String domainName) {
+        this.domainName = domainName;
         return this;
     }
-    public String getStreamName() {
-        return this.streamName;
+    public String getDomainName() {
+        return this.domainName;
     }
 
-    public CreateLiveStreamRecordIndexFilesRequest setOssEndpoint(String ossEndpoint) {
-        this.ossEndpoint = ossEndpoint;
+    public CreateLiveStreamRecordIndexFilesRequest setEndTime(String endTime) {
+        this.endTime = endTime;
         return this;
     }
-    public String getOssEndpoint() {
-        return this.ossEndpoint;
+    public String getEndTime() {
+        return this.endTime;
     }
 
     public CreateLiveStreamRecordIndexFilesRequest setOssBucket(String ossBucket) {
@@ -95,12 +71,36 @@ public class CreateLiveStreamRecordIndexFilesRequest extends TeaModel {
         return this.ossBucket;
     }
 
+    public CreateLiveStreamRecordIndexFilesRequest setOssEndpoint(String ossEndpoint) {
+        this.ossEndpoint = ossEndpoint;
+        return this;
+    }
+    public String getOssEndpoint() {
+        return this.ossEndpoint;
+    }
+
     public CreateLiveStreamRecordIndexFilesRequest setOssObject(String ossObject) {
         this.ossObject = ossObject;
         return this;
     }
     public String getOssObject() {
         return this.ossObject;
+    }
+
+    public CreateLiveStreamRecordIndexFilesRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public CreateLiveStreamRecordIndexFilesRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public CreateLiveStreamRecordIndexFilesRequest setStartTime(String startTime) {
@@ -111,12 +111,12 @@ public class CreateLiveStreamRecordIndexFilesRequest extends TeaModel {
         return this.startTime;
     }
 
-    public CreateLiveStreamRecordIndexFilesRequest setEndTime(String endTime) {
-        this.endTime = endTime;
+    public CreateLiveStreamRecordIndexFilesRequest setStreamName(String streamName) {
+        this.streamName = streamName;
         return this;
     }
-    public String getEndTime() {
-        return this.endTime;
+    public String getStreamName() {
+        return this.streamName;
     }
 
 }

@@ -7,11 +7,11 @@ public class DescribeLiveDomainBpsDataByTimeStampResponseBody extends TeaModel {
     @NameInMap("BpsDataList")
     public DescribeLiveDomainBpsDataByTimeStampResponseBodyBpsDataList bpsDataList;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("DomainName")
     public String domainName;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("TimeStamp")
     public String timeStamp;
@@ -29,20 +29,20 @@ public class DescribeLiveDomainBpsDataByTimeStampResponseBody extends TeaModel {
         return this.bpsDataList;
     }
 
-    public DescribeLiveDomainBpsDataByTimeStampResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeLiveDomainBpsDataByTimeStampResponseBody setDomainName(String domainName) {
         this.domainName = domainName;
         return this;
     }
     public String getDomainName() {
         return this.domainName;
+    }
+
+    public DescribeLiveDomainBpsDataByTimeStampResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeLiveDomainBpsDataByTimeStampResponseBody setTimeStamp(String timeStamp) {
@@ -54,21 +54,37 @@ public class DescribeLiveDomainBpsDataByTimeStampResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveDomainBpsDataByTimeStampResponseBodyBpsDataListBpsDataModel extends TeaModel {
+        @NameInMap("Bps")
+        public Long bps;
+
+        @NameInMap("IspName")
+        public String ispName;
+
         @NameInMap("LocationName")
         public String locationName;
 
         @NameInMap("TimeStamp")
         public String timeStamp;
 
-        @NameInMap("IspName")
-        public String ispName;
-
-        @NameInMap("Bps")
-        public Long bps;
-
         public static DescribeLiveDomainBpsDataByTimeStampResponseBodyBpsDataListBpsDataModel build(java.util.Map<String, ?> map) throws Exception {
             DescribeLiveDomainBpsDataByTimeStampResponseBodyBpsDataListBpsDataModel self = new DescribeLiveDomainBpsDataByTimeStampResponseBodyBpsDataListBpsDataModel();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeLiveDomainBpsDataByTimeStampResponseBodyBpsDataListBpsDataModel setBps(Long bps) {
+            this.bps = bps;
+            return this;
+        }
+        public Long getBps() {
+            return this.bps;
+        }
+
+        public DescribeLiveDomainBpsDataByTimeStampResponseBodyBpsDataListBpsDataModel setIspName(String ispName) {
+            this.ispName = ispName;
+            return this;
+        }
+        public String getIspName() {
+            return this.ispName;
         }
 
         public DescribeLiveDomainBpsDataByTimeStampResponseBodyBpsDataListBpsDataModel setLocationName(String locationName) {
@@ -85,22 +101,6 @@ public class DescribeLiveDomainBpsDataByTimeStampResponseBody extends TeaModel {
         }
         public String getTimeStamp() {
             return this.timeStamp;
-        }
-
-        public DescribeLiveDomainBpsDataByTimeStampResponseBodyBpsDataListBpsDataModel setIspName(String ispName) {
-            this.ispName = ispName;
-            return this;
-        }
-        public String getIspName() {
-            return this.ispName;
-        }
-
-        public DescribeLiveDomainBpsDataByTimeStampResponseBodyBpsDataListBpsDataModel setBps(Long bps) {
-            this.bps = bps;
-            return this;
-        }
-        public Long getBps() {
-            return this.bps;
         }
 
     }

@@ -4,12 +4,6 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class SetLiveStreamOptimizedFeatureConfigRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("DomainName")
-    public String domainName;
-
     @NameInMap("ConfigName")
     public String configName;
 
@@ -19,25 +13,15 @@ public class SetLiveStreamOptimizedFeatureConfigRequest extends TeaModel {
     @NameInMap("ConfigValue")
     public String configValue;
 
+    @NameInMap("DomainName")
+    public String domainName;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     public static SetLiveStreamOptimizedFeatureConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         SetLiveStreamOptimizedFeatureConfigRequest self = new SetLiveStreamOptimizedFeatureConfigRequest();
         return TeaModel.build(map, self);
-    }
-
-    public SetLiveStreamOptimizedFeatureConfigRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public SetLiveStreamOptimizedFeatureConfigRequest setDomainName(String domainName) {
-        this.domainName = domainName;
-        return this;
-    }
-    public String getDomainName() {
-        return this.domainName;
     }
 
     public SetLiveStreamOptimizedFeatureConfigRequest setConfigName(String configName) {
@@ -62,6 +46,22 @@ public class SetLiveStreamOptimizedFeatureConfigRequest extends TeaModel {
     }
     public String getConfigValue() {
         return this.configValue;
+    }
+
+    public SetLiveStreamOptimizedFeatureConfigRequest setDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String getDomainName() {
+        return this.domainName;
+    }
+
+    public SetLiveStreamOptimizedFeatureConfigRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
 }

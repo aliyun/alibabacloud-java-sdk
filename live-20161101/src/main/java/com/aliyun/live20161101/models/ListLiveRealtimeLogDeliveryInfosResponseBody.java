@@ -4,23 +4,15 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class ListLiveRealtimeLogDeliveryInfosResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Content")
     public ListLiveRealtimeLogDeliveryInfosResponseBodyContent content;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ListLiveRealtimeLogDeliveryInfosResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListLiveRealtimeLogDeliveryInfosResponseBody self = new ListLiveRealtimeLogDeliveryInfosResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListLiveRealtimeLogDeliveryInfosResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListLiveRealtimeLogDeliveryInfosResponseBody setContent(ListLiveRealtimeLogDeliveryInfosResponseBodyContent content) {
@@ -31,27 +23,27 @@ public class ListLiveRealtimeLogDeliveryInfosResponseBody extends TeaModel {
         return this.content;
     }
 
-    public static class ListLiveRealtimeLogDeliveryInfosResponseBodyContentRealtimeLogDeliveryInfos extends TeaModel {
-        @NameInMap("Region")
-        public String region;
+    public ListLiveRealtimeLogDeliveryInfosResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class ListLiveRealtimeLogDeliveryInfosResponseBodyContentRealtimeLogDeliveryInfos extends TeaModel {
         @NameInMap("Logstore")
         public String logstore;
 
         @NameInMap("Project")
         public String project;
 
+        @NameInMap("Region")
+        public String region;
+
         public static ListLiveRealtimeLogDeliveryInfosResponseBodyContentRealtimeLogDeliveryInfos build(java.util.Map<String, ?> map) throws Exception {
             ListLiveRealtimeLogDeliveryInfosResponseBodyContentRealtimeLogDeliveryInfos self = new ListLiveRealtimeLogDeliveryInfosResponseBodyContentRealtimeLogDeliveryInfos();
             return TeaModel.build(map, self);
-        }
-
-        public ListLiveRealtimeLogDeliveryInfosResponseBodyContentRealtimeLogDeliveryInfos setRegion(String region) {
-            this.region = region;
-            return this;
-        }
-        public String getRegion() {
-            return this.region;
         }
 
         public ListLiveRealtimeLogDeliveryInfosResponseBodyContentRealtimeLogDeliveryInfos setLogstore(String logstore) {
@@ -68,6 +60,14 @@ public class ListLiveRealtimeLogDeliveryInfosResponseBody extends TeaModel {
         }
         public String getProject() {
             return this.project;
+        }
+
+        public ListLiveRealtimeLogDeliveryInfosResponseBodyContentRealtimeLogDeliveryInfos setRegion(String region) {
+            this.region = region;
+            return this;
+        }
+        public String getRegion() {
+            return this.region;
         }
 
     }

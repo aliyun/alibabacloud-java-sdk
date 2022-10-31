@@ -7,11 +7,11 @@ public class DescribeLiveStreamSnapshotInfoResponseBody extends TeaModel {
     @NameInMap("LiveStreamSnapshotInfoList")
     public DescribeLiveStreamSnapshotInfoResponseBodyLiveStreamSnapshotInfoList liveStreamSnapshotInfoList;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("NextStartTime")
     public String nextStartTime;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeLiveStreamSnapshotInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveStreamSnapshotInfoResponseBody self = new DescribeLiveStreamSnapshotInfoResponseBody();
@@ -26,14 +26,6 @@ public class DescribeLiveStreamSnapshotInfoResponseBody extends TeaModel {
         return this.liveStreamSnapshotInfoList;
     }
 
-    public DescribeLiveStreamSnapshotInfoResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeLiveStreamSnapshotInfoResponseBody setNextStartTime(String nextStartTime) {
         this.nextStartTime = nextStartTime;
         return this;
@@ -42,12 +34,23 @@ public class DescribeLiveStreamSnapshotInfoResponseBody extends TeaModel {
         return this.nextStartTime;
     }
 
-    public static class DescribeLiveStreamSnapshotInfoResponseBodyLiveStreamSnapshotInfoListLiveStreamSnapshotInfo extends TeaModel {
-        @NameInMap("OssObject")
-        public String ossObject;
+    public DescribeLiveStreamSnapshotInfoResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class DescribeLiveStreamSnapshotInfoResponseBodyLiveStreamSnapshotInfoListLiveStreamSnapshotInfo extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
+
+        @NameInMap("CreateTimestamp")
+        public Long createTimestamp;
+
+        @NameInMap("IsOverlay")
+        public Boolean isOverlay;
 
         @NameInMap("OssBucket")
         public String ossBucket;
@@ -55,17 +58,12 @@ public class DescribeLiveStreamSnapshotInfoResponseBody extends TeaModel {
         @NameInMap("OssEndpoint")
         public String ossEndpoint;
 
+        @NameInMap("OssObject")
+        public String ossObject;
+
         public static DescribeLiveStreamSnapshotInfoResponseBodyLiveStreamSnapshotInfoListLiveStreamSnapshotInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeLiveStreamSnapshotInfoResponseBodyLiveStreamSnapshotInfoListLiveStreamSnapshotInfo self = new DescribeLiveStreamSnapshotInfoResponseBodyLiveStreamSnapshotInfoListLiveStreamSnapshotInfo();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeLiveStreamSnapshotInfoResponseBodyLiveStreamSnapshotInfoListLiveStreamSnapshotInfo setOssObject(String ossObject) {
-            this.ossObject = ossObject;
-            return this;
-        }
-        public String getOssObject() {
-            return this.ossObject;
         }
 
         public DescribeLiveStreamSnapshotInfoResponseBodyLiveStreamSnapshotInfoListLiveStreamSnapshotInfo setCreateTime(String createTime) {
@@ -74,6 +72,22 @@ public class DescribeLiveStreamSnapshotInfoResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        public DescribeLiveStreamSnapshotInfoResponseBodyLiveStreamSnapshotInfoListLiveStreamSnapshotInfo setCreateTimestamp(Long createTimestamp) {
+            this.createTimestamp = createTimestamp;
+            return this;
+        }
+        public Long getCreateTimestamp() {
+            return this.createTimestamp;
+        }
+
+        public DescribeLiveStreamSnapshotInfoResponseBodyLiveStreamSnapshotInfoListLiveStreamSnapshotInfo setIsOverlay(Boolean isOverlay) {
+            this.isOverlay = isOverlay;
+            return this;
+        }
+        public Boolean getIsOverlay() {
+            return this.isOverlay;
         }
 
         public DescribeLiveStreamSnapshotInfoResponseBodyLiveStreamSnapshotInfoListLiveStreamSnapshotInfo setOssBucket(String ossBucket) {
@@ -90,6 +104,14 @@ public class DescribeLiveStreamSnapshotInfoResponseBody extends TeaModel {
         }
         public String getOssEndpoint() {
             return this.ossEndpoint;
+        }
+
+        public DescribeLiveStreamSnapshotInfoResponseBodyLiveStreamSnapshotInfoListLiveStreamSnapshotInfo setOssObject(String ossObject) {
+            this.ossObject = ossObject;
+            return this;
+        }
+        public String getOssObject() {
+            return this.ossObject;
         }
 
     }

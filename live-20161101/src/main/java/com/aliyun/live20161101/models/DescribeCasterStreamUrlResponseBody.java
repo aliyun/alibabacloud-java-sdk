@@ -4,21 +4,37 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeCasterStreamUrlResponseBody extends TeaModel {
+    @NameInMap("CasterId")
+    public String casterId;
+
+    @NameInMap("CasterStreams")
+    public DescribeCasterStreamUrlResponseBodyCasterStreams casterStreams;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Total")
     public Integer total;
 
-    @NameInMap("CasterStreams")
-    public DescribeCasterStreamUrlResponseBodyCasterStreams casterStreams;
-
-    @NameInMap("CasterId")
-    public String casterId;
-
     public static DescribeCasterStreamUrlResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCasterStreamUrlResponseBody self = new DescribeCasterStreamUrlResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeCasterStreamUrlResponseBody setCasterId(String casterId) {
+        this.casterId = casterId;
+        return this;
+    }
+    public String getCasterId() {
+        return this.casterId;
+    }
+
+    public DescribeCasterStreamUrlResponseBody setCasterStreams(DescribeCasterStreamUrlResponseBodyCasterStreams casterStreams) {
+        this.casterStreams = casterStreams;
+        return this;
+    }
+    public DescribeCasterStreamUrlResponseBodyCasterStreams getCasterStreams() {
+        return this.casterStreams;
     }
 
     public DescribeCasterStreamUrlResponseBody setRequestId(String requestId) {
@@ -37,43 +53,19 @@ public class DescribeCasterStreamUrlResponseBody extends TeaModel {
         return this.total;
     }
 
-    public DescribeCasterStreamUrlResponseBody setCasterStreams(DescribeCasterStreamUrlResponseBodyCasterStreams casterStreams) {
-        this.casterStreams = casterStreams;
-        return this;
-    }
-    public DescribeCasterStreamUrlResponseBodyCasterStreams getCasterStreams() {
-        return this.casterStreams;
-    }
-
-    public DescribeCasterStreamUrlResponseBody setCasterId(String casterId) {
-        this.casterId = casterId;
-        return this;
-    }
-    public String getCasterId() {
-        return this.casterId;
-    }
-
     public static class DescribeCasterStreamUrlResponseBodyCasterStreamsCasterStreamStreamInfosStreamInfo extends TeaModel {
-        @NameInMap("VideoFormat")
-        public String videoFormat;
-
         @NameInMap("OutputStreamUrl")
         public String outputStreamUrl;
 
         @NameInMap("TranscodeConfig")
         public String transcodeConfig;
 
+        @NameInMap("VideoFormat")
+        public String videoFormat;
+
         public static DescribeCasterStreamUrlResponseBodyCasterStreamsCasterStreamStreamInfosStreamInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeCasterStreamUrlResponseBodyCasterStreamsCasterStreamStreamInfosStreamInfo self = new DescribeCasterStreamUrlResponseBodyCasterStreamsCasterStreamStreamInfosStreamInfo();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeCasterStreamUrlResponseBodyCasterStreamsCasterStreamStreamInfosStreamInfo setVideoFormat(String videoFormat) {
-            this.videoFormat = videoFormat;
-            return this;
-        }
-        public String getVideoFormat() {
-            return this.videoFormat;
         }
 
         public DescribeCasterStreamUrlResponseBodyCasterStreamsCasterStreamStreamInfosStreamInfo setOutputStreamUrl(String outputStreamUrl) {
@@ -90,6 +82,14 @@ public class DescribeCasterStreamUrlResponseBody extends TeaModel {
         }
         public String getTranscodeConfig() {
             return this.transcodeConfig;
+        }
+
+        public DescribeCasterStreamUrlResponseBodyCasterStreamsCasterStreamStreamInfosStreamInfo setVideoFormat(String videoFormat) {
+            this.videoFormat = videoFormat;
+            return this;
+        }
+        public String getVideoFormat() {
+            return this.videoFormat;
         }
 
     }
@@ -114,17 +114,17 @@ public class DescribeCasterStreamUrlResponseBody extends TeaModel {
     }
 
     public static class DescribeCasterStreamUrlResponseBodyCasterStreamsCasterStream extends TeaModel {
-        @NameInMap("RtmpUrl")
-        public String rtmpUrl;
-
         @NameInMap("OutputType")
         public Integer outputType;
 
-        @NameInMap("StreamInfos")
-        public DescribeCasterStreamUrlResponseBodyCasterStreamsCasterStreamStreamInfos streamInfos;
+        @NameInMap("RtmpUrl")
+        public String rtmpUrl;
 
         @NameInMap("SceneId")
         public String sceneId;
+
+        @NameInMap("StreamInfos")
+        public DescribeCasterStreamUrlResponseBodyCasterStreamsCasterStreamStreamInfos streamInfos;
 
         @NameInMap("StreamUrl")
         public String streamUrl;
@@ -132,14 +132,6 @@ public class DescribeCasterStreamUrlResponseBody extends TeaModel {
         public static DescribeCasterStreamUrlResponseBodyCasterStreamsCasterStream build(java.util.Map<String, ?> map) throws Exception {
             DescribeCasterStreamUrlResponseBodyCasterStreamsCasterStream self = new DescribeCasterStreamUrlResponseBodyCasterStreamsCasterStream();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeCasterStreamUrlResponseBodyCasterStreamsCasterStream setRtmpUrl(String rtmpUrl) {
-            this.rtmpUrl = rtmpUrl;
-            return this;
-        }
-        public String getRtmpUrl() {
-            return this.rtmpUrl;
         }
 
         public DescribeCasterStreamUrlResponseBodyCasterStreamsCasterStream setOutputType(Integer outputType) {
@@ -150,12 +142,12 @@ public class DescribeCasterStreamUrlResponseBody extends TeaModel {
             return this.outputType;
         }
 
-        public DescribeCasterStreamUrlResponseBodyCasterStreamsCasterStream setStreamInfos(DescribeCasterStreamUrlResponseBodyCasterStreamsCasterStreamStreamInfos streamInfos) {
-            this.streamInfos = streamInfos;
+        public DescribeCasterStreamUrlResponseBodyCasterStreamsCasterStream setRtmpUrl(String rtmpUrl) {
+            this.rtmpUrl = rtmpUrl;
             return this;
         }
-        public DescribeCasterStreamUrlResponseBodyCasterStreamsCasterStreamStreamInfos getStreamInfos() {
-            return this.streamInfos;
+        public String getRtmpUrl() {
+            return this.rtmpUrl;
         }
 
         public DescribeCasterStreamUrlResponseBodyCasterStreamsCasterStream setSceneId(String sceneId) {
@@ -164,6 +156,14 @@ public class DescribeCasterStreamUrlResponseBody extends TeaModel {
         }
         public String getSceneId() {
             return this.sceneId;
+        }
+
+        public DescribeCasterStreamUrlResponseBodyCasterStreamsCasterStream setStreamInfos(DescribeCasterStreamUrlResponseBodyCasterStreamsCasterStreamStreamInfos streamInfos) {
+            this.streamInfos = streamInfos;
+            return this;
+        }
+        public DescribeCasterStreamUrlResponseBodyCasterStreamsCasterStreamStreamInfos getStreamInfos() {
+            return this.streamInfos;
         }
 
         public DescribeCasterStreamUrlResponseBodyCasterStreamsCasterStream setStreamUrl(String streamUrl) {

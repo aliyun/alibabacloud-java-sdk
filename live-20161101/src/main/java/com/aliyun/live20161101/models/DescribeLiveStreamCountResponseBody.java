@@ -32,26 +32,26 @@ public class DescribeLiveStreamCountResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveStreamCountResponseBodyStreamCountInfosStreamCountInfoStreamCountDetailsStreamCountDetail extends TeaModel {
-        @NameInMap("VideoDataRate")
-        public Long videoDataRate;
+        @NameInMap("Count")
+        public Long count;
 
         @NameInMap("Format")
         public String format;
 
-        @NameInMap("Count")
-        public Long count;
+        @NameInMap("VideoDataRate")
+        public Long videoDataRate;
 
         public static DescribeLiveStreamCountResponseBodyStreamCountInfosStreamCountInfoStreamCountDetailsStreamCountDetail build(java.util.Map<String, ?> map) throws Exception {
             DescribeLiveStreamCountResponseBodyStreamCountInfosStreamCountInfoStreamCountDetailsStreamCountDetail self = new DescribeLiveStreamCountResponseBodyStreamCountInfosStreamCountInfoStreamCountDetailsStreamCountDetail();
             return TeaModel.build(map, self);
         }
 
-        public DescribeLiveStreamCountResponseBodyStreamCountInfosStreamCountInfoStreamCountDetailsStreamCountDetail setVideoDataRate(Long videoDataRate) {
-            this.videoDataRate = videoDataRate;
+        public DescribeLiveStreamCountResponseBodyStreamCountInfosStreamCountInfoStreamCountDetailsStreamCountDetail setCount(Long count) {
+            this.count = count;
             return this;
         }
-        public Long getVideoDataRate() {
-            return this.videoDataRate;
+        public Long getCount() {
+            return this.count;
         }
 
         public DescribeLiveStreamCountResponseBodyStreamCountInfosStreamCountInfoStreamCountDetailsStreamCountDetail setFormat(String format) {
@@ -62,12 +62,12 @@ public class DescribeLiveStreamCountResponseBody extends TeaModel {
             return this.format;
         }
 
-        public DescribeLiveStreamCountResponseBodyStreamCountInfosStreamCountInfoStreamCountDetailsStreamCountDetail setCount(Long count) {
-            this.count = count;
+        public DescribeLiveStreamCountResponseBodyStreamCountInfosStreamCountInfoStreamCountDetailsStreamCountDetail setVideoDataRate(Long videoDataRate) {
+            this.videoDataRate = videoDataRate;
             return this;
         }
-        public Long getCount() {
-            return this.count;
+        public Long getVideoDataRate() {
+            return this.videoDataRate;
         }
 
     }
@@ -92,37 +92,29 @@ public class DescribeLiveStreamCountResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveStreamCountResponseBodyStreamCountInfosStreamCountInfo extends TeaModel {
-        @NameInMap("Type")
-        public String type;
-
-        @NameInMap("StreamCountDetails")
-        public DescribeLiveStreamCountResponseBodyStreamCountInfosStreamCountInfoStreamCountDetails streamCountDetails;
+        @NameInMap("Count")
+        public Long count;
 
         @NameInMap("Limit")
         public Long limit;
 
-        @NameInMap("Count")
-        public Long count;
+        @NameInMap("StreamCountDetails")
+        public DescribeLiveStreamCountResponseBodyStreamCountInfosStreamCountInfoStreamCountDetails streamCountDetails;
+
+        @NameInMap("Type")
+        public String type;
 
         public static DescribeLiveStreamCountResponseBodyStreamCountInfosStreamCountInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeLiveStreamCountResponseBodyStreamCountInfosStreamCountInfo self = new DescribeLiveStreamCountResponseBodyStreamCountInfosStreamCountInfo();
             return TeaModel.build(map, self);
         }
 
-        public DescribeLiveStreamCountResponseBodyStreamCountInfosStreamCountInfo setType(String type) {
-            this.type = type;
+        public DescribeLiveStreamCountResponseBodyStreamCountInfosStreamCountInfo setCount(Long count) {
+            this.count = count;
             return this;
         }
-        public String getType() {
-            return this.type;
-        }
-
-        public DescribeLiveStreamCountResponseBodyStreamCountInfosStreamCountInfo setStreamCountDetails(DescribeLiveStreamCountResponseBodyStreamCountInfosStreamCountInfoStreamCountDetails streamCountDetails) {
-            this.streamCountDetails = streamCountDetails;
-            return this;
-        }
-        public DescribeLiveStreamCountResponseBodyStreamCountInfosStreamCountInfoStreamCountDetails getStreamCountDetails() {
-            return this.streamCountDetails;
+        public Long getCount() {
+            return this.count;
         }
 
         public DescribeLiveStreamCountResponseBodyStreamCountInfosStreamCountInfo setLimit(Long limit) {
@@ -133,12 +125,20 @@ public class DescribeLiveStreamCountResponseBody extends TeaModel {
             return this.limit;
         }
 
-        public DescribeLiveStreamCountResponseBodyStreamCountInfosStreamCountInfo setCount(Long count) {
-            this.count = count;
+        public DescribeLiveStreamCountResponseBodyStreamCountInfosStreamCountInfo setStreamCountDetails(DescribeLiveStreamCountResponseBodyStreamCountInfosStreamCountInfoStreamCountDetails streamCountDetails) {
+            this.streamCountDetails = streamCountDetails;
             return this;
         }
-        public Long getCount() {
-            return this.count;
+        public DescribeLiveStreamCountResponseBodyStreamCountInfosStreamCountInfoStreamCountDetails getStreamCountDetails() {
+            return this.streamCountDetails;
+        }
+
+        public DescribeLiveStreamCountResponseBodyStreamCountInfosStreamCountInfo setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }

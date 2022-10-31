@@ -4,30 +4,38 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveSnapshotDetectPornConfigResponseBody extends TeaModel {
+    @NameInMap("LiveSnapshotDetectPornConfigList")
+    public DescribeLiveSnapshotDetectPornConfigResponseBodyLiveSnapshotDetectPornConfigList liveSnapshotDetectPornConfigList;
+
     @NameInMap("Order")
     public String order;
-
-    @NameInMap("TotalNum")
-    public Integer totalNum;
 
     @NameInMap("PageNum")
     public Integer pageNum;
 
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("TotalNum")
+    public Integer totalNum;
 
     @NameInMap("TotalPage")
     public Integer totalPage;
 
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("LiveSnapshotDetectPornConfigList")
-    public DescribeLiveSnapshotDetectPornConfigResponseBodyLiveSnapshotDetectPornConfigList liveSnapshotDetectPornConfigList;
-
     public static DescribeLiveSnapshotDetectPornConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveSnapshotDetectPornConfigResponseBody self = new DescribeLiveSnapshotDetectPornConfigResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeLiveSnapshotDetectPornConfigResponseBody setLiveSnapshotDetectPornConfigList(DescribeLiveSnapshotDetectPornConfigResponseBodyLiveSnapshotDetectPornConfigList liveSnapshotDetectPornConfigList) {
+        this.liveSnapshotDetectPornConfigList = liveSnapshotDetectPornConfigList;
+        return this;
+    }
+    public DescribeLiveSnapshotDetectPornConfigResponseBodyLiveSnapshotDetectPornConfigList getLiveSnapshotDetectPornConfigList() {
+        return this.liveSnapshotDetectPornConfigList;
     }
 
     public DescribeLiveSnapshotDetectPornConfigResponseBody setOrder(String order) {
@@ -38,36 +46,12 @@ public class DescribeLiveSnapshotDetectPornConfigResponseBody extends TeaModel {
         return this.order;
     }
 
-    public DescribeLiveSnapshotDetectPornConfigResponseBody setTotalNum(Integer totalNum) {
-        this.totalNum = totalNum;
-        return this;
-    }
-    public Integer getTotalNum() {
-        return this.totalNum;
-    }
-
     public DescribeLiveSnapshotDetectPornConfigResponseBody setPageNum(Integer pageNum) {
         this.pageNum = pageNum;
         return this;
     }
     public Integer getPageNum() {
         return this.pageNum;
-    }
-
-    public DescribeLiveSnapshotDetectPornConfigResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeLiveSnapshotDetectPornConfigResponseBody setTotalPage(Integer totalPage) {
-        this.totalPage = totalPage;
-        return this;
-    }
-    public Integer getTotalPage() {
-        return this.totalPage;
     }
 
     public DescribeLiveSnapshotDetectPornConfigResponseBody setPageSize(Integer pageSize) {
@@ -78,12 +62,28 @@ public class DescribeLiveSnapshotDetectPornConfigResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeLiveSnapshotDetectPornConfigResponseBody setLiveSnapshotDetectPornConfigList(DescribeLiveSnapshotDetectPornConfigResponseBodyLiveSnapshotDetectPornConfigList liveSnapshotDetectPornConfigList) {
-        this.liveSnapshotDetectPornConfigList = liveSnapshotDetectPornConfigList;
+    public DescribeLiveSnapshotDetectPornConfigResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public DescribeLiveSnapshotDetectPornConfigResponseBodyLiveSnapshotDetectPornConfigList getLiveSnapshotDetectPornConfigList() {
-        return this.liveSnapshotDetectPornConfigList;
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeLiveSnapshotDetectPornConfigResponseBody setTotalNum(Integer totalNum) {
+        this.totalNum = totalNum;
+        return this;
+    }
+    public Integer getTotalNum() {
+        return this.totalNum;
+    }
+
+    public DescribeLiveSnapshotDetectPornConfigResponseBody setTotalPage(Integer totalPage) {
+        this.totalPage = totalPage;
+        return this;
+    }
+    public Integer getTotalPage() {
+        return this.totalPage;
     }
 
     public static class DescribeLiveSnapshotDetectPornConfigResponseBodyLiveSnapshotDetectPornConfigListLiveSnapshotDetectPornConfigScenes extends TeaModel {
@@ -106,38 +106,30 @@ public class DescribeLiveSnapshotDetectPornConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveSnapshotDetectPornConfigResponseBodyLiveSnapshotDetectPornConfigListLiveSnapshotDetectPornConfig extends TeaModel {
-        @NameInMap("OssObject")
-        public String ossObject;
-
         @NameInMap("AppName")
         public String appName;
-
-        @NameInMap("Interval")
-        public Integer interval;
-
-        @NameInMap("Scenes")
-        public DescribeLiveSnapshotDetectPornConfigResponseBodyLiveSnapshotDetectPornConfigListLiveSnapshotDetectPornConfigScenes scenes;
-
-        @NameInMap("OssBucket")
-        public String ossBucket;
 
         @NameInMap("DomainName")
         public String domainName;
 
+        @NameInMap("Interval")
+        public Integer interval;
+
+        @NameInMap("OssBucket")
+        public String ossBucket;
+
         @NameInMap("OssEndpoint")
         public String ossEndpoint;
+
+        @NameInMap("OssObject")
+        public String ossObject;
+
+        @NameInMap("Scenes")
+        public DescribeLiveSnapshotDetectPornConfigResponseBodyLiveSnapshotDetectPornConfigListLiveSnapshotDetectPornConfigScenes scenes;
 
         public static DescribeLiveSnapshotDetectPornConfigResponseBodyLiveSnapshotDetectPornConfigListLiveSnapshotDetectPornConfig build(java.util.Map<String, ?> map) throws Exception {
             DescribeLiveSnapshotDetectPornConfigResponseBodyLiveSnapshotDetectPornConfigListLiveSnapshotDetectPornConfig self = new DescribeLiveSnapshotDetectPornConfigResponseBodyLiveSnapshotDetectPornConfigListLiveSnapshotDetectPornConfig();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeLiveSnapshotDetectPornConfigResponseBodyLiveSnapshotDetectPornConfigListLiveSnapshotDetectPornConfig setOssObject(String ossObject) {
-            this.ossObject = ossObject;
-            return this;
-        }
-        public String getOssObject() {
-            return this.ossObject;
         }
 
         public DescribeLiveSnapshotDetectPornConfigResponseBodyLiveSnapshotDetectPornConfigListLiveSnapshotDetectPornConfig setAppName(String appName) {
@@ -148,20 +140,20 @@ public class DescribeLiveSnapshotDetectPornConfigResponseBody extends TeaModel {
             return this.appName;
         }
 
+        public DescribeLiveSnapshotDetectPornConfigResponseBodyLiveSnapshotDetectPornConfigListLiveSnapshotDetectPornConfig setDomainName(String domainName) {
+            this.domainName = domainName;
+            return this;
+        }
+        public String getDomainName() {
+            return this.domainName;
+        }
+
         public DescribeLiveSnapshotDetectPornConfigResponseBodyLiveSnapshotDetectPornConfigListLiveSnapshotDetectPornConfig setInterval(Integer interval) {
             this.interval = interval;
             return this;
         }
         public Integer getInterval() {
             return this.interval;
-        }
-
-        public DescribeLiveSnapshotDetectPornConfigResponseBodyLiveSnapshotDetectPornConfigListLiveSnapshotDetectPornConfig setScenes(DescribeLiveSnapshotDetectPornConfigResponseBodyLiveSnapshotDetectPornConfigListLiveSnapshotDetectPornConfigScenes scenes) {
-            this.scenes = scenes;
-            return this;
-        }
-        public DescribeLiveSnapshotDetectPornConfigResponseBodyLiveSnapshotDetectPornConfigListLiveSnapshotDetectPornConfigScenes getScenes() {
-            return this.scenes;
         }
 
         public DescribeLiveSnapshotDetectPornConfigResponseBodyLiveSnapshotDetectPornConfigListLiveSnapshotDetectPornConfig setOssBucket(String ossBucket) {
@@ -172,20 +164,28 @@ public class DescribeLiveSnapshotDetectPornConfigResponseBody extends TeaModel {
             return this.ossBucket;
         }
 
-        public DescribeLiveSnapshotDetectPornConfigResponseBodyLiveSnapshotDetectPornConfigListLiveSnapshotDetectPornConfig setDomainName(String domainName) {
-            this.domainName = domainName;
-            return this;
-        }
-        public String getDomainName() {
-            return this.domainName;
-        }
-
         public DescribeLiveSnapshotDetectPornConfigResponseBodyLiveSnapshotDetectPornConfigListLiveSnapshotDetectPornConfig setOssEndpoint(String ossEndpoint) {
             this.ossEndpoint = ossEndpoint;
             return this;
         }
         public String getOssEndpoint() {
             return this.ossEndpoint;
+        }
+
+        public DescribeLiveSnapshotDetectPornConfigResponseBodyLiveSnapshotDetectPornConfigListLiveSnapshotDetectPornConfig setOssObject(String ossObject) {
+            this.ossObject = ossObject;
+            return this;
+        }
+        public String getOssObject() {
+            return this.ossObject;
+        }
+
+        public DescribeLiveSnapshotDetectPornConfigResponseBodyLiveSnapshotDetectPornConfigListLiveSnapshotDetectPornConfig setScenes(DescribeLiveSnapshotDetectPornConfigResponseBodyLiveSnapshotDetectPornConfigListLiveSnapshotDetectPornConfigScenes scenes) {
+            this.scenes = scenes;
+            return this;
+        }
+        public DescribeLiveSnapshotDetectPornConfigResponseBodyLiveSnapshotDetectPornConfigListLiveSnapshotDetectPornConfigScenes getScenes() {
+            return this.scenes;
         }
 
     }

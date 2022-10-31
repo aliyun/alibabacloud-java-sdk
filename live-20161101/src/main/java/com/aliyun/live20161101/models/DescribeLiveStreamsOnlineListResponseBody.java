@@ -4,11 +4,8 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveStreamsOnlineListResponseBody extends TeaModel {
-    @NameInMap("TotalNum")
-    public Integer totalNum;
-
-    @NameInMap("TotalPage")
-    public Integer totalPage;
+    @NameInMap("OnlineInfo")
+    public DescribeLiveStreamsOnlineListResponseBodyOnlineInfo onlineInfo;
 
     @NameInMap("PageNum")
     public Integer pageNum;
@@ -19,28 +16,23 @@ public class DescribeLiveStreamsOnlineListResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("OnlineInfo")
-    public DescribeLiveStreamsOnlineListResponseBodyOnlineInfo onlineInfo;
+    @NameInMap("TotalNum")
+    public Integer totalNum;
+
+    @NameInMap("TotalPage")
+    public Integer totalPage;
 
     public static DescribeLiveStreamsOnlineListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveStreamsOnlineListResponseBody self = new DescribeLiveStreamsOnlineListResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeLiveStreamsOnlineListResponseBody setTotalNum(Integer totalNum) {
-        this.totalNum = totalNum;
+    public DescribeLiveStreamsOnlineListResponseBody setOnlineInfo(DescribeLiveStreamsOnlineListResponseBodyOnlineInfo onlineInfo) {
+        this.onlineInfo = onlineInfo;
         return this;
     }
-    public Integer getTotalNum() {
-        return this.totalNum;
-    }
-
-    public DescribeLiveStreamsOnlineListResponseBody setTotalPage(Integer totalPage) {
-        this.totalPage = totalPage;
-        return this;
-    }
-    public Integer getTotalPage() {
-        return this.totalPage;
+    public DescribeLiveStreamsOnlineListResponseBodyOnlineInfo getOnlineInfo() {
+        return this.onlineInfo;
     }
 
     public DescribeLiveStreamsOnlineListResponseBody setPageNum(Integer pageNum) {
@@ -67,68 +59,71 @@ public class DescribeLiveStreamsOnlineListResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeLiveStreamsOnlineListResponseBody setOnlineInfo(DescribeLiveStreamsOnlineListResponseBodyOnlineInfo onlineInfo) {
-        this.onlineInfo = onlineInfo;
+    public DescribeLiveStreamsOnlineListResponseBody setTotalNum(Integer totalNum) {
+        this.totalNum = totalNum;
         return this;
     }
-    public DescribeLiveStreamsOnlineListResponseBodyOnlineInfo getOnlineInfo() {
-        return this.onlineInfo;
+    public Integer getTotalNum() {
+        return this.totalNum;
+    }
+
+    public DescribeLiveStreamsOnlineListResponseBody setTotalPage(Integer totalPage) {
+        this.totalPage = totalPage;
+        return this;
+    }
+    public Integer getTotalPage() {
+        return this.totalPage;
     }
 
     public static class DescribeLiveStreamsOnlineListResponseBodyOnlineInfoLiveStreamOnlineInfo extends TeaModel {
-        @NameInMap("PublishUrl")
-        public String publishUrl;
+        @NameInMap("AppName")
+        public String appName;
 
-        @NameInMap("StreamName")
-        public String streamName;
+        @NameInMap("AudioCodecId")
+        public Integer audioCodecId;
+
+        @NameInMap("ClientIp")
+        public String clientIp;
 
         @NameInMap("DomainName")
         public String domainName;
 
+        @NameInMap("FrameRate")
+        public Integer frameRate;
+
+        @NameInMap("Height")
+        public Integer height;
+
         @NameInMap("PublishDomain")
         public String publishDomain;
-
-        @NameInMap("AppName")
-        public String appName;
 
         @NameInMap("PublishTime")
         public String publishTime;
 
+        @NameInMap("PublishType")
+        public String publishType;
+
+        @NameInMap("PublishUrl")
+        public String publishUrl;
+
+        @NameInMap("ServerIp")
+        public String serverIp;
+
+        @NameInMap("StreamName")
+        public String streamName;
+
+        @NameInMap("Transcoded")
+        public String transcoded;
+
+        @NameInMap("VideoCodecId")
+        public Integer videoCodecId;
+
+        @NameInMap("Width")
+        public Integer width;
+
         public static DescribeLiveStreamsOnlineListResponseBodyOnlineInfoLiveStreamOnlineInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeLiveStreamsOnlineListResponseBodyOnlineInfoLiveStreamOnlineInfo self = new DescribeLiveStreamsOnlineListResponseBodyOnlineInfoLiveStreamOnlineInfo();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeLiveStreamsOnlineListResponseBodyOnlineInfoLiveStreamOnlineInfo setPublishUrl(String publishUrl) {
-            this.publishUrl = publishUrl;
-            return this;
-        }
-        public String getPublishUrl() {
-            return this.publishUrl;
-        }
-
-        public DescribeLiveStreamsOnlineListResponseBodyOnlineInfoLiveStreamOnlineInfo setStreamName(String streamName) {
-            this.streamName = streamName;
-            return this;
-        }
-        public String getStreamName() {
-            return this.streamName;
-        }
-
-        public DescribeLiveStreamsOnlineListResponseBodyOnlineInfoLiveStreamOnlineInfo setDomainName(String domainName) {
-            this.domainName = domainName;
-            return this;
-        }
-        public String getDomainName() {
-            return this.domainName;
-        }
-
-        public DescribeLiveStreamsOnlineListResponseBodyOnlineInfoLiveStreamOnlineInfo setPublishDomain(String publishDomain) {
-            this.publishDomain = publishDomain;
-            return this;
-        }
-        public String getPublishDomain() {
-            return this.publishDomain;
         }
 
         public DescribeLiveStreamsOnlineListResponseBodyOnlineInfoLiveStreamOnlineInfo setAppName(String appName) {
@@ -139,12 +134,116 @@ public class DescribeLiveStreamsOnlineListResponseBody extends TeaModel {
             return this.appName;
         }
 
+        public DescribeLiveStreamsOnlineListResponseBodyOnlineInfoLiveStreamOnlineInfo setAudioCodecId(Integer audioCodecId) {
+            this.audioCodecId = audioCodecId;
+            return this;
+        }
+        public Integer getAudioCodecId() {
+            return this.audioCodecId;
+        }
+
+        public DescribeLiveStreamsOnlineListResponseBodyOnlineInfoLiveStreamOnlineInfo setClientIp(String clientIp) {
+            this.clientIp = clientIp;
+            return this;
+        }
+        public String getClientIp() {
+            return this.clientIp;
+        }
+
+        public DescribeLiveStreamsOnlineListResponseBodyOnlineInfoLiveStreamOnlineInfo setDomainName(String domainName) {
+            this.domainName = domainName;
+            return this;
+        }
+        public String getDomainName() {
+            return this.domainName;
+        }
+
+        public DescribeLiveStreamsOnlineListResponseBodyOnlineInfoLiveStreamOnlineInfo setFrameRate(Integer frameRate) {
+            this.frameRate = frameRate;
+            return this;
+        }
+        public Integer getFrameRate() {
+            return this.frameRate;
+        }
+
+        public DescribeLiveStreamsOnlineListResponseBodyOnlineInfoLiveStreamOnlineInfo setHeight(Integer height) {
+            this.height = height;
+            return this;
+        }
+        public Integer getHeight() {
+            return this.height;
+        }
+
+        public DescribeLiveStreamsOnlineListResponseBodyOnlineInfoLiveStreamOnlineInfo setPublishDomain(String publishDomain) {
+            this.publishDomain = publishDomain;
+            return this;
+        }
+        public String getPublishDomain() {
+            return this.publishDomain;
+        }
+
         public DescribeLiveStreamsOnlineListResponseBodyOnlineInfoLiveStreamOnlineInfo setPublishTime(String publishTime) {
             this.publishTime = publishTime;
             return this;
         }
         public String getPublishTime() {
             return this.publishTime;
+        }
+
+        public DescribeLiveStreamsOnlineListResponseBodyOnlineInfoLiveStreamOnlineInfo setPublishType(String publishType) {
+            this.publishType = publishType;
+            return this;
+        }
+        public String getPublishType() {
+            return this.publishType;
+        }
+
+        public DescribeLiveStreamsOnlineListResponseBodyOnlineInfoLiveStreamOnlineInfo setPublishUrl(String publishUrl) {
+            this.publishUrl = publishUrl;
+            return this;
+        }
+        public String getPublishUrl() {
+            return this.publishUrl;
+        }
+
+        public DescribeLiveStreamsOnlineListResponseBodyOnlineInfoLiveStreamOnlineInfo setServerIp(String serverIp) {
+            this.serverIp = serverIp;
+            return this;
+        }
+        public String getServerIp() {
+            return this.serverIp;
+        }
+
+        public DescribeLiveStreamsOnlineListResponseBodyOnlineInfoLiveStreamOnlineInfo setStreamName(String streamName) {
+            this.streamName = streamName;
+            return this;
+        }
+        public String getStreamName() {
+            return this.streamName;
+        }
+
+        public DescribeLiveStreamsOnlineListResponseBodyOnlineInfoLiveStreamOnlineInfo setTranscoded(String transcoded) {
+            this.transcoded = transcoded;
+            return this;
+        }
+        public String getTranscoded() {
+            return this.transcoded;
+        }
+
+        public DescribeLiveStreamsOnlineListResponseBodyOnlineInfoLiveStreamOnlineInfo setVideoCodecId(Integer videoCodecId) {
+            this.videoCodecId = videoCodecId;
+            return this;
+        }
+        public Integer getVideoCodecId() {
+            return this.videoCodecId;
+        }
+
+        public DescribeLiveStreamsOnlineListResponseBodyOnlineInfoLiveStreamOnlineInfo setWidth(Integer width) {
+            this.width = width;
+            return this;
+        }
+        public Integer getWidth() {
+            return this.width;
         }
 
     }

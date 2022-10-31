@@ -4,23 +4,15 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveDetectNotifyConfigResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("LiveDetectNotifyConfig")
     public DescribeLiveDetectNotifyConfigResponseBodyLiveDetectNotifyConfig liveDetectNotifyConfig;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeLiveDetectNotifyConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveDetectNotifyConfigResponseBody self = new DescribeLiveDetectNotifyConfigResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeLiveDetectNotifyConfigResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeLiveDetectNotifyConfigResponseBody setLiveDetectNotifyConfig(DescribeLiveDetectNotifyConfigResponseBodyLiveDetectNotifyConfig liveDetectNotifyConfig) {
@@ -31,24 +23,24 @@ public class DescribeLiveDetectNotifyConfigResponseBody extends TeaModel {
         return this.liveDetectNotifyConfig;
     }
 
-    public static class DescribeLiveDetectNotifyConfigResponseBodyLiveDetectNotifyConfig extends TeaModel {
-        @NameInMap("NotifyUrl")
-        public String notifyUrl;
+    public DescribeLiveDetectNotifyConfigResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class DescribeLiveDetectNotifyConfigResponseBodyLiveDetectNotifyConfig extends TeaModel {
         @NameInMap("DomainName")
         public String domainName;
+
+        @NameInMap("NotifyUrl")
+        public String notifyUrl;
 
         public static DescribeLiveDetectNotifyConfigResponseBodyLiveDetectNotifyConfig build(java.util.Map<String, ?> map) throws Exception {
             DescribeLiveDetectNotifyConfigResponseBodyLiveDetectNotifyConfig self = new DescribeLiveDetectNotifyConfigResponseBodyLiveDetectNotifyConfig();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeLiveDetectNotifyConfigResponseBodyLiveDetectNotifyConfig setNotifyUrl(String notifyUrl) {
-            this.notifyUrl = notifyUrl;
-            return this;
-        }
-        public String getNotifyUrl() {
-            return this.notifyUrl;
         }
 
         public DescribeLiveDetectNotifyConfigResponseBodyLiveDetectNotifyConfig setDomainName(String domainName) {
@@ -57,6 +49,14 @@ public class DescribeLiveDetectNotifyConfigResponseBody extends TeaModel {
         }
         public String getDomainName() {
             return this.domainName;
+        }
+
+        public DescribeLiveDetectNotifyConfigResponseBodyLiveDetectNotifyConfig setNotifyUrl(String notifyUrl) {
+            this.notifyUrl = notifyUrl;
+            return this;
+        }
+        public String getNotifyUrl() {
+            return this.notifyUrl;
         }
 
     }

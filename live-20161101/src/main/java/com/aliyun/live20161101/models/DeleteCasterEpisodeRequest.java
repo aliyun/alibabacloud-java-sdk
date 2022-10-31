@@ -4,26 +4,18 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DeleteCasterEpisodeRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("CasterId")
     public String casterId;
 
     @NameInMap("EpisodeId")
     public String episodeId;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     public static DeleteCasterEpisodeRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteCasterEpisodeRequest self = new DeleteCasterEpisodeRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteCasterEpisodeRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DeleteCasterEpisodeRequest setCasterId(String casterId) {
@@ -40,6 +32,14 @@ public class DeleteCasterEpisodeRequest extends TeaModel {
     }
     public String getEpisodeId() {
         return this.episodeId;
+    }
+
+    public DeleteCasterEpisodeRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
 }

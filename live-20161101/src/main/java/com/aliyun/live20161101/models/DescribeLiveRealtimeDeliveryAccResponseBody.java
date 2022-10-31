@@ -35,11 +35,11 @@ public class DescribeLiveRealtimeDeliveryAccResponseBody extends TeaModel {
         @NameInMap("FailedNum")
         public Integer failedNum;
 
-        @NameInMap("TimeStamp")
-        public String timeStamp;
-
         @NameInMap("SuccessNum")
         public Integer successNum;
+
+        @NameInMap("TimeStamp")
+        public String timeStamp;
 
         public static DescribeLiveRealtimeDeliveryAccResponseBodyRealTimeDeliveryAccDataAccData build(java.util.Map<String, ?> map) throws Exception {
             DescribeLiveRealtimeDeliveryAccResponseBodyRealTimeDeliveryAccDataAccData self = new DescribeLiveRealtimeDeliveryAccResponseBodyRealTimeDeliveryAccDataAccData();
@@ -54,20 +54,20 @@ public class DescribeLiveRealtimeDeliveryAccResponseBody extends TeaModel {
             return this.failedNum;
         }
 
-        public DescribeLiveRealtimeDeliveryAccResponseBodyRealTimeDeliveryAccDataAccData setTimeStamp(String timeStamp) {
-            this.timeStamp = timeStamp;
-            return this;
-        }
-        public String getTimeStamp() {
-            return this.timeStamp;
-        }
-
         public DescribeLiveRealtimeDeliveryAccResponseBodyRealTimeDeliveryAccDataAccData setSuccessNum(Integer successNum) {
             this.successNum = successNum;
             return this;
         }
         public Integer getSuccessNum() {
             return this.successNum;
+        }
+
+        public DescribeLiveRealtimeDeliveryAccResponseBodyRealTimeDeliveryAccDataAccData setTimeStamp(String timeStamp) {
+            this.timeStamp = timeStamp;
+            return this;
+        }
+        public String getTimeStamp() {
+            return this.timeStamp;
         }
 
     }

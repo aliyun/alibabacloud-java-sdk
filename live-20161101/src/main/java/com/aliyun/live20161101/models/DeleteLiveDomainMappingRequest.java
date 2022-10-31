@@ -4,29 +4,21 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DeleteLiveDomainMappingRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     @NameInMap("OwnerId")
     public Long ownerId;
-
-    @NameInMap("PushDomain")
-    public String pushDomain;
 
     @NameInMap("PullDomain")
     public String pullDomain;
 
+    @NameInMap("PushDomain")
+    public String pushDomain;
+
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     public static DeleteLiveDomainMappingRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteLiveDomainMappingRequest self = new DeleteLiveDomainMappingRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteLiveDomainMappingRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
     public DeleteLiveDomainMappingRequest setOwnerId(Long ownerId) {
@@ -37,6 +29,14 @@ public class DeleteLiveDomainMappingRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public DeleteLiveDomainMappingRequest setPullDomain(String pullDomain) {
+        this.pullDomain = pullDomain;
+        return this;
+    }
+    public String getPullDomain() {
+        return this.pullDomain;
+    }
+
     public DeleteLiveDomainMappingRequest setPushDomain(String pushDomain) {
         this.pushDomain = pushDomain;
         return this;
@@ -45,12 +45,12 @@ public class DeleteLiveDomainMappingRequest extends TeaModel {
         return this.pushDomain;
     }
 
-    public DeleteLiveDomainMappingRequest setPullDomain(String pullDomain) {
-        this.pullDomain = pullDomain;
+    public DeleteLiveDomainMappingRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getPullDomain() {
-        return this.pullDomain;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

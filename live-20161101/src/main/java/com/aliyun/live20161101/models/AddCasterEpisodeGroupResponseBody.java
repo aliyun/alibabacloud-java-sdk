@@ -4,26 +4,26 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class AddCasterEpisodeGroupResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("ItemIds")
+    public AddCasterEpisodeGroupResponseBodyItemIds itemIds;
 
     @NameInMap("ProgramId")
     public String programId;
 
-    @NameInMap("ItemIds")
-    public AddCasterEpisodeGroupResponseBodyItemIds itemIds;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static AddCasterEpisodeGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AddCasterEpisodeGroupResponseBody self = new AddCasterEpisodeGroupResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public AddCasterEpisodeGroupResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public AddCasterEpisodeGroupResponseBody setItemIds(AddCasterEpisodeGroupResponseBodyItemIds itemIds) {
+        this.itemIds = itemIds;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public AddCasterEpisodeGroupResponseBodyItemIds getItemIds() {
+        return this.itemIds;
     }
 
     public AddCasterEpisodeGroupResponseBody setProgramId(String programId) {
@@ -34,12 +34,12 @@ public class AddCasterEpisodeGroupResponseBody extends TeaModel {
         return this.programId;
     }
 
-    public AddCasterEpisodeGroupResponseBody setItemIds(AddCasterEpisodeGroupResponseBodyItemIds itemIds) {
-        this.itemIds = itemIds;
+    public AddCasterEpisodeGroupResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public AddCasterEpisodeGroupResponseBodyItemIds getItemIds() {
-        return this.itemIds;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class AddCasterEpisodeGroupResponseBodyItemIds extends TeaModel {

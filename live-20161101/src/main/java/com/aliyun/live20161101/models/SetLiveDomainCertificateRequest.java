@@ -4,20 +4,23 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class SetLiveDomainCertificateRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
-    @NameInMap("DomainName")
-    public String domainName;
-
     @NameInMap("CertName")
     public String certName;
 
     @NameInMap("CertType")
     public String certType;
+
+    @NameInMap("DomainName")
+    public String domainName;
+
+    @NameInMap("ForceSet")
+    public String forceSet;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("SSLPri")
+    public String SSLPri;
 
     @NameInMap("SSLProtocol")
     public String SSLProtocol;
@@ -25,39 +28,12 @@ public class SetLiveDomainCertificateRequest extends TeaModel {
     @NameInMap("SSLPub")
     public String SSLPub;
 
-    @NameInMap("SSLPri")
-    public String SSLPri;
-
-    @NameInMap("ForceSet")
-    public String forceSet;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     public static SetLiveDomainCertificateRequest build(java.util.Map<String, ?> map) throws Exception {
         SetLiveDomainCertificateRequest self = new SetLiveDomainCertificateRequest();
         return TeaModel.build(map, self);
-    }
-
-    public SetLiveDomainCertificateRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public SetLiveDomainCertificateRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
-    public SetLiveDomainCertificateRequest setDomainName(String domainName) {
-        this.domainName = domainName;
-        return this;
-    }
-    public String getDomainName() {
-        return this.domainName;
     }
 
     public SetLiveDomainCertificateRequest setCertName(String certName) {
@@ -76,6 +52,38 @@ public class SetLiveDomainCertificateRequest extends TeaModel {
         return this.certType;
     }
 
+    public SetLiveDomainCertificateRequest setDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String getDomainName() {
+        return this.domainName;
+    }
+
+    public SetLiveDomainCertificateRequest setForceSet(String forceSet) {
+        this.forceSet = forceSet;
+        return this;
+    }
+    public String getForceSet() {
+        return this.forceSet;
+    }
+
+    public SetLiveDomainCertificateRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public SetLiveDomainCertificateRequest setSSLPri(String SSLPri) {
+        this.SSLPri = SSLPri;
+        return this;
+    }
+    public String getSSLPri() {
+        return this.SSLPri;
+    }
+
     public SetLiveDomainCertificateRequest setSSLProtocol(String SSLProtocol) {
         this.SSLProtocol = SSLProtocol;
         return this;
@@ -92,20 +100,12 @@ public class SetLiveDomainCertificateRequest extends TeaModel {
         return this.SSLPub;
     }
 
-    public SetLiveDomainCertificateRequest setSSLPri(String SSLPri) {
-        this.SSLPri = SSLPri;
+    public SetLiveDomainCertificateRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getSSLPri() {
-        return this.SSLPri;
-    }
-
-    public SetLiveDomainCertificateRequest setForceSet(String forceSet) {
-        this.forceSet = forceSet;
-        return this;
-    }
-    public String getForceSet() {
-        return this.forceSet;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

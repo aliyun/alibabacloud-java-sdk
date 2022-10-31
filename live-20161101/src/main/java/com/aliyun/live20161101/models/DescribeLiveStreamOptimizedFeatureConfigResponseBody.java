@@ -4,23 +4,15 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveStreamOptimizedFeatureConfigResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("LiveStreamOptimizedFeatureConfigList")
     public DescribeLiveStreamOptimizedFeatureConfigResponseBodyLiveStreamOptimizedFeatureConfigList liveStreamOptimizedFeatureConfigList;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeLiveStreamOptimizedFeatureConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveStreamOptimizedFeatureConfigResponseBody self = new DescribeLiveStreamOptimizedFeatureConfigResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeLiveStreamOptimizedFeatureConfigResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeLiveStreamOptimizedFeatureConfigResponseBody setLiveStreamOptimizedFeatureConfigList(DescribeLiveStreamOptimizedFeatureConfigResponseBodyLiveStreamOptimizedFeatureConfigList liveStreamOptimizedFeatureConfigList) {
@@ -31,15 +23,23 @@ public class DescribeLiveStreamOptimizedFeatureConfigResponseBody extends TeaMod
         return this.liveStreamOptimizedFeatureConfigList;
     }
 
+    public DescribeLiveStreamOptimizedFeatureConfigResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeLiveStreamOptimizedFeatureConfigResponseBodyLiveStreamOptimizedFeatureConfigListLiveStreamOptimizedFeatureConfig extends TeaModel {
         @NameInMap("ConfigName")
         public String configName;
 
-        @NameInMap("ConfigValue")
-        public String configValue;
-
         @NameInMap("ConfigStatus")
         public String configStatus;
+
+        @NameInMap("ConfigValue")
+        public String configValue;
 
         @NameInMap("DomainName")
         public String domainName;
@@ -57,20 +57,20 @@ public class DescribeLiveStreamOptimizedFeatureConfigResponseBody extends TeaMod
             return this.configName;
         }
 
-        public DescribeLiveStreamOptimizedFeatureConfigResponseBodyLiveStreamOptimizedFeatureConfigListLiveStreamOptimizedFeatureConfig setConfigValue(String configValue) {
-            this.configValue = configValue;
-            return this;
-        }
-        public String getConfigValue() {
-            return this.configValue;
-        }
-
         public DescribeLiveStreamOptimizedFeatureConfigResponseBodyLiveStreamOptimizedFeatureConfigListLiveStreamOptimizedFeatureConfig setConfigStatus(String configStatus) {
             this.configStatus = configStatus;
             return this;
         }
         public String getConfigStatus() {
             return this.configStatus;
+        }
+
+        public DescribeLiveStreamOptimizedFeatureConfigResponseBodyLiveStreamOptimizedFeatureConfigListLiveStreamOptimizedFeatureConfig setConfigValue(String configValue) {
+            this.configValue = configValue;
+            return this;
+        }
+        public String getConfigValue() {
+            return this.configValue;
         }
 
         public DescribeLiveStreamOptimizedFeatureConfigResponseBodyLiveStreamOptimizedFeatureConfigListLiveStreamOptimizedFeatureConfig setDomainName(String domainName) {

@@ -4,27 +4,43 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveDomainPushTrafficDataResponseBody extends TeaModel {
+    @NameInMap("DataInterval")
+    public String dataInterval;
+
+    @NameInMap("DomainName")
+    public String domainName;
+
     @NameInMap("EndTime")
     public String endTime;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("DomainName")
-    public String domainName;
+    @NameInMap("StartTime")
+    public String startTime;
 
     @NameInMap("TrafficDataPerInterval")
     public DescribeLiveDomainPushTrafficDataResponseBodyTrafficDataPerInterval trafficDataPerInterval;
 
-    @NameInMap("StartTime")
-    public String startTime;
-
-    @NameInMap("DataInterval")
-    public String dataInterval;
-
     public static DescribeLiveDomainPushTrafficDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveDomainPushTrafficDataResponseBody self = new DescribeLiveDomainPushTrafficDataResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeLiveDomainPushTrafficDataResponseBody setDataInterval(String dataInterval) {
+        this.dataInterval = dataInterval;
+        return this;
+    }
+    public String getDataInterval() {
+        return this.dataInterval;
+    }
+
+    public DescribeLiveDomainPushTrafficDataResponseBody setDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String getDomainName() {
+        return this.domainName;
     }
 
     public DescribeLiveDomainPushTrafficDataResponseBody setEndTime(String endTime) {
@@ -43,12 +59,12 @@ public class DescribeLiveDomainPushTrafficDataResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeLiveDomainPushTrafficDataResponseBody setDomainName(String domainName) {
-        this.domainName = domainName;
+    public DescribeLiveDomainPushTrafficDataResponseBody setStartTime(String startTime) {
+        this.startTime = startTime;
         return this;
     }
-    public String getDomainName() {
-        return this.domainName;
+    public String getStartTime() {
+        return this.startTime;
     }
 
     public DescribeLiveDomainPushTrafficDataResponseBody setTrafficDataPerInterval(DescribeLiveDomainPushTrafficDataResponseBodyTrafficDataPerInterval trafficDataPerInterval) {
@@ -59,40 +75,16 @@ public class DescribeLiveDomainPushTrafficDataResponseBody extends TeaModel {
         return this.trafficDataPerInterval;
     }
 
-    public DescribeLiveDomainPushTrafficDataResponseBody setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
-    public DescribeLiveDomainPushTrafficDataResponseBody setDataInterval(String dataInterval) {
-        this.dataInterval = dataInterval;
-        return this;
-    }
-    public String getDataInterval() {
-        return this.dataInterval;
-    }
-
     public static class DescribeLiveDomainPushTrafficDataResponseBodyTrafficDataPerIntervalDataModule extends TeaModel {
-        @NameInMap("TrafficValue")
-        public String trafficValue;
-
         @NameInMap("TimeStamp")
         public String timeStamp;
+
+        @NameInMap("TrafficValue")
+        public String trafficValue;
 
         public static DescribeLiveDomainPushTrafficDataResponseBodyTrafficDataPerIntervalDataModule build(java.util.Map<String, ?> map) throws Exception {
             DescribeLiveDomainPushTrafficDataResponseBodyTrafficDataPerIntervalDataModule self = new DescribeLiveDomainPushTrafficDataResponseBodyTrafficDataPerIntervalDataModule();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeLiveDomainPushTrafficDataResponseBodyTrafficDataPerIntervalDataModule setTrafficValue(String trafficValue) {
-            this.trafficValue = trafficValue;
-            return this;
-        }
-        public String getTrafficValue() {
-            return this.trafficValue;
         }
 
         public DescribeLiveDomainPushTrafficDataResponseBodyTrafficDataPerIntervalDataModule setTimeStamp(String timeStamp) {
@@ -101,6 +93,14 @@ public class DescribeLiveDomainPushTrafficDataResponseBody extends TeaModel {
         }
         public String getTimeStamp() {
             return this.timeStamp;
+        }
+
+        public DescribeLiveDomainPushTrafficDataResponseBodyTrafficDataPerIntervalDataModule setTrafficValue(String trafficValue) {
+            this.trafficValue = trafficValue;
+            return this;
+        }
+        public String getTrafficValue() {
+            return this.trafficValue;
         }
 
     }

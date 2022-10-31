@@ -4,18 +4,26 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class StartLiveDomainRequest extends TeaModel {
+    @NameInMap("DomainName")
+    public String domainName;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    @NameInMap("DomainName")
-    public String domainName;
-
     public static StartLiveDomainRequest build(java.util.Map<String, ?> map) throws Exception {
         StartLiveDomainRequest self = new StartLiveDomainRequest();
         return TeaModel.build(map, self);
+    }
+
+    public StartLiveDomainRequest setDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String getDomainName() {
+        return this.domainName;
     }
 
     public StartLiveDomainRequest setOwnerId(Long ownerId) {
@@ -32,14 +40,6 @@ public class StartLiveDomainRequest extends TeaModel {
     }
     public String getSecurityToken() {
         return this.securityToken;
-    }
-
-    public StartLiveDomainRequest setDomainName(String domainName) {
-        this.domainName = domainName;
-        return this;
-    }
-    public String getDomainName() {
-        return this.domainName;
     }
 
 }

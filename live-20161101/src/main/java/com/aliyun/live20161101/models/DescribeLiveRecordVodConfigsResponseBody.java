@@ -4,17 +4,17 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveRecordVodConfigsResponseBody extends TeaModel {
+    @NameInMap("LiveRecordVodConfigs")
+    public DescribeLiveRecordVodConfigsResponseBodyLiveRecordVodConfigs liveRecordVodConfigs;
+
     @NameInMap("PageNum")
     public Integer pageNum;
-
-    @NameInMap("RequestId")
-    public String requestId;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("LiveRecordVodConfigs")
-    public DescribeLiveRecordVodConfigsResponseBodyLiveRecordVodConfigs liveRecordVodConfigs;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Total")
     public String total;
@@ -22,6 +22,14 @@ public class DescribeLiveRecordVodConfigsResponseBody extends TeaModel {
     public static DescribeLiveRecordVodConfigsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveRecordVodConfigsResponseBody self = new DescribeLiveRecordVodConfigsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeLiveRecordVodConfigsResponseBody setLiveRecordVodConfigs(DescribeLiveRecordVodConfigsResponseBodyLiveRecordVodConfigs liveRecordVodConfigs) {
+        this.liveRecordVodConfigs = liveRecordVodConfigs;
+        return this;
+    }
+    public DescribeLiveRecordVodConfigsResponseBodyLiveRecordVodConfigs getLiveRecordVodConfigs() {
+        return this.liveRecordVodConfigs;
     }
 
     public DescribeLiveRecordVodConfigsResponseBody setPageNum(Integer pageNum) {
@@ -32,14 +40,6 @@ public class DescribeLiveRecordVodConfigsResponseBody extends TeaModel {
         return this.pageNum;
     }
 
-    public DescribeLiveRecordVodConfigsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeLiveRecordVodConfigsResponseBody setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -48,12 +48,12 @@ public class DescribeLiveRecordVodConfigsResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeLiveRecordVodConfigsResponseBody setLiveRecordVodConfigs(DescribeLiveRecordVodConfigsResponseBodyLiveRecordVodConfigs liveRecordVodConfigs) {
-        this.liveRecordVodConfigs = liveRecordVodConfigs;
+    public DescribeLiveRecordVodConfigsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public DescribeLiveRecordVodConfigsResponseBodyLiveRecordVodConfigs getLiveRecordVodConfigs() {
-        return this.liveRecordVodConfigs;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeLiveRecordVodConfigsResponseBody setTotal(String total) {
@@ -71,14 +71,11 @@ public class DescribeLiveRecordVodConfigsResponseBody extends TeaModel {
         @NameInMap("AutoCompose")
         public String autoCompose;
 
-        @NameInMap("StreamName")
-        public String streamName;
+        @NameInMap("ComposeVodTranscodeGroupId")
+        public String composeVodTranscodeGroupId;
 
         @NameInMap("CreateTime")
         public String createTime;
-
-        @NameInMap("VodTranscodeGroupId")
-        public String vodTranscodeGroupId;
 
         @NameInMap("CycleDuration")
         public Integer cycleDuration;
@@ -86,8 +83,11 @@ public class DescribeLiveRecordVodConfigsResponseBody extends TeaModel {
         @NameInMap("DomainName")
         public String domainName;
 
-        @NameInMap("ComposeVodTranscodeGroupId")
-        public String composeVodTranscodeGroupId;
+        @NameInMap("StreamName")
+        public String streamName;
+
+        @NameInMap("VodTranscodeGroupId")
+        public String vodTranscodeGroupId;
 
         public static DescribeLiveRecordVodConfigsResponseBodyLiveRecordVodConfigsLiveRecordVodConfig build(java.util.Map<String, ?> map) throws Exception {
             DescribeLiveRecordVodConfigsResponseBodyLiveRecordVodConfigsLiveRecordVodConfig self = new DescribeLiveRecordVodConfigsResponseBodyLiveRecordVodConfigsLiveRecordVodConfig();
@@ -110,12 +110,12 @@ public class DescribeLiveRecordVodConfigsResponseBody extends TeaModel {
             return this.autoCompose;
         }
 
-        public DescribeLiveRecordVodConfigsResponseBodyLiveRecordVodConfigsLiveRecordVodConfig setStreamName(String streamName) {
-            this.streamName = streamName;
+        public DescribeLiveRecordVodConfigsResponseBodyLiveRecordVodConfigsLiveRecordVodConfig setComposeVodTranscodeGroupId(String composeVodTranscodeGroupId) {
+            this.composeVodTranscodeGroupId = composeVodTranscodeGroupId;
             return this;
         }
-        public String getStreamName() {
-            return this.streamName;
+        public String getComposeVodTranscodeGroupId() {
+            return this.composeVodTranscodeGroupId;
         }
 
         public DescribeLiveRecordVodConfigsResponseBodyLiveRecordVodConfigsLiveRecordVodConfig setCreateTime(String createTime) {
@@ -124,14 +124,6 @@ public class DescribeLiveRecordVodConfigsResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
-        }
-
-        public DescribeLiveRecordVodConfigsResponseBodyLiveRecordVodConfigsLiveRecordVodConfig setVodTranscodeGroupId(String vodTranscodeGroupId) {
-            this.vodTranscodeGroupId = vodTranscodeGroupId;
-            return this;
-        }
-        public String getVodTranscodeGroupId() {
-            return this.vodTranscodeGroupId;
         }
 
         public DescribeLiveRecordVodConfigsResponseBodyLiveRecordVodConfigsLiveRecordVodConfig setCycleDuration(Integer cycleDuration) {
@@ -150,12 +142,20 @@ public class DescribeLiveRecordVodConfigsResponseBody extends TeaModel {
             return this.domainName;
         }
 
-        public DescribeLiveRecordVodConfigsResponseBodyLiveRecordVodConfigsLiveRecordVodConfig setComposeVodTranscodeGroupId(String composeVodTranscodeGroupId) {
-            this.composeVodTranscodeGroupId = composeVodTranscodeGroupId;
+        public DescribeLiveRecordVodConfigsResponseBodyLiveRecordVodConfigsLiveRecordVodConfig setStreamName(String streamName) {
+            this.streamName = streamName;
             return this;
         }
-        public String getComposeVodTranscodeGroupId() {
-            return this.composeVodTranscodeGroupId;
+        public String getStreamName() {
+            return this.streamName;
+        }
+
+        public DescribeLiveRecordVodConfigsResponseBodyLiveRecordVodConfigsLiveRecordVodConfig setVodTranscodeGroupId(String vodTranscodeGroupId) {
+            this.vodTranscodeGroupId = vodTranscodeGroupId;
+            return this;
+        }
+        public String getVodTranscodeGroupId() {
+            return this.vodTranscodeGroupId;
         }
 
     }

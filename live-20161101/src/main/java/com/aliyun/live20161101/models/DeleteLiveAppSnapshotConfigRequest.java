@@ -4,37 +4,29 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DeleteLiveAppSnapshotConfigRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("AppName")
+    public String appName;
 
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("AppName")
-    public String appName;
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     public static DeleteLiveAppSnapshotConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteLiveAppSnapshotConfigRequest self = new DeleteLiveAppSnapshotConfigRequest();
         return TeaModel.build(map, self);
     }
 
-    public DeleteLiveAppSnapshotConfigRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public DeleteLiveAppSnapshotConfigRequest setAppName(String appName) {
+        this.appName = appName;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
-    public DeleteLiveAppSnapshotConfigRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public String getAppName() {
+        return this.appName;
     }
 
     public DeleteLiveAppSnapshotConfigRequest setDomainName(String domainName) {
@@ -45,12 +37,20 @@ public class DeleteLiveAppSnapshotConfigRequest extends TeaModel {
         return this.domainName;
     }
 
-    public DeleteLiveAppSnapshotConfigRequest setAppName(String appName) {
-        this.appName = appName;
+    public DeleteLiveAppSnapshotConfigRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getAppName() {
-        return this.appName;
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DeleteLiveAppSnapshotConfigRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

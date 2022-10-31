@@ -4,23 +4,15 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveCertificateListResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("CertificateListModel")
     public DescribeLiveCertificateListResponseBodyCertificateListModel certificateListModel;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeLiveCertificateListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveCertificateListResponseBody self = new DescribeLiveCertificateListResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeLiveCertificateListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeLiveCertificateListResponseBody setCertificateListModel(DescribeLiveCertificateListResponseBodyCertificateListModel certificateListModel) {
@@ -31,60 +23,36 @@ public class DescribeLiveCertificateListResponseBody extends TeaModel {
         return this.certificateListModel;
     }
 
-    public static class DescribeLiveCertificateListResponseBodyCertificateListModelCertListCert extends TeaModel {
-        @NameInMap("LastTime")
-        public Long lastTime;
+    public DescribeLiveCertificateListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
-        @NameInMap("Fingerprint")
-        public String fingerprint;
+    public static class DescribeLiveCertificateListResponseBodyCertificateListModelCertListCert extends TeaModel {
+        @NameInMap("CertId")
+        public Long certId;
 
         @NameInMap("CertName")
         public String certName;
 
+        @NameInMap("Common")
+        public String common;
+
+        @NameInMap("Fingerprint")
+        public String fingerprint;
+
         @NameInMap("Issuer")
         public String issuer;
 
-        @NameInMap("CertId")
-        public Long certId;
-
-        @NameInMap("Common")
-        public String common;
+        @NameInMap("LastTime")
+        public Long lastTime;
 
         public static DescribeLiveCertificateListResponseBodyCertificateListModelCertListCert build(java.util.Map<String, ?> map) throws Exception {
             DescribeLiveCertificateListResponseBodyCertificateListModelCertListCert self = new DescribeLiveCertificateListResponseBodyCertificateListModelCertListCert();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeLiveCertificateListResponseBodyCertificateListModelCertListCert setLastTime(Long lastTime) {
-            this.lastTime = lastTime;
-            return this;
-        }
-        public Long getLastTime() {
-            return this.lastTime;
-        }
-
-        public DescribeLiveCertificateListResponseBodyCertificateListModelCertListCert setFingerprint(String fingerprint) {
-            this.fingerprint = fingerprint;
-            return this;
-        }
-        public String getFingerprint() {
-            return this.fingerprint;
-        }
-
-        public DescribeLiveCertificateListResponseBodyCertificateListModelCertListCert setCertName(String certName) {
-            this.certName = certName;
-            return this;
-        }
-        public String getCertName() {
-            return this.certName;
-        }
-
-        public DescribeLiveCertificateListResponseBodyCertificateListModelCertListCert setIssuer(String issuer) {
-            this.issuer = issuer;
-            return this;
-        }
-        public String getIssuer() {
-            return this.issuer;
         }
 
         public DescribeLiveCertificateListResponseBodyCertificateListModelCertListCert setCertId(Long certId) {
@@ -95,12 +63,44 @@ public class DescribeLiveCertificateListResponseBody extends TeaModel {
             return this.certId;
         }
 
+        public DescribeLiveCertificateListResponseBodyCertificateListModelCertListCert setCertName(String certName) {
+            this.certName = certName;
+            return this;
+        }
+        public String getCertName() {
+            return this.certName;
+        }
+
         public DescribeLiveCertificateListResponseBodyCertificateListModelCertListCert setCommon(String common) {
             this.common = common;
             return this;
         }
         public String getCommon() {
             return this.common;
+        }
+
+        public DescribeLiveCertificateListResponseBodyCertificateListModelCertListCert setFingerprint(String fingerprint) {
+            this.fingerprint = fingerprint;
+            return this;
+        }
+        public String getFingerprint() {
+            return this.fingerprint;
+        }
+
+        public DescribeLiveCertificateListResponseBodyCertificateListModelCertListCert setIssuer(String issuer) {
+            this.issuer = issuer;
+            return this;
+        }
+        public String getIssuer() {
+            return this.issuer;
+        }
+
+        public DescribeLiveCertificateListResponseBodyCertificateListModelCertListCert setLastTime(Long lastTime) {
+            this.lastTime = lastTime;
+            return this;
+        }
+        public Long getLastTime() {
+            return this.lastTime;
         }
 
     }

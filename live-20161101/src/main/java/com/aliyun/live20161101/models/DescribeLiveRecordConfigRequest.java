@@ -4,20 +4,17 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveRecordConfigRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("AppName")
+    public String appName;
 
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("AppName")
-    public String appName;
+    @NameInMap("Order")
+    public String order;
 
-    @NameInMap("StreamName")
-    public String streamName;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("PageNum")
     public Integer pageNum;
@@ -25,36 +22,15 @@ public class DescribeLiveRecordConfigRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("Order")
-    public String order;
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
+    @NameInMap("StreamName")
+    public String streamName;
 
     public static DescribeLiveRecordConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveRecordConfigRequest self = new DescribeLiveRecordConfigRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeLiveRecordConfigRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
-    public DescribeLiveRecordConfigRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public DescribeLiveRecordConfigRequest setDomainName(String domainName) {
-        this.domainName = domainName;
-        return this;
-    }
-    public String getDomainName() {
-        return this.domainName;
     }
 
     public DescribeLiveRecordConfigRequest setAppName(String appName) {
@@ -65,12 +41,28 @@ public class DescribeLiveRecordConfigRequest extends TeaModel {
         return this.appName;
     }
 
-    public DescribeLiveRecordConfigRequest setStreamName(String streamName) {
-        this.streamName = streamName;
+    public DescribeLiveRecordConfigRequest setDomainName(String domainName) {
+        this.domainName = domainName;
         return this;
     }
-    public String getStreamName() {
-        return this.streamName;
+    public String getDomainName() {
+        return this.domainName;
+    }
+
+    public DescribeLiveRecordConfigRequest setOrder(String order) {
+        this.order = order;
+        return this;
+    }
+    public String getOrder() {
+        return this.order;
+    }
+
+    public DescribeLiveRecordConfigRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeLiveRecordConfigRequest setPageNum(Integer pageNum) {
@@ -89,12 +81,20 @@ public class DescribeLiveRecordConfigRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeLiveRecordConfigRequest setOrder(String order) {
-        this.order = order;
+    public DescribeLiveRecordConfigRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getOrder() {
-        return this.order;
+    public String getSecurityToken() {
+        return this.securityToken;
+    }
+
+    public DescribeLiveRecordConfigRequest setStreamName(String streamName) {
+        this.streamName = streamName;
+        return this;
+    }
+    public String getStreamName() {
+        return this.streamName;
     }
 
 }

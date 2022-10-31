@@ -4,17 +4,17 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveSnapshotConfigRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("AppName")
+    public String appName;
 
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("AppName")
-    public String appName;
+    @NameInMap("Order")
+    public String order;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("PageNum")
     public Integer pageNum;
@@ -22,28 +22,20 @@ public class DescribeLiveSnapshotConfigRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("Order")
-    public String order;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     public static DescribeLiveSnapshotConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveSnapshotConfigRequest self = new DescribeLiveSnapshotConfigRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeLiveSnapshotConfigRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public DescribeLiveSnapshotConfigRequest setAppName(String appName) {
+        this.appName = appName;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
-    public DescribeLiveSnapshotConfigRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public String getAppName() {
+        return this.appName;
     }
 
     public DescribeLiveSnapshotConfigRequest setDomainName(String domainName) {
@@ -54,12 +46,20 @@ public class DescribeLiveSnapshotConfigRequest extends TeaModel {
         return this.domainName;
     }
 
-    public DescribeLiveSnapshotConfigRequest setAppName(String appName) {
-        this.appName = appName;
+    public DescribeLiveSnapshotConfigRequest setOrder(String order) {
+        this.order = order;
         return this;
     }
-    public String getAppName() {
-        return this.appName;
+    public String getOrder() {
+        return this.order;
+    }
+
+    public DescribeLiveSnapshotConfigRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeLiveSnapshotConfigRequest setPageNum(Integer pageNum) {
@@ -78,12 +78,12 @@ public class DescribeLiveSnapshotConfigRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeLiveSnapshotConfigRequest setOrder(String order) {
-        this.order = order;
+    public DescribeLiveSnapshotConfigRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getOrder() {
-        return this.order;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }
