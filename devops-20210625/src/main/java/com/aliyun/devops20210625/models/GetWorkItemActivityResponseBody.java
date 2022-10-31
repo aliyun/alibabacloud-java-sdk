@@ -64,6 +64,88 @@ public class GetWorkItemActivityResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class GetWorkItemActivityResponseBodyActivitiesNewValue extends TeaModel {
+        @NameInMap("displayValue")
+        public String displayValue;
+
+        @NameInMap("plainValue")
+        public String plainValue;
+
+        @NameInMap("resourceType")
+        public String resourceType;
+
+        public static GetWorkItemActivityResponseBodyActivitiesNewValue build(java.util.Map<String, ?> map) throws Exception {
+            GetWorkItemActivityResponseBodyActivitiesNewValue self = new GetWorkItemActivityResponseBodyActivitiesNewValue();
+            return TeaModel.build(map, self);
+        }
+
+        public GetWorkItemActivityResponseBodyActivitiesNewValue setDisplayValue(String displayValue) {
+            this.displayValue = displayValue;
+            return this;
+        }
+        public String getDisplayValue() {
+            return this.displayValue;
+        }
+
+        public GetWorkItemActivityResponseBodyActivitiesNewValue setPlainValue(String plainValue) {
+            this.plainValue = plainValue;
+            return this;
+        }
+        public String getPlainValue() {
+            return this.plainValue;
+        }
+
+        public GetWorkItemActivityResponseBodyActivitiesNewValue setResourceType(String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+    }
+
+    public static class GetWorkItemActivityResponseBodyActivitiesOldValue extends TeaModel {
+        @NameInMap("displayValue")
+        public String displayValue;
+
+        @NameInMap("plainValue")
+        public String plainValue;
+
+        @NameInMap("resourceType")
+        public String resourceType;
+
+        public static GetWorkItemActivityResponseBodyActivitiesOldValue build(java.util.Map<String, ?> map) throws Exception {
+            GetWorkItemActivityResponseBodyActivitiesOldValue self = new GetWorkItemActivityResponseBodyActivitiesOldValue();
+            return TeaModel.build(map, self);
+        }
+
+        public GetWorkItemActivityResponseBodyActivitiesOldValue setDisplayValue(String displayValue) {
+            this.displayValue = displayValue;
+            return this;
+        }
+        public String getDisplayValue() {
+            return this.displayValue;
+        }
+
+        public GetWorkItemActivityResponseBodyActivitiesOldValue setPlainValue(String plainValue) {
+            this.plainValue = plainValue;
+            return this;
+        }
+        public String getPlainValue() {
+            return this.plainValue;
+        }
+
+        public GetWorkItemActivityResponseBodyActivitiesOldValue setResourceType(String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+    }
+
     public static class GetWorkItemActivityResponseBodyActivitiesProperty extends TeaModel {
         @NameInMap("displayName")
         public String displayName;
@@ -129,6 +211,12 @@ public class GetWorkItemActivityResponseBody extends TeaModel {
         @NameInMap("eventType")
         public String eventType;
 
+        @NameInMap("newValue")
+        public java.util.List<GetWorkItemActivityResponseBodyActivitiesNewValue> newValue;
+
+        @NameInMap("oldValue")
+        public java.util.List<GetWorkItemActivityResponseBodyActivitiesOldValue> oldValue;
+
         @NameInMap("operator")
         public String operator;
 
@@ -176,6 +264,22 @@ public class GetWorkItemActivityResponseBody extends TeaModel {
         }
         public String getEventType() {
             return this.eventType;
+        }
+
+        public GetWorkItemActivityResponseBodyActivities setNewValue(java.util.List<GetWorkItemActivityResponseBodyActivitiesNewValue> newValue) {
+            this.newValue = newValue;
+            return this;
+        }
+        public java.util.List<GetWorkItemActivityResponseBodyActivitiesNewValue> getNewValue() {
+            return this.newValue;
+        }
+
+        public GetWorkItemActivityResponseBodyActivities setOldValue(java.util.List<GetWorkItemActivityResponseBodyActivitiesOldValue> oldValue) {
+            this.oldValue = oldValue;
+            return this;
+        }
+        public java.util.List<GetWorkItemActivityResponseBodyActivitiesOldValue> getOldValue() {
+            return this.oldValue;
         }
 
         public GetWorkItemActivityResponseBodyActivities setOperator(String operator) {
