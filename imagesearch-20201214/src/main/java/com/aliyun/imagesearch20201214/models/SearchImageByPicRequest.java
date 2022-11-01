@@ -25,9 +25,6 @@ public class SearchImageByPicRequest extends TeaModel {
     @NameInMap("Region")
     public String region;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("Start")
     public Integer start;
 
@@ -90,14 +87,6 @@ public class SearchImageByPicRequest extends TeaModel {
     }
     public String getRegion() {
         return this.region;
-    }
-
-    public SearchImageByPicRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public SearchImageByPicRequest setStart(Integer start) {

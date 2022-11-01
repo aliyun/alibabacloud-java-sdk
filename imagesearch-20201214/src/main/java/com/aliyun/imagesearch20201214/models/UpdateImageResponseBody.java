@@ -7,7 +7,6 @@ public class UpdateImageResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
-    // Id of the request
     @NameInMap("Message")
     public String message;
 

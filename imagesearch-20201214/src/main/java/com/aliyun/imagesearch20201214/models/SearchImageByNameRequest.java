@@ -22,9 +22,6 @@ public class SearchImageByNameRequest extends TeaModel {
     @NameInMap("ProductId")
     public String productId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("Start")
     public Integer start;
 
@@ -79,14 +76,6 @@ public class SearchImageByNameRequest extends TeaModel {
     }
     public String getProductId() {
         return this.productId;
-    }
-
-    public SearchImageByNameRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public SearchImageByNameRequest setStart(Integer start) {

@@ -4,10 +4,6 @@ package com.aliyun.imagesearch20201214.models;
 import com.aliyun.tea.*;
 
 public class SearchImageByPicAdvanceRequest extends TeaModel {
-    @NameInMap("PicContentObject")
-    @Validation(required = true)
-    public java.io.InputStream picContentObject;
-
     @NameInMap("CategoryId")
     public Integer categoryId;
 
@@ -23,11 +19,11 @@ public class SearchImageByPicAdvanceRequest extends TeaModel {
     @NameInMap("Num")
     public Integer num;
 
+    @NameInMap("PicContent")
+    public java.io.InputStream picContentObject;
+
     @NameInMap("Region")
     public String region;
-
-    @NameInMap("RegionId")
-    public String regionId;
 
     @NameInMap("Start")
     public Integer start;
@@ -35,14 +31,6 @@ public class SearchImageByPicAdvanceRequest extends TeaModel {
     public static SearchImageByPicAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         SearchImageByPicAdvanceRequest self = new SearchImageByPicAdvanceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public SearchImageByPicAdvanceRequest setPicContentObject(java.io.InputStream picContentObject) {
-        this.picContentObject = picContentObject;
-        return this;
-    }
-    public java.io.InputStream getPicContentObject() {
-        return this.picContentObject;
     }
 
     public SearchImageByPicAdvanceRequest setCategoryId(Integer categoryId) {
@@ -85,20 +73,20 @@ public class SearchImageByPicAdvanceRequest extends TeaModel {
         return this.num;
     }
 
+    public SearchImageByPicAdvanceRequest setPicContentObject(java.io.InputStream picContentObject) {
+        this.picContentObject = picContentObject;
+        return this;
+    }
+    public java.io.InputStream getPicContentObject() {
+        return this.picContentObject;
+    }
+
     public SearchImageByPicAdvanceRequest setRegion(String region) {
         this.region = region;
         return this;
     }
     public String getRegion() {
         return this.region;
-    }
-
-    public SearchImageByPicAdvanceRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public SearchImageByPicAdvanceRequest setStart(Integer start) {
