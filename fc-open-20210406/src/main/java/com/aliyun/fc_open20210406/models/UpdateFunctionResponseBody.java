@@ -13,6 +13,9 @@ public class UpdateFunctionResponseBody extends TeaModel {
     @NameInMap("codeSize")
     public Long codeSize;
 
+    @NameInMap("cpu")
+    public Float cpu;
+
     @NameInMap("createdTime")
     public String createdTime;
 
@@ -30,6 +33,9 @@ public class UpdateFunctionResponseBody extends TeaModel {
 
     @NameInMap("description")
     public String description;
+
+    @NameInMap("diskSize")
+    public Integer diskSize;
 
     @NameInMap("environmentVariables")
     public java.util.Map<String, String> environmentVariables;
@@ -102,6 +108,14 @@ public class UpdateFunctionResponseBody extends TeaModel {
         return this.codeSize;
     }
 
+    public UpdateFunctionResponseBody setCpu(Float cpu) {
+        this.cpu = cpu;
+        return this;
+    }
+    public Float getCpu() {
+        return this.cpu;
+    }
+
     public UpdateFunctionResponseBody setCreatedTime(String createdTime) {
         this.createdTime = createdTime;
         return this;
@@ -148,6 +162,14 @@ public class UpdateFunctionResponseBody extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public UpdateFunctionResponseBody setDiskSize(Integer diskSize) {
+        this.diskSize = diskSize;
+        return this;
+    }
+    public Integer getDiskSize() {
+        return this.diskSize;
     }
 
     public UpdateFunctionResponseBody setEnvironmentVariables(java.util.Map<String, String> environmentVariables) {

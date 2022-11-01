@@ -13,6 +13,9 @@ public class UpdateFunctionRequest extends TeaModel {
     @NameInMap("code")
     public Code code;
 
+    @NameInMap("cpu")
+    public Float cpu;
+
     @NameInMap("customContainerConfig")
     public CustomContainerConfig customContainerConfig;
 
@@ -27,6 +30,9 @@ public class UpdateFunctionRequest extends TeaModel {
 
     @NameInMap("description")
     public String description;
+
+    @NameInMap("diskSize")
+    public Integer diskSize;
 
     @NameInMap("environmentVariables")
     public java.util.Map<String, String> environmentVariables;
@@ -90,6 +96,14 @@ public class UpdateFunctionRequest extends TeaModel {
         return this.code;
     }
 
+    public UpdateFunctionRequest setCpu(Float cpu) {
+        this.cpu = cpu;
+        return this;
+    }
+    public Float getCpu() {
+        return this.cpu;
+    }
+
     public UpdateFunctionRequest setCustomContainerConfig(CustomContainerConfig customContainerConfig) {
         this.customContainerConfig = customContainerConfig;
         return this;
@@ -128,6 +142,14 @@ public class UpdateFunctionRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public UpdateFunctionRequest setDiskSize(Integer diskSize) {
+        this.diskSize = diskSize;
+        return this;
+    }
+    public Integer getDiskSize() {
+        return this.diskSize;
     }
 
     public UpdateFunctionRequest setEnvironmentVariables(java.util.Map<String, String> environmentVariables) {

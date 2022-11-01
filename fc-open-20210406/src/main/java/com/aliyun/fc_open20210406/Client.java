@@ -137,7 +137,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public CreateAliasResponse createAliasWithOptions(String serviceName, CreateAliasRequest request, CreateAliasHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.additionalVersionWeight)) {
             body.put("additionalVersionWeight", request.additionalVersionWeight);
@@ -188,7 +187,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "CreateAlias"),
             new TeaPair("version", "2021-04-06"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/aliases"),
+            new TeaPair("pathname", "/2021-04-06/services/" + com.aliyun.openapiutil.Client.getEncodeParam(serviceName) + "/aliases"),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -270,7 +269,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public CreateFunctionResponse createFunctionWithOptions(String serviceName, CreateFunctionRequest request, CreateFunctionHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.caPort)) {
             body.put("caPort", request.caPort);
@@ -278,6 +276,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.code))) {
             body.put("code", request.code);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cpu)) {
+            body.put("cpu", request.cpu);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.customContainerConfig))) {
@@ -298,6 +300,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             body.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.diskSize)) {
+            body.put("diskSize", request.diskSize);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.environmentVariables)) {
@@ -381,7 +387,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "CreateFunction"),
             new TeaPair("version", "2021-04-06"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions"),
+            new TeaPair("pathname", "/2021-04-06/services/" + com.aliyun.openapiutil.Client.getEncodeParam(serviceName) + "/functions"),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -399,7 +405,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public CreateLayerVersionResponse createLayerVersionWithOptions(String layerName, CreateLayerVersionRequest request, CreateLayerVersionHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        layerName = com.aliyun.openapiutil.Client.getEncodeParam(layerName);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.code))) {
             body.put("Code", request.code);
@@ -438,7 +443,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "CreateLayerVersion"),
             new TeaPair("version", "2021-04-06"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/2021-04-06/layers/" + layerName + "/versions"),
+            new TeaPair("pathname", "/2021-04-06/layers/" + com.aliyun.openapiutil.Client.getEncodeParam(layerName) + "/versions"),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -536,8 +541,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public CreateTriggerResponse createTriggerWithOptions(String serviceName, String functionName, CreateTriggerRequest request, CreateTriggerHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
-        functionName = com.aliyun.openapiutil.Client.getEncodeParam(functionName);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             body.put("description", request.description);
@@ -592,7 +595,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "CreateTrigger"),
             new TeaPair("version", "2021-04-06"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/triggers"),
+            new TeaPair("pathname", "/2021-04-06/services/" + com.aliyun.openapiutil.Client.getEncodeParam(serviceName) + "/functions/" + com.aliyun.openapiutil.Client.getEncodeParam(functionName) + "/triggers"),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -610,7 +613,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public CreateVpcBindingResponse createVpcBindingWithOptions(String serviceName, CreateVpcBindingRequest request, CreateVpcBindingHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
             body.put("vpcId", request.vpcId);
@@ -641,7 +643,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "CreateVpcBinding"),
             new TeaPair("version", "2021-04-06"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/bindings"),
+            new TeaPair("pathname", "/2021-04-06/services/" + com.aliyun.openapiutil.Client.getEncodeParam(serviceName) + "/bindings"),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -658,8 +660,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public DeleteAliasResponse deleteAliasWithOptions(String serviceName, String aliasName, DeleteAliasHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
-        aliasName = com.aliyun.openapiutil.Client.getEncodeParam(aliasName);
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
             realHeaders = headers.commonHeaders;
@@ -688,7 +688,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "DeleteAlias"),
             new TeaPair("version", "2021-04-06"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/aliases/" + aliasName + ""),
+            new TeaPair("pathname", "/2021-04-06/services/" + com.aliyun.openapiutil.Client.getEncodeParam(serviceName) + "/aliases/" + com.aliyun.openapiutil.Client.getEncodeParam(aliasName) + ""),
             new TeaPair("method", "DELETE"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -705,7 +705,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public DeleteCustomDomainResponse deleteCustomDomainWithOptions(String domainName, DeleteCustomDomainHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        domainName = com.aliyun.openapiutil.Client.getEncodeParam(domainName);
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
             realHeaders = headers.commonHeaders;
@@ -730,7 +729,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "DeleteCustomDomain"),
             new TeaPair("version", "2021-04-06"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/2021-04-06/custom-domains/" + domainName + ""),
+            new TeaPair("pathname", "/2021-04-06/custom-domains/" + com.aliyun.openapiutil.Client.getEncodeParam(domainName) + ""),
             new TeaPair("method", "DELETE"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -747,8 +746,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public DeleteFunctionResponse deleteFunctionWithOptions(String serviceName, String functionName, DeleteFunctionHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
-        functionName = com.aliyun.openapiutil.Client.getEncodeParam(functionName);
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
             realHeaders = headers.commonHeaders;
@@ -777,7 +774,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "DeleteFunction"),
             new TeaPair("version", "2021-04-06"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + ""),
+            new TeaPair("pathname", "/2021-04-06/services/" + com.aliyun.openapiutil.Client.getEncodeParam(serviceName) + "/functions/" + com.aliyun.openapiutil.Client.getEncodeParam(functionName) + ""),
             new TeaPair("method", "DELETE"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -795,8 +792,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DeleteFunctionAsyncInvokeConfigResponse deleteFunctionAsyncInvokeConfigWithOptions(String serviceName, String functionName, DeleteFunctionAsyncInvokeConfigRequest request, DeleteFunctionAsyncInvokeConfigHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
-        functionName = com.aliyun.openapiutil.Client.getEncodeParam(functionName);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.qualifier)) {
             query.put("qualifier", request.qualifier);
@@ -827,7 +822,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "DeleteFunctionAsyncInvokeConfig"),
             new TeaPair("version", "2021-04-06"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/async-invoke-config"),
+            new TeaPair("pathname", "/2021-04-06/services/" + com.aliyun.openapiutil.Client.getEncodeParam(serviceName) + "/functions/" + com.aliyun.openapiutil.Client.getEncodeParam(functionName) + "/async-invoke-config"),
             new TeaPair("method", "DELETE"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -845,8 +840,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DeleteFunctionOnDemandConfigResponse deleteFunctionOnDemandConfigWithOptions(String serviceName, String functionName, DeleteFunctionOnDemandConfigRequest request, DeleteFunctionOnDemandConfigHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
-        functionName = com.aliyun.openapiutil.Client.getEncodeParam(functionName);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.qualifier)) {
             query.put("qualifier", request.qualifier);
@@ -881,7 +874,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "DeleteFunctionOnDemandConfig"),
             new TeaPair("version", "2021-04-06"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/on-demand-config"),
+            new TeaPair("pathname", "/2021-04-06/services/" + com.aliyun.openapiutil.Client.getEncodeParam(serviceName) + "/functions/" + com.aliyun.openapiutil.Client.getEncodeParam(functionName) + "/on-demand-config"),
             new TeaPair("method", "DELETE"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -898,8 +891,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public DeleteLayerVersionResponse deleteLayerVersionWithOptions(String layerName, String version, DeleteLayerVersionHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        layerName = com.aliyun.openapiutil.Client.getEncodeParam(layerName);
-        version = com.aliyun.openapiutil.Client.getEncodeParam(version);
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
             realHeaders = headers.commonHeaders;
@@ -924,7 +915,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "DeleteLayerVersion"),
             new TeaPair("version", "2021-04-06"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/2021-04-06/layers/" + layerName + "/versions/" + version + ""),
+            new TeaPair("pathname", "/2021-04-06/layers/" + com.aliyun.openapiutil.Client.getEncodeParam(layerName) + "/versions/" + com.aliyun.openapiutil.Client.getEncodeParam(version) + ""),
             new TeaPair("method", "DELETE"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -941,7 +932,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public DeleteServiceResponse deleteServiceWithOptions(String serviceName, DeleteServiceHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
             realHeaders = headers.commonHeaders;
@@ -970,7 +960,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "DeleteService"),
             new TeaPair("version", "2021-04-06"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + ""),
+            new TeaPair("pathname", "/2021-04-06/services/" + com.aliyun.openapiutil.Client.getEncodeParam(serviceName) + ""),
             new TeaPair("method", "DELETE"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -987,8 +977,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public DeleteServiceVersionResponse deleteServiceVersionWithOptions(String serviceName, String versionId, DeleteServiceVersionHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
-        versionId = com.aliyun.openapiutil.Client.getEncodeParam(versionId);
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
             realHeaders = headers.commonHeaders;
@@ -1013,7 +1001,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "DeleteServiceVersion"),
             new TeaPair("version", "2021-04-06"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/versions/" + versionId + ""),
+            new TeaPair("pathname", "/2021-04-06/services/" + com.aliyun.openapiutil.Client.getEncodeParam(serviceName) + "/versions/" + com.aliyun.openapiutil.Client.getEncodeParam(versionId) + ""),
             new TeaPair("method", "DELETE"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -1030,9 +1018,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public DeleteTriggerResponse deleteTriggerWithOptions(String serviceName, String functionName, String triggerName, DeleteTriggerHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
-        functionName = com.aliyun.openapiutil.Client.getEncodeParam(functionName);
-        triggerName = com.aliyun.openapiutil.Client.getEncodeParam(triggerName);
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
             realHeaders = headers.commonHeaders;
@@ -1061,7 +1046,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "DeleteTrigger"),
             new TeaPair("version", "2021-04-06"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/triggers/" + triggerName + ""),
+            new TeaPair("pathname", "/2021-04-06/services/" + com.aliyun.openapiutil.Client.getEncodeParam(serviceName) + "/functions/" + com.aliyun.openapiutil.Client.getEncodeParam(functionName) + "/triggers/" + com.aliyun.openapiutil.Client.getEncodeParam(triggerName) + ""),
             new TeaPair("method", "DELETE"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -1078,8 +1063,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public DeleteVpcBindingResponse deleteVpcBindingWithOptions(String serviceName, String vpcId, DeleteVpcBindingHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
-        vpcId = com.aliyun.openapiutil.Client.getEncodeParam(vpcId);
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
             realHeaders = headers.commonHeaders;
@@ -1104,7 +1087,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "DeleteVpcBinding"),
             new TeaPair("version", "2021-04-06"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/bindings/" + vpcId + ""),
+            new TeaPair("pathname", "/2021-04-06/services/" + com.aliyun.openapiutil.Client.getEncodeParam(serviceName) + "/bindings/" + com.aliyun.openapiutil.Client.getEncodeParam(vpcId) + ""),
             new TeaPair("method", "DELETE"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -1122,9 +1105,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DeregisterEventSourceResponse deregisterEventSourceWithOptions(String serviceName, String functionName, String sourceArn, DeregisterEventSourceRequest request, DeregisterEventSourceHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
-        functionName = com.aliyun.openapiutil.Client.getEncodeParam(functionName);
-        sourceArn = com.aliyun.openapiutil.Client.getEncodeParam(sourceArn);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.qualifier)) {
             query.put("qualifier", request.qualifier);
@@ -1155,7 +1135,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "DeregisterEventSource"),
             new TeaPair("version", "2021-04-06"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/event-sources/" + sourceArn + ""),
+            new TeaPair("pathname", "/2021-04-06/services/" + com.aliyun.openapiutil.Client.getEncodeParam(serviceName) + "/functions/" + com.aliyun.openapiutil.Client.getEncodeParam(functionName) + "/event-sources/" + com.aliyun.openapiutil.Client.getEncodeParam(sourceArn) + ""),
             new TeaPair("method", "DELETE"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -1213,8 +1193,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public GetAliasResponse getAliasWithOptions(String serviceName, String aliasName, GetAliasHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
-        aliasName = com.aliyun.openapiutil.Client.getEncodeParam(aliasName);
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
             realHeaders = headers.commonHeaders;
@@ -1239,7 +1217,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "GetAlias"),
             new TeaPair("version", "2021-04-06"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/aliases/" + aliasName + ""),
+            new TeaPair("pathname", "/2021-04-06/services/" + com.aliyun.openapiutil.Client.getEncodeParam(serviceName) + "/aliases/" + com.aliyun.openapiutil.Client.getEncodeParam(aliasName) + ""),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -1256,7 +1234,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public GetCustomDomainResponse getCustomDomainWithOptions(String domainName, GetCustomDomainHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        domainName = com.aliyun.openapiutil.Client.getEncodeParam(domainName);
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
             realHeaders = headers.commonHeaders;
@@ -1281,7 +1258,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "GetCustomDomain"),
             new TeaPair("version", "2021-04-06"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/2021-04-06/custom-domains/" + domainName + ""),
+            new TeaPair("pathname", "/2021-04-06/custom-domains/" + com.aliyun.openapiutil.Client.getEncodeParam(domainName) + ""),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -1299,8 +1276,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public GetFunctionResponse getFunctionWithOptions(String serviceName, String functionName, GetFunctionRequest request, GetFunctionHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
-        functionName = com.aliyun.openapiutil.Client.getEncodeParam(functionName);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.qualifier)) {
             query.put("qualifier", request.qualifier);
@@ -1331,7 +1306,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "GetFunction"),
             new TeaPair("version", "2021-04-06"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + ""),
+            new TeaPair("pathname", "/2021-04-06/services/" + com.aliyun.openapiutil.Client.getEncodeParam(serviceName) + "/functions/" + com.aliyun.openapiutil.Client.getEncodeParam(functionName) + ""),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -1349,8 +1324,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public GetFunctionAsyncInvokeConfigResponse getFunctionAsyncInvokeConfigWithOptions(String serviceName, String functionName, GetFunctionAsyncInvokeConfigRequest request, GetFunctionAsyncInvokeConfigHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
-        functionName = com.aliyun.openapiutil.Client.getEncodeParam(functionName);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.qualifier)) {
             query.put("qualifier", request.qualifier);
@@ -1381,7 +1354,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "GetFunctionAsyncInvokeConfig"),
             new TeaPair("version", "2021-04-06"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/async-invoke-config"),
+            new TeaPair("pathname", "/2021-04-06/services/" + com.aliyun.openapiutil.Client.getEncodeParam(serviceName) + "/functions/" + com.aliyun.openapiutil.Client.getEncodeParam(functionName) + "/async-invoke-config"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -1399,8 +1372,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public GetFunctionCodeResponse getFunctionCodeWithOptions(String serviceName, String functionName, GetFunctionCodeRequest request, GetFunctionCodeHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
-        functionName = com.aliyun.openapiutil.Client.getEncodeParam(functionName);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.qualifier)) {
             query.put("qualifier", request.qualifier);
@@ -1431,7 +1402,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "GetFunctionCode"),
             new TeaPair("version", "2021-04-06"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/code"),
+            new TeaPair("pathname", "/2021-04-06/services/" + com.aliyun.openapiutil.Client.getEncodeParam(serviceName) + "/functions/" + com.aliyun.openapiutil.Client.getEncodeParam(functionName) + "/code"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -1449,8 +1420,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public GetFunctionOnDemandConfigResponse getFunctionOnDemandConfigWithOptions(String serviceName, String functionName, GetFunctionOnDemandConfigRequest request, GetFunctionOnDemandConfigHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
-        functionName = com.aliyun.openapiutil.Client.getEncodeParam(functionName);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.qualifier)) {
             query.put("qualifier", request.qualifier);
@@ -1481,7 +1450,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "GetFunctionOnDemandConfig"),
             new TeaPair("version", "2021-04-06"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/on-demand-config"),
+            new TeaPair("pathname", "/2021-04-06/services/" + com.aliyun.openapiutil.Client.getEncodeParam(serviceName) + "/functions/" + com.aliyun.openapiutil.Client.getEncodeParam(functionName) + "/on-demand-config"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -1498,8 +1467,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public GetLayerVersionResponse getLayerVersionWithOptions(String layerName, String version, GetLayerVersionHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        layerName = com.aliyun.openapiutil.Client.getEncodeParam(layerName);
-        version = com.aliyun.openapiutil.Client.getEncodeParam(version);
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
             realHeaders = headers.commonHeaders;
@@ -1524,7 +1491,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "GetLayerVersion"),
             new TeaPair("version", "2021-04-06"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/2021-04-06/layers/" + layerName + "/versions/" + version + ""),
+            new TeaPair("pathname", "/2021-04-06/layers/" + com.aliyun.openapiutil.Client.getEncodeParam(layerName) + "/versions/" + com.aliyun.openapiutil.Client.getEncodeParam(version) + ""),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -1542,8 +1509,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public GetProvisionConfigResponse getProvisionConfigWithOptions(String serviceName, String functionName, GetProvisionConfigRequest request, GetProvisionConfigHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
-        functionName = com.aliyun.openapiutil.Client.getEncodeParam(functionName);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.qualifier)) {
             query.put("qualifier", request.qualifier);
@@ -1574,7 +1539,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "GetProvisionConfig"),
             new TeaPair("version", "2021-04-06"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/provision-config"),
+            new TeaPair("pathname", "/2021-04-06/services/" + com.aliyun.openapiutil.Client.getEncodeParam(serviceName) + "/functions/" + com.aliyun.openapiutil.Client.getEncodeParam(functionName) + "/provision-config"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -1640,7 +1605,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public GetServiceResponse getServiceWithOptions(String serviceName, GetServiceRequest request, GetServiceHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.qualifier)) {
             query.put("qualifier", request.qualifier);
@@ -1671,7 +1635,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "GetService"),
             new TeaPair("version", "2021-04-06"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + ""),
+            new TeaPair("pathname", "/2021-04-06/services/" + com.aliyun.openapiutil.Client.getEncodeParam(serviceName) + ""),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -1689,9 +1653,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public GetStatefulAsyncInvocationResponse getStatefulAsyncInvocationWithOptions(String serviceName, String functionName, String invocationId, GetStatefulAsyncInvocationRequest request, GetStatefulAsyncInvocationHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
-        functionName = com.aliyun.openapiutil.Client.getEncodeParam(functionName);
-        invocationId = com.aliyun.openapiutil.Client.getEncodeParam(invocationId);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.qualifier)) {
             query.put("qualifier", request.qualifier);
@@ -1734,7 +1695,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "GetStatefulAsyncInvocation"),
             new TeaPair("version", "2021-04-06"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/stateful-async-invocations/" + invocationId + ""),
+            new TeaPair("pathname", "/2021-04-06/services/" + com.aliyun.openapiutil.Client.getEncodeParam(serviceName) + "/functions/" + com.aliyun.openapiutil.Client.getEncodeParam(functionName) + "/stateful-async-invocations/" + com.aliyun.openapiutil.Client.getEncodeParam(invocationId) + ""),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -1751,9 +1712,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public GetTriggerResponse getTriggerWithOptions(String serviceName, String functionName, String triggerName, GetTriggerHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
-        functionName = com.aliyun.openapiutil.Client.getEncodeParam(functionName);
-        triggerName = com.aliyun.openapiutil.Client.getEncodeParam(triggerName);
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
             realHeaders = headers.commonHeaders;
@@ -1778,7 +1736,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "GetTrigger"),
             new TeaPair("version", "2021-04-06"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/triggers/" + triggerName + ""),
+            new TeaPair("pathname", "/2021-04-06/services/" + com.aliyun.openapiutil.Client.getEncodeParam(serviceName) + "/functions/" + com.aliyun.openapiutil.Client.getEncodeParam(functionName) + "/triggers/" + com.aliyun.openapiutil.Client.getEncodeParam(triggerName) + ""),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -1796,8 +1754,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public InvokeFunctionResponse invokeFunctionWithOptions(String serviceName, String functionName, InvokeFunctionRequest request, InvokeFunctionHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
-        functionName = com.aliyun.openapiutil.Client.getEncodeParam(functionName);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.qualifier)) {
             query.put("qualifier", request.qualifier);
@@ -1846,7 +1802,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "InvokeFunction"),
             new TeaPair("version", "2021-04-06"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/invocations"),
+            new TeaPair("pathname", "/2021-04-06/services/" + com.aliyun.openapiutil.Client.getEncodeParam(serviceName) + "/functions/" + com.aliyun.openapiutil.Client.getEncodeParam(functionName) + "/invocations"),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -1864,7 +1820,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public ListAliasesResponse listAliasesWithOptions(String serviceName, ListAliasesRequest request, ListAliasesHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
             query.put("limit", request.limit);
@@ -1907,7 +1862,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "ListAliases"),
             new TeaPair("version", "2021-04-06"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/aliases"),
+            new TeaPair("pathname", "/2021-04-06/services/" + com.aliyun.openapiutil.Client.getEncodeParam(serviceName) + "/aliases"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -1985,8 +1940,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public ListEventSourcesResponse listEventSourcesWithOptions(String serviceName, String functionName, ListEventSourcesRequest request, ListEventSourcesHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
-        functionName = com.aliyun.openapiutil.Client.getEncodeParam(functionName);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.qualifier)) {
             query.put("qualifier", request.qualifier);
@@ -2017,7 +1970,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "ListEventSources"),
             new TeaPair("version", "2021-04-06"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/event-sources"),
+            new TeaPair("pathname", "/2021-04-06/services/" + com.aliyun.openapiutil.Client.getEncodeParam(serviceName) + "/functions/" + com.aliyun.openapiutil.Client.getEncodeParam(functionName) + "/event-sources"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -2035,8 +1988,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public ListFunctionAsyncInvokeConfigsResponse listFunctionAsyncInvokeConfigsWithOptions(String serviceName, String functionName, ListFunctionAsyncInvokeConfigsRequest request, ListFunctionAsyncInvokeConfigsHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
-        functionName = com.aliyun.openapiutil.Client.getEncodeParam(functionName);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
             query.put("limit", request.limit);
@@ -2083,7 +2034,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "ListFunctionAsyncInvokeConfigs"),
             new TeaPair("version", "2021-04-06"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/async-invoke-configs"),
+            new TeaPair("pathname", "/2021-04-06/services/" + com.aliyun.openapiutil.Client.getEncodeParam(serviceName) + "/functions/" + com.aliyun.openapiutil.Client.getEncodeParam(functionName) + "/async-invoke-configs"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -2101,7 +2052,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public ListFunctionsResponse listFunctionsWithOptions(String serviceName, ListFunctionsRequest request, ListFunctionsHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
             query.put("limit", request.limit);
@@ -2148,7 +2098,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "ListFunctions"),
             new TeaPair("version", "2021-04-06"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions"),
+            new TeaPair("pathname", "/2021-04-06/services/" + com.aliyun.openapiutil.Client.getEncodeParam(serviceName) + "/functions"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -2166,8 +2116,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public ListInstancesResponse listInstancesWithOptions(String serviceName, String functionName, ListInstancesRequest request, ListInstancesHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
-        functionName = com.aliyun.openapiutil.Client.getEncodeParam(functionName);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.instanceIds)) {
             query.put("instanceIds", request.instanceIds);
@@ -2198,7 +2146,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "ListInstances"),
             new TeaPair("version", "2021-04-06"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/instances"),
+            new TeaPair("pathname", "/2021-04-06/services/" + com.aliyun.openapiutil.Client.getEncodeParam(serviceName) + "/functions/" + com.aliyun.openapiutil.Client.getEncodeParam(functionName) + "/instances"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -2216,7 +2164,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public ListLayerVersionsResponse listLayerVersionsWithOptions(String layerName, ListLayerVersionsRequest request, ListLayerVersionsHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        layerName = com.aliyun.openapiutil.Client.getEncodeParam(layerName);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
             query.put("limit", request.limit);
@@ -2251,7 +2198,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "ListLayerVersions"),
             new TeaPair("version", "2021-04-06"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/2021-04-06/layers/" + layerName + "/versions"),
+            new TeaPair("pathname", "/2021-04-06/layers/" + com.aliyun.openapiutil.Client.getEncodeParam(layerName) + "/versions"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -2509,7 +2456,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public ListServiceVersionsResponse listServiceVersionsWithOptions(String serviceName, ListServiceVersionsRequest request, ListServiceVersionsHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.direction)) {
             query.put("direction", request.direction);
@@ -2552,7 +2498,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "ListServiceVersions"),
             new TeaPair("version", "2021-04-06"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/versions"),
+            new TeaPair("pathname", "/2021-04-06/services/" + com.aliyun.openapiutil.Client.getEncodeParam(serviceName) + "/versions"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -2682,8 +2628,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public ListStatefulAsyncInvocationsResponse listStatefulAsyncInvocationsWithOptions(String serviceName, String functionName, ListStatefulAsyncInvocationsRequest request, ListStatefulAsyncInvocationsHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
-        functionName = com.aliyun.openapiutil.Client.getEncodeParam(functionName);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.includePayload)) {
             query.put("includePayload", request.includePayload);
@@ -2758,7 +2702,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "ListStatefulAsyncInvocations"),
             new TeaPair("version", "2021-04-06"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/stateful-async-invocations"),
+            new TeaPair("pathname", "/2021-04-06/services/" + com.aliyun.openapiutil.Client.getEncodeParam(serviceName) + "/functions/" + com.aliyun.openapiutil.Client.getEncodeParam(functionName) + "/stateful-async-invocations"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -2828,8 +2772,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public ListTriggersResponse listTriggersWithOptions(String serviceName, String functionName, ListTriggersRequest request, ListTriggersHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
-        functionName = com.aliyun.openapiutil.Client.getEncodeParam(functionName);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
             query.put("limit", request.limit);
@@ -2872,7 +2814,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "ListTriggers"),
             new TeaPair("version", "2021-04-06"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/triggers"),
+            new TeaPair("pathname", "/2021-04-06/services/" + com.aliyun.openapiutil.Client.getEncodeParam(serviceName) + "/functions/" + com.aliyun.openapiutil.Client.getEncodeParam(functionName) + "/triggers"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -2889,7 +2831,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public ListVpcBindingsResponse listVpcBindingsWithOptions(String serviceName, ListVpcBindingsHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
             realHeaders = headers.commonHeaders;
@@ -2914,7 +2855,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "ListVpcBindings"),
             new TeaPair("version", "2021-04-06"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/bindings"),
+            new TeaPair("pathname", "/2021-04-06/services/" + com.aliyun.openapiutil.Client.getEncodeParam(serviceName) + "/bindings"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -2932,7 +2873,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public PublishServiceVersionResponse publishServiceVersionWithOptions(String serviceName, PublishServiceVersionRequest request, PublishServiceVersionHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             body.put("description", request.description);
@@ -2967,7 +2907,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "PublishServiceVersion"),
             new TeaPair("version", "2021-04-06"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/versions"),
+            new TeaPair("pathname", "/2021-04-06/services/" + com.aliyun.openapiutil.Client.getEncodeParam(serviceName) + "/versions"),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -2985,8 +2925,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public PutFunctionAsyncInvokeConfigResponse putFunctionAsyncInvokeConfigWithOptions(String serviceName, String functionName, PutFunctionAsyncInvokeConfigRequest request, PutFunctionAsyncInvokeConfigHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
-        functionName = com.aliyun.openapiutil.Client.getEncodeParam(functionName);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.qualifier)) {
             query.put("qualifier", request.qualifier);
@@ -3035,7 +2973,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "PutFunctionAsyncInvokeConfig"),
             new TeaPair("version", "2021-04-06"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/async-invoke-config"),
+            new TeaPair("pathname", "/2021-04-06/services/" + com.aliyun.openapiutil.Client.getEncodeParam(serviceName) + "/functions/" + com.aliyun.openapiutil.Client.getEncodeParam(functionName) + "/async-invoke-config"),
             new TeaPair("method", "PUT"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -3053,8 +2991,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public PutFunctionOnDemandConfigResponse putFunctionOnDemandConfigWithOptions(String serviceName, String functionName, PutFunctionOnDemandConfigRequest request, PutFunctionOnDemandConfigHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
-        functionName = com.aliyun.openapiutil.Client.getEncodeParam(functionName);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.qualifier)) {
             query.put("qualifier", request.qualifier);
@@ -3095,7 +3031,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "PutFunctionOnDemandConfig"),
             new TeaPair("version", "2021-04-06"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/on-demand-config"),
+            new TeaPair("pathname", "/2021-04-06/services/" + com.aliyun.openapiutil.Client.getEncodeParam(serviceName) + "/functions/" + com.aliyun.openapiutil.Client.getEncodeParam(functionName) + "/on-demand-config"),
             new TeaPair("method", "PUT"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -3113,7 +3049,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public PutLayerACLResponse putLayerACLWithOptions(String layerName, PutLayerACLRequest request, PutLayerACLHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        layerName = com.aliyun.openapiutil.Client.getEncodeParam(layerName);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request._public)) {
             query.put("public", request._public);
@@ -3144,7 +3079,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "PutLayerACL"),
             new TeaPair("version", "2021-04-06"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/2021-04-06/layers/" + layerName + "/acl"),
+            new TeaPair("pathname", "/2021-04-06/layers/" + com.aliyun.openapiutil.Client.getEncodeParam(layerName) + "/acl"),
             new TeaPair("method", "PUT"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -3162,8 +3097,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public PutProvisionConfigResponse putProvisionConfigWithOptions(String serviceName, String functionName, PutProvisionConfigRequest request, PutProvisionConfigHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
-        functionName = com.aliyun.openapiutil.Client.getEncodeParam(functionName);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.qualifier)) {
             query.put("qualifier", request.qualifier);
@@ -3212,7 +3145,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "PutProvisionConfig"),
             new TeaPair("version", "2021-04-06"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/provision-config"),
+            new TeaPair("pathname", "/2021-04-06/services/" + com.aliyun.openapiutil.Client.getEncodeParam(serviceName) + "/functions/" + com.aliyun.openapiutil.Client.getEncodeParam(functionName) + "/provision-config"),
             new TeaPair("method", "PUT"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -3230,8 +3163,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public RegisterEventSourceResponse registerEventSourceWithOptions(String serviceName, String functionName, RegisterEventSourceRequest request, RegisterEventSourceHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
-        functionName = com.aliyun.openapiutil.Client.getEncodeParam(functionName);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.qualifier)) {
             query.put("qualifier", request.qualifier);
@@ -3268,7 +3199,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "RegisterEventSource"),
             new TeaPair("version", "2021-04-06"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/event-sources"),
+            new TeaPair("pathname", "/2021-04-06/services/" + com.aliyun.openapiutil.Client.getEncodeParam(serviceName) + "/functions/" + com.aliyun.openapiutil.Client.getEncodeParam(functionName) + "/event-sources"),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -3285,7 +3216,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public ReleaseGPUInstanceResponse releaseGPUInstanceWithOptions(String instanceId, ReleaseGPUInstanceHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        instanceId = com.aliyun.openapiutil.Client.getEncodeParam(instanceId);
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
             realHeaders = headers.commonHeaders;
@@ -3310,7 +3240,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "ReleaseGPUInstance"),
             new TeaPair("version", "2021-04-06"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/2021-04-06/gpuInstances/" + instanceId + ""),
+            new TeaPair("pathname", "/2021-04-06/gpuInstances/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + ""),
             new TeaPair("method", "DELETE"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -3328,9 +3258,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public StopStatefulAsyncInvocationResponse stopStatefulAsyncInvocationWithOptions(String serviceName, String functionName, String invocationId, StopStatefulAsyncInvocationRequest request, StopStatefulAsyncInvocationHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
-        functionName = com.aliyun.openapiutil.Client.getEncodeParam(functionName);
-        invocationId = com.aliyun.openapiutil.Client.getEncodeParam(invocationId);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.qualifier)) {
             query.put("qualifier", request.qualifier);
@@ -3361,7 +3288,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "StopStatefulAsyncInvocation"),
             new TeaPair("version", "2021-04-06"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/stateful-async-invocations/" + invocationId + ""),
+            new TeaPair("pathname", "/2021-04-06/services/" + com.aliyun.openapiutil.Client.getEncodeParam(serviceName) + "/functions/" + com.aliyun.openapiutil.Client.getEncodeParam(functionName) + "/stateful-async-invocations/" + com.aliyun.openapiutil.Client.getEncodeParam(invocationId) + ""),
             new TeaPair("method", "PUT"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -3487,8 +3414,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public UpdateAliasResponse updateAliasWithOptions(String serviceName, String aliasName, UpdateAliasRequest request, UpdateAliasHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
-        aliasName = com.aliyun.openapiutil.Client.getEncodeParam(aliasName);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.additionalVersionWeight)) {
             body.put("additionalVersionWeight", request.additionalVersionWeight);
@@ -3539,7 +3464,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "UpdateAlias"),
             new TeaPair("version", "2021-04-06"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/aliases/" + aliasName + ""),
+            new TeaPair("pathname", "/2021-04-06/services/" + com.aliyun.openapiutil.Client.getEncodeParam(serviceName) + "/aliases/" + com.aliyun.openapiutil.Client.getEncodeParam(aliasName) + ""),
             new TeaPair("method", "PUT"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -3557,7 +3482,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public UpdateCustomDomainResponse updateCustomDomainWithOptions(String domainName, UpdateCustomDomainRequest request, UpdateCustomDomainHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        domainName = com.aliyun.openapiutil.Client.getEncodeParam(domainName);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.certConfig))) {
             body.put("certConfig", request.certConfig);
@@ -3600,7 +3524,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "UpdateCustomDomain"),
             new TeaPair("version", "2021-04-06"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/2021-04-06/custom-domains/" + domainName + ""),
+            new TeaPair("pathname", "/2021-04-06/custom-domains/" + com.aliyun.openapiutil.Client.getEncodeParam(domainName) + ""),
             new TeaPair("method", "PUT"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -3618,8 +3542,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public UpdateFunctionResponse updateFunctionWithOptions(String serviceName, String functionName, UpdateFunctionRequest request, UpdateFunctionHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
-        functionName = com.aliyun.openapiutil.Client.getEncodeParam(functionName);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.instanceConcurrency)) {
             body.put("InstanceConcurrency", request.instanceConcurrency);
@@ -3631,6 +3553,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.code))) {
             body.put("code", request.code);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cpu)) {
+            body.put("cpu", request.cpu);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.customContainerConfig))) {
@@ -3651,6 +3577,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             body.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.diskSize)) {
+            body.put("diskSize", request.diskSize);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.environmentVariables)) {
@@ -3730,7 +3660,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "UpdateFunction"),
             new TeaPair("version", "2021-04-06"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + ""),
+            new TeaPair("pathname", "/2021-04-06/services/" + com.aliyun.openapiutil.Client.getEncodeParam(serviceName) + "/functions/" + com.aliyun.openapiutil.Client.getEncodeParam(functionName) + ""),
             new TeaPair("method", "PUT"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -3748,7 +3678,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public UpdateServiceResponse updateServiceWithOptions(String serviceName, UpdateServiceRequest request, UpdateServiceHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             body.put("description", request.description);
@@ -3811,7 +3740,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "UpdateService"),
             new TeaPair("version", "2021-04-06"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + ""),
+            new TeaPair("pathname", "/2021-04-06/services/" + com.aliyun.openapiutil.Client.getEncodeParam(serviceName) + ""),
             new TeaPair("method", "PUT"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -3829,9 +3758,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public UpdateTriggerResponse updateTriggerWithOptions(String serviceName, String functionName, String triggerName, UpdateTriggerRequest request, UpdateTriggerHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
-        functionName = com.aliyun.openapiutil.Client.getEncodeParam(functionName);
-        triggerName = com.aliyun.openapiutil.Client.getEncodeParam(triggerName);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             body.put("description", request.description);
@@ -3878,7 +3804,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "UpdateTrigger"),
             new TeaPair("version", "2021-04-06"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/triggers/" + triggerName + ""),
+            new TeaPair("pathname", "/2021-04-06/services/" + com.aliyun.openapiutil.Client.getEncodeParam(serviceName) + "/functions/" + com.aliyun.openapiutil.Client.getEncodeParam(functionName) + "/triggers/" + com.aliyun.openapiutil.Client.getEncodeParam(triggerName) + ""),
             new TeaPair("method", "PUT"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
