@@ -4,10 +4,6 @@ package com.aliyun.imagesearch20201214.models;
 import com.aliyun.tea.*;
 
 public class AddImageAdvanceRequest extends TeaModel {
-    @NameInMap("PicContentObject")
-    @Validation(required = true)
-    public java.io.InputStream picContentObject;
-
     @NameInMap("CategoryId")
     public Integer categoryId;
 
@@ -22,6 +18,9 @@ public class AddImageAdvanceRequest extends TeaModel {
 
     @NameInMap("IntAttr")
     public Integer intAttr;
+
+    @NameInMap("PicContent")
+    public java.io.InputStream picContentObject;
 
     @NameInMap("PicName")
     public String picName;
@@ -38,14 +37,6 @@ public class AddImageAdvanceRequest extends TeaModel {
     public static AddImageAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         AddImageAdvanceRequest self = new AddImageAdvanceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public AddImageAdvanceRequest setPicContentObject(java.io.InputStream picContentObject) {
-        this.picContentObject = picContentObject;
-        return this;
-    }
-    public java.io.InputStream getPicContentObject() {
-        return this.picContentObject;
     }
 
     public AddImageAdvanceRequest setCategoryId(Integer categoryId) {
@@ -86,6 +77,14 @@ public class AddImageAdvanceRequest extends TeaModel {
     }
     public Integer getIntAttr() {
         return this.intAttr;
+    }
+
+    public AddImageAdvanceRequest setPicContentObject(java.io.InputStream picContentObject) {
+        this.picContentObject = picContentObject;
+        return this;
+    }
+    public java.io.InputStream getPicContentObject() {
+        return this.picContentObject;
     }
 
     public AddImageAdvanceRequest setPicName(String picName) {
