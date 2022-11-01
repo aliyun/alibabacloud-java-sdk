@@ -4,9 +4,6 @@ package com.aliyun.imageseg20191230.models;
 import com.aliyun.tea.*;
 
 public class SegmentBodyRequest extends TeaModel {
-    @NameInMap("Async")
-    public Boolean async;
-
     @NameInMap("ImageURL")
     public String imageURL;
 
@@ -16,14 +13,6 @@ public class SegmentBodyRequest extends TeaModel {
     public static SegmentBodyRequest build(java.util.Map<String, ?> map) throws Exception {
         SegmentBodyRequest self = new SegmentBodyRequest();
         return TeaModel.build(map, self);
-    }
-
-    public SegmentBodyRequest setAsync(Boolean async) {
-        this.async = async;
-        return this;
-    }
-    public Boolean getAsync() {
-        return this.async;
     }
 
     public SegmentBodyRequest setImageURL(String imageURL) {
