@@ -7,6 +7,9 @@ public class HTTPTriggerConfig extends TeaModel {
     @NameInMap("authType")
     public String authType;
 
+    @NameInMap("disableURLInternet")
+    public Boolean disableURLInternet;
+
     @NameInMap("methods")
     public java.util.List<String> methods;
 
@@ -21,6 +24,14 @@ public class HTTPTriggerConfig extends TeaModel {
     }
     public String getAuthType() {
         return this.authType;
+    }
+
+    public HTTPTriggerConfig setDisableURLInternet(Boolean disableURLInternet) {
+        this.disableURLInternet = disableURLInternet;
+        return this;
+    }
+    public Boolean getDisableURLInternet() {
+        return this.disableURLInternet;
     }
 
     public HTTPTriggerConfig setMethods(java.util.List<String> methods) {

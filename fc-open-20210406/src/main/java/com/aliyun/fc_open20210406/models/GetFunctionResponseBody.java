@@ -13,6 +13,9 @@ public class GetFunctionResponseBody extends TeaModel {
     @NameInMap("codeSize")
     public Long codeSize;
 
+    @NameInMap("cpu")
+    public Float cpu;
+
     @NameInMap("createdTime")
     public String createdTime;
 
@@ -30,6 +33,9 @@ public class GetFunctionResponseBody extends TeaModel {
 
     @NameInMap("description")
     public String description;
+
+    @NameInMap("diskSize")
+    public Integer diskSize;
 
     @NameInMap("environmentVariables")
     public java.util.Map<String, String> environmentVariables;
@@ -67,6 +73,9 @@ public class GetFunctionResponseBody extends TeaModel {
     @NameInMap("layers")
     public java.util.List<String> layers;
 
+    @NameInMap("layersArnV2")
+    public java.util.List<String> layersArnV2;
+
     @NameInMap("memorySize")
     public Integer memorySize;
 
@@ -103,6 +112,14 @@ public class GetFunctionResponseBody extends TeaModel {
     }
     public Long getCodeSize() {
         return this.codeSize;
+    }
+
+    public GetFunctionResponseBody setCpu(Float cpu) {
+        this.cpu = cpu;
+        return this;
+    }
+    public Float getCpu() {
+        return this.cpu;
     }
 
     public GetFunctionResponseBody setCreatedTime(String createdTime) {
@@ -151,6 +168,14 @@ public class GetFunctionResponseBody extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public GetFunctionResponseBody setDiskSize(Integer diskSize) {
+        this.diskSize = diskSize;
+        return this;
+    }
+    public Integer getDiskSize() {
+        return this.diskSize;
     }
 
     public GetFunctionResponseBody setEnvironmentVariables(java.util.Map<String, String> environmentVariables) {
@@ -247,6 +272,14 @@ public class GetFunctionResponseBody extends TeaModel {
     }
     public java.util.List<String> getLayers() {
         return this.layers;
+    }
+
+    public GetFunctionResponseBody setLayersArnV2(java.util.List<String> layersArnV2) {
+        this.layersArnV2 = layersArnV2;
+        return this;
+    }
+    public java.util.List<String> getLayersArnV2() {
+        return this.layersArnV2;
     }
 
     public GetFunctionResponseBody setMemorySize(Integer memorySize) {

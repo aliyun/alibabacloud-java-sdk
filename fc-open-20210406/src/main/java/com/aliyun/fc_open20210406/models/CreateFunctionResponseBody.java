@@ -13,6 +13,9 @@ public class CreateFunctionResponseBody extends TeaModel {
     @NameInMap("codeSize")
     public Long codeSize;
 
+    @NameInMap("cpu")
+    public Float cpu;
+
     @NameInMap("createdTime")
     public String createdTime;
 
@@ -30,6 +33,9 @@ public class CreateFunctionResponseBody extends TeaModel {
 
     @NameInMap("description")
     public String description;
+
+    @NameInMap("diskSize")
+    public Integer diskSize;
 
     @NameInMap("environmentVariables")
     public java.util.Map<String, String> environmentVariables;
@@ -105,6 +111,14 @@ public class CreateFunctionResponseBody extends TeaModel {
         return this.codeSize;
     }
 
+    public CreateFunctionResponseBody setCpu(Float cpu) {
+        this.cpu = cpu;
+        return this;
+    }
+    public Float getCpu() {
+        return this.cpu;
+    }
+
     public CreateFunctionResponseBody setCreatedTime(String createdTime) {
         this.createdTime = createdTime;
         return this;
@@ -151,6 +165,14 @@ public class CreateFunctionResponseBody extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreateFunctionResponseBody setDiskSize(Integer diskSize) {
+        this.diskSize = diskSize;
+        return this;
+    }
+    public Integer getDiskSize() {
+        return this.diskSize;
     }
 
     public CreateFunctionResponseBody setEnvironmentVariables(java.util.Map<String, String> environmentVariables) {
