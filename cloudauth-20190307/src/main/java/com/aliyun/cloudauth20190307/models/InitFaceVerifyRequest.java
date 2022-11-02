@@ -73,6 +73,9 @@ public class InitFaceVerifyRequest extends TeaModel {
     @NameInMap("UserId")
     public String userId;
 
+    @NameInMap("VoluntaryCustomizedContent")
+    public String voluntaryCustomizedContent;
+
     public static InitFaceVerifyRequest build(java.util.Map<String, ?> map) throws Exception {
         InitFaceVerifyRequest self = new InitFaceVerifyRequest();
         return TeaModel.build(map, self);
@@ -260,6 +263,14 @@ public class InitFaceVerifyRequest extends TeaModel {
     }
     public String getUserId() {
         return this.userId;
+    }
+
+    public InitFaceVerifyRequest setVoluntaryCustomizedContent(String voluntaryCustomizedContent) {
+        this.voluntaryCustomizedContent = voluntaryCustomizedContent;
+        return this;
+    }
+    public String getVoluntaryCustomizedContent() {
+        return this.voluntaryCustomizedContent;
     }
 
 }

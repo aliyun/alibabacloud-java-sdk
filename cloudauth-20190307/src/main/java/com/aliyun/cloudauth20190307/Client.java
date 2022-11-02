@@ -785,6 +785,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("UserId", request.userId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.voluntaryCustomizedContent)) {
+            query.put("VoluntaryCustomizedContent", request.voluntaryCustomizedContent);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.authId)) {
             body.put("AuthId", request.authId);
