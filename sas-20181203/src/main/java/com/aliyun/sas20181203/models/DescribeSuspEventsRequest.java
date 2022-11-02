@@ -7,6 +7,9 @@ public class DescribeSuspEventsRequest extends TeaModel {
     @NameInMap("AlarmUniqueInfo")
     public String alarmUniqueInfo;
 
+    @NameInMap("AssetsTypeList")
+    public java.util.List<String> assetsTypeList;
+
     @NameInMap("ClusterId")
     public String clusterId;
 
@@ -99,6 +102,14 @@ public class DescribeSuspEventsRequest extends TeaModel {
     }
     public String getAlarmUniqueInfo() {
         return this.alarmUniqueInfo;
+    }
+
+    public DescribeSuspEventsRequest setAssetsTypeList(java.util.List<String> assetsTypeList) {
+        this.assetsTypeList = assetsTypeList;
+        return this;
+    }
+    public java.util.List<String> getAssetsTypeList() {
+        return this.assetsTypeList;
     }
 
     public DescribeSuspEventsRequest setClusterId(String clusterId) {

@@ -281,16 +281,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CheckUserHasEcsResponse checkUserHasEcsWithOptions(CheckUserHasEcsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
-            query.put("CurrentPage", request.currentPage);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
             query.put("Lang", request.lang);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
-            query.put("PageSize", request.pageSize);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -5576,6 +5568,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.alarmUniqueInfo)) {
             query.put("AlarmUniqueInfo", request.alarmUniqueInfo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.assetsTypeList)) {
+            query.put("AssetsTypeList", request.assetsTypeList);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {

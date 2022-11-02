@@ -19,6 +19,9 @@ public class DescribeLogstoreStorageResponseBody extends TeaModel {
     @NameInMap("Used")
     public Long used;
 
+    @NameInMap("UserProject")
+    public String userProject;
+
     public static DescribeLogstoreStorageResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLogstoreStorageResponseBody self = new DescribeLogstoreStorageResponseBody();
         return TeaModel.build(map, self);
@@ -62,6 +65,14 @@ public class DescribeLogstoreStorageResponseBody extends TeaModel {
     }
     public Long getUsed() {
         return this.used;
+    }
+
+    public DescribeLogstoreStorageResponseBody setUserProject(String userProject) {
+        this.userProject = userProject;
+        return this;
+    }
+    public String getUserProject() {
+        return this.userProject;
     }
 
 }
