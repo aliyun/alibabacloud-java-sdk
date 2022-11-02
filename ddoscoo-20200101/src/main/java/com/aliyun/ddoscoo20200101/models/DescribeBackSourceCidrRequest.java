@@ -4,6 +4,9 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackSourceCidrRequest extends TeaModel {
+    @NameInMap("IpVersion")
+    public String ipVersion;
+
     @NameInMap("Line")
     public String line;
 
@@ -13,6 +16,14 @@ public class DescribeBackSourceCidrRequest extends TeaModel {
     public static DescribeBackSourceCidrRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeBackSourceCidrRequest self = new DescribeBackSourceCidrRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeBackSourceCidrRequest setIpVersion(String ipVersion) {
+        this.ipVersion = ipVersion;
+        return this;
+    }
+    public String getIpVersion() {
+        return this.ipVersion;
     }
 
     public DescribeBackSourceCidrRequest setLine(String line) {
