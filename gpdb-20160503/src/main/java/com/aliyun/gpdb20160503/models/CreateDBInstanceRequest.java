@@ -31,6 +31,9 @@ public class CreateDBInstanceRequest extends TeaModel {
     @NameInMap("EngineVersion")
     public String engineVersion;
 
+    @NameInMap("IdleTime")
+    public Integer idleTime;
+
     @NameInMap("InstanceNetworkType")
     public String instanceNetworkType;
 
@@ -66,6 +69,12 @@ public class CreateDBInstanceRequest extends TeaModel {
 
     @NameInMap("SegStorageType")
     public String segStorageType;
+
+    @NameInMap("ServerlessMode")
+    public String serverlessMode;
+
+    @NameInMap("ServerlessResource")
+    public Integer serverlessResource;
 
     @NameInMap("StorageSize")
     public Long storageSize;
@@ -165,6 +174,14 @@ public class CreateDBInstanceRequest extends TeaModel {
         return this.engineVersion;
     }
 
+    public CreateDBInstanceRequest setIdleTime(Integer idleTime) {
+        this.idleTime = idleTime;
+        return this;
+    }
+    public Integer getIdleTime() {
+        return this.idleTime;
+    }
+
     public CreateDBInstanceRequest setInstanceNetworkType(String instanceNetworkType) {
         this.instanceNetworkType = instanceNetworkType;
         return this;
@@ -259,6 +276,22 @@ public class CreateDBInstanceRequest extends TeaModel {
     }
     public String getSegStorageType() {
         return this.segStorageType;
+    }
+
+    public CreateDBInstanceRequest setServerlessMode(String serverlessMode) {
+        this.serverlessMode = serverlessMode;
+        return this;
+    }
+    public String getServerlessMode() {
+        return this.serverlessMode;
+    }
+
+    public CreateDBInstanceRequest setServerlessResource(Integer serverlessResource) {
+        this.serverlessResource = serverlessResource;
+        return this;
+    }
+    public Integer getServerlessResource() {
+        return this.serverlessResource;
     }
 
     public CreateDBInstanceRequest setStorageSize(Long storageSize) {
