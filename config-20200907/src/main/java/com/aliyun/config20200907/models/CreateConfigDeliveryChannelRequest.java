@@ -25,6 +25,9 @@ public class CreateConfigDeliveryChannelRequest extends TeaModel {
     @NameInMap("DeliveryChannelType")
     public String deliveryChannelType;
 
+    @NameInMap("DeliverySnapshotTime")
+    public String deliverySnapshotTime;
+
     @NameInMap("Description")
     public String description;
 
@@ -93,6 +96,14 @@ public class CreateConfigDeliveryChannelRequest extends TeaModel {
     }
     public String getDeliveryChannelType() {
         return this.deliveryChannelType;
+    }
+
+    public CreateConfigDeliveryChannelRequest setDeliverySnapshotTime(String deliverySnapshotTime) {
+        this.deliverySnapshotTime = deliverySnapshotTime;
+        return this;
+    }
+    public String getDeliverySnapshotTime() {
+        return this.deliverySnapshotTime;
     }
 
     public CreateConfigDeliveryChannelRequest setDescription(String description) {

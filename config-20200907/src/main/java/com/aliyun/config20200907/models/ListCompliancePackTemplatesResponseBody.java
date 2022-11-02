@@ -76,6 +76,12 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
         @NameInMap("ConfigRuleParameters")
         public java.util.List<ListCompliancePackTemplatesResponseBodyCompliancePackTemplatesResultCompliancePackTemplatesConfigRulesConfigRuleParameters> configRuleParameters;
 
+        @NameInMap("ControlDescription")
+        public String controlDescription;
+
+        @NameInMap("ControlId")
+        public String controlId;
+
         @NameInMap("Description")
         public String description;
 
@@ -99,6 +105,22 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
         }
         public java.util.List<ListCompliancePackTemplatesResponseBodyCompliancePackTemplatesResultCompliancePackTemplatesConfigRulesConfigRuleParameters> getConfigRuleParameters() {
             return this.configRuleParameters;
+        }
+
+        public ListCompliancePackTemplatesResponseBodyCompliancePackTemplatesResultCompliancePackTemplatesConfigRules setControlDescription(String controlDescription) {
+            this.controlDescription = controlDescription;
+            return this;
+        }
+        public String getControlDescription() {
+            return this.controlDescription;
+        }
+
+        public ListCompliancePackTemplatesResponseBodyCompliancePackTemplatesResultCompliancePackTemplatesConfigRules setControlId(String controlId) {
+            this.controlId = controlId;
+            return this;
+        }
+        public String getControlId() {
+            return this.controlId;
         }
 
         public ListCompliancePackTemplatesResponseBodyCompliancePackTemplatesResultCompliancePackTemplatesConfigRules setDescription(String description) {
@@ -148,6 +170,12 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("Labels")
+        public String labels;
+
+        @NameInMap("LastUpdate")
+        public Integer lastUpdate;
+
         @NameInMap("RiskLevel")
         public Integer riskLevel;
 
@@ -186,6 +214,22 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public ListCompliancePackTemplatesResponseBodyCompliancePackTemplatesResultCompliancePackTemplates setLabels(String labels) {
+            this.labels = labels;
+            return this;
+        }
+        public String getLabels() {
+            return this.labels;
+        }
+
+        public ListCompliancePackTemplatesResponseBodyCompliancePackTemplatesResultCompliancePackTemplates setLastUpdate(Integer lastUpdate) {
+            this.lastUpdate = lastUpdate;
+            return this;
+        }
+        public Integer getLastUpdate() {
+            return this.lastUpdate;
         }
 
         public ListCompliancePackTemplatesResponseBodyCompliancePackTemplatesResultCompliancePackTemplates setRiskLevel(Integer riskLevel) {

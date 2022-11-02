@@ -7,11 +7,9 @@ public class GetAggregateResourceCountsGroupByRegionRequest extends TeaModel {
     @NameInMap("AggregatorId")
     public String aggregatorId;
 
-    // 资源夹Id
     @NameInMap("FolderId")
     public String folderId;
 
-    // 资源owner
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
