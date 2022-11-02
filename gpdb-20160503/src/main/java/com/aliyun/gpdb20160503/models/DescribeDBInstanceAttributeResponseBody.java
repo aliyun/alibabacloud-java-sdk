@@ -159,6 +159,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("HostType")
         public String hostType;
 
+        @NameInMap("IdleTime")
+        public Integer idleTime;
+
         @NameInMap("InstanceNetworkType")
         public String instanceNetworkType;
 
@@ -218,6 +221,12 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
         @NameInMap("SegmentCounts")
         public Integer segmentCounts;
+
+        @NameInMap("ServerlessMode")
+        public String serverlessMode;
+
+        @NameInMap("ServerlessResource")
+        public Integer serverlessResource;
 
         @NameInMap("StartTime")
         public String startTime;
@@ -462,6 +471,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             return this.hostType;
         }
 
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setIdleTime(Integer idleTime) {
+            this.idleTime = idleTime;
+            return this;
+        }
+        public Integer getIdleTime() {
+            return this.idleTime;
+        }
+
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setInstanceNetworkType(String instanceNetworkType) {
             this.instanceNetworkType = instanceNetworkType;
             return this;
@@ -620,6 +637,22 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public Integer getSegmentCounts() {
             return this.segmentCounts;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setServerlessMode(String serverlessMode) {
+            this.serverlessMode = serverlessMode;
+            return this;
+        }
+        public String getServerlessMode() {
+            return this.serverlessMode;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setServerlessResource(Integer serverlessResource) {
+            this.serverlessResource = serverlessResource;
+            return this;
+        }
+        public Integer getServerlessResource() {
+            return this.serverlessResource;
         }
 
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setStartTime(String startTime) {

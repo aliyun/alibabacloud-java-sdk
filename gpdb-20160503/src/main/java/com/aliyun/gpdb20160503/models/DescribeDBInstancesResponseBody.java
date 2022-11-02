@@ -174,6 +174,9 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         @NameInMap("SegNodeNum")
         public String segNodeNum;
 
+        @NameInMap("ServerlessMode")
+        public String serverlessMode;
+
         @NameInMap("StorageSize")
         public String storageSize;
 
@@ -355,6 +358,14 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         }
         public String getSegNodeNum() {
             return this.segNodeNum;
+        }
+
+        public DescribeDBInstancesResponseBodyItemsDBInstance setServerlessMode(String serverlessMode) {
+            this.serverlessMode = serverlessMode;
+            return this;
+        }
+        public String getServerlessMode() {
+            return this.serverlessMode;
         }
 
         public DescribeDBInstancesResponseBodyItemsDBInstance setStorageSize(String storageSize) {
