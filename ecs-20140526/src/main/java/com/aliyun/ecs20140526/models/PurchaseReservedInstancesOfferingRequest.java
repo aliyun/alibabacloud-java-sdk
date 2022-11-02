@@ -4,6 +4,12 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class PurchaseReservedInstancesOfferingRequest extends TeaModel {
+    @NameInMap("AutoRenew")
+    public Boolean autoRenew;
+
+    @NameInMap("AutoRenewPeriod")
+    public Integer autoRenewPeriod;
+
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -61,6 +67,22 @@ public class PurchaseReservedInstancesOfferingRequest extends TeaModel {
     public static PurchaseReservedInstancesOfferingRequest build(java.util.Map<String, ?> map) throws Exception {
         PurchaseReservedInstancesOfferingRequest self = new PurchaseReservedInstancesOfferingRequest();
         return TeaModel.build(map, self);
+    }
+
+    public PurchaseReservedInstancesOfferingRequest setAutoRenew(Boolean autoRenew) {
+        this.autoRenew = autoRenew;
+        return this;
+    }
+    public Boolean getAutoRenew() {
+        return this.autoRenew;
+    }
+
+    public PurchaseReservedInstancesOfferingRequest setAutoRenewPeriod(Integer autoRenewPeriod) {
+        this.autoRenewPeriod = autoRenewPeriod;
+        return this;
+    }
+    public Integer getAutoRenewPeriod() {
+        return this.autoRenewPeriod;
     }
 
     public PurchaseReservedInstancesOfferingRequest setClientToken(String clientToken) {
