@@ -22,6 +22,9 @@ public class CustomContainerConfigInfo extends TeaModel {
     @NameInMap("instanceID")
     public String instanceID;
 
+    @NameInMap("webServerMode")
+    public Boolean webServerMode;
+
     public static CustomContainerConfigInfo build(java.util.Map<String, ?> map) throws Exception {
         CustomContainerConfigInfo self = new CustomContainerConfigInfo();
         return TeaModel.build(map, self);
@@ -73,6 +76,14 @@ public class CustomContainerConfigInfo extends TeaModel {
     }
     public String getInstanceID() {
         return this.instanceID;
+    }
+
+    public CustomContainerConfigInfo setWebServerMode(Boolean webServerMode) {
+        this.webServerMode = webServerMode;
+        return this;
+    }
+    public Boolean getWebServerMode() {
+        return this.webServerMode;
     }
 
 }
