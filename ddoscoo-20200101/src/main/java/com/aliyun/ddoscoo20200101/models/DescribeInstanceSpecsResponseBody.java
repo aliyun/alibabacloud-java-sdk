@@ -38,6 +38,12 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
         @NameInMap("BaseBandwidth")
         public Integer baseBandwidth;
 
+        @NameInMap("ConnLimit")
+        public Long connLimit;
+
+        @NameInMap("CpsLimit")
+        public Long cpsLimit;
+
         @NameInMap("DefenseCount")
         public Integer defenseCount;
 
@@ -49,6 +55,9 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
 
         @NameInMap("ElasticBw")
         public Integer elasticBw;
+
+        @NameInMap("ElasticBwModel")
+        public String elasticBwModel;
 
         @NameInMap("FunctionVersion")
         public String functionVersion;
@@ -86,6 +95,22 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             return this.baseBandwidth;
         }
 
+        public DescribeInstanceSpecsResponseBodyInstanceSpecs setConnLimit(Long connLimit) {
+            this.connLimit = connLimit;
+            return this;
+        }
+        public Long getConnLimit() {
+            return this.connLimit;
+        }
+
+        public DescribeInstanceSpecsResponseBodyInstanceSpecs setCpsLimit(Long cpsLimit) {
+            this.cpsLimit = cpsLimit;
+            return this;
+        }
+        public Long getCpsLimit() {
+            return this.cpsLimit;
+        }
+
         public DescribeInstanceSpecsResponseBodyInstanceSpecs setDefenseCount(Integer defenseCount) {
             this.defenseCount = defenseCount;
             return this;
@@ -116,6 +141,14 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
         }
         public Integer getElasticBw() {
             return this.elasticBw;
+        }
+
+        public DescribeInstanceSpecsResponseBodyInstanceSpecs setElasticBwModel(String elasticBwModel) {
+            this.elasticBwModel = elasticBwModel;
+            return this;
+        }
+        public String getElasticBwModel() {
+            return this.elasticBwModel;
         }
 
         public DescribeInstanceSpecsResponseBodyInstanceSpecs setFunctionVersion(String functionVersion) {

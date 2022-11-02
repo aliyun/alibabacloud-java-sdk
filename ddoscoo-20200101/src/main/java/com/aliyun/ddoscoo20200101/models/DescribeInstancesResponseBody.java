@@ -67,6 +67,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("IpVersion")
         public String ipVersion;
 
+        @NameInMap("IsFirstOpenBw")
+        public Long isFirstOpenBw;
+
         @NameInMap("Remark")
         public String remark;
 
@@ -140,6 +143,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public String getIpVersion() {
             return this.ipVersion;
+        }
+
+        public DescribeInstancesResponseBodyInstances setIsFirstOpenBw(Long isFirstOpenBw) {
+            this.isFirstOpenBw = isFirstOpenBw;
+            return this;
+        }
+        public Long getIsFirstOpenBw() {
+            return this.isFirstOpenBw;
         }
 
         public DescribeInstancesResponseBodyInstances setRemark(String remark) {
