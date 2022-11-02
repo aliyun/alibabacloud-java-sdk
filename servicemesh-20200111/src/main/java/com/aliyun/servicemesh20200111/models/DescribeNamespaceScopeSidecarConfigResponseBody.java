@@ -192,6 +192,47 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesTracing extends TeaModel {
+        @NameInMap("CustomTags")
+        public java.util.Map<String, ?> customTags;
+
+        @NameInMap("MaxPathTagLength")
+        public Integer maxPathTagLength;
+
+        @NameInMap("Sampling")
+        public Double sampling;
+
+        public static DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesTracing build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesTracing self = new DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesTracing();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesTracing setCustomTags(java.util.Map<String, ?> customTags) {
+            this.customTags = customTags;
+            return this;
+        }
+        public java.util.Map<String, ?> getCustomTags() {
+            return this.customTags;
+        }
+
+        public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesTracing setMaxPathTagLength(Integer maxPathTagLength) {
+            this.maxPathTagLength = maxPathTagLength;
+            return this;
+        }
+        public Integer getMaxPathTagLength() {
+            return this.maxPathTagLength;
+        }
+
+        public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesTracing setSampling(Double sampling) {
+            this.sampling = sampling;
+            return this;
+        }
+        public Double getSampling() {
+            return this.sampling;
+        }
+
+    }
+
     public static class DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatches extends TeaModel {
         @NameInMap("Concurrency")
         public Integer concurrency;
@@ -243,6 +284,9 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
 
         @NameInMap("TerminationDrainDuration")
         public String terminationDrainDuration;
+
+        @NameInMap("Tracing")
+        public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesTracing tracing;
 
         public static DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatches build(java.util.Map<String, ?> map) throws Exception {
             DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatches self = new DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatches();
@@ -383,6 +427,14 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
         }
         public String getTerminationDrainDuration() {
             return this.terminationDrainDuration;
+        }
+
+        public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatches setTracing(DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesTracing tracing) {
+            this.tracing = tracing;
+            return this;
+        }
+        public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesTracing getTracing() {
+            return this.tracing;
         }
 
     }

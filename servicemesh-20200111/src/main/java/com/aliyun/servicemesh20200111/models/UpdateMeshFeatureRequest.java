@@ -49,6 +49,9 @@ public class UpdateMeshFeatureRequest extends TeaModel {
     @NameInMap("CniExcludeNamespaces")
     public String cniExcludeNamespaces;
 
+    @NameInMap("Concurrency")
+    public Integer concurrency;
+
     @NameInMap("ConfigSourceEnabled")
     public Boolean configSourceEnabled;
 
@@ -103,6 +106,9 @@ public class UpdateMeshFeatureRequest extends TeaModel {
     @NameInMap("GlobalRateLimitEnabled")
     public Boolean globalRateLimitEnabled;
 
+    @NameInMap("HoldApplicationUntilProxyStarts")
+    public Boolean holdApplicationUntilProxyStarts;
+
     @NameInMap("Http10Enabled")
     public Boolean http10Enabled;
 
@@ -111,6 +117,9 @@ public class UpdateMeshFeatureRequest extends TeaModel {
 
     @NameInMap("IncludeInboundPorts")
     public String includeInboundPorts;
+
+    @NameInMap("IncludeOutboundPorts")
+    public String includeOutboundPorts;
 
     @NameInMap("IntegrateKiali")
     public Boolean integrateKiali;
@@ -126,6 +135,9 @@ public class UpdateMeshFeatureRequest extends TeaModel {
 
     @NameInMap("LocalityLoadBalancing")
     public Boolean localityLoadBalancing;
+
+    @NameInMap("LogLevel")
+    public String logLevel;
 
     @NameInMap("MSEEnabled")
     public Boolean MSEEnabled;
@@ -211,6 +223,9 @@ public class UpdateMeshFeatureRequest extends TeaModel {
     @NameInMap("ProxyRequestMemory")
     public String proxyRequestMemory;
 
+    @NameInMap("ProxyStatsMatcher")
+    public String proxyStatsMatcher;
+
     @NameInMap("RedisFilterEnabled")
     public Boolean redisFilterEnabled;
 
@@ -240,6 +255,12 @@ public class UpdateMeshFeatureRequest extends TeaModel {
 
     @NameInMap("ThriftFilterEnabled")
     public Boolean thriftFilterEnabled;
+
+    @NameInMap("TraceCustomTags")
+    public String traceCustomTags;
+
+    @NameInMap("TraceMaxPathTagLength")
+    public String traceMaxPathTagLength;
 
     @NameInMap("TraceSampling")
     public Float traceSampling;
@@ -387,6 +408,14 @@ public class UpdateMeshFeatureRequest extends TeaModel {
         return this.cniExcludeNamespaces;
     }
 
+    public UpdateMeshFeatureRequest setConcurrency(Integer concurrency) {
+        this.concurrency = concurrency;
+        return this;
+    }
+    public Integer getConcurrency() {
+        return this.concurrency;
+    }
+
     public UpdateMeshFeatureRequest setConfigSourceEnabled(Boolean configSourceEnabled) {
         this.configSourceEnabled = configSourceEnabled;
         return this;
@@ -531,6 +560,14 @@ public class UpdateMeshFeatureRequest extends TeaModel {
         return this.globalRateLimitEnabled;
     }
 
+    public UpdateMeshFeatureRequest setHoldApplicationUntilProxyStarts(Boolean holdApplicationUntilProxyStarts) {
+        this.holdApplicationUntilProxyStarts = holdApplicationUntilProxyStarts;
+        return this;
+    }
+    public Boolean getHoldApplicationUntilProxyStarts() {
+        return this.holdApplicationUntilProxyStarts;
+    }
+
     public UpdateMeshFeatureRequest setHttp10Enabled(Boolean http10Enabled) {
         this.http10Enabled = http10Enabled;
         return this;
@@ -553,6 +590,14 @@ public class UpdateMeshFeatureRequest extends TeaModel {
     }
     public String getIncludeInboundPorts() {
         return this.includeInboundPorts;
+    }
+
+    public UpdateMeshFeatureRequest setIncludeOutboundPorts(String includeOutboundPorts) {
+        this.includeOutboundPorts = includeOutboundPorts;
+        return this;
+    }
+    public String getIncludeOutboundPorts() {
+        return this.includeOutboundPorts;
     }
 
     public UpdateMeshFeatureRequest setIntegrateKiali(Boolean integrateKiali) {
@@ -593,6 +638,14 @@ public class UpdateMeshFeatureRequest extends TeaModel {
     }
     public Boolean getLocalityLoadBalancing() {
         return this.localityLoadBalancing;
+    }
+
+    public UpdateMeshFeatureRequest setLogLevel(String logLevel) {
+        this.logLevel = logLevel;
+        return this;
+    }
+    public String getLogLevel() {
+        return this.logLevel;
     }
 
     public UpdateMeshFeatureRequest setMSEEnabled(Boolean MSEEnabled) {
@@ -819,6 +872,14 @@ public class UpdateMeshFeatureRequest extends TeaModel {
         return this.proxyRequestMemory;
     }
 
+    public UpdateMeshFeatureRequest setProxyStatsMatcher(String proxyStatsMatcher) {
+        this.proxyStatsMatcher = proxyStatsMatcher;
+        return this;
+    }
+    public String getProxyStatsMatcher() {
+        return this.proxyStatsMatcher;
+    }
+
     public UpdateMeshFeatureRequest setRedisFilterEnabled(Boolean redisFilterEnabled) {
         this.redisFilterEnabled = redisFilterEnabled;
         return this;
@@ -897,6 +958,22 @@ public class UpdateMeshFeatureRequest extends TeaModel {
     }
     public Boolean getThriftFilterEnabled() {
         return this.thriftFilterEnabled;
+    }
+
+    public UpdateMeshFeatureRequest setTraceCustomTags(String traceCustomTags) {
+        this.traceCustomTags = traceCustomTags;
+        return this;
+    }
+    public String getTraceCustomTags() {
+        return this.traceCustomTags;
+    }
+
+    public UpdateMeshFeatureRequest setTraceMaxPathTagLength(String traceMaxPathTagLength) {
+        this.traceMaxPathTagLength = traceMaxPathTagLength;
+        return this;
+    }
+    public String getTraceMaxPathTagLength() {
+        return this.traceMaxPathTagLength;
     }
 
     public UpdateMeshFeatureRequest setTraceSampling(Float traceSampling) {

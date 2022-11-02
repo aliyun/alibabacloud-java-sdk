@@ -79,6 +79,9 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends TeaModel {
     @NameInMap("TerminationDrainDuration")
     public String terminationDrainDuration;
 
+    @NameInMap("Tracing")
+    public String tracing;
+
     public static UpdateNamespaceScopeSidecarConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateNamespaceScopeSidecarConfigRequest self = new UpdateNamespaceScopeSidecarConfigRequest();
         return TeaModel.build(map, self);
@@ -282,6 +285,14 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends TeaModel {
     }
     public String getTerminationDrainDuration() {
         return this.terminationDrainDuration;
+    }
+
+    public UpdateNamespaceScopeSidecarConfigRequest setTracing(String tracing) {
+        this.tracing = tracing;
+        return this;
+    }
+    public String getTracing() {
+        return this.tracing;
     }
 
 }
