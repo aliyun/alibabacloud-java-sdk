@@ -16,6 +16,9 @@ public class ListAggregateConfigRulesRequest extends TeaModel {
     @NameInMap("ConfigRuleState")
     public String configRuleState;
 
+    @NameInMap("Keyword")
+    public String keyword;
+
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
@@ -60,6 +63,14 @@ public class ListAggregateConfigRulesRequest extends TeaModel {
     }
     public String getConfigRuleState() {
         return this.configRuleState;
+    }
+
+    public ListAggregateConfigRulesRequest setKeyword(String keyword) {
+        this.keyword = keyword;
+        return this;
+    }
+    public String getKeyword() {
+        return this.keyword;
     }
 
     public ListAggregateConfigRulesRequest setPageNumber(Integer pageNumber) {

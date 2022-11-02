@@ -7,14 +7,12 @@ public class GetAggregateResourceCountsGroupByResourceTypeRequest extends TeaMod
     @NameInMap("AggregatorId")
     public String aggregatorId;
 
-    // 资源文件夹Id
     @NameInMap("FolderId")
     public String folderId;
 
     @NameInMap("Region")
     public String region;
 
-    // 资源Owner
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 

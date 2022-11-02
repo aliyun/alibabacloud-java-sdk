@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListManagedRulesResponseBody extends TeaModel {
     @NameInMap("ManagedRules")
-    public java.util.List<ListManagedRulesResponseBodyManagedRules> managedRules;
+    public ListManagedRulesResponseBodyManagedRules managedRules;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -15,11 +15,11 @@ public class ListManagedRulesResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListManagedRulesResponseBody setManagedRules(java.util.List<ListManagedRulesResponseBodyManagedRules> managedRules) {
+    public ListManagedRulesResponseBody setManagedRules(ListManagedRulesResponseBodyManagedRules managedRules) {
         this.managedRules = managedRules;
         return this;
     }
-    public java.util.List<ListManagedRulesResponseBodyManagedRules> getManagedRules() {
+    public ListManagedRulesResponseBodyManagedRules getManagedRules() {
         return this.managedRules;
     }
 

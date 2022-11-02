@@ -62,6 +62,9 @@ public class ListAggregateDiscoveredResourcesResponseBody extends TeaModel {
         @NameInMap("Tags")
         public String tags;
 
+        @NameInMap("Version")
+        public Long version;
+
         public static ListAggregateDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList build(java.util.Map<String, ?> map) throws Exception {
             ListAggregateDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList self = new ListAggregateDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList();
             return TeaModel.build(map, self);
@@ -145,6 +148,14 @@ public class ListAggregateDiscoveredResourcesResponseBody extends TeaModel {
         }
         public String getTags() {
             return this.tags;
+        }
+
+        public ListAggregateDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList setVersion(Long version) {
+            this.version = version;
+            return this;
+        }
+        public Long getVersion() {
+            return this.version;
         }
 
     }

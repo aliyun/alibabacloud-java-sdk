@@ -7,15 +7,12 @@ public class UntagResourcesRequest extends TeaModel {
     @NameInMap("All")
     public Boolean all;
 
-    // 地域
     @NameInMap("RegionId")
     public String regionId;
 
-    // 资源ID,最多 50个子项
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
-    // 资源类型
     @NameInMap("ResourceType")
     public String resourceType;
 

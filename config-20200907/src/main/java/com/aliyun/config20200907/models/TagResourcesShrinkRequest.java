@@ -4,19 +4,15 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class TagResourcesShrinkRequest extends TeaModel {
-    // 地域
     @NameInMap("RegionId")
     public String regionId;
 
-    // 资源ID,最多 50个子项
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
-    // 资源类型
     @NameInMap("ResourceType")
     public String resourceType;
 
-    // 标签列表，最多包含20个子项
     @NameInMap("Tag")
     public String tagShrink;
 

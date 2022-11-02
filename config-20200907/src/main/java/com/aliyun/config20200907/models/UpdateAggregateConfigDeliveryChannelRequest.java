@@ -28,6 +28,9 @@ public class UpdateAggregateConfigDeliveryChannelRequest extends TeaModel {
     @NameInMap("DeliveryChannelTargetArn")
     public String deliveryChannelTargetArn;
 
+    @NameInMap("DeliverySnapshotTime")
+    public String deliverySnapshotTime;
+
     @NameInMap("Description")
     public String description;
 
@@ -107,6 +110,14 @@ public class UpdateAggregateConfigDeliveryChannelRequest extends TeaModel {
     }
     public String getDeliveryChannelTargetArn() {
         return this.deliveryChannelTargetArn;
+    }
+
+    public UpdateAggregateConfigDeliveryChannelRequest setDeliverySnapshotTime(String deliverySnapshotTime) {
+        this.deliverySnapshotTime = deliverySnapshotTime;
+        return this;
+    }
+    public String getDeliverySnapshotTime() {
+        return this.deliverySnapshotTime;
     }
 
     public UpdateAggregateConfigDeliveryChannelRequest setDescription(String description) {

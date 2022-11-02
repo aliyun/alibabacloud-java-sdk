@@ -62,6 +62,9 @@ public class ListAggregateConfigDeliveryChannelsResponseBody extends TeaModel {
         @NameInMap("DeliveryChannelType")
         public String deliveryChannelType;
 
+        @NameInMap("DeliverySnapshotTime")
+        public String deliverySnapshotTime;
+
         @NameInMap("Description")
         public String description;
 
@@ -157,6 +160,14 @@ public class ListAggregateConfigDeliveryChannelsResponseBody extends TeaModel {
         }
         public String getDeliveryChannelType() {
             return this.deliveryChannelType;
+        }
+
+        public ListAggregateConfigDeliveryChannelsResponseBodyDeliveryChannels setDeliverySnapshotTime(String deliverySnapshotTime) {
+            this.deliverySnapshotTime = deliverySnapshotTime;
+            return this;
+        }
+        public String getDeliverySnapshotTime() {
+            return this.deliverySnapshotTime;
         }
 
         public ListAggregateConfigDeliveryChannelsResponseBodyDeliveryChannels setDescription(String description) {
