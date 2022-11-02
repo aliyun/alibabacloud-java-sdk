@@ -10,8 +10,8 @@ public class UpdateServiceAutoScalerRequest extends TeaModel {
     @NameInMap("min")
     public Integer min;
 
-    @NameInMap("strategies")
-    public UpdateServiceAutoScalerRequestStrategies strategies;
+    @NameInMap("scaleStrategies")
+    public java.util.List<UpdateServiceAutoScalerRequestScaleStrategies> scaleStrategies;
 
     public static UpdateServiceAutoScalerRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateServiceAutoScalerRequest self = new UpdateServiceAutoScalerRequest();
@@ -34,40 +34,51 @@ public class UpdateServiceAutoScalerRequest extends TeaModel {
         return this.min;
     }
 
-    public UpdateServiceAutoScalerRequest setStrategies(UpdateServiceAutoScalerRequestStrategies strategies) {
-        this.strategies = strategies;
+    public UpdateServiceAutoScalerRequest setScaleStrategies(java.util.List<UpdateServiceAutoScalerRequestScaleStrategies> scaleStrategies) {
+        this.scaleStrategies = scaleStrategies;
         return this;
     }
-    public UpdateServiceAutoScalerRequestStrategies getStrategies() {
-        return this.strategies;
+    public java.util.List<UpdateServiceAutoScalerRequestScaleStrategies> getScaleStrategies() {
+        return this.scaleStrategies;
     }
 
-    public static class UpdateServiceAutoScalerRequestStrategies extends TeaModel {
-        @NameInMap("cpu")
-        public Float cpu;
+    public static class UpdateServiceAutoScalerRequestScaleStrategies extends TeaModel {
+        @NameInMap("metricName")
+        public String metricName;
 
-        @NameInMap("qps")
-        public Float qps;
+        @NameInMap("service")
+        public String service;
 
-        public static UpdateServiceAutoScalerRequestStrategies build(java.util.Map<String, ?> map) throws Exception {
-            UpdateServiceAutoScalerRequestStrategies self = new UpdateServiceAutoScalerRequestStrategies();
+        @NameInMap("threshold")
+        public Float threshold;
+
+        public static UpdateServiceAutoScalerRequestScaleStrategies build(java.util.Map<String, ?> map) throws Exception {
+            UpdateServiceAutoScalerRequestScaleStrategies self = new UpdateServiceAutoScalerRequestScaleStrategies();
             return TeaModel.build(map, self);
         }
 
-        public UpdateServiceAutoScalerRequestStrategies setCpu(Float cpu) {
-            this.cpu = cpu;
+        public UpdateServiceAutoScalerRequestScaleStrategies setMetricName(String metricName) {
+            this.metricName = metricName;
             return this;
         }
-        public Float getCpu() {
-            return this.cpu;
+        public String getMetricName() {
+            return this.metricName;
         }
 
-        public UpdateServiceAutoScalerRequestStrategies setQps(Float qps) {
-            this.qps = qps;
+        public UpdateServiceAutoScalerRequestScaleStrategies setService(String service) {
+            this.service = service;
             return this;
         }
-        public Float getQps() {
-            return this.qps;
+        public String getService() {
+            return this.service;
+        }
+
+        public UpdateServiceAutoScalerRequestScaleStrategies setThreshold(Float threshold) {
+            this.threshold = threshold;
+            return this;
+        }
+        public Float getThreshold() {
+            return this.threshold;
         }
 
     }

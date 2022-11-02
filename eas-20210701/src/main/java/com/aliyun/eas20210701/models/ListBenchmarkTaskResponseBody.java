@@ -4,15 +4,40 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class ListBenchmarkTaskResponseBody extends TeaModel {
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Tasks")
     public java.util.List<ListBenchmarkTaskResponseBodyTasks> tasks;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     public static ListBenchmarkTaskResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListBenchmarkTaskResponseBody self = new ListBenchmarkTaskResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListBenchmarkTaskResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public ListBenchmarkTaskResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public ListBenchmarkTaskResponseBody setRequestId(String requestId) {
@@ -29,6 +54,14 @@ public class ListBenchmarkTaskResponseBody extends TeaModel {
     }
     public java.util.List<ListBenchmarkTaskResponseBodyTasks> getTasks() {
         return this.tasks;
+    }
+
+    public ListBenchmarkTaskResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public static class ListBenchmarkTaskResponseBodyTasks extends TeaModel {

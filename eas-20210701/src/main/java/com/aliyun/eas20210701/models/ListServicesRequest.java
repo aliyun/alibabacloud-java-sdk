@@ -7,6 +7,9 @@ public class ListServicesRequest extends TeaModel {
     @NameInMap("Filter")
     public String filter;
 
+    @NameInMap("GroupName")
+    public String groupName;
+
     @NameInMap("Order")
     public String order;
 
@@ -30,6 +33,14 @@ public class ListServicesRequest extends TeaModel {
     }
     public String getFilter() {
         return this.filter;
+    }
+
+    public ListServicesRequest setGroupName(String groupName) {
+        this.groupName = groupName;
+        return this;
+    }
+    public String getGroupName() {
+        return this.groupName;
     }
 
     public ListServicesRequest setOrder(String order) {
