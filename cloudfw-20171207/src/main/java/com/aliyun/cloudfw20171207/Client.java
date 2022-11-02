@@ -1939,10 +1939,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Lang", request.lang);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.messageType)) {
-            query.put("MessageType", request.messageType);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.proto)) {
             query.put("Proto", request.proto);
         }
