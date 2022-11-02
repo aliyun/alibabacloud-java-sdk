@@ -43,6 +43,9 @@ public class InvokeCommandShrinkRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("Tag")
+    public java.util.List<InvokeCommandShrinkRequestTag> tag;
+
     @NameInMap("Timed")
     public Boolean timed;
 
@@ -164,6 +167,14 @@ public class InvokeCommandShrinkRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
+    public InvokeCommandShrinkRequest setTag(java.util.List<InvokeCommandShrinkRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<InvokeCommandShrinkRequestTag> getTag() {
+        return this.tag;
+    }
+
     public InvokeCommandShrinkRequest setTimed(Boolean timed) {
         this.timed = timed;
         return this;
@@ -194,6 +205,36 @@ public class InvokeCommandShrinkRequest extends TeaModel {
     }
     public String getWindowsPasswordName() {
         return this.windowsPasswordName;
+    }
+
+    public static class InvokeCommandShrinkRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static InvokeCommandShrinkRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            InvokeCommandShrinkRequestTag self = new InvokeCommandShrinkRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public InvokeCommandShrinkRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public InvokeCommandShrinkRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

@@ -34,6 +34,9 @@ public class CreateCommandRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateCommandRequestTag> tag;
+
     @NameInMap("Timeout")
     public Long timeout;
 
@@ -128,6 +131,14 @@ public class CreateCommandRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
+    public CreateCommandRequest setTag(java.util.List<CreateCommandRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateCommandRequestTag> getTag() {
+        return this.tag;
+    }
+
     public CreateCommandRequest setTimeout(Long timeout) {
         this.timeout = timeout;
         return this;
@@ -150,6 +161,36 @@ public class CreateCommandRequest extends TeaModel {
     }
     public String getWorkingDir() {
         return this.workingDir;
+    }
+
+    public static class CreateCommandRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateCommandRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateCommandRequestTag self = new CreateCommandRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateCommandRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateCommandRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }
