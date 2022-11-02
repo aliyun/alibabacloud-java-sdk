@@ -349,6 +349,9 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         @NameInMap("Uuid")
         public String uuid;
 
+        @NameInMap("clusterId")
+        public String clusterId;
+
         public static DescribeSuspEventsResponseBodySuspEvents build(java.util.Map<String, ?> map) throws Exception {
             DescribeSuspEventsResponseBodySuspEvents self = new DescribeSuspEventsResponseBodySuspEvents();
             return TeaModel.build(map, self);
@@ -752,6 +755,14 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         }
         public String getUuid() {
             return this.uuid;
+        }
+
+        public DescribeSuspEventsResponseBodySuspEvents setClusterId(String clusterId) {
+            this.clusterId = clusterId;
+            return this;
+        }
+        public String getClusterId() {
+            return this.clusterId;
         }
 
     }

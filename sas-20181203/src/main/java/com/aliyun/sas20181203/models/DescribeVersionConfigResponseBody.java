@@ -64,6 +64,9 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     @NameInMap("SlsCapacity")
     public Long slsCapacity;
 
+    @NameInMap("ThreatAnalysisCapacity")
+    public Long threatAnalysisCapacity;
+
     @NameInMap("UserDefinedAlarms")
     public Integer userDefinedAlarms;
 
@@ -242,6 +245,14 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     }
     public Long getSlsCapacity() {
         return this.slsCapacity;
+    }
+
+    public DescribeVersionConfigResponseBody setThreatAnalysisCapacity(Long threatAnalysisCapacity) {
+        this.threatAnalysisCapacity = threatAnalysisCapacity;
+        return this;
+    }
+    public Long getThreatAnalysisCapacity() {
+        return this.threatAnalysisCapacity;
     }
 
     public DescribeVersionConfigResponseBody setUserDefinedAlarms(Integer userDefinedAlarms) {
