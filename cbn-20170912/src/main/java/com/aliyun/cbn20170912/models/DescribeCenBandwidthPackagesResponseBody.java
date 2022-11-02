@@ -212,6 +212,9 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
         @NameInMap("ReservationOrderType")
         public String reservationOrderType;
 
+        @NameInMap("ServiceType")
+        public String serviceType;
+
         @NameInMap("Status")
         public String status;
 
@@ -370,6 +373,14 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
         }
         public String getReservationOrderType() {
             return this.reservationOrderType;
+        }
+
+        public DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackage setServiceType(String serviceType) {
+            this.serviceType = serviceType;
+            return this;
+        }
+        public String getServiceType() {
+            return this.serviceType;
         }
 
         public DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackage setStatus(String status) {

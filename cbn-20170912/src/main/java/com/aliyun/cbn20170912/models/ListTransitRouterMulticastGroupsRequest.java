@@ -7,6 +7,9 @@ public class ListTransitRouterMulticastGroupsRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("ConnectPeerIds")
+    public java.util.List<String> connectPeerIds;
+
     @NameInMap("GroupIpAddress")
     public String groupIpAddress;
 
@@ -57,6 +60,14 @@ public class ListTransitRouterMulticastGroupsRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public ListTransitRouterMulticastGroupsRequest setConnectPeerIds(java.util.List<String> connectPeerIds) {
+        this.connectPeerIds = connectPeerIds;
+        return this;
+    }
+    public java.util.List<String> getConnectPeerIds() {
+        return this.connectPeerIds;
     }
 
     public ListTransitRouterMulticastGroupsRequest setGroupIpAddress(String groupIpAddress) {

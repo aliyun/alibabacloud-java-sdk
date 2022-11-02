@@ -52,6 +52,9 @@ public class CreateCenBandwidthPackageRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("ServiceType")
+    public String serviceType;
+
     public static CreateCenBandwidthPackageRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateCenBandwidthPackageRequest self = new CreateCenBandwidthPackageRequest();
         return TeaModel.build(map, self);
@@ -183,6 +186,14 @@ public class CreateCenBandwidthPackageRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public CreateCenBandwidthPackageRequest setServiceType(String serviceType) {
+        this.serviceType = serviceType;
+        return this;
+    }
+    public String getServiceType() {
+        return this.serviceType;
     }
 
 }

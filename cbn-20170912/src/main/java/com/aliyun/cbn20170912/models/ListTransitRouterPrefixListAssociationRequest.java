@@ -4,6 +4,12 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class ListTransitRouterPrefixListAssociationRequest extends TeaModel {
+    @NameInMap("NextHop")
+    public String nextHop;
+
+    @NameInMap("NextHopType")
+    public String nextHopType;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -40,6 +46,22 @@ public class ListTransitRouterPrefixListAssociationRequest extends TeaModel {
     public static ListTransitRouterPrefixListAssociationRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTransitRouterPrefixListAssociationRequest self = new ListTransitRouterPrefixListAssociationRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListTransitRouterPrefixListAssociationRequest setNextHop(String nextHop) {
+        this.nextHop = nextHop;
+        return this;
+    }
+    public String getNextHop() {
+        return this.nextHop;
+    }
+
+    public ListTransitRouterPrefixListAssociationRequest setNextHopType(String nextHopType) {
+        this.nextHopType = nextHopType;
+        return this;
+    }
+    public String getNextHopType() {
+        return this.nextHopType;
     }
 
     public ListTransitRouterPrefixListAssociationRequest setOwnerAccount(String ownerAccount) {

@@ -22,6 +22,9 @@ public class ModifyCenBandwidthPackageSpecRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("ServiceType")
+    public String serviceType;
+
     public static ModifyCenBandwidthPackageSpecRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyCenBandwidthPackageSpecRequest self = new ModifyCenBandwidthPackageSpecRequest();
         return TeaModel.build(map, self);
@@ -73,6 +76,14 @@ public class ModifyCenBandwidthPackageSpecRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public ModifyCenBandwidthPackageSpecRequest setServiceType(String serviceType) {
+        this.serviceType = serviceType;
+        return this;
+    }
+    public String getServiceType() {
+        return this.serviceType;
     }
 
 }

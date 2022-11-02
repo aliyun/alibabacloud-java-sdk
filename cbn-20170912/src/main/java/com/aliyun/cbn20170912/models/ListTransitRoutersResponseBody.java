@@ -64,6 +64,69 @@ public class ListTransitRoutersResponseBody extends TeaModel {
         return this.transitRouters;
     }
 
+    public static class ListTransitRoutersResponseBodyTransitRoutersTransitRouterCidrList extends TeaModel {
+        @NameInMap("Cidr")
+        public String cidr;
+
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("PublishCidrRoute")
+        public Boolean publishCidrRoute;
+
+        @NameInMap("TransitRouterCidrId")
+        public String transitRouterCidrId;
+
+        public static ListTransitRoutersResponseBodyTransitRoutersTransitRouterCidrList build(java.util.Map<String, ?> map) throws Exception {
+            ListTransitRoutersResponseBodyTransitRoutersTransitRouterCidrList self = new ListTransitRoutersResponseBodyTransitRoutersTransitRouterCidrList();
+            return TeaModel.build(map, self);
+        }
+
+        public ListTransitRoutersResponseBodyTransitRoutersTransitRouterCidrList setCidr(String cidr) {
+            this.cidr = cidr;
+            return this;
+        }
+        public String getCidr() {
+            return this.cidr;
+        }
+
+        public ListTransitRoutersResponseBodyTransitRoutersTransitRouterCidrList setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public ListTransitRoutersResponseBodyTransitRoutersTransitRouterCidrList setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public ListTransitRoutersResponseBodyTransitRoutersTransitRouterCidrList setPublishCidrRoute(Boolean publishCidrRoute) {
+            this.publishCidrRoute = publishCidrRoute;
+            return this;
+        }
+        public Boolean getPublishCidrRoute() {
+            return this.publishCidrRoute;
+        }
+
+        public ListTransitRoutersResponseBodyTransitRoutersTransitRouterCidrList setTransitRouterCidrId(String transitRouterCidrId) {
+            this.transitRouterCidrId = transitRouterCidrId;
+            return this;
+        }
+        public String getTransitRouterCidrId() {
+            return this.transitRouterCidrId;
+        }
+
+    }
+
     public static class ListTransitRoutersResponseBodyTransitRouters extends TeaModel {
         @NameInMap("AliUid")
         public Long aliUid;
@@ -82,6 +145,9 @@ public class ListTransitRoutersResponseBody extends TeaModel {
 
         @NameInMap("SupportMulticast")
         public Boolean supportMulticast;
+
+        @NameInMap("TransitRouterCidrList")
+        public java.util.List<ListTransitRoutersResponseBodyTransitRoutersTransitRouterCidrList> transitRouterCidrList;
 
         @NameInMap("TransitRouterDescription")
         public String transitRouterDescription;
@@ -146,6 +212,14 @@ public class ListTransitRoutersResponseBody extends TeaModel {
         }
         public Boolean getSupportMulticast() {
             return this.supportMulticast;
+        }
+
+        public ListTransitRoutersResponseBodyTransitRouters setTransitRouterCidrList(java.util.List<ListTransitRoutersResponseBodyTransitRoutersTransitRouterCidrList> transitRouterCidrList) {
+            this.transitRouterCidrList = transitRouterCidrList;
+            return this;
+        }
+        public java.util.List<ListTransitRoutersResponseBodyTransitRoutersTransitRouterCidrList> getTransitRouterCidrList() {
+            return this.transitRouterCidrList;
         }
 
         public ListTransitRoutersResponseBodyTransitRouters setTransitRouterDescription(String transitRouterDescription) {

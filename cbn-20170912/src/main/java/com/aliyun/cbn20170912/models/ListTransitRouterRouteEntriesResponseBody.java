@@ -68,6 +68,12 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
+        @NameInMap("OperationalMode")
+        public Boolean operationalMode;
+
+        @NameInMap("Tag")
+        public String tag;
+
         @NameInMap("TransitRouterRouteEntryDescription")
         public String transitRouterRouteEntryDescription;
 
@@ -103,6 +109,22 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        public ListTransitRouterRouteEntriesResponseBodyTransitRouterRouteEntries setOperationalMode(Boolean operationalMode) {
+            this.operationalMode = operationalMode;
+            return this;
+        }
+        public Boolean getOperationalMode() {
+            return this.operationalMode;
+        }
+
+        public ListTransitRouterRouteEntriesResponseBodyTransitRouterRouteEntries setTag(String tag) {
+            this.tag = tag;
+            return this;
+        }
+        public String getTag() {
+            return this.tag;
         }
 
         public ListTransitRouterRouteEntriesResponseBodyTransitRouterRouteEntries setTransitRouterRouteEntryDescription(String transitRouterRouteEntryDescription) {

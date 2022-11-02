@@ -91,7 +91,7 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
         public String creationTime;
 
         @NameInMap("ResourceType")
-        public Integer resourceType;
+        public String resourceType;
 
         @NameInMap("Status")
         public String status;
@@ -141,11 +141,11 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
             return this.creationTime;
         }
 
-        public ListTransitRouterVpnAttachmentsResponseBodyTransitRouterAttachments setResourceType(Integer resourceType) {
+        public ListTransitRouterVpnAttachmentsResponseBodyTransitRouterAttachments setResourceType(String resourceType) {
             this.resourceType = resourceType;
             return this;
         }
-        public Integer getResourceType() {
+        public String getResourceType() {
             return this.resourceType;
         }
 
