@@ -4,6 +4,9 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class ResourceInstance extends TeaModel {
+    @NameInMap("Arch")
+    public String arch;
+
     @NameInMap("AutoRenewal")
     public Boolean autoRenewal;
 
@@ -21,6 +24,9 @@ public class ResourceInstance extends TeaModel {
 
     @NameInMap("InstanceGpuCount")
     public Integer instanceGpuCount;
+
+    @NameInMap("InstanceGpuMemory")
+    public String instanceGpuMemory;
 
     @NameInMap("InstanceId")
     public String instanceId;
@@ -49,9 +55,23 @@ public class ResourceInstance extends TeaModel {
     @NameInMap("InstanceUsedMemory")
     public String instanceUsedMemory;
 
+    @NameInMap("Region")
+    public String region;
+
+    @NameInMap("Zone")
+    public String zone;
+
     public static ResourceInstance build(java.util.Map<String, ?> map) throws Exception {
         ResourceInstance self = new ResourceInstance();
         return TeaModel.build(map, self);
+    }
+
+    public ResourceInstance setArch(String arch) {
+        this.arch = arch;
+        return this;
+    }
+    public String getArch() {
+        return this.arch;
     }
 
     public ResourceInstance setAutoRenewal(Boolean autoRenewal) {
@@ -100,6 +120,14 @@ public class ResourceInstance extends TeaModel {
     }
     public Integer getInstanceGpuCount() {
         return this.instanceGpuCount;
+    }
+
+    public ResourceInstance setInstanceGpuMemory(String instanceGpuMemory) {
+        this.instanceGpuMemory = instanceGpuMemory;
+        return this;
+    }
+    public String getInstanceGpuMemory() {
+        return this.instanceGpuMemory;
     }
 
     public ResourceInstance setInstanceId(String instanceId) {
@@ -172,6 +200,22 @@ public class ResourceInstance extends TeaModel {
     }
     public String getInstanceUsedMemory() {
         return this.instanceUsedMemory;
+    }
+
+    public ResourceInstance setRegion(String region) {
+        this.region = region;
+        return this;
+    }
+    public String getRegion() {
+        return this.region;
+    }
+
+    public ResourceInstance setZone(String zone) {
+        this.zone = zone;
+        return this;
+    }
+    public String getZone() {
+        return this.zone;
     }
 
 }

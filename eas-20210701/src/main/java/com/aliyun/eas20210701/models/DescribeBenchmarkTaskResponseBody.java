@@ -13,6 +13,9 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
     @NameInMap("DesiredAgent")
     public Long desiredAgent;
 
+    @NameInMap("Endpoint")
+    public String endpoint;
+
     @NameInMap("Message")
     public String message;
 
@@ -67,6 +70,14 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
     }
     public Long getDesiredAgent() {
         return this.desiredAgent;
+    }
+
+    public DescribeBenchmarkTaskResponseBody setEndpoint(String endpoint) {
+        this.endpoint = endpoint;
+        return this;
+    }
+    public String getEndpoint() {
+        return this.endpoint;
     }
 
     public DescribeBenchmarkTaskResponseBody setMessage(String message) {

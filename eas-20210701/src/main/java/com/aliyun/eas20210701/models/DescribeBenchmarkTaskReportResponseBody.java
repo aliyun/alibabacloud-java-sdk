@@ -4,6 +4,9 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class DescribeBenchmarkTaskReportResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public Object data;
+
     @NameInMap("ReportUrl")
     public String reportUrl;
 
@@ -13,6 +16,14 @@ public class DescribeBenchmarkTaskReportResponseBody extends TeaModel {
     public static DescribeBenchmarkTaskReportResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeBenchmarkTaskReportResponseBody self = new DescribeBenchmarkTaskReportResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeBenchmarkTaskReportResponseBody setData(Object data) {
+        this.data = data;
+        return this;
+    }
+    public Object getData() {
+        return this.data;
     }
 
     public DescribeBenchmarkTaskReportResponseBody setReportUrl(String reportUrl) {

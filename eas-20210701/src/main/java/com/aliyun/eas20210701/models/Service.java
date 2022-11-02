@@ -67,6 +67,12 @@ public class Service extends TeaModel {
     @NameInMap("ResourceAlias")
     public String resourceAlias;
 
+    @NameInMap("Role")
+    public String role;
+
+    @NameInMap("RoleAttrs")
+    public String roleAttrs;
+
     @NameInMap("RunningInstance")
     public Integer runningInstance;
 
@@ -271,6 +277,22 @@ public class Service extends TeaModel {
     }
     public String getResourceAlias() {
         return this.resourceAlias;
+    }
+
+    public Service setRole(String role) {
+        this.role = role;
+        return this;
+    }
+    public String getRole() {
+        return this.role;
+    }
+
+    public Service setRoleAttrs(String roleAttrs) {
+        this.roleAttrs = roleAttrs;
+        return this;
+    }
+    public String getRoleAttrs() {
+        return this.roleAttrs;
     }
 
     public Service setRunningInstance(Integer runningInstance) {

@@ -7,14 +7,14 @@ public class CreateBenchmarkTaskResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    @NameInMap("Name")
-    public String name;
-
     @NameInMap("Region")
     public String region;
 
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("TaskName")
+    public String taskName;
 
     public static CreateBenchmarkTaskResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateBenchmarkTaskResponseBody self = new CreateBenchmarkTaskResponseBody();
@@ -27,14 +27,6 @@ public class CreateBenchmarkTaskResponseBody extends TeaModel {
     }
     public String getMessage() {
         return this.message;
-    }
-
-    public CreateBenchmarkTaskResponseBody setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
     }
 
     public CreateBenchmarkTaskResponseBody setRegion(String region) {
@@ -51,6 +43,14 @@ public class CreateBenchmarkTaskResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public CreateBenchmarkTaskResponseBody setTaskName(String taskName) {
+        this.taskName = taskName;
+        return this;
+    }
+    public String getTaskName() {
+        return this.taskName;
     }
 
 }
