@@ -3,7 +3,7 @@ package com.aliyun.waf_openapi20211001.models;
 
 import com.aliyun.tea.*;
 
-public class CreateMajorProtectionBlackIpRequest extends TeaModel {
+public class ModifyMajorProtectionBlackIpRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
@@ -22,12 +22,12 @@ public class CreateMajorProtectionBlackIpRequest extends TeaModel {
     @NameInMap("TemplateId")
     public Long templateId;
 
-    public static CreateMajorProtectionBlackIpRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateMajorProtectionBlackIpRequest self = new CreateMajorProtectionBlackIpRequest();
+    public static ModifyMajorProtectionBlackIpRequest build(java.util.Map<String, ?> map) throws Exception {
+        ModifyMajorProtectionBlackIpRequest self = new ModifyMajorProtectionBlackIpRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateMajorProtectionBlackIpRequest setDescription(String description) {
+    public ModifyMajorProtectionBlackIpRequest setDescription(String description) {
         this.description = description;
         return this;
     }
@@ -35,7 +35,7 @@ public class CreateMajorProtectionBlackIpRequest extends TeaModel {
         return this.description;
     }
 
-    public CreateMajorProtectionBlackIpRequest setExpiredTime(Long expiredTime) {
+    public ModifyMajorProtectionBlackIpRequest setExpiredTime(Long expiredTime) {
         this.expiredTime = expiredTime;
         return this;
     }
@@ -43,7 +43,7 @@ public class CreateMajorProtectionBlackIpRequest extends TeaModel {
         return this.expiredTime;
     }
 
-    public CreateMajorProtectionBlackIpRequest setInstanceId(String instanceId) {
+    public ModifyMajorProtectionBlackIpRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -51,7 +51,7 @@ public class CreateMajorProtectionBlackIpRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public CreateMajorProtectionBlackIpRequest setIpList(String ipList) {
+    public ModifyMajorProtectionBlackIpRequest setIpList(String ipList) {
         this.ipList = ipList;
         return this;
     }
@@ -59,7 +59,7 @@ public class CreateMajorProtectionBlackIpRequest extends TeaModel {
         return this.ipList;
     }
 
-    public CreateMajorProtectionBlackIpRequest setRuleId(Long ruleId) {
+    public ModifyMajorProtectionBlackIpRequest setRuleId(Long ruleId) {
         this.ruleId = ruleId;
         return this;
     }
@@ -67,7 +67,7 @@ public class CreateMajorProtectionBlackIpRequest extends TeaModel {
         return this.ruleId;
     }
 
-    public CreateMajorProtectionBlackIpRequest setTemplateId(Long templateId) {
+    public ModifyMajorProtectionBlackIpRequest setTemplateId(Long templateId) {
         this.templateId = templateId;
         return this;
     }

@@ -4,24 +4,35 @@ package com.aliyun.waf_openapi20211001.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceResponseBody extends TeaModel {
-    // 实例详情
     @NameInMap("Details")
     public DescribeInstanceResponseBodyDetails details;
 
-    // 套餐
     @NameInMap("Edition")
     public String edition;
 
-    // 实例ID
+    @NameInMap("EndTime")
+    public Long endTime;
+
+    @NameInMap("InDebt")
+    public String inDebt;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // RegionId
+    @NameInMap("PayType")
+    public String payType;
+
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("StartTime")
+    public Long startTime;
+
+    @NameInMap("Status")
+    public Integer status;
 
     public static DescribeInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceResponseBody self = new DescribeInstanceResponseBody();
@@ -44,12 +55,36 @@ public class DescribeInstanceResponseBody extends TeaModel {
         return this.edition;
     }
 
+    public DescribeInstanceResponseBody setEndTime(Long endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public Long getEndTime() {
+        return this.endTime;
+    }
+
+    public DescribeInstanceResponseBody setInDebt(String inDebt) {
+        this.inDebt = inDebt;
+        return this;
+    }
+    public String getInDebt() {
+        return this.inDebt;
+    }
+
     public DescribeInstanceResponseBody setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public DescribeInstanceResponseBody setPayType(String payType) {
+        this.payType = payType;
+        return this;
+    }
+    public String getPayType() {
+        return this.payType;
     }
 
     public DescribeInstanceResponseBody setRegionId(String regionId) {
@@ -68,167 +103,173 @@ public class DescribeInstanceResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DescribeInstanceResponseBody setStartTime(Long startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public Long getStartTime() {
+        return this.startTime;
+    }
+
+    public DescribeInstanceResponseBody setStatus(Integer status) {
+        this.status = status;
+        return this;
+    }
+    public Integer getStatus() {
+        return this.status;
+    }
+
     public static class DescribeInstanceResponseBodyDetails extends TeaModel {
         @NameInMap("AclRuleMaxIpCount")
         public Long aclRuleMaxIpCount;
 
-        // 支持扫描防护
         @NameInMap("AntiScan")
         public Boolean antiScan;
 
-        // 扫描防护模板数
         @NameInMap("AntiScanTemplateMaxCount")
         public Long antiScanTemplateMaxCount;
 
-        // 最大回源数
         @NameInMap("BackendMaxCount")
         public Long backendMaxCount;
 
-        // 基础防护
         @NameInMap("BaseWafGroup")
         public Boolean baseWafGroup;
 
-        // 基础防护规则
         @NameInMap("BaseWafGroupRuleInTemplateMaxCount")
         public Long baseWafGroupRuleInTemplateMaxCount;
 
-        // 基础防护规则最大数量
         @NameInMap("BaseWafGroupRuleTemplateMaxCount")
         public Long baseWafGroupRuleTemplateMaxCount;
 
-        // 最大可添加CNAME数
+        @NameInMap("Bot")
+        public Boolean bot;
+
+        @NameInMap("BotApp")
+        public String botApp;
+
+        @NameInMap("BotTemplateMaxCount")
+        public Long botTemplateMaxCount;
+
+        @NameInMap("BotWeb")
+        public String botWeb;
+
         @NameInMap("CnameResourceMaxCount")
         public Long cnameResourceMaxCount;
 
-        // 支持自定义响应
         @NameInMap("CustomResponse")
         public Boolean customResponse;
 
-        // 自定义响应模板包含规则数
         @NameInMap("CustomResponseRuleInTemplateMaxCount")
         public Long customResponseRuleInTemplateMaxCount;
 
-        // 自定义响应模板数
         @NameInMap("CustomResponseTemplateMaxCount")
         public Long customResponseTemplateMaxCount;
 
-        // 支持自定义规则
         @NameInMap("CustomRule")
         public Boolean customRule;
 
-        // 包含字符串
         @NameInMap("CustomRuleAction")
         public String customRuleAction;
 
-        // 自定义规则匹配条件
         @NameInMap("CustomRuleCondition")
         public String customRuleCondition;
 
-        // 自定义规则模板包含规则数
         @NameInMap("CustomRuleInTemplateMaxCount")
         public Long customRuleInTemplateMaxCount;
 
-        // 自定义规则限速对象
         @NameInMap("CustomRuleRatelimitor")
         public String customRuleRatelimitor;
 
-        // 自定义规则模板数
         @NameInMap("CustomRuleTemplateMaxCount")
         public Long customRuleTemplateMaxCount;
 
-        // 最大防护组数量
         @NameInMap("DefenseGroupMaxCount")
         public Long defenseGroupMaxCount;
 
-        // 一个防护组内最大包含对象数量
         @NameInMap("DefenseObjectInGroupMaxCount")
         public Long defenseObjectInGroupMaxCount;
 
-        // 一个模板内关联对象的最大数量
         @NameInMap("DefenseObjectInTemplateMaxCount")
         public Long defenseObjectInTemplateMaxCount;
 
-        // 最大防护对象数量
         @NameInMap("DefenseObjectMaxCount")
         public Long defenseObjectMaxCount;
 
-        // 独享IP
+        @NameInMap("Dlp")
+        public Boolean dlp;
+
+        @NameInMap("DlpRuleInTemplateMaxCount")
+        public Long dlpRuleInTemplateMaxCount;
+
+        @NameInMap("DlpTemplateMaxCount")
+        public Long dlpTemplateMaxCount;
+
         @NameInMap("ExclusiveIp")
         public Boolean exclusiveIp;
 
-        // Gslb
         @NameInMap("Gslb")
         public Boolean gslb;
 
-        // HTTP端口可用范围
         @NameInMap("HttpPorts")
         public String httpPorts;
 
-        // HTTPS端口可用范围
         @NameInMap("HttpsPorts")
         public String httpsPorts;
 
-        // 支持IP黑名单
         @NameInMap("IpBlacklist")
         public Boolean ipBlacklist;
 
-        // IP黑名单规则包含IP数
         @NameInMap("IpBlacklistIpInRuleMaxCount")
         public Long ipBlacklistIpInRuleMaxCount;
 
-        // IP黑名单模板包含规则数
         @NameInMap("IpBlacklistRuleInTemplateMaxCount")
         public Long ipBlacklistRuleInTemplateMaxCount;
 
-        // /黑名单模板数
         @NameInMap("IpBlacklistTemplateMaxCount")
         public Long ipBlacklistTemplateMaxCount;
 
-        // Ipv6
         @NameInMap("Ipv6")
         public Boolean ipv6;
 
-        // 日志服务是否开启
         @NameInMap("LogService")
         public Boolean logService;
 
-        // 是否支持重保
         @NameInMap("MajorProtection")
         public Boolean majorProtection;
 
-        // 重保模板的最大数量
         @NameInMap("MajorProtectionTemplateMaxCount")
         public Long majorProtectionTemplateMaxCount;
 
-        // 海量IP单次上传文件IP的最大数量
+        @NameInMap("Tamperproof")
+        public Boolean tamperproof;
+
+        @NameInMap("TamperproofRuleInTemplateMaxCount")
+        public Long tamperproofRuleInTemplateMaxCount;
+
+        @NameInMap("TamperproofTemplateMaxCount")
+        public Long tamperproofTemplateMaxCount;
+
         @NameInMap("VastIpBlacklistInFileMaxCount")
         public Long vastIpBlacklistInFileMaxCount;
 
-        // 海量IP单次页面操作的最大数量
         @NameInMap("VastIpBlacklistInOperationMaxCount")
         public Long vastIpBlacklistInOperationMaxCount;
 
-        // 海量IP的最大数量（单用户）
         @NameInMap("VastIpBlacklistMaxCount")
         public Long vastIpBlacklistMaxCount;
 
-        // 是否支持白名单
         @NameInMap("Whitelist")
         public Boolean whitelist;
 
-        // 白名单规则匹配条件
         @NameInMap("WhitelistLogical")
         public String whitelistLogical;
 
-        // 白名单规则匹配条件
         @NameInMap("WhitelistRuleCondition")
         public String whitelistRuleCondition;
 
-        // 白名单模板包含规则数
         @NameInMap("WhitelistRuleInTemplateMaxCount")
         public Long whitelistRuleInTemplateMaxCount;
 
-        // 白名单模板数
         @NameInMap("WhitelistTemplateMaxCount")
         public Long whitelistTemplateMaxCount;
 
@@ -291,6 +332,38 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
         public Long getBaseWafGroupRuleTemplateMaxCount() {
             return this.baseWafGroupRuleTemplateMaxCount;
+        }
+
+        public DescribeInstanceResponseBodyDetails setBot(Boolean bot) {
+            this.bot = bot;
+            return this;
+        }
+        public Boolean getBot() {
+            return this.bot;
+        }
+
+        public DescribeInstanceResponseBodyDetails setBotApp(String botApp) {
+            this.botApp = botApp;
+            return this;
+        }
+        public String getBotApp() {
+            return this.botApp;
+        }
+
+        public DescribeInstanceResponseBodyDetails setBotTemplateMaxCount(Long botTemplateMaxCount) {
+            this.botTemplateMaxCount = botTemplateMaxCount;
+            return this;
+        }
+        public Long getBotTemplateMaxCount() {
+            return this.botTemplateMaxCount;
+        }
+
+        public DescribeInstanceResponseBodyDetails setBotWeb(String botWeb) {
+            this.botWeb = botWeb;
+            return this;
+        }
+        public String getBotWeb() {
+            return this.botWeb;
         }
 
         public DescribeInstanceResponseBodyDetails setCnameResourceMaxCount(Long cnameResourceMaxCount) {
@@ -405,6 +478,30 @@ public class DescribeInstanceResponseBody extends TeaModel {
             return this.defenseObjectMaxCount;
         }
 
+        public DescribeInstanceResponseBodyDetails setDlp(Boolean dlp) {
+            this.dlp = dlp;
+            return this;
+        }
+        public Boolean getDlp() {
+            return this.dlp;
+        }
+
+        public DescribeInstanceResponseBodyDetails setDlpRuleInTemplateMaxCount(Long dlpRuleInTemplateMaxCount) {
+            this.dlpRuleInTemplateMaxCount = dlpRuleInTemplateMaxCount;
+            return this;
+        }
+        public Long getDlpRuleInTemplateMaxCount() {
+            return this.dlpRuleInTemplateMaxCount;
+        }
+
+        public DescribeInstanceResponseBodyDetails setDlpTemplateMaxCount(Long dlpTemplateMaxCount) {
+            this.dlpTemplateMaxCount = dlpTemplateMaxCount;
+            return this;
+        }
+        public Long getDlpTemplateMaxCount() {
+            return this.dlpTemplateMaxCount;
+        }
+
         public DescribeInstanceResponseBodyDetails setExclusiveIp(Boolean exclusiveIp) {
             this.exclusiveIp = exclusiveIp;
             return this;
@@ -499,6 +596,30 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
         public Long getMajorProtectionTemplateMaxCount() {
             return this.majorProtectionTemplateMaxCount;
+        }
+
+        public DescribeInstanceResponseBodyDetails setTamperproof(Boolean tamperproof) {
+            this.tamperproof = tamperproof;
+            return this;
+        }
+        public Boolean getTamperproof() {
+            return this.tamperproof;
+        }
+
+        public DescribeInstanceResponseBodyDetails setTamperproofRuleInTemplateMaxCount(Long tamperproofRuleInTemplateMaxCount) {
+            this.tamperproofRuleInTemplateMaxCount = tamperproofRuleInTemplateMaxCount;
+            return this;
+        }
+        public Long getTamperproofRuleInTemplateMaxCount() {
+            return this.tamperproofRuleInTemplateMaxCount;
+        }
+
+        public DescribeInstanceResponseBodyDetails setTamperproofTemplateMaxCount(Long tamperproofTemplateMaxCount) {
+            this.tamperproofTemplateMaxCount = tamperproofTemplateMaxCount;
+            return this;
+        }
+        public Long getTamperproofTemplateMaxCount() {
+            return this.tamperproofTemplateMaxCount;
         }
 
         public DescribeInstanceResponseBodyDetails setVastIpBlacklistInFileMaxCount(Long vastIpBlacklistInFileMaxCount) {
