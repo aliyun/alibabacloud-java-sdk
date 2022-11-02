@@ -371,6 +371,9 @@ public class ListJobsResponseBody extends TeaModel {
         @NameInMap("JobMonitorInfo")
         public ListJobsResponseBodyDataJobsJobMonitorInfo jobMonitorInfo;
 
+        @NameInMap("JobType")
+        public String jobType;
+
         @NameInMap("MapTaskXAttrs")
         public ListJobsResponseBodyDataJobsMapTaskXAttrs mapTaskXAttrs;
 
@@ -391,6 +394,9 @@ public class ListJobsResponseBody extends TeaModel {
 
         @NameInMap("TimeConfig")
         public ListJobsResponseBodyDataJobsTimeConfig timeConfig;
+
+        @NameInMap("XAttrs")
+        public String XAttrs;
 
         public static ListJobsResponseBodyDataJobs build(java.util.Map<String, ?> map) throws Exception {
             ListJobsResponseBodyDataJobs self = new ListJobsResponseBodyDataJobs();
@@ -461,6 +467,14 @@ public class ListJobsResponseBody extends TeaModel {
             return this.jobMonitorInfo;
         }
 
+        public ListJobsResponseBodyDataJobs setJobType(String jobType) {
+            this.jobType = jobType;
+            return this;
+        }
+        public String getJobType() {
+            return this.jobType;
+        }
+
         public ListJobsResponseBodyDataJobs setMapTaskXAttrs(ListJobsResponseBodyDataJobsMapTaskXAttrs mapTaskXAttrs) {
             this.mapTaskXAttrs = mapTaskXAttrs;
             return this;
@@ -515,6 +529,14 @@ public class ListJobsResponseBody extends TeaModel {
         }
         public ListJobsResponseBodyDataJobsTimeConfig getTimeConfig() {
             return this.timeConfig;
+        }
+
+        public ListJobsResponseBodyDataJobs setXAttrs(String XAttrs) {
+            this.XAttrs = XAttrs;
+            return this;
+        }
+        public String getXAttrs() {
+            return this.XAttrs;
         }
 
     }
