@@ -4,6 +4,9 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class CorpTokenRequest extends TeaModel {
+    @NameInMap("app_secret")
+    public String appSecret;
+
     @NameInMap("corp_id")
     public String corpId;
 
@@ -13,6 +16,14 @@ public class CorpTokenRequest extends TeaModel {
     public static CorpTokenRequest build(java.util.Map<String, ?> map) throws Exception {
         CorpTokenRequest self = new CorpTokenRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CorpTokenRequest setAppSecret(String appSecret) {
+        this.appSecret = appSecret;
+        return this;
+    }
+    public String getAppSecret() {
+        return this.appSecret;
     }
 
     public CorpTokenRequest setCorpId(String corpId) {
