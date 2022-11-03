@@ -3299,6 +3299,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SnapshotId", request.snapshotId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.storageLocationArn)) {
+            query.put("StorageLocationArn", request.storageLocationArn);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
             query.put("Tag", request.tag);
         }

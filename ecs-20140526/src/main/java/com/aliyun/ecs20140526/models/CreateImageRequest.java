@@ -55,6 +55,9 @@ public class CreateImageRequest extends TeaModel {
     @NameInMap("SnapshotId")
     public String snapshotId;
 
+    @NameInMap("StorageLocationArn")
+    public String storageLocationArn;
+
     @NameInMap("Tag")
     public java.util.List<CreateImageRequestTag> tag;
 
@@ -197,6 +200,14 @@ public class CreateImageRequest extends TeaModel {
     }
     public String getSnapshotId() {
         return this.snapshotId;
+    }
+
+    public CreateImageRequest setStorageLocationArn(String storageLocationArn) {
+        this.storageLocationArn = storageLocationArn;
+        return this;
+    }
+    public String getStorageLocationArn() {
+        return this.storageLocationArn;
     }
 
     public CreateImageRequest setTag(java.util.List<CreateImageRequestTag> tag) {
