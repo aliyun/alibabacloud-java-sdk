@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>btripopen20220520</artifactId>
-  <version>1.0.26</version>
+  <version>1.0.27</version>
   <packaging>jar</packaging>
   <name>btripopen20220520</name>
   <description>Alibaba Cloud btripOpen (20220520) SDK for Java
@@ -41,12 +41,12 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-util</artifactId>
-      <version>0.2.14</version>
+      <version>0.2.15</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.2.6</version>
+      <version>0.2.7</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>

@@ -1228,6 +1228,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CorpTokenResponse corpTokenWithOptions(CorpTokenRequest request, CorpTokenHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appSecret)) {
+            query.put("app_secret", request.appSecret);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.corpId)) {
             query.put("corp_id", request.corpId);
         }
