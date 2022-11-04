@@ -1933,8 +1933,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listAppGroupsWithOptions(request, headers, runtime);
     }
 
-    public ListAppGroupsResponse listAppGroupsWithOptions(ListAppGroupsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public ListAppGroupsResponse listAppGroupsWithOptions(ListAppGroupsRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListAppGroupsShrinkRequest request = new ListAppGroupsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tags)) {
+            request.tagsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tags, "tags", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("instanceId", request.instanceId);
@@ -1958,6 +1964,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.sortBy)) {
             query.put("sortBy", request.sortBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagsShrink)) {
+            query.put("tags", request.tagsShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.type)) {
