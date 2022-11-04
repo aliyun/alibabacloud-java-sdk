@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>aligenieip_1_0</artifactId>
-  <version>1.0.11</version>
+  <version>1.0.12</version>
   <packaging>jar</packaging>
   <name>aligenieip_1_0</name>
   <description>Alibaba Cloud AliGenie (ip_1_0) SDK for Java
@@ -41,12 +41,12 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-util</artifactId>
-      <version>0.2.14</version>
+      <version>0.2.15</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.2.6</version>
+      <version>0.2.7</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
@@ -61,7 +61,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea</artifactId>
-      <version>1.1.14</version>
+      <version>1.2.0</version>
     </dependency>
   </dependencies>
   <build>
