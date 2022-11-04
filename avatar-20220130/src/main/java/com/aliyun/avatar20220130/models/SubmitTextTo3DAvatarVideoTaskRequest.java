@@ -84,6 +84,9 @@ public class SubmitTextTo3DAvatarVideoTaskRequest extends TeaModel {
     }
 
     public static class SubmitTextTo3DAvatarVideoTaskRequestVideoInfo extends TeaModel {
+        @NameInMap("BackgroundImageUrl")
+        public String backgroundImageUrl;
+
         @NameInMap("IsAlpha")
         public Boolean isAlpha;
 
@@ -96,6 +99,14 @@ public class SubmitTextTo3DAvatarVideoTaskRequest extends TeaModel {
         public static SubmitTextTo3DAvatarVideoTaskRequestVideoInfo build(java.util.Map<String, ?> map) throws Exception {
             SubmitTextTo3DAvatarVideoTaskRequestVideoInfo self = new SubmitTextTo3DAvatarVideoTaskRequestVideoInfo();
             return TeaModel.build(map, self);
+        }
+
+        public SubmitTextTo3DAvatarVideoTaskRequestVideoInfo setBackgroundImageUrl(String backgroundImageUrl) {
+            this.backgroundImageUrl = backgroundImageUrl;
+            return this;
+        }
+        public String getBackgroundImageUrl() {
+            return this.backgroundImageUrl;
         }
 
         public SubmitTextTo3DAvatarVideoTaskRequestVideoInfo setIsAlpha(Boolean isAlpha) {
