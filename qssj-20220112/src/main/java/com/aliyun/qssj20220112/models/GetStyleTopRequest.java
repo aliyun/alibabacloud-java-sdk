@@ -4,9 +4,11 @@ package com.aliyun.qssj20220112.models;
 import com.aliyun.tea.*;
 
 public class GetStyleTopRequest extends TeaModel {
-    // A short description of struct
     @NameInMap("CateIds")
     public String cateIds;
+
+    @NameInMap("PageIndex")
+    public Long pageIndex;
 
     @NameInMap("SortOrder")
     public Long sortOrder;
@@ -25,6 +27,14 @@ public class GetStyleTopRequest extends TeaModel {
     }
     public String getCateIds() {
         return this.cateIds;
+    }
+
+    public GetStyleTopRequest setPageIndex(Long pageIndex) {
+        this.pageIndex = pageIndex;
+        return this;
+    }
+    public Long getPageIndex() {
+        return this.pageIndex;
     }
 
     public GetStyleTopRequest setSortOrder(Long sortOrder) {

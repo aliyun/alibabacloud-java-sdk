@@ -4,7 +4,6 @@ package com.aliyun.qssj20220112.models;
 import com.aliyun.tea.*;
 
 public class GetStyleTopResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("Code")
     public String code;
 
@@ -66,6 +65,9 @@ public class GetStyleTopResponseBody extends TeaModel {
     }
 
     public static class GetStyleTopResponseBodyData extends TeaModel {
+        @NameInMap("BuyerTags")
+        public String buyerTags;
+
         @NameInMap("CateName")
         public String cateName;
 
@@ -96,6 +98,14 @@ public class GetStyleTopResponseBody extends TeaModel {
         public static GetStyleTopResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetStyleTopResponseBodyData self = new GetStyleTopResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetStyleTopResponseBodyData setBuyerTags(String buyerTags) {
+            this.buyerTags = buyerTags;
+            return this;
+        }
+        public String getBuyerTags() {
+            return this.buyerTags;
         }
 
         public GetStyleTopResponseBodyData setCateName(String cateName) {
