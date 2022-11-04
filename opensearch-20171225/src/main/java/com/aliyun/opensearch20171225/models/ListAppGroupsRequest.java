@@ -22,6 +22,9 @@ public class ListAppGroupsRequest extends TeaModel {
     @NameInMap("sortBy")
     public Integer sortBy;
 
+    @NameInMap("tags")
+    public java.util.List<ListAppGroupsRequestTags> tags;
+
     @NameInMap("type")
     public String type;
 
@@ -78,12 +81,50 @@ public class ListAppGroupsRequest extends TeaModel {
         return this.sortBy;
     }
 
+    public ListAppGroupsRequest setTags(java.util.List<ListAppGroupsRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<ListAppGroupsRequestTags> getTags() {
+        return this.tags;
+    }
+
     public ListAppGroupsRequest setType(String type) {
         this.type = type;
         return this;
     }
     public String getType() {
         return this.type;
+    }
+
+    public static class ListAppGroupsRequestTags extends TeaModel {
+        @NameInMap("key")
+        public String key;
+
+        @NameInMap("value")
+        public String value;
+
+        public static ListAppGroupsRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            ListAppGroupsRequestTags self = new ListAppGroupsRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListAppGroupsRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListAppGroupsRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }
