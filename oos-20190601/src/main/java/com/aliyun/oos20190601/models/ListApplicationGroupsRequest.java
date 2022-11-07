@@ -25,6 +25,9 @@ public class ListApplicationGroupsRequest extends TeaModel {
     @NameInMap("ResourceId")
     public String resourceId;
 
+    @NameInMap("ResourceProduct")
+    public String resourceProduct;
+
     @NameInMap("ResourceType")
     public String resourceType;
 
@@ -87,6 +90,14 @@ public class ListApplicationGroupsRequest extends TeaModel {
     }
     public String getResourceId() {
         return this.resourceId;
+    }
+
+    public ListApplicationGroupsRequest setResourceProduct(String resourceProduct) {
+        this.resourceProduct = resourceProduct;
+        return this;
+    }
+    public String getResourceProduct() {
+        return this.resourceProduct;
     }
 
     public ListApplicationGroupsRequest setResourceType(String resourceType) {

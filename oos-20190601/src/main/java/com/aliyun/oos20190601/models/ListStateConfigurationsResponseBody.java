@@ -4,6 +4,9 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class ListStateConfigurationsResponseBody extends TeaModel {
+    @NameInMap("NextToken")
+    public String nextToken;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -13,6 +16,14 @@ public class ListStateConfigurationsResponseBody extends TeaModel {
     public static ListStateConfigurationsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListStateConfigurationsResponseBody self = new ListStateConfigurationsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListStateConfigurationsResponseBody setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public ListStateConfigurationsResponseBody setRequestId(String requestId) {
