@@ -4,6 +4,15 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class TableProfile extends TeaModel {
+    @NameInMap("AccessNum")
+    public Long accessNum;
+
+    @NameInMap("AccessNumMonthly")
+    public Long accessNumMonthly;
+
+    @NameInMap("AccessNumWeekly")
+    public Long accessNumWeekly;
+
     @NameInMap("CreateTime")
     public String createTime;
 
@@ -37,6 +46,30 @@ public class TableProfile extends TeaModel {
     public static TableProfile build(java.util.Map<String, ?> map) throws Exception {
         TableProfile self = new TableProfile();
         return TeaModel.build(map, self);
+    }
+
+    public TableProfile setAccessNum(Long accessNum) {
+        this.accessNum = accessNum;
+        return this;
+    }
+    public Long getAccessNum() {
+        return this.accessNum;
+    }
+
+    public TableProfile setAccessNumMonthly(Long accessNumMonthly) {
+        this.accessNumMonthly = accessNumMonthly;
+        return this;
+    }
+    public Long getAccessNumMonthly() {
+        return this.accessNumMonthly;
+    }
+
+    public TableProfile setAccessNumWeekly(Long accessNumWeekly) {
+        this.accessNumWeekly = accessNumWeekly;
+        return this;
+    }
+    public Long getAccessNumWeekly() {
+        return this.accessNumWeekly;
     }
 
     public TableProfile setCreateTime(String createTime) {

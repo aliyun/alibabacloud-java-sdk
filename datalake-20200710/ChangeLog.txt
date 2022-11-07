@@ -1,3 +1,9 @@
+2022-11-07 Version: 2.0.11
+- Register location.
+- Update registered location.
+- Deregister location.
+- Modify tableProfile.
+
 2022-10-14 Version: 2.0.11-SNAPSHOT
 - Query support multi catalog.
 
