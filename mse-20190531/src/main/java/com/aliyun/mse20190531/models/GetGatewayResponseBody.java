@@ -186,6 +186,9 @@ public class GetGatewayResponseBody extends TeaModel {
         @NameInMap("Replica")
         public Integer replica;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         @NameInMap("SecurityGroup")
         public String securityGroup;
 
@@ -317,6 +320,14 @@ public class GetGatewayResponseBody extends TeaModel {
         }
         public Integer getReplica() {
             return this.replica;
+        }
+
+        public GetGatewayResponseBodyData setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public GetGatewayResponseBodyData setSecurityGroup(String securityGroup) {

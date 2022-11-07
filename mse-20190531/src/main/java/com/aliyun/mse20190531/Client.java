@@ -180,6 +180,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Replica", request.replica);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.slbSpec)) {
             query.put("SlbSpec", request.slbSpec);
         }

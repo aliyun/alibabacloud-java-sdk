@@ -31,6 +31,9 @@ public class AddGatewayRequest extends TeaModel {
     @NameInMap("Replica")
     public Integer replica;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("SlbSpec")
     public String slbSpec;
 
@@ -127,6 +130,14 @@ public class AddGatewayRequest extends TeaModel {
     }
     public Integer getReplica() {
         return this.replica;
+    }
+
+    public AddGatewayRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public AddGatewayRequest setSlbSpec(String slbSpec) {
