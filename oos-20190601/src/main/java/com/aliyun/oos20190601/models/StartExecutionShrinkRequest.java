@@ -40,6 +40,9 @@ public class StartExecutionShrinkRequest extends TeaModel {
     @NameInMap("TemplateName")
     public String templateName;
 
+    @NameInMap("TemplateURL")
+    public String templateURL;
+
     @NameInMap("TemplateVersion")
     public String templateVersion;
 
@@ -142,6 +145,14 @@ public class StartExecutionShrinkRequest extends TeaModel {
     }
     public String getTemplateName() {
         return this.templateName;
+    }
+
+    public StartExecutionShrinkRequest setTemplateURL(String templateURL) {
+        this.templateURL = templateURL;
+        return this;
+    }
+    public String getTemplateURL() {
+        return this.templateURL;
     }
 
     public StartExecutionShrinkRequest setTemplateVersion(String templateVersion) {

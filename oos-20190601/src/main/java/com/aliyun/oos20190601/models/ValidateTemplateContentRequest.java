@@ -10,6 +10,9 @@ public class ValidateTemplateContentRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("TemplateURL")
+    public String templateURL;
+
     public static ValidateTemplateContentRequest build(java.util.Map<String, ?> map) throws Exception {
         ValidateTemplateContentRequest self = new ValidateTemplateContentRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class ValidateTemplateContentRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ValidateTemplateContentRequest setTemplateURL(String templateURL) {
+        this.templateURL = templateURL;
+        return this;
+    }
+    public String getTemplateURL() {
+        return this.templateURL;
     }
 
 }
