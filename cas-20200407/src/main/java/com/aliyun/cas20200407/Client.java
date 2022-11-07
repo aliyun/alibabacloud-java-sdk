@@ -333,6 +333,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CsrPemString", request.csrPemString);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.immediately)) {
+            query.put("Immediately", request.immediately);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.locality)) {
             query.put("Locality", request.locality);
         }
@@ -398,12 +402,36 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CommonName", request.commonName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.country)) {
+            query.put("Country", request.country);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.csr)) {
             query.put("Csr", request.csr);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.days)) {
             query.put("Days", request.days);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.immediately)) {
+            query.put("Immediately", request.immediately);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.locality)) {
+            query.put("Locality", request.locality);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.months)) {
+            query.put("Months", request.months);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.organization)) {
+            query.put("Organization", request.organization);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.organizationUnit)) {
+            query.put("OrganizationUnit", request.organizationUnit);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.parentIdentifier)) {
@@ -416,6 +444,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.sanValue)) {
             query.put("SanValue", request.sanValue);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.state)) {
+            query.put("State", request.state);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.years)) {
+            query.put("Years", request.years);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
