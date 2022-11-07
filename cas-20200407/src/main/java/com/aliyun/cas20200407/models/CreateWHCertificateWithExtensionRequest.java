@@ -34,6 +34,9 @@ public class CreateWHCertificateWithExtensionRequest extends TeaModel {
     @NameInMap("CsrPemString")
     public String csrPemString;
 
+    @NameInMap("Immediately")
+    public Long immediately;
+
     @NameInMap("Locality")
     public String locality;
 
@@ -135,6 +138,14 @@ public class CreateWHCertificateWithExtensionRequest extends TeaModel {
     }
     public String getCsrPemString() {
         return this.csrPemString;
+    }
+
+    public CreateWHCertificateWithExtensionRequest setImmediately(Long immediately) {
+        this.immediately = immediately;
+        return this;
+    }
+    public Long getImmediately() {
+        return this.immediately;
     }
 
     public CreateWHCertificateWithExtensionRequest setLocality(String locality) {

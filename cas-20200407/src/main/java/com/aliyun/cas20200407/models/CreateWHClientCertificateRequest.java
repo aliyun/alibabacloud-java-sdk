@@ -16,11 +16,29 @@ public class CreateWHClientCertificateRequest extends TeaModel {
     @NameInMap("CommonName")
     public String commonName;
 
+    @NameInMap("Country")
+    public String country;
+
     @NameInMap("Csr")
     public String csr;
 
     @NameInMap("Days")
     public Long days;
+
+    @NameInMap("Immediately")
+    public Long immediately;
+
+    @NameInMap("Locality")
+    public String locality;
+
+    @NameInMap("Months")
+    public Long months;
+
+    @NameInMap("Organization")
+    public String organization;
+
+    @NameInMap("OrganizationUnit")
+    public String organizationUnit;
 
     @NameInMap("ParentIdentifier")
     public String parentIdentifier;
@@ -30,6 +48,12 @@ public class CreateWHClientCertificateRequest extends TeaModel {
 
     @NameInMap("SanValue")
     public String sanValue;
+
+    @NameInMap("State")
+    public String state;
+
+    @NameInMap("Years")
+    public Long years;
 
     public static CreateWHClientCertificateRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateWHClientCertificateRequest self = new CreateWHClientCertificateRequest();
@@ -68,6 +92,14 @@ public class CreateWHClientCertificateRequest extends TeaModel {
         return this.commonName;
     }
 
+    public CreateWHClientCertificateRequest setCountry(String country) {
+        this.country = country;
+        return this;
+    }
+    public String getCountry() {
+        return this.country;
+    }
+
     public CreateWHClientCertificateRequest setCsr(String csr) {
         this.csr = csr;
         return this;
@@ -82,6 +114,46 @@ public class CreateWHClientCertificateRequest extends TeaModel {
     }
     public Long getDays() {
         return this.days;
+    }
+
+    public CreateWHClientCertificateRequest setImmediately(Long immediately) {
+        this.immediately = immediately;
+        return this;
+    }
+    public Long getImmediately() {
+        return this.immediately;
+    }
+
+    public CreateWHClientCertificateRequest setLocality(String locality) {
+        this.locality = locality;
+        return this;
+    }
+    public String getLocality() {
+        return this.locality;
+    }
+
+    public CreateWHClientCertificateRequest setMonths(Long months) {
+        this.months = months;
+        return this;
+    }
+    public Long getMonths() {
+        return this.months;
+    }
+
+    public CreateWHClientCertificateRequest setOrganization(String organization) {
+        this.organization = organization;
+        return this;
+    }
+    public String getOrganization() {
+        return this.organization;
+    }
+
+    public CreateWHClientCertificateRequest setOrganizationUnit(String organizationUnit) {
+        this.organizationUnit = organizationUnit;
+        return this;
+    }
+    public String getOrganizationUnit() {
+        return this.organizationUnit;
     }
 
     public CreateWHClientCertificateRequest setParentIdentifier(String parentIdentifier) {
@@ -106,6 +178,22 @@ public class CreateWHClientCertificateRequest extends TeaModel {
     }
     public String getSanValue() {
         return this.sanValue;
+    }
+
+    public CreateWHClientCertificateRequest setState(String state) {
+        this.state = state;
+        return this;
+    }
+    public String getState() {
+        return this.state;
+    }
+
+    public CreateWHClientCertificateRequest setYears(Long years) {
+        this.years = years;
+        return this;
+    }
+    public Long getYears() {
+        return this.years;
     }
 
 }
