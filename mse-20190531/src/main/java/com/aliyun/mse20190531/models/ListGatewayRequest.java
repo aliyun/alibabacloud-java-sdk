@@ -91,6 +91,9 @@ public class ListGatewayRequest extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         @NameInMap("Vpc")
         public String vpc;
 
@@ -137,6 +140,14 @@ public class ListGatewayRequest extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public ListGatewayRequestFilterParams setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public ListGatewayRequestFilterParams setVpc(String vpc) {

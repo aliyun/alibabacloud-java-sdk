@@ -375,6 +375,9 @@ public class ListGatewayResponseBody extends TeaModel {
         @NameInMap("Replica")
         public Integer replica;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         @NameInMap("RollBack")
         public Boolean rollBack;
 
@@ -581,6 +584,14 @@ public class ListGatewayResponseBody extends TeaModel {
         }
         public Integer getReplica() {
             return this.replica;
+        }
+
+        public ListGatewayResponseBodyDataResult setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public ListGatewayResponseBodyDataResult setRollBack(Boolean rollBack) {
