@@ -481,12 +481,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AliOrderCode", request.aliOrderCode);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationExternalId)) {
+            query.put("ApplicationExternalId", request.applicationExternalId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
             query.put("PageNumber", request.pageNumber);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceCode)) {
+            query.put("ServiceCode", request.serviceCode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.statisticTimeMax)) {
