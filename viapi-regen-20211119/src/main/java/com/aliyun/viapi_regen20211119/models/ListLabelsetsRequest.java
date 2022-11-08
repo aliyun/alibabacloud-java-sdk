@@ -13,6 +13,9 @@ public class ListLabelsetsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
+    @NameInMap("Status")
+    public String status;
+
     public static ListLabelsetsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListLabelsetsRequest self = new ListLabelsetsRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class ListLabelsetsRequest extends TeaModel {
     }
     public Long getPageSize() {
         return this.pageSize;
+    }
+
+    public ListLabelsetsRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
 }

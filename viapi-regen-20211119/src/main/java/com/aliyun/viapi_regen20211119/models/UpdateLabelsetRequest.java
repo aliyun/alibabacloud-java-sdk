@@ -16,6 +16,9 @@ public class UpdateLabelsetRequest extends TeaModel {
     @NameInMap("ObjectKey")
     public String objectKey;
 
+    @NameInMap("TagUserList")
+    public String tagUserList;
+
     @NameInMap("UserOssUrl")
     public String userOssUrl;
 
@@ -54,6 +57,14 @@ public class UpdateLabelsetRequest extends TeaModel {
     }
     public String getObjectKey() {
         return this.objectKey;
+    }
+
+    public UpdateLabelsetRequest setTagUserList(String tagUserList) {
+        this.tagUserList = tagUserList;
+        return this;
+    }
+    public String getTagUserList() {
+        return this.tagUserList;
     }
 
     public UpdateLabelsetRequest setUserOssUrl(String userOssUrl) {

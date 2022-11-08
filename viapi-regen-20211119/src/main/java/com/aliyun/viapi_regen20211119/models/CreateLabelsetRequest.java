@@ -16,6 +16,9 @@ public class CreateLabelsetRequest extends TeaModel {
     @NameInMap("ObjectKey")
     public String objectKey;
 
+    @NameInMap("PreLabelId")
+    public Long preLabelId;
+
     @NameInMap("TagSettings")
     public String tagSettings;
 
@@ -63,6 +66,14 @@ public class CreateLabelsetRequest extends TeaModel {
     }
     public String getObjectKey() {
         return this.objectKey;
+    }
+
+    public CreateLabelsetRequest setPreLabelId(Long preLabelId) {
+        this.preLabelId = preLabelId;
+        return this;
+    }
+    public Long getPreLabelId() {
+        return this.preLabelId;
     }
 
     public CreateLabelsetRequest setTagSettings(String tagSettings) {

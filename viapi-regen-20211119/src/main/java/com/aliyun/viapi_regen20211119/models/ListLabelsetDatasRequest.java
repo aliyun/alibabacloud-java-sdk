@@ -7,6 +7,9 @@ public class ListLabelsetDatasRequest extends TeaModel {
     @NameInMap("CurrentPage")
     public Long currentPage;
 
+    @NameInMap("IsAbandon")
+    public Boolean isAbandon;
+
     @NameInMap("LabelId")
     public Long labelId;
 
@@ -33,6 +36,14 @@ public class ListLabelsetDatasRequest extends TeaModel {
     }
     public Long getCurrentPage() {
         return this.currentPage;
+    }
+
+    public ListLabelsetDatasRequest setIsAbandon(Boolean isAbandon) {
+        this.isAbandon = isAbandon;
+        return this;
+    }
+    public Boolean getIsAbandon() {
+        return this.isAbandon;
     }
 
     public ListLabelsetDatasRequest setLabelId(Long labelId) {

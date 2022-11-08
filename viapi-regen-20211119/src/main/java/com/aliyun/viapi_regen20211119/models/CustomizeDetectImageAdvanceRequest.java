@@ -4,8 +4,7 @@ package com.aliyun.viapi_regen20211119.models;
 import com.aliyun.tea.*;
 
 public class CustomizeDetectImageAdvanceRequest extends TeaModel {
-    @NameInMap("ImageUrlObject")
-    @Validation(required = true)
+    @NameInMap("ImageUrl")
     public java.io.InputStream imageUrlObject;
 
     @NameInMap("ServiceId")

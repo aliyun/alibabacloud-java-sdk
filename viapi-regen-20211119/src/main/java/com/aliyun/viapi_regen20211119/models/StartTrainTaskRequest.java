@@ -10,6 +10,9 @@ public class StartTrainTaskRequest extends TeaModel {
     @NameInMap("Id")
     public Long id;
 
+    @NameInMap("RelyOnTaskId")
+    public Long relyOnTaskId;
+
     public static StartTrainTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         StartTrainTaskRequest self = new StartTrainTaskRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class StartTrainTaskRequest extends TeaModel {
     }
     public Long getId() {
         return this.id;
+    }
+
+    public StartTrainTaskRequest setRelyOnTaskId(Long relyOnTaskId) {
+        this.relyOnTaskId = relyOnTaskId;
+        return this;
+    }
+    public Long getRelyOnTaskId() {
+        return this.relyOnTaskId;
     }
 
 }
