@@ -31,7 +31,62 @@ public class GetServiceResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class GetServiceResponseBodyDataDataReflowInfo extends TeaModel {
+        @NameInMap("DataReflowCount")
+        public Long dataReflowCount;
+
+        @NameInMap("DataReflowOssPath")
+        public String dataReflowOssPath;
+
+        @NameInMap("DataReflowRate")
+        public Long dataReflowRate;
+
+        @NameInMap("EnableDataReflowFlag")
+        public Boolean enableDataReflowFlag;
+
+        public static GetServiceResponseBodyDataDataReflowInfo build(java.util.Map<String, ?> map) throws Exception {
+            GetServiceResponseBodyDataDataReflowInfo self = new GetServiceResponseBodyDataDataReflowInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public GetServiceResponseBodyDataDataReflowInfo setDataReflowCount(Long dataReflowCount) {
+            this.dataReflowCount = dataReflowCount;
+            return this;
+        }
+        public Long getDataReflowCount() {
+            return this.dataReflowCount;
+        }
+
+        public GetServiceResponseBodyDataDataReflowInfo setDataReflowOssPath(String dataReflowOssPath) {
+            this.dataReflowOssPath = dataReflowOssPath;
+            return this;
+        }
+        public String getDataReflowOssPath() {
+            return this.dataReflowOssPath;
+        }
+
+        public GetServiceResponseBodyDataDataReflowInfo setDataReflowRate(Long dataReflowRate) {
+            this.dataReflowRate = dataReflowRate;
+            return this;
+        }
+        public Long getDataReflowRate() {
+            return this.dataReflowRate;
+        }
+
+        public GetServiceResponseBodyDataDataReflowInfo setEnableDataReflowFlag(Boolean enableDataReflowFlag) {
+            this.enableDataReflowFlag = enableDataReflowFlag;
+            return this;
+        }
+        public Boolean getEnableDataReflowFlag() {
+            return this.enableDataReflowFlag;
+        }
+
+    }
+
     public static class GetServiceResponseBodyData extends TeaModel {
+        @NameInMap("DataReflowInfo")
+        public GetServiceResponseBodyDataDataReflowInfo dataReflowInfo;
+
         @NameInMap("Errorcodes")
         public String errorcodes;
 
@@ -68,6 +123,14 @@ public class GetServiceResponseBody extends TeaModel {
         public static GetServiceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetServiceResponseBodyData self = new GetServiceResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetServiceResponseBodyData setDataReflowInfo(GetServiceResponseBodyDataDataReflowInfo dataReflowInfo) {
+            this.dataReflowInfo = dataReflowInfo;
+            return this;
+        }
+        public GetServiceResponseBodyDataDataReflowInfo getDataReflowInfo() {
+            return this.dataReflowInfo;
         }
 
         public GetServiceResponseBodyData setErrorcodes(String errorcodes) {

@@ -62,6 +62,12 @@ public class CreateTrainTaskResponseBody extends TeaModel {
         @NameInMap("ModelId")
         public Long modelId;
 
+        @NameInMap("RelyOnTaskId")
+        public Long relyOnTaskId;
+
+        @NameInMap("RelyOnTaskName")
+        public String relyOnTaskName;
+
         @NameInMap("TaskName")
         public String taskName;
 
@@ -154,6 +160,22 @@ public class CreateTrainTaskResponseBody extends TeaModel {
         }
         public Long getModelId() {
             return this.modelId;
+        }
+
+        public CreateTrainTaskResponseBodyData setRelyOnTaskId(Long relyOnTaskId) {
+            this.relyOnTaskId = relyOnTaskId;
+            return this;
+        }
+        public Long getRelyOnTaskId() {
+            return this.relyOnTaskId;
+        }
+
+        public CreateTrainTaskResponseBodyData setRelyOnTaskName(String relyOnTaskName) {
+            this.relyOnTaskName = relyOnTaskName;
+            return this;
+        }
+        public String getRelyOnTaskName() {
+            return this.relyOnTaskName;
         }
 
         public CreateTrainTaskResponseBodyData setTaskName(String taskName) {

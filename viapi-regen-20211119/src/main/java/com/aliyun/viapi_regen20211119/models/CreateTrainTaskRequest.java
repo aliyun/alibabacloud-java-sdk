@@ -7,17 +7,20 @@ public class CreateTrainTaskRequest extends TeaModel {
     @NameInMap("AdvancedParameters")
     public String advancedParameters;
 
-    @NameInMap("DatasetId")
-    public Long datasetId;
+    @NameInMap("DatasetIds")
+    public String datasetIds;
 
     @NameInMap("Description")
     public String description;
 
-    @NameInMap("LabelId")
-    public Long labelId;
+    @NameInMap("LabelIds")
+    public String labelIds;
 
     @NameInMap("Name")
     public String name;
+
+    @NameInMap("PreTrainTaskId")
+    public Long preTrainTaskId;
 
     @NameInMap("TrainMode")
     public String trainMode;
@@ -38,12 +41,12 @@ public class CreateTrainTaskRequest extends TeaModel {
         return this.advancedParameters;
     }
 
-    public CreateTrainTaskRequest setDatasetId(Long datasetId) {
-        this.datasetId = datasetId;
+    public CreateTrainTaskRequest setDatasetIds(String datasetIds) {
+        this.datasetIds = datasetIds;
         return this;
     }
-    public Long getDatasetId() {
-        return this.datasetId;
+    public String getDatasetIds() {
+        return this.datasetIds;
     }
 
     public CreateTrainTaskRequest setDescription(String description) {
@@ -54,12 +57,12 @@ public class CreateTrainTaskRequest extends TeaModel {
         return this.description;
     }
 
-    public CreateTrainTaskRequest setLabelId(Long labelId) {
-        this.labelId = labelId;
+    public CreateTrainTaskRequest setLabelIds(String labelIds) {
+        this.labelIds = labelIds;
         return this;
     }
-    public Long getLabelId() {
-        return this.labelId;
+    public String getLabelIds() {
+        return this.labelIds;
     }
 
     public CreateTrainTaskRequest setName(String name) {
@@ -68,6 +71,14 @@ public class CreateTrainTaskRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public CreateTrainTaskRequest setPreTrainTaskId(Long preTrainTaskId) {
+        this.preTrainTaskId = preTrainTaskId;
+        return this;
+    }
+    public Long getPreTrainTaskId() {
+        return this.preTrainTaskId;
     }
 
     public CreateTrainTaskRequest setTrainMode(String trainMode) {

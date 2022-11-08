@@ -10,6 +10,9 @@ public class ListTrainTasksRequest extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
+    @NameInMap("Status")
+    public String status;
+
     @NameInMap("WorkspaceId")
     public Long workspaceId;
 
@@ -32,6 +35,14 @@ public class ListTrainTasksRequest extends TeaModel {
     }
     public Long getPageSize() {
         return this.pageSize;
+    }
+
+    public ListTrainTasksRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
     public ListTrainTasksRequest setWorkspaceId(Long workspaceId) {

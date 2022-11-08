@@ -50,6 +50,15 @@ public class GetLabelsetResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("SubTaskPackageSize")
+        public String subTaskPackageSize;
+
+        @NameInMap("TagUserList")
+        public String tagUserList;
+
+        @NameInMap("Tags")
+        public String tags;
+
         @NameInMap("Total")
         public Long total;
 
@@ -104,6 +113,30 @@ public class GetLabelsetResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public GetLabelsetResponseBodyData setSubTaskPackageSize(String subTaskPackageSize) {
+            this.subTaskPackageSize = subTaskPackageSize;
+            return this;
+        }
+        public String getSubTaskPackageSize() {
+            return this.subTaskPackageSize;
+        }
+
+        public GetLabelsetResponseBodyData setTagUserList(String tagUserList) {
+            this.tagUserList = tagUserList;
+            return this;
+        }
+        public String getTagUserList() {
+            return this.tagUserList;
+        }
+
+        public GetLabelsetResponseBodyData setTags(String tags) {
+            this.tags = tags;
+            return this;
+        }
+        public String getTags() {
+            return this.tags;
         }
 
         public GetLabelsetResponseBodyData setTotal(Long total) {
