@@ -7,11 +7,17 @@ public class ListOrderConsumeStatisticRecordsRequest extends TeaModel {
     @NameInMap("AliOrderCode")
     public String aliOrderCode;
 
+    @NameInMap("ApplicationExternalId")
+    public String applicationExternalId;
+
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("ServiceCode")
+    public String serviceCode;
 
     @NameInMap("StatisticTimeMax")
     public String statisticTimeMax;
@@ -32,6 +38,14 @@ public class ListOrderConsumeStatisticRecordsRequest extends TeaModel {
         return this.aliOrderCode;
     }
 
+    public ListOrderConsumeStatisticRecordsRequest setApplicationExternalId(String applicationExternalId) {
+        this.applicationExternalId = applicationExternalId;
+        return this;
+    }
+    public String getApplicationExternalId() {
+        return this.applicationExternalId;
+    }
+
     public ListOrderConsumeStatisticRecordsRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -46,6 +60,14 @@ public class ListOrderConsumeStatisticRecordsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListOrderConsumeStatisticRecordsRequest setServiceCode(String serviceCode) {
+        this.serviceCode = serviceCode;
+        return this;
+    }
+    public String getServiceCode() {
+        return this.serviceCode;
     }
 
     public ListOrderConsumeStatisticRecordsRequest setStatisticTimeMax(String statisticTimeMax) {
