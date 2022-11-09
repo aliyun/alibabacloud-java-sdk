@@ -73,6 +73,9 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
 
+    @NameInMap("ReadOnlyCount")
+    public Integer readOnlyCount;
+
     @NameInMap("RegionId")
     public String regionId;
 
@@ -302,6 +305,14 @@ public class CreateInstanceRequest extends TeaModel {
     }
     public String getPrivateIpAddress() {
         return this.privateIpAddress;
+    }
+
+    public CreateInstanceRequest setReadOnlyCount(Integer readOnlyCount) {
+        this.readOnlyCount = readOnlyCount;
+        return this;
+    }
+    public Integer getReadOnlyCount() {
+        return this.readOnlyCount;
     }
 
     public CreateInstanceRequest setRegionId(String regionId) {

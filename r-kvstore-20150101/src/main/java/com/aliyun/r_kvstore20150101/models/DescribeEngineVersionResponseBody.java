@@ -19,6 +19,9 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
     @NameInMap("IsLatestVersion")
     public Boolean isLatestVersion;
 
+    @NameInMap("IsRedisCompatibleVersion")
+    public Boolean isRedisCompatibleVersion;
+
     @NameInMap("MajorVersion")
     public String majorVersion;
 
@@ -77,6 +80,14 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
     }
     public Boolean getIsLatestVersion() {
         return this.isLatestVersion;
+    }
+
+    public DescribeEngineVersionResponseBody setIsRedisCompatibleVersion(Boolean isRedisCompatibleVersion) {
+        this.isRedisCompatibleVersion = isRedisCompatibleVersion;
+        return this;
+    }
+    public Boolean getIsRedisCompatibleVersion() {
+        return this.isRedisCompatibleVersion;
     }
 
     public DescribeEngineVersionResponseBody setMajorVersion(String majorVersion) {

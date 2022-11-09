@@ -22,9 +22,6 @@ public class AddShardingNodeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("ReadOnlyCount")
-    public Integer readOnlyCount;
-
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -33,9 +30,6 @@ public class AddShardingNodeRequest extends TeaModel {
 
     @NameInMap("SecurityToken")
     public String securityToken;
-
-    @NameInMap("ShardClass")
-    public String shardClass;
 
     @NameInMap("ShardCount")
     public Integer shardCount;
@@ -96,14 +90,6 @@ public class AddShardingNodeRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public AddShardingNodeRequest setReadOnlyCount(Integer readOnlyCount) {
-        this.readOnlyCount = readOnlyCount;
-        return this;
-    }
-    public Integer getReadOnlyCount() {
-        return this.readOnlyCount;
-    }
-
     public AddShardingNodeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -126,14 +112,6 @@ public class AddShardingNodeRequest extends TeaModel {
     }
     public String getSecurityToken() {
         return this.securityToken;
-    }
-
-    public AddShardingNodeRequest setShardClass(String shardClass) {
-        this.shardClass = shardClass;
-        return this;
-    }
-    public String getShardClass() {
-        return this.shardClass;
     }
 
     public AddShardingNodeRequest setShardCount(Integer shardCount) {

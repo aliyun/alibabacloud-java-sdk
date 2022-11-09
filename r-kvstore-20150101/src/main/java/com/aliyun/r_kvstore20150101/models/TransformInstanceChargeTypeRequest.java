@@ -7,14 +7,8 @@ public class TransformInstanceChargeTypeRequest extends TeaModel {
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
-    @NameInMap("BusinessInfo")
-    public String businessInfo;
-
     @NameInMap("ChargeType")
     public String chargeType;
-
-    @NameInMap("CouponNo")
-    public String couponNo;
 
     @NameInMap("InstanceId")
     public String instanceId;
@@ -50,28 +44,12 @@ public class TransformInstanceChargeTypeRequest extends TeaModel {
         return this.autoPay;
     }
 
-    public TransformInstanceChargeTypeRequest setBusinessInfo(String businessInfo) {
-        this.businessInfo = businessInfo;
-        return this;
-    }
-    public String getBusinessInfo() {
-        return this.businessInfo;
-    }
-
     public TransformInstanceChargeTypeRequest setChargeType(String chargeType) {
         this.chargeType = chargeType;
         return this;
     }
     public String getChargeType() {
         return this.chargeType;
-    }
-
-    public TransformInstanceChargeTypeRequest setCouponNo(String couponNo) {
-        this.couponNo = couponNo;
-        return this;
-    }
-    public String getCouponNo() {
-        return this.couponNo;
     }
 
     public TransformInstanceChargeTypeRequest setInstanceId(String instanceId) {

@@ -55,6 +55,9 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    @NameInMap("ShardCount")
+    public Integer shardCount;
+
     @NameInMap("SourceBiz")
     public String sourceBiz;
 
@@ -197,6 +200,14 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     }
     public String getSecurityToken() {
         return this.securityToken;
+    }
+
+    public ModifyInstanceSpecRequest setShardCount(Integer shardCount) {
+        this.shardCount = shardCount;
+        return this;
+    }
+    public Integer getShardCount() {
+        return this.shardCount;
     }
 
     public ModifyInstanceSpecRequest setSourceBiz(String sourceBiz) {
