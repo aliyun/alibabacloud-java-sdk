@@ -16,9 +16,6 @@ public class DeleteShardingNodeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("ReadOnlyCount")
-    public Integer readOnlyCount;
-
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -66,14 +63,6 @@ public class DeleteShardingNodeRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    public DeleteShardingNodeRequest setReadOnlyCount(Integer readOnlyCount) {
-        this.readOnlyCount = readOnlyCount;
-        return this;
-    }
-    public Integer getReadOnlyCount() {
-        return this.readOnlyCount;
     }
 
     public DeleteShardingNodeRequest setResourceOwnerAccount(String resourceOwnerAccount) {

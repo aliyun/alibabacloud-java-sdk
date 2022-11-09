@@ -180,6 +180,9 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("ReadOnlyCount")
         public Integer readOnlyCount;
 
+        @NameInMap("RealInstanceClass")
+        public String realInstanceClass;
+
         @NameInMap("RegionId")
         public String regionId;
 
@@ -489,6 +492,14 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         }
         public Integer getReadOnlyCount() {
             return this.readOnlyCount;
+        }
+
+        public DescribeInstanceAttributeResponseBodyInstancesDBInstanceAttribute setRealInstanceClass(String realInstanceClass) {
+            this.realInstanceClass = realInstanceClass;
+            return this;
+        }
+        public String getRealInstanceClass() {
+            return this.realInstanceClass;
         }
 
         public DescribeInstanceAttributeResponseBodyInstancesDBInstanceAttribute setRegionId(String regionId) {

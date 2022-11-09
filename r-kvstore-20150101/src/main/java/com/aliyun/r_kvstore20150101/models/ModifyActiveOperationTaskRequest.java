@@ -3,9 +3,9 @@ package com.aliyun.r_kvstore20150101.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeClusterMemberInfoRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
+public class ModifyActiveOperationTaskRequest extends TeaModel {
+    @NameInMap("Ids")
+    public String ids;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
@@ -22,20 +22,23 @@ public class DescribeClusterMemberInfoRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    public static DescribeClusterMemberInfoRequest build(java.util.Map<String, ?> map) throws Exception {
-        DescribeClusterMemberInfoRequest self = new DescribeClusterMemberInfoRequest();
+    @NameInMap("SwitchTime")
+    public String switchTime;
+
+    public static ModifyActiveOperationTaskRequest build(java.util.Map<String, ?> map) throws Exception {
+        ModifyActiveOperationTaskRequest self = new ModifyActiveOperationTaskRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeClusterMemberInfoRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
+    public ModifyActiveOperationTaskRequest setIds(String ids) {
+        this.ids = ids;
         return this;
     }
-    public String getInstanceId() {
-        return this.instanceId;
+    public String getIds() {
+        return this.ids;
     }
 
-    public DescribeClusterMemberInfoRequest setOwnerAccount(String ownerAccount) {
+    public ModifyActiveOperationTaskRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
     }
@@ -43,7 +46,7 @@ public class DescribeClusterMemberInfoRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public DescribeClusterMemberInfoRequest setOwnerId(Long ownerId) {
+    public ModifyActiveOperationTaskRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -51,7 +54,7 @@ public class DescribeClusterMemberInfoRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public DescribeClusterMemberInfoRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public ModifyActiveOperationTaskRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -59,7 +62,7 @@ public class DescribeClusterMemberInfoRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public DescribeClusterMemberInfoRequest setResourceOwnerId(Long resourceOwnerId) {
+    public ModifyActiveOperationTaskRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
@@ -67,12 +70,20 @@ public class DescribeClusterMemberInfoRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DescribeClusterMemberInfoRequest setSecurityToken(String securityToken) {
+    public ModifyActiveOperationTaskRequest setSecurityToken(String securityToken) {
         this.securityToken = securityToken;
         return this;
     }
     public String getSecurityToken() {
         return this.securityToken;
+    }
+
+    public ModifyActiveOperationTaskRequest setSwitchTime(String switchTime) {
+        this.switchTime = switchTime;
+        return this;
+    }
+    public String getSwitchTime() {
+        return this.switchTime;
     }
 
 }
