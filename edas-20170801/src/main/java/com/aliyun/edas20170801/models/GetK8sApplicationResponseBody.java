@@ -122,6 +122,9 @@ public class GetK8sApplicationResponseBody extends TeaModel {
     }
 
     public static class GetK8sApplicationResponseBodyApplcationApp extends TeaModel {
+        @NameInMap("Annotations")
+        public String annotations;
+
         @NameInMap("AppId")
         public String appId;
 
@@ -167,8 +170,14 @@ public class GetK8sApplicationResponseBody extends TeaModel {
         @NameInMap("K8sNamespace")
         public String k8sNamespace;
 
+        @NameInMap("Labels")
+        public String labels;
+
         @NameInMap("LimitCpuM")
         public Integer limitCpuM;
+
+        @NameInMap("LimitEphemeralStorage")
+        public String limitEphemeralStorage;
 
         @NameInMap("LimitMem")
         public Integer limitMem;
@@ -178,6 +187,9 @@ public class GetK8sApplicationResponseBody extends TeaModel {
 
         @NameInMap("RequestCpuM")
         public Integer requestCpuM;
+
+        @NameInMap("RequestEphemeralStorage")
+        public String requestEphemeralStorage;
 
         @NameInMap("RequestMem")
         public Integer requestMem;
@@ -191,6 +203,14 @@ public class GetK8sApplicationResponseBody extends TeaModel {
         public static GetK8sApplicationResponseBodyApplcationApp build(java.util.Map<String, ?> map) throws Exception {
             GetK8sApplicationResponseBodyApplcationApp self = new GetK8sApplicationResponseBodyApplcationApp();
             return TeaModel.build(map, self);
+        }
+
+        public GetK8sApplicationResponseBodyApplcationApp setAnnotations(String annotations) {
+            this.annotations = annotations;
+            return this;
+        }
+        public String getAnnotations() {
+            return this.annotations;
         }
 
         public GetK8sApplicationResponseBodyApplcationApp setAppId(String appId) {
@@ -313,12 +333,28 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             return this.k8sNamespace;
         }
 
+        public GetK8sApplicationResponseBodyApplcationApp setLabels(String labels) {
+            this.labels = labels;
+            return this;
+        }
+        public String getLabels() {
+            return this.labels;
+        }
+
         public GetK8sApplicationResponseBodyApplcationApp setLimitCpuM(Integer limitCpuM) {
             this.limitCpuM = limitCpuM;
             return this;
         }
         public Integer getLimitCpuM() {
             return this.limitCpuM;
+        }
+
+        public GetK8sApplicationResponseBodyApplcationApp setLimitEphemeralStorage(String limitEphemeralStorage) {
+            this.limitEphemeralStorage = limitEphemeralStorage;
+            return this;
+        }
+        public String getLimitEphemeralStorage() {
+            return this.limitEphemeralStorage;
         }
 
         public GetK8sApplicationResponseBodyApplcationApp setLimitMem(Integer limitMem) {
@@ -343,6 +379,14 @@ public class GetK8sApplicationResponseBody extends TeaModel {
         }
         public Integer getRequestCpuM() {
             return this.requestCpuM;
+        }
+
+        public GetK8sApplicationResponseBodyApplcationApp setRequestEphemeralStorage(String requestEphemeralStorage) {
+            this.requestEphemeralStorage = requestEphemeralStorage;
+            return this;
+        }
+        public String getRequestEphemeralStorage() {
+            return this.requestEphemeralStorage;
         }
 
         public GetK8sApplicationResponseBodyApplcationApp setRequestMem(Integer requestMem) {
@@ -633,6 +677,9 @@ public class GetK8sApplicationResponseBody extends TeaModel {
         @NameInMap("Env")
         public String env;
 
+        @NameInMap("EnvFrom")
+        public String envFrom;
+
         public static GetK8sApplicationResponseBodyApplcationDeployGroupsDeployGroup build(java.util.Map<String, ?> map) throws Exception {
             GetK8sApplicationResponseBodyApplcationDeployGroupsDeployGroup self = new GetK8sApplicationResponseBodyApplcationDeployGroupsDeployGroup();
             return TeaModel.build(map, self);
@@ -652,6 +699,14 @@ public class GetK8sApplicationResponseBody extends TeaModel {
         }
         public String getEnv() {
             return this.env;
+        }
+
+        public GetK8sApplicationResponseBodyApplcationDeployGroupsDeployGroup setEnvFrom(String envFrom) {
+            this.envFrom = envFrom;
+            return this;
+        }
+        public String getEnvFrom() {
+            return this.envFrom;
         }
 
     }

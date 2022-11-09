@@ -72,6 +72,9 @@ public class ListSlbResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("Reusable")
+        public Boolean reusable;
+
         @NameInMap("SlbId")
         public String slbId;
 
@@ -80,6 +83,9 @@ public class ListSlbResponseBody extends TeaModel {
 
         @NameInMap("SlbStatus")
         public String slbStatus;
+
+        @NameInMap("Tags")
+        public String tags;
 
         @NameInMap("UserId")
         public String userId;
@@ -143,6 +149,14 @@ public class ListSlbResponseBody extends TeaModel {
             return this.regionId;
         }
 
+        public ListSlbResponseBodySlbListSlbEntity setReusable(Boolean reusable) {
+            this.reusable = reusable;
+            return this;
+        }
+        public Boolean getReusable() {
+            return this.reusable;
+        }
+
         public ListSlbResponseBodySlbListSlbEntity setSlbId(String slbId) {
             this.slbId = slbId;
             return this;
@@ -165,6 +179,14 @@ public class ListSlbResponseBody extends TeaModel {
         }
         public String getSlbStatus() {
             return this.slbStatus;
+        }
+
+        public ListSlbResponseBodySlbListSlbEntity setTags(String tags) {
+            this.tags = tags;
+            return this;
+        }
+        public String getTags() {
+            return this.tags;
         }
 
         public ListSlbResponseBodySlbListSlbEntity setUserId(String userId) {

@@ -213,6 +213,9 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
         @NameInMap("AlbId")
         public String albId;
 
+        @NameInMap("Annotations")
+        public String annotations;
+
         @NameInMap("CreationTime")
         public String creationTime;
 
@@ -225,17 +228,26 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
         @NameInMap("IngressType")
         public String ingressType;
 
+        @NameInMap("Labels")
+        public String labels;
+
+        @NameInMap("MseGatewayId")
+        public String mseGatewayId;
+
+        @NameInMap("MseGatewayName")
+        public String mseGatewayName;
+
         @NameInMap("Name")
         public String name;
 
         @NameInMap("Namespace")
         public String namespace;
 
-        @NameInMap("NewDashboard")
-        public Boolean newDashboard;
+        @NameInMap("OfficalBasicUrl")
+        public String officalBasicUrl;
 
-        @NameInMap("NewDashboardUrls")
-        public java.util.Map<String, String> newDashboardUrls;
+        @NameInMap("OfficalRequestUrl")
+        public String officalRequestUrl;
 
         @NameInMap("Rules")
         public java.util.List<ListK8sIngressRulesResponseBodyDataIngressConfsRules> rules;
@@ -254,6 +266,14 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
         }
         public String getAlbId() {
             return this.albId;
+        }
+
+        public ListK8sIngressRulesResponseBodyDataIngressConfs setAnnotations(String annotations) {
+            this.annotations = annotations;
+            return this;
+        }
+        public String getAnnotations() {
+            return this.annotations;
         }
 
         public ListK8sIngressRulesResponseBodyDataIngressConfs setCreationTime(String creationTime) {
@@ -288,6 +308,30 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
             return this.ingressType;
         }
 
+        public ListK8sIngressRulesResponseBodyDataIngressConfs setLabels(String labels) {
+            this.labels = labels;
+            return this;
+        }
+        public String getLabels() {
+            return this.labels;
+        }
+
+        public ListK8sIngressRulesResponseBodyDataIngressConfs setMseGatewayId(String mseGatewayId) {
+            this.mseGatewayId = mseGatewayId;
+            return this;
+        }
+        public String getMseGatewayId() {
+            return this.mseGatewayId;
+        }
+
+        public ListK8sIngressRulesResponseBodyDataIngressConfs setMseGatewayName(String mseGatewayName) {
+            this.mseGatewayName = mseGatewayName;
+            return this;
+        }
+        public String getMseGatewayName() {
+            return this.mseGatewayName;
+        }
+
         public ListK8sIngressRulesResponseBodyDataIngressConfs setName(String name) {
             this.name = name;
             return this;
@@ -304,20 +348,20 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
             return this.namespace;
         }
 
-        public ListK8sIngressRulesResponseBodyDataIngressConfs setNewDashboard(Boolean newDashboard) {
-            this.newDashboard = newDashboard;
+        public ListK8sIngressRulesResponseBodyDataIngressConfs setOfficalBasicUrl(String officalBasicUrl) {
+            this.officalBasicUrl = officalBasicUrl;
             return this;
         }
-        public Boolean getNewDashboard() {
-            return this.newDashboard;
+        public String getOfficalBasicUrl() {
+            return this.officalBasicUrl;
         }
 
-        public ListK8sIngressRulesResponseBodyDataIngressConfs setNewDashboardUrls(java.util.Map<String, String> newDashboardUrls) {
-            this.newDashboardUrls = newDashboardUrls;
+        public ListK8sIngressRulesResponseBodyDataIngressConfs setOfficalRequestUrl(String officalRequestUrl) {
+            this.officalRequestUrl = officalRequestUrl;
             return this;
         }
-        public java.util.Map<String, String> getNewDashboardUrls() {
-            return this.newDashboardUrls;
+        public String getOfficalRequestUrl() {
+            return this.officalRequestUrl;
         }
 
         public ListK8sIngressRulesResponseBodyDataIngressConfs setRules(java.util.List<ListK8sIngressRulesResponseBodyDataIngressConfsRules> rules) {

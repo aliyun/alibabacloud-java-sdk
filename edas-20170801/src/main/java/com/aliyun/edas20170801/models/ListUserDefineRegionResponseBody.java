@@ -66,11 +66,17 @@ public class ListUserDefineRegionResponseBody extends TeaModel {
         @NameInMap("Id")
         public Long id;
 
+        @NameInMap("MseInstanceId")
+        public String mseInstanceId;
+
         @NameInMap("RegionId")
         public String regionId;
 
         @NameInMap("RegionName")
         public String regionName;
+
+        @NameInMap("RegistryType")
+        public String registryType;
 
         @NameInMap("UserId")
         public String userId;
@@ -112,6 +118,14 @@ public class ListUserDefineRegionResponseBody extends TeaModel {
             return this.id;
         }
 
+        public ListUserDefineRegionResponseBodyUserDefineRegionListUserDefineRegionEntity setMseInstanceId(String mseInstanceId) {
+            this.mseInstanceId = mseInstanceId;
+            return this;
+        }
+        public String getMseInstanceId() {
+            return this.mseInstanceId;
+        }
+
         public ListUserDefineRegionResponseBodyUserDefineRegionListUserDefineRegionEntity setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
@@ -126,6 +140,14 @@ public class ListUserDefineRegionResponseBody extends TeaModel {
         }
         public String getRegionName() {
             return this.regionName;
+        }
+
+        public ListUserDefineRegionResponseBodyUserDefineRegionListUserDefineRegionEntity setRegistryType(String registryType) {
+            this.registryType = registryType;
+            return this;
+        }
+        public String getRegistryType() {
+            return this.registryType;
         }
 
         public ListUserDefineRegionResponseBodyUserDefineRegionListUserDefineRegionEntity setUserId(String userId) {

@@ -115,6 +115,9 @@ public class InsertK8sApplicationRequest extends TeaModel {
     @NameInMap("LimitCpu")
     public Integer limitCpu;
 
+    @NameInMap("LimitEphemeralStorage")
+    public Integer limitEphemeralStorage;
+
     @NameInMap("LimitMem")
     public Integer limitMem;
 
@@ -183,6 +186,9 @@ public class InsertK8sApplicationRequest extends TeaModel {
 
     @NameInMap("RequestsCpu")
     public Integer requestsCpu;
+
+    @NameInMap("RequestsEphemeralStorage")
+    public Integer requestsEphemeralStorage;
 
     @NameInMap("RequestsMem")
     public Integer requestsMem;
@@ -521,6 +527,14 @@ public class InsertK8sApplicationRequest extends TeaModel {
         return this.limitCpu;
     }
 
+    public InsertK8sApplicationRequest setLimitEphemeralStorage(Integer limitEphemeralStorage) {
+        this.limitEphemeralStorage = limitEphemeralStorage;
+        return this;
+    }
+    public Integer getLimitEphemeralStorage() {
+        return this.limitEphemeralStorage;
+    }
+
     public InsertK8sApplicationRequest setLimitMem(Integer limitMem) {
         this.limitMem = limitMem;
         return this;
@@ -703,6 +717,14 @@ public class InsertK8sApplicationRequest extends TeaModel {
     }
     public Integer getRequestsCpu() {
         return this.requestsCpu;
+    }
+
+    public InsertK8sApplicationRequest setRequestsEphemeralStorage(Integer requestsEphemeralStorage) {
+        this.requestsEphemeralStorage = requestsEphemeralStorage;
+        return this;
+    }
+    public Integer getRequestsEphemeralStorage() {
+        return this.requestsEphemeralStorage;
     }
 
     public InsertK8sApplicationRequest setRequestsMem(Integer requestsMem) {
