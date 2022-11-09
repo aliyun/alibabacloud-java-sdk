@@ -57,6 +57,9 @@ public class GetApplicationResponseBody extends TeaModel {
         @NameInMap("AppId")
         public String appId;
 
+        @NameInMap("AppPhase")
+        public String appPhase;
+
         @NameInMap("ApplicationType")
         public String applicationType;
 
@@ -155,6 +158,14 @@ public class GetApplicationResponseBody extends TeaModel {
         }
         public String getAppId() {
             return this.appId;
+        }
+
+        public GetApplicationResponseBodyApplication setAppPhase(String appPhase) {
+            this.appPhase = appPhase;
+            return this;
+        }
+        public String getAppPhase() {
+            return this.appPhase;
         }
 
         public GetApplicationResponseBodyApplication setApplicationType(String applicationType) {

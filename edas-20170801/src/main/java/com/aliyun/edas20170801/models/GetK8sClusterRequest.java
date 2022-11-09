@@ -16,6 +16,9 @@ public class GetK8sClusterRequest extends TeaModel {
     @NameInMap("RegionTag")
     public String regionTag;
 
+    @NameInMap("SubClusterType")
+    public String subClusterType;
+
     public static GetK8sClusterRequest build(java.util.Map<String, ?> map) throws Exception {
         GetK8sClusterRequest self = new GetK8sClusterRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class GetK8sClusterRequest extends TeaModel {
     }
     public String getRegionTag() {
         return this.regionTag;
+    }
+
+    public GetK8sClusterRequest setSubClusterType(String subClusterType) {
+        this.subClusterType = subClusterType;
+        return this;
+    }
+    public String getSubClusterType() {
+        return this.subClusterType;
     }
 
 }

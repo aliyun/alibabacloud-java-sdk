@@ -69,6 +69,9 @@ public class ListClusterMembersResponseBody extends TeaModel {
         @NameInMap("EcuId")
         public String ecuId;
 
+        @NameInMap("PrivateIp")
+        public String privateIp;
+
         @NameInMap("Status")
         public Integer status;
 
@@ -118,6 +121,14 @@ public class ListClusterMembersResponseBody extends TeaModel {
         }
         public String getEcuId() {
             return this.ecuId;
+        }
+
+        public ListClusterMembersResponseBodyClusterMemberPageClusterMemberListClusterMember setPrivateIp(String privateIp) {
+            this.privateIp = privateIp;
+            return this;
+        }
+        public String getPrivateIp() {
+            return this.privateIp;
         }
 
         public ListClusterMembersResponseBodyClusterMemberPageClusterMemberListClusterMember setStatus(Integer status) {

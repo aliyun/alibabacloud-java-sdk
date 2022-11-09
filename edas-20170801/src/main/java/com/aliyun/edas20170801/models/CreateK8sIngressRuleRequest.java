@@ -4,11 +4,17 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class CreateK8sIngressRuleRequest extends TeaModel {
+    @NameInMap("Annotations")
+    public String annotations;
+
     @NameInMap("ClusterId")
     public String clusterId;
 
     @NameInMap("IngressConf")
     public java.util.Map<String, ?> ingressConf;
+
+    @NameInMap("Labels")
+    public String labels;
 
     @NameInMap("Name")
     public String name;
@@ -19,6 +25,14 @@ public class CreateK8sIngressRuleRequest extends TeaModel {
     public static CreateK8sIngressRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateK8sIngressRuleRequest self = new CreateK8sIngressRuleRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateK8sIngressRuleRequest setAnnotations(String annotations) {
+        this.annotations = annotations;
+        return this;
+    }
+    public String getAnnotations() {
+        return this.annotations;
     }
 
     public CreateK8sIngressRuleRequest setClusterId(String clusterId) {
@@ -35,6 +49,14 @@ public class CreateK8sIngressRuleRequest extends TeaModel {
     }
     public java.util.Map<String, ?> getIngressConf() {
         return this.ingressConf;
+    }
+
+    public CreateK8sIngressRuleRequest setLabels(String labels) {
+        this.labels = labels;
+        return this;
+    }
+    public String getLabels() {
+        return this.labels;
     }
 
     public CreateK8sIngressRuleRequest setName(String name) {

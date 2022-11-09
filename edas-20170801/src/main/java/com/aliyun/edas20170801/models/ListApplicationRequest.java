@@ -4,6 +4,9 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class ListApplicationRequest extends TeaModel {
+    @NameInMap("AppIds")
+    public String appIds;
+
     @NameInMap("AppName")
     public String appName;
 
@@ -22,6 +25,14 @@ public class ListApplicationRequest extends TeaModel {
     public static ListApplicationRequest build(java.util.Map<String, ?> map) throws Exception {
         ListApplicationRequest self = new ListApplicationRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListApplicationRequest setAppIds(String appIds) {
+        this.appIds = appIds;
+        return this;
+    }
+    public String getAppIds() {
+        return this.appIds;
     }
 
     public ListApplicationRequest setAppName(String appName) {

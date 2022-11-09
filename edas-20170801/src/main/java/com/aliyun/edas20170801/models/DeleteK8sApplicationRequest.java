@@ -7,6 +7,9 @@ public class DeleteK8sApplicationRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    @NameInMap("Force")
+    public Boolean force;
+
     public static DeleteK8sApplicationRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteK8sApplicationRequest self = new DeleteK8sApplicationRequest();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class DeleteK8sApplicationRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
+    }
+
+    public DeleteK8sApplicationRequest setForce(Boolean force) {
+        this.force = force;
+        return this;
+    }
+    public Boolean getForce() {
+        return this.force;
     }
 
 }

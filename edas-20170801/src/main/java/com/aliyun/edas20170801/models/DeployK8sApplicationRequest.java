@@ -85,6 +85,9 @@ public class DeployK8sApplicationRequest extends TeaModel {
     @NameInMap("Labels")
     public String labels;
 
+    @NameInMap("LimitEphemeralStorage")
+    public Integer limitEphemeralStorage;
+
     @NameInMap("Liveness")
     public String liveness;
 
@@ -147,6 +150,9 @@ public class DeployK8sApplicationRequest extends TeaModel {
 
     @NameInMap("Replicas")
     public Integer replicas;
+
+    @NameInMap("RequestsEphemeralStorage")
+    public Integer requestsEphemeralStorage;
 
     @NameInMap("RuntimeClassName")
     public String runtimeClassName;
@@ -399,6 +405,14 @@ public class DeployK8sApplicationRequest extends TeaModel {
         return this.labels;
     }
 
+    public DeployK8sApplicationRequest setLimitEphemeralStorage(Integer limitEphemeralStorage) {
+        this.limitEphemeralStorage = limitEphemeralStorage;
+        return this;
+    }
+    public Integer getLimitEphemeralStorage() {
+        return this.limitEphemeralStorage;
+    }
+
     public DeployK8sApplicationRequest setLiveness(String liveness) {
         this.liveness = liveness;
         return this;
@@ -565,6 +579,14 @@ public class DeployK8sApplicationRequest extends TeaModel {
     }
     public Integer getReplicas() {
         return this.replicas;
+    }
+
+    public DeployK8sApplicationRequest setRequestsEphemeralStorage(Integer requestsEphemeralStorage) {
+        this.requestsEphemeralStorage = requestsEphemeralStorage;
+        return this;
+    }
+    public Integer getRequestsEphemeralStorage() {
+        return this.requestsEphemeralStorage;
     }
 
     public DeployK8sApplicationRequest setRuntimeClassName(String runtimeClassName) {

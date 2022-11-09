@@ -58,6 +58,9 @@ public class StartK8sAppPrecheckRequest extends TeaModel {
     @NameInMap("PvcMountDescs")
     public String pvcMountDescs;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("Replicas")
     public Integer replicas;
 
@@ -217,6 +220,14 @@ public class StartK8sAppPrecheckRequest extends TeaModel {
     }
     public String getPvcMountDescs() {
         return this.pvcMountDescs;
+    }
+
+    public StartK8sAppPrecheckRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public StartK8sAppPrecheckRequest setReplicas(Integer replicas) {
