@@ -32,34 +32,12 @@ public class GetRealPersonVerificationResultResponseBody extends TeaModel {
     }
 
     public static class GetRealPersonVerificationResultResponseBodyData extends TeaModel {
-        @NameInMap("IdentityInfo")
-        public String identityInfo;
-
-        @NameInMap("MaterialMatch")
-        public String materialMatch;
-
         @NameInMap("Passed")
         public Boolean passed;
 
         public static GetRealPersonVerificationResultResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetRealPersonVerificationResultResponseBodyData self = new GetRealPersonVerificationResultResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public GetRealPersonVerificationResultResponseBodyData setIdentityInfo(String identityInfo) {
-            this.identityInfo = identityInfo;
-            return this;
-        }
-        public String getIdentityInfo() {
-            return this.identityInfo;
-        }
-
-        public GetRealPersonVerificationResultResponseBodyData setMaterialMatch(String materialMatch) {
-            this.materialMatch = materialMatch;
-            return this;
-        }
-        public String getMaterialMatch() {
-            return this.materialMatch;
         }
 
         public GetRealPersonVerificationResultResponseBodyData setPassed(Boolean passed) {
