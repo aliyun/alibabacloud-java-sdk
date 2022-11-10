@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>ocr20191230</artifactId>
-  <version>1.0.22</version>
+  <version>1.0.23</version>
   <packaging>jar</packaging>
   <name>ocr20191230</name>
   <description>Aliyun OCR SDK for Java
@@ -122,12 +122,22 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.2.6</version>
+      <version>0.2.7</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>openapiutil</artifactId>
-      <version>0.1.14</version>
+      <version>0.2.0</version>
+    </dependency>
+    <dependency>
+      <groupId>com.aliyun</groupId>
+      <artifactId>darabonba-array</artifactId>
+      <version>0.1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>com.aliyun</groupId>
+      <artifactId>darabonba-number</artifactId>
+      <version>0.0.3</version>
     </dependency>
   </dependencies>
   <build>
