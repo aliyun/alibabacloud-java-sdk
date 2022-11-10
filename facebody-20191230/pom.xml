@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>facebody20191230</artifactId>
-  <version>2.0.5</version>
+  <version>2.0.6</version>
   <packaging>jar</packaging>
   <name>facebody20191230</name>
   <description>Alibaba Cloud facebody (20191230) SDK for Java
@@ -111,7 +111,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-util</artifactId>
-      <version>0.2.14</version>
+      <version>0.2.15</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
@@ -137,12 +137,22 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.2.6</version>
+      <version>0.2.7</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>openapiutil</artifactId>
-      <version>0.1.14</version>
+      <version>0.2.0</version>
+    </dependency>
+    <dependency>
+      <groupId>com.aliyun</groupId>
+      <artifactId>darabonba-array</artifactId>
+      <version>0.1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>com.aliyun</groupId>
+      <artifactId>darabonba-number</artifactId>
+      <version>0.0.3</version>
     </dependency>
   </dependencies>
   <build>
