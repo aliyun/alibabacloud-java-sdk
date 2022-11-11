@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>viapi_regen20211119</artifactId>
-  <version>1.0.3</version>
+  <version>1.0.4</version>
   <packaging>jar</packaging>
   <name>viapi_regen20211119</name>
   <description>Alibaba Cloud viapi-regen (20211119) SDK for Java
@@ -51,7 +51,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>openapiutil</artifactId>
-      <version>0.1.14</version>
+      <version>0.2.0</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
