@@ -10,6 +10,9 @@ public class UnbindUserDesktopRequest extends TeaModel {
     @NameInMap("ClientType")
     public String clientType;
 
+    @NameInMap("Force")
+    public Boolean force;
+
     @NameInMap("LoginToken")
     public String loginToken;
 
@@ -41,6 +44,14 @@ public class UnbindUserDesktopRequest extends TeaModel {
     }
     public String getClientType() {
         return this.clientType;
+    }
+
+    public UnbindUserDesktopRequest setForce(Boolean force) {
+        this.force = force;
+        return this;
+    }
+    public Boolean getForce() {
+        return this.force;
     }
 
     public UnbindUserDesktopRequest setLoginToken(String loginToken) {

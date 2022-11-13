@@ -34,6 +34,9 @@ public class DescribeGlobalDesktopsRequest extends TeaModel {
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
+    @NameInMap("QueryFotaUpdate")
+    public Boolean queryFotaUpdate;
+
     @NameInMap("RegionId")
     public String regionId;
 
@@ -126,6 +129,14 @@ public class DescribeGlobalDesktopsRequest extends TeaModel {
     }
     public String getOfficeSiteId() {
         return this.officeSiteId;
+    }
+
+    public DescribeGlobalDesktopsRequest setQueryFotaUpdate(Boolean queryFotaUpdate) {
+        this.queryFotaUpdate = queryFotaUpdate;
+        return this;
+    }
+    public Boolean getQueryFotaUpdate() {
+        return this.queryFotaUpdate;
     }
 
     public DescribeGlobalDesktopsRequest setRegionId(String regionId) {
