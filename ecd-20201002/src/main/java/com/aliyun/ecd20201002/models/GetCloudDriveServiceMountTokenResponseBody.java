@@ -38,6 +38,9 @@ public class GetCloudDriveServiceMountTokenResponseBody extends TeaModel {
         @NameInMap("ExpiredAfter")
         public String expiredAfter;
 
+        @NameInMap("Status")
+        public String status;
+
         @NameInMap("Token")
         public String token;
 
@@ -66,6 +69,14 @@ public class GetCloudDriveServiceMountTokenResponseBody extends TeaModel {
         }
         public String getExpiredAfter() {
             return this.expiredAfter;
+        }
+
+        public GetCloudDriveServiceMountTokenResponseBodyToken setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
         public GetCloudDriveServiceMountTokenResponseBodyToken setToken(String token) {

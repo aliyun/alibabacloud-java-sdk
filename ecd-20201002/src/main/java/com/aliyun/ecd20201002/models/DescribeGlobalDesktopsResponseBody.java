@@ -256,6 +256,9 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
         @NameInMap("LastStartTime")
         public String lastStartTime;
 
+        @NameInMap("LocalName")
+        public String localName;
+
         @NameInMap("ManagementFlags")
         public java.util.List<String> managementFlags;
 
@@ -276,6 +279,9 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
 
         @NameInMap("ProtocolType")
         public String protocolType;
+
+        @NameInMap("RealDesktopId")
+        public String realDesktopId;
 
         @NameInMap("RegionId")
         public String regionId;
@@ -443,6 +449,14 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             return this.lastStartTime;
         }
 
+        public DescribeGlobalDesktopsResponseBodyDesktops setLocalName(String localName) {
+            this.localName = localName;
+            return this;
+        }
+        public String getLocalName() {
+            return this.localName;
+        }
+
         public DescribeGlobalDesktopsResponseBodyDesktops setManagementFlags(java.util.List<String> managementFlags) {
             this.managementFlags = managementFlags;
             return this;
@@ -497,6 +511,14 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
         }
         public String getProtocolType() {
             return this.protocolType;
+        }
+
+        public DescribeGlobalDesktopsResponseBodyDesktops setRealDesktopId(String realDesktopId) {
+            this.realDesktopId = realDesktopId;
+            return this;
+        }
+        public String getRealDesktopId() {
+            return this.realDesktopId;
         }
 
         public DescribeGlobalDesktopsResponseBodyDesktops setRegionId(String regionId) {
