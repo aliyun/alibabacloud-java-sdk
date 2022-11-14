@@ -3,18 +3,15 @@ package com.aliyun.vpc20160428.models;
 
 import com.aliyun.tea.*;
 
-public class CreateVpnPbrRouteEntryRequest extends TeaModel {
+public class ModifyVpnPbrRouteEntryPriorityRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
-    @NameInMap("Description")
-    public String description;
+    @NameInMap("NewPriority")
+    public Integer newPriority;
 
     @NameInMap("NextHop")
     public String nextHop;
-
-    @NameInMap("OverlayMode")
-    public String overlayMode;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
@@ -24,9 +21,6 @@ public class CreateVpnPbrRouteEntryRequest extends TeaModel {
 
     @NameInMap("Priority")
     public Integer priority;
-
-    @NameInMap("PublishVpc")
-    public Boolean publishVpc;
 
     @NameInMap("RegionId")
     public String regionId;
@@ -49,12 +43,12 @@ public class CreateVpnPbrRouteEntryRequest extends TeaModel {
     @NameInMap("Weight")
     public Integer weight;
 
-    public static CreateVpnPbrRouteEntryRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateVpnPbrRouteEntryRequest self = new CreateVpnPbrRouteEntryRequest();
+    public static ModifyVpnPbrRouteEntryPriorityRequest build(java.util.Map<String, ?> map) throws Exception {
+        ModifyVpnPbrRouteEntryPriorityRequest self = new ModifyVpnPbrRouteEntryPriorityRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateVpnPbrRouteEntryRequest setClientToken(String clientToken) {
+    public ModifyVpnPbrRouteEntryPriorityRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
@@ -62,15 +56,15 @@ public class CreateVpnPbrRouteEntryRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public CreateVpnPbrRouteEntryRequest setDescription(String description) {
-        this.description = description;
+    public ModifyVpnPbrRouteEntryPriorityRequest setNewPriority(Integer newPriority) {
+        this.newPriority = newPriority;
         return this;
     }
-    public String getDescription() {
-        return this.description;
+    public Integer getNewPriority() {
+        return this.newPriority;
     }
 
-    public CreateVpnPbrRouteEntryRequest setNextHop(String nextHop) {
+    public ModifyVpnPbrRouteEntryPriorityRequest setNextHop(String nextHop) {
         this.nextHop = nextHop;
         return this;
     }
@@ -78,15 +72,7 @@ public class CreateVpnPbrRouteEntryRequest extends TeaModel {
         return this.nextHop;
     }
 
-    public CreateVpnPbrRouteEntryRequest setOverlayMode(String overlayMode) {
-        this.overlayMode = overlayMode;
-        return this;
-    }
-    public String getOverlayMode() {
-        return this.overlayMode;
-    }
-
-    public CreateVpnPbrRouteEntryRequest setOwnerAccount(String ownerAccount) {
+    public ModifyVpnPbrRouteEntryPriorityRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
     }
@@ -94,7 +80,7 @@ public class CreateVpnPbrRouteEntryRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public CreateVpnPbrRouteEntryRequest setOwnerId(Long ownerId) {
+    public ModifyVpnPbrRouteEntryPriorityRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -102,7 +88,7 @@ public class CreateVpnPbrRouteEntryRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public CreateVpnPbrRouteEntryRequest setPriority(Integer priority) {
+    public ModifyVpnPbrRouteEntryPriorityRequest setPriority(Integer priority) {
         this.priority = priority;
         return this;
     }
@@ -110,15 +96,7 @@ public class CreateVpnPbrRouteEntryRequest extends TeaModel {
         return this.priority;
     }
 
-    public CreateVpnPbrRouteEntryRequest setPublishVpc(Boolean publishVpc) {
-        this.publishVpc = publishVpc;
-        return this;
-    }
-    public Boolean getPublishVpc() {
-        return this.publishVpc;
-    }
-
-    public CreateVpnPbrRouteEntryRequest setRegionId(String regionId) {
+    public ModifyVpnPbrRouteEntryPriorityRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -126,7 +104,7 @@ public class CreateVpnPbrRouteEntryRequest extends TeaModel {
         return this.regionId;
     }
 
-    public CreateVpnPbrRouteEntryRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public ModifyVpnPbrRouteEntryPriorityRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -134,7 +112,7 @@ public class CreateVpnPbrRouteEntryRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public CreateVpnPbrRouteEntryRequest setResourceOwnerId(Long resourceOwnerId) {
+    public ModifyVpnPbrRouteEntryPriorityRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
@@ -142,7 +120,7 @@ public class CreateVpnPbrRouteEntryRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public CreateVpnPbrRouteEntryRequest setRouteDest(String routeDest) {
+    public ModifyVpnPbrRouteEntryPriorityRequest setRouteDest(String routeDest) {
         this.routeDest = routeDest;
         return this;
     }
@@ -150,7 +128,7 @@ public class CreateVpnPbrRouteEntryRequest extends TeaModel {
         return this.routeDest;
     }
 
-    public CreateVpnPbrRouteEntryRequest setRouteSource(String routeSource) {
+    public ModifyVpnPbrRouteEntryPriorityRequest setRouteSource(String routeSource) {
         this.routeSource = routeSource;
         return this;
     }
@@ -158,7 +136,7 @@ public class CreateVpnPbrRouteEntryRequest extends TeaModel {
         return this.routeSource;
     }
 
-    public CreateVpnPbrRouteEntryRequest setVpnGatewayId(String vpnGatewayId) {
+    public ModifyVpnPbrRouteEntryPriorityRequest setVpnGatewayId(String vpnGatewayId) {
         this.vpnGatewayId = vpnGatewayId;
         return this;
     }
@@ -166,7 +144,7 @@ public class CreateVpnPbrRouteEntryRequest extends TeaModel {
         return this.vpnGatewayId;
     }
 
-    public CreateVpnPbrRouteEntryRequest setWeight(Integer weight) {
+    public ModifyVpnPbrRouteEntryPriorityRequest setWeight(Integer weight) {
         this.weight = weight;
         return this;
     }

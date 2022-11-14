@@ -4,6 +4,9 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeRouteEntryListRequest extends TeaModel {
+    @NameInMap("DestCidrBlockList")
+    public java.util.List<String> destCidrBlockList;
+
     @NameInMap("DestinationCidrBlock")
     public String destinationCidrBlock;
 
@@ -49,9 +52,20 @@ public class DescribeRouteEntryListRequest extends TeaModel {
     @NameInMap("RouteTableId")
     public String routeTableId;
 
+    @NameInMap("ServiceType")
+    public String serviceType;
+
     public static DescribeRouteEntryListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeRouteEntryListRequest self = new DescribeRouteEntryListRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeRouteEntryListRequest setDestCidrBlockList(java.util.List<String> destCidrBlockList) {
+        this.destCidrBlockList = destCidrBlockList;
+        return this;
+    }
+    public java.util.List<String> getDestCidrBlockList() {
+        return this.destCidrBlockList;
     }
 
     public DescribeRouteEntryListRequest setDestinationCidrBlock(String destinationCidrBlock) {
@@ -172,6 +186,14 @@ public class DescribeRouteEntryListRequest extends TeaModel {
     }
     public String getRouteTableId() {
         return this.routeTableId;
+    }
+
+    public DescribeRouteEntryListRequest setServiceType(String serviceType) {
+        this.serviceType = serviceType;
+        return this;
+    }
+    public String getServiceType() {
+        return this.serviceType;
     }
 
 }

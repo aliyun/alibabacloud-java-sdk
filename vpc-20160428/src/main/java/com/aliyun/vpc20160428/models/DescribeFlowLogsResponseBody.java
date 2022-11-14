@@ -75,6 +75,25 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeFlowLogsResponseBodyFlowLogsFlowLogTrafficPath extends TeaModel {
+        @NameInMap("trafficPathList")
+        public java.util.List<String> trafficPathList;
+
+        public static DescribeFlowLogsResponseBodyFlowLogsFlowLogTrafficPath build(java.util.Map<String, ?> map) throws Exception {
+            DescribeFlowLogsResponseBodyFlowLogsFlowLogTrafficPath self = new DescribeFlowLogsResponseBodyFlowLogsFlowLogTrafficPath();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeFlowLogsResponseBodyFlowLogsFlowLogTrafficPath setTrafficPathList(java.util.List<String> trafficPathList) {
+            this.trafficPathList = trafficPathList;
+            return this;
+        }
+        public java.util.List<String> getTrafficPathList() {
+            return this.trafficPathList;
+        }
+
+    }
+
     public static class DescribeFlowLogsResponseBodyFlowLogsFlowLog extends TeaModel {
         @NameInMap("AggregationInterval")
         public Integer aggregationInterval;
@@ -109,8 +128,14 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         @NameInMap("ResourceType")
         public String resourceType;
 
+        @NameInMap("ServiceType")
+        public String serviceType;
+
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("TrafficPath")
+        public DescribeFlowLogsResponseBodyFlowLogsFlowLogTrafficPath trafficPath;
 
         @NameInMap("TrafficType")
         public String trafficType;
@@ -208,12 +233,28 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             return this.resourceType;
         }
 
+        public DescribeFlowLogsResponseBodyFlowLogsFlowLog setServiceType(String serviceType) {
+            this.serviceType = serviceType;
+            return this;
+        }
+        public String getServiceType() {
+            return this.serviceType;
+        }
+
         public DescribeFlowLogsResponseBodyFlowLogsFlowLog setStatus(String status) {
             this.status = status;
             return this;
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public DescribeFlowLogsResponseBodyFlowLogsFlowLog setTrafficPath(DescribeFlowLogsResponseBodyFlowLogsFlowLogTrafficPath trafficPath) {
+            this.trafficPath = trafficPath;
+            return this;
+        }
+        public DescribeFlowLogsResponseBodyFlowLogsFlowLogTrafficPath getTrafficPath() {
+            return this.trafficPath;
         }
 
         public DescribeFlowLogsResponseBodyFlowLogsFlowLog setTrafficType(String trafficType) {

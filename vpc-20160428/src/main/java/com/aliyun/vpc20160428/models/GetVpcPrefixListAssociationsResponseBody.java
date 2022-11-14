@@ -74,6 +74,9 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
         @NameInMap("Reason")
         public String reason;
 
+        @NameInMap("RegionId")
+        public String regionId;
+
         @NameInMap("ResourceId")
         public String resourceId;
 
@@ -110,6 +113,14 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
         }
         public String getReason() {
             return this.reason;
+        }
+
+        public GetVpcPrefixListAssociationsResponseBodyPrefixListAssociation setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
         }
 
         public GetVpcPrefixListAssociationsResponseBodyPrefixListAssociation setResourceId(String resourceId) {

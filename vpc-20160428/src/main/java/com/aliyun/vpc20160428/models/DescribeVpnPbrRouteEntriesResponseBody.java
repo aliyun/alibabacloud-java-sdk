@@ -71,6 +71,9 @@ public class DescribeVpnPbrRouteEntriesResponseBody extends TeaModel {
         @NameInMap("NextHop")
         public String nextHop;
 
+        @NameInMap("Priority")
+        public Integer priority;
+
         @NameInMap("RouteDest")
         public String routeDest;
 
@@ -105,6 +108,14 @@ public class DescribeVpnPbrRouteEntriesResponseBody extends TeaModel {
         }
         public String getNextHop() {
             return this.nextHop;
+        }
+
+        public DescribeVpnPbrRouteEntriesResponseBodyVpnPbrRouteEntriesVpnPbrRouteEntry setPriority(Integer priority) {
+            this.priority = priority;
+            return this;
+        }
+        public Integer getPriority() {
+            return this.priority;
         }
 
         public DescribeVpnPbrRouteEntriesResponseBodyVpnPbrRouteEntriesVpnPbrRouteEntry setRouteDest(String routeDest) {

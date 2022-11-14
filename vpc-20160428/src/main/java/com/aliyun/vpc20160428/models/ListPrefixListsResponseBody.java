@@ -92,6 +92,9 @@ public class ListPrefixListsResponseBody extends TeaModel {
         @NameInMap("PrefixListStatus")
         public String prefixListStatus;
 
+        @NameInMap("RegionId")
+        public String regionId;
+
         @NameInMap("ShareType")
         public String shareType;
 
@@ -173,6 +176,14 @@ public class ListPrefixListsResponseBody extends TeaModel {
         }
         public String getPrefixListStatus() {
             return this.prefixListStatus;
+        }
+
+        public ListPrefixListsResponseBodyPrefixLists setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
         }
 
         public ListPrefixListsResponseBodyPrefixLists setShareType(String shareType) {

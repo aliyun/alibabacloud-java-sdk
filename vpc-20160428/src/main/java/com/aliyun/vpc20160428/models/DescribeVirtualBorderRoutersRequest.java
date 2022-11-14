@@ -7,6 +7,9 @@ public class DescribeVirtualBorderRoutersRequest extends TeaModel {
     @NameInMap("Filter")
     public java.util.List<DescribeVirtualBorderRoutersRequestFilter> filter;
 
+    @NameInMap("IncludeCrossAccountVbr")
+    public Boolean includeCrossAccountVbr;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -36,6 +39,14 @@ public class DescribeVirtualBorderRoutersRequest extends TeaModel {
     }
     public java.util.List<DescribeVirtualBorderRoutersRequestFilter> getFilter() {
         return this.filter;
+    }
+
+    public DescribeVirtualBorderRoutersRequest setIncludeCrossAccountVbr(Boolean includeCrossAccountVbr) {
+        this.includeCrossAccountVbr = includeCrossAccountVbr;
+        return this;
+    }
+    public Boolean getIncludeCrossAccountVbr() {
+        return this.includeCrossAccountVbr;
     }
 
     public DescribeVirtualBorderRoutersRequest setOwnerId(Long ownerId) {

@@ -201,6 +201,9 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
         @NameInMap("RouteTableId")
         public String routeTableId;
 
+        @NameInMap("ServiceType")
+        public String serviceType;
+
         @NameInMap("Status")
         public String status;
 
@@ -274,6 +277,14 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
         }
         public String getRouteTableId() {
             return this.routeTableId;
+        }
+
+        public DescribeRouteEntryListResponseBodyRouteEntrysRouteEntry setServiceType(String serviceType) {
+            this.serviceType = serviceType;
+            return this;
+        }
+        public String getServiceType() {
+            return this.serviceType;
         }
 
         public DescribeRouteEntryListResponseBodyRouteEntrysRouteEntry setStatus(String status) {

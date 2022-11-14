@@ -4,9 +4,6 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateDhcpOptionsSetRequest extends TeaModel {
-    @NameInMap("BootFileName")
-    public String bootFileName;
-
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -46,20 +43,9 @@ public class CreateDhcpOptionsSetRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("TFTPServerName")
-    public String TFTPServerName;
-
     public static CreateDhcpOptionsSetRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDhcpOptionsSetRequest self = new CreateDhcpOptionsSetRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateDhcpOptionsSetRequest setBootFileName(String bootFileName) {
-        this.bootFileName = bootFileName;
-        return this;
-    }
-    public String getBootFileName() {
-        return this.bootFileName;
     }
 
     public CreateDhcpOptionsSetRequest setClientToken(String clientToken) {
@@ -164,14 +150,6 @@ public class CreateDhcpOptionsSetRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public CreateDhcpOptionsSetRequest setTFTPServerName(String TFTPServerName) {
-        this.TFTPServerName = TFTPServerName;
-        return this;
-    }
-    public String getTFTPServerName() {
-        return this.TFTPServerName;
     }
 
 }

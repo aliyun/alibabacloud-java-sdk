@@ -409,6 +409,9 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
         @NameInMap("Interval")
         public Integer interval;
 
+        @NameInMap("Policy")
+        public String policy;
+
         @NameInMap("Retry")
         public Integer retry;
 
@@ -442,6 +445,14 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
         }
         public Integer getInterval() {
             return this.interval;
+        }
+
+        public ModifyVpnAttachmentAttributeResponseBodyVcoHealthCheck setPolicy(String policy) {
+            this.policy = policy;
+            return this;
+        }
+        public String getPolicy() {
+            return this.policy;
         }
 
         public ModifyVpnAttachmentAttributeResponseBodyVcoHealthCheck setRetry(Integer retry) {

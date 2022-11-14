@@ -64,69 +64,6 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public static class ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolListPublicIpCidrBlockList extends TeaModel {
-        @NameInMap("CidrBlock")
-        public String cidrBlock;
-
-        @NameInMap("CreationTime")
-        public String creationTime;
-
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("TotalIpNum")
-        public Integer totalIpNum;
-
-        @NameInMap("UsedIpNum")
-        public Integer usedIpNum;
-
-        public static ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolListPublicIpCidrBlockList build(java.util.Map<String, ?> map) throws Exception {
-            ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolListPublicIpCidrBlockList self = new ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolListPublicIpCidrBlockList();
-            return TeaModel.build(map, self);
-        }
-
-        public ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolListPublicIpCidrBlockList setCidrBlock(String cidrBlock) {
-            this.cidrBlock = cidrBlock;
-            return this;
-        }
-        public String getCidrBlock() {
-            return this.cidrBlock;
-        }
-
-        public ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolListPublicIpCidrBlockList setCreationTime(String creationTime) {
-            this.creationTime = creationTime;
-            return this;
-        }
-        public String getCreationTime() {
-            return this.creationTime;
-        }
-
-        public ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolListPublicIpCidrBlockList setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolListPublicIpCidrBlockList setTotalIpNum(Integer totalIpNum) {
-            this.totalIpNum = totalIpNum;
-            return this;
-        }
-        public Integer getTotalIpNum() {
-            return this.totalIpNum;
-        }
-
-        public ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolListPublicIpCidrBlockList setUsedIpNum(Integer usedIpNum) {
-            this.usedIpNum = usedIpNum;
-            return this;
-        }
-        public Integer getUsedIpNum() {
-            return this.usedIpNum;
-        }
-
-    }
-
     public static class ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolList extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
@@ -145,9 +82,6 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
 
         @NameInMap("PublicIpAddressPoolId")
         public String publicIpAddressPoolId;
-
-        @NameInMap("PublicIpCidrBlockList")
-        public java.util.List<ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolListPublicIpCidrBlockList> publicIpCidrBlockList;
 
         @NameInMap("RegionId")
         public String regionId;
@@ -215,14 +149,6 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
         }
         public String getPublicIpAddressPoolId() {
             return this.publicIpAddressPoolId;
-        }
-
-        public ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolList setPublicIpCidrBlockList(java.util.List<ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolListPublicIpCidrBlockList> publicIpCidrBlockList) {
-            this.publicIpCidrBlockList = publicIpCidrBlockList;
-            return this;
-        }
-        public java.util.List<ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolListPublicIpCidrBlockList> getPublicIpCidrBlockList() {
-            return this.publicIpCidrBlockList;
         }
 
         public ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolList setRegionId(String regionId) {
