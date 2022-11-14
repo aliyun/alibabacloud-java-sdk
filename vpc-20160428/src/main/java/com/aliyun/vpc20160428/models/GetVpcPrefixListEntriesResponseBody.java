@@ -74,6 +74,9 @@ public class GetVpcPrefixListEntriesResponseBody extends TeaModel {
         @NameInMap("PrefixListId")
         public String prefixListId;
 
+        @NameInMap("RegionId")
+        public String regionId;
+
         public static GetVpcPrefixListEntriesResponseBodyPrefixListEntry build(java.util.Map<String, ?> map) throws Exception {
             GetVpcPrefixListEntriesResponseBodyPrefixListEntry self = new GetVpcPrefixListEntriesResponseBodyPrefixListEntry();
             return TeaModel.build(map, self);
@@ -101,6 +104,14 @@ public class GetVpcPrefixListEntriesResponseBody extends TeaModel {
         }
         public String getPrefixListId() {
             return this.prefixListId;
+        }
+
+        public GetVpcPrefixListEntriesResponseBodyPrefixListEntry setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
         }
 
     }

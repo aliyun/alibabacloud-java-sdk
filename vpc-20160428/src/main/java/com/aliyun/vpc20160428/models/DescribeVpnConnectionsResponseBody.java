@@ -421,6 +421,9 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         @NameInMap("IkeConfig")
         public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionIkeConfig ikeConfig;
 
+        @NameInMap("InternetIp")
+        public String internetIp;
+
         @NameInMap("IpsecConfig")
         public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionIpsecConfig ipsecConfig;
 
@@ -541,6 +544,14 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         }
         public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionIkeConfig getIkeConfig() {
             return this.ikeConfig;
+        }
+
+        public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnection setInternetIp(String internetIp) {
+            this.internetIp = internetIp;
+            return this;
+        }
+        public String getInternetIp() {
+            return this.internetIp;
         }
 
         public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnection setIpsecConfig(DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionIpsecConfig ipsecConfig) {

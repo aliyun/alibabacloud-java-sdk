@@ -10,6 +10,9 @@ public class ModifyBgpGroupAttributeRequest extends TeaModel {
     @NameInMap("BgpGroupId")
     public String bgpGroupId;
 
+    @NameInMap("ClearAuthKey")
+    public Boolean clearAuthKey;
+
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -59,6 +62,14 @@ public class ModifyBgpGroupAttributeRequest extends TeaModel {
     }
     public String getBgpGroupId() {
         return this.bgpGroupId;
+    }
+
+    public ModifyBgpGroupAttributeRequest setClearAuthKey(Boolean clearAuthKey) {
+        this.clearAuthKey = clearAuthKey;
+        return this;
+    }
+    public Boolean getClearAuthKey() {
+        return this.clearAuthKey;
     }
 
     public ModifyBgpGroupAttributeRequest setClientToken(String clientToken) {

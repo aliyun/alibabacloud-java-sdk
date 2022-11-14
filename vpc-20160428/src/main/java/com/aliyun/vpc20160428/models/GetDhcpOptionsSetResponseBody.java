@@ -128,9 +128,6 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
     }
 
     public static class GetDhcpOptionsSetResponseBodyDhcpOptions extends TeaModel {
-        @NameInMap("BootFileName")
-        public String bootFileName;
-
         @NameInMap("DomainName")
         public String domainName;
 
@@ -143,20 +140,9 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
         @NameInMap("LeaseTime")
         public String leaseTime;
 
-        @NameInMap("TFTPServerName")
-        public String TFTPServerName;
-
         public static GetDhcpOptionsSetResponseBodyDhcpOptions build(java.util.Map<String, ?> map) throws Exception {
             GetDhcpOptionsSetResponseBodyDhcpOptions self = new GetDhcpOptionsSetResponseBodyDhcpOptions();
             return TeaModel.build(map, self);
-        }
-
-        public GetDhcpOptionsSetResponseBodyDhcpOptions setBootFileName(String bootFileName) {
-            this.bootFileName = bootFileName;
-            return this;
-        }
-        public String getBootFileName() {
-            return this.bootFileName;
         }
 
         public GetDhcpOptionsSetResponseBodyDhcpOptions setDomainName(String domainName) {
@@ -189,14 +175,6 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
         }
         public String getLeaseTime() {
             return this.leaseTime;
-        }
-
-        public GetDhcpOptionsSetResponseBodyDhcpOptions setTFTPServerName(String TFTPServerName) {
-            this.TFTPServerName = TFTPServerName;
-            return this;
-        }
-        public String getTFTPServerName() {
-            return this.TFTPServerName;
         }
 
     }

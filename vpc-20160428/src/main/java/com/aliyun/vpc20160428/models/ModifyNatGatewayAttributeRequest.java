@@ -7,6 +7,9 @@ public class ModifyNatGatewayAttributeRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("EipBindMode")
+    public String eipBindMode;
+
     @NameInMap("IcmpReplyEnabled")
     public Boolean icmpReplyEnabled;
 
@@ -42,6 +45,14 @@ public class ModifyNatGatewayAttributeRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public ModifyNatGatewayAttributeRequest setEipBindMode(String eipBindMode) {
+        this.eipBindMode = eipBindMode;
+        return this;
+    }
+    public String getEipBindMode() {
+        return this.eipBindMode;
     }
 
     public ModifyNatGatewayAttributeRequest setIcmpReplyEnabled(Boolean icmpReplyEnabled) {

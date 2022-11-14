@@ -19,6 +19,9 @@ public class DeleteVpnPbrRouteEntryRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("Priority")
+    public Integer priority;
+
     @NameInMap("RegionId")
     public String regionId;
 
@@ -83,6 +86,14 @@ public class DeleteVpnPbrRouteEntryRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DeleteVpnPbrRouteEntryRequest setPriority(Integer priority) {
+        this.priority = priority;
+        return this;
+    }
+    public Integer getPriority() {
+        return this.priority;
     }
 
     public DeleteVpnPbrRouteEntryRequest setRegionId(String regionId) {

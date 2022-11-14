@@ -22,6 +22,9 @@ public class ModifyVpnPbrRouteEntryWeightRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("Priority")
+    public Integer priority;
+
     @NameInMap("RegionId")
     public String regionId;
 
@@ -94,6 +97,14 @@ public class ModifyVpnPbrRouteEntryWeightRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public ModifyVpnPbrRouteEntryWeightRequest setPriority(Integer priority) {
+        this.priority = priority;
+        return this;
+    }
+    public Integer getPriority() {
+        return this.priority;
     }
 
     public ModifyVpnPbrRouteEntryWeightRequest setRegionId(String regionId) {

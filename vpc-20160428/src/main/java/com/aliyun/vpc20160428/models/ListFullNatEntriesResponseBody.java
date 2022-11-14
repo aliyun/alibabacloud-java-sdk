@@ -108,6 +108,9 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
         @NameInMap("FullNatEntryStatus")
         public String fullNatEntryStatus;
 
+        @NameInMap("FullNatTableId")
+        public String fullNatTableId;
+
         @NameInMap("IpProtocol")
         public String ipProtocol;
 
@@ -182,6 +185,14 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
         }
         public String getFullNatEntryStatus() {
             return this.fullNatEntryStatus;
+        }
+
+        public ListFullNatEntriesResponseBodyFullNatEntries setFullNatTableId(String fullNatTableId) {
+            this.fullNatTableId = fullNatTableId;
+            return this;
+        }
+        public String getFullNatTableId() {
+            return this.fullNatTableId;
         }
 
         public ListFullNatEntriesResponseBodyFullNatEntries setIpProtocol(String ipProtocol) {

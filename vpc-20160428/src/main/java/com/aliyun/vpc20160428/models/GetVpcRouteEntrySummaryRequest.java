@@ -3,10 +3,7 @@ package com.aliyun.vpc20160428.models;
 
 import com.aliyun.tea.*;
 
-public class UnassociateVpcCidrBlockRequest extends TeaModel {
-    @NameInMap("IPv6CidrBlock")
-    public String IPv6CidrBlock;
-
+public class GetVpcRouteEntrySummaryRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -22,26 +19,21 @@ public class UnassociateVpcCidrBlockRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("SecondaryCidrBlock")
-    public String secondaryCidrBlock;
+    @NameInMap("RouteEntryType")
+    public String routeEntryType;
+
+    @NameInMap("RouteTableId")
+    public String routeTableId;
 
     @NameInMap("VpcId")
     public String vpcId;
 
-    public static UnassociateVpcCidrBlockRequest build(java.util.Map<String, ?> map) throws Exception {
-        UnassociateVpcCidrBlockRequest self = new UnassociateVpcCidrBlockRequest();
+    public static GetVpcRouteEntrySummaryRequest build(java.util.Map<String, ?> map) throws Exception {
+        GetVpcRouteEntrySummaryRequest self = new GetVpcRouteEntrySummaryRequest();
         return TeaModel.build(map, self);
     }
 
-    public UnassociateVpcCidrBlockRequest setIPv6CidrBlock(String IPv6CidrBlock) {
-        this.IPv6CidrBlock = IPv6CidrBlock;
-        return this;
-    }
-    public String getIPv6CidrBlock() {
-        return this.IPv6CidrBlock;
-    }
-
-    public UnassociateVpcCidrBlockRequest setOwnerAccount(String ownerAccount) {
+    public GetVpcRouteEntrySummaryRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
     }
@@ -49,7 +41,7 @@ public class UnassociateVpcCidrBlockRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public UnassociateVpcCidrBlockRequest setOwnerId(Long ownerId) {
+    public GetVpcRouteEntrySummaryRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -57,7 +49,7 @@ public class UnassociateVpcCidrBlockRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public UnassociateVpcCidrBlockRequest setRegionId(String regionId) {
+    public GetVpcRouteEntrySummaryRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -65,7 +57,7 @@ public class UnassociateVpcCidrBlockRequest extends TeaModel {
         return this.regionId;
     }
 
-    public UnassociateVpcCidrBlockRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public GetVpcRouteEntrySummaryRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -73,7 +65,7 @@ public class UnassociateVpcCidrBlockRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public UnassociateVpcCidrBlockRequest setResourceOwnerId(Long resourceOwnerId) {
+    public GetVpcRouteEntrySummaryRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
@@ -81,15 +73,23 @@ public class UnassociateVpcCidrBlockRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public UnassociateVpcCidrBlockRequest setSecondaryCidrBlock(String secondaryCidrBlock) {
-        this.secondaryCidrBlock = secondaryCidrBlock;
+    public GetVpcRouteEntrySummaryRequest setRouteEntryType(String routeEntryType) {
+        this.routeEntryType = routeEntryType;
         return this;
     }
-    public String getSecondaryCidrBlock() {
-        return this.secondaryCidrBlock;
+    public String getRouteEntryType() {
+        return this.routeEntryType;
     }
 
-    public UnassociateVpcCidrBlockRequest setVpcId(String vpcId) {
+    public GetVpcRouteEntrySummaryRequest setRouteTableId(String routeTableId) {
+        this.routeTableId = routeTableId;
+        return this;
+    }
+    public String getRouteTableId() {
+        return this.routeTableId;
+    }
+
+    public GetVpcRouteEntrySummaryRequest setVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }

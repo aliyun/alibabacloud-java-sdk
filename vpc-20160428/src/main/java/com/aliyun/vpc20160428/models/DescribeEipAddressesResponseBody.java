@@ -301,6 +301,12 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         @NameInMap("Tags")
         public DescribeEipAddressesResponseBodyEipAddressesEipAddressTags tags;
 
+        @NameInMap("VpcId")
+        public String vpcId;
+
+        @NameInMap("Zone")
+        public String zone;
+
         public static DescribeEipAddressesResponseBodyEipAddressesEipAddress build(java.util.Map<String, ?> map) throws Exception {
             DescribeEipAddressesResponseBodyEipAddressesEipAddress self = new DescribeEipAddressesResponseBodyEipAddressesEipAddress();
             return TeaModel.build(map, self);
@@ -600,6 +606,22 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         }
         public DescribeEipAddressesResponseBodyEipAddressesEipAddressTags getTags() {
             return this.tags;
+        }
+
+        public DescribeEipAddressesResponseBodyEipAddressesEipAddress setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        public DescribeEipAddressesResponseBodyEipAddressesEipAddress setZone(String zone) {
+            this.zone = zone;
+            return this;
+        }
+        public String getZone() {
+            return this.zone;
         }
 
     }

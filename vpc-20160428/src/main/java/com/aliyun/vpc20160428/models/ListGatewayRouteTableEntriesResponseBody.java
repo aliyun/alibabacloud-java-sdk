@@ -53,6 +53,58 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListGatewayRouteTableEntriesResponseBodyGatewayRouteEntryModelsNextHops extends TeaModel {
+        @NameInMap("Enabled")
+        public String enabled;
+
+        @NameInMap("NextHopId")
+        public String nextHopId;
+
+        @NameInMap("NextHopType")
+        public String nextHopType;
+
+        @NameInMap("Weight")
+        public String weight;
+
+        public static ListGatewayRouteTableEntriesResponseBodyGatewayRouteEntryModelsNextHops build(java.util.Map<String, ?> map) throws Exception {
+            ListGatewayRouteTableEntriesResponseBodyGatewayRouteEntryModelsNextHops self = new ListGatewayRouteTableEntriesResponseBodyGatewayRouteEntryModelsNextHops();
+            return TeaModel.build(map, self);
+        }
+
+        public ListGatewayRouteTableEntriesResponseBodyGatewayRouteEntryModelsNextHops setEnabled(String enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public String getEnabled() {
+            return this.enabled;
+        }
+
+        public ListGatewayRouteTableEntriesResponseBodyGatewayRouteEntryModelsNextHops setNextHopId(String nextHopId) {
+            this.nextHopId = nextHopId;
+            return this;
+        }
+        public String getNextHopId() {
+            return this.nextHopId;
+        }
+
+        public ListGatewayRouteTableEntriesResponseBodyGatewayRouteEntryModelsNextHops setNextHopType(String nextHopType) {
+            this.nextHopType = nextHopType;
+            return this;
+        }
+        public String getNextHopType() {
+            return this.nextHopType;
+        }
+
+        public ListGatewayRouteTableEntriesResponseBodyGatewayRouteEntryModelsNextHops setWeight(String weight) {
+            this.weight = weight;
+            return this;
+        }
+        public String getWeight() {
+            return this.weight;
+        }
+
+    }
+
     public static class ListGatewayRouteTableEntriesResponseBodyGatewayRouteEntryModels extends TeaModel {
         @NameInMap("Description")
         public String description;
@@ -68,6 +120,9 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
 
         @NameInMap("NextHopType")
         public String nextHopType;
+
+        @NameInMap("NextHops")
+        public java.util.List<ListGatewayRouteTableEntriesResponseBodyGatewayRouteEntryModelsNextHops> nextHops;
 
         @NameInMap("Status")
         public String status;
@@ -115,6 +170,14 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
         }
         public String getNextHopType() {
             return this.nextHopType;
+        }
+
+        public ListGatewayRouteTableEntriesResponseBodyGatewayRouteEntryModels setNextHops(java.util.List<ListGatewayRouteTableEntriesResponseBodyGatewayRouteEntryModelsNextHops> nextHops) {
+            this.nextHops = nextHops;
+            return this;
+        }
+        public java.util.List<ListGatewayRouteTableEntriesResponseBodyGatewayRouteEntryModelsNextHops> getNextHops() {
+            return this.nextHops;
         }
 
         public ListGatewayRouteTableEntriesResponseBodyGatewayRouteEntryModels setStatus(String status) {

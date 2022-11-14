@@ -40,6 +40,9 @@ public class AssociateEipAddressRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("VpcId")
+    public String vpcId;
+
     public static AssociateEipAddressRequest build(java.util.Map<String, ?> map) throws Exception {
         AssociateEipAddressRequest self = new AssociateEipAddressRequest();
         return TeaModel.build(map, self);
@@ -139,6 +142,14 @@ public class AssociateEipAddressRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public AssociateEipAddressRequest setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    public String getVpcId() {
+        return this.vpcId;
     }
 
 }

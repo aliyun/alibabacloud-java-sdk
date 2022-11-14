@@ -40,6 +40,9 @@ public class CreateFlowLogRequest extends TeaModel {
     @NameInMap("ResourceType")
     public String resourceType;
 
+    @NameInMap("TrafficPath")
+    public java.util.List<String> trafficPath;
+
     @NameInMap("TrafficType")
     public String trafficType;
 
@@ -142,6 +145,14 @@ public class CreateFlowLogRequest extends TeaModel {
     }
     public String getResourceType() {
         return this.resourceType;
+    }
+
+    public CreateFlowLogRequest setTrafficPath(java.util.List<String> trafficPath) {
+        this.trafficPath = trafficPath;
+        return this;
+    }
+    public java.util.List<String> getTrafficPath() {
+        return this.trafficPath;
     }
 
     public CreateFlowLogRequest setTrafficType(String trafficType) {
