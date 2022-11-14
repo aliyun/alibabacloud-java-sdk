@@ -4,27 +4,53 @@ package com.aliyun.alinlp20200629.models;
 import com.aliyun.tea.*;
 
 public class GetWsCustomizedChGeneralRequest extends TeaModel {
-    @NameInMap("Uuid")
-    @Validation(required = true)
-    public String uuid;
-
-    @NameInMap("TokenizerId")
-    public String tokenizerId;
-
-    @NameInMap("Text")
-    @Validation(required = true)
-    public String text;
-
     @NameInMap("OutType")
     public String outType;
 
     @NameInMap("ServiceCode")
-    @Validation(required = true)
     public String serviceCode;
+
+    @NameInMap("Text")
+    public String text;
+
+    @NameInMap("TokenizerId")
+    public String tokenizerId;
 
     public static GetWsCustomizedChGeneralRequest build(java.util.Map<String, ?> map) throws Exception {
         GetWsCustomizedChGeneralRequest self = new GetWsCustomizedChGeneralRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetWsCustomizedChGeneralRequest setOutType(String outType) {
+        this.outType = outType;
+        return this;
+    }
+    public String getOutType() {
+        return this.outType;
+    }
+
+    public GetWsCustomizedChGeneralRequest setServiceCode(String serviceCode) {
+        this.serviceCode = serviceCode;
+        return this;
+    }
+    public String getServiceCode() {
+        return this.serviceCode;
+    }
+
+    public GetWsCustomizedChGeneralRequest setText(String text) {
+        this.text = text;
+        return this;
+    }
+    public String getText() {
+        return this.text;
+    }
+
+    public GetWsCustomizedChGeneralRequest setTokenizerId(String tokenizerId) {
+        this.tokenizerId = tokenizerId;
+        return this;
+    }
+    public String getTokenizerId() {
+        return this.tokenizerId;
     }
 
 }
