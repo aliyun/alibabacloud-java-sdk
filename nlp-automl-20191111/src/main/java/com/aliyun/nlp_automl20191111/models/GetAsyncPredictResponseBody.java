@@ -4,37 +4,29 @@ package com.aliyun.nlp_automl20191111.models;
 import com.aliyun.tea.*;
 
 public class GetAsyncPredictResponseBody extends TeaModel {
-    @NameInMap("Status")
-    public Integer status;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("AsyncPredictId")
+    public Integer asyncPredictId;
 
     @NameInMap("Content")
     public String content;
 
-    @NameInMap("AsyncPredictId")
-    public Integer asyncPredictId;
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Status")
+    public Integer status;
 
     public static GetAsyncPredictResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetAsyncPredictResponseBody self = new GetAsyncPredictResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public GetAsyncPredictResponseBody setStatus(Integer status) {
-        this.status = status;
+    public GetAsyncPredictResponseBody setAsyncPredictId(Integer asyncPredictId) {
+        this.asyncPredictId = asyncPredictId;
         return this;
     }
-    public Integer getStatus() {
-        return this.status;
-    }
-
-    public GetAsyncPredictResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
+    public Integer getAsyncPredictId() {
+        return this.asyncPredictId;
     }
 
     public GetAsyncPredictResponseBody setContent(String content) {
@@ -45,12 +37,20 @@ public class GetAsyncPredictResponseBody extends TeaModel {
         return this.content;
     }
 
-    public GetAsyncPredictResponseBody setAsyncPredictId(Integer asyncPredictId) {
-        this.asyncPredictId = asyncPredictId;
+    public GetAsyncPredictResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Integer getAsyncPredictId() {
-        return this.asyncPredictId;
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public GetAsyncPredictResponseBody setStatus(Integer status) {
+        this.status = status;
+        return this;
+    }
+    public Integer getStatus() {
+        return this.status;
     }
 
 }

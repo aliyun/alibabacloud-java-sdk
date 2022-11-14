@@ -7,9 +7,6 @@ public class GetAsyncPredictRequest extends TeaModel {
     @NameInMap("AsyncPredictId")
     public Integer asyncPredictId;
 
-    @NameInMap("Product")
-    public String product;
-
     public static GetAsyncPredictRequest build(java.util.Map<String, ?> map) throws Exception {
         GetAsyncPredictRequest self = new GetAsyncPredictRequest();
         return TeaModel.build(map, self);
@@ -21,14 +18,6 @@ public class GetAsyncPredictRequest extends TeaModel {
     }
     public Integer getAsyncPredictId() {
         return this.asyncPredictId;
-    }
-
-    public GetAsyncPredictRequest setProduct(String product) {
-        this.product = product;
-        return this;
-    }
-    public String getProduct() {
-        return this.product;
     }
 
 }
