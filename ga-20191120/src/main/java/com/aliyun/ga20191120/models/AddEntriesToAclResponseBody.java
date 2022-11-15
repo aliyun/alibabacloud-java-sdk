@@ -7,7 +7,6 @@ public class AddEntriesToAclResponseBody extends TeaModel {
     @NameInMap("AclId")
     public String aclId;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

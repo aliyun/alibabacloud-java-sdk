@@ -4,11 +4,9 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class CreateBasicEndpointGroupResponseBody extends TeaModel {
-    // 终端节点组Id
     @NameInMap("EndpointGroupId")
     public String endpointGroupId;
 
-    // 请求Id
     @NameInMap("RequestId")
     public String requestId;
 

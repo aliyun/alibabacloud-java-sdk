@@ -4,11 +4,9 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class DeleteBasicAcceleratorResponseBody extends TeaModel {
-    // 全球加速实例Id
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
-    // 请求Id
     @NameInMap("RequestId")
     public String requestId;
 

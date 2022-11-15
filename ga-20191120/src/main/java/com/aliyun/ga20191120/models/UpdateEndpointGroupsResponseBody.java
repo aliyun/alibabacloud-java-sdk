@@ -7,7 +7,6 @@ public class UpdateEndpointGroupsResponseBody extends TeaModel {
     @NameInMap("EndpointGroupIds")
     public java.util.List<String> endpointGroupIds;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

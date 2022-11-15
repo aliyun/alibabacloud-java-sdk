@@ -4,23 +4,18 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class ListBasicAcceleratorsResponseBody extends TeaModel {
-    // 全球加速实例列表
     @NameInMap("Accelerators")
     public java.util.List<ListBasicAcceleratorsResponseBodyAccelerators> accelerators;
 
-    // 页码
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // 页大小
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 请求Id
     @NameInMap("RequestId")
     public String requestId;
 
-    // 全球加速实例总数
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -70,15 +65,12 @@ public class ListBasicAcceleratorsResponseBody extends TeaModel {
     }
 
     public static class ListBasicAcceleratorsResponseBodyAcceleratorsBasicBandwidthPackage extends TeaModel {
-        // 基础带宽包带宽
         @NameInMap("Bandwidth")
         public Integer bandwidth;
 
-        // 基础带宽包类型
         @NameInMap("BandwidthType")
         public String bandwidthType;
 
-        // 基础带宽包Id
         @NameInMap("InstanceId")
         public String instanceId;
 
@@ -114,11 +106,9 @@ public class ListBasicAcceleratorsResponseBody extends TeaModel {
     }
 
     public static class ListBasicAcceleratorsResponseBodyAcceleratorsCrossDomainBandwidthPackage extends TeaModel {
-        // 跨境带宽包带宽
         @NameInMap("Bandwidth")
         public Integer bandwidth;
 
-        // 跨境带宽包Id
         @NameInMap("InstanceId")
         public String instanceId;
 
@@ -145,56 +135,82 @@ public class ListBasicAcceleratorsResponseBody extends TeaModel {
 
     }
 
+    public static class ListBasicAcceleratorsResponseBodyAcceleratorsTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListBasicAcceleratorsResponseBodyAcceleratorsTags build(java.util.Map<String, ?> map) throws Exception {
+            ListBasicAcceleratorsResponseBodyAcceleratorsTags self = new ListBasicAcceleratorsResponseBodyAcceleratorsTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListBasicAcceleratorsResponseBodyAcceleratorsTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListBasicAcceleratorsResponseBodyAcceleratorsTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListBasicAcceleratorsResponseBodyAccelerators extends TeaModel {
-        // 全球加速实例Id
         @NameInMap("AcceleratorId")
         public String acceleratorId;
 
-        // 绑定的基础带宽包
+        @NameInMap("BandwidthBillingType")
+        public String bandwidthBillingType;
+
         @NameInMap("BasicBandwidthPackage")
         public ListBasicAcceleratorsResponseBodyAcceleratorsBasicBandwidthPackage basicBandwidthPackage;
 
-        // 全球加速实例下车点Id
         @NameInMap("BasicEndpointGroupId")
         public String basicEndpointGroupId;
 
-        // 全球加速实例上车点Id
         @NameInMap("BasicIpSetId")
         public String basicIpSetId;
 
-        // 创建时间
         @NameInMap("CreateTime")
         public Long createTime;
 
-        // 绑定的跨境带宽包
         @NameInMap("CrossDomainBandwidthPackage")
         public ListBasicAcceleratorsResponseBodyAcceleratorsCrossDomainBandwidthPackage crossDomainBandwidthPackage;
 
-        // 全球加速实例描述
         @NameInMap("Description")
         public String description;
 
-        // 到期时间
         @NameInMap("ExpiredTime")
         public Long expiredTime;
 
-        // 全球加速实例计费类型
         @NameInMap("InstanceChargeType")
         public String instanceChargeType;
 
-        // 全球加速实例名称
         @NameInMap("Name")
         public String name;
 
-        // RegionId
         @NameInMap("RegionId")
         public String regionId;
 
-        // 全球加速实例状态
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         @NameInMap("State")
         public String state;
 
-        // 全球加速实例类型
+        @NameInMap("Tags")
+        public java.util.List<ListBasicAcceleratorsResponseBodyAcceleratorsTags> tags;
+
         @NameInMap("Type")
         public String type;
 
@@ -209,6 +225,14 @@ public class ListBasicAcceleratorsResponseBody extends TeaModel {
         }
         public String getAcceleratorId() {
             return this.acceleratorId;
+        }
+
+        public ListBasicAcceleratorsResponseBodyAccelerators setBandwidthBillingType(String bandwidthBillingType) {
+            this.bandwidthBillingType = bandwidthBillingType;
+            return this;
+        }
+        public String getBandwidthBillingType() {
+            return this.bandwidthBillingType;
         }
 
         public ListBasicAcceleratorsResponseBodyAccelerators setBasicBandwidthPackage(ListBasicAcceleratorsResponseBodyAcceleratorsBasicBandwidthPackage basicBandwidthPackage) {
@@ -291,12 +315,28 @@ public class ListBasicAcceleratorsResponseBody extends TeaModel {
             return this.regionId;
         }
 
+        public ListBasicAcceleratorsResponseBodyAccelerators setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
         public ListBasicAcceleratorsResponseBodyAccelerators setState(String state) {
             this.state = state;
             return this;
         }
         public String getState() {
             return this.state;
+        }
+
+        public ListBasicAcceleratorsResponseBodyAccelerators setTags(java.util.List<ListBasicAcceleratorsResponseBodyAcceleratorsTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListBasicAcceleratorsResponseBodyAcceleratorsTags> getTags() {
+            return this.tags;
         }
 
         public ListBasicAcceleratorsResponseBodyAccelerators setType(String type) {

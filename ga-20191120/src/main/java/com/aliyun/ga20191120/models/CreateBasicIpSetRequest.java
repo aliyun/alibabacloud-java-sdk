@@ -4,23 +4,21 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class CreateBasicIpSetRequest extends TeaModel {
-    // 加速地域Id
     @NameInMap("AccelerateRegionId")
     public String accelerateRegionId;
 
-    // 基础版全球加速实例Id
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
-    // 客户端Token
+    @NameInMap("Bandwidth")
+    public Long bandwidth;
+
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // 公网质量类型
     @NameInMap("IspType")
     public String ispType;
 
-    // RegionId
     @NameInMap("RegionId")
     public String regionId;
 
@@ -43,6 +41,14 @@ public class CreateBasicIpSetRequest extends TeaModel {
     }
     public String getAcceleratorId() {
         return this.acceleratorId;
+    }
+
+    public CreateBasicIpSetRequest setBandwidth(Long bandwidth) {
+        this.bandwidth = bandwidth;
+        return this;
+    }
+    public Long getBandwidth() {
+        return this.bandwidth;
     }
 
     public CreateBasicIpSetRequest setClientToken(String clientToken) {

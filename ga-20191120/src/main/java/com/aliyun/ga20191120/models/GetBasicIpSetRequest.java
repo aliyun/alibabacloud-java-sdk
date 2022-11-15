@@ -4,15 +4,12 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class GetBasicIpSetRequest extends TeaModel {
-    // 客户端Token
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // 加速接入点Id
     @NameInMap("IpSetId")
     public String ipSetId;
 
-    // RegionId
     @NameInMap("RegionId")
     public String regionId;
 

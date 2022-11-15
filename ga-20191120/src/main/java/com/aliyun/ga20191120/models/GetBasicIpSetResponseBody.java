@@ -4,39 +4,30 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class GetBasicIpSetResponseBody extends TeaModel {
-    // 加速地域Id
     @NameInMap("AccelerateRegionId")
     public String accelerateRegionId;
 
-    // 全球加速实例Id
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
-    // 加速地域带宽
     @NameInMap("Bandwidth")
-    public Integer bandwidth;
+    public Long bandwidth;
 
-    // 加速接入点IP地址
     @NameInMap("IpAddress")
     public String ipAddress;
 
-    // 加速接入点id
     @NameInMap("IpSetId")
     public String ipSetId;
 
-    // 加速接入点地址类型
     @NameInMap("IpVersion")
     public String ipVersion;
 
-    // 公网质量类型
     @NameInMap("IspType")
     public String ispType;
 
-    // 请求Id
     @NameInMap("RequestId")
     public String requestId;
 
-    // 加速接入点状态
     @NameInMap("State")
     public String state;
 
@@ -61,11 +52,11 @@ public class GetBasicIpSetResponseBody extends TeaModel {
         return this.acceleratorId;
     }
 
-    public GetBasicIpSetResponseBody setBandwidth(Integer bandwidth) {
+    public GetBasicIpSetResponseBody setBandwidth(Long bandwidth) {
         this.bandwidth = bandwidth;
         return this;
     }
-    public Integer getBandwidth() {
+    public Long getBandwidth() {
         return this.bandwidth;
     }
 

@@ -22,9 +22,14 @@ public class GetAclResponseBody extends TeaModel {
     @NameInMap("RelatedListeners")
     public java.util.List<GetAclResponseBodyRelatedListeners> relatedListeners;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
+    @NameInMap("Tags")
+    public java.util.List<GetAclResponseBodyTags> tags;
 
     public static GetAclResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetAclResponseBody self = new GetAclResponseBody();
@@ -85,6 +90,22 @@ public class GetAclResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public GetAclResponseBody setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public GetAclResponseBody setTags(java.util.List<GetAclResponseBodyTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<GetAclResponseBodyTags> getTags() {
+        return this.tags;
     }
 
     public static class GetAclResponseBodyAclEntries extends TeaModel {
@@ -154,6 +175,36 @@ public class GetAclResponseBody extends TeaModel {
         }
         public String getListenerId() {
             return this.listenerId;
+        }
+
+    }
+
+    public static class GetAclResponseBodyTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static GetAclResponseBodyTags build(java.util.Map<String, ?> map) throws Exception {
+            GetAclResponseBodyTags self = new GetAclResponseBodyTags();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAclResponseBodyTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public GetAclResponseBodyTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

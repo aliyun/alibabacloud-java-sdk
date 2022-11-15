@@ -63,6 +63,9 @@ public class CreateIpSetsRequest extends TeaModel {
         @NameInMap("IpVersion")
         public String ipVersion;
 
+        @NameInMap("IspType")
+        public String ispType;
+
         public static CreateIpSetsRequestAccelerateRegion build(java.util.Map<String, ?> map) throws Exception {
             CreateIpSetsRequestAccelerateRegion self = new CreateIpSetsRequestAccelerateRegion();
             return TeaModel.build(map, self);
@@ -90,6 +93,14 @@ public class CreateIpSetsRequest extends TeaModel {
         }
         public String getIpVersion() {
             return this.ipVersion;
+        }
+
+        public CreateIpSetsRequestAccelerateRegion setIspType(String ispType) {
+            this.ispType = ispType;
+            return this;
+        }
+        public String getIspType() {
+            return this.ispType;
         }
 
     }

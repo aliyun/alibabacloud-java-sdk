@@ -49,8 +49,14 @@ public class DescribeBandwidthPackageResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("State")
     public String state;
+
+    @NameInMap("Tags")
+    public java.util.List<DescribeBandwidthPackageResponseBodyTags> tags;
 
     @NameInMap("Type")
     public String type;
@@ -180,6 +186,14 @@ public class DescribeBandwidthPackageResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DescribeBandwidthPackageResponseBody setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public DescribeBandwidthPackageResponseBody setState(String state) {
         this.state = state;
         return this;
@@ -188,12 +202,50 @@ public class DescribeBandwidthPackageResponseBody extends TeaModel {
         return this.state;
     }
 
+    public DescribeBandwidthPackageResponseBody setTags(java.util.List<DescribeBandwidthPackageResponseBodyTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<DescribeBandwidthPackageResponseBodyTags> getTags() {
+        return this.tags;
+    }
+
     public DescribeBandwidthPackageResponseBody setType(String type) {
         this.type = type;
         return this;
     }
     public String getType() {
         return this.type;
+    }
+
+    public static class DescribeBandwidthPackageResponseBodyTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeBandwidthPackageResponseBodyTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeBandwidthPackageResponseBodyTags self = new DescribeBandwidthPackageResponseBodyTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeBandwidthPackageResponseBodyTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeBandwidthPackageResponseBodyTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

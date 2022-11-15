@@ -22,6 +22,9 @@ public class CreateAclRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static CreateAclRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAclRequest self = new CreateAclRequest();
         return TeaModel.build(map, self);
@@ -73,6 +76,14 @@ public class CreateAclRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public CreateAclRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public static class CreateAclRequestAclEntries extends TeaModel {

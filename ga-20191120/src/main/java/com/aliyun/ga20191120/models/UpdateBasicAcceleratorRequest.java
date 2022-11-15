@@ -4,23 +4,18 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class UpdateBasicAcceleratorRequest extends TeaModel {
-    // 全球加速实例Id
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
-    // 客户端Token
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // 全球加速实例描述
     @NameInMap("Description")
     public String description;
 
-    // 全球加速实例名称
     @NameInMap("Name")
     public String name;
 
-    // RegionId
     @NameInMap("RegionId")
     public String regionId;
 

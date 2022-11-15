@@ -52,6 +52,9 @@ public class DescribeListenerResponseBody extends TeaModel {
     @NameInMap("State")
     public String state;
 
+    @NameInMap("Type")
+    public String type;
+
     @NameInMap("XForwardedForConfig")
     public DescribeListenerResponseBodyXForwardedForConfig XForwardedForConfig;
 
@@ -186,6 +189,14 @@ public class DescribeListenerResponseBody extends TeaModel {
     }
     public String getState() {
         return this.state;
+    }
+
+    public DescribeListenerResponseBody setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
     public DescribeListenerResponseBody setXForwardedForConfig(DescribeListenerResponseBodyXForwardedForConfig XForwardedForConfig) {

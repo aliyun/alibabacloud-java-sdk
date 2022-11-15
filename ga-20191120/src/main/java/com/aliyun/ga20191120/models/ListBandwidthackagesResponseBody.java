@@ -64,6 +64,36 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListBandwidthackagesResponseBodyBandwidthPackagesTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListBandwidthackagesResponseBodyBandwidthPackagesTags build(java.util.Map<String, ?> map) throws Exception {
+            ListBandwidthackagesResponseBodyBandwidthPackagesTags self = new ListBandwidthackagesResponseBodyBandwidthPackagesTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListBandwidthackagesResponseBodyBandwidthPackagesTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListBandwidthackagesResponseBodyBandwidthPackagesTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListBandwidthackagesResponseBodyBandwidthPackages extends TeaModel {
         @NameInMap("Accelerators")
         public java.util.List<String> accelerators;
@@ -92,8 +122,14 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         @NameInMap("State")
         public String state;
+
+        @NameInMap("Tags")
+        public java.util.List<ListBandwidthackagesResponseBodyBandwidthPackagesTags> tags;
 
         public static ListBandwidthackagesResponseBodyBandwidthPackages build(java.util.Map<String, ?> map) throws Exception {
             ListBandwidthackagesResponseBodyBandwidthPackages self = new ListBandwidthackagesResponseBodyBandwidthPackages();
@@ -172,12 +208,28 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
             return this.regionId;
         }
 
+        public ListBandwidthackagesResponseBodyBandwidthPackages setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
         public ListBandwidthackagesResponseBodyBandwidthPackages setState(String state) {
             this.state = state;
             return this;
         }
         public String getState() {
             return this.state;
+        }
+
+        public ListBandwidthackagesResponseBodyBandwidthPackages setTags(java.util.List<ListBandwidthackagesResponseBodyBandwidthPackagesTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListBandwidthackagesResponseBodyBandwidthPackagesTags> getTags() {
+            return this.tags;
         }
 
     }

@@ -7,6 +7,9 @@ public class DescribeAcceleratorResponseBody extends TeaModel {
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
+    @NameInMap("BandwidthBillingType")
+    public String bandwidthBillingType;
+
     @NameInMap("BasicBandwidthPackage")
     public DescribeAcceleratorResponseBodyBasicBandwidthPackage basicBandwidthPackage;
 
@@ -18,6 +21,9 @@ public class DescribeAcceleratorResponseBody extends TeaModel {
 
     @NameInMap("CrossDomainBandwidthPackage")
     public DescribeAcceleratorResponseBodyCrossDomainBandwidthPackage crossDomainBandwidthPackage;
+
+    @NameInMap("CrossPrivateState")
+    public String crossPrivateState;
 
     @NameInMap("DdosId")
     public String ddosId;
@@ -46,6 +52,9 @@ public class DescribeAcceleratorResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("SecondDnsName")
     public String secondDnsName;
 
@@ -54,6 +63,9 @@ public class DescribeAcceleratorResponseBody extends TeaModel {
 
     @NameInMap("State")
     public String state;
+
+    @NameInMap("Tags")
+    public java.util.List<DescribeAcceleratorResponseBodyTags> tags;
 
     public static DescribeAcceleratorResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAcceleratorResponseBody self = new DescribeAcceleratorResponseBody();
@@ -66,6 +78,14 @@ public class DescribeAcceleratorResponseBody extends TeaModel {
     }
     public String getAcceleratorId() {
         return this.acceleratorId;
+    }
+
+    public DescribeAcceleratorResponseBody setBandwidthBillingType(String bandwidthBillingType) {
+        this.bandwidthBillingType = bandwidthBillingType;
+        return this;
+    }
+    public String getBandwidthBillingType() {
+        return this.bandwidthBillingType;
     }
 
     public DescribeAcceleratorResponseBody setBasicBandwidthPackage(DescribeAcceleratorResponseBodyBasicBandwidthPackage basicBandwidthPackage) {
@@ -98,6 +118,14 @@ public class DescribeAcceleratorResponseBody extends TeaModel {
     }
     public DescribeAcceleratorResponseBodyCrossDomainBandwidthPackage getCrossDomainBandwidthPackage() {
         return this.crossDomainBandwidthPackage;
+    }
+
+    public DescribeAcceleratorResponseBody setCrossPrivateState(String crossPrivateState) {
+        this.crossPrivateState = crossPrivateState;
+        return this;
+    }
+    public String getCrossPrivateState() {
+        return this.crossPrivateState;
     }
 
     public DescribeAcceleratorResponseBody setDdosId(String ddosId) {
@@ -172,6 +200,14 @@ public class DescribeAcceleratorResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DescribeAcceleratorResponseBody setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public DescribeAcceleratorResponseBody setSecondDnsName(String secondDnsName) {
         this.secondDnsName = secondDnsName;
         return this;
@@ -194,6 +230,14 @@ public class DescribeAcceleratorResponseBody extends TeaModel {
     }
     public String getState() {
         return this.state;
+    }
+
+    public DescribeAcceleratorResponseBody setTags(java.util.List<DescribeAcceleratorResponseBodyTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<DescribeAcceleratorResponseBodyTags> getTags() {
+        return this.tags;
     }
 
     public static class DescribeAcceleratorResponseBodyBasicBandwidthPackage extends TeaModel {
@@ -282,6 +326,36 @@ public class DescribeAcceleratorResponseBody extends TeaModel {
         }
         public String getAccessMode() {
             return this.accessMode;
+        }
+
+    }
+
+    public static class DescribeAcceleratorResponseBodyTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeAcceleratorResponseBodyTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAcceleratorResponseBodyTags self = new DescribeAcceleratorResponseBodyTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAcceleratorResponseBodyTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeAcceleratorResponseBodyTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

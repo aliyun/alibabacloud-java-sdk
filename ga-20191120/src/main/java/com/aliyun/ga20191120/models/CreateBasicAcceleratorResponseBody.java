@@ -4,15 +4,12 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class CreateBasicAcceleratorResponseBody extends TeaModel {
-    // 全球加速实例ID
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
-    // 订单Id
     @NameInMap("OrderId")
     public String orderId;
 
-    // 请求Id
     @NameInMap("RequestId")
     public String requestId;
 
