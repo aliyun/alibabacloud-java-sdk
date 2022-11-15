@@ -7,11 +7,29 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     @NameInMap("AliUid")
     public Long aliUid;
 
+    @NameInMap("ArbiterVSwitchId")
+    public String arbiterVSwitchId;
+
+    @NameInMap("ArbiterZoneId")
+    public String arbiterZoneId;
+
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
     @NameInMap("ColdStorage")
     public Integer coldStorage;
+
+    @NameInMap("CoreDiskCategory")
+    public String coreDiskCategory;
+
+    @NameInMap("CoreNum")
+    public Integer coreNum;
+
+    @NameInMap("CoreSingleStorage")
+    public Integer coreSingleStorage;
+
+    @NameInMap("CoreSpec")
+    public String coreSpec;
 
     @NameInMap("CreateMilliseconds")
     public Long createMilliseconds;
@@ -73,17 +91,38 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     @NameInMap("InstanceStorage")
     public String instanceStorage;
 
+    @NameInMap("LogDiskCategory")
+    public String logDiskCategory;
+
+    @NameInMap("LogNum")
+    public Integer logNum;
+
+    @NameInMap("LogSingleStorage")
+    public Integer logSingleStorage;
+
+    @NameInMap("LogSpec")
+    public String logSpec;
+
     @NameInMap("MaintainEndTime")
     public String maintainEndTime;
 
     @NameInMap("MaintainStartTime")
     public String maintainStartTime;
 
+    @NameInMap("MultiZoneCombination")
+    public String multiZoneCombination;
+
     @NameInMap("NetworkType")
     public String networkType;
 
     @NameInMap("PayType")
     public String payType;
+
+    @NameInMap("PrimaryVSwitchId")
+    public String primaryVSwitchId;
+
+    @NameInMap("PrimaryZoneId")
+    public String primaryZoneId;
 
     @NameInMap("RegionId")
     public String regionId;
@@ -96,6 +135,12 @@ public class GetLindormInstanceResponseBody extends TeaModel {
 
     @NameInMap("ServiceType")
     public String serviceType;
+
+    @NameInMap("StandbyVSwitchId")
+    public String standbyVSwitchId;
+
+    @NameInMap("StandbyZoneId")
+    public String standbyZoneId;
 
     @NameInMap("VpcId")
     public String vpcId;
@@ -119,6 +164,22 @@ public class GetLindormInstanceResponseBody extends TeaModel {
         return this.aliUid;
     }
 
+    public GetLindormInstanceResponseBody setArbiterVSwitchId(String arbiterVSwitchId) {
+        this.arbiterVSwitchId = arbiterVSwitchId;
+        return this;
+    }
+    public String getArbiterVSwitchId() {
+        return this.arbiterVSwitchId;
+    }
+
+    public GetLindormInstanceResponseBody setArbiterZoneId(String arbiterZoneId) {
+        this.arbiterZoneId = arbiterZoneId;
+        return this;
+    }
+    public String getArbiterZoneId() {
+        return this.arbiterZoneId;
+    }
+
     public GetLindormInstanceResponseBody setAutoRenew(Boolean autoRenew) {
         this.autoRenew = autoRenew;
         return this;
@@ -133,6 +194,38 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     }
     public Integer getColdStorage() {
         return this.coldStorage;
+    }
+
+    public GetLindormInstanceResponseBody setCoreDiskCategory(String coreDiskCategory) {
+        this.coreDiskCategory = coreDiskCategory;
+        return this;
+    }
+    public String getCoreDiskCategory() {
+        return this.coreDiskCategory;
+    }
+
+    public GetLindormInstanceResponseBody setCoreNum(Integer coreNum) {
+        this.coreNum = coreNum;
+        return this;
+    }
+    public Integer getCoreNum() {
+        return this.coreNum;
+    }
+
+    public GetLindormInstanceResponseBody setCoreSingleStorage(Integer coreSingleStorage) {
+        this.coreSingleStorage = coreSingleStorage;
+        return this;
+    }
+    public Integer getCoreSingleStorage() {
+        return this.coreSingleStorage;
+    }
+
+    public GetLindormInstanceResponseBody setCoreSpec(String coreSpec) {
+        this.coreSpec = coreSpec;
+        return this;
+    }
+    public String getCoreSpec() {
+        return this.coreSpec;
     }
 
     public GetLindormInstanceResponseBody setCreateMilliseconds(Long createMilliseconds) {
@@ -295,6 +388,38 @@ public class GetLindormInstanceResponseBody extends TeaModel {
         return this.instanceStorage;
     }
 
+    public GetLindormInstanceResponseBody setLogDiskCategory(String logDiskCategory) {
+        this.logDiskCategory = logDiskCategory;
+        return this;
+    }
+    public String getLogDiskCategory() {
+        return this.logDiskCategory;
+    }
+
+    public GetLindormInstanceResponseBody setLogNum(Integer logNum) {
+        this.logNum = logNum;
+        return this;
+    }
+    public Integer getLogNum() {
+        return this.logNum;
+    }
+
+    public GetLindormInstanceResponseBody setLogSingleStorage(Integer logSingleStorage) {
+        this.logSingleStorage = logSingleStorage;
+        return this;
+    }
+    public Integer getLogSingleStorage() {
+        return this.logSingleStorage;
+    }
+
+    public GetLindormInstanceResponseBody setLogSpec(String logSpec) {
+        this.logSpec = logSpec;
+        return this;
+    }
+    public String getLogSpec() {
+        return this.logSpec;
+    }
+
     public GetLindormInstanceResponseBody setMaintainEndTime(String maintainEndTime) {
         this.maintainEndTime = maintainEndTime;
         return this;
@@ -311,6 +436,14 @@ public class GetLindormInstanceResponseBody extends TeaModel {
         return this.maintainStartTime;
     }
 
+    public GetLindormInstanceResponseBody setMultiZoneCombination(String multiZoneCombination) {
+        this.multiZoneCombination = multiZoneCombination;
+        return this;
+    }
+    public String getMultiZoneCombination() {
+        return this.multiZoneCombination;
+    }
+
     public GetLindormInstanceResponseBody setNetworkType(String networkType) {
         this.networkType = networkType;
         return this;
@@ -325,6 +458,22 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     }
     public String getPayType() {
         return this.payType;
+    }
+
+    public GetLindormInstanceResponseBody setPrimaryVSwitchId(String primaryVSwitchId) {
+        this.primaryVSwitchId = primaryVSwitchId;
+        return this;
+    }
+    public String getPrimaryVSwitchId() {
+        return this.primaryVSwitchId;
+    }
+
+    public GetLindormInstanceResponseBody setPrimaryZoneId(String primaryZoneId) {
+        this.primaryZoneId = primaryZoneId;
+        return this;
+    }
+    public String getPrimaryZoneId() {
+        return this.primaryZoneId;
     }
 
     public GetLindormInstanceResponseBody setRegionId(String regionId) {
@@ -357,6 +506,22 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     }
     public String getServiceType() {
         return this.serviceType;
+    }
+
+    public GetLindormInstanceResponseBody setStandbyVSwitchId(String standbyVSwitchId) {
+        this.standbyVSwitchId = standbyVSwitchId;
+        return this;
+    }
+    public String getStandbyVSwitchId() {
+        return this.standbyVSwitchId;
+    }
+
+    public GetLindormInstanceResponseBody setStandbyZoneId(String standbyZoneId) {
+        this.standbyZoneId = standbyZoneId;
+        return this;
+    }
+    public String getStandbyZoneId() {
+        return this.standbyZoneId;
     }
 
     public GetLindormInstanceResponseBody setVpcId(String vpcId) {

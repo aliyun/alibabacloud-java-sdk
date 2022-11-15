@@ -4,8 +4,20 @@ package com.aliyun.hitsdb20200615.models;
 import com.aliyun.tea.*;
 
 public class CreateLindormInstanceRequest extends TeaModel {
+    @NameInMap("ArbiterVSwitchId")
+    public String arbiterVSwitchId;
+
+    @NameInMap("ArbiterZoneId")
+    public String arbiterZoneId;
+
+    @NameInMap("ArchVersion")
+    public String archVersion;
+
     @NameInMap("ColdStorage")
     public Integer coldStorage;
+
+    @NameInMap("CoreSingleStorage")
+    public Integer coreSingleStorage;
 
     @NameInMap("CoreSpec")
     public String coreSpec;
@@ -34,6 +46,21 @@ public class CreateLindormInstanceRequest extends TeaModel {
     @NameInMap("LindormSpec")
     public String lindormSpec;
 
+    @NameInMap("LogDiskCategory")
+    public String logDiskCategory;
+
+    @NameInMap("LogNum")
+    public Integer logNum;
+
+    @NameInMap("LogSingleStorage")
+    public Integer logSingleStorage;
+
+    @NameInMap("LogSpec")
+    public String logSpec;
+
+    @NameInMap("MultiZoneCombination")
+    public String multiZoneCombination;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -45,6 +72,12 @@ public class CreateLindormInstanceRequest extends TeaModel {
 
     @NameInMap("PricingCycle")
     public String pricingCycle;
+
+    @NameInMap("PrimaryVSwitchId")
+    public String primaryVSwitchId;
+
+    @NameInMap("PrimaryZoneId")
+    public String primaryZoneId;
 
     @NameInMap("RegionId")
     public String regionId;
@@ -67,6 +100,12 @@ public class CreateLindormInstanceRequest extends TeaModel {
     @NameInMap("SolrSpec")
     public String solrSpec;
 
+    @NameInMap("StandbyVSwitchId")
+    public String standbyVSwitchId;
+
+    @NameInMap("StandbyZoneId")
+    public String standbyZoneId;
+
     @NameInMap("TsdbNum")
     public Integer tsdbNum;
 
@@ -87,12 +126,44 @@ public class CreateLindormInstanceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateLindormInstanceRequest setArbiterVSwitchId(String arbiterVSwitchId) {
+        this.arbiterVSwitchId = arbiterVSwitchId;
+        return this;
+    }
+    public String getArbiterVSwitchId() {
+        return this.arbiterVSwitchId;
+    }
+
+    public CreateLindormInstanceRequest setArbiterZoneId(String arbiterZoneId) {
+        this.arbiterZoneId = arbiterZoneId;
+        return this;
+    }
+    public String getArbiterZoneId() {
+        return this.arbiterZoneId;
+    }
+
+    public CreateLindormInstanceRequest setArchVersion(String archVersion) {
+        this.archVersion = archVersion;
+        return this;
+    }
+    public String getArchVersion() {
+        return this.archVersion;
+    }
+
     public CreateLindormInstanceRequest setColdStorage(Integer coldStorage) {
         this.coldStorage = coldStorage;
         return this;
     }
     public Integer getColdStorage() {
         return this.coldStorage;
+    }
+
+    public CreateLindormInstanceRequest setCoreSingleStorage(Integer coreSingleStorage) {
+        this.coreSingleStorage = coreSingleStorage;
+        return this;
+    }
+    public Integer getCoreSingleStorage() {
+        return this.coreSingleStorage;
     }
 
     public CreateLindormInstanceRequest setCoreSpec(String coreSpec) {
@@ -167,6 +238,46 @@ public class CreateLindormInstanceRequest extends TeaModel {
         return this.lindormSpec;
     }
 
+    public CreateLindormInstanceRequest setLogDiskCategory(String logDiskCategory) {
+        this.logDiskCategory = logDiskCategory;
+        return this;
+    }
+    public String getLogDiskCategory() {
+        return this.logDiskCategory;
+    }
+
+    public CreateLindormInstanceRequest setLogNum(Integer logNum) {
+        this.logNum = logNum;
+        return this;
+    }
+    public Integer getLogNum() {
+        return this.logNum;
+    }
+
+    public CreateLindormInstanceRequest setLogSingleStorage(Integer logSingleStorage) {
+        this.logSingleStorage = logSingleStorage;
+        return this;
+    }
+    public Integer getLogSingleStorage() {
+        return this.logSingleStorage;
+    }
+
+    public CreateLindormInstanceRequest setLogSpec(String logSpec) {
+        this.logSpec = logSpec;
+        return this;
+    }
+    public String getLogSpec() {
+        return this.logSpec;
+    }
+
+    public CreateLindormInstanceRequest setMultiZoneCombination(String multiZoneCombination) {
+        this.multiZoneCombination = multiZoneCombination;
+        return this;
+    }
+    public String getMultiZoneCombination() {
+        return this.multiZoneCombination;
+    }
+
     public CreateLindormInstanceRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
@@ -197,6 +308,22 @@ public class CreateLindormInstanceRequest extends TeaModel {
     }
     public String getPricingCycle() {
         return this.pricingCycle;
+    }
+
+    public CreateLindormInstanceRequest setPrimaryVSwitchId(String primaryVSwitchId) {
+        this.primaryVSwitchId = primaryVSwitchId;
+        return this;
+    }
+    public String getPrimaryVSwitchId() {
+        return this.primaryVSwitchId;
+    }
+
+    public CreateLindormInstanceRequest setPrimaryZoneId(String primaryZoneId) {
+        this.primaryZoneId = primaryZoneId;
+        return this;
+    }
+    public String getPrimaryZoneId() {
+        return this.primaryZoneId;
     }
 
     public CreateLindormInstanceRequest setRegionId(String regionId) {
@@ -253,6 +380,22 @@ public class CreateLindormInstanceRequest extends TeaModel {
     }
     public String getSolrSpec() {
         return this.solrSpec;
+    }
+
+    public CreateLindormInstanceRequest setStandbyVSwitchId(String standbyVSwitchId) {
+        this.standbyVSwitchId = standbyVSwitchId;
+        return this;
+    }
+    public String getStandbyVSwitchId() {
+        return this.standbyVSwitchId;
+    }
+
+    public CreateLindormInstanceRequest setStandbyZoneId(String standbyZoneId) {
+        this.standbyZoneId = standbyZoneId;
+        return this;
+    }
+    public String getStandbyZoneId() {
+        return this.standbyZoneId;
     }
 
     public CreateLindormInstanceRequest setTsdbNum(Integer tsdbNum) {
