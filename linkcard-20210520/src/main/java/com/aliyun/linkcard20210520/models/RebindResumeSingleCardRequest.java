@@ -8,7 +8,7 @@ public class RebindResumeSingleCardRequest extends TeaModel {
     public String iccid;
 
     @NameInMap("OptMsisdns")
-    public java.util.Map<String, ?> optMsisdns;
+    public java.util.List<String> optMsisdns;
 
     public static RebindResumeSingleCardRequest build(java.util.Map<String, ?> map) throws Exception {
         RebindResumeSingleCardRequest self = new RebindResumeSingleCardRequest();
@@ -23,11 +23,11 @@ public class RebindResumeSingleCardRequest extends TeaModel {
         return this.iccid;
     }
 
-    public RebindResumeSingleCardRequest setOptMsisdns(java.util.Map<String, ?> optMsisdns) {
+    public RebindResumeSingleCardRequest setOptMsisdns(java.util.List<String> optMsisdns) {
         this.optMsisdns = optMsisdns;
         return this;
     }
-    public java.util.Map<String, ?> getOptMsisdns() {
+    public java.util.List<String> getOptMsisdns() {
         return this.optMsisdns;
     }
 
