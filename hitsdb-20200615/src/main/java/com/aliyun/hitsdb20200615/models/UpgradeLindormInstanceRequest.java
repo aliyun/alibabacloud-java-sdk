@@ -10,11 +10,8 @@ public class UpgradeLindormInstanceRequest extends TeaModel {
     @NameInMap("ColdStorage")
     public Integer coldStorage;
 
-    @NameInMap("CoreNum")
-    public Integer coreNum;
-
-    @NameInMap("CoreSpec")
-    public String coreSpec;
+    @NameInMap("CoreSingleStorage")
+    public Integer coreSingleStorage;
 
     @NameInMap("FilestoreNum")
     public Integer filestoreNum;
@@ -30,6 +27,15 @@ public class UpgradeLindormInstanceRequest extends TeaModel {
 
     @NameInMap("LindormSpec")
     public String lindormSpec;
+
+    @NameInMap("LogNum")
+    public Integer logNum;
+
+    @NameInMap("LogSingleStorage")
+    public Integer logSingleStorage;
+
+    @NameInMap("LogSpec")
+    public String logSpec;
 
     @NameInMap("LtsCoreNum")
     public Integer ltsCoreNum;
@@ -100,20 +106,12 @@ public class UpgradeLindormInstanceRequest extends TeaModel {
         return this.coldStorage;
     }
 
-    public UpgradeLindormInstanceRequest setCoreNum(Integer coreNum) {
-        this.coreNum = coreNum;
+    public UpgradeLindormInstanceRequest setCoreSingleStorage(Integer coreSingleStorage) {
+        this.coreSingleStorage = coreSingleStorage;
         return this;
     }
-    public Integer getCoreNum() {
-        return this.coreNum;
-    }
-
-    public UpgradeLindormInstanceRequest setCoreSpec(String coreSpec) {
-        this.coreSpec = coreSpec;
-        return this;
-    }
-    public String getCoreSpec() {
-        return this.coreSpec;
+    public Integer getCoreSingleStorage() {
+        return this.coreSingleStorage;
     }
 
     public UpgradeLindormInstanceRequest setFilestoreNum(Integer filestoreNum) {
@@ -154,6 +152,30 @@ public class UpgradeLindormInstanceRequest extends TeaModel {
     }
     public String getLindormSpec() {
         return this.lindormSpec;
+    }
+
+    public UpgradeLindormInstanceRequest setLogNum(Integer logNum) {
+        this.logNum = logNum;
+        return this;
+    }
+    public Integer getLogNum() {
+        return this.logNum;
+    }
+
+    public UpgradeLindormInstanceRequest setLogSingleStorage(Integer logSingleStorage) {
+        this.logSingleStorage = logSingleStorage;
+        return this;
+    }
+    public Integer getLogSingleStorage() {
+        return this.logSingleStorage;
+    }
+
+    public UpgradeLindormInstanceRequest setLogSpec(String logSpec) {
+        this.logSpec = logSpec;
+        return this;
+    }
+    public String getLogSpec() {
+        return this.logSpec;
     }
 
     public UpgradeLindormInstanceRequest setLtsCoreNum(Integer ltsCoreNum) {
