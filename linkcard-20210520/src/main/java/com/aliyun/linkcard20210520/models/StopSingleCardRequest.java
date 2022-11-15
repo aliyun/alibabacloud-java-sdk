@@ -8,7 +8,7 @@ public class StopSingleCardRequest extends TeaModel {
     public String iccid;
 
     @NameInMap("OptMsisdns")
-    public java.util.Map<String, ?> optMsisdns;
+    public java.util.List<String> optMsisdns;
 
     public static StopSingleCardRequest build(java.util.Map<String, ?> map) throws Exception {
         StopSingleCardRequest self = new StopSingleCardRequest();
@@ -23,11 +23,11 @@ public class StopSingleCardRequest extends TeaModel {
         return this.iccid;
     }
 
-    public StopSingleCardRequest setOptMsisdns(java.util.Map<String, ?> optMsisdns) {
+    public StopSingleCardRequest setOptMsisdns(java.util.List<String> optMsisdns) {
         this.optMsisdns = optMsisdns;
         return this;
     }
-    public java.util.Map<String, ?> getOptMsisdns() {
+    public java.util.List<String> getOptMsisdns() {
         return this.optMsisdns;
     }
 

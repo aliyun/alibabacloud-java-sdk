@@ -142,6 +142,12 @@ public class ListOrderResponseBody extends TeaModel {
         @NameInMap("AliFee")
         public String aliFee;
 
+        @NameInMap("ApnName")
+        public String apnName;
+
+        @NameInMap("ApnRegion")
+        public String apnRegion;
+
         @NameInMap("BillingCycle")
         public String billingCycle;
 
@@ -202,6 +208,9 @@ public class ListOrderResponseBody extends TeaModel {
         @NameInMap("PoolNo")
         public String poolNo;
 
+        @NameInMap("ResourceQuantity")
+        public Long resourceQuantity;
+
         @NameInMap("Vendor")
         public String vendor;
 
@@ -216,6 +225,22 @@ public class ListOrderResponseBody extends TeaModel {
         }
         public String getAliFee() {
             return this.aliFee;
+        }
+
+        public ListOrderResponseBodyDataList setApnName(String apnName) {
+            this.apnName = apnName;
+            return this;
+        }
+        public String getApnName() {
+            return this.apnName;
+        }
+
+        public ListOrderResponseBodyDataList setApnRegion(String apnRegion) {
+            this.apnRegion = apnRegion;
+            return this;
+        }
+        public String getApnRegion() {
+            return this.apnRegion;
         }
 
         public ListOrderResponseBodyDataList setBillingCycle(String billingCycle) {
@@ -376,6 +401,14 @@ public class ListOrderResponseBody extends TeaModel {
         }
         public String getPoolNo() {
             return this.poolNo;
+        }
+
+        public ListOrderResponseBodyDataList setResourceQuantity(Long resourceQuantity) {
+            this.resourceQuantity = resourceQuantity;
+            return this;
+        }
+        public Long getResourceQuantity() {
+            return this.resourceQuantity;
         }
 
         public ListOrderResponseBodyDataList setVendor(String vendor) {
