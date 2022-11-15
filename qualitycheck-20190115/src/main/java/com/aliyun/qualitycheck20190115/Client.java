@@ -2699,6 +2699,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.syncQualityCheckWithOptions(request, runtime);
     }
 
+    public TestRuleV4Response testRuleV4WithOptions(TestRuleV4Request request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.isSchemeData)) {
+            body.put("IsSchemeData", request.isSchemeData);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.testJson)) {
+            body.put("TestJson", request.testJson);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "TestRuleV4"),
+            new TeaPair("version", "2019-01-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TestRuleV4Response());
+    }
+
+    public TestRuleV4Response testRuleV4(TestRuleV4Request request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.testRuleV4WithOptions(request, runtime);
+    }
+
     public UpdateAsrVocabResponse updateAsrVocabWithOptions(UpdateAsrVocabRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
