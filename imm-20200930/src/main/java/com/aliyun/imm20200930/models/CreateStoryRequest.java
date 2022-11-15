@@ -4,6 +4,9 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateStoryRequest extends TeaModel {
+    @NameInMap("Address")
+    public AddressForStory address;
+
     @NameInMap("CustomId")
     public String customId;
 
@@ -52,6 +55,14 @@ public class CreateStoryRequest extends TeaModel {
     public static CreateStoryRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateStoryRequest self = new CreateStoryRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateStoryRequest setAddress(AddressForStory address) {
+        this.address = address;
+        return this;
+    }
+    public AddressForStory getAddress() {
+        return this.address;
     }
 
     public CreateStoryRequest setCustomId(String customId) {

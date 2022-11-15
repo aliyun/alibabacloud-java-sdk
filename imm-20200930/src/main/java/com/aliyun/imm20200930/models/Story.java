@@ -4,6 +4,9 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class Story extends TeaModel {
+    @NameInMap("Addresses")
+    public java.util.List<Address> addresses;
+
     @NameInMap("Cover")
     public File cover;
 
@@ -58,6 +61,14 @@ public class Story extends TeaModel {
     public static Story build(java.util.Map<String, ?> map) throws Exception {
         Story self = new Story();
         return TeaModel.build(map, self);
+    }
+
+    public Story setAddresses(java.util.List<Address> addresses) {
+        this.addresses = addresses;
+        return this;
+    }
+    public java.util.List<Address> getAddresses() {
+        return this.addresses;
     }
 
     public Story setCover(File cover) {
