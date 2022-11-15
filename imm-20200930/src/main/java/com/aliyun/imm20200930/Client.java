@@ -671,6 +671,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createDatasetWithOptions(request, runtime);
     }
 
+    public CreateDetectVideoLabelsTaskResponse createDetectVideoLabelsTaskWithOptions(CreateDetectVideoLabelsTaskRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateDetectVideoLabelsTaskShrinkRequest request = new CreateDetectVideoLabelsTaskShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.credentialConfig))) {
+            request.credentialConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.credentialConfig), "CredentialConfig", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tags)) {
+            request.tagsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tags, "Tags", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.credentialConfigShrink)) {
+            query.put("CredentialConfig", request.credentialConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.notifyTopicName)) {
+            query.put("NotifyTopicName", request.notifyTopicName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectName)) {
+            query.put("ProjectName", request.projectName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceURI)) {
+            query.put("SourceURI", request.sourceURI);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagsShrink)) {
+            query.put("Tags", request.tagsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userData)) {
+            query.put("UserData", request.userData);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateDetectVideoLabelsTask"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDetectVideoLabelsTaskResponse());
+    }
+
+    public CreateDetectVideoLabelsTaskResponse createDetectVideoLabelsTask(CreateDetectVideoLabelsTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createDetectVideoLabelsTaskWithOptions(request, runtime);
+    }
+
     public CreateFigureClusteringTaskResponse createFigureClusteringTaskWithOptions(CreateFigureClusteringTaskRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateFigureClusteringTaskShrinkRequest request = new CreateFigureClusteringTaskShrinkRequest();
@@ -1168,6 +1227,73 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createImageToPDFTaskWithOptions(request, runtime);
     }
 
+    public CreateLocationDateClusteringTaskResponse createLocationDateClusteringTaskWithOptions(CreateLocationDateClusteringTaskRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateLocationDateClusteringTaskShrinkRequest request = new CreateLocationDateClusteringTaskShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.dateOptions))) {
+            request.dateOptionsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.dateOptions), "DateOptions", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.locationOptions))) {
+            request.locationOptionsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.locationOptions), "LocationOptions", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tags)) {
+            request.tagsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tags, "Tags", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.datasetName)) {
+            query.put("DatasetName", request.datasetName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dateOptionsShrink)) {
+            query.put("DateOptions", request.dateOptionsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.locationOptionsShrink)) {
+            query.put("LocationOptions", request.locationOptionsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.notifyTopicName)) {
+            query.put("NotifyTopicName", request.notifyTopicName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectName)) {
+            query.put("ProjectName", request.projectName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagsShrink)) {
+            query.put("Tags", request.tagsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userData)) {
+            query.put("UserData", request.userData);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateLocationDateClusteringTask"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateLocationDateClusteringTaskResponse());
+    }
+
+    public CreateLocationDateClusteringTaskResponse createLocationDateClusteringTask(CreateLocationDateClusteringTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createLocationDateClusteringTaskWithOptions(request, runtime);
+    }
+
     public CreateMediaConvertTaskResponse createMediaConvertTaskWithOptions(CreateMediaConvertTaskRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateMediaConvertTaskShrinkRequest request = new CreateMediaConvertTaskShrinkRequest();
@@ -1578,6 +1704,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateStoryResponse createStory(CreateStoryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createStoryWithOptions(request, runtime);
+    }
+
+    public CreateVideoLabelClassificationTaskResponse createVideoLabelClassificationTaskWithOptions(CreateVideoLabelClassificationTaskRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateVideoLabelClassificationTaskShrinkRequest request = new CreateVideoLabelClassificationTaskShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.credentialConfig))) {
+            request.credentialConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.credentialConfig), "CredentialConfig", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tags)) {
+            request.tagsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tags, "Tags", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.credentialConfigShrink)) {
+            query.put("CredentialConfig", request.credentialConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.notifyTopicName)) {
+            query.put("NotifyTopicName", request.notifyTopicName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectName)) {
+            query.put("ProjectName", request.projectName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceURI)) {
+            query.put("SourceURI", request.sourceURI);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagsShrink)) {
+            query.put("Tags", request.tagsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userData)) {
+            query.put("UserData", request.userData);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateVideoLabelClassificationTask"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateVideoLabelClassificationTaskResponse());
+    }
+
+    public CreateVideoLabelClassificationTaskResponse createVideoLabelClassificationTask(CreateVideoLabelClassificationTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createVideoLabelClassificationTaskWithOptions(request, runtime);
     }
 
     public CreateVideoModerationTaskResponse createVideoModerationTaskWithOptions(CreateVideoModerationTaskRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2614,6 +2799,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetTaskResponse getTask(GetTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getTaskWithOptions(request, runtime);
+    }
+
+    public GetVideoLabelClassificationResultResponse getVideoLabelClassificationResultWithOptions(GetVideoLabelClassificationResultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.projectName)) {
+            query.put("ProjectName", request.projectName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("TaskId", request.taskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskType)) {
+            query.put("TaskType", request.taskType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetVideoLabelClassificationResult"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetVideoLabelClassificationResultResponse());
+    }
+
+    public GetVideoLabelClassificationResultResponse getVideoLabelClassificationResult(GetVideoLabelClassificationResultRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getVideoLabelClassificationResultWithOptions(request, runtime);
     }
 
     public GetVideoPlaylistResponse getVideoPlaylistWithOptions(GetVideoPlaylistRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
