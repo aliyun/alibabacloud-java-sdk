@@ -4,7 +4,6 @@ package com.aliyun.aiearth_engine20220609.models;
 import com.aliyun.tea.*;
 
 public class DeleteJobsShrinkRequest extends TeaModel {
-    // 任务Id
     @NameInMap("JobIds")
     public String jobIdsShrink;
 

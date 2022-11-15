@@ -47,6 +47,9 @@ public class GetJobsResponseBody extends TeaModel {
         @NameInMap("OutDataId")
         public Long outDataId;
 
+        @NameInMap("OutDataType")
+        public Integer outDataType;
+
         @NameInMap("OutDateType")
         public Integer outDateType;
 
@@ -105,6 +108,14 @@ public class GetJobsResponseBody extends TeaModel {
         }
         public Long getOutDataId() {
             return this.outDataId;
+        }
+
+        public GetJobsResponseBodyList setOutDataType(Integer outDataType) {
+            this.outDataType = outDataType;
+            return this;
+        }
+        public Integer getOutDataType() {
+            return this.outDataType;
         }
 
         public GetJobsResponseBodyList setOutDateType(Integer outDateType) {

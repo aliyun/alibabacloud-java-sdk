@@ -4,23 +4,18 @@ package com.aliyun.aiearth_engine20220609.models;
 import com.aliyun.tea.*;
 
 public class ListUserVectorDatasRequest extends TeaModel {
-    // 来源类型，个人上传：personal，任务结果：result
     @NameInMap("FromType")
     public String fromType;
 
-    // 名称
     @NameInMap("Name")
     public String name;
 
-    // 页码
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // 每页数量
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 上传日期
     @NameInMap("UploadDate")
     public String uploadDate;
 

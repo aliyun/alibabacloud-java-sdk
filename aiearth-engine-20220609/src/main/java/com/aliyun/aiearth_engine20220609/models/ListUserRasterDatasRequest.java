@@ -4,31 +4,24 @@ package com.aliyun.aiearth_engine20220609.models;
 import com.aliyun.tea.*;
 
 public class ListUserRasterDatasRequest extends TeaModel {
-    // 采集日期
     @NameInMap("AcquisitionDate")
     public String acquisitionDate;
 
-    // 来源类型，个人上传：personal，任务结果：result
     @NameInMap("FromType")
     public String fromType;
 
-    // 名称
     @NameInMap("Name")
     public String name;
 
-    // 页码
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // 每页数量
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 分辨率
     @NameInMap("Resolution")
     public Double resolution;
 
-    // 上传日期
     @NameInMap("UploadDate")
     public String uploadDate;
 

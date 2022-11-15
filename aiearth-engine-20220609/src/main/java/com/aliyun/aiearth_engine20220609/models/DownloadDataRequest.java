@@ -7,7 +7,6 @@ public class DownloadDataRequest extends TeaModel {
     @NameInMap("BandNo")
     public String bandNo;
 
-    // 需要下载数据的DataId
     @NameInMap("DataId")
     public String dataId;
 
