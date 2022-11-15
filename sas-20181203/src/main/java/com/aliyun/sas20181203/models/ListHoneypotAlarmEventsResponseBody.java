@@ -219,12 +219,6 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
-        @NameInMap("LastRowKey")
-        public String lastRowKey;
-
-        @NameInMap("NextToken")
-        public String nextToken;
-
         @NameInMap("PageSize")
         public Integer pageSize;
 
@@ -250,22 +244,6 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
         }
         public Integer getCurrentPage() {
             return this.currentPage;
-        }
-
-        public ListHoneypotAlarmEventsResponseBodyPageInfo setLastRowKey(String lastRowKey) {
-            this.lastRowKey = lastRowKey;
-            return this;
-        }
-        public String getLastRowKey() {
-            return this.lastRowKey;
-        }
-
-        public ListHoneypotAlarmEventsResponseBodyPageInfo setNextToken(String nextToken) {
-            this.nextToken = nextToken;
-            return this;
-        }
-        public String getNextToken() {
-            return this.nextToken;
         }
 
         public ListHoneypotAlarmEventsResponseBodyPageInfo setPageSize(Integer pageSize) {
