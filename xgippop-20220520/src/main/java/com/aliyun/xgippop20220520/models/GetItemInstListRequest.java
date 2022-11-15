@@ -19,6 +19,9 @@ public class GetItemInstListRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("Status")
+    public String status;
+
     @NameInMap("UId")
     public Long UId;
 
@@ -65,6 +68,14 @@ public class GetItemInstListRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public GetItemInstListRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
     public GetItemInstListRequest setUId(Long UId) {

@@ -94,6 +94,9 @@ public class QueryOrderListResponseBody extends TeaModel {
         @NameInMap("OrderTime")
         public String orderTime;
 
+        @NameInMap("OutBizNo")
+        public String outBizNo;
+
         @NameInMap("ProductId")
         public String productId;
 
@@ -154,6 +157,14 @@ public class QueryOrderListResponseBody extends TeaModel {
         }
         public String getOrderTime() {
             return this.orderTime;
+        }
+
+        public QueryOrderListResponseBodyDataList setOutBizNo(String outBizNo) {
+            this.outBizNo = outBizNo;
+            return this;
+        }
+        public String getOutBizNo() {
+            return this.outBizNo;
         }
 
         public QueryOrderListResponseBodyDataList setProductId(String productId) {

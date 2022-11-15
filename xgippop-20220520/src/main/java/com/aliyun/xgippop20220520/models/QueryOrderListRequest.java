@@ -16,6 +16,12 @@ public class QueryOrderListRequest extends TeaModel {
     @NameInMap("Mobile")
     public String mobile;
 
+    @NameInMap("OrderTime")
+    public String orderTime;
+
+    @NameInMap("OutBizNo")
+    public String outBizNo;
+
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -57,6 +63,22 @@ public class QueryOrderListRequest extends TeaModel {
     }
     public String getMobile() {
         return this.mobile;
+    }
+
+    public QueryOrderListRequest setOrderTime(String orderTime) {
+        this.orderTime = orderTime;
+        return this;
+    }
+    public String getOrderTime() {
+        return this.orderTime;
+    }
+
+    public QueryOrderListRequest setOutBizNo(String outBizNo) {
+        this.outBizNo = outBizNo;
+        return this;
+    }
+    public String getOutBizNo() {
+        return this.outBizNo;
     }
 
     public QueryOrderListRequest setPageSize(Integer pageSize) {

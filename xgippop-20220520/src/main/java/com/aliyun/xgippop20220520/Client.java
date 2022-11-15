@@ -79,6 +79,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ChargeFlowResponse chargeFlowWithOptions(ChargeFlowRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.channelCode)) {
+            query.put("ChannelCode", request.channelCode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }
@@ -89,6 +93,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.mobile)) {
             query.put("Mobile", request.mobile);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderTime)) {
+            query.put("OrderTime", request.orderTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outBizNo)) {
+            query.put("OutBizNo", request.outBizNo);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.UId)) {
@@ -890,55 +902,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.saveApplicationInfoWithOptions(request, runtime);
     }
 
-    public SdkChargeFlowResponse sdkChargeFlowWithOptions(SdkChargeFlowRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.channelCode)) {
-            query.put("ChannelCode", request.channelCode);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
-            query.put("InstanceId", request.instanceId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.itemCode)) {
-            query.put("ItemCode", request.itemCode);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.mobile)) {
-            query.put("Mobile", request.mobile);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.outBizNo)) {
-            query.put("OutBizNo", request.outBizNo);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.UId)) {
-            query.put("UId", request.UId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "SdkChargeFlow"),
-            new TeaPair("version", "2022-05-20"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new SdkChargeFlowResponse());
-    }
-
-    public SdkChargeFlowResponse sdkChargeFlow(SdkChargeFlowRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.sdkChargeFlowWithOptions(request, runtime);
-    }
-
     public SdkGetInventoryInfoResponse sdkGetInventoryInfoWithOptions(SdkGetInventoryInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -962,31 +925,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SdkGetInventoryInfoResponse sdkGetInventoryInfo(SdkGetInventoryInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.sdkGetInventoryInfoWithOptions(request, runtime);
-    }
-
-    public SdkGetItemInstListResponse sdkGetItemInstListWithOptions(SdkGetItemInstListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "SdkGetItemInstList"),
-            new TeaPair("version", "2022-05-20"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "GET"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new SdkGetItemInstListResponse());
-    }
-
-    public SdkGetItemInstListResponse sdkGetItemInstList(SdkGetItemInstListRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.sdkGetItemInstListWithOptions(request, runtime);
     }
 
     public SdkOrderQosProductResponse sdkOrderQosProductWithOptions(SdkOrderQosProductRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
