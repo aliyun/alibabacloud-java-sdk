@@ -4,61 +4,59 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class GetBasicAcceleratorResponseBody extends TeaModel {
-    // 全球加速实例Id
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
-    // 绑定的基础带宽包
+    @NameInMap("BandwidthBillingType")
+    public String bandwidthBillingType;
+
     @NameInMap("BasicBandwidthPackage")
     public GetBasicAcceleratorResponseBodyBasicBandwidthPackage basicBandwidthPackage;
 
-    // 全球加速实例下车点Id
     @NameInMap("BasicEndpointGroupId")
     public String basicEndpointGroupId;
 
-    // 全球加速实例上车点Id
     @NameInMap("BasicIpSetId")
     public String basicIpSetId;
 
-    // 使用的云企业网Id
     @NameInMap("CenId")
     public String cenId;
 
-    // 全球加速实例创建时间
     @NameInMap("CreateTime")
     public Long createTime;
 
-    // 绑定的跨境带宽包
     @NameInMap("CrossDomainBandwidthPackage")
     public GetBasicAcceleratorResponseBodyCrossDomainBandwidthPackage crossDomainBandwidthPackage;
 
-    // 全球加速实例描述
+    @NameInMap("CrossPrivateState")
+    public String crossPrivateState;
+
     @NameInMap("Description")
     public String description;
 
-    // 到期时间
     @NameInMap("ExpiredTime")
     public Long expiredTime;
 
-    // 全球加速实例收费类型
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
 
-    // 全球加速实例名称
     @NameInMap("Name")
     public String name;
 
-    // RegionId
     @NameInMap("RegionId")
     public String regionId;
 
-    // 请求Id
     @NameInMap("RequestId")
     public String requestId;
 
-    // 实例状态
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("State")
     public String state;
+
+    @NameInMap("Tags")
+    public java.util.List<GetBasicAcceleratorResponseBodyTags> tags;
 
     public static GetBasicAcceleratorResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetBasicAcceleratorResponseBody self = new GetBasicAcceleratorResponseBody();
@@ -71,6 +69,14 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
     }
     public String getAcceleratorId() {
         return this.acceleratorId;
+    }
+
+    public GetBasicAcceleratorResponseBody setBandwidthBillingType(String bandwidthBillingType) {
+        this.bandwidthBillingType = bandwidthBillingType;
+        return this;
+    }
+    public String getBandwidthBillingType() {
+        return this.bandwidthBillingType;
     }
 
     public GetBasicAcceleratorResponseBody setBasicBandwidthPackage(GetBasicAcceleratorResponseBodyBasicBandwidthPackage basicBandwidthPackage) {
@@ -121,6 +127,14 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
         return this.crossDomainBandwidthPackage;
     }
 
+    public GetBasicAcceleratorResponseBody setCrossPrivateState(String crossPrivateState) {
+        this.crossPrivateState = crossPrivateState;
+        return this;
+    }
+    public String getCrossPrivateState() {
+        return this.crossPrivateState;
+    }
+
     public GetBasicAcceleratorResponseBody setDescription(String description) {
         this.description = description;
         return this;
@@ -169,6 +183,14 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public GetBasicAcceleratorResponseBody setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public GetBasicAcceleratorResponseBody setState(String state) {
         this.state = state;
         return this;
@@ -177,16 +199,21 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
         return this.state;
     }
 
+    public GetBasicAcceleratorResponseBody setTags(java.util.List<GetBasicAcceleratorResponseBodyTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<GetBasicAcceleratorResponseBodyTags> getTags() {
+        return this.tags;
+    }
+
     public static class GetBasicAcceleratorResponseBodyBasicBandwidthPackage extends TeaModel {
-        // 基础带宽包带宽
         @NameInMap("Bandwidth")
         public Integer bandwidth;
 
-        // 基础带宽包类型
         @NameInMap("BandwidthType")
         public String bandwidthType;
 
-        // 基础带宽包Id
         @NameInMap("InstanceId")
         public String instanceId;
 
@@ -222,11 +249,9 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
     }
 
     public static class GetBasicAcceleratorResponseBodyCrossDomainBandwidthPackage extends TeaModel {
-        // 跨境带宽包带宽
         @NameInMap("Bandwidth")
         public Integer bandwidth;
 
-        // 跨境带宽包Id
         @NameInMap("InstanceId")
         public String instanceId;
 
@@ -249,6 +274,36 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+    }
+
+    public static class GetBasicAcceleratorResponseBodyTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static GetBasicAcceleratorResponseBodyTags build(java.util.Map<String, ?> map) throws Exception {
+            GetBasicAcceleratorResponseBodyTags self = new GetBasicAcceleratorResponseBodyTags();
+            return TeaModel.build(map, self);
+        }
+
+        public GetBasicAcceleratorResponseBodyTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public GetBasicAcceleratorResponseBodyTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

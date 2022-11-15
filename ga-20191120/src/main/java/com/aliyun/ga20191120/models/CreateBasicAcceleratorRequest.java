@@ -4,37 +4,35 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class CreateBasicAcceleratorRequest extends TeaModel {
-    // 自动续费
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
-    // 自动续费
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
-    // 续费周期
     @NameInMap("AutoRenewDuration")
     public Integer autoRenewDuration;
 
-    // 自动使用优惠券
     @NameInMap("AutoUseCoupon")
     public String autoUseCoupon;
 
-    // 客户端Token
+    @NameInMap("BandwidthBillingType")
+    public String bandwidthBillingType;
+
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // 购买时长
     @NameInMap("Duration")
     public Integer duration;
 
-    // 时长单位
     @NameInMap("PricingCycle")
     public String pricingCycle;
 
-    // RegionId
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     public static CreateBasicAcceleratorRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateBasicAcceleratorRequest self = new CreateBasicAcceleratorRequest();
@@ -73,6 +71,14 @@ public class CreateBasicAcceleratorRequest extends TeaModel {
         return this.autoUseCoupon;
     }
 
+    public CreateBasicAcceleratorRequest setBandwidthBillingType(String bandwidthBillingType) {
+        this.bandwidthBillingType = bandwidthBillingType;
+        return this;
+    }
+    public String getBandwidthBillingType() {
+        return this.bandwidthBillingType;
+    }
+
     public CreateBasicAcceleratorRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -103,6 +109,14 @@ public class CreateBasicAcceleratorRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public CreateBasicAcceleratorRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

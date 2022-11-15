@@ -16,8 +16,14 @@ public class ListBandwidthPackagesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("State")
     public String state;
+
+    @NameInMap("Tag")
+    public java.util.List<ListBandwidthPackagesRequestTag> tag;
 
     @NameInMap("Type")
     public String type;
@@ -59,6 +65,14 @@ public class ListBandwidthPackagesRequest extends TeaModel {
         return this.regionId;
     }
 
+    public ListBandwidthPackagesRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public ListBandwidthPackagesRequest setState(String state) {
         this.state = state;
         return this;
@@ -67,12 +81,50 @@ public class ListBandwidthPackagesRequest extends TeaModel {
         return this.state;
     }
 
+    public ListBandwidthPackagesRequest setTag(java.util.List<ListBandwidthPackagesRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<ListBandwidthPackagesRequestTag> getTag() {
+        return this.tag;
+    }
+
     public ListBandwidthPackagesRequest setType(String type) {
         this.type = type;
         return this;
     }
     public String getType() {
         return this.type;
+    }
+
+    public static class ListBandwidthPackagesRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListBandwidthPackagesRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            ListBandwidthPackagesRequestTag self = new ListBandwidthPackagesRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public ListBandwidthPackagesRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListBandwidthPackagesRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

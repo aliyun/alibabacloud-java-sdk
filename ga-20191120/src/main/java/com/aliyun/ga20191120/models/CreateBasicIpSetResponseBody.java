@@ -4,11 +4,9 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class CreateBasicIpSetResponseBody extends TeaModel {
-    // 加速地域接入点Id
     @NameInMap("IpSetId")
     public String ipSetId;
 
-    // 请求Id
     @NameInMap("RequestId")
     public String requestId;
 

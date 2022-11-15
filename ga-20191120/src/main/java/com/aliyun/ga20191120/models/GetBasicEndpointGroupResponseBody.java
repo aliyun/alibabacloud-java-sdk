@@ -4,39 +4,33 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class GetBasicEndpointGroupResponseBody extends TeaModel {
-    // 全球加速实例Id
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
-    // 终端节点组描述
     @NameInMap("Description")
     public String description;
 
-    // 终端节点组地址
     @NameInMap("EndpointAddress")
     public String endpointAddress;
 
-    // 终端节点组Id
     @NameInMap("EndpointGroupId")
     public String endpointGroupId;
 
-    // 终端节点组所在地域
     @NameInMap("EndpointGroupRegion")
     public String endpointGroupRegion;
 
-    // 终端节点类型
+    @NameInMap("EndpointSubAddress")
+    public String endpointSubAddress;
+
     @NameInMap("EndpointType")
     public String endpointType;
 
-    // 终端节点组名称
     @NameInMap("Name")
     public String name;
 
-    // 请求Id
     @NameInMap("RequestId")
     public String requestId;
 
-    // 终端节点组状态
     @NameInMap("State")
     public String state;
 
@@ -83,6 +77,14 @@ public class GetBasicEndpointGroupResponseBody extends TeaModel {
     }
     public String getEndpointGroupRegion() {
         return this.endpointGroupRegion;
+    }
+
+    public GetBasicEndpointGroupResponseBody setEndpointSubAddress(String endpointSubAddress) {
+        this.endpointSubAddress = endpointSubAddress;
+        return this;
+    }
+    public String getEndpointSubAddress() {
+        return this.endpointSubAddress;
     }
 
     public GetBasicEndpointGroupResponseBody setEndpointType(String endpointType) {

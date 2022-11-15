@@ -10,7 +10,6 @@ public class DissociateAclsFromListenerResponseBody extends TeaModel {
     @NameInMap("ListenerId")
     public String listenerId;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

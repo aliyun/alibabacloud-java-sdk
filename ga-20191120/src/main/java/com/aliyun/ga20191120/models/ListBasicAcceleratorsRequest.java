@@ -4,25 +4,26 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class ListBasicAcceleratorsRequest extends TeaModel {
-    // 全球加速实例Id
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
-    // 分页页码
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // 分页大小
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // RegionId
     @NameInMap("RegionId")
     public String regionId;
 
-    // 全球加速实例状态
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("State")
     public String state;
+
+    @NameInMap("Tag")
+    public java.util.List<ListBasicAcceleratorsRequestTag> tag;
 
     public static ListBasicAcceleratorsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListBasicAcceleratorsRequest self = new ListBasicAcceleratorsRequest();
@@ -61,12 +62,58 @@ public class ListBasicAcceleratorsRequest extends TeaModel {
         return this.regionId;
     }
 
+    public ListBasicAcceleratorsRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public ListBasicAcceleratorsRequest setState(String state) {
         this.state = state;
         return this;
     }
     public String getState() {
         return this.state;
+    }
+
+    public ListBasicAcceleratorsRequest setTag(java.util.List<ListBasicAcceleratorsRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<ListBasicAcceleratorsRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class ListBasicAcceleratorsRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListBasicAcceleratorsRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            ListBasicAcceleratorsRequestTag self = new ListBasicAcceleratorsRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public ListBasicAcceleratorsRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListBasicAcceleratorsRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

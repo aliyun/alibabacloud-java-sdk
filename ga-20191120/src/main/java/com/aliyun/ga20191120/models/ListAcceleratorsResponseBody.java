@@ -136,7 +136,6 @@ public class ListAcceleratorsResponseBody extends TeaModel {
     }
 
     public static class ListAcceleratorsResponseBodyAcceleratorsIpSetConfig extends TeaModel {
-        // 加速区接入方式
         @NameInMap("AccessMode")
         public String accessMode;
 
@@ -155,12 +154,45 @@ public class ListAcceleratorsResponseBody extends TeaModel {
 
     }
 
+    public static class ListAcceleratorsResponseBodyAcceleratorsTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListAcceleratorsResponseBodyAcceleratorsTags build(java.util.Map<String, ?> map) throws Exception {
+            ListAcceleratorsResponseBodyAcceleratorsTags self = new ListAcceleratorsResponseBodyAcceleratorsTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListAcceleratorsResponseBodyAcceleratorsTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListAcceleratorsResponseBodyAcceleratorsTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListAcceleratorsResponseBodyAccelerators extends TeaModel {
         @NameInMap("AcceleratorId")
         public String acceleratorId;
 
         @NameInMap("Bandwidth")
         public Integer bandwidth;
+
+        @NameInMap("BandwidthBillingType")
+        public String bandwidthBillingType;
 
         @NameInMap("BasicBandwidthPackage")
         public ListAcceleratorsResponseBodyAcceleratorsBasicBandwidthPackage basicBandwidthPackage;
@@ -189,7 +221,6 @@ public class ListAcceleratorsResponseBody extends TeaModel {
         @NameInMap("InstanceChargeType")
         public String instanceChargeType;
 
-        // 加速区配置
         @NameInMap("IpSetConfig")
         public ListAcceleratorsResponseBodyAcceleratorsIpSetConfig ipSetConfig;
 
@@ -199,6 +230,9 @@ public class ListAcceleratorsResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         @NameInMap("SecondDnsName")
         public String secondDnsName;
 
@@ -207,6 +241,9 @@ public class ListAcceleratorsResponseBody extends TeaModel {
 
         @NameInMap("State")
         public String state;
+
+        @NameInMap("Tags")
+        public java.util.List<ListAcceleratorsResponseBodyAcceleratorsTags> tags;
 
         @NameInMap("Type")
         public String type;
@@ -230,6 +267,14 @@ public class ListAcceleratorsResponseBody extends TeaModel {
         }
         public Integer getBandwidth() {
             return this.bandwidth;
+        }
+
+        public ListAcceleratorsResponseBodyAccelerators setBandwidthBillingType(String bandwidthBillingType) {
+            this.bandwidthBillingType = bandwidthBillingType;
+            return this;
+        }
+        public String getBandwidthBillingType() {
+            return this.bandwidthBillingType;
         }
 
         public ListAcceleratorsResponseBodyAccelerators setBasicBandwidthPackage(ListAcceleratorsResponseBodyAcceleratorsBasicBandwidthPackage basicBandwidthPackage) {
@@ -328,6 +373,14 @@ public class ListAcceleratorsResponseBody extends TeaModel {
             return this.regionId;
         }
 
+        public ListAcceleratorsResponseBodyAccelerators setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
         public ListAcceleratorsResponseBodyAccelerators setSecondDnsName(String secondDnsName) {
             this.secondDnsName = secondDnsName;
             return this;
@@ -350,6 +403,14 @@ public class ListAcceleratorsResponseBody extends TeaModel {
         }
         public String getState() {
             return this.state;
+        }
+
+        public ListAcceleratorsResponseBodyAccelerators setTags(java.util.List<ListAcceleratorsResponseBodyAcceleratorsTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListAcceleratorsResponseBodyAcceleratorsTags> getTags() {
+            return this.tags;
         }
 
         public ListAcceleratorsResponseBodyAccelerators setType(String type) {

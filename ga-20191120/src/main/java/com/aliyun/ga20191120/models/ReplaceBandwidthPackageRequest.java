@@ -4,6 +4,9 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class ReplaceBandwidthPackageRequest extends TeaModel {
+    @NameInMap("AcceleratorId")
+    public String acceleratorId;
+
     @NameInMap("BandwidthPackageId")
     public String bandwidthPackageId;
 
@@ -16,6 +19,14 @@ public class ReplaceBandwidthPackageRequest extends TeaModel {
     public static ReplaceBandwidthPackageRequest build(java.util.Map<String, ?> map) throws Exception {
         ReplaceBandwidthPackageRequest self = new ReplaceBandwidthPackageRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ReplaceBandwidthPackageRequest setAcceleratorId(String acceleratorId) {
+        this.acceleratorId = acceleratorId;
+        return this;
+    }
+    public String getAcceleratorId() {
+        return this.acceleratorId;
     }
 
     public ReplaceBandwidthPackageRequest setBandwidthPackageId(String bandwidthPackageId) {

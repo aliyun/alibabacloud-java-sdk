@@ -4,7 +4,6 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class ListSpareIpsResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

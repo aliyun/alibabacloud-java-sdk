@@ -52,6 +52,9 @@ public class CreateIpSetsResponseBody extends TeaModel {
         @NameInMap("IpSetId")
         public String ipSetId;
 
+        @NameInMap("IspType")
+        public String ispType;
+
         public static CreateIpSetsResponseBodyIpSets build(java.util.Map<String, ?> map) throws Exception {
             CreateIpSetsResponseBodyIpSets self = new CreateIpSetsResponseBodyIpSets();
             return TeaModel.build(map, self);
@@ -79,6 +82,14 @@ public class CreateIpSetsResponseBody extends TeaModel {
         }
         public String getIpSetId() {
             return this.ipSetId;
+        }
+
+        public CreateIpSetsResponseBodyIpSets setIspType(String ispType) {
+            this.ispType = ispType;
+            return this;
+        }
+        public String getIspType() {
+            return this.ispType;
         }
 
     }

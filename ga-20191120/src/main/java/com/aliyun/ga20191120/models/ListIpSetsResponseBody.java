@@ -80,6 +80,9 @@ public class ListIpSetsResponseBody extends TeaModel {
         @NameInMap("IpVersion")
         public String ipVersion;
 
+        @NameInMap("IspType")
+        public String ispType;
+
         @NameInMap("State")
         public String state;
 
@@ -126,6 +129,14 @@ public class ListIpSetsResponseBody extends TeaModel {
         }
         public String getIpVersion() {
             return this.ipVersion;
+        }
+
+        public ListIpSetsResponseBodyIpSets setIspType(String ispType) {
+            this.ispType = ispType;
+            return this;
+        }
+        public String getIspType() {
+            return this.ispType;
         }
 
         public ListIpSetsResponseBodyIpSets setState(String state) {

@@ -74,6 +74,9 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
         @NameInMap("IsDefault")
         public Boolean isDefault;
 
+        @NameInMap("State")
+        public String state;
+
         public static ListListenerCertificatesResponseBodyCertificates build(java.util.Map<String, ?> map) throws Exception {
             ListListenerCertificatesResponseBodyCertificates self = new ListListenerCertificatesResponseBodyCertificates();
             return TeaModel.build(map, self);
@@ -101,6 +104,14 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
         }
         public Boolean getIsDefault() {
             return this.isDefault;
+        }
+
+        public ListListenerCertificatesResponseBodyCertificates setState(String state) {
+            this.state = state;
+            return this;
+        }
+        public String getState() {
+            return this.state;
         }
 
     }

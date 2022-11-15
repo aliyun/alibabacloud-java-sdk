@@ -4,11 +4,9 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class DeleteBasicEndpointGroupRequest extends TeaModel {
-    // 客户端Token
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // 终端节点组Id
     @NameInMap("EndpointGroupId")
     public String endpointGroupId;
 

@@ -4,7 +4,6 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class UpdateBasicEndpointGroupResponseBody extends TeaModel {
-    // 请求Id
     @NameInMap("RequestId")
     public String requestId;
 

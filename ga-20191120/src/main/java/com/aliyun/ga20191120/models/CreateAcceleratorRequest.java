@@ -16,6 +16,9 @@ public class CreateAcceleratorRequest extends TeaModel {
     @NameInMap("AutoUseCoupon")
     public String autoUseCoupon;
 
+    @NameInMap("BandwidthBillingType")
+    public String bandwidthBillingType;
+
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -33,6 +36,9 @@ public class CreateAcceleratorRequest extends TeaModel {
 
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     @NameInMap("Spec")
     public String spec;
@@ -72,6 +78,14 @@ public class CreateAcceleratorRequest extends TeaModel {
     }
     public String getAutoUseCoupon() {
         return this.autoUseCoupon;
+    }
+
+    public CreateAcceleratorRequest setBandwidthBillingType(String bandwidthBillingType) {
+        this.bandwidthBillingType = bandwidthBillingType;
+        return this;
+    }
+    public String getBandwidthBillingType() {
+        return this.bandwidthBillingType;
     }
 
     public CreateAcceleratorRequest setClientToken(String clientToken) {
@@ -120,6 +134,14 @@ public class CreateAcceleratorRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public CreateAcceleratorRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public CreateAcceleratorRequest setSpec(String spec) {

@@ -64,6 +64,36 @@ public class ListBandwidthPackagesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListBandwidthPackagesResponseBodyBandwidthPackagesTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListBandwidthPackagesResponseBodyBandwidthPackagesTags build(java.util.Map<String, ?> map) throws Exception {
+            ListBandwidthPackagesResponseBodyBandwidthPackagesTags self = new ListBandwidthPackagesResponseBodyBandwidthPackagesTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListBandwidthPackagesResponseBodyBandwidthPackagesTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListBandwidthPackagesResponseBodyBandwidthPackagesTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListBandwidthPackagesResponseBodyBandwidthPackages extends TeaModel {
         @NameInMap("Accelerators")
         public java.util.List<String> accelerators;
@@ -107,8 +137,14 @@ public class ListBandwidthPackagesResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         @NameInMap("State")
         public String state;
+
+        @NameInMap("Tags")
+        public java.util.List<ListBandwidthPackagesResponseBodyBandwidthPackagesTags> tags;
 
         @NameInMap("Type")
         public String type;
@@ -230,12 +266,28 @@ public class ListBandwidthPackagesResponseBody extends TeaModel {
             return this.regionId;
         }
 
+        public ListBandwidthPackagesResponseBodyBandwidthPackages setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
         public ListBandwidthPackagesResponseBodyBandwidthPackages setState(String state) {
             this.state = state;
             return this;
         }
         public String getState() {
             return this.state;
+        }
+
+        public ListBandwidthPackagesResponseBodyBandwidthPackages setTags(java.util.List<ListBandwidthPackagesResponseBodyBandwidthPackagesTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListBandwidthPackagesResponseBodyBandwidthPackagesTags> getTags() {
+            return this.tags;
         }
 
         public ListBandwidthPackagesResponseBodyBandwidthPackages setType(String type) {
