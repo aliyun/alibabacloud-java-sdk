@@ -1,3 +1,6 @@
+2022-11-16 Version: 1.0.3
+- Update goodstech.
+
 2022-10-24 Version: 1.0.2
 - Update goodstech.
 
