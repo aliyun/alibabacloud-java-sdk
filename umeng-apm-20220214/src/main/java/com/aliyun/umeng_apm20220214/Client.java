@@ -3,16 +3,10 @@ package com.aliyun.umeng_apm20220214;
 
 import com.aliyun.tea.*;
 import com.aliyun.umeng_apm20220214.models.*;
-import com.aliyun.teautil.*;
-import com.aliyun.teautil.models.*;
-import com.aliyun.teaopenapi.*;
-import com.aliyun.teaopenapi.models.*;
-import com.aliyun.openapiutil.*;
-import com.aliyun.endpointutil.*;
 
 public class Client extends com.aliyun.teaopenapi.Client {
 
-    public Client(Config config) throws Exception {
+    public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "";
         this.checkConfig(config);
@@ -33,12 +27,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public GetStatTrendResponse getStatTrend(GetStatTrendRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getStatTrendWithOptions(request, headers, runtime);
     }
 
-    public GetStatTrendResponse getStatTrendWithOptions(GetStatTrendRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public GetStatTrendResponse getStatTrendWithOptions(GetStatTrendRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.appVersion)) {
@@ -61,11 +55,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("type", request.type);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetStatTrend"),
             new TeaPair("version", "2022-02-14"),
             new TeaPair("protocol", "HTTPS"),
@@ -80,12 +74,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public GetSymUploadParamResponse getSymUploadParam(GetSymUploadParamRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getSymUploadParamWithOptions(request, headers, runtime);
     }
 
-    public GetSymUploadParamResponse getSymUploadParamWithOptions(GetSymUploadParamRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public GetSymUploadParamResponse getSymUploadParamWithOptions(GetSymUploadParamRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.appVersion)) {
@@ -104,11 +98,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("fileType", request.fileType);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetSymUploadParam"),
             new TeaPair("version", "2022-02-14"),
             new TeaPair("protocol", "HTTPS"),
@@ -123,12 +117,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public GetTodayStatTrendResponse getTodayStatTrend(GetTodayStatTrendRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getTodayStatTrendWithOptions(request, headers, runtime);
     }
 
-    public GetTodayStatTrendResponse getTodayStatTrendWithOptions(GetTodayStatTrendRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public GetTodayStatTrendResponse getTodayStatTrendWithOptions(GetTodayStatTrendRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.appVersion)) {
@@ -143,11 +137,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("type", request.type);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetTodayStatTrend"),
             new TeaPair("version", "2022-02-14"),
             new TeaPair("protocol", "HTTPS"),
