@@ -44,6 +44,9 @@ public class GetApplicationResponseBody extends TeaModel {
         @NameInMap("ApplicationSourceType")
         public String applicationSourceType;
 
+        @NameInMap("ApplicationTemplateId")
+        public String applicationTemplateId;
+
         @NameInMap("AuthorizationType")
         public String authorizationType;
 
@@ -115,6 +118,14 @@ public class GetApplicationResponseBody extends TeaModel {
         }
         public String getApplicationSourceType() {
             return this.applicationSourceType;
+        }
+
+        public GetApplicationResponseBodyApplication setApplicationTemplateId(String applicationTemplateId) {
+            this.applicationTemplateId = applicationTemplateId;
+            return this;
+        }
+        public String getApplicationTemplateId() {
+            return this.applicationTemplateId;
         }
 
         public GetApplicationResponseBodyApplication setAuthorizationType(String authorizationType) {
