@@ -31,7 +31,43 @@ public class ListProjectsResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class ListProjectsResponseBodyPageResultProjectListTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListProjectsResponseBodyPageResultProjectListTags build(java.util.Map<String, ?> map) throws Exception {
+            ListProjectsResponseBodyPageResultProjectListTags self = new ListProjectsResponseBodyPageResultProjectListTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListProjectsResponseBodyPageResultProjectListTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListProjectsResponseBodyPageResultProjectListTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListProjectsResponseBodyPageResultProjectList extends TeaModel {
+        @NameInMap("DisableDevelopment")
+        public Boolean disableDevelopment;
+
+        @NameInMap("IsDefault")
+        public Integer isDefault;
+
         @NameInMap("ProjectDescription")
         public String projectDescription;
 
@@ -53,9 +89,37 @@ public class ListProjectsResponseBody extends TeaModel {
         @NameInMap("ProjectStatusCode")
         public String projectStatusCode;
 
+        @NameInMap("ResourceManagerResourceGroupId")
+        public String resourceManagerResourceGroupId;
+
+        @NameInMap("TablePrivacyMode")
+        public Integer tablePrivacyMode;
+
+        @NameInMap("Tags")
+        public java.util.List<ListProjectsResponseBodyPageResultProjectListTags> tags;
+
+        @NameInMap("UseProxyOdpsAccount")
+        public Boolean useProxyOdpsAccount;
+
         public static ListProjectsResponseBodyPageResultProjectList build(java.util.Map<String, ?> map) throws Exception {
             ListProjectsResponseBodyPageResultProjectList self = new ListProjectsResponseBodyPageResultProjectList();
             return TeaModel.build(map, self);
+        }
+
+        public ListProjectsResponseBodyPageResultProjectList setDisableDevelopment(Boolean disableDevelopment) {
+            this.disableDevelopment = disableDevelopment;
+            return this;
+        }
+        public Boolean getDisableDevelopment() {
+            return this.disableDevelopment;
+        }
+
+        public ListProjectsResponseBodyPageResultProjectList setIsDefault(Integer isDefault) {
+            this.isDefault = isDefault;
+            return this;
+        }
+        public Integer getIsDefault() {
+            return this.isDefault;
         }
 
         public ListProjectsResponseBodyPageResultProjectList setProjectDescription(String projectDescription) {
@@ -112,6 +176,38 @@ public class ListProjectsResponseBody extends TeaModel {
         }
         public String getProjectStatusCode() {
             return this.projectStatusCode;
+        }
+
+        public ListProjectsResponseBodyPageResultProjectList setResourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
+            this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
+            return this;
+        }
+        public String getResourceManagerResourceGroupId() {
+            return this.resourceManagerResourceGroupId;
+        }
+
+        public ListProjectsResponseBodyPageResultProjectList setTablePrivacyMode(Integer tablePrivacyMode) {
+            this.tablePrivacyMode = tablePrivacyMode;
+            return this;
+        }
+        public Integer getTablePrivacyMode() {
+            return this.tablePrivacyMode;
+        }
+
+        public ListProjectsResponseBodyPageResultProjectList setTags(java.util.List<ListProjectsResponseBodyPageResultProjectListTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListProjectsResponseBodyPageResultProjectListTags> getTags() {
+            return this.tags;
+        }
+
+        public ListProjectsResponseBodyPageResultProjectList setUseProxyOdpsAccount(Boolean useProxyOdpsAccount) {
+            this.useProxyOdpsAccount = useProxyOdpsAccount;
+            return this;
+        }
+        public Boolean getUseProxyOdpsAccount() {
+            return this.useProxyOdpsAccount;
         }
 
     }

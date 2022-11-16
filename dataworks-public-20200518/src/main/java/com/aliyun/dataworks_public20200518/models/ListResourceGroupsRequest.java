@@ -13,6 +13,12 @@ public class ListResourceGroupsRequest extends TeaModel {
     @NameInMap("ResourceGroupType")
     public Integer resourceGroupType;
 
+    @NameInMap("ResourceManagerResourceGroupId")
+    public String resourceManagerResourceGroupId;
+
+    @NameInMap("Tags")
+    public java.util.List<ListResourceGroupsRequestTags> tags;
+
     public static ListResourceGroupsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListResourceGroupsRequest self = new ListResourceGroupsRequest();
         return TeaModel.build(map, self);
@@ -40,6 +46,52 @@ public class ListResourceGroupsRequest extends TeaModel {
     }
     public Integer getResourceGroupType() {
         return this.resourceGroupType;
+    }
+
+    public ListResourceGroupsRequest setResourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
+        this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
+        return this;
+    }
+    public String getResourceManagerResourceGroupId() {
+        return this.resourceManagerResourceGroupId;
+    }
+
+    public ListResourceGroupsRequest setTags(java.util.List<ListResourceGroupsRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<ListResourceGroupsRequestTags> getTags() {
+        return this.tags;
+    }
+
+    public static class ListResourceGroupsRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListResourceGroupsRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            ListResourceGroupsRequestTags self = new ListResourceGroupsRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListResourceGroupsRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListResourceGroupsRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }
