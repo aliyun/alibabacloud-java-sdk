@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>goodstech20191230</artifactId>
-  <version>1.0.2</version>
+  <version>1.0.3</version>
   <packaging>jar</packaging>
   <name>goodstech20191230</name>
   <description>Aliyun GOODSTECH SDK for Java
@@ -100,12 +100,12 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.2.6</version>
+      <version>0.2.8</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>openapiutil</artifactId>
-      <version>0.1.14</version>
+      <version>0.2.0</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
