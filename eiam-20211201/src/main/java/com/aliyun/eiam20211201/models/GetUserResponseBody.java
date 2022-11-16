@@ -56,6 +56,9 @@ public class GetUserResponseBody extends TeaModel {
         @NameInMap("LockExpireTime")
         public Long lockExpireTime;
 
+        @NameInMap("PasswordExpireTime")
+        public Long passwordExpireTime;
+
         @NameInMap("PhoneNumber")
         public String phoneNumber;
 
@@ -159,6 +162,14 @@ public class GetUserResponseBody extends TeaModel {
         }
         public Long getLockExpireTime() {
             return this.lockExpireTime;
+        }
+
+        public GetUserResponseBodyUser setPasswordExpireTime(Long passwordExpireTime) {
+            this.passwordExpireTime = passwordExpireTime;
+            return this;
+        }
+        public Long getPasswordExpireTime() {
+            return this.passwordExpireTime;
         }
 
         public GetUserResponseBodyUser setPhoneNumber(String phoneNumber) {
