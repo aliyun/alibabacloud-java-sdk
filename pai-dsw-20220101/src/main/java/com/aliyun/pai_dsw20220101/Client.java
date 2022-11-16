@@ -835,8 +835,44 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateInstanceResponse updateInstanceWithOptions(String InstanceId, UpdateInstanceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accessibility)) {
+            body.put("Accessibility", request.accessibility);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.datasets)) {
+            body.put("Datasets", request.datasets);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.disassociateDatasets)) {
+            body.put("DisassociateDatasets", request.disassociateDatasets);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.disassociateVpc)) {
+            body.put("DisassociateVpc", request.disassociateVpc);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ecsSpec)) {
+            body.put("EcsSpec", request.ecsSpec);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageId)) {
+            body.put("ImageId", request.imageId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageUrl)) {
+            body.put("ImageUrl", request.imageUrl);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceName)) {
             body.put("InstanceName", request.instanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.requestedResource))) {
+            body.put("RequestedResource", request.requestedResource);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.userVpc))) {
+            body.put("UserVpc", request.userVpc);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
