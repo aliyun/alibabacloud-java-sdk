@@ -67,11 +67,17 @@ public class CreateHybridClusterRequest extends TeaModel {
     @NameInMap("OnPremiseVolumeRemotePath")
     public String onPremiseVolumeRemotePath;
 
+    @NameInMap("OpenldapPar")
+    public CreateHybridClusterRequestOpenldapPar openldapPar;
+
     @NameInMap("OsTag")
     public String osTag;
 
     @NameInMap("Password")
     public String password;
+
+    @NameInMap("Plugin")
+    public String plugin;
 
     @NameInMap("PostInstallScript")
     public java.util.List<CreateHybridClusterRequestPostInstallScript> postInstallScript;
@@ -108,6 +114,9 @@ public class CreateHybridClusterRequest extends TeaModel {
 
     @NameInMap("VpcId")
     public String vpcId;
+
+    @NameInMap("WinAdPar")
+    public CreateHybridClusterRequestWinAdPar winAdPar;
 
     @NameInMap("ZoneId")
     public String zoneId;
@@ -285,6 +294,14 @@ public class CreateHybridClusterRequest extends TeaModel {
         return this.onPremiseVolumeRemotePath;
     }
 
+    public CreateHybridClusterRequest setOpenldapPar(CreateHybridClusterRequestOpenldapPar openldapPar) {
+        this.openldapPar = openldapPar;
+        return this;
+    }
+    public CreateHybridClusterRequestOpenldapPar getOpenldapPar() {
+        return this.openldapPar;
+    }
+
     public CreateHybridClusterRequest setOsTag(String osTag) {
         this.osTag = osTag;
         return this;
@@ -299,6 +316,14 @@ public class CreateHybridClusterRequest extends TeaModel {
     }
     public String getPassword() {
         return this.password;
+    }
+
+    public CreateHybridClusterRequest setPlugin(String plugin) {
+        this.plugin = plugin;
+        return this;
+    }
+    public String getPlugin() {
+        return this.plugin;
     }
 
     public CreateHybridClusterRequest setPostInstallScript(java.util.List<CreateHybridClusterRequestPostInstallScript> postInstallScript) {
@@ -395,6 +420,14 @@ public class CreateHybridClusterRequest extends TeaModel {
     }
     public String getVpcId() {
         return this.vpcId;
+    }
+
+    public CreateHybridClusterRequest setWinAdPar(CreateHybridClusterRequestWinAdPar winAdPar) {
+        this.winAdPar = winAdPar;
+        return this;
+    }
+    public CreateHybridClusterRequestWinAdPar getWinAdPar() {
+        return this.winAdPar;
     }
 
     public CreateHybridClusterRequest setZoneId(String zoneId) {
@@ -568,6 +601,36 @@ public class CreateHybridClusterRequest extends TeaModel {
 
     }
 
+    public static class CreateHybridClusterRequestOpenldapPar extends TeaModel {
+        @NameInMap("BaseDn")
+        public String baseDn;
+
+        @NameInMap("LdapServerIp")
+        public String ldapServerIp;
+
+        public static CreateHybridClusterRequestOpenldapPar build(java.util.Map<String, ?> map) throws Exception {
+            CreateHybridClusterRequestOpenldapPar self = new CreateHybridClusterRequestOpenldapPar();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateHybridClusterRequestOpenldapPar setBaseDn(String baseDn) {
+            this.baseDn = baseDn;
+            return this;
+        }
+        public String getBaseDn() {
+            return this.baseDn;
+        }
+
+        public CreateHybridClusterRequestOpenldapPar setLdapServerIp(String ldapServerIp) {
+            this.ldapServerIp = ldapServerIp;
+            return this;
+        }
+        public String getLdapServerIp() {
+            return this.ldapServerIp;
+        }
+
+    }
+
     public static class CreateHybridClusterRequestPostInstallScript extends TeaModel {
         @NameInMap("Args")
         public String args;
@@ -594,6 +657,58 @@ public class CreateHybridClusterRequest extends TeaModel {
         }
         public String getUrl() {
             return this.url;
+        }
+
+    }
+
+    public static class CreateHybridClusterRequestWinAdPar extends TeaModel {
+        @NameInMap("AdDc")
+        public String adDc;
+
+        @NameInMap("AdIp")
+        public String adIp;
+
+        @NameInMap("AdUser")
+        public String adUser;
+
+        @NameInMap("AdUserPasswd")
+        public String adUserPasswd;
+
+        public static CreateHybridClusterRequestWinAdPar build(java.util.Map<String, ?> map) throws Exception {
+            CreateHybridClusterRequestWinAdPar self = new CreateHybridClusterRequestWinAdPar();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateHybridClusterRequestWinAdPar setAdDc(String adDc) {
+            this.adDc = adDc;
+            return this;
+        }
+        public String getAdDc() {
+            return this.adDc;
+        }
+
+        public CreateHybridClusterRequestWinAdPar setAdIp(String adIp) {
+            this.adIp = adIp;
+            return this;
+        }
+        public String getAdIp() {
+            return this.adIp;
+        }
+
+        public CreateHybridClusterRequestWinAdPar setAdUser(String adUser) {
+            this.adUser = adUser;
+            return this;
+        }
+        public String getAdUser() {
+            return this.adUser;
+        }
+
+        public CreateHybridClusterRequestWinAdPar setAdUserPasswd(String adUserPasswd) {
+            this.adUserPasswd = adUserPasswd;
+            return this;
+        }
+        public String getAdUserPasswd() {
+            return this.adUserPasswd;
         }
 
     }
