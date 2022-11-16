@@ -55,6 +55,9 @@ public class UpdateRemindRequest extends TeaModel {
     @NameInMap("UseFlag")
     public Boolean useFlag;
 
+    @NameInMap("Webhooks")
+    public String webhooks;
+
     public static UpdateRemindRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateRemindRequest self = new UpdateRemindRequest();
         return TeaModel.build(map, self);
@@ -194,6 +197,14 @@ public class UpdateRemindRequest extends TeaModel {
     }
     public Boolean getUseFlag() {
         return this.useFlag;
+    }
+
+    public UpdateRemindRequest setWebhooks(String webhooks) {
+        this.webhooks = webhooks;
+        return this;
+    }
+    public String getWebhooks() {
+        return this.webhooks;
     }
 
 }

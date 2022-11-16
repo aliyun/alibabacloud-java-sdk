@@ -294,6 +294,9 @@ public class GetRemindResponseBody extends TeaModel {
         @NameInMap("Useflag")
         public Boolean useflag;
 
+        @NameInMap("Webhooks")
+        public java.util.List<String> webhooks;
+
         public static GetRemindResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetRemindResponseBodyData self = new GetRemindResponseBodyData();
             return TeaModel.build(map, self);
@@ -449,6 +452,14 @@ public class GetRemindResponseBody extends TeaModel {
         }
         public Boolean getUseflag() {
             return this.useflag;
+        }
+
+        public GetRemindResponseBodyData setWebhooks(java.util.List<String> webhooks) {
+            this.webhooks = webhooks;
+            return this;
+        }
+        public java.util.List<String> getWebhooks() {
+            return this.webhooks;
         }
 
     }

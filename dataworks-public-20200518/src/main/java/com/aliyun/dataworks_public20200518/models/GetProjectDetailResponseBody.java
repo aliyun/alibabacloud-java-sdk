@@ -53,12 +53,45 @@ public class GetProjectDetailResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class GetProjectDetailResponseBodyDataTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static GetProjectDetailResponseBodyDataTags build(java.util.Map<String, ?> map) throws Exception {
+            GetProjectDetailResponseBodyDataTags self = new GetProjectDetailResponseBodyDataTags();
+            return TeaModel.build(map, self);
+        }
+
+        public GetProjectDetailResponseBodyDataTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public GetProjectDetailResponseBodyDataTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class GetProjectDetailResponseBodyData extends TeaModel {
         @NameInMap("DefaultDiResourceGroupIdentifier")
         public String defaultDiResourceGroupIdentifier;
 
         @NameInMap("DevelopmentType")
         public Integer developmentType;
+
+        @NameInMap("DisableDevelopment")
+        public Boolean disableDevelopment;
 
         @NameInMap("EnvTypes")
         public java.util.List<String> envTypes;
@@ -71,6 +104,9 @@ public class GetProjectDetailResponseBody extends TeaModel {
 
         @NameInMap("IsAllowDownload")
         public Integer isAllowDownload;
+
+        @NameInMap("IsDefault")
+        public Integer isDefault;
 
         @NameInMap("ProjectDescription")
         public String projectDescription;
@@ -96,6 +132,9 @@ public class GetProjectDetailResponseBody extends TeaModel {
         @NameInMap("ResidentArea")
         public String residentArea;
 
+        @NameInMap("ResourceManagerResourceGroupId")
+        public String resourceManagerResourceGroupId;
+
         @NameInMap("SchedulerMaxRetryTimes")
         public Integer schedulerMaxRetryTimes;
 
@@ -105,8 +144,17 @@ public class GetProjectDetailResponseBody extends TeaModel {
         @NameInMap("Status")
         public Integer status;
 
+        @NameInMap("TablePrivacyMode")
+        public Integer tablePrivacyMode;
+
+        @NameInMap("Tags")
+        public java.util.List<GetProjectDetailResponseBodyDataTags> tags;
+
         @NameInMap("TenantId")
         public Long tenantId;
+
+        @NameInMap("UseProxyOdpsAccount")
+        public Boolean useProxyOdpsAccount;
 
         public static GetProjectDetailResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetProjectDetailResponseBodyData self = new GetProjectDetailResponseBodyData();
@@ -127,6 +175,14 @@ public class GetProjectDetailResponseBody extends TeaModel {
         }
         public Integer getDevelopmentType() {
             return this.developmentType;
+        }
+
+        public GetProjectDetailResponseBodyData setDisableDevelopment(Boolean disableDevelopment) {
+            this.disableDevelopment = disableDevelopment;
+            return this;
+        }
+        public Boolean getDisableDevelopment() {
+            return this.disableDevelopment;
         }
 
         public GetProjectDetailResponseBodyData setEnvTypes(java.util.List<String> envTypes) {
@@ -159,6 +215,14 @@ public class GetProjectDetailResponseBody extends TeaModel {
         }
         public Integer getIsAllowDownload() {
             return this.isAllowDownload;
+        }
+
+        public GetProjectDetailResponseBodyData setIsDefault(Integer isDefault) {
+            this.isDefault = isDefault;
+            return this;
+        }
+        public Integer getIsDefault() {
+            return this.isDefault;
         }
 
         public GetProjectDetailResponseBodyData setProjectDescription(String projectDescription) {
@@ -225,6 +289,14 @@ public class GetProjectDetailResponseBody extends TeaModel {
             return this.residentArea;
         }
 
+        public GetProjectDetailResponseBodyData setResourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
+            this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
+            return this;
+        }
+        public String getResourceManagerResourceGroupId() {
+            return this.resourceManagerResourceGroupId;
+        }
+
         public GetProjectDetailResponseBodyData setSchedulerMaxRetryTimes(Integer schedulerMaxRetryTimes) {
             this.schedulerMaxRetryTimes = schedulerMaxRetryTimes;
             return this;
@@ -249,12 +321,36 @@ public class GetProjectDetailResponseBody extends TeaModel {
             return this.status;
         }
 
+        public GetProjectDetailResponseBodyData setTablePrivacyMode(Integer tablePrivacyMode) {
+            this.tablePrivacyMode = tablePrivacyMode;
+            return this;
+        }
+        public Integer getTablePrivacyMode() {
+            return this.tablePrivacyMode;
+        }
+
+        public GetProjectDetailResponseBodyData setTags(java.util.List<GetProjectDetailResponseBodyDataTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<GetProjectDetailResponseBodyDataTags> getTags() {
+            return this.tags;
+        }
+
         public GetProjectDetailResponseBodyData setTenantId(Long tenantId) {
             this.tenantId = tenantId;
             return this;
         }
         public Long getTenantId() {
             return this.tenantId;
+        }
+
+        public GetProjectDetailResponseBodyData setUseProxyOdpsAccount(Boolean useProxyOdpsAccount) {
+            this.useProxyOdpsAccount = useProxyOdpsAccount;
+            return this;
+        }
+        public Boolean getUseProxyOdpsAccount() {
+            return this.useProxyOdpsAccount;
         }
 
     }

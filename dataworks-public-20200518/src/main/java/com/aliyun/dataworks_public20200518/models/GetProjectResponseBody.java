@@ -53,6 +53,36 @@ public class GetProjectResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class GetProjectResponseBodyDataTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static GetProjectResponseBodyDataTags build(java.util.Map<String, ?> map) throws Exception {
+            GetProjectResponseBodyDataTags self = new GetProjectResponseBodyDataTags();
+            return TeaModel.build(map, self);
+        }
+
+        public GetProjectResponseBodyDataTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public GetProjectResponseBodyDataTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class GetProjectResponseBodyData extends TeaModel {
         @NameInMap("Appkey")
         public String appkey;
@@ -120,6 +150,9 @@ public class GetProjectResponseBody extends TeaModel {
         @NameInMap("ResidentArea")
         public String residentArea;
 
+        @NameInMap("ResourceManagerResourceGroupId")
+        public String resourceManagerResourceGroupId;
+
         @NameInMap("SchedulerMaxRetryTimes")
         public Integer schedulerMaxRetryTimes;
 
@@ -131,6 +164,9 @@ public class GetProjectResponseBody extends TeaModel {
 
         @NameInMap("TablePrivacyMode")
         public Integer tablePrivacyMode;
+
+        @NameInMap("Tags")
+        public java.util.List<GetProjectResponseBodyDataTags> tags;
 
         @NameInMap("TenantId")
         public Long tenantId;
@@ -319,6 +355,14 @@ public class GetProjectResponseBody extends TeaModel {
             return this.residentArea;
         }
 
+        public GetProjectResponseBodyData setResourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
+            this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
+            return this;
+        }
+        public String getResourceManagerResourceGroupId() {
+            return this.resourceManagerResourceGroupId;
+        }
+
         public GetProjectResponseBodyData setSchedulerMaxRetryTimes(Integer schedulerMaxRetryTimes) {
             this.schedulerMaxRetryTimes = schedulerMaxRetryTimes;
             return this;
@@ -349,6 +393,14 @@ public class GetProjectResponseBody extends TeaModel {
         }
         public Integer getTablePrivacyMode() {
             return this.tablePrivacyMode;
+        }
+
+        public GetProjectResponseBodyData setTags(java.util.List<GetProjectResponseBodyDataTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<GetProjectResponseBodyDataTags> getTags() {
+            return this.tags;
         }
 
         public GetProjectResponseBodyData setTenantId(Long tenantId) {

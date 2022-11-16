@@ -49,6 +49,9 @@ public class CreateRemindRequest extends TeaModel {
     @NameInMap("RobotUrls")
     public String robotUrls;
 
+    @NameInMap("Webhooks")
+    public String webhooks;
+
     public static CreateRemindRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateRemindRequest self = new CreateRemindRequest();
         return TeaModel.build(map, self);
@@ -172,6 +175,14 @@ public class CreateRemindRequest extends TeaModel {
     }
     public String getRobotUrls() {
         return this.robotUrls;
+    }
+
+    public CreateRemindRequest setWebhooks(String webhooks) {
+        this.webhooks = webhooks;
+        return this;
+    }
+    public String getWebhooks() {
+        return this.webhooks;
     }
 
 }
