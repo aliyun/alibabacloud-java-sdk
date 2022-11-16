@@ -43,6 +43,9 @@ public class SetLoadBalancerTCPListenerAttributeRequest extends TeaModel {
     @NameInMap("HealthCheckInterval")
     public Integer healthCheckInterval;
 
+    @NameInMap("HealthCheckSwitch")
+    public String healthCheckSwitch;
+
     @NameInMap("HealthCheckType")
     public String healthCheckType;
 
@@ -207,6 +210,14 @@ public class SetLoadBalancerTCPListenerAttributeRequest extends TeaModel {
     }
     public Integer getHealthCheckInterval() {
         return this.healthCheckInterval;
+    }
+
+    public SetLoadBalancerTCPListenerAttributeRequest setHealthCheckSwitch(String healthCheckSwitch) {
+        this.healthCheckSwitch = healthCheckSwitch;
+        return this;
+    }
+    public String getHealthCheckSwitch() {
+        return this.healthCheckSwitch;
     }
 
     public SetLoadBalancerTCPListenerAttributeRequest setHealthCheckType(String healthCheckType) {

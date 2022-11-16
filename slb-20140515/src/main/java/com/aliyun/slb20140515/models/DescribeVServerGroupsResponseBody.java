@@ -185,6 +185,9 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
         @NameInMap("AssociatedObjects")
         public DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjects associatedObjects;
 
+        @NameInMap("CreateTime")
+        public String createTime;
+
         @NameInMap("ServerCount")
         public Long serverCount;
 
@@ -205,6 +208,14 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
         }
         public DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjects getAssociatedObjects() {
             return this.associatedObjects;
+        }
+
+        public DescribeVServerGroupsResponseBodyVServerGroupsVServerGroup setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
         }
 
         public DescribeVServerGroupsResponseBodyVServerGroupsVServerGroup setServerCount(Long serverCount) {

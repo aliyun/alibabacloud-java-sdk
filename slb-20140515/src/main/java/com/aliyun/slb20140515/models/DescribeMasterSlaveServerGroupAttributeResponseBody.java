@@ -4,6 +4,9 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaModel {
+    @NameInMap("CreateTime")
+    public String createTime;
+
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
@@ -22,6 +25,14 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
     public static DescribeMasterSlaveServerGroupAttributeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeMasterSlaveServerGroupAttributeResponseBody self = new DescribeMasterSlaveServerGroupAttributeResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeMasterSlaveServerGroupAttributeResponseBody setCreateTime(String createTime) {
+        this.createTime = createTime;
+        return this;
+    }
+    public String getCreateTime() {
+        return this.createTime;
     }
 
     public DescribeMasterSlaveServerGroupAttributeResponseBody setLoadBalancerId(String loadBalancerId) {

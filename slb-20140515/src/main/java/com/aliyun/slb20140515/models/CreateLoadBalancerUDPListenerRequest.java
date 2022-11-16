@@ -28,6 +28,9 @@ public class CreateLoadBalancerUDPListenerRequest extends TeaModel {
     @NameInMap("HealthCheckConnectTimeout")
     public Integer healthCheckConnectTimeout;
 
+    @NameInMap("HealthCheckSwitch")
+    public String healthCheckSwitch;
+
     @NameInMap("HealthyThreshold")
     public Integer healthyThreshold;
 
@@ -143,6 +146,14 @@ public class CreateLoadBalancerUDPListenerRequest extends TeaModel {
     }
     public Integer getHealthCheckConnectTimeout() {
         return this.healthCheckConnectTimeout;
+    }
+
+    public CreateLoadBalancerUDPListenerRequest setHealthCheckSwitch(String healthCheckSwitch) {
+        this.healthCheckSwitch = healthCheckSwitch;
+        return this;
+    }
+    public String getHealthCheckSwitch() {
+        return this.healthCheckSwitch;
     }
 
     public CreateLoadBalancerUDPListenerRequest setHealthyThreshold(Integer healthyThreshold) {

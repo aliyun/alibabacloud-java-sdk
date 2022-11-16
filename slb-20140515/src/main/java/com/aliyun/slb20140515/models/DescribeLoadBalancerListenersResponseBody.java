@@ -786,6 +786,9 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
         @NameInMap("PersistenceTimeout")
         public Integer persistenceTimeout;
 
+        @NameInMap("ProxyProtocolV2Enabled")
+        public String proxyProtocolV2Enabled;
+
         @NameInMap("UnhealthyThreshold")
         public Integer unhealthyThreshold;
 
@@ -914,6 +917,14 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             return this.persistenceTimeout;
         }
 
+        public DescribeLoadBalancerListenersResponseBodyListenersTCPListenerConfig setProxyProtocolV2Enabled(String proxyProtocolV2Enabled) {
+            this.proxyProtocolV2Enabled = proxyProtocolV2Enabled;
+            return this;
+        }
+        public String getProxyProtocolV2Enabled() {
+            return this.proxyProtocolV2Enabled;
+        }
+
         public DescribeLoadBalancerListenersResponseBodyListenersTCPListenerConfig setUnhealthyThreshold(Integer unhealthyThreshold) {
             this.unhealthyThreshold = unhealthyThreshold;
             return this;
@@ -954,6 +965,9 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
 
         @NameInMap("MasterSlaveServerGroupId")
         public String masterSlaveServerGroupId;
+
+        @NameInMap("ProxyProtocolV2Enabled")
+        public String proxyProtocolV2Enabled;
 
         @NameInMap("UnhealthyThreshold")
         public Integer unhealthyThreshold;
@@ -1041,6 +1055,14 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
         }
         public String getMasterSlaveServerGroupId() {
             return this.masterSlaveServerGroupId;
+        }
+
+        public DescribeLoadBalancerListenersResponseBodyListenersUDPListenerConfig setProxyProtocolV2Enabled(String proxyProtocolV2Enabled) {
+            this.proxyProtocolV2Enabled = proxyProtocolV2Enabled;
+            return this;
+        }
+        public String getProxyProtocolV2Enabled() {
+            return this.proxyProtocolV2Enabled;
         }
 
         public DescribeLoadBalancerListenersResponseBodyListenersUDPListenerConfig setUnhealthyThreshold(Integer unhealthyThreshold) {

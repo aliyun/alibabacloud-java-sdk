@@ -16,6 +16,9 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
     @NameInMap("AddressIPVersion")
     public String addressIPVersion;
 
+    @NameInMap("CreateTime")
+    public String createTime;
+
     @NameInMap("RelatedListeners")
     public DescribeAccessControlListAttributeResponseBodyRelatedListeners relatedListeners;
 
@@ -60,6 +63,14 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
     }
     public String getAddressIPVersion() {
         return this.addressIPVersion;
+    }
+
+    public DescribeAccessControlListAttributeResponseBody setCreateTime(String createTime) {
+        this.createTime = createTime;
+        return this;
+    }
+    public String getCreateTime() {
+        return this.createTime;
     }
 
     public DescribeAccessControlListAttributeResponseBody setRelatedListeners(DescribeAccessControlListAttributeResponseBodyRelatedListeners relatedListeners) {
