@@ -61,6 +61,58 @@ public class DetectLivingFaceResponseBody extends TeaModel {
 
     }
 
+    public static class DetectLivingFaceResponseBodyDataElementsResultsRect extends TeaModel {
+        @NameInMap("Height")
+        public Long height;
+
+        @NameInMap("Left")
+        public Long left;
+
+        @NameInMap("Top")
+        public Long top;
+
+        @NameInMap("Width")
+        public Long width;
+
+        public static DetectLivingFaceResponseBodyDataElementsResultsRect build(java.util.Map<String, ?> map) throws Exception {
+            DetectLivingFaceResponseBodyDataElementsResultsRect self = new DetectLivingFaceResponseBodyDataElementsResultsRect();
+            return TeaModel.build(map, self);
+        }
+
+        public DetectLivingFaceResponseBodyDataElementsResultsRect setHeight(Long height) {
+            this.height = height;
+            return this;
+        }
+        public Long getHeight() {
+            return this.height;
+        }
+
+        public DetectLivingFaceResponseBodyDataElementsResultsRect setLeft(Long left) {
+            this.left = left;
+            return this;
+        }
+        public Long getLeft() {
+            return this.left;
+        }
+
+        public DetectLivingFaceResponseBodyDataElementsResultsRect setTop(Long top) {
+            this.top = top;
+            return this;
+        }
+        public Long getTop() {
+            return this.top;
+        }
+
+        public DetectLivingFaceResponseBodyDataElementsResultsRect setWidth(Long width) {
+            this.width = width;
+            return this;
+        }
+        public Long getWidth() {
+            return this.width;
+        }
+
+    }
+
     public static class DetectLivingFaceResponseBodyDataElementsResults extends TeaModel {
         @NameInMap("Frames")
         public java.util.List<DetectLivingFaceResponseBodyDataElementsResultsFrames> frames;
@@ -68,8 +120,14 @@ public class DetectLivingFaceResponseBody extends TeaModel {
         @NameInMap("Label")
         public String label;
 
+        @NameInMap("MessageTips")
+        public String messageTips;
+
         @NameInMap("Rate")
         public Float rate;
+
+        @NameInMap("Rect")
+        public DetectLivingFaceResponseBodyDataElementsResultsRect rect;
 
         @NameInMap("Suggestion")
         public String suggestion;
@@ -95,12 +153,28 @@ public class DetectLivingFaceResponseBody extends TeaModel {
             return this.label;
         }
 
+        public DetectLivingFaceResponseBodyDataElementsResults setMessageTips(String messageTips) {
+            this.messageTips = messageTips;
+            return this;
+        }
+        public String getMessageTips() {
+            return this.messageTips;
+        }
+
         public DetectLivingFaceResponseBodyDataElementsResults setRate(Float rate) {
             this.rate = rate;
             return this;
         }
         public Float getRate() {
             return this.rate;
+        }
+
+        public DetectLivingFaceResponseBodyDataElementsResults setRect(DetectLivingFaceResponseBodyDataElementsResultsRect rect) {
+            this.rect = rect;
+            return this;
+        }
+        public DetectLivingFaceResponseBodyDataElementsResultsRect getRect() {
+            return this.rect;
         }
 
         public DetectLivingFaceResponseBodyDataElementsResults setSuggestion(String suggestion) {
@@ -114,6 +188,9 @@ public class DetectLivingFaceResponseBody extends TeaModel {
     }
 
     public static class DetectLivingFaceResponseBodyDataElements extends TeaModel {
+        @NameInMap("FaceNumber")
+        public Long faceNumber;
+
         @NameInMap("ImageURL")
         public String imageURL;
 
@@ -126,6 +203,14 @@ public class DetectLivingFaceResponseBody extends TeaModel {
         public static DetectLivingFaceResponseBodyDataElements build(java.util.Map<String, ?> map) throws Exception {
             DetectLivingFaceResponseBodyDataElements self = new DetectLivingFaceResponseBodyDataElements();
             return TeaModel.build(map, self);
+        }
+
+        public DetectLivingFaceResponseBodyDataElements setFaceNumber(Long faceNumber) {
+            this.faceNumber = faceNumber;
+            return this;
+        }
+        public Long getFaceNumber() {
+            return this.faceNumber;
         }
 
         public DetectLivingFaceResponseBodyDataElements setImageURL(String imageURL) {
