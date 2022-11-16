@@ -43,6 +43,9 @@ public class CreateLoadBalancerTCPListenerRequest extends TeaModel {
     @NameInMap("HealthCheckHttpCode")
     public String healthCheckHttpCode;
 
+    @NameInMap("HealthCheckSwitch")
+    public String healthCheckSwitch;
+
     @NameInMap("HealthCheckType")
     public String healthCheckType;
 
@@ -201,6 +204,14 @@ public class CreateLoadBalancerTCPListenerRequest extends TeaModel {
     }
     public String getHealthCheckHttpCode() {
         return this.healthCheckHttpCode;
+    }
+
+    public CreateLoadBalancerTCPListenerRequest setHealthCheckSwitch(String healthCheckSwitch) {
+        this.healthCheckSwitch = healthCheckSwitch;
+        return this;
+    }
+    public String getHealthCheckSwitch() {
+        return this.healthCheckSwitch;
     }
 
     public CreateLoadBalancerTCPListenerRequest setHealthCheckType(String healthCheckType) {

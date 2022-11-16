@@ -85,6 +85,9 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
         @NameInMap("AddressIPVersion")
         public String addressIPVersion;
 
+        @NameInMap("CreateTime")
+        public String createTime;
+
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
@@ -115,6 +118,14 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
         }
         public String getAddressIPVersion() {
             return this.addressIPVersion;
+        }
+
+        public DescribeAccessControlListsResponseBodyAclsAcl setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
         }
 
         public DescribeAccessControlListsResponseBodyAclsAcl setResourceGroupId(String resourceGroupId) {

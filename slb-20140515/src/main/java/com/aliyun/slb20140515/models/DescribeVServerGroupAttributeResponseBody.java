@@ -7,6 +7,9 @@ public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
     @NameInMap("BackendServers")
     public DescribeVServerGroupAttributeResponseBodyBackendServers backendServers;
 
+    @NameInMap("CreateTime")
+    public String createTime;
+
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
@@ -30,6 +33,14 @@ public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
     }
     public DescribeVServerGroupAttributeResponseBodyBackendServers getBackendServers() {
         return this.backendServers;
+    }
+
+    public DescribeVServerGroupAttributeResponseBody setCreateTime(String createTime) {
+        this.createTime = createTime;
+        return this;
+    }
+    public String getCreateTime() {
+        return this.createTime;
     }
 
     public DescribeVServerGroupAttributeResponseBody setLoadBalancerId(String loadBalancerId) {
@@ -74,6 +85,9 @@ public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
         @NameInMap("ServerId")
         public String serverId;
 
+        @NameInMap("ServerIp")
+        public String serverIp;
+
         @NameInMap("Type")
         public String type;
 
@@ -107,6 +121,14 @@ public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
         }
         public String getServerId() {
             return this.serverId;
+        }
+
+        public DescribeVServerGroupAttributeResponseBodyBackendServersBackendServer setServerIp(String serverIp) {
+            this.serverIp = serverIp;
+            return this;
+        }
+        public String getServerIp() {
+            return this.serverIp;
         }
 
         public DescribeVServerGroupAttributeResponseBodyBackendServersBackendServer setType(String type) {

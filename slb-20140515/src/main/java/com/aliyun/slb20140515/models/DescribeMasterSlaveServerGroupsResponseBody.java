@@ -103,6 +103,9 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
         @NameInMap("AssociatedObjects")
         public DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupAssociatedObjects associatedObjects;
 
+        @NameInMap("CreateTime")
+        public String createTime;
+
         @NameInMap("MasterSlaveServerGroupId")
         public String masterSlaveServerGroupId;
 
@@ -120,6 +123,14 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
         }
         public DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupAssociatedObjects getAssociatedObjects() {
             return this.associatedObjects;
+        }
+
+        public DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroup setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
         }
 
         public DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroup setMasterSlaveServerGroupId(String masterSlaveServerGroupId) {
