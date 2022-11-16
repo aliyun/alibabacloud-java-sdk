@@ -4970,6 +4970,73 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.enableInstanceAccessControlWithOptions(request, runtime);
     }
 
+    public ImportOASResponse importOASWithOptions(ImportOASRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authType)) {
+            query.put("AuthType", request.authType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.backendName)) {
+            query.put("BackendName", request.backendName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
+            query.put("GroupId", request.groupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ignoreWarning)) {
+            query.put("IgnoreWarning", request.ignoreWarning);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.OASVersion)) {
+            query.put("OASVersion", request.OASVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.overwrite)) {
+            query.put("Overwrite", request.overwrite);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.requestMode)) {
+            query.put("RequestMode", request.requestMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skipDryRun)) {
+            query.put("SkipDryRun", request.skipDryRun);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.data)) {
+            body.put("Data", request.data);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ImportOAS"),
+            new TeaPair("version", "2016-07-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ImportOASResponse());
+    }
+
+    public ImportOASResponse importOAS(ImportOASRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.importOASWithOptions(request, runtime);
+    }
+
     public ImportSwaggerResponse importSwaggerWithOptions(ImportSwaggerRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         ImportSwaggerShrinkRequest request = new ImportSwaggerShrinkRequest();
