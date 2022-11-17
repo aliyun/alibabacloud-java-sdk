@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateInstanceResponseBody extends TeaModel {
     @NameInMap("Data")
-    public java.util.List<CreateInstanceResponseBodyData> data;
+    public CreateInstanceResponseBodyData data;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -15,11 +15,11 @@ public class CreateInstanceResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateInstanceResponseBody setData(java.util.List<CreateInstanceResponseBodyData> data) {
+    public CreateInstanceResponseBody setData(CreateInstanceResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public java.util.List<CreateInstanceResponseBodyData> getData() {
+    public CreateInstanceResponseBodyData getData() {
         return this.data;
     }
 
