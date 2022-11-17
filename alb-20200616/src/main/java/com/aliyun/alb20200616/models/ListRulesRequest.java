@@ -4,6 +4,9 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class ListRulesRequest extends TeaModel {
+    @NameInMap("Direction")
+    public String direction;
+
     @NameInMap("ListenerIds")
     public java.util.List<String> listenerIds;
 
@@ -22,6 +25,14 @@ public class ListRulesRequest extends TeaModel {
     public static ListRulesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListRulesRequest self = new ListRulesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListRulesRequest setDirection(String direction) {
+        this.direction = direction;
+        return this;
+    }
+    public String getDirection() {
+        return this.direction;
     }
 
     public ListRulesRequest setListenerIds(java.util.List<String> listenerIds) {
