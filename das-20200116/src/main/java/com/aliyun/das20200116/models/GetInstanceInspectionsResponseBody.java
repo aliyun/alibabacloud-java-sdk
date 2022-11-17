@@ -64,15 +64,87 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class GetInstanceInspectionsResponseBodyDataListAutoFunction extends TeaModel {
+        @NameInMap("AutoIndex")
+        public Integer autoIndex;
+
+        @NameInMap("AutoLimitedSql")
+        public Integer autoLimitedSql;
+
+        @NameInMap("AutoResourceOptimize")
+        public Integer autoResourceOptimize;
+
+        @NameInMap("AutoScale")
+        public Integer autoScale;
+
+        @NameInMap("EventSubscription")
+        public Integer eventSubscription;
+
+        public static GetInstanceInspectionsResponseBodyDataListAutoFunction build(java.util.Map<String, ?> map) throws Exception {
+            GetInstanceInspectionsResponseBodyDataListAutoFunction self = new GetInstanceInspectionsResponseBodyDataListAutoFunction();
+            return TeaModel.build(map, self);
+        }
+
+        public GetInstanceInspectionsResponseBodyDataListAutoFunction setAutoIndex(Integer autoIndex) {
+            this.autoIndex = autoIndex;
+            return this;
+        }
+        public Integer getAutoIndex() {
+            return this.autoIndex;
+        }
+
+        public GetInstanceInspectionsResponseBodyDataListAutoFunction setAutoLimitedSql(Integer autoLimitedSql) {
+            this.autoLimitedSql = autoLimitedSql;
+            return this;
+        }
+        public Integer getAutoLimitedSql() {
+            return this.autoLimitedSql;
+        }
+
+        public GetInstanceInspectionsResponseBodyDataListAutoFunction setAutoResourceOptimize(Integer autoResourceOptimize) {
+            this.autoResourceOptimize = autoResourceOptimize;
+            return this;
+        }
+        public Integer getAutoResourceOptimize() {
+            return this.autoResourceOptimize;
+        }
+
+        public GetInstanceInspectionsResponseBodyDataListAutoFunction setAutoScale(Integer autoScale) {
+            this.autoScale = autoScale;
+            return this;
+        }
+        public Integer getAutoScale() {
+            return this.autoScale;
+        }
+
+        public GetInstanceInspectionsResponseBodyDataListAutoFunction setEventSubscription(Integer eventSubscription) {
+            this.eventSubscription = eventSubscription;
+            return this;
+        }
+        public Integer getEventSubscription() {
+            return this.eventSubscription;
+        }
+
+    }
+
     public static class GetInstanceInspectionsResponseBodyDataListInstance extends TeaModel {
         @NameInMap("AccountId")
         public String accountId;
+
+        @NameInMap("Category")
+        public String category;
+
+        @NameInMap("Cpu")
+        public String cpu;
 
         @NameInMap("Engine")
         public String engine;
 
         @NameInMap("EngineVersion")
         public String engineVersion;
+
+        @NameInMap("InstanceAlias")
+        public String instanceAlias;
 
         @NameInMap("InstanceArea")
         public String instanceArea;
@@ -83,6 +155,9 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
+        @NameInMap("Memory")
+        public Integer memory;
+
         @NameInMap("NetworkType")
         public String networkType;
 
@@ -91,6 +166,9 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
 
         @NameInMap("Region")
         public String region;
+
+        @NameInMap("Storage")
+        public Integer storage;
 
         @NameInMap("Uuid")
         public String uuid;
@@ -111,6 +189,22 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             return this.accountId;
         }
 
+        public GetInstanceInspectionsResponseBodyDataListInstance setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
+        }
+
+        public GetInstanceInspectionsResponseBodyDataListInstance setCpu(String cpu) {
+            this.cpu = cpu;
+            return this;
+        }
+        public String getCpu() {
+            return this.cpu;
+        }
+
         public GetInstanceInspectionsResponseBodyDataListInstance setEngine(String engine) {
             this.engine = engine;
             return this;
@@ -125,6 +219,14 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
         }
         public String getEngineVersion() {
             return this.engineVersion;
+        }
+
+        public GetInstanceInspectionsResponseBodyDataListInstance setInstanceAlias(String instanceAlias) {
+            this.instanceAlias = instanceAlias;
+            return this;
+        }
+        public String getInstanceAlias() {
+            return this.instanceAlias;
         }
 
         public GetInstanceInspectionsResponseBodyDataListInstance setInstanceArea(String instanceArea) {
@@ -151,6 +253,14 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             return this.instanceId;
         }
 
+        public GetInstanceInspectionsResponseBodyDataListInstance setMemory(Integer memory) {
+            this.memory = memory;
+            return this;
+        }
+        public Integer getMemory() {
+            return this.memory;
+        }
+
         public GetInstanceInspectionsResponseBodyDataListInstance setNetworkType(String networkType) {
             this.networkType = networkType;
             return this;
@@ -175,6 +285,14 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             return this.region;
         }
 
+        public GetInstanceInspectionsResponseBodyDataListInstance setStorage(Integer storage) {
+            this.storage = storage;
+            return this;
+        }
+        public Integer getStorage() {
+            return this.storage;
+        }
+
         public GetInstanceInspectionsResponseBodyDataListInstance setUuid(String uuid) {
             this.uuid = uuid;
             return this;
@@ -194,8 +312,14 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
     }
 
     public static class GetInstanceInspectionsResponseBodyDataList extends TeaModel {
+        @NameInMap("AutoFunction")
+        public GetInstanceInspectionsResponseBodyDataListAutoFunction autoFunction;
+
         @NameInMap("Data")
         public java.util.Map<String, ?> data;
+
+        @NameInMap("EnableDasPro")
+        public Integer enableDasPro;
 
         @NameInMap("EndTime")
         public Long endTime;
@@ -215,9 +339,23 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
         @NameInMap("StartTime")
         public Long startTime;
 
+        @NameInMap("State")
+        public Integer state;
+
+        @NameInMap("TaskType")
+        public Integer taskType;
+
         public static GetInstanceInspectionsResponseBodyDataList build(java.util.Map<String, ?> map) throws Exception {
             GetInstanceInspectionsResponseBodyDataList self = new GetInstanceInspectionsResponseBodyDataList();
             return TeaModel.build(map, self);
+        }
+
+        public GetInstanceInspectionsResponseBodyDataList setAutoFunction(GetInstanceInspectionsResponseBodyDataListAutoFunction autoFunction) {
+            this.autoFunction = autoFunction;
+            return this;
+        }
+        public GetInstanceInspectionsResponseBodyDataListAutoFunction getAutoFunction() {
+            return this.autoFunction;
         }
 
         public GetInstanceInspectionsResponseBodyDataList setData(java.util.Map<String, ?> data) {
@@ -226,6 +364,14 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
         }
         public java.util.Map<String, ?> getData() {
             return this.data;
+        }
+
+        public GetInstanceInspectionsResponseBodyDataList setEnableDasPro(Integer enableDasPro) {
+            this.enableDasPro = enableDasPro;
+            return this;
+        }
+        public Integer getEnableDasPro() {
+            return this.enableDasPro;
         }
 
         public GetInstanceInspectionsResponseBodyDataList setEndTime(Long endTime) {
@@ -274,6 +420,22 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
         }
         public Long getStartTime() {
             return this.startTime;
+        }
+
+        public GetInstanceInspectionsResponseBodyDataList setState(Integer state) {
+            this.state = state;
+            return this;
+        }
+        public Integer getState() {
+            return this.state;
+        }
+
+        public GetInstanceInspectionsResponseBodyDataList setTaskType(Integer taskType) {
+            this.taskType = taskType;
+            return this;
+        }
+        public Integer getTaskType() {
+            return this.taskType;
         }
 
     }
