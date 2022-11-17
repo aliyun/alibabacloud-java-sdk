@@ -83,6 +83,18 @@ public class ListUserCertificateOrderResponseBody extends TeaModel {
         @NameInMap("CertType")
         public String certType;
 
+        @NameInMap("CertificateId")
+        public Long certificateId;
+
+        @NameInMap("City")
+        public String city;
+
+        @NameInMap("CommonName")
+        public String commonName;
+
+        @NameInMap("Country")
+        public String country;
+
         @NameInMap("Domain")
         public String domain;
 
@@ -92,11 +104,29 @@ public class ListUserCertificateOrderResponseBody extends TeaModel {
         @NameInMap("DomainType")
         public String domainType;
 
+        @NameInMap("EndDate")
+        public String endDate;
+
+        @NameInMap("Expired")
+        public Boolean expired;
+
+        @NameInMap("Fingerprint")
+        public String fingerprint;
+
         @NameInMap("InstanceId")
         public String instanceId;
 
+        @NameInMap("Issuer")
+        public String issuer;
+
+        @NameInMap("Name")
+        public String name;
+
         @NameInMap("OrderId")
         public Long orderId;
+
+        @NameInMap("OrgName")
+        public String orgName;
 
         @NameInMap("PartnerOrderId")
         public String partnerOrderId;
@@ -107,17 +137,35 @@ public class ListUserCertificateOrderResponseBody extends TeaModel {
         @NameInMap("ProductName")
         public String productName;
 
+        @NameInMap("Province")
+        public String province;
+
         @NameInMap("RootBrand")
         public String rootBrand;
 
+        @NameInMap("Sans")
+        public String sans;
+
+        @NameInMap("SerialNo")
+        public String serialNo;
+
+        @NameInMap("Sha2")
+        public String sha2;
+
         @NameInMap("SourceType")
         public String sourceType;
+
+        @NameInMap("StartDate")
+        public String startDate;
 
         @NameInMap("Status")
         public String status;
 
         @NameInMap("TrusteeStatus")
         public String trusteeStatus;
+
+        @NameInMap("Upload")
+        public Boolean upload;
 
         @NameInMap("WildDomainCount")
         public Long wildDomainCount;
@@ -175,6 +223,38 @@ public class ListUserCertificateOrderResponseBody extends TeaModel {
             return this.certType;
         }
 
+        public ListUserCertificateOrderResponseBodyCertificateOrderList setCertificateId(Long certificateId) {
+            this.certificateId = certificateId;
+            return this;
+        }
+        public Long getCertificateId() {
+            return this.certificateId;
+        }
+
+        public ListUserCertificateOrderResponseBodyCertificateOrderList setCity(String city) {
+            this.city = city;
+            return this;
+        }
+        public String getCity() {
+            return this.city;
+        }
+
+        public ListUserCertificateOrderResponseBodyCertificateOrderList setCommonName(String commonName) {
+            this.commonName = commonName;
+            return this;
+        }
+        public String getCommonName() {
+            return this.commonName;
+        }
+
+        public ListUserCertificateOrderResponseBodyCertificateOrderList setCountry(String country) {
+            this.country = country;
+            return this;
+        }
+        public String getCountry() {
+            return this.country;
+        }
+
         public ListUserCertificateOrderResponseBodyCertificateOrderList setDomain(String domain) {
             this.domain = domain;
             return this;
@@ -199,6 +279,30 @@ public class ListUserCertificateOrderResponseBody extends TeaModel {
             return this.domainType;
         }
 
+        public ListUserCertificateOrderResponseBodyCertificateOrderList setEndDate(String endDate) {
+            this.endDate = endDate;
+            return this;
+        }
+        public String getEndDate() {
+            return this.endDate;
+        }
+
+        public ListUserCertificateOrderResponseBodyCertificateOrderList setExpired(Boolean expired) {
+            this.expired = expired;
+            return this;
+        }
+        public Boolean getExpired() {
+            return this.expired;
+        }
+
+        public ListUserCertificateOrderResponseBodyCertificateOrderList setFingerprint(String fingerprint) {
+            this.fingerprint = fingerprint;
+            return this;
+        }
+        public String getFingerprint() {
+            return this.fingerprint;
+        }
+
         public ListUserCertificateOrderResponseBodyCertificateOrderList setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
@@ -207,12 +311,36 @@ public class ListUserCertificateOrderResponseBody extends TeaModel {
             return this.instanceId;
         }
 
+        public ListUserCertificateOrderResponseBodyCertificateOrderList setIssuer(String issuer) {
+            this.issuer = issuer;
+            return this;
+        }
+        public String getIssuer() {
+            return this.issuer;
+        }
+
+        public ListUserCertificateOrderResponseBodyCertificateOrderList setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
         public ListUserCertificateOrderResponseBodyCertificateOrderList setOrderId(Long orderId) {
             this.orderId = orderId;
             return this;
         }
         public Long getOrderId() {
             return this.orderId;
+        }
+
+        public ListUserCertificateOrderResponseBodyCertificateOrderList setOrgName(String orgName) {
+            this.orgName = orgName;
+            return this;
+        }
+        public String getOrgName() {
+            return this.orgName;
         }
 
         public ListUserCertificateOrderResponseBodyCertificateOrderList setPartnerOrderId(String partnerOrderId) {
@@ -239,6 +367,14 @@ public class ListUserCertificateOrderResponseBody extends TeaModel {
             return this.productName;
         }
 
+        public ListUserCertificateOrderResponseBodyCertificateOrderList setProvince(String province) {
+            this.province = province;
+            return this;
+        }
+        public String getProvince() {
+            return this.province;
+        }
+
         public ListUserCertificateOrderResponseBodyCertificateOrderList setRootBrand(String rootBrand) {
             this.rootBrand = rootBrand;
             return this;
@@ -247,12 +383,44 @@ public class ListUserCertificateOrderResponseBody extends TeaModel {
             return this.rootBrand;
         }
 
+        public ListUserCertificateOrderResponseBodyCertificateOrderList setSans(String sans) {
+            this.sans = sans;
+            return this;
+        }
+        public String getSans() {
+            return this.sans;
+        }
+
+        public ListUserCertificateOrderResponseBodyCertificateOrderList setSerialNo(String serialNo) {
+            this.serialNo = serialNo;
+            return this;
+        }
+        public String getSerialNo() {
+            return this.serialNo;
+        }
+
+        public ListUserCertificateOrderResponseBodyCertificateOrderList setSha2(String sha2) {
+            this.sha2 = sha2;
+            return this;
+        }
+        public String getSha2() {
+            return this.sha2;
+        }
+
         public ListUserCertificateOrderResponseBodyCertificateOrderList setSourceType(String sourceType) {
             this.sourceType = sourceType;
             return this;
         }
         public String getSourceType() {
             return this.sourceType;
+        }
+
+        public ListUserCertificateOrderResponseBodyCertificateOrderList setStartDate(String startDate) {
+            this.startDate = startDate;
+            return this;
+        }
+        public String getStartDate() {
+            return this.startDate;
         }
 
         public ListUserCertificateOrderResponseBodyCertificateOrderList setStatus(String status) {
@@ -269,6 +437,14 @@ public class ListUserCertificateOrderResponseBody extends TeaModel {
         }
         public String getTrusteeStatus() {
             return this.trusteeStatus;
+        }
+
+        public ListUserCertificateOrderResponseBodyCertificateOrderList setUpload(Boolean upload) {
+            this.upload = upload;
+            return this;
+        }
+        public Boolean getUpload() {
+            return this.upload;
         }
 
         public ListUserCertificateOrderResponseBodyCertificateOrderList setWildDomainCount(Long wildDomainCount) {

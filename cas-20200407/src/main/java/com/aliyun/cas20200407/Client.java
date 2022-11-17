@@ -290,99 +290,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createCertificateWithCsrRequestWithOptions(request, runtime);
     }
 
-    public CreateWHCertificateWithExtensionResponse createWHCertificateWithExtensionWithOptions(CreateWHCertificateWithExtensionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.afterTime)) {
-            query.put("AfterTime", request.afterTime);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.algorithmKeySize)) {
-            query.put("AlgorithmKeySize", request.algorithmKeySize);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.aliasName)) {
-            query.put("AliasName", request.aliasName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.appendCrl)) {
-            query.put("AppendCrl", request.appendCrl);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.basicConstraintsCritical)) {
-            query.put("BasicConstraintsCritical", request.basicConstraintsCritical);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.beforeTime)) {
-            query.put("BeforeTime", request.beforeTime);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.certType)) {
-            query.put("CertType", request.certType);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.commonName)) {
-            query.put("CommonName", request.commonName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.countryCode)) {
-            query.put("CountryCode", request.countryCode);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.csrPemString)) {
-            query.put("CsrPemString", request.csrPemString);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.immediately)) {
-            query.put("Immediately", request.immediately);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.locality)) {
-            query.put("Locality", request.locality);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.organization)) {
-            query.put("Organization", request.organization);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.organizationUnit)) {
-            query.put("OrganizationUnit", request.organizationUnit);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.parentIdentifier)) {
-            query.put("ParentIdentifier", request.parentIdentifier);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.sans)) {
-            query.put("Sans", request.sans);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.state)) {
-            query.put("State", request.state);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "CreateWHCertificateWithExtension"),
-            new TeaPair("version", "2020-04-07"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateWHCertificateWithExtensionResponse());
-    }
-
-    public CreateWHCertificateWithExtensionResponse createWHCertificateWithExtension(CreateWHCertificateWithExtensionRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.createWHCertificateWithExtensionWithOptions(request, runtime);
-    }
-
     public CreateWHClientCertificateResponse createWHClientCertificateWithOptions(CreateWHClientCertificateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -674,6 +581,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.encryptWithOptions(request, runtime);
     }
 
+    public GetCertWarehouseQuotaResponse getCertWarehouseQuotaWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetCertWarehouseQuota"),
+            new TeaPair("version", "2020-04-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetCertWarehouseQuotaResponse());
+    }
+
+    public GetCertWarehouseQuotaResponse getCertWarehouseQuota() throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getCertWarehouseQuotaWithOptions(runtime);
+    }
+
     public ListCertResponse listCertWithOptions(ListCertRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -687,6 +615,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.showSize)) {
             query.put("ShowSize", request.showSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceType)) {
+            query.put("SourceType", request.sourceType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.status)) {

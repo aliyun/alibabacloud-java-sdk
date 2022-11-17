@@ -13,6 +13,9 @@ public class ListCertRequest extends TeaModel {
     @NameInMap("ShowSize")
     public Long showSize;
 
+    @NameInMap("SourceType")
+    public String sourceType;
+
     @NameInMap("Status")
     public String status;
 
@@ -46,6 +49,14 @@ public class ListCertRequest extends TeaModel {
     }
     public Long getShowSize() {
         return this.showSize;
+    }
+
+    public ListCertRequest setSourceType(String sourceType) {
+        this.sourceType = sourceType;
+        return this;
+    }
+    public String getSourceType() {
+        return this.sourceType;
     }
 
     public ListCertRequest setStatus(String status) {
