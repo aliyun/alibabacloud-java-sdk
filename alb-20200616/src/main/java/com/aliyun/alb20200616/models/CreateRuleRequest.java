@@ -7,6 +7,9 @@ public class CreateRuleRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("Direction")
+    public String direction;
+
     @NameInMap("DryRun")
     public Boolean dryRun;
 
@@ -36,6 +39,14 @@ public class CreateRuleRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreateRuleRequest setDirection(String direction) {
+        this.direction = direction;
+        return this;
+    }
+    public String getDirection() {
+        return this.direction;
     }
 
     public CreateRuleRequest setDryRun(Boolean dryRun) {
