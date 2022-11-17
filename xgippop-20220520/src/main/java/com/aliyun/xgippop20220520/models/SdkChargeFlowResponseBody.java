@@ -76,64 +76,53 @@ public class SdkChargeFlowResponseBody extends TeaModel {
     }
 
     public static class SdkChargeFlowResponseBodyData extends TeaModel {
-        @NameInMap("Code")
-        public String code;
+        @NameInMap("BizCode")
+        public String bizCode;
 
-        @NameInMap("Message")
-        public String message;
+        @NameInMap("CustomerFlowOrderId")
+        public String customerFlowOrderId;
 
-        @NameInMap("Mobile")
-        public String mobile;
+        @NameInMap("CustomerFlowRequestId")
+        public String customerFlowRequestId;
 
-        @NameInMap("RequestId")
-        public String requestId;
-
-        @NameInMap("Success")
-        public Boolean success;
+        @NameInMap("Status")
+        public String status;
 
         public static SdkChargeFlowResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             SdkChargeFlowResponseBodyData self = new SdkChargeFlowResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public SdkChargeFlowResponseBodyData setCode(String code) {
-            this.code = code;
+        public SdkChargeFlowResponseBodyData setBizCode(String bizCode) {
+            this.bizCode = bizCode;
             return this;
         }
-        public String getCode() {
-            return this.code;
+        public String getBizCode() {
+            return this.bizCode;
         }
 
-        public SdkChargeFlowResponseBodyData setMessage(String message) {
-            this.message = message;
+        public SdkChargeFlowResponseBodyData setCustomerFlowOrderId(String customerFlowOrderId) {
+            this.customerFlowOrderId = customerFlowOrderId;
             return this;
         }
-        public String getMessage() {
-            return this.message;
+        public String getCustomerFlowOrderId() {
+            return this.customerFlowOrderId;
         }
 
-        public SdkChargeFlowResponseBodyData setMobile(String mobile) {
-            this.mobile = mobile;
+        public SdkChargeFlowResponseBodyData setCustomerFlowRequestId(String customerFlowRequestId) {
+            this.customerFlowRequestId = customerFlowRequestId;
             return this;
         }
-        public String getMobile() {
-            return this.mobile;
+        public String getCustomerFlowRequestId() {
+            return this.customerFlowRequestId;
         }
 
-        public SdkChargeFlowResponseBodyData setRequestId(String requestId) {
-            this.requestId = requestId;
+        public SdkChargeFlowResponseBodyData setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public String getRequestId() {
-            return this.requestId;
-        }
-
-        public SdkChargeFlowResponseBodyData setSuccess(Boolean success) {
-            this.success = success;
-            return this;
-        }
-        public Boolean getSuccess() {
-            return this.success;
+        public String getStatus() {
+            return this.status;
         }
 
     }

@@ -16,6 +16,9 @@ public class SdkChargeFlowRequest extends TeaModel {
     @NameInMap("Mobile")
     public String mobile;
 
+    @NameInMap("OrderTime")
+    public String orderTime;
+
     @NameInMap("OutBizNo")
     public String outBizNo;
 
@@ -57,6 +60,14 @@ public class SdkChargeFlowRequest extends TeaModel {
     }
     public String getMobile() {
         return this.mobile;
+    }
+
+    public SdkChargeFlowRequest setOrderTime(String orderTime) {
+        this.orderTime = orderTime;
+        return this;
+    }
+    public String getOrderTime() {
+        return this.orderTime;
     }
 
     public SdkChargeFlowRequest setOutBizNo(String outBizNo) {

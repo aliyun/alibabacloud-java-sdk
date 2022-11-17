@@ -127,4 +127,56 @@ public class ChargeFlowResponseBody extends TeaModel {
 
     }
 
+    public static class SdkChargeFlowResponseBodyData extends TeaModel {
+        @NameInMap("BizCode")
+        public String bizCode;
+
+        @NameInMap("CustomerFlowOrderId")
+        public String customerFlowOrderId;
+
+        @NameInMap("CustomerFlowRequestId")
+        public String customerFlowRequestId;
+
+        @NameInMap("Status")
+        public String status;
+
+        public static SdkChargeFlowResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            SdkChargeFlowResponseBodyData self = new SdkChargeFlowResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public SdkChargeFlowResponseBodyData setBizCode(String bizCode) {
+            this.bizCode = bizCode;
+            return this;
+        }
+        public String getBizCode() {
+            return this.bizCode;
+        }
+
+        public SdkChargeFlowResponseBodyData setCustomerFlowOrderId(String customerFlowOrderId) {
+            this.customerFlowOrderId = customerFlowOrderId;
+            return this;
+        }
+        public String getCustomerFlowOrderId() {
+            return this.customerFlowOrderId;
+        }
+
+        public SdkChargeFlowResponseBodyData setCustomerFlowRequestId(String customerFlowRequestId) {
+            this.customerFlowRequestId = customerFlowRequestId;
+            return this;
+        }
+        public String getCustomerFlowRequestId() {
+            return this.customerFlowRequestId;
+        }
+
+        public SdkChargeFlowResponseBodyData setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+    }
+
 }
