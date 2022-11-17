@@ -1,3 +1,6 @@
+2022-11-17 Version: 1.0.24
+- Add DescribeRDDomainConfig.
+
 2022-10-27 Version: 1.0.23
 - Update BatchAddDcdnDomain,add error code.
 
