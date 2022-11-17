@@ -1,3 +1,6 @@
+2022-11-17 Version: 1.0.25
+- Update DescribeRDDomainConfig.
+
 2022-11-17 Version: 1.0.24
 - Add DescribeRDDomainConfig.
 
