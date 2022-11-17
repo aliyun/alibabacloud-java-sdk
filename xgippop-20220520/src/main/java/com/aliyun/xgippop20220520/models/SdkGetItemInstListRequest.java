@@ -25,6 +25,9 @@ public class SdkGetItemInstListRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("Status")
+    public String status;
+
     @NameInMap("UId")
     public Long UId;
 
@@ -87,6 +90,14 @@ public class SdkGetItemInstListRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public SdkGetItemInstListRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
     public SdkGetItemInstListRequest setUId(Long UId) {
