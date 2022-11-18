@@ -8,7 +8,7 @@ public class ChangeSkyAdvanceRequest extends TeaModel {
     public java.io.InputStream imageURLObject;
 
     @NameInMap("ReplaceImageURL")
-    public String replaceImageURL;
+    public java.io.InputStream replaceImageURLObject;
 
     public static ChangeSkyAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         ChangeSkyAdvanceRequest self = new ChangeSkyAdvanceRequest();
@@ -23,12 +23,12 @@ public class ChangeSkyAdvanceRequest extends TeaModel {
         return this.imageURLObject;
     }
 
-    public ChangeSkyAdvanceRequest setReplaceImageURL(String replaceImageURL) {
-        this.replaceImageURL = replaceImageURL;
+    public ChangeSkyAdvanceRequest setReplaceImageURLObject(java.io.InputStream replaceImageURLObject) {
+        this.replaceImageURLObject = replaceImageURLObject;
         return this;
     }
-    public String getReplaceImageURL() {
-        return this.replaceImageURL;
+    public java.io.InputStream getReplaceImageURLObject() {
+        return this.replaceImageURLObject;
     }
 
 }
