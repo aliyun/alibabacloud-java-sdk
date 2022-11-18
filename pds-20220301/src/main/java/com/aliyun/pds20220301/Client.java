@@ -1616,16 +1616,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetVideoPreviewPlayInfoResponse());
     }
 
-    public GetVideoPreviewPlayMetaResponse getVideoPreviewPlayMeta(String domainId, GetVideoPreviewPlayMetaRequest request) throws Exception {
+    public GetVideoPreviewPlayMetaResponse getVideoPreviewPlayMeta(GetVideoPreviewPlayMetaRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getVideoPreviewPlayMetaWithOptions(domainId, request, headers, runtime);
+        return this.getVideoPreviewPlayMetaWithOptions(request, headers, runtime);
     }
 
-    public GetVideoPreviewPlayMetaResponse getVideoPreviewPlayMetaWithOptions(String domainId, GetVideoPreviewPlayMetaRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetVideoPreviewPlayMetaResponse getVideoPreviewPlayMetaWithOptions(GetVideoPreviewPlayMetaRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
-        hostMap.put("domain_id", domainId);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.category)) {
             body.put("category", request.category);
@@ -1644,7 +1642,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
