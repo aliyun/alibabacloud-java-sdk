@@ -31,6 +31,9 @@ public class CreateTopicShrinkRequest extends TeaModel {
     @NameInMap("ReplicationFactor")
     public Long replicationFactor;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateTopicShrinkRequestTag> tag;
+
     @NameInMap("Topic")
     public String topic;
 
@@ -111,12 +114,50 @@ public class CreateTopicShrinkRequest extends TeaModel {
         return this.replicationFactor;
     }
 
+    public CreateTopicShrinkRequest setTag(java.util.List<CreateTopicShrinkRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateTopicShrinkRequestTag> getTag() {
+        return this.tag;
+    }
+
     public CreateTopicShrinkRequest setTopic(String topic) {
         this.topic = topic;
         return this;
     }
     public String getTopic() {
         return this.topic;
+    }
+
+    public static class CreateTopicShrinkRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateTopicShrinkRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateTopicShrinkRequestTag self = new CreateTopicShrinkRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateTopicShrinkRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateTopicShrinkRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

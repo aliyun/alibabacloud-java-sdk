@@ -34,6 +34,9 @@ public class CreatePostPayOrderRequest extends TeaModel {
     @NameInMap("SpecType")
     public String specType;
 
+    @NameInMap("Tag")
+    public java.util.List<CreatePostPayOrderRequestTag> tag;
+
     @NameInMap("TopicQuota")
     public Integer topicQuota;
 
@@ -122,12 +125,50 @@ public class CreatePostPayOrderRequest extends TeaModel {
         return this.specType;
     }
 
+    public CreatePostPayOrderRequest setTag(java.util.List<CreatePostPayOrderRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreatePostPayOrderRequestTag> getTag() {
+        return this.tag;
+    }
+
     public CreatePostPayOrderRequest setTopicQuota(Integer topicQuota) {
         this.topicQuota = topicQuota;
         return this;
     }
     public Integer getTopicQuota() {
         return this.topicQuota;
+    }
+
+    public static class CreatePostPayOrderRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreatePostPayOrderRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreatePostPayOrderRequestTag self = new CreatePostPayOrderRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreatePostPayOrderRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreatePostPayOrderRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }
