@@ -10,6 +10,9 @@ public class ModifySmartAccessGatewayRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("EnableSoftwareConnectionAudit")
+    public Boolean enableSoftwareConnectionAudit;
+
     @NameInMap("Name")
     public String name;
 
@@ -18,6 +21,9 @@ public class ModifySmartAccessGatewayRequest extends TeaModel {
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("Position")
+    public String position;
 
     @NameInMap("RegionId")
     public String regionId;
@@ -58,6 +64,14 @@ public class ModifySmartAccessGatewayRequest extends TeaModel {
         return this.description;
     }
 
+    public ModifySmartAccessGatewayRequest setEnableSoftwareConnectionAudit(Boolean enableSoftwareConnectionAudit) {
+        this.enableSoftwareConnectionAudit = enableSoftwareConnectionAudit;
+        return this;
+    }
+    public Boolean getEnableSoftwareConnectionAudit() {
+        return this.enableSoftwareConnectionAudit;
+    }
+
     public ModifySmartAccessGatewayRequest setName(String name) {
         this.name = name;
         return this;
@@ -80,6 +94,14 @@ public class ModifySmartAccessGatewayRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public ModifySmartAccessGatewayRequest setPosition(String position) {
+        this.position = position;
+        return this;
+    }
+    public String getPosition() {
+        return this.position;
     }
 
     public ModifySmartAccessGatewayRequest setRegionId(String regionId) {

@@ -225,6 +225,12 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
         @NameInMap("DpiStatus")
         public String dpiStatus;
 
+        @NameInMap("EnableAdvancedMonitor")
+        public Boolean enableAdvancedMonitor;
+
+        @NameInMap("EnableSoftwareConnectionAudit")
+        public Boolean enableSoftwareConnectionAudit;
+
         @NameInMap("EndTime")
         public Long endTime;
 
@@ -233,6 +239,9 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
 
         @NameInMap("HardwareVersion")
         public String hardwareVersion;
+
+        @NameInMap("IRIds")
+        public String IRIds;
 
         @NameInMap("IdaasApplicationId")
         public String idaasApplicationId;
@@ -243,6 +252,9 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
         @NameInMap("IpsecStatus")
         public String ipsecStatus;
 
+        @NameInMap("Isp")
+        public String isp;
+
         @NameInMap("Links")
         public DescribeSmartAccessGatewaysResponseBodySmartAccessGatewaysSmartAccessGatewayLinks links;
 
@@ -251,6 +263,9 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
 
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("Position")
+        public String position;
 
         @NameInMap("QosIds")
         public String qosIds;
@@ -422,6 +437,22 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
             return this.dpiStatus;
         }
 
+        public DescribeSmartAccessGatewaysResponseBodySmartAccessGatewaysSmartAccessGateway setEnableAdvancedMonitor(Boolean enableAdvancedMonitor) {
+            this.enableAdvancedMonitor = enableAdvancedMonitor;
+            return this;
+        }
+        public Boolean getEnableAdvancedMonitor() {
+            return this.enableAdvancedMonitor;
+        }
+
+        public DescribeSmartAccessGatewaysResponseBodySmartAccessGatewaysSmartAccessGateway setEnableSoftwareConnectionAudit(Boolean enableSoftwareConnectionAudit) {
+            this.enableSoftwareConnectionAudit = enableSoftwareConnectionAudit;
+            return this;
+        }
+        public Boolean getEnableSoftwareConnectionAudit() {
+            return this.enableSoftwareConnectionAudit;
+        }
+
         public DescribeSmartAccessGatewaysResponseBodySmartAccessGatewaysSmartAccessGateway setEndTime(Long endTime) {
             this.endTime = endTime;
             return this;
@@ -444,6 +475,14 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
         }
         public String getHardwareVersion() {
             return this.hardwareVersion;
+        }
+
+        public DescribeSmartAccessGatewaysResponseBodySmartAccessGatewaysSmartAccessGateway setIRIds(String IRIds) {
+            this.IRIds = IRIds;
+            return this;
+        }
+        public String getIRIds() {
+            return this.IRIds;
         }
 
         public DescribeSmartAccessGatewaysResponseBodySmartAccessGatewaysSmartAccessGateway setIdaasApplicationId(String idaasApplicationId) {
@@ -470,6 +509,14 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
             return this.ipsecStatus;
         }
 
+        public DescribeSmartAccessGatewaysResponseBodySmartAccessGatewaysSmartAccessGateway setIsp(String isp) {
+            this.isp = isp;
+            return this;
+        }
+        public String getIsp() {
+            return this.isp;
+        }
+
         public DescribeSmartAccessGatewaysResponseBodySmartAccessGatewaysSmartAccessGateway setLinks(DescribeSmartAccessGatewaysResponseBodySmartAccessGatewaysSmartAccessGatewayLinks links) {
             this.links = links;
             return this;
@@ -492,6 +539,14 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public DescribeSmartAccessGatewaysResponseBodySmartAccessGatewaysSmartAccessGateway setPosition(String position) {
+            this.position = position;
+            return this;
+        }
+        public String getPosition() {
+            return this.position;
         }
 
         public DescribeSmartAccessGatewaysResponseBodySmartAccessGatewaysSmartAccessGateway setQosIds(String qosIds) {

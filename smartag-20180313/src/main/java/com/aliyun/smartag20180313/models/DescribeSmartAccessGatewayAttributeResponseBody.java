@@ -58,11 +58,17 @@ public class DescribeSmartAccessGatewayAttributeResponseBody extends TeaModel {
     @NameInMap("EnableOptimization")
     public Boolean enableOptimization;
 
+    @NameInMap("EnableSoftwareConnectionAudit")
+    public Boolean enableSoftwareConnectionAudit;
+
     @NameInMap("EndTime")
     public Long endTime;
 
     @NameInMap("FlowLogIds")
     public DescribeSmartAccessGatewayAttributeResponseBodyFlowLogIds flowLogIds;
+
+    @NameInMap("IRIds")
+    public DescribeSmartAccessGatewayAttributeResponseBodyIRIds IRIds;
 
     @NameInMap("InstanceType")
     public String instanceType;
@@ -81,6 +87,9 @@ public class DescribeSmartAccessGatewayAttributeResponseBody extends TeaModel {
 
     @NameInMap("OptimizationType")
     public Boolean optimizationType;
+
+    @NameInMap("Position")
+    public String position;
 
     @NameInMap("QosIds")
     public DescribeSmartAccessGatewayAttributeResponseBodyQosIds qosIds;
@@ -276,6 +285,14 @@ public class DescribeSmartAccessGatewayAttributeResponseBody extends TeaModel {
         return this.enableOptimization;
     }
 
+    public DescribeSmartAccessGatewayAttributeResponseBody setEnableSoftwareConnectionAudit(Boolean enableSoftwareConnectionAudit) {
+        this.enableSoftwareConnectionAudit = enableSoftwareConnectionAudit;
+        return this;
+    }
+    public Boolean getEnableSoftwareConnectionAudit() {
+        return this.enableSoftwareConnectionAudit;
+    }
+
     public DescribeSmartAccessGatewayAttributeResponseBody setEndTime(Long endTime) {
         this.endTime = endTime;
         return this;
@@ -290,6 +307,14 @@ public class DescribeSmartAccessGatewayAttributeResponseBody extends TeaModel {
     }
     public DescribeSmartAccessGatewayAttributeResponseBodyFlowLogIds getFlowLogIds() {
         return this.flowLogIds;
+    }
+
+    public DescribeSmartAccessGatewayAttributeResponseBody setIRIds(DescribeSmartAccessGatewayAttributeResponseBodyIRIds IRIds) {
+        this.IRIds = IRIds;
+        return this;
+    }
+    public DescribeSmartAccessGatewayAttributeResponseBodyIRIds getIRIds() {
+        return this.IRIds;
     }
 
     public DescribeSmartAccessGatewayAttributeResponseBody setInstanceType(String instanceType) {
@@ -338,6 +363,14 @@ public class DescribeSmartAccessGatewayAttributeResponseBody extends TeaModel {
     }
     public Boolean getOptimizationType() {
         return this.optimizationType;
+    }
+
+    public DescribeSmartAccessGatewayAttributeResponseBody setPosition(String position) {
+        this.position = position;
+        return this;
+    }
+    public String getPosition() {
+        return this.position;
     }
 
     public DescribeSmartAccessGatewayAttributeResponseBody setQosIds(DescribeSmartAccessGatewayAttributeResponseBodyQosIds qosIds) {
@@ -639,6 +672,25 @@ public class DescribeSmartAccessGatewayAttributeResponseBody extends TeaModel {
         }
         public java.util.List<String> getFlowLogId() {
             return this.flowLogId;
+        }
+
+    }
+
+    public static class DescribeSmartAccessGatewayAttributeResponseBodyIRIds extends TeaModel {
+        @NameInMap("IRId")
+        public java.util.List<String> IRId;
+
+        public static DescribeSmartAccessGatewayAttributeResponseBodyIRIds build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSmartAccessGatewayAttributeResponseBodyIRIds self = new DescribeSmartAccessGatewayAttributeResponseBodyIRIds();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeSmartAccessGatewayAttributeResponseBodyIRIds setIRId(java.util.List<String> IRId) {
+            this.IRId = IRId;
+            return this;
+        }
+        public java.util.List<String> getIRId() {
+            return this.IRId;
         }
 
     }

@@ -7,6 +7,9 @@ public class DescribeACLsRequest extends TeaModel {
     @NameInMap("AclIds")
     public String aclIds;
 
+    @NameInMap("AclType")
+    public String aclType;
+
     @NameInMap("Name")
     public String name;
 
@@ -42,6 +45,14 @@ public class DescribeACLsRequest extends TeaModel {
     }
     public String getAclIds() {
         return this.aclIds;
+    }
+
+    public DescribeACLsRequest setAclType(String aclType) {
+        this.aclType = aclType;
+        return this;
+    }
+    public String getAclType() {
+        return this.aclType;
     }
 
     public DescribeACLsRequest setName(String name) {
