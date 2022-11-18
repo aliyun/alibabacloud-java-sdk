@@ -4,27 +4,21 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class ListSubmissionsResponseBody extends TeaModel {
-    // 主机ID
     @NameInMap("HostId")
     public String hostId;
 
-    // 最大返回结果
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 下次查询Token
     @NameInMap("NextToken")
     public String nextToken;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
-    // 投递列表
     @NameInMap("Submissions")
     public java.util.List<ListSubmissionsResponseBodySubmissions> submissions;
 
-    // 返回个数
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -82,31 +76,24 @@ public class ListSubmissionsResponseBody extends TeaModel {
     }
 
     public static class ListSubmissionsResponseBodySubmissionsRunStats extends TeaModel {
-        // 已取消数量
         @NameInMap("Aborted")
         public Long aborted;
 
-        // 取消中数量
         @NameInMap("Aborting")
         public Long aborting;
 
-        // 已失败数量
         @NameInMap("Failed")
         public Long failed;
 
-        // 等待中数量
         @NameInMap("Pending")
         public Long pending;
 
-        // 运行中数量
         @NameInMap("Running")
         public Long running;
 
-        // 已提交数量
         @NameInMap("Submitted")
         public Long submitted;
 
-        // 已成功数量
         @NameInMap("Succeeded")
         public Long succeeded;
 
@@ -174,34 +161,27 @@ public class ListSubmissionsResponseBody extends TeaModel {
     }
 
     public static class ListSubmissionsResponseBodySubmissions extends TeaModel {
-        // 提交时间
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 结束时间
         @NameInMap("EndTime")
         public String endTime;
 
-        // 实体类型
         @NameInMap("EntityType")
         public String entityType;
 
         @NameInMap("RunStats")
         public ListSubmissionsResponseBodySubmissionsRunStats runStats;
 
-        // 开始时间
         @NameInMap("StartTime")
         public String startTime;
 
-        // 任务状态
         @NameInMap("Status")
         public String status;
 
-        // 提交ID
         @NameInMap("SubmissionId")
         public String submissionId;
 
-        // 工作空间名字
         @NameInMap("Workspace")
         public String workspace;
 

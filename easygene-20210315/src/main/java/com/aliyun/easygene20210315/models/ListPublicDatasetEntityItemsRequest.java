@@ -4,35 +4,27 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class ListPublicDatasetEntityItemsRequest extends TeaModel {
-    // 数据集名称
     @NameInMap("DatasetName")
     public String datasetName;
 
-    // 实体类型
     @NameInMap("EntityType")
     public String entityType;
 
-    // 是否反转
     @NameInMap("IsReversed")
     public Boolean isReversed;
 
-    // 公共数据集所在区域
     @NameInMap("Location")
     public String location;
 
-    // 分页数量
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 翻页Token用来标记当前开始读取的位置，置空表示从头开始
     @NameInMap("NextToken")
     public String nextToken;
 
-    // 排序字段
     @NameInMap("OrderBy")
     public String orderBy;
 
-    // 实体名中搜索的关键字
     @NameInMap("Search")
     public String search;
 

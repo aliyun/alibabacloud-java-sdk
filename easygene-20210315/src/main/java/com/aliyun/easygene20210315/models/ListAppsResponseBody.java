@@ -4,27 +4,21 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class ListAppsResponseBody extends TeaModel {
-    // 应用数组
     @NameInMap("Apps")
     public java.util.List<ListAppsResponseBodyApps> apps;
 
-    // 主机ID
     @NameInMap("HostId")
     public String hostId;
 
-    // 最大返回个数
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // Next Token
     @NameInMap("NextToken")
     public String nextToken;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
-    // 返回个数
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -82,43 +76,33 @@ public class ListAppsResponseBody extends TeaModel {
     }
 
     public static class ListAppsResponseBodyApps extends TeaModel {
-        // 默认版本
         @NameInMap("AppDefaultVersion")
         public String appDefaultVersion;
 
-        // 应用名称
         @NameInMap("AppName")
         public String appName;
 
-        // 应用类型
         @NameInMap("AppType")
         public String appType;
 
-        // 创建时间
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 应用描述
         @NameInMap("Description")
         public String description;
 
-        // 标签
         @NameInMap("Labels")
         public java.util.Map<String, String> labels;
 
-        // 应用描述语言
         @NameInMap("Language")
         public String language;
 
-        // 应用可见范围
         @NameInMap("Scope")
         public String scope;
 
-        // 应用来源
         @NameInMap("Source")
         public String source;
 
-        // 应用所在工作空间
         @NameInMap("Workspace")
         public String workspace;
 

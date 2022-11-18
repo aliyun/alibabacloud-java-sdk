@@ -4,43 +4,33 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class CreateTemplateRequest extends TeaModel {
-    // 应用的名称
     @NameInMap("AppName")
     public String appName;
 
-    // 应用的版本
     @NameInMap("AppRevision")
     public String appRevision;
 
-    // 幂等Token
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // 应用模板描述
     @NameInMap("Description")
     public String description;
 
-    // 应用的输入
     @NameInMap("InputsExpression")
     public java.util.List<CreateTemplateRequestInputsExpression> inputsExpression;
 
-    // 应用标签
     @NameInMap("Labels")
     public String labels;
 
-    // 应用的输出
     @NameInMap("OutputsExpression")
     public java.util.List<CreateTemplateRequestOutputsExpression> outputsExpression;
 
-    // 根实体类型
     @NameInMap("RootEntity")
     public String rootEntity;
 
-    // 应用模板名称
     @NameInMap("TemplateName")
     public String templateName;
 
-    // 工作空间名称
     @NameInMap("Workspace")
     public String workspace;
 
@@ -130,31 +120,24 @@ public class CreateTemplateRequest extends TeaModel {
     }
 
     public static class CreateTemplateRequestInputsExpression extends TeaModel {
-        // 帮助信息
         @NameInMap("Help")
         public String help;
 
-        // 是否必填
         @NameInMap("Required")
         public Boolean required;
 
-        // 步骤顺序
         @NameInMap("StepOrder")
         public Integer stepOrder;
 
-        // 任务名称
         @NameInMap("TaskName")
         public String taskName;
 
-        // 变量名
         @NameInMap("VariableName")
         public String variableName;
 
-        // 变量类型
         @NameInMap("VariableType")
         public String variableType;
 
-        // 变量值
         @NameInMap("VariableValue")
         public String variableValue;
 
@@ -222,31 +205,24 @@ public class CreateTemplateRequest extends TeaModel {
     }
 
     public static class CreateTemplateRequestOutputsExpression extends TeaModel {
-        // 帮助信息
         @NameInMap("Help")
         public String help;
 
-        // 是否必填
         @NameInMap("Required")
         public Boolean required;
 
-        // 步骤顺序
         @NameInMap("StepOrder")
         public Integer stepOrder;
 
-        // 任务名称
         @NameInMap("TaskName")
         public String taskName;
 
-        // 变量名
         @NameInMap("VariableName")
         public String variableName;
 
-        // 变量类型
         @NameInMap("VariableType")
         public String variableType;
 
-        // 变量值
         @NameInMap("VariableValue")
         public String variableValue;
 

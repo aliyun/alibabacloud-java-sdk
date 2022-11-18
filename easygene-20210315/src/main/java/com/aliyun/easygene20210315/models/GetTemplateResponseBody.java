@@ -4,59 +4,45 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class GetTemplateResponseBody extends TeaModel {
-    // 应用的名称
     @NameInMap("AppName")
     public String appName;
 
-    // 应用的版本
     @NameInMap("AppRevision")
     public String appRevision;
 
-    // 创建时间
     @NameInMap("CreateTime")
     public String createTime;
 
-    // 应用简要描述
     @NameInMap("Description")
     public String description;
 
-    // 主机ID
     @NameInMap("HostId")
     public String hostId;
 
-    // 应用输入
     @NameInMap("InputsExpression")
     public java.util.List<GetTemplateResponseBodyInputsExpression> inputsExpression;
 
-    // 应用标签
     @NameInMap("Labels")
     public java.util.Map<String, String> labels;
 
-    // 应用最后修改时间
     @NameInMap("LastModifiedTime")
     public String lastModifiedTime;
 
-    // 应用的输出参数
     @NameInMap("OutputsExpression")
     public java.util.List<GetTemplateResponseBodyOutputsExpression> outputsExpression;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
-    // 实体类型
     @NameInMap("RootEntity")
     public String rootEntity;
 
-    // 应用来源
     @NameInMap("Source")
     public String source;
 
-    // 应用模板名称
     @NameInMap("TemplateName")
     public String templateName;
 
-    // 工作空间名称
     @NameInMap("Workspace")
     public String workspace;
 
@@ -178,31 +164,24 @@ public class GetTemplateResponseBody extends TeaModel {
     }
 
     public static class GetTemplateResponseBodyInputsExpression extends TeaModel {
-        // 帮助信息
         @NameInMap("Help")
         public String help;
 
-        // 是否必须参数
         @NameInMap("Required")
         public Boolean required;
 
-        // 步骤顺序
         @NameInMap("StepOrder")
         public Long stepOrder;
 
-        // 任务名称
         @NameInMap("TaskName")
         public String taskName;
 
-        // 变量名称
         @NameInMap("VariableName")
         public String variableName;
 
-        // 变量类型
         @NameInMap("VariableType")
         public String variableType;
 
-        // 变量值
         @NameInMap("VariableValue")
         public String variableValue;
 
@@ -270,31 +249,24 @@ public class GetTemplateResponseBody extends TeaModel {
     }
 
     public static class GetTemplateResponseBodyOutputsExpression extends TeaModel {
-        // 帮助信息
         @NameInMap("Help")
         public String help;
 
-        // 是否必须参数
         @NameInMap("Required")
         public Boolean required;
 
-        // 步骤顺序
         @NameInMap("StepOrder")
         public Long stepOrder;
 
-        // 任务名称
         @NameInMap("TaskName")
         public String taskName;
 
-        // 变量名称
         @NameInMap("VariableName")
         public String variableName;
 
-        // 变量类型
         @NameInMap("VariableType")
         public String variableType;
 
-        // 变量值
         @NameInMap("VariableValue")
         public String variableValue;
 

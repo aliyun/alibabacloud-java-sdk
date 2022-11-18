@@ -4,15 +4,12 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class CreateWorkspaceResponseBody extends TeaModel {
-    // 主机ID
     @NameInMap("HostId")
     public String hostId;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
-    // 创建成功的工作空间名称
     @NameInMap("Workspace")
     public String workspace;
 

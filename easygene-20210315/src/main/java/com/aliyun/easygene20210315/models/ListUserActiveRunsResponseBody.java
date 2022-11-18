@@ -4,27 +4,21 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class ListUserActiveRunsResponseBody extends TeaModel {
-    // 主机ID
     @NameInMap("HostId")
     public String hostId;
 
-    // 最大返回结果
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 下次查询Token
     @NameInMap("NextToken")
     public String nextToken;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
-    // 任务列表
     @NameInMap("Runs")
     public java.util.List<ListUserActiveRunsResponseBodyRuns> runs;
 
-    // 返回个数
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -82,19 +76,15 @@ public class ListUserActiveRunsResponseBody extends TeaModel {
     }
 
     public static class ListUserActiveRunsResponseBodyRunsExecuteOptions extends TeaModel {
-        // 是否开启CallCaching
         @NameInMap("CallCaching")
         public Boolean callCaching;
 
-        // 是否删除中间文件
         @NameInMap("DeleteIntermediateResults")
         public Boolean deleteIntermediateResults;
 
-        // 失败模式
         @NameInMap("FailureMode")
         public String failureMode;
 
-        // 使用相对路径
         @NameInMap("UseRelativeOutputPaths")
         public Boolean useRelativeOutputPaths;
 
@@ -138,78 +128,60 @@ public class ListUserActiveRunsResponseBody extends TeaModel {
     }
 
     public static class ListUserActiveRunsResponseBodyRuns extends TeaModel {
-        // 应用名称
         @NameInMap("AppName")
         public String appName;
 
-        // 应用版本号
         @NameInMap("AppRevision")
         public String appRevision;
 
-        // 提交时间
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 默认运行时
         @NameInMap("DefaultRuntime")
         public String defaultRuntime;
 
-        // 结束时间
         @NameInMap("EndTime")
         public String endTime;
 
-        // 实体名称
         @NameInMap("EntityName")
         public String entityName;
 
-        // 实体对象ID
         @NameInMap("EntityType")
         public String entityType;
 
-        // 运行目录
         @NameInMap("ExecuteDirectory")
         public String executeDirectory;
 
         @NameInMap("ExecuteOptions")
         public ListUserActiveRunsResponseBodyRunsExecuteOptions executeOptions;
 
-        // 输入参数
         @NameInMap("Inputs")
         public String inputs;
 
-        // 任务标签
         @NameInMap("Labels")
         public java.util.Map<String, String> labels;
 
-        // 区域
         @NameInMap("RegionId")
         public String regionId;
 
-        // 任务ID
         @NameInMap("RunId")
         public String runId;
 
-        // 任务名称
         @NameInMap("RunName")
         public String runName;
 
-        // 应用来源
         @NameInMap("Source")
         public String source;
 
-        // 开始时间
         @NameInMap("StartTime")
         public String startTime;
 
-        // 任务状态
         @NameInMap("Status")
         public String status;
 
-        // 提交ID
         @NameInMap("SubmissionId")
         public String submissionId;
 
-        // 工作空间
         @NameInMap("Workspace")
         public String workspace;
 

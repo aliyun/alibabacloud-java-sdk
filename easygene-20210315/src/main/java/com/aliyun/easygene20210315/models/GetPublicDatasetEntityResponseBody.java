@@ -4,27 +4,21 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class GetPublicDatasetEntityResponseBody extends TeaModel {
-    // 实体属性名称列表
     @NameInMap("Attributes")
     public java.util.List<String> attributes;
 
-    // 公共数据集名称
     @NameInMap("DatasetName")
     public String datasetName;
 
-    // 实体类型
     @NameInMap("EntityType")
     public String entityType;
 
-    // 主机ID
     @NameInMap("HostId")
     public String hostId;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
-    // 该类型实体总数
     @NameInMap("TotalCount")
     public Integer totalCount;
 

@@ -4,50 +4,39 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class CreateSubmissionShrinkRequest extends TeaModel {
-    // 应用名称
     @NameInMap("AppName")
     public String appName;
 
-    // 任务幂等token
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // 默认运行时
     @NameInMap("DefaultRuntime")
     public String defaultRuntime;
 
     @NameInMap("EntityNames")
     public String entityNamesShrink;
 
-    // 实体类型
     @NameInMap("EntityType")
     public String entityType;
 
-    // 任务执行目录
     @NameInMap("ExecuteDirectory")
     public String executeDirectory;
 
-    // 任务配置
     @NameInMap("ExecuteOptions")
     public String executeOptions;
 
-    // 任务输入
     @NameInMap("Inputs")
     public String inputs;
 
-    // 任务输出拷贝目录
     @NameInMap("OutputFolder")
     public String outputFolder;
 
-    // 任务输出
     @NameInMap("Outputs")
     public String outputs;
 
-    // 应用版本号
     @NameInMap("Revision")
     public String revision;
 
-    // 工作空间名字
     @NameInMap("Workspace")
     public String workspace;
 

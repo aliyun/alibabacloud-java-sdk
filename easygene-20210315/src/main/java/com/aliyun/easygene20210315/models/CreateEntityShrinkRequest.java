@@ -4,18 +4,15 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class CreateEntityShrinkRequest extends TeaModel {
-    // 幂等Token
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("EntityItems")
     public String entityItemsShrink;
 
-    // 实体类型
     @NameInMap("EntityType")
     public String entityType;
 
-    // 工作空间
     @NameInMap("Workspace")
     public String workspace;
 

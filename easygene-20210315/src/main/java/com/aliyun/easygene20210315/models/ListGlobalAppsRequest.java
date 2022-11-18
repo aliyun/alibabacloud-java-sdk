@@ -4,39 +4,30 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class ListGlobalAppsRequest extends TeaModel {
-    // 可见范围
     @NameInMap("AppScope")
     public String appScope;
 
-    // 分类
     @NameInMap("Category")
     public String category;
 
-    // 是否倒序，默认倒序排列
     @NameInMap("IsReversed")
     public Boolean isReversed;
 
-    // 区域Id
     @NameInMap("Location")
     public String location;
 
-    // 分页数
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 翻页Token用来标记当前开始读取的位置，置空表示从头开始
     @NameInMap("NextToken")
     public String nextToken;
 
-    // 排序字段:AppName,LastModified,Used
     @NameInMap("OrderBy")
     public String orderBy;
 
-    // 模糊搜索字段：NamesapceName  AppName  Categories AppDescription
     @NameInMap("Search")
     public String search;
 
-    // 工具集
     @NameInMap("Toolkit")
     public String toolkit;
 

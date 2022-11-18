@@ -7,11 +7,9 @@ public class DownloadEntityRequest extends TeaModel {
     @NameInMap("EntityNames")
     public java.util.List<String> entityNames;
 
-    // 实体类型
     @NameInMap("EntityType")
     public String entityType;
 
-    // 工作空间
     @NameInMap("Workspace")
     public String workspace;
 

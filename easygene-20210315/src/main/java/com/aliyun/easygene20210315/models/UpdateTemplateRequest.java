@@ -4,31 +4,24 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class UpdateTemplateRequest extends TeaModel {
-    // 应用模板描述
     @NameInMap("Description")
     public String description;
 
-    // 应用的输入
     @NameInMap("InputsExpression")
     public java.util.List<UpdateTemplateRequestInputsExpression> inputsExpression;
 
-    // 应用模板标签
     @NameInMap("Labels")
     public String labels;
 
-    // 应用的输出
     @NameInMap("OutputsExpression")
     public java.util.List<UpdateTemplateRequestOutputsExpression> outputsExpression;
 
-    // 实体类型
     @NameInMap("RootEntity")
     public String rootEntity;
 
-    // 应用模板名称
     @NameInMap("TemplateName")
     public String templateName;
 
-    // 工作空间名称
     @NameInMap("Workspace")
     public String workspace;
 
@@ -94,31 +87,24 @@ public class UpdateTemplateRequest extends TeaModel {
     }
 
     public static class UpdateTemplateRequestInputsExpression extends TeaModel {
-        // 帮助信息
         @NameInMap("Help")
         public String help;
 
-        // 是否必填
         @NameInMap("Required")
         public Boolean required;
 
-        // 步骤顺序
         @NameInMap("StepOrder")
         public Integer stepOrder;
 
-        // 任务名称
         @NameInMap("TaskName")
         public String taskName;
 
-        // 变量名
         @NameInMap("VariableName")
         public String variableName;
 
-        // 变量类型
         @NameInMap("VariableType")
         public String variableType;
 
-        // 变量值
         @NameInMap("VariableValue")
         public String variableValue;
 
@@ -186,31 +172,24 @@ public class UpdateTemplateRequest extends TeaModel {
     }
 
     public static class UpdateTemplateRequestOutputsExpression extends TeaModel {
-        // 帮助信息
         @NameInMap("Help")
         public String help;
 
-        // 是否必填
         @NameInMap("Required")
         public Boolean required;
 
-        // 步骤顺序
         @NameInMap("StepOrder")
         public Integer stepOrder;
 
-        // 任务名称
         @NameInMap("TaskName")
         public String taskName;
 
-        // 变量名
         @NameInMap("VariableName")
         public String variableName;
 
-        // 变量类型
         @NameInMap("VariableType")
         public String variableType;
 
-        // 变量值
         @NameInMap("VariableValue")
         public String variableValue;
 

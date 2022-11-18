@@ -4,59 +4,45 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class ListRunsRequest extends TeaModel {
-    // 应用名称
     @NameInMap("AppName")
     public String appName;
 
-    // 应用版本
     @NameInMap("AppRevision")
     public String appRevision;
 
-    // 实体名称
     @NameInMap("EntityName")
     public String entityName;
 
-    // 实体类型
     @NameInMap("EntityType")
     public String entityType;
 
-    // 是否返回所有任务条数
     @NameInMap("GetTotal")
     public Boolean getTotal;
 
-    // 是否逆序
     @NameInMap("IsReversed")
     public Boolean isReversed;
 
-    // 标签选择
     @NameInMap("LabelSelector")
     public String labelSelector;
 
-    // 最大返回个数
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 查询起始位置
     @NameInMap("NextToken")
     public String nextToken;
 
-    // 排序依据
     @NameInMap("OrderBy")
     public String orderBy;
 
-    // 搜索ID
     @NameInMap("Search")
     public String search;
 
-    // 状态
     @NameInMap("Status")
     public String status;
 
-    // 提交ID
     @NameInMap("SubmissionId")
     public String submissionId;
 
-    // 工作空间
     @NameInMap("Workspace")
     public String workspace;
 

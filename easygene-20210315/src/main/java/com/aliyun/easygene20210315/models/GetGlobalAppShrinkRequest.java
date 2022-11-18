@@ -4,23 +4,18 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class GetGlobalAppShrinkRequest extends TeaModel {
-    // 应用名称
     @NameInMap("AppName")
     public String appName;
 
-    // 应用版本
     @NameInMap("AppVersion")
     public String appVersion;
 
-    // 查询字段信息：appVersions，regionIds，dag
     @NameInMap("Attributes")
     public String attributesShrink;
 
-    // 应用可用区域
     @NameInMap("Location")
     public String location;
 
-    // 命名空间
     @NameInMap("NamespaceName")
     public String namespaceName;
 

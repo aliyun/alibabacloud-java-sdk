@@ -4,27 +4,21 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class ListGlobalAppsResponseBody extends TeaModel {
-    // 公共应用集合
     @NameInMap("GlobalApps")
     public java.util.List<ListGlobalAppsResponseBodyGlobalApps> globalApps;
 
-    // 主机ID
     @NameInMap("HostId")
     public String hostId;
 
-    // 分页数
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 翻页Token用来表示当前调用返回读取到的位置，空代表数据已经读取完毕
     @NameInMap("NextToken")
     public String nextToken;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
-    // 本次请求条件下的数据总量
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -82,47 +76,36 @@ public class ListGlobalAppsResponseBody extends TeaModel {
     }
 
     public static class ListGlobalAppsResponseBodyGlobalApps extends TeaModel {
-        // 应用默认版本
         @NameInMap("AppDefaultVersion")
         public String appDefaultVersion;
 
-        // 应用描述
         @NameInMap("AppDescription")
         public String appDescription;
 
-        // 应用计费说明
         @NameInMap("AppFee")
         public String appFee;
 
-        // 应用名称
         @NameInMap("AppName")
         public String appName;
 
-        // 应用权限
         @NameInMap("AppScope")
         public String appScope;
 
-        // 应用所属分类
         @NameInMap("Categories")
         public java.util.List<String> categories;
 
-        // 更新时间
         @NameInMap("LastModified")
         public String lastModified;
 
-        // 应用支持的区域ids
         @NameInMap("Locations")
         public java.util.List<String> locations;
 
-        // 命名空间名称
         @NameInMap("NamespaceName")
         public String namespaceName;
 
-        // 应用收藏置顶标记
         @NameInMap("Pinned")
         public Boolean pinned;
 
-        // 应用工具合集
         @NameInMap("Toolkit")
         public String toolkit;
 

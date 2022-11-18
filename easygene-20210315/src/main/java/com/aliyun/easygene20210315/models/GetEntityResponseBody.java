@@ -4,27 +4,21 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class GetEntityResponseBody extends TeaModel {
-    // 属性列数组
     @NameInMap("Attributes")
     public java.util.List<String> attributes;
 
-    // 实体类型
     @NameInMap("EntityType")
     public String entityType;
 
-    // 主机ID
     @NameInMap("HostId")
     public String hostId;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
-    // 实体元素总个数
     @NameInMap("TotalCount")
     public Integer totalCount;
 
-    // 工作空间
     @NameInMap("Workspace")
     public String workspace;
 

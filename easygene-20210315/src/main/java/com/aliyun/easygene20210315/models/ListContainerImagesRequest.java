@@ -4,15 +4,12 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class ListContainerImagesRequest extends TeaModel {
-    // 区域
     @NameInMap("Location")
     public String location;
 
-    // 分页数量
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 翻页Token用来标记当前开始读取的位置，置空表示从头开始
     @NameInMap("NextToken")
     public String nextToken;
 

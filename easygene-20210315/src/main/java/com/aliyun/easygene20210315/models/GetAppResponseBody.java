@@ -4,103 +4,78 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class GetAppResponseBody extends TeaModel {
-    // 应用名称
     @NameInMap("AppName")
     public String appName;
 
-    // 实体类型
     @NameInMap("AppType")
     public String appType;
 
-    // 参考输入
     @NameInMap("Configs")
     public java.util.List<GetAppResponseBodyConfigs> configs;
 
-    // 创建时间
     @NameInMap("CreateTime")
     public String createTime;
 
-    // 应用定义
     @NameInMap("Definition")
     public String definition;
 
-    // 依赖应用
     @NameInMap("Dependencies")
     public java.util.List<GetAppResponseBodyDependencies> dependencies;
 
-    // 应用简要描述
     @NameInMap("Description")
     public String description;
 
-    // 应用详细文档
     @NameInMap("Documentation")
     public String documentation;
 
-    // 主机ID
     @NameInMap("HostId")
     public String hostId;
 
-    // 应用输入
     @NameInMap("Inputs")
     public java.util.List<GetAppResponseBodyInputs> inputs;
 
-    // 应用标签
     @NameInMap("Labels")
     public java.util.Map<String, String> labels;
 
-    // 应用描述语言
     @NameInMap("Language")
     public String language;
 
-    // 应用描述语言版本
     @NameInMap("LanguageVersion")
     public String languageVersion;
 
-    // 应用最后修改时间
     @NameInMap("LastModifiedTime")
     public String lastModifiedTime;
 
-    // 应用的输出参数
     @NameInMap("Outputs")
     public java.util.List<GetAppResponseBodyOutputs> outputs;
 
-    // 主WDL路径
     @NameInMap("Path")
     public String path;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
-    // 应用版本号
     @NameInMap("Revision")
     public String revision;
 
-    // 应用当前版本修改
     @NameInMap("RevisionComment")
     public String revisionComment;
 
-    // 应用的所有版本号
     @NameInMap("Revisions")
     public java.util.List<GetAppResponseBodyRevisions> revisions;
 
-    // 应用可见范围
     @NameInMap("Scope")
     public String scope;
 
-    // 应用来源
     @NameInMap("Source")
     public String source;
 
-    // 应用URL
     @NameInMap("URL")
     public String URL;
 
-    // 工作流名称
     @NameInMap("WorkflowName")
     public String workflowName;
 
-    // 工作空间名称
     @NameInMap("Workspace")
     public String workspace;
 
@@ -340,11 +315,9 @@ public class GetAppResponseBody extends TeaModel {
     }
 
     public static class GetAppResponseBodyDependencies extends TeaModel {
-        // wdl内容
         @NameInMap("Content")
         public String content;
 
-        // 依赖路径
         @NameInMap("Path")
         public String path;
 
@@ -372,31 +345,24 @@ public class GetAppResponseBody extends TeaModel {
     }
 
     public static class GetAppResponseBodyInputs extends TeaModel {
-        // 帮助
         @NameInMap("Help")
         public String help;
 
-        // 是否必须
         @NameInMap("Required")
         public Boolean required;
 
-        // 步骤顺序
         @NameInMap("StepOrder")
         public Long stepOrder;
 
-        // 任务名称
         @NameInMap("TaskName")
         public String taskName;
 
-        // 变量名称
         @NameInMap("VariableName")
         public String variableName;
 
-        // 变量类型
         @NameInMap("VariableType")
         public String variableType;
 
-        // 变量值
         @NameInMap("VariableValue")
         public String variableValue;
 
@@ -464,31 +430,24 @@ public class GetAppResponseBody extends TeaModel {
     }
 
     public static class GetAppResponseBodyOutputs extends TeaModel {
-        // 帮助信息
         @NameInMap("Help")
         public String help;
 
-        // 是否必须
         @NameInMap("Required")
         public Boolean required;
 
-        // 步骤编号
         @NameInMap("StepOrder")
         public Long stepOrder;
 
-        // 任务名称
         @NameInMap("TaskName")
         public String taskName;
 
-        // 参数名称
         @NameInMap("VariableName")
         public String variableName;
 
-        // 参数类型
         @NameInMap("VariableType")
         public String variableType;
 
-        // 参数值
         @NameInMap("VariableValue")
         public String variableValue;
 
@@ -556,15 +515,12 @@ public class GetAppResponseBody extends TeaModel {
     }
 
     public static class GetAppResponseBodyRevisions extends TeaModel {
-        // 创建时间
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 版本号
         @NameInMap("Revision")
         public String revision;
 
-        // 应用当前版本修改
         @NameInMap("RevisionComment")
         public String revisionComment;
 

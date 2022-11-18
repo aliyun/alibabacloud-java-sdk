@@ -4,95 +4,72 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class GetGlobalAppResponseBody extends TeaModel {
-    // 默认版本
     @NameInMap("AppDefaultVersion")
     public String appDefaultVersion;
 
-    // 应用描述
     @NameInMap("AppDescription")
     public String appDescription;
 
-    // 应用的描述文件内容
     @NameInMap("AppDescriptorFiles")
     public java.util.List<GetGlobalAppResponseBodyAppDescriptorFiles> appDescriptorFiles;
 
-    // 应用描述语言标准
     @NameInMap("AppDescriptorType")
     public String appDescriptorType;
 
-    // 应用计费说明
     @NameInMap("AppFee")
     public String appFee;
 
-    // 应用名称
     @NameInMap("AppName")
     public String appName;
 
-    // 应用权限
     @NameInMap("AppScope")
     public String appScope;
 
-    // 应用类型
     @NameInMap("AppType")
     public String appType;
 
-    // 应用版本
     @NameInMap("AppVersion")
     public String appVersion;
 
-    // 应用的所有版本列表
     @NameInMap("AppVersions")
     public java.util.List<GetGlobalAppResponseBodyAppVersions> appVersions;
 
-    // 应用所属分类
     @NameInMap("Categories")
     public java.util.List<String> categories;
 
-    // 应用的备注信息
     @NameInMap("Comment")
     public String comment;
 
-    // 应用联系人信息
     @NameInMap("Contact")
     public String contact;
 
-    // 应用的DAG信息
     @NameInMap("DAG")
     public String DAG;
 
-    // 应用的帮助文档
     @NameInMap("Document")
     public String document;
 
-    // 主机ID
     @NameInMap("HostId")
     public String hostId;
 
-    // 更新时间
     @NameInMap("LastModified")
     public String lastModified;
 
-    // 应用主页信息
     @NameInMap("Links")
     public java.util.List<String> links;
 
-    // 应用支持的区域
     @NameInMap("Locations")
     public java.util.List<String> locations;
 
-    // 命名空间名称
     @NameInMap("NamespaceName")
     public String namespaceName;
 
-    // 应用收藏置顶标记
     @NameInMap("Pinned")
     public Boolean pinned;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
-    // 应用所属工具合集
     @NameInMap("Toolkit")
     public String toolkit;
 
@@ -286,23 +263,18 @@ public class GetGlobalAppResponseBody extends TeaModel {
     }
 
     public static class GetGlobalAppResponseBodyAppDescriptorFiles extends TeaModel {
-        // 应用文件内容的完整性校验码，如MD5值
         @NameInMap("Checksum")
         public String checksum;
 
-        // 应用文件内容
         @NameInMap("Content")
         public String content;
 
-        // 应用文件的类型
         @NameInMap("FileType")
         public String fileType;
 
-        // 应用文件的路径，除PRIMARY_DESCRIPTOR外，其他均为相对于PRIMARY_DESCRIPTOR的相对路径
         @NameInMap("Path")
         public String path;
 
-        // 应用文件链接
         @NameInMap("Url")
         public String url;
 
@@ -354,15 +326,12 @@ public class GetGlobalAppResponseBody extends TeaModel {
     }
 
     public static class GetGlobalAppResponseBodyAppVersions extends TeaModel {
-        // 应用版本
         @NameInMap("AppVersion")
         public String appVersion;
 
-        // 版本描述
         @NameInMap("Comment")
         public String comment;
 
-        // 更新时间
         @NameInMap("LastModified")
         public String lastModified;
 

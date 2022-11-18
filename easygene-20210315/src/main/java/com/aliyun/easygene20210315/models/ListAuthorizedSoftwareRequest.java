@@ -4,27 +4,21 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class ListAuthorizedSoftwareRequest extends TeaModel {
-    // 是否反转
     @NameInMap("IsReversed")
     public Boolean isReversed;
 
-    // 区域
     @NameInMap("Location")
     public String location;
 
-    // 分页数量
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 翻页Token用来标记当前开始读取的位置，置空表示从头开始
     @NameInMap("NextToken")
     public String nextToken;
 
-    // 排序字段
     @NameInMap("OrderBy")
     public String orderBy;
 
-    // 软件名称、软件长名称中搜索的关键字
     @NameInMap("Search")
     public String search;
 

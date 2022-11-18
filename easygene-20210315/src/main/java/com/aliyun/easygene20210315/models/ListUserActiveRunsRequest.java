@@ -4,7 +4,6 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class ListUserActiveRunsRequest extends TeaModel {
-    // 查询数量
     @NameInMap("MaxResults")
     public Integer maxResults;
 

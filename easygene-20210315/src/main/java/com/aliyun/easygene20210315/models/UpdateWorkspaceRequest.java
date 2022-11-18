@@ -4,23 +4,18 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class UpdateWorkspaceRequest extends TeaModel {
-    // 工作空间描述
     @NameInMap("Description")
     public String description;
 
-    // 工作空间内任务生命周期
     @NameInMap("JobLifecycle")
     public Integer jobLifecycle;
 
-    // 工作空间标签
     @NameInMap("Labels")
     public String labels;
 
-    // 工作空间内Ram角色
     @NameInMap("Role")
     public String role;
 
-    // 工作空间名称
     @NameInMap("Workspace")
     public String workspace;
 
