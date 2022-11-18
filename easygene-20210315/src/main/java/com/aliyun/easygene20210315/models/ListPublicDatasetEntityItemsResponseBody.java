@@ -4,31 +4,24 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class ListPublicDatasetEntityItemsResponseBody extends TeaModel {
-    // 公共数据集名称
     @NameInMap("DatasetName")
     public String datasetName;
 
-    // 该实体包含的所有对象
     @NameInMap("EntityItems")
     public java.util.List<ListPublicDatasetEntityItemsResponseBodyEntityItems> entityItems;
 
-    // 主机ID
     @NameInMap("HostId")
     public String hostId;
 
-    // 分页数
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 翻页Token用来表示当前调用返回读取到的位置，空代表数据已经读取完毕
     @NameInMap("NextToken")
     public String nextToken;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
-    // 总记录数
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -94,11 +87,9 @@ public class ListPublicDatasetEntityItemsResponseBody extends TeaModel {
     }
 
     public static class ListPublicDatasetEntityItemsResponseBodyEntityItems extends TeaModel {
-        // 实体属性值
         @NameInMap("EntityData")
         public java.util.Map<String, String> entityData;
 
-        // 实体名称
         @NameInMap("EntityName")
         public String entityName;
 

@@ -4,27 +4,21 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class ListContainerImagesResponseBody extends TeaModel {
-    // 容器镜像
     @NameInMap("ContainerImages")
     public java.util.List<ListContainerImagesResponseBodyContainerImages> containerImages;
 
-    // 主机ID
     @NameInMap("HostId")
     public String hostId;
 
-    // 分页数
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 翻页Token用来表示当前调用返回读取到的位置，空代表数据已经读取完毕
     @NameInMap("NextToken")
     public String nextToken;
 
-    // 主机ID
     @NameInMap("RequestId")
     public String requestId;
 
-    // 总记录数
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -82,31 +76,24 @@ public class ListContainerImagesResponseBody extends TeaModel {
     }
 
     public static class ListContainerImagesResponseBodyContainerImages extends TeaModel {
-        // 容器镜像描述
         @NameInMap("ContainerImageDescription")
         public String containerImageDescription;
 
-        // 容器镜像名称
         @NameInMap("ContainerImageName")
         public String containerImageName;
 
-        // 容器镜像名称空间名称
         @NameInMap("ContainerImageNamespace")
         public String containerImageNamespace;
 
-        // 容器镜像版本
         @NameInMap("ContainerImageVersions")
         public java.util.List<String> containerImageVersions;
 
-        // 容器镜像仓库名称
         @NameInMap("ContainerRegistry")
         public String containerRegistry;
 
-        // 最后更新时间
         @NameInMap("LastModified")
         public String lastModified;
 
-        // 容器镜像所在区域
         @NameInMap("Location")
         public String location;
 

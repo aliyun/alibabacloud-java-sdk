@@ -4,27 +4,21 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class ListPublicDatasetRequest extends TeaModel {
-    // 排序是否反转
     @NameInMap("IsReversed")
     public Boolean isReversed;
 
-    // 分页数量
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 翻页Token用来标记当前开始读取的位置，置空表示从头开始
     @NameInMap("NextToken")
     public String nextToken;
 
-    // 排序字段
     @NameInMap("OrderBy")
     public String orderBy;
 
-    // 名称、描述中搜索的关键字
     @NameInMap("Search")
     public String search;
 
-    // 公共数据集标签名
     @NameInMap("Tag")
     public String tag;
 

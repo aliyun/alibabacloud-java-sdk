@@ -4,15 +4,12 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class DownloadEntityResponseBody extends TeaModel {
-    // 下载的表格文件URL
     @NameInMap("EntityCSVFile")
     public String entityCSVFile;
 
-    // 主机ID
     @NameInMap("HostId")
     public String hostId;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 

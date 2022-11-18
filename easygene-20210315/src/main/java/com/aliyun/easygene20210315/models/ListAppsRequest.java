@@ -4,43 +4,33 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class ListAppsRequest extends TeaModel {
-    // 应用类型
     @NameInMap("AppType")
     public String appType;
 
-    // 是否逆序
     @NameInMap("IsReversed")
     public Boolean isReversed;
 
-    // Label 选择器
     @NameInMap("LabelSelector")
     public String labelSelector;
 
-    // 应用描述语言
     @NameInMap("Language")
     public String language;
 
-    // 最大返回结果数
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // Next Token
     @NameInMap("NextToken")
     public String nextToken;
 
-    // 排序依据
     @NameInMap("OrderBy")
     public String orderBy;
 
-    // 应用范围
     @NameInMap("Scope")
     public String scope;
 
-    // 按照名字匹配
     @NameInMap("Search")
     public String search;
 
-    // 工作空间
     @NameInMap("Workspace")
     public String workspace;
 

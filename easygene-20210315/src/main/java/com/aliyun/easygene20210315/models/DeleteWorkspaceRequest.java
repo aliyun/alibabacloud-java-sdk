@@ -4,7 +4,6 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class DeleteWorkspaceRequest extends TeaModel {
-    // 工作空间名称
     @NameInMap("Workspace")
     public String workspace;
 

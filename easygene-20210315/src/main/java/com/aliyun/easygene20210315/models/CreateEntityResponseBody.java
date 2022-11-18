@@ -4,19 +4,15 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class CreateEntityResponseBody extends TeaModel {
-    // 实体类型
     @NameInMap("EntityType")
     public String entityType;
 
-    // 主机ID
     @NameInMap("HostId")
     public String hostId;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
-    // 工作空间
     @NameInMap("Workspace")
     public String workspace;
 

@@ -4,15 +4,12 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class DeleteAppRequest extends TeaModel {
-    // 应用名称
     @NameInMap("AppName")
     public String appName;
 
-    // 应用版本
     @NameInMap("Revision")
     public String revision;
 
-    // 工作空间名称
     @NameInMap("Workspace")
     public String workspace;
 

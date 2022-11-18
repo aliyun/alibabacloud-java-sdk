@@ -4,19 +4,15 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class CreateTemplateResponseBody extends TeaModel {
-    // 主机 ID
     @NameInMap("HostId")
     public String hostId;
 
-    // 请求 ID
     @NameInMap("RequestId")
     public String requestId;
 
-    // 应用模板名称
     @NameInMap("TemplateName")
     public String templateName;
 
-    // 工作空间名称
     @NameInMap("Workspace")
     public String workspace;
 

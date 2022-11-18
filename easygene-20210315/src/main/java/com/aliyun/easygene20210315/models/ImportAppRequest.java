@@ -4,15 +4,12 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class ImportAppRequest extends TeaModel {
-    // 安装后应用名
     @NameInMap("AppName")
     public String appName;
 
-    // 来源
     @NameInMap("Source")
     public String source;
 
-    // 工作空间
     @NameInMap("Workspace")
     public String workspace;
 

@@ -4,31 +4,24 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class CreateWorkspaceRequest extends TeaModel {
-    // 幂等Token
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // 工作空间描述
     @NameInMap("Description")
     public String description;
 
-    // 工作空间任务生命周期
     @NameInMap("JobLifecycle")
     public Integer jobLifecycle;
 
-    // 工作空间标签
     @NameInMap("Labels")
     public String labels;
 
-    // 工作空间内的ram角色
     @NameInMap("Role")
     public String role;
 
-    // 工作空间的OSS工作路径
     @NameInMap("Storage")
     public String storage;
 
-    // 工作空间名称
     @NameInMap("Workspace")
     public String workspace;
 

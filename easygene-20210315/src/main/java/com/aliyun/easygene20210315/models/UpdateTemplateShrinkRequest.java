@@ -4,31 +4,24 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class UpdateTemplateShrinkRequest extends TeaModel {
-    // 应用模板描述
     @NameInMap("Description")
     public String description;
 
-    // 应用的输入
     @NameInMap("InputsExpression")
     public String inputsExpressionShrink;
 
-    // 应用模板标签
     @NameInMap("Labels")
     public String labels;
 
-    // 应用的输出
     @NameInMap("OutputsExpression")
     public String outputsExpressionShrink;
 
-    // 实体类型
     @NameInMap("RootEntity")
     public String rootEntity;
 
-    // 应用模板名称
     @NameInMap("TemplateName")
     public String templateName;
 
-    // 工作空间名称
     @NameInMap("Workspace")
     public String workspace;
 

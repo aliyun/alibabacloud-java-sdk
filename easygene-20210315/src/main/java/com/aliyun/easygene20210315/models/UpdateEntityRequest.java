@@ -7,11 +7,9 @@ public class UpdateEntityRequest extends TeaModel {
     @NameInMap("EntityItems")
     public java.util.List<UpdateEntityRequestEntityItems> entityItems;
 
-    // 实体类型
     @NameInMap("EntityType")
     public String entityType;
 
-    // 工作空间
     @NameInMap("Workspace")
     public String workspace;
 
@@ -48,7 +46,6 @@ public class UpdateEntityRequest extends TeaModel {
         @NameInMap("EntityData")
         public java.util.Map<String, String> entityData;
 
-        // 实体元素名称
         @NameInMap("EntityName")
         public String entityName;
 

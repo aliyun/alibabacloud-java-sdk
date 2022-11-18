@@ -4,27 +4,21 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class ListPublicDatasetTagsResponseBody extends TeaModel {
-    // 主机ID
     @NameInMap("HostId")
     public String hostId;
 
-    // 分页数
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 翻页Token用来表示当前调用返回读取到的位置，空代表数据已经读取完毕
     @NameInMap("NextToken")
     public String nextToken;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
-    // 公共数据集标签
     @NameInMap("Tags")
     public java.util.List<String> tags;
 
-    // 总记录数
     @NameInMap("TotalCount")
     public Integer totalCount;
 

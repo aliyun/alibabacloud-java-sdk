@@ -4,51 +4,42 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class CreateRunShrinkRequest extends TeaModel {
-    // 应用名称
     @NameInMap("AppName")
     public String appName;
 
-    // 应用版本号
     @NameInMap("AppRevision")
     public String appRevision;
 
-    // 任务幂等token
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // 默认运行时
     @NameInMap("DefaultRuntime")
     public String defaultRuntime;
 
-    // 任务描述
     @NameInMap("Description")
     public String description;
 
-    // 任务执行目录
     @NameInMap("ExecuteDirectory")
     public String executeDirectory;
 
-    // 任务配置
     @NameInMap("ExecuteOptions")
     public String executeOptionsShrink;
 
-    // 任务输入
     @NameInMap("Inputs")
     public String inputs;
 
-    // 任务标签
     @NameInMap("Labels")
     public String labels;
 
-    // 任务输出拷贝目录
     @NameInMap("OutputFolder")
     public String outputFolder;
 
-    // 任务名称
+    @NameInMap("Role")
+    public String role;
+
     @NameInMap("RunName")
     public String runName;
 
-    // 工作空间名字
     @NameInMap("Workspace")
     public String workspace;
 
@@ -135,6 +126,14 @@ public class CreateRunShrinkRequest extends TeaModel {
     }
     public String getOutputFolder() {
         return this.outputFolder;
+    }
+
+    public CreateRunShrinkRequest setRole(String role) {
+        this.role = role;
+        return this;
+    }
+    public String getRole() {
+        return this.role;
     }
 
     public CreateRunShrinkRequest setRunName(String runName) {

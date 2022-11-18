@@ -4,31 +4,24 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class ListSubmissionsRequest extends TeaModel {
-    // 逆序
     @NameInMap("IsReversed")
     public Boolean isReversed;
 
-    // 最大返回数目
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // Next Token
     @NameInMap("NextToken")
     public String nextToken;
 
-    // 排序依据
     @NameInMap("OrderBy")
     public String orderBy;
 
-    // 搜索ID
     @NameInMap("Search")
     public String search;
 
-    // 状态
     @NameInMap("Status")
     public String status;
 
-    // 工作空间
     @NameInMap("Workspace")
     public String workspace;
 

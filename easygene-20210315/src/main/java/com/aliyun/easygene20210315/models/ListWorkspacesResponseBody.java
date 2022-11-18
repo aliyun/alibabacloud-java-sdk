@@ -4,27 +4,21 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class ListWorkspacesResponseBody extends TeaModel {
-    // 主机ID
     @NameInMap("HostId")
     public String hostId;
 
-    // 最大结果数
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 下次查询的起始Token
     @NameInMap("NextToken")
     public String nextToken;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
-    // 返回总个数
     @NameInMap("TotalCount")
     public Integer totalCount;
 
-    // 工作空间数组
     @NameInMap("Workspaces")
     public java.util.List<ListWorkspacesResponseBodyWorkspaces> workspaces;
 
@@ -82,47 +76,36 @@ public class ListWorkspacesResponseBody extends TeaModel {
     }
 
     public static class ListWorkspacesResponseBodyWorkspaces extends TeaModel {
-        // 工作空间Bucket名字
         @NameInMap("BucketName")
         public String bucketName;
 
-        // 创建时间
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 工作空间描述
         @NameInMap("Description")
         public String description;
 
-        // 任务生命周期
         @NameInMap("JobLifecycle")
         public Integer jobLifecycle;
 
-        // 工作空间标签
         @NameInMap("Labels")
         public java.util.Map<String, String> labels;
 
-        // 最后修改时间
         @NameInMap("LastModifiedTime")
         public String lastModifiedTime;
 
-        // 地域ID
         @NameInMap("Location")
         public String location;
 
-        // RAM Role
         @NameInMap("Role")
         public String role;
 
-        // 工作空间状态
         @NameInMap("Status")
         public String status;
 
-        // OSS工作路径
         @NameInMap("Storage")
         public String storage;
 
-        // 工作空间名称
         @NameInMap("Workspace")
         public String workspace;
 

@@ -7,11 +7,9 @@ public class UpdateEntityShrinkRequest extends TeaModel {
     @NameInMap("EntityItems")
     public String entityItemsShrink;
 
-    // 实体类型
     @NameInMap("EntityType")
     public String entityType;
 
-    // 工作空间
     @NameInMap("Workspace")
     public String workspace;
 

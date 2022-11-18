@@ -4,27 +4,21 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class ListTemplatesResponseBody extends TeaModel {
-    // 主机ID
     @NameInMap("HostId")
     public String hostId;
 
-    // 最大返回结果
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 下次查询Token
     @NameInMap("NextToken")
     public String nextToken;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
-    // 应用模板列表
     @NameInMap("Templates")
     public java.util.List<ListTemplatesResponseBodyTemplates> templates;
 
-    // 返回个数
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -82,31 +76,24 @@ public class ListTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListTemplatesResponseBodyTemplatesInputsExpression extends TeaModel {
-        // 帮助信息
         @NameInMap("Help")
         public String help;
 
-        // 是否必须参数
         @NameInMap("Required")
         public Boolean required;
 
-        // 步骤顺序
         @NameInMap("StepOrder")
         public Long stepOrder;
 
-        // 任务名称
         @NameInMap("TaskName")
         public String taskName;
 
-        // 变量名称
         @NameInMap("VariableName")
         public String variableName;
 
-        // 变量类型
         @NameInMap("VariableType")
         public String variableType;
 
-        // 变量值
         @NameInMap("VariableValue")
         public String variableValue;
 
@@ -174,31 +161,24 @@ public class ListTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListTemplatesResponseBodyTemplatesOutputsExpression extends TeaModel {
-        // 帮助信息
         @NameInMap("Help")
         public String help;
 
-        // 是否必须参数
         @NameInMap("Required")
         public Boolean required;
 
-        // 步骤顺序
         @NameInMap("StepOrder")
         public Long stepOrder;
 
-        // 任务名称
         @NameInMap("TaskName")
         public String taskName;
 
-        // 变量名称
         @NameInMap("VariableName")
         public String variableName;
 
-        // 变量类型
         @NameInMap("VariableType")
         public String variableType;
 
-        // 变量值
         @NameInMap("VariableValue")
         public String variableValue;
 
@@ -266,47 +246,36 @@ public class ListTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListTemplatesResponseBodyTemplates extends TeaModel {
-        // 应用名称
         @NameInMap("AppName")
         public String appName;
 
-        // 应用版本
         @NameInMap("AppRevision")
         public String appRevision;
 
-        // 创建时间
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 模板描述信息
         @NameInMap("Description")
         public String description;
 
-        // 应用输入
         @NameInMap("InputsExpression")
         public java.util.List<ListTemplatesResponseBodyTemplatesInputsExpression> inputsExpression;
 
-        // 标签
         @NameInMap("Labels")
         public java.util.Map<String, String> labels;
 
-        // 最后修改时间
         @NameInMap("LastModifiedTime")
         public String lastModifiedTime;
 
-        // 应用的输出参数
         @NameInMap("OutputsExpression")
         public java.util.List<ListTemplatesResponseBodyTemplatesOutputsExpression> outputsExpression;
 
-        // 实体类型
         @NameInMap("RootEntity")
         public String rootEntity;
 
-        // 应用模板名称
         @NameInMap("TemplateName")
         public String templateName;
 
-        // 工作空间
         @NameInMap("Workspace")
         public String workspace;
 

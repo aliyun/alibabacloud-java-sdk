@@ -4,55 +4,42 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class GetWorkspaceResponseBody extends TeaModel {
-    // 工作空间Bucket
     @NameInMap("BucketName")
     public String bucketName;
 
-    // 创建时间
     @NameInMap("CreateTime")
     public String createTime;
 
-    // 工作空间简要描述
     @NameInMap("Description")
     public String description;
 
-    // 主机ID
     @NameInMap("HostId")
     public String hostId;
 
-    // 工作空间内作业生命周期
     @NameInMap("JobLifecycle")
     public Integer jobLifecycle;
 
-    // 工作空间标签
     @NameInMap("Labels")
     public java.util.Map<String, String> labels;
 
-    // 最后修改时间
     @NameInMap("LastModifiedTime")
     public String lastModifiedTime;
 
-    // 地域ID
     @NameInMap("Location")
     public String location;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
-    // 工作空间内默认的RAM服务角色
     @NameInMap("Role")
     public String role;
 
-    // 工作空间状态
     @NameInMap("Status")
     public String status;
 
-    // 工作空间内OSS上的工作路径
     @NameInMap("Storage")
     public String storage;
 
-    // 工作空间名称
     @NameInMap("Workspace")
     public String workspace;
 

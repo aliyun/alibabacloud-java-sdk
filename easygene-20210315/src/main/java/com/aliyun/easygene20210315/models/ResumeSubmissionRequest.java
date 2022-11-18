@@ -4,11 +4,9 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class ResumeSubmissionRequest extends TeaModel {
-    // 投递ID
     @NameInMap("SubmissionId")
     public String submissionId;
 
-    // 工作空间名称
     @NameInMap("Workspace")
     public String workspace;
 

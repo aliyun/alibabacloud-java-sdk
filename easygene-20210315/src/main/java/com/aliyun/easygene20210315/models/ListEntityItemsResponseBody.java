@@ -4,27 +4,21 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class ListEntityItemsResponseBody extends TeaModel {
-    // 表格数据元素数组
     @NameInMap("EntityItems")
     public java.util.List<ListEntityItemsResponseBodyEntityItems> entityItems;
 
-    // 主机ID
     @NameInMap("HostId")
     public String hostId;
 
-    // 请求的最大结果数
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 下次查询的起始Token
     @NameInMap("NextToken")
     public String nextToken;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
-    // 返回总个数
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -82,11 +76,9 @@ public class ListEntityItemsResponseBody extends TeaModel {
     }
 
     public static class ListEntityItemsResponseBodyEntityItems extends TeaModel {
-        // 数据元素属性
         @NameInMap("EntityData")
         public java.util.Map<String, String> entityData;
 
-        // 表格数据元素名称
         @NameInMap("EntityName")
         public String entityName;
 

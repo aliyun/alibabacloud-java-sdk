@@ -4,15 +4,12 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class ListRegionsResponseBody extends TeaModel {
-    // 主机ID
     @NameInMap("HostId")
     public String hostId;
 
-    // 基因分析平台产品可用地域列表。
     @NameInMap("Regions")
     public java.util.List<ListRegionsResponseBodyRegions> regions;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
@@ -46,15 +43,12 @@ public class ListRegionsResponseBody extends TeaModel {
     }
 
     public static class ListRegionsResponseBodyRegions extends TeaModel {
-        // 名称
         @NameInMap("LocalName")
         public String localName;
 
-        // 访问Endpoint
         @NameInMap("RegionEndpoint")
         public String regionEndpoint;
 
-        // 区域ID
         @NameInMap("RegionId")
         public String regionId;
 

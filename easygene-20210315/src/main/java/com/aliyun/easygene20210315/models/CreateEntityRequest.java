@@ -4,18 +4,15 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class CreateEntityRequest extends TeaModel {
-    // 幂等Token
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("EntityItems")
     public java.util.List<CreateEntityRequestEntityItems> entityItems;
 
-    // 实体类型
     @NameInMap("EntityType")
     public String entityType;
 
-    // 工作空间
     @NameInMap("Workspace")
     public String workspace;
 
@@ -60,7 +57,6 @@ public class CreateEntityRequest extends TeaModel {
         @NameInMap("EntityData")
         public java.util.Map<String, String> entityData;
 
-        // 表格元素名称
         @NameInMap("EntityName")
         public String entityName;
 

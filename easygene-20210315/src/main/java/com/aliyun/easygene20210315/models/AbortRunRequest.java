@@ -4,11 +4,9 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class AbortRunRequest extends TeaModel {
-    // 任务ID
     @NameInMap("RunId")
     public String runId;
 
-    // 工作空间名称
     @NameInMap("Workspace")
     public String workspace;
 

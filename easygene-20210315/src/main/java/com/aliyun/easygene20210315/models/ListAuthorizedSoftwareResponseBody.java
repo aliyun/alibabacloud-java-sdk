@@ -4,27 +4,21 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class ListAuthorizedSoftwareResponseBody extends TeaModel {
-    // 主机ID
     @NameInMap("HostId")
     public String hostId;
 
-    // 分页数
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 翻页Token用来表示当前调用返回读取到的位置，空代表数据已经读取完毕
     @NameInMap("NextToken")
     public String nextToken;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
-    // 软件信息
     @NameInMap("Softwares")
     public java.util.List<ListAuthorizedSoftwareResponseBodySoftwares> softwares;
 
-    // 总记录数
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -82,47 +76,36 @@ public class ListAuthorizedSoftwareResponseBody extends TeaModel {
     }
 
     public static class ListAuthorizedSoftwareResponseBodySoftwares extends TeaModel {
-        // 帮助链接
         @NameInMap("HelpLink")
         public String helpLink;
 
-        // 最后更新时间
         @NameInMap("LastModified")
         public String lastModified;
 
-        // 软件可用区域
         @NameInMap("Locations")
         public java.util.List<String> locations;
 
-        // 限时免费说明
         @NameInMap("Promotion")
         public String promotion;
 
-        // 软件默认版本
         @NameInMap("SoftwareDefaultVersion")
         public String softwareDefaultVersion;
 
-        // 软件描述
         @NameInMap("SoftwareDescription")
         public String softwareDescription;
 
-        // 软件图标链接
         @NameInMap("SoftwareIcon")
         public String softwareIcon;
 
-        // 软件使用费用
         @NameInMap("SoftwareLicenseFee")
         public Float softwareLicenseFee;
 
-        // 软件长名称
         @NameInMap("SoftwareLongName")
         public String softwareLongName;
 
-        // 软件名称
         @NameInMap("SoftwareName")
         public String softwareName;
 
-        // 软件所有版本
         @NameInMap("SoftwareVersions")
         public java.util.List<String> softwareVersions;
 

@@ -4,23 +4,18 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class ImportAppResponseBody extends TeaModel {
-    // 安装后应用名
     @NameInMap("AppName")
     public String appName;
 
-    // 主机 ID
     @NameInMap("HostId")
     public String hostId;
 
-    // 区域名
     @NameInMap("RegionId")
     public String regionId;
 
-    // 请求 ID
     @NameInMap("RequestId")
     public String requestId;
 
-    // 工作空间
     @NameInMap("Workspace")
     public String workspace;
 

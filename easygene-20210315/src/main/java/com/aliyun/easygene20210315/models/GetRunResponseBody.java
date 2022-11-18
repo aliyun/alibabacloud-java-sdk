@@ -4,111 +4,84 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class GetRunResponseBody extends TeaModel {
-    // 应用名称
     @NameInMap("AppName")
     public String appName;
 
-    // 应用版本
     @NameInMap("AppRevision")
     public String appRevision;
 
-    // 作业信息
     @NameInMap("Calls")
     public String calls;
 
-    // 提交时间
     @NameInMap("CreateTime")
     public String createTime;
 
-    // 默认runtime值
     @NameInMap("DefaultRuntime")
     public String defaultRuntime;
 
-    // 任务描述
     @NameInMap("Description")
     public String description;
 
-    // 结束时间
     @NameInMap("EndTime")
     public String endTime;
 
-    // 实体对象名称
     @NameInMap("EntityName")
     public String entityName;
 
-    // 实体类型
     @NameInMap("EntityType")
     public String entityType;
 
-    // 任务执行目录
     @NameInMap("ExecuteDirectory")
     public String executeDirectory;
 
-    // 任务配置
     @NameInMap("ExecuteOptions")
     public GetRunResponseBodyExecuteOptions executeOptions;
 
-    // 错误信息
     @NameInMap("Failures")
     public String failures;
 
-    // 主机ID
     @NameInMap("HostId")
     public String hostId;
 
-    // 任务输入
     @NameInMap("Inputs")
     public String inputs;
 
-    // 任务标签
     @NameInMap("Labels")
     public java.util.Map<String, String> labels;
 
-    // 输出拷贝目录
     @NameInMap("OutputFolder")
     public String outputFolder;
 
-    // 任务输出
     @NameInMap("Outputs")
     public String outputs;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
-    // 任务ID
     @NameInMap("RunId")
     public String runId;
 
-    // 任务名称
     @NameInMap("RunName")
     public String runName;
 
-    // 应用来源
     @NameInMap("Source")
     public String source;
 
-    // 开始时间
     @NameInMap("StartTime")
     public String startTime;
 
-    // 任务状态
     @NameInMap("Status")
     public String status;
 
-    // 提交ID
     @NameInMap("SubmissionId")
     public String submissionId;
 
-    // 时序信息
     @NameInMap("Timing")
     public String timing;
 
-    // 用户ID
     @NameInMap("User")
     public String user;
 
-    // 工作空间名字
     @NameInMap("Workspace")
     public String workspace;
 
@@ -334,19 +307,15 @@ public class GetRunResponseBody extends TeaModel {
     }
 
     public static class GetRunResponseBodyExecuteOptions extends TeaModel {
-        // 是否开启CallCaching
         @NameInMap("CallCaching")
         public Boolean callCaching;
 
-        // 是否删除中间文件
         @NameInMap("DeleteIntermediateResults")
         public Boolean deleteIntermediateResults;
 
-        // 失败模式
         @NameInMap("FailureMode")
         public String failureMode;
 
-        // 相对输出路径
         @NameInMap("UseRelativeOutputPaths")
         public Boolean useRelativeOutputPaths;
 

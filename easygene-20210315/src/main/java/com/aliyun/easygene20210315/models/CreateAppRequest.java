@@ -4,59 +4,45 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class CreateAppRequest extends TeaModel {
-    // 应用名称
     @NameInMap("AppName")
     public String appName;
 
-    // 应用类型
     @NameInMap("AppType")
     public String appType;
 
-    // 幂等Token
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // 参考输入
     @NameInMap("Configs")
     public java.util.List<CreateAppRequestConfigs> configs;
 
-    // 应用定义
     @NameInMap("Definition")
     public String definition;
 
-    // 依赖应用
     @NameInMap("Dependencies")
     public java.util.List<CreateAppRequestDependencies> dependencies;
 
-    // 应用描述
     @NameInMap("Description")
     public String description;
 
-    // 应用使用文档
     @NameInMap("Documentation")
     public String documentation;
 
-    // 应用标签
     @NameInMap("Labels")
     public String labels;
 
-    // 应用描述语言
     @NameInMap("Language")
     public String language;
 
-    // 应用描述语语言版本
     @NameInMap("LanguageVersion")
     public String languageVersion;
 
-    // 主WDL路径
     @NameInMap("Path")
     public String path;
 
-    // 应用当前版本说明
     @NameInMap("RevisionComment")
     public String revisionComment;
 
-    // 工作空间名称
     @NameInMap("Workspace")
     public String workspace;
 
@@ -208,11 +194,9 @@ public class CreateAppRequest extends TeaModel {
     }
 
     public static class CreateAppRequestDependencies extends TeaModel {
-        // 依赖内容
         @NameInMap("Content")
         public String content;
 
-        // 依赖路径
         @NameInMap("Path")
         public String path;
 

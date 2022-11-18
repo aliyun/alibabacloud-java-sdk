@@ -4,15 +4,12 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class GetPublicDatasetEntityRequest extends TeaModel {
-    // 数据集名称
     @NameInMap("DatasetName")
     public String datasetName;
 
-    // 实体类型
     @NameInMap("EntityType")
     public String entityType;
 
-    // 公共数据集所在区域
     @NameInMap("Location")
     public String location;
 
