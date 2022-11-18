@@ -202,6 +202,9 @@ public class GetInstanceListResponseBody extends TeaModel {
         @NameInMap("SslEndPoint")
         public String sslEndPoint;
 
+        @NameInMap("StandardZoneId")
+        public String standardZoneId;
+
         @NameInMap("Tags")
         public GetInstanceListResponseBodyInstanceListInstanceVOTags tags;
 
@@ -416,6 +419,14 @@ public class GetInstanceListResponseBody extends TeaModel {
         }
         public String getSslEndPoint() {
             return this.sslEndPoint;
+        }
+
+        public GetInstanceListResponseBodyInstanceListInstanceVO setStandardZoneId(String standardZoneId) {
+            this.standardZoneId = standardZoneId;
+            return this;
+        }
+        public String getStandardZoneId() {
+            return this.standardZoneId;
         }
 
         public GetInstanceListResponseBodyInstanceListInstanceVO setTags(GetInstanceListResponseBodyInstanceListInstanceVOTags tags) {

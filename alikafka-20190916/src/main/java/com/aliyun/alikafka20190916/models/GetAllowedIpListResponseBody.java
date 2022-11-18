@@ -65,6 +65,9 @@ public class GetAllowedIpListResponseBody extends TeaModel {
     }
 
     public static class GetAllowedIpListResponseBodyAllowedListInternetList extends TeaModel {
+        @NameInMap("AllowedIpGroup")
+        public java.util.Map<String, String> allowedIpGroup;
+
         @NameInMap("AllowedIpList")
         public java.util.List<String> allowedIpList;
 
@@ -74,6 +77,14 @@ public class GetAllowedIpListResponseBody extends TeaModel {
         public static GetAllowedIpListResponseBodyAllowedListInternetList build(java.util.Map<String, ?> map) throws Exception {
             GetAllowedIpListResponseBodyAllowedListInternetList self = new GetAllowedIpListResponseBodyAllowedListInternetList();
             return TeaModel.build(map, self);
+        }
+
+        public GetAllowedIpListResponseBodyAllowedListInternetList setAllowedIpGroup(java.util.Map<String, String> allowedIpGroup) {
+            this.allowedIpGroup = allowedIpGroup;
+            return this;
+        }
+        public java.util.Map<String, String> getAllowedIpGroup() {
+            return this.allowedIpGroup;
         }
 
         public GetAllowedIpListResponseBodyAllowedListInternetList setAllowedIpList(java.util.List<String> allowedIpList) {
@@ -95,6 +106,9 @@ public class GetAllowedIpListResponseBody extends TeaModel {
     }
 
     public static class GetAllowedIpListResponseBodyAllowedListVpcList extends TeaModel {
+        @NameInMap("AllowedIpGroup")
+        public java.util.Map<String, String> allowedIpGroup;
+
         @NameInMap("AllowedIpList")
         public java.util.List<String> allowedIpList;
 
@@ -104,6 +118,14 @@ public class GetAllowedIpListResponseBody extends TeaModel {
         public static GetAllowedIpListResponseBodyAllowedListVpcList build(java.util.Map<String, ?> map) throws Exception {
             GetAllowedIpListResponseBodyAllowedListVpcList self = new GetAllowedIpListResponseBodyAllowedListVpcList();
             return TeaModel.build(map, self);
+        }
+
+        public GetAllowedIpListResponseBodyAllowedListVpcList setAllowedIpGroup(java.util.Map<String, String> allowedIpGroup) {
+            this.allowedIpGroup = allowedIpGroup;
+            return this;
+        }
+        public java.util.Map<String, String> getAllowedIpGroup() {
+            return this.allowedIpGroup;
         }
 
         public GetAllowedIpListResponseBodyAllowedListVpcList setAllowedIpList(java.util.List<String> allowedIpList) {

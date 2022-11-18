@@ -16,6 +16,9 @@ public class CreateConsumerGroupRequest extends TeaModel {
     @NameInMap("Remark")
     public String remark;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateConsumerGroupRequestTag> tag;
+
     public static CreateConsumerGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateConsumerGroupRequest self = new CreateConsumerGroupRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,44 @@ public class CreateConsumerGroupRequest extends TeaModel {
     }
     public String getRemark() {
         return this.remark;
+    }
+
+    public CreateConsumerGroupRequest setTag(java.util.List<CreateConsumerGroupRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateConsumerGroupRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class CreateConsumerGroupRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateConsumerGroupRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateConsumerGroupRequestTag self = new CreateConsumerGroupRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateConsumerGroupRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateConsumerGroupRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

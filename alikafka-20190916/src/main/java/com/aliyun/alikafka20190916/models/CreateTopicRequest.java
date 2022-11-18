@@ -31,6 +31,9 @@ public class CreateTopicRequest extends TeaModel {
     @NameInMap("ReplicationFactor")
     public Long replicationFactor;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateTopicRequestTag> tag;
+
     @NameInMap("Topic")
     public String topic;
 
@@ -111,12 +114,50 @@ public class CreateTopicRequest extends TeaModel {
         return this.replicationFactor;
     }
 
+    public CreateTopicRequest setTag(java.util.List<CreateTopicRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateTopicRequestTag> getTag() {
+        return this.tag;
+    }
+
     public CreateTopicRequest setTopic(String topic) {
         this.topic = topic;
         return this;
     }
     public String getTopic() {
         return this.topic;
+    }
+
+    public static class CreateTopicRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateTopicRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateTopicRequestTag self = new CreateTopicRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateTopicRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateTopicRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

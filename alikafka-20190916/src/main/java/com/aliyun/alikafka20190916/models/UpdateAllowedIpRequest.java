@@ -10,6 +10,9 @@ public class UpdateAllowedIpRequest extends TeaModel {
     @NameInMap("AllowedListType")
     public String allowedListType;
 
+    @NameInMap("Description")
+    public String description;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -41,6 +44,14 @@ public class UpdateAllowedIpRequest extends TeaModel {
     }
     public String getAllowedListType() {
         return this.allowedListType;
+    }
+
+    public UpdateAllowedIpRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public UpdateAllowedIpRequest setInstanceId(String instanceId) {

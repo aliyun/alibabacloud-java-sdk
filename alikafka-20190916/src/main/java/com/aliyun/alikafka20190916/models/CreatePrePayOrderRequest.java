@@ -34,6 +34,9 @@ public class CreatePrePayOrderRequest extends TeaModel {
     @NameInMap("SpecType")
     public String specType;
 
+    @NameInMap("Tag")
+    public java.util.List<CreatePrePayOrderRequestTag> tag;
+
     @NameInMap("TopicQuota")
     public Integer topicQuota;
 
@@ -122,12 +125,50 @@ public class CreatePrePayOrderRequest extends TeaModel {
         return this.specType;
     }
 
+    public CreatePrePayOrderRequest setTag(java.util.List<CreatePrePayOrderRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreatePrePayOrderRequestTag> getTag() {
+        return this.tag;
+    }
+
     public CreatePrePayOrderRequest setTopicQuota(Integer topicQuota) {
         this.topicQuota = topicQuota;
         return this;
     }
     public Integer getTopicQuota() {
         return this.topicQuota;
+    }
+
+    public static class CreatePrePayOrderRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreatePrePayOrderRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreatePrePayOrderRequestTag self = new CreatePrePayOrderRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreatePrePayOrderRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreatePrePayOrderRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }
