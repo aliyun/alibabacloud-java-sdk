@@ -52,12 +52,6 @@ public class CreateFileRequest extends TeaModel {
     @NameInMap("pre_hash")
     public String preHash;
 
-    @NameInMap("proof_code")
-    public String proofCode;
-
-    @NameInMap("proof_version")
-    public String proofVersion;
-
     @NameInMap("share_id")
     public String shareId;
 
@@ -204,22 +198,6 @@ public class CreateFileRequest extends TeaModel {
     }
     public String getPreHash() {
         return this.preHash;
-    }
-
-    public CreateFileRequest setProofCode(String proofCode) {
-        this.proofCode = proofCode;
-        return this;
-    }
-    public String getProofCode() {
-        return this.proofCode;
-    }
-
-    public CreateFileRequest setProofVersion(String proofVersion) {
-        this.proofVersion = proofVersion;
-        return this;
-    }
-    public String getProofVersion() {
-        return this.proofVersion;
     }
 
     public CreateFileRequest setShareId(String shareId) {

@@ -388,14 +388,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("pre_hash", request.preHash);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.proofCode)) {
-            body.put("proof_code", request.proofCode);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.proofVersion)) {
-            body.put("proof_version", request.proofVersion);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.shareId)) {
             body.put("share_id", request.shareId);
         }
@@ -3345,72 +3337,5 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new UpdateUserResponse());
-    }
-
-    public WalkFileResponse walkFile(WalkFileRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.walkFileWithOptions(request, headers, runtime);
-    }
-
-    public WalkFileResponse walkFileWithOptions(WalkFileRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.category)) {
-            body.put("category", request.category);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.driveId)) {
-            body.put("drive_id", request.driveId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.fields)) {
-            body.put("fields", request.fields);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
-            body.put("limit", request.limit);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.marker)) {
-            body.put("marker", request.marker);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.orderBy)) {
-            body.put("order_by", request.orderBy);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.orderDirection)) {
-            body.put("order_direction", request.orderDirection);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.parentFileId)) {
-            body.put("parent_file_id", request.parentFileId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
-            body.put("status", request.status);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
-            body.put("type", request.type);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "WalkFile"),
-            new TeaPair("version", "2022-03-01"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/v2/file/walk"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.execute(params, req, runtime), new WalkFileResponse());
     }
 }
