@@ -7,6 +7,9 @@ public class SendChatappMassMessageShrinkRequest extends TeaModel {
     @NameInMap("ChannelType")
     public String channelType;
 
+    @NameInMap("CustSpaceId")
+    public String custSpaceId;
+
     @NameInMap("CustWabaId")
     public String custWabaId;
 
@@ -45,6 +48,14 @@ public class SendChatappMassMessageShrinkRequest extends TeaModel {
     }
     public String getChannelType() {
         return this.channelType;
+    }
+
+    public SendChatappMassMessageShrinkRequest setCustSpaceId(String custSpaceId) {
+        this.custSpaceId = custSpaceId;
+        return this;
+    }
+    public String getCustSpaceId() {
+        return this.custSpaceId;
     }
 
     public SendChatappMassMessageShrinkRequest setCustWabaId(String custWabaId) {

@@ -4,6 +4,9 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class DeleteChatappTemplateRequest extends TeaModel {
+    @NameInMap("CustSpaceId")
+    public String custSpaceId;
+
     @NameInMap("CustWabaId")
     public String custWabaId;
 
@@ -16,6 +19,14 @@ public class DeleteChatappTemplateRequest extends TeaModel {
     public static DeleteChatappTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteChatappTemplateRequest self = new DeleteChatappTemplateRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteChatappTemplateRequest setCustSpaceId(String custSpaceId) {
+        this.custSpaceId = custSpaceId;
+        return this;
+    }
+    public String getCustSpaceId() {
+        return this.custSpaceId;
     }
 
     public DeleteChatappTemplateRequest setCustWabaId(String custWabaId) {
