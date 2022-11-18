@@ -7,6 +7,9 @@ public class CreateACLResponseBody extends TeaModel {
     @NameInMap("AclId")
     public String aclId;
 
+    @NameInMap("AclType")
+    public String aclType;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -24,6 +27,14 @@ public class CreateACLResponseBody extends TeaModel {
     }
     public String getAclId() {
         return this.aclId;
+    }
+
+    public CreateACLResponseBody setAclType(String aclType) {
+        this.aclType = aclType;
+        return this;
+    }
+    public String getAclType() {
+        return this.aclType;
     }
 
     public CreateACLResponseBody setRequestId(String requestId) {

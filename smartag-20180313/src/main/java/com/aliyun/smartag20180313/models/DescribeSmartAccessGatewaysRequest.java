@@ -10,6 +10,9 @@ public class DescribeSmartAccessGatewaysRequest extends TeaModel {
     @NameInMap("AssociatedCcnId")
     public String associatedCcnId;
 
+    @NameInMap("AssociatedCcnName")
+    public String associatedCcnName;
+
     @NameInMap("BusinessState")
     public String businessState;
 
@@ -89,6 +92,14 @@ public class DescribeSmartAccessGatewaysRequest extends TeaModel {
     }
     public String getAssociatedCcnId() {
         return this.associatedCcnId;
+    }
+
+    public DescribeSmartAccessGatewaysRequest setAssociatedCcnName(String associatedCcnName) {
+        this.associatedCcnName = associatedCcnName;
+        return this;
+    }
+    public String getAssociatedCcnName() {
+        return this.associatedCcnName;
     }
 
     public DescribeSmartAccessGatewaysRequest setBusinessState(String businessState) {

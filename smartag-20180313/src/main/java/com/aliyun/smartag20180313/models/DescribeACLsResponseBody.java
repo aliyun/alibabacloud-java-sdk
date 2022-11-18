@@ -68,6 +68,9 @@ public class DescribeACLsResponseBody extends TeaModel {
         @NameInMap("AclId")
         public String aclId;
 
+        @NameInMap("AclType")
+        public String aclType;
+
         @NameInMap("Name")
         public String name;
 
@@ -88,6 +91,14 @@ public class DescribeACLsResponseBody extends TeaModel {
         }
         public String getAclId() {
             return this.aclId;
+        }
+
+        public DescribeACLsResponseBodyAclsAcl setAclType(String aclType) {
+            this.aclType = aclType;
+            return this;
+        }
+        public String getAclType() {
+            return this.aclType;
         }
 
         public DescribeACLsResponseBodyAclsAcl setName(String name) {

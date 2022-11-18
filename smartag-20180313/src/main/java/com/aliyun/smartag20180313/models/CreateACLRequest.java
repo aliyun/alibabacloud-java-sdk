@@ -4,6 +4,9 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class CreateACLRequest extends TeaModel {
+    @NameInMap("AclType")
+    public String aclType;
+
     @NameInMap("Name")
     public String name;
 
@@ -25,6 +28,14 @@ public class CreateACLRequest extends TeaModel {
     public static CreateACLRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateACLRequest self = new CreateACLRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateACLRequest setAclType(String aclType) {
+        this.aclType = aclType;
+        return this;
+    }
+    public String getAclType() {
+        return this.aclType;
     }
 
     public CreateACLRequest setName(String name) {

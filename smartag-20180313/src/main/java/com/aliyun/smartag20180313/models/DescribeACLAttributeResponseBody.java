@@ -106,6 +106,9 @@ public class DescribeACLAttributeResponseBody extends TeaModel {
         @NameInMap("AclId")
         public String aclId;
 
+        @NameInMap("AclType")
+        public String aclType;
+
         @NameInMap("AcrId")
         public String acrId;
 
@@ -162,6 +165,14 @@ public class DescribeACLAttributeResponseBody extends TeaModel {
         }
         public String getAclId() {
             return this.aclId;
+        }
+
+        public DescribeACLAttributeResponseBodyAcrsAcr setAclType(String aclType) {
+            this.aclType = aclType;
+            return this;
+        }
+        public String getAclType() {
+            return this.aclType;
         }
 
         public DescribeACLAttributeResponseBodyAcrsAcr setAcrId(String acrId) {
