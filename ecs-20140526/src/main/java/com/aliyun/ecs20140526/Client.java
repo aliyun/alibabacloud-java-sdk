@@ -3247,6 +3247,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Description", request.description);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.detectionStrategy)) {
+            query.put("DetectionStrategy", request.detectionStrategy);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.diskDeviceMapping)) {
             query.put("DiskDeviceMapping", request.diskDeviceMapping);
         }
