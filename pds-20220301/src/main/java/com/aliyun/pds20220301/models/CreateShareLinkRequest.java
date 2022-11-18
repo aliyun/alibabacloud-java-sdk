@@ -26,7 +26,7 @@ public class CreateShareLinkRequest extends TeaModel {
     public String expiration;
 
     @NameInMap("file_id_list")
-    public String fileIdList;
+    public java.util.List<String> fileIdList;
 
     @NameInMap("preview_limit")
     public Long previewLimit;
@@ -104,11 +104,11 @@ public class CreateShareLinkRequest extends TeaModel {
         return this.expiration;
     }
 
-    public CreateShareLinkRequest setFileIdList(String fileIdList) {
+    public CreateShareLinkRequest setFileIdList(java.util.List<String> fileIdList) {
         this.fileIdList = fileIdList;
         return this;
     }
-    public String getFileIdList() {
+    public java.util.List<String> getFileIdList() {
         return this.fileIdList;
     }
 

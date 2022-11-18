@@ -14,7 +14,7 @@ public class GetVideoPreviewPlayInfoRequest extends TeaModel {
     public String fileId;
 
     @NameInMap("get_without_url")
-    public String getWithoutUrl;
+    public Boolean getWithoutUrl;
 
     @NameInMap("share_id")
     public String shareId;
@@ -51,11 +51,11 @@ public class GetVideoPreviewPlayInfoRequest extends TeaModel {
         return this.fileId;
     }
 
-    public GetVideoPreviewPlayInfoRequest setGetWithoutUrl(String getWithoutUrl) {
+    public GetVideoPreviewPlayInfoRequest setGetWithoutUrl(Boolean getWithoutUrl) {
         this.getWithoutUrl = getWithoutUrl;
         return this;
     }
-    public String getGetWithoutUrl() {
+    public Boolean getGetWithoutUrl() {
         return this.getWithoutUrl;
     }
 
