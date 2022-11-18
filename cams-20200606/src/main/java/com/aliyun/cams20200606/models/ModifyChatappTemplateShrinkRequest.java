@@ -7,6 +7,9 @@ public class ModifyChatappTemplateShrinkRequest extends TeaModel {
     @NameInMap("Components")
     public String componentsShrink;
 
+    @NameInMap("CustSpaceId")
+    public String custSpaceId;
+
     @NameInMap("CustWabaId")
     public String custWabaId;
 
@@ -33,6 +36,14 @@ public class ModifyChatappTemplateShrinkRequest extends TeaModel {
     }
     public String getComponentsShrink() {
         return this.componentsShrink;
+    }
+
+    public ModifyChatappTemplateShrinkRequest setCustSpaceId(String custSpaceId) {
+        this.custSpaceId = custSpaceId;
+        return this;
+    }
+    public String getCustSpaceId() {
+        return this.custSpaceId;
     }
 
     public ModifyChatappTemplateShrinkRequest setCustWabaId(String custWabaId) {

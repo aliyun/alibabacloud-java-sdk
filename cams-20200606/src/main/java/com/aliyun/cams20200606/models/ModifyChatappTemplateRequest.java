@@ -7,6 +7,9 @@ public class ModifyChatappTemplateRequest extends TeaModel {
     @NameInMap("Components")
     public java.util.List<ModifyChatappTemplateRequestComponents> components;
 
+    @NameInMap("CustSpaceId")
+    public String custSpaceId;
+
     @NameInMap("CustWabaId")
     public String custWabaId;
 
@@ -33,6 +36,14 @@ public class ModifyChatappTemplateRequest extends TeaModel {
     }
     public java.util.List<ModifyChatappTemplateRequestComponents> getComponents() {
         return this.components;
+    }
+
+    public ModifyChatappTemplateRequest setCustSpaceId(String custSpaceId) {
+        this.custSpaceId = custSpaceId;
+        return this;
+    }
+    public String getCustSpaceId() {
+        return this.custSpaceId;
     }
 
     public ModifyChatappTemplateRequest setCustWabaId(String custWabaId) {

@@ -7,6 +7,9 @@ public class ListChatappTemplateRequest extends TeaModel {
     @NameInMap("AuditStatus")
     public String auditStatus;
 
+    @NameInMap("CustSpaceId")
+    public String custSpaceId;
+
     @NameInMap("CustWabaId")
     public String custWabaId;
 
@@ -33,6 +36,14 @@ public class ListChatappTemplateRequest extends TeaModel {
     }
     public String getAuditStatus() {
         return this.auditStatus;
+    }
+
+    public ListChatappTemplateRequest setCustSpaceId(String custSpaceId) {
+        this.custSpaceId = custSpaceId;
+        return this;
+    }
+    public String getCustSpaceId() {
+        return this.custSpaceId;
     }
 
     public ListChatappTemplateRequest setCustWabaId(String custWabaId) {

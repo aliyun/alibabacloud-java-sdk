@@ -7,6 +7,9 @@ public class BeeBotChatShrinkRequest extends TeaModel {
     @NameInMap("ChatBotInstanceId")
     public String chatBotInstanceId;
 
+    @NameInMap("CustSpaceId")
+    public String custSpaceId;
+
     @NameInMap("IntentName")
     public String intentName;
 
@@ -45,6 +48,14 @@ public class BeeBotChatShrinkRequest extends TeaModel {
     }
     public String getChatBotInstanceId() {
         return this.chatBotInstanceId;
+    }
+
+    public BeeBotChatShrinkRequest setCustSpaceId(String custSpaceId) {
+        this.custSpaceId = custSpaceId;
+        return this;
+    }
+    public String getCustSpaceId() {
+        return this.custSpaceId;
     }
 
     public BeeBotChatShrinkRequest setIntentName(String intentName) {

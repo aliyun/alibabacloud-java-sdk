@@ -10,6 +10,9 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
     @NameInMap("Content")
     public String content;
 
+    @NameInMap("CustSpaceId")
+    public String custSpaceId;
+
     @NameInMap("CustWabaId")
     public String custWabaId;
 
@@ -65,6 +68,14 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
     }
     public String getContent() {
         return this.content;
+    }
+
+    public SendChatappMessageShrinkRequest setCustSpaceId(String custSpaceId) {
+        this.custSpaceId = custSpaceId;
+        return this;
+    }
+    public String getCustSpaceId() {
+        return this.custSpaceId;
     }
 
     public SendChatappMessageShrinkRequest setCustWabaId(String custWabaId) {

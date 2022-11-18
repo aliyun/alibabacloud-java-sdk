@@ -7,6 +7,9 @@ public class BeeBotAssociateRequest extends TeaModel {
     @NameInMap("ChatBotInstanceId")
     public String chatBotInstanceId;
 
+    @NameInMap("CustSpaceId")
+    public String custSpaceId;
+
     @NameInMap("IsvCode")
     public String isvCode;
 
@@ -33,6 +36,14 @@ public class BeeBotAssociateRequest extends TeaModel {
     }
     public String getChatBotInstanceId() {
         return this.chatBotInstanceId;
+    }
+
+    public BeeBotAssociateRequest setCustSpaceId(String custSpaceId) {
+        this.custSpaceId = custSpaceId;
+        return this;
+    }
+    public String getCustSpaceId() {
+        return this.custSpaceId;
     }
 
     public BeeBotAssociateRequest setIsvCode(String isvCode) {
