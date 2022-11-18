@@ -19,8 +19,14 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
     @NameInMap("IsLatestVersion")
     public Boolean isLatestVersion;
 
+    @NameInMap("IsNewSSLMode")
+    public String isNewSSLMode;
+
     @NameInMap("IsRedisCompatibleVersion")
-    public Boolean isRedisCompatibleVersion;
+    public String isRedisCompatibleVersion;
+
+    @NameInMap("IsSSLEnable")
+    public String isSSLEnable;
 
     @NameInMap("MajorVersion")
     public String majorVersion;
@@ -82,12 +88,28 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
         return this.isLatestVersion;
     }
 
-    public DescribeEngineVersionResponseBody setIsRedisCompatibleVersion(Boolean isRedisCompatibleVersion) {
+    public DescribeEngineVersionResponseBody setIsNewSSLMode(String isNewSSLMode) {
+        this.isNewSSLMode = isNewSSLMode;
+        return this;
+    }
+    public String getIsNewSSLMode() {
+        return this.isNewSSLMode;
+    }
+
+    public DescribeEngineVersionResponseBody setIsRedisCompatibleVersion(String isRedisCompatibleVersion) {
         this.isRedisCompatibleVersion = isRedisCompatibleVersion;
         return this;
     }
-    public Boolean getIsRedisCompatibleVersion() {
+    public String getIsRedisCompatibleVersion() {
         return this.isRedisCompatibleVersion;
+    }
+
+    public DescribeEngineVersionResponseBody setIsSSLEnable(String isSSLEnable) {
+        this.isSSLEnable = isSSLEnable;
+        return this;
+    }
+    public String getIsSSLEnable() {
+        return this.isSSLEnable;
     }
 
     public DescribeEngineVersionResponseBody setMajorVersion(String majorVersion) {
