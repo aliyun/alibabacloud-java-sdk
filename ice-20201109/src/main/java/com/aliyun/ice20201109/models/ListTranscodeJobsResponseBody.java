@@ -43,6 +43,9 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
     }
 
     public static class ListTranscodeJobsResponseBodyJobsInputGroup extends TeaModel {
+        @NameInMap("InputUrl")
+        public String inputUrl;
+
         @NameInMap("Media")
         public String media;
 
@@ -52,6 +55,14 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
         public static ListTranscodeJobsResponseBodyJobsInputGroup build(java.util.Map<String, ?> map) throws Exception {
             ListTranscodeJobsResponseBodyJobsInputGroup self = new ListTranscodeJobsResponseBodyJobsInputGroup();
             return TeaModel.build(map, self);
+        }
+
+        public ListTranscodeJobsResponseBodyJobsInputGroup setInputUrl(String inputUrl) {
+            this.inputUrl = inputUrl;
+            return this;
+        }
+        public String getInputUrl() {
+            return this.inputUrl;
         }
 
         public ListTranscodeJobsResponseBodyJobsInputGroup setMedia(String media) {
@@ -76,6 +87,9 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
         @NameInMap("Media")
         public String media;
 
+        @NameInMap("OutputUrl")
+        public String outputUrl;
+
         @NameInMap("Type")
         public String type;
 
@@ -90,6 +104,14 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
         }
         public String getMedia() {
             return this.media;
+        }
+
+        public ListTranscodeJobsResponseBodyJobsOutputGroupOutput setOutputUrl(String outputUrl) {
+            this.outputUrl = outputUrl;
+            return this;
+        }
+        public String getOutputUrl() {
+            return this.outputUrl;
         }
 
         public ListTranscodeJobsResponseBodyJobsOutputGroupOutput setType(String type) {
@@ -1040,6 +1062,9 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
         @NameInMap("MuxConfig")
         public ListTranscodeJobsResponseBodyJobsOutputGroupProcessConfigTranscodeOverwriteParamsMuxConfig muxConfig;
 
+        @NameInMap("Tags")
+        public java.util.Map<String, String> tags;
+
         @NameInMap("Video")
         public ListTranscodeJobsResponseBodyJobsOutputGroupProcessConfigTranscodeOverwriteParamsVideo video;
 
@@ -1070,6 +1095,14 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
         }
         public ListTranscodeJobsResponseBodyJobsOutputGroupProcessConfigTranscodeOverwriteParamsMuxConfig getMuxConfig() {
             return this.muxConfig;
+        }
+
+        public ListTranscodeJobsResponseBodyJobsOutputGroupProcessConfigTranscodeOverwriteParams setTags(java.util.Map<String, String> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.Map<String, String> getTags() {
+            return this.tags;
         }
 
         public ListTranscodeJobsResponseBodyJobsOutputGroupProcessConfigTranscodeOverwriteParams setVideo(ListTranscodeJobsResponseBodyJobsOutputGroupProcessConfigTranscodeOverwriteParamsVideo video) {
@@ -1122,6 +1155,9 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
         @NameInMap("ImageWatermarks")
         public java.util.List<ListTranscodeJobsResponseBodyJobsOutputGroupProcessConfigImageWatermarks> imageWatermarks;
 
+        @NameInMap("IsInheritTags")
+        public Boolean isInheritTags;
+
         @NameInMap("Subtitles")
         public java.util.List<ListTranscodeJobsResponseBodyJobsOutputGroupProcessConfigSubtitles> subtitles;
 
@@ -1158,6 +1194,14 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
         }
         public java.util.List<ListTranscodeJobsResponseBodyJobsOutputGroupProcessConfigImageWatermarks> getImageWatermarks() {
             return this.imageWatermarks;
+        }
+
+        public ListTranscodeJobsResponseBodyJobsOutputGroupProcessConfig setIsInheritTags(Boolean isInheritTags) {
+            this.isInheritTags = isInheritTags;
+            return this;
+        }
+        public Boolean getIsInheritTags() {
+            return this.isInheritTags;
         }
 
         public ListTranscodeJobsResponseBodyJobsOutputGroupProcessConfig setSubtitles(java.util.List<ListTranscodeJobsResponseBodyJobsOutputGroupProcessConfigSubtitles> subtitles) {
