@@ -4,11 +4,8 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class AddWebhookRequest extends TeaModel {
-    @NameInMap("AccessToken")
+    @NameInMap("accessToken")
     public String accessToken;
-
-    @NameInMap("OrganizationId")
-    public String organizationId;
 
     @NameInMap("description")
     public String description;
@@ -34,6 +31,9 @@ public class AddWebhookRequest extends TeaModel {
     @NameInMap("url")
     public String url;
 
+    @NameInMap("organizationId")
+    public String organizationId;
+
     public static AddWebhookRequest build(java.util.Map<String, ?> map) throws Exception {
         AddWebhookRequest self = new AddWebhookRequest();
         return TeaModel.build(map, self);
@@ -45,14 +45,6 @@ public class AddWebhookRequest extends TeaModel {
     }
     public String getAccessToken() {
         return this.accessToken;
-    }
-
-    public AddWebhookRequest setOrganizationId(String organizationId) {
-        this.organizationId = organizationId;
-        return this;
-    }
-    public String getOrganizationId() {
-        return this.organizationId;
     }
 
     public AddWebhookRequest setDescription(String description) {
@@ -117,6 +109,14 @@ public class AddWebhookRequest extends TeaModel {
     }
     public String getUrl() {
         return this.url;
+    }
+
+    public AddWebhookRequest setOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
+        return this;
+    }
+    public String getOrganizationId() {
+        return this.organizationId;
     }
 
 }

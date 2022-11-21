@@ -3,7 +3,7 @@ package com.aliyun.devops20210625.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateProtectedBranchesRequest extends TeaModel {
+public class CreateProtectdBranchRequest extends TeaModel {
     @NameInMap("accessToken")
     public String accessToken;
 
@@ -26,20 +26,20 @@ public class UpdateProtectedBranchesRequest extends TeaModel {
     public Long id;
 
     @NameInMap("mergeRequestSetting")
-    public UpdateProtectedBranchesRequestMergeRequestSetting mergeRequestSetting;
+    public CreateProtectdBranchRequestMergeRequestSetting mergeRequestSetting;
 
     @NameInMap("testSettingDTO")
-    public UpdateProtectedBranchesRequestTestSettingDTO testSettingDTO;
+    public CreateProtectdBranchRequestTestSettingDTO testSettingDTO;
 
     @NameInMap("organizationId")
     public String organizationId;
 
-    public static UpdateProtectedBranchesRequest build(java.util.Map<String, ?> map) throws Exception {
-        UpdateProtectedBranchesRequest self = new UpdateProtectedBranchesRequest();
+    public static CreateProtectdBranchRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateProtectdBranchRequest self = new CreateProtectdBranchRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateProtectedBranchesRequest setAccessToken(String accessToken) {
+    public CreateProtectdBranchRequest setAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
     }
@@ -47,7 +47,7 @@ public class UpdateProtectedBranchesRequest extends TeaModel {
         return this.accessToken;
     }
 
-    public UpdateProtectedBranchesRequest setAllowMergeRoles(java.util.List<Integer> allowMergeRoles) {
+    public CreateProtectdBranchRequest setAllowMergeRoles(java.util.List<Integer> allowMergeRoles) {
         this.allowMergeRoles = allowMergeRoles;
         return this;
     }
@@ -55,7 +55,7 @@ public class UpdateProtectedBranchesRequest extends TeaModel {
         return this.allowMergeRoles;
     }
 
-    public UpdateProtectedBranchesRequest setAllowMergeUserIds(java.util.List<String> allowMergeUserIds) {
+    public CreateProtectdBranchRequest setAllowMergeUserIds(java.util.List<String> allowMergeUserIds) {
         this.allowMergeUserIds = allowMergeUserIds;
         return this;
     }
@@ -63,7 +63,7 @@ public class UpdateProtectedBranchesRequest extends TeaModel {
         return this.allowMergeUserIds;
     }
 
-    public UpdateProtectedBranchesRequest setAllowPushRoles(java.util.List<Integer> allowPushRoles) {
+    public CreateProtectdBranchRequest setAllowPushRoles(java.util.List<Integer> allowPushRoles) {
         this.allowPushRoles = allowPushRoles;
         return this;
     }
@@ -71,7 +71,7 @@ public class UpdateProtectedBranchesRequest extends TeaModel {
         return this.allowPushRoles;
     }
 
-    public UpdateProtectedBranchesRequest setAllowPushUserIds(java.util.List<String> allowPushUserIds) {
+    public CreateProtectdBranchRequest setAllowPushUserIds(java.util.List<String> allowPushUserIds) {
         this.allowPushUserIds = allowPushUserIds;
         return this;
     }
@@ -79,7 +79,7 @@ public class UpdateProtectedBranchesRequest extends TeaModel {
         return this.allowPushUserIds;
     }
 
-    public UpdateProtectedBranchesRequest setBranch(String branch) {
+    public CreateProtectdBranchRequest setBranch(String branch) {
         this.branch = branch;
         return this;
     }
@@ -87,7 +87,7 @@ public class UpdateProtectedBranchesRequest extends TeaModel {
         return this.branch;
     }
 
-    public UpdateProtectedBranchesRequest setId(Long id) {
+    public CreateProtectdBranchRequest setId(Long id) {
         this.id = id;
         return this;
     }
@@ -95,23 +95,23 @@ public class UpdateProtectedBranchesRequest extends TeaModel {
         return this.id;
     }
 
-    public UpdateProtectedBranchesRequest setMergeRequestSetting(UpdateProtectedBranchesRequestMergeRequestSetting mergeRequestSetting) {
+    public CreateProtectdBranchRequest setMergeRequestSetting(CreateProtectdBranchRequestMergeRequestSetting mergeRequestSetting) {
         this.mergeRequestSetting = mergeRequestSetting;
         return this;
     }
-    public UpdateProtectedBranchesRequestMergeRequestSetting getMergeRequestSetting() {
+    public CreateProtectdBranchRequestMergeRequestSetting getMergeRequestSetting() {
         return this.mergeRequestSetting;
     }
 
-    public UpdateProtectedBranchesRequest setTestSettingDTO(UpdateProtectedBranchesRequestTestSettingDTO testSettingDTO) {
+    public CreateProtectdBranchRequest setTestSettingDTO(CreateProtectdBranchRequestTestSettingDTO testSettingDTO) {
         this.testSettingDTO = testSettingDTO;
         return this;
     }
-    public UpdateProtectedBranchesRequestTestSettingDTO getTestSettingDTO() {
+    public CreateProtectdBranchRequestTestSettingDTO getTestSettingDTO() {
         return this.testSettingDTO;
     }
 
-    public UpdateProtectedBranchesRequest setOrganizationId(String organizationId) {
+    public CreateProtectdBranchRequest setOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
     }
@@ -119,7 +119,7 @@ public class UpdateProtectedBranchesRequest extends TeaModel {
         return this.organizationId;
     }
 
-    public static class UpdateProtectedBranchesRequestMergeRequestSetting extends TeaModel {
+    public static class CreateProtectdBranchRequestMergeRequestSetting extends TeaModel {
         @NameInMap("allowMergeRequestRoles")
         public java.util.List<Integer> allowMergeRequestRoles;
 
@@ -147,12 +147,12 @@ public class UpdateProtectedBranchesRequest extends TeaModel {
         @NameInMap("whiteList")
         public String whiteList;
 
-        public static UpdateProtectedBranchesRequestMergeRequestSetting build(java.util.Map<String, ?> map) throws Exception {
-            UpdateProtectedBranchesRequestMergeRequestSetting self = new UpdateProtectedBranchesRequestMergeRequestSetting();
+        public static CreateProtectdBranchRequestMergeRequestSetting build(java.util.Map<String, ?> map) throws Exception {
+            CreateProtectdBranchRequestMergeRequestSetting self = new CreateProtectdBranchRequestMergeRequestSetting();
             return TeaModel.build(map, self);
         }
 
-        public UpdateProtectedBranchesRequestMergeRequestSetting setAllowMergeRequestRoles(java.util.List<Integer> allowMergeRequestRoles) {
+        public CreateProtectdBranchRequestMergeRequestSetting setAllowMergeRequestRoles(java.util.List<Integer> allowMergeRequestRoles) {
             this.allowMergeRequestRoles = allowMergeRequestRoles;
             return this;
         }
@@ -160,7 +160,7 @@ public class UpdateProtectedBranchesRequest extends TeaModel {
             return this.allowMergeRequestRoles;
         }
 
-        public UpdateProtectedBranchesRequestMergeRequestSetting setDefaultAssignees(java.util.List<String> defaultAssignees) {
+        public CreateProtectdBranchRequestMergeRequestSetting setDefaultAssignees(java.util.List<String> defaultAssignees) {
             this.defaultAssignees = defaultAssignees;
             return this;
         }
@@ -168,7 +168,7 @@ public class UpdateProtectedBranchesRequest extends TeaModel {
             return this.defaultAssignees;
         }
 
-        public UpdateProtectedBranchesRequestMergeRequestSetting setIsAllowSelfApproval(Boolean isAllowSelfApproval) {
+        public CreateProtectdBranchRequestMergeRequestSetting setIsAllowSelfApproval(Boolean isAllowSelfApproval) {
             this.isAllowSelfApproval = isAllowSelfApproval;
             return this;
         }
@@ -176,7 +176,7 @@ public class UpdateProtectedBranchesRequest extends TeaModel {
             return this.isAllowSelfApproval;
         }
 
-        public UpdateProtectedBranchesRequestMergeRequestSetting setIsRequireDiscussionProcessed(Boolean isRequireDiscussionProcessed) {
+        public CreateProtectdBranchRequestMergeRequestSetting setIsRequireDiscussionProcessed(Boolean isRequireDiscussionProcessed) {
             this.isRequireDiscussionProcessed = isRequireDiscussionProcessed;
             return this;
         }
@@ -184,7 +184,7 @@ public class UpdateProtectedBranchesRequest extends TeaModel {
             return this.isRequireDiscussionProcessed;
         }
 
-        public UpdateProtectedBranchesRequestMergeRequestSetting setIsRequired(Boolean isRequired) {
+        public CreateProtectdBranchRequestMergeRequestSetting setIsRequired(Boolean isRequired) {
             this.isRequired = isRequired;
             return this;
         }
@@ -192,7 +192,7 @@ public class UpdateProtectedBranchesRequest extends TeaModel {
             return this.isRequired;
         }
 
-        public UpdateProtectedBranchesRequestMergeRequestSetting setIsResetApprovalWhenNewPush(Boolean isResetApprovalWhenNewPush) {
+        public CreateProtectdBranchRequestMergeRequestSetting setIsResetApprovalWhenNewPush(Boolean isResetApprovalWhenNewPush) {
             this.isResetApprovalWhenNewPush = isResetApprovalWhenNewPush;
             return this;
         }
@@ -200,7 +200,7 @@ public class UpdateProtectedBranchesRequest extends TeaModel {
             return this.isResetApprovalWhenNewPush;
         }
 
-        public UpdateProtectedBranchesRequestMergeRequestSetting setMinimumApproval(Integer minimumApproval) {
+        public CreateProtectdBranchRequestMergeRequestSetting setMinimumApproval(Integer minimumApproval) {
             this.minimumApproval = minimumApproval;
             return this;
         }
@@ -208,7 +208,7 @@ public class UpdateProtectedBranchesRequest extends TeaModel {
             return this.minimumApproval;
         }
 
-        public UpdateProtectedBranchesRequestMergeRequestSetting setMrMode(String mrMode) {
+        public CreateProtectdBranchRequestMergeRequestSetting setMrMode(String mrMode) {
             this.mrMode = mrMode;
             return this;
         }
@@ -216,7 +216,7 @@ public class UpdateProtectedBranchesRequest extends TeaModel {
             return this.mrMode;
         }
 
-        public UpdateProtectedBranchesRequestMergeRequestSetting setWhiteList(String whiteList) {
+        public CreateProtectdBranchRequestMergeRequestSetting setWhiteList(String whiteList) {
             this.whiteList = whiteList;
             return this;
         }
@@ -226,19 +226,19 @@ public class UpdateProtectedBranchesRequest extends TeaModel {
 
     }
 
-    public static class UpdateProtectedBranchesRequestTestSettingDTOCheckConfigCheckItems extends TeaModel {
+    public static class CreateProtectdBranchRequestTestSettingDTOCheckConfigCheckItems extends TeaModel {
         @NameInMap("isRequired")
         public Boolean isRequired;
 
         @NameInMap("name")
         public String name;
 
-        public static UpdateProtectedBranchesRequestTestSettingDTOCheckConfigCheckItems build(java.util.Map<String, ?> map) throws Exception {
-            UpdateProtectedBranchesRequestTestSettingDTOCheckConfigCheckItems self = new UpdateProtectedBranchesRequestTestSettingDTOCheckConfigCheckItems();
+        public static CreateProtectdBranchRequestTestSettingDTOCheckConfigCheckItems build(java.util.Map<String, ?> map) throws Exception {
+            CreateProtectdBranchRequestTestSettingDTOCheckConfigCheckItems self = new CreateProtectdBranchRequestTestSettingDTOCheckConfigCheckItems();
             return TeaModel.build(map, self);
         }
 
-        public UpdateProtectedBranchesRequestTestSettingDTOCheckConfigCheckItems setIsRequired(Boolean isRequired) {
+        public CreateProtectdBranchRequestTestSettingDTOCheckConfigCheckItems setIsRequired(Boolean isRequired) {
             this.isRequired = isRequired;
             return this;
         }
@@ -246,7 +246,7 @@ public class UpdateProtectedBranchesRequest extends TeaModel {
             return this.isRequired;
         }
 
-        public UpdateProtectedBranchesRequestTestSettingDTOCheckConfigCheckItems setName(String name) {
+        public CreateProtectdBranchRequestTestSettingDTOCheckConfigCheckItems setName(String name) {
             this.name = name;
             return this;
         }
@@ -256,26 +256,26 @@ public class UpdateProtectedBranchesRequest extends TeaModel {
 
     }
 
-    public static class UpdateProtectedBranchesRequestTestSettingDTOCheckConfig extends TeaModel {
+    public static class CreateProtectdBranchRequestTestSettingDTOCheckConfig extends TeaModel {
         @NameInMap("checkItems")
-        public java.util.List<UpdateProtectedBranchesRequestTestSettingDTOCheckConfigCheckItems> checkItems;
+        public java.util.List<CreateProtectdBranchRequestTestSettingDTOCheckConfigCheckItems> checkItems;
 
-        public static UpdateProtectedBranchesRequestTestSettingDTOCheckConfig build(java.util.Map<String, ?> map) throws Exception {
-            UpdateProtectedBranchesRequestTestSettingDTOCheckConfig self = new UpdateProtectedBranchesRequestTestSettingDTOCheckConfig();
+        public static CreateProtectdBranchRequestTestSettingDTOCheckConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateProtectdBranchRequestTestSettingDTOCheckConfig self = new CreateProtectdBranchRequestTestSettingDTOCheckConfig();
             return TeaModel.build(map, self);
         }
 
-        public UpdateProtectedBranchesRequestTestSettingDTOCheckConfig setCheckItems(java.util.List<UpdateProtectedBranchesRequestTestSettingDTOCheckConfigCheckItems> checkItems) {
+        public CreateProtectdBranchRequestTestSettingDTOCheckConfig setCheckItems(java.util.List<CreateProtectdBranchRequestTestSettingDTOCheckConfigCheckItems> checkItems) {
             this.checkItems = checkItems;
             return this;
         }
-        public java.util.List<UpdateProtectedBranchesRequestTestSettingDTOCheckConfigCheckItems> getCheckItems() {
+        public java.util.List<CreateProtectdBranchRequestTestSettingDTOCheckConfigCheckItems> getCheckItems() {
             return this.checkItems;
         }
 
     }
 
-    public static class UpdateProtectedBranchesRequestTestSettingDTOCheckTaskQualityConfig extends TeaModel {
+    public static class CreateProtectdBranchRequestTestSettingDTOCheckTaskQualityConfig extends TeaModel {
         @NameInMap("bizNo")
         public String bizNo;
 
@@ -288,12 +288,12 @@ public class UpdateProtectedBranchesRequest extends TeaModel {
         @NameInMap("taskName")
         public String taskName;
 
-        public static UpdateProtectedBranchesRequestTestSettingDTOCheckTaskQualityConfig build(java.util.Map<String, ?> map) throws Exception {
-            UpdateProtectedBranchesRequestTestSettingDTOCheckTaskQualityConfig self = new UpdateProtectedBranchesRequestTestSettingDTOCheckTaskQualityConfig();
+        public static CreateProtectdBranchRequestTestSettingDTOCheckTaskQualityConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateProtectdBranchRequestTestSettingDTOCheckTaskQualityConfig self = new CreateProtectdBranchRequestTestSettingDTOCheckTaskQualityConfig();
             return TeaModel.build(map, self);
         }
 
-        public UpdateProtectedBranchesRequestTestSettingDTOCheckTaskQualityConfig setBizNo(String bizNo) {
+        public CreateProtectdBranchRequestTestSettingDTOCheckTaskQualityConfig setBizNo(String bizNo) {
             this.bizNo = bizNo;
             return this;
         }
@@ -301,7 +301,7 @@ public class UpdateProtectedBranchesRequest extends TeaModel {
             return this.bizNo;
         }
 
-        public UpdateProtectedBranchesRequestTestSettingDTOCheckTaskQualityConfig setEnabled(Boolean enabled) {
+        public CreateProtectdBranchRequestTestSettingDTOCheckTaskQualityConfig setEnabled(Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
@@ -309,7 +309,7 @@ public class UpdateProtectedBranchesRequest extends TeaModel {
             return this.enabled;
         }
 
-        public UpdateProtectedBranchesRequestTestSettingDTOCheckTaskQualityConfig setMessage(String message) {
+        public CreateProtectdBranchRequestTestSettingDTOCheckTaskQualityConfig setMessage(String message) {
             this.message = message;
             return this;
         }
@@ -317,7 +317,7 @@ public class UpdateProtectedBranchesRequest extends TeaModel {
             return this.message;
         }
 
-        public UpdateProtectedBranchesRequestTestSettingDTOCheckTaskQualityConfig setTaskName(String taskName) {
+        public CreateProtectdBranchRequestTestSettingDTOCheckTaskQualityConfig setTaskName(String taskName) {
             this.taskName = taskName;
             return this;
         }
@@ -327,19 +327,19 @@ public class UpdateProtectedBranchesRequest extends TeaModel {
 
     }
 
-    public static class UpdateProtectedBranchesRequestTestSettingDTOCodeGuidelinesDetection extends TeaModel {
+    public static class CreateProtectdBranchRequestTestSettingDTOCodeGuidelinesDetection extends TeaModel {
         @NameInMap("enabled")
         public Boolean enabled;
 
         @NameInMap("message")
         public String message;
 
-        public static UpdateProtectedBranchesRequestTestSettingDTOCodeGuidelinesDetection build(java.util.Map<String, ?> map) throws Exception {
-            UpdateProtectedBranchesRequestTestSettingDTOCodeGuidelinesDetection self = new UpdateProtectedBranchesRequestTestSettingDTOCodeGuidelinesDetection();
+        public static CreateProtectdBranchRequestTestSettingDTOCodeGuidelinesDetection build(java.util.Map<String, ?> map) throws Exception {
+            CreateProtectdBranchRequestTestSettingDTOCodeGuidelinesDetection self = new CreateProtectdBranchRequestTestSettingDTOCodeGuidelinesDetection();
             return TeaModel.build(map, self);
         }
 
-        public UpdateProtectedBranchesRequestTestSettingDTOCodeGuidelinesDetection setEnabled(Boolean enabled) {
+        public CreateProtectdBranchRequestTestSettingDTOCodeGuidelinesDetection setEnabled(Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
@@ -347,7 +347,7 @@ public class UpdateProtectedBranchesRequest extends TeaModel {
             return this.enabled;
         }
 
-        public UpdateProtectedBranchesRequestTestSettingDTOCodeGuidelinesDetection setMessage(String message) {
+        public CreateProtectdBranchRequestTestSettingDTOCodeGuidelinesDetection setMessage(String message) {
             this.message = message;
             return this;
         }
@@ -357,19 +357,19 @@ public class UpdateProtectedBranchesRequest extends TeaModel {
 
     }
 
-    public static class UpdateProtectedBranchesRequestTestSettingDTOSensitiveInfoDetection extends TeaModel {
+    public static class CreateProtectdBranchRequestTestSettingDTOSensitiveInfoDetection extends TeaModel {
         @NameInMap("enabled")
         public Boolean enabled;
 
         @NameInMap("message")
         public String message;
 
-        public static UpdateProtectedBranchesRequestTestSettingDTOSensitiveInfoDetection build(java.util.Map<String, ?> map) throws Exception {
-            UpdateProtectedBranchesRequestTestSettingDTOSensitiveInfoDetection self = new UpdateProtectedBranchesRequestTestSettingDTOSensitiveInfoDetection();
+        public static CreateProtectdBranchRequestTestSettingDTOSensitiveInfoDetection build(java.util.Map<String, ?> map) throws Exception {
+            CreateProtectdBranchRequestTestSettingDTOSensitiveInfoDetection self = new CreateProtectdBranchRequestTestSettingDTOSensitiveInfoDetection();
             return TeaModel.build(map, self);
         }
 
-        public UpdateProtectedBranchesRequestTestSettingDTOSensitiveInfoDetection setEnabled(Boolean enabled) {
+        public CreateProtectdBranchRequestTestSettingDTOSensitiveInfoDetection setEnabled(Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
@@ -377,7 +377,7 @@ public class UpdateProtectedBranchesRequest extends TeaModel {
             return this.enabled;
         }
 
-        public UpdateProtectedBranchesRequestTestSettingDTOSensitiveInfoDetection setMessage(String message) {
+        public CreateProtectdBranchRequestTestSettingDTOSensitiveInfoDetection setMessage(String message) {
             this.message = message;
             return this;
         }
@@ -387,52 +387,52 @@ public class UpdateProtectedBranchesRequest extends TeaModel {
 
     }
 
-    public static class UpdateProtectedBranchesRequestTestSettingDTO extends TeaModel {
+    public static class CreateProtectdBranchRequestTestSettingDTO extends TeaModel {
         @NameInMap("checkConfig")
-        public UpdateProtectedBranchesRequestTestSettingDTOCheckConfig checkConfig;
+        public CreateProtectdBranchRequestTestSettingDTOCheckConfig checkConfig;
 
         @NameInMap("checkTaskQualityConfig")
-        public UpdateProtectedBranchesRequestTestSettingDTOCheckTaskQualityConfig checkTaskQualityConfig;
+        public CreateProtectdBranchRequestTestSettingDTOCheckTaskQualityConfig checkTaskQualityConfig;
 
         @NameInMap("codeGuidelinesDetection")
-        public UpdateProtectedBranchesRequestTestSettingDTOCodeGuidelinesDetection codeGuidelinesDetection;
+        public CreateProtectdBranchRequestTestSettingDTOCodeGuidelinesDetection codeGuidelinesDetection;
 
         @NameInMap("isRequired")
         public Boolean isRequired;
 
         @NameInMap("sensitiveInfoDetection")
-        public UpdateProtectedBranchesRequestTestSettingDTOSensitiveInfoDetection sensitiveInfoDetection;
+        public CreateProtectdBranchRequestTestSettingDTOSensitiveInfoDetection sensitiveInfoDetection;
 
-        public static UpdateProtectedBranchesRequestTestSettingDTO build(java.util.Map<String, ?> map) throws Exception {
-            UpdateProtectedBranchesRequestTestSettingDTO self = new UpdateProtectedBranchesRequestTestSettingDTO();
+        public static CreateProtectdBranchRequestTestSettingDTO build(java.util.Map<String, ?> map) throws Exception {
+            CreateProtectdBranchRequestTestSettingDTO self = new CreateProtectdBranchRequestTestSettingDTO();
             return TeaModel.build(map, self);
         }
 
-        public UpdateProtectedBranchesRequestTestSettingDTO setCheckConfig(UpdateProtectedBranchesRequestTestSettingDTOCheckConfig checkConfig) {
+        public CreateProtectdBranchRequestTestSettingDTO setCheckConfig(CreateProtectdBranchRequestTestSettingDTOCheckConfig checkConfig) {
             this.checkConfig = checkConfig;
             return this;
         }
-        public UpdateProtectedBranchesRequestTestSettingDTOCheckConfig getCheckConfig() {
+        public CreateProtectdBranchRequestTestSettingDTOCheckConfig getCheckConfig() {
             return this.checkConfig;
         }
 
-        public UpdateProtectedBranchesRequestTestSettingDTO setCheckTaskQualityConfig(UpdateProtectedBranchesRequestTestSettingDTOCheckTaskQualityConfig checkTaskQualityConfig) {
+        public CreateProtectdBranchRequestTestSettingDTO setCheckTaskQualityConfig(CreateProtectdBranchRequestTestSettingDTOCheckTaskQualityConfig checkTaskQualityConfig) {
             this.checkTaskQualityConfig = checkTaskQualityConfig;
             return this;
         }
-        public UpdateProtectedBranchesRequestTestSettingDTOCheckTaskQualityConfig getCheckTaskQualityConfig() {
+        public CreateProtectdBranchRequestTestSettingDTOCheckTaskQualityConfig getCheckTaskQualityConfig() {
             return this.checkTaskQualityConfig;
         }
 
-        public UpdateProtectedBranchesRequestTestSettingDTO setCodeGuidelinesDetection(UpdateProtectedBranchesRequestTestSettingDTOCodeGuidelinesDetection codeGuidelinesDetection) {
+        public CreateProtectdBranchRequestTestSettingDTO setCodeGuidelinesDetection(CreateProtectdBranchRequestTestSettingDTOCodeGuidelinesDetection codeGuidelinesDetection) {
             this.codeGuidelinesDetection = codeGuidelinesDetection;
             return this;
         }
-        public UpdateProtectedBranchesRequestTestSettingDTOCodeGuidelinesDetection getCodeGuidelinesDetection() {
+        public CreateProtectdBranchRequestTestSettingDTOCodeGuidelinesDetection getCodeGuidelinesDetection() {
             return this.codeGuidelinesDetection;
         }
 
-        public UpdateProtectedBranchesRequestTestSettingDTO setIsRequired(Boolean isRequired) {
+        public CreateProtectdBranchRequestTestSettingDTO setIsRequired(Boolean isRequired) {
             this.isRequired = isRequired;
             return this;
         }
@@ -440,11 +440,11 @@ public class UpdateProtectedBranchesRequest extends TeaModel {
             return this.isRequired;
         }
 
-        public UpdateProtectedBranchesRequestTestSettingDTO setSensitiveInfoDetection(UpdateProtectedBranchesRequestTestSettingDTOSensitiveInfoDetection sensitiveInfoDetection) {
+        public CreateProtectdBranchRequestTestSettingDTO setSensitiveInfoDetection(CreateProtectdBranchRequestTestSettingDTOSensitiveInfoDetection sensitiveInfoDetection) {
             this.sensitiveInfoDetection = sensitiveInfoDetection;
             return this;
         }
-        public UpdateProtectedBranchesRequestTestSettingDTOSensitiveInfoDetection getSensitiveInfoDetection() {
+        public CreateProtectdBranchRequestTestSettingDTOSensitiveInfoDetection getSensitiveInfoDetection() {
             return this.sensitiveInfoDetection;
         }
 

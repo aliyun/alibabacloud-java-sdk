@@ -20,7 +20,7 @@ public class ListRepositoryBranchesResponseBody extends TeaModel {
     public Boolean success;
 
     @NameInMap("total")
-    public String total;
+    public Long total;
 
     public static ListRepositoryBranchesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListRepositoryBranchesResponseBody self = new ListRepositoryBranchesResponseBody();
@@ -67,11 +67,11 @@ public class ListRepositoryBranchesResponseBody extends TeaModel {
         return this.success;
     }
 
-    public ListRepositoryBranchesResponseBody setTotal(String total) {
+    public ListRepositoryBranchesResponseBody setTotal(Long total) {
         this.total = total;
         return this;
     }
-    public String getTotal() {
+    public Long getTotal() {
         return this.total;
     }
 

@@ -7,8 +7,8 @@ public class GetFileLastCommitRequest extends TeaModel {
     @NameInMap("accessToken")
     public String accessToken;
 
-    @NameInMap("filepath")
-    public String filepath;
+    @NameInMap("filePath")
+    public String filePath;
 
     @NameInMap("organizationId")
     public String organizationId;
@@ -32,12 +32,12 @@ public class GetFileLastCommitRequest extends TeaModel {
         return this.accessToken;
     }
 
-    public GetFileLastCommitRequest setFilepath(String filepath) {
-        this.filepath = filepath;
+    public GetFileLastCommitRequest setFilePath(String filePath) {
+        this.filePath = filePath;
         return this;
     }
-    public String getFilepath() {
-        return this.filepath;
+    public String getFilePath() {
+        return this.filePath;
     }
 
     public GetFileLastCommitRequest setOrganizationId(String organizationId) {

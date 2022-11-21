@@ -69,7 +69,7 @@ public class UpdateProtectedBranchesResponseBody extends TeaModel {
         public java.util.List<Integer> allowMergeRequestRoles;
 
         @NameInMap("defaultAssignees")
-        public java.util.List<Integer> defaultAssignees;
+        public java.util.List<String> defaultAssignees;
 
         @NameInMap("isAllowSelfApproval")
         public Boolean isAllowSelfApproval;
@@ -105,11 +105,11 @@ public class UpdateProtectedBranchesResponseBody extends TeaModel {
             return this.allowMergeRequestRoles;
         }
 
-        public UpdateProtectedBranchesResponseBodyResultMergeRequestSetting setDefaultAssignees(java.util.List<Integer> defaultAssignees) {
+        public UpdateProtectedBranchesResponseBodyResultMergeRequestSetting setDefaultAssignees(java.util.List<String> defaultAssignees) {
             this.defaultAssignees = defaultAssignees;
             return this;
         }
-        public java.util.List<Integer> getDefaultAssignees() {
+        public java.util.List<String> getDefaultAssignees() {
             return this.defaultAssignees;
         }
 

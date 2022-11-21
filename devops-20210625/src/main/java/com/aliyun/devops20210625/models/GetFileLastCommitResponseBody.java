@@ -4,19 +4,19 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class GetFileLastCommitResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @NameInMap("errorCode")
     public String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @NameInMap("errorMessage")
     public String errorMessage;
 
-    @NameInMap("RequestId")
+    @NameInMap("requestId")
     public String requestId;
 
-    @NameInMap("Result")
+    @NameInMap("result")
     public GetFileLastCommitResponseBodyResult result;
 
-    @NameInMap("Success")
+    @NameInMap("success")
     public Boolean success;
 
     public static GetFileLastCommitResponseBody build(java.util.Map<String, ?> map) throws Exception {
@@ -95,43 +95,43 @@ public class GetFileLastCommitResponseBody extends TeaModel {
     }
 
     public static class GetFileLastCommitResponseBodyResult extends TeaModel {
-        @NameInMap("AuthorDate")
+        @NameInMap("authorDate")
         public String authorDate;
 
-        @NameInMap("AuthorEmail")
+        @NameInMap("authorEmail")
         public String authorEmail;
 
-        @NameInMap("AuthorName")
+        @NameInMap("authorName")
         public String authorName;
 
-        @NameInMap("CommittedDate")
+        @NameInMap("committedDate")
         public String committedDate;
 
-        @NameInMap("CommitterEmail")
+        @NameInMap("committerEmail")
         public String committerEmail;
 
-        @NameInMap("CommitterName")
+        @NameInMap("committerName")
         public String committerName;
 
-        @NameInMap("CreatedAt")
+        @NameInMap("createdAt")
         public String createdAt;
 
-        @NameInMap("Id")
+        @NameInMap("id")
         public String id;
 
-        @NameInMap("Message")
+        @NameInMap("message")
         public String message;
 
-        @NameInMap("ParentIds")
+        @NameInMap("parentIds")
         public java.util.List<String> parentIds;
 
-        @NameInMap("ShortId")
+        @NameInMap("shortId")
         public String shortId;
 
-        @NameInMap("Signature")
+        @NameInMap("signature")
         public GetFileLastCommitResponseBodyResultSignature signature;
 
-        @NameInMap("Title")
+        @NameInMap("title")
         public String title;
 
         public static GetFileLastCommitResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
