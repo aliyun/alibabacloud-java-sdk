@@ -4,19 +4,19 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class AddRepositoryMemberResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @NameInMap("errorCode")
     public String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @NameInMap("errorMessage")
     public String errorMessage;
 
-    @NameInMap("RequestId")
+    @NameInMap("requestId")
     public String requestId;
 
-    @NameInMap("Result")
+    @NameInMap("result")
     public java.util.List<AddRepositoryMemberResponseBodyResult> result;
 
-    @NameInMap("Success")
+    @NameInMap("success")
     public Boolean success;
 
     public static AddRepositoryMemberResponseBody build(java.util.Map<String, ?> map) throws Exception {
@@ -65,22 +65,22 @@ public class AddRepositoryMemberResponseBody extends TeaModel {
     }
 
     public static class AddRepositoryMemberResponseBodyResult extends TeaModel {
-        @NameInMap("AccessLevel")
+        @NameInMap("accessLevel")
         public Integer accessLevel;
 
-        @NameInMap("AvatarUrl")
+        @NameInMap("avatarUrl")
         public String avatarUrl;
 
-        @NameInMap("Email")
+        @NameInMap("email")
         public String email;
 
-        @NameInMap("ExternUserId")
+        @NameInMap("externUserId")
         public String externUserId;
 
-        @NameInMap("Id")
+        @NameInMap("id")
         public Long id;
 
-        @NameInMap("State")
+        @NameInMap("state")
         public String state;
 
         public static AddRepositoryMemberResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {

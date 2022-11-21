@@ -4,7 +4,7 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class AddRepositoryMemberRequest extends TeaModel {
-    @NameInMap("AccessToken")
+    @NameInMap("accessToken")
     public String accessToken;
 
     @NameInMap("accessLevel")

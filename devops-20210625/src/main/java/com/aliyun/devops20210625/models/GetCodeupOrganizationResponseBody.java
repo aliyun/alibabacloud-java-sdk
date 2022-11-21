@@ -4,19 +4,19 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class GetCodeupOrganizationResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @NameInMap("errorCode")
     public String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @NameInMap("errorMessage")
     public String errorMessage;
 
-    @NameInMap("RequestId")
+    @NameInMap("requestId")
     public String requestId;
 
-    @NameInMap("Result")
+    @NameInMap("result")
     public GetCodeupOrganizationResponseBodyResult result;
 
-    @NameInMap("Success")
+    @NameInMap("success")
     public Boolean success;
 
     public static GetCodeupOrganizationResponseBody build(java.util.Map<String, ?> map) throws Exception {
@@ -65,25 +65,25 @@ public class GetCodeupOrganizationResponseBody extends TeaModel {
     }
 
     public static class GetCodeupOrganizationResponseBodyResult extends TeaModel {
-        @NameInMap("CreatedAt")
+        @NameInMap("createdAt")
         public String createdAt;
 
-        @NameInMap("Id")
+        @NameInMap("id")
         public Long id;
 
-        @NameInMap("NamespaceId")
+        @NameInMap("namespaceId")
         public Long namespaceId;
 
-        @NameInMap("OrganizationId")
+        @NameInMap("organizationId")
         public String organizationId;
 
-        @NameInMap("Path")
+        @NameInMap("path")
         public String path;
 
-        @NameInMap("UpdatedAt")
+        @NameInMap("updatedAt")
         public String updatedAt;
 
-        @NameInMap("UserRole")
+        @NameInMap("userRole")
         public String userRole;
 
         public static GetCodeupOrganizationResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {

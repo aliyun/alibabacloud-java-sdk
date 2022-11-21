@@ -3,19 +3,19 @@ package com.aliyun.devops20210625.models;
 
 import com.aliyun.tea.*;
 
-public class GetProjectMemberRequest extends TeaModel {
+public class DeleteRepositoryWebhookRequest extends TeaModel {
     @NameInMap("accessToken")
     public String accessToken;
 
     @NameInMap("organizationId")
     public String organizationId;
 
-    public static GetProjectMemberRequest build(java.util.Map<String, ?> map) throws Exception {
-        GetProjectMemberRequest self = new GetProjectMemberRequest();
+    public static DeleteRepositoryWebhookRequest build(java.util.Map<String, ?> map) throws Exception {
+        DeleteRepositoryWebhookRequest self = new DeleteRepositoryWebhookRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetProjectMemberRequest setAccessToken(String accessToken) {
+    public DeleteRepositoryWebhookRequest setAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
     }
@@ -23,7 +23,7 @@ public class GetProjectMemberRequest extends TeaModel {
         return this.accessToken;
     }
 
-    public GetProjectMemberRequest setOrganizationId(String organizationId) {
+    public DeleteRepositoryWebhookRequest setOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
     }
