@@ -329,6 +329,9 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         @NameInMap("AssociatedPhysicalConnections")
         public DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSetVirtualBorderRouterTypeAssociatedPhysicalConnections associatedPhysicalConnections;
 
+        @NameInMap("Bandwidth")
+        public Integer bandwidth;
+
         @NameInMap("CircuitCode")
         public String circuitCode;
 
@@ -454,6 +457,14 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         }
         public DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSetVirtualBorderRouterTypeAssociatedPhysicalConnections getAssociatedPhysicalConnections() {
             return this.associatedPhysicalConnections;
+        }
+
+        public DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSetVirtualBorderRouterType setBandwidth(Integer bandwidth) {
+            this.bandwidth = bandwidth;
+            return this;
+        }
+        public Integer getBandwidth() {
+            return this.bandwidth;
         }
 
         public DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSetVirtualBorderRouterType setCircuitCode(String circuitCode) {

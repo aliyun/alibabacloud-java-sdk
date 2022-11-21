@@ -25,8 +25,8 @@ public class CreateVpcPrefixListRequest extends TeaModel {
     @NameInMap("PrefixListDescription")
     public String prefixListDescription;
 
-    @NameInMap("PrefixListEntrys")
-    public java.util.List<CreateVpcPrefixListRequestPrefixListEntrys> prefixListEntrys;
+    @NameInMap("PrefixListEntries")
+    public java.util.List<CreateVpcPrefixListRequestPrefixListEntries> prefixListEntries;
 
     @NameInMap("PrefixListName")
     public String prefixListName;
@@ -101,12 +101,12 @@ public class CreateVpcPrefixListRequest extends TeaModel {
         return this.prefixListDescription;
     }
 
-    public CreateVpcPrefixListRequest setPrefixListEntrys(java.util.List<CreateVpcPrefixListRequestPrefixListEntrys> prefixListEntrys) {
-        this.prefixListEntrys = prefixListEntrys;
+    public CreateVpcPrefixListRequest setPrefixListEntries(java.util.List<CreateVpcPrefixListRequestPrefixListEntries> prefixListEntries) {
+        this.prefixListEntries = prefixListEntries;
         return this;
     }
-    public java.util.List<CreateVpcPrefixListRequestPrefixListEntrys> getPrefixListEntrys() {
-        return this.prefixListEntrys;
+    public java.util.List<CreateVpcPrefixListRequestPrefixListEntries> getPrefixListEntries() {
+        return this.prefixListEntries;
     }
 
     public CreateVpcPrefixListRequest setPrefixListName(String prefixListName) {
@@ -141,19 +141,19 @@ public class CreateVpcPrefixListRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public static class CreateVpcPrefixListRequestPrefixListEntrys extends TeaModel {
+    public static class CreateVpcPrefixListRequestPrefixListEntries extends TeaModel {
         @NameInMap("Cidr")
         public String cidr;
 
         @NameInMap("Description")
         public String description;
 
-        public static CreateVpcPrefixListRequestPrefixListEntrys build(java.util.Map<String, ?> map) throws Exception {
-            CreateVpcPrefixListRequestPrefixListEntrys self = new CreateVpcPrefixListRequestPrefixListEntrys();
+        public static CreateVpcPrefixListRequestPrefixListEntries build(java.util.Map<String, ?> map) throws Exception {
+            CreateVpcPrefixListRequestPrefixListEntries self = new CreateVpcPrefixListRequestPrefixListEntries();
             return TeaModel.build(map, self);
         }
 
-        public CreateVpcPrefixListRequestPrefixListEntrys setCidr(String cidr) {
+        public CreateVpcPrefixListRequestPrefixListEntries setCidr(String cidr) {
             this.cidr = cidr;
             return this;
         }
@@ -161,7 +161,7 @@ public class CreateVpcPrefixListRequest extends TeaModel {
             return this.cidr;
         }
 
-        public CreateVpcPrefixListRequestPrefixListEntrys setDescription(String description) {
+        public CreateVpcPrefixListRequestPrefixListEntries setDescription(String description) {
             this.description = description;
             return this;
         }
