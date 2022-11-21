@@ -65,6 +65,9 @@ public class SubmitTranscodeJobRequest extends TeaModel {
     }
 
     public static class SubmitTranscodeJobRequestInputGroup extends TeaModel {
+        @NameInMap("InputUrl")
+        public String inputUrl;
+
         @NameInMap("Media")
         public String media;
 
@@ -74,6 +77,14 @@ public class SubmitTranscodeJobRequest extends TeaModel {
         public static SubmitTranscodeJobRequestInputGroup build(java.util.Map<String, ?> map) throws Exception {
             SubmitTranscodeJobRequestInputGroup self = new SubmitTranscodeJobRequestInputGroup();
             return TeaModel.build(map, self);
+        }
+
+        public SubmitTranscodeJobRequestInputGroup setInputUrl(String inputUrl) {
+            this.inputUrl = inputUrl;
+            return this;
+        }
+        public String getInputUrl() {
+            return this.inputUrl;
         }
 
         public SubmitTranscodeJobRequestInputGroup setMedia(String media) {
@@ -98,6 +109,9 @@ public class SubmitTranscodeJobRequest extends TeaModel {
         @NameInMap("Media")
         public String media;
 
+        @NameInMap("OutputUrl")
+        public String outputUrl;
+
         @NameInMap("Type")
         public String type;
 
@@ -112,6 +126,14 @@ public class SubmitTranscodeJobRequest extends TeaModel {
         }
         public String getMedia() {
             return this.media;
+        }
+
+        public SubmitTranscodeJobRequestOutputGroupOutput setOutputUrl(String outputUrl) {
+            this.outputUrl = outputUrl;
+            return this;
+        }
+        public String getOutputUrl() {
+            return this.outputUrl;
         }
 
         public SubmitTranscodeJobRequestOutputGroupOutput setType(String type) {
@@ -1062,6 +1084,9 @@ public class SubmitTranscodeJobRequest extends TeaModel {
         @NameInMap("MuxConfig")
         public SubmitTranscodeJobRequestOutputGroupProcessConfigTranscodeOverwriteParamsMuxConfig muxConfig;
 
+        @NameInMap("Tags")
+        public java.util.Map<String, String> tags;
+
         @NameInMap("Video")
         public SubmitTranscodeJobRequestOutputGroupProcessConfigTranscodeOverwriteParamsVideo video;
 
@@ -1092,6 +1117,14 @@ public class SubmitTranscodeJobRequest extends TeaModel {
         }
         public SubmitTranscodeJobRequestOutputGroupProcessConfigTranscodeOverwriteParamsMuxConfig getMuxConfig() {
             return this.muxConfig;
+        }
+
+        public SubmitTranscodeJobRequestOutputGroupProcessConfigTranscodeOverwriteParams setTags(java.util.Map<String, String> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.Map<String, String> getTags() {
+            return this.tags;
         }
 
         public SubmitTranscodeJobRequestOutputGroupProcessConfigTranscodeOverwriteParams setVideo(SubmitTranscodeJobRequestOutputGroupProcessConfigTranscodeOverwriteParamsVideo video) {
@@ -1144,6 +1177,9 @@ public class SubmitTranscodeJobRequest extends TeaModel {
         @NameInMap("ImageWatermarks")
         public java.util.List<SubmitTranscodeJobRequestOutputGroupProcessConfigImageWatermarks> imageWatermarks;
 
+        @NameInMap("IsInheritTags")
+        public Boolean isInheritTags;
+
         @NameInMap("Subtitles")
         public java.util.List<SubmitTranscodeJobRequestOutputGroupProcessConfigSubtitles> subtitles;
 
@@ -1180,6 +1216,14 @@ public class SubmitTranscodeJobRequest extends TeaModel {
         }
         public java.util.List<SubmitTranscodeJobRequestOutputGroupProcessConfigImageWatermarks> getImageWatermarks() {
             return this.imageWatermarks;
+        }
+
+        public SubmitTranscodeJobRequestOutputGroupProcessConfig setIsInheritTags(Boolean isInheritTags) {
+            this.isInheritTags = isInheritTags;
+            return this;
+        }
+        public Boolean getIsInheritTags() {
+            return this.isInheritTags;
         }
 
         public SubmitTranscodeJobRequestOutputGroupProcessConfig setSubtitles(java.util.List<SubmitTranscodeJobRequestOutputGroupProcessConfigSubtitles> subtitles) {

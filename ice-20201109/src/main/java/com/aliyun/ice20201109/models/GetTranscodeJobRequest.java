@@ -4,20 +4,20 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class GetTranscodeJobRequest extends TeaModel {
-    @NameInMap("JobId")
-    public String jobId;
+    @NameInMap("ParentJobId")
+    public String parentJobId;
 
     public static GetTranscodeJobRequest build(java.util.Map<String, ?> map) throws Exception {
         GetTranscodeJobRequest self = new GetTranscodeJobRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetTranscodeJobRequest setJobId(String jobId) {
-        this.jobId = jobId;
+    public GetTranscodeJobRequest setParentJobId(String parentJobId) {
+        this.parentJobId = parentJobId;
         return this;
     }
-    public String getJobId() {
-        return this.jobId;
+    public String getParentJobId() {
+        return this.parentJobId;
     }
 
 }

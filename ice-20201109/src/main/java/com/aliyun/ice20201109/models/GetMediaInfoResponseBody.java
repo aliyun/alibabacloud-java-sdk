@@ -31,6 +31,47 @@ public class GetMediaInfoResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class GetMediaInfoResponseBodyMediaInfoAiRoughData extends TeaModel {
+        @NameInMap("Result")
+        public String result;
+
+        @NameInMap("SaveType")
+        public String saveType;
+
+        @NameInMap("Status")
+        public String status;
+
+        public static GetMediaInfoResponseBodyMediaInfoAiRoughData build(java.util.Map<String, ?> map) throws Exception {
+            GetMediaInfoResponseBodyMediaInfoAiRoughData self = new GetMediaInfoResponseBodyMediaInfoAiRoughData();
+            return TeaModel.build(map, self);
+        }
+
+        public GetMediaInfoResponseBodyMediaInfoAiRoughData setResult(String result) {
+            this.result = result;
+            return this;
+        }
+        public String getResult() {
+            return this.result;
+        }
+
+        public GetMediaInfoResponseBodyMediaInfoAiRoughData setSaveType(String saveType) {
+            this.saveType = saveType;
+            return this;
+        }
+        public String getSaveType() {
+            return this.saveType;
+        }
+
+        public GetMediaInfoResponseBodyMediaInfoAiRoughData setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+    }
+
     public static class GetMediaInfoResponseBodyMediaInfoFileInfoListAudioStreamInfoList extends TeaModel {
         @NameInMap("Bitrate")
         public String bitrate;
@@ -1070,6 +1111,9 @@ public class GetMediaInfoResponseBody extends TeaModel {
     }
 
     public static class GetMediaInfoResponseBodyMediaInfo extends TeaModel {
+        @NameInMap("AiRoughData")
+        public GetMediaInfoResponseBodyMediaInfoAiRoughData aiRoughData;
+
         @NameInMap("FileInfoList")
         public java.util.List<GetMediaInfoResponseBodyMediaInfoFileInfoList> fileInfoList;
 
@@ -1082,6 +1126,14 @@ public class GetMediaInfoResponseBody extends TeaModel {
         public static GetMediaInfoResponseBodyMediaInfo build(java.util.Map<String, ?> map) throws Exception {
             GetMediaInfoResponseBodyMediaInfo self = new GetMediaInfoResponseBodyMediaInfo();
             return TeaModel.build(map, self);
+        }
+
+        public GetMediaInfoResponseBodyMediaInfo setAiRoughData(GetMediaInfoResponseBodyMediaInfoAiRoughData aiRoughData) {
+            this.aiRoughData = aiRoughData;
+            return this;
+        }
+        public GetMediaInfoResponseBodyMediaInfoAiRoughData getAiRoughData() {
+            return this.aiRoughData;
         }
 
         public GetMediaInfoResponseBodyMediaInfo setFileInfoList(java.util.List<GetMediaInfoResponseBodyMediaInfoFileInfoList> fileInfoList) {

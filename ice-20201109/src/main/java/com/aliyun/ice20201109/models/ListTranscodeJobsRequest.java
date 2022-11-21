@@ -7,9 +7,6 @@ public class ListTranscodeJobsRequest extends TeaModel {
     @NameInMap("EndOfCreateTime")
     public String endOfCreateTime;
 
-    @NameInMap("JobId")
-    public String jobId;
-
     @NameInMap("NextPageToken")
     public String nextPageToken;
 
@@ -18,6 +15,9 @@ public class ListTranscodeJobsRequest extends TeaModel {
 
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("ParentJobId")
+    public String parentJobId;
 
     @NameInMap("StartOfCreateTime")
     public String startOfCreateTime;
@@ -36,14 +36,6 @@ public class ListTranscodeJobsRequest extends TeaModel {
     }
     public String getEndOfCreateTime() {
         return this.endOfCreateTime;
-    }
-
-    public ListTranscodeJobsRequest setJobId(String jobId) {
-        this.jobId = jobId;
-        return this;
-    }
-    public String getJobId() {
-        return this.jobId;
     }
 
     public ListTranscodeJobsRequest setNextPageToken(String nextPageToken) {
@@ -68,6 +60,14 @@ public class ListTranscodeJobsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListTranscodeJobsRequest setParentJobId(String parentJobId) {
+        this.parentJobId = parentJobId;
+        return this;
+    }
+    public String getParentJobId() {
+        return this.parentJobId;
     }
 
     public ListTranscodeJobsRequest setStartOfCreateTime(String startOfCreateTime) {

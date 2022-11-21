@@ -168,6 +168,9 @@ public class GetPlayInfoResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("StreamTags")
+        public String streamTags;
+
         @NameInMap("StreamType")
         public String streamType;
 
@@ -319,6 +322,14 @@ public class GetPlayInfoResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public GetPlayInfoResponseBodyPlayInfoList setStreamTags(String streamTags) {
+            this.streamTags = streamTags;
+            return this;
+        }
+        public String getStreamTags() {
+            return this.streamTags;
         }
 
         public GetPlayInfoResponseBodyPlayInfoList setStreamType(String streamType) {

@@ -65,6 +65,9 @@ public class GetTranscodeJobResponseBody extends TeaModel {
         @NameInMap("Media")
         public String media;
 
+        @NameInMap("OutputUrl")
+        public String outputUrl;
+
         @NameInMap("Type")
         public String type;
 
@@ -79,6 +82,14 @@ public class GetTranscodeJobResponseBody extends TeaModel {
         }
         public String getMedia() {
             return this.media;
+        }
+
+        public GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupOutput setOutputUrl(String outputUrl) {
+            this.outputUrl = outputUrl;
+            return this;
+        }
+        public String getOutputUrl() {
+            return this.outputUrl;
         }
 
         public GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupOutput setType(String type) {
@@ -1236,6 +1247,9 @@ public class GetTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListInputGroup extends TeaModel {
+        @NameInMap("InputUrl")
+        public String inputUrl;
+
         @NameInMap("Media")
         public String media;
 
@@ -1245,6 +1259,14 @@ public class GetTranscodeJobResponseBody extends TeaModel {
         public static GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListInputGroup build(java.util.Map<String, ?> map) throws Exception {
             GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListInputGroup self = new GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListInputGroup();
             return TeaModel.build(map, self);
+        }
+
+        public GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListInputGroup setInputUrl(String inputUrl) {
+            this.inputUrl = inputUrl;
+            return this;
+        }
+        public String getInputUrl() {
+            return this.inputUrl;
         }
 
         public GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListInputGroup setMedia(String media) {
@@ -1884,6 +1906,9 @@ public class GetTranscodeJobResponseBody extends TeaModel {
         @NameInMap("Media")
         public String media;
 
+        @NameInMap("OutputUrl")
+        public String outputUrl;
+
         @NameInMap("Type")
         public String type;
 
@@ -1898,6 +1923,14 @@ public class GetTranscodeJobResponseBody extends TeaModel {
         }
         public String getMedia() {
             return this.media;
+        }
+
+        public GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListOutput setOutputUrl(String outputUrl) {
+            this.outputUrl = outputUrl;
+            return this;
+        }
+        public String getOutputUrl() {
+            return this.outputUrl;
         }
 
         public GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListOutput setType(String type) {
@@ -2848,6 +2881,9 @@ public class GetTranscodeJobResponseBody extends TeaModel {
         @NameInMap("MuxConfig")
         public GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscodeOverwriteParamsMuxConfig muxConfig;
 
+        @NameInMap("Tags")
+        public java.util.Map<String, String> tags;
+
         @NameInMap("Video")
         public GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscodeOverwriteParamsVideo video;
 
@@ -2878,6 +2914,14 @@ public class GetTranscodeJobResponseBody extends TeaModel {
         }
         public GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscodeOverwriteParamsMuxConfig getMuxConfig() {
             return this.muxConfig;
+        }
+
+        public GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscodeOverwriteParams setTags(java.util.Map<String, String> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.Map<String, String> getTags() {
+            return this.tags;
         }
 
         public GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscodeOverwriteParams setVideo(GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscodeOverwriteParamsVideo video) {
@@ -2930,6 +2974,9 @@ public class GetTranscodeJobResponseBody extends TeaModel {
         @NameInMap("ImageWatermarks")
         public java.util.List<GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigImageWatermarks> imageWatermarks;
 
+        @NameInMap("IsInheritTags")
+        public Boolean isInheritTags;
+
         @NameInMap("Subtitles")
         public java.util.List<GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigSubtitles> subtitles;
 
@@ -2966,6 +3013,14 @@ public class GetTranscodeJobResponseBody extends TeaModel {
         }
         public java.util.List<GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigImageWatermarks> getImageWatermarks() {
             return this.imageWatermarks;
+        }
+
+        public GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfig setIsInheritTags(Boolean isInheritTags) {
+            this.isInheritTags = isInheritTags;
+            return this;
+        }
+        public Boolean getIsInheritTags() {
+            return this.isInheritTags;
         }
 
         public GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfig setSubtitles(java.util.List<GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigSubtitles> subtitles) {

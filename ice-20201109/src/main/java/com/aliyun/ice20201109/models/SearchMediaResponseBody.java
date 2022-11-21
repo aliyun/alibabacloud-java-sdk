@@ -64,6 +64,480 @@ public class SearchMediaResponseBody extends TeaModel {
         return this.total;
     }
 
+    public static class SearchMediaResponseBodyMediaInfoListAiDataAiLabelInfoOccurrencesTracks extends TeaModel {
+        @NameInMap("Position")
+        public String position;
+
+        @NameInMap("Size")
+        public Double size;
+
+        @NameInMap("Timestamp")
+        public Double timestamp;
+
+        public static SearchMediaResponseBodyMediaInfoListAiDataAiLabelInfoOccurrencesTracks build(java.util.Map<String, ?> map) throws Exception {
+            SearchMediaResponseBodyMediaInfoListAiDataAiLabelInfoOccurrencesTracks self = new SearchMediaResponseBodyMediaInfoListAiDataAiLabelInfoOccurrencesTracks();
+            return TeaModel.build(map, self);
+        }
+
+        public SearchMediaResponseBodyMediaInfoListAiDataAiLabelInfoOccurrencesTracks setPosition(String position) {
+            this.position = position;
+            return this;
+        }
+        public String getPosition() {
+            return this.position;
+        }
+
+        public SearchMediaResponseBodyMediaInfoListAiDataAiLabelInfoOccurrencesTracks setSize(Double size) {
+            this.size = size;
+            return this;
+        }
+        public Double getSize() {
+            return this.size;
+        }
+
+        public SearchMediaResponseBodyMediaInfoListAiDataAiLabelInfoOccurrencesTracks setTimestamp(Double timestamp) {
+            this.timestamp = timestamp;
+            return this;
+        }
+        public Double getTimestamp() {
+            return this.timestamp;
+        }
+
+    }
+
+    public static class SearchMediaResponseBodyMediaInfoListAiDataAiLabelInfoOccurrences extends TeaModel {
+        @NameInMap("Content")
+        public String content;
+
+        @NameInMap("FinegrainId")
+        public String finegrainId;
+
+        @NameInMap("FinegrainName")
+        public String finegrainName;
+
+        @NameInMap("From")
+        public Double from;
+
+        @NameInMap("Image")
+        public String image;
+
+        @NameInMap("Score")
+        public Double score;
+
+        @NameInMap("TableBatchSeqId")
+        public String tableBatchSeqId;
+
+        @NameInMap("To")
+        public Double to;
+
+        @NameInMap("Tracks")
+        public java.util.List<SearchMediaResponseBodyMediaInfoListAiDataAiLabelInfoOccurrencesTracks> tracks;
+
+        @NameInMap("clipId")
+        public String clipId;
+
+        public static SearchMediaResponseBodyMediaInfoListAiDataAiLabelInfoOccurrences build(java.util.Map<String, ?> map) throws Exception {
+            SearchMediaResponseBodyMediaInfoListAiDataAiLabelInfoOccurrences self = new SearchMediaResponseBodyMediaInfoListAiDataAiLabelInfoOccurrences();
+            return TeaModel.build(map, self);
+        }
+
+        public SearchMediaResponseBodyMediaInfoListAiDataAiLabelInfoOccurrences setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
+        }
+
+        public SearchMediaResponseBodyMediaInfoListAiDataAiLabelInfoOccurrences setFinegrainId(String finegrainId) {
+            this.finegrainId = finegrainId;
+            return this;
+        }
+        public String getFinegrainId() {
+            return this.finegrainId;
+        }
+
+        public SearchMediaResponseBodyMediaInfoListAiDataAiLabelInfoOccurrences setFinegrainName(String finegrainName) {
+            this.finegrainName = finegrainName;
+            return this;
+        }
+        public String getFinegrainName() {
+            return this.finegrainName;
+        }
+
+        public SearchMediaResponseBodyMediaInfoListAiDataAiLabelInfoOccurrences setFrom(Double from) {
+            this.from = from;
+            return this;
+        }
+        public Double getFrom() {
+            return this.from;
+        }
+
+        public SearchMediaResponseBodyMediaInfoListAiDataAiLabelInfoOccurrences setImage(String image) {
+            this.image = image;
+            return this;
+        }
+        public String getImage() {
+            return this.image;
+        }
+
+        public SearchMediaResponseBodyMediaInfoListAiDataAiLabelInfoOccurrences setScore(Double score) {
+            this.score = score;
+            return this;
+        }
+        public Double getScore() {
+            return this.score;
+        }
+
+        public SearchMediaResponseBodyMediaInfoListAiDataAiLabelInfoOccurrences setTableBatchSeqId(String tableBatchSeqId) {
+            this.tableBatchSeqId = tableBatchSeqId;
+            return this;
+        }
+        public String getTableBatchSeqId() {
+            return this.tableBatchSeqId;
+        }
+
+        public SearchMediaResponseBodyMediaInfoListAiDataAiLabelInfoOccurrences setTo(Double to) {
+            this.to = to;
+            return this;
+        }
+        public Double getTo() {
+            return this.to;
+        }
+
+        public SearchMediaResponseBodyMediaInfoListAiDataAiLabelInfoOccurrences setTracks(java.util.List<SearchMediaResponseBodyMediaInfoListAiDataAiLabelInfoOccurrencesTracks> tracks) {
+            this.tracks = tracks;
+            return this;
+        }
+        public java.util.List<SearchMediaResponseBodyMediaInfoListAiDataAiLabelInfoOccurrencesTracks> getTracks() {
+            return this.tracks;
+        }
+
+        public SearchMediaResponseBodyMediaInfoListAiDataAiLabelInfoOccurrences setClipId(String clipId) {
+            this.clipId = clipId;
+            return this;
+        }
+        public String getClipId() {
+            return this.clipId;
+        }
+
+    }
+
+    public static class SearchMediaResponseBodyMediaInfoListAiDataAiLabelInfo extends TeaModel {
+        @NameInMap("Category")
+        public String category;
+
+        @NameInMap("FaceId")
+        public String faceId;
+
+        @NameInMap("LabelId")
+        public String labelId;
+
+        @NameInMap("LabelName")
+        public String labelName;
+
+        @NameInMap("LabelType")
+        public String labelType;
+
+        @NameInMap("Occurrences")
+        public java.util.List<SearchMediaResponseBodyMediaInfoListAiDataAiLabelInfoOccurrences> occurrences;
+
+        @NameInMap("Source")
+        public String source;
+
+        public static SearchMediaResponseBodyMediaInfoListAiDataAiLabelInfo build(java.util.Map<String, ?> map) throws Exception {
+            SearchMediaResponseBodyMediaInfoListAiDataAiLabelInfo self = new SearchMediaResponseBodyMediaInfoListAiDataAiLabelInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public SearchMediaResponseBodyMediaInfoListAiDataAiLabelInfo setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
+        }
+
+        public SearchMediaResponseBodyMediaInfoListAiDataAiLabelInfo setFaceId(String faceId) {
+            this.faceId = faceId;
+            return this;
+        }
+        public String getFaceId() {
+            return this.faceId;
+        }
+
+        public SearchMediaResponseBodyMediaInfoListAiDataAiLabelInfo setLabelId(String labelId) {
+            this.labelId = labelId;
+            return this;
+        }
+        public String getLabelId() {
+            return this.labelId;
+        }
+
+        public SearchMediaResponseBodyMediaInfoListAiDataAiLabelInfo setLabelName(String labelName) {
+            this.labelName = labelName;
+            return this;
+        }
+        public String getLabelName() {
+            return this.labelName;
+        }
+
+        public SearchMediaResponseBodyMediaInfoListAiDataAiLabelInfo setLabelType(String labelType) {
+            this.labelType = labelType;
+            return this;
+        }
+        public String getLabelType() {
+            return this.labelType;
+        }
+
+        public SearchMediaResponseBodyMediaInfoListAiDataAiLabelInfo setOccurrences(java.util.List<SearchMediaResponseBodyMediaInfoListAiDataAiLabelInfoOccurrences> occurrences) {
+            this.occurrences = occurrences;
+            return this;
+        }
+        public java.util.List<SearchMediaResponseBodyMediaInfoListAiDataAiLabelInfoOccurrences> getOccurrences() {
+            return this.occurrences;
+        }
+
+        public SearchMediaResponseBodyMediaInfoListAiDataAiLabelInfo setSource(String source) {
+            this.source = source;
+            return this;
+        }
+        public String getSource() {
+            return this.source;
+        }
+
+    }
+
+    public static class SearchMediaResponseBodyMediaInfoListAiDataAsrInfo extends TeaModel {
+        @NameInMap("ClipId")
+        public String clipId;
+
+        @NameInMap("Content")
+        public String content;
+
+        @NameInMap("From")
+        public Double from;
+
+        @NameInMap("Timestamp")
+        public Double timestamp;
+
+        @NameInMap("To")
+        public Double to;
+
+        public static SearchMediaResponseBodyMediaInfoListAiDataAsrInfo build(java.util.Map<String, ?> map) throws Exception {
+            SearchMediaResponseBodyMediaInfoListAiDataAsrInfo self = new SearchMediaResponseBodyMediaInfoListAiDataAsrInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public SearchMediaResponseBodyMediaInfoListAiDataAsrInfo setClipId(String clipId) {
+            this.clipId = clipId;
+            return this;
+        }
+        public String getClipId() {
+            return this.clipId;
+        }
+
+        public SearchMediaResponseBodyMediaInfoListAiDataAsrInfo setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
+        }
+
+        public SearchMediaResponseBodyMediaInfoListAiDataAsrInfo setFrom(Double from) {
+            this.from = from;
+            return this;
+        }
+        public Double getFrom() {
+            return this.from;
+        }
+
+        public SearchMediaResponseBodyMediaInfoListAiDataAsrInfo setTimestamp(Double timestamp) {
+            this.timestamp = timestamp;
+            return this;
+        }
+        public Double getTimestamp() {
+            return this.timestamp;
+        }
+
+        public SearchMediaResponseBodyMediaInfoListAiDataAsrInfo setTo(Double to) {
+            this.to = to;
+            return this;
+        }
+        public Double getTo() {
+            return this.to;
+        }
+
+    }
+
+    public static class SearchMediaResponseBodyMediaInfoListAiDataOcrInfo extends TeaModel {
+        @NameInMap("ClipId")
+        public String clipId;
+
+        @NameInMap("Content")
+        public String content;
+
+        @NameInMap("From")
+        public Double from;
+
+        @NameInMap("Timestamp")
+        public Double timestamp;
+
+        @NameInMap("To")
+        public Double to;
+
+        public static SearchMediaResponseBodyMediaInfoListAiDataOcrInfo build(java.util.Map<String, ?> map) throws Exception {
+            SearchMediaResponseBodyMediaInfoListAiDataOcrInfo self = new SearchMediaResponseBodyMediaInfoListAiDataOcrInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public SearchMediaResponseBodyMediaInfoListAiDataOcrInfo setClipId(String clipId) {
+            this.clipId = clipId;
+            return this;
+        }
+        public String getClipId() {
+            return this.clipId;
+        }
+
+        public SearchMediaResponseBodyMediaInfoListAiDataOcrInfo setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
+        }
+
+        public SearchMediaResponseBodyMediaInfoListAiDataOcrInfo setFrom(Double from) {
+            this.from = from;
+            return this;
+        }
+        public Double getFrom() {
+            return this.from;
+        }
+
+        public SearchMediaResponseBodyMediaInfoListAiDataOcrInfo setTimestamp(Double timestamp) {
+            this.timestamp = timestamp;
+            return this;
+        }
+        public Double getTimestamp() {
+            return this.timestamp;
+        }
+
+        public SearchMediaResponseBodyMediaInfoListAiDataOcrInfo setTo(Double to) {
+            this.to = to;
+            return this;
+        }
+        public Double getTo() {
+            return this.to;
+        }
+
+    }
+
+    public static class SearchMediaResponseBodyMediaInfoListAiData extends TeaModel {
+        @NameInMap("AiLabelInfo")
+        public java.util.List<SearchMediaResponseBodyMediaInfoListAiDataAiLabelInfo> aiLabelInfo;
+
+        @NameInMap("AsrInfo")
+        public java.util.List<SearchMediaResponseBodyMediaInfoListAiDataAsrInfo> asrInfo;
+
+        @NameInMap("OcrInfo")
+        public java.util.List<SearchMediaResponseBodyMediaInfoListAiDataOcrInfo> ocrInfo;
+
+        public static SearchMediaResponseBodyMediaInfoListAiData build(java.util.Map<String, ?> map) throws Exception {
+            SearchMediaResponseBodyMediaInfoListAiData self = new SearchMediaResponseBodyMediaInfoListAiData();
+            return TeaModel.build(map, self);
+        }
+
+        public SearchMediaResponseBodyMediaInfoListAiData setAiLabelInfo(java.util.List<SearchMediaResponseBodyMediaInfoListAiDataAiLabelInfo> aiLabelInfo) {
+            this.aiLabelInfo = aiLabelInfo;
+            return this;
+        }
+        public java.util.List<SearchMediaResponseBodyMediaInfoListAiDataAiLabelInfo> getAiLabelInfo() {
+            return this.aiLabelInfo;
+        }
+
+        public SearchMediaResponseBodyMediaInfoListAiData setAsrInfo(java.util.List<SearchMediaResponseBodyMediaInfoListAiDataAsrInfo> asrInfo) {
+            this.asrInfo = asrInfo;
+            return this;
+        }
+        public java.util.List<SearchMediaResponseBodyMediaInfoListAiDataAsrInfo> getAsrInfo() {
+            return this.asrInfo;
+        }
+
+        public SearchMediaResponseBodyMediaInfoListAiData setOcrInfo(java.util.List<SearchMediaResponseBodyMediaInfoListAiDataOcrInfo> ocrInfo) {
+            this.ocrInfo = ocrInfo;
+            return this;
+        }
+        public java.util.List<SearchMediaResponseBodyMediaInfoListAiDataOcrInfo> getOcrInfo() {
+            return this.ocrInfo;
+        }
+
+    }
+
+    public static class SearchMediaResponseBodyMediaInfoListAiRoughData extends TeaModel {
+        @NameInMap("AiCategoryLevel1")
+        public String aiCategoryLevel1;
+
+        @NameInMap("AiJobId")
+        public String aiJobId;
+
+        @NameInMap("Result")
+        public String result;
+
+        @NameInMap("SaveType")
+        public String saveType;
+
+        @NameInMap("Status")
+        public String status;
+
+        public static SearchMediaResponseBodyMediaInfoListAiRoughData build(java.util.Map<String, ?> map) throws Exception {
+            SearchMediaResponseBodyMediaInfoListAiRoughData self = new SearchMediaResponseBodyMediaInfoListAiRoughData();
+            return TeaModel.build(map, self);
+        }
+
+        public SearchMediaResponseBodyMediaInfoListAiRoughData setAiCategoryLevel1(String aiCategoryLevel1) {
+            this.aiCategoryLevel1 = aiCategoryLevel1;
+            return this;
+        }
+        public String getAiCategoryLevel1() {
+            return this.aiCategoryLevel1;
+        }
+
+        public SearchMediaResponseBodyMediaInfoListAiRoughData setAiJobId(String aiJobId) {
+            this.aiJobId = aiJobId;
+            return this;
+        }
+        public String getAiJobId() {
+            return this.aiJobId;
+        }
+
+        public SearchMediaResponseBodyMediaInfoListAiRoughData setResult(String result) {
+            this.result = result;
+            return this;
+        }
+        public String getResult() {
+            return this.result;
+        }
+
+        public SearchMediaResponseBodyMediaInfoListAiRoughData setSaveType(String saveType) {
+            this.saveType = saveType;
+            return this;
+        }
+        public String getSaveType() {
+            return this.saveType;
+        }
+
+        public SearchMediaResponseBodyMediaInfoListAiRoughData setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+    }
+
     public static class SearchMediaResponseBodyMediaInfoListFileInfoListFileBasicInfo extends TeaModel {
         @NameInMap("Bitrate")
         public String bitrate;
@@ -496,6 +970,12 @@ public class SearchMediaResponseBody extends TeaModel {
     }
 
     public static class SearchMediaResponseBodyMediaInfoList extends TeaModel {
+        @NameInMap("AiData")
+        public SearchMediaResponseBodyMediaInfoListAiData aiData;
+
+        @NameInMap("AiRoughData")
+        public SearchMediaResponseBodyMediaInfoListAiRoughData aiRoughData;
+
         @NameInMap("FileInfoList")
         public java.util.List<SearchMediaResponseBodyMediaInfoListFileInfoList> fileInfoList;
 
@@ -508,6 +988,22 @@ public class SearchMediaResponseBody extends TeaModel {
         public static SearchMediaResponseBodyMediaInfoList build(java.util.Map<String, ?> map) throws Exception {
             SearchMediaResponseBodyMediaInfoList self = new SearchMediaResponseBodyMediaInfoList();
             return TeaModel.build(map, self);
+        }
+
+        public SearchMediaResponseBodyMediaInfoList setAiData(SearchMediaResponseBodyMediaInfoListAiData aiData) {
+            this.aiData = aiData;
+            return this;
+        }
+        public SearchMediaResponseBodyMediaInfoListAiData getAiData() {
+            return this.aiData;
+        }
+
+        public SearchMediaResponseBodyMediaInfoList setAiRoughData(SearchMediaResponseBodyMediaInfoListAiRoughData aiRoughData) {
+            this.aiRoughData = aiRoughData;
+            return this;
+        }
+        public SearchMediaResponseBodyMediaInfoListAiRoughData getAiRoughData() {
+            return this.aiRoughData;
         }
 
         public SearchMediaResponseBodyMediaInfoList setFileInfoList(java.util.List<SearchMediaResponseBodyMediaInfoListFileInfoList> fileInfoList) {
