@@ -7,11 +7,20 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
     @NameInMap("ReplicaGroups")
     public java.util.List<DescribeDiskReplicaGroupsResponseBodyReplicaGroups> replicaGroups;
 
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("TotalCount")
+    public Long totalCount;
 
     public static DescribeDiskReplicaGroupsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDiskReplicaGroupsResponseBody self = new DescribeDiskReplicaGroupsResponseBody();
@@ -24,6 +33,22 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public DescribeDiskReplicaGroupsResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeDiskReplicaGroupsResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public DescribeDiskReplicaGroupsResponseBody setReplicaGroups(java.util.List<DescribeDiskReplicaGroupsResponseBodyReplicaGroups> replicaGroups) {
@@ -40,6 +65,14 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeDiskReplicaGroupsResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
     }
 
     public static class DescribeDiskReplicaGroupsResponseBodyReplicaGroups extends TeaModel {
