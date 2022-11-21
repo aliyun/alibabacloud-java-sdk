@@ -5654,8 +5654,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PrefixListDescription", request.prefixListDescription);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.prefixListEntrys)) {
-            query.put("PrefixListEntrys", request.prefixListEntrys);
+        if (!com.aliyun.teautil.Common.isUnset(request.prefixListEntries)) {
+            query.put("PrefixListEntries", request.prefixListEntries);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.prefixListName)) {
