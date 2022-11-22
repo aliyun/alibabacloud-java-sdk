@@ -13,6 +13,9 @@ public class UntagResourcesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
@@ -55,6 +58,14 @@ public class UntagResourcesRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public UntagResourcesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public UntagResourcesRequest setResourceId(java.util.List<String> resourceId) {

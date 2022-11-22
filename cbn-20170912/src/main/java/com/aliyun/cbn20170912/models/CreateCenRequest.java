@@ -28,6 +28,9 @@ public class CreateCenRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateCenRequestTag> tag;
+
     public static CreateCenRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateCenRequest self = new CreateCenRequest();
         return TeaModel.build(map, self);
@@ -95,6 +98,44 @@ public class CreateCenRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public CreateCenRequest setTag(java.util.List<CreateCenRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateCenRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class CreateCenRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateCenRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateCenRequestTag self = new CreateCenRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateCenRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateCenRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

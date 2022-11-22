@@ -64,6 +64,36 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
         return this.transitRouterAttachments;
     }
 
+    public static class ListTransitRouterPeerAttachmentsResponseBodyTransitRouterAttachmentsTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListTransitRouterPeerAttachmentsResponseBodyTransitRouterAttachmentsTags build(java.util.Map<String, ?> map) throws Exception {
+            ListTransitRouterPeerAttachmentsResponseBodyTransitRouterAttachmentsTags self = new ListTransitRouterPeerAttachmentsResponseBodyTransitRouterAttachmentsTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListTransitRouterPeerAttachmentsResponseBodyTransitRouterAttachmentsTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListTransitRouterPeerAttachmentsResponseBodyTransitRouterAttachmentsTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListTransitRouterPeerAttachmentsResponseBodyTransitRouterAttachments extends TeaModel {
         @NameInMap("AutoPublishRouteEnabled")
         public Boolean autoPublishRouteEnabled;
@@ -100,6 +130,9 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
 
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("Tags")
+        public java.util.List<ListTransitRouterPeerAttachmentsResponseBodyTransitRouterAttachmentsTags> tags;
 
         @NameInMap("TransitRouterAttachmentDescription")
         public String transitRouterAttachmentDescription;
@@ -212,6 +245,14 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public ListTransitRouterPeerAttachmentsResponseBodyTransitRouterAttachments setTags(java.util.List<ListTransitRouterPeerAttachmentsResponseBodyTransitRouterAttachmentsTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListTransitRouterPeerAttachmentsResponseBodyTransitRouterAttachmentsTags> getTags() {
+            return this.tags;
         }
 
         public ListTransitRouterPeerAttachmentsResponseBodyTransitRouterAttachments setTransitRouterAttachmentDescription(String transitRouterAttachmentDescription) {

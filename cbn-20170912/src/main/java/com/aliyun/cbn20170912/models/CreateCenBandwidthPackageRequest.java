@@ -52,8 +52,8 @@ public class CreateCenBandwidthPackageRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("ServiceType")
-    public String serviceType;
+    @NameInMap("Tag")
+    public java.util.List<CreateCenBandwidthPackageRequestTag> tag;
 
     public static CreateCenBandwidthPackageRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateCenBandwidthPackageRequest self = new CreateCenBandwidthPackageRequest();
@@ -188,12 +188,42 @@ public class CreateCenBandwidthPackageRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public CreateCenBandwidthPackageRequest setServiceType(String serviceType) {
-        this.serviceType = serviceType;
+    public CreateCenBandwidthPackageRequest setTag(java.util.List<CreateCenBandwidthPackageRequestTag> tag) {
+        this.tag = tag;
         return this;
     }
-    public String getServiceType() {
-        return this.serviceType;
+    public java.util.List<CreateCenBandwidthPackageRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class CreateCenBandwidthPackageRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateCenBandwidthPackageRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateCenBandwidthPackageRequestTag self = new CreateCenBandwidthPackageRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateCenBandwidthPackageRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateCenBandwidthPackageRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }
