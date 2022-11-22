@@ -2212,6 +2212,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("MFAAuthenticationSettings", request.MFAAuthenticationSettings);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.operationForRiskLogin)) {
+            query.put("OperationForRiskLogin", request.operationForRiskLogin);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
