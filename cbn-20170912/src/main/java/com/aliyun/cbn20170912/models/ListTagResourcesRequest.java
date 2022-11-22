@@ -16,6 +16,9 @@ public class ListTagResourcesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
@@ -66,6 +69,14 @@ public class ListTagResourcesRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListTagResourcesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ListTagResourcesRequest setResourceId(java.util.List<String> resourceId) {

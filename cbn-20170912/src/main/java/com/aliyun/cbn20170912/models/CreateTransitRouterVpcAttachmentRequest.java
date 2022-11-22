@@ -31,6 +31,9 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateTransitRouterVpcAttachmentRequestTag> tag;
+
     @NameInMap("TransitRouterAttachmentDescription")
     public String transitRouterAttachmentDescription;
 
@@ -126,6 +129,14 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
+    public CreateTransitRouterVpcAttachmentRequest setTag(java.util.List<CreateTransitRouterVpcAttachmentRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateTransitRouterVpcAttachmentRequestTag> getTag() {
+        return this.tag;
+    }
+
     public CreateTransitRouterVpcAttachmentRequest setTransitRouterAttachmentDescription(String transitRouterAttachmentDescription) {
         this.transitRouterAttachmentDescription = transitRouterAttachmentDescription;
         return this;
@@ -172,6 +183,36 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
     }
     public java.util.List<CreateTransitRouterVpcAttachmentRequestZoneMappings> getZoneMappings() {
         return this.zoneMappings;
+    }
+
+    public static class CreateTransitRouterVpcAttachmentRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateTransitRouterVpcAttachmentRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateTransitRouterVpcAttachmentRequestTag self = new CreateTransitRouterVpcAttachmentRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateTransitRouterVpcAttachmentRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateTransitRouterVpcAttachmentRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
     public static class CreateTransitRouterVpcAttachmentRequestZoneMappings extends TeaModel {

@@ -34,6 +34,9 @@ public class CreateTransitRouterVpnAttachmentRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateTransitRouterVpnAttachmentRequestTag> tag;
+
     @NameInMap("TransitRouterAttachmentDescription")
     public String transitRouterAttachmentDescription;
 
@@ -137,6 +140,14 @@ public class CreateTransitRouterVpnAttachmentRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
+    public CreateTransitRouterVpnAttachmentRequest setTag(java.util.List<CreateTransitRouterVpnAttachmentRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateTransitRouterVpnAttachmentRequestTag> getTag() {
+        return this.tag;
+    }
+
     public CreateTransitRouterVpnAttachmentRequest setTransitRouterAttachmentDescription(String transitRouterAttachmentDescription) {
         this.transitRouterAttachmentDescription = transitRouterAttachmentDescription;
         return this;
@@ -183,6 +194,36 @@ public class CreateTransitRouterVpnAttachmentRequest extends TeaModel {
     }
     public java.util.List<CreateTransitRouterVpnAttachmentRequestZone> getZone() {
         return this.zone;
+    }
+
+    public static class CreateTransitRouterVpnAttachmentRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateTransitRouterVpnAttachmentRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateTransitRouterVpnAttachmentRequestTag self = new CreateTransitRouterVpnAttachmentRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateTransitRouterVpnAttachmentRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateTransitRouterVpnAttachmentRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
     public static class CreateTransitRouterVpnAttachmentRequestZone extends TeaModel {

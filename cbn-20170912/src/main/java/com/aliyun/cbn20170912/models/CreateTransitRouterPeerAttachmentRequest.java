@@ -46,6 +46,9 @@ public class CreateTransitRouterPeerAttachmentRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateTransitRouterPeerAttachmentRequestTag> tag;
+
     @NameInMap("TransitRouterAttachmentDescription")
     public String transitRouterAttachmentDescription;
 
@@ -172,6 +175,14 @@ public class CreateTransitRouterPeerAttachmentRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
+    public CreateTransitRouterPeerAttachmentRequest setTag(java.util.List<CreateTransitRouterPeerAttachmentRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateTransitRouterPeerAttachmentRequestTag> getTag() {
+        return this.tag;
+    }
+
     public CreateTransitRouterPeerAttachmentRequest setTransitRouterAttachmentDescription(String transitRouterAttachmentDescription) {
         this.transitRouterAttachmentDescription = transitRouterAttachmentDescription;
         return this;
@@ -194,6 +205,36 @@ public class CreateTransitRouterPeerAttachmentRequest extends TeaModel {
     }
     public String getTransitRouterId() {
         return this.transitRouterId;
+    }
+
+    public static class CreateTransitRouterPeerAttachmentRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateTransitRouterPeerAttachmentRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateTransitRouterPeerAttachmentRequestTag self = new CreateTransitRouterPeerAttachmentRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateTransitRouterPeerAttachmentRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateTransitRouterPeerAttachmentRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

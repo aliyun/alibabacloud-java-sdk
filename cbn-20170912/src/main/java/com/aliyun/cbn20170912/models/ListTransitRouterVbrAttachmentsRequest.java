@@ -28,6 +28,9 @@ public class ListTransitRouterVbrAttachmentsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("Tag")
+    public java.util.List<ListTransitRouterVbrAttachmentsRequestTag> tag;
+
     @NameInMap("TransitRouterAttachmentId")
     public String transitRouterAttachmentId;
 
@@ -103,6 +106,14 @@ public class ListTransitRouterVbrAttachmentsRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
+    public ListTransitRouterVbrAttachmentsRequest setTag(java.util.List<ListTransitRouterVbrAttachmentsRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<ListTransitRouterVbrAttachmentsRequestTag> getTag() {
+        return this.tag;
+    }
+
     public ListTransitRouterVbrAttachmentsRequest setTransitRouterAttachmentId(String transitRouterAttachmentId) {
         this.transitRouterAttachmentId = transitRouterAttachmentId;
         return this;
@@ -117,6 +128,36 @@ public class ListTransitRouterVbrAttachmentsRequest extends TeaModel {
     }
     public String getTransitRouterId() {
         return this.transitRouterId;
+    }
+
+    public static class ListTransitRouterVbrAttachmentsRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListTransitRouterVbrAttachmentsRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            ListTransitRouterVbrAttachmentsRequestTag self = new ListTransitRouterVbrAttachmentsRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public ListTransitRouterVbrAttachmentsRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListTransitRouterVbrAttachmentsRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }
