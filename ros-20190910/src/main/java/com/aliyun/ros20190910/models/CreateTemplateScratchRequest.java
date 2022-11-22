@@ -31,6 +31,9 @@ public class CreateTemplateScratchRequest extends TeaModel {
     @NameInMap("SourceTag")
     public CreateTemplateScratchRequestSourceTag sourceTag;
 
+    @NameInMap("Tags")
+    public java.util.List<CreateTemplateScratchRequestTags> tags;
+
     @NameInMap("TemplateScratchType")
     public String templateScratchType;
 
@@ -109,6 +112,14 @@ public class CreateTemplateScratchRequest extends TeaModel {
     }
     public CreateTemplateScratchRequestSourceTag getSourceTag() {
         return this.sourceTag;
+    }
+
+    public CreateTemplateScratchRequest setTags(java.util.List<CreateTemplateScratchRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<CreateTemplateScratchRequestTags> getTags() {
+        return this.tags;
     }
 
     public CreateTemplateScratchRequest setTemplateScratchType(String templateScratchType) {
@@ -235,6 +246,36 @@ public class CreateTemplateScratchRequest extends TeaModel {
         }
         public java.util.List<String> getResourceTypeFilter() {
             return this.resourceTypeFilter;
+        }
+
+    }
+
+    public static class CreateTemplateScratchRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateTemplateScratchRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            CreateTemplateScratchRequestTags self = new CreateTemplateScratchRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateTemplateScratchRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateTemplateScratchRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

@@ -658,6 +658,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SourceTag", request.sourceTagShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
+            query.put("Tags", request.tags);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.templateScratchType)) {
             query.put("TemplateScratchType", request.templateScratchType);
         }
@@ -2196,6 +2200,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Status", request.status);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
+            query.put("Tags", request.tags);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -2625,6 +2633,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Status", request.status);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
+            query.put("Tags", request.tags);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.templateScratchId)) {
             query.put("TemplateScratchId", request.templateScratchId);
         }
@@ -2786,14 +2798,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.moveResourceGroupWithOptions(request, runtime);
     }
 
-    public PreviewStackResponse previewStackWithOptions(PreviewStackRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(tmpReq);
-        PreviewStackShrinkRequest request = new PreviewStackShrinkRequest();
-        com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.resourceConfigRules)) {
-            request.resourceConfigRulesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.resourceConfigRules, "ResourceConfigRules", "json");
-        }
-
+    public PreviewStackResponse previewStackWithOptions(PreviewStackRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             query.put("ClientToken", request.clientToken);
@@ -2801,6 +2807,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.disableRollback)) {
             query.put("DisableRollback", request.disableRollback);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enablePreConfig)) {
+            query.put("EnablePreConfig", request.enablePreConfig);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.parallelism)) {
@@ -2813,10 +2823,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceConfigRulesShrink)) {
-            query.put("ResourceConfigRules", request.resourceConfigRulesShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.stackId)) {

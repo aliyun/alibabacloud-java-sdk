@@ -184,6 +184,36 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
 
     }
 
+    public static class ListTemplateScratchesResponseBodyTemplateScratchesTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListTemplateScratchesResponseBodyTemplateScratchesTags build(java.util.Map<String, ?> map) throws Exception {
+            ListTemplateScratchesResponseBodyTemplateScratchesTags self = new ListTemplateScratchesResponseBodyTemplateScratchesTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListTemplateScratchesResponseBodyTemplateScratchesTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListTemplateScratchesResponseBodyTemplateScratchesTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListTemplateScratchesResponseBodyTemplateScratches extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
@@ -214,6 +244,9 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
 
         @NameInMap("StatusReason")
         public String statusReason;
+
+        @NameInMap("Tags")
+        public java.util.List<ListTemplateScratchesResponseBodyTemplateScratchesTags> tags;
 
         @NameInMap("TemplateScratchId")
         public String templateScratchId;
@@ -307,6 +340,14 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
         }
         public String getStatusReason() {
             return this.statusReason;
+        }
+
+        public ListTemplateScratchesResponseBodyTemplateScratches setTags(java.util.List<ListTemplateScratchesResponseBodyTemplateScratchesTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListTemplateScratchesResponseBodyTemplateScratchesTags> getTags() {
+            return this.tags;
         }
 
         public ListTemplateScratchesResponseBodyTemplateScratches setTemplateScratchId(String templateScratchId) {

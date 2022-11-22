@@ -31,6 +31,9 @@ public class CreateTemplateScratchShrinkRequest extends TeaModel {
     @NameInMap("SourceTag")
     public String sourceTagShrink;
 
+    @NameInMap("Tags")
+    public java.util.List<CreateTemplateScratchShrinkRequestTags> tags;
+
     @NameInMap("TemplateScratchType")
     public String templateScratchType;
 
@@ -111,12 +114,50 @@ public class CreateTemplateScratchShrinkRequest extends TeaModel {
         return this.sourceTagShrink;
     }
 
+    public CreateTemplateScratchShrinkRequest setTags(java.util.List<CreateTemplateScratchShrinkRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<CreateTemplateScratchShrinkRequestTags> getTags() {
+        return this.tags;
+    }
+
     public CreateTemplateScratchShrinkRequest setTemplateScratchType(String templateScratchType) {
         this.templateScratchType = templateScratchType;
         return this;
     }
     public String getTemplateScratchType() {
         return this.templateScratchType;
+    }
+
+    public static class CreateTemplateScratchShrinkRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateTemplateScratchShrinkRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            CreateTemplateScratchShrinkRequestTags self = new CreateTemplateScratchShrinkRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateTemplateScratchShrinkRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateTemplateScratchShrinkRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

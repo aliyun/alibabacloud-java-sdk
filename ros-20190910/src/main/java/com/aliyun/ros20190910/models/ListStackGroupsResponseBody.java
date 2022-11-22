@@ -94,6 +94,36 @@ public class ListStackGroupsResponseBody extends TeaModel {
 
     }
 
+    public static class ListStackGroupsResponseBodyStackGroupsTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListStackGroupsResponseBodyStackGroupsTags build(java.util.Map<String, ?> map) throws Exception {
+            ListStackGroupsResponseBodyStackGroupsTags self = new ListStackGroupsResponseBodyStackGroupsTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListStackGroupsResponseBodyStackGroupsTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListStackGroupsResponseBodyStackGroupsTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListStackGroupsResponseBodyStackGroups extends TeaModel {
         @NameInMap("AutoDeployment")
         public ListStackGroupsResponseBodyStackGroupsAutoDeployment autoDeployment;
@@ -121,6 +151,9 @@ public class ListStackGroupsResponseBody extends TeaModel {
 
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("Tags")
+        public java.util.List<ListStackGroupsResponseBodyStackGroupsTags> tags;
 
         public static ListStackGroupsResponseBodyStackGroups build(java.util.Map<String, ?> map) throws Exception {
             ListStackGroupsResponseBodyStackGroups self = new ListStackGroupsResponseBodyStackGroups();
@@ -197,6 +230,14 @@ public class ListStackGroupsResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public ListStackGroupsResponseBodyStackGroups setTags(java.util.List<ListStackGroupsResponseBodyStackGroupsTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListStackGroupsResponseBodyStackGroupsTags> getTags() {
+            return this.tags;
         }
 
     }
