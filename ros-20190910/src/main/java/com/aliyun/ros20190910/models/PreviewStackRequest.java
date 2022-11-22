@@ -10,6 +10,9 @@ public class PreviewStackRequest extends TeaModel {
     @NameInMap("DisableRollback")
     public Boolean disableRollback;
 
+    @NameInMap("EnablePreConfig")
+    public Boolean enablePreConfig;
+
     @NameInMap("Parallelism")
     public Long parallelism;
 
@@ -18,9 +21,6 @@ public class PreviewStackRequest extends TeaModel {
 
     @NameInMap("RegionId")
     public String regionId;
-
-    @NameInMap("ResourceConfigRules")
-    public java.util.List<PreviewStackRequestResourceConfigRules> resourceConfigRules;
 
     @NameInMap("StackId")
     public String stackId;
@@ -76,6 +76,14 @@ public class PreviewStackRequest extends TeaModel {
         return this.disableRollback;
     }
 
+    public PreviewStackRequest setEnablePreConfig(Boolean enablePreConfig) {
+        this.enablePreConfig = enablePreConfig;
+        return this;
+    }
+    public Boolean getEnablePreConfig() {
+        return this.enablePreConfig;
+    }
+
     public PreviewStackRequest setParallelism(Long parallelism) {
         this.parallelism = parallelism;
         return this;
@@ -98,14 +106,6 @@ public class PreviewStackRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
-    }
-
-    public PreviewStackRequest setResourceConfigRules(java.util.List<PreviewStackRequestResourceConfigRules> resourceConfigRules) {
-        this.resourceConfigRules = resourceConfigRules;
-        return this;
-    }
-    public java.util.List<PreviewStackRequestResourceConfigRules> getResourceConfigRules() {
-        return this.resourceConfigRules;
     }
 
     public PreviewStackRequest setStackId(String stackId) {
@@ -222,47 +222,6 @@ public class PreviewStackRequest extends TeaModel {
         }
         public String getParameterValue() {
             return this.parameterValue;
-        }
-
-    }
-
-    public static class PreviewStackRequestResourceConfigRules extends TeaModel {
-        @NameInMap("Identifier")
-        public String identifier;
-
-        @NameInMap("InputParameters")
-        public java.util.Map<String, ?> inputParameters;
-
-        @NameInMap("ResourceType")
-        public String resourceType;
-
-        public static PreviewStackRequestResourceConfigRules build(java.util.Map<String, ?> map) throws Exception {
-            PreviewStackRequestResourceConfigRules self = new PreviewStackRequestResourceConfigRules();
-            return TeaModel.build(map, self);
-        }
-
-        public PreviewStackRequestResourceConfigRules setIdentifier(String identifier) {
-            this.identifier = identifier;
-            return this;
-        }
-        public String getIdentifier() {
-            return this.identifier;
-        }
-
-        public PreviewStackRequestResourceConfigRules setInputParameters(java.util.Map<String, ?> inputParameters) {
-            this.inputParameters = inputParameters;
-            return this;
-        }
-        public java.util.Map<String, ?> getInputParameters() {
-            return this.inputParameters;
-        }
-
-        public PreviewStackRequestResourceConfigRules setResourceType(String resourceType) {
-            this.resourceType = resourceType;
-            return this;
-        }
-        public String getResourceType() {
-            return this.resourceType;
         }
 
     }

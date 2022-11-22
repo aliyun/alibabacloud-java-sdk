@@ -19,6 +19,9 @@ public class ListStackGroupsRequest extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    @NameInMap("Tags")
+    public java.util.List<ListStackGroupsRequestTags> tags;
+
     public static ListStackGroupsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListStackGroupsRequest self = new ListStackGroupsRequest();
         return TeaModel.build(map, self);
@@ -62,6 +65,44 @@ public class ListStackGroupsRequest extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public ListStackGroupsRequest setTags(java.util.List<ListStackGroupsRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<ListStackGroupsRequestTags> getTags() {
+        return this.tags;
+    }
+
+    public static class ListStackGroupsRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListStackGroupsRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            ListStackGroupsRequestTags self = new ListStackGroupsRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListStackGroupsRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListStackGroupsRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }
