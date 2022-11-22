@@ -61,6 +61,88 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeDBClusterNodesDBClusterNode extends TeaModel {
+        @NameInMap("ClassCode")
+        public String classCode;
+
+        @NameInMap("NodeId")
+        public String nodeId;
+
+        @NameInMap("NodeRegionId")
+        public String nodeRegionId;
+
+        @NameInMap("NodeRole")
+        public String nodeRole;
+
+        @NameInMap("NodeZoneId")
+        public String nodeZoneId;
+
+        public static DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeDBClusterNodesDBClusterNode build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeDBClusterNodesDBClusterNode self = new DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeDBClusterNodesDBClusterNode();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeDBClusterNodesDBClusterNode setClassCode(String classCode) {
+            this.classCode = classCode;
+            return this;
+        }
+        public String getClassCode() {
+            return this.classCode;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeDBClusterNodesDBClusterNode setNodeId(String nodeId) {
+            this.nodeId = nodeId;
+            return this;
+        }
+        public String getNodeId() {
+            return this.nodeId;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeDBClusterNodesDBClusterNode setNodeRegionId(String nodeRegionId) {
+            this.nodeRegionId = nodeRegionId;
+            return this;
+        }
+        public String getNodeRegionId() {
+            return this.nodeRegionId;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeDBClusterNodesDBClusterNode setNodeRole(String nodeRole) {
+            this.nodeRole = nodeRole;
+            return this;
+        }
+        public String getNodeRole() {
+            return this.nodeRole;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeDBClusterNodesDBClusterNode setNodeZoneId(String nodeZoneId) {
+            this.nodeZoneId = nodeZoneId;
+            return this;
+        }
+        public String getNodeZoneId() {
+            return this.nodeZoneId;
+        }
+
+    }
+
+    public static class DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeDBClusterNodes extends TeaModel {
+        @NameInMap("DBClusterNode")
+        public java.util.List<DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeDBClusterNodesDBClusterNode> DBClusterNode;
+
+        public static DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeDBClusterNodes build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeDBClusterNodes self = new DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeDBClusterNodes();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeDBClusterNodes setDBClusterNode(java.util.List<DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeDBClusterNodesDBClusterNode> DBClusterNode) {
+            this.DBClusterNode = DBClusterNode;
+            return this;
+        }
+        public java.util.List<DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeDBClusterNodesDBClusterNode> getDBClusterNode() {
+            return this.DBClusterNode;
+        }
+
+    }
+
     public static class DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeExtraDBInstanceIds extends TeaModel {
         @NameInMap("DBInstanceId")
         public java.util.List<String> DBInstanceId;
@@ -263,6 +345,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
         @NameInMap("CurrentKernelVersion")
         public String currentKernelVersion;
+
+        @NameInMap("DBClusterNodes")
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeDBClusterNodes DBClusterNodes;
 
         @NameInMap("DBInstanceCPU")
         public String DBInstanceCPU;
@@ -525,6 +610,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public String getCurrentKernelVersion() {
             return this.currentKernelVersion;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setDBClusterNodes(DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeDBClusterNodes DBClusterNodes) {
+            this.DBClusterNodes = DBClusterNodes;
+            return this;
+        }
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeDBClusterNodes getDBClusterNodes() {
+            return this.DBClusterNodes;
         }
 
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setDBInstanceCPU(String DBInstanceCPU) {

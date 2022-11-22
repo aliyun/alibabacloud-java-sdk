@@ -16,6 +16,9 @@ public class ModifyDBInstanceTDERequest extends TeaModel {
     @NameInMap("EncryptionKey")
     public String encryptionKey;
 
+    @NameInMap("IsRotate")
+    public Boolean isRotate;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -75,6 +78,14 @@ public class ModifyDBInstanceTDERequest extends TeaModel {
     }
     public String getEncryptionKey() {
         return this.encryptionKey;
+    }
+
+    public ModifyDBInstanceTDERequest setIsRotate(Boolean isRotate) {
+        this.isRotate = isRotate;
+        return this;
+    }
+    public Boolean getIsRotate() {
+        return this.isRotate;
     }
 
     public ModifyDBInstanceTDERequest setOwnerAccount(String ownerAccount) {
