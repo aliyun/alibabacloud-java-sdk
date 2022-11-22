@@ -10,6 +10,9 @@ public class UpdateMFAAuthenticationSettingsRequest extends TeaModel {
     @NameInMap("MFAAuthenticationSettings")
     public String MFAAuthenticationSettings;
 
+    @NameInMap("OperationForRiskLogin")
+    public String operationForRiskLogin;
+
     public static UpdateMFAAuthenticationSettingsRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateMFAAuthenticationSettingsRequest self = new UpdateMFAAuthenticationSettingsRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class UpdateMFAAuthenticationSettingsRequest extends TeaModel {
     }
     public String getMFAAuthenticationSettings() {
         return this.MFAAuthenticationSettings;
+    }
+
+    public UpdateMFAAuthenticationSettingsRequest setOperationForRiskLogin(String operationForRiskLogin) {
+        this.operationForRiskLogin = operationForRiskLogin;
+        return this;
+    }
+    public String getOperationForRiskLogin() {
+        return this.operationForRiskLogin;
     }
 
 }
