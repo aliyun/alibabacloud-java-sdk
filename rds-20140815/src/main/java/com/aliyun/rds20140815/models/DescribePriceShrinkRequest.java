@@ -3,7 +3,7 @@ package com.aliyun.rds20140815.models;
 
 import com.aliyun.tea.*;
 
-public class DescribePriceRequest extends TeaModel {
+public class DescribePriceShrinkRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -23,7 +23,7 @@ public class DescribePriceRequest extends TeaModel {
     public String DBInstanceStorageType;
 
     @NameInMap("DBNode")
-    public java.util.List<DescribePriceRequestDBNode> DBNode;
+    public String DBNodeShrink;
 
     @NameInMap("Engine")
     public String engine;
@@ -67,12 +67,12 @@ public class DescribePriceRequest extends TeaModel {
     @NameInMap("ZoneId")
     public String zoneId;
 
-    public static DescribePriceRequest build(java.util.Map<String, ?> map) throws Exception {
-        DescribePriceRequest self = new DescribePriceRequest();
+    public static DescribePriceShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        DescribePriceShrinkRequest self = new DescribePriceShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribePriceRequest setClientToken(String clientToken) {
+    public DescribePriceShrinkRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
@@ -80,7 +80,7 @@ public class DescribePriceRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public DescribePriceRequest setCommodityCode(String commodityCode) {
+    public DescribePriceShrinkRequest setCommodityCode(String commodityCode) {
         this.commodityCode = commodityCode;
         return this;
     }
@@ -88,7 +88,7 @@ public class DescribePriceRequest extends TeaModel {
         return this.commodityCode;
     }
 
-    public DescribePriceRequest setDBInstanceClass(String DBInstanceClass) {
+    public DescribePriceShrinkRequest setDBInstanceClass(String DBInstanceClass) {
         this.DBInstanceClass = DBInstanceClass;
         return this;
     }
@@ -96,7 +96,7 @@ public class DescribePriceRequest extends TeaModel {
         return this.DBInstanceClass;
     }
 
-    public DescribePriceRequest setDBInstanceId(String DBInstanceId) {
+    public DescribePriceShrinkRequest setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
         return this;
     }
@@ -104,7 +104,7 @@ public class DescribePriceRequest extends TeaModel {
         return this.DBInstanceId;
     }
 
-    public DescribePriceRequest setDBInstanceStorage(Integer DBInstanceStorage) {
+    public DescribePriceShrinkRequest setDBInstanceStorage(Integer DBInstanceStorage) {
         this.DBInstanceStorage = DBInstanceStorage;
         return this;
     }
@@ -112,7 +112,7 @@ public class DescribePriceRequest extends TeaModel {
         return this.DBInstanceStorage;
     }
 
-    public DescribePriceRequest setDBInstanceStorageType(String DBInstanceStorageType) {
+    public DescribePriceShrinkRequest setDBInstanceStorageType(String DBInstanceStorageType) {
         this.DBInstanceStorageType = DBInstanceStorageType;
         return this;
     }
@@ -120,15 +120,15 @@ public class DescribePriceRequest extends TeaModel {
         return this.DBInstanceStorageType;
     }
 
-    public DescribePriceRequest setDBNode(java.util.List<DescribePriceRequestDBNode> DBNode) {
-        this.DBNode = DBNode;
+    public DescribePriceShrinkRequest setDBNodeShrink(String DBNodeShrink) {
+        this.DBNodeShrink = DBNodeShrink;
         return this;
     }
-    public java.util.List<DescribePriceRequestDBNode> getDBNode() {
-        return this.DBNode;
+    public String getDBNodeShrink() {
+        return this.DBNodeShrink;
     }
 
-    public DescribePriceRequest setEngine(String engine) {
+    public DescribePriceShrinkRequest setEngine(String engine) {
         this.engine = engine;
         return this;
     }
@@ -136,7 +136,7 @@ public class DescribePriceRequest extends TeaModel {
         return this.engine;
     }
 
-    public DescribePriceRequest setEngineVersion(String engineVersion) {
+    public DescribePriceShrinkRequest setEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
     }
@@ -144,7 +144,7 @@ public class DescribePriceRequest extends TeaModel {
         return this.engineVersion;
     }
 
-    public DescribePriceRequest setInstanceUsedType(Integer instanceUsedType) {
+    public DescribePriceShrinkRequest setInstanceUsedType(Integer instanceUsedType) {
         this.instanceUsedType = instanceUsedType;
         return this;
     }
@@ -152,7 +152,7 @@ public class DescribePriceRequest extends TeaModel {
         return this.instanceUsedType;
     }
 
-    public DescribePriceRequest setOrderType(String orderType) {
+    public DescribePriceShrinkRequest setOrderType(String orderType) {
         this.orderType = orderType;
         return this;
     }
@@ -160,7 +160,7 @@ public class DescribePriceRequest extends TeaModel {
         return this.orderType;
     }
 
-    public DescribePriceRequest setOwnerAccount(String ownerAccount) {
+    public DescribePriceShrinkRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
     }
@@ -168,7 +168,7 @@ public class DescribePriceRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public DescribePriceRequest setOwnerId(Long ownerId) {
+    public DescribePriceShrinkRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -176,7 +176,7 @@ public class DescribePriceRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public DescribePriceRequest setPayType(String payType) {
+    public DescribePriceShrinkRequest setPayType(String payType) {
         this.payType = payType;
         return this;
     }
@@ -184,7 +184,7 @@ public class DescribePriceRequest extends TeaModel {
         return this.payType;
     }
 
-    public DescribePriceRequest setQuantity(Integer quantity) {
+    public DescribePriceShrinkRequest setQuantity(Integer quantity) {
         this.quantity = quantity;
         return this;
     }
@@ -192,7 +192,7 @@ public class DescribePriceRequest extends TeaModel {
         return this.quantity;
     }
 
-    public DescribePriceRequest setRegionId(String regionId) {
+    public DescribePriceShrinkRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -200,7 +200,7 @@ public class DescribePriceRequest extends TeaModel {
         return this.regionId;
     }
 
-    public DescribePriceRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public DescribePriceShrinkRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -208,7 +208,7 @@ public class DescribePriceRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public DescribePriceRequest setResourceOwnerId(Long resourceOwnerId) {
+    public DescribePriceShrinkRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
@@ -216,7 +216,7 @@ public class DescribePriceRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DescribePriceRequest setTimeType(String timeType) {
+    public DescribePriceShrinkRequest setTimeType(String timeType) {
         this.timeType = timeType;
         return this;
     }
@@ -224,7 +224,7 @@ public class DescribePriceRequest extends TeaModel {
         return this.timeType;
     }
 
-    public DescribePriceRequest setUsedTime(Integer usedTime) {
+    public DescribePriceShrinkRequest setUsedTime(Integer usedTime) {
         this.usedTime = usedTime;
         return this;
     }
@@ -232,42 +232,12 @@ public class DescribePriceRequest extends TeaModel {
         return this.usedTime;
     }
 
-    public DescribePriceRequest setZoneId(String zoneId) {
+    public DescribePriceShrinkRequest setZoneId(String zoneId) {
         this.zoneId = zoneId;
         return this;
     }
     public String getZoneId() {
         return this.zoneId;
-    }
-
-    public static class DescribePriceRequestDBNode extends TeaModel {
-        @NameInMap("ClassCode")
-        public String classCode;
-
-        @NameInMap("ZoneId")
-        public String zoneId;
-
-        public static DescribePriceRequestDBNode build(java.util.Map<String, ?> map) throws Exception {
-            DescribePriceRequestDBNode self = new DescribePriceRequestDBNode();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribePriceRequestDBNode setClassCode(String classCode) {
-            this.classCode = classCode;
-            return this;
-        }
-        public String getClassCode() {
-            return this.classCode;
-        }
-
-        public DescribePriceRequestDBNode setZoneId(String zoneId) {
-            this.zoneId = zoneId;
-            return this;
-        }
-        public String getZoneId() {
-            return this.zoneId;
-        }
-
     }
 
 }
