@@ -128,6 +128,9 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
         @NameInMap("RemarkedUuidList")
         public java.util.List<String> remarkedUuidList;
 
+        @NameInMap("ServerType")
+        public String serverType;
+
         @NameInMap("ServiceErrorCount")
         public Integer serviceErrorCount;
 
@@ -234,6 +237,14 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
         }
         public java.util.List<String> getRemarkedUuidList() {
             return this.remarkedUuidList;
+        }
+
+        public DescribeBackupPoliciesResponseBodyPolicies setServerType(String serverType) {
+            this.serverType = serverType;
+            return this;
+        }
+        public String getServerType() {
+            return this.serverType;
         }
 
         public DescribeBackupPoliciesResponseBodyPolicies setServiceErrorCount(Integer serviceErrorCount) {

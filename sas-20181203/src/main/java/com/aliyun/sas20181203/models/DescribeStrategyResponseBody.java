@@ -88,6 +88,9 @@ public class DescribeStrategyResponseBody extends TeaModel {
         @NameInMap("EcsCount")
         public Integer ecsCount;
 
+        @NameInMap("EndTime")
+        public String endTime;
+
         @NameInMap("ExecStatus")
         public Integer execStatus;
 
@@ -105,6 +108,9 @@ public class DescribeStrategyResponseBody extends TeaModel {
 
         @NameInMap("RiskCount")
         public Integer riskCount;
+
+        @NameInMap("StartTime")
+        public String startTime;
 
         @NameInMap("Type")
         public Integer type;
@@ -154,6 +160,14 @@ public class DescribeStrategyResponseBody extends TeaModel {
             return this.ecsCount;
         }
 
+        public DescribeStrategyResponseBodyStrategies setEndTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public String getEndTime() {
+            return this.endTime;
+        }
+
         public DescribeStrategyResponseBodyStrategies setExecStatus(Integer execStatus) {
             this.execStatus = execStatus;
             return this;
@@ -200,6 +214,14 @@ public class DescribeStrategyResponseBody extends TeaModel {
         }
         public Integer getRiskCount() {
             return this.riskCount;
+        }
+
+        public DescribeStrategyResponseBodyStrategies setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
         }
 
         public DescribeStrategyResponseBodyStrategies setType(Integer type) {
