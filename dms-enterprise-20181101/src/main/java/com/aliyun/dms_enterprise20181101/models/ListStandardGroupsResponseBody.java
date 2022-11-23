@@ -71,6 +71,9 @@ public class ListStandardGroupsResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("GroupId")
+        public Long groupId;
+
         @NameInMap("GroupMode")
         public String groupMode;
 
@@ -99,6 +102,14 @@ public class ListStandardGroupsResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public ListStandardGroupsResponseBodyStandardGroupList setGroupId(Long groupId) {
+            this.groupId = groupId;
+            return this;
+        }
+        public Long getGroupId() {
+            return this.groupId;
         }
 
         public ListStandardGroupsResponseBodyStandardGroupList setGroupMode(String groupMode) {
