@@ -8,7 +8,7 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
     public String nextToken;
 
     @NameInMap("Reports")
-    public java.util.List<DescribeDiagnosticReportsResponseBodyReports> reports;
+    public DescribeDiagnosticReportsResponseBodyReports reports;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -26,11 +26,11 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
         return this.nextToken;
     }
 
-    public DescribeDiagnosticReportsResponseBody setReports(java.util.List<DescribeDiagnosticReportsResponseBodyReports> reports) {
+    public DescribeDiagnosticReportsResponseBody setReports(DescribeDiagnosticReportsResponseBodyReports reports) {
         this.reports = reports;
         return this;
     }
-    public java.util.List<DescribeDiagnosticReportsResponseBodyReports> getReports() {
+    public DescribeDiagnosticReportsResponseBodyReports getReports() {
         return this.reports;
     }
 
@@ -42,7 +42,7 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public static class DescribeDiagnosticReportsResponseBodyReportsIssues extends TeaModel {
+    public static class DescribeDiagnosticReportsResponseBodyReportsReportIssuesIssue extends TeaModel {
         @NameInMap("IssueId")
         public String issueId;
 
@@ -55,12 +55,12 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
         @NameInMap("Severity")
         public String severity;
 
-        public static DescribeDiagnosticReportsResponseBodyReportsIssues build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDiagnosticReportsResponseBodyReportsIssues self = new DescribeDiagnosticReportsResponseBodyReportsIssues();
+        public static DescribeDiagnosticReportsResponseBodyReportsReportIssuesIssue build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDiagnosticReportsResponseBodyReportsReportIssuesIssue self = new DescribeDiagnosticReportsResponseBodyReportsReportIssuesIssue();
             return TeaModel.build(map, self);
         }
 
-        public DescribeDiagnosticReportsResponseBodyReportsIssues setIssueId(String issueId) {
+        public DescribeDiagnosticReportsResponseBodyReportsReportIssuesIssue setIssueId(String issueId) {
             this.issueId = issueId;
             return this;
         }
@@ -68,7 +68,7 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
             return this.issueId;
         }
 
-        public DescribeDiagnosticReportsResponseBodyReportsIssues setMetricCategory(String metricCategory) {
+        public DescribeDiagnosticReportsResponseBodyReportsReportIssuesIssue setMetricCategory(String metricCategory) {
             this.metricCategory = metricCategory;
             return this;
         }
@@ -76,7 +76,7 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
             return this.metricCategory;
         }
 
-        public DescribeDiagnosticReportsResponseBodyReportsIssues setMetricId(String metricId) {
+        public DescribeDiagnosticReportsResponseBodyReportsReportIssuesIssue setMetricId(String metricId) {
             this.metricId = metricId;
             return this;
         }
@@ -84,7 +84,7 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
             return this.metricId;
         }
 
-        public DescribeDiagnosticReportsResponseBodyReportsIssues setSeverity(String severity) {
+        public DescribeDiagnosticReportsResponseBodyReportsReportIssuesIssue setSeverity(String severity) {
             this.severity = severity;
             return this;
         }
@@ -94,7 +94,26 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeDiagnosticReportsResponseBodyReports extends TeaModel {
+    public static class DescribeDiagnosticReportsResponseBodyReportsReportIssues extends TeaModel {
+        @NameInMap("Issue")
+        public java.util.List<DescribeDiagnosticReportsResponseBodyReportsReportIssuesIssue> issue;
+
+        public static DescribeDiagnosticReportsResponseBodyReportsReportIssues build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDiagnosticReportsResponseBodyReportsReportIssues self = new DescribeDiagnosticReportsResponseBodyReportsReportIssues();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDiagnosticReportsResponseBodyReportsReportIssues setIssue(java.util.List<DescribeDiagnosticReportsResponseBodyReportsReportIssuesIssue> issue) {
+            this.issue = issue;
+            return this;
+        }
+        public java.util.List<DescribeDiagnosticReportsResponseBodyReportsReportIssuesIssue> getIssue() {
+            return this.issue;
+        }
+
+    }
+
+    public static class DescribeDiagnosticReportsResponseBodyReportsReport extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
 
@@ -105,7 +124,7 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
         public String finishedTime;
 
         @NameInMap("Issues")
-        public java.util.List<DescribeDiagnosticReportsResponseBodyReportsIssues> issues;
+        public DescribeDiagnosticReportsResponseBodyReportsReportIssues issues;
 
         @NameInMap("MetricSetId")
         public String metricSetId;
@@ -128,12 +147,12 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
-        public static DescribeDiagnosticReportsResponseBodyReports build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDiagnosticReportsResponseBodyReports self = new DescribeDiagnosticReportsResponseBodyReports();
+        public static DescribeDiagnosticReportsResponseBodyReportsReport build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDiagnosticReportsResponseBodyReportsReport self = new DescribeDiagnosticReportsResponseBodyReportsReport();
             return TeaModel.build(map, self);
         }
 
-        public DescribeDiagnosticReportsResponseBodyReports setCreationTime(String creationTime) {
+        public DescribeDiagnosticReportsResponseBodyReportsReport setCreationTime(String creationTime) {
             this.creationTime = creationTime;
             return this;
         }
@@ -141,7 +160,7 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
             return this.creationTime;
         }
 
-        public DescribeDiagnosticReportsResponseBodyReports setEndTime(String endTime) {
+        public DescribeDiagnosticReportsResponseBodyReportsReport setEndTime(String endTime) {
             this.endTime = endTime;
             return this;
         }
@@ -149,7 +168,7 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
             return this.endTime;
         }
 
-        public DescribeDiagnosticReportsResponseBodyReports setFinishedTime(String finishedTime) {
+        public DescribeDiagnosticReportsResponseBodyReportsReport setFinishedTime(String finishedTime) {
             this.finishedTime = finishedTime;
             return this;
         }
@@ -157,15 +176,15 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
             return this.finishedTime;
         }
 
-        public DescribeDiagnosticReportsResponseBodyReports setIssues(java.util.List<DescribeDiagnosticReportsResponseBodyReportsIssues> issues) {
+        public DescribeDiagnosticReportsResponseBodyReportsReport setIssues(DescribeDiagnosticReportsResponseBodyReportsReportIssues issues) {
             this.issues = issues;
             return this;
         }
-        public java.util.List<DescribeDiagnosticReportsResponseBodyReportsIssues> getIssues() {
+        public DescribeDiagnosticReportsResponseBodyReportsReportIssues getIssues() {
             return this.issues;
         }
 
-        public DescribeDiagnosticReportsResponseBodyReports setMetricSetId(String metricSetId) {
+        public DescribeDiagnosticReportsResponseBodyReportsReport setMetricSetId(String metricSetId) {
             this.metricSetId = metricSetId;
             return this;
         }
@@ -173,7 +192,7 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
             return this.metricSetId;
         }
 
-        public DescribeDiagnosticReportsResponseBodyReports setReportId(String reportId) {
+        public DescribeDiagnosticReportsResponseBodyReportsReport setReportId(String reportId) {
             this.reportId = reportId;
             return this;
         }
@@ -181,7 +200,7 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
             return this.reportId;
         }
 
-        public DescribeDiagnosticReportsResponseBodyReports setResourceId(String resourceId) {
+        public DescribeDiagnosticReportsResponseBodyReportsReport setResourceId(String resourceId) {
             this.resourceId = resourceId;
             return this;
         }
@@ -189,7 +208,7 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
             return this.resourceId;
         }
 
-        public DescribeDiagnosticReportsResponseBodyReports setResourceType(String resourceType) {
+        public DescribeDiagnosticReportsResponseBodyReportsReport setResourceType(String resourceType) {
             this.resourceType = resourceType;
             return this;
         }
@@ -197,7 +216,7 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
             return this.resourceType;
         }
 
-        public DescribeDiagnosticReportsResponseBodyReports setSeverity(String severity) {
+        public DescribeDiagnosticReportsResponseBodyReportsReport setSeverity(String severity) {
             this.severity = severity;
             return this;
         }
@@ -205,7 +224,7 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
             return this.severity;
         }
 
-        public DescribeDiagnosticReportsResponseBodyReports setStartTime(String startTime) {
+        public DescribeDiagnosticReportsResponseBodyReportsReport setStartTime(String startTime) {
             this.startTime = startTime;
             return this;
         }
@@ -213,12 +232,31 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
             return this.startTime;
         }
 
-        public DescribeDiagnosticReportsResponseBodyReports setStatus(String status) {
+        public DescribeDiagnosticReportsResponseBodyReportsReport setStatus(String status) {
             this.status = status;
             return this;
         }
         public String getStatus() {
             return this.status;
+        }
+
+    }
+
+    public static class DescribeDiagnosticReportsResponseBodyReports extends TeaModel {
+        @NameInMap("Report")
+        public java.util.List<DescribeDiagnosticReportsResponseBodyReportsReport> report;
+
+        public static DescribeDiagnosticReportsResponseBodyReports build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDiagnosticReportsResponseBodyReports self = new DescribeDiagnosticReportsResponseBodyReports();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDiagnosticReportsResponseBodyReports setReport(java.util.List<DescribeDiagnosticReportsResponseBodyReportsReport> report) {
+            this.report = report;
+            return this;
+        }
+        public java.util.List<DescribeDiagnosticReportsResponseBodyReportsReport> getReport() {
+            return this.report;
         }
 
     }
