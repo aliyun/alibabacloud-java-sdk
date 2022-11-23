@@ -347,11 +347,17 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeStrategyDetailResponseBodyStrategy extends TeaModel {
+        @NameInMap("CustomType")
+        public String customType;
+
         @NameInMap("CycleDays")
         public Integer cycleDays;
 
         @NameInMap("CycleStartTime")
         public Integer cycleStartTime;
+
+        @NameInMap("EndTime")
+        public String endTime;
 
         @NameInMap("Id")
         public Integer id;
@@ -362,12 +368,26 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
         @NameInMap("RiskTypeWhiteListQueryResultList")
         public java.util.List<DescribeStrategyDetailResponseBodyStrategyRiskTypeWhiteListQueryResultList> riskTypeWhiteListQueryResultList;
 
+        @NameInMap("StartTime")
+        public String startTime;
+
+        @NameInMap("TargetType")
+        public String targetType;
+
         @NameInMap("Type")
         public Integer type;
 
         public static DescribeStrategyDetailResponseBodyStrategy build(java.util.Map<String, ?> map) throws Exception {
             DescribeStrategyDetailResponseBodyStrategy self = new DescribeStrategyDetailResponseBodyStrategy();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeStrategyDetailResponseBodyStrategy setCustomType(String customType) {
+            this.customType = customType;
+            return this;
+        }
+        public String getCustomType() {
+            return this.customType;
         }
 
         public DescribeStrategyDetailResponseBodyStrategy setCycleDays(Integer cycleDays) {
@@ -384,6 +404,14 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
         }
         public Integer getCycleStartTime() {
             return this.cycleStartTime;
+        }
+
+        public DescribeStrategyDetailResponseBodyStrategy setEndTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public String getEndTime() {
+            return this.endTime;
         }
 
         public DescribeStrategyDetailResponseBodyStrategy setId(Integer id) {
@@ -408,6 +436,22 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
         }
         public java.util.List<DescribeStrategyDetailResponseBodyStrategyRiskTypeWhiteListQueryResultList> getRiskTypeWhiteListQueryResultList() {
             return this.riskTypeWhiteListQueryResultList;
+        }
+
+        public DescribeStrategyDetailResponseBodyStrategy setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        public DescribeStrategyDetailResponseBodyStrategy setTargetType(String targetType) {
+            this.targetType = targetType;
+            return this;
+        }
+        public String getTargetType() {
+            return this.targetType;
         }
 
         public DescribeStrategyDetailResponseBodyStrategy setType(Integer type) {

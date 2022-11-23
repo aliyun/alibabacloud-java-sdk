@@ -38,6 +38,9 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
         @NameInMap("ClientStatus")
         public String clientStatus;
 
+        @NameInMap("ClientVersion")
+        public String clientVersion;
+
         @NameInMap("InstanceId")
         public String instanceId;
 
@@ -63,6 +66,14 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
         }
         public String getClientStatus() {
             return this.clientStatus;
+        }
+
+        public DescribeBackupClientsResponseBodyClients setClientVersion(String clientVersion) {
+            this.clientVersion = clientVersion;
+            return this;
+        }
+        public String getClientVersion() {
+            return this.clientVersion;
         }
 
         public DescribeBackupClientsResponseBodyClients setInstanceId(String instanceId) {

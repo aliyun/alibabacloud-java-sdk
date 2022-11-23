@@ -64,6 +64,12 @@ public class DescribeSuspEventsRequest extends TeaModel {
     @NameInMap("Remark")
     public String remark;
 
+    @NameInMap("SortColumn")
+    public String sortColumn;
+
+    @NameInMap("SortType")
+    public String sortType;
+
     @NameInMap("Source")
     public String source;
 
@@ -254,6 +260,22 @@ public class DescribeSuspEventsRequest extends TeaModel {
     }
     public String getRemark() {
         return this.remark;
+    }
+
+    public DescribeSuspEventsRequest setSortColumn(String sortColumn) {
+        this.sortColumn = sortColumn;
+        return this;
+    }
+    public String getSortColumn() {
+        return this.sortColumn;
+    }
+
+    public DescribeSuspEventsRequest setSortType(String sortType) {
+        this.sortType = sortType;
+        return this;
+    }
+    public String getSortType() {
+        return this.sortType;
     }
 
     public DescribeSuspEventsRequest setSource(String source) {

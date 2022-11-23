@@ -7,6 +7,9 @@ public class OperateAgentClientInstallRequest extends TeaModel {
     @NameInMap("InstanceIds")
     public String instanceIds;
 
+    @NameInMap("Lang")
+    public String lang;
+
     @NameInMap("Uuids")
     public String uuids;
 
@@ -21,6 +24,14 @@ public class OperateAgentClientInstallRequest extends TeaModel {
     }
     public String getInstanceIds() {
         return this.instanceIds;
+    }
+
+    public OperateAgentClientInstallRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
     }
 
     public OperateAgentClientInstallRequest setUuids(String uuids) {

@@ -174,6 +174,9 @@ public class ListCheckResultResponseBody extends TeaModel {
         @NameInMap("TaskId")
         public String taskId;
 
+        @NameInMap("TrialPermission")
+        public Boolean trialPermission;
+
         @NameInMap("Vendor")
         public String vendor;
 
@@ -255,6 +258,14 @@ public class ListCheckResultResponseBody extends TeaModel {
         }
         public String getTaskId() {
             return this.taskId;
+        }
+
+        public ListCheckResultResponseBodyChecks setTrialPermission(Boolean trialPermission) {
+            this.trialPermission = trialPermission;
+            return this;
+        }
+        public Boolean getTrialPermission() {
+            return this.trialPermission;
         }
 
         public ListCheckResultResponseBodyChecks setVendor(String vendor) {

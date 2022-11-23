@@ -10,9 +10,6 @@ public class BindAuthToMachineResponseBody extends TeaModel {
     @NameInMap("InsufficientCoreCount")
     public Integer insufficientCoreCount;
 
-    @NameInMap("InsufficientCount")
-    public Integer insufficientCount;
-
     @NameInMap("InsufficientEcsCount")
     public Integer insufficientEcsCount;
 
@@ -44,14 +41,6 @@ public class BindAuthToMachineResponseBody extends TeaModel {
     }
     public Integer getInsufficientCoreCount() {
         return this.insufficientCoreCount;
-    }
-
-    public BindAuthToMachineResponseBody setInsufficientCount(Integer insufficientCount) {
-        this.insufficientCount = insufficientCount;
-        return this;
-    }
-    public Integer getInsufficientCount() {
-        return this.insufficientCount;
     }
 
     public BindAuthToMachineResponseBody setInsufficientEcsCount(Integer insufficientEcsCount) {

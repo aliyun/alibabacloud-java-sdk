@@ -46,6 +46,12 @@ public class DescribeAlarmEventListRequest extends TeaModel {
     @NameInMap("Remark")
     public String remark;
 
+    @NameInMap("SortColumn")
+    public String sortColumn;
+
+    @NameInMap("SortType")
+    public String sortType;
+
     @NameInMap("SourceIp")
     public String sourceIp;
 
@@ -179,6 +185,22 @@ public class DescribeAlarmEventListRequest extends TeaModel {
     }
     public String getRemark() {
         return this.remark;
+    }
+
+    public DescribeAlarmEventListRequest setSortColumn(String sortColumn) {
+        this.sortColumn = sortColumn;
+        return this;
+    }
+    public String getSortColumn() {
+        return this.sortColumn;
+    }
+
+    public DescribeAlarmEventListRequest setSortType(String sortType) {
+        this.sortType = sortType;
+        return this;
+    }
+    public String getSortType() {
+        return this.sortType;
     }
 
     public DescribeAlarmEventListRequest setSourceIp(String sourceIp) {

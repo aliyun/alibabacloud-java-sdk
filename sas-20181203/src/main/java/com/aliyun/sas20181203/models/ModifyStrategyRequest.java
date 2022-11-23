@@ -13,6 +13,9 @@ public class ModifyStrategyRequest extends TeaModel {
     @NameInMap("CycleStartTime")
     public String cycleStartTime;
 
+    @NameInMap("EndTime")
+    public String endTime;
+
     @NameInMap("Id")
     public String id;
 
@@ -27,6 +30,12 @@ public class ModifyStrategyRequest extends TeaModel {
 
     @NameInMap("SourceIp")
     public String sourceIp;
+
+    @NameInMap("StartTime")
+    public String startTime;
+
+    @NameInMap("TargetType")
+    public String targetType;
 
     public static ModifyStrategyRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyStrategyRequest self = new ModifyStrategyRequest();
@@ -55,6 +64,14 @@ public class ModifyStrategyRequest extends TeaModel {
     }
     public String getCycleStartTime() {
         return this.cycleStartTime;
+    }
+
+    public ModifyStrategyRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
     }
 
     public ModifyStrategyRequest setId(String id) {
@@ -95,6 +112,22 @@ public class ModifyStrategyRequest extends TeaModel {
     }
     public String getSourceIp() {
         return this.sourceIp;
+    }
+
+    public ModifyStrategyRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
+    }
+
+    public ModifyStrategyRequest setTargetType(String targetType) {
+        this.targetType = targetType;
+        return this;
+    }
+    public String getTargetType() {
+        return this.targetType;
     }
 
 }
