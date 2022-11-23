@@ -83,6 +83,9 @@ public class DescribeSubDomainRecordsResponseBody extends TeaModel {
         @NameInMap("RecordId")
         public String recordId;
 
+        @NameInMap("Remark")
+        public String remark;
+
         @NameInMap("Status")
         public String status;
 
@@ -149,6 +152,14 @@ public class DescribeSubDomainRecordsResponseBody extends TeaModel {
         }
         public String getRecordId() {
             return this.recordId;
+        }
+
+        public DescribeSubDomainRecordsResponseBodyDomainRecordsRecord setRemark(String remark) {
+            this.remark = remark;
+            return this;
+        }
+        public String getRemark() {
+            return this.remark;
         }
 
         public DescribeSubDomainRecordsResponseBodyDomainRecordsRecord setStatus(String status) {
