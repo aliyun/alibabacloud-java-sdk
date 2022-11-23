@@ -13,6 +13,9 @@ public class GetTemplateParameterConstraintsShrinkRequest extends TeaModel {
     @NameInMap("ParametersKeyFilter")
     public String parametersKeyFilterShrink;
 
+    @NameInMap("ParametersOrder")
+    public String parametersOrderShrink;
+
     @NameInMap("RegionId")
     public String regionId;
 
@@ -55,6 +58,14 @@ public class GetTemplateParameterConstraintsShrinkRequest extends TeaModel {
     }
     public String getParametersKeyFilterShrink() {
         return this.parametersKeyFilterShrink;
+    }
+
+    public GetTemplateParameterConstraintsShrinkRequest setParametersOrderShrink(String parametersOrderShrink) {
+        this.parametersOrderShrink = parametersOrderShrink;
+        return this;
+    }
+    public String getParametersOrderShrink() {
+        return this.parametersOrderShrink;
     }
 
     public GetTemplateParameterConstraintsShrinkRequest setRegionId(String regionId) {

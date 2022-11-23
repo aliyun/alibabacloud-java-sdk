@@ -79,6 +79,9 @@ public class ValidateTemplateResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("Label")
+        public String label;
+
         @NameInMap("OutputKey")
         public String outputKey;
 
@@ -93,6 +96,14 @@ public class ValidateTemplateResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public ValidateTemplateResponseBodyOutputs setLabel(String label) {
+            this.label = label;
+            return this;
+        }
+        public String getLabel() {
+            return this.label;
         }
 
         public ValidateTemplateResponseBodyOutputs setOutputKey(String outputKey) {
