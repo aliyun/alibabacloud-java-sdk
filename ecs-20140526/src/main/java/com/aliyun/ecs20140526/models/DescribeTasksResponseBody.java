@@ -82,6 +82,9 @@ public class DescribeTasksResponseBody extends TeaModel {
         @NameInMap("FinishedTime")
         public String finishedTime;
 
+        @NameInMap("ResourceId")
+        public String resourceId;
+
         @NameInMap("SupportCancel")
         public String supportCancel;
 
@@ -113,6 +116,14 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
         public String getFinishedTime() {
             return this.finishedTime;
+        }
+
+        public DescribeTasksResponseBodyTaskSetTask setResourceId(String resourceId) {
+            this.resourceId = resourceId;
+            return this;
+        }
+        public String getResourceId() {
+            return this.resourceId;
         }
 
         public DescribeTasksResponseBodyTaskSetTask setSupportCancel(String supportCancel) {

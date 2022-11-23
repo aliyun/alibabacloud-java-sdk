@@ -22,6 +22,9 @@ public class DescribeTasksRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceIds")
+    public java.util.List<String> resourceIds;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -91,6 +94,14 @@ public class DescribeTasksRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeTasksRequest setResourceIds(java.util.List<String> resourceIds) {
+        this.resourceIds = resourceIds;
+        return this;
+    }
+    public java.util.List<String> getResourceIds() {
+        return this.resourceIds;
     }
 
     public DescribeTasksRequest setResourceOwnerAccount(String resourceOwnerAccount) {
