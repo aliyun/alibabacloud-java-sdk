@@ -13,6 +13,9 @@ public class GetTemplateParameterConstraintsRequest extends TeaModel {
     @NameInMap("ParametersKeyFilter")
     public java.util.List<String> parametersKeyFilter;
 
+    @NameInMap("ParametersOrder")
+    public java.util.List<String> parametersOrder;
+
     @NameInMap("RegionId")
     public String regionId;
 
@@ -55,6 +58,14 @@ public class GetTemplateParameterConstraintsRequest extends TeaModel {
     }
     public java.util.List<String> getParametersKeyFilter() {
         return this.parametersKeyFilter;
+    }
+
+    public GetTemplateParameterConstraintsRequest setParametersOrder(java.util.List<String> parametersOrder) {
+        this.parametersOrder = parametersOrder;
+        return this;
+    }
+    public java.util.List<String> getParametersOrder() {
+        return this.parametersOrder;
     }
 
     public GetTemplateParameterConstraintsRequest setRegionId(String regionId) {
