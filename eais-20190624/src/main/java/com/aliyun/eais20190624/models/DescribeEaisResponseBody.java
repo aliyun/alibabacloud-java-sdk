@@ -150,6 +150,9 @@ public class DescribeEaisResponseBody extends TeaModel {
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
+        @NameInMap("StartTime")
+        public String startTime;
+
         @NameInMap("Status")
         public String status;
 
@@ -261,6 +264,14 @@ public class DescribeEaisResponseBody extends TeaModel {
         }
         public String getSecurityGroupId() {
             return this.securityGroupId;
+        }
+
+        public DescribeEaisResponseBodyInstancesInstance setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
         }
 
         public DescribeEaisResponseBodyInstancesInstance setStatus(String status) {
