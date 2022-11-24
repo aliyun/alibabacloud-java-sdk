@@ -67,6 +67,9 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
         @NameInMap("image_category")
         public String imageCategory;
 
+        @NameInMap("architecture")
+        public String architecture;
+
         public static DescribeKubernetesVersionMetadataResponseBodyImages build(java.util.Map<String, ?> map) throws Exception {
             DescribeKubernetesVersionMetadataResponseBodyImages self = new DescribeKubernetesVersionMetadataResponseBodyImages();
             return TeaModel.build(map, self);
@@ -126,6 +129,14 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
         }
         public String getImageCategory() {
             return this.imageCategory;
+        }
+
+        public DescribeKubernetesVersionMetadataResponseBodyImages setArchitecture(String architecture) {
+            this.architecture = architecture;
+            return this;
+        }
+        public String getArchitecture() {
+            return this.architecture;
         }
 
     }
