@@ -10,8 +10,20 @@ public class GetServiceInstanceResponseBody extends TeaModel {
     @NameInMap("EnableInstanceOps")
     public Boolean enableInstanceOps;
 
+    @NameInMap("EndTime")
+    public String endTime;
+
     @NameInMap("IsOperated")
     public Boolean isOperated;
+
+    @NameInMap("LicenseEndTime")
+    public String licenseEndTime;
+
+    @NameInMap("Name")
+    public String name;
+
+    @NameInMap("NetworkConfig")
+    public GetServiceInstanceResponseBodyNetworkConfig networkConfig;
 
     @NameInMap("OperatedServiceInstanceId")
     public String operatedServiceInstanceId;
@@ -28,6 +40,9 @@ public class GetServiceInstanceResponseBody extends TeaModel {
     @NameInMap("Parameters")
     public String parameters;
 
+    @NameInMap("PayType")
+    public String payType;
+
     @NameInMap("Progress")
     public Long progress;
 
@@ -43,17 +58,32 @@ public class GetServiceInstanceResponseBody extends TeaModel {
     @NameInMap("ServiceInstanceId")
     public String serviceInstanceId;
 
+    @NameInMap("ServiceType")
+    public String serviceType;
+
+    @NameInMap("Source")
+    public String source;
+
     @NameInMap("Status")
     public String status;
 
     @NameInMap("StatusDetail")
     public String statusDetail;
 
+    @NameInMap("SupplierUid")
+    public Long supplierUid;
+
+    @NameInMap("Tags")
+    public java.util.List<GetServiceInstanceResponseBodyTags> tags;
+
     @NameInMap("TemplateName")
     public String templateName;
 
     @NameInMap("UpdateTime")
     public String updateTime;
+
+    @NameInMap("UserId")
+    public Long userId;
 
     public static GetServiceInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetServiceInstanceResponseBody self = new GetServiceInstanceResponseBody();
@@ -76,12 +106,44 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         return this.enableInstanceOps;
     }
 
+    public GetServiceInstanceResponseBody setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
     public GetServiceInstanceResponseBody setIsOperated(Boolean isOperated) {
         this.isOperated = isOperated;
         return this;
     }
     public Boolean getIsOperated() {
         return this.isOperated;
+    }
+
+    public GetServiceInstanceResponseBody setLicenseEndTime(String licenseEndTime) {
+        this.licenseEndTime = licenseEndTime;
+        return this;
+    }
+    public String getLicenseEndTime() {
+        return this.licenseEndTime;
+    }
+
+    public GetServiceInstanceResponseBody setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public GetServiceInstanceResponseBody setNetworkConfig(GetServiceInstanceResponseBodyNetworkConfig networkConfig) {
+        this.networkConfig = networkConfig;
+        return this;
+    }
+    public GetServiceInstanceResponseBodyNetworkConfig getNetworkConfig() {
+        return this.networkConfig;
     }
 
     public GetServiceInstanceResponseBody setOperatedServiceInstanceId(String operatedServiceInstanceId) {
@@ -124,6 +186,14 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         return this.parameters;
     }
 
+    public GetServiceInstanceResponseBody setPayType(String payType) {
+        this.payType = payType;
+        return this;
+    }
+    public String getPayType() {
+        return this.payType;
+    }
+
     public GetServiceInstanceResponseBody setProgress(Long progress) {
         this.progress = progress;
         return this;
@@ -164,6 +234,22 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         return this.serviceInstanceId;
     }
 
+    public GetServiceInstanceResponseBody setServiceType(String serviceType) {
+        this.serviceType = serviceType;
+        return this;
+    }
+    public String getServiceType() {
+        return this.serviceType;
+    }
+
+    public GetServiceInstanceResponseBody setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
+    }
+
     public GetServiceInstanceResponseBody setStatus(String status) {
         this.status = status;
         return this;
@@ -180,6 +266,22 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         return this.statusDetail;
     }
 
+    public GetServiceInstanceResponseBody setSupplierUid(Long supplierUid) {
+        this.supplierUid = supplierUid;
+        return this;
+    }
+    public Long getSupplierUid() {
+        return this.supplierUid;
+    }
+
+    public GetServiceInstanceResponseBody setTags(java.util.List<GetServiceInstanceResponseBodyTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<GetServiceInstanceResponseBodyTags> getTags() {
+        return this.tags;
+    }
+
     public GetServiceInstanceResponseBody setTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
@@ -194,6 +296,115 @@ public class GetServiceInstanceResponseBody extends TeaModel {
     }
     public String getUpdateTime() {
         return this.updateTime;
+    }
+
+    public GetServiceInstanceResponseBody setUserId(Long userId) {
+        this.userId = userId;
+        return this;
+    }
+    public Long getUserId() {
+        return this.userId;
+    }
+
+    public static class GetServiceInstanceResponseBodyNetworkConfigPrivateVpcConnections extends TeaModel {
+        @NameInMap("EndpointId")
+        public String endpointId;
+
+        @NameInMap("PrivateZoneId")
+        public String privateZoneId;
+
+        public static GetServiceInstanceResponseBodyNetworkConfigPrivateVpcConnections build(java.util.Map<String, ?> map) throws Exception {
+            GetServiceInstanceResponseBodyNetworkConfigPrivateVpcConnections self = new GetServiceInstanceResponseBodyNetworkConfigPrivateVpcConnections();
+            return TeaModel.build(map, self);
+        }
+
+        public GetServiceInstanceResponseBodyNetworkConfigPrivateVpcConnections setEndpointId(String endpointId) {
+            this.endpointId = endpointId;
+            return this;
+        }
+        public String getEndpointId() {
+            return this.endpointId;
+        }
+
+        public GetServiceInstanceResponseBodyNetworkConfigPrivateVpcConnections setPrivateZoneId(String privateZoneId) {
+            this.privateZoneId = privateZoneId;
+            return this;
+        }
+        public String getPrivateZoneId() {
+            return this.privateZoneId;
+        }
+
+    }
+
+    public static class GetServiceInstanceResponseBodyNetworkConfigReversePrivateVpcConnections extends TeaModel {
+        @NameInMap("EndpointId")
+        public String endpointId;
+
+        public static GetServiceInstanceResponseBodyNetworkConfigReversePrivateVpcConnections build(java.util.Map<String, ?> map) throws Exception {
+            GetServiceInstanceResponseBodyNetworkConfigReversePrivateVpcConnections self = new GetServiceInstanceResponseBodyNetworkConfigReversePrivateVpcConnections();
+            return TeaModel.build(map, self);
+        }
+
+        public GetServiceInstanceResponseBodyNetworkConfigReversePrivateVpcConnections setEndpointId(String endpointId) {
+            this.endpointId = endpointId;
+            return this;
+        }
+        public String getEndpointId() {
+            return this.endpointId;
+        }
+
+    }
+
+    public static class GetServiceInstanceResponseBodyNetworkConfig extends TeaModel {
+        @NameInMap("EndpointId")
+        public String endpointId;
+
+        @NameInMap("PrivateVpcConnections")
+        public java.util.List<GetServiceInstanceResponseBodyNetworkConfigPrivateVpcConnections> privateVpcConnections;
+
+        @NameInMap("PrivateZoneId")
+        public String privateZoneId;
+
+        @NameInMap("ReversePrivateVpcConnections")
+        public java.util.List<GetServiceInstanceResponseBodyNetworkConfigReversePrivateVpcConnections> reversePrivateVpcConnections;
+
+        public static GetServiceInstanceResponseBodyNetworkConfig build(java.util.Map<String, ?> map) throws Exception {
+            GetServiceInstanceResponseBodyNetworkConfig self = new GetServiceInstanceResponseBodyNetworkConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public GetServiceInstanceResponseBodyNetworkConfig setEndpointId(String endpointId) {
+            this.endpointId = endpointId;
+            return this;
+        }
+        public String getEndpointId() {
+            return this.endpointId;
+        }
+
+        public GetServiceInstanceResponseBodyNetworkConfig setPrivateVpcConnections(java.util.List<GetServiceInstanceResponseBodyNetworkConfigPrivateVpcConnections> privateVpcConnections) {
+            this.privateVpcConnections = privateVpcConnections;
+            return this;
+        }
+        public java.util.List<GetServiceInstanceResponseBodyNetworkConfigPrivateVpcConnections> getPrivateVpcConnections() {
+            return this.privateVpcConnections;
+        }
+
+        public GetServiceInstanceResponseBodyNetworkConfig setPrivateZoneId(String privateZoneId) {
+            this.privateZoneId = privateZoneId;
+            return this;
+        }
+        public String getPrivateZoneId() {
+            return this.privateZoneId;
+        }
+
+        public GetServiceInstanceResponseBodyNetworkConfig setReversePrivateVpcConnections(java.util.List<GetServiceInstanceResponseBodyNetworkConfigReversePrivateVpcConnections> reversePrivateVpcConnections) {
+            this.reversePrivateVpcConnections = reversePrivateVpcConnections;
+            return this;
+        }
+        public java.util.List<GetServiceInstanceResponseBodyNetworkConfigReversePrivateVpcConnections> getReversePrivateVpcConnections() {
+            return this.reversePrivateVpcConnections;
+        }
+
     }
 
     public static class GetServiceInstanceResponseBodyServiceServiceInfos extends TeaModel {
@@ -258,11 +469,17 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         @NameInMap("PublishTime")
         public String publishTime;
 
+        @NameInMap("ServiceDocUrl")
+        public String serviceDocUrl;
+
         @NameInMap("ServiceId")
         public String serviceId;
 
         @NameInMap("ServiceInfos")
         public java.util.List<GetServiceInstanceResponseBodyServiceServiceInfos> serviceInfos;
+
+        @NameInMap("ServiceProductUrl")
+        public String serviceProductUrl;
 
         @NameInMap("ServiceType")
         public String serviceType;
@@ -276,8 +493,17 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         @NameInMap("SupplierUrl")
         public String supplierUrl;
 
+        @NameInMap("UpgradableServiceVersions")
+        public java.util.List<String> upgradableServiceVersions;
+
+        @NameInMap("UpgradeMetadata")
+        public String upgradeMetadata;
+
         @NameInMap("Version")
         public String version;
+
+        @NameInMap("VersionName")
+        public String versionName;
 
         public static GetServiceInstanceResponseBodyService build(java.util.Map<String, ?> map) throws Exception {
             GetServiceInstanceResponseBodyService self = new GetServiceInstanceResponseBodyService();
@@ -308,6 +534,14 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             return this.publishTime;
         }
 
+        public GetServiceInstanceResponseBodyService setServiceDocUrl(String serviceDocUrl) {
+            this.serviceDocUrl = serviceDocUrl;
+            return this;
+        }
+        public String getServiceDocUrl() {
+            return this.serviceDocUrl;
+        }
+
         public GetServiceInstanceResponseBodyService setServiceId(String serviceId) {
             this.serviceId = serviceId;
             return this;
@@ -322,6 +556,14 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
         public java.util.List<GetServiceInstanceResponseBodyServiceServiceInfos> getServiceInfos() {
             return this.serviceInfos;
+        }
+
+        public GetServiceInstanceResponseBodyService setServiceProductUrl(String serviceProductUrl) {
+            this.serviceProductUrl = serviceProductUrl;
+            return this;
+        }
+        public String getServiceProductUrl() {
+            return this.serviceProductUrl;
         }
 
         public GetServiceInstanceResponseBodyService setServiceType(String serviceType) {
@@ -356,12 +598,66 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             return this.supplierUrl;
         }
 
+        public GetServiceInstanceResponseBodyService setUpgradableServiceVersions(java.util.List<String> upgradableServiceVersions) {
+            this.upgradableServiceVersions = upgradableServiceVersions;
+            return this;
+        }
+        public java.util.List<String> getUpgradableServiceVersions() {
+            return this.upgradableServiceVersions;
+        }
+
+        public GetServiceInstanceResponseBodyService setUpgradeMetadata(String upgradeMetadata) {
+            this.upgradeMetadata = upgradeMetadata;
+            return this;
+        }
+        public String getUpgradeMetadata() {
+            return this.upgradeMetadata;
+        }
+
         public GetServiceInstanceResponseBodyService setVersion(String version) {
             this.version = version;
             return this;
         }
         public String getVersion() {
             return this.version;
+        }
+
+        public GetServiceInstanceResponseBodyService setVersionName(String versionName) {
+            this.versionName = versionName;
+            return this;
+        }
+        public String getVersionName() {
+            return this.versionName;
+        }
+
+    }
+
+    public static class GetServiceInstanceResponseBodyTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static GetServiceInstanceResponseBodyTags build(java.util.Map<String, ?> map) throws Exception {
+            GetServiceInstanceResponseBodyTags self = new GetServiceInstanceResponseBodyTags();
+            return TeaModel.build(map, self);
+        }
+
+        public GetServiceInstanceResponseBodyTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public GetServiceInstanceResponseBodyTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

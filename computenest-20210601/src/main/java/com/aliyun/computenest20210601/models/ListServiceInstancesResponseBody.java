@@ -144,6 +144,9 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         @NameInMap("Version")
         public String version;
 
+        @NameInMap("VersionName")
+        public String versionName;
+
         public static ListServiceInstancesResponseBodyServiceInstancesService build(java.util.Map<String, ?> map) throws Exception {
             ListServiceInstancesResponseBodyServiceInstancesService self = new ListServiceInstancesResponseBodyServiceInstancesService();
             return TeaModel.build(map, self);
@@ -221,6 +224,44 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             return this.version;
         }
 
+        public ListServiceInstancesResponseBodyServiceInstancesService setVersionName(String versionName) {
+            this.versionName = versionName;
+            return this;
+        }
+        public String getVersionName() {
+            return this.versionName;
+        }
+
+    }
+
+    public static class ListServiceInstancesResponseBodyServiceInstancesTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListServiceInstancesResponseBodyServiceInstancesTags build(java.util.Map<String, ?> map) throws Exception {
+            ListServiceInstancesResponseBodyServiceInstancesTags self = new ListServiceInstancesResponseBodyServiceInstancesTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListServiceInstancesResponseBodyServiceInstancesTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListServiceInstancesResponseBodyServiceInstancesTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
     public static class ListServiceInstancesResponseBodyServiceInstances extends TeaModel {
@@ -229,6 +270,15 @@ public class ListServiceInstancesResponseBody extends TeaModel {
 
         @NameInMap("EnableInstanceOps")
         public Boolean enableInstanceOps;
+
+        @NameInMap("EndTime")
+        public String endTime;
+
+        @NameInMap("MarketInstanceId")
+        public String marketInstanceId;
+
+        @NameInMap("Name")
+        public String name;
 
         @NameInMap("OperatedServiceInstanceId")
         public String operatedServiceInstanceId;
@@ -245,6 +295,9 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         @NameInMap("Parameters")
         public String parameters;
 
+        @NameInMap("PayType")
+        public String payType;
+
         @NameInMap("Progress")
         public Long progress;
 
@@ -257,11 +310,20 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         @NameInMap("ServiceInstanceId")
         public String serviceInstanceId;
 
+        @NameInMap("ServiceType")
+        public String serviceType;
+
+        @NameInMap("Source")
+        public String source;
+
         @NameInMap("Status")
         public String status;
 
         @NameInMap("StatusDetail")
         public String statusDetail;
+
+        @NameInMap("Tags")
+        public java.util.List<ListServiceInstancesResponseBodyServiceInstancesTags> tags;
 
         @NameInMap("TemplateName")
         public String templateName;
@@ -288,6 +350,30 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         }
         public Boolean getEnableInstanceOps() {
             return this.enableInstanceOps;
+        }
+
+        public ListServiceInstancesResponseBodyServiceInstances setEndTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public String getEndTime() {
+            return this.endTime;
+        }
+
+        public ListServiceInstancesResponseBodyServiceInstances setMarketInstanceId(String marketInstanceId) {
+            this.marketInstanceId = marketInstanceId;
+            return this;
+        }
+        public String getMarketInstanceId() {
+            return this.marketInstanceId;
+        }
+
+        public ListServiceInstancesResponseBodyServiceInstances setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
         public ListServiceInstancesResponseBodyServiceInstances setOperatedServiceInstanceId(String operatedServiceInstanceId) {
@@ -330,6 +416,14 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             return this.parameters;
         }
 
+        public ListServiceInstancesResponseBodyServiceInstances setPayType(String payType) {
+            this.payType = payType;
+            return this;
+        }
+        public String getPayType() {
+            return this.payType;
+        }
+
         public ListServiceInstancesResponseBodyServiceInstances setProgress(Long progress) {
             this.progress = progress;
             return this;
@@ -362,6 +456,22 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             return this.serviceInstanceId;
         }
 
+        public ListServiceInstancesResponseBodyServiceInstances setServiceType(String serviceType) {
+            this.serviceType = serviceType;
+            return this;
+        }
+        public String getServiceType() {
+            return this.serviceType;
+        }
+
+        public ListServiceInstancesResponseBodyServiceInstances setSource(String source) {
+            this.source = source;
+            return this;
+        }
+        public String getSource() {
+            return this.source;
+        }
+
         public ListServiceInstancesResponseBodyServiceInstances setStatus(String status) {
             this.status = status;
             return this;
@@ -376,6 +486,14 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         }
         public String getStatusDetail() {
             return this.statusDetail;
+        }
+
+        public ListServiceInstancesResponseBodyServiceInstances setTags(java.util.List<ListServiceInstancesResponseBodyServiceInstancesTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListServiceInstancesResponseBodyServiceInstancesTags> getTags() {
+            return this.tags;
         }
 
         public ListServiceInstancesResponseBodyServiceInstances setTemplateName(String templateName) {
