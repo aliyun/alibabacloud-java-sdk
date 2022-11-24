@@ -34,6 +34,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ClusterId", request.clusterId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.ignoreNamespaceCheck)) {
+            body.put("IgnoreNamespaceCheck", request.ignoreNamespaceCheck);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.serviceMeshId)) {
             body.put("ServiceMeshId", request.serviceMeshId);
         }
@@ -418,6 +422,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ExcludeOutboundPorts", request.excludeOutboundPorts);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.existingCaCert)) {
+            body.put("ExistingCaCert", request.existingCaCert);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.existingCaKey)) {
+            body.put("ExistingCaKey", request.existingCaKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.existingCaType)) {
+            body.put("ExistingCaType", request.existingCaType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.existingRootCaCert)) {
+            body.put("ExistingRootCaCert", request.existingRootCaCert);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.existingRootCaKey)) {
+            body.put("ExistingRootCaKey", request.existingRootCaKey);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.filterGatewayClusterConfig)) {
             body.put("FilterGatewayClusterConfig", request.filterGatewayClusterConfig);
         }
@@ -548,6 +572,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.tracing)) {
             body.put("Tracing", request.tracing);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.useExistingCA)) {
+            body.put("UseExistingCA", request.useExistingCA);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.vSwitches)) {
@@ -1508,6 +1536,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeIstioGatewayRoutesResponse describeIstioGatewayRoutes(DescribeIstioGatewayRoutesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeIstioGatewayRoutesWithOptions(request, runtime);
+    }
+
+    public DescribeMetadataResponse describeMetadataWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeMetadata"),
+            new TeaPair("version", "2020-01-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeMetadataResponse());
+    }
+
+    public DescribeMetadataResponse describeMetadata() throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeMetadataWithOptions(runtime);
     }
 
     public DescribeNamespaceScopeSidecarConfigResponse describeNamespaceScopeSidecarConfigWithOptions(DescribeNamespaceScopeSidecarConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2572,6 +2621,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ClusterId", request.clusterId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.reserveNamespace)) {
+            body.put("ReserveNamespace", request.reserveNamespace);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.serviceMeshId)) {
             body.put("ServiceMeshId", request.serviceMeshId);
         }
@@ -2828,6 +2881,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateIstioGatewayRoutesResponse updateIstioGatewayRoutes(UpdateIstioGatewayRoutesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateIstioGatewayRoutesWithOptions(request, runtime);
+    }
+
+    public UpdateIstioInjectionConfigResponse updateIstioInjectionConfigWithOptions(UpdateIstioInjectionConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.enableIstioInjection)) {
+            body.put("EnableIstioInjection", request.enableIstioInjection);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableSidecarSetInjection)) {
+            body.put("EnableSidecarSetInjection", request.enableSidecarSetInjection);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            body.put("Namespace", request.namespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceMeshId)) {
+            body.put("ServiceMeshId", request.serviceMeshId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateIstioInjectionConfig"),
+            new TeaPair("version", "2020-01-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateIstioInjectionConfigResponse());
+    }
+
+    public UpdateIstioInjectionConfigResponse updateIstioInjectionConfig(UpdateIstioInjectionConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateIstioInjectionConfigWithOptions(request, runtime);
     }
 
     public UpdateIstioRouteAdditionalStatusResponse updateIstioRouteAdditionalStatusWithOptions(UpdateIstioRouteAdditionalStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {

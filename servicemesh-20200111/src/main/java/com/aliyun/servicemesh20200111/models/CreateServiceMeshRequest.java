@@ -94,6 +94,21 @@ public class CreateServiceMeshRequest extends TeaModel {
     @NameInMap("ExcludeOutboundPorts")
     public String excludeOutboundPorts;
 
+    @NameInMap("ExistingCaCert")
+    public String existingCaCert;
+
+    @NameInMap("ExistingCaKey")
+    public String existingCaKey;
+
+    @NameInMap("ExistingCaType")
+    public String existingCaType;
+
+    @NameInMap("ExistingRootCaCert")
+    public String existingRootCaCert;
+
+    @NameInMap("ExistingRootCaKey")
+    public String existingRootCaKey;
+
     @NameInMap("FilterGatewayClusterConfig")
     public Boolean filterGatewayClusterConfig;
 
@@ -192,6 +207,9 @@ public class CreateServiceMeshRequest extends TeaModel {
 
     @NameInMap("Tracing")
     public Boolean tracing;
+
+    @NameInMap("UseExistingCA")
+    public Boolean useExistingCA;
 
     @NameInMap("VSwitches")
     public String vSwitches;
@@ -445,6 +463,46 @@ public class CreateServiceMeshRequest extends TeaModel {
     }
     public String getExcludeOutboundPorts() {
         return this.excludeOutboundPorts;
+    }
+
+    public CreateServiceMeshRequest setExistingCaCert(String existingCaCert) {
+        this.existingCaCert = existingCaCert;
+        return this;
+    }
+    public String getExistingCaCert() {
+        return this.existingCaCert;
+    }
+
+    public CreateServiceMeshRequest setExistingCaKey(String existingCaKey) {
+        this.existingCaKey = existingCaKey;
+        return this;
+    }
+    public String getExistingCaKey() {
+        return this.existingCaKey;
+    }
+
+    public CreateServiceMeshRequest setExistingCaType(String existingCaType) {
+        this.existingCaType = existingCaType;
+        return this;
+    }
+    public String getExistingCaType() {
+        return this.existingCaType;
+    }
+
+    public CreateServiceMeshRequest setExistingRootCaCert(String existingRootCaCert) {
+        this.existingRootCaCert = existingRootCaCert;
+        return this;
+    }
+    public String getExistingRootCaCert() {
+        return this.existingRootCaCert;
+    }
+
+    public CreateServiceMeshRequest setExistingRootCaKey(String existingRootCaKey) {
+        this.existingRootCaKey = existingRootCaKey;
+        return this;
+    }
+    public String getExistingRootCaKey() {
+        return this.existingRootCaKey;
     }
 
     public CreateServiceMeshRequest setFilterGatewayClusterConfig(Boolean filterGatewayClusterConfig) {
@@ -709,6 +767,14 @@ public class CreateServiceMeshRequest extends TeaModel {
     }
     public Boolean getTracing() {
         return this.tracing;
+    }
+
+    public CreateServiceMeshRequest setUseExistingCA(Boolean useExistingCA) {
+        this.useExistingCA = useExistingCA;
+        return this;
+    }
+    public Boolean getUseExistingCA() {
+        return this.useExistingCA;
     }
 
     public CreateServiceMeshRequest setVSwitches(String vSwitches) {
