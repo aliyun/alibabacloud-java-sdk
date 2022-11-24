@@ -1297,6 +1297,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("OutputFigure", request.outputFigure);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.outputQualityInfo)) {
+            query.put("OutputQualityInfo", request.outputQualityInfo);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.url)) {
             query.put("Url", request.url);
         }
@@ -2483,5 +2487,87 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RecognizeWaybillResponse recognizeWaybill(RecognizeWaybillRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.recognizeWaybillWithOptions(request, runtime);
+    }
+
+    public VerifyBusinessLicenseResponse verifyBusinessLicenseWithOptions(VerifyBusinessLicenseRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.companyName)) {
+            query.put("CompanyName", request.companyName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.creditCode)) {
+            query.put("CreditCode", request.creditCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.legalPerson)) {
+            query.put("LegalPerson", request.legalPerson);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "VerifyBusinessLicense"),
+            new TeaPair("version", "2021-07-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new VerifyBusinessLicenseResponse());
+    }
+
+    public VerifyBusinessLicenseResponse verifyBusinessLicense(VerifyBusinessLicenseRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.verifyBusinessLicenseWithOptions(request, runtime);
+    }
+
+    public VerifyVATInvoiceResponse verifyVATInvoiceWithOptions(VerifyVATInvoiceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.invoiceCode)) {
+            query.put("InvoiceCode", request.invoiceCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.invoiceDate)) {
+            query.put("InvoiceDate", request.invoiceDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.invoiceNo)) {
+            query.put("InvoiceNo", request.invoiceNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.invoiceSum)) {
+            query.put("InvoiceSum", request.invoiceSum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.verifyCode)) {
+            query.put("VerifyCode", request.verifyCode);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "VerifyVATInvoice"),
+            new TeaPair("version", "2021-07-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new VerifyVATInvoiceResponse());
+    }
+
+    public VerifyVATInvoiceResponse verifyVATInvoice(VerifyVATInvoiceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.verifyVATInvoiceWithOptions(request, runtime);
     }
 }
