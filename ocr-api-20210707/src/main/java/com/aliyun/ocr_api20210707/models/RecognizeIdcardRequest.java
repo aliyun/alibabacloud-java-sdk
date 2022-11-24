@@ -7,6 +7,9 @@ public class RecognizeIdcardRequest extends TeaModel {
     @NameInMap("OutputFigure")
     public Boolean outputFigure;
 
+    @NameInMap("OutputQualityInfo")
+    public Boolean outputQualityInfo;
+
     @NameInMap("Url")
     public String url;
 
@@ -24,6 +27,14 @@ public class RecognizeIdcardRequest extends TeaModel {
     }
     public Boolean getOutputFigure() {
         return this.outputFigure;
+    }
+
+    public RecognizeIdcardRequest setOutputQualityInfo(Boolean outputQualityInfo) {
+        this.outputQualityInfo = outputQualityInfo;
+        return this;
+    }
+    public Boolean getOutputQualityInfo() {
+        return this.outputQualityInfo;
     }
 
     public RecognizeIdcardRequest setUrl(String url) {
