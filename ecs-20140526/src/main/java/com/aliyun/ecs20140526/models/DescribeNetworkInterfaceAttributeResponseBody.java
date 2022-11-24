@@ -22,6 +22,12 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("Ipv4PrefixSets")
+    public DescribeNetworkInterfaceAttributeResponseBodyIpv4PrefixSets ipv4PrefixSets;
+
+    @NameInMap("Ipv6PrefixSets")
+    public DescribeNetworkInterfaceAttributeResponseBodyIpv6PrefixSets ipv6PrefixSets;
+
     @NameInMap("Ipv6Sets")
     public DescribeNetworkInterfaceAttributeResponseBodyIpv6Sets ipv6Sets;
 
@@ -139,6 +145,22 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public DescribeNetworkInterfaceAttributeResponseBody setIpv4PrefixSets(DescribeNetworkInterfaceAttributeResponseBodyIpv4PrefixSets ipv4PrefixSets) {
+        this.ipv4PrefixSets = ipv4PrefixSets;
+        return this;
+    }
+    public DescribeNetworkInterfaceAttributeResponseBodyIpv4PrefixSets getIpv4PrefixSets() {
+        return this.ipv4PrefixSets;
+    }
+
+    public DescribeNetworkInterfaceAttributeResponseBody setIpv6PrefixSets(DescribeNetworkInterfaceAttributeResponseBodyIpv6PrefixSets ipv6PrefixSets) {
+        this.ipv6PrefixSets = ipv6PrefixSets;
+        return this;
+    }
+    public DescribeNetworkInterfaceAttributeResponseBodyIpv6PrefixSets getIpv6PrefixSets() {
+        return this.ipv6PrefixSets;
     }
 
     public DescribeNetworkInterfaceAttributeResponseBody setIpv6Sets(DescribeNetworkInterfaceAttributeResponseBodyIpv6Sets ipv6Sets) {
@@ -504,6 +526,82 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         }
         public DescribeNetworkInterfaceAttributeResponseBodyBondInterfaceSpecificationSlaveInterfaceSpecification getSlaveInterfaceSpecification() {
             return this.slaveInterfaceSpecification;
+        }
+
+    }
+
+    public static class DescribeNetworkInterfaceAttributeResponseBodyIpv4PrefixSetsIpv4PrefixSet extends TeaModel {
+        @NameInMap("Ipv4Prefix")
+        public String ipv4Prefix;
+
+        public static DescribeNetworkInterfaceAttributeResponseBodyIpv4PrefixSetsIpv4PrefixSet build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNetworkInterfaceAttributeResponseBodyIpv4PrefixSetsIpv4PrefixSet self = new DescribeNetworkInterfaceAttributeResponseBodyIpv4PrefixSetsIpv4PrefixSet();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNetworkInterfaceAttributeResponseBodyIpv4PrefixSetsIpv4PrefixSet setIpv4Prefix(String ipv4Prefix) {
+            this.ipv4Prefix = ipv4Prefix;
+            return this;
+        }
+        public String getIpv4Prefix() {
+            return this.ipv4Prefix;
+        }
+
+    }
+
+    public static class DescribeNetworkInterfaceAttributeResponseBodyIpv4PrefixSets extends TeaModel {
+        @NameInMap("Ipv4PrefixSet")
+        public java.util.List<DescribeNetworkInterfaceAttributeResponseBodyIpv4PrefixSetsIpv4PrefixSet> ipv4PrefixSet;
+
+        public static DescribeNetworkInterfaceAttributeResponseBodyIpv4PrefixSets build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNetworkInterfaceAttributeResponseBodyIpv4PrefixSets self = new DescribeNetworkInterfaceAttributeResponseBodyIpv4PrefixSets();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNetworkInterfaceAttributeResponseBodyIpv4PrefixSets setIpv4PrefixSet(java.util.List<DescribeNetworkInterfaceAttributeResponseBodyIpv4PrefixSetsIpv4PrefixSet> ipv4PrefixSet) {
+            this.ipv4PrefixSet = ipv4PrefixSet;
+            return this;
+        }
+        public java.util.List<DescribeNetworkInterfaceAttributeResponseBodyIpv4PrefixSetsIpv4PrefixSet> getIpv4PrefixSet() {
+            return this.ipv4PrefixSet;
+        }
+
+    }
+
+    public static class DescribeNetworkInterfaceAttributeResponseBodyIpv6PrefixSetsIpv6PrefixSet extends TeaModel {
+        @NameInMap("Ipv6Prefix")
+        public String ipv6Prefix;
+
+        public static DescribeNetworkInterfaceAttributeResponseBodyIpv6PrefixSetsIpv6PrefixSet build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNetworkInterfaceAttributeResponseBodyIpv6PrefixSetsIpv6PrefixSet self = new DescribeNetworkInterfaceAttributeResponseBodyIpv6PrefixSetsIpv6PrefixSet();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNetworkInterfaceAttributeResponseBodyIpv6PrefixSetsIpv6PrefixSet setIpv6Prefix(String ipv6Prefix) {
+            this.ipv6Prefix = ipv6Prefix;
+            return this;
+        }
+        public String getIpv6Prefix() {
+            return this.ipv6Prefix;
+        }
+
+    }
+
+    public static class DescribeNetworkInterfaceAttributeResponseBodyIpv6PrefixSets extends TeaModel {
+        @NameInMap("Ipv6PrefixSet")
+        public java.util.List<DescribeNetworkInterfaceAttributeResponseBodyIpv6PrefixSetsIpv6PrefixSet> ipv6PrefixSet;
+
+        public static DescribeNetworkInterfaceAttributeResponseBodyIpv6PrefixSets build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNetworkInterfaceAttributeResponseBodyIpv6PrefixSets self = new DescribeNetworkInterfaceAttributeResponseBodyIpv6PrefixSets();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNetworkInterfaceAttributeResponseBodyIpv6PrefixSets setIpv6PrefixSet(java.util.List<DescribeNetworkInterfaceAttributeResponseBodyIpv6PrefixSetsIpv6PrefixSet> ipv6PrefixSet) {
+            this.ipv6PrefixSet = ipv6PrefixSet;
+            return this;
+        }
+        public java.util.List<DescribeNetworkInterfaceAttributeResponseBodyIpv6PrefixSetsIpv6PrefixSet> getIpv6PrefixSet() {
+            return this.ipv6PrefixSet;
         }
 
     }

@@ -7,6 +7,12 @@ public class AssignPrivateIpAddressesRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("Ipv4Prefix")
+    public java.util.List<String> ipv4Prefix;
+
+    @NameInMap("Ipv4PrefixCount")
+    public Integer ipv4PrefixCount;
+
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;
 
@@ -42,6 +48,22 @@ public class AssignPrivateIpAddressesRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public AssignPrivateIpAddressesRequest setIpv4Prefix(java.util.List<String> ipv4Prefix) {
+        this.ipv4Prefix = ipv4Prefix;
+        return this;
+    }
+    public java.util.List<String> getIpv4Prefix() {
+        return this.ipv4Prefix;
+    }
+
+    public AssignPrivateIpAddressesRequest setIpv4PrefixCount(Integer ipv4PrefixCount) {
+        this.ipv4PrefixCount = ipv4PrefixCount;
+        return this;
+    }
+    public Integer getIpv4PrefixCount() {
+        return this.ipv4PrefixCount;
     }
 
     public AssignPrivateIpAddressesRequest setNetworkInterfaceId(String networkInterfaceId) {

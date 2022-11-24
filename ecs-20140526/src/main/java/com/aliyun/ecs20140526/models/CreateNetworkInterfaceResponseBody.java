@@ -7,6 +7,12 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("Ipv4PrefixSets")
+    public CreateNetworkInterfaceResponseBodyIpv4PrefixSets ipv4PrefixSets;
+
+    @NameInMap("Ipv6PrefixSets")
+    public CreateNetworkInterfaceResponseBodyIpv6PrefixSets ipv6PrefixSets;
+
     @NameInMap("Ipv6Sets")
     public CreateNetworkInterfaceResponseBodyIpv6Sets ipv6Sets;
 
@@ -72,6 +78,22 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreateNetworkInterfaceResponseBody setIpv4PrefixSets(CreateNetworkInterfaceResponseBodyIpv4PrefixSets ipv4PrefixSets) {
+        this.ipv4PrefixSets = ipv4PrefixSets;
+        return this;
+    }
+    public CreateNetworkInterfaceResponseBodyIpv4PrefixSets getIpv4PrefixSets() {
+        return this.ipv4PrefixSets;
+    }
+
+    public CreateNetworkInterfaceResponseBody setIpv6PrefixSets(CreateNetworkInterfaceResponseBodyIpv6PrefixSets ipv6PrefixSets) {
+        this.ipv6PrefixSets = ipv6PrefixSets;
+        return this;
+    }
+    public CreateNetworkInterfaceResponseBodyIpv6PrefixSets getIpv6PrefixSets() {
+        return this.ipv6PrefixSets;
     }
 
     public CreateNetworkInterfaceResponseBody setIpv6Sets(CreateNetworkInterfaceResponseBodyIpv6Sets ipv6Sets) {
@@ -216,6 +238,82 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     }
     public String getZoneId() {
         return this.zoneId;
+    }
+
+    public static class CreateNetworkInterfaceResponseBodyIpv4PrefixSetsIpv4PrefixSet extends TeaModel {
+        @NameInMap("Ipv4Prefix")
+        public String ipv4Prefix;
+
+        public static CreateNetworkInterfaceResponseBodyIpv4PrefixSetsIpv4PrefixSet build(java.util.Map<String, ?> map) throws Exception {
+            CreateNetworkInterfaceResponseBodyIpv4PrefixSetsIpv4PrefixSet self = new CreateNetworkInterfaceResponseBodyIpv4PrefixSetsIpv4PrefixSet();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateNetworkInterfaceResponseBodyIpv4PrefixSetsIpv4PrefixSet setIpv4Prefix(String ipv4Prefix) {
+            this.ipv4Prefix = ipv4Prefix;
+            return this;
+        }
+        public String getIpv4Prefix() {
+            return this.ipv4Prefix;
+        }
+
+    }
+
+    public static class CreateNetworkInterfaceResponseBodyIpv4PrefixSets extends TeaModel {
+        @NameInMap("Ipv4PrefixSet")
+        public java.util.List<CreateNetworkInterfaceResponseBodyIpv4PrefixSetsIpv4PrefixSet> ipv4PrefixSet;
+
+        public static CreateNetworkInterfaceResponseBodyIpv4PrefixSets build(java.util.Map<String, ?> map) throws Exception {
+            CreateNetworkInterfaceResponseBodyIpv4PrefixSets self = new CreateNetworkInterfaceResponseBodyIpv4PrefixSets();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateNetworkInterfaceResponseBodyIpv4PrefixSets setIpv4PrefixSet(java.util.List<CreateNetworkInterfaceResponseBodyIpv4PrefixSetsIpv4PrefixSet> ipv4PrefixSet) {
+            this.ipv4PrefixSet = ipv4PrefixSet;
+            return this;
+        }
+        public java.util.List<CreateNetworkInterfaceResponseBodyIpv4PrefixSetsIpv4PrefixSet> getIpv4PrefixSet() {
+            return this.ipv4PrefixSet;
+        }
+
+    }
+
+    public static class CreateNetworkInterfaceResponseBodyIpv6PrefixSetsIpv6PrefixSet extends TeaModel {
+        @NameInMap("Ipv6Prefix")
+        public String ipv6Prefix;
+
+        public static CreateNetworkInterfaceResponseBodyIpv6PrefixSetsIpv6PrefixSet build(java.util.Map<String, ?> map) throws Exception {
+            CreateNetworkInterfaceResponseBodyIpv6PrefixSetsIpv6PrefixSet self = new CreateNetworkInterfaceResponseBodyIpv6PrefixSetsIpv6PrefixSet();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateNetworkInterfaceResponseBodyIpv6PrefixSetsIpv6PrefixSet setIpv6Prefix(String ipv6Prefix) {
+            this.ipv6Prefix = ipv6Prefix;
+            return this;
+        }
+        public String getIpv6Prefix() {
+            return this.ipv6Prefix;
+        }
+
+    }
+
+    public static class CreateNetworkInterfaceResponseBodyIpv6PrefixSets extends TeaModel {
+        @NameInMap("Ipv6PrefixSet")
+        public java.util.List<CreateNetworkInterfaceResponseBodyIpv6PrefixSetsIpv6PrefixSet> ipv6PrefixSet;
+
+        public static CreateNetworkInterfaceResponseBodyIpv6PrefixSets build(java.util.Map<String, ?> map) throws Exception {
+            CreateNetworkInterfaceResponseBodyIpv6PrefixSets self = new CreateNetworkInterfaceResponseBodyIpv6PrefixSets();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateNetworkInterfaceResponseBodyIpv6PrefixSets setIpv6PrefixSet(java.util.List<CreateNetworkInterfaceResponseBodyIpv6PrefixSetsIpv6PrefixSet> ipv6PrefixSet) {
+            this.ipv6PrefixSet = ipv6PrefixSet;
+            return this;
+        }
+        public java.util.List<CreateNetworkInterfaceResponseBodyIpv6PrefixSetsIpv6PrefixSet> getIpv6PrefixSet() {
+            return this.ipv6PrefixSet;
+        }
+
     }
 
     public static class CreateNetworkInterfaceResponseBodyIpv6SetsIpv6Set extends TeaModel {

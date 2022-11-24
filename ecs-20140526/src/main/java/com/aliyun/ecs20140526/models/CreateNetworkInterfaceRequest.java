@@ -16,11 +16,23 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     @NameInMap("InstanceType")
     public String instanceType;
 
+    @NameInMap("Ipv4Prefix")
+    public java.util.List<String> ipv4Prefix;
+
+    @NameInMap("Ipv4PrefixCount")
+    public Integer ipv4PrefixCount;
+
     @NameInMap("Ipv6Address")
     public java.util.List<String> ipv6Address;
 
     @NameInMap("Ipv6AddressCount")
     public Integer ipv6AddressCount;
+
+    @NameInMap("Ipv6Prefix")
+    public java.util.List<String> ipv6Prefix;
+
+    @NameInMap("Ipv6PrefixCount")
+    public Integer ipv6PrefixCount;
 
     @NameInMap("NetworkInterfaceName")
     public String networkInterfaceName;
@@ -113,6 +125,22 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
         return this.instanceType;
     }
 
+    public CreateNetworkInterfaceRequest setIpv4Prefix(java.util.List<String> ipv4Prefix) {
+        this.ipv4Prefix = ipv4Prefix;
+        return this;
+    }
+    public java.util.List<String> getIpv4Prefix() {
+        return this.ipv4Prefix;
+    }
+
+    public CreateNetworkInterfaceRequest setIpv4PrefixCount(Integer ipv4PrefixCount) {
+        this.ipv4PrefixCount = ipv4PrefixCount;
+        return this;
+    }
+    public Integer getIpv4PrefixCount() {
+        return this.ipv4PrefixCount;
+    }
+
     public CreateNetworkInterfaceRequest setIpv6Address(java.util.List<String> ipv6Address) {
         this.ipv6Address = ipv6Address;
         return this;
@@ -127,6 +155,22 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     }
     public Integer getIpv6AddressCount() {
         return this.ipv6AddressCount;
+    }
+
+    public CreateNetworkInterfaceRequest setIpv6Prefix(java.util.List<String> ipv6Prefix) {
+        this.ipv6Prefix = ipv6Prefix;
+        return this;
+    }
+    public java.util.List<String> getIpv6Prefix() {
+        return this.ipv6Prefix;
+    }
+
+    public CreateNetworkInterfaceRequest setIpv6PrefixCount(Integer ipv6PrefixCount) {
+        this.ipv6PrefixCount = ipv6PrefixCount;
+        return this;
+    }
+    public Integer getIpv6PrefixCount() {
+        return this.ipv6PrefixCount;
     }
 
     public CreateNetworkInterfaceRequest setNetworkInterfaceName(String networkInterfaceName) {
