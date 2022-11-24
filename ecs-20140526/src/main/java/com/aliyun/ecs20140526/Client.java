@@ -578,6 +578,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Ipv6AddressCount", request.ipv6AddressCount);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.ipv6Prefix)) {
+            query.put("Ipv6Prefix", request.ipv6Prefix);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ipv6PrefixCount)) {
+            query.put("Ipv6PrefixCount", request.ipv6PrefixCount);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.networkInterfaceId)) {
             query.put("NetworkInterfaceId", request.networkInterfaceId);
         }
@@ -633,6 +641,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ipv4Prefix)) {
+            query.put("Ipv4Prefix", request.ipv4Prefix);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ipv4PrefixCount)) {
+            query.put("Ipv4PrefixCount", request.ipv4PrefixCount);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.networkInterfaceId)) {
@@ -4351,12 +4367,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceType", request.instanceType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.ipv4Prefix)) {
+            query.put("Ipv4Prefix", request.ipv4Prefix);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ipv4PrefixCount)) {
+            query.put("Ipv4PrefixCount", request.ipv4PrefixCount);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ipv6Address)) {
             query.put("Ipv6Address", request.ipv6Address);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ipv6AddressCount)) {
             query.put("Ipv6AddressCount", request.ipv6AddressCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ipv6Prefix)) {
+            query.put("Ipv6Prefix", request.ipv6Prefix);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ipv6PrefixCount)) {
+            query.put("Ipv6PrefixCount", request.ipv6PrefixCount);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.networkInterfaceName)) {
@@ -23823,6 +23855,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Ipv6Address", request.ipv6Address);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.ipv6Prefix)) {
+            query.put("Ipv6Prefix", request.ipv6Prefix);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.networkInterfaceId)) {
             query.put("NetworkInterfaceId", request.networkInterfaceId);
         }
@@ -23876,6 +23912,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UnassignPrivateIpAddressesResponse unassignPrivateIpAddressesWithOptions(UnassignPrivateIpAddressesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ipv4Prefix)) {
+            query.put("Ipv4Prefix", request.ipv4Prefix);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.networkInterfaceId)) {
             query.put("NetworkInterfaceId", request.networkInterfaceId);
         }

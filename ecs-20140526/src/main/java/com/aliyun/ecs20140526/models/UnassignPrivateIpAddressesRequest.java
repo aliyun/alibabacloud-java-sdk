@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class UnassignPrivateIpAddressesRequest extends TeaModel {
+    @NameInMap("Ipv4Prefix")
+    public java.util.List<String> ipv4Prefix;
+
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;
 
@@ -28,6 +31,14 @@ public class UnassignPrivateIpAddressesRequest extends TeaModel {
     public static UnassignPrivateIpAddressesRequest build(java.util.Map<String, ?> map) throws Exception {
         UnassignPrivateIpAddressesRequest self = new UnassignPrivateIpAddressesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UnassignPrivateIpAddressesRequest setIpv4Prefix(java.util.List<String> ipv4Prefix) {
+        this.ipv4Prefix = ipv4Prefix;
+        return this;
+    }
+    public java.util.List<String> getIpv4Prefix() {
+        return this.ipv4Prefix;
     }
 
     public UnassignPrivateIpAddressesRequest setNetworkInterfaceId(String networkInterfaceId) {

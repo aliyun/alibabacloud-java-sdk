@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class AssignIpv6AddressesResponseBody extends TeaModel {
+    @NameInMap("Ipv6PrefixSets")
+    public AssignIpv6AddressesResponseBodyIpv6PrefixSets ipv6PrefixSets;
+
     @NameInMap("Ipv6Sets")
     public AssignIpv6AddressesResponseBodyIpv6Sets ipv6Sets;
 
@@ -16,6 +19,14 @@ public class AssignIpv6AddressesResponseBody extends TeaModel {
     public static AssignIpv6AddressesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AssignIpv6AddressesResponseBody self = new AssignIpv6AddressesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public AssignIpv6AddressesResponseBody setIpv6PrefixSets(AssignIpv6AddressesResponseBodyIpv6PrefixSets ipv6PrefixSets) {
+        this.ipv6PrefixSets = ipv6PrefixSets;
+        return this;
+    }
+    public AssignIpv6AddressesResponseBodyIpv6PrefixSets getIpv6PrefixSets() {
+        return this.ipv6PrefixSets;
     }
 
     public AssignIpv6AddressesResponseBody setIpv6Sets(AssignIpv6AddressesResponseBodyIpv6Sets ipv6Sets) {
@@ -40,6 +51,25 @@ public class AssignIpv6AddressesResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public static class AssignIpv6AddressesResponseBodyIpv6PrefixSets extends TeaModel {
+        @NameInMap("Ipv6Prefix")
+        public java.util.List<String> ipv6Prefix;
+
+        public static AssignIpv6AddressesResponseBodyIpv6PrefixSets build(java.util.Map<String, ?> map) throws Exception {
+            AssignIpv6AddressesResponseBodyIpv6PrefixSets self = new AssignIpv6AddressesResponseBodyIpv6PrefixSets();
+            return TeaModel.build(map, self);
+        }
+
+        public AssignIpv6AddressesResponseBodyIpv6PrefixSets setIpv6Prefix(java.util.List<String> ipv6Prefix) {
+            this.ipv6Prefix = ipv6Prefix;
+            return this;
+        }
+        public java.util.List<String> getIpv6Prefix() {
+            return this.ipv6Prefix;
+        }
+
     }
 
     public static class AssignIpv6AddressesResponseBodyIpv6Sets extends TeaModel {

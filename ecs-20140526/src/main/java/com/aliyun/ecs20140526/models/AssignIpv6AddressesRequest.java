@@ -10,6 +10,12 @@ public class AssignIpv6AddressesRequest extends TeaModel {
     @NameInMap("Ipv6AddressCount")
     public Integer ipv6AddressCount;
 
+    @NameInMap("Ipv6Prefix")
+    public java.util.List<String> ipv6Prefix;
+
+    @NameInMap("Ipv6PrefixCount")
+    public Integer ipv6PrefixCount;
+
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;
 
@@ -47,6 +53,22 @@ public class AssignIpv6AddressesRequest extends TeaModel {
     }
     public Integer getIpv6AddressCount() {
         return this.ipv6AddressCount;
+    }
+
+    public AssignIpv6AddressesRequest setIpv6Prefix(java.util.List<String> ipv6Prefix) {
+        this.ipv6Prefix = ipv6Prefix;
+        return this;
+    }
+    public java.util.List<String> getIpv6Prefix() {
+        return this.ipv6Prefix;
+    }
+
+    public AssignIpv6AddressesRequest setIpv6PrefixCount(Integer ipv6PrefixCount) {
+        this.ipv6PrefixCount = ipv6PrefixCount;
+        return this;
+    }
+    public Integer getIpv6PrefixCount() {
+        return this.ipv6PrefixCount;
     }
 
     public AssignIpv6AddressesRequest setNetworkInterfaceId(String networkInterfaceId) {

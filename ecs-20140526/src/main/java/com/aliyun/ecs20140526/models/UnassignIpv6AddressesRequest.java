@@ -7,6 +7,9 @@ public class UnassignIpv6AddressesRequest extends TeaModel {
     @NameInMap("Ipv6Address")
     public java.util.List<String> ipv6Address;
 
+    @NameInMap("Ipv6Prefix")
+    public java.util.List<String> ipv6Prefix;
+
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;
 
@@ -36,6 +39,14 @@ public class UnassignIpv6AddressesRequest extends TeaModel {
     }
     public java.util.List<String> getIpv6Address() {
         return this.ipv6Address;
+    }
+
+    public UnassignIpv6AddressesRequest setIpv6Prefix(java.util.List<String> ipv6Prefix) {
+        this.ipv6Prefix = ipv6Prefix;
+        return this;
+    }
+    public java.util.List<String> getIpv6Prefix() {
+        return this.ipv6Prefix;
     }
 
     public UnassignIpv6AddressesRequest setNetworkInterfaceId(String networkInterfaceId) {
