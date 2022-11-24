@@ -57,14 +57,23 @@ public class ListServiceInstanceLogsResponseBody extends TeaModel {
         @NameInMap("Content")
         public String content;
 
-        @NameInMap("Phase")
-        public String phase;
+        @NameInMap("LogType")
+        public String logType;
+
+        @NameInMap("ResourceId")
+        public String resourceId;
+
+        @NameInMap("ResourceType")
+        public String resourceType;
 
         @NameInMap("ServiceInstanceId")
         public String serviceInstanceId;
 
         @NameInMap("Source")
         public String source;
+
+        @NameInMap("Status")
+        public String status;
 
         @NameInMap("Timestamp")
         public String timestamp;
@@ -82,12 +91,28 @@ public class ListServiceInstanceLogsResponseBody extends TeaModel {
             return this.content;
         }
 
-        public ListServiceInstanceLogsResponseBodyServiceInstancesLogs setPhase(String phase) {
-            this.phase = phase;
+        public ListServiceInstanceLogsResponseBodyServiceInstancesLogs setLogType(String logType) {
+            this.logType = logType;
             return this;
         }
-        public String getPhase() {
-            return this.phase;
+        public String getLogType() {
+            return this.logType;
+        }
+
+        public ListServiceInstanceLogsResponseBodyServiceInstancesLogs setResourceId(String resourceId) {
+            this.resourceId = resourceId;
+            return this;
+        }
+        public String getResourceId() {
+            return this.resourceId;
+        }
+
+        public ListServiceInstanceLogsResponseBodyServiceInstancesLogs setResourceType(String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+        public String getResourceType() {
+            return this.resourceType;
         }
 
         public ListServiceInstanceLogsResponseBodyServiceInstancesLogs setServiceInstanceId(String serviceInstanceId) {
@@ -104,6 +129,14 @@ public class ListServiceInstanceLogsResponseBody extends TeaModel {
         }
         public String getSource() {
             return this.source;
+        }
+
+        public ListServiceInstanceLogsResponseBodyServiceInstancesLogs setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
         public ListServiceInstanceLogsResponseBodyServiceInstancesLogs setTimestamp(String timestamp) {

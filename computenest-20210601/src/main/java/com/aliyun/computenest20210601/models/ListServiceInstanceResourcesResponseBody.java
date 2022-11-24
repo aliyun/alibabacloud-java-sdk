@@ -54,12 +54,100 @@ public class ListServiceInstanceResourcesResponseBody extends TeaModel {
     }
 
     public static class ListServiceInstanceResourcesResponseBodyResources extends TeaModel {
+        @NameInMap("CreateTime")
+        public String createTime;
+
+        @NameInMap("ExpireTime")
+        public String expireTime;
+
+        @NameInMap("PayType")
+        public String payType;
+
+        @NameInMap("ProductCode")
+        public String productCode;
+
+        @NameInMap("ProductType")
+        public String productType;
+
+        @NameInMap("RenewStatus")
+        public String renewStatus;
+
+        @NameInMap("RenewalPeriod")
+        public Integer renewalPeriod;
+
+        @NameInMap("RenewalPeriodUnit")
+        public String renewalPeriodUnit;
+
         @NameInMap("ResourceARN")
         public String resourceARN;
 
         public static ListServiceInstanceResourcesResponseBodyResources build(java.util.Map<String, ?> map) throws Exception {
             ListServiceInstanceResourcesResponseBodyResources self = new ListServiceInstanceResourcesResponseBodyResources();
             return TeaModel.build(map, self);
+        }
+
+        public ListServiceInstanceResourcesResponseBodyResources setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        public ListServiceInstanceResourcesResponseBodyResources setExpireTime(String expireTime) {
+            this.expireTime = expireTime;
+            return this;
+        }
+        public String getExpireTime() {
+            return this.expireTime;
+        }
+
+        public ListServiceInstanceResourcesResponseBodyResources setPayType(String payType) {
+            this.payType = payType;
+            return this;
+        }
+        public String getPayType() {
+            return this.payType;
+        }
+
+        public ListServiceInstanceResourcesResponseBodyResources setProductCode(String productCode) {
+            this.productCode = productCode;
+            return this;
+        }
+        public String getProductCode() {
+            return this.productCode;
+        }
+
+        public ListServiceInstanceResourcesResponseBodyResources setProductType(String productType) {
+            this.productType = productType;
+            return this;
+        }
+        public String getProductType() {
+            return this.productType;
+        }
+
+        public ListServiceInstanceResourcesResponseBodyResources setRenewStatus(String renewStatus) {
+            this.renewStatus = renewStatus;
+            return this;
+        }
+        public String getRenewStatus() {
+            return this.renewStatus;
+        }
+
+        public ListServiceInstanceResourcesResponseBodyResources setRenewalPeriod(Integer renewalPeriod) {
+            this.renewalPeriod = renewalPeriod;
+            return this;
+        }
+        public Integer getRenewalPeriod() {
+            return this.renewalPeriod;
+        }
+
+        public ListServiceInstanceResourcesResponseBodyResources setRenewalPeriodUnit(String renewalPeriodUnit) {
+            this.renewalPeriodUnit = renewalPeriodUnit;
+            return this;
+        }
+        public String getRenewalPeriodUnit() {
+            return this.renewalPeriodUnit;
         }
 
         public ListServiceInstanceResourcesResponseBodyResources setResourceARN(String resourceARN) {
