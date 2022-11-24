@@ -7,6 +7,9 @@ public class RemoveClusterFromServiceMeshRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
+    @NameInMap("ReserveNamespace")
+    public Boolean reserveNamespace;
+
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;
 
@@ -21,6 +24,14 @@ public class RemoveClusterFromServiceMeshRequest extends TeaModel {
     }
     public String getClusterId() {
         return this.clusterId;
+    }
+
+    public RemoveClusterFromServiceMeshRequest setReserveNamespace(Boolean reserveNamespace) {
+        this.reserveNamespace = reserveNamespace;
+        return this;
+    }
+    public Boolean getReserveNamespace() {
+        return this.reserveNamespace;
     }
 
     public RemoveClusterFromServiceMeshRequest setServiceMeshId(String serviceMeshId) {
