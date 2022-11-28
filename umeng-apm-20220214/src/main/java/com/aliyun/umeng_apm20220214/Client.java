@@ -154,4 +154,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetTodayStatTrendResponse());
     }
+
+    public UpdateAlertPlanResponse updateAlertPlan(UpdateAlertPlanRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateAlertPlanWithOptions(request, headers, runtime);
+    }
+
+    public UpdateAlertPlanResponse updateAlertPlanWithOptions(UpdateAlertPlanRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSourceId)) {
+            query.put("dataSourceId", request.dataSourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.planId)) {
+            query.put("planId", request.planId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.versions)) {
+            query.put("versions", request.versions);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateAlertPlan"),
+            new TeaPair("version", "2022-02-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/updateAlertPlan"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAlertPlanResponse());
+    }
 }
