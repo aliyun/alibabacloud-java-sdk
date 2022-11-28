@@ -7,6 +7,12 @@ public class SubmitTextTo2DAvatarVideoTaskShrinkRequest extends TeaModel {
     @NameInMap("App")
     public String appShrink;
 
+    @NameInMap("AudioInfo")
+    public String audioInfoShrink;
+
+    @NameInMap("AvatarInfo")
+    public String avatarInfoShrink;
+
     @NameInMap("TenantId")
     public Long tenantId;
 
@@ -30,6 +36,22 @@ public class SubmitTextTo2DAvatarVideoTaskShrinkRequest extends TeaModel {
     }
     public String getAppShrink() {
         return this.appShrink;
+    }
+
+    public SubmitTextTo2DAvatarVideoTaskShrinkRequest setAudioInfoShrink(String audioInfoShrink) {
+        this.audioInfoShrink = audioInfoShrink;
+        return this;
+    }
+    public String getAudioInfoShrink() {
+        return this.audioInfoShrink;
+    }
+
+    public SubmitTextTo2DAvatarVideoTaskShrinkRequest setAvatarInfoShrink(String avatarInfoShrink) {
+        this.avatarInfoShrink = avatarInfoShrink;
+        return this;
+    }
+    public String getAvatarInfoShrink() {
+        return this.avatarInfoShrink;
     }
 
     public SubmitTextTo2DAvatarVideoTaskShrinkRequest setTenantId(Long tenantId) {

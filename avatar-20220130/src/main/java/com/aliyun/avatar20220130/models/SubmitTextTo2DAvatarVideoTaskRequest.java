@@ -7,6 +7,12 @@ public class SubmitTextTo2DAvatarVideoTaskRequest extends TeaModel {
     @NameInMap("App")
     public SubmitTextTo2DAvatarVideoTaskRequestApp app;
 
+    @NameInMap("AudioInfo")
+    public SubmitTextTo2DAvatarVideoTaskRequestAudioInfo audioInfo;
+
+    @NameInMap("AvatarInfo")
+    public SubmitTextTo2DAvatarVideoTaskRequestAvatarInfo avatarInfo;
+
     @NameInMap("TenantId")
     public Long tenantId;
 
@@ -30,6 +36,22 @@ public class SubmitTextTo2DAvatarVideoTaskRequest extends TeaModel {
     }
     public SubmitTextTo2DAvatarVideoTaskRequestApp getApp() {
         return this.app;
+    }
+
+    public SubmitTextTo2DAvatarVideoTaskRequest setAudioInfo(SubmitTextTo2DAvatarVideoTaskRequestAudioInfo audioInfo) {
+        this.audioInfo = audioInfo;
+        return this;
+    }
+    public SubmitTextTo2DAvatarVideoTaskRequestAudioInfo getAudioInfo() {
+        return this.audioInfo;
+    }
+
+    public SubmitTextTo2DAvatarVideoTaskRequest setAvatarInfo(SubmitTextTo2DAvatarVideoTaskRequestAvatarInfo avatarInfo) {
+        this.avatarInfo = avatarInfo;
+        return this;
+    }
+    public SubmitTextTo2DAvatarVideoTaskRequestAvatarInfo getAvatarInfo() {
+        return this.avatarInfo;
     }
 
     public SubmitTextTo2DAvatarVideoTaskRequest setTenantId(Long tenantId) {
@@ -83,7 +105,81 @@ public class SubmitTextTo2DAvatarVideoTaskRequest extends TeaModel {
 
     }
 
+    public static class SubmitTextTo2DAvatarVideoTaskRequestAudioInfo extends TeaModel {
+        @NameInMap("PitchRate")
+        public Integer pitchRate;
+
+        @NameInMap("SpeechRate")
+        public Integer speechRate;
+
+        @NameInMap("Voice")
+        public String voice;
+
+        @NameInMap("Volume")
+        public Integer volume;
+
+        public static SubmitTextTo2DAvatarVideoTaskRequestAudioInfo build(java.util.Map<String, ?> map) throws Exception {
+            SubmitTextTo2DAvatarVideoTaskRequestAudioInfo self = new SubmitTextTo2DAvatarVideoTaskRequestAudioInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public SubmitTextTo2DAvatarVideoTaskRequestAudioInfo setPitchRate(Integer pitchRate) {
+            this.pitchRate = pitchRate;
+            return this;
+        }
+        public Integer getPitchRate() {
+            return this.pitchRate;
+        }
+
+        public SubmitTextTo2DAvatarVideoTaskRequestAudioInfo setSpeechRate(Integer speechRate) {
+            this.speechRate = speechRate;
+            return this;
+        }
+        public Integer getSpeechRate() {
+            return this.speechRate;
+        }
+
+        public SubmitTextTo2DAvatarVideoTaskRequestAudioInfo setVoice(String voice) {
+            this.voice = voice;
+            return this;
+        }
+        public String getVoice() {
+            return this.voice;
+        }
+
+        public SubmitTextTo2DAvatarVideoTaskRequestAudioInfo setVolume(Integer volume) {
+            this.volume = volume;
+            return this;
+        }
+        public Integer getVolume() {
+            return this.volume;
+        }
+
+    }
+
+    public static class SubmitTextTo2DAvatarVideoTaskRequestAvatarInfo extends TeaModel {
+        @NameInMap("Code")
+        public String code;
+
+        public static SubmitTextTo2DAvatarVideoTaskRequestAvatarInfo build(java.util.Map<String, ?> map) throws Exception {
+            SubmitTextTo2DAvatarVideoTaskRequestAvatarInfo self = new SubmitTextTo2DAvatarVideoTaskRequestAvatarInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public SubmitTextTo2DAvatarVideoTaskRequestAvatarInfo setCode(String code) {
+            this.code = code;
+            return this;
+        }
+        public String getCode() {
+            return this.code;
+        }
+
+    }
+
     public static class SubmitTextTo2DAvatarVideoTaskRequestVideoInfo extends TeaModel {
+        @NameInMap("BackgroundImageUrl")
+        public String backgroundImageUrl;
+
         @NameInMap("IsAlpha")
         public Boolean isAlpha;
 
@@ -93,6 +189,14 @@ public class SubmitTextTo2DAvatarVideoTaskRequest extends TeaModel {
         public static SubmitTextTo2DAvatarVideoTaskRequestVideoInfo build(java.util.Map<String, ?> map) throws Exception {
             SubmitTextTo2DAvatarVideoTaskRequestVideoInfo self = new SubmitTextTo2DAvatarVideoTaskRequestVideoInfo();
             return TeaModel.build(map, self);
+        }
+
+        public SubmitTextTo2DAvatarVideoTaskRequestVideoInfo setBackgroundImageUrl(String backgroundImageUrl) {
+            this.backgroundImageUrl = backgroundImageUrl;
+            return this;
+        }
+        public String getBackgroundImageUrl() {
+            return this.backgroundImageUrl;
         }
 
         public SubmitTextTo2DAvatarVideoTaskRequestVideoInfo setIsAlpha(Boolean isAlpha) {
