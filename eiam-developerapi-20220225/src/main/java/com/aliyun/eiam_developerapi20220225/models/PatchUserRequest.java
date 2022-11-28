@@ -4,6 +4,9 @@ package com.aliyun.eiam_developerapi20220225.models;
 import com.aliyun.tea.*;
 
 public class PatchUserRequest extends TeaModel {
+    @NameInMap("customFields")
+    public java.util.List<PatchUserRequestCustomFields> customFields;
+
     @NameInMap("displayName")
     public String displayName;
 
@@ -28,6 +31,14 @@ public class PatchUserRequest extends TeaModel {
     public static PatchUserRequest build(java.util.Map<String, ?> map) throws Exception {
         PatchUserRequest self = new PatchUserRequest();
         return TeaModel.build(map, self);
+    }
+
+    public PatchUserRequest setCustomFields(java.util.List<PatchUserRequestCustomFields> customFields) {
+        this.customFields = customFields;
+        return this;
+    }
+    public java.util.List<PatchUserRequestCustomFields> getCustomFields() {
+        return this.customFields;
     }
 
     public PatchUserRequest setDisplayName(String displayName) {
@@ -84,6 +95,47 @@ public class PatchUserRequest extends TeaModel {
     }
     public String getUsername() {
         return this.username;
+    }
+
+    public static class PatchUserRequestCustomFields extends TeaModel {
+        @NameInMap("fieldName")
+        public String fieldName;
+
+        @NameInMap("fieldValue")
+        public String fieldValue;
+
+        @NameInMap("operator")
+        public String operator;
+
+        public static PatchUserRequestCustomFields build(java.util.Map<String, ?> map) throws Exception {
+            PatchUserRequestCustomFields self = new PatchUserRequestCustomFields();
+            return TeaModel.build(map, self);
+        }
+
+        public PatchUserRequestCustomFields setFieldName(String fieldName) {
+            this.fieldName = fieldName;
+            return this;
+        }
+        public String getFieldName() {
+            return this.fieldName;
+        }
+
+        public PatchUserRequestCustomFields setFieldValue(String fieldValue) {
+            this.fieldValue = fieldValue;
+            return this;
+        }
+        public String getFieldValue() {
+            return this.fieldValue;
+        }
+
+        public PatchUserRequestCustomFields setOperator(String operator) {
+            this.operator = operator;
+            return this;
+        }
+        public String getOperator() {
+            return this.operator;
+        }
+
     }
 
 }
