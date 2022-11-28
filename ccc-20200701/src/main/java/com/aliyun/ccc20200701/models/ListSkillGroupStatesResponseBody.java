@@ -82,6 +82,9 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
         @NameInMap("BreakingAgents")
         public Long breakingAgents;
 
+        @NameInMap("InboundTalkingAgents")
+        public Long inboundTalkingAgents;
+
         @NameInMap("InstanceId")
         public String instanceId;
 
@@ -93,6 +96,9 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
 
         @NameInMap("OutboundScenarioReadyAgents")
         public Long outboundScenarioReadyAgents;
+
+        @NameInMap("OutboundTalkingAgents")
+        public Long outboundTalkingAgents;
 
         @NameInMap("ReadyAgents")
         public Long readyAgents;
@@ -142,6 +148,14 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
             return this.breakingAgents;
         }
 
+        public ListSkillGroupStatesResponseBodyDataList setInboundTalkingAgents(Long inboundTalkingAgents) {
+            this.inboundTalkingAgents = inboundTalkingAgents;
+            return this;
+        }
+        public Long getInboundTalkingAgents() {
+            return this.inboundTalkingAgents;
+        }
+
         public ListSkillGroupStatesResponseBodyDataList setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
@@ -172,6 +186,14 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
         }
         public Long getOutboundScenarioReadyAgents() {
             return this.outboundScenarioReadyAgents;
+        }
+
+        public ListSkillGroupStatesResponseBodyDataList setOutboundTalkingAgents(Long outboundTalkingAgents) {
+            this.outboundTalkingAgents = outboundTalkingAgents;
+            return this;
+        }
+        public Long getOutboundTalkingAgents() {
+            return this.outboundTalkingAgents;
         }
 
         public ListSkillGroupStatesResponseBodyDataList setReadyAgents(Long readyAgents) {
