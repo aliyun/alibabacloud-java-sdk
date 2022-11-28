@@ -40,6 +40,9 @@ public class CreateFlowlogRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateFlowlogRequestTag> tag;
+
     @NameInMap("TransitRouterAttachmentId")
     public String transitRouterAttachmentId;
 
@@ -144,12 +147,50 @@ public class CreateFlowlogRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
+    public CreateFlowlogRequest setTag(java.util.List<CreateFlowlogRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateFlowlogRequestTag> getTag() {
+        return this.tag;
+    }
+
     public CreateFlowlogRequest setTransitRouterAttachmentId(String transitRouterAttachmentId) {
         this.transitRouterAttachmentId = transitRouterAttachmentId;
         return this;
     }
     public String getTransitRouterAttachmentId() {
         return this.transitRouterAttachmentId;
+    }
+
+    public static class CreateFlowlogRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateFlowlogRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateFlowlogRequestTag self = new CreateFlowlogRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateFlowlogRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateFlowlogRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

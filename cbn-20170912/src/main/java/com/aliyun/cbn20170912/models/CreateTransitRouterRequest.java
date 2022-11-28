@@ -31,6 +31,12 @@ public class CreateTransitRouterRequest extends TeaModel {
     @NameInMap("SupportMulticast")
     public Boolean supportMulticast;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateTransitRouterRequestTag> tag;
+
+    @NameInMap("TransitRouterCidrList")
+    public java.util.List<CreateTransitRouterRequestTransitRouterCidrList> transitRouterCidrList;
+
     @NameInMap("TransitRouterDescription")
     public String transitRouterDescription;
 
@@ -114,6 +120,22 @@ public class CreateTransitRouterRequest extends TeaModel {
         return this.supportMulticast;
     }
 
+    public CreateTransitRouterRequest setTag(java.util.List<CreateTransitRouterRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateTransitRouterRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public CreateTransitRouterRequest setTransitRouterCidrList(java.util.List<CreateTransitRouterRequestTransitRouterCidrList> transitRouterCidrList) {
+        this.transitRouterCidrList = transitRouterCidrList;
+        return this;
+    }
+    public java.util.List<CreateTransitRouterRequestTransitRouterCidrList> getTransitRouterCidrList() {
+        return this.transitRouterCidrList;
+    }
+
     public CreateTransitRouterRequest setTransitRouterDescription(String transitRouterDescription) {
         this.transitRouterDescription = transitRouterDescription;
         return this;
@@ -128,6 +150,88 @@ public class CreateTransitRouterRequest extends TeaModel {
     }
     public String getTransitRouterName() {
         return this.transitRouterName;
+    }
+
+    public static class CreateTransitRouterRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateTransitRouterRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateTransitRouterRequestTag self = new CreateTransitRouterRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateTransitRouterRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateTransitRouterRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class CreateTransitRouterRequestTransitRouterCidrList extends TeaModel {
+        @NameInMap("Cidr")
+        public String cidr;
+
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("PublishCidrRoute")
+        public Boolean publishCidrRoute;
+
+        public static CreateTransitRouterRequestTransitRouterCidrList build(java.util.Map<String, ?> map) throws Exception {
+            CreateTransitRouterRequestTransitRouterCidrList self = new CreateTransitRouterRequestTransitRouterCidrList();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateTransitRouterRequestTransitRouterCidrList setCidr(String cidr) {
+            this.cidr = cidr;
+            return this;
+        }
+        public String getCidr() {
+            return this.cidr;
+        }
+
+        public CreateTransitRouterRequestTransitRouterCidrList setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public CreateTransitRouterRequestTransitRouterCidrList setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public CreateTransitRouterRequestTransitRouterCidrList setPublishCidrRoute(Boolean publishCidrRoute) {
+            this.publishCidrRoute = publishCidrRoute;
+            return this;
+        }
+        public Boolean getPublishCidrRoute() {
+            return this.publishCidrRoute;
+        }
+
     }
 
 }

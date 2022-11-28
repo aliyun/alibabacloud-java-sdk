@@ -64,9 +64,42 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
         return this.transitRouterRouteTables;
     }
 
+    public static class ListTransitRouterRouteTablesResponseBodyTransitRouterRouteTablesTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListTransitRouterRouteTablesResponseBodyTransitRouterRouteTablesTags build(java.util.Map<String, ?> map) throws Exception {
+            ListTransitRouterRouteTablesResponseBodyTransitRouterRouteTablesTags self = new ListTransitRouterRouteTablesResponseBodyTransitRouterRouteTablesTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListTransitRouterRouteTablesResponseBodyTransitRouterRouteTablesTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListTransitRouterRouteTablesResponseBodyTransitRouterRouteTablesTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListTransitRouterRouteTablesResponseBodyTransitRouterRouteTables extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
+
+        @NameInMap("Tags")
+        public java.util.List<ListTransitRouterRouteTablesResponseBodyTransitRouterRouteTablesTags> tags;
 
         @NameInMap("TransitRouterRouteTableDescription")
         public String transitRouterRouteTableDescription;
@@ -94,6 +127,14 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        public ListTransitRouterRouteTablesResponseBodyTransitRouterRouteTables setTags(java.util.List<ListTransitRouterRouteTablesResponseBodyTransitRouterRouteTablesTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListTransitRouterRouteTablesResponseBodyTransitRouterRouteTablesTags> getTags() {
+            return this.tags;
         }
 
         public ListTransitRouterRouteTablesResponseBodyTransitRouterRouteTables setTransitRouterRouteTableDescription(String transitRouterRouteTableDescription) {

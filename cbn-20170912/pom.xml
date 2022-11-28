@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>cbn20170912</artifactId>
-  <version>1.0.22</version>
+  <version>1.0.23</version>
   <packaging>jar</packaging>
   <name>cbn20170912</name>
   <description>Alibaba Cloud Cloud Enterprise Network (20170912) SDK for Java
@@ -149,6 +149,10 @@
                 <relocation>
                   <pattern>org.apache</pattern>
                   <shadedPattern>com.aliyun.cbn20170912.external.org.apache</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>org.slf4j</pattern>
+                  <shadedPattern>com.aliyun.cbn20170912.external.org.slf4j</shadedPattern>
                 </relocation>
               </relocations>
               <artifactSet>

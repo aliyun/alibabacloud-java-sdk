@@ -75,6 +75,55 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeFlowlogsResponseBodyFlowLogsFlowLogTagsTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeFlowlogsResponseBodyFlowLogsFlowLogTagsTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeFlowlogsResponseBodyFlowLogsFlowLogTagsTag self = new DescribeFlowlogsResponseBodyFlowLogsFlowLogTagsTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeFlowlogsResponseBodyFlowLogsFlowLogTagsTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeFlowlogsResponseBodyFlowLogsFlowLogTagsTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class DescribeFlowlogsResponseBodyFlowLogsFlowLogTags extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<DescribeFlowlogsResponseBodyFlowLogsFlowLogTagsTag> tag;
+
+        public static DescribeFlowlogsResponseBodyFlowLogsFlowLogTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeFlowlogsResponseBodyFlowLogsFlowLogTags self = new DescribeFlowlogsResponseBodyFlowLogsFlowLogTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeFlowlogsResponseBodyFlowLogsFlowLogTags setTag(java.util.List<DescribeFlowlogsResponseBodyFlowLogsFlowLogTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<DescribeFlowlogsResponseBodyFlowLogsFlowLogTagsTag> getTag() {
+            return this.tag;
+        }
+
+    }
+
     public static class DescribeFlowlogsResponseBodyFlowLogsFlowLog extends TeaModel {
         @NameInMap("CenId")
         public String cenId;
@@ -102,6 +151,9 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
 
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("Tags")
+        public DescribeFlowlogsResponseBodyFlowLogsFlowLogTags tags;
 
         public static DescribeFlowlogsResponseBodyFlowLogsFlowLog build(java.util.Map<String, ?> map) throws Exception {
             DescribeFlowlogsResponseBodyFlowLogsFlowLog self = new DescribeFlowlogsResponseBodyFlowLogsFlowLog();
@@ -178,6 +230,14 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public DescribeFlowlogsResponseBodyFlowLogsFlowLog setTags(DescribeFlowlogsResponseBodyFlowLogsFlowLogTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public DescribeFlowlogsResponseBodyFlowLogsFlowLogTags getTags() {
+            return this.tags;
         }
 
     }

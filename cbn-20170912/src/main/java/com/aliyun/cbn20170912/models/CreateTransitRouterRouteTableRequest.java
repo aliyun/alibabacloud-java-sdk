@@ -22,6 +22,9 @@ public class CreateTransitRouterRouteTableRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateTransitRouterRouteTableRequestTag> tag;
+
     @NameInMap("TransitRouterId")
     public String transitRouterId;
 
@@ -84,6 +87,14 @@ public class CreateTransitRouterRouteTableRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
+    public CreateTransitRouterRouteTableRequest setTag(java.util.List<CreateTransitRouterRouteTableRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateTransitRouterRouteTableRequestTag> getTag() {
+        return this.tag;
+    }
+
     public CreateTransitRouterRouteTableRequest setTransitRouterId(String transitRouterId) {
         this.transitRouterId = transitRouterId;
         return this;
@@ -106,6 +117,36 @@ public class CreateTransitRouterRouteTableRequest extends TeaModel {
     }
     public String getTransitRouterRouteTableName() {
         return this.transitRouterRouteTableName;
+    }
+
+    public static class CreateTransitRouterRouteTableRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateTransitRouterRouteTableRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateTransitRouterRouteTableRequestTag self = new CreateTransitRouterRouteTableRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateTransitRouterRouteTableRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateTransitRouterRouteTableRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }
