@@ -30,8 +30,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CancelVideoTaskShrinkRequest request = new CancelVideoTaskShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.app))) {
-            request.appShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.app), "App", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.app)) {
+            request.appShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.app, "App", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -77,8 +77,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.customKeywordsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.customKeywords, "CustomKeywords", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.dialogContext))) {
-            request.dialogContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.dialogContext), "DialogContext", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.dialogContext)) {
+            request.dialogContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.dialogContext, "DialogContext", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -148,8 +148,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         GetVideoTaskInfoShrinkRequest request = new GetVideoTaskInfoShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.app))) {
-            request.appShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.app), "App", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.app)) {
+            request.appShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.app, "App", "json");
         }
 
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -179,8 +179,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         QueryRunningInstanceShrinkRequest request = new QueryRunningInstanceShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.app))) {
-            request.appShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.app), "App", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.app)) {
+            request.appShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.app, "App", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -222,12 +222,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         SendMessageShrinkRequest request = new SendMessageShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.textRequest))) {
-            request.textRequestShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.textRequest), "TextRequest", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.textRequest)) {
+            request.textRequestShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.textRequest, "TextRequest", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.VAMLRequest))) {
-            request.VAMLRequestShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.VAMLRequest), "VAMLRequest", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.VAMLRequest)) {
+            request.VAMLRequestShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.VAMLRequest, "VAMLRequest", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -273,20 +273,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         StartInstanceShrinkRequest request = new StartInstanceShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.app))) {
-            request.appShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.app), "App", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.app)) {
+            request.appShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.app, "App", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.channel))) {
-            request.channelShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.channel), "Channel", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.channel)) {
+            request.channelShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.channel, "Channel", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.commandRequest))) {
-            request.commandRequestShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.commandRequest), "CommandRequest", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.commandRequest)) {
+            request.commandRequestShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.commandRequest, "CommandRequest", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.user))) {
-            request.userShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.user), "User", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.user)) {
+            request.userShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.user, "User", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -369,17 +369,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         SubmitTextTo2DAvatarVideoTaskShrinkRequest request = new SubmitTextTo2DAvatarVideoTaskShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.app))) {
-            request.appShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.app), "App", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.app)) {
+            request.appShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.app, "App", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.videoInfo))) {
-            request.videoInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.videoInfo), "VideoInfo", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.audioInfo)) {
+            request.audioInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.audioInfo, "AudioInfo", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.avatarInfo)) {
+            request.avatarInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.avatarInfo, "AvatarInfo", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.videoInfo)) {
+            request.videoInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.videoInfo, "VideoInfo", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.appShrink)) {
             query.put("App", request.appShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.audioInfoShrink)) {
+            query.put("AudioInfo", request.audioInfoShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.avatarInfoShrink)) {
+            query.put("AvatarInfo", request.avatarInfoShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
@@ -424,12 +440,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         SubmitTextTo3DAvatarVideoTaskShrinkRequest request = new SubmitTextTo3DAvatarVideoTaskShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.app))) {
-            request.appShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.app), "App", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.app)) {
+            request.appShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.app, "App", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.videoInfo))) {
-            request.videoInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.videoInfo), "VideoInfo", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.videoInfo)) {
+            request.videoInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.videoInfo, "VideoInfo", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -479,12 +495,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         SubmitTextToSignVideoTaskShrinkRequest request = new SubmitTextToSignVideoTaskShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.app))) {
-            request.appShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.app), "App", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.app)) {
+            request.appShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.app, "App", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.videoInfo))) {
-            request.videoInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.videoInfo), "VideoInfo", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.videoInfo)) {
+            request.videoInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.videoInfo, "VideoInfo", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
