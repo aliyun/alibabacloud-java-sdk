@@ -175,12 +175,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.externalTravelerListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.externalTravelerList, "external_traveler_list", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.externalTravelerStandard))) {
-            request.externalTravelerStandardShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.externalTravelerStandard), "external_traveler_standard", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.externalTravelerStandard)) {
+            request.externalTravelerStandardShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.externalTravelerStandard, "external_traveler_standard", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.hotelShare))) {
-            request.hotelShareShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.hotelShare), "hotel_share", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.hotelShare)) {
+            request.hotelShareShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.hotelShare, "hotel_share", "json");
         }
 
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.itineraryList)) {
@@ -507,12 +507,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.externalTravelerListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.externalTravelerList, "external_traveler_list", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.externalTravelerStandard))) {
-            request.externalTravelerStandardShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.externalTravelerStandard), "external_traveler_standard", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.externalTravelerStandard)) {
+            request.externalTravelerStandardShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.externalTravelerStandard, "external_traveler_standard", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.hotelShare))) {
-            request.hotelShareShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.hotelShare), "hotel_share", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.hotelShare)) {
+            request.hotelShareShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.hotelShare, "hotel_share", "json");
         }
 
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.itineraryList)) {
@@ -1069,6 +1069,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new CarOrderListQueryResponse());
+    }
+
+    public CarOrderQueryResponse carOrderQuery(CarOrderQueryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        CarOrderQueryHeaders headers = new CarOrderQueryHeaders();
+        return this.carOrderQueryWithOptions(request, headers, runtime);
+    }
+
+    public CarOrderQueryResponse carOrderQueryWithOptions(CarOrderQueryRequest request, CarOrderQueryHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.orderId)) {
+            query.put("order_id", request.orderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subOrderId)) {
+            query.put("sub_order_id", request.subOrderId);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripSoCorpToken)) {
+            realHeaders.put("x-acs-btrip-so-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripSoCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CarOrderQuery"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/car/v1/order"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CarOrderQueryResponse());
     }
 
     public CitySearchResponse citySearch(CitySearchRequest request) throws Exception {
@@ -2119,6 +2163,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new HotelOrderListQueryResponse());
+    }
+
+    public HotelOrderQueryResponse hotelOrderQuery(HotelOrderQueryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        HotelOrderQueryHeaders headers = new HotelOrderQueryHeaders();
+        return this.hotelOrderQueryWithOptions(request, headers, runtime);
+    }
+
+    public HotelOrderQueryResponse hotelOrderQueryWithOptions(HotelOrderQueryRequest request, HotelOrderQueryHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.orderId)) {
+            query.put("order_id", request.orderId);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripSoCorpToken)) {
+            realHeaders.put("x-acs-btrip-so-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripSoCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "HotelOrderQuery"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/hotel/v1/order"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new HotelOrderQueryResponse());
     }
 
     public IeFlightBillSettlementQueryResponse ieFlightBillSettlementQuery(IeFlightBillSettlementQueryRequest request) throws Exception {
