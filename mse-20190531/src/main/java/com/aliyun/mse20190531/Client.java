@@ -299,20 +299,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         AddGatewayRouteShrinkRequest request = new AddGatewayRouteShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.directResponseJSON))) {
-            request.directResponseJSONShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.directResponseJSON), "DirectResponseJSON", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.directResponseJSON)) {
+            request.directResponseJSONShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.directResponseJSON, "DirectResponseJSON", "json");
         }
 
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.fallbackServices)) {
             request.fallbackServicesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.fallbackServices, "FallbackServices", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.predicates))) {
-            request.predicatesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.predicates), "Predicates", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.predicates)) {
+            request.predicatesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.predicates, "Predicates", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.redirectJSON))) {
-            request.redirectJSONShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.redirectJSON), "RedirectJSON", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.redirectJSON)) {
+            request.redirectJSONShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.redirectJSON, "RedirectJSON", "json");
         }
 
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.services)) {
@@ -671,8 +671,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.groupListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.groupList, "GroupList", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.ingressOptionsRequest))) {
-            request.ingressOptionsRequestShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.ingressOptionsRequest), "IngressOptionsRequest", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.ingressOptionsRequest)) {
+            request.ingressOptionsRequestShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.ingressOptionsRequest, "IngressOptionsRequest", "json");
         }
 
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.pathList)) {
@@ -2888,6 +2888,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("GatewayUniqueId", request.gatewayUniqueId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
+            query.put("VpcId", request.vpcId);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -3792,8 +3796,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         ListGatewayShrinkRequest request = new ListGatewayShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.filterParams))) {
-            request.filterParamsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.filterParams), "FilterParams", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.filterParams)) {
+            request.filterParamsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.filterParams, "FilterParams", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3884,8 +3888,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         ListGatewayRouteShrinkRequest request = new ListGatewayRouteShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.filterParams))) {
-            request.filterParamsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.filterParams), "FilterParams", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.filterParams)) {
+            request.filterParamsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.filterParams, "FilterParams", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3939,8 +3943,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         ListGatewayServiceShrinkRequest request = new ListGatewayServiceShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.filterParams))) {
-            request.filterParamsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.filterParams), "FilterParams", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.filterParams)) {
+            request.filterParamsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.filterParams, "FilterParams", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4471,6 +4475,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListTagResourcesResponse listTagResources(ListTagResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listTagResourcesWithOptions(request, runtime);
+    }
+
+    public ListZkTrackResponse listZkTrackWithOptions(ListZkTrackRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListZkTrack"),
+            new TeaPair("version", "2019-05-31"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListZkTrackResponse());
+    }
+
+    public ListZkTrackResponse listZkTrack(ListZkTrackRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listZkTrackWithOptions(request, runtime);
     }
 
     public ListZnodeChildrenResponse listZnodeChildrenWithOptions(ListZnodeChildrenRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -5783,8 +5812,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         UpdateGatewayOptionShrinkRequest request = new UpdateGatewayOptionShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.gatewayOption))) {
-            request.gatewayOptionShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.gatewayOption), "GatewayOption", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.gatewayOption)) {
+            request.gatewayOptionShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.gatewayOption, "GatewayOption", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5830,20 +5859,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         UpdateGatewayRouteShrinkRequest request = new UpdateGatewayRouteShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.directResponseJSON))) {
-            request.directResponseJSONShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.directResponseJSON), "DirectResponseJSON", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.directResponseJSON)) {
+            request.directResponseJSONShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.directResponseJSON, "DirectResponseJSON", "json");
         }
 
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.fallbackServices)) {
             request.fallbackServicesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.fallbackServices, "FallbackServices", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.predicates))) {
-            request.predicatesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.predicates), "Predicates", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.predicates)) {
+            request.predicatesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.predicates, "Predicates", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.redirectJSON))) {
-            request.redirectJSONShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.redirectJSON), "RedirectJSON", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.redirectJSON)) {
+            request.redirectJSONShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.redirectJSON, "RedirectJSON", "json");
         }
 
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.services)) {
@@ -5937,8 +5966,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         UpdateGatewayRouteCORSShrinkRequest request = new UpdateGatewayRouteCORSShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.corsJSON))) {
-            request.corsJSONShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.corsJSON), "CorsJSON", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.corsJSON)) {
+            request.corsJSONShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.corsJSON, "CorsJSON", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6078,8 +6107,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         UpdateGatewayRouteRetryShrinkRequest request = new UpdateGatewayRouteRetryShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.retryJSON))) {
-            request.retryJSONShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.retryJSON), "RetryJSON", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.retryJSON)) {
+            request.retryJSONShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.retryJSON, "RetryJSON", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6129,8 +6158,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         UpdateGatewayRouteTimeoutShrinkRequest request = new UpdateGatewayRouteTimeoutShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.timeoutJSON))) {
-            request.timeoutJSONShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.timeoutJSON), "TimeoutJSON", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.timeoutJSON)) {
+            request.timeoutJSONShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.timeoutJSON, "TimeoutJSON", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6221,8 +6250,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         UpdateGatewayServiceTrafficPolicyShrinkRequest request = new UpdateGatewayServiceTrafficPolicyShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.gatewayTrafficPolicy))) {
-            request.gatewayTrafficPolicyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.gatewayTrafficPolicy), "GatewayTrafficPolicy", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.gatewayTrafficPolicy)) {
+            request.gatewayTrafficPolicyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.gatewayTrafficPolicy, "GatewayTrafficPolicy", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6818,8 +6847,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         UpdateServiceSourceShrinkRequest request = new UpdateServiceSourceShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.ingressOptionsRequest))) {
-            request.ingressOptionsRequestShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.ingressOptionsRequest), "IngressOptionsRequest", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.ingressOptionsRequest)) {
+            request.ingressOptionsRequestShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.ingressOptionsRequest, "IngressOptionsRequest", "json");
         }
 
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.pathList)) {

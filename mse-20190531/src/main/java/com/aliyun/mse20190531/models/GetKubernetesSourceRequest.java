@@ -10,6 +10,9 @@ public class GetKubernetesSourceRequest extends TeaModel {
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
+    @NameInMap("VpcId")
+    public String vpcId;
+
     public static GetKubernetesSourceRequest build(java.util.Map<String, ?> map) throws Exception {
         GetKubernetesSourceRequest self = new GetKubernetesSourceRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class GetKubernetesSourceRequest extends TeaModel {
     }
     public String getGatewayUniqueId() {
         return this.gatewayUniqueId;
+    }
+
+    public GetKubernetesSourceRequest setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    public String getVpcId() {
+        return this.vpcId;
     }
 
 }
