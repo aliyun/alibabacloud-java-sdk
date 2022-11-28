@@ -10,6 +10,9 @@ public class GetUserResponseBody extends TeaModel {
     @NameInMap("createTime")
     public Long createTime;
 
+    @NameInMap("customFields")
+    public java.util.List<GetUserResponseBodyCustomFields> customFields;
+
     @NameInMap("description")
     public String description;
 
@@ -30,6 +33,9 @@ public class GetUserResponseBody extends TeaModel {
 
     @NameInMap("organizationalUnits")
     public java.util.List<GetUserResponseBodyOrganizationalUnits> organizationalUnits;
+
+    @NameInMap("passwordSet")
+    public Boolean passwordSet;
 
     @NameInMap("phoneNumber")
     public String phoneNumber;
@@ -88,6 +94,14 @@ public class GetUserResponseBody extends TeaModel {
         return this.createTime;
     }
 
+    public GetUserResponseBody setCustomFields(java.util.List<GetUserResponseBodyCustomFields> customFields) {
+        this.customFields = customFields;
+        return this;
+    }
+    public java.util.List<GetUserResponseBodyCustomFields> getCustomFields() {
+        return this.customFields;
+    }
+
     public GetUserResponseBody setDescription(String description) {
         this.description = description;
         return this;
@@ -142,6 +156,14 @@ public class GetUserResponseBody extends TeaModel {
     }
     public java.util.List<GetUserResponseBodyOrganizationalUnits> getOrganizationalUnits() {
         return this.organizationalUnits;
+    }
+
+    public GetUserResponseBody setPasswordSet(Boolean passwordSet) {
+        this.passwordSet = passwordSet;
+        return this;
+    }
+    public Boolean getPasswordSet() {
+        return this.passwordSet;
     }
 
     public GetUserResponseBody setPhoneNumber(String phoneNumber) {
@@ -238,6 +260,36 @@ public class GetUserResponseBody extends TeaModel {
     }
     public String getUsername() {
         return this.username;
+    }
+
+    public static class GetUserResponseBodyCustomFields extends TeaModel {
+        @NameInMap("fieldName")
+        public String fieldName;
+
+        @NameInMap("fieldValue")
+        public String fieldValue;
+
+        public static GetUserResponseBodyCustomFields build(java.util.Map<String, ?> map) throws Exception {
+            GetUserResponseBodyCustomFields self = new GetUserResponseBodyCustomFields();
+            return TeaModel.build(map, self);
+        }
+
+        public GetUserResponseBodyCustomFields setFieldName(String fieldName) {
+            this.fieldName = fieldName;
+            return this;
+        }
+        public String getFieldName() {
+            return this.fieldName;
+        }
+
+        public GetUserResponseBodyCustomFields setFieldValue(String fieldValue) {
+            this.fieldValue = fieldValue;
+            return this;
+        }
+        public String getFieldValue() {
+            return this.fieldValue;
+        }
+
     }
 
     public static class GetUserResponseBodyOrganizationalUnits extends TeaModel {
