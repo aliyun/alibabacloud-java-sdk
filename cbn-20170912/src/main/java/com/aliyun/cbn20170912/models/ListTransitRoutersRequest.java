@@ -28,6 +28,9 @@ public class ListTransitRoutersRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("Tag")
+    public java.util.List<ListTransitRoutersRequestTag> tag;
+
     @NameInMap("TransitRouterId")
     public String transitRouterId;
 
@@ -100,12 +103,50 @@ public class ListTransitRoutersRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
+    public ListTransitRoutersRequest setTag(java.util.List<ListTransitRoutersRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<ListTransitRoutersRequestTag> getTag() {
+        return this.tag;
+    }
+
     public ListTransitRoutersRequest setTransitRouterId(String transitRouterId) {
         this.transitRouterId = transitRouterId;
         return this;
     }
     public String getTransitRouterId() {
         return this.transitRouterId;
+    }
+
+    public static class ListTransitRoutersRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListTransitRoutersRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            ListTransitRoutersRequestTag self = new ListTransitRoutersRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public ListTransitRoutersRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListTransitRoutersRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

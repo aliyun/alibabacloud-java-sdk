@@ -22,6 +22,9 @@ public class ListTransitRouterRouteTablesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("Tag")
+    public java.util.List<ListTransitRouterRouteTablesRequestTag> tag;
+
     @NameInMap("TransitRouterId")
     public String transitRouterId;
 
@@ -90,6 +93,14 @@ public class ListTransitRouterRouteTablesRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
+    public ListTransitRouterRouteTablesRequest setTag(java.util.List<ListTransitRouterRouteTablesRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<ListTransitRouterRouteTablesRequestTag> getTag() {
+        return this.tag;
+    }
+
     public ListTransitRouterRouteTablesRequest setTransitRouterId(String transitRouterId) {
         this.transitRouterId = transitRouterId;
         return this;
@@ -128,6 +139,36 @@ public class ListTransitRouterRouteTablesRequest extends TeaModel {
     }
     public String getTransitRouterRouteTableType() {
         return this.transitRouterRouteTableType;
+    }
+
+    public static class ListTransitRouterRouteTablesRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListTransitRouterRouteTablesRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            ListTransitRouterRouteTablesRequestTag self = new ListTransitRouterRouteTablesRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public ListTransitRouterRouteTablesRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListTransitRouterRouteTablesRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

@@ -64,9 +64,42 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
         return this.transitRouterMulticastDomains;
     }
 
+    public static class ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomainsTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomainsTags build(java.util.Map<String, ?> map) throws Exception {
+            ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomainsTags self = new ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomainsTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomainsTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomainsTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomains extends TeaModel {
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("Tags")
+        public java.util.List<ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomainsTags> tags;
 
         @NameInMap("TransitRouterMulticastDomainDescription")
         public String transitRouterMulticastDomainDescription;
@@ -88,6 +121,14 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomains setTags(java.util.List<ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomainsTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomainsTags> getTags() {
+            return this.tags;
         }
 
         public ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomains setTransitRouterMulticastDomainDescription(String transitRouterMulticastDomainDescription) {

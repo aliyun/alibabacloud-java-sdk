@@ -117,6 +117,9 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
         @NameInMap("AutoPublishRouteEnabled")
         public Boolean autoPublishRouteEnabled;
 
+        @NameInMap("ChargeType")
+        public String chargeType;
+
         @NameInMap("CreationTime")
         public String creationTime;
 
@@ -164,6 +167,14 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
         }
         public Boolean getAutoPublishRouteEnabled() {
             return this.autoPublishRouteEnabled;
+        }
+
+        public ListTransitRouterVpnAttachmentsResponseBodyTransitRouterAttachments setChargeType(String chargeType) {
+            this.chargeType = chargeType;
+            return this;
+        }
+        public String getChargeType() {
+            return this.chargeType;
         }
 
         public ListTransitRouterVpnAttachmentsResponseBodyTransitRouterAttachments setCreationTime(String creationTime) {

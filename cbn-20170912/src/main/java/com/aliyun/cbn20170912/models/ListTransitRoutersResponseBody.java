@@ -64,6 +64,36 @@ public class ListTransitRoutersResponseBody extends TeaModel {
         return this.transitRouters;
     }
 
+    public static class ListTransitRoutersResponseBodyTransitRoutersTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListTransitRoutersResponseBodyTransitRoutersTags build(java.util.Map<String, ?> map) throws Exception {
+            ListTransitRoutersResponseBodyTransitRoutersTags self = new ListTransitRoutersResponseBodyTransitRoutersTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListTransitRoutersResponseBodyTransitRoutersTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListTransitRoutersResponseBodyTransitRoutersTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListTransitRoutersResponseBodyTransitRoutersTransitRouterCidrList extends TeaModel {
         @NameInMap("Cidr")
         public String cidr;
@@ -146,6 +176,9 @@ public class ListTransitRoutersResponseBody extends TeaModel {
         @NameInMap("SupportMulticast")
         public Boolean supportMulticast;
 
+        @NameInMap("Tags")
+        public java.util.List<ListTransitRoutersResponseBodyTransitRoutersTags> tags;
+
         @NameInMap("TransitRouterCidrList")
         public java.util.List<ListTransitRoutersResponseBodyTransitRoutersTransitRouterCidrList> transitRouterCidrList;
 
@@ -212,6 +245,14 @@ public class ListTransitRoutersResponseBody extends TeaModel {
         }
         public Boolean getSupportMulticast() {
             return this.supportMulticast;
+        }
+
+        public ListTransitRoutersResponseBodyTransitRouters setTags(java.util.List<ListTransitRoutersResponseBodyTransitRoutersTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListTransitRoutersResponseBodyTransitRoutersTags> getTags() {
+            return this.tags;
         }
 
         public ListTransitRoutersResponseBodyTransitRouters setTransitRouterCidrList(java.util.List<ListTransitRoutersResponseBodyTransitRoutersTransitRouterCidrList> transitRouterCidrList) {
