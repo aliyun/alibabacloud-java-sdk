@@ -107,6 +107,9 @@ public class GetUserAppEnhanceProcessInMsaResponseBody extends TeaModel {
         @NameInMap("AppPackage")
         public String appPackage;
 
+        @NameInMap("AssetsFileList")
+        public java.util.List<String> assetsFileList;
+
         @NameInMap("BeforeMd5")
         public String beforeMd5;
 
@@ -122,8 +125,14 @@ public class GetUserAppEnhanceProcessInMsaResponseBody extends TeaModel {
         @NameInMap("EnhanceRules")
         public java.util.List<String> enhanceRules;
 
+        @NameInMap("EnhancedAssetsFiles")
+        public java.util.List<String> enhancedAssetsFiles;
+
         @NameInMap("EnhancedClasses")
         public java.util.List<String> enhancedClasses;
+
+        @NameInMap("EnhancedSoFiles")
+        public java.util.List<String> enhancedSoFiles;
 
         @NameInMap("Id")
         public Long id;
@@ -133,6 +142,9 @@ public class GetUserAppEnhanceProcessInMsaResponseBody extends TeaModel {
 
         @NameInMap("Progress")
         public Long progress;
+
+        @NameInMap("SoFileList")
+        public java.util.List<String> soFileList;
 
         @NameInMap("Status")
         public Long status;
@@ -183,6 +195,14 @@ public class GetUserAppEnhanceProcessInMsaResponseBody extends TeaModel {
             return this.appPackage;
         }
 
+        public GetUserAppEnhanceProcessInMsaResponseBodyResultContentData setAssetsFileList(java.util.List<String> assetsFileList) {
+            this.assetsFileList = assetsFileList;
+            return this;
+        }
+        public java.util.List<String> getAssetsFileList() {
+            return this.assetsFileList;
+        }
+
         public GetUserAppEnhanceProcessInMsaResponseBodyResultContentData setBeforeMd5(String beforeMd5) {
             this.beforeMd5 = beforeMd5;
             return this;
@@ -223,12 +243,28 @@ public class GetUserAppEnhanceProcessInMsaResponseBody extends TeaModel {
             return this.enhanceRules;
         }
 
+        public GetUserAppEnhanceProcessInMsaResponseBodyResultContentData setEnhancedAssetsFiles(java.util.List<String> enhancedAssetsFiles) {
+            this.enhancedAssetsFiles = enhancedAssetsFiles;
+            return this;
+        }
+        public java.util.List<String> getEnhancedAssetsFiles() {
+            return this.enhancedAssetsFiles;
+        }
+
         public GetUserAppEnhanceProcessInMsaResponseBodyResultContentData setEnhancedClasses(java.util.List<String> enhancedClasses) {
             this.enhancedClasses = enhancedClasses;
             return this;
         }
         public java.util.List<String> getEnhancedClasses() {
             return this.enhancedClasses;
+        }
+
+        public GetUserAppEnhanceProcessInMsaResponseBodyResultContentData setEnhancedSoFiles(java.util.List<String> enhancedSoFiles) {
+            this.enhancedSoFiles = enhancedSoFiles;
+            return this;
+        }
+        public java.util.List<String> getEnhancedSoFiles() {
+            return this.enhancedSoFiles;
         }
 
         public GetUserAppEnhanceProcessInMsaResponseBodyResultContentData setId(Long id) {
@@ -253,6 +289,14 @@ public class GetUserAppEnhanceProcessInMsaResponseBody extends TeaModel {
         }
         public Long getProgress() {
             return this.progress;
+        }
+
+        public GetUserAppEnhanceProcessInMsaResponseBodyResultContentData setSoFileList(java.util.List<String> soFileList) {
+            this.soFileList = soFileList;
+            return this;
+        }
+        public java.util.List<String> getSoFileList() {
+            return this.soFileList;
         }
 
         public GetUserAppEnhanceProcessInMsaResponseBodyResultContentData setStatus(Long status) {

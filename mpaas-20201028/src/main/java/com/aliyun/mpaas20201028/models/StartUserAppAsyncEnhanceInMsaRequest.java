@@ -10,6 +10,9 @@ public class StartUserAppAsyncEnhanceInMsaRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    @NameInMap("AssetsFileList")
+    public String assetsFileList;
+
     @NameInMap("Classes")
     public String classes;
 
@@ -39,6 +42,12 @@ public class StartUserAppAsyncEnhanceInMsaRequest extends TeaModel {
 
     @NameInMap("Root")
     public Integer root;
+
+    @NameInMap("RunMode")
+    public String runMode;
+
+    @NameInMap("SoFileList")
+    public String soFileList;
 
     @NameInMap("TaskType")
     public String taskType;
@@ -71,6 +80,14 @@ public class StartUserAppAsyncEnhanceInMsaRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
+    }
+
+    public StartUserAppAsyncEnhanceInMsaRequest setAssetsFileList(String assetsFileList) {
+        this.assetsFileList = assetsFileList;
+        return this;
+    }
+    public String getAssetsFileList() {
+        return this.assetsFileList;
     }
 
     public StartUserAppAsyncEnhanceInMsaRequest setClasses(String classes) {
@@ -151,6 +168,22 @@ public class StartUserAppAsyncEnhanceInMsaRequest extends TeaModel {
     }
     public Integer getRoot() {
         return this.root;
+    }
+
+    public StartUserAppAsyncEnhanceInMsaRequest setRunMode(String runMode) {
+        this.runMode = runMode;
+        return this;
+    }
+    public String getRunMode() {
+        return this.runMode;
+    }
+
+    public StartUserAppAsyncEnhanceInMsaRequest setSoFileList(String soFileList) {
+        this.soFileList = soFileList;
+        return this;
+    }
+    public String getSoFileList() {
+        return this.soFileList;
     }
 
     public StartUserAppAsyncEnhanceInMsaRequest setTaskType(String taskType) {
