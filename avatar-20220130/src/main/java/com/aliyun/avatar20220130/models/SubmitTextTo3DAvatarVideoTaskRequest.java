@@ -7,6 +7,9 @@ public class SubmitTextTo3DAvatarVideoTaskRequest extends TeaModel {
     @NameInMap("App")
     public SubmitTextTo3DAvatarVideoTaskRequestApp app;
 
+    @NameInMap("AvatarInfo")
+    public SubmitTextTo3DAvatarVideoTaskRequestAvatarInfo avatarInfo;
+
     @NameInMap("TenantId")
     public Long tenantId;
 
@@ -30,6 +33,14 @@ public class SubmitTextTo3DAvatarVideoTaskRequest extends TeaModel {
     }
     public SubmitTextTo3DAvatarVideoTaskRequestApp getApp() {
         return this.app;
+    }
+
+    public SubmitTextTo3DAvatarVideoTaskRequest setAvatarInfo(SubmitTextTo3DAvatarVideoTaskRequestAvatarInfo avatarInfo) {
+        this.avatarInfo = avatarInfo;
+        return this;
+    }
+    public SubmitTextTo3DAvatarVideoTaskRequestAvatarInfo getAvatarInfo() {
+        return this.avatarInfo;
     }
 
     public SubmitTextTo3DAvatarVideoTaskRequest setTenantId(Long tenantId) {
@@ -83,7 +94,40 @@ public class SubmitTextTo3DAvatarVideoTaskRequest extends TeaModel {
 
     }
 
+    public static class SubmitTextTo3DAvatarVideoTaskRequestAvatarInfo extends TeaModel {
+        @NameInMap("Angle")
+        public Integer angle;
+
+        @NameInMap("Locate")
+        public Integer locate;
+
+        public static SubmitTextTo3DAvatarVideoTaskRequestAvatarInfo build(java.util.Map<String, ?> map) throws Exception {
+            SubmitTextTo3DAvatarVideoTaskRequestAvatarInfo self = new SubmitTextTo3DAvatarVideoTaskRequestAvatarInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public SubmitTextTo3DAvatarVideoTaskRequestAvatarInfo setAngle(Integer angle) {
+            this.angle = angle;
+            return this;
+        }
+        public Integer getAngle() {
+            return this.angle;
+        }
+
+        public SubmitTextTo3DAvatarVideoTaskRequestAvatarInfo setLocate(Integer locate) {
+            this.locate = locate;
+            return this;
+        }
+        public Integer getLocate() {
+            return this.locate;
+        }
+
+    }
+
     public static class SubmitTextTo3DAvatarVideoTaskRequestVideoInfo extends TeaModel {
+        @NameInMap("AlphaFormat")
+        public Integer alphaFormat;
+
         @NameInMap("BackgroundImageUrl")
         public String backgroundImageUrl;
 
@@ -99,6 +143,14 @@ public class SubmitTextTo3DAvatarVideoTaskRequest extends TeaModel {
         public static SubmitTextTo3DAvatarVideoTaskRequestVideoInfo build(java.util.Map<String, ?> map) throws Exception {
             SubmitTextTo3DAvatarVideoTaskRequestVideoInfo self = new SubmitTextTo3DAvatarVideoTaskRequestVideoInfo();
             return TeaModel.build(map, self);
+        }
+
+        public SubmitTextTo3DAvatarVideoTaskRequestVideoInfo setAlphaFormat(Integer alphaFormat) {
+            this.alphaFormat = alphaFormat;
+            return this;
+        }
+        public Integer getAlphaFormat() {
+            return this.alphaFormat;
         }
 
         public SubmitTextTo3DAvatarVideoTaskRequestVideoInfo setBackgroundImageUrl(String backgroundImageUrl) {
