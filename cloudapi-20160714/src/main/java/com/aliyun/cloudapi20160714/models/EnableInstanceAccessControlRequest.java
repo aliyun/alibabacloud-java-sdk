@@ -10,6 +10,9 @@ public class EnableInstanceAccessControlRequest extends TeaModel {
     @NameInMap("AclType")
     public String aclType;
 
+    @NameInMap("AddressIPVersion")
+    public String addressIPVersion;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -35,6 +38,14 @@ public class EnableInstanceAccessControlRequest extends TeaModel {
     }
     public String getAclType() {
         return this.aclType;
+    }
+
+    public EnableInstanceAccessControlRequest setAddressIPVersion(String addressIPVersion) {
+        this.addressIPVersion = addressIPVersion;
+        return this;
+    }
+    public String getAddressIPVersion() {
+        return this.addressIPVersion;
     }
 
     public EnableInstanceAccessControlRequest setInstanceId(String instanceId) {

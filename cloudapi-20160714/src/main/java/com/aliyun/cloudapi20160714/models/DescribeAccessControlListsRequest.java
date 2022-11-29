@@ -7,6 +7,9 @@ public class DescribeAccessControlListsRequest extends TeaModel {
     @NameInMap("AclName")
     public String aclName;
 
+    @NameInMap("AddressIPVersion")
+    public String addressIPVersion;
+
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
@@ -27,6 +30,14 @@ public class DescribeAccessControlListsRequest extends TeaModel {
     }
     public String getAclName() {
         return this.aclName;
+    }
+
+    public DescribeAccessControlListsRequest setAddressIPVersion(String addressIPVersion) {
+        this.addressIPVersion = addressIPVersion;
+        return this;
+    }
+    public String getAddressIPVersion() {
+        return this.addressIPVersion;
     }
 
     public DescribeAccessControlListsRequest setPageNumber(Integer pageNumber) {

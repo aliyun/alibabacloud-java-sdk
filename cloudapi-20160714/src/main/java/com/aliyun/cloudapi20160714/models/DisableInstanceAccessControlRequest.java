@@ -7,6 +7,9 @@ public class DisableInstanceAccessControlRequest extends TeaModel {
     @NameInMap("AclId")
     public String aclId;
 
+    @NameInMap("AddressIPVersion")
+    public String addressIPVersion;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -24,6 +27,14 @@ public class DisableInstanceAccessControlRequest extends TeaModel {
     }
     public String getAclId() {
         return this.aclId;
+    }
+
+    public DisableInstanceAccessControlRequest setAddressIPVersion(String addressIPVersion) {
+        this.addressIPVersion = addressIPVersion;
+        return this;
+    }
+    public String getAddressIPVersion() {
+        return this.addressIPVersion;
     }
 
     public DisableInstanceAccessControlRequest setInstanceId(String instanceId) {
