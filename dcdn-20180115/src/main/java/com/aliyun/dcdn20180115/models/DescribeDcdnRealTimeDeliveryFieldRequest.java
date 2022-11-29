@@ -7,9 +7,6 @@ public class DescribeDcdnRealTimeDeliveryFieldRequest extends TeaModel {
     @NameInMap("BusinessType")
     public String businessType;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     public static DescribeDcdnRealTimeDeliveryFieldRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDcdnRealTimeDeliveryFieldRequest self = new DescribeDcdnRealTimeDeliveryFieldRequest();
         return TeaModel.build(map, self);
@@ -21,14 +18,6 @@ public class DescribeDcdnRealTimeDeliveryFieldRequest extends TeaModel {
     }
     public String getBusinessType() {
         return this.businessType;
-    }
-
-    public DescribeDcdnRealTimeDeliveryFieldRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
 }

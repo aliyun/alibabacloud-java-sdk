@@ -10,9 +10,6 @@ public class UpdateDcdnUserRealTimeDeliveryFieldRequest extends TeaModel {
     @NameInMap("Fields")
     public String fields;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     public static UpdateDcdnUserRealTimeDeliveryFieldRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateDcdnUserRealTimeDeliveryFieldRequest self = new UpdateDcdnUserRealTimeDeliveryFieldRequest();
         return TeaModel.build(map, self);
@@ -32,14 +29,6 @@ public class UpdateDcdnUserRealTimeDeliveryFieldRequest extends TeaModel {
     }
     public String getFields() {
         return this.fields;
-    }
-
-    public UpdateDcdnUserRealTimeDeliveryFieldRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
 }

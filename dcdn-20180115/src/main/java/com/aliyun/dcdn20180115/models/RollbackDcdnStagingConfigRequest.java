@@ -7,9 +7,6 @@ public class RollbackDcdnStagingConfigRequest extends TeaModel {
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     public static RollbackDcdnStagingConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         RollbackDcdnStagingConfigRequest self = new RollbackDcdnStagingConfigRequest();
         return TeaModel.build(map, self);
@@ -21,14 +18,6 @@ public class RollbackDcdnStagingConfigRequest extends TeaModel {
     }
     public String getDomainName() {
         return this.domainName;
-    }
-
-    public RollbackDcdnStagingConfigRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
 }

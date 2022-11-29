@@ -10,9 +10,6 @@ public class DescribeDcdnDomainIpaConnDataRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("SplitBy")
     public String splitBy;
 
@@ -38,14 +35,6 @@ public class DescribeDcdnDomainIpaConnDataRequest extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
-    }
-
-    public DescribeDcdnDomainIpaConnDataRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeDcdnDomainIpaConnDataRequest setSplitBy(String splitBy) {

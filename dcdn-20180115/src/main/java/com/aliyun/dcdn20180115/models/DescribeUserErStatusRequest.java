@@ -7,9 +7,6 @@ public class DescribeUserErStatusRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     public static DescribeUserErStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeUserErStatusRequest self = new DescribeUserErStatusRequest();
         return TeaModel.build(map, self);
@@ -21,14 +18,6 @@ public class DescribeUserErStatusRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    public DescribeUserErStatusRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
 }
