@@ -4,7 +4,6 @@ package com.aliyun.serverless20210924.models;
 import com.aliyun.tea.*;
 
 public class ListTemplatesRequest extends TeaModel {
-    // The type of the applicable resource for this template. Must be either "Environment" or "Service".
     @NameInMap("type")
     public String type;
 

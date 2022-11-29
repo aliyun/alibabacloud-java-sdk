@@ -4,35 +4,27 @@ package com.aliyun.serverless20210924.models;
 import com.aliyun.tea.*;
 
 public class TemplateRevision extends TeaModel {
-    // A time representing the server time when this object was created. Clients may not set this value. Populated by the system. Read-only.
     @NameInMap("createdTime")
     public String createdTime;
 
-    // The kind of the resource.
     @NameInMap("kind")
     public String kind;
 
-    // Specification of the desired behavior of the Template.
     @NameInMap("spec")
     public TemplateSpec spec;
 
-    // Most recently observed status of the Template. This data may not be up-to-date. Populated by the system. Read-only.
     @NameInMap("status")
     public TemplateStatus status;
 
-    // The generation of the template.
     @NameInMap("templateGeneration")
     public Integer templateGeneration;
 
-    // The name of a template.
     @NameInMap("templateName")
     public String templateName;
 
-    // The version of a template.
     @NameInMap("templateVersion")
     public Integer templateVersion;
 
-    // Main user ID of an Aliyun account.
     @NameInMap("uid")
     public String uid;
 

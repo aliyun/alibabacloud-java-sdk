@@ -4,27 +4,21 @@ package com.aliyun.serverless20210924.models;
 import com.aliyun.tea.*;
 
 public class InputVariable extends TeaModel {
-    // A default value (as JSON string) which then makes the variable optional.
     @NameInMap("defaultJson")
     public String defaultJson;
 
-    // This specifies the input variable's documentation.
     @NameInMap("description")
     public String description;
 
-    // The identifier of an input variable. Identifiers can contain letters, digits, underscores (_), and hyphens (-). The first character of an identifier must not be a digit, to avoid ambiguity with literal numbers.
     @NameInMap("name")
     public String name;
 
-    // Specify if the variable can be null. True by default.
     @NameInMap("nullable")
     public Boolean nullable;
 
-    // Specify if the variable contains sensitive material. False by default.
     @NameInMap("sensitive")
     public Boolean sensitive;
 
-    // This argument specifies what value types are accepted for the variable.
     @NameInMap("type")
     public String type;
 

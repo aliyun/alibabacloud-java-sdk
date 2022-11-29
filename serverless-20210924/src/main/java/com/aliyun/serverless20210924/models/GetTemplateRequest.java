@@ -4,7 +4,6 @@ package com.aliyun.serverless20210924.models;
 import com.aliyun.tea.*;
 
 public class GetTemplateRequest extends TeaModel {
-    // The major version of the template. "1" by default.
     @NameInMap("version")
     public Integer version;
 

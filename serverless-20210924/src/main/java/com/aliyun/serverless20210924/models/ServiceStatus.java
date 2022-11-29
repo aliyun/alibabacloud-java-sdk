@@ -4,23 +4,18 @@ package com.aliyun.serverless20210924.models;
 import com.aliyun.tea.*;
 
 public class ServiceStatus extends TeaModel {
-    // A human-readable message indicating details about why the Service is in this condition
     @NameInMap("message")
     public String message;
 
-    // The most recent generation observed
     @NameInMap("observedGeneration")
     public Integer observedGeneration;
 
-    // Time when the last update of the status is observed
     @NameInMap("observedTime")
     public String observedTime;
 
-    // Details of current state of the Service
     @NameInMap("output")
     public java.util.Map<String, ?> output;
 
-    // A simple, high-level summary of where the Service is in its lifecycle
     @NameInMap("phase")
     public String phase;
 

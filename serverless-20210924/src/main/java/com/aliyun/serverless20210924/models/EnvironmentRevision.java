@@ -4,31 +4,24 @@ package com.aliyun.serverless20210924.models;
 import com.aliyun.tea.*;
 
 public class EnvironmentRevision extends TeaModel {
-    // A time representing the server time when this object was created. Clients may not set this value. Populated by the system. Read-only.
     @NameInMap("createdTime")
     public String createdTime;
 
-    // The generation of the environment.
     @NameInMap("environmentGeneration")
     public Integer environmentGeneration;
 
-    // The name of an environment.
     @NameInMap("environmentName")
     public String environmentName;
 
-    // The kind of the resource.
     @NameInMap("kind")
     public String kind;
 
-    // Specification of the desired behavior of the Environment.
     @NameInMap("spec")
     public EnvironmentSpec spec;
 
-    // Most recently observed status of the Environment. This data may not be up-to-date. Populated by the system. Read-only.
     @NameInMap("status")
     public EnvironmentStatus status;
 
-    // Main user ID of an Aliyun account.
     @NameInMap("uid")
     public String uid;
 

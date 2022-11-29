@@ -4,11 +4,9 @@ package com.aliyun.serverless20210924.models;
 import com.aliyun.tea.*;
 
 public class ListTemplateRevisionsRequest extends TeaModel {
-    // The name of a template.
     @NameInMap("templateName")
     public String templateName;
 
-    // The major version of the template. "1" by default.
     @NameInMap("templateVersion")
     public Integer templateVersion;
 

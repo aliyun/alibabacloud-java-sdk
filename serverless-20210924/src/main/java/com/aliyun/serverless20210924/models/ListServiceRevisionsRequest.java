@@ -4,7 +4,6 @@ package com.aliyun.serverless20210924.models;
 import com.aliyun.tea.*;
 
 public class ListServiceRevisionsRequest extends TeaModel {
-    // The name of a service.
     @NameInMap("serviceName")
     public String serviceName;
 

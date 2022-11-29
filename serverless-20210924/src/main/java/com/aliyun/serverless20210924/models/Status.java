@@ -4,19 +4,15 @@ package com.aliyun.serverless20210924.models;
 import com.aliyun.tea.*;
 
 public class Status extends TeaModel {
-    // A machine-readable description of why this operation is in the failure status. If this value is empty there is no information available.
     @NameInMap("code")
     public String code;
 
-    // A human-readable description of the status of this operation.
     @NameInMap("message")
     public String message;
 
-    // ID of the request. May be null.
     @NameInMap("requestId")
     public String requestId;
 
-    // Whether the operation is successful.
     @NameInMap("success")
     public Boolean success;
 

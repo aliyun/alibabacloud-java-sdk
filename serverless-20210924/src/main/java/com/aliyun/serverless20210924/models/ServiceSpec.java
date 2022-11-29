@@ -4,23 +4,18 @@ package com.aliyun.serverless20210924.models;
 import com.aliyun.tea.*;
 
 public class ServiceSpec extends TeaModel {
-    // The name of the associated Environment for the Service
     @NameInMap("environment")
     public String environment;
 
-    // The ARN (Aliyun Resource Name) of the role designated by a user to allow the system to manage his Aliyun resources. If null, use roleArn of role AliyunFCDefaultRole.
     @NameInMap("roleArn")
     public String roleArn;
 
-    // The name of the template for the Service
     @NameInMap("template")
     public String template;
 
-    // Variables for specified template
     @NameInMap("templateVariables")
     public java.util.Map<String, ?> templateVariables;
 
-    // The major version of the template. "1" by default.
     @NameInMap("templateVersion")
     public Integer templateVersion;
 

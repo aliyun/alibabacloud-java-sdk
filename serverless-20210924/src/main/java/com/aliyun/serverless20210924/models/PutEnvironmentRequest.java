@@ -4,7 +4,6 @@ package com.aliyun.serverless20210924.models;
 import com.aliyun.tea.*;
 
 public class PutEnvironmentRequest extends TeaModel {
-    // An environment for serverless deployments
     @NameInMap("body")
     public Environment body;
 
