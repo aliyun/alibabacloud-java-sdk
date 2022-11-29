@@ -32,6 +32,9 @@ public class GetAggregateResourceCountsGroupByResourceTypeResponseBody extends T
     }
 
     public static class GetAggregateResourceCountsGroupByResourceTypeResponseBodyDiscoveredResourceCountsSummary extends TeaModel {
+        @NameInMap("GroupName")
+        public String groupName;
+
         @NameInMap("ResourceCount")
         public Long resourceCount;
 
@@ -41,6 +44,14 @@ public class GetAggregateResourceCountsGroupByResourceTypeResponseBody extends T
         public static GetAggregateResourceCountsGroupByResourceTypeResponseBodyDiscoveredResourceCountsSummary build(java.util.Map<String, ?> map) throws Exception {
             GetAggregateResourceCountsGroupByResourceTypeResponseBodyDiscoveredResourceCountsSummary self = new GetAggregateResourceCountsGroupByResourceTypeResponseBodyDiscoveredResourceCountsSummary();
             return TeaModel.build(map, self);
+        }
+
+        public GetAggregateResourceCountsGroupByResourceTypeResponseBodyDiscoveredResourceCountsSummary setGroupName(String groupName) {
+            this.groupName = groupName;
+            return this;
+        }
+        public String getGroupName() {
+            return this.groupName;
         }
 
         public GetAggregateResourceCountsGroupByResourceTypeResponseBodyDiscoveredResourceCountsSummary setResourceCount(Long resourceCount) {
