@@ -49,6 +49,9 @@ public class DeployApplicationRequest extends TeaModel {
     @NameInMap("Envs")
     public String envs;
 
+    @NameInMap("ImagePullSecrets")
+    public String imagePullSecrets;
+
     @NameInMap("ImageUrl")
     public String imageUrl;
 
@@ -120,6 +123,12 @@ public class DeployApplicationRequest extends TeaModel {
 
     @NameInMap("PvtzDiscoverySvc")
     public String pvtzDiscoverySvc;
+
+    @NameInMap("Python")
+    public String python;
+
+    @NameInMap("PythonModules")
+    public String pythonModules;
 
     @NameInMap("Readiness")
     public String readiness;
@@ -268,6 +277,14 @@ public class DeployApplicationRequest extends TeaModel {
     }
     public String getEnvs() {
         return this.envs;
+    }
+
+    public DeployApplicationRequest setImagePullSecrets(String imagePullSecrets) {
+        this.imagePullSecrets = imagePullSecrets;
+        return this;
+    }
+    public String getImagePullSecrets() {
+        return this.imagePullSecrets;
     }
 
     public DeployApplicationRequest setImageUrl(String imageUrl) {
@@ -460,6 +477,22 @@ public class DeployApplicationRequest extends TeaModel {
     }
     public String getPvtzDiscoverySvc() {
         return this.pvtzDiscoverySvc;
+    }
+
+    public DeployApplicationRequest setPython(String python) {
+        this.python = python;
+        return this;
+    }
+    public String getPython() {
+        return this.python;
+    }
+
+    public DeployApplicationRequest setPythonModules(String pythonModules) {
+        this.pythonModules = pythonModules;
+        return this;
+    }
+    public String getPythonModules() {
+        return this.pythonModules;
     }
 
     public DeployApplicationRequest setReadiness(String readiness) {

@@ -90,6 +90,9 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         @NameInMap("AccessKey")
         public String accessKey;
 
+        @NameInMap("AddressServerHost")
+        public String addressServerHost;
+
         @NameInMap("NamespaceDescription")
         public String namespaceDescription;
 
@@ -119,6 +122,14 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         }
         public String getAccessKey() {
             return this.accessKey;
+        }
+
+        public DescribeNamespacesResponseBodyDataNamespaces setAddressServerHost(String addressServerHost) {
+            this.addressServerHost = addressServerHost;
+            return this;
+        }
+        public String getAddressServerHost() {
+            return this.addressServerHost;
         }
 
         public DescribeNamespacesResponseBodyDataNamespaces setNamespaceDescription(String namespaceDescription) {

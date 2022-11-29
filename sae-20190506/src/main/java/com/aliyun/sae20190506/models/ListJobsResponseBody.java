@@ -163,6 +163,12 @@ public class ListJobsResponseBody extends TeaModel {
         @NameInMap("Instances")
         public Integer instances;
 
+        @NameInMap("LastChangeorderState")
+        public String lastChangeorderState;
+
+        @NameInMap("LastJobState")
+        public String lastJobState;
+
         @NameInMap("LastStartTime")
         public Long lastStartTime;
 
@@ -254,6 +260,22 @@ public class ListJobsResponseBody extends TeaModel {
         }
         public Integer getInstances() {
             return this.instances;
+        }
+
+        public ListJobsResponseBodyDataApplications setLastChangeorderState(String lastChangeorderState) {
+            this.lastChangeorderState = lastChangeorderState;
+            return this;
+        }
+        public String getLastChangeorderState() {
+            return this.lastChangeorderState;
+        }
+
+        public ListJobsResponseBodyDataApplications setLastJobState(String lastJobState) {
+            this.lastJobState = lastJobState;
+            return this;
+        }
+        public String getLastJobState() {
+            return this.lastJobState;
         }
 
         public ListJobsResponseBodyDataApplications setLastStartTime(Long lastStartTime) {

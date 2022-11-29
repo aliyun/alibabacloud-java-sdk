@@ -46,6 +46,9 @@ public class CreateApplicationRequest extends TeaModel {
     @NameInMap("Envs")
     public String envs;
 
+    @NameInMap("ImagePullSecrets")
+    public String imagePullSecrets;
+
     @NameInMap("ImageUrl")
     public String imageUrl;
 
@@ -123,6 +126,12 @@ public class CreateApplicationRequest extends TeaModel {
 
     @NameInMap("PvtzDiscoverySvc")
     public String pvtzDiscoverySvc;
+
+    @NameInMap("Python")
+    public String python;
+
+    @NameInMap("PythonModules")
+    public String pythonModules;
 
     @NameInMap("Readiness")
     public String readiness;
@@ -272,6 +281,14 @@ public class CreateApplicationRequest extends TeaModel {
     }
     public String getEnvs() {
         return this.envs;
+    }
+
+    public CreateApplicationRequest setImagePullSecrets(String imagePullSecrets) {
+        this.imagePullSecrets = imagePullSecrets;
+        return this;
+    }
+    public String getImagePullSecrets() {
+        return this.imagePullSecrets;
     }
 
     public CreateApplicationRequest setImageUrl(String imageUrl) {
@@ -480,6 +497,22 @@ public class CreateApplicationRequest extends TeaModel {
     }
     public String getPvtzDiscoverySvc() {
         return this.pvtzDiscoverySvc;
+    }
+
+    public CreateApplicationRequest setPython(String python) {
+        this.python = python;
+        return this;
+    }
+    public String getPython() {
+        return this.python;
+    }
+
+    public CreateApplicationRequest setPythonModules(String pythonModules) {
+        this.pythonModules = pythonModules;
+        return this;
+    }
+    public String getPythonModules() {
+        return this.pythonModules;
     }
 
     public CreateApplicationRequest setReadiness(String readiness) {

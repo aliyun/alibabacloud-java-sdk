@@ -299,6 +299,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @NameInMap("Envs")
         public String envs;
 
+        @NameInMap("ImagePullSecrets")
+        public String imagePullSecrets;
+
         @NameInMap("ImageUrl")
         public String imageUrl;
 
@@ -385,6 +388,12 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
 
         @NameInMap("PvtzDiscovery")
         public String pvtzDiscovery;
+
+        @NameInMap("Python")
+        public String python;
+
+        @NameInMap("PythonModules")
+        public String pythonModules;
 
         @NameInMap("Readiness")
         public String readiness;
@@ -559,6 +568,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
         public String getEnvs() {
             return this.envs;
+        }
+
+        public DescribeApplicationConfigResponseBodyData setImagePullSecrets(String imagePullSecrets) {
+            this.imagePullSecrets = imagePullSecrets;
+            return this;
+        }
+        public String getImagePullSecrets() {
+            return this.imagePullSecrets;
         }
 
         public DescribeApplicationConfigResponseBodyData setImageUrl(String imageUrl) {
@@ -791,6 +808,22 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
         public String getPvtzDiscovery() {
             return this.pvtzDiscovery;
+        }
+
+        public DescribeApplicationConfigResponseBodyData setPython(String python) {
+            this.python = python;
+            return this;
+        }
+        public String getPython() {
+            return this.python;
+        }
+
+        public DescribeApplicationConfigResponseBodyData setPythonModules(String pythonModules) {
+            this.pythonModules = pythonModules;
+            return this;
+        }
+        public String getPythonModules() {
+            return this.pythonModules;
         }
 
         public DescribeApplicationConfigResponseBodyData setReadiness(String readiness) {
