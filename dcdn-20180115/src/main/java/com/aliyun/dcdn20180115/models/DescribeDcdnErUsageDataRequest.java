@@ -7,9 +7,6 @@ public class DescribeDcdnErUsageDataRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("RoutineID")
     public String routineID;
 
@@ -33,14 +30,6 @@ public class DescribeDcdnErUsageDataRequest extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
-    }
-
-    public DescribeDcdnErUsageDataRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeDcdnErUsageDataRequest setRoutineID(String routineID) {

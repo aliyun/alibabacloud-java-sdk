@@ -19,9 +19,6 @@ public class DescribeDcdnBgpBpsDataRequest extends TeaModel {
     @NameInMap("Isp")
     public String isp;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("StartTime")
     public String startTime;
 
@@ -68,14 +65,6 @@ public class DescribeDcdnBgpBpsDataRequest extends TeaModel {
     }
     public String getIsp() {
         return this.isp;
-    }
-
-    public DescribeDcdnBgpBpsDataRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeDcdnBgpBpsDataRequest setStartTime(String startTime) {

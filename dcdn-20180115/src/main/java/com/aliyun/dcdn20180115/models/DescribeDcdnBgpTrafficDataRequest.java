@@ -13,9 +13,6 @@ public class DescribeDcdnBgpTrafficDataRequest extends TeaModel {
     @NameInMap("Isp")
     public String isp;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("StartTime")
     public String startTime;
 
@@ -46,14 +43,6 @@ public class DescribeDcdnBgpTrafficDataRequest extends TeaModel {
     }
     public String getIsp() {
         return this.isp;
-    }
-
-    public DescribeDcdnBgpTrafficDataRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeDcdnBgpTrafficDataRequest setStartTime(String startTime) {
