@@ -4,27 +4,21 @@ package com.aliyun.serverless20210924.models;
 import com.aliyun.tea.*;
 
 public class TemplateStatus extends TeaModel {
-    // A human-readable message indicating details about why the Template is in this condition.
     @NameInMap("message")
     public String message;
 
-    // The most recent generation observed.
     @NameInMap("observedGeneration")
     public Integer observedGeneration;
 
-    // Time when the last update of the status is observed.
     @NameInMap("observedTime")
     public String observedTime;
 
-    // The definition of output values of the template parsed from the template content.
     @NameInMap("outputs")
     public java.util.List<OutputValue> outputs;
 
-    // A simple, high-level summary of where the Template is in its lifecycle.
     @NameInMap("phase")
     public String phase;
 
-    // The definition of input variables of the template parsed from the template content.
     @NameInMap("variables")
     public java.util.List<InputVariable> variables;
 

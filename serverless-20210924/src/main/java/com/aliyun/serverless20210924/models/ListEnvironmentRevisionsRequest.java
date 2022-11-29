@@ -4,7 +4,6 @@ package com.aliyun.serverless20210924.models;
 import com.aliyun.tea.*;
 
 public class ListEnvironmentRevisionsRequest extends TeaModel {
-    // The name of an environment.
     @NameInMap("environmentName")
     public String environmentName;
 

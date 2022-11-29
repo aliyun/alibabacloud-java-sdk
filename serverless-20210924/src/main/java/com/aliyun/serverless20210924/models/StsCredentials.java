@@ -4,23 +4,18 @@ package com.aliyun.serverless20210924.models;
 import com.aliyun.tea.*;
 
 public class StsCredentials extends TeaModel {
-    // Access key ID
     @NameInMap("accessKeyId")
     public String accessKeyId;
 
-    // Expiration time of the credentials
     @NameInMap("expirationTime")
     public String expirationTime;
 
-    // The kind of the credentials
     @NameInMap("kind")
     public String kind;
 
-    // Secret access key
     @NameInMap("secretAccessKey")
     public String secretAccessKey;
 
-    // Token
     @NameInMap("token")
     public String token;
 

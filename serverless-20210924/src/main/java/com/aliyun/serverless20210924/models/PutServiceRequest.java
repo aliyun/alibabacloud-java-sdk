@@ -4,7 +4,6 @@ package com.aliyun.serverless20210924.models;
 import com.aliyun.tea.*;
 
 public class PutServiceRequest extends TeaModel {
-    // A service for serverless deployments
     @NameInMap("body")
     public Service body;
 

@@ -4,39 +4,30 @@ package com.aliyun.serverless20210924.models;
 import com.aliyun.tea.*;
 
 public class Environment extends TeaModel {
-    // A time representing the server time when this object was created. Clients may not set this value. Populated by the system. Read-only.
     @NameInMap("createdTime")
     public String createdTime;
 
-    // Date and time at which a deletion is requested by the user. Null when the resource has not been requested for deletion. This field is set by the server, not directly settable by a client. Populated by the system. Read-only.
     @NameInMap("deletionTime")
     public String deletionTime;
 
-    // Human-readable description of the resource
     @NameInMap("description")
     public String description;
 
-    // A sequence number representing a specific generation of the desired state. Populated by the system. Read-only.
     @NameInMap("generation")
     public Integer generation;
 
-    // The kind of the resource
     @NameInMap("kind")
     public String kind;
 
-    // Name must be unique within a namespace. Is required when creating resources. Cannot be updated.
     @NameInMap("name")
     public String name;
 
-    // Specification of the desired behavior of the Environment.
     @NameInMap("spec")
     public EnvironmentSpec spec;
 
-    // Most recently observed status of the Environment. This data may not be up-to-date. Populated by the system. Read-only.
     @NameInMap("status")
     public EnvironmentStatus status;
 
-    // Main user ID of an Aliyun account
     @NameInMap("uid")
     public String uid;
 
