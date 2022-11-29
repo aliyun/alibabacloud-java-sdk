@@ -4,15 +4,40 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeARMServerInstancesResponseBody extends TeaModel {
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Servers")
     public java.util.List<DescribeARMServerInstancesResponseBodyServers> servers;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     public static DescribeARMServerInstancesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeARMServerInstancesResponseBody self = new DescribeARMServerInstancesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeARMServerInstancesResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeARMServerInstancesResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public DescribeARMServerInstancesResponseBody setRequestId(String requestId) {
@@ -29,6 +54,14 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
     }
     public java.util.List<DescribeARMServerInstancesResponseBodyServers> getServers() {
         return this.servers;
+    }
+
+    public DescribeARMServerInstancesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public static class DescribeARMServerInstancesResponseBodyServersAICInstancesNetworkAttributes extends TeaModel {
