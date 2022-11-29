@@ -10,6 +10,9 @@ public class DescribeCACertificateResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("Years")
+    public Integer years;
+
     public static DescribeCACertificateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCACertificateResponseBody self = new DescribeCACertificateResponseBody();
         return TeaModel.build(map, self);
@@ -31,6 +34,14 @@ public class DescribeCACertificateResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DescribeCACertificateResponseBody setYears(Integer years) {
+        this.years = years;
+        return this;
+    }
+    public Integer getYears() {
+        return this.years;
+    }
+
     public static class DescribeCACertificateResponseBodyCertificate extends TeaModel {
         @NameInMap("AfterDate")
         public Long afterDate;
@@ -49,6 +60,12 @@ public class DescribeCACertificateResponseBody extends TeaModel {
 
         @NameInMap("CountryCode")
         public String countryCode;
+
+        @NameInMap("CrlStatus")
+        public String crlStatus;
+
+        @NameInMap("CrlUrl")
+        public String crlUrl;
 
         @NameInMap("Identifier")
         public String identifier;
@@ -94,9 +111,6 @@ public class DescribeCACertificateResponseBody extends TeaModel {
 
         @NameInMap("X509Certificate")
         public String x509Certificate;
-
-        @NameInMap("Years")
-        public Integer years;
 
         public static DescribeCACertificateResponseBodyCertificate build(java.util.Map<String, ?> map) throws Exception {
             DescribeCACertificateResponseBodyCertificate self = new DescribeCACertificateResponseBodyCertificate();
@@ -149,6 +163,22 @@ public class DescribeCACertificateResponseBody extends TeaModel {
         }
         public String getCountryCode() {
             return this.countryCode;
+        }
+
+        public DescribeCACertificateResponseBodyCertificate setCrlStatus(String crlStatus) {
+            this.crlStatus = crlStatus;
+            return this;
+        }
+        public String getCrlStatus() {
+            return this.crlStatus;
+        }
+
+        public DescribeCACertificateResponseBodyCertificate setCrlUrl(String crlUrl) {
+            this.crlUrl = crlUrl;
+            return this;
+        }
+        public String getCrlUrl() {
+            return this.crlUrl;
         }
 
         public DescribeCACertificateResponseBodyCertificate setIdentifier(String identifier) {
@@ -269,14 +299,6 @@ public class DescribeCACertificateResponseBody extends TeaModel {
         }
         public String getX509Certificate() {
             return this.x509Certificate;
-        }
-
-        public DescribeCACertificateResponseBodyCertificate setYears(Integer years) {
-            this.years = years;
-            return this;
-        }
-        public Integer getYears() {
-            return this.years;
         }
 
     }

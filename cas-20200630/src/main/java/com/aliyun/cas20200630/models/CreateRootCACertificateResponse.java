@@ -8,6 +8,10 @@ public class CreateRootCACertificateResponse extends TeaModel {
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    public Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     public CreateRootCACertificateResponseBody body;
@@ -23,6 +27,14 @@ public class CreateRootCACertificateResponse extends TeaModel {
     }
     public java.util.Map<String, String> getHeaders() {
         return this.headers;
+    }
+
+    public CreateRootCACertificateResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
     public CreateRootCACertificateResponse setBody(CreateRootCACertificateResponseBody body) {

@@ -20,7 +20,7 @@ public class ListClientCertificateResponseBody extends TeaModel {
     public Integer showSize;
 
     @NameInMap("TotalCount")
-    public Integer totalCount;
+    public Long totalCount;
 
     public static ListClientCertificateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListClientCertificateResponseBody self = new ListClientCertificateResponseBody();
@@ -67,11 +67,11 @@ public class ListClientCertificateResponseBody extends TeaModel {
         return this.showSize;
     }
 
-    public ListClientCertificateResponseBody setTotalCount(Integer totalCount) {
+    public ListClientCertificateResponseBody setTotalCount(Long totalCount) {
         this.totalCount = totalCount;
         return this;
     }
-    public Integer getTotalCount() {
+    public Long getTotalCount() {
         return this.totalCount;
     }
 

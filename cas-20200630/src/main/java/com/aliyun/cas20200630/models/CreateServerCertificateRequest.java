@@ -16,14 +16,41 @@ public class CreateServerCertificateRequest extends TeaModel {
     @NameInMap("CommonName")
     public String commonName;
 
+    @NameInMap("Country")
+    public String country;
+
+    @NameInMap("Csr")
+    public String csr;
+
     @NameInMap("Days")
     public Integer days;
 
     @NameInMap("Domain")
     public String domain;
 
+    @NameInMap("Immediately")
+    public Integer immediately;
+
+    @NameInMap("Locality")
+    public String locality;
+
+    @NameInMap("Months")
+    public Integer months;
+
+    @NameInMap("Organization")
+    public String organization;
+
+    @NameInMap("OrganizationUnit")
+    public String organizationUnit;
+
     @NameInMap("ParentIdentifier")
     public String parentIdentifier;
+
+    @NameInMap("State")
+    public String state;
+
+    @NameInMap("Years")
+    public Integer years;
 
     public static CreateServerCertificateRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateServerCertificateRequest self = new CreateServerCertificateRequest();
@@ -62,6 +89,22 @@ public class CreateServerCertificateRequest extends TeaModel {
         return this.commonName;
     }
 
+    public CreateServerCertificateRequest setCountry(String country) {
+        this.country = country;
+        return this;
+    }
+    public String getCountry() {
+        return this.country;
+    }
+
+    public CreateServerCertificateRequest setCsr(String csr) {
+        this.csr = csr;
+        return this;
+    }
+    public String getCsr() {
+        return this.csr;
+    }
+
     public CreateServerCertificateRequest setDays(Integer days) {
         this.days = days;
         return this;
@@ -78,12 +121,68 @@ public class CreateServerCertificateRequest extends TeaModel {
         return this.domain;
     }
 
+    public CreateServerCertificateRequest setImmediately(Integer immediately) {
+        this.immediately = immediately;
+        return this;
+    }
+    public Integer getImmediately() {
+        return this.immediately;
+    }
+
+    public CreateServerCertificateRequest setLocality(String locality) {
+        this.locality = locality;
+        return this;
+    }
+    public String getLocality() {
+        return this.locality;
+    }
+
+    public CreateServerCertificateRequest setMonths(Integer months) {
+        this.months = months;
+        return this;
+    }
+    public Integer getMonths() {
+        return this.months;
+    }
+
+    public CreateServerCertificateRequest setOrganization(String organization) {
+        this.organization = organization;
+        return this;
+    }
+    public String getOrganization() {
+        return this.organization;
+    }
+
+    public CreateServerCertificateRequest setOrganizationUnit(String organizationUnit) {
+        this.organizationUnit = organizationUnit;
+        return this;
+    }
+    public String getOrganizationUnit() {
+        return this.organizationUnit;
+    }
+
     public CreateServerCertificateRequest setParentIdentifier(String parentIdentifier) {
         this.parentIdentifier = parentIdentifier;
         return this;
     }
     public String getParentIdentifier() {
         return this.parentIdentifier;
+    }
+
+    public CreateServerCertificateRequest setState(String state) {
+        this.state = state;
+        return this;
+    }
+    public String getState() {
+        return this.state;
+    }
+
+    public CreateServerCertificateRequest setYears(Integer years) {
+        this.years = years;
+        return this;
+    }
+    public Integer getYears() {
+        return this.years;
     }
 
 }

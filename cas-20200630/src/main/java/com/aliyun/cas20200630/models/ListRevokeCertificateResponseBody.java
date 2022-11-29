@@ -20,7 +20,7 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
     public Integer showSize;
 
     @NameInMap("TotalCount")
-    public Integer totalCount;
+    public Long totalCount;
 
     public static ListRevokeCertificateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListRevokeCertificateResponseBody self = new ListRevokeCertificateResponseBody();
@@ -67,11 +67,11 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
         return this.showSize;
     }
 
-    public ListRevokeCertificateResponseBody setTotalCount(Integer totalCount) {
+    public ListRevokeCertificateResponseBody setTotalCount(Long totalCount) {
         this.totalCount = totalCount;
         return this;
     }
-    public Integer getTotalCount() {
+    public Long getTotalCount() {
         return this.totalCount;
     }
 
@@ -84,6 +84,9 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
 
         @NameInMap("BeforeDate")
         public String beforeDate;
+
+        @NameInMap("CertificateType")
+        public String certificateType;
 
         @NameInMap("CommonName")
         public String commonName;
@@ -109,6 +112,9 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
         @NameInMap("OrganizationUnit")
         public String organizationUnit;
 
+        @NameInMap("ParentIdentifier")
+        public String parentIdentifier;
+
         @NameInMap("RevokeDate")
         public String revokeDate;
 
@@ -126,6 +132,9 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
 
         @NameInMap("State")
         public String state;
+
+        @NameInMap("Status")
+        public String status;
 
         @NameInMap("SubjectDN")
         public String subjectDN;
@@ -157,6 +166,14 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
         }
         public String getBeforeDate() {
             return this.beforeDate;
+        }
+
+        public ListRevokeCertificateResponseBodyCertificateList setCertificateType(String certificateType) {
+            this.certificateType = certificateType;
+            return this;
+        }
+        public String getCertificateType() {
+            return this.certificateType;
         }
 
         public ListRevokeCertificateResponseBodyCertificateList setCommonName(String commonName) {
@@ -223,6 +240,14 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
             return this.organizationUnit;
         }
 
+        public ListRevokeCertificateResponseBodyCertificateList setParentIdentifier(String parentIdentifier) {
+            this.parentIdentifier = parentIdentifier;
+            return this;
+        }
+        public String getParentIdentifier() {
+            return this.parentIdentifier;
+        }
+
         public ListRevokeCertificateResponseBodyCertificateList setRevokeDate(String revokeDate) {
             this.revokeDate = revokeDate;
             return this;
@@ -269,6 +294,14 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
         }
         public String getState() {
             return this.state;
+        }
+
+        public ListRevokeCertificateResponseBodyCertificateList setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
         public ListRevokeCertificateResponseBodyCertificateList setSubjectDN(String subjectDN) {
