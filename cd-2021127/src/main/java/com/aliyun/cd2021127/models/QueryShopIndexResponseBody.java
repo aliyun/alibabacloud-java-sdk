@@ -171,12 +171,45 @@ public class QueryShopIndexResponseBody extends TeaModel {
 
     }
 
+    public static class QueryShopIndexResponseBodyDataShopScheduleIndexFailShops extends TeaModel {
+        @NameInMap("ShopId")
+        public String shopId;
+
+        @NameInMap("ShopName")
+        public String shopName;
+
+        public static QueryShopIndexResponseBodyDataShopScheduleIndexFailShops build(java.util.Map<String, ?> map) throws Exception {
+            QueryShopIndexResponseBodyDataShopScheduleIndexFailShops self = new QueryShopIndexResponseBodyDataShopScheduleIndexFailShops();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryShopIndexResponseBodyDataShopScheduleIndexFailShops setShopId(String shopId) {
+            this.shopId = shopId;
+            return this;
+        }
+        public String getShopId() {
+            return this.shopId;
+        }
+
+        public QueryShopIndexResponseBodyDataShopScheduleIndexFailShops setShopName(String shopName) {
+            this.shopName = shopName;
+            return this;
+        }
+        public String getShopName() {
+            return this.shopName;
+        }
+
+    }
+
     public static class QueryShopIndexResponseBodyDataShopScheduleIndex extends TeaModel {
         @NameInMap("CostTime")
         public Double costTime;
 
         @NameInMap("FailShopNum")
         public Integer failShopNum;
+
+        @NameInMap("FailShops")
+        public java.util.List<QueryShopIndexResponseBodyDataShopScheduleIndexFailShops> failShops;
 
         @NameInMap("ScheduleNum")
         public Integer scheduleNum;
@@ -206,6 +239,14 @@ public class QueryShopIndexResponseBody extends TeaModel {
         }
         public Integer getFailShopNum() {
             return this.failShopNum;
+        }
+
+        public QueryShopIndexResponseBodyDataShopScheduleIndex setFailShops(java.util.List<QueryShopIndexResponseBodyDataShopScheduleIndexFailShops> failShops) {
+            this.failShops = failShops;
+            return this;
+        }
+        public java.util.List<QueryShopIndexResponseBodyDataShopScheduleIndexFailShops> getFailShops() {
+            return this.failShops;
         }
 
         public QueryShopIndexResponseBodyDataShopScheduleIndex setScheduleNum(Integer scheduleNum) {
