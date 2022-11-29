@@ -99,6 +99,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("DeliveryAddress", request.deliveryAddress);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.distributionOutTradeId)) {
+            body.put("DistributionOutTradeId", request.distributionOutTradeId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.distributionSupplierId)) {
             body.put("DistributionSupplierId", request.distributionSupplierId);
         }

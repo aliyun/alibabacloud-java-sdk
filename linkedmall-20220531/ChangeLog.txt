@@ -1,3 +1,6 @@
+2022-11-29 Version: 1.0.12
+- ApplyCreateDistributionOrder add field distributionOutTradeId.
+
 2022-11-18 Version: 1.0.11
 - ADD QueryDistributionBillDetail .
 
