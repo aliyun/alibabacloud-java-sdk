@@ -32,6 +32,9 @@ public class GetDiscoveredResourceCountsGroupByRegionResponseBody extends TeaMod
     }
 
     public static class GetDiscoveredResourceCountsGroupByRegionResponseBodyDiscoveredResourceCountsSummary extends TeaModel {
+        @NameInMap("GroupName")
+        public String groupName;
+
         @NameInMap("Region")
         public String region;
 
@@ -41,6 +44,14 @@ public class GetDiscoveredResourceCountsGroupByRegionResponseBody extends TeaMod
         public static GetDiscoveredResourceCountsGroupByRegionResponseBodyDiscoveredResourceCountsSummary build(java.util.Map<String, ?> map) throws Exception {
             GetDiscoveredResourceCountsGroupByRegionResponseBodyDiscoveredResourceCountsSummary self = new GetDiscoveredResourceCountsGroupByRegionResponseBodyDiscoveredResourceCountsSummary();
             return TeaModel.build(map, self);
+        }
+
+        public GetDiscoveredResourceCountsGroupByRegionResponseBodyDiscoveredResourceCountsSummary setGroupName(String groupName) {
+            this.groupName = groupName;
+            return this;
+        }
+        public String getGroupName() {
+            return this.groupName;
         }
 
         public GetDiscoveredResourceCountsGroupByRegionResponseBodyDiscoveredResourceCountsSummary setRegion(String region) {

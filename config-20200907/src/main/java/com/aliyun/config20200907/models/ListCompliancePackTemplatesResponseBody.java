@@ -82,6 +82,9 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
         @NameInMap("ControlId")
         public String controlId;
 
+        @NameInMap("DefaultEnable")
+        public Boolean defaultEnable;
+
         @NameInMap("Description")
         public String description;
 
@@ -121,6 +124,14 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
         }
         public String getControlId() {
             return this.controlId;
+        }
+
+        public ListCompliancePackTemplatesResponseBodyCompliancePackTemplatesResultCompliancePackTemplatesConfigRules setDefaultEnable(Boolean defaultEnable) {
+            this.defaultEnable = defaultEnable;
+            return this;
+        }
+        public Boolean getDefaultEnable() {
+            return this.defaultEnable;
         }
 
         public ListCompliancePackTemplatesResponseBodyCompliancePackTemplatesResultCompliancePackTemplatesConfigRules setDescription(String description) {

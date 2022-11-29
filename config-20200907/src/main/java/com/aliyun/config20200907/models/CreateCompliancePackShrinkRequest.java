@@ -16,6 +16,9 @@ public class CreateCompliancePackShrinkRequest extends TeaModel {
     @NameInMap("ConfigRules")
     public String configRulesShrink;
 
+    @NameInMap("DefaultEnable")
+    public Boolean defaultEnable;
+
     @NameInMap("Description")
     public String description;
 
@@ -57,6 +60,14 @@ public class CreateCompliancePackShrinkRequest extends TeaModel {
     }
     public String getConfigRulesShrink() {
         return this.configRulesShrink;
+    }
+
+    public CreateCompliancePackShrinkRequest setDefaultEnable(Boolean defaultEnable) {
+        this.defaultEnable = defaultEnable;
+        return this;
+    }
+    public Boolean getDefaultEnable() {
+        return this.defaultEnable;
     }
 
     public CreateCompliancePackShrinkRequest setDescription(String description) {

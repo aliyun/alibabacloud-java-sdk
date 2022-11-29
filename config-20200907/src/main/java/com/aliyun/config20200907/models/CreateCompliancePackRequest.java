@@ -16,6 +16,9 @@ public class CreateCompliancePackRequest extends TeaModel {
     @NameInMap("ConfigRules")
     public java.util.List<CreateCompliancePackRequestConfigRules> configRules;
 
+    @NameInMap("DefaultEnable")
+    public Boolean defaultEnable;
+
     @NameInMap("Description")
     public String description;
 
@@ -57,6 +60,14 @@ public class CreateCompliancePackRequest extends TeaModel {
     }
     public java.util.List<CreateCompliancePackRequestConfigRules> getConfigRules() {
         return this.configRules;
+    }
+
+    public CreateCompliancePackRequest setDefaultEnable(Boolean defaultEnable) {
+        this.defaultEnable = defaultEnable;
+        return this;
+    }
+    public Boolean getDefaultEnable() {
+        return this.defaultEnable;
     }
 
     public CreateCompliancePackRequest setDescription(String description) {
