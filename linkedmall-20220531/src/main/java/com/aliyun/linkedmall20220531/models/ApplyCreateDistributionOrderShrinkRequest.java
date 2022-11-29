@@ -10,6 +10,9 @@ public class ApplyCreateDistributionOrderShrinkRequest extends TeaModel {
     @NameInMap("DeliveryAddress")
     public String deliveryAddress;
 
+    @NameInMap("DistributionOutTradeId")
+    public String distributionOutTradeId;
+
     @NameInMap("DistributionSupplierId")
     public String distributionSupplierId;
 
@@ -44,6 +47,14 @@ public class ApplyCreateDistributionOrderShrinkRequest extends TeaModel {
     }
     public String getDeliveryAddress() {
         return this.deliveryAddress;
+    }
+
+    public ApplyCreateDistributionOrderShrinkRequest setDistributionOutTradeId(String distributionOutTradeId) {
+        this.distributionOutTradeId = distributionOutTradeId;
+        return this;
+    }
+    public String getDistributionOutTradeId() {
+        return this.distributionOutTradeId;
     }
 
     public ApplyCreateDistributionOrderShrinkRequest setDistributionSupplierId(String distributionSupplierId) {
