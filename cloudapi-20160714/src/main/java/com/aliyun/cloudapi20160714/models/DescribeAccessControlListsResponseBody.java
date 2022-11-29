@@ -71,6 +71,9 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
         @NameInMap("AclName")
         public String aclName;
 
+        @NameInMap("AddressIPVersion")
+        public String addressIPVersion;
+
         public static DescribeAccessControlListsResponseBodyAclsAcl build(java.util.Map<String, ?> map) throws Exception {
             DescribeAccessControlListsResponseBodyAclsAcl self = new DescribeAccessControlListsResponseBodyAclsAcl();
             return TeaModel.build(map, self);
@@ -90,6 +93,14 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
         }
         public String getAclName() {
             return this.aclName;
+        }
+
+        public DescribeAccessControlListsResponseBodyAclsAcl setAddressIPVersion(String addressIPVersion) {
+            this.addressIPVersion = addressIPVersion;
+            return this;
+        }
+        public String getAddressIPVersion() {
+            return this.addressIPVersion;
         }
 
     }

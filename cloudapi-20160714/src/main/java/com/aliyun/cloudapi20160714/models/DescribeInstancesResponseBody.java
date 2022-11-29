@@ -141,6 +141,18 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("HttpsPolicies")
         public String httpsPolicies;
 
+        @NameInMap("IPV6AclId")
+        public String IPV6AclId;
+
+        @NameInMap("IPV6AclName")
+        public String IPV6AclName;
+
+        @NameInMap("IPV6AclStatus")
+        public String IPV6AclStatus;
+
+        @NameInMap("IPV6AclType")
+        public String IPV6AclType;
+
         @NameInMap("InstanceChargeType")
         public String instanceChargeType;
 
@@ -279,6 +291,38 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public String getHttpsPolicies() {
             return this.httpsPolicies;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceAttribute setIPV6AclId(String IPV6AclId) {
+            this.IPV6AclId = IPV6AclId;
+            return this;
+        }
+        public String getIPV6AclId() {
+            return this.IPV6AclId;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceAttribute setIPV6AclName(String IPV6AclName) {
+            this.IPV6AclName = IPV6AclName;
+            return this;
+        }
+        public String getIPV6AclName() {
+            return this.IPV6AclName;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceAttribute setIPV6AclStatus(String IPV6AclStatus) {
+            this.IPV6AclStatus = IPV6AclStatus;
+            return this;
+        }
+        public String getIPV6AclStatus() {
+            return this.IPV6AclStatus;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceAttribute setIPV6AclType(String IPV6AclType) {
+            this.IPV6AclType = IPV6AclType;
+            return this;
+        }
+        public String getIPV6AclType() {
+            return this.IPV6AclType;
         }
 
         public DescribeInstancesResponseBodyInstancesInstanceAttribute setInstanceChargeType(String instanceChargeType) {

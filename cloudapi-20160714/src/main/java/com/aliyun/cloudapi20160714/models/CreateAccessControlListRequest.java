@@ -7,6 +7,9 @@ public class CreateAccessControlListRequest extends TeaModel {
     @NameInMap("AclName")
     public String aclName;
 
+    @NameInMap("AddressIPVersion")
+    public String addressIPVersion;
+
     @NameInMap("SecurityToken")
     public String securityToken;
 
@@ -21,6 +24,14 @@ public class CreateAccessControlListRequest extends TeaModel {
     }
     public String getAclName() {
         return this.aclName;
+    }
+
+    public CreateAccessControlListRequest setAddressIPVersion(String addressIPVersion) {
+        this.addressIPVersion = addressIPVersion;
+        return this;
+    }
+    public String getAddressIPVersion() {
+        return this.addressIPVersion;
     }
 
     public CreateAccessControlListRequest setSecurityToken(String securityToken) {
