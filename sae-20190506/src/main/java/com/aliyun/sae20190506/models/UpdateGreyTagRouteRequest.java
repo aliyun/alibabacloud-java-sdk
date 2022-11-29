@@ -4,6 +4,9 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class UpdateGreyTagRouteRequest extends TeaModel {
+    @NameInMap("AlbRules")
+    public String albRules;
+
     @NameInMap("Description")
     public String description;
 
@@ -19,6 +22,14 @@ public class UpdateGreyTagRouteRequest extends TeaModel {
     public static UpdateGreyTagRouteRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateGreyTagRouteRequest self = new UpdateGreyTagRouteRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateGreyTagRouteRequest setAlbRules(String albRules) {
+        this.albRules = albRules;
+        return this;
+    }
+    public String getAlbRules() {
+        return this.albRules;
     }
 
     public UpdateGreyTagRouteRequest setDescription(String description) {

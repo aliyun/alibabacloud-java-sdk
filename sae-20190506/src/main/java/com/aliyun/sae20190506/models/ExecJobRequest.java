@@ -25,6 +25,9 @@ public class ExecJobRequest extends TeaModel {
     @NameInMap("JarStartOptions")
     public String jarStartOptions;
 
+    @NameInMap("Time")
+    public String time;
+
     @NameInMap("WarStartOptions")
     public String warStartOptions;
 
@@ -87,6 +90,14 @@ public class ExecJobRequest extends TeaModel {
     }
     public String getJarStartOptions() {
         return this.jarStartOptions;
+    }
+
+    public ExecJobRequest setTime(String time) {
+        this.time = time;
+        return this;
+    }
+    public String getTime() {
+        return this.time;
     }
 
     public ExecJobRequest setWarStartOptions(String warStartOptions) {

@@ -49,6 +49,9 @@ public class CreateJobRequest extends TeaModel {
     @NameInMap("Envs")
     public String envs;
 
+    @NameInMap("ImagePullSecrets")
+    public String imagePullSecrets;
+
     @NameInMap("ImageUrl")
     public String imageUrl;
 
@@ -114,6 +117,12 @@ public class CreateJobRequest extends TeaModel {
 
     @NameInMap("ProgrammingLanguage")
     public String programmingLanguage;
+
+    @NameInMap("Python")
+    public String python;
+
+    @NameInMap("PythonModules")
+    public String pythonModules;
 
     @NameInMap("Readiness")
     public String readiness;
@@ -291,6 +300,14 @@ public class CreateJobRequest extends TeaModel {
         return this.envs;
     }
 
+    public CreateJobRequest setImagePullSecrets(String imagePullSecrets) {
+        this.imagePullSecrets = imagePullSecrets;
+        return this;
+    }
+    public String getImagePullSecrets() {
+        return this.imagePullSecrets;
+    }
+
     public CreateJobRequest setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
@@ -465,6 +482,22 @@ public class CreateJobRequest extends TeaModel {
     }
     public String getProgrammingLanguage() {
         return this.programmingLanguage;
+    }
+
+    public CreateJobRequest setPython(String python) {
+        this.python = python;
+        return this;
+    }
+    public String getPython() {
+        return this.python;
+    }
+
+    public CreateJobRequest setPythonModules(String pythonModules) {
+        this.pythonModules = pythonModules;
+        return this;
+    }
+    public String getPythonModules() {
+        return this.pythonModules;
     }
 
     public CreateJobRequest setReadiness(String readiness) {
