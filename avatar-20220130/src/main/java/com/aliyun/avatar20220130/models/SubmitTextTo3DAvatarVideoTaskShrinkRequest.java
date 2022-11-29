@@ -7,6 +7,9 @@ public class SubmitTextTo3DAvatarVideoTaskShrinkRequest extends TeaModel {
     @NameInMap("App")
     public String appShrink;
 
+    @NameInMap("AvatarInfo")
+    public String avatarInfoShrink;
+
     @NameInMap("TenantId")
     public Long tenantId;
 
@@ -30,6 +33,14 @@ public class SubmitTextTo3DAvatarVideoTaskShrinkRequest extends TeaModel {
     }
     public String getAppShrink() {
         return this.appShrink;
+    }
+
+    public SubmitTextTo3DAvatarVideoTaskShrinkRequest setAvatarInfoShrink(String avatarInfoShrink) {
+        this.avatarInfoShrink = avatarInfoShrink;
+        return this;
+    }
+    public String getAvatarInfoShrink() {
+        return this.avatarInfoShrink;
     }
 
     public SubmitTextTo3DAvatarVideoTaskShrinkRequest setTenantId(Long tenantId) {
