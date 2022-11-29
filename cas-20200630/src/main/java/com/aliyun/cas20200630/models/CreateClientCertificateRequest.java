@@ -16,8 +16,29 @@ public class CreateClientCertificateRequest extends TeaModel {
     @NameInMap("CommonName")
     public String commonName;
 
+    @NameInMap("Country")
+    public String country;
+
+    @NameInMap("Csr")
+    public String csr;
+
     @NameInMap("Days")
     public Integer days;
+
+    @NameInMap("Immediately")
+    public Integer immediately;
+
+    @NameInMap("Locality")
+    public String locality;
+
+    @NameInMap("Months")
+    public Integer months;
+
+    @NameInMap("Organization")
+    public String organization;
+
+    @NameInMap("OrganizationUnit")
+    public String organizationUnit;
 
     @NameInMap("ParentIdentifier")
     public String parentIdentifier;
@@ -27,6 +48,12 @@ public class CreateClientCertificateRequest extends TeaModel {
 
     @NameInMap("SanValue")
     public String sanValue;
+
+    @NameInMap("State")
+    public String state;
+
+    @NameInMap("Years")
+    public Integer years;
 
     public static CreateClientCertificateRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateClientCertificateRequest self = new CreateClientCertificateRequest();
@@ -65,12 +92,68 @@ public class CreateClientCertificateRequest extends TeaModel {
         return this.commonName;
     }
 
+    public CreateClientCertificateRequest setCountry(String country) {
+        this.country = country;
+        return this;
+    }
+    public String getCountry() {
+        return this.country;
+    }
+
+    public CreateClientCertificateRequest setCsr(String csr) {
+        this.csr = csr;
+        return this;
+    }
+    public String getCsr() {
+        return this.csr;
+    }
+
     public CreateClientCertificateRequest setDays(Integer days) {
         this.days = days;
         return this;
     }
     public Integer getDays() {
         return this.days;
+    }
+
+    public CreateClientCertificateRequest setImmediately(Integer immediately) {
+        this.immediately = immediately;
+        return this;
+    }
+    public Integer getImmediately() {
+        return this.immediately;
+    }
+
+    public CreateClientCertificateRequest setLocality(String locality) {
+        this.locality = locality;
+        return this;
+    }
+    public String getLocality() {
+        return this.locality;
+    }
+
+    public CreateClientCertificateRequest setMonths(Integer months) {
+        this.months = months;
+        return this;
+    }
+    public Integer getMonths() {
+        return this.months;
+    }
+
+    public CreateClientCertificateRequest setOrganization(String organization) {
+        this.organization = organization;
+        return this;
+    }
+    public String getOrganization() {
+        return this.organization;
+    }
+
+    public CreateClientCertificateRequest setOrganizationUnit(String organizationUnit) {
+        this.organizationUnit = organizationUnit;
+        return this;
+    }
+    public String getOrganizationUnit() {
+        return this.organizationUnit;
     }
 
     public CreateClientCertificateRequest setParentIdentifier(String parentIdentifier) {
@@ -95,6 +178,22 @@ public class CreateClientCertificateRequest extends TeaModel {
     }
     public String getSanValue() {
         return this.sanValue;
+    }
+
+    public CreateClientCertificateRequest setState(String state) {
+        this.state = state;
+        return this;
+    }
+    public String getState() {
+        return this.state;
+    }
+
+    public CreateClientCertificateRequest setYears(Integer years) {
+        this.years = years;
+        return this;
+    }
+    public Integer getYears() {
+        return this.years;
     }
 
 }
