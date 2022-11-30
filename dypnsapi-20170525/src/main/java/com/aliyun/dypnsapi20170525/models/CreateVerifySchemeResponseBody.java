@@ -10,11 +10,17 @@ public class CreateVerifySchemeResponseBody extends TeaModel {
     @NameInMap("GateVerifySchemeDTO")
     public CreateVerifySchemeResponseBodyGateVerifySchemeDTO gateVerifySchemeDTO;
 
+    @NameInMap("HttpStatusCode")
+    public Long httpStatusCode;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
 
     public static CreateVerifySchemeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateVerifySchemeResponseBody self = new CreateVerifySchemeResponseBody();
@@ -37,6 +43,14 @@ public class CreateVerifySchemeResponseBody extends TeaModel {
         return this.gateVerifySchemeDTO;
     }
 
+    public CreateVerifySchemeResponseBody setHttpStatusCode(Long httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Long getHttpStatusCode() {
+        return this.httpStatusCode;
+    }
+
     public CreateVerifySchemeResponseBody setMessage(String message) {
         this.message = message;
         return this;
@@ -51,6 +65,14 @@ public class CreateVerifySchemeResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public CreateVerifySchemeResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public static class CreateVerifySchemeResponseBodyGateVerifySchemeDTO extends TeaModel {
