@@ -3,7 +3,7 @@ package com.aliyun.dypnsapi20170525.models;
 
 import com.aliyun.tea.*;
 
-public class VerifySmsCodeResponse extends TeaModel {
+public class GetPhoneWithTokenResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class VerifySmsCodeResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public VerifySmsCodeResponseBody body;
+    public GetPhoneWithTokenResponseBody body;
 
-    public static VerifySmsCodeResponse build(java.util.Map<String, ?> map) throws Exception {
-        VerifySmsCodeResponse self = new VerifySmsCodeResponse();
+    public static GetPhoneWithTokenResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetPhoneWithTokenResponse self = new GetPhoneWithTokenResponse();
         return TeaModel.build(map, self);
     }
 
-    public VerifySmsCodeResponse setHeaders(java.util.Map<String, String> headers) {
+    public GetPhoneWithTokenResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class VerifySmsCodeResponse extends TeaModel {
         return this.headers;
     }
 
-    public VerifySmsCodeResponse setStatusCode(Integer statusCode) {
+    public GetPhoneWithTokenResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class VerifySmsCodeResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public VerifySmsCodeResponse setBody(VerifySmsCodeResponseBody body) {
+    public GetPhoneWithTokenResponse setBody(GetPhoneWithTokenResponseBody body) {
         this.body = body;
         return this;
     }
-    public VerifySmsCodeResponseBody getBody() {
+    public GetPhoneWithTokenResponseBody getBody() {
         return this.body;
     }
 
