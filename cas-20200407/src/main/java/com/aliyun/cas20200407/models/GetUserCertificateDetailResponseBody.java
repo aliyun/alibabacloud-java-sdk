@@ -19,6 +19,12 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
     @NameInMap("Country")
     public String country;
 
+    @NameInMap("EncryptCert")
+    public String encryptCert;
+
+    @NameInMap("EncryptPrivateKey")
+    public String encryptPrivateKey;
+
     @NameInMap("EndDate")
     public String endDate;
 
@@ -40,6 +46,9 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("OrderId")
+    public Long orderId;
+
     @NameInMap("OrgName")
     public String orgName;
 
@@ -49,8 +58,17 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("Sans")
     public String sans;
+
+    @NameInMap("SignCert")
+    public String signCert;
+
+    @NameInMap("SignPrivateKey")
+    public String signPrivateKey;
 
     @NameInMap("StartDate")
     public String startDate;
@@ -98,6 +116,22 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
     }
     public String getCountry() {
         return this.country;
+    }
+
+    public GetUserCertificateDetailResponseBody setEncryptCert(String encryptCert) {
+        this.encryptCert = encryptCert;
+        return this;
+    }
+    public String getEncryptCert() {
+        return this.encryptCert;
+    }
+
+    public GetUserCertificateDetailResponseBody setEncryptPrivateKey(String encryptPrivateKey) {
+        this.encryptPrivateKey = encryptPrivateKey;
+        return this;
+    }
+    public String getEncryptPrivateKey() {
+        return this.encryptPrivateKey;
     }
 
     public GetUserCertificateDetailResponseBody setEndDate(String endDate) {
@@ -156,6 +190,14 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
         return this.name;
     }
 
+    public GetUserCertificateDetailResponseBody setOrderId(Long orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+    public Long getOrderId() {
+        return this.orderId;
+    }
+
     public GetUserCertificateDetailResponseBody setOrgName(String orgName) {
         this.orgName = orgName;
         return this;
@@ -180,12 +222,36 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public GetUserCertificateDetailResponseBody setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public GetUserCertificateDetailResponseBody setSans(String sans) {
         this.sans = sans;
         return this;
     }
     public String getSans() {
         return this.sans;
+    }
+
+    public GetUserCertificateDetailResponseBody setSignCert(String signCert) {
+        this.signCert = signCert;
+        return this;
+    }
+    public String getSignCert() {
+        return this.signCert;
+    }
+
+    public GetUserCertificateDetailResponseBody setSignPrivateKey(String signPrivateKey) {
+        this.signPrivateKey = signPrivateKey;
+        return this;
+    }
+    public String getSignPrivateKey() {
+        return this.signPrivateKey;
     }
 
     public GetUserCertificateDetailResponseBody setStartDate(String startDate) {

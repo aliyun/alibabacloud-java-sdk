@@ -13,6 +13,9 @@ public class ListUserCertificateOrderRequest extends TeaModel {
     @NameInMap("OrderType")
     public String orderType;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("ShowSize")
     public Long showSize;
 
@@ -46,6 +49,14 @@ public class ListUserCertificateOrderRequest extends TeaModel {
     }
     public String getOrderType() {
         return this.orderType;
+    }
+
+    public ListUserCertificateOrderRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public ListUserCertificateOrderRequest setShowSize(Long showSize) {
