@@ -17,7 +17,7 @@ public class SubmitTextTo2DAvatarVideoTaskResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("Success")
-    public String success;
+    public Boolean success;
 
     public static SubmitTextTo2DAvatarVideoTaskResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SubmitTextTo2DAvatarVideoTaskResponseBody self = new SubmitTextTo2DAvatarVideoTaskResponseBody();
@@ -56,11 +56,11 @@ public class SubmitTextTo2DAvatarVideoTaskResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public SubmitTextTo2DAvatarVideoTaskResponseBody setSuccess(String success) {
+    public SubmitTextTo2DAvatarVideoTaskResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
-    public String getSuccess() {
+    public Boolean getSuccess() {
         return this.success;
     }
 

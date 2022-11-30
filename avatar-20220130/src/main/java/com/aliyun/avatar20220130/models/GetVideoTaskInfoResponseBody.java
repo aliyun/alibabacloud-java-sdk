@@ -17,7 +17,7 @@ public class GetVideoTaskInfoResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("Success")
-    public String success;
+    public Boolean success;
 
     public static GetVideoTaskInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetVideoTaskInfoResponseBody self = new GetVideoTaskInfoResponseBody();
@@ -56,11 +56,11 @@ public class GetVideoTaskInfoResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetVideoTaskInfoResponseBody setSuccess(String success) {
+    public GetVideoTaskInfoResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
-    public String getSuccess() {
+    public Boolean getSuccess() {
         return this.success;
     }
 
