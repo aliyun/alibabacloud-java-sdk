@@ -140,6 +140,9 @@ public class ListUserCertificateOrderResponseBody extends TeaModel {
         @NameInMap("Province")
         public String province;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         @NameInMap("RootBrand")
         public String rootBrand;
 
@@ -373,6 +376,14 @@ public class ListUserCertificateOrderResponseBody extends TeaModel {
         }
         public String getProvince() {
             return this.province;
+        }
+
+        public ListUserCertificateOrderResponseBodyCertificateOrderList setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public ListUserCertificateOrderResponseBodyCertificateOrderList setRootBrand(String rootBrand) {

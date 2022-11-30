@@ -19,6 +19,9 @@ public class UploadUserCertificateRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("SignCert")
     public String signCert;
 
@@ -68,6 +71,14 @@ public class UploadUserCertificateRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public UploadUserCertificateRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public UploadUserCertificateRequest setSignCert(String signCert) {
