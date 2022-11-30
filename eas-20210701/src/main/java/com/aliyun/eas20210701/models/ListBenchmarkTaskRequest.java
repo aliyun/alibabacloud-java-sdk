@@ -4,8 +4,8 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class ListBenchmarkTaskRequest extends TeaModel {
-    @NameInMap("Fileter")
-    public String fileter;
+    @NameInMap("Filter")
+    public String filter;
 
     @NameInMap("PageNumber")
     public String pageNumber;
@@ -21,12 +21,12 @@ public class ListBenchmarkTaskRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListBenchmarkTaskRequest setFileter(String fileter) {
-        this.fileter = fileter;
+    public ListBenchmarkTaskRequest setFilter(String filter) {
+        this.filter = filter;
         return this;
     }
-    public String getFileter() {
-        return this.fileter;
+    public String getFilter() {
+        return this.filter;
     }
 
     public ListBenchmarkTaskRequest setPageNumber(String pageNumber) {

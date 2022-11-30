@@ -76,6 +76,9 @@ public class Service extends TeaModel {
     @NameInMap("RunningInstance")
     public Integer runningInstance;
 
+    @NameInMap("SafetyLock")
+    public String safetyLock;
+
     @NameInMap("ServiceConfig")
     public String serviceConfig;
 
@@ -301,6 +304,14 @@ public class Service extends TeaModel {
     }
     public Integer getRunningInstance() {
         return this.runningInstance;
+    }
+
+    public Service setSafetyLock(String safetyLock) {
+        this.safetyLock = safetyLock;
+        return this;
+    }
+    public String getSafetyLock() {
+        return this.safetyLock;
     }
 
     public Service setServiceConfig(String serviceConfig) {

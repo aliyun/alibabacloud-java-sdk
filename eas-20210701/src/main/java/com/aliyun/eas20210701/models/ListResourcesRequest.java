@@ -10,6 +10,12 @@ public class ListResourcesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("ResourceId")
+    public String resourceId;
+
+    @NameInMap("ResourceName")
+    public String resourceName;
+
     public static ListResourcesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListResourcesRequest self = new ListResourcesRequest();
         return TeaModel.build(map, self);
@@ -29,6 +35,22 @@ public class ListResourcesRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListResourcesRequest setResourceId(String resourceId) {
+        this.resourceId = resourceId;
+        return this;
+    }
+    public String getResourceId() {
+        return this.resourceId;
+    }
+
+    public ListResourcesRequest setResourceName(String resourceName) {
+        this.resourceName = resourceName;
+        return this;
+    }
+    public String getResourceName() {
+        return this.resourceName;
     }
 
 }
