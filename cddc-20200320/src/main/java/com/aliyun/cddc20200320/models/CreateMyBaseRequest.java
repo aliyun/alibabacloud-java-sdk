@@ -22,11 +22,20 @@ public class CreateMyBaseRequest extends TeaModel {
     @NameInMap("Engine")
     public String engine;
 
+    @NameInMap("ImageId")
+    public String imageId;
+
+    @NameInMap("KeyPairName")
+    public String keyPairName;
+
     @NameInMap("OsPassword")
     public String osPassword;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("PasswordInherit")
+    public String passwordInherit;
 
     @NameInMap("PayType")
     public String payType;
@@ -111,6 +120,22 @@ public class CreateMyBaseRequest extends TeaModel {
         return this.engine;
     }
 
+    public CreateMyBaseRequest setImageId(String imageId) {
+        this.imageId = imageId;
+        return this;
+    }
+    public String getImageId() {
+        return this.imageId;
+    }
+
+    public CreateMyBaseRequest setKeyPairName(String keyPairName) {
+        this.keyPairName = keyPairName;
+        return this;
+    }
+    public String getKeyPairName() {
+        return this.keyPairName;
+    }
+
     public CreateMyBaseRequest setOsPassword(String osPassword) {
         this.osPassword = osPassword;
         return this;
@@ -125,6 +150,14 @@ public class CreateMyBaseRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public CreateMyBaseRequest setPasswordInherit(String passwordInherit) {
+        this.passwordInherit = passwordInherit;
+        return this;
+    }
+    public String getPasswordInherit() {
+        return this.passwordInherit;
     }
 
     public CreateMyBaseRequest setPayType(String payType) {
@@ -208,6 +241,18 @@ public class CreateMyBaseRequest extends TeaModel {
     }
 
     public static class CreateMyBaseRequestECSClassList extends TeaModel {
+        @NameInMap("dataDiskPerformanceLevel")
+        public String dataDiskPerformanceLevel;
+
+        @NameInMap("diskCapacity")
+        public Integer diskCapacity;
+
+        @NameInMap("diskCount")
+        public Integer diskCount;
+
+        @NameInMap("diskType")
+        public String diskType;
+
         @NameInMap("instanceType")
         public String instanceType;
 
@@ -220,9 +265,44 @@ public class CreateMyBaseRequest extends TeaModel {
         @NameInMap("sysDiskType")
         public String sysDiskType;
 
+        @NameInMap("systemDiskPerformanceLevel")
+        public String systemDiskPerformanceLevel;
+
         public static CreateMyBaseRequestECSClassList build(java.util.Map<String, ?> map) throws Exception {
             CreateMyBaseRequestECSClassList self = new CreateMyBaseRequestECSClassList();
             return TeaModel.build(map, self);
+        }
+
+        public CreateMyBaseRequestECSClassList setDataDiskPerformanceLevel(String dataDiskPerformanceLevel) {
+            this.dataDiskPerformanceLevel = dataDiskPerformanceLevel;
+            return this;
+        }
+        public String getDataDiskPerformanceLevel() {
+            return this.dataDiskPerformanceLevel;
+        }
+
+        public CreateMyBaseRequestECSClassList setDiskCapacity(Integer diskCapacity) {
+            this.diskCapacity = diskCapacity;
+            return this;
+        }
+        public Integer getDiskCapacity() {
+            return this.diskCapacity;
+        }
+
+        public CreateMyBaseRequestECSClassList setDiskCount(Integer diskCount) {
+            this.diskCount = diskCount;
+            return this;
+        }
+        public Integer getDiskCount() {
+            return this.diskCount;
+        }
+
+        public CreateMyBaseRequestECSClassList setDiskType(String diskType) {
+            this.diskType = diskType;
+            return this;
+        }
+        public String getDiskType() {
+            return this.diskType;
         }
 
         public CreateMyBaseRequestECSClassList setInstanceType(String instanceType) {
@@ -255,6 +335,14 @@ public class CreateMyBaseRequest extends TeaModel {
         }
         public String getSysDiskType() {
             return this.sysDiskType;
+        }
+
+        public CreateMyBaseRequestECSClassList setSystemDiskPerformanceLevel(String systemDiskPerformanceLevel) {
+            this.systemDiskPerformanceLevel = systemDiskPerformanceLevel;
+            return this;
+        }
+        public String getSystemDiskPerformanceLevel() {
+            return this.systemDiskPerformanceLevel;
         }
 
     }

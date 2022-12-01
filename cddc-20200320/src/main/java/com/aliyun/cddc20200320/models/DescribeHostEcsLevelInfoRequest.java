@@ -4,9 +4,6 @@ package com.aliyun.cddc20200320.models;
 import com.aliyun.tea.*;
 
 public class DescribeHostEcsLevelInfoRequest extends TeaModel {
-    @NameInMap("CommodityCode")
-    public String commodityCode;
-
     @NameInMap("DbType")
     public String dbType;
 
@@ -15,9 +12,6 @@ public class DescribeHostEcsLevelInfoRequest extends TeaModel {
 
     @NameInMap("OwnerId")
     public Long ownerId;
-
-    @NameInMap("PayType")
-    public String payType;
 
     @NameInMap("RegionId")
     public String regionId;
@@ -37,14 +31,6 @@ public class DescribeHostEcsLevelInfoRequest extends TeaModel {
     public static DescribeHostEcsLevelInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeHostEcsLevelInfoRequest self = new DescribeHostEcsLevelInfoRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeHostEcsLevelInfoRequest setCommodityCode(String commodityCode) {
-        this.commodityCode = commodityCode;
-        return this;
-    }
-    public String getCommodityCode() {
-        return this.commodityCode;
     }
 
     public DescribeHostEcsLevelInfoRequest setDbType(String dbType) {
@@ -69,14 +55,6 @@ public class DescribeHostEcsLevelInfoRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    public DescribeHostEcsLevelInfoRequest setPayType(String payType) {
-        this.payType = payType;
-        return this;
-    }
-    public String getPayType() {
-        return this.payType;
     }
 
     public DescribeHostEcsLevelInfoRequest setRegionId(String regionId) {

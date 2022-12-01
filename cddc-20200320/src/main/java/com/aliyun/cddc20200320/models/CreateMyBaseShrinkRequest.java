@@ -22,11 +22,20 @@ public class CreateMyBaseShrinkRequest extends TeaModel {
     @NameInMap("Engine")
     public String engine;
 
+    @NameInMap("ImageId")
+    public String imageId;
+
+    @NameInMap("KeyPairName")
+    public String keyPairName;
+
     @NameInMap("OsPassword")
     public String osPassword;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("PasswordInherit")
+    public String passwordInherit;
 
     @NameInMap("PayType")
     public String payType;
@@ -111,6 +120,22 @@ public class CreateMyBaseShrinkRequest extends TeaModel {
         return this.engine;
     }
 
+    public CreateMyBaseShrinkRequest setImageId(String imageId) {
+        this.imageId = imageId;
+        return this;
+    }
+    public String getImageId() {
+        return this.imageId;
+    }
+
+    public CreateMyBaseShrinkRequest setKeyPairName(String keyPairName) {
+        this.keyPairName = keyPairName;
+        return this;
+    }
+    public String getKeyPairName() {
+        return this.keyPairName;
+    }
+
     public CreateMyBaseShrinkRequest setOsPassword(String osPassword) {
         this.osPassword = osPassword;
         return this;
@@ -125,6 +150,14 @@ public class CreateMyBaseShrinkRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public CreateMyBaseShrinkRequest setPasswordInherit(String passwordInherit) {
+        this.passwordInherit = passwordInherit;
+        return this;
+    }
+    public String getPasswordInherit() {
+        return this.passwordInherit;
     }
 
     public CreateMyBaseShrinkRequest setPayType(String payType) {
