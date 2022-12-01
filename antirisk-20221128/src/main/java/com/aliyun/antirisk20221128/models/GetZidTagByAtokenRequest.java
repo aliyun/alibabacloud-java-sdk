@@ -7,9 +7,6 @@ public class GetZidTagByAtokenRequest extends TeaModel {
     @NameInMap("atoken")
     public String atoken;
 
-    @NameInMap("channel")
-    public String channel;
-
     @NameInMap("dataSourceId")
     public String dataSourceId;
 
@@ -24,14 +21,6 @@ public class GetZidTagByAtokenRequest extends TeaModel {
     }
     public String getAtoken() {
         return this.atoken;
-    }
-
-    public GetZidTagByAtokenRequest setChannel(String channel) {
-        this.channel = channel;
-        return this;
-    }
-    public String getChannel() {
-        return this.channel;
     }
 
     public GetZidTagByAtokenRequest setDataSourceId(String dataSourceId) {

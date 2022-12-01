@@ -39,10 +39,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("atoken", request.atoken);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.channel)) {
-            query.put("channel", request.channel);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.dataSourceId)) {
             query.put("dataSourceId", request.dataSourceId);
         }
