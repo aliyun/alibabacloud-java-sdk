@@ -260,6 +260,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("InstanceName")
         public String instanceName;
 
+        @NameInMap("InstanceType")
+        public String instanceType;
+
         @NameInMap("MaintainTime")
         public String maintainTime;
 
@@ -408,6 +411,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public String getInstanceName() {
             return this.instanceName;
+        }
+
+        public DescribeInstancesResponseBodyInstances setInstanceType(String instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public String getInstanceType() {
+            return this.instanceType;
         }
 
         public DescribeInstancesResponseBodyInstances setMaintainTime(String maintainTime) {

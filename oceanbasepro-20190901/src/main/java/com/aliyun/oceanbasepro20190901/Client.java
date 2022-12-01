@@ -229,24 +229,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateOmsOpenAPIProjectShrinkRequest request = new CreateOmsOpenAPIProjectShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.destConfig))) {
-            request.destConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.destConfig), "DestConfig", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.destConfig)) {
+            request.destConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.destConfig, "DestConfig", "json");
         }
 
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.labelIds)) {
             request.labelIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.labelIds, "LabelIds", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.sourceConfig))) {
-            request.sourceConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.sourceConfig), "SourceConfig", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.sourceConfig)) {
+            request.sourceConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sourceConfig, "SourceConfig", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.transferMapping))) {
-            request.transferMappingShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.transferMapping), "TransferMapping", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.transferMapping)) {
+            request.transferMappingShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.transferMapping, "TransferMapping", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.transferStepConfig))) {
-            request.transferStepConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.transferStepConfig), "TransferStepConfig", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.transferStepConfig)) {
+            request.transferStepConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.transferStepConfig, "TransferStepConfig", "json");
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();

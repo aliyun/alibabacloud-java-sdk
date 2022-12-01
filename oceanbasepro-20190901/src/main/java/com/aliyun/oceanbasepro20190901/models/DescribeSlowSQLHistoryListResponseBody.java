@@ -86,8 +86,8 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
         @NameInMap("FailTimes")
         public Double failTimes;
 
-        @NameInMap("GetplanTime")
-        public Double getplanTime;
+        @NameInMap("GetPlanTime")
+        public Double getPlanTime;
 
         @NameInMap("IOWaitTime")
         public Double IOWaitTime;
@@ -107,8 +107,8 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
         @NameInMap("MissPlans")
         public Double missPlans;
 
-        @NameInMap("NetwaitTime")
-        public Double netwaitTime;
+        @NameInMap("NetWaitTime")
+        public Double netWaitTime;
 
         @NameInMap("NodeIp")
         public String nodeIp;
@@ -301,12 +301,12 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
             return this.failTimes;
         }
 
-        public DescribeSlowSQLHistoryListResponseBodySlowSQLHistoryListList setGetplanTime(Double getplanTime) {
-            this.getplanTime = getplanTime;
+        public DescribeSlowSQLHistoryListResponseBodySlowSQLHistoryListList setGetPlanTime(Double getPlanTime) {
+            this.getPlanTime = getPlanTime;
             return this;
         }
-        public Double getGetplanTime() {
-            return this.getplanTime;
+        public Double getGetPlanTime() {
+            return this.getPlanTime;
         }
 
         public DescribeSlowSQLHistoryListResponseBodySlowSQLHistoryListList setIOWaitTime(Double IOWaitTime) {
@@ -357,12 +357,12 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
             return this.missPlans;
         }
 
-        public DescribeSlowSQLHistoryListResponseBodySlowSQLHistoryListList setNetwaitTime(Double netwaitTime) {
-            this.netwaitTime = netwaitTime;
+        public DescribeSlowSQLHistoryListResponseBodySlowSQLHistoryListList setNetWaitTime(Double netWaitTime) {
+            this.netWaitTime = netWaitTime;
             return this;
         }
-        public Double getNetwaitTime() {
-            return this.netwaitTime;
+        public Double getNetWaitTime() {
+            return this.netWaitTime;
         }
 
         public DescribeSlowSQLHistoryListResponseBodySlowSQLHistoryListList setNodeIp(String nodeIp) {
