@@ -1,3 +1,6 @@
+2022-12-01 Version: 1.0.1
+- sendByApp and SendByDevice.
+
 2022-11-30 Version: 1.0.0
 - Init.
 

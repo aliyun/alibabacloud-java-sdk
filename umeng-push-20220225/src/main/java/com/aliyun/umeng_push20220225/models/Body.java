@@ -185,6 +185,25 @@ public class Body extends TeaModel {
         return this.url;
     }
 
+    public static class SendByAppResponseBodyData extends TeaModel {
+        @NameInMap("MsgId")
+        public String msgId;
+
+        public static SendByAppResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            SendByAppResponseBodyData self = new SendByAppResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public SendByAppResponseBodyData setMsgId(String msgId) {
+            this.msgId = msgId;
+            return this;
+        }
+        public String getMsgId() {
+            return this.msgId;
+        }
+
+    }
+
     public static class SendByDeviceResponseBodyData extends TeaModel {
         @NameInMap("MsgId")
         public String msgId;
