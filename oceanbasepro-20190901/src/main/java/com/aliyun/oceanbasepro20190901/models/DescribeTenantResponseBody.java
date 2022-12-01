@@ -32,6 +32,9 @@ public class DescribeTenantResponseBody extends TeaModel {
     }
 
     public static class DescribeTenantResponseBodyTenantTenantConnections extends TeaModel {
+        @NameInMap("AddressType")
+        public String addressType;
+
         @NameInMap("ConnectionRole")
         public String connectionRole;
 
@@ -62,6 +65,9 @@ public class DescribeTenantResponseBody extends TeaModel {
         @NameInMap("IntranetPort")
         public Integer intranetPort;
 
+        @NameInMap("TransactionSplit")
+        public Boolean transactionSplit;
+
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
@@ -71,6 +77,14 @@ public class DescribeTenantResponseBody extends TeaModel {
         public static DescribeTenantResponseBodyTenantTenantConnections build(java.util.Map<String, ?> map) throws Exception {
             DescribeTenantResponseBodyTenantTenantConnections self = new DescribeTenantResponseBodyTenantTenantConnections();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeTenantResponseBodyTenantTenantConnections setAddressType(String addressType) {
+            this.addressType = addressType;
+            return this;
+        }
+        public String getAddressType() {
+            return this.addressType;
         }
 
         public DescribeTenantResponseBodyTenantTenantConnections setConnectionRole(String connectionRole) {
@@ -151,6 +165,14 @@ public class DescribeTenantResponseBody extends TeaModel {
         }
         public Integer getIntranetPort() {
             return this.intranetPort;
+        }
+
+        public DescribeTenantResponseBodyTenantTenantConnections setTransactionSplit(Boolean transactionSplit) {
+            this.transactionSplit = transactionSplit;
+            return this;
+        }
+        public Boolean getTransactionSplit() {
+            return this.transactionSplit;
         }
 
         public DescribeTenantResponseBodyTenantTenantConnections setVSwitchId(String vSwitchId) {
@@ -366,6 +388,9 @@ public class DescribeTenantResponseBody extends TeaModel {
     }
 
     public static class DescribeTenantResponseBodyTenant extends TeaModel {
+        @NameInMap("AvailableZones")
+        public java.util.List<String> availableZones;
+
         @NameInMap("Charset")
         public String charset;
 
@@ -387,20 +412,35 @@ public class DescribeTenantResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("DiskType")
+        public String diskType;
+
         @NameInMap("EnableClogService")
         public Boolean enableClogService;
 
         @NameInMap("EnableInternetAddressService")
         public Boolean enableInternetAddressService;
 
+        @NameInMap("EnableReadWriteSplit")
+        public Boolean enableReadWriteSplit;
+
+        @NameInMap("InstanceType")
+        public String instanceType;
+
         @NameInMap("MasterIntranetAddressZone")
         public String masterIntranetAddressZone;
+
+        @NameInMap("PayType")
+        public String payType;
 
         @NameInMap("PrimaryZone")
         public String primaryZone;
 
         @NameInMap("PrimaryZoneDeployType")
         public String primaryZoneDeployType;
+
+        @NameInMap("Series")
+        public String series;
 
         @NameInMap("Status")
         public String status;
@@ -429,6 +469,14 @@ public class DescribeTenantResponseBody extends TeaModel {
         public static DescribeTenantResponseBodyTenant build(java.util.Map<String, ?> map) throws Exception {
             DescribeTenantResponseBodyTenant self = new DescribeTenantResponseBodyTenant();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeTenantResponseBodyTenant setAvailableZones(java.util.List<String> availableZones) {
+            this.availableZones = availableZones;
+            return this;
+        }
+        public java.util.List<String> getAvailableZones() {
+            return this.availableZones;
         }
 
         public DescribeTenantResponseBodyTenant setCharset(String charset) {
@@ -487,6 +535,14 @@ public class DescribeTenantResponseBody extends TeaModel {
             return this.description;
         }
 
+        public DescribeTenantResponseBodyTenant setDiskType(String diskType) {
+            this.diskType = diskType;
+            return this;
+        }
+        public String getDiskType() {
+            return this.diskType;
+        }
+
         public DescribeTenantResponseBodyTenant setEnableClogService(Boolean enableClogService) {
             this.enableClogService = enableClogService;
             return this;
@@ -503,12 +559,36 @@ public class DescribeTenantResponseBody extends TeaModel {
             return this.enableInternetAddressService;
         }
 
+        public DescribeTenantResponseBodyTenant setEnableReadWriteSplit(Boolean enableReadWriteSplit) {
+            this.enableReadWriteSplit = enableReadWriteSplit;
+            return this;
+        }
+        public Boolean getEnableReadWriteSplit() {
+            return this.enableReadWriteSplit;
+        }
+
+        public DescribeTenantResponseBodyTenant setInstanceType(String instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
         public DescribeTenantResponseBodyTenant setMasterIntranetAddressZone(String masterIntranetAddressZone) {
             this.masterIntranetAddressZone = masterIntranetAddressZone;
             return this;
         }
         public String getMasterIntranetAddressZone() {
             return this.masterIntranetAddressZone;
+        }
+
+        public DescribeTenantResponseBodyTenant setPayType(String payType) {
+            this.payType = payType;
+            return this;
+        }
+        public String getPayType() {
+            return this.payType;
         }
 
         public DescribeTenantResponseBodyTenant setPrimaryZone(String primaryZone) {
@@ -525,6 +605,14 @@ public class DescribeTenantResponseBody extends TeaModel {
         }
         public String getPrimaryZoneDeployType() {
             return this.primaryZoneDeployType;
+        }
+
+        public DescribeTenantResponseBodyTenant setSeries(String series) {
+            this.series = series;
+            return this;
+        }
+        public String getSeries() {
+            return this.series;
         }
 
         public DescribeTenantResponseBodyTenant setStatus(String status) {
