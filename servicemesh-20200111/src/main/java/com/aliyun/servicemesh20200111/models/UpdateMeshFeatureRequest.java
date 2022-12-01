@@ -124,6 +124,9 @@ public class UpdateMeshFeatureRequest extends TeaModel {
     @NameInMap("IntegrateKiali")
     public Boolean integrateKiali;
 
+    @NameInMap("InterceptionMode")
+    public String interceptionMode;
+
     @NameInMap("KialiEnabled")
     public Boolean kialiEnabled;
 
@@ -606,6 +609,14 @@ public class UpdateMeshFeatureRequest extends TeaModel {
     }
     public Boolean getIntegrateKiali() {
         return this.integrateKiali;
+    }
+
+    public UpdateMeshFeatureRequest setInterceptionMode(String interceptionMode) {
+        this.interceptionMode = interceptionMode;
+        return this;
+    }
+    public String getInterceptionMode() {
+        return this.interceptionMode;
     }
 
     public UpdateMeshFeatureRequest setKialiEnabled(Boolean kialiEnabled) {

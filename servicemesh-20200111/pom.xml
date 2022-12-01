@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>servicemesh20200111</artifactId>
-  <version>2.0.25</version>
+  <version>2.0.26</version>
   <packaging>jar</packaging>
   <name>servicemesh20200111</name>
   <description>Alibaba Cloud Alibaba Cloud Service Mesh (20200111) SDK for Java
@@ -165,6 +165,10 @@
                 <relocation>
                   <pattern>org.apache</pattern>
                   <shadedPattern>com.aliyun.servicemesh20200111.external.org.apache</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>org.slf4j</pattern>
+                  <shadedPattern>com.aliyun.servicemesh20200111.external.org.slf4j</shadedPattern>
                 </relocation>
               </relocations>
               <artifactSet>

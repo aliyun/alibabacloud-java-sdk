@@ -28,6 +28,9 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends TeaModel {
     @NameInMap("IncludeOutboundPorts")
     public String includeOutboundPorts;
 
+    @NameInMap("InterceptionMode")
+    public String interceptionMode;
+
     @NameInMap("IstioDNSProxyEnabled")
     public Boolean istioDNSProxyEnabled;
 
@@ -149,6 +152,14 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends TeaModel {
     }
     public String getIncludeOutboundPorts() {
         return this.includeOutboundPorts;
+    }
+
+    public UpdateNamespaceScopeSidecarConfigRequest setInterceptionMode(String interceptionMode) {
+        this.interceptionMode = interceptionMode;
+        return this;
+    }
+    public String getInterceptionMode() {
+        return this.interceptionMode;
     }
 
     public UpdateNamespaceScopeSidecarConfigRequest setIstioDNSProxyEnabled(Boolean istioDNSProxyEnabled) {
