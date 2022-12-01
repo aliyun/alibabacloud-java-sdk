@@ -248,8 +248,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateIstioGatewayRoutesShrinkRequest request = new CreateIstioGatewayRoutesShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.gatewayRoute))) {
-            request.gatewayRouteShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.gatewayRoute), "GatewayRoute", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.gatewayRoute)) {
+            request.gatewayRouteShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.gatewayRoute, "GatewayRoute", "json");
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -2832,8 +2832,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         UpdateIstioGatewayRoutesShrinkRequest request = new UpdateIstioGatewayRoutesShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.gatewayRoute))) {
-            request.gatewayRouteShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.gatewayRoute), "GatewayRoute", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.gatewayRoute)) {
+            request.gatewayRouteShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.gatewayRoute, "GatewayRoute", "json");
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -3191,6 +3191,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("IntegrateKiali", request.integrateKiali);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.interceptionMode)) {
+            body.put("InterceptionMode", request.interceptionMode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.kialiEnabled)) {
             body.put("KialiEnabled", request.kialiEnabled);
         }
@@ -3458,6 +3462,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.includeOutboundPorts)) {
             body.put("IncludeOutboundPorts", request.includeOutboundPorts);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.interceptionMode)) {
+            body.put("InterceptionMode", request.interceptionMode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.istioDNSProxyEnabled)) {
