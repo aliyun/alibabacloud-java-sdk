@@ -41,6 +41,9 @@ public class GetScriptFileNamesResponseBody extends TeaModel {
         @NameInMap("modifyTime")
         public String modifyTime;
 
+        @NameInMap("pathName")
+        public String pathName;
+
         public static GetScriptFileNamesResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             GetScriptFileNamesResponseBodyResult self = new GetScriptFileNamesResponseBodyResult();
             return TeaModel.build(map, self);
@@ -68,6 +71,14 @@ public class GetScriptFileNamesResponseBody extends TeaModel {
         }
         public String getModifyTime() {
             return this.modifyTime;
+        }
+
+        public GetScriptFileNamesResponseBodyResult setPathName(String pathName) {
+            this.pathName = pathName;
+            return this;
+        }
+        public String getPathName() {
+            return this.pathName;
         }
 
     }

@@ -7,6 +7,9 @@ public class RenewAppGroupResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    @NameInMap("result")
+    public Boolean result;
+
     public static RenewAppGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RenewAppGroupResponseBody self = new RenewAppGroupResponseBody();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class RenewAppGroupResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public RenewAppGroupResponseBody setResult(Boolean result) {
+        this.result = result;
+        return this;
+    }
+    public Boolean getResult() {
+        return this.result;
     }
 
 }

@@ -73,31 +73,31 @@ public class DescribeAppGroupResponseBody extends TeaModel {
     }
 
     public static class DescribeAppGroupResponseBodyResultTags extends TeaModel {
-        @NameInMap("tagKey")
-        public String tagKey;
+        @NameInMap("key")
+        public String key;
 
-        @NameInMap("tagValue")
-        public String tagValue;
+        @NameInMap("value")
+        public String value;
 
         public static DescribeAppGroupResponseBodyResultTags build(java.util.Map<String, ?> map) throws Exception {
             DescribeAppGroupResponseBodyResultTags self = new DescribeAppGroupResponseBodyResultTags();
             return TeaModel.build(map, self);
         }
 
-        public DescribeAppGroupResponseBodyResultTags setTagKey(String tagKey) {
-            this.tagKey = tagKey;
+        public DescribeAppGroupResponseBodyResultTags setKey(String key) {
+            this.key = key;
             return this;
         }
-        public String getTagKey() {
-            return this.tagKey;
+        public String getKey() {
+            return this.key;
         }
 
-        public DescribeAppGroupResponseBodyResultTags setTagValue(String tagValue) {
-            this.tagValue = tagValue;
+        public DescribeAppGroupResponseBodyResultTags setValue(String value) {
+            this.value = value;
             return this;
         }
-        public String getTagValue() {
-            return this.tagValue;
+        public String getValue() {
+            return this.value;
         }
 
     }
