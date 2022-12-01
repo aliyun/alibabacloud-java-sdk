@@ -84,31 +84,31 @@ public class ListAppGroupsResponseBody extends TeaModel {
     }
 
     public static class ListAppGroupsResponseBodyResultTags extends TeaModel {
-        @NameInMap("tagKey")
-        public String tagKey;
+        @NameInMap("key")
+        public String key;
 
-        @NameInMap("tagValue")
-        public String tagValue;
+        @NameInMap("value")
+        public String value;
 
         public static ListAppGroupsResponseBodyResultTags build(java.util.Map<String, ?> map) throws Exception {
             ListAppGroupsResponseBodyResultTags self = new ListAppGroupsResponseBodyResultTags();
             return TeaModel.build(map, self);
         }
 
-        public ListAppGroupsResponseBodyResultTags setTagKey(String tagKey) {
-            this.tagKey = tagKey;
+        public ListAppGroupsResponseBodyResultTags setKey(String key) {
+            this.key = key;
             return this;
         }
-        public String getTagKey() {
-            return this.tagKey;
+        public String getKey() {
+            return this.key;
         }
 
-        public ListAppGroupsResponseBodyResultTags setTagValue(String tagValue) {
-            this.tagValue = tagValue;
+        public ListAppGroupsResponseBodyResultTags setValue(String value) {
+            this.value = value;
             return this;
         }
-        public String getTagValue() {
-            return this.tagValue;
+        public String getValue() {
+            return this.value;
         }
 
     }
