@@ -216,6 +216,9 @@ public class DescribeIngressResponseBody extends TeaModel {
         @NameInMap("CertId")
         public String certId;
 
+        @NameInMap("CertIds")
+        public String certIds;
+
         @NameInMap("DefaultRule")
         public DescribeIngressResponseBodyDataDefaultRule defaultRule;
 
@@ -260,6 +263,14 @@ public class DescribeIngressResponseBody extends TeaModel {
         }
         public String getCertId() {
             return this.certId;
+        }
+
+        public DescribeIngressResponseBodyData setCertIds(String certIds) {
+            this.certIds = certIds;
+            return this;
+        }
+        public String getCertIds() {
+            return this.certIds;
         }
 
         public DescribeIngressResponseBodyData setDefaultRule(DescribeIngressResponseBodyDataDefaultRule defaultRule) {

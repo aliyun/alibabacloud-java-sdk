@@ -653,6 +653,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CertId", request.certId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.certIds)) {
+            query.put("CertIds", request.certIds);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.defaultRule)) {
             query.put("DefaultRule", request.defaultRule);
         }
@@ -4114,6 +4118,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CertId", request.certId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.certIds)) {
+            query.put("CertIds", request.certIds);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.defaultRule)) {
             query.put("DefaultRule", request.defaultRule);
         }
@@ -4160,6 +4168,247 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateIngressResponse());
+    }
+
+    public UpdateJobResponse updateJob(UpdateJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateJobWithOptions(request, headers, runtime);
+    }
+
+    public UpdateJobResponse updateJobWithOptions(UpdateJobRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acrAssumeRoleArn)) {
+            query.put("AcrAssumeRoleArn", request.acrAssumeRoleArn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoEnableApplicationScalingRule)) {
+            query.put("AutoEnableApplicationScalingRule", request.autoEnableApplicationScalingRule);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.backoffLimit)) {
+            query.put("BackoffLimit", request.backoffLimit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.batchWaitTime)) {
+            query.put("BatchWaitTime", request.batchWaitTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.changeOrderDesc)) {
+            query.put("ChangeOrderDesc", request.changeOrderDesc);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.command)) {
+            query.put("Command", request.command);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.commandArgs)) {
+            query.put("CommandArgs", request.commandArgs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.concurrencyPolicy)) {
+            query.put("ConcurrencyPolicy", request.concurrencyPolicy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customHostAlias)) {
+            query.put("CustomHostAlias", request.customHostAlias);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.edasContainerVersion)) {
+            query.put("EdasContainerVersion", request.edasContainerVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableAhas)) {
+            query.put("EnableAhas", request.enableAhas);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableGreyTagRoute)) {
+            query.put("EnableGreyTagRoute", request.enableGreyTagRoute);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.envs)) {
+            query.put("Envs", request.envs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imagePullSecrets)) {
+            query.put("ImagePullSecrets", request.imagePullSecrets);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageUrl)) {
+            query.put("ImageUrl", request.imageUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jarStartArgs)) {
+            query.put("JarStartArgs", request.jarStartArgs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jarStartOptions)) {
+            query.put("JarStartOptions", request.jarStartOptions);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jdk)) {
+            query.put("Jdk", request.jdk);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.liveness)) {
+            query.put("Liveness", request.liveness);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.minReadyInstances)) {
+            query.put("MinReadyInstances", request.minReadyInstances);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mountDesc)) {
+            query.put("MountDesc", request.mountDesc);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mountHost)) {
+            query.put("MountHost", request.mountHost);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nasId)) {
+            query.put("NasId", request.nasId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.packageUrl)) {
+            query.put("PackageUrl", request.packageUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.packageVersion)) {
+            query.put("PackageVersion", request.packageVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.phpArmsConfigLocation)) {
+            query.put("PhpArmsConfigLocation", request.phpArmsConfigLocation);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.phpConfigLocation)) {
+            query.put("PhpConfigLocation", request.phpConfigLocation);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.postStart)) {
+            query.put("PostStart", request.postStart);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.preStop)) {
+            query.put("PreStop", request.preStop);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.programmingLanguage)) {
+            query.put("ProgrammingLanguage", request.programmingLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.python)) {
+            query.put("Python", request.python);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pythonModules)) {
+            query.put("PythonModules", request.pythonModules);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.readiness)) {
+            query.put("Readiness", request.readiness);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.refAppId)) {
+            query.put("RefAppId", request.refAppId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.replicas)) {
+            query.put("Replicas", request.replicas);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.slice)) {
+            query.put("Slice", request.slice);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sliceEnvs)) {
+            query.put("SliceEnvs", request.sliceEnvs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.slsConfigs)) {
+            query.put("SlsConfigs", request.slsConfigs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.terminationGracePeriodSeconds)) {
+            query.put("TerminationGracePeriodSeconds", request.terminationGracePeriodSeconds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timeout)) {
+            query.put("Timeout", request.timeout);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timezone)) {
+            query.put("Timezone", request.timezone);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tomcatConfig)) {
+            query.put("TomcatConfig", request.tomcatConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.triggerConfig)) {
+            query.put("TriggerConfig", request.triggerConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.updateStrategy)) {
+            query.put("UpdateStrategy", request.updateStrategy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.warStartOptions)) {
+            query.put("WarStartOptions", request.warStartOptions);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.webContainer)) {
+            query.put("WebContainer", request.webContainer);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.associateEip)) {
+            body.put("AssociateEip", request.associateEip);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configMapMountDesc)) {
+            body.put("ConfigMapMountDesc", request.configMapMountDesc);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ossAkId)) {
+            body.put("OssAkId", request.ossAkId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ossAkSecret)) {
+            body.put("OssAkSecret", request.ossAkSecret);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ossMountDescs)) {
+            body.put("OssMountDescs", request.ossMountDescs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.phpConfig)) {
+            body.put("PhpConfig", request.phpConfig);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateJob"),
+            new TeaPair("version", "2019-05-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/pop/v1/sam/job/updateJob"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateJobResponse());
     }
 
     public UpdateNamespaceResponse updateNamespace(UpdateNamespaceRequest request) throws Exception {

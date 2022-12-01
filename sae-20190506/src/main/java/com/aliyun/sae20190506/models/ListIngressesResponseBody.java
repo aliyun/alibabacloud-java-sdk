@@ -90,6 +90,9 @@ public class ListIngressesResponseBody extends TeaModel {
         @NameInMap("CertId")
         public String certId;
 
+        @NameInMap("CertIds")
+        public String certIds;
+
         @NameInMap("Description")
         public String description;
 
@@ -128,6 +131,14 @@ public class ListIngressesResponseBody extends TeaModel {
         }
         public String getCertId() {
             return this.certId;
+        }
+
+        public ListIngressesResponseBodyDataIngressList setCertIds(String certIds) {
+            this.certIds = certIds;
+            return this;
+        }
+        public String getCertIds() {
+            return this.certIds;
         }
 
         public ListIngressesResponseBodyDataIngressList setDescription(String description) {
