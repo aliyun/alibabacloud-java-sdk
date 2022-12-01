@@ -7,6 +7,9 @@ public class UpdateJobRequest extends TeaModel {
     @NameInMap("AcrAssumeRoleArn")
     public String acrAssumeRoleArn;
 
+    @NameInMap("AcrInstanceId")
+    public String acrInstanceId;
+
     @NameInMap("AppId")
     public String appId;
 
@@ -97,6 +100,9 @@ public class UpdateJobRequest extends TeaModel {
     @NameInMap("PackageVersion")
     public String packageVersion;
 
+    @NameInMap("Php")
+    public String php;
+
     @NameInMap("PhpArmsConfigLocation")
     public String phpArmsConfigLocation;
 
@@ -105,6 +111,12 @@ public class UpdateJobRequest extends TeaModel {
 
     @NameInMap("PhpConfigLocation")
     public String phpConfigLocation;
+
+    @NameInMap("PhpExtensions")
+    public String phpExtensions;
+
+    @NameInMap("PhpPECLExtensions")
+    public String phpPECLExtensions;
 
     @NameInMap("PostStart")
     public String postStart;
@@ -174,6 +186,14 @@ public class UpdateJobRequest extends TeaModel {
     }
     public String getAcrAssumeRoleArn() {
         return this.acrAssumeRoleArn;
+    }
+
+    public UpdateJobRequest setAcrInstanceId(String acrInstanceId) {
+        this.acrInstanceId = acrInstanceId;
+        return this;
+    }
+    public String getAcrInstanceId() {
+        return this.acrInstanceId;
     }
 
     public UpdateJobRequest setAppId(String appId) {
@@ -416,6 +436,14 @@ public class UpdateJobRequest extends TeaModel {
         return this.packageVersion;
     }
 
+    public UpdateJobRequest setPhp(String php) {
+        this.php = php;
+        return this;
+    }
+    public String getPhp() {
+        return this.php;
+    }
+
     public UpdateJobRequest setPhpArmsConfigLocation(String phpArmsConfigLocation) {
         this.phpArmsConfigLocation = phpArmsConfigLocation;
         return this;
@@ -438,6 +466,22 @@ public class UpdateJobRequest extends TeaModel {
     }
     public String getPhpConfigLocation() {
         return this.phpConfigLocation;
+    }
+
+    public UpdateJobRequest setPhpExtensions(String phpExtensions) {
+        this.phpExtensions = phpExtensions;
+        return this;
+    }
+    public String getPhpExtensions() {
+        return this.phpExtensions;
+    }
+
+    public UpdateJobRequest setPhpPECLExtensions(String phpPECLExtensions) {
+        this.phpPECLExtensions = phpPECLExtensions;
+        return this;
+    }
+    public String getPhpPECLExtensions() {
+        return this.phpPECLExtensions;
     }
 
     public UpdateJobRequest setPostStart(String postStart) {
