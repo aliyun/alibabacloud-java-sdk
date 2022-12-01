@@ -38,6 +38,9 @@ public class ListDelegatedServicesForAccountResponseBody extends TeaModel {
         @NameInMap("ServicePrincipal")
         public String servicePrincipal;
 
+        @NameInMap("Status")
+        public String status;
+
         public static ListDelegatedServicesForAccountResponseBodyDelegatedServicesDelegatedService build(java.util.Map<String, ?> map) throws Exception {
             ListDelegatedServicesForAccountResponseBodyDelegatedServicesDelegatedService self = new ListDelegatedServicesForAccountResponseBodyDelegatedServicesDelegatedService();
             return TeaModel.build(map, self);
@@ -57,6 +60,14 @@ public class ListDelegatedServicesForAccountResponseBody extends TeaModel {
         }
         public String getServicePrincipal() {
             return this.servicePrincipal;
+        }
+
+        public ListDelegatedServicesForAccountResponseBodyDelegatedServicesDelegatedService setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }
