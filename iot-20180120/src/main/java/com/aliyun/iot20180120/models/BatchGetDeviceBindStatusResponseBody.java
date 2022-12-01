@@ -68,6 +68,9 @@ public class BatchGetDeviceBindStatusResponseBody extends TeaModel {
         @NameInMap("BindStatus")
         public Integer bindStatus;
 
+        @NameInMap("InstanceId")
+        public String instanceId;
+
         @NameInMap("IotId")
         public String iotId;
 
@@ -82,6 +85,14 @@ public class BatchGetDeviceBindStatusResponseBody extends TeaModel {
         }
         public Integer getBindStatus() {
             return this.bindStatus;
+        }
+
+        public BatchGetDeviceBindStatusResponseBodyData setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
         public BatchGetDeviceBindStatusResponseBodyData setIotId(String iotId) {
