@@ -4368,6 +4368,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acrInstanceId)) {
+            body.put("AcrInstanceId", request.acrInstanceId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.associateEip)) {
             body.put("AssociateEip", request.associateEip);
         }
@@ -4388,8 +4392,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("OssMountDescs", request.ossMountDescs);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.php)) {
+            body.put("Php", request.php);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.phpConfig)) {
             body.put("PhpConfig", request.phpConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.phpExtensions)) {
+            body.put("PhpExtensions", request.phpExtensions);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.phpPECLExtensions)) {
+            body.put("PhpPECLExtensions", request.phpPECLExtensions);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
