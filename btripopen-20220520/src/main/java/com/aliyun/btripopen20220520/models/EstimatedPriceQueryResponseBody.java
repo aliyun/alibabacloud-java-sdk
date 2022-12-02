@@ -266,7 +266,7 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
 
     public static class EstimatedPriceQueryResponseBodyModuleTrafficFeeBtripRoutes extends TeaModel {
         @NameInMap("arr_date")
-        public String arrDate;
+        public Long arrDate;
 
         @NameInMap("btrip_type")
         public Integer btripType;
@@ -275,7 +275,7 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
         public EstimatedPriceQueryResponseBodyModuleTrafficFeeBtripRoutesCheapest cheapest;
 
         @NameInMap("dep_date")
-        public String depDate;
+        public Long depDate;
 
         @NameInMap("dest_city")
         public String destCity;
@@ -303,11 +303,11 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public EstimatedPriceQueryResponseBodyModuleTrafficFeeBtripRoutes setArrDate(String arrDate) {
+        public EstimatedPriceQueryResponseBodyModuleTrafficFeeBtripRoutes setArrDate(Long arrDate) {
             this.arrDate = arrDate;
             return this;
         }
-        public String getArrDate() {
+        public Long getArrDate() {
             return this.arrDate;
         }
 
@@ -327,11 +327,11 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
             return this.cheapest;
         }
 
-        public EstimatedPriceQueryResponseBodyModuleTrafficFeeBtripRoutes setDepDate(String depDate) {
+        public EstimatedPriceQueryResponseBodyModuleTrafficFeeBtripRoutes setDepDate(Long depDate) {
             this.depDate = depDate;
             return this;
         }
-        public String getDepDate() {
+        public Long getDepDate() {
             return this.depDate;
         }
 

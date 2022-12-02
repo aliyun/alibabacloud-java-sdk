@@ -2866,6 +2866,92 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ProjectModifyResponse());
     }
 
+    public SyncSingleUserResponse syncSingleUser(SyncSingleUserRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        SyncSingleUserHeaders headers = new SyncSingleUserHeaders();
+        return this.syncSingleUserWithOptions(request, headers, runtime);
+    }
+
+    public SyncSingleUserResponse syncSingleUserWithOptions(SyncSingleUserRequest tmpReq, SyncSingleUserHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        SyncSingleUserShrinkRequest request = new SyncSingleUserShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.thirdDepartIdList)) {
+            request.thirdDepartIdListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.thirdDepartIdList, "third_depart_id_list", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.email)) {
+            body.put("email", request.email);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobNo)) {
+            body.put("job_no", request.jobNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.leaveStatus)) {
+            body.put("leave_status", request.leaveStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.managerUserId)) {
+            body.put("manager_user_id", request.managerUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.phone)) {
+            body.put("phone", request.phone);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.position)) {
+            body.put("position", request.position);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.positionLevel)) {
+            body.put("position_level", request.positionLevel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.realNameEn)) {
+            body.put("real_name_en", request.realNameEn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.thirdDepartIdListShrink)) {
+            body.put("third_depart_id_list", request.thirdDepartIdListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            body.put("user_id", request.userId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userName)) {
+            body.put("user_name", request.userName);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripSoCorpToken)) {
+            realHeaders.put("x-acs-btrip-so-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripSoCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SyncSingleUser"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/user/v1/single-user/action/sync"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SyncSingleUserResponse());
+    }
+
     public TrainBillSettlementQueryResponse trainBillSettlementQuery(TrainBillSettlementQueryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         TrainBillSettlementQueryHeaders headers = new TrainBillSettlementQueryHeaders();
