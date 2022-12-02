@@ -4,67 +4,51 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class NetworkArchitecture extends TeaModel {
-    // 架构最新版本uuid
     @NameInMap("ArchVersionIterationId")
     public String archVersionIterationId;
 
-    // 可用
     @NameInMap("Availabe")
     public Boolean availabe;
 
-    // 子节点
     @NameInMap("Children")
     public java.util.List<String> children;
 
-    // 创建时间
     @NameInMap("CreateTime")
     public String createTime;
 
-    // 架构描述
     @NameInMap("Description")
     public String description;
 
-    // 设备数
     @NameInMap("DeviceNumber")
     public Long deviceNumber;
 
-    // 组数
     @NameInMap("GroupNumber")
     public Long groupNumber;
 
-    // 架构资源id
     @NameInMap("Id")
     public String id;
 
-    // 架构名称
     @NameInMap("Name")
     public String name;
 
-    // 资源一级ID
     @NameInMap("NetworkArchitectureId")
     public String networkArchitectureId;
 
-    // 架构内容
     @NameInMap("Role")
     public String role;
 
-    // 可选
     @NameInMap("Selected")
     public Boolean selected;
 
-    // 堆叠
     @NameInMap("Stack")
     public Boolean stack;
 
-    // 架构状态
     @NameInMap("Status")
     public String status;
 
-    // 更新时间
     @NameInMap("UpdateTime")
     public String updateTime;
 
-    // 架构版本
     @NameInMap("Version")
     public String version;
 

@@ -4,23 +4,18 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class CreateEventDefinitionRequest extends TeaModel {
-    // 幂等参数
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // 事件名称
     @NameInMap("EventName")
     public String eventName;
 
-    // 事件大类
     @NameInMap("EventType")
     public String eventType;
 
-    // 实例ID
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 自动化模板ID
     @NameInMap("TemplateId")
     public String templateId;
 

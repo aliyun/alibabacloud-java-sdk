@@ -7,7 +7,6 @@ public class GetDeviceConfigDiffResponseBody extends TeaModel {
     @NameInMap("DeviceConfigDiff")
     public GetDeviceConfigDiffResponseBodyDeviceConfigDiff deviceConfigDiff;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -33,11 +32,9 @@ public class GetDeviceConfigDiffResponseBody extends TeaModel {
     }
 
     public static class GetDeviceConfigDiffResponseBodyDeviceConfigDiff extends TeaModel {
-        // 差异提取
         @NameInMap("ExtractDiff")
         public String extractDiff;
 
-        // 全量比对
         @NameInMap("TotalDiff")
         public String totalDiff;
 

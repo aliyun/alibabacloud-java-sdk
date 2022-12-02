@@ -4,23 +4,18 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ListIpBlocksResponseBody extends TeaModel {
-    // 地址段对象
     @NameInMap("IpBlock")
     public java.util.List<ListIpBlocksResponseBodyIpBlock> ipBlock;
 
-    // 每页数量。
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 当总结果个数大于MaxResults时，用于翻页的token。
     @NameInMap("NextToken")
     public Integer nextToken;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 总记录数。
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -70,23 +65,18 @@ public class ListIpBlocksResponseBody extends TeaModel {
     }
 
     public static class ListIpBlocksResponseBodyIpBlockTasksIpList extends TeaModel {
-        // 设备ID
         @NameInMap("DevId")
         public String devId;
 
-        // 设备名
         @NameInMap("DevName")
         public String devName;
 
-        // Ip
         @NameInMap("Ip")
         public String ip;
 
-        // 来源，SYSTEM表示系统校正
         @NameInMap("Origin")
         public String origin;
 
-        // Ping
         @NameInMap("Ping")
         public String ping;
 
@@ -138,39 +128,30 @@ public class ListIpBlocksResponseBody extends TeaModel {
     }
 
     public static class ListIpBlocksResponseBodyIpBlockTasks extends TeaModel {
-        // 探针
         @NameInMap("Domain")
         public String domain;
 
-        // 创建时间
         @NameInMap("GmtCreateTime")
         public String gmtCreateTime;
 
-        // 更新时间
         @NameInMap("GmtModifiedTime")
         public String gmtModifiedTime;
 
-        // Ip
         @NameInMap("Ip")
         public String ip;
 
-        // IP列表
         @NameInMap("IpList")
         public java.util.List<ListIpBlocksResponseBodyIpBlockTasksIpList> ipList;
 
-        // 错误信息
         @NameInMap("Msg")
         public String msg;
 
-        // 状态
         @NameInMap("Status")
         public String status;
 
-        // 任务id
         @NameInMap("TaskId")
         public String taskId;
 
-        // ip总数
         @NameInMap("TotalIpCount")
         public Long totalIpCount;
 
@@ -254,11 +235,9 @@ public class ListIpBlocksResponseBody extends TeaModel {
     }
 
     public static class ListIpBlocksResponseBodyIpBlockZoneLayer extends TeaModel {
-        // 园区层级名称
         @NameInMap("Name")
         public String name;
 
-        // 园区层级值
         @NameInMap("Value")
         public String value;
 
@@ -286,93 +265,89 @@ public class ListIpBlocksResponseBody extends TeaModel {
     }
 
     public static class ListIpBlocksResponseBodyIpBlock extends TeaModel {
-        // IP用途
+        @NameInMap("Abbr")
+        public String abbr;
+
         @NameInMap("Application")
         public String application;
 
-        // 备份设备名称
         @NameInMap("BackupDeviceName")
         public String backupDeviceName;
 
-        // 业务类型UID
         @NameInMap("BusinessTypeId")
         public String businessTypeId;
 
-        // 业务类型名称
         @NameInMap("BusinessTypeName")
         public String businessTypeName;
 
-        // 地址类别 IPV4
         @NameInMap("Category")
         public String category;
 
-        // 备注
         @NameInMap("Description")
         public String description;
 
-        // 设备名称
         @NameInMap("DeviceName")
         public String deviceName;
 
-        // IP段
         @NameInMap("IpBlockCode")
         public String ipBlockCode;
 
-        // IP地址段UID
         @NameInMap("IpBlockId")
         public String ipBlockId;
 
-        // 地址段子段列表
         @NameInMap("IpBlocks")
         public java.util.List<String> ipBlocks;
 
-        // 是否锁定
         @NameInMap("IsLock")
         public Long isLock;
 
-        // 限制园区类型
         @NameInMap("LimitZoneTypes")
         public String limitZoneTypes;
 
-        // 公网地址类型 INC GUEST VIP
         @NameInMap("NetBusiness")
         public String netBusiness;
 
-        // 公网私网标志 PUBLIC PRIVATE
         @NameInMap("NetType")
         public String netType;
 
-        // IP归属
         @NameInMap("Ownership")
         public String ownership;
 
-        // 父地址段UID
         @NameInMap("ParentId")
         public String parentId;
 
-        // 状态： using available lock
+        @NameInMap("QueryIpList")
+        public java.util.List<String> queryIpList;
+
+        @NameInMap("SplitRate")
+        public Double splitRate;
+
         @NameInMap("Status")
         public String status;
 
-        // 业务小类名称
         @NameInMap("SubBusinessTypeName")
         public String subBusinessTypeName;
 
-        // 任务集
         @NameInMap("Tasks")
         public java.util.List<ListIpBlocksResponseBodyIpBlockTasks> tasks;
 
-        // 园区层级
         @NameInMap("ZoneLayer")
         public java.util.List<ListIpBlocksResponseBodyIpBlockZoneLayer> zoneLayer;
 
-        // 园区名称
         @NameInMap("ZoneName")
         public String zoneName;
 
         public static ListIpBlocksResponseBodyIpBlock build(java.util.Map<String, ?> map) throws Exception {
             ListIpBlocksResponseBodyIpBlock self = new ListIpBlocksResponseBodyIpBlock();
             return TeaModel.build(map, self);
+        }
+
+        public ListIpBlocksResponseBodyIpBlock setAbbr(String abbr) {
+            this.abbr = abbr;
+            return this;
+        }
+        public String getAbbr() {
+            return this.abbr;
         }
 
         public ListIpBlocksResponseBodyIpBlock setApplication(String application) {
@@ -501,6 +476,22 @@ public class ListIpBlocksResponseBody extends TeaModel {
         }
         public String getParentId() {
             return this.parentId;
+        }
+
+        public ListIpBlocksResponseBodyIpBlock setQueryIpList(java.util.List<String> queryIpList) {
+            this.queryIpList = queryIpList;
+            return this;
+        }
+        public java.util.List<String> getQueryIpList() {
+            return this.queryIpList;
+        }
+
+        public ListIpBlocksResponseBodyIpBlock setSplitRate(Double splitRate) {
+            this.splitRate = splitRate;
+            return this;
+        }
+        public Double getSplitRate() {
+            return this.splitRate;
         }
 
         public ListIpBlocksResponseBodyIpBlock setStatus(String status) {

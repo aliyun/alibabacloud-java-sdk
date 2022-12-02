@@ -4,11 +4,9 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class CreateDeviceFormResponseBody extends TeaModel {
-    // 资源实例ID，如ECS实例的创建接口CreateInstance应返回InstanceId。
     @NameInMap("DeviceFormId")
     public String deviceFormId;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

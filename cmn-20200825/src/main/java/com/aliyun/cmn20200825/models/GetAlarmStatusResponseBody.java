@@ -4,11 +4,9 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class GetAlarmStatusResponseBody extends TeaModel {
-    // 告警状态
     @NameInMap("AlarmStatus")
     public GetAlarmStatusResponseBodyAlarmStatus alarmStatus;
 
-    // request Id
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,35 +32,27 @@ public class GetAlarmStatusResponseBody extends TeaModel {
     }
 
     public static class GetAlarmStatusResponseBodyAlarmStatusAggregateData extends TeaModel {
-        // 描述
         @NameInMap("AggregateDataDescription")
         public String aggregateDataDescription;
 
-        // 聚合数据ID
         @NameInMap("AggregateDataId")
         public String aggregateDataId;
 
-        // 聚合数据名称
         @NameInMap("AggregateDataName")
         public String aggregateDataName;
 
-        // 聚合方式
         @NameInMap("AggregateMode")
         public String aggregateMode;
 
-        // 数据项
         @NameInMap("DataItem")
         public String dataItem;
 
-        // 设备ID
         @NameInMap("DeviceId")
         public String deviceId;
 
-        // 是否聚合全部设备
         @NameInMap("IsAllDevice")
         public Integer isAllDevice;
 
-        // 监控项ID
         @NameInMap("MonitorItemId")
         public String monitorItemId;
 
@@ -138,31 +128,24 @@ public class GetAlarmStatusResponseBody extends TeaModel {
     }
 
     public static class GetAlarmStatusResponseBodyAlarmStatusDedicatedLine extends TeaModel {
-        // 带宽
         @NameInMap("Bandwidth")
         public String bandwidth;
 
-        // 对端IP
         @NameInMap("DedicatedLineGateway")
         public String dedicatedLineGateway;
 
-        // 专线名称
         @NameInMap("DedicatedLineName")
         public String dedicatedLineName;
 
-        // 设备ID
         @NameInMap("DeviceId")
         public String deviceId;
 
-        // IP
         @NameInMap("Ip")
         public String ip;
 
-        // 端口名
         @NameInMap("PortName")
         public String portName;
 
-        // 物理空间
         @NameInMap("Space")
         public String space;
 
@@ -230,35 +213,27 @@ public class GetAlarmStatusResponseBody extends TeaModel {
     }
 
     public static class GetAlarmStatusResponseBodyAlarmStatusMonitorItem extends TeaModel {
-        // 采集类型
         @NameInMap("CollectionType")
         public String collectionType;
 
-        // 设备形态
         @NameInMap("DeviceForm")
         public String deviceForm;
 
-        // 是否启用
         @NameInMap("Effective")
         public Long effective;
 
-        // 执行间隔
         @NameInMap("ExecInterval")
         public String execInterval;
 
-        // 描述
         @NameInMap("MonitorItemDescription")
         public String monitorItemDescription;
 
-        // 监控项ID
         @NameInMap("MonitorItemId")
         public String monitorItemId;
 
-        // 监控项名称
         @NameInMap("MonitorItemName")
         public String monitorItemName;
 
-        // 安全域
         @NameInMap("SecurityDomain")
         public String securityDomain;
 
@@ -334,11 +309,9 @@ public class GetAlarmStatusResponseBody extends TeaModel {
     }
 
     public static class GetAlarmStatusResponseBodyAlarmStatusNotificationSwitch extends TeaModel {
-        // 关闭到期时间
         @NameInMap("ExpiryTime")
         public String expiryTime;
 
-        // 关闭原因
         @NameInMap("Reason")
         public String reason;
 
@@ -366,15 +339,12 @@ public class GetAlarmStatusResponseBody extends TeaModel {
     }
 
     public static class GetAlarmStatusResponseBodyAlarmStatusPortCollectionPortListResourceDevice extends TeaModel {
-        // 设备名
         @NameInMap("HostName")
         public String hostName;
 
-        // IP
         @NameInMap("Ip")
         public String ip;
 
-        // 安全域
         @NameInMap("SecurityDomain")
         public String securityDomain;
 
@@ -410,15 +380,12 @@ public class GetAlarmStatusResponseBody extends TeaModel {
     }
 
     public static class GetAlarmStatusResponseBodyAlarmStatusPortCollectionPortList extends TeaModel {
-        // 设备ID
         @NameInMap("DeviceId")
         public String deviceId;
 
-        // 端口名
         @NameInMap("PortName")
         public String portName;
 
-        // 设备详情
         @NameInMap("ResourceDevice")
         public GetAlarmStatusResponseBodyAlarmStatusPortCollectionPortListResourceDevice resourceDevice;
 
@@ -454,19 +421,15 @@ public class GetAlarmStatusResponseBody extends TeaModel {
     }
 
     public static class GetAlarmStatusResponseBodyAlarmStatusPortCollection extends TeaModel {
-        // 端口集描述
         @NameInMap("PortCollectionDescription")
         public String portCollectionDescription;
 
-        // 端口集ID
         @NameInMap("PortCollectionId")
         public String portCollectionId;
 
-        // 端口集名称
         @NameInMap("PortCollectionName")
         public String portCollectionName;
 
-        // 端口列表
         @NameInMap("PortList")
         public java.util.List<GetAlarmStatusResponseBodyAlarmStatusPortCollectionPortList> portList;
 
@@ -510,23 +473,18 @@ public class GetAlarmStatusResponseBody extends TeaModel {
     }
 
     public static class GetAlarmStatusResponseBodyAlarmStatusResourceApp extends TeaModel {
-        // 应用ID
         @NameInMap("AppId")
         public String appId;
 
-        // 监控域名
         @NameInMap("Domain")
         public String domain;
 
-        // 端口
         @NameInMap("Port")
         public String port;
 
-        // 所属探针
         @NameInMap("SecurityDomain")
         public String securityDomain;
 
-        // 资源类型
         @NameInMap("Type")
         public String type;
 
@@ -578,43 +536,33 @@ public class GetAlarmStatusResponseBody extends TeaModel {
     }
 
     public static class GetAlarmStatusResponseBodyAlarmStatusResourceDevice extends TeaModel {
-        // 设备形态
         @NameInMap("DeviceForm")
         public String deviceForm;
 
-        // 设备ID
         @NameInMap("DeviceId")
         public String deviceId;
 
-        // 设备名
         @NameInMap("HostName")
         public String hostName;
 
-        // IP
         @NameInMap("Ip")
         public String ip;
 
-        // 型号
         @NameInMap("Model")
         public String model;
 
-        // 安全域
         @NameInMap("SecurityDomain")
         public String securityDomain;
 
-        // sn
         @NameInMap("Sn")
         public String sn;
 
-        // 物理空间
         @NameInMap("Space")
         public String space;
 
-        // 状态
         @NameInMap("Status")
         public String status;
 
-        // 厂商
         @NameInMap("Vendor")
         public String vendor;
 
@@ -706,94 +654,72 @@ public class GetAlarmStatusResponseBody extends TeaModel {
     }
 
     public static class GetAlarmStatusResponseBodyAlarmStatus extends TeaModel {
-        // 异常数据项
         @NameInMap("AbnormalDataItem")
         public String abnormalDataItem;
 
-        // 采集探针IP
         @NameInMap("AgentIp")
         public String agentIp;
 
-        // 聚合数据详情
         @NameInMap("AggregateData")
         public GetAlarmStatusResponseBodyAlarmStatusAggregateData aggregateData;
 
-        // 聚合数据ID
         @NameInMap("AggregateDataId")
         public String aggregateDataId;
 
-        // 命中告警规则
         @NameInMap("AlarmRule")
         public String alarmRule;
 
-        // 告警状态
         @NameInMap("AlarmStatus")
         public String alarmStatus;
 
-        // 应用ID
         @NameInMap("AppId")
         public String appId;
 
-        // 采集时间
         @NameInMap("CollectionTime")
         public String collectionTime;
 
-        // 专线详情
         @NameInMap("DedicatedLine")
         public GetAlarmStatusResponseBodyAlarmStatusDedicatedLine dedicatedLine;
 
-        // 专线ID
         @NameInMap("DedicatedLineId")
         public String dedicatedLineId;
 
-        // 设备ID
         @NameInMap("DeviceId")
         public String deviceId;
 
-        // 首次异常时间
         @NameInMap("FirstAbnormalTime")
         public String firstAbnormalTime;
 
-        // 监控项
         @NameInMap("MonitorItem")
         public GetAlarmStatusResponseBodyAlarmStatusMonitorItem monitorItem;
 
-        // 监控项ID
         @NameInMap("MonitorItemId")
         public String monitorItemId;
 
-        // 告警开关
         @NameInMap("NotificationSwitch")
         public GetAlarmStatusResponseBodyAlarmStatusNotificationSwitch notificationSwitch;
 
         @NameInMap("PortCollection")
         public GetAlarmStatusResponseBodyAlarmStatusPortCollection portCollection;
 
-        // 端口集ID
         @NameInMap("PortCollectionId")
         public String portCollectionId;
 
-        // 接收时间
         @NameInMap("ReceiveTime")
         public String receiveTime;
 
-        // 应用
         @NameInMap("ResourceApp")
         public GetAlarmStatusResponseBodyAlarmStatusResourceApp resourceApp;
 
-        // 设备
         @NameInMap("ResourceDevice")
         public GetAlarmStatusResponseBodyAlarmStatusResourceDevice resourceDevice;
 
-        // 采集状态码
         @NameInMap("ResponseCode")
         public String responseCode;
 
-        // 采集结果
         @NameInMap("Result")
         public String result;
 
-        // 索引
         @NameInMap("UniqueKey")
         public String uniqueKey;
 

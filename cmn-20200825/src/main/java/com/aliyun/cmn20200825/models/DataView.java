@@ -4,27 +4,21 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class DataView extends TeaModel {
-    // 图表列表
     @NameInMap("DataViewChartList")
     public java.util.List<DataViewChart> dataViewChartList;
 
-    // 描述
     @NameInMap("DataViewDescription")
     public String dataViewDescription;
 
-    // 聚合数据
     @NameInMap("DataViewId")
     public String dataViewId;
 
-    // 数据视图名称
     @NameInMap("DataViewName")
     public String dataViewName;
 
-    // 创建时间
     @NameInMap("GmtCreate")
     public String gmtCreate;
 
-    // 修改时间
     @NameInMap("GmtModified")
     public String gmtModified;
 

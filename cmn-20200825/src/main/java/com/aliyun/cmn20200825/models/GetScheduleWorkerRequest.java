@@ -7,7 +7,6 @@ public class GetScheduleWorkerRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 实例 ID。
     @NameInMap("ScheduleWorkerId")
     public String scheduleWorkerId;
 

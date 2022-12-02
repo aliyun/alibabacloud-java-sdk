@@ -4,55 +4,42 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ListInspectionTasksShrinkRequest extends TeaModel {
-    // 告警结果状态
     @NameInMap("AlarmStatus")
     public String alarmStatusShrink;
 
-    // 设备类型
     @NameInMap("DeviceType")
     public String deviceType;
 
-    // 主机名
     @NameInMap("HostName")
     public String hostName;
 
-    // 设备IP
     @NameInMap("IP")
     public String IP;
 
-    // 实例ID
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 巡检项ID
     @NameInMap("ItemId")
     public String itemId;
 
-    // 返回结果的最大个数。
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 型号
     @NameInMap("Model")
     public String model;
 
-    // 当总结果个数大于MaxResults时，用于翻页的token。
     @NameInMap("NextToken")
     public String nextToken;
 
-    // 角色
     @NameInMap("Role")
     public String role;
 
-    // 物理空间
     @NameInMap("Space")
     public String space;
 
-    // 巡检状态
     @NameInMap("TaskStatus")
     public String taskStatus;
 
-    // 厂商
     @NameInMap("Vendor")
     public String vendor;
 

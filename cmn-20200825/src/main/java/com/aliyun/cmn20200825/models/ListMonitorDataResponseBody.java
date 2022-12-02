@@ -4,11 +4,9 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ListMonitorDataResponseBody extends TeaModel {
-    // 数据列表
     @NameInMap("MonitorData")
     public java.util.List<ListMonitorDataResponseBodyMonitorData> monitorData;
 
-    // Request Id
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,19 +32,15 @@ public class ListMonitorDataResponseBody extends TeaModel {
     }
 
     public static class ListMonitorDataResponseBodyMonitorData extends TeaModel {
-        // 数据项
         @NameInMap("DataItem")
         public String dataItem;
 
-        // key
         @NameInMap("Key")
         public String key;
 
-        // 时间戳
         @NameInMap("Timestamp")
         public Long timestamp;
 
-        // 数值
         @NameInMap("Value")
         public String value;
 

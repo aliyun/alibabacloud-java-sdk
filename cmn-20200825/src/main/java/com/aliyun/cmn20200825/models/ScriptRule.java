@@ -4,35 +4,27 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ScriptRule extends TeaModel {
-    // 设备架构
     @NameInMap("Arch")
     public String arch;
 
-    // 设备安全域
     @NameInMap("Domain")
     public String domain;
 
-    // 设备型号
     @NameInMap("Model")
     public String model;
 
-    // 设备OS版本
     @NameInMap("Os")
     public String os;
 
-    // 设备角色
     @NameInMap("Role")
     public String role;
 
-    // 规则id
     @NameInMap("RuleId")
     public String ruleId;
 
-    // 脚本id
     @NameInMap("ScriptId")
     public String scriptId;
 
-    // 设备厂商
     @NameInMap("Vendor")
     public String vendor;
 

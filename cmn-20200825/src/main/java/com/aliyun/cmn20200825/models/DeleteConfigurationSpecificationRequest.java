@@ -4,11 +4,9 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class DeleteConfigurationSpecificationRequest extends TeaModel {
-    // 实例 ID。
     @NameInMap("ConfigurationSpecificationId")
     public String configurationSpecificationId;
 
-    // instanceId
     @NameInMap("InstanceId")
     public String instanceId;
 

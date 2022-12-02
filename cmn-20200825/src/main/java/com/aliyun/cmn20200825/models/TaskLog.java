@@ -4,31 +4,24 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class TaskLog extends TeaModel {
-    // 函数名
     @NameInMap("FuncName")
     public String funcName;
 
-    // 记录时间
     @NameInMap("GmtCreate")
     public String gmtCreate;
 
-    // 日志等级
     @NameInMap("Level")
     public String level;
 
-    // 行数
     @NameInMap("LineNo")
     public Integer lineNo;
 
-    // 日志id
     @NameInMap("LogId")
     public String logId;
 
-    // 日志信息
     @NameInMap("Message")
     public String message;
 
-    // 任务id
     @NameInMap("TaskId")
     public String taskId;
 

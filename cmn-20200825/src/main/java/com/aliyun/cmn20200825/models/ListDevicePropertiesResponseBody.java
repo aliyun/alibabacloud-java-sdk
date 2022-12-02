@@ -4,23 +4,18 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ListDevicePropertiesResponseBody extends TeaModel {
-    // 数组，返回示例目录。
     @NameInMap("DeviceProperties")
     public java.util.List<ListDevicePropertiesResponseBodyDeviceProperties> deviceProperties;
 
-    // 每页数量。
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 当总结果个数大于MaxResults时，用于翻页的token。
     @NameInMap("NextToken")
     public Integer nextToken;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 总记录数。
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -70,35 +65,27 @@ public class ListDevicePropertiesResponseBody extends TeaModel {
     }
 
     public static class ListDevicePropertiesResponseBodyDeviceProperties extends TeaModel {
-        // 是否内置属性
         @NameInMap("BuiltIn")
         public Boolean builtIn;
 
-        // 设备形态ID
         @NameInMap("DeviceFormId")
         public String deviceFormId;
 
-        // 设备形态名称
         @NameInMap("DeviceFormName")
         public String deviceFormName;
 
-        // 设备属性ID
         @NameInMap("DevicePropertyId")
         public String devicePropertyId;
 
-        // 属性内容
         @NameInMap("PropertyContent")
         public String propertyContent;
 
-        // 属性格式
         @NameInMap("PropertyFormat")
         public String propertyFormat;
 
-        // 属性主键
         @NameInMap("PropertyKey")
         public String propertyKey;
 
-        // 属性名称
         @NameInMap("PropertyName")
         public String propertyName;
 

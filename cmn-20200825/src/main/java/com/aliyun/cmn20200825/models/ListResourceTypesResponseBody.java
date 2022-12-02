@@ -4,11 +4,9 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ListResourceTypesResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 资源类型
     @NameInMap("ResourceType")
     public java.util.List<ListResourceTypesResponseBodyResourceType> resourceType;
 
@@ -37,11 +35,9 @@ public class ListResourceTypesResponseBody extends TeaModel {
         @NameInMap("Key")
         public String key;
 
-        // 资源类型
         @NameInMap("ResourceType")
         public String resourceType;
 
-        // 资源名称
         @NameInMap("ResourceTypeName")
         public String resourceTypeName;
 

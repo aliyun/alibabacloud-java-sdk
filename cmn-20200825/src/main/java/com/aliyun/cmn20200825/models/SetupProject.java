@@ -4,59 +4,45 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class SetupProject extends TeaModel {
-    // 架构id
     @NameInMap("ArchId")
     public String archId;
 
-    // 架构版本
     @NameInMap("ArchVersion")
     public String archVersion;
 
-    // 架构id
     @NameInMap("ArchitectureId")
     public String architectureId;
 
-    // 创建时间
     @NameInMap("CreateTime")
     public String createTime;
 
-    // 预计交付时间
     @NameInMap("DeliveryTime")
     public String deliveryTime;
 
-    // 描述
     @NameInMap("Description")
     public String description;
 
-    // 节点
     @NameInMap("Nodes")
     public String nodes;
 
-    // 套餐
     @NameInMap("Packages")
     public java.util.List<SetupProjectPackages> packages;
 
-    // 资源一级ID
     @NameInMap("SetupProjectId")
     public String setupProjectId;
 
-    // 资源名称
     @NameInMap("SetupProjectName")
     public String setupProjectName;
 
-    // 物理空间uId
     @NameInMap("SpaceId")
     public String spaceId;
 
-    // 物理空间名称
     @NameInMap("SpaceName")
     public String spaceName;
 
-    // 物理空间类型
     @NameInMap("SpaceType")
     public String spaceType;
 
-    // 状态
     @NameInMap("Status")
     public String status;
 
@@ -178,19 +164,15 @@ public class SetupProject extends TeaModel {
     }
 
     public static class SetupProjectPackages extends TeaModel {
-        // 设备号
         @NameInMap("DeviceNumber")
         public String deviceNumber;
 
-        // 型号
         @NameInMap("Model")
         public String model;
 
-        // 角色
         @NameInMap("Role")
         public String role;
 
-        // 厂商
         @NameInMap("Vendor")
         public String vendor;
 

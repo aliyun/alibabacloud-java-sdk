@@ -4,23 +4,18 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class UpdateDevicePropertyRequest extends TeaModel {
-    // 实例 ID。
     @NameInMap("DevicePropertyId")
     public String devicePropertyId;
 
-    // 实例ID
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 属性内容
     @NameInMap("PropertyContent")
     public String propertyContent;
 
-    // 属性格式
     @NameInMap("PropertyFormat")
     public String propertyFormat;
 
-    // 属性名称
     @NameInMap("PropertyName")
     public String propertyName;
 

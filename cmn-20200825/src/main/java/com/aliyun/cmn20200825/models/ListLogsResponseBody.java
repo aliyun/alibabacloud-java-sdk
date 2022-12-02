@@ -4,23 +4,18 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ListLogsResponseBody extends TeaModel {
-    // 日志列表
     @NameInMap("Logs")
     public java.util.List<ListLogsResponseBodyLogs> logs;
 
-    // MaxResults本次请求所返回的最大记录条数
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 表示当前调用返回读取到的位置，空代表数据已经读取完毕
     @NameInMap("NextToken")
     public String nextToken;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // TotalCount本次请求条件下的数据总量，此参数为可选参数，默认可不返回
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -100,14 +95,27 @@ public class ListLogsResponseBody extends TeaModel {
     }
 
     public static class ListLogsResponseBodyLogs extends TeaModel {
-        // 日志内容
+        @NameInMap("AlarmObject")
+        public String alarmObject;
+
+        @NameInMap("AlarmStatus")
+        public String alarmStatus;
+
+        @NameInMap("AlarmType")
+        public String alarmType;
+
+        @NameInMap("DeviceId")
+        public String deviceId;
+
         @NameInMap("Log")
         public String log;
+
+        @NameInMap("ReceiveTime")
+        public String receiveTime;
 
         @NameInMap("ResourceDevice")
         public ListLogsResponseBodyLogsResourceDevice resourceDevice;
 
-        // 日志时间戳
         @NameInMap("Time")
         public String time;
 
@@ -116,12 +124,52 @@ public class ListLogsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public ListLogsResponseBodyLogs setAlarmObject(String alarmObject) {
+            this.alarmObject = alarmObject;
+            return this;
+        }
+        public String getAlarmObject() {
+            return this.alarmObject;
+        }
+
+        public ListLogsResponseBodyLogs setAlarmStatus(String alarmStatus) {
+            this.alarmStatus = alarmStatus;
+            return this;
+        }
+        public String getAlarmStatus() {
+            return this.alarmStatus;
+        }
+
+        public ListLogsResponseBodyLogs setAlarmType(String alarmType) {
+            this.alarmType = alarmType;
+            return this;
+        }
+        public String getAlarmType() {
+            return this.alarmType;
+        }
+
+        public ListLogsResponseBodyLogs setDeviceId(String deviceId) {
+            this.deviceId = deviceId;
+            return this;
+        }
+        public String getDeviceId() {
+            return this.deviceId;
+        }
+
         public ListLogsResponseBodyLogs setLog(String log) {
             this.log = log;
             return this;
         }
         public String getLog() {
             return this.log;
+        }
+
+        public ListLogsResponseBodyLogs setReceiveTime(String receiveTime) {
+            this.receiveTime = receiveTime;
+            return this;
+        }
+        public String getReceiveTime() {
+            return this.receiveTime;
         }
 
         public ListLogsResponseBodyLogs setResourceDevice(ListLogsResponseBodyLogsResourceDevice resourceDevice) {

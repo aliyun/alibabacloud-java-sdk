@@ -4,19 +4,15 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class DisableNotificationShrinkRequest extends TeaModel {
-    // 到期时间
     @NameInMap("ExpiryTime")
     public String expiryTime;
 
-    // 实例ID
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 关闭通知的对象
     @NameInMap("List")
     public String listShrink;
 
-    // 关闭原因
     @NameInMap("Reason")
     public String reason;
 

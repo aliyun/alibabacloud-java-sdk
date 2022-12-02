@@ -4,19 +4,15 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ListInspectionDevicesShrinkRequest extends TeaModel {
-    // 实例id
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 型号
     @NameInMap("Model")
     public String modelShrink;
 
-    // 角色
     @NameInMap("Role")
     public String role;
 
-    // 厂商
     @NameInMap("Vendor")
     public String vendor;
 

@@ -7,23 +7,18 @@ public class UpdateInformationKeyActionRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 键
     @NameInMap("Key")
     public String key;
 
-    // 动作
     @NameInMap("KeyAction")
     public String keyAction;
 
-    // 资源id
     @NameInMap("ResourceInformationId")
     public String resourceInformationId;
 
-    // 建设项目id
     @NameInMap("SetupProjectId")
     public String setupProjectId;
 
-    // 键值
     @NameInMap("Value")
     public String value;
 

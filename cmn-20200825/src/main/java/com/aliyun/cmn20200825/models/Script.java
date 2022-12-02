@@ -4,39 +4,30 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class Script extends TeaModel {
-    // 脚本代码
     @NameInMap("Content")
     public String content;
 
-    // 创建时间
     @NameInMap("GmtCreate")
     public String gmtCreate;
 
-    // 修改时间
     @NameInMap("GmtModify")
     public String gmtModify;
 
-    // 模板入参
     @NameInMap("Input")
     public java.util.List<ScriptInput> input;
 
-    // 模板出参
     @NameInMap("Output")
     public java.util.List<ScriptOutput> output;
 
-    // 规则列表
     @NameInMap("Rules")
     public java.util.List<ScriptRule> rules;
 
-    // 脚本id
     @NameInMap("ScriptId")
     public String scriptId;
 
-    // 模板id
     @NameInMap("TemplateId")
     public String templateId;
 
-    // 版本id
     @NameInMap("VersionId")
     public String versionId;
 
@@ -118,19 +109,15 @@ public class Script extends TeaModel {
     }
 
     public static class InspectionScriptInspectionAlarmRules extends TeaModel {
-        // 告警表达式
         @NameInMap("AlarmExpression")
         public String alarmExpression;
 
-        // 告警级别
         @NameInMap("AlarmLevel")
         public String alarmLevel;
 
-        // 告警符号
         @NameInMap("AlarmOperator")
         public String alarmOperator;
 
-        // 告警值
         @NameInMap("AlarmValue")
         public String alarmValue;
 
@@ -174,19 +161,15 @@ public class Script extends TeaModel {
     }
 
     public static class ScriptInput extends TeaModel {
-        // 参数说明
         @NameInMap("Description")
         public String description;
 
-        // 参数名称
         @NameInMap("Name")
         public String name;
 
-        // 参数示例
         @NameInMap("Sample")
         public String sample;
 
-        // 参数类型
         @NameInMap("Type")
         public String type;
 
@@ -230,19 +213,15 @@ public class Script extends TeaModel {
     }
 
     public static class ScriptOutput extends TeaModel {
-        // 参数说明
         @NameInMap("Description")
         public String description;
 
-        // 参数名称
         @NameInMap("Name")
         public String name;
 
-        // 参数示例
         @NameInMap("Sample")
         public String sample;
 
-        // 参数类型
         @NameInMap("Type")
         public String type;
 

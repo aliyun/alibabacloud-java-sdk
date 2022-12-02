@@ -4,39 +4,30 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ApplyIPShrinkRequest extends TeaModel {
-    // 业务类型id
     @NameInMap("BusinessTypeId")
     public String businessTypeId;
 
-    // 业务参数
     @NameInMap("BusinessTypeParams")
     public String businessTypeParams;
 
-    // deviceResourceId
     @NameInMap("DeviceResourceId")
     public String deviceResourceId;
 
-    // 设备uuid列表
     @NameInMap("DeviceResourceIds")
     public String deviceResourceIdsShrink;
 
-    // instanceId
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // ip地址类型
     @NameInMap("IpType")
     public String ipType;
 
-    // Loopback端口
     @NameInMap("LoopbackPort")
     public String loopbackPort;
 
-    // 位置空间
     @NameInMap("NetLocation")
     public String netLocation;
 
-    // 建设项目id
     @NameInMap("SetupProjectId")
     public String setupProjectId;
 

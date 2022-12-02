@@ -4,27 +4,21 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class AtomicStep extends TeaModel {
-    // 步骤说明
     @NameInMap("Description")
     public String description;
 
-    // 步骤入参
     @NameInMap("Input")
     public java.util.List<AtomicStepInput> input;
 
-    // 步骤出参
     @NameInMap("Output")
     public java.util.List<AtomicStepOutput> output;
 
-    // 步骤id
     @NameInMap("StepId")
     public String stepId;
 
-    // 步骤名称
     @NameInMap("StepName")
     public String stepName;
 
-    // 步骤类型
     @NameInMap("StepType")
     public String stepType;
 
@@ -82,19 +76,15 @@ public class AtomicStep extends TeaModel {
     }
 
     public static class AtomicStepInput extends TeaModel {
-        // 参数说明
         @NameInMap("Description")
         public String description;
 
-        // 参数名称
         @NameInMap("Name")
         public String name;
 
-        // 参数示例
         @NameInMap("Sample")
         public String sample;
 
-        // 参数类型
         @NameInMap("Type")
         public String type;
 
@@ -138,19 +128,15 @@ public class AtomicStep extends TeaModel {
     }
 
     public static class AtomicStepOutput extends TeaModel {
-        // 参数说明
         @NameInMap("Description")
         public String description;
 
-        // 参数名称
         @NameInMap("Name")
         public String name;
 
-        // 参数示例
         @NameInMap("Sample")
         public String sample;
 
-        // 参数类型
         @NameInMap("Type")
         public String type;
 

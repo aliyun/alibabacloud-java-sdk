@@ -4,52 +4,50 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class UpdatePhysicalSpaceRequest extends TeaModel {
-    // 具体地址
     @NameInMap("Address")
     public String address;
 
-    // 所属城市
     @NameInMap("City")
     public String city;
 
-    // 所属国家
     @NameInMap("Country")
     public String country;
 
-    // 实例ID
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 负责人
+    @NameInMap("MoveAction")
+    public String moveAction;
+
     @NameInMap("Owner")
     public String owner;
 
     @NameInMap("ParentUid")
     public String parentUid;
 
-    // 实例 ID。
     @NameInMap("PhysicalSpaceId")
     public String physicalSpaceId;
 
-    // 物理空间名称
     @NameInMap("PhysicalSpaceName")
     public String physicalSpaceName;
 
-    // 所属省份
     @NameInMap("Province")
     public String province;
 
-    // 备注
     @NameInMap("Remark")
     public String remark;
 
-    // 缩写
+    @NameInMap("SecurityDomainList")
+    public java.util.List<String> securityDomainList;
+
     @NameInMap("SpaceAbbreviation")
     public String spaceAbbreviation;
 
-    // 模型
     @NameInMap("SpaceType")
     public String spaceType;
+
+    @NameInMap("TargetUid")
+    public String targetUid;
 
     public static UpdatePhysicalSpaceRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdatePhysicalSpaceRequest self = new UpdatePhysicalSpaceRequest();
@@ -86,6 +84,14 @@ public class UpdatePhysicalSpaceRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public UpdatePhysicalSpaceRequest setMoveAction(String moveAction) {
+        this.moveAction = moveAction;
+        return this;
+    }
+    public String getMoveAction() {
+        return this.moveAction;
     }
 
     public UpdatePhysicalSpaceRequest setOwner(String owner) {
@@ -136,6 +142,14 @@ public class UpdatePhysicalSpaceRequest extends TeaModel {
         return this.remark;
     }
 
+    public UpdatePhysicalSpaceRequest setSecurityDomainList(java.util.List<String> securityDomainList) {
+        this.securityDomainList = securityDomainList;
+        return this;
+    }
+    public java.util.List<String> getSecurityDomainList() {
+        return this.securityDomainList;
+    }
+
     public UpdatePhysicalSpaceRequest setSpaceAbbreviation(String spaceAbbreviation) {
         this.spaceAbbreviation = spaceAbbreviation;
         return this;
@@ -150,6 +164,14 @@ public class UpdatePhysicalSpaceRequest extends TeaModel {
     }
     public String getSpaceType() {
         return this.spaceType;
+    }
+
+    public UpdatePhysicalSpaceRequest setTargetUid(String targetUid) {
+        this.targetUid = targetUid;
+        return this;
+    }
+    public String getTargetUid() {
+        return this.targetUid;
     }
 
 }

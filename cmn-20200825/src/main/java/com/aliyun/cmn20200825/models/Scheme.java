@@ -4,47 +4,36 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class Scheme extends TeaModel {
-    // 方案类型
     @NameInMap("Category")
     public String category;
 
-    // 方案内容
     @NameInMap("Content")
     public String content;
 
-    // 方案说明
     @NameInMap("Description")
     public String description;
 
-    // 创建时间
     @NameInMap("GmtCreate")
     public String gmtCreate;
 
-    // 修改时间
     @NameInMap("GmtModify")
     public String gmtModify;
 
-    // 方案入参
     @NameInMap("Input")
     public java.util.List<SchemeInput> input;
 
-    // 方案出参
     @NameInMap("Output")
     public java.util.List<SchemeOutput> output;
 
-    // 方案id
     @NameInMap("SchemeId")
     public String schemeId;
 
-    // 方案名称
     @NameInMap("SchemeName")
     public String schemeName;
 
-    // 方案状态
     @NameInMap("Status")
     public String status;
 
-    // 方案展示
     @NameInMap("View")
     public String view;
 
@@ -142,19 +131,15 @@ public class Scheme extends TeaModel {
     }
 
     public static class SchemeInput extends TeaModel {
-        // 参数说明
         @NameInMap("Description")
         public String description;
 
-        // 参数名称
         @NameInMap("Name")
         public String name;
 
-        // 参数示例
         @NameInMap("Sample")
         public String sample;
 
-        // 参数类型
         @NameInMap("Type")
         public String type;
 
@@ -198,19 +183,15 @@ public class Scheme extends TeaModel {
     }
 
     public static class SchemeOutput extends TeaModel {
-        // 参数说明
         @NameInMap("Description")
         public String description;
 
-        // 参数名称
         @NameInMap("Name")
         public String name;
 
-        // 参数示例
         @NameInMap("Sample")
         public String sample;
 
-        // 参数类型
         @NameInMap("Type")
         public String type;
 

@@ -4,11 +4,9 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class CreateConfigurationVariateResponseBody extends TeaModel {
-    // 资源实例ID，如ECS实例的创建接口CreateInstance应返回InstanceId。
     @NameInMap("ConfigurationVariateId")
     public String configurationVariateId;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,43 +4,33 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class Task extends TeaModel {
-    // 模板类别
     @NameInMap("Category")
     public String category;
 
-    // 创建时间
     @NameInMap("GmtCreate")
     public String gmtCreate;
 
-    // 修改时间
     @NameInMap("GmtModify")
     public String gmtModify;
 
-    // 任务参数
     @NameInMap("Params")
     public String params;
 
-    // 任务错误码
     @NameInMap("ResponseCode")
     public String responseCode;
 
-    // 任务返回
     @NameInMap("Result")
     public String result;
 
-    // 任务状态
     @NameInMap("Status")
     public String status;
 
-    // 任务id
     @NameInMap("TaskId")
     public String taskId;
 
-    // 模板id
     @NameInMap("TemplateId")
     public String templateId;
 
-    // 模板名称
     @NameInMap("TemplateName")
     public String templateName;
 
@@ -130,23 +120,18 @@ public class Task extends TeaModel {
     }
 
     public static class InspectionTaskInspectionAlarmRules extends TeaModel {
-        // 告警实际值
         @NameInMap("ActualValue")
         public String actualValue;
 
-        // 告警表达式
         @NameInMap("Expression")
         public String expression;
 
-        // 告警级别
         @NameInMap("Level")
         public String level;
 
-        // 告警操作符
         @NameInMap("Operator")
         public String operator;
 
-        // 告警值
         @NameInMap("Value")
         public String value;
 
@@ -198,23 +183,18 @@ public class Task extends TeaModel {
     }
 
     public static class GetInspectionTaskResponseBodyInspectionTaskInspectionAlarmRules extends TeaModel {
-        // 告警实际值
         @NameInMap("ActualValue")
         public String actualValue;
 
-        // 告警符号
         @NameInMap("Expression")
         public String expression;
 
-        // 告警级别
         @NameInMap("Level")
         public String level;
 
-        // 告警操作符
         @NameInMap("Operator")
         public String operator;
 
-        // 告警值
         @NameInMap("Value")
         public String value;
 
@@ -266,23 +246,18 @@ public class Task extends TeaModel {
     }
 
     public static class ListInspectionTaskReportsResponseBodyInspectionTaskAlarmStatistic extends TeaModel {
-        // 高危数量
         @NameInMap("CriticalNumber")
         public Long criticalNumber;
 
-        // 巡检项
         @NameInMap("InspectionItem")
         public String inspectionItem;
 
-        // 型号
         @NameInMap("Model")
         public String model;
 
-        // 厂商
         @NameInMap("Vendor")
         public String vendor;
 
-        // 中危数量
         @NameInMap("WarningNumber")
         public Long warningNumber;
 

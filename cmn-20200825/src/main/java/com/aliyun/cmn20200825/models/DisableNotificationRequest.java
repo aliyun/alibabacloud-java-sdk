@@ -4,19 +4,15 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class DisableNotificationRequest extends TeaModel {
-    // 到期时间
     @NameInMap("ExpiryTime")
     public String expiryTime;
 
-    // 实例ID
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 关闭通知的对象
     @NameInMap("List")
     public java.util.List<DisableNotificationRequestList> list;
 
-    // 关闭原因
     @NameInMap("Reason")
     public String reason;
 
@@ -58,19 +54,15 @@ public class DisableNotificationRequest extends TeaModel {
     }
 
     public static class DisableNotificationRequestList extends TeaModel {
-        // 聚合数据ID
         @NameInMap("AggregateDataId")
         public String aggregateDataId;
 
-        // 应用ID
         @NameInMap("AppId")
         public String appId;
 
-        // 专线ID
         @NameInMap("DedicatedLineId")
         public String dedicatedLineId;
 
-        // 设备ID
         @NameInMap("DeviceId")
         public String deviceId;
 
@@ -80,15 +72,12 @@ public class DisableNotificationRequest extends TeaModel {
         @NameInMap("EventObjectId")
         public String eventObjectId;
 
-        // 监控项ID
         @NameInMap("MonitorItemId")
         public String monitorItemId;
 
-        // 端口集ID
         @NameInMap("PortCollectionId")
         public String portCollectionId;
 
-        // 类型
         @NameInMap("Type")
         public String type;
 

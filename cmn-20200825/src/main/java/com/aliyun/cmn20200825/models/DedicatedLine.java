@@ -4,35 +4,27 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class DedicatedLine extends TeaModel {
-    // 宽带（Mbps）
     @NameInMap("Bandwidth")
     public Integer bandwidth;
 
-    // 关联设备ID
     @NameInMap("DeviceId")
     public String deviceId;
 
-    // 关联设备端口
     @NameInMap("DevicePort")
     public String devicePort;
 
-    // 运营商
     @NameInMap("Isp")
     public String isp;
 
-    // 专线网关
     @NameInMap("LineGateway")
     public String lineGateway;
 
-    // 物理空间专线ID
     @NameInMap("LineId")
     public String lineId;
 
-    // 专线IP
     @NameInMap("LineIp")
     public String lineIp;
 
-    // 专线角色
     @NameInMap("LineRole")
     public String lineRole;
 

@@ -4,15 +4,12 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class GetSpaceModelSortRequest extends TeaModel {
-    // instanceId
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 操作类型
     @NameInMap("OperateType")
     public String operateType;
 
-    // 物理空间类型
     @NameInMap("SpaceType")
     public String spaceType;
 

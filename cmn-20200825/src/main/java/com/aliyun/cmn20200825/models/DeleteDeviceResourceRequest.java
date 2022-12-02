@@ -4,11 +4,9 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class DeleteDeviceResourceRequest extends TeaModel {
-    // 实例 ID。
     @NameInMap("DeviceResourceId")
     public String deviceResourceId;
 
-    // instanceId
     @NameInMap("InstanceId")
     public String instanceId;
 

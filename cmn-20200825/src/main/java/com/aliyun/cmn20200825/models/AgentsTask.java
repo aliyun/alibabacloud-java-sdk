@@ -4,31 +4,24 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class AgentsTask extends TeaModel {
-    // 操作类型
     @NameInMap("ActionType")
     public String actionType;
 
-    // 探针类型
     @NameInMap("AgentType")
     public String agentType;
 
-    // 任务ID
     @NameInMap("AgentsTaskId")
     public String agentsTaskId;
 
-    // 创建时间
     @NameInMap("GmtCreate")
     public String gmtCreate;
 
-    // 更新时间
     @NameInMap("GmtModify")
     public String gmtModify;
 
-    // 任务参数
     @NameInMap("Params")
     public String params;
 
-    // 任务状态
     @NameInMap("Status")
     public String status;
 

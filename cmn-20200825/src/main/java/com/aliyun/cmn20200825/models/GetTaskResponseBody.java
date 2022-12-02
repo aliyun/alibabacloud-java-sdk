@@ -4,11 +4,9 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class GetTaskResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 任务信息
     @NameInMap("Task")
     public GetTaskResponseBodyTask task;
 
@@ -34,43 +32,33 @@ public class GetTaskResponseBody extends TeaModel {
     }
 
     public static class GetTaskResponseBodyTask extends TeaModel {
-        // 模板类别
         @NameInMap("Category")
         public String category;
 
-        // 创建时间
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 任务参数
         @NameInMap("Params")
         public String params;
 
-        // 任务错误码
         @NameInMap("ResponseCode")
         public String responseCode;
 
-        // 任务返回
         @NameInMap("Result")
         public String result;
 
-        // 任务状态
         @NameInMap("Status")
         public String status;
 
-        // 任务id
         @NameInMap("TaskId")
         public String taskId;
 
-        // 模板id
         @NameInMap("TemplateId")
         public String templateId;
 
-        // 模板名称
         @NameInMap("TemplateName")
         public String templateName;
 
-        // 修改时间
         @NameInMap("UpdateTime")
         public String updateTime;
 

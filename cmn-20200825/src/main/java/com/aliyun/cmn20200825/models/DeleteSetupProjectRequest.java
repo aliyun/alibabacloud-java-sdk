@@ -4,11 +4,9 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class DeleteSetupProjectRequest extends TeaModel {
-    // instanceId
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 实例 ID。
     @NameInMap("SetupProjectId")
     public String setupProjectId;
 

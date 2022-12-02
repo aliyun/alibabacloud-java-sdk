@@ -4,11 +4,9 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class GetPhysicalSpaceRequest extends TeaModel {
-    // 实例ID
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 实例 ID。
     @NameInMap("PhysicalSpaceId")
     public String physicalSpaceId;
 

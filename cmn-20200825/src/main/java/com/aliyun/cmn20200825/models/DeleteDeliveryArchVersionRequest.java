@@ -4,11 +4,9 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class DeleteDeliveryArchVersionRequest extends TeaModel {
-    // 资源 ID。
     @NameInMap("DeliveryArchVersionId")
     public String deliveryArchVersionId;
 
-    // 实例ID
     @NameInMap("InstanceId")
     public String instanceId;
 

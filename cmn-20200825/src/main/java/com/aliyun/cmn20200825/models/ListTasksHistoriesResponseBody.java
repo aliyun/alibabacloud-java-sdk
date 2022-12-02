@@ -4,19 +4,15 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ListTasksHistoriesResponseBody extends TeaModel {
-    // 数组，返回示例目录。
     @NameInMap("InspectionTasks")
     public java.util.List<ListTasksHistoriesResponseBodyInspectionTasks> inspectionTasks;
 
-    // 当总结果个数大于MaxResults时，用于翻页的token。
     @NameInMap("NextToken")
     public Integer nextToken;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
-    // 总记录数。
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -58,23 +54,18 @@ public class ListTasksHistoriesResponseBody extends TeaModel {
     }
 
     public static class ListTasksHistoriesResponseBodyInspectionTasksInspectionAlarmRules extends TeaModel {
-        // 告警实际值
         @NameInMap("ActualValue")
         public String actualValue;
 
-        // 告警表达式
         @NameInMap("AlarmExpression")
         public String alarmExpression;
 
-        // 告警级别
         @NameInMap("AlarmLevel")
         public String alarmLevel;
 
-        // 告警操作符
         @NameInMap("AlarmOperator")
         public String alarmOperator;
 
-        // 告警值
         @NameInMap("AlarmValue")
         public String alarmValue;
 
@@ -126,29 +117,46 @@ public class ListTasksHistoriesResponseBody extends TeaModel {
     }
 
     public static class ListTasksHistoriesResponseBodyInspectionTasks extends TeaModel {
-        // 巡检开始时间
+        @NameInMap("DeviceDisplay")
+        public String deviceDisplay;
+
+        @NameInMap("ErrorCode")
+        public String errorCode;
+
         @NameInMap("ExecutionBeginTime")
         public String executionBeginTime;
 
-        // 巡检结束时间
         @NameInMap("ExecutionEndTime")
         public String executionEndTime;
 
-        // 告警规则
         @NameInMap("InspectionAlarmRules")
         public java.util.List<ListTasksHistoriesResponseBodyInspectionTasksInspectionAlarmRules> inspectionAlarmRules;
 
-        // 巡检结果
         @NameInMap("InspectionResult")
         public String inspectionResult;
 
-        // 任务ID
         @NameInMap("TaskId")
         public String taskId;
 
         public static ListTasksHistoriesResponseBodyInspectionTasks build(java.util.Map<String, ?> map) throws Exception {
             ListTasksHistoriesResponseBodyInspectionTasks self = new ListTasksHistoriesResponseBodyInspectionTasks();
             return TeaModel.build(map, self);
+        }
+
+        public ListTasksHistoriesResponseBodyInspectionTasks setDeviceDisplay(String deviceDisplay) {
+            this.deviceDisplay = deviceDisplay;
+            return this;
+        }
+        public String getDeviceDisplay() {
+            return this.deviceDisplay;
+        }
+
+        public ListTasksHistoriesResponseBodyInspectionTasks setErrorCode(String errorCode) {
+            this.errorCode = errorCode;
+            return this;
+        }
+        public String getErrorCode() {
+            return this.errorCode;
         }
 
         public ListTasksHistoriesResponseBodyInspectionTasks setExecutionBeginTime(String executionBeginTime) {

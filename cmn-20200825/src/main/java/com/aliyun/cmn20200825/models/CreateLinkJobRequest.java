@@ -4,23 +4,18 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class CreateLinkJobRequest extends TeaModel {
-    // 是否自动确认
     @NameInMap("AutoConfirm")
     public Boolean autoConfirm;
 
-    // 双端链路转换策略
     @NameInMap("DoubleConvertStrategy")
     public String doubleConvertStrategy;
 
-    // 实例ID
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 任务ID
     @NameInMap("JobId")
     public String jobId;
 
-    // 单端链路发现策略
     @NameInMap("SingleStrategy")
     public String singleStrategy;
 

@@ -4,11 +4,9 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class GetSpaceModelInstanceResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 建设项目
     @NameInMap("SpaceModel")
     public GetSpaceModelInstanceResponseBodySpaceModel spaceModel;
 
@@ -34,7 +32,6 @@ public class GetSpaceModelInstanceResponseBody extends TeaModel {
     }
 
     public static class GetSpaceModelInstanceResponseBodySpaceModel extends TeaModel {
-        // 物理空间实例
         @NameInMap("Instance")
         public String instance;
 

@@ -7,7 +7,6 @@ public class DeleteWorkOrderRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 工单编号
     @NameInMap("WorkOrderId")
     public String workOrderId;
 

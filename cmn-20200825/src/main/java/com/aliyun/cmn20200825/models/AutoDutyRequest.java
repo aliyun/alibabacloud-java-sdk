@@ -4,23 +4,18 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class AutoDutyRequest extends TeaModel {
-    // 批次号
     @NameInMap("DutyBatch")
     public String dutyBatch;
 
-    // 表明
     @NameInMap("DutyName")
     public String dutyName;
 
-    // 结束时间
     @NameInMap("EndDate")
     public String endDate;
 
-    // instanceId
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 开始时间
     @NameInMap("StartDate")
     public String startDate;
 

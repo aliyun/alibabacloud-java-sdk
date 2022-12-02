@@ -4,63 +4,48 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class DeviceTask extends TeaModel {
-    // 设备id
     @NameInMap("DeviceId")
     public String deviceId;
 
-    // 设备ip
     @NameInMap("DeviceIp")
     public String deviceIp;
 
-    // 设备名
     @NameInMap("DeviceName")
     public String deviceName;
 
-    // 设备任务id
     @NameInMap("DeviceTaskId")
     public String deviceTaskId;
 
-    // 创建时间
     @NameInMap("GmtCreate")
     public String gmtCreate;
 
-    // 修改时间
     @NameInMap("GmtModify")
     public String gmtModify;
 
-    // 设备任务回显
     @NameInMap("Output")
     public String output;
 
-    // 设备任务参数
     @NameInMap("Params")
     public String params;
 
-    // 设备任务错误码
     @NameInMap("ResponseCode")
     public String responseCode;
 
-    // 设备任务返回
     @NameInMap("Result")
     public String result;
 
-    // 脚本id
     @NameInMap("ScriptId")
     public String scriptId;
 
-    // 版本id
     @NameInMap("ScriptVersion")
     public String scriptVersion;
 
-    // 设备任务状态
     @NameInMap("Status")
     public String status;
 
-    // 模板id
     @NameInMap("TemplateId")
     public String templateId;
 
-    // 模板名称
     @NameInMap("TemplateName")
     public String templateName;
 

@@ -4,59 +4,45 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class OsVersion extends TeaModel {
-    // 用户名
     @NameInMap("AccessId")
     public String accessId;
 
-    // 创建时间
     @NameInMap("CreateTime")
     public String createTime;
 
-    // 目录
     @NameInMap("Directory")
     public String directory;
 
-    // 过期时间
     @NameInMap("ExpireTime")
     public String expireTime;
 
-    // file
     @NameInMap("FileName")
     public String fileName;
 
-    // 文件路径
     @NameInMap("FilePath")
     public String filePath;
 
-    // 主机
     @NameInMap("Host")
     public String host;
 
-    // 型号
     @NameInMap("Model")
     public String model;
 
-    // 版本
     @NameInMap("OsVersion")
     public String osVersion;
 
-    // 资源id
     @NameInMap("OsVersionId")
     public String osVersionId;
 
-    // 策略
     @NameInMap("Policy")
     public String policy;
 
-    // 签名
     @NameInMap("Signature")
     public String signature;
 
-    // 状态
     @NameInMap("Status")
     public String status;
 
-    // 厂商
     @NameInMap("Vendor")
     public String vendor;
 

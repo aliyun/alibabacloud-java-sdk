@@ -4,51 +4,39 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class IpRecord extends TeaModel {
-    // 业务类型名称
     @NameInMap("BusinessTypeName")
     public String businessTypeName;
 
-    // 创建时间
     @NameInMap("CreateTime")
     public String createTime;
 
-    // 创建人
     @NameInMap("Creator")
     public String creator;
 
-    // 备注
     @NameInMap("Description")
     public String description;
 
-    // 工单详情
     @NameInMap("Detail")
     public java.util.List<IpRecordDetail> detail;
 
-    // 地址段
     @NameInMap("IpBlock")
     public String ipBlock;
 
-    // IP地址列表
     @NameInMap("IpCode")
     public java.util.List<String> ipCode;
 
-    // 资源一级ID
     @NameInMap("IpRecordId")
     public String ipRecordId;
 
-    // 工单类型 Apply 申请工单 Recycle 释放工单
     @NameInMap("RecodeType")
     public String recodeType;
 
-    // 工单状态 running complete fail
     @NameInMap("Status")
     public String status;
 
-    // 更新时间
     @NameInMap("UpdateTime")
     public String updateTime;
 
-    // 园区名
     @NameInMap("ZoneName")
     public String zoneName;
 
@@ -154,11 +142,9 @@ public class IpRecord extends TeaModel {
     }
 
     public static class IpRecordDetailZoneLayer extends TeaModel {
-        // 园区层级名称
         @NameInMap("Name")
         public String name;
 
-        // 园区层级值
         @NameInMap("Value")
         public String value;
 
@@ -186,43 +172,33 @@ public class IpRecord extends TeaModel {
     }
 
     public static class IpRecordDetail extends TeaModel {
-        // 设备MAC
         @NameInMap("DeviceMac")
         public String deviceMac;
 
-        // 设备名称
         @NameInMap("DeviceName")
         public String deviceName;
 
-        // 网关
         @NameInMap("Gateway")
         public String gateway;
 
-        // 申请到的Ip
         @NameInMap("Ip")
         public String ip;
 
-        // 父地址段列表
         @NameInMap("ParentIpBlocks")
         public java.util.List<String> parentIpBlocks;
 
-        // 设备端口
         @NameInMap("Port")
         public String port;
 
-        // 对端设备名称
         @NameInMap("RemoteDeviceName")
         public String remoteDeviceName;
 
-        // 对端IP
         @NameInMap("RemoteIp")
         public String remoteIp;
 
-        // 对端设备端口
         @NameInMap("RemotePort")
         public String remotePort;
 
-        // 园区层级
         @NameInMap("ZoneLayer")
         public java.util.List<IpRecordDetailZoneLayer> zoneLayer;
 

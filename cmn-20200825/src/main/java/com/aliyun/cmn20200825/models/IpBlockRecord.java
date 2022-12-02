@@ -4,55 +4,42 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class IpBlockRecord extends TeaModel {
-    // 创建时间
     @NameInMap("CreateTime")
     public String createTime;
 
-    // 创建人
     @NameInMap("Creator")
     public Long creator;
 
-    // 工单备注
     @NameInMap("Description")
     public String description;
 
-    // 工单详情
     @NameInMap("Detail")
     public java.util.List<IpBlockRecordDetail> detail;
 
-    // 要释放的IP段
     @NameInMap("IpBlockCode")
     public java.util.List<String> ipBlockCode;
 
-    // 工单uuid
     @NameInMap("IpBlockRecordId")
     public String ipBlockRecordId;
 
-    // 公网私网标志 PUBLIC PRIVATE
     @NameInMap("NetType")
     public String netType;
 
-    // 工单类型 Apply 申请工单 Recycle 释放工单
     @NameInMap("RecordType")
     public String recordType;
 
-    // 工单状态 running complete fail cancel lock approving
     @NameInMap("Status")
     public String status;
 
-    // 工单名称
     @NameInMap("Title")
     public String title;
 
-    // 更新时间
     @NameInMap("UpdateTime")
     public String updateTime;
 
-    // 工号
     @NameInMap("WorkNo")
     public String workNo;
 
-    // 园区名称
     @NameInMap("ZoneName")
     public String zoneName;
 
@@ -166,11 +153,9 @@ public class IpBlockRecord extends TeaModel {
     }
 
     public static class IpBlockRecordDetailZoneLayer extends TeaModel {
-        // 园区层级名称
         @NameInMap("Name")
         public String name;
 
-        // 园区层级值
         @NameInMap("Value")
         public String value;
 
@@ -198,23 +183,18 @@ public class IpBlockRecord extends TeaModel {
     }
 
     public static class IpBlockRecordDetail extends TeaModel {
-        // 业务类型
         @NameInMap("BusinessTypeName")
         public String businessTypeName;
 
-        // 设备名称
         @NameInMap("DeviceName")
         public String deviceName;
 
-        // 网关
         @NameInMap("Gateway")
         public String gateway;
 
-        // 父地址段列表
         @NameInMap("ParentIpBlocks")
         public java.util.List<String> parentIpBlocks;
 
-        // 园区层级
         @NameInMap("ZoneLayer")
         public java.util.List<IpBlockRecordDetailZoneLayer> zoneLayer;
 

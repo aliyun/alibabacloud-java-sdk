@@ -4,15 +4,12 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class GetPhysicalSpaceTopoRequest extends TeaModel {
-    // 实例ID
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 物理空间id
     @NameInMap("PhysicalSpaceId")
     public String physicalSpaceId;
 
-    // 拓扑类型
     @NameInMap("TopoType")
     public String topoType;
 

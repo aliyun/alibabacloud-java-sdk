@@ -7,23 +7,21 @@ public class ListAlarmStatusRequest extends TeaModel {
     @NameInMap("AggregateDataName")
     public String aggregateDataName;
 
-    // 所属城市
     @NameInMap("City")
     public String city;
 
-    // 所属国家
     @NameInMap("Country")
     public String country;
 
-    // 专线名称
+    @NameInMap("DedicatedLineId")
+    public String dedicatedLineId;
+
     @NameInMap("DedicatedLineName")
     public String dedicatedLineName;
 
-    // 设备形态
     @NameInMap("DeviceForm")
     public String deviceForm;
 
-    // 设备ID
     @NameInMap("DeviceId")
     public String deviceId;
 
@@ -33,74 +31,57 @@ public class ListAlarmStatusRequest extends TeaModel {
     @NameInMap("HostName")
     public String hostName;
 
-    // 实例ID
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 设备厂商
     @NameInMap("Manufacturer")
     public String manufacturer;
 
-    // 本次读取的最大数据记录数量
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 设备型号
     @NameInMap("Model")
     public String model;
 
-    // 监控项ID
     @NameInMap("MonitorItemId")
     public String monitorItemId;
 
-    // 标记当前开始读取的位置，置空表示从头开始
     @NameInMap("NextToken")
     public String nextToken;
 
-    // 物理空间ID
     @NameInMap("PhysicalSpaceId")
     public String physicalSpaceId;
 
-    // 端口集ID
     @NameInMap("PortCollectionId")
     public String portCollectionId;
 
     @NameInMap("PortCollectionName")
     public String portCollectionName;
 
-    // 所属省份
     @NameInMap("Province")
     public String province;
 
-    // 设备所属地域
     @NameInMap("Region")
     public String region;
 
-    // 设备角色
     @NameInMap("Role")
     public String role;
 
-    // 探针标识
     @NameInMap("SecurityDomain")
     public String securityDomain;
 
-    // 设备状态
     @NameInMap("ServiceStatus")
     public String serviceStatus;
 
-    // 物理空间
     @NameInMap("Space")
     public String space;
 
-    // 物理空间模型
     @NameInMap("SpaceType")
     public String spaceType;
 
-    // 告警状态
     @NameInMap("Status")
     public String status;
 
-    // 数据类型
     @NameInMap("Type")
     public String type;
 
@@ -134,6 +115,14 @@ public class ListAlarmStatusRequest extends TeaModel {
     }
     public String getCountry() {
         return this.country;
+    }
+
+    public ListAlarmStatusRequest setDedicatedLineId(String dedicatedLineId) {
+        this.dedicatedLineId = dedicatedLineId;
+        return this;
+    }
+    public String getDedicatedLineId() {
+        return this.dedicatedLineId;
     }
 
     public ListAlarmStatusRequest setDedicatedLineName(String dedicatedLineName) {

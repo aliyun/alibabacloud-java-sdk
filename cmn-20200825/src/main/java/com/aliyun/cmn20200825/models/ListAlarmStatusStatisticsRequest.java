@@ -4,31 +4,24 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ListAlarmStatusStatisticsRequest extends TeaModel {
-    // 告警状态
     @NameInMap("AlarmStatus")
     public String alarmStatus;
 
-    // 实例ID
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 本次读取的最大数据记录数量
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 标记当前开始读取的位置，置空表示从头开始
     @NameInMap("NextToken")
     public String nextToken;
 
-    // 物理空间ID
     @NameInMap("PhysicalSpaceId")
     public String physicalSpaceId;
 
-    // 探针标识
     @NameInMap("SecurityDomain")
     public String securityDomain;
 
-    // 数据类型
     @NameInMap("Type")
     public String type;
 

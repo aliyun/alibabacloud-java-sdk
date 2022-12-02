@@ -7,7 +7,6 @@ public class GetOsVersionRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 实例 ID。
     @NameInMap("OsVersionId")
     public String osVersionId;
 

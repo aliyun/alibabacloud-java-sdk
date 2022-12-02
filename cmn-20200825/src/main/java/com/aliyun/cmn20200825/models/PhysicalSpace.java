@@ -4,27 +4,21 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class PhysicalSpace extends TeaModel {
-    // 具体所在地址
     @NameInMap("Address")
     public String address;
 
-    // 所属城市
     @NameInMap("City")
     public String city;
 
-    // 所属国家
     @NameInMap("Country")
     public String country;
 
-    // 所属省份
     @NameInMap("Province")
     public String province;
 
-    // 物理空间ID
     @NameInMap("SpaceId")
     public String spaceId;
 
-    // 物理空间名称
     @NameInMap("SpaceName")
     public String spaceName;
 

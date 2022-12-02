@@ -4,19 +4,15 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class CreateTaskRequest extends TeaModel {
-    // 幂等参数
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // 实例ID
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 任务参数
     @NameInMap("Params")
     public String params;
 
-    // 模板id
     @NameInMap("TemplateId")
     public String templateId;
 

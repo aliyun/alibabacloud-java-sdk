@@ -4,81 +4,74 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ListDevicesShrinkRequest extends TeaModel {
-    // 设备形态ID
+    @NameInMap("CalculateAmount")
+    public Boolean calculateAmount;
+
     @NameInMap("DeviceFormId")
     public String deviceFormId;
 
-    // 设备形态名称
     @NameInMap("DeviceFormName")
     public String deviceFormName;
 
-    // 设备Id列表
     @NameInMap("DeviceIds")
     public String deviceIdsShrink;
 
-    // 设备额外属性
     @NameInMap("ExtAttributes")
     public String extAttributes;
 
-    // 设备主机名
     @NameInMap("HostName")
     public String hostNameShrink;
 
-    // 实例ID
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 设备IP
     @NameInMap("Ip")
     public String ipShrink;
 
-    // 模糊查询值
     @NameInMap("Keyword")
     public String keyword;
 
-    // 设备MAC
     @NameInMap("Mac")
     public String macShrink;
 
-    // 返回结果的最大个数。
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 设备型号
     @NameInMap("Model")
     public String modelShrink;
 
-    // 当总结果个数大于MaxResults时，用于翻页的token。
     @NameInMap("NextToken")
     public String nextToken;
 
-    // 物理空间ID
     @NameInMap("PhysicalSpaceId")
     public String physicalSpaceId;
 
-    // 物理空间IDS
     @NameInMap("PhysicalSpaceIds")
     public String physicalSpaceIdsShrink;
 
-    // 安全域
     @NameInMap("SecurityDomain")
     public String securityDomainShrink;
 
-    // 设备服务状态
     @NameInMap("ServiceStatus")
     public String serviceStatusShrink;
 
-    // 设备SN
     @NameInMap("Sn")
     public String snShrink;
 
-    // 设备厂商
     @NameInMap("Vendor")
     public String vendorShrink;
 
     public static ListDevicesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDevicesShrinkRequest self = new ListDevicesShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListDevicesShrinkRequest setCalculateAmount(Boolean calculateAmount) {
+        this.calculateAmount = calculateAmount;
+        return this;
+    }
+    public Boolean getCalculateAmount() {
+        return this.calculateAmount;
     }
 
     public ListDevicesShrinkRequest setDeviceFormId(String deviceFormId) {

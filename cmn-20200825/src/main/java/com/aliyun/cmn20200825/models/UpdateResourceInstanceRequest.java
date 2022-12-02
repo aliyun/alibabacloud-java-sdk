@@ -7,15 +7,12 @@ public class UpdateResourceInstanceRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 数据
     @NameInMap("ResourceInformation")
     public java.util.List<UpdateResourceInstanceRequestResourceInformation> resourceInformation;
 
-    // 资源id
     @NameInMap("ResourceInformationId")
     public String resourceInformationId;
 
-    // 建设项目资源uuid
     @NameInMap("SetupProjectId")
     public String setupProjectId;
 
@@ -57,11 +54,9 @@ public class UpdateResourceInstanceRequest extends TeaModel {
     }
 
     public static class UpdateResourceInstanceRequestResourceInformation extends TeaModel {
-        // 键
         @NameInMap("Key")
         public String key;
 
-        // 值
         @NameInMap("Value")
         public String value;
 

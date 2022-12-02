@@ -4,11 +4,9 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class GetDeviceResourceResponseBody extends TeaModel {
-    // 设备资源
     @NameInMap("DeviceResource")
     public GetDeviceResourceResponseBodyDeviceResource deviceResource;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,79 +32,60 @@ public class GetDeviceResourceResponseBody extends TeaModel {
     }
 
     public static class GetDeviceResourceResponseBodyDeviceResource extends TeaModel {
-        // 组号
         @NameInMap("BlockNumber")
         public String blockNumber;
 
-        // 设备业务地址
         @NameInMap("Business")
         public String business;
 
-        // 设备配置
         @NameInMap("Config")
         public String config;
 
-        // 配置下发状态
         @NameInMap("ConfigTaskStatus")
         public String configTaskStatus;
 
-        // 交付登录地址
         @NameInMap("DeliveryIp")
         public String deliveryIp;
 
-        // 设备号
         @NameInMap("DeviceNum")
         public String deviceNum;
 
-        // 资源一级ID
         @NameInMap("DeviceResourceId")
         public String deviceResourceId;
 
-        // 配置生成
         @NameInMap("GenerateConfig")
         public String generateConfig;
 
-        // 主机名
         @NameInMap("HostName")
         public String hostName;
 
-        // 设备互联地址
         @NameInMap("InterConnection")
         public String interConnection;
 
-        // 物理空间位置
         @NameInMap("Location")
         public String location;
 
-        // loopback地址
         @NameInMap("Loopback")
         public String loopback;
 
-        // 带内管理地址
         @NameInMap("ManagerIp")
         public String managerIp;
 
-        // 模型
         @NameInMap("Model")
         public String model;
 
-        // 角色
         @NameInMap("Role")
         public String role;
 
-        // 建设项目id
         @NameInMap("SetupProjectId")
         public String setupProjectId;
 
-        // 设备sn号
         @NameInMap("Sn")
         public String sn;
 
-        // 堆叠状态
         @NameInMap("Stack")
         public Boolean stack;
 
-        // 厂商
         @NameInMap("Vendor")
         public String vendor;
 

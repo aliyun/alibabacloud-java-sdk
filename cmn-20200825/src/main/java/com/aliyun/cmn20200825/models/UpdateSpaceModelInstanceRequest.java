@@ -4,11 +4,9 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class UpdateSpaceModelInstanceRequest extends TeaModel {
-    // 物理空间实例
     @NameInMap("Instance")
     public String instance;
 
-    // 物理空间id
     @NameInMap("SpaceId")
     public String spaceId;
 

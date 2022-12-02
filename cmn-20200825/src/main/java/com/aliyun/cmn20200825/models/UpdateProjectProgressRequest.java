@@ -7,11 +7,9 @@ public class UpdateProjectProgressRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 建设进展
     @NameInMap("Progress")
     public String progress;
 
-    // 资源id
     @NameInMap("SetupProjectId")
     public String setupProjectId;
 

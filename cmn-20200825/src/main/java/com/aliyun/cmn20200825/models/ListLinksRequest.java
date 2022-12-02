@@ -4,50 +4,39 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ListLinksRequest extends TeaModel {
-    // A端设备名
     @NameInMap("DeviceNameA")
     public String deviceNameA;
 
-    // B端设备名
     @NameInMap("DeviceNameB")
     public String deviceNameB;
 
-    // A端IP
     @NameInMap("IpA")
     public String ipA;
 
-    // B端IP
     @NameInMap("IpB")
     public String ipB;
 
-    // 链路名称
     @NameInMap("LinkName")
     public String linkName;
 
     @NameInMap("LinkNo")
     public String linkNo;
 
-    // 链路状态
     @NameInMap("LinkStatus")
     public String linkStatus;
 
-    // 链路类型（单端、双端）
     @NameInMap("LinkType")
     public String linkType;
 
-    // 返回结果的最大个数。
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 当总结果个数大于MaxResults时，用于翻页的token。
     @NameInMap("NextToken")
     public String nextToken;
 
-    // A端端口名
     @NameInMap("PortA")
     public String portA;
 
-    // B端端口名
     @NameInMap("PortB")
     public String portB;
 

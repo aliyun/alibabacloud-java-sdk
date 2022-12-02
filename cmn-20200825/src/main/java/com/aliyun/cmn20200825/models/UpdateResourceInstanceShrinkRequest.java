@@ -7,15 +7,12 @@ public class UpdateResourceInstanceShrinkRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 数据
     @NameInMap("ResourceInformation")
     public String resourceInformationShrink;
 
-    // 资源id
     @NameInMap("ResourceInformationId")
     public String resourceInformationId;
 
-    // 建设项目资源uuid
     @NameInMap("SetupProjectId")
     public String setupProjectId;
 

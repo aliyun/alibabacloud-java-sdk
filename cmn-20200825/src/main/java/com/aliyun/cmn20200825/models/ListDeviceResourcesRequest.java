@@ -4,27 +4,21 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ListDeviceResourcesRequest extends TeaModel {
-    // 业务类型
     @NameInMap("BusinessType")
     public String businessType;
 
-    // instanceId
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // List类型
     @NameInMap("ListType")
     public String listType;
 
-    // 返回结果的最大个数。
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 当总结果个数大于MaxResults时，用于翻页的token。
     @NameInMap("NextToken")
     public String nextToken;
 
-    // 建设项目id
     @NameInMap("SetupProjectId")
     public String setupProjectId;
 

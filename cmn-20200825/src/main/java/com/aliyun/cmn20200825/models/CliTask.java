@@ -4,55 +4,42 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class CliTask extends TeaModel {
-    // agent IP
     @NameInMap("AgentIp")
     public String agentIp;
 
-    // cli任务id
     @NameInMap("CliTaskId")
     public String cliTaskId;
 
-    // cli命令
     @NameInMap("Command")
     public String command;
 
-    // 设备id
     @NameInMap("DeviceId")
     public String deviceId;
 
-    // 创建时间
     @NameInMap("GmtCreate")
     public String gmtCreate;
 
-    // 修改时间
     @NameInMap("GmtModify")
     public String gmtModify;
 
-    // 设备回显
     @NameInMap("Output")
     public String output;
 
-    // 协议
     @NameInMap("Protocol")
     public String protocol;
 
-    // 任务错误码
     @NameInMap("ResponseCode")
     public String responseCode;
 
-    // 任务结果
     @NameInMap("Result")
     public String result;
 
-    // 会话id
     @NameInMap("SessionId")
     public String sessionId;
 
-    // cli任务状态
     @NameInMap("Status")
     public String status;
 
-    // 超时参数
     @NameInMap("Timeout")
     public Integer timeout;
 

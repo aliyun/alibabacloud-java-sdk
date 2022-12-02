@@ -4,15 +4,12 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ListInspectionTaskReportsRequest extends TeaModel {
-    // 巡检项id
     @NameInMap("InspectionItemId")
     public String inspectionItemId;
 
-    // 实例id
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 厂商
     @NameInMap("Vendor")
     public String vendor;
 

@@ -4,38 +4,30 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ListConnectionPoliciesRequest extends TeaModel {
-    // 架构迭代uid
     @NameInMap("ArchitectureIterationId")
     public String architectureIterationId;
 
-    // 连接策略id
     @NameInMap("ConnectionPolicyId")
     public String connectionPolicyId;
 
-    // 下联设备uid
     @NameInMap("DownlinkArchitectureDeviceId")
     public String downlinkArchitectureDeviceId;
 
-    // 下联模块uid
     @NameInMap("DownlinkArchitectureModuleId")
     public String downlinkArchitectureModuleId;
 
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 返回结果的最大个数。
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 当总结果个数大于MaxResults时，用于翻页的token。
     @NameInMap("NextToken")
     public String nextToken;
 
-    // 上联设备uid
     @NameInMap("UplinkArchitectureDeviceId")
     public String uplinkArchitectureDeviceId;
 
-    // 上联模块uid
     @NameInMap("UplinkArchitectureModuleId")
     public String uplinkArchitectureModuleId;
 

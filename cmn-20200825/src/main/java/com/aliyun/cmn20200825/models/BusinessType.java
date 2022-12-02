@@ -4,63 +4,48 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class BusinessType extends TeaModel {
-    // 业务类型缩写
     @NameInMap("Abbr")
     public String abbr;
 
-    // 业务类型地址申请完对应的动作，DHCP表示需要触发DHCP变更
     @NameInMap("ActionFlag")
     public String actionFlag;
 
-    // 配置规范对象
     @NameInMap("BusinessTypeId")
     public String businessTypeId;
 
-    // 创建时间
     @NameInMap("CreateTime")
     public String createTime;
 
-    // 分配方向，0表示正向，1表示反向
     @NameInMap("Direction")
     public Long direction;
 
-    // 网关地址位置，正数为正数序号，负数为倒数序号
     @NameInMap("Gateway")
     public Long gateway;
 
-    // 有效时间
     @NameInMap("LeaseTime")
     public String leaseTime;
 
-    // 掩码
     @NameInMap("Mask")
     public String mask;
 
-    // 业务类型名称
     @NameInMap("Name")
     public String name;
 
-    // 保留地址数目
     @NameInMap("ReserveNumber")
     public Long reserveNumber;
 
-    // 是否复用 reuse/single
     @NameInMap("Sharing")
     public String sharing;
 
-    // 业务类型大类
     @NameInMap("Type")
     public String type;
 
-    // 更新时间
     @NameInMap("UpdateTime")
     public String updateTime;
 
-    // Vlan
     @NameInMap("Vlan")
     public String vlan;
 
-    // 绑定的园区类型
     @NameInMap("ZoneType")
     public String zoneType;
 

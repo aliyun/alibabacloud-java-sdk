@@ -4,33 +4,38 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ListEventsRequest extends TeaModel {
-    // 设备ID
+    @NameInMap("AlarmStatus")
+    public String alarmStatus;
+
     @NameInMap("DeviceId")
     public String deviceId;
 
-    // 事件类型
     @NameInMap("EventType")
     public String eventType;
 
-    // 实例ID
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 本次读取的最大数据记录数量
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 标记当前开始读取的位置，置空表示从头开始
     @NameInMap("NextToken")
     public String nextToken;
 
-    // 物理空间ID
     @NameInMap("PhysicalSpaceId")
     public String physicalSpaceId;
 
     public static ListEventsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListEventsRequest self = new ListEventsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListEventsRequest setAlarmStatus(String alarmStatus) {
+        this.alarmStatus = alarmStatus;
+        return this;
+    }
+    public String getAlarmStatus() {
+        return this.alarmStatus;
     }
 
     public ListEventsRequest setDeviceId(String deviceId) {

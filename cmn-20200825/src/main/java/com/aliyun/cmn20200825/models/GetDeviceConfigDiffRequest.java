@@ -4,19 +4,15 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class GetDeviceConfigDiffRequest extends TeaModel {
-    // 实例 ID。
     @NameInMap("DeviceId")
     public String deviceId;
 
-    // 查询日期2，格式 yyyy-MM-dd
     @NameInMap("EndDate")
     public String endDate;
 
-    // 实例ID
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 查询日期1，格式 yyyy-MM-dd
     @NameInMap("StartDate")
     public String startDate;
 

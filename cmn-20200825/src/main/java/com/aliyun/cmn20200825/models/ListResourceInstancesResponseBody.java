@@ -7,7 +7,6 @@ public class ListResourceInstancesResponseBody extends TeaModel {
     @NameInMap("LogicResource")
     public java.util.List<ListResourceInstancesResponseBodyLogicResource> logicResource;
 
-    // 请求id
     @NameInMap("RequestId")
     public String requestId;
 

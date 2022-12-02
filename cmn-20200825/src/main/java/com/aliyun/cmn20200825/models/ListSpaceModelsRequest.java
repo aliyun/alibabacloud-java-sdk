@@ -4,23 +4,18 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ListSpaceModelsRequest extends TeaModel {
-    // instanceId
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 返回结果的最大个数。
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 当总结果个数大于MaxResults时，用于翻页的token。
     @NameInMap("NextToken")
     public String nextToken;
 
-    // 物理空间类型
     @NameInMap("SpaceType")
     public String spaceType;
 
-    // 物理空间状态
     @NameInMap("Status")
     public String status;
 

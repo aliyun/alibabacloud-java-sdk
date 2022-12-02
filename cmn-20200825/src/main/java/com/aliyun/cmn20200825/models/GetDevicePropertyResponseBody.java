@@ -4,11 +4,9 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class GetDevicePropertyResponseBody extends TeaModel {
-    // 设备属性详情
     @NameInMap("DeviceProperty")
     public GetDevicePropertyResponseBodyDeviceProperty deviceProperty;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,35 +32,27 @@ public class GetDevicePropertyResponseBody extends TeaModel {
     }
 
     public static class GetDevicePropertyResponseBodyDeviceProperty extends TeaModel {
-        // 是否内置属性
         @NameInMap("BuiltIn")
         public Boolean builtIn;
 
-        // 设备形态ID
         @NameInMap("DeviceFormId")
         public String deviceFormId;
 
-        // 设备形态名称
         @NameInMap("DeviceFormName")
         public String deviceFormName;
 
-        // 设备属性ID
         @NameInMap("DevicePropertyId")
         public String devicePropertyId;
 
-        // 属性内容
         @NameInMap("PropertyContent")
         public String propertyContent;
 
-        // 属性格式
         @NameInMap("PropertyFormat")
         public String propertyFormat;
 
-        // 属性主键
         @NameInMap("PropertyKey")
         public String propertyKey;
 
-        // 属性名称
         @NameInMap("PropertyName")
         public String propertyName;
 

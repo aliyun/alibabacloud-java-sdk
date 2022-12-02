@@ -4,18 +4,15 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ListArchitectureAttributeRequest extends TeaModel {
-    // 架构id
     @NameInMap("ArchitectureId")
     public String architectureId;
 
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 角色
     @NameInMap("Role")
     public String role;
 
-    // 厂商
     @NameInMap("Vendor")
     public String vendor;
 

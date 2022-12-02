@@ -4,59 +4,48 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class PhysicalSpaceDto extends TeaModel {
-    // 具体地址
     @NameInMap("Address")
     public String address;
 
-    // 下一级
     @NameInMap("Children")
     public java.util.List<PhysicalSpaceDto> children;
 
-    // 所属城市
     @NameInMap("City")
     public String city;
 
-    // 所属国家
     @NameInMap("Country")
     public String country;
 
-    // 上级全路径
     @NameInMap("FullParentPath")
     public String fullParentPath;
 
-    // 实例
     @NameInMap("Instance")
     public String instance;
 
-    // 负责人
     @NameInMap("Owner")
     public String owner;
 
-    // 上级物理空间
     @NameInMap("ParentUid")
     public String parentUid;
 
-    // 物理空间ID
     @NameInMap("PhysicalSpaceId")
     public String physicalSpaceId;
 
-    // 物理空间名称
     @NameInMap("PhysicalSpaceName")
     public String physicalSpaceName;
 
-    // 所属省份
     @NameInMap("Province")
     public String province;
 
-    // 备注
     @NameInMap("Remark")
     public String remark;
 
-    // 缩写
+    @NameInMap("SecurityDomainList")
+    public java.util.List<String> securityDomainList;
+
     @NameInMap("SpaceAbbreviation")
     public String spaceAbbreviation;
 
-    // 模型
     @NameInMap("SpaceType")
     public String spaceType;
 
@@ -159,6 +148,14 @@ public class PhysicalSpaceDto extends TeaModel {
     }
     public String getRemark() {
         return this.remark;
+    }
+
+    public PhysicalSpaceDto setSecurityDomainList(java.util.List<String> securityDomainList) {
+        this.securityDomainList = securityDomainList;
+        return this;
+    }
+    public java.util.List<String> getSecurityDomainList() {
+        return this.securityDomainList;
     }
 
     public PhysicalSpaceDto setSpaceAbbreviation(String spaceAbbreviation) {

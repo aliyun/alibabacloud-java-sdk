@@ -4,35 +4,27 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ListConfigurationSpecificationsRequest extends TeaModel {
-    // 架构类型
     @NameInMap("Architecture")
     public String architecture;
 
-    // instanceId
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 返回结果的最大个数。
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 型号
     @NameInMap("Model")
     public String model;
 
-    // 当总结果个数大于MaxResults时，用于翻页的token。
     @NameInMap("NextToken")
     public String nextToken;
 
-    // 角色
     @NameInMap("Role")
     public String role;
 
-    // 配置规范名字
     @NameInMap("SpecificationName")
     public String specificationName;
 
-    // 厂商
     @NameInMap("Vendor")
     public String vendor;
 

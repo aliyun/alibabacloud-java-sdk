@@ -4,26 +4,21 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ListTreePhysicalSpacesShrinkRequest extends TeaModel {
-    // 实例ID
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 返回结果的最大个数。
     @NameInMap("MaxResults")
     public String maxResults;
 
-    // 当总结果个数大于MaxResults时，用于翻页的token。
     @NameInMap("NextToken")
     public String nextToken;
 
-    // 物理空间ID
     @NameInMap("PhysicalSpaceIds")
     public String physicalSpaceIdsShrink;
 
     @NameInMap("PhysicalSpaceName")
     public String physicalSpaceName;
 
-    // 如果Tree为true时，分页失效
     @NameInMap("Tree")
     public Boolean tree;
 

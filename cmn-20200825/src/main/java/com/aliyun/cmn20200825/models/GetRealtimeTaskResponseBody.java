@@ -4,11 +4,9 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class GetRealtimeTaskResponseBody extends TeaModel {
-    // 请求任务结果
     @NameInMap("InspectionTask")
     public GetRealtimeTaskResponseBodyInspectionTask inspectionTask;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,19 +32,15 @@ public class GetRealtimeTaskResponseBody extends TeaModel {
     }
 
     public static class GetRealtimeTaskResponseBodyInspectionTask extends TeaModel {
-        // 巡检错误码
         @NameInMap("ErrorCode")
         public String errorCode;
 
-        // 巡检错误信息
         @NameInMap("InspectionMessage")
         public String inspectionMessage;
 
-        // 巡检输出
         @NameInMap("InspectionResult")
         public String inspectionResult;
 
-        // 巡检状态
         @NameInMap("TaskStatus")
         public String taskStatus;
 

@@ -4,23 +4,18 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ListSetupProjectsResponseBody extends TeaModel {
-    // 本次读取的最大数据量
     @NameInMap("MaxResults")
     public Long maxResults;
 
-    // 当总结果个数大于MaxResults时，用于翻页的token。
     @NameInMap("NextToken")
     public Integer nextToken;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 数组，返回示例目录。
     @NameInMap("SetupProject")
     public java.util.List<ListSetupProjectsResponseBodySetupProject> setupProject;
 
-    // 总记录数。
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -70,19 +65,15 @@ public class ListSetupProjectsResponseBody extends TeaModel {
     }
 
     public static class ListSetupProjectsResponseBodySetupProjectPackages extends TeaModel {
-        // 设备号
         @NameInMap("DeviceNumber")
         public Long deviceNumber;
 
-        // 型号
         @NameInMap("Model")
         public String model;
 
-        // 角色
         @NameInMap("Role")
         public String role;
 
-        // 厂商
         @NameInMap("Vendor")
         public String vendor;
 
@@ -126,51 +117,39 @@ public class ListSetupProjectsResponseBody extends TeaModel {
     }
 
     public static class ListSetupProjectsResponseBodySetupProject extends TeaModel {
-        // 架构版本
         @NameInMap("ArchVersion")
         public String archVersion;
 
-        // 架构id
         @NameInMap("ArchitectureId")
         public String architectureId;
 
-        // 创建时间
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 预计交付时间
         @NameInMap("DeliveryTime")
         public String deliveryTime;
 
-        // 描述
         @NameInMap("Description")
         public String description;
 
-        // 节点
         @NameInMap("Nodes")
         public String nodes;
 
-        // 套餐
         @NameInMap("Packages")
         public java.util.List<ListSetupProjectsResponseBodySetupProjectPackages> packages;
 
-        // 项目进展
         @NameInMap("Progress")
         public String progress;
 
-        // 资源一级ID
         @NameInMap("SetupProjectId")
         public String setupProjectId;
 
-        // 物理空间uId
         @NameInMap("SpaceId")
         public String spaceId;
 
-        // 物理空间名称
         @NameInMap("SpaceName")
         public String spaceName;
 
-        // 物理空间类型
         @NameInMap("SpaceType")
         public String spaceType;
 

@@ -4,35 +4,27 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class UpdateOsVersionRequest extends TeaModel {
-    // 文件名
     @NameInMap("FileName")
     public String fileName;
 
-    // 文件路径
     @NameInMap("FilePath")
     public String filePath;
 
-    // instanceId
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 型号
     @NameInMap("Model")
     public String model;
 
-    // 系统版本
     @NameInMap("OsVersion")
     public String osVersion;
 
-    // osVersionId
     @NameInMap("OsVersionId")
     public String osVersionId;
 
-    // 状态
     @NameInMap("Status")
     public String status;
 
-    // 厂商
     @NameInMap("Vendor")
     public String vendor;
 

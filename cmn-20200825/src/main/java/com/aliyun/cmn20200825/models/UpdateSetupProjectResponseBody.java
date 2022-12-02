@@ -4,19 +4,15 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class UpdateSetupProjectResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 资源实例ID，如ECS实例的创建接口CreateInstance应返回InstanceId。
     @NameInMap("SetupProjectId")
     public String setupProjectId;
 
-    // 实例的名称
     @NameInMap("SetupProjectName")
     public String setupProjectName;
 
-    // 实例的规格。
     @NameInMap("SetupProjectSpecification")
     public String setupProjectSpecification;
 

@@ -4,19 +4,15 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class AlarmOverview extends TeaModel {
-    // 告警总览ID
     @NameInMap("AlarmOverviewId")
     public String alarmOverviewId;
 
-    // 告警总览名称
     @NameInMap("AlarmOverviewName")
     public String alarmOverviewName;
 
-    // 过滤条件列表
     @NameInMap("ConditionList")
     public java.util.List<AlarmOverviewConditionList> conditionList;
 
-    // 排序序号
     @NameInMap("SerialNumber")
     public Integer serialNumber;
 
@@ -58,11 +54,9 @@ public class AlarmOverview extends TeaModel {
     }
 
     public static class AlarmOverviewConditionList extends TeaModel {
-        // 过滤条件字段
         @NameInMap("ConditionName")
         public String conditionName;
 
-        // 过滤条件值
         @NameInMap("ConditionValue")
         public String conditionValue;
 

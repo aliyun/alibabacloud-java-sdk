@@ -4,23 +4,18 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ListOsVersionsResponseBody extends TeaModel {
-    // 本次读取的最大数据量
     @NameInMap("MaxResults")
     public Long maxResults;
 
-    // 当总结果个数大于MaxResults时，用于翻页的token。
     @NameInMap("NextToken")
     public Integer nextToken;
 
-    // 数组，返回示例目录。
     @NameInMap("OsVersion")
     public java.util.List<ListOsVersionsResponseBodyOsVersion> osVersion;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 总记录数。
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -70,39 +65,30 @@ public class ListOsVersionsResponseBody extends TeaModel {
     }
 
     public static class ListOsVersionsResponseBodyOsVersion extends TeaModel {
-        // 创建时间
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 文件名
         @NameInMap("FileName")
         public String fileName;
 
-        // 文件路径
         @NameInMap("FilePath")
         public String filePath;
 
-        // 型号
         @NameInMap("Model")
         public String model;
 
-        // 系统版本
         @NameInMap("OsVersion")
         public String osVersion;
 
-        // 资源uuid
         @NameInMap("OsVersionId")
         public String osVersionId;
 
-        // 状态
         @NameInMap("Status")
         public String status;
 
-        // 修改时间
         @NameInMap("UpdateTime")
         public String updateTime;
 
-        // 厂商
         @NameInMap("Vendor")
         public String vendor;
 

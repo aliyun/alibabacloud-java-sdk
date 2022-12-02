@@ -4,53 +4,59 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class UpdateDedicatedLineRequest extends TeaModel {
-    // 宽带（Mbps）
     @NameInMap("Bandwidth")
     public Integer bandwidth;
 
-    // 联系人
     @NameInMap("Contact")
     public String contact;
 
-    // 专线网关
     @NameInMap("DedicatedLineGateway")
     public String dedicatedLineGateway;
 
-    // 实例 ID。
     @NameInMap("DedicatedLineId")
     public String dedicatedLineId;
 
-    // 专线IP
     @NameInMap("DedicatedLineIp")
     public String dedicatedLineIp;
 
-    // 专线角色
     @NameInMap("DedicatedLineRole")
     public String dedicatedLineRole;
 
-    // 备注
     @NameInMap("Description")
     public String description;
 
-    // 关联设备ID
     @NameInMap("DeviceId")
     public String deviceId;
 
-    // 关联设备端口名称
     @NameInMap("DevicePort")
     public String devicePort;
 
-    // 实例ID
+    @NameInMap("ExpirationDate")
+    public String expirationDate;
+
+    @NameInMap("ExtAttributes")
+    public String extAttributes;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 运营商
     @NameInMap("Isp")
     public String isp;
 
-    // 联系电话
+    @NameInMap("IspId")
+    public String ispId;
+
+    @NameInMap("Keyword")
+    public String keyword;
+
+    @NameInMap("OnlineDate")
+    public String onlineDate;
+
     @NameInMap("Phone")
     public String phone;
+
+    @NameInMap("PhysicalSpaceId")
+    public String physicalSpaceId;
 
     public static UpdateDedicatedLineRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateDedicatedLineRequest self = new UpdateDedicatedLineRequest();
@@ -129,6 +135,22 @@ public class UpdateDedicatedLineRequest extends TeaModel {
         return this.devicePort;
     }
 
+    public UpdateDedicatedLineRequest setExpirationDate(String expirationDate) {
+        this.expirationDate = expirationDate;
+        return this;
+    }
+    public String getExpirationDate() {
+        return this.expirationDate;
+    }
+
+    public UpdateDedicatedLineRequest setExtAttributes(String extAttributes) {
+        this.extAttributes = extAttributes;
+        return this;
+    }
+    public String getExtAttributes() {
+        return this.extAttributes;
+    }
+
     public UpdateDedicatedLineRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -145,12 +167,44 @@ public class UpdateDedicatedLineRequest extends TeaModel {
         return this.isp;
     }
 
+    public UpdateDedicatedLineRequest setIspId(String ispId) {
+        this.ispId = ispId;
+        return this;
+    }
+    public String getIspId() {
+        return this.ispId;
+    }
+
+    public UpdateDedicatedLineRequest setKeyword(String keyword) {
+        this.keyword = keyword;
+        return this;
+    }
+    public String getKeyword() {
+        return this.keyword;
+    }
+
+    public UpdateDedicatedLineRequest setOnlineDate(String onlineDate) {
+        this.onlineDate = onlineDate;
+        return this;
+    }
+    public String getOnlineDate() {
+        return this.onlineDate;
+    }
+
     public UpdateDedicatedLineRequest setPhone(String phone) {
         this.phone = phone;
         return this;
     }
     public String getPhone() {
         return this.phone;
+    }
+
+    public UpdateDedicatedLineRequest setPhysicalSpaceId(String physicalSpaceId) {
+        this.physicalSpaceId = physicalSpaceId;
+        return this;
+    }
+    public String getPhysicalSpaceId() {
+        return this.physicalSpaceId;
     }
 
 }

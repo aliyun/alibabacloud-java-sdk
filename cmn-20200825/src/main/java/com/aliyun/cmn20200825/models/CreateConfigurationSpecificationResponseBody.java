@@ -4,11 +4,9 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class CreateConfigurationSpecificationResponseBody extends TeaModel {
-    // 资源uuid
     @NameInMap("ConfigurationSpecificationId")
     public String configurationSpecificationId;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

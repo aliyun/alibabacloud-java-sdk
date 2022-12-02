@@ -4,11 +4,9 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ListInstancesResponseBody extends TeaModel {
-    // 实例列表
     @NameInMap("Instances")
     public java.util.List<ListInstancesResponseBodyInstances> instances;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,31 +32,24 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyInstances extends TeaModel {
-        // 最大纳管设备数量
         @NameInMap("InstanceDeviceMaxCount")
         public String instanceDeviceMaxCount;
 
-        // 实例到期时间
         @NameInMap("InstanceEndDate")
         public String instanceEndDate;
 
-        // 实例ID
         @NameInMap("InstanceId")
         public String instanceId;
 
-        // 实例名称
         @NameInMap("InstanceName")
         public String instanceName;
 
-        // 实例开通时间
         @NameInMap("InstanceOpenDate")
         public String instanceOpenDate;
 
-        // 实例规格
         @NameInMap("InstanceSpec")
         public String instanceSpec;
 
-        // 实例状态
         @NameInMap("InstanceStatus")
         public String instanceStatus;
 

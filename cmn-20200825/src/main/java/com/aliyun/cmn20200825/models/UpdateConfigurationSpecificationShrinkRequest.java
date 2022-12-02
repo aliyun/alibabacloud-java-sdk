@@ -4,39 +4,30 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class UpdateConfigurationSpecificationShrinkRequest extends TeaModel {
-    // 架构类型
     @NameInMap("Architecture")
     public String architecture;
 
-    // 配置规范id
     @NameInMap("ConfigurationSpecificationId")
     public String configurationSpecificationId;
 
-    // instanceId
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 型号
     @NameInMap("Model")
     public String model;
 
-    // 相关变量
     @NameInMap("RelatedVariate")
     public String relatedVariateShrink;
 
-    // 角色
     @NameInMap("Role")
     public String role;
 
-    // 配置规范内容
     @NameInMap("SpecificationContent")
     public String specificationContent;
 
-    // 配置规范名字
     @NameInMap("SpecificationName")
     public String specificationName;
 
-    // 厂商
     @NameInMap("Vendor")
     public String vendor;
 

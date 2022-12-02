@@ -4,11 +4,9 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class CreateRealtimeTaskResponseBody extends TeaModel {
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
-    // 实时任务ID
     @NameInMap("TaskId")
     public String taskId;
 

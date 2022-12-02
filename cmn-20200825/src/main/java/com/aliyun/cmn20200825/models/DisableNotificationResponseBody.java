@@ -4,7 +4,6 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class DisableNotificationResponseBody extends TeaModel {
-    // request id
     @NameInMap("RequestId")
     public String requestId;
 

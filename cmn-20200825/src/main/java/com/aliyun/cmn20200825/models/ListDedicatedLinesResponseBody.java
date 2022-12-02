@@ -4,7 +4,6 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ListDedicatedLinesResponseBody extends TeaModel {
-    // 数组，返回示例目录。
     @NameInMap("DedicatedLines")
     public java.util.List<ListDedicatedLinesResponseBodyDedicatedLines> dedicatedLines;
 
@@ -14,7 +13,6 @@ public class ListDedicatedLinesResponseBody extends TeaModel {
     @NameInMap("NextToken")
     public Integer nextToken;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -66,56 +64,116 @@ public class ListDedicatedLinesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public static class ListDedicatedLinesResponseBodyDedicatedLines extends TeaModel {
-        // 宽带（Mbps）
-        @NameInMap("Bandwidth")
-        public Integer bandwidth;
-
-        // 联系人
-        @NameInMap("Contact")
-        public String contact;
-
-        // 专线网关
-        @NameInMap("DedicatedLineGateway")
-        public String dedicatedLineGateway;
-
-        // 物理空间专线ID
-        @NameInMap("DedicatedLineId")
-        public String dedicatedLineId;
-
-        // 专线IP
-        @NameInMap("DedicatedLineIp")
-        public String dedicatedLineIp;
-
-        // 专线角色
-        @NameInMap("DedicatedLineRole")
-        public String dedicatedLineRole;
-
-        // 备注
+    public static class ListDedicatedLinesResponseBodyDedicatedLinesContact extends TeaModel {
         @NameInMap("Description")
         public String description;
 
-        // 关联设备ID
-        @NameInMap("DeviceId")
-        public String deviceId;
+        @NameInMap("Email")
+        public String email;
 
-        // 关联设备名称
-        @NameInMap("DeviceName")
-        public String deviceName;
+        @NameInMap("Name")
+        public String name;
 
-        // 关联设备端口
-        @NameInMap("DevicePort")
-        public String devicePort;
-
-        // 运营商
-        @NameInMap("Isp")
-        public String isp;
-
-        // 联系电话
         @NameInMap("Phone")
         public String phone;
 
-        // 关联物理空间ID
+        public static ListDedicatedLinesResponseBodyDedicatedLinesContact build(java.util.Map<String, ?> map) throws Exception {
+            ListDedicatedLinesResponseBodyDedicatedLinesContact self = new ListDedicatedLinesResponseBodyDedicatedLinesContact();
+            return TeaModel.build(map, self);
+        }
+
+        public ListDedicatedLinesResponseBodyDedicatedLinesContact setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public ListDedicatedLinesResponseBodyDedicatedLinesContact setEmail(String email) {
+            this.email = email;
+            return this;
+        }
+        public String getEmail() {
+            return this.email;
+        }
+
+        public ListDedicatedLinesResponseBodyDedicatedLinesContact setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public ListDedicatedLinesResponseBodyDedicatedLinesContact setPhone(String phone) {
+            this.phone = phone;
+            return this;
+        }
+        public String getPhone() {
+            return this.phone;
+        }
+
+    }
+
+    public static class ListDedicatedLinesResponseBodyDedicatedLines extends TeaModel {
+        @NameInMap("Bandwidth")
+        public Integer bandwidth;
+
+        @NameInMap("Contact")
+        public java.util.List<ListDedicatedLinesResponseBodyDedicatedLinesContact> contact;
+
+        @NameInMap("DedicatedLineGateway")
+        public String dedicatedLineGateway;
+
+        @NameInMap("DedicatedLineId")
+        public String dedicatedLineId;
+
+        @NameInMap("DedicatedLineIp")
+        public String dedicatedLineIp;
+
+        @NameInMap("DedicatedLineRole")
+        public String dedicatedLineRole;
+
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("DeviceId")
+        public String deviceId;
+
+        @NameInMap("DeviceName")
+        public String deviceName;
+
+        @NameInMap("DevicePort")
+        public String devicePort;
+
+        @NameInMap("ExpirationDate")
+        public String expirationDate;
+
+        @NameInMap("Ext")
+        public String ext;
+
+        @NameInMap("Isp")
+        public String isp;
+
+        @NameInMap("IspFormId")
+        public String ispFormId;
+
+        @NameInMap("IspFormName")
+        public String ispFormName;
+
+        @NameInMap("IspId")
+        public String ispId;
+
+        @NameInMap("Keyword")
+        public String keyword;
+
+        @NameInMap("OnlineDate")
+        public String onlineDate;
+
+        @NameInMap("Phone")
+        public String phone;
+
         @NameInMap("PhysicalSpaceId")
         public String physicalSpaceId;
 
@@ -135,11 +193,11 @@ public class ListDedicatedLinesResponseBody extends TeaModel {
             return this.bandwidth;
         }
 
-        public ListDedicatedLinesResponseBodyDedicatedLines setContact(String contact) {
+        public ListDedicatedLinesResponseBodyDedicatedLines setContact(java.util.List<ListDedicatedLinesResponseBodyDedicatedLinesContact> contact) {
             this.contact = contact;
             return this;
         }
-        public String getContact() {
+        public java.util.List<ListDedicatedLinesResponseBodyDedicatedLinesContact> getContact() {
             return this.contact;
         }
 
@@ -207,12 +265,68 @@ public class ListDedicatedLinesResponseBody extends TeaModel {
             return this.devicePort;
         }
 
+        public ListDedicatedLinesResponseBodyDedicatedLines setExpirationDate(String expirationDate) {
+            this.expirationDate = expirationDate;
+            return this;
+        }
+        public String getExpirationDate() {
+            return this.expirationDate;
+        }
+
+        public ListDedicatedLinesResponseBodyDedicatedLines setExt(String ext) {
+            this.ext = ext;
+            return this;
+        }
+        public String getExt() {
+            return this.ext;
+        }
+
         public ListDedicatedLinesResponseBodyDedicatedLines setIsp(String isp) {
             this.isp = isp;
             return this;
         }
         public String getIsp() {
             return this.isp;
+        }
+
+        public ListDedicatedLinesResponseBodyDedicatedLines setIspFormId(String ispFormId) {
+            this.ispFormId = ispFormId;
+            return this;
+        }
+        public String getIspFormId() {
+            return this.ispFormId;
+        }
+
+        public ListDedicatedLinesResponseBodyDedicatedLines setIspFormName(String ispFormName) {
+            this.ispFormName = ispFormName;
+            return this;
+        }
+        public String getIspFormName() {
+            return this.ispFormName;
+        }
+
+        public ListDedicatedLinesResponseBodyDedicatedLines setIspId(String ispId) {
+            this.ispId = ispId;
+            return this;
+        }
+        public String getIspId() {
+            return this.ispId;
+        }
+
+        public ListDedicatedLinesResponseBodyDedicatedLines setKeyword(String keyword) {
+            this.keyword = keyword;
+            return this;
+        }
+        public String getKeyword() {
+            return this.keyword;
+        }
+
+        public ListDedicatedLinesResponseBodyDedicatedLines setOnlineDate(String onlineDate) {
+            this.onlineDate = onlineDate;
+            return this;
+        }
+        public String getOnlineDate() {
+            return this.onlineDate;
         }
 
         public ListDedicatedLinesResponseBodyDedicatedLines setPhone(String phone) {

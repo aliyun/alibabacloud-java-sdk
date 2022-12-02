@@ -4,11 +4,9 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class EnableNotificationShrinkRequest extends TeaModel {
-    // 实例ID
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 通知对象
     @NameInMap("List")
     public String listShrink;
 

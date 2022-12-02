@@ -7,7 +7,6 @@ public class GetWorkOrderResponseBody extends TeaModel {
     @NameInMap("Content")
     public GetWorkOrderResponseBodyContent content;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -33,27 +32,21 @@ public class GetWorkOrderResponseBody extends TeaModel {
     }
 
     public static class GetWorkOrderResponseBodyContentWorkOrderOperationDtos extends TeaModel {
-        // 创建时间
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
-        // 操作
         @NameInMap("Operation")
         public String operation;
 
-        // 操作编号
         @NameInMap("OperationId")
         public String operationId;
 
-        // 操作人
         @NameInMap("Operator")
         public String operator;
 
-        // 备注
         @NameInMap("Remark")
         public String remark;
 
-        // 工单编号
         @NameInMap("WorkOrderId")
         public String workOrderId;
 
@@ -113,207 +106,156 @@ public class GetWorkOrderResponseBody extends TeaModel {
     }
 
     public static class GetWorkOrderResponseBodyContent extends TeaModel {
-        // 告警发生时间
         @NameInMap("AlarmHappenTime")
         public String alarmHappenTime;
 
-        // 告警恢复时间
         @NameInMap("AlarmRecoverTime")
         public String alarmRecoverTime;
 
-        // 关联告警项
         @NameInMap("AlarmRelated")
         public String alarmRelated;
 
-        // 区域
         @NameInMap("Area")
         public String area;
 
-        // 电路编码
         @NameInMap("CircuitId")
         public String circuitId;
 
-        // 电路名
         @NameInMap("CircuitName")
         public String circuitName;
 
-        // 电路类型
         @NameInMap("CircuitType")
         public String circuitType;
 
-        // 设备告警信息
         @NameInMap("DeviceAlarmInfo")
         public String deviceAlarmInfo;
 
-        // 设备IP
         @NameInMap("DeviceIp")
         public String deviceIp;
 
-        // A-IP
         @NameInMap("DeviceIpA")
         public String deviceIpA;
 
-        // B-IP
         @NameInMap("DeviceIpB")
         public String deviceIpB;
 
-        // A-设备型号
         @NameInMap("DeviceModelA")
         public String deviceModelA;
 
-        // B-设备型号
         @NameInMap("DeviceModelB")
         public String deviceModelB;
 
-        // 设备名
         @NameInMap("DeviceName")
         public String deviceName;
 
-        // A-设备名
         @NameInMap("DeviceNameA")
         public String deviceNameA;
 
-        // B-设备名
         @NameInMap("DeviceNameB")
         public String deviceNameB;
 
-        // A-端口
         @NameInMap("DevicePortA")
         public String devicePortA;
 
-        // B-端口
         @NameInMap("DevicePortB")
         public String devicePortB;
 
-        // A-设备SN
         @NameInMap("DeviceSnA")
         public String deviceSnA;
 
-        // B-设备SN
         @NameInMap("DeviceSnB")
         public String deviceSnB;
 
-        // 设备类型
         @NameInMap("DeviceType")
         public String deviceType;
 
-        // 设备厂家
         @NameInMap("DeviceVendor")
         public String deviceVendor;
 
-        // A-厂家
         @NameInMap("DeviceVendorA")
         public String deviceVendorA;
 
-        // B-厂家
         @NameInMap("DeviceVendorB")
         public String deviceVendorB;
 
-        // 紧急程度
         @NameInMap("EmergencyDegree")
         public String emergencyDegree;
 
-        // 额外字段
         @NameInMap("Extra")
         public String extra;
 
-        // 故障时常(时)
         @NameInMap("FaultDuration")
         public String faultDuration;
 
-        // 创建时间
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
-        // 修改时间
         @NameInMap("GmtModified")
         public String gmtModified;
 
-        // 文件名
         @NameInMap("HangFileName")
         public String hangFileName;
 
-        // 文件id
         @NameInMap("HangFilePath")
         public String hangFilePath;
 
-        // 挂起/转交原因
         @NameInMap("HangReason")
         public String hangReason;
 
-        // 是否影响业务
         @NameInMap("ImpactBusiness")
         public String impactBusiness;
 
-        // 问题描述
         @NameInMap("IncidentDescription")
         public String incidentDescription;
 
-        // 故障小类
         @NameInMap("IncidentSubType")
         public String incidentSubType;
 
-        // 故障分类
         @NameInMap("IncidentType")
         public String incidentType;
 
-        // 责任人
         @NameInMap("LiableMan")
         public String liableMan;
 
-        // 用户/联系人
         @NameInMap("LinkMan")
         public String linkMan;
 
-        // 告警源主体
         @NameInMap("OriginalSubjectAlarm")
         public String originalSubjectAlarm;
 
-        // 处理时限
         @NameInMap("ProcessLimited")
         public String processLimited;
 
-        // 处理人
         @NameInMap("ProcessMan")
         public String processMan;
 
-        // 处理人编号
         @NameInMap("ProcessManId")
         public String processManId;
 
-        // 处理结果
         @NameInMap("ProcessResult")
         public String processResult;
 
-        // 技能组
         @NameInMap("SkillGroups")
         public String skillGroups;
 
-        // 是否超时
         @NameInMap("Timeout")
         public String timeout;
 
-        // 工单编号
         @NameInMap("WorkOrderId")
         public String workOrderId;
 
-        // 操作流水
         @NameInMap("WorkOrderOperationDtos")
         public java.util.List<GetWorkOrderResponseBodyContentWorkOrderOperationDtos> workOrderOperationDtos;
 
-        // 工单来源
         @NameInMap("WorkOrderSource")
         public String workOrderSource;
 
-        // 工单状态
         @NameInMap("WorkOrderStep")
         public String workOrderStep;
 
-        // 工单标题
         @NameInMap("WorkOrderTitle")
         public String workOrderTitle;
 
-        // 工单类型
         @NameInMap("WorkOrderType")
         public String workOrderType;
 

@@ -4,11 +4,9 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class CreateLinkJobResponseBody extends TeaModel {
-    // 若创建接口为异步实现，则需返回明确的JobId。
     @NameInMap("Content")
     public String content;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
