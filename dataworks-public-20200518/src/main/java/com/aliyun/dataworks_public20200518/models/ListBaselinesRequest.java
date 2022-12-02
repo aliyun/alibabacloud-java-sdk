@@ -22,9 +22,6 @@ public class ListBaselinesRequest extends TeaModel {
     @NameInMap("Priority")
     public String priority;
 
-    @NameInMap("ProjectEnv")
-    public String projectEnv;
-
     @NameInMap("ProjectId")
     public Long projectId;
 
@@ -82,14 +79,6 @@ public class ListBaselinesRequest extends TeaModel {
     }
     public String getPriority() {
         return this.priority;
-    }
-
-    public ListBaselinesRequest setProjectEnv(String projectEnv) {
-        this.projectEnv = projectEnv;
-        return this;
-    }
-    public String getProjectEnv() {
-        return this.projectEnv;
     }
 
     public ListBaselinesRequest setProjectId(Long projectId) {
