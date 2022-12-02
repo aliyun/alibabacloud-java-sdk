@@ -10,9 +10,6 @@ public class MergeImageFaceAdvanceRequest extends TeaModel {
     @NameInMap("TemplateId")
     public String templateId;
 
-    @NameInMap("UserId")
-    public String userId;
-
     public static MergeImageFaceAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         MergeImageFaceAdvanceRequest self = new MergeImageFaceAdvanceRequest();
         return TeaModel.build(map, self);
@@ -32,14 +29,6 @@ public class MergeImageFaceAdvanceRequest extends TeaModel {
     }
     public String getTemplateId() {
         return this.templateId;
-    }
-
-    public MergeImageFaceAdvanceRequest setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
     }
 
 }
