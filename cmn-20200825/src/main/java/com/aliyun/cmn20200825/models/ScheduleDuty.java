@@ -4,47 +4,36 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ScheduleDuty extends TeaModel {
-    // 创建时间
     @NameInMap("CreateTime")
     public String createTime;
 
-    // 结束时间
     @NameInMap("EndDate")
     public String endDate;
 
-    // 资源一级ID
     @NameInMap("ScheduleDutyId")
     public String scheduleDutyId;
 
-    // scheduleTypeIds
     @NameInMap("ScheduleTypeIds")
     public java.util.List<String> scheduleTypeIds;
 
-    // 开始时间
     @NameInMap("StartDate")
     public String startDate;
 
-    // typeWorkerList
     @NameInMap("TypeWorkerList")
     public java.util.List<ScheduleDutyTypeWorkerList> typeWorkerList;
 
-    // 更新时间
     @NameInMap("UpdateTime")
     public String updateTime;
 
-    // 值班表日期
     @NameInMap("WorkDate")
     public String workDate;
 
-    // 值班表类型
     @NameInMap("WorkType")
     public String workType;
 
-    // 值班人员工号
     @NameInMap("WorkerId")
     public String workerId;
 
-    // 值班人员姓名
     @NameInMap("WorkerName")
     public String workerName;
 
@@ -142,11 +131,9 @@ public class ScheduleDuty extends TeaModel {
     }
 
     public static class ScheduleDutyTypeWorkerList extends TeaModel {
-        // scheduleTypeId
         @NameInMap("ScheduleTypeId")
         public String scheduleTypeId;
 
-        // 值班人员姓名
         @NameInMap("ScheduleWorkerName")
         public java.util.List<String> scheduleWorkerName;
 

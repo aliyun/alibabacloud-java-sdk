@@ -7,7 +7,6 @@ public class ListResourceInstancesRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 建设项目资源id
     @NameInMap("SetupProjectId")
     public String setupProjectId;
 

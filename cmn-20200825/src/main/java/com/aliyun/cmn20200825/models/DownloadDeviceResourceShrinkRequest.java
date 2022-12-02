@@ -4,23 +4,18 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class DownloadDeviceResourceShrinkRequest extends TeaModel {
-    // deviceResourceId
     @NameInMap("DeviceResourceId")
     public String deviceResourceId;
 
-    // 资源uuid
     @NameInMap("DeviceResourceIds")
     public String deviceResourceIdsShrink;
 
-    // 操作类型
     @NameInMap("DownloadType")
     public String downloadType;
 
-    // instanceId
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 建设项目id
     @NameInMap("SetupProjectId")
     public String setupProjectId;
 

@@ -4,43 +4,33 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class AggregateData extends TeaModel {
-    // 描述
     @NameInMap("AggregateDataDescription")
     public String aggregateDataDescription;
 
-    // 聚合数据ID
     @NameInMap("AggregateDataId")
     public String aggregateDataId;
 
-    // 聚合数据名称
     @NameInMap("AggregateDataName")
     public String aggregateDataName;
 
-    // 聚合方式列表
     @NameInMap("AggregateModeList")
     public java.util.List<String> aggregateModeList;
 
-    // 数据项
     @NameInMap("DataItem")
     public String dataItem;
 
-    // 聚合设备ID列表
     @NameInMap("DeviceIdList")
     public java.util.List<String> deviceIdList;
 
-    // 创建时间
     @NameInMap("GmtCreate")
     public String gmtCreate;
 
-    // 修改时间
     @NameInMap("GmtModified")
     public String gmtModified;
 
-    // 是否聚合全部设备
     @NameInMap("IsAllDevice")
     public Integer isAllDevice;
 
-    // 监控项ID
     @NameInMap("MonitorItemId")
     public String monitorItemId;
 

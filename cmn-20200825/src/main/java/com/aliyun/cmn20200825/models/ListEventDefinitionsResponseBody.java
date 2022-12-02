@@ -4,23 +4,18 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ListEventDefinitionsResponseBody extends TeaModel {
-    // 事件项列表
     @NameInMap("EventDefinitions")
     public java.util.List<EventDefinition> eventDefinitions;
 
-    // MaxResults本次请求所返回的最大记录条数
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 表示当前调用返回读取到的位置，空代表数据已经读取完毕
     @NameInMap("NextToken")
     public String nextToken;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // TotalCount本次请求条件下的数据总量，此参数为可选参数，默认可不返回
     @NameInMap("TotalCount")
     public Integer totalCount;
 

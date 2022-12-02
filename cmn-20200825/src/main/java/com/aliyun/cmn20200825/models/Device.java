@@ -4,99 +4,75 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class Device extends TeaModel {
-    // 账号类型
     @NameInMap("AccountType")
     public String accountType;
 
-    // snmp版本号
     @NameInMap("AccountVersion")
     public String accountVersion;
 
-    // Auth PassPhrase
     @NameInMap("AuthPassPhrase")
     public String authPassPhrase;
 
-    // Auth Protocol
     @NameInMap("AuthProtocol")
     public String authProtocol;
 
-    // community
     @NameInMap("Community")
     public String community;
 
-    // 设备形态
     @NameInMap("DeviceForm")
     public String deviceForm;
 
-    // 设备ID
     @NameInMap("DeviceId")
     public String deviceId;
 
-    // 设备IP
     @NameInMap("DeviceIp")
     public String deviceIp;
 
-    // 设备MAC地址
     @NameInMap("DeviceMac")
     public String deviceMac;
 
-    // 设备SN
     @NameInMap("DeviceSn")
     public String deviceSn;
 
-    // 主机名
     @NameInMap("Hostname")
     public String hostname;
 
-    // 设备型号
     @NameInMap("Model")
     public String model;
 
-    // Privacy PassPhrase
     @NameInMap("PrivacyPassPhrase")
     public String privacyPassPhrase;
 
-    // Privacy Protocol
     @NameInMap("PrivacyProtocol")
     public String privacyProtocol;
 
-    // 设备安全域
     @NameInMap("SecurityDomain")
     public String securityDomain;
 
-    // 安全等级
     @NameInMap("SecurityLevel")
     public String securityLevel;
 
-    // 设备所属物理空间
     @NameInMap("Space")
     public String space;
 
-    // SSH登录账号
     @NameInMap("SshAccount")
     public String sshAccount;
 
-    // SSH登录密码
     @NameInMap("SshPassword")
     public String sshPassword;
 
-    // 设备状态
     @NameInMap("Status")
     public String status;
 
-    // TELNET登录账号
     @NameInMap("TelnetAccount")
     public String telnetAccount;
 
-    // TELNET登录密码
     @NameInMap("TelnetPassword")
     public String telnetPassword;
 
-    // 用户名
     @NameInMap("UserName")
     public String userName;
 
-    // 设备厂商
     @NameInMap("Vendor")
     public String vendor;
 

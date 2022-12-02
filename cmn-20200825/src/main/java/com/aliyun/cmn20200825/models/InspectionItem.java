@@ -4,19 +4,15 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class InspectionItem extends TeaModel {
-    // 巡检定时表达式
     @NameInMap("InspectionCrontab")
     public String inspectionCrontab;
 
-    // 巡检项描述
     @NameInMap("ItemDescription")
     public String itemDescription;
 
-    // 巡检项ID
     @NameInMap("ItemId")
     public String itemId;
 
-    // 巡检项名字
     @NameInMap("ItemName")
     public String itemName;
 

@@ -4,23 +4,18 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ListConnectionPoliciesResponseBody extends TeaModel {
-    // 数组，返回示例目录。
     @NameInMap("ConnectionPolicy")
     public java.util.List<ListConnectionPoliciesResponseBodyConnectionPolicy> connectionPolicy;
 
-    // 本次读取的最大数据量
     @NameInMap("MaxResults")
     public Long maxResults;
 
-    // 当总结果个数大于MaxResults时，用于翻页的token。
     @NameInMap("NextToken")
     public Integer nextToken;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 总记录数。
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -70,47 +65,36 @@ public class ListConnectionPoliciesResponseBody extends TeaModel {
     }
 
     public static class ListConnectionPoliciesResponseBodyConnectionPolicy extends TeaModel {
-        // 连接策略算法
         @NameInMap("Algorithm")
         public String algorithm;
 
-        // 架构迭代uid
         @NameInMap("ArchitectureIterationId")
         public String architectureIterationId;
 
-        // 创建时间
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 上联设备uid
         @NameInMap("DownlinkArchitectureDeviceId")
         public String downlinkArchitectureDeviceId;
 
-        // 下联设备uid
         @NameInMap("DownlinkArchitectureModuleId")
         public String downlinkArchitectureModuleId;
 
-        // 连接策略uid
         @NameInMap("Id")
         public String id;
 
-        // 连接数
         @NameInMap("LinkCount")
         public Integer linkCount;
 
-        // 连接策略名字
         @NameInMap("Name")
         public String name;
 
-        // 更新是啊金
         @NameInMap("UpdateTime")
         public String updateTime;
 
-        // 上联模块uid
         @NameInMap("UplinkArchitectureDeviceId")
         public String uplinkArchitectureDeviceId;
 
-        // 下联模块uid
         @NameInMap("UplinkArchitectureModuleId")
         public String uplinkArchitectureModuleId;
 

@@ -4,31 +4,24 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ScheduleType extends TeaModel {
-    // 创建时间
     @NameInMap("CreateTime")
     public String createTime;
 
-    // 值班类型key
     @NameInMap("Key")
     public String key;
 
-    // relatedWorkerStr
     @NameInMap("RelatedWorker")
     public java.util.List<String> relatedWorker;
 
-    // 资源一级ID
     @NameInMap("ScheduleTypeId")
     public String scheduleTypeId;
 
-    // 值班类型状态
     @NameInMap("Status")
     public String status;
 
-    // 更新时间
     @NameInMap("UpdateTime")
     public String updateTime;
 
-    // 值班类型value
     @NameInMap("Value")
     public String value;
 

@@ -4,19 +4,15 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class UpdateSpaceModelRequest extends TeaModel {
-    // instanceId
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 层级
     @NameInMap("Sort")
     public java.util.List<UpdateSpaceModelRequestSort> sort;
 
-    // 资源uuid
     @NameInMap("SpaceModelId")
     public String spaceModelId;
 
-    // 物理空间类型
     @NameInMap("SpaceType")
     public String spaceType;
 
@@ -58,11 +54,9 @@ public class UpdateSpaceModelRequest extends TeaModel {
     }
 
     public static class UpdateSpaceModelRequestSort extends TeaModel {
-        // 层级
         @NameInMap("Level")
         public Long level;
 
-        // 层级名称
         @NameInMap("LevelName")
         public String levelName;
 

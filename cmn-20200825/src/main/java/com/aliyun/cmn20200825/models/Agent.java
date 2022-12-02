@@ -4,47 +4,36 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class Agent extends TeaModel {
-    // 探针Id
     @NameInMap("AgentId")
     public String agentId;
 
-    // 探针名称
     @NameInMap("AgentName")
     public String agentName;
 
-    // 探针版本
     @NameInMap("AgentVersion")
     public String agentVersion;
 
-    // cpu使用率
     @NameInMap("CpuUsage")
     public String cpuUsage;
 
-    // 磁盘利用率
     @NameInMap("DiskUsage")
     public String diskUsage;
 
-    // 更新时间
     @NameInMap("GmtModify")
     public String gmtModify;
 
-    // 探针IP
     @NameInMap("Ip")
     public String ip;
 
-    // 系统版本
     @NameInMap("KernelVersion")
     public String kernelVersion;
 
-    // 内存使用率
     @NameInMap("MemoryUsage")
     public String memoryUsage;
 
-    // 安全域
     @NameInMap("SecurityDomain")
     public String securityDomain;
 
-    // 探针状态
     @NameInMap("Status")
     public String status;
 

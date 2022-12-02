@@ -4,60 +4,68 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ListIpBlocksRequest extends TeaModel {
-    // 地址类别
+    @NameInMap("BottomNode")
+    public Boolean bottomNode;
+
     @NameInMap("Category")
     public String category;
 
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // IP地址
     @NameInMap("Ip")
     public String ip;
 
-    // 地址段
     @NameInMap("IpBlockCode")
     public String ipBlockCode;
 
-    // 返回结果的最大个数。
+    @NameInMap("IpList")
+    public java.util.List<String> ipList;
+
+    @NameInMap("LeafNode")
+    public Boolean leafNode;
+
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 公网地址类型，NetType为PUBLIC有效
     @NameInMap("NetBusiness")
     public String netBusiness;
 
-    // 网络类型 PRIVATE PUBLIC
     @NameInMap("NetType")
     public String netType;
 
-    // 当总结果个数大于MaxResults时，用于翻页的token。
     @NameInMap("NextToken")
     public String nextToken;
 
-    // 地址段状态
+    @NameInMap("ParentUid")
+    public String parentUid;
+
     @NameInMap("Status")
     public String status;
 
-    // 业务类型小类
     @NameInMap("SubNetBusiness")
     public String subNetBusiness;
 
-    // 是否获取顶层父类
     @NameInMap("TopParent")
     public Boolean topParent;
 
-    // 是否树状展示地址段
     @NameInMap("TreeType")
     public Boolean treeType;
 
-    // 园区名称，NetType为PUBLIC有效
     @NameInMap("ZoneName")
     public String zoneName;
 
     public static ListIpBlocksRequest build(java.util.Map<String, ?> map) throws Exception {
         ListIpBlocksRequest self = new ListIpBlocksRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListIpBlocksRequest setBottomNode(Boolean bottomNode) {
+        this.bottomNode = bottomNode;
+        return this;
+    }
+    public Boolean getBottomNode() {
+        return this.bottomNode;
     }
 
     public ListIpBlocksRequest setCategory(String category) {
@@ -92,6 +100,22 @@ public class ListIpBlocksRequest extends TeaModel {
         return this.ipBlockCode;
     }
 
+    public ListIpBlocksRequest setIpList(java.util.List<String> ipList) {
+        this.ipList = ipList;
+        return this;
+    }
+    public java.util.List<String> getIpList() {
+        return this.ipList;
+    }
+
+    public ListIpBlocksRequest setLeafNode(Boolean leafNode) {
+        this.leafNode = leafNode;
+        return this;
+    }
+    public Boolean getLeafNode() {
+        return this.leafNode;
+    }
+
     public ListIpBlocksRequest setMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -122,6 +146,14 @@ public class ListIpBlocksRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public ListIpBlocksRequest setParentUid(String parentUid) {
+        this.parentUid = parentUid;
+        return this;
+    }
+    public String getParentUid() {
+        return this.parentUid;
     }
 
     public ListIpBlocksRequest setStatus(String status) {

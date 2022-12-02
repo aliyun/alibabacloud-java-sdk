@@ -4,47 +4,36 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class MonitorItem extends TeaModel {
-    // 解析代码
     @NameInMap("AnalysisCode")
     public String analysisCode;
 
-    // 采集类型
     @NameInMap("CollectionType")
     public String collectionType;
 
-    // 采集配置
     @NameInMap("Config")
     public String config;
 
-    // 是否启用
     @NameInMap("Enable")
     public Integer enable;
 
-    // 采集间隔
     @NameInMap("ExecInterval")
     public String execInterval;
 
-    // 创建时间
     @NameInMap("GmtCreate")
     public String gmtCreate;
 
-    // 更新时间
     @NameInMap("GmtModified")
     public String gmtModified;
 
-    // 描述
     @NameInMap("MonitorItemDescription")
     public String monitorItemDescription;
 
-    // 监控项ID
     @NameInMap("MonitorItemId")
     public String monitorItemId;
 
-    // 监控项名称
     @NameInMap("MonitorItemName")
     public String monitorItemName;
 
-    // 安全域
     @NameInMap("SecurityDomain")
     public String securityDomain;
 

@@ -4,27 +4,21 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ListAlarmStatusResponseBody extends TeaModel {
-    // 告警状态列表
     @NameInMap("AlarmStatus")
     public java.util.List<ListAlarmStatusResponseBodyAlarmStatus> alarmStatus;
 
-    // MaxResults本次请求所返回的最大记录条数
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 表示当前调用返回读取到的位置，空代表数据已经读取完毕
     @NameInMap("NextToken")
     public String nextToken;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 告警状态统计
     @NameInMap("Statistics")
     public java.util.List<ListAlarmStatusResponseBodyStatistics> statistics;
 
-    // TotalCount本次请求条件下的数据总量，此参数为可选参数，默认可不返回
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -82,11 +76,9 @@ public class ListAlarmStatusResponseBody extends TeaModel {
     }
 
     public static class ListAlarmStatusResponseBodyAlarmStatusAggregateData extends TeaModel {
-        // 聚合数据名称
         @NameInMap("AggregateDataName")
         public String aggregateDataName;
 
-        // 数据项
         @NameInMap("DataItem")
         public String dataItem;
 
@@ -114,7 +106,6 @@ public class ListAlarmStatusResponseBody extends TeaModel {
     }
 
     public static class ListAlarmStatusResponseBodyAlarmStatusDedicatedLine extends TeaModel {
-        // 专线名称
         @NameInMap("DedicatedLineName")
         public String dedicatedLineName;
 
@@ -145,15 +136,12 @@ public class ListAlarmStatusResponseBody extends TeaModel {
     }
 
     public static class ListAlarmStatusResponseBodyAlarmStatusMonitorItem extends TeaModel {
-        // 采集类型
         @NameInMap("CollectionType")
         public String collectionType;
 
-        // 监控项描述
         @NameInMap("MonitorItemDescription")
         public String monitorItemDescription;
 
-        // 监控项名称
         @NameInMap("MonitorItemName")
         public String monitorItemName;
 
@@ -189,11 +177,9 @@ public class ListAlarmStatusResponseBody extends TeaModel {
     }
 
     public static class ListAlarmStatusResponseBodyAlarmStatusNotificationSwitch extends TeaModel {
-        // 关闭到期时间
         @NameInMap("ExpiryTime")
         public String expiryTime;
 
-        // 关闭原因
         @NameInMap("Reason")
         public String reason;
 
@@ -221,7 +207,6 @@ public class ListAlarmStatusResponseBody extends TeaModel {
     }
 
     public static class ListAlarmStatusResponseBodyAlarmStatusPortCollection extends TeaModel {
-        // 端口集名称
         @NameInMap("PortCollectionName")
         public String portCollectionName;
 
@@ -241,23 +226,18 @@ public class ListAlarmStatusResponseBody extends TeaModel {
     }
 
     public static class ListAlarmStatusResponseBodyAlarmStatusResourceApp extends TeaModel {
-        // 应用ID
         @NameInMap("AppId")
         public String appId;
 
-        // 监控域名
         @NameInMap("Domain")
         public String domain;
 
-        // 端口
         @NameInMap("Port")
         public String port;
 
-        // 所属探针
         @NameInMap("SecurityDomain")
         public String securityDomain;
 
-        // 资源类型
         @NameInMap("Type")
         public String type;
 
@@ -312,7 +292,6 @@ public class ListAlarmStatusResponseBody extends TeaModel {
         @NameInMap("DeviceForm")
         public String deviceForm;
 
-        // 设备名
         @NameInMap("HostName")
         public String hostName;
 
@@ -351,95 +330,72 @@ public class ListAlarmStatusResponseBody extends TeaModel {
     }
 
     public static class ListAlarmStatusResponseBodyAlarmStatus extends TeaModel {
-        // 异常数据项
         @NameInMap("AbnormalDataItem")
         public String abnormalDataItem;
 
-        // 采集探针IP
         @NameInMap("AgentIp")
         public String agentIp;
 
-        // 聚合数据
         @NameInMap("AggregateData")
         public ListAlarmStatusResponseBodyAlarmStatusAggregateData aggregateData;
 
-        // 聚合数据ID
         @NameInMap("AggregateDataId")
         public String aggregateDataId;
 
-        // 命中告警规则
         @NameInMap("AlarmRule")
         public String alarmRule;
 
-        // 告警状态
         @NameInMap("AlarmStatus")
         public String alarmStatus;
 
-        // 应用ID
         @NameInMap("AppId")
         public String appId;
 
-        // 检测时间
         @NameInMap("CollectionTime")
         public String collectionTime;
 
-        // 专线
         @NameInMap("DedicatedLine")
         public ListAlarmStatusResponseBodyAlarmStatusDedicatedLine dedicatedLine;
 
-        // 专线ID
         @NameInMap("DedicatedLineId")
         public String dedicatedLineId;
 
-        // 设备ID
         @NameInMap("DeviceId")
         public String deviceId;
 
-        // 首次异常时间
         @NameInMap("FirstAbnormalTime")
         public String firstAbnormalTime;
 
-        // 监控项
         @NameInMap("MonitorItem")
         public ListAlarmStatusResponseBodyAlarmStatusMonitorItem monitorItem;
 
-        // 监控项ID
         @NameInMap("MonitorItemId")
         public String monitorItemId;
 
-        // 告警开关配置
         @NameInMap("NotificationSwitch")
         public ListAlarmStatusResponseBodyAlarmStatusNotificationSwitch notificationSwitch;
 
-        // 端口集
         @NameInMap("PortCollection")
         public ListAlarmStatusResponseBodyAlarmStatusPortCollection portCollection;
 
-        // 端口集ID
         @NameInMap("PortCollectionId")
         public String portCollectionId;
 
-        // 接收时间
         @NameInMap("ReceiveTime")
         public String receiveTime;
 
-        // 应用资源
         @NameInMap("ResourceApp")
         public ListAlarmStatusResponseBodyAlarmStatusResourceApp resourceApp;
 
-        // 设备
         @NameInMap("ResourceDevice")
         public ListAlarmStatusResponseBodyAlarmStatusResourceDevice resourceDevice;
 
-        // 采集状态码
         @NameInMap("ResponseCode")
         public String responseCode;
 
-        // 采集结果
         @NameInMap("Result")
         public String result;
 
-        // 索引
         @NameInMap("UniqueKey")
         public String uniqueKey;
 
@@ -635,11 +591,9 @@ public class ListAlarmStatusResponseBody extends TeaModel {
     }
 
     public static class ListAlarmStatusResponseBodyStatistics extends TeaModel {
-        // 数量
         @NameInMap("Count")
         public Long count;
 
-        // 告警状态
         @NameInMap("Status")
         public String status;
 

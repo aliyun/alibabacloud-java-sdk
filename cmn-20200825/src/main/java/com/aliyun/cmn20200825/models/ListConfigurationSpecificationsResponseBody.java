@@ -4,23 +4,18 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ListConfigurationSpecificationsResponseBody extends TeaModel {
-    // 数组，返回示例目录。
     @NameInMap("ConfigurationSpecification")
     public java.util.List<ListConfigurationSpecificationsResponseBodyConfigurationSpecification> configurationSpecification;
 
-    // 本次读取的最大数据量
     @NameInMap("MaxResults")
     public Long maxResults;
 
-    // 当总结果个数大于MaxResults时，用于翻页的token。
     @NameInMap("NextToken")
     public Integer nextToken;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 总记录数。
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -70,43 +65,33 @@ public class ListConfigurationSpecificationsResponseBody extends TeaModel {
     }
 
     public static class ListConfigurationSpecificationsResponseBodyConfigurationSpecification extends TeaModel {
-        // 架构
         @NameInMap("Architecture")
         public String architecture;
 
-        // 配置规范id
         @NameInMap("ConfigurationSpecificationId")
         public String configurationSpecificationId;
 
-        // 创建时间
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 型号
         @NameInMap("Model")
         public String model;
 
-        // 相关变量
         @NameInMap("RelatedVariate")
         public java.util.List<String> relatedVariate;
 
-        // 角色
         @NameInMap("Role")
         public String role;
 
-        // 规范内容
         @NameInMap("SpecificationContent")
         public String specificationContent;
 
-        // 配置规范名字
         @NameInMap("SpecificationName")
         public String specificationName;
 
-        // 更新时间
         @NameInMap("UpdateTime")
         public String updateTime;
 
-        // 厂商
         @NameInMap("Vendor")
         public String vendor;
 

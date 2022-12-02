@@ -4,11 +4,9 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class RetryTasksRequest extends TeaModel {
-    // 实例ID
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 重执行任务的数组
     @NameInMap("RetryTasks")
     public java.util.List<RetryTasksRequestRetryTasks> retryTasks;
 
@@ -34,15 +32,12 @@ public class RetryTasksRequest extends TeaModel {
     }
 
     public static class RetryTasksRequestRetryTasks extends TeaModel {
-        // 设备ID
         @NameInMap("DeviceId")
         public String deviceId;
 
-        // 巡检项名称
         @NameInMap("ItemName")
         public String itemName;
 
-        // 脚本ID
         @NameInMap("ScriptId")
         public String scriptId;
 

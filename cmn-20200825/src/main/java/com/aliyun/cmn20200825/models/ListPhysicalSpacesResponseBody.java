@@ -4,23 +4,18 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ListPhysicalSpacesResponseBody extends TeaModel {
-    // 每页数量。
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 当总结果个数大于MaxResults时，用于翻页的token。
     @NameInMap("NextToken")
     public Integer nextToken;
 
-    // 数组，返回示例目录。
     @NameInMap("PhysicalSpaces")
     public java.util.List<ListPhysicalSpacesResponseBodyPhysicalSpaces> physicalSpaces;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 总记录数。
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -70,47 +65,39 @@ public class ListPhysicalSpacesResponseBody extends TeaModel {
     }
 
     public static class ListPhysicalSpacesResponseBodyPhysicalSpaces extends TeaModel {
-        // 具体地址
         @NameInMap("Address")
         public String address;
 
-        // 所属城市
         @NameInMap("City")
         public String city;
 
-        // 所属国家
         @NameInMap("Country")
         public String country;
 
-        // 实例
         @NameInMap("Instance")
         public String instance;
 
-        // 负责人
         @NameInMap("Owner")
         public String owner;
 
-        // 物理空间ID
         @NameInMap("PhysicalSpaceId")
         public String physicalSpaceId;
 
-        // 物理空间名称
         @NameInMap("PhysicalSpaceName")
         public String physicalSpaceName;
 
-        // 所属省份
         @NameInMap("Province")
         public String province;
 
-        // 备注
         @NameInMap("Remark")
         public String remark;
 
-        // 缩写
+        @NameInMap("SecurityDomainList")
+        public java.util.List<String> securityDomainList;
+
         @NameInMap("SpaceAbbreviation")
         public String spaceAbbreviation;
 
-        // 模型
         @NameInMap("SpaceType")
         public String spaceType;
 
@@ -189,6 +176,14 @@ public class ListPhysicalSpacesResponseBody extends TeaModel {
         }
         public String getRemark() {
             return this.remark;
+        }
+
+        public ListPhysicalSpacesResponseBodyPhysicalSpaces setSecurityDomainList(java.util.List<String> securityDomainList) {
+            this.securityDomainList = securityDomainList;
+            return this;
+        }
+        public java.util.List<String> getSecurityDomainList() {
+            return this.securityDomainList;
         }
 
         public ListPhysicalSpacesResponseBodyPhysicalSpaces setSpaceAbbreviation(String spaceAbbreviation) {

@@ -4,23 +4,18 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class DeviceForm extends TeaModel {
-    // 是否需要配置账号信息
     @NameInMap("AccountConfig")
     public String accountConfig;
 
-    // 是否需要展示配置备份
     @NameInMap("ConfigCompare")
     public String configCompare;
 
-    // 设备形态ID
     @NameInMap("FormId")
     public String formId;
 
-    // 设备形态名称
     @NameInMap("FormName")
     public String formName;
 
-    // 设备形态属性列表
     @NameInMap("PropertiesList")
     public java.util.List<DeviceFormProperty> propertiesList;
 

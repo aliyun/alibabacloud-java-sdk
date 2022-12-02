@@ -4,75 +4,60 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ListNotificationHistoriesRequest extends TeaModel {
-    // 聚合数据ID
     @NameInMap("AggregateDataId")
     public String aggregateDataId;
 
-    // 监控状态
     @NameInMap("AlarmStatus")
     public String alarmStatus;
 
-    // 应用ID
     @NameInMap("AppId")
     public String appId;
 
-    // 专线ID
     @NameInMap("DedicatedLineId")
     public String dedicatedLineId;
 
-    // 设备ID
     @NameInMap("DeviceId")
     public String deviceId;
 
-    // 查询结束时间戳
     @NameInMap("End")
     public Long end;
 
-    // 实例ID
+    @NameInMap("EventItemId")
+    public String eventItemId;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 本次读取的最大数据记录数量
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 发送内容
     @NameInMap("Message")
     public String message;
 
-    // 监控项ID
     @NameInMap("MonitorItemId")
     public String monitorItemId;
 
-    // 标记当前开始读取的位置，置空表示从头开始
     @NameInMap("NextToken")
     public String nextToken;
 
-    // 通知组ID
     @NameInMap("NotificationGroupId")
     public String notificationGroupId;
 
-    // 发送方式
     @NameInMap("NotificationMode")
     public String notificationMode;
 
-    // 物理空间ID
     @NameInMap("PhysicalSpaceId")
     public String physicalSpaceId;
 
-    // 端口集ID
     @NameInMap("PortCollectionId")
     public String portCollectionId;
 
-    // 查询开始时间戳
     @NameInMap("Start")
     public Long start;
 
-    // 发送状态
     @NameInMap("Status")
     public String status;
 
-    // 类型
     @NameInMap("Type")
     public String type;
 
@@ -127,6 +112,14 @@ public class ListNotificationHistoriesRequest extends TeaModel {
     }
     public Long getEnd() {
         return this.end;
+    }
+
+    public ListNotificationHistoriesRequest setEventItemId(String eventItemId) {
+        this.eventItemId = eventItemId;
+        return this;
+    }
+    public String getEventItemId() {
+        return this.eventItemId;
     }
 
     public ListNotificationHistoriesRequest setInstanceId(String instanceId) {

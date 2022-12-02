@@ -4,19 +4,15 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ListDevicePropertiesRequest extends TeaModel {
-    // 设备形态ID
     @NameInMap("DeviceFormId")
     public String deviceFormId;
 
-    // 实例ID
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 返回结果的最大个数。
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 当总结果个数大于MaxResults时，用于翻页的token。
     @NameInMap("NextToken")
     public String nextToken;
 

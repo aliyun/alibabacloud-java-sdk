@@ -7,7 +7,6 @@ public class GetOsDownloadPathRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 架构资源uuid
     @NameInMap("OsVersionId")
     public String osVersionId;
 

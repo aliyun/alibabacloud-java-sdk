@@ -4,11 +4,9 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class DeleteDedicatedLineRequest extends TeaModel {
-    // 实例 ID。
     @NameInMap("DedicatedLineId")
     public String dedicatedLineId;
 
-    // 实例ID
     @NameInMap("InstanceId")
     public String instanceId;
 

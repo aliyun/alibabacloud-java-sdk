@@ -4,11 +4,9 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class DeleteSpaceModelRequest extends TeaModel {
-    // instanceId
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 实例 ID。
     @NameInMap("SpaceModelId")
     public String spaceModelId;
 

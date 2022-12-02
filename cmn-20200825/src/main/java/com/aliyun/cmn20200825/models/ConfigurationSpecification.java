@@ -4,43 +4,33 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ConfigurationSpecification extends TeaModel {
-    // 架构类型
     @NameInMap("Architecture")
     public String architecture;
 
-    // 配置规范uid
     @NameInMap("ConfigurationSpecificationId")
     public String configurationSpecificationId;
 
-    // 创建时间
     @NameInMap("CreateTime")
     public String createTime;
 
-    // 型号
     @NameInMap("Model")
     public String model;
 
-    // 相关变量
     @NameInMap("RelatedVariate")
     public java.util.List<String> relatedVariate;
 
-    // 角色
     @NameInMap("Role")
     public String role;
 
-    // 配置规范内容
     @NameInMap("SpecificationContent")
     public String specificationContent;
 
-    // 配置规范名字
     @NameInMap("SpecificationName")
     public String specificationName;
 
-    // 更新时间
     @NameInMap("UpdateTime")
     public String updateTime;
 
-    // 厂商
     @NameInMap("Vendor")
     public String vendor;
 

@@ -4,11 +4,9 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class GetPhysicalSpaceResponseBody extends TeaModel {
-    // 物理空间详情
     @NameInMap("PhysicalSpace")
     public GetPhysicalSpaceResponseBodyPhysicalSpace physicalSpace;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,43 +32,36 @@ public class GetPhysicalSpaceResponseBody extends TeaModel {
     }
 
     public static class GetPhysicalSpaceResponseBodyPhysicalSpace extends TeaModel {
-        // 具体地址
         @NameInMap("Address")
         public String address;
 
-        // 所属城市
         @NameInMap("City")
         public String city;
 
-        // 所属国家
         @NameInMap("Country")
         public String country;
 
-        // 负责人
         @NameInMap("Owner")
         public String owner;
 
-        // 物理空间ID
         @NameInMap("PhysicalSpaceId")
         public String physicalSpaceId;
 
-        // 物理空间名称
         @NameInMap("PhysicalSpaceName")
         public String physicalSpaceName;
 
-        // 所属省份
         @NameInMap("Province")
         public String province;
 
-        // 备注
         @NameInMap("Remark")
         public String remark;
 
-        // 缩写
+        @NameInMap("SecurityDomainList")
+        public java.util.List<String> securityDomainList;
+
         @NameInMap("SpaceAbbreviation")
         public String spaceAbbreviation;
 
-        // 模型
         @NameInMap("SpaceType")
         public String spaceType;
 
@@ -141,6 +132,14 @@ public class GetPhysicalSpaceResponseBody extends TeaModel {
         }
         public String getRemark() {
             return this.remark;
+        }
+
+        public GetPhysicalSpaceResponseBodyPhysicalSpace setSecurityDomainList(java.util.List<String> securityDomainList) {
+            this.securityDomainList = securityDomainList;
+            return this;
+        }
+        public java.util.List<String> getSecurityDomainList() {
+            return this.securityDomainList;
         }
 
         public GetPhysicalSpaceResponseBodyPhysicalSpace setSpaceAbbreviation(String spaceAbbreviation) {

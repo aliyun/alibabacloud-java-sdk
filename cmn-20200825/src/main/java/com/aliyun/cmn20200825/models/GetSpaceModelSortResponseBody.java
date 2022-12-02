@@ -4,11 +4,9 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class GetSpaceModelSortResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 建设项目
     @NameInMap("SpaceModel")
     public java.util.List<GetSpaceModelSortResponseBodySpaceModel> spaceModel;
 
@@ -34,11 +32,9 @@ public class GetSpaceModelSortResponseBody extends TeaModel {
     }
 
     public static class GetSpaceModelSortResponseBodySpaceModel extends TeaModel {
-        // 层级
         @NameInMap("Level")
         public Long level;
 
-        // 层级名称
         @NameInMap("LevelName")
         public String levelName;
 

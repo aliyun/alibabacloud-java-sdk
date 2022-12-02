@@ -4,23 +4,18 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class UpdateResourceInformationRequest extends TeaModel {
-    // 信息
     @NameInMap("Information")
     public java.util.List<UpdateResourceInformationRequestInformation> information;
 
-    // instanceId
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 资源属性
     @NameInMap("ResourceAttribute")
     public String resourceAttribute;
 
-    // 资源信息Id
     @NameInMap("ResourceInformationId")
     public String resourceInformationId;
 
-    // 资源类型
     @NameInMap("ResourceType")
     public String resourceType;
 
@@ -70,23 +65,18 @@ public class UpdateResourceInformationRequest extends TeaModel {
     }
 
     public static class UpdateResourceInformationRequestInformation extends TeaModel {
-        // 键
         @NameInMap("Key")
         public String key;
 
-        // 键动作
         @NameInMap("KeyAction")
         public String keyAction;
 
-        // 键属性
         @NameInMap("KeyAttribute")
         public String keyAttribute;
 
-        // 键描述
         @NameInMap("KeyDescription")
         public String keyDescription;
 
-        // 建设项目id
         @NameInMap("SetupProjectId")
         public String setupProjectId;
 

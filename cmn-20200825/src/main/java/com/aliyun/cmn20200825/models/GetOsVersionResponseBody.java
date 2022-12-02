@@ -4,11 +4,9 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class GetOsVersionResponseBody extends TeaModel {
-    // 数组，返回示例目录。
     @NameInMap("OsVersion")
     public java.util.List<GetOsVersionResponseBodyOsVersion> osVersion;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,7 +32,6 @@ public class GetOsVersionResponseBody extends TeaModel {
     }
 
     public static class GetOsVersionResponseBodyOsVersion extends TeaModel {
-        // 下载路径
         @NameInMap("DownloadPath")
         public String downloadPath;
 

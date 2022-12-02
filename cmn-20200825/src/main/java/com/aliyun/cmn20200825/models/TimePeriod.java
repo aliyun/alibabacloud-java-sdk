@@ -4,31 +4,24 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class TimePeriod extends TeaModel {
-    // Cron表达式
     @NameInMap("CronExpression")
     public String cronExpression;
 
-    // 创建时间
     @NameInMap("GmtCreate")
     public String gmtCreate;
 
-    // 修改时间
     @NameInMap("GmtModified")
     public String gmtModified;
 
-    // 来源
     @NameInMap("Source")
     public String source;
 
-    // 描述
     @NameInMap("TimePeriodDescription")
     public String timePeriodDescription;
 
-    // 时间段ID
     @NameInMap("TimePeriodId")
     public String timePeriodId;
 
-    // 时间段名称
     @NameInMap("TimePeriodName")
     public String timePeriodName;
 

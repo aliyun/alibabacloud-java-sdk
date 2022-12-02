@@ -4,35 +4,27 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class Template extends TeaModel {
-    // 模板类型
     @NameInMap("Category")
     public String category;
 
-    // 模板说明
     @NameInMap("Comment")
     public String comment;
 
-    // 创建时间
     @NameInMap("GmtCreate")
     public String gmtCreate;
 
-    // 修改时间
     @NameInMap("GmtModify")
     public String gmtModify;
 
-    // 模板入参
     @NameInMap("Input")
     public java.util.List<TemplateInput> input;
 
-    // 模板出参
     @NameInMap("Output")
     public java.util.List<TemplateOutput> output;
 
-    // 模板名称
     @NameInMap("TemplateName")
     public String templateName;
 
-    // 模板类型
     @NameInMap("TemplateType")
     public String templateType;
 
@@ -106,19 +98,15 @@ public class Template extends TeaModel {
     }
 
     public static class TemplateInput extends TeaModel {
-        // 参数说明
         @NameInMap("Description")
         public String description;
 
-        // 参数名称
         @NameInMap("Name")
         public String name;
 
-        // 参数示例
         @NameInMap("Sample")
         public String sample;
 
-        // 参数类型
         @NameInMap("Type")
         public String type;
 
@@ -162,19 +150,15 @@ public class Template extends TeaModel {
     }
 
     public static class TemplateOutput extends TeaModel {
-        // 参数说明
         @NameInMap("Description")
         public String description;
 
-        // 参数名称
         @NameInMap("Name")
         public String name;
 
-        // 参数示例
         @NameInMap("Sample")
         public String sample;
 
-        // 参数类型
         @NameInMap("Type")
         public String type;
 

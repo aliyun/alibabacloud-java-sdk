@@ -4,23 +4,18 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ListResourceInformationsResponseBody extends TeaModel {
-    // 本次读取的最大数据量
     @NameInMap("MaxResults")
     public Long maxResults;
 
-    // 当总结果个数大于MaxResults时，用于翻页的token。
     @NameInMap("NextToken")
     public Integer nextToken;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 数组，返回示例目录。
     @NameInMap("ResourceInformation")
     public java.util.List<ListResourceInformationsResponseBodyResourceInformation> resourceInformation;
 
-    // 总记录数。
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -70,19 +65,15 @@ public class ListResourceInformationsResponseBody extends TeaModel {
     }
 
     public static class ListResourceInformationsResponseBodyResourceInformationInformation extends TeaModel {
-        // 键
         @NameInMap("Key")
         public String key;
 
-        // 键动作
         @NameInMap("KeyAction")
         public String keyAction;
 
-        // 键属性
         @NameInMap("KeyAttribute")
         public String keyAttribute;
 
-        // 键描述
         @NameInMap("KeyDescription")
         public String keyDescription;
 
@@ -126,19 +117,15 @@ public class ListResourceInformationsResponseBody extends TeaModel {
     }
 
     public static class ListResourceInformationsResponseBodyResourceInformation extends TeaModel {
-        // 信息
         @NameInMap("Information")
         public java.util.List<ListResourceInformationsResponseBodyResourceInformationInformation> information;
 
-        // 资源属性
         @NameInMap("ResourceAttribute")
         public String resourceAttribute;
 
-        // 资源一级ID
         @NameInMap("ResourceInformationId")
         public String resourceInformationId;
 
-        // 资源类型
         @NameInMap("ResourceType")
         public String resourceType;
 

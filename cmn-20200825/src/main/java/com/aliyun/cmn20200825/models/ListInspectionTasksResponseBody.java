@@ -4,19 +4,15 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ListInspectionTasksResponseBody extends TeaModel {
-    // 数组，返回示例目录。
     @NameInMap("InspectionTasks")
     public java.util.List<ListInspectionTasksResponseBodyInspectionTasks> inspectionTasks;
 
-    // 当总结果个数大于MaxResults时，用于翻页的token。
     @NameInMap("NextToken")
     public Integer nextToken;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
-    // 总记录数。
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -58,23 +54,18 @@ public class ListInspectionTasksResponseBody extends TeaModel {
     }
 
     public static class ListInspectionTasksResponseBodyInspectionTasksInspectionAlarmRules extends TeaModel {
-        // 告警实际值
         @NameInMap("ActualValue")
         public String actualValue;
 
-        // 告警符号
         @NameInMap("AlarmExpression")
         public String alarmExpression;
 
-        // 告警级别
         @NameInMap("AlarmLevel")
         public String alarmLevel;
 
-        // 告警变量
         @NameInMap("AlarmOperator")
         public String alarmOperator;
 
-        // 告警值
         @NameInMap("AlarmValue")
         public String alarmValue;
 
@@ -126,83 +117,66 @@ public class ListInspectionTasksResponseBody extends TeaModel {
     }
 
     public static class ListInspectionTasksResponseBodyInspectionTasks extends TeaModel {
-        // 告警结果状态
         @NameInMap("AlarmStatus")
         public String alarmStatus;
 
-        // 设备ID
         @NameInMap("DeviceId")
         public String deviceId;
 
-        // 设备类型
         @NameInMap("DeviceType")
         public String deviceType;
 
-        // 错误码
         @NameInMap("ErrorCode")
         public String errorCode;
 
-        // 巡检开始时间
         @NameInMap("ExecutionBeginTime")
         public String executionBeginTime;
 
-        // 巡检结束时间
         @NameInMap("ExecutionEndTime")
         public String executionEndTime;
 
-        // 主机名
         @NameInMap("HostName")
         public String hostName;
 
-        // IP地址
         @NameInMap("IP")
         public String IP;
 
-        // 告警规则
         @NameInMap("InspectionAlarmRules")
         public java.util.List<ListInspectionTasksResponseBodyInspectionTasksInspectionAlarmRules> inspectionAlarmRules;
 
-        // 巡检信息
         @NameInMap("InspectionMessage")
         public String inspectionMessage;
 
-        // 巡检结果（可能截断）
         @NameInMap("InspectionResult")
         public String inspectionResult;
 
-        // 巡检项ID
+        @NameInMap("IsInspectionResultTruncation")
+        public Boolean isInspectionResultTruncation;
+
         @NameInMap("ItemId")
         public String itemId;
 
-        // 巡检项名字
         @NameInMap("ItemName")
         public String itemName;
 
-        // 型号
         @NameInMap("Model")
         public java.util.List<String> model;
 
-        // 角色
         @NameInMap("Role")
         public String role;
 
-        // 模板ID
         @NameInMap("ScriptId")
         public String scriptId;
 
-        // 物理空间
         @NameInMap("Space")
         public String space;
 
-        // 任务ID
         @NameInMap("TaskId")
         public String taskId;
 
-        // 任务状态
         @NameInMap("TaskStatus")
         public String taskStatus;
 
-        // 厂商
         @NameInMap("Vendor")
         public String vendor;
 
@@ -297,6 +271,14 @@ public class ListInspectionTasksResponseBody extends TeaModel {
         }
         public String getInspectionResult() {
             return this.inspectionResult;
+        }
+
+        public ListInspectionTasksResponseBodyInspectionTasks setIsInspectionResultTruncation(Boolean isInspectionResultTruncation) {
+            this.isInspectionResultTruncation = isInspectionResultTruncation;
+            return this;
+        }
+        public Boolean getIsInspectionResultTruncation() {
+            return this.isInspectionResultTruncation;
         }
 
         public ListInspectionTasksResponseBodyInspectionTasks setItemId(String itemId) {

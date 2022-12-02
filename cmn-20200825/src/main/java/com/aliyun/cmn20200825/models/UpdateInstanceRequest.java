@@ -4,11 +4,9 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class UpdateInstanceRequest extends TeaModel {
-    // 实例Id
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 实例名称
     @NameInMap("InstanceName")
     public String instanceName;
 

@@ -4,11 +4,9 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class DeleteConfigurationVariateRequest extends TeaModel {
-    // 实例 ID。
     @NameInMap("ConfigurationVariateId")
     public String configurationVariateId;
 
-    // instanceId
     @NameInMap("InstanceId")
     public String instanceId;
 

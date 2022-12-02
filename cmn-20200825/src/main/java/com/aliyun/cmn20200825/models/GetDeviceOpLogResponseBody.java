@@ -4,23 +4,18 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class GetDeviceOpLogResponseBody extends TeaModel {
-    // 每页数量。
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 当总结果个数大于MaxResults时，用于翻页的token。
     @NameInMap("NextToken")
     public Integer nextToken;
 
-    // 数组，返回示例目录。
     @NameInMap("OperationLogs")
     public java.util.List<GetDeviceOpLogResponseBodyOperationLogs> operationLogs;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 总记录数。
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -70,27 +65,21 @@ public class GetDeviceOpLogResponseBody extends TeaModel {
     }
 
     public static class GetDeviceOpLogResponseBodyOperationLogs extends TeaModel {
-        // 设备ID
         @NameInMap("DeviceId")
         public String deviceId;
 
-        // 操作时间
         @NameInMap("GmtModifiedTime")
         public String gmtModifiedTime;
 
-        // 属性
         @NameInMap("Keyword")
         public String keyword;
 
-        // 新值
         @NameInMap("NewValue")
         public String newValue;
 
-        // 旧值
         @NameInMap("OldValue")
         public String oldValue;
 
-        // 操作描述
         @NameInMap("Operator")
         public String operator;
 

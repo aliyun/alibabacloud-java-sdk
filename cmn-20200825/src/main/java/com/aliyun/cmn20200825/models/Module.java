@@ -4,51 +4,39 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class Module extends TeaModel {
-    // 创建时间
     @NameInMap("CreateTime")
     public String createTime;
 
-    // 设备信息
     @NameInMap("Device")
     public ModuleDevice device;
 
-    // 模块uuid
     @NameInMap("Id")
     public String id;
 
-    // 最大建设模块数量
     @NameInMap("MaxCount")
     public Long maxCount;
 
-    // 最小建设模块数量
     @NameInMap("MinCount")
     public Long minCount;
 
-    // 模块详情
     @NameInMap("ModuleDetails")
     public java.util.List<ModuleModuleDetails> moduleDetails;
 
-    // 资源一级ID
     @NameInMap("ModuleId")
     public String moduleId;
 
-    // 模块类型
     @NameInMap("ModuleType")
     public String moduleType;
 
-    // 模块名字
     @NameInMap("Name")
     public String name;
 
-    // 父模块uuid
     @NameInMap("ParentModuleId")
     public String parentModuleId;
 
-    // 堆叠
     @NameInMap("Stack")
     public Boolean stack;
 
-    // 更新时间
     @NameInMap("UpdateTime")
     public String updateTime;
 
@@ -154,47 +142,36 @@ public class Module extends TeaModel {
     }
 
     public static class ModuleDevice extends TeaModel {
-        // 区块内设备数量
         @NameInMap("Count")
         public Long count;
 
-        // 创建时间
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 区块内设备数量
         @NameInMap("DeviceCount")
         public Long deviceCount;
 
-        // 设备角色
         @NameInMap("DeviceRole")
         public String deviceRole;
 
-        // 设备x坐标
         @NameInMap("DeviceX")
         public String deviceX;
 
-        // 设备y坐标
         @NameInMap("DeviceY")
         public String deviceY;
 
-        // 设备uuid
         @NameInMap("Id")
         public String id;
 
-        // 设备角色
         @NameInMap("Role")
         public String role;
 
-        // 更新时间
         @NameInMap("UpdateTime")
         public String updateTime;
 
-        // 设备x坐标
         @NameInMap("X")
         public String x;
 
-        // 设备y坐标
         @NameInMap("Y")
         public String y;
 
@@ -294,7 +271,6 @@ public class Module extends TeaModel {
     }
 
     public static class ModuleModuleDetailsDeviceDetails extends TeaModel {
-        // 设备序号
         @NameInMap("OrderNumber")
         public Long orderNumber;
 
@@ -314,11 +290,9 @@ public class Module extends TeaModel {
     }
 
     public static class ModuleModuleDetails extends TeaModel {
-        // 设备详情
         @NameInMap("DeviceDetails")
         public java.util.List<ModuleModuleDetailsDeviceDetails> deviceDetails;
 
-        // 模块序号
         @NameInMap("OrderNumber")
         public Long orderNumber;
 

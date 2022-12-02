@@ -4,23 +4,18 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ListConfigurationVariateResponseBody extends TeaModel {
-    // 数组，返回示例目录。
     @NameInMap("ConfigurationVariate")
     public java.util.List<ListConfigurationVariateResponseBodyConfigurationVariate> configurationVariate;
 
-    // 本次读取的最大数据量
     @NameInMap("MaxResults")
     public Long maxResults;
 
-    // 当总结果个数大于MaxResults时，用于翻页的token。
     @NameInMap("NextToken")
     public Integer nextToken;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 总记录数。
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -70,27 +65,21 @@ public class ListConfigurationVariateResponseBody extends TeaModel {
     }
 
     public static class ListConfigurationVariateResponseBodyConfigurationVariate extends TeaModel {
-        // 配置变量描述
         @NameInMap("Comment")
         public String comment;
 
-        // 配置变量id
         @NameInMap("ConfigurationVariateId")
         public String configurationVariateId;
 
-        // 创建时间
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 配置变量转换函数
         @NameInMap("FormatFunction")
         public String formatFunction;
 
-        // 更新时间
         @NameInMap("UpdateTime")
         public String updateTime;
 
-        // 配置变量名称
         @NameInMap("VariateName")
         public String variateName;
 

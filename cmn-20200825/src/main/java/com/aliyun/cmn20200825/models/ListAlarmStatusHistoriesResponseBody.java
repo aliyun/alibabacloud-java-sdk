@@ -4,11 +4,9 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ListAlarmStatusHistoriesResponseBody extends TeaModel {
-    // 数据列表
     @NameInMap("AlarmStatusHistories")
     public java.util.List<ListAlarmStatusHistoriesResponseBodyAlarmStatusHistories> alarmStatusHistories;
 
-    // request id
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,11 +32,9 @@ public class ListAlarmStatusHistoriesResponseBody extends TeaModel {
     }
 
     public static class ListAlarmStatusHistoriesResponseBodyAlarmStatusHistories extends TeaModel {
-        // 时间戳
         @NameInMap("Timestamp")
         public Long timestamp;
 
-        // 数值
         @NameInMap("Value")
         public String value;
 

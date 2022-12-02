@@ -4,27 +4,21 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ConfigurationVariate extends TeaModel {
-    // 描述变量
     @NameInMap("Comment")
     public String comment;
 
-    // 资源一级ID
     @NameInMap("ConfigurationVariateId")
     public String configurationVariateId;
 
-    // 创建时间
     @NameInMap("CreateTime")
     public String createTime;
 
-    // python转换函数
     @NameInMap("FormatFunction")
     public String formatFunction;
 
-    // 更新时间
     @NameInMap("UpdateTime")
     public String updateTime;
 
-    // 变量名字
     @NameInMap("VariateName")
     public String variateName;
 

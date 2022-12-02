@@ -4,50 +4,42 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class CreatePhysicalSpaceRequest extends TeaModel {
-    // 具体地址
     @NameInMap("Address")
     public String address;
 
-    // 所属城市
     @NameInMap("City")
     public String city;
 
-    // 幂等校验 token
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // 所属国家
     @NameInMap("Country")
     public String country;
 
-    // 实例ID
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 负责人
     @NameInMap("Owner")
     public String owner;
 
     @NameInMap("ParentUid")
     public String parentUid;
 
-    // 物理空间名称
     @NameInMap("PhysicalSpaceName")
     public String physicalSpaceName;
 
-    // 所属省份
     @NameInMap("Province")
     public String province;
 
-    // 备注
     @NameInMap("Remark")
     public String remark;
 
-    // 物理空间缩写
+    @NameInMap("SecurityDomainList")
+    public java.util.List<String> securityDomainList;
+
     @NameInMap("SpaceAbbreviation")
     public String spaceAbbreviation;
 
-    // 物理空间模型
     @NameInMap("SpaceType")
     public String spaceType;
 
@@ -134,6 +126,14 @@ public class CreatePhysicalSpaceRequest extends TeaModel {
     }
     public String getRemark() {
         return this.remark;
+    }
+
+    public CreatePhysicalSpaceRequest setSecurityDomainList(java.util.List<String> securityDomainList) {
+        this.securityDomainList = securityDomainList;
+        return this;
+    }
+    public java.util.List<String> getSecurityDomainList() {
+        return this.securityDomainList;
     }
 
     public CreatePhysicalSpaceRequest setSpaceAbbreviation(String spaceAbbreviation) {

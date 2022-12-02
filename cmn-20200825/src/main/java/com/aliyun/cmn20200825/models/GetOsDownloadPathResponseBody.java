@@ -4,11 +4,9 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class GetOsDownloadPathResponseBody extends TeaModel {
-    // 系统版本
     @NameInMap("OsVersion")
     public GetOsDownloadPathResponseBodyOsVersion osVersion;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,7 +32,6 @@ public class GetOsDownloadPathResponseBody extends TeaModel {
     }
 
     public static class GetOsDownloadPathResponseBodyOsVersion extends TeaModel {
-        // 系统版本下载路径
         @NameInMap("DownloadPath")
         public String downloadPath;
 

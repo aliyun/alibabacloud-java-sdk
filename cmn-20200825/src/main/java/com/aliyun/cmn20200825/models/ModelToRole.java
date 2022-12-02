@@ -4,35 +4,27 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ModelToRole extends TeaModel {
-    // 创建时间
     @NameInMap("CreateTime")
     public String createTime;
 
-    // 角色型号对应关系uid
     @NameInMap("Id")
     public String id;
 
-    // 设备型号
     @NameInMap("Model")
     public String model;
 
-    // 资源一级ID
     @NameInMap("ModelToRoleId")
     public String modelToRoleId;
 
-    // 架构迭代uid
     @NameInMap("NetworkArchitectureIterationId")
     public String networkArchitectureIterationId;
 
-    // 角色
     @NameInMap("Role")
     public String role;
 
-    // 更新时间
     @NameInMap("UpdateTime")
     public String updateTime;
 
-    // 设备厂商
     @NameInMap("Vendor")
     public String vendor;
 

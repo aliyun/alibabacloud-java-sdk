@@ -4,83 +4,69 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class UpdateDevicesShrinkRequest extends TeaModel {
-    // 设备ID
     @NameInMap("DeviceIds")
     public String deviceIdsShrink;
 
-    // enable密码
     @NameInMap("EnablePassword")
     public String enablePassword;
 
-    // 实例ID
+    @NameInMap("ExtAttributes")
+    public String extAttributes;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 登录密码
     @NameInMap("LoginPassword")
     public String loginPassword;
 
-    // 登录类型
     @NameInMap("LoginType")
     public String loginType;
 
-    // 登录账号
     @NameInMap("LoginUsername")
     public String loginUsername;
 
-    // 型号
     @NameInMap("Model")
     public String model;
 
-    // 物理空间id
     @NameInMap("PhysicalSpaceId")
     public String physicalSpaceId;
 
-    // 物理空间名称
     @NameInMap("PhysicalSpaceName")
     public String physicalSpaceName;
 
-    // 服务状态
+    @NameInMap("SecurityDomain")
+    public String securityDomain;
+
     @NameInMap("ServiceStatus")
     public String serviceStatus;
 
-    // SNMP 账号类型
     @NameInMap("SnmpAccountType")
     public String snmpAccountType;
 
-    // SNMP 版本号
     @NameInMap("SnmpAccountVersion")
     public String snmpAccountVersion;
 
-    // SNMP Auth Passphrase
     @NameInMap("SnmpAuthPassphrase")
     public String snmpAuthPassphrase;
 
-    // SNMP Auth Protocol
     @NameInMap("SnmpAuthProtocol")
     public String snmpAuthProtocol;
 
-    // SNMP Community
     @NameInMap("SnmpCommunity")
     public String snmpCommunity;
 
-    // SNMP Privacy Passphrase
     @NameInMap("SnmpPrivacyPassphrase")
     public String snmpPrivacyPassphrase;
 
-    // SNMP Privacy Protocol
     @NameInMap("SnmpPrivacyProtocol")
     public String snmpPrivacyProtocol;
 
-    // SNMP 安全级别
     @NameInMap("SnmpSecurityLevel")
     public String snmpSecurityLevel;
 
-    // SNMP 用户名
     @NameInMap("SnmpUsername")
     public String snmpUsername;
 
-    // 厂商
     @NameInMap("Vendor")
     public String vendor;
 
@@ -103,6 +89,14 @@ public class UpdateDevicesShrinkRequest extends TeaModel {
     }
     public String getEnablePassword() {
         return this.enablePassword;
+    }
+
+    public UpdateDevicesShrinkRequest setExtAttributes(String extAttributes) {
+        this.extAttributes = extAttributes;
+        return this;
+    }
+    public String getExtAttributes() {
+        return this.extAttributes;
     }
 
     public UpdateDevicesShrinkRequest setInstanceId(String instanceId) {
@@ -159,6 +153,14 @@ public class UpdateDevicesShrinkRequest extends TeaModel {
     }
     public String getPhysicalSpaceName() {
         return this.physicalSpaceName;
+    }
+
+    public UpdateDevicesShrinkRequest setSecurityDomain(String securityDomain) {
+        this.securityDomain = securityDomain;
+        return this;
+    }
+    public String getSecurityDomain() {
+        return this.securityDomain;
     }
 
     public UpdateDevicesShrinkRequest setServiceStatus(String serviceStatus) {

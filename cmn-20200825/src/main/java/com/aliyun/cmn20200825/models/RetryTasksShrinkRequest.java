@@ -4,11 +4,9 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class RetryTasksShrinkRequest extends TeaModel {
-    // 实例ID
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 重执行任务的数组
     @NameInMap("RetryTasks")
     public String retryTasksShrink;
 

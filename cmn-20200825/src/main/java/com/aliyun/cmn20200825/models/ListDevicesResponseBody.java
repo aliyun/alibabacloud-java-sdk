@@ -4,33 +4,56 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ListDevicesResponseBody extends TeaModel {
-    // 每页数量。
+    @NameInMap("AmountDetail")
+    public String amountDetail;
+
     @NameInMap("AmountUsed")
     public Integer amountUsed;
 
-    // 数组，返回示例目录。
     @NameInMap("Devices")
     public java.util.List<ListDevicesResponseBodyDevices> devices;
 
-    // 每页数量。
+    @NameInMap("IotCoefficient")
+    public Integer iotCoefficient;
+
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 当总结果个数大于MaxResults时，用于翻页的token。
+    @NameInMap("NetworkCoefficient")
+    public Integer networkCoefficient;
+
+    @NameInMap("NetworkMaintenanceCoefficient")
+    public Integer networkMaintenanceCoefficient;
+
     @NameInMap("NextToken")
     public Integer nextToken;
 
-    // Id of the request
+    @NameInMap("OtherCoefficient")
+    public Integer otherCoefficient;
+
     @NameInMap("RequestId")
     public String requestId;
 
-    // 总记录数。
+    @NameInMap("ServerCoefficient")
+    public Integer serverCoefficient;
+
+    @NameInMap("ServerMaintenanceCoefficient")
+    public Integer serverMaintenanceCoefficient;
+
     @NameInMap("TotalCount")
     public Integer totalCount;
 
     public static ListDevicesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListDevicesResponseBody self = new ListDevicesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListDevicesResponseBody setAmountDetail(String amountDetail) {
+        this.amountDetail = amountDetail;
+        return this;
+    }
+    public String getAmountDetail() {
+        return this.amountDetail;
     }
 
     public ListDevicesResponseBody setAmountUsed(Integer amountUsed) {
@@ -49,12 +72,36 @@ public class ListDevicesResponseBody extends TeaModel {
         return this.devices;
     }
 
+    public ListDevicesResponseBody setIotCoefficient(Integer iotCoefficient) {
+        this.iotCoefficient = iotCoefficient;
+        return this;
+    }
+    public Integer getIotCoefficient() {
+        return this.iotCoefficient;
+    }
+
     public ListDevicesResponseBody setMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
     }
     public Integer getMaxResults() {
         return this.maxResults;
+    }
+
+    public ListDevicesResponseBody setNetworkCoefficient(Integer networkCoefficient) {
+        this.networkCoefficient = networkCoefficient;
+        return this;
+    }
+    public Integer getNetworkCoefficient() {
+        return this.networkCoefficient;
+    }
+
+    public ListDevicesResponseBody setNetworkMaintenanceCoefficient(Integer networkMaintenanceCoefficient) {
+        this.networkMaintenanceCoefficient = networkMaintenanceCoefficient;
+        return this;
+    }
+    public Integer getNetworkMaintenanceCoefficient() {
+        return this.networkMaintenanceCoefficient;
     }
 
     public ListDevicesResponseBody setNextToken(Integer nextToken) {
@@ -65,12 +112,36 @@ public class ListDevicesResponseBody extends TeaModel {
         return this.nextToken;
     }
 
+    public ListDevicesResponseBody setOtherCoefficient(Integer otherCoefficient) {
+        this.otherCoefficient = otherCoefficient;
+        return this;
+    }
+    public Integer getOtherCoefficient() {
+        return this.otherCoefficient;
+    }
+
     public ListDevicesResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public ListDevicesResponseBody setServerCoefficient(Integer serverCoefficient) {
+        this.serverCoefficient = serverCoefficient;
+        return this;
+    }
+    public Integer getServerCoefficient() {
+        return this.serverCoefficient;
+    }
+
+    public ListDevicesResponseBody setServerMaintenanceCoefficient(Integer serverMaintenanceCoefficient) {
+        this.serverMaintenanceCoefficient = serverMaintenanceCoefficient;
+        return this;
+    }
+    public Integer getServerMaintenanceCoefficient() {
+        return this.serverMaintenanceCoefficient;
     }
 
     public ListDevicesResponseBody setTotalCount(Integer totalCount) {
@@ -82,119 +153,90 @@ public class ListDevicesResponseBody extends TeaModel {
     }
 
     public static class ListDevicesResponseBodyDevices extends TeaModel {
-        // 设备形态ID
         @NameInMap("DeviceFormId")
         public String deviceFormId;
 
-        // 设备形态名称
         @NameInMap("DeviceFormName")
         public String deviceFormName;
 
-        // 设备ID
         @NameInMap("DeviceId")
         public String deviceId;
 
-        // enable密码
         @NameInMap("EnablePassword")
         public String enablePassword;
 
-        // 设备额外属性
         @NameInMap("ExtAttributes")
         public String extAttributes;
 
-        // 创建时间
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
-        // 修改时间
         @NameInMap("GmtModified")
         public String gmtModified;
 
-        // 主机名
         @NameInMap("HostName")
         public String hostName;
 
-        // 设备IP
         @NameInMap("Ip")
         public String ip;
 
-        // 登录密码
         @NameInMap("LoginPassword")
         public String loginPassword;
 
-        // 登录类型
         @NameInMap("LoginType")
         public String loginType;
 
-        // 登录账号
         @NameInMap("LoginUsername")
         public String loginUsername;
 
-        // 设备MAC地址
         @NameInMap("Mac")
         public String mac;
 
-        // 设备型号
         @NameInMap("Model")
         public String model;
 
-        // 物理空间ID
         @NameInMap("PhysicalSpaceId")
         public String physicalSpaceId;
 
-        // 物理空间名称
         @NameInMap("PhysicalSpaceName")
         public String physicalSpaceName;
 
-        // 设备安全域
         @NameInMap("SecurityDomain")
         public String securityDomain;
 
-        // 设备状态
         @NameInMap("ServiceStatus")
         public String serviceStatus;
 
-        // 设备SN
         @NameInMap("Sn")
         public String sn;
 
-        // SNMP 账号类型
         @NameInMap("SnmpAccountType")
         public String snmpAccountType;
 
-        // SNMP版本号
         @NameInMap("SnmpAccountVersion")
         public String snmpAccountVersion;
 
-        // SNMP Auth Passphrase
         @NameInMap("SnmpAuthPassphrase")
         public String snmpAuthPassphrase;
 
-        // SNMP Auth Protocol
         @NameInMap("SnmpAuthProtocol")
         public String snmpAuthProtocol;
 
-        // SNMP Community
         @NameInMap("SnmpCommunity")
         public String snmpCommunity;
 
-        // SNMP Privacy Passphrase
         @NameInMap("SnmpPrivacyPassphrase")
         public String snmpPrivacyPassphrase;
 
-        // SNMP Privacy Protocol
         @NameInMap("SnmpPrivacyProtocol")
         public String snmpPrivacyProtocol;
 
-        // SNMP 安全级别
         @NameInMap("SnmpSecurityLevel")
         public String snmpSecurityLevel;
 
-        // SNMP 用户名
         @NameInMap("SnmpUsername")
         public String snmpUsername;
 
-        // 设备厂商
         @NameInMap("Vendor")
         public String vendor;
 

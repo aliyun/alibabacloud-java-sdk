@@ -4,11 +4,9 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class GetConfigurationVariateResponseBody extends TeaModel {
-    // 资源对象
     @NameInMap("ConfigurationVariate")
     public GetConfigurationVariateResponseBodyConfigurationVariate configurationVariate;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,15 +32,12 @@ public class GetConfigurationVariateResponseBody extends TeaModel {
     }
 
     public static class GetConfigurationVariateResponseBodyConfigurationVariate extends TeaModel {
-        // 变量描述
         @NameInMap("Comment")
         public String comment;
 
-        // 转换函数
         @NameInMap("FormatFunction")
         public String formatFunction;
 
-        // project
         @NameInMap("VariateName")
         public String variateName;
 

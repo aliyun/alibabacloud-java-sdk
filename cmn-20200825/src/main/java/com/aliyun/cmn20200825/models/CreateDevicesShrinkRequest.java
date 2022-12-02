@@ -4,18 +4,15 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class CreateDevicesShrinkRequest extends TeaModel {
-    // 幂等参数
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // 设备形态ID
     @NameInMap("DeviceFormId")
     public String deviceFormId;
 
     @NameInMap("DeviceParamModelList")
     public String deviceParamModelListShrink;
 
-    // 实例ID
     @NameInMap("InstanceId")
     public String instanceId;
 

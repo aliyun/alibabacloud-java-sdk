@@ -4,11 +4,9 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class GetScheduleWorkerResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 值班人员对象
     @NameInMap("ScheduleWorker")
     public GetScheduleWorkerResponseBodyScheduleWorker scheduleWorker;
 
@@ -34,27 +32,21 @@ public class GetScheduleWorkerResponseBody extends TeaModel {
     }
 
     public static class GetScheduleWorkerResponseBodyScheduleWorker extends TeaModel {
-        // 创建时间
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 资源一级ID
         @NameInMap("ScheduleWorkerId")
         public String scheduleWorkerId;
 
-        // 更新时间
         @NameInMap("UpdateTime")
         public String updateTime;
 
-        // 联系方式
         @NameInMap("WorkerContact")
         public String workerContact;
 
-        // 值班人员工号
         @NameInMap("WorkerId")
         public String workerId;
 
-        // 值班人员姓名
         @NameInMap("WorkerName")
         public String workerName;
 

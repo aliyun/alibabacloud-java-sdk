@@ -4,11 +4,9 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class GetPhysicalSpaceTopoResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 拓扑数据
     @NameInMap("TopoData")
     public GetPhysicalSpaceTopoResponseBodyTopoData topoData;
 
@@ -34,19 +32,15 @@ public class GetPhysicalSpaceTopoResponseBody extends TeaModel {
     }
 
     public static class GetPhysicalSpaceTopoResponseBodyTopoDataDevices extends TeaModel {
-        // 设备id
         @NameInMap("DeviceId")
         public String deviceId;
 
-        // 设备角色
         @NameInMap("DeviceRole")
         public String deviceRole;
 
-        // 设备主机名
         @NameInMap("HostName")
         public String hostName;
 
-        // 设备ip
         @NameInMap("Ip")
         public String ip;
 
@@ -90,27 +84,21 @@ public class GetPhysicalSpaceTopoResponseBody extends TeaModel {
     }
 
     public static class GetPhysicalSpaceTopoResponseBodyTopoDataLinks extends TeaModel {
-        // 源设备id
         @NameInMap("SourceDeviceId")
         public String sourceDeviceId;
 
-        // 源设备名
         @NameInMap("SourceDeviceName")
         public String sourceDeviceName;
 
-        // 源设备端口
         @NameInMap("SourcePort")
         public String sourcePort;
 
-        // 目标设备id
         @NameInMap("TargetDeviceId")
         public String targetDeviceId;
 
-        // 目标设备名
         @NameInMap("TargetDeviceName")
         public String targetDeviceName;
 
-        // 目标设备端口
         @NameInMap("TargetPort")
         public String targetPort;
 
@@ -176,7 +164,6 @@ public class GetPhysicalSpaceTopoResponseBody extends TeaModel {
         @NameInMap("Links")
         public java.util.List<GetPhysicalSpaceTopoResponseBodyTopoDataLinks> links;
 
-        // 更新时间
         @NameInMap("UpdateTime")
         public String updateTime;
 

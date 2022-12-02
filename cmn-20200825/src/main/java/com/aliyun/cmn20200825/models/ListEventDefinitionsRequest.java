@@ -4,27 +4,21 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ListEventDefinitionsRequest extends TeaModel {
-    // 事件项ID
     @NameInMap("EventId")
     public String eventId;
 
-    // 事件项名称
     @NameInMap("EventName")
     public String eventName;
 
-    // 事件类型
     @NameInMap("EventType")
     public String eventType;
 
-    // 实例ID
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 本次读取的最大数据记录数量
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 标记当前开始读取的位置，置空表示从头开始
     @NameInMap("NextToken")
     public String nextToken;
 

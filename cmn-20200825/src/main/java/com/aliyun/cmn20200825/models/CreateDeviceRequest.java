@@ -4,107 +4,81 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class CreateDeviceRequest extends TeaModel {
-    // 幂等校验 token
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // 设备形态ID
     @NameInMap("DeviceFormId")
     public String deviceFormId;
 
-    // enable密码
     @NameInMap("EnablePassword")
     public String enablePassword;
 
-    // 设备额外属性
     @NameInMap("ExtAttributes")
     public String extAttributes;
 
-    // 主机名
     @NameInMap("HostName")
     public String hostName;
 
-    // 实例ID
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 设备IP
     @NameInMap("Ip")
     public String ip;
 
-    // 登录密码
     @NameInMap("LoginPassword")
     public String loginPassword;
 
-    // 登录类型
     @NameInMap("LoginType")
     public String loginType;
 
-    // 登录账号
     @NameInMap("LoginUsername")
     public String loginUsername;
 
-    // 设备MAC地址
     @NameInMap("Mac")
     public String mac;
 
-    // 设备型号
     @NameInMap("Model")
     public String model;
 
-    // 物理空间ID
     @NameInMap("PhysicalSpaceId")
     public String physicalSpaceId;
 
-    // 设备安全域
     @NameInMap("SecurityDomain")
     public String securityDomain;
 
-    // 设备状态
     @NameInMap("ServiceStatus")
     public String serviceStatus;
 
-    // 设备SN
     @NameInMap("Sn")
     public String sn;
 
-    // SNMP 账号类型
     @NameInMap("SnmpAccountType")
     public String snmpAccountType;
 
-    // SNMP 版本号
     @NameInMap("SnmpAccountVersion")
     public String snmpAccountVersion;
 
-    // SNMP Auth PassPhrase
     @NameInMap("SnmpAuthPassphrase")
     public String snmpAuthPassphrase;
 
-    // SNMP Auth Protocol
     @NameInMap("SnmpAuthProtocol")
     public String snmpAuthProtocol;
 
-    // SNMP Community
     @NameInMap("SnmpCommunity")
     public String snmpCommunity;
 
-    // SNMP Privacy Passphrase
     @NameInMap("SnmpPrivacyPassphrase")
     public String snmpPrivacyPassphrase;
 
-    // SNMP Privacy Protocol
     @NameInMap("SnmpPrivacyProtocol")
     public String snmpPrivacyProtocol;
 
-    // SNMP 安全级别
     @NameInMap("SnmpSecurityLevel")
     public String snmpSecurityLevel;
 
-    // SNMP 用户名
     @NameInMap("SnmpUsername")
     public String snmpUsername;
 
-    // 设备厂商
     @NameInMap("Vendor")
     public String vendor;
 

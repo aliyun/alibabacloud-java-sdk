@@ -4,43 +4,33 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class SpaceModel extends TeaModel {
-    // 创建时间
     @NameInMap("CreateTime")
     public String createTime;
 
-    // 物理空间实例
     @NameInMap("Instance")
     public String instance;
 
-    // 操作类型
     @NameInMap("OperateType")
     public String operateType;
 
-    // 层级
     @NameInMap("Sort")
     public SpaceModelSort sort;
 
-    // 物理空间id
     @NameInMap("SpaceId")
     public String spaceId;
 
-    // 物理空间模型
     @NameInMap("SpaceModel")
     public SpaceModelSpaceModel spaceModel;
 
-    // 资源一级ID
     @NameInMap("SpaceModelId")
     public String spaceModelId;
 
-    // 资源名称
     @NameInMap("SpaceModelName")
     public String spaceModelName;
 
-    // 物理空间类型
     @NameInMap("SpaceType")
     public String spaceType;
 
-    // 状态
     @NameInMap("Status")
     public String status;
 
@@ -130,11 +120,9 @@ public class SpaceModel extends TeaModel {
     }
 
     public static class SpaceModelSort extends TeaModel {
-        // 层次
         @NameInMap("Level")
         public Long level;
 
-        // 分层名称
         @NameInMap("LevelName")
         public String levelName;
 
@@ -162,11 +150,9 @@ public class SpaceModel extends TeaModel {
     }
 
     public static class SpaceModelSpaceModelSort extends TeaModel {
-        // 层级
         @NameInMap("Level")
         public Long level;
 
-        // 层级名称
         @NameInMap("LevleName")
         public String levleName;
 
@@ -194,27 +180,21 @@ public class SpaceModel extends TeaModel {
     }
 
     public static class SpaceModelSpaceModel extends TeaModel {
-        // 创建时间
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 模型实例
         @NameInMap("Sort")
         public SpaceModelSpaceModelSort sort;
 
-        // 物理空间模型id
         @NameInMap("SpaceModelId")
         public String spaceModelId;
 
-        // 物理空间类型
         @NameInMap("SpaceType")
         public String spaceType;
 
-        // 模型状态
         @NameInMap("Status")
         public String status;
 
-        // 更新时间
         @NameInMap("UpdateTime")
         public String updateTime;
 

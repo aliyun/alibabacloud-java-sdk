@@ -7,7 +7,6 @@ public class GetWorkOrderRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 工单Id
     @NameInMap("WorkOrderId")
     public String workOrderId;
 

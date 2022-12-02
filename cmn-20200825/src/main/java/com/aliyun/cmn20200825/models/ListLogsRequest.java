@@ -4,31 +4,33 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ListLogsRequest extends TeaModel {
-    // 搜索内容
+    @NameInMap("AlarmStatus")
+    public String alarmStatus;
+
     @NameInMap("Content")
     public String content;
 
-    // 查询结束时间戳
+    @NameInMap("DeviceId")
+    public String deviceId;
+
     @NameInMap("End")
     public Long end;
 
-    // 实例ID
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 日志类型
     @NameInMap("LogType")
     public String logType;
 
-    // 本次读取的最大数据记录数量
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 标记当前开始读取的位置，置空表示从头开始
     @NameInMap("NextToken")
     public String nextToken;
 
-    // 查询开始时间戳
+    @NameInMap("Sort")
+    public String sort;
+
     @NameInMap("Start")
     public Long start;
 
@@ -37,12 +39,28 @@ public class ListLogsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListLogsRequest setAlarmStatus(String alarmStatus) {
+        this.alarmStatus = alarmStatus;
+        return this;
+    }
+    public String getAlarmStatus() {
+        return this.alarmStatus;
+    }
+
     public ListLogsRequest setContent(String content) {
         this.content = content;
         return this;
     }
     public String getContent() {
         return this.content;
+    }
+
+    public ListLogsRequest setDeviceId(String deviceId) {
+        this.deviceId = deviceId;
+        return this;
+    }
+    public String getDeviceId() {
+        return this.deviceId;
     }
 
     public ListLogsRequest setEnd(Long end) {
@@ -83,6 +101,14 @@ public class ListLogsRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public ListLogsRequest setSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    public String getSort() {
+        return this.sort;
     }
 
     public ListLogsRequest setStart(Long start) {

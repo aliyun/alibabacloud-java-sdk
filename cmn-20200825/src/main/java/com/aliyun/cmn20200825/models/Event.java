@@ -4,51 +4,39 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class Event extends TeaModel {
-    // 事件告警状态
     @NameInMap("AlarmStatus")
     public String alarmStatus;
 
-    // 发生次数
     @NameInMap("Count")
     public Long count;
 
-    // 事件发生时间
     @NameInMap("CreateTime")
     public String createTime;
 
-    // 设备ID
     @NameInMap("DeviceId")
     public String deviceId;
 
-    // 事件名称
     @NameInMap("EventName")
     public String eventName;
 
-    // 事件对象
     @NameInMap("EventObject")
     public String eventObject;
 
-    // 事件对象ID
     @NameInMap("EventObjectId")
     public String eventObjectId;
 
-    // 事件类型
     @NameInMap("EventType")
     public String eventType;
 
-    // 事件内容
     @NameInMap("Message")
     public String message;
 
-    // 设备
     @NameInMap("ResourceDevice")
     public EventResourceDevice resourceDevice;
 
-    // 自动化模板ID
     @NameInMap("TemplateId")
     public String templateId;
 
-    // 事件更新时间
     @NameInMap("UpdateTime")
     public String updateTime;
 
@@ -154,11 +142,9 @@ public class Event extends TeaModel {
     }
 
     public static class EventResourceDevice extends TeaModel {
-        // 设备名
         @NameInMap("HostName")
         public String hostName;
 
-        // 物理空间
         @NameInMap("PhysicalSpace")
         public String physicalSpace;
 

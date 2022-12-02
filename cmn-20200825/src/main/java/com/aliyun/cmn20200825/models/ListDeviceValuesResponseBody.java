@@ -4,11 +4,9 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ListDeviceValuesResponseBody extends TeaModel {
-    // 数组，返回示例目录。
     @NameInMap("DeviceValues")
     public java.util.List<String> deviceValues;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

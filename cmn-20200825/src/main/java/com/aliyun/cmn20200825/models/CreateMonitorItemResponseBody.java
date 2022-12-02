@@ -4,11 +4,9 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class CreateMonitorItemResponseBody extends TeaModel {
-    // 监控项ID
     @NameInMap("MonitorItemId")
     public String monitorItemId;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

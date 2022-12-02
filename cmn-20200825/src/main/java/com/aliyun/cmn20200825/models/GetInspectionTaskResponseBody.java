@@ -4,11 +4,9 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class GetInspectionTaskResponseBody extends TeaModel {
-    // 周期巡检任务详情
     @NameInMap("InspectionTask")
     public GetInspectionTaskResponseBodyInspectionTask inspectionTask;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,23 +32,18 @@ public class GetInspectionTaskResponseBody extends TeaModel {
     }
 
     public static class GetInspectionTaskResponseBodyInspectionTaskInspectionAlarmRules extends TeaModel {
-        // 告警实际值
         @NameInMap("ActualValue")
         public String actualValue;
 
-        // 告警符号
         @NameInMap("Expression")
         public String expression;
 
-        // 告警级别
         @NameInMap("Level")
         public String level;
 
-        // 告警操作符
         @NameInMap("Operator")
         public String operator;
 
-        // 告警值
         @NameInMap("Value")
         public String value;
 
@@ -102,71 +95,54 @@ public class GetInspectionTaskResponseBody extends TeaModel {
     }
 
     public static class GetInspectionTaskResponseBodyInspectionTask extends TeaModel {
-        // 设备回显
         @NameInMap("DeviceDisplay")
         public String deviceDisplay;
 
-        // 设备ID
         @NameInMap("DeviceId")
         public String deviceId;
 
-        // 错误码
         @NameInMap("ErrorCode")
         public String errorCode;
 
-        // 巡检开始时间
         @NameInMap("ExecutionBeginTime")
         public String executionBeginTime;
 
-        // 巡检结束时间
         @NameInMap("ExecutionEndTime")
         public String executionEndTime;
 
-        // 主机名
         @NameInMap("HostName")
         public String hostName;
 
-        // IP地址
         @NameInMap("IP")
         public String IP;
 
-        // 告警规则
         @NameInMap("InspectionAlarmRules")
         public java.util.List<GetInspectionTaskResponseBodyInspectionTaskInspectionAlarmRules> inspectionAlarmRules;
 
-        // 巡检结果
         @NameInMap("InspectionResult")
         public String inspectionResult;
 
-        // 巡检项ID
         @NameInMap("ItemId")
         public String itemId;
 
-        // 巡检项名字
         @NameInMap("ItemName")
         public String itemName;
 
-        // 型号
         @NameInMap("Model")
         public java.util.List<String> model;
 
-        // 模板ID
         @NameInMap("ScriptId")
         public String scriptId;
 
-        // 物理空间
         @NameInMap("Space")
         public String space;
 
-        // 任务ID
         @NameInMap("TaskId")
         public String taskId;
 
-        // 任务状态
         @NameInMap("TaskStatus")
         public String taskStatus;
 
-        // 厂商
         @NameInMap("Vendor")
         public String vendor;
 

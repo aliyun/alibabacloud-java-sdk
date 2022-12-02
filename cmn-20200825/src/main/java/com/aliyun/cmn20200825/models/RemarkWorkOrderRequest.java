@@ -4,23 +4,18 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class RemarkWorkOrderRequest extends TeaModel {
-    // 幂等校验 token
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // 实例ID
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 备注人
     @NameInMap("Operator")
     public String operator;
 
-    // 备注信息
     @NameInMap("Remark")
     public String remark;
 
-    // 备注工单id
     @NameInMap("WorkOrderId")
     public String workOrderId;
 

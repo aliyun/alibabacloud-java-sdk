@@ -4,47 +4,36 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class InspectionScript extends TeaModel {
-    // 巡检告警规则
     @NameInMap("InspectionAlarmRules")
     public java.util.List<InspectionScriptInspectionAlarmRules> inspectionAlarmRules;
 
-    // 巡检项定时表达式
     @NameInMap("InspectionCrontab")
     public String inspectionCrontab;
 
-    // 巡检项描述
     @NameInMap("ItemDescription")
     public String itemDescription;
 
-    // 巡检项ID
     @NameInMap("ItemId")
     public String itemId;
 
-    // 巡检项名字
     @NameInMap("ItemName")
     public String itemName;
 
-    // 型号
     @NameInMap("Model")
     public String model;
 
-    // 角色
     @NameInMap("Role")
     public String role;
 
-    // 模板执行内容
     @NameInMap("Script")
     public String script;
 
-    // 巡检模板ID
     @NameInMap("ScriptId")
     public String scriptId;
 
-    // 模板状态
     @NameInMap("ScriptStatus")
     public String scriptStatus;
 
-    // 厂商
     @NameInMap("Vendor")
     public String vendor;
 
@@ -142,19 +131,15 @@ public class InspectionScript extends TeaModel {
     }
 
     public static class InspectionScriptInspectionAlarmRules extends TeaModel {
-        // 告警表达式
         @NameInMap("AlarmExpression")
         public String alarmExpression;
 
-        // 告警级别
         @NameInMap("AlarmLevel")
         public String alarmLevel;
 
-        // 告警符号
         @NameInMap("AlarmOperator")
         public String alarmOperator;
 
-        // 告警值
         @NameInMap("AlarmValue")
         public String alarmValue;
 

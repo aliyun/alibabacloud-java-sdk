@@ -4,23 +4,18 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class CreateTimePeriodRequest extends TeaModel {
-    // 幂等参数
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // cron表达式
     @NameInMap("Expression")
     public String expression;
 
-    // 实例ID
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 描述
     @NameInMap("TimePeriodDescription")
     public String timePeriodDescription;
 
-    // 时间段名称
     @NameInMap("TimePeriodName")
     public String timePeriodName;
 

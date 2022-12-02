@@ -4,23 +4,18 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ZoneType extends TeaModel {
-    // 创建时间
     @NameInMap("CreateTime")
     public String createTime;
 
-    // 园区类型名称
     @NameInMap("Name")
     public String name;
 
-    // 资源一级ID
     @NameInMap("ZoneTypeId")
     public String zoneTypeId;
 
-    // 园区层级
     @NameInMap("ZoneTypeLayer")
     public java.util.List<ZoneTypeZoneTypeLayer> zoneTypeLayer;
 
-    // 资源名称
     @NameInMap("ZoneTypeName")
     public String zoneTypeName;
 
@@ -70,11 +65,9 @@ public class ZoneType extends TeaModel {
     }
 
     public static class ZoneTypeZoneTypeLayer extends TeaModel {
-        // 园区层级掩码
         @NameInMap("Mask")
         public Long mask;
 
-        // 园区层级名称
         @NameInMap("Name")
         public String name;
 

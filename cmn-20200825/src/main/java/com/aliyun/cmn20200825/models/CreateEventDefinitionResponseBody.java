@@ -4,11 +4,9 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class CreateEventDefinitionResponseBody extends TeaModel {
-    // 事件定义ID
     @NameInMap("EventId")
     public String eventId;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,31 +4,24 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class CreateDevicePropertyRequest extends TeaModel {
-    // 幂等校验 token
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // 设备形态ID
     @NameInMap("DeviceFormId")
     public String deviceFormId;
 
-    // 实例ID
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 属性内容
     @NameInMap("PropertyContent")
     public String propertyContent;
 
-    // 属性格式
     @NameInMap("PropertyFormat")
     public String propertyFormat;
 
-    // 属性主键
     @NameInMap("PropertyKey")
     public String propertyKey;
 
-    // 属性名称
     @NameInMap("PropertyName")
     public String propertyName;
 

@@ -4,23 +4,18 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class CreateConfigurationVariateRequest extends TeaModel {
-    // 幂等参数
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // 描述变量
     @NameInMap("Comment")
     public String comment;
 
-    // python转换函数
     @NameInMap("FormatFunction")
     public String formatFunction;
 
-    // instanceId
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 资源名称
     @NameInMap("VariateName")
     public String variateName;
 

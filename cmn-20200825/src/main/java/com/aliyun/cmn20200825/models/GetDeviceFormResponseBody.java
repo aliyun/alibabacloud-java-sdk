@@ -4,11 +4,9 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class GetDeviceFormResponseBody extends TeaModel {
-    // 设备详情
     @NameInMap("DeviceForm")
     public GetDeviceFormResponseBodyDeviceForm deviceForm;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,51 +32,42 @@ public class GetDeviceFormResponseBody extends TeaModel {
     }
 
     public static class GetDeviceFormResponseBodyDeviceFormAttributeList extends TeaModel {
-        // 设备形态属性是否内置
         @NameInMap("AttributeBuiltIn")
         public Boolean attributeBuiltIn;
 
-        // 设备形态属性值格式
         @NameInMap("AttributeFormat")
         public String attributeFormat;
 
-        // 前端查询控件是否支持模糊搜索
         @NameInMap("AttributeFuzzyQuery")
         public Boolean attributeFuzzyQuery;
 
-        // 设备形态属性主键
         @NameInMap("AttributeKey")
         public String attributeKey;
 
-        // 设备形态属性名称
         @NameInMap("AttributeName")
         public String attributeName;
 
-        // 前端查询控件占位符
         @NameInMap("AttributePlaceholder")
         public String attributePlaceholder;
 
-        // 前端是否展示对应的查询控件
         @NameInMap("AttributeQuery")
         public Boolean attributeQuery;
 
-        // 设备形态属性关联对象
         @NameInMap("AttributeReference")
         public String attributeReference;
 
-        // 设备形态属性是否必填
         @NameInMap("AttributeRequirement")
         public Boolean attributeRequirement;
 
-        // 设备形态属性是否表格可见
+        @NameInMap("AttributeSequence")
+        public Integer attributeSequence;
+
         @NameInMap("AttributeTableDisplay")
         public Boolean attributeTableDisplay;
 
-        // 设备形态属性值类型
         @NameInMap("AttributeType")
         public String attributeType;
 
-        // 设备形态属性是否唯一
         @NameInMap("AttributeUniqueness")
         public Boolean attributeUniqueness;
 
@@ -159,6 +148,14 @@ public class GetDeviceFormResponseBody extends TeaModel {
             return this.attributeRequirement;
         }
 
+        public GetDeviceFormResponseBodyDeviceFormAttributeList setAttributeSequence(Integer attributeSequence) {
+            this.attributeSequence = attributeSequence;
+            return this;
+        }
+        public Integer getAttributeSequence() {
+            return this.attributeSequence;
+        }
+
         public GetDeviceFormResponseBodyDeviceFormAttributeList setAttributeTableDisplay(Boolean attributeTableDisplay) {
             this.attributeTableDisplay = attributeTableDisplay;
             return this;
@@ -186,43 +183,33 @@ public class GetDeviceFormResponseBody extends TeaModel {
     }
 
     public static class GetDeviceFormResponseBodyDeviceForm extends TeaModel {
-        // 是否需要账号配置
         @NameInMap("AccountConfig")
         public Boolean accountConfig;
 
-        // 设备形态属性列表
         @NameInMap("AttributeList")
         public java.util.List<GetDeviceFormResponseBodyDeviceFormAttributeList> attributeList;
 
-        // 是否支持配置生成
         @NameInMap("ConfigCompare")
         public Boolean configCompare;
 
-        // 是否展示设备详情
         @NameInMap("DetailDisplay")
         public Boolean detailDisplay;
 
-        // 设备形态ID
         @NameInMap("DeviceFormId")
         public String deviceFormId;
 
-        // 设备形态名称
         @NameInMap("DeviceFormName")
         public String deviceFormName;
 
-        // 设备形态是否内置
         @NameInMap("FormBuiltIn")
         public Boolean formBuiltIn;
 
-        // 资源用途
         @NameInMap("ResourceUse")
         public String resourceUse;
 
-        // 设备代码
         @NameInMap("Script")
         public String script;
 
-        // 设备形态主键
         @NameInMap("UniqueKey")
         public String uniqueKey;
 

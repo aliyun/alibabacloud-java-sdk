@@ -4,27 +4,21 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class UpdateDeviceResourceRequest extends TeaModel {
-    // 更新数据
     @NameInMap("Data")
     public String data;
 
-    // 资源一级ID
     @NameInMap("DeviceResourceId")
     public String deviceResourceId;
 
-    // 资源一级ID
     @NameInMap("DeviceResourceIds")
     public java.util.List<String> deviceResourceIds;
 
-    // instanceId
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 建设项目id
     @NameInMap("SetupProjectId")
     public String setupProjectId;
 
-    // 操作类型
     @NameInMap("UpdateType")
     public String updateType;
 

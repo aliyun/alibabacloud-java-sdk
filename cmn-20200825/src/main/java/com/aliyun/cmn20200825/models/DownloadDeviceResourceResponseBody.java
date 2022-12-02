@@ -4,11 +4,9 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class DownloadDeviceResourceResponseBody extends TeaModel {
-    // 下载链接
     @NameInMap("DownloadUrl")
     public String downloadUrl;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

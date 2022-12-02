@@ -4,27 +4,21 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class EventDefinition extends TeaModel {
-    // 创建时间
     @NameInMap("CreateTime")
     public String createTime;
 
-    // 事件项ID
     @NameInMap("EventId")
     public String eventId;
 
-    // 事件名称
     @NameInMap("EventName")
     public String eventName;
 
-    // 事件大类
     @NameInMap("EventType")
     public String eventType;
 
-    // 自动化模板ID
     @NameInMap("TemplateId")
     public String templateId;
 
-    // 修改时间
     @NameInMap("UpdateTime")
     public String updateTime;
 

@@ -4,27 +4,21 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class DeviceProperty extends TeaModel {
-    // 属性值
     @NameInMap("Content")
     public String content;
 
-    // 设备形态
     @NameInMap("DeviceForm")
     public String deviceForm;
 
-    // 属性格式，包括JSON和SPLITTER（分隔符）
     @NameInMap("Format")
     public String format;
 
-    // 属性展示名称
     @NameInMap("NameCn")
     public String nameCn;
 
-    // 属性英文主键
     @NameInMap("NameEn")
     public String nameEn;
 
-    // 设备属性ID
     @NameInMap("PropertyId")
     public String propertyId;
 

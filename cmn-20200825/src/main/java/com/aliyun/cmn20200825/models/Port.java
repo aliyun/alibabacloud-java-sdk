@@ -4,23 +4,18 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class Port extends TeaModel {
-    // 设备ID
     @NameInMap("DeviceId")
     public String deviceId;
 
-    // 创建时间
     @NameInMap("GmtCreate")
     public String gmtCreate;
 
-    // 修改时间
     @NameInMap("GmtModified")
     public String gmtModified;
 
-    // 端口集ID
     @NameInMap("PortCollectionId")
     public String portCollectionId;
 
-    // 端口名称
     @NameInMap("PortName")
     public String portName;
 

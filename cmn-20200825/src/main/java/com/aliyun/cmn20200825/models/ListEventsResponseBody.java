@@ -4,27 +4,21 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ListEventsResponseBody extends TeaModel {
-    // 事件列表
     @NameInMap("Events")
     public java.util.List<Event> events;
 
-    // MaxResults本次请求所返回的最大记录条数
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 表示当前调用返回读取到的位置，空代表数据已经读取完毕
     @NameInMap("NextToken")
     public String nextToken;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 事件统计
     @NameInMap("Statistics")
     public java.util.List<ListEventsResponseBodyStatistics> statistics;
 
-    // TotalCount本次请求条件下的数据总量，此参数为可选参数，默认可不返回
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -82,11 +76,9 @@ public class ListEventsResponseBody extends TeaModel {
     }
 
     public static class ListEventsResponseBodyStatistics extends TeaModel {
-        // 总量
         @NameInMap("Count")
         public Integer count;
 
-        // 事件告警状态
         @NameInMap("Status")
         public String status;
 

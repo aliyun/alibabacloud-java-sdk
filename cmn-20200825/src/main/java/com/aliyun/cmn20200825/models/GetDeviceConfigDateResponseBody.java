@@ -4,11 +4,9 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class GetDeviceConfigDateResponseBody extends TeaModel {
-    // 设备配置变化日期
     @NameInMap("DeviceConfigDate")
     public java.util.List<String> deviceConfigDate;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

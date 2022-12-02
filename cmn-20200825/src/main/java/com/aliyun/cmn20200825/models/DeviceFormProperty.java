@@ -4,47 +4,36 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class DeviceFormProperty extends TeaModel {
-    // 属性描述
     @NameInMap("Content")
     public String content;
 
-    // 属性关键词
     @NameInMap("Keyword")
     public String keyword;
 
-    // 前端界面控件占位符文字
     @NameInMap("Placeholder")
     public Boolean placeholder;
 
-    // 属性是否必填
     @NameInMap("Required")
     public Boolean required;
 
-    // 属性是否作为界面查询条件
     @NameInMap("SearchSupported")
     public Boolean searchSupported;
 
-    // 属性展示的次序
     @NameInMap("Sequence")
     public Integer sequence;
 
-    // 前端界面是否展示为表格列
     @NameInMap("TableVisible")
     public Boolean tableVisible;
 
-    // 属性是否需要唯一检查
     @NameInMap("Uniqueness")
     public Boolean uniqueness;
 
-    // 属性值来源具体的方式
     @NameInMap("ValueReference")
     public String valueReference;
 
-    // 属性值来源类型：枚举、接口等
     @NameInMap("ValueSource")
     public String valueSource;
 
-    // 属性类型，JSON或者分隔符
     @NameInMap("ValueType")
     public String valueType;
 

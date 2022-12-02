@@ -4,51 +4,39 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class Ip extends TeaModel {
-    // 业务类型UID
     @NameInMap("BusinessTypeId")
     public String businessTypeId;
 
-    // 业务类型名称
     @NameInMap("BusinessTypeName")
     public String businessTypeName;
 
-    // 创建时间
     @NameInMap("CreateTime")
     public String createTime;
 
-    // 设备MAC
     @NameInMap("DeviceMac")
     public String deviceMac;
 
-    // 设备名称
     @NameInMap("DeviceName")
     public String deviceName;
 
-    // IP地址
     @NameInMap("IpAddress")
     public String ipAddress;
 
-    // 资源一级ID
     @NameInMap("IpId")
     public String ipId;
 
-    // 资源名称
     @NameInMap("IpName")
     public String ipName;
 
-    // 地址段
     @NameInMap("ParentIpBlock")
     public String parentIpBlock;
 
-    // 设备端口名称
     @NameInMap("Port")
     public String port;
 
-    // 状态 using available lock
     @NameInMap("Status")
     public String status;
 
-    // 园区层级
     @NameInMap("ZoneLayer")
     public java.util.List<IpZoneLayer> zoneLayer;
 
@@ -154,11 +142,9 @@ public class Ip extends TeaModel {
     }
 
     public static class IpZoneLayer extends TeaModel {
-        // 园区层级名称
         @NameInMap("Name")
         public String name;
 
-        // 园区层级值
         @NameInMap("Value")
         public String value;
 

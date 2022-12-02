@@ -4,11 +4,9 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class GetConfigurationSpecificationResponseBody extends TeaModel {
-    // 配置规范对象
     @NameInMap("ConfigurationSpecification")
     public GetConfigurationSpecificationResponseBodyConfigurationSpecification configurationSpecification;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,43 +32,33 @@ public class GetConfigurationSpecificationResponseBody extends TeaModel {
     }
 
     public static class GetConfigurationSpecificationResponseBodyConfigurationSpecification extends TeaModel {
-        // 架构
         @NameInMap("Architecture")
         public String architecture;
 
-        // 配置规范资源ID
         @NameInMap("ConfigurationSpecificationId")
         public String configurationSpecificationId;
 
-        // 创建时间
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 型号
         @NameInMap("Mode")
         public String mode;
 
-        // 相关变量
         @NameInMap("RelatedVariate")
         public java.util.List<String> relatedVariate;
 
-        // 角色
         @NameInMap("Role")
         public String role;
 
-        // 规范内容
         @NameInMap("SpecificationContent")
         public String specificationContent;
 
-        // 配置规范名字
         @NameInMap("SpecificationName")
         public String specificationName;
 
-        // 更新时间
         @NameInMap("UpdateTime")
         public String updateTime;
 
-        // 厂商
         @NameInMap("Vendor")
         public String vendor;
 

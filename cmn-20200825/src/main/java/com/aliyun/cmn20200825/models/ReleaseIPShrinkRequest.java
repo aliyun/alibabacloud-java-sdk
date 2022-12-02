@@ -4,23 +4,18 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ReleaseIPShrinkRequest extends TeaModel {
-    // deviceResourceId
     @NameInMap("DeviceResourceId")
     public String deviceResourceId;
 
-    // deviceResourceIdStr
     @NameInMap("DeviceResourceIds")
     public String deviceResourceIdsShrink;
 
-    // instanceId
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // ip地址类型
     @NameInMap("IpType")
     public String ipType;
 
-    // 建设项目id
     @NameInMap("SetupProjectId")
     public String setupProjectId;
 

@@ -4,11 +4,9 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class GetDedicatedLineResponseBody extends TeaModel {
-    // 物理空间专线详情
     @NameInMap("DedicatedLine")
     public GetDedicatedLineResponseBodyDedicatedLine dedicatedLine;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,47 +32,36 @@ public class GetDedicatedLineResponseBody extends TeaModel {
     }
 
     public static class GetDedicatedLineResponseBodyDedicatedLine extends TeaModel {
-        // 宽带（Mbps）
         @NameInMap("Bandwidth")
         public Integer bandwidth;
 
-        // 专线网关
         @NameInMap("DedicatedLineGateway")
         public String dedicatedLineGateway;
 
-        // 专线ID
         @NameInMap("DedicatedLineId")
         public String dedicatedLineId;
 
-        // 专线IP
         @NameInMap("DedicatedLineIp")
         public String dedicatedLineIp;
 
-        // 专线角色
         @NameInMap("DedicatedLineRole")
         public String dedicatedLineRole;
 
-        // 备注
         @NameInMap("Description")
         public String description;
 
-        // 关联设备ID
         @NameInMap("DeviceId")
         public String deviceId;
 
-        // 关联设备名称
         @NameInMap("DeviceName")
         public String deviceName;
 
-        // 关联设备端口名称
         @NameInMap("DevicePort")
         public String devicePort;
 
-        // 运营商
         @NameInMap("Isp")
         public String isp;
 
-        // 物理空间ID
         @NameInMap("PhysicalSpaceId")
         public String physicalSpaceId;
 

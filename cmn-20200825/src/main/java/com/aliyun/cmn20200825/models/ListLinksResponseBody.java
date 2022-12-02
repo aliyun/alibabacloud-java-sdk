@@ -4,19 +4,15 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ListLinksResponseBody extends TeaModel {
-    // 数组，返回示例目录。
     @NameInMap("Content")
     public java.util.List<ListLinksResponseBodyContent> content;
 
-    // 当总结果个数大于MaxResults时，用于翻页的token。
     @NameInMap("NextToken")
     public Integer nextToken;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 总记录数。
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -58,95 +54,72 @@ public class ListLinksResponseBody extends TeaModel {
     }
 
     public static class ListLinksResponseBodyContent extends TeaModel {
-        // A端设备名
         @NameInMap("DeviceNameA")
         public String deviceNameA;
 
-        // B端设备名
         @NameInMap("DeviceNameB")
         public String deviceNameB;
 
-        // 创建时间
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
-        // 修改时间
         @NameInMap("GmtModified")
         public String gmtModified;
 
-        // A端端口索引
         @NameInMap("IdxA")
         public String idxA;
 
-        // B端端口索引
         @NameInMap("IdxB")
         public String idxB;
 
-        // A端IP
         @NameInMap("IpA")
         public String ipA;
 
-        // B端IP
         @NameInMap("IpB")
         public String ipB;
 
-        // 链路发现任务
         @NameInMap("JobId")
         public String jobId;
 
-        // 链路名称
         @NameInMap("LinkName")
         public String linkName;
 
-        // 链路编号
         @NameInMap("LinkNo")
         public String linkNo;
 
-        // 链路状态
         @NameInMap("LinkStatus")
         public String linkStatus;
 
-        // 链路类型（单端、双端）
         @NameInMap("LinkType")
         public String linkType;
 
-        // 报错信息或者日志
         @NameInMap("Message")
         public String message;
 
-        // A端端口名
         @NameInMap("PortA")
         public String portA;
 
-        // B端端口名
         @NameInMap("PortB")
         public String portB;
 
-        // A端描述
         @NameInMap("PortDescA")
         public String portDescA;
 
-        // B端描述
         @NameInMap("PortDescB")
         public String portDescB;
 
-        // A端端口状态
         @NameInMap("PortStatusA")
         public String portStatusA;
 
-        // B端端口状态
         @NameInMap("PortStatusB")
         public String portStatusB;
 
-        // A端端口类型
         @NameInMap("PortTypeA")
         public String portTypeA;
 
-        // B端端口类型
         @NameInMap("PortTypeB")
         public String portTypeB;
 
-        // 地域ID
         @NameInMap("RegionId")
         public String regionId;
 

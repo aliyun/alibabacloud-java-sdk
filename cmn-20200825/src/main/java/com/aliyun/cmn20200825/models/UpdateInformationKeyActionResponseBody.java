@@ -4,11 +4,9 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class UpdateInformationKeyActionResponseBody extends TeaModel {
-    // 返回信息
     @NameInMap("ActionMessage")
     public String actionMessage;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

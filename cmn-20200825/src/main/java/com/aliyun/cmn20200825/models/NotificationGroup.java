@@ -4,31 +4,24 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class NotificationGroup extends TeaModel {
-    // 创建时间
     @NameInMap("GmtCreate")
     public String gmtCreate;
 
-    // 修改时间
     @NameInMap("GmtModified")
     public String gmtModified;
 
-    // 描述
     @NameInMap("NotificationGroupDescription")
     public String notificationGroupDescription;
 
-    // 通知组ID
     @NameInMap("NotificationGroupId")
     public String notificationGroupId;
 
-    // 通知组名称
     @NameInMap("NotificationGroupName")
     public String notificationGroupName;
 
-    // 通知组类型
     @NameInMap("NotificationGroupType")
     public String notificationGroupType;
 
-    // 钉钉群webhook
     @NameInMap("Webhook")
     public String webhook;
 

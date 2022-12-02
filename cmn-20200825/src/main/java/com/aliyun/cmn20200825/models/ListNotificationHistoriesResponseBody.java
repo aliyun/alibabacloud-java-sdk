@@ -4,23 +4,18 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ListNotificationHistoriesResponseBody extends TeaModel {
-    // MaxResults本次请求所返回的最大记录条数
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 表示当前调用返回读取到的位置，空代表数据已经读取完毕
     @NameInMap("NextToken")
     public String nextToken;
 
-    // 数据列表
     @NameInMap("NotificationHistories")
     public java.util.List<ListNotificationHistoriesResponseBodyNotificationHistories> notificationHistories;
 
-    // request Id
     @NameInMap("RequestId")
     public String requestId;
 
-    // TotalCount本次请求条件下的数据总量，此参数为可选参数，默认可不返回
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -70,59 +65,45 @@ public class ListNotificationHistoriesResponseBody extends TeaModel {
     }
 
     public static class ListNotificationHistoriesResponseBodyNotificationHistories extends TeaModel {
-        // 聚合数据ID
         @NameInMap("AggregateDataId")
         public String aggregateDataId;
 
-        // 监控状态
         @NameInMap("AlarmStatus")
         public String alarmStatus;
 
-        // 应用ID
         @NameInMap("AppId")
         public String appId;
 
-        // 专线ID
         @NameInMap("DedicatedLineId")
         public String dedicatedLineId;
 
-        // 设备ID
         @NameInMap("DeviceId")
         public String deviceId;
 
-        // 发送内容
         @NameInMap("Message")
         public String message;
 
-        // 监控项ID
         @NameInMap("MonitorItemId")
         public String monitorItemId;
 
-        // 通知组ID
         @NameInMap("NotificationGroupId")
         public String notificationGroupId;
 
-        // 通知组名称
         @NameInMap("NotificationGroupName")
         public String notificationGroupName;
 
-        // 发送方式
         @NameInMap("NotificationMode")
         public String notificationMode;
 
-        // 输出内容
         @NameInMap("Output")
         public String output;
 
-        // 端口集ID
         @NameInMap("PortCollectionId")
         public String portCollectionId;
 
-        // 发送状态
         @NameInMap("Status")
         public String status;
 
-        // 发送时间
         @NameInMap("Time")
         public String time;
 

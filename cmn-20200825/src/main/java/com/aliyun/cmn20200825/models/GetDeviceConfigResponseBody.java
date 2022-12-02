@@ -4,11 +4,9 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class GetDeviceConfigResponseBody extends TeaModel {
-    // 设备配置内容
     @NameInMap("DeviceConfig")
     public String deviceConfig;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

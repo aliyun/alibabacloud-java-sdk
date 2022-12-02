@@ -4,23 +4,18 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ListSpaceModelsResponseBody extends TeaModel {
-    // 本次读取的最大数据量
     @NameInMap("MaxResults")
     public Long maxResults;
 
-    // 当总结果个数大于MaxResults时，用于翻页的token。
     @NameInMap("NextToken")
     public String nextToken;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 数组，返回示例目录。
     @NameInMap("SpaceModel")
     public java.util.List<ListSpaceModelsResponseBodySpaceModel> spaceModel;
 
-    // 总记录数。
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -70,11 +65,9 @@ public class ListSpaceModelsResponseBody extends TeaModel {
     }
 
     public static class ListSpaceModelsResponseBodySpaceModelSort extends TeaModel {
-        // 层级
         @NameInMap("Level")
         public Long level;
 
-        // 层级名称
         @NameInMap("LevelName")
         public String levelName;
 
@@ -102,27 +95,21 @@ public class ListSpaceModelsResponseBody extends TeaModel {
     }
 
     public static class ListSpaceModelsResponseBodySpaceModel extends TeaModel {
-        // 创建时间
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 层级
         @NameInMap("Sort")
         public java.util.List<ListSpaceModelsResponseBodySpaceModelSort> sort;
 
-        // 资源一级ID
         @NameInMap("SpaceModelId")
         public String spaceModelId;
 
-        // 物理空间类型
         @NameInMap("SpaceType")
         public String spaceType;
 
-        // 模型状态
         @NameInMap("Status")
         public String status;
 
-        // 更新时间
         @NameInMap("UpdateTime")
         public String updateTime;
 

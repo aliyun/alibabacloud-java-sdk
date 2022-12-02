@@ -4,59 +4,45 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class CreateMonitorItemShrinkRequest extends TeaModel {
-    // 告警规则列表
     @NameInMap("AlarmRuleList")
     public String alarmRuleListShrink;
 
-    // 解析代码
     @NameInMap("AnalysisCode")
     public String analysisCode;
 
-    // 幂等参数
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // 采集类型
     @NameInMap("CollectionType")
     public String collectionType;
 
-    // 监控项参数配置
     @NameInMap("Config")
     public String config;
 
-    // 数据项
     @NameInMap("DataItem")
     public String dataItem;
 
-    // 设备形态
     @NameInMap("DeviceForm")
     public String deviceForm;
 
-    // 是否启用
     @NameInMap("Effective")
     public Integer effective;
 
-    // 执行间隔(s)
     @NameInMap("ExecInterval")
     public Integer execInterval;
 
-    // 实例ID
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 监控项描述
     @NameInMap("MonitorItemDescription")
     public String monitorItemDescription;
 
-    // 监控项名称
     @NameInMap("MonitorItemName")
     public String monitorItemName;
 
-    // 安全域
     @NameInMap("SecurityDomain")
     public String securityDomain;
 
-    // 类型
     @NameInMap("Type")
     public String type;
 

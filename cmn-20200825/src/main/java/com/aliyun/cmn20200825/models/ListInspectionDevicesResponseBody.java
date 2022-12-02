@@ -4,11 +4,9 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ListInspectionDevicesResponseBody extends TeaModel {
-    // content
     @NameInMap("InspectionScripts")
     public java.util.List<ListInspectionDevicesResponseBodyInspectionScripts> inspectionScripts;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,35 +32,27 @@ public class ListInspectionDevicesResponseBody extends TeaModel {
     }
 
     public static class ListInspectionDevicesResponseBodyInspectionScripts extends TeaModel {
-        // 设备id
         @NameInMap("DeviceId")
         public String deviceId;
 
-        // 设备状态
         @NameInMap("DeviceState")
         public String deviceState;
 
-        // 主机名
         @NameInMap("HostName")
         public String hostName;
 
-        // 管理ip
         @NameInMap("ManageIp")
         public String manageIp;
 
-        // 型号
         @NameInMap("Model")
         public String model;
 
-        // 角色
         @NameInMap("Role")
         public String role;
 
-        // 物理空间
         @NameInMap("Space")
         public String space;
 
-        // 厂商
         @NameInMap("Vendor")
         public String vendor;
 

@@ -4,11 +4,9 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class DeleteDevicesShrinkRequest extends TeaModel {
-    // 实例 ID列表。
     @NameInMap("DeviceIds")
     public String deviceIdsShrink;
 
-    // 实例ID
     @NameInMap("InstanceId")
     public String instanceId;
 

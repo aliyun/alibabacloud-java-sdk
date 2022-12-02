@@ -4,51 +4,42 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ListMonitorDataRequest extends TeaModel {
-    // 聚合数据ID
     @NameInMap("AggregateDataId")
     public String aggregateDataId;
 
-    // 应用ID
+    @NameInMap("AggregationType")
+    public String aggregationType;
+
     @NameInMap("AppId")
     public String appId;
 
-    // 数据项
     @NameInMap("DataItem")
     public String dataItem;
 
-    // 数据类型
     @NameInMap("DataType")
     public String dataType;
 
-    // 专线ID
     @NameInMap("DedicatedLineId")
     public String dedicatedLineId;
 
-    // 设备ID
     @NameInMap("DeviceId")
     public String deviceId;
 
-    // 结束时间
     @NameInMap("End")
     public Long end;
 
-    // 实例ID
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // key
     @NameInMap("Key")
     public String key;
 
-    // 监控项ID
     @NameInMap("MonitorItemId")
     public String monitorItemId;
 
-    // 端口集ID
     @NameInMap("PortCollectionId")
     public String portCollectionId;
 
-    // 开始时间
     @NameInMap("Start")
     public Long start;
 
@@ -63,6 +54,14 @@ public class ListMonitorDataRequest extends TeaModel {
     }
     public String getAggregateDataId() {
         return this.aggregateDataId;
+    }
+
+    public ListMonitorDataRequest setAggregationType(String aggregationType) {
+        this.aggregationType = aggregationType;
+        return this;
+    }
+    public String getAggregationType() {
+        return this.aggregationType;
     }
 
     public ListMonitorDataRequest setAppId(String appId) {

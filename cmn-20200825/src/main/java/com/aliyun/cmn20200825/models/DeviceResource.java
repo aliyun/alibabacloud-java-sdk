@@ -4,67 +4,51 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class DeviceResource extends TeaModel {
-    // 架构资源ID
     @NameInMap("ArchId")
     public String archId;
 
-    // 业务类型
     @NameInMap("BusinessType")
     public String businessType;
 
-    // 业务类型id
     @NameInMap("BusinessTypeId")
     public String businessTypeId;
 
-    // 业务参数
     @NameInMap("BusinessTypeParams")
     public String businessTypeParams;
 
-    // 创建时间
     @NameInMap("CreateTime")
     public String createTime;
 
-    // 更新数据
     @NameInMap("Data")
     public String data;
 
-    // 设备资源
     @NameInMap("DeviceResource")
     public java.util.List<DeviceResourceDeviceResource> deviceResource;
 
-    // 设备资源id
     @NameInMap("DeviceResourceId")
     public String deviceResourceId;
 
-    // 资源一级ID
     @NameInMap("DeviceResourceIds")
     public java.util.List<String> deviceResourceIds;
 
-    // 操作类型
     @NameInMap("DownloadType")
     public String downloadType;
 
-    // ip类型
     @NameInMap("IpType")
     public String ipType;
 
-    // list类型
     @NameInMap("ListType")
     public String listType;
 
-    // Loopback口
     @NameInMap("LoopbackPort")
     public String loopbackPort;
 
-    // 位置
     @NameInMap("NetLocation")
     public String netLocation;
 
-    // 建设项目id
     @NameInMap("SetupProjectId")
     public String setupProjectId;
 
-    // 操作类型
     @NameInMap("Type")
     public String type;
 
@@ -202,79 +186,60 @@ public class DeviceResource extends TeaModel {
     }
 
     public static class DeviceResourceDeviceResource extends TeaModel {
-        // 组号
         @NameInMap("BlockNumber")
         public String blockNumber;
 
-        // 设备业务地址
         @NameInMap("Business")
         public String business;
 
-        // 设备配置
         @NameInMap("Config")
         public String config;
 
-        // 配置生成
         @NameInMap("ConfigGenerate")
         public Boolean configGenerate;
 
-        // 配置下发状态
         @NameInMap("ConfigTaskStatus")
         public String configTaskStatus;
 
-        // 交付登录地址
         @NameInMap("DeliveryIp")
         public String deliveryIp;
 
-        // 设备号
         @NameInMap("DeviceNumber")
         public String deviceNumber;
 
-        // 设备资源ID
         @NameInMap("DeviceResourceId")
         public String deviceResourceId;
 
-        // 主机名
         @NameInMap("HostName")
         public String hostName;
 
-        // 设备互联地址
         @NameInMap("InterConnection")
         public String interConnection;
 
-        // 物理空间位置
         @NameInMap("Location")
         public String location;
 
-        // loopback地址
         @NameInMap("Loopback")
         public String loopback;
 
-        // 带内管理地址
         @NameInMap("ManagerIp")
         public String managerIp;
 
-        // 模型
         @NameInMap("Model")
         public String model;
 
-        // 角色
         @NameInMap("Role")
         public String role;
 
-        // 建设项目id
         @NameInMap("SetupProjectId")
         public String setupProjectId;
 
-        // 设备sn号
         @NameInMap("Sn")
         public String sn;
 
-        // 堆叠状态
         @NameInMap("Stack")
         public Boolean stack;
 
-        // 厂商
         @NameInMap("Vendor")
         public String vendor;
 

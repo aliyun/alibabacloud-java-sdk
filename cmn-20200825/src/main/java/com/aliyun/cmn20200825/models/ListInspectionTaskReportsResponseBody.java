@@ -4,11 +4,9 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ListInspectionTaskReportsResponseBody extends TeaModel {
-    // 内容
     @NameInMap("InspectionTask")
     public java.util.List<ListInspectionTaskReportsResponseBodyInspectionTask> inspectionTask;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,23 +32,18 @@ public class ListInspectionTaskReportsResponseBody extends TeaModel {
     }
 
     public static class ListInspectionTaskReportsResponseBodyInspectionTaskAlarmStatistic extends TeaModel {
-        // 高危数量
         @NameInMap("CriticalNumber")
         public Long criticalNumber;
 
-        // 巡检项
         @NameInMap("InspectionItem")
         public String inspectionItem;
 
-        // 型号
         @NameInMap("Model")
         public String model;
 
-        // 厂商
         @NameInMap("Vendor")
         public String vendor;
 
-        // 中危数量
         @NameInMap("WarningNumber")
         public Long warningNumber;
 
@@ -102,78 +95,60 @@ public class ListInspectionTaskReportsResponseBody extends TeaModel {
     }
 
     public static class ListInspectionTaskReportsResponseBodyInspectionTask extends TeaModel {
-        // 实际设备数
         @NameInMap("ActualDeviceNumber")
         public Long actualDeviceNumber;
 
-        // 告警数量
         @NameInMap("AlarmNumber")
         public Long alarmNumber;
 
         @NameInMap("AlarmStatistic")
         public java.util.List<ListInspectionTaskReportsResponseBodyInspectionTaskAlarmStatistic> alarmStatistic;
 
-        // 高危数量
         @NameInMap("CriticalNumber")
         public Long criticalNumber;
 
-        // 高危占比
         @NameInMap("CriticalRate")
         public String criticalRate;
 
-        // 设备占比
         @NameInMap("DeviceRate")
         public String deviceRate;
 
-        // 失败详情
         @NameInMap("FailureStatistic")
         public String failureStatistic;
 
-        // 失败任务数
         @NameInMap("FailureTaskNumber")
         public Long failureTaskNumber;
 
-        // 失败占比
         @NameInMap("FailureTaskRate")
         public String failureTaskRate;
 
-        // 正常数量
         @NameInMap("NormalNumber")
         public Long normalNumber;
 
-        // 正常占比
         @NameInMap("NormalRate")
         public String normalRate;
 
-        // 正在运行任务数
         @NameInMap("RunningTaskNumber")
         public Long runningTaskNumber;
 
-        // 运行占比
         @NameInMap("RunningTaskRate")
         public String runningTaskRate;
 
-        // 成功任务数
         @NameInMap("SuccessTaskNumber")
         public Long successTaskNumber;
 
-        // 成功占比
         @NameInMap("SuccessTaskRate")
         public String successTaskRate;
 
-        // 任务数
         @NameInMap("TaskNumber")
         public Long taskNumber;
 
-        // 总设备数
         @NameInMap("TotalDeviceNumber")
         public Long totalDeviceNumber;
 
-        // 中危数量
         @NameInMap("WarningNumber")
         public Long warningNumber;
 
-        // 中危占比
         @NameInMap("WarningRate")
         public String warningRate;
 

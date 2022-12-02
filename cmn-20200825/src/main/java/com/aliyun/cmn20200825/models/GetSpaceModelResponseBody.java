@@ -4,11 +4,9 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class GetSpaceModelResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 物理空间模型
     @NameInMap("SpaceModel")
     public GetSpaceModelResponseBodySpaceModel spaceModel;
 
@@ -34,11 +32,9 @@ public class GetSpaceModelResponseBody extends TeaModel {
     }
 
     public static class GetSpaceModelResponseBodySpaceModelSort extends TeaModel {
-        // 层级
         @NameInMap("Level")
         public Long level;
 
-        // 层级名称
         @NameInMap("LevelName")
         public String levelName;
 
@@ -66,27 +62,21 @@ public class GetSpaceModelResponseBody extends TeaModel {
     }
 
     public static class GetSpaceModelResponseBodySpaceModel extends TeaModel {
-        // 创建时间
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 模型实例
         @NameInMap("Sort")
         public java.util.List<GetSpaceModelResponseBodySpaceModelSort> sort;
 
-        // 物理空间模型id
         @NameInMap("SpaceModelId")
         public String spaceModelId;
 
-        // 物理空间类型
         @NameInMap("SpaceType")
         public String spaceType;
 
-        // 模型状态
         @NameInMap("Status")
         public String status;
 
-        // 更新时间
         @NameInMap("UpdateTime")
         public String updateTime;
 

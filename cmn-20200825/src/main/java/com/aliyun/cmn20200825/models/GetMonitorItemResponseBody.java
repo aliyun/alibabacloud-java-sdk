@@ -4,11 +4,9 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class GetMonitorItemResponseBody extends TeaModel {
-    // 数据
     @NameInMap("MonitorItem")
     public GetMonitorItemResponseBodyMonitorItem monitorItem;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,19 +32,15 @@ public class GetMonitorItemResponseBody extends TeaModel {
     }
 
     public static class GetMonitorItemResponseBodyMonitorItemAlarmRuleList extends TeaModel {
-        // 告警规则
         @NameInMap("AlarmStatus")
         public String alarmStatus;
 
-        // 表达式
         @NameInMap("Expression")
         public String expression;
 
-        // 比较值
         @NameInMap("Value")
         public String value;
 
-        // 指标名
         @NameInMap("Variable")
         public String variable;
 
@@ -90,27 +84,21 @@ public class GetMonitorItemResponseBody extends TeaModel {
     }
 
     public static class GetMonitorItemResponseBodyMonitorItemPersonalizedAlarmRuleList extends TeaModel {
-        // 告警规则
         @NameInMap("AlarmStatus")
         public String alarmStatus;
 
-        // 表达式
         @NameInMap("Expression")
         public String expression;
 
-        // 个性化对象类型
         @NameInMap("FieldName")
         public String fieldName;
 
-        // 个性化对象值
         @NameInMap("FieldValue")
         public String fieldValue;
 
-        // 类型
         @NameInMap("Value")
         public String value;
 
-        // 指标名
         @NameInMap("Variable")
         public String variable;
 
@@ -170,67 +158,51 @@ public class GetMonitorItemResponseBody extends TeaModel {
     }
 
     public static class GetMonitorItemResponseBodyMonitorItem extends TeaModel {
-        // 通用告警规则列表
         @NameInMap("AlarmRuleList")
         public java.util.List<GetMonitorItemResponseBodyMonitorItemAlarmRuleList> alarmRuleList;
 
-        // 解析代码
         @NameInMap("AnalysisCode")
         public String analysisCode;
 
-        // 采集类型
         @NameInMap("CollectionType")
         public String collectionType;
 
-        // 监控项参数配置
         @NameInMap("Config")
         public String config;
 
-        // 创建时间
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 数据项
         @NameInMap("DataItem")
         public String dataItem;
 
-        // 设备形态
         @NameInMap("DeviceForm")
         public String deviceForm;
 
-        // 是否启用
         @NameInMap("Effective")
         public Integer effective;
 
-        // 执行间隔(s)
         @NameInMap("ExecInterval")
         public Integer execInterval;
 
-        // 监控项描述
         @NameInMap("MonitorItemDescription")
         public String monitorItemDescription;
 
-        // 监控项ID
         @NameInMap("MonitorItemId")
         public String monitorItemId;
 
-        // 监控项名称
         @NameInMap("MonitorItemName")
         public String monitorItemName;
 
-        // 个性化告警规则列表
         @NameInMap("PersonalizedAlarmRuleList")
         public java.util.List<GetMonitorItemResponseBodyMonitorItemPersonalizedAlarmRuleList> personalizedAlarmRuleList;
 
-        // 安全域
         @NameInMap("SecurityDomain")
         public String securityDomain;
 
-        // 类型
         @NameInMap("Type")
         public String type;
 
-        // 修改时间
         @NameInMap("UpdateTime")
         public String updateTime;
 

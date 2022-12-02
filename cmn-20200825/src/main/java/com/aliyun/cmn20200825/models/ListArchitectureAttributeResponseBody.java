@@ -4,11 +4,9 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ListArchitectureAttributeResponseBody extends TeaModel {
-    // 架构对象
     @NameInMap("Architecture")
     public java.util.List<ListArchitectureAttributeResponseBodyArchitecture> architecture;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,15 +32,12 @@ public class ListArchitectureAttributeResponseBody extends TeaModel {
     }
 
     public static class ListArchitectureAttributeResponseBodyArchitecture extends TeaModel {
-        // 型号
         @NameInMap("Model")
         public java.util.List<String> model;
 
-        // 角色
         @NameInMap("Role")
         public java.util.List<String> role;
 
-        // 厂商
         @NameInMap("Vendor")
         public java.util.List<String> vendor;
 

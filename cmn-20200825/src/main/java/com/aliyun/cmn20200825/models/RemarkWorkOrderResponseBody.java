@@ -4,11 +4,9 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class RemarkWorkOrderResponseBody extends TeaModel {
-    // 操作id
     @NameInMap("OperationId")
     public String operationId;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

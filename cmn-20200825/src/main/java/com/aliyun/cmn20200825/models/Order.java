@@ -4,39 +4,30 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class Order extends TeaModel {
-    // 创建时间
     @NameInMap("GmtCreate")
     public String gmtCreate;
 
-    // 修改时间
     @NameInMap("GmtModify")
     public String gmtModify;
 
-    // 工单id
     @NameInMap("OrderId")
     public String orderId;
 
-    // 工单返回
     @NameInMap("Output")
     public String output;
 
-    // 工单参数
     @NameInMap("Params")
     public String params;
 
-    // 方案id
     @NameInMap("SchemeId")
     public String schemeId;
 
-    // 方案名
     @NameInMap("SchemeName")
     public String schemeName;
 
-    // 任务状态
     @NameInMap("Status")
     public String status;
 
-    // 工单标题
     @NameInMap("Title")
     public String title;
 

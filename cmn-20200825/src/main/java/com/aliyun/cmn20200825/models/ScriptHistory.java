@@ -4,35 +4,27 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ScriptHistory extends TeaModel {
-    // 版本说明
     @NameInMap("Comment")
     public String comment;
 
-    // 脚本代码
     @NameInMap("Content")
     public String content;
 
-    // 创建时间
     @NameInMap("GmtCreate")
     public String gmtCreate;
 
-    // 修改时间
     @NameInMap("GmtModify")
     public String gmtModify;
 
-    // 模板入参
     @NameInMap("Input")
     public java.util.List<ScriptHistoryInput> input;
 
-    // 模板出参
     @NameInMap("Output")
     public java.util.List<ScriptHistoryOutput> output;
 
-    // 脚本id
     @NameInMap("ScriptId")
     public String scriptId;
 
-    // 版本id
     @NameInMap("VersionId")
     public String versionId;
 
@@ -106,19 +98,15 @@ public class ScriptHistory extends TeaModel {
     }
 
     public static class ScriptHistoryInput extends TeaModel {
-        // 参数说明
         @NameInMap("Description")
         public String description;
 
-        // 参数名称
         @NameInMap("Name")
         public String name;
 
-        // 参数示例
         @NameInMap("Sample")
         public String sample;
 
-        // 参数类型
         @NameInMap("Type")
         public String type;
 
@@ -162,19 +150,15 @@ public class ScriptHistory extends TeaModel {
     }
 
     public static class ScriptHistoryOutput extends TeaModel {
-        // 参数说明
         @NameInMap("Description")
         public String description;
 
-        // 参数名称
         @NameInMap("Name")
         public String name;
 
-        // 参数示例
         @NameInMap("Sample")
         public String sample;
 
-        // 参数类型
         @NameInMap("Type")
         public String type;
 

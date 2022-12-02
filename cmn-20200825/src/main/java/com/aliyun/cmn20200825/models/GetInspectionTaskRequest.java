@@ -4,19 +4,15 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class GetInspectionTaskRequest extends TeaModel {
-    // 设备ID
     @NameInMap("DeviceId")
     public String deviceId;
 
-    // 实例ID
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 巡检项名称
     @NameInMap("ItemName")
     public String itemName;
 
-    // 巡检项ID
     @NameInMap("TaskId")
     public String taskId;
 

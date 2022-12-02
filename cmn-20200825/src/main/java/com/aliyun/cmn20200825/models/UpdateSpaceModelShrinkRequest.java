@@ -4,19 +4,15 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class UpdateSpaceModelShrinkRequest extends TeaModel {
-    // instanceId
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 层级
     @NameInMap("Sort")
     public String sortShrink;
 
-    // 资源uuid
     @NameInMap("SpaceModelId")
     public String spaceModelId;
 
-    // 物理空间类型
     @NameInMap("SpaceType")
     public String spaceType;
 

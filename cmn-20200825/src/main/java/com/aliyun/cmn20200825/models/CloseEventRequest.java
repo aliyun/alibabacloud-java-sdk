@@ -4,19 +4,15 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class CloseEventRequest extends TeaModel {
-    // 事件名称
     @NameInMap("EventName")
     public String eventName;
 
-    // 事件对象ID
     @NameInMap("EventObjectId")
     public String eventObjectId;
 
-    // 事件类型
     @NameInMap("EventType")
     public String eventType;
 
-    // 实例ID
     @NameInMap("InstanceId")
     public String instanceId;
 

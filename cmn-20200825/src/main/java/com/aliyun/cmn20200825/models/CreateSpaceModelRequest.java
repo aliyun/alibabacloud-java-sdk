@@ -4,19 +4,15 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class CreateSpaceModelRequest extends TeaModel {
-    // 幂等参数
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // instanceId
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 层级
     @NameInMap("Sort")
     public java.util.List<CreateSpaceModelRequestSort> sort;
 
-    // 物理空间类型
     @NameInMap("SpaceType")
     public String spaceType;
 
@@ -58,11 +54,9 @@ public class CreateSpaceModelRequest extends TeaModel {
     }
 
     public static class CreateSpaceModelRequestSort extends TeaModel {
-        // 层级
         @NameInMap("Level")
         public Long level;
 
-        // 层级名称
         @NameInMap("LevelName")
         public String levelName;
 
