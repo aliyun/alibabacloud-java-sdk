@@ -16,6 +16,9 @@ public class CreateLoadBalancerRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("DeletionProtectionConfig")
+    public CreateLoadBalancerRequestDeletionProtectionConfig deletionProtectionConfig;
+
     @NameInMap("DryRun")
     public Boolean dryRun;
 
@@ -27,6 +30,9 @@ public class CreateLoadBalancerRequest extends TeaModel {
 
     @NameInMap("LoadBalancerType")
     public String loadBalancerType;
+
+    @NameInMap("ModificationProtectionConfig")
+    public CreateLoadBalancerRequestModificationProtectionConfig modificationProtectionConfig;
 
     @NameInMap("RegionId")
     public String regionId;
@@ -77,6 +83,14 @@ public class CreateLoadBalancerRequest extends TeaModel {
         return this.clientToken;
     }
 
+    public CreateLoadBalancerRequest setDeletionProtectionConfig(CreateLoadBalancerRequestDeletionProtectionConfig deletionProtectionConfig) {
+        this.deletionProtectionConfig = deletionProtectionConfig;
+        return this;
+    }
+    public CreateLoadBalancerRequestDeletionProtectionConfig getDeletionProtectionConfig() {
+        return this.deletionProtectionConfig;
+    }
+
     public CreateLoadBalancerRequest setDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -107,6 +121,14 @@ public class CreateLoadBalancerRequest extends TeaModel {
     }
     public String getLoadBalancerType() {
         return this.loadBalancerType;
+    }
+
+    public CreateLoadBalancerRequest setModificationProtectionConfig(CreateLoadBalancerRequestModificationProtectionConfig modificationProtectionConfig) {
+        this.modificationProtectionConfig = modificationProtectionConfig;
+        return this;
+    }
+    public CreateLoadBalancerRequestModificationProtectionConfig getModificationProtectionConfig() {
+        return this.modificationProtectionConfig;
     }
 
     public CreateLoadBalancerRequest setRegionId(String regionId) {
@@ -141,6 +163,36 @@ public class CreateLoadBalancerRequest extends TeaModel {
         return this.zoneMappings;
     }
 
+    public static class CreateLoadBalancerRequestDeletionProtectionConfig extends TeaModel {
+        @NameInMap("Enabled")
+        public Boolean enabled;
+
+        @NameInMap("Reason")
+        public String reason;
+
+        public static CreateLoadBalancerRequestDeletionProtectionConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateLoadBalancerRequestDeletionProtectionConfig self = new CreateLoadBalancerRequestDeletionProtectionConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateLoadBalancerRequestDeletionProtectionConfig setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public CreateLoadBalancerRequestDeletionProtectionConfig setReason(String reason) {
+            this.reason = reason;
+            return this;
+        }
+        public String getReason() {
+            return this.reason;
+        }
+
+    }
+
     public static class CreateLoadBalancerRequestLoadBalancerBillingConfig extends TeaModel {
         @NameInMap("PayType")
         public String payType;
@@ -156,6 +208,36 @@ public class CreateLoadBalancerRequest extends TeaModel {
         }
         public String getPayType() {
             return this.payType;
+        }
+
+    }
+
+    public static class CreateLoadBalancerRequestModificationProtectionConfig extends TeaModel {
+        @NameInMap("Reason")
+        public String reason;
+
+        @NameInMap("Status")
+        public String status;
+
+        public static CreateLoadBalancerRequestModificationProtectionConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateLoadBalancerRequestModificationProtectionConfig self = new CreateLoadBalancerRequestModificationProtectionConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateLoadBalancerRequestModificationProtectionConfig setReason(String reason) {
+            this.reason = reason;
+            return this;
+        }
+        public String getReason() {
+            return this.reason;
+        }
+
+        public CreateLoadBalancerRequestModificationProtectionConfig setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }
