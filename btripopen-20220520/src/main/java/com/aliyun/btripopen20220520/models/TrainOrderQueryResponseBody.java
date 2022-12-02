@@ -344,6 +344,12 @@ public class TrainOrderQueryResponseBody extends TeaModel {
         @NameInMap("depart_name")
         public String departName;
 
+        @NameInMap("exceed_apply_id")
+        public String exceedApplyId;
+
+        @NameInMap("exceed_third_part_apply_id")
+        public String exceedThirdPartApplyId;
+
         @NameInMap("gmt_create")
         public String gmtCreate;
 
@@ -433,6 +439,22 @@ public class TrainOrderQueryResponseBody extends TeaModel {
         }
         public String getDepartName() {
             return this.departName;
+        }
+
+        public TrainOrderQueryResponseBodyModuleOrderBaseInfo setExceedApplyId(String exceedApplyId) {
+            this.exceedApplyId = exceedApplyId;
+            return this;
+        }
+        public String getExceedApplyId() {
+            return this.exceedApplyId;
+        }
+
+        public TrainOrderQueryResponseBodyModuleOrderBaseInfo setExceedThirdPartApplyId(String exceedThirdPartApplyId) {
+            this.exceedThirdPartApplyId = exceedThirdPartApplyId;
+            return this;
+        }
+        public String getExceedThirdPartApplyId() {
+            return this.exceedThirdPartApplyId;
         }
 
         public TrainOrderQueryResponseBodyModuleOrderBaseInfo setGmtCreate(String gmtCreate) {
