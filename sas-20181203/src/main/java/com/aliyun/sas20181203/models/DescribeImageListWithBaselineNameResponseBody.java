@@ -76,6 +76,18 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
+        @NameInMap("InstanceName")
+        public String instanceName;
+
+        @NameInMap("InternetIp")
+        public String internetIp;
+
+        @NameInMap("IntranetIp")
+        public String intranetIp;
+
+        @NameInMap("LastScanTime")
+        public Long lastScanTime;
+
         @NameInMap("LowRiskImage")
         public Integer lowRiskImage;
 
@@ -111,6 +123,15 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
 
         @NameInMap("Tag")
         public String tag;
+
+        @NameInMap("TargetId")
+        public String targetId;
+
+        @NameInMap("TargetName")
+        public String targetName;
+
+        @NameInMap("TargetType")
+        public String targetType;
 
         @NameInMap("TotalItemCount")
         public Integer totalItemCount;
@@ -211,6 +232,38 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             return this.instanceId;
         }
 
+        public DescribeImageListWithBaselineNameResponseBodyImageInfos setInstanceName(String instanceName) {
+            this.instanceName = instanceName;
+            return this;
+        }
+        public String getInstanceName() {
+            return this.instanceName;
+        }
+
+        public DescribeImageListWithBaselineNameResponseBodyImageInfos setInternetIp(String internetIp) {
+            this.internetIp = internetIp;
+            return this;
+        }
+        public String getInternetIp() {
+            return this.internetIp;
+        }
+
+        public DescribeImageListWithBaselineNameResponseBodyImageInfos setIntranetIp(String intranetIp) {
+            this.intranetIp = intranetIp;
+            return this;
+        }
+        public String getIntranetIp() {
+            return this.intranetIp;
+        }
+
+        public DescribeImageListWithBaselineNameResponseBodyImageInfos setLastScanTime(Long lastScanTime) {
+            this.lastScanTime = lastScanTime;
+            return this;
+        }
+        public Long getLastScanTime() {
+            return this.lastScanTime;
+        }
+
         public DescribeImageListWithBaselineNameResponseBodyImageInfos setLowRiskImage(Integer lowRiskImage) {
             this.lowRiskImage = lowRiskImage;
             return this;
@@ -305,6 +358,30 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
         }
         public String getTag() {
             return this.tag;
+        }
+
+        public DescribeImageListWithBaselineNameResponseBodyImageInfos setTargetId(String targetId) {
+            this.targetId = targetId;
+            return this;
+        }
+        public String getTargetId() {
+            return this.targetId;
+        }
+
+        public DescribeImageListWithBaselineNameResponseBodyImageInfos setTargetName(String targetName) {
+            this.targetName = targetName;
+            return this;
+        }
+        public String getTargetName() {
+            return this.targetName;
+        }
+
+        public DescribeImageListWithBaselineNameResponseBodyImageInfos setTargetType(String targetType) {
+            this.targetType = targetType;
+            return this;
+        }
+        public String getTargetType() {
+            return this.targetType;
         }
 
         public DescribeImageListWithBaselineNameResponseBodyImageInfos setTotalItemCount(Integer totalItemCount) {

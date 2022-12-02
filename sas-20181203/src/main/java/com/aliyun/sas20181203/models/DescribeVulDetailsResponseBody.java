@@ -97,6 +97,15 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
         @NameInMap("CvssVector")
         public String cvssVector;
 
+        @NameInMap("InstanceName")
+        public String instanceName;
+
+        @NameInMap("InternetIp")
+        public String internetIp;
+
+        @NameInMap("IntranetIp")
+        public String intranetIp;
+
         @NameInMap("Poc")
         public String poc;
 
@@ -120,6 +129,12 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
 
         @NameInMap("Summary")
         public String summary;
+
+        @NameInMap("TargetId")
+        public String targetId;
+
+        @NameInMap("TargetName")
+        public String targetName;
 
         @NameInMap("Title")
         public String title;
@@ -199,6 +214,30 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             return this.cvssVector;
         }
 
+        public DescribeVulDetailsResponseBodyCves setInstanceName(String instanceName) {
+            this.instanceName = instanceName;
+            return this;
+        }
+        public String getInstanceName() {
+            return this.instanceName;
+        }
+
+        public DescribeVulDetailsResponseBodyCves setInternetIp(String internetIp) {
+            this.internetIp = internetIp;
+            return this;
+        }
+        public String getInternetIp() {
+            return this.internetIp;
+        }
+
+        public DescribeVulDetailsResponseBodyCves setIntranetIp(String intranetIp) {
+            this.intranetIp = intranetIp;
+            return this;
+        }
+        public String getIntranetIp() {
+            return this.intranetIp;
+        }
+
         public DescribeVulDetailsResponseBodyCves setPoc(String poc) {
             this.poc = poc;
             return this;
@@ -261,6 +300,22 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
         }
         public String getSummary() {
             return this.summary;
+        }
+
+        public DescribeVulDetailsResponseBodyCves setTargetId(String targetId) {
+            this.targetId = targetId;
+            return this;
+        }
+        public String getTargetId() {
+            return this.targetId;
+        }
+
+        public DescribeVulDetailsResponseBodyCves setTargetName(String targetName) {
+            this.targetName = targetName;
+            return this;
+        }
+        public String getTargetName() {
+            return this.targetName;
         }
 
         public DescribeVulDetailsResponseBodyCves setTitle(String title) {

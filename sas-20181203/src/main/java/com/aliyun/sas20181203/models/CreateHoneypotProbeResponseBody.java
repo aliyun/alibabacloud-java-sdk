@@ -7,6 +7,9 @@ public class CreateHoneypotProbeResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("HoneypotProbe")
+    public CreateHoneypotProbeResponseBodyHoneypotProbe honeypotProbe;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
@@ -30,6 +33,14 @@ public class CreateHoneypotProbeResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public CreateHoneypotProbeResponseBody setHoneypotProbe(CreateHoneypotProbeResponseBodyHoneypotProbe honeypotProbe) {
+        this.honeypotProbe = honeypotProbe;
+        return this;
+    }
+    public CreateHoneypotProbeResponseBodyHoneypotProbe getHoneypotProbe() {
+        return this.honeypotProbe;
     }
 
     public CreateHoneypotProbeResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -62,6 +73,25 @@ public class CreateHoneypotProbeResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public static class CreateHoneypotProbeResponseBodyHoneypotProbe extends TeaModel {
+        @NameInMap("ProbeId")
+        public String probeId;
+
+        public static CreateHoneypotProbeResponseBodyHoneypotProbe build(java.util.Map<String, ?> map) throws Exception {
+            CreateHoneypotProbeResponseBodyHoneypotProbe self = new CreateHoneypotProbeResponseBodyHoneypotProbe();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateHoneypotProbeResponseBodyHoneypotProbe setProbeId(String probeId) {
+            this.probeId = probeId;
+            return this;
+        }
+        public String getProbeId() {
+            return this.probeId;
+        }
+
     }
 
 }

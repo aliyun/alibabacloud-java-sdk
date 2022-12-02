@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeVulWhitelistResponseBody extends TeaModel {
+    @NameInMap("Count")
+    public Integer count;
+
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
@@ -22,6 +25,14 @@ public class DescribeVulWhitelistResponseBody extends TeaModel {
     public static DescribeVulWhitelistResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeVulWhitelistResponseBody self = new DescribeVulWhitelistResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeVulWhitelistResponseBody setCount(Integer count) {
+        this.count = count;
+        return this;
+    }
+    public Integer getCount() {
+        return this.count;
     }
 
     public DescribeVulWhitelistResponseBody setCurrentPage(Integer currentPage) {
@@ -83,6 +94,9 @@ public class DescribeVulWhitelistResponseBody extends TeaModel {
         @NameInMap("Type")
         public String type;
 
+        @NameInMap("Whitelist")
+        public String whitelist;
+
         public static DescribeVulWhitelistResponseBodyVulWhitelists build(java.util.Map<String, ?> map) throws Exception {
             DescribeVulWhitelistResponseBodyVulWhitelists self = new DescribeVulWhitelistResponseBodyVulWhitelists();
             return TeaModel.build(map, self);
@@ -134,6 +148,14 @@ public class DescribeVulWhitelistResponseBody extends TeaModel {
         }
         public String getType() {
             return this.type;
+        }
+
+        public DescribeVulWhitelistResponseBodyVulWhitelists setWhitelist(String whitelist) {
+            this.whitelist = whitelist;
+            return this;
+        }
+        public String getWhitelist() {
+            return this.whitelist;
         }
 
     }

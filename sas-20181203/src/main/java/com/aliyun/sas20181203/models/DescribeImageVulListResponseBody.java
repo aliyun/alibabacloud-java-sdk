@@ -232,11 +232,23 @@ public class DescribeImageVulListResponseBody extends TeaModel {
         @NameInMap("ImageDigest")
         public String imageDigest;
 
+        @NameInMap("InstanceName")
+        public String instanceName;
+
+        @NameInMap("InternetIp")
+        public String internetIp;
+
+        @NameInMap("IntranetIp")
+        public String intranetIp;
+
         @NameInMap("LastTs")
         public Long lastTs;
 
         @NameInMap("Layers")
         public java.util.List<String> layers;
+
+        @NameInMap("MaliciousSource")
+        public String maliciousSource;
 
         @NameInMap("ModifyTs")
         public Long modifyTs;
@@ -265,11 +277,23 @@ public class DescribeImageVulListResponseBody extends TeaModel {
         @NameInMap("RepoNamespace")
         public String repoNamespace;
 
+        @NameInMap("ScanTime")
+        public Long scanTime;
+
         @NameInMap("Status")
         public Integer status;
 
         @NameInMap("Tag")
         public String tag;
+
+        @NameInMap("TargetId")
+        public String targetId;
+
+        @NameInMap("TargetName")
+        public String targetName;
+
+        @NameInMap("TargetType")
+        public String targetType;
 
         @NameInMap("Type")
         public String type;
@@ -362,6 +386,30 @@ public class DescribeImageVulListResponseBody extends TeaModel {
             return this.imageDigest;
         }
 
+        public DescribeImageVulListResponseBodyVulRecords setInstanceName(String instanceName) {
+            this.instanceName = instanceName;
+            return this;
+        }
+        public String getInstanceName() {
+            return this.instanceName;
+        }
+
+        public DescribeImageVulListResponseBodyVulRecords setInternetIp(String internetIp) {
+            this.internetIp = internetIp;
+            return this;
+        }
+        public String getInternetIp() {
+            return this.internetIp;
+        }
+
+        public DescribeImageVulListResponseBodyVulRecords setIntranetIp(String intranetIp) {
+            this.intranetIp = intranetIp;
+            return this;
+        }
+        public String getIntranetIp() {
+            return this.intranetIp;
+        }
+
         public DescribeImageVulListResponseBodyVulRecords setLastTs(Long lastTs) {
             this.lastTs = lastTs;
             return this;
@@ -376,6 +424,14 @@ public class DescribeImageVulListResponseBody extends TeaModel {
         }
         public java.util.List<String> getLayers() {
             return this.layers;
+        }
+
+        public DescribeImageVulListResponseBodyVulRecords setMaliciousSource(String maliciousSource) {
+            this.maliciousSource = maliciousSource;
+            return this;
+        }
+        public String getMaliciousSource() {
+            return this.maliciousSource;
         }
 
         public DescribeImageVulListResponseBodyVulRecords setModifyTs(Long modifyTs) {
@@ -450,6 +506,14 @@ public class DescribeImageVulListResponseBody extends TeaModel {
             return this.repoNamespace;
         }
 
+        public DescribeImageVulListResponseBodyVulRecords setScanTime(Long scanTime) {
+            this.scanTime = scanTime;
+            return this;
+        }
+        public Long getScanTime() {
+            return this.scanTime;
+        }
+
         public DescribeImageVulListResponseBodyVulRecords setStatus(Integer status) {
             this.status = status;
             return this;
@@ -464,6 +528,30 @@ public class DescribeImageVulListResponseBody extends TeaModel {
         }
         public String getTag() {
             return this.tag;
+        }
+
+        public DescribeImageVulListResponseBodyVulRecords setTargetId(String targetId) {
+            this.targetId = targetId;
+            return this;
+        }
+        public String getTargetId() {
+            return this.targetId;
+        }
+
+        public DescribeImageVulListResponseBodyVulRecords setTargetName(String targetName) {
+            this.targetName = targetName;
+            return this;
+        }
+        public String getTargetName() {
+            return this.targetName;
+        }
+
+        public DescribeImageVulListResponseBodyVulRecords setTargetType(String targetType) {
+            this.targetType = targetType;
+            return this;
+        }
+        public String getTargetType() {
+            return this.targetType;
         }
 
         public DescribeImageVulListResponseBodyVulRecords setType(String type) {
