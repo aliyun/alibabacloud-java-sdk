@@ -7,9 +7,6 @@ public class QueryFaceImageTemplateRequest extends TeaModel {
     @NameInMap("TemplateId")
     public String templateId;
 
-    @NameInMap("UserId")
-    public String userId;
-
     public static QueryFaceImageTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryFaceImageTemplateRequest self = new QueryFaceImageTemplateRequest();
         return TeaModel.build(map, self);
@@ -21,14 +18,6 @@ public class QueryFaceImageTemplateRequest extends TeaModel {
     }
     public String getTemplateId() {
         return this.templateId;
-    }
-
-    public QueryFaceImageTemplateRequest setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
     }
 
 }

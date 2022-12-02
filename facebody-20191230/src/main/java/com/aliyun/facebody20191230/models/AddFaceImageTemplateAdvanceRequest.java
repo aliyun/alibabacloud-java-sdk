@@ -7,9 +7,6 @@ public class AddFaceImageTemplateAdvanceRequest extends TeaModel {
     @NameInMap("ImageURL")
     public java.io.InputStream imageURLObject;
 
-    @NameInMap("UserId")
-    public String userId;
-
     public static AddFaceImageTemplateAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         AddFaceImageTemplateAdvanceRequest self = new AddFaceImageTemplateAdvanceRequest();
         return TeaModel.build(map, self);
@@ -21,14 +18,6 @@ public class AddFaceImageTemplateAdvanceRequest extends TeaModel {
     }
     public java.io.InputStream getImageURLObject() {
         return this.imageURLObject;
-    }
-
-    public AddFaceImageTemplateAdvanceRequest setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
     }
 
 }

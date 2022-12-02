@@ -7,9 +7,6 @@ public class AddFaceImageTemplateRequest extends TeaModel {
     @NameInMap("ImageURL")
     public String imageURL;
 
-    @NameInMap("UserId")
-    public String userId;
-
     public static AddFaceImageTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
         AddFaceImageTemplateRequest self = new AddFaceImageTemplateRequest();
         return TeaModel.build(map, self);
@@ -21,14 +18,6 @@ public class AddFaceImageTemplateRequest extends TeaModel {
     }
     public String getImageURL() {
         return this.imageURL;
-    }
-
-    public AddFaceImageTemplateRequest setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
     }
 
 }
