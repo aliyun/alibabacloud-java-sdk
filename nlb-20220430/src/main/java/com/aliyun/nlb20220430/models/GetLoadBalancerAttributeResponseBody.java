@@ -25,6 +25,9 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
     @NameInMap("DNSName")
     public String DNSName;
 
+    @NameInMap("DeletionProtectionConfig")
+    public GetLoadBalancerAttributeResponseBodyDeletionProtectionConfig deletionProtectionConfig;
+
     @NameInMap("Ipv6AddressType")
     public String ipv6AddressType;
 
@@ -45,6 +48,9 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
 
     @NameInMap("LoadBalancerType")
     public String loadBalancerType;
+
+    @NameInMap("ModificationProtectionConfig")
+    public GetLoadBalancerAttributeResponseBodyModificationProtectionConfig modificationProtectionConfig;
 
     @NameInMap("OperationLocks")
     public java.util.List<GetLoadBalancerAttributeResponseBodyOperationLocks> operationLocks;
@@ -125,6 +131,14 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
         return this.DNSName;
     }
 
+    public GetLoadBalancerAttributeResponseBody setDeletionProtectionConfig(GetLoadBalancerAttributeResponseBodyDeletionProtectionConfig deletionProtectionConfig) {
+        this.deletionProtectionConfig = deletionProtectionConfig;
+        return this;
+    }
+    public GetLoadBalancerAttributeResponseBodyDeletionProtectionConfig getDeletionProtectionConfig() {
+        return this.deletionProtectionConfig;
+    }
+
     public GetLoadBalancerAttributeResponseBody setIpv6AddressType(String ipv6AddressType) {
         this.ipv6AddressType = ipv6AddressType;
         return this;
@@ -181,6 +195,14 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
         return this.loadBalancerType;
     }
 
+    public GetLoadBalancerAttributeResponseBody setModificationProtectionConfig(GetLoadBalancerAttributeResponseBodyModificationProtectionConfig modificationProtectionConfig) {
+        this.modificationProtectionConfig = modificationProtectionConfig;
+        return this;
+    }
+    public GetLoadBalancerAttributeResponseBodyModificationProtectionConfig getModificationProtectionConfig() {
+        return this.modificationProtectionConfig;
+    }
+
     public GetLoadBalancerAttributeResponseBody setOperationLocks(java.util.List<GetLoadBalancerAttributeResponseBodyOperationLocks> operationLocks) {
         this.operationLocks = operationLocks;
         return this;
@@ -229,6 +251,47 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
         return this.zoneMappings;
     }
 
+    public static class GetLoadBalancerAttributeResponseBodyDeletionProtectionConfig extends TeaModel {
+        @NameInMap("Enabled")
+        public Boolean enabled;
+
+        @NameInMap("EnabledTime")
+        public String enabledTime;
+
+        @NameInMap("Reason")
+        public String reason;
+
+        public static GetLoadBalancerAttributeResponseBodyDeletionProtectionConfig build(java.util.Map<String, ?> map) throws Exception {
+            GetLoadBalancerAttributeResponseBodyDeletionProtectionConfig self = new GetLoadBalancerAttributeResponseBodyDeletionProtectionConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public GetLoadBalancerAttributeResponseBodyDeletionProtectionConfig setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public GetLoadBalancerAttributeResponseBodyDeletionProtectionConfig setEnabledTime(String enabledTime) {
+            this.enabledTime = enabledTime;
+            return this;
+        }
+        public String getEnabledTime() {
+            return this.enabledTime;
+        }
+
+        public GetLoadBalancerAttributeResponseBodyDeletionProtectionConfig setReason(String reason) {
+            this.reason = reason;
+            return this;
+        }
+        public String getReason() {
+            return this.reason;
+        }
+
+    }
+
     public static class GetLoadBalancerAttributeResponseBodyLoadBalancerBillingConfig extends TeaModel {
         @NameInMap("PayType")
         public String payType;
@@ -244,6 +307,47 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
         }
         public String getPayType() {
             return this.payType;
+        }
+
+    }
+
+    public static class GetLoadBalancerAttributeResponseBodyModificationProtectionConfig extends TeaModel {
+        @NameInMap("EnabledTime")
+        public String enabledTime;
+
+        @NameInMap("Reason")
+        public String reason;
+
+        @NameInMap("Status")
+        public String status;
+
+        public static GetLoadBalancerAttributeResponseBodyModificationProtectionConfig build(java.util.Map<String, ?> map) throws Exception {
+            GetLoadBalancerAttributeResponseBodyModificationProtectionConfig self = new GetLoadBalancerAttributeResponseBodyModificationProtectionConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public GetLoadBalancerAttributeResponseBodyModificationProtectionConfig setEnabledTime(String enabledTime) {
+            this.enabledTime = enabledTime;
+            return this;
+        }
+        public String getEnabledTime() {
+            return this.enabledTime;
+        }
+
+        public GetLoadBalancerAttributeResponseBodyModificationProtectionConfig setReason(String reason) {
+            this.reason = reason;
+            return this;
+        }
+        public String getReason() {
+            return this.reason;
+        }
+
+        public GetLoadBalancerAttributeResponseBodyModificationProtectionConfig setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }

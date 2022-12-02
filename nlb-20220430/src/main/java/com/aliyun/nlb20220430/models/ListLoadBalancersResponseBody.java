@@ -64,6 +64,47 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListLoadBalancersResponseBodyLoadBalancersDeletionProtectionConfig extends TeaModel {
+        @NameInMap("Enabled")
+        public Boolean enabled;
+
+        @NameInMap("EnabledTime")
+        public String enabledTime;
+
+        @NameInMap("Reason")
+        public String reason;
+
+        public static ListLoadBalancersResponseBodyLoadBalancersDeletionProtectionConfig build(java.util.Map<String, ?> map) throws Exception {
+            ListLoadBalancersResponseBodyLoadBalancersDeletionProtectionConfig self = new ListLoadBalancersResponseBodyLoadBalancersDeletionProtectionConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public ListLoadBalancersResponseBodyLoadBalancersDeletionProtectionConfig setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public ListLoadBalancersResponseBodyLoadBalancersDeletionProtectionConfig setEnabledTime(String enabledTime) {
+            this.enabledTime = enabledTime;
+            return this;
+        }
+        public String getEnabledTime() {
+            return this.enabledTime;
+        }
+
+        public ListLoadBalancersResponseBodyLoadBalancersDeletionProtectionConfig setReason(String reason) {
+            this.reason = reason;
+            return this;
+        }
+        public String getReason() {
+            return this.reason;
+        }
+
+    }
+
     public static class ListLoadBalancersResponseBodyLoadBalancersLoadBalancerBillingConfig extends TeaModel {
         @NameInMap("PayType")
         public String payType;
@@ -79,6 +120,47 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         }
         public String getPayType() {
             return this.payType;
+        }
+
+    }
+
+    public static class ListLoadBalancersResponseBodyLoadBalancersModificationProtectionConfig extends TeaModel {
+        @NameInMap("EnabledTime")
+        public String enabledTime;
+
+        @NameInMap("Reason")
+        public String reason;
+
+        @NameInMap("Status")
+        public String status;
+
+        public static ListLoadBalancersResponseBodyLoadBalancersModificationProtectionConfig build(java.util.Map<String, ?> map) throws Exception {
+            ListLoadBalancersResponseBodyLoadBalancersModificationProtectionConfig self = new ListLoadBalancersResponseBodyLoadBalancersModificationProtectionConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public ListLoadBalancersResponseBodyLoadBalancersModificationProtectionConfig setEnabledTime(String enabledTime) {
+            this.enabledTime = enabledTime;
+            return this;
+        }
+        public String getEnabledTime() {
+            return this.enabledTime;
+        }
+
+        public ListLoadBalancersResponseBodyLoadBalancersModificationProtectionConfig setReason(String reason) {
+            this.reason = reason;
+            return this;
+        }
+        public String getReason() {
+            return this.reason;
+        }
+
+        public ListLoadBalancersResponseBodyLoadBalancersModificationProtectionConfig setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }
@@ -266,6 +348,9 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         @NameInMap("DNSName")
         public String DNSName;
 
+        @NameInMap("DeletionProtectionConfig")
+        public ListLoadBalancersResponseBodyLoadBalancersDeletionProtectionConfig deletionProtectionConfig;
+
         @NameInMap("Ipv6AddressType")
         public String ipv6AddressType;
 
@@ -286,6 +371,9 @@ public class ListLoadBalancersResponseBody extends TeaModel {
 
         @NameInMap("LoadBalancerType")
         public String loadBalancerType;
+
+        @NameInMap("ModificationProtectionConfig")
+        public ListLoadBalancersResponseBodyLoadBalancersModificationProtectionConfig modificationProtectionConfig;
 
         @NameInMap("OperationLocks")
         public java.util.List<ListLoadBalancersResponseBodyLoadBalancersOperationLocks> operationLocks;
@@ -361,6 +449,14 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             return this.DNSName;
         }
 
+        public ListLoadBalancersResponseBodyLoadBalancers setDeletionProtectionConfig(ListLoadBalancersResponseBodyLoadBalancersDeletionProtectionConfig deletionProtectionConfig) {
+            this.deletionProtectionConfig = deletionProtectionConfig;
+            return this;
+        }
+        public ListLoadBalancersResponseBodyLoadBalancersDeletionProtectionConfig getDeletionProtectionConfig() {
+            return this.deletionProtectionConfig;
+        }
+
         public ListLoadBalancersResponseBodyLoadBalancers setIpv6AddressType(String ipv6AddressType) {
             this.ipv6AddressType = ipv6AddressType;
             return this;
@@ -415,6 +511,14 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         }
         public String getLoadBalancerType() {
             return this.loadBalancerType;
+        }
+
+        public ListLoadBalancersResponseBodyLoadBalancers setModificationProtectionConfig(ListLoadBalancersResponseBodyLoadBalancersModificationProtectionConfig modificationProtectionConfig) {
+            this.modificationProtectionConfig = modificationProtectionConfig;
+            return this;
+        }
+        public ListLoadBalancersResponseBodyLoadBalancersModificationProtectionConfig getModificationProtectionConfig() {
+            return this.modificationProtectionConfig;
         }
 
         public ListLoadBalancersResponseBodyLoadBalancers setOperationLocks(java.util.List<ListLoadBalancersResponseBodyLoadBalancersOperationLocks> operationLocks) {

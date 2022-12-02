@@ -249,12 +249,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ClientToken", request.clientToken);
         }
 
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deletionProtectionConfig)) {
+            bodyFlat.put("DeletionProtectionConfig", request.deletionProtectionConfig);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
             body.put("DryRun", request.dryRun);
         }
 
-        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.loadBalancerBillingConfig))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.loadBalancerBillingConfig)) {
             bodyFlat.put("LoadBalancerBillingConfig", request.loadBalancerBillingConfig);
         }
 
@@ -264,6 +268,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.loadBalancerType)) {
             body.put("LoadBalancerType", request.loadBalancerType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modificationProtectionConfig)) {
+            bodyFlat.put("ModificationProtectionConfig", request.modificationProtectionConfig);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -389,7 +397,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.healthCheckConfig))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.healthCheckConfig)) {
             bodyFlat.put("HealthCheckConfig", request.healthCheckConfig);
         }
 
@@ -1881,6 +1889,63 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateLoadBalancerAttributeWithOptions(request, runtime);
     }
 
+    public UpdateLoadBalancerProtectionResponse updateLoadBalancerProtectionWithOptions(UpdateLoadBalancerProtectionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deletionProtectionEnabled)) {
+            body.put("DeletionProtectionEnabled", request.deletionProtectionEnabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deletionProtectionReason)) {
+            body.put("DeletionProtectionReason", request.deletionProtectionReason);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            body.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.loadBalancerId)) {
+            body.put("LoadBalancerId", request.loadBalancerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modificationProtectionReason)) {
+            body.put("ModificationProtectionReason", request.modificationProtectionReason);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modificationProtectionStatus)) {
+            body.put("ModificationProtectionStatus", request.modificationProtectionStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            body.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateLoadBalancerProtection"),
+            new TeaPair("version", "2022-04-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateLoadBalancerProtectionResponse());
+    }
+
+    public UpdateLoadBalancerProtectionResponse updateLoadBalancerProtection(UpdateLoadBalancerProtectionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateLoadBalancerProtectionWithOptions(request, runtime);
+    }
+
     public UpdateLoadBalancerZonesResponse updateLoadBalancerZonesWithOptions(UpdateLoadBalancerZonesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -1999,7 +2064,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.healthCheckConfig))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.healthCheckConfig)) {
             bodyFlat.put("HealthCheckConfig", request.healthCheckConfig);
         }
 
