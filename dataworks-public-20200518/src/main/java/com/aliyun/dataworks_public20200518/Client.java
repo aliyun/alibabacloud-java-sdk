@@ -200,6 +200,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.approvePermissionApplyOrderWithOptions(request, runtime);
     }
 
+    public ChangeResourceManagerResourceGroupResponse changeResourceManagerResourceGroupWithOptions(ChangeResourceManagerResourceGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceId)) {
+            query.put("ResourceId", request.resourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
+            query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ChangeResourceManagerResourceGroup"),
+            new TeaPair("version", "2020-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ChangeResourceManagerResourceGroupResponse());
+    }
+
+    public ChangeResourceManagerResourceGroupResponse changeResourceManagerResourceGroup(ChangeResourceManagerResourceGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.changeResourceManagerResourceGroupWithOptions(request, runtime);
+    }
+
     public CheckFileDeploymentResponse checkFileDeploymentWithOptions(CheckFileDeploymentRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -4613,8 +4650,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         GetMetaTablePartitionShrinkRequest request = new GetMetaTablePartitionShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.sortCriterion))) {
-            request.sortCriterionShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.sortCriterion), "SortCriterion", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.sortCriterion)) {
+            request.sortCriterionShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sortCriterion, "SortCriterion", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5632,10 +5669,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.priority)) {
             body.put("Priority", request.priority);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.projectEnv)) {
-            body.put("ProjectEnv", request.projectEnv);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
@@ -7597,6 +7630,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.tagsShrink)) {
             query.put("Tags", request.tagsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.typeNames)) {
+            query.put("TypeNames", request.typeNames);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
