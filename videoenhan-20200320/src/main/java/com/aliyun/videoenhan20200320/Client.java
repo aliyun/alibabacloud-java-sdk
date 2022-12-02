@@ -251,10 +251,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public AddFaceVideoTemplateResponse addFaceVideoTemplateWithOptions(AddFaceVideoTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
-            body.put("UserId", request.userId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.videoURL)) {
             body.put("VideoURL", request.videoURL);
         }
@@ -729,10 +725,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
             body.put("TemplateId", request.templateId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
-            body.put("UserId", request.userId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -1575,10 +1567,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("TemplateId", request.templateId);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
-            body.put("UserId", request.userId);
-        }
-
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
@@ -1680,10 +1668,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
             query.put("TemplateId", request.templateId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
-            query.put("UserId", request.userId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

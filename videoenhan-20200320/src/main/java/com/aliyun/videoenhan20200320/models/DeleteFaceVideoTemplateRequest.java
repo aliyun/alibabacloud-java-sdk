@@ -7,9 +7,6 @@ public class DeleteFaceVideoTemplateRequest extends TeaModel {
     @NameInMap("TemplateId")
     public String templateId;
 
-    @NameInMap("UserId")
-    public String userId;
-
     public static DeleteFaceVideoTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteFaceVideoTemplateRequest self = new DeleteFaceVideoTemplateRequest();
         return TeaModel.build(map, self);
@@ -21,14 +18,6 @@ public class DeleteFaceVideoTemplateRequest extends TeaModel {
     }
     public String getTemplateId() {
         return this.templateId;
-    }
-
-    public DeleteFaceVideoTemplateRequest setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
     }
 
 }
