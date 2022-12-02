@@ -35,6 +35,21 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
         @NameInMap("Account")
         public Integer account;
 
+        @NameInMap("AgentlessAll")
+        public Integer agentlessAll;
+
+        @NameInMap("AgentlessBaseline")
+        public Integer agentlessBaseline;
+
+        @NameInMap("AgentlessMalicious")
+        public Integer agentlessMalicious;
+
+        @NameInMap("AgentlessVulCve")
+        public Integer agentlessVulCve;
+
+        @NameInMap("AgentlessVulSca")
+        public Integer agentlessVulSca;
+
         @NameInMap("AppNum")
         public Integer appNum;
 
@@ -82,6 +97,46 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
         }
         public Integer getAccount() {
             return this.account;
+        }
+
+        public DescribeInstanceStatisticsResponseBodyData setAgentlessAll(Integer agentlessAll) {
+            this.agentlessAll = agentlessAll;
+            return this;
+        }
+        public Integer getAgentlessAll() {
+            return this.agentlessAll;
+        }
+
+        public DescribeInstanceStatisticsResponseBodyData setAgentlessBaseline(Integer agentlessBaseline) {
+            this.agentlessBaseline = agentlessBaseline;
+            return this;
+        }
+        public Integer getAgentlessBaseline() {
+            return this.agentlessBaseline;
+        }
+
+        public DescribeInstanceStatisticsResponseBodyData setAgentlessMalicious(Integer agentlessMalicious) {
+            this.agentlessMalicious = agentlessMalicious;
+            return this;
+        }
+        public Integer getAgentlessMalicious() {
+            return this.agentlessMalicious;
+        }
+
+        public DescribeInstanceStatisticsResponseBodyData setAgentlessVulCve(Integer agentlessVulCve) {
+            this.agentlessVulCve = agentlessVulCve;
+            return this;
+        }
+        public Integer getAgentlessVulCve() {
+            return this.agentlessVulCve;
+        }
+
+        public DescribeInstanceStatisticsResponseBodyData setAgentlessVulSca(Integer agentlessVulSca) {
+            this.agentlessVulSca = agentlessVulSca;
+            return this;
+        }
+        public Integer getAgentlessVulSca() {
+            return this.agentlessVulSca;
         }
 
         public DescribeInstanceStatisticsResponseBodyData setAppNum(Integer appNum) {

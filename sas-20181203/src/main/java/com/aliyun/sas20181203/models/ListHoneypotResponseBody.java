@@ -96,6 +96,9 @@ public class ListHoneypotResponseBody extends TeaModel {
         @NameInMap("HoneypotImageDisplayName")
         public String honeypotImageDisplayName;
 
+        @NameInMap("HoneypotImageId")
+        public String honeypotImageId;
+
         @NameInMap("HoneypotImageName")
         public String honeypotImageName;
 
@@ -138,6 +141,14 @@ public class ListHoneypotResponseBody extends TeaModel {
         }
         public String getHoneypotImageDisplayName() {
             return this.honeypotImageDisplayName;
+        }
+
+        public ListHoneypotResponseBodyList setHoneypotImageId(String honeypotImageId) {
+            this.honeypotImageId = honeypotImageId;
+            return this;
+        }
+        public String getHoneypotImageId() {
+            return this.honeypotImageId;
         }
 
         public ListHoneypotResponseBodyList setHoneypotImageName(String honeypotImageName) {

@@ -73,6 +73,15 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
         @NameInMap("ImageUuid")
         public String imageUuid;
 
+        @NameInMap("InstanceName")
+        public String instanceName;
+
+        @NameInMap("InternetIp")
+        public String internetIp;
+
+        @NameInMap("IntranetIp")
+        public String intranetIp;
+
         @NameInMap("LatestScanTimestamp")
         public Long latestScanTimestamp;
 
@@ -111,6 +120,18 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
 
         @NameInMap("Tag")
         public String tag;
+
+        @NameInMap("TargetId")
+        public String targetId;
+
+        @NameInMap("TargetName")
+        public String targetName;
+
+        @NameInMap("TargetType")
+        public String targetType;
+
+        @NameInMap("Uuid")
+        public String uuid;
 
         public static DescribeAffectedMaliciousFileImagesResponseBodyAffectedMaliciousFileImagesResponse build(java.util.Map<String, ?> map) throws Exception {
             DescribeAffectedMaliciousFileImagesResponseBodyAffectedMaliciousFileImagesResponse self = new DescribeAffectedMaliciousFileImagesResponseBodyAffectedMaliciousFileImagesResponse();
@@ -195,6 +216,30 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
         }
         public String getImageUuid() {
             return this.imageUuid;
+        }
+
+        public DescribeAffectedMaliciousFileImagesResponseBodyAffectedMaliciousFileImagesResponse setInstanceName(String instanceName) {
+            this.instanceName = instanceName;
+            return this;
+        }
+        public String getInstanceName() {
+            return this.instanceName;
+        }
+
+        public DescribeAffectedMaliciousFileImagesResponseBodyAffectedMaliciousFileImagesResponse setInternetIp(String internetIp) {
+            this.internetIp = internetIp;
+            return this;
+        }
+        public String getInternetIp() {
+            return this.internetIp;
+        }
+
+        public DescribeAffectedMaliciousFileImagesResponseBodyAffectedMaliciousFileImagesResponse setIntranetIp(String intranetIp) {
+            this.intranetIp = intranetIp;
+            return this;
+        }
+        public String getIntranetIp() {
+            return this.intranetIp;
         }
 
         public DescribeAffectedMaliciousFileImagesResponseBodyAffectedMaliciousFileImagesResponse setLatestScanTimestamp(Long latestScanTimestamp) {
@@ -299,6 +344,38 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
         }
         public String getTag() {
             return this.tag;
+        }
+
+        public DescribeAffectedMaliciousFileImagesResponseBodyAffectedMaliciousFileImagesResponse setTargetId(String targetId) {
+            this.targetId = targetId;
+            return this;
+        }
+        public String getTargetId() {
+            return this.targetId;
+        }
+
+        public DescribeAffectedMaliciousFileImagesResponseBodyAffectedMaliciousFileImagesResponse setTargetName(String targetName) {
+            this.targetName = targetName;
+            return this;
+        }
+        public String getTargetName() {
+            return this.targetName;
+        }
+
+        public DescribeAffectedMaliciousFileImagesResponseBodyAffectedMaliciousFileImagesResponse setTargetType(String targetType) {
+            this.targetType = targetType;
+            return this;
+        }
+        public String getTargetType() {
+            return this.targetType;
+        }
+
+        public DescribeAffectedMaliciousFileImagesResponseBodyAffectedMaliciousFileImagesResponse setUuid(String uuid) {
+            this.uuid = uuid;
+            return this;
+        }
+        public String getUuid() {
+            return this.uuid;
         }
 
     }

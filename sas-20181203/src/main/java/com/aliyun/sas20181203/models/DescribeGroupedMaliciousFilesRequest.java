@@ -28,6 +28,9 @@ public class DescribeGroupedMaliciousFilesRequest extends TeaModel {
     @NameInMap("Levels")
     public String levels;
 
+    @NameInMap("MaliciousMd5")
+    public String maliciousMd5;
+
     @NameInMap("PageSize")
     public String pageSize;
 
@@ -116,6 +119,14 @@ public class DescribeGroupedMaliciousFilesRequest extends TeaModel {
     }
     public String getLevels() {
         return this.levels;
+    }
+
+    public DescribeGroupedMaliciousFilesRequest setMaliciousMd5(String maliciousMd5) {
+        this.maliciousMd5 = maliciousMd5;
+        return this;
+    }
+    public String getMaliciousMd5() {
+        return this.maliciousMd5;
     }
 
     public DescribeGroupedMaliciousFilesRequest setPageSize(String pageSize) {

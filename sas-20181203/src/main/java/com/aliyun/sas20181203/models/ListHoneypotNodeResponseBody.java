@@ -126,6 +126,9 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
         @NameInMap("TotalStatus")
         public Integer totalStatus;
 
+        @NameInMap("UpgradeAvailable")
+        public Boolean upgradeAvailable;
+
         public static ListHoneypotNodeResponseBodyHoneypotNodeList build(java.util.Map<String, ?> map) throws Exception {
             ListHoneypotNodeResponseBodyHoneypotNodeList self = new ListHoneypotNodeResponseBodyHoneypotNodeList();
             return TeaModel.build(map, self);
@@ -233,6 +236,14 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
         }
         public Integer getTotalStatus() {
             return this.totalStatus;
+        }
+
+        public ListHoneypotNodeResponseBodyHoneypotNodeList setUpgradeAvailable(Boolean upgradeAvailable) {
+            this.upgradeAvailable = upgradeAvailable;
+            return this;
+        }
+        public Boolean getUpgradeAvailable() {
+            return this.upgradeAvailable;
         }
 
     }
