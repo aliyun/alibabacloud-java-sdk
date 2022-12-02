@@ -19,6 +19,9 @@ public class MetricsTrigger extends TeaModel {
     @NameInMap("Statistics")
     public String statistics;
 
+    @NameInMap("Tags")
+    public java.util.List<Tag> tags;
+
     @NameInMap("Threshold")
     public Double threshold;
 
@@ -68,6 +71,14 @@ public class MetricsTrigger extends TeaModel {
     }
     public String getStatistics() {
         return this.statistics;
+    }
+
+    public MetricsTrigger setTags(java.util.List<Tag> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<Tag> getTags() {
+        return this.tags;
     }
 
     public MetricsTrigger setThreshold(Double threshold) {
