@@ -10,9 +10,6 @@ public class MergeVideoModelFaceRequest extends TeaModel {
     @NameInMap("TemplateId")
     public String templateId;
 
-    @NameInMap("UserId")
-    public String userId;
-
     public static MergeVideoModelFaceRequest build(java.util.Map<String, ?> map) throws Exception {
         MergeVideoModelFaceRequest self = new MergeVideoModelFaceRequest();
         return TeaModel.build(map, self);
@@ -32,14 +29,6 @@ public class MergeVideoModelFaceRequest extends TeaModel {
     }
     public String getTemplateId() {
         return this.templateId;
-    }
-
-    public MergeVideoModelFaceRequest setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
     }
 
 }
