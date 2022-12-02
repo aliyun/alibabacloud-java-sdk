@@ -64,6 +64,25 @@ public class GetLogicDatabaseResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class GetLogicDatabaseResponseBodyLogicDatabaseDatabaseIds extends TeaModel {
+        @NameInMap("DatabaseIds")
+        public java.util.List<Long> databaseIds;
+
+        public static GetLogicDatabaseResponseBodyLogicDatabaseDatabaseIds build(java.util.Map<String, ?> map) throws Exception {
+            GetLogicDatabaseResponseBodyLogicDatabaseDatabaseIds self = new GetLogicDatabaseResponseBodyLogicDatabaseDatabaseIds();
+            return TeaModel.build(map, self);
+        }
+
+        public GetLogicDatabaseResponseBodyLogicDatabaseDatabaseIds setDatabaseIds(java.util.List<Long> databaseIds) {
+            this.databaseIds = databaseIds;
+            return this;
+        }
+        public java.util.List<Long> getDatabaseIds() {
+            return this.databaseIds;
+        }
+
+    }
+
     public static class GetLogicDatabaseResponseBodyLogicDatabaseOwnerIdList extends TeaModel {
         @NameInMap("OwnerIds")
         public java.util.List<String> ownerIds;
@@ -109,6 +128,9 @@ public class GetLogicDatabaseResponseBody extends TeaModel {
         @NameInMap("DatabaseId")
         public String databaseId;
 
+        @NameInMap("DatabaseIds")
+        public GetLogicDatabaseResponseBodyLogicDatabaseDatabaseIds databaseIds;
+
         @NameInMap("DbType")
         public String dbType;
 
@@ -149,6 +171,14 @@ public class GetLogicDatabaseResponseBody extends TeaModel {
         }
         public String getDatabaseId() {
             return this.databaseId;
+        }
+
+        public GetLogicDatabaseResponseBodyLogicDatabase setDatabaseIds(GetLogicDatabaseResponseBodyLogicDatabaseDatabaseIds databaseIds) {
+            this.databaseIds = databaseIds;
+            return this;
+        }
+        public GetLogicDatabaseResponseBodyLogicDatabaseDatabaseIds getDatabaseIds() {
+            return this.databaseIds;
         }
 
         public GetLogicDatabaseResponseBodyLogicDatabase setDbType(String dbType) {

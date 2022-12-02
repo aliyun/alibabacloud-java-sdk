@@ -13,6 +13,9 @@ public class DatasetItemVO extends TeaModel {
     @NameInMap("DatasetType")
     public Integer datasetType;
 
+    @NameInMap("Digest")
+    public String digest;
+
     @NameInMap("FileSystem")
     public String fileSystem;
 
@@ -73,6 +76,14 @@ public class DatasetItemVO extends TeaModel {
     }
     public Integer getDatasetType() {
         return this.datasetType;
+    }
+
+    public DatasetItemVO setDigest(String digest) {
+        this.digest = digest;
+        return this;
+    }
+    public String getDigest() {
+        return this.digest;
     }
 
     public DatasetItemVO setFileSystem(String fileSystem) {

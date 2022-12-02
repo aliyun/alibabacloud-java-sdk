@@ -75,6 +75,25 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabaseDatabaseIds extends TeaModel {
+        @NameInMap("DatabaseIds")
+        public java.util.List<Long> databaseIds;
+
+        public static ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabaseDatabaseIds build(java.util.Map<String, ?> map) throws Exception {
+            ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabaseDatabaseIds self = new ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabaseDatabaseIds();
+            return TeaModel.build(map, self);
+        }
+
+        public ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabaseDatabaseIds setDatabaseIds(java.util.List<Long> databaseIds) {
+            this.databaseIds = databaseIds;
+            return this;
+        }
+        public java.util.List<Long> getDatabaseIds() {
+            return this.databaseIds;
+        }
+
+    }
+
     public static class ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabaseOwnerIdList extends TeaModel {
         @NameInMap("OwnerIds")
         public java.util.List<String> ownerIds;
@@ -120,6 +139,9 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
         @NameInMap("DatabaseId")
         public String databaseId;
 
+        @NameInMap("DatabaseIds")
+        public ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabaseDatabaseIds databaseIds;
+
         @NameInMap("DbType")
         public String dbType;
 
@@ -160,6 +182,14 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
         }
         public String getDatabaseId() {
             return this.databaseId;
+        }
+
+        public ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabase setDatabaseIds(ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabaseDatabaseIds databaseIds) {
+            this.databaseIds = databaseIds;
+            return this;
+        }
+        public ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabaseDatabaseIds getDatabaseIds() {
+            return this.databaseIds;
         }
 
         public ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabase setDbType(String dbType) {
