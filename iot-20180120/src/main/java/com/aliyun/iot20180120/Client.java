@@ -9051,6 +9051,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public PubResponse pubWithOptions(PubRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.contentType)) {
+            query.put("ContentType", request.contentType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.correlationData)) {
             query.put("CorrelationData", request.correlationData);
         }
@@ -9061,6 +9065,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
             query.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.payloadFormatIndicator)) {
+            query.put("PayloadFormatIndicator", request.payloadFormatIndicator);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.productKey)) {

@@ -4,6 +4,9 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class PubRequest extends TeaModel {
+    @NameInMap("ContentType")
+    public String contentType;
+
     @NameInMap("CorrelationData")
     public String correlationData;
 
@@ -15,6 +18,9 @@ public class PubRequest extends TeaModel {
 
     @NameInMap("MessageContent")
     public String messageContent;
+
+    @NameInMap("PayloadFormatIndicator")
+    public Integer payloadFormatIndicator;
 
     @NameInMap("ProductKey")
     public String productKey;
@@ -34,6 +40,14 @@ public class PubRequest extends TeaModel {
     public static PubRequest build(java.util.Map<String, ?> map) throws Exception {
         PubRequest self = new PubRequest();
         return TeaModel.build(map, self);
+    }
+
+    public PubRequest setContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
+    public String getContentType() {
+        return this.contentType;
     }
 
     public PubRequest setCorrelationData(String correlationData) {
@@ -66,6 +80,14 @@ public class PubRequest extends TeaModel {
     }
     public String getMessageContent() {
         return this.messageContent;
+    }
+
+    public PubRequest setPayloadFormatIndicator(Integer payloadFormatIndicator) {
+        this.payloadFormatIndicator = payloadFormatIndicator;
+        return this;
+    }
+    public Integer getPayloadFormatIndicator() {
+        return this.payloadFormatIndicator;
     }
 
     public PubRequest setProductKey(String productKey) {
