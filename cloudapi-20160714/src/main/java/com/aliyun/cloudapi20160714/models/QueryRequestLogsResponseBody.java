@@ -39,7 +39,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
         public String apiName;
 
         @NameInMap("ClientIp")
-        public Integer clientIp;
+        public String clientIp;
 
         @NameInMap("ClientNonce")
         public String clientNonce;
@@ -158,11 +158,11 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             return this.apiName;
         }
 
-        public QueryRequestLogsResponseBodyRequestLogsRequestLog setClientIp(Integer clientIp) {
+        public QueryRequestLogsResponseBodyRequestLogsRequestLog setClientIp(String clientIp) {
             this.clientIp = clientIp;
             return this;
         }
-        public Integer getClientIp() {
+        public String getClientIp() {
             return this.clientIp;
         }
 
