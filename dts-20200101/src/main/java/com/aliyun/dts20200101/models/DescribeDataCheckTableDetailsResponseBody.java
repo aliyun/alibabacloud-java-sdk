@@ -4,6 +4,9 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
+    @NameInMap("DiffRowCount")
+    public Long diffRowCount;
+
     @NameInMap("DynamicCode")
     public String dynamicCode;
 
@@ -16,14 +19,26 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
     @NameInMap("ErrMessage")
     public String errMessage;
 
+    @NameInMap("FailedCount")
+    public Long failedCount;
+
+    @NameInMap("FinishedCount")
+    public Long finishedCount;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
+
+    @NameInMap("InitCount")
+    public Long initCount;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("RunningCount")
+    public Long runningCount;
 
     @NameInMap("Success")
     public Boolean success;
@@ -34,9 +49,20 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     public Long totalCount;
 
+    @NameInMap("WarningCount")
+    public Long warningCount;
+
     public static DescribeDataCheckTableDetailsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDataCheckTableDetailsResponseBody self = new DescribeDataCheckTableDetailsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDataCheckTableDetailsResponseBody setDiffRowCount(Long diffRowCount) {
+        this.diffRowCount = diffRowCount;
+        return this;
+    }
+    public Long getDiffRowCount() {
+        return this.diffRowCount;
     }
 
     public DescribeDataCheckTableDetailsResponseBody setDynamicCode(String dynamicCode) {
@@ -71,12 +97,36 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
         return this.errMessage;
     }
 
+    public DescribeDataCheckTableDetailsResponseBody setFailedCount(Long failedCount) {
+        this.failedCount = failedCount;
+        return this;
+    }
+    public Long getFailedCount() {
+        return this.failedCount;
+    }
+
+    public DescribeDataCheckTableDetailsResponseBody setFinishedCount(Long finishedCount) {
+        this.finishedCount = finishedCount;
+        return this;
+    }
+    public Long getFinishedCount() {
+        return this.finishedCount;
+    }
+
     public DescribeDataCheckTableDetailsResponseBody setHttpStatusCode(Integer httpStatusCode) {
         this.httpStatusCode = httpStatusCode;
         return this;
     }
     public Integer getHttpStatusCode() {
         return this.httpStatusCode;
+    }
+
+    public DescribeDataCheckTableDetailsResponseBody setInitCount(Long initCount) {
+        this.initCount = initCount;
+        return this;
+    }
+    public Long getInitCount() {
+        return this.initCount;
     }
 
     public DescribeDataCheckTableDetailsResponseBody setPageNumber(Integer pageNumber) {
@@ -93,6 +143,14 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeDataCheckTableDetailsResponseBody setRunningCount(Long runningCount) {
+        this.runningCount = runningCount;
+        return this;
+    }
+    public Long getRunningCount() {
+        return this.runningCount;
     }
 
     public DescribeDataCheckTableDetailsResponseBody setSuccess(Boolean success) {
@@ -117,6 +175,14 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
     }
     public Long getTotalCount() {
         return this.totalCount;
+    }
+
+    public DescribeDataCheckTableDetailsResponseBody setWarningCount(Long warningCount) {
+        this.warningCount = warningCount;
+        return this;
+    }
+    public Long getWarningCount() {
+        return this.warningCount;
     }
 
     public static class DescribeDataCheckTableDetailsResponseBodyTableDetails extends TeaModel {

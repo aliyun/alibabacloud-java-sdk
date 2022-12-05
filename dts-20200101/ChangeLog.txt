@@ -1,3 +1,6 @@
+2022-12-05 Version: 1.9.13
+- CheckDefaultRole.
+
 2022-09-15 Version: 1.9.12
 - DTS SDK.
 

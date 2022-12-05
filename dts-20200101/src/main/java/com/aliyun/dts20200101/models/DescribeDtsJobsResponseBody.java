@@ -141,6 +141,69 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         return this.totalRecordCount;
     }
 
+    public static class DescribeDtsJobsResponseBodyDtsJobListDataCloudStatus extends TeaModel {
+        @NameInMap("ErrorMessage")
+        public String errorMessage;
+
+        @NameInMap("NeedUpgrade")
+        public Boolean needUpgrade;
+
+        @NameInMap("Percent")
+        public String percent;
+
+        @NameInMap("Progress")
+        public String progress;
+
+        @NameInMap("Status")
+        public String status;
+
+        public static DescribeDtsJobsResponseBodyDtsJobListDataCloudStatus build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDtsJobsResponseBodyDtsJobListDataCloudStatus self = new DescribeDtsJobsResponseBodyDtsJobListDataCloudStatus();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListDataCloudStatus setErrorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
+        public String getErrorMessage() {
+            return this.errorMessage;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListDataCloudStatus setNeedUpgrade(Boolean needUpgrade) {
+            this.needUpgrade = needUpgrade;
+            return this;
+        }
+        public Boolean getNeedUpgrade() {
+            return this.needUpgrade;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListDataCloudStatus setPercent(String percent) {
+            this.percent = percent;
+            return this;
+        }
+        public String getPercent() {
+            return this.percent;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListDataCloudStatus setProgress(String progress) {
+            this.progress = progress;
+            return this;
+        }
+        public String getProgress() {
+            return this.progress;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListDataCloudStatus setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+    }
+
     public static class DescribeDtsJobsResponseBodyDtsJobListDataEtlStatus extends TeaModel {
         @NameInMap("ErrorMessage")
         public String errorMessage;
@@ -652,6 +715,21 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         @NameInMap("MaxRetryTime")
         public Integer maxRetryTime;
 
+        @NameInMap("MigrationErrCode")
+        public String migrationErrCode;
+
+        @NameInMap("MigrationErrHelpDocId")
+        public String migrationErrHelpDocId;
+
+        @NameInMap("MigrationErrHelpDocKey")
+        public String migrationErrHelpDocKey;
+
+        @NameInMap("MigrationErrMsg")
+        public String migrationErrMsg;
+
+        @NameInMap("MigrationErrWorkaround")
+        public String migrationErrWorkaround;
+
         @NameInMap("Module")
         public String module;
 
@@ -694,6 +772,46 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         }
         public Integer getMaxRetryTime() {
             return this.maxRetryTime;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListRetryState setMigrationErrCode(String migrationErrCode) {
+            this.migrationErrCode = migrationErrCode;
+            return this;
+        }
+        public String getMigrationErrCode() {
+            return this.migrationErrCode;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListRetryState setMigrationErrHelpDocId(String migrationErrHelpDocId) {
+            this.migrationErrHelpDocId = migrationErrHelpDocId;
+            return this;
+        }
+        public String getMigrationErrHelpDocId() {
+            return this.migrationErrHelpDocId;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListRetryState setMigrationErrHelpDocKey(String migrationErrHelpDocKey) {
+            this.migrationErrHelpDocKey = migrationErrHelpDocKey;
+            return this;
+        }
+        public String getMigrationErrHelpDocKey() {
+            return this.migrationErrHelpDocKey;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListRetryState setMigrationErrMsg(String migrationErrMsg) {
+            this.migrationErrMsg = migrationErrMsg;
+            return this;
+        }
+        public String getMigrationErrMsg() {
+            return this.migrationErrMsg;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListRetryState setMigrationErrWorkaround(String migrationErrWorkaround) {
+            this.migrationErrWorkaround = migrationErrWorkaround;
+            return this;
+        }
+        public String getMigrationErrWorkaround() {
+            return this.migrationErrWorkaround;
         }
 
         public DescribeDtsJobsResponseBodyDtsJobListRetryState setModule(String module) {
@@ -1884,6 +2002,9 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
+        @NameInMap("DataCloudStatus")
+        public DescribeDtsJobsResponseBodyDtsJobListDataCloudStatus dataCloudStatus;
+
         @NameInMap("DataEtlStatus")
         public DescribeDtsJobsResponseBodyDtsJobListDataEtlStatus dataEtlStatus;
 
@@ -1940,6 +2061,21 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
         @NameInMap("MemUsage")
         public String memUsage;
+
+        @NameInMap("MigrationErrCode")
+        public String migrationErrCode;
+
+        @NameInMap("MigrationErrHelpDocId")
+        public String migrationErrHelpDocId;
+
+        @NameInMap("MigrationErrHelpDocKey")
+        public String migrationErrHelpDocKey;
+
+        @NameInMap("MigrationErrMsg")
+        public String migrationErrMsg;
+
+        @NameInMap("MigrationErrWorkaround")
+        public String migrationErrWorkaround;
 
         @NameInMap("MigrationMode")
         public DescribeDtsJobsResponseBodyDtsJobListMigrationMode migrationMode;
@@ -2042,6 +2178,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobList setDataCloudStatus(DescribeDtsJobsResponseBodyDtsJobListDataCloudStatus dataCloudStatus) {
+            this.dataCloudStatus = dataCloudStatus;
+            return this;
+        }
+        public DescribeDtsJobsResponseBodyDtsJobListDataCloudStatus getDataCloudStatus() {
+            return this.dataCloudStatus;
         }
 
         public DescribeDtsJobsResponseBodyDtsJobList setDataEtlStatus(DescribeDtsJobsResponseBodyDtsJobListDataEtlStatus dataEtlStatus) {
@@ -2194,6 +2338,46 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         }
         public String getMemUsage() {
             return this.memUsage;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobList setMigrationErrCode(String migrationErrCode) {
+            this.migrationErrCode = migrationErrCode;
+            return this;
+        }
+        public String getMigrationErrCode() {
+            return this.migrationErrCode;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobList setMigrationErrHelpDocId(String migrationErrHelpDocId) {
+            this.migrationErrHelpDocId = migrationErrHelpDocId;
+            return this;
+        }
+        public String getMigrationErrHelpDocId() {
+            return this.migrationErrHelpDocId;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobList setMigrationErrHelpDocKey(String migrationErrHelpDocKey) {
+            this.migrationErrHelpDocKey = migrationErrHelpDocKey;
+            return this;
+        }
+        public String getMigrationErrHelpDocKey() {
+            return this.migrationErrHelpDocKey;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobList setMigrationErrMsg(String migrationErrMsg) {
+            this.migrationErrMsg = migrationErrMsg;
+            return this;
+        }
+        public String getMigrationErrMsg() {
+            return this.migrationErrMsg;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobList setMigrationErrWorkaround(String migrationErrWorkaround) {
+            this.migrationErrWorkaround = migrationErrWorkaround;
+            return this;
+        }
+        public String getMigrationErrWorkaround() {
+            return this.migrationErrWorkaround;
         }
 
         public DescribeDtsJobsResponseBodyDtsJobList setMigrationMode(DescribeDtsJobsResponseBodyDtsJobListMigrationMode migrationMode) {
