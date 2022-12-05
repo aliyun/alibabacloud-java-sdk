@@ -3,15 +3,15 @@ package com.aliyun.polardb20170801.models;
 
 import com.aliyun.tea.*;
 
-public class SwitchOverGlobalDatabaseNetworkRequest extends TeaModel {
-    @NameInMap("DBClusterId")
-    public String DBClusterId;
+public class ModifyGlobalSecurityIPGroupRequest extends TeaModel {
+    @NameInMap("GIpList")
+    public String GIpList;
 
-    @NameInMap("Forced")
-    public Boolean forced;
+    @NameInMap("GlobalIgName")
+    public String globalIgName;
 
-    @NameInMap("GDNId")
-    public String GDNId;
+    @NameInMap("GlobalSecurityGroupId")
+    public String globalSecurityGroupId;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
@@ -34,36 +34,36 @@ public class SwitchOverGlobalDatabaseNetworkRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    public static SwitchOverGlobalDatabaseNetworkRequest build(java.util.Map<String, ?> map) throws Exception {
-        SwitchOverGlobalDatabaseNetworkRequest self = new SwitchOverGlobalDatabaseNetworkRequest();
+    public static ModifyGlobalSecurityIPGroupRequest build(java.util.Map<String, ?> map) throws Exception {
+        ModifyGlobalSecurityIPGroupRequest self = new ModifyGlobalSecurityIPGroupRequest();
         return TeaModel.build(map, self);
     }
 
-    public SwitchOverGlobalDatabaseNetworkRequest setDBClusterId(String DBClusterId) {
-        this.DBClusterId = DBClusterId;
+    public ModifyGlobalSecurityIPGroupRequest setGIpList(String GIpList) {
+        this.GIpList = GIpList;
         return this;
     }
-    public String getDBClusterId() {
-        return this.DBClusterId;
+    public String getGIpList() {
+        return this.GIpList;
     }
 
-    public SwitchOverGlobalDatabaseNetworkRequest setForced(Boolean forced) {
-        this.forced = forced;
+    public ModifyGlobalSecurityIPGroupRequest setGlobalIgName(String globalIgName) {
+        this.globalIgName = globalIgName;
         return this;
     }
-    public Boolean getForced() {
-        return this.forced;
+    public String getGlobalIgName() {
+        return this.globalIgName;
     }
 
-    public SwitchOverGlobalDatabaseNetworkRequest setGDNId(String GDNId) {
-        this.GDNId = GDNId;
+    public ModifyGlobalSecurityIPGroupRequest setGlobalSecurityGroupId(String globalSecurityGroupId) {
+        this.globalSecurityGroupId = globalSecurityGroupId;
         return this;
     }
-    public String getGDNId() {
-        return this.GDNId;
+    public String getGlobalSecurityGroupId() {
+        return this.globalSecurityGroupId;
     }
 
-    public SwitchOverGlobalDatabaseNetworkRequest setOwnerAccount(String ownerAccount) {
+    public ModifyGlobalSecurityIPGroupRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
     }
@@ -71,7 +71,7 @@ public class SwitchOverGlobalDatabaseNetworkRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public SwitchOverGlobalDatabaseNetworkRequest setOwnerId(Long ownerId) {
+    public ModifyGlobalSecurityIPGroupRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -79,7 +79,7 @@ public class SwitchOverGlobalDatabaseNetworkRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public SwitchOverGlobalDatabaseNetworkRequest setRegionId(String regionId) {
+    public ModifyGlobalSecurityIPGroupRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -87,7 +87,7 @@ public class SwitchOverGlobalDatabaseNetworkRequest extends TeaModel {
         return this.regionId;
     }
 
-    public SwitchOverGlobalDatabaseNetworkRequest setResourceGroupId(String resourceGroupId) {
+    public ModifyGlobalSecurityIPGroupRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
     }
@@ -95,7 +95,7 @@ public class SwitchOverGlobalDatabaseNetworkRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
-    public SwitchOverGlobalDatabaseNetworkRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public ModifyGlobalSecurityIPGroupRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -103,7 +103,7 @@ public class SwitchOverGlobalDatabaseNetworkRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public SwitchOverGlobalDatabaseNetworkRequest setResourceOwnerId(Long resourceOwnerId) {
+    public ModifyGlobalSecurityIPGroupRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
@@ -111,7 +111,7 @@ public class SwitchOverGlobalDatabaseNetworkRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public SwitchOverGlobalDatabaseNetworkRequest setSecurityToken(String securityToken) {
+    public ModifyGlobalSecurityIPGroupRequest setSecurityToken(String securityToken) {
         this.securityToken = securityToken;
         return this;
     }

@@ -40,6 +40,9 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
     @NameInMap("SourceRDSDBInstanceId")
     public String sourceRDSDBInstanceId;
 
+    @NameInMap("SrcDbType")
+    public String srcDbType;
+
     @NameInMap("Topologies")
     public String topologies;
 
@@ -142,6 +145,14 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
     }
     public String getSourceRDSDBInstanceId() {
         return this.sourceRDSDBInstanceId;
+    }
+
+    public DescribeDBClusterMigrationResponseBody setSrcDbType(String srcDbType) {
+        this.srcDbType = srcDbType;
+        return this;
+    }
+    public String getSrcDbType() {
+        return this.srcDbType;
     }
 
     public DescribeDBClusterMigrationResponseBody setTopologies(String topologies) {
