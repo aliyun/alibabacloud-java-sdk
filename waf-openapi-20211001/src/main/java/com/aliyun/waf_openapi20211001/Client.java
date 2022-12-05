@@ -228,12 +228,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateDomainShrinkRequest request = new CreateDomainShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.listen))) {
-            request.listenShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.listen), "Listen", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.listen)) {
+            request.listenShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.listen, "Listen", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.redirect))) {
-            request.redirectShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.redirect), "Redirect", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.redirect)) {
+            request.redirectShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.redirect, "Redirect", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -438,6 +438,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteDomainResponse deleteDomainWithOptions(DeleteDomainRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accessType)) {
+            query.put("AccessType", request.accessType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.domain)) {
             query.put("Domain", request.domain);
         }
@@ -1809,12 +1813,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         ModifyDomainShrinkRequest request = new ModifyDomainShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.listen))) {
-            request.listenShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.listen), "Listen", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.listen)) {
+            request.listenShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.listen, "Listen", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.redirect))) {
-            request.redirectShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.redirect), "Redirect", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.redirect)) {
+            request.redirectShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.redirect, "Redirect", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();

@@ -296,6 +296,15 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         @NameInMap("FocusHttpBackend")
         public Boolean focusHttpBackend;
 
+        @NameInMap("Keepalive")
+        public Boolean keepalive;
+
+        @NameInMap("KeepaliveRequests")
+        public Integer keepaliveRequests;
+
+        @NameInMap("KeepaliveTimeout")
+        public Integer keepaliveTimeout;
+
         @NameInMap("Loadbalance")
         public String loadbalance;
 
@@ -304,6 +313,9 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
 
         @NameInMap("RequestHeaders")
         public java.util.List<DescribeDomainDetailResponseBodyRedirectRequestHeaders> requestHeaders;
+
+        @NameInMap("Retry")
+        public Boolean retry;
 
         @NameInMap("SniEnabled")
         public Boolean sniEnabled;
@@ -343,6 +355,30 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             return this.focusHttpBackend;
         }
 
+        public DescribeDomainDetailResponseBodyRedirect setKeepalive(Boolean keepalive) {
+            this.keepalive = keepalive;
+            return this;
+        }
+        public Boolean getKeepalive() {
+            return this.keepalive;
+        }
+
+        public DescribeDomainDetailResponseBodyRedirect setKeepaliveRequests(Integer keepaliveRequests) {
+            this.keepaliveRequests = keepaliveRequests;
+            return this;
+        }
+        public Integer getKeepaliveRequests() {
+            return this.keepaliveRequests;
+        }
+
+        public DescribeDomainDetailResponseBodyRedirect setKeepaliveTimeout(Integer keepaliveTimeout) {
+            this.keepaliveTimeout = keepaliveTimeout;
+            return this;
+        }
+        public Integer getKeepaliveTimeout() {
+            return this.keepaliveTimeout;
+        }
+
         public DescribeDomainDetailResponseBodyRedirect setLoadbalance(String loadbalance) {
             this.loadbalance = loadbalance;
             return this;
@@ -365,6 +401,14 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         }
         public java.util.List<DescribeDomainDetailResponseBodyRedirectRequestHeaders> getRequestHeaders() {
             return this.requestHeaders;
+        }
+
+        public DescribeDomainDetailResponseBodyRedirect setRetry(Boolean retry) {
+            this.retry = retry;
+            return this;
+        }
+        public Boolean getRetry() {
+            return this.retry;
         }
 
         public DescribeDomainDetailResponseBodyRedirect setSniEnabled(Boolean sniEnabled) {

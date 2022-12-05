@@ -277,6 +277,15 @@ public class ModifyDomainRequest extends TeaModel {
         @NameInMap("FocusHttpBackend")
         public Boolean focusHttpBackend;
 
+        @NameInMap("Keepalive")
+        public Boolean keepalive;
+
+        @NameInMap("KeepaliveRequests")
+        public Integer keepaliveRequests;
+
+        @NameInMap("KeepaliveTimeout")
+        public Integer keepaliveTimeout;
+
         @NameInMap("Loadbalance")
         public String loadbalance;
 
@@ -285,6 +294,9 @@ public class ModifyDomainRequest extends TeaModel {
 
         @NameInMap("RequestHeaders")
         public java.util.List<ModifyDomainRequestRedirectRequestHeaders> requestHeaders;
+
+        @NameInMap("Retry")
+        public Boolean retry;
 
         @NameInMap("SniEnabled")
         public Boolean sniEnabled;
@@ -324,6 +336,30 @@ public class ModifyDomainRequest extends TeaModel {
             return this.focusHttpBackend;
         }
 
+        public ModifyDomainRequestRedirect setKeepalive(Boolean keepalive) {
+            this.keepalive = keepalive;
+            return this;
+        }
+        public Boolean getKeepalive() {
+            return this.keepalive;
+        }
+
+        public ModifyDomainRequestRedirect setKeepaliveRequests(Integer keepaliveRequests) {
+            this.keepaliveRequests = keepaliveRequests;
+            return this;
+        }
+        public Integer getKeepaliveRequests() {
+            return this.keepaliveRequests;
+        }
+
+        public ModifyDomainRequestRedirect setKeepaliveTimeout(Integer keepaliveTimeout) {
+            this.keepaliveTimeout = keepaliveTimeout;
+            return this;
+        }
+        public Integer getKeepaliveTimeout() {
+            return this.keepaliveTimeout;
+        }
+
         public ModifyDomainRequestRedirect setLoadbalance(String loadbalance) {
             this.loadbalance = loadbalance;
             return this;
@@ -346,6 +382,14 @@ public class ModifyDomainRequest extends TeaModel {
         }
         public java.util.List<ModifyDomainRequestRedirectRequestHeaders> getRequestHeaders() {
             return this.requestHeaders;
+        }
+
+        public ModifyDomainRequestRedirect setRetry(Boolean retry) {
+            this.retry = retry;
+            return this;
+        }
+        public Boolean getRetry() {
+            return this.retry;
         }
 
         public ModifyDomainRequestRedirect setSniEnabled(Boolean sniEnabled) {

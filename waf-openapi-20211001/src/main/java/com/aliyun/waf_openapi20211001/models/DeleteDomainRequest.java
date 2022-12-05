@@ -4,6 +4,9 @@ package com.aliyun.waf_openapi20211001.models;
 import com.aliyun.tea.*;
 
 public class DeleteDomainRequest extends TeaModel {
+    @NameInMap("AccessType")
+    public String accessType;
+
     @NameInMap("Domain")
     public String domain;
 
@@ -16,6 +19,14 @@ public class DeleteDomainRequest extends TeaModel {
     public static DeleteDomainRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteDomainRequest self = new DeleteDomainRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteDomainRequest setAccessType(String accessType) {
+        this.accessType = accessType;
+        return this;
+    }
+    public String getAccessType() {
+        return this.accessType;
     }
 
     public DeleteDomainRequest setDomain(String domain) {
