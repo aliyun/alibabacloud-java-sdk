@@ -19,9 +19,6 @@ public class ListMessageGroupUserRequest extends TeaModel {
     @NameInMap("SortType")
     public Integer sortType;
 
-    @NameInMap("Type")
-    public Integer type;
-
     public static ListMessageGroupUserRequest build(java.util.Map<String, ?> map) throws Exception {
         ListMessageGroupUserRequest self = new ListMessageGroupUserRequest();
         return TeaModel.build(map, self);
@@ -65,14 +62,6 @@ public class ListMessageGroupUserRequest extends TeaModel {
     }
     public Integer getSortType() {
         return this.sortType;
-    }
-
-    public ListMessageGroupUserRequest setType(Integer type) {
-        this.type = type;
-        return this;
-    }
-    public Integer getType() {
-        return this.type;
     }
 
 }

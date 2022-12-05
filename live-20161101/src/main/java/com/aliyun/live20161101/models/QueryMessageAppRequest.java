@@ -3,9 +3,12 @@ package com.aliyun.live20161101.models;
 
 import com.aliyun.tea.*;
 
-public class ListMessageGroupRequest extends TeaModel {
+public class QueryMessageAppRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
+
+    @NameInMap("AppName")
+    public String appName;
 
     @NameInMap("PageNum")
     public Integer pageNum;
@@ -16,15 +19,12 @@ public class ListMessageGroupRequest extends TeaModel {
     @NameInMap("SortType")
     public Integer sortType;
 
-    @NameInMap("UserId")
-    public String userId;
-
-    public static ListMessageGroupRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListMessageGroupRequest self = new ListMessageGroupRequest();
+    public static QueryMessageAppRequest build(java.util.Map<String, ?> map) throws Exception {
+        QueryMessageAppRequest self = new QueryMessageAppRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListMessageGroupRequest setAppId(String appId) {
+    public QueryMessageAppRequest setAppId(String appId) {
         this.appId = appId;
         return this;
     }
@@ -32,7 +32,15 @@ public class ListMessageGroupRequest extends TeaModel {
         return this.appId;
     }
 
-    public ListMessageGroupRequest setPageNum(Integer pageNum) {
+    public QueryMessageAppRequest setAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
+    public String getAppName() {
+        return this.appName;
+    }
+
+    public QueryMessageAppRequest setPageNum(Integer pageNum) {
         this.pageNum = pageNum;
         return this;
     }
@@ -40,7 +48,7 @@ public class ListMessageGroupRequest extends TeaModel {
         return this.pageNum;
     }
 
-    public ListMessageGroupRequest setPageSize(Integer pageSize) {
+    public QueryMessageAppRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
@@ -48,20 +56,12 @@ public class ListMessageGroupRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListMessageGroupRequest setSortType(Integer sortType) {
+    public QueryMessageAppRequest setSortType(Integer sortType) {
         this.sortType = sortType;
         return this;
     }
     public Integer getSortType() {
         return this.sortType;
-    }
-
-    public ListMessageGroupRequest setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
     }
 
 }

@@ -4,6 +4,9 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class ListMessageRequest extends TeaModel {
+    @NameInMap("AppId")
+    public String appId;
+
     @NameInMap("GroupId")
     public String groupId;
 
@@ -22,6 +25,14 @@ public class ListMessageRequest extends TeaModel {
     public static ListMessageRequest build(java.util.Map<String, ?> map) throws Exception {
         ListMessageRequest self = new ListMessageRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListMessageRequest setAppId(String appId) {
+        this.appId = appId;
+        return this;
+    }
+    public String getAppId() {
+        return this.appId;
     }
 
     public ListMessageRequest setGroupId(String groupId) {
