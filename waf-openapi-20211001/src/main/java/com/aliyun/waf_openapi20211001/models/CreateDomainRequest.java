@@ -271,11 +271,23 @@ public class CreateDomainRequest extends TeaModel {
         @NameInMap("Backends")
         public java.util.List<String> backends;
 
+        @NameInMap("CnameEnabled")
+        public Boolean cnameEnabled;
+
         @NameInMap("ConnectTimeout")
         public Integer connectTimeout;
 
         @NameInMap("FocusHttpBackend")
         public Boolean focusHttpBackend;
+
+        @NameInMap("Keepalive")
+        public Boolean keepalive;
+
+        @NameInMap("KeepaliveRequests")
+        public Integer keepaliveRequests;
+
+        @NameInMap("KeepaliveTimeout")
+        public Integer keepaliveTimeout;
 
         @NameInMap("Loadbalance")
         public String loadbalance;
@@ -285,6 +297,12 @@ public class CreateDomainRequest extends TeaModel {
 
         @NameInMap("RequestHeaders")
         public java.util.List<CreateDomainRequestRedirectRequestHeaders> requestHeaders;
+
+        @NameInMap("Retry")
+        public Boolean retry;
+
+        @NameInMap("RoutingRules")
+        public String routingRules;
 
         @NameInMap("SniEnabled")
         public Boolean sniEnabled;
@@ -308,6 +326,14 @@ public class CreateDomainRequest extends TeaModel {
             return this.backends;
         }
 
+        public CreateDomainRequestRedirect setCnameEnabled(Boolean cnameEnabled) {
+            this.cnameEnabled = cnameEnabled;
+            return this;
+        }
+        public Boolean getCnameEnabled() {
+            return this.cnameEnabled;
+        }
+
         public CreateDomainRequestRedirect setConnectTimeout(Integer connectTimeout) {
             this.connectTimeout = connectTimeout;
             return this;
@@ -322,6 +348,30 @@ public class CreateDomainRequest extends TeaModel {
         }
         public Boolean getFocusHttpBackend() {
             return this.focusHttpBackend;
+        }
+
+        public CreateDomainRequestRedirect setKeepalive(Boolean keepalive) {
+            this.keepalive = keepalive;
+            return this;
+        }
+        public Boolean getKeepalive() {
+            return this.keepalive;
+        }
+
+        public CreateDomainRequestRedirect setKeepaliveRequests(Integer keepaliveRequests) {
+            this.keepaliveRequests = keepaliveRequests;
+            return this;
+        }
+        public Integer getKeepaliveRequests() {
+            return this.keepaliveRequests;
+        }
+
+        public CreateDomainRequestRedirect setKeepaliveTimeout(Integer keepaliveTimeout) {
+            this.keepaliveTimeout = keepaliveTimeout;
+            return this;
+        }
+        public Integer getKeepaliveTimeout() {
+            return this.keepaliveTimeout;
         }
 
         public CreateDomainRequestRedirect setLoadbalance(String loadbalance) {
@@ -346,6 +396,22 @@ public class CreateDomainRequest extends TeaModel {
         }
         public java.util.List<CreateDomainRequestRedirectRequestHeaders> getRequestHeaders() {
             return this.requestHeaders;
+        }
+
+        public CreateDomainRequestRedirect setRetry(Boolean retry) {
+            this.retry = retry;
+            return this;
+        }
+        public Boolean getRetry() {
+            return this.retry;
+        }
+
+        public CreateDomainRequestRedirect setRoutingRules(String routingRules) {
+            this.routingRules = routingRules;
+            return this;
+        }
+        public String getRoutingRules() {
+            return this.routingRules;
         }
 
         public CreateDomainRequestRedirect setSniEnabled(Boolean sniEnabled) {
