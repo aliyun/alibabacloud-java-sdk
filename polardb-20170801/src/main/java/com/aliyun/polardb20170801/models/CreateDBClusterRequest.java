@@ -4,6 +4,9 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class CreateDBClusterRequest extends TeaModel {
+    @NameInMap("AllowShutDown")
+    public String allowShutDown;
+
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
@@ -76,11 +79,29 @@ public class CreateDBClusterRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("ScaleMax")
+    public String scaleMax;
+
+    @NameInMap("ScaleMin")
+    public String scaleMin;
+
+    @NameInMap("ScaleRoNumMax")
+    public String scaleRoNumMax;
+
+    @NameInMap("ScaleRoNumMin")
+    public String scaleRoNumMin;
+
     @NameInMap("SecurityIPList")
     public String securityIPList;
 
+    @NameInMap("ServerlessType")
+    public String serverlessType;
+
     @NameInMap("SourceResourceId")
     public String sourceResourceId;
+
+    @NameInMap("StorageType")
+    public String storageType;
 
     @NameInMap("TDEStatus")
     public Boolean TDEStatus;
@@ -103,6 +124,14 @@ public class CreateDBClusterRequest extends TeaModel {
     public static CreateDBClusterRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDBClusterRequest self = new CreateDBClusterRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateDBClusterRequest setAllowShutDown(String allowShutDown) {
+        this.allowShutDown = allowShutDown;
+        return this;
+    }
+    public String getAllowShutDown() {
+        return this.allowShutDown;
     }
 
     public CreateDBClusterRequest setAutoRenew(Boolean autoRenew) {
@@ -297,6 +326,38 @@ public class CreateDBClusterRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
+    public CreateDBClusterRequest setScaleMax(String scaleMax) {
+        this.scaleMax = scaleMax;
+        return this;
+    }
+    public String getScaleMax() {
+        return this.scaleMax;
+    }
+
+    public CreateDBClusterRequest setScaleMin(String scaleMin) {
+        this.scaleMin = scaleMin;
+        return this;
+    }
+    public String getScaleMin() {
+        return this.scaleMin;
+    }
+
+    public CreateDBClusterRequest setScaleRoNumMax(String scaleRoNumMax) {
+        this.scaleRoNumMax = scaleRoNumMax;
+        return this;
+    }
+    public String getScaleRoNumMax() {
+        return this.scaleRoNumMax;
+    }
+
+    public CreateDBClusterRequest setScaleRoNumMin(String scaleRoNumMin) {
+        this.scaleRoNumMin = scaleRoNumMin;
+        return this;
+    }
+    public String getScaleRoNumMin() {
+        return this.scaleRoNumMin;
+    }
+
     public CreateDBClusterRequest setSecurityIPList(String securityIPList) {
         this.securityIPList = securityIPList;
         return this;
@@ -305,12 +366,28 @@ public class CreateDBClusterRequest extends TeaModel {
         return this.securityIPList;
     }
 
+    public CreateDBClusterRequest setServerlessType(String serverlessType) {
+        this.serverlessType = serverlessType;
+        return this;
+    }
+    public String getServerlessType() {
+        return this.serverlessType;
+    }
+
     public CreateDBClusterRequest setSourceResourceId(String sourceResourceId) {
         this.sourceResourceId = sourceResourceId;
         return this;
     }
     public String getSourceResourceId() {
         return this.sourceResourceId;
+    }
+
+    public CreateDBClusterRequest setStorageType(String storageType) {
+        this.storageType = storageType;
+        return this;
+    }
+    public String getStorageType() {
+        return this.storageType;
     }
 
     public CreateDBClusterRequest setTDEStatus(Boolean TDEStatus) {

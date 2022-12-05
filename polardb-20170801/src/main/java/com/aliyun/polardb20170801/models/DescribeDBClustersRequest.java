@@ -4,6 +4,9 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBClustersRequest extends TeaModel {
+    @NameInMap("ConnectionString")
+    public String connectionString;
+
     @NameInMap("DBClusterDescription")
     public String DBClusterDescription;
 
@@ -18,6 +21,9 @@ public class DescribeDBClustersRequest extends TeaModel {
 
     @NameInMap("DBType")
     public String DBType;
+
+    @NameInMap("DBVersion")
+    public String DBVersion;
 
     @NameInMap("Expired")
     public Boolean expired;
@@ -63,6 +69,14 @@ public class DescribeDBClustersRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeDBClustersRequest setConnectionString(String connectionString) {
+        this.connectionString = connectionString;
+        return this;
+    }
+    public String getConnectionString() {
+        return this.connectionString;
+    }
+
     public DescribeDBClustersRequest setDBClusterDescription(String DBClusterDescription) {
         this.DBClusterDescription = DBClusterDescription;
         return this;
@@ -101,6 +115,14 @@ public class DescribeDBClustersRequest extends TeaModel {
     }
     public String getDBType() {
         return this.DBType;
+    }
+
+    public DescribeDBClustersRequest setDBVersion(String DBVersion) {
+        this.DBVersion = DBVersion;
+        return this;
+    }
+    public String getDBVersion() {
+        return this.DBVersion;
     }
 
     public DescribeDBClustersRequest setExpired(Boolean expired) {

@@ -522,6 +522,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("SccMode")
         public String sccMode;
 
+        @NameInMap("ServerWeight")
+        public String serverWeight;
+
         @NameInMap("ZoneId")
         public String zoneId;
 
@@ -632,6 +635,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
         public String getSccMode() {
             return this.sccMode;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyDBNodes setServerWeight(String serverWeight) {
+            this.serverWeight = serverWeight;
+            return this;
+        }
+        public String getServerWeight() {
+            return this.serverWeight;
         }
 
         public DescribeDBClusterAttributeResponseBodyDBNodes setZoneId(String zoneId) {
