@@ -16,14 +16,14 @@ public class DescribeDomainUsageDataResponseBody extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
-    @NameInMap("Field")
-    public String field;
-
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("StartTime")
     public String startTime;
+
+    @NameInMap("Type")
+    public String type;
 
     @NameInMap("UsageDataPerInterval")
     public DescribeDomainUsageDataResponseBodyUsageDataPerInterval usageDataPerInterval;
@@ -65,14 +65,6 @@ public class DescribeDomainUsageDataResponseBody extends TeaModel {
         return this.endTime;
     }
 
-    public DescribeDomainUsageDataResponseBody setField(String field) {
-        this.field = field;
-        return this;
-    }
-    public String getField() {
-        return this.field;
-    }
-
     public DescribeDomainUsageDataResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -87,6 +79,14 @@ public class DescribeDomainUsageDataResponseBody extends TeaModel {
     }
     public String getStartTime() {
         return this.startTime;
+    }
+
+    public DescribeDomainUsageDataResponseBody setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
     public DescribeDomainUsageDataResponseBody setUsageDataPerInterval(DescribeDomainUsageDataResponseBodyUsageDataPerInterval usageDataPerInterval) {

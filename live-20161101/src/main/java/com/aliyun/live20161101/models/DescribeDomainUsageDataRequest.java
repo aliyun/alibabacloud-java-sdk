@@ -7,6 +7,9 @@ public class DescribeDomainUsageDataRequest extends TeaModel {
     @NameInMap("Area")
     public String area;
 
+    @NameInMap("DataProtocol")
+    public String dataProtocol;
+
     @NameInMap("DomainName")
     public String domainName;
 
@@ -39,6 +42,14 @@ public class DescribeDomainUsageDataRequest extends TeaModel {
     }
     public String getArea() {
         return this.area;
+    }
+
+    public DescribeDomainUsageDataRequest setDataProtocol(String dataProtocol) {
+        this.dataProtocol = dataProtocol;
+        return this;
+    }
+    public String getDataProtocol() {
+        return this.dataProtocol;
     }
 
     public DescribeDomainUsageDataRequest setDomainName(String domainName) {

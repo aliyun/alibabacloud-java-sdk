@@ -32,6 +32,9 @@ public class ListMessageGroupResponseBody extends TeaModel {
     }
 
     public static class ListMessageGroupResponseBodyResultGroupList extends TeaModel {
+        @NameInMap("AppId")
+        public String appId;
+
         @NameInMap("CreateTime")
         public Long createTime;
 
@@ -50,6 +53,14 @@ public class ListMessageGroupResponseBody extends TeaModel {
         public static ListMessageGroupResponseBodyResultGroupList build(java.util.Map<String, ?> map) throws Exception {
             ListMessageGroupResponseBodyResultGroupList self = new ListMessageGroupResponseBodyResultGroupList();
             return TeaModel.build(map, self);
+        }
+
+        public ListMessageGroupResponseBodyResultGroupList setAppId(String appId) {
+            this.appId = appId;
+            return this;
+        }
+        public String getAppId() {
+            return this.appId;
         }
 
         public ListMessageGroupResponseBodyResultGroupList setCreateTime(Long createTime) {
