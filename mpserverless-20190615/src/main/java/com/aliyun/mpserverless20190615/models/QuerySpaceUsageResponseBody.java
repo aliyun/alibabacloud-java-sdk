@@ -7,9 +7,6 @@ public class QuerySpaceUsageResponseBody extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
-    @NameInMap("GmtCreate")
-    public String gmtCreate;
-
     @NameInMap("RequestId")
     public String requestId;
 
@@ -33,14 +30,6 @@ public class QuerySpaceUsageResponseBody extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
-    }
-
-    public QuerySpaceUsageResponseBody setGmtCreate(String gmtCreate) {
-        this.gmtCreate = gmtCreate;
-        return this;
-    }
-    public String getGmtCreate() {
-        return this.gmtCreate;
     }
 
     public QuerySpaceUsageResponseBody setRequestId(String requestId) {
