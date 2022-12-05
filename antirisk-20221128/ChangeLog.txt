@@ -1,3 +1,6 @@
+2022-12-05 Version: 1.0.5
+- Supported atoken to zid_tags.
+
 2022-12-05 Version: 1.0.4
 - Supported atoken to zid_tags.
 
