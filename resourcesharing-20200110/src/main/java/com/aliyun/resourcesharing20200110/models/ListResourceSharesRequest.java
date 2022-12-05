@@ -10,6 +10,9 @@ public class ListResourceSharesRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    @NameInMap("PermissionName")
+    public String permissionName;
+
     @NameInMap("ResourceOwner")
     public String resourceOwner;
 
@@ -41,6 +44,14 @@ public class ListResourceSharesRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public ListResourceSharesRequest setPermissionName(String permissionName) {
+        this.permissionName = permissionName;
+        return this;
+    }
+    public String getPermissionName() {
+        return this.permissionName;
     }
 
     public ListResourceSharesRequest setResourceOwner(String resourceOwner) {

@@ -4,6 +4,9 @@ package com.aliyun.resourcesharing20200110.models;
 import com.aliyun.tea.*;
 
 public class AssociateResourceShareRequest extends TeaModel {
+    @NameInMap("PermissionNames")
+    public java.util.List<String> permissionNames;
+
     @NameInMap("ResourceShareId")
     public String resourceShareId;
 
@@ -16,6 +19,14 @@ public class AssociateResourceShareRequest extends TeaModel {
     public static AssociateResourceShareRequest build(java.util.Map<String, ?> map) throws Exception {
         AssociateResourceShareRequest self = new AssociateResourceShareRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AssociateResourceShareRequest setPermissionNames(java.util.List<String> permissionNames) {
+        this.permissionNames = permissionNames;
+        return this;
+    }
+    public java.util.List<String> getPermissionNames() {
+        return this.permissionNames;
     }
 
     public AssociateResourceShareRequest setResourceShareId(String resourceShareId) {
