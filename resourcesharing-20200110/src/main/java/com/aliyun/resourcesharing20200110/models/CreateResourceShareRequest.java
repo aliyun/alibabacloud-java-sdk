@@ -7,6 +7,9 @@ public class CreateResourceShareRequest extends TeaModel {
     @NameInMap("AllowExternalTargets")
     public Boolean allowExternalTargets;
 
+    @NameInMap("PermissionNames")
+    public java.util.List<String> permissionNames;
+
     @NameInMap("ResourceShareName")
     public String resourceShareName;
 
@@ -27,6 +30,14 @@ public class CreateResourceShareRequest extends TeaModel {
     }
     public Boolean getAllowExternalTargets() {
         return this.allowExternalTargets;
+    }
+
+    public CreateResourceShareRequest setPermissionNames(java.util.List<String> permissionNames) {
+        this.permissionNames = permissionNames;
+        return this;
+    }
+    public java.util.List<String> getPermissionNames() {
+        return this.permissionNames;
     }
 
     public CreateResourceShareRequest setResourceShareName(String resourceShareName) {
