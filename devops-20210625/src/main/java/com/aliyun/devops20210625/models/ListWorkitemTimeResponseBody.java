@@ -77,7 +77,7 @@ public class ListWorkitemTimeResponseBody extends TeaModel {
 
     public static class ListWorkitemTimeResponseBodyWorkitemTime extends TeaModel {
         @NameInMap("actualTime")
-        public Long actualTime;
+        public Float actualTime;
 
         @NameInMap("description")
         public String description;
@@ -111,11 +111,11 @@ public class ListWorkitemTimeResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ListWorkitemTimeResponseBodyWorkitemTime setActualTime(Long actualTime) {
+        public ListWorkitemTimeResponseBodyWorkitemTime setActualTime(Float actualTime) {
             this.actualTime = actualTime;
             return this;
         }
-        public Long getActualTime() {
+        public Float getActualTime() {
             return this.actualTime;
         }
 
