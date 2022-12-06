@@ -16,6 +16,9 @@ public class QueryConfigRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("NeedRunningConf")
+    public Boolean needRunningConf;
+
     @NameInMap("RequestPars")
     public String requestPars;
 
@@ -54,6 +57,14 @@ public class QueryConfigRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public QueryConfigRequest setNeedRunningConf(Boolean needRunningConf) {
+        this.needRunningConf = needRunningConf;
+        return this;
+    }
+    public Boolean getNeedRunningConf() {
+        return this.needRunningConf;
     }
 
     public QueryConfigRequest setRequestPars(String requestPars) {

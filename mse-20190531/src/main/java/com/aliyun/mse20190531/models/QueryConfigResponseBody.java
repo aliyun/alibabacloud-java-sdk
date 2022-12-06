@@ -75,6 +75,25 @@ public class QueryConfigResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class QueryConfigResponseBodyDataNacosRunningEnv extends TeaModel {
+        @NameInMap("emptyProtect")
+        public Boolean emptyProtect;
+
+        public static QueryConfigResponseBodyDataNacosRunningEnv build(java.util.Map<String, ?> map) throws Exception {
+            QueryConfigResponseBodyDataNacosRunningEnv self = new QueryConfigResponseBodyDataNacosRunningEnv();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryConfigResponseBodyDataNacosRunningEnv setEmptyProtect(Boolean emptyProtect) {
+            this.emptyProtect = emptyProtect;
+            return this;
+        }
+        public Boolean getEmptyProtect() {
+            return this.emptyProtect;
+        }
+
+    }
+
     public static class QueryConfigResponseBodyData extends TeaModel {
         @NameInMap("AutopurgePurgeInterval")
         public String autopurgePurgeInterval;
@@ -90,6 +109,9 @@ public class QueryConfigResponseBody extends TeaModel {
 
         @NameInMap("ConfigAuthSupported")
         public Boolean configAuthSupported;
+
+        @NameInMap("ConfigContentLimit")
+        public Long configContentLimit;
 
         @NameInMap("ConfigSecretEnabled")
         public Boolean configSecretEnabled;
@@ -120,6 +142,9 @@ public class QueryConfigResponseBody extends TeaModel {
 
         @NameInMap("MinSessionTimeout")
         public String minSessionTimeout;
+
+        @NameInMap("NacosRunningEnv")
+        public QueryConfigResponseBodyDataNacosRunningEnv nacosRunningEnv;
 
         @NameInMap("NamingAuthEnabled")
         public Boolean namingAuthEnabled;
@@ -194,6 +219,14 @@ public class QueryConfigResponseBody extends TeaModel {
         }
         public Boolean getConfigAuthSupported() {
             return this.configAuthSupported;
+        }
+
+        public QueryConfigResponseBodyData setConfigContentLimit(Long configContentLimit) {
+            this.configContentLimit = configContentLimit;
+            return this;
+        }
+        public Long getConfigContentLimit() {
+            return this.configContentLimit;
         }
 
         public QueryConfigResponseBodyData setConfigSecretEnabled(Boolean configSecretEnabled) {
@@ -274,6 +307,14 @@ public class QueryConfigResponseBody extends TeaModel {
         }
         public String getMinSessionTimeout() {
             return this.minSessionTimeout;
+        }
+
+        public QueryConfigResponseBodyData setNacosRunningEnv(QueryConfigResponseBodyDataNacosRunningEnv nacosRunningEnv) {
+            this.nacosRunningEnv = nacosRunningEnv;
+            return this;
+        }
+        public QueryConfigResponseBodyDataNacosRunningEnv getNacosRunningEnv() {
+            return this.nacosRunningEnv;
         }
 
         public QueryConfigResponseBodyData setNamingAuthEnabled(Boolean namingAuthEnabled) {
