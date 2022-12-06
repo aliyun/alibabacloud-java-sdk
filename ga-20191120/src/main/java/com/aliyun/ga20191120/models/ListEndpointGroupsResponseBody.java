@@ -179,6 +179,36 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
 
     }
 
+    public static class ListEndpointGroupsResponseBodyEndpointGroupsTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListEndpointGroupsResponseBodyEndpointGroupsTags build(java.util.Map<String, ?> map) throws Exception {
+            ListEndpointGroupsResponseBodyEndpointGroupsTags self = new ListEndpointGroupsResponseBodyEndpointGroupsTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListEndpointGroupsResponseBodyEndpointGroupsTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListEndpointGroupsResponseBodyEndpointGroupsTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListEndpointGroupsResponseBodyEndpointGroups extends TeaModel {
         @NameInMap("AcceleratorId")
         public String acceleratorId;
@@ -236,6 +266,9 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
 
         @NameInMap("State")
         public String state;
+
+        @NameInMap("Tags")
+        public java.util.List<ListEndpointGroupsResponseBodyEndpointGroupsTags> tags;
 
         @NameInMap("ThresholdCount")
         public Integer thresholdCount;
@@ -398,6 +431,14 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         }
         public String getState() {
             return this.state;
+        }
+
+        public ListEndpointGroupsResponseBodyEndpointGroups setTags(java.util.List<ListEndpointGroupsResponseBodyEndpointGroupsTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListEndpointGroupsResponseBodyEndpointGroupsTags> getTags() {
+            return this.tags;
         }
 
         public ListEndpointGroupsResponseBodyEndpointGroups setThresholdCount(Integer thresholdCount) {

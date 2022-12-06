@@ -28,6 +28,9 @@ public class ListEndpointGroupsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("Tag")
+    public java.util.List<ListEndpointGroupsRequestTag> tag;
+
     public static ListEndpointGroupsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListEndpointGroupsRequest self = new ListEndpointGroupsRequest();
         return TeaModel.build(map, self);
@@ -95,6 +98,44 @@ public class ListEndpointGroupsRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ListEndpointGroupsRequest setTag(java.util.List<ListEndpointGroupsRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<ListEndpointGroupsRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class ListEndpointGroupsRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListEndpointGroupsRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            ListEndpointGroupsRequestTag self = new ListEndpointGroupsRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public ListEndpointGroupsRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListEndpointGroupsRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

@@ -79,6 +79,9 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
     @NameInMap("State")
     public String state;
 
+    @NameInMap("Tags")
+    public java.util.List<DescribeEndpointGroupResponseBodyTags> tags;
+
     @NameInMap("ThresholdCount")
     public Integer thresholdCount;
 
@@ -293,6 +296,14 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
         return this.state;
     }
 
+    public DescribeEndpointGroupResponseBody setTags(java.util.List<DescribeEndpointGroupResponseBodyTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<DescribeEndpointGroupResponseBodyTags> getTags() {
+        return this.tags;
+    }
+
     public DescribeEndpointGroupResponseBody setThresholdCount(Integer thresholdCount) {
         this.thresholdCount = thresholdCount;
         return this;
@@ -417,6 +428,36 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
         }
         public Integer getListenerPort() {
             return this.listenerPort;
+        }
+
+    }
+
+    public static class DescribeEndpointGroupResponseBodyTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeEndpointGroupResponseBodyTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeEndpointGroupResponseBodyTags self = new DescribeEndpointGroupResponseBodyTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeEndpointGroupResponseBodyTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeEndpointGroupResponseBodyTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }
