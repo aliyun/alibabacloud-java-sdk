@@ -22,6 +22,9 @@ public class CreateVirtualPhysicalConnectionRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("Spec")
     public String spec;
 
@@ -33,6 +36,9 @@ public class CreateVirtualPhysicalConnectionRequest extends TeaModel {
 
     @NameInMap("VpconnAliUid")
     public Long vpconnAliUid;
+
+    @NameInMap("VpconnUidResourceGroupId")
+    public String vpconnUidResourceGroupId;
 
     public static CreateVirtualPhysicalConnectionRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateVirtualPhysicalConnectionRequest self = new CreateVirtualPhysicalConnectionRequest();
@@ -87,6 +93,14 @@ public class CreateVirtualPhysicalConnectionRequest extends TeaModel {
         return this.regionId;
     }
 
+    public CreateVirtualPhysicalConnectionRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public CreateVirtualPhysicalConnectionRequest setSpec(String spec) {
         this.spec = spec;
         return this;
@@ -117,6 +131,14 @@ public class CreateVirtualPhysicalConnectionRequest extends TeaModel {
     }
     public Long getVpconnAliUid() {
         return this.vpconnAliUid;
+    }
+
+    public CreateVirtualPhysicalConnectionRequest setVpconnUidResourceGroupId(String vpconnUidResourceGroupId) {
+        this.vpconnUidResourceGroupId = vpconnUidResourceGroupId;
+        return this;
+    }
+    public String getVpconnUidResourceGroupId() {
+        return this.vpconnUidResourceGroupId;
     }
 
 }

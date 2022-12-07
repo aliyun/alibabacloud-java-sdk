@@ -34,6 +34,9 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("NetworkType")
+    public String networkType;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -153,6 +156,14 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public DescribeVpnGatewayResponseBody setNetworkType(String networkType) {
+        this.networkType = networkType;
+        return this;
+    }
+    public String getNetworkType() {
+        return this.networkType;
     }
 
     public DescribeVpnGatewayResponseBody setRequestId(String requestId) {

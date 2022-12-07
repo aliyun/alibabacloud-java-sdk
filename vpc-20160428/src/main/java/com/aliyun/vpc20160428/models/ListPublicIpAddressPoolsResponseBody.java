@@ -80,11 +80,17 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("OwnerId")
+        public Long ownerId;
+
         @NameInMap("PublicIpAddressPoolId")
         public String publicIpAddressPoolId;
 
         @NameInMap("RegionId")
         public String regionId;
+
+        @NameInMap("ShareType")
+        public String shareType;
 
         @NameInMap("Status")
         public String status;
@@ -94,9 +100,6 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
 
         @NameInMap("UsedIpNum")
         public Integer usedIpNum;
-
-        @NameInMap("UserType")
-        public Boolean userType;
 
         public static ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolList build(java.util.Map<String, ?> map) throws Exception {
             ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolList self = new ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolList();
@@ -143,6 +146,14 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
             return this.name;
         }
 
+        public ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolList setOwnerId(Long ownerId) {
+            this.ownerId = ownerId;
+            return this;
+        }
+        public Long getOwnerId() {
+            return this.ownerId;
+        }
+
         public ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolList setPublicIpAddressPoolId(String publicIpAddressPoolId) {
             this.publicIpAddressPoolId = publicIpAddressPoolId;
             return this;
@@ -157,6 +168,14 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolList setShareType(String shareType) {
+            this.shareType = shareType;
+            return this;
+        }
+        public String getShareType() {
+            return this.shareType;
         }
 
         public ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolList setStatus(String status) {
@@ -181,14 +200,6 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
         }
         public Integer getUsedIpNum() {
             return this.usedIpNum;
-        }
-
-        public ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolList setUserType(Boolean userType) {
-            this.userType = userType;
-            return this;
-        }
-        public Boolean getUserType() {
-            return this.userType;
         }
 
     }

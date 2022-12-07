@@ -149,6 +149,9 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
         @NameInMap("ReservationOrderType")
         public String reservationOrderType;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         @NameInMap("Spec")
         public String spec;
 
@@ -394,6 +397,14 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
         }
         public String getReservationOrderType() {
             return this.reservationOrderType;
+        }
+
+        public DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionType setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionType setSpec(String spec) {
