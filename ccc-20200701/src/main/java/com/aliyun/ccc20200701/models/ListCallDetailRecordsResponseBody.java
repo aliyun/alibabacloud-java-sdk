@@ -101,6 +101,9 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         @NameInMap("ContactType")
         public String contactType;
 
+        @NameInMap("DialingTime")
+        public Long dialingTime;
+
         @NameInMap("EarlyMediaState")
         public String earlyMediaState;
 
@@ -257,6 +260,14 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         }
         public String getContactType() {
             return this.contactType;
+        }
+
+        public ListCallDetailRecordsResponseBodyDataList setDialingTime(Long dialingTime) {
+            this.dialingTime = dialingTime;
+            return this;
+        }
+        public Long getDialingTime() {
+            return this.dialingTime;
         }
 
         public ListCallDetailRecordsResponseBodyDataList setEarlyMediaState(String earlyMediaState) {

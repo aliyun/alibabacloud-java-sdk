@@ -252,6 +252,9 @@ public class PollUserStatusResponseBody extends TeaModel {
         @NameInMap("CallType")
         public String callType;
 
+        @NameInMap("CallVariables")
+        public String callVariables;
+
         @NameInMap("ChannelContexts")
         public java.util.List<PollUserStatusResponseBodyDataCallContextChannelContexts> channelContexts;
 
@@ -272,6 +275,14 @@ public class PollUserStatusResponseBody extends TeaModel {
         }
         public String getCallType() {
             return this.callType;
+        }
+
+        public PollUserStatusResponseBodyDataCallContext setCallVariables(String callVariables) {
+            this.callVariables = callVariables;
+            return this;
+        }
+        public String getCallVariables() {
+            return this.callVariables;
         }
 
         public PollUserStatusResponseBodyDataCallContext setChannelContexts(java.util.List<PollUserStatusResponseBodyDataCallContextChannelContexts> channelContexts) {

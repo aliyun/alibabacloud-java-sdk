@@ -10,6 +10,12 @@ public class ChangeWorkModeRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("Mobile")
+    public String mobile;
+
+    @NameInMap("SignedSkillGroupIdList")
+    public String signedSkillGroupIdList;
+
     @NameInMap("UserId")
     public String userId;
 
@@ -35,6 +41,22 @@ public class ChangeWorkModeRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public ChangeWorkModeRequest setMobile(String mobile) {
+        this.mobile = mobile;
+        return this;
+    }
+    public String getMobile() {
+        return this.mobile;
+    }
+
+    public ChangeWorkModeRequest setSignedSkillGroupIdList(String signedSkillGroupIdList) {
+        this.signedSkillGroupIdList = signedSkillGroupIdList;
+        return this;
+    }
+    public String getSignedSkillGroupIdList() {
+        return this.signedSkillGroupIdList;
     }
 
     public ChangeWorkModeRequest setUserId(String userId) {
