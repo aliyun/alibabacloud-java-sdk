@@ -265,20 +265,20 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
     }
 
     public static class EstimatedPriceQueryResponseBodyModuleTrafficFeeBtripRoutes extends TeaModel {
+        @NameInMap("arr_city")
+        public String arrCity;
+
         @NameInMap("arr_date")
         public Long arrDate;
-
-        @NameInMap("btrip_type")
-        public Integer btripType;
 
         @NameInMap("cheapest")
         public EstimatedPriceQueryResponseBodyModuleTrafficFeeBtripRoutesCheapest cheapest;
 
+        @NameInMap("dep_city")
+        public String depCity;
+
         @NameInMap("dep_date")
         public Long depDate;
-
-        @NameInMap("dest_city")
-        public String destCity;
 
         @NameInMap("err_msg")
         public String errMsg;
@@ -286,14 +286,8 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
         @NameInMap("itinerary_id")
         public String itineraryId;
 
-        @NameInMap("itinerary_index")
-        public Integer itineraryIndex;
-
         @NameInMap("most_expensive")
         public EstimatedPriceQueryResponseBodyModuleTrafficFeeBtripRoutesMostExpensive mostExpensive;
-
-        @NameInMap("org_city")
-        public String orgCity;
 
         @NameInMap("success")
         public Boolean success;
@@ -301,6 +295,14 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
         public static EstimatedPriceQueryResponseBodyModuleTrafficFeeBtripRoutes build(java.util.Map<String, ?> map) throws Exception {
             EstimatedPriceQueryResponseBodyModuleTrafficFeeBtripRoutes self = new EstimatedPriceQueryResponseBodyModuleTrafficFeeBtripRoutes();
             return TeaModel.build(map, self);
+        }
+
+        public EstimatedPriceQueryResponseBodyModuleTrafficFeeBtripRoutes setArrCity(String arrCity) {
+            this.arrCity = arrCity;
+            return this;
+        }
+        public String getArrCity() {
+            return this.arrCity;
         }
 
         public EstimatedPriceQueryResponseBodyModuleTrafficFeeBtripRoutes setArrDate(Long arrDate) {
@@ -311,14 +313,6 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
             return this.arrDate;
         }
 
-        public EstimatedPriceQueryResponseBodyModuleTrafficFeeBtripRoutes setBtripType(Integer btripType) {
-            this.btripType = btripType;
-            return this;
-        }
-        public Integer getBtripType() {
-            return this.btripType;
-        }
-
         public EstimatedPriceQueryResponseBodyModuleTrafficFeeBtripRoutes setCheapest(EstimatedPriceQueryResponseBodyModuleTrafficFeeBtripRoutesCheapest cheapest) {
             this.cheapest = cheapest;
             return this;
@@ -327,20 +321,20 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
             return this.cheapest;
         }
 
+        public EstimatedPriceQueryResponseBodyModuleTrafficFeeBtripRoutes setDepCity(String depCity) {
+            this.depCity = depCity;
+            return this;
+        }
+        public String getDepCity() {
+            return this.depCity;
+        }
+
         public EstimatedPriceQueryResponseBodyModuleTrafficFeeBtripRoutes setDepDate(Long depDate) {
             this.depDate = depDate;
             return this;
         }
         public Long getDepDate() {
             return this.depDate;
-        }
-
-        public EstimatedPriceQueryResponseBodyModuleTrafficFeeBtripRoutes setDestCity(String destCity) {
-            this.destCity = destCity;
-            return this;
-        }
-        public String getDestCity() {
-            return this.destCity;
         }
 
         public EstimatedPriceQueryResponseBodyModuleTrafficFeeBtripRoutes setErrMsg(String errMsg) {
@@ -359,28 +353,12 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
             return this.itineraryId;
         }
 
-        public EstimatedPriceQueryResponseBodyModuleTrafficFeeBtripRoutes setItineraryIndex(Integer itineraryIndex) {
-            this.itineraryIndex = itineraryIndex;
-            return this;
-        }
-        public Integer getItineraryIndex() {
-            return this.itineraryIndex;
-        }
-
         public EstimatedPriceQueryResponseBodyModuleTrafficFeeBtripRoutes setMostExpensive(EstimatedPriceQueryResponseBodyModuleTrafficFeeBtripRoutesMostExpensive mostExpensive) {
             this.mostExpensive = mostExpensive;
             return this;
         }
         public EstimatedPriceQueryResponseBodyModuleTrafficFeeBtripRoutesMostExpensive getMostExpensive() {
             return this.mostExpensive;
-        }
-
-        public EstimatedPriceQueryResponseBodyModuleTrafficFeeBtripRoutes setOrgCity(String orgCity) {
-            this.orgCity = orgCity;
-            return this;
-        }
-        public String getOrgCity() {
-            return this.orgCity;
         }
 
         public EstimatedPriceQueryResponseBodyModuleTrafficFeeBtripRoutes setSuccess(Boolean success) {
