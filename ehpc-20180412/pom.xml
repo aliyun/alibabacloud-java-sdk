@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>ehpc20180412</artifactId>
-  <version>1.14.19</version>
+  <version>1.14.20</version>
   <packaging>jar</packaging>
   <name>ehpc20180412</name>
   <description>Alibaba Cloud Elastic High Performance Computing (20180412) SDK for Java
@@ -149,6 +149,10 @@
                 <relocation>
                   <pattern>org.apache</pattern>
                   <shadedPattern>com.aliyun.ehpc20180412.external.org.apache</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>org.slf4j</pattern>
+                  <shadedPattern>com.aliyun.ehpc20180412.external.org.slf4j</shadedPattern>
                 </relocation>
               </relocations>
               <artifactSet>
