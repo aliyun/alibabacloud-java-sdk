@@ -7,6 +7,9 @@ public class SubmitJobRequest extends TeaModel {
     @NameInMap("ArrayRequest")
     public String arrayRequest;
 
+    @NameInMap("Async")
+    public Boolean async;
+
     @NameInMap("ClockTime")
     public String clockTime;
 
@@ -18,6 +21,9 @@ public class SubmitJobRequest extends TeaModel {
 
     @NameInMap("ContainerId")
     public String containerId;
+
+    @NameInMap("Cpu")
+    public Integer cpu;
 
     @NameInMap("Gpu")
     public Integer gpu;
@@ -86,6 +92,14 @@ public class SubmitJobRequest extends TeaModel {
         return this.arrayRequest;
     }
 
+    public SubmitJobRequest setAsync(Boolean async) {
+        this.async = async;
+        return this;
+    }
+    public Boolean getAsync() {
+        return this.async;
+    }
+
     public SubmitJobRequest setClockTime(String clockTime) {
         this.clockTime = clockTime;
         return this;
@@ -116,6 +130,14 @@ public class SubmitJobRequest extends TeaModel {
     }
     public String getContainerId() {
         return this.containerId;
+    }
+
+    public SubmitJobRequest setCpu(Integer cpu) {
+        this.cpu = cpu;
+        return this;
+    }
+    public Integer getCpu() {
+        return this.cpu;
     }
 
     public SubmitJobRequest setGpu(Integer gpu) {

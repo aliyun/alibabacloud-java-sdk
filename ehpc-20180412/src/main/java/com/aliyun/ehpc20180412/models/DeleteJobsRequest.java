@@ -4,6 +4,9 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class DeleteJobsRequest extends TeaModel {
+    @NameInMap("Async")
+    public Boolean async;
+
     @NameInMap("ClusterId")
     public String clusterId;
 
@@ -13,6 +16,14 @@ public class DeleteJobsRequest extends TeaModel {
     public static DeleteJobsRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteJobsRequest self = new DeleteJobsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteJobsRequest setAsync(Boolean async) {
+        this.async = async;
+        return this;
+    }
+    public Boolean getAsync() {
+        return this.async;
     }
 
     public DeleteJobsRequest setClusterId(String clusterId) {
