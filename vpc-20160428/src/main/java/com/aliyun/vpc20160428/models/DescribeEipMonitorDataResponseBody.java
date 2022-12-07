@@ -36,7 +36,7 @@ public class DescribeEipMonitorDataResponseBody extends TeaModel {
         public Integer eipBandwidth;
 
         @NameInMap("EipFlow")
-        public Integer eipFlow;
+        public Long eipFlow;
 
         @NameInMap("EipPackets")
         public Integer eipPackets;
@@ -63,11 +63,11 @@ public class DescribeEipMonitorDataResponseBody extends TeaModel {
             return this.eipBandwidth;
         }
 
-        public DescribeEipMonitorDataResponseBodyEipMonitorDatasEipMonitorData setEipFlow(Integer eipFlow) {
+        public DescribeEipMonitorDataResponseBodyEipMonitorDatasEipMonitorData setEipFlow(Long eipFlow) {
             this.eipFlow = eipFlow;
             return this;
         }
-        public Integer getEipFlow() {
+        public Long getEipFlow() {
             return this.eipFlow;
         }
 

@@ -64,25 +64,6 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public static class DescribeEipAddressesResponseBodyEipAddressesEipAddressAvailableRegions extends TeaModel {
-        @NameInMap("AvailableRegion")
-        public java.util.List<String> availableRegion;
-
-        public static DescribeEipAddressesResponseBodyEipAddressesEipAddressAvailableRegions build(java.util.Map<String, ?> map) throws Exception {
-            DescribeEipAddressesResponseBodyEipAddressesEipAddressAvailableRegions self = new DescribeEipAddressesResponseBodyEipAddressesEipAddressAvailableRegions();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeEipAddressesResponseBodyEipAddressesEipAddressAvailableRegions setAvailableRegion(java.util.List<String> availableRegion) {
-            this.availableRegion = availableRegion;
-            return this;
-        }
-        public java.util.List<String> getAvailableRegion() {
-            return this.availableRegion;
-        }
-
-    }
-
     public static class DescribeEipAddressesResponseBodyEipAddressesEipAddressOperationLocksLockReason extends TeaModel {
         @NameInMap("LockReason")
         public String lockReason;
@@ -195,9 +176,6 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
 
         @NameInMap("AllocationTime")
         public String allocationTime;
-
-        @NameInMap("AvailableRegions")
-        public DescribeEipAddressesResponseBodyEipAddressesEipAddressAvailableRegions availableRegions;
 
         @NameInMap("Bandwidth")
         public String bandwidth;
@@ -326,14 +304,6 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         }
         public String getAllocationTime() {
             return this.allocationTime;
-        }
-
-        public DescribeEipAddressesResponseBodyEipAddressesEipAddress setAvailableRegions(DescribeEipAddressesResponseBodyEipAddressesEipAddressAvailableRegions availableRegions) {
-            this.availableRegions = availableRegions;
-            return this;
-        }
-        public DescribeEipAddressesResponseBodyEipAddressesEipAddressAvailableRegions getAvailableRegions() {
-            return this.availableRegions;
         }
 
         public DescribeEipAddressesResponseBodyEipAddressesEipAddress setBandwidth(String bandwidth) {

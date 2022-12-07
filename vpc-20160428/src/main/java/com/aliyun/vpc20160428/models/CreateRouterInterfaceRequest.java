@@ -16,6 +16,9 @@ public class CreateRouterInterfaceRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("FastLinkMode")
+    public Boolean fastLinkMode;
+
     @NameInMap("HealthCheckSourceIp")
     public String healthCheckSourceIp;
 
@@ -114,6 +117,14 @@ public class CreateRouterInterfaceRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreateRouterInterfaceRequest setFastLinkMode(Boolean fastLinkMode) {
+        this.fastLinkMode = fastLinkMode;
+        return this;
+    }
+    public Boolean getFastLinkMode() {
+        return this.fastLinkMode;
     }
 
     public CreateRouterInterfaceRequest setHealthCheckSourceIp(String healthCheckSourceIp) {

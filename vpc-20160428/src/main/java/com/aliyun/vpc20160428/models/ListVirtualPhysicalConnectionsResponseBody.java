@@ -137,6 +137,9 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
         @NameInMap("RedundantPhysicalConnectionId")
         public String redundantPhysicalConnectionId;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         @NameInMap("Spec")
         public String spec;
 
@@ -347,6 +350,14 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
         }
         public String getRedundantPhysicalConnectionId() {
             return this.redundantPhysicalConnectionId;
+        }
+
+        public ListVirtualPhysicalConnectionsResponseBodyVirtualPhysicalConnections setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public ListVirtualPhysicalConnectionsResponseBodyVirtualPhysicalConnections setSpec(String spec) {
