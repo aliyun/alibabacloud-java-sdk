@@ -4,6 +4,9 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class GenerateTemplatePolicyRequest extends TeaModel {
+    @NameInMap("OperationTypes")
+    public java.util.List<String> operationTypes;
+
     @NameInMap("TemplateBody")
     public String templateBody;
 
@@ -19,6 +22,14 @@ public class GenerateTemplatePolicyRequest extends TeaModel {
     public static GenerateTemplatePolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         GenerateTemplatePolicyRequest self = new GenerateTemplatePolicyRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GenerateTemplatePolicyRequest setOperationTypes(java.util.List<String> operationTypes) {
+        this.operationTypes = operationTypes;
+        return this;
+    }
+    public java.util.List<String> getOperationTypes() {
+        return this.operationTypes;
     }
 
     public GenerateTemplatePolicyRequest setTemplateBody(String templateBody) {

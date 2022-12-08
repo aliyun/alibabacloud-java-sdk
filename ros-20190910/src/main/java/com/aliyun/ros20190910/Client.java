@@ -1175,6 +1175,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GenerateTemplatePolicyResponse generateTemplatePolicyWithOptions(GenerateTemplatePolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.operationTypes)) {
+            query.put("OperationTypes", request.operationTypes);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.templateBody)) {
             query.put("TemplateBody", request.templateBody);
         }
