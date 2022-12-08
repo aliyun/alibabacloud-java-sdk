@@ -11,7 +11,7 @@ public class GetTableUnderstandingResultResponseBody extends TeaModel {
     public Boolean completed;
 
     @NameInMap("Data")
-    public Object data;
+    public java.util.Map<String, ?> data;
 
     @NameInMap("Message")
     public String message;
@@ -43,11 +43,11 @@ public class GetTableUnderstandingResultResponseBody extends TeaModel {
         return this.completed;
     }
 
-    public GetTableUnderstandingResultResponseBody setData(Object data) {
+    public GetTableUnderstandingResultResponseBody setData(java.util.Map<String, ?> data) {
         this.data = data;
         return this;
     }
-    public Object getData() {
+    public java.util.Map<String, ?> getData() {
         return this.data;
     }
 
