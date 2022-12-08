@@ -7,6 +7,9 @@ public class DescribeOutgoingDestinationIPRequest extends TeaModel {
     @NameInMap("ApplicationName")
     public String applicationName;
 
+    @NameInMap("CategoryId")
+    public String categoryId;
+
     @NameInMap("CurrentPage")
     public String currentPage;
 
@@ -40,6 +43,9 @@ public class DescribeOutgoingDestinationIPRequest extends TeaModel {
     @NameInMap("StartTime")
     public String startTime;
 
+    @NameInMap("TagIdNew")
+    public String tagIdNew;
+
     public static DescribeOutgoingDestinationIPRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeOutgoingDestinationIPRequest self = new DescribeOutgoingDestinationIPRequest();
         return TeaModel.build(map, self);
@@ -51,6 +57,14 @@ public class DescribeOutgoingDestinationIPRequest extends TeaModel {
     }
     public String getApplicationName() {
         return this.applicationName;
+    }
+
+    public DescribeOutgoingDestinationIPRequest setCategoryId(String categoryId) {
+        this.categoryId = categoryId;
+        return this;
+    }
+    public String getCategoryId() {
+        return this.categoryId;
     }
 
     public DescribeOutgoingDestinationIPRequest setCurrentPage(String currentPage) {
@@ -139,6 +153,14 @@ public class DescribeOutgoingDestinationIPRequest extends TeaModel {
     }
     public String getStartTime() {
         return this.startTime;
+    }
+
+    public DescribeOutgoingDestinationIPRequest setTagIdNew(String tagIdNew) {
+        this.tagIdNew = tagIdNew;
+        return this;
+    }
+    public String getTagIdNew() {
+        return this.tagIdNew;
     }
 
 }
