@@ -101,6 +101,9 @@ public class ListTransitRouterMulticastGroupsResponseBody extends TeaModel {
         @NameInMap("TransitRouterAttachmentId")
         public String transitRouterAttachmentId;
 
+        @NameInMap("TransitRouterMulticastDomainId")
+        public String transitRouterMulticastDomainId;
+
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
@@ -203,6 +206,14 @@ public class ListTransitRouterMulticastGroupsResponseBody extends TeaModel {
         }
         public String getTransitRouterAttachmentId() {
             return this.transitRouterAttachmentId;
+        }
+
+        public ListTransitRouterMulticastGroupsResponseBodyTransitRouterMulticastGroups setTransitRouterMulticastDomainId(String transitRouterMulticastDomainId) {
+            this.transitRouterMulticastDomainId = transitRouterMulticastDomainId;
+            return this;
+        }
+        public String getTransitRouterMulticastDomainId() {
+            return this.transitRouterMulticastDomainId;
         }
 
         public ListTransitRouterMulticastGroupsResponseBodyTransitRouterMulticastGroups setVSwitchId(String vSwitchId) {

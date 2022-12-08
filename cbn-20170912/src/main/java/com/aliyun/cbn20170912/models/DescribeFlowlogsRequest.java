@@ -52,6 +52,9 @@ public class DescribeFlowlogsRequest extends TeaModel {
     @NameInMap("Tag")
     public java.util.List<DescribeFlowlogsRequestTag> tag;
 
+    @NameInMap("TransitRouterAttachmentId")
+    public String transitRouterAttachmentId;
+
     public static DescribeFlowlogsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeFlowlogsRequest self = new DescribeFlowlogsRequest();
         return TeaModel.build(map, self);
@@ -183,6 +186,14 @@ public class DescribeFlowlogsRequest extends TeaModel {
     }
     public java.util.List<DescribeFlowlogsRequestTag> getTag() {
         return this.tag;
+    }
+
+    public DescribeFlowlogsRequest setTransitRouterAttachmentId(String transitRouterAttachmentId) {
+        this.transitRouterAttachmentId = transitRouterAttachmentId;
+        return this;
+    }
+    public String getTransitRouterAttachmentId() {
+        return this.transitRouterAttachmentId;
     }
 
     public static class DescribeFlowlogsRequestTag extends TeaModel {

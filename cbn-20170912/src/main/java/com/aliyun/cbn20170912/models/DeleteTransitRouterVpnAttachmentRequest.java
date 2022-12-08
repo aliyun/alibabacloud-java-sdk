@@ -10,6 +10,9 @@ public class DeleteTransitRouterVpnAttachmentRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    @NameInMap("Force")
+    public Boolean force;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -44,6 +47,14 @@ public class DeleteTransitRouterVpnAttachmentRequest extends TeaModel {
     }
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    public DeleteTransitRouterVpnAttachmentRequest setForce(Boolean force) {
+        this.force = force;
+        return this;
+    }
+    public Boolean getForce() {
+        return this.force;
     }
 
     public DeleteTransitRouterVpnAttachmentRequest setOwnerAccount(String ownerAccount) {
