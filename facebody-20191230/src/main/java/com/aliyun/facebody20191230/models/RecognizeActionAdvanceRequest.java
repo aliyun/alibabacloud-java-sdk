@@ -11,7 +11,7 @@ public class RecognizeActionAdvanceRequest extends TeaModel {
     public java.util.List<RecognizeActionAdvanceRequestURLList> URLList;
 
     @NameInMap("VideoData")
-    public byte[] videoData;
+    public String videoData;
 
     @NameInMap("VideoUrl")
     public String videoUrl;
@@ -37,11 +37,11 @@ public class RecognizeActionAdvanceRequest extends TeaModel {
         return this.URLList;
     }
 
-    public RecognizeActionAdvanceRequest setVideoData(byte[] videoData) {
+    public RecognizeActionAdvanceRequest setVideoData(String videoData) {
         this.videoData = videoData;
         return this;
     }
-    public byte[] getVideoData() {
+    public String getVideoData() {
         return this.videoData;
     }
 
@@ -58,7 +58,7 @@ public class RecognizeActionAdvanceRequest extends TeaModel {
         public java.io.InputStream URLObject;
 
         @NameInMap("imageData")
-        public byte[] imageData;
+        public String imageData;
 
         public static RecognizeActionAdvanceRequestURLList build(java.util.Map<String, ?> map) throws Exception {
             RecognizeActionAdvanceRequestURLList self = new RecognizeActionAdvanceRequestURLList();
@@ -73,11 +73,11 @@ public class RecognizeActionAdvanceRequest extends TeaModel {
             return this.URLObject;
         }
 
-        public RecognizeActionAdvanceRequestURLList setImageData(byte[] imageData) {
+        public RecognizeActionAdvanceRequestURLList setImageData(String imageData) {
             this.imageData = imageData;
             return this;
         }
-        public byte[] getImageData() {
+        public String getImageData() {
             return this.imageData;
         }
 
