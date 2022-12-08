@@ -1003,6 +1003,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ApplicationName", request.applicationName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.categoryId)) {
+            query.put("CategoryId", request.categoryId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
             query.put("CurrentPage", request.currentPage);
         }
@@ -1047,6 +1051,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("StartTime", request.startTime);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tagIdNew)) {
+            query.put("TagIdNew", request.tagIdNew);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -1072,6 +1080,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeOutgoingDomainResponse describeOutgoingDomainWithOptions(DescribeOutgoingDomainRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.categoryId)) {
+            query.put("CategoryId", request.categoryId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
             query.put("CurrentPage", request.currentPage);
         }
@@ -1106,6 +1118,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
             query.put("StartTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagIdNew)) {
+            query.put("TagIdNew", request.tagIdNew);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -1768,6 +1784,99 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeVpcFirewallPolicyPriorUsedResponse describeVpcFirewallPolicyPriorUsed(DescribeVpcFirewallPolicyPriorUsedRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeVpcFirewallPolicyPriorUsedWithOptions(request, runtime);
+    }
+
+    public DescribeVulnerabilityProtectedListResponse describeVulnerabilityProtectedListWithOptions(DescribeVulnerabilityProtectedListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.attackType)) {
+            query.put("AttackType", request.attackType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.buyVersion)) {
+            query.put("BuyVersion", request.buyVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.order)) {
+            query.put("Order", request.order);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortKey)) {
+            query.put("SortKey", request.sortKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceIp)) {
+            query.put("SourceIp", request.sourceIp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userType)) {
+            query.put("UserType", request.userType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vulnCveName)) {
+            query.put("VulnCveName", request.vulnCveName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vulnLevel)) {
+            query.put("VulnLevel", request.vulnLevel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vulnResource)) {
+            query.put("VulnResource", request.vulnResource);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vulnStatus)) {
+            query.put("VulnStatus", request.vulnStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vulnType)) {
+            query.put("VulnType", request.vulnType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeVulnerabilityProtectedList"),
+            new TeaPair("version", "2017-12-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeVulnerabilityProtectedListResponse());
+    }
+
+    public DescribeVulnerabilityProtectedListResponse describeVulnerabilityProtectedList(DescribeVulnerabilityProtectedListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeVulnerabilityProtectedListWithOptions(request, runtime);
     }
 
     public ModifyAddressBookResponse modifyAddressBookWithOptions(ModifyAddressBookRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
