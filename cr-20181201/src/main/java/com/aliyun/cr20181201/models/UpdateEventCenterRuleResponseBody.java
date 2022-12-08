@@ -7,7 +7,6 @@ public class UpdateEventCenterRuleResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

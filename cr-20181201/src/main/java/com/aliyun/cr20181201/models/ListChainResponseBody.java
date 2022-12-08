@@ -105,6 +105,9 @@ public class ListChainResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("ScopeExclude")
+        public java.util.List<String> scopeExclude;
+
         @NameInMap("ScopeId")
         public String scopeId;
 
@@ -162,6 +165,14 @@ public class ListChainResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public ListChainResponseBodyChains setScopeExclude(java.util.List<String> scopeExclude) {
+            this.scopeExclude = scopeExclude;
+            return this;
+        }
+        public java.util.List<String> getScopeExclude() {
+            return this.scopeExclude;
         }
 
         public ListChainResponseBodyChains setScopeId(String scopeId) {

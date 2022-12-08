@@ -37,6 +37,9 @@ public class GetChartRepositoryResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("Summary")
     public String summary;
 
@@ -131,6 +134,14 @@ public class GetChartRepositoryResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public GetChartRepositoryResponseBody setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public GetChartRepositoryResponseBody setSummary(String summary) {

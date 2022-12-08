@@ -10,6 +10,12 @@ public class DeleteRepositoryRequest extends TeaModel {
     @NameInMap("RepoId")
     public String repoId;
 
+    @NameInMap("RepoName")
+    public String repoName;
+
+    @NameInMap("RepoNamespaceName")
+    public String repoNamespaceName;
+
     public static DeleteRepositoryRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteRepositoryRequest self = new DeleteRepositoryRequest();
         return TeaModel.build(map, self);
@@ -29,6 +35,22 @@ public class DeleteRepositoryRequest extends TeaModel {
     }
     public String getRepoId() {
         return this.repoId;
+    }
+
+    public DeleteRepositoryRequest setRepoName(String repoName) {
+        this.repoName = repoName;
+        return this;
+    }
+    public String getRepoName() {
+        return this.repoName;
+    }
+
+    public DeleteRepositoryRequest setRepoNamespaceName(String repoNamespaceName) {
+        this.repoNamespaceName = repoNamespaceName;
+        return this;
+    }
+    public String getRepoNamespaceName() {
+        return this.repoNamespaceName;
     }
 
 }
