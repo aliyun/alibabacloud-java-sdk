@@ -37,6 +37,9 @@ public class ListTransitRouterVpcAttachmentsRequest extends TeaModel {
     @NameInMap("TransitRouterId")
     public String transitRouterId;
 
+    @NameInMap("VpcId")
+    public String vpcId;
+
     public static ListTransitRouterVpcAttachmentsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTransitRouterVpcAttachmentsRequest self = new ListTransitRouterVpcAttachmentsRequest();
         return TeaModel.build(map, self);
@@ -128,6 +131,14 @@ public class ListTransitRouterVpcAttachmentsRequest extends TeaModel {
     }
     public String getTransitRouterId() {
         return this.transitRouterId;
+    }
+
+    public ListTransitRouterVpcAttachmentsRequest setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    public String getVpcId() {
+        return this.vpcId;
     }
 
     public static class ListTransitRouterVpcAttachmentsRequestTag extends TeaModel {

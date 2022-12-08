@@ -204,6 +204,9 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
         @NameInMap("TrafficMatchRules")
         public java.util.List<ListTrafficMarkingPoliciesResponseBodyTrafficMarkingPoliciesTrafficMatchRules> trafficMatchRules;
 
+        @NameInMap("TransitRouterId")
+        public String transitRouterId;
+
         public static ListTrafficMarkingPoliciesResponseBodyTrafficMarkingPolicies build(java.util.Map<String, ?> map) throws Exception {
             ListTrafficMarkingPoliciesResponseBodyTrafficMarkingPolicies self = new ListTrafficMarkingPoliciesResponseBodyTrafficMarkingPolicies();
             return TeaModel.build(map, self);
@@ -263,6 +266,14 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
         }
         public java.util.List<ListTrafficMarkingPoliciesResponseBodyTrafficMarkingPoliciesTrafficMatchRules> getTrafficMatchRules() {
             return this.trafficMatchRules;
+        }
+
+        public ListTrafficMarkingPoliciesResponseBodyTrafficMarkingPolicies setTransitRouterId(String transitRouterId) {
+            this.transitRouterId = transitRouterId;
+            return this;
+        }
+        public String getTransitRouterId() {
+            return this.transitRouterId;
         }
 
     }

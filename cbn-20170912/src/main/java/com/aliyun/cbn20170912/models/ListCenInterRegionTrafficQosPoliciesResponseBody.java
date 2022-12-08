@@ -143,6 +143,12 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
         @NameInMap("TrafficQosQueues")
         public java.util.List<ListCenInterRegionTrafficQosPoliciesResponseBodyTrafficQosPoliciesTrafficQosQueues> trafficQosQueues;
 
+        @NameInMap("TransitRouterAttachmentId")
+        public String transitRouterAttachmentId;
+
+        @NameInMap("TransitRouterId")
+        public String transitRouterId;
+
         public static ListCenInterRegionTrafficQosPoliciesResponseBodyTrafficQosPolicies build(java.util.Map<String, ?> map) throws Exception {
             ListCenInterRegionTrafficQosPoliciesResponseBodyTrafficQosPolicies self = new ListCenInterRegionTrafficQosPoliciesResponseBodyTrafficQosPolicies();
             return TeaModel.build(map, self);
@@ -186,6 +192,22 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
         }
         public java.util.List<ListCenInterRegionTrafficQosPoliciesResponseBodyTrafficQosPoliciesTrafficQosQueues> getTrafficQosQueues() {
             return this.trafficQosQueues;
+        }
+
+        public ListCenInterRegionTrafficQosPoliciesResponseBodyTrafficQosPolicies setTransitRouterAttachmentId(String transitRouterAttachmentId) {
+            this.transitRouterAttachmentId = transitRouterAttachmentId;
+            return this;
+        }
+        public String getTransitRouterAttachmentId() {
+            return this.transitRouterAttachmentId;
+        }
+
+        public ListCenInterRegionTrafficQosPoliciesResponseBodyTrafficQosPolicies setTransitRouterId(String transitRouterId) {
+            this.transitRouterId = transitRouterId;
+            return this;
+        }
+        public String getTransitRouterId() {
+            return this.transitRouterId;
         }
 
     }

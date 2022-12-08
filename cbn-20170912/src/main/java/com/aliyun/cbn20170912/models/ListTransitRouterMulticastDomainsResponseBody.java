@@ -101,6 +101,9 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
         @NameInMap("Tags")
         public java.util.List<ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomainsTags> tags;
 
+        @NameInMap("TransitRouterId")
+        public String transitRouterId;
+
         @NameInMap("TransitRouterMulticastDomainDescription")
         public String transitRouterMulticastDomainDescription;
 
@@ -129,6 +132,14 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
         }
         public java.util.List<ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomainsTags> getTags() {
             return this.tags;
+        }
+
+        public ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomains setTransitRouterId(String transitRouterId) {
+            this.transitRouterId = transitRouterId;
+            return this;
+        }
+        public String getTransitRouterId() {
+            return this.transitRouterId;
         }
 
         public ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomains setTransitRouterMulticastDomainDescription(String transitRouterMulticastDomainDescription) {

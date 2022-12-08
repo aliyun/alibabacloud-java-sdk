@@ -10,8 +10,17 @@ public class ListTransitRouterMulticastGroupsRequest extends TeaModel {
     @NameInMap("GroupIpAddress")
     public String groupIpAddress;
 
+    @NameInMap("IsGroupMember")
+    public Boolean isGroupMember;
+
+    @NameInMap("IsGroupSource")
+    public Boolean isGroupSource;
+
     @NameInMap("MaxResults")
     public Long maxResults;
+
+    @NameInMap("NetworkInterfaceIds")
+    public java.util.List<String> networkInterfaceIds;
 
     @NameInMap("NextToken")
     public String nextToken;
@@ -67,12 +76,36 @@ public class ListTransitRouterMulticastGroupsRequest extends TeaModel {
         return this.groupIpAddress;
     }
 
+    public ListTransitRouterMulticastGroupsRequest setIsGroupMember(Boolean isGroupMember) {
+        this.isGroupMember = isGroupMember;
+        return this;
+    }
+    public Boolean getIsGroupMember() {
+        return this.isGroupMember;
+    }
+
+    public ListTransitRouterMulticastGroupsRequest setIsGroupSource(Boolean isGroupSource) {
+        this.isGroupSource = isGroupSource;
+        return this;
+    }
+    public Boolean getIsGroupSource() {
+        return this.isGroupSource;
+    }
+
     public ListTransitRouterMulticastGroupsRequest setMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
     }
     public Long getMaxResults() {
         return this.maxResults;
+    }
+
+    public ListTransitRouterMulticastGroupsRequest setNetworkInterfaceIds(java.util.List<String> networkInterfaceIds) {
+        this.networkInterfaceIds = networkInterfaceIds;
+        return this;
+    }
+    public java.util.List<String> getNetworkInterfaceIds() {
+        return this.networkInterfaceIds;
     }
 
     public ListTransitRouterMulticastGroupsRequest setNextToken(String nextToken) {
