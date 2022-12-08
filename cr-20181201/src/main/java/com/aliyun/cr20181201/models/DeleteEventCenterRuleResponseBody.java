@@ -7,7 +7,6 @@ public class DeleteEventCenterRuleResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

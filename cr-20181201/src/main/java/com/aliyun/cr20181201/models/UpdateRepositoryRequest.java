@@ -13,6 +13,12 @@ public class UpdateRepositoryRequest extends TeaModel {
     @NameInMap("RepoId")
     public String repoId;
 
+    @NameInMap("RepoName")
+    public String repoName;
+
+    @NameInMap("RepoNamespaceName")
+    public String repoNamespaceName;
+
     @NameInMap("RepoType")
     public String repoType;
 
@@ -49,6 +55,22 @@ public class UpdateRepositoryRequest extends TeaModel {
     }
     public String getRepoId() {
         return this.repoId;
+    }
+
+    public UpdateRepositoryRequest setRepoName(String repoName) {
+        this.repoName = repoName;
+        return this;
+    }
+    public String getRepoName() {
+        return this.repoName;
+    }
+
+    public UpdateRepositoryRequest setRepoNamespaceName(String repoNamespaceName) {
+        this.repoNamespaceName = repoNamespaceName;
+        return this;
+    }
+    public String getRepoNamespaceName() {
+        return this.repoNamespaceName;
     }
 
     public UpdateRepositoryRequest setRepoType(String repoType) {

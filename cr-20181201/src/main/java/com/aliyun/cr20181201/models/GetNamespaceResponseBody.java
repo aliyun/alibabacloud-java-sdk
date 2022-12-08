@@ -34,9 +34,6 @@ public class GetNamespaceResponseBody extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    @NameInMap("Tags")
-    public java.util.List<GetNamespaceResponseBodyTags> tags;
-
     public static GetNamespaceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetNamespaceResponseBody self = new GetNamespaceResponseBody();
         return TeaModel.build(map, self);
@@ -120,44 +117,6 @@ public class GetNamespaceResponseBody extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
-    }
-
-    public GetNamespaceResponseBody setTags(java.util.List<GetNamespaceResponseBodyTags> tags) {
-        this.tags = tags;
-        return this;
-    }
-    public java.util.List<GetNamespaceResponseBodyTags> getTags() {
-        return this.tags;
-    }
-
-    public static class GetNamespaceResponseBodyTags extends TeaModel {
-        @NameInMap("TagKey")
-        public String tagKey;
-
-        @NameInMap("TagValue")
-        public String tagValue;
-
-        public static GetNamespaceResponseBodyTags build(java.util.Map<String, ?> map) throws Exception {
-            GetNamespaceResponseBodyTags self = new GetNamespaceResponseBodyTags();
-            return TeaModel.build(map, self);
-        }
-
-        public GetNamespaceResponseBodyTags setTagKey(String tagKey) {
-            this.tagKey = tagKey;
-            return this;
-        }
-        public String getTagKey() {
-            return this.tagKey;
-        }
-
-        public GetNamespaceResponseBodyTags setTagValue(String tagValue) {
-            this.tagValue = tagValue;
-            return this;
-        }
-        public String getTagValue() {
-            return this.tagValue;
-        }
-
     }
 
 }

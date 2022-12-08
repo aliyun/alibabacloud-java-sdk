@@ -19,9 +19,6 @@ public class CreateRepositoryRequest extends TeaModel {
     @NameInMap("RepoType")
     public String repoType;
 
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
-
     @NameInMap("Summary")
     public String summary;
 
@@ -71,14 +68,6 @@ public class CreateRepositoryRequest extends TeaModel {
     }
     public String getRepoType() {
         return this.repoType;
-    }
-
-    public CreateRepositoryRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
     }
 
     public CreateRepositoryRequest setSummary(String summary) {

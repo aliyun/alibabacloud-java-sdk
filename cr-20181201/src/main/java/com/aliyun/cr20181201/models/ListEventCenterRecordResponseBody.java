@@ -19,7 +19,6 @@ public class ListEventCenterRecordResponseBody extends TeaModel {
     @NameInMap("Records")
     public java.util.List<ListEventCenterRecordResponseBodyRecords> records;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

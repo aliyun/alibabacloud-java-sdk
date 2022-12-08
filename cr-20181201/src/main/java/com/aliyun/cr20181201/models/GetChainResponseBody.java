@@ -34,6 +34,9 @@ public class GetChainResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("ScopeExclude")
+    public java.util.List<String> scopeExclude;
+
     @NameInMap("ScopeId")
     public String scopeId;
 
@@ -125,6 +128,14 @@ public class GetChainResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public GetChainResponseBody setScopeExclude(java.util.List<String> scopeExclude) {
+        this.scopeExclude = scopeExclude;
+        return this;
+    }
+    public java.util.List<String> getScopeExclude() {
+        return this.scopeExclude;
+    }
+
     public GetChainResponseBody setScopeId(String scopeId) {
         this.scopeId = scopeId;
         return this;
@@ -145,14 +156,23 @@ public class GetChainResponseBody extends TeaModel {
         @NameInMap("Action")
         public String action;
 
+        @NameInMap("BaselineList")
+        public String baselineList;
+
         @NameInMap("IssueCount")
         public String issueCount;
 
         @NameInMap("IssueLevel")
         public String issueLevel;
 
+        @NameInMap("IssueList")
+        public String issueList;
+
         @NameInMap("Logic")
         public String logic;
+
+        @NameInMap("MaliciousList")
+        public String maliciousList;
 
         public static GetChainResponseBodyChainConfigNodesNodeConfigDenyPolicy build(java.util.Map<String, ?> map) throws Exception {
             GetChainResponseBodyChainConfigNodesNodeConfigDenyPolicy self = new GetChainResponseBodyChainConfigNodesNodeConfigDenyPolicy();
@@ -165,6 +185,14 @@ public class GetChainResponseBody extends TeaModel {
         }
         public String getAction() {
             return this.action;
+        }
+
+        public GetChainResponseBodyChainConfigNodesNodeConfigDenyPolicy setBaselineList(String baselineList) {
+            this.baselineList = baselineList;
+            return this;
+        }
+        public String getBaselineList() {
+            return this.baselineList;
         }
 
         public GetChainResponseBodyChainConfigNodesNodeConfigDenyPolicy setIssueCount(String issueCount) {
@@ -183,12 +211,28 @@ public class GetChainResponseBody extends TeaModel {
             return this.issueLevel;
         }
 
+        public GetChainResponseBodyChainConfigNodesNodeConfigDenyPolicy setIssueList(String issueList) {
+            this.issueList = issueList;
+            return this;
+        }
+        public String getIssueList() {
+            return this.issueList;
+        }
+
         public GetChainResponseBodyChainConfigNodesNodeConfigDenyPolicy setLogic(String logic) {
             this.logic = logic;
             return this;
         }
         public String getLogic() {
             return this.logic;
+        }
+
+        public GetChainResponseBodyChainConfigNodesNodeConfigDenyPolicy setMaliciousList(String maliciousList) {
+            this.maliciousList = maliciousList;
+            return this;
+        }
+        public String getMaliciousList() {
+            return this.maliciousList;
         }
 
     }

@@ -22,6 +22,9 @@ public class CreateChainRequest extends TeaModel {
     @NameInMap("RepoNamespaceName")
     public String repoNamespaceName;
 
+    @NameInMap("ScopeExclude")
+    public java.util.List<String> scopeExclude;
+
     public static CreateChainRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateChainRequest self = new CreateChainRequest();
         return TeaModel.build(map, self);
@@ -73,6 +76,14 @@ public class CreateChainRequest extends TeaModel {
     }
     public String getRepoNamespaceName() {
         return this.repoNamespaceName;
+    }
+
+    public CreateChainRequest setScopeExclude(java.util.List<String> scopeExclude) {
+        this.scopeExclude = scopeExclude;
+        return this;
+    }
+    public java.util.List<String> getScopeExclude() {
+        return this.scopeExclude;
     }
 
 }

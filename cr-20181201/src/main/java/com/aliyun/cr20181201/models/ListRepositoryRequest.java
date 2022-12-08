@@ -22,9 +22,6 @@ public class ListRepositoryRequest extends TeaModel {
     @NameInMap("RepoStatus")
     public String repoStatus;
 
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
-
     public static ListRepositoryRequest build(java.util.Map<String, ?> map) throws Exception {
         ListRepositoryRequest self = new ListRepositoryRequest();
         return TeaModel.build(map, self);
@@ -76,14 +73,6 @@ public class ListRepositoryRequest extends TeaModel {
     }
     public String getRepoStatus() {
         return this.repoStatus;
-    }
-
-    public ListRepositoryRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
     }
 
 }

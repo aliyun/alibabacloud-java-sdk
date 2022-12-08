@@ -111,6 +111,9 @@ public class ListChartRepositoryResponseBody extends TeaModel {
         @NameInMap("RepoType")
         public String repoType;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         @NameInMap("Summary")
         public String summary;
 
@@ -181,6 +184,14 @@ public class ListChartRepositoryResponseBody extends TeaModel {
         }
         public String getRepoType() {
             return this.repoType;
+        }
+
+        public ListChartRepositoryResponseBodyRepositories setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public ListChartRepositoryResponseBodyRepositories setSummary(String summary) {

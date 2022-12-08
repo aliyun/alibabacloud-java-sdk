@@ -19,6 +19,9 @@ public class UpdateChainRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("ScopeExclude")
+    public java.util.List<String> scopeExclude;
+
     public static UpdateChainRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateChainRequest self = new UpdateChainRequest();
         return TeaModel.build(map, self);
@@ -62,6 +65,14 @@ public class UpdateChainRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public UpdateChainRequest setScopeExclude(java.util.List<String> scopeExclude) {
+        this.scopeExclude = scopeExclude;
+        return this;
+    }
+    public java.util.List<String> getScopeExclude() {
+        return this.scopeExclude;
     }
 
 }
