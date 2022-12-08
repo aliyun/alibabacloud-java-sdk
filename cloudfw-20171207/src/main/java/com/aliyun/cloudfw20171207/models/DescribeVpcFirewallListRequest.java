@@ -4,6 +4,9 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeVpcFirewallListRequest extends TeaModel {
+    @NameInMap("ConnectSubType")
+    public String connectSubType;
+
     @NameInMap("CurrentPage")
     public String currentPage;
 
@@ -18,6 +21,9 @@ public class DescribeVpcFirewallListRequest extends TeaModel {
 
     @NameInMap("PageSize")
     public String pageSize;
+
+    @NameInMap("PeerUid")
+    public String peerUid;
 
     @NameInMap("RegionNo")
     public String regionNo;
@@ -34,6 +40,14 @@ public class DescribeVpcFirewallListRequest extends TeaModel {
     public static DescribeVpcFirewallListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeVpcFirewallListRequest self = new DescribeVpcFirewallListRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeVpcFirewallListRequest setConnectSubType(String connectSubType) {
+        this.connectSubType = connectSubType;
+        return this;
+    }
+    public String getConnectSubType() {
+        return this.connectSubType;
     }
 
     public DescribeVpcFirewallListRequest setCurrentPage(String currentPage) {
@@ -74,6 +88,14 @@ public class DescribeVpcFirewallListRequest extends TeaModel {
     }
     public String getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeVpcFirewallListRequest setPeerUid(String peerUid) {
+        this.peerUid = peerUid;
+        return this;
+    }
+    public String getPeerUid() {
+        return this.peerUid;
     }
 
     public DescribeVpcFirewallListRequest setRegionNo(String regionNo) {

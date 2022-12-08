@@ -76,6 +76,9 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         @NameInMap("DestinationGroupCidrs")
         public java.util.List<String> destinationGroupCidrs;
 
+        @NameInMap("DestinationGroupType")
+        public String destinationGroupType;
+
         @NameInMap("DestinationType")
         public String destinationType;
 
@@ -99,6 +102,9 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
 
         @NameInMap("SourceGroupCidrs")
         public java.util.List<String> sourceGroupCidrs;
+
+        @NameInMap("SourceGroupType")
+        public String sourceGroupType;
 
         @NameInMap("SourceType")
         public String sourceType;
@@ -196,6 +202,14 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             return this.destinationGroupCidrs;
         }
 
+        public DescribeVpcFirewallControlPolicyResponseBodyPolicys setDestinationGroupType(String destinationGroupType) {
+            this.destinationGroupType = destinationGroupType;
+            return this;
+        }
+        public String getDestinationGroupType() {
+            return this.destinationGroupType;
+        }
+
         public DescribeVpcFirewallControlPolicyResponseBodyPolicys setDestinationType(String destinationType) {
             this.destinationType = destinationType;
             return this;
@@ -258,6 +272,14 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         }
         public java.util.List<String> getSourceGroupCidrs() {
             return this.sourceGroupCidrs;
+        }
+
+        public DescribeVpcFirewallControlPolicyResponseBodyPolicys setSourceGroupType(String sourceGroupType) {
+            this.sourceGroupType = sourceGroupType;
+            return this;
+        }
+        public String getSourceGroupType() {
+            return this.sourceGroupType;
         }
 
         public DescribeVpcFirewallControlPolicyResponseBodyPolicys setSourceType(String sourceType) {

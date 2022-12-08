@@ -324,6 +324,9 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
         @NameInMap("SrcIP")
         public String srcIP;
 
+        @NameInMap("SrcIPTag")
+        public String srcIPTag;
+
         @NameInMap("SrcPrivateIPList")
         public java.util.List<String> srcPrivateIPList;
 
@@ -478,6 +481,14 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
         }
         public String getSrcIP() {
             return this.srcIP;
+        }
+
+        public DescribeRiskEventGroupResponseBodyDataList setSrcIPTag(String srcIPTag) {
+            this.srcIPTag = srcIPTag;
+            return this;
+        }
+        public String getSrcIPTag() {
+            return this.srcIPTag;
         }
 
         public DescribeRiskEventGroupResponseBodyDataList setSrcPrivateIPList(java.util.List<String> srcPrivateIPList) {
