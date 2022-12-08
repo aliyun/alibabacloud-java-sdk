@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class QueryPictureSearchAiboxesRequest extends TeaModel {
     @NameInMap("AppInstanceId")
-    @Validation(required = true)
     public String appInstanceId;
 
-    @NameInMap("PageSize")
-    @Validation(required = true)
-    public Integer pageSize;
-
     @NameInMap("CurrentPage")
-    @Validation(required = true)
     public Integer currentPage;
+
+    @NameInMap("IotInstanceId")
+    public String iotInstanceId;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     public static QueryPictureSearchAiboxesRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryPictureSearchAiboxesRequest self = new QueryPictureSearchAiboxesRequest();
@@ -29,20 +29,28 @@ public class QueryPictureSearchAiboxesRequest extends TeaModel {
         return this.appInstanceId;
     }
 
-    public QueryPictureSearchAiboxesRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
     public QueryPictureSearchAiboxesRequest setCurrentPage(Integer currentPage) {
         this.currentPage = currentPage;
         return this;
     }
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    public QueryPictureSearchAiboxesRequest setIotInstanceId(String iotInstanceId) {
+        this.iotInstanceId = iotInstanceId;
+        return this;
+    }
+    public String getIotInstanceId() {
+        return this.iotInstanceId;
+    }
+
+    public QueryPictureSearchAiboxesRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
 }

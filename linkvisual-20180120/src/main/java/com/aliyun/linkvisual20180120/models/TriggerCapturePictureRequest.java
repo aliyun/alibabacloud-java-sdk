@@ -4,16 +4,29 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class TriggerCapturePictureRequest extends TeaModel {
+    @NameInMap("DeviceName")
+    public String deviceName;
+
     @NameInMap("IotId")
-    @Validation(required = true)
     public String iotId;
 
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
+    @NameInMap("ProductKey")
+    public String productKey;
+
     public static TriggerCapturePictureRequest build(java.util.Map<String, ?> map) throws Exception {
         TriggerCapturePictureRequest self = new TriggerCapturePictureRequest();
         return TeaModel.build(map, self);
+    }
+
+    public TriggerCapturePictureRequest setDeviceName(String deviceName) {
+        this.deviceName = deviceName;
+        return this;
+    }
+    public String getDeviceName() {
+        return this.deviceName;
     }
 
     public TriggerCapturePictureRequest setIotId(String iotId) {
@@ -30,6 +43,14 @@ public class TriggerCapturePictureRequest extends TeaModel {
     }
     public String getIotInstanceId() {
         return this.iotInstanceId;
+    }
+
+    public TriggerCapturePictureRequest setProductKey(String productKey) {
+        this.productKey = productKey;
+        return this;
+    }
+    public String getProductKey() {
+        return this.productKey;
     }
 
 }

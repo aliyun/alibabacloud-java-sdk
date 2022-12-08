@@ -4,57 +4,27 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryFaceDeviceGroupsByDeviceRequest extends TeaModel {
-    @NameInMap("IsolationId")
-    @Validation(required = true)
-    public String isolationId;
-
-    @NameInMap("IotInstanceId")
-    @Validation(required = true)
-    public String iotInstanceId;
-
-    @NameInMap("ProductKey")
-    @Validation(required = true)
-    public String productKey;
-
     @NameInMap("DeviceName")
-    @Validation(required = true)
     public String deviceName;
 
-    @NameInMap("PageSize")
-    @Validation(required = true)
-    public Integer pageSize;
+    @NameInMap("IotInstanceId")
+    public String iotInstanceId;
+
+    @NameInMap("IsolationId")
+    public String isolationId;
 
     @NameInMap("PageNo")
-    @Validation(required = true)
     public Integer pageNo;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("ProductKey")
+    public String productKey;
 
     public static QueryFaceDeviceGroupsByDeviceRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryFaceDeviceGroupsByDeviceRequest self = new QueryFaceDeviceGroupsByDeviceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public QueryFaceDeviceGroupsByDeviceRequest setIsolationId(String isolationId) {
-        this.isolationId = isolationId;
-        return this;
-    }
-    public String getIsolationId() {
-        return this.isolationId;
-    }
-
-    public QueryFaceDeviceGroupsByDeviceRequest setIotInstanceId(String iotInstanceId) {
-        this.iotInstanceId = iotInstanceId;
-        return this;
-    }
-    public String getIotInstanceId() {
-        return this.iotInstanceId;
-    }
-
-    public QueryFaceDeviceGroupsByDeviceRequest setProductKey(String productKey) {
-        this.productKey = productKey;
-        return this;
-    }
-    public String getProductKey() {
-        return this.productKey;
     }
 
     public QueryFaceDeviceGroupsByDeviceRequest setDeviceName(String deviceName) {
@@ -65,12 +35,20 @@ public class QueryFaceDeviceGroupsByDeviceRequest extends TeaModel {
         return this.deviceName;
     }
 
-    public QueryFaceDeviceGroupsByDeviceRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
+    public QueryFaceDeviceGroupsByDeviceRequest setIotInstanceId(String iotInstanceId) {
+        this.iotInstanceId = iotInstanceId;
         return this;
     }
-    public Integer getPageSize() {
-        return this.pageSize;
+    public String getIotInstanceId() {
+        return this.iotInstanceId;
+    }
+
+    public QueryFaceDeviceGroupsByDeviceRequest setIsolationId(String isolationId) {
+        this.isolationId = isolationId;
+        return this;
+    }
+    public String getIsolationId() {
+        return this.isolationId;
     }
 
     public QueryFaceDeviceGroupsByDeviceRequest setPageNo(Integer pageNo) {
@@ -79,6 +57,22 @@ public class QueryFaceDeviceGroupsByDeviceRequest extends TeaModel {
     }
     public Integer getPageNo() {
         return this.pageNo;
+    }
+
+    public QueryFaceDeviceGroupsByDeviceRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public QueryFaceDeviceGroupsByDeviceRequest setProductKey(String productKey) {
+        this.productKey = productKey;
+        return this;
+    }
+    public String getProductKey() {
+        return this.productKey;
     }
 
 }

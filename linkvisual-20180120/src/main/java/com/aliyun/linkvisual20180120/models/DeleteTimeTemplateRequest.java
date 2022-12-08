@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DeleteTimeTemplateRequest extends TeaModel {
     @NameInMap("TemplateId")
-    @Validation(required = true)
     public String templateId;
 
     public static DeleteTimeTemplateRequest build(java.util.Map<String, ?> map) throws Exception {

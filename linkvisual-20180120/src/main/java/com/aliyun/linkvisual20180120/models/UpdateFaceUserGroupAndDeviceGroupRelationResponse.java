@@ -4,101 +4,45 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class UpdateFaceUserGroupAndDeviceGroupRelationResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("statusCode")
     @Validation(required = true)
-    public Boolean success;
+    public Integer statusCode;
 
-    @NameInMap("ErrorMessage")
+    @NameInMap("body")
     @Validation(required = true)
-    public String errorMessage;
-
-    @NameInMap("Code")
-    @Validation(required = true)
-    public String code;
-
-    @NameInMap("Data")
-    @Validation(required = true)
-    public UpdateFaceUserGroupAndDeviceGroupRelationResponseData data;
+    public UpdateFaceUserGroupAndDeviceGroupRelationResponseBody body;
 
     public static UpdateFaceUserGroupAndDeviceGroupRelationResponse build(java.util.Map<String, ?> map) throws Exception {
         UpdateFaceUserGroupAndDeviceGroupRelationResponse self = new UpdateFaceUserGroupAndDeviceGroupRelationResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpdateFaceUserGroupAndDeviceGroupRelationResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public UpdateFaceUserGroupAndDeviceGroupRelationResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public UpdateFaceUserGroupAndDeviceGroupRelationResponse setSuccess(Boolean success) {
-        this.success = success;
+    public UpdateFaceUserGroupAndDeviceGroupRelationResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
-    public UpdateFaceUserGroupAndDeviceGroupRelationResponse setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
+    public UpdateFaceUserGroupAndDeviceGroupRelationResponse setBody(UpdateFaceUserGroupAndDeviceGroupRelationResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public UpdateFaceUserGroupAndDeviceGroupRelationResponse setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public UpdateFaceUserGroupAndDeviceGroupRelationResponse setData(UpdateFaceUserGroupAndDeviceGroupRelationResponseData data) {
-        this.data = data;
-        return this;
-    }
-    public UpdateFaceUserGroupAndDeviceGroupRelationResponseData getData() {
-        return this.data;
-    }
-
-    public static class UpdateFaceUserGroupAndDeviceGroupRelationResponseData extends TeaModel {
-        @NameInMap("ControlId")
-        @Validation(required = true)
-        public String controlId;
-
-        @NameInMap("ModifiedTime")
-        @Validation(required = true)
-        public String modifiedTime;
-
-        public static UpdateFaceUserGroupAndDeviceGroupRelationResponseData build(java.util.Map<String, ?> map) throws Exception {
-            UpdateFaceUserGroupAndDeviceGroupRelationResponseData self = new UpdateFaceUserGroupAndDeviceGroupRelationResponseData();
-            return TeaModel.build(map, self);
-        }
-
-        public UpdateFaceUserGroupAndDeviceGroupRelationResponseData setControlId(String controlId) {
-            this.controlId = controlId;
-            return this;
-        }
-        public String getControlId() {
-            return this.controlId;
-        }
-
-        public UpdateFaceUserGroupAndDeviceGroupRelationResponseData setModifiedTime(String modifiedTime) {
-            this.modifiedTime = modifiedTime;
-            return this;
-        }
-        public String getModifiedTime() {
-            return this.modifiedTime;
-        }
-
+    public UpdateFaceUserGroupAndDeviceGroupRelationResponseBody getBody() {
+        return this.body;
     }
 
 }

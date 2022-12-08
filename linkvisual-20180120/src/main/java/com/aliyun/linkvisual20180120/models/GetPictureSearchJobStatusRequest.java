@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetPictureSearchJobStatusRequest extends TeaModel {
     @NameInMap("AppInstanceId")
-    @Validation(required = true)
     public String appInstanceId;
 
     @NameInMap("JobId")
-    @Validation(required = true)
     public String jobId;
 
     public static GetPictureSearchJobStatusRequest build(java.util.Map<String, ?> map) throws Exception {

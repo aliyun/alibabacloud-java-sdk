@@ -4,35 +4,24 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateEventRecordPlanRequest extends TeaModel {
-    @NameInMap("Name")
-    @Validation(required = true)
-    public String name;
-
     @NameInMap("EventTypes")
     public String eventTypes;
+
+    @NameInMap("Name")
+    public String name;
 
     @NameInMap("PreRecordDuration")
     public Integer preRecordDuration;
 
     @NameInMap("RecordDuration")
-    @Validation(required = true)
     public Integer recordDuration;
 
     @NameInMap("TemplateId")
-    @Validation(required = true)
     public String templateId;
 
     public static CreateEventRecordPlanRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateEventRecordPlanRequest self = new CreateEventRecordPlanRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateEventRecordPlanRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
     }
 
     public CreateEventRecordPlanRequest setEventTypes(String eventTypes) {
@@ -41,6 +30,14 @@ public class CreateEventRecordPlanRequest extends TeaModel {
     }
     public String getEventTypes() {
         return this.eventTypes;
+    }
+
+    public CreateEventRecordPlanRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
     }
 
     public CreateEventRecordPlanRequest setPreRecordDuration(Integer preRecordDuration) {

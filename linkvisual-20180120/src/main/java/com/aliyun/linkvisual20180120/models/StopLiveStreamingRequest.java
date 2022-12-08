@@ -4,19 +4,32 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class StopLiveStreamingRequest extends TeaModel {
-    @NameInMap("IotId")
-    @Validation(required = true)
-    public String iotId;
+    @NameInMap("DeviceName")
+    public String deviceName;
 
-    @NameInMap("StreamType")
-    public Integer streamType;
+    @NameInMap("IotId")
+    public String iotId;
 
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
+    @NameInMap("ProductKey")
+    public String productKey;
+
+    @NameInMap("StreamType")
+    public Integer streamType;
+
     public static StopLiveStreamingRequest build(java.util.Map<String, ?> map) throws Exception {
         StopLiveStreamingRequest self = new StopLiveStreamingRequest();
         return TeaModel.build(map, self);
+    }
+
+    public StopLiveStreamingRequest setDeviceName(String deviceName) {
+        this.deviceName = deviceName;
+        return this;
+    }
+    public String getDeviceName() {
+        return this.deviceName;
     }
 
     public StopLiveStreamingRequest setIotId(String iotId) {
@@ -27,20 +40,28 @@ public class StopLiveStreamingRequest extends TeaModel {
         return this.iotId;
     }
 
-    public StopLiveStreamingRequest setStreamType(Integer streamType) {
-        this.streamType = streamType;
-        return this;
-    }
-    public Integer getStreamType() {
-        return this.streamType;
-    }
-
     public StopLiveStreamingRequest setIotInstanceId(String iotInstanceId) {
         this.iotInstanceId = iotInstanceId;
         return this;
     }
     public String getIotInstanceId() {
         return this.iotInstanceId;
+    }
+
+    public StopLiveStreamingRequest setProductKey(String productKey) {
+        this.productKey = productKey;
+        return this;
+    }
+    public String getProductKey() {
+        return this.productKey;
+    }
+
+    public StopLiveStreamingRequest setStreamType(Integer streamType) {
+        this.streamType = streamType;
+        return this;
+    }
+    public Integer getStreamType() {
+        return this.streamType;
     }
 
 }

@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class QueryDeviceRecordLifeCycleRequest extends TeaModel {
     @NameInMap("DeviceList")
-    @Validation(required = true)
     public java.util.List<String> deviceList;
 
     public static QueryDeviceRecordLifeCycleRequest build(java.util.Map<String, ?> map) throws Exception {

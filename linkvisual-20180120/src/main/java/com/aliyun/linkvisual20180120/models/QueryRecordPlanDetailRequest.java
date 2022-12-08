@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class QueryRecordPlanDetailRequest extends TeaModel {
     @NameInMap("PlanId")
-    @Validation(required = true)
     public String planId;
 
     public static QueryRecordPlanDetailRequest build(java.util.Map<String, ?> map) throws Exception {

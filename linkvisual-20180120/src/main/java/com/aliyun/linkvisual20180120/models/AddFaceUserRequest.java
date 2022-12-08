@@ -4,17 +4,14 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class AddFaceUserRequest extends TeaModel {
-    @NameInMap("IsolationId")
-    @Validation(required = true)
-    public String isolationId;
+    @NameInMap("CustomUserId")
+    public String customUserId;
 
     @NameInMap("FacePicUrl")
-    @Validation(required = true)
     public String facePicUrl;
 
-    @NameInMap("CustomUserId")
-    @Validation(required = true)
-    public String customUserId;
+    @NameInMap("IsolationId")
+    public String isolationId;
 
     @NameInMap("Name")
     public String name;
@@ -27,12 +24,12 @@ public class AddFaceUserRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public AddFaceUserRequest setIsolationId(String isolationId) {
-        this.isolationId = isolationId;
+    public AddFaceUserRequest setCustomUserId(String customUserId) {
+        this.customUserId = customUserId;
         return this;
     }
-    public String getIsolationId() {
-        return this.isolationId;
+    public String getCustomUserId() {
+        return this.customUserId;
     }
 
     public AddFaceUserRequest setFacePicUrl(String facePicUrl) {
@@ -43,12 +40,12 @@ public class AddFaceUserRequest extends TeaModel {
         return this.facePicUrl;
     }
 
-    public AddFaceUserRequest setCustomUserId(String customUserId) {
-        this.customUserId = customUserId;
+    public AddFaceUserRequest setIsolationId(String isolationId) {
+        this.isolationId = isolationId;
         return this;
     }
-    public String getCustomUserId() {
-        return this.customUserId;
+    public String getIsolationId() {
+        return this.isolationId;
     }
 
     public AddFaceUserRequest setName(String name) {

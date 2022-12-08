@@ -4,57 +4,45 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class DeleteRecordPlanDeviceResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("statusCode")
     @Validation(required = true)
-    public Boolean success;
+    public Integer statusCode;
 
-    @NameInMap("ErrorMessage")
+    @NameInMap("body")
     @Validation(required = true)
-    public String errorMessage;
-
-    @NameInMap("Code")
-    @Validation(required = true)
-    public String code;
+    public DeleteRecordPlanDeviceResponseBody body;
 
     public static DeleteRecordPlanDeviceResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteRecordPlanDeviceResponse self = new DeleteRecordPlanDeviceResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteRecordPlanDeviceResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DeleteRecordPlanDeviceResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DeleteRecordPlanDeviceResponse setSuccess(Boolean success) {
-        this.success = success;
+    public DeleteRecordPlanDeviceResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
-    public DeleteRecordPlanDeviceResponse setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
+    public DeleteRecordPlanDeviceResponse setBody(DeleteRecordPlanDeviceResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public DeleteRecordPlanDeviceResponse setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
+    public DeleteRecordPlanDeviceResponseBody getBody() {
+        return this.body;
     }
 
 }

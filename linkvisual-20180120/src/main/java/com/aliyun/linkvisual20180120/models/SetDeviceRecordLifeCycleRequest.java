@@ -4,17 +4,40 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class SetDeviceRecordLifeCycleRequest extends TeaModel {
+    @NameInMap("Day")
+    public Integer day;
+
+    @NameInMap("DeviceName")
+    public String deviceName;
+
     @NameInMap("IotId")
-    @Validation(required = true)
     public String iotId;
 
-    @NameInMap("Day")
-    @Validation(required = true)
-    public Integer day;
+    @NameInMap("IotInstanceId")
+    public String iotInstanceId;
+
+    @NameInMap("ProductKey")
+    public String productKey;
 
     public static SetDeviceRecordLifeCycleRequest build(java.util.Map<String, ?> map) throws Exception {
         SetDeviceRecordLifeCycleRequest self = new SetDeviceRecordLifeCycleRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SetDeviceRecordLifeCycleRequest setDay(Integer day) {
+        this.day = day;
+        return this;
+    }
+    public Integer getDay() {
+        return this.day;
+    }
+
+    public SetDeviceRecordLifeCycleRequest setDeviceName(String deviceName) {
+        this.deviceName = deviceName;
+        return this;
+    }
+    public String getDeviceName() {
+        return this.deviceName;
     }
 
     public SetDeviceRecordLifeCycleRequest setIotId(String iotId) {
@@ -25,12 +48,20 @@ public class SetDeviceRecordLifeCycleRequest extends TeaModel {
         return this.iotId;
     }
 
-    public SetDeviceRecordLifeCycleRequest setDay(Integer day) {
-        this.day = day;
+    public SetDeviceRecordLifeCycleRequest setIotInstanceId(String iotInstanceId) {
+        this.iotInstanceId = iotInstanceId;
         return this;
     }
-    public Integer getDay() {
-        return this.day;
+    public String getIotInstanceId() {
+        return this.iotInstanceId;
+    }
+
+    public SetDeviceRecordLifeCycleRequest setProductKey(String productKey) {
+        this.productKey = productKey;
+        return this;
+    }
+    public String getProductKey() {
+        return this.productKey;
     }
 
 }

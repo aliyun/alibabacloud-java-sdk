@@ -5,16 +5,13 @@ import com.aliyun.tea.*;
 
 public class QueryPictureSearchDevicesRequest extends TeaModel {
     @NameInMap("AppInstanceId")
-    @Validation(required = true)
     public String appInstanceId;
 
-    @NameInMap("PageSize")
-    @Validation(required = true)
-    public Integer pageSize;
-
     @NameInMap("CurrentPage")
-    @Validation(required = true)
     public Integer currentPage;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     public static QueryPictureSearchDevicesRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryPictureSearchDevicesRequest self = new QueryPictureSearchDevicesRequest();
@@ -29,20 +26,20 @@ public class QueryPictureSearchDevicesRequest extends TeaModel {
         return this.appInstanceId;
     }
 
-    public QueryPictureSearchDevicesRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
     public QueryPictureSearchDevicesRequest setCurrentPage(Integer currentPage) {
         this.currentPage = currentPage;
         return this;
     }
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    public QueryPictureSearchDevicesRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
 }

@@ -4,57 +4,45 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class AddFaceDeviceToDeviceGroupResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("statusCode")
     @Validation(required = true)
-    public Boolean success;
+    public Integer statusCode;
 
-    @NameInMap("Code")
+    @NameInMap("body")
     @Validation(required = true)
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    @Validation(required = true)
-    public String errorMessage;
+    public AddFaceDeviceToDeviceGroupResponseBody body;
 
     public static AddFaceDeviceToDeviceGroupResponse build(java.util.Map<String, ?> map) throws Exception {
         AddFaceDeviceToDeviceGroupResponse self = new AddFaceDeviceToDeviceGroupResponse();
         return TeaModel.build(map, self);
     }
 
-    public AddFaceDeviceToDeviceGroupResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public AddFaceDeviceToDeviceGroupResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public AddFaceDeviceToDeviceGroupResponse setSuccess(Boolean success) {
-        this.success = success;
+    public AddFaceDeviceToDeviceGroupResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
-    public AddFaceDeviceToDeviceGroupResponse setCode(String code) {
-        this.code = code;
+    public AddFaceDeviceToDeviceGroupResponse setBody(AddFaceDeviceToDeviceGroupResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getCode() {
-        return this.code;
-    }
-
-    public AddFaceDeviceToDeviceGroupResponse setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
+    public AddFaceDeviceToDeviceGroupResponseBody getBody() {
+        return this.body;
     }
 
 }

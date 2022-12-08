@@ -4,44 +4,39 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryPictureFilesRequest extends TeaModel {
-    @NameInMap("IotId")
-    @Validation(required = true)
-    public String iotId;
-
     @NameInMap("BeginTime")
-    @Validation(required = true)
     public Long beginTime;
-
-    @NameInMap("EndTime")
-    @Validation(required = true)
-    public Long endTime;
 
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    @NameInMap("PageSize")
-    public Integer pageSize;
+    @NameInMap("DeviceName")
+    public String deviceName;
 
-    @NameInMap("PictureType")
-    public Integer pictureType;
+    @NameInMap("EndTime")
+    public Long endTime;
 
-    @NameInMap("PictureSource")
-    public Integer pictureSource;
+    @NameInMap("IotId")
+    public String iotId;
 
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("PictureSource")
+    public Integer pictureSource;
+
+    @NameInMap("PictureType")
+    public Integer pictureType;
+
+    @NameInMap("ProductKey")
+    public String productKey;
+
     public static QueryPictureFilesRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryPictureFilesRequest self = new QueryPictureFilesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public QueryPictureFilesRequest setIotId(String iotId) {
-        this.iotId = iotId;
-        return this;
-    }
-    public String getIotId() {
-        return this.iotId;
     }
 
     public QueryPictureFilesRequest setBeginTime(Long beginTime) {
@@ -52,6 +47,22 @@ public class QueryPictureFilesRequest extends TeaModel {
         return this.beginTime;
     }
 
+    public QueryPictureFilesRequest setCurrentPage(Integer currentPage) {
+        this.currentPage = currentPage;
+        return this;
+    }
+    public Integer getCurrentPage() {
+        return this.currentPage;
+    }
+
+    public QueryPictureFilesRequest setDeviceName(String deviceName) {
+        this.deviceName = deviceName;
+        return this;
+    }
+    public String getDeviceName() {
+        return this.deviceName;
+    }
+
     public QueryPictureFilesRequest setEndTime(Long endTime) {
         this.endTime = endTime;
         return this;
@@ -60,12 +71,20 @@ public class QueryPictureFilesRequest extends TeaModel {
         return this.endTime;
     }
 
-    public QueryPictureFilesRequest setCurrentPage(Integer currentPage) {
-        this.currentPage = currentPage;
+    public QueryPictureFilesRequest setIotId(String iotId) {
+        this.iotId = iotId;
         return this;
     }
-    public Integer getCurrentPage() {
-        return this.currentPage;
+    public String getIotId() {
+        return this.iotId;
+    }
+
+    public QueryPictureFilesRequest setIotInstanceId(String iotInstanceId) {
+        this.iotInstanceId = iotInstanceId;
+        return this;
+    }
+    public String getIotInstanceId() {
+        return this.iotInstanceId;
     }
 
     public QueryPictureFilesRequest setPageSize(Integer pageSize) {
@@ -76,14 +95,6 @@ public class QueryPictureFilesRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public QueryPictureFilesRequest setPictureType(Integer pictureType) {
-        this.pictureType = pictureType;
-        return this;
-    }
-    public Integer getPictureType() {
-        return this.pictureType;
-    }
-
     public QueryPictureFilesRequest setPictureSource(Integer pictureSource) {
         this.pictureSource = pictureSource;
         return this;
@@ -92,12 +103,20 @@ public class QueryPictureFilesRequest extends TeaModel {
         return this.pictureSource;
     }
 
-    public QueryPictureFilesRequest setIotInstanceId(String iotInstanceId) {
-        this.iotInstanceId = iotInstanceId;
+    public QueryPictureFilesRequest setPictureType(Integer pictureType) {
+        this.pictureType = pictureType;
         return this;
     }
-    public String getIotInstanceId() {
-        return this.iotInstanceId;
+    public Integer getPictureType() {
+        return this.pictureType;
+    }
+
+    public QueryPictureFilesRequest setProductKey(String productKey) {
+        this.productKey = productKey;
+        return this;
+    }
+    public String getProductKey() {
+        return this.productKey;
     }
 
 }

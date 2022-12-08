@@ -5,16 +5,13 @@ import com.aliyun.tea.*;
 
 public class QueryFaceAllUserGroupAndDeviceGroupRelationRequest extends TeaModel {
     @NameInMap("IsolationId")
-    @Validation(required = true)
     public String isolationId;
 
-    @NameInMap("PageSize")
-    @Validation(required = true)
-    public Integer pageSize;
-
     @NameInMap("PageNo")
-    @Validation(required = true)
     public Integer pageNo;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     public static QueryFaceAllUserGroupAndDeviceGroupRelationRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryFaceAllUserGroupAndDeviceGroupRelationRequest self = new QueryFaceAllUserGroupAndDeviceGroupRelationRequest();
@@ -29,20 +26,20 @@ public class QueryFaceAllUserGroupAndDeviceGroupRelationRequest extends TeaModel
         return this.isolationId;
     }
 
-    public QueryFaceAllUserGroupAndDeviceGroupRelationRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
     public QueryFaceAllUserGroupAndDeviceGroupRelationRequest setPageNo(Integer pageNo) {
         this.pageNo = pageNo;
         return this;
     }
     public Integer getPageNo() {
         return this.pageNo;
+    }
+
+    public QueryFaceAllUserGroupAndDeviceGroupRelationRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
 }

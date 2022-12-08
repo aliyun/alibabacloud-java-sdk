@@ -5,23 +5,24 @@ import com.aliyun.tea.*;
 
 public class CreatePictureSearchJobRequest extends TeaModel {
     @NameInMap("AppInstanceId")
-    @Validation(required = true)
     public String appInstanceId;
 
+    @NameInMap("BodyThreshold")
+    public Float bodyThreshold;
+
+    @NameInMap("EndTime")
+    public Long endTime;
+
+    @NameInMap("PictureSearchType")
+    public Integer pictureSearchType;
+
     @NameInMap("SearchPicUrl")
-    @Validation(required = true)
     public String searchPicUrl;
 
     @NameInMap("StartTime")
-    @Validation(required = true)
     public Long startTime;
 
-    @NameInMap("EndTime")
-    @Validation(required = true)
-    public Long endTime;
-
     @NameInMap("Threshold")
-    @Validation(required = true)
     public Float threshold;
 
     public static CreatePictureSearchJobRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -35,6 +36,30 @@ public class CreatePictureSearchJobRequest extends TeaModel {
     }
     public String getAppInstanceId() {
         return this.appInstanceId;
+    }
+
+    public CreatePictureSearchJobRequest setBodyThreshold(Float bodyThreshold) {
+        this.bodyThreshold = bodyThreshold;
+        return this;
+    }
+    public Float getBodyThreshold() {
+        return this.bodyThreshold;
+    }
+
+    public CreatePictureSearchJobRequest setEndTime(Long endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public Long getEndTime() {
+        return this.endTime;
+    }
+
+    public CreatePictureSearchJobRequest setPictureSearchType(Integer pictureSearchType) {
+        this.pictureSearchType = pictureSearchType;
+        return this;
+    }
+    public Integer getPictureSearchType() {
+        return this.pictureSearchType;
     }
 
     public CreatePictureSearchJobRequest setSearchPicUrl(String searchPicUrl) {
@@ -51,14 +76,6 @@ public class CreatePictureSearchJobRequest extends TeaModel {
     }
     public Long getStartTime() {
         return this.startTime;
-    }
-
-    public CreatePictureSearchJobRequest setEndTime(Long endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public Long getEndTime() {
-        return this.endTime;
     }
 
     public CreatePictureSearchJobRequest setThreshold(Float threshold) {

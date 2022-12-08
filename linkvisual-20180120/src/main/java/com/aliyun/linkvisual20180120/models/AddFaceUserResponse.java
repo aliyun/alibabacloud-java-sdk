@@ -4,125 +4,45 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class AddFaceUserResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("statusCode")
     @Validation(required = true)
-    public Boolean success;
+    public Integer statusCode;
 
-    @NameInMap("ErrorMessage")
+    @NameInMap("body")
     @Validation(required = true)
-    public String errorMessage;
-
-    @NameInMap("Code")
-    @Validation(required = true)
-    public String code;
-
-    @NameInMap("Data")
-    @Validation(required = true)
-    public AddFaceUserResponseData data;
+    public AddFaceUserResponseBody body;
 
     public static AddFaceUserResponse build(java.util.Map<String, ?> map) throws Exception {
         AddFaceUserResponse self = new AddFaceUserResponse();
         return TeaModel.build(map, self);
     }
 
-    public AddFaceUserResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public AddFaceUserResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public AddFaceUserResponse setSuccess(Boolean success) {
-        this.success = success;
+    public AddFaceUserResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
-    public AddFaceUserResponse setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
+    public AddFaceUserResponse setBody(AddFaceUserResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public AddFaceUserResponse setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public AddFaceUserResponse setData(AddFaceUserResponseData data) {
-        this.data = data;
-        return this;
-    }
-    public AddFaceUserResponseData getData() {
-        return this.data;
-    }
-
-    public static class AddFaceUserResponseData extends TeaModel {
-        @NameInMap("UserId")
-        @Validation(required = true)
-        public String userId;
-
-        @NameInMap("CustomUserId")
-        @Validation(required = true)
-        public String customUserId;
-
-        @NameInMap("Name")
-        @Validation(required = true)
-        public String name;
-
-        @NameInMap("Params")
-        @Validation(required = true)
-        public String params;
-
-        public static AddFaceUserResponseData build(java.util.Map<String, ?> map) throws Exception {
-            AddFaceUserResponseData self = new AddFaceUserResponseData();
-            return TeaModel.build(map, self);
-        }
-
-        public AddFaceUserResponseData setUserId(String userId) {
-            this.userId = userId;
-            return this;
-        }
-        public String getUserId() {
-            return this.userId;
-        }
-
-        public AddFaceUserResponseData setCustomUserId(String customUserId) {
-            this.customUserId = customUserId;
-            return this;
-        }
-        public String getCustomUserId() {
-            return this.customUserId;
-        }
-
-        public AddFaceUserResponseData setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public AddFaceUserResponseData setParams(String params) {
-            this.params = params;
-            return this;
-        }
-        public String getParams() {
-            return this.params;
-        }
-
+    public AddFaceUserResponseBody getBody() {
+        return this.body;
     }
 
 }

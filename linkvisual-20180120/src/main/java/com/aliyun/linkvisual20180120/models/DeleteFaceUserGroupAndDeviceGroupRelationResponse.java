@@ -4,57 +4,45 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class DeleteFaceUserGroupAndDeviceGroupRelationResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("statusCode")
     @Validation(required = true)
-    public Boolean success;
+    public Integer statusCode;
 
-    @NameInMap("ErrorMessage")
+    @NameInMap("body")
     @Validation(required = true)
-    public String errorMessage;
-
-    @NameInMap("Code")
-    @Validation(required = true)
-    public String code;
+    public DeleteFaceUserGroupAndDeviceGroupRelationResponseBody body;
 
     public static DeleteFaceUserGroupAndDeviceGroupRelationResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteFaceUserGroupAndDeviceGroupRelationResponse self = new DeleteFaceUserGroupAndDeviceGroupRelationResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteFaceUserGroupAndDeviceGroupRelationResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DeleteFaceUserGroupAndDeviceGroupRelationResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DeleteFaceUserGroupAndDeviceGroupRelationResponse setSuccess(Boolean success) {
-        this.success = success;
+    public DeleteFaceUserGroupAndDeviceGroupRelationResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
-    public DeleteFaceUserGroupAndDeviceGroupRelationResponse setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
+    public DeleteFaceUserGroupAndDeviceGroupRelationResponse setBody(DeleteFaceUserGroupAndDeviceGroupRelationResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public DeleteFaceUserGroupAndDeviceGroupRelationResponse setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
+    public DeleteFaceUserGroupAndDeviceGroupRelationResponseBody getBody() {
+        return this.body;
     }
 
 }

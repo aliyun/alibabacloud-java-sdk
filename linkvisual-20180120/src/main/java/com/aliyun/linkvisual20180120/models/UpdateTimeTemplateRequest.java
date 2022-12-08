@@ -4,16 +4,14 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class UpdateTimeTemplateRequest extends TeaModel {
-    @NameInMap("TemplateId")
-    @Validation(required = true)
-    public String templateId;
+    @NameInMap("AllDay")
+    public Integer allDay;
 
     @NameInMap("Name")
     public String name;
 
-    @NameInMap("AllDay")
-    @Validation(required = true)
-    public Integer allDay;
+    @NameInMap("TemplateId")
+    public String templateId;
 
     @NameInMap("TimeSections")
     public java.util.List<UpdateTimeTemplateRequestTimeSections> timeSections;
@@ -23,12 +21,12 @@ public class UpdateTimeTemplateRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public UpdateTimeTemplateRequest setTemplateId(String templateId) {
-        this.templateId = templateId;
+    public UpdateTimeTemplateRequest setAllDay(Integer allDay) {
+        this.allDay = allDay;
         return this;
     }
-    public String getTemplateId() {
-        return this.templateId;
+    public Integer getAllDay() {
+        return this.allDay;
     }
 
     public UpdateTimeTemplateRequest setName(String name) {
@@ -39,12 +37,12 @@ public class UpdateTimeTemplateRequest extends TeaModel {
         return this.name;
     }
 
-    public UpdateTimeTemplateRequest setAllDay(Integer allDay) {
-        this.allDay = allDay;
+    public UpdateTimeTemplateRequest setTemplateId(String templateId) {
+        this.templateId = templateId;
         return this;
     }
-    public Integer getAllDay() {
-        return this.allDay;
+    public String getTemplateId() {
+        return this.templateId;
     }
 
     public UpdateTimeTemplateRequest setTimeSections(java.util.List<UpdateTimeTemplateRequestTimeSections> timeSections) {
@@ -56,11 +54,11 @@ public class UpdateTimeTemplateRequest extends TeaModel {
     }
 
     public static class UpdateTimeTemplateRequestTimeSections extends TeaModel {
-        @NameInMap("DayOfWeek")
-        public Integer dayOfWeek;
-
         @NameInMap("Begin")
         public Integer begin;
+
+        @NameInMap("DayOfWeek")
+        public Integer dayOfWeek;
 
         @NameInMap("End")
         public Integer end;
@@ -70,20 +68,20 @@ public class UpdateTimeTemplateRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public UpdateTimeTemplateRequestTimeSections setDayOfWeek(Integer dayOfWeek) {
-            this.dayOfWeek = dayOfWeek;
-            return this;
-        }
-        public Integer getDayOfWeek() {
-            return this.dayOfWeek;
-        }
-
         public UpdateTimeTemplateRequestTimeSections setBegin(Integer begin) {
             this.begin = begin;
             return this;
         }
         public Integer getBegin() {
             return this.begin;
+        }
+
+        public UpdateTimeTemplateRequestTimeSections setDayOfWeek(Integer dayOfWeek) {
+            this.dayOfWeek = dayOfWeek;
+            return this;
+        }
+        public Integer getDayOfWeek() {
+            return this.dayOfWeek;
         }
 
         public UpdateTimeTemplateRequestTimeSections setEnd(Integer end) {

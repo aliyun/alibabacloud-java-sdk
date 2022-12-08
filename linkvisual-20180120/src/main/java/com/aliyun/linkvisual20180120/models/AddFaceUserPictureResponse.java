@@ -4,69 +4,45 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class AddFaceUserPictureResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("statusCode")
     @Validation(required = true)
-    public Boolean success;
+    public Integer statusCode;
 
-    @NameInMap("ErrorMessage")
+    @NameInMap("body")
     @Validation(required = true)
-    public String errorMessage;
-
-    @NameInMap("Code")
-    @Validation(required = true)
-    public String code;
-
-    @NameInMap("Data")
-    @Validation(required = true)
-    public java.util.Map<String, ?> data;
+    public AddFaceUserPictureResponseBody body;
 
     public static AddFaceUserPictureResponse build(java.util.Map<String, ?> map) throws Exception {
         AddFaceUserPictureResponse self = new AddFaceUserPictureResponse();
         return TeaModel.build(map, self);
     }
 
-    public AddFaceUserPictureResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public AddFaceUserPictureResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public AddFaceUserPictureResponse setSuccess(Boolean success) {
-        this.success = success;
+    public AddFaceUserPictureResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
-    public AddFaceUserPictureResponse setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
+    public AddFaceUserPictureResponse setBody(AddFaceUserPictureResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public AddFaceUserPictureResponse setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public AddFaceUserPictureResponse setData(java.util.Map<String, ?> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.Map<String, ?> getData() {
-        return this.data;
+    public AddFaceUserPictureResponseBody getBody() {
+        return this.body;
     }
 
 }

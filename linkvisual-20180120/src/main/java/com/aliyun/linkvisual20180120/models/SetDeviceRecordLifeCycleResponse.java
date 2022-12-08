@@ -4,57 +4,45 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class SetDeviceRecordLifeCycleResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("statusCode")
     @Validation(required = true)
-    public Boolean success;
+    public Integer statusCode;
 
-    @NameInMap("ErrorMessage")
+    @NameInMap("body")
     @Validation(required = true)
-    public String errorMessage;
-
-    @NameInMap("Code")
-    @Validation(required = true)
-    public String code;
+    public SetDeviceRecordLifeCycleResponseBody body;
 
     public static SetDeviceRecordLifeCycleResponse build(java.util.Map<String, ?> map) throws Exception {
         SetDeviceRecordLifeCycleResponse self = new SetDeviceRecordLifeCycleResponse();
         return TeaModel.build(map, self);
     }
 
-    public SetDeviceRecordLifeCycleResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public SetDeviceRecordLifeCycleResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public SetDeviceRecordLifeCycleResponse setSuccess(Boolean success) {
-        this.success = success;
+    public SetDeviceRecordLifeCycleResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
-    public SetDeviceRecordLifeCycleResponse setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
+    public SetDeviceRecordLifeCycleResponse setBody(SetDeviceRecordLifeCycleResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public SetDeviceRecordLifeCycleResponse setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
+    public SetDeviceRecordLifeCycleResponseBody getBody() {
+        return this.body;
     }
 
 }

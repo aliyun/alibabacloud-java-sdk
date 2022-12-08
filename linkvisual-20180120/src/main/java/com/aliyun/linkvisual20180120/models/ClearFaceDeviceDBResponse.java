@@ -4,69 +4,45 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class ClearFaceDeviceDBResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("statusCode")
     @Validation(required = true)
-    public Boolean success;
+    public Integer statusCode;
 
-    @NameInMap("Code")
+    @NameInMap("body")
     @Validation(required = true)
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    @Validation(required = true)
-    public String errorMessage;
-
-    @NameInMap("Data")
-    @Validation(required = true)
-    public java.util.Map<String, ?> data;
+    public ClearFaceDeviceDBResponseBody body;
 
     public static ClearFaceDeviceDBResponse build(java.util.Map<String, ?> map) throws Exception {
         ClearFaceDeviceDBResponse self = new ClearFaceDeviceDBResponse();
         return TeaModel.build(map, self);
     }
 
-    public ClearFaceDeviceDBResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public ClearFaceDeviceDBResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public ClearFaceDeviceDBResponse setSuccess(Boolean success) {
-        this.success = success;
+    public ClearFaceDeviceDBResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
-    public ClearFaceDeviceDBResponse setCode(String code) {
-        this.code = code;
+    public ClearFaceDeviceDBResponse setBody(ClearFaceDeviceDBResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getCode() {
-        return this.code;
-    }
-
-    public ClearFaceDeviceDBResponse setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public ClearFaceDeviceDBResponse setData(java.util.Map<String, ?> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.Map<String, ?> getData() {
-        return this.data;
+    public ClearFaceDeviceDBResponseBody getBody() {
+        return this.body;
     }
 
 }

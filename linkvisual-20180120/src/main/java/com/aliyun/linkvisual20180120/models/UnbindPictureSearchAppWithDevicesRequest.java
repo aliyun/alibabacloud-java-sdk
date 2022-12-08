@@ -5,12 +5,13 @@ import com.aliyun.tea.*;
 
 public class UnbindPictureSearchAppWithDevicesRequest extends TeaModel {
     @NameInMap("AppInstanceId")
-    @Validation(required = true)
     public String appInstanceId;
 
     @NameInMap("DeviceIotIds")
-    @Validation(required = true)
     public java.util.List<String> deviceIotIds;
+
+    @NameInMap("IotInstanceId")
+    public String iotInstanceId;
 
     public static UnbindPictureSearchAppWithDevicesRequest build(java.util.Map<String, ?> map) throws Exception {
         UnbindPictureSearchAppWithDevicesRequest self = new UnbindPictureSearchAppWithDevicesRequest();
@@ -31,6 +32,14 @@ public class UnbindPictureSearchAppWithDevicesRequest extends TeaModel {
     }
     public java.util.List<String> getDeviceIotIds() {
         return this.deviceIotIds;
+    }
+
+    public UnbindPictureSearchAppWithDevicesRequest setIotInstanceId(String iotInstanceId) {
+        this.iotInstanceId = iotInstanceId;
+        return this;
+    }
+    public String getIotInstanceId() {
+        return this.iotInstanceId;
     }
 
 }

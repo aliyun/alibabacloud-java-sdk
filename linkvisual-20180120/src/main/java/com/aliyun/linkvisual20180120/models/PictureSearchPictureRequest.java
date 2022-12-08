@@ -5,36 +5,31 @@ import com.aliyun.tea.*;
 
 public class PictureSearchPictureRequest extends TeaModel {
     @NameInMap("AppInstanceId")
-    @Validation(required = true)
     public String appInstanceId;
 
-    @NameInMap("PageSize")
-    @Validation(required = true)
-    public Integer pageSize;
+    @NameInMap("ContainPicUrl")
+    public Boolean containPicUrl;
 
     @NameInMap("CurrentPage")
-    @Validation(required = true)
     public Integer currentPage;
 
+    @NameInMap("EndTime")
+    public Long endTime;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("PictureSearchType")
+    public Integer pictureSearchType;
+
     @NameInMap("SearchPicUrl")
-    @Validation(required = true)
     public String searchPicUrl;
 
     @NameInMap("StartTime")
-    @Validation(required = true)
     public Long startTime;
 
-    @NameInMap("EndTime")
-    @Validation(required = true)
-    public Long endTime;
-
     @NameInMap("Threshold")
-    @Validation(required = true)
     public Float threshold;
-
-    @NameInMap("ContainPicUrl")
-    @Validation(required = true)
-    public Boolean containPicUrl;
 
     public static PictureSearchPictureRequest build(java.util.Map<String, ?> map) throws Exception {
         PictureSearchPictureRequest self = new PictureSearchPictureRequest();
@@ -49,12 +44,12 @@ public class PictureSearchPictureRequest extends TeaModel {
         return this.appInstanceId;
     }
 
-    public PictureSearchPictureRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
+    public PictureSearchPictureRequest setContainPicUrl(Boolean containPicUrl) {
+        this.containPicUrl = containPicUrl;
         return this;
     }
-    public Integer getPageSize() {
-        return this.pageSize;
+    public Boolean getContainPicUrl() {
+        return this.containPicUrl;
     }
 
     public PictureSearchPictureRequest setCurrentPage(Integer currentPage) {
@@ -63,6 +58,30 @@ public class PictureSearchPictureRequest extends TeaModel {
     }
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    public PictureSearchPictureRequest setEndTime(Long endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public Long getEndTime() {
+        return this.endTime;
+    }
+
+    public PictureSearchPictureRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public PictureSearchPictureRequest setPictureSearchType(Integer pictureSearchType) {
+        this.pictureSearchType = pictureSearchType;
+        return this;
+    }
+    public Integer getPictureSearchType() {
+        return this.pictureSearchType;
     }
 
     public PictureSearchPictureRequest setSearchPicUrl(String searchPicUrl) {
@@ -81,28 +100,12 @@ public class PictureSearchPictureRequest extends TeaModel {
         return this.startTime;
     }
 
-    public PictureSearchPictureRequest setEndTime(Long endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public Long getEndTime() {
-        return this.endTime;
-    }
-
     public PictureSearchPictureRequest setThreshold(Float threshold) {
         this.threshold = threshold;
         return this;
     }
     public Float getThreshold() {
         return this.threshold;
-    }
-
-    public PictureSearchPictureRequest setContainPicUrl(Boolean containPicUrl) {
-        this.containPicUrl = containPicUrl;
-        return this;
-    }
-    public Boolean getContainPicUrl() {
-        return this.containPicUrl;
     }
 
 }

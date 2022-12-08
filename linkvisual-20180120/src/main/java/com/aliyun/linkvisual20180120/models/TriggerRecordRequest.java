@@ -4,26 +4,38 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class TriggerRecordRequest extends TeaModel {
+    @NameInMap("DeviceName")
+    public String deviceName;
+
     @NameInMap("IotId")
-    @Validation(required = true)
     public String iotId;
-
-    @NameInMap("StreamType")
-    public Integer streamType;
-
-    @NameInMap("PreRecordDuration")
-    public Integer preRecordDuration;
-
-    @NameInMap("RecordDuration")
-    @Validation(required = true)
-    public Integer recordDuration;
 
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
+    @NameInMap("PreRecordDuration")
+    public Integer preRecordDuration;
+
+    @NameInMap("ProductKey")
+    public String productKey;
+
+    @NameInMap("RecordDuration")
+    public Integer recordDuration;
+
+    @NameInMap("StreamType")
+    public Integer streamType;
+
     public static TriggerRecordRequest build(java.util.Map<String, ?> map) throws Exception {
         TriggerRecordRequest self = new TriggerRecordRequest();
         return TeaModel.build(map, self);
+    }
+
+    public TriggerRecordRequest setDeviceName(String deviceName) {
+        this.deviceName = deviceName;
+        return this;
+    }
+    public String getDeviceName() {
+        return this.deviceName;
     }
 
     public TriggerRecordRequest setIotId(String iotId) {
@@ -34,12 +46,12 @@ public class TriggerRecordRequest extends TeaModel {
         return this.iotId;
     }
 
-    public TriggerRecordRequest setStreamType(Integer streamType) {
-        this.streamType = streamType;
+    public TriggerRecordRequest setIotInstanceId(String iotInstanceId) {
+        this.iotInstanceId = iotInstanceId;
         return this;
     }
-    public Integer getStreamType() {
-        return this.streamType;
+    public String getIotInstanceId() {
+        return this.iotInstanceId;
     }
 
     public TriggerRecordRequest setPreRecordDuration(Integer preRecordDuration) {
@@ -50,6 +62,14 @@ public class TriggerRecordRequest extends TeaModel {
         return this.preRecordDuration;
     }
 
+    public TriggerRecordRequest setProductKey(String productKey) {
+        this.productKey = productKey;
+        return this;
+    }
+    public String getProductKey() {
+        return this.productKey;
+    }
+
     public TriggerRecordRequest setRecordDuration(Integer recordDuration) {
         this.recordDuration = recordDuration;
         return this;
@@ -58,12 +78,12 @@ public class TriggerRecordRequest extends TeaModel {
         return this.recordDuration;
     }
 
-    public TriggerRecordRequest setIotInstanceId(String iotInstanceId) {
-        this.iotInstanceId = iotInstanceId;
+    public TriggerRecordRequest setStreamType(Integer streamType) {
+        this.streamType = streamType;
         return this;
     }
-    public String getIotInstanceId() {
-        return this.iotInstanceId;
+    public Integer getStreamType() {
+        return this.streamType;
     }
 
 }
