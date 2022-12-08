@@ -65,6 +65,12 @@ public class GetStyleTopResponseBody extends TeaModel {
     }
 
     public static class GetStyleTopResponseBodyData extends TeaModel {
+        @NameInMap("AttributeContent")
+        public String attributeContent;
+
+        @NameInMap("BrandName")
+        public String brandName;
+
         @NameInMap("BuyerTags")
         public String buyerTags;
 
@@ -80,6 +86,9 @@ public class GetStyleTopResponseBody extends TeaModel {
         @NameInMap("Material")
         public String material;
 
+        @NameInMap("Price")
+        public Double price;
+
         @NameInMap("ProductLink")
         public String productLink;
 
@@ -88,6 +97,9 @@ public class GetStyleTopResponseBody extends TeaModel {
 
         @NameInMap("SearchVolume")
         public Double searchVolume;
+
+        @NameInMap("ShopName")
+        public String shopName;
 
         @NameInMap("Style")
         public String style;
@@ -98,6 +110,22 @@ public class GetStyleTopResponseBody extends TeaModel {
         public static GetStyleTopResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetStyleTopResponseBodyData self = new GetStyleTopResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetStyleTopResponseBodyData setAttributeContent(String attributeContent) {
+            this.attributeContent = attributeContent;
+            return this;
+        }
+        public String getAttributeContent() {
+            return this.attributeContent;
+        }
+
+        public GetStyleTopResponseBodyData setBrandName(String brandName) {
+            this.brandName = brandName;
+            return this;
+        }
+        public String getBrandName() {
+            return this.brandName;
         }
 
         public GetStyleTopResponseBodyData setBuyerTags(String buyerTags) {
@@ -140,6 +168,14 @@ public class GetStyleTopResponseBody extends TeaModel {
             return this.material;
         }
 
+        public GetStyleTopResponseBodyData setPrice(Double price) {
+            this.price = price;
+            return this;
+        }
+        public Double getPrice() {
+            return this.price;
+        }
+
         public GetStyleTopResponseBodyData setProductLink(String productLink) {
             this.productLink = productLink;
             return this;
@@ -162,6 +198,14 @@ public class GetStyleTopResponseBody extends TeaModel {
         }
         public Double getSearchVolume() {
             return this.searchVolume;
+        }
+
+        public GetStyleTopResponseBodyData setShopName(String shopName) {
+            this.shopName = shopName;
+            return this;
+        }
+        public String getShopName() {
+            return this.shopName;
         }
 
         public GetStyleTopResponseBodyData setStyle(String style) {
