@@ -125,6 +125,9 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableResourcesResponseBodyResourcesSupportedEnginesSupportedInstanceClasses extends TeaModel {
+        @NameInMap("Category")
+        public String category;
+
         @NameInMap("Description")
         public String description;
 
@@ -146,6 +149,14 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
         public static DescribeAvailableResourcesResponseBodyResourcesSupportedEnginesSupportedInstanceClasses build(java.util.Map<String, ?> map) throws Exception {
             DescribeAvailableResourcesResponseBodyResourcesSupportedEnginesSupportedInstanceClasses self = new DescribeAvailableResourcesResponseBodyResourcesSupportedEnginesSupportedInstanceClasses();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeAvailableResourcesResponseBodyResourcesSupportedEnginesSupportedInstanceClasses setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
         }
 
         public DescribeAvailableResourcesResponseBodyResourcesSupportedEnginesSupportedInstanceClasses setDescription(String description) {
