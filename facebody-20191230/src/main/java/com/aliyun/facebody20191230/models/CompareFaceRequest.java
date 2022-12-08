@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CompareFaceRequest extends TeaModel {
     @NameInMap("ImageDataA")
-    public byte[] imageDataA;
+    public String imageDataA;
 
     @NameInMap("ImageDataB")
-    public byte[] imageDataB;
+    public String imageDataB;
 
     @NameInMap("ImageURLA")
     public String imageURLA;
@@ -24,19 +24,19 @@ public class CompareFaceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CompareFaceRequest setImageDataA(byte[] imageDataA) {
+    public CompareFaceRequest setImageDataA(String imageDataA) {
         this.imageDataA = imageDataA;
         return this;
     }
-    public byte[] getImageDataA() {
+    public String getImageDataA() {
         return this.imageDataA;
     }
 
-    public CompareFaceRequest setImageDataB(byte[] imageDataB) {
+    public CompareFaceRequest setImageDataB(String imageDataB) {
         this.imageDataB = imageDataB;
         return this;
     }
-    public byte[] getImageDataB() {
+    public String getImageDataB() {
         return this.imageDataB;
     }
 

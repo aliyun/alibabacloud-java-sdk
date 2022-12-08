@@ -22,7 +22,7 @@ public class RecognizePublicFaceRequest extends TeaModel {
 
     public static class RecognizePublicFaceRequestTask extends TeaModel {
         @NameInMap("ImageData")
-        public byte[] imageData;
+        public String imageData;
 
         @NameInMap("ImageURL")
         public String imageURL;
@@ -32,11 +32,11 @@ public class RecognizePublicFaceRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public RecognizePublicFaceRequestTask setImageData(byte[] imageData) {
+        public RecognizePublicFaceRequestTask setImageData(String imageData) {
             this.imageData = imageData;
             return this;
         }
-        public byte[] getImageData() {
+        public String getImageData() {
             return this.imageData;
         }
 

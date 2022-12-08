@@ -22,7 +22,7 @@ public class DetectLivingFaceRequest extends TeaModel {
 
     public static class DetectLivingFaceRequestTasks extends TeaModel {
         @NameInMap("ImageData")
-        public byte[] imageData;
+        public String imageData;
 
         @NameInMap("ImageURL")
         public String imageURL;
@@ -32,11 +32,11 @@ public class DetectLivingFaceRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DetectLivingFaceRequestTasks setImageData(byte[] imageData) {
+        public DetectLivingFaceRequestTasks setImageData(String imageData) {
             this.imageData = imageData;
             return this;
         }
-        public byte[] getImageData() {
+        public String getImageData() {
             return this.imageData;
         }
 

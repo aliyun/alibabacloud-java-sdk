@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ExtractFingerPrintAdvanceRequest extends TeaModel {
     @NameInMap("ImageData")
-    public byte[] imageData;
+    public String imageData;
 
     @NameInMap("ImageURL")
     public java.io.InputStream imageURLObject;
@@ -15,11 +15,11 @@ public class ExtractFingerPrintAdvanceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ExtractFingerPrintAdvanceRequest setImageData(byte[] imageData) {
+    public ExtractFingerPrintAdvanceRequest setImageData(String imageData) {
         this.imageData = imageData;
         return this;
     }
-    public byte[] getImageData() {
+    public String getImageData() {
         return this.imageData;
     }
 
