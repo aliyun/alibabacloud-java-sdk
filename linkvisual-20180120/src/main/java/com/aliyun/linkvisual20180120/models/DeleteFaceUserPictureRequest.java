@@ -4,21 +4,26 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class DeleteFaceUserPictureRequest extends TeaModel {
+    @NameInMap("FacePicMd5")
+    public String facePicMd5;
+
     @NameInMap("IsolationId")
-    @Validation(required = true)
     public String isolationId;
 
     @NameInMap("UserId")
-    @Validation(required = true)
     public String userId;
-
-    @NameInMap("FacePicMd5")
-    @Validation(required = true)
-    public String facePicMd5;
 
     public static DeleteFaceUserPictureRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteFaceUserPictureRequest self = new DeleteFaceUserPictureRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteFaceUserPictureRequest setFacePicMd5(String facePicMd5) {
+        this.facePicMd5 = facePicMd5;
+        return this;
+    }
+    public String getFacePicMd5() {
+        return this.facePicMd5;
     }
 
     public DeleteFaceUserPictureRequest setIsolationId(String isolationId) {
@@ -35,14 +40,6 @@ public class DeleteFaceUserPictureRequest extends TeaModel {
     }
     public String getUserId() {
         return this.userId;
-    }
-
-    public DeleteFaceUserPictureRequest setFacePicMd5(String facePicMd5) {
-        this.facePicMd5 = facePicMd5;
-        return this;
-    }
-    public String getFacePicMd5() {
-        return this.facePicMd5;
     }
 
 }

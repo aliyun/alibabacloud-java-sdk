@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DetectUserFaceByUrlRequest extends TeaModel {
     @NameInMap("FacePicUrl")
-    @Validation(required = true)
     public String facePicUrl;
 
     public static DetectUserFaceByUrlRequest build(java.util.Map<String, ?> map) throws Exception {

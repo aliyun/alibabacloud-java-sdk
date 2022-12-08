@@ -4,13 +4,14 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class UpdateFaceUserRequest extends TeaModel {
-    @NameInMap("IsolationId")
-    @Validation(required = true)
-    public String isolationId;
+    @NameInMap("CustomUserId")
+    public String customUserId;
 
-    @NameInMap("UserId")
-    @Validation(required = true)
-    public String userId;
+    @NameInMap("FacePicUrl")
+    public String facePicUrl;
+
+    @NameInMap("IsolationId")
+    public String isolationId;
 
     @NameInMap("Name")
     public String name;
@@ -18,15 +19,28 @@ public class UpdateFaceUserRequest extends TeaModel {
     @NameInMap("Params")
     public String params;
 
-    @NameInMap("FacePicUrl")
-    public String facePicUrl;
-
-    @NameInMap("CustomUserId")
-    public String customUserId;
+    @NameInMap("UserId")
+    public String userId;
 
     public static UpdateFaceUserRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateFaceUserRequest self = new UpdateFaceUserRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateFaceUserRequest setCustomUserId(String customUserId) {
+        this.customUserId = customUserId;
+        return this;
+    }
+    public String getCustomUserId() {
+        return this.customUserId;
+    }
+
+    public UpdateFaceUserRequest setFacePicUrl(String facePicUrl) {
+        this.facePicUrl = facePicUrl;
+        return this;
+    }
+    public String getFacePicUrl() {
+        return this.facePicUrl;
     }
 
     public UpdateFaceUserRequest setIsolationId(String isolationId) {
@@ -35,14 +49,6 @@ public class UpdateFaceUserRequest extends TeaModel {
     }
     public String getIsolationId() {
         return this.isolationId;
-    }
-
-    public UpdateFaceUserRequest setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
     }
 
     public UpdateFaceUserRequest setName(String name) {
@@ -61,20 +67,12 @@ public class UpdateFaceUserRequest extends TeaModel {
         return this.params;
     }
 
-    public UpdateFaceUserRequest setFacePicUrl(String facePicUrl) {
-        this.facePicUrl = facePicUrl;
+    public UpdateFaceUserRequest setUserId(String userId) {
+        this.userId = userId;
         return this;
     }
-    public String getFacePicUrl() {
-        return this.facePicUrl;
-    }
-
-    public UpdateFaceUserRequest setCustomUserId(String customUserId) {
-        this.customUserId = customUserId;
-        return this;
-    }
-    public String getCustomUserId() {
-        return this.customUserId;
+    public String getUserId() {
+        return this.userId;
     }
 
 }

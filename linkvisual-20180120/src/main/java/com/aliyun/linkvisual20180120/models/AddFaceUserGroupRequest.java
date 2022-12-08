@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class AddFaceUserGroupRequest extends TeaModel {
     @NameInMap("IsolationId")
-    @Validation(required = true)
     public String isolationId;
 
     @NameInMap("UserGroupName")
-    @Validation(required = true)
     public String userGroupName;
 
     public static AddFaceUserGroupRequest build(java.util.Map<String, ?> map) throws Exception {

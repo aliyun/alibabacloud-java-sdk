@@ -5,16 +5,13 @@ import com.aliyun.tea.*;
 
 public class AddFaceUserToUserGroupRequest extends TeaModel {
     @NameInMap("IsolationId")
-    @Validation(required = true)
     public String isolationId;
 
-    @NameInMap("UserId")
-    @Validation(required = true)
-    public String userId;
-
     @NameInMap("UserGroupId")
-    @Validation(required = true)
     public String userGroupId;
+
+    @NameInMap("UserId")
+    public String userId;
 
     public static AddFaceUserToUserGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         AddFaceUserToUserGroupRequest self = new AddFaceUserToUserGroupRequest();
@@ -29,20 +26,20 @@ public class AddFaceUserToUserGroupRequest extends TeaModel {
         return this.isolationId;
     }
 
-    public AddFaceUserToUserGroupRequest setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
-    }
-
     public AddFaceUserToUserGroupRequest setUserGroupId(String userGroupId) {
         this.userGroupId = userGroupId;
         return this;
     }
     public String getUserGroupId() {
         return this.userGroupId;
+    }
+
+    public AddFaceUserToUserGroupRequest setUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    public String getUserId() {
+        return this.userId;
     }
 
 }

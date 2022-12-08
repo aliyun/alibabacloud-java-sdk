@@ -5,19 +5,16 @@ import com.aliyun.tea.*;
 
 public class QueryPictureSearchJobRequest extends TeaModel {
     @NameInMap("AppInstanceId")
-    @Validation(required = true)
     public String appInstanceId;
+
+    @NameInMap("CurrentPage")
+    public Integer currentPage;
 
     @NameInMap("JobStatus")
     public Integer jobStatus;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public Integer pageSize;
-
-    @NameInMap("CurrentPage")
-    @Validation(required = true)
-    public Integer currentPage;
 
     public static QueryPictureSearchJobRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryPictureSearchJobRequest self = new QueryPictureSearchJobRequest();
@@ -30,6 +27,14 @@ public class QueryPictureSearchJobRequest extends TeaModel {
     }
     public String getAppInstanceId() {
         return this.appInstanceId;
+    }
+
+    public QueryPictureSearchJobRequest setCurrentPage(Integer currentPage) {
+        this.currentPage = currentPage;
+        return this;
+    }
+    public Integer getCurrentPage() {
+        return this.currentPage;
     }
 
     public QueryPictureSearchJobRequest setJobStatus(Integer jobStatus) {
@@ -46,14 +51,6 @@ public class QueryPictureSearchJobRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
-    }
-
-    public QueryPictureSearchJobRequest setCurrentPage(Integer currentPage) {
-        this.currentPage = currentPage;
-        return this;
-    }
-    public Integer getCurrentPage() {
-        return this.currentPage;
     }
 
 }

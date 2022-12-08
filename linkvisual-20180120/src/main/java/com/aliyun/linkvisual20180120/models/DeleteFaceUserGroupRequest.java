@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class DeleteFaceUserGroupRequest extends TeaModel {
     @NameInMap("IsolationId")
-    @Validation(required = true)
     public String isolationId;
 
     @NameInMap("UserGroupId")
-    @Validation(required = true)
     public String userGroupId;
 
     public static DeleteFaceUserGroupRequest build(java.util.Map<String, ?> map) throws Exception {

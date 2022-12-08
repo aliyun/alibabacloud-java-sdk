@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateRecordPlanRequest extends TeaModel {
     @NameInMap("Name")
-    @Validation(required = true)
     public String name;
 
     @NameInMap("TemplateId")
-    @Validation(required = true)
     public String templateId;
 
     public static CreateRecordPlanRequest build(java.util.Map<String, ?> map) throws Exception {

@@ -4,26 +4,22 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class UpdateEventRecordPlanRequest extends TeaModel {
-    @NameInMap("PlanId")
-    @Validation(required = true)
-    public String planId;
-
-    @NameInMap("Name")
-    @Validation(required = true)
-    public String name;
-
     @NameInMap("EventTypes")
     public String eventTypes;
+
+    @NameInMap("Name")
+    public String name;
+
+    @NameInMap("PlanId")
+    public String planId;
 
     @NameInMap("PreRecordDuration")
     public Integer preRecordDuration;
 
     @NameInMap("RecordDuration")
-    @Validation(required = true)
     public Integer recordDuration;
 
     @NameInMap("TemplateId")
-    @Validation(required = true)
     public String templateId;
 
     public static UpdateEventRecordPlanRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -31,12 +27,12 @@ public class UpdateEventRecordPlanRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public UpdateEventRecordPlanRequest setPlanId(String planId) {
-        this.planId = planId;
+    public UpdateEventRecordPlanRequest setEventTypes(String eventTypes) {
+        this.eventTypes = eventTypes;
         return this;
     }
-    public String getPlanId() {
-        return this.planId;
+    public String getEventTypes() {
+        return this.eventTypes;
     }
 
     public UpdateEventRecordPlanRequest setName(String name) {
@@ -47,12 +43,12 @@ public class UpdateEventRecordPlanRequest extends TeaModel {
         return this.name;
     }
 
-    public UpdateEventRecordPlanRequest setEventTypes(String eventTypes) {
-        this.eventTypes = eventTypes;
+    public UpdateEventRecordPlanRequest setPlanId(String planId) {
+        this.planId = planId;
         return this;
     }
-    public String getEventTypes() {
-        return this.eventTypes;
+    public String getPlanId() {
+        return this.planId;
     }
 
     public UpdateEventRecordPlanRequest setPreRecordDuration(Integer preRecordDuration) {

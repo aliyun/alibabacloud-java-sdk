@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class QueryDevicePictureLifeCycleRequest extends TeaModel {
     @NameInMap("IotId")
-    @Validation(required = true)
     public String iotId;
 
     public static QueryDevicePictureLifeCycleRequest build(java.util.Map<String, ?> map) throws Exception {

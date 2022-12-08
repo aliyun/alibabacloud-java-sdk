@@ -5,20 +5,16 @@ import com.aliyun.tea.*;
 
 public class QueryFaceUserGroupRequest extends TeaModel {
     @NameInMap("IsolationId")
-    @Validation(required = true)
     public String isolationId;
 
-    @NameInMap("UserId")
-    @Validation(required = true)
-    public String userId;
+    @NameInMap("PageNo")
+    public Integer pageNo;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public Integer pageSize;
 
-    @NameInMap("PageNo")
-    @Validation(required = true)
-    public Integer pageNo;
+    @NameInMap("UserId")
+    public String userId;
 
     public static QueryFaceUserGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryFaceUserGroupRequest self = new QueryFaceUserGroupRequest();
@@ -33,12 +29,12 @@ public class QueryFaceUserGroupRequest extends TeaModel {
         return this.isolationId;
     }
 
-    public QueryFaceUserGroupRequest setUserId(String userId) {
-        this.userId = userId;
+    public QueryFaceUserGroupRequest setPageNo(Integer pageNo) {
+        this.pageNo = pageNo;
         return this;
     }
-    public String getUserId() {
-        return this.userId;
+    public Integer getPageNo() {
+        return this.pageNo;
     }
 
     public QueryFaceUserGroupRequest setPageSize(Integer pageSize) {
@@ -49,12 +45,12 @@ public class QueryFaceUserGroupRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public QueryFaceUserGroupRequest setPageNo(Integer pageNo) {
-        this.pageNo = pageNo;
+    public QueryFaceUserGroupRequest setUserId(String userId) {
+        this.userId = userId;
         return this;
     }
-    public Integer getPageNo() {
-        return this.pageNo;
+    public String getUserId() {
+        return this.userId;
     }
 
 }

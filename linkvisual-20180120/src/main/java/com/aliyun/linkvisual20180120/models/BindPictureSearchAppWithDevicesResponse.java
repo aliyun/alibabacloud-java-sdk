@@ -4,57 +4,45 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class BindPictureSearchAppWithDevicesResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("statusCode")
     @Validation(required = true)
-    public Boolean success;
+    public Integer statusCode;
 
-    @NameInMap("Code")
+    @NameInMap("body")
     @Validation(required = true)
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    @Validation(required = true)
-    public String errorMessage;
+    public BindPictureSearchAppWithDevicesResponseBody body;
 
     public static BindPictureSearchAppWithDevicesResponse build(java.util.Map<String, ?> map) throws Exception {
         BindPictureSearchAppWithDevicesResponse self = new BindPictureSearchAppWithDevicesResponse();
         return TeaModel.build(map, self);
     }
 
-    public BindPictureSearchAppWithDevicesResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public BindPictureSearchAppWithDevicesResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public BindPictureSearchAppWithDevicesResponse setSuccess(Boolean success) {
-        this.success = success;
+    public BindPictureSearchAppWithDevicesResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
-    public BindPictureSearchAppWithDevicesResponse setCode(String code) {
-        this.code = code;
+    public BindPictureSearchAppWithDevicesResponse setBody(BindPictureSearchAppWithDevicesResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getCode() {
-        return this.code;
-    }
-
-    public BindPictureSearchAppWithDevicesResponse setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
+    public BindPictureSearchAppWithDevicesResponseBody getBody() {
+        return this.body;
     }
 
 }

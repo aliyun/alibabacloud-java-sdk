@@ -4,29 +4,18 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class UpdateFaceUserGroupAndDeviceGroupRelationRequest extends TeaModel {
-    @NameInMap("IsolationId")
-    @Validation(required = true)
-    public String isolationId;
-
     @NameInMap("ControlId")
-    @Validation(required = true)
     public String controlId;
 
+    @NameInMap("IsolationId")
+    public String isolationId;
+
     @NameInMap("Relation")
-    @Validation(required = true)
     public String relation;
 
     public static UpdateFaceUserGroupAndDeviceGroupRelationRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateFaceUserGroupAndDeviceGroupRelationRequest self = new UpdateFaceUserGroupAndDeviceGroupRelationRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateFaceUserGroupAndDeviceGroupRelationRequest setIsolationId(String isolationId) {
-        this.isolationId = isolationId;
-        return this;
-    }
-    public String getIsolationId() {
-        return this.isolationId;
     }
 
     public UpdateFaceUserGroupAndDeviceGroupRelationRequest setControlId(String controlId) {
@@ -35,6 +24,14 @@ public class UpdateFaceUserGroupAndDeviceGroupRelationRequest extends TeaModel {
     }
     public String getControlId() {
         return this.controlId;
+    }
+
+    public UpdateFaceUserGroupAndDeviceGroupRelationRequest setIsolationId(String isolationId) {
+        this.isolationId = isolationId;
+        return this;
+    }
+    public String getIsolationId() {
+        return this.isolationId;
     }
 
     public UpdateFaceUserGroupAndDeviceGroupRelationRequest setRelation(String relation) {

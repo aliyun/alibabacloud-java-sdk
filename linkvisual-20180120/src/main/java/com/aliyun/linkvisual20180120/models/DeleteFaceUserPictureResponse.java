@@ -4,57 +4,45 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class DeleteFaceUserPictureResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("statusCode")
     @Validation(required = true)
-    public Boolean success;
+    public Integer statusCode;
 
-    @NameInMap("ErrorMessage")
+    @NameInMap("body")
     @Validation(required = true)
-    public String errorMessage;
-
-    @NameInMap("Code")
-    @Validation(required = true)
-    public String code;
+    public DeleteFaceUserPictureResponseBody body;
 
     public static DeleteFaceUserPictureResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteFaceUserPictureResponse self = new DeleteFaceUserPictureResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteFaceUserPictureResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DeleteFaceUserPictureResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DeleteFaceUserPictureResponse setSuccess(Boolean success) {
-        this.success = success;
+    public DeleteFaceUserPictureResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
-    public DeleteFaceUserPictureResponse setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
+    public DeleteFaceUserPictureResponse setBody(DeleteFaceUserPictureResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public DeleteFaceUserPictureResponse setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
+    public DeleteFaceUserPictureResponseBody getBody() {
+        return this.body;
     }
 
 }

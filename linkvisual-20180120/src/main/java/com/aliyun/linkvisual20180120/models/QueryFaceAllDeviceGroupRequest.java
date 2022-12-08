@@ -4,32 +4,21 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryFaceAllDeviceGroupRequest extends TeaModel {
-    @NameInMap("IsolationId")
-    @Validation(required = true)
-    public String isolationId;
-
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
-    @NameInMap("PageSize")
-    @Validation(required = true)
-    public Integer pageSize;
+    @NameInMap("IsolationId")
+    public String isolationId;
 
     @NameInMap("PageNo")
-    @Validation(required = true)
     public Integer pageNo;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     public static QueryFaceAllDeviceGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryFaceAllDeviceGroupRequest self = new QueryFaceAllDeviceGroupRequest();
         return TeaModel.build(map, self);
-    }
-
-    public QueryFaceAllDeviceGroupRequest setIsolationId(String isolationId) {
-        this.isolationId = isolationId;
-        return this;
-    }
-    public String getIsolationId() {
-        return this.isolationId;
     }
 
     public QueryFaceAllDeviceGroupRequest setIotInstanceId(String iotInstanceId) {
@@ -40,12 +29,12 @@ public class QueryFaceAllDeviceGroupRequest extends TeaModel {
         return this.iotInstanceId;
     }
 
-    public QueryFaceAllDeviceGroupRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
+    public QueryFaceAllDeviceGroupRequest setIsolationId(String isolationId) {
+        this.isolationId = isolationId;
         return this;
     }
-    public Integer getPageSize() {
-        return this.pageSize;
+    public String getIsolationId() {
+        return this.isolationId;
     }
 
     public QueryFaceAllDeviceGroupRequest setPageNo(Integer pageNo) {
@@ -54,6 +43,14 @@ public class QueryFaceAllDeviceGroupRequest extends TeaModel {
     }
     public Integer getPageNo() {
         return this.pageNo;
+    }
+
+    public QueryFaceAllDeviceGroupRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
 }

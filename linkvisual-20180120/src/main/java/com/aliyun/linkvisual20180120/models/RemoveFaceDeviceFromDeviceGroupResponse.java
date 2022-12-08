@@ -4,57 +4,45 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class RemoveFaceDeviceFromDeviceGroupResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("statusCode")
     @Validation(required = true)
-    public Boolean success;
+    public Integer statusCode;
 
-    @NameInMap("Code")
+    @NameInMap("body")
     @Validation(required = true)
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    @Validation(required = true)
-    public String errorMessage;
+    public RemoveFaceDeviceFromDeviceGroupResponseBody body;
 
     public static RemoveFaceDeviceFromDeviceGroupResponse build(java.util.Map<String, ?> map) throws Exception {
         RemoveFaceDeviceFromDeviceGroupResponse self = new RemoveFaceDeviceFromDeviceGroupResponse();
         return TeaModel.build(map, self);
     }
 
-    public RemoveFaceDeviceFromDeviceGroupResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public RemoveFaceDeviceFromDeviceGroupResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public RemoveFaceDeviceFromDeviceGroupResponse setSuccess(Boolean success) {
-        this.success = success;
+    public RemoveFaceDeviceFromDeviceGroupResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
-    public RemoveFaceDeviceFromDeviceGroupResponse setCode(String code) {
-        this.code = code;
+    public RemoveFaceDeviceFromDeviceGroupResponse setBody(RemoveFaceDeviceFromDeviceGroupResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getCode() {
-        return this.code;
-    }
-
-    public RemoveFaceDeviceFromDeviceGroupResponse setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
+    public RemoveFaceDeviceFromDeviceGroupResponseBody getBody() {
+        return this.body;
     }
 
 }

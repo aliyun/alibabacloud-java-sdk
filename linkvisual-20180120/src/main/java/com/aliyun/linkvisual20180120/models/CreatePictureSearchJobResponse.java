@@ -4,69 +4,45 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class CreatePictureSearchJobResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("statusCode")
     @Validation(required = true)
-    public Boolean success;
+    public Integer statusCode;
 
-    @NameInMap("Code")
+    @NameInMap("body")
     @Validation(required = true)
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    @Validation(required = true)
-    public String errorMessage;
-
-    @NameInMap("Data")
-    @Validation(required = true)
-    public String data;
+    public CreatePictureSearchJobResponseBody body;
 
     public static CreatePictureSearchJobResponse build(java.util.Map<String, ?> map) throws Exception {
         CreatePictureSearchJobResponse self = new CreatePictureSearchJobResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreatePictureSearchJobResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreatePictureSearchJobResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreatePictureSearchJobResponse setSuccess(Boolean success) {
-        this.success = success;
+    public CreatePictureSearchJobResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
-    public CreatePictureSearchJobResponse setCode(String code) {
-        this.code = code;
+    public CreatePictureSearchJobResponse setBody(CreatePictureSearchJobResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getCode() {
-        return this.code;
-    }
-
-    public CreatePictureSearchJobResponse setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public CreatePictureSearchJobResponse setData(String data) {
-        this.data = data;
-        return this;
-    }
-    public String getData() {
-        return this.data;
+    public CreatePictureSearchJobResponseBody getBody() {
+        return this.body;
     }
 
 }
