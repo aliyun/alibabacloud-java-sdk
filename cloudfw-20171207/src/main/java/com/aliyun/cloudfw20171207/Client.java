@@ -311,71 +311,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createVpcFirewallCenConfigureWithOptions(request, runtime);
     }
 
-    public CreateVpcFirewallConfigureResponse createVpcFirewallConfigureWithOptions(CreateVpcFirewallConfigureRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.firewallSwitch)) {
-            query.put("FirewallSwitch", request.firewallSwitch);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
-            query.put("Lang", request.lang);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.localVpcCidrTableList)) {
-            query.put("LocalVpcCidrTableList", request.localVpcCidrTableList);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.localVpcId)) {
-            query.put("LocalVpcId", request.localVpcId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.localVpcRegion)) {
-            query.put("LocalVpcRegion", request.localVpcRegion);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.memberUid)) {
-            query.put("MemberUid", request.memberUid);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.peerVpcCidrTableList)) {
-            query.put("PeerVpcCidrTableList", request.peerVpcCidrTableList);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.peerVpcId)) {
-            query.put("PeerVpcId", request.peerVpcId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.peerVpcRegion)) {
-            query.put("PeerVpcRegion", request.peerVpcRegion);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.vpcFirewallName)) {
-            query.put("VpcFirewallName", request.vpcFirewallName);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "CreateVpcFirewallConfigure"),
-            new TeaPair("version", "2017-12-07"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateVpcFirewallConfigureResponse());
-    }
-
-    public CreateVpcFirewallConfigureResponse createVpcFirewallConfigure(CreateVpcFirewallConfigureRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.createVpcFirewallConfigureWithOptions(request, runtime);
-    }
-
     public CreateVpcFirewallControlPolicyResponse createVpcFirewallControlPolicyWithOptions(CreateVpcFirewallControlPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1732,6 +1667,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeVpcFirewallListResponse describeVpcFirewallListWithOptions(DescribeVpcFirewallListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.connectSubType)) {
+            query.put("ConnectSubType", request.connectSubType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
             query.put("CurrentPage", request.currentPage);
         }
@@ -1754,6 +1693,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.peerUid)) {
+            query.put("PeerUid", request.peerUid);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionNo)) {

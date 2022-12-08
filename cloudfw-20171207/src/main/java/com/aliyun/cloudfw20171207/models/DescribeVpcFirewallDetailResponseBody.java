@@ -16,6 +16,9 @@ public class DescribeVpcFirewallDetailResponseBody extends TeaModel {
     @NameInMap("LocalVpc")
     public DescribeVpcFirewallDetailResponseBodyLocalVpc localVpc;
 
+    @NameInMap("MemberUid")
+    public String memberUid;
+
     @NameInMap("PeerVpc")
     public DescribeVpcFirewallDetailResponseBodyPeerVpc peerVpc;
 
@@ -63,6 +66,14 @@ public class DescribeVpcFirewallDetailResponseBody extends TeaModel {
     }
     public DescribeVpcFirewallDetailResponseBodyLocalVpc getLocalVpc() {
         return this.localVpc;
+    }
+
+    public DescribeVpcFirewallDetailResponseBody setMemberUid(String memberUid) {
+        this.memberUid = memberUid;
+        return this;
+    }
+    public String getMemberUid() {
+        return this.memberUid;
     }
 
     public DescribeVpcFirewallDetailResponseBody setPeerVpc(DescribeVpcFirewallDetailResponseBodyPeerVpc peerVpc) {

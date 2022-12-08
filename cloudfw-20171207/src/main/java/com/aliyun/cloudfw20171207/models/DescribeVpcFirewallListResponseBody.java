@@ -355,6 +355,9 @@ public class DescribeVpcFirewallListResponseBody extends TeaModel {
         @NameInMap("Bandwidth")
         public Integer bandwidth;
 
+        @NameInMap("ConnectSubType")
+        public String connectSubType;
+
         @NameInMap("ConnectType")
         public String connectType;
 
@@ -376,6 +379,9 @@ public class DescribeVpcFirewallListResponseBody extends TeaModel {
         @NameInMap("RegionStatus")
         public String regionStatus;
 
+        @NameInMap("ResultCode")
+        public String resultCode;
+
         @NameInMap("VpcFirewallId")
         public String vpcFirewallId;
 
@@ -393,6 +399,14 @@ public class DescribeVpcFirewallListResponseBody extends TeaModel {
         }
         public Integer getBandwidth() {
             return this.bandwidth;
+        }
+
+        public DescribeVpcFirewallListResponseBodyVpcFirewalls setConnectSubType(String connectSubType) {
+            this.connectSubType = connectSubType;
+            return this;
+        }
+        public String getConnectSubType() {
+            return this.connectSubType;
         }
 
         public DescribeVpcFirewallListResponseBodyVpcFirewalls setConnectType(String connectType) {
@@ -449,6 +463,14 @@ public class DescribeVpcFirewallListResponseBody extends TeaModel {
         }
         public String getRegionStatus() {
             return this.regionStatus;
+        }
+
+        public DescribeVpcFirewallListResponseBodyVpcFirewalls setResultCode(String resultCode) {
+            this.resultCode = resultCode;
+            return this;
+        }
+        public String getResultCode() {
+            return this.resultCode;
         }
 
         public DescribeVpcFirewallListResponseBodyVpcFirewalls setVpcFirewallId(String vpcFirewallId) {
