@@ -8,7 +8,7 @@ public class ErasePersonAdvanceRequest extends TeaModel {
     public java.io.InputStream imageURLObject;
 
     @NameInMap("UserMask")
-    public String userMask;
+    public java.io.InputStream userMaskObject;
 
     public static ErasePersonAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         ErasePersonAdvanceRequest self = new ErasePersonAdvanceRequest();
@@ -23,12 +23,12 @@ public class ErasePersonAdvanceRequest extends TeaModel {
         return this.imageURLObject;
     }
 
-    public ErasePersonAdvanceRequest setUserMask(String userMask) {
-        this.userMask = userMask;
+    public ErasePersonAdvanceRequest setUserMaskObject(java.io.InputStream userMaskObject) {
+        this.userMaskObject = userMaskObject;
         return this;
     }
-    public String getUserMask() {
-        return this.userMask;
+    public java.io.InputStream getUserMaskObject() {
+        return this.userMaskObject;
     }
 
 }
