@@ -13,9 +13,6 @@ public class EditRoutineConfShrinkRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     public static EditRoutineConfShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         EditRoutineConfShrinkRequest self = new EditRoutineConfShrinkRequest();
         return TeaModel.build(map, self);
@@ -43,14 +40,6 @@ public class EditRoutineConfShrinkRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
-    }
-
-    public EditRoutineConfShrinkRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
 }

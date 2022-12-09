@@ -10,9 +10,6 @@ public class UpdateDcdnSubTaskRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("ReportIds")
     public String reportIds;
 
@@ -38,14 +35,6 @@ public class UpdateDcdnSubTaskRequest extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
-    }
-
-    public UpdateDcdnSubTaskRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public UpdateDcdnSubTaskRequest setReportIds(String reportIds) {

@@ -4,9 +4,6 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class TagDcdnResourcesRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
@@ -19,14 +16,6 @@ public class TagDcdnResourcesRequest extends TeaModel {
     public static TagDcdnResourcesRequest build(java.util.Map<String, ?> map) throws Exception {
         TagDcdnResourcesRequest self = new TagDcdnResourcesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public TagDcdnResourcesRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public TagDcdnResourcesRequest setResourceId(java.util.List<String> resourceId) {

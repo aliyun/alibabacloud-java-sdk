@@ -13,9 +13,6 @@ public class CreateDcdnDeliverTaskRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("Reports")
     public String reports;
 
@@ -49,14 +46,6 @@ public class CreateDcdnDeliverTaskRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
-    }
-
-    public CreateDcdnDeliverTaskRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public CreateDcdnDeliverTaskRequest setReports(String reports) {

@@ -7,9 +7,6 @@ public class CreateDcdnWafPolicyRequest extends TeaModel {
     @NameInMap("DefenseScene")
     public String defenseScene;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("PolicyName")
     public String policyName;
 
@@ -30,14 +27,6 @@ public class CreateDcdnWafPolicyRequest extends TeaModel {
     }
     public String getDefenseScene() {
         return this.defenseScene;
-    }
-
-    public CreateDcdnWafPolicyRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public CreateDcdnWafPolicyRequest setPolicyName(String policyName) {

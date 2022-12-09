@@ -13,9 +13,6 @@ public class EditRoutineConfRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     public static EditRoutineConfRequest build(java.util.Map<String, ?> map) throws Exception {
         EditRoutineConfRequest self = new EditRoutineConfRequest();
         return TeaModel.build(map, self);
@@ -43,14 +40,6 @@ public class EditRoutineConfRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
-    }
-
-    public EditRoutineConfRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
 }

@@ -7,9 +7,6 @@ public class CreateSlrAndSlsProjectRequest extends TeaModel {
     @NameInMap("BusinessType")
     public String businessType;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("Region")
     public String region;
 
@@ -24,14 +21,6 @@ public class CreateSlrAndSlsProjectRequest extends TeaModel {
     }
     public String getBusinessType() {
         return this.businessType;
-    }
-
-    public CreateSlrAndSlsProjectRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public CreateSlrAndSlsProjectRequest setRegion(String region) {

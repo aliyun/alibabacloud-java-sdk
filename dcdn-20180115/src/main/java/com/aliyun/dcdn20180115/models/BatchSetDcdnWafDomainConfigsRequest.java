@@ -13,9 +13,6 @@ public class BatchSetDcdnWafDomainConfigsRequest extends TeaModel {
     @NameInMap("DomainNames")
     public String domainNames;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     public static BatchSetDcdnWafDomainConfigsRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchSetDcdnWafDomainConfigsRequest self = new BatchSetDcdnWafDomainConfigsRequest();
         return TeaModel.build(map, self);
@@ -43,14 +40,6 @@ public class BatchSetDcdnWafDomainConfigsRequest extends TeaModel {
     }
     public String getDomainNames() {
         return this.domainNames;
-    }
-
-    public BatchSetDcdnWafDomainConfigsRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
 }

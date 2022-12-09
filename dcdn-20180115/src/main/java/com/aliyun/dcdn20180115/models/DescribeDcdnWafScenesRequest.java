@@ -7,9 +7,6 @@ public class DescribeDcdnWafScenesRequest extends TeaModel {
     @NameInMap("DefenseScenes")
     public String defenseScenes;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     public static DescribeDcdnWafScenesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDcdnWafScenesRequest self = new DescribeDcdnWafScenesRequest();
         return TeaModel.build(map, self);
@@ -21,14 +18,6 @@ public class DescribeDcdnWafScenesRequest extends TeaModel {
     }
     public String getDefenseScenes() {
         return this.defenseScenes;
-    }
-
-    public DescribeDcdnWafScenesRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
 }

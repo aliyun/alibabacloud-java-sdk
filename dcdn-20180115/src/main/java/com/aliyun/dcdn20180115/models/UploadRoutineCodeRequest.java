@@ -10,9 +10,6 @@ public class UploadRoutineCodeRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     public static UploadRoutineCodeRequest build(java.util.Map<String, ?> map) throws Exception {
         UploadRoutineCodeRequest self = new UploadRoutineCodeRequest();
         return TeaModel.build(map, self);
@@ -32,14 +29,6 @@ public class UploadRoutineCodeRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
-    }
-
-    public UploadRoutineCodeRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
 }

@@ -7,9 +7,6 @@ public class ModifyDCdnDomainSchdmByPropertyRequest extends TeaModel {
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("Property")
     public String property;
 
@@ -24,14 +21,6 @@ public class ModifyDCdnDomainSchdmByPropertyRequest extends TeaModel {
     }
     public String getDomainName() {
         return this.domainName;
-    }
-
-    public ModifyDCdnDomainSchdmByPropertyRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public ModifyDCdnDomainSchdmByPropertyRequest setProperty(String property) {

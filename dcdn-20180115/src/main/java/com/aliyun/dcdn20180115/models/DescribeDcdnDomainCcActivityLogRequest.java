@@ -10,9 +10,6 @@ public class DescribeDcdnDomainCcActivityLogRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("PageNumber")
     public Long pageNumber;
 
@@ -50,14 +47,6 @@ public class DescribeDcdnDomainCcActivityLogRequest extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
-    }
-
-    public DescribeDcdnDomainCcActivityLogRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeDcdnDomainCcActivityLogRequest setPageNumber(Long pageNumber) {

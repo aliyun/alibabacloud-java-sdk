@@ -7,9 +7,6 @@ public class CreateDcdnSubTaskRequest extends TeaModel {
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("ReportIds")
     public String reportIds;
 
@@ -24,14 +21,6 @@ public class CreateDcdnSubTaskRequest extends TeaModel {
     }
     public String getDomainName() {
         return this.domainName;
-    }
-
-    public CreateDcdnSubTaskRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public CreateDcdnSubTaskRequest setReportIds(String reportIds) {

@@ -10,9 +10,6 @@ public class DescribeDcdnWafFilterInfoRequest extends TeaModel {
     @NameInMap("Language")
     public String language;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     public static DescribeDcdnWafFilterInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDcdnWafFilterInfoRequest self = new DescribeDcdnWafFilterInfoRequest();
         return TeaModel.build(map, self);
@@ -32,14 +29,6 @@ public class DescribeDcdnWafFilterInfoRequest extends TeaModel {
     }
     public String getLanguage() {
         return this.language;
-    }
-
-    public DescribeDcdnWafFilterInfoRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
 }

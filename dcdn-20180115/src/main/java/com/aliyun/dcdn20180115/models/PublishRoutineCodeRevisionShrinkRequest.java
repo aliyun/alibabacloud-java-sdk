@@ -10,9 +10,6 @@ public class PublishRoutineCodeRevisionShrinkRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("SelectCodeRevision")
     public String selectCodeRevision;
 
@@ -35,14 +32,6 @@ public class PublishRoutineCodeRevisionShrinkRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
-    }
-
-    public PublishRoutineCodeRevisionShrinkRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public PublishRoutineCodeRevisionShrinkRequest setSelectCodeRevision(String selectCodeRevision) {

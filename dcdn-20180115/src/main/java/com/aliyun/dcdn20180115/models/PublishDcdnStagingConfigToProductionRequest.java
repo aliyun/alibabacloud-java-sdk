@@ -10,9 +10,6 @@ public class PublishDcdnStagingConfigToProductionRequest extends TeaModel {
     @NameInMap("FunctionName")
     public String functionName;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     public static PublishDcdnStagingConfigToProductionRequest build(java.util.Map<String, ?> map) throws Exception {
         PublishDcdnStagingConfigToProductionRequest self = new PublishDcdnStagingConfigToProductionRequest();
         return TeaModel.build(map, self);
@@ -32,14 +29,6 @@ public class PublishDcdnStagingConfigToProductionRequest extends TeaModel {
     }
     public String getFunctionName() {
         return this.functionName;
-    }
-
-    public PublishDcdnStagingConfigToProductionRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
 }

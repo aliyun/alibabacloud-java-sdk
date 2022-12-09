@@ -10,9 +10,6 @@ public class CommitStagingRoutineCodeRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     public static CommitStagingRoutineCodeRequest build(java.util.Map<String, ?> map) throws Exception {
         CommitStagingRoutineCodeRequest self = new CommitStagingRoutineCodeRequest();
         return TeaModel.build(map, self);
@@ -32,14 +29,6 @@ public class CommitStagingRoutineCodeRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
-    }
-
-    public CommitStagingRoutineCodeRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
 }
