@@ -110,6 +110,9 @@ public class QueryItemGuideRetailPriceResponseBody extends TeaModel {
         @NameInMap("LmItemId")
         public String lmItemId;
 
+        @NameInMap("LowGuideRetailPrice")
+        public Long lowGuideRetailPrice;
+
         @NameInMap("PriceCent")
         public Long priceCent;
 
@@ -160,6 +163,14 @@ public class QueryItemGuideRetailPriceResponseBody extends TeaModel {
         }
         public String getLmItemId() {
             return this.lmItemId;
+        }
+
+        public QueryItemGuideRetailPriceResponseBodyModelSkuModels setLowGuideRetailPrice(Long lowGuideRetailPrice) {
+            this.lowGuideRetailPrice = lowGuideRetailPrice;
+            return this;
+        }
+        public Long getLowGuideRetailPrice() {
+            return this.lowGuideRetailPrice;
         }
 
         public QueryItemGuideRetailPriceResponseBodyModelSkuModels setPriceCent(Long priceCent) {
@@ -220,6 +231,9 @@ public class QueryItemGuideRetailPriceResponseBody extends TeaModel {
         @NameInMap("LmItemId")
         public String lmItemId;
 
+        @NameInMap("LowGuideRetailPriceScope")
+        public String lowGuideRetailPriceScope;
+
         @NameInMap("ReservedPrice")
         public Long reservedPrice;
 
@@ -272,6 +286,14 @@ public class QueryItemGuideRetailPriceResponseBody extends TeaModel {
         }
         public String getLmItemId() {
             return this.lmItemId;
+        }
+
+        public QueryItemGuideRetailPriceResponseBodyModel setLowGuideRetailPriceScope(String lowGuideRetailPriceScope) {
+            this.lowGuideRetailPriceScope = lowGuideRetailPriceScope;
+            return this;
+        }
+        public String getLowGuideRetailPriceScope() {
+            return this.lowGuideRetailPriceScope;
         }
 
         public QueryItemGuideRetailPriceResponseBodyModel setReservedPrice(Long reservedPrice) {
