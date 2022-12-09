@@ -13,9 +13,6 @@ public class DeleteCdnDomainRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     public static DeleteCdnDomainRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteCdnDomainRequest self = new DeleteCdnDomainRequest();
         return TeaModel.build(map, self);
@@ -43,14 +40,6 @@ public class DeleteCdnDomainRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    public DeleteCdnDomainRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
 }
