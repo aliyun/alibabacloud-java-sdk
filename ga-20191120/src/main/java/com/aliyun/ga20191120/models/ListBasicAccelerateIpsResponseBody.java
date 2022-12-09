@@ -64,113 +64,6 @@ public class ListBasicAccelerateIpsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public static class ListBasicAccelerateIpsResponseBodyAccelerateIpsEndpoint extends TeaModel {
-        @NameInMap("EndPointId")
-        public String endPointId;
-
-        @NameInMap("EndpointAddress")
-        public String endpointAddress;
-
-        @NameInMap("EndpointGroupId")
-        public String endpointGroupId;
-
-        @NameInMap("EndpointSubAddress")
-        public String endpointSubAddress;
-
-        @NameInMap("EndpointSubAddressType")
-        public String endpointSubAddressType;
-
-        @NameInMap("EndpointType")
-        public String endpointType;
-
-        @NameInMap("EndpointZoneId")
-        public String endpointZoneId;
-
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("State")
-        public String state;
-
-        public static ListBasicAccelerateIpsResponseBodyAccelerateIpsEndpoint build(java.util.Map<String, ?> map) throws Exception {
-            ListBasicAccelerateIpsResponseBodyAccelerateIpsEndpoint self = new ListBasicAccelerateIpsResponseBodyAccelerateIpsEndpoint();
-            return TeaModel.build(map, self);
-        }
-
-        public ListBasicAccelerateIpsResponseBodyAccelerateIpsEndpoint setEndPointId(String endPointId) {
-            this.endPointId = endPointId;
-            return this;
-        }
-        public String getEndPointId() {
-            return this.endPointId;
-        }
-
-        public ListBasicAccelerateIpsResponseBodyAccelerateIpsEndpoint setEndpointAddress(String endpointAddress) {
-            this.endpointAddress = endpointAddress;
-            return this;
-        }
-        public String getEndpointAddress() {
-            return this.endpointAddress;
-        }
-
-        public ListBasicAccelerateIpsResponseBodyAccelerateIpsEndpoint setEndpointGroupId(String endpointGroupId) {
-            this.endpointGroupId = endpointGroupId;
-            return this;
-        }
-        public String getEndpointGroupId() {
-            return this.endpointGroupId;
-        }
-
-        public ListBasicAccelerateIpsResponseBodyAccelerateIpsEndpoint setEndpointSubAddress(String endpointSubAddress) {
-            this.endpointSubAddress = endpointSubAddress;
-            return this;
-        }
-        public String getEndpointSubAddress() {
-            return this.endpointSubAddress;
-        }
-
-        public ListBasicAccelerateIpsResponseBodyAccelerateIpsEndpoint setEndpointSubAddressType(String endpointSubAddressType) {
-            this.endpointSubAddressType = endpointSubAddressType;
-            return this;
-        }
-        public String getEndpointSubAddressType() {
-            return this.endpointSubAddressType;
-        }
-
-        public ListBasicAccelerateIpsResponseBodyAccelerateIpsEndpoint setEndpointType(String endpointType) {
-            this.endpointType = endpointType;
-            return this;
-        }
-        public String getEndpointType() {
-            return this.endpointType;
-        }
-
-        public ListBasicAccelerateIpsResponseBodyAccelerateIpsEndpoint setEndpointZoneId(String endpointZoneId) {
-            this.endpointZoneId = endpointZoneId;
-            return this;
-        }
-        public String getEndpointZoneId() {
-            return this.endpointZoneId;
-        }
-
-        public ListBasicAccelerateIpsResponseBodyAccelerateIpsEndpoint setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public ListBasicAccelerateIpsResponseBodyAccelerateIpsEndpoint setState(String state) {
-            this.state = state;
-            return this;
-        }
-        public String getState() {
-            return this.state;
-        }
-
-    }
-
     public static class ListBasicAccelerateIpsResponseBodyAccelerateIps extends TeaModel {
         @NameInMap("AccelerateIpAddress")
         public String accelerateIpAddress;
@@ -180,9 +73,6 @@ public class ListBasicAccelerateIpsResponseBody extends TeaModel {
 
         @NameInMap("AcceleratorId")
         public String acceleratorId;
-
-        @NameInMap("Endpoint")
-        public ListBasicAccelerateIpsResponseBodyAccelerateIpsEndpoint endpoint;
 
         @NameInMap("IpSetId")
         public String ipSetId;
@@ -217,14 +107,6 @@ public class ListBasicAccelerateIpsResponseBody extends TeaModel {
         }
         public String getAcceleratorId() {
             return this.acceleratorId;
-        }
-
-        public ListBasicAccelerateIpsResponseBodyAccelerateIps setEndpoint(ListBasicAccelerateIpsResponseBodyAccelerateIpsEndpoint endpoint) {
-            this.endpoint = endpoint;
-            return this;
-        }
-        public ListBasicAccelerateIpsResponseBodyAccelerateIpsEndpoint getEndpoint() {
-            return this.endpoint;
         }
 
         public ListBasicAccelerateIpsResponseBodyAccelerateIps setIpSetId(String ipSetId) {

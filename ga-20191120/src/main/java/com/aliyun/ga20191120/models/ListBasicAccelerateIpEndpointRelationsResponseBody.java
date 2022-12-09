@@ -68,6 +68,9 @@ public class ListBasicAccelerateIpEndpointRelationsResponseBody extends TeaModel
         @NameInMap("AccelerateIpId")
         public String accelerateIpId;
 
+        @NameInMap("AcceleratorId")
+        public String acceleratorId;
+
         @NameInMap("EndpointAddress")
         public String endpointAddress;
 
@@ -106,6 +109,14 @@ public class ListBasicAccelerateIpEndpointRelationsResponseBody extends TeaModel
         }
         public String getAccelerateIpId() {
             return this.accelerateIpId;
+        }
+
+        public ListBasicAccelerateIpEndpointRelationsResponseBodyAccelerateIpEndpointRelations setAcceleratorId(String acceleratorId) {
+            this.acceleratorId = acceleratorId;
+            return this;
+        }
+        public String getAcceleratorId() {
+            return this.acceleratorId;
         }
 
         public ListBasicAccelerateIpEndpointRelationsResponseBodyAccelerateIpEndpointRelations setEndpointAddress(String endpointAddress) {
