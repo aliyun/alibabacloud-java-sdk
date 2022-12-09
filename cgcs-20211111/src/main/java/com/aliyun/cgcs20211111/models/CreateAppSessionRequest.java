@@ -4,6 +4,9 @@ package com.aliyun.cgcs20211111.models;
 import com.aliyun.tea.*;
 
 public class CreateAppSessionRequest extends TeaModel {
+    @NameInMap("AdapterFileId")
+    public String adapterFileId;
+
     @NameInMap("AppId")
     public String appId;
 
@@ -37,6 +40,14 @@ public class CreateAppSessionRequest extends TeaModel {
     public static CreateAppSessionRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAppSessionRequest self = new CreateAppSessionRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateAppSessionRequest setAdapterFileId(String adapterFileId) {
+        this.adapterFileId = adapterFileId;
+        return this;
+    }
+    public String getAdapterFileId() {
+        return this.adapterFileId;
     }
 
     public CreateAppSessionRequest setAppId(String appId) {

@@ -74,6 +74,9 @@ public class GetCapacityResponseBody extends TeaModel {
         @NameInMap("DistrictId")
         public String districtId;
 
+        @NameInMap("ProjectId")
+        public String projectId;
+
         @NameInMap("SessionCapacity")
         public Integer sessionCapacity;
 
@@ -104,6 +107,14 @@ public class GetCapacityResponseBody extends TeaModel {
         }
         public String getDistrictId() {
             return this.districtId;
+        }
+
+        public GetCapacityResponseBodyCapacities setProjectId(String projectId) {
+            this.projectId = projectId;
+            return this;
+        }
+        public String getProjectId() {
+            return this.projectId;
         }
 
         public GetCapacityResponseBodyCapacities setSessionCapacity(Integer sessionCapacity) {
