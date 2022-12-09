@@ -185,6 +185,159 @@ public class Body extends TeaModel {
         return this.url;
     }
 
+    public static class CancelByMsgIdResponseBodyData extends TeaModel {
+        @NameInMap("MsgId")
+        public String msgId;
+
+        public static CancelByMsgIdResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            CancelByMsgIdResponseBodyData self = new CancelByMsgIdResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public CancelByMsgIdResponseBodyData setMsgId(String msgId) {
+            this.msgId = msgId;
+            return this;
+        }
+        public String getMsgId() {
+            return this.msgId;
+        }
+
+    }
+
+    public static class QueryMsgStatResponseBodyData extends TeaModel {
+        @NameInMap("Accept")
+        public Long accept;
+
+        @NameInMap("Arrive")
+        public Long arrive;
+
+        @NameInMap("ClosePush")
+        public Long closePush;
+
+        @NameInMap("Dismiss")
+        public Long dismiss;
+
+        @NameInMap("MsgId")
+        public String msgId;
+
+        @NameInMap("Open")
+        public Long open;
+
+        @NameInMap("Sent")
+        public Long sent;
+
+        @NameInMap("Status")
+        public Integer status;
+
+        public static QueryMsgStatResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            QueryMsgStatResponseBodyData self = new QueryMsgStatResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryMsgStatResponseBodyData setAccept(Long accept) {
+            this.accept = accept;
+            return this;
+        }
+        public Long getAccept() {
+            return this.accept;
+        }
+
+        public QueryMsgStatResponseBodyData setArrive(Long arrive) {
+            this.arrive = arrive;
+            return this;
+        }
+        public Long getArrive() {
+            return this.arrive;
+        }
+
+        public QueryMsgStatResponseBodyData setClosePush(Long closePush) {
+            this.closePush = closePush;
+            return this;
+        }
+        public Long getClosePush() {
+            return this.closePush;
+        }
+
+        public QueryMsgStatResponseBodyData setDismiss(Long dismiss) {
+            this.dismiss = dismiss;
+            return this;
+        }
+        public Long getDismiss() {
+            return this.dismiss;
+        }
+
+        public QueryMsgStatResponseBodyData setMsgId(String msgId) {
+            this.msgId = msgId;
+            return this;
+        }
+        public String getMsgId() {
+            return this.msgId;
+        }
+
+        public QueryMsgStatResponseBodyData setOpen(Long open) {
+            this.open = open;
+            return this;
+        }
+        public Long getOpen() {
+            return this.open;
+        }
+
+        public QueryMsgStatResponseBodyData setSent(Long sent) {
+            this.sent = sent;
+            return this;
+        }
+        public Long getSent() {
+            return this.sent;
+        }
+
+        public QueryMsgStatResponseBodyData setStatus(Integer status) {
+            this.status = status;
+            return this;
+        }
+        public Integer getStatus() {
+            return this.status;
+        }
+
+    }
+
+    public static class SendByAliasResponseBodyData extends TeaModel {
+        @NameInMap("MsgId")
+        public String msgId;
+
+        public static SendByAliasResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            SendByAliasResponseBodyData self = new SendByAliasResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public SendByAliasResponseBodyData setMsgId(String msgId) {
+            this.msgId = msgId;
+            return this;
+        }
+        public String getMsgId() {
+            return this.msgId;
+        }
+
+    }
+
+    public static class SendByAliasFileIdResponseBodyData extends TeaModel {
+        @NameInMap("MsgId")
+        public String msgId;
+
+        public static SendByAliasFileIdResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            SendByAliasFileIdResponseBodyData self = new SendByAliasFileIdResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public SendByAliasFileIdResponseBodyData setMsgId(String msgId) {
+            this.msgId = msgId;
+            return this;
+        }
+        public String getMsgId() {
+            return this.msgId;
+        }
+
+    }
+
     public static class SendByAppResponseBodyData extends TeaModel {
         @NameInMap("MsgId")
         public String msgId;
@@ -219,6 +372,63 @@ public class Body extends TeaModel {
         }
         public String getMsgId() {
             return this.msgId;
+        }
+
+    }
+
+    public static class SendByDeviceFileIdResponseBodyData extends TeaModel {
+        @NameInMap("MsgId")
+        public String msgId;
+
+        public static SendByDeviceFileIdResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            SendByDeviceFileIdResponseBodyData self = new SendByDeviceFileIdResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public SendByDeviceFileIdResponseBodyData setMsgId(String msgId) {
+            this.msgId = msgId;
+            return this;
+        }
+        public String getMsgId() {
+            return this.msgId;
+        }
+
+    }
+
+    public static class SendByFilterResponseBodyData extends TeaModel {
+        @NameInMap("MsgId")
+        public String msgId;
+
+        public static SendByFilterResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            SendByFilterResponseBodyData self = new SendByFilterResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public SendByFilterResponseBodyData setMsgId(String msgId) {
+            this.msgId = msgId;
+            return this;
+        }
+        public String getMsgId() {
+            return this.msgId;
+        }
+
+    }
+
+    public static class UploadDeviceResponseBodyData extends TeaModel {
+        @NameInMap("FileId")
+        public String fileId;
+
+        public static UploadDeviceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            UploadDeviceResponseBodyData self = new UploadDeviceResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public UploadDeviceResponseBodyData setFileId(String fileId) {
+            this.fileId = fileId;
+            return this;
+        }
+        public String getFileId() {
+            return this.fileId;
         }
 
     }
