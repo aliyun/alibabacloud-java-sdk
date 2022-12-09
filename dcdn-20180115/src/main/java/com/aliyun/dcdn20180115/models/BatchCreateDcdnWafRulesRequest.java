@@ -4,9 +4,6 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class BatchCreateDcdnWafRulesRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("PolicyId")
     public Long policyId;
 
@@ -16,14 +13,6 @@ public class BatchCreateDcdnWafRulesRequest extends TeaModel {
     public static BatchCreateDcdnWafRulesRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchCreateDcdnWafRulesRequest self = new BatchCreateDcdnWafRulesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public BatchCreateDcdnWafRulesRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public BatchCreateDcdnWafRulesRequest setPolicyId(Long policyId) {

@@ -10,9 +10,6 @@ public class DescribeDcdnTopDomainsByFlowRequest extends TeaModel {
     @NameInMap("Limit")
     public Long limit;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("StartTime")
     public String startTime;
 
@@ -35,14 +32,6 @@ public class DescribeDcdnTopDomainsByFlowRequest extends TeaModel {
     }
     public Long getLimit() {
         return this.limit;
-    }
-
-    public DescribeDcdnTopDomainsByFlowRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeDcdnTopDomainsByFlowRequest setStartTime(String startTime) {

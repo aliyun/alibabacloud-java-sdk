@@ -16,9 +16,6 @@ public class DescribeDcdnUserSecDropByMinuteRequest extends TeaModel {
     @NameInMap("Object")
     public String object;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("PageNumber")
     public Long pageNumber;
 
@@ -69,14 +66,6 @@ public class DescribeDcdnUserSecDropByMinuteRequest extends TeaModel {
     }
     public String getObject() {
         return this.object;
-    }
-
-    public DescribeDcdnUserSecDropByMinuteRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeDcdnUserSecDropByMinuteRequest setPageNumber(Long pageNumber) {

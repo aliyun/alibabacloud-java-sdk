@@ -10,9 +10,6 @@ public class SetDcdnDomainStagingConfigRequest extends TeaModel {
     @NameInMap("Functions")
     public String functions;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     public static SetDcdnDomainStagingConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         SetDcdnDomainStagingConfigRequest self = new SetDcdnDomainStagingConfigRequest();
         return TeaModel.build(map, self);
@@ -32,14 +29,6 @@ public class SetDcdnDomainStagingConfigRequest extends TeaModel {
     }
     public String getFunctions() {
         return this.functions;
-    }
-
-    public SetDcdnDomainStagingConfigRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
 }

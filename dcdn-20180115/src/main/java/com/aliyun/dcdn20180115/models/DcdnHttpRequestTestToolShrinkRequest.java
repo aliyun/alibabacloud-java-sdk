@@ -19,9 +19,6 @@ public class DcdnHttpRequestTestToolShrinkRequest extends TeaModel {
     @NameInMap("Method")
     public String method;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("ProxyIp")
     public String proxyIp;
 
@@ -74,14 +71,6 @@ public class DcdnHttpRequestTestToolShrinkRequest extends TeaModel {
     }
     public String getMethod() {
         return this.method;
-    }
-
-    public DcdnHttpRequestTestToolShrinkRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DcdnHttpRequestTestToolShrinkRequest setProxyIp(String proxyIp) {

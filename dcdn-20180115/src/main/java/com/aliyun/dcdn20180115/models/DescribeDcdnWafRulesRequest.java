@@ -4,9 +4,6 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnWafRulesRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
@@ -19,14 +16,6 @@ public class DescribeDcdnWafRulesRequest extends TeaModel {
     public static DescribeDcdnWafRulesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDcdnWafRulesRequest self = new DescribeDcdnWafRulesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDcdnWafRulesRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeDcdnWafRulesRequest setPageNumber(Integer pageNumber) {

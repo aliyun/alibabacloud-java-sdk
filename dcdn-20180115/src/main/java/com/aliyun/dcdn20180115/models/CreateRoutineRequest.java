@@ -13,9 +13,6 @@ public class CreateRoutineRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     public static CreateRoutineRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateRoutineRequest self = new CreateRoutineRequest();
         return TeaModel.build(map, self);
@@ -43,14 +40,6 @@ public class CreateRoutineRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
-    }
-
-    public CreateRoutineRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
 }

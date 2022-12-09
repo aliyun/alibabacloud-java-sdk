@@ -7,9 +7,6 @@ public class UntagDcdnResourcesRequest extends TeaModel {
     @NameInMap("All")
     public Boolean all;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
@@ -30,14 +27,6 @@ public class UntagDcdnResourcesRequest extends TeaModel {
     }
     public Boolean getAll() {
         return this.all;
-    }
-
-    public UntagDcdnResourcesRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public UntagDcdnResourcesRequest setResourceId(java.util.List<String> resourceId) {

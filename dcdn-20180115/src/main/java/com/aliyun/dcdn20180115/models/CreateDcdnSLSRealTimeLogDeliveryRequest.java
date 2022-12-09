@@ -13,9 +13,6 @@ public class CreateDcdnSLSRealTimeLogDeliveryRequest extends TeaModel {
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("ProjectName")
     public String projectName;
 
@@ -58,14 +55,6 @@ public class CreateDcdnSLSRealTimeLogDeliveryRequest extends TeaModel {
     }
     public String getDomainName() {
         return this.domainName;
-    }
-
-    public CreateDcdnSLSRealTimeLogDeliveryRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public CreateDcdnSLSRealTimeLogDeliveryRequest setProjectName(String projectName) {

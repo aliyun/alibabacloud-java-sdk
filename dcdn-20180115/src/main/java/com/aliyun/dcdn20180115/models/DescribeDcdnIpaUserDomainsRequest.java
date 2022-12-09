@@ -34,9 +34,6 @@ public class DescribeDcdnIpaUserDomainsRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     @NameInMap("Tag")
     public java.util.List<DescribeDcdnIpaUserDomainsRequestTag> tag;
 
@@ -123,14 +120,6 @@ public class DescribeDcdnIpaUserDomainsRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
-    }
-
-    public DescribeDcdnIpaUserDomainsRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
     public DescribeDcdnIpaUserDomainsRequest setTag(java.util.List<DescribeDcdnIpaUserDomainsRequestTag> tag) {

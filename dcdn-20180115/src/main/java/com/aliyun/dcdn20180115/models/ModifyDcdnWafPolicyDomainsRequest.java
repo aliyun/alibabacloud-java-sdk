@@ -7,9 +7,6 @@ public class ModifyDcdnWafPolicyDomainsRequest extends TeaModel {
     @NameInMap("BindDomains")
     public String bindDomains;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("PolicyId")
     public Long policyId;
 
@@ -27,14 +24,6 @@ public class ModifyDcdnWafPolicyDomainsRequest extends TeaModel {
     }
     public String getBindDomains() {
         return this.bindDomains;
-    }
-
-    public ModifyDcdnWafPolicyDomainsRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public ModifyDcdnWafPolicyDomainsRequest setPolicyId(Long policyId) {

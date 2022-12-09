@@ -10,9 +10,6 @@ public class ListDcdnRealTimeDeliveryProjectRequest extends TeaModel {
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
@@ -38,14 +35,6 @@ public class ListDcdnRealTimeDeliveryProjectRequest extends TeaModel {
     }
     public String getDomainName() {
         return this.domainName;
-    }
-
-    public ListDcdnRealTimeDeliveryProjectRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public ListDcdnRealTimeDeliveryProjectRequest setPageNumber(Integer pageNumber) {

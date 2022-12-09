@@ -7,9 +7,6 @@ public class DeleteRoutineCodeRevisionRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("SelectCodeRevision")
     public String selectCodeRevision;
 
@@ -24,14 +21,6 @@ public class DeleteRoutineCodeRevisionRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
-    }
-
-    public DeleteRoutineCodeRevisionRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DeleteRoutineCodeRevisionRequest setSelectCodeRevision(String selectCodeRevision) {

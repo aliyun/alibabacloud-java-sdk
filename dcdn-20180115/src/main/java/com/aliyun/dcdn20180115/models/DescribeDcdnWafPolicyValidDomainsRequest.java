@@ -10,9 +10,6 @@ public class DescribeDcdnWafPolicyValidDomainsRequest extends TeaModel {
     @NameInMap("DomainNameLike")
     public String domainNameLike;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
@@ -38,14 +35,6 @@ public class DescribeDcdnWafPolicyValidDomainsRequest extends TeaModel {
     }
     public String getDomainNameLike() {
         return this.domainNameLike;
-    }
-
-    public DescribeDcdnWafPolicyValidDomainsRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeDcdnWafPolicyValidDomainsRequest setPageNumber(Integer pageNumber) {
