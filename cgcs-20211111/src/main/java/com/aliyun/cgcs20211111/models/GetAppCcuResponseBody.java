@@ -46,6 +46,9 @@ public class GetAppCcuResponseBody extends TeaModel {
         @NameInMap("AppId")
         public String appId;
 
+        @NameInMap("AppVersion")
+        public String appVersion;
+
         @NameInMap("Ccu")
         public String ccu;
 
@@ -66,6 +69,14 @@ public class GetAppCcuResponseBody extends TeaModel {
         }
         public String getAppId() {
             return this.appId;
+        }
+
+        public GetAppCcuResponseBodyDetailList setAppVersion(String appVersion) {
+            this.appVersion = appVersion;
+            return this;
+        }
+        public String getAppVersion() {
+            return this.appVersion;
         }
 
         public GetAppCcuResponseBodyDetailList setCcu(String ccu) {

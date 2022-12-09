@@ -5,18 +5,18 @@ import com.aliyun.tea.*;
 
 public class BatchCheckSessionRequest extends TeaModel {
     @NameInMap("Records")
-    public BatchCheckSessionRequestRecords records;
+    public java.util.List<BatchCheckSessionRequestRecords> records;
 
     public static BatchCheckSessionRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchCheckSessionRequest self = new BatchCheckSessionRequest();
         return TeaModel.build(map, self);
     }
 
-    public BatchCheckSessionRequest setRecords(BatchCheckSessionRequestRecords records) {
+    public BatchCheckSessionRequest setRecords(java.util.List<BatchCheckSessionRequestRecords> records) {
         this.records = records;
         return this;
     }
-    public BatchCheckSessionRequestRecords getRecords() {
+    public java.util.List<BatchCheckSessionRequestRecords> getRecords() {
         return this.records;
     }
 
@@ -28,7 +28,7 @@ public class BatchCheckSessionRequest extends TeaModel {
         public String platformSessionId;
 
         @NameInMap("ReferenceInfo")
-        public java.util.Map<String, String> referenceInfo;
+        public java.util.Map<String, ?> referenceInfo;
 
         @NameInMap("Type")
         public String type;
@@ -54,11 +54,11 @@ public class BatchCheckSessionRequest extends TeaModel {
             return this.platformSessionId;
         }
 
-        public BatchCheckSessionRequestRecords setReferenceInfo(java.util.Map<String, String> referenceInfo) {
+        public BatchCheckSessionRequestRecords setReferenceInfo(java.util.Map<String, ?> referenceInfo) {
             this.referenceInfo = referenceInfo;
             return this;
         }
-        public java.util.Map<String, String> getReferenceInfo() {
+        public java.util.Map<String, ?> getReferenceInfo() {
             return this.referenceInfo;
         }
 
