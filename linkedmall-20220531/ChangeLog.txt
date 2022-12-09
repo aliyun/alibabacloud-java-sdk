@@ -1,3 +1,6 @@
+2022-12-09 Version: 1.0.13
+- Modify QueryItemGuideRetailPrice.
+
 2022-11-29 Version: 1.0.12
 - ApplyCreateDistributionOrder add field distributionOutTradeId.
 
