@@ -18606,6 +18606,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ClientToken", request.clientToken);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.customerGatewayId)) {
+            query.put("CustomerGatewayId", request.customerGatewayId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.effectImmediately)) {
             query.put("EffectImmediately", request.effectImmediately);
         }

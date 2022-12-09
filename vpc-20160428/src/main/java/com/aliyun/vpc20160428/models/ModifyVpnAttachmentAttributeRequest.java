@@ -13,6 +13,9 @@ public class ModifyVpnAttachmentAttributeRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("CustomerGatewayId")
+    public String customerGatewayId;
+
     @NameInMap("EffectImmediately")
     public Boolean effectImmediately;
 
@@ -88,6 +91,14 @@ public class ModifyVpnAttachmentAttributeRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public ModifyVpnAttachmentAttributeRequest setCustomerGatewayId(String customerGatewayId) {
+        this.customerGatewayId = customerGatewayId;
+        return this;
+    }
+    public String getCustomerGatewayId() {
+        return this.customerGatewayId;
     }
 
     public ModifyVpnAttachmentAttributeRequest setEffectImmediately(Boolean effectImmediately) {

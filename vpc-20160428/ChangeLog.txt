@@ -1,3 +1,12 @@
+2022-12-09 Version: 3.2.11
+- Add error code.
+- Fix createVBR error message.
+- Support vbrCrossCen grant.
+- Fix bugs.
+- Add new errorcode and error message in some API.
+- Modify some error message in some error code.
+- Modify parameter CustomerGatewayId in ModifyVpnAttachmentAttribute.
+
 2022-12-07 Version: 3.2.10
 - Supported ShareType for ListPublicIpAddressPools.
 - Supported OwnerId for ListPublicIpAddressPools.
