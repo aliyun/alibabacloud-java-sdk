@@ -1,3 +1,6 @@
+2022-12-10 Version: 1.0.6
+- Generated java 2021-01-01 for Ft.
+
 2022-07-30 Version: 1.0.5
 - AMP Version Change.
 
