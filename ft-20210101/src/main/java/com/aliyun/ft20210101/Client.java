@@ -3,16 +3,10 @@ package com.aliyun.ft20210101;
 
 import com.aliyun.tea.*;
 import com.aliyun.ft20210101.models.*;
-import com.aliyun.teautil.*;
-import com.aliyun.teautil.models.*;
-import com.aliyun.teaopenapi.*;
-import com.aliyun.teaopenapi.models.*;
-import com.aliyun.openapiutil.*;
-import com.aliyun.endpointutil.*;
 
 public class Client extends com.aliyun.teaopenapi.Client {
 
-    public Client(Config config) throws Exception {
+    public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
@@ -83,9 +77,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
-    public DataRateLimitTestResponse dataRateLimitTestWithOptions(RuntimeOptions runtime) throws Exception {
-        OpenApiRequest req = new OpenApiRequest();
-        Params params = Params.build(TeaConverter.buildMap(
+    public DataRateLimitTestResponse dataRateLimitTestWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DataRateLimitTest"),
             new TeaPair("version", "2021-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -100,13 +94,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public DataRateLimitTestResponse dataRateLimitTest() throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.dataRateLimitTestWithOptions(runtime);
     }
 
-    public NormalRpcHsfApiResponse normalRpcHsfApiWithOptions(RuntimeOptions runtime) throws Exception {
-        OpenApiRequest req = new OpenApiRequest();
-        Params params = Params.build(TeaConverter.buildMap(
+    public NormalRpcHsfApiResponse normalRpcHsfApiWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "NormalRpcHsfApi"),
             new TeaPair("version", "2021-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -121,13 +115,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public NormalRpcHsfApiResponse normalRpcHsfApi() throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.normalRpcHsfApiWithOptions(runtime);
     }
 
-    public NormalRpcHttpApiResponse normalRpcHttpApiWithOptions(RuntimeOptions runtime) throws Exception {
-        OpenApiRequest req = new OpenApiRequest();
-        Params params = Params.build(TeaConverter.buildMap(
+    public NormalRpcHttpApiResponse normalRpcHttpApiWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "NormalRpcHttpApi"),
             new TeaPair("version", "2021-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -142,11 +136,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public NormalRpcHttpApiResponse normalRpcHttpApi() throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.normalRpcHttpApiWithOptions(runtime);
     }
 
-    public RpcDataUploadResponse rpcDataUploadWithOptions(RpcDataUploadRequest request, RuntimeOptions runtime) throws Exception {
+    public RpcDataUploadResponse rpcDataUploadWithOptions(RpcDataUploadRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.query1)) {
@@ -162,11 +156,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("largeParam", request.largeParam);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "RpcDataUpload"),
             new TeaPair("version", "2021-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -181,21 +175,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public RpcDataUploadResponse rpcDataUpload(RpcDataUploadRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.rpcDataUploadWithOptions(request, runtime);
     }
 
-    public RpcDataUploadAndDownloadResponse rpcDataUploadAndDownloadWithOptions(RpcDataUploadAndDownloadRequest request, RuntimeOptions runtime) throws Exception {
+    public RpcDataUploadAndDownloadResponse rpcDataUploadAndDownloadWithOptions(RpcDataUploadAndDownloadRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.query1)) {
             query.put("query1", request.query1);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "RpcDataUploadAndDownload"),
             new TeaPair("version", "2021-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -210,13 +204,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public RpcDataUploadAndDownloadResponse rpcDataUploadAndDownload(RpcDataUploadAndDownloadRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.rpcDataUploadAndDownloadWithOptions(request, runtime);
     }
 
-    public RpcDataUploadTestResponse rpcDataUploadTestWithOptions(RuntimeOptions runtime) throws Exception {
-        OpenApiRequest req = new OpenApiRequest();
-        Params params = Params.build(TeaConverter.buildMap(
+    public RpcDataUploadTestResponse rpcDataUploadTestWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "RpcDataUploadTest"),
             new TeaPair("version", "2021-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -231,7 +225,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public RpcDataUploadTestResponse rpcDataUploadTest() throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.rpcDataUploadTestWithOptions(runtime);
     }
 }
