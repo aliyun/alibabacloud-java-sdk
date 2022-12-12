@@ -72,6 +72,7 @@ public class DescribeSQLLogsOnSliceResponseBody extends TeaModel {
         @NameInMap("ReturnRowCounts")
         public Long returnRowCounts;
 
+        // Segment ID。
         @NameInMap("SegmentId")
         public String segmentId;
 
