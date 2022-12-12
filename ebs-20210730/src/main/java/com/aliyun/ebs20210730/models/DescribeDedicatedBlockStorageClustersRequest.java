@@ -22,11 +22,23 @@ public class DescribeDedicatedBlockStorageClustersRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("Status")
     public java.util.List<String> status;
+
+    @NameInMap("Tag")
+    public java.util.List<DescribeDedicatedBlockStorageClustersRequestTag> tag;
 
     public static DescribeDedicatedBlockStorageClustersRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDedicatedBlockStorageClustersRequest self = new DescribeDedicatedBlockStorageClustersRequest();
@@ -81,6 +93,22 @@ public class DescribeDedicatedBlockStorageClustersRequest extends TeaModel {
         return this.nextToken;
     }
 
+    public DescribeDedicatedBlockStorageClustersRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeDedicatedBlockStorageClustersRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
     public DescribeDedicatedBlockStorageClustersRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
@@ -89,12 +117,58 @@ public class DescribeDedicatedBlockStorageClustersRequest extends TeaModel {
         return this.regionId;
     }
 
+    public DescribeDedicatedBlockStorageClustersRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public DescribeDedicatedBlockStorageClustersRequest setStatus(java.util.List<String> status) {
         this.status = status;
         return this;
     }
     public java.util.List<String> getStatus() {
         return this.status;
+    }
+
+    public DescribeDedicatedBlockStorageClustersRequest setTag(java.util.List<DescribeDedicatedBlockStorageClustersRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeDedicatedBlockStorageClustersRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class DescribeDedicatedBlockStorageClustersRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeDedicatedBlockStorageClustersRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDedicatedBlockStorageClustersRequestTag self = new DescribeDedicatedBlockStorageClustersRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDedicatedBlockStorageClustersRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeDedicatedBlockStorageClustersRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

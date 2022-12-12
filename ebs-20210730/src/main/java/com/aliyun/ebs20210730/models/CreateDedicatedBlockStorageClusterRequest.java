@@ -19,6 +19,9 @@ public class CreateDedicatedBlockStorageClusterRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("Type")
     public String type;
 
@@ -65,6 +68,14 @@ public class CreateDedicatedBlockStorageClusterRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public CreateDedicatedBlockStorageClusterRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public CreateDedicatedBlockStorageClusterRequest setType(String type) {

@@ -35,6 +35,9 @@ public class DescribeRegionsResponseBody extends TeaModel {
         @NameInMap("LocalName")
         public String localName;
 
+        @NameInMap("ResourceTypes")
+        public java.util.List<String> resourceTypes;
+
         @NameInMap("ZoneId")
         public String zoneId;
 
@@ -49,6 +52,14 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
         public String getLocalName() {
             return this.localName;
+        }
+
+        public DescribeRegionsResponseBodyRegionsZones setResourceTypes(java.util.List<String> resourceTypes) {
+            this.resourceTypes = resourceTypes;
+            return this;
+        }
+        public java.util.List<String> getResourceTypes() {
+            return this.resourceTypes;
         }
 
         public DescribeRegionsResponseBodyRegionsZones setZoneId(String zoneId) {

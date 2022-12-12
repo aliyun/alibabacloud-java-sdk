@@ -10,8 +10,17 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
     @NameInMap("NextToken")
     public String nextToken;
 
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("TotalCount")
+    public Long totalCount;
 
     public static DescribeDedicatedBlockStorageClustersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDedicatedBlockStorageClustersResponseBody self = new DescribeDedicatedBlockStorageClustersResponseBody();
@@ -34,12 +43,36 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
         return this.nextToken;
     }
 
+    public DescribeDedicatedBlockStorageClustersResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeDedicatedBlockStorageClustersResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
     public DescribeDedicatedBlockStorageClustersResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeDedicatedBlockStorageClustersResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
     }
 
     public static class DescribeDedicatedBlockStorageClustersResponseBodyDedicatedBlockStorageClustersDedicatedBlockStorageClusterCapacity extends TeaModel {
@@ -94,6 +127,36 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
 
     }
 
+    public static class DescribeDedicatedBlockStorageClustersResponseBodyDedicatedBlockStorageClustersTags extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static DescribeDedicatedBlockStorageClustersResponseBodyDedicatedBlockStorageClustersTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDedicatedBlockStorageClustersResponseBodyDedicatedBlockStorageClustersTags self = new DescribeDedicatedBlockStorageClustersResponseBodyDedicatedBlockStorageClustersTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDedicatedBlockStorageClustersResponseBodyDedicatedBlockStorageClustersTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public DescribeDedicatedBlockStorageClustersResponseBodyDedicatedBlockStorageClustersTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
     public static class DescribeDedicatedBlockStorageClustersResponseBodyDedicatedBlockStorageClusters extends TeaModel {
         @NameInMap("Category")
         public String category;
@@ -122,11 +185,17 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         @NameInMap("Status")
         public String status;
 
         @NameInMap("SupportedCategory")
         public String supportedCategory;
+
+        @NameInMap("Tags")
+        public java.util.List<DescribeDedicatedBlockStorageClustersResponseBodyDedicatedBlockStorageClustersTags> tags;
 
         @NameInMap("Type")
         public String type;
@@ -211,6 +280,14 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
             return this.regionId;
         }
 
+        public DescribeDedicatedBlockStorageClustersResponseBodyDedicatedBlockStorageClusters setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
         public DescribeDedicatedBlockStorageClustersResponseBodyDedicatedBlockStorageClusters setStatus(String status) {
             this.status = status;
             return this;
@@ -225,6 +302,14 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
         }
         public String getSupportedCategory() {
             return this.supportedCategory;
+        }
+
+        public DescribeDedicatedBlockStorageClustersResponseBodyDedicatedBlockStorageClusters setTags(java.util.List<DescribeDedicatedBlockStorageClustersResponseBodyDedicatedBlockStorageClustersTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<DescribeDedicatedBlockStorageClustersResponseBodyDedicatedBlockStorageClustersTags> getTags() {
+            return this.tags;
         }
 
         public DescribeDedicatedBlockStorageClustersResponseBodyDedicatedBlockStorageClusters setType(String type) {
