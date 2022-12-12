@@ -1276,32 +1276,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateSyntheticTaskShrinkRequest request = new CreateSyntheticTaskShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.commonParam))) {
-            request.commonParamShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.commonParam), "CommonParam", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.commonParam)) {
+            request.commonParamShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.commonParam, "CommonParam", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.download))) {
-            request.downloadShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.download), "Download", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.download)) {
+            request.downloadShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.download, "Download", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.extendInterval))) {
-            request.extendIntervalShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.extendInterval), "ExtendInterval", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.extendInterval)) {
+            request.extendIntervalShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.extendInterval, "ExtendInterval", "json");
         }
 
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.monitorList)) {
             request.monitorListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.monitorList, "MonitorList", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.navigation))) {
-            request.navigationShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.navigation), "Navigation", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.navigation)) {
+            request.navigationShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.navigation, "Navigation", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.net))) {
-            request.netShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.net), "Net", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.net)) {
+            request.netShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.net, "Net", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.protocol))) {
-            request.protocolShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.protocol), "Protocol", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.protocol)) {
+            request.protocolShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.protocol, "Protocol", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
