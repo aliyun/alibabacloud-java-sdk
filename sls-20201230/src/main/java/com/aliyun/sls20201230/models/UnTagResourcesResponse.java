@@ -3,7 +3,7 @@ package com.aliyun.sls20201230.models;
 
 import com.aliyun.tea.*;
 
-public class UnTagResourcesResponse extends TeaModel {
+public class UntagResourcesResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -12,12 +12,12 @@ public class UnTagResourcesResponse extends TeaModel {
     @Validation(required = true)
     public Integer statusCode;
 
-    public static UnTagResourcesResponse build(java.util.Map<String, ?> map) throws Exception {
-        UnTagResourcesResponse self = new UnTagResourcesResponse();
+    public static UntagResourcesResponse build(java.util.Map<String, ?> map) throws Exception {
+        UntagResourcesResponse self = new UntagResourcesResponse();
         return TeaModel.build(map, self);
     }
 
-    public UnTagResourcesResponse setHeaders(java.util.Map<String, String> headers) {
+    public UntagResourcesResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,7 +25,7 @@ public class UnTagResourcesResponse extends TeaModel {
         return this.headers;
     }
 
-    public UnTagResourcesResponse setStatusCode(Integer statusCode) {
+    public UntagResourcesResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
