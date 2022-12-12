@@ -13,6 +13,7 @@ public class ModifyDBInstanceNetworkTypeRequest extends TeaModel {
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
 
+    // VPC ID。
     @NameInMap("VPCId")
     public String VPCId;
 

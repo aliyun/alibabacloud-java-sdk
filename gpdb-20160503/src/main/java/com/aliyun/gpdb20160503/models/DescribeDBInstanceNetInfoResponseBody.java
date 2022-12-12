@@ -58,6 +58,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         @NameInMap("Port")
         public String port;
 
+        // VPC ID。
         @NameInMap("VPCId")
         public String VPCId;
 

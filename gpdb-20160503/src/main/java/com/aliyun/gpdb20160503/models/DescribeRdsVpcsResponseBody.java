@@ -50,6 +50,7 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        // vSwitch ID。
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
@@ -155,6 +156,7 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
         @NameInMap("VSwitchs")
         public java.util.List<DescribeRdsVpcsResponseBodyVpcsVpcVSwitchs> vSwitchs;
 
+        // VPC ID。
         @NameInMap("VpcId")
         public String vpcId;
 

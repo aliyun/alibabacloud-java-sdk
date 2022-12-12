@@ -19,6 +19,7 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // SQL ID。
     @NameInMap("SQLId")
     public Long SQLId;
 

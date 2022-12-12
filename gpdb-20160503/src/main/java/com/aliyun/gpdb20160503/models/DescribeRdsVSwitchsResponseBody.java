@@ -59,6 +59,7 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        // vSwitch ID。
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
