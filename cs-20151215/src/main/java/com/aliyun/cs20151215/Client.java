@@ -59,12 +59,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
-    public AttachInstancesResponse attachInstances(String ClusterId, AttachInstancesRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.attachInstancesWithOptions(ClusterId, request, headers, runtime);
-    }
-
     public AttachInstancesResponse attachInstancesWithOptions(String ClusterId, AttachInstancesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -108,7 +102,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("rds_instances", request.rdsInstances);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.runtime))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.runtime)) {
             body.put("runtime", request.runtime);
         }
 
@@ -138,10 +132,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AttachInstancesResponse());
     }
 
-    public CancelClusterUpgradeResponse cancelClusterUpgrade(String ClusterId) throws Exception {
+    public AttachInstancesResponse attachInstances(String ClusterId, AttachInstancesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.cancelClusterUpgradeWithOptions(ClusterId, headers, runtime);
+        return this.attachInstancesWithOptions(ClusterId, request, headers, runtime);
     }
 
     public CancelClusterUpgradeResponse cancelClusterUpgradeWithOptions(String ClusterId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -162,10 +156,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CancelClusterUpgradeResponse());
     }
 
-    public CancelComponentUpgradeResponse cancelComponentUpgrade(String clusterId, String componentId) throws Exception {
+    public CancelClusterUpgradeResponse cancelClusterUpgrade(String ClusterId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.cancelComponentUpgradeWithOptions(clusterId, componentId, headers, runtime);
+        return this.cancelClusterUpgradeWithOptions(ClusterId, headers, runtime);
     }
 
     public CancelComponentUpgradeResponse cancelComponentUpgradeWithOptions(String clusterId, String componentId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -186,10 +180,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CancelComponentUpgradeResponse());
     }
 
-    public CancelTaskResponse cancelTask(String taskId) throws Exception {
+    public CancelComponentUpgradeResponse cancelComponentUpgrade(String clusterId, String componentId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.cancelTaskWithOptions(taskId, headers, runtime);
+        return this.cancelComponentUpgradeWithOptions(clusterId, componentId, headers, runtime);
     }
 
     public CancelTaskResponse cancelTaskWithOptions(String taskId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -210,10 +204,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CancelTaskResponse());
     }
 
-    public CancelWorkflowResponse cancelWorkflow(String workflowName, CancelWorkflowRequest request) throws Exception {
+    public CancelTaskResponse cancelTask(String taskId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.cancelWorkflowWithOptions(workflowName, request, headers, runtime);
+        return this.cancelTaskWithOptions(taskId, headers, runtime);
     }
 
     public CancelWorkflowResponse cancelWorkflowWithOptions(String workflowName, CancelWorkflowRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -241,10 +235,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CancelWorkflowResponse());
     }
 
-    public CreateAutoscalingConfigResponse createAutoscalingConfig(String ClusterId, CreateAutoscalingConfigRequest request) throws Exception {
+    public CancelWorkflowResponse cancelWorkflow(String workflowName, CancelWorkflowRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.createAutoscalingConfigWithOptions(ClusterId, request, headers, runtime);
+        return this.cancelWorkflowWithOptions(workflowName, request, headers, runtime);
     }
 
     public CreateAutoscalingConfigResponse createAutoscalingConfigWithOptions(String ClusterId, CreateAutoscalingConfigRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -296,10 +290,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAutoscalingConfigResponse());
     }
 
-    public CreateClusterResponse createCluster(CreateClusterRequest request) throws Exception {
+    public CreateAutoscalingConfigResponse createAutoscalingConfig(String ClusterId, CreateAutoscalingConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.createClusterWithOptions(request, headers, runtime);
+        return this.createAutoscalingConfigWithOptions(ClusterId, request, headers, runtime);
     }
 
     public CreateClusterResponse createClusterWithOptions(CreateClusterRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -541,7 +535,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("resource_group_id", request.resourceGroupId);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.runtime))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.runtime)) {
             body.put("runtime", request.runtime);
         }
 
@@ -675,16 +669,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateClusterResponse());
     }
 
-    public CreateClusterNodePoolResponse createClusterNodePool(String ClusterId, CreateClusterNodePoolRequest request) throws Exception {
+    public CreateClusterResponse createCluster(CreateClusterRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.createClusterNodePoolWithOptions(ClusterId, request, headers, runtime);
+        return this.createClusterWithOptions(request, headers, runtime);
     }
 
     public CreateClusterNodePoolResponse createClusterNodePoolWithOptions(String ClusterId, CreateClusterNodePoolRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.autoScaling))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.autoScaling)) {
             body.put("auto_scaling", request.autoScaling);
         }
 
@@ -692,7 +686,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("count", request.count);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.interconnectConfig))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.interconnectConfig)) {
             body.put("interconnect_config", request.interconnectConfig);
         }
 
@@ -700,11 +694,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("interconnect_mode", request.interconnectMode);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.kubernetesConfig))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.kubernetesConfig)) {
             body.put("kubernetes_config", request.kubernetesConfig);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.management))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.management)) {
             body.put("management", request.management);
         }
 
@@ -712,15 +706,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("max_nodes", request.maxNodes);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.nodepoolInfo))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.nodepoolInfo)) {
             body.put("nodepool_info", request.nodepoolInfo);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.scalingGroup))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.scalingGroup)) {
             body.put("scaling_group", request.scalingGroup);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.teeConfig))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.teeConfig)) {
             body.put("tee_config", request.teeConfig);
         }
 
@@ -742,10 +736,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateClusterNodePoolResponse());
     }
 
-    public CreateEdgeMachineResponse createEdgeMachine(CreateEdgeMachineRequest request) throws Exception {
+    public CreateClusterNodePoolResponse createClusterNodePool(String ClusterId, CreateClusterNodePoolRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.createEdgeMachineWithOptions(request, headers, runtime);
+        return this.createClusterNodePoolWithOptions(ClusterId, request, headers, runtime);
     }
 
     public CreateEdgeMachineResponse createEdgeMachineWithOptions(CreateEdgeMachineRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -781,10 +775,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateEdgeMachineResponse());
     }
 
-    public CreateKubernetesTriggerResponse createKubernetesTrigger(CreateKubernetesTriggerRequest request) throws Exception {
+    public CreateEdgeMachineResponse createEdgeMachine(CreateEdgeMachineRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.createKubernetesTriggerWithOptions(request, headers, runtime);
+        return this.createEdgeMachineWithOptions(request, headers, runtime);
     }
 
     public CreateKubernetesTriggerResponse createKubernetesTriggerWithOptions(CreateKubernetesTriggerRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -824,10 +818,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateKubernetesTriggerResponse());
     }
 
-    public CreateTemplateResponse createTemplate(CreateTemplateRequest request) throws Exception {
+    public CreateKubernetesTriggerResponse createKubernetesTrigger(CreateKubernetesTriggerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.createTemplateWithOptions(request, headers, runtime);
+        return this.createKubernetesTriggerWithOptions(request, headers, runtime);
     }
 
     public CreateTemplateResponse createTemplateWithOptions(CreateTemplateRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -871,10 +865,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateTemplateResponse());
     }
 
-    public CreateTriggerResponse createTrigger(String clusterId, CreateTriggerRequest request) throws Exception {
+    public CreateTemplateResponse createTemplate(CreateTemplateRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.createTriggerWithOptions(clusterId, request, headers, runtime);
+        return this.createTemplateWithOptions(request, headers, runtime);
     }
 
     public CreateTriggerResponse createTriggerWithOptions(String clusterId, CreateTriggerRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -914,10 +908,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateTriggerResponse());
     }
 
-    public DeleteAlertContactResponse deleteAlertContact() throws Exception {
+    public CreateTriggerResponse createTrigger(String clusterId, CreateTriggerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deleteAlertContactWithOptions(headers, runtime);
+        return this.createTriggerWithOptions(clusterId, request, headers, runtime);
     }
 
     public DeleteAlertContactResponse deleteAlertContactWithOptions(java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -938,10 +932,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAlertContactResponse());
     }
 
-    public DeleteAlertContactGroupResponse deleteAlertContactGroup() throws Exception {
+    public DeleteAlertContactResponse deleteAlertContact() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deleteAlertContactGroupWithOptions(headers, runtime);
+        return this.deleteAlertContactWithOptions(headers, runtime);
     }
 
     public DeleteAlertContactGroupResponse deleteAlertContactGroupWithOptions(java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -962,10 +956,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAlertContactGroupResponse());
     }
 
-    public DeleteClusterResponse deleteCluster(String ClusterId, DeleteClusterRequest request) throws Exception {
+    public DeleteAlertContactGroupResponse deleteAlertContactGroup() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deleteClusterWithOptions(ClusterId, request, headers, runtime);
+        return this.deleteAlertContactGroupWithOptions(headers, runtime);
     }
 
     public DeleteClusterResponse deleteClusterWithOptions(String ClusterId, DeleteClusterRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1007,10 +1001,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteClusterResponse());
     }
 
-    public DeleteClusterNodepoolResponse deleteClusterNodepool(String ClusterId, String NodepoolId, DeleteClusterNodepoolRequest request) throws Exception {
+    public DeleteClusterResponse deleteCluster(String ClusterId, DeleteClusterRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deleteClusterNodepoolWithOptions(ClusterId, NodepoolId, request, headers, runtime);
+        return this.deleteClusterWithOptions(ClusterId, request, headers, runtime);
     }
 
     public DeleteClusterNodepoolResponse deleteClusterNodepoolWithOptions(String ClusterId, String NodepoolId, DeleteClusterNodepoolRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1038,10 +1032,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteClusterNodepoolResponse());
     }
 
-    public DeleteClusterNodesResponse deleteClusterNodes(String ClusterId, DeleteClusterNodesRequest request) throws Exception {
+    public DeleteClusterNodepoolResponse deleteClusterNodepool(String ClusterId, String NodepoolId, DeleteClusterNodepoolRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deleteClusterNodesWithOptions(ClusterId, request, headers, runtime);
+        return this.deleteClusterNodepoolWithOptions(ClusterId, NodepoolId, request, headers, runtime);
     }
 
     public DeleteClusterNodesResponse deleteClusterNodesWithOptions(String ClusterId, DeleteClusterNodesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1077,10 +1071,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteClusterNodesResponse());
     }
 
-    public DeleteEdgeMachineResponse deleteEdgeMachine(String edgeMachineid, DeleteEdgeMachineRequest request) throws Exception {
+    public DeleteClusterNodesResponse deleteClusterNodes(String ClusterId, DeleteClusterNodesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deleteEdgeMachineWithOptions(edgeMachineid, request, headers, runtime);
+        return this.deleteClusterNodesWithOptions(ClusterId, request, headers, runtime);
     }
 
     public DeleteEdgeMachineResponse deleteEdgeMachineWithOptions(String edgeMachineid, DeleteEdgeMachineRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1108,10 +1102,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteEdgeMachineResponse());
     }
 
-    public DeleteKubernetesTriggerResponse deleteKubernetesTrigger(String Id) throws Exception {
+    public DeleteEdgeMachineResponse deleteEdgeMachine(String edgeMachineid, DeleteEdgeMachineRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deleteKubernetesTriggerWithOptions(Id, headers, runtime);
+        return this.deleteEdgeMachineWithOptions(edgeMachineid, request, headers, runtime);
     }
 
     public DeleteKubernetesTriggerResponse deleteKubernetesTriggerWithOptions(String Id, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1132,10 +1126,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteKubernetesTriggerResponse());
     }
 
-    public DeletePolicyInstanceResponse deletePolicyInstance(String clusterId, String policyName, DeletePolicyInstanceRequest request) throws Exception {
+    public DeleteKubernetesTriggerResponse deleteKubernetesTrigger(String Id) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deletePolicyInstanceWithOptions(clusterId, policyName, request, headers, runtime);
+        return this.deleteKubernetesTriggerWithOptions(Id, headers, runtime);
     }
 
     public DeletePolicyInstanceResponse deletePolicyInstanceWithOptions(String clusterId, String policyName, DeletePolicyInstanceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1163,10 +1157,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeletePolicyInstanceResponse());
     }
 
-    public DeleteTemplateResponse deleteTemplate(String TemplateId) throws Exception {
+    public DeletePolicyInstanceResponse deletePolicyInstance(String clusterId, String policyName, DeletePolicyInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deleteTemplateWithOptions(TemplateId, headers, runtime);
+        return this.deletePolicyInstanceWithOptions(clusterId, policyName, request, headers, runtime);
     }
 
     public DeleteTemplateResponse deleteTemplateWithOptions(String TemplateId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1187,10 +1181,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteTemplateResponse());
     }
 
-    public DeleteTriggerResponse deleteTrigger(String clusterId, String Id) throws Exception {
+    public DeleteTemplateResponse deleteTemplate(String TemplateId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deleteTriggerWithOptions(clusterId, Id, headers, runtime);
+        return this.deleteTemplateWithOptions(TemplateId, headers, runtime);
     }
 
     public DeleteTriggerResponse deleteTriggerWithOptions(String clusterId, String Id, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1211,10 +1205,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteTriggerResponse());
     }
 
-    public DeployPolicyInstanceResponse deployPolicyInstance(String clusterId, String policyName, DeployPolicyInstanceRequest request) throws Exception {
+    public DeleteTriggerResponse deleteTrigger(String clusterId, String Id) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deployPolicyInstanceWithOptions(clusterId, policyName, request, headers, runtime);
+        return this.deleteTriggerWithOptions(clusterId, Id, headers, runtime);
     }
 
     public DeployPolicyInstanceResponse deployPolicyInstanceWithOptions(String clusterId, String policyName, DeployPolicyInstanceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1250,10 +1244,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeployPolicyInstanceResponse());
     }
 
-    public DescirbeWorkflowResponse descirbeWorkflow(String workflowName) throws Exception {
+    public DeployPolicyInstanceResponse deployPolicyInstance(String clusterId, String policyName, DeployPolicyInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.descirbeWorkflowWithOptions(workflowName, headers, runtime);
+        return this.deployPolicyInstanceWithOptions(clusterId, policyName, request, headers, runtime);
     }
 
     public DescirbeWorkflowResponse descirbeWorkflowWithOptions(String workflowName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1274,17 +1268,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescirbeWorkflowResponse());
     }
 
-    public DescribeAddonsResponse describeAddons(DescribeAddonsRequest request) throws Exception {
+    public DescirbeWorkflowResponse descirbeWorkflow(String workflowName) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.describeAddonsWithOptions(request, headers, runtime);
+        return this.descirbeWorkflowWithOptions(workflowName, headers, runtime);
     }
 
     public DescribeAddonsResponse describeAddonsWithOptions(DescribeAddonsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterProfile)) {
+            query.put("cluster_profile", request.clusterProfile);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterSpec)) {
+            query.put("cluster_spec", request.clusterSpec);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.clusterType)) {
             query.put("cluster_type", request.clusterType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterVersion)) {
+            query.put("cluster_version", request.clusterVersion);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.region)) {
@@ -1309,10 +1315,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAddonsResponse());
     }
 
-    public DescribeClusterAddonMetadataResponse describeClusterAddonMetadata(String clusterId, String componentId, String version) throws Exception {
+    public DescribeAddonsResponse describeAddons(DescribeAddonsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.describeClusterAddonMetadataWithOptions(clusterId, componentId, version, headers, runtime);
+        return this.describeAddonsWithOptions(request, headers, runtime);
     }
 
     public DescribeClusterAddonMetadataResponse describeClusterAddonMetadataWithOptions(String clusterId, String componentId, String version, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1333,12 +1339,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeClusterAddonMetadataResponse());
     }
 
-    public DescribeClusterAddonUpgradeStatusResponse describeClusterAddonUpgradeStatus(String ClusterId, String ComponentId) throws Exception {
+    public DescribeClusterAddonMetadataResponse describeClusterAddonMetadata(String clusterId, String componentId, String version) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.describeClusterAddonUpgradeStatusWithOptions(ClusterId, ComponentId, headers, runtime);
+        return this.describeClusterAddonMetadataWithOptions(clusterId, componentId, version, headers, runtime);
     }
 
+    /**
+      * @deprecated
+      *
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeClusterAddonUpgradeStatusResponse
+     */
     public DescribeClusterAddonUpgradeStatusResponse describeClusterAddonUpgradeStatusWithOptions(String ClusterId, String ComponentId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -1357,10 +1370,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeClusterAddonUpgradeStatusResponse());
     }
 
-    public DescribeClusterAddonsUpgradeStatusResponse describeClusterAddonsUpgradeStatus(String ClusterId, DescribeClusterAddonsUpgradeStatusRequest request) throws Exception {
+    /**
+      * @deprecated
+      *
+      * @return DescribeClusterAddonUpgradeStatusResponse
+     */
+    public DescribeClusterAddonUpgradeStatusResponse describeClusterAddonUpgradeStatus(String ClusterId, String ComponentId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.describeClusterAddonsUpgradeStatusWithOptions(ClusterId, request, headers, runtime);
+        return this.describeClusterAddonUpgradeStatusWithOptions(ClusterId, ComponentId, headers, runtime);
     }
 
     public DescribeClusterAddonsUpgradeStatusResponse describeClusterAddonsUpgradeStatusWithOptions(String ClusterId, DescribeClusterAddonsUpgradeStatusRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1394,10 +1412,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeClusterAddonsUpgradeStatusResponse());
     }
 
-    public DescribeClusterAddonsVersionResponse describeClusterAddonsVersion(String ClusterId) throws Exception {
+    public DescribeClusterAddonsUpgradeStatusResponse describeClusterAddonsUpgradeStatus(String ClusterId, DescribeClusterAddonsUpgradeStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.describeClusterAddonsVersionWithOptions(ClusterId, headers, runtime);
+        return this.describeClusterAddonsUpgradeStatusWithOptions(ClusterId, request, headers, runtime);
     }
 
     public DescribeClusterAddonsVersionResponse describeClusterAddonsVersionWithOptions(String ClusterId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1418,10 +1436,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeClusterAddonsVersionResponse());
     }
 
-    public DescribeClusterAttachScriptsResponse describeClusterAttachScripts(String ClusterId, DescribeClusterAttachScriptsRequest request) throws Exception {
+    public DescribeClusterAddonsVersionResponse describeClusterAddonsVersion(String ClusterId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.describeClusterAttachScriptsWithOptions(ClusterId, request, headers, runtime);
+        return this.describeClusterAddonsVersionWithOptions(ClusterId, headers, runtime);
     }
 
     public DescribeClusterAttachScriptsResponse describeClusterAttachScriptsWithOptions(String ClusterId, DescribeClusterAttachScriptsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1469,10 +1487,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeClusterAttachScriptsResponse());
     }
 
-    public DescribeClusterDetailResponse describeClusterDetail(String ClusterId) throws Exception {
+    public DescribeClusterAttachScriptsResponse describeClusterAttachScripts(String ClusterId, DescribeClusterAttachScriptsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.describeClusterDetailWithOptions(ClusterId, headers, runtime);
+        return this.describeClusterAttachScriptsWithOptions(ClusterId, request, headers, runtime);
     }
 
     public DescribeClusterDetailResponse describeClusterDetailWithOptions(String ClusterId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1493,10 +1511,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeClusterDetailResponse());
     }
 
-    public DescribeClusterEventsResponse describeClusterEvents(String ClusterId, DescribeClusterEventsRequest request) throws Exception {
+    public DescribeClusterDetailResponse describeClusterDetail(String ClusterId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.describeClusterEventsWithOptions(ClusterId, request, headers, runtime);
+        return this.describeClusterDetailWithOptions(ClusterId, headers, runtime);
     }
 
     public DescribeClusterEventsResponse describeClusterEventsWithOptions(String ClusterId, DescribeClusterEventsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1532,10 +1550,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeClusterEventsResponse());
     }
 
-    public DescribeClusterLogsResponse describeClusterLogs(String ClusterId) throws Exception {
+    public DescribeClusterEventsResponse describeClusterEvents(String ClusterId, DescribeClusterEventsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.describeClusterLogsWithOptions(ClusterId, headers, runtime);
+        return this.describeClusterEventsWithOptions(ClusterId, request, headers, runtime);
     }
 
     public DescribeClusterLogsResponse describeClusterLogsWithOptions(String ClusterId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1556,10 +1574,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeClusterLogsResponse());
     }
 
-    public DescribeClusterNodePoolDetailResponse describeClusterNodePoolDetail(String ClusterId, String NodepoolId) throws Exception {
+    public DescribeClusterLogsResponse describeClusterLogs(String ClusterId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.describeClusterNodePoolDetailWithOptions(ClusterId, NodepoolId, headers, runtime);
+        return this.describeClusterLogsWithOptions(ClusterId, headers, runtime);
     }
 
     public DescribeClusterNodePoolDetailResponse describeClusterNodePoolDetailWithOptions(String ClusterId, String NodepoolId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1580,10 +1598,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeClusterNodePoolDetailResponse());
     }
 
-    public DescribeClusterNodePoolsResponse describeClusterNodePools(String ClusterId) throws Exception {
+    public DescribeClusterNodePoolDetailResponse describeClusterNodePoolDetail(String ClusterId, String NodepoolId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.describeClusterNodePoolsWithOptions(ClusterId, headers, runtime);
+        return this.describeClusterNodePoolDetailWithOptions(ClusterId, NodepoolId, headers, runtime);
     }
 
     public DescribeClusterNodePoolsResponse describeClusterNodePoolsWithOptions(String ClusterId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1604,10 +1622,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeClusterNodePoolsResponse());
     }
 
-    public DescribeClusterNodesResponse describeClusterNodes(String ClusterId, DescribeClusterNodesRequest request) throws Exception {
+    public DescribeClusterNodePoolsResponse describeClusterNodePools(String ClusterId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.describeClusterNodesWithOptions(ClusterId, request, headers, runtime);
+        return this.describeClusterNodePoolsWithOptions(ClusterId, headers, runtime);
     }
 
     public DescribeClusterNodesResponse describeClusterNodesWithOptions(String ClusterId, DescribeClusterNodesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1651,10 +1669,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeClusterNodesResponse());
     }
 
-    public DescribeClusterResourcesResponse describeClusterResources(String ClusterId) throws Exception {
+    public DescribeClusterNodesResponse describeClusterNodes(String ClusterId, DescribeClusterNodesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.describeClusterResourcesWithOptions(ClusterId, headers, runtime);
+        return this.describeClusterNodesWithOptions(ClusterId, request, headers, runtime);
     }
 
     public DescribeClusterResourcesResponse describeClusterResourcesWithOptions(String ClusterId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1675,10 +1693,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeClusterResourcesResponse());
     }
 
-    public DescribeClusterTasksResponse describeClusterTasks(String clusterId) throws Exception {
+    public DescribeClusterResourcesResponse describeClusterResources(String ClusterId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.describeClusterTasksWithOptions(clusterId, headers, runtime);
+        return this.describeClusterResourcesWithOptions(ClusterId, headers, runtime);
     }
 
     public DescribeClusterTasksResponse describeClusterTasksWithOptions(String clusterId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1699,10 +1717,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeClusterTasksResponse());
     }
 
-    public DescribeClusterUserKubeconfigResponse describeClusterUserKubeconfig(String ClusterId, DescribeClusterUserKubeconfigRequest request) throws Exception {
+    public DescribeClusterTasksResponse describeClusterTasks(String clusterId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.describeClusterUserKubeconfigWithOptions(ClusterId, request, headers, runtime);
+        return this.describeClusterTasksWithOptions(clusterId, headers, runtime);
     }
 
     public DescribeClusterUserKubeconfigResponse describeClusterUserKubeconfigWithOptions(String ClusterId, DescribeClusterUserKubeconfigRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1734,12 +1752,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeClusterUserKubeconfigResponse());
     }
 
-    public DescribeClusterV2UserKubeconfigResponse describeClusterV2UserKubeconfig(String ClusterId, DescribeClusterV2UserKubeconfigRequest request) throws Exception {
+    public DescribeClusterUserKubeconfigResponse describeClusterUserKubeconfig(String ClusterId, DescribeClusterUserKubeconfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.describeClusterV2UserKubeconfigWithOptions(ClusterId, request, headers, runtime);
+        return this.describeClusterUserKubeconfigWithOptions(ClusterId, request, headers, runtime);
     }
 
+    /**
+      * @deprecated
+      *
+      * @param request DescribeClusterV2UserKubeconfigRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeClusterV2UserKubeconfigResponse
+     */
     public DescribeClusterV2UserKubeconfigResponse describeClusterV2UserKubeconfigWithOptions(String ClusterId, DescribeClusterV2UserKubeconfigRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1765,12 +1791,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeClusterV2UserKubeconfigResponse());
     }
 
-    public DescribeClustersResponse describeClusters(DescribeClustersRequest request) throws Exception {
+    /**
+      * @deprecated
+      *
+      * @param request DescribeClusterV2UserKubeconfigRequest
+      * @return DescribeClusterV2UserKubeconfigResponse
+     */
+    public DescribeClusterV2UserKubeconfigResponse describeClusterV2UserKubeconfig(String ClusterId, DescribeClusterV2UserKubeconfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.describeClustersWithOptions(request, headers, runtime);
+        return this.describeClusterV2UserKubeconfigWithOptions(ClusterId, request, headers, runtime);
     }
 
+    /**
+      * @deprecated
+      *
+      * @param request DescribeClustersRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeClustersResponse
+     */
     public DescribeClustersResponse describeClustersWithOptions(DescribeClustersRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1800,10 +1840,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeClustersResponse());
     }
 
-    public DescribeClustersV1Response describeClustersV1(DescribeClustersV1Request request) throws Exception {
+    /**
+      * @deprecated
+      *
+      * @param request DescribeClustersRequest
+      * @return DescribeClustersResponse
+     */
+    public DescribeClustersResponse describeClusters(DescribeClustersRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.describeClustersV1WithOptions(request, headers, runtime);
+        return this.describeClustersWithOptions(request, headers, runtime);
     }
 
     public DescribeClustersV1Response describeClustersV1WithOptions(DescribeClustersV1Request request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1855,10 +1901,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeClustersV1Response());
     }
 
-    public DescribeEdgeMachineActiveProcessResponse describeEdgeMachineActiveProcess(String edgeMachineid) throws Exception {
+    public DescribeClustersV1Response describeClustersV1(DescribeClustersV1Request request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.describeEdgeMachineActiveProcessWithOptions(edgeMachineid, headers, runtime);
+        return this.describeClustersV1WithOptions(request, headers, runtime);
     }
 
     public DescribeEdgeMachineActiveProcessResponse describeEdgeMachineActiveProcessWithOptions(String edgeMachineid, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1879,10 +1925,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeEdgeMachineActiveProcessResponse());
     }
 
-    public DescribeEdgeMachineModelsResponse describeEdgeMachineModels() throws Exception {
+    public DescribeEdgeMachineActiveProcessResponse describeEdgeMachineActiveProcess(String edgeMachineid) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.describeEdgeMachineModelsWithOptions(headers, runtime);
+        return this.describeEdgeMachineActiveProcessWithOptions(edgeMachineid, headers, runtime);
     }
 
     public DescribeEdgeMachineModelsResponse describeEdgeMachineModelsWithOptions(java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1903,10 +1949,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeEdgeMachineModelsResponse());
     }
 
-    public DescribeEdgeMachineTunnelConfigDetailResponse describeEdgeMachineTunnelConfigDetail(String edgeMachineid) throws Exception {
+    public DescribeEdgeMachineModelsResponse describeEdgeMachineModels() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.describeEdgeMachineTunnelConfigDetailWithOptions(edgeMachineid, headers, runtime);
+        return this.describeEdgeMachineModelsWithOptions(headers, runtime);
     }
 
     public DescribeEdgeMachineTunnelConfigDetailResponse describeEdgeMachineTunnelConfigDetailWithOptions(String edgeMachineid, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1927,10 +1973,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeEdgeMachineTunnelConfigDetailResponse());
     }
 
-    public DescribeEdgeMachinesResponse describeEdgeMachines(DescribeEdgeMachinesRequest request) throws Exception {
+    public DescribeEdgeMachineTunnelConfigDetailResponse describeEdgeMachineTunnelConfigDetail(String edgeMachineid) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.describeEdgeMachinesWithOptions(request, headers, runtime);
+        return this.describeEdgeMachineTunnelConfigDetailWithOptions(edgeMachineid, headers, runtime);
     }
 
     public DescribeEdgeMachinesResponse describeEdgeMachinesWithOptions(DescribeEdgeMachinesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1978,10 +2024,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeEdgeMachinesResponse());
     }
 
-    public DescribeEventsResponse describeEvents(DescribeEventsRequest request) throws Exception {
+    public DescribeEdgeMachinesResponse describeEdgeMachines(DescribeEdgeMachinesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.describeEventsWithOptions(request, headers, runtime);
+        return this.describeEdgeMachinesWithOptions(request, headers, runtime);
     }
 
     public DescribeEventsResponse describeEventsWithOptions(DescribeEventsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2021,10 +2067,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeEventsResponse());
     }
 
-    public DescribeExternalAgentResponse describeExternalAgent(String ClusterId, DescribeExternalAgentRequest request) throws Exception {
+    public DescribeEventsResponse describeEvents(DescribeEventsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.describeExternalAgentWithOptions(ClusterId, request, headers, runtime);
+        return this.describeEventsWithOptions(request, headers, runtime);
     }
 
     public DescribeExternalAgentResponse describeExternalAgentWithOptions(String ClusterId, DescribeExternalAgentRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2052,10 +2098,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeExternalAgentResponse());
     }
 
-    public DescribeKubernetesVersionMetadataResponse describeKubernetesVersionMetadata(DescribeKubernetesVersionMetadataRequest request) throws Exception {
+    public DescribeExternalAgentResponse describeExternalAgent(String ClusterId, DescribeExternalAgentRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.describeKubernetesVersionMetadataWithOptions(request, headers, runtime);
+        return this.describeExternalAgentWithOptions(ClusterId, request, headers, runtime);
     }
 
     public DescribeKubernetesVersionMetadataResponse describeKubernetesVersionMetadataWithOptions(DescribeKubernetesVersionMetadataRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2099,10 +2145,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeKubernetesVersionMetadataResponse());
     }
 
-    public DescribeNodePoolVulsResponse describeNodePoolVuls(String clusterId, String nodepoolId) throws Exception {
+    public DescribeKubernetesVersionMetadataResponse describeKubernetesVersionMetadata(DescribeKubernetesVersionMetadataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.describeNodePoolVulsWithOptions(clusterId, nodepoolId, headers, runtime);
+        return this.describeKubernetesVersionMetadataWithOptions(request, headers, runtime);
     }
 
     public DescribeNodePoolVulsResponse describeNodePoolVulsWithOptions(String clusterId, String nodepoolId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2123,10 +2169,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeNodePoolVulsResponse());
     }
 
-    public DescribePoliciesResponse describePolicies() throws Exception {
+    public DescribeNodePoolVulsResponse describeNodePoolVuls(String clusterId, String nodepoolId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.describePoliciesWithOptions(headers, runtime);
+        return this.describeNodePoolVulsWithOptions(clusterId, nodepoolId, headers, runtime);
     }
 
     public DescribePoliciesResponse describePoliciesWithOptions(java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2147,10 +2193,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribePoliciesResponse());
     }
 
-    public DescribePolicyDetailsResponse describePolicyDetails(String policyName) throws Exception {
+    public DescribePoliciesResponse describePolicies() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.describePolicyDetailsWithOptions(policyName, headers, runtime);
+        return this.describePoliciesWithOptions(headers, runtime);
     }
 
     public DescribePolicyDetailsResponse describePolicyDetailsWithOptions(String policyName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2171,10 +2217,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribePolicyDetailsResponse());
     }
 
-    public DescribePolicyGovernanceInClusterResponse describePolicyGovernanceInCluster(String clusterId) throws Exception {
+    public DescribePolicyDetailsResponse describePolicyDetails(String policyName) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.describePolicyGovernanceInClusterWithOptions(clusterId, headers, runtime);
+        return this.describePolicyDetailsWithOptions(policyName, headers, runtime);
     }
 
     public DescribePolicyGovernanceInClusterResponse describePolicyGovernanceInClusterWithOptions(String clusterId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2195,10 +2241,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribePolicyGovernanceInClusterResponse());
     }
 
-    public DescribePolicyInstancesResponse describePolicyInstances(String clusterId, DescribePolicyInstancesRequest request) throws Exception {
+    public DescribePolicyGovernanceInClusterResponse describePolicyGovernanceInCluster(String clusterId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.describePolicyInstancesWithOptions(clusterId, request, headers, runtime);
+        return this.describePolicyGovernanceInClusterWithOptions(clusterId, headers, runtime);
     }
 
     public DescribePolicyInstancesResponse describePolicyInstancesWithOptions(String clusterId, DescribePolicyInstancesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2230,10 +2276,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribePolicyInstancesResponse());
     }
 
-    public DescribePolicyInstancesStatusResponse describePolicyInstancesStatus(String clusterId) throws Exception {
+    public DescribePolicyInstancesResponse describePolicyInstances(String clusterId, DescribePolicyInstancesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.describePolicyInstancesStatusWithOptions(clusterId, headers, runtime);
+        return this.describePolicyInstancesWithOptions(clusterId, request, headers, runtime);
     }
 
     public DescribePolicyInstancesStatusResponse describePolicyInstancesStatusWithOptions(String clusterId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2254,10 +2300,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribePolicyInstancesStatusResponse());
     }
 
-    public DescribeTaskInfoResponse describeTaskInfo(String taskId) throws Exception {
+    public DescribePolicyInstancesStatusResponse describePolicyInstancesStatus(String clusterId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.describeTaskInfoWithOptions(taskId, headers, runtime);
+        return this.describePolicyInstancesStatusWithOptions(clusterId, headers, runtime);
     }
 
     public DescribeTaskInfoResponse describeTaskInfoWithOptions(String taskId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2278,10 +2324,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeTaskInfoResponse());
     }
 
-    public DescribeTemplateAttributeResponse describeTemplateAttribute(String TemplateId, DescribeTemplateAttributeRequest request) throws Exception {
+    public DescribeTaskInfoResponse describeTaskInfo(String taskId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.describeTemplateAttributeWithOptions(TemplateId, request, headers, runtime);
+        return this.describeTaskInfoWithOptions(taskId, headers, runtime);
     }
 
     public DescribeTemplateAttributeResponse describeTemplateAttributeWithOptions(String TemplateId, DescribeTemplateAttributeRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2309,10 +2355,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeTemplateAttributeResponse());
     }
 
-    public DescribeTemplatesResponse describeTemplates(DescribeTemplatesRequest request) throws Exception {
+    public DescribeTemplateAttributeResponse describeTemplateAttribute(String TemplateId, DescribeTemplateAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.describeTemplatesWithOptions(request, headers, runtime);
+        return this.describeTemplateAttributeWithOptions(TemplateId, request, headers, runtime);
     }
 
     public DescribeTemplatesResponse describeTemplatesWithOptions(DescribeTemplatesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2348,10 +2394,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeTemplatesResponse());
     }
 
-    public DescribeTriggerResponse describeTrigger(String clusterId, DescribeTriggerRequest request) throws Exception {
+    public DescribeTemplatesResponse describeTemplates(DescribeTemplatesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.describeTriggerWithOptions(clusterId, request, headers, runtime);
+        return this.describeTemplatesWithOptions(request, headers, runtime);
     }
 
     public DescribeTriggerResponse describeTriggerWithOptions(String clusterId, DescribeTriggerRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2391,10 +2437,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeTriggerResponse());
     }
 
-    public DescribeUserPermissionResponse describeUserPermission(String uid) throws Exception {
+    public DescribeTriggerResponse describeTrigger(String clusterId, DescribeTriggerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.describeUserPermissionWithOptions(uid, headers, runtime);
+        return this.describeTriggerWithOptions(clusterId, request, headers, runtime);
     }
 
     public DescribeUserPermissionResponse describeUserPermissionWithOptions(String uid, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2415,10 +2461,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeUserPermissionResponse());
     }
 
-    public DescribeUserQuotaResponse describeUserQuota() throws Exception {
+    public DescribeUserPermissionResponse describeUserPermission(String uid) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.describeUserQuotaWithOptions(headers, runtime);
+        return this.describeUserPermissionWithOptions(uid, headers, runtime);
     }
 
     public DescribeUserQuotaResponse describeUserQuotaWithOptions(java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2439,10 +2485,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeUserQuotaResponse());
     }
 
-    public DescribeWorkflowsResponse describeWorkflows() throws Exception {
+    public DescribeUserQuotaResponse describeUserQuota() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.describeWorkflowsWithOptions(headers, runtime);
+        return this.describeUserQuotaWithOptions(headers, runtime);
     }
 
     public DescribeWorkflowsResponse describeWorkflowsWithOptions(java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2463,10 +2509,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeWorkflowsResponse());
     }
 
-    public EdgeClusterAddEdgeMachineResponse edgeClusterAddEdgeMachine(String clusterid, String edgeMachineid, EdgeClusterAddEdgeMachineRequest request) throws Exception {
+    public DescribeWorkflowsResponse describeWorkflows() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.edgeClusterAddEdgeMachineWithOptions(clusterid, edgeMachineid, request, headers, runtime);
+        return this.describeWorkflowsWithOptions(headers, runtime);
     }
 
     public EdgeClusterAddEdgeMachineResponse edgeClusterAddEdgeMachineWithOptions(String clusterid, String edgeMachineid, EdgeClusterAddEdgeMachineRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2502,10 +2548,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new EdgeClusterAddEdgeMachineResponse());
     }
 
-    public FixNodePoolVulsResponse fixNodePoolVuls(String clusterId, String nodepoolId, FixNodePoolVulsRequest request) throws Exception {
+    public EdgeClusterAddEdgeMachineResponse edgeClusterAddEdgeMachine(String clusterid, String edgeMachineid, EdgeClusterAddEdgeMachineRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.fixNodePoolVulsWithOptions(clusterId, nodepoolId, request, headers, runtime);
+        return this.edgeClusterAddEdgeMachineWithOptions(clusterid, edgeMachineid, request, headers, runtime);
     }
 
     public FixNodePoolVulsResponse fixNodePoolVulsWithOptions(String clusterId, String nodepoolId, FixNodePoolVulsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2515,7 +2561,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("nodes", request.nodes);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.rolloutPolicy))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.rolloutPolicy)) {
             body.put("rollout_policy", request.rolloutPolicy);
         }
 
@@ -2541,10 +2587,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new FixNodePoolVulsResponse());
     }
 
-    public GetKubernetesTriggerResponse getKubernetesTrigger(String ClusterId, GetKubernetesTriggerRequest request) throws Exception {
+    public FixNodePoolVulsResponse fixNodePoolVuls(String clusterId, String nodepoolId, FixNodePoolVulsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getKubernetesTriggerWithOptions(ClusterId, request, headers, runtime);
+        return this.fixNodePoolVulsWithOptions(clusterId, nodepoolId, request, headers, runtime);
     }
 
     public GetKubernetesTriggerResponse getKubernetesTriggerWithOptions(String ClusterId, GetKubernetesTriggerRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2584,10 +2630,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetKubernetesTriggerResponse());
     }
 
-    public GetUpgradeStatusResponse getUpgradeStatus(String ClusterId) throws Exception {
+    public GetKubernetesTriggerResponse getKubernetesTrigger(String ClusterId, GetKubernetesTriggerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getUpgradeStatusWithOptions(ClusterId, headers, runtime);
+        return this.getKubernetesTriggerWithOptions(ClusterId, request, headers, runtime);
     }
 
     public GetUpgradeStatusResponse getUpgradeStatusWithOptions(String ClusterId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2608,10 +2654,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetUpgradeStatusResponse());
     }
 
-    public GrantPermissionsResponse grantPermissions(String uid, GrantPermissionsRequest request) throws Exception {
+    public GetUpgradeStatusResponse getUpgradeStatus(String ClusterId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.grantPermissionsWithOptions(uid, request, headers, runtime);
+        return this.getUpgradeStatusWithOptions(ClusterId, headers, runtime);
     }
 
     public GrantPermissionsResponse grantPermissionsWithOptions(String uid, GrantPermissionsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2634,10 +2680,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GrantPermissionsResponse());
     }
 
-    public InstallClusterAddonsResponse installClusterAddons(String ClusterId, InstallClusterAddonsRequest request) throws Exception {
+    public GrantPermissionsResponse grantPermissions(String uid, GrantPermissionsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.installClusterAddonsWithOptions(ClusterId, request, headers, runtime);
+        return this.grantPermissionsWithOptions(uid, request, headers, runtime);
     }
 
     public InstallClusterAddonsResponse installClusterAddonsWithOptions(String ClusterId, InstallClusterAddonsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2660,10 +2706,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new InstallClusterAddonsResponse());
     }
 
-    public ListTagResourcesResponse listTagResources(ListTagResourcesRequest request) throws Exception {
+    public InstallClusterAddonsResponse installClusterAddons(String ClusterId, InstallClusterAddonsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.listTagResourcesWithOptions(request, headers, runtime);
+        return this.installClusterAddonsWithOptions(ClusterId, request, headers, runtime);
     }
 
     public ListTagResourcesResponse listTagResourcesWithOptions(ListTagResourcesRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2717,10 +2763,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListTagResourcesResponse());
     }
 
-    public MigrateClusterResponse migrateCluster(String clusterId, MigrateClusterRequest request) throws Exception {
+    public ListTagResourcesResponse listTagResources(ListTagResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.migrateClusterWithOptions(clusterId, request, headers, runtime);
+        return this.listTagResourcesWithOptions(request, headers, runtime);
     }
 
     public MigrateClusterResponse migrateClusterWithOptions(String clusterId, MigrateClusterRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2752,10 +2798,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new MigrateClusterResponse());
     }
 
-    public ModifyClusterResponse modifyCluster(String ClusterId, ModifyClusterRequest request) throws Exception {
+    public MigrateClusterResponse migrateCluster(String clusterId, MigrateClusterRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.modifyClusterWithOptions(ClusterId, request, headers, runtime);
+        return this.migrateClusterWithOptions(clusterId, request, headers, runtime);
     }
 
     public ModifyClusterResponse modifyClusterWithOptions(String ClusterId, ModifyClusterRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2789,7 +2835,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("instance_deletion_protection", request.instanceDeletionProtection);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.maintenanceWindow))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.maintenanceWindow)) {
             body.put("maintenance_window", request.maintenanceWindow);
         }
 
@@ -2815,10 +2861,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyClusterResponse());
     }
 
-    public ModifyClusterAddonResponse modifyClusterAddon(String clusterId, String componentId, ModifyClusterAddonRequest request) throws Exception {
+    public ModifyClusterResponse modifyCluster(String ClusterId, ModifyClusterRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.modifyClusterAddonWithOptions(clusterId, componentId, request, headers, runtime);
+        return this.modifyClusterWithOptions(ClusterId, request, headers, runtime);
     }
 
     public ModifyClusterAddonResponse modifyClusterAddonWithOptions(String clusterId, String componentId, ModifyClusterAddonRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2846,10 +2892,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyClusterAddonResponse());
     }
 
-    public ModifyClusterConfigurationResponse modifyClusterConfiguration(String ClusterId, ModifyClusterConfigurationRequest request) throws Exception {
+    public ModifyClusterAddonResponse modifyClusterAddon(String clusterId, String componentId, ModifyClusterAddonRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.modifyClusterConfigurationWithOptions(ClusterId, request, headers, runtime);
+        return this.modifyClusterAddonWithOptions(clusterId, componentId, request, headers, runtime);
     }
 
     public ModifyClusterConfigurationResponse modifyClusterConfigurationWithOptions(String ClusterId, ModifyClusterConfigurationRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2877,36 +2923,36 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyClusterConfigurationResponse());
     }
 
-    public ModifyClusterNodePoolResponse modifyClusterNodePool(String ClusterId, String NodepoolId, ModifyClusterNodePoolRequest request) throws Exception {
+    public ModifyClusterConfigurationResponse modifyClusterConfiguration(String ClusterId, ModifyClusterConfigurationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.modifyClusterNodePoolWithOptions(ClusterId, NodepoolId, request, headers, runtime);
+        return this.modifyClusterConfigurationWithOptions(ClusterId, request, headers, runtime);
     }
 
     public ModifyClusterNodePoolResponse modifyClusterNodePoolWithOptions(String ClusterId, String NodepoolId, ModifyClusterNodePoolRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.autoScaling))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.autoScaling)) {
             body.put("auto_scaling", request.autoScaling);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.kubernetesConfig))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.kubernetesConfig)) {
             body.put("kubernetes_config", request.kubernetesConfig);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.management))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.management)) {
             body.put("management", request.management);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.nodepoolInfo))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.nodepoolInfo)) {
             body.put("nodepool_info", request.nodepoolInfo);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.scalingGroup))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.scalingGroup)) {
             body.put("scaling_group", request.scalingGroup);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.teeConfig))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.teeConfig)) {
             body.put("tee_config", request.teeConfig);
         }
 
@@ -2932,10 +2978,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyClusterNodePoolResponse());
     }
 
-    public ModifyClusterTagsResponse modifyClusterTags(String ClusterId, ModifyClusterTagsRequest request) throws Exception {
+    public ModifyClusterNodePoolResponse modifyClusterNodePool(String ClusterId, String NodepoolId, ModifyClusterNodePoolRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.modifyClusterTagsWithOptions(ClusterId, request, headers, runtime);
+        return this.modifyClusterNodePoolWithOptions(ClusterId, NodepoolId, request, headers, runtime);
     }
 
     public ModifyClusterTagsResponse modifyClusterTagsWithOptions(String ClusterId, ModifyClusterTagsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2958,20 +3004,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyClusterTagsResponse());
     }
 
-    public ModifyNodePoolNodeConfigResponse modifyNodePoolNodeConfig(String ClusterId, String NodepoolId, ModifyNodePoolNodeConfigRequest request) throws Exception {
+    public ModifyClusterTagsResponse modifyClusterTags(String ClusterId, ModifyClusterTagsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.modifyNodePoolNodeConfigWithOptions(ClusterId, NodepoolId, request, headers, runtime);
+        return this.modifyClusterTagsWithOptions(ClusterId, request, headers, runtime);
     }
 
     public ModifyNodePoolNodeConfigResponse modifyNodePoolNodeConfigWithOptions(String ClusterId, String NodepoolId, ModifyNodePoolNodeConfigRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.kubeletConfig))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.kubeletConfig)) {
             body.put("kubelet_config", request.kubeletConfig);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.rollingPolicy))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.rollingPolicy)) {
             body.put("rolling_policy", request.rollingPolicy);
         }
 
@@ -2993,10 +3039,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyNodePoolNodeConfigResponse());
     }
 
-    public ModifyPolicyInstanceResponse modifyPolicyInstance(String clusterId, String policyName, ModifyPolicyInstanceRequest request) throws Exception {
+    public ModifyNodePoolNodeConfigResponse modifyNodePoolNodeConfig(String ClusterId, String NodepoolId, ModifyNodePoolNodeConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.modifyPolicyInstanceWithOptions(clusterId, policyName, request, headers, runtime);
+        return this.modifyNodePoolNodeConfigWithOptions(ClusterId, NodepoolId, request, headers, runtime);
     }
 
     public ModifyPolicyInstanceResponse modifyPolicyInstanceWithOptions(String clusterId, String policyName, ModifyPolicyInstanceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -3036,10 +3082,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyPolicyInstanceResponse());
     }
 
-    public OpenAckServiceResponse openAckService(OpenAckServiceRequest request) throws Exception {
+    public ModifyPolicyInstanceResponse modifyPolicyInstance(String clusterId, String policyName, ModifyPolicyInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.openAckServiceWithOptions(request, headers, runtime);
+        return this.modifyPolicyInstanceWithOptions(clusterId, policyName, request, headers, runtime);
     }
 
     public OpenAckServiceResponse openAckServiceWithOptions(OpenAckServiceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -3067,10 +3113,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new OpenAckServiceResponse());
     }
 
-    public PauseClusterUpgradeResponse pauseClusterUpgrade(String ClusterId) throws Exception {
+    public OpenAckServiceResponse openAckService(OpenAckServiceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.pauseClusterUpgradeWithOptions(ClusterId, headers, runtime);
+        return this.openAckServiceWithOptions(request, headers, runtime);
     }
 
     public PauseClusterUpgradeResponse pauseClusterUpgradeWithOptions(String ClusterId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -3091,10 +3137,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new PauseClusterUpgradeResponse());
     }
 
-    public PauseComponentUpgradeResponse pauseComponentUpgrade(String clusterid, String componentid) throws Exception {
+    public PauseClusterUpgradeResponse pauseClusterUpgrade(String ClusterId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.pauseComponentUpgradeWithOptions(clusterid, componentid, headers, runtime);
+        return this.pauseClusterUpgradeWithOptions(ClusterId, headers, runtime);
     }
 
     public PauseComponentUpgradeResponse pauseComponentUpgradeWithOptions(String clusterid, String componentid, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -3115,10 +3161,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new PauseComponentUpgradeResponse());
     }
 
-    public PauseTaskResponse pauseTask(String taskId) throws Exception {
+    public PauseComponentUpgradeResponse pauseComponentUpgrade(String clusterid, String componentid) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.pauseTaskWithOptions(taskId, headers, runtime);
+        return this.pauseComponentUpgradeWithOptions(clusterid, componentid, headers, runtime);
     }
 
     public PauseTaskResponse pauseTaskWithOptions(String taskId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -3139,12 +3185,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new PauseTaskResponse());
     }
 
-    public RemoveClusterNodesResponse removeClusterNodes(String ClusterId, RemoveClusterNodesRequest request) throws Exception {
+    public PauseTaskResponse pauseTask(String taskId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.removeClusterNodesWithOptions(ClusterId, request, headers, runtime);
+        return this.pauseTaskWithOptions(taskId, headers, runtime);
     }
 
+    /**
+      * @deprecated
+      *
+      * @param request RemoveClusterNodesRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return RemoveClusterNodesResponse
+     */
     public RemoveClusterNodesResponse removeClusterNodesWithOptions(String ClusterId, RemoveClusterNodesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -3178,10 +3232,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveClusterNodesResponse());
     }
 
-    public RemoveNodePoolNodesResponse removeNodePoolNodes(String ClusterId, String NodepoolId, RemoveNodePoolNodesRequest request) throws Exception {
+    /**
+      * @deprecated
+      *
+      * @param request RemoveClusterNodesRequest
+      * @return RemoveClusterNodesResponse
+     */
+    public RemoveClusterNodesResponse removeClusterNodes(String ClusterId, RemoveClusterNodesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.removeNodePoolNodesWithOptions(ClusterId, NodepoolId, request, headers, runtime);
+        return this.removeClusterNodesWithOptions(ClusterId, request, headers, runtime);
     }
 
     public RemoveNodePoolNodesResponse removeNodePoolNodesWithOptions(String ClusterId, String NodepoolId, RemoveNodePoolNodesRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -3223,10 +3283,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveNodePoolNodesResponse());
     }
 
-    public RemoveWorkflowResponse removeWorkflow(String workflowName) throws Exception {
+    public RemoveNodePoolNodesResponse removeNodePoolNodes(String ClusterId, String NodepoolId, RemoveNodePoolNodesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.removeWorkflowWithOptions(workflowName, headers, runtime);
+        return this.removeNodePoolNodesWithOptions(ClusterId, NodepoolId, request, headers, runtime);
     }
 
     public RemoveWorkflowResponse removeWorkflowWithOptions(String workflowName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -3247,10 +3307,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveWorkflowResponse());
     }
 
-    public RepairClusterNodePoolResponse repairClusterNodePool(String clusterId, String nodepoolId, RepairClusterNodePoolRequest request) throws Exception {
+    public RemoveWorkflowResponse removeWorkflow(String workflowName) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.repairClusterNodePoolWithOptions(clusterId, nodepoolId, request, headers, runtime);
+        return this.removeWorkflowWithOptions(workflowName, headers, runtime);
     }
 
     public RepairClusterNodePoolResponse repairClusterNodePoolWithOptions(String clusterId, String nodepoolId, RepairClusterNodePoolRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -3278,10 +3338,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RepairClusterNodePoolResponse());
     }
 
-    public ResumeComponentUpgradeResponse resumeComponentUpgrade(String clusterid, String componentid) throws Exception {
+    public RepairClusterNodePoolResponse repairClusterNodePool(String clusterId, String nodepoolId, RepairClusterNodePoolRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.resumeComponentUpgradeWithOptions(clusterid, componentid, headers, runtime);
+        return this.repairClusterNodePoolWithOptions(clusterId, nodepoolId, request, headers, runtime);
     }
 
     public ResumeComponentUpgradeResponse resumeComponentUpgradeWithOptions(String clusterid, String componentid, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -3302,10 +3362,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ResumeComponentUpgradeResponse());
     }
 
-    public ResumeTaskResponse resumeTask(String taskId) throws Exception {
+    public ResumeComponentUpgradeResponse resumeComponentUpgrade(String clusterid, String componentid) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.resumeTaskWithOptions(taskId, headers, runtime);
+        return this.resumeComponentUpgradeWithOptions(clusterid, componentid, headers, runtime);
     }
 
     public ResumeTaskResponse resumeTaskWithOptions(String taskId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -3326,10 +3386,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ResumeTaskResponse());
     }
 
-    public ResumeUpgradeClusterResponse resumeUpgradeCluster(String ClusterId) throws Exception {
+    public ResumeTaskResponse resumeTask(String taskId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.resumeUpgradeClusterWithOptions(ClusterId, headers, runtime);
+        return this.resumeTaskWithOptions(taskId, headers, runtime);
     }
 
     public ResumeUpgradeClusterResponse resumeUpgradeClusterWithOptions(String ClusterId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -3350,12 +3410,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ResumeUpgradeClusterResponse());
     }
 
-    public ScaleClusterResponse scaleCluster(String ClusterId, ScaleClusterRequest request) throws Exception {
+    public ResumeUpgradeClusterResponse resumeUpgradeCluster(String ClusterId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.scaleClusterWithOptions(ClusterId, request, headers, runtime);
+        return this.resumeUpgradeClusterWithOptions(ClusterId, headers, runtime);
     }
 
+    /**
+      * @deprecated
+      *
+      * @param request ScaleClusterRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ScaleClusterResponse
+     */
     public ScaleClusterResponse scaleClusterWithOptions(String ClusterId, ScaleClusterRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -3453,10 +3521,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ScaleClusterResponse());
     }
 
-    public ScaleClusterNodePoolResponse scaleClusterNodePool(String ClusterId, String NodepoolId, ScaleClusterNodePoolRequest request) throws Exception {
+    /**
+      * @deprecated
+      *
+      * @param request ScaleClusterRequest
+      * @return ScaleClusterResponse
+     */
+    public ScaleClusterResponse scaleCluster(String ClusterId, ScaleClusterRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.scaleClusterNodePoolWithOptions(ClusterId, NodepoolId, request, headers, runtime);
+        return this.scaleClusterWithOptions(ClusterId, request, headers, runtime);
     }
 
     public ScaleClusterNodePoolResponse scaleClusterNodePoolWithOptions(String ClusterId, String NodepoolId, ScaleClusterNodePoolRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -3484,10 +3558,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ScaleClusterNodePoolResponse());
     }
 
-    public ScaleOutClusterResponse scaleOutCluster(String ClusterId, ScaleOutClusterRequest request) throws Exception {
+    public ScaleClusterNodePoolResponse scaleClusterNodePool(String ClusterId, String NodepoolId, ScaleClusterNodePoolRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.scaleOutClusterWithOptions(ClusterId, request, headers, runtime);
+        return this.scaleClusterNodePoolWithOptions(ClusterId, NodepoolId, request, headers, runtime);
     }
 
     public ScaleOutClusterResponse scaleOutClusterWithOptions(String ClusterId, ScaleOutClusterRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -3521,7 +3595,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("rds_instances", request.rdsInstances);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.runtime))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.runtime)) {
             body.put("runtime", request.runtime);
         }
 
@@ -3595,10 +3669,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ScaleOutClusterResponse());
     }
 
-    public StartWorkflowResponse startWorkflow(StartWorkflowRequest request) throws Exception {
+    public ScaleOutClusterResponse scaleOutCluster(String ClusterId, ScaleOutClusterRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.startWorkflowWithOptions(request, headers, runtime);
+        return this.scaleOutClusterWithOptions(ClusterId, request, headers, runtime);
+    }
+
+    public StartAlertResponse startAlertWithOptions(String ClusterId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StartAlert"),
+            new TeaPair("version", "2015-12-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/alert/" + com.aliyun.openapiutil.Client.getEncodeParam(ClusterId) + "/alert_rule/start"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StartAlertResponse());
+    }
+
+    public StartAlertResponse startAlert(String ClusterId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.startAlertWithOptions(ClusterId, headers, runtime);
     }
 
     public StartWorkflowResponse startWorkflowWithOptions(StartWorkflowRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -3698,10 +3796,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new StartWorkflowResponse());
     }
 
-    public TagResourcesResponse tagResources(TagResourcesRequest request) throws Exception {
+    public StartWorkflowResponse startWorkflow(StartWorkflowRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.tagResourcesWithOptions(request, headers, runtime);
+        return this.startWorkflowWithOptions(request, headers, runtime);
+    }
+
+    public StopAlertResponse stopAlertWithOptions(String ClusterId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StopAlert"),
+            new TeaPair("version", "2015-12-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/alert/" + com.aliyun.openapiutil.Client.getEncodeParam(ClusterId) + "/alert_rule/stop"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StopAlertResponse());
+    }
+
+    public StopAlertResponse stopAlert(String ClusterId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.stopAlertWithOptions(ClusterId, headers, runtime);
     }
 
     public TagResourcesResponse tagResourcesWithOptions(TagResourcesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -3741,10 +3863,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new TagResourcesResponse());
     }
 
-    public UnInstallClusterAddonsResponse unInstallClusterAddons(String ClusterId, UnInstallClusterAddonsRequest request) throws Exception {
+    public TagResourcesResponse tagResources(TagResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.unInstallClusterAddonsWithOptions(ClusterId, request, headers, runtime);
+        return this.tagResourcesWithOptions(request, headers, runtime);
     }
 
     public UnInstallClusterAddonsResponse unInstallClusterAddonsWithOptions(String ClusterId, UnInstallClusterAddonsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -3767,10 +3889,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UnInstallClusterAddonsResponse());
     }
 
-    public UntagResourcesResponse untagResources(UntagResourcesRequest request) throws Exception {
+    public UnInstallClusterAddonsResponse unInstallClusterAddons(String ClusterId, UnInstallClusterAddonsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.untagResourcesWithOptions(request, headers, runtime);
+        return this.unInstallClusterAddonsWithOptions(ClusterId, request, headers, runtime);
     }
 
     public UntagResourcesResponse untagResourcesWithOptions(UntagResourcesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -3814,10 +3936,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UntagResourcesResponse());
     }
 
-    public UpdateContactGroupForAlertResponse updateContactGroupForAlert(String ClusterId) throws Exception {
+    public UntagResourcesResponse untagResources(UntagResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.updateContactGroupForAlertWithOptions(ClusterId, headers, runtime);
+        return this.untagResourcesWithOptions(request, headers, runtime);
     }
 
     public UpdateContactGroupForAlertResponse updateContactGroupForAlertWithOptions(String ClusterId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -3838,10 +3960,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateContactGroupForAlertResponse());
     }
 
-    public UpdateK8sClusterUserConfigExpireResponse updateK8sClusterUserConfigExpire(String ClusterId, UpdateK8sClusterUserConfigExpireRequest request) throws Exception {
+    public UpdateContactGroupForAlertResponse updateContactGroupForAlert(String ClusterId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.updateK8sClusterUserConfigExpireWithOptions(ClusterId, request, headers, runtime);
+        return this.updateContactGroupForAlertWithOptions(ClusterId, headers, runtime);
     }
 
     public UpdateK8sClusterUserConfigExpireResponse updateK8sClusterUserConfigExpireWithOptions(String ClusterId, UpdateK8sClusterUserConfigExpireRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -3873,10 +3995,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateK8sClusterUserConfigExpireResponse());
     }
 
-    public UpdateTemplateResponse updateTemplate(String TemplateId, UpdateTemplateRequest request) throws Exception {
+    public UpdateK8sClusterUserConfigExpireResponse updateK8sClusterUserConfigExpire(String ClusterId, UpdateK8sClusterUserConfigExpireRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.updateTemplateWithOptions(TemplateId, request, headers, runtime);
+        return this.updateK8sClusterUserConfigExpireWithOptions(ClusterId, request, headers, runtime);
     }
 
     public UpdateTemplateResponse updateTemplateWithOptions(String TemplateId, UpdateTemplateRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -3920,10 +4042,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateTemplateResponse());
     }
 
-    public UpgradeClusterResponse upgradeCluster(String ClusterId, UpgradeClusterRequest request) throws Exception {
+    public UpdateTemplateResponse updateTemplate(String TemplateId, UpdateTemplateRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.upgradeClusterWithOptions(ClusterId, request, headers, runtime);
+        return this.updateTemplateWithOptions(TemplateId, request, headers, runtime);
     }
 
     public UpgradeClusterResponse upgradeClusterWithOptions(String ClusterId, UpgradeClusterRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -3959,10 +4081,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpgradeClusterResponse());
     }
 
-    public UpgradeClusterAddonsResponse upgradeClusterAddons(String ClusterId, UpgradeClusterAddonsRequest request) throws Exception {
+    public UpgradeClusterResponse upgradeCluster(String ClusterId, UpgradeClusterRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.upgradeClusterAddonsWithOptions(ClusterId, request, headers, runtime);
+        return this.upgradeClusterWithOptions(ClusterId, request, headers, runtime);
     }
 
     public UpgradeClusterAddonsResponse upgradeClusterAddonsWithOptions(String ClusterId, UpgradeClusterAddonsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -3985,10 +4107,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpgradeClusterAddonsResponse());
     }
 
-    public UpgradeClusterNodepoolResponse upgradeClusterNodepool(String ClusterId, String NodepoolId, UpgradeClusterNodepoolRequest request) throws Exception {
+    public UpgradeClusterAddonsResponse upgradeClusterAddons(String ClusterId, UpgradeClusterAddonsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.upgradeClusterNodepoolWithOptions(ClusterId, NodepoolId, request, headers, runtime);
+        return this.upgradeClusterAddonsWithOptions(ClusterId, request, headers, runtime);
     }
 
     public UpgradeClusterNodepoolResponse upgradeClusterNodepoolWithOptions(String ClusterId, String NodepoolId, UpgradeClusterNodepoolRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -4022,5 +4144,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpgradeClusterNodepoolResponse());
+    }
+
+    public UpgradeClusterNodepoolResponse upgradeClusterNodepool(String ClusterId, String NodepoolId, UpgradeClusterNodepoolRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.upgradeClusterNodepoolWithOptions(ClusterId, NodepoolId, request, headers, runtime);
     }
 }
