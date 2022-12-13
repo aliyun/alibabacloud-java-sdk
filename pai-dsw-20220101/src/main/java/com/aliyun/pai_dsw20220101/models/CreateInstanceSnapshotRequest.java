@@ -7,6 +7,9 @@ public class CreateInstanceSnapshotRequest extends TeaModel {
     @NameInMap("ImageUrl")
     public String imageUrl;
 
+    @NameInMap("Labels")
+    public java.util.List<CreateInstanceSnapshotRequestLabels> labels;
+
     @NameInMap("SnapshotDescription")
     public String snapshotDescription;
 
@@ -26,6 +29,14 @@ public class CreateInstanceSnapshotRequest extends TeaModel {
         return this.imageUrl;
     }
 
+    public CreateInstanceSnapshotRequest setLabels(java.util.List<CreateInstanceSnapshotRequestLabels> labels) {
+        this.labels = labels;
+        return this;
+    }
+    public java.util.List<CreateInstanceSnapshotRequestLabels> getLabels() {
+        return this.labels;
+    }
+
     public CreateInstanceSnapshotRequest setSnapshotDescription(String snapshotDescription) {
         this.snapshotDescription = snapshotDescription;
         return this;
@@ -40,6 +51,36 @@ public class CreateInstanceSnapshotRequest extends TeaModel {
     }
     public String getSnapshotName() {
         return this.snapshotName;
+    }
+
+    public static class CreateInstanceSnapshotRequestLabels extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateInstanceSnapshotRequestLabels build(java.util.Map<String, ?> map) throws Exception {
+            CreateInstanceSnapshotRequestLabels self = new CreateInstanceSnapshotRequestLabels();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateInstanceSnapshotRequestLabels setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateInstanceSnapshotRequestLabels setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }
