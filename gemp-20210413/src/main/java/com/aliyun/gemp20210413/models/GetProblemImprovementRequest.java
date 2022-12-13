@@ -4,11 +4,9 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class GetProblemImprovementRequest extends TeaModel {
-    // 幂等校验token
     @NameInMap("clientToken")
     public String clientToken;
 
-    // 故障ID
     @NameInMap("problemId")
     public String problemId;
 

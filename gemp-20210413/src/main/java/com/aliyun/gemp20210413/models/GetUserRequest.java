@@ -4,11 +4,9 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class GetUserRequest extends TeaModel {
-    // 幂等号
     @NameInMap("clientToken")
     public String clientToken;
 
-    // 用户ID
     @NameInMap("userId")
     public Long userId;
 

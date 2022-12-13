@@ -4,43 +4,33 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class UpdateProblemRequest extends TeaModel {
-    // 舆情反馈
     @NameInMap("feedback")
     public String feedback;
 
-    // 故障等级
     @NameInMap("level")
     public String level;
 
-    // 主要处理人
     @NameInMap("mainHandlerId")
     public Long mainHandlerId;
 
-    // 初步原因
     @NameInMap("preliminaryReason")
     public String preliminaryReason;
 
-    // 故障ID
     @NameInMap("problemId")
     public Long problemId;
 
-    // 故障名
     @NameInMap("problemName")
     public String problemName;
 
-    // 进展摘要
     @NameInMap("progressSummary")
     public String progressSummary;
 
-    // 进展摘要富文本id
     @NameInMap("progressSummaryRichTextId")
     public Long progressSummaryRichTextId;
 
-    // 所属服务
     @NameInMap("relatedServiceId")
     public Long relatedServiceId;
 
-    // 应急协同组
     @NameInMap("serviceGroupIds")
     public java.util.List<Long> serviceGroupIds;
 

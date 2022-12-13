@@ -4,19 +4,18 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ListIncidentDetailTimelinesRequest extends TeaModel {
-    // 幂等校验
     @NameInMap("clientToken")
     public String clientToken;
 
-    // 事件ID
+    @NameInMap("idSort")
+    public String idSort;
+
     @NameInMap("incidentId")
     public Long incidentId;
 
-    // 页
     @NameInMap("pageNumber")
     public Long pageNumber;
 
-    // 行
     @NameInMap("pageSize")
     public Long pageSize;
 
@@ -31,6 +30,14 @@ public class ListIncidentDetailTimelinesRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public ListIncidentDetailTimelinesRequest setIdSort(String idSort) {
+        this.idSort = idSort;
+        return this;
+    }
+    public String getIdSort() {
+        return this.idSort;
     }
 
     public ListIncidentDetailTimelinesRequest setIncidentId(Long incidentId) {

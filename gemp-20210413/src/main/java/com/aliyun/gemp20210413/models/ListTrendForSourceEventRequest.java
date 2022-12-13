@@ -4,27 +4,21 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ListTrendForSourceEventRequest extends TeaModel {
-    // 结束时间
     @NameInMap("endTime")
     public String endTime;
 
-    // 报警ID
     @NameInMap("instanceId")
     public Long instanceId;
 
-    // 类型
     @NameInMap("instanceType")
     public String instanceType;
 
-    // 请求ID
     @NameInMap("requestId")
     public String requestId;
 
-    // 开始时间
     @NameInMap("startTime")
     public String startTime;
 
-    // 时间单位毫秒
     @NameInMap("timeUnit")
     public Long timeUnit;
 

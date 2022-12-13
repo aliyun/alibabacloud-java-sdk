@@ -4,23 +4,18 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class CreateProblemTimelineRequest extends TeaModel {
-    // clientToken
     @NameInMap("clientToken")
     public String clientToken;
 
-    // 节点内容
     @NameInMap("content")
     public String content;
 
-    // 关键节点 码表:PROBLEM_KEY_NODE (逗号分隔)
     @NameInMap("keyNode")
     public String keyNode;
 
-    // 故障id
     @NameInMap("problemId")
     public Long problemId;
 
-    // 发生时间
     @NameInMap("time")
     public String time;
 

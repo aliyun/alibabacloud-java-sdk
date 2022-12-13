@@ -4,6 +4,7 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class CreateProblemMeasureResponseBody extends TeaModel {
+    // data
     @NameInMap("data")
     public CreateProblemMeasureResponseBodyData data;
 
@@ -33,7 +34,6 @@ public class CreateProblemMeasureResponseBody extends TeaModel {
     }
 
     public static class CreateProblemMeasureResponseBodyData extends TeaModel {
-        // 故障措施Id
         @NameInMap("measureId")
         public Long measureId;
 

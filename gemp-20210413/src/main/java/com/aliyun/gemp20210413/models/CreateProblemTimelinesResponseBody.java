@@ -4,9 +4,11 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class CreateProblemTimelinesResponseBody extends TeaModel {
+    // data
     @NameInMap("data")
     public CreateProblemTimelinesResponseBodyData data;
 
+    // id of the request
     @NameInMap("requestId")
     public String requestId;
 

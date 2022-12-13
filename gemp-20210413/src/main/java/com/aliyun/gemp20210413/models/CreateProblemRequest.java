@@ -4,63 +4,48 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class CreateProblemRequest extends TeaModel {
-    // 影响服务列表
     @NameInMap("affectServiceIds")
     public java.util.List<Long> affectServiceIds;
 
-    // 幂等校验Id
     @NameInMap("clientToken")
     public String clientToken;
 
-    // 发现时间 (XXXX-XX-XX 00:00:00)
     @NameInMap("discoverTime")
     public String discoverTime;
 
-    // 事件id
     @NameInMap("incidentId")
     public Long incidentId;
 
-    // 主要处理人
     @NameInMap("mainHandlerId")
     public Long mainHandlerId;
 
-    // 初步原因
     @NameInMap("preliminaryReason")
     public String preliminaryReason;
 
-    // 故障等级 1=P1 2=P2 3=P3 4=P4
     @NameInMap("problemLevel")
     public String problemLevel;
 
-    // 故障名称
     @NameInMap("problemName")
     public String problemName;
 
-    // 通告类型
     @NameInMap("problemNotifyType")
     public String problemNotifyType;
 
-    // 故障状态  HANDLING 处理中 RECOVERED 已恢复  REPLAYING 复盘中  REPLAYED 已复盘 CANCEL 已取消
     @NameInMap("problemStatus")
     public String problemStatus;
 
-    // 进展摘要
     @NameInMap("progressSummary")
     public String progressSummary;
 
-    // 进展摘要富文本id
     @NameInMap("progressSummaryRichTextId")
     public Long progressSummaryRichTextId;
 
-    // 恢复时间
     @NameInMap("recoveryTime")
     public String recoveryTime;
 
-    // 所属服务
     @NameInMap("relatedServiceId")
     public Long relatedServiceId;
 
-    // 应急协同组
     @NameInMap("serviceGroupIds")
     public java.util.List<Long> serviceGroupIds;
 

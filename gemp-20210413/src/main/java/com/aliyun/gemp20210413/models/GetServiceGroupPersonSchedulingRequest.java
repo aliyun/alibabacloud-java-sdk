@@ -4,23 +4,18 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class GetServiceGroupPersonSchedulingRequest extends TeaModel {
-    // 幂等号
     @NameInMap("clientToken")
     public String clientToken;
 
-    // 排班结束时间
     @NameInMap("endTime")
     public String endTime;
 
-    // 服务组ID
     @NameInMap("serviceGroupId")
     public Long serviceGroupId;
 
-    // 排班开始时间
     @NameInMap("startTime")
     public String startTime;
 
-    // 用户ID
     @NameInMap("userId")
     public Long userId;
 

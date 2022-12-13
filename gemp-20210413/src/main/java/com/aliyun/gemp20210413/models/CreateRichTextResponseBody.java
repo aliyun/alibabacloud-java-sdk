@@ -34,15 +34,12 @@ public class CreateRichTextResponseBody extends TeaModel {
     }
 
     public static class CreateRichTextResponseBodyData extends TeaModel {
-        // 资源id
         @NameInMap("instanceId")
         public Long instanceId;
 
-        // 资源类型
         @NameInMap("instanceType")
         public Long instanceType;
 
-        // 富文本内容
         @NameInMap("richText")
         public String richText;
 

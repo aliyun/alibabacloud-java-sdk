@@ -4,47 +4,36 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ListIncidentsRequest extends TeaModel {
-    // 幂等校验id
     @NameInMap("clientToken")
     public String clientToken;
 
-    // 创建结束时间
     @NameInMap("createEndTime")
     public String createEndTime;
 
-    // 创建开始时间
     @NameInMap("createStartTime")
     public String createStartTime;
 
-    // 影响等级 高：HIGH 低 LOW
     @NameInMap("effect")
     public String effect;
 
-    // 事件级别 P1 P2 P3 P4
     @NameInMap("incidentLevel")
     public String incidentLevel;
 
-    // 事件状态 ASSIGNED已分派 RESPONDED已响应  FINISHED已完结
     @NameInMap("incidentStatus")
     public String incidentStatus;
 
-    // 是否自己 1是 0不是
     @NameInMap("me")
     public Integer me;
 
-    // 页
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
-    // 行
     @NameInMap("pageSize")
     public Integer pageSize;
 
-    // 关联服务ID
     @NameInMap("relationServiceId")
     public Long relationServiceId;
 
-    // 流转规则名字
     @NameInMap("ruleName")
     public String ruleName;
 

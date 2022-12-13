@@ -4,9 +4,11 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class GetSubscriptionResponseBody extends TeaModel {
+    // Object
     @NameInMap("data")
     public GetSubscriptionResponseBodyData data;
 
+    // requestId
     @NameInMap("requestId")
     public String requestId;
 
@@ -32,19 +34,15 @@ public class GetSubscriptionResponseBody extends TeaModel {
     }
 
     public static class GetSubscriptionResponseBodyDataNotifyObjectList extends TeaModel {
-        // id主键
         @NameInMap("id")
         public Long id;
 
-        // 通知对象名
         @NameInMap("name")
         public String name;
 
-        // 关联主键id
         @NameInMap("notifyObjectId")
         public Long notifyObjectId;
 
-        // 通知对象类型0服务组 1个人
         @NameInMap("notifyObjectType")
         public Long notifyObjectType;
 
@@ -88,19 +86,15 @@ public class GetSubscriptionResponseBody extends TeaModel {
     }
 
     public static class GetSubscriptionResponseBodyDataNotifyStrategyListStrategiesConditions extends TeaModel {
-        // 事件动作
         @NameInMap("action")
         public String action;
 
-        // 影响范围
         @NameInMap("effection")
         public String effection;
 
-        // 等级
         @NameInMap("level")
         public String level;
 
-        // 故障通知类型
         @NameInMap("problemNotifyType")
         public String problemNotifyType;
 
@@ -144,11 +138,9 @@ public class GetSubscriptionResponseBody extends TeaModel {
     }
 
     public static class GetSubscriptionResponseBodyDataNotifyStrategyListStrategiesPeriodChannel extends TeaModel {
-        // 非工作时间
         @NameInMap("nonWorkday")
         public String nonWorkday;
 
-        // 工作时间
         @NameInMap("workday")
         public String workday;
 
@@ -176,19 +168,15 @@ public class GetSubscriptionResponseBody extends TeaModel {
     }
 
     public static class GetSubscriptionResponseBodyDataNotifyStrategyListStrategies extends TeaModel {
-        // 通知渠道
         @NameInMap("channels")
         public String channels;
 
-        // 条件
         @NameInMap("conditions")
         public java.util.List<GetSubscriptionResponseBodyDataNotifyStrategyListStrategiesConditions> conditions;
 
-        // 策略主键
         @NameInMap("id")
         public Long id;
 
-        // 分时间段渠道
         @NameInMap("periodChannel")
         public GetSubscriptionResponseBodyDataNotifyStrategyListStrategiesPeriodChannel periodChannel;
 
@@ -232,11 +220,9 @@ public class GetSubscriptionResponseBody extends TeaModel {
     }
 
     public static class GetSubscriptionResponseBodyDataNotifyStrategyList extends TeaModel {
-        // 订阅实例类型，0事件、1报警、2故障
         @NameInMap("instanceType")
         public Long instanceType;
 
-        // 策略
         @NameInMap("strategies")
         public java.util.List<GetSubscriptionResponseBodyDataNotifyStrategyListStrategies> strategies;
 
@@ -264,19 +250,18 @@ public class GetSubscriptionResponseBody extends TeaModel {
     }
 
     public static class GetSubscriptionResponseBodyDataScopeObjectList extends TeaModel {
-        // id主键
         @NameInMap("id")
         public Long id;
 
-        // 订阅范围类型 0 全部 1服务 2 流转规则
+        @NameInMap("isValid")
+        public Long isValid;
+
         @NameInMap("scope")
         public String scope;
 
-        // 订阅范围对象名称
         @NameInMap("scopeObject")
         public String scopeObject;
 
-        // 订阅范围对象关联表主键id
         @NameInMap("scopeObjectId")
         public Long scopeObjectId;
 
@@ -291,6 +276,14 @@ public class GetSubscriptionResponseBody extends TeaModel {
         }
         public Long getId() {
             return this.id;
+        }
+
+        public GetSubscriptionResponseBodyDataScopeObjectList setIsValid(Long isValid) {
+            this.isValid = isValid;
+            return this;
+        }
+        public Long getIsValid() {
+            return this.isValid;
         }
 
         public GetSubscriptionResponseBodyDataScopeObjectList setScope(String scope) {
@@ -320,49 +313,40 @@ public class GetSubscriptionResponseBody extends TeaModel {
     }
 
     public static class GetSubscriptionResponseBodyData extends TeaModel {
-        // 时效结束时间
         @NameInMap("endTime")
         public String endTime;
 
-        // 有效期类型 0 长期 1短期
         @NameInMap("expiredType")
         public String expiredType;
 
-        // 通知对象列表
         @NameInMap("notifyObjectList")
         public java.util.List<GetSubscriptionResponseBodyDataNotifyObjectList> notifyObjectList;
 
-        // 0服务组 1个人
         @NameInMap("notifyObjectType")
         public String notifyObjectType;
 
-        // 通知策略列表
         @NameInMap("notifyStrategyList")
         public java.util.List<GetSubscriptionResponseBodyDataNotifyStrategyList> notifyStrategyList;
 
-        // 时间段字符串
         @NameInMap("period")
         public String period;
 
-        // 0 全部 1服务 2 流转规则
         @NameInMap("scope")
         public String scope;
 
+        // Array
         @NameInMap("scopeObjectList")
         public java.util.List<GetSubscriptionResponseBodyDataScopeObjectList> scopeObjectList;
 
-        // 时效开始时间
         @NameInMap("startTime")
         public String startTime;
 
-        // 1 启用 0禁用
         @NameInMap("status")
         public String status;
 
         @NameInMap("subscriptionId")
         public Long subscriptionId;
 
-        // 通知订阅名称
         @NameInMap("subscriptionTitle")
         public String subscriptionTitle;
 

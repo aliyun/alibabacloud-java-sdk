@@ -4,11 +4,10 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class UpdateIntegrationConfigRequest extends TeaModel {
-    // 集成秘钥
+    // accessKey
     @NameInMap("accessKey")
     public String accessKey;
 
-    // 幂等id
     @NameInMap("clientToken")
     public String clientToken;
 

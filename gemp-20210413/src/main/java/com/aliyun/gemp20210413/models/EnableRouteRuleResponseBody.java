@@ -7,7 +7,6 @@ public class EnableRouteRuleResponseBody extends TeaModel {
     @NameInMap("data")
     public Integer data;
 
-    // 请求ID
     @NameInMap("requestId")
     public String requestId;
 

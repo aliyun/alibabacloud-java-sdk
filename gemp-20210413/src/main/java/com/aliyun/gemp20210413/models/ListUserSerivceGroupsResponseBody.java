@@ -4,6 +4,7 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ListUserSerivceGroupsResponseBody extends TeaModel {
+    // data
     @NameInMap("data")
     public ListUserSerivceGroupsResponseBodyData data;
 
@@ -33,15 +34,12 @@ public class ListUserSerivceGroupsResponseBody extends TeaModel {
     }
 
     public static class ListUserSerivceGroupsResponseBodyDataServiceGroups extends TeaModel {
-        // 服务组描述
         @NameInMap("serviceGroupDescription")
         public String serviceGroupDescription;
 
-        // 服务组id
         @NameInMap("serviceGroupId")
         public Long serviceGroupId;
 
-        // 服务组名称
         @NameInMap("serviceGroupName")
         public String serviceGroupName;
 
@@ -77,27 +75,21 @@ public class ListUserSerivceGroupsResponseBody extends TeaModel {
     }
 
     public static class ListUserSerivceGroupsResponseBodyData extends TeaModel {
-        // 邮箱
         @NameInMap("email")
         public String email;
 
-        // 手机号
         @NameInMap("phone")
         public String phone;
 
-        // RAM子账号ID
         @NameInMap("ramId")
         public Long ramId;
 
-        // 人员所属服务组
         @NameInMap("serviceGroups")
         public java.util.List<ListUserSerivceGroupsResponseBodyDataServiceGroups> serviceGroups;
 
-        // 用户ID
         @NameInMap("userId")
         public Long userId;
 
-        // 用户昵称
         @NameInMap("username")
         public String username;
 

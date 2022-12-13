@@ -4,7 +4,6 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class DeleteRouteRuleResponseBody extends TeaModel {
-    // 请求ID
     @NameInMap("requestId")
     public Long requestId;
 

@@ -4,15 +4,12 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ListServiceGroupMonitorSourceTemplatesRequest extends TeaModel {
-    // 幂等号
     @NameInMap("clientToken")
     public String clientToken;
 
-    // 请求ID
     @NameInMap("requestId")
     public String requestId;
 
-    // 服务组ID
     @NameInMap("serviceGroupId")
     public Long serviceGroupId;
 

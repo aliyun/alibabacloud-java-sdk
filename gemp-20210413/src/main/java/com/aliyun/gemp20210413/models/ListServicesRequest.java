@@ -4,19 +4,15 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ListServicesRequest extends TeaModel {
-    // 幂等号
     @NameInMap("clientToken")
     public String clientToken;
 
-    // 当前页
     @NameInMap("pageNumber")
     public Long pageNumber;
 
-    // 页大小
     @NameInMap("pageSize")
     public Long pageSize;
 
-    // 服务名称
     @NameInMap("serviceName")
     public String serviceName;
 

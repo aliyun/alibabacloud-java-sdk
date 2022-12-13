@@ -4,6 +4,7 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ListIncidentTimelinesResponseBody extends TeaModel {
+    // data
     @NameInMap("data")
     public java.util.List<ListIncidentTimelinesResponseBodyData> data;
 
@@ -13,10 +14,10 @@ public class ListIncidentTimelinesResponseBody extends TeaModel {
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    // requestId
     @NameInMap("requestId")
     public String requestId;
 
-    // 总数
     @NameInMap("totalCount")
     public Integer totalCount;
 
@@ -66,43 +67,36 @@ public class ListIncidentTimelinesResponseBody extends TeaModel {
     }
 
     public static class ListIncidentTimelinesResponseBodyData extends TeaModel {
-        // 动态类型  触发新增 INCIDENT_ADD 响应 INCIDENT_RESPONSE 转交 INCIDENT_DELIVER 变更 INCIDENT_UPDATE 添加小计 INCIDENT_ADD_SUBTOTAL 完结 INCIDENT_FINISH 分配 INCIDENT_ASSIGN 升级 INCIDENT_UPGRAD
         @NameInMap("action")
         public String action;
 
-        // 创建时间
         @NameInMap("createTime")
         public String createTime;
 
-        // 描述
         @NameInMap("description")
         public Long description;
 
-        // 事件Id
         @NameInMap("incidentId")
         public Long incidentId;
 
-        // 事件编号
         @NameInMap("incidentNumber")
         public String incidentNumber;
 
-        // 事件标题
         @NameInMap("incidentTitle")
         public String incidentTitle;
 
-        // 服务名称
+        @NameInMap("relRouteRuleDeleteType")
+        public Integer relRouteRuleDeleteType;
+
         @NameInMap("relatedServiceName")
         public String relatedServiceName;
 
-        // 备注
         @NameInMap("remark")
         public String remark;
 
-        // 动态快照数据
         @NameInMap("snapshotData")
         public String snapshotData;
 
-        // 动态
         @NameInMap("title")
         public String title;
 
@@ -157,6 +151,14 @@ public class ListIncidentTimelinesResponseBody extends TeaModel {
         }
         public String getIncidentTitle() {
             return this.incidentTitle;
+        }
+
+        public ListIncidentTimelinesResponseBodyData setRelRouteRuleDeleteType(Integer relRouteRuleDeleteType) {
+            this.relRouteRuleDeleteType = relRouteRuleDeleteType;
+            return this;
+        }
+        public Integer getRelRouteRuleDeleteType() {
+            return this.relRouteRuleDeleteType;
         }
 
         public ListIncidentTimelinesResponseBodyData setRelatedServiceName(String relatedServiceName) {

@@ -34,11 +34,9 @@ public class GetEscalationPlanResponseBody extends TeaModel {
     }
 
     public static class GetEscalationPlanResponseBodyDataEscalationPlanRulesEscalationPlanConditions extends TeaModel {
-        // 影响等级
         @NameInMap("effection")
         public String effection;
 
-        // 事件等级
         @NameInMap("level")
         public String level;
 
@@ -66,11 +64,9 @@ public class GetEscalationPlanResponseBody extends TeaModel {
     }
 
     public static class GetEscalationPlanResponseBodyDataEscalationPlanRulesEscalationPlanStrategiesNoticeObjectList extends TeaModel {
-        // 通知对象id
         @NameInMap("noticeObjectId")
         public Long noticeObjectId;
 
-        // 通知对象名称
         @NameInMap("noticeObjectName")
         public String noticeObjectName;
 
@@ -98,11 +94,9 @@ public class GetEscalationPlanResponseBody extends TeaModel {
     }
 
     public static class GetEscalationPlanResponseBodyDataEscalationPlanRulesEscalationPlanStrategiesServiceGroups extends TeaModel {
-        // 服务组id
         @NameInMap("id")
         public Long id;
 
-        // 服务组名称
         @NameInMap("serviceGroupName")
         public String serviceGroupName;
 
@@ -130,27 +124,21 @@ public class GetEscalationPlanResponseBody extends TeaModel {
     }
 
     public static class GetEscalationPlanResponseBodyDataEscalationPlanRulesEscalationPlanStrategies extends TeaModel {
-        // 是否支持群通知
         @NameInMap("enableWebhook")
         public Boolean enableWebhook;
 
-        // 升级计划类型
         @NameInMap("escalationPlanType")
         public String escalationPlanType;
 
-        // 通知对象渠道
         @NameInMap("noticeChannels")
         public String noticeChannels;
 
-        // 通知对象列表
         @NameInMap("noticeObjectList")
         public java.util.List<GetEscalationPlanResponseBodyDataEscalationPlanRulesEscalationPlanStrategiesNoticeObjectList> noticeObjectList;
 
-        // 通知时间
         @NameInMap("noticeTime")
         public Long noticeTime;
 
-        // 服务组列表
         @NameInMap("serviceGroups")
         public java.util.List<GetEscalationPlanResponseBodyDataEscalationPlanRulesEscalationPlanStrategiesServiceGroups> serviceGroups;
 
@@ -210,15 +198,12 @@ public class GetEscalationPlanResponseBody extends TeaModel {
     }
 
     public static class GetEscalationPlanResponseBodyDataEscalationPlanRules extends TeaModel {
-        // 升级计划条件
         @NameInMap("escalationPlanConditions")
         public java.util.List<GetEscalationPlanResponseBodyDataEscalationPlanRulesEscalationPlanConditions> escalationPlanConditions;
 
-        // 升级计划id
         @NameInMap("escalationPlanRuleId")
         public Long escalationPlanRuleId;
 
-        // 升级计划策略
         @NameInMap("escalationPlanStrategies")
         public java.util.List<GetEscalationPlanResponseBodyDataEscalationPlanRulesEscalationPlanStrategies> escalationPlanStrategies;
 
@@ -254,15 +239,18 @@ public class GetEscalationPlanResponseBody extends TeaModel {
     }
 
     public static class GetEscalationPlanResponseBodyDataEscalationPlanScopeObjects extends TeaModel {
-        // 范围对象类型
+        @NameInMap("escalationPlanScopeObjects")
+        public Integer escalationPlanScopeObjects;
+
         @NameInMap("scope")
         public String scope;
 
-        // 范围对象id
+        @NameInMap("scopeObjectDeletedType")
+        public Integer scopeObjectDeletedType;
+
         @NameInMap("scopeObjectId")
         public Long scopeObjectId;
 
-        // 范围对象名称
         @NameInMap("scopeObjectName")
         public String scopeObjectName;
 
@@ -271,12 +259,28 @@ public class GetEscalationPlanResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public GetEscalationPlanResponseBodyDataEscalationPlanScopeObjects setEscalationPlanScopeObjects(Integer escalationPlanScopeObjects) {
+            this.escalationPlanScopeObjects = escalationPlanScopeObjects;
+            return this;
+        }
+        public Integer getEscalationPlanScopeObjects() {
+            return this.escalationPlanScopeObjects;
+        }
+
         public GetEscalationPlanResponseBodyDataEscalationPlanScopeObjects setScope(String scope) {
             this.scope = scope;
             return this;
         }
         public String getScope() {
             return this.scope;
+        }
+
+        public GetEscalationPlanResponseBodyDataEscalationPlanScopeObjects setScopeObjectDeletedType(Integer scopeObjectDeletedType) {
+            this.scopeObjectDeletedType = scopeObjectDeletedType;
+            return this;
+        }
+        public Integer getScopeObjectDeletedType() {
+            return this.scopeObjectDeletedType;
         }
 
         public GetEscalationPlanResponseBodyDataEscalationPlanScopeObjects setScopeObjectId(Long scopeObjectId) {
@@ -298,27 +302,21 @@ public class GetEscalationPlanResponseBody extends TeaModel {
     }
 
     public static class GetEscalationPlanResponseBodyData extends TeaModel {
-        // 创建时间
         @NameInMap("createTime")
         public String createTime;
 
-        // 升级计划描述
         @NameInMap("escalationPlanDescription")
         public String escalationPlanDescription;
 
-        // 升级计划id
         @NameInMap("escalationPlanId")
         public Long escalationPlanId;
 
-        // 升级计划名称
         @NameInMap("escalationPlanName")
         public String escalationPlanName;
 
-        // 升级计划规则列表
         @NameInMap("escalationPlanRules")
         public java.util.List<GetEscalationPlanResponseBodyDataEscalationPlanRules> escalationPlanRules;
 
-        // 升级计划范围对象列表
         @NameInMap("escalationPlanScopeObjects")
         public java.util.List<GetEscalationPlanResponseBodyDataEscalationPlanScopeObjects> escalationPlanScopeObjects;
 

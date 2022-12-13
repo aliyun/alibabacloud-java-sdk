@@ -34,7 +34,6 @@ public class UpdateRichTextResponseBody extends TeaModel {
     }
 
     public static class UpdateRichTextResponseBodyData extends TeaModel {
-        // 富文本id
         @NameInMap("id")
         public Long id;
 

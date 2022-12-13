@@ -8,11 +8,9 @@ public class CreateProblemTimelinesRequest extends TeaModel {
     @NameInMap("clientToken")
     public String clientToken;
 
-    // 故障id
     @NameInMap("problemId")
     public Long problemId;
 
-    // 时间线节点
     @NameInMap("timelineNodes")
     public String timelineNodes;
 

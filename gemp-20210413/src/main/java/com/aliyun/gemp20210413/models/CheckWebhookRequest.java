@@ -4,15 +4,12 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class CheckWebhookRequest extends TeaModel {
-    // 幂等校验token
     @NameInMap("clientToken")
     public String clientToken;
 
-    // webook地址
     @NameInMap("webhook")
     public String webhook;
 
-    // webhook地址类型 企业微信WEIXIN_GROUP 钉钉群 DING_GROUP 飞书 FEISHU_GROUP
     @NameInMap("webhookType")
     public String webhookType;
 

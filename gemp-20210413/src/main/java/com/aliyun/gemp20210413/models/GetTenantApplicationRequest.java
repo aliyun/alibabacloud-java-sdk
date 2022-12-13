@@ -4,7 +4,6 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class GetTenantApplicationRequest extends TeaModel {
-    // 幂等标识
     @NameInMap("clientToken")
     public String clientToken;
 

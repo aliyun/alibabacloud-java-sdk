@@ -8,7 +8,6 @@ public class GenerateProblemPictureLinkRequest extends TeaModel {
     @NameInMap("keys")
     public java.util.List<String> keys;
 
-    // 故障id
     @NameInMap("problemId")
     public String problemId;
 

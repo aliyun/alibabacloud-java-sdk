@@ -4,35 +4,30 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ListSubscriptionsRequest extends TeaModel {
-    // 幂等参数
     @NameInMap("clientToken")
     public String clientToken;
 
-    // 通知对象名
+    @NameInMap("notFilterScopeObjectDeleted")
+    public Boolean notFilterScopeObjectDeleted;
+
     @NameInMap("notifyObject")
     public String notifyObject;
 
-    // 通知对象类型notifyWhoType:0服务组 1个人
     @NameInMap("notifyObjectType")
     public String notifyObjectType;
 
-    // 第几页
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
-    // 一页几条
     @NameInMap("pageSize")
     public Integer pageSize;
 
-    // 订阅范围类型 0全部1服务2流转规则
     @NameInMap("scope")
     public String scope;
 
-    // 订阅范围对象名称
     @NameInMap("scopeObject")
     public String scopeObject;
 
-    // 通知订阅名
     @NameInMap("subscriptionTitle")
     public String subscriptionTitle;
 
@@ -47,6 +42,14 @@ public class ListSubscriptionsRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public ListSubscriptionsRequest setNotFilterScopeObjectDeleted(Boolean notFilterScopeObjectDeleted) {
+        this.notFilterScopeObjectDeleted = notFilterScopeObjectDeleted;
+        return this;
+    }
+    public Boolean getNotFilterScopeObjectDeleted() {
+        return this.notFilterScopeObjectDeleted;
     }
 
     public ListSubscriptionsRequest setNotifyObject(String notifyObject) {

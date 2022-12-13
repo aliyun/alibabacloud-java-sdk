@@ -4,14 +4,13 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ListSubscriptionsResponseBody extends TeaModel {
+    // data
     @NameInMap("data")
     public java.util.List<ListSubscriptionsResponseBodyData> data;
 
-    // 分页参数
     @NameInMap("pageNumber")
     public Long pageNumber;
 
-    // 分页参数
     @NameInMap("pageSize")
     public Long pageSize;
 
@@ -19,7 +18,6 @@ public class ListSubscriptionsResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
-    // 分页参数
     @NameInMap("totalCount")
     public Long totalCount;
 
@@ -69,19 +67,18 @@ public class ListSubscriptionsResponseBody extends TeaModel {
     }
 
     public static class ListSubscriptionsResponseBodyDataNotifyObjectList extends TeaModel {
-        // id主键
         @NameInMap("id")
         public Long id;
 
-        // 通知对象名
+        @NameInMap("isValid")
+        public Long isValid;
+
         @NameInMap("name")
         public String name;
 
-        // 关联主键id
         @NameInMap("notifyObjectId")
         public Long notifyObjectId;
 
-        // 通知对象类型0服务组 1个人
         @NameInMap("notifyObjectType")
         public Long notifyObjectType;
 
@@ -96,6 +93,14 @@ public class ListSubscriptionsResponseBody extends TeaModel {
         }
         public Long getId() {
             return this.id;
+        }
+
+        public ListSubscriptionsResponseBodyDataNotifyObjectList setIsValid(Long isValid) {
+            this.isValid = isValid;
+            return this;
+        }
+        public Long getIsValid() {
+            return this.isValid;
         }
 
         public ListSubscriptionsResponseBodyDataNotifyObjectList setName(String name) {
@@ -125,19 +130,18 @@ public class ListSubscriptionsResponseBody extends TeaModel {
     }
 
     public static class ListSubscriptionsResponseBodyDataScopeObjectList extends TeaModel {
-        // id主键
         @NameInMap("id")
         public Long id;
 
-        // 订阅范围类型 ALL全部 SERVICE服务 ROUTETULE流转规则
+        @NameInMap("isValid")
+        public Long isValid;
+
         @NameInMap("scope")
         public Long scope;
 
-        // 订阅范围对象名称
         @NameInMap("scopeObject")
         public String scopeObject;
 
-        // 订阅范围对象关联表主键id
         @NameInMap("scopeObjectId")
         public Long scopeObjectId;
 
@@ -152,6 +156,14 @@ public class ListSubscriptionsResponseBody extends TeaModel {
         }
         public Long getId() {
             return this.id;
+        }
+
+        public ListSubscriptionsResponseBodyDataScopeObjectList setIsValid(Long isValid) {
+            this.isValid = isValid;
+            return this;
+        }
+        public Long getIsValid() {
+            return this.isValid;
         }
 
         public ListSubscriptionsResponseBodyDataScopeObjectList setScope(Long scope) {
@@ -181,43 +193,33 @@ public class ListSubscriptionsResponseBody extends TeaModel {
     }
 
     public static class ListSubscriptionsResponseBodyData extends TeaModel {
-        // 时效结束时间
         @NameInMap("endTime")
         public String endTime;
 
-        // 有效期类型 0 长期 1短期
         @NameInMap("expiredType")
         public String expiredType;
 
-        // 通知对象列表
         @NameInMap("notifyObjectList")
         public java.util.List<ListSubscriptionsResponseBodyDataNotifyObjectList> notifyObjectList;
 
-        // 0服务组 1个人
         @NameInMap("notifyObjectType")
         public Long notifyObjectType;
 
-        // 0 全部 1服务 2 流转规则
         @NameInMap("scope")
         public Long scope;
 
-        // 订阅范围列表
         @NameInMap("scopeObjectList")
         public java.util.List<ListSubscriptionsResponseBodyDataScopeObjectList> scopeObjectList;
 
-        // 时效开始时间
         @NameInMap("startTime")
         public String startTime;
 
-        // ENABLE 启用 DISABLE禁用
         @NameInMap("status")
         public String status;
 
-        // 订阅id
         @NameInMap("subscriptionId")
         public Long subscriptionId;
 
-        // 通知订阅名称
         @NameInMap("subscriptionTitle")
         public String subscriptionTitle;
 

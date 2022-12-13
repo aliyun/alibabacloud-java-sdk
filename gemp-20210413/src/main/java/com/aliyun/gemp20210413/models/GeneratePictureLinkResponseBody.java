@@ -4,6 +4,7 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class GeneratePictureLinkResponseBody extends TeaModel {
+    // data
     @NameInMap("data")
     public GeneratePictureLinkResponseBodyData data;
 

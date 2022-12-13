@@ -4,6 +4,7 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ListIncidentDetailTimelinesResponseBody extends TeaModel {
+    // data
     @NameInMap("data")
     public java.util.List<ListIncidentDetailTimelinesResponseBodyData> data;
 
@@ -17,7 +18,6 @@ public class ListIncidentDetailTimelinesResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
-    // 总数
     @NameInMap("totalCount")
     public Integer totalCount;
 
@@ -67,35 +67,30 @@ public class ListIncidentDetailTimelinesResponseBody extends TeaModel {
     }
 
     public static class ListIncidentDetailTimelinesResponseBodyData extends TeaModel {
-        // 事件action
         @NameInMap("action")
         public String action;
 
-        // 创建时间
         @NameInMap("createTime")
         public String createTime;
 
-        // 描述
         @NameInMap("description")
         public String description;
 
-        // 事件Id
         @NameInMap("incidentId")
         public Long incidentId;
 
-        // 服务名称
+        @NameInMap("relRouteRuleDeleteType")
+        public Integer relRouteRuleDeleteType;
+
         @NameInMap("relatedServiceName")
         public String relatedServiceName;
 
-        // 备注
         @NameInMap("remark")
         public String remark;
 
-        // 快照数据
         @NameInMap("snapshotData")
         public String snapshotData;
 
-        // 主题
         @NameInMap("title")
         public String title;
 
@@ -134,6 +129,14 @@ public class ListIncidentDetailTimelinesResponseBody extends TeaModel {
         }
         public Long getIncidentId() {
             return this.incidentId;
+        }
+
+        public ListIncidentDetailTimelinesResponseBodyData setRelRouteRuleDeleteType(Integer relRouteRuleDeleteType) {
+            this.relRouteRuleDeleteType = relRouteRuleDeleteType;
+            return this;
+        }
+        public Integer getRelRouteRuleDeleteType() {
+            return this.relRouteRuleDeleteType;
         }
 
         public ListIncidentDetailTimelinesResponseBodyData setRelatedServiceName(String relatedServiceName) {

@@ -4,7 +4,6 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class GetServiceGroupSpecialPersonSchedulingResponseBody extends TeaModel {
-    // 人员排班信息
     @NameInMap("data")
     public java.util.List<GetServiceGroupSpecialPersonSchedulingResponseBodyData> data;
 
@@ -34,27 +33,21 @@ public class GetServiceGroupSpecialPersonSchedulingResponseBody extends TeaModel
     }
 
     public static class GetServiceGroupSpecialPersonSchedulingResponseBodyData extends TeaModel {
-        // 排班日期
         @NameInMap("schedulingDate")
         public String schedulingDate;
 
-        // 排班结束时间
         @NameInMap("schedulingEndTime")
         public String schedulingEndTime;
 
-        // 排班开始时间
         @NameInMap("schedulingStartTime")
         public String schedulingStartTime;
 
-        // 排班用户ID
         @NameInMap("schedulingUserId")
         public Long schedulingUserId;
 
-        // 服务组id
         @NameInMap("serviceGroupId")
         public Long serviceGroupId;
 
-        // 服务组名字
         @NameInMap("serviceGroupName")
         public String serviceGroupName;
 

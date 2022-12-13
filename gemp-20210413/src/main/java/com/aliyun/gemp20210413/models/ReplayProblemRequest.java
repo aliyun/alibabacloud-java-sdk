@@ -4,15 +4,12 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ReplayProblemRequest extends TeaModel {
-    // 幂等校验token
     @NameInMap("clientToken")
     public String clientToken;
 
-    // 故障ID
     @NameInMap("problemId")
     public Long problemId;
 
-    // 复盘负责人ID
     @NameInMap("replayDutyUserId")
     public Long replayDutyUserId;
 

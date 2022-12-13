@@ -4,7 +4,6 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ListDataReportForUserResponseBody extends TeaModel {
-    // 个人统计数据
     @NameInMap("data")
     public java.util.List<ListDataReportForUserResponseBodyData> data;
 
@@ -12,7 +11,6 @@ public class ListDataReportForUserResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
-    // 总条数
     @NameInMap("totalCount")
     public Long totalCount;
 
@@ -46,19 +44,15 @@ public class ListDataReportForUserResponseBody extends TeaModel {
     }
 
     public static class ListDataReportForUserResponseBodyData extends TeaModel {
-        // 分配事件数量
         @NameInMap("distributionIncidentCount")
         public Long distributionIncidentCount;
 
-        // 升级事件数量
         @NameInMap("escalationIncidentCount")
         public Long escalationIncidentCount;
 
-        // 完结事件数量
         @NameInMap("finishIncidentNumber")
         public Long finishIncidentNumber;
 
-        // 完结率
         @NameInMap("finishProportion")
         public String finishProportion;
 
@@ -70,23 +64,18 @@ public class ListDataReportForUserResponseBody extends TeaModel {
         @NameInMap("meanTimeToRepair")
         public String meanTimeToRepair;
 
-        // 未响应升级数
         @NameInMap("unAcknowledgedEscalationIncidentCount")
         public Long unAcknowledgedEscalationIncidentCount;
 
-        // 非分配完结数
         @NameInMap("unDistributionIncidentCount")
         public Long unDistributionIncidentCount;
 
-        // 未完结事件数
         @NameInMap("unFinishEscalationIncidentCount")
         public Long unFinishEscalationIncidentCount;
 
-        // 用户ID
         @NameInMap("userId")
         public Long userId;
 
-        // 用户名字
         @NameInMap("userName")
         public String userName;
 

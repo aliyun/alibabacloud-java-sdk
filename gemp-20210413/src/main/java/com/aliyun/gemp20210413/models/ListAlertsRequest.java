@@ -4,39 +4,35 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ListAlertsRequest extends TeaModel {
-    // 报警等级 P1 P2 P3 P4
     @NameInMap("alertLevel")
     public String alertLevel;
 
-    // 报警名称
     @NameInMap("alertName")
     public String alertName;
 
-    // 报警来源
     @NameInMap("alertSourceName")
     public String alertSourceName;
 
-    // 结束时间
+    // 2020-09-10 21:00:00
     @NameInMap("endTime")
     public String endTime;
 
-    // 当前页
+    @NameInMap("monitorSourceId")
+    public String monitorSourceId;
+
     @NameInMap("pageNumber")
     public Long pageNumber;
 
-    // 页大小
     @NameInMap("pageSize")
     public Long pageSize;
 
-    // 服务id
     @NameInMap("relatedServiceId")
     public Long relatedServiceId;
 
-    // 流转规则名字
     @NameInMap("ruleName")
     public String ruleName;
 
-    // 开始时间
+    // 2020-09-10 13:00:00
     @NameInMap("startTime")
     public String startTime;
 
@@ -75,6 +71,14 @@ public class ListAlertsRequest extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public ListAlertsRequest setMonitorSourceId(String monitorSourceId) {
+        this.monitorSourceId = monitorSourceId;
+        return this;
+    }
+    public String getMonitorSourceId() {
+        return this.monitorSourceId;
     }
 
     public ListAlertsRequest setPageNumber(Long pageNumber) {

@@ -4,11 +4,9 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class CreateRouteRuleResponseBody extends TeaModel {
-    // 结果
     @NameInMap("data")
     public CreateRouteRuleResponseBodyData data;
 
-    // 请求
     @NameInMap("requestId")
     public String requestId;
 
@@ -34,7 +32,6 @@ public class CreateRouteRuleResponseBody extends TeaModel {
     }
 
     public static class CreateRouteRuleResponseBodyData extends TeaModel {
-        // 规则ID
         @NameInMap("routeRuleId")
         public Long routeRuleId;
 

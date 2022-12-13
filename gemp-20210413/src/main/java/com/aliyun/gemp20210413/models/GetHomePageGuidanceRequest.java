@@ -4,7 +4,6 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class GetHomePageGuidanceRequest extends TeaModel {
-    // 幂等号
     @NameInMap("clientToken")
     public String clientToken;
 

@@ -4,9 +4,11 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ListIntegrationConfigsResponseBody extends TeaModel {
+    // data
     @NameInMap("data")
     public java.util.List<ListIntegrationConfigsResponseBodyData> data;
 
+    // id of the request
     @NameInMap("requestId")
     public String requestId;
 
@@ -32,27 +34,21 @@ public class ListIntegrationConfigsResponseBody extends TeaModel {
     }
 
     public static class ListIntegrationConfigsResponseBodyData extends TeaModel {
-        // 集成配置id
         @NameInMap("integrationConfigId")
         public Long integrationConfigId;
 
-        // 是否已接受报警
         @NameInMap("isReceivedEvent")
         public Boolean isReceivedEvent;
 
-        // 监控源id
         @NameInMap("monitorSourceId")
         public Long monitorSourceId;
 
-        // 监控源名城
         @NameInMap("monitorSourceName")
         public String monitorSourceName;
 
-        // 监控源简称
         @NameInMap("monitorSourceShortName")
         public String monitorSourceShortName;
 
-        // 集成配置状态
         @NameInMap("status")
         public String status;
 

@@ -4,11 +4,9 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class CreateTenantApplicationRequest extends TeaModel {
-    // 应用协同渠道
     @NameInMap("channel")
     public String channel;
 
-    // 幂等标识
     @NameInMap("clientToken")
     public String clientToken;
 

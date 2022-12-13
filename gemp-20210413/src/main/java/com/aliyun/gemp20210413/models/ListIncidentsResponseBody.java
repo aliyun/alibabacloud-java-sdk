@@ -4,14 +4,13 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ListIncidentsResponseBody extends TeaModel {
+    // data
     @NameInMap("data")
     public java.util.List<ListIncidentsResponseBodyData> data;
 
-    // 页
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
-    // 行
     @NameInMap("pageSize")
     public Integer pageSize;
 
@@ -19,7 +18,6 @@ public class ListIncidentsResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
-    // 总数
     @NameInMap("totalCount")
     public Integer totalCount;
 
@@ -69,68 +67,81 @@ public class ListIncidentsResponseBody extends TeaModel {
     }
 
     public static class ListIncidentsResponseBodyData extends TeaModel {
-        // 分派的用户ID
+        @NameInMap("assignToWhoIsValid")
+        public Long assignToWhoIsValid;
+
+        // 代表创建时间的资源属性字段
         @NameInMap("assignUserId")
         public Long assignUserId;
 
-        // 分派的用户姓名
+        // 代表资源一级ID的资源属性字段
         @NameInMap("assignUserName")
         public String assignUserName;
 
-        // 分派人手机号
         @NameInMap("assignUserPhone")
         public String assignUserPhone;
 
-        // 创建时间
+        // 事件级别
         @NameInMap("createTime")
         public String createTime;
 
-        // 影响等级 高：HIGH 低 LOW
+        // 时间指派人ID
         @NameInMap("effect")
         public String effect;
 
+        // 修改时间
         @NameInMap("incidentId")
         public Long incidentId;
 
-        // 事件级别 P1 P2 P3 P4
+        // 影响程度
         @NameInMap("incidentLevel")
         public String incidentLevel;
 
-        // 事件编号
         @NameInMap("incidentNumber")
         public String incidentNumber;
 
-        // 事件状态 0已分派 1已响应 2已完结
+        // 关联流转规则ID
         @NameInMap("incidentStatus")
         public String incidentStatus;
 
-        // 事件标题
+        // 事件内容
         @NameInMap("incidentTitle")
         public String incidentTitle;
 
-        // 事件来源 是=手动 否=自动
         @NameInMap("isManual")
         public Boolean isManual;
 
-        // 关联服务ID
+        @NameInMap("relRouteRuleDeleteType")
+        public Integer relRouteRuleDeleteType;
+
+        @NameInMap("relServiceDeleteType")
+        public Integer relServiceDeleteType;
+
+        // 事件状态
         @NameInMap("relatedServiceId")
         public Long relatedServiceId;
 
-        // 关联服务名称
         @NameInMap("relatedServiceName")
         public String relatedServiceName;
 
-        // 流转规则ID
+        // 关联的服务ID
         @NameInMap("routeRuleId")
         public Long routeRuleId;
 
-        // 流转规则
         @NameInMap("routeRuleName")
         public String routeRuleName;
 
         public static ListIncidentsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListIncidentsResponseBodyData self = new ListIncidentsResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListIncidentsResponseBodyData setAssignToWhoIsValid(Long assignToWhoIsValid) {
+            this.assignToWhoIsValid = assignToWhoIsValid;
+            return this;
+        }
+        public Long getAssignToWhoIsValid() {
+            return this.assignToWhoIsValid;
         }
 
         public ListIncidentsResponseBodyData setAssignUserId(Long assignUserId) {
@@ -219,6 +230,22 @@ public class ListIncidentsResponseBody extends TeaModel {
         }
         public Boolean getIsManual() {
             return this.isManual;
+        }
+
+        public ListIncidentsResponseBodyData setRelRouteRuleDeleteType(Integer relRouteRuleDeleteType) {
+            this.relRouteRuleDeleteType = relRouteRuleDeleteType;
+            return this;
+        }
+        public Integer getRelRouteRuleDeleteType() {
+            return this.relRouteRuleDeleteType;
+        }
+
+        public ListIncidentsResponseBodyData setRelServiceDeleteType(Integer relServiceDeleteType) {
+            this.relServiceDeleteType = relServiceDeleteType;
+            return this;
+        }
+        public Integer getRelServiceDeleteType() {
+            return this.relServiceDeleteType;
         }
 
         public ListIncidentsResponseBodyData setRelatedServiceId(Long relatedServiceId) {

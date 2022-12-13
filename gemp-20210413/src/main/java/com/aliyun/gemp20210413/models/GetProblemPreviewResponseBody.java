@@ -4,6 +4,7 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class GetProblemPreviewResponseBody extends TeaModel {
+    // data
     @NameInMap("data")
     public GetProblemPreviewResponseBodyData data;
 
@@ -33,7 +34,6 @@ public class GetProblemPreviewResponseBody extends TeaModel {
     }
 
     public static class GetProblemPreviewResponseBodyDataMailUsers extends TeaModel {
-        // 用户名称
         @NameInMap("username")
         public String username;
 
@@ -53,7 +53,6 @@ public class GetProblemPreviewResponseBody extends TeaModel {
     }
 
     public static class GetProblemPreviewResponseBodyDataMail extends TeaModel {
-        // 数量
         @NameInMap("count")
         public Long count;
 
@@ -84,15 +83,12 @@ public class GetProblemPreviewResponseBody extends TeaModel {
     }
 
     public static class GetProblemPreviewResponseBodyDataProblemCoordinationGroups extends TeaModel {
-        // 服务组Maison
         @NameInMap("serviceGroupDescription")
         public String serviceGroupDescription;
 
-        // 服务Id
         @NameInMap("serviceGroupId")
         public Long serviceGroupId;
 
-        // 服务组名称
         @NameInMap("serviceGroupName")
         public String serviceGroupName;
 
@@ -128,11 +124,9 @@ public class GetProblemPreviewResponseBody extends TeaModel {
     }
 
     public static class GetProblemPreviewResponseBodyDataProblemEffectionServices extends TeaModel {
-        // 影响服务Id
         @NameInMap("serviceId")
         public Long serviceId;
 
-        // 影响服务名称
         @NameInMap("serviceName")
         public String serviceName;
 
@@ -160,75 +154,57 @@ public class GetProblemPreviewResponseBody extends TeaModel {
     }
 
     public static class GetProblemPreviewResponseBodyDataProblem extends TeaModel {
-        // 应急协同组
         @NameInMap("coordinationGroups")
         public java.util.List<GetProblemPreviewResponseBodyDataProblemCoordinationGroups> coordinationGroups;
 
-        // 创建时间
         @NameInMap("createTime")
         public String createTime;
 
-        // 发现时间
         @NameInMap("discoverTime")
         public String discoverTime;
 
-        // 影响服务
         @NameInMap("effectionServices")
         public java.util.List<GetProblemPreviewResponseBodyDataProblemEffectionServices> effectionServices;
 
-        // 是否手动
         @NameInMap("isManual")
         public Boolean isManual;
 
-        // 是否升级
         @NameInMap("isUpgrade")
         public Boolean isUpgrade;
 
-        // 主要处理人Id
         @NameInMap("mainHandlerId")
         public String mainHandlerId;
 
-        // 主要处理人
         @NameInMap("mainHandlerName")
         public String mainHandlerName;
 
-        // 初步原因
         @NameInMap("preliminaryReason")
         public String preliminaryReason;
 
-        // 故障Id
         @NameInMap("problemId")
         public Long problemId;
 
-        // 故障等级 1=P1 2=P2 3=P3 4=P4
         @NameInMap("problemLevel")
         public String problemLevel;
 
-        // 故障名称
         @NameInMap("problemName")
         public String problemName;
 
-        // 故障状态 1 处理中 2已恢复 3复盘中 4已复盘 5已取消
         @NameInMap("problemStatus")
         public String problemStatus;
 
-        // 进展摘要
         @NameInMap("progressSummary")
         public String progressSummary;
 
-        // 富文本id
         @NameInMap("progressSummaryRichTextId")
         public Long progressSummaryRichTextId;
 
-        // 恢复时间
         @NameInMap("recoveryTime")
         public String recoveryTime;
 
-        // 关联服务ID
         @NameInMap("relatedServiceId")
         public Long relatedServiceId;
 
-        // 关联服务 名称
         @NameInMap("serviceName")
         public String serviceName;
 
@@ -384,7 +360,6 @@ public class GetProblemPreviewResponseBody extends TeaModel {
     }
 
     public static class GetProblemPreviewResponseBodyDataSmsUsers extends TeaModel {
-        // 用户名称
         @NameInMap("username")
         public String username;
 
@@ -404,7 +379,6 @@ public class GetProblemPreviewResponseBody extends TeaModel {
     }
 
     public static class GetProblemPreviewResponseBodyDataSms extends TeaModel {
-        // 数量
         @NameInMap("count")
         public Long count;
 
@@ -435,7 +409,6 @@ public class GetProblemPreviewResponseBody extends TeaModel {
     }
 
     public static class GetProblemPreviewResponseBodyDataVoiceUsers extends TeaModel {
-        // 用户
         @NameInMap("username")
         public String username;
 
@@ -455,7 +428,6 @@ public class GetProblemPreviewResponseBody extends TeaModel {
     }
 
     public static class GetProblemPreviewResponseBodyDataVoice extends TeaModel {
-        // 数量
         @NameInMap("count")
         public Long count;
 
@@ -486,7 +458,6 @@ public class GetProblemPreviewResponseBody extends TeaModel {
     }
 
     public static class GetProblemPreviewResponseBodyDataWebhookServiceGroups extends TeaModel {
-        // 服务名称
         @NameInMap("serviceName")
         public String serviceName;
 
@@ -506,7 +477,6 @@ public class GetProblemPreviewResponseBody extends TeaModel {
     }
 
     public static class GetProblemPreviewResponseBodyDataWebhook extends TeaModel {
-        // 数量
         @NameInMap("count")
         public Long count;
 
@@ -537,34 +507,28 @@ public class GetProblemPreviewResponseBody extends TeaModel {
     }
 
     public static class GetProblemPreviewResponseBodyData extends TeaModel {
-        // 降级后数据
         @NameInMap("deAfterData")
         public String deAfterData;
 
-        // 降级前数据
         @NameInMap("deBeforeData")
         public String deBeforeData;
 
-        // 邮箱
         @NameInMap("mail")
         public GetProblemPreviewResponseBodyDataMail mail;
 
+        // object
         @NameInMap("problem")
         public GetProblemPreviewResponseBodyDataProblem problem;
 
-        // 短信
         @NameInMap("sms")
         public GetProblemPreviewResponseBodyDataSms sms;
 
-        // 升级后数据
         @NameInMap("upAfterData")
         public String upAfterData;
 
-        // 升级前数据
         @NameInMap("upBeforeData")
         public String upBeforeData;
 
-        // 语音
         @NameInMap("voice")
         public GetProblemPreviewResponseBodyDataVoice voice;
 

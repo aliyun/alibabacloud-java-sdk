@@ -4,35 +4,27 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class GetProblemPreviewRequest extends TeaModel {
-    // 幂等校验token
     @NameInMap("clientToken")
     public String clientToken;
 
-    // 影响服务
     @NameInMap("effectServiceIds")
     public java.util.List<Long> effectServiceIds;
 
-    // 事件Id
     @NameInMap("incidentId")
     public Long incidentId;
 
-    // 故障id
     @NameInMap("problemId")
     public Long problemId;
 
-    // 故障等级
     @NameInMap("problemLevel")
     public String problemLevel;
 
-    // 通告类型
     @NameInMap("problemNotifyType")
     public String problemNotifyType;
 
-    // 所属服务
     @NameInMap("relatedServiceId")
     public Long relatedServiceId;
 
-    // 应急协同组
     @NameInMap("serviceGroupIds")
     public java.util.List<Long> serviceGroupIds;
 

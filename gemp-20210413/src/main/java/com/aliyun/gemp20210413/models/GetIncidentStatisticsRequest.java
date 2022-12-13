@@ -4,7 +4,6 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class GetIncidentStatisticsRequest extends TeaModel {
-    // 幂等校验Id
     @NameInMap("clientToken")
     public String clientToken;
 

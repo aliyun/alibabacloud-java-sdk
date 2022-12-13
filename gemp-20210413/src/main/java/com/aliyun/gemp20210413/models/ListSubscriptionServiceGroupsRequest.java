@@ -4,11 +4,9 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ListSubscriptionServiceGroupsRequest extends TeaModel {
-    // 幂等校验token
     @NameInMap("clientToken")
     public String clientToken;
 
-    // 服务列表
     @NameInMap("serviceIds")
     public java.util.List<Long> serviceIds;
 

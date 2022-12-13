@@ -4,7 +4,6 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class VerifyRouteRuleResponseBody extends TeaModel {
-    // 验证结果
     @NameInMap("data")
     public VerifyRouteRuleResponseBodyData data;
 
@@ -34,11 +33,9 @@ public class VerifyRouteRuleResponseBody extends TeaModel {
     }
 
     public static class VerifyRouteRuleResponseBodyDataEscalationPlans extends TeaModel {
-        // 升级计划ID
         @NameInMap("escalationPlanId")
         public Long escalationPlanId;
 
-        // 升级计划名称
         @NameInMap("escalationPlanName")
         public String escalationPlanName;
 
@@ -66,11 +63,9 @@ public class VerifyRouteRuleResponseBody extends TeaModel {
     }
 
     public static class VerifyRouteRuleResponseBodyDataNotifySubscriptionNames extends TeaModel {
-        // 订阅ID
         @NameInMap("subscriptionId")
         public Long subscriptionId;
 
-        // 订阅名称
         @NameInMap("title")
         public String title;
 
@@ -98,27 +93,21 @@ public class VerifyRouteRuleResponseBody extends TeaModel {
     }
 
     public static class VerifyRouteRuleResponseBodyData extends TeaModel {
-        // 升级策略名称
         @NameInMap("escalationPlans")
         public java.util.List<VerifyRouteRuleResponseBodyDataEscalationPlans> escalationPlans;
 
-        // 验证是否成功
         @NameInMap("isValidRule")
         public Boolean isValidRule;
 
-        // 验证失败监控源ID
         @NameInMap("monitorSourceIds")
         public java.util.List<Long> monitorSourceIds;
 
-        // 订阅名称
         @NameInMap("notifySubscriptionNames")
         public java.util.List<VerifyRouteRuleResponseBodyDataNotifySubscriptionNames> notifySubscriptionNames;
 
-        // 流转规则验证失败的原因
         @NameInMap("routeRuleFailReason")
         public java.util.List<String> routeRuleFailReason;
 
-        // 事件或者报警
         @NameInMap("routeType")
         public String routeType;
 

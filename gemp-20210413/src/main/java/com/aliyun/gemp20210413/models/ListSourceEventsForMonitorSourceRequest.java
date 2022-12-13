@@ -4,7 +4,6 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ListSourceEventsForMonitorSourceRequest extends TeaModel {
-    // 监控源ID
     @NameInMap("monitorSourceId")
     public Long monitorSourceId;
 

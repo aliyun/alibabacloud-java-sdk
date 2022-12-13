@@ -4,47 +4,36 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class CreateSubscriptionRequest extends TeaModel {
-    // 幂等参数
     @NameInMap("clientToken")
     public String clientToken;
 
-    // 结束时间
     @NameInMap("endTime")
     public String endTime;
 
-    // 订阅时效
     @NameInMap("expiredType")
     public Long expiredType;
 
-    // 通知对象列表
     @NameInMap("notifyObjectList")
     public java.util.List<CreateSubscriptionRequestNotifyObjectList> notifyObjectList;
 
-    // 通知对象类型
     @NameInMap("notifyObjectType")
     public Long notifyObjectType;
 
-    // 通知策略列表
     @NameInMap("notifyStrategyList")
     public java.util.List<CreateSubscriptionRequestNotifyStrategyList> notifyStrategyList;
 
-    // 时间段
     @NameInMap("period")
     public String period;
 
-    // 订阅范围类型
     @NameInMap("scope")
     public Long scope;
 
-    // 订阅范围列表
     @NameInMap("scopeObjectList")
     public java.util.List<CreateSubscriptionRequestScopeObjectList> scopeObjectList;
 
-    // 开始时间
     @NameInMap("startTime")
     public String startTime;
 
-    // 通知订阅名称
     @NameInMap("subscriptionTitle")
     public String subscriptionTitle;
 
@@ -142,7 +131,6 @@ public class CreateSubscriptionRequest extends TeaModel {
     }
 
     public static class CreateSubscriptionRequestNotifyObjectList extends TeaModel {
-        // 通知对象id
         @NameInMap("notifyObjectId")
         public Long notifyObjectId;
 
@@ -162,11 +150,9 @@ public class CreateSubscriptionRequest extends TeaModel {
     }
 
     public static class CreateSubscriptionRequestNotifyStrategyListPeriodChannel extends TeaModel {
-        // 非工作时段
         @NameInMap("nonWorkday")
         public String nonWorkday;
 
-        // 工作时段
         @NameInMap("workday")
         public String workday;
 
@@ -194,19 +180,15 @@ public class CreateSubscriptionRequest extends TeaModel {
     }
 
     public static class CreateSubscriptionRequestNotifyStrategyListStrategiesConditions extends TeaModel {
-        // 时间动作
         @NameInMap("action")
         public String action;
 
-        // 影响范围
         @NameInMap("effection")
         public String effection;
 
-        // 等级
         @NameInMap("level")
         public String level;
 
-        // 故障通知类型
         @NameInMap("problemNotifyType")
         public String problemNotifyType;
 
@@ -250,7 +232,6 @@ public class CreateSubscriptionRequest extends TeaModel {
     }
 
     public static class CreateSubscriptionRequestNotifyStrategyListStrategies extends TeaModel {
-        // 通知策略条件
         @NameInMap("conditions")
         public java.util.List<CreateSubscriptionRequestNotifyStrategyListStrategiesConditions> conditions;
 
@@ -270,19 +251,15 @@ public class CreateSubscriptionRequest extends TeaModel {
     }
 
     public static class CreateSubscriptionRequestNotifyStrategyList extends TeaModel {
-        // 渠道，多个逗号分隔
         @NameInMap("channels")
         public String channels;
 
-        // 订阅实例类型，事件、报警、故障
         @NameInMap("instanceType")
         public Long instanceType;
 
-        // 分时段渠道
         @NameInMap("periodChannel")
         public CreateSubscriptionRequestNotifyStrategyListPeriodChannel periodChannel;
 
-        // 条件。json格式，包含多个条件，比如级别、影响程度 kv格式
         @NameInMap("strategies")
         public java.util.List<CreateSubscriptionRequestNotifyStrategyListStrategies> strategies;
 
@@ -326,7 +303,6 @@ public class CreateSubscriptionRequest extends TeaModel {
     }
 
     public static class CreateSubscriptionRequestScopeObjectList extends TeaModel {
-        // 订阅范围对象id
         @NameInMap("scopeObjectId")
         public Long scopeObjectId;
 

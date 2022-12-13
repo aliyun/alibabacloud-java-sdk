@@ -4,15 +4,12 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class CreateIncidentSubtotalRequest extends TeaModel {
-    // 幂等校验Id
     @NameInMap("clientToken")
     public String clientToken;
 
-    // 描述
     @NameInMap("description")
     public String description;
 
-    // 事件id
     @NameInMap("incidentId")
     public Long incidentId;
 

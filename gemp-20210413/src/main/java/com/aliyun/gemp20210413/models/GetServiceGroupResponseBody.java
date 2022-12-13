@@ -7,7 +7,6 @@ public class GetServiceGroupResponseBody extends TeaModel {
     @NameInMap("data")
     public GetServiceGroupResponseBodyData data;
 
-    // 请求ID
     @NameInMap("requestId")
     public String requestId;
 
@@ -33,19 +32,15 @@ public class GetServiceGroupResponseBody extends TeaModel {
     }
 
     public static class GetServiceGroupResponseBodyDataUsers extends TeaModel {
-        // 手机号
         @NameInMap("phone")
         public String phone;
 
-        // 服务组ID
         @NameInMap("serviceGroupId")
         public Long serviceGroupId;
 
-        // 用户ID
         @NameInMap("userId")
         public Long userId;
 
-        // 用户名字
         @NameInMap("userName")
         public String userName;
 
@@ -89,39 +84,30 @@ public class GetServiceGroupResponseBody extends TeaModel {
     }
 
     public static class GetServiceGroupResponseBodyData extends TeaModel {
-        // 创建时间
         @NameInMap("createTime")
         public String createTime;
 
-        // ENABLE 启用 DISABLE 禁用
         @NameInMap("enableWebhook")
         public String enableWebhook;
 
-        // 服务组描述
         @NameInMap("serviceGroupDescription")
         public String serviceGroupDescription;
 
-        // 服务组ID
         @NameInMap("serviceGroupId")
         public Long serviceGroupId;
 
-        // 服务组名称
         @NameInMap("serviceGroupName")
         public String serviceGroupName;
 
-        // 修改时间
         @NameInMap("updateTime")
         public String updateTime;
 
-        // 用户ID
         @NameInMap("users")
         public java.util.List<GetServiceGroupResponseBodyDataUsers> users;
 
-        // webhook 跳转地址
         @NameInMap("webhookLink")
         public String webhookLink;
 
-        // WEIXIN_GROUP 微信 DING_GROUP 钉钉 FEISHU_GROUP飞书
         @NameInMap("webhookType")
         public String webhookType;
 

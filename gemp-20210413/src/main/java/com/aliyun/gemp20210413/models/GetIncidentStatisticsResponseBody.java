@@ -4,9 +4,11 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class GetIncidentStatisticsResponseBody extends TeaModel {
+    // data
     @NameInMap("data")
     public GetIncidentStatisticsResponseBodyData data;
 
+    // requestId
     @NameInMap("requestId")
     public String requestId;
 
@@ -32,19 +34,15 @@ public class GetIncidentStatisticsResponseBody extends TeaModel {
     }
 
     public static class GetIncidentStatisticsResponseBodyData extends TeaModel {
-        // 所有 完结
         @NameInMap("allFinish")
         public Integer allFinish;
 
-        // 所有 待响应
         @NameInMap("allResponse")
         public Integer allResponse;
 
-        // 我的 完结
         @NameInMap("myFinish")
         public Integer myFinish;
 
-        // 我的 待响应
         @NameInMap("myResponse")
         public Integer myResponse;
 

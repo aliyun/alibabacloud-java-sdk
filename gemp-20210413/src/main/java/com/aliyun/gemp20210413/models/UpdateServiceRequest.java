@@ -4,19 +4,15 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class UpdateServiceRequest extends TeaModel {
-    // 幂等号
     @NameInMap("clientToken")
     public String clientToken;
 
-    // 服务描述
     @NameInMap("serviceDescription")
     public String serviceDescription;
 
-    // 服务ID
     @NameInMap("serviceId")
     public Long serviceId;
 
-    // 服务名字
     @NameInMap("serviceName")
     public String serviceName;
 

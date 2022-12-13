@@ -4,6 +4,7 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class CreateSubscriptionResponseBody extends TeaModel {
+    // data
     @NameInMap("data")
     public CreateSubscriptionResponseBodyData data;
 
@@ -33,7 +34,6 @@ public class CreateSubscriptionResponseBody extends TeaModel {
     }
 
     public static class CreateSubscriptionResponseBodyData extends TeaModel {
-        // 订阅id
         @NameInMap("subscriptionId")
         public Long subscriptionId;
 

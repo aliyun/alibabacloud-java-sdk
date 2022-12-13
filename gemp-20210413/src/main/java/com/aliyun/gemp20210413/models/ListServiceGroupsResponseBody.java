@@ -4,15 +4,12 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ListServiceGroupsResponseBody extends TeaModel {
-    // 服务组列表
     @NameInMap("data")
     public java.util.List<ListServiceGroupsResponseBodyData> data;
 
-    // 当前页
     @NameInMap("pageNumber")
     public Long pageNumber;
 
-    // 分页大小
     @NameInMap("pageSize")
     public Long pageSize;
 
@@ -20,7 +17,6 @@ public class ListServiceGroupsResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
-    // 总条数
     @NameInMap("totalCount")
     public Long totalCount;
 
@@ -70,23 +66,21 @@ public class ListServiceGroupsResponseBody extends TeaModel {
     }
 
     public static class ListServiceGroupsResponseBodyDataUsers extends TeaModel {
-        // 邮箱
         @NameInMap("email")
         public String email;
 
-        // 手机号
+        @NameInMap("isRelated")
+        public Integer isRelated;
+
         @NameInMap("phone")
         public String phone;
 
-        // 服务组ID
         @NameInMap("serviceGroupId")
         public Long serviceGroupId;
 
-        // 用户ID
         @NameInMap("userId")
         public Long userId;
 
-        // 用户名字
         @NameInMap("userName")
         public String userName;
 
@@ -101,6 +95,14 @@ public class ListServiceGroupsResponseBody extends TeaModel {
         }
         public String getEmail() {
             return this.email;
+        }
+
+        public ListServiceGroupsResponseBodyDataUsers setIsRelated(Integer isRelated) {
+            this.isRelated = isRelated;
+            return this;
+        }
+        public Integer getIsRelated() {
+            return this.isRelated;
         }
 
         public ListServiceGroupsResponseBodyDataUsers setPhone(String phone) {
@@ -138,39 +140,30 @@ public class ListServiceGroupsResponseBody extends TeaModel {
     }
 
     public static class ListServiceGroupsResponseBodyData extends TeaModel {
-        // ENABLE 启用 DISABLE 禁用
         @NameInMap("enableWebhook")
         public String enableWebhook;
 
-        // 是否已经排班
         @NameInMap("isScheduled")
         public Boolean isScheduled;
 
-        // 服务组描述
         @NameInMap("serviceGroupDescription")
         public String serviceGroupDescription;
 
-        // 服务组ID
         @NameInMap("serviceGroupId")
         public Long serviceGroupId;
 
-        // 服务组名字
         @NameInMap("serviceGroupName")
         public String serviceGroupName;
 
-        // 修改时间
         @NameInMap("updateTime")
         public String updateTime;
 
-        // 服务组用户列表
         @NameInMap("users")
         public java.util.List<ListServiceGroupsResponseBodyDataUsers> users;
 
-        // webhook 跳转地址
         @NameInMap("webhookLink")
         public String webhookLink;
 
-        // WEIXIN_GROUP微信DING_GROUP钉钉FEISHU_GROUP飞书
         @NameInMap("webhookType")
         public String webhookType;
 

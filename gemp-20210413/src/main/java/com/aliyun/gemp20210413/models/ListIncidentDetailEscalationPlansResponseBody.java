@@ -33,16 +33,169 @@ public class ListIncidentDetailEscalationPlansResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public static class ListIncidentDetailEscalationPlansResponseBodyDataNuAcknowledgeEscalationPlanNoticeObjectList extends TeaModel {
-        // 分配对象id
+    public static class ListIncidentDetailEscalationPlansResponseBodyDataConvergenceEscalationPlanNoticeObjectList extends TeaModel {
         @NameInMap("noticeObjectId")
         public Long noticeObjectId;
 
-        // 分配对象名称
         @NameInMap("noticeObjectName")
         public String noticeObjectName;
 
-        // 分配对象手机号
+        @NameInMap("noticeObjectPhone")
+        public String noticeObjectPhone;
+
+        public static ListIncidentDetailEscalationPlansResponseBodyDataConvergenceEscalationPlanNoticeObjectList build(java.util.Map<String, ?> map) throws Exception {
+            ListIncidentDetailEscalationPlansResponseBodyDataConvergenceEscalationPlanNoticeObjectList self = new ListIncidentDetailEscalationPlansResponseBodyDataConvergenceEscalationPlanNoticeObjectList();
+            return TeaModel.build(map, self);
+        }
+
+        public ListIncidentDetailEscalationPlansResponseBodyDataConvergenceEscalationPlanNoticeObjectList setNoticeObjectId(Long noticeObjectId) {
+            this.noticeObjectId = noticeObjectId;
+            return this;
+        }
+        public Long getNoticeObjectId() {
+            return this.noticeObjectId;
+        }
+
+        public ListIncidentDetailEscalationPlansResponseBodyDataConvergenceEscalationPlanNoticeObjectList setNoticeObjectName(String noticeObjectName) {
+            this.noticeObjectName = noticeObjectName;
+            return this;
+        }
+        public String getNoticeObjectName() {
+            return this.noticeObjectName;
+        }
+
+        public ListIncidentDetailEscalationPlansResponseBodyDataConvergenceEscalationPlanNoticeObjectList setNoticeObjectPhone(String noticeObjectPhone) {
+            this.noticeObjectPhone = noticeObjectPhone;
+            return this;
+        }
+        public String getNoticeObjectPhone() {
+            return this.noticeObjectPhone;
+        }
+
+    }
+
+    public static class ListIncidentDetailEscalationPlansResponseBodyDataConvergenceEscalationPlanServiceGroupList extends TeaModel {
+        @NameInMap("id")
+        public Long id;
+
+        @NameInMap("name")
+        public String name;
+
+        public static ListIncidentDetailEscalationPlansResponseBodyDataConvergenceEscalationPlanServiceGroupList build(java.util.Map<String, ?> map) throws Exception {
+            ListIncidentDetailEscalationPlansResponseBodyDataConvergenceEscalationPlanServiceGroupList self = new ListIncidentDetailEscalationPlansResponseBodyDataConvergenceEscalationPlanServiceGroupList();
+            return TeaModel.build(map, self);
+        }
+
+        public ListIncidentDetailEscalationPlansResponseBodyDataConvergenceEscalationPlanServiceGroupList setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
+        }
+
+        public ListIncidentDetailEscalationPlansResponseBodyDataConvergenceEscalationPlanServiceGroupList setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
+    public static class ListIncidentDetailEscalationPlansResponseBodyDataConvergenceEscalationPlan extends TeaModel {
+        @NameInMap("escalationPlanType")
+        public String escalationPlanType;
+
+        @NameInMap("noticeChannels")
+        public java.util.List<String> noticeChannels;
+
+        @NameInMap("noticeObjectList")
+        public java.util.List<ListIncidentDetailEscalationPlansResponseBodyDataConvergenceEscalationPlanNoticeObjectList> noticeObjectList;
+
+        @NameInMap("noticeTime")
+        public Long noticeTime;
+
+        @NameInMap("serviceGroupList")
+        public java.util.List<ListIncidentDetailEscalationPlansResponseBodyDataConvergenceEscalationPlanServiceGroupList> serviceGroupList;
+
+        @NameInMap("startTime")
+        public Long startTime;
+
+        @NameInMap("status")
+        public String status;
+
+        public static ListIncidentDetailEscalationPlansResponseBodyDataConvergenceEscalationPlan build(java.util.Map<String, ?> map) throws Exception {
+            ListIncidentDetailEscalationPlansResponseBodyDataConvergenceEscalationPlan self = new ListIncidentDetailEscalationPlansResponseBodyDataConvergenceEscalationPlan();
+            return TeaModel.build(map, self);
+        }
+
+        public ListIncidentDetailEscalationPlansResponseBodyDataConvergenceEscalationPlan setEscalationPlanType(String escalationPlanType) {
+            this.escalationPlanType = escalationPlanType;
+            return this;
+        }
+        public String getEscalationPlanType() {
+            return this.escalationPlanType;
+        }
+
+        public ListIncidentDetailEscalationPlansResponseBodyDataConvergenceEscalationPlan setNoticeChannels(java.util.List<String> noticeChannels) {
+            this.noticeChannels = noticeChannels;
+            return this;
+        }
+        public java.util.List<String> getNoticeChannels() {
+            return this.noticeChannels;
+        }
+
+        public ListIncidentDetailEscalationPlansResponseBodyDataConvergenceEscalationPlan setNoticeObjectList(java.util.List<ListIncidentDetailEscalationPlansResponseBodyDataConvergenceEscalationPlanNoticeObjectList> noticeObjectList) {
+            this.noticeObjectList = noticeObjectList;
+            return this;
+        }
+        public java.util.List<ListIncidentDetailEscalationPlansResponseBodyDataConvergenceEscalationPlanNoticeObjectList> getNoticeObjectList() {
+            return this.noticeObjectList;
+        }
+
+        public ListIncidentDetailEscalationPlansResponseBodyDataConvergenceEscalationPlan setNoticeTime(Long noticeTime) {
+            this.noticeTime = noticeTime;
+            return this;
+        }
+        public Long getNoticeTime() {
+            return this.noticeTime;
+        }
+
+        public ListIncidentDetailEscalationPlansResponseBodyDataConvergenceEscalationPlan setServiceGroupList(java.util.List<ListIncidentDetailEscalationPlansResponseBodyDataConvergenceEscalationPlanServiceGroupList> serviceGroupList) {
+            this.serviceGroupList = serviceGroupList;
+            return this;
+        }
+        public java.util.List<ListIncidentDetailEscalationPlansResponseBodyDataConvergenceEscalationPlanServiceGroupList> getServiceGroupList() {
+            return this.serviceGroupList;
+        }
+
+        public ListIncidentDetailEscalationPlansResponseBodyDataConvergenceEscalationPlan setStartTime(Long startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public Long getStartTime() {
+            return this.startTime;
+        }
+
+        public ListIncidentDetailEscalationPlansResponseBodyDataConvergenceEscalationPlan setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+    }
+
+    public static class ListIncidentDetailEscalationPlansResponseBodyDataNuAcknowledgeEscalationPlanNoticeObjectList extends TeaModel {
+        @NameInMap("noticeObjectId")
+        public Long noticeObjectId;
+
+        @NameInMap("noticeObjectName")
+        public String noticeObjectName;
+
         @NameInMap("noticeObjectPhone")
         public String noticeObjectPhone;
 
@@ -78,11 +231,9 @@ public class ListIncidentDetailEscalationPlansResponseBody extends TeaModel {
     }
 
     public static class ListIncidentDetailEscalationPlansResponseBodyDataNuAcknowledgeEscalationPlanServiceGroupList extends TeaModel {
-        // 服务组id
         @NameInMap("id")
         public Long id;
 
-        // 服务组名称
         @NameInMap("name")
         public String name;
 
@@ -110,31 +261,24 @@ public class ListIncidentDetailEscalationPlansResponseBody extends TeaModel {
     }
 
     public static class ListIncidentDetailEscalationPlansResponseBodyDataNuAcknowledgeEscalationPlan extends TeaModel {
-        // 升级策略类型 UN_ACKNOWLEDGE
         @NameInMap("escalationPlanType")
         public String escalationPlanType;
 
-        // 分配渠道
         @NameInMap("noticeChannels")
         public java.util.List<String> noticeChannels;
 
-        // 用户信息
         @NameInMap("noticeObjectList")
         public java.util.List<ListIncidentDetailEscalationPlansResponseBodyDataNuAcknowledgeEscalationPlanNoticeObjectList> noticeObjectList;
 
-        // 延迟时间
         @NameInMap("noticeTime")
         public Long noticeTime;
 
-        // 通知群
         @NameInMap("serviceGroupList")
         public java.util.List<ListIncidentDetailEscalationPlansResponseBodyDataNuAcknowledgeEscalationPlanServiceGroupList> serviceGroupList;
 
-        // 开始时间
         @NameInMap("startTime")
         public Long startTime;
 
-        // 规则触发状态
         @NameInMap("status")
         public String status;
 
@@ -202,15 +346,12 @@ public class ListIncidentDetailEscalationPlansResponseBody extends TeaModel {
     }
 
     public static class ListIncidentDetailEscalationPlansResponseBodyDataUnFinishEscalationPlanNoticeObjectList extends TeaModel {
-        // 分配对象id
         @NameInMap("noticeObjectId")
         public Long noticeObjectId;
 
-        // 分配对象名称
         @NameInMap("noticeObjectName")
         public String noticeObjectName;
 
-        // 手机号
         @NameInMap("noticeObjectPhone")
         public String noticeObjectPhone;
 
@@ -246,11 +387,9 @@ public class ListIncidentDetailEscalationPlansResponseBody extends TeaModel {
     }
 
     public static class ListIncidentDetailEscalationPlansResponseBodyDataUnFinishEscalationPlanServiceGroupList extends TeaModel {
-        // 服务组id
         @NameInMap("id")
         public Long id;
 
-        // 服务组名称
         @NameInMap("name")
         public String name;
 
@@ -278,31 +417,24 @@ public class ListIncidentDetailEscalationPlansResponseBody extends TeaModel {
     }
 
     public static class ListIncidentDetailEscalationPlansResponseBodyDataUnFinishEscalationPlan extends TeaModel {
-        // 升级策略类型 UN_ACKNOWLEDGE
         @NameInMap("escalationPlanType")
         public String escalationPlanType;
 
-        // 分配渠道
         @NameInMap("noticeChannels")
         public java.util.List<String> noticeChannels;
 
-        // 用户信息
         @NameInMap("noticeObjectList")
         public java.util.List<ListIncidentDetailEscalationPlansResponseBodyDataUnFinishEscalationPlanNoticeObjectList> noticeObjectList;
 
-        // 延迟时间
         @NameInMap("noticeTime")
         public Integer noticeTime;
 
-        // 消息群
         @NameInMap("serviceGroupList")
         public java.util.List<ListIncidentDetailEscalationPlansResponseBodyDataUnFinishEscalationPlanServiceGroupList> serviceGroupList;
 
-        // 开始时间
         @NameInMap("startTime")
         public Long startTime;
 
-        // 规则触发状态
         @NameInMap("status")
         public String status;
 
@@ -370,25 +502,32 @@ public class ListIncidentDetailEscalationPlansResponseBody extends TeaModel {
     }
 
     public static class ListIncidentDetailEscalationPlansResponseBodyData extends TeaModel {
-        // 升级策略ID
+        @NameInMap("convergenceEscalationPlan")
+        public java.util.List<ListIncidentDetailEscalationPlansResponseBodyDataConvergenceEscalationPlan> convergenceEscalationPlan;
+
         @NameInMap("escalationPlanId")
         public Long escalationPlanId;
 
-        // 升级策略名称
         @NameInMap("escalationPlanName")
         public String escalationPlanName;
 
-        // 未响应升级策略
         @NameInMap("nuAcknowledgeEscalationPlan")
         public java.util.List<ListIncidentDetailEscalationPlansResponseBodyDataNuAcknowledgeEscalationPlan> nuAcknowledgeEscalationPlan;
 
-        // 未完结升级策略规则列表
         @NameInMap("unFinishEscalationPlan")
         public java.util.List<ListIncidentDetailEscalationPlansResponseBodyDataUnFinishEscalationPlan> unFinishEscalationPlan;
 
         public static ListIncidentDetailEscalationPlansResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListIncidentDetailEscalationPlansResponseBodyData self = new ListIncidentDetailEscalationPlansResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListIncidentDetailEscalationPlansResponseBodyData setConvergenceEscalationPlan(java.util.List<ListIncidentDetailEscalationPlansResponseBodyDataConvergenceEscalationPlan> convergenceEscalationPlan) {
+            this.convergenceEscalationPlan = convergenceEscalationPlan;
+            return this;
+        }
+        public java.util.List<ListIncidentDetailEscalationPlansResponseBodyDataConvergenceEscalationPlan> getConvergenceEscalationPlan() {
+            return this.convergenceEscalationPlan;
         }
 
         public ListIncidentDetailEscalationPlansResponseBodyData setEscalationPlanId(Long escalationPlanId) {

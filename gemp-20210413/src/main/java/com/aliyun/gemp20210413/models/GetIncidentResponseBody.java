@@ -4,9 +4,11 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class GetIncidentResponseBody extends TeaModel {
+    // data
     @NameInMap("data")
     public GetIncidentResponseBodyData data;
 
+    // requestId
     @NameInMap("requestId")
     public String requestId;
 
@@ -32,105 +34,110 @@ public class GetIncidentResponseBody extends TeaModel {
     }
 
     public static class GetIncidentResponseBodyData extends TeaModel {
-        // 分派的用户ID
+        @NameInMap("assignToWhoIsValid")
+        public Integer assignToWhoIsValid;
+
         @NameInMap("assignUserId")
         public Long assignUserId;
 
-        // 分派的用户姓名 (用户表获取)
         @NameInMap("assignUserName")
         public String assignUserName;
 
-        // 分派的用户手机号
         @NameInMap("assignUserPhone")
         public String assignUserPhone;
 
-        // 创建时间
         @NameInMap("createTime")
         public String createTime;
 
-        // 持续时间
+        @NameInMap("defaultAssignToWho")
+        public Integer defaultAssignToWho;
+
+        @NameInMap("defaultAssignToWhoIsValid")
+        public Integer defaultAssignToWhoIsValid;
+
+        @NameInMap("defaultAssignToWhoName")
+        public String defaultAssignToWhoName;
+
         @NameInMap("durationTime")
         public Long durationTime;
 
-        // HIGH	影响等级 高：HIGH 低 LOW
         @NameInMap("effect")
         public String effect;
 
-        // 事件描述
         @NameInMap("incidentDescription")
         public String incidentDescription;
 
-        // 事件Id
         @NameInMap("incidentId")
         public Long incidentId;
 
-        // 事件级别 P1 P2 P3 P4
         @NameInMap("incidentLevel")
         public String incidentLevel;
 
-        // 事件编号
         @NameInMap("incidentNumber")
         public String incidentNumber;
 
-        // 事件状态 ASSIGNED已分派 RESPONDED已响应  FINISHED已完结
         @NameInMap("incidentStatus")
         public String incidentStatus;
 
-        // 事件标题
         @NameInMap("incidentTitle")
         public String incidentTitle;
 
-        // 事件来源 是：手动 否：自动
         @NameInMap("isManual")
         public Boolean isManual;
 
-        // 是否升级 是 否
         @NameInMap("isUpgrade")
         public Boolean isUpgrade;
 
-        // 通知渠道
         @NameInMap("notifyChannels")
         public java.util.List<String> notifyChannels;
 
-        // 故障Id
         @NameInMap("problemId")
         public Long problemId;
 
-        // 故障编号
         @NameInMap("problemNumber")
         public String problemNumber;
 
-        // 关联服务描述
+        @NameInMap("relRouteRuleDeleteType")
+        public Integer relRouteRuleDeleteType;
+
+        @NameInMap("relServiceDeleteType")
+        public Integer relServiceDeleteType;
+
+        @NameInMap("relServiceGroupIsValid")
+        public Integer relServiceGroupIsValid;
+
         @NameInMap("relatedServiceDescription")
         public String relatedServiceDescription;
 
-        // 关联服服务id
         @NameInMap("relatedServiceGroupId")
         public Long relatedServiceGroupId;
 
-        // 关联服务组名称
         @NameInMap("relatedServiceGroupName")
         public String relatedServiceGroupName;
 
-        // 关联服务ID
         @NameInMap("relatedServiceId")
         public Long relatedServiceId;
 
-        // 关联服务名称
         @NameInMap("relatedServiceName")
         public String relatedServiceName;
 
-        // 流转规则ID
         @NameInMap("routeRuleId")
         public Long routeRuleId;
 
-        // 流转规则名称
         @NameInMap("routeRuleName")
         public String routeRuleName;
 
         public static GetIncidentResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetIncidentResponseBodyData self = new GetIncidentResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetIncidentResponseBodyData setAssignToWhoIsValid(Integer assignToWhoIsValid) {
+            this.assignToWhoIsValid = assignToWhoIsValid;
+            return this;
+        }
+        public Integer getAssignToWhoIsValid() {
+            return this.assignToWhoIsValid;
         }
 
         public GetIncidentResponseBodyData setAssignUserId(Long assignUserId) {
@@ -163,6 +170,30 @@ public class GetIncidentResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        public GetIncidentResponseBodyData setDefaultAssignToWho(Integer defaultAssignToWho) {
+            this.defaultAssignToWho = defaultAssignToWho;
+            return this;
+        }
+        public Integer getDefaultAssignToWho() {
+            return this.defaultAssignToWho;
+        }
+
+        public GetIncidentResponseBodyData setDefaultAssignToWhoIsValid(Integer defaultAssignToWhoIsValid) {
+            this.defaultAssignToWhoIsValid = defaultAssignToWhoIsValid;
+            return this;
+        }
+        public Integer getDefaultAssignToWhoIsValid() {
+            return this.defaultAssignToWhoIsValid;
+        }
+
+        public GetIncidentResponseBodyData setDefaultAssignToWhoName(String defaultAssignToWhoName) {
+            this.defaultAssignToWhoName = defaultAssignToWhoName;
+            return this;
+        }
+        public String getDefaultAssignToWhoName() {
+            return this.defaultAssignToWhoName;
         }
 
         public GetIncidentResponseBodyData setDurationTime(Long durationTime) {
@@ -267,6 +298,30 @@ public class GetIncidentResponseBody extends TeaModel {
         }
         public String getProblemNumber() {
             return this.problemNumber;
+        }
+
+        public GetIncidentResponseBodyData setRelRouteRuleDeleteType(Integer relRouteRuleDeleteType) {
+            this.relRouteRuleDeleteType = relRouteRuleDeleteType;
+            return this;
+        }
+        public Integer getRelRouteRuleDeleteType() {
+            return this.relRouteRuleDeleteType;
+        }
+
+        public GetIncidentResponseBodyData setRelServiceDeleteType(Integer relServiceDeleteType) {
+            this.relServiceDeleteType = relServiceDeleteType;
+            return this;
+        }
+        public Integer getRelServiceDeleteType() {
+            return this.relServiceDeleteType;
+        }
+
+        public GetIncidentResponseBodyData setRelServiceGroupIsValid(Integer relServiceGroupIsValid) {
+            this.relServiceGroupIsValid = relServiceGroupIsValid;
+            return this;
+        }
+        public Integer getRelServiceGroupIsValid() {
+            return this.relServiceGroupIsValid;
         }
 
         public GetIncidentResponseBodyData setRelatedServiceDescription(String relatedServiceDescription) {

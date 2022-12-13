@@ -8,7 +8,6 @@ public class ListUserSerivceGroupsRequest extends TeaModel {
     @NameInMap("clientToken")
     public String clientToken;
 
-    // 用户ID
     @NameInMap("userId")
     public Long userId;
 

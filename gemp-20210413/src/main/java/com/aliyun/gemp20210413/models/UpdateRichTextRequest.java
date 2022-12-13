@@ -4,19 +4,15 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class UpdateRichTextRequest extends TeaModel {
-    // 资源id
     @NameInMap("instanceId")
     public Long instanceId;
 
-    // 资源类型
     @NameInMap("instanceType")
     public String instanceType;
 
-    // 文本内容
     @NameInMap("richText")
     public String richText;
 
-    // 富文本id
     @NameInMap("richTextId")
     public Long richTextId;
 

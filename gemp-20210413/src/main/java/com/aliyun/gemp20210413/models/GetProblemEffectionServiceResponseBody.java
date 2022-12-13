@@ -4,6 +4,7 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class GetProblemEffectionServiceResponseBody extends TeaModel {
+    // data
     @NameInMap("data")
     public GetProblemEffectionServiceResponseBodyData data;
 
@@ -33,31 +34,24 @@ public class GetProblemEffectionServiceResponseBody extends TeaModel {
     }
 
     public static class GetProblemEffectionServiceResponseBodyData extends TeaModel {
-        // 影响描述
         @NameInMap("description")
         public String description;
 
-        // 影响服务id
         @NameInMap("effectionServiceId")
         public Long effectionServiceId;
 
-        // 影响等级
         @NameInMap("level")
         public Long level;
 
-        // 图片链接
         @NameInMap("picUrl")
         public java.util.List<String> picUrl;
 
-        // 服务id
         @NameInMap("serviceId")
         public Long serviceId;
 
-        // 服务名称
         @NameInMap("serviceName")
         public String serviceName;
 
-        // 影响状态 0 未恢复 1已恢复
         @NameInMap("status")
         public Long status;
 

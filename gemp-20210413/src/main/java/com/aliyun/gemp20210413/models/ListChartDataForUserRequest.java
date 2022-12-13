@@ -4,14 +4,13 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ListChartDataForUserRequest extends TeaModel {
+    // clientToken
     @NameInMap("clientToken")
     public String clientToken;
 
-    // 结束时间
     @NameInMap("endTime")
     public String endTime;
 
-    // 开始时间
     @NameInMap("startTime")
     public String startTime;
 

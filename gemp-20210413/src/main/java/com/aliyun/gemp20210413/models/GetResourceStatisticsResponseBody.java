@@ -34,19 +34,15 @@ public class GetResourceStatisticsResponseBody extends TeaModel {
     }
 
     public static class GetResourceStatisticsResponseBodyData extends TeaModel {
-        // 报警总数
         @NameInMap("alertCount")
         public Integer alertCount;
 
-        // 事件总数
         @NameInMap("incidentCount")
         public Integer incidentCount;
 
-        // 集成总数
         @NameInMap("integrationCount")
         public Integer integrationCount;
 
-        // 故障总数
         @NameInMap("problemCount")
         public Integer problemCount;
 

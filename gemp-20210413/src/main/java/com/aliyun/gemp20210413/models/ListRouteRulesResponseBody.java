@@ -4,23 +4,18 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ListRouteRulesResponseBody extends TeaModel {
-    // 规则列表
     @NameInMap("data")
     public java.util.List<ListRouteRulesResponseBodyData> data;
 
-    // 第几页
     @NameInMap("pageNumber")
     public Long pageNumber;
 
-    // 分页大小
     @NameInMap("pageSize")
     public Long pageSize;
 
-    // 请求ID
     @NameInMap("requestId")
     public String requestId;
 
-    // 总条数
     @NameInMap("totalCount")
     public Long totalCount;
 
@@ -70,71 +65,60 @@ public class ListRouteRulesResponseBody extends TeaModel {
     }
 
     public static class ListRouteRulesResponseBodyData extends TeaModel {
-        // 事件分派对象ID（服务组ID 或用户ID）
         @NameInMap("assignObjectId")
         public Long assignObjectId;
 
-        // 事件分派对象类型 SERVICEGROUP 服务组  USER 单个用户
         @NameInMap("assignObjectType")
         public String assignObjectType;
 
-        // 创建时间
         @NameInMap("createTime")
         public String createTime;
 
-        // 影响程度 LOW-一般 HIGH-严重
         @NameInMap("effection")
         public String effection;
 
-        // 是否启用  DISABLE禁用. ENABLE 启用
         @NameInMap("enableStatus")
         public String enableStatus;
 
-        // 事件级别 P1 P2 P3 P4
         @NameInMap("incidentLevel")
         public String incidentLevel;
 
-        // 命中次数
+        @NameInMap("isValid")
+        public Integer isValid;
+
         @NameInMap("matchCount")
         public Long matchCount;
 
-        // 监控源名称
         @NameInMap("monitorSourceNames")
         public String monitorSourceNames;
 
-        // 关联服务ID
+        @NameInMap("relServiceDeleteType")
+        public Integer relServiceDeleteType;
+
         @NameInMap("relatedServiceId")
         public Long relatedServiceId;
 
-        // 服务名称
         @NameInMap("relatedServiceName")
         public String relatedServiceName;
 
-        // 规则ID
         @NameInMap("routeRuleId")
         public Long routeRuleId;
 
-        // 路由类型：INCIDENT 触发事件 ALERT 仅触发报警
         @NameInMap("routeType")
         public String routeType;
 
-        // 规则名称
         @NameInMap("ruleName")
         public String ruleName;
 
-        // 租户ID
         @NameInMap("tenantRamId")
         public Long tenantRamId;
 
-        // 时间窗口
         @NameInMap("timeWindow")
         public Long timeWindow;
 
-        // 时间窗口单位 MINUTE 分钟  SECOND 秒
         @NameInMap("timeWindowUnit")
         public Long timeWindowUnit;
 
-        // 修改时间
         @NameInMap("updateTime")
         public String updateTime;
 
@@ -191,6 +175,14 @@ public class ListRouteRulesResponseBody extends TeaModel {
             return this.incidentLevel;
         }
 
+        public ListRouteRulesResponseBodyData setIsValid(Integer isValid) {
+            this.isValid = isValid;
+            return this;
+        }
+        public Integer getIsValid() {
+            return this.isValid;
+        }
+
         public ListRouteRulesResponseBodyData setMatchCount(Long matchCount) {
             this.matchCount = matchCount;
             return this;
@@ -205,6 +197,14 @@ public class ListRouteRulesResponseBody extends TeaModel {
         }
         public String getMonitorSourceNames() {
             return this.monitorSourceNames;
+        }
+
+        public ListRouteRulesResponseBodyData setRelServiceDeleteType(Integer relServiceDeleteType) {
+            this.relServiceDeleteType = relServiceDeleteType;
+            return this;
+        }
+        public Integer getRelServiceDeleteType() {
+            return this.relServiceDeleteType;
         }
 
         public ListRouteRulesResponseBodyData setRelatedServiceId(Long relatedServiceId) {

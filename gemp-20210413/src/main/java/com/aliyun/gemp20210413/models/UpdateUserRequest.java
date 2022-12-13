@@ -4,27 +4,21 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class UpdateUserRequest extends TeaModel {
-    // 幂等号
     @NameInMap("clientToken")
     public String clientToken;
 
-    // 邮件
     @NameInMap("email")
     public String email;
 
-    // 手机号
     @NameInMap("phone")
     public String phone;
 
-    // 用户ramId
     @NameInMap("ramId")
     public Long ramId;
 
-    // 用户ID
     @NameInMap("userId")
     public Long userId;
 
-    // 用户名
     @NameInMap("username")
     public String username;
 

@@ -4,7 +4,6 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ListSourceEventsForMonitorSourceResponseBody extends TeaModel {
-    // 告警列表
     @NameInMap("data")
     public java.util.List<ListSourceEventsForMonitorSourceResponseBodyData> data;
 
@@ -34,19 +33,15 @@ public class ListSourceEventsForMonitorSourceResponseBody extends TeaModel {
     }
 
     public static class ListSourceEventsForMonitorSourceResponseBodyData extends TeaModel {
-        // 告警内容
         @NameInMap("eventJson")
         public String eventJson;
 
-        // 告警上报时间
         @NameInMap("eventTime")
         public String eventTime;
 
-        // 监控源ID
         @NameInMap("monitorSourceId")
         public Boolean monitorSourceId;
 
-        // 监控源名称
         @NameInMap("monitorSourceName")
         public String monitorSourceName;
 

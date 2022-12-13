@@ -4,15 +4,12 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class GetServiceGroupSpecialPersonSchedulingRequest extends TeaModel {
-    // 幂等号
     @NameInMap("clientToken")
     public String clientToken;
 
-    // 服务组ID
     @NameInMap("serviceGroupId")
     public Long serviceGroupId;
 
-    // 用户ID
     @NameInMap("userId")
     public Long userId;
 

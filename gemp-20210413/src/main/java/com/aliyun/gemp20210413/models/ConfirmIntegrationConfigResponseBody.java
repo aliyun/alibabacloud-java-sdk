@@ -4,6 +4,7 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ConfirmIntegrationConfigResponseBody extends TeaModel {
+    // Id of the request
     @NameInMap("requestId")
     public String requestId;
 

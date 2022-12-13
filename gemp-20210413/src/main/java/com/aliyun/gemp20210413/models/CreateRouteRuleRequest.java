@@ -4,63 +4,57 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class CreateRouteRuleRequest extends TeaModel {
-    // 事件分派对象ID（服务组ID 或用户ID）
     @NameInMap("assignObjectId")
     public Long assignObjectId;
 
-    // 事件分派对象类型 SERVICEGROUP服务组 USER 单个用户
     @NameInMap("assignObjectType")
     public String assignObjectType;
 
-    // 子规则关系AND,OR
     @NameInMap("childRuleRelation")
     public String childRuleRelation;
 
-    // 幂等号
     @NameInMap("clientToken")
     public String clientToken;
 
-    // 影响程度 LOW-一般 HIGH-严重
+    @NameInMap("coverageProblemLevels")
+    public java.util.List<String> coverageProblemLevels;
+
     @NameInMap("effection")
     public String effection;
 
-    // 启用状态
     @NameInMap("enableStatus")
     public String enableStatus;
 
-    // 事件级别 P1 P2 P3 P4
     @NameInMap("incidentLevel")
     public String incidentLevel;
 
-    // 命中次数
     @NameInMap("matchCount")
     public Integer matchCount;
 
-    // 通知渠道。 SMS 短信  EMAIL 邮件  PHONE电话  WEIXIN_GROUP 企微群 DING_GROUP钉钉群
     @NameInMap("notifyChannels")
     public java.util.List<String> notifyChannels;
 
-    // 关联服务ID
+    @NameInMap("problemEffectionServices")
+    public java.util.List<Long> problemEffectionServices;
+
+    @NameInMap("problemLevelGroup")
+    public java.util.Map<String, ProblemLevelGroupValue> problemLevelGroup;
+
     @NameInMap("relatedServiceId")
     public Long relatedServiceId;
 
-    // 子规则
     @NameInMap("routeChildRules")
     public java.util.List<CreateRouteRuleRequestRouteChildRules> routeChildRules;
 
-    // 路由类型：INCIDENT 触发事件 ALERT仅触发报警
     @NameInMap("routeType")
     public String routeType;
 
-    // 规则名称
     @NameInMap("ruleName")
     public String ruleName;
 
-    // 时间窗口
     @NameInMap("timeWindow")
     public Long timeWindow;
 
-    // 时间窗口单位 MINUTE  分钟  SECOND 秒
     @NameInMap("timeWindowUnit")
     public String timeWindowUnit;
 
@@ -101,6 +95,14 @@ public class CreateRouteRuleRequest extends TeaModel {
         return this.clientToken;
     }
 
+    public CreateRouteRuleRequest setCoverageProblemLevels(java.util.List<String> coverageProblemLevels) {
+        this.coverageProblemLevels = coverageProblemLevels;
+        return this;
+    }
+    public java.util.List<String> getCoverageProblemLevels() {
+        return this.coverageProblemLevels;
+    }
+
     public CreateRouteRuleRequest setEffection(String effection) {
         this.effection = effection;
         return this;
@@ -139,6 +141,22 @@ public class CreateRouteRuleRequest extends TeaModel {
     }
     public java.util.List<String> getNotifyChannels() {
         return this.notifyChannels;
+    }
+
+    public CreateRouteRuleRequest setProblemEffectionServices(java.util.List<Long> problemEffectionServices) {
+        this.problemEffectionServices = problemEffectionServices;
+        return this;
+    }
+    public java.util.List<Long> getProblemEffectionServices() {
+        return this.problemEffectionServices;
+    }
+
+    public CreateRouteRuleRequest setProblemLevelGroup(java.util.Map<String, ProblemLevelGroupValue> problemLevelGroup) {
+        this.problemLevelGroup = problemLevelGroup;
+        return this;
+    }
+    public java.util.Map<String, ProblemLevelGroupValue> getProblemLevelGroup() {
+        return this.problemLevelGroup;
     }
 
     public CreateRouteRuleRequest setRelatedServiceId(Long relatedServiceId) {
@@ -190,15 +208,12 @@ public class CreateRouteRuleRequest extends TeaModel {
     }
 
     public static class CreateRouteRuleRequestRouteChildRulesConditions extends TeaModel {
-        // 字段名称
         @NameInMap("key")
         public String key;
 
-        // 操作符号：notContain 不包含；contain 包含；equals 等于；notEquals 不等于；
         @NameInMap("operationSymbol")
         public String operationSymbol;
 
-        // 字段值
         @NameInMap("value")
         public String value;
 
@@ -234,17 +249,17 @@ public class CreateRouteRuleRequest extends TeaModel {
     }
 
     public static class CreateRouteRuleRequestRouteChildRules extends TeaModel {
-        // 0-与，1-或
         @NameInMap("childConditionRelation")
         public Long childConditionRelation;
 
-        // 条件
         @NameInMap("conditions")
         public java.util.List<CreateRouteRuleRequestRouteChildRulesConditions> conditions;
 
-        // 监控源ID
         @NameInMap("monitorSourceId")
         public Long monitorSourceId;
+
+        @NameInMap("problemLevel")
+        public String problemLevel;
 
         public static CreateRouteRuleRequestRouteChildRules build(java.util.Map<String, ?> map) throws Exception {
             CreateRouteRuleRequestRouteChildRules self = new CreateRouteRuleRequestRouteChildRules();
@@ -273,6 +288,14 @@ public class CreateRouteRuleRequest extends TeaModel {
         }
         public Long getMonitorSourceId() {
             return this.monitorSourceId;
+        }
+
+        public CreateRouteRuleRequestRouteChildRules setProblemLevel(String problemLevel) {
+            this.problemLevel = problemLevel;
+            return this;
+        }
+        public String getProblemLevel() {
+            return this.problemLevel;
         }
 
     }

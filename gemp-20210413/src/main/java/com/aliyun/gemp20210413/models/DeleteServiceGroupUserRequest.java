@@ -4,23 +4,18 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class DeleteServiceGroupUserRequest extends TeaModel {
-    // 幂等号
     @NameInMap("clientToken")
     public String clientToken;
 
-    // 新的用户
     @NameInMap("newUserId")
     public Long newUserId;
 
-    // 老的用户ID
     @NameInMap("oldUserId")
     public Long oldUserId;
 
-    // 删除服务组成员
     @NameInMap("removeUser")
     public Boolean removeUser;
 
-    // 服务组ID
     @NameInMap("serviceGroupId")
     public Long serviceGroupId;
 

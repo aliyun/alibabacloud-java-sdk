@@ -4,63 +4,51 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class UpdateProblemImprovementRequest extends TeaModel {
-    // 幂等校验token
     @NameInMap("clientToken")
     public String clientToken;
 
-    // 发现来源 码表:PROBLEM_DISCOVER_SOURCE
+    @NameInMap("customProblemReason")
+    public String customProblemReason;
+
     @NameInMap("discoverSource")
     public Long discoverSource;
 
-    // 故障责任部门ID
     @NameInMap("dutyDepartmentId")
     public Long dutyDepartmentId;
 
-    // 故障责任部门
     @NameInMap("dutyDepartmentName")
     public String dutyDepartmentName;
 
-    // 故障责任人id
     @NameInMap("dutyUserId")
     public Long dutyUserId;
 
-    // 注入方式 码表:PROBLEM_INJECTION_MODE
     @NameInMap("injectionMode")
     public String injectionMode;
 
-    // 监控源
     @NameInMap("monitorSourceName")
     public String monitorSourceName;
 
-    // 故障ID
     @NameInMap("problemId")
     public Long problemId;
 
-    // 故障原因
     @NameInMap("problemReason")
     public String problemReason;
 
-    // 最近活动 码表:PROBLEM_RECENT_ACTIVITY
     @NameInMap("recentActivity")
     public String recentActivity;
 
-    // 恢复方式  码表:PROBLEM_RECOVERY_MODE
     @NameInMap("recoveryMode")
     public String recoveryMode;
 
-    // 关联变更
     @NameInMap("relationChanges")
     public String relationChanges;
 
-    // 备注
     @NameInMap("remark")
     public String remark;
 
-    // 复盘负责人id
     @NameInMap("replayDutyUserId")
     public Long replayDutyUserId;
 
-    // 用户上报 码表:PROBLEM_USER_REPORT
     @NameInMap("userReport")
     public Long userReport;
 
@@ -75,6 +63,14 @@ public class UpdateProblemImprovementRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public UpdateProblemImprovementRequest setCustomProblemReason(String customProblemReason) {
+        this.customProblemReason = customProblemReason;
+        return this;
+    }
+    public String getCustomProblemReason() {
+        return this.customProblemReason;
     }
 
     public UpdateProblemImprovementRequest setDiscoverSource(Long discoverSource) {
