@@ -7,15 +7,22 @@ public class DescribeNetworkPackagesRequest extends TeaModel {
     @NameInMap("InternetChargeType")
     public String internetChargeType;
 
+    // The number of entries to return on each page.
+    // 
+    // Maximum value: 100
+    // 
+    // Default value: 10
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     @NameInMap("NetworkPackageId")
     public java.util.List<String> networkPackageId;
 
+    // The token that determines the start point of the next query.
     @NameInMap("NextToken")
     public String nextToken;
 
+    // The ID of the region.
     @NameInMap("RegionId")
     public String regionId;
 

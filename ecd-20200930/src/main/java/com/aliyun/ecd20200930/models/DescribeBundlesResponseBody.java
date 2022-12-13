@@ -4,12 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeBundlesResponseBody extends TeaModel {
+    // Details about the cloud desktop templates.
     @NameInMap("Bundles")
     public java.util.List<DescribeBundlesResponseBodyBundles> bundles;
 
+    // The token that is used for the next query. If this parameter is empty, all results have been returned.
     @NameInMap("NextToken")
     public String nextToken;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,15 +46,19 @@ public class DescribeBundlesResponseBody extends TeaModel {
     }
 
     public static class DescribeBundlesResponseBodyBundlesDesktopTypeAttribute extends TeaModel {
+        // The number of vCPUs.
         @NameInMap("CpuCount")
         public Integer cpuCount;
 
+        // The number of GPUs.
         @NameInMap("GpuCount")
         public Float gpuCount;
 
+        // The GPU type.
         @NameInMap("GpuSpec")
         public String gpuSpec;
 
+        // The memory size. Unit: MB.
         @NameInMap("MemorySize")
         public Integer memorySize;
 
@@ -95,12 +102,18 @@ public class DescribeBundlesResponseBody extends TeaModel {
     }
 
     public static class DescribeBundlesResponseBodyBundlesDisks extends TeaModel {
+        // The performance level (PL) of the disk.
         @NameInMap("DiskPerformanceLevel")
         public String diskPerformanceLevel;
 
+        // The size of the disk. Unit: GiB.
         @NameInMap("DiskSize")
         public Integer diskSize;
 
+        // The disk type. Valid values:
+        // 
+        // *   SYSTEM: the system disk
+        // *   DATA: the data disk
         @NameInMap("DiskType")
         public String diskType;
 
@@ -136,54 +149,83 @@ public class DescribeBundlesResponseBody extends TeaModel {
     }
 
     public static class DescribeBundlesResponseBodyBundles extends TeaModel {
+        // The ID of the cloud desktop template.
         @NameInMap("BundleId")
         public String bundleId;
 
+        // The name of the cloud desktop template.
         @NameInMap("BundleName")
         public String bundleName;
 
+        // The type of the cloud desktop template. Valid values:
+        // 
+        // *   SYSTEM: the system template
+        // *   CUSTOM: the custom template
         @NameInMap("BundleType")
         public String bundleType;
 
+        // The time when the cloud desktop template was created.
         @NameInMap("CreationTime")
         public String creationTime;
 
+        // The description of the cloud desktop template.
         @NameInMap("Description")
         public String description;
 
+        // The type of the cloud desktop.
         @NameInMap("DesktopType")
         public String desktopType;
 
+        // Details about the cloud desktop type.
         @NameInMap("DesktopTypeAttribute")
         public DescribeBundlesResponseBodyBundlesDesktopTypeAttribute desktopTypeAttribute;
 
+        // The family of the cloud desktop type. Valid values:
+        // 
+        // *   eds.general: General Office
+        // *   eds.hf: High Frequency
+        // *   eds.graphics: Graphics
         @NameInMap("DesktopTypeFamily")
         public String desktopTypeFamily;
 
+        // Details about the disks.
         @NameInMap("Disks")
         public java.util.List<DescribeBundlesResponseBodyBundlesDisks> disks;
 
+        // The ID of the image.
         @NameInMap("ImageId")
         public String imageId;
 
+        // The name of the image.
         @NameInMap("ImageName")
         public String imageName;
 
+        // The OS language of the image.
         @NameInMap("Language")
         public String language;
 
+        // The OS type.
         @NameInMap("OsType")
         public String osType;
 
         @NameInMap("Platform")
         public String platform;
 
+        // The protocol type.
+        // 
+        // *   HDX
+        // *   ASP (Recommend)
         @NameInMap("ProtocolType")
         public String protocolType;
 
+        // The session type. Valid values:
+        // 
+        // *   0: single_session
+        // *   1: multiple_session
         @NameInMap("SessionType")
         public String sessionType;
 
+        // The inventory status of the cloud desktop type, which is returned when the CheckStock parameter is set to true.
         @NameInMap("StockState")
         public String stockState;
 

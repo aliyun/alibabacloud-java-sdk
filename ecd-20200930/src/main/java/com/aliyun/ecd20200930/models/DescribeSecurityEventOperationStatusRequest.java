@@ -4,12 +4,14 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeSecurityEventOperationStatusRequest extends TeaModel {
+    // The ID of the region.
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("SecurityEventId")
     public java.util.List<String> securityEventId;
 
+    // The ID of the task to handle the alerts.
     @NameInMap("TaskId")
     public Long taskId;
 

@@ -4,12 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ListDirectoryUsersResponseBody extends TeaModel {
+    // The token used to start the next query. If the value of this parameter is empty, all results are returned.
     @NameInMap("NextToken")
     public String nextToken;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The names of users corresponding to the AD directory. If the AD directory corresponds only to the `Administrator` and `Guest` users, the returned `Users` value is empty.
     @NameInMap("Users")
     public java.util.List<ListDirectoryUsersResponseBodyUsers> users;
 
@@ -46,6 +49,7 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
         @NameInMap("DisplayName")
         public String displayName;
 
+        // The name of the user.
         @NameInMap("EndUser")
         public String endUser;
 

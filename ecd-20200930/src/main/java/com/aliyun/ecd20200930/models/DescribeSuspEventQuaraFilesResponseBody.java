@@ -4,18 +4,23 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeSuspEventQuaraFilesResponseBody extends TeaModel {
+    // The page number of the returned page.
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    // The maximum number of entries returned per page.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The quarantined files.
     @NameInMap("QuaraFiles")
     public java.util.List<DescribeSuspEventQuaraFilesResponseBodyQuaraFiles> quaraFiles;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The total number of quarantined files.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,33 +70,50 @@ public class DescribeSuspEventQuaraFilesResponseBody extends TeaModel {
     }
 
     public static class DescribeSuspEventQuaraFilesResponseBodyQuaraFiles extends TeaModel {
+        // The ID of the cloud desktop.
         @NameInMap("DesktopId")
         public String desktopId;
 
+        // The name of the cloud desktop.
         @NameInMap("DesktopName")
         public String desktopName;
 
+        // The name of the alert.
         @NameInMap("EventName")
         public String eventName;
 
+        // The type of the alert.
         @NameInMap("EventType")
         public String eventType;
 
+        // The ID of the quarantined file.
         @NameInMap("Id")
         public Integer id;
 
+        // The message-digest algorithm 5 (MD5) value of the quarantined file.
         @NameInMap("Md5")
         public String md5;
 
+        // The time when the quarantined file was updated.
         @NameInMap("ModifyTime")
         public String modifyTime;
 
+        // The path where the quarantined file is stored on the cloud desktop.
         @NameInMap("Path")
         public String path;
 
+        // The status of the quarantined file. Valid values:
+        // 
+        // *   quaraFailed: The file failed to be quarantined.
+        // *   quaraDone: The file is quarantined.
+        // *   quaraing: The file is being quarantined.
+        // *   rollbackFailed: Quarantine for the file failed to be canceled.
+        // *   rollbackDone: Quarantine for the file is canceled.
+        // *   rollbacking: Quarantine for the file is being canceled.
         @NameInMap("Status")
         public String status;
 
+        // The tag of the alert.
         @NameInMap("Tag")
         public String tag;
 

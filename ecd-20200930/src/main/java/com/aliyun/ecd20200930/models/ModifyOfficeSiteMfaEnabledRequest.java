@@ -4,12 +4,18 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ModifyOfficeSiteMfaEnabledRequest extends TeaModel {
+    // Specifies whether to enable MFA. Valid values:
+    // 
+    // *   true: enables MFA
+    // *   false: disables MFA
     @NameInMap("MfaEnabled")
     public Boolean mfaEnabled;
 
+    // The ID of the workspace.
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
+    // The ID of the region.
     @NameInMap("RegionId")
     public String regionId;
 

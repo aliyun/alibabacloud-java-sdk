@@ -4,12 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeNetworkPackagesResponseBody extends TeaModel {
+    // Details about the Internet access packages.
     @NameInMap("NetworkPackages")
     public java.util.List<DescribeNetworkPackagesResponseBodyNetworkPackages> networkPackages;
 
+    // The token that determines the start point of the next query. This parameter is empty if no additional results exist.
     @NameInMap("NextToken")
     public String nextToken;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,35 +46,67 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworkPackagesResponseBodyNetworkPackages extends TeaModel {
+        // The peak public bandwidth value. Unit: Mbit/s.
         @NameInMap("Bandwidth")
         public Integer bandwidth;
 
+        // The time when the Internet access package was created.
         @NameInMap("CreateTime")
         public String createTime;
 
+        // >  This parameter is in invitational preview and unavailable for public use.
         @NameInMap("EipAddresses")
         public java.util.List<String> eipAddresses;
 
+        // The time when the Internet access package expires.
+        // 
+        // *   If the Internet access package uses the pay-by-bandwidth billing method, the actual expiration time is returned.
+        // *   If the Internet access package uses the pay-by-data-transfer billing method, 2099-12-31T15:59:59Z is returned.
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
+        // The billing method of the Internet access package.
+        // 
+        // *   PayByTraffic: pay-by-data-transfer
+        // *   PayByBandwidth: pay-by-bandwidth
         @NameInMap("InternetChargeType")
         public String internetChargeType;
 
+        // The ID of the Internet access package.
         @NameInMap("NetworkPackageId")
         public String networkPackageId;
 
+        // The status of the Internet access package. The valid values include:
+        // 
+        // *   Creating: The Internet access package is being created.
+        // *   InUse: The Internet access package is in use.
+        // *   Releasing: The Internet access package is being released.
+        // *   Released: The Internet access package is released.
         @NameInMap("NetworkPackageStatus")
         public String networkPackageStatus;
 
+        // The ID of the workspace.
         @NameInMap("OfficeSiteId")
         public String officeSiteId;
 
+        // The name of the workspace.
         @NameInMap("OfficeSiteName")
         public String officeSiteName;
 
         @NameInMap("OfficeSiteVpcType")
         public String officeSiteVpcType;
+
+        @NameInMap("PayType")
+        public String payType;
+
+        @NameInMap("ReservationActiveTime")
+        public String reservationActiveTime;
+
+        @NameInMap("ReservationBandwidth")
+        public Integer reservationBandwidth;
+
+        @NameInMap("ReservationInternetChargeType")
+        public String reservationInternetChargeType;
 
         public static DescribeNetworkPackagesResponseBodyNetworkPackages build(java.util.Map<String, ?> map) throws Exception {
             DescribeNetworkPackagesResponseBodyNetworkPackages self = new DescribeNetworkPackagesResponseBodyNetworkPackages();
@@ -156,6 +191,38 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
         }
         public String getOfficeSiteVpcType() {
             return this.officeSiteVpcType;
+        }
+
+        public DescribeNetworkPackagesResponseBodyNetworkPackages setPayType(String payType) {
+            this.payType = payType;
+            return this;
+        }
+        public String getPayType() {
+            return this.payType;
+        }
+
+        public DescribeNetworkPackagesResponseBodyNetworkPackages setReservationActiveTime(String reservationActiveTime) {
+            this.reservationActiveTime = reservationActiveTime;
+            return this;
+        }
+        public String getReservationActiveTime() {
+            return this.reservationActiveTime;
+        }
+
+        public DescribeNetworkPackagesResponseBodyNetworkPackages setReservationBandwidth(Integer reservationBandwidth) {
+            this.reservationBandwidth = reservationBandwidth;
+            return this;
+        }
+        public Integer getReservationBandwidth() {
+            return this.reservationBandwidth;
+        }
+
+        public DescribeNetworkPackagesResponseBodyNetworkPackages setReservationInternetChargeType(String reservationInternetChargeType) {
+            this.reservationInternetChargeType = reservationInternetChargeType;
+            return this;
+        }
+        public String getReservationInternetChargeType() {
+            return this.reservationInternetChargeType;
         }
 
     }

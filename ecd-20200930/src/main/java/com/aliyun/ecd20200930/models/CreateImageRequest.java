@@ -7,27 +7,34 @@ public class CreateImageRequest extends TeaModel {
     @NameInMap("AutoCleanUserdata")
     public Boolean autoCleanUserdata;
 
+    // The description of the custom image. The description must be 2 to 256 characters in length. It cannot start with `http://` or `https://`.
     @NameInMap("Description")
     public String description;
 
+    // The ID of the cloud desktop.
     @NameInMap("DesktopId")
     public String desktopId;
 
     @NameInMap("DiskType")
     public String diskType;
 
+    // The name of the image. The name must be 2 to 128 characters in length. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-). The name must start with a letter and cannot start with `http://` or `https://`.
     @NameInMap("ImageName")
     public String imageName;
 
+    // This parameter is not available to the public.
     @NameInMap("ImageResourceType")
     public String imageResourceType;
 
+    // The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The ID of the snapshot.
     @NameInMap("SnapshotId")
     public String snapshotId;
 
+    // The IDs of the snapshots.
     @NameInMap("SnapshotIds")
     public java.util.List<String> snapshotIds;
 

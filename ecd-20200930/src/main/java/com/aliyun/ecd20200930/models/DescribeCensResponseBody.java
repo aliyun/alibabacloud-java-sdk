@@ -4,18 +4,23 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeCensResponseBody extends TeaModel {
+    // Details about CEN instances.
     @NameInMap("Cens")
     public java.util.List<DescribeCensResponseBodyCens> cens;
 
+    // The number of the page to return.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries returned per page.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The total number of CEN instances returned.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,6 +70,7 @@ public class DescribeCensResponseBody extends TeaModel {
     }
 
     public static class DescribeCensResponseBodyCensPackageIds extends TeaModel {
+        // The ID of the bandwidth plan that is associated with the CEN instance.
         @NameInMap("PackageId")
         public String packageId;
 
@@ -84,9 +90,11 @@ public class DescribeCensResponseBody extends TeaModel {
     }
 
     public static class DescribeCensResponseBodyCensTags extends TeaModel {
+        // The tag key of the CEN instance.
         @NameInMap("Key")
         public String key;
 
+        // The tag value of the CEN instance.
         @NameInMap("Value")
         public String value;
 
@@ -114,30 +122,45 @@ public class DescribeCensResponseBody extends TeaModel {
     }
 
     public static class DescribeCensResponseBodyCens extends TeaModel {
+        // The ID of the CEN instance.
         @NameInMap("CenId")
         public String cenId;
 
+        // The time when the CEN instance was created.
         @NameInMap("CreationTime")
         public String creationTime;
 
+        // The description of the CEN instance.
         @NameInMap("Description")
         public String description;
 
+        // Indicates whether IPv6 is supported. Valid value: DISABLED. This value indicates that IPv6 is not supported.
+        // 
+        // >  IPv6 is not supported.
         @NameInMap("Ipv6Level")
         public String ipv6Level;
 
+        // The name of the CEN instance.
         @NameInMap("Name")
         public String name;
 
+        // The IDs of the bandwidth plans that are associated with the CEN instance.
         @NameInMap("PackageIds")
         public java.util.List<DescribeCensResponseBodyCensPackageIds> packageIds;
 
+        // The level of CIDR block overlapping. Valid value: REDUCED. This value indicates that the CIDR blocks can overlap with each other but must not be the same.
         @NameInMap("ProtectionLevel")
         public String protectionLevel;
 
+        // The status of the CEN instance. Valid values:
+        // 
+        // *   Creating: The CEN instance is being created.
+        // *   Active: The CEN instance is running.
+        // *   Deleting: The CEN instance is being deleted.
         @NameInMap("Status")
         public String status;
 
+        // The tags of the CEN instance.
         @NameInMap("Tags")
         public java.util.List<DescribeCensResponseBodyCensTags> tags;
 

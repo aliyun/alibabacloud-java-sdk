@@ -4,18 +4,23 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeSuspEventsResponseBody extends TeaModel {
+    // The page number of the returned page.
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    // The maximum number of entries returned per page.
     @NameInMap("PageSize")
     public String pageSize;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Details about exceptions.
     @NameInMap("SuspEvents")
     public java.util.List<DescribeSuspEventsResponseBodySuspEvents> suspEvents;
 
+    // The total number of exceptions returned.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,18 +70,23 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
     }
 
     public static class DescribeSuspEventsResponseBodySuspEventsDetails extends TeaModel {
+        // The original property name.
         @NameInMap("Name")
         public String name;
 
+        // The property name displayed after the Name parameter was translated.
         @NameInMap("NameDisplay")
         public String nameDisplay;
 
+        // The way in which the property value is displayed. The property value can be a string or displayed in the HTML or Markdown format.
         @NameInMap("Type")
         public String type;
 
+        // The property value.
         @NameInMap("Value")
         public String value;
 
+        // The property value displayed after the Value parameter was translated.
         @NameInMap("ValueDisplay")
         public String valueDisplay;
 
@@ -128,69 +138,109 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
     }
 
     public static class DescribeSuspEventsResponseBodySuspEvents extends TeaModel {
+        // The name of the alert event to which the exception is related.
         @NameInMap("AlarmEventName")
         public String alarmEventName;
 
+        // The description of the alert event to which the exception is related.
         @NameInMap("AlarmEventNameDisplay")
         public String alarmEventNameDisplay;
 
+        // The type of the alert event to which the exception is related.
         @NameInMap("AlarmEventType")
         public String alarmEventType;
 
+        // The description of the alert event type to which the exception is related.
         @NameInMap("AlarmEventTypeDisplay")
         public String alarmEventTypeDisplay;
 
+        // The ID of the alert event to which the exception is related.
         @NameInMap("AlarmUniqueInfo")
         public String alarmUniqueInfo;
 
+        // Indicates whether the exception can be processed online. Valid values:
+        // 
+        // *   true: The exception can be processed online.
+        // *   false: The exception cannot be processed online.
         @NameInMap("CanBeDealOnLine")
         public String canBeDealOnLine;
 
+        // Indicates whether the exception can be ignored. Valid values:
+        // 
+        // *   true: The exception can be ignored.
+        // *   false: The exception cannot be ignored.
         @NameInMap("CanCancelFault")
         public Boolean canCancelFault;
 
+        // The source of data. This parameter can be ignored.
         @NameInMap("DataSource")
         public String dataSource;
 
+        // The impact of the exception.
         @NameInMap("Desc")
         public String desc;
 
+        // The ID of the affected cloud desktop.
         @NameInMap("DesktopId")
         public String desktopId;
 
+        // The name of the affected cloud desktop.
         @NameInMap("DesktopName")
         public String desktopName;
 
+        // Details about exceptions.
         @NameInMap("Details")
         public java.util.List<DescribeSuspEventsResponseBodySuspEventsDetails> details;
 
+        // The status of the exception. Valid values:
+        // 
+        // *   1: PENDING
+        // *   2: IGNORE
+        // *   4: HANDLED
+        // *   8: FAULT
+        // *   16: DEALING
+        // *   32: DONE
+        // *   64: EXPIRE
         @NameInMap("EventStatus")
         public Integer eventStatus;
 
+        // The name of the exception.
         @NameInMap("EventSubType")
         public String eventSubType;
 
+        // The ID of the exception.
         @NameInMap("Id")
         public Long id;
 
+        // The time when the exception last occurred.
         @NameInMap("LastTime")
         public String lastTime;
 
+        // The severity level of the exception. Valid values:
+        // 
+        // *   serious
+        // *   suspicious
+        // *   remind
         @NameInMap("Level")
         public String level;
 
+        // The complete name of the exception.
         @NameInMap("Name")
         public String name;
 
+        // The time when the exception first occurred.
         @NameInMap("OccurrenceTime")
         public String occurrenceTime;
 
+        // The error code of the exception operation.
         @NameInMap("OperateErrorCode")
         public String operateErrorCode;
 
+        // The remarks of the exception operation.
         @NameInMap("OperateMsg")
         public String operateMsg;
 
+        // The ID of the exception.
         @NameInMap("UniqueInfo")
         public String uniqueInfo;
 

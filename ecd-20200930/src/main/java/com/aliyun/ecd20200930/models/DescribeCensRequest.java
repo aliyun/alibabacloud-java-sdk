@@ -4,12 +4,19 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeCensRequest extends TeaModel {
+    // The number of the page to return.
+    // 
+    // Default value: 1.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The maximum number of entries to return on each page.
+    // 
+    // Default value: 50.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The ID of the region.
     @NameInMap("RegionId")
     public String regionId;
 

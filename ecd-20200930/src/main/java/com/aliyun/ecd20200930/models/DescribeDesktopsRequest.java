@@ -4,18 +4,39 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeDesktopsRequest extends TeaModel {
+    // The billing method of the cloud desktop. Valid values:
+    // 
+    // *   PostPaid: pay-as-you-go
+    // *   PrePaid: subscription
+    // 
+    // Default value: PostPaid.
     @NameInMap("ChargeType")
     public String chargeType;
+
+    @NameInMap("DesktopGroupId")
+    public String desktopGroupId;
 
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
+    // The name of the cloud desktop.
     @NameInMap("DesktopName")
     public String desktopName;
 
+    // The status of the cloud desktop. Valid values:
+    // 
+    // *   Pending
+    // *   Starting
+    // *   Running
+    // *   Stopping
+    // *   Rebuilding
+    // *   Stopped
+    // *   Expired
+    // *   Deleted
     @NameInMap("DesktopStatus")
     public String desktopStatus;
 
+    // The ID of the directory, which is the same as the workspace ID.
     @NameInMap("DirectoryId")
     public String directoryId;
 
@@ -25,45 +46,86 @@ public class DescribeDesktopsRequest extends TeaModel {
     @NameInMap("ExcludedEndUserId")
     public java.util.List<String> excludedEndUserId;
 
+    // The time when the subscription cloud desktop expires.
     @NameInMap("ExpiredTime")
     public String expiredTime;
 
+    // Specifies whether to filter cloud desktops in the desktop group. Default value: true.
+    // 
+    // *   true: filters cloud desktops in the desktop group.
+    // *   false: does not filter cloud desktops in the desktop group.
     @NameInMap("FilterDesktopGroup")
     public Boolean filterDesktopGroup;
 
+    // The ID of the cloud desktop group.
+    // 
+    // >  The desktop group feature is in invitational preview. If you want to use this feature, submit a ticket.
     @NameInMap("GroupId")
     public String groupId;
 
+    // The flag that is used to manage the cloud desktop. Valid values:
+    // 
+    // *   NoFlag: No flag exists for the cloud desktop.
+    // *   Updating: The configurations of the cloud desktop are being changed.
+    // *   Migrating: The cloud desktop is being migrated.
     @NameInMap("ManagementFlag")
     public String managementFlag;
 
+    // The number of entries to return on each page.
+    // 
+    // Maximum value: 100.
+    // 
+    // Default value: 10.
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    // The token that is used for the next query. If this parameter is empty, all results are returned.
     @NameInMap("NextToken")
     public String nextToken;
 
+    // The ID of the workspace.
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
+    // The name of the workspace.
     @NameInMap("OfficeSiteName")
     public String officeSiteName;
 
+    @NameInMap("OnlyDesktopGroup")
+    public Boolean onlyDesktopGroup;
+
+    @NameInMap("OsTypes")
+    public java.util.List<String> osTypes;
+
+    // The ID of the policy.
     @NameInMap("PolicyGroupId")
     public String policyGroupId;
 
+    // The protocol type.
+    // 
+    // *   HDX
+    // *   ASP (Recommend)
     @NameInMap("ProtocolType")
     public String protocolType;
 
+    // Specifies whether to query the information about desktop upgrade. Default value: false.
+    // 
+    // *   true: queries the information about desktop upgrade.
+    // *   false: does not query the information about desktop upgrade.
     @NameInMap("QueryFotaUpdate")
     public Boolean queryFotaUpdate;
 
+    // The ID of the region.
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("SnapshotPolicyId")
+    public String snapshotPolicyId;
 
     @NameInMap("Tag")
     public java.util.List<DescribeDesktopsRequestTag> tag;
 
+    // The name of the regular user.
     @NameInMap("UserName")
     public String userName;
 
@@ -78,6 +140,14 @@ public class DescribeDesktopsRequest extends TeaModel {
     }
     public String getChargeType() {
         return this.chargeType;
+    }
+
+    public DescribeDesktopsRequest setDesktopGroupId(String desktopGroupId) {
+        this.desktopGroupId = desktopGroupId;
+        return this;
+    }
+    public String getDesktopGroupId() {
+        return this.desktopGroupId;
     }
 
     public DescribeDesktopsRequest setDesktopId(java.util.List<String> desktopId) {
@@ -192,6 +262,22 @@ public class DescribeDesktopsRequest extends TeaModel {
         return this.officeSiteName;
     }
 
+    public DescribeDesktopsRequest setOnlyDesktopGroup(Boolean onlyDesktopGroup) {
+        this.onlyDesktopGroup = onlyDesktopGroup;
+        return this;
+    }
+    public Boolean getOnlyDesktopGroup() {
+        return this.onlyDesktopGroup;
+    }
+
+    public DescribeDesktopsRequest setOsTypes(java.util.List<String> osTypes) {
+        this.osTypes = osTypes;
+        return this;
+    }
+    public java.util.List<String> getOsTypes() {
+        return this.osTypes;
+    }
+
     public DescribeDesktopsRequest setPolicyGroupId(String policyGroupId) {
         this.policyGroupId = policyGroupId;
         return this;
@@ -222,6 +308,14 @@ public class DescribeDesktopsRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeDesktopsRequest setSnapshotPolicyId(String snapshotPolicyId) {
+        this.snapshotPolicyId = snapshotPolicyId;
+        return this;
+    }
+    public String getSnapshotPolicyId() {
+        return this.snapshotPolicyId;
     }
 
     public DescribeDesktopsRequest setTag(java.util.List<DescribeDesktopsRequestTag> tag) {

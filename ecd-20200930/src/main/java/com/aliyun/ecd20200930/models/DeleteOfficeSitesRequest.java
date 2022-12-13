@@ -4,9 +4,11 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DeleteOfficeSitesRequest extends TeaModel {
+    // The IDs of the workspaces. You can specify up to 100 workspace IDs.
     @NameInMap("OfficeSiteId")
     public java.util.List<String> officeSiteId;
 
+    // The ID of the region.
     @NameInMap("RegionId")
     public String regionId;
 

@@ -4,33 +4,43 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeDesktopsInGroupResponseBody extends TeaModel {
+    // The token that determines the start point of the next query.
     @NameInMap("NextToken")
     public String nextToken;
 
+    // The number of subscription cloud desktops that are connected.
     @NameInMap("OnlinePrePaidDesktopsCount")
     public Integer onlinePrePaidDesktopsCount;
 
+    // Details about the subscription cloud desktops.
     @NameInMap("PaidDesktops")
     public java.util.List<DescribeDesktopsInGroupResponseBodyPaidDesktops> paidDesktops;
 
+    // The total number of subscription cloud desktops.
     @NameInMap("PaidDesktopsCount")
     public Integer paidDesktopsCount;
 
+    // Details of the pay-as-you-go cloud desktops.
     @NameInMap("PostPaidDesktops")
     public java.util.List<DescribeDesktopsInGroupResponseBodyPostPaidDesktops> postPaidDesktops;
 
+    // The total number of pay-as-you-go cloud desktops.
     @NameInMap("PostPaidDesktopsCount")
     public Integer postPaidDesktopsCount;
 
+    // The total bill for pay-as-you-go cloud desktops.
     @NameInMap("PostPaidDesktopsTotalAmount")
     public Integer postPaidDesktopsTotalAmount;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The number of subscription desktops that are running.
     @NameInMap("RunningPrePaidDesktopsCount")
     public Integer runningPrePaidDesktopsCount;
 
+    // The number of subscription cloud desktops that are stopped.
     @NameInMap("StopedPrePaidDesktopsCount")
     public Integer stopedPrePaidDesktopsCount;
 
@@ -120,42 +130,55 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
     }
 
     public static class DescribeDesktopsInGroupResponseBodyPaidDesktops extends TeaModel {
+        // The connection status of the cloud desktop.
         @NameInMap("ConnectionStatus")
         public String connectionStatus;
 
+        // The ID of the cloud desktop.
         @NameInMap("DesktopId")
         public String desktopId;
 
+        // The name of the cloud desktop.
         @NameInMap("DesktopName")
         public String desktopName;
 
+        // The state of the cloud desktop.
         @NameInMap("DesktopStatus")
         public String desktopStatus;
 
+        // The type of the disk.
         @NameInMap("DiskType")
         public String diskType;
 
+        // The ID of the authorized user.
         @NameInMap("EndUserId")
         public String endUserId;
 
+        // Details of the IDs of users that are connected to cloud desktops. If no users are connected, no values are returned.
         @NameInMap("EndUserIds")
         public java.util.List<String> endUserIds;
 
+        // The username of the authorized user.
         @NameInMap("EndUserName")
         public String endUserName;
 
+        // Details of the names of users that are connected to cloud desktops. If no users are connected, no values are returned.
         @NameInMap("EndUserNames")
         public java.util.List<String> endUserNames;
 
+        // The version of the GPU driver.
         @NameInMap("GpuDriverVersion")
         public String gpuDriverVersion;
 
+        // The ID of the image.
         @NameInMap("ImageId")
         public String imageId;
 
+        // The name of the image.
         @NameInMap("ImageName")
         public String imageName;
 
+        // The flag that is used for management.
         @NameInMap("ManagementFlag")
         public String managementFlag;
 
@@ -165,15 +188,18 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         @NameInMap("MemberEniIp")
         public String memberEniIp;
 
+        // The type of the OS.
         @NameInMap("OsType")
         public String osType;
 
         @NameInMap("PrimaryEniIp")
         public String primaryEniIp;
 
+        // The point of time when the cloud desktop was reset.
         @NameInMap("ResetTime")
         public String resetTime;
 
+        // The size of the system disk. Unit: GiB.
         @NameInMap("SystemDiskSize")
         public Integer systemDiskSize;
 
@@ -337,48 +363,63 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
     }
 
     public static class DescribeDesktopsInGroupResponseBodyPostPaidDesktops extends TeaModel {
+        // The connection status of the cloud desktop.
         @NameInMap("ConnectionStatus")
         public String connectionStatus;
 
+        // The retention period.
         @NameInMap("CreateDuration")
         public String createDuration;
 
+        // The time when the cloud desktop was created.
         @NameInMap("CreateTime")
         public String createTime;
 
+        // The ID of the cloud desktop.
         @NameInMap("DesktopId")
         public String desktopId;
 
+        // The name of the cloud desktop.
         @NameInMap("DesktopName")
         public String desktopName;
 
+        // The state of the cloud desktop.
         @NameInMap("DesktopStatus")
         public String desktopStatus;
 
+        // The type of the disk.
         @NameInMap("DiskType")
         public String diskType;
 
+        // The ID of the authorized user.
         @NameInMap("EndUserId")
         public String endUserId;
 
+        // Details of the IDs of users that are connected to cloud desktops. If no users are connected, no values are returned.
         @NameInMap("EndUserIds")
         public java.util.List<String> endUserIds;
 
+        // The username of the authorized user.
         @NameInMap("EndUserName")
         public String endUserName;
 
+        // Details of the names of users that are connected to cloud desktops. If no users are connected, no values are returned.
         @NameInMap("EndUserNames")
         public java.util.List<String> endUserNames;
 
+        // The version of the GPU driver.
         @NameInMap("GpuDriverVersion")
         public String gpuDriverVersion;
 
+        // The ID of the image.
         @NameInMap("ImageId")
         public String imageId;
 
+        // The name of the image.
         @NameInMap("ImageName")
         public String imageName;
 
+        // The flag that is used for management.
         @NameInMap("ManagementFlag")
         public String managementFlag;
 
@@ -388,18 +429,22 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         @NameInMap("MemberEniIp")
         public String memberEniIp;
 
+        // The type of the OS.
         @NameInMap("OsType")
         public String osType;
 
         @NameInMap("PrimaryEniIp")
         public String primaryEniIp;
 
+        // The time when the cloud desktop was released.
         @NameInMap("ReleaseTime")
         public String releaseTime;
 
+        // The point of time when the cloud desktop was reset.
         @NameInMap("ResetTime")
         public String resetTime;
 
+        // The size of the system disk. Unit: GiB.
         @NameInMap("SystemDiskSize")
         public Integer systemDiskSize;
 

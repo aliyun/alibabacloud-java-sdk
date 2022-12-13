@@ -4,9 +4,11 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DissociateNetworkPackageRequest extends TeaModel {
+    // The ID of the Internet access package. You can call the [DescribeNetworkPackages](~~216079~~) operation to query the ID of the Internet access package.
     @NameInMap("NetworkPackageId")
     public String networkPackageId;
 
+    // The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 

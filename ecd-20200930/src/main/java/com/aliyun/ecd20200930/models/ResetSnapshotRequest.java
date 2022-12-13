@@ -4,9 +4,11 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ResetSnapshotRequest extends TeaModel {
+    // The ID of the region.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The ID of the snapshot to be used to restore the disk.
     @NameInMap("SnapshotId")
     public String snapshotId;
 

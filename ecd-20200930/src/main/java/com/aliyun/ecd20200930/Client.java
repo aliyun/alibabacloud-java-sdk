@@ -26,6 +26,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    /**
+      * If a workspace of the convenience account type is not used for a long time, the system locks the workspace and releases virtual private cloud (VPC) resources to improve resource utilization. If you want to continue to use a workspace that is locked, you can call the ActivateOfficeSite operation to activate the workspace. After the workspace is activated, the system recreates VPC resources based on the original configurations.
+      *
+      * @param request ActivateOfficeSiteRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ActivateOfficeSiteResponse
+     */
     public ActivateOfficeSiteResponse activateOfficeSiteWithOptions(ActivateOfficeSiteRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -54,6 +61,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ActivateOfficeSiteResponse());
     }
 
+    /**
+      * If a workspace of the convenience account type is not used for a long time, the system locks the workspace and releases virtual private cloud (VPC) resources to improve resource utilization. If you want to continue to use a workspace that is locked, you can call the ActivateOfficeSite operation to activate the workspace. After the workspace is activated, the system recreates VPC resources based on the original configurations.
+      *
+      * @param request ActivateOfficeSiteRequest
+      * @return ActivateOfficeSiteResponse
+     */
     public ActivateOfficeSiteResponse activateOfficeSite(ActivateOfficeSiteRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.activateOfficeSiteWithOptions(request, runtime);
@@ -139,6 +152,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public AddUserToDesktopGroupResponse addUserToDesktopGroup(AddUserToDesktopGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.addUserToDesktopGroupWithOptions(request, runtime);
+    }
+
+    public ApplyAutoSnapshotPolicyResponse applyAutoSnapshotPolicyWithOptions(ApplyAutoSnapshotPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.desktopId)) {
+            query.put("DesktopId", request.desktopId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policyId)) {
+            query.put("PolicyId", request.policyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ApplyAutoSnapshotPolicy"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ApplyAutoSnapshotPolicyResponse());
+    }
+
+    public ApplyAutoSnapshotPolicyResponse applyAutoSnapshotPolicy(ApplyAutoSnapshotPolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.applyAutoSnapshotPolicyWithOptions(request, runtime);
     }
 
     public ApplyCoordinatePrivilegeResponse applyCoordinatePrivilegeWithOptions(ApplyCoordinatePrivilegeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -309,6 +359,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.associateNetworkPackageWithOptions(request, runtime);
     }
 
+    /**
+      * ## Description
+      * *   A Cloud Enterprise Network (CEN) instance is created.
+      * *   A workspace of the convenience account type is created.
+      * >  The secure office network of a workspace of the enterprise Active Directory (AD) account type is attached to a CEN instance when you create the workspace. The secure office network that corresponds to each workspace can be attached only to a single CEN instance.
+      *
+      * @param request AttachCenRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return AttachCenResponse
+     */
     public AttachCenResponse attachCenWithOptions(AttachCenRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -349,6 +409,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AttachCenResponse());
     }
 
+    /**
+      * ## Description
+      * *   A Cloud Enterprise Network (CEN) instance is created.
+      * *   A workspace of the convenience account type is created.
+      * >  The secure office network of a workspace of the enterprise Active Directory (AD) account type is attached to a CEN instance when you create the workspace. The secure office network that corresponds to each workspace can be attached only to a single CEN instance.
+      *
+      * @param request AttachCenRequest
+      * @return AttachCenResponse
+     */
     public AttachCenResponse attachCen(AttachCenRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.attachCenWithOptions(request, runtime);
@@ -405,6 +474,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public AttachEndUserResponse attachEndUser(AttachEndUserRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.attachEndUserWithOptions(request, runtime);
+    }
+
+    public CancelAutoSnapshotPolicyResponse cancelAutoSnapshotPolicyWithOptions(CancelAutoSnapshotPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.desktopId)) {
+            query.put("DesktopId", request.desktopId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policyId)) {
+            query.put("PolicyId", request.policyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CancelAutoSnapshotPolicy"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CancelAutoSnapshotPolicyResponse());
+    }
+
+    public CancelAutoSnapshotPolicyResponse cancelAutoSnapshotPolicy(CancelAutoSnapshotPolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.cancelAutoSnapshotPolicyWithOptions(request, runtime);
     }
 
     public CancelCoordinationForMonitoringResponse cancelCoordinationForMonitoringWithOptions(CancelCoordinationForMonitoringRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -645,6 +751,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.copyImageWithOptions(request, runtime);
     }
 
+    /**
+      * AD directories are used to connect to enterprise AD systems and are suitable for large-scale desktop deployments. You are charged for AD directories that are used to connect to enterprise AD systems. For more information, see [Billing overview](~~188395~~).
+      *
+      * @param request CreateADConnectorDirectoryRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateADConnectorDirectoryResponse
+     */
     public CreateADConnectorDirectoryResponse createADConnectorDirectoryWithOptions(CreateADConnectorDirectoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -717,11 +830,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateADConnectorDirectoryResponse());
     }
 
+    /**
+      * AD directories are used to connect to enterprise AD systems and are suitable for large-scale desktop deployments. You are charged for AD directories that are used to connect to enterprise AD systems. For more information, see [Billing overview](~~188395~~).
+      *
+      * @param request CreateADConnectorDirectoryRequest
+      * @return CreateADConnectorDirectoryResponse
+     */
     public CreateADConnectorDirectoryResponse createADConnectorDirectory(CreateADConnectorDirectoryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createADConnectorDirectoryWithOptions(request, runtime);
     }
 
+    /**
+      * - When you create a workspace of the enterprise Active Directory (AD) account type, AD connectors are automatically created for you to connect to enterprise AD systems. You are charged for the AD connectors. For more information, see [Billing overview](~~188395~~).
+      * - After you call this operation to create the AD workspace, you must configure the AD domain. To configure the AD domain, perform the following operations:
+      *     1. Configure the conditional forwarder in the Domain Name System (DNS) server.
+      *     2. Configure the trust relationship in the AD domain server, and call the [ConfigADConnectorTrust](~~311258~~) operation to configure the trust relationship for the AD workspace.
+      *     3. Call the [ListUserAdOrganizationUnits](~~311259~~) operation to obtain the organizational unit (OU) details of the AD domain. Then, call the [ConfigADConnectorUser](~~311262~~) operation to specify an OU and an administrator for the AD workspace.
+      *     > If you specify the DomainUserName and DomainPassword parameters when you create the AD workspace, you need to configure only the conditional forwarder. If you do not specify the DomainUserName and DomainPassword parameters, you need to configure the conditional forwarder, trust relationship, and OU.
+      * For more information, see [Create a workspace of the enterprise account type](~~214469~~).
+      *
+      * @param request CreateADConnectorOfficeSiteRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateADConnectorOfficeSiteResponse
+     */
     public CreateADConnectorOfficeSiteResponse createADConnectorOfficeSiteWithOptions(CreateADConnectorOfficeSiteRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -822,6 +954,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateADConnectorOfficeSiteResponse());
     }
 
+    /**
+      * - When you create a workspace of the enterprise Active Directory (AD) account type, AD connectors are automatically created for you to connect to enterprise AD systems. You are charged for the AD connectors. For more information, see [Billing overview](~~188395~~).
+      * - After you call this operation to create the AD workspace, you must configure the AD domain. To configure the AD domain, perform the following operations:
+      *     1. Configure the conditional forwarder in the Domain Name System (DNS) server.
+      *     2. Configure the trust relationship in the AD domain server, and call the [ConfigADConnectorTrust](~~311258~~) operation to configure the trust relationship for the AD workspace.
+      *     3. Call the [ListUserAdOrganizationUnits](~~311259~~) operation to obtain the organizational unit (OU) details of the AD domain. Then, call the [ConfigADConnectorUser](~~311262~~) operation to specify an OU and an administrator for the AD workspace.
+      *     > If you specify the DomainUserName and DomainPassword parameters when you create the AD workspace, you need to configure only the conditional forwarder. If you do not specify the DomainUserName and DomainPassword parameters, you need to configure the conditional forwarder, trust relationship, and OU.
+      * For more information, see [Create a workspace of the enterprise account type](~~214469~~).
+      *
+      * @param request CreateADConnectorOfficeSiteRequest
+      * @return CreateADConnectorOfficeSiteResponse
+     */
     public CreateADConnectorOfficeSiteResponse createADConnectorOfficeSite(CreateADConnectorOfficeSiteRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createADConnectorOfficeSiteWithOptions(request, runtime);
@@ -884,6 +1028,55 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createAndBindNasFileSystemWithOptions(request, runtime);
     }
 
+    public CreateAutoSnapshotPolicyResponse createAutoSnapshotPolicyWithOptions(CreateAutoSnapshotPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cronExpression)) {
+            query.put("CronExpression", request.cronExpression);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policyName)) {
+            query.put("PolicyName", request.policyName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.retentionDays)) {
+            query.put("RetentionDays", request.retentionDays);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAutoSnapshotPolicy"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAutoSnapshotPolicyResponse());
+    }
+
+    public CreateAutoSnapshotPolicyResponse createAutoSnapshotPolicy(CreateAutoSnapshotPolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createAutoSnapshotPolicyWithOptions(request, runtime);
+    }
+
+    /**
+      * ## Description
+      * Desktop templates are categorized into system templates and custom templates. System templates are the templates provided by Alibaba Cloud. You can call this operation to create a custom template.
+      *
+      * @param request CreateBundleRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateBundleResponse
+     */
     public CreateBundleResponse createBundleWithOptions(CreateBundleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -944,11 +1137,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateBundleResponse());
     }
 
+    /**
+      * ## Description
+      * Desktop templates are categorized into system templates and custom templates. System templates are the templates provided by Alibaba Cloud. You can call this operation to create a custom template.
+      *
+      * @param request CreateBundleRequest
+      * @return CreateBundleResponse
+     */
     public CreateBundleResponse createBundle(CreateBundleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createBundleWithOptions(request, runtime);
     }
 
+    /**
+      * Before you call this operation to create a desktop group, make sure that the following conditions are met:
+      * *   You are familiar with the features, usage limits, and scaling policies of desktop groups. For more information, see [Overview](~~290959~~).
+      * *   Resources such as workspaces, users, desktop templates, and policies are created.
+      *
+      * @param request CreateDesktopGroupRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateDesktopGroupResponse
+     */
     public CreateDesktopGroupResponse createDesktopGroupWithOptions(CreateDesktopGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1109,11 +1318,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDesktopGroupResponse());
     }
 
+    /**
+      * Before you call this operation to create a desktop group, make sure that the following conditions are met:
+      * *   You are familiar with the features, usage limits, and scaling policies of desktop groups. For more information, see [Overview](~~290959~~).
+      * *   Resources such as workspaces, users, desktop templates, and policies are created.
+      *
+      * @param request CreateDesktopGroupRequest
+      * @return CreateDesktopGroupResponse
+     */
     public CreateDesktopGroupResponse createDesktopGroup(CreateDesktopGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createDesktopGroupWithOptions(request, runtime);
     }
 
+    /**
+      * ## Description
+      * Before you create a cloud desktop in Elastic Desktop Service (EDS), make sure that the following operations are complete:
+      * *   A workspace and a regular user are created. For more information, see the following topics:
+      *     *   [CreateSimpleOfficeSite](~~215416~~) and [Create a convenience user](~~214472~~)
+      *     *   [CreateADConnectorOfficeSite](~~215417~~) and [Create an enterprise AD user](~~188619~~)
+      * *   A cloud desktop template is created by calling the [CreateBundle](~~188883~~) operation, or an existing cloud desktop template is available.
+      * *   A policy is created by calling the [CreatePolicyGroup](~~188889~~) operation, or an existing policy is available.
+      *
+      * @param request CreateDesktopsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateDesktopsResponse
+     */
     public CreateDesktopsResponse createDesktopsWithOptions(CreateDesktopsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1131,6 +1361,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.bundleId)) {
             query.put("BundleId", request.bundleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bundleModels)) {
+            query.put("BundleModels", request.bundleModels);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.chargeType)) {
@@ -1230,6 +1464,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDesktopsResponse());
     }
 
+    /**
+      * ## Description
+      * Before you create a cloud desktop in Elastic Desktop Service (EDS), make sure that the following operations are complete:
+      * *   A workspace and a regular user are created. For more information, see the following topics:
+      *     *   [CreateSimpleOfficeSite](~~215416~~) and [Create a convenience user](~~214472~~)
+      *     *   [CreateADConnectorOfficeSite](~~215417~~) and [Create an enterprise AD user](~~188619~~)
+      * *   A cloud desktop template is created by calling the [CreateBundle](~~188883~~) operation, or an existing cloud desktop template is available.
+      * *   A policy is created by calling the [CreatePolicyGroup](~~188889~~) operation, or an existing policy is available.
+      *
+      * @param request CreateDesktopsRequest
+      * @return CreateDesktopsResponse
+     */
     public CreateDesktopsResponse createDesktops(CreateDesktopsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createDesktopsWithOptions(request, runtime);
@@ -1262,79 +1508,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateDiskEncryptionServiceResponse createDiskEncryptionService(CreateDiskEncryptionServiceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createDiskEncryptionServiceWithOptions(request, runtime);
-    }
-
-    public CreateDriveResponse createDriveWithOptions(CreateDriveRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.aliUid)) {
-            query.put("AliUid", request.aliUid);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
-            query.put("Description", request.description);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.domainId)) {
-            query.put("DomainId", request.domainId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.driveName)) {
-            query.put("DriveName", request.driveName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.externalDomainId)) {
-            query.put("ExternalDomainId", request.externalDomainId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.profileRoaming)) {
-            query.put("ProfileRoaming", request.profileRoaming);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
-            query.put("ResourceType", request.resourceType);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.totalSize)) {
-            query.put("TotalSize", request.totalSize);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
-            query.put("Type", request.type);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.usedSize)) {
-            query.put("UsedSize", request.usedSize);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
-            query.put("UserId", request.userId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "CreateDrive"),
-            new TeaPair("version", "2020-09-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDriveResponse());
-    }
-
-    public CreateDriveResponse createDrive(CreateDriveRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.createDriveWithOptions(request, runtime);
     }
 
     public CreateImageResponse createImageWithOptions(CreateImageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1398,6 +1571,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createImageWithOptions(request, runtime);
     }
 
+    /**
+      * - You can create a NAS file system for each workspace so that cloud desktops within the workspace can share files.
+      * - The system creates a General-purpose NAS file system and generates a default mount target. The storage types of the NAS file system includes Capacity type and Performance type. The Capacity type provides 10 PiB of storage while the Performance type provides only 1 PiB of storage.
+      * - NAS file systems are billed on a pay-as-you-go basis. You are charged based on the amount of used storage. You can also purchase storage plans to offset the bills for the used storage of NAS file systems.
+      * For more information, see [Create a NAS file system](~~214481~~).
+      *
+      * @param request CreateNASFileSystemRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateNASFileSystemResponse
+     */
     public CreateNASFileSystemResponse createNASFileSystemWithOptions(CreateNASFileSystemRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1442,6 +1625,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateNASFileSystemResponse());
     }
 
+    /**
+      * - You can create a NAS file system for each workspace so that cloud desktops within the workspace can share files.
+      * - The system creates a General-purpose NAS file system and generates a default mount target. The storage types of the NAS file system includes Capacity type and Performance type. The Capacity type provides 10 PiB of storage while the Performance type provides only 1 PiB of storage.
+      * - NAS file systems are billed on a pay-as-you-go basis. You are charged based on the amount of used storage. You can also purchase storage plans to offset the bills for the used storage of NAS file systems.
+      * For more information, see [Create a NAS file system](~~214481~~).
+      *
+      * @param request CreateNASFileSystemRequest
+      * @return CreateNASFileSystemResponse
+     */
     public CreateNASFileSystemResponse createNASFileSystem(CreateNASFileSystemRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createNASFileSystemWithOptions(request, runtime);
@@ -1468,6 +1660,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.officeSiteId)) {
             query.put("OfficeSiteId", request.officeSiteId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.payType)) {
+            query.put("PayType", request.payType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.period)) {
@@ -1508,6 +1704,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createNetworkPackageWithOptions(request, runtime);
     }
 
+    /**
+      * A policy is a set of security rules that are used to control security configurations when regular users use cloud desktops. A policy consists of a basic policy that provides features such as USB redirection and watermarking, and security group rules. For more information, see [Policy overview](~~189345~~).
+      *
+      * @param request CreatePolicyGroupRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreatePolicyGroupResponse
+     */
     public CreatePolicyGroupResponse createPolicyGroupWithOptions(CreatePolicyGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1551,6 +1754,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Html5FileTransfer", request.html5FileTransfer);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.internetCommunicationProtocol)) {
+            query.put("InternetCommunicationProtocol", request.internetCommunicationProtocol);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.localDrive)) {
             query.put("LocalDrive", request.localDrive);
         }
@@ -1587,6 +1794,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Recording", request.recording);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.recordingAudio)) {
+            query.put("RecordingAudio", request.recordingAudio);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.recordingDuration)) {
             query.put("RecordingDuration", request.recordingDuration);
         }
@@ -1613,6 +1824,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.remoteCoordinate)) {
             query.put("RemoteCoordinate", request.remoteCoordinate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scope)) {
+            query.put("Scope", request.scope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scopeValue)) {
+            query.put("ScopeValue", request.scopeValue);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.usbRedirect)) {
@@ -1656,11 +1875,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreatePolicyGroupResponse());
     }
 
+    /**
+      * A policy is a set of security rules that are used to control security configurations when regular users use cloud desktops. A policy consists of a basic policy that provides features such as USB redirection and watermarking, and security group rules. For more information, see [Policy overview](~~189345~~).
+      *
+      * @param request CreatePolicyGroupRequest
+      * @return CreatePolicyGroupResponse
+     */
     public CreatePolicyGroupResponse createPolicyGroup(CreatePolicyGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createPolicyGroupWithOptions(request, runtime);
     }
 
+    /**
+      * Before you create a RAM directory, make sure that you have completed the following operations:
+      * *   You have created a virtual private cloud (VPC) by calling the [CreateVpc](~~35737~~) operation in a region where EDS is available.
+      * *   You have created a vSwitch in the VPC by calling the [CreateVSwitch](~~35745~~) operation, and the vSwitch resides in a zone where EDS is available.
+      *
+      * @param request CreateRAMDirectoryRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateRAMDirectoryResponse
+     */
     public CreateRAMDirectoryResponse createRAMDirectoryWithOptions(CreateRAMDirectoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1705,6 +1939,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRAMDirectoryResponse());
     }
 
+    /**
+      * Before you create a RAM directory, make sure that you have completed the following operations:
+      * *   You have created a virtual private cloud (VPC) by calling the [CreateVpc](~~35737~~) operation in a region where EDS is available.
+      * *   You have created a vSwitch in the VPC by calling the [CreateVSwitch](~~35745~~) operation, and the vSwitch resides in a zone where EDS is available.
+      *
+      * @param request CreateRAMDirectoryRequest
+      * @return CreateRAMDirectoryResponse
+     */
     public CreateRAMDirectoryResponse createRAMDirectory(CreateRAMDirectoryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createRAMDirectoryWithOptions(request, runtime);
@@ -1787,6 +2029,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createSimpleOfficeSiteWithOptions(request, runtime);
     }
 
+    /**
+      * ## Description
+      * The cloud desktop for whose disk you want to create a snapshot must be in the **Running** or **Stopped** state.
+      *
+      * @param request CreateSnapshotRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateSnapshotResponse
+     */
     public CreateSnapshotResponse createSnapshotWithOptions(CreateSnapshotRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1827,9 +2077,49 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSnapshotResponse());
     }
 
+    /**
+      * ## Description
+      * The cloud desktop for whose disk you want to create a snapshot must be in the **Running** or **Stopped** state.
+      *
+      * @param request CreateSnapshotRequest
+      * @return CreateSnapshotResponse
+     */
     public CreateSnapshotResponse createSnapshot(CreateSnapshotRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createSnapshotWithOptions(request, runtime);
+    }
+
+    public DeleteAutoSnapshotPolicyResponse deleteAutoSnapshotPolicyWithOptions(DeleteAutoSnapshotPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.policyId)) {
+            query.put("PolicyId", request.policyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteAutoSnapshotPolicy"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAutoSnapshotPolicyResponse());
+    }
+
+    public DeleteAutoSnapshotPolicyResponse deleteAutoSnapshotPolicy(DeleteAutoSnapshotPolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteAutoSnapshotPolicyWithOptions(request, runtime);
     }
 
     public DeleteBundlesResponse deleteBundlesWithOptions(DeleteBundlesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2009,6 +2299,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteDevicesWithOptions(request, runtime);
     }
 
+    /**
+      * You cannot delete directories that are in use by cloud desktops.
+      *
+      * @param request DeleteDirectoriesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteDirectoriesResponse
+     */
     public DeleteDirectoriesResponse deleteDirectoriesWithOptions(DeleteDirectoriesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2037,44 +2334,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDirectoriesResponse());
     }
 
+    /**
+      * You cannot delete directories that are in use by cloud desktops.
+      *
+      * @param request DeleteDirectoriesRequest
+      * @return DeleteDirectoriesResponse
+     */
     public DeleteDirectoriesResponse deleteDirectories(DeleteDirectoriesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteDirectoriesWithOptions(request, runtime);
     }
 
-    public DeleteDriveResponse deleteDriveWithOptions(DeleteDriveRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.driveId)) {
-            query.put("DriveId", request.driveId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DeleteDrive"),
-            new TeaPair("version", "2020-09-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDriveResponse());
-    }
-
-    public DeleteDriveResponse deleteDrive(DeleteDriveRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.deleteDriveWithOptions(request, runtime);
-    }
-
+    /**
+      * ## Description
+      * *   Images include system images and custom images. System images cannot be deleted.
+      * *   If an image to delete is used by a desktop bundle, call the [DeleteBundles](~~188885~~) operation to delete the desktop bundle.
+      *
+      * @param request DeleteImagesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteImagesResponse
+     */
     public DeleteImagesResponse deleteImagesWithOptions(DeleteImagesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2103,11 +2382,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteImagesResponse());
     }
 
+    /**
+      * ## Description
+      * *   Images include system images and custom images. System images cannot be deleted.
+      * *   If an image to delete is used by a desktop bundle, call the [DeleteBundles](~~188885~~) operation to delete the desktop bundle.
+      *
+      * @param request DeleteImagesRequest
+      * @return DeleteImagesResponse
+     */
     public DeleteImagesResponse deleteImages(DeleteImagesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteImagesWithOptions(request, runtime);
     }
 
+    /**
+      * ## Description
+      * Before you delete a NAS file system, make sure that the data you want to retain is backed up.
+      * >  If a NAS file system is deleted, data stored in the NAS file system cannot be restored. Proceed with caution when you delete NAS file systems.
+      *
+      * @param request DeleteNASFileSystemsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteNASFileSystemsResponse
+     */
     public DeleteNASFileSystemsResponse deleteNASFileSystemsWithOptions(DeleteNASFileSystemsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2136,6 +2432,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteNASFileSystemsResponse());
     }
 
+    /**
+      * ## Description
+      * Before you delete a NAS file system, make sure that the data you want to retain is backed up.
+      * >  If a NAS file system is deleted, data stored in the NAS file system cannot be restored. Proceed with caution when you delete NAS file systems.
+      *
+      * @param request DeleteNASFileSystemsRequest
+      * @return DeleteNASFileSystemsResponse
+     */
     public DeleteNASFileSystemsResponse deleteNASFileSystems(DeleteNASFileSystemsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteNASFileSystemsWithOptions(request, runtime);
@@ -2174,6 +2478,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteNetworkPackagesWithOptions(request, runtime);
     }
 
+    /**
+      * Before you delete a workspace, make sure that the following operations are complete:
+      * *   All cloud desktops in the workspace are released.
+      * *   The data that you want to retain is backed up.
+      * >  After a workspace is deleted, its resources and data cannot be restored. Proceed with caution.
+      *
+      * @param request DeleteOfficeSitesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteOfficeSitesResponse
+     */
     public DeleteOfficeSitesResponse deleteOfficeSitesWithOptions(DeleteOfficeSitesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2202,11 +2516,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteOfficeSitesResponse());
     }
 
+    /**
+      * Before you delete a workspace, make sure that the following operations are complete:
+      * *   All cloud desktops in the workspace are released.
+      * *   The data that you want to retain is backed up.
+      * >  After a workspace is deleted, its resources and data cannot be restored. Proceed with caution.
+      *
+      * @param request DeleteOfficeSitesRequest
+      * @return DeleteOfficeSitesResponse
+     */
     public DeleteOfficeSitesResponse deleteOfficeSites(DeleteOfficeSitesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteOfficeSitesWithOptions(request, runtime);
     }
 
+    /**
+      * *   System policies cannot be deleted.
+      * *   Custom policies that are associated with cloud desktops cannot be deleted.
+      *
+      * @param request DeletePolicyGroupsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeletePolicyGroupsResponse
+     */
     public DeletePolicyGroupsResponse deletePolicyGroupsWithOptions(DeletePolicyGroupsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2235,11 +2566,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeletePolicyGroupsResponse());
     }
 
+    /**
+      * *   System policies cannot be deleted.
+      * *   Custom policies that are associated with cloud desktops cannot be deleted.
+      *
+      * @param request DeletePolicyGroupsRequest
+      * @return DeletePolicyGroupsResponse
+     */
     public DeletePolicyGroupsResponse deletePolicyGroups(DeletePolicyGroupsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deletePolicyGroupsWithOptions(request, runtime);
     }
 
+    /**
+      * ## Description
+      * If the snapshot ID that you specify does not exist, requests are ignored.
+      *
+      * @param request DeleteSnapshotRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteSnapshotResponse
+     */
     public DeleteSnapshotResponse deleteSnapshotWithOptions(DeleteSnapshotRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2268,11 +2614,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteSnapshotResponse());
     }
 
+    /**
+      * ## Description
+      * If the snapshot ID that you specify does not exist, requests are ignored.
+      *
+      * @param request DeleteSnapshotRequest
+      * @return DeleteSnapshotResponse
+     */
     public DeleteSnapshotResponse deleteSnapshot(DeleteSnapshotRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteSnapshotWithOptions(request, runtime);
     }
 
+    /**
+      * ## Description
+      * If an MFA device is deleted, the device is unbound, reset, and disabled. When the Active Directory (AD) user wants to log on to the cloud desktop, the AD user must bind a new MFA device.
+      *
+      * @param request DeleteVirtualMFADeviceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteVirtualMFADeviceResponse
+     */
     public DeleteVirtualMFADeviceResponse deleteVirtualMFADeviceWithOptions(DeleteVirtualMFADeviceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2301,6 +2662,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteVirtualMFADeviceResponse());
     }
 
+    /**
+      * ## Description
+      * If an MFA device is deleted, the device is unbound, reset, and disabled. When the Active Directory (AD) user wants to log on to the cloud desktop, the AD user must bind a new MFA device.
+      *
+      * @param request DeleteVirtualMFADeviceRequest
+      * @return DeleteVirtualMFADeviceResponse
+     */
     public DeleteVirtualMFADeviceResponse deleteVirtualMFADevice(DeleteVirtualMFADeviceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteVirtualMFADeviceWithOptions(request, runtime);
@@ -2349,6 +2717,51 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeAlarmEventStackInfoResponse describeAlarmEventStackInfo(DescribeAlarmEventStackInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeAlarmEventStackInfoWithOptions(request, runtime);
+    }
+
+    public DescribeAutoSnapshotPolicyResponse describeAutoSnapshotPolicyWithOptions(DescribeAutoSnapshotPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policyId)) {
+            query.put("PolicyId", request.policyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policyName)) {
+            query.put("PolicyName", request.policyName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeAutoSnapshotPolicy"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAutoSnapshotPolicyResponse());
+    }
+
+    public DescribeAutoSnapshotPolicyResponse describeAutoSnapshotPolicy(DescribeAutoSnapshotPolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeAutoSnapshotPolicyWithOptions(request, runtime);
     }
 
     public DescribeBundlesResponse describeBundlesWithOptions(DescribeBundlesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2404,6 +2817,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.selectedBundle)) {
+            query.put("SelectedBundle", request.selectedBundle);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.supportMultiSession)) {
@@ -2473,6 +2890,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeCensWithOptions(request, runtime);
     }
 
+    /**
+      * You can audit the operation logs of regular users to improve security. The operation logs record events such as desktop startup, shutdown, and session disconnection.
+      *
+      * @param request DescribeClientEventsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeClientEventsResponse
+     */
     public DescribeClientEventsResponse describeClientEventsWithOptions(DescribeClientEventsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2549,6 +2973,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeClientEventsResponse());
     }
 
+    /**
+      * You can audit the operation logs of regular users to improve security. The operation logs record events such as desktop startup, shutdown, and session disconnection.
+      *
+      * @param request DescribeClientEventsRequest
+      * @return DescribeClientEventsResponse
+     */
     public DescribeClientEventsResponse describeClientEvents(DescribeClientEventsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeClientEventsWithOptions(request, runtime);
@@ -2746,63 +3176,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeDesktopIdsByVulNamesWithOptions(request, runtime);
     }
 
-    public DescribeDesktopMetricListResponse describeDesktopMetricListWithOptions(DescribeDesktopMetricListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.dimensions)) {
-            query.put("Dimensions", request.dimensions);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
-            query.put("EndTime", request.endTime);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.length)) {
-            query.put("Length", request.length);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.metricName)) {
-            query.put("MetricName", request.metricName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
-            query.put("NextToken", request.nextToken);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.period)) {
-            query.put("Period", request.period);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
-            query.put("StartTime", request.startTime);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DescribeDesktopMetricList"),
-            new TeaPair("version", "2020-09-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDesktopMetricListResponse());
-    }
-
-    public DescribeDesktopMetricListResponse describeDesktopMetricList(DescribeDesktopMetricListRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeDesktopMetricListWithOptions(request, runtime);
-    }
-
+    /**
+      * ## Description
+      * When no values are specified for the `InstanceTypeFamily` and `DesktopTypeId` parameters for a cloud desktop, all types of cloud desktops are queried.
+      *
+      * @param request DescribeDesktopTypesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDesktopTypesResponse
+     */
     public DescribeDesktopTypesResponse describeDesktopTypesWithOptions(DescribeDesktopTypesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2859,6 +3240,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDesktopTypesResponse());
     }
 
+    /**
+      * ## Description
+      * When no values are specified for the `InstanceTypeFamily` and `DesktopTypeId` parameters for a cloud desktop, all types of cloud desktops are queried.
+      *
+      * @param request DescribeDesktopTypesRequest
+      * @return DescribeDesktopTypesResponse
+     */
     public DescribeDesktopTypesResponse describeDesktopTypes(DescribeDesktopTypesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDesktopTypesWithOptions(request, runtime);
@@ -2869,6 +3257,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.chargeType)) {
             query.put("ChargeType", request.chargeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.desktopGroupId)) {
+            query.put("DesktopGroupId", request.desktopGroupId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.desktopId)) {
@@ -2927,6 +3319,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("OfficeSiteName", request.officeSiteName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.onlyDesktopGroup)) {
+            query.put("OnlyDesktopGroup", request.onlyDesktopGroup);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.osTypes)) {
+            query.put("OsTypes", request.osTypes);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.policyGroupId)) {
             query.put("PolicyGroupId", request.policyGroupId);
         }
@@ -2941,6 +3341,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.snapshotPolicyId)) {
+            query.put("SnapshotPolicyId", request.snapshotPolicyId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
@@ -3136,47 +3540,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeDirectoriesWithOptions(request, runtime);
     }
 
-    public DescribeDrivesResponse describeDrivesWithOptions(DescribeDrivesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.domainIds)) {
-            query.put("DomainIds", request.domainIds);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
-            query.put("ResourceType", request.resourceType);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
-            query.put("UserId", request.userId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DescribeDrives"),
-            new TeaPair("version", "2020-09-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDrivesResponse());
-    }
-
-    public DescribeDrivesResponse describeDrives(DescribeDrivesRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeDrivesWithOptions(request, runtime);
-    }
-
     public DescribeFlowMetricResponse describeFlowMetricWithOptions(DescribeFlowMetricRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3353,6 +3716,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeFotaTasksWithOptions(request, runtime);
     }
 
+    /**
+      * ## Description
+      * You can query the information about patches of up to 50 vulnerabilities in each request before you fix the current vulnerability. The maximum value of N in the request parameters that starts with VulInfo.N is 50.
+      *
+      * @param request DescribeFrontVulPatchListRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeFrontVulPatchListResponse
+     */
     public DescribeFrontVulPatchListResponse describeFrontVulPatchListWithOptions(DescribeFrontVulPatchListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3389,11 +3760,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeFrontVulPatchListResponse());
     }
 
+    /**
+      * ## Description
+      * You can query the information about patches of up to 50 vulnerabilities in each request before you fix the current vulnerability. The maximum value of N in the request parameters that starts with VulInfo.N is 50.
+      *
+      * @param request DescribeFrontVulPatchListRequest
+      * @return DescribeFrontVulPatchListResponse
+     */
     public DescribeFrontVulPatchListResponse describeFrontVulPatchList(DescribeFrontVulPatchListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeFrontVulPatchListWithOptions(request, runtime);
     }
 
+    /**
+      * ## Description
+      * After security protection is enabled, the system scans your cloud desktops for vulnerabilities once every day.
+      *
+      * @param request DescribeGroupedVulRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeGroupedVulResponse
+     */
     public DescribeGroupedVulResponse describeGroupedVulWithOptions(DescribeGroupedVulRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3446,6 +3832,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeGroupedVulResponse());
     }
 
+    /**
+      * ## Description
+      * After security protection is enabled, the system scans your cloud desktops for vulnerabilities once every day.
+      *
+      * @param request DescribeGroupedVulRequest
+      * @return DescribeGroupedVulResponse
+     */
     public DescribeGroupedVulResponse describeGroupedVul(DescribeGroupedVulRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeGroupedVulWithOptions(request, runtime);
@@ -3598,6 +3991,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeImagesWithOptions(request, runtime);
     }
 
+    /**
+      * - After you run a command, it may not succeed. You can call this operation to query the execution result.
+      * - You can query the information about execution in the last two weeks. A maximum of 100,000 lines of execution information can be retained.
+      *
+      * @param request DescribeInvocationsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeInvocationsResponse
+     */
     public DescribeInvocationsResponse describeInvocationsWithOptions(DescribeInvocationsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3611,6 +4012,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.desktopId)) {
             query.put("DesktopId", request.desktopId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.desktopIds)) {
+            query.put("DesktopIds", request.desktopIds);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.endUserId)) {
@@ -3658,6 +4063,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeInvocationsResponse());
     }
 
+    /**
+      * - After you run a command, it may not succeed. You can call this operation to query the execution result.
+      * - You can query the information about execution in the last two weeks. A maximum of 100,000 lines of execution information can be retained.
+      *
+      * @param request DescribeInvocationsRequest
+      * @return DescribeInvocationsResponse
+     */
     public DescribeInvocationsResponse describeInvocations(DescribeInvocationsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeInvocationsWithOptions(request, runtime);
@@ -3697,6 +4109,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.fileSystemId)) {
             query.put("FileSystemId", request.fileSystemId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.matchCompatibleProfile)) {
+            query.put("MatchCompatibleProfile", request.matchCompatibleProfile);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
@@ -3848,6 +4264,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scope)) {
+            query.put("Scope", request.scope);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -4015,6 +4435,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DesktopId", request.desktopId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.desktopName)) {
+            query.put("DesktopName", request.desktopName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
             query.put("MaxResults", request.maxResults);
         }
@@ -4029,6 +4457,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.snapshotId)) {
             query.put("SnapshotId", request.snapshotId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.snapshotName)) {
+            query.put("SnapshotName", request.snapshotName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.snapshotType)) {
+            query.put("SnapshotType", request.snapshotType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceDiskType)) {
+            query.put("SourceDiskType", request.sourceDiskType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -4082,6 +4526,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeSuspEventOverviewWithOptions(request, runtime);
     }
 
+    /**
+      * ## Description
+      * When alerts are handled, the system quarantines the files that contain detected threats to the quarantine panel. You can call this operation to view the quarantined files.
+      *
+      * @param request DescribeSuspEventQuaraFilesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeSuspEventQuaraFilesResponse
+     */
     public DescribeSuspEventQuaraFilesResponse describeSuspEventQuaraFilesWithOptions(DescribeSuspEventQuaraFilesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4122,11 +4574,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeSuspEventQuaraFilesResponse());
     }
 
+    /**
+      * ## Description
+      * When alerts are handled, the system quarantines the files that contain detected threats to the quarantine panel. You can call this operation to view the quarantined files.
+      *
+      * @param request DescribeSuspEventQuaraFilesRequest
+      * @return DescribeSuspEventQuaraFilesResponse
+     */
     public DescribeSuspEventQuaraFilesResponse describeSuspEventQuaraFiles(DescribeSuspEventQuaraFilesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeSuspEventQuaraFilesWithOptions(request, runtime);
     }
 
+    /**
+      * ## Description
+      * An alert event consists of alerts and exceptions. Each alert event is related to multiple exceptions.
+      *
+      * @param request DescribeSuspEventsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeSuspEventsResponse
+     */
     public DescribeSuspEventsResponse describeSuspEventsWithOptions(DescribeSuspEventsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4183,6 +4650,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeSuspEventsResponse());
     }
 
+    /**
+      * ## Description
+      * An alert event consists of alerts and exceptions. Each alert event is related to multiple exceptions.
+      *
+      * @param request DescribeSuspEventsRequest
+      * @return DescribeSuspEventsResponse
+     */
     public DescribeSuspEventsResponse describeSuspEvents(DescribeSuspEventsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeSuspEventsWithOptions(request, runtime);
@@ -4759,6 +5233,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EventTypes", request.eventTypes);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.langType)) {
+            query.put("LangType", request.langType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
             query.put("MaxResults", request.maxResults);
         }
@@ -4801,6 +5279,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.exportClientEventsWithOptions(request, runtime);
     }
 
+    /**
+      * You can call the operation to export desktop groups and then save the desktop groups in the .xlsx file. The information about exported desktop groups includes: the desktop group ID and name, the workspace ID and name, the desktop template, the security policy name, the number of authorized users, the billing method, and the creation time.
+      *
+      * @param request ExportDesktopGroupInfoRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ExportDesktopGroupInfoResponse
+     */
     public ExportDesktopGroupInfoResponse exportDesktopGroupInfoWithOptions(ExportDesktopGroupInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4865,11 +5350,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ExportDesktopGroupInfoResponse());
     }
 
+    /**
+      * You can call the operation to export desktop groups and then save the desktop groups in the .xlsx file. The information about exported desktop groups includes: the desktop group ID and name, the workspace ID and name, the desktop template, the security policy name, the number of authorized users, the billing method, and the creation time.
+      *
+      * @param request ExportDesktopGroupInfoRequest
+      * @return ExportDesktopGroupInfoResponse
+     */
     public ExportDesktopGroupInfoResponse exportDesktopGroupInfo(ExportDesktopGroupInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.exportDesktopGroupInfoWithOptions(request, runtime);
     }
 
+    /**
+      * The list of cloud desktops that are exported by calling the ExportDesktopListInfo operation is saved in a CSV file. The CSV file contains the information about each cloud desktop, including the IDs and names of cloud desktops, IDs and names of workspaces, IDs and names of desktop groups, vCPUs, memory, protocols, system disk capacity, data disk capacity, OSs, running status, current user, tags, IP addresses, billing methods, and creation time.
+      *
+      * @param request ExportDesktopListInfoRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ExportDesktopListInfoResponse
+     */
     public ExportDesktopListInfoResponse exportDesktopListInfoWithOptions(ExportDesktopListInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4950,6 +5448,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ExportDesktopListInfoResponse());
     }
 
+    /**
+      * The list of cloud desktops that are exported by calling the ExportDesktopListInfo operation is saved in a CSV file. The CSV file contains the information about each cloud desktop, including the IDs and names of cloud desktops, IDs and names of workspaces, IDs and names of desktop groups, vCPUs, memory, protocols, system disk capacity, data disk capacity, OSs, running status, current user, tags, IP addresses, billing methods, and creation time.
+      *
+      * @param request ExportDesktopListInfoRequest
+      * @return ExportDesktopListInfoResponse
+     */
     public ExportDesktopListInfoResponse exportDesktopListInfo(ExportDesktopListInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.exportDesktopListInfoWithOptions(request, runtime);
@@ -5086,6 +5590,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getOfficeSiteSsoStatusWithOptions(request, runtime);
     }
 
+    /**
+      * ## Description
+      * You can call this operation only for workspaces of the Active Directory (AD) and convenience account types. You cannot call this operation for RAM directories.
+      *
+      * @param request GetSpMetadataRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetSpMetadataResponse
+     */
     public GetSpMetadataResponse getSpMetadataWithOptions(GetSpMetadataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5118,6 +5630,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetSpMetadataResponse());
     }
 
+    /**
+      * ## Description
+      * You can call this operation only for workspaces of the Active Directory (AD) and convenience account types. You cannot call this operation for RAM directories.
+      *
+      * @param request GetSpMetadataRequest
+      * @return GetSpMetadataResponse
+     */
     public GetSpMetadataResponse getSpMetadata(GetSpMetadataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getSpMetadataWithOptions(request, runtime);
@@ -5164,6 +5683,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.handleSecurityEventsWithOptions(request, runtime);
     }
 
+    /**
+      * ## Description
+      * If you use an AD directory to connect to an AD system, you can call this operation to obtain the user information in the AD system.
+      *
+      * @param request ListDirectoryUsersRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListDirectoryUsersResponse
+     */
     public ListDirectoryUsersResponse listDirectoryUsersWithOptions(ListDirectoryUsersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5208,6 +5735,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListDirectoryUsersResponse());
     }
 
+    /**
+      * ## Description
+      * If you use an AD directory to connect to an AD system, you can call this operation to obtain the user information in the AD system.
+      *
+      * @param request ListDirectoryUsersRequest
+      * @return ListDirectoryUsersResponse
+     */
     public ListDirectoryUsersResponse listDirectoryUsers(ListDirectoryUsersRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listDirectoryUsersWithOptions(request, runtime);
@@ -5311,6 +5845,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listOfficeSiteUsersWithOptions(request, runtime);
     }
 
+    /**
+      * ## Description
+      * You must specify at least one of the ResourceId.N, Tag.N.Key, and Tag.N.Value parameters in the request to specify the query objects.
+      *
+      * @param request ListTagResourcesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListTagResourcesResponse
+     */
     public ListTagResourcesResponse listTagResourcesWithOptions(ListTagResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5355,6 +5897,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListTagResourcesResponse());
     }
 
+    /**
+      * ## Description
+      * You must specify at least one of the ResourceId.N, Tag.N.Key, and Tag.N.Value parameters in the request to specify the query objects.
+      *
+      * @param request ListTagResourcesRequest
+      * @return ListTagResourcesResponse
+     */
     public ListTagResourcesResponse listTagResources(ListTagResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listTagResourcesWithOptions(request, runtime);
@@ -5393,6 +5942,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listUserAdOrganizationUnitsWithOptions(request, runtime);
     }
 
+    /**
+      * ## Description
+      * After a virtual MFA device is locked, its status changes to LOCKED. The AD user who uses the virtual MFA device is unable to pass MFA and is therefore unable to log on to the client. You can call the [UnlockVirtualMFADevice](~~206212~~) operation to unlock the device.
+      *
+      * @param request LockVirtualMFADeviceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return LockVirtualMFADeviceResponse
+     */
     public LockVirtualMFADeviceResponse lockVirtualMFADeviceWithOptions(LockVirtualMFADeviceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5421,11 +5978,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new LockVirtualMFADeviceResponse());
     }
 
+    /**
+      * ## Description
+      * After a virtual MFA device is locked, its status changes to LOCKED. The AD user who uses the virtual MFA device is unable to pass MFA and is therefore unable to log on to the client. You can call the [UnlockVirtualMFADevice](~~206212~~) operation to unlock the device.
+      *
+      * @param request LockVirtualMFADeviceRequest
+      * @return LockVirtualMFADeviceResponse
+     */
     public LockVirtualMFADeviceResponse lockVirtualMFADevice(LockVirtualMFADeviceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.lockVirtualMFADeviceWithOptions(request, runtime);
     }
 
+    /**
+      * ## Description
+      * This operation modifies only the domain name and DNS parameters of AD directories in the Error (ERROR) or Registering (REGISTERING) state. DNS parameters include DomainName, SubDomainName, DnsAddress.N, and SubDomainDnsAddress.
+      *
+      * @param request ModifyADConnectorDirectoryRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyADConnectorDirectoryResponse
+     */
     public ModifyADConnectorDirectoryResponse modifyADConnectorDirectoryWithOptions(ModifyADConnectorDirectoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5494,11 +6066,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyADConnectorDirectoryResponse());
     }
 
+    /**
+      * ## Description
+      * This operation modifies only the domain name and DNS parameters of AD directories in the Error (ERROR) or Registering (REGISTERING) state. DNS parameters include DomainName, SubDomainName, DnsAddress.N, and SubDomainDnsAddress.
+      *
+      * @param request ModifyADConnectorDirectoryRequest
+      * @return ModifyADConnectorDirectoryResponse
+     */
     public ModifyADConnectorDirectoryResponse modifyADConnectorDirectory(ModifyADConnectorDirectoryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyADConnectorDirectoryWithOptions(request, runtime);
     }
 
+    /**
+      * This operation modifies the domain name and DNS parameters of workspaces that are of enterprise AD account type and in the Error or Registering state. DNS parameters include DomainName, SubDomainName, DnsAddress.N, and SubDomainDnsAddress.N.
+      *
+      * @param request ModifyADConnectorOfficeSiteRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyADConnectorOfficeSiteResponse
+     */
     public ModifyADConnectorOfficeSiteResponse modifyADConnectorOfficeSiteWithOptions(ModifyADConnectorOfficeSiteRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5567,11 +6153,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyADConnectorOfficeSiteResponse());
     }
 
+    /**
+      * This operation modifies the domain name and DNS parameters of workspaces that are of enterprise AD account type and in the Error or Registering state. DNS parameters include DomainName, SubDomainName, DnsAddress.N, and SubDomainDnsAddress.N.
+      *
+      * @param request ModifyADConnectorOfficeSiteRequest
+      * @return ModifyADConnectorOfficeSiteResponse
+     */
     public ModifyADConnectorOfficeSiteResponse modifyADConnectorOfficeSite(ModifyADConnectorOfficeSiteRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyADConnectorOfficeSiteWithOptions(request, runtime);
     }
 
+    public ModifyAutoSnapshotPolicyResponse modifyAutoSnapshotPolicyWithOptions(ModifyAutoSnapshotPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cronExpression)) {
+            query.put("CronExpression", request.cronExpression);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policyId)) {
+            query.put("PolicyId", request.policyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policyName)) {
+            query.put("PolicyName", request.policyName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.retentionDays)) {
+            query.put("RetentionDays", request.retentionDays);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyAutoSnapshotPolicy"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyAutoSnapshotPolicyResponse());
+    }
+
+    public ModifyAutoSnapshotPolicyResponse modifyAutoSnapshotPolicy(ModifyAutoSnapshotPolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyAutoSnapshotPolicyWithOptions(request, runtime);
+    }
+
+    /**
+      * ## Description
+      * Only custom desktop templates can be modified.
+      *
+      * @param request ModifyBundleRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyBundleResponse
+     */
     public ModifyBundleResponse modifyBundleWithOptions(ModifyBundleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5616,6 +6261,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyBundleResponse());
     }
 
+    /**
+      * ## Description
+      * Only custom desktop templates can be modified.
+      *
+      * @param request ModifyBundleRequest
+      * @return ModifyBundleResponse
+     */
     public ModifyBundleResponse modifyBundle(ModifyBundleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyBundleWithOptions(request, runtime);
@@ -5699,6 +6351,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifyCustomizedListHeadersWithOptions(request, runtime);
     }
 
+    /**
+      * ## Description
+      * *   Before you call this operation, make sure that you are familiar with the billing methods of cloud desktops in Elastic Desktop Service (EDS). For more information, see [Billing overview](~~188395~~).
+      * *   Before you call this operation, make sure that the cloud desktop that you want to manage is in the Running or Stopped state and no overdue payments of the cloud desktop are generated.
+      * *   After the order payment is completed, the system starts to change the billing method of the cloud desktop. During the change, you cannot perform operations, such as starting or stopping the cloud desktop, and changing configurations of the cloud desktop.
+      *
+      * @param request ModifyDesktopChargeTypeRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyDesktopChargeTypeResponse
+     */
     public ModifyDesktopChargeTypeResponse modifyDesktopChargeTypeWithOptions(ModifyDesktopChargeTypeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5747,11 +6409,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyDesktopChargeTypeResponse());
     }
 
+    /**
+      * ## Description
+      * *   Before you call this operation, make sure that you are familiar with the billing methods of cloud desktops in Elastic Desktop Service (EDS). For more information, see [Billing overview](~~188395~~).
+      * *   Before you call this operation, make sure that the cloud desktop that you want to manage is in the Running or Stopped state and no overdue payments of the cloud desktop are generated.
+      * *   After the order payment is completed, the system starts to change the billing method of the cloud desktop. During the change, you cannot perform operations, such as starting or stopping the cloud desktop, and changing configurations of the cloud desktop.
+      *
+      * @param request ModifyDesktopChargeTypeRequest
+      * @return ModifyDesktopChargeTypeResponse
+     */
     public ModifyDesktopChargeTypeResponse modifyDesktopChargeType(ModifyDesktopChargeTypeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyDesktopChargeTypeWithOptions(request, runtime);
     }
 
+    /**
+      * After you create a desktop group, the system creates a specific number of cloud desktops based on the scaling policy that you configure for the desktop group and the number of regular users who request to connect to the cloud desktops. Cloud desktops in a desktop group are created by using the same desktop template and security policy. You can modify the configurations of the desktop group in different scenarios to manage cloud desktops in a centralized manner.
+      * *   By default, a desktop group has the same name as all cloud desktops in the group. You can modify the desktop group name, which is specified by the DesktopGroupName parameter, to distinguish the desktop group from the cloud desktops.
+      * *   If the number of vCPUs and memory size of the cloud desktop cannot meet your business requirements in high performance scenarios, you can change the desktop template that is used to create the cloud desktop to a desktop template whose ID is specified by the OwnBundleId parameter and that has higher specifications.
+      * *   If a security policy that is associated with the desktop group cannot meet your requirements on security, you can change the policy whose ID is specified by the PolicyGroupId parameter.
+      * *   If the number of cloud desktops in the desktop group is insufficient to meet the business requirements of regular users, you can modify the parameters in the scaling policy. The parameters include MinDesktopsCount, MaxDesktopsCount, and AllowBufferCount.
+      *
+      * @param request ModifyDesktopGroupRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyDesktopGroupResponse
+     */
     public ModifyDesktopGroupResponse modifyDesktopGroupWithOptions(ModifyDesktopGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5827,6 +6509,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PolicyGroupId", request.policyGroupId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.policyGroupIds)) {
+            query.put("PolicyGroupIds", request.policyGroupIds);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.profileFollowSwitch)) {
             query.put("ProfileFollowSwitch", request.profileFollowSwitch);
         }
@@ -5868,11 +6554,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyDesktopGroupResponse());
     }
 
+    /**
+      * After you create a desktop group, the system creates a specific number of cloud desktops based on the scaling policy that you configure for the desktop group and the number of regular users who request to connect to the cloud desktops. Cloud desktops in a desktop group are created by using the same desktop template and security policy. You can modify the configurations of the desktop group in different scenarios to manage cloud desktops in a centralized manner.
+      * *   By default, a desktop group has the same name as all cloud desktops in the group. You can modify the desktop group name, which is specified by the DesktopGroupName parameter, to distinguish the desktop group from the cloud desktops.
+      * *   If the number of vCPUs and memory size of the cloud desktop cannot meet your business requirements in high performance scenarios, you can change the desktop template that is used to create the cloud desktop to a desktop template whose ID is specified by the OwnBundleId parameter and that has higher specifications.
+      * *   If a security policy that is associated with the desktop group cannot meet your requirements on security, you can change the policy whose ID is specified by the PolicyGroupId parameter.
+      * *   If the number of cloud desktops in the desktop group is insufficient to meet the business requirements of regular users, you can modify the parameters in the scaling policy. The parameters include MinDesktopsCount, MaxDesktopsCount, and AllowBufferCount.
+      *
+      * @param request ModifyDesktopGroupRequest
+      * @return ModifyDesktopGroupResponse
+     */
     public ModifyDesktopGroupResponse modifyDesktopGroup(ModifyDesktopGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyDesktopGroupWithOptions(request, runtime);
     }
 
+    /**
+      * ## Description
+      * You can only change the hostname of a Windows cloud desktop in the workspace of the enterprise Active Directory (AD) account type. After the hostname is changed, the cloud desktop is recreated.
+      *
+      * @param request ModifyDesktopHostNameRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyDesktopHostNameResponse
+     */
     public ModifyDesktopHostNameResponse modifyDesktopHostNameWithOptions(ModifyDesktopHostNameRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5905,6 +6609,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyDesktopHostNameResponse());
     }
 
+    /**
+      * ## Description
+      * You can only change the hostname of a Windows cloud desktop in the workspace of the enterprise Active Directory (AD) account type. After the hostname is changed, the cloud desktop is recreated.
+      *
+      * @param request ModifyDesktopHostNameRequest
+      * @return ModifyDesktopHostNameResponse
+     */
     public ModifyDesktopHostNameResponse modifyDesktopHostName(ModifyDesktopHostNameRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyDesktopHostNameWithOptions(request, runtime);
@@ -5947,6 +6658,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifyDesktopNameWithOptions(request, runtime);
     }
 
+    /**
+      * ## Description
+      * You can call this operation to change the configurations, such as the desktop type and disk size, of a cloud desktop.
+      * *   Before you call this operation, take note of the cloud desktop types and the disk sizes for each type of cloud desktop that Elastic Desktop Service (EDS) provides. For more information, see [Cloud desktop types](~~188609~~).
+      * *   When you change the configurations of a cloud desktop, you can change the desktop type or the size of the system disk or data disk. You must configure at least one of the following parameters: DesktopType, RootDiskSizeGib, and UserDiskSizeGib. Take note of the following items:
+      *     *   Each desktop type contains different desktop specifications, such as vCPUs, memory size, and GPUs. You cannot change only one of these specifications. If you want to change the desktop specifications, you must change the desktop type.
+      *     *   You cannot change a cloud desktop from the General Office type to a non-General Office type, or from a non-General Office type to the General Office type. You cannot change a cloud desktop from the Graphics type to a non-Graphics type, or from a non-Graphics type to the Graphics type.
+      *     *   You can only increase the sizes of system and data disks.
+      *     *   If the cloud desktop uses the subscription billing method, the price difference is calculated based on the price before and after the change. You can receive a refund, or must pay for the price difference.
+      *     *   If you want to change the type of cloud desktop for multiple times, we recommend that you wait at least 5 minutes before you change the desktop type if you want to change it again.
+      *     *   The cloud desktop for which you want to change configurations must be in the Stopped state.
+      * *   The changes do not affect your personal data on the cloud desktop.
+      *
+      * @param request ModifyDesktopSpecRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyDesktopSpecResponse
+     */
     public ModifyDesktopSpecResponse modifyDesktopSpecWithOptions(ModifyDesktopSpecRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5999,11 +6727,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyDesktopSpecResponse());
     }
 
+    /**
+      * ## Description
+      * You can call this operation to change the configurations, such as the desktop type and disk size, of a cloud desktop.
+      * *   Before you call this operation, take note of the cloud desktop types and the disk sizes for each type of cloud desktop that Elastic Desktop Service (EDS) provides. For more information, see [Cloud desktop types](~~188609~~).
+      * *   When you change the configurations of a cloud desktop, you can change the desktop type or the size of the system disk or data disk. You must configure at least one of the following parameters: DesktopType, RootDiskSizeGib, and UserDiskSizeGib. Take note of the following items:
+      *     *   Each desktop type contains different desktop specifications, such as vCPUs, memory size, and GPUs. You cannot change only one of these specifications. If you want to change the desktop specifications, you must change the desktop type.
+      *     *   You cannot change a cloud desktop from the General Office type to a non-General Office type, or from a non-General Office type to the General Office type. You cannot change a cloud desktop from the Graphics type to a non-Graphics type, or from a non-Graphics type to the Graphics type.
+      *     *   You can only increase the sizes of system and data disks.
+      *     *   If the cloud desktop uses the subscription billing method, the price difference is calculated based on the price before and after the change. You can receive a refund, or must pay for the price difference.
+      *     *   If you want to change the type of cloud desktop for multiple times, we recommend that you wait at least 5 minutes before you change the desktop type if you want to change it again.
+      *     *   The cloud desktop for which you want to change configurations must be in the Stopped state.
+      * *   The changes do not affect your personal data on the cloud desktop.
+      *
+      * @param request ModifyDesktopSpecRequest
+      * @return ModifyDesktopSpecResponse
+     */
     public ModifyDesktopSpecResponse modifyDesktopSpec(ModifyDesktopSpecRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyDesktopSpecWithOptions(request, runtime);
     }
 
+    /**
+      * The cloud desktops that you want to restart by calling this operation must be in the Running state.
+      *
+      * @param request ModifyDesktopsPolicyGroupRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyDesktopsPolicyGroupResponse
+     */
     public ModifyDesktopsPolicyGroupResponse modifyDesktopsPolicyGroupWithOptions(ModifyDesktopsPolicyGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6013,6 +6764,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.policyGroupId)) {
             query.put("PolicyGroupId", request.policyGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policyGroupIds)) {
+            query.put("PolicyGroupIds", request.policyGroupIds);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -6036,6 +6791,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyDesktopsPolicyGroupResponse());
     }
 
+    /**
+      * The cloud desktops that you want to restart by calling this operation must be in the Running state.
+      *
+      * @param request ModifyDesktopsPolicyGroupRequest
+      * @return ModifyDesktopsPolicyGroupResponse
+     */
     public ModifyDesktopsPolicyGroupResponse modifyDesktopsPolicyGroup(ModifyDesktopsPolicyGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyDesktopsPolicyGroupWithOptions(request, runtime);
@@ -6090,6 +6851,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifyDiskSpecWithOptions(request, runtime);
     }
 
+    /**
+      * The cloud desktop must be in the Running state.
+      *
+      * @param request ModifyEntitlementRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyEntitlementResponse
+     */
     public ModifyEntitlementResponse modifyEntitlementWithOptions(ModifyEntitlementRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6122,11 +6890,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyEntitlementResponse());
     }
 
+    /**
+      * The cloud desktop must be in the Running state.
+      *
+      * @param request ModifyEntitlementRequest
+      * @return ModifyEntitlementResponse
+     */
     public ModifyEntitlementResponse modifyEntitlement(ModifyEntitlementRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyEntitlementWithOptions(request, runtime);
     }
 
+    /**
+      * ## Description
+      * You can call this operation to modify the properties of only custom images in the Available (Available) state.
+      *
+      * @param request ModifyImageAttributeRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyImageAttributeResponse
+     */
     public ModifyImageAttributeResponse modifyImageAttributeWithOptions(ModifyImageAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6163,6 +6945,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyImageAttributeResponse());
     }
 
+    /**
+      * ## Description
+      * You can call this operation to modify the properties of only custom images in the Available (Available) state.
+      *
+      * @param request ModifyImageAttributeRequest
+      * @return ModifyImageAttributeResponse
+     */
     public ModifyImageAttributeResponse modifyImageAttribute(ModifyImageAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyImageAttributeWithOptions(request, runtime);
@@ -6209,6 +6998,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifyImagePermissionWithOptions(request, runtime);
     }
 
+    /**
+      * ## Description
+      * When you create a NAS file system, a mount target is automatically generated. By default, the mount target does not need to be changed. If the mount target is accidentally deleted, you must specify a new mount target for the NAS file system in the workspace. You can call the [CreateMountTarget](~~62621~~) operation to create a mount target.
+      *
+      * @param request ModifyNASDefaultMountTargetRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyNASDefaultMountTargetResponse
+     */
     public ModifyNASDefaultMountTargetResponse modifyNASDefaultMountTargetWithOptions(ModifyNASDefaultMountTargetRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6241,6 +7038,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyNASDefaultMountTargetResponse());
     }
 
+    /**
+      * ## Description
+      * When you create a NAS file system, a mount target is automatically generated. By default, the mount target does not need to be changed. If the mount target is accidentally deleted, you must specify a new mount target for the NAS file system in the workspace. You can call the [CreateMountTarget](~~62621~~) operation to create a mount target.
+      *
+      * @param request ModifyNASDefaultMountTargetRequest
+      * @return ModifyNASDefaultMountTargetResponse
+     */
     public ModifyNASDefaultMountTargetResponse modifyNASDefaultMountTarget(ModifyNASDefaultMountTargetRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyNASDefaultMountTargetWithOptions(request, runtime);
@@ -6291,6 +7095,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifyNetworkPackageBandwidthWithOptions(request, runtime);
     }
 
+    /**
+      * ## Description
+      * If you want to temporarily disable Internet access for a cloud desktop, you can disable the Internet access package. You can restore the package based on your requirements.
+      *
+      * @param request ModifyNetworkPackageEnabledRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyNetworkPackageEnabledResponse
+     */
     public ModifyNetworkPackageEnabledResponse modifyNetworkPackageEnabledWithOptions(ModifyNetworkPackageEnabledRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6323,6 +7135,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyNetworkPackageEnabledResponse());
     }
 
+    /**
+      * ## Description
+      * If you want to temporarily disable Internet access for a cloud desktop, you can disable the Internet access package. You can restore the package based on your requirements.
+      *
+      * @param request ModifyNetworkPackageEnabledRequest
+      * @return ModifyNetworkPackageEnabledResponse
+     */
     public ModifyNetworkPackageEnabledResponse modifyNetworkPackageEnabled(ModifyNetworkPackageEnabledRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyNetworkPackageEnabledWithOptions(request, runtime);
@@ -6539,6 +7358,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Html5FileTransfer", request.html5FileTransfer);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.internetCommunicationProtocol)) {
+            query.put("InternetCommunicationProtocol", request.internetCommunicationProtocol);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.localDrive)) {
             query.put("LocalDrive", request.localDrive);
         }
@@ -6579,6 +7402,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Recording", request.recording);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.recordingAudio)) {
+            query.put("RecordingAudio", request.recordingAudio);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.recordingDuration)) {
             query.put("RecordingDuration", request.recordingDuration);
         }
@@ -6613,6 +7440,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.revokeSecurityPolicyRule)) {
             query.put("RevokeSecurityPolicyRule", request.revokeSecurityPolicyRule);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scope)) {
+            query.put("Scope", request.scope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scopeValue)) {
+            query.put("ScopeValue", request.scopeValue);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.usbRedirect)) {
@@ -6661,6 +7496,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifyPolicyGroupWithOptions(request, runtime);
     }
 
+    /**
+      * You can modify permissions for regular users on cloud desktops that are only in the Running state.
+      *
+      * @param request ModifyUserEntitlementRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyUserEntitlementResponse
+     */
     public ModifyUserEntitlementResponse modifyUserEntitlementWithOptions(ModifyUserEntitlementRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6697,6 +7539,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyUserEntitlementResponse());
     }
 
+    /**
+      * You can modify permissions for regular users on cloud desktops that are only in the Running state.
+      *
+      * @param request ModifyUserEntitlementRequest
+      * @return ModifyUserEntitlementResponse
+     */
     public ModifyUserEntitlementResponse modifyUserEntitlement(ModifyUserEntitlementRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyUserEntitlementWithOptions(request, runtime);
@@ -6796,6 +7644,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.operateVulsWithOptions(request, runtime);
     }
 
+    /**
+      * The cloud desktops that you want to restart by calling this operation must be in the Running state.
+      *
+      * @param request RebootDesktopsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return RebootDesktopsResponse
+     */
     public RebootDesktopsResponse rebootDesktopsWithOptions(RebootDesktopsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6824,11 +7679,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RebootDesktopsResponse());
     }
 
+    /**
+      * The cloud desktops that you want to restart by calling this operation must be in the Running state.
+      *
+      * @param request RebootDesktopsRequest
+      * @return RebootDesktopsResponse
+     */
     public RebootDesktopsResponse rebootDesktops(RebootDesktopsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.rebootDesktopsWithOptions(request, runtime);
     }
 
+    /**
+      * Before you change the image of a cloud desktop, take note of the following limits:
+      * - You can select the OS of an image during image change. However, this operation is unavailable in the following regions: China (Hong Kong), Australia (Sydney), Singapore (Singapore), and Japan (Tokyo).
+      * - Image change between GPU and non-GPU images is not supported. If a cloud desktop is of the Graphics type, you can use only a GPU image. If the cloud desktop is of a non-Graphics type, you can use only a non-GPU image.
+      * After you change the image of the cloud desktop, the system uses the new image to initialize the system disk of the cloud desktop. Take note of the following impacts:
+      * - The system deletes data from the original system disk. The snapshots that are created from the original system disk of the cloud desktop become unavailable and are automatically deleted.
+      * - If you change the OS of the image, the system deletes data from the original data disk of the cloud desktop. The system also deletes snapshots that are created from the original data disk of the cloud desktop because original snapshots become unavailable. If you do not change the OS of the image, data on the original data disk is retained, and snapshots that are created from the data disk are still available.
+      *
+      * @param request RebuildDesktopsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return RebuildDesktopsResponse
+     */
     public RebuildDesktopsResponse rebuildDesktopsWithOptions(RebuildDesktopsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6861,6 +7734,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RebuildDesktopsResponse());
     }
 
+    /**
+      * Before you change the image of a cloud desktop, take note of the following limits:
+      * - You can select the OS of an image during image change. However, this operation is unavailable in the following regions: China (Hong Kong), Australia (Sydney), Singapore (Singapore), and Japan (Tokyo).
+      * - Image change between GPU and non-GPU images is not supported. If a cloud desktop is of the Graphics type, you can use only a GPU image. If the cloud desktop is of a non-Graphics type, you can use only a non-GPU image.
+      * After you change the image of the cloud desktop, the system uses the new image to initialize the system disk of the cloud desktop. Take note of the following impacts:
+      * - The system deletes data from the original system disk. The snapshots that are created from the original system disk of the cloud desktop become unavailable and are automatically deleted.
+      * - If you change the OS of the image, the system deletes data from the original data disk of the cloud desktop. The system also deletes snapshots that are created from the original data disk of the cloud desktop because original snapshots become unavailable. If you do not change the OS of the image, data on the original data disk is retained, and snapshots that are created from the data disk are still available.
+      *
+      * @param request RebuildDesktopsRequest
+      * @return RebuildDesktopsResponse
+     */
     public RebuildDesktopsResponse rebuildDesktops(RebuildDesktopsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.rebuildDesktopsWithOptions(request, runtime);
@@ -7054,6 +7938,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.resetDesktopsWithOptions(request, runtime);
     }
 
+    /**
+      * ## Description
+      * When you create a NAS file system, a mount target is automatically generated. By default, you do not need to modify the mount target of the NAS file system. If the mount target is disabled, you need to reset the mount target of the NAS file system.
+      *
+      * @param request ResetNASDefaultMountTargetRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ResetNASDefaultMountTargetResponse
+     */
     public ResetNASDefaultMountTargetResponse resetNASDefaultMountTargetWithOptions(ResetNASDefaultMountTargetRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -7082,11 +7974,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ResetNASDefaultMountTargetResponse());
     }
 
+    /**
+      * ## Description
+      * When you create a NAS file system, a mount target is automatically generated. By default, you do not need to modify the mount target of the NAS file system. If the mount target is disabled, you need to reset the mount target of the NAS file system.
+      *
+      * @param request ResetNASDefaultMountTargetRequest
+      * @return ResetNASDefaultMountTargetResponse
+     */
     public ResetNASDefaultMountTargetResponse resetNASDefaultMountTarget(ResetNASDefaultMountTargetRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.resetNASDefaultMountTargetWithOptions(request, runtime);
     }
 
+    /**
+      * ## Description
+      * Before you call this operation, make sure that the following operations are performed:
+      * *   The data that you want to retain in the disk is backed up.
+      *     **
+      *     **Note** The disk restoration operation is irreversible. After you call this operation for a disk, the disk is restored to the state it was in when the snapshot was created, and you lose all the data changes that occurred between the time when the snapshot was created and the time when the disk is restored. Make sure that data is backed up before you restore the disk.
+      * *   The cloud desktop whose disk you want to restore is stopped.
+      *
+      * @param request ResetSnapshotRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ResetSnapshotResponse
+     */
     public ResetSnapshotResponse resetSnapshotWithOptions(ResetSnapshotRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -7115,6 +8026,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ResetSnapshotResponse());
     }
 
+    /**
+      * ## Description
+      * Before you call this operation, make sure that the following operations are performed:
+      * *   The data that you want to retain in the disk is backed up.
+      *     **
+      *     **Note** The disk restoration operation is irreversible. After you call this operation for a disk, the disk is restored to the state it was in when the snapshot was created, and you lose all the data changes that occurred between the time when the snapshot was created and the time when the disk is restored. Make sure that data is backed up before you restore the disk.
+      * *   The cloud desktop whose disk you want to restore is stopped.
+      *
+      * @param request ResetSnapshotRequest
+      * @return ResetSnapshotResponse
+     */
     public ResetSnapshotResponse resetSnapshot(ResetSnapshotRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.resetSnapshotWithOptions(request, runtime);
@@ -7165,6 +8087,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.revokeCoordinatePrivilegeWithOptions(request, runtime);
     }
 
+    /**
+      * ## Description
+      * When alerts are handled, the system quarantines the files that contain detected threats to the quarantine panel. You can call this operation to remove quarantined files from the quarantine panel.
+      *
+      * @param request RollbackSuspEventQuaraFileRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return RollbackSuspEventQuaraFileResponse
+     */
     public RollbackSuspEventQuaraFileResponse rollbackSuspEventQuaraFileWithOptions(RollbackSuspEventQuaraFileRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -7197,6 +8127,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RollbackSuspEventQuaraFileResponse());
     }
 
+    /**
+      * ## Description
+      * When alerts are handled, the system quarantines the files that contain detected threats to the quarantine panel. You can call this operation to remove quarantined files from the quarantine panel.
+      *
+      * @param request RollbackSuspEventQuaraFileRequest
+      * @return RollbackSuspEventQuaraFileResponse
+     */
     public RollbackSuspEventQuaraFileResponse rollbackSuspEventQuaraFile(RollbackSuspEventQuaraFileRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.rollbackSuspEventQuaraFileWithOptions(request, runtime);
@@ -7255,6 +8192,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.runCommandWithOptions(request, runtime);
     }
 
+    /**
+      * ## Description
+      * When you attach your workspace network to a Cloud Enterprise Network (CEN) instance in another Alibaba Cloud account, you need to call this operation to obtain a verification code. After the call is successful, the system sends a verification code to the email address associated with the Alibaba Cloud account.
+      *
+      * @param request SendVerifyCodeRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return SendVerifyCodeResponse
+     */
     public SendVerifyCodeResponse sendVerifyCodeWithOptions(SendVerifyCodeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -7287,9 +8232,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SendVerifyCodeResponse());
     }
 
+    /**
+      * ## Description
+      * When you attach your workspace network to a Cloud Enterprise Network (CEN) instance in another Alibaba Cloud account, you need to call this operation to obtain a verification code. After the call is successful, the system sends a verification code to the email address associated with the Alibaba Cloud account.
+      *
+      * @param request SendVerifyCodeRequest
+      * @return SendVerifyCodeResponse
+     */
     public SendVerifyCodeResponse sendVerifyCode(SendVerifyCodeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.sendVerifyCodeWithOptions(request, runtime);
+    }
+
+    public SetDesktopGroupScaleTimerResponse setDesktopGroupScaleTimerWithOptions(SetDesktopGroupScaleTimerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.desktopGroupId)) {
+            query.put("DesktopGroupId", request.desktopGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scaleTimerInfos)) {
+            query.put("ScaleTimerInfos", request.scaleTimerInfos);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SetDesktopGroupScaleTimer"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SetDesktopGroupScaleTimerResponse());
+    }
+
+    public SetDesktopGroupScaleTimerResponse setDesktopGroupScaleTimer(SetDesktopGroupScaleTimerRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.setDesktopGroupScaleTimerWithOptions(request, runtime);
     }
 
     public SetDesktopGroupTimerResponse setDesktopGroupTimerWithOptions(SetDesktopGroupTimerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -7382,6 +8371,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.setDesktopGroupTimerStatusWithOptions(request, runtime);
     }
 
+    /**
+      * ## Description
+      * You can call this operation only for workspaces of the Active Directory (AD) and convenience account types. You cannot call this operation for RAM directories.
+      *
+      * @param request SetIdpMetadataRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return SetIdpMetadataResponse
+     */
     public SetIdpMetadataResponse setIdpMetadataWithOptions(SetIdpMetadataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -7418,6 +8415,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SetIdpMetadataResponse());
     }
 
+    /**
+      * ## Description
+      * You can call this operation only for workspaces of the Active Directory (AD) and convenience account types. You cannot call this operation for RAM directories.
+      *
+      * @param request SetIdpMetadataRequest
+      * @return SetIdpMetadataResponse
+     */
     public SetIdpMetadataResponse setIdpMetadata(SetIdpMetadataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.setIdpMetadataWithOptions(request, runtime);
@@ -7460,6 +8464,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.setOfficeSiteSsoStatusWithOptions(request, runtime);
     }
 
+    /**
+      * The cloud desktop to be started must be in the Stopped (Stopped) state.
+      *
+      * @param request StartDesktopsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return StartDesktopsResponse
+     */
     public StartDesktopsResponse startDesktopsWithOptions(StartDesktopsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -7488,11 +8499,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new StartDesktopsResponse());
     }
 
+    /**
+      * The cloud desktop to be started must be in the Stopped (Stopped) state.
+      *
+      * @param request StartDesktopsRequest
+      * @return StartDesktopsResponse
+     */
     public StartDesktopsResponse startDesktops(StartDesktopsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.startDesktopsWithOptions(request, runtime);
     }
 
+    /**
+      * ## Description
+      * When you call this operation, you must specify a workspace or a cloud desktop by specifying the OfficeSiteId or DesktopId parameter.
+      * >  When you specify a workspace, all cloud desktops within the workspace are scanned.
+      *
+      * @param request StartVirusScanTaskRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return StartVirusScanTaskResponse
+     */
     public StartVirusScanTaskResponse startVirusScanTaskWithOptions(StartVirusScanTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -7525,11 +8551,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new StartVirusScanTaskResponse());
     }
 
+    /**
+      * ## Description
+      * When you call this operation, you must specify a workspace or a cloud desktop by specifying the OfficeSiteId or DesktopId parameter.
+      * >  When you specify a workspace, all cloud desktops within the workspace are scanned.
+      *
+      * @param request StartVirusScanTaskRequest
+      * @return StartVirusScanTaskResponse
+     */
     public StartVirusScanTaskResponse startVirusScanTask(StartVirusScanTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.startVirusScanTaskWithOptions(request, runtime);
     }
 
+    /**
+      * The cloud desktop must be in the Running state.
+      *
+      * @param request StopDesktopsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return StopDesktopsResponse
+     */
     public StopDesktopsResponse stopDesktopsWithOptions(StopDesktopsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -7562,11 +8603,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new StopDesktopsResponse());
     }
 
+    /**
+      * The cloud desktop must be in the Running state.
+      *
+      * @param request StopDesktopsRequest
+      * @return StopDesktopsResponse
+     */
     public StopDesktopsResponse stopDesktops(StopDesktopsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.stopDesktopsWithOptions(request, runtime);
     }
 
+    /**
+      * When you stop a one-time execution of a command, the command continues to run on the cloud desktops where it has started to run, and will not run on the cloud desktops where it has not started to run.
+      *
+      * @param request StopInvocationRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return StopInvocationResponse
+     */
     public StopInvocationResponse stopInvocationWithOptions(StopInvocationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -7599,11 +8653,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new StopInvocationResponse());
     }
 
+    /**
+      * When you stop a one-time execution of a command, the command continues to run on the cloud desktops where it has started to run, and will not run on the cloud desktops where it has not started to run.
+      *
+      * @param request StopInvocationRequest
+      * @return StopInvocationResponse
+     */
     public StopInvocationResponse stopInvocation(StopInvocationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.stopInvocationWithOptions(request, runtime);
     }
 
+    /**
+      * If TagKey is specified, the new TagValue value overrides the original TagValue value.
+      *
+      * @param request TagResourcesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return TagResourcesResponse
+     */
     public TagResourcesResponse tagResourcesWithOptions(TagResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -7640,6 +8707,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new TagResourcesResponse());
     }
 
+    /**
+      * If TagKey is specified, the new TagValue value overrides the original TagValue value.
+      *
+      * @param request TagResourcesRequest
+      * @return TagResourcesResponse
+     */
     public TagResourcesResponse tagResources(TagResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.tagResourcesWithOptions(request, runtime);

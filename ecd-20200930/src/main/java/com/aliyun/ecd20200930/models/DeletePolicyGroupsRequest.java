@@ -4,9 +4,11 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DeletePolicyGroupsRequest extends TeaModel {
+    // The ID of the policy. You can specify 1 to 100 policy IDs.
     @NameInMap("PolicyGroupId")
     public java.util.List<String> policyGroupId;
 
+    // The ID of the region.
     @NameInMap("RegionId")
     public String regionId;
 

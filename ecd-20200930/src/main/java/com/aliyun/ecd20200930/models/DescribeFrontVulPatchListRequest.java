@@ -4,12 +4,18 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeFrontVulPatchListRequest extends TeaModel {
+    // The type of the action that you want to perform on the vulnerability. Valid value: vul_fix.
     @NameInMap("OperateType")
     public String operateType;
 
+    // The ID of the region.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The type of the vulnerability. Valid values:
+    // 
+    // *   cve: a Linux software vulnerability
+    // *   sys: a Windows system vulnerability
     @NameInMap("Type")
     public String type;
 
@@ -54,12 +60,15 @@ public class DescribeFrontVulPatchListRequest extends TeaModel {
     }
 
     public static class DescribeFrontVulPatchListRequestVulInfo extends TeaModel {
+        // The ID of the cloud desktop that is affected by vulnerability N. Valid values of N: 1 to 50.
         @NameInMap("DesktopId")
         public String desktopId;
 
+        // The name of vulnerability N. Valid values of N: 1 to 50.
         @NameInMap("Name")
         public String name;
 
+        // The tag of vulnerability N. Valid values of N: 1 to 50.
         @NameInMap("Tag")
         public String tag;
 

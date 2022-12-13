@@ -4,18 +4,23 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeGroupedVulResponseBody extends TeaModel {
+    // The maximum number of entries returned per page.
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    // Details about vulnerabilities.
     @NameInMap("GroupedVulItems")
     public java.util.List<DescribeGroupedVulResponseBodyGroupedVulItems> groupedVulItems;
 
+    // The page number of the returned page.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The total number of entries returned.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,30 +70,42 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
     }
 
     public static class DescribeGroupedVulResponseBodyGroupedVulItems extends TeaModel {
+        // The alias of the vulnerability.
         @NameInMap("AliasName")
         public String aliasName;
 
+        // The number of high-risk vulnerabilities.
         @NameInMap("AsapCount")
         public Integer asapCount;
 
+        // The time when the vulnerability was last detected. The timestamp follows the UNIX time format. It is the number of milliseconds that have elapsed since 00:00:00 Thursday, January 1, 1970.
         @NameInMap("GmtLast")
         public String gmtLast;
 
+        // The number of vulnerabilities processed.
         @NameInMap("HandledCount")
         public Integer handledCount;
 
+        // The number of medium-risk vulnerabilities.
         @NameInMap("LaterCount")
         public Integer laterCount;
 
+        // The name of the vulnerability.
         @NameInMap("Name")
         public String name;
 
+        // The number of low-risk vulnerabilities.
         @NameInMap("NntfCount")
         public Integer nntfCount;
 
+        // The tags of the vulnerability.
         @NameInMap("Tags")
         public String tags;
 
+        // The type of the vulnerability. Valid values:
+        // 
+        // *   cve: Linux software vulnerability
+        // *   sys: Windows system vulnerability
         @NameInMap("Type")
         public String type;
 

@@ -4,12 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribePolicyGroupsResponseBody extends TeaModel {
+    // The policies.
     @NameInMap("DescribePolicyGroups")
     public java.util.List<DescribePolicyGroupsResponseBodyDescribePolicyGroups> describePolicyGroups;
 
+    // The token that is used to start the next query. If this parameter is empty, all results have been returned.
     @NameInMap("NextToken")
     public String nextToken;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,9 +46,11 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribePolicyGroupsResponseBodyDescribePolicyGroupsAuthorizeAccessPolicyRules extends TeaModel {
+        // The IPv4 CIDR block that can be accessed from the client. The value is an IPv4 CIDR block.
         @NameInMap("CidrIp")
         public String cidrIp;
 
+        // The description of the IPv4 CIDR block.
         @NameInMap("Description")
         public String description;
 
@@ -73,24 +78,31 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribePolicyGroupsResponseBodyDescribePolicyGroupsAuthorizeSecurityPolicyRules extends TeaModel {
+        // The IPv4 CIDR block of the security group rule.
         @NameInMap("CidrIp")
         public String cidrIp;
 
+        // The description of the security group rule.
         @NameInMap("Description")
         public String description;
 
+        // The protocol type of the security group rule.
         @NameInMap("IpProtocol")
         public String ipProtocol;
 
+        // The authorization policy of the security group rule.
         @NameInMap("Policy")
         public String policy;
 
+        // The port range of the security group rule.
         @NameInMap("PortRange")
         public String portRange;
 
+        // The priority of the security group rule. A smaller value indicates a higher priority.
         @NameInMap("Priority")
         public String priority;
 
+        // The direction of the security group rule.
         @NameInMap("Type")
         public String type;
 
@@ -158,9 +170,11 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribePolicyGroupsResponseBodyDescribePolicyGroupsClientTypes extends TeaModel {
+        // The type of the client.
         @NameInMap("ClientType")
         public String clientType;
 
+        // Specifies whether a specific client type is allowed to log on to the cloud desktop.
         @NameInMap("Status")
         public String status;
 
@@ -188,24 +202,31 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribePolicyGroupsResponseBodyDescribePolicyGroupsUsbSupplyRedirectRule extends TeaModel {
+        // The description of the rule.
         @NameInMap("Description")
         public String description;
 
+        // The device class. This parameter is required when you set the `usbRuleType` parameter to 1. For more information, see [Defined Class Codes](https://www.usb.org/defined-class-codes).
         @NameInMap("DeviceClass")
         public String deviceClass;
 
+        // The subclass of the device. This parameter is required when you set the `usbRuleType` parameter to 1. For more information, see [Defined Class Codes](https://www.usb.org/defined-class-codes).
         @NameInMap("DeviceSubclass")
         public String deviceSubclass;
 
+        // The ID of the service.
         @NameInMap("ProductId")
         public String productId;
 
+        // The type of USB redirection.
         @NameInMap("UsbRedirectType")
         public Long usbRedirectType;
 
+        // The type of the USB redirection rule.
         @NameInMap("UsbRuleType")
         public Long usbRuleType;
 
+        // The ID of the vendor. For more information, see [Valid USB Vendor IDs (VIDs)](https://www.usb.org/sites/default/files/vendor_ids032322.pdf\_1.pdf).
         @NameInMap("VendorId")
         public String vendorId;
 
@@ -273,111 +294,168 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribePolicyGroupsResponseBodyDescribePolicyGroups extends TeaModel {
+        // Specifies whether to enable the anti-screenshot feature. Valid values:
+        // 
+        // on: enables the anti-screenshot feature. off: disables the anti-screenshot feature. Default value: off.
         @NameInMap("AppContentProtection")
         public String appContentProtection;
 
+        // The client CIDR block whitelists.
         @NameInMap("AuthorizeAccessPolicyRules")
         public java.util.List<DescribePolicyGroupsResponseBodyDescribePolicyGroupsAuthorizeAccessPolicyRules> authorizeAccessPolicyRules;
 
+        // The security group rules.
         @NameInMap("AuthorizeSecurityPolicyRules")
         public java.util.List<DescribePolicyGroupsResponseBodyDescribePolicyGroupsAuthorizeSecurityPolicyRules> authorizeSecurityPolicyRules;
 
+        // Specifies whether to enable the webcam redirection feature.
         @NameInMap("CameraRedirect")
         public String cameraRedirect;
 
+        // The logon methods.
         @NameInMap("ClientTypes")
         public java.util.List<DescribePolicyGroupsResponseBodyDescribePolicyGroupsClientTypes> clientTypes;
 
+        // The permissions on the clipboard.
         @NameInMap("Clipboard")
         public String clipboard;
 
+        // The blacklist or whitelist of domain names. Domain names support the asterisk (\*) wildcard. Separate multiple domain names with commas (,). Valid values:
+        // 
+        // *   \[black:],example.com,example.org: the domain name blacklist. The cloud desktop cannot access the domain names specified in the blacklist.
+        // *   \[white:],example.com,example.org: the domain name whitelist. The cloud desktop can access only the domain names specified in the whitelist.
         @NameInMap("DomainList")
         public String domainList;
 
+        // The number of cloud desktops associated with the policy.\
+        // This parameter is returned only for custom policies.
         @NameInMap("EdsCount")
         public Integer edsCount;
 
+        // Specifies whether to enable the image quality policy for the Graphics desktop. We recommend that you enable this policy if you have high requirements on desktop performance and user experience. For example, you can enable this policy in professional design scenarios.
         @NameInMap("GpuAcceleration")
         public String gpuAcceleration;
 
+        // The access policy for HTML5 clients.
         @NameInMap("Html5Access")
         public String html5Access;
 
+        // The file transfer policy for HTML5 clients.
         @NameInMap("Html5FileTransfer")
         public String html5FileTransfer;
 
+        @NameInMap("InternetCommunicationProtocol")
+        public String internetCommunicationProtocol;
+
+        // The permissions on local disk mapping.
         @NameInMap("LocalDrive")
         public String localDrive;
 
+        // The name of the policy.
         @NameInMap("Name")
         public String name;
 
         @NameInMap("NetRedirect")
         public String netRedirect;
 
+        // The ID of the policy.
         @NameInMap("PolicyGroupId")
         public String policyGroupId;
 
+        // The type of the policy.
         @NameInMap("PolicyGroupType")
         public String policyGroupType;
 
+        // The status of the policy.
         @NameInMap("PolicyStatus")
         public String policyStatus;
 
+        // Specifies whether to allow user preemption. User preemption is not allowed. The value of this parameter is `off`.
         @NameInMap("PreemptLogin")
         public String preemptLogin;
 
+        // The names of the users that are allowed to connect to the same cloud desktop at the same time.
         @NameInMap("PreemptLoginUsers")
         public java.util.List<String> preemptLoginUsers;
 
+        // The policy for printer redirection.
         @NameInMap("PrinterRedirection")
         public String printerRedirection;
 
+        // Specifies whether to enable the custom screen recording feature. Valid values:
+        // 
+        // on: enables the custom screen recording feature. off: disables the custom screen recording feature. Default value: off.
         @NameInMap("RecordContent")
         public String recordContent;
 
+        // The time when the custom screen recording expires. Default value: 30 days.
         @NameInMap("RecordContentExpires")
         public Long recordContentExpires;
 
+        // Specifies whether to enable screen recording.
         @NameInMap("Recording")
         public String recording;
+
+        @NameInMap("RecordingAudio")
+        public String recordingAudio;
 
         @NameInMap("RecordingDuration")
         public Integer recordingDuration;
 
+        // The end time for screen recording. The value is in the format of HH:MM:SS. The value takes effect only when you set the Recording parameter to PERIOD.
         @NameInMap("RecordingEndTime")
         public String recordingEndTime;
 
         @NameInMap("RecordingExpires")
         public Long recordingExpires;
 
+        // The frame rate of screen recording. Valid values:
+        // 
+        // *   2
+        // *   5
+        // *   10
+        // *   15
         @NameInMap("RecordingFps")
         public Long recordingFps;
 
+        // The start time for screen recording. The value is in the format of HH:MM:SS. The value takes effect only when you set the Recording parameter to PERIOD.
         @NameInMap("RecordingStartTime")
         public String recordingStartTime;
 
         @NameInMap("RemoteCoordinate")
         public String remoteCoordinate;
 
+        @NameInMap("Scope")
+        public String scope;
+
+        @NameInMap("ScopeValue")
+        public java.util.List<String> scopeValue;
+
+        // Specifies whether to enable USB redirection.
         @NameInMap("UsbRedirect")
         public String usbRedirect;
 
+        // The USB redirection rules.
         @NameInMap("UsbSupplyRedirectRule")
         public java.util.List<DescribePolicyGroupsResponseBodyDescribePolicyGroupsUsbSupplyRedirectRule> usbSupplyRedirectRule;
 
+        // The policy for image display quality.
         @NameInMap("VisualQuality")
         public String visualQuality;
 
+        // Specifies whether to enable watermarking.
         @NameInMap("Watermark")
         public String watermark;
 
+        // This parameter is unavailable.
         @NameInMap("WatermarkCustomText")
         public String watermarkCustomText;
 
+        // The transparency of the watermark.
         @NameInMap("WatermarkTransparency")
         public String watermarkTransparency;
 
+        // The type of the watermark.
         @NameInMap("WatermarkType")
         public String watermarkType;
 
@@ -472,6 +550,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
         public String getHtml5FileTransfer() {
             return this.html5FileTransfer;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setInternetCommunicationProtocol(String internetCommunicationProtocol) {
+            this.internetCommunicationProtocol = internetCommunicationProtocol;
+            return this;
+        }
+        public String getInternetCommunicationProtocol() {
+            return this.internetCommunicationProtocol;
         }
 
         public DescribePolicyGroupsResponseBodyDescribePolicyGroups setLocalDrive(String localDrive) {
@@ -570,6 +656,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             return this.recording;
         }
 
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setRecordingAudio(String recordingAudio) {
+            this.recordingAudio = recordingAudio;
+            return this;
+        }
+        public String getRecordingAudio() {
+            return this.recordingAudio;
+        }
+
         public DescribePolicyGroupsResponseBodyDescribePolicyGroups setRecordingDuration(Integer recordingDuration) {
             this.recordingDuration = recordingDuration;
             return this;
@@ -616,6 +710,22 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
         public String getRemoteCoordinate() {
             return this.remoteCoordinate;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setScope(String scope) {
+            this.scope = scope;
+            return this;
+        }
+        public String getScope() {
+            return this.scope;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setScopeValue(java.util.List<String> scopeValue) {
+            this.scopeValue = scopeValue;
+            return this;
+        }
+        public java.util.List<String> getScopeValue() {
+            return this.scopeValue;
         }
 
         public DescribePolicyGroupsResponseBodyDescribePolicyGroups setUsbRedirect(String usbRedirect) {

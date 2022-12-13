@@ -4,15 +4,29 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ModifyOperateVulRequest extends TeaModel {
+    // The action that you want to perform on the vulnerability. Valid values:
+    // 
+    // *   vul_fix: fixes the vulnerability. The system fixes the vulnerability.
+    // *   vul_verify: verifies whether the vulnerability is fixed. The system performs this action and the cloud desktop is restarted.
+    // *   vul_ignore: ignores the vulnerability. After the vulnerability is ignored, the system provides no more prompts about the vulnerability.
+    // *   vul_undo_ignore: cancels the ignore action on the vulnerability. After you cancel the ignore action on the vulnerability, the system provides prompts about the vulnerability again.
     @NameInMap("OperateType")
     public String operateType;
 
+    // The reason why the vulnerability is ignored.
+    // 
+    // This parameter is required only when `OperateType` is set to `vul_ignore`.
     @NameInMap("Reason")
     public String reason;
 
+    // The ID of the region.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The type of the vulnerability. Valid values:
+    // 
+    // *   cve: Linux software vulnerabilities
+    // *   sys: Windows system vulnerabilities
     @NameInMap("Type")
     public String type;
 
@@ -65,12 +79,15 @@ public class ModifyOperateVulRequest extends TeaModel {
     }
 
     public static class ModifyOperateVulRequestVulInfo extends TeaModel {
+        // The ID of cloud desktop in which vulnerability N is detected.
         @NameInMap("DesktopId")
         public String desktopId;
 
+        // The name of vulnerability N.
         @NameInMap("Name")
         public String name;
 
+        // The tag of vulnerability N.
         @NameInMap("Tag")
         public String tag;
 

@@ -4,33 +4,70 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeInvocationsRequest extends TeaModel {
+    // The type of the command. Valid values:
+    // 
+    // *   RunBatScript
+    // *   RunPowerShellScript
     @NameInMap("CommandType")
     public String commandType;
 
+    // The encoding method of the command content and output. Valid values:
+    // 
+    // *   PlainText
+    // *   Base64
+    // 
+    // Default value: Base64.
     @NameInMap("ContentEncoding")
     public String contentEncoding;
 
+    // The ID of the cloud desktop. If you specify a cloud desktop, all the execution records of Cloud Assistant commands on the cloud desktop are queried.
     @NameInMap("DesktopId")
     public String desktopId;
 
+    // The ID of the cloud desktop. If you specify a cloud desktop, all the execution records of Cloud Assistant commands on the cloud desktop are queried.
+    @NameInMap("DesktopIds")
+    public java.util.List<String> desktopIds;
+
+    // The ID of the regular user.
     @NameInMap("EndUserId")
     public String endUserId;
 
+    // Specifies whether to return command outputs in the response. Valid values:
+    // 
+    // *   true: returns command outputs.
+    // *   false: does not return command outputs.
+    // 
+    // Default value: false.
     @NameInMap("IncludeOutput")
     public Boolean includeOutput;
 
+    // The ID of the execution.
     @NameInMap("InvokeId")
     public String invokeId;
 
+    // The overall execution status of a command. The overall execution status is determined by the execution status of the command on one or more cloud desktops. Valid values:
+    // 
+    // *   Running: The execution is in progress on one or more cloud desktops.
+    // *   Finished: The execution is finished on all cloud desktops, or the execution is manually stopped on some cloud desktops and the execution is finished on others.
+    // *   Failed: The execution failed on all cloud desktops.
+    // *   PartialFailed: The execution failed on some cloud desktops.
+    // *   Stopped: The execution is stopped.
+    // 
+    // Default value: Running.
     @NameInMap("InvokeStatus")
     public String invokeStatus;
 
+    // The number of entries to return on each page.
+    // 
+    // Default value: 100.
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    // The query token. Set the value to the NextToken value that is returned from the last call to the previous DescribeInvocations operation.
     @NameInMap("NextToken")
     public String nextToken;
 
+    // The ID of the region.
     @NameInMap("RegionId")
     public String regionId;
 
@@ -61,6 +98,14 @@ public class DescribeInvocationsRequest extends TeaModel {
     }
     public String getDesktopId() {
         return this.desktopId;
+    }
+
+    public DescribeInvocationsRequest setDesktopIds(java.util.List<String> desktopIds) {
+        this.desktopIds = desktopIds;
+        return this;
+    }
+    public java.util.List<String> getDesktopIds() {
+        return this.desktopIds;
     }
 
     public DescribeInvocationsRequest setEndUserId(String endUserId) {

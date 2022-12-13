@@ -4,24 +4,47 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class RunCommandRequest extends TeaModel {
+    // The plaintext content or the Base64-encoded content of the command.
+    // 
+    // The Base64-encoded command content cannot exceed 16 KB in size.
+    // 
+    // >  If the command content is Base64-encoded, you must set ContentEncoding to Base64.
     @NameInMap("CommandContent")
     public String commandContent;
 
+    // The encoding mode of the command content. Valid values:
+    // 
+    // *   PlainText: The content of the command is not encoded and is transmitted in plaintext.
+    // *   Base64: The content of the command is encoded in Base64.
+    // 
+    // Default value: PlainText. If the specified value of this parameter is invalid, PlainText is used by default.
     @NameInMap("ContentEncoding")
     public String contentEncoding;
 
+    // The IDs of cloud desktops. You can specify 1 to 50 cloud desktop IDs.
+    // 
+    // If multiple cloud desktops are specified and the command succeeds for one or more of these cloud desktops, the operation is considered successful. If multiple cloud desktops are specified and the command fails for all of these cloud desktops, verify the values of the parameter and try again.
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
+    // The ID of the end user.
     @NameInMap("EndUserId")
     public String endUserId;
 
+    // The ID of the region.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The timeout period for the command to run. Unit: seconds. Default value: 60.
+    // 
+    // A timeout error occurs when the command cannot be executed because the process slows down or because a specific module or the Cloud Assistant client does not exist. When a timeout error occurs, the command process is forcibly terminated.
     @NameInMap("Timeout")
     public Long timeout;
 
+    // The language of the O&M command. Valid values:
+    // 
+    // - RunBatScript
+    // - RunPowerShellScript
     @NameInMap("Type")
     public String type;
 

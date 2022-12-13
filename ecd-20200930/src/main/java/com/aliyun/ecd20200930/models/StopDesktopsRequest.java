@@ -4,12 +4,20 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class StopDesktopsRequest extends TeaModel {
+    // The IDs of cloud desktops. You can specify up to 20 cloud desktop IDs.
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
+    // The ID of the region.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The billing mode after you stop the cloud desktop.
+    // 
+    // *   StopCharging: Computing resources are not billed after you stop the cloud desktop. After the cloud desktop is stopped, the system automatically reclaims computing resources. From this point on, you are no longer charged for computing resources. However, you are still charged for storage resources.
+    // *   KeepCharging: The billing continues after you stop the cloud desktop. After the cloud desktop is stopped, the system does not reclaim resources to avoid startup failures due to insufficient resources. You are still charged for the resources.
+    // 
+    // Default value: StopCharging
     @NameInMap("StoppedMode")
     public String stoppedMode;
 

@@ -4,12 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeSnapshotsResponseBody extends TeaModel {
+    // The token that is used to start the next query. If this parameter is empty, all results are returned.
     @NameInMap("NextToken")
     public String nextToken;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Details of the snapshots.
     @NameInMap("Snapshots")
     public java.util.List<DescribeSnapshotsResponseBodySnapshots> snapshots;
 
@@ -43,45 +46,90 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
     }
 
     public static class DescribeSnapshotsResponseBodySnapshots extends TeaModel {
+        // The time when the snapshot was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
         @NameInMap("CreationTime")
         public String creationTime;
 
+        @NameInMap("Creator")
+        public String creator;
+
+        @NameInMap("DeletionTime")
+        public String deletionTime;
+
+        // The description of the snapshot.
         @NameInMap("Description")
         public String description;
 
+        // The ID of the cloud desktop to which the snapshot belongs.
         @NameInMap("DesktopId")
         public String desktopId;
 
+        // The name of the cloud desktop.
+        @NameInMap("DesktopName")
+        public String desktopName;
+
+        // The status of the cloud desktop. Valid values:
+        // 
+        // *   Pending
+        // *   Starting
+        // *   Running
+        // *   Stopping
+        // *   Rebuilding
+        // *   Stopped
+        // *   Expired
+        // *   Deleted
+        @NameInMap("DesktopStatus")
+        public String desktopStatus;
+
+        // The progress of creating the snapshot. Unit: percentage (%).
         @NameInMap("Progress")
         public String progress;
 
+        // The protocol type.
+        // 
+        // *   HDX
+        // *   ASP (Recommend)
         @NameInMap("ProtocolType")
         public String protocolType;
 
+        // The remaining time that is required to complete the snapshot creation. Unit: seconds.
+        // 
+        // > If the value of the `RemainTime` parameter is `-1` and the value of the `Status` parameter is `PROGRESSING`, the system is calculating the remaining time.
         @NameInMap("RemainTime")
         public Integer remainTime;
 
+        // The ID of the snapshot.
         @NameInMap("SnapshotId")
         public String snapshotId;
 
+        // The name of the snapshot.
         @NameInMap("SnapshotName")
         public String snapshotName;
 
+        // Indicates how the snapshot is created.
         @NameInMap("SnapshotType")
         public String snapshotType;
 
+        // The size of the source disk. Unit: GiB.
         @NameInMap("SourceDiskSize")
         public String sourceDiskSize;
 
+        // The type of the source disk. Valid values:
+        // 
+        // *   SYSTEM: the system disk
+        // *   DATA: the data disk
         @NameInMap("SourceDiskType")
         public String sourceDiskType;
 
+        // The state of the snapshot.
         @NameInMap("Status")
         public String status;
 
+        // Indicates whether disk encryption is enabled.
         @NameInMap("VolumeEncryptionEnabled")
         public Boolean volumeEncryptionEnabled;
 
+        // The ID of the Key Management Service (KMS) key that is used when disk encryption is enabled. You can call the [ListKeys](~~28951~~) operation to obtain a list of KMS keys.
         @NameInMap("VolumeEncryptionKey")
         public String volumeEncryptionKey;
 
@@ -98,6 +146,22 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             return this.creationTime;
         }
 
+        public DescribeSnapshotsResponseBodySnapshots setCreator(String creator) {
+            this.creator = creator;
+            return this;
+        }
+        public String getCreator() {
+            return this.creator;
+        }
+
+        public DescribeSnapshotsResponseBodySnapshots setDeletionTime(String deletionTime) {
+            this.deletionTime = deletionTime;
+            return this;
+        }
+        public String getDeletionTime() {
+            return this.deletionTime;
+        }
+
         public DescribeSnapshotsResponseBodySnapshots setDescription(String description) {
             this.description = description;
             return this;
@@ -112,6 +176,22 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         }
         public String getDesktopId() {
             return this.desktopId;
+        }
+
+        public DescribeSnapshotsResponseBodySnapshots setDesktopName(String desktopName) {
+            this.desktopName = desktopName;
+            return this;
+        }
+        public String getDesktopName() {
+            return this.desktopName;
+        }
+
+        public DescribeSnapshotsResponseBodySnapshots setDesktopStatus(String desktopStatus) {
+            this.desktopStatus = desktopStatus;
+            return this;
+        }
+        public String getDesktopStatus() {
+            return this.desktopStatus;
         }
 
         public DescribeSnapshotsResponseBodySnapshots setProgress(String progress) {

@@ -7,6 +7,7 @@ public class GetConnectionTicketRequest extends TeaModel {
     @NameInMap("CommandContent")
     public String commandContent;
 
+    // The ID of the cloud desktop.
     @NameInMap("DesktopId")
     public String desktopId;
 
@@ -19,6 +20,7 @@ public class GetConnectionTicketRequest extends TeaModel {
     @NameInMap("Password")
     public String password;
 
+    // The ID of the region.
     @NameInMap("RegionId")
     public String regionId;
 
@@ -28,9 +30,11 @@ public class GetConnectionTicketRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    // The ID of the desktop connection task.
     @NameInMap("TaskId")
     public String taskId;
 
+    // The unique identifier of the client. When you use an Alibaba Cloud Workspace client, you can view the client version in the **About** dialog box on the client logon page.
     @NameInMap("Uuid")
     public String uuid;
 

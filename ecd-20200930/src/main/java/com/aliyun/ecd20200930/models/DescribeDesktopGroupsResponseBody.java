@@ -4,12 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeDesktopGroupsResponseBody extends TeaModel {
+    // Details about desktop groups.
     @NameInMap("DesktopGroups")
     public java.util.List<DescribeDesktopGroupsResponseBodyDesktopGroups> desktopGroups;
 
+    // The token that determines the start point of the next query.
     @NameInMap("NextToken")
     public String nextToken;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,120 +46,154 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeDesktopGroupsResponseBodyDesktopGroups extends TeaModel {
+        // The number of sessions that are allowed for each cloud desktop in the multi-session desktop group.
         @NameInMap("BindAmount")
         public Long bindAmount;
 
+        // The remarks on the desktop group.
         @NameInMap("Comments")
         public String comments;
 
         @NameInMap("ConnectDuration")
         public Long connectDuration;
 
+        // The number of vCPUs.
         @NameInMap("Cpu")
         public Integer cpu;
 
+        // The time when the desktop group was created.
         @NameInMap("CreateTime")
         public String createTime;
 
+        // The ID of the Alibaba Cloud account that is used to create the desktop group.
         @NameInMap("Creator")
         public String creator;
 
+        // The type of the data disk.
         @NameInMap("DataDiskCategory")
         public String dataDiskCategory;
 
+        // The size of the data disk. Unit: GiB.
         @NameInMap("DataDiskSize")
         public String dataDiskSize;
 
+        // The ID of the desktop group.
         @NameInMap("DesktopGroupId")
         public String desktopGroupId;
 
+        // The name of the desktop group.
         @NameInMap("DesktopGroupName")
         public String desktopGroupName;
 
+        // The number of users that are authorized to use the desktop group.
         @NameInMap("EndUserCount")
         public Integer endUserCount;
 
+        // The time when the subscription cloud desktop expires.
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
+        // The number of GPUs.
         @NameInMap("GpuCount")
         public Float gpuCount;
 
+        // The GPU memory.
         @NameInMap("GpuSpec")
         public String gpuSpec;
 
         @NameInMap("IdleDisconnectDuration")
         public Long idleDisconnectDuration;
 
+        // The ID of the image.
         @NameInMap("ImageId")
         public String imageId;
 
+        // The retention period during which the cloud desktop remains connected after the regular user disconnects from the cloud desktop. Unit: ms.
         @NameInMap("KeepDuration")
         public Long keepDuration;
 
+        // The load balancing policy of the multi-session desktop group.
         @NameInMap("LoadPolicy")
         public Long loadPolicy;
 
+        // The maximum number of cloud desktops that the desktop group can hold.
         @NameInMap("MaxDesktopsCount")
         public Integer maxDesktopsCount;
 
+        // The size of the memory. Unit: MiB.
         @NameInMap("Memory")
         public Long memory;
 
+        // The minimum number of desktops that the desktop group must retain.
         @NameInMap("MinDesktopsCount")
         public Integer minDesktopsCount;
 
+        // The ID of the workspace.
         @NameInMap("OfficeSiteId")
         public String officeSiteId;
 
+        // The name of the workspace.
         @NameInMap("OfficeSiteName")
         public String officeSiteName;
 
+        // The account type of the workspace.
         @NameInMap("OfficeSiteType")
         public String officeSiteType;
 
+        // The ID of the desktop template.
         @NameInMap("OwnBundleId")
         public String ownBundleId;
 
+        // The name of the desktop template.
         @NameInMap("OwnBundleName")
         public String ownBundleName;
 
+        // The type of the desktop group.
         @NameInMap("OwnType")
         public Long ownType;
 
+        // The billing method of the desktop group.
         @NameInMap("PayType")
         public String payType;
 
+        // The ID of the policy.
         @NameInMap("PolicyGroupId")
         public String policyGroupId;
 
+        // The name of the policy.
         @NameInMap("PolicyGroupName")
         public String policyGroupName;
 
         @NameInMap("RatioThreshold")
         public Float ratioThreshold;
 
+        // Indicates which type of disk used by cloud desktops in the desktop group is reset.
         @NameInMap("ResetType")
         public Long resetType;
 
+        // The payment status of the desktop group.
         @NameInMap("Status")
         public Integer status;
 
         @NameInMap("StopDuration")
         public Long stopDuration;
 
+        // The type of the system disk.
         @NameInMap("SystemDiskCategory")
         public String systemDiskCategory;
 
+        // The size of the system disk. Unit: GiB.
         @NameInMap("SystemDiskSize")
         public Integer systemDiskSize;
 
         @NameInMap("Version")
         public Integer version;
 
+        // Indicates whether disk encryption is enabled.
         @NameInMap("VolumeEncryptionEnabled")
         public Boolean volumeEncryptionEnabled;
 
+        // The ID of the Key Management Service (KMS) key for the disk.
         @NameInMap("VolumeEncryptionKey")
         public String volumeEncryptionKey;
 

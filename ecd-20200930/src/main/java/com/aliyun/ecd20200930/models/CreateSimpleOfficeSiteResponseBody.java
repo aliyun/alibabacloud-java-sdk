@@ -4,9 +4,11 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateSimpleOfficeSiteResponseBody extends TeaModel {
+    // The ID of the workspace.
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

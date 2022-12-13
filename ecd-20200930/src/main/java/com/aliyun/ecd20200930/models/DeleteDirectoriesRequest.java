@@ -4,9 +4,11 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DeleteDirectoriesRequest extends TeaModel {
+    // The IDs of directories.
     @NameInMap("DirectoryId")
     public java.util.List<String> directoryId;
 
+    // The ID of the region.
     @NameInMap("RegionId")
     public String regionId;
 

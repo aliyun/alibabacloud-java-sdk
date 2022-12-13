@@ -4,9 +4,11 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DeleteDesktopsRequest extends TeaModel {
+    // The IDs of the cloud desktops that you want to release. You can configure up to 100 desktop IDs.
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
+    // The ID of the region where the cloud desktops to release are located.
     @NameInMap("RegionId")
     public String regionId;
 

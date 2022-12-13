@@ -10,6 +10,7 @@ public class StartVirusScanTaskRequest extends TeaModel {
     @NameInMap("OfficeSiteId")
     public java.util.List<String> officeSiteId;
 
+    // The ID of the region.
     @NameInMap("RegionId")
     public String regionId;
 

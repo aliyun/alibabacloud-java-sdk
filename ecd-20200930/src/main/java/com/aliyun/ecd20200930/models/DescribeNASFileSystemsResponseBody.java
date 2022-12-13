@@ -4,12 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeNASFileSystemsResponseBody extends TeaModel {
+    // Details about the NAS file systems.
     @NameInMap("FileSystems")
     public java.util.List<DescribeNASFileSystemsResponseBodyFileSystems> fileSystems;
 
+    // The token that determines the start point of the next query. This parameter is empty if no additional results exist.
     @NameInMap("NextToken")
     public String nextToken;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -42,55 +45,128 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class DescribeNASFileSystemsResponseBodyFileSystemsDesktopGroups extends TeaModel {
+        // The ID of the desktop group.
+        @NameInMap("DesktopGroupId")
+        public String desktopGroupId;
+
+        // The name of the desktop group.
+        @NameInMap("DesktopGroupName")
+        public String desktopGroupName;
+
+        public static DescribeNASFileSystemsResponseBodyFileSystemsDesktopGroups build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNASFileSystemsResponseBodyFileSystemsDesktopGroups self = new DescribeNASFileSystemsResponseBodyFileSystemsDesktopGroups();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNASFileSystemsResponseBodyFileSystemsDesktopGroups setDesktopGroupId(String desktopGroupId) {
+            this.desktopGroupId = desktopGroupId;
+            return this;
+        }
+        public String getDesktopGroupId() {
+            return this.desktopGroupId;
+        }
+
+        public DescribeNASFileSystemsResponseBodyFileSystemsDesktopGroups setDesktopGroupName(String desktopGroupName) {
+            this.desktopGroupName = desktopGroupName;
+            return this;
+        }
+        public String getDesktopGroupName() {
+            return this.desktopGroupName;
+        }
+
+    }
+
     public static class DescribeNASFileSystemsResponseBodyFileSystems extends TeaModel {
+        // The total capacity of the NAS file system. Unit: GiB.
+        // 
+        // *   The Capacity type has 10 PiB of storage, which is equal to 10,485,760 GiB.
+        // *   The Performance type has 1 PiB of storage, which is equal to 1,048,576 GiB.
         @NameInMap("Capacity")
         public Long capacity;
 
+        // The time when the NAS file system was created.
         @NameInMap("CreateTime")
         public String createTime;
 
+        // The description of the NAS file system.
         @NameInMap("Description")
         public String description;
+
+        @NameInMap("DesktopGroups")
+        public java.util.List<DescribeNASFileSystemsResponseBodyFileSystemsDesktopGroups> desktopGroups;
 
         @NameInMap("EncryptionEnabled")
         public Boolean encryptionEnabled;
 
+        // The ID of the NAS file system.
         @NameInMap("FileSystemId")
         public String fileSystemId;
 
+        // The name of the NAS file system.
         @NameInMap("FileSystemName")
         public String fileSystemName;
 
+        // The status of the NAS file system. The possible values include:
+        // 
+        // *   Pending: The NAS file system is being created.
+        // *   Running: The NAS file system is running.
+        // *   Stopped: The NAS file system is stopped.
+        // *   Deleting: The NAS file system is being deleted.
+        // *   Deleted: The NAS file system is deleted.
+        // *   Invalid: The NAS file system is invalid.
         @NameInMap("FileSystemStatus")
         public String fileSystemStatus;
 
+        // The type of the NAS file system. Valid value: Universal NAS. This value indicates that the NAS file system is a General-purpose one.
         @NameInMap("FileSystemType")
         public String fileSystemType;
 
+        // The used storage of the NAS file system. Unit: byte.
         @NameInMap("MeteredSize")
         public Long meteredSize;
 
+        // The domain name of the mount target.
         @NameInMap("MountTargetDomain")
         public String mountTargetDomain;
 
+        // The status of the mount target. The possible values include:
+        // 
+        // *   Pending: The mount target is being created.
+        // *   Active: The mount target is enabled.
+        // *   Inactive: The mount target is disabled.
+        // *   Deleting: The mount target is being deleted.
+        // *   Invalid: The mount target is invalid.
         @NameInMap("MountTargetStatus")
         public String mountTargetStatus;
 
+        // The ID of the workspace.
         @NameInMap("OfficeSiteId")
         public String officeSiteId;
 
+        // The name of the workspace.
         @NameInMap("OfficeSiteName")
         public String officeSiteName;
 
+        @NameInMap("ProfileCompatible")
+        public Boolean profileCompatible;
+
+        // The ID of the region.
         @NameInMap("RegionId")
         public String regionId;
 
+        // The storage type of the NAS file system. Valid values:
+        // 
+        // *   Capacity
+        // *   Performance
         @NameInMap("StorageType")
         public String storageType;
 
+        // Indicates whether the Server Message Block (SMB) access control list (ACL) feature was enabled.
         @NameInMap("SupportAcl")
         public Boolean supportAcl;
 
+        // The ID of the zone where the NAS file system resides.
         @NameInMap("ZoneId")
         public String zoneId;
 
@@ -121,6 +197,14 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public DescribeNASFileSystemsResponseBodyFileSystems setDesktopGroups(java.util.List<DescribeNASFileSystemsResponseBodyFileSystemsDesktopGroups> desktopGroups) {
+            this.desktopGroups = desktopGroups;
+            return this;
+        }
+        public java.util.List<DescribeNASFileSystemsResponseBodyFileSystemsDesktopGroups> getDesktopGroups() {
+            return this.desktopGroups;
         }
 
         public DescribeNASFileSystemsResponseBodyFileSystems setEncryptionEnabled(Boolean encryptionEnabled) {
@@ -201,6 +285,14 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         }
         public String getOfficeSiteName() {
             return this.officeSiteName;
+        }
+
+        public DescribeNASFileSystemsResponseBodyFileSystems setProfileCompatible(Boolean profileCompatible) {
+            this.profileCompatible = profileCompatible;
+            return this;
+        }
+        public Boolean getProfileCompatible() {
+            return this.profileCompatible;
         }
 
         public DescribeNASFileSystemsResponseBodyFileSystems setRegionId(String regionId) {

@@ -4,9 +4,11 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class GetDesktopGroupDetailResponseBody extends TeaModel {
+    // The information about the desktop group.
     @NameInMap("Desktops")
     public GetDesktopGroupDetailResponseBodyDesktops desktops;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -106,15 +108,18 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
     }
 
     public static class GetDesktopGroupDetailResponseBodyDesktopsTimerInfos extends TeaModel {
+        // The cron expression.
         @NameInMap("CronExpression")
         public String cronExpression;
 
         @NameInMap("Forced")
         public Boolean forced;
 
+        // The status of the scheduled task.
         @NameInMap("Status")
         public Integer status;
 
+        // The type of the scheduled task.
         @NameInMap("TimerType")
         public Integer timerType;
 
@@ -158,72 +163,93 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
     }
 
     public static class GetDesktopGroupDetailResponseBodyDesktops extends TeaModel {
+        // Indicates whether the desktop group enables auto scale-out.
         @NameInMap("AllowAutoSetup")
         public Integer allowAutoSetup;
 
+        // The number of idle cloud desktops that you allow the system to reserve.
         @NameInMap("AllowBufferCount")
         public Integer allowBufferCount;
 
+        // The number of sessions allowed for each cloud desktop in the multi-session desktop group.
         @NameInMap("BindAmount")
         public Integer bindAmount;
 
+        // The remarks of the desktop group.
         @NameInMap("Comments")
         public String comments;
 
         @NameInMap("ConnectDuration")
         public Long connectDuration;
 
+        // The number of vCPUs.
         @NameInMap("Cpu")
         public Integer cpu;
 
+        // The time when the desktop group was created.
         @NameInMap("CreationTime")
         public String creationTime;
 
+        // The user that creates the desktop group.
         @NameInMap("Creator")
         public String creator;
 
+        // The data disk type.
         @NameInMap("DataDiskCategory")
         public String dataDiskCategory;
 
+        // The size of the data disk.
         @NameInMap("DataDiskSize")
         public String dataDiskSize;
 
+        // The ID of the desktop group.
         @NameInMap("DesktopGroupId")
         public String desktopGroupId;
 
+        // The name of the desktop group.
         @NameInMap("DesktopGroupName")
         public String desktopGroupName;
 
+        // The ID of the directory, which is the same as the ID of the workspace.
         @NameInMap("DirectoryId")
         public String directoryId;
 
+        // The type of the directory.
         @NameInMap("DirectoryType")
         public String directoryType;
 
+        // The time when the desktop group expires.
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
+        // The number of GPUs.
         @NameInMap("GpuCount")
         public Float gpuCount;
 
+        // The GPU type.
         @NameInMap("GpuSpec")
         public String gpuSpec;
 
         @NameInMap("IdleDisconnectDuration")
         public Long idleDisconnectDuration;
 
+        // The retention period after the cloud desktop is disconnected. Unit: milliseconds.
         @NameInMap("KeepDuration")
         public Long keepDuration;
 
+        // The load balancing policy of the multi-session desktop group.
         @NameInMap("LoadPolicy")
         public Integer loadPolicy;
 
+        // The maximum number of cloud desktops that the desktop group can hold.
         @NameInMap("MaxDesktopsCount")
         public Integer maxDesktopsCount;
 
+        // The memory size.
         @NameInMap("Memory")
         public Long memory;
 
+        // The minimum number of desktops that the desktop group must retain.
         @NameInMap("MinDesktopsCount")
         public Integer minDesktopsCount;
 
@@ -233,32 +259,47 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         @NameInMap("NasFileSystemName")
         public String nasFileSystemName;
 
+        // The ID of the workspace.
         @NameInMap("OfficeSiteId")
         public String officeSiteId;
 
+        // The name of the workspace.
         @NameInMap("OfficeSiteName")
         public String officeSiteName;
 
+        // The type of the workspace.
         @NameInMap("OfficeSiteType")
         public String officeSiteType;
 
+        // The ID of the desktop template.
         @NameInMap("OwnBundleId")
         public String ownBundleId;
 
+        // The name of the desktop template.
         @NameInMap("OwnBundleName")
         public String ownBundleName;
 
+        // The type of the desktop group.
         @NameInMap("OwnType")
         public Integer ownType;
 
+        // The billing method of the desktop group.
         @NameInMap("PayType")
         public String payType;
 
+        // The ID of the security policy group.
         @NameInMap("PolicyGroupId")
         public String policyGroupId;
 
+        @NameInMap("PolicyGroupIds")
+        public java.util.List<String> policyGroupIds;
+
+        // The name of the security policy group.
         @NameInMap("PolicyGroupName")
         public String policyGroupName;
+
+        @NameInMap("PolicyGroupNames")
+        public java.util.List<String> policyGroupNames;
 
         @NameInMap("ProfileFollowSwitch")
         public Boolean profileFollowSwitch;
@@ -266,27 +307,33 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         @NameInMap("RatioThreshold")
         public Float ratioThreshold;
 
+        // The type of the resource.
         @NameInMap("ResType")
         public Integer resType;
 
+        // Indicates which type of the disk used by cloud desktops in the desktop group is reset.
         @NameInMap("ResetType")
         public Integer resetType;
 
         @NameInMap("ScaleTimerInfos")
         public java.util.List<GetDesktopGroupDetailResponseBodyDesktopsScaleTimerInfos> scaleTimerInfos;
 
+        // The payment status of the desktop group.
         @NameInMap("Status")
         public Integer status;
 
         @NameInMap("StopDuration")
         public Long stopDuration;
 
+        // The type of the system disk.
         @NameInMap("SystemDiskCategory")
         public String systemDiskCategory;
 
+        // The size of the system disk.
         @NameInMap("SystemDiskSize")
         public Integer systemDiskSize;
 
+        // The list of scheduled time for desktop group tasks.
         @NameInMap("TimerInfos")
         public java.util.List<GetDesktopGroupDetailResponseBodyDesktopsTimerInfos> timerInfos;
 
@@ -565,12 +612,28 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             return this.policyGroupId;
         }
 
+        public GetDesktopGroupDetailResponseBodyDesktops setPolicyGroupIds(java.util.List<String> policyGroupIds) {
+            this.policyGroupIds = policyGroupIds;
+            return this;
+        }
+        public java.util.List<String> getPolicyGroupIds() {
+            return this.policyGroupIds;
+        }
+
         public GetDesktopGroupDetailResponseBodyDesktops setPolicyGroupName(String policyGroupName) {
             this.policyGroupName = policyGroupName;
             return this;
         }
         public String getPolicyGroupName() {
             return this.policyGroupName;
+        }
+
+        public GetDesktopGroupDetailResponseBodyDesktops setPolicyGroupNames(java.util.List<String> policyGroupNames) {
+            this.policyGroupNames = policyGroupNames;
+            return this;
+        }
+        public java.util.List<String> getPolicyGroupNames() {
+            return this.policyGroupNames;
         }
 
         public GetDesktopGroupDetailResponseBodyDesktops setProfileFollowSwitch(Boolean profileFollowSwitch) {

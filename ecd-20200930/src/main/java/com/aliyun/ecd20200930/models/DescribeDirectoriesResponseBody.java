@@ -4,15 +4,19 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeDirectoriesResponseBody extends TeaModel {
+    // The hostname of the domain controller. The hostname must comply with the hostname naming convention of Windows.
     @NameInMap("AdHostname")
     public String adHostname;
 
+    // Details of the directories.
     @NameInMap("Directories")
     public java.util.List<DescribeDirectoriesResponseBodyDirectories> directories;
 
+    // The token that is used for the next query. If this parameter is empty, all results are returned.
     @NameInMap("NextToken")
     public String nextToken;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,21 +58,27 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
     }
 
     public static class DescribeDirectoriesResponseBodyDirectoriesADConnectors extends TeaModel {
+        // The address of the AD connector.
         @NameInMap("ADConnectorAddress")
         public String ADConnectorAddress;
 
+        // The status of the AD connector.
         @NameInMap("ConnectorStatus")
         public String connectorStatus;
 
+        // The ID of the network interface controller (NIC) with which the AD connector is associated.
         @NameInMap("NetworkInterfaceId")
         public String networkInterfaceId;
 
+        // The type of the AD connector.
         @NameInMap("Specification")
         public String specification;
 
+        // The trust password of the AD domain controller.
         @NameInMap("TrustKey")
         public String trustKey;
 
+        // The ID of the vSwitch with which the AD connector is associated.
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
@@ -128,15 +138,19 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
     }
 
     public static class DescribeDirectoriesResponseBodyDirectoriesLogs extends TeaModel {
+        // The level of the log entry.
         @NameInMap("Level")
         public String level;
 
+        // Details of the log entry.
         @NameInMap("Message")
         public String message;
 
+        // The step that corresponds to the log entry.
         @NameInMap("Step")
         public String step;
 
+        // The time when the log entry was printed.
         @NameInMap("TimeStamp")
         public String timeStamp;
 
@@ -180,87 +194,123 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
     }
 
     public static class DescribeDirectoriesResponseBodyDirectories extends TeaModel {
+        // Details of the AD connectors.
         @NameInMap("ADConnectors")
         public java.util.List<DescribeDirectoriesResponseBodyDirectoriesADConnectors> ADConnectors;
 
+        // The time when the directory was created.
         @NameInMap("CreationTime")
         public String creationTime;
 
+        // The ID of the security group.
         @NameInMap("CustomSecurityGroupId")
         public String customSecurityGroupId;
 
+        // The method that is used to connect the client to cloud desktops.
         @NameInMap("DesktopAccessType")
         public String desktopAccessType;
 
+        // The endpoint that is used to connect to cloud desktops over a VPC.
         @NameInMap("DesktopVpcEndpoint")
         public String desktopVpcEndpoint;
 
+        // The ID of the directory.
         @NameInMap("DirectoryId")
         public String directoryId;
 
+        // The type of the directory.
         @NameInMap("DirectoryType")
         public String directoryType;
 
+        // Details of the DNS addresses of the directory.
         @NameInMap("DnsAddress")
         public java.util.List<String> dnsAddress;
 
+        // The username of the Domain Name System (DNS) user.
         @NameInMap("DnsUserName")
         public String dnsUserName;
 
+        // The name of the domain.
         @NameInMap("DomainName")
         public String domainName;
 
+        // The password of the domain administrator.
         @NameInMap("DomainPassword")
         public String domainPassword;
 
+        // The username of the domain administrator.
         @NameInMap("DomainUserName")
         public String domainUserName;
 
+        // Indicates whether the permissions of the local administrator are granted to the regular user of the cloud desktop.
         @NameInMap("EnableAdminAccess")
         public Boolean enableAdminAccess;
 
+        // Indicates whether the desktop communication feature is enabled for cloud desktops in the same workspace.
+        // 
+        // If the feature is enabled, the cloud desktops in the same workspace can access each other.
         @NameInMap("EnableCrossDesktopAccess")
         public Boolean enableCrossDesktopAccess;
 
+        // Indicates whether access over the Internet is allowed.
+        // 
+        // >  This parameter is unavailable.
         @NameInMap("EnableInternetAccess")
         public Boolean enableInternetAccess;
 
+        // Details of the IDs of the Apsara File Storage NAS (NAS) file systems.
         @NameInMap("FileSystemIds")
         public java.util.List<String> fileSystemIds;
 
+        // Details of the registration logs.
         @NameInMap("Logs")
         public java.util.List<DescribeDirectoriesResponseBodyDirectoriesLogs> logs;
 
+        // Indicates whether multi-factor authentication (MFA) is enabled.
         @NameInMap("MfaEnabled")
         public Boolean mfaEnabled;
 
+        // The name of the directory.
         @NameInMap("Name")
         public String name;
 
+        // Indicates whether two-factor verification for logons is enabled. This parameter is returned only for workspaces of the convenience account type.\
+        // If two-factor verification is enabled, the system checks whether security risks exist within the logon account when a convenience user logs on to the Elastic Desktop Service (EDS) client. If risks are detected, the system sends a verification code to the email address that is associated with the account. Then, the convenience user can log on to the client only after the user enters the correct verification code.
         @NameInMap("NeedVerifyLoginRisk")
         public Boolean needVerifyLoginRisk;
 
+        // The name of the organizational unit (OU) that you specified when you add cloud desktops to domains.
         @NameInMap("OuName")
         public String ouName;
 
+        // Indicates whether single sign-on (SSO) is enabled.
         @NameInMap("SsoEnabled")
         public Boolean ssoEnabled;
 
+        // The status of the AD directory. Valid values:
+        // 
+        // *   REGISTERING
+        // *   REGISTERED
         @NameInMap("Status")
         public String status;
 
+        // Details of the DNS addresses of the AD subdomain.
         @NameInMap("SubDnsAddress")
         public java.util.List<String> subDnsAddress;
 
+        // The fully qualified domain name (FQDN) of the enterprise AD subdomain. The value must contain the hostname and the subdomain name. Example: child.example.com.
         @NameInMap("SubDomainName")
         public String subDomainName;
 
+        // The AD trust password.
         @NameInMap("TrustPassword")
         public String trustPassword;
 
+        // Details of vSwitch IDs that are specified when the directory is being created.
         @NameInMap("VSwitchIds")
         public java.util.List<String> vSwitchIds;
 
+        // The ID of the virtual private cloud (VPC) to which the vSwitch belongs.
         @NameInMap("VpcId")
         public String vpcId;
 

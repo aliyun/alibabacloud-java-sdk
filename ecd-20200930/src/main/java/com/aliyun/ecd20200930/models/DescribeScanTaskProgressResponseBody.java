@@ -4,12 +4,20 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeScanTaskProgressResponseBody extends TeaModel {
+    // The time when the task was created.
     @NameInMap("CreateTime")
     public String createTime;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The status of the task. Valid values:
+    // 
+    // *   init: The task is being initialized.
+    // *   Processing: The task is in progress.
+    // *   Success: The task is completed.
+    // *   Failed: The task failed.
     @NameInMap("TaskStatus")
     public String taskStatus;
 

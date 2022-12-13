@@ -4,15 +4,19 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class TagResourcesRequest extends TeaModel {
+    // The region ID of the resource.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The ID of the resource, which is the ID of the cloud desktop. Valid values of N: 1 to 50.
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
+    // The type of the resource. Set the value to ALIYUN::GWS::INSTANCE.
     @NameInMap("ResourceType")
     public String resourceType;
 
+    // The list of the resource.
     @NameInMap("Tag")
     public java.util.List<TagResourcesRequestTag> tag;
 
@@ -54,9 +58,11 @@ public class TagResourcesRequest extends TeaModel {
     }
 
     public static class ListTagResourcesRequestTag extends TeaModel {
+        // The key of tag N. Valid values of N: 1 to 20.
         @NameInMap("Key")
         public String key;
 
+        // The value of tag N. Valid values of N: 1 to 20.
         @NameInMap("Value")
         public String value;
 
@@ -84,9 +90,15 @@ public class TagResourcesRequest extends TeaModel {
     }
 
     public static class TagResourcesRequestTag extends TeaModel {
+        // The key of tag.
+        // Valid values of N: 1 to 20.
+        // The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
         @NameInMap("Key")
         public String key;
 
+        // The value of tag.
+        // Valid values of N: 1 to 20.
+        // The tag value can be an empty string. It can be up to 128 characters in length. It cannot start with `acs:` or contain `http://` or `https://`.
         @NameInMap("Value")
         public String value;
 

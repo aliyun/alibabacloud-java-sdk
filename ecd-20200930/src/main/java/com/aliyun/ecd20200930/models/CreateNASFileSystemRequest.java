@@ -4,21 +4,31 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateNASFileSystemRequest extends TeaModel {
+    // The description of the NAS file system.
     @NameInMap("Description")
     public String description;
 
     @NameInMap("EncryptType")
     public String encryptType;
 
+    // The name of the NAS file system.
     @NameInMap("Name")
     public String name;
 
+    // The ID of the workspace.
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
+    // The ID of the region.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The storage type of the NAS file system. Valid values:
+    // 
+    // *   Capacity
+    // *   Performance
+    // 
+    // Default value: Capacity.
     @NameInMap("StorageType")
     public String storageType;
 

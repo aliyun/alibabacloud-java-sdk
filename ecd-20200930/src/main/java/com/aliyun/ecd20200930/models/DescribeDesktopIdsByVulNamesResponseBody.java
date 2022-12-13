@@ -4,9 +4,11 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeDesktopIdsByVulNamesResponseBody extends TeaModel {
+    // Details about cloud desktops.
     @NameInMap("DesktopItems")
     public java.util.List<DescribeDesktopIdsByVulNamesResponseBodyDesktopItems> desktopItems;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +34,11 @@ public class DescribeDesktopIdsByVulNamesResponseBody extends TeaModel {
     }
 
     public static class DescribeDesktopIdsByVulNamesResponseBodyDesktopItems extends TeaModel {
+        // The ID of the cloud desktop.
         @NameInMap("DesktopId")
         public String desktopId;
 
+        // The name of the cloud desktop.
         @NameInMap("DesktopName")
         public String desktopName;
 

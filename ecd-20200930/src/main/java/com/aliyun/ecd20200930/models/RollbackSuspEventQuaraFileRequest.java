@@ -4,12 +4,17 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class RollbackSuspEventQuaraFileRequest extends TeaModel {
+    // The ID of the cloud desktop.
     @NameInMap("DesktopId")
     public String desktopId;
 
+    // The ID of the quarantined file.
+    // 
+    // You can call the [DescribeSuspEventQuaraFiles](~~217947~~) operation to obtain the ID of the quarantined file.
     @NameInMap("QuaraFieldId")
     public Integer quaraFieldId;
 
+    // The ID of the region.
     @NameInMap("RegionId")
     public String regionId;
 

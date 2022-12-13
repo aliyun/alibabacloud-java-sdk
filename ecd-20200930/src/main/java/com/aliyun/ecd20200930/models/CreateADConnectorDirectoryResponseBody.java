@@ -4,15 +4,19 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateADConnectorDirectoryResponseBody extends TeaModel {
+    // Details of the AD connectors.
     @NameInMap("AdConnectors")
     public java.util.List<CreateADConnectorDirectoryResponseBodyAdConnectors> adConnectors;
 
+    // The ID of the AD directory.
     @NameInMap("DirectoryId")
     public String directoryId;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The AD trust password.
     @NameInMap("TrustPassword")
     public String trustPassword;
 
@@ -54,6 +58,7 @@ public class CreateADConnectorDirectoryResponseBody extends TeaModel {
     }
 
     public static class CreateADConnectorDirectoryResponseBodyAdConnectors extends TeaModel {
+        // The IP address of the AD connector.
         @NameInMap("Address")
         public String address;
 

@@ -7,15 +7,26 @@ public class DescribeNASFileSystemsRequest extends TeaModel {
     @NameInMap("FileSystemId")
     public java.util.List<String> fileSystemId;
 
+    @NameInMap("MatchCompatibleProfile")
+    public Boolean matchCompatibleProfile;
+
+    // The number of entries to return on each page.
+    // 
+    // Maximum value: 100.
+    // 
+    // Default value: 10.
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    // The token that determines the start point of the query.
     @NameInMap("NextToken")
     public String nextToken;
 
+    // The ID of the workspace.
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
+    // The ID of the region.
     @NameInMap("RegionId")
     public String regionId;
 
@@ -30,6 +41,14 @@ public class DescribeNASFileSystemsRequest extends TeaModel {
     }
     public java.util.List<String> getFileSystemId() {
         return this.fileSystemId;
+    }
+
+    public DescribeNASFileSystemsRequest setMatchCompatibleProfile(Boolean matchCompatibleProfile) {
+        this.matchCompatibleProfile = matchCompatibleProfile;
+        return this;
+    }
+    public Boolean getMatchCompatibleProfile() {
+        return this.matchCompatibleProfile;
     }
 
     public DescribeNASFileSystemsRequest setMaxResults(Integer maxResults) {
