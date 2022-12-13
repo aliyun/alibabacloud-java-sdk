@@ -464,12 +464,15 @@ public class GetJobResponseBody extends TeaModel {
         @NameInMap("GmtStartTime")
         public String gmtStartTime;
 
+        // Pod Ip
         @NameInMap("Ip")
         public String ip;
 
+        // Pod Id
         @NameInMap("PodId")
         public String podId;
 
+        // Pod UId
         @NameInMap("PodUid")
         public String podUid;
 
@@ -569,6 +572,7 @@ public class GetJobResponseBody extends TeaModel {
         @NameInMap("PodId")
         public String podId;
 
+        // Pod UId
         @NameInMap("PodUid")
         public String podUid;
 

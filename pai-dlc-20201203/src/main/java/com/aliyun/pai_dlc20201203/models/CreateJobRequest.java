@@ -43,6 +43,9 @@ public class CreateJobRequest extends TeaModel {
     @NameInMap("Settings")
     public JobSettings settings;
 
+    @NameInMap("SuccessPolicy")
+    public String successPolicy;
+
     @NameInMap("ThirdpartyLibDir")
     public String thirdpartyLibDir;
 
@@ -165,6 +168,14 @@ public class CreateJobRequest extends TeaModel {
     }
     public JobSettings getSettings() {
         return this.settings;
+    }
+
+    public CreateJobRequest setSuccessPolicy(String successPolicy) {
+        this.successPolicy = successPolicy;
+        return this;
+    }
+    public String getSuccessPolicy() {
+        return this.successPolicy;
     }
 
     public CreateJobRequest setThirdpartyLibDir(String thirdpartyLibDir) {

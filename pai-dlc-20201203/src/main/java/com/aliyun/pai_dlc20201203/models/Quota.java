@@ -10,11 +10,8 @@ public class Quota extends TeaModel {
     @NameInMap("ClusterName")
     public String clusterName;
 
-    @NameInMap("EnableTideResource")
-    public Boolean enableTideResource;
-
-    @NameInMap("IsExclusiveQuota")
-    public Boolean isExclusiveQuota;
+    @NameInMap("QuotaConfig")
+    public QuotaConfig quotaConfig;
 
     @NameInMap("QuotaId")
     public String quotaId;
@@ -24,9 +21,6 @@ public class Quota extends TeaModel {
 
     @NameInMap("QuotaType")
     public String quotaType;
-
-    @NameInMap("ResourceLevel")
-    public String resourceLevel;
 
     @NameInMap("TotalQuota")
     public QuotaDetail totalQuota;
@@ -61,20 +55,12 @@ public class Quota extends TeaModel {
         return this.clusterName;
     }
 
-    public Quota setEnableTideResource(Boolean enableTideResource) {
-        this.enableTideResource = enableTideResource;
+    public Quota setQuotaConfig(QuotaConfig quotaConfig) {
+        this.quotaConfig = quotaConfig;
         return this;
     }
-    public Boolean getEnableTideResource() {
-        return this.enableTideResource;
-    }
-
-    public Quota setIsExclusiveQuota(Boolean isExclusiveQuota) {
-        this.isExclusiveQuota = isExclusiveQuota;
-        return this;
-    }
-    public Boolean getIsExclusiveQuota() {
-        return this.isExclusiveQuota;
+    public QuotaConfig getQuotaConfig() {
+        return this.quotaConfig;
     }
 
     public Quota setQuotaId(String quotaId) {
@@ -99,14 +85,6 @@ public class Quota extends TeaModel {
     }
     public String getQuotaType() {
         return this.quotaType;
-    }
-
-    public Quota setResourceLevel(String resourceLevel) {
-        this.resourceLevel = resourceLevel;
-        return this;
-    }
-    public String getResourceLevel() {
-        return this.resourceLevel;
     }
 
     public Quota setTotalQuota(QuotaDetail totalQuota) {
