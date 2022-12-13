@@ -1,3 +1,7 @@
+2022-12-13 Version: 1.0.35
+- Support describe cluster support features.
+
+
 2022-12-12 Version: 1.0.34
 - Support describe cluster support features.
 
