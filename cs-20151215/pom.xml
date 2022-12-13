@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>cs20151215</artifactId>
-  <version>3.0.21</version>
+  <version>3.0.22</version>
   <packaging>jar</packaging>
   <name>cs20151215</name>
   <description>Alibaba Cloud CS (20151215) SDK for Java
@@ -171,6 +171,10 @@
                 <relocation>
                   <pattern>org.apache</pattern>
                   <shadedPattern>com.aliyun.cs20151215.external.org.apache</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>org.slf4j</pattern>
+                  <shadedPattern>com.aliyun.cs20151215.external.org.slf4j</shadedPattern>
                 </relocation>
               </relocations>
               <artifactSet>
