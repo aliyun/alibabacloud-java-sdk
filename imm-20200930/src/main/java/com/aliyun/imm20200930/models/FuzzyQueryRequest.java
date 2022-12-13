@@ -13,11 +13,17 @@ public class FuzzyQueryRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    @NameInMap("Order")
+    public String order;
+
     @NameInMap("ProjectName")
     public String projectName;
 
     @NameInMap("Query")
     public String query;
+
+    @NameInMap("Sort")
+    public String sort;
 
     public static FuzzyQueryRequest build(java.util.Map<String, ?> map) throws Exception {
         FuzzyQueryRequest self = new FuzzyQueryRequest();
@@ -48,6 +54,14 @@ public class FuzzyQueryRequest extends TeaModel {
         return this.nextToken;
     }
 
+    public FuzzyQueryRequest setOrder(String order) {
+        this.order = order;
+        return this;
+    }
+    public String getOrder() {
+        return this.order;
+    }
+
     public FuzzyQueryRequest setProjectName(String projectName) {
         this.projectName = projectName;
         return this;
@@ -62,6 +76,14 @@ public class FuzzyQueryRequest extends TeaModel {
     }
     public String getQuery() {
         return this.query;
+    }
+
+    public FuzzyQueryRequest setSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    public String getSort() {
+        return this.sort;
     }
 
 }
