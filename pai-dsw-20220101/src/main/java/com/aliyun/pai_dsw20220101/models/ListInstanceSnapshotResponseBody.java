@@ -86,6 +86,36 @@ public class ListInstanceSnapshotResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListInstanceSnapshotResponseBodySnapshotsLabels extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListInstanceSnapshotResponseBodySnapshotsLabels build(java.util.Map<String, ?> map) throws Exception {
+            ListInstanceSnapshotResponseBodySnapshotsLabels self = new ListInstanceSnapshotResponseBodySnapshotsLabels();
+            return TeaModel.build(map, self);
+        }
+
+        public ListInstanceSnapshotResponseBodySnapshotsLabels setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListInstanceSnapshotResponseBodySnapshotsLabels setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListInstanceSnapshotResponseBodySnapshots extends TeaModel {
         @NameInMap("GmtCreateTime")
         public String gmtCreateTime;
@@ -101,6 +131,9 @@ public class ListInstanceSnapshotResponseBody extends TeaModel {
 
         @NameInMap("InstanceId")
         public String instanceId;
+
+        @NameInMap("Labels")
+        public java.util.List<ListInstanceSnapshotResponseBodySnapshotsLabels> labels;
 
         @NameInMap("ReasonCode")
         public String reasonCode;
@@ -160,6 +193,14 @@ public class ListInstanceSnapshotResponseBody extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public ListInstanceSnapshotResponseBodySnapshots setLabels(java.util.List<ListInstanceSnapshotResponseBodySnapshotsLabels> labels) {
+            this.labels = labels;
+            return this;
+        }
+        public java.util.List<ListInstanceSnapshotResponseBodySnapshotsLabels> getLabels() {
+            return this.labels;
         }
 
         public ListInstanceSnapshotResponseBodySnapshots setReasonCode(String reasonCode) {

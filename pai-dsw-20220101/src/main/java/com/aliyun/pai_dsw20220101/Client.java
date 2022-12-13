@@ -26,12 +26,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
-    public CreateIdleInstanceCullerResponse createIdleInstanceCuller(String InstanceId, CreateIdleInstanceCullerRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.createIdleInstanceCullerWithOptions(InstanceId, request, headers, runtime);
-    }
-
     public CreateIdleInstanceCullerResponse createIdleInstanceCullerWithOptions(String InstanceId, CreateIdleInstanceCullerRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -65,10 +59,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateIdleInstanceCullerResponse());
     }
 
-    public CreateInstanceResponse createInstance(CreateInstanceRequest request) throws Exception {
+    public CreateIdleInstanceCullerResponse createIdleInstanceCuller(String InstanceId, CreateIdleInstanceCullerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.createInstanceWithOptions(request, headers, runtime);
+        return this.createIdleInstanceCullerWithOptions(InstanceId, request, headers, runtime);
     }
 
     public CreateInstanceResponse createInstanceWithOptions(CreateInstanceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -110,7 +104,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Priority", request.priority);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.requestedResource))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.requestedResource)) {
             body.put("RequestedResource", request.requestedResource);
         }
 
@@ -118,7 +112,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ResourceId", request.resourceId);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.userVpc))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.userVpc)) {
             body.put("UserVpc", request.userVpc);
         }
 
@@ -144,10 +138,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateInstanceResponse());
     }
 
-    public CreateInstanceShutdownTimerResponse createInstanceShutdownTimer(String InstanceId, CreateInstanceShutdownTimerRequest request) throws Exception {
+    public CreateInstanceResponse createInstance(CreateInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.createInstanceShutdownTimerWithOptions(InstanceId, request, headers, runtime);
+        return this.createInstanceWithOptions(request, headers, runtime);
     }
 
     public CreateInstanceShutdownTimerResponse createInstanceShutdownTimerWithOptions(String InstanceId, CreateInstanceShutdownTimerRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -179,10 +173,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateInstanceShutdownTimerResponse());
     }
 
-    public CreateInstanceSnapshotResponse createInstanceSnapshot(String InstanceId, CreateInstanceSnapshotRequest request) throws Exception {
+    public CreateInstanceShutdownTimerResponse createInstanceShutdownTimer(String InstanceId, CreateInstanceShutdownTimerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.createInstanceSnapshotWithOptions(InstanceId, request, headers, runtime);
+        return this.createInstanceShutdownTimerWithOptions(InstanceId, request, headers, runtime);
     }
 
     public CreateInstanceSnapshotResponse createInstanceSnapshotWithOptions(String InstanceId, CreateInstanceSnapshotRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -190,6 +184,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.imageUrl)) {
             body.put("ImageUrl", request.imageUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.labels)) {
+            body.put("Labels", request.labels);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.snapshotDescription)) {
@@ -218,10 +216,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateInstanceSnapshotResponse());
     }
 
-    public DeleteIdleInstanceCullerResponse deleteIdleInstanceCuller(String InstanceId) throws Exception {
+    public CreateInstanceSnapshotResponse createInstanceSnapshot(String InstanceId, CreateInstanceSnapshotRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deleteIdleInstanceCullerWithOptions(InstanceId, headers, runtime);
+        return this.createInstanceSnapshotWithOptions(InstanceId, request, headers, runtime);
     }
 
     public DeleteIdleInstanceCullerResponse deleteIdleInstanceCullerWithOptions(String InstanceId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -242,10 +240,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteIdleInstanceCullerResponse());
     }
 
-    public DeleteInstanceResponse deleteInstance(String InstanceId) throws Exception {
+    public DeleteIdleInstanceCullerResponse deleteIdleInstanceCuller(String InstanceId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deleteInstanceWithOptions(InstanceId, headers, runtime);
+        return this.deleteIdleInstanceCullerWithOptions(InstanceId, headers, runtime);
     }
 
     public DeleteInstanceResponse deleteInstanceWithOptions(String InstanceId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -266,10 +264,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteInstanceResponse());
     }
 
-    public DeleteInstanceShutdownTimerResponse deleteInstanceShutdownTimer(String InstanceId) throws Exception {
+    public DeleteInstanceResponse deleteInstance(String InstanceId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deleteInstanceShutdownTimerWithOptions(InstanceId, headers, runtime);
+        return this.deleteInstanceWithOptions(InstanceId, headers, runtime);
     }
 
     public DeleteInstanceShutdownTimerResponse deleteInstanceShutdownTimerWithOptions(String InstanceId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -290,10 +288,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteInstanceShutdownTimerResponse());
     }
 
-    public DeleteInstanceSnapshotResponse deleteInstanceSnapshot(String InstanceId, String SnapshotId) throws Exception {
+    public DeleteInstanceShutdownTimerResponse deleteInstanceShutdownTimer(String InstanceId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deleteInstanceSnapshotWithOptions(InstanceId, SnapshotId, headers, runtime);
+        return this.deleteInstanceShutdownTimerWithOptions(InstanceId, headers, runtime);
     }
 
     public DeleteInstanceSnapshotResponse deleteInstanceSnapshotWithOptions(String InstanceId, String SnapshotId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -314,10 +312,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteInstanceSnapshotResponse());
     }
 
-    public GetIdleInstanceCullerResponse getIdleInstanceCuller(String InstanceId) throws Exception {
+    public DeleteInstanceSnapshotResponse deleteInstanceSnapshot(String InstanceId, String SnapshotId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getIdleInstanceCullerWithOptions(InstanceId, headers, runtime);
+        return this.deleteInstanceSnapshotWithOptions(InstanceId, SnapshotId, headers, runtime);
     }
 
     public GetIdleInstanceCullerResponse getIdleInstanceCullerWithOptions(String InstanceId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -338,10 +336,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetIdleInstanceCullerResponse());
     }
 
-    public GetInstanceResponse getInstance(String InstanceId) throws Exception {
+    public GetIdleInstanceCullerResponse getIdleInstanceCuller(String InstanceId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getInstanceWithOptions(InstanceId, headers, runtime);
+        return this.getIdleInstanceCullerWithOptions(InstanceId, headers, runtime);
     }
 
     public GetInstanceResponse getInstanceWithOptions(String InstanceId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -362,10 +360,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetInstanceResponse());
     }
 
-    public GetInstanceMetricsResponse getInstanceMetrics(String InstanceId, GetInstanceMetricsRequest request) throws Exception {
+    public GetInstanceResponse getInstance(String InstanceId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getInstanceMetricsWithOptions(InstanceId, request, headers, runtime);
+        return this.getInstanceWithOptions(InstanceId, headers, runtime);
     }
 
     public GetInstanceMetricsResponse getInstanceMetricsWithOptions(String InstanceId, GetInstanceMetricsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -405,10 +403,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetInstanceMetricsResponse());
     }
 
-    public GetInstanceShutdownTimerResponse getInstanceShutdownTimer(String InstanceId) throws Exception {
+    public GetInstanceMetricsResponse getInstanceMetrics(String InstanceId, GetInstanceMetricsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getInstanceShutdownTimerWithOptions(InstanceId, headers, runtime);
+        return this.getInstanceMetricsWithOptions(InstanceId, request, headers, runtime);
     }
 
     public GetInstanceShutdownTimerResponse getInstanceShutdownTimerWithOptions(String InstanceId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -429,10 +427,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetInstanceShutdownTimerResponse());
     }
 
-    public GetInstanceSnapshotResponse getInstanceSnapshot(String InstanceId, String SnapshotId) throws Exception {
+    public GetInstanceShutdownTimerResponse getInstanceShutdownTimer(String InstanceId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getInstanceSnapshotWithOptions(InstanceId, SnapshotId, headers, runtime);
+        return this.getInstanceShutdownTimerWithOptions(InstanceId, headers, runtime);
     }
 
     public GetInstanceSnapshotResponse getInstanceSnapshotWithOptions(String InstanceId, String SnapshotId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -453,10 +451,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetInstanceSnapshotResponse());
     }
 
-    public GetLifecycleResponse getLifecycle(String InstanceId, GetLifecycleRequest request) throws Exception {
+    public GetInstanceSnapshotResponse getInstanceSnapshot(String InstanceId, String SnapshotId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getLifecycleWithOptions(InstanceId, request, headers, runtime);
+        return this.getInstanceSnapshotWithOptions(InstanceId, SnapshotId, headers, runtime);
     }
 
     public GetLifecycleResponse getLifecycleWithOptions(String InstanceId, GetLifecycleRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -500,10 +498,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetLifecycleResponse());
     }
 
-    public GetTokenResponse getToken(GetTokenRequest request) throws Exception {
+    public GetLifecycleResponse getLifecycle(String InstanceId, GetLifecycleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getTokenWithOptions(request, headers, runtime);
+        return this.getLifecycleWithOptions(InstanceId, request, headers, runtime);
     }
 
     public GetTokenResponse getTokenWithOptions(GetTokenRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -535,10 +533,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetTokenResponse());
     }
 
-    public GetUserConfigResponse getUserConfig() throws Exception {
+    public GetTokenResponse getToken(GetTokenRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getUserConfigWithOptions(headers, runtime);
+        return this.getTokenWithOptions(request, headers, runtime);
     }
 
     public GetUserConfigResponse getUserConfigWithOptions(java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -559,10 +557,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetUserConfigResponse());
     }
 
-    public ListDemoCategoriesResponse listDemoCategories() throws Exception {
+    public GetUserConfigResponse getUserConfig() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.listDemoCategoriesWithOptions(headers, runtime);
+        return this.getUserConfigWithOptions(headers, runtime);
     }
 
     public ListDemoCategoriesResponse listDemoCategoriesWithOptions(java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -583,10 +581,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListDemoCategoriesResponse());
     }
 
-    public ListDemosResponse listDemos(ListDemosRequest request) throws Exception {
+    public ListDemoCategoriesResponse listDemoCategories() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.listDemosWithOptions(request, headers, runtime);
+        return this.listDemoCategoriesWithOptions(headers, runtime);
     }
 
     public ListDemosResponse listDemosWithOptions(ListDemosRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -626,10 +624,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListDemosResponse());
     }
 
-    public ListEcsSpecsResponse listEcsSpecs(ListEcsSpecsRequest request) throws Exception {
+    public ListDemosResponse listDemos(ListDemosRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.listEcsSpecsWithOptions(request, headers, runtime);
+        return this.listDemosWithOptions(request, headers, runtime);
     }
 
     public ListEcsSpecsResponse listEcsSpecsWithOptions(ListEcsSpecsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -673,10 +671,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListEcsSpecsResponse());
     }
 
-    public ListInstanceSnapshotResponse listInstanceSnapshot(String InstanceId, ListInstanceSnapshotRequest request) throws Exception {
+    public ListEcsSpecsResponse listEcsSpecs(ListEcsSpecsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.listInstanceSnapshotWithOptions(InstanceId, request, headers, runtime);
+        return this.listEcsSpecsWithOptions(request, headers, runtime);
     }
 
     public ListInstanceSnapshotResponse listInstanceSnapshotWithOptions(String InstanceId, ListInstanceSnapshotRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -716,10 +714,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListInstanceSnapshotResponse());
     }
 
-    public ListInstanceStatisticsResponse listInstanceStatistics(ListInstanceStatisticsRequest request) throws Exception {
+    public ListInstanceSnapshotResponse listInstanceSnapshot(String InstanceId, ListInstanceSnapshotRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.listInstanceStatisticsWithOptions(request, headers, runtime);
+        return this.listInstanceSnapshotWithOptions(InstanceId, request, headers, runtime);
     }
 
     public ListInstanceStatisticsResponse listInstanceStatisticsWithOptions(ListInstanceStatisticsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -747,10 +745,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListInstanceStatisticsResponse());
     }
 
-    public ListInstancesResponse listInstances(ListInstancesRequest request) throws Exception {
+    public ListInstanceStatisticsResponse listInstanceStatistics(ListInstanceStatisticsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.listInstancesWithOptions(request, headers, runtime);
+        return this.listInstanceStatisticsWithOptions(request, headers, runtime);
     }
 
     public ListInstancesResponse listInstancesWithOptions(ListInstancesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -818,10 +816,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListInstancesResponse());
     }
 
-    public StartInstanceResponse startInstance(String InstanceId) throws Exception {
+    public ListInstancesResponse listInstances(ListInstancesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.startInstanceWithOptions(InstanceId, headers, runtime);
+        return this.listInstancesWithOptions(request, headers, runtime);
     }
 
     public StartInstanceResponse startInstanceWithOptions(String InstanceId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -842,10 +840,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new StartInstanceResponse());
     }
 
-    public StopInstanceResponse stopInstance(String InstanceId, StopInstanceRequest request) throws Exception {
+    public StartInstanceResponse startInstance(String InstanceId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.stopInstanceWithOptions(InstanceId, request, headers, runtime);
+        return this.startInstanceWithOptions(InstanceId, headers, runtime);
     }
 
     public StopInstanceResponse stopInstanceWithOptions(String InstanceId, StopInstanceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -873,10 +871,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new StopInstanceResponse());
     }
 
-    public UpdateInstanceResponse updateInstance(String InstanceId, UpdateInstanceRequest request) throws Exception {
+    public StopInstanceResponse stopInstance(String InstanceId, StopInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.updateInstanceWithOptions(InstanceId, request, headers, runtime);
+        return this.stopInstanceWithOptions(InstanceId, request, headers, runtime);
     }
 
     public UpdateInstanceResponse updateInstanceWithOptions(String InstanceId, UpdateInstanceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -914,11 +912,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("InstanceName", request.instanceName);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.requestedResource))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.requestedResource)) {
             body.put("RequestedResource", request.requestedResource);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.userVpc))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.userVpc)) {
             body.put("UserVpc", request.userVpc);
         }
 
@@ -938,5 +936,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateInstanceResponse());
+    }
+
+    public UpdateInstanceResponse updateInstance(String InstanceId, UpdateInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateInstanceWithOptions(InstanceId, request, headers, runtime);
     }
 }
