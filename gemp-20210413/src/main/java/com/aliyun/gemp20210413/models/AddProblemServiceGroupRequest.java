@@ -4,11 +4,9 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class AddProblemServiceGroupRequest extends TeaModel {
-    // 故障ID
     @NameInMap("problemId")
     public Long problemId;
 
-    // 应急协同组
     @NameInMap("serviceGroupIds")
     public java.util.List<Long> serviceGroupIds;
 

@@ -33,19 +33,15 @@ public class GetHomePageGuidanceResponseBody extends TeaModel {
     }
 
     public static class GetHomePageGuidanceResponseBodyData extends TeaModel {
-        // 通知订阅配置状态
         @NameInMap("notifySubscriptionStatus")
         public Boolean notifySubscriptionStatus;
 
-        // 服务组配置状态
         @NameInMap("serviceGroupStatus")
         public Boolean serviceGroupStatus;
 
-        // 服务配置状态
         @NameInMap("serviceStatus")
         public Boolean serviceStatus;
 
-        // 用户配置状态
         @NameInMap("usersStatus")
         public Boolean usersStatus;
 

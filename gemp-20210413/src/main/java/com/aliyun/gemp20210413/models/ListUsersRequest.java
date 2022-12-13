@@ -8,31 +8,24 @@ public class ListUsersRequest extends TeaModel {
     @NameInMap("clientToken")
     public String clientToken;
 
-    // 分页参数
     @NameInMap("pageNumber")
     public Long pageNumber;
 
-    // 分页参数
     @NameInMap("pageSize")
     public Long pageSize;
 
-    // 人员手机号
     @NameInMap("phone")
     public String phone;
 
-    // ramID
     @NameInMap("ramId")
     public String ramId;
 
-    // USER_LIST列表 ALL_USERS下拉
     @NameInMap("scene")
     public Long scene;
 
-    // 移动应用协同渠道
     @NameInMap("synergyChannel")
     public String synergyChannel;
 
-    // 人员名称
     @NameInMap("username")
     public String username;
 

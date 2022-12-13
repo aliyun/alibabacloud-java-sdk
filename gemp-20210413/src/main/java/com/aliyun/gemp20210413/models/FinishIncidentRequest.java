@@ -4,27 +4,21 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class FinishIncidentRequest extends TeaModel {
-    // 幂等校验Id
     @NameInMap("clientToken")
     public String clientToken;
 
-    // 完结原因
     @NameInMap("incidentFinishReason")
     public Integer incidentFinishReason;
 
-    // 原因描述
     @NameInMap("incidentFinishReasonDescription")
     public String incidentFinishReasonDescription;
 
-    // 解决方案
     @NameInMap("incidentFinishSolution")
     public Integer incidentFinishSolution;
 
-    // 解决方案描述
     @NameInMap("incidentFinishSolutionDescription")
     public String incidentFinishSolutionDescription;
 
-    // 事件ID数组
     @NameInMap("incidentIds")
     public java.util.List<Long> incidentIds;
 

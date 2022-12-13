@@ -4,15 +4,12 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class DeliverIncidentRequest extends TeaModel {
-    // 转交用户ID
     @NameInMap("assignUserId")
     public Long assignUserId;
 
-    // 幂等校验id
     @NameInMap("clientToken")
     public String clientToken;
 
-    // 事件ID
     @NameInMap("incidentId")
     public Long incidentId;
 

@@ -4,11 +4,9 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ListProblemTimeLinesRequest extends TeaModel {
-    // clientToken
     @NameInMap("clientToken")
     public String clientToken;
 
-    // 故障ID
     @NameInMap("problemId")
     public Long problemId;
 

@@ -4,35 +4,28 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class CreateServiceGroupRequest extends TeaModel {
-    // 幂等号
     @NameInMap("clientToken")
     public String clientToken;
 
-    // ENABLE 启用 DISABLE 禁用
     @NameInMap("enableWebhook")
     public String enableWebhook;
 
-    // 监控源消息模版
     @NameInMap("monitorSourceTemplates")
     public java.util.List<CreateServiceGroupRequestMonitorSourceTemplates> monitorSourceTemplates;
 
-    // 服务描述
     @NameInMap("serviceGroupDescription")
     public String serviceGroupDescription;
 
-    // 服务小组名称
     @NameInMap("serviceGroupName")
     public String serviceGroupName;
 
-    // 小组人员用户ID
     @NameInMap("userIds")
     public java.util.List<Long> userIds;
 
-    // webhookLink
+    // webhooklink
     @NameInMap("webhookLink")
     public String webhookLink;
 
-    // WEIXIN_GROUP微信 DING_GROUP钉钉 FEISHU_GROUP飞书
     @NameInMap("webhookType")
     public String webhookType;
 
@@ -106,19 +99,15 @@ public class CreateServiceGroupRequest extends TeaModel {
     }
 
     public static class CreateServiceGroupRequestMonitorSourceTemplates extends TeaModel {
-        // 监控源ID
         @NameInMap("monitorSourceId")
         public Long monitorSourceId;
 
-        // 监控源名字
         @NameInMap("monitorSourceName")
         public String monitorSourceName;
 
-        // 模板内容
         @NameInMap("templateContent")
         public String templateContent;
 
-        // 消息模版ID
         @NameInMap("templateId")
         public Long templateId;
 

@@ -34,43 +34,33 @@ public class ListChartDataForServiceGroupResponseBody extends TeaModel {
     }
 
     public static class ListChartDataForServiceGroupResponseBodyData extends TeaModel {
-        // 根据影响等级时间等级分组统计数量
         @NameInMap("effectionLevel")
         public java.util.Map<String, ?> effectionLevel;
 
-        // 升级事件数
         @NameInMap("escalationIncidentCount")
         public Long escalationIncidentCount;
 
-        // 时间总数
         @NameInMap("incidentCount")
         public Long incidentCount;
 
-        // 当日平均响应时间单位秒
         @NameInMap("meanTimeToAcknowledge")
         public Long meanTimeToAcknowledge;
 
-        // 当日平均完结时间单位秒
         @NameInMap("meanTimeToRepair")
         public Long meanTimeToRepair;
 
-        // 时间
         @NameInMap("time")
         public String time;
 
-        // 总平均响应时间
         @NameInMap("totalMeanTimeToAcknowledge")
         public Long totalMeanTimeToAcknowledge;
 
-        // 总平均完结时间
         @NameInMap("totalMeanTimeToRepair")
         public Long totalMeanTimeToRepair;
 
-        // 未响应升级事件数
         @NameInMap("unAcknowledgedEscalationIncidentCount")
         public Long unAcknowledgedEscalationIncidentCount;
 
-        // 未完结升级事件数
         @NameInMap("unFinishEscalationIncidentCount")
         public Long unFinishEscalationIncidentCount;
 

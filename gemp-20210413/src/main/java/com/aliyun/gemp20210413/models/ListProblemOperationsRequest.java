@@ -4,15 +4,12 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ListProblemOperationsRequest extends TeaModel {
-    // 幂等校验token
     @NameInMap("clientToken")
     public String clientToken;
 
-    // 页
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
-    // 行
     @NameInMap("pageSize")
     public Integer pageSize;
 

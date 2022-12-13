@@ -4,19 +4,15 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class GenerateProblemPictureUploadSignRequest extends TeaModel {
-    // 文件名
     @NameInMap("fileName")
     public String fileName;
 
-    // 文件大小KB
     @NameInMap("fileSize")
     public Long fileSize;
 
-    // 文件类型
     @NameInMap("fileType")
     public String fileType;
 
-    // 故障id
     @NameInMap("problemId")
     public Long problemId;
 

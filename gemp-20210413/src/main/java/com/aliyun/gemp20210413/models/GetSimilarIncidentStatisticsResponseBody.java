@@ -34,59 +34,45 @@ public class GetSimilarIncidentStatisticsResponseBody extends TeaModel {
     }
 
     public static class GetSimilarIncidentStatisticsResponseBodyDataDailySimilarIncidentsSimilarIncidents extends TeaModel {
-        // 分派人id
         @NameInMap("assignUserId")
         public Long assignUserId;
 
-        // 分派人
         @NameInMap("assignUserName")
         public String assignUserName;
 
-        // 触发时间
         @NameInMap("createTime")
         public String createTime;
 
-        // 持续时间
         @NameInMap("durationTime")
         public Long durationTime;
 
-        // 触发原因
         @NameInMap("finishReason")
         public Long finishReason;
 
-        // 触发原因描述
         @NameInMap("finishReasonDescription")
         public String finishReasonDescription;
 
-        // 解决方案描述
         @NameInMap("finishSolutionDescription")
         public String finishSolutionDescription;
 
-        // 解决方案
         @NameInMap("incidentFinishSolution")
         public Long incidentFinishSolution;
 
-        // 事件id
         @NameInMap("incidentId")
         public Long incidentId;
 
-        // 事件编号
         @NameInMap("incidentNumber")
         public String incidentNumber;
 
-        // 事件名称
         @NameInMap("incidentTitle")
         public String incidentTitle;
 
-        // 流转规则id
         @NameInMap("relatedRouteRuleId")
         public Long relatedRouteRuleId;
 
-        // 流转规则名称
         @NameInMap("relatedRouteRuleName")
         public String relatedRouteRuleName;
 
-        // 相似度
         @NameInMap("similarScore")
         public String similarScore;
 
@@ -210,27 +196,21 @@ public class GetSimilarIncidentStatisticsResponseBody extends TeaModel {
     }
 
     public static class GetSimilarIncidentStatisticsResponseBodyDataDailySimilarIncidents extends TeaModel {
-        // 数量
         @NameInMap("commitment")
         public Long commitment;
 
-        // 日期
         @NameInMap("date")
         public String date;
 
-        // 星期几
         @NameInMap("day")
         public Long day;
 
-        // 月份
         @NameInMap("month")
         public Long month;
 
-        // 相似事件列表
         @NameInMap("similarIncidents")
         public java.util.List<GetSimilarIncidentStatisticsResponseBodyDataDailySimilarIncidentsSimilarIncidents> similarIncidents;
 
-        // 周
         @NameInMap("week")
         public String week;
 
@@ -290,59 +270,45 @@ public class GetSimilarIncidentStatisticsResponseBody extends TeaModel {
     }
 
     public static class GetSimilarIncidentStatisticsResponseBodyDataTopFiveIncidents extends TeaModel {
-        // 分派人id
         @NameInMap("assignUserId")
         public String assignUserId;
 
-        // 分派人
         @NameInMap("assignUserName")
         public String assignUserName;
 
-        // 触发时间
         @NameInMap("createTime")
         public String createTime;
 
-        // 持续时间
         @NameInMap("durationTime")
         public Long durationTime;
 
-        // 触发原因
         @NameInMap("finishReason")
         public Long finishReason;
 
-        // 触发原因描述
         @NameInMap("finishReasonDescription")
         public String finishReasonDescription;
 
-        // 解决方案描述
         @NameInMap("finishSolutionDescription")
         public String finishSolutionDescription;
 
-        // 解决方案
         @NameInMap("incidentFinishSolution")
         public Long incidentFinishSolution;
 
-        // 事件id
         @NameInMap("incidentId")
         public Long incidentId;
 
-        // 事件编号
         @NameInMap("incidentNumber")
         public String incidentNumber;
 
-        // 事件标题
         @NameInMap("incidentTitle")
         public String incidentTitle;
 
-        // 流转规则id
         @NameInMap("relatedRouteRuleId")
         public Long relatedRouteRuleId;
 
-        // 流转规则名称
         @NameInMap("relatedRouteRuleName")
         public String relatedRouteRuleName;
 
-        // 相似度
         @NameInMap("similarScore")
         public String similarScore;
 
@@ -466,15 +432,12 @@ public class GetSimilarIncidentStatisticsResponseBody extends TeaModel {
     }
 
     public static class GetSimilarIncidentStatisticsResponseBodyData extends TeaModel {
-        // 7天内相似事件数量
         @NameInMap("countInSevenDays")
         public Long countInSevenDays;
 
-        // 6月内相似事件数量
         @NameInMap("countInSixMonths")
         public Long countInSixMonths;
 
-        // 根据日期分类
         @NameInMap("dailySimilarIncidents")
         public java.util.List<GetSimilarIncidentStatisticsResponseBodyDataDailySimilarIncidents> dailySimilarIncidents;
 

@@ -4,39 +4,32 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ListSourceEventsRequest extends TeaModel {
-    // 幂等号
     @NameInMap("clientToken")
     public String clientToken;
 
-    // 结束时间
+    // 2020-09-18 13:00:00
     @NameInMap("endTime")
     public String endTime;
 
-    // 报警或者事件ID
     @NameInMap("instanceId")
     public Long instanceId;
 
-    // INCIDENT 事件、ALERT 报警、PROBLEM 故障
     @NameInMap("instanceType")
     public String instanceType;
 
-    // 当前页
     @NameInMap("pageNumber")
     public Long pageNumber;
 
-    // 页大小
     @NameInMap("pageSize")
     public Long pageSize;
 
-    // startRowKey 用来查询下一页的数据
     @NameInMap("startRowKey")
     public String startRowKey;
 
-    // 开始时间
+    // 2020-09-10 13:00:00
     @NameInMap("startTime")
     public String startTime;
 
-    // stopRowKey 用来查询上一页的数据
     @NameInMap("stopRowKey")
     public String stopRowKey;
 

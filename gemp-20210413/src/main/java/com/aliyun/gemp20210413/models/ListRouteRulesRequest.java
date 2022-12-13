@@ -4,27 +4,24 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ListRouteRulesRequest extends TeaModel {
-    // 幂等号
     @NameInMap("clientToken")
     public String clientToken;
 
-    // 第几页
+    @NameInMap("notFilterRouteRuleDeleted")
+    public Boolean notFilterRouteRuleDeleted;
+
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
-    // 页的大小
     @NameInMap("pageSize")
     public Integer pageSize;
 
-    // 路由类型：0触发事件 1仅触发报警 r
     @NameInMap("routeType")
     public Long routeType;
 
-    // 规则名称
     @NameInMap("ruleName")
     public byte[] ruleName;
 
-    // 服务名称
     @NameInMap("serviceName")
     public byte[] serviceName;
 
@@ -39,6 +36,14 @@ public class ListRouteRulesRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public ListRouteRulesRequest setNotFilterRouteRuleDeleted(Boolean notFilterRouteRuleDeleted) {
+        this.notFilterRouteRuleDeleted = notFilterRouteRuleDeleted;
+        return this;
+    }
+    public Boolean getNotFilterRouteRuleDeleted() {
+        return this.notFilterRouteRuleDeleted;
     }
 
     public ListRouteRulesRequest setPageNumber(Integer pageNumber) {

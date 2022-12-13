@@ -7,7 +7,6 @@ public class UpdateRouteRuleResponseBody extends TeaModel {
     @NameInMap("data")
     public Long data;
 
-    // 请求ID
     @NameInMap("requestId")
     public String requestId;
 

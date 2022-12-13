@@ -7,11 +7,9 @@ public class ListServicesResponseBody extends TeaModel {
     @NameInMap("data")
     public java.util.List<ListServicesResponseBodyData> data;
 
-    // 当前页
     @NameInMap("pageNumber")
     public Long pageNumber;
 
-    // 页大小
     @NameInMap("pageSize")
     public Long pageSize;
 
@@ -19,7 +17,6 @@ public class ListServicesResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
-    // 总条数
     @NameInMap("totalCount")
     public Long totalCount;
 
@@ -69,25 +66,32 @@ public class ListServicesResponseBody extends TeaModel {
     }
 
     public static class ListServicesResponseBodyData extends TeaModel {
-        // 服务描述
+        @NameInMap("isValid")
+        public Integer isValid;
+
         @NameInMap("serviceDescription")
         public String serviceDescription;
 
-        // 服务ID
         @NameInMap("serviceId")
         public Long serviceId;
 
-        // 服务名字
         @NameInMap("serviceName")
         public String serviceName;
 
-        // 修改时间
         @NameInMap("updateTime")
         public String updateTime;
 
         public static ListServicesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListServicesResponseBodyData self = new ListServicesResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListServicesResponseBodyData setIsValid(Integer isValid) {
+            this.isValid = isValid;
+            return this;
+        }
+        public Integer getIsValid() {
+            return this.isValid;
         }
 
         public ListServicesResponseBodyData setServiceDescription(String serviceDescription) {

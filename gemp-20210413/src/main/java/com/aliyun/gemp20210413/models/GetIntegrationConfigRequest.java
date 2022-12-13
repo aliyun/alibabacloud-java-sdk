@@ -4,11 +4,9 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class GetIntegrationConfigRequest extends TeaModel {
-    // 幂等id
     @NameInMap("clientToken")
     public String clientToken;
 
-    // 集成配置id
     @NameInMap("integrationConfigId")
     public Long integrationConfigId;
 

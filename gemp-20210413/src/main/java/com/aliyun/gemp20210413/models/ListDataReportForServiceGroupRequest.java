@@ -4,15 +4,12 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ListDataReportForServiceGroupRequest extends TeaModel {
-    // 结束时间
     @NameInMap("endTime")
     public String endTime;
 
-    // 服务组名称
     @NameInMap("serviceGroupName")
     public String serviceGroupName;
 
-    // 开始时间
     @NameInMap("startTime")
     public String startTime;
 

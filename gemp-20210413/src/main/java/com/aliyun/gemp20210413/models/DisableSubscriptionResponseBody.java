@@ -4,6 +4,7 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class DisableSubscriptionResponseBody extends TeaModel {
+    // requestId
     @NameInMap("requestId")
     public String requestId;
 

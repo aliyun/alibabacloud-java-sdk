@@ -10,27 +10,21 @@ public class DataValue extends TeaModel {
     @NameInMap("description")
     public String description;
 
-    // 配置描述
     @NameInMap("configDescription")
     public String configDescription;
 
-    // 配置code
     @NameInMap("configCode")
     public String configCode;
 
-    // 配置父code
     @NameInMap("parentCode")
     public String parentCode;
 
-    // key (用于前后端值传递)
     @NameInMap("configKey")
     public String configKey;
 
-    // value (用于前端展示)
     @NameInMap("configValue")
     public String configValue;
 
-    // 是否必选
     @NameInMap("requirement")
     public Boolean requirement;
 

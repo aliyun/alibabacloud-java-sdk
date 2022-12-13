@@ -34,11 +34,9 @@ public class ListEscalationPlanServicesResponseBody extends TeaModel {
     }
 
     public static class ListEscalationPlanServicesResponseBodyData extends TeaModel {
-        // 范围类型
         @NameInMap("scope")
         public String scope;
 
-        // 范围对象id
         @NameInMap("scopeObjectId")
         public Long scopeObjectId;
 

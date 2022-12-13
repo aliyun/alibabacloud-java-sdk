@@ -4,19 +4,15 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ListIntegrationConfigTimelinesRequest extends TeaModel {
-    // 幂等参数
     @NameInMap("clientToken")
     public String clientToken;
 
-    // 集成配置id
     @NameInMap("integrationConfigId")
     public Long integrationConfigId;
 
-    // 分页参数
     @NameInMap("pageNumber")
     public Long pageNumber;
 
-    // 分页参数
     @NameInMap("pageSize")
     public Long pageSize;
 

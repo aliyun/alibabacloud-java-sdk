@@ -4,39 +4,31 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class CreateIncidentRequest extends TeaModel {
-    // 分派的用户ID
     @NameInMap("assignUserId")
     public Long assignUserId;
 
-    // 通知渠道     SMS 短信   EMAIL 邮件   PHONE  电话  WEIXIN_GROUP企微群 DING_GROUP 钉钉群
     @NameInMap("channels")
     public java.util.List<String> channels;
 
-    // 幂等UUID
     @NameInMap("clientToken")
     public String clientToken;
 
-    // 影响等级 高：HIGH 低 LOW
     @NameInMap("effect")
     public String effect;
 
-    // 事件描述
     @NameInMap("incidentDescription")
     public String incidentDescription;
 
-    // P1	事件级别 P1 P2 P3 P4
     @NameInMap("incidentLevel")
     public String incidentLevel;
 
-    // 事件标题
     @NameInMap("incidentTitle")
     public String incidentTitle;
 
-    // 关联服务ID
     @NameInMap("relatedServiceId")
     public Long relatedServiceId;
 
-    // 服务组Id
+    // 12000
     @NameInMap("serviceGroupId")
     public Long serviceGroupId;
 

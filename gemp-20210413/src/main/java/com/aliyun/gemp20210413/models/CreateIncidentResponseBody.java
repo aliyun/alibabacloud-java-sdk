@@ -34,7 +34,6 @@ public class CreateIncidentResponseBody extends TeaModel {
     }
 
     public static class CreateIncidentResponseBodyData extends TeaModel {
-        // 事件主健Id
         @NameInMap("incidentId")
         public Long incidentId;
 

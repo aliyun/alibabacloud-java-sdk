@@ -4,59 +4,45 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ListProblemsRequest extends TeaModel {
-    // 影响服务ID
     @NameInMap("affectServiceId")
     public Long affectServiceId;
 
-    // 幂等号
     @NameInMap("clientToken")
     public String clientToken;
 
-    // 发现结束时间
     @NameInMap("discoveryEndTime")
     public String discoveryEndTime;
 
-    // 发现开始时间
     @NameInMap("discoveryStartTime")
     public String discoveryStartTime;
 
-    // 主要处理人
     @NameInMap("mainHandlerId")
     public Long mainHandlerId;
 
-    // 当前页
     @NameInMap("pageNumber")
     public Long pageNumber;
 
-    // 页大小
     @NameInMap("pageSize")
     public Long pageSize;
 
-    // 故障等级 1=P1 2=P2 3=P3 4=P4
     @NameInMap("problemLevel")
     public String problemLevel;
 
-    // 故障状态  HANDLING   处理中 RECOVERED 已恢复  REPLAYING   复盘中  REPLAYED     已复盘 CANCEL        已取消
     @NameInMap("problemStatus")
     public String problemStatus;
 
-    // RESPONSIBLE 我负责的       PARTICIPATED 我参与的  ALL 全部
     @NameInMap("queryType")
     public String queryType;
 
-    // 复盘负责人
     @NameInMap("repeaterId")
     public Long repeaterId;
 
-    // 恢复结束时间
     @NameInMap("restoreEndTime")
     public String restoreEndTime;
 
-    // 恢复开始时间
     @NameInMap("restoreStartTime")
     public String restoreStartTime;
 
-    // 应急协同组
     @NameInMap("serviceGroupId")
     public Long serviceGroupId;
 

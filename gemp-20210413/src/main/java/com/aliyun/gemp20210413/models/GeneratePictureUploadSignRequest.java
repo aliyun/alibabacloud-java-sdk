@@ -4,15 +4,12 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class GeneratePictureUploadSignRequest extends TeaModel {
-    // 文件
     @NameInMap("files")
     public java.util.List<GeneratePictureUploadSignRequestFiles> files;
 
-    // 资源id
     @NameInMap("instanceId")
     public Long instanceId;
 
-    // 资源类型
     @NameInMap("instanceType")
     public String instanceType;
 
@@ -46,15 +43,12 @@ public class GeneratePictureUploadSignRequest extends TeaModel {
     }
 
     public static class GeneratePictureUploadSignRequestFiles extends TeaModel {
-        // 文件名称
         @NameInMap("fileName")
         public String fileName;
 
-        // 文件大小
         @NameInMap("fileSize")
         public Long fileSize;
 
-        // 文件类型
         @NameInMap("fileType")
         public String fileType;
 

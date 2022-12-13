@@ -4,19 +4,15 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ListDataReportForUserRequest extends TeaModel {
-    // 结束时间
     @NameInMap("endTime")
     public String endTime;
 
-    // 当前页
     @NameInMap("pageNumber")
     public Long pageNumber;
 
-    // 页大小
     @NameInMap("pageSize")
     public Long pageSize;
 
-    // 开始时间
     @NameInMap("startTime")
     public String startTime;
 

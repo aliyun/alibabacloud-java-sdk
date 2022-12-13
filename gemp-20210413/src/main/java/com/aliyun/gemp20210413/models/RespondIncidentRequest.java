@@ -4,11 +4,10 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class RespondIncidentRequest extends TeaModel {
-    // 幂等校验Id
     @NameInMap("clientToken")
     public String clientToken;
 
-    // 事件ID数组
+    // 影响程度
     @NameInMap("incidentIds")
     public java.util.List<Long> incidentIds;
 

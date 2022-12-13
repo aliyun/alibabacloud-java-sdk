@@ -15,19 +15,15 @@ public class ListSourceEventsResponseBody extends TeaModel {
     @NameInMap("lastRowKey")
     public String lastRowKey;
 
-    // 当前页
     @NameInMap("pageNumber")
     public Long pageNumber;
 
-    // 页大小
     @NameInMap("pageSize")
     public Long pageSize;
 
-    // 请求ID
     @NameInMap("requestId")
     public String requestId;
 
-    // 总条数
     @NameInMap("totalCount")
     public Long totalCount;
 
@@ -93,35 +89,27 @@ public class ListSourceEventsResponseBody extends TeaModel {
     }
 
     public static class ListSourceEventsResponseBodyData extends TeaModel {
-        // 告警内容json
         @NameInMap("eventJson")
         public String eventJson;
 
-        // 告警上报时间
         @NameInMap("eventTime")
         public String eventTime;
 
-        // 关联对象ID
         @NameInMap("instanceId")
         public Long instanceId;
 
-        // INCIDENT 事件、ALERT 报警、PROBLEM 故障
         @NameInMap("instanceType")
         public String instanceType;
 
-        // 监控告警源ID
         @NameInMap("monitorSourceId")
         public Long monitorSourceId;
 
-        // 监控告警源名称
         @NameInMap("monitorSourceName")
         public String monitorSourceName;
 
-        // 规则ID
         @NameInMap("routeRuleId")
         public Long routeRuleId;
 
-        // 租户ID
         @NameInMap("tenantRamId")
         public Long tenantRamId;
 

@@ -4,7 +4,7 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class CreateProblemTimelineResponseBody extends TeaModel {
-    // Object
+    // data
     @NameInMap("data")
     public CreateProblemTimelineResponseBodyData data;
 
@@ -34,7 +34,6 @@ public class CreateProblemTimelineResponseBody extends TeaModel {
     }
 
     public static class CreateProblemTimelineResponseBodyData extends TeaModel {
-        // 故障事件线id
         @NameInMap("problemTimelineId")
         public Long problemTimelineId;
 

@@ -4,11 +4,9 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class GetIncidentSubtotalCountRequest extends TeaModel {
-    // 幂等标识
     @NameInMap("clientToken")
     public String clientToken;
 
-    // 事件id列表
     @NameInMap("incidentIds")
     public java.util.List<Long> incidentIds;
 

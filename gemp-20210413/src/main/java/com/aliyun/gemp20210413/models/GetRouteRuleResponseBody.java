@@ -4,11 +4,9 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class GetRouteRuleResponseBody extends TeaModel {
-    // 规则详情
     @NameInMap("data")
     public GetRouteRuleResponseBodyData data;
 
-    // 请求ID
     @NameInMap("requestId")
     public String requestId;
 
@@ -34,15 +32,12 @@ public class GetRouteRuleResponseBody extends TeaModel {
     }
 
     public static class GetRouteRuleResponseBodyDataEventRouteChildRulesConditions extends TeaModel {
-        // 条件可以
         @NameInMap("key")
         public String key;
 
-        // 操作符
         @NameInMap("operationSymbol")
         public String operationSymbol;
 
-        // 匹配值
         @NameInMap("value")
         public String value;
 
@@ -78,37 +73,32 @@ public class GetRouteRuleResponseBody extends TeaModel {
     }
 
     public static class GetRouteRuleResponseBodyDataEventRouteChildRules extends TeaModel {
-        // 子条件计算关系，0-与，1-或
         @NameInMap("childConditionRelation")
         public Long childConditionRelation;
 
-        // 子规则ID
         @NameInMap("childRouteRuleId")
         public Long childRouteRuleId;
 
-        // 条件
         @NameInMap("conditions")
         public java.util.List<GetRouteRuleResponseBodyDataEventRouteChildRulesConditions> conditions;
 
-        // 是否有效得规则true有效 false无效
         @NameInMap("isValidChildRule")
         public Boolean isValidChildRule;
 
-        // 集成配置ID
         @NameInMap("monitorIntegrationConfigId")
         public Long monitorIntegrationConfigId;
 
-        // 监控源ID
         @NameInMap("monitorSourceId")
         public Long monitorSourceId;
 
-        // 监控源名称
         @NameInMap("monitorSourceName")
         public String monitorSourceName;
 
-        // 规则ID
         @NameInMap("parentRuleId")
         public Long parentRuleId;
+
+        @NameInMap("problemLevel")
+        public String problemLevel;
 
         public static GetRouteRuleResponseBodyDataEventRouteChildRules build(java.util.Map<String, ?> map) throws Exception {
             GetRouteRuleResponseBodyDataEventRouteChildRules self = new GetRouteRuleResponseBodyDataEventRouteChildRules();
@@ -179,82 +169,83 @@ public class GetRouteRuleResponseBody extends TeaModel {
             return this.parentRuleId;
         }
 
+        public GetRouteRuleResponseBodyDataEventRouteChildRules setProblemLevel(String problemLevel) {
+            this.problemLevel = problemLevel;
+            return this;
+        }
+        public String getProblemLevel() {
+            return this.problemLevel;
+        }
+
     }
 
     public static class GetRouteRuleResponseBodyData extends TeaModel {
-        // 事件分派对象ID（服务组ID 或用户ID）
         @NameInMap("assignObjectId")
         public Long assignObjectId;
 
-        // 通知对象名称
         @NameInMap("assignObjectName")
         public String assignObjectName;
 
-        // 事件分派对象类型 SERVICEGROUP 服务组  USER 单个用户
         @NameInMap("assignObjectType")
         public String assignObjectType;
 
-        // 子规则关系，0与，1或
         @NameInMap("childRuleRelation")
         public String childRuleRelation;
 
-        // 创建时间
+        @NameInMap("coverageProblemLevels")
+        public java.util.List<String> coverageProblemLevels;
+
         @NameInMap("createTime")
         public String createTime;
 
-        // 影响程度  LOW一般  HIGH-严重
         @NameInMap("effection")
         public String effection;
 
-        // 是否启用  DISABLE禁用 ENABLE 启用
         @NameInMap("enableStatus")
         public String enableStatus;
 
-        // 子规则
         @NameInMap("eventRouteChildRules")
         public java.util.List<GetRouteRuleResponseBodyDataEventRouteChildRules> eventRouteChildRules;
 
-        // 事件级别 P1 P2 P3 P4
         @NameInMap("incidentLevel")
         public String incidentLevel;
 
-        // 命中次数
         @NameInMap("matchCount")
         public Long matchCount;
 
-        // 通知渠道名称
         @NameInMap("notifyChannelNames")
         public java.util.List<String> notifyChannelNames;
 
-        // 通知渠道
         @NameInMap("notifyChannels")
         public java.util.List<String> notifyChannels;
 
-        // 关联服务ID
+        @NameInMap("problemEffectionServices")
+        public java.util.List<Long> problemEffectionServices;
+
+        @NameInMap("problemLevelGroup")
+        public java.util.Map<String, DataProblemLevelGroupValue> problemLevelGroup;
+
+        @NameInMap("relServiceDeleteType")
+        public Integer relServiceDeleteType;
+
         @NameInMap("relatedServiceId")
         public Long relatedServiceId;
 
-        // 关联服务名称
         @NameInMap("relatedServiceName")
         public String relatedServiceName;
 
-        // 规则ID
         @NameInMap("routeRuleId")
         public Long routeRuleId;
 
-        // 路由类型：INCIDENT 触发事件 ALERT 仅触发报警
         @NameInMap("routeType")
         public String routeType;
 
-        // 流转规则名字
         @NameInMap("ruleName")
         public String ruleName;
 
-        // 时间窗口
         @NameInMap("timeWindow")
         public Integer timeWindow;
 
-        // 修改时间
         @NameInMap("updateTime")
         public String updateTime;
 
@@ -293,6 +284,14 @@ public class GetRouteRuleResponseBody extends TeaModel {
         }
         public String getChildRuleRelation() {
             return this.childRuleRelation;
+        }
+
+        public GetRouteRuleResponseBodyData setCoverageProblemLevels(java.util.List<String> coverageProblemLevels) {
+            this.coverageProblemLevels = coverageProblemLevels;
+            return this;
+        }
+        public java.util.List<String> getCoverageProblemLevels() {
+            return this.coverageProblemLevels;
         }
 
         public GetRouteRuleResponseBodyData setCreateTime(String createTime) {
@@ -357,6 +356,30 @@ public class GetRouteRuleResponseBody extends TeaModel {
         }
         public java.util.List<String> getNotifyChannels() {
             return this.notifyChannels;
+        }
+
+        public GetRouteRuleResponseBodyData setProblemEffectionServices(java.util.List<Long> problemEffectionServices) {
+            this.problemEffectionServices = problemEffectionServices;
+            return this;
+        }
+        public java.util.List<Long> getProblemEffectionServices() {
+            return this.problemEffectionServices;
+        }
+
+        public GetRouteRuleResponseBodyData setProblemLevelGroup(java.util.Map<String, DataProblemLevelGroupValue> problemLevelGroup) {
+            this.problemLevelGroup = problemLevelGroup;
+            return this;
+        }
+        public java.util.Map<String, DataProblemLevelGroupValue> getProblemLevelGroup() {
+            return this.problemLevelGroup;
+        }
+
+        public GetRouteRuleResponseBodyData setRelServiceDeleteType(Integer relServiceDeleteType) {
+            this.relServiceDeleteType = relServiceDeleteType;
+            return this;
+        }
+        public Integer getRelServiceDeleteType() {
+            return this.relServiceDeleteType;
         }
 
         public GetRouteRuleResponseBodyData setRelatedServiceId(Long relatedServiceId) {

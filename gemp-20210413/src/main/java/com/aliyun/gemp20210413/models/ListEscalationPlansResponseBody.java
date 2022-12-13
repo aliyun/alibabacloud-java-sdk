@@ -8,11 +8,9 @@ public class ListEscalationPlansResponseBody extends TeaModel {
     @NameInMap("data")
     public java.util.List<ListEscalationPlansResponseBodyData> data;
 
-    // 分页参数
     @NameInMap("pageNumber")
     public Long pageNumber;
 
-    // 分页参数
     @NameInMap("pageSize")
     public Long pageSize;
 
@@ -20,7 +18,6 @@ public class ListEscalationPlansResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
-    // 总条数
     @NameInMap("totalCount")
     public Long totalCount;
 
@@ -70,15 +67,15 @@ public class ListEscalationPlansResponseBody extends TeaModel {
     }
 
     public static class ListEscalationPlansResponseBodyDataEscalationPlanScopeObjects extends TeaModel {
-        // 范围对象类型
         @NameInMap("scope")
         public String scope;
 
-        // 范围对象id（服务id）
+        @NameInMap("scopeObjectDeletedType")
+        public Integer scopeObjectDeletedType;
+
         @NameInMap("scopeObjectId")
         public Long scopeObjectId;
 
-        // 范围对象名称
         @NameInMap("scopeObjectName")
         public String scopeObjectName;
 
@@ -93,6 +90,14 @@ public class ListEscalationPlansResponseBody extends TeaModel {
         }
         public String getScope() {
             return this.scope;
+        }
+
+        public ListEscalationPlansResponseBodyDataEscalationPlanScopeObjects setScopeObjectDeletedType(Integer scopeObjectDeletedType) {
+            this.scopeObjectDeletedType = scopeObjectDeletedType;
+            return this;
+        }
+        public Integer getScopeObjectDeletedType() {
+            return this.scopeObjectDeletedType;
         }
 
         public ListEscalationPlansResponseBodyDataEscalationPlanScopeObjects setScopeObjectId(Long scopeObjectId) {
@@ -114,23 +119,18 @@ public class ListEscalationPlansResponseBody extends TeaModel {
     }
 
     public static class ListEscalationPlansResponseBodyData extends TeaModel {
-        // 升级计划id
         @NameInMap("escalationPlanId")
         public Long escalationPlanId;
 
-        // 升级计划名称
         @NameInMap("escalationPlanName")
         public String escalationPlanName;
 
-        // 升级计划范围对象
         @NameInMap("escalationPlanScopeObjects")
         public java.util.List<ListEscalationPlansResponseBodyDataEscalationPlanScopeObjects> escalationPlanScopeObjects;
 
-        // 修改时间
         @NameInMap("modifyTime")
         public String modifyTime;
 
-        // 启用ENABLE 禁用DISABLE
         @NameInMap("status")
         public String status;
 

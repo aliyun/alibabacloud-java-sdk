@@ -4,27 +4,21 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class GetSimilarIncidentStatisticsRequest extends TeaModel {
-    // 幂等标识
     @NameInMap("clientToken")
     public String clientToken;
 
-    // 触发时间
     @NameInMap("createTime")
     public String createTime;
 
-    // 事件告警内容
     @NameInMap("events")
     public java.util.List<String> events;
 
-    // 事件id
     @NameInMap("incidentId")
     public Long incidentId;
 
-    // 事件标题
     @NameInMap("incidentTitle")
     public String incidentTitle;
 
-    // 关联服务id
     @NameInMap("relatedServiceId")
     public Long relatedServiceId;
 

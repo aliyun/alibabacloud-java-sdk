@@ -4,47 +4,36 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class UpdateProblemMeasureRequest extends TeaModel {
-    // 验收标准
     @NameInMap("checkStandard")
     public String checkStandard;
 
-    // 验收人id
     @NameInMap("checkUserId")
     public Long checkUserId;
 
-    // 幂等校验token
     @NameInMap("clientToken")
     public String clientToken;
 
-    // 措施内容
     @NameInMap("content")
     public String content;
 
-    // 负责人id
     @NameInMap("directorId")
     public Long directorId;
 
-    // 措施Id
     @NameInMap("measureId")
     public Long measureId;
 
-    // 计划完成时间
     @NameInMap("planFinishTime")
     public String planFinishTime;
 
-    // 故障Id
     @NameInMap("problemId")
     public Long problemId;
 
-    // 跟踪人id
     @NameInMap("stalkerId")
     public Long stalkerId;
 
-    // 状态 IMPROVED 改进 2 未改进UNIMPROVED
     @NameInMap("status")
     public String status;
 
-    // 措施类型 码表 PROBLEM_REPLAY_IMPROVEMENT
     @NameInMap("type")
     public Integer type;
 

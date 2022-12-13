@@ -4,9 +4,11 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class CreateIntegrationConfigResponseBody extends TeaModel {
+    // data
     @NameInMap("data")
     public CreateIntegrationConfigResponseBodyData data;
 
+    // id of the request
     @NameInMap("requestId")
     public String requestId;
 
@@ -32,7 +34,6 @@ public class CreateIntegrationConfigResponseBody extends TeaModel {
     }
 
     public static class CreateIntegrationConfigResponseBodyData extends TeaModel {
-        // 集成配置id
         @NameInMap("integrationConfigId")
         public Long integrationConfigId;
 

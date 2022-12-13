@@ -7,11 +7,9 @@ public class ListProblemsResponseBody extends TeaModel {
     @NameInMap("data")
     public java.util.List<ListProblemsResponseBodyData> data;
 
-    // 当前页
     @NameInMap("pageNumber")
     public Long pageNumber;
 
-    // 页大小
     @NameInMap("pageSize")
     public Long pageSize;
 
@@ -19,7 +17,6 @@ public class ListProblemsResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
-    // 总条数
     @NameInMap("totalCount")
     public Long totalCount;
 
@@ -69,19 +66,15 @@ public class ListProblemsResponseBody extends TeaModel {
     }
 
     public static class ListProblemsResponseBodyDataAffectServices extends TeaModel {
-        // 服务描述
         @NameInMap("serviceDescription")
         public String serviceDescription;
 
-        // 影响服务ID
         @NameInMap("serviceId")
         public Long serviceId;
 
-        // 服务名字
         @NameInMap("serviceName")
         public String serviceName;
 
-        // 修改时间
         @NameInMap("updateTime")
         public String updateTime;
 
@@ -128,79 +121,66 @@ public class ListProblemsResponseBody extends TeaModel {
         @NameInMap("affectServices")
         public java.util.List<ListProblemsResponseBodyDataAffectServices> affectServices;
 
-        // 取消时间
         @NameInMap("cancelTime")
         public String cancelTime;
 
-        // 创建时间
         @NameInMap("createTime")
         public String createTime;
 
-        // 发现时间
         @NameInMap("discoverTime")
         public String discoverTime;
 
-        // 完结时间
         @NameInMap("finishTime")
         public String finishTime;
 
-        // 事件ID
         @NameInMap("incidentId")
         public Long incidentId;
 
-        // 是否手动
         @NameInMap("isManual")
         public Boolean isManual;
 
-        // 是否升级
         @NameInMap("isUpgrade")
         public Boolean isUpgrade;
 
-        // 主要处理人ID
         @NameInMap("mainHandlerId")
         public Long mainHandlerId;
 
-        // 主要处理人名称
+        @NameInMap("mainHandlerIsValid")
+        public Long mainHandlerIsValid;
+
         @NameInMap("mainHandlerName")
         public String mainHandlerName;
 
-        // 故障id
         @NameInMap("problemId")
         public Long problemId;
 
-        // 故障等级 1=P1 2=P2 3=P3 4=P4
         @NameInMap("problemLevel")
         public String problemLevel;
 
-        // 故障名称
         @NameInMap("problemName")
         public String problemName;
 
-        // 故障编号
         @NameInMap("problemNumber")
         public String problemNumber;
 
-        // 故障状态  HANDLING    处理中 RECOVERED  已恢复  REPLAYING   复盘中  REPLAYED     已复盘 CANCEL        已取消
         @NameInMap("problemStatus")
         public String problemStatus;
 
-        // 恢复时间
         @NameInMap("recoveryTime")
         public String recoveryTime;
 
-        // 关联服务ID
         @NameInMap("relatedServiceId")
         public String relatedServiceId;
 
-        // 复盘时间
         @NameInMap("replayTime")
         public String replayTime;
 
-        // 关联服务名称
+        @NameInMap("serviceDeletedType")
+        public Integer serviceDeletedType;
+
         @NameInMap("serviceName")
         public String serviceName;
 
-        // 修改时间
         @NameInMap("updateTime")
         public String updateTime;
 
@@ -281,6 +261,14 @@ public class ListProblemsResponseBody extends TeaModel {
             return this.mainHandlerId;
         }
 
+        public ListProblemsResponseBodyData setMainHandlerIsValid(Long mainHandlerIsValid) {
+            this.mainHandlerIsValid = mainHandlerIsValid;
+            return this;
+        }
+        public Long getMainHandlerIsValid() {
+            return this.mainHandlerIsValid;
+        }
+
         public ListProblemsResponseBodyData setMainHandlerName(String mainHandlerName) {
             this.mainHandlerName = mainHandlerName;
             return this;
@@ -351,6 +339,14 @@ public class ListProblemsResponseBody extends TeaModel {
         }
         public String getReplayTime() {
             return this.replayTime;
+        }
+
+        public ListProblemsResponseBodyData setServiceDeletedType(Integer serviceDeletedType) {
+            this.serviceDeletedType = serviceDeletedType;
+            return this;
+        }
+        public Integer getServiceDeletedType() {
+            return this.serviceDeletedType;
         }
 
         public ListProblemsResponseBodyData setServiceName(String serviceName) {

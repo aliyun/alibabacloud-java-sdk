@@ -4,7 +4,6 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class RefreshIntegrationConfigKeyRequest extends TeaModel {
-    // 幂等id
     @NameInMap("clientToken")
     public String clientToken;
 

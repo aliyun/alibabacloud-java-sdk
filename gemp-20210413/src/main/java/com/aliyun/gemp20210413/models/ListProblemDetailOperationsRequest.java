@@ -4,23 +4,18 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ListProblemDetailOperationsRequest extends TeaModel {
-    // 幂等校验
     @NameInMap("clientToken")
     public String clientToken;
 
-    // 时间排序
     @NameInMap("createTimeSort")
     public String createTimeSort;
 
-    // 页
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
-    // 行
     @NameInMap("pageSize")
     public Integer pageSize;
 
-    // 故障id
     @NameInMap("problemId")
     public Long problemId;
 

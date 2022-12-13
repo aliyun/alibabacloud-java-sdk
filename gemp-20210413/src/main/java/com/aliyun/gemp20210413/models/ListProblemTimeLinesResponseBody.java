@@ -33,17 +33,26 @@ public class ListProblemTimeLinesResponseBody extends TeaModel {
     }
 
     public static class ListProblemTimeLinesResponseBodyDataUsersInContent extends TeaModel {
-        // 用户id
+        @NameInMap("isValid")
+        public Long isValid;
+
         @NameInMap("userId")
         public Long userId;
 
-        // 用户名
         @NameInMap("username")
         public String username;
 
         public static ListProblemTimeLinesResponseBodyDataUsersInContent build(java.util.Map<String, ?> map) throws Exception {
             ListProblemTimeLinesResponseBodyDataUsersInContent self = new ListProblemTimeLinesResponseBodyDataUsersInContent();
             return TeaModel.build(map, self);
+        }
+
+        public ListProblemTimeLinesResponseBodyDataUsersInContent setIsValid(Long isValid) {
+            this.isValid = isValid;
+            return this;
+        }
+        public Long getIsValid() {
+            return this.isValid;
         }
 
         public ListProblemTimeLinesResponseBodyDataUsersInContent setUserId(Long userId) {
@@ -65,35 +74,27 @@ public class ListProblemTimeLinesResponseBody extends TeaModel {
     }
 
     public static class ListProblemTimeLinesResponseBodyData extends TeaModel {
-        // 内容
         @NameInMap("content")
         public String content;
 
-        // 创建时间
         @NameInMap("createTime")
         public String createTime;
 
-        // 是否是关键字 true是 false不是 默认 false
         @NameInMap("isKey")
         public Boolean isKey;
 
-        // 关键节点 码表:PROBLEM_KEY_NODE (逗号分隔)
         @NameInMap("keyNode")
         public String keyNode;
 
-        // 时间线id
         @NameInMap("problemTimelineId")
         public Long problemTimelineId;
 
-        // 展示时间
         @NameInMap("time")
         public String time;
 
-        // 修改时间
         @NameInMap("updateTime")
         public String updateTime;
 
-        // 内容中的用户信息
         @NameInMap("usersInContent")
         public java.util.List<ListProblemTimeLinesResponseBodyDataUsersInContent> usersInContent;
 

@@ -4,15 +4,12 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ListIncidentTimelinesRequest extends TeaModel {
-    // 幂等校验Id
     @NameInMap("clientToken")
     public String clientToken;
 
-    // 页
     @NameInMap("pageNumber")
     public Long pageNumber;
 
-    // 行
     @NameInMap("pageSize")
     public Long pageSize;
 

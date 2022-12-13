@@ -34,15 +34,12 @@ public class GeneratePictureUploadSignResponseBody extends TeaModel {
     }
 
     public static class GeneratePictureUploadSignResponseBodyDataFiles extends TeaModel {
-        // 文件名称
         @NameInMap("fileName")
         public String fileName;
 
-        // 文件大小
         @NameInMap("fileSize")
         public Long fileSize;
 
-        // 文件类型
         @NameInMap("fileType")
         public String fileType;
 

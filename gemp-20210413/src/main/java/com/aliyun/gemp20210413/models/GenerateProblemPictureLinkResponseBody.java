@@ -4,6 +4,7 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class GenerateProblemPictureLinkResponseBody extends TeaModel {
+    // data
     @NameInMap("data")
     public GenerateProblemPictureLinkResponseBodyData data;
 
@@ -37,7 +38,6 @@ public class GenerateProblemPictureLinkResponseBody extends TeaModel {
         @NameInMap("key")
         public String key;
 
-        // 图片链接
         @NameInMap("link")
         public String link;
 
@@ -65,7 +65,6 @@ public class GenerateProblemPictureLinkResponseBody extends TeaModel {
     }
 
     public static class GenerateProblemPictureLinkResponseBodyData extends TeaModel {
-        // 图片链接列表
         @NameInMap("links")
         public java.util.List<GenerateProblemPictureLinkResponseBodyDataLinks> links;
 

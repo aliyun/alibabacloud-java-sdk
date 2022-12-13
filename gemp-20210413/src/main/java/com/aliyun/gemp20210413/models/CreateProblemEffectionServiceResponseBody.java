@@ -4,9 +4,11 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class CreateProblemEffectionServiceResponseBody extends TeaModel {
+    // data
     @NameInMap("data")
     public CreateProblemEffectionServiceResponseBodyData data;
 
+    // id of the request
     @NameInMap("requestId")
     public String requestId;
 
@@ -32,7 +34,6 @@ public class CreateProblemEffectionServiceResponseBody extends TeaModel {
     }
 
     public static class CreateProblemEffectionServiceResponseBodyData extends TeaModel {
-        // 影响服务id
         @NameInMap("effectionServiceId")
         public Long effectionServiceId;
 

@@ -4,6 +4,7 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class RefreshIntegrationConfigKeyResponseBody extends TeaModel {
+    // data
     @NameInMap("data")
     public RefreshIntegrationConfigKeyResponseBodyData data;
 
@@ -33,7 +34,6 @@ public class RefreshIntegrationConfigKeyResponseBody extends TeaModel {
     }
 
     public static class RefreshIntegrationConfigKeyResponseBodyData extends TeaModel {
-        // 集成秘钥
         @NameInMap("key")
         public String key;
 

@@ -4,7 +4,6 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ListTrendForSourceEventResponseBody extends TeaModel {
-    // 统计列表
     @NameInMap("data")
     public java.util.List<ListTrendForSourceEventResponseBodyData> data;
 
@@ -34,23 +33,18 @@ public class ListTrendForSourceEventResponseBody extends TeaModel {
     }
 
     public static class ListTrendForSourceEventResponseBodyData extends TeaModel {
-        // 收敛率
         @NameInMap("convergenceRate")
         public String convergenceRate;
 
-        // 最大持续时长
         @NameInMap("maxSustainTime")
         public Long maxSustainTime;
 
-        // 是否跨天
         @NameInMap("skipDay")
         public Boolean skipDay;
 
-        // 按监控源分组统计数据
         @NameInMap("sourceEventsStatMap")
         public java.util.Map<String, ?> sourceEventsStatMap;
 
-        // 时间单位
         @NameInMap("unit")
         public String unit;
 

@@ -4,6 +4,7 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class UpdateIncidentResponseBody extends TeaModel {
+    // data
     @NameInMap("data")
     public UpdateIncidentResponseBodyData data;
 
@@ -33,7 +34,6 @@ public class UpdateIncidentResponseBody extends TeaModel {
     }
 
     public static class UpdateIncidentResponseBodyData extends TeaModel {
-        // 事件id
         @NameInMap("incidentId")
         public Long incidentId;
 

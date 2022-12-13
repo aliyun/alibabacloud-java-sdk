@@ -4,47 +4,36 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class UpdateSubscriptionRequest extends TeaModel {
-    // 结束时间
     @NameInMap("endTime")
     public String endTime;
 
-    // 订阅时效
     @NameInMap("expiredType")
     public String expiredType;
 
-    // 通知对象列表
     @NameInMap("notifyObjectList")
     public java.util.List<UpdateSubscriptionRequestNotifyObjectList> notifyObjectList;
 
-    // 通知对象类型
     @NameInMap("notifyObjectType")
     public String notifyObjectType;
 
-    // 通知策略列表
     @NameInMap("notifyStrategyList")
     public java.util.List<UpdateSubscriptionRequestNotifyStrategyList> notifyStrategyList;
 
-    // 时间段字符串
     @NameInMap("period")
     public String period;
 
-    // 订阅范围类型
     @NameInMap("scope")
     public String scope;
 
-    // 订阅范围列表
     @NameInMap("scopeObjectList")
     public java.util.List<UpdateSubscriptionRequestScopeObjectList> scopeObjectList;
 
-    // 开始时间
     @NameInMap("startTime")
     public String startTime;
 
-    // 主键
     @NameInMap("subscriptionId")
     public Long subscriptionId;
 
-    // 通知订阅名称
     @NameInMap("subscriptionTitle")
     public String subscriptionTitle;
 
@@ -142,11 +131,9 @@ public class UpdateSubscriptionRequest extends TeaModel {
     }
 
     public static class UpdateSubscriptionRequestNotifyObjectList extends TeaModel {
-        // 主键id
         @NameInMap("id")
         public Long id;
 
-        // 通知对象id
         @NameInMap("notifyObjectId")
         public Long notifyObjectId;
 
@@ -174,19 +161,15 @@ public class UpdateSubscriptionRequest extends TeaModel {
     }
 
     public static class UpdateSubscriptionRequestNotifyStrategyListStrategiesConditions extends TeaModel {
-        // 事件动作
         @NameInMap("action")
         public String action;
 
-        // 影响程度
         @NameInMap("effection")
         public String effection;
 
-        // 等级
         @NameInMap("level")
         public String level;
 
-        // 故障通知类型
         @NameInMap("problemNotifyType")
         public String problemNotifyType;
 
@@ -230,11 +213,9 @@ public class UpdateSubscriptionRequest extends TeaModel {
     }
 
     public static class UpdateSubscriptionRequestNotifyStrategyListStrategiesPeriodChannel extends TeaModel {
-        // 非工作时间
         @NameInMap("nonWorkday")
         public String nonWorkday;
 
-        // 工作时间
         @NameInMap("workday")
         public String workday;
 
@@ -262,19 +243,15 @@ public class UpdateSubscriptionRequest extends TeaModel {
     }
 
     public static class UpdateSubscriptionRequestNotifyStrategyListStrategies extends TeaModel {
-        // 故障等级
         @NameInMap("channels")
         public String channels;
 
-        // 影响程度
         @NameInMap("conditions")
         public java.util.List<UpdateSubscriptionRequestNotifyStrategyListStrategiesConditions> conditions;
 
-        // id
         @NameInMap("id")
         public String id;
 
-        // 分时段通知渠道
         @NameInMap("periodChannel")
         public UpdateSubscriptionRequestNotifyStrategyListStrategiesPeriodChannel periodChannel;
 
@@ -318,11 +295,9 @@ public class UpdateSubscriptionRequest extends TeaModel {
     }
 
     public static class UpdateSubscriptionRequestNotifyStrategyList extends TeaModel {
-        // 订阅实例类型，事件、报警、故障
         @NameInMap("instanceType")
         public Long instanceType;
 
-        // 通知策略
         @NameInMap("strategies")
         public java.util.List<UpdateSubscriptionRequestNotifyStrategyListStrategies> strategies;
 
@@ -350,11 +325,9 @@ public class UpdateSubscriptionRequest extends TeaModel {
     }
 
     public static class UpdateSubscriptionRequestScopeObjectList extends TeaModel {
-        // 主键id
         @NameInMap("id")
         public Long id;
 
-        // 订阅范围对象id
         @NameInMap("scopeObjectId")
         public Long scopeObjectId;
 

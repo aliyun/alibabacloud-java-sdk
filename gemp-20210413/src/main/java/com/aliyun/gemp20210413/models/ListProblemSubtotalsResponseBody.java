@@ -4,6 +4,7 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ListProblemSubtotalsResponseBody extends TeaModel {
+    // data
     @NameInMap("data")
     public java.util.List<ListProblemSubtotalsResponseBodyData> data;
 
@@ -33,23 +34,18 @@ public class ListProblemSubtotalsResponseBody extends TeaModel {
     }
 
     public static class ListProblemSubtotalsResponseBodyData extends TeaModel {
-        // 操作人
         @NameInMap("createRamName")
         public String createRamName;
 
-        // 创建时间
         @NameInMap("createTime")
         public String createTime;
 
-        // 人员id
         @NameInMap("createUserId")
         public Long createUserId;
 
-        // 操作人手机号
         @NameInMap("createUserPhone")
         public String createUserPhone;
 
-        // 描述
         @NameInMap("description")
         public String description;
 

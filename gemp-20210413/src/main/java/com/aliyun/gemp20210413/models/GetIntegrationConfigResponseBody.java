@@ -4,6 +4,7 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class GetIntegrationConfigResponseBody extends TeaModel {
+    // data
     @NameInMap("data")
     public GetIntegrationConfigResponseBodyData data;
 
@@ -33,31 +34,24 @@ public class GetIntegrationConfigResponseBody extends TeaModel {
     }
 
     public static class GetIntegrationConfigResponseBodyData extends TeaModel {
-        // 集成秘钥
         @NameInMap("accessKey")
         public String accessKey;
 
-        // 集成配置id、
         @NameInMap("integrationConfigId")
         public Long integrationConfigId;
 
-        // 是否接收报警
         @NameInMap("isReceivedEvent")
         public Boolean isReceivedEvent;
 
-        // 监控源id
         @NameInMap("monitorSourceId")
         public Long monitorSourceId;
 
-        // 监控源名称
         @NameInMap("monitorSourceName")
         public String monitorSourceName;
 
-        // 监控源简称
         @NameInMap("monitorSourceShortName")
         public String monitorSourceShortName;
 
-        // 集成配置状态，DISABLE 禁用，INTEGRATED 已集成，UNINTEGRATED未集成
         @NameInMap("status")
         public String status;
 

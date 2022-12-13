@@ -34,7 +34,6 @@ public class CreateEscalationPlanResponseBody extends TeaModel {
     }
 
     public static class CreateEscalationPlanResponseBodyData extends TeaModel {
-        // 升级计划id
         @NameInMap("escalationPlanId")
         public Long escalationPlanId;
 

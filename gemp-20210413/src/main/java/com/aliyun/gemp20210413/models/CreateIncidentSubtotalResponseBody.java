@@ -4,6 +4,7 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class CreateIncidentSubtotalResponseBody extends TeaModel {
+    // data
     @NameInMap("data")
     public CreateIncidentSubtotalResponseBodyData data;
 
@@ -33,7 +34,6 @@ public class CreateIncidentSubtotalResponseBody extends TeaModel {
     }
 
     public static class CreateIncidentSubtotalResponseBodyData extends TeaModel {
-        // 小计Id
         @NameInMap("subtotalId")
         public Long subtotalId;
 

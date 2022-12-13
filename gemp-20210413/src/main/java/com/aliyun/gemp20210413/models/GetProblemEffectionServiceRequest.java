@@ -8,11 +8,9 @@ public class GetProblemEffectionServiceRequest extends TeaModel {
     @NameInMap("clientToken")
     public String clientToken;
 
-    // id主键
     @NameInMap("effectionServiceId")
     public Long effectionServiceId;
 
-    // 故障id
     @NameInMap("problemId")
     public Long problemId;
 

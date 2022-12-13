@@ -8,27 +8,21 @@ public class CreateProblemEffectionServiceRequest extends TeaModel {
     @NameInMap("clientToken")
     public String clientToken;
 
-    // 影响描述
     @NameInMap("description")
     public String description;
 
-    // 影响等级
     @NameInMap("level")
     public String level;
 
-    // 图片地址
     @NameInMap("pictureUrl")
     public java.util.List<String> pictureUrl;
 
-    // 故障id
     @NameInMap("problemId")
     public Long problemId;
 
-    // 影响服务id
     @NameInMap("serviceId")
     public Long serviceId;
 
-    // 影响状态 0 未恢复 1已恢复
     @NameInMap("status")
     public String status;
 

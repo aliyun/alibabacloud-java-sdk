@@ -8,11 +8,9 @@ public class DeleteProblemEffectionServiceRequest extends TeaModel {
     @NameInMap("clientToken")
     public String clientToken;
 
-    // 影响服务ID
     @NameInMap("effectionServiceId")
     public Long effectionServiceId;
 
-    // 故障id
     @NameInMap("problemId")
     public Long problemId;
 

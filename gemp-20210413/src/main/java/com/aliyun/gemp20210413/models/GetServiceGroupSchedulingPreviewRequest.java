@@ -4,31 +4,24 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class GetServiceGroupSchedulingPreviewRequest extends TeaModel {
-    // 幂等号
     @NameInMap("clientToken")
     public String clientToken;
 
-    // 排班结束时间
     @NameInMap("endTime")
     public String endTime;
 
-    // 快速排班
     @NameInMap("fastScheduling")
     public GetServiceGroupSchedulingPreviewRequestFastScheduling fastScheduling;
 
-    // 精细排
     @NameInMap("fineScheduling")
     public GetServiceGroupSchedulingPreviewRequestFineScheduling fineScheduling;
 
-    // 排班方式 FAST 快速排班 FINE 精细排班
     @NameInMap("schedulingWay")
     public String schedulingWay;
 
-    // 服务组ID
     @NameInMap("serviceGroupId")
     public Long serviceGroupId;
 
-    // 排班开始时间
     @NameInMap("startTime")
     public String startTime;
 
@@ -94,11 +87,9 @@ public class GetServiceGroupSchedulingPreviewRequest extends TeaModel {
     }
 
     public static class GetServiceGroupSchedulingPreviewRequestFastSchedulingSchedulingUsers extends TeaModel {
-        // 排班顺序
         @NameInMap("schedulingOrder")
         public Integer schedulingOrder;
 
-        // 轮班用户ID
         @NameInMap("schedulingUserId")
         public Long schedulingUserId;
 
@@ -126,19 +117,17 @@ public class GetServiceGroupSchedulingPreviewRequest extends TeaModel {
     }
 
     public static class GetServiceGroupSchedulingPreviewRequestFastScheduling extends TeaModel {
-        // 值班方案 dutyPlan FAST_CHOICE 快速选择 CUSTOM 自定义
+        // FAST_CHOICE
         @NameInMap("dutyPlan")
         public String dutyPlan;
 
-        // 快速轮班用户
         @NameInMap("schedulingUsers")
         public java.util.List<GetServiceGroupSchedulingPreviewRequestFastSchedulingSchedulingUsers> schedulingUsers;
 
-        // 每人排班时长
         @NameInMap("singleDuration")
         public Integer singleDuration;
 
-        // 每人排班时长单位 HOUR 小时 DAY 天
+        // DAY
         @NameInMap("singleDurationUnit")
         public String singleDurationUnit;
 
@@ -182,19 +171,15 @@ public class GetServiceGroupSchedulingPreviewRequest extends TeaModel {
     }
 
     public static class GetServiceGroupSchedulingPreviewRequestFineSchedulingSchedulingFineShifts extends TeaModel {
-        // 排班结束时间
         @NameInMap("schedulingEndTime")
         public String schedulingEndTime;
 
-        // 排班顺序
         @NameInMap("schedulingOrder")
         public Long schedulingOrder;
 
-        // 排班开始时间
         @NameInMap("schedulingStartTime")
         public String schedulingStartTime;
 
-        // 班次名称
         @NameInMap("shiftName")
         public String shiftName;
 
@@ -238,19 +223,15 @@ public class GetServiceGroupSchedulingPreviewRequest extends TeaModel {
     }
 
     public static class GetServiceGroupSchedulingPreviewRequestFineScheduling extends TeaModel {
-        // 循环周期
         @NameInMap("period")
         public Integer period;
 
-        // 循环周期单位 HOUR 小时 DAY 天
         @NameInMap("periodUnit")
         public String periodUnit;
 
-        // 精细排班班次人员信息
         @NameInMap("schedulingFineShifts")
         public java.util.List<GetServiceGroupSchedulingPreviewRequestFineSchedulingSchedulingFineShifts> schedulingFineShifts;
 
-        // 班次类型 MORNING_NIGHT 早晚班 MORNING_NOON_NIGHT 早中晚班 CUSTOM 自定义
         @NameInMap("shiftType")
         public String shiftType;
 

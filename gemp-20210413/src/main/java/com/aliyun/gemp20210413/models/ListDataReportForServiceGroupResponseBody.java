@@ -4,15 +4,12 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ListDataReportForServiceGroupResponseBody extends TeaModel {
-    // 统计数据
     @NameInMap("data")
     public java.util.List<ListDataReportForServiceGroupResponseBodyData> data;
 
-    // 当前页
     @NameInMap("pageNumber")
     public Long pageNumber;
 
-    // 页大小
     @NameInMap("pageSIze")
     public Long pageSIze;
 
@@ -20,7 +17,6 @@ public class ListDataReportForServiceGroupResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
-    // 总数
     @NameInMap("totalCount")
     public Long totalCount;
 
@@ -70,19 +66,15 @@ public class ListDataReportForServiceGroupResponseBody extends TeaModel {
     }
 
     public static class ListDataReportForServiceGroupResponseBodyData extends TeaModel {
-        // 升级事件数量
         @NameInMap("escalationIncidentCount")
         public Long escalationIncidentCount;
 
-        // 事件完结数
         @NameInMap("finishIncidentCount")
         public Long finishIncidentCount;
 
-        // 完结率
         @NameInMap("finishProportion")
         public String finishProportion;
 
-        // 事件数量
         @NameInMap("incidentCount")
         public Long incidentCount;
 
@@ -94,19 +86,15 @@ public class ListDataReportForServiceGroupResponseBody extends TeaModel {
         @NameInMap("meanTimeToRepair")
         public Long meanTimeToRepair;
 
-        // 服务组ID
         @NameInMap("serviceGroupId")
         public Long serviceGroupId;
 
-        // 服务组名字
         @NameInMap("serviceGroupName")
         public String serviceGroupName;
 
-        // 未响应升级事件数量
         @NameInMap("unAcknowledgedEscalationIncidentCount")
         public Long unAcknowledgedEscalationIncidentCount;
 
-        // 未完成升级事件数量
         @NameInMap("unFinishEscalationIncidentCount")
         public Long unFinishEscalationIncidentCount;
 

@@ -4,23 +4,18 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ListAlertsResponseBody extends TeaModel {
-    // 报警列表
     @NameInMap("data")
     public java.util.List<ListAlertsResponseBodyData> data;
 
-    // 当前页
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
-    // 页的大小
     @NameInMap("pageSize")
     public Integer pageSize;
 
-    // 请求ID
     @NameInMap("requestId")
     public String requestId;
 
-    // 总条数
     @NameInMap("totalCount")
     public Long totalCount;
 
@@ -70,47 +65,45 @@ public class ListAlertsResponseBody extends TeaModel {
     }
 
     public static class ListAlertsResponseBodyData extends TeaModel {
-        // 报警ID
         @NameInMap("alertId")
         public Long alertId;
 
-        // 告警优先级  1，2，3，4  对应 p1,p2,p3,p4
         @NameInMap("alertLevel")
         public String alertLevel;
 
-        // 报警编号
         @NameInMap("alertNumber")
         public String alertNumber;
 
-        // 报警源
         @NameInMap("alertSourceName")
         public String alertSourceName;
 
-        // 创建时间
         @NameInMap("createTime")
         public String createTime;
 
-        // 第一次告警上报时间
         @NameInMap("firstEventTime")
         public String firstEventTime;
 
-        // 关联服务名称
+        @NameInMap("monitorSourceName")
+        public String monitorSourceName;
+
+        @NameInMap("relServiceDeleteType")
+        public Integer relServiceDeleteType;
+
         @NameInMap("relatedServiceName")
         public String relatedServiceName;
 
-        // 关联流转规则ID
+        @NameInMap("routeRuleDeleteType")
+        public Integer routeRuleDeleteType;
+
         @NameInMap("routeRuleId")
         public Long routeRuleId;
 
-        // 流转规则名字
         @NameInMap("routeRuleName")
         public String routeRuleName;
 
-        // 收敛量
         @NameInMap("sourceEventCount")
         public Long sourceEventCount;
 
-        // 报警标题
         @NameInMap("title")
         public String title;
 
@@ -167,12 +160,36 @@ public class ListAlertsResponseBody extends TeaModel {
             return this.firstEventTime;
         }
 
+        public ListAlertsResponseBodyData setMonitorSourceName(String monitorSourceName) {
+            this.monitorSourceName = monitorSourceName;
+            return this;
+        }
+        public String getMonitorSourceName() {
+            return this.monitorSourceName;
+        }
+
+        public ListAlertsResponseBodyData setRelServiceDeleteType(Integer relServiceDeleteType) {
+            this.relServiceDeleteType = relServiceDeleteType;
+            return this;
+        }
+        public Integer getRelServiceDeleteType() {
+            return this.relServiceDeleteType;
+        }
+
         public ListAlertsResponseBodyData setRelatedServiceName(String relatedServiceName) {
             this.relatedServiceName = relatedServiceName;
             return this;
         }
         public String getRelatedServiceName() {
             return this.relatedServiceName;
+        }
+
+        public ListAlertsResponseBodyData setRouteRuleDeleteType(Integer routeRuleDeleteType) {
+            this.routeRuleDeleteType = routeRuleDeleteType;
+            return this;
+        }
+        public Integer getRouteRuleDeleteType() {
+            return this.routeRuleDeleteType;
         }
 
         public ListAlertsResponseBodyData setRouteRuleId(Long routeRuleId) {

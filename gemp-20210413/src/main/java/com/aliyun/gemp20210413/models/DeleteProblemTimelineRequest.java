@@ -4,15 +4,12 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class DeleteProblemTimelineRequest extends TeaModel {
-    // clientToken
     @NameInMap("clientToken")
     public String clientToken;
 
-    // 故障id
     @NameInMap("problemId")
     public Long problemId;
 
-    // ID
     @NameInMap("problemTimelineId")
     public Long problemTimelineId;
 

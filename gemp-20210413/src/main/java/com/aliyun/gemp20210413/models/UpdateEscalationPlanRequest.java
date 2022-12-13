@@ -8,23 +8,18 @@ public class UpdateEscalationPlanRequest extends TeaModel {
     @NameInMap("clientToken")
     public String clientToken;
 
-    // 升级计划描述
     @NameInMap("escalationPlanDescription")
     public String escalationPlanDescription;
 
-    // 升级计划id
     @NameInMap("escalationPlanId")
     public Long escalationPlanId;
 
-    // 升级计划名称
     @NameInMap("escalationPlanName")
     public String escalationPlanName;
 
-    // 升级计划规则
     @NameInMap("escalationPlanRules")
     public java.util.List<UpdateEscalationPlanRequestEscalationPlanRules> escalationPlanRules;
 
-    // 关联范围列表（服务）
     @NameInMap("escalationPlanScopeObjects")
     public java.util.List<UpdateEscalationPlanRequestEscalationPlanScopeObjects> escalationPlanScopeObjects;
 
@@ -114,23 +109,18 @@ public class UpdateEscalationPlanRequest extends TeaModel {
     }
 
     public static class UpdateEscalationPlanRequestEscalationPlanRulesEscalationPlanStrategies extends TeaModel {
-        // 是否支持群通知
         @NameInMap("enableWebhook")
         public Boolean enableWebhook;
 
-        // 通知渠道
         @NameInMap("noticeChannels")
         public java.util.List<String> noticeChannels;
 
-        // 通知对象id
         @NameInMap("noticeObjects")
         public java.util.List<Long> noticeObjects;
 
-        // 通知时间
         @NameInMap("noticeTime")
         public Long noticeTime;
 
-        // 服务组id
         @NameInMap("serviceGroupIds")
         public java.util.List<Long> serviceGroupIds;
 
@@ -182,19 +172,15 @@ public class UpdateEscalationPlanRequest extends TeaModel {
     }
 
     public static class UpdateEscalationPlanRequestEscalationPlanRules extends TeaModel {
-        // 升级计划条件列表
         @NameInMap("escalationPlanConditions")
         public java.util.List<UpdateEscalationPlanRequestEscalationPlanRulesEscalationPlanConditions> escalationPlanConditions;
 
-        // 升级策略列表
         @NameInMap("escalationPlanStrategies")
         public java.util.List<UpdateEscalationPlanRequestEscalationPlanRulesEscalationPlanStrategies> escalationPlanStrategies;
 
-        // UN_ACKNOWLEDGE 未响应 UN_FINISH 未完结
         @NameInMap("escalationPlanType")
         public String escalationPlanType;
 
-        // 主键
         @NameInMap("id")
         public Long id;
 
@@ -238,15 +224,12 @@ public class UpdateEscalationPlanRequest extends TeaModel {
     }
 
     public static class UpdateEscalationPlanRequestEscalationPlanScopeObjects extends TeaModel {
-        // 主键
         @NameInMap("id")
         public Long id;
 
-        // 范围对象类型
         @NameInMap("scope")
         public String scope;
 
-        // 范围对象id
         @NameInMap("scopeObjectId")
         public Long scopeObjectId;
 

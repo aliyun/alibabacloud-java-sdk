@@ -4,35 +4,27 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ListServiceGroupsRequest extends TeaModel {
-    // 幂等号
     @NameInMap("clientToken")
     public String clientToken;
 
-    // 是否已经排班
     @NameInMap("isScheduled")
     public Boolean isScheduled;
 
-    // 是否根据排班状态排序
     @NameInMap("orderByScheduleStatus")
     public Boolean orderByScheduleStatus;
 
-    // 当前页
     @NameInMap("pageNumber")
     public Long pageNumber;
 
-    // 页大小
     @NameInMap("pageSize")
     public Long pageSize;
 
-    // 搜索名称
     @NameInMap("queryName")
     public String queryName;
 
-    // 搜索类型。USER用户 SERVICEGROUP服务组
     @NameInMap("queryType")
     public String queryType;
 
-    // 用户ID
     @NameInMap("userId")
     public Long userId;
 

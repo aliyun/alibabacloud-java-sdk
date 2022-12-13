@@ -4,6 +4,7 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ListIntegrationConfigTimelinesResponseBody extends TeaModel {
+    // data
     @NameInMap("data")
     public java.util.List<ListIntegrationConfigTimelinesResponseBodyData> data;
 
@@ -69,15 +70,12 @@ public class ListIntegrationConfigTimelinesResponseBody extends TeaModel {
     }
 
     public static class ListIntegrationConfigTimelinesResponseBodyData extends TeaModel {
-        // 创建时间
         @NameInMap("createTime")
         public String createTime;
 
-        // 描述
         @NameInMap("description")
         public String description;
 
-        // 主题
         @NameInMap("title")
         public String title;
 

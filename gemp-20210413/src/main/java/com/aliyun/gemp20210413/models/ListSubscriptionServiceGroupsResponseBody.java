@@ -4,6 +4,7 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ListSubscriptionServiceGroupsResponseBody extends TeaModel {
+    // data
     @NameInMap("data")
     public java.util.List<ListSubscriptionServiceGroupsResponseBodyData> data;
 
@@ -33,15 +34,12 @@ public class ListSubscriptionServiceGroupsResponseBody extends TeaModel {
     }
 
     public static class ListSubscriptionServiceGroupsResponseBodyData extends TeaModel {
-        // 服务组描述
         @NameInMap("serviceGroupDescription")
         public String serviceGroupDescription;
 
-        // 主键
         @NameInMap("serviceId")
         public Long serviceId;
 
-        // 服务组名称
         @NameInMap("serviceName")
         public String serviceName;
 

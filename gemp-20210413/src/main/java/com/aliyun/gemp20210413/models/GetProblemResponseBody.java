@@ -4,11 +4,9 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class GetProblemResponseBody extends TeaModel {
-    // 详情
     @NameInMap("data")
     public GetProblemResponseBodyData data;
 
-    // 请求ID
     @NameInMap("requestId")
     public String requestId;
 
@@ -34,19 +32,15 @@ public class GetProblemResponseBody extends TeaModel {
     }
 
     public static class GetProblemResponseBodyDataCancelProblemOperateLogs extends TeaModel {
-        // 动作名称
         @NameInMap("actionName")
         public String actionName;
 
-        // 操作时间
         @NameInMap("actionTime")
         public String actionTime;
 
-        // 操作人
         @NameInMap("operator")
         public String operator;
 
-        // 用户ID
         @NameInMap("userId")
         public Long userId;
 
@@ -90,17 +84,26 @@ public class GetProblemResponseBody extends TeaModel {
     }
 
     public static class GetProblemResponseBodyDataCoordinationGroups extends TeaModel {
-        // 服务组ID
+        @NameInMap("isValid")
+        public Long isValid;
+
         @NameInMap("serviceGroupId")
         public Long serviceGroupId;
 
-        // 服务组名字
         @NameInMap("serviceGroupName")
         public String serviceGroupName;
 
         public static GetProblemResponseBodyDataCoordinationGroups build(java.util.Map<String, ?> map) throws Exception {
             GetProblemResponseBodyDataCoordinationGroups self = new GetProblemResponseBodyDataCoordinationGroups();
             return TeaModel.build(map, self);
+        }
+
+        public GetProblemResponseBodyDataCoordinationGroups setIsValid(Long isValid) {
+            this.isValid = isValid;
+            return this;
+        }
+        public Long getIsValid() {
+            return this.isValid;
         }
 
         public GetProblemResponseBodyDataCoordinationGroups setServiceGroupId(Long serviceGroupId) {
@@ -122,23 +125,21 @@ public class GetProblemResponseBody extends TeaModel {
     }
 
     public static class GetProblemResponseBodyDataEffectionServices extends TeaModel {
-        // 影响描述
         @NameInMap("description")
         public String description;
 
-        // 影响等级 P1 . P2 P3 P4
         @NameInMap("effectionLevel")
         public Long effectionLevel;
 
-        // 服务ID
         @NameInMap("effectionServiceId")
         public Long effectionServiceId;
 
-        // 影响服务状态  RECOVERED 已经恢复 ,UN_RECOVERED 未恢复
         @NameInMap("effectionStatus")
         public Integer effectionStatus;
 
-        // 服务名称
+        @NameInMap("serviceDeleteType")
+        public Integer serviceDeleteType;
+
         @NameInMap("serviceName")
         public String serviceName;
 
@@ -179,6 +180,14 @@ public class GetProblemResponseBody extends TeaModel {
             return this.effectionStatus;
         }
 
+        public GetProblemResponseBodyDataEffectionServices setServiceDeleteType(Integer serviceDeleteType) {
+            this.serviceDeleteType = serviceDeleteType;
+            return this;
+        }
+        public Integer getServiceDeleteType() {
+            return this.serviceDeleteType;
+        }
+
         public GetProblemResponseBodyDataEffectionServices setServiceName(String serviceName) {
             this.serviceName = serviceName;
             return this;
@@ -190,21 +199,20 @@ public class GetProblemResponseBody extends TeaModel {
     }
 
     public static class GetProblemResponseBodyDataHandingProblemOperateLogs extends TeaModel {
-        // 动作名称
         @NameInMap("actionName")
         public String actionName;
 
-        // 操作时间
         @NameInMap("actionTime")
         public String actionTime;
 
-        // 操作人
         @NameInMap("operator")
         public String operator;
 
-        // 用户id
         @NameInMap("userId")
         public Long userId;
+
+        @NameInMap("userIsValid")
+        public Long userIsValid;
 
         public static GetProblemResponseBodyDataHandingProblemOperateLogs build(java.util.Map<String, ?> map) throws Exception {
             GetProblemResponseBodyDataHandingProblemOperateLogs self = new GetProblemResponseBodyDataHandingProblemOperateLogs();
@@ -243,24 +251,31 @@ public class GetProblemResponseBody extends TeaModel {
             return this.userId;
         }
 
+        public GetProblemResponseBodyDataHandingProblemOperateLogs setUserIsValid(Long userIsValid) {
+            this.userIsValid = userIsValid;
+            return this;
+        }
+        public Long getUserIsValid() {
+            return this.userIsValid;
+        }
+
     }
 
     public static class GetProblemResponseBodyDataReplayProblemOperateLogs extends TeaModel {
-        // 动作名称
         @NameInMap("actionName")
         public String actionName;
 
-        // 操作时间
         @NameInMap("actionTime")
         public String actionTime;
 
-        // 操作人
         @NameInMap("operator")
         public String operator;
 
-        // 用户id
         @NameInMap("userId")
         public Long userId;
+
+        @NameInMap("userIsValid")
+        public Long userIsValid;
 
         public static GetProblemResponseBodyDataReplayProblemOperateLogs build(java.util.Map<String, ?> map) throws Exception {
             GetProblemResponseBodyDataReplayProblemOperateLogs self = new GetProblemResponseBodyDataReplayProblemOperateLogs();
@@ -299,24 +314,31 @@ public class GetProblemResponseBody extends TeaModel {
             return this.userId;
         }
 
+        public GetProblemResponseBodyDataReplayProblemOperateLogs setUserIsValid(Long userIsValid) {
+            this.userIsValid = userIsValid;
+            return this;
+        }
+        public Long getUserIsValid() {
+            return this.userIsValid;
+        }
+
     }
 
     public static class GetProblemResponseBodyDataReplayingProblemOperateLogs extends TeaModel {
-        // 动作名称
         @NameInMap("actionName")
         public String actionName;
 
-        // 操作时间
         @NameInMap("actionTime")
         public String actionTime;
 
-        // 操作人
         @NameInMap("operator")
         public String operator;
 
-        // 用户id
         @NameInMap("userId")
         public Long userId;
+
+        @NameInMap("userIsValid")
+        public Long userIsValid;
 
         public static GetProblemResponseBodyDataReplayingProblemOperateLogs build(java.util.Map<String, ?> map) throws Exception {
             GetProblemResponseBodyDataReplayingProblemOperateLogs self = new GetProblemResponseBodyDataReplayingProblemOperateLogs();
@@ -355,24 +377,31 @@ public class GetProblemResponseBody extends TeaModel {
             return this.userId;
         }
 
+        public GetProblemResponseBodyDataReplayingProblemOperateLogs setUserIsValid(Long userIsValid) {
+            this.userIsValid = userIsValid;
+            return this;
+        }
+        public Long getUserIsValid() {
+            return this.userIsValid;
+        }
+
     }
 
     public static class GetProblemResponseBodyDataRestoredProblemOperateLogs extends TeaModel {
-        // 动作名称
         @NameInMap("actionName")
         public String actionName;
 
-        // 操作时间
         @NameInMap("actionTime")
         public String actionTime;
 
-        // 操作人
         @NameInMap("operator")
         public String operator;
 
-        // 用户id
         @NameInMap("userId")
         public Long userId;
+
+        @NameInMap("userIsValid")
+        public Long userIsValid;
 
         public static GetProblemResponseBodyDataRestoredProblemOperateLogs build(java.util.Map<String, ?> map) throws Exception {
             GetProblemResponseBodyDataRestoredProblemOperateLogs self = new GetProblemResponseBodyDataRestoredProblemOperateLogs();
@@ -411,10 +440,17 @@ public class GetProblemResponseBody extends TeaModel {
             return this.userId;
         }
 
+        public GetProblemResponseBodyDataRestoredProblemOperateLogs setUserIsValid(Long userIsValid) {
+            this.userIsValid = userIsValid;
+            return this;
+        }
+        public Long getUserIsValid() {
+            return this.userIsValid;
+        }
+
     }
 
     public static class GetProblemResponseBodyDataTimelines extends TeaModel {
-        // 关键节点 码表:PROBLEM_KEY_NODE (逗号分隔)
         @NameInMap("keyNode")
         public String keyNode;
 
@@ -434,67 +470,54 @@ public class GetProblemResponseBody extends TeaModel {
     }
 
     public static class GetProblemResponseBodyData extends TeaModel {
-        // 已取消故障操作日志
         @NameInMap("cancelProblemOperateLogs")
         public java.util.List<GetProblemResponseBodyDataCancelProblemOperateLogs> cancelProblemOperateLogs;
 
-        // 取消原因
         @NameInMap("cancelReason")
         public Long cancelReason;
 
-        // 取消原因描述
         @NameInMap("cancelReasonDescription")
         public String cancelReasonDescription;
 
-        // 应急协同组
         @NameInMap("coordinationGroups")
         public java.util.List<GetProblemResponseBodyDataCoordinationGroups> coordinationGroups;
 
-        // 创建时间
         @NameInMap("createTime")
         public String createTime;
 
-        // 发现时间
         @NameInMap("discoverTime")
         public String discoverTime;
 
-        // 持续时间
         @NameInMap("durationTime")
         public Long durationTime;
 
-        // 影响服务
         @NameInMap("effectionServices")
         public java.util.List<GetProblemResponseBodyDataEffectionServices> effectionServices;
 
-        // 舆情反馈
         @NameInMap("feedback")
         public String feedback;
 
-        // 处理中故障操作日志
         @NameInMap("handingProblemOperateLogs")
         public java.util.List<GetProblemResponseBodyDataHandingProblemOperateLogs> handingProblemOperateLogs;
 
-        // 事件id
         @NameInMap("incidentId")
         public Long incidentId;
 
-        // 事件编号
         @NameInMap("incidentNumber")
         public String incidentNumber;
 
-        // 主要处理人
         @NameInMap("mainHandler")
         public Long mainHandler;
 
-        // 主要处理人ID
         @NameInMap("mainHandlerId")
         public Long mainHandlerId;
 
-        // 主要处理人手机号
+        @NameInMap("mainHandlerIsValid")
+        public Long mainHandlerIsValid;
+
         @NameInMap("mainHandlerPhone")
         public String mainHandlerPhone;
 
-        // 初步原因
         @NameInMap("preliminaryReason")
         public String preliminaryReason;
 
@@ -502,55 +525,46 @@ public class GetProblemResponseBody extends TeaModel {
         @NameInMap("problemId")
         public Long problemId;
 
-        // 故障等级 P1 P2 P3 P4
         @NameInMap("problemLevel")
         public Integer problemLevel;
 
-        // 故障名称
         @NameInMap("problemName")
         public String problemName;
 
-        // 故障编号
         @NameInMap("problemNumber")
         public String problemNumber;
 
-        // 故障状态  HANDLING    处理中 RECOVERED  已恢复  REPLAYING   复盘中  REPLAYED     已复盘 CANCEL        已取消
         @NameInMap("problemStatus")
         public Integer problemStatus;
 
-        // 进展摘要
         @NameInMap("progressSummary")
         public String progressSummary;
 
-        // 进展摘要富文本id
         @NameInMap("progressSummaryRichTextId")
         public Long progressSummaryRichTextId;
 
-        // 恢复时间
         @NameInMap("recoveryTime")
         public String recoveryTime;
 
-        // 关联服务ID
         @NameInMap("relatedServiceId")
         public Long relatedServiceId;
 
-        // 已复盘故障操作日志
         @NameInMap("replayProblemOperateLogs")
         public java.util.List<GetProblemResponseBodyDataReplayProblemOperateLogs> replayProblemOperateLogs;
 
-        // 复盘中故障操作日志
         @NameInMap("replayingProblemOperateLogs")
         public java.util.List<GetProblemResponseBodyDataReplayingProblemOperateLogs> replayingProblemOperateLogs;
 
-        // 已恢复故障操作日志
         @NameInMap("restoredProblemOperateLogs")
         public java.util.List<GetProblemResponseBodyDataRestoredProblemOperateLogs> restoredProblemOperateLogs;
 
-        // 关联服务 名称
+        // serviceDeleteType
+        @NameInMap("serviceDeleteType")
+        public Integer serviceDeleteType;
+
         @NameInMap("serviceName")
         public String serviceName;
 
-        // 故障操作时间线
         @NameInMap("timelines")
         public java.util.List<GetProblemResponseBodyDataTimelines> timelines;
 
@@ -671,6 +685,14 @@ public class GetProblemResponseBody extends TeaModel {
             return this.mainHandlerId;
         }
 
+        public GetProblemResponseBodyData setMainHandlerIsValid(Long mainHandlerIsValid) {
+            this.mainHandlerIsValid = mainHandlerIsValid;
+            return this;
+        }
+        public Long getMainHandlerIsValid() {
+            return this.mainHandlerIsValid;
+        }
+
         public GetProblemResponseBodyData setMainHandlerPhone(String mainHandlerPhone) {
             this.mainHandlerPhone = mainHandlerPhone;
             return this;
@@ -781,6 +803,14 @@ public class GetProblemResponseBody extends TeaModel {
         }
         public java.util.List<GetProblemResponseBodyDataRestoredProblemOperateLogs> getRestoredProblemOperateLogs() {
             return this.restoredProblemOperateLogs;
+        }
+
+        public GetProblemResponseBodyData setServiceDeleteType(Integer serviceDeleteType) {
+            this.serviceDeleteType = serviceDeleteType;
+            return this;
+        }
+        public Integer getServiceDeleteType() {
+            return this.serviceDeleteType;
         }
 
         public GetProblemResponseBodyData setServiceName(String serviceName) {

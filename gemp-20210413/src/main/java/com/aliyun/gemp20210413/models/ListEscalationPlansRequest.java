@@ -4,23 +4,18 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ListEscalationPlansRequest extends TeaModel {
-    // clientToken
     @NameInMap("clientToken")
     public String clientToken;
 
-    // 升级计划名
     @NameInMap("escalationPlanName")
     public String escalationPlanName;
 
-    // pageNumber
     @NameInMap("pageNumber")
     public Long pageNumber;
 
-    // pageSize
     @NameInMap("pageSize")
     public Long pageSize;
 
-    // 服务名称
     @NameInMap("serviceName")
     public String serviceName;
 

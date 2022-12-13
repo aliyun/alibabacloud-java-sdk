@@ -34,11 +34,9 @@ public class CreateTenantApplicationResponseBody extends TeaModel {
     }
 
     public static class CreateTenantApplicationResponseBodyData extends TeaModel {
-        // 开通url
         @NameInMap("openUrl")
         public String openUrl;
 
-        // 开通进度状态
         @NameInMap("progress")
         public String progress;
 

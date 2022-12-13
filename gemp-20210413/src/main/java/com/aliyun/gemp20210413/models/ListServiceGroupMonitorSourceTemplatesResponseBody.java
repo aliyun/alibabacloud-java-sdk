@@ -4,7 +4,6 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ListServiceGroupMonitorSourceTemplatesResponseBody extends TeaModel {
-    // data
     @NameInMap("data")
     public java.util.List<ListServiceGroupMonitorSourceTemplatesResponseBodyData> data;
 
@@ -34,23 +33,18 @@ public class ListServiceGroupMonitorSourceTemplatesResponseBody extends TeaModel
     }
 
     public static class ListServiceGroupMonitorSourceTemplatesResponseBodyData extends TeaModel {
-        // 字段
         @NameInMap("fields")
         public java.util.List<String> fields;
 
-        // 监控源ID
         @NameInMap("monitorSourceId")
         public Long monitorSourceId;
 
-        // 监控报警源名字
         @NameInMap("monitorSourceName")
         public String monitorSourceName;
 
-        // 模板内容
         @NameInMap("templateContent")
         public String templateContent;
 
-        // 消息模版ID
         @NameInMap("templateId")
         public Long templateId;
 

@@ -4,15 +4,12 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class DeleteProblemMeasureRequest extends TeaModel {
-    // 幂等校验token
     @NameInMap("clientToken")
     public String clientToken;
 
-    // 故障改成措施id
     @NameInMap("measureId")
     public Long measureId;
 
-    // 故障Id
     @NameInMap("problemId")
     public String problemId;
 

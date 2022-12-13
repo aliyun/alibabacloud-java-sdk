@@ -34,19 +34,18 @@ public class GetTenantApplicationResponseBody extends TeaModel {
     }
 
     public static class GetTenantApplicationResponseBodyData extends TeaModel {
-        // 业务id
         @NameInMap("bizId")
         public String bizId;
 
-        // 云钉协同渠道
         @NameInMap("channel")
         public String channel;
 
-        // 企业id
         @NameInMap("corporationId")
         public String corporationId;
 
-        // 进度
+        @NameInMap("originalCorpId")
+        public String originalCorpId;
+
         @NameInMap("progress")
         public String progress;
 
@@ -77,6 +76,14 @@ public class GetTenantApplicationResponseBody extends TeaModel {
         }
         public String getCorporationId() {
             return this.corporationId;
+        }
+
+        public GetTenantApplicationResponseBodyData setOriginalCorpId(String originalCorpId) {
+            this.originalCorpId = originalCorpId;
+            return this;
+        }
+        public String getOriginalCorpId() {
+            return this.originalCorpId;
         }
 
         public GetTenantApplicationResponseBodyData setProgress(String progress) {

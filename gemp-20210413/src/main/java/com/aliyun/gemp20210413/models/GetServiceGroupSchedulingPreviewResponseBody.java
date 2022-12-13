@@ -4,7 +4,6 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class GetServiceGroupSchedulingPreviewResponseBody extends TeaModel {
-    // 服务组排班信息
     @NameInMap("data")
     public java.util.Map<String, ?> data;
 

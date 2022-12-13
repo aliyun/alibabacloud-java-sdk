@@ -4,9 +4,11 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ListDictionariesResponseBody extends TeaModel {
+    // data
     @NameInMap("data")
     public java.util.Map<String, java.util.List<DataValue>> data;
 
+    // id of the request
     @NameInMap("requestId")
     public String requestId;
 

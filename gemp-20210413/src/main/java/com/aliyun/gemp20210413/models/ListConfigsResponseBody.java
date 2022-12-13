@@ -4,6 +4,7 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ListConfigsResponseBody extends TeaModel {
+    // data
     @NameInMap("data")
     public java.util.Map<String, java.util.List<DataValue>> data;
 

@@ -8,11 +8,9 @@ public class ListUsersResponseBody extends TeaModel {
     @NameInMap("data")
     public java.util.List<ListUsersResponseBodyData> data;
 
-    // 分页
     @NameInMap("pageNumber")
     public Long pageNumber;
 
-    // 分页
     @NameInMap("pageSize")
     public Long pageSize;
 
@@ -20,7 +18,6 @@ public class ListUsersResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
-    // 总条数
     @NameInMap("totalCount")
     public Long totalCount;
 
@@ -70,43 +67,39 @@ public class ListUsersResponseBody extends TeaModel {
     }
 
     public static class ListUsersResponseBodyData extends TeaModel {
-        // 账户类型
         @NameInMap("accountType")
         public Long accountType;
 
-        // 移动应用账户
         @NameInMap("appAccount")
         public String appAccount;
 
-        // 邮箱
         @NameInMap("email")
         public String email;
 
-        // 是否可编辑
         @NameInMap("isEditableUser")
         public Long isEditableUser;
 
-        // 是否关联
+        @NameInMap("isOperation")
+        public Integer isOperation;
+
+        @NameInMap("isRam")
+        public Integer isRam;
+
         @NameInMap("isRelated")
         public String isRelated;
 
-        // 手机
         @NameInMap("phone")
         public String phone;
 
-        // 子账号ramId
         @NameInMap("ramId")
         public Long ramId;
 
-        // 移动应用协同渠道
         @NameInMap("synergyChannel")
         public String synergyChannel;
 
-        // 用户id
         @NameInMap("userId")
         public Long userId;
 
-        // 用户名
         @NameInMap("username")
         public String username;
 
@@ -145,6 +138,22 @@ public class ListUsersResponseBody extends TeaModel {
         }
         public Long getIsEditableUser() {
             return this.isEditableUser;
+        }
+
+        public ListUsersResponseBodyData setIsOperation(Integer isOperation) {
+            this.isOperation = isOperation;
+            return this;
+        }
+        public Integer getIsOperation() {
+            return this.isOperation;
+        }
+
+        public ListUsersResponseBodyData setIsRam(Integer isRam) {
+            this.isRam = isRam;
+            return this;
+        }
+        public Integer getIsRam() {
+            return this.isRam;
         }
 
         public ListUsersResponseBodyData setIsRelated(String isRelated) {

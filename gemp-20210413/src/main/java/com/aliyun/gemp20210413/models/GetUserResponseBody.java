@@ -4,7 +4,6 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class GetUserResponseBody extends TeaModel {
-    // 用户
     @NameInMap("data")
     public GetUserResponseBodyData data;
 
@@ -34,11 +33,9 @@ public class GetUserResponseBody extends TeaModel {
     }
 
     public static class GetUserResponseBodyDataServiceGroups extends TeaModel {
-        // 服务组名称
         @NameInMap("name")
         public String name;
 
-        // 服务组ID
         @NameInMap("serviceGroupId")
         public Long serviceGroupId;
 
@@ -66,11 +63,9 @@ public class GetUserResponseBody extends TeaModel {
     }
 
     public static class GetUserResponseBodyData extends TeaModel {
-        // CUSTOMER:主账号，SUB:子账号
         @NameInMap("accountType")
         public String accountType;
 
-        // 创建时间
         @NameInMap("createTime")
         public String createTime;
 
@@ -78,15 +73,12 @@ public class GetUserResponseBody extends TeaModel {
         @NameInMap("email")
         public String email;
 
-        // 是否可编辑
         @NameInMap("isEditableUser")
         public Boolean isEditableUser;
 
-        // 是否关联
         @NameInMap("isRelated")
         public String isRelated;
 
-        // 用户手机号
         @NameInMap("phone")
         public String phone;
 
@@ -94,15 +86,12 @@ public class GetUserResponseBody extends TeaModel {
         @NameInMap("ramId")
         public String ramId;
 
-        // 所属服务组
         @NameInMap("serviceGroups")
         public java.util.List<GetUserResponseBodyDataServiceGroups> serviceGroups;
 
-        // 用户ID
         @NameInMap("userId")
         public Long userId;
 
-        // 用户昵称
         @NameInMap("username")
         public String username;
 

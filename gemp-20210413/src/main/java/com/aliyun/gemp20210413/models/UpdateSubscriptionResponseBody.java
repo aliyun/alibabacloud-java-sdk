@@ -4,6 +4,7 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class UpdateSubscriptionResponseBody extends TeaModel {
+    // id of the request
     @NameInMap("requestId")
     public String requestId;
 

@@ -4,6 +4,7 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class GetProblemImprovementResponseBody extends TeaModel {
+    // data
     @NameInMap("data")
     public GetProblemImprovementResponseBodyData data;
 
@@ -33,51 +34,48 @@ public class GetProblemImprovementResponseBody extends TeaModel {
     }
 
     public static class GetProblemImprovementResponseBodyDataMeasureList extends TeaModel {
-        // 验收标准
         @NameInMap("checkStandard")
         public String checkStandard;
 
-        // 验收人id
         @NameInMap("checkUserId")
         public Long checkUserId;
 
-        // 验收人名称
+        @NameInMap("checkUserIsValid")
+        public Integer checkUserIsValid;
+
         @NameInMap("checkUserName")
         public String checkUserName;
 
-        // 措施内容
         @NameInMap("content")
         public String content;
 
-        // 负责人id
         @NameInMap("directorId")
         public Long directorId;
 
-        // 负责人名称
+        @NameInMap("directorIsValid")
+        public Integer directorIsValid;
+
         @NameInMap("directorName")
         public String directorName;
 
-        // 改进措施id 用于删除或更新
         @NameInMap("measureId")
         public Long measureId;
 
-        // 计划完成时间
         @NameInMap("planFinishTime")
         public String planFinishTime;
 
-        // 跟踪人id
         @NameInMap("stalkerId")
         public Long stalkerId;
 
-        // 跟踪人名称
+        @NameInMap("stalkerIsValid")
+        public Integer stalkerIsValid;
+
         @NameInMap("stalkerName")
         public String stalkerName;
 
-        // UNIMPROVED	状态 IMPROVED 改进 2 未改进UNIMPROVED
         @NameInMap("status")
         public String status;
 
-        // 措施类型
         @NameInMap("type")
         public Long type;
 
@@ -102,6 +100,14 @@ public class GetProblemImprovementResponseBody extends TeaModel {
             return this.checkUserId;
         }
 
+        public GetProblemImprovementResponseBodyDataMeasureList setCheckUserIsValid(Integer checkUserIsValid) {
+            this.checkUserIsValid = checkUserIsValid;
+            return this;
+        }
+        public Integer getCheckUserIsValid() {
+            return this.checkUserIsValid;
+        }
+
         public GetProblemImprovementResponseBodyDataMeasureList setCheckUserName(String checkUserName) {
             this.checkUserName = checkUserName;
             return this;
@@ -124,6 +130,14 @@ public class GetProblemImprovementResponseBody extends TeaModel {
         }
         public Long getDirectorId() {
             return this.directorId;
+        }
+
+        public GetProblemImprovementResponseBodyDataMeasureList setDirectorIsValid(Integer directorIsValid) {
+            this.directorIsValid = directorIsValid;
+            return this;
+        }
+        public Integer getDirectorIsValid() {
+            return this.directorIsValid;
         }
 
         public GetProblemImprovementResponseBodyDataMeasureList setDirectorName(String directorName) {
@@ -158,6 +172,14 @@ public class GetProblemImprovementResponseBody extends TeaModel {
             return this.stalkerId;
         }
 
+        public GetProblemImprovementResponseBodyDataMeasureList setStalkerIsValid(Integer stalkerIsValid) {
+            this.stalkerIsValid = stalkerIsValid;
+            return this;
+        }
+        public Integer getStalkerIsValid() {
+            return this.stalkerIsValid;
+        }
+
         public GetProblemImprovementResponseBodyDataMeasureList setStalkerName(String stalkerName) {
             this.stalkerName = stalkerName;
             return this;
@@ -185,89 +207,86 @@ public class GetProblemImprovementResponseBody extends TeaModel {
     }
 
     public static class GetProblemImprovementResponseBodyData extends TeaModel {
-        // 发现来源 码表:PROBLEM_DISCOVER_SOURCE
+        @NameInMap("customProblemReason")
+        public String customProblemReason;
+
         @NameInMap("discoverSource")
         public String discoverSource;
 
-        // 故障责任部门
         @NameInMap("dutyDepartmentId")
         public String dutyDepartmentId;
 
-        // 故障责任部门名称
         @NameInMap("dutyDepartmentName")
         public String dutyDepartmentName;
 
-        // 故障责任人id
         @NameInMap("dutyUserId")
         public Long dutyUserId;
 
-        // 故障责任人名称
+        @NameInMap("dutyUserIsValid")
+        public Long dutyUserIsValid;
+
         @NameInMap("dutyUserName")
         public String dutyUserName;
 
-        // 故障责任人手机号
         @NameInMap("dutyUserPhone")
         public String dutyUserPhone;
 
-        // 注入方式 码表:PROBLEM_INJECTION_MODE
         @NameInMap("injectionMode")
         public String injectionMode;
 
-        // 是否手动
         @NameInMap("isManual")
         public Boolean isManual;
 
-        // 改进措施列表
         @NameInMap("measureList")
         public java.util.List<GetProblemImprovementResponseBodyDataMeasureList> measureList;
 
-        // 监控源
         @NameInMap("monitorSourceName")
         public String monitorSourceName;
 
-        // 故障ID
         @NameInMap("problemId")
         public String problemId;
 
-        // 故障原因
         @NameInMap("problemReason")
         public String problemReason;
 
-        // 最近活动 码表:PROBLEM_RECENT_ACTIVITY
         @NameInMap("recentActivity")
         public String recentActivity;
 
-        // 恢复方式  码表:PROBLEM_RECOVERY_MODE
         @NameInMap("recoveryMode")
         public String recoveryMode;
 
-        // 关联变更
         @NameInMap("relationChanges")
         public String relationChanges;
 
-        // 备注
         @NameInMap("remark")
         public String remark;
 
-        // 复盘负责人id
         @NameInMap("replayDutyUserId")
         public Long replayDutyUserId;
 
-        // 复盘负责人名称
+        @NameInMap("replayDutyUserIsValid")
+        public Long replayDutyUserIsValid;
+
         @NameInMap("replayDutyUserName")
         public String replayDutyUserName;
 
-        // 复盘负责人手机号
         @NameInMap("replayDutyUserPhone")
         public String replayDutyUserPhone;
 
-        // 用户上报 码表:PROBLEM_USER_REPORT
         @NameInMap("userReport")
         public Long userReport;
 
         public static GetProblemImprovementResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetProblemImprovementResponseBodyData self = new GetProblemImprovementResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetProblemImprovementResponseBodyData setCustomProblemReason(String customProblemReason) {
+            this.customProblemReason = customProblemReason;
+            return this;
+        }
+        public String getCustomProblemReason() {
+            return this.customProblemReason;
         }
 
         public GetProblemImprovementResponseBodyData setDiscoverSource(String discoverSource) {
@@ -300,6 +319,14 @@ public class GetProblemImprovementResponseBody extends TeaModel {
         }
         public Long getDutyUserId() {
             return this.dutyUserId;
+        }
+
+        public GetProblemImprovementResponseBodyData setDutyUserIsValid(Long dutyUserIsValid) {
+            this.dutyUserIsValid = dutyUserIsValid;
+            return this;
+        }
+        public Long getDutyUserIsValid() {
+            return this.dutyUserIsValid;
         }
 
         public GetProblemImprovementResponseBodyData setDutyUserName(String dutyUserName) {
@@ -404,6 +431,14 @@ public class GetProblemImprovementResponseBody extends TeaModel {
         }
         public Long getReplayDutyUserId() {
             return this.replayDutyUserId;
+        }
+
+        public GetProblemImprovementResponseBodyData setReplayDutyUserIsValid(Long replayDutyUserIsValid) {
+            this.replayDutyUserIsValid = replayDutyUserIsValid;
+            return this;
+        }
+        public Long getReplayDutyUserIsValid() {
+            return this.replayDutyUserIsValid;
         }
 
         public GetProblemImprovementResponseBodyData setReplayDutyUserName(String replayDutyUserName) {

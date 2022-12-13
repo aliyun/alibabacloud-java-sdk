@@ -4,11 +4,9 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class GetEscalationPlanRequest extends TeaModel {
-    // 幂等标识
     @NameInMap("clientToken")
     public String clientToken;
 
-    // 升级计划id
     @NameInMap("escalationPlanId")
     public Long escalationPlanId;
 
