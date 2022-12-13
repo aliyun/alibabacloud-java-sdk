@@ -4,12 +4,17 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ListOfficeSiteUsersResponseBody extends TeaModel {
+    // The ID of the request.
     @NameInMap("NextToken")
     public String nextToken;
 
+    // The usernames of AD users.
+    // 
+    // This parameter is empty if the AD users include only Administrator and Guest.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The usernames of AD users.
     @NameInMap("Users")
     public java.util.List<ListOfficeSiteUsersResponseBodyUsers> users;
 
@@ -43,9 +48,11 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
     }
 
     public static class ListOfficeSiteUsersResponseBodyUsers extends TeaModel {
+        // The display name of the AD user.
         @NameInMap("DisplayName")
         public String displayName;
 
+        // The username of the AD user.
         @NameInMap("EndUser")
         public String endUser;
 

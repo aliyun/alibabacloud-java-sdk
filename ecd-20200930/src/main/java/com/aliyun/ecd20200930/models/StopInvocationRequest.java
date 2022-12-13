@@ -4,12 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class StopInvocationRequest extends TeaModel {
+    // The ID of cloud desktop. Valid values of N: 1 to 50.
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
+    // The ID of the execution.
     @NameInMap("InvokeId")
     public String invokeId;
 
+    // The ID of the region.
     @NameInMap("RegionId")
     public String regionId;
 

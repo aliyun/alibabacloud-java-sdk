@@ -4,9 +4,11 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeFrontVulPatchListResponseBody extends TeaModel {
+    // Details about patches of one or more vulnerabilities before you fix the current vulnerability.
     @NameInMap("FrontPatchList")
     public java.util.List<DescribeFrontVulPatchListResponseBodyFrontPatchList> frontPatchList;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +34,11 @@ public class DescribeFrontVulPatchListResponseBody extends TeaModel {
     }
 
     public static class DescribeFrontVulPatchListResponseBodyFrontPatchListPatchList extends TeaModel {
+        // The alias of the vulnerability.
         @NameInMap("AliasName")
         public String aliasName;
 
+        // The name of the vulnerability.
         @NameInMap("Name")
         public String name;
 
@@ -62,9 +66,11 @@ public class DescribeFrontVulPatchListResponseBody extends TeaModel {
     }
 
     public static class DescribeFrontVulPatchListResponseBodyFrontPatchList extends TeaModel {
+        // The ID of the cloud desktop.
         @NameInMap("DesktopId")
         public String desktopId;
 
+        // Details about patches.
         @NameInMap("PatchList")
         public java.util.List<DescribeFrontVulPatchListResponseBodyFrontPatchListPatchList> patchList;
 

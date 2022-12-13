@@ -4,9 +4,13 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DeleteVirtualMFADeviceRequest extends TeaModel {
+    // The ID of the region.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The serial number of the virtual MFA device, which is a unique identifier.
+    // 
+    // You can call the [DescribeVirtualMFADevices](~~206210~~) operation to query the serial number of the virtual MFA device bound to AD users.
     @NameInMap("SerialNumber")
     public String serialNumber;
 

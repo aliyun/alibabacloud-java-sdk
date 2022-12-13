@@ -4,15 +4,19 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeSuspEventOverviewResponseBody extends TeaModel {
+    // The total number of alerts at the remind level.
     @NameInMap("RemindCount")
     public Integer remindCount;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The total number of alerts at the serious level.
     @NameInMap("SeriousCount")
     public Integer seriousCount;
 
+    // The total number of alerts at the suspicious level.
     @NameInMap("SuspiciousCount")
     public Integer suspiciousCount;
 

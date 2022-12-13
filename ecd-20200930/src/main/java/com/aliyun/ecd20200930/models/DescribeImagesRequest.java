@@ -4,39 +4,54 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeImagesRequest extends TeaModel {
+    // The type of the cloud desktop. You can call the [DescribeBundles](~~188884~~) operation to obtain the type of the cloud desktop.
     @NameInMap("DesktopInstanceType")
     public String desktopInstanceType;
 
+    // Specifies whether the image is a GPU-accelerated image.
     @NameInMap("GpuCategory")
     public Boolean gpuCategory;
 
+    // The version of the GPU driver.
     @NameInMap("GpuDriverVersion")
     public String gpuDriverVersion;
 
+    // The IDs of the images. You can specify one or more image IDs.
     @NameInMap("ImageId")
     public java.util.List<String> imageId;
 
+    // The state of the image.
     @NameInMap("ImageStatus")
     public String imageStatus;
 
+    // The type of the image.
     @NameInMap("ImageType")
     public String imageType;
 
+    // The language of the OS.
     @NameInMap("LanguageType")
     public String languageType;
 
+    // The number of entries to return on each page.
+    // 
+    // *   Maximum value: 100.
+    // *   Default value: 10.
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    // The token that determines the start point of the next query. If this parameter is empty, all results are returned.
     @NameInMap("NextToken")
     public String nextToken;
 
+    // The type of the OS. Default value: `null`.
     @NameInMap("OsType")
     public String osType;
 
+    // The type of the protocol. Recommended value: ASP.
     @NameInMap("ProtocolType")
     public String protocolType;
 
+    // The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 

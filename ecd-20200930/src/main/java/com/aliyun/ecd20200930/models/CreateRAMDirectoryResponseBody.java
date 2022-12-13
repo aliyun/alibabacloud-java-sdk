@@ -4,9 +4,11 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateRAMDirectoryResponseBody extends TeaModel {
+    // The ID of the RAM directory.
     @NameInMap("DirectoryId")
     public String directoryId;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

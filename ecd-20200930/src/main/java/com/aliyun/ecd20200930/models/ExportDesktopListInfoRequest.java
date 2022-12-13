@@ -4,48 +4,80 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ExportDesktopListInfoRequest extends TeaModel {
+    // The billing method of the cloud desktop. Valid values:
+    // 
+    // *   PostPaid: pay-as-you-go
+    // *   PrePaid: subscription
+    // 
+    // Default value: PostPaid.
     @NameInMap("ChargeType")
     public String chargeType;
 
+    // The IDs of the cloud desktops. You can specify 1 to 100 cloud desktop IDs.
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
+    // The name of the cloud desktop.
     @NameInMap("DesktopName")
     public String desktopName;
 
+    // The status of the cloud desktop. Valid values:
+    // 
+    // *   Pending
+    // *   Starting
+    // *   Running
+    // *   Stopping
+    // *   Rebuilding
+    // *   Stopped
+    // *   Expired
+    // *   Deleted
     @NameInMap("DesktopStatus")
     public String desktopStatus;
 
+    // The IDs of the users which the cloud desktop is assigned. You can specify 1 to 100 user IDs.
     @NameInMap("EndUserId")
     public java.util.List<String> endUserId;
 
+    // The time when the subscription cloud desktop expires.
     @NameInMap("ExpiredTime")
     public String expiredTime;
 
+    // The ID of the group to which the cloud desktop belongs.
     @NameInMap("GroupId")
     public String groupId;
 
+    // The language that you want to use.
     @NameInMap("LangType")
     public String langType;
 
+    // The maximum number of entries to return on each page.
+    // 
+    // Maximum value: 100.
+    // 
+    // Default value: 10.
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    // The token that is used for the next query. If this parameter is empty, all results are returned.
     @NameInMap("NextToken")
     public String nextToken;
 
+    // The ID of the workspace.
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
+    // The ID of the policy that is associated with the cloud desktop.
     @NameInMap("PolicyGroupId")
     public String policyGroupId;
 
+    // The ID of the region.
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("Tag")
     public java.util.List<ExportDesktopListInfoRequestTag> tag;
 
+    // The username of the current user of the cloud desktop.
     @NameInMap("UserName")
     public String userName;
 

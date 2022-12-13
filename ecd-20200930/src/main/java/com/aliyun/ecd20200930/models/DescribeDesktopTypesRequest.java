@@ -7,27 +7,62 @@ public class DescribeDesktopTypesRequest extends TeaModel {
     @NameInMap("AppliedScope")
     public String appliedScope;
 
+    // The number of vCPUs.
     @NameInMap("CpuCount")
     public Integer cpuCount;
 
     @NameInMap("DesktopIdForModify")
     public String desktopIdForModify;
 
+    // The ID of the cloud desktop type. Valid values:
+    // 
+    // *   eds.graphics.16c1t4
+    // *   eds.graphics.24c1t4
+    // *   eds.hf.12c24g
+    // *   eds.hf.8c16g
+    // *   eds.hf.4c8g
+    // *   eds.general.8c32g
+    // *   eds.general.16c32g
+    // *   eds.general.8c16g
+    // *   eds.general.4c16g
+    // *   eds.general.4c8g
+    // *   eds.general.2c8g
+    // *   eds.general.2c4g
+    // *   eds.general.2c2g
+    // *   ecd.graphics.xlarge
+    // *   ecd.graphics.2xlarge
+    // *   ecd.performance.2xlarge
+    // *   ecd.advanced.xlarge
+    // *   ecd.advanced.large
+    // *   ecd.basic.large
+    // *   ecd.basic.small
     @NameInMap("DesktopTypeId")
     public String desktopTypeId;
 
+    // The number of GPUs.
     @NameInMap("GpuCount")
     public Float gpuCount;
 
+    // The family of the cloud desktop type. Valid values:
+    // 
+    // *   eds.graphics
+    // *   eds.hf
+    // *   eds.general
+    // *   ecd.graphics
+    // *   ecd.performance
+    // *   ecd.advanced
+    // *   ecd.basic
     @NameInMap("InstanceTypeFamily")
     public String instanceTypeFamily;
 
+    // The memory size. Unit: GiB.
     @NameInMap("MemorySize")
     public Integer memorySize;
 
     @NameInMap("OrderType")
     public String orderType;
 
+    // The ID of the region.
     @NameInMap("RegionId")
     public String regionId;
 

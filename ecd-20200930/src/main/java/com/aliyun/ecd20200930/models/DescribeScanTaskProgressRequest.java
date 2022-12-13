@@ -4,9 +4,13 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeScanTaskProgressRequest extends TeaModel {
+    // The ID of the region.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The ID of the virus scan task. If this parameter is not specified, the status of the latest scan task is queried by default.
+    // 
+    // You can call the [StartVirusScanTask](~~217908~~) operation to query the ID of a virus scan task.
     @NameInMap("TaskId")
     public Long taskId;
 

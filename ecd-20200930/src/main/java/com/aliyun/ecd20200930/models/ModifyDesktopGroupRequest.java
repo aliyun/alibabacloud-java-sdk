@@ -4,59 +4,80 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ModifyDesktopGroupRequest extends TeaModel {
+    // Specifies whether to allow the system to create cloud desktops in the desktop group when you set the ChargeType parameter to PrePaid. This parameter takes effect and is required only when you set the ChargeType parameter to PrePaid. Valid values:
+    // 
+    // *   0: allows the system to create cloud desktops in the desktop group when you set the ChargeType parameter to PrePaid.
+    // *   1: does not allow the system to create cloud desktops in the desktop group when you set the ChargeType parameter to PrePaid.
     @NameInMap("AllowAutoSetup")
     public Integer allowAutoSetup;
 
+    // Specifies whether to allow the system to reserve cloud desktops when you set the ChargeType parameter to PostPaid. This parameter takes effect and is required only when you set the ChargeType parameter to PostPaid. Valid values: 0: does not allow the system to reserve cloud desktops when you set the ChargeType parameter to PostPaid. N: allows the system to reserve N cloud desktops when you set the ChargeType parameter to PostPaid. Valid values of N: 1 to MaxDesktopsCount.
     @NameInMap("AllowBufferCount")
     public Integer allowBufferCount;
 
+    // The number of sessions allowed per desktop in the multi-session desktop group.
     @NameInMap("BindAmount")
     public Long bindAmount;
 
+    // The classification of the desktop pool.
     @NameInMap("Classify")
     public String classify;
 
+    // The description of the desktop group.
     @NameInMap("Comments")
     public String comments;
 
     @NameInMap("ConnectDuration")
     public Long connectDuration;
 
+    // The ID of the desktop group.
     @NameInMap("DesktopGroupId")
     public String desktopGroupId;
 
+    // The name of the desktop group.
     @NameInMap("DesktopGroupName")
     public String desktopGroupName;
 
     @NameInMap("DisableSessionConfig")
     public Boolean disableSessionConfig;
 
+    // The ID of the NAS file system.
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
     @NameInMap("IdleDisconnectDuration")
     public Long idleDisconnectDuration;
 
+    // The ID of the image.
     @NameInMap("ImageId")
     public String imageId;
 
+    // The retention period during which the cloud desktop remains connected after the regular user disconnects from the cloud desktop. Unit: ms.
     @NameInMap("KeepDuration")
     public Long keepDuration;
 
+    // The load balancing policy of the multi-session desktop group.
     @NameInMap("LoadPolicy")
     public Long loadPolicy;
 
+    // The maximum number of cloud desktops that the desktop group can hold. Maximum value: 100.
     @NameInMap("MaxDesktopsCount")
     public Integer maxDesktopsCount;
 
+    // The minimum number of cloud desktops that the desktop group must contain. This parameter takes effect and is required only when you set the ChargeType parameter to PrePaid. The value of the MinDesktopsCount parameter ranges from 0 to the value of the MaxDesktopsCount parameter. Default value: 1.
     @NameInMap("MinDesktopsCount")
     public Integer minDesktopsCount;
 
+    // The ID of the cloud desktop template.
     @NameInMap("OwnBundleId")
     public String ownBundleId;
 
+    // The ID of the policy.
     @NameInMap("PolicyGroupId")
     public String policyGroupId;
+
+    @NameInMap("PolicyGroupIds")
+    public java.util.List<String> policyGroupIds;
 
     @NameInMap("ProfileFollowSwitch")
     public Boolean profileFollowSwitch;
@@ -64,12 +85,17 @@ public class ModifyDesktopGroupRequest extends TeaModel {
     @NameInMap("RatioThreshold")
     public Float ratioThreshold;
 
+    // The ID of the region
     @NameInMap("RegionId")
     public String regionId;
 
+    // Specifies which type of the disk used by cloud desktops in the desktop group is reset.
     @NameInMap("ResetType")
     public Long resetType;
 
+    // The ID of the scaling policy group.
+    // 
+    // >  This parameter is unavailable.
     @NameInMap("ScaleStrategyId")
     public String scaleStrategyId;
 
@@ -223,6 +249,14 @@ public class ModifyDesktopGroupRequest extends TeaModel {
     }
     public String getPolicyGroupId() {
         return this.policyGroupId;
+    }
+
+    public ModifyDesktopGroupRequest setPolicyGroupIds(java.util.List<String> policyGroupIds) {
+        this.policyGroupIds = policyGroupIds;
+        return this;
+    }
+    public java.util.List<String> getPolicyGroupIds() {
+        return this.policyGroupIds;
     }
 
     public ModifyDesktopGroupRequest setProfileFollowSwitch(Boolean profileFollowSwitch) {

@@ -4,9 +4,11 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class StartVirusScanTaskResponseBody extends TeaModel {
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The ID of the virus scan task.
     @NameInMap("ScanTaskId")
     public Long scanTaskId;
 

@@ -4,12 +4,18 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ModifyDesktopsPolicyGroupRequest extends TeaModel {
+    // The ID of the cloud desktop. You can specify one or more desktop IDs. The value is a JSON array.
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
+    // The ID of the policy.
     @NameInMap("PolicyGroupId")
     public String policyGroupId;
 
+    @NameInMap("PolicyGroupIds")
+    public java.util.List<String> policyGroupIds;
+
+    // The ID of the region.
     @NameInMap("RegionId")
     public String regionId;
 
@@ -32,6 +38,14 @@ public class ModifyDesktopsPolicyGroupRequest extends TeaModel {
     }
     public String getPolicyGroupId() {
         return this.policyGroupId;
+    }
+
+    public ModifyDesktopsPolicyGroupRequest setPolicyGroupIds(java.util.List<String> policyGroupIds) {
+        this.policyGroupIds = policyGroupIds;
+        return this;
+    }
+    public java.util.List<String> getPolicyGroupIds() {
+        return this.policyGroupIds;
     }
 
     public ModifyDesktopsPolicyGroupRequest setRegionId(String regionId) {

@@ -4,12 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ListOfficeSiteOverviewResponseBody extends TeaModel {
+    // The token that is used to start the next query. If this parameter is empty, all results are returned.
     @NameInMap("NextToken")
     public String nextToken;
 
+    // Details of the workspaces.
     @NameInMap("OfficeSiteOverviewResults")
     public java.util.List<ListOfficeSiteOverviewResponseBodyOfficeSiteOverviewResults> officeSiteOverviewResults;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,42 +46,55 @@ public class ListOfficeSiteOverviewResponseBody extends TeaModel {
     }
 
     public static class ListOfficeSiteOverviewResponseBodyOfficeSiteOverviewResults extends TeaModel {
+        // The number of expired cloud desktops in the workspace.
         @NameInMap("HasExpiredEdsCount")
         public Integer hasExpiredEdsCount;
 
+        // The number of expired cloud desktops in the desktop group.
         @NameInMap("HasExpiredEdsCountForGroup")
         public Integer hasExpiredEdsCountForGroup;
 
+        // The ID of the workspace.
         @NameInMap("OfficeSiteId")
         public String officeSiteId;
 
+        // The name of the workspace.
         @NameInMap("OfficeSiteName")
         public String officeSiteName;
 
+        // The status of the workspace.
         @NameInMap("OfficeSiteStatus")
         public String officeSiteStatus;
 
+        // The region ID of the workspace.
         @NameInMap("RegionId")
         public String regionId;
 
+        // The number of running cloud desktops in the workspace.
         @NameInMap("RunningEdsCount")
         public Integer runningEdsCount;
 
+        // The number of running cloud desktops in the desktop group.
         @NameInMap("RunningEdsCountForGroup")
         public Integer runningEdsCountForGroup;
 
+        // The total number of cloud desktops in the workspace.
         @NameInMap("TotalEdsCount")
         public Integer totalEdsCount;
 
+        // The total number of cloud desktops in the desktop group.
         @NameInMap("TotalEdsCountForGroup")
         public Integer totalEdsCountForGroup;
 
+        // The virtual private cloud (VPC) type of the workspace.
         @NameInMap("VpcType")
         public String vpcType;
 
+        // The number of cloud desktops that are about to expire in the workspace.
         @NameInMap("WillExpiredEdsCount")
         public Integer willExpiredEdsCount;
 
+        // The number of cloud desktops that are about to expire in the desktop group.
         @NameInMap("WillExpiredEdsCountForGroup")
         public Integer willExpiredEdsCountForGroup;
 

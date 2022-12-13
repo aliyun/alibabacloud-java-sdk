@@ -4,21 +4,30 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeOfficeSitesRequest extends TeaModel {
+    // The number of entries to return on each page.
+    // 
+    // *   Maximum value: 100.
+    // *   Default value: 10.
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    // The token that determines the start point of the next query.
     @NameInMap("NextToken")
     public String nextToken;
 
+    // The IDs of the workspaces. You can specify 1 to 100 workspace IDs.
     @NameInMap("OfficeSiteId")
     public java.util.List<String> officeSiteId;
 
+    // The account type of the workspace.
     @NameInMap("OfficeSiteType")
     public String officeSiteType;
 
+    // The ID of the region
     @NameInMap("RegionId")
     public String regionId;
 
+    // The status of the workspace.
     @NameInMap("Status")
     public String status;
 

@@ -4,12 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeImagesResponseBody extends TeaModel {
+    // Details of the images.
     @NameInMap("Images")
     public java.util.List<DescribeImagesResponseBodyImages> images;
 
+    // The token that is used to start the next query. If this parameter is empty, all results haven been returned.
     @NameInMap("NextToken")
     public String nextToken;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,60 +46,78 @@ public class DescribeImagesResponseBody extends TeaModel {
     }
 
     public static class DescribeImagesResponseBodyImages extends TeaModel {
+        // The version of the image.
         @NameInMap("AppVersion")
         public String appVersion;
 
+        // The time when the image was created.
         @NameInMap("CreationTime")
         public String creationTime;
 
+        // The size of the data disk. Unit: GiB.
         @NameInMap("DataDiskSize")
         public Integer dataDiskSize;
 
+        // The description of the image.
         @NameInMap("Description")
         public String description;
 
+        // Indicates whether the image is a GPU-accelerated image.
         @NameInMap("GpuCategory")
         public Boolean gpuCategory;
 
+        // The version of the GPU driver.
         @NameInMap("GpuDriverVersion")
         public String gpuDriverVersion;
 
+        // The ID of the image.
         @NameInMap("ImageId")
         public String imageId;
 
+        // The type of the image.
         @NameInMap("ImageType")
         public String imageType;
 
+        // The name of the image.
         @NameInMap("Name")
         public String name;
 
+        // The type of the OS.
         @NameInMap("OsType")
         public String osType;
 
+        // The progress of image creation. Unit: percentage (%).
         @NameInMap("Progress")
         public String progress;
 
+        // The type of the protocol. Recommended value: ASP.
         @NameInMap("ProtocolType")
         public String protocolType;
 
         @NameInMap("SessionType")
         public String sessionType;
 
+        // The number of shared images.
         @NameInMap("SharedCount")
         public Integer sharedCount;
 
+        // The size of the image. Unit: GiB.
         @NameInMap("Size")
         public Integer size;
 
+        // The state of the image.
         @NameInMap("Status")
         public String status;
 
+        // The languages of the OS.
         @NameInMap("SupportedLanguages")
         public java.util.List<String> supportedLanguages;
 
+        // Indicates whether disk encryption is enabled.
         @NameInMap("VolumeEncryptionEnabled")
         public Boolean volumeEncryptionEnabled;
 
+        // The ID of the Key Management Service (KMS) key that is used when disk encryption is enabled. You can call the [ListKeys](~~28951~~) operation to obtain a list of KMS keys.
         @NameInMap("VolumeEncryptionKey")
         public String volumeEncryptionKey;
 

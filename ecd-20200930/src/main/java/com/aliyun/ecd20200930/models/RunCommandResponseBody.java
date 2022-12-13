@@ -4,9 +4,11 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class RunCommandResponseBody extends TeaModel {
+    // The ID of the command execution.
     @NameInMap("InvokeId")
     public String invokeId;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

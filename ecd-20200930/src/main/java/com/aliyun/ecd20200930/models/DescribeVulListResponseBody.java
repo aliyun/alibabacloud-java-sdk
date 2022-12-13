@@ -4,18 +4,23 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeVulListResponseBody extends TeaModel {
+    // The page number of the returned page.
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    // The maximum number of entries returned per page.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The total number of entries returned.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    // Details about vulnerabilities.
     @NameInMap("VulRecords")
     public java.util.List<DescribeVulListResponseBodyVulRecords> vulRecords;
 
@@ -65,18 +70,23 @@ public class DescribeVulListResponseBody extends TeaModel {
     }
 
     public static class DescribeVulListResponseBodyVulRecordsExtendContentJsonRpmEntityList extends TeaModel {
+        // The complete version number of the RPM package.
         @NameInMap("FullVersion")
         public String fullVersion;
 
+        // The detailed matching information of the vulnerability.
         @NameInMap("MatchDetail")
         public String matchDetail;
 
+        // The name of the RPM package.
         @NameInMap("Name")
         public String name;
 
+        // The path of the software that has the vulnerability.
         @NameInMap("Path")
         public String path;
 
+        // The command used to fix the vulnerability.
         @NameInMap("UpdateCmd")
         public String updateCmd;
 
@@ -128,6 +138,7 @@ public class DescribeVulListResponseBody extends TeaModel {
     }
 
     public static class DescribeVulListResponseBodyVulRecordsExtendContentJson extends TeaModel {
+        // Details about RPM packages.
         @NameInMap("RpmEntityList")
         public java.util.List<DescribeVulListResponseBodyVulRecordsExtendContentJsonRpmEntityList> rpmEntityList;
 
@@ -147,57 +158,98 @@ public class DescribeVulListResponseBody extends TeaModel {
     }
 
     public static class DescribeVulListResponseBodyVulRecords extends TeaModel {
+        // The name of the vulnerability.
         @NameInMap("AliasName")
         public String aliasName;
 
+        // The ID of the affected cloud desktop.
         @NameInMap("DesktopId")
         public String desktopId;
 
+        // The name of the affected cloud desktop.
         @NameInMap("DesktopName")
         public String desktopName;
 
+        // The extended information of the vulnerability.
         @NameInMap("ExtendContentJson")
         public DescribeVulListResponseBodyVulRecordsExtendContentJson extendContentJson;
 
         @NameInMap("FirstTs")
         public Long firstTs;
 
+        // The timestamp when the vulnerability was last detected. The timestamp follows the UNIX time format. It is the number of milliseconds that have elapsed since 00:00:00 Thursday, January 1, 1970.
         @NameInMap("LastTs")
         public Long lastTs;
 
+        // The timestamp when the vulnerability status was modified. The timestamp follows the UNIX time format. It is the number of milliseconds that have elapsed since 00:00:00 Thursday, January 1, 1970.
         @NameInMap("ModifyTs")
         public Long modifyTs;
 
+        // The name of the vulnerability.
         @NameInMap("Name")
         public String name;
 
+        // The priority to fix the vulnerability or the risk level of the vulnerability. Valid values:
+        // 
+        // *   asap: high
+        // *   later: medium
+        // *   nntf: low
         @NameInMap("Necessity")
         public String necessity;
 
+        // Indicates whether the Security Center agent on the cloud desktops is online. Valid values:
+        // 
+        // *   true: online
+        // *   false: offline
         @NameInMap("Online")
         public Boolean online;
 
+        // The name of the operating system of the cloud desktop.
         @NameInMap("OsVersion")
         public String osVersion;
 
+        // The IDs of Common Vulnerabilities and Exposures (CVEs) related to the vulnerability.
         @NameInMap("Related")
         public String related;
 
+        // The timestamp when the vulnerability was fixed. The timestamp follows the UNIX time format. It is the number of milliseconds that have elapsed since 00:00:00 Thursday, January 1, 1970.
         @NameInMap("RepairTs")
         public Long repairTs;
 
+        // The code returned after the vulnerability is fixed.
         @NameInMap("ResultCode")
         public String resultCode;
 
+        // The message returned after the vulnerability is fixed.
         @NameInMap("ResultMessage")
         public String resultMessage;
 
+        // The status of the vulnerability. Valid values:
+        // 
+        // *   1: unfixed
+        // *   2: fix failed
+        // *   3: rollback failed
+        // *   4: fixing
+        // *   5: rolling back
+        // *   6: verifying
+        // *   7: fixed
+        // *   8: fixed and pending restart
+        // *   9: rolled back
+        // *   10: ignored
+        // *   11: rolled back and pending restart
+        // *   12: not found
+        // *   20: expired
         @NameInMap("Status")
         public Integer status;
 
+        // The tag of the vulnerability.
         @NameInMap("Tag")
         public String tag;
 
+        // The type of the vulnerability. Valid values:
+        // 
+        // *   cve: Linux software vulnerability
+        // *   sys: Windows system vulnerability
         @NameInMap("Type")
         public String type;
 

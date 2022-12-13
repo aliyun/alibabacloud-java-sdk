@@ -7,41 +7,69 @@ public class DescribeBundlesRequest extends TeaModel {
     @NameInMap("BundleId")
     public java.util.List<String> bundleId;
 
+    // The type of the cloud desktop template. Valid values:
+    // 
+    // *   SYSTEM: the system template
+    // *   CUSTOM: the custom template
     @NameInMap("BundleType")
     public String bundleType;
 
+    // Specifies whether to query the inventory status of the cloud desktop type.
     @NameInMap("CheckStock")
     public Boolean checkStock;
 
+    // The number of vCPUs that is defined in the cloud desktop type.
     @NameInMap("CpuCount")
     public Integer cpuCount;
 
+    // The family of the cloud desktop type. Valid values:
+    // 
+    // *   eds.general: General Office
+    // *   eds.hf: High Frequency
+    // *   eds.graphics: Graphics
     @NameInMap("DesktopTypeFamily")
     public String desktopTypeFamily;
 
     @NameInMap("FotaChannel")
     public String fotaChannel;
 
+    // Specifies whether the cloud desktop template belongs to a desktop group. Default value: false.
     @NameInMap("FromDesktopGroup")
     public Boolean fromDesktopGroup;
 
+    // The number of GPUs that is defined in the cloud desktop type.
     @NameInMap("GpuCount")
     public Float gpuCount;
 
+    // The number of entries to return on each page.
+    // 
+    // Maximum value: 100.
+    // 
+    // Default value: 10.
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    // The memory size that is defined in the cloud desktop type. Unit: GiB.
     @NameInMap("MemorySize")
     public Integer memorySize;
 
+    // The token that is used to start the next query.
     @NameInMap("NextToken")
     public String nextToken;
 
+    // The protocol type.
+    // 
+    // *   HDX
+    // *   ASP (Recommend)
     @NameInMap("ProtocolType")
     public String protocolType;
 
+    // The ID of the region.
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("SelectedBundle")
+    public Boolean selectedBundle;
 
     @NameInMap("SupportMultiSession")
     public Boolean supportMultiSession;
@@ -156,6 +184,14 @@ public class DescribeBundlesRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeBundlesRequest setSelectedBundle(Boolean selectedBundle) {
+        this.selectedBundle = selectedBundle;
+        return this;
+    }
+    public Boolean getSelectedBundle() {
+        return this.selectedBundle;
     }
 
     public DescribeBundlesRequest setSupportMultiSession(Boolean supportMultiSession) {

@@ -4,12 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeClientEventsResponseBody extends TeaModel {
+    // Details about the events.
     @NameInMap("Events")
     public java.util.List<DescribeClientEventsResponseBodyEvents> events;
 
+    // The query token that is returned in this call.
     @NameInMap("NextToken")
     public String nextToken;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,69 +46,97 @@ public class DescribeClientEventsResponseBody extends TeaModel {
     }
 
     public static class DescribeClientEventsResponseBodyEvents extends TeaModel {
+        // The ID of the Alibaba Cloud account with which the event is associated.
         @NameInMap("AliUid")
         public String aliUid;
 
+        // The number of bytes that are received.
         @NameInMap("BytesReceived")
         public String bytesReceived;
 
+        // The number of bytes that are sent.
         @NameInMap("BytesSend")
         public String bytesSend;
 
+        // The IP address of the client.
         @NameInMap("ClientIp")
         public String clientIp;
 
+        // The OS that the client runs.
         @NameInMap("ClientOS")
         public String clientOS;
 
+        // The version of the client.
         @NameInMap("ClientVersion")
         public String clientVersion;
 
+        // The ID of the desktop group.
         @NameInMap("DesktopGroupId")
         public String desktopGroupId;
 
+        // The name of the desktop group.
         @NameInMap("DesktopGroupName")
         public String desktopGroupName;
 
+        // The ID of the cloud desktop.
         @NameInMap("DesktopId")
         public String desktopId;
 
+        // The IP address of the cloud desktop.
         @NameInMap("DesktopIp")
         public String desktopIp;
 
+        // The name of the cloud desktop.
         @NameInMap("DesktopName")
         public String desktopName;
 
+        // The ID of the directory to which the cloud desktop belongs.
         @NameInMap("DirectoryId")
         public String directoryId;
 
+        // The type of the directory.
         @NameInMap("DirectoryType")
         public String directoryType;
 
+        // The information about the regular user that connects to the cloud desktop from the EDS client. The information can be the RAM user ID or AD username.
         @NameInMap("EndUserId")
         public String endUserId;
 
+        // The ID of the event.
         @NameInMap("EventId")
         public String eventId;
 
+        // The time when the event occurred.
         @NameInMap("EventTime")
         public String eventTime;
 
+        // The type of the event.
         @NameInMap("EventType")
         public String eventType;
 
+        // The ID of the workspace to which the cloud desktop belongs.
         @NameInMap("OfficeSiteId")
         public String officeSiteId;
 
+        // The name of the workspace.
         @NameInMap("OfficeSiteName")
         public String officeSiteName;
 
+        // The account type of the workspace. Valid values:
+        // 
+        // *   SIMPLE: convenience account
+        // *   AD_CONNECTOR: enterprise AD account
         @NameInMap("OfficeSiteType")
         public String officeSiteType;
 
+        // The ID of the region.
         @NameInMap("RegionId")
         public String regionId;
 
+        // The status of the event. This parameter is returned if you set the EventType parameter to DESKTOP_DISCONNECT or GET_CONNECTION_TICKET. Valid values:
+        // 
+        // *   200\. The value indicates that the request is successful.
+        // *   An error message. The value indicates that the request failed. Example: FailedToGetConnectionTicket.
         @NameInMap("Status")
         public String status;
 

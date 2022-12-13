@@ -4,9 +4,11 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ListUserAdOrganizationUnitsResponseBody extends TeaModel {
+    // The details of the OU in the AD domain.
     @NameInMap("OUNames")
     public java.util.List<ListUserAdOrganizationUnitsResponseBodyOUNames> OUNames;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +34,11 @@ public class ListUserAdOrganizationUnitsResponseBody extends TeaModel {
     }
 
     public static class ListUserAdOrganizationUnitsResponseBodyOUNames extends TeaModel {
+        // The name of the organization unit.
         @NameInMap("OUName")
         public String OUName;
 
+        // The ID of the AD workspace.
         @NameInMap("OfficeSiteId")
         public String officeSiteId;
 

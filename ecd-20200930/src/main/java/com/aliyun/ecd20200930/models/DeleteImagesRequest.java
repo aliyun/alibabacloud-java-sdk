@@ -4,9 +4,11 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DeleteImagesRequest extends TeaModel {
+    // The IDs of the images that you want to delete.
     @NameInMap("ImageId")
     public java.util.List<String> imageId;
 
+    // The ID of the region where the images to delete are located.
     @NameInMap("RegionId")
     public String regionId;
 

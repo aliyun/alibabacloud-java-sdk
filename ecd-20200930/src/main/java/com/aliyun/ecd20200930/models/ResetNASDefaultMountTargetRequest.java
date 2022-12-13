@@ -4,9 +4,11 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ResetNASDefaultMountTargetRequest extends TeaModel {
+    // The ID of the NAS file system.
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
+    // The ID of the region.
     @NameInMap("RegionId")
     public String regionId;
 

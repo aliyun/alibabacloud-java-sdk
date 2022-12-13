@@ -4,12 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ModifyDesktopChargeTypeResponseBody extends TeaModel {
+    // The ID of cloud desktop. If multiple cloud desktops are created at a time, multiple cloud desktop IDs are returned.
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
+    // The ID of the order.
     @NameInMap("OrderId")
     public String orderId;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

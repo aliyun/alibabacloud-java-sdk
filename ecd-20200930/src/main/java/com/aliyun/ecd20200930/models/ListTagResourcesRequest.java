@@ -4,21 +4,27 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
+    // The number of entries to return on each page.
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    // The token used to start the next query.
     @NameInMap("NextToken")
     public String nextToken;
 
+    // The region ID of the resource.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The ID of the resource, which is the ID of the cloud desktop. Valid values of N: 1 to 50.
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
+    // The type of the resource. Set the value to ALIYUN::GWS::INSTANCE.
     @NameInMap("ResourceType")
     public String resourceType;
 
+    // The list of the resource.
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
 
@@ -76,9 +82,11 @@ public class ListTagResourcesRequest extends TeaModel {
     }
 
     public static class ListTagResourcesRequestTag extends TeaModel {
+        // The key of tag N. Valid values of N: 1 to 20.
         @NameInMap("Key")
         public String key;
 
+        // The value of tag N. Valid values of N: 1 to 20.
         @NameInMap("Value")
         public String value;
 

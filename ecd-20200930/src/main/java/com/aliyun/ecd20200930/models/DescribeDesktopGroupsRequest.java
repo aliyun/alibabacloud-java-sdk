@@ -4,42 +4,55 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeDesktopGroupsRequest extends TeaModel {
+    // The ID of the desktop group.
     @NameInMap("DesktopGroupId")
     public String desktopGroupId;
 
+    // The name of the desktop group that you want to query. Fuzzy search is supported.
     @NameInMap("DesktopGroupName")
     public String desktopGroupName;
 
+    // The authorized user.
     @NameInMap("EndUserIds")
     public java.util.List<String> endUserIds;
 
+    // The authorized user that you want to exclude.
     @NameInMap("ExcludedEndUserIds")
     public java.util.List<String> excludedEndUserIds;
 
+    // The number of entries to return on each page. Maximum value: 100 Default value: 10.
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    // The token that determines the start point of the next query. If this parameter is empty, all results are returned.
     @NameInMap("NextToken")
     public String nextToken;
 
+    // The ID of the workspace to which the desktop group belongs.
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
+    // The type of the desktop group.
     @NameInMap("OwnType")
     public Long ownType;
 
+    // The duration during which the desktop group is valid. The unit is specified by the PeriodUnit parameter.
     @NameInMap("Period")
     public Integer period;
 
+    // The unit of the duration.
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
+    // The ID of the policy with which the desktop group is associated.
     @NameInMap("PolicyGroupId")
     public String policyGroupId;
 
+    // The ID of the region.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The payment status of the desktop group.
     @NameInMap("Status")
     public Integer status;
 

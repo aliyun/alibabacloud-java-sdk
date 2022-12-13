@@ -4,27 +4,54 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeGroupedVulRequest extends TeaModel {
+    // The number of the page to return.
+    // 
+    // Pages start from page 1.
+    // 
+    // Default value: 1.
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    // The processing status of the vulnerability. Valid values:
+    // 
+    // *   y: handled
+    // *   n: unhandled
     @NameInMap("Dealed")
     public String dealed;
 
+    // The natural language of the request and response. Valid values:
+    // 
+    // *   zh: Chinese
+    // *   en: English
     @NameInMap("Lang")
     public String lang;
 
+    // The priority to fix the vulnerability or the risk level of the vulnerability. Valid values:
+    // 
+    // *   asap: high
+    // *   later: medium
+    // *   nntf: low
     @NameInMap("Necessity")
     public String necessity;
 
+    // The ID of the workspace.
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
+    // The maximum number of entries to return on each page.
+    // 
+    // Default value: 20.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The ID of the region.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The type of the vulnerability. Valid values:
+    // 
+    // *   cve: Linux software vulnerability
+    // *   sys: Windows system vulnerability
     @NameInMap("Type")
     public String type;
 

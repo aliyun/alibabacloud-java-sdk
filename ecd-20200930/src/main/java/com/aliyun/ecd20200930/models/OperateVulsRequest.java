@@ -7,18 +7,34 @@ public class OperateVulsRequest extends TeaModel {
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
+    // The operation to perform on the vulnerability. Valid values:
+    // 
+    // *   vul_fix: fixes the vulnerability. The system fixes the vulnerability.
+    // *   vul_verify: verifies whether the vulnerability is fixed. Perform this operation after the vulnerability is fixed and the cloud desktop is restarted.
+    // *   vul_ignore: ignores the vulnerability. After you ignore the vulnerability, the system gives no more prompts about the vulnerability.
+    // *   vul_undo_ignore: cancels the ignore operation on the vulnerability. After you cancel the ignore operation on the vulnerability, the system gives prompts about the vulnerability again.
     @NameInMap("OperateType")
     public String operateType;
 
+    // Specifies whether to record the previous state of the vulnerability. Valid values:
+    // 
+    // *   0: The previous state of the vulnerability is not recorded.
+    // *   1: The previous state of the vulnerability is recorded.
     @NameInMap("Precondition")
     public Integer precondition;
 
+    // The reason why the vulnerability is fixed.
     @NameInMap("Reason")
     public String reason;
 
+    // The ID of the region.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The type of the vulnerability. Valid values:
+    // 
+    // *   cve: Linux software vulnerability
+    // *   sys: Windows system vulnerability
     @NameInMap("Type")
     public String type;
 

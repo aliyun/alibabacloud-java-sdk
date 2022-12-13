@@ -4,15 +4,19 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class RemoveUserFromDesktopGroupRequest extends TeaModel {
+    // The ID of the desktop group on which the permissions you want to revoke from the authorized user.
     @NameInMap("DesktopGroupId")
     public String desktopGroupId;
 
+    // Details about the IDs of the desktop groups.
     @NameInMap("DesktopGroupIds")
     public java.util.List<String> desktopGroupIds;
 
+    // Details about the authorized users from which you want to revoke permissions on the desktop group.
     @NameInMap("EndUserIds")
     public java.util.List<String> endUserIds;
 
+    // The ID of the region.
     @NameInMap("RegionId")
     public String regionId;
 

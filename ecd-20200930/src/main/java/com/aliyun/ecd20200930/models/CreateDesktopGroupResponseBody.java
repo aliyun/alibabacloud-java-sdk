@@ -4,12 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateDesktopGroupResponseBody extends TeaModel {
+    // The ID of the desktop group.
     @NameInMap("DesktopGroupId")
     public String desktopGroupId;
 
+    // The ID of the order.
     @NameInMap("OrderIds")
     public java.util.List<String> orderIds;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

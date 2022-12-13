@@ -4,15 +4,19 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ModifyImageAttributeRequest extends TeaModel {
+    // The description of the image.
     @NameInMap("Description")
     public String description;
 
+    // The ID of the image.
     @NameInMap("ImageId")
     public String imageId;
 
+    // The name of the image.
     @NameInMap("Name")
     public String name;
 
+    // The region ID of the image.
     @NameInMap("RegionId")
     public String regionId;
 

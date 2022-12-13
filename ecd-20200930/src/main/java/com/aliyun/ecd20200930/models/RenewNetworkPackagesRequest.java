@@ -4,9 +4,16 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class RenewNetworkPackagesRequest extends TeaModel {
+    // Specifies whether to enable automatic payment. Valid values:
+    // 
+    // *   true: enables automatic payment. Make sure that you have sufficient balance in your account. Otherwise, abnormal orders are generated.
+    // *   false: generates the order with no payment made. You can log on to the EDS console and complete the payment based on the order number.
+    // 
+    // Default value: true.
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
+    // The IDs of the Internet access packages.
     @NameInMap("NetworkPackageId")
     public java.util.List<String> networkPackageId;
 
@@ -16,9 +23,11 @@ public class RenewNetworkPackagesRequest extends TeaModel {
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
+    // The ID of the sales promotion.
     @NameInMap("PromotionId")
     public String promotionId;
 
+    // The ID of the region.
     @NameInMap("RegionId")
     public String regionId;
 

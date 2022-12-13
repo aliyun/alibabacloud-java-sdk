@@ -4,9 +4,11 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeDesktopTypesResponseBody extends TeaModel {
+    // Details of cloud desktop types.
     @NameInMap("DesktopTypes")
     public java.util.List<DescribeDesktopTypesResponseBodyDesktopTypes> desktopTypes;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,30 +34,39 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
     }
 
     public static class DescribeDesktopTypesResponseBodyDesktopTypes extends TeaModel {
+        // The number of vCPUs.
         @NameInMap("CpuCount")
         public String cpuCount;
 
+        // The size of the data disk. Unit: GiB.
         @NameInMap("DataDiskSize")
         public String dataDiskSize;
 
+        // The ID of the cloud desktop type.
         @NameInMap("DesktopTypeId")
         public String desktopTypeId;
 
+        // The status of the cloud desktop type. If SUFFICIENT is returned, the number of cloud desktops of the type is sufficient.
         @NameInMap("DesktopTypeStatus")
         public String desktopTypeStatus;
 
+        // The number of GPUs.
         @NameInMap("GpuCount")
         public Float gpuCount;
 
+        // The GPU memory.
         @NameInMap("GpuSpec")
         public String gpuSpec;
 
+        // The family of the cloud desktop type.
         @NameInMap("InstanceTypeFamily")
         public String instanceTypeFamily;
 
+        // The memory size. Unit: MiB.
         @NameInMap("MemorySize")
         public String memorySize;
 
+        // The size of the system disk. Unit: GiB.
         @NameInMap("SystemDiskSize")
         public String systemDiskSize;
 

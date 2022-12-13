@@ -4,9 +4,11 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class CreatePolicyGroupResponseBody extends TeaModel {
+    // The ID of the policy.
     @NameInMap("PolicyGroupId")
     public String policyGroupId;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

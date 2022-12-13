@@ -4,12 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ClonePolicyGroupRequest extends TeaModel {
+    // The name of the policy.
     @NameInMap("Name")
     public String name;
 
+    // The ID of the policy that you want to clone.
     @NameInMap("PolicyGroupId")
     public String policyGroupId;
 
+    // The ID of the region.
     @NameInMap("RegionId")
     public String regionId;
 

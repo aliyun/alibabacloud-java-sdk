@@ -4,18 +4,23 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateNASFileSystemResponseBody extends TeaModel {
+    // The ID of the NAS file system.
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
+    // The name of the NAS file system.
     @NameInMap("FileSystemName")
     public String fileSystemName;
 
+    // The domain name of the mount target.
     @NameInMap("MountTargetDomain")
     public String mountTargetDomain;
 
+    // The ID of the workspace.
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
