@@ -7,6 +7,7 @@ public class DeleteTensorboardResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    // Tensorboad Id
     @NameInMap("TensorboardId")
     public String tensorboardId;
 

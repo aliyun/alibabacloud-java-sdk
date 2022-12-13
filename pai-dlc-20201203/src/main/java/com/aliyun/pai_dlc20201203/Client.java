@@ -3,16 +3,10 @@ package com.aliyun.pai_dlc20201203;
 
 import com.aliyun.tea.*;
 import com.aliyun.pai_dlc20201203.models.*;
-import com.aliyun.teautil.*;
-import com.aliyun.teautil.models.*;
-import com.aliyun.teaopenapi.*;
-import com.aliyun.teaopenapi.models.*;
-import com.aliyun.openapiutil.*;
-import com.aliyun.endpointutil.*;
 
 public class Client extends com.aliyun.teaopenapi.Client {
 
-    public Client(Config config) throws Exception {
+    public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._signatureAlgorithm = "v2";
         this._endpointRule = "regional";
@@ -84,16 +78,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
-    public CreateJobResponse createJob(CreateJobRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.createJobWithOptions(request, headers, runtime);
-    }
-
-    public CreateJobResponse createJobWithOptions(CreateJobRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public CreateJobResponse createJobWithOptions(CreateJobRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.codeSource))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.codeSource)) {
             body.put("CodeSource", request.codeSource);
         }
 
@@ -109,7 +97,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("DisplayName", request.displayName);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.elasticSpec))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.elasticSpec)) {
             body.put("ElasticSpec", request.elasticSpec);
         }
 
@@ -141,8 +129,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ResourceId", request.resourceId);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.settings))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.settings)) {
             body.put("Settings", request.settings);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.successPolicy)) {
+            body.put("SuccessPolicy", request.successPolicy);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.thirdpartyLibDir)) {
@@ -157,7 +149,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("UserCommand", request.userCommand);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.userVpc))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.userVpc)) {
             body.put("UserVpc", request.userVpc);
         }
 
@@ -165,11 +157,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("WorkspaceId", request.workspaceId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateJob"),
             new TeaPair("version", "2020-12-03"),
             new TeaPair("protocol", "HTTPS"),
@@ -183,13 +175,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateJobResponse());
     }
 
-    public CreateTensorboardResponse createTensorboard(CreateTensorboardRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public CreateJobResponse createJob(CreateJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.createTensorboardWithOptions(request, headers, runtime);
+        return this.createJobWithOptions(request, headers, runtime);
     }
 
-    public CreateTensorboardResponse createTensorboardWithOptions(CreateTensorboardRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public CreateTensorboardResponse createTensorboardWithOptions(CreateTensorboardRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.dataSourceId)) {
@@ -244,11 +236,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("WorkspaceId", request.workspaceId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateTensorboard"),
             new TeaPair("version", "2020-12-03"),
             new TeaPair("protocol", "HTTPS"),
@@ -262,22 +254,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateTensorboardResponse());
     }
 
-    public DeleteJobResponse deleteJob(String JobId) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public CreateTensorboardResponse createTensorboard(CreateTensorboardRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deleteJobWithOptions(JobId, headers, runtime);
+        return this.createTensorboardWithOptions(request, headers, runtime);
     }
 
-    public DeleteJobResponse deleteJobWithOptions(String JobId, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
-        JobId = com.aliyun.openapiutil.Client.getEncodeParam(JobId);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+    public DeleteJobResponse deleteJobWithOptions(String JobId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DeleteJob"),
             new TeaPair("version", "2020-12-03"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v1/jobs/" + JobId + ""),
+            new TeaPair("pathname", "/api/v1/jobs/" + com.aliyun.openapiutil.Client.getEncodeParam(JobId) + ""),
             new TeaPair("method", "DELETE"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -287,29 +278,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteJobResponse());
     }
 
-    public DeleteTensorboardResponse deleteTensorboard(String TensorboardId, DeleteTensorboardRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public DeleteJobResponse deleteJob(String JobId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deleteTensorboardWithOptions(TensorboardId, request, headers, runtime);
+        return this.deleteJobWithOptions(JobId, headers, runtime);
     }
 
-    public DeleteTensorboardResponse deleteTensorboardWithOptions(String TensorboardId, DeleteTensorboardRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public DeleteTensorboardResponse deleteTensorboardWithOptions(String TensorboardId, DeleteTensorboardRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        TensorboardId = com.aliyun.openapiutil.Client.getEncodeParam(TensorboardId);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
             query.put("WorkspaceId", request.workspaceId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DeleteTensorboard"),
             new TeaPair("version", "2020-12-03"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v1/tensorboards/" + TensorboardId + ""),
+            new TeaPair("pathname", "/api/v1/tensorboards/" + com.aliyun.openapiutil.Client.getEncodeParam(TensorboardId) + ""),
             new TeaPair("method", "DELETE"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -319,22 +309,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteTensorboardResponse());
     }
 
-    public GetJobResponse getJob(String JobId) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public DeleteTensorboardResponse deleteTensorboard(String TensorboardId, DeleteTensorboardRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getJobWithOptions(JobId, headers, runtime);
+        return this.deleteTensorboardWithOptions(TensorboardId, request, headers, runtime);
     }
 
-    public GetJobResponse getJobWithOptions(String JobId, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
-        JobId = com.aliyun.openapiutil.Client.getEncodeParam(JobId);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+    public GetJobResponse getJobWithOptions(String JobId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetJob"),
             new TeaPair("version", "2020-12-03"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v1/jobs/" + JobId + ""),
+            new TeaPair("pathname", "/api/v1/jobs/" + com.aliyun.openapiutil.Client.getEncodeParam(JobId) + ""),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -344,15 +333,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetJobResponse());
     }
 
-    public GetJobEventsResponse getJobEvents(String JobId, GetJobEventsRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public GetJobResponse getJob(String JobId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getJobEventsWithOptions(JobId, request, headers, runtime);
+        return this.getJobWithOptions(JobId, headers, runtime);
     }
 
-    public GetJobEventsResponse getJobEventsWithOptions(String JobId, GetJobEventsRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public GetJobEventsResponse getJobEventsWithOptions(String JobId, GetJobEventsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        JobId = com.aliyun.openapiutil.Client.getEncodeParam(JobId);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
             query.put("EndTime", request.endTime);
@@ -366,15 +354,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("StartTime", request.startTime);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetJobEvents"),
             new TeaPair("version", "2020-12-03"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v1/jobs/" + JobId + "/events"),
+            new TeaPair("pathname", "/api/v1/jobs/" + com.aliyun.openapiutil.Client.getEncodeParam(JobId) + "/events"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -384,15 +372,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetJobEventsResponse());
     }
 
-    public GetJobMetricsResponse getJobMetrics(String JobId, GetJobMetricsRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public GetJobEventsResponse getJobEvents(String JobId, GetJobEventsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getJobMetricsWithOptions(JobId, request, headers, runtime);
+        return this.getJobEventsWithOptions(JobId, request, headers, runtime);
     }
 
-    public GetJobMetricsResponse getJobMetricsWithOptions(String JobId, GetJobMetricsRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public GetJobMetricsResponse getJobMetricsWithOptions(String JobId, GetJobMetricsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        JobId = com.aliyun.openapiutil.Client.getEncodeParam(JobId);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
             query.put("EndTime", request.endTime);
@@ -414,15 +401,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Token", request.token);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetJobMetrics"),
             new TeaPair("version", "2020-12-03"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v1/jobs/" + JobId + "/metrics"),
+            new TeaPair("pathname", "/api/v1/jobs/" + com.aliyun.openapiutil.Client.getEncodeParam(JobId) + "/metrics"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -432,16 +419,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetJobMetricsResponse());
     }
 
-    public GetPodEventsResponse getPodEvents(String JobId, String PodId, GetPodEventsRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public GetJobMetricsResponse getJobMetrics(String JobId, GetJobMetricsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getPodEventsWithOptions(JobId, PodId, request, headers, runtime);
+        return this.getJobMetricsWithOptions(JobId, request, headers, runtime);
     }
 
-    public GetPodEventsResponse getPodEventsWithOptions(String JobId, String PodId, GetPodEventsRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public GetPodEventsResponse getPodEventsWithOptions(String JobId, String PodId, GetPodEventsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        JobId = com.aliyun.openapiutil.Client.getEncodeParam(JobId);
-        PodId = com.aliyun.openapiutil.Client.getEncodeParam(PodId);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
             query.put("EndTime", request.endTime);
@@ -459,15 +444,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("StartTime", request.startTime);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetPodEvents"),
             new TeaPair("version", "2020-12-03"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v1/jobs/" + JobId + "/pods/" + PodId + "/events"),
+            new TeaPair("pathname", "/api/v1/jobs/" + com.aliyun.openapiutil.Client.getEncodeParam(JobId) + "/pods/" + com.aliyun.openapiutil.Client.getEncodeParam(PodId) + "/events"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -477,16 +462,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetPodEventsResponse());
     }
 
-    public GetPodLogsResponse getPodLogs(String JobId, String PodId, GetPodLogsRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public GetPodEventsResponse getPodEvents(String JobId, String PodId, GetPodEventsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getPodLogsWithOptions(JobId, PodId, request, headers, runtime);
+        return this.getPodEventsWithOptions(JobId, PodId, request, headers, runtime);
     }
 
-    public GetPodLogsResponse getPodLogsWithOptions(String JobId, String PodId, GetPodLogsRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public GetPodLogsResponse getPodLogsWithOptions(String JobId, String PodId, GetPodLogsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        JobId = com.aliyun.openapiutil.Client.getEncodeParam(JobId);
-        PodId = com.aliyun.openapiutil.Client.getEncodeParam(PodId);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.downloadToFile)) {
             query.put("DownloadToFile", request.downloadToFile);
@@ -508,15 +491,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("StartTime", request.startTime);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetPodLogs"),
             new TeaPair("version", "2020-12-03"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v1/jobs/" + JobId + "/pods/" + PodId + "/logs"),
+            new TeaPair("pathname", "/api/v1/jobs/" + com.aliyun.openapiutil.Client.getEncodeParam(JobId) + "/pods/" + com.aliyun.openapiutil.Client.getEncodeParam(PodId) + "/logs"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -526,15 +509,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetPodLogsResponse());
     }
 
-    public GetTensorboardResponse getTensorboard(String TensorboardId, GetTensorboardRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public GetPodLogsResponse getPodLogs(String JobId, String PodId, GetPodLogsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getTensorboardWithOptions(TensorboardId, request, headers, runtime);
+        return this.getPodLogsWithOptions(JobId, PodId, request, headers, runtime);
     }
 
-    public GetTensorboardResponse getTensorboardWithOptions(String TensorboardId, GetTensorboardRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public GetTensorboardResponse getTensorboardWithOptions(String TensorboardId, GetTensorboardRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        TensorboardId = com.aliyun.openapiutil.Client.getEncodeParam(TensorboardId);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.jodId)) {
             query.put("JodId", request.jodId);
@@ -544,15 +526,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("WorkspaceId", request.workspaceId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetTensorboard"),
             new TeaPair("version", "2020-12-03"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v1/tensorboards/" + TensorboardId + ""),
+            new TeaPair("pathname", "/api/v1/tensorboards/" + com.aliyun.openapiutil.Client.getEncodeParam(TensorboardId) + ""),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -562,13 +544,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetTensorboardResponse());
     }
 
-    public ListEcsSpecsResponse listEcsSpecs(ListEcsSpecsRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public GetTensorboardResponse getTensorboard(String TensorboardId, GetTensorboardRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.listEcsSpecsWithOptions(request, headers, runtime);
+        return this.getTensorboardWithOptions(TensorboardId, request, headers, runtime);
     }
 
-    public ListEcsSpecsResponse listEcsSpecsWithOptions(ListEcsSpecsRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public ListEcsSpecsResponse listEcsSpecsWithOptions(ListEcsSpecsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.acceleratorType)) {
@@ -591,11 +573,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SortBy", request.sortBy);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ListEcsSpecs"),
             new TeaPair("version", "2020-12-03"),
             new TeaPair("protocol", "HTTPS"),
@@ -609,13 +591,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListEcsSpecsResponse());
     }
 
-    public ListJobsResponse listJobs(ListJobsRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public ListEcsSpecsResponse listEcsSpecs(ListEcsSpecsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.listJobsWithOptions(request, headers, runtime);
+        return this.listEcsSpecsWithOptions(request, headers, runtime);
     }
 
-    public ListJobsResponse listJobsWithOptions(ListJobsRequest tmpReq, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public ListJobsResponse listJobsWithOptions(ListJobsRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         ListJobsShrinkRequest request = new ListJobsShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
@@ -642,6 +624,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.fromAllWorkspaces)) {
             query.put("FromAllWorkspaces", request.fromAllWorkspaces);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            query.put("JobId", request.jobId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.jobType)) {
@@ -692,11 +678,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("WorkspaceId", request.workspaceId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ListJobs"),
             new TeaPair("version", "2020-12-03"),
             new TeaPair("protocol", "HTTPS"),
@@ -710,13 +696,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListJobsResponse());
     }
 
-    public ListTensorboardsResponse listTensorboards(ListTensorboardsRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public ListJobsResponse listJobs(ListJobsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.listTensorboardsWithOptions(request, headers, runtime);
+        return this.listJobsWithOptions(request, headers, runtime);
     }
 
-    public ListTensorboardsResponse listTensorboardsWithOptions(ListTensorboardsRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public ListTensorboardsResponse listTensorboardsWithOptions(ListTensorboardsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.displayName)) {
@@ -775,11 +761,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("WorkspaceId", request.workspaceId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ListTensorboards"),
             new TeaPair("version", "2020-12-03"),
             new TeaPair("protocol", "HTTPS"),
@@ -793,29 +779,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListTensorboardsResponse());
     }
 
-    public StartTensorboardResponse startTensorboard(String TensorboardId, StartTensorboardRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public ListTensorboardsResponse listTensorboards(ListTensorboardsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.startTensorboardWithOptions(TensorboardId, request, headers, runtime);
+        return this.listTensorboardsWithOptions(request, headers, runtime);
     }
 
-    public StartTensorboardResponse startTensorboardWithOptions(String TensorboardId, StartTensorboardRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public StartTensorboardResponse startTensorboardWithOptions(String TensorboardId, StartTensorboardRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        TensorboardId = com.aliyun.openapiutil.Client.getEncodeParam(TensorboardId);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
             query.put("WorkspaceId", request.workspaceId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "StartTensorboard"),
             new TeaPair("version", "2020-12-03"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v1/tensorboards/" + TensorboardId + "/start"),
+            new TeaPair("pathname", "/api/v1/tensorboards/" + com.aliyun.openapiutil.Client.getEncodeParam(TensorboardId) + "/start"),
             new TeaPair("method", "PUT"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -825,22 +810,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new StartTensorboardResponse());
     }
 
-    public StopJobResponse stopJob(String JobId) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public StartTensorboardResponse startTensorboard(String TensorboardId, StartTensorboardRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.stopJobWithOptions(JobId, headers, runtime);
+        return this.startTensorboardWithOptions(TensorboardId, request, headers, runtime);
     }
 
-    public StopJobResponse stopJobWithOptions(String JobId, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
-        JobId = com.aliyun.openapiutil.Client.getEncodeParam(JobId);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+    public StopJobResponse stopJobWithOptions(String JobId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "StopJob"),
             new TeaPair("version", "2020-12-03"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v1/jobs/" + JobId + "/stop"),
+            new TeaPair("pathname", "/api/v1/jobs/" + com.aliyun.openapiutil.Client.getEncodeParam(JobId) + "/stop"),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -850,29 +834,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new StopJobResponse());
     }
 
-    public StopTensorboardResponse stopTensorboard(String TensorboardId, StopTensorboardRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public StopJobResponse stopJob(String JobId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.stopTensorboardWithOptions(TensorboardId, request, headers, runtime);
+        return this.stopJobWithOptions(JobId, headers, runtime);
     }
 
-    public StopTensorboardResponse stopTensorboardWithOptions(String TensorboardId, StopTensorboardRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public StopTensorboardResponse stopTensorboardWithOptions(String TensorboardId, StopTensorboardRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        TensorboardId = com.aliyun.openapiutil.Client.getEncodeParam(TensorboardId);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
             query.put("WorkspaceId", request.workspaceId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "StopTensorboard"),
             new TeaPair("version", "2020-12-03"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v1/tensorboards/" + TensorboardId + "/stop"),
+            new TeaPair("pathname", "/api/v1/tensorboards/" + com.aliyun.openapiutil.Client.getEncodeParam(TensorboardId) + "/stop"),
             new TeaPair("method", "PUT"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -882,29 +865,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new StopTensorboardResponse());
     }
 
-    public UpdateJobResponse updateJob(String JobId, UpdateJobRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public StopTensorboardResponse stopTensorboard(String TensorboardId, StopTensorboardRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.updateJobWithOptions(JobId, request, headers, runtime);
+        return this.stopTensorboardWithOptions(TensorboardId, request, headers, runtime);
     }
 
-    public UpdateJobResponse updateJobWithOptions(String JobId, UpdateJobRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public UpdateJobResponse updateJobWithOptions(String JobId, UpdateJobRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        JobId = com.aliyun.openapiutil.Client.getEncodeParam(JobId);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.priority)) {
             body.put("Priority", request.priority);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "UpdateJob"),
             new TeaPair("version", "2020-12-03"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v1/jobs/" + JobId + ""),
+            new TeaPair("pathname", "/api/v1/jobs/" + com.aliyun.openapiutil.Client.getEncodeParam(JobId) + ""),
             new TeaPair("method", "PUT"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -914,15 +896,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateJobResponse());
     }
 
-    public UpdateTensorboardResponse updateTensorboard(String TensorboardId, UpdateTensorboardRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public UpdateJobResponse updateJob(String JobId, UpdateJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.updateTensorboardWithOptions(TensorboardId, request, headers, runtime);
+        return this.updateJobWithOptions(JobId, request, headers, runtime);
     }
 
-    public UpdateTensorboardResponse updateTensorboardWithOptions(String TensorboardId, UpdateTensorboardRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public UpdateTensorboardResponse updateTensorboardWithOptions(String TensorboardId, UpdateTensorboardRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        TensorboardId = com.aliyun.openapiutil.Client.getEncodeParam(TensorboardId);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.maxRunningTimeMinutes)) {
             query.put("MaxRunningTimeMinutes", request.maxRunningTimeMinutes);
@@ -932,15 +913,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("WorkspaceId", request.workspaceId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "UpdateTensorboard"),
             new TeaPair("version", "2020-12-03"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v1/tensorboards/" + TensorboardId + ""),
+            new TeaPair("pathname", "/api/v1/tensorboards/" + com.aliyun.openapiutil.Client.getEncodeParam(TensorboardId) + ""),
             new TeaPair("method", "PUT"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -948,5 +929,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateTensorboardResponse());
+    }
+
+    public UpdateTensorboardResponse updateTensorboard(String TensorboardId, UpdateTensorboardRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateTensorboardWithOptions(TensorboardId, request, headers, runtime);
     }
 }

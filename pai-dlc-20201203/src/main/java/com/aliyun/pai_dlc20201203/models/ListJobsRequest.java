@@ -19,6 +19,9 @@ public class ListJobsRequest extends TeaModel {
     @NameInMap("FromAllWorkspaces")
     public Boolean fromAllWorkspaces;
 
+    @NameInMap("JobId")
+    public String jobId;
+
     @NameInMap("JobType")
     public String jobType;
 
@@ -98,6 +101,14 @@ public class ListJobsRequest extends TeaModel {
     }
     public Boolean getFromAllWorkspaces() {
         return this.fromAllWorkspaces;
+    }
+
+    public ListJobsRequest setJobId(String jobId) {
+        this.jobId = jobId;
+        return this;
+    }
+    public String getJobId() {
+        return this.jobId;
     }
 
     public ListJobsRequest setJobType(String jobType) {

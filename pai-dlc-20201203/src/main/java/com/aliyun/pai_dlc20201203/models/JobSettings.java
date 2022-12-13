@@ -13,6 +13,9 @@ public class JobSettings extends TeaModel {
     @NameInMap("EnableErrorMonitoringInAIMaster")
     public Boolean enableErrorMonitoringInAIMaster;
 
+    @NameInMap("EnableOssAppend")
+    public Boolean enableOssAppend;
+
     @NameInMap("EnableRDMA")
     public Boolean enableRDMA;
 
@@ -55,6 +58,14 @@ public class JobSettings extends TeaModel {
     }
     public Boolean getEnableErrorMonitoringInAIMaster() {
         return this.enableErrorMonitoringInAIMaster;
+    }
+
+    public JobSettings setEnableOssAppend(Boolean enableOssAppend) {
+        this.enableOssAppend = enableOssAppend;
+        return this;
+    }
+    public Boolean getEnableOssAppend() {
+        return this.enableOssAppend;
     }
 
     public JobSettings setEnableRDMA(Boolean enableRDMA) {

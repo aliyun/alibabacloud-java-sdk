@@ -4,6 +4,7 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class CreateTensorboardResponseBody extends TeaModel {
+    // DataSourceId
     @NameInMap("DataSourceId")
     public String dataSourceId;
 
@@ -13,6 +14,7 @@ public class CreateTensorboardResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    // Tensorboard id
     @NameInMap("TensorboardId")
     public String tensorboardId;
 
