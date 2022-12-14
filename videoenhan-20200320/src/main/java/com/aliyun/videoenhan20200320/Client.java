@@ -1216,7 +1216,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         GenerateVideoRequest generateVideoReq = new GenerateVideoRequest();
         com.aliyun.openapiutil.Client.convert(request, generateVideoReq);
         if (!com.aliyun.teautil.Common.isUnset(request.fileList)) {
-            Integer i = 0;
+            Integer i0 = 0;
             for (GenerateVideoAdvanceRequest.GenerateVideoAdvanceRequestFileList item0 : request.fileList) {
                 if (!com.aliyun.teautil.Common.isUnset(item0.fileUrlObject)) {
                     authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
@@ -1241,9 +1241,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
                         new TeaPair("header", ossHeader)
                     ));
                     ossClient.postObject(uploadRequest, ossRuntime);
-                    GenerateVideoRequest.GenerateVideoRequestFileList tmp = generateVideoReq.fileList.get(i);
+                    GenerateVideoRequest.GenerateVideoRequestFileList tmp = generateVideoReq.fileList.get(i0);
                     tmp.fileUrl = "http://" + authResponse.body.bucket + "." + authResponse.body.endpoint + "/" + authResponse.body.objectKey + "";
-                    i = com.aliyun.darabonbanumber.Client.ltoi(com.aliyun.darabonbanumber.Client.add(com.aliyun.darabonbanumber.Client.itol(i), com.aliyun.darabonbanumber.Client.itol(1)));
+                    i0 = com.aliyun.darabonbanumber.Client.ltoi(com.aliyun.darabonbanumber.Client.add(com.aliyun.darabonbanumber.Client.itol(i0), com.aliyun.darabonbanumber.Client.itol(1)));
                 }
 
             }
