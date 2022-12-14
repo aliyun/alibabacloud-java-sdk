@@ -3,20 +3,23 @@ package com.aliyun.dbs20210101.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteSandboxInstanceResponseBody extends TeaModel {
+public class DescribeDownloadSupportResponseBody extends TeaModel {
     // The error code.
     @NameInMap("Code")
     public String code;
 
-    // The response parameters.
+    // Indicates whether the advanced download feature is supported. Valid values:
+    // 
+    // *   **true**: The advanced download feature is supported.
+    // *   **false**: The advanced download feature is not supported.
     @NameInMap("Data")
     public String data;
 
-    // The error code.
+    // The error code returned if the request fails.
     @NameInMap("ErrCode")
     public String errCode;
 
-    // The error message.
+    // The error message returned if the request fails.
     @NameInMap("ErrMessage")
     public String errMessage;
 
@@ -28,16 +31,19 @@ public class DeleteSandboxInstanceResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request is successful.
+    // Indicates whether the request is successful. Valid values:
+    // 
+    // *   **true**: The request is successful.
+    // *   **false**: The request fails.
     @NameInMap("Success")
     public String success;
 
-    public static DeleteSandboxInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DeleteSandboxInstanceResponseBody self = new DeleteSandboxInstanceResponseBody();
+    public static DescribeDownloadSupportResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DescribeDownloadSupportResponseBody self = new DescribeDownloadSupportResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DeleteSandboxInstanceResponseBody setCode(String code) {
+    public DescribeDownloadSupportResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -45,7 +51,7 @@ public class DeleteSandboxInstanceResponseBody extends TeaModel {
         return this.code;
     }
 
-    public DeleteSandboxInstanceResponseBody setData(String data) {
+    public DescribeDownloadSupportResponseBody setData(String data) {
         this.data = data;
         return this;
     }
@@ -53,7 +59,7 @@ public class DeleteSandboxInstanceResponseBody extends TeaModel {
         return this.data;
     }
 
-    public DeleteSandboxInstanceResponseBody setErrCode(String errCode) {
+    public DescribeDownloadSupportResponseBody setErrCode(String errCode) {
         this.errCode = errCode;
         return this;
     }
@@ -61,7 +67,7 @@ public class DeleteSandboxInstanceResponseBody extends TeaModel {
         return this.errCode;
     }
 
-    public DeleteSandboxInstanceResponseBody setErrMessage(String errMessage) {
+    public DescribeDownloadSupportResponseBody setErrMessage(String errMessage) {
         this.errMessage = errMessage;
         return this;
     }
@@ -69,7 +75,7 @@ public class DeleteSandboxInstanceResponseBody extends TeaModel {
         return this.errMessage;
     }
 
-    public DeleteSandboxInstanceResponseBody setMessage(String message) {
+    public DescribeDownloadSupportResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -77,7 +83,7 @@ public class DeleteSandboxInstanceResponseBody extends TeaModel {
         return this.message;
     }
 
-    public DeleteSandboxInstanceResponseBody setRequestId(String requestId) {
+    public DescribeDownloadSupportResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -85,7 +91,7 @@ public class DeleteSandboxInstanceResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DeleteSandboxInstanceResponseBody setSuccess(String success) {
+    public DescribeDownloadSupportResponseBody setSuccess(String success) {
         this.success = success;
         return this;
     }
