@@ -1741,7 +1741,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         DetectLivingFaceRequest detectLivingFaceReq = new DetectLivingFaceRequest();
         com.aliyun.openapiutil.Client.convert(request, detectLivingFaceReq);
         if (!com.aliyun.teautil.Common.isUnset(request.tasks)) {
-            Integer i = 0;
+            Integer i0 = 0;
             for (DetectLivingFaceAdvanceRequest.DetectLivingFaceAdvanceRequestTasks item0 : request.tasks) {
                 if (!com.aliyun.teautil.Common.isUnset(item0.imageURLObject)) {
                     authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
@@ -1766,9 +1766,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
                         new TeaPair("header", ossHeader)
                     ));
                     ossClient.postObject(uploadRequest, ossRuntime);
-                    DetectLivingFaceRequest.DetectLivingFaceRequestTasks tmp = detectLivingFaceReq.tasks.get(i);
+                    DetectLivingFaceRequest.DetectLivingFaceRequestTasks tmp = detectLivingFaceReq.tasks.get(i0);
                     tmp.imageURL = "http://" + authResponse.body.bucket + "." + authResponse.body.endpoint + "/" + authResponse.body.objectKey + "";
-                    i = com.aliyun.darabonbanumber.Client.ltoi(com.aliyun.darabonbanumber.Client.add(com.aliyun.darabonbanumber.Client.itol(i), com.aliyun.darabonbanumber.Client.itol(1)));
+                    i0 = com.aliyun.darabonbanumber.Client.ltoi(com.aliyun.darabonbanumber.Client.add(com.aliyun.darabonbanumber.Client.itol(i0), com.aliyun.darabonbanumber.Client.itol(1)));
                 }
 
             }
@@ -3911,7 +3911,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         RecognizeActionRequest recognizeActionReq = new RecognizeActionRequest();
         com.aliyun.openapiutil.Client.convert(request, recognizeActionReq);
         if (!com.aliyun.teautil.Common.isUnset(request.URLList)) {
-            Integer i = 0;
+            Integer i0 = 0;
             for (RecognizeActionAdvanceRequest.RecognizeActionAdvanceRequestURLList item0 : request.URLList) {
                 if (!com.aliyun.teautil.Common.isUnset(item0.URLObject)) {
                     authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
@@ -3936,12 +3936,38 @@ public class Client extends com.aliyun.teaopenapi.Client {
                         new TeaPair("header", ossHeader)
                     ));
                     ossClient.postObject(uploadRequest, ossRuntime);
-                    RecognizeActionRequest.RecognizeActionRequestURLList tmp = recognizeActionReq.URLList.get(i);
+                    RecognizeActionRequest.RecognizeActionRequestURLList tmp = recognizeActionReq.URLList.get(i0);
                     tmp.URL = "http://" + authResponse.body.bucket + "." + authResponse.body.endpoint + "/" + authResponse.body.objectKey + "";
-                    i = com.aliyun.darabonbanumber.Client.ltoi(com.aliyun.darabonbanumber.Client.add(com.aliyun.darabonbanumber.Client.itol(i), com.aliyun.darabonbanumber.Client.itol(1)));
+                    i0 = com.aliyun.darabonbanumber.Client.ltoi(com.aliyun.darabonbanumber.Client.add(com.aliyun.darabonbanumber.Client.itol(i0), com.aliyun.darabonbanumber.Client.itol(1)));
                 }
 
             }
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.videoUrlObject)) {
+            authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
+            ossConfig.accessKeyId = authResponse.body.accessKeyId;
+            ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.body.endpoint, authResponse.body.useAccelerate, _endpointType);
+            ossClient = new com.aliyun.oss.Client(ossConfig);
+            fileObj = com.aliyun.fileform.models.FileField.build(TeaConverter.buildMap(
+                new TeaPair("filename", authResponse.body.objectKey),
+                new TeaPair("content", request.videoUrlObject),
+                new TeaPair("contentType", "")
+            ));
+            ossHeader = com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
+                new TeaPair("accessKeyId", authResponse.body.accessKeyId),
+                new TeaPair("policy", authResponse.body.encodedPolicy),
+                new TeaPair("signature", authResponse.body.signature),
+                new TeaPair("key", authResponse.body.objectKey),
+                new TeaPair("file", fileObj),
+                new TeaPair("successActionStatus", "201")
+            ));
+            uploadRequest = com.aliyun.oss.models.PostObjectRequest.build(TeaConverter.buildMap(
+                new TeaPair("bucketName", authResponse.body.bucket),
+                new TeaPair("header", ossHeader)
+            ));
+            ossClient.postObject(uploadRequest, ossRuntime);
+            recognizeActionReq.videoUrl = "http://" + authResponse.body.bucket + "." + authResponse.body.endpoint + "/" + authResponse.body.objectKey + "";
         }
 
         RecognizeActionResponse recognizeActionResp = this.recognizeActionWithOptions(recognizeActionReq, runtime);
@@ -4375,7 +4401,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         RecognizePublicFaceRequest recognizePublicFaceReq = new RecognizePublicFaceRequest();
         com.aliyun.openapiutil.Client.convert(request, recognizePublicFaceReq);
         if (!com.aliyun.teautil.Common.isUnset(request.task)) {
-            Integer i = 0;
+            Integer i0 = 0;
             for (RecognizePublicFaceAdvanceRequest.RecognizePublicFaceAdvanceRequestTask item0 : request.task) {
                 if (!com.aliyun.teautil.Common.isUnset(item0.imageURLObject)) {
                     authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
@@ -4400,9 +4426,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
                         new TeaPair("header", ossHeader)
                     ));
                     ossClient.postObject(uploadRequest, ossRuntime);
-                    RecognizePublicFaceRequest.RecognizePublicFaceRequestTask tmp = recognizePublicFaceReq.task.get(i);
+                    RecognizePublicFaceRequest.RecognizePublicFaceRequestTask tmp = recognizePublicFaceReq.task.get(i0);
                     tmp.imageURL = "http://" + authResponse.body.bucket + "." + authResponse.body.endpoint + "/" + authResponse.body.objectKey + "";
-                    i = com.aliyun.darabonbanumber.Client.ltoi(com.aliyun.darabonbanumber.Client.add(com.aliyun.darabonbanumber.Client.itol(i), com.aliyun.darabonbanumber.Client.itol(1)));
+                    i0 = com.aliyun.darabonbanumber.Client.ltoi(com.aliyun.darabonbanumber.Client.add(com.aliyun.darabonbanumber.Client.itol(i0), com.aliyun.darabonbanumber.Client.itol(1)));
                 }
 
             }

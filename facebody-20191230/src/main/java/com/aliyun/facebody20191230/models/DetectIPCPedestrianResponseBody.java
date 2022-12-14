@@ -7,6 +7,7 @@ public class DetectIPCPedestrianResponseBody extends TeaModel {
     @NameInMap("Data")
     public DetectIPCPedestrianResponseBodyData data;
 
+    // requestId
     @NameInMap("RequestId")
     public String requestId;
 

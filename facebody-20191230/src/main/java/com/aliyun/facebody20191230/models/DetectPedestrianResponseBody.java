@@ -32,6 +32,7 @@ public class DetectPedestrianResponseBody extends TeaModel {
     }
 
     public static class DetectPedestrianResponseBodyDataElements extends TeaModel {
+        // 1
         @NameInMap("Boxes")
         public java.util.List<Integer> boxes;
 

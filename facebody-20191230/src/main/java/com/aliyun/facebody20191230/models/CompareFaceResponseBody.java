@@ -44,12 +44,15 @@ public class CompareFaceResponseBody extends TeaModel {
         @NameInMap("QualityScoreB")
         public Float qualityScoreB;
 
+        // 1
         @NameInMap("RectAList")
         public java.util.List<Integer> rectAList;
 
+        // 1
         @NameInMap("RectBList")
         public java.util.List<Integer> rectBList;
 
+        // 1
         @NameInMap("Thresholds")
         public java.util.List<Float> thresholds;
 
