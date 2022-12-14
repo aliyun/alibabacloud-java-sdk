@@ -7,6 +7,7 @@ public class GetZidTagByAtokenResponseBody extends TeaModel {
     @NameInMap("Msg")
     public String msg;
 
+    // code
     @NameInMap("code")
     public Long code;
 
@@ -16,6 +17,7 @@ public class GetZidTagByAtokenResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    // success
     @NameInMap("success")
     public Boolean success;
 
@@ -65,6 +67,7 @@ public class GetZidTagByAtokenResponseBody extends TeaModel {
     }
 
     public static class GetZidTagByAtokenResponseBodyData extends TeaModel {
+        // aHook
         @NameInMap("aHook")
         public String aHook;
 
@@ -74,26 +77,18 @@ public class GetZidTagByAtokenResponseBody extends TeaModel {
         @NameInMap("doubleOpen")
         public String doubleOpen;
 
+        // javaHook
         @NameInMap("javaHook")
         public String javaHook;
 
-        @NameInMap("javaHookCount")
-        public String javaHookCount;
-
         @NameInMap("nativeHook")
         public String nativeHook;
-
-        @NameInMap("nativeHookCount")
-        public String nativeHookCount;
 
         @NameInMap("root")
         public String root;
 
         @NameInMap("simulator")
         public String simulator;
-
-        @NameInMap("version")
-        public String version;
 
         @NameInMap("vpnProxy")
         public String vpnProxy;
@@ -141,28 +136,12 @@ public class GetZidTagByAtokenResponseBody extends TeaModel {
             return this.javaHook;
         }
 
-        public GetZidTagByAtokenResponseBodyData setJavaHookCount(String javaHookCount) {
-            this.javaHookCount = javaHookCount;
-            return this;
-        }
-        public String getJavaHookCount() {
-            return this.javaHookCount;
-        }
-
         public GetZidTagByAtokenResponseBodyData setNativeHook(String nativeHook) {
             this.nativeHook = nativeHook;
             return this;
         }
         public String getNativeHook() {
             return this.nativeHook;
-        }
-
-        public GetZidTagByAtokenResponseBodyData setNativeHookCount(String nativeHookCount) {
-            this.nativeHookCount = nativeHookCount;
-            return this;
-        }
-        public String getNativeHookCount() {
-            return this.nativeHookCount;
         }
 
         public GetZidTagByAtokenResponseBodyData setRoot(String root) {
@@ -179,14 +158,6 @@ public class GetZidTagByAtokenResponseBody extends TeaModel {
         }
         public String getSimulator() {
             return this.simulator;
-        }
-
-        public GetZidTagByAtokenResponseBodyData setVersion(String version) {
-            this.version = version;
-            return this;
-        }
-        public String getVersion() {
-            return this.version;
         }
 
         public GetZidTagByAtokenResponseBodyData setVpnProxy(String vpnProxy) {

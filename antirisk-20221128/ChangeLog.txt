@@ -1,3 +1,7 @@
+2022-12-14 Version: 1.0.7
+- Supported atoken to zid_tags.
+- Add csharp sdk.
+
 2022-12-06 Version: 1.0.6
 - Supported atoken to zid_tags.
 
