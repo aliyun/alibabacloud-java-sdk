@@ -4,6 +4,7 @@ package com.aliyun.imageprocess20200320.models;
 import com.aliyun.tea.*;
 
 public class RunCTRegistrationRequest extends TeaModel {
+    // DICOM。
     @NameInMap("DataFormat")
     public String dataFormat;
 

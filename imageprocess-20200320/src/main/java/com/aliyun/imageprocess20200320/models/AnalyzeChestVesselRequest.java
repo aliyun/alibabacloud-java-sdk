@@ -16,6 +16,7 @@ public class AnalyzeChestVesselRequest extends TeaModel {
     @NameInMap("OrgName")
     public String orgName;
 
+    // 1
     @NameInMap("URLList")
     public java.util.List<AnalyzeChestVesselRequestURLList> URLList;
 

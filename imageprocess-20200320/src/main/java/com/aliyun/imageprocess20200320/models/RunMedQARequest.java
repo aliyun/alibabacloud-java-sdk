@@ -99,18 +99,18 @@ public class RunMedQARequest extends TeaModel {
 
     public static class RunMedQARequestAnswerImageDataList extends TeaModel {
         @NameInMap("AnswerImageData")
-        public byte[] answerImageData;
+        public String answerImageData;
 
         public static RunMedQARequestAnswerImageDataList build(java.util.Map<String, ?> map) throws Exception {
             RunMedQARequestAnswerImageDataList self = new RunMedQARequestAnswerImageDataList();
             return TeaModel.build(map, self);
         }
 
-        public RunMedQARequestAnswerImageDataList setAnswerImageData(byte[] answerImageData) {
+        public RunMedQARequestAnswerImageDataList setAnswerImageData(String answerImageData) {
             this.answerImageData = answerImageData;
             return this;
         }
-        public byte[] getAnswerImageData() {
+        public String getAnswerImageData() {
             return this.answerImageData;
         }
 

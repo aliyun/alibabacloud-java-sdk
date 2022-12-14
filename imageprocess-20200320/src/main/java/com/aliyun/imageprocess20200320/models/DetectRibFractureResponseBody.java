@@ -49,6 +49,9 @@ public class DetectRibFractureResponseBody extends TeaModel {
         @NameInMap("Coordinates")
         public java.util.List<Integer> coordinates;
 
+        @NameInMap("FracSOPInstanceUID")
+        public String fracSOPInstanceUID;
+
         @NameInMap("FractureCategory")
         public String fractureCategory;
 
@@ -83,6 +86,14 @@ public class DetectRibFractureResponseBody extends TeaModel {
         }
         public java.util.List<Integer> getCoordinates() {
             return this.coordinates;
+        }
+
+        public DetectRibFractureResponseBodyDataDetections setFracSOPInstanceUID(String fracSOPInstanceUID) {
+            this.fracSOPInstanceUID = fracSOPInstanceUID;
+            return this;
+        }
+        public String getFracSOPInstanceUID() {
+            return this.fracSOPInstanceUID;
         }
 
         public DetectRibFractureResponseBodyDataDetections setFractureCategory(String fractureCategory) {
