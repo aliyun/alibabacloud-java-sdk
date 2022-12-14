@@ -11,7 +11,7 @@ public class ExecuteServerSideVerificationRequest extends TeaModel {
     public String certificateNumber;
 
     @NameInMap("facialPictureData")
-    public byte[] facialPictureData;
+    public String facialPictureData;
 
     @NameInMap("facialPictureUrl")
     public String facialPictureUrl;
@@ -40,11 +40,11 @@ public class ExecuteServerSideVerificationRequest extends TeaModel {
         return this.certificateNumber;
     }
 
-    public ExecuteServerSideVerificationRequest setFacialPictureData(byte[] facialPictureData) {
+    public ExecuteServerSideVerificationRequest setFacialPictureData(String facialPictureData) {
         this.facialPictureData = facialPictureData;
         return this;
     }
-    public byte[] getFacialPictureData() {
+    public String getFacialPictureData() {
         return this.facialPictureData;
     }
 

@@ -4,11 +4,9 @@ package com.aliyun.facebody20200910.models;
 import com.aliyun.tea.*;
 
 public class DetectIPCPedestrianOptimizedResponseBody extends TeaModel {
-    // data
     @NameInMap("Data")
     public DetectIPCPedestrianOptimizedResponseBodyData data;
 
-    // requestId
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,11 +32,9 @@ public class DetectIPCPedestrianOptimizedResponseBody extends TeaModel {
     }
 
     public static class DetectIPCPedestrianOptimizedResponseBodyDataImageInfoListElements extends TeaModel {
-        // box array
         @NameInMap("Boxes")
         public java.util.List<Long> boxes;
 
-        // score
         @NameInMap("Score")
         public Float score;
 
@@ -66,7 +62,6 @@ public class DetectIPCPedestrianOptimizedResponseBody extends TeaModel {
     }
 
     public static class DetectIPCPedestrianOptimizedResponseBodyDataImageInfoList extends TeaModel {
-        // Elements
         @NameInMap("Elements")
         public java.util.List<DetectIPCPedestrianOptimizedResponseBodyDataImageInfoListElements> elements;
 
@@ -86,7 +81,6 @@ public class DetectIPCPedestrianOptimizedResponseBody extends TeaModel {
     }
 
     public static class DetectIPCPedestrianOptimizedResponseBodyData extends TeaModel {
-        // imageInfoList
         @NameInMap("ImageInfoList")
         public java.util.List<DetectIPCPedestrianOptimizedResponseBodyDataImageInfoList> imageInfoList;
 
