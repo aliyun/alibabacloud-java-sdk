@@ -4,24 +4,31 @@ package com.aliyun.dbs20210101.models;
 import com.aliyun.tea.*;
 
 public class CreateSandboxInstanceResponseBody extends TeaModel {
+    // The error code.
     @NameInMap("Code")
     public String code;
 
+    // The response parameters.
     @NameInMap("Data")
     public CreateSandboxInstanceResponseBodyData data;
 
+    // The error code.
     @NameInMap("ErrCode")
     public String errCode;
 
+    // The error message.
     @NameInMap("ErrMessage")
     public String errMessage;
 
+    // The error message.
     @NameInMap("Message")
     public String message;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request is successful.
     @NameInMap("Success")
     public String success;
 
@@ -87,9 +94,11 @@ public class CreateSandboxInstanceResponseBody extends TeaModel {
     }
 
     public static class CreateSandboxInstanceResponseBodyData extends TeaModel {
+        // The ID of the backup schedule.
         @NameInMap("BackupPlanId")
         public String backupPlanId;
 
+        // The ID of the sandbox instance.
         @NameInMap("InstanceId")
         public String instanceId;
 

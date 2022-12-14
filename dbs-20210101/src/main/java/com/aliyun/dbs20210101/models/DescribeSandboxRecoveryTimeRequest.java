@@ -4,6 +4,9 @@ package com.aliyun.dbs20210101.models;
 import com.aliyun.tea.*;
 
 public class DescribeSandboxRecoveryTimeRequest extends TeaModel {
+    // The ID of the backup schedule. You can call the [DescribeBackupPlanList](~~437215~~) operation to obtain the ID of the backup schedule. If you set this parameter to the backup schedule ID obtained by calling the DescribeBackupPlanList operation, the dbs prefix must be removed. Otherwise, the call fails.
+    // 
+    // >  If your instance is an ApsaraDB RDS for MySQL instance, you can configure [automatic access to the instance](~~193091~~) to automatically add the instance to DBS and obtain the ID of the backup schedule.
     @NameInMap("BackupPlanId")
     public String backupPlanId;
 
