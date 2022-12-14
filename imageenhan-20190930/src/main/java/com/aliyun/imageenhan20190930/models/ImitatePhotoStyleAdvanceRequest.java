@@ -8,7 +8,7 @@ public class ImitatePhotoStyleAdvanceRequest extends TeaModel {
     public java.io.InputStream imageURLObject;
 
     @NameInMap("StyleUrl")
-    public String styleUrl;
+    public java.io.InputStream styleUrlObject;
 
     public static ImitatePhotoStyleAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         ImitatePhotoStyleAdvanceRequest self = new ImitatePhotoStyleAdvanceRequest();
@@ -23,12 +23,12 @@ public class ImitatePhotoStyleAdvanceRequest extends TeaModel {
         return this.imageURLObject;
     }
 
-    public ImitatePhotoStyleAdvanceRequest setStyleUrl(String styleUrl) {
-        this.styleUrl = styleUrl;
+    public ImitatePhotoStyleAdvanceRequest setStyleUrlObject(java.io.InputStream styleUrlObject) {
+        this.styleUrlObject = styleUrlObject;
         return this;
     }
-    public String getStyleUrl() {
-        return this.styleUrl;
+    public java.io.InputStream getStyleUrlObject() {
+        return this.styleUrlObject;
     }
 
 }
