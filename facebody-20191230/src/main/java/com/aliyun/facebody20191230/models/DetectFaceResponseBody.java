@@ -32,27 +32,35 @@ public class DetectFaceResponseBody extends TeaModel {
     }
 
     public static class DetectFaceResponseBodyDataQualities extends TeaModel {
+        // 1
         @NameInMap("BlurList")
         public java.util.List<Float> blurList;
 
+        // 1
         @NameInMap("FnfList")
         public java.util.List<Float> fnfList;
 
+        // 1
         @NameInMap("GlassList")
         public java.util.List<Float> glassList;
 
+        // 1
         @NameInMap("IlluList")
         public java.util.List<Float> illuList;
 
+        // 1
         @NameInMap("MaskList")
         public java.util.List<Float> maskList;
 
+        // 1
         @NameInMap("NoiseList")
         public java.util.List<Float> noiseList;
 
+        // 1
         @NameInMap("PoseList")
         public java.util.List<Float> poseList;
 
+        // 1
         @NameInMap("ScoreList")
         public java.util.List<Float> scoreList;
 
@@ -131,21 +139,26 @@ public class DetectFaceResponseBody extends TeaModel {
         @NameInMap("FaceCount")
         public Integer faceCount;
 
+        // 1
         @NameInMap("FaceProbabilityList")
         public java.util.List<Float> faceProbabilityList;
 
+        // 1
         @NameInMap("FaceRectangles")
         public java.util.List<Integer> faceRectangles;
 
         @NameInMap("LandmarkCount")
         public Integer landmarkCount;
 
+        // 1
         @NameInMap("Landmarks")
         public java.util.List<Float> landmarks;
 
+        // 1
         @NameInMap("PoseList")
         public java.util.List<Float> poseList;
 
+        // 1
         @NameInMap("Pupils")
         public java.util.List<Float> pupils;
 

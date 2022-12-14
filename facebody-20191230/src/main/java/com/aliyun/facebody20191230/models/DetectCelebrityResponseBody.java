@@ -32,6 +32,7 @@ public class DetectCelebrityResponseBody extends TeaModel {
     }
 
     public static class DetectCelebrityResponseBodyDataFaceRecognizeResults extends TeaModel {
+        // 1
         @NameInMap("FaceBoxes")
         public java.util.List<Float> faceBoxes;
 

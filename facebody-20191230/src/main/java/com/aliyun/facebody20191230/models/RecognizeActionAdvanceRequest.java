@@ -14,7 +14,7 @@ public class RecognizeActionAdvanceRequest extends TeaModel {
     public String videoData;
 
     @NameInMap("VideoUrl")
-    public String videoUrl;
+    public java.io.InputStream videoUrlObject;
 
     public static RecognizeActionAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         RecognizeActionAdvanceRequest self = new RecognizeActionAdvanceRequest();
@@ -45,12 +45,12 @@ public class RecognizeActionAdvanceRequest extends TeaModel {
         return this.videoData;
     }
 
-    public RecognizeActionAdvanceRequest setVideoUrl(String videoUrl) {
-        this.videoUrl = videoUrl;
+    public RecognizeActionAdvanceRequest setVideoUrlObject(java.io.InputStream videoUrlObject) {
+        this.videoUrlObject = videoUrlObject;
         return this;
     }
-    public String getVideoUrl() {
-        return this.videoUrl;
+    public java.io.InputStream getVideoUrlObject() {
+        return this.videoUrlObject;
     }
 
     public static class RecognizeActionAdvanceRequestURLList extends TeaModel {
