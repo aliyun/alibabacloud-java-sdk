@@ -1,3 +1,0 @@
-2022-01-13 Version: 1.0.0-SNAPSHOT
-- Test.
-
