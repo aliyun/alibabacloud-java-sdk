@@ -43,6 +43,7 @@ public class ScreenChestCTResponseBody extends TeaModel {
     }
 
     public static class ScreenChestCTResponseBodyDataAnalyzeChestVesselAortaInfo extends TeaModel {
+        // 1
         @NameInMap("Area")
         public java.util.List<Float> area;
 
@@ -117,6 +118,7 @@ public class ScreenChestCTResponseBody extends TeaModel {
     }
 
     public static class ScreenChestCTResponseBodyDataAnalyzeChestVesselPulmonaryInfo extends TeaModel {
+        // 1
         @NameInMap("Area")
         public java.util.List<Float> area;
 
@@ -624,6 +626,9 @@ public class ScreenChestCTResponseBody extends TeaModel {
         @NameInMap("Coordinates")
         public java.util.List<Long> coordinates;
 
+        @NameInMap("FracSOPInstanceUID")
+        public String fracSOPInstanceUID;
+
         @NameInMap("FractureCategory")
         public Long fractureCategory;
 
@@ -658,6 +663,14 @@ public class ScreenChestCTResponseBody extends TeaModel {
         }
         public java.util.List<Long> getCoordinates() {
             return this.coordinates;
+        }
+
+        public ScreenChestCTResponseBodyDataDetectRibFractureDetections setFracSOPInstanceUID(String fracSOPInstanceUID) {
+            this.fracSOPInstanceUID = fracSOPInstanceUID;
+            return this;
+        }
+        public String getFracSOPInstanceUID() {
+            return this.fracSOPInstanceUID;
         }
 
         public ScreenChestCTResponseBodyDataDetectRibFractureDetections setFractureCategory(Long fractureCategory) {
@@ -1031,6 +1044,99 @@ public class ScreenChestCTResponseBody extends TeaModel {
 
     }
 
+    public static class ScreenChestCTResponseBodyDataScreenEcLesion extends TeaModel {
+        @NameInMap("BenignVolume")
+        public String benignVolume;
+
+        @NameInMap("EcVolume")
+        public String ecVolume;
+
+        @NameInMap("EsoVolume")
+        public String esoVolume;
+
+        @NameInMap("Mask")
+        public String mask;
+
+        @NameInMap("Possibilities")
+        public java.util.List<String> possibilities;
+
+        public static ScreenChestCTResponseBodyDataScreenEcLesion build(java.util.Map<String, ?> map) throws Exception {
+            ScreenChestCTResponseBodyDataScreenEcLesion self = new ScreenChestCTResponseBodyDataScreenEcLesion();
+            return TeaModel.build(map, self);
+        }
+
+        public ScreenChestCTResponseBodyDataScreenEcLesion setBenignVolume(String benignVolume) {
+            this.benignVolume = benignVolume;
+            return this;
+        }
+        public String getBenignVolume() {
+            return this.benignVolume;
+        }
+
+        public ScreenChestCTResponseBodyDataScreenEcLesion setEcVolume(String ecVolume) {
+            this.ecVolume = ecVolume;
+            return this;
+        }
+        public String getEcVolume() {
+            return this.ecVolume;
+        }
+
+        public ScreenChestCTResponseBodyDataScreenEcLesion setEsoVolume(String esoVolume) {
+            this.esoVolume = esoVolume;
+            return this;
+        }
+        public String getEsoVolume() {
+            return this.esoVolume;
+        }
+
+        public ScreenChestCTResponseBodyDataScreenEcLesion setMask(String mask) {
+            this.mask = mask;
+            return this;
+        }
+        public String getMask() {
+            return this.mask;
+        }
+
+        public ScreenChestCTResponseBodyDataScreenEcLesion setPossibilities(java.util.List<String> possibilities) {
+            this.possibilities = possibilities;
+            return this;
+        }
+        public java.util.List<String> getPossibilities() {
+            return this.possibilities;
+        }
+
+    }
+
+    public static class ScreenChestCTResponseBodyDataScreenEc extends TeaModel {
+        @NameInMap("Lesion")
+        public ScreenChestCTResponseBodyDataScreenEcLesion lesion;
+
+        @NameInMap("SeriesInsanceUid")
+        public String seriesInsanceUid;
+
+        public static ScreenChestCTResponseBodyDataScreenEc build(java.util.Map<String, ?> map) throws Exception {
+            ScreenChestCTResponseBodyDataScreenEc self = new ScreenChestCTResponseBodyDataScreenEc();
+            return TeaModel.build(map, self);
+        }
+
+        public ScreenChestCTResponseBodyDataScreenEc setLesion(ScreenChestCTResponseBodyDataScreenEcLesion lesion) {
+            this.lesion = lesion;
+            return this;
+        }
+        public ScreenChestCTResponseBodyDataScreenEcLesion getLesion() {
+            return this.lesion;
+        }
+
+        public ScreenChestCTResponseBodyDataScreenEc setSeriesInsanceUid(String seriesInsanceUid) {
+            this.seriesInsanceUid = seriesInsanceUid;
+            return this;
+        }
+        public String getSeriesInsanceUid() {
+            return this.seriesInsanceUid;
+        }
+
+    }
+
     public static class ScreenChestCTResponseBodyData extends TeaModel {
         @NameInMap("AnalyzeChestVessel")
         public ScreenChestCTResponseBodyDataAnalyzeChestVessel analyzeChestVessel;
@@ -1058,6 +1164,9 @@ public class ScreenChestCTResponseBody extends TeaModel {
 
         @NameInMap("NestedUrlList")
         public java.util.Map<String, ?> nestedUrlList;
+
+        @NameInMap("ScreenEc")
+        public ScreenChestCTResponseBodyDataScreenEc screenEc;
 
         @NameInMap("URLList")
         public java.util.Map<String, ?> URLList;
@@ -1137,6 +1246,14 @@ public class ScreenChestCTResponseBody extends TeaModel {
         }
         public java.util.Map<String, ?> getNestedUrlList() {
             return this.nestedUrlList;
+        }
+
+        public ScreenChestCTResponseBodyData setScreenEc(ScreenChestCTResponseBodyDataScreenEc screenEc) {
+            this.screenEc = screenEc;
+            return this;
+        }
+        public ScreenChestCTResponseBodyDataScreenEc getScreenEc() {
+            return this.screenEc;
         }
 
         public ScreenChestCTResponseBodyData setURLList(java.util.Map<String, ?> URLList) {
