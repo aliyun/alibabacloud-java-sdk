@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>appstream_center20210218</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <packaging>jar</packaging>
   <name>appstream_center20210218</name>
   <description>Alibaba Cloud appstream-center (20210218) SDK for Java
@@ -41,12 +41,12 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-util</artifactId>
-      <version>0.2.15</version>
+      <version>0.2.16</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.2.7</version>
+      <version>0.2.8</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
@@ -57,6 +57,11 @@
       <groupId>com.aliyun</groupId>
       <artifactId>tea</artifactId>
       <version>1.2.0</version>
+    </dependency>
+    <dependency>
+      <groupId>com.aliyun</groupId>
+      <artifactId>openapiutil</artifactId>
+      <version>0.2.0</version>
     </dependency>
   </dependencies>
   <build>
@@ -144,6 +149,10 @@
                 <relocation>
                   <pattern>org.apache</pattern>
                   <shadedPattern>com.aliyun.appstream_center20210218.external.org.apache</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>org.slf4j</pattern>
+                  <shadedPattern>com.aliyun.appstream_center20210218.external.org.slf4j</shadedPattern>
                 </relocation>
               </relocations>
               <artifactSet>
