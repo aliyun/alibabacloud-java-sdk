@@ -1,9 +1,0 @@
-2022-07-01 Version: 1.0.2
-- Generated java 2022-03-30 for Wftest4321.
-
-2022-06-30 Version: 1.0.1
-- Automatically generate sdk tasks.
-
-2022-06-29 Version: 1.0.0
-- Automatically generate sdk tasks.
-
