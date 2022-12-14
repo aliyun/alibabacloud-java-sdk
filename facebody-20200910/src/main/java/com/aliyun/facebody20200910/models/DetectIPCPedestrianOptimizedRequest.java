@@ -4,21 +4,26 @@ package com.aliyun.facebody20200910.models;
 import com.aliyun.tea.*;
 
 public class DetectIPCPedestrianOptimizedRequest extends TeaModel {
-    // image data
+    @NameInMap("height")
+    public Long height;
+
     @NameInMap("imageData")
     public byte[] imageData;
 
-    // image width
     @NameInMap("width")
     public Long width;
-
-    // image height
-    @NameInMap("height")
-    public Long height;
 
     public static DetectIPCPedestrianOptimizedRequest build(java.util.Map<String, ?> map) throws Exception {
         DetectIPCPedestrianOptimizedRequest self = new DetectIPCPedestrianOptimizedRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DetectIPCPedestrianOptimizedRequest setHeight(Long height) {
+        this.height = height;
+        return this;
+    }
+    public Long getHeight() {
+        return this.height;
     }
 
     public DetectIPCPedestrianOptimizedRequest setImageData(byte[] imageData) {
@@ -35,14 +40,6 @@ public class DetectIPCPedestrianOptimizedRequest extends TeaModel {
     }
     public Long getWidth() {
         return this.width;
-    }
-
-    public DetectIPCPedestrianOptimizedRequest setHeight(Long height) {
-        this.height = height;
-        return this;
-    }
-    public Long getHeight() {
-        return this.height;
     }
 
 }

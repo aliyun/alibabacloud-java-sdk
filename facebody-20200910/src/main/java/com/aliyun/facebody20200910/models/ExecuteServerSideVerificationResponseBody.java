@@ -4,30 +4,15 @@ package com.aliyun.facebody20200910.models;
 import com.aliyun.tea.*;
 
 public class ExecuteServerSideVerificationResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public ExecuteServerSideVerificationResponseBodyData data;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("Message")
-    public String message;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ExecuteServerSideVerificationResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ExecuteServerSideVerificationResponseBody self = new ExecuteServerSideVerificationResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ExecuteServerSideVerificationResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ExecuteServerSideVerificationResponseBody setData(ExecuteServerSideVerificationResponseBodyData data) {
@@ -38,31 +23,23 @@ public class ExecuteServerSideVerificationResponseBody extends TeaModel {
         return this.data;
     }
 
-    public ExecuteServerSideVerificationResponseBody setCode(String code) {
-        this.code = code;
+    public ExecuteServerSideVerificationResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getCode() {
-        return this.code;
-    }
-
-    public ExecuteServerSideVerificationResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class ExecuteServerSideVerificationResponseBodyData extends TeaModel {
         @NameInMap("Pass")
         public Boolean pass;
 
-        @NameInMap("VerificationToken")
-        public String verificationToken;
-
         @NameInMap("Reason")
         public String reason;
+
+        @NameInMap("VerificationToken")
+        public String verificationToken;
 
         public static ExecuteServerSideVerificationResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ExecuteServerSideVerificationResponseBodyData self = new ExecuteServerSideVerificationResponseBodyData();
@@ -77,20 +54,20 @@ public class ExecuteServerSideVerificationResponseBody extends TeaModel {
             return this.pass;
         }
 
-        public ExecuteServerSideVerificationResponseBodyData setVerificationToken(String verificationToken) {
-            this.verificationToken = verificationToken;
-            return this;
-        }
-        public String getVerificationToken() {
-            return this.verificationToken;
-        }
-
         public ExecuteServerSideVerificationResponseBodyData setReason(String reason) {
             this.reason = reason;
             return this;
         }
         public String getReason() {
             return this.reason;
+        }
+
+        public ExecuteServerSideVerificationResponseBodyData setVerificationToken(String verificationToken) {
+            this.verificationToken = verificationToken;
+            return this;
+        }
+        public String getVerificationToken() {
+            return this.verificationToken;
         }
 
     }

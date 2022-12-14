@@ -3,16 +3,10 @@ package com.aliyun.facebody20200910;
 
 import com.aliyun.tea.*;
 import com.aliyun.facebody20200910.models.*;
-import com.aliyun.teautil.*;
-import com.aliyun.teautil.models.*;
-import com.aliyun.teaopenapi.*;
-import com.aliyun.teaopenapi.models.*;
-import com.aliyun.openapiutil.*;
-import com.aliyun.endpointutil.*;
 
 public class Client extends com.aliyun.teaopenapi.Client {
 
-    public Client(Config config) throws Exception {
+    public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
         this.checkConfig(config);
@@ -33,17 +27,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * 行人检测快速版
+      * 行人检测快速版
+      *
+      * @param request DetectIPCPedestrianOptimizedRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DetectIPCPedestrianOptimizedResponse
      */
-    public DetectIPCPedestrianOptimizedResponse detectIPCPedestrianOptimized(DetectIPCPedestrianOptimizedRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.detectIPCPedestrianOptimizedWithOptions(request, headers, runtime);
-    }
-
-    public DetectIPCPedestrianOptimizedResponse detectIPCPedestrianOptimizedWithOptions(DetectIPCPedestrianOptimizedRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public DetectIPCPedestrianOptimizedResponse detectIPCPedestrianOptimizedWithOptions(DetectIPCPedestrianOptimizedRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.height)) {
+            body.put("height", request.height);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.imageData)) {
             body.put("imageData", request.imageData);
         }
@@ -52,24 +49,37 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("width", request.width);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.height)) {
-            body.put("height", request.height);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doROARequestWithForm("DetectIPCPedestrianOptimized", "2020-09-10", "HTTPS", "POST", "AK", "/viapi/k8s/facebody/detect-ipc-pedestrian-optimized", "json", req, runtime), new DetectIPCPedestrianOptimizedResponse());
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DetectIPCPedestrianOptimized"),
+            new TeaPair("version", "2020-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/viapi/k8s/facebody/detect-ipc-pedestrian-optimized"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DetectIPCPedestrianOptimizedResponse());
     }
 
-    public ExecuteServerSideVerificationResponse executeServerSideVerification(ExecuteServerSideVerificationRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    /**
+      * 行人检测快速版
+      *
+      * @param request DetectIPCPedestrianOptimizedRequest
+      * @return DetectIPCPedestrianOptimizedResponse
+     */
+    public DetectIPCPedestrianOptimizedResponse detectIPCPedestrianOptimized(DetectIPCPedestrianOptimizedRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.executeServerSideVerificationWithOptions(request, headers, runtime);
+        return this.detectIPCPedestrianOptimizedWithOptions(request, headers, runtime);
     }
 
-    public ExecuteServerSideVerificationResponse executeServerSideVerificationWithOptions(ExecuteServerSideVerificationRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public ExecuteServerSideVerificationResponse executeServerSideVerificationWithOptions(ExecuteServerSideVerificationRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.certificateName)) {
@@ -92,10 +102,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("sceneType", request.sceneType);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doROARequestWithForm("ExecuteServerSideVerification", "2020-09-10", "HTTPS", "POST", "AK", "/viapi/thirdparty/realperson/execServerSideVerification", "json", req, runtime), new ExecuteServerSideVerificationResponse());
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ExecuteServerSideVerification"),
+            new TeaPair("version", "2020-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/viapi/thirdparty/realperson/execServerSideVerification"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ExecuteServerSideVerificationResponse());
+    }
+
+    public ExecuteServerSideVerificationResponse executeServerSideVerification(ExecuteServerSideVerificationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.executeServerSideVerificationWithOptions(request, headers, runtime);
     }
 }
