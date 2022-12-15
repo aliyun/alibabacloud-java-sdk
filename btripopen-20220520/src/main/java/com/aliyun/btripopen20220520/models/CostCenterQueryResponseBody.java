@@ -22,6 +22,7 @@ public class CostCenterQueryResponseBody extends TeaModel {
     @NameInMap("success")
     public Boolean success;
 
+    // traceId
     @NameInMap("traceId")
     public String traceId;
 
@@ -165,6 +166,7 @@ public class CostCenterQueryResponseBody extends TeaModel {
         @NameInMap("number")
         public String number;
 
+        // rule code
         @NameInMap("rule_code")
         public Long ruleCode;
 

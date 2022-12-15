@@ -19,6 +19,7 @@ public class CorpTokenResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    // traceId
     @NameInMap("traceId")
     public String traceId;
 

@@ -19,6 +19,7 @@ public class AllBaseCityInfoQueryResponseBody extends TeaModel {
     @NameInMap("success")
     public Boolean success;
 
+    // traceId
     @NameInMap("traceId")
     public String traceId;
 

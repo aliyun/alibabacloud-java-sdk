@@ -10,6 +10,7 @@ public class TrainStationSearchResponseBody extends TeaModel {
     @NameInMap("message")
     public String message;
 
+    // module
     @NameInMap("module")
     public TrainStationSearchResponseBodyModule module;
 

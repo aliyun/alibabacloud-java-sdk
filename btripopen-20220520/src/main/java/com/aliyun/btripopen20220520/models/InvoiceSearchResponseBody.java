@@ -19,6 +19,7 @@ public class InvoiceSearchResponseBody extends TeaModel {
     @NameInMap("success")
     public Boolean success;
 
+    // traceId
     @NameInMap("traceId")
     public String traceId;
 
@@ -76,6 +77,7 @@ public class InvoiceSearchResponseBody extends TeaModel {
     }
 
     public static class InvoiceSearchResponseBodyModule extends TeaModel {
+        // ID
         @NameInMap("id")
         public Long id;
 

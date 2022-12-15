@@ -19,6 +19,7 @@ public class DepartmentSaveResponseBody extends TeaModel {
     @NameInMap("success")
     public Boolean success;
 
+    // traceId
     @NameInMap("traceId")
     public String traceId;
 
