@@ -16,6 +16,9 @@ public class EvaluateTicketRequest extends TeaModel {
     @NameInMap("TicketId")
     public String ticketId;
 
+    @NameInMap("Uid")
+    public String uid;
+
     public static EvaluateTicketRequest build(java.util.Map<String, ?> map) throws Exception {
         EvaluateTicketRequest self = new EvaluateTicketRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class EvaluateTicketRequest extends TeaModel {
     }
     public String getTicketId() {
         return this.ticketId;
+    }
+
+    public EvaluateTicketRequest setUid(String uid) {
+        this.uid = uid;
+        return this;
+    }
+    public String getUid() {
+        return this.uid;
     }
 
 }

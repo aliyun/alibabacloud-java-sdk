@@ -28,6 +28,9 @@ public class ListTicketsRequest extends TeaModel {
     @NameInMap("TicketIdList")
     public java.util.List<String> ticketIdList;
 
+    @NameInMap("Uid")
+    public String uid;
+
     public static ListTicketsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTicketsRequest self = new ListTicketsRequest();
         return TeaModel.build(map, self);
@@ -95,6 +98,14 @@ public class ListTicketsRequest extends TeaModel {
     }
     public java.util.List<String> getTicketIdList() {
         return this.ticketIdList;
+    }
+
+    public ListTicketsRequest setUid(String uid) {
+        this.uid = uid;
+        return this;
+    }
+    public String getUid() {
+        return this.uid;
     }
 
 }

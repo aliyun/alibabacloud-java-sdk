@@ -10,6 +10,9 @@ public class ReopenTicketRequest extends TeaModel {
     @NameInMap("TicketId")
     public String ticketId;
 
+    @NameInMap("Uid")
+    public String uid;
+
     public static ReopenTicketRequest build(java.util.Map<String, ?> map) throws Exception {
         ReopenTicketRequest self = new ReopenTicketRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class ReopenTicketRequest extends TeaModel {
     }
     public String getTicketId() {
         return this.ticketId;
+    }
+
+    public ReopenTicketRequest setUid(String uid) {
+        this.uid = uid;
+        return this;
+    }
+    public String getUid() {
+        return this.uid;
     }
 
 }

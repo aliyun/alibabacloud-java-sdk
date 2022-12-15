@@ -37,6 +37,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("TicketId", request.ticketId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.uid)) {
+            body.put("Uid", request.uid);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
@@ -67,8 +71,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.fileNameListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.fileNameList, "FileNameList", "simple");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.secretInfo))) {
-            request.secretInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.secretInfo), "SecretInfo", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.secretInfo)) {
+            request.secretInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.secretInfo, "SecretInfo", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -145,6 +149,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.ticketId)) {
             body.put("TicketId", request.ticketId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uid)) {
+            body.put("Uid", request.uid);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -224,6 +232,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.ticketId)) {
             body.put("TicketId", request.ticketId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uid)) {
+            body.put("Uid", request.uid);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -327,6 +339,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("TicketId", request.ticketId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.uid)) {
+            query.put("Uid", request.uid);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -391,6 +407,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("TicketIdList", request.ticketIdListShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.uid)) {
+            body.put("Uid", request.uid);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
@@ -423,6 +443,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.ticketId)) {
             body.put("TicketId", request.ticketId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uid)) {
+            body.put("Uid", request.uid);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -471,6 +495,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.ticketId)) {
             body.put("TicketId", request.ticketId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uid)) {
+            body.put("Uid", request.uid);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
