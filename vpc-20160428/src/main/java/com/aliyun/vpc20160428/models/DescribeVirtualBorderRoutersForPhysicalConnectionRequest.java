@@ -4,6 +4,7 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeVirtualBorderRoutersForPhysicalConnectionRequest extends TeaModel {
+    // 25425
     @NameInMap("Filter")
     public java.util.List<DescribeVirtualBorderRoutersForPhysicalConnectionRequestFilter> filter;
 
