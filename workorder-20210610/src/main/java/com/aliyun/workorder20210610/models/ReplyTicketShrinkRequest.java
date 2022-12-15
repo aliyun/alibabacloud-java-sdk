@@ -16,6 +16,9 @@ public class ReplyTicketShrinkRequest extends TeaModel {
     @NameInMap("TicketId")
     public String ticketId;
 
+    @NameInMap("Uid")
+    public String uid;
+
     public static ReplyTicketShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ReplyTicketShrinkRequest self = new ReplyTicketShrinkRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class ReplyTicketShrinkRequest extends TeaModel {
     }
     public String getTicketId() {
         return this.ticketId;
+    }
+
+    public ReplyTicketShrinkRequest setUid(String uid) {
+        this.uid = uid;
+        return this;
+    }
+    public String getUid() {
+        return this.uid;
     }
 
 }

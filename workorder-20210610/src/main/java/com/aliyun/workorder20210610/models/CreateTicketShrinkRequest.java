@@ -13,6 +13,7 @@ public class CreateTicketShrinkRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    // sdahkjdshga@qq.com
     @NameInMap("Email")
     public String email;
 

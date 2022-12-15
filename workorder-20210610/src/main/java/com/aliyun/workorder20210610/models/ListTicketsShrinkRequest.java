@@ -28,6 +28,9 @@ public class ListTicketsShrinkRequest extends TeaModel {
     @NameInMap("TicketIdList")
     public String ticketIdListShrink;
 
+    @NameInMap("Uid")
+    public String uid;
+
     public static ListTicketsShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTicketsShrinkRequest self = new ListTicketsShrinkRequest();
         return TeaModel.build(map, self);
@@ -95,6 +98,14 @@ public class ListTicketsShrinkRequest extends TeaModel {
     }
     public String getTicketIdListShrink() {
         return this.ticketIdListShrink;
+    }
+
+    public ListTicketsShrinkRequest setUid(String uid) {
+        this.uid = uid;
+        return this;
+    }
+    public String getUid() {
+        return this.uid;
     }
 
 }
