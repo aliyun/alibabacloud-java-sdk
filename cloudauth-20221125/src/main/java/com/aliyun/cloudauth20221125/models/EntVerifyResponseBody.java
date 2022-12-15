@@ -86,7 +86,7 @@ public class EntVerifyResponseBody extends TeaModel {
 
     public static class EntVerifyResponseBodyResultRiskVerifyResult extends TeaModel {
         @NameInMap("Found")
-        public String found;
+        public Boolean found;
 
         @NameInMap("ModelResults")
         public java.util.List<EntVerifyResponseBodyResultRiskVerifyResultModelResults> modelResults;
@@ -96,11 +96,11 @@ public class EntVerifyResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public EntVerifyResponseBodyResultRiskVerifyResult setFound(String found) {
+        public EntVerifyResponseBodyResultRiskVerifyResult setFound(Boolean found) {
             this.found = found;
             return this;
         }
-        public String getFound() {
+        public Boolean getFound() {
             return this.found;
         }
 
