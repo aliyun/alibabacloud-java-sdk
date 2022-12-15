@@ -10,6 +10,7 @@ public class ApplyAddResponseBody extends TeaModel {
     @NameInMap("message")
     public String message;
 
+    // module。
     @NameInMap("module")
     public ApplyAddResponseBodyModule module;
 

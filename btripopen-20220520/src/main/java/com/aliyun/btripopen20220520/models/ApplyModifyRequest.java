@@ -404,6 +404,9 @@ public class ApplyModifyRequest extends TeaModel {
         @NameInMap("hotel_citys")
         public java.util.List<ApplyModifyRequestExternalTravelerStandardHotelCitys> hotelCitys;
 
+        @NameInMap("premium_economy_discount")
+        public Integer premiumEconomyDiscount;
+
         @NameInMap("reserve_type")
         public Integer reserveType;
 
@@ -453,6 +456,14 @@ public class ApplyModifyRequest extends TeaModel {
         }
         public java.util.List<ApplyModifyRequestExternalTravelerStandardHotelCitys> getHotelCitys() {
             return this.hotelCitys;
+        }
+
+        public ApplyModifyRequestExternalTravelerStandard setPremiumEconomyDiscount(Integer premiumEconomyDiscount) {
+            this.premiumEconomyDiscount = premiumEconomyDiscount;
+            return this;
+        }
+        public Integer getPremiumEconomyDiscount() {
+            return this.premiumEconomyDiscount;
         }
 
         public ApplyModifyRequestExternalTravelerStandard setReserveType(Integer reserveType) {
@@ -925,6 +936,9 @@ public class ApplyModifyRequest extends TeaModel {
         @NameInMap("hotel_citys")
         public java.util.List<ApplyModifyRequestTravelerStandardHotelCitys> hotelCitys;
 
+        @NameInMap("premium_economy_discount")
+        public Integer premiumEconomyDiscount;
+
         @NameInMap("reserve_type")
         public Integer reserveType;
 
@@ -977,6 +991,14 @@ public class ApplyModifyRequest extends TeaModel {
         }
         public java.util.List<ApplyModifyRequestTravelerStandardHotelCitys> getHotelCitys() {
             return this.hotelCitys;
+        }
+
+        public ApplyModifyRequestTravelerStandard setPremiumEconomyDiscount(Integer premiumEconomyDiscount) {
+            this.premiumEconomyDiscount = premiumEconomyDiscount;
+            return this;
+        }
+        public Integer getPremiumEconomyDiscount() {
+            return this.premiumEconomyDiscount;
         }
 
         public ApplyModifyRequestTravelerStandard setReserveType(Integer reserveType) {

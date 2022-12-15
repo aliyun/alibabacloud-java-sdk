@@ -10,6 +10,7 @@ public class ApplyApproveResponseBody extends TeaModel {
     @NameInMap("message")
     public String message;
 
+    // module。
     @NameInMap("module")
     public String module;
 

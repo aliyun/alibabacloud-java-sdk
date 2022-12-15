@@ -217,6 +217,9 @@ public class ApplyQueryResponseBody extends TeaModel {
         @NameInMap("hotel_citys")
         public java.util.List<ApplyQueryResponseBodyModuleExternalTravelerListHotelCitys> hotelCitys;
 
+        @NameInMap("premium_economy_discount")
+        public Integer premiumEconomyDiscount;
+
         @NameInMap("reserve_type")
         public Integer reserveType;
 
@@ -269,6 +272,14 @@ public class ApplyQueryResponseBody extends TeaModel {
         }
         public java.util.List<ApplyQueryResponseBodyModuleExternalTravelerListHotelCitys> getHotelCitys() {
             return this.hotelCitys;
+        }
+
+        public ApplyQueryResponseBodyModuleExternalTravelerList setPremiumEconomyDiscount(Integer premiumEconomyDiscount) {
+            this.premiumEconomyDiscount = premiumEconomyDiscount;
+            return this;
+        }
+        public Integer getPremiumEconomyDiscount() {
+            return this.premiumEconomyDiscount;
         }
 
         public ApplyQueryResponseBodyModuleExternalTravelerList setReserveType(Integer reserveType) {
@@ -653,6 +664,9 @@ public class ApplyQueryResponseBody extends TeaModel {
         @NameInMap("hotel_citys")
         public java.util.List<ApplyQueryResponseBodyModuleTravelerListHotelCitys> hotelCitys;
 
+        @NameInMap("premium_economy_discount")
+        public Integer premiumEconomyDiscount;
+
         @NameInMap("reserve_type")
         public Integer reserveType;
 
@@ -708,6 +722,14 @@ public class ApplyQueryResponseBody extends TeaModel {
         }
         public java.util.List<ApplyQueryResponseBodyModuleTravelerListHotelCitys> getHotelCitys() {
             return this.hotelCitys;
+        }
+
+        public ApplyQueryResponseBodyModuleTravelerList setPremiumEconomyDiscount(Integer premiumEconomyDiscount) {
+            this.premiumEconomyDiscount = premiumEconomyDiscount;
+            return this;
+        }
+        public Integer getPremiumEconomyDiscount() {
+            return this.premiumEconomyDiscount;
         }
 
         public ApplyQueryResponseBodyModuleTravelerList setReserveType(Integer reserveType) {

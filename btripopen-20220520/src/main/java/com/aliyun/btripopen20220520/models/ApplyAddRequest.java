@@ -426,6 +426,9 @@ public class ApplyAddRequest extends TeaModel {
         @NameInMap("hotel_citys")
         public java.util.List<ApplyAddRequestExternalTravelerStandardHotelCitys> hotelCitys;
 
+        @NameInMap("premium_economy_discount")
+        public Integer premiumEconomyDiscount;
+
         @NameInMap("reserve_type")
         public Integer reserveType;
 
@@ -475,6 +478,14 @@ public class ApplyAddRequest extends TeaModel {
         }
         public java.util.List<ApplyAddRequestExternalTravelerStandardHotelCitys> getHotelCitys() {
             return this.hotelCitys;
+        }
+
+        public ApplyAddRequestExternalTravelerStandard setPremiumEconomyDiscount(Integer premiumEconomyDiscount) {
+            this.premiumEconomyDiscount = premiumEconomyDiscount;
+            return this;
+        }
+        public Integer getPremiumEconomyDiscount() {
+            return this.premiumEconomyDiscount;
         }
 
         public ApplyAddRequestExternalTravelerStandard setReserveType(Integer reserveType) {
@@ -947,6 +958,9 @@ public class ApplyAddRequest extends TeaModel {
         @NameInMap("hotel_citys")
         public java.util.List<ApplyAddRequestTravelerStandardHotelCitys> hotelCitys;
 
+        @NameInMap("premium_economy_discount")
+        public Integer premiumEconomyDiscount;
+
         @NameInMap("reserve_type")
         public Integer reserveType;
 
@@ -999,6 +1013,14 @@ public class ApplyAddRequest extends TeaModel {
         }
         public java.util.List<ApplyAddRequestTravelerStandardHotelCitys> getHotelCitys() {
             return this.hotelCitys;
+        }
+
+        public ApplyAddRequestTravelerStandard setPremiumEconomyDiscount(Integer premiumEconomyDiscount) {
+            this.premiumEconomyDiscount = premiumEconomyDiscount;
+            return this;
+        }
+        public Integer getPremiumEconomyDiscount() {
+            return this.premiumEconomyDiscount;
         }
 
         public ApplyAddRequestTravelerStandard setReserveType(Integer reserveType) {

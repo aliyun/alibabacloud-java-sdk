@@ -10,6 +10,7 @@ public class CarApplyModifyResponseBody extends TeaModel {
     @NameInMap("message")
     public String message;
 
+    // module。
     @NameInMap("module")
     public Boolean module;
 

@@ -26,12 +26,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
-    public AccessTokenResponse accessToken(AccessTokenRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.accessTokenWithOptions(request, headers, runtime);
-    }
-
     public AccessTokenResponse accessTokenWithOptions(AccessTokenRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -61,10 +55,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AccessTokenResponse());
     }
 
-    public AddressGetResponse addressGet(AddressGetRequest request) throws Exception {
+    public AccessTokenResponse accessToken(AccessTokenRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        AddressGetHeaders headers = new AddressGetHeaders();
-        return this.addressGetWithOptions(request, headers, runtime);
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.accessTokenWithOptions(request, headers, runtime);
     }
 
     public AddressGetResponse addressGetWithOptions(AddressGetRequest request, AddressGetHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -117,10 +111,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AddressGetResponse());
     }
 
-    public AirportSearchResponse airportSearch(AirportSearchRequest request) throws Exception {
+    public AddressGetResponse addressGet(AddressGetRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        AirportSearchHeaders headers = new AirportSearchHeaders();
-        return this.airportSearchWithOptions(request, headers, runtime);
+        AddressGetHeaders headers = new AddressGetHeaders();
+        return this.addressGetWithOptions(request, headers, runtime);
     }
 
     public AirportSearchResponse airportSearchWithOptions(AirportSearchRequest request, AirportSearchHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -161,10 +155,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AirportSearchResponse());
     }
 
-    public AllBaseCityInfoQueryResponse allBaseCityInfoQuery() throws Exception {
+    public AirportSearchResponse airportSearch(AirportSearchRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        AllBaseCityInfoQueryHeaders headers = new AllBaseCityInfoQueryHeaders();
-        return this.allBaseCityInfoQueryWithOptions(headers, runtime);
+        AirportSearchHeaders headers = new AirportSearchHeaders();
+        return this.airportSearchWithOptions(request, headers, runtime);
     }
 
     public AllBaseCityInfoQueryResponse allBaseCityInfoQueryWithOptions(AllBaseCityInfoQueryHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -194,10 +188,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AllBaseCityInfoQueryResponse());
     }
 
-    public ApplyAddResponse applyAdd(ApplyAddRequest request) throws Exception {
+    public AllBaseCityInfoQueryResponse allBaseCityInfoQuery() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        ApplyAddHeaders headers = new ApplyAddHeaders();
-        return this.applyAddWithOptions(request, headers, runtime);
+        AllBaseCityInfoQueryHeaders headers = new AllBaseCityInfoQueryHeaders();
+        return this.allBaseCityInfoQueryWithOptions(headers, runtime);
     }
 
     public ApplyAddResponse applyAddWithOptions(ApplyAddRequest tmpReq, ApplyAddHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -386,10 +380,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ApplyAddResponse());
     }
 
-    public ApplyApproveResponse applyApprove(ApplyApproveRequest request) throws Exception {
+    public ApplyAddResponse applyAdd(ApplyAddRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        ApplyApproveHeaders headers = new ApplyApproveHeaders();
-        return this.applyApproveWithOptions(request, headers, runtime);
+        ApplyAddHeaders headers = new ApplyAddHeaders();
+        return this.applyAddWithOptions(request, headers, runtime);
     }
 
     public ApplyApproveResponse applyApproveWithOptions(ApplyApproveRequest request, ApplyApproveHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -446,10 +440,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ApplyApproveResponse());
     }
 
-    public ApplyListQueryResponse applyListQuery(ApplyListQueryRequest request) throws Exception {
+    public ApplyApproveResponse applyApprove(ApplyApproveRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        ApplyListQueryHeaders headers = new ApplyListQueryHeaders();
-        return this.applyListQueryWithOptions(request, headers, runtime);
+        ApplyApproveHeaders headers = new ApplyApproveHeaders();
+        return this.applyApproveWithOptions(request, headers, runtime);
     }
 
     public ApplyListQueryResponse applyListQueryWithOptions(ApplyListQueryRequest request, ApplyListQueryHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -526,10 +520,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ApplyListQueryResponse());
     }
 
-    public ApplyModifyResponse applyModify(ApplyModifyRequest request) throws Exception {
+    public ApplyListQueryResponse applyListQuery(ApplyListQueryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        ApplyModifyHeaders headers = new ApplyModifyHeaders();
-        return this.applyModifyWithOptions(request, headers, runtime);
+        ApplyListQueryHeaders headers = new ApplyListQueryHeaders();
+        return this.applyListQueryWithOptions(request, headers, runtime);
     }
 
     public ApplyModifyResponse applyModifyWithOptions(ApplyModifyRequest tmpReq, ApplyModifyHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -708,10 +702,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ApplyModifyResponse());
     }
 
-    public ApplyQueryResponse applyQuery(ApplyQueryRequest request) throws Exception {
+    public ApplyModifyResponse applyModify(ApplyModifyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        ApplyQueryHeaders headers = new ApplyQueryHeaders();
-        return this.applyQueryWithOptions(request, headers, runtime);
+        ApplyModifyHeaders headers = new ApplyModifyHeaders();
+        return this.applyModifyWithOptions(request, headers, runtime);
     }
 
     public ApplyQueryResponse applyQueryWithOptions(ApplyQueryRequest request, ApplyQueryHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -760,10 +754,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ApplyQueryResponse());
     }
 
-    public CarApplyAddResponse carApplyAdd(CarApplyAddRequest request) throws Exception {
+    public ApplyQueryResponse applyQuery(ApplyQueryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        CarApplyAddHeaders headers = new CarApplyAddHeaders();
-        return this.carApplyAddWithOptions(request, headers, runtime);
+        ApplyQueryHeaders headers = new ApplyQueryHeaders();
+        return this.applyQueryWithOptions(request, headers, runtime);
     }
 
     public CarApplyAddResponse carApplyAddWithOptions(CarApplyAddRequest request, CarApplyAddHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -856,10 +850,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CarApplyAddResponse());
     }
 
-    public CarApplyModifyResponse carApplyModify(CarApplyModifyRequest request) throws Exception {
+    public CarApplyAddResponse carApplyAdd(CarApplyAddRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        CarApplyModifyHeaders headers = new CarApplyModifyHeaders();
-        return this.carApplyModifyWithOptions(request, headers, runtime);
+        CarApplyAddHeaders headers = new CarApplyAddHeaders();
+        return this.carApplyAddWithOptions(request, headers, runtime);
     }
 
     public CarApplyModifyResponse carApplyModifyWithOptions(CarApplyModifyRequest request, CarApplyModifyHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -912,10 +906,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CarApplyModifyResponse());
     }
 
-    public CarApplyQueryResponse carApplyQuery(CarApplyQueryRequest request) throws Exception {
+    public CarApplyModifyResponse carApplyModify(CarApplyModifyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        CarApplyQueryHeaders headers = new CarApplyQueryHeaders();
-        return this.carApplyQueryWithOptions(request, headers, runtime);
+        CarApplyModifyHeaders headers = new CarApplyModifyHeaders();
+        return this.carApplyModifyWithOptions(request, headers, runtime);
     }
 
     public CarApplyQueryResponse carApplyQueryWithOptions(CarApplyQueryRequest request, CarApplyQueryHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -972,10 +966,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CarApplyQueryResponse());
     }
 
-    public CarBillSettlementQueryResponse carBillSettlementQuery(CarBillSettlementQueryRequest request) throws Exception {
+    public CarApplyQueryResponse carApplyQuery(CarApplyQueryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        CarBillSettlementQueryHeaders headers = new CarBillSettlementQueryHeaders();
-        return this.carBillSettlementQueryWithOptions(request, headers, runtime);
+        CarApplyQueryHeaders headers = new CarApplyQueryHeaders();
+        return this.carApplyQueryWithOptions(request, headers, runtime);
     }
 
     public CarBillSettlementQueryResponse carBillSettlementQueryWithOptions(CarBillSettlementQueryRequest request, CarBillSettlementQueryHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1024,10 +1018,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CarBillSettlementQueryResponse());
     }
 
-    public CarOrderListQueryResponse carOrderListQuery(CarOrderListQueryRequest request) throws Exception {
+    public CarBillSettlementQueryResponse carBillSettlementQuery(CarBillSettlementQueryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        CarOrderListQueryHeaders headers = new CarOrderListQueryHeaders();
-        return this.carOrderListQueryWithOptions(request, headers, runtime);
+        CarBillSettlementQueryHeaders headers = new CarBillSettlementQueryHeaders();
+        return this.carBillSettlementQueryWithOptions(request, headers, runtime);
     }
 
     public CarOrderListQueryResponse carOrderListQueryWithOptions(CarOrderListQueryRequest request, CarOrderListQueryHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1104,10 +1098,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CarOrderListQueryResponse());
     }
 
-    public CarOrderQueryResponse carOrderQuery(CarOrderQueryRequest request) throws Exception {
+    public CarOrderListQueryResponse carOrderListQuery(CarOrderListQueryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        CarOrderQueryHeaders headers = new CarOrderQueryHeaders();
-        return this.carOrderQueryWithOptions(request, headers, runtime);
+        CarOrderListQueryHeaders headers = new CarOrderListQueryHeaders();
+        return this.carOrderListQueryWithOptions(request, headers, runtime);
     }
 
     public CarOrderQueryResponse carOrderQueryWithOptions(CarOrderQueryRequest request, CarOrderQueryHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1148,10 +1142,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CarOrderQueryResponse());
     }
 
-    public CitySearchResponse citySearch(CitySearchRequest request) throws Exception {
+    public CarOrderQueryResponse carOrderQuery(CarOrderQueryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        CitySearchHeaders headers = new CitySearchHeaders();
-        return this.citySearchWithOptions(request, headers, runtime);
+        CarOrderQueryHeaders headers = new CarOrderQueryHeaders();
+        return this.carOrderQueryWithOptions(request, headers, runtime);
     }
 
     public CitySearchResponse citySearchWithOptions(CitySearchRequest request, CitySearchHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1188,10 +1182,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CitySearchResponse());
     }
 
-    public CommonApplyQueryResponse commonApplyQuery(CommonApplyQueryRequest request) throws Exception {
+    public CitySearchResponse citySearch(CitySearchRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        CommonApplyQueryHeaders headers = new CommonApplyQueryHeaders();
-        return this.commonApplyQueryWithOptions(request, headers, runtime);
+        CitySearchHeaders headers = new CitySearchHeaders();
+        return this.citySearchWithOptions(request, headers, runtime);
     }
 
     public CommonApplyQueryResponse commonApplyQueryWithOptions(CommonApplyQueryRequest request, CommonApplyQueryHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1236,10 +1230,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CommonApplyQueryResponse());
     }
 
-    public CommonApplySyncResponse commonApplySync(CommonApplySyncRequest request) throws Exception {
+    public CommonApplyQueryResponse commonApplyQuery(CommonApplyQueryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        CommonApplySyncHeaders headers = new CommonApplySyncHeaders();
-        return this.commonApplySyncWithOptions(request, headers, runtime);
+        CommonApplyQueryHeaders headers = new CommonApplyQueryHeaders();
+        return this.commonApplyQueryWithOptions(request, headers, runtime);
     }
 
     public CommonApplySyncResponse commonApplySyncWithOptions(CommonApplySyncRequest request, CommonApplySyncHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1296,10 +1290,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CommonApplySyncResponse());
     }
 
-    public CorpTokenResponse corpToken(CorpTokenRequest request) throws Exception {
+    public CommonApplySyncResponse commonApplySync(CommonApplySyncRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        CorpTokenHeaders headers = new CorpTokenHeaders();
-        return this.corpTokenWithOptions(request, headers, runtime);
+        CommonApplySyncHeaders headers = new CommonApplySyncHeaders();
+        return this.commonApplySyncWithOptions(request, headers, runtime);
     }
 
     public CorpTokenResponse corpTokenWithOptions(CorpTokenRequest request, CorpTokenHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1344,10 +1338,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CorpTokenResponse());
     }
 
-    public CostCenterDeleteResponse costCenterDelete(CostCenterDeleteRequest request) throws Exception {
+    public CorpTokenResponse corpToken(CorpTokenRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        CostCenterDeleteHeaders headers = new CostCenterDeleteHeaders();
-        return this.costCenterDeleteWithOptions(request, headers, runtime);
+        CorpTokenHeaders headers = new CorpTokenHeaders();
+        return this.corpTokenWithOptions(request, headers, runtime);
     }
 
     public CostCenterDeleteResponse costCenterDeleteWithOptions(CostCenterDeleteRequest request, CostCenterDeleteHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1384,10 +1378,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CostCenterDeleteResponse());
     }
 
-    public CostCenterModifyResponse costCenterModify(CostCenterModifyRequest request) throws Exception {
+    public CostCenterDeleteResponse costCenterDelete(CostCenterDeleteRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        CostCenterModifyHeaders headers = new CostCenterModifyHeaders();
-        return this.costCenterModifyWithOptions(request, headers, runtime);
+        CostCenterDeleteHeaders headers = new CostCenterDeleteHeaders();
+        return this.costCenterDeleteWithOptions(request, headers, runtime);
     }
 
     public CostCenterModifyResponse costCenterModifyWithOptions(CostCenterModifyRequest request, CostCenterModifyHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1440,10 +1434,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CostCenterModifyResponse());
     }
 
-    public CostCenterQueryResponse costCenterQuery(CostCenterQueryRequest request) throws Exception {
+    public CostCenterModifyResponse costCenterModify(CostCenterModifyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        CostCenterQueryHeaders headers = new CostCenterQueryHeaders();
-        return this.costCenterQueryWithOptions(request, headers, runtime);
+        CostCenterModifyHeaders headers = new CostCenterModifyHeaders();
+        return this.costCenterModifyWithOptions(request, headers, runtime);
     }
 
     public CostCenterQueryResponse costCenterQueryWithOptions(CostCenterQueryRequest request, CostCenterQueryHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1492,10 +1486,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CostCenterQueryResponse());
     }
 
-    public CostCenterSaveResponse costCenterSave(CostCenterSaveRequest request) throws Exception {
+    public CostCenterQueryResponse costCenterQuery(CostCenterQueryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        CostCenterSaveHeaders headers = new CostCenterSaveHeaders();
-        return this.costCenterSaveWithOptions(request, headers, runtime);
+        CostCenterQueryHeaders headers = new CostCenterQueryHeaders();
+        return this.costCenterQueryWithOptions(request, headers, runtime);
     }
 
     public CostCenterSaveResponse costCenterSaveWithOptions(CostCenterSaveRequest request, CostCenterSaveHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1548,10 +1542,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CostCenterSaveResponse());
     }
 
-    public DepartmentSaveResponse departmentSave(DepartmentSaveRequest request) throws Exception {
+    public CostCenterSaveResponse costCenterSave(CostCenterSaveRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        DepartmentSaveHeaders headers = new DepartmentSaveHeaders();
-        return this.departmentSaveWithOptions(request, headers, runtime);
+        CostCenterSaveHeaders headers = new CostCenterSaveHeaders();
+        return this.costCenterSaveWithOptions(request, headers, runtime);
     }
 
     public DepartmentSaveResponse departmentSaveWithOptions(DepartmentSaveRequest tmpReq, DepartmentSaveHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1594,10 +1588,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DepartmentSaveResponse());
     }
 
-    public EntityAddResponse entityAdd(EntityAddRequest request) throws Exception {
+    public DepartmentSaveResponse departmentSave(DepartmentSaveRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        EntityAddHeaders headers = new EntityAddHeaders();
-        return this.entityAddWithOptions(request, headers, runtime);
+        DepartmentSaveHeaders headers = new DepartmentSaveHeaders();
+        return this.departmentSaveWithOptions(request, headers, runtime);
     }
 
     public EntityAddResponse entityAddWithOptions(EntityAddRequest tmpReq, EntityAddHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1644,10 +1638,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new EntityAddResponse());
     }
 
-    public EntityDeleteResponse entityDelete(EntityDeleteRequest request) throws Exception {
+    public EntityAddResponse entityAdd(EntityAddRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        EntityDeleteHeaders headers = new EntityDeleteHeaders();
-        return this.entityDeleteWithOptions(request, headers, runtime);
+        EntityAddHeaders headers = new EntityAddHeaders();
+        return this.entityAddWithOptions(request, headers, runtime);
     }
 
     public EntityDeleteResponse entityDeleteWithOptions(EntityDeleteRequest tmpReq, EntityDeleteHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1700,10 +1694,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new EntityDeleteResponse());
     }
 
-    public EntitySetResponse entitySet(EntitySetRequest request) throws Exception {
+    public EntityDeleteResponse entityDelete(EntityDeleteRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        EntitySetHeaders headers = new EntitySetHeaders();
-        return this.entitySetWithOptions(request, headers, runtime);
+        EntityDeleteHeaders headers = new EntityDeleteHeaders();
+        return this.entityDeleteWithOptions(request, headers, runtime);
     }
 
     public EntitySetResponse entitySetWithOptions(EntitySetRequest tmpReq, EntitySetHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1750,10 +1744,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new EntitySetResponse());
     }
 
-    public EstimatedPriceQueryResponse estimatedPriceQuery(EstimatedPriceQueryRequest request) throws Exception {
+    public EntitySetResponse entitySet(EntitySetRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        EstimatedPriceQueryHeaders headers = new EstimatedPriceQueryHeaders();
-        return this.estimatedPriceQueryWithOptions(request, headers, runtime);
+        EntitySetHeaders headers = new EntitySetHeaders();
+        return this.entitySetWithOptions(request, headers, runtime);
     }
 
     public EstimatedPriceQueryResponse estimatedPriceQueryWithOptions(EstimatedPriceQueryRequest request, EstimatedPriceQueryHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1814,10 +1808,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new EstimatedPriceQueryResponse());
     }
 
-    public ExceedApplySyncResponse exceedApplySync(ExceedApplySyncRequest request) throws Exception {
+    public EstimatedPriceQueryResponse estimatedPriceQuery(EstimatedPriceQueryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        ExceedApplySyncHeaders headers = new ExceedApplySyncHeaders();
-        return this.exceedApplySyncWithOptions(request, headers, runtime);
+        EstimatedPriceQueryHeaders headers = new EstimatedPriceQueryHeaders();
+        return this.estimatedPriceQueryWithOptions(request, headers, runtime);
     }
 
     public ExceedApplySyncResponse exceedApplySyncWithOptions(ExceedApplySyncRequest request, ExceedApplySyncHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1874,10 +1868,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ExceedApplySyncResponse());
     }
 
-    public FlightBillSettlementQueryResponse flightBillSettlementQuery(FlightBillSettlementQueryRequest request) throws Exception {
+    public ExceedApplySyncResponse exceedApplySync(ExceedApplySyncRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        FlightBillSettlementQueryHeaders headers = new FlightBillSettlementQueryHeaders();
-        return this.flightBillSettlementQueryWithOptions(request, headers, runtime);
+        ExceedApplySyncHeaders headers = new ExceedApplySyncHeaders();
+        return this.exceedApplySyncWithOptions(request, headers, runtime);
     }
 
     public FlightBillSettlementQueryResponse flightBillSettlementQueryWithOptions(FlightBillSettlementQueryRequest request, FlightBillSettlementQueryHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1926,10 +1920,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new FlightBillSettlementQueryResponse());
     }
 
-    public FlightExceedApplyQueryResponse flightExceedApplyQuery(FlightExceedApplyQueryRequest request) throws Exception {
+    public FlightBillSettlementQueryResponse flightBillSettlementQuery(FlightBillSettlementQueryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        FlightExceedApplyQueryHeaders headers = new FlightExceedApplyQueryHeaders();
-        return this.flightExceedApplyQueryWithOptions(request, headers, runtime);
+        FlightBillSettlementQueryHeaders headers = new FlightBillSettlementQueryHeaders();
+        return this.flightBillSettlementQueryWithOptions(request, headers, runtime);
     }
 
     public FlightExceedApplyQueryResponse flightExceedApplyQueryWithOptions(FlightExceedApplyQueryRequest request, FlightExceedApplyQueryHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1966,10 +1960,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new FlightExceedApplyQueryResponse());
     }
 
-    public FlightOrderListQueryResponse flightOrderListQuery(FlightOrderListQueryRequest request) throws Exception {
+    public FlightExceedApplyQueryResponse flightExceedApplyQuery(FlightExceedApplyQueryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        FlightOrderListQueryHeaders headers = new FlightOrderListQueryHeaders();
-        return this.flightOrderListQueryWithOptions(request, headers, runtime);
+        FlightExceedApplyQueryHeaders headers = new FlightExceedApplyQueryHeaders();
+        return this.flightExceedApplyQueryWithOptions(request, headers, runtime);
     }
 
     public FlightOrderListQueryResponse flightOrderListQueryWithOptions(FlightOrderListQueryRequest request, FlightOrderListQueryHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2046,10 +2040,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new FlightOrderListQueryResponse());
     }
 
-    public FlightOrderQueryResponse flightOrderQuery(FlightOrderQueryRequest request) throws Exception {
+    public FlightOrderListQueryResponse flightOrderListQuery(FlightOrderListQueryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        FlightOrderQueryHeaders headers = new FlightOrderQueryHeaders();
-        return this.flightOrderQueryWithOptions(request, headers, runtime);
+        FlightOrderListQueryHeaders headers = new FlightOrderListQueryHeaders();
+        return this.flightOrderListQueryWithOptions(request, headers, runtime);
     }
 
     public FlightOrderQueryResponse flightOrderQueryWithOptions(FlightOrderQueryRequest request, FlightOrderQueryHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2090,10 +2084,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new FlightOrderQueryResponse());
     }
 
-    public HotelBillSettlementQueryResponse hotelBillSettlementQuery(HotelBillSettlementQueryRequest request) throws Exception {
+    public FlightOrderQueryResponse flightOrderQuery(FlightOrderQueryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        HotelBillSettlementQueryHeaders headers = new HotelBillSettlementQueryHeaders();
-        return this.hotelBillSettlementQueryWithOptions(request, headers, runtime);
+        FlightOrderQueryHeaders headers = new FlightOrderQueryHeaders();
+        return this.flightOrderQueryWithOptions(request, headers, runtime);
     }
 
     public HotelBillSettlementQueryResponse hotelBillSettlementQueryWithOptions(HotelBillSettlementQueryRequest request, HotelBillSettlementQueryHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2142,10 +2136,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new HotelBillSettlementQueryResponse());
     }
 
-    public HotelExceedApplyQueryResponse hotelExceedApplyQuery(HotelExceedApplyQueryRequest request) throws Exception {
+    public HotelBillSettlementQueryResponse hotelBillSettlementQuery(HotelBillSettlementQueryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        HotelExceedApplyQueryHeaders headers = new HotelExceedApplyQueryHeaders();
-        return this.hotelExceedApplyQueryWithOptions(request, headers, runtime);
+        HotelBillSettlementQueryHeaders headers = new HotelBillSettlementQueryHeaders();
+        return this.hotelBillSettlementQueryWithOptions(request, headers, runtime);
     }
 
     public HotelExceedApplyQueryResponse hotelExceedApplyQueryWithOptions(HotelExceedApplyQueryRequest request, HotelExceedApplyQueryHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2182,10 +2176,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new HotelExceedApplyQueryResponse());
     }
 
-    public HotelOrderListQueryResponse hotelOrderListQuery(HotelOrderListQueryRequest request) throws Exception {
+    public HotelExceedApplyQueryResponse hotelExceedApplyQuery(HotelExceedApplyQueryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        HotelOrderListQueryHeaders headers = new HotelOrderListQueryHeaders();
-        return this.hotelOrderListQueryWithOptions(request, headers, runtime);
+        HotelExceedApplyQueryHeaders headers = new HotelExceedApplyQueryHeaders();
+        return this.hotelExceedApplyQueryWithOptions(request, headers, runtime);
     }
 
     public HotelOrderListQueryResponse hotelOrderListQueryWithOptions(HotelOrderListQueryRequest request, HotelOrderListQueryHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2262,10 +2256,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new HotelOrderListQueryResponse());
     }
 
-    public HotelOrderQueryResponse hotelOrderQuery(HotelOrderQueryRequest request) throws Exception {
+    public HotelOrderListQueryResponse hotelOrderListQuery(HotelOrderListQueryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        HotelOrderQueryHeaders headers = new HotelOrderQueryHeaders();
-        return this.hotelOrderQueryWithOptions(request, headers, runtime);
+        HotelOrderListQueryHeaders headers = new HotelOrderListQueryHeaders();
+        return this.hotelOrderListQueryWithOptions(request, headers, runtime);
     }
 
     public HotelOrderQueryResponse hotelOrderQueryWithOptions(HotelOrderQueryRequest request, HotelOrderQueryHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2302,10 +2296,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new HotelOrderQueryResponse());
     }
 
-    public IeFlightBillSettlementQueryResponse ieFlightBillSettlementQuery(IeFlightBillSettlementQueryRequest request) throws Exception {
+    public HotelOrderQueryResponse hotelOrderQuery(HotelOrderQueryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        IeFlightBillSettlementQueryHeaders headers = new IeFlightBillSettlementQueryHeaders();
-        return this.ieFlightBillSettlementQueryWithOptions(request, headers, runtime);
+        HotelOrderQueryHeaders headers = new HotelOrderQueryHeaders();
+        return this.hotelOrderQueryWithOptions(request, headers, runtime);
     }
 
     public IeFlightBillSettlementQueryResponse ieFlightBillSettlementQueryWithOptions(IeFlightBillSettlementQueryRequest request, IeFlightBillSettlementQueryHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2354,10 +2348,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new IeFlightBillSettlementQueryResponse());
     }
 
-    public InvoiceAddResponse invoiceAdd(InvoiceAddRequest request) throws Exception {
+    public IeFlightBillSettlementQueryResponse ieFlightBillSettlementQuery(IeFlightBillSettlementQueryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        InvoiceAddHeaders headers = new InvoiceAddHeaders();
-        return this.invoiceAddWithOptions(request, headers, runtime);
+        IeFlightBillSettlementQueryHeaders headers = new IeFlightBillSettlementQueryHeaders();
+        return this.ieFlightBillSettlementQueryWithOptions(request, headers, runtime);
     }
 
     public InvoiceAddResponse invoiceAddWithOptions(InvoiceAddRequest request, InvoiceAddHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2422,10 +2416,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new InvoiceAddResponse());
     }
 
-    public InvoiceDeleteResponse invoiceDelete(InvoiceDeleteRequest request) throws Exception {
+    public InvoiceAddResponse invoiceAdd(InvoiceAddRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        InvoiceDeleteHeaders headers = new InvoiceDeleteHeaders();
-        return this.invoiceDeleteWithOptions(request, headers, runtime);
+        InvoiceAddHeaders headers = new InvoiceAddHeaders();
+        return this.invoiceAddWithOptions(request, headers, runtime);
     }
 
     public InvoiceDeleteResponse invoiceDeleteWithOptions(InvoiceDeleteRequest request, InvoiceDeleteHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2462,10 +2456,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new InvoiceDeleteResponse());
     }
 
-    public InvoiceModifyResponse invoiceModify(InvoiceModifyRequest request) throws Exception {
+    public InvoiceDeleteResponse invoiceDelete(InvoiceDeleteRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        InvoiceModifyHeaders headers = new InvoiceModifyHeaders();
-        return this.invoiceModifyWithOptions(request, headers, runtime);
+        InvoiceDeleteHeaders headers = new InvoiceDeleteHeaders();
+        return this.invoiceDeleteWithOptions(request, headers, runtime);
     }
 
     public InvoiceModifyResponse invoiceModifyWithOptions(InvoiceModifyRequest request, InvoiceModifyHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2530,10 +2524,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new InvoiceModifyResponse());
     }
 
-    public InvoiceRuleSaveResponse invoiceRuleSave(InvoiceRuleSaveRequest request) throws Exception {
+    public InvoiceModifyResponse invoiceModify(InvoiceModifyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        InvoiceRuleSaveHeaders headers = new InvoiceRuleSaveHeaders();
-        return this.invoiceRuleSaveWithOptions(request, headers, runtime);
+        InvoiceModifyHeaders headers = new InvoiceModifyHeaders();
+        return this.invoiceModifyWithOptions(request, headers, runtime);
     }
 
     public InvoiceRuleSaveResponse invoiceRuleSaveWithOptions(InvoiceRuleSaveRequest tmpReq, InvoiceRuleSaveHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2584,10 +2578,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new InvoiceRuleSaveResponse());
     }
 
-    public InvoiceSearchResponse invoiceSearch(InvoiceSearchRequest request) throws Exception {
+    public InvoiceRuleSaveResponse invoiceRuleSave(InvoiceRuleSaveRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        InvoiceSearchHeaders headers = new InvoiceSearchHeaders();
-        return this.invoiceSearchWithOptions(request, headers, runtime);
+        InvoiceRuleSaveHeaders headers = new InvoiceRuleSaveHeaders();
+        return this.invoiceRuleSaveWithOptions(request, headers, runtime);
     }
 
     public InvoiceSearchResponse invoiceSearchWithOptions(InvoiceSearchRequest request, InvoiceSearchHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2628,10 +2622,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new InvoiceSearchResponse());
     }
 
-    public IsvUserSaveResponse isvUserSave(IsvUserSaveRequest request) throws Exception {
+    public InvoiceSearchResponse invoiceSearch(InvoiceSearchRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        IsvUserSaveHeaders headers = new IsvUserSaveHeaders();
-        return this.isvUserSaveWithOptions(request, headers, runtime);
+        InvoiceSearchHeaders headers = new InvoiceSearchHeaders();
+        return this.invoiceSearchWithOptions(request, headers, runtime);
     }
 
     public IsvUserSaveResponse isvUserSaveWithOptions(IsvUserSaveRequest tmpReq, IsvUserSaveHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2674,10 +2668,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new IsvUserSaveResponse());
     }
 
-    public MonthBillGetResponse monthBillGet(MonthBillGetRequest request) throws Exception {
+    public IsvUserSaveResponse isvUserSave(IsvUserSaveRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        MonthBillGetHeaders headers = new MonthBillGetHeaders();
-        return this.monthBillGetWithOptions(request, headers, runtime);
+        IsvUserSaveHeaders headers = new IsvUserSaveHeaders();
+        return this.isvUserSaveWithOptions(request, headers, runtime);
     }
 
     public MonthBillGetResponse monthBillGetWithOptions(MonthBillGetRequest request, MonthBillGetHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2714,10 +2708,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new MonthBillGetResponse());
     }
 
-    public ProjectAddResponse projectAdd(ProjectAddRequest request) throws Exception {
+    public MonthBillGetResponse monthBillGet(MonthBillGetRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        ProjectAddHeaders headers = new ProjectAddHeaders();
-        return this.projectAddWithOptions(request, headers, runtime);
+        MonthBillGetHeaders headers = new MonthBillGetHeaders();
+        return this.monthBillGetWithOptions(request, headers, runtime);
     }
 
     public ProjectAddResponse projectAddWithOptions(ProjectAddRequest request, ProjectAddHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2770,10 +2764,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ProjectAddResponse());
     }
 
-    public ProjectDeleteResponse projectDelete(ProjectDeleteRequest request) throws Exception {
+    public ProjectAddResponse projectAdd(ProjectAddRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        ProjectDeleteHeaders headers = new ProjectDeleteHeaders();
-        return this.projectDeleteWithOptions(request, headers, runtime);
+        ProjectAddHeaders headers = new ProjectAddHeaders();
+        return this.projectAddWithOptions(request, headers, runtime);
     }
 
     public ProjectDeleteResponse projectDeleteWithOptions(ProjectDeleteRequest request, ProjectDeleteHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2810,10 +2804,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ProjectDeleteResponse());
     }
 
-    public ProjectModifyResponse projectModify(ProjectModifyRequest request) throws Exception {
+    public ProjectDeleteResponse projectDelete(ProjectDeleteRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        ProjectModifyHeaders headers = new ProjectModifyHeaders();
-        return this.projectModifyWithOptions(request, headers, runtime);
+        ProjectDeleteHeaders headers = new ProjectDeleteHeaders();
+        return this.projectDeleteWithOptions(request, headers, runtime);
     }
 
     public ProjectModifyResponse projectModifyWithOptions(ProjectModifyRequest request, ProjectModifyHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2866,10 +2860,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ProjectModifyResponse());
     }
 
-    public SyncSingleUserResponse syncSingleUser(SyncSingleUserRequest request) throws Exception {
+    public ProjectModifyResponse projectModify(ProjectModifyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        SyncSingleUserHeaders headers = new SyncSingleUserHeaders();
-        return this.syncSingleUserWithOptions(request, headers, runtime);
+        ProjectModifyHeaders headers = new ProjectModifyHeaders();
+        return this.projectModifyWithOptions(request, headers, runtime);
     }
 
     public SyncSingleUserResponse syncSingleUserWithOptions(SyncSingleUserRequest tmpReq, SyncSingleUserHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2952,10 +2946,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SyncSingleUserResponse());
     }
 
-    public TrainBillSettlementQueryResponse trainBillSettlementQuery(TrainBillSettlementQueryRequest request) throws Exception {
+    public SyncSingleUserResponse syncSingleUser(SyncSingleUserRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        TrainBillSettlementQueryHeaders headers = new TrainBillSettlementQueryHeaders();
-        return this.trainBillSettlementQueryWithOptions(request, headers, runtime);
+        SyncSingleUserHeaders headers = new SyncSingleUserHeaders();
+        return this.syncSingleUserWithOptions(request, headers, runtime);
     }
 
     public TrainBillSettlementQueryResponse trainBillSettlementQueryWithOptions(TrainBillSettlementQueryRequest request, TrainBillSettlementQueryHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -3004,10 +2998,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new TrainBillSettlementQueryResponse());
     }
 
-    public TrainExceedApplyQueryResponse trainExceedApplyQuery(TrainExceedApplyQueryRequest request) throws Exception {
+    public TrainBillSettlementQueryResponse trainBillSettlementQuery(TrainBillSettlementQueryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        TrainExceedApplyQueryHeaders headers = new TrainExceedApplyQueryHeaders();
-        return this.trainExceedApplyQueryWithOptions(request, headers, runtime);
+        TrainBillSettlementQueryHeaders headers = new TrainBillSettlementQueryHeaders();
+        return this.trainBillSettlementQueryWithOptions(request, headers, runtime);
     }
 
     public TrainExceedApplyQueryResponse trainExceedApplyQueryWithOptions(TrainExceedApplyQueryRequest request, TrainExceedApplyQueryHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -3044,10 +3038,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new TrainExceedApplyQueryResponse());
     }
 
-    public TrainOrderListQueryResponse trainOrderListQuery(TrainOrderListQueryRequest request) throws Exception {
+    public TrainExceedApplyQueryResponse trainExceedApplyQuery(TrainExceedApplyQueryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        TrainOrderListQueryHeaders headers = new TrainOrderListQueryHeaders();
-        return this.trainOrderListQueryWithOptions(request, headers, runtime);
+        TrainExceedApplyQueryHeaders headers = new TrainExceedApplyQueryHeaders();
+        return this.trainExceedApplyQueryWithOptions(request, headers, runtime);
     }
 
     public TrainOrderListQueryResponse trainOrderListQueryWithOptions(TrainOrderListQueryRequest request, TrainOrderListQueryHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -3124,10 +3118,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new TrainOrderListQueryResponse());
     }
 
-    public TrainOrderQueryResponse trainOrderQuery(TrainOrderQueryRequest request) throws Exception {
+    public TrainOrderListQueryResponse trainOrderListQuery(TrainOrderListQueryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        TrainOrderQueryHeaders headers = new TrainOrderQueryHeaders();
-        return this.trainOrderQueryWithOptions(request, headers, runtime);
+        TrainOrderListQueryHeaders headers = new TrainOrderListQueryHeaders();
+        return this.trainOrderListQueryWithOptions(request, headers, runtime);
     }
 
     public TrainOrderQueryResponse trainOrderQueryWithOptions(TrainOrderQueryRequest request, TrainOrderQueryHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -3168,10 +3162,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new TrainOrderQueryResponse());
     }
 
-    public TrainStationSearchResponse trainStationSearch(TrainStationSearchRequest request) throws Exception {
+    public TrainOrderQueryResponse trainOrderQuery(TrainOrderQueryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        TrainStationSearchHeaders headers = new TrainStationSearchHeaders();
-        return this.trainStationSearchWithOptions(request, headers, runtime);
+        TrainOrderQueryHeaders headers = new TrainOrderQueryHeaders();
+        return this.trainOrderQueryWithOptions(request, headers, runtime);
     }
 
     public TrainStationSearchResponse trainStationSearchWithOptions(TrainStationSearchRequest request, TrainStationSearchHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -3208,10 +3202,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new TrainStationSearchResponse());
     }
 
-    public UserQueryResponse userQuery(UserQueryRequest request) throws Exception {
+    public TrainStationSearchResponse trainStationSearch(TrainStationSearchRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        UserQueryHeaders headers = new UserQueryHeaders();
-        return this.userQueryWithOptions(request, headers, runtime);
+        TrainStationSearchHeaders headers = new TrainStationSearchHeaders();
+        return this.trainStationSearchWithOptions(request, headers, runtime);
     }
 
     public UserQueryResponse userQueryWithOptions(UserQueryRequest request, UserQueryHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -3258,5 +3252,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new UserQueryResponse());
+    }
+
+    public UserQueryResponse userQuery(UserQueryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        UserQueryHeaders headers = new UserQueryHeaders();
+        return this.userQueryWithOptions(request, headers, runtime);
     }
 }
