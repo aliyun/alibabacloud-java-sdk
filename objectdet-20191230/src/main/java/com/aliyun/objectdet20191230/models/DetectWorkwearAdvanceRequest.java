@@ -10,6 +10,7 @@ public class DetectWorkwearAdvanceRequest extends TeaModel {
     @NameInMap("ImageUrl")
     public java.io.InputStream imageUrlObject;
 
+    // 1
     @NameInMap("Labels")
     public java.util.List<String> labels;
 
