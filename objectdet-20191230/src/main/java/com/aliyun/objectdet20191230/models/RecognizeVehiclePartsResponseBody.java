@@ -32,6 +32,7 @@ public class RecognizeVehiclePartsResponseBody extends TeaModel {
     }
 
     public static class RecognizeVehiclePartsResponseBodyDataElements extends TeaModel {
+        // 1
         @NameInMap("Boxes")
         public java.util.List<Integer> boxes;
 
@@ -76,6 +77,7 @@ public class RecognizeVehiclePartsResponseBody extends TeaModel {
         @NameInMap("Elements")
         public java.util.List<RecognizeVehiclePartsResponseBodyDataElements> elements;
 
+        // 1
         @NameInMap("OriginShapes")
         public java.util.List<Integer> originShapes;
 

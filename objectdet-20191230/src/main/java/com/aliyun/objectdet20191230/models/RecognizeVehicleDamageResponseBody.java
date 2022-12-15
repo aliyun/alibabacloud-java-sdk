@@ -32,12 +32,14 @@ public class RecognizeVehicleDamageResponseBody extends TeaModel {
     }
 
     public static class RecognizeVehicleDamageResponseBodyDataElements extends TeaModel {
+        // 1
         @NameInMap("Boxes")
         public java.util.List<Integer> boxes;
 
         @NameInMap("Score")
         public Float score;
 
+        // 1
         @NameInMap("Scores")
         public java.util.List<Float> scores;
 

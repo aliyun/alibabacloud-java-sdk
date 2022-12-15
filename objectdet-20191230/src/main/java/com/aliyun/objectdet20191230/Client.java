@@ -1011,69 +1011,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return detectVehicleIllegalParkingResp;
     }
 
-    public DetectVideoFrameResponse detectVideoFrameWithOptions(DetectVideoFrameRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(tmpReq);
-        DetectVideoFrameShrinkRequest request = new DetectVideoFrameShrinkRequest();
-        com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.features)) {
-            request.featuresShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.features, "Features", "json");
-        }
-
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.createTime)) {
-            body.put("CreateTime", request.createTime);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.featureConfig)) {
-            body.put("FeatureConfig", request.featureConfig);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.featuresShrink)) {
-            body.put("Features", request.featuresShrink);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.height)) {
-            body.put("Height", request.height);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.imageURL)) {
-            body.put("ImageURL", request.imageURL);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
-            body.put("OwnerId", request.ownerId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.streamArn)) {
-            body.put("StreamArn", request.streamArn);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.width)) {
-            body.put("Width", request.width);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DetectVideoFrame"),
-            new TeaPair("version", "2019-12-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DetectVideoFrameResponse());
-    }
-
-    public DetectVideoFrameResponse detectVideoFrame(DetectVideoFrameRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.detectVideoFrameWithOptions(request, runtime);
-    }
-
     public DetectVideoIPCObjectResponse detectVideoIPCObjectWithOptions(DetectVideoIPCObjectRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -1292,8 +1229,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         DetectWorkwearShrinkRequest request = new DetectWorkwearShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.clothes))) {
-            request.clothesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.clothes), "Clothes", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.clothes)) {
+            request.clothesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.clothes, "Clothes", "json");
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -1405,35 +1342,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return detectWorkwearResp;
     }
 
-    public GenerateVehicleRepairPlanResponse generateVehicleRepairPlanWithOptions(GenerateVehicleRepairPlanRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.damageImageList)) {
-            body.put("DamageImageList", request.damageImageList);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "GenerateVehicleRepairPlan"),
-            new TeaPair("version", "2019-12-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GenerateVehicleRepairPlanResponse());
-    }
-
-    public GenerateVehicleRepairPlanResponse generateVehicleRepairPlan(GenerateVehicleRepairPlanRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.generateVehicleRepairPlanWithOptions(request, runtime);
-    }
-
     public GetAsyncJobResultResponse getAsyncJobResultWithOptions(GetAsyncJobResultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -1461,143 +1369,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetAsyncJobResultResponse getAsyncJobResult(GetAsyncJobResultRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getAsyncJobResultWithOptions(request, runtime);
-    }
-
-    public GetVehicleRepairPlanResponse getVehicleRepairPlanWithOptions(GetVehicleRepairPlanRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.carNumberImage)) {
-            body.put("CarNumberImage", request.carNumberImage);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
-            body.put("TaskId", request.taskId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.vinCodeImage)) {
-            body.put("VinCodeImage", request.vinCodeImage);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "GetVehicleRepairPlan"),
-            new TeaPair("version", "2019-12-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetVehicleRepairPlanResponse());
-    }
-
-    public GetVehicleRepairPlanResponse getVehicleRepairPlan(GetVehicleRepairPlanRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getVehicleRepairPlanWithOptions(request, runtime);
-    }
-
-    public GetVehicleRepairPlanResponse getVehicleRepairPlanAdvance(GetVehicleRepairPlanAdvanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        // Step 0: init client
-        String accessKeyId = _credential.getAccessKeyId();
-        String accessKeySecret = _credential.getAccessKeySecret();
-        String securityToken = _credential.getSecurityToken();
-        String credentialType = _credential.getType();
-        String openPlatformEndpoint = _openPlatformEndpoint;
-        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
-            openPlatformEndpoint = "openplatform.aliyuncs.com";
-        }
-
-        if (com.aliyun.teautil.Common.isUnset(credentialType)) {
-            credentialType = "access_key";
-        }
-
-        com.aliyun.teaopenapi.models.Config authConfig = com.aliyun.teaopenapi.models.Config.build(TeaConverter.buildMap(
-            new TeaPair("accessKeyId", accessKeyId),
-            new TeaPair("accessKeySecret", accessKeySecret),
-            new TeaPair("securityToken", securityToken),
-            new TeaPair("type", credentialType),
-            new TeaPair("endpoint", openPlatformEndpoint),
-            new TeaPair("protocol", _protocol),
-            new TeaPair("regionId", _regionId)
-        ));
-        com.aliyun.openplatform20191219.Client authClient = new com.aliyun.openplatform20191219.Client(authConfig);
-        com.aliyun.openplatform20191219.models.AuthorizeFileUploadRequest authRequest = com.aliyun.openplatform20191219.models.AuthorizeFileUploadRequest.build(TeaConverter.buildMap(
-            new TeaPair("product", "objectdet"),
-            new TeaPair("regionId", _regionId)
-        ));
-        com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = new com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse();
-        com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
-            new TeaPair("accessKeySecret", accessKeySecret),
-            new TeaPair("type", "access_key"),
-            new TeaPair("protocol", _protocol),
-            new TeaPair("regionId", _regionId)
-        ));
-        com.aliyun.oss.Client ossClient = null;
-        com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
-        com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = new com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader();
-        com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
-        com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
-        com.aliyun.openapiutil.Client.convert(runtime, ossRuntime);
-        GetVehicleRepairPlanRequest getVehicleRepairPlanReq = new GetVehicleRepairPlanRequest();
-        com.aliyun.openapiutil.Client.convert(request, getVehicleRepairPlanReq);
-        if (!com.aliyun.teautil.Common.isUnset(request.carNumberImageObject)) {
-            authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
-            ossConfig.accessKeyId = authResponse.body.accessKeyId;
-            ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.body.endpoint, authResponse.body.useAccelerate, _endpointType);
-            ossClient = new com.aliyun.oss.Client(ossConfig);
-            fileObj = com.aliyun.fileform.models.FileField.build(TeaConverter.buildMap(
-                new TeaPair("filename", authResponse.body.objectKey),
-                new TeaPair("content", request.carNumberImageObject),
-                new TeaPair("contentType", "")
-            ));
-            ossHeader = com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
-                new TeaPair("accessKeyId", authResponse.body.accessKeyId),
-                new TeaPair("policy", authResponse.body.encodedPolicy),
-                new TeaPair("signature", authResponse.body.signature),
-                new TeaPair("key", authResponse.body.objectKey),
-                new TeaPair("file", fileObj),
-                new TeaPair("successActionStatus", "201")
-            ));
-            uploadRequest = com.aliyun.oss.models.PostObjectRequest.build(TeaConverter.buildMap(
-                new TeaPair("bucketName", authResponse.body.bucket),
-                new TeaPair("header", ossHeader)
-            ));
-            ossClient.postObject(uploadRequest, ossRuntime);
-            getVehicleRepairPlanReq.carNumberImage = "http://" + authResponse.body.bucket + "." + authResponse.body.endpoint + "/" + authResponse.body.objectKey + "";
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.vinCodeImageObject)) {
-            authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
-            ossConfig.accessKeyId = authResponse.body.accessKeyId;
-            ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.body.endpoint, authResponse.body.useAccelerate, _endpointType);
-            ossClient = new com.aliyun.oss.Client(ossConfig);
-            fileObj = com.aliyun.fileform.models.FileField.build(TeaConverter.buildMap(
-                new TeaPair("filename", authResponse.body.objectKey),
-                new TeaPair("content", request.vinCodeImageObject),
-                new TeaPair("contentType", "")
-            ));
-            ossHeader = com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
-                new TeaPair("accessKeyId", authResponse.body.accessKeyId),
-                new TeaPair("policy", authResponse.body.encodedPolicy),
-                new TeaPair("signature", authResponse.body.signature),
-                new TeaPair("key", authResponse.body.objectKey),
-                new TeaPair("file", fileObj),
-                new TeaPair("successActionStatus", "201")
-            ));
-            uploadRequest = com.aliyun.oss.models.PostObjectRequest.build(TeaConverter.buildMap(
-                new TeaPair("bucketName", authResponse.body.bucket),
-                new TeaPair("header", ossHeader)
-            ));
-            ossClient.postObject(uploadRequest, ossRuntime);
-            getVehicleRepairPlanReq.vinCodeImage = "http://" + authResponse.body.bucket + "." + authResponse.body.endpoint + "/" + authResponse.body.objectKey + "";
-        }
-
-        GetVehicleRepairPlanResponse getVehicleRepairPlanResp = this.getVehicleRepairPlanWithOptions(getVehicleRepairPlanReq, runtime);
-        return getVehicleRepairPlanResp;
     }
 
     public RecognizeVehicleDamageResponse recognizeVehicleDamageWithOptions(RecognizeVehicleDamageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {

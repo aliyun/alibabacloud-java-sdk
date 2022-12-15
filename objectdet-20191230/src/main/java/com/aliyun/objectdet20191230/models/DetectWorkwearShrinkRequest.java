@@ -10,6 +10,7 @@ public class DetectWorkwearShrinkRequest extends TeaModel {
     @NameInMap("ImageUrl")
     public String imageUrl;
 
+    // 1
     @NameInMap("Labels")
     public java.util.List<String> labels;
 
