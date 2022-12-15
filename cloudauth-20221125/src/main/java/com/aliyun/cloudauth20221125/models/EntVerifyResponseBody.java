@@ -10,6 +10,7 @@ public class EntVerifyResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -84,12 +85,23 @@ public class EntVerifyResponseBody extends TeaModel {
     }
 
     public static class EntVerifyResponseBodyResultRiskVerifyResult extends TeaModel {
+        @NameInMap("Found")
+        public String found;
+
         @NameInMap("ModelResults")
         public java.util.List<EntVerifyResponseBodyResultRiskVerifyResultModelResults> modelResults;
 
         public static EntVerifyResponseBodyResultRiskVerifyResult build(java.util.Map<String, ?> map) throws Exception {
             EntVerifyResponseBodyResultRiskVerifyResult self = new EntVerifyResponseBodyResultRiskVerifyResult();
             return TeaModel.build(map, self);
+        }
+
+        public EntVerifyResponseBodyResultRiskVerifyResult setFound(String found) {
+            this.found = found;
+            return this;
+        }
+        public String getFound() {
+            return this.found;
         }
 
         public EntVerifyResponseBodyResultRiskVerifyResult setModelResults(java.util.List<EntVerifyResponseBodyResultRiskVerifyResultModelResults> modelResults) {
