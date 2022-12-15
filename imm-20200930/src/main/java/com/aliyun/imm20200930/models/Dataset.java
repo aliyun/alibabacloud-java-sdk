@@ -37,6 +37,9 @@ public class Dataset extends TeaModel {
     @NameInMap("ProjectName")
     public String projectName;
 
+    @NameInMap("TemplateId")
+    public String templateId;
+
     @NameInMap("TotalFileSize")
     public Long totalFileSize;
 
@@ -134,6 +137,14 @@ public class Dataset extends TeaModel {
     }
     public String getProjectName() {
         return this.projectName;
+    }
+
+    public Dataset setTemplateId(String templateId) {
+        this.templateId = templateId;
+        return this;
+    }
+    public String getTemplateId() {
+        return this.templateId;
     }
 
     public Dataset setTotalFileSize(Long totalFileSize) {

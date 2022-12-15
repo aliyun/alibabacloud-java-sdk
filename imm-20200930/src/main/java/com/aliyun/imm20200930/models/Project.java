@@ -46,6 +46,9 @@ public class Project extends TeaModel {
     @NameInMap("ServiceRole")
     public String serviceRole;
 
+    @NameInMap("TemplateId")
+    public String templateId;
+
     @NameInMap("TotalFileSize")
     public Long totalFileSize;
 
@@ -167,6 +170,14 @@ public class Project extends TeaModel {
     }
     public String getServiceRole() {
         return this.serviceRole;
+    }
+
+    public Project setTemplateId(String templateId) {
+        this.templateId = templateId;
+        return this;
+    }
+    public String getTemplateId() {
+        return this.templateId;
     }
 
     public Project setTotalFileSize(Long totalFileSize) {
