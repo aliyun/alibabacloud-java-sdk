@@ -38,6 +38,12 @@ public class ModifyLosslessRuleRequest extends TeaModel {
     @NameInMap("FuncType")
     public Long funcType;
 
+    @NameInMap("LossLessDetail")
+    public Boolean lossLessDetail;
+
+    @NameInMap("Notice")
+    public Boolean notice;
+
     // The region ID.
     @NameInMap("RegionId")
     public String regionId;
@@ -117,6 +123,22 @@ public class ModifyLosslessRuleRequest extends TeaModel {
     }
     public Long getFuncType() {
         return this.funcType;
+    }
+
+    public ModifyLosslessRuleRequest setLossLessDetail(Boolean lossLessDetail) {
+        this.lossLessDetail = lossLessDetail;
+        return this;
+    }
+    public Boolean getLossLessDetail() {
+        return this.lossLessDetail;
+    }
+
+    public ModifyLosslessRuleRequest setNotice(Boolean notice) {
+        this.notice = notice;
+        return this;
+    }
+    public Boolean getNotice() {
+        return this.notice;
     }
 
     public ModifyLosslessRuleRequest setRegionId(String regionId) {
