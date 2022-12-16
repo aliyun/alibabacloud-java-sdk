@@ -49,6 +49,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("IntAttr", request.intAttr);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.intAttr2)) {
+            body.put("IntAttr2", request.intAttr2);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.picContent)) {
             body.put("PicContent", request.picContent);
         }
@@ -67,6 +71,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.strAttr)) {
             body.put("StrAttr", request.strAttr);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.strAttr2)) {
+            body.put("StrAttr2", request.strAttr2);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -590,6 +598,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("IntAttr", request.intAttr);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.intAttr2)) {
+            body.put("IntAttr2", request.intAttr2);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.picName)) {
             body.put("PicName", request.picName);
         }
@@ -600,6 +612,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.strAttr)) {
             body.put("StrAttr", request.strAttr);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.strAttr2)) {
+            body.put("StrAttr2", request.strAttr2);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

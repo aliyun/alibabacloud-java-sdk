@@ -96,6 +96,9 @@ public class SearchImageByNameResponseBody extends TeaModel {
         @NameInMap("IntAttr")
         public Integer intAttr;
 
+        @NameInMap("IntAttr2")
+        public Integer intAttr2;
+
         @NameInMap("PicName")
         public String picName;
 
@@ -110,6 +113,9 @@ public class SearchImageByNameResponseBody extends TeaModel {
 
         @NameInMap("StrAttr")
         public String strAttr;
+
+        @NameInMap("StrAttr2")
+        public String strAttr2;
 
         public static SearchImageByNameResponseBodyAuctions build(java.util.Map<String, ?> map) throws Exception {
             SearchImageByNameResponseBodyAuctions self = new SearchImageByNameResponseBodyAuctions();
@@ -138,6 +144,14 @@ public class SearchImageByNameResponseBody extends TeaModel {
         }
         public Integer getIntAttr() {
             return this.intAttr;
+        }
+
+        public SearchImageByNameResponseBodyAuctions setIntAttr2(Integer intAttr2) {
+            this.intAttr2 = intAttr2;
+            return this;
+        }
+        public Integer getIntAttr2() {
+            return this.intAttr2;
         }
 
         public SearchImageByNameResponseBodyAuctions setPicName(String picName) {
@@ -178,6 +192,14 @@ public class SearchImageByNameResponseBody extends TeaModel {
         }
         public String getStrAttr() {
             return this.strAttr;
+        }
+
+        public SearchImageByNameResponseBodyAuctions setStrAttr2(String strAttr2) {
+            this.strAttr2 = strAttr2;
+            return this;
+        }
+        public String getStrAttr2() {
+            return this.strAttr2;
         }
 
     }
