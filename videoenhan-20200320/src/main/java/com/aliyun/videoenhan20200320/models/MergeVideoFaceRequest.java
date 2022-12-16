@@ -4,9 +4,6 @@ package com.aliyun.videoenhan20200320.models;
 import com.aliyun.tea.*;
 
 public class MergeVideoFaceRequest extends TeaModel {
-    @NameInMap("PostURL")
-    public String postURL;
-
     @NameInMap("ReferenceURL")
     public String referenceURL;
 
@@ -16,14 +13,6 @@ public class MergeVideoFaceRequest extends TeaModel {
     public static MergeVideoFaceRequest build(java.util.Map<String, ?> map) throws Exception {
         MergeVideoFaceRequest self = new MergeVideoFaceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public MergeVideoFaceRequest setPostURL(String postURL) {
-        this.postURL = postURL;
-        return this;
-    }
-    public String getPostURL() {
-        return this.postURL;
     }
 
     public MergeVideoFaceRequest setReferenceURL(String referenceURL) {
