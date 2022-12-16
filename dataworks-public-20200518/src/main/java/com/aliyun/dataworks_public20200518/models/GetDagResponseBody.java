@@ -85,12 +85,14 @@ public class GetDagResponseBody extends TeaModel {
         @NameInMap("CreateUser")
         public String createUser;
 
+        // DagId。
         @NameInMap("DagId")
         public Long dagId;
 
         @NameInMap("FinishTime")
         public Long finishTime;
 
+        // Gmtdate。
         @NameInMap("Gmtdate")
         public Long gmtdate;
 
