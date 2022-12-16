@@ -1,3 +1,6 @@
+2022-12-16 Version: 1.2.1
+- Fix and improvements.
+
 2022-12-15 Version: 1.2.0
 - Public Sdk.
 
