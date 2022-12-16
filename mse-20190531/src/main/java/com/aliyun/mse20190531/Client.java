@@ -5007,6 +5007,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("FuncType", request.funcType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.lossLessDetail)) {
+            query.put("LossLessDetail", request.lossLessDetail);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.notice)) {
+            query.put("Notice", request.notice);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
