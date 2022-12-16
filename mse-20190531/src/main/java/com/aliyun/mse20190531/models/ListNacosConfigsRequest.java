@@ -4,36 +4,50 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListNacosConfigsRequest extends TeaModel {
+    // The language of the response. Valid values:
+    // 
+    // - zh: Chinese
+    // - en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    // The name of the application.
     @NameInMap("AppName")
     public String appName;
 
+    // The ID of the configuration.
     @NameInMap("DataId")
     public String dataId;
 
+    // The name of the group. Default value: `default`.
     @NameInMap("Group")
     public String group;
 
+    // The ID of the instance.
     @NameInMap("InstanceId")
     public String instanceId;
 
+    // The ID of the namespace.
     @NameInMap("NamespaceId")
     public String namespaceId;
 
+    // The number of the page to return.
     @NameInMap("PageNum")
     public Integer pageNum;
 
+    // The number of entries to return on each page.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The ID of the region in which the cluster resides.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The extended request parameters. The JSON format is supported.
     @NameInMap("RequestPars")
     public String requestPars;
 
+    // The tags of the configuration.
     @NameInMap("Tags")
     public String tags;
 

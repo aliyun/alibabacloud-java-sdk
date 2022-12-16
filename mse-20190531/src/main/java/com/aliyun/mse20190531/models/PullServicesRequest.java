@@ -4,15 +4,22 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class PullServicesRequest extends TeaModel {
+    // The language of the response. Valid values:
+    // 
+    // *   zh: Chinese
+    // *   en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    // The unique ID of the gateway.
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
+    // The namespace.
     @NameInMap("Namespace")
     public String namespace;
 
+    // The type of the service source.
     @NameInMap("SourceType")
     public String sourceType;
 

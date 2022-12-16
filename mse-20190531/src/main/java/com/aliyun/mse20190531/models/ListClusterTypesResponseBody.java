@@ -4,27 +4,40 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListClusterTypesResponseBody extends TeaModel {
+    // The return value.
     @NameInMap("Code")
     public Integer code;
 
+    // The returned data.
     @NameInMap("Data")
     public java.util.List<ListClusterTypesResponseBodyData> data;
 
+    // The dynamic part in the error message. This parameter is used to replace the \*\*%s\*\* variable in the **ErrMessage** parameter.
+    // 
+    // >  If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    // The error code.
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    // The HTTP status code.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    // The returned message.
     @NameInMap("Message")
     public String message;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // *   `true`: The request was successful.
+    // *   `false`: The request failed.
     @NameInMap("Success")
     public Boolean success;
 
@@ -98,6 +111,7 @@ public class ListClusterTypesResponseBody extends TeaModel {
     }
 
     public static class ListClusterTypesResponseBodyData extends TeaModel {
+        // The type of the MSE engine that can be activated.
         @NameInMap("ShowName")
         public String showName;
 

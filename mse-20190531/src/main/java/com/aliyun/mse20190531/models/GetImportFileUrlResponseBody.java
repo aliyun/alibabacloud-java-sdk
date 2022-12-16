@@ -4,27 +4,38 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetImportFileUrlResponseBody extends TeaModel {
+    // The status code returned.
     @NameInMap("Code")
     public Integer code;
 
+    // The details of the data.
     @NameInMap("Data")
     public GetImportFileUrlResponseBodyData data;
 
+    // The dynamic part in the error message. This parameter is used to replace the **%s** variable in the **Message** parameter. 
+    // > If the specified **InstanceId** parameter is invalid, **The Value of Input Parameter %s is not valid** is returned for **Message** and **InstanceId** is returned for **DynamicMessage**.
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    // The error code returned if the request fails.
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    // The HTTP status code returned.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    // The message returned.
     @NameInMap("Message")
     public String message;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request is successful. Valid values:
+    // - `true`: The request is successful. 
+    // - `false`: The request fails.
     @NameInMap("Success")
     public Boolean success;
 
@@ -98,6 +109,7 @@ public class GetImportFileUrlResponseBody extends TeaModel {
     }
 
     public static class GetImportFileUrlResponseBodyData extends TeaModel {
+        // The upload URL of the configuration file.
         @NameInMap("Url")
         public String url;
 

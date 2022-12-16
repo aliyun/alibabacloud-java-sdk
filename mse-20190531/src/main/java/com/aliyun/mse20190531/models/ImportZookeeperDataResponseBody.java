@@ -1,0 +1,78 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.mse20190531.models;
+
+import com.aliyun.tea.*;
+
+public class ImportZookeeperDataResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public Object data;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    @NameInMap("HttpCode")
+    public String httpCode;
+
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
+
+    public static ImportZookeeperDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ImportZookeeperDataResponseBody self = new ImportZookeeperDataResponseBody();
+        return TeaModel.build(map, self);
+    }
+
+    public ImportZookeeperDataResponseBody setData(Object data) {
+        this.data = data;
+        return this;
+    }
+    public Object getData() {
+        return this.data;
+    }
+
+    public ImportZookeeperDataResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public ImportZookeeperDataResponseBody setHttpCode(String httpCode) {
+        this.httpCode = httpCode;
+        return this;
+    }
+    public String getHttpCode() {
+        return this.httpCode;
+    }
+
+    public ImportZookeeperDataResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public ImportZookeeperDataResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ImportZookeeperDataResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+}

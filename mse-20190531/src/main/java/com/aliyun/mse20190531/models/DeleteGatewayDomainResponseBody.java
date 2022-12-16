@@ -4,21 +4,29 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class DeleteGatewayDomainResponseBody extends TeaModel {
+    // The error message returned if the request fails.
     @NameInMap("Code")
     public Integer code;
 
+    // Indicates whether the request is successful. Valid values:
+    // - `true`: The request is successful. 
+    // - `false`: The request fails.
     @NameInMap("Data")
     public DeleteGatewayDomainResponseBodyData data;
 
+    // The ID of the request.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    // The HTTP status code returned.
     @NameInMap("Message")
     public String message;
 
+    // The data structure.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The status code returned.
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,30 +84,39 @@ public class DeleteGatewayDomainResponseBody extends TeaModel {
     }
 
     public static class DeleteGatewayDomainResponseBodyData extends TeaModel {
+        // Indicates whether HTTP probing is allowed.
         @NameInMap("CertIdentifier")
         public String certIdentifier;
 
+        // The unique ID of the gateway.
         @NameInMap("GatewayId")
         public Long gatewayId;
 
+        // The name of the gateway.
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 
+        // The ID of the certificate.
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        // The time when the domain name was added.
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        // The returned data.
         @NameInMap("Id")
         public Long id;
 
+        // The protocol used by the gateway.
         @NameInMap("MustHttps")
         public Boolean mustHttps;
 
+        // The ID of the domain name.
         @NameInMap("Name")
         public String name;
 
+        // The ID of the gateway.
         @NameInMap("Protocol")
         public String protocol;
 

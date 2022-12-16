@@ -4,30 +4,41 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListEurekaServicesResponseBody extends TeaModel {
+    // The details of the data.
     @NameInMap("Data")
     public java.util.List<ListEurekaServicesResponseBodyData> data;
 
+    // The error code returned if the request fails.
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    // The HTTP status code returned.
     @NameInMap("HttpCode")
     public String httpCode;
 
+    // The message returned.
     @NameInMap("Message")
     public String message;
 
+    // The page number of the returned page.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries returned per page.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request is successful. Valid values:
+    // - `true`: The request is successful. 
+    // - `false`: The request fails.
     @NameInMap("Success")
     public Boolean success;
 
+    // The total number of entries returned.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -109,12 +120,15 @@ public class ListEurekaServicesResponseBody extends TeaModel {
     }
 
     public static class ListEurekaServicesResponseBodyData extends TeaModel {
+        // The information about instances.
         @NameInMap("InstancesId")
         public java.util.List<String> instancesId;
 
+        // The name of the service.
         @NameInMap("Name")
         public String name;
 
+        // The number of service providers. The value is in the following format: Number of healthy instances/Total number of instances.
         @NameInMap("UpStatus")
         public String upStatus;
 

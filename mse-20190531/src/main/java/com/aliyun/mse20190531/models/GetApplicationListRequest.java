@@ -4,33 +4,46 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetApplicationListRequest extends TeaModel {
+    // The language of the response. Valid values:
+    // 
+    // *   zh: Chinese
+    // *   en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    // The ID of the application.
     @NameInMap("AppId")
     public String appId;
 
+    // The name of the application.
     @NameInMap("AppName")
     public String appName;
 
+    // The programming language of the application, such as Java and Go.
     @NameInMap("Language")
     public String language;
 
+    // The number of the page to return.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries to return on each page.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The region ID.
     @NameInMap("Region")
     public String region;
 
+    // Specifies whether to enable the Sentinel-compatible mode.
     @NameInMap("SentinelEnable")
     public Boolean sentinelEnable;
 
+    // The source of the application. The value is fixed as edasmsc.
     @NameInMap("Source")
     public String source;
 
+    // Specifies whether to enable switching.
     @NameInMap("SwitchEnable")
     public Boolean switchEnable;
 

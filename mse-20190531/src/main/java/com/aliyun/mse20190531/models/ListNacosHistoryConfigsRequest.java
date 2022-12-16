@@ -4,30 +4,42 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListNacosHistoryConfigsRequest extends TeaModel {
+    // The language of the response. Valid values:
+    // 
+    // - zh: Chinese
+    // - en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    // The ID of the configuration.
     @NameInMap("DataId")
     public String dataId;
 
+    // The name of the group.
     @NameInMap("Group")
     public String group;
 
+    // The ID of the instance.
     @NameInMap("InstanceId")
     public String instanceId;
 
+    // The ID of the namespace.
     @NameInMap("NamespaceId")
     public String namespaceId;
 
+    // The number of the page to return.
     @NameInMap("PageNum")
     public Integer pageNum;
 
+    // The number of entries to return on each page.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The ID of the region in which the cluster resides.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The extended request parameters in the JSON format.
     @NameInMap("RequestPars")
     public String requestPars;
 

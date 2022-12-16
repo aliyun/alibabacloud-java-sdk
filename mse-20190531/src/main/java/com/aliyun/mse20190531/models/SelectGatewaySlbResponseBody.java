@@ -4,21 +4,30 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class SelectGatewaySlbResponseBody extends TeaModel {
+    // The HTTP status code returned.
     @NameInMap("Code")
     public Integer code;
 
+    // The data structure.
     @NameInMap("Data")
     public java.util.List<SelectGatewaySlbResponseBodyData> data;
 
+    // The HTTP status code returned.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    // The message returned.
     @NameInMap("Message")
     public String message;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // *   `true`: The request was successful.
+    // *   `false`: The request failed.
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,9 +85,11 @@ public class SelectGatewaySlbResponseBody extends TeaModel {
     }
 
     public static class SelectGatewaySlbResponseBodyData extends TeaModel {
+        // SLB ID.
         @NameInMap("SlbId")
         public String slbId;
 
+        // The name of the SLB instance.
         @NameInMap("SlbName")
         public String slbName;
 

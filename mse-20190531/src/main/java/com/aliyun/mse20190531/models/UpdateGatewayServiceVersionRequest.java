@@ -7,12 +7,15 @@ public class UpdateGatewayServiceVersionRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    // The unique ID of the gateway.
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
+    // The ID of the service.
     @NameInMap("ServiceId")
     public Long serviceId;
 
+    // The version of the service.
     @NameInMap("ServiceVersion")
     public String serviceVersion;
 

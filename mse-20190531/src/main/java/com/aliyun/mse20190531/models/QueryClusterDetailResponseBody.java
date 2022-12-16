@@ -4,18 +4,25 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class QueryClusterDetailResponseBody extends TeaModel {
+    // The details of the data.
     @NameInMap("Data")
     public QueryClusterDetailResponseBodyData data;
 
+    // The error code returned if the request fails.
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    // The message returned.
     @NameInMap("Message")
     public String message;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request is successful. Valid values:
+    // - `true`: The request is successful. 
+    // - `false`: The request fails.
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,24 +72,31 @@ public class QueryClusterDetailResponseBody extends TeaModel {
     }
 
     public static class QueryClusterDetailResponseBodyDataInstanceModels extends TeaModel {
+        // The timestamp when the node was created.
         @NameInMap("CreationTimestamp")
         public String creationTimestamp;
 
+        // The health status of the node.
         @NameInMap("HealthStatus")
         public String healthStatus;
 
+        // The public IP address.
         @NameInMap("InternetIp")
         public String internetIp;
 
+        // The IP address of the node.
         @NameInMap("Ip")
         public String ip;
 
+        // The name of the pod.
         @NameInMap("PodName")
         public String podName;
 
+        // The role of the node.
         @NameInMap("Role")
         public String role;
 
+        // The single-thread IP address.
         @NameInMap("SingleTunnelVip")
         public String singleTunnelVip;
 
@@ -161,102 +175,141 @@ public class QueryClusterDetailResponseBody extends TeaModel {
     }
 
     public static class QueryClusterDetailResponseBodyData extends TeaModel {
+        // The whitelist of the cluster.
         @NameInMap("AclEntryList")
         public String aclEntryList;
 
+        // The ID of the whitelist.
         @NameInMap("AclId")
         public String aclId;
 
+        // The version of the application.
         @NameInMap("AppVersion")
         public String appVersion;
 
+        // The billing method, such as subscription or pay-as-you-go.
         @NameInMap("ChargeType")
         public String chargeType;
 
+        // The alias of the cluster.
         @NameInMap("ClusterAliasName")
         public String clusterAliasName;
 
+        // The name of the cluster.
         @NameInMap("ClusterName")
         public String clusterName;
 
+        // The specifications of the engine.
         @NameInMap("ClusterSpecification")
         public String clusterSpecification;
 
+        // The type of the cluster. Valid values: ZooKeeper, Nacos-Ans, and Eureka.
         @NameInMap("ClusterType")
         public String clusterType;
 
+        // The version of the cluster.
         @NameInMap("ClusterVersion")
         public String clusterVersion;
 
+        // The connection type. Valid values:
+        // 
+        // - slb
+        // - eni
         @NameInMap("ConnectionType")
         public String connectionType;
 
+        // The number of CPUs.
         @NameInMap("Cpu")
         public Integer cpu;
 
+        // The time when the cluster was created.
         @NameInMap("CreateTime")
         public String createTime;
 
+        // The capacity of the disk. Unit: GB.
         @NameInMap("DiskCapacity")
         public Long diskCapacity;
 
+        // The type of the disk.
         @NameInMap("DiskType")
         public String diskType;
 
+        // The health status of the cluster.
         @NameInMap("HealthStatus")
         public String healthStatus;
 
+        // The amount of time taken to create the cluster. Unit: milliseconds.
         @NameInMap("InitCostTime")
         public Long initCostTime;
 
+        // The creation status of the cluster.
         @NameInMap("InitStatus")
         public String initStatus;
 
+        // The number of nodes.
         @NameInMap("InstanceCount")
         public Integer instanceCount;
 
+        // The ID of the instance.
         @NameInMap("InstanceId")
         public String instanceId;
 
+        // The information about nodes.
         @NameInMap("InstanceModels")
         public java.util.List<QueryClusterDetailResponseBodyDataInstanceModels> instanceModels;
 
+        // The public IP address.
         @NameInMap("InternetAddress")
         public String internetAddress;
 
+        // The public domain name.
         @NameInMap("InternetDomain")
         public String internetDomain;
 
+        // The private port.
         @NameInMap("InternetPort")
         public String internetPort;
 
+        // The private IP address.
         @NameInMap("IntranetAddress")
         public String intranetAddress;
 
+        // The private domain name.
         @NameInMap("IntranetDomain")
         public String intranetDomain;
 
+        // The private port.
         @NameInMap("IntranetPort")
         public String intranetPort;
 
+        // The size of the memory. Unit: GB.
         @NameInMap("MemoryCapacity")
         public Long memoryCapacity;
 
+        // The version category of the cluster.
         @NameInMap("MseVersion")
         public String mseVersion;
 
+        // The network type of the cluster. Valid values:
+        // 
+        // - `privatenet`: private network 
+        // - `pubnet`: the Internet
         @NameInMap("NetType")
         public String netType;
 
         @NameInMap("OrderClusterVersion")
         public String orderClusterVersion;
 
+        // The billing method, such as subscription or pay-as-you-go.
         @NameInMap("PayInfo")
         public String payInfo;
 
+        // The public bandwidth. Unit: Mbit/s.    
+        // Valid values: 0 to 5000. A value of 0 indicates no access to the Internet.
         @NameInMap("PubNetworkFlow")
         public String pubNetworkFlow;
 
+        // The ID of the region.
         @NameInMap("RegionId")
         public String regionId;
 
@@ -266,9 +319,11 @@ public class QueryClusterDetailResponseBody extends TeaModel {
         @NameInMap("Tags")
         public java.util.Map<String, ?> tags;
 
+        // The ID of the vSwitch.
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        // VPC ID.
         @NameInMap("VpcId")
         public String vpcId;
 

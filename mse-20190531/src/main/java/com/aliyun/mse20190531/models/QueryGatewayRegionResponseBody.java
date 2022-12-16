@@ -4,21 +4,29 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class QueryGatewayRegionResponseBody extends TeaModel {
+    // The request is processed successfully.
     @NameInMap("Code")
     public Integer code;
 
+    // Indicates whether the request is successful. Valid values:
+    // - `true`: The request is successful. 
+    // - `false`: The request fails.
     @NameInMap("Data")
     public java.util.List<String> data;
 
+    // The ID of the request.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    // The HTTP status code returned.
     @NameInMap("Message")
     public String message;
 
+    // The data structure.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The status code returned.
     @NameInMap("Success")
     public Boolean success;
 

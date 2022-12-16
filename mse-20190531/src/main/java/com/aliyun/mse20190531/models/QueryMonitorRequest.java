@@ -4,24 +4,61 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class QueryMonitorRequest extends TeaModel {
+    // The language of the response. Valid values:
+    // 
+    // *   zh: Chinese
+    // *   en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    // The timestamp when the monitoring ends.
     @NameInMap("EndTime")
     public Long endTime;
 
+    // The ID of the instance.
     @NameInMap("InstanceId")
     public String instanceId;
 
+    // The metric type. The following metrics are supported:
+    // 
+    // \[Basic system metrics]
+    // 
+    // *   cpuUsage
+    // *   memoryUsage
+    // *   diskUsage
+    // *   gcCount
+    // *   gcTime
+    // 
+    // \[Nacos registry]
+    // 
+    // *   serviceCount
+    // *   writeCostTime
+    // *   readCostTime
+    // *   regCenterTps
+    // *   regCenterQps
+    // 
+    // \[Nacos configuration center]
+    // 
+    // *   publish
+    // *   getConfig
+    // 
+    // \[Zookeeper]
+    // 
+    // *   zk_TpsCount
+    // *   zk_QpsCount
+    // *   zookeeper_AvgRequestLatency
     @NameInMap("MonitorType")
     public String monitorType;
 
+    // The extended request parameters in the JSON format.
     @NameInMap("RequestPars")
     public String requestPars;
 
+    // The timestamp when the monitoring starts.
     @NameInMap("StartTime")
     public Long startTime;
 
+    // The interval between data points. Unit: seconds.
     @NameInMap("Step")
     public Long step;
 

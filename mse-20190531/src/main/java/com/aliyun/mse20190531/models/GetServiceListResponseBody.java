@@ -4,21 +4,27 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetServiceListResponseBody extends TeaModel {
+    // The status code returned.
     @NameInMap("Code")
     public Integer code;
 
+    // The data entries returned.
     @NameInMap("Data")
     public java.util.List<GetServiceListResponseBodyData> data;
 
+    // The HTTP status code returned.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    // The message returned.
     @NameInMap("Message")
     public String message;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request was successful.
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,21 +82,27 @@ public class GetServiceListResponseBody extends TeaModel {
     }
 
     public static class GetServiceListResponseBodyDataMethods extends TeaModel {
+        // The controller of the method.
         @NameInMap("MethodController")
         public String methodController;
 
+        // The name of the method.
         @NameInMap("Name")
         public String name;
 
+        // The data types of the parameters.
         @NameInMap("ParameterTypes")
         public java.util.List<String> parameterTypes;
 
+        // The paths.
         @NameInMap("Paths")
         public java.util.List<String> paths;
 
+        // The methods.
         @NameInMap("RequestMethods")
         public java.util.List<String> requestMethods;
 
+        // The type of the return value.
         @NameInMap("ReturnType")
         public String returnType;
 
@@ -150,33 +162,43 @@ public class GetServiceListResponseBody extends TeaModel {
     }
 
     public static class GetServiceListResponseBodyData extends TeaModel {
+        // The name of the Dubbo application.
         @NameInMap("DubboApplicationName")
         public String dubboApplicationName;
 
+        // The name of the application.
         @NameInMap("EdasAppName")
         public String edasAppName;
 
+        // The group.
         @NameInMap("Group")
         public String group;
 
+        // The metadata.
         @NameInMap("Metadata")
         public java.util.Map<String, ?> metadata;
 
+        // The methods.
         @NameInMap("Methods")
         public java.util.List<GetServiceListResponseBodyDataMethods> methods;
 
+        // The type of the service registry.
         @NameInMap("RegistryType")
         public String registryType;
 
+        // The name of the service.
         @NameInMap("ServiceName")
         public String serviceName;
 
+        // The type of the service.
         @NameInMap("ServiceType")
         public String serviceType;
 
+        // The name of the Spring application.
         @NameInMap("SpringApplicationName")
         public String springApplicationName;
 
+        // The version information.
         @NameInMap("Version")
         public String version;
 

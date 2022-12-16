@@ -4,33 +4,50 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListAnsServicesRequest extends TeaModel {
+    // The language of the response. Valid values:
+    // 
+    // *   zh: Chinese
+    // *   en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    // The ID of the cluster.
+    // 
+    // > This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.
     @NameInMap("ClusterId")
     public String clusterId;
 
+    // The name of the contact group.
     @NameInMap("GroupName")
     public String groupName;
 
+    // Specifies whether to query the number of instances that are used for the service.
     @NameInMap("HasIpCount")
     public String hasIpCount;
 
+    // The ID of the instance.
+    // 
+    // > This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.
     @NameInMap("InstanceId")
     public String instanceId;
 
+    // The ID of the namespace.
     @NameInMap("NamespaceId")
     public String namespaceId;
 
+    // The number of the page to return.
     @NameInMap("PageNum")
     public Integer pageNum;
 
+    // The number of entries to return on each page.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The extended request parameter in the JSON format.
     @NameInMap("RequestPars")
     public String requestPars;
 
+    // The name of the service.
     @NameInMap("ServiceName")
     public String serviceName;
 

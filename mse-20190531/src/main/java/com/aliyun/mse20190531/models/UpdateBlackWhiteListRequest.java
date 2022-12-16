@@ -4,18 +4,26 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class UpdateBlackWhiteListRequest extends TeaModel {
+    // The language of the response. Valid values:
+    // 
+    // - zh: Chinese
+    // - en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    // The content of the blacklist.
     @NameInMap("Content")
     public String content;
 
+    // The unique ID of the gateway.
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
+    // The ID of the blacklist.
     @NameInMap("Id")
     public Long id;
 
+    // Specifies whether to modify the whitelist.
     @NameInMap("IsWhite")
     public Boolean isWhite;
 
@@ -28,12 +36,15 @@ public class UpdateBlackWhiteListRequest extends TeaModel {
     @NameInMap("ResourceIdJsonList")
     public String resourceIdJsonList;
 
+    // The type of the resource.
     @NameInMap("ResourceType")
     public String resourceType;
 
+    // Specifies whether to enable the blacklist or whitelist.
     @NameInMap("Status")
     public String status;
 
+    // The type of the blacklist or whitelist.
     @NameInMap("Type")
     public String type;
 

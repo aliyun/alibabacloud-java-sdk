@@ -4,27 +4,38 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class DeleteSwimmingLaneResponseBody extends TeaModel {
+    // The status code. A value of 200 is returned if the request is successful.
     @NameInMap("Code")
     public Integer code;
 
+    // The details of the data.
     @NameInMap("Data")
     public Object data;
 
+    // The dynamic part in the error message.
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    // The error code returned if the request fails.
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    // The HTTP status code returned.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    // The message returned.
     @NameInMap("Message")
     public String message;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request is successful. Valid values:
+    // 
+    // - `true`: The request is successful. 
+    // - `false`: The request fails.
     @NameInMap("Success")
     public Boolean success;
 

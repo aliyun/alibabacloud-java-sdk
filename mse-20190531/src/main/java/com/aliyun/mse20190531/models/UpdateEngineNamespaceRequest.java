@@ -4,24 +4,34 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class UpdateEngineNamespaceRequest extends TeaModel {
+    // The language of the response. Valid values:
+    // 
+    // - zh: Chinese
+    // - en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    // The ID of the cluster.
     @NameInMap("ClusterId")
     public String clusterId;
 
+    // The description of the cluster.
     @NameInMap("Desc")
     public String desc;
 
+    // The ID of the namespace.
     @NameInMap("Id")
     public String id;
 
+    // The ID of the instance.
     @NameInMap("InstanceId")
     public String instanceId;
 
+    // The name of the cluster.
     @NameInMap("Name")
     public String name;
 
+    // The number of active services.
     @NameInMap("ServiceCount")
     public Integer serviceCount;
 

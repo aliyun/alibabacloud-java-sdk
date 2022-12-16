@@ -4,21 +4,33 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class AddGatewayResponseBody extends TeaModel {
+    // The return value.
     @NameInMap("Code")
     public Integer code;
 
+    // The returned data.
     @NameInMap("Data")
     public AddGatewayResponseBodyData data;
 
+    // The HTTP status code.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    // The returned message.
+    // 
+    // *   If the request is successful, a success message is returned.
+    // *   If the request fails, an error message is returned.
     @NameInMap("Message")
     public String message;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // *   `true`: The request was successful.
+    // *   `false`: The request failed.
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,6 +88,7 @@ public class AddGatewayResponseBody extends TeaModel {
     }
 
     public static class AddGatewayResponseBodyData extends TeaModel {
+        // The unique ID of the gateway.
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 

@@ -4,21 +4,27 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetServiceListRequest extends TeaModel {
+    // The language of the response.
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    // The ID of the application.
     @NameInMap("AppId")
     public String appId;
 
+    // The IP address.
     @NameInMap("Ip")
     public String ip;
 
+    // The ID of the region.
     @NameInMap("Region")
     public String region;
 
+    // The name of the service.
     @NameInMap("ServiceName")
     public String serviceName;
 
+    // The type of the framework.
     @NameInMap("ServiceType")
     public String serviceType;
 

@@ -4,18 +4,26 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListListenersByIpRequest extends TeaModel {
+    // The language of the response. Valid values:
+    // 
+    // *   zh: Chinese
+    // *   en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    // The ID of the instance.
     @NameInMap("InstanceId")
     public String instanceId;
 
+    // The IP address of the listener.
     @NameInMap("Ip")
     public String ip;
 
+    // The ID of the namespace.
     @NameInMap("NamespaceId")
     public String namespaceId;
 
+    // The extended request parameters in the JSON format.
     @NameInMap("RequestPars")
     public String requestPars;
 

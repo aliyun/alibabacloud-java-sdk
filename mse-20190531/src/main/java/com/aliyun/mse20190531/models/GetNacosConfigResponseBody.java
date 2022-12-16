@@ -4,18 +4,25 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetNacosConfigResponseBody extends TeaModel {
+    // The information about the configuration.
     @NameInMap("Configuration")
     public GetNacosConfigResponseBodyConfiguration configuration;
 
+    // The error code returned if the request fails.
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    // The message returned.
     @NameInMap("Message")
     public String message;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request is successful. Valid values:
+    // - `true`: The request is successful. 
+    // - `false`: The request fails.
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,33 +72,43 @@ public class GetNacosConfigResponseBody extends TeaModel {
     }
 
     public static class GetNacosConfigResponseBodyConfiguration extends TeaModel {
+        // The name of the application.
         @NameInMap("AppName")
         public String appName;
 
+        // The list of IP addresses where the beta release of the configuration is performed.
         @NameInMap("BetaIps")
         public String betaIps;
 
+        // The content of the configuration.
         @NameInMap("Content")
         public String content;
 
+        // The ID of the configuration.
         @NameInMap("DataId")
         public String dataId;
 
+        // The description of the configuration.
         @NameInMap("Desc")
         public String desc;
 
+        // The encryption key.
         @NameInMap("EncryptedDataKey")
         public String encryptedDataKey;
 
+        // The name of the group.
         @NameInMap("Group")
         public String group;
 
+        // The MD5 value of the configuration.
         @NameInMap("Md5")
         public String md5;
 
+        // The tags of the configuration.
         @NameInMap("Tags")
         public String tags;
 
+        // The format of the configuration.
         @NameInMap("Type")
         public String type;
 

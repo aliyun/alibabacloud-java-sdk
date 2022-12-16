@@ -7,36 +7,47 @@ public class CreateNacosInstanceRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    // The name of the Nacos cluster.
     @NameInMap("ClusterName")
     public String clusterName;
 
+    // Specifies whether to enable the service for the instance.
     @NameInMap("Enabled")
     public Boolean enabled;
 
+    // Specifies whether to mark the instance as a temporary node.
     @NameInMap("Ephemeral")
     public Boolean ephemeral;
 
+    // The name of the group.
     @NameInMap("GroupName")
     public String groupName;
 
+    // The ID of the instance.
     @NameInMap("InstanceId")
     public String instanceId;
 
+    // The IP address of the Nacos instance.
     @NameInMap("Ip")
     public String ip;
 
+    // The node metadata of the instance.
     @NameInMap("Metadata")
     public String metadata;
 
+    // The ID of the namespace.
     @NameInMap("NamespaceId")
     public String namespaceId;
 
+    // The port of the Nacos instance.
     @NameInMap("Port")
     public Integer port;
 
+    // The name of the service.
     @NameInMap("ServiceName")
     public String serviceName;
 
+    // The weight of the instance.
     @NameInMap("Weight")
     public String weight;
 

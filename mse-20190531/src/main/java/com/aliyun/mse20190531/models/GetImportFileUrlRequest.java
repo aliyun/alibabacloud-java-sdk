@@ -4,15 +4,22 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetImportFileUrlRequest extends TeaModel {
+    // The language of the response. Valid values:
+    // 
+    // - zh: Chinese
+    // - en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    // The type of the configuration file.
     @NameInMap("ContentType")
     public String contentType;
 
+    // The ID of the instance.
     @NameInMap("InstanceId")
     public String instanceId;
 
+    // The ID of the namespace.
     @NameInMap("NamespaceId")
     public String namespaceId;
 

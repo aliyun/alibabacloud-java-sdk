@@ -4,18 +4,26 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class UpdateGatewayServiceTrafficPolicyRequest extends TeaModel {
+    // The language of the response. Valid values:
+    // 
+    // *   **zh**: Chinese. This is the default value.
+    // *   **en**: English.
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    // The ID of the gateway.
     @NameInMap("GatewayId")
     public Long gatewayId;
 
+    // The traffic policy of the service.
     @NameInMap("GatewayTrafficPolicy")
     public TrafficPolicy gatewayTrafficPolicy;
 
+    // The unique ID of the gateway.
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
+    // The ID of the service.
     @NameInMap("ServiceId")
     public Long serviceId;
 

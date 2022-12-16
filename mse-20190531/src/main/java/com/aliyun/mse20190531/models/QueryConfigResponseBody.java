@@ -4,21 +4,30 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class QueryConfigResponseBody extends TeaModel {
+    // The status code returned.
     @NameInMap("Code")
     public Integer code;
 
+    // The details of the data.
     @NameInMap("Data")
     public QueryConfigResponseBodyData data;
 
+    // The HTTP status code.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    // The message returned.
     @NameInMap("Message")
     public String message;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // *   `true`: The request was successful.
+    // *   `false`: The request failed.
     @NameInMap("Success")
     public Boolean success;
 
@@ -95,84 +104,143 @@ public class QueryConfigResponseBody extends TeaModel {
     }
 
     public static class QueryConfigResponseBodyData extends TeaModel {
+        // A reserved parameter.
         @NameInMap("AutopurgePurgeInterval")
         public String autopurgePurgeInterval;
 
+        // A reserved parameter.
         @NameInMap("AutopurgeSnapRetainCount")
         public String autopurgeSnapRetainCount;
 
+        // The name of the cluster.
         @NameInMap("ClusterName")
         public String clusterName;
 
+        // Indicates whether RAM authentication of a configuration center is enabled. This parameter is valid for Nacos instances. Valid values:
+        // 
+        // *   `true`: enabled
+        // *   `false`: disabled
         @NameInMap("ConfigAuthEnabled")
         public Boolean configAuthEnabled;
 
+        // Indicates whether RAM authentication is supported by a configuration center of the instance. This parameter is valid for Nacos instances. Valid values:
+        // 
+        // *   `true`: supported
+        // *   `false`: not supported
         @NameInMap("ConfigAuthSupported")
         public Boolean configAuthSupported;
 
         @NameInMap("ConfigContentLimit")
         public Long configContentLimit;
 
+        // Indicates whether configuration encryption of a configuration center is enabled by the instance. This parameter is valid for Nacos instances. Valid values:
+        // 
+        // *   `true`: enabled
+        // *   `false`: disabled
         @NameInMap("ConfigSecretEnabled")
         public Boolean configSecretEnabled;
 
+        // Indicates whether configuration encryption of a configuration center is supported by the instance. This parameter is valid for Nacos instances. Valid values:
+        // 
+        // *   `true`: supported
+        // *   `false`: not supported
         @NameInMap("ConfigSecretSupported")
         public Boolean configSecretSupported;
 
+        // The maximum connection duration of the instance. This parameter is valid for ZooKeeper instances. Unit: seconds.
         @NameInMap("InitLimit")
         public String initLimit;
 
+        // The maximum amount of data on each node. This parameter is valid for ZooKeeper instances. Unit: bytes.
         @NameInMap("JuteMaxbuffer")
         public String juteMaxbuffer;
 
+        // A reserved parameter.
         @NameInMap("JvmFlagsCustom")
         public String jvmFlagsCustom;
 
+        // Indicates whether Mesh Configuration Protocol (MCP) is enabled. This parameter is valid for Nacos instances. Valid values:
+        // 
+        // *   `true`: enabled
+        // *   `false`: disabled
         @NameInMap("MCPEnabled")
         public Boolean MCPEnabled;
 
+        // Indicates whether MCP is supported. This parameter is valid for Nacos instances. Valid values:
+        // 
+        // *   `true`: supported
+        // *   `false`: not supported
         @NameInMap("MCPSupported")
         public Boolean MCPSupported;
 
+        // The number of connections between a client and a server. This parameter is valid for ZooKeeper instances.\
+        // If this parameter is set to 0, no limits are imposed on the number of connections.
         @NameInMap("MaxClientCnxns")
         public String maxClientCnxns;
 
+        // The maximum timeout period. This parameter is valid for ZooKeeper instances.
         @NameInMap("MaxSessionTimeout")
         public String maxSessionTimeout;
 
+        // The minimum timeout period. This parameter is valid for ZooKeeper instances.
         @NameInMap("MinSessionTimeout")
         public String minSessionTimeout;
 
         @NameInMap("NacosRunningEnv")
         public QueryConfigResponseBodyDataNacosRunningEnv nacosRunningEnv;
 
+        // Indicates whether RAM authentication of a registry is enabled. This parameter is valid for Nacos instances. Valid values:
+        // 
+        // *   `true`: enabled
+        // *   `false`: disabled
         @NameInMap("NamingAuthEnabled")
         public Boolean namingAuthEnabled;
 
+        // Indicates whether RAM authentication of services is supported by the instance. This parameter is valid for Nacos instances. Valid values:
+        // 
+        // *   `true`: supported
+        // *   `false`: not supported
         @NameInMap("NamingAuthSupported")
         public Boolean namingAuthSupported;
 
+        // Indicates whether service creation is supported for the instance. This parameter is valid for Nacos instances. Valid values:
+        // 
+        // *   `true`: supported
+        // *   `false`: not supported
         @NameInMap("NamingCreateServiceSupported")
         public Boolean namingCreateServiceSupported;
 
+        // Indicates whether super permissions are enabled. This parameter is valid for ZooKeeper instances. Valid values:
+        // 
+        // *   `true`: enabled
+        // *   `false`: disabled
         @NameInMap("OpenSuperAcl")
         public Boolean openSuperAcl;
 
+        // The password of the user. This parameter is valid only if OpenSuperAcl is set to true.
         @NameInMap("PassWord")
         public String passWord;
 
+        // Indicates whether the instance was restarted and new configurations have taken effect. Valid values:
+        // 
+        // *   `true`: The restart was successful.
+        // *   `false`: The restart failed.
         @NameInMap("RestartFlag")
         public Boolean restartFlag;
 
+        // The frequency for generating snapshots. This parameter is valid for ZooKeeper instances.
         @NameInMap("SnapshotCount")
         public String snapshotCount;
 
+        // The connection timeout period of the instance. This parameter is valid for ZooKeeper instances. Unit: seconds.
         @NameInMap("SyncLimit")
         public String syncLimit;
 
+        // The time unit of the engine. This parameter is valid for ZooKeeper instances. Default value: 2000. Unit: milliseconds.
         @NameInMap("TickTime")
         public String tickTime;
 
+        // The username of the user. This parameter is valid only if OpenSuperAcl is set to true.
         @NameInMap("UserName")
         public String userName;
 

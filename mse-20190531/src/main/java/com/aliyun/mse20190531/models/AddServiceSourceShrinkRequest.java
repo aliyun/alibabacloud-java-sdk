@@ -4,30 +4,43 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class AddServiceSourceShrinkRequest extends TeaModel {
+    // The language in which the returned information is displayed. Valid values:
+    // 
+    // - zh-CN: Chinese. This is the default value.
+    // - en-US: English.
+    // - ja: Japanese.
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    // The address of the service.
     @NameInMap("Address")
     public String address;
 
+    // The unique ID of the gateway.
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
+    // GroupList.
     @NameInMap("GroupList")
     public String groupListShrink;
 
+    // The Ingress configuration.
     @NameInMap("IngressOptionsRequest")
     public String ingressOptionsRequestShrink;
 
+    // The name of the service.
     @NameInMap("Name")
     public String name;
 
+    // Service root path array.
     @NameInMap("PathList")
     public String pathListShrink;
 
+    // The type of the service source.
     @NameInMap("Source")
     public String source;
 
+    // The service type.
     @NameInMap("Type")
     public String type;
 

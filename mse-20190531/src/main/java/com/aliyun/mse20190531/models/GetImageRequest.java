@@ -7,6 +7,7 @@ public class GetImageRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    // The version of the cluster.
     @NameInMap("VersionCode")
     public String versionCode;
 

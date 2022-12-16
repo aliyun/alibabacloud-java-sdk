@@ -4,21 +4,30 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
+    // The status code returned. A value of 200 indicates that the request is successful.
     @NameInMap("Code")
     public Integer code;
 
+    // The returned data.
     @NameInMap("Data")
     public UpdateGatewayRouteWafStatusResponseBodyData data;
 
+    // The HTTP status code.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    // The response message.
     @NameInMap("Message")
     public String message;
 
+    // ID of the Request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // *   `true`: The request was successful.
+    // *   `false`: The request failed.
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,27 +85,35 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
     }
 
     public static class UpdateGatewayRouteWafStatusResponseBodyDataCors extends TeaModel {
+        // The credentials allowed.
         @NameInMap("AllowCredentials")
         public Boolean allowCredentials;
 
+        // The headers allowed.
         @NameInMap("AllowHeaders")
         public String allowHeaders;
 
+        // The methods allowed.
         @NameInMap("AllowMethods")
         public String allowMethods;
 
+        // The origins allowed.
         @NameInMap("AllowOrigins")
         public String allowOrigins;
 
+        // The response headers.
         @NameInMap("ExposeHeaders")
         public String exposeHeaders;
 
+        // The status.
         @NameInMap("Status")
         public String status;
 
+        // The time unit.
         @NameInMap("TimeUnit")
         public String timeUnit;
 
+        // The unit number.
         @NameInMap("UnitNum")
         public Long unitNum;
 
@@ -172,9 +189,11 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
     }
 
     public static class UpdateGatewayRouteWafStatusResponseBodyDataDirectResponse extends TeaModel {
+        // The mock return value.
         @NameInMap("Body")
         public String body;
 
+        // The return value.
         @NameInMap("Code")
         public Integer code;
 
@@ -202,21 +221,27 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
     }
 
     public static class UpdateGatewayRouteWafStatusResponseBodyDataHTTPRewrite extends TeaModel {
+        // The domain name.
         @NameInMap("Host")
         public String host;
 
+        // The HTTP request path.
         @NameInMap("Path")
         public String path;
 
+        // The path type of the HTTP request.
         @NameInMap("PathType")
         public String pathType;
 
+        // The matching pattern.
         @NameInMap("Pattern")
         public String pattern;
 
+        // The HTTP status.
         @NameInMap("Status")
         public String status;
 
+        // The replacement.
         @NameInMap("Substitution")
         public String substitution;
 
@@ -276,15 +301,19 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
     }
 
     public static class UpdateGatewayRouteWafStatusResponseBodyDataHeaderOpHeaderOpItems extends TeaModel {
+        // The request or response.
         @NameInMap("DirectionType")
         public String directionType;
 
+        // Header Key.
         @NameInMap("Key")
         public String key;
 
+        // The operation type.
         @NameInMap("OpType")
         public String opType;
 
+        // The header value.
         @NameInMap("Value")
         public String value;
 
@@ -328,9 +357,11 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
     }
 
     public static class UpdateGatewayRouteWafStatusResponseBodyDataHeaderOp extends TeaModel {
+        // The policy.
         @NameInMap("HeaderOpItems")
         public java.util.List<UpdateGatewayRouteWafStatusResponseBodyDataHeaderOpHeaderOpItems> headerOpItems;
 
+        // The status.
         @NameInMap("Status")
         public String status;
 
@@ -358,12 +389,15 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
     }
 
     public static class UpdateGatewayRouteWafStatusResponseBodyDataRedirect extends TeaModel {
+        // The response code returned.
         @NameInMap("Code")
         public Integer code;
 
+        // The hostname.
         @NameInMap("Host")
         public String host;
 
+        // The path.
         @NameInMap("Path")
         public String path;
 
@@ -399,15 +433,19 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
     }
 
     public static class UpdateGatewayRouteWafStatusResponseBodyDataRetry extends TeaModel {
+        // The number of retries allowed for a request.
         @NameInMap("Attempts")
         public Integer attempts;
 
+        // The HTTP status code.
         @NameInMap("HttpCodes")
         public java.util.List<String> httpCodes;
 
+        // The retry condition.
         @NameInMap("RetryOn")
         public java.util.List<String> retryOn;
 
+        // The retry status.
         @NameInMap("Status")
         public String status;
 
@@ -451,12 +489,15 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
     }
 
     public static class UpdateGatewayRouteWafStatusResponseBodyDataRoutePredicatesHeaderPredicates extends TeaModel {
+        // The key of the request header.
         @NameInMap("Key")
         public String key;
 
+        // The matching type.
         @NameInMap("Type")
         public String type;
 
+        // The value of the request header.
         @NameInMap("Value")
         public String value;
 
@@ -492,12 +533,15 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
     }
 
     public static class UpdateGatewayRouteWafStatusResponseBodyDataRoutePredicatesPathPredicates extends TeaModel {
+        // Indicates whether case sensitivity is ignored.
         @NameInMap("IgnoreCase")
         public Boolean ignoreCase;
 
+        // The path.
         @NameInMap("Path")
         public String path;
 
+        // The matching type.
         @NameInMap("Type")
         public String type;
 
@@ -533,12 +577,15 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
     }
 
     public static class UpdateGatewayRouteWafStatusResponseBodyDataRoutePredicatesQueryPredicates extends TeaModel {
+        // The name of the parameter.
         @NameInMap("Key")
         public String key;
 
+        // The type.
         @NameInMap("Type")
         public String type;
 
+        // The value of the parameter.
         @NameInMap("Value")
         public String value;
 
@@ -574,15 +621,19 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
     }
 
     public static class UpdateGatewayRouteWafStatusResponseBodyDataRoutePredicates extends TeaModel {
+        // The rules for matching based on request headers.
         @NameInMap("HeaderPredicates")
         public java.util.List<UpdateGatewayRouteWafStatusResponseBodyDataRoutePredicatesHeaderPredicates> headerPredicates;
 
+        // The information about method matching.
         @NameInMap("MethodPredicates")
         public java.util.List<String> methodPredicates;
 
+        // The information about route matching.
         @NameInMap("PathPredicates")
         public UpdateGatewayRouteWafStatusResponseBodyDataRoutePredicatesPathPredicates pathPredicates;
 
+        // The information about parameter matching.
         @NameInMap("QueryPredicates")
         public java.util.List<UpdateGatewayRouteWafStatusResponseBodyDataRoutePredicatesQueryPredicates> queryPredicates;
 
@@ -626,27 +677,35 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
     }
 
     public static class UpdateGatewayRouteWafStatusResponseBodyDataRouteServices extends TeaModel {
+        // The name of the group to which the service belongs.
         @NameInMap("GroupName")
         public String groupName;
 
+        // The name of the service.
         @NameInMap("Name")
         public String name;
 
+        // The namespace.
         @NameInMap("Namespace")
         public String namespace;
 
+        // The weight.
         @NameInMap("Percent")
         public Integer percent;
 
+        // The ID of the service.
         @NameInMap("ServiceId")
         public Long serviceId;
 
+        // The name of the service.
         @NameInMap("ServiceName")
         public String serviceName;
 
+        // The source type of the service.
         @NameInMap("SourceType")
         public String sourceType;
 
+        // The version of the service.
         @NameInMap("Version")
         public String version;
 
@@ -722,12 +781,15 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
     }
 
     public static class UpdateGatewayRouteWafStatusResponseBodyDataTimeout extends TeaModel {
+        // The status.
         @NameInMap("Status")
         public String status;
 
+        // The time unit.
         @NameInMap("TimeUnit")
         public String timeUnit;
 
+        // The unit number.
         @NameInMap("UnitNum")
         public Integer unitNum;
 
@@ -763,84 +825,111 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
     }
 
     public static class UpdateGatewayRouteWafStatusResponseBodyData extends TeaModel {
+        // The configuration for cross-origin resource sharing (CORS).
         @NameInMap("Cors")
         public UpdateGatewayRouteWafStatusResponseBodyDataCors cors;
 
+        // The default service ID.
         @NameInMap("DefaultServiceId")
         public Long defaultServiceId;
 
+        // The default service name.
         @NameInMap("DefaultServiceName")
         public String defaultServiceName;
 
+        // The destination service type.
         @NameInMap("DestinationType")
         public String destinationType;
 
+        // The information about service mocking.
         @NameInMap("DirectResponse")
         public UpdateGatewayRouteWafStatusResponseBodyDataDirectResponse directResponse;
 
+        // The ID of the domain name.
         @NameInMap("DomainId")
         public Long domainId;
 
+        // The IDs of the domain names.
         @NameInMap("DomainIdList")
         public java.util.List<Long> domainIdList;
 
+        // The domain name.
         @NameInMap("DomainName")
         public String domainName;
 
+        // The domain names.
         @NameInMap("DomainNameList")
         public java.util.List<String> domainNameList;
 
+        // Indicates whether WAF is enabled.
         @NameInMap("EnableWaf")
         public Boolean enableWaf;
 
+        // The ID of the gateway.
         @NameInMap("GatewayId")
         public Long gatewayId;
 
+        // The unique ID of the gateway.
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 
+        // The creation time.
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        // The modification time.
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        // The information about the rewrite policy.
         @NameInMap("HTTPRewrite")
         public UpdateGatewayRouteWafStatusResponseBodyDataHTTPRewrite HTTPRewrite;
 
+        // The information about the header configuration policy.
         @NameInMap("HeaderOp")
         public UpdateGatewayRouteWafStatusResponseBodyDataHeaderOp headerOp;
 
+        // The ID of the route.
         @NameInMap("Id")
         public Long id;
 
+        // The name of the route.
         @NameInMap("Name")
         public String name;
 
+        // The matching rule.
         @NameInMap("Predicates")
         public String predicates;
 
+        // The configuration of the redirection.
         @NameInMap("Redirect")
         public UpdateGatewayRouteWafStatusResponseBodyDataRedirect redirect;
 
+        // The retry configuration.
         @NameInMap("Retry")
         public UpdateGatewayRouteWafStatusResponseBodyDataRetry retry;
 
+        // The sequence number of the route.
         @NameInMap("RouteOrder")
         public Integer routeOrder;
 
+        // The information about route matching.
         @NameInMap("RoutePredicates")
         public UpdateGatewayRouteWafStatusResponseBodyDataRoutePredicates routePredicates;
 
+        // The information about services.
         @NameInMap("RouteServices")
         public java.util.List<UpdateGatewayRouteWafStatusResponseBodyDataRouteServices> routeServices;
 
+        // The information about services.
         @NameInMap("Services")
         public String services;
 
+        // The status of the route.
         @NameInMap("Status")
         public Integer status;
 
+        // The timeout configuration.
         @NameInMap("Timeout")
         public UpdateGatewayRouteWafStatusResponseBodyDataTimeout timeout;
 

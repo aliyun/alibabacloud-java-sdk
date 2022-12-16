@@ -7,18 +7,22 @@ public class AddAuthResourceRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    // The ID of the authorization record.
     @NameInMap("AuthId")
     public Long authId;
 
+    // The ID of the domain name.
     @NameInMap("DomainId")
     public Long domainId;
 
+    // The unique ID of the gateway.
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
     @NameInMap("MatchType")
     public String matchType;
 
+    // The path.
     @NameInMap("Path")
     public String path;
 

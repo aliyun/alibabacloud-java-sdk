@@ -4,21 +4,30 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class CreateEngineNamespaceResponseBody extends TeaModel {
+    // The ID of the cluster.
     @NameInMap("ClusterId")
     public String clusterId;
 
+    // The details of the data.
     @NameInMap("Data")
     public CreateEngineNamespaceResponseBodyData data;
 
+    // The error code returned.
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    // The message returned.
     @NameInMap("Message")
     public String message;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // *   `true`: The request was successful.
+    // *   `false`: The request failed.
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,24 +85,35 @@ public class CreateEngineNamespaceResponseBody extends TeaModel {
     }
 
     public static class CreateEngineNamespaceResponseBodyData extends TeaModel {
+        // The number of configurations.
         @NameInMap("ConfigCount")
         public Integer configCount;
 
+        // The ID of the namespace.
         @NameInMap("Namespace")
         public String namespace;
 
+        // The description of the namespace.
         @NameInMap("NamespaceDesc")
         public String namespaceDesc;
 
+        // The display name of the namespace.
         @NameInMap("NamespaceShowName")
         public String namespaceShowName;
 
+        // The quota of configurations.
         @NameInMap("Quota")
         public Integer quota;
 
+        // The number of active services.
         @NameInMap("ServiceCount")
         public Integer serviceCount;
 
+        // The type of the namespace. Valid values:
+        // 
+        // *   `0`: global configuration
+        // *   `1`: default namespace
+        // *   `2`: custom namespace
         @NameInMap("Type")
         public Integer type;
 

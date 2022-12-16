@@ -54,15 +54,19 @@ public class TagResourcesResponseBody extends TeaModel {
     }
 
     public static class ListTagResourcesResponseBodyTagResourcesTagResource extends TeaModel {
+        // The ID of a resource.
         @NameInMap("ResourceId")
         public String resourceId;
 
+        // The type of a resource.
         @NameInMap("ResourceType")
         public String resourceType;
 
+        // The key of a tag.
         @NameInMap("TagKey")
         public String tagKey;
 
+        // The value of a tag.
         @NameInMap("TagValue")
         public String tagValue;
 

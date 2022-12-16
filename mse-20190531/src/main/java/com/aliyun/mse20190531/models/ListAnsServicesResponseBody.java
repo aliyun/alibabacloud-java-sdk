@@ -4,30 +4,42 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListAnsServicesResponseBody extends TeaModel {
+    // The details of the data.
     @NameInMap("Data")
     public java.util.List<ListAnsServicesResponseBodyData> data;
 
+    // The error code returned.
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    // The HTTP status code.
     @NameInMap("HttpCode")
     public String httpCode;
 
+    // The message returned.
     @NameInMap("Message")
     public String message;
 
+    // The page number of the returned page.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries returned per page.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // *   `true`: The request was successful.
+    // *   `false`: The request failed.
     @NameInMap("Success")
     public Boolean success;
 
+    // The total number of returned instances.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -109,18 +121,23 @@ public class ListAnsServicesResponseBody extends TeaModel {
     }
 
     public static class ListAnsServicesResponseBodyData extends TeaModel {
+        // The total number of clusters.
         @NameInMap("ClusterCount")
         public Integer clusterCount;
 
+        // The name of the contact group.
         @NameInMap("GroupName")
         public String groupName;
 
+        // The total number of instances with healthy heartbeats.
         @NameInMap("HealthyInstanceCount")
         public Integer healthyInstanceCount;
 
+        // The total number of instances that are used for the current service.
         @NameInMap("IpCount")
         public Integer ipCount;
 
+        // The name of the service.
         @NameInMap("Name")
         public String name;
 

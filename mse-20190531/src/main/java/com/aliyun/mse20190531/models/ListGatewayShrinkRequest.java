@@ -4,21 +4,30 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListGatewayShrinkRequest extends TeaModel {
+    // The language of the response. Valid values:
+    // 
+    // *   zh: Chinese
+    // *   en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    // Specifies whether to enable the sorting feature. This feature is not available.
     @NameInMap("DescSort")
     public Boolean descSort;
 
+    // The details of parameters.
     @NameInMap("FilterParams")
     public String filterParamsShrink;
 
+    // The order information.
     @NameInMap("OrderItem")
     public String orderItem;
 
+    // The number of the page to return.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries to return on each page.
     @NameInMap("PageSize")
     public Integer pageSize;
 

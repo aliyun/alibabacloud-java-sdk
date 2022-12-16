@@ -4,18 +4,26 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class UpdateGatewayRouteTimeoutShrinkRequest extends TeaModel {
+    // The language of the response. Valid values:
+    // 
+    // - zh: Chinese
+    // - en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    // The ID of the gateway.
     @NameInMap("GatewayId")
     public Long gatewayId;
 
+    // The unique ID of the gateway.
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
+    // The ID of the route.
     @NameInMap("Id")
     public Long id;
 
+    // The timeout period.
     @NameInMap("TimeoutJSON")
     public String timeoutJSONShrink;
 

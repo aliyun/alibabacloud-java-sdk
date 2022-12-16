@@ -4,21 +4,30 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetKubernetesSourceResponseBody extends TeaModel {
+    // The status code returned.
     @NameInMap("Code")
     public Integer code;
 
+    // The data structure.
     @NameInMap("Data")
     public java.util.List<GetKubernetesSourceResponseBodyData> data;
 
+    // The HTTP status code returned.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    // The message returned.
     @NameInMap("Message")
     public String message;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request is successful. Valid values:
+    // 
+    // - `true`: The request is successful. 
+    // - `false`: The request fails.
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,9 +85,11 @@ public class GetKubernetesSourceResponseBody extends TeaModel {
     }
 
     public static class GetKubernetesSourceResponseBodyData extends TeaModel {
+        // The ID of the ACK cluster.
         @NameInMap("Cluster")
         public String cluster;
 
+        // The name of the ACK cluster.
         @NameInMap("Name")
         public String name;
 

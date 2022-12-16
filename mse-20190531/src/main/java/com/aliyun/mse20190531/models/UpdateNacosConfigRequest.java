@@ -4,42 +4,58 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class UpdateNacosConfigRequest extends TeaModel {
+    // The language of the response. Valid values:
+    // 
+    // - zh: Chinese
+    // - en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    // The name of the application.
     @NameInMap("AppName")
     public String appName;
 
+    // The list of IP addresses where the beta release of the configuration is performed.
     @NameInMap("BetaIps")
     public String betaIps;
 
+    // The content of the configuration.
     @NameInMap("Content")
     public String content;
 
+    // The ID of the configuration.
     @NameInMap("DataId")
     public String dataId;
 
+    // The description of the configuration.
     @NameInMap("Desc")
     public String desc;
 
+    // The encryption key.
     @NameInMap("EncryptedDataKey")
     public String encryptedDataKey;
 
+    // The name of the group.
     @NameInMap("Group")
     public String group;
 
+    // The ID of the instance.
     @NameInMap("InstanceId")
     public String instanceId;
 
+    // The MD5 value of the configuration.
     @NameInMap("Md5")
     public String md5;
 
+    // The ID of the namespace.
     @NameInMap("NamespaceId")
     public String namespaceId;
 
+    // The tags of the configuration.
     @NameInMap("Tags")
     public String tags;
 
+    // The format of the configuration. Supported formats include TEXT, JSON, XML, and HTML.
     @NameInMap("Type")
     public String type;
 

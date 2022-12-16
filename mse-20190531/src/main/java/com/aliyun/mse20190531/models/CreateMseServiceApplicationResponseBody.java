@@ -4,21 +4,30 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class CreateMseServiceApplicationResponseBody extends TeaModel {
+    // The status code returned.
     @NameInMap("Code")
     public Integer code;
 
+    // The data structure.
     @NameInMap("Data")
     public CreateMseServiceApplicationResponseBodyData data;
 
+    // The HTTP status code returned.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    // The message returned.
     @NameInMap("Message")
     public String message;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // *   `true`: The request was successful.
+    // *   `false`: The request failed.
     @NameInMap("Success")
     public String success;
 
@@ -76,39 +85,51 @@ public class CreateMseServiceApplicationResponseBody extends TeaModel {
     }
 
     public static class CreateMseServiceApplicationResponseBodyData extends TeaModel {
+        // The ID of the application.
         @NameInMap("AppId")
         public String appId;
 
+        // The name of the application.
         @NameInMap("AppName")
         public String appName;
 
+        // The creation time.
         @NameInMap("CreateTime")
         public Long createTime;
 
+        // The additional information.
         @NameInMap("ExtraInfo")
         public String extraInfo;
 
+        // The programming language of the application.
         @NameInMap("Language")
         public String language;
 
+        // The license key in use.
         @NameInMap("LicenseKey")
         public String licenseKey;
 
+        // The region ID.
         @NameInMap("RegionId")
         public String regionId;
 
+        // The type of the service source.
         @NameInMap("Source")
         public String source;
 
+        // The status.
         @NameInMap("Status")
         public Integer status;
 
+        // The time of the last modification.
         @NameInMap("UpdateTime")
         public Long updateTime;
 
+        // The ID of the user.
         @NameInMap("UserId")
         public String userId;
 
+        // The version information.
         @NameInMap("Version")
         public String version;
 

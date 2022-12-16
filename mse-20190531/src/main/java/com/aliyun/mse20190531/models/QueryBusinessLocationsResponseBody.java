@@ -4,18 +4,23 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class QueryBusinessLocationsResponseBody extends TeaModel {
+    // The details of the data.
     @NameInMap("Data")
     public java.util.List<QueryBusinessLocationsResponseBodyData> data;
 
+    // The error code returned if the request fails.
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    // The message returned.
     @NameInMap("Message")
     public String message;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request is successful.
     @NameInMap("Success")
     public String success;
 
@@ -65,42 +70,55 @@ public class QueryBusinessLocationsResponseBody extends TeaModel {
     }
 
     public static class QueryBusinessLocationsResponseBodyData extends TeaModel {
+        // The Chinese name of the region.
         @NameInMap("CnName")
         public String cnName;
 
+        // The description of the region.
         @NameInMap("Description")
         public String description;
 
+        // The Chinese name of the district.
         @NameInMap("DistrictCnName")
         public String districtCnName;
 
+        // The English name of the district.
         @NameInMap("DistrictEnName")
         public String districtEnName;
 
+        // The ID of the district.
         @NameInMap("DistrictId")
         public String districtId;
 
+        // The ordering information of the district.
         @NameInMap("DistrictOrdering")
         public Integer districtOrdering;
 
+        // The display name of the district.
         @NameInMap("DistrictShowName")
         public String districtShowName;
 
+        // The complete description of the region.
         @NameInMap("EnDescription")
         public String enDescription;
 
+        // The English name of the region.
         @NameInMap("EnName")
         public String enName;
 
+        // The ID of the region.
         @NameInMap("Name")
         public String name;
 
+        // The ordering information.
         @NameInMap("Ordering")
         public Integer ordering;
 
+        // The display name of the region.
         @NameInMap("ShowName")
         public String showName;
 
+        // The type of the data.
         @NameInMap("Type")
         public String type;
 

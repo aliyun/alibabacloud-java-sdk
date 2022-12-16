@@ -4,18 +4,26 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class UpdateClusterSpecRequest extends TeaModel {
+    // The language of the response. Valid values:
+    // 
+    // *   zh: Chinese
+    // *   en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    // The ID of the cluster.
     @NameInMap("ClusterId")
     public String clusterId;
 
+    // The specifications of the engine.
     @NameInMap("ClusterSpecification")
     public String clusterSpecification;
 
+    // The number of nodes.
     @NameInMap("InstanceCount")
     public Integer instanceCount;
 
+    // The ID of the instance.
     @NameInMap("InstanceId")
     public String instanceId;
 

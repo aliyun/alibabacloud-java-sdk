@@ -4,39 +4,60 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class UpdateNacosInstanceRequest extends TeaModel {
+    // The language of the response. Valid values:
+    // 
+    // *   zh: Chinese
+    // *   en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    // The name of the Nacos instance.
     @NameInMap("ClusterName")
     public String clusterName;
 
+    // Specifies whether to disable this service. Valid values:
+    // 
+    // *   `true`: yes
+    // *   `false`: no
     @NameInMap("Enabled")
     public Boolean enabled;
 
+    // Specifies whether the node is a non-persistent node. Valid values:
+    // 
+    // *   `true`: yes
+    // *   `false`: no
     @NameInMap("Ephemeral")
     public Boolean ephemeral;
 
+    // The name of the group.
     @NameInMap("GroupName")
     public String groupName;
 
+    // The ID of the instance.
     @NameInMap("InstanceId")
     public String instanceId;
 
+    // The IP address of the Nacos instance.
     @NameInMap("Ip")
     public String ip;
 
+    // The metadata of the instance.
     @NameInMap("Metadata")
     public String metadata;
 
+    // The ID of the namespace.
     @NameInMap("NamespaceId")
     public String namespaceId;
 
+    // The port of the Nacos instance.
     @NameInMap("Port")
     public Integer port;
 
+    // The name of the service.
     @NameInMap("ServiceName")
     public String serviceName;
 
+    // The weight. Valid values: 0 to 10000. The value must be an integer. A larger value indicates a higher frequency at which the instance is accessed.
     @NameInMap("Weight")
     public String weight;
 

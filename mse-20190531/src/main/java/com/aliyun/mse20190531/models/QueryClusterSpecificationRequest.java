@@ -4,12 +4,24 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class QueryClusterSpecificationRequest extends TeaModel {
+    // The language of the response. Valid values:
+    // 
+    // *   zh: Chinese
+    // *   en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    // The network type. Valid values:
+    // 
+    // *   slb
+    // *   eni
     @NameInMap("ConnectType")
     public String connectType;
 
+    // The edition of the Microservices Engine (MSE) instance that you want to purchase.
+    // 
+    // *   mse_pro: Professional Edition
+    // *   mse_dev: Developer Edition
     @NameInMap("MseVersion")
     public String mseVersion;
 

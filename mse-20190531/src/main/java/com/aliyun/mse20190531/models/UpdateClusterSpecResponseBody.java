@@ -4,21 +4,30 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class UpdateClusterSpecResponseBody extends TeaModel {
+    // The response code returned.
     @NameInMap("Code")
     public Integer code;
 
+    // The data returned.
     @NameInMap("Data")
     public String data;
 
+    // The HTTP status code returned.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    // The message returned.
     @NameInMap("Message")
     public String message;
 
+    // ID of the Request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the call was successful. Valid values:
+    // 
+    // *   `true`: The call was successful.
+    // *   `false`: The call failed.
     @NameInMap("Success")
     public Boolean success;
 

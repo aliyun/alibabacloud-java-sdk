@@ -4,15 +4,22 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class UpdateGatewayRouteShrinkRequest extends TeaModel {
+    // The language of the response. Valid values:
+    // 
+    // - zh: Chinese
+    // - en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    // The type of the destination service.
     @NameInMap("DestinationType")
     public String destinationType;
 
+    // The information about service mocking.
     @NameInMap("DirectResponseJSON")
     public String directResponseJSONShrink;
 
+    // The IDs of domain names with which the route is associated.
     @NameInMap("DomainIdListJSON")
     public String domainIdListJSON;
 
@@ -25,27 +32,35 @@ public class UpdateGatewayRouteShrinkRequest extends TeaModel {
     @NameInMap("FallbackServices")
     public String fallbackServicesShrink;
 
+    // The ID of the gateway.
     @NameInMap("GatewayId")
     public Long gatewayId;
 
+    // The unique ID of the gateway.
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
+    // The ID of the route.
     @NameInMap("Id")
     public Long id;
 
+    // The name of the route.
     @NameInMap("Name")
     public String name;
 
+    // The matching rules of the route.
     @NameInMap("Predicates")
     public String predicatesShrink;
 
+    // The configuration of the redirect action.
     @NameInMap("RedirectJSON")
     public String redirectJSONShrink;
 
+    // The sequence number of the route.
     @NameInMap("RouteOrder")
     public Integer routeOrder;
 
+    // The information about services.
     @NameInMap("Services")
     public String servicesShrink;
 

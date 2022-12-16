@@ -4,12 +4,18 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetGatewayDomainDetailRequest extends TeaModel {
+    // The language of the response. Valid values:
+    // 
+    // *   zh: Chinese
+    // *   en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    // The unique ID of the gateway.
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
+    // The ID of the domain name.
     @NameInMap("Id")
     public String id;
 

@@ -4,21 +4,30 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class DeleteNacosConfigResponseBody extends TeaModel {
+    // The status code returned.
     @NameInMap("Code")
     public String code;
 
+    // The error code returned.
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    // The HTTP status code returned.
     @NameInMap("HttpCode")
     public String httpCode;
 
+    // The message returned.
     @NameInMap("Message")
     public String message;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // *   `true`: The request was successful.
+    // *   `false`: The request failed.
     @NameInMap("Success")
     public Boolean success;
 

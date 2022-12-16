@@ -4,15 +4,22 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class DeleteGatewaySlbRequest extends TeaModel {
+    // The language of the response. Valid values:
+    // 
+    // *   zh: Chinese
+    // *   en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    // Specifies whether to delete the SLB instance purchased for the gateway when you delete the gateway.
     @NameInMap("DeleteSlb")
     public Boolean deleteSlb;
 
+    // The unique ID of the gateway.
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
+    // The ID of the associated record.
     @NameInMap("Id")
     public String id;
 

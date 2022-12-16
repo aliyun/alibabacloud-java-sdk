@@ -4,21 +4,27 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class UpdateGatewayRouteTimeoutResponseBody extends TeaModel {
+    // The status code returned.
     @NameInMap("Code")
     public Integer code;
 
+    // The details of the data.
     @NameInMap("Data")
     public Long data;
 
+    // The HTTP status code returned.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    // The message returned.
     @NameInMap("Message")
     public String message;
 
+    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request is successful. A value of true indicates that the request is successful. A value of false indicates that the request fails.
     @NameInMap("Success")
     public Boolean success;
 

@@ -4,33 +4,52 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class UpdateServiceSourceRequest extends TeaModel {
+    // The language of the response. Valid values:
+    // 
+    // *   zh: Chinese
+    // *   en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    // The address.
     @NameInMap("Address")
     public String address;
 
+    // The ID of the gateway.
     @NameInMap("GatewayId")
     public Long gatewayId;
 
+    // The unique ID of the gateway.
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
+    // The ID of the service source.
     @NameInMap("Id")
     public Long id;
 
+    // The configurations of Ingress resources.
     @NameInMap("IngressOptionsRequest")
     public UpdateServiceSourceRequestIngressOptionsRequest ingressOptionsRequest;
 
+    // The name.
     @NameInMap("Name")
     public String name;
 
+    // An array of service root paths.
     @NameInMap("PathList")
     public java.util.List<String> pathList;
 
+    // The service source. Valid values:
+    // 
+    // *   K8S: ACK cluster
+    // *   MSE: Nacos instance
     @NameInMap("Source")
     public String source;
 
+    // The type of the service source. Valid values:
+    // 
+    // *   K8S: ACK cluster
+    // *   NACOS: Nacos instance
     @NameInMap("Type")
     public String type;
 
@@ -120,15 +139,19 @@ public class UpdateServiceSourceRequest extends TeaModel {
     }
 
     public static class UpdateServiceSourceRequestIngressOptionsRequest extends TeaModel {
+        // Specifies whether to enable Ingress.
         @NameInMap("EnableIngress")
         public Boolean enableIngress;
 
+        // Specifies whether to update the Ingress status.
         @NameInMap("EnableStatus")
         public Boolean enableStatus;
 
+        // Specifies whether to monitor Ingress classes.
         @NameInMap("IngressClass")
         public String ingressClass;
 
+        // The namespace whose resources you want to monitor.
         @NameInMap("WatchNamespace")
         public String watchNamespace;
 

@@ -4,21 +4,30 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListGatewayServiceResponseBody extends TeaModel {
+    // The status code returned.
     @NameInMap("Code")
     public Integer code;
 
+    // The returned data.
     @NameInMap("Data")
     public ListGatewayServiceResponseBodyData data;
 
+    // The HTTP status code returned.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    // The error message.
     @NameInMap("Message")
     public String message;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // *   `true`: The request was successful.
+    // *   `false`: The request failed.
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,12 +85,15 @@ public class ListGatewayServiceResponseBody extends TeaModel {
     }
 
     public static class ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicyLoadBalancerSettingsConsistentHashLBConfigHttpCookie extends TeaModel {
+        // The name of the cookie.
         @NameInMap("Name")
         public String name;
 
+        // The path of the cookie.
         @NameInMap("Path")
         public String path;
 
+        // The lifecycle of the cookie.
         @NameInMap("Ttl")
         public String ttl;
 
@@ -117,15 +129,24 @@ public class ListGatewayServiceResponseBody extends TeaModel {
     }
 
     public static class ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicyLoadBalancerSettingsConsistentHashLBConfig extends TeaModel {
+        // The type based on which consistent hashing load balancing is performed.
+        // 
+        // *   HEADER
+        // *   COOKIE
+        // *   SOURCE_IP
+        // *   QUERY_PARAMETER
         @NameInMap("ConsistentHashLBType")
         public String consistentHashLBType;
 
+        // The cookie-based load balancing parameters.
         @NameInMap("HttpCookie")
         public ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicyLoadBalancerSettingsConsistentHashLBConfigHttpCookie httpCookie;
 
+        // The minimum value of the hash ring.
         @NameInMap("MinimumRingSize")
         public Long minimumRingSize;
 
+        // The name of the parameter.
         @NameInMap("ParameterName")
         public String parameterName;
 
@@ -169,12 +190,20 @@ public class ListGatewayServiceResponseBody extends TeaModel {
     }
 
     public static class ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicyLoadBalancerSettings extends TeaModel {
+        // The consistent hashing settings.
         @NameInMap("ConsistentHashLBConfig")
         public ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicyLoadBalancerSettingsConsistentHashLBConfig consistentHashLBConfig;
 
+        // The load balancing type.
+        // 
+        // *   ROUND_ROBIN
+        // *   LEAST_CONN
+        // *   RANDOM
+        // *   CONSISTENT_HASH
         @NameInMap("LoadbalancerType")
         public String loadbalancerType;
 
+        // The prefetch time of least connection load balancing.
         @NameInMap("WarmupDuration")
         public Integer warmupDuration;
 
@@ -210,21 +239,32 @@ public class ListGatewayServiceResponseBody extends TeaModel {
     }
 
     public static class ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicyTls extends TeaModel {
+        // The public key of the CA certificate .
         @NameInMap("CaCertContent")
         public String caCertContent;
 
+        // The ID of the certification authority (CA) certificate.
         @NameInMap("CaCertId")
         public String caCertId;
 
+        // The ID of the certificate.
         @NameInMap("CertId")
         public String certId;
 
+        // The TLS mode.
+        // 
+        // *   DISABLE
+        // *   SIMPLE
+        // *   MUTUAL
+        // *   ISTIO_MUTUAL
         @NameInMap("Mode")
         public String mode;
 
+        // The Server Name Indication (SNI) value.
         @NameInMap("Sni")
         public String sni;
 
+        // The array of subject aliases.
         @NameInMap("SubjectAltNames")
         public java.util.List<String> subjectAltNames;
 
@@ -284,9 +324,11 @@ public class ListGatewayServiceResponseBody extends TeaModel {
     }
 
     public static class ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicy extends TeaModel {
+        // The load balancing settings.
         @NameInMap("LoadBalancerSettings")
         public ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicyLoadBalancerSettings loadBalancerSettings;
 
+        // TLS.
         @NameInMap("Tls")
         public ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicyTls tls;
 
@@ -314,30 +356,39 @@ public class ListGatewayServiceResponseBody extends TeaModel {
     }
 
     public static class ListGatewayServiceResponseBodyDataResultHealthCheckInfo extends TeaModel {
+        // Indicates whether checks are performed.
         @NameInMap("Check")
         public Boolean check;
 
+        // The expected status of the health check.
         @NameInMap("ExpectedStatuses")
         public java.util.List<Integer> expectedStatuses;
 
+        // The threshold for healthy instances.
         @NameInMap("HealthyThreshold")
         public Integer healthyThreshold;
 
+        // The URL of the HTTP request for the health check.
         @NameInMap("HttpHost")
         public String httpHost;
 
+        // The path to which the HTTP request for the health check is sent.
         @NameInMap("HttpPath")
         public String httpPath;
 
+        // The health check interval.
         @NameInMap("Interval")
         public Integer interval;
 
+        // The network protocol.
         @NameInMap("Protocol")
         public String protocol;
 
+        // The timeout period.
         @NameInMap("Timeout")
         public Integer timeout;
 
+        // The threshold for unhealthy instances.
         @NameInMap("UnhealthyThreshold")
         public Integer unhealthyThreshold;
 
@@ -421,6 +472,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
     }
 
     public static class ListGatewayServiceResponseBodyDataResultVersions extends TeaModel {
+        // The version number.
         @NameInMap("Name")
         public String name;
 
@@ -440,72 +492,103 @@ public class ListGatewayServiceResponseBody extends TeaModel {
     }
 
     public static class ListGatewayServiceResponseBodyDataResult extends TeaModel {
+        // The ID of the gateway.
         @NameInMap("GatewayId")
         public Long gatewayId;
 
+        // The traffic management policy.
         @NameInMap("GatewayTrafficPolicy")
         public ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicy gatewayTrafficPolicy;
 
+        // The unique ID of the gateway.
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 
+        // The time when the service was created.
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        // The time when the service was last modified.
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        // The group.
         @NameInMap("GroupName")
         public String groupName;
 
+        // The health status.
+        // 
+        // *   Health
+        // *   Unhealthy
+        // *   Unknown
         @NameInMap("HealehStatus")
         public String healehStatus;
 
+        // Indicates whether health checks are performed.
         @NameInMap("HealthCheck")
         public Boolean healthCheck;
 
+        // The information about health checks.
         @NameInMap("HealthCheckInfo")
         public ListGatewayServiceResponseBodyDataResultHealthCheckInfo healthCheckInfo;
 
+        // The health status.
+        // 
+        // *   Health
+        // *   Unhealthy
+        // *   Unknown
         @NameInMap("HealthStatus")
         public String healthStatus;
 
+        // ID.
         @NameInMap("Id")
         public Long id;
 
+        // The IP addresses of the service.
         @NameInMap("Ips")
         public java.util.List<String> ips;
 
+        // The metadata or IP addresses of the service.
         @NameInMap("MetaInfo")
         public String metaInfo;
 
+        // The name of the service.
         @NameInMap("Name")
         public String name;
 
+        // The namespace.
         @NameInMap("Namespace")
         public String namespace;
 
+        // The port array.
         @NameInMap("Ports")
         public java.util.List<Integer> ports;
 
+        // The name of the service registered with the service registry.
         @NameInMap("ServiceNameInRegistry")
         public String serviceNameInRegistry;
 
+        // The service port.
         @NameInMap("ServicePort")
         public Long servicePort;
 
+        // The protocol of the service.
         @NameInMap("ServiceProtocol")
         public String serviceProtocol;
 
+        // The ID of the service source.
         @NameInMap("SourceId")
         public Long sourceId;
 
+        // The type of the service source.
         @NameInMap("SourceType")
         public String sourceType;
 
+        // The array of unhealthy endpoints.
         @NameInMap("UnhealthyEndpoints")
         public java.util.List<String> unhealthyEndpoints;
 
+        // The version of the service.
         @NameInMap("Versions")
         public java.util.List<ListGatewayServiceResponseBodyDataResultVersions> versions;
 
@@ -701,15 +784,19 @@ public class ListGatewayServiceResponseBody extends TeaModel {
     }
 
     public static class ListGatewayServiceResponseBodyData extends TeaModel {
+        // The page number of the returned page.
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        // The maximum number of entries returned per page. Default value: 10.
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        // The returned information.
         @NameInMap("Result")
         public java.util.List<ListGatewayServiceResponseBodyDataResult> result;
 
+        // The total number of entries returned.
         @NameInMap("TotalSize")
         public Long totalSize;
 

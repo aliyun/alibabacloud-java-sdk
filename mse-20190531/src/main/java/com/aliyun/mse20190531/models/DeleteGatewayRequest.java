@@ -7,9 +7,11 @@ public class DeleteGatewayRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    // Specifies whether to delete the Server Load Balancer (SLB) instance purchased for the gateway.
     @NameInMap("DeleteSlb")
     public Boolean deleteSlb;
 
+    // The unique ID of the gateway.
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 

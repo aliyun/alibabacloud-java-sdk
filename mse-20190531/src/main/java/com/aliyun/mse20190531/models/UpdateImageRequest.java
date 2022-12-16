@@ -7,9 +7,11 @@ public class UpdateImageRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    // The ID of the cluster.
     @NameInMap("ClusterId")
     public String clusterId;
 
+    // The destination version of the image.
     @NameInMap("VersionCode")
     public String versionCode;
 

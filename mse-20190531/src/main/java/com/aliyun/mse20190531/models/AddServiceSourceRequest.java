@@ -4,30 +4,43 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class AddServiceSourceRequest extends TeaModel {
+    // The language in which the returned information is displayed. Valid values:
+    // 
+    // - zh-CN: Chinese. This is the default value.
+    // - en-US: English.
+    // - ja: Japanese.
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    // The address of the service.
     @NameInMap("Address")
     public String address;
 
+    // The unique ID of the gateway.
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
+    // GroupList.
     @NameInMap("GroupList")
     public java.util.List<String> groupList;
 
+    // The Ingress configuration.
     @NameInMap("IngressOptionsRequest")
     public AddServiceSourceRequestIngressOptionsRequest ingressOptionsRequest;
 
+    // The name of the service.
     @NameInMap("Name")
     public String name;
 
+    // Service root path array.
     @NameInMap("PathList")
     public java.util.List<String> pathList;
 
+    // The type of the service source.
     @NameInMap("Source")
     public String source;
 
+    // The service type.
     @NameInMap("Type")
     public String type;
 
@@ -109,15 +122,19 @@ public class AddServiceSourceRequest extends TeaModel {
     }
 
     public static class AddServiceSourceRequestIngressOptionsRequest extends TeaModel {
+        // Specifies whether to enable Ingress.
         @NameInMap("EnableIngress")
         public Boolean enableIngress;
 
+        // Update the Ingress Status.
         @NameInMap("EnableStatus")
         public Boolean enableStatus;
 
+        // Specifies whether to monitor Ingress classes.
         @NameInMap("IngressClass")
         public String ingressClass;
 
+        // The namespace that you want to monitor.
         @NameInMap("WatchNamespace")
         public String watchNamespace;
 

@@ -4,15 +4,28 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListClusterTypesRequest extends TeaModel {
+    // The language of the response. Valid values:
+    // 
+    // *   zh: Chinese
+    // *   en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    // The network type. Valid values:
+    // 
+    // *   slb
+    // *   eni
     @NameInMap("ConnectType")
     public String connectType;
 
+    // The edition of the MSE instance that you want to activate.
+    // 
+    // *   mse_pro: Professional Edition
+    // *   mse_dev: Developer Edition
     @NameInMap("MseVersion")
     public String mseVersion;
 
+    // The ID of the region in which the instance resides. The region is supported by Microservices Engine (MSE).
     @NameInMap("RegionId")
     public String regionId;
 

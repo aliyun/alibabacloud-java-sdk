@@ -4,18 +4,26 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class UpdateZnodeRequest extends TeaModel {
+    // The language of the response. Valid values:
+    // 
+    // - zh: Chinese
+    // - en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    // The ID of the cluster.
     @NameInMap("ClusterId")
     public String clusterId;
 
+    // The data of the node.
     @NameInMap("Data")
     public String data;
 
+    // The path of the node.
     @NameInMap("Path")
     public String path;
 
+    // The extended request parameters in the JSON format.
     @NameInMap("RequestPars")
     public String requestPars;
 

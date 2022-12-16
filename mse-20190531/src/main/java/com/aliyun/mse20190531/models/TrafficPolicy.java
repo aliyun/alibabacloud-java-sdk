@@ -207,12 +207,15 @@ public class TrafficPolicy extends TeaModel {
     }
 
     public static class ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicyLoadBalancerSettingsConsistentHashLBConfigHttpCookie extends TeaModel {
+        // The name of the cookie.
         @NameInMap("Name")
         public String name;
 
+        // The path of the cookie.
         @NameInMap("Path")
         public String path;
 
+        // The lifecycle of the cookie.
         @NameInMap("Ttl")
         public String ttl;
 
@@ -248,15 +251,24 @@ public class TrafficPolicy extends TeaModel {
     }
 
     public static class ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicyLoadBalancerSettingsConsistentHashLBConfig extends TeaModel {
+        // The type based on which consistent hashing load balancing is performed.
+        // 
+        // *   HEADER
+        // *   COOKIE
+        // *   SOURCE_IP
+        // *   QUERY_PARAMETER
         @NameInMap("ConsistentHashLBType")
         public String consistentHashLBType;
 
+        // The cookie-based load balancing parameters.
         @NameInMap("HttpCookie")
         public ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicyLoadBalancerSettingsConsistentHashLBConfigHttpCookie httpCookie;
 
+        // The minimum value of the hash ring.
         @NameInMap("MinimumRingSize")
         public Long minimumRingSize;
 
+        // The name of the parameter.
         @NameInMap("ParameterName")
         public String parameterName;
 
@@ -300,12 +312,20 @@ public class TrafficPolicy extends TeaModel {
     }
 
     public static class ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicyLoadBalancerSettings extends TeaModel {
+        // The consistent hashing settings.
         @NameInMap("ConsistentHashLBConfig")
         public ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicyLoadBalancerSettingsConsistentHashLBConfig consistentHashLBConfig;
 
+        // The load balancing type.
+        // 
+        // *   ROUND_ROBIN
+        // *   LEAST_CONN
+        // *   RANDOM
+        // *   CONSISTENT_HASH
         @NameInMap("LoadbalancerType")
         public String loadbalancerType;
 
+        // The prefetch time of least connection load balancing.
         @NameInMap("WarmupDuration")
         public Integer warmupDuration;
 
@@ -341,21 +361,32 @@ public class TrafficPolicy extends TeaModel {
     }
 
     public static class ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicyTls extends TeaModel {
+        // The public key of the CA certificate .
         @NameInMap("CaCertContent")
         public String caCertContent;
 
+        // The ID of the certification authority (CA) certificate.
         @NameInMap("CaCertId")
         public String caCertId;
 
+        // The ID of the certificate.
         @NameInMap("CertId")
         public String certId;
 
+        // The TLS mode.
+        // 
+        // *   DISABLE
+        // *   SIMPLE
+        // *   MUTUAL
+        // *   ISTIO_MUTUAL
         @NameInMap("Mode")
         public String mode;
 
+        // The Server Name Indication (SNI) value.
         @NameInMap("Sni")
         public String sni;
 
+        // The array of subject aliases.
         @NameInMap("SubjectAltNames")
         public java.util.List<String> subjectAltNames;
 

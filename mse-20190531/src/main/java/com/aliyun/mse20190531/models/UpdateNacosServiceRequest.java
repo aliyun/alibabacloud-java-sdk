@@ -4,24 +4,38 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class UpdateNacosServiceRequest extends TeaModel {
+    // The language of the response. Valid values:
+    // 
+    // *   zh: Chinese
+    // *   en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    // The ID of the cluster.
+    // 
+    // > This operation contains both the InstanceId and ClusterId parameters. You must configure either InstanceId or ClusterId.
     @NameInMap("ClusterId")
     public String clusterId;
 
+    // The name of the group.
     @NameInMap("GroupName")
     public String groupName;
 
+    // The ID of the instance.
+    // 
+    // > This operation contains both the InstanceId and ClusterId parameters. You must configure either InstanceId or ClusterId.
     @NameInMap("InstanceId")
     public String instanceId;
 
+    // The ID of the namespace.
     @NameInMap("NamespaceId")
     public String namespaceId;
 
+    // The protection threshold.
     @NameInMap("ProtectThreshold")
     public String protectThreshold;
 
+    // The name of the service.
     @NameInMap("ServiceName")
     public String serviceName;
 

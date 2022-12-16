@@ -4,24 +4,34 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListApplicationsWithTagRulesRequest extends TeaModel {
+    // The language of the response. Valid values:
+    // 
+    // - zh: Chinese
+    // - en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    // The ID of the application.
     @NameInMap("AppId")
     public String appId;
 
+    // The name of the application.
     @NameInMap("AppName")
     public String appName;
 
+    // The number of the page to return.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries to return on each page.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The ID of the region.
     @NameInMap("Region")
     public String region;
 
+    // The source of the routing rule. Default value: edasmsc.
     @NameInMap("Source")
     public String source;
 

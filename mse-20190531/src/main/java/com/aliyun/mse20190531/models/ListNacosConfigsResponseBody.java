@@ -4,33 +4,45 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListNacosConfigsResponseBody extends TeaModel {
+    // The status code returned.
     @NameInMap("Code")
     public Integer code;
 
+    // The information about configurations.
     @NameInMap("Configurations")
     public java.util.List<ListNacosConfigsResponseBodyConfigurations> configurations;
 
+    // The error code returned if the request fails.
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    // The HTTP status code returned.
     @NameInMap("HttpCode")
     public String httpCode;
 
+    // The message returned.
     @NameInMap("Message")
     public String message;
 
+    // The page number of the returned page.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries returned per page.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request is successful. Valid values:
+    // - `true`: The request is successful. 
+    // - `false`: The request fails.
     @NameInMap("Success")
     public Boolean success;
 
+    // The total number of entries returned.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -120,15 +132,19 @@ public class ListNacosConfigsResponseBody extends TeaModel {
     }
 
     public static class ListNacosConfigsResponseBodyConfigurations extends TeaModel {
+        // The name of the application.
         @NameInMap("AppName")
         public String appName;
 
+        // The ID of the configuration.
         @NameInMap("DataId")
         public String dataId;
 
+        // The ID of the group.
         @NameInMap("Group")
         public String group;
 
+        // The ID of the application.
         @NameInMap("Id")
         public String id;
 

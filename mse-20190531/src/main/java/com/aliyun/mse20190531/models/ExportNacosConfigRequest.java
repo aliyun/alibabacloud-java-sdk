@@ -4,24 +4,34 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ExportNacosConfigRequest extends TeaModel {
+    // The language of the response. Valid values:
+    // 
+    // - zh: Chinese
+    // - en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    // The name of the application.
     @NameInMap("AppName")
     public String appName;
 
+    // The data ID.
     @NameInMap("DataId")
     public String dataId;
 
+    // The name of the group.
     @NameInMap("Group")
     public String group;
 
+    // The IDs of configurations.
     @NameInMap("Ids")
     public String ids;
 
+    // The ID of the instance.
     @NameInMap("InstanceId")
     public String instanceId;
 
+    // The ID of the namespace.
     @NameInMap("NamespaceId")
     public String namespaceId;
 

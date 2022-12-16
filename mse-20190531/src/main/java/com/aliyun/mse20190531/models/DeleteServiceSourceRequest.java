@@ -7,9 +7,11 @@ public class DeleteServiceSourceRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    // The unique ID of the gateway.
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
+    // The ID of the service source.
     @NameInMap("SourceId")
     public Long sourceId;
 

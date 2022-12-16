@@ -4,21 +4,29 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListSSLCertResponseBody extends TeaModel {
+    // The status code returned. A value of 200 indicates that the request is successful.
     @NameInMap("Code")
     public Integer code;
 
+    // The returned data.
     @NameInMap("Data")
     public java.util.List<ListSSLCertResponseBodyData> data;
 
+    // The HTTP status code returned.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    // The error message returned if the request fails.
     @NameInMap("Message")
     public String message;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request is successful. Valid values:
+    // - `true`: The request is successful. 
+    // - `false`: The request fails.
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,33 +84,43 @@ public class ListSSLCertResponseBody extends TeaModel {
     }
 
     public static class ListSSLCertResponseBodyData extends TeaModel {
+        // The effective time of the certificate.
         @NameInMap("AfterDate")
         public String afterDate;
 
+        // The algorithm of the certificate.
         @NameInMap("Algorithm")
         public String algorithm;
 
+        // The expiration time of the certificate.
         @NameInMap("BeforeDate")
         public String beforeDate;
 
+        // The ID of the certificate.
         @NameInMap("CertIdentifier")
         public String certIdentifier;
 
+        // The name of the certificate.
         @NameInMap("CertName")
         public String certName;
 
+        // The domain name with which the certificate is associated.
         @NameInMap("CommonName")
         public String commonName;
 
+        // The effective time of the certificate.
         @NameInMap("GmtAfter")
         public String gmtAfter;
 
+        // The expiration time of the certificate.
         @NameInMap("GmtBefore")
         public String gmtBefore;
 
+        // The issuer of the certificate.
         @NameInMap("Issuer")
         public String issuer;
 
+        // The SSL certificate.
         @NameInMap("Sans")
         public String sans;
 

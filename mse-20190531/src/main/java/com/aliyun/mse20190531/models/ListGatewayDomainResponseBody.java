@@ -4,21 +4,29 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListGatewayDomainResponseBody extends TeaModel {
+    // The status code returned.
     @NameInMap("Code")
     public Integer code;
 
+    // The details of the data.
     @NameInMap("Data")
     public java.util.List<ListGatewayDomainResponseBodyData> data;
 
+    // The HTTP status code returned.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    // The error message returned if the request fails.
     @NameInMap("Message")
     public String message;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request is successful. Valid values:
+    // - `true`: The request is successful. 
+    // - `false`: The request fails.
     @NameInMap("Success")
     public Boolean success;
 
@@ -95,45 +103,60 @@ public class ListGatewayDomainResponseBody extends TeaModel {
     }
 
     public static class ListGatewayDomainResponseBodyData extends TeaModel {
+        // The expiration time of the certificate.
         @NameInMap("CertBeforeDate")
         public String certBeforeDate;
 
+        // The ID of the certificate.
         @NameInMap("CertIdentifier")
         public String certIdentifier;
 
         @NameInMap("Comment")
         public ListGatewayDomainResponseBodyDataComment comment;
 
+        // The ID of the gateway.
         @NameInMap("GatewayId")
         public Long gatewayId;
 
+        // The time when the domain name was associated.
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        // The time when the domain name was last modified.
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        // Specifies whether to enable `Http2`.
+        // - `open`: enables `Http2`.
+        // - `close`: disables `Http2`.
+        // - `globalConfig`: uses global configurations.
         @NameInMap("Http2")
         public String http2;
 
+        // ID
         @NameInMap("Id")
         public Long id;
 
+        // Indicates whether HTTPS is forcibly used.
         @NameInMap("MustHttps")
         public Boolean mustHttps;
 
+        // The domain name.
         @NameInMap("Name")
         public String name;
 
+        // The type of the protocol.
         @NameInMap("Protocol")
         public String protocol;
 
         @NameInMap("Status")
         public Integer status;
 
+        // The maximum version of Transport Layer Security (TLS).
         @NameInMap("TlsMax")
         public String tlsMax;
 
+        // The minimum version of TLS.
         @NameInMap("TlsMin")
         public String tlsMin;
 

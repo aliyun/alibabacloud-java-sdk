@@ -7,12 +7,15 @@ public class AddBlackWhiteListRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    // The content of the blacklist.
     @NameInMap("Content")
     public String content;
 
+    // The unique ID of the gateway.
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
+    // Specifies whether to enable the whitelist mode for authorization.
     @NameInMap("IsWhite")
     public Boolean isWhite;
 
@@ -25,12 +28,15 @@ public class AddBlackWhiteListRequest extends TeaModel {
     @NameInMap("ResourceIdJsonList")
     public String resourceIdJsonList;
 
+    // The resource type to which the blacklist or whitelist applies.
     @NameInMap("ResourceType")
     public String resourceType;
 
+    // The status of the blacklist.
     @NameInMap("Status")
     public String status;
 
+    // The type of object in the blacklist or whitelist.
     @NameInMap("Type")
     public String type;
 
