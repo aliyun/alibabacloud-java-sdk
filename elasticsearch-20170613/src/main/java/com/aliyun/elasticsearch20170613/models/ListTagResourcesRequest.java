@@ -8,6 +8,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String nextToken;
 
     @NameInMap("Page")
+    @Deprecated
     public Integer page;
 
     @NameInMap("ResourceIds")
@@ -17,6 +18,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String resourceType;
 
     @NameInMap("Size")
+    @Deprecated
     public Integer size;
 
     @NameInMap("Tags")
