@@ -4,30 +4,42 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListAnsInstancesResponseBody extends TeaModel {
+    // The details of the data.
     @NameInMap("Data")
     public java.util.List<ListAnsInstancesResponseBodyData> data;
 
+    // The error code returned.
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    // The HTTP status code.
     @NameInMap("HttpCode")
     public String httpCode;
 
+    // The message returned.
     @NameInMap("Message")
     public String message;
 
+    // The page number of the returned page.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries returned per page.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // *   `true`: The request was successful.
+    // *   `false`: The request failed.
     @NameInMap("Success")
     public Boolean success;
 
+    // The total number of returned instances.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -109,63 +121,95 @@ public class ListAnsInstancesResponseBody extends TeaModel {
     }
 
     public static class ListAnsInstancesResponseBodyData extends TeaModel {
+        // The name of the application.
         @NameInMap("App")
         public String app;
 
+        // The name of the cluster.
         @NameInMap("ClusterName")
         public String clusterName;
 
+        // The reference key.
         @NameInMap("DatumKey")
         public String datumKey;
 
+        // The default key.
         @NameInMap("DefaultKey")
         public String defaultKey;
 
+        // The effective status of the instance. Valid values:
+        // 
+        // *   `true`: The instance takes effect.
+        // *   `false`: The instance does not take effect.
         @NameInMap("Enabled")
         public Boolean enabled;
 
+        // Indicates whether the service is marked as a temporary node. Valid values:
+        // 
+        // *   `true`: yes
+        // *   `false`: no
         @NameInMap("Ephemeral")
         public Boolean ephemeral;
 
+        // The number of failed checks.
         @NameInMap("FailCount")
         public Integer failCount;
 
+        // The health status of the instance. Valid values:
+        // 
+        // *   `true`: The instance is healthy.
+        // *   `false`: The instance is unhealthy.
         @NameInMap("Healthy")
         public Boolean healthy;
 
+        // The heartbeat interval of the instance. Unit: seconds.
         @NameInMap("InstanceHeartBeatInterval")
         public Integer instanceHeartBeatInterval;
 
+        // The timeout period of the instance heartbeat.
         @NameInMap("InstanceHeartBeatTimeOut")
         public Integer instanceHeartBeatTimeOut;
 
+        // The ID of the instance.
         @NameInMap("InstanceId")
         public String instanceId;
 
+        // The public IP address.
         @NameInMap("Ip")
         public String ip;
 
+        // The timeout period for removing an IP address.
         @NameInMap("IpDeleteTimeout")
         public Integer ipDeleteTimeout;
 
+        // The time when the instance heartbeat was last checked.
         @NameInMap("LastBeat")
         public Long lastBeat;
 
+        // Indicates whether the instance was marked. Valid values:
+        // 
+        // *   `true`: The instance marking was successful.
+        // *   `false`: The instance marking failed.
         @NameInMap("Marked")
         public Boolean marked;
 
+        // The metadata.
         @NameInMap("Metadata")
         public java.util.Map<String, ?> metadata;
 
+        // The number of successful checks.
         @NameInMap("OkCount")
         public Integer okCount;
 
+        // The port number.
         @NameInMap("Port")
         public Integer port;
 
+        // The name of the service.
         @NameInMap("ServiceName")
         public String serviceName;
 
+        // The weight.
         @NameInMap("Weight")
         public Integer weight;
 

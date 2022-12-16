@@ -4,21 +4,29 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class CreateZnodeResponseBody extends TeaModel {
+    // The details of the data.
     @NameInMap("Data")
     public CreateZnodeResponseBodyData data;
 
+    // The error code returned if the request fails.
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    // The HTTP status code returned.
     @NameInMap("HttpCode")
     public String httpCode;
 
+    // The message returned.
     @NameInMap("Message")
     public String message;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request is successful. Valid values:
+    // - `true`: The request is successful. 
+    // - `false`: The request fails.
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,15 +84,21 @@ public class CreateZnodeResponseBody extends TeaModel {
     }
 
     public static class CreateZnodeResponseBodyData extends TeaModel {
+        // The data of the node.
         @NameInMap("Data")
         public String data;
 
+        // Indicates whether the node directory information is returned. Valid values:
+        // - `true`: The information is returned. 
+        // - `false`: The information fails to be returned.
         @NameInMap("Dir")
         public Boolean dir;
 
+        // The name of the node.
         @NameInMap("Name")
         public String name;
 
+        // The path of the node.
         @NameInMap("Path")
         public String path;
 

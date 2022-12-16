@@ -4,27 +4,38 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class CreateApplicationRequest extends TeaModel {
+    // The language of the response. Valid values:
+    // 
+    // - zh: Chinese
+    // - en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    // The name of the application.
     @NameInMap("AppName")
     public String appName;
 
+    // The additional information.
     @NameInMap("ExtraInfo")
     public String extraInfo;
 
+    // The programming language of the application.
     @NameInMap("Language")
     public String language;
 
+    // The region to which the application belongs.
     @NameInMap("Region")
     public String region;
 
+    // Specifies whether to enable the Sentinel-compatible mode.
     @NameInMap("SentinelEnable")
     public String sentinelEnable;
 
+    // The service where the application is deployed. A value of ACK indicates Container Service for Kubernetes.
     @NameInMap("Source")
     public String source;
 
+    // Specifies whether to enable switching.
     @NameInMap("SwitchEnable")
     public String switchEnable;
 

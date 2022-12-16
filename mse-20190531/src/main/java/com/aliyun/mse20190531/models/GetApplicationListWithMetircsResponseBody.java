@@ -88,6 +88,7 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
         @NameInMap("Qps")
         public Double qps;
 
+        // Rt。
         @NameInMap("Rt")
         public Double rt;
 
@@ -170,9 +171,11 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
         @NameInMap("PassQps")
         public Double passQps;
 
+        // QPS。
         @NameInMap("Qps")
         public Double qps;
 
+        // Rt。
         @NameInMap("Rt")
         public Double rt;
 

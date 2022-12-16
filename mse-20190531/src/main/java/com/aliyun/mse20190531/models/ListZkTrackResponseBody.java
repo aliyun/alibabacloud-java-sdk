@@ -109,6 +109,7 @@ public class ListZkTrackResponseBody extends TeaModel {
     }
 
     public static class ListZkTrackResponseBodyTraces extends TeaModel {
+        // ACL。
         @NameInMap("Acl")
         public String acl;
 
@@ -136,6 +137,7 @@ public class ListZkTrackResponseBody extends TeaModel {
         @NameInMap("Result")
         public String result;
 
+        // SessionId。
         @NameInMap("SessionId")
         public String sessionId;
 
@@ -145,6 +147,7 @@ public class ListZkTrackResponseBody extends TeaModel {
         @NameInMap("TraceType")
         public String traceType;
 
+        // TTL。
         @NameInMap("Ttl")
         public Long ttl;
 

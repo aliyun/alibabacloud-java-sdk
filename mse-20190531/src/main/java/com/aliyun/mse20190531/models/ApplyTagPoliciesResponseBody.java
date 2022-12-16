@@ -4,21 +4,27 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ApplyTagPoliciesResponseBody extends TeaModel {
+    // The status code returned.
     @NameInMap("Code")
     public Integer code;
 
+    // The returned data.
     @NameInMap("Data")
     public java.util.List<ApplyTagPoliciesResponseBodyData> data;
 
+    // The HTTP status code returned.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    // The message returned.
     @NameInMap("Message")
     public String message;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request is successful.
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,33 +82,46 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
     }
 
     public static class ApplyTagPoliciesResponseBodyData extends TeaModel {
+        // Indicates whether pass-through is enabled.
         @NameInMap("CarryData")
         public Boolean carryData;
 
+        // Indicates whether the routing rule is enabled. 
+        // 
+        // - `true`: enabled 
+        // - `false`: disabled
         @NameInMap("Enable")
         public Boolean enable;
 
+        // The ID of the primary key.
         @NameInMap("Id")
         public Long id;
 
+        // The number of instances.
         @NameInMap("InstanceNum")
         public Integer instanceNum;
 
+        // The name of the routing rule.
         @NameInMap("Name")
         public String name;
 
+        // The rate.
         @NameInMap("Rate")
         public Integer rate;
 
+        // Indicates whether the routing rule is deleted.
         @NameInMap("Remove")
         public Boolean remove;
 
+        // The details of the routing rule.
         @NameInMap("Rules")
         public String rules;
 
+        // The status of the routing rule.
         @NameInMap("Status")
         public Integer status;
 
+        // The tag.
         @NameInMap("Tag")
         public String tag;
 

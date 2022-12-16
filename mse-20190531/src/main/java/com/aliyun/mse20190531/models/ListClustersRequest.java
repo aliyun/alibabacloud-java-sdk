@@ -4,27 +4,38 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListClustersRequest extends TeaModel {
+    // The language of the response. Valid values:
+    // 
+    // *   zh: Chinese
+    // *   en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    // The alias of the instance. Fuzzy match is supported.
     @NameInMap("ClusterAliasName")
     public String clusterAliasName;
 
+    // The number of the page to return.
     @NameInMap("PageNum")
     public Integer pageNum;
 
+    // The number of entries to return on each page.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The ID of the region in which the instance resides. The region is supported by MSE.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The extended request parameter in the JSON format.
     @NameInMap("RequestPars")
     public String requestPars;
 
+    // The ID of the resource group. For more information about resource groups, see the topic "View basic information of a resource group."
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    // The list of tags. A maximum number of 20 tags are supported.
     @NameInMap("Tag")
     public java.util.List<ListClustersRequestTag> tag;
 
@@ -98,9 +109,11 @@ public class ListClustersRequest extends TeaModel {
     }
 
     public static class ListClustersRequestTag extends TeaModel {
+        // The key of a tag.
         @NameInMap("Key")
         public String key;
 
+        // The value of a tag.
         @NameInMap("Value")
         public String value;
 

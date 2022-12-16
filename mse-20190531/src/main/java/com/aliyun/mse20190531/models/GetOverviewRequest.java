@@ -4,12 +4,18 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetOverviewRequest extends TeaModel {
+    // The language of the response. Valid values:
+    // 
+    // - zh: Chinese
+    // - en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    // The subscription period of the instance. Unit: months. Valid values: 1, 2, 3, 6, and 12.
     @NameInMap("Period")
     public Integer period;
 
+    // The ID of the region.
     @NameInMap("Region")
     public String region;
 

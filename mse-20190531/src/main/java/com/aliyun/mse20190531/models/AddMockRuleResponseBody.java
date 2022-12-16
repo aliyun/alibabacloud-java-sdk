@@ -4,21 +4,29 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class AddMockRuleResponseBody extends TeaModel {
+    // The status code returned.
     @NameInMap("Code")
     public Integer code;
 
+    // The details of the data.
     @NameInMap("Data")
     public AddMockRuleResponseBodyData data;
 
+    // The HTTP status code returned.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    // The message returned.
     @NameInMap("Message")
     public String message;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request is successful. Valid values:
+    // - `true`: The request is successful. 
+    // - `false`: The request fails.
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,45 +84,65 @@ public class AddMockRuleResponseBody extends TeaModel {
     }
 
     public static class AddMockRuleResponseBodyData extends TeaModel {
+        // The ID of the Alibaba Cloud account.
         @NameInMap("AccountId")
         public String accountId;
 
+        // The ID of the consumer application.
         @NameInMap("ConsumerAppId")
         public String consumerAppId;
 
+        // The name of the consumer application.
         @NameInMap("ConsumerAppName")
         public String consumerAppName;
 
+        // Indicates whether the rule is enabled. 
+        // 
+        // - `true`: enabled 
+        // - `false`: disabled
         @NameInMap("Enable")
         public Boolean enable;
 
+        // The description.
         @NameInMap("ExtraJson")
         public String extraJson;
 
+        // The ID of the rule.
         @NameInMap("Id")
         public Long id;
 
+        // The type of the model. Valid values:
+        // 
+        // - `[unk]0[unk]`: desktop client
+        // - `[unk]1[unk]`: mobile client
         @NameInMap("MockType")
         public Long mockType;
 
+        // The name of the rule.
         @NameInMap("Name")
         public String name;
 
+        // The ID of the namespace.
         @NameInMap("NamespaceId")
         public String namespaceId;
 
+        // The ID of the service provider application.
         @NameInMap("ProviderAppId")
         public String providerAppId;
 
+        // The name of the service provider application.
         @NameInMap("ProviderAppName")
         public String providerAppName;
 
+        // The ID of the region.
         @NameInMap("Region")
         public String region;
 
+        // The HTTP mock rule.
         @NameInMap("ScMockItemJson")
         public String scMockItemJson;
 
+        // The source.
         @NameInMap("Source")
         public String source;
 

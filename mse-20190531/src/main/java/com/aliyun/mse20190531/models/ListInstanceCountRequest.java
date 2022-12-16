@@ -4,18 +4,35 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListInstanceCountRequest extends TeaModel {
+    // The language of the response. Valid values:
+    // 
+    // *   zh: Chinese
+    // *   en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    // The type of the instance. Valid values: ZooKeeper and Nacos-Ans.
     @NameInMap("ClusterType")
     public String clusterType;
 
+    // The edition type of the instance. Valid values:
+    // 
+    // *   `mse_dev`: Developer Edition
+    // *   `mse_pro`: Professional Edition
     @NameInMap("MseVersion")
     public String mseVersion;
 
+    // The ID of the region where the instance resides. Examples:
+    // 
+    // *   cn-hangzhou: China (Hangzhou)
+    // *   cn-beijing: China (Beijing)
+    // *   cn-shanghai: China (Shanghai)
+    // *   cn-zhangjiakou: China (Zhangjiakou)
+    // *   cn-shenzhen: China (Shenzhen)
     @NameInMap("RegionId")
     public String regionId;
 
+    // The extended request parameters in the JSON format.
     @NameInMap("RequestPars")
     public String requestPars;
 

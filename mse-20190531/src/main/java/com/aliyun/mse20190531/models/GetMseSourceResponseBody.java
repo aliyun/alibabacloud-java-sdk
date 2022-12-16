@@ -4,21 +4,32 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetMseSourceResponseBody extends TeaModel {
+    // The status code returned.
     @NameInMap("Code")
     public Integer code;
 
+    // The data structure.
     @NameInMap("Data")
     public java.util.List<GetMseSourceResponseBodyData> data;
 
+    // The HTTP status code returned.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    // The message returned. Valid values: 
+    // 
+    // - If the request is successful, a success message is returned. 
+    // - If the request fails, an error message is returned, such as the "TaskId not found" message.
     @NameInMap("Message")
     public String message;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request is successful. Valid values:
+    // - `true`: The request is successful. 
+    // - `false`: The request fails.
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,18 +87,23 @@ public class GetMseSourceResponseBody extends TeaModel {
     }
 
     public static class GetMseSourceResponseBodyData extends TeaModel {
+        // The endpoint of the instance.
         @NameInMap("Address")
         public String address;
 
+        // The ID of the cluster.
         @NameInMap("ClusterId")
         public String clusterId;
 
+        // The ID of the instance.
         @NameInMap("InstanceId")
         public String instanceId;
 
+        // The name of the service source.
         @NameInMap("Name")
         public String name;
 
+        // The type of the service source.
         @NameInMap("Type")
         public String type;
 

@@ -4,24 +4,34 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class QueryClusterSpecificationResponseBody extends TeaModel {
+    // The status code returned.
     @NameInMap("Code")
     public Integer code;
 
+    // The details of the data.
     @NameInMap("Data")
     public java.util.List<QueryClusterSpecificationResponseBodyData> data;
 
+    // The error code returned.
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    // The HTTP status code.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    // The message returned.
     @NameInMap("Message")
     public String message;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // *   `true`: The request was successful.
+    // *   `false`: The request failed.
     @NameInMap("Success")
     public Boolean success;
 
@@ -87,12 +97,15 @@ public class QueryClusterSpecificationResponseBody extends TeaModel {
     }
 
     public static class QueryClusterSpecificationResponseBodyData extends TeaModel {
+        // The engine specifications that can be used.
         @NameInMap("ClusterSpecificationName")
         public String clusterSpecificationName;
 
+        // The number of vCPUs in the specifications.
         @NameInMap("CpuCapacity")
         public String cpuCapacity;
 
+        // The memory size in the specifications. Unit: GB.
         @NameInMap("MemoryCapacity")
         public String memoryCapacity;
 

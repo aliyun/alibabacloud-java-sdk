@@ -4,27 +4,35 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class UpdatePluginConfigResponseBody extends TeaModel {
+    // Code.
     @NameInMap("Code")
     public Integer code;
 
+    // The ID of the plug-in configuration.
     @NameInMap("Data")
     public Long data;
 
+    // The dynamic part in the error message.
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    // The error code returned if the request failed.
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    // The HTTP status code returned.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    // The message returned.
     @NameInMap("Message")
     public String message;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request was successful.
     @NameInMap("Success")
     public Boolean success;
 

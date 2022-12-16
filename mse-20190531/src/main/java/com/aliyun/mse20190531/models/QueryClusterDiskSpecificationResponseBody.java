@@ -4,27 +4,38 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class QueryClusterDiskSpecificationResponseBody extends TeaModel {
+    // The status code returned.
     @NameInMap("Code")
     public Integer code;
 
+    // The details of the data.
     @NameInMap("Data")
     public QueryClusterDiskSpecificationResponseBodyData data;
 
+    // The dynamic part in the error message. This parameter is used to replace the **%s** variable in the **Message** parameter. 
+    // > If the specified **InstanceId** parameter is invalid, **The Value of Input Parameter %s is not valid** is returned for **Message** and **InstanceId** is returned for **DynamicMessage**.
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    // The error code returned if the request fails.
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    // The HTTP status code returned.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    // The message returned.
     @NameInMap("Message")
     public String message;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request is successful. Valid values:
+    // - `true`: The request is successful. 
+    // - `false`: The request fails.
     @NameInMap("Success")
     public Boolean success;
 
@@ -98,12 +109,15 @@ public class QueryClusterDiskSpecificationResponseBody extends TeaModel {
     }
 
     public static class QueryClusterDiskSpecificationResponseBodyData extends TeaModel {
+        // The maximum capacity of the disk.
         @NameInMap("Max")
         public Integer max;
 
+        // The minimum capacity of the disk.
         @NameInMap("Min")
         public Integer min;
 
+        // The step size of the disk capacity.
         @NameInMap("Step")
         public Integer step;
 

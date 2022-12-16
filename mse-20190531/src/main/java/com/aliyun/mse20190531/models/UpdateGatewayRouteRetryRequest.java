@@ -4,18 +4,26 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class UpdateGatewayRouteRetryRequest extends TeaModel {
+    // The language of the response. Valid values:
+    // 
+    // - zh: Chinese
+    // - en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    // The ID of the gateway.
     @NameInMap("GatewayId")
     public Long gatewayId;
 
+    // The unique ID of the gateway.
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
+    // The ID of the route.
     @NameInMap("Id")
     public Long id;
 
+    // The information about the retry policy.
     @NameInMap("RetryJSON")
     public UpdateGatewayRouteRetryRequestRetryJSON retryJSON;
 
@@ -65,15 +73,19 @@ public class UpdateGatewayRouteRetryRequest extends TeaModel {
     }
 
     public static class UpdateGatewayRouteRetryRequestRetryJSON extends TeaModel {
+        // The number of retries allowed.
         @NameInMap("Attempts")
         public Integer attempts;
 
+        // The HTTP status codes returned.
         @NameInMap("HttpCodes")
         public java.util.List<String> httpCodes;
 
+        // The retry conditions.
         @NameInMap("RetryOn")
         public java.util.List<String> retryOn;
 
+        // The status of the policy.
         @NameInMap("Status")
         public String status;
 

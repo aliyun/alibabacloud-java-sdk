@@ -4,30 +4,42 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListListenersByConfigResponseBody extends TeaModel {
+    // The error code returned.
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    // The HTTP status code returned.
     @NameInMap("HttpCode")
     public String httpCode;
 
+    // The information about listeners.
     @NameInMap("Listeners")
     public java.util.List<ListListenersByConfigResponseBodyListeners> listeners;
 
+    // The response message.
     @NameInMap("Message")
     public String message;
 
+    // The number of the returned page.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries returned per page.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // *   `true`: The call was successful.
+    // *   `false`: The request failed.
     @NameInMap("Success")
     public Boolean success;
 
+    // The total number of entries returned.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -109,12 +121,15 @@ public class ListListenersByConfigResponseBody extends TeaModel {
     }
 
     public static class ListListenersByConfigResponseBodyListeners extends TeaModel {
+        // IP.
         @NameInMap("Ip")
         public String ip;
 
+        // The verification string.
         @NameInMap("Md5")
         public String md5;
 
+        // The status.
         @NameInMap("Status")
         public String status;
 

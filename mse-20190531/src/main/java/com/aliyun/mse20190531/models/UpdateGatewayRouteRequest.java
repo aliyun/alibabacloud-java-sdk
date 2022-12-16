@@ -4,15 +4,22 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class UpdateGatewayRouteRequest extends TeaModel {
+    // The language of the response. Valid values:
+    // 
+    // - zh: Chinese
+    // - en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    // The type of the destination service.
     @NameInMap("DestinationType")
     public String destinationType;
 
+    // The information about service mocking.
     @NameInMap("DirectResponseJSON")
     public UpdateGatewayRouteRequestDirectResponseJSON directResponseJSON;
 
+    // The IDs of domain names with which the route is associated.
     @NameInMap("DomainIdListJSON")
     public String domainIdListJSON;
 
@@ -25,27 +32,35 @@ public class UpdateGatewayRouteRequest extends TeaModel {
     @NameInMap("FallbackServices")
     public java.util.List<UpdateGatewayRouteRequestFallbackServices> fallbackServices;
 
+    // The ID of the gateway.
     @NameInMap("GatewayId")
     public Long gatewayId;
 
+    // The unique ID of the gateway.
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
+    // The ID of the route.
     @NameInMap("Id")
     public Long id;
 
+    // The name of the route.
     @NameInMap("Name")
     public String name;
 
+    // The matching rules of the route.
     @NameInMap("Predicates")
     public UpdateGatewayRouteRequestPredicates predicates;
 
+    // The configuration of the redirect action.
     @NameInMap("RedirectJSON")
     public UpdateGatewayRouteRequestRedirectJSON redirectJSON;
 
+    // The sequence number of the route.
     @NameInMap("RouteOrder")
     public Integer routeOrder;
 
+    // The information about services.
     @NameInMap("Services")
     public java.util.List<UpdateGatewayRouteRequestServices> services;
 
@@ -175,9 +190,11 @@ public class UpdateGatewayRouteRequest extends TeaModel {
     }
 
     public static class UpdateGatewayRouteRequestDirectResponseJSON extends TeaModel {
+        // The return value for service mocking.
         @NameInMap("Body")
         public String body;
 
+        // The status code returned for service mocking.
         @NameInMap("Code")
         public Long code;
 
@@ -312,12 +329,15 @@ public class UpdateGatewayRouteRequest extends TeaModel {
     }
 
     public static class UpdateGatewayRouteRequestPredicatesHeaderPredicates extends TeaModel {
+        // The key of the request header.
         @NameInMap("Key")
         public String key;
 
+        // The matching mode.
         @NameInMap("Type")
         public String type;
 
+        // The value of the request header.
         @NameInMap("Value")
         public String value;
 
@@ -353,12 +373,15 @@ public class UpdateGatewayRouteRequest extends TeaModel {
     }
 
     public static class UpdateGatewayRouteRequestPredicatesPathPredicates extends TeaModel {
+        // Specifies whether to perform case-insensitive matches.
         @NameInMap("IgnoreCase")
         public Boolean ignoreCase;
 
+        // The path.
         @NameInMap("Path")
         public String path;
 
+        // The matching mode.
         @NameInMap("Type")
         public String type;
 
@@ -394,12 +417,15 @@ public class UpdateGatewayRouteRequest extends TeaModel {
     }
 
     public static class UpdateGatewayRouteRequestPredicatesQueryPredicates extends TeaModel {
+        // The name of the parameter.
         @NameInMap("Key")
         public String key;
 
+        // The matching mode.
         @NameInMap("Type")
         public String type;
 
+        // The value of the parameter.
         @NameInMap("Value")
         public String value;
 
@@ -435,15 +461,19 @@ public class UpdateGatewayRouteRequest extends TeaModel {
     }
 
     public static class UpdateGatewayRouteRequestPredicates extends TeaModel {
+        // The information about header matching.
         @NameInMap("HeaderPredicates")
         public java.util.List<UpdateGatewayRouteRequestPredicatesHeaderPredicates> headerPredicates;
 
+        // The information about method matching.
         @NameInMap("MethodPredicates")
         public java.util.List<String> methodPredicates;
 
+        // The information about path matching.
         @NameInMap("PathPredicates")
         public UpdateGatewayRouteRequestPredicatesPathPredicates pathPredicates;
 
+        // The information about URL parameter matching.
         @NameInMap("QueryPredicates")
         public java.util.List<UpdateGatewayRouteRequestPredicatesQueryPredicates> queryPredicates;
 
@@ -487,12 +517,15 @@ public class UpdateGatewayRouteRequest extends TeaModel {
     }
 
     public static class UpdateGatewayRouteRequestRedirectJSON extends TeaModel {
+        // The status code returned.
         @NameInMap("Code")
         public Integer code;
 
+        // The hostname to be redirected to.
         @NameInMap("Host")
         public String host;
 
+        // The path to be redirected to.
         @NameInMap("Path")
         public String path;
 
@@ -698,30 +731,37 @@ public class UpdateGatewayRouteRequest extends TeaModel {
         @NameInMap("AgreementType")
         public String agreementType;
 
+        // The name of the group to which the service belongs.
         @NameInMap("GroupName")
         public String groupName;
 
         @NameInMap("HttpDubboTranscoder")
         public UpdateGatewayRouteRequestServicesHttpDubboTranscoder httpDubboTranscoder;
 
+        // The name of the service.
         @NameInMap("Name")
         public String name;
 
+        // The namespace in which the service resides.
         @NameInMap("Namespace")
         public String namespace;
 
+        // The weight in the form of a percentage value.
         @NameInMap("Percent")
         public Integer percent;
 
+        // The ID of the service.
         @NameInMap("ServiceId")
         public Long serviceId;
 
         @NameInMap("ServicePort")
         public Integer servicePort;
 
+        // The source type of the service.
         @NameInMap("SourceType")
         public String sourceType;
 
+        // The version of the service.
         @NameInMap("Version")
         public String version;
 

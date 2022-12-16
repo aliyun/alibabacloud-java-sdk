@@ -4,21 +4,29 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class DeleteGatewayRouteResponseBody extends TeaModel {
+    // The status code returned.
     @NameInMap("Code")
     public Integer code;
 
+    // The returned data.
     @NameInMap("Data")
     public DeleteGatewayRouteResponseBodyData data;
 
+    // The HTTP status code returned.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    // The message returned.
     @NameInMap("Message")
     public String message;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request is successful. Valid values:
+    // - `true`: The request is successful. 
+    // - `false`: The request fails.
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,33 +84,43 @@ public class DeleteGatewayRouteResponseBody extends TeaModel {
     }
 
     public static class DeleteGatewayRouteResponseBodyData extends TeaModel {
+        // The ID of the default service.
         @NameInMap("DefaultServiceId")
         public Long defaultServiceId;
 
+        // The ID of the gateway.
         @NameInMap("GatewayId")
         public Long gatewayId;
 
+        // The unique ID of the gateway.
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 
+        // The time when the route was created.
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        // The time when the route was last modified.
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        // ID.
         @NameInMap("Id")
         public Long id;
 
+        // The name of the route.
         @NameInMap("Name")
         public String name;
 
+        // The matching rules of the route.
         @NameInMap("Predicates")
         public String predicates;
 
+        // The sequence number of the route.
         @NameInMap("RouteOrder")
         public Integer routeOrder;
 
+        // The status of the route.
         @NameInMap("Status")
         public Integer status;
 

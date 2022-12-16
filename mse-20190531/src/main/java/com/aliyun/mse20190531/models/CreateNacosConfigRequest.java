@@ -4,36 +4,50 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class CreateNacosConfigRequest extends TeaModel {
+    // The language of the response. Valid values:
+    // 
+    // - zh: Chinese
+    // - en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    // The name of the application.
     @NameInMap("AppName")
     public String appName;
 
+    // The list of IP addresses where the beta release of the configuration is performed.
     @NameInMap("BetaIps")
     public String betaIps;
 
+    // The content of the configuration.
     @NameInMap("Content")
     public String content;
 
+    // The data ID.
     @NameInMap("DataId")
     public String dataId;
 
+    // The description of the configuration.
     @NameInMap("Desc")
     public String desc;
 
+    // The ID of the group.
     @NameInMap("Group")
     public String group;
 
+    // The ID of the instance.
     @NameInMap("InstanceId")
     public String instanceId;
 
+    // The ID of the namespace.
     @NameInMap("NamespaceId")
     public String namespaceId;
 
+    // The tag of the configuration.
     @NameInMap("Tags")
     public String tags;
 
+    // The format of the configuration. Supported formats include TEXT, JSON, and XML.
     @NameInMap("Type")
     public String type;
 

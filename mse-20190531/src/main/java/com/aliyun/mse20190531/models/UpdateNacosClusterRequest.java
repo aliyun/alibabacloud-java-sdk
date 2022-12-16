@@ -4,30 +4,42 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class UpdateNacosClusterRequest extends TeaModel {
+    // The language of the response. Valid values:
+    // 
+    // *   zh: Chinese
+    // *   en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    // The port used for health checks.
     @NameInMap("CheckPort")
     public Integer checkPort;
 
+    // The name of the Nacos cluster.
     @NameInMap("ClusterName")
     public String clusterName;
 
+    // The name of the group.
     @NameInMap("GroupName")
     public String groupName;
 
+    // The type of the health check.
     @NameInMap("HealthChecker")
     public String healthChecker;
 
+    // The ID of the instance.
     @NameInMap("InstanceId")
     public String instanceId;
 
+    // The ID of the namespace.
     @NameInMap("NamespaceId")
     public String namespaceId;
 
+    // The name of the service.
     @NameInMap("ServiceName")
     public String serviceName;
 
+    // Specifies whether to use the port of the instance for a health check.
     @NameInMap("UseInstancePortForCheck")
     public Boolean useInstancePortForCheck;
 

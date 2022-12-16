@@ -4,30 +4,42 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class AddGatewaySlbRequest extends TeaModel {
+    // The language of the response. Valid values:
+    // 
+    // *   zh: Chinese
+    // *   en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    // The unique ID of the gateway.
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
+    // The HTTP port number (virtual service group).
     @NameInMap("HttpPort")
     public Integer httpPort;
 
+    // The HTTPS port number (virtual service group).
     @NameInMap("HttpsPort")
     public Integer httpsPort;
 
+    // The ID of the HTTPS virtual service group.
     @NameInMap("HttpsVServerGroupId")
     public String httpsVServerGroupId;
 
+    // The service weight.
     @NameInMap("ServiceWeight")
     public Integer serviceWeight;
 
+    // SLB ID.
     @NameInMap("SlbId")
     public String slbId;
 
+    // The type.
     @NameInMap("Type")
     public String type;
 
+    // The ID of the HTTP virtual service group.
     @NameInMap("VServerGroupId")
     public String VServerGroupId;
 

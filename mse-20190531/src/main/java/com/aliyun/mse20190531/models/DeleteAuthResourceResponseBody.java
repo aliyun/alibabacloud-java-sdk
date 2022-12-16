@@ -4,21 +4,30 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class DeleteAuthResourceResponseBody extends TeaModel {
+    // The status code returned.
     @NameInMap("Code")
     public Integer code;
 
+    // The returned data.
     @NameInMap("Data")
     public DeleteAuthResourceResponseBodyData data;
 
+    // The HTTP status code returned.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    // The message returned.
     @NameInMap("Message")
     public String message;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // *   `true`: The request was successful.
+    // *   `false`: The request failed.
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,33 +85,43 @@ public class DeleteAuthResourceResponseBody extends TeaModel {
     }
 
     public static class DeleteAuthResourceResponseBodyData extends TeaModel {
+        // The ID of the authorization record.
         @NameInMap("AuthId")
         public Long authId;
 
+        // The ID of the domain name.
         @NameInMap("DomainId")
         public Long domainId;
 
+        // The domain name.
         @NameInMap("DomainName")
         public String domainName;
 
+        // The ID of the gateway.
         @NameInMap("GatewayId")
         public Long gatewayId;
 
+        // The unique ID of the gateway.
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 
+        // The creation time.
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        // The modification time.
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        // The ID of the primary key.
         @NameInMap("Id")
         public Long id;
 
+        // Indicates whether the whitelist mode is enabled.
         @NameInMap("IsWhite")
         public Boolean isWhite;
 
+        // The path.
         @NameInMap("Path")
         public String path;
 

@@ -4,30 +4,51 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class CreateMseServiceApplicationRequest extends TeaModel {
+    // The language of the response. Valid values:
+    // 
+    // *   zh: Chinese
+    // *   en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    // The name of the application.
     @NameInMap("AppName")
     public String appName;
 
+    // The additional information.
     @NameInMap("ExtraInfo")
     public String extraInfo;
 
+    // The programming language of the application.
     @NameInMap("Language")
     public String language;
 
+    // The edition of the MSE instance that you want to purchase.
+    // 
+    // *   mse_pro: Professional Edition
+    // *   mse_dev: Developer Edition
     @NameInMap("MseVersion")
     public String mseVersion;
 
+    // The ID of the region where the Microservices Engine (MSE) instance resides. Examples:
+    // 
+    // *   cn-hangzhou: China (Hangzhou)
+    // *   cn-beijing: China (Beijing)
+    // *   cn-shanghai: China (Shanghai)
+    // *   cn-zhangjiakou: China (Zhangjiakou)
+    // *   cn-shenzhen: China (Shenzhen)
     @NameInMap("Region")
     public String region;
 
+    // Specifies whether to enable the Sentinel-compatible mode.
     @NameInMap("SentinelEnable")
     public String sentinelEnable;
 
+    // The service source.
     @NameInMap("Source")
     public String source;
 
+    // Specifies whether to enable switching.
     @NameInMap("SwitchEnable")
     public String switchEnable;
 

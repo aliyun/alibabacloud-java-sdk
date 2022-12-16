@@ -4,21 +4,30 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetGatewayDomainDetailResponseBody extends TeaModel {
+    // The status code returned.
     @NameInMap("Code")
     public Integer code;
 
+    // The returned data.
     @NameInMap("Data")
     public GetGatewayDomainDetailResponseBodyData data;
 
+    // The HTTP status code returned.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    // The message returned.
     @NameInMap("Message")
     public String message;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // *   `true`: The request was successful.
+    // *   `false`: The request failed.
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,66 +85,91 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
     }
 
     public static class GetGatewayDomainDetailResponseBodyData extends TeaModel {
+        // The start time.
         @NameInMap("AfterDate")
         public Long afterDate;
 
+        // The algorithm.
         @NameInMap("Algorithm")
         public String algorithm;
 
+        // The expiration time.
         @NameInMap("BeforeDate")
         public Long beforeDate;
 
+        // The ID of the certificate.
         @NameInMap("CertIdentifier")
         public String certIdentifier;
 
+        // The name of the certificate.
         @NameInMap("CertName")
         public String certName;
 
+        // The public domain name.
         @NameInMap("CommonName")
         public String commonName;
 
+        // The ID of the gateway.
         @NameInMap("GatewayId")
         public Long gatewayId;
 
+        // The unique ID of the gateway.
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 
+        // The start time.
         @NameInMap("GmtAfter")
         public String gmtAfter;
 
+        // The expiration time.
         @NameInMap("GmtBefore")
         public String gmtBefore;
 
+        // The creation time.
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        // The update time.
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        // Indicates whether `HTTP/2` is enabled.
+        // 
+        // *   `open`: `HTTP/2` is enabled.
+        // *   `close`: `HTTP/2` is disabled.
+        // *   `globalConfig`: Global configurations are used.
         @NameInMap("Http2")
         public String http2;
 
+        // ID.
         @NameInMap("Id")
         public Long id;
 
+        // The issuer.
         @NameInMap("Issuer")
         public String issuer;
 
+        // Indicates whether HTTPS is forcibly used.
         @NameInMap("MustHttps")
         public Boolean mustHttps;
 
+        // The domain name.
         @NameInMap("Name")
         public String name;
 
+        // The protocol of the gateway.
         @NameInMap("Protocol")
         public String protocol;
 
+        // The name of the extended field.
         @NameInMap("Sans")
         public String sans;
 
+        // The maximum version of Transport Layer Security (TLS).
         @NameInMap("TlsMax")
         public String tlsMax;
 
+        // The minimum version of TLS.
         @NameInMap("TlsMin")
         public String tlsMin;
 

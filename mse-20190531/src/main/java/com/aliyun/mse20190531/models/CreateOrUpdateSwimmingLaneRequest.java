@@ -4,51 +4,72 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
+    // The language of the response. Valid values:****
+    // 
+    // *   **zh-CN**: Chinese
+    // *   **en-US**: English.
+    // 
+    // > Default value: **zh-CN**.
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    // Specifies whether to enable a lane.
     @NameInMap("Enable")
     public Boolean enable;
 
+    // Specifies whether to set a routing rule for the lane. If an Ingress gateway is used, this parameter is not required.
     @NameInMap("EnableRules")
     public Boolean enableRules;
 
+    // json string.
     @NameInMap("EntryRule")
     public String entryRule;
 
+    // SwimmingLane.
     @NameInMap("EntryRules")
     public java.util.List<CreateOrUpdateSwimmingLaneRequestEntryRules> entryRules;
 
+    // Optional. The time when the lane was created.
     @NameInMap("GmtCreate")
     public String gmtCreate;
 
+    // Optional. The time when the lane was last modified.
     @NameInMap("GmtModified")
     public String gmtModified;
 
+    // The group to which the lane belongs.
     @NameInMap("GroupId")
     public Long groupId;
 
+    // The ID of the primary key. A value -1 specifies a request that is used to create a lane. A value greater than 0 specifies a request that is used to modify a lane.
     @NameInMap("Id")
     public Long id;
 
+    // The license key in use.
     @NameInMap("LicenseKey")
     public String licenseKey;
 
+    // The name of the lane.
     @NameInMap("Name")
     public String name;
 
+    // The ID of the region.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The service source. Valid value: edasmsc.
     @NameInMap("Source")
     public String source;
 
+    // The value 0 indicates that the lane is disabled.
     @NameInMap("Status")
     public Integer status;
 
+    // The tag.
     @NameInMap("Tag")
     public String tag;
 
+    // The Alibaba Cloud account. The format is a number, such as 136246975637\*\*\*\*. You can leave this parameter empty.
     @NameInMap("UserId")
     public String userId;
 
@@ -186,33 +207,43 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
     }
 
     public static class CreateOrUpdateSwimmingLaneRequestEntryRulesRestItems extends TeaModel {
+        // The expression. =, >, <, >=, <=
         @NameInMap("Cond")
         public String cond;
 
+        // The base value used for the rawvalue operator.
         @NameInMap("Datum")
         public String datum;
 
+        // The divisor used for the mod operator.
         @NameInMap("Divisor")
         public Integer divisor;
 
+        // The name of the rule. This parameter corresponds to the key of the type parameter.
         @NameInMap("Name")
         public String name;
 
+        // The list of names.
         @NameInMap("NameList")
         public java.util.List<String> nameList;
 
+        // The operator type. Valid values: mod, list, rawvalue, and rate.
         @NameInMap("Operator")
         public String operator;
 
+        // The rate.
         @NameInMap("Rate")
         public Integer rate;
 
+        // The remainder used for the mod operator.
         @NameInMap("Remainder")
         public Integer remainder;
 
+        // The type of the rule. Valid values: cookie, param, and header.
         @NameInMap("Type")
         public String type;
 
+        // The content of the rule.
         @NameInMap("Value")
         public String value;
 
@@ -304,21 +335,30 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
     }
 
     public static class CreateOrUpdateSwimmingLaneRequestEntryRules extends TeaModel {
+        // The common parameters in the JSON format.
         @NameInMap("Condition")
         public String condition;
 
+        // Specifies whether to enable the rule. Valid values:
+        // 
+        // *   `true`: yes
+        // *   `false`: no
         @NameInMap("Enable")
         public Boolean enable;
 
+        // The path.
         @NameInMap("Path")
         public String path;
 
+        // The list of paths.
         @NameInMap("Paths")
         public java.util.List<String> paths;
 
+        // The priority. A smaller value of this parameter indicates a higher priority.
         @NameInMap("Priority")
         public Integer priority;
 
+        // The information about the rule for the REST method.
         @NameInMap("RestItems")
         public java.util.List<CreateOrUpdateSwimmingLaneRequestEntryRulesRestItems> restItems;
 

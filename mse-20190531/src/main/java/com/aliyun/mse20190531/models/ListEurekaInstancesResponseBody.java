@@ -4,30 +4,41 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListEurekaInstancesResponseBody extends TeaModel {
+    // The details of the data.
     @NameInMap("Data")
     public java.util.List<ListEurekaInstancesResponseBodyData> data;
 
+    // The error code returned if the request fails.
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    // The HTTP status code returned.
     @NameInMap("HttpCode")
     public String httpCode;
 
+    // The message returned.
     @NameInMap("Message")
     public String message;
 
+    // The page number of the returned page.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries returned per page.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request is successful. Valid values:
+    // - `true`: The request is successful. 
+    // - `false`: The request fails.
     @NameInMap("Success")
     public Boolean success;
 
+    // The total number of entries returned.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -109,45 +120,61 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
     }
 
     public static class ListEurekaInstancesResponseBodyData extends TeaModel {
+        // The name of the application.
         @NameInMap("App")
         public String app;
 
+        // The timeout period of the instance.   
+        // After the specified timeout period expires, the service is unavailable by default and therefore is deleted.
         @NameInMap("DurationInSecs")
         public Integer durationInSecs;
 
+        // The URL of the homepage.
         @NameInMap("HomePageUrl")
         public String homePageUrl;
 
+        // The hostname.
         @NameInMap("HostName")
         public String hostName;
 
+        // The ID of the instance.
         @NameInMap("InstanceId")
         public String instanceId;
 
+        // The IP address of the instance.
         @NameInMap("IpAddr")
         public String ipAddr;
 
+        // The time when the instance was last modified.
         @NameInMap("LastDirtyTimestamp")
         public Long lastDirtyTimestamp;
 
+        // The time when the instance heartbeat was last checked.
         @NameInMap("LastUpdatedTimestamp")
         public Long lastUpdatedTimestamp;
 
+        // The metadata.
         @NameInMap("Metadata")
         public java.util.Map<String, ?> metadata;
 
+        // The port of the service.
         @NameInMap("Port")
         public Integer port;
 
+        // The maximum interval between two heartbeat checks after a heartbeat check times out.   
+        // Default value: 10.
         @NameInMap("RenewalIntervalInSecs")
         public Integer renewalIntervalInSecs;
 
+        // The security port.
         @NameInMap("SecurePort")
         public Integer securePort;
 
+        // The number of service providers. The value is in the following format: Number of healthy instances/Total number of instances.
         @NameInMap("Status")
         public String status;
 
+        // The virtual hostname.
         @NameInMap("VipAddress")
         public String vipAddress;
 

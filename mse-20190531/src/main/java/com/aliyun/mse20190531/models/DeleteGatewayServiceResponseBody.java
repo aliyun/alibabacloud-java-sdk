@@ -4,21 +4,30 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class DeleteGatewayServiceResponseBody extends TeaModel {
+    // The status code returned.
     @NameInMap("Code")
     public Integer code;
 
+    // The returned data.
     @NameInMap("Data")
     public DeleteGatewayServiceResponseBodyData data;
 
+    // The HTTP status code returned.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    // The message returned.
     @NameInMap("Message")
     public String message;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request is successful. Valid values:
+    // 
+    // - `true`: The request is successful. 
+    // - `false`: The request fails.
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,42 +85,55 @@ public class DeleteGatewayServiceResponseBody extends TeaModel {
     }
 
     public static class DeleteGatewayServiceResponseBodyData extends TeaModel {
+        // The ID of the gateway.
         @NameInMap("GatewayId")
         public Long gatewayId;
 
+        // The unique ID of the gateway.
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 
+        // The time when the service was created.
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        // The time when the domain name was last modified.
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        // The name of the group.
         @NameInMap("GroupName")
         public String groupName;
 
+        // The ID of the service.
         @NameInMap("Id")
         public Long id;
 
+        // IP
         @NameInMap("Ips")
         public java.util.List<String> ips;
 
+        // The basic information about the service.
         @NameInMap("MetaInfo")
         public String metaInfo;
 
+        // The name of the service.
         @NameInMap("Name")
         public String name;
 
+        // The namespace in which the service resides.
         @NameInMap("Namespace")
         public String namespace;
 
+        // The name of the service registered with the service registry.
         @NameInMap("ServiceNameInRegistry")
         public String serviceNameInRegistry;
 
+        // The source ID of the service.
         @NameInMap("SourceId")
         public Long sourceId;
 
+        // The source type of the service.
         @NameInMap("SourceType")
         public String sourceType;
 

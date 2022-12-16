@@ -4,21 +4,29 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
+    // The status code returned.
     @NameInMap("Code")
     public Integer code;
 
+    // The details of the data.
     @NameInMap("Data")
     public GetGovernanceKubernetesClusterResponseBodyData data;
 
+    // The HTTP status code returned.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    // The message returned.
     @NameInMap("Message")
     public String message;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request is successful. Valid values:
+    // - `true`: The request is successful. 
+    // - `false`: The request fails.
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,9 +84,11 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
     }
 
     public static class GetGovernanceKubernetesClusterResponseBodyDataNamespaces extends TeaModel {
+        // The name of the namespace.
         @NameInMap("Name")
         public String name;
 
+        // The tags of the namespace.
         @NameInMap("Tags")
         public String tags;
 
@@ -106,27 +116,35 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
     }
 
     public static class GetGovernanceKubernetesClusterResponseBodyData extends TeaModel {
+        // The ID of the cluster.
         @NameInMap("ClusterId")
         public String clusterId;
 
+        // The name of the cluster.
         @NameInMap("ClusterName")
         public String clusterName;
 
+        // The version of Kubernetes.
         @NameInMap("K8sVersion")
         public String k8sVersion;
 
+        // The information about namespaces.
         @NameInMap("NamespaceInfos")
         public String namespaceInfos;
 
+        // The details of namespaces.
         @NameInMap("Namespaces")
         public java.util.List<GetGovernanceKubernetesClusterResponseBodyDataNamespaces> namespaces;
 
+        // The time when the cluster was started.
         @NameInMap("PilotStartTime")
         public String pilotStartTime;
 
+        // The ID of the region in which the cluster resides.
         @NameInMap("Region")
         public String region;
 
+        // The time when the cluster was last modified.
         @NameInMap("UpdateTime")
         public String updateTime;
 

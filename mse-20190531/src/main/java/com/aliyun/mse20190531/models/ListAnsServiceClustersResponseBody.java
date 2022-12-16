@@ -4,18 +4,25 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListAnsServiceClustersResponseBody extends TeaModel {
+    // The details of the data.
     @NameInMap("Data")
     public ListAnsServiceClustersResponseBodyData data;
 
+    // The error code returned if the request fails.
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    // The message returned.
     @NameInMap("Message")
     public String message;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request is successful. Valid values:
+    // - `true`: The request is successful. 
+    // - `false`: The request fails.
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,24 +72,31 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
     }
 
     public static class ListAnsServiceClustersResponseBodyDataClusters extends TeaModel {
+        // The default port used for a health check.
         @NameInMap("DefaultCheckPort")
         public Integer defaultCheckPort;
 
+        // The default port.
         @NameInMap("DefaultPort")
         public Integer defaultPort;
 
+        // The type of health check.
         @NameInMap("HealthCheckerType")
         public String healthCheckerType;
 
+        // The metadata.
         @NameInMap("Metadata")
         public java.util.Map<String, ?> metadata;
 
+        // The name of the cluster.
         @NameInMap("Name")
         public String name;
 
+        // The name of the service.
         @NameInMap("ServiceName")
         public String serviceName;
 
+        // Indicates whether the IP address is used for a health check.
         @NameInMap("UseIPPort4Check")
         public Boolean useIPPort4Check;
 
@@ -150,24 +164,33 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
     }
 
     public static class ListAnsServiceClustersResponseBodyData extends TeaModel {
+        // The information about clusters.
         @NameInMap("Clusters")
         public java.util.List<ListAnsServiceClustersResponseBodyDataClusters> clusters;
 
+        // Indicates whether the service is marked as a temporary node. Valid values:
+        // - `true` 
+        // - `false`
         @NameInMap("Ephemeral")
         public Boolean ephemeral;
 
+        // The name of the contact group.
         @NameInMap("GroupName")
         public String groupName;
 
+        // The metadata.
         @NameInMap("Metadata")
         public java.util.Map<String, ?> metadata;
 
+        // The name of the service.
         @NameInMap("Name")
         public String name;
 
+        // The protection threshold.
         @NameInMap("ProtectThreshold")
         public Float protectThreshold;
 
+        // The election mode.
         @NameInMap("SelectorType")
         public String selectorType;
 

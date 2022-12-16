@@ -4,18 +4,26 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class AddSecurityGroupRuleRequest extends TeaModel {
+    // The language of the response. Valid values:
+    // 
+    // - zh: Chinese
+    // - en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    // The description of the rule.
     @NameInMap("Description")
     public String description;
 
+    // The ID of the gateway.
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
+    // The port range.
     @NameInMap("PortRange")
     public String portRange;
 
+    // The ID of the security group.
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 

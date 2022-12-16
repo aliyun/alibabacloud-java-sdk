@@ -4,30 +4,39 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetPluginsResponseBody extends TeaModel {
+    // Code.
     @NameInMap("Code")
     public Integer code;
 
+    // The returned data.
     @NameInMap("Data")
     public java.util.List<GetPluginsResponseBodyData> data;
 
+    // The dynamic part in the error message.
     @NameInMap("DynamicCode")
     public String dynamicCode;
 
+    // The dynamic error message.
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    // The error code returned.
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    // The HTTP status code returned.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    // The message returned.
     @NameInMap("Message")
     public String message;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request was successful.
     @NameInMap("Success")
     public Boolean success;
 
@@ -109,42 +118,90 @@ public class GetPluginsResponseBody extends TeaModel {
     }
 
     public static class GetPluginsResponseBodyData extends TeaModel {
+        // The directory of the plug-in.
+        // 
+        // 0: user-defined
+        // 
+        // 1: permission authentication
+        // 
+        // 2: security protection
+        // 
+        // 3: transmission protocol
+        // 
+        // 4: traffic control
+        // 
+        // 5: traffic observation
         @NameInMap("Category")
         public Integer category;
 
+        // The information about the configuration check.
         @NameInMap("ConfigCheck")
         public String configCheck;
 
+        // The ID of the plug-in.
         @NameInMap("Id")
         public Long id;
 
+        @NameInMap("MaxVersion")
+        public String maxVersion;
+
+        @NameInMap("Mode")
+        public Integer mode;
+
+        // The name of the plug-in.
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("NewVersionPublishingFlag")
+        public Boolean newVersionPublishingFlag;
+
+        // The plug-in execution stage.
+        // 
+        // *   0: default stage
+        // *   1: authorization stage
+        // *   2: authentication stage
+        // *   3: statistics stage
         @NameInMap("Phase")
         public Integer phase;
 
+        // The ID of the creator.
         @NameInMap("PrimaryUser")
         public String primaryUser;
 
+        // The plug-in execution priority. A larger value indicates a higher priority.
         @NameInMap("Priority")
         public Integer priority;
 
+        // The publish status.
         @NameInMap("PublishState")
         public Integer publishState;
 
+        // Indicates whether the plug-in is enabled.
+        // 
+        // *   0: disabled
+        // *   1: enabled
         @NameInMap("Status")
         public String status;
 
+        // The summary of the plug-in.
         @NameInMap("Summary")
         public String summary;
 
+        // The version of the plug-in.
         @NameInMap("Version")
         public String version;
 
+        // The Object Storage Service (OSS) of the WebAssembly plug-in.
         @NameInMap("WasmFile")
         public String wasmFile;
 
+        // The WebAssembly language.
+        // 
+        // *   0: C++
+        // *   1: TinyGo
+        // *   2: Rust
+        // *   3: AssemblyScript
+        // *   4: Zig
         @NameInMap("WasmLang")
         public Integer wasmLang;
 
@@ -177,12 +234,36 @@ public class GetPluginsResponseBody extends TeaModel {
             return this.id;
         }
 
+        public GetPluginsResponseBodyData setMaxVersion(String maxVersion) {
+            this.maxVersion = maxVersion;
+            return this;
+        }
+        public String getMaxVersion() {
+            return this.maxVersion;
+        }
+
+        public GetPluginsResponseBodyData setMode(Integer mode) {
+            this.mode = mode;
+            return this;
+        }
+        public Integer getMode() {
+            return this.mode;
+        }
+
         public GetPluginsResponseBodyData setName(String name) {
             this.name = name;
             return this;
         }
         public String getName() {
             return this.name;
+        }
+
+        public GetPluginsResponseBodyData setNewVersionPublishingFlag(Boolean newVersionPublishingFlag) {
+            this.newVersionPublishingFlag = newVersionPublishingFlag;
+            return this;
+        }
+        public Boolean getNewVersionPublishingFlag() {
+            return this.newVersionPublishingFlag;
         }
 
         public GetPluginsResponseBodyData setPhase(Integer phase) {

@@ -4,21 +4,33 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class UpdateMessageQueueRouteRequest extends TeaModel {
+    // The language of the response. Valid values:
+    // 
+    // *   zh: Chinese
+    // *   en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    // The ID of the application.
     @NameInMap("AppId")
     public String appId;
 
+    // Specifies whether the canary release for messaging feature is enabled for the application. Valid values:
+    // 
+    // *   `true`: enabled
+    // *   `false`: disabled
     @NameInMap("Enable")
     public Boolean enable;
 
+    // The side for message filtering when the canary release for messaging feature is enabled.
     @NameInMap("FilterSide")
     public String filterSide;
 
+    // The region ID.
     @NameInMap("Region")
     public String region;
 
+    // The tag that is negligible for the untagged environment of the application.
     @NameInMap("Tags")
     public java.util.List<String> tags;
 

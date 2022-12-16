@@ -4,12 +4,18 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListAppBySwimmingLaneGroupTagRequest extends TeaModel {
+    // The language of the response. Valid values:
+    // 
+    // - zh: Chinese
+    // - en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    // The ID of the lane group.
     @NameInMap("GroupId")
     public Long groupId;
 
+    // The tag of the lane group.
     @NameInMap("Tag")
     public String tag;
 

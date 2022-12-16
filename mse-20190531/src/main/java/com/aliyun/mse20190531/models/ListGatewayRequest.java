@@ -4,21 +4,30 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListGatewayRequest extends TeaModel {
+    // The language of the response. Valid values:
+    // 
+    // *   zh: Chinese
+    // *   en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    // Specifies whether to enable the sorting feature. This feature is not available.
     @NameInMap("DescSort")
     public Boolean descSort;
 
+    // The details of parameters.
     @NameInMap("FilterParams")
     public ListGatewayRequestFilterParams filterParams;
 
+    // The order information.
     @NameInMap("OrderItem")
     public String orderItem;
 
+    // The number of the page to return.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries to return on each page.
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -76,24 +85,29 @@ public class ListGatewayRequest extends TeaModel {
     }
 
     public static class ListGatewayRequestFilterParams extends TeaModel {
+        // The type of the gateway.
         @NameInMap("GatewayType")
         public String gatewayType;
 
+        // The unique ID of the gateway.
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 
+        // The ID of the instance.
         @NameInMap("InstanceId")
         public String instanceId;
 
         @NameInMap("MseTag")
         public String mseTag;
 
+        // The name of the gateway.
         @NameInMap("Name")
         public String name;
 
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        // The ID of the virtual private cloud (VPC).
         @NameInMap("Vpc")
         public String vpc;
 

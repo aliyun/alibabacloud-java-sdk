@@ -22,12 +22,14 @@ public class ListZkTrackRequest extends TeaModel {
     @NameInMap("Path")
     public String path;
 
+    // RequestPars。
     @NameInMap("RequestPars")
     public String requestPars;
 
     @NameInMap("Reverse")
     public Boolean reverse;
 
+    // SessionId。
     @NameInMap("SessionId")
     public String sessionId;
 

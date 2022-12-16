@@ -4,30 +4,45 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class DeleteNacosInstanceRequest extends TeaModel {
+    // The language of the response. Valid values:
+    // 
+    // *   zh: Chinese
+    // *   en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    // The name of the instance.
     @NameInMap("ClusterName")
     public String clusterName;
 
+    // Specifies whether the instance is a temporary node. Valid values:
+    // 
+    // *   `true`: yes
+    // *   `false`: no
     @NameInMap("Ephemeral")
     public Boolean ephemeral;
 
+    // The name of the group.
     @NameInMap("GroupName")
     public String groupName;
 
+    // The ID of the instance.
     @NameInMap("InstanceId")
     public String instanceId;
 
+    // The IP address of the instance.
     @NameInMap("Ip")
     public String ip;
 
+    // The ID of the namespace.
     @NameInMap("NamespaceId")
     public String namespaceId;
 
+    // The port number of the instance.
     @NameInMap("Port")
     public Integer port;
 
+    // The name of the service.
     @NameInMap("ServiceName")
     public String serviceName;
 

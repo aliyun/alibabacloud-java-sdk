@@ -4,15 +4,19 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ImportServicesShrinkRequest extends TeaModel {
+    // The data structure.
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    // The unique ID of the gateway.
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
+    // The information about services.
     @NameInMap("ServiceList")
     public String serviceListShrink;
 
+    // The source type of the service.
     @NameInMap("SourceType")
     public String sourceType;
 

@@ -4,27 +4,38 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class DeleteNacosInstanceResponseBody extends TeaModel {
+    // The status code. The value 200 is returned if the request is successful.
     @NameInMap("Code")
     public Integer code;
 
+    // The data of the node.
     @NameInMap("Data")
     public String data;
 
+    // The dynamic part in the error message.
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    // The error code returned.
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    // The HTTP status code.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    // The returned message.
     @NameInMap("Message")
     public String message;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // *   `true`: The request was successful.
+    // *   `false`: The request failed.
     @NameInMap("Success")
     public Boolean success;
 

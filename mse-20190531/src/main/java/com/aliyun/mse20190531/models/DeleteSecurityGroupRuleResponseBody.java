@@ -4,21 +4,29 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class DeleteSecurityGroupRuleResponseBody extends TeaModel {
+    // The status code returned.
     @NameInMap("Code")
     public Integer code;
 
+    // The returned data.
     @NameInMap("Data")
     public DeleteSecurityGroupRuleResponseBodyData data;
 
+    // The HTTP status code returned.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    // The message returned.
     @NameInMap("Message")
     public String message;
 
+    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request is successful. Valid values:
+    // - `true`: The request is successful. 
+    // - `false`: The request fails.
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,30 +84,50 @@ public class DeleteSecurityGroupRuleResponseBody extends TeaModel {
     }
 
     public static class DeleteSecurityGroupRuleResponseBodyData extends TeaModel {
+        // The description.
         @NameInMap("Description")
         public String description;
 
+        // The ID of the gateway.
         @NameInMap("GatewayId")
         public Long gatewayId;
 
+        // The unique ID of the gateway.
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 
+        // The time when the security group rule was created.
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        // The time when the security group rule was last modified.
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        // ID.
         @NameInMap("Id")
         public Long id;
 
+        // The transport layer protocol. The value of this parameter is case-insensitive. Valid values: 
+        //          
+        // - icmp
+        // - gre
+        // - tcp
+        // - udp
+        // - all: All protocols are supported.
         @NameInMap("IpProtocol")
         public String ipProtocol;
 
+        // The range of destination ports that correspond to the transport layer protocol. Valid values: 
+        //          
+        // - When the value of the IpProtocol parameter is tcp or udp, the port number range is 1 to 65535. The start port number and the end port number are separated by a forward slash (/). Example: 1/200.
+        // - When the value of the IpProtocol parameter is icmp, the port number range is -1/-1, which indicates all ports.
+        // - When the value of the IpProtocol parameter is gre, the port number range is -1/-1, which indicates all ports.
+        // - When the value of the IpProtocol parameter is all, the port number range is -1/-1, which indicates all ports.
         @NameInMap("PortRange")
         public String portRange;
 
+        // The ID of the security group.
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 

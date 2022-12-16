@@ -4,21 +4,30 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class PullServicesResponseBody extends TeaModel {
+    // The response code returned.
     @NameInMap("Code")
     public Integer code;
 
+    // The data entries returned.
     @NameInMap("Data")
     public java.util.List<PullServicesResponseBodyData> data;
 
+    // The HTTP status code returned.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    // The message returned.
     @NameInMap("Message")
     public String message;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // *   `true`: The request was successful.
+    // *   `false`: The request failed.
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,18 +85,23 @@ public class PullServicesResponseBody extends TeaModel {
     }
 
     public static class PullServicesResponseBodyDataServices extends TeaModel {
+        // The group.
         @NameInMap("GroupName")
         public String groupName;
 
+        // The name of the service.
         @NameInMap("Name")
         public String name;
 
+        // The namespace.
         @NameInMap("Namespace")
         public String namespace;
 
+        // The ID of the service source.
         @NameInMap("SourceId")
         public String sourceId;
 
+        // The type of the service source.
         @NameInMap("SourceType")
         public String sourceType;
 
@@ -139,15 +153,19 @@ public class PullServicesResponseBody extends TeaModel {
     }
 
     public static class PullServicesResponseBodyData extends TeaModel {
+        // The group.
         @NameInMap("GroupName")
         public String groupName;
 
+        // The namespace.
         @NameInMap("Namespace")
         public String namespace;
 
+        // The alias of the namespace.
         @NameInMap("NamespaceShowName")
         public String namespaceShowName;
 
+        // The information about services.
         @NameInMap("Services")
         public java.util.List<PullServicesResponseBodyDataServices> services;
 

@@ -65,9 +65,11 @@ public class TagResourcesRequest extends TeaModel {
     }
 
     public static class ListTagResourcesRequestTag extends TeaModel {
+        // The key of a tag.
         @NameInMap("Key")
         public String key;
 
+        // The value of a tag.
         @NameInMap("Value")
         public String value;
 

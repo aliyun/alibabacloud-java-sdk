@@ -4,18 +4,26 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class UpdateGatewayRouteCORSRequest extends TeaModel {
+    // The language of the response. In compliance with [RFC 7231](https://tools.ietf.org/html/rfc7231), the backend service must return a response based on the language used by the user.
+    // This parameter is empty by default. Valid values:
+    // * zh-CN: Chinese
+    // * en-US: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    // The information about the CORS policy.
     @NameInMap("CorsJSON")
     public UpdateGatewayRouteCORSRequestCorsJSON corsJSON;
 
+    // The ID of the gateway.
     @NameInMap("GatewayId")
     public Long gatewayId;
 
+    // The unique ID of the gateway.
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
+    // The ID of the route.
     @NameInMap("Id")
     public Long id;
 
@@ -65,27 +73,35 @@ public class UpdateGatewayRouteCORSRequest extends TeaModel {
     }
 
     public static class UpdateGatewayRouteCORSRequestCorsJSON extends TeaModel {
+        // The credentials allowed.
         @NameInMap("AllowCredentials")
         public Boolean allowCredentials;
 
+        // The request headers allowed.
         @NameInMap("AllowHeaders")
         public String allowHeaders;
 
+        // The HTTP methods allowed.
         @NameInMap("AllowMethods")
         public String allowMethods;
 
+        // The origins from which access is allowed.
         @NameInMap("AllowOrigins")
         public String allowOrigins;
 
+        // The response headers allowed.
         @NameInMap("ExposeHeaders")
         public String exposeHeaders;
 
+        // The status of the policy.
         @NameInMap("Status")
         public String status;
 
+        // The unit of time.
         @NameInMap("TimeUnit")
         public String timeUnit;
 
+        // The value of time.
         @NameInMap("UnitNum")
         public Long unitNum;
 

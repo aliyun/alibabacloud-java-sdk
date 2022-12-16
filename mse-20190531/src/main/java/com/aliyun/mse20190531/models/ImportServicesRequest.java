@@ -4,15 +4,19 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ImportServicesRequest extends TeaModel {
+    // The data structure.
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    // The unique ID of the gateway.
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
+    // The information about services.
     @NameInMap("ServiceList")
     public java.util.List<ImportServicesRequestServiceList> serviceList;
 
+    // The source type of the service.
     @NameInMap("SourceType")
     public String sourceType;
 
@@ -65,21 +69,27 @@ public class ImportServicesRequest extends TeaModel {
     }
 
     public static class ImportServicesRequestServiceList extends TeaModel {
+        // The name of the group.
         @NameInMap("GroupName")
         public String groupName;
 
+        // The IP addresses of the service.
         @NameInMap("Ips")
         public java.util.List<String> ips;
 
+        // The name of the service.
         @NameInMap("Name")
         public String name;
 
+        // The name of the namespace.
         @NameInMap("Namespace")
         public String namespace;
 
+        // The port of the service.
         @NameInMap("ServicePort")
         public Long servicePort;
 
+        // The protocol of the service.
         @NameInMap("ServiceProtocol")
         public String serviceProtocol;
 

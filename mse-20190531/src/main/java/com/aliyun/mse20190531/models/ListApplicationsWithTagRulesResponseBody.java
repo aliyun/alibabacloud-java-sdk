@@ -4,21 +4,30 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
+    // The status code returned.
     @NameInMap("Code")
     public Integer code;
 
+    // The details of the data.
     @NameInMap("Data")
     public ListApplicationsWithTagRulesResponseBodyData data;
 
+    // The HTTP status code returned.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    // The message returned. Valid values: 
+    // 
+    // - If the request is successful, a success message is returned. 
+    // - If the request fails, an error message is returned.
     @NameInMap("Message")
     public String message;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request is successful. Valid values: -[unk]true[unk]: The request is successful. -[unk]false[unk]: The request fails.
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,36 +85,50 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
     }
 
     public static class ListApplicationsWithTagRulesResponseBodyDataResultRouteRules extends TeaModel {
+        // Indicates whether pass-through is enabled.
         @NameInMap("CarryData")
         public Boolean carryData;
 
+        // Indicates whether the routing rule is enabled. Valid values:
+        // 
+        // - `true`: enabled 
+        // - `false`: disabled
         @NameInMap("Enable")
         public Boolean enable;
 
+        // The time when the routing rule was last modified.
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        // The ID of the routing rule.
         @NameInMap("Id")
         public Long id;
 
+        // The number of instances.
         @NameInMap("InstanceNum")
         public Integer instanceNum;
 
+        // The name of the routing rule.
         @NameInMap("Name")
         public String name;
 
+        // The rate.
         @NameInMap("Rate")
         public Integer rate;
 
+        // Indicates whether the routing rule is deleted.
         @NameInMap("Remove")
         public Boolean remove;
 
+        // The details of the routing rule.
         @NameInMap("Rules")
         public String rules;
 
+        // The status of the routing rule.
         @NameInMap("Status")
         public Integer status;
 
+        // The tag of the routing rule.
         @NameInMap("Tag")
         public String tag;
 
@@ -205,15 +228,19 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
     }
 
     public static class ListApplicationsWithTagRulesResponseBodyDataResult extends TeaModel {
+        // The ID of the application.
         @NameInMap("AppId")
         public String appId;
 
+        // The name of the application.
         @NameInMap("AppName")
         public String appName;
 
+        // The information about routing rules.
         @NameInMap("RouteRules")
         public java.util.List<ListApplicationsWithTagRulesResponseBodyDataResultRouteRules> routeRules;
 
+        // The status of the route. Valid values: -0: disabled. -1: enabled.
         @NameInMap("RouteStatus")
         public Long routeStatus;
 
@@ -257,15 +284,19 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
     }
 
     public static class ListApplicationsWithTagRulesResponseBodyData extends TeaModel {
+        // The page number of the returned page.
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        // The number of entries returned per page.
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        // The data structure.
         @NameInMap("Result")
         public java.util.List<ListApplicationsWithTagRulesResponseBodyDataResult> result;
 
+        // The total number of entries returned.
         @NameInMap("TotalSize")
         public Integer totalSize;
 

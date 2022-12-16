@@ -4,39 +4,57 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ModifyLosslessRuleRequest extends TeaModel {
+    // The language of the response. Valid values:
+    // 
+    // *   zh: Chinese
+    // *   en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    // Specifies whether to align the lifecycle of the application in the Kubernetes cluster with that of the microservice.
     @NameInMap("Aligned")
     public Boolean aligned;
 
+    // The ID of the application.
     @NameInMap("AppId")
     public String appId;
 
+    // The name of the application.
     @NameInMap("AppName")
     public String appName;
 
+    // The registration latency.
     @NameInMap("DelayTime")
     public Long delayTime;
 
+    // Specifies whether to enable the alert rule. Valid values:
+    // 
+    // *   `true`: enables the rule.
+    // *   `false`: disables the rule.
     @NameInMap("Enable")
     public Boolean enable;
 
+    // The slope of the prefetching curve.
     @NameInMap("FuncType")
     public Long funcType;
 
+    // The region ID.
     @NameInMap("RegionId")
     public String regionId;
 
+    // Specifies whether to associate readiness probe with service prefetching.
     @NameInMap("Related")
     public Boolean related;
 
+    // The cooldown duration. Unit: seconds.
     @NameInMap("ShutdownWaitSeconds")
     public Integer shutdownWaitSeconds;
 
+    // The service source. Valid values:
     @NameInMap("Source")
     public String source;
 
+    // The prefetching duration.
     @NameInMap("WarmupTime")
     public Long warmupTime;
 

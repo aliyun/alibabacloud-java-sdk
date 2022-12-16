@@ -4,36 +4,53 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetEngineNamepaceResponseBody extends TeaModel {
+    // The number of configurations.
     @NameInMap("ConfigCount")
     public String configCount;
 
+    // The error code returned if the request fails.
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    // The HTTP status code returned.
     @NameInMap("HttpCode")
     public String httpCode;
 
+    // The message returned.
     @NameInMap("Message")
     public String message;
 
+    // The name of the namespace.
     @NameInMap("Namespace")
     public String namespace;
 
+    // The description of the namespace.
     @NameInMap("NamespaceDesc")
     public String namespaceDesc;
 
+    // The display name of the namespace.
     @NameInMap("NamespaceShowName")
     public String namespaceShowName;
 
+    // The quota of configurations.
     @NameInMap("Quota")
     public String quota;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request is successful. Valid values:
+    // - `true`: The request is successful. 
+    // - `false`: The request fails.
     @NameInMap("Success")
     public Boolean success;
 
+    // The type of the namespace. Valid values:
+    // 
+    // - 0: global configuration                                 
+    // - 1: default namespace                                 
+    // - 2: custom namespace
     @NameInMap("Type")
     public String type;
 

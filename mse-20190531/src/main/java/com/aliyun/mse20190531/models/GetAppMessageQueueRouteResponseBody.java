@@ -4,21 +4,30 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetAppMessageQueueRouteResponseBody extends TeaModel {
+    // The response code returned.
     @NameInMap("Code")
     public Integer code;
 
+    // The returned data.
     @NameInMap("Data")
     public GetAppMessageQueueRouteResponseBodyData data;
 
+    // The HTTP status code.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    // The returned message.
+    // 
+    // *   If the request is successful, a success message is returned.
+    // *   If the request fails, an error message is returned.
     @NameInMap("Message")
     public String message;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request was successful. Valid values: true and false. The value true indicates that the request was successful. The value false indicates that the request failed.
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,18 +85,26 @@ public class GetAppMessageQueueRouteResponseBody extends TeaModel {
     }
 
     public static class GetAppMessageQueueRouteResponseBodyData extends TeaModel {
+        // The ID of the application.
         @NameInMap("AppId")
         public String appId;
 
+        // Indicates whether the canary release for messaging feature is enabled.
+        // 
+        // *   `true`: enabled
+        // *   `false`: disabled
         @NameInMap("Enable")
         public Boolean enable;
 
+        // The side for message filtering when the canary release for messaging feature is enabled.
         @NameInMap("FilterSide")
         public String filterSide;
 
+        // The ID of the region.
         @NameInMap("Region")
         public String region;
 
+        // The tags used to ignore message consumption for nodes in untagged environments.
         @NameInMap("Tags")
         public java.util.List<String> tags;
 

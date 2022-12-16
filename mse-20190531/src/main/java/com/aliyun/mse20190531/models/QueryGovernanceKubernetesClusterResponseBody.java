@@ -4,21 +4,27 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
+    // The status code returned.
     @NameInMap("Code")
     public Integer code;
 
+    // The data returned.
     @NameInMap("Data")
     public QueryGovernanceKubernetesClusterResponseBodyData data;
 
+    // HttpCode
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    // Message
     @NameInMap("Message")
     public String message;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request was successful.
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,21 +82,27 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
     }
 
     public static class QueryGovernanceKubernetesClusterResponseBodyDataResult extends TeaModel {
+        // The ID of the cluster.
         @NameInMap("ClusterId")
         public String clusterId;
 
+        // The name of the cluster.
         @NameInMap("ClusterName")
         public String clusterName;
 
+        // The version of the cluster.
         @NameInMap("K8sVersion")
         public String k8sVersion;
 
+        // The information of the namespace.
         @NameInMap("NamespaceInfos")
         public String namespaceInfos;
 
+        // The time when the ack-one-pilot component was started.
         @NameInMap("PilotStartTime")
         public String pilotStartTime;
 
+        // Region
         @NameInMap("Region")
         public String region;
 
@@ -150,15 +162,18 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
     }
 
     public static class QueryGovernanceKubernetesClusterResponseBodyData extends TeaModel {
+        // The page number of the returned page.
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        // The number of entries returned per page.
         @NameInMap("PageSize")
         public Integer pageSize;
 
         @NameInMap("Result")
         public java.util.List<QueryGovernanceKubernetesClusterResponseBodyDataResult> result;
 
+        // The number of clusters.
         @NameInMap("TotalSize")
         public Integer totalSize;
 

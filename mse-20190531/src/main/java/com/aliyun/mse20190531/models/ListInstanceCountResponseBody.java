@@ -4,30 +4,44 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListInstanceCountResponseBody extends TeaModel {
+    // The status code. A value of 200 is returned if the request is successful.
     @NameInMap("Code")
     public Integer code;
 
+    // The data entries returned.
     @NameInMap("Data")
     public java.util.List<Integer> data;
 
+    // The dynamic part in the error message.
     @NameInMap("DynamicCode")
     public String dynamicCode;
 
+    // The dynamic part in the error message. This parameter is used to replace the \*\*%s\*\* variable in the **ErrMessage** parameter.
+    // 
+    // > If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    // The error code returned if the request failed. If the request failed, the ErrorCode parameter is returned. For more information, see the "Error codes" section of this topic.
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    // The HTTP status code returned.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    // The message returned. If the request is successful, a success message is returned. If the request fails, an error message is returned.
     @NameInMap("Message")
     public String message;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // *   `true`: The request was successful.
+    // *   `false`: The request failed.
     @NameInMap("Success")
     public Boolean success;
 

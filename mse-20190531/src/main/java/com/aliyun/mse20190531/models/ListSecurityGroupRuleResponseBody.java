@@ -4,21 +4,29 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListSecurityGroupRuleResponseBody extends TeaModel {
+    // The status code returned.
     @NameInMap("Code")
     public Integer code;
 
+    // The returned results.
     @NameInMap("Data")
     public java.util.List<ListSecurityGroupRuleResponseBodyData> data;
 
+    // The HTTP status code returned.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    // The message returned.
     @NameInMap("Message")
     public String message;
 
+    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request is successful. Valid values:
+    // - `true`: The request is successful. 
+    // - `false`: The request fails.
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,30 +84,39 @@ public class ListSecurityGroupRuleResponseBody extends TeaModel {
     }
 
     public static class ListSecurityGroupRuleResponseBodyData extends TeaModel {
+        // The description of the rule.
         @NameInMap("Description")
         public String description;
 
+        // The ID of the gateway.
         @NameInMap("GatewayId")
         public Long gatewayId;
 
+        // The unique ID of the gateway.
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 
+        // The time when the security group rule was created.
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        // The time when the security group rule was last modified.
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        // ID.
         @NameInMap("Id")
         public String id;
 
+        // The type of the protocol.
         @NameInMap("IpProtocol")
         public String ipProtocol;
 
+        // The range of ports.
         @NameInMap("PortRange")
         public String portRange;
 
+        // The ID of the security group.
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 

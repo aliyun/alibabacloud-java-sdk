@@ -4,30 +4,39 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetPluginConfigResponseBody extends TeaModel {
+    // Code.
     @NameInMap("Code")
     public Integer code;
 
+    // The returned data.
     @NameInMap("Data")
     public GetPluginConfigResponseBodyData data;
 
+    // The dynamic error code.
     @NameInMap("DynamicCode")
     public String dynamicCode;
 
+    // The dynamic error message.
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    // The error code returned if the request failed.
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    // The HTTP status code returned.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    // The message returned.
     @NameInMap("Message")
     public String message;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request was successful.
     @NameInMap("Success")
     public Boolean success;
 
@@ -109,30 +118,45 @@ public class GetPluginConfigResponseBody extends TeaModel {
     }
 
     public static class GetPluginConfigResponseBodyDataGatewayConfigList extends TeaModel {
+        // The plug-in configuration.
         @NameInMap("Config")
         public String config;
 
+        // The application scope of the plug-in.
+        // 
+        // 0: global
+        // 
+        // 1: domain names
+        // 
+        // 2: routes
         @NameInMap("ConfigLevel")
         public Integer configLevel;
 
+        // Indicates whether the plug-in is enabled.
         @NameInMap("Enable")
         public Boolean enable;
 
+        // The ID of the gateway.
         @NameInMap("GatewayId")
         public Long gatewayId;
 
+        // The unique ID of the gateway.
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 
+        // The creation time.
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        // The update time.
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        // The ID of the plug-in configuration.
         @NameInMap("Id")
         public Long id;
 
+        // The ID of the gateway plug-in.
         @NameInMap("PluginId")
         public Long pluginId;
 
@@ -216,57 +240,112 @@ public class GetPluginConfigResponseBody extends TeaModel {
     }
 
     public static class GetPluginConfigResponseBodyData extends TeaModel {
+        // The category of the plug-in.
+        // 
+        // 0: custom
+        // 
+        // 1: permission authorization
+        // 
+        // 2: security protection
+        // 
+        // 3: transmission protocol
+        // 
+        // 4: traffic control
+        // 
+        // 5: traffic observation
         @NameInMap("Category")
         public Integer category;
 
+        // The information about the plug-in configuration used for checking.
         @NameInMap("ConfigCheck")
         public String configCheck;
 
+        // The list of gateway plug-in configurations.
         @NameInMap("GatewayConfigList")
         public java.util.List<GetPluginConfigResponseBodyDataGatewayConfigList> gatewayConfigList;
 
+        // The ID of the plug-in.
         @NameInMap("Id")
         public Long id;
 
+        // The name of the image.
         @NameInMap("ImageName")
         public String imageName;
 
+        // The mode.
         @NameInMap("Mode")
         public Integer mode;
 
+        // The name of the plug-in.
         @NameInMap("Name")
         public String name;
 
+        // The execution stage of the plug-in.
+        // 
+        // 0: default stage
+        // 
+        // 1: authorization stage
+        // 
+        // 2: authentication stage
+        // 
+        // 3: statistics stage
         @NameInMap("Phase")
         public Integer phase;
 
+        // The ID of the creator.
         @NameInMap("PrimaryUser")
         public String primaryUser;
 
+        // The execution priority of the plug-in. A larger value indicates a higher priority.
         @NameInMap("Priority")
         public Integer priority;
 
+        // The publish status.
         @NameInMap("PublishState")
         public Integer publishState;
 
+        // The description of the README file.
         @NameInMap("Readme")
         public String readme;
 
+        // The description of the README file that is edited in English.
         @NameInMap("ReadmeEn")
         public String readmeEn;
 
+        // Indicates whether the plug-in is enabled.
+        // 
+        // 0: disabled
+        // 
+        // 1: enabled
         @NameInMap("Status")
         public String status;
 
+        // The summary of the plug-in.
         @NameInMap("Summary")
         public String summary;
 
+        // The type.
         @NameInMap("Type")
         public Integer type;
 
+        // The version of the plug-in.
         @NameInMap("Version")
         public String version;
 
+        @NameInMap("VersionJson")
+        public String versionJson;
+
+        // The WebAssembly language.
+        // 
+        // 0: C++
+        // 
+        // 1: TinyGo
+        // 
+        // 2: Rust
+        // 
+        // 3: AssemblyScript
+        // 
+        // 4: Zig
         @NameInMap("WasmLang")
         public Integer wasmLang;
 
@@ -409,6 +488,14 @@ public class GetPluginConfigResponseBody extends TeaModel {
         }
         public String getVersion() {
             return this.version;
+        }
+
+        public GetPluginConfigResponseBodyData setVersionJson(String versionJson) {
+            this.versionJson = versionJson;
+            return this;
+        }
+        public String getVersionJson() {
+            return this.versionJson;
         }
 
         public GetPluginConfigResponseBodyData setWasmLang(Integer wasmLang) {

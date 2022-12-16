@@ -4,21 +4,29 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetBlackWhiteListResponseBody extends TeaModel {
+    // The status code returned. A value of 200 indicates that the request is successful.
     @NameInMap("Code")
     public Integer code;
 
+    // The details of the data.
     @NameInMap("Data")
     public GetBlackWhiteListResponseBodyData data;
 
+    // The HTTP status code returned.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    // The message returned.
     @NameInMap("Message")
     public String message;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request is successful. Valid values:
+    // - `true`: The request is successful. 
+    // - `false`: The request fails.
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,36 +84,47 @@ public class GetBlackWhiteListResponseBody extends TeaModel {
     }
 
     public static class GetBlackWhiteListResponseBodyData extends TeaModel {
+        // The content of the blacklist.
         @NameInMap("Content")
         public String content;
 
+        // The ID of the gateway.
         @NameInMap("GatewayId")
         public Long gatewayId;
 
+        // The unique ID of the gateway.
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 
+        // The time when the blacklist or whitelist was created.
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        // The time when the blacklist or whitelist was last modified.
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        // ID.
         @NameInMap("Id")
         public Long id;
 
+        // Indicates whether the whitelist is queried.
         @NameInMap("IsWhite")
         public Boolean isWhite;
 
+        // The ID of the resource.
         @NameInMap("ResourceId")
         public Long resourceId;
 
+        // The type of the resource.
         @NameInMap("ResourceType")
         public String resourceType;
 
+        // The status of the blacklist or whitelist.
         @NameInMap("Status")
         public String status;
 
+        // The type of the blacklist or whitelist.
         @NameInMap("Type")
         public String type;
 

@@ -4,33 +4,49 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class UpdatePluginConfigRequest extends TeaModel {
+    // The language of the response. Valid values:
+    // 
+    // zh: Chinese en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    // The plug-in configuration.
     @NameInMap("Config")
     public String config;
 
+    // The application scope of the plug-in.
+    // 
+    // *   0: global
+    // *   1: domain names
+    // *   2: routes
     @NameInMap("ConfigLevel")
     public Integer configLevel;
 
+    // Specifies whether to enable the plug-in.
     @NameInMap("Enable")
     public Boolean enable;
 
+    // The ID of the gateway.
     @NameInMap("GatewayId")
     public Long gatewayId;
 
+    // The unique ID of the gateway.
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
+    // The creation time.
     @NameInMap("GmtCreate")
     public String gmtCreate;
 
+    // The update time.
     @NameInMap("GmtModified")
     public String gmtModified;
 
+    // The ID of the plug-in configuration.
     @NameInMap("Id")
     public Long id;
 
+    // The ID of the gateway plug-in.
     @NameInMap("PluginId")
     public Long pluginId;
 

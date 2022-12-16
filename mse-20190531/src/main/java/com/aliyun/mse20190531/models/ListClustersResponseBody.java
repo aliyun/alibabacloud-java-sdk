@@ -4,30 +4,42 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListClustersResponseBody extends TeaModel {
+    // The details of the data.
     @NameInMap("Data")
     public java.util.List<ListClustersResponseBodyData> data;
 
+    // The error code returned.
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    // The HTTP status code.
     @NameInMap("HttpCode")
     public String httpCode;
 
+    // The message returned.
     @NameInMap("Message")
     public String message;
 
+    // The page number of the returned page.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries returned per page.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // *   `true`: The request was successful.
+    // *   `false`: The request failed.
     @NameInMap("Success")
     public Boolean success;
 
+    // The total number of instances.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -109,60 +121,79 @@ public class ListClustersResponseBody extends TeaModel {
     }
 
     public static class ListClustersResponseBodyData extends TeaModel {
+        // The application version.
         @NameInMap("AppVersion")
         public String appVersion;
 
+        // Indicates whether the instance can be upgraded.
         @NameInMap("CanUpdate")
         public Boolean canUpdate;
 
+        // The billing method, such as subscription or pay-as-you-go.
         @NameInMap("ChargeType")
         public String chargeType;
 
+        // The alias of the instance.
         @NameInMap("ClusterAliasName")
         public String clusterAliasName;
 
+        // The name of the instance.
         @NameInMap("ClusterName")
         public String clusterName;
 
+        // The type of the instance. Valid values: ZooKeeper, Nacos-Ans, and Eureka.
         @NameInMap("ClusterType")
         public String clusterType;
 
+        // The time when the instance was created.
         @NameInMap("CreateTime")
         public String createTime;
 
+        // The time when the instance expires.
         @NameInMap("EndDate")
         public String endDate;
 
+        // The initialization status of the instance.
         @NameInMap("InitStatus")
         public String initStatus;
 
+        // The number of instances.
         @NameInMap("InstanceCount")
         public Long instanceCount;
 
+        // The ID of the instance.
         @NameInMap("InstanceId")
         public String instanceId;
 
+        // The public IP address of the instance.
         @NameInMap("InternetAddress")
         public String internetAddress;
 
+        // The public endpoint of the instance.
         @NameInMap("InternetDomain")
         public String internetDomain;
 
+        // The internal IP address of the instance.
         @NameInMap("IntranetAddress")
         public String intranetAddress;
 
+        // The internal endpoint of the instance.
         @NameInMap("IntranetDomain")
         public String intranetDomain;
 
+        // The edition of the instance.
         @NameInMap("MseVersion")
         public String mseVersion;
 
+        // The ID of the resource group to which the instance belongs.
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        // The tags that are attached to the instance.
         @NameInMap("Tags")
         public java.util.Map<String, ?> tags;
 
+        // The version information.
         @NameInMap("VersionCode")
         public String versionCode;
 
