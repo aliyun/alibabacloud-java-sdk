@@ -80,6 +80,9 @@ public class UserQueryResponseBody extends TeaModel {
         @NameInMap("employee_nick")
         public String employeeNick;
 
+        @NameInMap("leave_status")
+        public Integer leaveStatus;
+
         @NameInMap("third_part_employee_id")
         public String thirdPartEmployeeId;
 
@@ -97,6 +100,14 @@ public class UserQueryResponseBody extends TeaModel {
         }
         public String getEmployeeNick() {
             return this.employeeNick;
+        }
+
+        public UserQueryResponseBodyModuleItems setLeaveStatus(Integer leaveStatus) {
+            this.leaveStatus = leaveStatus;
+            return this;
+        }
+        public Integer getLeaveStatus() {
+            return this.leaveStatus;
         }
 
         public UserQueryResponseBodyModuleItems setThirdPartEmployeeId(String thirdPartEmployeeId) {
