@@ -4,6 +4,9 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListInstanceHistoryEventsRequest extends TeaModel {
+    @NameInMap("body")
+    public java.util.List<ListInstanceHistoryEventsRequestBody> body;
+
     @NameInMap("eventCreateEndTime")
     public String eventCreateEndTime;
 
@@ -46,6 +49,14 @@ public class ListInstanceHistoryEventsRequest extends TeaModel {
     public static ListInstanceHistoryEventsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListInstanceHistoryEventsRequest self = new ListInstanceHistoryEventsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListInstanceHistoryEventsRequest setBody(java.util.List<ListInstanceHistoryEventsRequestBody> body) {
+        this.body = body;
+        return this;
+    }
+    public java.util.List<ListInstanceHistoryEventsRequestBody> getBody() {
+        return this.body;
     }
 
     public ListInstanceHistoryEventsRequest setEventCreateEndTime(String eventCreateEndTime) {
@@ -150,6 +161,36 @@ public class ListInstanceHistoryEventsRequest extends TeaModel {
     }
     public Integer getSize() {
         return this.size;
+    }
+
+    public static class ListInstanceHistoryEventsRequestBody extends TeaModel {
+        @NameInMap("desc")
+        public Boolean desc;
+
+        @NameInMap("sortField")
+        public String sortField;
+
+        public static ListInstanceHistoryEventsRequestBody build(java.util.Map<String, ?> map) throws Exception {
+            ListInstanceHistoryEventsRequestBody self = new ListInstanceHistoryEventsRequestBody();
+            return TeaModel.build(map, self);
+        }
+
+        public ListInstanceHistoryEventsRequestBody setDesc(Boolean desc) {
+            this.desc = desc;
+            return this;
+        }
+        public Boolean getDesc() {
+            return this.desc;
+        }
+
+        public ListInstanceHistoryEventsRequestBody setSortField(String sortField) {
+            this.sortField = sortField;
+            return this;
+        }
+        public String getSortField() {
+            return this.sortField;
+        }
+
     }
 
 }

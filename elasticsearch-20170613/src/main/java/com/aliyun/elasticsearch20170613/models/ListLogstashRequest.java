@@ -10,9 +10,6 @@ public class ListLogstashRequest extends TeaModel {
     @NameInMap("instanceId")
     public String instanceId;
 
-    @NameInMap("ownerId")
-    public String ownerId;
-
     @NameInMap("page")
     public Integer page;
 
@@ -47,14 +44,6 @@ public class ListLogstashRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public ListLogstashRequest setOwnerId(String ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public String getOwnerId() {
-        return this.ownerId;
     }
 
     public ListLogstashRequest setPage(Integer page) {

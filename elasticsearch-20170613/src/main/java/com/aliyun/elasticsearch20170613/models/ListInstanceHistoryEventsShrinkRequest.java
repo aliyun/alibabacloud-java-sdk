@@ -4,6 +4,9 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListInstanceHistoryEventsShrinkRequest extends TeaModel {
+    @NameInMap("body")
+    public java.util.List<ListInstanceHistoryEventsShrinkRequestBody> body;
+
     @NameInMap("eventCreateEndTime")
     public String eventCreateEndTime;
 
@@ -46,6 +49,14 @@ public class ListInstanceHistoryEventsShrinkRequest extends TeaModel {
     public static ListInstanceHistoryEventsShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ListInstanceHistoryEventsShrinkRequest self = new ListInstanceHistoryEventsShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListInstanceHistoryEventsShrinkRequest setBody(java.util.List<ListInstanceHistoryEventsShrinkRequestBody> body) {
+        this.body = body;
+        return this;
+    }
+    public java.util.List<ListInstanceHistoryEventsShrinkRequestBody> getBody() {
+        return this.body;
     }
 
     public ListInstanceHistoryEventsShrinkRequest setEventCreateEndTime(String eventCreateEndTime) {
@@ -150,6 +161,36 @@ public class ListInstanceHistoryEventsShrinkRequest extends TeaModel {
     }
     public Integer getSize() {
         return this.size;
+    }
+
+    public static class ListInstanceHistoryEventsShrinkRequestBody extends TeaModel {
+        @NameInMap("desc")
+        public Boolean desc;
+
+        @NameInMap("sortField")
+        public String sortField;
+
+        public static ListInstanceHistoryEventsShrinkRequestBody build(java.util.Map<String, ?> map) throws Exception {
+            ListInstanceHistoryEventsShrinkRequestBody self = new ListInstanceHistoryEventsShrinkRequestBody();
+            return TeaModel.build(map, self);
+        }
+
+        public ListInstanceHistoryEventsShrinkRequestBody setDesc(Boolean desc) {
+            this.desc = desc;
+            return this;
+        }
+        public Boolean getDesc() {
+            return this.desc;
+        }
+
+        public ListInstanceHistoryEventsShrinkRequestBody setSortField(String sortField) {
+            this.sortField = sortField;
+            return this;
+        }
+        public String getSortField() {
+            return this.sortField;
+        }
+
     }
 
 }
