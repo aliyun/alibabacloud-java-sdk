@@ -13,6 +13,7 @@ public class UpdateIDEEventResultRequest extends TeaModel {
     @NameInMap("ExtensionCode")
     public String extensionCode;
 
+    // 扩展点消息UUID
     @NameInMap("MessageId")
     public String messageId;
 

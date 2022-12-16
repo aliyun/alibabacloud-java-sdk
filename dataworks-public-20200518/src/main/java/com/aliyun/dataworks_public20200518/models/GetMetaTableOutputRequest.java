@@ -19,6 +19,9 @@ public class GetMetaTableOutputRequest extends TeaModel {
     @NameInMap("TableGuid")
     public String tableGuid;
 
+    @NameInMap("TaskId")
+    public String taskId;
+
     public static GetMetaTableOutputRequest build(java.util.Map<String, ?> map) throws Exception {
         GetMetaTableOutputRequest self = new GetMetaTableOutputRequest();
         return TeaModel.build(map, self);
@@ -62,6 +65,14 @@ public class GetMetaTableOutputRequest extends TeaModel {
     }
     public String getTableGuid() {
         return this.tableGuid;
+    }
+
+    public GetMetaTableOutputRequest setTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public String getTaskId() {
+        return this.taskId;
     }
 
 }

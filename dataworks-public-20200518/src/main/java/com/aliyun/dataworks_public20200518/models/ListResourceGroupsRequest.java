@@ -19,9 +19,6 @@ public class ListResourceGroupsRequest extends TeaModel {
     @NameInMap("Tags")
     public java.util.List<ListResourceGroupsRequestTags> tags;
 
-    @NameInMap("TypeNames")
-    public String typeNames;
-
     public static ListResourceGroupsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListResourceGroupsRequest self = new ListResourceGroupsRequest();
         return TeaModel.build(map, self);
@@ -65,14 +62,6 @@ public class ListResourceGroupsRequest extends TeaModel {
     }
     public java.util.List<ListResourceGroupsRequestTags> getTags() {
         return this.tags;
-    }
-
-    public ListResourceGroupsRequest setTypeNames(String typeNames) {
-        this.typeNames = typeNames;
-        return this;
-    }
-    public String getTypeNames() {
-        return this.typeNames;
     }
 
     public static class ListResourceGroupsRequestTags extends TeaModel {

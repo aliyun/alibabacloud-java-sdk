@@ -19,9 +19,6 @@ public class ListResourceGroupsShrinkRequest extends TeaModel {
     @NameInMap("Tags")
     public String tagsShrink;
 
-    @NameInMap("TypeNames")
-    public String typeNames;
-
     public static ListResourceGroupsShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ListResourceGroupsShrinkRequest self = new ListResourceGroupsShrinkRequest();
         return TeaModel.build(map, self);
@@ -65,14 +62,6 @@ public class ListResourceGroupsShrinkRequest extends TeaModel {
     }
     public String getTagsShrink() {
         return this.tagsShrink;
-    }
-
-    public ListResourceGroupsShrinkRequest setTypeNames(String typeNames) {
-        this.typeNames = typeNames;
-        return this;
-    }
-    public String getTypeNames() {
-        return this.typeNames;
     }
 
 }
