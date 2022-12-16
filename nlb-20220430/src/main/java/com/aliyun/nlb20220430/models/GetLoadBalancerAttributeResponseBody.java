@@ -64,6 +64,9 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    @NameInMap("SecurityGroupIds")
+    public java.util.List<String> securityGroupIds;
+
     @NameInMap("VpcId")
     public String vpcId;
 
@@ -233,6 +236,14 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public GetLoadBalancerAttributeResponseBody setSecurityGroupIds(java.util.List<String> securityGroupIds) {
+        this.securityGroupIds = securityGroupIds;
+        return this;
+    }
+    public java.util.List<String> getSecurityGroupIds() {
+        return this.securityGroupIds;
     }
 
     public GetLoadBalancerAttributeResponseBody setVpcId(String vpcId) {
