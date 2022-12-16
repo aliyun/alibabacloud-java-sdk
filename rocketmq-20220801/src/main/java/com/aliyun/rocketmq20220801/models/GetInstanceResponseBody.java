@@ -116,6 +116,25 @@ public class GetInstanceResponseBody extends TeaModel {
 
     }
 
+    public static class GetInstanceResponseBodyDataAclInfo extends TeaModel {
+        @NameInMap("aclType")
+        public String aclType;
+
+        public static GetInstanceResponseBodyDataAclInfo build(java.util.Map<String, ?> map) throws Exception {
+            GetInstanceResponseBodyDataAclInfo self = new GetInstanceResponseBodyDataAclInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public GetInstanceResponseBodyDataAclInfo setAclType(String aclType) {
+            this.aclType = aclType;
+            return this;
+        }
+        public String getAclType() {
+            return this.aclType;
+        }
+
+    }
+
     public static class GetInstanceResponseBodyDataExtConfig extends TeaModel {
         @NameInMap("aclType")
         public String aclType;
@@ -316,6 +335,58 @@ public class GetInstanceResponseBody extends TeaModel {
 
     }
 
+    public static class GetInstanceResponseBodyDataNetworkInfoInternetInfo extends TeaModel {
+        @NameInMap("flowOutBandwidth")
+        public Integer flowOutBandwidth;
+
+        @NameInMap("flowOutType")
+        public String flowOutType;
+
+        @NameInMap("internetSpec")
+        public String internetSpec;
+
+        @NameInMap("ipWhitelist")
+        public java.util.List<String> ipWhitelist;
+
+        public static GetInstanceResponseBodyDataNetworkInfoInternetInfo build(java.util.Map<String, ?> map) throws Exception {
+            GetInstanceResponseBodyDataNetworkInfoInternetInfo self = new GetInstanceResponseBodyDataNetworkInfoInternetInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public GetInstanceResponseBodyDataNetworkInfoInternetInfo setFlowOutBandwidth(Integer flowOutBandwidth) {
+            this.flowOutBandwidth = flowOutBandwidth;
+            return this;
+        }
+        public Integer getFlowOutBandwidth() {
+            return this.flowOutBandwidth;
+        }
+
+        public GetInstanceResponseBodyDataNetworkInfoInternetInfo setFlowOutType(String flowOutType) {
+            this.flowOutType = flowOutType;
+            return this;
+        }
+        public String getFlowOutType() {
+            return this.flowOutType;
+        }
+
+        public GetInstanceResponseBodyDataNetworkInfoInternetInfo setInternetSpec(String internetSpec) {
+            this.internetSpec = internetSpec;
+            return this;
+        }
+        public String getInternetSpec() {
+            return this.internetSpec;
+        }
+
+        public GetInstanceResponseBodyDataNetworkInfoInternetInfo setIpWhitelist(java.util.List<String> ipWhitelist) {
+            this.ipWhitelist = ipWhitelist;
+            return this;
+        }
+        public java.util.List<String> getIpWhitelist() {
+            return this.ipWhitelist;
+        }
+
+    }
+
     public static class GetInstanceResponseBodyDataNetworkInfoVpcInfo extends TeaModel {
         @NameInMap("vSwitchId")
         public String vSwitchId;
@@ -350,6 +421,9 @@ public class GetInstanceResponseBody extends TeaModel {
         @NameInMap("endpoints")
         public java.util.List<GetInstanceResponseBodyDataNetworkInfoEndpoints> endpoints;
 
+        @NameInMap("internetInfo")
+        public GetInstanceResponseBodyDataNetworkInfoInternetInfo internetInfo;
+
         @NameInMap("vpcInfo")
         public GetInstanceResponseBodyDataNetworkInfoVpcInfo vpcInfo;
 
@@ -366,6 +440,14 @@ public class GetInstanceResponseBody extends TeaModel {
             return this.endpoints;
         }
 
+        public GetInstanceResponseBodyDataNetworkInfo setInternetInfo(GetInstanceResponseBodyDataNetworkInfoInternetInfo internetInfo) {
+            this.internetInfo = internetInfo;
+            return this;
+        }
+        public GetInstanceResponseBodyDataNetworkInfoInternetInfo getInternetInfo() {
+            return this.internetInfo;
+        }
+
         public GetInstanceResponseBodyDataNetworkInfo setVpcInfo(GetInstanceResponseBodyDataNetworkInfoVpcInfo vpcInfo) {
             this.vpcInfo = vpcInfo;
             return this;
@@ -376,10 +458,77 @@ public class GetInstanceResponseBody extends TeaModel {
 
     }
 
+    public static class GetInstanceResponseBodyDataProductInfo extends TeaModel {
+        @NameInMap("autoScaling")
+        public Boolean autoScaling;
+
+        @NameInMap("messageRetentionTime")
+        public Integer messageRetentionTime;
+
+        @NameInMap("msgProcessSpec")
+        public String msgProcessSpec;
+
+        @NameInMap("sendReceiveRatio")
+        public Float sendReceiveRatio;
+
+        @NameInMap("supportAutoScaling")
+        public Boolean supportAutoScaling;
+
+        public static GetInstanceResponseBodyDataProductInfo build(java.util.Map<String, ?> map) throws Exception {
+            GetInstanceResponseBodyDataProductInfo self = new GetInstanceResponseBodyDataProductInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public GetInstanceResponseBodyDataProductInfo setAutoScaling(Boolean autoScaling) {
+            this.autoScaling = autoScaling;
+            return this;
+        }
+        public Boolean getAutoScaling() {
+            return this.autoScaling;
+        }
+
+        public GetInstanceResponseBodyDataProductInfo setMessageRetentionTime(Integer messageRetentionTime) {
+            this.messageRetentionTime = messageRetentionTime;
+            return this;
+        }
+        public Integer getMessageRetentionTime() {
+            return this.messageRetentionTime;
+        }
+
+        public GetInstanceResponseBodyDataProductInfo setMsgProcessSpec(String msgProcessSpec) {
+            this.msgProcessSpec = msgProcessSpec;
+            return this;
+        }
+        public String getMsgProcessSpec() {
+            return this.msgProcessSpec;
+        }
+
+        public GetInstanceResponseBodyDataProductInfo setSendReceiveRatio(Float sendReceiveRatio) {
+            this.sendReceiveRatio = sendReceiveRatio;
+            return this;
+        }
+        public Float getSendReceiveRatio() {
+            return this.sendReceiveRatio;
+        }
+
+        public GetInstanceResponseBodyDataProductInfo setSupportAutoScaling(Boolean supportAutoScaling) {
+            this.supportAutoScaling = supportAutoScaling;
+            return this;
+        }
+        public Boolean getSupportAutoScaling() {
+            return this.supportAutoScaling;
+        }
+
+    }
+
     public static class GetInstanceResponseBodyData extends TeaModel {
         @NameInMap("accountInfo")
         public GetInstanceResponseBodyDataAccountInfo accountInfo;
 
+        @NameInMap("aclInfo")
+        public GetInstanceResponseBodyDataAclInfo aclInfo;
+
+        // BID
         @NameInMap("bid")
         public String bid;
 
@@ -394,9 +543,6 @@ public class GetInstanceResponseBody extends TeaModel {
 
         @NameInMap("extConfig")
         public GetInstanceResponseBodyDataExtConfig extConfig;
-
-        @NameInMap("groupCount")
-        public Long groupCount;
 
         @NameInMap("instanceId")
         public String instanceId;
@@ -413,6 +559,9 @@ public class GetInstanceResponseBody extends TeaModel {
         @NameInMap("paymentType")
         public String paymentType;
 
+        @NameInMap("productInfo")
+        public GetInstanceResponseBodyDataProductInfo productInfo;
+
         @NameInMap("regionId")
         public String regionId;
 
@@ -421,6 +570,9 @@ public class GetInstanceResponseBody extends TeaModel {
 
         @NameInMap("remark")
         public String remark;
+
+        @NameInMap("resourceGroupId")
+        public String resourceGroupId;
 
         @NameInMap("seriesCode")
         public String seriesCode;
@@ -436,9 +588,6 @@ public class GetInstanceResponseBody extends TeaModel {
 
         @NameInMap("subSeriesCode")
         public String subSeriesCode;
-
-        @NameInMap("topicCount")
-        public Long topicCount;
 
         @NameInMap("updateTime")
         public String updateTime;
@@ -457,6 +606,14 @@ public class GetInstanceResponseBody extends TeaModel {
         }
         public GetInstanceResponseBodyDataAccountInfo getAccountInfo() {
             return this.accountInfo;
+        }
+
+        public GetInstanceResponseBodyData setAclInfo(GetInstanceResponseBodyDataAclInfo aclInfo) {
+            this.aclInfo = aclInfo;
+            return this;
+        }
+        public GetInstanceResponseBodyDataAclInfo getAclInfo() {
+            return this.aclInfo;
         }
 
         public GetInstanceResponseBodyData setBid(String bid) {
@@ -499,14 +656,6 @@ public class GetInstanceResponseBody extends TeaModel {
             return this.extConfig;
         }
 
-        public GetInstanceResponseBodyData setGroupCount(Long groupCount) {
-            this.groupCount = groupCount;
-            return this;
-        }
-        public Long getGroupCount() {
-            return this.groupCount;
-        }
-
         public GetInstanceResponseBodyData setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
@@ -547,6 +696,14 @@ public class GetInstanceResponseBody extends TeaModel {
             return this.paymentType;
         }
 
+        public GetInstanceResponseBodyData setProductInfo(GetInstanceResponseBodyDataProductInfo productInfo) {
+            this.productInfo = productInfo;
+            return this;
+        }
+        public GetInstanceResponseBodyDataProductInfo getProductInfo() {
+            return this.productInfo;
+        }
+
         public GetInstanceResponseBodyData setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
@@ -569,6 +726,14 @@ public class GetInstanceResponseBody extends TeaModel {
         }
         public String getRemark() {
             return this.remark;
+        }
+
+        public GetInstanceResponseBodyData setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public GetInstanceResponseBodyData setSeriesCode(String seriesCode) {
@@ -609,14 +774,6 @@ public class GetInstanceResponseBody extends TeaModel {
         }
         public String getSubSeriesCode() {
             return this.subSeriesCode;
-        }
-
-        public GetInstanceResponseBodyData setTopicCount(Long topicCount) {
-            this.topicCount = topicCount;
-            return this;
-        }
-        public Long getTopicCount() {
-            return this.topicCount;
         }
 
         public GetInstanceResponseBodyData setUpdateTime(String updateTime) {

@@ -4,14 +4,14 @@ package com.aliyun.rocketmq20220801.models;
 import com.aliyun.tea.*;
 
 public class UpdateInstanceRequest extends TeaModel {
-    @NameInMap("extConfig")
-    public UpdateInstanceRequestExtConfig extConfig;
-
     @NameInMap("instanceName")
     public String instanceName;
 
     @NameInMap("networkInfo")
     public UpdateInstanceRequestNetworkInfo networkInfo;
+
+    @NameInMap("productInfo")
+    public UpdateInstanceRequestProductInfo productInfo;
 
     @NameInMap("remark")
     public String remark;
@@ -19,14 +19,6 @@ public class UpdateInstanceRequest extends TeaModel {
     public static UpdateInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateInstanceRequest self = new UpdateInstanceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateInstanceRequest setExtConfig(UpdateInstanceRequestExtConfig extConfig) {
-        this.extConfig = extConfig;
-        return this;
-    }
-    public UpdateInstanceRequestExtConfig getExtConfig() {
-        return this.extConfig;
     }
 
     public UpdateInstanceRequest setInstanceName(String instanceName) {
@@ -45,6 +37,14 @@ public class UpdateInstanceRequest extends TeaModel {
         return this.networkInfo;
     }
 
+    public UpdateInstanceRequest setProductInfo(UpdateInstanceRequestProductInfo productInfo) {
+        this.productInfo = productInfo;
+        return this;
+    }
+    public UpdateInstanceRequestProductInfo getProductInfo() {
+        return this.productInfo;
+    }
+
     public UpdateInstanceRequest setRemark(String remark) {
         this.remark = remark;
         return this;
@@ -53,7 +53,45 @@ public class UpdateInstanceRequest extends TeaModel {
         return this.remark;
     }
 
-    public static class UpdateInstanceRequestExtConfig extends TeaModel {
+    public static class UpdateInstanceRequestNetworkInfoInternetInfo extends TeaModel {
+        @NameInMap("ipWhitelist")
+        public java.util.List<String> ipWhitelist;
+
+        public static UpdateInstanceRequestNetworkInfoInternetInfo build(java.util.Map<String, ?> map) throws Exception {
+            UpdateInstanceRequestNetworkInfoInternetInfo self = new UpdateInstanceRequestNetworkInfoInternetInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateInstanceRequestNetworkInfoInternetInfo setIpWhitelist(java.util.List<String> ipWhitelist) {
+            this.ipWhitelist = ipWhitelist;
+            return this;
+        }
+        public java.util.List<String> getIpWhitelist() {
+            return this.ipWhitelist;
+        }
+
+    }
+
+    public static class UpdateInstanceRequestNetworkInfo extends TeaModel {
+        @NameInMap("internetInfo")
+        public UpdateInstanceRequestNetworkInfoInternetInfo internetInfo;
+
+        public static UpdateInstanceRequestNetworkInfo build(java.util.Map<String, ?> map) throws Exception {
+            UpdateInstanceRequestNetworkInfo self = new UpdateInstanceRequestNetworkInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateInstanceRequestNetworkInfo setInternetInfo(UpdateInstanceRequestNetworkInfoInternetInfo internetInfo) {
+            this.internetInfo = internetInfo;
+            return this;
+        }
+        public UpdateInstanceRequestNetworkInfoInternetInfo getInternetInfo() {
+            return this.internetInfo;
+        }
+
+    }
+
+    public static class UpdateInstanceRequestProductInfo extends TeaModel {
         @NameInMap("autoScaling")
         public Boolean autoScaling;
 
@@ -63,12 +101,12 @@ public class UpdateInstanceRequest extends TeaModel {
         @NameInMap("sendReceiveRatio")
         public Float sendReceiveRatio;
 
-        public static UpdateInstanceRequestExtConfig build(java.util.Map<String, ?> map) throws Exception {
-            UpdateInstanceRequestExtConfig self = new UpdateInstanceRequestExtConfig();
+        public static UpdateInstanceRequestProductInfo build(java.util.Map<String, ?> map) throws Exception {
+            UpdateInstanceRequestProductInfo self = new UpdateInstanceRequestProductInfo();
             return TeaModel.build(map, self);
         }
 
-        public UpdateInstanceRequestExtConfig setAutoScaling(Boolean autoScaling) {
+        public UpdateInstanceRequestProductInfo setAutoScaling(Boolean autoScaling) {
             this.autoScaling = autoScaling;
             return this;
         }
@@ -76,7 +114,7 @@ public class UpdateInstanceRequest extends TeaModel {
             return this.autoScaling;
         }
 
-        public UpdateInstanceRequestExtConfig setMessageRetentionTime(Integer messageRetentionTime) {
+        public UpdateInstanceRequestProductInfo setMessageRetentionTime(Integer messageRetentionTime) {
             this.messageRetentionTime = messageRetentionTime;
             return this;
         }
@@ -84,61 +122,12 @@ public class UpdateInstanceRequest extends TeaModel {
             return this.messageRetentionTime;
         }
 
-        public UpdateInstanceRequestExtConfig setSendReceiveRatio(Float sendReceiveRatio) {
+        public UpdateInstanceRequestProductInfo setSendReceiveRatio(Float sendReceiveRatio) {
             this.sendReceiveRatio = sendReceiveRatio;
             return this;
         }
         public Float getSendReceiveRatio() {
             return this.sendReceiveRatio;
-        }
-
-    }
-
-    public static class UpdateInstanceRequestNetworkInfoEndpoints extends TeaModel {
-        @NameInMap("endpointType")
-        public String endpointType;
-
-        @NameInMap("ipWhitelist")
-        public String ipWhitelist;
-
-        public static UpdateInstanceRequestNetworkInfoEndpoints build(java.util.Map<String, ?> map) throws Exception {
-            UpdateInstanceRequestNetworkInfoEndpoints self = new UpdateInstanceRequestNetworkInfoEndpoints();
-            return TeaModel.build(map, self);
-        }
-
-        public UpdateInstanceRequestNetworkInfoEndpoints setEndpointType(String endpointType) {
-            this.endpointType = endpointType;
-            return this;
-        }
-        public String getEndpointType() {
-            return this.endpointType;
-        }
-
-        public UpdateInstanceRequestNetworkInfoEndpoints setIpWhitelist(String ipWhitelist) {
-            this.ipWhitelist = ipWhitelist;
-            return this;
-        }
-        public String getIpWhitelist() {
-            return this.ipWhitelist;
-        }
-
-    }
-
-    public static class UpdateInstanceRequestNetworkInfo extends TeaModel {
-        @NameInMap("endpoints")
-        public java.util.List<UpdateInstanceRequestNetworkInfoEndpoints> endpoints;
-
-        public static UpdateInstanceRequestNetworkInfo build(java.util.Map<String, ?> map) throws Exception {
-            UpdateInstanceRequestNetworkInfo self = new UpdateInstanceRequestNetworkInfo();
-            return TeaModel.build(map, self);
-        }
-
-        public UpdateInstanceRequestNetworkInfo setEndpoints(java.util.List<UpdateInstanceRequestNetworkInfoEndpoints> endpoints) {
-            this.endpoints = endpoints;
-            return this;
-        }
-        public java.util.List<UpdateInstanceRequestNetworkInfoEndpoints> getEndpoints() {
-            return this.endpoints;
         }
 
     }
