@@ -19,6 +19,9 @@ public class AddImageAdvanceRequest extends TeaModel {
     @NameInMap("IntAttr")
     public Integer intAttr;
 
+    @NameInMap("IntAttr2")
+    public Integer intAttr2;
+
     @NameInMap("PicContent")
     public java.io.InputStream picContentObject;
 
@@ -33,6 +36,9 @@ public class AddImageAdvanceRequest extends TeaModel {
 
     @NameInMap("StrAttr")
     public String strAttr;
+
+    @NameInMap("StrAttr2")
+    public String strAttr2;
 
     public static AddImageAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         AddImageAdvanceRequest self = new AddImageAdvanceRequest();
@@ -79,6 +85,14 @@ public class AddImageAdvanceRequest extends TeaModel {
         return this.intAttr;
     }
 
+    public AddImageAdvanceRequest setIntAttr2(Integer intAttr2) {
+        this.intAttr2 = intAttr2;
+        return this;
+    }
+    public Integer getIntAttr2() {
+        return this.intAttr2;
+    }
+
     public AddImageAdvanceRequest setPicContentObject(java.io.InputStream picContentObject) {
         this.picContentObject = picContentObject;
         return this;
@@ -117,6 +131,14 @@ public class AddImageAdvanceRequest extends TeaModel {
     }
     public String getStrAttr() {
         return this.strAttr;
+    }
+
+    public AddImageAdvanceRequest setStrAttr2(String strAttr2) {
+        this.strAttr2 = strAttr2;
+        return this;
+    }
+    public String getStrAttr2() {
+        return this.strAttr2;
     }
 
 }

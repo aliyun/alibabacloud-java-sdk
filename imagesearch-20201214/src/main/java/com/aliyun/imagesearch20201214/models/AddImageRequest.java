@@ -19,6 +19,9 @@ public class AddImageRequest extends TeaModel {
     @NameInMap("IntAttr")
     public Integer intAttr;
 
+    @NameInMap("IntAttr2")
+    public Integer intAttr2;
+
     @NameInMap("PicContent")
     public String picContent;
 
@@ -33,6 +36,9 @@ public class AddImageRequest extends TeaModel {
 
     @NameInMap("StrAttr")
     public String strAttr;
+
+    @NameInMap("StrAttr2")
+    public String strAttr2;
 
     public static AddImageRequest build(java.util.Map<String, ?> map) throws Exception {
         AddImageRequest self = new AddImageRequest();
@@ -79,6 +85,14 @@ public class AddImageRequest extends TeaModel {
         return this.intAttr;
     }
 
+    public AddImageRequest setIntAttr2(Integer intAttr2) {
+        this.intAttr2 = intAttr2;
+        return this;
+    }
+    public Integer getIntAttr2() {
+        return this.intAttr2;
+    }
+
     public AddImageRequest setPicContent(String picContent) {
         this.picContent = picContent;
         return this;
@@ -117,6 +131,14 @@ public class AddImageRequest extends TeaModel {
     }
     public String getStrAttr() {
         return this.strAttr;
+    }
+
+    public AddImageRequest setStrAttr2(String strAttr2) {
+        this.strAttr2 = strAttr2;
+        return this;
+    }
+    public String getStrAttr2() {
+        return this.strAttr2;
     }
 
 }
