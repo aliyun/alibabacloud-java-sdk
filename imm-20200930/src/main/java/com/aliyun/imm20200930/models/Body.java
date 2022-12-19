@@ -132,6 +132,47 @@ public class Body extends TeaModel {
 
     }
 
+    public static class SearchImageFigureClusterResponseBodyClusters extends TeaModel {
+        @NameInMap("Boundary")
+        public Boundary boundary;
+
+        @NameInMap("ClusterId")
+        public String clusterId;
+
+        @NameInMap("Similarity")
+        public Float similarity;
+
+        public static SearchImageFigureClusterResponseBodyClusters build(java.util.Map<String, ?> map) throws Exception {
+            SearchImageFigureClusterResponseBodyClusters self = new SearchImageFigureClusterResponseBodyClusters();
+            return TeaModel.build(map, self);
+        }
+
+        public SearchImageFigureClusterResponseBodyClusters setBoundary(Boundary boundary) {
+            this.boundary = boundary;
+            return this;
+        }
+        public Boundary getBoundary() {
+            return this.boundary;
+        }
+
+        public SearchImageFigureClusterResponseBodyClusters setClusterId(String clusterId) {
+            this.clusterId = clusterId;
+            return this;
+        }
+        public String getClusterId() {
+            return this.clusterId;
+        }
+
+        public SearchImageFigureClusterResponseBodyClusters setSimilarity(Float similarity) {
+            this.similarity = similarity;
+            return this;
+        }
+        public Float getSimilarity() {
+            return this.similarity;
+        }
+
+    }
+
     public static class SimpleQueryResponseBodyAggregationsGroups extends TeaModel {
         @NameInMap("Count")
         public Long count;
