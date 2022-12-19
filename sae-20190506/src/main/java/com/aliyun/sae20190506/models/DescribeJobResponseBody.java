@@ -87,6 +87,7 @@ public class DescribeJobResponseBody extends TeaModel {
     }
 
     public static class DescribeJobResponseBodyDataConfigMapMountDesc extends TeaModel {
+        // ConfigMap ID。
         @NameInMap("ConfigMapId")
         public Long configMapId;
 
@@ -254,6 +255,9 @@ public class DescribeJobResponseBody extends TeaModel {
         @NameInMap("AcrAssumeRoleArn")
         public String acrAssumeRoleArn;
 
+        @NameInMap("AcrInstanceId")
+        public String acrInstanceId;
+
         @NameInMap("AppDescription")
         public String appDescription;
 
@@ -263,14 +267,8 @@ public class DescribeJobResponseBody extends TeaModel {
         @NameInMap("AppName")
         public String appName;
 
-        @NameInMap("AssociateEip")
-        public Boolean associateEip;
-
         @NameInMap("BackoffLimit")
         public Long backoffLimit;
-
-        @NameInMap("BatchWaitTime")
-        public Integer batchWaitTime;
 
         @NameInMap("Command")
         public String command;
@@ -293,12 +291,6 @@ public class DescribeJobResponseBody extends TeaModel {
         @NameInMap("EdasContainerVersion")
         public String edasContainerVersion;
 
-        @NameInMap("EnableAhas")
-        public String enableAhas;
-
-        @NameInMap("EnableGreyTagRoute")
-        public Boolean enableGreyTagRoute;
-
         @NameInMap("Envs")
         public String envs;
 
@@ -317,14 +309,8 @@ public class DescribeJobResponseBody extends TeaModel {
         @NameInMap("Jdk")
         public String jdk;
 
-        @NameInMap("Liveness")
-        public String liveness;
-
         @NameInMap("Memory")
         public Integer memory;
-
-        @NameInMap("MinReadyInstances")
-        public Integer minReadyInstances;
 
         @NameInMap("MountDesc")
         public java.util.List<DescribeJobResponseBodyDataMountDesc> mountDesc;
@@ -332,15 +318,13 @@ public class DescribeJobResponseBody extends TeaModel {
         @NameInMap("MountHost")
         public String mountHost;
 
-        @NameInMap("MseApplicationId")
-        public String mseApplicationId;
-
         @NameInMap("NamespaceId")
         public String namespaceId;
 
         @NameInMap("NasConfigs")
         public String nasConfigs;
 
+        // NAS ID。
         @NameInMap("NasId")
         public String nasId;
 
@@ -361,9 +345,6 @@ public class DescribeJobResponseBody extends TeaModel {
 
         @NameInMap("PackageVersion")
         public String packageVersion;
-
-        @NameInMap("PhpArmsConfigLocation")
-        public String phpArmsConfigLocation;
 
         @NameInMap("PhpConfig")
         public String phpConfig;
@@ -388,9 +369,6 @@ public class DescribeJobResponseBody extends TeaModel {
 
         @NameInMap("PythonModules")
         public String pythonModules;
-
-        @NameInMap("Readiness")
-        public String readiness;
 
         @NameInMap("RefAppId")
         public String refAppId;
@@ -437,9 +415,11 @@ public class DescribeJobResponseBody extends TeaModel {
         @NameInMap("TriggerConfig")
         public String triggerConfig;
 
+        // vSwitch ID。
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        // VPC ID。
         @NameInMap("VpcId")
         public String vpcId;
 
@@ -463,6 +443,14 @@ public class DescribeJobResponseBody extends TeaModel {
         }
         public String getAcrAssumeRoleArn() {
             return this.acrAssumeRoleArn;
+        }
+
+        public DescribeJobResponseBodyData setAcrInstanceId(String acrInstanceId) {
+            this.acrInstanceId = acrInstanceId;
+            return this;
+        }
+        public String getAcrInstanceId() {
+            return this.acrInstanceId;
         }
 
         public DescribeJobResponseBodyData setAppDescription(String appDescription) {
@@ -489,28 +477,12 @@ public class DescribeJobResponseBody extends TeaModel {
             return this.appName;
         }
 
-        public DescribeJobResponseBodyData setAssociateEip(Boolean associateEip) {
-            this.associateEip = associateEip;
-            return this;
-        }
-        public Boolean getAssociateEip() {
-            return this.associateEip;
-        }
-
         public DescribeJobResponseBodyData setBackoffLimit(Long backoffLimit) {
             this.backoffLimit = backoffLimit;
             return this;
         }
         public Long getBackoffLimit() {
             return this.backoffLimit;
-        }
-
-        public DescribeJobResponseBodyData setBatchWaitTime(Integer batchWaitTime) {
-            this.batchWaitTime = batchWaitTime;
-            return this;
-        }
-        public Integer getBatchWaitTime() {
-            return this.batchWaitTime;
         }
 
         public DescribeJobResponseBodyData setCommand(String command) {
@@ -569,22 +541,6 @@ public class DescribeJobResponseBody extends TeaModel {
             return this.edasContainerVersion;
         }
 
-        public DescribeJobResponseBodyData setEnableAhas(String enableAhas) {
-            this.enableAhas = enableAhas;
-            return this;
-        }
-        public String getEnableAhas() {
-            return this.enableAhas;
-        }
-
-        public DescribeJobResponseBodyData setEnableGreyTagRoute(Boolean enableGreyTagRoute) {
-            this.enableGreyTagRoute = enableGreyTagRoute;
-            return this;
-        }
-        public Boolean getEnableGreyTagRoute() {
-            return this.enableGreyTagRoute;
-        }
-
         public DescribeJobResponseBodyData setEnvs(String envs) {
             this.envs = envs;
             return this;
@@ -633,28 +589,12 @@ public class DescribeJobResponseBody extends TeaModel {
             return this.jdk;
         }
 
-        public DescribeJobResponseBodyData setLiveness(String liveness) {
-            this.liveness = liveness;
-            return this;
-        }
-        public String getLiveness() {
-            return this.liveness;
-        }
-
         public DescribeJobResponseBodyData setMemory(Integer memory) {
             this.memory = memory;
             return this;
         }
         public Integer getMemory() {
             return this.memory;
-        }
-
-        public DescribeJobResponseBodyData setMinReadyInstances(Integer minReadyInstances) {
-            this.minReadyInstances = minReadyInstances;
-            return this;
-        }
-        public Integer getMinReadyInstances() {
-            return this.minReadyInstances;
         }
 
         public DescribeJobResponseBodyData setMountDesc(java.util.List<DescribeJobResponseBodyDataMountDesc> mountDesc) {
@@ -671,14 +611,6 @@ public class DescribeJobResponseBody extends TeaModel {
         }
         public String getMountHost() {
             return this.mountHost;
-        }
-
-        public DescribeJobResponseBodyData setMseApplicationId(String mseApplicationId) {
-            this.mseApplicationId = mseApplicationId;
-            return this;
-        }
-        public String getMseApplicationId() {
-            return this.mseApplicationId;
         }
 
         public DescribeJobResponseBodyData setNamespaceId(String namespaceId) {
@@ -753,14 +685,6 @@ public class DescribeJobResponseBody extends TeaModel {
             return this.packageVersion;
         }
 
-        public DescribeJobResponseBodyData setPhpArmsConfigLocation(String phpArmsConfigLocation) {
-            this.phpArmsConfigLocation = phpArmsConfigLocation;
-            return this;
-        }
-        public String getPhpArmsConfigLocation() {
-            return this.phpArmsConfigLocation;
-        }
-
         public DescribeJobResponseBodyData setPhpConfig(String phpConfig) {
             this.phpConfig = phpConfig;
             return this;
@@ -823,14 +747,6 @@ public class DescribeJobResponseBody extends TeaModel {
         }
         public String getPythonModules() {
             return this.pythonModules;
-        }
-
-        public DescribeJobResponseBodyData setReadiness(String readiness) {
-            this.readiness = readiness;
-            return this;
-        }
-        public String getReadiness() {
-            return this.readiness;
         }
 
         public DescribeJobResponseBodyData setRefAppId(String refAppId) {

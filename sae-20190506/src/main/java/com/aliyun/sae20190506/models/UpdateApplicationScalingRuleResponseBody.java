@@ -4,11 +4,23 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class UpdateApplicationScalingRuleResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Data")
     public UpdateApplicationScalingRuleResponseBodyData data;
 
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    @NameInMap("Message")
+    public String message;
+
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
 
     @NameInMap("TraceId")
     public String traceId;
@@ -16,6 +28,14 @@ public class UpdateApplicationScalingRuleResponseBody extends TeaModel {
     public static UpdateApplicationScalingRuleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateApplicationScalingRuleResponseBody self = new UpdateApplicationScalingRuleResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateApplicationScalingRuleResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public UpdateApplicationScalingRuleResponseBody setData(UpdateApplicationScalingRuleResponseBodyData data) {
@@ -26,12 +46,36 @@ public class UpdateApplicationScalingRuleResponseBody extends TeaModel {
         return this.data;
     }
 
+    public UpdateApplicationScalingRuleResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public UpdateApplicationScalingRuleResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
     public UpdateApplicationScalingRuleResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public UpdateApplicationScalingRuleResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public UpdateApplicationScalingRuleResponseBody setTraceId(String traceId) {

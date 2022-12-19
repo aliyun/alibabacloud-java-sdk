@@ -7,14 +7,14 @@ public class CreateJobRequest extends TeaModel {
     @NameInMap("AcrAssumeRoleArn")
     public String acrAssumeRoleArn;
 
+    @NameInMap("AcrInstanceId")
+    public String acrInstanceId;
+
     @NameInMap("AppDescription")
     public String appDescription;
 
     @NameInMap("AppName")
     public String appName;
-
-    @NameInMap("AssociateEip")
-    public Boolean associateEip;
 
     @NameInMap("AutoConfig")
     public Boolean autoConfig;
@@ -40,9 +40,6 @@ public class CreateJobRequest extends TeaModel {
     @NameInMap("CustomHostAlias")
     public String customHostAlias;
 
-    @NameInMap("Deploy")
-    public Boolean deploy;
-
     @NameInMap("EdasContainerVersion")
     public String edasContainerVersion;
 
@@ -63,9 +60,6 @@ public class CreateJobRequest extends TeaModel {
 
     @NameInMap("Jdk")
     public String jdk;
-
-    @NameInMap("Liveness")
-    public String liveness;
 
     @NameInMap("Memory")
     public Integer memory;
@@ -100,9 +94,6 @@ public class CreateJobRequest extends TeaModel {
     @NameInMap("PackageVersion")
     public String packageVersion;
 
-    @NameInMap("PhpArmsConfigLocation")
-    public String phpArmsConfigLocation;
-
     @NameInMap("PhpConfig")
     public String phpConfig;
 
@@ -123,9 +114,6 @@ public class CreateJobRequest extends TeaModel {
 
     @NameInMap("PythonModules")
     public String pythonModules;
-
-    @NameInMap("Readiness")
-    public String readiness;
 
     @NameInMap("RefAppId")
     public String refAppId;
@@ -188,6 +176,14 @@ public class CreateJobRequest extends TeaModel {
         return this.acrAssumeRoleArn;
     }
 
+    public CreateJobRequest setAcrInstanceId(String acrInstanceId) {
+        this.acrInstanceId = acrInstanceId;
+        return this;
+    }
+    public String getAcrInstanceId() {
+        return this.acrInstanceId;
+    }
+
     public CreateJobRequest setAppDescription(String appDescription) {
         this.appDescription = appDescription;
         return this;
@@ -202,14 +198,6 @@ public class CreateJobRequest extends TeaModel {
     }
     public String getAppName() {
         return this.appName;
-    }
-
-    public CreateJobRequest setAssociateEip(Boolean associateEip) {
-        this.associateEip = associateEip;
-        return this;
-    }
-    public Boolean getAssociateEip() {
-        return this.associateEip;
     }
 
     public CreateJobRequest setAutoConfig(Boolean autoConfig) {
@@ -276,14 +264,6 @@ public class CreateJobRequest extends TeaModel {
         return this.customHostAlias;
     }
 
-    public CreateJobRequest setDeploy(Boolean deploy) {
-        this.deploy = deploy;
-        return this;
-    }
-    public Boolean getDeploy() {
-        return this.deploy;
-    }
-
     public CreateJobRequest setEdasContainerVersion(String edasContainerVersion) {
         this.edasContainerVersion = edasContainerVersion;
         return this;
@@ -338,14 +318,6 @@ public class CreateJobRequest extends TeaModel {
     }
     public String getJdk() {
         return this.jdk;
-    }
-
-    public CreateJobRequest setLiveness(String liveness) {
-        this.liveness = liveness;
-        return this;
-    }
-    public String getLiveness() {
-        return this.liveness;
     }
 
     public CreateJobRequest setMemory(Integer memory) {
@@ -436,14 +408,6 @@ public class CreateJobRequest extends TeaModel {
         return this.packageVersion;
     }
 
-    public CreateJobRequest setPhpArmsConfigLocation(String phpArmsConfigLocation) {
-        this.phpArmsConfigLocation = phpArmsConfigLocation;
-        return this;
-    }
-    public String getPhpArmsConfigLocation() {
-        return this.phpArmsConfigLocation;
-    }
-
     public CreateJobRequest setPhpConfig(String phpConfig) {
         this.phpConfig = phpConfig;
         return this;
@@ -498,14 +462,6 @@ public class CreateJobRequest extends TeaModel {
     }
     public String getPythonModules() {
         return this.pythonModules;
-    }
-
-    public CreateJobRequest setReadiness(String readiness) {
-        this.readiness = readiness;
-        return this;
-    }
-    public String getReadiness() {
-        return this.readiness;
     }
 
     public CreateJobRequest setRefAppId(String refAppId) {

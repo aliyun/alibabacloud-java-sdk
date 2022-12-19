@@ -111,9 +111,11 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
+        // vSwitch ID。
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        // VPC ID。
         @NameInMap("VpcId")
         public String vpcId;
 

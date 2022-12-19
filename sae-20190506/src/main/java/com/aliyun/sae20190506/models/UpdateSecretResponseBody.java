@@ -88,18 +88,18 @@ public class UpdateSecretResponseBody extends TeaModel {
 
     public static class UpdateSecretResponseBodyData extends TeaModel {
         @NameInMap("SecretId")
-        public String secretId;
+        public Long secretId;
 
         public static UpdateSecretResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             UpdateSecretResponseBodyData self = new UpdateSecretResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public UpdateSecretResponseBodyData setSecretId(String secretId) {
+        public UpdateSecretResponseBodyData setSecretId(Long secretId) {
             this.secretId = secretId;
             return this;
         }
-        public String getSecretId() {
+        public Long getSecretId() {
             return this.secretId;
         }
 

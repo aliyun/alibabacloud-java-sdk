@@ -37,6 +37,9 @@ public class DeployApplicationRequest extends TeaModel {
     @NameInMap("CustomHostAlias")
     public String customHostAlias;
 
+    @NameInMap("Deploy")
+    public String deploy;
+
     @NameInMap("EdasContainerVersion")
     public String edasContainerVersion;
 
@@ -245,6 +248,14 @@ public class DeployApplicationRequest extends TeaModel {
     }
     public String getCustomHostAlias() {
         return this.customHostAlias;
+    }
+
+    public DeployApplicationRequest setDeploy(String deploy) {
+        this.deploy = deploy;
+        return this;
+    }
+    public String getDeploy() {
+        return this.deploy;
     }
 
     public DeployApplicationRequest setEdasContainerVersion(String edasContainerVersion) {

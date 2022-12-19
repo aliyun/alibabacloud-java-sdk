@@ -142,9 +142,6 @@ public class ListJobsResponseBody extends TeaModel {
         @NameInMap("Active")
         public Long active;
 
-        @NameInMap("AppDeletingStatus")
-        public Boolean appDeletingStatus;
-
         @NameInMap("AppDescription")
         public String appDescription;
 
@@ -160,9 +157,6 @@ public class ListJobsResponseBody extends TeaModel {
         @NameInMap("Failed")
         public Long failed;
 
-        @NameInMap("Instances")
-        public Integer instances;
-
         @NameInMap("LastChangeorderState")
         public String lastChangeorderState;
 
@@ -177,9 +171,6 @@ public class ListJobsResponseBody extends TeaModel {
 
         @NameInMap("RegionId")
         public String regionId;
-
-        @NameInMap("RunningInstances")
-        public Integer runningInstances;
 
         @NameInMap("Succeeded")
         public Long succeeded;
@@ -204,14 +195,6 @@ public class ListJobsResponseBody extends TeaModel {
         }
         public Long getActive() {
             return this.active;
-        }
-
-        public ListJobsResponseBodyDataApplications setAppDeletingStatus(Boolean appDeletingStatus) {
-            this.appDeletingStatus = appDeletingStatus;
-            return this;
-        }
-        public Boolean getAppDeletingStatus() {
-            return this.appDeletingStatus;
         }
 
         public ListJobsResponseBodyDataApplications setAppDescription(String appDescription) {
@@ -254,14 +237,6 @@ public class ListJobsResponseBody extends TeaModel {
             return this.failed;
         }
 
-        public ListJobsResponseBodyDataApplications setInstances(Integer instances) {
-            this.instances = instances;
-            return this;
-        }
-        public Integer getInstances() {
-            return this.instances;
-        }
-
         public ListJobsResponseBodyDataApplications setLastChangeorderState(String lastChangeorderState) {
             this.lastChangeorderState = lastChangeorderState;
             return this;
@@ -300,14 +275,6 @@ public class ListJobsResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
-        }
-
-        public ListJobsResponseBodyDataApplications setRunningInstances(Integer runningInstances) {
-            this.runningInstances = runningInstances;
-            return this;
-        }
-        public Integer getRunningInstances() {
-            return this.runningInstances;
         }
 
         public ListJobsResponseBodyDataApplications setSucceeded(Long succeeded) {
