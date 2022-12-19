@@ -4,9 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeSimilarEventScenariosResponseBody extends TeaModel {
+    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The scenarios in which you can handle the alerts triggered by the same rule or rules of the same type.
     @NameInMap("Scenarios")
     public java.util.List<DescribeSimilarEventScenariosResponseBodyScenarios> scenarios;
 
@@ -32,6 +34,11 @@ public class DescribeSimilarEventScenariosResponseBody extends TeaModel {
     }
 
     public static class DescribeSimilarEventScenariosResponseBodyScenarios extends TeaModel {
+        // The code of the scenario. Valid values: Valid values:
+        // - **default**: the same alert type
+        // - **same_file_content**: the same file content rule
+        // - **same_ip**: the same IP address rule
+        // - **same_url**: the same URL rule
         @NameInMap("Code")
         public String code;
 

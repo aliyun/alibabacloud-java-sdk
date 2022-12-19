@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DeleteVpcHoneyPotRequest extends TeaModel {
+    // The ID of the virtual private cloud (VPC) on which the honeypot is deployed.
+    // 
+    // >  You can call the [DescribeVpcHoneyPotList](~~DescribeVpcHoneyPotList~~) operation to query the IDs of VPCs.
     @NameInMap("VpcId")
     public String vpcId;
 

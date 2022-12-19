@@ -4,9 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class CreateBackupPolicyResponseBody extends TeaModel {
+    // The information about the anti-ransomware policy.
     @NameInMap("BackupPolicy")
     public CreateBackupPolicyResponseBodyBackupPolicy backupPolicy;
 
+    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +34,16 @@ public class CreateBackupPolicyResponseBody extends TeaModel {
     }
 
     public static class CreateBackupPolicyResponseBodyBackupPolicy extends TeaModel {
+        // The ID of the anti-ransomware policy.
         @NameInMap("Id")
         public String id;
 
+        // The status of the anti-ransomware policy. Valid values:
+        // 
+        // *   **enabled**
+        // *   **disabled**
+        // 
+        // >  After you create an anti-ransomware policy, the policy is enabled by default.
         @NameInMap("Status")
         public String status;
 

@@ -4,69 +4,115 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeAlarmEventListRequest extends TeaModel {
+    // The name of the alert event.
+    // 
+    // >  You can call the [DescribeNsasSuspEventType](~~DescribeNsasSuspEventType~~) operation to query the names of alert events.
     @NameInMap("AlarmEventName")
     public String alarmEventName;
 
+    // The type of the alert event.
+    // 
+    // >  You can call the [DescribeNsasSuspEventType](~~DescribeNsasSuspEventType~~) operation to query the types of alert events.
     @NameInMap("AlarmEventType")
     public String alarmEventType;
 
+    // The number of the page to return. Pages start from page **1**. Default value: **1**.
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    // Specifies whether the alert event is handled. Valid values:
+    // 
+    // *   **N**: unhandled
+    // *   **Y**: handled
     @NameInMap("Dealed")
     public String dealed;
 
+    // The ID of the request source. Set the value to **sas**, which indicates that the request is sent from Security Center.
     @NameInMap("From")
     public String from;
 
+    // The ID of the asset group to which the affected asset belongs.
     @NameInMap("GroupId")
     public String groupId;
 
+    // The ID of the alert event.
     @NameInMap("Id")
     public Long id;
 
+    // The language of the content within the request and response. Default value: **zh**. Valid values:
+    // 
+    // *   **zh**: Chinese
+    // *   **en**: English
     @NameInMap("Lang")
     public String lang;
 
+    // The severity of the alert event. Separate multiple severities with commas (,). Valid values:
+    // 
+    // *   **serious**
+    // *   **suspicious**
+    // *   **remind**
     @NameInMap("Levels")
     public String levels;
 
+    // An array that consists of the handling result codes of alert events.
     @NameInMap("OperateErrorCodeList")
     public java.util.List<String> operateErrorCodeList;
 
+    // The time when the handling operation ends.
     @NameInMap("OperateTimeEnd")
     public String operateTimeEnd;
 
+    // The time when the handing operation starts.
     @NameInMap("OperateTimeStart")
     public String operateTimeStart;
 
+    // The number of entries to return on each page. Default value: **20**.
     @NameInMap("PageSize")
     public String pageSize;
 
+    // The name of the alert or the information about the asset.
     @NameInMap("Remark")
     public String remark;
 
+    // The custom sorting field. Default value: **operateTime**. Valid values:
+    // 
+    // *   **lastTime**: the latest occurrence time
+    // *   **operateTime**: the handling time
+    // 
+    // >  This parameter takes effect if you set the **Dealed** parameter to Y.
     @NameInMap("SortColumn")
     public String sortColumn;
 
+    // The custom sorting order. Default value: **desc**. Valid values:
+    // 
+    // *   **asc**: the ascending order
+    // *   **desc**: the descending order
+    // 
+    // >  This parameter takes effect if you set the **Dealed** parameter to Y.
     @NameInMap("SortType")
     public String sortType;
 
+    // The source IP address of the request.
     @NameInMap("SourceIp")
     public String sourceIp;
 
+    // The tactic ID of ATT\&CK.
     @NameInMap("TacticId")
     public String tacticId;
 
+    // The end time when the alert event was last detected.
     @NameInMap("TimeEnd")
     public String timeEnd;
 
+    // The start time when the alert event was last detected.
     @NameInMap("TimeStart")
     public String timeStart;
 
+    // The ID of the alert event.
     @NameInMap("UniqueInfo")
     public String uniqueInfo;
 
+    // The UUIDs of the assets. Separate multiple UUIDs with commas (,).
     @NameInMap("Uuids")
     public String uuids;
 

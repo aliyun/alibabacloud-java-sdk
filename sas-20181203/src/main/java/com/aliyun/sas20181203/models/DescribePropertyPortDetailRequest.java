@@ -4,27 +4,35 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribePropertyPortDetailRequest extends TeaModel {
+    // The IP address that is bound to the listening port.
     @NameInMap("BindIp")
     public String bindIp;
 
+    // The number of the page to return. Default value: **1**.
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    // Specifies whether fuzzy search by port number is supported. If you want to use fuzzy search, set the parameter to **1**. If you set the parameter to a different value or leave the parameter empty, fuzzy search is not supported.
     @NameInMap("Extend")
     public String extend;
 
+    // The number of entries to return on each page. Default value: **10**.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The listening port of the server.
     @NameInMap("Port")
     public String port;
 
+    // The name of the server process.
     @NameInMap("ProcName")
     public String procName;
 
+    // The name or IP address of the server.
     @NameInMap("Remark")
     public String remark;
 
+    // The UUID of the server.
     @NameInMap("Uuid")
     public String uuid;
 

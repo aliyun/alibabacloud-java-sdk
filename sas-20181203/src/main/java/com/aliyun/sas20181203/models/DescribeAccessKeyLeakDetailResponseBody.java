@@ -4,63 +4,99 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccessKeyLeakDetailResponseBody extends TeaModel {
+    // The ID of the AccessKey pair that is leaked.
     @NameInMap("AccesskeyId")
     public String accesskeyId;
 
+    // The platform to which the asset belongs. The value is fixed as **Cloud platform**.
     @NameInMap("Asset")
     public String asset;
 
+    // The code snippet that is leaked.
     @NameInMap("Code")
     public String code;
 
+    // The time when the AccessKey pair leak was handled.
     @NameInMap("DealTime")
     public String dealTime;
 
+    // The solution to the AccessKey pair leak. Valid values:
+    // 
+    // *   **manual**: manually deleted
+    // *   **disable**: manually disabled
+    // *   **add-whitelist**: added to the whitelist
+    // *   **pending**: unhandled
     @NameInMap("DealType")
     public String dealType;
 
+    // The name of the GitHub file.
     @NameInMap("GithubFileName")
     public String githubFileName;
 
+    // The type of the GitHub file. Valid values:
+    // 
+    // *   Python
+    // *   XML
+    // *   GO
+    // *   Javascript
+    // *   INI
+    // *   JSON
+    // *   C++
     @NameInMap("GithubFileType")
     public String githubFileType;
 
+    // The time when the GitHub file was updated.
     @NameInMap("GithubFileUpdateTime")
     public String githubFileUpdateTime;
 
+    // The URL of the GitHub file.
     @NameInMap("GithubFileUrl")
     public String githubFileUrl;
 
+    // The name of the GitHub repository.
     @NameInMap("GithubRepoName")
     public String githubRepoName;
 
+    // The URL of the GitHub repository.
     @NameInMap("GithubRepoUrl")
     public String githubRepoUrl;
 
+    // The username of the GitHub user.
     @NameInMap("GithubUser")
     public String githubUser;
 
+    // The URL of the profile picture for the GitHub user.
     @NameInMap("GithubUserPicUrl")
     public String githubUserPicUrl;
 
+    // The first time when the AccessKey pair leak was detected.
     @NameInMap("GmtCreate")
     public String gmtCreate;
 
+    // The last time when the AccessKey pair leak was detected.
     @NameInMap("GmtModified")
     public String gmtModified;
 
+    // The remarks of the AccessKey pair leak.
     @NameInMap("Remark")
     public String remark;
 
+    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The platform on which the AccessKey pair leak is detected.
     @NameInMap("Source")
     public String source;
 
+    // The type of the leak. The value is fixed as **AccessKey**.
     @NameInMap("Type")
     public String type;
 
+    // Indicates whether the AccessKey pair leak is added to the whitelist. Valid values:
+    // 
+    // *   **no**: The AccessKey pair leak is not added to the whitelist.
+    // *   **yes**: The AccessKey pair leak is added to the whitelist.
     @NameInMap("WhitelistStatus")
     public String whitelistStatus;
 

@@ -4,24 +4,31 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccesskeyLeakListResponseBody extends TeaModel {
+    // An array that consists of the details about AccessKey pair leaks.
     @NameInMap("AccessKeyLeakList")
     public java.util.List<DescribeAccesskeyLeakListResponseBodyAccessKeyLeakList> accessKeyLeakList;
 
+    // The number of AccessKey pair leaks that are unhandled.
     @NameInMap("AkLeakCount")
     public Integer akLeakCount;
 
+    // The page number of the returned page.
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    // This parameter is deprecated.
     @NameInMap("GmtLast")
     public Long gmtLast;
 
+    // The number of entries returned on each page.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The total number of AccessKey pair leaks.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -87,36 +94,58 @@ public class DescribeAccesskeyLeakListResponseBody extends TeaModel {
     }
 
     public static class DescribeAccesskeyLeakListResponseBodyAccessKeyLeakList extends TeaModel {
+        // The ID of the AccessKey pair that is leaked.
         @NameInMap("AccesskeyId")
         public String accesskeyId;
 
+        // The name of the Alibaba Cloud account that is affected.
         @NameInMap("AliUserName")
         public String aliUserName;
 
+        // The platform to which the asset belongs. The value is fixed as **Cloud platform**.
         @NameInMap("Asset")
         public String asset;
 
+        // The time when the AccessKey pair leak is handled.
         @NameInMap("DealTime")
         public String dealTime;
 
+        // The method to handle the AccessKey pair leak. Valid values:
+        // 
+        // *   **pending**: The AccessKey pair leak is unhandled.
+        // *   **manual**: The AccessKey pair leak is manually handled.
+        // *   **disable**: The AccessKey pair leak is disabled.
+        // *   **add-whitelist**: The AccessKey pair leak is added to the whitelist.
         @NameInMap("DealType")
         public String dealType;
 
+        // The time when the AccessKey pair leak is first detected. The value of this parameter is a UNIX timestamp. Unit: milliseconds.
         @NameInMap("GmtModified")
         public Long gmtModified;
 
+        // The primary key ID of the database.
         @NameInMap("Id")
         public Long id;
 
+        // Indicates whether the AccessKey pair leak is handled. Valid values:
+        // 
+        // *   **pending**: unhandled
+        // *   **dealed**: handled
         @NameInMap("Status")
         public String status;
 
+        // The type of the leak. The value is fixed as **AccessKey**.
         @NameInMap("Type")
         public String type;
 
+        // The URL of the platform on which the AccessKey pair leak is detected.
         @NameInMap("Url")
         public String url;
 
+        // The type of the account to which the leaked AccessKey pair belongs. Valid values:
+        // 
+        // *   **master**: Alibaba Cloud account
+        // *   **ram**: RAM user
         @NameInMap("UserType")
         public String userType;
 

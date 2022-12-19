@@ -4,15 +4,19 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainCountResponseBody extends TeaModel {
+    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The number of root domains.
     @NameInMap("RootDomainsCount")
     public Integer rootDomainsCount;
 
+    // The number of subdomains.
     @NameInMap("SubDomainsCount")
     public Integer subDomainsCount;
 
+    // The total number of entries returned.
     @NameInMap("TotalDomainsCount")
     public Integer totalDomainsCount;
 

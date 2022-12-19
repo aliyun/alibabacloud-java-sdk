@@ -4,12 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ModifyEmgVulSubmitRequest extends TeaModel {
+    // The language of the content within the request and response. Default value: **zh**. Valid values:
+    // 
+    // *   **zh**: Chinese
+    // *   **en**: English
     @NameInMap("Lang")
     public String lang;
 
+    // The name of the vulnerability.
     @NameInMap("Name")
     public String name;
 
+    // Specifies whether to scan for urgent vulnerabilities. Valid values:
+    // 
+    // *   **yes**
+    // *   **no**
     @NameInMap("UserAgreement")
     public String userAgreement;
 

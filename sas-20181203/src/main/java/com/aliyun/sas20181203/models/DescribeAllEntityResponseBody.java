@@ -4,9 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeAllEntityResponseBody extends TeaModel {
+    // An array that consists of servers.
     @NameInMap("EntityList")
     public java.util.List<DescribeAllEntityResponseBodyEntityList> entityList;
 
+    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,24 +34,34 @@ public class DescribeAllEntityResponseBody extends TeaModel {
     }
 
     public static class DescribeAllEntityResponseBodyEntityList extends TeaModel {
+        // The ID of the asset group.
         @NameInMap("GroupId")
         public Integer groupId;
 
+        // The name of the server.
         @NameInMap("InstanceName")
         public String instanceName;
 
+        // The public IP address of the server.
         @NameInMap("InternetIp")
         public String internetIp;
 
+        // The private IP address of the server.
         @NameInMap("IntranetIp")
         public String intranetIp;
 
+        // The IP address of the server.
         @NameInMap("Ip")
         public String ip;
 
+        // The operating system of the server. Valid values:
+        // 
+        // *   **linux**
+        // *   **windows**
         @NameInMap("Os")
         public String os;
 
+        // The UUID of the server.
         @NameInMap("Uuid")
         public String uuid;
 

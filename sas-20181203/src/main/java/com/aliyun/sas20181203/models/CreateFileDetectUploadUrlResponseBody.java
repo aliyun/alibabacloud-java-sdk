@@ -4,9 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class CreateFileDetectUploadUrlResponseBody extends TeaModel {
+    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
+    // An array consisting of the parameters that are required to upload a file.
     @NameInMap("UploadUrlList")
     public java.util.List<CreateFileDetectUploadUrlResponseBodyUploadUrlList> uploadUrlList;
 
@@ -32,15 +34,19 @@ public class CreateFileDetectUploadUrlResponseBody extends TeaModel {
     }
 
     public static class CreateFileDetectUploadUrlResponseBodyUploadUrlListContext extends TeaModel {
+        // The AccessKey ID that is used to access the OSS bucket.
         @NameInMap("AccessId")
         public String accessId;
 
+        // The key of the file that is used after the file is uploaded to the OSS bucket.
         @NameInMap("OssKey")
         public String ossKey;
 
+        // The policy that poses limits on file upload. For example, the policy limits the size of the file.
         @NameInMap("Policy")
         public String policy;
 
+        // The signature that is used to upload the file.
         @NameInMap("Signature")
         public String signature;
 
@@ -84,27 +90,38 @@ public class CreateFileDetectUploadUrlResponseBody extends TeaModel {
     }
 
     public static class CreateFileDetectUploadUrlResponseBodyUploadUrlList extends TeaModel {
+        // The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
         @NameInMap("Code")
         public String code;
 
+        // The signature information.
         @NameInMap("Context")
         public CreateFileDetectUploadUrlResponseBodyUploadUrlListContext context;
 
+        // The timestamp when the values of the parameters expire. Unit: milliseconds.
         @NameInMap("Expire")
         public String expire;
 
+        // Indicates whether the file exists in the cloud. Valid values:
+        // 
+        // *   **true**: The file exists in the cloud. You do not need to upload the file.
+        // *   **false**: The file does not exist in the cloud. You must upload the file.
         @NameInMap("FileExist")
         public Boolean fileExist;
 
+        // The identifier of the file.
         @NameInMap("HashKey")
         public String hashKey;
 
+        // The internal endpoint of the URL to which the file is uploaded.
         @NameInMap("InternalUrl")
         public String internalUrl;
 
+        // The error message returned.
         @NameInMap("Message")
         public String message;
 
+        // The public endpoint of the URL to which the file is uploaded.
         @NameInMap("PublicUrl")
         public String publicUrl;
 

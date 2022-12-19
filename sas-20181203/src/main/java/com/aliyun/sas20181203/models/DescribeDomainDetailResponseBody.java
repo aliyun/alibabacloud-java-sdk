@@ -4,21 +4,27 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainDetailResponseBody extends TeaModel {
+    // The total number of alerts in your website assets.
     @NameInMap("AlarmCount")
     public Integer alarmCount;
 
+    // The domain name.
     @NameInMap("Domain")
     public String domain;
 
+    // An array that consists of the details about the domain asset.
     @NameInMap("DomainDetailItems")
     public java.util.List<DescribeDomainDetailResponseBodyDomainDetailItems> domainDetailItems;
 
+    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The name of the root domain that corresponds to the domain.
     @NameInMap("RootDomain")
     public String rootDomain;
 
+    // The total number of vulnerabilities in your website assets.
     @NameInMap("VulCount")
     public Integer vulCount;
 
@@ -76,21 +82,33 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainDetailResponseBodyDomainDetailItems extends TeaModel {
+        // The type of the domain asset. Valid values:
+        // 
+        // *   **0**: an Elastic Compute Service (ECS) instance
+        // *   **1**: a Server Load Balancer (SLB) instance
+        // *   **2**: a Network Address Translation (NAT) gateway
+        // *   **3**: an ApsaraDB RDS instance
+        // *   **4**: an ApsaraDB for MongoDB instance
         @NameInMap("AssetType")
         public String assetType;
 
+        // The instance ID of the asset.
         @NameInMap("InstanceId")
         public String instanceId;
 
+        // The name of the asset.
         @NameInMap("InstanceName")
         public String instanceName;
 
+        // The public IP address of the asset.
         @NameInMap("InternetIp")
         public String internetIp;
 
+        // The private IP address of the asset.
         @NameInMap("IntranetIp")
         public String intranetIp;
 
+        // The instance UUID of the domain asset.
         @NameInMap("Uuid")
         public String uuid;
 

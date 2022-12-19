@@ -4,6 +4,7 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class AddInstallCodeResponseBody extends TeaModel {
+    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 

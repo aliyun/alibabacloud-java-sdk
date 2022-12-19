@@ -4,9 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeSuspiciousOverallConfigResponseBody extends TeaModel {
+    // The configuration.
     @NameInMap("OverallConfig")
     public DescribeSuspiciousOverallConfigResponseBodyOverallConfig overallConfig;
 
+    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +34,21 @@ public class DescribeSuspiciousOverallConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeSuspiciousOverallConfigResponseBodyOverallConfig extends TeaModel {
+        // The status of the feature. Valid values:
+        // 
+        // *   **off**: disabled
+        // *   **on**: enabled
         @NameInMap("Config")
         public String config;
 
+        // The type of the feature. Valid values:
+        // 
+        // *   **auto_breaking**: Anti-Virus
+        // *   **ransomware_breaking**: Anti-ransomware (Bait Capture)
+        // *   **webshell\_cloud_breaking**: Webshell Protection
+        // *   **alinet**: Behavior prevention
+        // *   **k8s\_log_analysis**: K8s Threat Detection
+        // *   **alisecguard**: Defense mode for Client Protection
         @NameInMap("Type")
         public String type;
 

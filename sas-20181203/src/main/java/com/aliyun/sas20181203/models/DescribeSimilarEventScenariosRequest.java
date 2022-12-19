@@ -7,9 +7,11 @@ public class DescribeSimilarEventScenariosRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    // The ID of the alert to query.
     @NameInMap("SecurityEventId")
     public Long securityEventId;
 
+    // The source IP address of the request.
     @NameInMap("SourceIp")
     public String sourceIp;
 

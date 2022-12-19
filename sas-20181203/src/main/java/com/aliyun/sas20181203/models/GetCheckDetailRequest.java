@@ -4,9 +4,14 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetCheckDetailRequest extends TeaModel {
+    // The ID of the check item.
     @NameInMap("CheckId")
     public Long checkId;
 
+    // The language of the content within the request and response. Default value: **zh**. Valid values:
+    // 
+    // *   **zh**: Chinese
+    // *   **en**: English
     @NameInMap("Lang")
     public String lang;
 

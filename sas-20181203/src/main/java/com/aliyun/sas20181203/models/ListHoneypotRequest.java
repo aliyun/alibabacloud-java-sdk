@@ -4,21 +4,27 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListHoneypotRequest extends TeaModel {
+    // The number of the page to return.
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    // The IDs of honeypots.
     @NameInMap("HoneypotIds")
     public java.util.List<String> honeypotIds;
 
+    // The name of the honeypot.
     @NameInMap("HoneypotName")
     public String honeypotName;
 
+    // The ID of the management node to which the honeypot belongs.
     @NameInMap("NodeId")
     public String nodeId;
 
+    // The name of the management node to which the honeypot belongs.
     @NameInMap("NodeName")
     public String nodeName;
 
+    // The number of entries to return on each page.
     @NameInMap("PageSize")
     public Integer pageSize;
 

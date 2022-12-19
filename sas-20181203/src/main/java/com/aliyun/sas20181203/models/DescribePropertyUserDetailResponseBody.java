@@ -4,12 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribePropertyUserDetailResponseBody extends TeaModel {
+    // The pagination information.
     @NameInMap("PageInfo")
     public DescribePropertyUserDetailResponseBodyPageInfo pageInfo;
 
+    // The details of asset fingerprints for the account.
     @NameInMap("Propertys")
     public java.util.List<DescribePropertyUserDetailResponseBodyPropertys> propertys;
 
+    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,15 +46,19 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
     }
 
     public static class DescribePropertyUserDetailResponseBodyPageInfo extends TeaModel {
+        // The number of entries returned on the current page.
         @NameInMap("Count")
         public Integer count;
 
+        // The page number of the returned page.
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        // The number of entries returned per page. Default value: **10**.
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        // The total number of entries returned.
         @NameInMap("TotalCount")
         public Integer totalCount;
 
@@ -95,69 +102,109 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
     }
 
     public static class DescribePropertyUserDetailResponseBodyPropertys extends TeaModel {
+        // The date on which the account expires.
         @NameInMap("AccountsExpirationDate")
         public String accountsExpirationDate;
 
+        // The timestamp at which the last asset fingerprint collection is performed. Unit: milliseconds.
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
+        // The details of the user groups to which the account belongs.
         @NameInMap("GroupNames")
         public java.util.List<String> groupNames;
 
+        // The ID of the server.
         @NameInMap("InstanceId")
         public String instanceId;
 
+        // The name of the server.
         @NameInMap("InstanceName")
         public String instanceName;
 
+        // The public IP address of the server.
         @NameInMap("InternetIp")
         public String internetIp;
 
+        // The private IP address of the server.
         @NameInMap("IntranetIp")
         public String intranetIp;
 
+        // The IP addresses of the server.
         @NameInMap("Ip")
         public String ip;
 
+        // Indicates whether the account is an interactive logon account. Valid values:
+        // 
+        // *   **0**: no
+        // *   **1**: yes
         @NameInMap("IsCouldLogin")
         public Integer isCouldLogin;
 
+        // Indicates whether the password expires. Valid values:
+        // 
+        // *   **0**: yes
+        // *   **1**: no
         @NameInMap("IsPasswdExpired")
         public Integer isPasswdExpired;
 
+        // Indicates whether the password is locked. Valid values:
+        // 
+        // *   **0**: yes
+        // *   **1**: no
         @NameInMap("IsPasswdLocked")
         public Integer isPasswdLocked;
 
+        // Indicates whether the account has root permissions. Valid values:
+        // 
+        // *   **0**: no
+        // *   **1**: yes
         @NameInMap("IsRoot")
         public String isRoot;
 
+        // Indicates whether the account is a sudo account. Valid values:
+        // 
+        // *   **0**: no
+        // *   **1**: yes
         @NameInMap("IsSudoer")
         public Integer isSudoer;
 
+        // Indicates whether the account expires. Valid values:
+        // 
+        // *   **0**: yes
+        // *   **1**: no
         @NameInMap("IsUserExpired")
         public Integer isUserExpired;
 
+        // The source IP address of the last logon to the account.
         @NameInMap("LastLoginIp")
         public String lastLoginIp;
 
+        // The last logon time of the account.
         @NameInMap("LastLoginTime")
         public String lastLoginTime;
 
+        // The timestamp of the last logon to the account. Unit: milliseconds.
         @NameInMap("LastLoginTimeDt")
         public Long lastLoginTimeDt;
 
+        // The timestamp of the last logon to the account. Unit: milliseconds.
         @NameInMap("LastLoginTimestamp")
         public Long lastLoginTimestamp;
 
+        // The date on which the password of the account expires.
         @NameInMap("PasswordExpirationDate")
         public String passwordExpirationDate;
 
+        // This parameter is deprecated. You can ignore it.
         @NameInMap("Status")
         public String status;
 
+        // The name of the account.
         @NameInMap("User")
         public String user;
 
+        // The UUID of the server.
         @NameInMap("Uuid")
         public String uuid;
 

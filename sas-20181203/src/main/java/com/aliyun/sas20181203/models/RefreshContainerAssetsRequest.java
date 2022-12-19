@@ -4,6 +4,10 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class RefreshContainerAssetsRequest extends TeaModel {
+    // The type of the container asset whose statistics you want to refresh. Valid values:
+    // 
+    // *   **IMAGE**
+    // *   **CONTAINER**
     @NameInMap("AssetType")
     public String assetType;
 

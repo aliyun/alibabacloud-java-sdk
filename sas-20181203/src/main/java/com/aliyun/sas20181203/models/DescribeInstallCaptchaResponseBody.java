@@ -4,12 +4,17 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstallCaptchaResponseBody extends TeaModel {
+    // The installation verification code for you to manually install the Security Center agent.
     @NameInMap("CaptchaCode")
     public String captchaCode;
 
+    // The validity period of the installation verification code.
+    // 
+    // >  The installation verification code is valid only within the validity period. An expired installation verification code cannot be used to install the agent.
     @NameInMap("Deadline")
     public String deadline;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

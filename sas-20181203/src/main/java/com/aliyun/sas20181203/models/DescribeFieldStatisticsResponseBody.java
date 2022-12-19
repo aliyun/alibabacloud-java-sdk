@@ -4,9 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeFieldStatisticsResponseBody extends TeaModel {
+    // The information about servers that are returned.
     @NameInMap("GroupedFields")
     public DescribeFieldStatisticsResponseBodyGroupedFields groupedFields;
 
+    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,66 +34,95 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
     }
 
     public static class DescribeFieldStatisticsResponseBodyGroupedFields extends TeaModel {
+        // The number of assets that are deployed on Alibaba Cloud.
         @NameInMap("AliYunInstanceCount")
         public Integer aliYunInstanceCount;
 
+        // The number of servers.
         @NameInMap("AwsInstanceCount")
         public Integer awsInstanceCount;
 
+        // The number of exposed servers.
         @NameInMap("ExposedInstanceCount")
         public Integer exposedInstanceCount;
 
+        // The number of assets whose importance is common.
         @NameInMap("GeneralAssetCount")
         public Integer generalAssetCount;
 
+        // The number of server groups.
         @NameInMap("GroupCount")
         public Integer groupCount;
 
+        // The number of instances that are provisioned by third-party providers.
         @NameInMap("HuaweiInstanceCount")
         public Integer huaweiInstanceCount;
 
+        // The number of assets that can be protected by Security Center.
         @NameInMap("IdcInstanceCount")
         public Integer idcInstanceCount;
 
+        // The number of assets whose importance is important.
         @NameInMap("ImportantAssetCount")
         public Integer importantAssetCount;
 
+        // The total number of assets of the specified type. If no asset types are specified, this parameter indicates the total number of all servers and Alibaba Cloud services within your account.
         @NameInMap("InstanceCount")
         public Integer instanceCount;
 
+        // The total number of tasks for the specified type of assets. If no asset types are specified, this parameter indicates the total number of all servers and Alibaba Cloud services within your account.
         @NameInMap("InstanceSyncTaskCount")
         public Integer instanceSyncTaskCount;
 
+        // The number of newly added servers.
         @NameInMap("NewInstanceCount")
         public Integer newInstanceCount;
 
+        // The number of assets that do not pose risks.
+        @NameInMap("NoRiskInstanceCount")
+        public Integer noRiskInstanceCount;
+
+        // The number of servers that are shut down.
         @NameInMap("NotRunningStatusCount")
         public Integer notRunningStatusCount;
 
+        // The number of servers whose Security Center agent status is Offline.
         @NameInMap("OfflineInstanceCount")
         public Integer offlineInstanceCount;
 
+        // The number of servers outside the cloud.
         @NameInMap("OutMachineInstanceCount")
         public Integer outMachineInstanceCount;
 
+        // The number of servers for which the Security Center agent suspends protection.
         @NameInMap("PauseInstanceCount")
         public Integer pauseInstanceCount;
 
+        // The number of regions to which the servers belong.
         @NameInMap("RegionCount")
         public Integer regionCount;
 
+        // The number of assets that are at risk.
         @NameInMap("RiskInstanceCount")
         public Integer riskInstanceCount;
 
+        // The total number of cloud services that are protected by Security Center.
         @NameInMap("TencentInstanceCount")
         public Integer tencentInstanceCount;
 
+        // The number of assets whose importance is test.
         @NameInMap("TestAssetCount")
         public Integer testAssetCount;
 
+        // The number of assets whose statuses are unknown.
+        @NameInMap("UnKnowStatusInstanceCount")
+        public Integer unKnowStatusInstanceCount;
+
+        // The number of unprotected assets.
         @NameInMap("UnprotectedInstanceCount")
         public Integer unprotectedInstanceCount;
 
+        // The number of virtual private clouds (VPCs).
         @NameInMap("VpcCount")
         public Integer vpcCount;
 
@@ -188,6 +219,14 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             return this.newInstanceCount;
         }
 
+        public DescribeFieldStatisticsResponseBodyGroupedFields setNoRiskInstanceCount(Integer noRiskInstanceCount) {
+            this.noRiskInstanceCount = noRiskInstanceCount;
+            return this;
+        }
+        public Integer getNoRiskInstanceCount() {
+            return this.noRiskInstanceCount;
+        }
+
         public DescribeFieldStatisticsResponseBodyGroupedFields setNotRunningStatusCount(Integer notRunningStatusCount) {
             this.notRunningStatusCount = notRunningStatusCount;
             return this;
@@ -250,6 +289,14 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         }
         public Integer getTestAssetCount() {
             return this.testAssetCount;
+        }
+
+        public DescribeFieldStatisticsResponseBodyGroupedFields setUnKnowStatusInstanceCount(Integer unKnowStatusInstanceCount) {
+            this.unKnowStatusInstanceCount = unKnowStatusInstanceCount;
+            return this;
+        }
+        public Integer getUnKnowStatusInstanceCount() {
+            return this.unKnowStatusInstanceCount;
         }
 
         public DescribeFieldStatisticsResponseBodyGroupedFields setUnprotectedInstanceCount(Integer unprotectedInstanceCount) {

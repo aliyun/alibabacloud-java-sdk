@@ -4,12 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class OperationSuspEventsResponseBody extends TeaModel {
+    // Indicates whether you have access permissions. Valid values:
+    // 
+    // *   **pass**: yes
+    // *   **no_permission**: no
     @NameInMap("AccessCode")
     public String accessCode;
 
+    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether exceptions are handled. Valid values:
+    // 
+    // *   **true**: yes
+    // *   **false**: no
     @NameInMap("Success")
     public Boolean success;
 

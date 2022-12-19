@@ -4,18 +4,23 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageGroupedVulListResponseBody extends TeaModel {
+    // The page number of the returned page.
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    // An array that consists of the image vulnerabilities.
     @NameInMap("GroupedVulItems")
     public java.util.List<DescribeImageGroupedVulListResponseBodyGroupedVulItems> groupedVulItems;
 
+    // The number of entries returned per page. Default value: **20**.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The total number of image system vulnerabilities.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,33 +70,58 @@ public class DescribeImageGroupedVulListResponseBody extends TeaModel {
     }
 
     public static class DescribeImageGroupedVulListResponseBodyGroupedVulItems extends TeaModel {
+        // The alias of the vulnerability.
         @NameInMap("AliasName")
         public String aliasName;
 
+        // The number of vulnerabilities that have the high priority.
         @NameInMap("AsapCount")
         public Integer asapCount;
 
+        // The timestamp when the first scan was performed. Unit: milliseconds.
         @NameInMap("GmtLast")
         public Long gmtLast;
 
+        // The timestamp when the last scan was performed. Unit: milliseconds.
         @NameInMap("LastScanTime")
         public Long lastScanTime;
 
+        // The number of vulnerabilities that have the medium priority.
         @NameInMap("LaterCount")
         public Integer laterCount;
 
+        // The name of the vulnerability.
         @NameInMap("Name")
         public String name;
 
+        // The number of vulnerabilities that have the low priority.
         @NameInMap("NntfCount")
         public Integer nntfCount;
 
+        // The status of the vulnerability. Valid values:
+        // 
+        // *   **0**: unhandled
+        // *   **1**: handled
+        // *   **2**: verifying
+        // *   **3**: added to the whitelist
         @NameInMap("Status")
         public Integer status;
 
+        // The tag that is added to the vulnerability. Valid values:
+        // 
+        // *   Restart required
+        // *   Remote exploitation
+        // *   Exploit exists
+        // *   Exploitable
+        // *   Privilege escalation
+        // *   Code execution
         @NameInMap("Tags")
         public String tags;
 
+        // The type of the vulnerability. Valid values:
+        // 
+        // *   **cve**: image system vulnerability
+        // *   **sca**: image application vulnerability
         @NameInMap("Type")
         public String type;
 

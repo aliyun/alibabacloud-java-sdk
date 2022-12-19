@@ -4,12 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageBaselineCheckSummaryResponseBody extends TeaModel {
+    // An array that consists of the check results of image baselines.
     @NameInMap("BaselineResultSummary")
     public java.util.List<DescribeImageBaselineCheckSummaryResponseBodyBaselineResultSummary> baselineResultSummary;
 
+    // The pagination information.
     @NameInMap("PageInfo")
     public DescribeImageBaselineCheckSummaryResponseBodyPageInfo pageInfo;
 
+    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,36 +46,56 @@ public class DescribeImageBaselineCheckSummaryResponseBody extends TeaModel {
     }
 
     public static class DescribeImageBaselineCheckSummaryResponseBodyBaselineResultSummary extends TeaModel {
+        // The category of the baseline.
         @NameInMap("BaselineClassAlias")
         public String baselineClassAlias;
 
+        // The keyword of the baseline category.
         @NameInMap("BaselineClassKey")
         public String baselineClassKey;
 
+        // The name of the baseline.
         @NameInMap("BaselineNameAlias")
         public String baselineNameAlias;
 
+        // The keyword of the baseline name.
         @NameInMap("BaselineNameKey")
         public String baselineNameKey;
 
+        // The severity of the image baseline. Valid values:
+        // 
+        // *   **high**
+        // *   **medium**
+        // *   **low**
         @NameInMap("BaselineNameLevel")
         public String baselineNameLevel;
 
+        // The timestamp when the first scan was performed. Unit: milliseconds.
         @NameInMap("FirstScanTime")
         public Long firstScanTime;
 
+        // The number of images on which **high** baseline risks are detected.
         @NameInMap("HighRiskImage")
         public Integer highRiskImage;
 
+        // The timestamp when the last scan was performed. Unit: milliseconds.
         @NameInMap("LastScanTime")
         public Long lastScanTime;
 
+        // The number of images on which **low** baseline risks are detected.
         @NameInMap("LowRiskImage")
         public Integer lowRiskImage;
 
+        // The number of images on which **medium** baseline risks are detected.
         @NameInMap("MiddleRiskImage")
         public Integer middleRiskImage;
 
+        // The status of the baseline risks. Valid values:
+        // 
+        // *   **0**: unfixed
+        // *   **1**: fixed
+        // *   **2**: pending verification
+        // *   **3**: fixing failed
         @NameInMap("Status")
         public Integer status;
 
@@ -172,15 +195,19 @@ public class DescribeImageBaselineCheckSummaryResponseBody extends TeaModel {
     }
 
     public static class DescribeImageBaselineCheckSummaryResponseBodyPageInfo extends TeaModel {
+        // The number of entries returned on the current page.
         @NameInMap("Count")
         public Integer count;
 
+        // The page number of the returned page.
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        // The number of entries returned per page. Default value: **20**.
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        // The total number of entries returned.
         @NameInMap("TotalCount")
         public Integer totalCount;
 

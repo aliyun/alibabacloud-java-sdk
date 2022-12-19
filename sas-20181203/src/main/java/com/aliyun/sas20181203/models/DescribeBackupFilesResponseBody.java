@@ -4,12 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupFilesResponseBody extends TeaModel {
+    // An array that consists of the backup files returned.
     @NameInMap("BackupFiles")
     public java.util.List<DescribeBackupFilesResponseBodyBackupFiles> backupFiles;
 
+    // The pagination information.
     @NameInMap("PageInfo")
     public DescribeBackupFilesResponseBodyPageInfo pageInfo;
 
+    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,15 +46,22 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
     }
 
     public static class DescribeBackupFilesResponseBodyBackupFiles extends TeaModel {
+        // The name of the anti-ransomware policy.
         @NameInMap("Name")
         public String name;
 
+        // The size of the backup file. Unit: bytes.
         @NameInMap("Size")
         public Long size;
 
+        // The path to the subdirectory of the backup file.
         @NameInMap("Subtree")
         public String subtree;
 
+        // The type of the protected file. Valid values:
+        // 
+        // *   **file**: files
+        // *   **dir**: folders
         @NameInMap("Type")
         public String type;
 
@@ -95,15 +105,19 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
     }
 
     public static class DescribeBackupFilesResponseBodyPageInfo extends TeaModel {
+        // The number of backup files returned on the current page.
         @NameInMap("Count")
         public Integer count;
 
+        // The page number of the returned page.
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        // The number of entries returned per page. Default value: **10**.
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        // The total number of backup files returned.
         @NameInMap("TotalCount")
         public Integer totalCount;
 

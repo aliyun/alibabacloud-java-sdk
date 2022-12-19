@@ -4,9 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class CreateAntiBruteForceRuleResponseBody extends TeaModel {
+    // The information about the defense rule.
     @NameInMap("CreateAntiBruteForceRule")
     public CreateAntiBruteForceRuleResponseBodyCreateAntiBruteForceRule createAntiBruteForceRule;
 
+    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +34,7 @@ public class CreateAntiBruteForceRuleResponseBody extends TeaModel {
     }
 
     public static class CreateAntiBruteForceRuleResponseBodyCreateAntiBruteForceRule extends TeaModel {
+        // The ID of the defense rule.
         @NameInMap("RuleId")
         public Long ruleId;
 

@@ -4,57 +4,94 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeSuspEventDetailResponseBody extends TeaModel {
+    // Indicates whether the online processing of exceptions is supported, such as blocking an exception, adding an exception to the whitelist, and ignoring an exception. Valid values:
+    // 
+    // *   **true**: yes
+    // *   **false**: no
     @NameInMap("CanBeDealOnLine")
     public Boolean canBeDealOnLine;
 
+    // The data source of the exception.
     @NameInMap("DataSource")
     public String dataSource;
 
+    // The details about the exception.
     @NameInMap("Details")
     public java.util.List<DescribeSuspEventDetailResponseBodyDetails> details;
 
+    // The description of the exception.
     @NameInMap("EventDesc")
     public String eventDesc;
 
+    // The name of the exception.
     @NameInMap("EventName")
     public String eventName;
 
+    // The status of the exception. Valid values:
+    // 
+    // *   **1**: pending handling
+    // *   **2**: ignored
+    // *   **4**: confirmed
+    // *   **8**: marked as a false positive
+    // *   **16**: handling
+    // *   **32**: handled
+    // *   **64**: expired
     @NameInMap("EventStatus")
     public String eventStatus;
 
+    // The type of the exception.
     @NameInMap("EventTypeDesc")
     public String eventTypeDesc;
 
+    // The ID of the exception.
     @NameInMap("Id")
     public Integer id;
 
+    // The name of the server on which the exception was detected.
     @NameInMap("InstanceName")
     public String instanceName;
 
+    // The public IP address of the server on which the exception was detected.
     @NameInMap("InternetIp")
     public String internetIp;
 
+    // The private IP address of the server on which the exception was detected.
     @NameInMap("IntranetIp")
     public String intranetIp;
 
+    // The time when the exception was last detected.
     @NameInMap("LastTime")
     public String lastTime;
 
+    // The severity of the exception. Valid values:
+    // 
+    // *   **serious**
+    // *   **suspicious**
+    // *   **remind**
     @NameInMap("Level")
     public String level;
 
+    // The code that indicates the handling result of the exception.
     @NameInMap("OperateErrorCode")
     public String operateErrorCode;
 
+    // The message that indicates the handling result of the exception.
     @NameInMap("OperateMsg")
     public String operateMsg;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The edition of Security Center in which the exception can be detected. Valid values:
+    // 
+    // *   **0**: Basic edition
+    // *   **1**: Advanced edition
+    // *   **2**: Enterprise edition
     @NameInMap("SaleVersion")
     public String saleVersion;
 
+    // The UUID of the server on which the exception was detected.
     @NameInMap("Uuid")
     public String uuid;
 
@@ -208,12 +245,20 @@ public class DescribeSuspEventDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeSuspEventDetailResponseBodyDetails extends TeaModel {
+        // The display name of the alert event.
         @NameInMap("NameDisplay")
         public String nameDisplay;
 
+        // The format in which the details about the exception are displayed.
+        // 
+        // Valid values:
+        // 
+        // *   **text**
+        // *   **html**
         @NameInMap("Type")
         public String type;
 
+        // The attribute information about the exception. For example, if the exception is associated with an alert that is triggered by an unusual logon, the information can include the time when the logon is initiated and the location from which the logon is initiated. If the exception is associated with an alert that is triggered by a webshell file, the information can include the path of the trojan file and the type of the trojan.
         @NameInMap("Value")
         public String value;
 

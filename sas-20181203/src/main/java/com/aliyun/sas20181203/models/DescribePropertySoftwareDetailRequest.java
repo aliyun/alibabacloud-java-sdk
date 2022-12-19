@@ -4,33 +4,43 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribePropertySoftwareDetailRequest extends TeaModel {
+    // The number of the page to return. Default value: **1**.
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    // Specifies whether fuzzy search by software name is supported. If you want to use fuzzy search, set the parameter to 1. If you set the parameter to a different value or leave the parameter empty, fuzzy search is not supported.
     @NameInMap("Extend")
     public String extend;
 
+    // The timestamp at which the software update ends. Unit: milliseconds.
     @NameInMap("InstallTimeEnd")
     public Long installTimeEnd;
 
+    // The timestamp at which the software update starts. Unit: milliseconds.
     @NameInMap("InstallTimeStart")
     public Long installTimeStart;
 
+    // The name of the software.
     @NameInMap("Name")
     public String name;
 
+    // The number of entries to return on each page. Default value: **10**.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The installation path of the software.
     @NameInMap("Path")
     public String path;
 
+    // The name or IP address of the server.
     @NameInMap("Remark")
     public String remark;
 
+    // The version of the software.
     @NameInMap("SoftwareVersion")
     public String softwareVersion;
 
+    // The UUID of the server.
     @NameInMap("Uuid")
     public String uuid;
 

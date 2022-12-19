@@ -4,12 +4,19 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ModifyAssetGroupRequest extends TeaModel {
+    // The ID of the new server group to which the servers belong.
+    // 
+    // >  You can call the [DescribeAllGroups](~~DescribeAllGroups~~) operation to query the IDs of server groups.
     @NameInMap("GroupId")
     public Long groupId;
 
+    // The source IP address of the request.
     @NameInMap("SourceIp")
     public String sourceIp;
 
+    // The UUIDs of the servers for which you want to change the server group. Separate multiple UUIDs with commas (,).
+    // 
+    // >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
     @NameInMap("Uuids")
     public String uuids;
 

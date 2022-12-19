@@ -4,21 +4,32 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class BindAuthToMachineResponseBody extends TeaModel {
+    // The number of bound servers.
     @NameInMap("BindCount")
     public Integer bindCount;
 
+    // The shortage in the quota for cores of servers that can be protected.
     @NameInMap("InsufficientCoreCount")
     public Integer insufficientCoreCount;
 
+    // The shortage in the quota for servers that can be protected.
     @NameInMap("InsufficientEcsCount")
     public Integer insufficientEcsCount;
 
+    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The status code that indicates the result. Valid values:
+    // 
+    // *   **0**: The servers are bound to or unbound from Security Center.
+    // *   **1**: The values that you specified for the parameters are invalid.
+    // *   **2**: The quota for servers that can be protected is insufficient.
+    // *   **3**: The quota for cores of servers that can be protected is insufficient.
     @NameInMap("ResultCode")
     public Integer resultCode;
 
+    // The number of unbound servers.
     @NameInMap("UnBindCount")
     public Integer unBindCount;
 

@@ -4,21 +4,30 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class CreateHoneypotResponseBody extends TeaModel {
+    // The status code returned. The status code **200** indicates that the request was is successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
     @NameInMap("Code")
     public String code;
 
+    // The information about the honeypot.
     @NameInMap("Data")
     public CreateHoneypotResponseBodyData data;
 
+    // The HTTP status code returned.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    // The error message returned.
     @NameInMap("Message")
     public String message;
 
+    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // *   **true**: The request was successful.
+    // *   **false**: The request failed.
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,27 +85,35 @@ public class CreateHoneypotResponseBody extends TeaModel {
     }
 
     public static class CreateHoneypotResponseBodyData extends TeaModel {
+        // The name of the management node to which the honeypot is deployed.
         @NameInMap("ControlNodeName")
         public String controlNodeName;
 
+        // The ID of the honeypot.
         @NameInMap("HoneypotId")
         public String honeypotId;
 
+        // The display name of the image that is used for the honeypot.
         @NameInMap("HoneypotImageDisplayName")
         public String honeypotImageDisplayName;
 
+        // The name of the image that is used for the honeypot.
         @NameInMap("HoneypotImageName")
         public String honeypotImageName;
 
+        // The custom name of the honeypot.
         @NameInMap("HoneypotName")
         public String honeypotName;
 
+        // The ID of the management node.
         @NameInMap("NodeId")
         public String nodeId;
 
+        // The ID of the custom configuration for the honeypot.
         @NameInMap("PresetId")
         public String presetId;
 
+        // The status of the honeypot.
         @NameInMap("State")
         public java.util.List<String> state;
 

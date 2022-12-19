@@ -4,9 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeExposedInstanceCriteriaResponseBody extends TeaModel {
+    // The search conditions that are used to search for exposed assets.
     @NameInMap("CriteriaList")
     public java.util.List<DescribeExposedInstanceCriteriaResponseBodyCriteriaList> criteriaList;
 
+    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +34,20 @@ public class DescribeExposedInstanceCriteriaResponseBody extends TeaModel {
     }
 
     public static class DescribeExposedInstanceCriteriaResponseBodyCriteriaList extends TeaModel {
+        // The name of the search condition.
         @NameInMap("Name")
         public String name;
 
+        // The type of the search condition. Valid values:
+        // 
+        // *   **input**: You must configure the search condition.
+        // *   **select**: You must select a search condition from the **Values** list.
         @NameInMap("Type")
         public String type;
 
+        // The value of the search condition. This parameter is returned only when the value of the **Type** parameter is **select**.
+        // 
+        // >  If the value of the **Type** parameter is **input**, this parameter is empty.
         @NameInMap("Values")
         public String values;
 

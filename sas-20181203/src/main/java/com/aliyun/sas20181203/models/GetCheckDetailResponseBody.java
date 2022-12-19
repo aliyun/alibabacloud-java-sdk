@@ -4,15 +4,19 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetCheckDetailResponseBody extends TeaModel {
+    // The help information about the check item.
     @NameInMap("AssistInfo")
     public GetCheckDetailResponseBodyAssistInfo assistInfo;
 
+    // The description of the check item.
     @NameInMap("Description")
     public GetCheckDetailResponseBodyDescription description;
 
+    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The solution to handle the risk item.
     @NameInMap("Solution")
     public GetCheckDetailResponseBodySolution solution;
 
@@ -54,12 +58,18 @@ public class GetCheckDetailResponseBody extends TeaModel {
     }
 
     public static class GetCheckDetailResponseBodyAssistInfo extends TeaModel {
+        // The link to the help information about the risk item when the Type parameter is set to link.
         @NameInMap("Link")
         public String link;
 
+        // The type of the help information about the risk item. Valid values:
+        // 
+        // *   **text**
+        // *   **link**
         @NameInMap("Type")
         public String type;
 
+        // The content in the help information about the risk item when the Type parameter is set to text.
         @NameInMap("Value")
         public String value;
 
@@ -95,12 +105,15 @@ public class GetCheckDetailResponseBody extends TeaModel {
     }
 
     public static class GetCheckDetailResponseBodyDescription extends TeaModel {
+        // The link to the description of the check item.
         @NameInMap("Link")
         public String link;
 
+        // The type of the description of the check item. The value is fixed as text.
         @NameInMap("Type")
         public String type;
 
+        // The content in the description of the check item.
         @NameInMap("Value")
         public String value;
 
@@ -136,12 +149,18 @@ public class GetCheckDetailResponseBody extends TeaModel {
     }
 
     public static class GetCheckDetailResponseBodySolution extends TeaModel {
+        // The link to the solution to handle the risk item when the Type parameter is set to link.
         @NameInMap("Link")
         public String link;
 
+        // The type of the solution to handle to the risk item. Valid values:
+        // 
+        // *   **text**
+        // *   **link**
         @NameInMap("Type")
         public String type;
 
+        // The content of the solution to handle the risk item when the Type parameter is set to text.
         @NameInMap("Value")
         public String value;
 

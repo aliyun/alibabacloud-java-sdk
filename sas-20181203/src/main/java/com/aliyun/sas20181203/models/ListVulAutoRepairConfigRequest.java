@@ -4,15 +4,22 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListVulAutoRepairConfigRequest extends TeaModel {
+    // The alias of the vulnerability.
     @NameInMap("AliasName")
     public String aliasName;
 
+    // The number of the page to return. Default value: **1**.
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    // The number of entries to return on each page. Default value: **10**.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The type of the vulnerability. Valid values:
+    // 
+    // *   **cve**: Linux software vulnerability
+    // *   **sys**: Windows system vulnerability
     @NameInMap("Type")
     public String type;
 

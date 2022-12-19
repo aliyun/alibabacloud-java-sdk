@@ -4,15 +4,22 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ModifyClearLogstoreStorageRequest extends TeaModel {
+    // The ID of the request source. Set the value to **sas**.
     @NameInMap("From")
     public String from;
 
+    // The language of the content within the request and response. Default value: **zh**. Valid values:
+    // 
+    // *   **zh**: Chinese
+    // *   **en**: English
     @NameInMap("Lang")
     public String lang;
 
+    // The name of the Logstore that stores logs.
     @NameInMap("UserLogStore")
     public String userLogStore;
 
+    // The name of the project.
     @NameInMap("UserProject")
     public String userProject;
 

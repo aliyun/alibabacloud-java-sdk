@@ -4,12 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
+    // An array that consists of the container assets returned.
     @NameInMap("GroupedContainerInstanceList")
     public java.util.List<DescribeGroupedContainerInstancesResponseBodyGroupedContainerInstanceList> groupedContainerInstanceList;
 
+    // The pagination information.
     @NameInMap("PageInfo")
     public DescribeGroupedContainerInstancesResponseBodyPageInfo pageInfo;
 
+    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,78 +46,120 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeGroupedContainerInstancesResponseBodyGroupedContainerInstanceList extends TeaModel {
+        // The number of alerts that are generated on the current pod, application, namespace, or cluster.
         @NameInMap("AlarmCount")
         public Integer alarmCount;
 
+        // The name of the application.
         @NameInMap("AppName")
         public String appName;
 
+        // The ID of cluster.
         @NameInMap("ClusterId")
         public String clusterId;
 
+        // The name of the instance.
         @NameInMap("ClusterName")
         public String clusterName;
 
+        // The type of the cluster. Valid values:
+        // 
+        // *   **Kubernetes**: dedicated Kubernetes cluster
+        // *   **ManagedKubernetes**: standard managed cluster (edge cluster)
+        // *   **Ask**: standard serverless cluster
         @NameInMap("ClusterType")
         public String clusterType;
 
+        // The timestamp when the cluster was created. Unit: milliseconds.
         @NameInMap("CreateTime")
         public Long createTime;
 
+        // The status of the cluster. Valid values:
+        // 
+        // *   **running**: The cluster is running.
+        // *   **stopped**: The cluster is stopped.
+        // *   **deleted**: The cluster is deleted.
+        // *   **delete_failed**: The cluster fails to be deleted.
+        // *   **failed**: The cluster fails to be created.
         @NameInMap("CusterState")
         public String custerState;
 
+        // The number of baseline risks that are detected on the current pod, application, namespace, or cluster.
         @NameInMap("HcCount")
         public Integer hcCount;
 
+        // The IP address of the host in the container cluster.
         @NameInMap("HostIp")
         public String hostIp;
 
+        // The image of the container.
         @NameInMap("Image")
         public String image;
 
+        // The digest value of the image.
         @NameInMap("ImageDigest")
         public String imageDigest;
 
+        // The name of the image repository.
         @NameInMap("ImageRepoName")
         public String imageRepoName;
 
+        // The namespace to which the image repository belongs.
         @NameInMap("ImageRepoNamespace")
         public String imageRepoNamespace;
 
+        // The tag that is added to the image repository.
         @NameInMap("ImageRepoTag")
         public String imageRepoTag;
 
+        // The UUID of the image.
         @NameInMap("ImageUuid")
         public String imageUuid;
 
+        // The number of queried pods, applications, clusters, or namespaces.
         @NameInMap("InstanceCount")
         public Integer instanceCount;
 
+        // The ID of the server.
         @NameInMap("InstanceId")
         public String instanceId;
 
+        // The namespace of the cluster.
         @NameInMap("Namespace")
         public String namespace;
 
+        // The name of the pod.
         @NameInMap("Pod")
         public String pod;
 
+        // The IP address of the pod.
         @NameInMap("PodIp")
         public String podIp;
 
+        // The ID of the region in which the server resides.
         @NameInMap("RegionId")
         public String regionId;
 
+        // The number of at-risk instances.
         @NameInMap("RiskInstanceCount")
         public Integer riskInstanceCount;
 
+        // The risk level. Valid values:
+        // 
+        // *   **high**
+        // *   **medium**
+        // *   **low**
         @NameInMap("RiskLevel")
         public String riskLevel;
 
+        // Indicates whether risks were detected. Valid values:
+        // 
+        // *   **NO**: No risks were detected.
+        // *   **YES**: Risks were detected.
         @NameInMap("RiskStatus")
         public String riskStatus;
 
+        // The number of vulnerabilities that are detected on the current pod, application, namespace, or cluster.
         @NameInMap("VulCount")
         public Integer vulCount;
 
@@ -326,15 +371,19 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeGroupedContainerInstancesResponseBodyPageInfo extends TeaModel {
+        // The number of container assets returned on the current page.
         @NameInMap("Count")
         public Integer count;
 
+        // The page number of the returned page.
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        // The number of entries returned per page. Default value: **20**.
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        // The total number of container assets returned.
         @NameInMap("TotalCount")
         public Integer totalCount;
 

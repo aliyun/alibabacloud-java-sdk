@@ -4,12 +4,18 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeWebLockConfigListRequest extends TeaModel {
+    // The language of the content within the request and the response. Valid values:
+    // 
+    // *   **zh**: Chinese
+    // *   **en**: English
     @NameInMap("Lang")
     public String lang;
 
+    // The source IP address of the request.
     @NameInMap("SourceIp")
     public String sourceIp;
 
+    // The UUID of the server for which you want to query the configurations.
     @NameInMap("Uuid")
     public String uuid;
 

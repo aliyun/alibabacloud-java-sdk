@@ -4,9 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
+    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The summary information about the check results of cloud service configurations.
     @NameInMap("RiskCheckSummary")
     public DescribeRiskCheckSummaryResponseBodyRiskCheckSummary riskCheckSummary;
 
@@ -32,9 +34,14 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
     }
 
     public static class DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryGroupsCountByStatus extends TeaModel {
+        // The number of detected risk items.
         @NameInMap("Count")
         public Integer count;
 
+        // The status of the check item after the check is finished. Valid values:
+        // 
+        // *   **pass**: The check item passes the check, which indicates that the check item is normal.
+        // *   **failed**: The check item fails the check, which indicates that risks are detected for the check item.
         @NameInMap("Status")
         public String status;
 
@@ -62,21 +69,32 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
     }
 
     public static class DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryGroups extends TeaModel {
+        // An array that consists of the statistics about check results.
         @NameInMap("CountByStatus")
         public java.util.List<DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryGroupsCountByStatus> countByStatus;
 
+        // The ID of the check item type.
         @NameInMap("Id")
         public Long id;
 
+        // The remaining time before the check is complete.
         @NameInMap("RemainingTime")
         public Integer remainingTime;
 
+        // The sequence number of the check item type in the **All Types** drop-down list in the Security Center console.
         @NameInMap("Sort")
         public Integer sort;
 
+        // The status of the check. Valid values:
+        // 
+        // *   **finish**: The check is finished.
+        // *   **running**: The check is in process.
+        // *   **waiting**: The check is pending.
+        // *   **notStart**: The check is not started.
         @NameInMap("Status")
         public String status;
 
+        // The type of the check item.
         @NameInMap("Title")
         public String title;
 
@@ -136,9 +154,15 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
     }
 
     public static class DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryRiskLevelCount extends TeaModel {
+        // The number of check items at the specified risk level.
         @NameInMap("Count")
         public Integer count;
 
+        // The risk level of the check items. Valid values of risk levels:
+        // 
+        // *   **high**
+        // *   **medium**
+        // *   **low**
         @NameInMap("Key")
         public String key;
 
@@ -166,33 +190,43 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
     }
 
     public static class DescribeRiskCheckSummaryResponseBodyRiskCheckSummary extends TeaModel {
+        // The number of affected assets.
         @NameInMap("AffectedAssetCount")
         public Integer affectedAssetCount;
 
+        // The number of the check items that fail the check.
         @NameInMap("DisabledRiskCount")
         public Integer disabledRiskCount;
 
+        // The number of the check items that pass the check.
         @NameInMap("EnabledRiskCount")
         public Integer enabledRiskCount;
 
+        // An array that consists of the statistics about each type of check items.
         @NameInMap("Groups")
         public java.util.List<DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryGroups> groups;
 
+        // The number of check items.
         @NameInMap("ItemCount")
         public Integer itemCount;
 
+        // The number of risk items detected in the last check.
         @NameInMap("PreviousCount")
         public Integer previousCount;
 
+        // The timestamp of the last check. Unit: milliseconds.
         @NameInMap("PreviousTime")
         public Long previousTime;
 
+        // The number of detected risk items.
         @NameInMap("RiskCount")
         public Integer riskCount;
 
+        // An array that consists of the number of check items at each risk level.
         @NameInMap("RiskLevelCount")
         public java.util.List<DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryRiskLevelCount> riskLevelCount;
 
+        // The proportion of risk items to all check items.
         @NameInMap("RiskRate")
         public Float riskRate;
 

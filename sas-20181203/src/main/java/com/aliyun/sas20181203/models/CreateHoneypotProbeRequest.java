@@ -4,36 +4,62 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class CreateHoneypotProbeRequest extends TeaModel {
+    // Specifies whether to enable Address Resolution Protocol (ARP) spoofing. Valid values:
+    // 
+    // *   **true**: yes
+    // *   **false**: no
     @NameInMap("Arp")
     public Boolean arp;
 
+    // The ID of the business group.
     @NameInMap("BusinessGroupId")
     public String businessGroupId;
 
+    // The ID of the management node.
+    // 
+    // >  You can call the [ListHoneypotNode](~~ListHoneypotNode~~) operation to query the IDs of management nodes.
     @NameInMap("ControlNodeId")
     public String controlNodeId;
 
+    // The name of the probe.
     @NameInMap("DisplayName")
     public String displayName;
 
+    // The honeypot configurations.
     @NameInMap("HoneypotBindList")
     public java.util.List<CreateHoneypotProbeRequestHoneypotBindList> honeypotBindList;
 
+    // Specifies whether to enable ping scan. Valid values:
+    // 
+    // *   **false**: yes
+    // *   **false**: no
     @NameInMap("Ping")
     public Boolean ping;
 
+    // The type of the probe. Valid values:
+    // 
+    // *   **host_probe**: host probe
+    // *   **vpc_black_hole_probe**: virtual private cloud (VPC) probe
     @NameInMap("ProbeType")
     public String probeType;
 
+    // The version of the probe.
     @NameInMap("ProbeVersion")
     public String probeVersion;
 
+    // The IP address of the proxy.
     @NameInMap("ProxyIp")
     public String proxyIp;
 
+    // The UUID of the instance.
+    // 
+    // >  If **ProbeType** is set to **host_probe**, this parameter is required.
     @NameInMap("Uuid")
     public String uuid;
 
+    // The ID of the VPC.
+    // 
+    // >  If **ProbeType** is set to **vpc_black_hole_probe**, this parameter is required. You can call the DescribeVpcHoneyPotList operation to query the IDs of VPCs.
     @NameInMap("VpcId")
     public String vpcId;
 
@@ -131,18 +157,31 @@ public class CreateHoneypotProbeRequest extends TeaModel {
     }
 
     public static class CreateHoneypotProbeRequestHoneypotBindListBindPortList extends TeaModel {
+        // Specifies whether to bind a port. Valid values:
+        // 
+        // *   **true**: yes
+        // *   **false**: no
         @NameInMap("BindPort")
         public Boolean bindPort;
 
+        // The end of the port range.
         @NameInMap("EndPort")
         public Integer endPort;
 
+        // Specifies whether the port is fixed. Valid values:
+        // 
+        // *   **0**: no
+        // *   **1**: yes
         @NameInMap("Fixed")
         public Boolean fixed;
 
+        // The start of the port range.
         @NameInMap("StartPort")
         public Integer startPort;
 
+        // The destination port.
+        // 
+        // >  If **HoneypotId** is specified, this parameter is required.
         @NameInMap("TargetPort")
         public Integer targetPort;
 
@@ -194,9 +233,13 @@ public class CreateHoneypotProbeRequest extends TeaModel {
     }
 
     public static class CreateHoneypotProbeRequestHoneypotBindList extends TeaModel {
+        // The listener ports.
         @NameInMap("BindPortList")
         public java.util.List<CreateHoneypotProbeRequestHoneypotBindListBindPortList> bindPortList;
 
+        // The ID of the honeypot.
+        // 
+        // >  You can call the [ListHoneypot](~~ListHoneypot~~) operation to query the IDs of honeypots.
         @NameInMap("HoneypotId")
         public String honeypotId;
 

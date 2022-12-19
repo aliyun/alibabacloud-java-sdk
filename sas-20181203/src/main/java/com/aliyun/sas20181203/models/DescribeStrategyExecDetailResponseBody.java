@@ -4,30 +4,42 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeStrategyExecDetailResponseBody extends TeaModel {
+    // The time when the baseline check ends.
     @NameInMap("EndTime")
     public String endTime;
 
+    // The number of check items that failed to pass the baseline check. This type of check item is considered risk items.
     @NameInMap("FailCount")
     public Integer failCount;
 
+    // An array consisting of the servers on which risk items were detected.
     @NameInMap("FailedEcsList")
     public java.util.List<DescribeStrategyExecDetailResponseBodyFailedEcsList> failedEcsList;
 
+    // The number of tasks that are **running** based on the baseline check policy.
     @NameInMap("InProcessCount")
     public Integer inProcessCount;
 
+    // The execution progress of the baseline check policy.
     @NameInMap("Percent")
     public String percent;
 
+    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The type of the baseline check. Valid values:
+    // 
+    // *   **Schedule**: automatic check that periodically runs
+    // *   **Manual**: intermediate check that is manually performed
     @NameInMap("Source")
     public String source;
 
+    // The time when the baseline check starts.
     @NameInMap("StartTime")
     public String startTime;
 
+    // The number of check items that **passed** the baseline check.
     @NameInMap("SuccessCount")
     public Integer successCount;
 
@@ -109,18 +121,23 @@ public class DescribeStrategyExecDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeStrategyExecDetailResponseBodyFailedEcsList extends TeaModel {
+        // The IP address of the server on which the baseline check was performed.
         @NameInMap("IP")
         public String IP;
 
+        // The name of the instance.
         @NameInMap("InstanceName")
         public String instanceName;
 
+        // The public IP address.
         @NameInMap("InternetIp")
         public String internetIp;
 
+        // The private IP address.
         @NameInMap("IntranetIp")
         public String intranetIp;
 
+        // The failure cause for the check item.
         @NameInMap("Reason")
         public String reason;
 

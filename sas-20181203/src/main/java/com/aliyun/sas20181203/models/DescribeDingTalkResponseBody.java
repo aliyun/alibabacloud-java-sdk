@@ -4,12 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeDingTalkResponseBody extends TeaModel {
+    // An array that consists of details of notifications.
     @NameInMap("ActionList")
     public java.util.List<DescribeDingTalkResponseBodyActionList> actionList;
 
+    // The pagination information.
     @NameInMap("PageInfo")
     public DescribeDingTalkResponseBodyPageInfo pageInfo;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,36 +46,53 @@ public class DescribeDingTalkResponseBody extends TeaModel {
     }
 
     public static class DescribeDingTalkResponseBodyActionList extends TeaModel {
+        // The name of the notification.
         @NameInMap("ActionName")
         public String actionName;
 
+        // The UID of the user.
         @NameInMap("AliUid")
         public Long aliUid;
 
+        // The list of notification settings.
         @NameInMap("ConfigList")
         public String configList;
 
+        // The language of the content within notifications. Valid values:
+        // 
+        // *   **zh**: Chinese
+        // *   **en**: English
         @NameInMap("DingTalkLang")
         public String dingTalkLang;
 
+        // The creation time. unit:millisecond.
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
+        // The modification time.
         @NameInMap("GmtModified")
         public Long gmtModified;
 
+        // The group IDs.
         @NameInMap("GroupIdList")
         public String groupIdList;
 
+        // The ID of the notification.
         @NameInMap("Id")
         public Integer id;
 
+        // The interval at which the notifications are sent.unit:minute.
         @NameInMap("IntervalTime")
         public Integer intervalTime;
 
+        // The status of the notification. Valid values:
+        // 
+        // *   **0**: disabled
+        // *   **1**: enabled
         @NameInMap("Status")
         public Integer status;
 
+        // The parameters of the notification.
         @NameInMap("Url")
         public String url;
 
@@ -172,12 +192,15 @@ public class DescribeDingTalkResponseBody extends TeaModel {
     }
 
     public static class DescribeDingTalkResponseBodyPageInfo extends TeaModel {
+        // The page number of the returned page.
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        // The number of entries returned per page.
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        // The total number of messages.
         @NameInMap("TotalCount")
         public Integer totalCount;
 

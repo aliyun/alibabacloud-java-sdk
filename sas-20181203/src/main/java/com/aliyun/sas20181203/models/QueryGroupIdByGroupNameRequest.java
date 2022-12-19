@@ -4,9 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class QueryGroupIdByGroupNameRequest extends TeaModel {
+    // The name of the asset group.
     @NameInMap("GroupName")
     public String groupName;
 
+    // The source IP address of the request.
     @NameInMap("SourceIp")
     public String sourceIp;
 

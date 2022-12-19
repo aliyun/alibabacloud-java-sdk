@@ -4,6 +4,7 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DeleteAntiBruteForceRuleRequest extends TeaModel {
+    // An array that consists of the IDs of the defense rules against brute-force attacks to delete.
     @NameInMap("Ids")
     public java.util.List<Long> ids;
 

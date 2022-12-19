@@ -4,54 +4,79 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageListWithBaselineNameRequest extends TeaModel {
+    // The name of the image baseline.
     @NameInMap("BaselineNameKey")
     public String baselineNameKey;
 
+    // The ID of the container cluster.
+    // 
+    // >  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.
     @NameInMap("ClusterId")
     public String clusterId;
 
+    // The name of the cluster.
     @NameInMap("ClusterName")
     public String clusterName;
 
+    // The ID of the container.
     @NameInMap("ContainerId")
     public String containerId;
 
+    // The search condition for the image baseline.
     @NameInMap("Criteria")
     public String criteria;
 
+    // The type of the search condition. Valid values:
+    // 
+    // *   **BaselineNameAlias**: baseline name
+    // *   **BaselineClassAlias**: baseline category
     @NameInMap("CriteriaType")
     public String criteriaType;
 
+    // The number of the page to return. Default value: **1**.
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    // The name of the image to which the container belongs.
     @NameInMap("Image")
     public String image;
 
+    // The SHA-256 value of the image digest.
     @NameInMap("ImageDigest")
     public String imageDigest;
 
+    // The language of the content within the request and response. Default value: **zh**. Valid values:
+    // 
+    // *   **zh**: Chinese
+    // *   **en**: English
     @NameInMap("Lang")
     public String lang;
 
+    // The namespace.
     @NameInMap("Namespace")
     public String namespace;
 
+    // The number of entries to return on each page. Default value: **10**.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The pod.
     @NameInMap("Pod")
     public String pod;
 
+    // The instance ID of the image repository.
     @NameInMap("RepoInstanceId")
     public String repoInstanceId;
 
+    // The name of the image repository.
     @NameInMap("RepoName")
     public String repoName;
 
+    // The namespace to which the image repository belongs.
     @NameInMap("RepoNamespace")
     public String repoNamespace;
 
+    // The types of the assets that you want to scan.
     @NameInMap("ScanRange")
     public java.util.List<String> scanRange;
 

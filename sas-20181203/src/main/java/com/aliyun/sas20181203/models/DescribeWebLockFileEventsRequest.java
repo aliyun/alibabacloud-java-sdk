@@ -4,24 +4,36 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeWebLockFileEventsRequest extends TeaModel {
+    // The number of the page to return. Default value: **1**.
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    // Specifies whether the event on web tamper proofing is handled. Valid values:
+    // 
+    // *   **n**: no
+    // *   **y**: yes
     @NameInMap("Dealed")
     public String dealed;
 
+    // The number of entries to return on each page. Default value: **10**.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The name of the process.
     @NameInMap("ProcessName")
     public String processName;
 
+    // The name of the asset.
+    // 
+    // >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the names of assets.
     @NameInMap("Remark")
     public String remark;
 
+    // The beginning of the time range to query. The value is a UNIX timestamp.
     @NameInMap("TsBegin")
     public Long tsBegin;
 
+    // The end of the time range to query. The value is a UNIX timestamp.
     @NameInMap("TsEnd")
     public Long tsEnd;
 

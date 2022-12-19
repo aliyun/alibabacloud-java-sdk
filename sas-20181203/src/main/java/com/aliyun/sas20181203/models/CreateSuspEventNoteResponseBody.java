@@ -4,18 +4,26 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class CreateSuspEventNoteResponseBody extends TeaModel {
+    // The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
     @NameInMap("Code")
     public String code;
 
+    // The HTTP status code returned.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    // The error message returned.
     @NameInMap("Message")
     public String message;
 
+    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether exceptions are handled. Valid values:
+    // 
+    // *   **true**: yes
+    // *   **false**: no
     @NameInMap("Success")
     public Boolean success;
 

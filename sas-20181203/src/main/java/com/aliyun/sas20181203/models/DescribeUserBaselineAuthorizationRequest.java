@@ -4,12 +4,18 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserBaselineAuthorizationRequest extends TeaModel {
+    // The language of the content within the request and response. Valid values:
+    // 
+    // *   **zh**: Chinese
+    // *   **en**: English
     @NameInMap("Lang")
     public String lang;
 
+    // The ID of the asset owner.
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    // The source IP address of the request.
     @NameInMap("SourceIp")
     public String sourceIp;
 
