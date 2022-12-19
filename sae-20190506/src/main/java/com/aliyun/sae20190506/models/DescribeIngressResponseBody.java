@@ -246,6 +246,7 @@ public class DescribeIngressResponseBody extends TeaModel {
         @NameInMap("Rules")
         public java.util.List<DescribeIngressResponseBodyDataRules> rules;
 
+        // SLB ID。
         @NameInMap("SlbId")
         public String slbId;
 

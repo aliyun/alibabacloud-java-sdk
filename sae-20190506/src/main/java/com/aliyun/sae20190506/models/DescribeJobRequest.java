@@ -10,9 +10,6 @@ public class DescribeJobRequest extends TeaModel {
     @NameInMap("JobId")
     public String jobId;
 
-    @NameInMap("VersionId")
-    public String versionId;
-
     public static DescribeJobRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeJobRequest self = new DescribeJobRequest();
         return TeaModel.build(map, self);
@@ -32,14 +29,6 @@ public class DescribeJobRequest extends TeaModel {
     }
     public String getJobId() {
         return this.jobId;
-    }
-
-    public DescribeJobRequest setVersionId(String versionId) {
-        this.versionId = versionId;
-        return this;
-    }
-    public String getVersionId() {
-        return this.versionId;
     }
 
 }

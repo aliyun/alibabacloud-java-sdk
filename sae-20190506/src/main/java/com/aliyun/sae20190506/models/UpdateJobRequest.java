@@ -13,20 +13,8 @@ public class UpdateJobRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
-    @NameInMap("AssociateEip")
-    public Boolean associateEip;
-
-    @NameInMap("AutoEnableApplicationScalingRule")
-    public Boolean autoEnableApplicationScalingRule;
-
     @NameInMap("BackoffLimit")
     public Long backoffLimit;
-
-    @NameInMap("BatchWaitTime")
-    public Integer batchWaitTime;
-
-    @NameInMap("ChangeOrderDesc")
-    public String changeOrderDesc;
 
     @NameInMap("Command")
     public String command;
@@ -46,12 +34,6 @@ public class UpdateJobRequest extends TeaModel {
     @NameInMap("EdasContainerVersion")
     public String edasContainerVersion;
 
-    @NameInMap("EnableAhas")
-    public String enableAhas;
-
-    @NameInMap("EnableGreyTagRoute")
-    public Boolean enableGreyTagRoute;
-
     @NameInMap("Envs")
     public String envs;
 
@@ -69,12 +51,6 @@ public class UpdateJobRequest extends TeaModel {
 
     @NameInMap("Jdk")
     public String jdk;
-
-    @NameInMap("Liveness")
-    public String liveness;
-
-    @NameInMap("MinReadyInstances")
-    public Integer minReadyInstances;
 
     @NameInMap("MountDesc")
     public String mountDesc;
@@ -103,20 +79,11 @@ public class UpdateJobRequest extends TeaModel {
     @NameInMap("Php")
     public String php;
 
-    @NameInMap("PhpArmsConfigLocation")
-    public String phpArmsConfigLocation;
-
     @NameInMap("PhpConfig")
     public String phpConfig;
 
     @NameInMap("PhpConfigLocation")
     public String phpConfigLocation;
-
-    @NameInMap("PhpExtensions")
-    public String phpExtensions;
-
-    @NameInMap("PhpPECLExtensions")
-    public String phpPECLExtensions;
 
     @NameInMap("PostStart")
     public String postStart;
@@ -132,9 +99,6 @@ public class UpdateJobRequest extends TeaModel {
 
     @NameInMap("PythonModules")
     public String pythonModules;
-
-    @NameInMap("Readiness")
-    public String readiness;
 
     @NameInMap("RefAppId")
     public String refAppId;
@@ -165,9 +129,6 @@ public class UpdateJobRequest extends TeaModel {
 
     @NameInMap("TriggerConfig")
     public String triggerConfig;
-
-    @NameInMap("UpdateStrategy")
-    public String updateStrategy;
 
     @NameInMap("WarStartOptions")
     public String warStartOptions;
@@ -204,44 +165,12 @@ public class UpdateJobRequest extends TeaModel {
         return this.appId;
     }
 
-    public UpdateJobRequest setAssociateEip(Boolean associateEip) {
-        this.associateEip = associateEip;
-        return this;
-    }
-    public Boolean getAssociateEip() {
-        return this.associateEip;
-    }
-
-    public UpdateJobRequest setAutoEnableApplicationScalingRule(Boolean autoEnableApplicationScalingRule) {
-        this.autoEnableApplicationScalingRule = autoEnableApplicationScalingRule;
-        return this;
-    }
-    public Boolean getAutoEnableApplicationScalingRule() {
-        return this.autoEnableApplicationScalingRule;
-    }
-
     public UpdateJobRequest setBackoffLimit(Long backoffLimit) {
         this.backoffLimit = backoffLimit;
         return this;
     }
     public Long getBackoffLimit() {
         return this.backoffLimit;
-    }
-
-    public UpdateJobRequest setBatchWaitTime(Integer batchWaitTime) {
-        this.batchWaitTime = batchWaitTime;
-        return this;
-    }
-    public Integer getBatchWaitTime() {
-        return this.batchWaitTime;
-    }
-
-    public UpdateJobRequest setChangeOrderDesc(String changeOrderDesc) {
-        this.changeOrderDesc = changeOrderDesc;
-        return this;
-    }
-    public String getChangeOrderDesc() {
-        return this.changeOrderDesc;
     }
 
     public UpdateJobRequest setCommand(String command) {
@@ -292,22 +221,6 @@ public class UpdateJobRequest extends TeaModel {
         return this.edasContainerVersion;
     }
 
-    public UpdateJobRequest setEnableAhas(String enableAhas) {
-        this.enableAhas = enableAhas;
-        return this;
-    }
-    public String getEnableAhas() {
-        return this.enableAhas;
-    }
-
-    public UpdateJobRequest setEnableGreyTagRoute(Boolean enableGreyTagRoute) {
-        this.enableGreyTagRoute = enableGreyTagRoute;
-        return this;
-    }
-    public Boolean getEnableGreyTagRoute() {
-        return this.enableGreyTagRoute;
-    }
-
     public UpdateJobRequest setEnvs(String envs) {
         this.envs = envs;
         return this;
@@ -354,22 +267,6 @@ public class UpdateJobRequest extends TeaModel {
     }
     public String getJdk() {
         return this.jdk;
-    }
-
-    public UpdateJobRequest setLiveness(String liveness) {
-        this.liveness = liveness;
-        return this;
-    }
-    public String getLiveness() {
-        return this.liveness;
-    }
-
-    public UpdateJobRequest setMinReadyInstances(Integer minReadyInstances) {
-        this.minReadyInstances = minReadyInstances;
-        return this;
-    }
-    public Integer getMinReadyInstances() {
-        return this.minReadyInstances;
     }
 
     public UpdateJobRequest setMountDesc(String mountDesc) {
@@ -444,14 +341,6 @@ public class UpdateJobRequest extends TeaModel {
         return this.php;
     }
 
-    public UpdateJobRequest setPhpArmsConfigLocation(String phpArmsConfigLocation) {
-        this.phpArmsConfigLocation = phpArmsConfigLocation;
-        return this;
-    }
-    public String getPhpArmsConfigLocation() {
-        return this.phpArmsConfigLocation;
-    }
-
     public UpdateJobRequest setPhpConfig(String phpConfig) {
         this.phpConfig = phpConfig;
         return this;
@@ -466,22 +355,6 @@ public class UpdateJobRequest extends TeaModel {
     }
     public String getPhpConfigLocation() {
         return this.phpConfigLocation;
-    }
-
-    public UpdateJobRequest setPhpExtensions(String phpExtensions) {
-        this.phpExtensions = phpExtensions;
-        return this;
-    }
-    public String getPhpExtensions() {
-        return this.phpExtensions;
-    }
-
-    public UpdateJobRequest setPhpPECLExtensions(String phpPECLExtensions) {
-        this.phpPECLExtensions = phpPECLExtensions;
-        return this;
-    }
-    public String getPhpPECLExtensions() {
-        return this.phpPECLExtensions;
     }
 
     public UpdateJobRequest setPostStart(String postStart) {
@@ -522,14 +395,6 @@ public class UpdateJobRequest extends TeaModel {
     }
     public String getPythonModules() {
         return this.pythonModules;
-    }
-
-    public UpdateJobRequest setReadiness(String readiness) {
-        this.readiness = readiness;
-        return this;
-    }
-    public String getReadiness() {
-        return this.readiness;
     }
 
     public UpdateJobRequest setRefAppId(String refAppId) {
@@ -610,14 +475,6 @@ public class UpdateJobRequest extends TeaModel {
     }
     public String getTriggerConfig() {
         return this.triggerConfig;
-    }
-
-    public UpdateJobRequest setUpdateStrategy(String updateStrategy) {
-        this.updateStrategy = updateStrategy;
-        return this;
-    }
-    public String getUpdateStrategy() {
-        return this.updateStrategy;
     }
 
     public UpdateJobRequest setWarStartOptions(String warStartOptions) {

@@ -4,9 +4,6 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class CreateGreyTagRouteRequest extends TeaModel {
-    @NameInMap("AlbRules")
-    public String albRules;
-
     @NameInMap("AppId")
     public String appId;
 
@@ -25,14 +22,6 @@ public class CreateGreyTagRouteRequest extends TeaModel {
     public static CreateGreyTagRouteRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateGreyTagRouteRequest self = new CreateGreyTagRouteRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateGreyTagRouteRequest setAlbRules(String albRules) {
-        this.albRules = albRules;
-        return this;
-    }
-    public String getAlbRules() {
-        return this.albRules;
     }
 
     public CreateGreyTagRouteRequest setAppId(String appId) {

@@ -4,8 +4,20 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class DisableApplicationScalingRuleResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    @NameInMap("Message")
+    public String message;
+
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
 
     @NameInMap("TraceId")
     public String traceId;
@@ -15,12 +27,44 @@ public class DisableApplicationScalingRuleResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DisableApplicationScalingRuleResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public DisableApplicationScalingRuleResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public DisableApplicationScalingRuleResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
     public DisableApplicationScalingRuleResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DisableApplicationScalingRuleResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public DisableApplicationScalingRuleResponseBody setTraceId(String traceId) {
