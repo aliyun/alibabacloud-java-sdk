@@ -4,9 +4,14 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ModifyPropertyScheduleConfigResponseBody extends TeaModel {
+    // Indicates whether the collection frequency of asset fingerprints is modified. Valid values:
+    // 
+    // *   **true**: yes
+    // *   **false**: no
     @NameInMap("ModifyResult")
     public Boolean modifyResult;
 
+    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 

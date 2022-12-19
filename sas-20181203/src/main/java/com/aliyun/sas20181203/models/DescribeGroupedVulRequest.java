@@ -4,36 +4,72 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeGroupedVulRequest extends TeaModel {
+    // The alias of the vulnerability.
     @NameInMap("AliasName")
     public String aliasName;
 
+    // The type of the vulnerability.
+    // 
+    // >  This parameter is valid only for application vulnerabilities and vulnerabilities that are detected based on software component analysis.
     @NameInMap("AttachTypes")
     public String attachTypes;
 
+    // The number of the page to return. Default value: **1**.
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    // Specifies whether the vulnerability is handled. Valid values:
+    // 
+    // **y**: yes **n**: no
     @NameInMap("Dealed")
     public String dealed;
 
+    // The ID of the asset group.
     @NameInMap("GroupId")
     public String groupId;
 
+    // The language of the content within the request and response. Default value: **zh**. Valid values:
+    // 
+    // *   **zh**: Chinese
+    // *   **en**: English
     @NameInMap("Lang")
     public String lang;
 
+    // The priority to fix the vulnerability. Separate multiple priorities with commas (,). Valid values:
+    // 
+    // *   **asap**: high
+    // *   **later**: medium
+    // *   **nntf**: low
     @NameInMap("Necessity")
     public String necessity;
 
+    // The number of entries to return on each page. Default value: 10.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The tag that is used to filter vulnerabilities. Valid values:
+    // 
+    // *   Restart required
+    // *   Remote exploitation
+    // *   Exploit exists
+    // *   Exploitable
+    // *   Privilege escalation
+    // *   Code execution
     @NameInMap("SearchTags")
     public String searchTags;
 
+    // The type of the vulnerability. Valid values:
+    // 
+    // *   **cve**: Linux software vulnerability
+    // *   **sys**: Windows system vulnerability
+    // *   **cms**: Web-CMS vulnerability
+    // *   **app**: application vulnerability
+    // *   **emg**: urgent vulnerability
+    // *   **sca**: vulnerability that is detected based on software component analysis
     @NameInMap("Type")
     public String type;
 
+    // The UUIDs of the servers. Separate multiple UUIDs with commas (,).
     @NameInMap("Uuids")
     public String uuids;
 

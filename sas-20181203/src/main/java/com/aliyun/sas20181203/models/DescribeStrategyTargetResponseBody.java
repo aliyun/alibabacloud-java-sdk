@@ -4,9 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeStrategyTargetResponseBody extends TeaModel {
+    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
+    // An array consisting of the assets to which the baseline check policy is applied.
     @NameInMap("StrategyTargets")
     public java.util.List<DescribeStrategyTargetResponseBodyStrategyTargets> strategyTargets;
 
@@ -32,15 +34,25 @@ public class DescribeStrategyTargetResponseBody extends TeaModel {
     }
 
     public static class DescribeStrategyTargetResponseBodyStrategyTargets extends TeaModel {
+        // The number of the assets that belong to the asset group.
         @NameInMap("BindUuidCount")
         public Integer bindUuidCount;
 
+        // Indicates whether the baseline check policy is applied to the asset group. Valid values:
+        // 
+        // *   **add**: yes
+        // *   **del**: no
         @NameInMap("Flag")
         public String flag;
 
+        // The ID of the asset group to which the assets belong or the UUID of the asset.
         @NameInMap("Target")
         public String target;
 
+        // The method that is used to add the assets to the baseline check policy. Valid values:
+        // 
+        // *   **groupId**: the ID of the asset group
+        // *   **uuid**: the UUID of the asset
         @NameInMap("TargetType")
         public String targetType;
 

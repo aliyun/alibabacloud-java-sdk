@@ -4,9 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class CreateFileDetectResponseBody extends TeaModel {
+    // The identifier of the file.
     @NameInMap("HashKey")
     public String hashKey;
 
+    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 

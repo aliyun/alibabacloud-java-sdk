@@ -4,30 +4,43 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class PublicPreCheckImageScanTaskRequest extends TeaModel {
+    // The SHA-256 value of the image digest. Separate multiple SHA-256 values with commas (,).
     @NameInMap("Digests")
     public String digests;
 
+    // The ID of the Container Registry instance in which the image repository is created. Separate multiple IDs with commas (,).
     @NameInMap("InstanceIds")
     public String instanceIds;
 
+    // The region ID of the image. Separate multiple IDs with commas (,).
     @NameInMap("RegionIds")
     public String regionIds;
 
+    // The type of the image repository. Separate multiple types with commas (,). Valid values:
+    // 
+    // *   **acr**
+    // *   **harbor**
+    // *   **quay**
     @NameInMap("RegistryTypes")
     public String registryTypes;
 
+    // The ID of the image repository. Separate multiple IDs with commas (,).
     @NameInMap("RepoIds")
     public String repoIds;
 
+    // The name of the image repository. Separate multiple names with commas (,).
     @NameInMap("RepoNames")
     public String repoNames;
 
+    // The namespace to which the image repository belongs. Separate multiple namespaces with commas (,).
     @NameInMap("RepoNamespaces")
     public String repoNamespaces;
 
+    // The source IP address of the request.
     @NameInMap("SourceIp")
     public String sourceIp;
 
+    // The tag that is added to the image. Separate multiple tags with commas (,).
     @NameInMap("Tags")
     public String tags;
 

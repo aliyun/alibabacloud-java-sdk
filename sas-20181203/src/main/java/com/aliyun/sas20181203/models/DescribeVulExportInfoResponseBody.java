@@ -4,30 +4,43 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeVulExportInfoResponseBody extends TeaModel {
+    // The number of exported entries.
     @NameInMap("CurrentCount")
     public Integer currentCount;
 
+    // The status of the export task. Valid values:
+    // 
+    // - **init**: The task is being initialized.
+    // - **exporting**: The task is in progress.
+    // - **success**: The task is complete.
     @NameInMap("ExportStatus")
     public String exportStatus;
 
+    // The name of the exported Excel file.
     @NameInMap("FileName")
     public String fileName;
 
+    // The ID of the vulnerability export task.
     @NameInMap("Id")
     public Long id;
 
+    // The URL at which you can download the exported Excel file.
     @NameInMap("Link")
     public String link;
 
+    // The message that shows the task result. The value is fixed as **success*, which indicates that the export task is completed.
     @NameInMap("Message")
     public String message;
 
+    // The progress percentage of the asset export task.
     @NameInMap("Progress")
     public Integer progress;
 
+    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The total number of entries in the Excel file.
     @NameInMap("TotalCount")
     public Integer totalCount;
 

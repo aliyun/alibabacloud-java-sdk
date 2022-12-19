@@ -4,9 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeAlarmEventDetailResponseBody extends TeaModel {
+    // The details about the alert event.
     @NameInMap("Data")
     public DescribeAlarmEventDetailResponseBodyData data;
 
+    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +34,18 @@ public class DescribeAlarmEventDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeAlarmEventDetailResponseBodyDataCauseDetailsValue extends TeaModel {
+        // The name of the field that displays tracing information.
         @NameInMap("Name")
         public String name;
 
+        // The type of the field that displays tracing information. Valid values:
+        // 
+        // *   **text**
+        // *   **html**
         @NameInMap("Type")
         public String type;
 
+        // The value of the field that displays tracing information.
         @NameInMap("Value")
         public String value;
 
@@ -73,9 +81,11 @@ public class DescribeAlarmEventDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeAlarmEventDetailResponseBodyDataCauseDetails extends TeaModel {
+        // The key that is used to trace the alert event.
         @NameInMap("Key")
         public String key;
 
+        // An array consisting of the value that is used to trace the alert event.
         @NameInMap("Value")
         public java.util.List<DescribeAlarmEventDetailResponseBodyDataCauseDetailsValue> value;
 
@@ -103,84 +113,147 @@ public class DescribeAlarmEventDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeAlarmEventDetailResponseBodyData extends TeaModel {
+        // The name of the alert event.
         @NameInMap("AlarmEventAliasName")
         public String alarmEventAliasName;
 
+        // The description of the alert event.
         @NameInMap("AlarmEventDesc")
         public String alarmEventDesc;
 
+        // The unique ID of the alert event.
+        // 
+        // >  To query the details about an alert event, you must specify the unique ID of the alert event. You can call the [DescribeAlarmEventList](~~DescribeAlarmEventList~~) operation to query the unique IDs of alert events.
         @NameInMap("AlarmUniqueInfo")
         public String alarmUniqueInfo;
 
+        // The name of the container application.
         @NameInMap("AppName")
         public String appName;
 
+        // Indicates whether the online handling of the alert event is supported. Valid values:
+        // 
+        // *   **true**: yes
+        // *   **false**: no
         @NameInMap("CanBeDealOnLine")
         public Boolean canBeDealOnLine;
 
+        // Indicates whether you can cancel marking the alert event as a false positive. Valid values:
+        // 
+        // *   **true**: yes
+        // *   **false**: no
         @NameInMap("CanCancelFault")
         public Boolean canCancelFault;
 
+        // An array consisting of the cause of the alert event, which can be used to trace the alert event.
         @NameInMap("CauseDetails")
         public java.util.List<DescribeAlarmEventDetailResponseBodyDataCauseDetails> causeDetails;
 
+        // Indicates whether the Safeguard Mode For Major Activities mode is enabled.
         @NameInMap("ContainHwMode")
         public Boolean containHwMode;
 
+        // The ID of the container application.
         @NameInMap("ContainerId")
         public String containerId;
 
+        // The ID of the image to which the container belongs.
         @NameInMap("ContainerImageId")
         public String containerImageId;
 
+        // The name of the image to which the container belongs.
         @NameInMap("ContainerImageName")
         public String containerImageName;
 
+        // The data source of the alert event.
         @NameInMap("DataSource")
         public String dataSource;
 
+        // The timestamp when the alert event ends. Unit: milliseconds.
         @NameInMap("EndTime")
         public Long endTime;
 
+        // The name of the instance.
         @NameInMap("InstanceName")
         public String instanceName;
 
+        // The public IP address of the associated instance.
         @NameInMap("InternetIp")
         public String internetIp;
 
+        // The private IP address of the associated instance.
         @NameInMap("IntranetIp")
         public String intranetIp;
 
+        // The ID of the Kubernetes cluster.
         @NameInMap("K8sClusterId")
         public String k8sClusterId;
 
+        // The name of the Kubernetes cluster.
         @NameInMap("K8sClusterName")
         public String k8sClusterName;
 
+        // The namespace of the Kubernetes cluster.
         @NameInMap("K8sNamespace")
         public String k8sNamespace;
 
+        // The ID of the Kubernetes cluster node.
         @NameInMap("K8sNodeId")
         public String k8sNodeId;
 
+        // The name of the Kubernetes cluster node.
         @NameInMap("K8sNodeName")
         public String k8sNodeName;
 
+        // The name of the Kubernetes pod.
         @NameInMap("K8sPodName")
         public String k8sPodName;
 
+        // The severity of the alert event. Valid values:
+        // 
+        // *   **serious**
+        // *   **suspicious**
+        // *   **remind**
         @NameInMap("Level")
         public String level;
 
+        // The solution to the alert event.
         @NameInMap("Solution")
         public String solution;
 
+        // The timestamp when the alert event starts. Unit: milliseconds.
         @NameInMap("StartTime")
         public Long startTime;
 
+        // The alert type of the alert event. Valid values:
+        // 
+        // *   Suspicious process
+        // *   Webshell
+        // *   Unusual logon
+        // *   Exception
+        // *   Sensitive file tampering
+        // *   Malicious process (cloud threat detection)
+        // *   Suspicious network connection
+        // *   Other
+        // *   Abnormal account
+        // *   Application intrusion event
+        // *   Cloud threat detection
+        // *   Precise defense
+        // *   Application whitelist
+        // *   Persistent webshell
+        // *   Web application threat detection
+        // *   Malicious script
+        // *   Threat intelligence
+        // *   Malicious network activity
+        // *   Cluster exception
+        // *   Webshell (on-premises threat detection)
+        // *   Vulnerability exploitation
+        // *   Malicious process (on-premises threat detection)
+        // *   Trusted exception
         @NameInMap("Type")
         public String type;
 
+        // The instance UUID of the asset.
         @NameInMap("Uuid")
         public String uuid;
 

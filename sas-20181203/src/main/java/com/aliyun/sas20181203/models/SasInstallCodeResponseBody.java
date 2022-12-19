@@ -4,9 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class SasInstallCodeResponseBody extends TeaModel {
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The installation verification code that is used to run the installation command when you manually install the Security Center agent.
     @NameInMap("data")
     public String data;
 

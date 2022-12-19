@@ -4,21 +4,27 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeCheckWarningsResponseBody extends TeaModel {
+    // An array that consists of the check items.
     @NameInMap("CheckWarnings")
     public java.util.List<DescribeCheckWarningsResponseBodyCheckWarnings> checkWarnings;
 
+    // The number of entries returned on the current page.
     @NameInMap("Count")
     public Integer count;
 
+    // The page number of the returned page.
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    // The number of entries returned per page. Default value: **20**.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The total number of entries returned.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -76,30 +82,52 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
     }
 
     public static class DescribeCheckWarningsResponseBodyCheckWarnings extends TeaModel {
+        // The ID of the check item.
         @NameInMap("CheckId")
         public Long checkId;
 
+        // The ID of the alert that is triggered by the check item.
         @NameInMap("CheckWarningId")
         public Long checkWarningId;
 
+        // The fixing status of the check item. Valid values:
+        // 
+        // *   **0**: disabled
+        // *   **1**: enabled
         @NameInMap("FixStatus")
         public Integer fixStatus;
 
+        // The name of the check item.
         @NameInMap("Item")
         public String item;
 
+        // The risk level of the risk item. Valid values:
+        // 
+        // *   **high**
+        // *   **medium**
+        // *   **low**
         @NameInMap("Level")
         public String level;
 
+        // The remarks.
         @NameInMap("Reason")
         public String reason;
 
+        // The status of the check item. Valid values:
+        // 
+        // *   **1**: failed
+        // *   **2**: verifying
+        // *   **3**: passed
+        // *   **5**: expired
+        // *   **6**: ignored
         @NameInMap("Status")
         public Integer status;
 
+        // The type of the check item.
         @NameInMap("Type")
         public String type;
 
+        // The UUID of the server on which the baseline check is performed.
         @NameInMap("Uuid")
         public String uuid;
 

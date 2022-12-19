@@ -4,9 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeVpcHoneyPotCriteriaResponseBody extends TeaModel {
+    // An array consisting of the search conditions that can be used to query honeypots.
     @NameInMap("CriteriaList")
     public java.util.List<DescribeVpcHoneyPotCriteriaResponseBodyCriteriaList> criteriaList;
 
+    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +34,20 @@ public class DescribeVpcHoneyPotCriteriaResponseBody extends TeaModel {
     }
 
     public static class DescribeVpcHoneyPotCriteriaResponseBodyCriteriaList extends TeaModel {
+        // The name of the search condition.
         @NameInMap("Name")
         public String name;
 
+        // The type of the search condition. Valid values:
+        // 
+        // *   **input**: You must manually enter the search condition.
+        // *   **select**: You must select a search condition from the **Values** drop-down list.
         @NameInMap("Type")
         public String type;
 
+        // The values of the search condition. This parameter is returned only if the value of **Type** is **select**.
+        // 
+        // >  If the value of **Type** is **input**, the value of this parameter is an empty string.
         @NameInMap("Values")
         public String values;
 

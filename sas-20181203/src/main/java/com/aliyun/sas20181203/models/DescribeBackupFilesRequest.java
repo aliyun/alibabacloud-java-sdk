@@ -4,18 +4,23 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupFilesRequest extends TeaModel {
+    // The number of the page to return. Default value: **1**.
     @NameInMap("CurrentPage")
     public String currentPage;
 
+    // The number of entries to return on each page. Default value: **10**.
     @NameInMap("PageSize")
     public String pageSize;
 
+    // The path to the backup file.
     @NameInMap("Path")
     public String path;
 
+    // The hash value of the backup file.
     @NameInMap("SnapshotHash")
     public String snapshotHash;
 
+    // The UUID of the server to which an anti-ransomware policy is applied.
     @NameInMap("Uuid")
     public String uuid;
 

@@ -4,27 +4,39 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeCheckWarningDetailResponseBody extends TeaModel {
+    // The suggestion for the management of the risk item.
     @NameInMap("Advice")
     public String advice;
 
+    // The ID of the check item.
     @NameInMap("CheckId")
     public Long checkId;
 
+    // The additional information about the risk item.
     @NameInMap("Description")
     public String description;
 
+    // The name of the check item.
     @NameInMap("Item")
     public String item;
 
+    // The risk level of the check item. Valid values:
+    // 
+    // *   **high**: The item is a high-risk item and is highlighted in red.
+    // *   **medium**: The item is a medium-risk item and is highlighted in orange.
+    // *   **low**: The item is a low-risk item and is highlighted in gray.
     @NameInMap("Level")
     public String level;
 
+    // The prompt for the risk item.
     @NameInMap("Prompt")
     public String prompt;
 
+    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The type of the check item. Valid values:
     @NameInMap("Type")
     public String type;
 

@@ -4,9 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupClientsResponseBody extends TeaModel {
+    // An array that consists of the information about the anti-ransomware agent.
     @NameInMap("Clients")
     public java.util.List<DescribeBackupClientsResponseBodyClients> clients;
 
+    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +34,32 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
     }
 
     public static class DescribeBackupClientsResponseBodyClients extends TeaModel {
+        // The ID of the anti-ransomware agent.
         @NameInMap("ClientId")
         public String clientId;
 
+        // The status of the anti-ransomware agent.
+        // 
+        // Valid values:
+        // 
+        // *   **INSTALLING**: The agent is being installed.
+        // *   **ONLINE**: The agent is online.
+        // *   **UNINSTALLING**: The agent is being uninstalled.
+        // *   **NOT_INSTALLED**: The agent is not installed.
+        // *   **ACTIVATED**: The agent is enabled.
+        // *   **CLIENT\_CONNECTION_ERROR**: A connection error occurs on the agent.
         @NameInMap("ClientStatus")
         public String clientStatus;
 
+        // The version of the anti-ransomware agent.
         @NameInMap("ClientVersion")
         public String clientVersion;
 
+        // The ID of the ECS instance on which the anti-ransomware agent is installed.
         @NameInMap("InstanceId")
         public String instanceId;
 
+        // The UUID of the Elastic Compute Service (ECS) instance on which the anti-ransomware agent is installed.
         @NameInMap("Uuid")
         public String uuid;
 

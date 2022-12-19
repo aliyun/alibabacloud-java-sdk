@@ -4,21 +4,31 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeRiskListCheckResultRequest extends TeaModel {
+    // The number of the page to return. Pages start from page 1. Default value: 1.
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    // The instance ID of the cloud service. Separate multiple IDs with commas (,).
+    // 
+    // >  If you do not specify this parameter, an empty list is returned.
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
+    // The language of the content within the request and response. Valid values:
+    // 
+    // *   **zh**: Chinese
+    // *   **en**: English
     @NameInMap("Lang")
     public String lang;
 
+    // The number of entries to return on each page.
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    // The source IP address of the request.
     @NameInMap("SourceIp")
     public String sourceIp;
 

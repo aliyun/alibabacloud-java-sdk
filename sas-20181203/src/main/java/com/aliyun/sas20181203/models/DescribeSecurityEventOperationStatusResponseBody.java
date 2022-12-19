@@ -4,9 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeSecurityEventOperationStatusResponseBody extends TeaModel {
+    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The information about the task that handles the alert events.
     @NameInMap("SecurityEventOperationStatusResponse")
     public DescribeSecurityEventOperationStatusResponseBodySecurityEventOperationStatusResponse securityEventOperationStatusResponse;
 
@@ -32,12 +34,19 @@ public class DescribeSecurityEventOperationStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeSecurityEventOperationStatusResponseBodySecurityEventOperationStatusResponseSecurityEventOperationStatuses extends TeaModel {
+        // The code that indicates the handling result of the alert event.
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        // The ID of the alert event.
         @NameInMap("SecurityEventId")
         public String securityEventId;
 
+        // The handling status of the alert event. Valid values:
+        // 
+        // *   **Processing**: The alert event is being handled.
+        // *   **Success**: The alert event is handled.
+        // *   **Failed**: The alert event failed to be handled.
         @NameInMap("Status")
         public String status;
 
@@ -73,9 +82,16 @@ public class DescribeSecurityEventOperationStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeSecurityEventOperationStatusResponseBodySecurityEventOperationStatusResponse extends TeaModel {
+        // An array consisting of the status of the alert events handled by the task.
         @NameInMap("SecurityEventOperationStatuses")
         public java.util.List<DescribeSecurityEventOperationStatusResponseBodySecurityEventOperationStatusResponseSecurityEventOperationStatuses> securityEventOperationStatuses;
 
+        // The status of the task that handles the alert events. Valid values:
+        // 
+        // *   **Processing**: The task is running.
+        // *   **Success**: The task is successful.
+        // *   **Failure**: The task failed.
+        // *   **Pending**: The task is pending.
         @NameInMap("TaskStatus")
         public String taskStatus;
 

@@ -4,9 +4,13 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class PauseClientRequest extends TeaModel {
+    // The list of servers for which you want to enable or disable the Security Center agent.
     @NameInMap("Uuids")
     public String uuids;
 
+    // The status of the Security Center agent. Valid values:
+    // - **0**: disabled
+    // - **1**: enabled
     @NameInMap("Value")
     public String value;
 

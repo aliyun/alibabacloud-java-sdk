@@ -4,9 +4,14 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class CheckSecurityEventIdResponseBody extends TeaModel {
+    // Indicates whether the alert events are generated on the server. Valid values:
+    // 
+    // *   **true**: yes
+    // *   **false**: no
     @NameInMap("Data")
     public Boolean data;
 
+    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 

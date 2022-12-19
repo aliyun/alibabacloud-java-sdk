@@ -4,18 +4,23 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeWebLockBindListResponseBody extends TeaModel {
+    // The information about the servers that have web tamper proofing enabled.
     @NameInMap("BindList")
     public java.util.List<DescribeWebLockBindListResponseBodyBindList> bindList;
 
+    // The page number of the returned page. Pages start from page 1. Default value: 1.
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    // The number of entries returned per page. Default value: 20.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The total number of servers that have web tamper proofing enabled.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,42 +70,70 @@ public class DescribeWebLockBindListResponseBody extends TeaModel {
     }
 
     public static class DescribeWebLockBindListResponseBodyBindList extends TeaModel {
+        // The number of alerts.
         @NameInMap("AuditCount")
         public String auditCount;
 
+        // The number of blocked tampering events.
         @NameInMap("BlockCount")
         public String blockCount;
 
+        // The number of protected directories.
         @NameInMap("DirCount")
         public String dirCount;
 
+        // The name of the server.
         @NameInMap("InstanceName")
         public String instanceName;
 
+        // The public IP address of the server.
         @NameInMap("InternetIp")
         public String internetIp;
 
+        // The private IP address of the server.
         @NameInMap("IntranetIp")
         public String intranetIp;
 
+        // The operating system that the server runs.
         @NameInMap("Os")
         public String os;
 
+        // The starting progress percentage of web tamper proofing. Valid values: 0 to 100.
         @NameInMap("Percent")
         public Integer percent;
 
+        // The error code for web tamper proofing. Valid values:
+        // 
+        // *   **2001**: The Security Center agent is offline.
+        // *   **9999**: The connection timed out.
         @NameInMap("ServiceCode")
         public String serviceCode;
 
+        // The error message for web tamper proofing. Valid values:
+        // 
+        // *   **client offline**: The Security Center agent is offline.
+        // *   **timeout**: The connection timed out.
         @NameInMap("ServiceDetail")
         public String serviceDetail;
 
+        // The status of web tamper proofing on the server. Valid values:
+        // 
+        // *   **stop**: Web tamper proofing is disabled.
+        // *   **initializing**: Web tamper proofing is being enabled.
+        // *   **exception**: Web tamper proofing is not running as expected.
+        // *   **running**: Web tamper proofing is running.
+        // *   **closing**: Web tamper proofing is being disabled.
         @NameInMap("ServiceStatus")
         public String serviceStatus;
 
+        // The protection status of the server. Valid values:
+        // 
+        // *   **on**: protected
+        // *   **off**: unprotected
         @NameInMap("Status")
         public String status;
 
+        // The UUID of the server.
         @NameInMap("Uuid")
         public String uuid;
 

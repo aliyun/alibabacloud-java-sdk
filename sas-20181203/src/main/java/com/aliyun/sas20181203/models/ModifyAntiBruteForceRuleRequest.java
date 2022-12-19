@@ -4,30 +4,67 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ModifyAntiBruteForceRuleRequest extends TeaModel {
+    // Specifies whether to set the defense rule as the default rule. Valid values:
+    // 
+    // *   **true**: yes
+    // *   **false**: no
     @NameInMap("DefaultRule")
     public Boolean defaultRule;
 
+    // The threshold of logon failures that you specify. Valid values:
+    // 
+    // *   **2**
+    // *   **3**
+    // *   **4**
+    // *   **5**
+    // *   **10**
+    // *   **50**
+    // *   **80**
+    // *   **100**
     @NameInMap("FailCount")
     public Integer failCount;
 
+    // The period of time during which logons from an account are not allowed. Unit: minutes. Valid values:
+    // 
+    // *   **5**
+    // *   **15**
+    // *   **30**
+    // *   **60**
+    // *   **120**
+    // *   **360**
+    // *   **720**
+    // *   **1440**
+    // *   **10080**
+    // *   **52560000**: permanent
     @NameInMap("ForbiddenTime")
     public Integer forbiddenTime;
 
+    // The ID of the defense rule.
     @NameInMap("Id")
     public Long id;
 
+    // The name of the defense rule.
     @NameInMap("Name")
     public String name;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    // The source IP address of the request.
     @NameInMap("SourceIp")
     public String sourceIp;
 
+    // The period of time during which logon failures from an account are measured. Unit: minutes. Valid values:
+    // 
+    // *   **1**
+    // *   **2**
+    // *   **5**
+    // *   **10**
+    // *   **15**
     @NameInMap("Span")
     public Integer span;
 
+    // An array consisting of the UUIDs of the servers to which the defense rule is applied.
     @NameInMap("UuidList")
     public java.util.List<String> uuidList;
 

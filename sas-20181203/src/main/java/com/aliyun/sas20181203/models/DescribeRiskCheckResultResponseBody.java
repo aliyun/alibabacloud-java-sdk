@@ -4,24 +4,31 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeRiskCheckResultResponseBody extends TeaModel {
+    // The number of entries returned on the current page.
     @NameInMap("Count")
     public Integer count;
 
+    // The page number of the returned page.
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    // An array that consists of the check items.
     @NameInMap("List")
     public java.util.List<DescribeRiskCheckResultResponseBodyList> list;
 
+    // The total number of pages returned.
     @NameInMap("PageCount")
     public Integer pageCount;
 
+    // The number of entries returned per page. Default value: **20**.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The total number of entries returned.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -87,9 +94,16 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
     }
 
     public static class DescribeRiskCheckResultResponseBodyListRiskItemResources extends TeaModel {
+        // The details about the check result.
         @NameInMap("ContentResource")
         public java.util.Map<String, ?> contentResource;
 
+        // The title in the details. Valid values:
+        // 
+        // *   **bestPractice**: description
+        // *   **influence**: risk
+        // *   **suggestion**: solution
+        // *   **helpResource**: reference
         @NameInMap("ResourceName")
         public String resourceName;
 
@@ -117,45 +131,83 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
     }
 
     public static class DescribeRiskCheckResultResponseBodyList extends TeaModel {
+        // The number of affected assets.
         @NameInMap("AffectedCount")
         public Integer affectedCount;
 
+        // The timestamp when the last check was performed. Unit: milliseconds.
         @NameInMap("CheckTime")
         public Long checkTime;
 
+        // The ID of the check item. For more information about the description of the check item ID, see the check item table in the "Response parameters" section of this topic.
         @NameInMap("ItemId")
         public Long itemId;
 
+        // The time when the next check will be performed.
         @NameInMap("RemainingTime")
         public Integer remainingTime;
 
+        // Indicates whether the risks that are detected for the check item can be fixed. Valid values:
+        // 
+        // *   **enabled**: yes
+        // *   **disabled**: no
         @NameInMap("RepairStatus")
         public String repairStatus;
 
+        // The type of the affected assets.
         @NameInMap("RiskAssertType")
         public String riskAssertType;
 
+        // An array that consists of the details about the check item.
         @NameInMap("RiskItemResources")
         public java.util.List<DescribeRiskCheckResultResponseBodyListRiskItemResources> riskItemResources;
 
+        // The risk level of the check item. Valid values:
+        // 
+        // *   **high**
+        // *   **medium**
+        // *   **low**
         @NameInMap("RiskLevel")
         public String riskLevel;
 
+        // The sequence number of the check result. The check items are sorted based on the sequence number.
         @NameInMap("Sort")
         public Integer sort;
 
+        // Indicates whether the check item is supported by the cloud service. Valid values:
+        // 
+        // *   **enabled**: The check item is supported by the cloud service.
+        // *   **disable**: The check item is not supported by the cloud service.
         @NameInMap("StartStatus")
         public String startStatus;
 
+        // The status of the check result. Valid values:
+        // 
+        // *   **pass**
+        // *   **failed**
+        // *   **running**
+        // *   **waiting**
+        // *   **ignored**
+        // *   **falsePositive**
         @NameInMap("Status")
         public String status;
 
+        // The ID of the check task.
         @NameInMap("TaskId")
         public Long taskId;
 
+        // The name of the check item.
         @NameInMap("Title")
         public String title;
 
+        // The type of the check item. Valid values:
+        // 
+        // *   Identity authentication and permissions
+        // *   Network access control
+        // *   Log audit
+        // *   Data security
+        // *   Monitoring and alerting
+        // *   Basic security protection
         @NameInMap("Type")
         public String type;
 

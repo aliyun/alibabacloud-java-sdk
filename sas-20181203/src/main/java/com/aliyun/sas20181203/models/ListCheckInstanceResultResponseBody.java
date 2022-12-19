@@ -4,18 +4,23 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListCheckInstanceResultResponseBody extends TeaModel {
+    // An array that consists of the basic information about the instances.
     @NameInMap("BasicData")
     public java.util.List<ListCheckInstanceResultResponseBodyBasicData> basicData;
 
+    // The extended information about the instances.
     @NameInMap("Checks")
     public java.util.List<java.util.Map<String, ?>> checks;
 
+    // The metadata information about the search conditions that can be used to filter instances.
     @NameInMap("Columns")
     public java.util.List<ListCheckInstanceResultResponseBodyColumns> columns;
 
+    // The pagination information.
     @NameInMap("PageInfo")
     public ListCheckInstanceResultResponseBodyPageInfo pageInfo;
 
+    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -65,18 +70,29 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
     }
 
     public static class ListCheckInstanceResultResponseBodyBasicData extends TeaModel {
+        // The ID of the check result for the instance.
         @NameInMap("Id")
         public Long id;
 
+        // The ID of the server.
         @NameInMap("InstanceId")
         public String instanceId;
 
+        // The name of the server.
         @NameInMap("InstanceName")
         public String instanceName;
 
+        // The region ID of the instance.
         @NameInMap("RegionId")
         public String regionId;
 
+        // The statuses of check items. Multiple statuses are separated by commas (,). Valid values:
+        // 
+        // *   **PASS**
+        // *   **NOT_PASS**
+        // *   **CHECKING**
+        // *   **NOT_CHECK**
+        // *   **WHITELIST**
         @NameInMap("Status")
         public String status;
 
@@ -128,12 +144,18 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
     }
 
     public static class ListCheckInstanceResultResponseBodyColumnsGrids extends TeaModel {
+        // The search condition.
         @NameInMap("Key")
         public String key;
 
+        // The display name of the search condition.
         @NameInMap("ShowName")
         public String showName;
 
+        // The format of the check results for the instances. Valid values:
+        // 
+        // *   **text**
+        // *   **link**
         @NameInMap("Type")
         public String type;
 
@@ -169,21 +191,33 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
     }
 
     public static class ListCheckInstanceResultResponseBodyColumns extends TeaModel {
+        // The metadata information about the details of the instances.
         @NameInMap("Grids")
         public java.util.List<ListCheckInstanceResultResponseBodyColumnsGrids> grids;
 
+        // The search condition.
         @NameInMap("Key")
         public String key;
 
+        // Indicates whether the search condition is used. Valid values:
+        // 
+        // *   **true**: yes
+        // *   **false**: no
         @NameInMap("Search")
         public Boolean search;
 
+        // The value of the search condition.
         @NameInMap("SearchKey")
         public String searchKey;
 
+        // The display name of the search condition.
         @NameInMap("ShowName")
         public String showName;
 
+        // The format of the check results for the instances. Valid values:
+        // 
+        // *   **text**
+        // *   **link**
         @NameInMap("Type")
         public String type;
 
@@ -243,15 +277,19 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
     }
 
     public static class ListCheckInstanceResultResponseBodyPageInfo extends TeaModel {
+        // The number of entries returned on the current page.
         @NameInMap("Count")
         public String count;
 
+        // The page number of the returned page.
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        // The number of entries returned per page.
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        // The total number of entries returned.
         @NameInMap("TotalCount")
         public Integer totalCount;
 

@@ -4,12 +4,17 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class CreateVulAutoRepairConfigRequest extends TeaModel {
+    // The reason why the vulnerability can be automatically fixed.
     @NameInMap("Reason")
     public String reason;
 
+    // The type of the vulnerability. Valid values: 
+    // - **cve**: Linux software vulnerability. 
+    // - **sys**: Windows system vulnerability.
     @NameInMap("Type")
     public String type;
 
+    // The vulnerabilities that can be automatically fixed.
     @NameInMap("VulAutoRepairConfigList")
     public java.util.List<CreateVulAutoRepairConfigRequestVulAutoRepairConfigList> vulAutoRepairConfigList;
 
@@ -43,9 +48,11 @@ public class CreateVulAutoRepairConfigRequest extends TeaModel {
     }
 
     public static class CreateVulAutoRepairConfigRequestVulAutoRepairConfigList extends TeaModel {
+        // The alias of the vulnerability.
         @NameInMap("AliasName")
         public String aliasName;
 
+        // The name of the vulnerability.
         @NameInMap("Name")
         public String name;
 

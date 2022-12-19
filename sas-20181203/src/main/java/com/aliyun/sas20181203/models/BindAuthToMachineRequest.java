@@ -4,24 +4,52 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class BindAuthToMachineRequest extends TeaModel {
+    // The edition of Security Center. Valid values:
+    // 
+    // *   **6**: Anti-virus edition
+    // *   **5**: Advanced edition
+    // *   **3**: Enterprise edition
+    // *   **7**: Ultimate edition
+    // *   **10**: Value-added Plan edition
     @NameInMap("AuthVersion")
     public Integer authVersion;
 
+    // Specifies whether to automatically bind servers to Security Center. Valid values:
+    // 
+    // *   **0**: no
+    // *   **1**: yes
     @NameInMap("AutoBind")
     public Integer autoBind;
 
+    // The UUIDs of the servers that you want to bind to Security Center.
+    // 
+    // >  You must specify at least one of the **Bind** and **UnBind** parameters.
     @NameInMap("Bind")
     public java.util.List<String> bind;
 
+    // Specifies whether to bind all servers to Security Center. Default value: **false**. Valid values:
+    // 
+    // *   **true**: yes
+    // *   **false**: no
     @NameInMap("BindAll")
     public Boolean bindAll;
 
+    // The search conditions that are used to filter servers. The value of this parameter is in the JSON format and is case-sensitive.
+    // 
+    // >  A search condition can be an instance ID, instance name, virtual private cloud (VPC) ID, region, or public IP address. You can call the [DescribeCriteria](~~DescribeCriteria~~) operation to query the supported search conditions.
     @NameInMap("Criteria")
     public String criteria;
 
+    // The logical relationship among multiple search conditions. Valid values:
+    // 
+    // *   **OR**: Search conditions are evaluated by using a logical **OR**.
+    // *   **AND**: Search conditions are evaluated by using a logical **AND**.
     @NameInMap("LogicalExp")
     public String logicalExp;
 
+    // The UUIDs of the servers that you want to unbind from Security Center.
+    // 
+    // >  You must specify at least one of the **Bind** and **UnBind** parameters.
     @NameInMap("UnBind")
     public java.util.List<String> unBind;
 

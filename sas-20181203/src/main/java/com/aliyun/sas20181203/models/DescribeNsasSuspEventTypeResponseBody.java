@@ -4,9 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeNsasSuspEventTypeResponseBody extends TeaModel {
+    // An array that consists of the information about the alert type.
     @NameInMap("EventTypes")
     public java.util.List<DescribeNsasSuspEventTypeResponseBodyEventTypes> eventTypes;
 
+    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +34,15 @@ public class DescribeNsasSuspEventTypeResponseBody extends TeaModel {
     }
 
     public static class DescribeNsasSuspEventTypeResponseBodyEventTypes extends TeaModel {
+        // The name of the alert type.
         @NameInMap("Name")
         public String name;
 
+        // The number of assets for which an alert of the type is generated.
         @NameInMap("SuspEventCount")
         public Integer suspEventCount;
 
+        // The alert type.
         @NameInMap("Type")
         public String type;
 

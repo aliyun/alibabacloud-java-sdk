@@ -4,21 +4,33 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeWebLockBindListRequest extends TeaModel {
+    // The number of the page to return. Pages start from page 1. Default value: 1.
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    // The language of the content within the request and the response. Valid values:
+    // 
+    // *   **zh**: Chinese
+    // *   **en**: English
     @NameInMap("Lang")
     public String lang;
 
+    // The number of entries to return on each page. Default value: 20.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The string that allows you to search for servers in fuzzy match mode. You can enter a server name or IP address.
     @NameInMap("Remark")
     public String remark;
 
+    // The source IP address of the request.
     @NameInMap("SourceIp")
     public String sourceIp;
 
+    // The protection status of the server that you want to query. Valid values:
+    // 
+    // *   **on**: protected
+    // *   **off**: unprotected
     @NameInMap("Status")
     public String status;
 

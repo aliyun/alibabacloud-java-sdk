@@ -4,12 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeSuspiciousUUIDConfigResponseBody extends TeaModel {
+    // The total number of servers on which proactive defense of the specified type takes effect.
     @NameInMap("Count")
     public Integer count;
 
+    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The UUIDs of servers on which proactive defense of the specified type takes effect.
     @NameInMap("UUIDList")
     public java.util.List<String> UUIDList;
 

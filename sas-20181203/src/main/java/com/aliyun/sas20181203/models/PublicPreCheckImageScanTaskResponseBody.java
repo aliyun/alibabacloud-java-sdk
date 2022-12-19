@@ -4,9 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class PublicPreCheckImageScanTaskResponseBody extends TeaModel {
+    // The data returned if the call is successful.
     @NameInMap("Data")
     public PublicPreCheckImageScanTaskResponseBodyData data;
 
+    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +34,11 @@ public class PublicPreCheckImageScanTaskResponseBody extends TeaModel {
     }
 
     public static class PublicPreCheckImageScanTaskResponseBodyData extends TeaModel {
+        // The number of images to scan in the task.
         @NameInMap("NeedAuthCount")
         public Integer needAuthCount;
 
+        // The quota for container image scan to be consumed by the task.
         @NameInMap("ScanImageCount")
         public Integer scanImageCount;
 

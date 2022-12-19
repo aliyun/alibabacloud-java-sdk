@@ -4,6 +4,7 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListAvailableHoneypotRequest extends TeaModel {
+    // The ID of the management node to which the honeypot is deployed.
     @NameInMap("NodeId")
     public String nodeId;
 

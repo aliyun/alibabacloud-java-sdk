@@ -4,9 +4,14 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DeleteBackupPolicyRequest extends TeaModel {
+    // The ID of the anti-ransomware policy that you want to delete.
     @NameInMap("Id")
     public Long id;
 
+    // The version of the anti-ransomware policy that you want to delete. You can call the [DescribeBackupPolicies](~~322795~~) operation to query the versions of anti-ransomware policies. Valid values:
+    // 
+    // *   **1.0.0**
+    // *   **2.0.0**
     @NameInMap("PolicyVersion")
     public String policyVersion;
 

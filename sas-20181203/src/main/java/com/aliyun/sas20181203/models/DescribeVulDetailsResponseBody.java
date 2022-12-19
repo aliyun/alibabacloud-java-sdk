@@ -4,9 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeVulDetailsResponseBody extends TeaModel {
+    // An array that consists of the details about the vulnerability.
     @NameInMap("Cves")
     public java.util.List<DescribeVulDetailsResponseBodyCves> cves;
 
+    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +34,15 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
     }
 
     public static class DescribeVulDetailsResponseBodyCvesClassifys extends TeaModel {
+        // The type of the vulnerability.
         @NameInMap("Classify")
         public String classify;
 
+        // The URL of the demo video for the vulnerability.
         @NameInMap("DemoVideoUrl")
         public String demoVideoUrl;
 
+        // The description of the vulnerability type.
         @NameInMap("Description")
         public String description;
 
@@ -73,27 +78,39 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
     }
 
     public static class DescribeVulDetailsResponseBodyCves extends TeaModel {
+        // The type of the vulnerability.
         @NameInMap("Classify")
         public String classify;
 
+        // An array that consists of vulnerability types.
         @NameInMap("Classifys")
         public java.util.List<DescribeVulDetailsResponseBodyCvesClassifys> classifys;
 
+        // The China National Vulnerability Database (CNVD) ID.
         @NameInMap("CnvdId")
         public String cnvdId;
 
+        // The difficulty level of exploiting the vulnerability. Valid values:
+        // 
+        // *   **LOW**
+        // *   **MEDIUM**
+        // *   **HIGH**
         @NameInMap("Complexity")
         public String complexity;
 
+        // The CVE content.
         @NameInMap("Content")
         public String content;
 
+        // The Common Vulnerabilities and Exposures (CVE) ID.
         @NameInMap("CveId")
         public String cveId;
 
+        // The Common Vulnerability Scoring System (CVSS) score of the vulnerability in the Alibaba Cloud vulnerability library.
         @NameInMap("CvssScore")
         public String cvssScore;
 
+        // The vector that is used to calculate the CVSS score.
         @NameInMap("CvssVector")
         public String cvssVector;
 
@@ -106,27 +123,35 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
         @NameInMap("IntranetIp")
         public String intranetIp;
 
+        // The POC content.
         @NameInMap("Poc")
         public String poc;
 
+        // The timestamp when the proof of concept (POC) was created. Unit: milliseconds.
         @NameInMap("PocCreateTime")
         public Long pocCreateTime;
 
+        // The timestamp when the POC was disclosed. Unit: milliseconds.
         @NameInMap("PocDisclosureTime")
         public Long pocDisclosureTime;
 
+        // The service that is affected by the vulnerability.
         @NameInMap("Product")
         public String product;
 
+        // The reference of the vulnerability in the Alibaba Cloud vulnerability library. The value is a URL.
         @NameInMap("Reference")
         public String reference;
 
+        // The disclosure time that is displayed for the vulnerability in the Alibaba Cloud vulnerability library. The value is a UNIX timestamp. Unit: milliseconds.
         @NameInMap("ReleaseTime")
         public Long releaseTime;
 
+        // The fixing suggestions of the vulnerability.
         @NameInMap("Solution")
         public String solution;
 
+        // The introduction to the vulnerability.
         @NameInMap("Summary")
         public String summary;
 
@@ -136,12 +161,20 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
         @NameInMap("TargetName")
         public String targetName;
 
+        // The title of the vulnerability announcement.
         @NameInMap("Title")
         public String title;
 
+        // The vendor that disclosed the vulnerability.
         @NameInMap("Vendor")
         public String vendor;
 
+        // The severity of the vulnerability. Valid values:
+        // 
+        // *   **serious**
+        // *   **high**
+        // *   **medium**
+        // *   **low**
         @NameInMap("VulLevel")
         public String vulLevel;
 

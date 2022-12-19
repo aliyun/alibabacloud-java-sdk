@@ -4,9 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeFrontVulPatchListResponseBody extends TeaModel {
+    // An array consisting of the information about the pre-patches that are required to fix the specified Windows system vulnerability.
     @NameInMap("FrontPatchList")
     public java.util.List<DescribeFrontVulPatchListResponseBodyFrontPatchList> frontPatchList;
 
+    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +34,11 @@ public class DescribeFrontVulPatchListResponseBody extends TeaModel {
     }
 
     public static class DescribeFrontVulPatchListResponseBodyFrontPatchListPatchList extends TeaModel {
+        // The name of the Windows system vulnerability.
         @NameInMap("AliasName")
         public String aliasName;
 
+        // The version number of the pre-patch that is required to fix the Windows system vulnerability.
         @NameInMap("Name")
         public String name;
 
@@ -62,9 +66,11 @@ public class DescribeFrontVulPatchListResponseBody extends TeaModel {
     }
 
     public static class DescribeFrontVulPatchListResponseBodyFrontPatchList extends TeaModel {
+        // An array consisting of the pre-patches that are required to fix the specified Windows system vulnerability on the server.
         @NameInMap("PatchList")
         public java.util.List<DescribeFrontVulPatchListResponseBodyFrontPatchListPatchList> patchList;
 
+        // The UUID of the server.
         @NameInMap("Uuid")
         public String uuid;
 

@@ -4,12 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribePropertyPortItemResponseBody extends TeaModel {
+    // The pagination information.
     @NameInMap("PageInfo")
     public DescribePropertyPortItemResponseBodyPageInfo pageInfo;
 
+    // An array that consists of the ports returned.
     @NameInMap("PropertyItems")
     public java.util.List<DescribePropertyPortItemResponseBodyPropertyItems> propertyItems;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,15 +46,19 @@ public class DescribePropertyPortItemResponseBody extends TeaModel {
     }
 
     public static class DescribePropertyPortItemResponseBodyPageInfo extends TeaModel {
+        // The number of entries returned on the current page.
         @NameInMap("Count")
         public Integer count;
 
+        // The page number of the returned page.
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        // The number of entries returned per page.
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        // The total number of entries returned.
         @NameInMap("TotalCount")
         public Integer totalCount;
 
@@ -95,12 +102,15 @@ public class DescribePropertyPortItemResponseBody extends TeaModel {
     }
 
     public static class DescribePropertyPortItemResponseBodyPropertyItems extends TeaModel {
+        // The number of servers that use the port.
         @NameInMap("Count")
         public Integer count;
 
+        // The number of the listening port.
         @NameInMap("Port")
         public String port;
 
+        // The network protocol of the port.
         @NameInMap("Proto")
         public String proto;
 

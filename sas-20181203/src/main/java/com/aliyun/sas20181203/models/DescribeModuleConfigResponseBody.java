@@ -4,18 +4,26 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeModuleConfigResponseBody extends TeaModel {
+    // The number of configurations for the module.
     @NameInMap("Count")
     public Integer count;
 
+    // The HTTP status code returned.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    // An array that consists of the configurations.
     @NameInMap("ModuleConfigList")
     public java.util.List<DescribeModuleConfigResponseBodyModuleConfigList> moduleConfigList;
 
+    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the call is successful. Valid values:
+    // 
+    // *   **true**: yes
+    // *   **false**: no
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,21 +73,27 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeModuleConfigResponseBodyModuleConfigListItems extends TeaModel {
+        // The ID of the server group to which the server belongs.
         @NameInMap("GroupId")
         public Integer groupId;
 
+        // The ID of the server.
         @NameInMap("InstanceId")
         public String instanceId;
 
+        // The name of the server.
         @NameInMap("InstanceName")
         public String instanceName;
 
+        // The IP address of the server.
         @NameInMap("Ip")
         public String ip;
 
+        // The region in which the server resides.
         @NameInMap("Region")
         public String region;
 
+        // The UUID of the server.
         @NameInMap("Uuid")
         public String uuid;
 
@@ -139,12 +153,15 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeModuleConfigResponseBodyModuleConfigList extends TeaModel {
+        // The name of the configuration.
         @NameInMap("ConfigName")
         public String configName;
 
+        // The configuration items.
         @NameInMap("Items")
         public java.util.List<DescribeModuleConfigResponseBodyModuleConfigListItems> items;
 
+        // The name of the module.
         @NameInMap("ModuleName")
         public String moduleName;
 

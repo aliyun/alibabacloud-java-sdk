@@ -4,9 +4,13 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribePropertyScheduleConfigResponseBody extends TeaModel {
+    // The configuration time. Unit: hours.
+    // 
+    // >  The value **0** indicates that asset fingerprint collection is disabled for this type of asset.
     @NameInMap("Config")
     public String config;
 
+    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 

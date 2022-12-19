@@ -4,6 +4,7 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceRebootStatusRequest extends TeaModel {
+    // The UUIDs of the servers that you restart. Separate multiple UUIDs with commas (,).
     @NameInMap("Uuids")
     public String uuids;
 

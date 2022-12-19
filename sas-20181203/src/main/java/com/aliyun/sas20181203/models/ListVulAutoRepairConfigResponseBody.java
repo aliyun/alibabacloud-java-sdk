@@ -4,24 +4,34 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListVulAutoRepairConfigResponseBody extends TeaModel {
+    // The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
     @NameInMap("Code")
     public String code;
 
+    // The HTTP status code returned.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    // The error message returned.
     @NameInMap("Message")
     public String message;
 
+    // The pagination information.
     @NameInMap("PageInfo")
     public ListVulAutoRepairConfigResponseBodyPageInfo pageInfo;
 
+    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // *   **true**: The request was successful.
+    // *   **false**: The request failed.
     @NameInMap("Success")
     public Boolean success;
 
+    // An array consisting of the existing configurations of vulnerabilities that can be automatically fixed.
     @NameInMap("VulAutoRepairConfigList")
     public java.util.List<ListVulAutoRepairConfigResponseBodyVulAutoRepairConfigList> vulAutoRepairConfigList;
 
@@ -87,15 +97,19 @@ public class ListVulAutoRepairConfigResponseBody extends TeaModel {
     }
 
     public static class ListVulAutoRepairConfigResponseBodyPageInfo extends TeaModel {
+        // The number of entries returned on the current page.
         @NameInMap("Count")
         public Integer count;
 
+        // The page number of the returned page.
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        // The number of entries returned per page. Default value: **10**.
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        // The total number of entries returned.
         @NameInMap("TotalCount")
         public Integer totalCount;
 
@@ -139,18 +153,26 @@ public class ListVulAutoRepairConfigResponseBody extends TeaModel {
     }
 
     public static class ListVulAutoRepairConfigResponseBodyVulAutoRepairConfigList extends TeaModel {
+        // The alias of the vulnerability.
         @NameInMap("AliasName")
         public String aliasName;
 
+        // The configuration ID of the vulnerability.
         @NameInMap("Id")
         public Long id;
 
+        // The name of the vulnerability.
         @NameInMap("Name")
         public String name;
 
+        // The reason why the vulnerability can be automatically fixed.
         @NameInMap("Reason")
         public String reason;
 
+        // The type of the vulnerability. Valid values:
+        // 
+        // *   **cve**: Linux software vulnerability
+        // *   **sys**: Windows system vulnerability
         @NameInMap("Type")
         public String type;
 

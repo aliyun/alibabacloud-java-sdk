@@ -4,12 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
+    // An array consisting of the images that have malicious image samples.
     @NameInMap("AffectedMaliciousFileImagesResponse")
     public java.util.List<DescribeAffectedMaliciousFileImagesResponseBodyAffectedMaliciousFileImagesResponse> affectedMaliciousFileImagesResponse;
 
+    // The pagination information.
     @NameInMap("PageInfo")
     public DescribeAffectedMaliciousFileImagesResponseBodyPageInfo pageInfo;
 
+    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,33 +46,43 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
     }
 
     public static class DescribeAffectedMaliciousFileImagesResponseBodyAffectedMaliciousFileImagesResponse extends TeaModel {
+        // The ID of the cluster.
         @NameInMap("ClusterId")
         public String clusterId;
 
+        // The name of the cluster.
         @NameInMap("ClusterName")
         public String clusterName;
 
+        // The ID of the container.
         @NameInMap("ContainerId")
         public String containerId;
 
+        // The image digest.
         @NameInMap("Digest")
         public String digest;
 
+        // The URL to download the malicious image sample.
         @NameInMap("DownloadUrl")
         public String downloadUrl;
 
+        // The path to the image file.
         @NameInMap("FilePath")
         public String filePath;
 
+        // The timestamp of the first scan.
         @NameInMap("FirstScanTimestamp")
         public Long firstScanTimestamp;
 
+        // The text that is highlighted.
         @NameInMap("HighLight")
         public String highLight;
 
+        // The name of the image.
         @NameInMap("Image")
         public String image;
 
+        // The UUID of the image.
         @NameInMap("ImageUuid")
         public String imageUuid;
 
@@ -82,42 +95,64 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
         @NameInMap("IntranetIp")
         public String intranetIp;
 
+        // The timestamp of the last scan.
         @NameInMap("LatestScanTimestamp")
         public Long latestScanTimestamp;
 
+        // The timestamp of the last verification.
         @NameInMap("LatestVerifyTimestamp")
         public Long latestVerifyTimestamp;
 
+        // The image layer.
         @NameInMap("Layer")
         public String layer;
 
+        // The severity of the malicious image sample. Valid values:
+        // 
+        // *   **serious**
+        // *   **suspicious**
+        // *   **remind**
         @NameInMap("Level")
         public String level;
 
+        // The MD5 hash value of the malicious image sample.
         @NameInMap("MaliciousMd5")
         public String maliciousMd5;
 
+        // The namespace to which the image repository belongs.
         @NameInMap("Namespace")
         public String namespace;
 
+        // The pod.
         @NameInMap("Pod")
         public String pod;
 
+        // The ID of the image repository.
         @NameInMap("RepoId")
         public String repoId;
 
+        // The ID of the container image.
         @NameInMap("RepoInstanceId")
         public String repoInstanceId;
 
+        // The name of the image repository.
         @NameInMap("RepoName")
         public String repoName;
 
+        // The region ID of the image repository.
         @NameInMap("RepoRegionId")
         public String repoRegionId;
 
+        // The handling status of the malicious image sample. Valid values:
+        // 
+        // *   **0**: unhandled
+        // *   **1**: handled
+        // *   **2**: verifying
+        // *   **3**: added to the whitelist
         @NameInMap("Status")
         public Integer status;
 
+        // The tag that is added to the image.
         @NameInMap("Tag")
         public String tag;
 
@@ -381,15 +416,19 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
     }
 
     public static class DescribeAffectedMaliciousFileImagesResponseBodyPageInfo extends TeaModel {
+        // The number of images that have malicious image samples returned on the current page.
         @NameInMap("Count")
         public Integer count;
 
+        // The page number of the returned page. Pages start from page **1**. Default value: **1**.
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        // The number of entries returned per page. Default value: **20**.
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        // The total number of images that have malicious image samples.
         @NameInMap("TotalCount")
         public Integer totalCount;
 

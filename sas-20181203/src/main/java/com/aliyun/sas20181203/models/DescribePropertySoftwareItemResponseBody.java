@@ -4,12 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribePropertySoftwareItemResponseBody extends TeaModel {
+    // The pagination information.
     @NameInMap("PageInfo")
     public DescribePropertySoftwareItemResponseBodyPageInfo pageInfo;
 
+    // An array that consists of the software assets returned.
     @NameInMap("PropertyItems")
     public java.util.List<DescribePropertySoftwareItemResponseBodyPropertyItems> propertyItems;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,15 +46,19 @@ public class DescribePropertySoftwareItemResponseBody extends TeaModel {
     }
 
     public static class DescribePropertySoftwareItemResponseBodyPageInfo extends TeaModel {
+        // The number of entries returned on the current page.
         @NameInMap("Count")
         public Integer count;
 
+        // The page number of the returned page.
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        // The number of entries returned per page.
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        // The total number of entries returned.
         @NameInMap("TotalCount")
         public Integer totalCount;
 
@@ -95,9 +102,11 @@ public class DescribePropertySoftwareItemResponseBody extends TeaModel {
     }
 
     public static class DescribePropertySoftwareItemResponseBodyPropertyItems extends TeaModel {
+        // The number of servers on which the software is installed.
         @NameInMap("Count")
         public Integer count;
 
+        // The name of the software.
         @NameInMap("Name")
         public String name;
 

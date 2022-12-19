@@ -4,9 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeRiskItemTypeResponseBody extends TeaModel {
+    // An array that consists of the types of check items.
     @NameInMap("List")
     public java.util.List<DescribeRiskItemTypeResponseBodyList> list;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +34,11 @@ public class DescribeRiskItemTypeResponseBody extends TeaModel {
     }
 
     public static class DescribeRiskItemTypeResponseBodyList extends TeaModel {
+        // The ID of the check item.
         @NameInMap("Id")
         public Long id;
 
+        // The name of the check item type. Example: Identity authentication and permissions.
         @NameInMap("Title")
         public String title;
 

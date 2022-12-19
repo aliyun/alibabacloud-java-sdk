@@ -4,12 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeAllGroupsResponseBody extends TeaModel {
+    // The total number of server groups.
     @NameInMap("Count")
     public Integer count;
 
+    // An array that consists of the information about server groups.
     @NameInMap("Groups")
     public java.util.List<DescribeAllGroupsResponseBodyGroups> groups;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,12 +46,18 @@ public class DescribeAllGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeAllGroupsResponseBodyGroups extends TeaModel {
+        // The type of the server group. Valid values:
+        // 
+        // *   **0**: the default group
+        // *   **1**: other groups
         @NameInMap("GroupFlag")
         public Integer groupFlag;
 
+        // The ID of the server group.
         @NameInMap("GroupId")
         public Integer groupId;
 
+        // The name of the server group.
         @NameInMap("GroupName")
         public String groupName;
 

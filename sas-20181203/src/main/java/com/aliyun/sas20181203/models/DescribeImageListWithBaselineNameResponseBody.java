@@ -4,12 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
+    // An array that consists of the images returned.
     @NameInMap("ImageInfos")
     public java.util.List<DescribeImageListWithBaselineNameResponseBodyImageInfos> imageInfos;
 
+    // The pagination information.
     @NameInMap("PageInfo")
     public DescribeImageListWithBaselineNameResponseBodyPageInfo pageInfo;
 
+    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,36 +46,47 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
     }
 
     public static class DescribeImageListWithBaselineNameResponseBodyImageInfos extends TeaModel {
+        // The ID of the cluster.
         @NameInMap("ClusterId")
         public String clusterId;
 
+        // The name of the cluster.
         @NameInMap("ClusterName")
         public String clusterName;
 
+        // The ID of the container.
         @NameInMap("ContainerId")
         public String containerId;
 
+        // The SHA-256 value of the image digest.
         @NameInMap("Digest")
         public String digest;
 
+        // The number of images on which **high** baseline risks are detected.
         @NameInMap("HighRiskImage")
         public Integer highRiskImage;
 
+        // The name of the image.
         @NameInMap("Image")
         public String image;
 
+        // The timestamp when the image was created. Unit: milliseconds.
         @NameInMap("ImageCreate")
         public Long imageCreate;
 
+        // The ID of the image.
         @NameInMap("ImageId")
         public String imageId;
 
+        // The size of the image.
         @NameInMap("ImageSize")
         public Integer imageSize;
 
+        // The timestamp when the image was updated. Unit: milliseconds.
         @NameInMap("ImageUpdate")
         public Long imageUpdate;
 
+        // The ID of the image instance.
         @NameInMap("InstanceId")
         public String instanceId;
 
@@ -88,39 +102,54 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
         @NameInMap("LastScanTime")
         public Long lastScanTime;
 
+        // The number of images on which **low** baseline risks are detected.
         @NameInMap("LowRiskImage")
         public Integer lowRiskImage;
 
+        // The number of images on which **medium** baseline risks are detected.
         @NameInMap("MiddleRiskImage")
         public Integer middleRiskImage;
 
+        // The namespace.
         @NameInMap("Namespace")
         public String namespace;
 
+        // The number of images that do not have baseline risks.
         @NameInMap("NoRiskImage")
         public Integer noRiskImage;
 
+        // The pod.
         @NameInMap("Pod")
         public String pod;
 
+        // The region ID of the image instance.
         @NameInMap("RegionId")
         public String regionId;
 
+        // The ID of the image repository.
         @NameInMap("RepoId")
         public String repoId;
 
+        // The name of the image repository.
         @NameInMap("RepoName")
         public String repoName;
 
+        // The namespace to which the image repository belongs.
         @NameInMap("RepoNamespace")
         public String repoNamespace;
 
+        // The type of the image repository.
         @NameInMap("RepoType")
         public String repoType;
 
+        // Indicates whether the image is at risk. Valid values:
+        // 
+        // *   **YES**
+        // *   **NO**
         @NameInMap("RiskStatus")
         public String riskStatus;
 
+        // The version of the image.
         @NameInMap("Tag")
         public String tag;
 
@@ -133,9 +162,11 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
         @NameInMap("TargetType")
         public String targetType;
 
+        // The total number of risk items that are detected on the image by using the baseline.
         @NameInMap("TotalItemCount")
         public Integer totalItemCount;
 
+        // The UUID of the image.
         @NameInMap("Uuid")
         public String uuid;
 
@@ -403,15 +434,19 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
     }
 
     public static class DescribeImageListWithBaselineNameResponseBodyPageInfo extends TeaModel {
+        // The number of the images returned on the current page.
         @NameInMap("Count")
         public Integer count;
 
+        // The page number of the returned page. Default value: **1**.
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        // The number of entries returned per page. Default value: **10**.
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        // The total number of images on which baseline risks are detected.
         @NameInMap("TotalCount")
         public Integer totalCount;
 

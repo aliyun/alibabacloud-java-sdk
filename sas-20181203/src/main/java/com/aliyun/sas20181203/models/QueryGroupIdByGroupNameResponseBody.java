@@ -4,9 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class QueryGroupIdByGroupNameResponseBody extends TeaModel {
+    // The ID of the asset group.
     @NameInMap("GroupId")
     public Long groupId;
 
+    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 

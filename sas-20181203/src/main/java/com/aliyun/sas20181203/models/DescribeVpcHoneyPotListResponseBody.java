@@ -4,12 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
+    // The pagination information.
     @NameInMap("PageInfo")
     public DescribeVpcHoneyPotListResponseBodyPageInfo pageInfo;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // An array that consists of the honeypots.
     @NameInMap("VpcHoneyPotDTOList")
     public java.util.List<DescribeVpcHoneyPotListResponseBodyVpcHoneyPotDTOList> vpcHoneyPotDTOList;
 
@@ -43,15 +46,19 @@ public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
     }
 
     public static class DescribeVpcHoneyPotListResponseBodyPageInfo extends TeaModel {
+        // The number of entries returned on the current page.
         @NameInMap("Count")
         public Integer count;
 
+        // The page number of the returned page.
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        // The number of entries returned per page.
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        // The total number of entries returned.
         @NameInMap("TotalCount")
         public Integer totalCount;
 
@@ -95,12 +102,15 @@ public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
     }
 
     public static class DescribeVpcHoneyPotListResponseBodyVpcHoneyPotDTOListVpcSwitchIdList extends TeaModel {
+        // The ID of the vSwitch.
         @NameInMap("VpcSwitchId")
         public String vpcSwitchId;
 
+        // The name of the vSwitch.
         @NameInMap("VpcSwitchName")
         public String vpcSwitchName;
 
+        // The zone ID of the vSwitch.
         @NameInMap("ZoneId")
         public String zoneId;
 
@@ -136,39 +146,71 @@ public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
     }
 
     public static class DescribeVpcHoneyPotListResponseBodyVpcHoneyPotDTOList extends TeaModel {
+        // The CIDR block of the VPC.
         @NameInMap("CidrBlock")
         public String cidrBlock;
 
+        // The time when the VPC was created. Unit: milliseconds.
         @NameInMap("CreateTime")
         public Long createTime;
 
+        // The status of the server on which the honeypot is deployed. Valid values:
+        // 
+        // *   **Pending**: The server is being created.
+        // *   **Running**: The server is running.
+        // *   **Starting**: The server is being started.
+        // *   **Stopping**: The server is being stopped.
+        // *   **Stopped**: The server is stopped.
         @NameInMap("HoneyPotEcsInstanceStatus")
         public String honeyPotEcsInstanceStatus;
 
+        // The ID of the elastic network interface (ENI) used by the honeypot in the VPC.
         @NameInMap("HoneyPotEniInstanceId")
         public String honeyPotEniInstanceId;
 
+        // Indicates whether the cloud honeypot feature is enabled for the VPC. Valid values:
+        // 
+        // *   **true**: yes
+        // *   **false**: no
         @NameInMap("HoneyPotExistence")
         public Boolean honeyPotExistence;
 
+        // The status of the honeypot. Valid values:
+        // 
+        // *   **pending**: The honeypot is being created.
+        // *   **deleting**: The honeypot is being deleted.
+        // *   **off**: The honeypot is disabled.
+        // *   **suspending**: The honeypot is suspended.
+        // *   **on**: The honeypot is enabled.
         @NameInMap("HoneyPotInstanceStatus")
         public String honeyPotInstanceStatus;
 
+        // The ID of the vSwitch to which the ENI used by the honeypot is connected.
         @NameInMap("HoneyPotVpcSwitchId")
         public String honeyPotVpcSwitchId;
 
+        // The ID of the VPC.
         @NameInMap("VpcId")
         public String vpcId;
 
+        // The name of the VPC.
         @NameInMap("VpcName")
         public String vpcName;
 
+        // The region ID of the VPC.
+        // 
+        // >  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
         @NameInMap("VpcRegionId")
         public String vpcRegionId;
 
+        // The status of the VPC. Valid values:
+        // 
+        // *   **Available**: The VPC is normal and available.
+        // *   **Pending**: The VPC is being configured.
         @NameInMap("VpcStatus")
         public String vpcStatus;
 
+        // An array that consists of the vSwitches in the VPC.
         @NameInMap("VpcSwitchIdList")
         public java.util.List<DescribeVpcHoneyPotListResponseBodyVpcHoneyPotDTOListVpcSwitchIdList> vpcSwitchIdList;
 

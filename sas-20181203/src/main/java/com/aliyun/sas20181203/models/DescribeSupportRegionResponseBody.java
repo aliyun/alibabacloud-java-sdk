@@ -4,9 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeSupportRegionResponseBody extends TeaModel {
+    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The regions in which the anti-ransomware feature is supported.
     @NameInMap("SupportRegion")
     public java.util.List<String> supportRegion;
 

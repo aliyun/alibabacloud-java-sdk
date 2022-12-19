@@ -4,9 +4,18 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeSuspiciousOverallConfigRequest extends TeaModel {
+    // The source IP address of the request.
     @NameInMap("SourceIp")
     public String sourceIp;
 
+    // The type of the feature. Valid values:
+    // 
+    // *   **auto_breaking**: Anti-Virus
+    // *   **ransomware_breaking**: Anti-ransomware (Bait Capture)
+    // *   **webshell\_cloud_breaking**: Webshell Protection
+    // *   **alinet**: Behavior prevention
+    // *   **k8s\_log_analysis**: K8s Threat Detection
+    // *   **alisecguard**: Defense mode for Client Protection
     @NameInMap("Type")
     public String type;
 

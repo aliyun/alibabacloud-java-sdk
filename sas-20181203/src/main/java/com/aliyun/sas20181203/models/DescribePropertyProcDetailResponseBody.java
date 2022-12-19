@@ -4,12 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribePropertyProcDetailResponseBody extends TeaModel {
+    // The pagination information.
     @NameInMap("PageInfo")
     public DescribePropertyProcDetailResponseBodyPageInfo pageInfo;
 
+    // An array that consists of the fingerprints of the processes.
     @NameInMap("Propertys")
     public java.util.List<DescribePropertyProcDetailResponseBodyPropertys> propertys;
 
+    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,15 +46,19 @@ public class DescribePropertyProcDetailResponseBody extends TeaModel {
     }
 
     public static class DescribePropertyProcDetailResponseBodyPageInfo extends TeaModel {
+        // The number of entries returned on the current page.
         @NameInMap("Count")
         public Integer count;
 
+        // The page number of the returned page.
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        // The number of entries returned per page. Default value: **10**.
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        // The total number of entries returned.
         @NameInMap("TotalCount")
         public Integer totalCount;
 
@@ -95,57 +102,78 @@ public class DescribePropertyProcDetailResponseBody extends TeaModel {
     }
 
     public static class DescribePropertyProcDetailResponseBodyPropertys extends TeaModel {
+        // The startup parameter of the process.
         @NameInMap("Cmdline")
         public String cmdline;
 
+        // The timestamp of last data collection. Unit: milliseconds.
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
+        // The permission that is required to run the process.
         @NameInMap("EuidName")
         public String euidName;
 
+        // The ID of the server that is associated with the process.
         @NameInMap("InstanceId")
         public String instanceId;
 
+        // The name of the server that is associated with the process.
         @NameInMap("InstanceName")
         public String instanceName;
 
+        // The public IP address of the server.
         @NameInMap("InternetIp")
         public String internetIp;
 
+        // The private IP address of the server.
         @NameInMap("IntranetIp")
         public String intranetIp;
 
+        // Indicates whether the process is a package installation process. Valid values:
+        // 
+        // *   **1**: yes
+        // *   **0**: no
         @NameInMap("IsPackage")
         public Integer isPackage;
 
+        // The MD5 hash value of the process file.
         @NameInMap("Md5")
         public String md5;
 
+        // The name of the process.
         @NameInMap("Name")
         public String name;
 
+        // The path of the process.
         @NameInMap("Path")
         public String path;
 
+        // The ID of the process.
         @NameInMap("Pid")
         public String pid;
 
+        // The name of the parent process to which the process belongs.
         @NameInMap("Pname")
         public String pname;
 
+        // The time when the process starts.
         @NameInMap("StartTime")
         public String startTime;
 
+        // The timestamp when the process starts. Unit: milliseconds.
         @NameInMap("StartTimeDt")
         public Long startTimeDt;
 
+        // The status of the process.
         @NameInMap("State")
         public String state;
 
+        // The user who runs the process.
         @NameInMap("User")
         public String user;
 
+        // The UUID of the server that is associated with the process.
         @NameInMap("Uuid")
         public String uuid;
 
