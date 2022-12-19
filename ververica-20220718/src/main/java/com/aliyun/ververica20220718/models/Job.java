@@ -10,6 +10,12 @@ public class Job extends TeaModel {
     @NameInMap("batchResourceSetting")
     public BatchResourceSetting batchResourceSetting;
 
+    @NameInMap("creator")
+    public String creator;
+
+    @NameInMap("creatorName")
+    public String creatorName;
+
     @NameInMap("deploymentId")
     public String deploymentId;
 
@@ -36,6 +42,12 @@ public class Job extends TeaModel {
 
     @NameInMap("metric")
     public JobMetric metric;
+
+    @NameInMap("modifier")
+    public String modifier;
+
+    @NameInMap("modifierName")
+    public String modifierName;
 
     @NameInMap("namespace")
     public String namespace;
@@ -74,6 +86,22 @@ public class Job extends TeaModel {
     }
     public BatchResourceSetting getBatchResourceSetting() {
         return this.batchResourceSetting;
+    }
+
+    public Job setCreator(String creator) {
+        this.creator = creator;
+        return this;
+    }
+    public String getCreator() {
+        return this.creator;
+    }
+
+    public Job setCreatorName(String creatorName) {
+        this.creatorName = creatorName;
+        return this;
+    }
+    public String getCreatorName() {
+        return this.creatorName;
     }
 
     public Job setDeploymentId(String deploymentId) {
@@ -146,6 +174,22 @@ public class Job extends TeaModel {
     }
     public JobMetric getMetric() {
         return this.metric;
+    }
+
+    public Job setModifier(String modifier) {
+        this.modifier = modifier;
+        return this;
+    }
+    public String getModifier() {
+        return this.modifier;
+    }
+
+    public Job setModifierName(String modifierName) {
+        this.modifierName = modifierName;
+        return this;
+    }
+    public String getModifierName() {
+        return this.modifierName;
     }
 
     public Job setNamespace(String namespace) {

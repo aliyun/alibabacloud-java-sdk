@@ -7,6 +7,12 @@ public class Deployment extends TeaModel {
     @NameInMap("artifact")
     public Artifact artifact;
 
+    @NameInMap("creator")
+    public String creator;
+
+    @NameInMap("creatorName")
+    public String creatorName;
+
     @NameInMap("deploymentHasChanged")
     public Boolean deploymentHasChanged;
 
@@ -34,6 +40,12 @@ public class Deployment extends TeaModel {
     @NameInMap("logging")
     public Logging logging;
 
+    @NameInMap("modifier")
+    public String modifier;
+
+    @NameInMap("modifierName")
+    public String modifierName;
+
     @NameInMap("name")
     public String name;
 
@@ -51,6 +63,22 @@ public class Deployment extends TeaModel {
     }
     public Artifact getArtifact() {
         return this.artifact;
+    }
+
+    public Deployment setCreator(String creator) {
+        this.creator = creator;
+        return this;
+    }
+    public String getCreator() {
+        return this.creator;
+    }
+
+    public Deployment setCreatorName(String creatorName) {
+        this.creatorName = creatorName;
+        return this;
+    }
+    public String getCreatorName() {
+        return this.creatorName;
     }
 
     public Deployment setDeploymentHasChanged(Boolean deploymentHasChanged) {
@@ -123,6 +151,22 @@ public class Deployment extends TeaModel {
     }
     public Logging getLogging() {
         return this.logging;
+    }
+
+    public Deployment setModifier(String modifier) {
+        this.modifier = modifier;
+        return this;
+    }
+    public String getModifier() {
+        return this.modifier;
+    }
+
+    public Deployment setModifierName(String modifierName) {
+        this.modifierName = modifierName;
+        return this;
+    }
+    public String getModifierName() {
+        return this.modifierName;
     }
 
     public Deployment setName(String name) {
