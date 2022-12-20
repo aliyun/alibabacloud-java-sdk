@@ -4,9 +4,11 @@ package com.aliyun.imageaudit20191230.models;
 import com.aliyun.tea.*;
 
 public class ScanImageAdvanceRequest extends TeaModel {
+    // 1
     @NameInMap("Scene")
     public java.util.List<String> scene;
 
+    // 1
     @NameInMap("Task")
     public java.util.List<ScanImageAdvanceRequestTask> task;
 

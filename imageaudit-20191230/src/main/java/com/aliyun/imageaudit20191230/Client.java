@@ -104,7 +104,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         ScanImageRequest scanImageReq = new ScanImageRequest();
         com.aliyun.openapiutil.Client.convert(request, scanImageReq);
         if (!com.aliyun.teautil.Common.isUnset(request.task)) {
-            Integer i = 0;
+            Integer i0 = 0;
             for (ScanImageAdvanceRequest.ScanImageAdvanceRequestTask item0 : request.task) {
                 if (!com.aliyun.teautil.Common.isUnset(item0.imageURLObject)) {
                     authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
@@ -129,9 +129,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
                         new TeaPair("header", ossHeader)
                     ));
                     ossClient.postObject(uploadRequest, ossRuntime);
-                    ScanImageRequest.ScanImageRequestTask tmp = scanImageReq.task.get(i);
+                    ScanImageRequest.ScanImageRequestTask tmp = scanImageReq.task.get(i0);
                     tmp.imageURL = "http://" + authResponse.body.bucket + "." + authResponse.body.endpoint + "/" + authResponse.body.objectKey + "";
-                    i = com.aliyun.darabonbanumber.Client.ltoi(com.aliyun.darabonbanumber.Client.add(com.aliyun.darabonbanumber.Client.itol(i), com.aliyun.darabonbanumber.Client.itol(1)));
+                    i0 = com.aliyun.darabonbanumber.Client.ltoi(com.aliyun.darabonbanumber.Client.add(com.aliyun.darabonbanumber.Client.itol(i0), com.aliyun.darabonbanumber.Client.itol(1)));
                 }
 
             }
