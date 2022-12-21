@@ -4,18 +4,26 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListUserTenantsResponseBody extends TeaModel {
+    // The error code.
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    // The error message.
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request is successful. Valid values:
+    // 
+    // *   **true**: The request is successful.
+    // *   **false**: The request fails.
     @NameInMap("Success")
     public Boolean success;
 
+    // The details of the tenants that were returned.
     @NameInMap("TenantList")
     public java.util.List<ListUserTenantsResponseBodyTenantList> tenantList;
 
@@ -65,12 +73,18 @@ public class ListUserTenantsResponseBody extends TeaModel {
     }
 
     public static class ListUserTenantsResponseBodyTenantList extends TeaModel {
+        // The status of the tenant. Valid values:
+        // 
+        // *   **ACTIVE**: The tenant is used to access DMS.
+        // *   **IN_ACTIVE**: The tenant is not used.
         @NameInMap("Status")
         public String status;
 
+        // The name of the tenant.
         @NameInMap("TenantName")
         public String tenantName;
 
+        // The ID of the tenant.
         @NameInMap("Tid")
         public Long tid;
 

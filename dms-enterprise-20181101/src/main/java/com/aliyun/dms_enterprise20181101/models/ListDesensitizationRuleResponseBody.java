@@ -4,21 +4,30 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListDesensitizationRuleResponseBody extends TeaModel {
+    // The list of masking rules.
     @NameInMap("DesensitizationRuleList")
     public java.util.List<ListDesensitizationRuleResponseBodyDesensitizationRuleList> desensitizationRuleList;
 
+    // The error code returned if the request failed.
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    // The error message returned if the request failed.
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // *   true: The request was successful.
+    // *   false: The request failed.
     @NameInMap("Success")
     public Boolean success;
 
+    // The total number of entries returned. By default, this parameter is not returned.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -76,33 +85,43 @@ public class ListDesensitizationRuleResponseBody extends TeaModel {
     }
 
     public static class ListDesensitizationRuleResponseBodyDesensitizationRuleList extends TeaModel {
+        // The parameter.
         @NameInMap("FuncParams")
         public String funcParams;
 
+        // The example.
         @NameInMap("FuncSample")
         public String funcSample;
 
+        // The algorithm type.
         @NameInMap("FunctionType")
         public String functionType;
 
+        // The ID of the user who last modified the masking rule.
         @NameInMap("LastModifierId")
         public String lastModifierId;
 
+        // The name of the user who last modified the masking rule.
         @NameInMap("LastModifierName")
         public String lastModifierName;
 
+        // The number of times that the masking was used.
         @NameInMap("ReferenceCount")
         public Integer referenceCount;
 
+        // The description of the rule.
         @NameInMap("RuleDesc")
         public String ruleDesc;
 
+        // The ID of the masking rule.
         @NameInMap("RuleId")
         public Integer ruleId;
 
+        // The name of the masking rule.
         @NameInMap("RuleName")
         public String ruleName;
 
+        // The algorithm used for masking.
         @NameInMap("RuleType")
         public String ruleType;
 

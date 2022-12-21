@@ -4,18 +4,26 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListLogicTableRouteConfigResponseBody extends TeaModel {
+    // The error code returned.
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    // The error message returned.
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    // The routing algorithms.
     @NameInMap("LogicTableRouteConfigList")
     public ListLogicTableRouteConfigResponseBodyLogicTableRouteConfigList logicTableRouteConfigList;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // - **true**: The request was successful.
+    // - **false**: The request failed.
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,12 +73,15 @@ public class ListLogicTableRouteConfigResponseBody extends TeaModel {
     }
 
     public static class ListLogicTableRouteConfigResponseBodyLogicTableRouteConfigListLogicTableRouteConfig extends TeaModel {
+        // The routing algorithm expression.
         @NameInMap("RouteExpr")
         public String routeExpr;
 
+        // The unique key of the routing algorithm.
         @NameInMap("RouteKey")
         public String routeKey;
 
+        // The ID of the logical table.
         @NameInMap("TableId")
         public Long tableId;
 

@@ -4,18 +4,26 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetDataExportDownloadURLResponseBody extends TeaModel {
+    // The details about the download URL of the file that records the export results for the ticket.
     @NameInMap("DownloadURLResult")
     public GetDataExportDownloadURLResponseBodyDownloadURLResult downloadURLResult;
 
+    // The error code.
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    // The error message.
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // *   **true**: The request was successful.
+    // *   **false**: The request failed.
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,12 +73,18 @@ public class GetDataExportDownloadURLResponseBody extends TeaModel {
     }
 
     public static class GetDataExportDownloadURLResponseBodyDownloadURLResult extends TeaModel {
+        // Indicates whether export results are available for download. Valid values:
+        // 
+        // *   **true**: Export results are available for download.
+        // *   **false**: No export results are available for download.
         @NameInMap("HasResult")
         public Boolean hasResult;
 
+        // The message that indicates an exception.
         @NameInMap("TipMessage")
         public String tipMessage;
 
+        // The download URL of the file that records the export results for the ticket.
         @NameInMap("URL")
         public String URL;
 

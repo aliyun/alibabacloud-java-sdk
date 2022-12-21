@@ -4,6 +4,7 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListUserTenantsRequest extends TeaModel {
+    // The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the tenant ID.
     @NameInMap("Tid")
     public Long tid;
 

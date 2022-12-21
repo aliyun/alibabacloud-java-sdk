@@ -4,21 +4,30 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListInstanceLoginAuditLogResponseBody extends TeaModel {
+    // The error code returned.
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    // The error message returned.
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    // The logon records of the instance.
     @NameInMap("InstanceLoginAuditLogList")
     public ListInstanceLoginAuditLogResponseBodyInstanceLoginAuditLogList instanceLoginAuditLogList;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // *   **true**: The request was successful.
+    // *   **false**: The request failed.
     @NameInMap("Success")
     public Boolean success;
 
+    // The number of entries returned.
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -76,24 +85,31 @@ public class ListInstanceLoginAuditLogResponseBody extends TeaModel {
     }
 
     public static class ListInstanceLoginAuditLogResponseBodyInstanceLoginAuditLogListInstanceLoginAuditLog extends TeaModel {
+        // The database account that is used to log on to the instance.
         @NameInMap("DbUser")
         public String dbUser;
 
+        // The ID of the instance.
         @NameInMap("InstanceId")
         public Long instanceId;
 
+        // The name of the instance.
         @NameInMap("InstanceName")
         public String instanceName;
 
+        // The time when the user performed an operation on the instance.
         @NameInMap("OpTime")
         public String opTime;
 
+        // The source IP address of the request.
         @NameInMap("RequestIp")
         public String requestIp;
 
+        // The ID of the user.
         @NameInMap("UserId")
         public Long userId;
 
+        // The alias of the user.
         @NameInMap("UserName")
         public String userName;
 

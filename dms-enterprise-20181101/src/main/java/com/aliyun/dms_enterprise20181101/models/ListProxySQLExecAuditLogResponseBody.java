@@ -4,21 +4,30 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListProxySQLExecAuditLogResponseBody extends TeaModel {
+    // The error code returned.
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    // The error message returned.
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    // The audit information about the database instance that is provided by the secure access proxy feature.
     @NameInMap("ProxySQLExecAuditLogList")
     public ListProxySQLExecAuditLogResponseBodyProxySQLExecAuditLogList proxySQLExecAuditLogList;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // *   **true**: The request was successful.
+    // *   **false**: The request failed.
     @NameInMap("Success")
     public Boolean success;
 
+    // The number of entries returned.
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -76,39 +85,62 @@ public class ListProxySQLExecAuditLogResponseBody extends TeaModel {
     }
 
     public static class ListProxySQLExecAuditLogResponseBodyProxySQLExecAuditLogListProxySQLExecAuditLog extends TeaModel {
+        // Indicates the total number of rows returned after the SQL statement was executed. If an SELECT SQL statement is executed, the return value of this parameter indicates the total number of the queried data rows.
         @NameInMap("AffectRows")
         public Long affectRows;
 
+        // The amount of time that is consumed to execute the SQL statement. Unit: milliseconds.
         @NameInMap("ElapsedTime")
         public Long elapsedTime;
 
+        // The execution status of the SQL statement. Valid values:
+        // 
+        // *   **FAIL**: The execution of the SQL statement fails.
+        // *   **CANCEL**: The execution of the SQL statement is canceled.
+        // *   **SUCCESS**: The SQL statement is executed.
         @NameInMap("ExecState")
         public String execState;
 
+        // The ID of the database instance.
         @NameInMap("InstanceId")
         public Long instanceId;
 
+        // The name of the database instance.
         @NameInMap("InstanceName")
         public String instanceName;
 
+        // The time at which the user executes the SQL statement on the database instance. The value of this parameter must be a timestamp that follows the UNIX time format.
         @NameInMap("OpTime")
         public String opTime;
 
+        // The description.
         @NameInMap("Remark")
         public String remark;
 
+        // The SQL statement that was executed.
         @NameInMap("SQL")
         public String SQL;
 
+        // The type of the SQL statement. Valid values:
+        // 
+        // *   **SELECT**
+        // *   **INSERT**
+        // *   **DELETE**
+        // *   **CREATE_TABLE**
+        // 
+        // >  You can choose Operation Audit > Secure Access Proxy in the top navigation bar of the DMS console to view more types of SQL statements.
         @NameInMap("SQLType")
         public String SQLType;
 
+        // The name of the database.
         @NameInMap("SchemaName")
         public String schemaName;
 
+        // The ID of the user.
         @NameInMap("UserId")
         public Long userId;
 
+        // The nickname of the user.
         @NameInMap("UserName")
         public String userName;
 

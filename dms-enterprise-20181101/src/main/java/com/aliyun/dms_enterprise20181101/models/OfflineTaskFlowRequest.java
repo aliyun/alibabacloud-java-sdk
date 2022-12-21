@@ -4,9 +4,11 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class OfflineTaskFlowRequest extends TeaModel {
+    // The ID of the task flow. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to obtain the task flow ID.
     @NameInMap("DagId")
     public Long dagId;
 
+    // The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
     @NameInMap("Tid")
     public Long tid;
 

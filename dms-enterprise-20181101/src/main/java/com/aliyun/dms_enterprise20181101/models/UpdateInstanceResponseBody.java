@@ -4,15 +4,22 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class UpdateInstanceResponseBody extends TeaModel {
+    // The error code that is returned.
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    // The error message that is returned.
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // *   **true**: The request was successful.
+    // *   **false**: The request failed.
     @NameInMap("Success")
     public Boolean success;
 

@@ -4,12 +4,17 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class UpdateTaskFlowRelationsRequest extends TeaModel {
+    // The ID of the task flow. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to query the task flow ID.
     @NameInMap("DagId")
     public Long dagId;
 
+    // The list of task flow edges to be updated.
     @NameInMap("Edges")
     public java.util.List<UpdateTaskFlowRelationsRequestEdges> edges;
 
+    // The ID of the tenant.
+    // 
+    // >  To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).
     @NameInMap("Tid")
     public Long tid;
 
@@ -43,12 +48,15 @@ public class UpdateTaskFlowRelationsRequest extends TeaModel {
     }
 
     public static class UpdateTaskFlowRelationsRequestEdges extends TeaModel {
+        // The ID of the task flow edge.
         @NameInMap("Id")
         public Long id;
 
+        // The ID of the end node on the edge.
         @NameInMap("NodeEnd")
         public Long nodeEnd;
 
+        // The ID of the start node on the edge.
         @NameInMap("NodeFrom")
         public Long nodeFrom;
 

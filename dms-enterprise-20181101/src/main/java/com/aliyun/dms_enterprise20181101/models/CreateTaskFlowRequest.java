@@ -4,15 +4,19 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class CreateTaskFlowRequest extends TeaModel {
+    // The name of the task flow.
     @NameInMap("DagName")
     public String dagName;
 
+    // The description of the task flow.
     @NameInMap("Description")
     public String description;
 
+    // The ID of the scenario.
     @NameInMap("ScenarioId")
     public Long scenarioId;
 
+    // The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to query the tenant ID.
     @NameInMap("Tid")
     public Long tid;
 

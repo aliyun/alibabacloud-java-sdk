@@ -4,18 +4,26 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
+    // The information about the data change ticket.
     @NameInMap("DataCorrectOrderDetail")
     public GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetail dataCorrectOrderDetail;
 
+    // The error code returned if the request fails.
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    // The error message returned if the request fails.
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request is successful. Valid values:
+    // 
+    // - **true**: The request is successful.
+    // - **false**: The request fails.
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,18 +73,35 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
     }
 
     public static class GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailDatabaseListDatabase extends TeaModel {
+        // The ID of the database.
         @NameInMap("DbId")
         public Integer dbId;
 
+        // The engine of the database.
         @NameInMap("DbType")
         public String dbType;
 
+        // The type of the environment to which the database belongs. Valid values:
+        // 
+        // - product: production environment
+        // - dev: development environment
+        // - pre: staging environment
+        // - test: test environment
+        // - sit: system integration testing (SIT) environment
+        // - uat: user acceptance testing (UAT) environment
+        // - pet: stress testing environment
+        // - stag: STAG environment
         @NameInMap("EnvType")
         public String envType;
 
+        // Indicates whether the database is a logical database. Valid values:
+        // 
+        // - **true**: The database is a logical database.
+        // - **false**: The database is a physical database.
         @NameInMap("Logic")
         public Boolean logic;
 
+        // The name that is used to search for the database.
         @NameInMap("SearchName")
         public String searchName;
 
@@ -147,36 +172,56 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
     }
 
     public static class GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailOrderDetail extends TeaModel {
+        // The number of affected rows that is obtained by the precheck.
         @NameInMap("ActualAffectRows")
         public Long actualAffectRows;
 
+        // The name of the attachment that contains the SQL statements used to change data.
         @NameInMap("AttachmentName")
         public String attachmentName;
 
+        // The category of the reason for the data change.
         @NameInMap("Classify")
         public String classify;
 
+        // The estimated number of affected rows.
         @NameInMap("EstimateAffectRows")
         public Long estimateAffectRows;
 
+        // The executed SQL statements.
         @NameInMap("ExeSQL")
         public String exeSQL;
 
+        // Indicates whether the precheck result is ignored. Valid values:
+        // 
+        // - **true**: The precheck result is ignored.
+        // - **false**: The precheck result is not ignored.
         @NameInMap("IgnoreAffectRows")
         public Boolean ignoreAffectRows;
 
+        // The reason why the precheck result is ignored.
         @NameInMap("IgnoreAffectRowsReason")
         public String ignoreAffectRowsReason;
 
+        // The name of the attachment that contains the SQL statements used to roll back the data change.
         @NameInMap("RbAttachmentName")
         public String rbAttachmentName;
 
+        // The SQL statements used to roll back the data change.
         @NameInMap("RbSQL")
         public String rbSQL;
 
+        // The format of the SQL statements used to roll back the data change. Valid values:
+        // 
+        // - **TEXT**: text
+        // - **ATTACHMENT**: attachment
         @NameInMap("RbSQLType")
         public String rbSQLType;
 
+        // The format of the SQL statements used to change data. Valid values:
+        // 
+        // - **TEXT**: text
+        // - **ATTACHMENT**: attachment
         @NameInMap("SqlType")
         public String sqlType;
 
@@ -276,12 +321,25 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
     }
 
     public static class GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailPreCheckDetailTaskCheckDO extends TeaModel {
+        // The status of the precheck. Valid values:
+        // 
+        // *   **WAITING**: The ticket is pending precheck.
+        // *   **RUNNING**: The ticket is being prechecked.
+        // *   **SUCCESS**: The ticket passes the precheck.
+        // *   **FAIL**: The ticket fails the precheck.
         @NameInMap("CheckStatus")
         public String checkStatus;
 
+        // The check step of the precheck. Valid values:
+        // 
+        // *   **SQL_PARSE**: The system checks the syntax of the SQL statement.
+        // *   **SQL_TYPE_CHECK**: The system checks the type of the SQL statement.
+        // *   **PERMISSION_CHECK**: The system checks the permissions required for the data change.
+        // *   **ROW_CHECK**: The system checks the number of affected rows.
         @NameInMap("CheckStep")
         public String checkStep;
 
+        // The message that indicates a check step.
         @NameInMap("UserTip")
         public String userTip;
 
@@ -336,18 +394,39 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
     }
 
     public static class GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetail extends TeaModel {
+        // The information about the database in which data is changed.
         @NameInMap("DatabaseList")
         public GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailDatabaseList databaseList;
 
+        // The execution mode of the ticket after the ticket is approved. Valid values:
+        // 
+        // - **COMMITOR**: The data change is performed by the user who submits the ticket.
+        // - **AUTO**: The data change is automatically performed after the ticket is approved.
+        // - **LAST_AUDITOR**: The data change is performed by the last approver of the ticket.
         @NameInMap("ExecMode")
         public String execMode;
 
+        // The details of the ticket.
         @NameInMap("OrderDetail")
         public GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailOrderDetail orderDetail;
 
+        // The precheck details of the ticket.
         @NameInMap("PreCheckDetail")
         public GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailPreCheckDetail preCheckDetail;
 
+        // The status of the ticket. Valid values:
+        // 
+        // - **new**: The ticket is created.
+        // - **precheck**: The ticket is being prechecked.
+        // - **precheck_fail**: The ticket fails the precheck.
+        // - **precheck_success**: The ticket passes the precheck and waits to be submitted for approval.
+        // - **toaudit**: The ticket is being reviewed.
+        // - **Approved**: The ticket is approved.
+        // - **reject**: The ticket is rejected.
+        // - **waiting**: The ticket is submitted and waits to be scheduled.
+        // - **processing**: The ticket is being executed.
+        // - **success**: The ticket is executed.
+        // - **closed**: The ticket is closed.
         @NameInMap("Status")
         public String status;
 

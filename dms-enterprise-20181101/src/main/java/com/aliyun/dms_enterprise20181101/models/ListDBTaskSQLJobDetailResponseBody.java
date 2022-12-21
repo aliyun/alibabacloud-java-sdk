@@ -4,21 +4,30 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListDBTaskSQLJobDetailResponseBody extends TeaModel {
+    // The details of SQL tasks.
     @NameInMap("DBTaskSQLJobDetailList")
     public java.util.List<ListDBTaskSQLJobDetailResponseBodyDBTaskSQLJobDetailList> DBTaskSQLJobDetailList;
 
+    // The error code that is returned.
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    // The error message that is returned.
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request is successful. Valid values:
+    // 
+    // *   **true**: The request is successful.
+    // *   **false**: The request fails.
     @NameInMap("Success")
     public Boolean success;
 
+    // The total number of SQL tasks.
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -76,45 +85,74 @@ public class ListDBTaskSQLJobDetailResponseBody extends TeaModel {
     }
 
     public static class ListDBTaskSQLJobDetailResponseBodyDBTaskSQLJobDetailList extends TeaModel {
+        // The number of rows affected by the SQL task.
         @NameInMap("AffectRows")
         public Long affectRows;
 
+        // The SQL statement that was executed in the SQL task.
         @NameInMap("CurrentSql")
         public String currentSql;
 
+        // The ID of the physical database.
         @NameInMap("DbId")
         public Long dbId;
 
+        // The point in time when the SQL task ended.
         @NameInMap("EndTime")
         public String endTime;
 
+        // The number of times that the SQL statement was executed.
         @NameInMap("ExecuteCount")
         public Long executeCount;
 
+        // The ID of the details of the SQL task.
         @NameInMap("JobDetailId")
         public Long jobDetailId;
 
+        // The ID of the SQL task.
         @NameInMap("JobId")
         public Long jobId;
 
+        // The details of the operational log.
         @NameInMap("Log")
         public String log;
 
+        // Indicates whether the database is a logical database. Valid values:
+        // 
+        // *   **true**: The database is a logical database.
+        // *   **false**: The database is a physical database.
         @NameInMap("Logic")
         public Boolean logic;
 
+        // Indicates whether the SQL statement was skipped. Valid values:
+        // 
+        // *   **true**: The SQL statement was skipped.
+        // *   **false**: The SQL statement was not skipped.
         @NameInMap("Skip")
         public Boolean skip;
 
+        // The type of the SQL statement, such as DELETE, UPDATE, or ALTER_TABLE.
         @NameInMap("SqlType")
         public String sqlType;
 
+        // The point in time when the SQL task started.
         @NameInMap("StartTime")
         public String startTime;
 
+        // The status of the SQL task. Valid values:
+        // 
+        // *   **INIT**: The SQL task was initialized.
+        // *   **PENDING**: The SQL task waited to be run.
+        // *   **BE_SCHEDULED**: The SQL task waited to be scheduled.
+        // *   **FAIL**: The SQL task failed.
+        // *   **SUCCESS**: The SQL task was successful.
+        // *   **PAUSE**: The SQL task was paused.
+        // *   **DELETE**: The SQL task was deleted.
+        // *   **RUNNING**: The SQL task was being run.
         @NameInMap("Status")
         public String status;
 
+        // The duration of the SQL task. Unit: milliseconds.
         @NameInMap("TimeDelay")
         public Long timeDelay;
 

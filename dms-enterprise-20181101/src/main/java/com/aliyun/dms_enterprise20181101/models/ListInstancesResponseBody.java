@@ -4,21 +4,30 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListInstancesResponseBody extends TeaModel {
+    // The error code that is returned.
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    // The error message that is returned.
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    // The information about the database instances that are returned.
     @NameInMap("InstanceList")
     public ListInstancesResponseBodyInstanceList instanceList;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // - **true**: The request was successful.
+    // - **false**: The request failed.
     @NameInMap("Success")
     public Boolean success;
 
+    // The total number of database instances that are returned.
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -114,9 +123,15 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyInstanceListInstanceStandardGroup extends TeaModel {
+        // The type of the control mode. Valid values:
+        // 
+        // *   **COMMON**: Security Collaboration
+        // *   **NONE_CONTROL**: Flexible Management
+        // *   **STABLE**: Stable Change
         @NameInMap("GroupMode")
         public String groupMode;
 
+        // The name of the security rule set corresponding to the control mode.
         @NameInMap("GroupName")
         public String groupName;
 
@@ -144,81 +159,118 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyInstanceListInstance extends TeaModel {
+        // The name of the database link for the database instance.
         @NameInMap("DataLinkName")
         public String dataLinkName;
 
+        // The password that is used to log on to the database.
         @NameInMap("DatabasePassword")
         public String databasePassword;
 
+        // The account that is used to log on to the database.
         @NameInMap("DatabaseUser")
         public String databaseUser;
 
+        // The ID of the database administrator (DBA) for the database instance.
         @NameInMap("DbaId")
         public String dbaId;
 
+        // The nickname of the DBA for the database instance.
         @NameInMap("DbaNickName")
         public String dbaNickName;
 
+        // Indicates whether the lock-free schema change feature is enabled for the database instance.
         @NameInMap("DdlOnline")
         public Integer ddlOnline;
 
+        // The ID of the ECS instance on which the database instance is deployed.
         @NameInMap("EcsInstanceId")
         public String ecsInstanceId;
 
+        // The ID of the region in which the database instance resides.
         @NameInMap("EcsRegion")
         public String ecsRegion;
 
+        // The type of the environment to which the database instance belongs. Valid values:
+        // 
+        // *   **product**: production environment
+        // *   **dev**: development environment
+        // *   **pre**: staging environment
+        // *   **test**: test environment
+        // *   **sit**: SIT environment
+        // *   **uat**: UAT environment
+        // *   **pet**: stress testing environment
+        // *   **stag**: STAG environment
         @NameInMap("EnvType")
         public String envType;
 
+        // The timeout period for exporting data from the database instance.
         @NameInMap("ExportTimeout")
         public Integer exportTimeout;
 
+        // The host address that is used to connect to the database instance.
         @NameInMap("Host")
         public String host;
 
+        // The alias of the database instance.
         @NameInMap("InstanceAlias")
         public String instanceAlias;
 
+        // The ID of the database instance.
         @NameInMap("InstanceId")
         public String instanceId;
 
+        // The source of the database instance.
         @NameInMap("InstanceSource")
         public String instanceSource;
 
+        // The type of the database instance.
         @NameInMap("InstanceType")
         public String instanceType;
 
+        // The ID of the owner for the database instance.
         @NameInMap("OwnerIdList")
         public ListInstancesResponseBodyInstanceListInstanceOwnerIdList ownerIdList;
 
+        // The nickname of the owner for the database instance.
         @NameInMap("OwnerNameList")
         public ListInstancesResponseBodyInstanceListInstanceOwnerNameList ownerNameList;
 
+        // The port number that is used to connect to the database instance.
         @NameInMap("Port")
         public Integer port;
 
+        // The timeout period for querying data in the database instance.
         @NameInMap("QueryTimeout")
         public Integer queryTimeout;
 
+        // The ID of the security rule set for the database instance.
         @NameInMap("SafeRuleId")
         public String safeRuleId;
 
         @NameInMap("SellSitd")
         public Boolean sellSitd;
 
+        // The system ID (SID) of the database instance.
         @NameInMap("Sid")
         public String sid;
 
+        // The control mode of the database instance.
         @NameInMap("StandardGroup")
         public ListInstancesResponseBodyInstanceListInstanceStandardGroup standardGroup;
 
+        // The status of the database instance.
         @NameInMap("State")
         public String state;
 
+        // Indicates whether the cross-database query feature is enabled for the database instance. Valid values:
+        // 
+        // *   **0**: disabled
+        // *   **1**: enabled
         @NameInMap("UseDsql")
         public Integer useDsql;
 
+        // The ID of the VPC to which the database instance belongs.
         @NameInMap("VpcId")
         public String vpcId;
 

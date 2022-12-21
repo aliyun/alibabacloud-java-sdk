@@ -4,21 +4,30 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetOpLogResponseBody extends TeaModel {
+    // The error code returned if the request fails.
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    // The error message returned if the request fails.
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    // The details of the operation log.
     @NameInMap("OpLogDetails")
     public GetOpLogResponseBodyOpLogDetails opLogDetails;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request is successful. Valid values:
+    // 
+    // - **true**: The request is successful.
+    // - **false**: The request fails.
     @NameInMap("Success")
     public Boolean success;
 
+    // The total number of operation logs that are returned.
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -76,27 +85,40 @@ public class GetOpLogResponseBody extends TeaModel {
     }
 
     public static class GetOpLogResponseBodyOpLogDetailsOpLogDetail extends TeaModel {
+        // The endpoint of the database instance.
+        // 
+        // > *   This parameter is valid only for database instances of the LocalInstance type.
+        // *   This parameter is valid only for operations on the functional modules related to tasks.
         @NameInMap("Database")
         public String database;
 
+        // The functional module for which the operation log is queried.
         @NameInMap("Module")
         public String module;
 
+        // The details of the operation.
         @NameInMap("OpContent")
         public String opContent;
 
+        // The time when the operation was performed.
         @NameInMap("OpTime")
         public String opTime;
 
+        // The ID of the user who performed the operation.
         @NameInMap("OpUserId")
         public Long opUserId;
 
+        // The ID of the ticket or task.
+        // 
+        // >  This parameter is valid only for operations on the functional modules related to tasks and the task management module in system management.
         @NameInMap("OrderId")
         public Long orderId;
 
+        // The UID of the Alibaba Cloud account.
         @NameInMap("UserId")
         public String userId;
 
+        // The display name of the user.
         @NameInMap("UserNick")
         public String userNick;
 

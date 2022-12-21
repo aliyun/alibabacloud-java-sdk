@@ -4,18 +4,26 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetMetaTableColumnResponseBody extends TeaModel {
+    // The details about fields in the table.
     @NameInMap("ColumnList")
     public java.util.List<GetMetaTableColumnResponseBodyColumnList> columnList;
 
+    // The error code returned.
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    // The error message returned.
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // *   **true**: The request was successful.
+    // *   **false**: The request failed.
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,39 +73,68 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
     }
 
     public static class GetMetaTableColumnResponseBodyColumnList extends TeaModel {
+        // Indicates whether the field is an auto-increment field. Valid values:
+        // 
+        // *   **true**: The field is an auto-increment field.
+        // *   **false**: The field is not an auto-increment field.
         @NameInMap("AutoIncrement")
         public Boolean autoIncrement;
 
+        // The ID of the field.
         @NameInMap("ColumnId")
         public String columnId;
 
+        // The name of the field.
         @NameInMap("ColumnName")
         public String columnName;
 
+        // The data type of the field.
+        // 
+        // >  The returned data type is not unique. For example, the returned data type can be **bigint** or **int**.
         @NameInMap("ColumnType")
         public String columnType;
 
+        // The length of the field.
         @NameInMap("DataLength")
         public Long dataLength;
 
+        // The precision of the field.
         @NameInMap("DataPrecision")
         public Integer dataPrecision;
 
+        // The number of decimal places that the field shows.
         @NameInMap("DataScale")
         public Integer dataScale;
 
+        // The description of the field.
         @NameInMap("Description")
         public String description;
 
+        // Indicates whether the field can be empty. Valid values:
+        // 
+        // *   **true**: The field can be empty.
+        // *   **false**: The field cannot be empty.
         @NameInMap("Nullable")
         public Boolean nullable;
 
+        // The position of the field in the table.
         @NameInMap("Position")
         public Integer position;
 
+        // Indicates whether the field is the primary key. Valid values:
+        // 
+        // *   **true**: The field is the primary key.
+        // *   **false**: The field is not the primary key.
         @NameInMap("PrimaryKey")
         public String primaryKey;
 
+        // The sensitivity level of the field. Valid values:
+        // 
+        // *   **INNER**: The field is not sensitive.
+        // *   **SENSITIVE**: The field is sensitive.
+        // *   **CONFIDENTIAL**: The field is confidential.
+        // 
+        // >  For more information, see [Sensitivity levels of fields](~~66091~~).
         @NameInMap("SecurityLevel")
         public String securityLevel;
 

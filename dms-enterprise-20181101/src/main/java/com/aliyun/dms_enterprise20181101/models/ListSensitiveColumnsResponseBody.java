@@ -4,21 +4,30 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListSensitiveColumnsResponseBody extends TeaModel {
+    // The error code.
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    // The error message.
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The sensitive fields.
     @NameInMap("SensitiveColumnList")
     public ListSensitiveColumnsResponseBodySensitiveColumnList sensitiveColumnList;
 
+    // Indicates whether the request is successful. Valid values:
+    // 
+    // - true: The request is successful.
+    // - false: The request fails.
     @NameInMap("Success")
     public Boolean success;
 
+    // The total number of returned entries.
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -76,21 +85,34 @@ public class ListSensitiveColumnsResponseBody extends TeaModel {
     }
 
     public static class ListSensitiveColumnsResponseBodySensitiveColumnListSensitiveColumn extends TeaModel {
+        // The number of sensitive fields.
         @NameInMap("ColumnCount")
         public Long columnCount;
 
+        // The name of the field.
         @NameInMap("ColumnName")
         public String columnName;
 
+        // The type of the de-identification algorithm. Valid values:
+        // 
+        // *   DEFAULT: All characters are masked. This is the default value.
+        // *   FIX_POS: The characters at specific positions are masked.
+        // *   FIX_CHAR: Specific characters are masked.
         @NameInMap("FunctionType")
         public String functionType;
 
+        // The name of the database.
         @NameInMap("SchemaName")
         public String schemaName;
 
+        // The sensitivity level of the field. Valid values:
+        // 
+        // *   SENSITIVE
+        // *   CONFIDENTIAL
         @NameInMap("SecurityLevel")
         public String securityLevel;
 
+        // The name of the table.
         @NameInMap("TableName")
         public String tableName;
 

@@ -4,18 +4,26 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetRuleNumLimitOfSLAResponseBody extends TeaModel {
+    // The error code returned if the request failed.
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    // The error message returned if the request failed.
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    // The ID of the request. You can use the ID to locate logs and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The maximum number of SLA rules.
     @NameInMap("RuleNumLimit")
     public Integer ruleNumLimit;
 
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // *   **true**: The request was successful.
+    // *   **false**: The request failed.
     @NameInMap("Success")
     public Boolean success;
 
