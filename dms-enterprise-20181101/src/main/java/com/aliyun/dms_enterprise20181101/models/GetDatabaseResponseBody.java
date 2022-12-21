@@ -4,18 +4,26 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetDatabaseResponseBody extends TeaModel {
+    // The details of the database.
     @NameInMap("Database")
     public GetDatabaseResponseBodyDatabase database;
 
+    // The error code.
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    // The error message.
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request is successful. Valid values:
+    // 
+    // *   **true**: The request is successful.
+    // *   **false**: The request fails.
     @NameInMap("Success")
     public Boolean success;
 
@@ -103,51 +111,83 @@ public class GetDatabaseResponseBody extends TeaModel {
     }
 
     public static class GetDatabaseResponseBodyDatabase extends TeaModel {
+        // The name of the catalog to which the database belongs.
         @NameInMap("CatalogName")
         public String catalogName;
 
+        // The ID of the database.
         @NameInMap("DatabaseId")
         public String databaseId;
 
+        // The type of the database. For more information about the valid values of this parameter, see [DbType parameter](~~198106~~).
         @NameInMap("DbType")
         public String dbType;
 
+        // The ID of the database administrator (DBA).
         @NameInMap("DbaId")
         public String dbaId;
 
+        // The nickname of the DBA.
         @NameInMap("DbaName")
         public String dbaName;
 
+        // The encoding format of the database.
         @NameInMap("Encoding")
         public String encoding;
 
+        // The type of the environment to which the database belongs. Valid values:
+        // 
+        // *   **product**: production environment
+        // *   **dev**: development environment
+        // *   **pre**: staging environment
+        // *   **test**: test environment
+        // *   **sit**: SIT environment
+        // *   **uat**: user acceptance testing (UAT) environment
+        // *   **pet**: stress testing environment
+        // *   **stag**: STAG environment
         @NameInMap("EnvType")
         public String envType;
 
+        // The endpoint that is used to connect to the database.
         @NameInMap("Host")
         public String host;
 
+        // The ID of the instance.
         @NameInMap("InstanceId")
         public String instanceId;
 
+        // The IDs of the owners of the database.
         @NameInMap("OwnerIdList")
         public GetDatabaseResponseBodyDatabaseOwnerIdList ownerIdList;
 
+        // The names of the owners of the database.
         @NameInMap("OwnerNameList")
         public GetDatabaseResponseBodyDatabaseOwnerNameList ownerNameList;
 
+        // The port that is used to connect to the database.
         @NameInMap("Port")
         public Integer port;
 
+        // The name of the database.
         @NameInMap("SchemaName")
         public String schemaName;
 
+        // The keyword that is used to search for the database.
         @NameInMap("SearchName")
         public String searchName;
 
+        // The SID of the database.
+        // 
+        // >  The value of the parameter is returned only for Oracle databases.
         @NameInMap("Sid")
         public String sid;
 
+        // The status of the database. Valid values:
+        // 
+        // *   **NORMAL**: The database is running as expected.
+        // *   **DISABLE**: The database is disabled.
+        // *   **OFFLINE**: The database is unpublished.
+        // *   **NOT_EXIST**: The database does not exist.
         @NameInMap("State")
         public String state;
 

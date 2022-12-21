@@ -4,18 +4,26 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListColumnsResponseBody extends TeaModel {
+    // The information about the columns returned.
     @NameInMap("ColumnList")
     public ListColumnsResponseBodyColumnList columnList;
 
+    // The error code returned.
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    // The error message returned.
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // - **true**: The request was successful.
+    // - **false**: The request failed.
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,42 +73,75 @@ public class ListColumnsResponseBody extends TeaModel {
     }
 
     public static class ListColumnsResponseBodyColumnListColumn extends TeaModel {
+        // Indicates whether the field is an auto-increment field. Valid values:
+        // 
+        // *   true: The field is an auto-increment field.
+        // *   false: The field is not an auto-increment field.
         @NameInMap("AutoIncrement")
         public Boolean autoIncrement;
 
+        // The ID of the field.
         @NameInMap("ColumnId")
         public String columnId;
 
+        // The name of the field.
         @NameInMap("ColumnName")
         public String columnName;
 
+        // The data type of the field.
         @NameInMap("ColumnType")
         public String columnType;
 
+        // The length of the field.
         @NameInMap("DataLength")
         public Long dataLength;
 
+        // The number of valid digits for the field.
         @NameInMap("DataPrecision")
         public Integer dataPrecision;
 
+        // The number of decimal places for the field.
         @NameInMap("DataScale")
         public Integer dataScale;
 
+        // The default value of the field.
         @NameInMap("DefaultValue")
         public String defaultValue;
 
+        // The description of the field.
         @NameInMap("Description")
         public String description;
 
+        // The type of the masking algorithm that is used for the field. Valid values:
+        // 
+        // *   null: No masking algorithm is used.
+        // *   DEFAULT: A full masking algorithm is used.
+        // *   FIX_POS: The fixed position is masked.
+        // *   FIX_CHAR: The fixed characters are replaced.
         @NameInMap("FunctionType")
         public String functionType;
 
+        // Indicates whether the field can be empty. Valid values:
+        // 
+        // *   **true**: The field can be empty.
+        // *   **false**: The field cannot be empty.
         @NameInMap("Nullable")
         public Boolean nullable;
 
+        // The security level of the field. Valid values:
+        // 
+        // *   INNER: The field is an internal field but not sensitive.
+        // *   SENSITIVE: The field is a sensitive field.
+        // *   CONFIDENTIAL: The field is a confidential field.
+        // 
+        // >  For more information, see [Adjust the sensitivity level of one or more fields](~~66091~~).
         @NameInMap("SecurityLevel")
         public String securityLevel;
 
+        // Indicates whether the field is a sensitive field. Valid values:
+        // 
+        // *   **true**: The field is a sensitive field.
+        // *   **false**: The field is not a sensitive field.
         @NameInMap("Sensitive")
         public Boolean sensitive;
 

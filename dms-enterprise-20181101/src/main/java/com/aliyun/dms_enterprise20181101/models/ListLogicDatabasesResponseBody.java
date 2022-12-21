@@ -4,21 +4,30 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListLogicDatabasesResponseBody extends TeaModel {
+    // The error code that is returned.
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    // The error message that is returned.
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    // The details of logical databases.
     @NameInMap("LogicDatabaseList")
     public ListLogicDatabasesResponseBodyLogicDatabaseList logicDatabaseList;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request is successful. Valid values:
+    // 
+    // - **true**: The request is successful.
+    // - **false**: The request fails.
     @NameInMap("Success")
     public Boolean success;
 
+    // The total number of logical databases.
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -133,33 +142,51 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
     }
 
     public static class ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabase extends TeaModel {
+        // The alias of the logical database.
         @NameInMap("Alias")
         public String alias;
 
+        // The ID of the logical database.
         @NameInMap("DatabaseId")
         public String databaseId;
 
         @NameInMap("DatabaseIds")
         public ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabaseDatabaseIds databaseIds;
 
+        // The type of the logical database. For more information about the valid values of this parameter, see [DbType parameter](https://www.alibabacloud.com/help/en/data-management-service/latest/dbtype-parameter).
         @NameInMap("DbType")
         public String dbType;
 
+        // The type of the environment to which the logical database belongs. Valid values:
+        // 
+        // - **product**: production environment
+        // - **dev**: development environment
+        // - **pre**: staging environment
+        // - **test**: test environment
+        // - **sit**: system integration testing (SIT) environment
+        // - **uat**: user acceptance testing (UAT) environment
+        // - **pet**: stress testing environment
+        // - **stag**: STAG environment
         @NameInMap("EnvType")
         public String envType;
 
+        // Indicates whether the database is a logical database. The return value is true.
         @NameInMap("Logic")
         public Boolean logic;
 
+        // The IDs of the owners of the logical database.
         @NameInMap("OwnerIdList")
         public ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabaseOwnerIdList ownerIdList;
 
+        // The names of the owners of the logical database.
         @NameInMap("OwnerNameList")
         public ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabaseOwnerNameList ownerNameList;
 
+        // The name of the logical database.
         @NameInMap("SchemaName")
         public String schemaName;
 
+        // The name that is used to search for the logical database.
         @NameInMap("SearchName")
         public String searchName;
 

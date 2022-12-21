@@ -4,15 +4,19 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class DeleteInstanceRequest extends TeaModel {
+    // The endpoint of the database instance. You can call the [ListInstances](~~141936~~) or [GetInstance](~~141567~~) operation to obtain the endpoint.
     @NameInMap("Host")
     public String host;
 
+    // The port number that is used to connect to the database instance. You can call the [ListInstances](~~141936~~) or [GetInstance](~~141567~~) operation to obtain the port number.
     @NameInMap("Port")
     public Integer port;
 
+    // The system ID (SID) of the database instance. You can call the [ListInstances](~~141936~~) or [GetInstance](~~141567~~) operation to obtain the SID.
     @NameInMap("Sid")
     public String sid;
 
+    // The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to obtain the tenant ID.
     @NameInMap("Tid")
     public Long tid;
 

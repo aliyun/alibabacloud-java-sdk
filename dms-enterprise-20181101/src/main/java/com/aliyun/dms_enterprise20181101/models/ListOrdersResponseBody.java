@@ -4,21 +4,30 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListOrdersResponseBody extends TeaModel {
+    // The error code.
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    // The error message.
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    // The details about the tickets.
     @NameInMap("Orders")
     public ListOrdersResponseBodyOrders orders;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // - **true**: The request was successful.
+    // - **false**: The request failed.
     @NameInMap("Success")
     public Boolean success;
 
+    // The total number of entries that are returned.
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -76,30 +85,48 @@ public class ListOrdersResponseBody extends TeaModel {
     }
 
     public static class ListOrdersResponseBodyOrdersOrder extends TeaModel {
+        // The remarks of the ticket.
         @NameInMap("Comment")
         public String comment;
 
+        // The user who submitted the ticket.
         @NameInMap("Committer")
         public String committer;
 
+        // The ID of the user who submitted the ticket.
         @NameInMap("CommitterId")
         public Long committerId;
 
+        // The time when the ticket was created.
         @NameInMap("CreateTime")
         public String createTime;
 
+        // The time when the ticket was last modified.
         @NameInMap("LastModifyTime")
         public String lastModifyTime;
 
+        // The ID of the ticket.
         @NameInMap("OrderId")
         public Long orderId;
 
+        // The type of the ticket.
         @NameInMap("PluginType")
         public String pluginType;
 
+        // The status code of the ticket. Valid values:
+        // 
+        // *   **fail**: The ticket fails to be executed.
+        // *   **toaudit**: The ticket is waiting for approval.
+        // *   **cancel**: The ticket is cancelled.
+        // *   **processing**: The ticket is being executed.
+        // *   **approved**: The ticket is approved.
+        // *   **reject**: The ticket is rejected.
+        // *   **success**: The ticket is executed.
+        // *   **closed**: The ticket is closed.
         @NameInMap("StatusCode")
         public String statusCode;
 
+        // The status description of the ticket.
         @NameInMap("StatusDesc")
         public String statusDesc;
 

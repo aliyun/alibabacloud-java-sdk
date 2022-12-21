@@ -4,18 +4,26 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListTaskFlowCooperatorsResponseBody extends TeaModel {
+    // The users that are involved in the task flow.
     @NameInMap("CooperatorList")
     public ListTaskFlowCooperatorsResponseBodyCooperatorList cooperatorList;
 
+    // The error code returned if the request failed.
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    // The error message returned if the request failed.
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    // The ID of the request. You can use the ID to locate logs and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // *   **true**: The request was successful.
+    // *   **false**: The request failed.
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,14 +73,20 @@ public class ListTaskFlowCooperatorsResponseBody extends TeaModel {
     }
 
     public static class ListTaskFlowCooperatorsResponseBodyCooperatorListCooperator extends TeaModel {
+        // The email address of the user.
         @NameInMap("Email")
         public String email;
 
+        // The username.
         @NameInMap("LoginName")
         public String loginName;
 
+        // The alias of the user.
         @NameInMap("NickName")
         public String nickName;
+
+        @NameInMap("UserId")
+        public String userId;
 
         public static ListTaskFlowCooperatorsResponseBodyCooperatorListCooperator build(java.util.Map<String, ?> map) throws Exception {
             ListTaskFlowCooperatorsResponseBodyCooperatorListCooperator self = new ListTaskFlowCooperatorsResponseBodyCooperatorListCooperator();
@@ -101,6 +115,14 @@ public class ListTaskFlowCooperatorsResponseBody extends TeaModel {
         }
         public String getNickName() {
             return this.nickName;
+        }
+
+        public ListTaskFlowCooperatorsResponseBodyCooperatorListCooperator setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
         }
 
     }

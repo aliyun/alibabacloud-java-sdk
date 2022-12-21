@@ -4,33 +4,56 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListOrdersRequest extends TeaModel {
+    // The end of the time range to query.
     @NameInMap("EndTime")
     public String endTime;
 
+    // The scope of the tickets that you want to query. Valid values:
+    // 
+    // *   **AS_ADMIN**: all tickets.
+    // *   **AS_COMMITTER**: the tickets that are submitted by the current user.
+    // *   **AS_HANDLER**: the tickets to be processed by the current user.
+    // *   **AS_OWNER**: the tickets that are processed by the current user.
+    // *   **AS_Related**: the tickets that are related to the current user.
     @NameInMap("OrderResultType")
     public String orderResultType;
 
+    // The status of the tickets that you want to query. Valid values:
+    // 
+    // *   **ALL**: queries the tickets of all statuses.
+    // *   **FINISHED**: queries the tickets that are completed.
+    // *   **RUNNING**: queries the tickets that are being processed.
     @NameInMap("OrderStatus")
     public String orderStatus;
 
+    // The number of the page to return.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries to return on each page.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The type of the tickets that you want to query. For more information, see [PluginType parameter](~~429109~~).
     @NameInMap("PluginType")
     public String pluginType;
 
+    // The keyword that is used to query tickets.
     @NameInMap("SearchContent")
     public String searchContent;
 
+    // The time condition based on which you want to query tickets. Valid values:
+    // 
+    // *   **CREATE_TIME**: the time when a ticket was created.
+    // *   **MODIFY_TIME**: the time when a ticket was last modified.
     @NameInMap("SearchDateType")
     public String searchDateType;
 
+    // The beginning of the time range to query.
     @NameInMap("StartTime")
     public String startTime;
 
+    // The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
     @NameInMap("Tid")
     public Long tid;
 

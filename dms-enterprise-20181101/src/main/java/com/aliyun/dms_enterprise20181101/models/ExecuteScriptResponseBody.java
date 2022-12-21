@@ -4,18 +4,23 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ExecuteScriptResponseBody extends TeaModel {
+    // The error code.
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    // The error message about the gateway.
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The results of the SQL statements that are executed, in the format of an array. Each entry in the array indicates the result of an SQL statement.
     @NameInMap("Results")
     public java.util.List<ExecuteScriptResponseBodyResults> results;
 
+    // Indicates whether the request is successful.
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,18 +70,23 @@ public class ExecuteScriptResponseBody extends TeaModel {
     }
 
     public static class ExecuteScriptResponseBodyResults extends TeaModel {
+        // The fields that are queried after the SQL statement is executed.
         @NameInMap("ColumnNames")
         public java.util.List<String> columnNames;
 
+        // The error message that is returned if the SQL statement fails to be executed. For example, an error message is returned because the SQL statement is invalid.
         @NameInMap("Message")
         public String message;
 
+        // The total number of entries that are returned.
         @NameInMap("RowCount")
         public Long rowCount;
 
+        // The rows that are queried after the SQL statement is executed.
         @NameInMap("Rows")
         public java.util.List<java.util.Map<String, ?>> rows;
 
+        // Indicates whether the SQL statement is executed.
         @NameInMap("Success")
         public Boolean success;
 

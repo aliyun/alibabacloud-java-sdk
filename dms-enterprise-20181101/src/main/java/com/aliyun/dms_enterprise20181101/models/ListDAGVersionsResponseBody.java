@@ -4,21 +4,30 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListDAGVersionsResponseBody extends TeaModel {
+    // The information about the published versions.
     @NameInMap("DagVersionList")
     public ListDAGVersionsResponseBodyDagVersionList dagVersionList;
 
+    // The error code returned if the request fails.
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    // The error message returned if the request fails.
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request is successful. Valid values:
+    // 
+    // *   **true**: The request is successful.
+    // *   **false**: The request fails.
     @NameInMap("Success")
     public Boolean success;
 
+    // The total number of entries returned.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -76,21 +85,27 @@ public class ListDAGVersionsResponseBody extends TeaModel {
     }
 
     public static class ListDAGVersionsResponseBodyDagVersionListDagVersion extends TeaModel {
+        // The name of the task flow.
         @NameInMap("DagName")
         public String dagName;
 
+        // The ID of the task flow owner.
         @NameInMap("DagOwnerId")
         public String dagOwnerId;
 
+        // The name of the task flow owner.
         @NameInMap("DagOwnerNickName")
         public String dagOwnerNickName;
 
+        // The ID of the previously published version.
         @NameInMap("LastVersionId")
         public Long lastVersionId;
 
+        // The description of the version.
         @NameInMap("VersionComments")
         public String versionComments;
 
+        // The ID of the version.
         @NameInMap("VersionId")
         public Long versionId;
 

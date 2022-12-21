@@ -4,18 +4,23 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetUserUploadFileJobResponseBody extends TeaModel {
+    // The error code returned.
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    // The error message returned.
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request is successful.
     @NameInMap("Success")
     public Boolean success;
 
+    // The details of the file upload task.
     @NameInMap("UploadFileJobDetail")
     public GetUserUploadFileJobResponseBodyUploadFileJobDetail uploadFileJobDetail;
 
@@ -65,12 +70,15 @@ public class GetUserUploadFileJobResponseBody extends TeaModel {
     }
 
     public static class GetUserUploadFileJobResponseBodyUploadFileJobDetailUploadOSSParam extends TeaModel {
+        // The name of the OSS bucket.
         @NameInMap("BucketName")
         public String bucketName;
 
+        // The endpoint of the OSS bucket.
         @NameInMap("Endpoint")
         public String endpoint;
 
+        // The name of the OSS object.
         @NameInMap("ObjectName")
         public String objectName;
 
@@ -106,36 +114,66 @@ public class GetUserUploadFileJobResponseBody extends TeaModel {
     }
 
     public static class GetUserUploadFileJobResponseBodyUploadFileJobDetail extends TeaModel {
+        // The key of the file that is returned after the file is uploaded. You can use this key when you upload the file as an attachment in a ticket.
         @NameInMap("AttachmentKey")
         public String attachmentKey;
 
+        // The name of the file.
         @NameInMap("FileName")
         public String fileName;
 
+        // The size of the file. Unit: byte.
         @NameInMap("FileSize")
         public Long fileSize;
 
+        // The purpose of the uploaded file. Valid values:
+        // 
+        // *   **datacorrect**: The file is uploaded to change data.
+        // *   **order_info_attachment**: The file is uploaded as an attachment in a ticket.
+        // *   **big-file**: The file is uploaded to import multiple data records at a time.
+        // *   **sqlreview**: The file is uploaded for SQL review.
         @NameInMap("FileSource")
         public String fileSource;
 
+        // The key of the file upload task.
         @NameInMap("JobKey")
         public String jobKey;
 
+        // The status of the file upload task. Valid values:
+        // 
+        // *   **INIT**: The task was initialized.
+        // *   **PENDING**: The task waited to be run.
+        // *   **BE_SCHEDULED**: The task waited to be scheduled.
+        // *   **FAIL**: The task failed.
+        // *   **SUCCESS**: The task was run as expected.
+        // *   **RUNNING**: The task was being run.
         @NameInMap("JobStatus")
         public String jobStatus;
 
+        // The information about the status of the file upload task.
         @NameInMap("JobStatusDesc")
         public String jobStatusDesc;
 
+        // The information about the Object Storage Service (OSS) bucket from which the file is uploaded.
+        // 
+        // >  This parameter is returned if the **UploadType** parameter is set to **OSS**.
         @NameInMap("UploadOSSParam")
         public GetUserUploadFileJobResponseBodyUploadFileJobDetailUploadOSSParam uploadOSSParam;
 
+        // The method used to upload the file. Valid values:
+        // 
+        // *   **URL**
+        // *   **OSS**
         @NameInMap("UploadType")
         public String uploadType;
 
+        // The URL of the file.
+        // 
+        // >  This parameter is returned if the **UploadType** parameter is set to **URL**.
         @NameInMap("UploadURL")
         public String uploadURL;
 
+        // The size of the uploaded file. Unit: byte.
         @NameInMap("UploadedSize")
         public Long uploadedSize;
 

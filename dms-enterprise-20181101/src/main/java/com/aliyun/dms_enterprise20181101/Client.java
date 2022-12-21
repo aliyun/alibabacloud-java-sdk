@@ -82,6 +82,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.addDesensitizationRuleWithOptions(request, runtime);
     }
 
+    /**
+      * You must call this operation as a DMS administrator, a database administrator (DBA), or a workspace administrator.
+      * Usage notes:
+      * *   Before you call this operation to add a user as a task flow developer, make sure that you have added the user as a workspace member.
+      * *   You cannot call this operation to transfer the ownership of a task flow. To transfer the ownership of a task flow, call the [ChangLhDagOwner](~~424761~~) operation.
+      * *   For more information about workspace roles and permissions, see [Manage permissions on a workspace](~~410893~~).
+      *
+      * @param tmpReq AddLhMembersRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return AddLhMembersResponse
+     */
     public AddLhMembersResponse addLhMembersWithOptions(AddLhMembersRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         AddLhMembersShrinkRequest request = new AddLhMembersShrinkRequest();
@@ -124,6 +135,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AddLhMembersResponse());
     }
 
+    /**
+      * You must call this operation as a DMS administrator, a database administrator (DBA), or a workspace administrator.
+      * Usage notes:
+      * *   Before you call this operation to add a user as a task flow developer, make sure that you have added the user as a workspace member.
+      * *   You cannot call this operation to transfer the ownership of a task flow. To transfer the ownership of a task flow, call the [ChangLhDagOwner](~~424761~~) operation.
+      * *   For more information about workspace roles and permissions, see [Manage permissions on a workspace](~~410893~~).
+      *
+      * @param request AddLhMembersRequest
+      * @return AddLhMembersResponse
+     */
     public AddLhMembersResponse addLhMembers(AddLhMembersRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.addLhMembersWithOptions(request, runtime);
@@ -254,6 +275,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.approveOrderWithOptions(request, runtime);
     }
 
+    /**
+      * ## Description
+      * During a data backfill, task flows are run in sequence based on their dates. You can specify whether task flows are run in chronological or reverse chronological order. After the data backfill is complete, you can specify a date or date range, and a node range to run task flows.
+      *
+      * @param tmpReq BackFillRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return BackFillResponse
+     */
     public BackFillResponse backFillWithOptions(BackFillRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         BackFillShrinkRequest request = new BackFillShrinkRequest();
@@ -320,6 +349,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new BackFillResponse());
     }
 
+    /**
+      * ## Description
+      * During a data backfill, task flows are run in sequence based on their dates. You can specify whether task flows are run in chronological or reverse chronological order. After the data backfill is complete, you can specify a date or date range, and a node range to run task flows.
+      *
+      * @param request BackFillRequest
+      * @return BackFillResponse
+     */
     public BackFillResponse backFill(BackFillRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.backFillWithOptions(request, runtime);
@@ -419,6 +455,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.changeColumnSecLevelWithOptions(request, runtime);
     }
 
+    /**
+      * Usage notes:
+      * *   If you call this operation to transfer the ownership of a published task flow, the ownership transfer does not take effect.
+      * *   You can call the [ReDeployLhDagVersion](~~424712~~) operation to redeploy a published version of a task flow.
+      *
+      * @param request ChangeLhDagOwnerRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ChangeLhDagOwnerResponse
+     */
     public ChangeLhDagOwnerResponse changeLhDagOwnerWithOptions(ChangeLhDagOwnerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -451,6 +496,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ChangeLhDagOwnerResponse());
     }
 
+    /**
+      * Usage notes:
+      * *   If you call this operation to transfer the ownership of a published task flow, the ownership transfer does not take effect.
+      * *   You can call the [ReDeployLhDagVersion](~~424712~~) operation to redeploy a published version of a task flow.
+      *
+      * @param request ChangeLhDagOwnerRequest
+      * @return ChangeLhDagOwnerResponse
+     */
     public ChangeLhDagOwnerResponse changeLhDagOwner(ChangeLhDagOwnerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.changeLhDagOwnerWithOptions(request, runtime);
@@ -493,6 +546,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.closeOrderWithOptions(request, runtime);
     }
 
+    /**
+      * For more information about the Normal Data Modify feature, see [Change regular data](~~58419~~).
+      *
+      * @param tmpReq CreateDataCorrectOrderRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateDataCorrectOrderResponse
+     */
     public CreateDataCorrectOrderResponse createDataCorrectOrderWithOptions(CreateDataCorrectOrderRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateDataCorrectOrderShrinkRequest request = new CreateDataCorrectOrderShrinkRequest();
@@ -543,11 +603,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDataCorrectOrderResponse());
     }
 
+    /**
+      * For more information about the Normal Data Modify feature, see [Change regular data](~~58419~~).
+      *
+      * @param request CreateDataCorrectOrderRequest
+      * @return CreateDataCorrectOrderResponse
+     */
     public CreateDataCorrectOrderResponse createDataCorrectOrder(CreateDataCorrectOrderRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createDataCorrectOrderWithOptions(request, runtime);
     }
 
+    /**
+      * For more information about the historical data cleaning, see [Clear historical data](~~162507~~).
+      * This operation can be used only for MySQL databases.
+      *
+      * @param tmpReq CreateDataCronClearOrderRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateDataCronClearOrderResponse
+     */
     public CreateDataCronClearOrderResponse createDataCronClearOrderWithOptions(CreateDataCronClearOrderRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateDataCronClearOrderShrinkRequest request = new CreateDataCronClearOrderShrinkRequest();
@@ -598,11 +672,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDataCronClearOrderResponse());
     }
 
+    /**
+      * For more information about the historical data cleaning, see [Clear historical data](~~162507~~).
+      * This operation can be used only for MySQL databases.
+      *
+      * @param request CreateDataCronClearOrderRequest
+      * @return CreateDataCronClearOrderResponse
+     */
     public CreateDataCronClearOrderResponse createDataCronClearOrder(CreateDataCronClearOrderRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createDataCronClearOrderWithOptions(request, runtime);
     }
 
+    /**
+      * For more information about the Large Data Import feature, see [Import data](~~161439~~).
+      *
+      * @param tmpReq CreateDataImportOrderRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateDataImportOrderResponse
+     */
     public CreateDataImportOrderResponse createDataImportOrderWithOptions(CreateDataImportOrderRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateDataImportOrderShrinkRequest request = new CreateDataImportOrderShrinkRequest();
@@ -653,11 +741,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDataImportOrderResponse());
     }
 
+    /**
+      * For more information about the Large Data Import feature, see [Import data](~~161439~~).
+      *
+      * @param request CreateDataImportOrderRequest
+      * @return CreateDataImportOrderResponse
+     */
     public CreateDataImportOrderResponse createDataImportOrder(CreateDataImportOrderRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createDataImportOrderWithOptions(request, runtime);
     }
 
+    /**
+      * For more information about the lock-free change feature, see [Overview](~~207847~~).
+      * This operation can be used only for instances that are managed in Stable Change or Security Collaboration mode. For more information, see [Change data without the need to lock tables](~~96145~~) and [Change schemas without locking tables](~~98373~~).
+      *
+      * @param tmpReq CreateFreeLockCorrectOrderRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateFreeLockCorrectOrderResponse
+     */
     public CreateFreeLockCorrectOrderResponse createFreeLockCorrectOrderWithOptions(CreateFreeLockCorrectOrderRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateFreeLockCorrectOrderShrinkRequest request = new CreateFreeLockCorrectOrderShrinkRequest();
@@ -708,11 +810,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateFreeLockCorrectOrderResponse());
     }
 
+    /**
+      * For more information about the lock-free change feature, see [Overview](~~207847~~).
+      * This operation can be used only for instances that are managed in Stable Change or Security Collaboration mode. For more information, see [Change data without the need to lock tables](~~96145~~) and [Change schemas without locking tables](~~98373~~).
+      *
+      * @param request CreateFreeLockCorrectOrderRequest
+      * @return CreateFreeLockCorrectOrderResponse
+     */
     public CreateFreeLockCorrectOrderResponse createFreeLockCorrectOrder(CreateFreeLockCorrectOrderRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createFreeLockCorrectOrderWithOptions(request, runtime);
     }
 
+    /**
+      * *   The workspace name must be unique within a tenant. If a workspace with the same name already exists within the tenant, the call may fail.
+      * *   You can call the [GetLhSpaceByName](~~424379~~) operation to query whether a workspace with a specific name already exists as a DMS administrator or database administrator (DBA).
+      *
+      * @param request CreateLakeHouseSpaceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateLakeHouseSpaceResponse
+     */
     public CreateLakeHouseSpaceResponse createLakeHouseSpaceWithOptions(CreateLakeHouseSpaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -765,6 +882,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateLakeHouseSpaceResponse());
     }
 
+    /**
+      * *   The workspace name must be unique within a tenant. If a workspace with the same name already exists within the tenant, the call may fail.
+      * *   You can call the [GetLhSpaceByName](~~424379~~) operation to query whether a workspace with a specific name already exists as a DMS administrator or database administrator (DBA).
+      *
+      * @param request CreateLakeHouseSpaceRequest
+      * @return CreateLakeHouseSpaceResponse
+     */
     public CreateLakeHouseSpaceResponse createLakeHouseSpace(CreateLakeHouseSpaceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createLakeHouseSpaceWithOptions(request, runtime);
@@ -813,6 +937,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createLogicDatabaseWithOptions(request, runtime);
     }
 
+    /**
+      * To facilitate ticket creation, you can call the following dedicated operations to create some types of tickets:
+      * *   [CreateDataCorrectOrder](~~208388~~): creates a regular data change ticket.
+      * *   [CreateDataCronClearOrder](~~208385~~): creates a ticket to clear historical data.
+      * *   [CreateDataImportOrder](~~208387~~): creates a data import ticket.
+      * *   [CreateFreeLockCorrectOrder](~~208386~~): creates a lock-free change ticket.
+      *
+      * @param tmpReq CreateOrderRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateOrderResponse
+     */
     public CreateOrderResponse createOrderWithOptions(CreateOrderRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateOrderShrinkRequest request = new CreateOrderShrinkRequest();
@@ -865,11 +1000,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateOrderResponse());
     }
 
+    /**
+      * To facilitate ticket creation, you can call the following dedicated operations to create some types of tickets:
+      * *   [CreateDataCorrectOrder](~~208388~~): creates a regular data change ticket.
+      * *   [CreateDataCronClearOrder](~~208385~~): creates a ticket to clear historical data.
+      * *   [CreateDataImportOrder](~~208387~~): creates a data import ticket.
+      * *   [CreateFreeLockCorrectOrder](~~208386~~): creates a lock-free change ticket.
+      *
+      * @param request CreateOrderRequest
+      * @return CreateOrderResponse
+     */
     public CreateOrderResponse createOrder(CreateOrderRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createOrderWithOptions(request, runtime);
     }
 
+    /**
+      * - The database instance runs the MySQL or MariaDB database engine. For example, the database instance can be an ApsaraDB RDS for MySQL instance, a PolarDB for MySQL cluster, a Distributed Relational Database Service (DRDS) cluster, or an AnalyticDB for MySQL cluster. The database instance can also be a self-managed MySQL or MariaDB database, or a MySQL or MariaDB database in a third-party cloud.
+      * - The database instance resides in the China (Hangzhou) or China (Beijing) region.
+      * - You are a Data Management (DMS) administrator, a database administrator (DBA), or the owner of the database instance.
+      *
+      * @param request CreateProxyRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateProxyResponse
+     */
     public CreateProxyResponse createProxyWithOptions(CreateProxyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -906,11 +1060,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateProxyResponse());
     }
 
+    /**
+      * - The database instance runs the MySQL or MariaDB database engine. For example, the database instance can be an ApsaraDB RDS for MySQL instance, a PolarDB for MySQL cluster, a Distributed Relational Database Service (DRDS) cluster, or an AnalyticDB for MySQL cluster. The database instance can also be a self-managed MySQL or MariaDB database, or a MySQL or MariaDB database in a third-party cloud.
+      * - The database instance resides in the China (Hangzhou) or China (Beijing) region.
+      * - You are a Data Management (DMS) administrator, a database administrator (DBA), or the owner of the database instance.
+      *
+      * @param request CreateProxyRequest
+      * @return CreateProxyResponse
+     */
     public CreateProxyResponse createProxy(CreateProxyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createProxyWithOptions(request, runtime);
     }
 
+    /**
+      * - The data security protection feature is enabled for the instance.
+      * - Your user role is the administrator role, DBA role, or the owner of data security protection for the current instance.
+      *
+      * @param request CreateProxyAccessRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateProxyAccessResponse
+     */
     public CreateProxyAccessResponse createProxyAccessWithOptions(CreateProxyAccessRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -951,6 +1121,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateProxyAccessResponse());
     }
 
+    /**
+      * - The data security protection feature is enabled for the instance.
+      * - Your user role is the administrator role, DBA role, or the owner of data security protection for the current instance.
+      *
+      * @param request CreateProxyAccessRequest
+      * @return CreateProxyAccessResponse
+     */
     public CreateProxyAccessResponse createProxyAccess(CreateProxyAccessRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createProxyAccessWithOptions(request, runtime);
@@ -1005,6 +1182,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createPublishGroupTaskWithOptions(request, runtime);
     }
 
+    /**
+      * For more instructions on this feature, see [SQL audit](~~60374~~) .
+      *
+      * @param tmpReq CreateSQLReviewOrderRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateSQLReviewOrderResponse
+     */
     public CreateSQLReviewOrderResponse createSQLReviewOrderWithOptions(CreateSQLReviewOrderRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateSQLReviewOrderShrinkRequest request = new CreateSQLReviewOrderShrinkRequest();
@@ -1051,6 +1235,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSQLReviewOrderResponse());
     }
 
+    /**
+      * For more instructions on this feature, see [SQL audit](~~60374~~) .
+      *
+      * @param request CreateSQLReviewOrderRequest
+      * @return CreateSQLReviewOrderResponse
+     */
     public CreateSQLReviewOrderResponse createSQLReviewOrder(CreateSQLReviewOrderRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createSQLReviewOrderWithOptions(request, runtime);
@@ -1375,6 +1565,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createUploadOSSFileJobWithOptions(request, runtime);
     }
 
+    /**
+      * Note: You can call this operation only to remove a database instance from the instance list of DMS. The instance is not deleted or shut down.
+      *
+      * @param request DeleteInstanceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteInstanceResponse
+     */
     public DeleteInstanceResponse deleteInstanceWithOptions(DeleteInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1411,6 +1608,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteInstanceResponse());
     }
 
+    /**
+      * Note: You can call this operation only to remove a database instance from the instance list of DMS. The instance is not deleted or shut down.
+      *
+      * @param request DeleteInstanceRequest
+      * @return DeleteInstanceResponse
+     */
     public DeleteInstanceResponse deleteInstance(DeleteInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteInstanceWithOptions(request, runtime);
@@ -1449,6 +1652,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteLakeHouseSpaceWithOptions(request, runtime);
     }
 
+    /**
+      * You must call this operation as a DMS administrator, a database administrator (DBA), or a workspace administrator.
+      * You cannot call this operation to transfer the ownership of a task flow. To transfer the ownership of a task flow, call the [ChangLhDagOwner](~~424761~~) operation.
+      *
+      * @param tmpReq DeleteLhMembersRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteLhMembersResponse
+     */
     public DeleteLhMembersResponse deleteLhMembersWithOptions(DeleteLhMembersRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         DeleteLhMembersShrinkRequest request = new DeleteLhMembersShrinkRequest();
@@ -1491,6 +1702,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteLhMembersResponse());
     }
 
+    /**
+      * You must call this operation as a DMS administrator, a database administrator (DBA), or a workspace administrator.
+      * You cannot call this operation to transfer the ownership of a task flow. To transfer the ownership of a task flow, call the [ChangLhDagOwner](~~424761~~) operation.
+      *
+      * @param request DeleteLhMembersRequest
+      * @return DeleteLhMembersResponse
+     */
     public DeleteLhMembersResponse deleteLhMembers(DeleteLhMembersRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteLhMembersWithOptions(request, runtime);
@@ -1566,6 +1784,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteLogicTableRouteConfigWithOptions(request, runtime);
     }
 
+    /**
+      * After you disable this feature, your DB instance loses the JDBC protocol. All authorization information is recycled.
+      *
+      * @param request DeleteProxyRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteProxyResponse
+     */
     public DeleteProxyResponse deleteProxyWithOptions(DeleteProxyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1594,6 +1819,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteProxyResponse());
     }
 
+    /**
+      * After you disable this feature, your DB instance loses the JDBC protocol. All authorization information is recycled.
+      *
+      * @param request DeleteProxyRequest
+      * @return DeleteProxyResponse
+     */
     public DeleteProxyResponse deleteProxy(DeleteProxyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteProxyWithOptions(request, runtime);
@@ -1632,6 +1863,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteProxyAccessWithOptions(request, runtime);
     }
 
+    /**
+      * ### Usage notes
+      * When you call this operation, make sure that no task flow is specified in the business scenario.
+      *
+      * @param request DeleteScenarioRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteScenarioResponse
+     */
     public DeleteScenarioResponse deleteScenarioWithOptions(DeleteScenarioRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1660,6 +1899,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteScenarioResponse());
     }
 
+    /**
+      * ### Usage notes
+      * When you call this operation, make sure that no task flow is specified in the business scenario.
+      *
+      * @param request DeleteScenarioRequest
+      * @return DeleteScenarioResponse
+     */
     public DeleteScenarioResponse deleteScenario(DeleteScenarioRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteScenarioWithOptions(request, runtime);
@@ -1731,6 +1977,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteTaskFlowWithOptions(request, runtime);
     }
 
+    /**
+      * This operation is used for multi-condition query. You can call it to delete the edges of a specified task flow that meet all specified conditions.
+      *
+      * @param request DeleteTaskFlowEdgesByConditionRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteTaskFlowEdgesByConditionResponse
+     */
     public DeleteTaskFlowEdgesByConditionResponse deleteTaskFlowEdgesByConditionWithOptions(DeleteTaskFlowEdgesByConditionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1771,11 +2024,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteTaskFlowEdgesByConditionResponse());
     }
 
+    /**
+      * This operation is used for multi-condition query. You can call it to delete the edges of a specified task flow that meet all specified conditions.
+      *
+      * @param request DeleteTaskFlowEdgesByConditionRequest
+      * @return DeleteTaskFlowEdgesByConditionResponse
+     */
     public DeleteTaskFlowEdgesByConditionResponse deleteTaskFlowEdgesByCondition(DeleteTaskFlowEdgesByConditionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteTaskFlowEdgesByConditionWithOptions(request, runtime);
     }
 
+    /**
+      * The effect of deleting a user by calling this operation is the same as that of deleting a user by choosing System Management > User Management in the DMS Enterprise console. The administrator of DMS Enterprise can call this operation to delete a user that is no longer used from DMS Enterprise. After the user is deleted, the data source permission, data owner configuration, and database administrator (DBA) configuration of the corresponding Alibaba Cloud account or Resource Access Management (RAM) user are revoked and become invalid.
+      * >  This operation only removes the association of the Alibaba Cloud account or RAM user with DMS Enterprise of the enterprise, rather than actually deleting the Alibaba Cloud account or RAM user. After the user is deleted, the Alibaba Cloud account or RAM user cannot log on to DMS Enterprise, unless the user is added to DMS Enterprise again.
+      *
+      * @param request DeleteUserRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteUserResponse
+     */
     public DeleteUserResponse deleteUserWithOptions(DeleteUserRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1804,11 +2071,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteUserResponse());
     }
 
+    /**
+      * The effect of deleting a user by calling this operation is the same as that of deleting a user by choosing System Management > User Management in the DMS Enterprise console. The administrator of DMS Enterprise can call this operation to delete a user that is no longer used from DMS Enterprise. After the user is deleted, the data source permission, data owner configuration, and database administrator (DBA) configuration of the corresponding Alibaba Cloud account or Resource Access Management (RAM) user are revoked and become invalid.
+      * >  This operation only removes the association of the Alibaba Cloud account or RAM user with DMS Enterprise of the enterprise, rather than actually deleting the Alibaba Cloud account or RAM user. After the user is deleted, the Alibaba Cloud account or RAM user cannot log on to DMS Enterprise, unless the user is added to DMS Enterprise again.
+      *
+      * @param request DeleteUserRequest
+      * @return DeleteUserResponse
+     */
     public DeleteUserResponse deleteUser(DeleteUserRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteUserWithOptions(request, runtime);
     }
 
+    /**
+      * The effect of disabling a user by calling this operation is the same as that of disabling a user by choosing System Management > User Management in the DMS Enterprise console. The administrator of DMS Enterprise can call this operation to disable a user that is temporarily not used in DMS Enterprise. After the user is disabled, the data source permission, data owner configuration, and database administrator (DBA) configuration of the corresponding Alibaba Cloud account or Resource Access Management (RAM) user are revoked and become invalid.
+      * >  This operation only stops the Alibaba Cloud account or RAM user from logging on to DMS Enterprise of the enterprise, rather than actually disabling the Alibaba Cloud account or RAM user. After the user is disabled, the Alibaba Cloud account or RAM user cannot log on to DMS Enterprise, unless the user is enabled again. The disabled user, however, still exists in DMS Enterprise.
+      *
+      * @param request DisableUserRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DisableUserResponse
+     */
     public DisableUserResponse disableUserWithOptions(DisableUserRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1837,6 +2119,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DisableUserResponse());
     }
 
+    /**
+      * The effect of disabling a user by calling this operation is the same as that of disabling a user by choosing System Management > User Management in the DMS Enterprise console. The administrator of DMS Enterprise can call this operation to disable a user that is temporarily not used in DMS Enterprise. After the user is disabled, the data source permission, data owner configuration, and database administrator (DBA) configuration of the corresponding Alibaba Cloud account or Resource Access Management (RAM) user are revoked and become invalid.
+      * >  This operation only stops the Alibaba Cloud account or RAM user from logging on to DMS Enterprise of the enterprise, rather than actually disabling the Alibaba Cloud account or RAM user. After the user is disabled, the Alibaba Cloud account or RAM user cannot log on to DMS Enterprise, unless the user is enabled again. The disabled user, however, still exists in DMS Enterprise.
+      *
+      * @param request DisableUserRequest
+      * @return DisableUserResponse
+     */
     public DisableUserResponse disableUser(DisableUserRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.disableUserWithOptions(request, runtime);
@@ -1889,6 +2178,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.editLogicDatabaseWithOptions(request, runtime);
     }
 
+    /**
+      * The effect of enabling a user by calling this operation is the same as that of enabling a user by choosing System Management > User Management in the DMS Enterprise console. The administrator of DMS Enterprise can call this operation to enable a user that has been disabled in DMS Enterprise. After the user is enabled, the corresponding Alibaba Cloud account or Resource Access Management (RAM) user can continue to log on to DMS Enterprise and perform relevant operations.
+      * >  This operation only enables the Alibaba Cloud account or RAM user to log on to DMS Enterprise of the enterprise and perform relevant operations, rather than granting other permissions to the Alibaba Cloud account or RAM user.
+      *
+      * @param request EnableUserRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return EnableUserResponse
+     */
     public EnableUserResponse enableUserWithOptions(EnableUserRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1917,6 +2214,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new EnableUserResponse());
     }
 
+    /**
+      * The effect of enabling a user by calling this operation is the same as that of enabling a user by choosing System Management > User Management in the DMS Enterprise console. The administrator of DMS Enterprise can call this operation to enable a user that has been disabled in DMS Enterprise. After the user is enabled, the corresponding Alibaba Cloud account or Resource Access Management (RAM) user can continue to log on to DMS Enterprise and perform relevant operations.
+      * >  This operation only enables the Alibaba Cloud account or RAM user to log on to DMS Enterprise of the enterprise and perform relevant operations, rather than granting other permissions to the Alibaba Cloud account or RAM user.
+      *
+      * @param request EnableUserRequest
+      * @return EnableUserResponse
+     */
     public EnableUserResponse enableUser(EnableUserRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.enableUserWithOptions(request, runtime);
@@ -2008,6 +2312,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.executeDataExportWithOptions(request, runtime);
     }
 
+    /**
+      * You can call this operation only for instances that are managed in Security Collaboration mode.
+      *
+      * @param request ExecuteScriptRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ExecuteScriptResponse
+     */
     public ExecuteScriptResponse executeScriptWithOptions(ExecuteScriptRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2044,11 +2355,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ExecuteScriptResponse());
     }
 
+    /**
+      * You can call this operation only for instances that are managed in Security Collaboration mode.
+      *
+      * @param request ExecuteScriptRequest
+      * @return ExecuteScriptResponse
+     */
     public ExecuteScriptResponse executeScript(ExecuteScriptRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.executeScriptWithOptions(request, runtime);
     }
 
+    /**
+      * If the security rules of the instance need to be approved for synchronization, call [SubmitStructSyncOrderApproval](~~206166~~) The interface initiates an approval process and completes the approval.
+      * >  You can call [GetStructSyncJobDetail](~~206160~~) You can call this operation to query whether the target instance requires an approval.
+      *
+      * @param request ExecuteStructSyncRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ExecuteStructSyncResponse
+     */
     public ExecuteStructSyncResponse executeStructSyncWithOptions(ExecuteStructSyncRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2077,6 +2402,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ExecuteStructSyncResponse());
     }
 
+    /**
+      * If the security rules of the instance need to be approved for synchronization, call [SubmitStructSyncOrderApproval](~~206166~~) The interface initiates an approval process and completes the approval.
+      * >  You can call [GetStructSyncJobDetail](~~206160~~) You can call this operation to query whether the target instance requires an approval.
+      *
+      * @param request ExecuteStructSyncRequest
+      * @return ExecuteStructSyncResponse
+     */
     public ExecuteStructSyncResponse executeStructSync(ExecuteStructSyncRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.executeStructSyncWithOptions(request, runtime);
@@ -2290,6 +2622,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getDataCorrectRollbackFileWithOptions(request, runtime);
     }
 
+    /**
+      * This interface applies to: [Common data change](~~58419~~) and [Batch Data import](~~144643~~) .
+      *
+      * @param request GetDataCorrectSQLFileRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetDataCorrectSQLFileResponse
+     */
     public GetDataCorrectSQLFileResponse getDataCorrectSQLFileWithOptions(GetDataCorrectSQLFileRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2318,6 +2657,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetDataCorrectSQLFileResponse());
     }
 
+    /**
+      * This interface applies to: [Common data change](~~58419~~) and [Batch Data import](~~144643~~) .
+      *
+      * @param request GetDataCorrectSQLFileRequest
+      * @return GetDataCorrectSQLFileResponse
+     */
     public GetDataCorrectSQLFileResponse getDataCorrectSQLFile(GetDataCorrectSQLFileRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getDataCorrectSQLFileWithOptions(request, runtime);
@@ -2617,6 +2962,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getIntervalLimitOfSLAWithOptions(request, runtime);
     }
 
+    /**
+      * You are a DMS administrator or a database administrator (DBA).
+      *
+      * @param request GetLhSpaceByNameRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetLhSpaceByNameResponse
+     */
     public GetLhSpaceByNameResponse getLhSpaceByNameWithOptions(GetLhSpaceByNameRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2645,6 +2997,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetLhSpaceByNameResponse());
     }
 
+    /**
+      * You are a DMS administrator or a database administrator (DBA).
+      *
+      * @param request GetLhSpaceByNameRequest
+      * @return GetLhSpaceByNameResponse
+     */
     public GetLhSpaceByNameResponse getLhSpaceByName(GetLhSpaceByNameRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getLhSpaceByNameWithOptions(request, runtime);
@@ -2782,6 +3140,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getOnlineDDLProgressWithOptions(request, runtime);
     }
 
+    /**
+      * Prerequisites: You are an administrator of Data Management (DMS) or a security administrator. You can call the [ListUsers](~~141938~~) or [GetUser](~~147098~~) operation to obtain your user role from the RoleIdList parameter that is returned.
+      *
+      * @param request GetOpLogRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetOpLogResponse
+     */
     public GetOpLogResponse getOpLogWithOptions(GetOpLogRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2826,6 +3191,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetOpLogResponse());
     }
 
+    /**
+      * Prerequisites: You are an administrator of Data Management (DMS) or a security administrator. You can call the [ListUsers](~~141938~~) or [GetUser](~~147098~~) operation to obtain your user role from the RoleIdList parameter that is returned.
+      *
+      * @param request GetOpLogRequest
+      * @return GetOpLogResponse
+     */
     public GetOpLogResponse getOpLog(GetOpLogRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getOpLogWithOptions(request, runtime);
@@ -2930,6 +3301,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getOwnerApplyOrderDetailWithOptions(request, runtime);
     }
 
+    /**
+      * This interface is applicable to obtaining: **Database-permission** , **Table-permissions** , **sensitive column-permission** .
+      *
+      * @param request GetPermApplyOrderDetailRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetPermApplyOrderDetailResponse
+     */
     public GetPermApplyOrderDetailResponse getPermApplyOrderDetailWithOptions(GetPermApplyOrderDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2958,6 +3336,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetPermApplyOrderDetailResponse());
     }
 
+    /**
+      * This interface is applicable to obtaining: **Database-permission** , **Table-permissions** , **sensitive column-permission** .
+      *
+      * @param request GetPermApplyOrderDetailRequest
+      * @return GetPermApplyOrderDetailResponse
+     */
     public GetPermApplyOrderDetailResponse getPermApplyOrderDetail(GetPermApplyOrderDetailRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getPermApplyOrderDetailWithOptions(request, runtime);
@@ -3033,6 +3417,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getProxyWithOptions(request, runtime);
     }
 
+    public GetProxyAccessResponse getProxyAccessWithOptions(GetProxyAccessRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.proxyAccessId)) {
+            query.put("ProxyAccessId", request.proxyAccessId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tid)) {
+            query.put("Tid", request.tid);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetProxyAccess"),
+            new TeaPair("version", "2018-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetProxyAccessResponse());
+    }
+
+    public GetProxyAccessResponse getProxyAccess(GetProxyAccessRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getProxyAccessWithOptions(request, runtime);
+    }
+
     public GetRuleNumLimitOfSLAResponse getRuleNumLimitOfSLAWithOptions(GetRuleNumLimitOfSLARequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3066,6 +3483,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getRuleNumLimitOfSLAWithOptions(request, runtime);
     }
 
+    /**
+      * For more instructions on this feature, see [SQL audit](~~60374~~) .
+      *
+      * @param request GetSQLReviewCheckResultStatusRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetSQLReviewCheckResultStatusResponse
+     */
     public GetSQLReviewCheckResultStatusResponse getSQLReviewCheckResultStatusWithOptions(GetSQLReviewCheckResultStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3094,11 +3518,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetSQLReviewCheckResultStatusResponse());
     }
 
+    /**
+      * For more instructions on this feature, see [SQL audit](~~60374~~) .
+      *
+      * @param request GetSQLReviewCheckResultStatusRequest
+      * @return GetSQLReviewCheckResultStatusResponse
+     */
     public GetSQLReviewCheckResultStatusResponse getSQLReviewCheckResultStatus(GetSQLReviewCheckResultStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getSQLReviewCheckResultStatusWithOptions(request, runtime);
     }
 
+    /**
+      * For more information about the SQL review feature, see [SQL review](https://icms.alibaba-inc.com/content/dms/doc?l=1\\&m=61777\\&n=2433364).
+      *
+      * @param request GetSQLReviewOptimizeDetailRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetSQLReviewOptimizeDetailResponse
+     */
     public GetSQLReviewOptimizeDetailResponse getSQLReviewOptimizeDetailWithOptions(GetSQLReviewOptimizeDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3127,6 +3564,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetSQLReviewOptimizeDetailResponse());
     }
 
+    /**
+      * For more information about the SQL review feature, see [SQL review](https://icms.alibaba-inc.com/content/dms/doc?l=1\\&m=61777\\&n=2433364).
+      *
+      * @param request GetSQLReviewOptimizeDetailRequest
+      * @return GetSQLReviewOptimizeDetailResponse
+     */
     public GetSQLReviewOptimizeDetailResponse getSQLReviewOptimizeDetail(GetSQLReviewOptimizeDetailRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getSQLReviewOptimizeDetailWithOptions(request, runtime);
@@ -3905,6 +4348,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listDDLPublishRecordsWithOptions(request, runtime);
     }
 
+    /**
+      * For more information about the Normal Data Modify feature, see [Change regular data](~~58419~~).
+      *
+      * @param request ListDataCorrectPreCheckDBRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListDataCorrectPreCheckDBResponse
+     */
     public ListDataCorrectPreCheckDBResponse listDataCorrectPreCheckDBWithOptions(ListDataCorrectPreCheckDBRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3941,11 +4391,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListDataCorrectPreCheckDBResponse());
     }
 
+    /**
+      * For more information about the Normal Data Modify feature, see [Change regular data](~~58419~~).
+      *
+      * @param request ListDataCorrectPreCheckDBRequest
+      * @return ListDataCorrectPreCheckDBResponse
+     */
     public ListDataCorrectPreCheckDBResponse listDataCorrectPreCheckDB(ListDataCorrectPreCheckDBRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listDataCorrectPreCheckDBWithOptions(request, runtime);
     }
 
+    /**
+      * For more information about the Normal Data Modify feature, see [Change regular data](~~58419~~).
+      *
+      * @param request ListDataCorrectPreCheckSQLRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListDataCorrectPreCheckSQLResponse
+     */
     public ListDataCorrectPreCheckSQLResponse listDataCorrectPreCheckSQLWithOptions(ListDataCorrectPreCheckSQLRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3986,6 +4449,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListDataCorrectPreCheckSQLResponse());
     }
 
+    /**
+      * For more information about the Normal Data Modify feature, see [Change regular data](~~58419~~).
+      *
+      * @param request ListDataCorrectPreCheckSQLRequest
+      * @return ListDataCorrectPreCheckSQLResponse
+     */
     public ListDataCorrectPreCheckSQLResponse listDataCorrectPreCheckSQL(ListDataCorrectPreCheckSQLRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listDataCorrectPreCheckSQLWithOptions(request, runtime);
@@ -4396,6 +4865,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listInstancesWithOptions(request, runtime);
     }
 
+    /**
+      * *   Before you call this operation, make sure that you have the access permissions on the workspace. If you do not have the access permissions on the workspace, you can contact a DMS administrator, database administrator (DBA), or workspace administrator to add you as a member of the workspace. The [AddLhMembers](~~424759~~) operation can be called to add a workspace member.
+      * *   If you are a DMS administrator or a workspace administrator, you can query the business scenarios and task flows related to a user in a workspace based on the user ID.
+      *
+      * @param request ListLhTaskFlowAndScenarioRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListLhTaskFlowAndScenarioResponse
+     */
     public ListLhTaskFlowAndScenarioResponse listLhTaskFlowAndScenarioWithOptions(ListLhTaskFlowAndScenarioRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4428,6 +4905,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListLhTaskFlowAndScenarioResponse());
     }
 
+    /**
+      * *   Before you call this operation, make sure that you have the access permissions on the workspace. If you do not have the access permissions on the workspace, you can contact a DMS administrator, database administrator (DBA), or workspace administrator to add you as a member of the workspace. The [AddLhMembers](~~424759~~) operation can be called to add a workspace member.
+      * *   If you are a DMS administrator or a workspace administrator, you can query the business scenarios and task flows related to a user in a workspace based on the user ID.
+      *
+      * @param request ListLhTaskFlowAndScenarioRequest
+      * @return ListLhTaskFlowAndScenarioResponse
+     */
     public ListLhTaskFlowAndScenarioResponse listLhTaskFlowAndScenario(ListLhTaskFlowAndScenarioRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listLhTaskFlowAndScenarioWithOptions(request, runtime);
@@ -4834,6 +5318,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listSQLExecAuditLogWithOptions(request, runtime);
     }
 
+    /**
+      * For more information about the SQL review feature, see [SQL review](~~60374~~).
+      *
+      * @param tmpReq ListSQLReviewOriginSQLRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListSQLReviewOriginSQLResponse
+     */
     public ListSQLReviewOriginSQLResponse listSQLReviewOriginSQLWithOptions(ListSQLReviewOriginSQLRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         ListSQLReviewOriginSQLShrinkRequest request = new ListSQLReviewOriginSQLShrinkRequest();
@@ -4872,6 +5363,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListSQLReviewOriginSQLResponse());
     }
 
+    /**
+      * For more information about the SQL review feature, see [SQL review](~~60374~~).
+      *
+      * @param request ListSQLReviewOriginSQLRequest
+      * @return ListSQLReviewOriginSQLResponse
+     */
     public ListSQLReviewOriginSQLResponse listSQLReviewOriginSQL(ListSQLReviewOriginSQLRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listSQLReviewOriginSQLWithOptions(request, runtime);
@@ -5254,6 +5751,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listTaskFlowCooperatorsWithOptions(request, runtime);
     }
 
+    /**
+      * This operation is used for multi-condition query. You can call this operation to query the edges of a specified task flow that meet all specified conditions.
+      *
+      * @param request ListTaskFlowEdgesByConditionRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListTaskFlowEdgesByConditionResponse
+     */
     public ListTaskFlowEdgesByConditionResponse listTaskFlowEdgesByConditionWithOptions(ListTaskFlowEdgesByConditionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5294,6 +5798,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListTaskFlowEdgesByConditionResponse());
     }
 
+    /**
+      * This operation is used for multi-condition query. You can call this operation to query the edges of a specified task flow that meet all specified conditions.
+      *
+      * @param request ListTaskFlowEdgesByConditionRequest
+      * @return ListTaskFlowEdgesByConditionResponse
+     */
     public ListTaskFlowEdgesByConditionResponse listTaskFlowEdgesByCondition(ListTaskFlowEdgesByConditionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listTaskFlowEdgesByConditionWithOptions(request, runtime);
@@ -6058,6 +6568,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.refundPayAsYouGoOrderWithOptions(request, runtime);
     }
 
+    /**
+      * Prerequisites:
+      * You are a DMS administrator or a database administrator (DBA). You can call the [ListUsers](~~141938~~) or [GetUser](~~147098~~) operation to obtain your user role from the RoleIdList parameter that is returned.
+      *
+      * @param request RegisterInstanceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return RegisterInstanceResponse
+     */
     public RegisterInstanceResponse registerInstanceWithOptions(RegisterInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6178,11 +6696,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RegisterInstanceResponse());
     }
 
+    /**
+      * Prerequisites:
+      * You are a DMS administrator or a database administrator (DBA). You can call the [ListUsers](~~141938~~) or [GetUser](~~147098~~) operation to obtain your user role from the RoleIdList parameter that is returned.
+      *
+      * @param request RegisterInstanceRequest
+      * @return RegisterInstanceResponse
+     */
     public RegisterInstanceResponse registerInstance(RegisterInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.registerInstanceWithOptions(request, runtime);
     }
 
+    /**
+      * If you are an **administrator** in Data Management (DMS), you can call this operation to register a user for your enterprise. To view users that are assigned the administrator role, perform the following steps: Log on to the DMS console. In the top navigation bar, click O&M. In the left-side navigation pane, click User.
+      *
+      * @param request RegisterUserRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return RegisterUserResponse
+     */
     public RegisterUserResponse registerUserWithOptions(RegisterUserRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6223,6 +6755,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RegisterUserResponse());
     }
 
+    /**
+      * If you are an **administrator** in Data Management (DMS), you can call this operation to register a user for your enterprise. To view users that are assigned the administrator role, perform the following steps: Log on to the DMS console. In the top navigation bar, click O&M. In the left-side navigation pane, click User.
+      *
+      * @param request RegisterUserRequest
+      * @return RegisterUserResponse
+     */
     public RegisterUserResponse registerUser(RegisterUserRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.registerUserWithOptions(request, runtime);
@@ -6781,6 +7319,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.syncInstanceMetaWithOptions(request, runtime);
     }
 
+    /**
+      * Before you call the UpdateInstance operation, call the [GetInstance](~~141567~~) or [ListInstances](~~141936~~) operation to obtain the complete information about the instance.
+      *
+      * @param request UpdateInstanceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateInstanceResponse
+     */
     public UpdateInstanceResponse updateInstanceWithOptions(UpdateInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6901,6 +7446,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateInstanceResponse());
     }
 
+    /**
+      * Before you call the UpdateInstance operation, call the [GetInstance](~~141567~~) or [ListInstances](~~141936~~) operation to obtain the complete information about the instance.
+      *
+      * @param request UpdateInstanceRequest
+      * @return UpdateInstanceResponse
+     */
     public UpdateInstanceResponse updateInstance(UpdateInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateInstanceWithOptions(request, runtime);
@@ -7027,6 +7578,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateTaskConfigWithOptions(request, runtime);
     }
 
+    /**
+      * You can call this operation to modify node configurations.
+      *
+      * @param request UpdateTaskContentRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateTaskContentResponse
+     */
     public UpdateTaskContentResponse updateTaskContentWithOptions(UpdateTaskContentRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -7059,6 +7617,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateTaskContentResponse());
     }
 
+    /**
+      * You can call this operation to modify node configurations.
+      *
+      * @param request UpdateTaskContentRequest
+      * @return UpdateTaskContentResponse
+     */
     public UpdateTaskContentResponse updateTaskContent(UpdateTaskContentRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateTaskContentWithOptions(request, runtime);
@@ -7150,6 +7714,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateTaskFlowCooperatorsWithOptions(request, runtime);
     }
 
+    /**
+      * ## Usage notes
+      * The edges can be updated only when the following conditions are met:
+      * 1\\. The specified edge exists in the Directed Acyclic Graph (DAG) of the task flow. The DAG is identified by DagId.
+      * 2\\. The end points of the specified edge exist in the DAG of the task flow. The DAG is identified by DagId.
+      * 3\\. After the update, no loop appears in the DAG.
+      *
+      * @param tmpReq UpdateTaskFlowEdgesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateTaskFlowEdgesResponse
+     */
     public UpdateTaskFlowEdgesResponse updateTaskFlowEdgesWithOptions(UpdateTaskFlowEdgesRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         UpdateTaskFlowEdgesShrinkRequest request = new UpdateTaskFlowEdgesShrinkRequest();
@@ -7188,6 +7763,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateTaskFlowEdgesResponse());
     }
 
+    /**
+      * ## Usage notes
+      * The edges can be updated only when the following conditions are met:
+      * 1\\. The specified edge exists in the Directed Acyclic Graph (DAG) of the task flow. The DAG is identified by DagId.
+      * 2\\. The end points of the specified edge exist in the DAG of the task flow. The DAG is identified by DagId.
+      * 3\\. After the update, no loop appears in the DAG.
+      *
+      * @param request UpdateTaskFlowEdgesRequest
+      * @return UpdateTaskFlowEdgesResponse
+     */
     public UpdateTaskFlowEdgesResponse updateTaskFlowEdges(UpdateTaskFlowEdgesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateTaskFlowEdgesWithOptions(request, runtime);
@@ -7279,6 +7864,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateTaskFlowNotificationWithOptions(request, runtime);
     }
 
+    /**
+      * Note: The new owner of the task flow must belong to the same tenant as the previous owner.
+      *
+      * @param request UpdateTaskFlowOwnerRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateTaskFlowOwnerResponse
+     */
     public UpdateTaskFlowOwnerResponse updateTaskFlowOwnerWithOptions(UpdateTaskFlowOwnerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -7311,11 +7903,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateTaskFlowOwnerResponse());
     }
 
+    /**
+      * Note: The new owner of the task flow must belong to the same tenant as the previous owner.
+      *
+      * @param request UpdateTaskFlowOwnerRequest
+      * @return UpdateTaskFlowOwnerResponse
+     */
     public UpdateTaskFlowOwnerResponse updateTaskFlowOwner(UpdateTaskFlowOwnerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateTaskFlowOwnerWithOptions(request, runtime);
     }
 
+    /**
+      * You can call this operation to perform a full update. For incremental updates, see AddTaskFlowEdges, UpdateTaskFlowEdges, and DeleteTaskFlowEdgesByMultiCondition.
+      *
+      * @param tmpReq UpdateTaskFlowRelationsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateTaskFlowRelationsResponse
+     */
     public UpdateTaskFlowRelationsResponse updateTaskFlowRelationsWithOptions(UpdateTaskFlowRelationsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         UpdateTaskFlowRelationsShrinkRequest request = new UpdateTaskFlowRelationsShrinkRequest();
@@ -7354,6 +7959,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateTaskFlowRelationsResponse());
     }
 
+    /**
+      * You can call this operation to perform a full update. For incremental updates, see AddTaskFlowEdges, UpdateTaskFlowEdges, and DeleteTaskFlowEdgesByMultiCondition.
+      *
+      * @param request UpdateTaskFlowRelationsRequest
+      * @return UpdateTaskFlowRelationsResponse
+     */
     public UpdateTaskFlowRelationsResponse updateTaskFlowRelations(UpdateTaskFlowRelationsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateTaskFlowRelationsWithOptions(request, runtime);
@@ -7498,6 +8109,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateTaskNameWithOptions(request, runtime);
     }
 
+    /**
+      * ## Usage notes
+      * Only nodes of single-instance SQL assignment, script code, and ECS remote command have output variables.
+      *
+      * @param request UpdateTaskOutputRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateTaskOutputResponse
+     */
     public UpdateTaskOutputResponse updateTaskOutputWithOptions(UpdateTaskOutputRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -7530,6 +8149,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateTaskOutputResponse());
     }
 
+    /**
+      * ## Usage notes
+      * Only nodes of single-instance SQL assignment, script code, and ECS remote command have output variables.
+      *
+      * @param request UpdateTaskOutputRequest
+      * @return UpdateTaskOutputResponse
+     */
     public UpdateTaskOutputResponse updateTaskOutput(UpdateTaskOutputRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateTaskOutputWithOptions(request, runtime);

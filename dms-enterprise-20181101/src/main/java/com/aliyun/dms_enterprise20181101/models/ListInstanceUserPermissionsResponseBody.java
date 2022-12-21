@@ -4,21 +4,30 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListInstanceUserPermissionsResponseBody extends TeaModel {
+    // The error code.
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    // The error message.
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request is successful. Valid values:
+    // 
+    // - true: The request is successful.
+    // - false: The request fails.
     @NameInMap("Success")
     public Boolean success;
 
+    // The total number of returned entries.
     @NameInMap("TotalCount")
     public Long totalCount;
 
+    // The permissions of the user on the instance.
     @NameInMap("UserPermissions")
     public ListInstanceUserPermissionsResponseBodyUserPermissions userPermissions;
 
@@ -76,21 +85,30 @@ public class ListInstanceUserPermissionsResponseBody extends TeaModel {
     }
 
     public static class ListInstanceUserPermissionsResponseBodyUserPermissionsUserPermissionPermDetailsPermDetail extends TeaModel {
+        // The time when the permissions were granted.
         @NameInMap("CreateDate")
         public String createDate;
 
+        // The time when the permissions expire.
         @NameInMap("ExpireDate")
         public String expireDate;
 
+        // This parameter is reserved.
         @NameInMap("ExtraData")
         public String extraData;
 
+        // The user who grants the permissions.
         @NameInMap("OriginFrom")
         public String originFrom;
 
+        // The type of the permissions. Valid values:
+        // 
+        // *   LOGIN: the logon permissions
+        // *   PERF: the query permissions on the instance
         @NameInMap("PermType")
         public String permType;
 
+        // The ID of the authorization record.
         @NameInMap("UserAccessId")
         public String userAccessId;
 
@@ -169,15 +187,19 @@ public class ListInstanceUserPermissionsResponseBody extends TeaModel {
     }
 
     public static class ListInstanceUserPermissionsResponseBodyUserPermissionsUserPermission extends TeaModel {
+        // The ID of the instance.
         @NameInMap("InstanceId")
         public String instanceId;
 
+        // The details of permissions.
         @NameInMap("PermDetails")
         public ListInstanceUserPermissionsResponseBodyUserPermissionsUserPermissionPermDetails permDetails;
 
+        // The ID of the user.
         @NameInMap("UserId")
         public String userId;
 
+        // The nickname of the user.
         @NameInMap("UserNickName")
         public String userNickName;
 

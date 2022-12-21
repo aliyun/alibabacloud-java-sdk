@@ -4,18 +4,25 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetDatabaseRequest extends TeaModel {
+    // The endpoint that is used to connect to the database.
     @NameInMap("Host")
     public String host;
 
+    // The port that is used to connect to the database.
     @NameInMap("Port")
     public Integer port;
 
+    // The name of the database.
     @NameInMap("SchemaName")
     public String schemaName;
 
+    // The system identifier (SID) of the database.
+    // 
+    // >  The SID uniquely identifies an Oracle database. After a database is created, a SID is generated for the database.
     @NameInMap("Sid")
     public String sid;
 
+    // The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the ID of the tenant.
     @NameInMap("Tid")
     public Long tid;
 

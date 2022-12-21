@@ -4,18 +4,26 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListTaskFlowResponseBody extends TeaModel {
+    // The error code.
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    // The error message.
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // *   **true**: The request was successful.
+    // *   **false**: The request failed.
     @NameInMap("Success")
     public Boolean success;
 
+    // The information about the task flows returned.
     @NameInMap("TaskFlowList")
     public ListTaskFlowResponseBodyTaskFlowList taskFlowList;
 
@@ -65,27 +73,43 @@ public class ListTaskFlowResponseBody extends TeaModel {
     }
 
     public static class ListTaskFlowResponseBodyTaskFlowListTaskFlow extends TeaModel {
+        // The ID of the user who creates the task flow.
         @NameInMap("CreatorId")
         public String creatorId;
 
+        // The name of the user who creates the task flow.
         @NameInMap("CreatorNickName")
         public String creatorNickName;
 
+        // The name of the task flow owner.
         @NameInMap("DagOwnerNickName")
         public String dagOwnerNickName;
 
+        // The ID of the latest deployment record.
         @NameInMap("DeployId")
         public Long deployId;
 
+        // The ID of the task flow.
         @NameInMap("Id")
         public Long id;
 
+        // The status of the latest execution. Valid values:
+        // 
+        // *   **0**: invalid.
+        // *   **1**: scheduling disabled.
+        // *   **2**: waiting to be scheduled.
         @NameInMap("LatestInstanceStatus")
         public Integer latestInstanceStatus;
 
+        // The time when the latest execution record was generated.
         @NameInMap("LatestInstanceTime")
         public String latestInstanceTime;
 
+        // The status of the task flow. Valid values:
+        // 
+        // *   **0**: The task flow is invalid.
+        // *   **1**: Scheduling is disabled for the task flow.
+        // *   **2**: The task flow is waiting to be scheduled.
         @NameInMap("Status")
         public Integer status;
 

@@ -4,24 +4,33 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListDesensitizationRuleRequest extends TeaModel {
+    // The type of the masking algorithm.
     @NameInMap("FuncType")
     public String funcType;
 
+    // The number of the page to return.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries to return on each page. The maximum value is 100.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The ID of the masking rule.
     @NameInMap("RuleId")
     public Integer ruleId;
 
+    // The name of the masking rule.
     @NameInMap("RuleName")
     public String ruleName;
 
+    // The algorithm used for masking.
     @NameInMap("RuleType")
     public String ruleType;
 
+    // The ID of the tenant.
+    // 
+    // >  To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [View information about the current tenant](~~181330~~).
     @NameInMap("Tid")
     public Long tid;
 

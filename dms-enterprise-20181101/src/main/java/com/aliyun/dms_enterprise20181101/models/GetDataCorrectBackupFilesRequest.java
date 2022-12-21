@@ -4,12 +4,15 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetDataCorrectBackupFilesRequest extends TeaModel {
+    // The parameters that are required to perform the operation. You do not need to specify this parameter.
     @NameInMap("ActionDetail")
     public java.util.Map<String, ?> actionDetail;
 
+    // The ID of the ticket. You can call the [ListOrders](~~144643~~) operation to obtain the ticket ID.
     @NameInMap("OrderId")
     public Long orderId;
 
+    // The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
     @NameInMap("Tid")
     public Long tid;
 

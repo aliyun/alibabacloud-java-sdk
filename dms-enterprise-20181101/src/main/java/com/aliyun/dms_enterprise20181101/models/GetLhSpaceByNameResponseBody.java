@@ -4,18 +4,26 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetLhSpaceByNameResponseBody extends TeaModel {
+    // The error code returned if the request fails.
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    // The error message returned if the request fails.
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    // The workspace for data warehouse development.
     @NameInMap("LakehouseSpace")
     public GetLhSpaceByNameResponseBodyLakehouseSpace lakehouseSpace;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request is successful. Valid values:
+    // 
+    // *   **true**: The request is successful.
+    // *   **false**: The request fails.
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,36 +73,59 @@ public class GetLhSpaceByNameResponseBody extends TeaModel {
     }
 
     public static class GetLhSpaceByNameResponseBodyLakehouseSpace extends TeaModel {
+        // The ID of the user who creates the workspace.
         @NameInMap("CreatorId")
         public String creatorId;
 
+        // The description of the workspace.
         @NameInMap("Description")
         public String description;
 
+        // The ID of the development database.
         @NameInMap("DevDbId")
         public Integer devDbId;
 
+        // The type of the database. Valid values:
+        // 
+        // *   **14**: AnalyticDB for MySQL
+        // *   **18**: AnalyticDB for PostgreSQL
         @NameInMap("DwDbType")
         public String dwDbType;
 
+        // The ID of the workspace.
         @NameInMap("Id")
         public Long id;
 
+        // Indicates whether the workspace is deleted. Valid values:
+        // 
+        // *   **true**: The workspace is deleted.
+        // *   **false**: The workspace is not deleted.
         @NameInMap("IsDeleted")
         public Boolean isDeleted;
 
+        // The mode in which the workspace runs. Valid values:
+        // 
+        // *   **0**: basic mode
+        // *   **1**: standard mode
         @NameInMap("Mode")
         public Integer mode;
 
+        // The ID of the production database.
         @NameInMap("ProdDbId")
         public Integer prodDbId;
 
+        // The configuration of the workspace. Valid values:
+        // 
+        // *   **skipManualRunCheck**: No security rule check is required in the trial run phase.
+        // *   **skipPublishApprove**: No approval is required for publishing and O\&M.
         @NameInMap("SpaceConfig")
         public String spaceConfig;
 
+        // The name of the workspace.
         @NameInMap("SpaceName")
         public String spaceName;
 
+        // The ID of the tenant to which the workspace belongs.
         @NameInMap("TenantId")
         public String tenantId;
 

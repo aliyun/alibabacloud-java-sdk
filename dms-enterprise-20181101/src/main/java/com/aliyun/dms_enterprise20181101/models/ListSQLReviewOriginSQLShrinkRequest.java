@@ -4,12 +4,15 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListSQLReviewOriginSQLShrinkRequest extends TeaModel {
+    // The parameters that are used to filter SQL statements involved in the ticket.
     @NameInMap("OrderActionDetail")
     public String orderActionDetailShrink;
 
+    // The ID of the ticket for the SQL review. You can call the [CreateSQLReviewOrder](~~257777~~) operation to query the ID of the ticket.
     @NameInMap("OrderId")
     public Long orderId;
 
+    // The ID of the tenant. You can call the [GetUserActiveTenant](https://www.alibabacloud.com/help/en/data-management-service/latest/getuseractivetenant) or [ListUserTenants](https://www.alibabacloud.com/help/en/data-management-service/latest/listusertenants) operation to query the ID of the tenant.
     @NameInMap("Tid")
     public Long tid;
 

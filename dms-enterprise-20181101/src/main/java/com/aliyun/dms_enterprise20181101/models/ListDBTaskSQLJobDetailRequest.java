@@ -4,15 +4,19 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListDBTaskSQLJobDetailRequest extends TeaModel {
+    // The ID of the SQL task. You can call the [ListDBTaskSQLJob](~~207049~~) operation to query the SQL task ID.
     @NameInMap("JobId")
     public Long jobId;
 
+    // The number of the page to return.
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    // The number of entries to return on each page.
     @NameInMap("PageSize")
     public Long pageSize;
 
+    // The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the tenant ID.
     @NameInMap("Tid")
     public Long tid;
 

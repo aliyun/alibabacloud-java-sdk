@@ -4,27 +4,44 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class SearchDatabaseRequest extends TeaModel {
+    // The type of the database. For more information about the valid values of this parameter, see [DbType parameter](~~198106~~).
     @NameInMap("DbType")
     public String dbType;
 
+    // The type of the environment to which the database belongs. For more information, see [Change the environment type of an instance](~~163309~~).
     @NameInMap("EnvType")
     public String envType;
 
+    // The number of the page to return.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries to return on each page.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The keyword that is used to search for databases.
     @NameInMap("SearchKey")
     public String searchKey;
 
+    // The query range based on permissions. Valid values:
+    // 
+    // *   **HAS_PERMSSION**: searches for databases on which the current user has permissions.
+    // *   **OWNER**: searches for databases owned by the current user.
+    // *   **MY_FOCUS**: searches for databases that the current user follows.
+    // *   **UNKNOWN**: searches for all databases.
     @NameInMap("SearchRange")
     public String searchRange;
 
+    // The category of the database. Valid values:
+    // 
+    // *   **DB**: single database or logical database.
+    // *   **SINGLE_DB**: single database.
+    // *   **LOGIC_DB**: logical database.
     @NameInMap("SearchTarget")
     public String searchTarget;
 
+    // The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to obtain the tenant ID.
     @NameInMap("Tid")
     public Long tid;
 

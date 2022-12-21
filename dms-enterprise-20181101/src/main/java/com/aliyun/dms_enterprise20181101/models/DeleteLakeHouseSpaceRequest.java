@@ -4,9 +4,11 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class DeleteLakeHouseSpaceRequest extends TeaModel {
+    // The ID of the workspace. You can call the [GetLhSpaceByName](~~424379~~) operation to obtain the workspace ID.
     @NameInMap("SpaceId")
     public Long spaceId;
 
+    // The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
     @NameInMap("Tid")
     public Long tid;
 

@@ -4,18 +4,23 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListDataCorrectPreCheckDBResponseBody extends TeaModel {
+    // The error code returned.
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    // The error message returned.
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    // The information about the databases that are involved in the precheck.
     @NameInMap("PreCheckDBList")
     public java.util.List<ListDataCorrectPreCheckDBResponseBodyPreCheckDBList> preCheckDBList;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request is successful.
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,12 +70,15 @@ public class ListDataCorrectPreCheckDBResponseBody extends TeaModel {
     }
 
     public static class ListDataCorrectPreCheckDBResponseBodyPreCheckDBList extends TeaModel {
+        // The ID of the database.
         @NameInMap("DbId")
         public Long dbId;
 
+        // The name of the database.
         @NameInMap("SearchName")
         public String searchName;
 
+        // The number of SQL statements.
         @NameInMap("SqlNum")
         public Long sqlNum;
 

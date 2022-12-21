@@ -4,18 +4,26 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListDefaultSLARulesResponseBody extends TeaModel {
+    // The error code returned if the request failed.
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    // The error message returned if the request failed.
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    // The ID of the request. You can use the ID to query logs and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The list of SLA rules.
     @NameInMap("SLARuleList")
     public ListDefaultSLARulesResponseBodySLARuleList SLARuleList;
 
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // *   **true**: The request was successful.
+    // *   **false**: The request failed.
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,18 +73,26 @@ public class ListDefaultSLARulesResponseBody extends TeaModel {
     }
 
     public static class ListDefaultSLARulesResponseBodySLARuleListSLARule extends TeaModel {
+        // The ID of the task flow.
         @NameInMap("DagId")
         public Long dagId;
 
+        // The ID of the SLA rule.
         @NameInMap("Id")
         public Long id;
 
+        // The timeout period. Unit: minutes.
         @NameInMap("IntervalMinutes")
         public Integer intervalMinutes;
 
+        // The ID of the task node.
         @NameInMap("NodeId")
         public Long nodeId;
 
+        // The type of the rule. Valid values:
+        // 
+        // *   **0**: an SLA rule for a task flow
+        // *   **1**: an SLA rule for a task node
         @NameInMap("RuleType")
         public Integer ruleType;
 

@@ -4,12 +4,15 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListLhTaskFlowAndScenarioRequest extends TeaModel {
+    // The ID of the workspace. You can call the [GetLhSpaceByName](~~424379~~) operation to obtain the workspace ID.
     @NameInMap("SpaceId")
     public Long spaceId;
 
+    // The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
     @NameInMap("Tid")
     public Long tid;
 
+    // The ID of the user. You can call the [ListUsers](~~141938~~) or [GetUser](~~147098~~) operation to obtain the user ID.
     @NameInMap("UserId")
     public Long userId;
 

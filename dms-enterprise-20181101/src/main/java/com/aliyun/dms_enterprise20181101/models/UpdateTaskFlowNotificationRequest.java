@@ -4,18 +4,25 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class UpdateTaskFlowNotificationRequest extends TeaModel {
+    // The unique ID of the task flow. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to query the task flow ID.
     @NameInMap("DagId")
     public Long dagId;
 
+    // Specifies whether to enable notifications for failed task flows. Notifications are disabled by default. You can enable notifications based on your business requirements.
     @NameInMap("DagNotificationFail")
     public Boolean dagNotificationFail;
 
+    // Specifies whether to enable SLA global notifications for task flows. Notifications are disabled by default. You can enable notifications based on your business requirements.
     @NameInMap("DagNotificationSla")
     public Boolean dagNotificationSla;
 
+    // Specifies whether to enable notifications for successful task flows. Notifications are disabled by default. You can enable notifications based on your business requirements.
     @NameInMap("DagNotificationSuccess")
     public Boolean dagNotificationSuccess;
 
+    // The ID of the tenant.
+    // 
+    // >  To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).
     @NameInMap("Tid")
     public Long tid;
 

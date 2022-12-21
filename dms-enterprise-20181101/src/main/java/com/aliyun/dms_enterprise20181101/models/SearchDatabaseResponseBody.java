@@ -4,21 +4,30 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class SearchDatabaseResponseBody extends TeaModel {
+    // The error code returned.
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    // The error message returned.
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The information about the databases.
     @NameInMap("SearchDatabaseList")
     public SearchDatabaseResponseBodySearchDatabaseList searchDatabaseList;
 
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // - **true**: The request was successful.
+    // - **false**: The request failed.
     @NameInMap("Success")
     public Boolean success;
 
+    // The total number of entries returned.
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -114,48 +123,66 @@ public class SearchDatabaseResponseBody extends TeaModel {
     }
 
     public static class SearchDatabaseResponseBodySearchDatabaseListSearchDatabase extends TeaModel {
+        // The alias of the database.
         @NameInMap("Alias")
         public String alias;
 
+        // The ID of the database.
         @NameInMap("DatabaseId")
         public String databaseId;
 
+        // The name of the data link for cross-database queries.
         @NameInMap("DatalinkName")
         public String datalinkName;
 
+        // The type of the database.
         @NameInMap("DbType")
         public String dbType;
 
+        // The ID of the user who assumes the database administrator (DBA) role.
         @NameInMap("DbaId")
         public String dbaId;
 
+        // The encoding method of the database.
         @NameInMap("Encoding")
         public String encoding;
 
+        // The type of the environment to which the database belongs. For more information, see [Change the environment type of an instance](~~163309~~).
         @NameInMap("EnvType")
         public String envType;
 
+        // The endpoint of the instance in which the database resides.
         @NameInMap("Host")
         public String host;
 
+        // Indicates whether the database is a logical database. Valid values:
+        // 
+        // *   **true**: The database is a logical database.
+        // *   **false**: The database is not a logical database.
         @NameInMap("Logic")
         public Boolean logic;
 
+        // The IDs of the owners of the database.
         @NameInMap("OwnerIdList")
         public SearchDatabaseResponseBodySearchDatabaseListSearchDatabaseOwnerIdList ownerIdList;
 
+        // The nicknames of the database owners.
         @NameInMap("OwnerNameList")
         public SearchDatabaseResponseBodySearchDatabaseListSearchDatabaseOwnerNameList ownerNameList;
 
+        // The port number of the instance in which the database resides.
         @NameInMap("Port")
         public Integer port;
 
+        // The name of the database.
         @NameInMap("SchemaName")
         public String schemaName;
 
+        // The name that is used to search for the database.
         @NameInMap("SearchName")
         public String searchName;
 
+        // The system ID (Sid) of the instance in which the database resides.
         @NameInMap("Sid")
         public String sid;
 

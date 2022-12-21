@@ -4,21 +4,30 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListTablesResponseBody extends TeaModel {
+    // The error code that is returned if the request fails.
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    // The error message returned if the request fails.
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // - **true**: The request was successful.
+    // - **false**: The request failed.
     @NameInMap("Success")
     public Boolean success;
 
+    // The details of the tables.
     @NameInMap("TableList")
     public ListTablesResponseBodyTableList tableList;
 
+    // The total number of tables that meet the query conditions.
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -114,42 +123,55 @@ public class ListTablesResponseBody extends TeaModel {
     }
 
     public static class ListTablesResponseBodyTableListTable extends TeaModel {
+        // The ID of the physical database.
         @NameInMap("DatabaseId")
         public String databaseId;
 
+        // The description of the table.
         @NameInMap("Description")
         public String description;
 
+        // The encoding format of the table.
         @NameInMap("Encoding")
         public String encoding;
 
+        // The engine of the table.
         @NameInMap("Engine")
         public String engine;
 
+        // The number of rows in the table. This is a statistical value and does not indicate the actual number of rows.
         @NameInMap("NumRows")
         public Long numRows;
 
+        // The IDs of the owners of the table.
         @NameInMap("OwnerIdList")
         public ListTablesResponseBodyTableListTableOwnerIdList ownerIdList;
 
+        // The nicknames of the owners of the table.
         @NameInMap("OwnerNameList")
         public ListTablesResponseBodyTableListTableOwnerNameList ownerNameList;
 
+        // The storage space that is occupied by the table. This is a statistical value and does not indicate the accurate storage space. Unit: MB.
         @NameInMap("StoreCapacity")
         public Long storeCapacity;
 
+        // The GUID of the table in DMS.
         @NameInMap("TableGuid")
         public String tableGuid;
 
+        // The ID of the table.
         @NameInMap("TableId")
         public String tableId;
 
+        // The name of the table.
         @NameInMap("TableName")
         public String tableName;
 
+        // The database in which the table resides.
         @NameInMap("TableSchemaName")
         public String tableSchemaName;
 
+        // The type of the table. Default value: NORMAL.
         @NameInMap("TableType")
         public String tableType;
 
