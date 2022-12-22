@@ -4,24 +4,39 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class CreateVpcFirewallCenConfigureRequest extends TeaModel {
+    // The ID of the CEN instance.
     @NameInMap("CenId")
     public String cenId;
 
+    // Specifies whether to enable the VPC firewall. Valid values:
+    // 
+    // *   **open**: After you create the VPC firewall, the VPC firewall is automatically enabled. This is the default value.
+    // *   **close**: After you create the VPC firewall, the VPC firewall is disabled. You can call the [ModifyVpcFirewallCenSwitchStatus](~~345780~~) operation to manually enable the VPC firewall.
     @NameInMap("FirewallSwitch")
     public String firewallSwitch;
 
+    // The language of the content within the request and response. Valid values:
+    // 
+    // *   **zh**: Chinese (default)
+    // *   **en**: English
     @NameInMap("Lang")
     public String lang;
 
+    // The UID of the member that is managed by your Alibaba Cloud account.
     @NameInMap("MemberUid")
     public String memberUid;
 
+    // The ID of the VPC for which you want to create the VPC firewall.
     @NameInMap("NetworkInstanceId")
     public String networkInstanceId;
 
+    // The instance name of the VPC firewall.
     @NameInMap("VpcFirewallName")
     public String vpcFirewallName;
 
+    // The ID of the region to which the VPC belongs.
+    // 
+    // >  For more information about the regions, see [Supported regions](~~195657~~).
     @NameInMap("VpcRegion")
     public String vpcRegion;
 

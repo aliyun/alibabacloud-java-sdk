@@ -4,21 +4,27 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeInvadeEventListResponseBody extends TeaModel {
+    // An array that consists of breach awareness events.
     @NameInMap("EventList")
     public java.util.List<DescribeInvadeEventListResponseBodyEventList> eventList;
 
+    // The ratio of high-risk events.
     @NameInMap("HighLevelPercent")
     public Integer highLevelPercent;
 
+    // The ratio of low-risk events.
     @NameInMap("LowLevelPercent")
     public Integer lowLevelPercent;
 
+    // The ratio of medium-risk events.
     @NameInMap("MiddleLevelPercent")
     public Integer middleLevelPercent;
 
+    // The pagination information.
     @NameInMap("PageInfo")
     public DescribeInvadeEventListResponseBodyPageInfo pageInfo;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -76,51 +82,104 @@ public class DescribeInvadeEventListResponseBody extends TeaModel {
     }
 
     public static class DescribeInvadeEventListResponseBodyEventList extends TeaModel {
+        // The ID of the affected asset.
         @NameInMap("AssetsInstanceId")
         public String assetsInstanceId;
 
+        // The name of the affected asset.
         @NameInMap("AssetsInstanceName")
         public String assetsInstanceName;
 
+        // The type of the affected asset. Valid values:
+        // 
+        // * **BastionHostIP**: the egress IP address of a bastion host
+        // * **BastionHostIngressIP**: the ingress IP address of a bastion host
+        // * **EcsEIP**: the elastic IP address (EIP) of an Elastic Compute Service (ECS) instance
+        // * **EcsPublicIP**: the public IP address of an ECS instance
+        // * **EIP**: the EIP
+        // * **EniEIP**: the EIP of an elastic network interface (ENI)
+        // * **NatEIP**: the EIP of a NAT gateway
+        // * **SlbEIP**: the EIP of a Server Load Balancer (SLB) instance
+        // * **SlbPublicIP**: the public IP address of an SLB instance
+        // * **NatPublicIP**: the public IP address of a NAT gateway
+        // * **HAVIP**: the high-availability virtual IP address (HAVIP)
         @NameInMap("AssetsType")
         public String assetsType;
 
+        // The ID of the breach awareness event.
         @NameInMap("EventKey")
         public String eventKey;
 
+        // The name of the breach awareness event.
         @NameInMap("EventName")
         public String eventName;
 
+        // The type of the breach awareness event. Valid values:
+        // 
+        // *   **IPS**: intrusion prevention event
+        // *   **offline**: disconnection event
         @NameInMap("EventSrc")
         public String eventSrc;
 
+        // The UUID of the breach awareness event.
         @NameInMap("EventUuid")
         public String eventUuid;
 
+        // The time when the breach awareness event first occurred. The value is a UNIX timestamp. Unit: seconds.
         @NameInMap("FirstTime")
         public Integer firstTime;
 
+        // Indicates whether the breach awareness event is ignored. Valid values:
+        // 
+        // *   **true**: The breach awareness event is ignored.
+        // *   **false**: The breach awareness event is not ignored.
         @NameInMap("IsIgnore")
         public Boolean isIgnore;
 
+        // The time when the breach awareness event last occurred. The value is a UNIX timestamp. Unit: seconds.
         @NameInMap("LastTime")
         public Integer lastTime;
 
+        // The ID of the member.
         @NameInMap("MemberUid")
         public String memberUid;
 
+        // The private IP address of the affected asset.
         @NameInMap("PrivateIP")
         public String privateIP;
 
+        // The handling status of the breach awareness event. Valid values:
+        // 
+        // *   **0**: unhandled
+        // *   **20**: handled
         @NameInMap("ProcessStatus")
         public Integer processStatus;
 
+        // The public IP address of the affected asset.
         @NameInMap("PublicIP")
         public String publicIP;
 
+        // The type of the affected asset. Valid values:
+        // 
+        // * **BastionHostIP**: the egress IP address of a bastion host
+        // * **BastionHostIngressIP**: the ingress IP address of a bastion host
+        // * **EcsEIP**: the EIP of an ECS instance
+        // * **EcsPublicIP**: the public IP address of an ECS instance
+        // * **EIP**: the EIP
+        // * **EniEIP**: the EIP of an ENI
+        // * **NatEIP**: the EIP of a NAT gateway
+        // * **SlbEIP**: the EIP of an SLB instance
+        // * **SlbPublicIP**: the public IP address of an SLB instance
+        // * **NatPublicIP**: the public IP address of a NAT gateway
+        // * **HAVIP**: the HAVIP
         @NameInMap("PublicIpType")
         public String publicIpType;
 
+        // The risk level. Valid values:
+        // 
+        // *   **1**: low
+        // *   **2**: medium
+        // *   **3**: high
         @NameInMap("RiskLevel")
         public Integer riskLevel;
 
@@ -260,12 +319,15 @@ public class DescribeInvadeEventListResponseBody extends TeaModel {
     }
 
     public static class DescribeInvadeEventListResponseBodyPageInfo extends TeaModel {
+        // The page number of the returned page.
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        // The number of entries returned per page.
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        // The total number of breach awareness events.
         @NameInMap("TotalCount")
         public Integer totalCount;
 

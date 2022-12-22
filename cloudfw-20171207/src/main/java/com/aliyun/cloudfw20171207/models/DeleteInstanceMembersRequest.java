@@ -4,6 +4,7 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DeleteInstanceMembersRequest extends TeaModel {
+    // The unique identifiers (UID) of members that you want to remove from Cloud Firewall.
     @NameInMap("MemberUids")
     public java.util.List<Long> memberUids;
 

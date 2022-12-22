@@ -4,12 +4,18 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class PutDisableAllFwSwitchRequest extends TeaModel {
+    // The instance ID of your Cloud Firewall.
     @NameInMap("InstanceId")
     public String instanceId;
 
+    // The natural language of the request and response. Valid values:
+    // 
+    // *   **zh**: Chinese (default)
+    // *   **en**: English
     @NameInMap("Lang")
     public String lang;
 
+    // The source IP address of the request.
     @NameInMap("SourceIp")
     public String sourceIp;
 

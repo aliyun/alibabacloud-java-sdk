@@ -4,12 +4,18 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserAssetIPTrafficInfoRequest extends TeaModel {
+    // The IP address of the asset.
     @NameInMap("AssetIP")
     public String assetIP;
 
+    // The language of the content within the response. Valid values:
+    // 
+    // *   **zh**: Chinese (default)
+    // *   **en**: English
     @NameInMap("Lang")
     public String lang;
 
+    // The point in time to query. The value is a UNIX timestamp. Unit: seconds.
     @NameInMap("TrafficTime")
     public String trafficTime;
 

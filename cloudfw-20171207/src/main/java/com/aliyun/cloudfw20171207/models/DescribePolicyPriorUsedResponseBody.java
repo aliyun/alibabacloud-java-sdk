@@ -4,12 +4,19 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribePolicyPriorUsedResponseBody extends TeaModel {
+    // The lowest priority of existing access control policies.
+    // 
+    // >  The value -1 indicates the lowest priority.
     @NameInMap("End")
     public Integer end;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The highest priority of existing access control policies.
+    // 
+    // >  The value 0 indicates the highest priority.
     @NameInMap("Start")
     public Integer start;
 

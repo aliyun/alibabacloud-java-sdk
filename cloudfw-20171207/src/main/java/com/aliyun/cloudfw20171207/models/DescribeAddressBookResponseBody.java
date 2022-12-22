@@ -4,18 +4,23 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeAddressBookResponseBody extends TeaModel {
+    // The information about the address book.
     @NameInMap("Acls")
     public java.util.List<DescribeAddressBookResponseBodyAcls> acls;
 
+    // The page number of the current page.
     @NameInMap("PageNo")
     public String pageNo;
 
+    // The number of entries returned per page.
     @NameInMap("PageSize")
     public String pageSize;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The total number of the returned address books.
     @NameInMap("TotalCount")
     public String totalCount;
 
@@ -65,9 +70,11 @@ public class DescribeAddressBookResponseBody extends TeaModel {
     }
 
     public static class DescribeAddressBookResponseBodyAclsTagList extends TeaModel {
+        // The key of the ECS tag.
         @NameInMap("TagKey")
         public String tagKey;
 
+        // The value of the ECS tag.
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -95,33 +102,56 @@ public class DescribeAddressBookResponseBody extends TeaModel {
     }
 
     public static class DescribeAddressBookResponseBodyAcls extends TeaModel {
+        // The addresses in the address book.
         @NameInMap("AddressList")
         public java.util.List<String> addressList;
 
+        // The number of addresses in the address book.
         @NameInMap("AddressListCount")
         public Integer addressListCount;
 
+        // Indicates whether the public IP addresses of ECS instances are automatically added to the address book if the instances match the specified tags. The setting takes effect on both newly purchased ECS instances whose tag settings are complete and ECS instances whose tag settings are modified. Valid values:
+        // 
+        // * **1**: yes
+        // * **0**: no
         @NameInMap("AutoAddTagEcs")
         public Integer autoAddTagEcs;
 
+        // The description of the address book.
         @NameInMap("Description")
         public String description;
 
+        // The name of the address book.
         @NameInMap("GroupName")
         public String groupName;
 
+        // The type of the address book. Valid values:
+        // 
+        // * **ip**: IP address book
+        // * **domain**: domain address book
+        // * **port**: port address book
+        // * **tag**: ECS tag-based address book
+        // * **allCloud**: cloud service address book
+        // * **threat**: threat intelligence address book
         @NameInMap("GroupType")
         public String groupType;
 
+        // The unique ID of the address book.
         @NameInMap("GroupUuid")
         public String groupUuid;
 
+        // The number of times that the address book is referenced.
         @NameInMap("ReferenceCount")
         public Integer referenceCount;
 
+        // The details about the ECS tags that can be automatically added to the address book.
         @NameInMap("TagList")
         public java.util.List<DescribeAddressBookResponseBodyAclsTagList> tagList;
 
+        // The logical relationship among ECS tags. Valid values:
+        // 
+        // * **and**: Only the public IP addresses of ECS instances that match all the specified tags can be added to the address book.
+        // * **or**: The public IP addresses of ECS instances that match any of the specified tags can be added to the address book.
         @NameInMap("TagRelation")
         public String tagRelation;
 

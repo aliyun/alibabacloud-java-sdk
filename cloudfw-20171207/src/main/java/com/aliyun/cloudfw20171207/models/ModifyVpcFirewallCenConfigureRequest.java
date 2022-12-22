@@ -4,15 +4,24 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class ModifyVpcFirewallCenConfigureRequest extends TeaModel {
+    // The language of the content within the request and response. Valid values:
+    // 
+    // *   **zh**: Chinese (default)
+    // *   **en**: English
     @NameInMap("Lang")
     public String lang;
 
+    // The UID of the member that is managed by your Alibaba Cloud account.
     @NameInMap("MemberUid")
     public String memberUid;
 
+    // The instance ID of the VPC firewall.
+    // 
+    // >  You can call the [DescribeVpcFirewallCenList](~~345777~~) operation to query the instance IDs of VPC firewalls.
     @NameInMap("VpcFirewallId")
     public String vpcFirewallId;
 
+    // The instance name of the VPC firewall.
     @NameInMap("VpcFirewallName")
     public String vpcFirewallName;
 

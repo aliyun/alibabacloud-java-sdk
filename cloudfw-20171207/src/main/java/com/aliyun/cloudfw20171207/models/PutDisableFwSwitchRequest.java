@@ -4,18 +4,32 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class PutDisableFwSwitchRequest extends TeaModel {
+    // The IP addresses.
+    // 
+    // >  You must specify at least one of the IpaddrList, RegionList, and ResourceTypeList parameters.
     @NameInMap("IpaddrList")
     public java.util.List<String> ipaddrList;
 
+    // The language of the content within the response. Valid values:
+    // 
+    // *   **zh**: Chinese (default)
+    // *   **en**: English
     @NameInMap("Lang")
     public String lang;
 
+    // The regions.
+    // 
+    // >  You must specify at least one of the IpaddrList, RegionList, and ResourceTypeList parameters.
     @NameInMap("RegionList")
     public java.util.List<String> regionList;
 
+    // The types of the assets.
+    // 
+    // > You must specify at least one of the IpaddrList, RegionList, and ResourceTypeList parameters.
     @NameInMap("ResourceTypeList")
     public java.util.List<String> resourceTypeList;
 
+    // The source IP address of the request.
     @NameInMap("SourceIp")
     public String sourceIp;
 

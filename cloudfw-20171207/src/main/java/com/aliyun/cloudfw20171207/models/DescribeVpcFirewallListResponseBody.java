@@ -4,12 +4,15 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeVpcFirewallListResponseBody extends TeaModel {
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The total number of VPC firewalls.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    // The details about VPC firewalls.
     @NameInMap("VpcFirewalls")
     public java.util.List<DescribeVpcFirewallListResponseBodyVpcFirewalls> vpcFirewalls;
 
@@ -43,12 +46,24 @@ public class DescribeVpcFirewallListResponseBody extends TeaModel {
     }
 
     public static class DescribeVpcFirewallListResponseBodyVpcFirewallsIpsConfig extends TeaModel {
+        // The status of basic policies. Valid values:
+        // 
+        // - **1**: enabled
+        // - **0**: disabled
         @NameInMap("BasicRules")
         public Integer basicRules;
 
+        // The status of virtual patches. Valid values:
+        // 
+        // - **1**: enabled
+        // - **0**: disabled
         @NameInMap("EnableAllPatch")
         public Integer enableAllPatch;
 
+        // The working mode of the IPS. Valid values:
+        // 
+        // - **1**: blocking mode
+        // - **0**: monitoring mode
         @NameInMap("RunMode")
         public Integer runMode;
 
@@ -84,9 +99,11 @@ public class DescribeVpcFirewallListResponseBody extends TeaModel {
     }
 
     public static class DescribeVpcFirewallListResponseBodyVpcFirewallsLocalVpcVpcCidrTableListRouteEntryList extends TeaModel {
+        // The destination CIDR block of the local VPC.
         @NameInMap("DestinationCidr")
         public String destinationCidr;
 
+        // The instance ID of the next hop for the local VPC.
         @NameInMap("NextHopInstanceId")
         public String nextHopInstanceId;
 
@@ -114,9 +131,11 @@ public class DescribeVpcFirewallListResponseBody extends TeaModel {
     }
 
     public static class DescribeVpcFirewallListResponseBodyVpcFirewallsLocalVpcVpcCidrTableList extends TeaModel {
+        // The route entries of the local VPC.
         @NameInMap("RouteEntryList")
         public java.util.List<DescribeVpcFirewallListResponseBodyVpcFirewallsLocalVpcVpcCidrTableListRouteEntryList> routeEntryList;
 
+        // The ID of the route table for the local VPC.
         @NameInMap("RouteTableId")
         public String routeTableId;
 
@@ -144,21 +163,27 @@ public class DescribeVpcFirewallListResponseBody extends TeaModel {
     }
 
     public static class DescribeVpcFirewallListResponseBodyVpcFirewallsLocalVpc extends TeaModel {
+        // Indicates whether Cloud Firewall is authorized to access the local VPC. The value is fixed as authorized, which indicates that Cloud Firewall is authorized to access the local VPC.
         @NameInMap("AuthorizationStatus")
         public String authorizationStatus;
 
+        // The UID of the Alibaba Cloud account to which the local VPC belongs.
         @NameInMap("OwnerId")
         public Long ownerId;
 
+        // The region ID of the local VPC.
         @NameInMap("RegionNo")
         public String regionNo;
 
+        // The CIDR blocks of the local VPC.
         @NameInMap("VpcCidrTableList")
         public java.util.List<DescribeVpcFirewallListResponseBodyVpcFirewallsLocalVpcVpcCidrTableList> vpcCidrTableList;
 
+        // The ID of the local VPC.
         @NameInMap("VpcId")
         public String vpcId;
 
+        // The name of the local VPC.
         @NameInMap("VpcName")
         public String vpcName;
 
@@ -218,9 +243,11 @@ public class DescribeVpcFirewallListResponseBody extends TeaModel {
     }
 
     public static class DescribeVpcFirewallListResponseBodyVpcFirewallsPeerVpcVpcCidrTableListRouteEntryList extends TeaModel {
+        // The destination CIDR block of the peer VPC.
         @NameInMap("DestinationCidr")
         public String destinationCidr;
 
+        // The instance ID of the next hop for the peer VPC.
         @NameInMap("NextHopInstanceId")
         public String nextHopInstanceId;
 
@@ -248,9 +275,11 @@ public class DescribeVpcFirewallListResponseBody extends TeaModel {
     }
 
     public static class DescribeVpcFirewallListResponseBodyVpcFirewallsPeerVpcVpcCidrTableList extends TeaModel {
+        // The route entries of the peer VPC.
         @NameInMap("RouteEntryList")
         public java.util.List<DescribeVpcFirewallListResponseBodyVpcFirewallsPeerVpcVpcCidrTableListRouteEntryList> routeEntryList;
 
+        // The ID of the route table for the peer VPC.
         @NameInMap("RouteTableId")
         public String routeTableId;
 
@@ -278,21 +307,27 @@ public class DescribeVpcFirewallListResponseBody extends TeaModel {
     }
 
     public static class DescribeVpcFirewallListResponseBodyVpcFirewallsPeerVpc extends TeaModel {
+        // Indicates whether Cloud Firewall is authorized to access the peer VPC. The value is fixed as **authorized**, which indicates that Cloud Firewall is authorized to access the peer VPC.
         @NameInMap("AuthorizationStatus")
         public String authorizationStatus;
 
+        // The UID of the Alibaba Cloud account to which the peer VPC belongs.
         @NameInMap("OwnerId")
         public Long ownerId;
 
+        // The region ID of the peer VPC.
         @NameInMap("RegionNo")
         public String regionNo;
 
+        // The CIDR blocks of the peer VPC.
         @NameInMap("VpcCidrTableList")
         public java.util.List<DescribeVpcFirewallListResponseBodyVpcFirewallsPeerVpcVpcCidrTableList> vpcCidrTableList;
 
+        // The ID of the peer VPC.
         @NameInMap("VpcId")
         public String vpcId;
 
+        // The name of the peer VPC.
         @NameInMap("VpcName")
         public String vpcName;
 
@@ -352,39 +387,67 @@ public class DescribeVpcFirewallListResponseBody extends TeaModel {
     }
 
     public static class DescribeVpcFirewallListResponseBodyVpcFirewalls extends TeaModel {
+        // The bandwidth of the Express Connect circuit. Unit: Mbit/s.
         @NameInMap("Bandwidth")
         public Integer bandwidth;
 
+        // The sub type of connection. Valid values:
+        // 
+        // - **vpc2vpc**: High-speed channel.
+        // - **vppeer**: Peer connection.
         @NameInMap("ConnectSubType")
         public String connectSubType;
 
+        // The connection type of the VPC firewall. The value is fixed as **expressconnect**, which indicates Express Connect circuits.
         @NameInMap("ConnectType")
         public String connectType;
 
+        // The status of the VPC firewall. Valid values:
+        // 
+        // *   **opened**: The VPC firewall is enabled.
+        // *   **closed**: The VPC firewall is disabled.
+        // *   **notconfigured**: The VPC firewall is not configured.
         @NameInMap("FirewallSwitchStatus")
         public String firewallSwitchStatus;
 
+        // The configuration of the intrusion prevention system (IPS).
         @NameInMap("IpsConfig")
         public DescribeVpcFirewallListResponseBodyVpcFirewallsIpsConfig ipsConfig;
 
+        // The details about the local VPC.
         @NameInMap("LocalVpc")
         public DescribeVpcFirewallListResponseBodyVpcFirewallsLocalVpc localVpc;
 
+        // The UID of the member that is managed by your Alibaba Cloud account.
         @NameInMap("MemberUid")
         public String memberUid;
 
+        // The details about the peer VPC.
         @NameInMap("PeerVpc")
         public DescribeVpcFirewallListResponseBodyVpcFirewallsPeerVpc peerVpc;
 
+        // The status of the region. Valid values:
+        // 
+        // *   **enable**: indicates that you can create VPC firewalls in the region.
+        // *   **disable**: indicates that you cannot create VPC firewalls in the region.
         @NameInMap("RegionStatus")
         public String regionStatus;
 
+        // The result code of the operation that creates the VPC firewall. Valid values:
+        // 
+        // *   **Unauthorized**: Cloud Firewall is not authorized to access the VPC for which the VPC firewall is created, and the VPC firewall cannot be created.
+        // *   **RegionDisable**: .VPC Firewall is not supported in the region of the VPC for which the VPC firewall is created, and the VPC firewall cannot be created.
+        // *   **OpsDisable**: You are not allowed to create the VPC firewall.
+        // *   **VbrNotSupport**: The VPC firewall cannot be created for a VBR that is attached to the CEN instance.
+        // *   Empty string: You can create a VPC firewall for the network instance.
         @NameInMap("ResultCode")
         public String resultCode;
 
+        // The instance ID of the VPC firewall.
         @NameInMap("VpcFirewallId")
         public String vpcFirewallId;
 
+        // The instance name of the VPC firewall.
         @NameInMap("VpcFirewallName")
         public String vpcFirewallName;
 

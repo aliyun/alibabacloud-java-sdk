@@ -4,12 +4,15 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
+    // An array that consists of destination IP addresses in outbound connections.
     @NameInMap("DstIPList")
     public java.util.List<DescribeOutgoingDestinationIPResponseBodyDstIPList> dstIPList;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The total number of destination IP addresses in outbound connections.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -73,9 +76,11 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
     }
 
     public static class DescribeOutgoingDestinationIPResponseBodyDstIPListApplicationPortList extends TeaModel {
+        // The type of the application.
         @NameInMap("ApplicationName")
         public String applicationName;
 
+        // The port of the application.
         @NameInMap("Port")
         public Integer port;
 
@@ -106,15 +111,23 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
         @NameInMap("ClassId")
         public String classId;
 
+        // The risk level. Valid values:
+        // 
+        // *   **1**: low
+        // *   **2**: medium
+        // *   **3**: high
         @NameInMap("RiskLevel")
         public Integer riskLevel;
 
+        // The description of the tag.
         @NameInMap("TagDescribe")
         public String tagDescribe;
 
+        // The ID of the tag.
         @NameInMap("TagId")
         public String tagId;
 
+        // The name of the tag.
         @NameInMap("TagName")
         public String tagName;
 
@@ -166,66 +179,105 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
     }
 
     public static class DescribeOutgoingDestinationIPResponseBodyDstIPList extends TeaModel {
+        // Indicates whether an access control policy is configured. Valid values:
+        // 
+        // *   **Uncovered**: No access control policies are configured.
+        // *   **FullCoverage**: An access control policy is configured.
         @NameInMap("AclCoverage")
         public String aclCoverage;
 
+        // The suggestion in an access control policy.
         @NameInMap("AclRecommendDetail")
         public String aclRecommendDetail;
 
+        // The state of the access control policy. Valid values:
+        // 
+        // *   **normal**: healthy
+        // *   **abnormal**: unhealthy
         @NameInMap("AclStatus")
         public String aclStatus;
 
         @NameInMap("AddressGroupList")
         public java.util.List<DescribeOutgoingDestinationIPResponseBodyDstIPListAddressGroupList> addressGroupList;
 
+        // An array that consists of application ports.
         @NameInMap("ApplicationPortList")
         public java.util.List<DescribeOutgoingDestinationIPResponseBodyDstIPListApplicationPortList> applicationPortList;
 
         @NameInMap("CategoryClassId")
         public String categoryClassId;
 
+        // The ID of the service to which the destination IP address belongs. Valid values:
+        // 
+        // *   **Aliyun**: Alibaba Cloud services
+        // *   **NotAliyun**: third-party services
         @NameInMap("CategoryId")
         public String categoryId;
 
+        // The type of the service to which the destination IP address belongs. Valid values:
+        // 
+        // *   **Alibaba Cloud services**
+        // *   **third-party services**
         @NameInMap("CategoryName")
         public String categoryName;
 
+        // The destination IP address in the outbound connection that is initiated to access a domain name.
         @NameInMap("DstIP")
         public String dstIP;
 
+        // The name of the group to which the access control policy belongs.
         @NameInMap("GroupName")
         public String groupName;
 
         @NameInMap("HasAcl")
         public String hasAcl;
 
+        // Indicates whether an access control policy is recommended. Valid values:
+        // 
+        // *   **true**: yes
+        // *   **false**: no
         @NameInMap("HasAclRecommend")
         public Boolean hasAclRecommend;
 
+        // The inbound traffic. Unit: bytes.
         @NameInMap("InBytes")
         public Long inBytes;
 
+        // Indicates whether the destination IP address is added to an allowlist. Valid values:
+        // 
+        // *   **true**: added
+        // *   **false**: not added
         @NameInMap("IsMarkNormal")
         public Boolean isMarkNormal;
 
+        // The outbound traffic. Unit: bytes.
         @NameInMap("OutBytes")
         public Long outBytes;
 
+        // The UUID of the access control policy.
         @NameInMap("RuleId")
         public String ruleId;
 
+        // The name of the access control policy.
         @NameInMap("RuleName")
         public String ruleName;
 
         @NameInMap("SecurityReason")
         public String securityReason;
 
+        // The suggestion to handle the traffic of the domain name in outbound connections. Valid values:
+        // 
+        // *   **pass**: allow
+        // *   **alert**: deny
+        // *   **drop**: monitor
         @NameInMap("SecuritySuggest")
         public String securitySuggest;
 
+        // The number of requests.
         @NameInMap("SessionCount")
         public Long sessionCount;
 
+        // An array that consists of tags.
         @NameInMap("TagList")
         public java.util.List<DescribeOutgoingDestinationIPResponseBodyDstIPListTagList> tagList;
 
