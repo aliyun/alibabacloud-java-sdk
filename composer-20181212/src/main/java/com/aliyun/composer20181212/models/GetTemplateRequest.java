@@ -4,6 +4,7 @@ package com.aliyun.composer20181212.models;
 import com.aliyun.tea.*;
 
 public class GetTemplateRequest extends TeaModel {
+    // The ID of the template.
     @NameInMap("TemplateId")
     public String templateId;
 

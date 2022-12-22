@@ -4,9 +4,11 @@ package com.aliyun.composer20181212.models;
 import com.aliyun.tea.*;
 
 public class CreateFlowResponseBody extends TeaModel {
+    // The ID of the created workflow.
     @NameInMap("FlowId")
     public String flowId;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

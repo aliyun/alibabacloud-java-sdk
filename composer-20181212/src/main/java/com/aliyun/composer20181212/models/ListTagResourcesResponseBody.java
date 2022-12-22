@@ -4,15 +4,19 @@ package com.aliyun.composer20181212.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
+    // The token that is used to start the next query.
     @NameInMap("NextToken")
     public String nextToken;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The mappings between resources and tags.
     @NameInMap("TagResources")
     public java.util.List<ListTagResourcesResponseBodyTagResources> tagResources;
 
+    // The total number of resources.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -54,15 +58,21 @@ public class ListTagResourcesResponseBody extends TeaModel {
     }
 
     public static class ListTagResourcesResponseBodyTagResources extends TeaModel {
+        // The ID of the resource.
         @NameInMap("ResourceId")
         public String resourceId;
 
+        // The type of the resource.
+        // 
+        // *   Valid value: ALIYUN::LC::FLOW
         @NameInMap("ResourceType")
         public String resourceType;
 
+        // The key of the tag.
         @NameInMap("TagKey")
         public String tagKey;
 
+        // The value of the tag.
         @NameInMap("TagValue")
         public String tagValue;
 

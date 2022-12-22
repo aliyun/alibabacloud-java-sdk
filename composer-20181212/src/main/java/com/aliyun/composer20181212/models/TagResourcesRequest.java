@@ -4,12 +4,17 @@ package com.aliyun.composer20181212.models;
 import com.aliyun.tea.*;
 
 public class TagResourcesRequest extends TeaModel {
+    // Specifies a maximum of 50 resource IDs.
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
+    // The type of the resources. Set the value to ALIYUN::LC::FLOW.
+    // 
+    // *   ALIYUN::LC::FLOW indicates Logic Composer workflows.
     @NameInMap("ResourceType")
     public String resourceType;
 
+    // Specifies a list of tags that you want to attach to the resources.
     @NameInMap("Tag")
     public java.util.List<TagResourcesRequestTag> tag;
 
@@ -43,9 +48,11 @@ public class TagResourcesRequest extends TeaModel {
     }
 
     public static class ListTagResourcesRequestTag extends TeaModel {
+        // The key of the tag.
         @NameInMap("Key")
         public String key;
 
+        // The value of the tag.
         @NameInMap("Value")
         public String value;
 
@@ -73,9 +80,11 @@ public class TagResourcesRequest extends TeaModel {
     }
 
     public static class TagResourcesRequestTag extends TeaModel {
+        // The key of the tag.
         @NameInMap("Key")
         public String key;
 
+        // The value of the tag.
         @NameInMap("Value")
         public String value;
 

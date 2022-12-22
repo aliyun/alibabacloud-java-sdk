@@ -4,12 +4,20 @@ package com.aliyun.composer20181212.models;
 import com.aliyun.tea.*;
 
 public class InvokeFlowResponseBody extends TeaModel {
+    // The unique identifier of the execution.
     @NameInMap("InvocationId")
     public String invocationId;
 
+    // The ID for this request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the workflow execution was triggered.
+    // 
+    // *   **true**: The workflow execution was triggered
+    // *   **false**: The workflow execution failed to be triggered.
+    // 
+    // > : You can call the **GetInvocationLog** operation to check whether the workflow execution is successful.
     @NameInMap("Success")
     public Boolean success;
 

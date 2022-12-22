@@ -4,9 +4,11 @@ package com.aliyun.composer20181212.models;
 import com.aliyun.tea.*;
 
 public class UntagResourcesResponseBody extends TeaModel {
+    // Indicates whether the call was successful.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The ID of the request.
     @NameInMap("Success")
     public Boolean success;
 

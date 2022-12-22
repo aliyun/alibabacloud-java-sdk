@@ -4,33 +4,43 @@ package com.aliyun.composer20181212.models;
 import com.aliyun.tea.*;
 
 public class GetVersionResponseBody extends TeaModel {
+    // The time when the version was created.
     @NameInMap("CreateTime")
     public String createTime;
 
+    // The definition of the workflow to which the version belongs.
     @NameInMap("Definition")
     public String definition;
 
+    // The ID of the workflow to which the version belongs.
     @NameInMap("FlowId")
     public String flowId;
 
+    // The region where the workflow resides.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The time when the version was last updated.
     @NameInMap("UpdateTime")
     public String updateTime;
 
+    // The description of the version.
     @NameInMap("VersionDescription")
     public String versionDescription;
 
+    // The ID of the version.
     @NameInMap("VersionId")
     public String versionId;
 
+    // The name of the version.
     @NameInMap("VersionName")
     public String versionName;
 
+    // The status of the version. **Enabled** indicates that the version is enabled.
     @NameInMap("VersionStatus")
     public String versionStatus;
 

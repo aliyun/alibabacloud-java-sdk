@@ -4,12 +4,15 @@ package com.aliyun.composer20181212.models;
 import com.aliyun.tea.*;
 
 public class ListVersionsResponseBody extends TeaModel {
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The total number of versions of the workflow.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    // A list of the versions.
     @NameInMap("Versions")
     public java.util.List<ListVersionsResponseBodyVersions> versions;
 
@@ -43,23 +46,33 @@ public class ListVersionsResponseBody extends TeaModel {
     }
 
     public static class ListVersionsResponseBodyVersions extends TeaModel {
+        // The time when the version was created.
         @NameInMap("CreateTime")
         public String createTime;
 
+        // The ID of the workflow to which the version belongs.
         @NameInMap("FlowId")
         public String flowId;
 
+        // The time when the version was last updated.
         @NameInMap("UpdateTime")
         public String updateTime;
 
+        // The ID of the version.
         @NameInMap("VersionId")
         public String versionId;
 
+        // The name of the version.
         @NameInMap("VersionName")
-        public Integer versionName;
+        public String versionName;
 
+        // The number of the version. Increment from 1.
+        @NameInMap("VersionNumber")
+        public Integer versionNumber;
+
+        // The status of the version. **Enabled** indicates that the version is enabled.
         @NameInMap("VersionStatus")
-        public Integer versionStatus;
+        public String versionStatus;
 
         public static ListVersionsResponseBodyVersions build(java.util.Map<String, ?> map) throws Exception {
             ListVersionsResponseBodyVersions self = new ListVersionsResponseBodyVersions();
@@ -98,19 +111,27 @@ public class ListVersionsResponseBody extends TeaModel {
             return this.versionId;
         }
 
-        public ListVersionsResponseBodyVersions setVersionName(Integer versionName) {
+        public ListVersionsResponseBodyVersions setVersionName(String versionName) {
             this.versionName = versionName;
             return this;
         }
-        public Integer getVersionName() {
+        public String getVersionName() {
             return this.versionName;
         }
 
-        public ListVersionsResponseBodyVersions setVersionStatus(Integer versionStatus) {
+        public ListVersionsResponseBodyVersions setVersionNumber(Integer versionNumber) {
+            this.versionNumber = versionNumber;
+            return this;
+        }
+        public Integer getVersionNumber() {
+            return this.versionNumber;
+        }
+
+        public ListVersionsResponseBodyVersions setVersionStatus(String versionStatus) {
             this.versionStatus = versionStatus;
             return this;
         }
-        public Integer getVersionStatus() {
+        public String getVersionStatus() {
             return this.versionStatus;
         }
 
