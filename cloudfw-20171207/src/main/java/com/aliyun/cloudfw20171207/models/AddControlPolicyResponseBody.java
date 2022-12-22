@@ -4,9 +4,11 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class AddControlPolicyResponseBody extends TeaModel {
+    // The ID of the access control policy that is created on the Internet firewall.
     @NameInMap("AclUuid")
     public String aclUuid;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

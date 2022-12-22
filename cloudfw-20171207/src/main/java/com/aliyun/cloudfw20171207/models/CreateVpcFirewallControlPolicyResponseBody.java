@@ -4,9 +4,11 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class CreateVpcFirewallControlPolicyResponseBody extends TeaModel {
+    // The ID of the access control policy.
     @NameInMap("AclUuid")
     public String aclUuid;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

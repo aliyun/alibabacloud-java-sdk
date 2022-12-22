@@ -4,12 +4,18 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DeleteVpcFirewallCenConfigureRequest extends TeaModel {
+    // The language of the content within the request and response. Valid values:
+    // 
+    // *   **zh**: Chinese (default)
+    // *   **en**: English
     @NameInMap("Lang")
     public String lang;
 
+    // The UID of the member that is managed by your Alibaba Cloud account.
     @NameInMap("MemberUid")
     public String memberUid;
 
+    // The list of VPC firewall IDs.
     @NameInMap("VpcFirewallIdList")
     public java.util.List<String> vpcFirewallIdList;
 

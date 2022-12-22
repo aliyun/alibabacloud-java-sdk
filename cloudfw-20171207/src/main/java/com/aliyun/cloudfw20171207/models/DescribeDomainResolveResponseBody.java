@@ -4,9 +4,11 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainResolveResponseBody extends TeaModel {
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The details about the DNS record of the domain name.
     @NameInMap("ResolveResult")
     public DescribeDomainResolveResponseBodyResolveResult resolveResult;
 
@@ -32,9 +34,11 @@ public class DescribeDomainResolveResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainResolveResponseBodyResolveResult extends TeaModel {
+        // The IP address to which the domain name is resolved. Multiple IP addresses are separated by commas (,).
         @NameInMap("IpAddrs")
         public String ipAddrs;
 
+        // The time when the domain name was resolved. The value of this parameter is a timestamp. Unit: seconds.
         @NameInMap("UpdateTime")
         public Long updateTime;
 

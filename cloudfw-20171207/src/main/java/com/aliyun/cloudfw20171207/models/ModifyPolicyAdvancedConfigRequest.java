@@ -4,12 +4,21 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class ModifyPolicyAdvancedConfigRequest extends TeaModel {
+    // Specifies whether to enable the strict mode for the access control policy. Valid values:
+    // 
+    // *   **on**: enables the strict mode.
+    // *   **off**: disables the strict mode.
     @NameInMap("InternetSwitch")
     public String internetSwitch;
 
+    // The natural language of the request and response. Valid values:
+    // 
+    // *   **zh**: Chinese (default)
+    // *   **en**: English
     @NameInMap("Lang")
     public String lang;
 
+    // The source IP address of the request.
     @NameInMap("SourceIp")
     public String sourceIp;
 

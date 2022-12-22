@@ -4,15 +4,28 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeVpcFirewallDefaultIPSConfigResponseBody extends TeaModel {
+    // Indicates whether basic policies are enabled. Valid values:
+    // 
+    // *   **1**: yes
+    // *   **0**: no
     @NameInMap("BasicRules")
     public Integer basicRules;
 
+    // Indicates whether virtual patching is enabled. Valid values:
+    // 
+    // *   **1**: yes
+    // *   **0**: no
     @NameInMap("EnableAllPatch")
     public Integer enableAllPatch;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The mode of the intrusion prevention system (IPS). Valid values:
+    // 
+    // *   **1**: block mode
+    // *   **0**: monitor mode
     @NameInMap("RunMode")
     public Integer runMode;
 

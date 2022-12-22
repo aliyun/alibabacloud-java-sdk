@@ -4,9 +4,16 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class ResetVpcFirewallRuleHitCountRequest extends TeaModel {
+    // The ID of the access control policy.
     @NameInMap("AclUuid")
     public String aclUuid;
 
+    // The natural language of the request and response. 
+    // 
+    // Valid values:
+    // 
+    // - **zh**: Chinese (default)
+    // - **en**: English
     @NameInMap("Lang")
     public String lang;
 

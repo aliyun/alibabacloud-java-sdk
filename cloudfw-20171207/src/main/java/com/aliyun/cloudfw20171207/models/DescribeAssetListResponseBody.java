@@ -4,12 +4,15 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeAssetListResponseBody extends TeaModel {
+    // The details about the assets that are protected by Cloud Firewall.
     @NameInMap("Assets")
     public java.util.List<DescribeAssetListResponseBodyAssets> assets;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The total number of the assets that are protected by Cloud Firewall.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -43,60 +46,122 @@ public class DescribeAssetListResponseBody extends TeaModel {
     }
 
     public static class DescribeAssetListResponseBodyAssets extends TeaModel {
+        // The UID of the Alibaba Cloud account.
+        // 
+        // >  The value of this parameter indicates the management account to which the member is added.
         @NameInMap("AliUid")
         public Long aliUid;
 
+        // The instance ID of the asset that is bound to Cloud Firewall.
         @NameInMap("BindInstanceId")
         public String bindInstanceId;
 
+        // The instance name of the asset that is bound to Cloud Firewall.
         @NameInMap("BindInstanceName")
         public String bindInstanceName;
 
+        // The public IP address of the server.
         @NameInMap("InternetAddress")
         public String internetAddress;
 
+        // The internal IP address of the server.
         @NameInMap("IntranetAddress")
         public String intranetAddress;
 
+        // The IP version of the asset that is protected by Cloud Firewall.
+        // 
+        // Valid values:
+        // 
+        // *   **4**: IPv4
+        // *   **6**: IPv6
         @NameInMap("IpVersion")
         public Integer ipVersion;
 
+        // The UID of the member that is added in Cloud Firewall.
         @NameInMap("MemberUid")
         public Long memberUid;
 
+        // The instance name of the asset that is protected by Cloud Firewall.
         @NameInMap("Name")
         public String name;
 
+        // The remarks of the asset. Valid values:
+        // 
+        // *   **REGION\_NOT\_SUPPORT**: The region is not supported.
+        // *   **NETWORK\_NOT\_SUPPORT**: The network is not supported.
         @NameInMap("Note")
         public String note;
 
+        // The status of the firewall. Valid values:
+        // 
+        // *   **open**: The firewall is enabled.
+        // *   **opening**: The firewall is being enabled.
+        // *   **closed**: The firewall is disabled.
+        // *   **closing**: The firewall is being disabled.
         @NameInMap("ProtectStatus")
         public String protectStatus;
 
+        // The ID of the region in which the asset resides.
         @NameInMap("RegionID")
         public String regionID;
 
+        // Indicates whether the firewall is supported in the region in which the asset resides. Valid values:
+        // 
+        // *   **enable**: supported
+        // *   **disable**: unsupported
         @NameInMap("RegionStatus")
         public String regionStatus;
 
+        // The instance ID of the asset.
         @NameInMap("ResourceInstanceId")
         public String resourceInstanceId;
 
+        // The type of the asset. Valid values:
+        // 
+        // *   **BastionHostEgressIP**: the egress IP address of a bastion host
+        // *   **BastionHostIngressIP**: the ingress IP address of a bastion host
+        // *   **EcsEIP**: the EIP of an ECS instance
+        // *   **EcsPublicIP**: the public IP address of an ECS instance
+        // *   **EIP**: the EIP
+        // *   **EniEIP**: the EIP of an ENI
+        // *   **NatEIP**: the EIP of a NAT gateway
+        // *   **SlbEIP**: the EIP of an SLB instance
+        // *   **SlbPublicIP**: the public IP address of an SLB instance
+        // *   **NatPublicIP**: the public IP address of a NAT gateway
+        // *   **HAVIP**: the HAVIP
         @NameInMap("ResourceType")
         public String resourceType;
 
+        // The risk level of the asset. Valid values:
+        // 
+        // *   **low**: low
+        // *   **middle**: medium
+        // *   **hight**: high
+        // 
+        // >  The value of this parameter is returned only when the UserType parameter is set to free.
         @NameInMap("RiskLevel")
         public String riskLevel;
 
+        // The status of the security group policy. Valid values:
+        // 
+        // *   **pass**: delivered
+        // *   **block**: undelivered
+        // *   **unsupport**: unsupported
         @NameInMap("SgStatus")
         public String sgStatus;
 
+        // The time when the status of the security group was last checked. The value is a UNIX timestamp. Unit: seconds.
         @NameInMap("SgStatusTime")
         public Long sgStatusTime;
 
+        // The status of traffic redirection for the asset. Valid values:
+        // 
+        // *   **enable**: Traffic redirection is enabled.
+        // *   **disable**: Traffic redirection is disabled.
         @NameInMap("SyncStatus")
         public String syncStatus;
 
+        // This parameter is deprecated.
         @NameInMap("Type")
         public String type;
 

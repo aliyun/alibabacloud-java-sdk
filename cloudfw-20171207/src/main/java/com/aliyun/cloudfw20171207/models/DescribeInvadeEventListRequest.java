@@ -4,51 +4,77 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeInvadeEventListRequest extends TeaModel {
+    // The IP address of the affected asset.
     @NameInMap("AssetsIP")
     public String assetsIP;
 
+    // The ID of the instance.
     @NameInMap("AssetsInstanceId")
     public String assetsInstanceId;
 
+    // The name of the instance.
     @NameInMap("AssetsInstanceName")
     public String assetsInstanceName;
 
+    // The number of the page to return.
+    // 
+    // Pages start from page 1. Default value: 1.
     @NameInMap("CurrentPage")
     public String currentPage;
 
+    // The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.
     @NameInMap("EndTime")
     public String endTime;
 
+    // The ID of the breach awareness event.
     @NameInMap("EventKey")
     public String eventKey;
 
+    // The name of the breach awareness event.
     @NameInMap("EventName")
     public String eventName;
 
+    // The UUID of the breach awareness event.
     @NameInMap("EventUuid")
     public String eventUuid;
 
+    // Specifies whether to ignore the breach awareness event. Valid values:
+    // 
+    // *   **true**: ignores the breach awareness event.
+    // *   **false**: does not ignore the breach awareness event.
     @NameInMap("IsIgnore")
     public String isIgnore;
 
+    // The language of the content within the response. Valid values:
+    // 
+    // *   **zh**: Chinese (default)
+    // *   **en**: English
     @NameInMap("Lang")
     public String lang;
 
+    // The ID of the member.
     @NameInMap("MemberUid")
     public Long memberUid;
 
+    // The number of entries to return on each page.
+    // 
+    // Default value: 6. Maximum value: 10.
     @NameInMap("PageSize")
     public String pageSize;
 
+    // The list of process statuses.
     @NameInMap("ProcessStatusList")
     public java.util.List<Integer> processStatusList;
 
+    // The list of risk levels.
     @NameInMap("RiskLevel")
     public java.util.List<Integer> riskLevel;
 
+    // The source IP address of the request.
     @NameInMap("SourceIp")
     public String sourceIp;
 
+    // The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.
     @NameInMap("StartTime")
     public String startTime;
 

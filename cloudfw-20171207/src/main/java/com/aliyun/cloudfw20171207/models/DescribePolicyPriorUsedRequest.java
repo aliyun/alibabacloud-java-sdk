@@ -4,15 +4,34 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribePolicyPriorUsedRequest extends TeaModel {
+    // The direction of the traffic to which the access control policy applies.
+    // 
+    // Valid values:
+    // 
+    // *   **in**: inbound traffic
+    // *   **out**: outbound traffic
     @NameInMap("Direction")
     public String direction;
 
+    // The IP version of the asset that is protected by Cloud Firewall.
+    // 
+    // Valid values:
+    // 
+    // *   **4**: IPv4 (default)
+    // *   **6**: IPv6
     @NameInMap("IpVersion")
     public String ipVersion;
 
+    // The natural language of the request and response.
+    // 
+    // Valid values:
+    // 
+    // *   **zh**: Chinese (default)
+    // *   **en**: English
     @NameInMap("Lang")
     public String lang;
 
+    // The source IP address of the request.
     @NameInMap("SourceIp")
     public String sourceIp;
 

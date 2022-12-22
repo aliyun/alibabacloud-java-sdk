@@ -4,12 +4,15 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceMembersResponseBody extends TeaModel {
+    // The information about the member in Cloud Firewall.
     @NameInMap("Members")
     public java.util.List<DescribeInstanceMembersResponseBodyMembers> members;
 
+    // The pagination information.
     @NameInMap("PageInfo")
     public DescribeInstanceMembersResponseBodyPageInfo pageInfo;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,21 +46,34 @@ public class DescribeInstanceMembersResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceMembersResponseBodyMembers extends TeaModel {
+        // The time when the member was added to Cloud Firewall.
+        // 
+        // >  The value is a UNIX timestamp. Unit: seconds.
         @NameInMap("CreateTime")
         public Integer createTime;
 
+        // The remarks of the member in Cloud Firewall.
         @NameInMap("MemberDesc")
         public String memberDesc;
 
+        // The name of the member in Cloud Firewall.
         @NameInMap("MemberDisplayName")
         public String memberDisplayName;
 
+        // The status of the member in Cloud Firewall. Valid values:
+        // 
+        // *   **normal**
+        // *   **deleting**
         @NameInMap("MemberStatus")
         public String memberStatus;
 
+        // The UID of the member in Cloud Firewall.
         @NameInMap("MemberUid")
         public Long memberUid;
 
+        // The time when the member in Cloud Firewall was last modified.
+        // 
+        // >  The value is a UNIX timestamp. Unit: seconds.
         @NameInMap("ModifyTime")
         public Integer modifyTime;
 
@@ -117,12 +133,15 @@ public class DescribeInstanceMembersResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceMembersResponseBodyPageInfo extends TeaModel {
+        // The page number of the current page.
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        // The number of entries returned per page.
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        // The total number of the members in Cloud Firewall.
         @NameInMap("TotalCount")
         public Integer totalCount;
 

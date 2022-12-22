@@ -4,30 +4,39 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserAssetIPTrafficInfoResponseBody extends TeaModel {
+    // The end of the time range that is queried. The value is a UNIX timestamp. Unit: seconds.
     @NameInMap("EndTime")
     public Long endTime;
 
+    // The network throughput, which indicates the inbound traffic rate. Unit: bit/s.
     @NameInMap("InBps")
     public Long inBps;
 
+    // The network throughput, which indicates the inbound packet rate. Unit: packets per second (pps).
     @NameInMap("InPps")
     public Long inPps;
 
+    // The number of new connections.
     @NameInMap("NewConn")
     public Long newConn;
 
+    // The network throughput, which indicates the outbound traffic rate. Unit: bit/s.
     @NameInMap("OutBps")
     public Long outBps;
 
+    // The network throughput, which indicates the outbound packet rate. Unit: pps.
     @NameInMap("OutPps")
     public Long outPps;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The number of requests.
     @NameInMap("SessionCount")
     public Long sessionCount;
 
+    // The beginning of the time range that is queried. The value is a UNIX timestamp. Unit: seconds.
     @NameInMap("StartTime")
     public Long startTime;
 

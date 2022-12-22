@@ -4,12 +4,20 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DeleteAddressBookRequest extends TeaModel {
+    // The ID of the address book.
+    // 
+    // To delete the address book, you must provide the ID of the address book. You can call the DescribeAddressBook operation to query the ID.
     @NameInMap("GroupUuid")
     public String groupUuid;
 
+    // The natural language of the request and response. Valid values:
+    // 
+    // *   **zh**: Chinese (default)
+    // *   **en**: English
     @NameInMap("Lang")
     public String lang;
 
+    // The source IP address of the request.
     @NameInMap("SourceIp")
     public String sourceIp;
 

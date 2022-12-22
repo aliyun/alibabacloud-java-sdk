@@ -4,12 +4,15 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The total number of VPC firewalls.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    // The details about the VPC firewall.
     @NameInMap("VpcFirewalls")
     public java.util.List<DescribeVpcFirewallCenListResponseBodyVpcFirewalls> vpcFirewalls;
 
@@ -43,12 +46,24 @@ public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
     }
 
     public static class DescribeVpcFirewallCenListResponseBodyVpcFirewallsIpsConfig extends TeaModel {
+        // Indicates whether basic protection is enabled. Valid values:
+        // 
+        // - **1**: yes
+        // - **0**: no
         @NameInMap("BasicRules")
         public Integer basicRules;
 
+        // Indicates whether virtual patching is enabled. Valid values:
+        // 
+        // - **1**: yes
+        // - **0**: no
         @NameInMap("EnableAllPatch")
         public Integer enableAllPatch;
 
+        // The mode of the IPS. Valid values:
+        // 
+        // - **1**: block mode
+        // - **0**: monitor mode
         @NameInMap("RunMode")
         public Integer runMode;
 
@@ -84,9 +99,11 @@ public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
     }
 
     public static class DescribeVpcFirewallCenListResponseBodyVpcFirewallsLocalVpcVpcCidrTableListRouteEntryList extends TeaModel {
+        // The destination CIDR block of the VPC.
         @NameInMap("DestinationCidr")
         public String destinationCidr;
 
+        // The instance ID for the next hop of the VPC.
         @NameInMap("NextHopInstanceId")
         public String nextHopInstanceId;
 
@@ -114,9 +131,11 @@ public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
     }
 
     public static class DescribeVpcFirewallCenListResponseBodyVpcFirewallsLocalVpcVpcCidrTableList extends TeaModel {
+        // The route entries for the VPC.
         @NameInMap("RouteEntryList")
         public java.util.List<DescribeVpcFirewallCenListResponseBodyVpcFirewallsLocalVpcVpcCidrTableListRouteEntryList> routeEntryList;
 
+        // The route table ID of the VPC.
         @NameInMap("RouteTableId")
         public String routeTableId;
 
@@ -144,45 +163,72 @@ public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
     }
 
     public static class DescribeVpcFirewallCenListResponseBodyVpcFirewallsLocalVpc extends TeaModel {
+        // Indicates whether the VPC is granted the required permissions. The value is fixed as **authorized**, which indicates that the VPC is granted the required permissions.
         @NameInMap("AuthorizationStatus")
         public String authorizationStatus;
 
+        // The CIDR blocks that are protected by the VPC firewall.
         @NameInMap("DefendCidrList")
         public java.util.List<String> defendCidrList;
 
+        // The ID of the specified vSwitch when the routing mode is manual.
         @NameInMap("ManualVSwitchId")
         public String manualVSwitchId;
 
+        // The ID of the network instance.
         @NameInMap("NetworkInstanceId")
         public String networkInstanceId;
 
+        // The name of the network instance.
         @NameInMap("NetworkInstanceName")
         public String networkInstanceName;
 
+        // The type of the network instance. Valid values:
+        // 
+        // *   **VPC**
+        // *   **VBR**
+        // *   **CCN**
         @NameInMap("NetworkInstanceType")
         public String networkInstanceType;
 
+        // The ID of the Alibaba Cloud account to which the VPC belongs.
         @NameInMap("OwnerId")
         public Long ownerId;
 
+        // The region ID of the VPC.
         @NameInMap("RegionNo")
         public String regionNo;
 
+        // The routing mode of the VPC firewall. Valid values:
+        // 
+        // *   **auto**: automatic mode
+        // *   **manual**: manual mode
         @NameInMap("RouteMode")
         public String routeMode;
 
+        // Indicates whether the manual routing mode is supported. Valid values:
+        // 
+        // *   **1**: yes
+        // *   **0**: no
         @NameInMap("SupportManualMode")
         public String supportManualMode;
 
+        // The type of the CEN transit router. Valid values:
+        // 
+        // *   **Basic**: Basic Edition transit router
+        // *   **Enterprise**: Enterprise Edition transit router
         @NameInMap("TransitRouterType")
         public String transitRouterType;
 
+        // The CIDR block of the VPC.
         @NameInMap("VpcCidrTableList")
         public java.util.List<DescribeVpcFirewallCenListResponseBodyVpcFirewallsLocalVpcVpcCidrTableList> vpcCidrTableList;
 
+        // The ID of the VPC.
         @NameInMap("VpcId")
         public String vpcId;
 
+        // The name of the VPC.
         @NameInMap("VpcName")
         public String vpcName;
 
@@ -306,39 +352,68 @@ public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
     }
 
     public static class DescribeVpcFirewallCenListResponseBodyVpcFirewalls extends TeaModel {
+        // The ID of the CEN instance.
         @NameInMap("CenId")
         public String cenId;
 
+        // The name of the CEN instance.
         @NameInMap("CenName")
         public String cenName;
 
+        // The connection type of the VPC firewall. The value is fixed as cen, which indicates a CEN instance.
         @NameInMap("ConnectType")
         public String connectType;
 
+        // The status of the VPC firewall. Valid values:
+        // 
+        // *   **opened**: The VPC firewall is enabled.
+        // *   **closed**: The VPC firewall is disabled.
+        // *   **notconfigured**: The VPC firewall is not created.
         @NameInMap("FirewallSwitchStatus")
         public String firewallSwitchStatus;
 
+        // The information about the intrusion prevention system (IPS) configuration.
         @NameInMap("IpsConfig")
         public DescribeVpcFirewallCenListResponseBodyVpcFirewallsIpsConfig ipsConfig;
 
+        // The details about the VPC.
         @NameInMap("LocalVpc")
         public DescribeVpcFirewallCenListResponseBodyVpcFirewallsLocalVpc localVpc;
 
+        // The UID of the member that is manged by your Alibaba Cloud account. The member is also an Alibaba Cloud account.
         @NameInMap("MemberUid")
         public String memberUid;
 
+        // Indicates whether the VPC firewall can be automatically enabled to protect VPC traffic based on route learning. Valid values: 
+        // 
+        // - **passed**: The VPC firewall can be automatically enabled.
+        // - **failed**: The VPC firewall cannot be automatically enabled.
+        // - **unknown**: The VPC firewall is in an unknown state.
         @NameInMap("PrecheckStatus")
         public String precheckStatus;
 
+        // Indicates whether you can create a VPC firewall in a region. Valid values:
+        // 
+        // *   **enable**: yes
+        // *   **disable**: no
         @NameInMap("RegionStatus")
         public String regionStatus;
 
+        // The result code of the operation that creates the VPC firewall. Valid values:
+        // 
+        // *   **Unauthorized**: Cloud Firewall is not authorized to access the VPC for which the VPC firewall is created, and the VPC firewall cannot be created.
+        // *   **RegionDisable**: .VPC Firewall is not supported in the region of the VPC for which the VPC firewall is created, and the VPC firewall cannot be created.
+        // *   **OpsDisable**: You are not allowed to create the VPC firewall.
+        // *   **VbrNotSupport**: The VPC firewall cannot be created for a VBR that is attached to the CEN instance.
+        // *   Empty string: You can create a VPC firewall for the network instance.
         @NameInMap("ResultCode")
         public String resultCode;
 
+        // The instance ID of the VPC firewall.
         @NameInMap("VpcFirewallId")
         public String vpcFirewallId;
 
+        // The instance name of the VPC firewall.
         @NameInMap("VpcFirewallName")
         public String vpcFirewallName;
 

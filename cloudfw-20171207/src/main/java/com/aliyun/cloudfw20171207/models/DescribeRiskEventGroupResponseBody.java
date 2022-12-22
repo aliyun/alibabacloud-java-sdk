@@ -4,12 +4,15 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeRiskEventGroupResponseBody extends TeaModel {
+    // An array that consists of the details of the intrusion events.
     @NameInMap("DataList")
     public java.util.List<DescribeRiskEventGroupResponseBodyDataList> dataList;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The total number of risk events.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -43,15 +46,19 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
     }
 
     public static class DescribeRiskEventGroupResponseBodyDataListIPLocationInfo extends TeaModel {
+        // The ID of the city to which the IP address belongs.
         @NameInMap("CityId")
         public String cityId;
 
+        // The name of the city to which the IP address belongs.
         @NameInMap("CityName")
         public String cityName;
 
+        // The ID of the country to which the IP address belongs.
         @NameInMap("CountryId")
         public String countryId;
 
+        // The name of the country to which the IP address belongs.
         @NameInMap("CountryName")
         public String countryName;
 
@@ -95,15 +102,19 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
     }
 
     public static class DescribeRiskEventGroupResponseBodyDataListResourcePrivateIPList extends TeaModel {
+        // The ID of the region to which the private IP address belongs.
         @NameInMap("RegionNo")
         public String regionNo;
 
+        // The ID of the instance that uses the private IP address.
         @NameInMap("ResourceInstanceId")
         public String resourceInstanceId;
 
+        // The name of the instance that uses the private IP address.
         @NameInMap("ResourceInstanceName")
         public String resourceInstanceName;
 
+        // The private IP address.
         @NameInMap("ResourcePrivateIP")
         public String resourcePrivateIP;
 
@@ -147,18 +158,23 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
     }
 
     public static class DescribeRiskEventGroupResponseBodyDataListVpcDstInfo extends TeaModel {
+        // The ID of the ECS instance.
         @NameInMap("EcsInstanceId")
         public String ecsInstanceId;
 
+        // The name of the ECS instance.
         @NameInMap("EcsInstanceName")
         public String ecsInstanceName;
 
+        // The ID of the VPC.
         @NameInMap("NetworkInstanceId")
         public String networkInstanceId;
 
+        // The name of the VPC.
         @NameInMap("NetworkInstanceName")
         public String networkInstanceName;
 
+        // The ID of the region in which the destination VPC resides.
         @NameInMap("RegionNo")
         public String regionNo;
 
@@ -210,18 +226,23 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
     }
 
     public static class DescribeRiskEventGroupResponseBodyDataListVpcSrcInfo extends TeaModel {
+        // The ID of the ECS instance.
         @NameInMap("EcsInstanceId")
         public String ecsInstanceId;
 
+        // The name of the ECS instance.
         @NameInMap("EcsInstanceName")
         public String ecsInstanceName;
 
+        // The ID of the VPC.
         @NameInMap("NetworkInstanceId")
         public String networkInstanceId;
 
+        // The name of the VPC.
         @NameInMap("NetworkInstanceName")
         public String networkInstanceName;
 
+        // The ID of the region in which the source VPC resides.
         @NameInMap("RegionNo")
         public String regionNo;
 
@@ -273,72 +294,131 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
     }
 
     public static class DescribeRiskEventGroupResponseBodyDataList extends TeaModel {
+        // The name of the attacked application.
         @NameInMap("AttackApp")
         public String attackApp;
 
+        // The attack type of the intrusion event. Valid values:
+        // 
+        // * **1**: suspicious connection
+        // * **2**: command execution
+        // * **3**: brute-force attack
+        // * **4**: scanning
+        // * **5**: others
+        // * **6**: information leak
+        // * **7**: DoS attack
+        // * **8**: buffer overflow attack
+        // * **9**: web attack
+        // * **10**: trojan backdoor
+        // * **11**: computer worm
+        // * **12**: mining
+        // * **13**: reverse shell
         @NameInMap("AttackType")
         public Integer attackType;
 
+        // The description of the intrusion event.
         @NameInMap("Description")
         public String description;
 
+        // The direction of the traffic for the intrusion events. Valid values:
+        // 
+        // *   **in**: inbound
+        // *   **out**: outbound
         @NameInMap("Direction")
         public String direction;
 
+        // The destination IP address that is included in the intrusion event.
         @NameInMap("DstIP")
         public String dstIP;
 
+        // The number of intrusion events.
         @NameInMap("EventCount")
         public Integer eventCount;
 
+        // The ID of the intrusion event.
         @NameInMap("EventId")
         public String eventId;
 
+        // The name of the intrusion event.
         @NameInMap("EventName")
         public String eventName;
 
+        // The time when the intrusion event was first detected. The value is a UNIX timestamp. Unit: seconds.
         @NameInMap("FirstEventTime")
         public Integer firstEventTime;
 
+        // The information about the geographical location of the IP address. The value is a struct that contains the following parameters: **CityId**, **CityName**, **CountryId**, and **CountryName**.
         @NameInMap("IPLocationInfo")
         public DescribeRiskEventGroupResponseBodyDataListIPLocationInfo IPLocationInfo;
 
+        // The time when the intrusion event was last detected. The value is a UNIX timestamp. Unit: seconds.
         @NameInMap("LastEventTime")
         public Integer lastEventTime;
 
+        // The information about the private IP address of the intrusion event. The value is an array that contains the following parameters: **RegionNo**, **ResourceInstanceId**, **ResourceInstanceName**, and **ResourcePrivateIP**.
         @NameInMap("ResourcePrivateIPList")
         public java.util.List<DescribeRiskEventGroupResponseBodyDataListResourcePrivateIPList> resourcePrivateIPList;
 
+        // The type of the public IP address in the intrusion event. Valid values:
+        // 
+        // *   **EIP**: the elastic IP address (EIP)
+        // *   **EcsPublicIP**: the public IP address of an Elastic Compute Service (ECS) instance
+        // *   **EcsEIP**: the EIP of an ECS instance
+        // *   **NatPublicIP**: the public IP address of a NAT gateway
+        // *   **NatEIP**: the EIP of a NAT gateway
         @NameInMap("ResourceType")
         public String resourceType;
 
+        // The ID of the rule that is used to detect the intrusion event.
         @NameInMap("RuleId")
         public String ruleId;
 
+        // The status of the firewall. Valid values:
+        // 
+        // *   **1**: alerting
+        // *   **2**: blocking
         @NameInMap("RuleResult")
         public Integer ruleResult;
 
+        // The module of the rule that is used to detect the intrusion event. Valid values:
+        // 
+        // *   **1**: basic protection
+        // *   **2**: virtual patching
+        // *   **4**: threat intelligence
         @NameInMap("RuleSource")
         public Integer ruleSource;
 
+        // The source IP address that is included in the intrusion event.
         @NameInMap("SrcIP")
         public String srcIP;
 
+        // The source IP tag. It is used to identify whether it is the cloud product back to the source IP.
         @NameInMap("SrcIPTag")
         public String srcIPTag;
 
+        // The source private IP addresses of the intrusion event.
+        // 
+        // >  The value of this parameter is returned only when you set Direction to out.
         @NameInMap("SrcPrivateIPList")
         public java.util.List<String> srcPrivateIPList;
 
+        // The tag added to the threat intelligence that is provided for major events.
         @NameInMap("Tag")
         public String tag;
 
+        // The information about the destination VPC of the intrusion event. The value is a struct that contains the following parameters: **EcsInstanceId**, **EcsInstanceName**, **NetworkInstanceId**, **NetworkInstanceName**, and **RegionNo**.
         @NameInMap("VpcDstInfo")
         public DescribeRiskEventGroupResponseBodyDataListVpcDstInfo vpcDstInfo;
 
+        // The information about the source VPC of the intrusion event. The value is a struct that contains the following parameters: **EcsInstanceId**, **EcsInstanceName**, **NetworkInstanceId**, **NetworkInstanceName**, and **RegionNo**.
         @NameInMap("VpcSrcInfo")
         public DescribeRiskEventGroupResponseBodyDataListVpcSrcInfo vpcSrcInfo;
 
+        // The risk level of the intrusion event. Valid values:
+        // 
+        // *   **1**: low
+        // *   **2**: medium
+        // *   **3**: high
         @NameInMap("VulLevel")
         public Integer vulLevel;
 
