@@ -65,6 +65,9 @@ public class GetVideoTaskInfoResponseBody extends TeaModel {
     }
 
     public static class GetVideoTaskInfoResponseBodyDataTaskResult extends TeaModel {
+        @NameInMap("FailCode")
+        public String failCode;
+
         @NameInMap("FailReason")
         public String failReason;
 
@@ -77,6 +80,14 @@ public class GetVideoTaskInfoResponseBody extends TeaModel {
         public static GetVideoTaskInfoResponseBodyDataTaskResult build(java.util.Map<String, ?> map) throws Exception {
             GetVideoTaskInfoResponseBodyDataTaskResult self = new GetVideoTaskInfoResponseBodyDataTaskResult();
             return TeaModel.build(map, self);
+        }
+
+        public GetVideoTaskInfoResponseBodyDataTaskResult setFailCode(String failCode) {
+            this.failCode = failCode;
+            return this;
+        }
+        public String getFailCode() {
+            return this.failCode;
         }
 
         public GetVideoTaskInfoResponseBodyDataTaskResult setFailReason(String failReason) {
