@@ -37,9 +37,6 @@ public class CreateVirtualPhysicalConnectionRequest extends TeaModel {
     @NameInMap("VpconnAliUid")
     public Long vpconnAliUid;
 
-    @NameInMap("VpconnUidResourceGroupId")
-    public String vpconnUidResourceGroupId;
-
     public static CreateVirtualPhysicalConnectionRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateVirtualPhysicalConnectionRequest self = new CreateVirtualPhysicalConnectionRequest();
         return TeaModel.build(map, self);
@@ -131,14 +128,6 @@ public class CreateVirtualPhysicalConnectionRequest extends TeaModel {
     }
     public Long getVpconnAliUid() {
         return this.vpconnAliUid;
-    }
-
-    public CreateVirtualPhysicalConnectionRequest setVpconnUidResourceGroupId(String vpconnUidResourceGroupId) {
-        this.vpconnUidResourceGroupId = vpconnUidResourceGroupId;
-        return this;
-    }
-    public String getVpconnUidResourceGroupId() {
-        return this.vpconnUidResourceGroupId;
     }
 
 }
