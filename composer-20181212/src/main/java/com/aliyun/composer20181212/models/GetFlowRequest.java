@@ -4,6 +4,7 @@ package com.aliyun.composer20181212.models;
 import com.aliyun.tea.*;
 
 public class GetFlowRequest extends TeaModel {
+    // The ID of the workflow.
     @NameInMap("FlowId")
     public String flowId;
 

@@ -4,6 +4,7 @@ package com.aliyun.composer20181212.models;
 import com.aliyun.tea.*;
 
 public class DisableFlowRequest extends TeaModel {
+    // The ID of the workflow that you want to disable.
     @NameInMap("FlowId")
     public String flowId;
 

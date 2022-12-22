@@ -4,6 +4,7 @@ package com.aliyun.composer20181212.models;
 import com.aliyun.tea.*;
 
 public class DeleteFlowRequest extends TeaModel {
+    // The ID of the workflow that you want to delete.
     @NameInMap("FlowId")
     public String flowId;
 

@@ -4,18 +4,25 @@ package com.aliyun.composer20181212.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
+    // The maximum number of results to return on each page.
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    // The token that is used to start the next query.
     @NameInMap("NextToken")
     public String nextToken;
 
+    // A list of resource IDs.
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
+    // The type of the resources. Set the value to ALIYUN::LC::FLOW.
+    // 
+    // *   ALIYUN::LC::FLOW indicates Logic Composer workflows.
     @NameInMap("ResourceType")
     public String resourceType;
 
+    // A list of tags that are attached to the resources. A list can contain a maximum of 20 tags.
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
 
@@ -65,9 +72,11 @@ public class ListTagResourcesRequest extends TeaModel {
     }
 
     public static class ListTagResourcesRequestTag extends TeaModel {
+        // The key of the tag.
         @NameInMap("Key")
         public String key;
 
+        // The value of the tag.
         @NameInMap("Value")
         public String value;
 

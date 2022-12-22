@@ -4,12 +4,21 @@ package com.aliyun.composer20181212.models;
 import com.aliyun.tea.*;
 
 public class DisableFlowResponseBody extends TeaModel {
+    // The status of the workflow.
+    // 
+    // *   **Enabled**: The workflow is enabled.
+    // *   **Disabled**: The workflow is disabled.
     @NameInMap("FlowStatus")
     public String flowStatus;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the operation was successful.
+    // 
+    // *   **true**: The operation was successful.
+    // *   **false**: The operation failed.
     @NameInMap("Success")
     public Boolean success;
 

@@ -4,12 +4,15 @@ package com.aliyun.composer20181212.models;
 import com.aliyun.tea.*;
 
 public class ListFlowsResponseBody extends TeaModel {
+    // A list of workflows.
     @NameInMap("Flows")
     public java.util.List<ListFlowsResponseBodyFlows> flows;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The total number of workflows in the current region.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -43,38 +46,56 @@ public class ListFlowsResponseBody extends TeaModel {
     }
 
     public static class ListFlowsResponseBodyFlows extends TeaModel {
+        // The time when the workflow was created.
         @NameInMap("CreateTime")
         public String createTime;
 
+        // The description of the workflow.
         @NameInMap("FlowDescription")
         public String flowDescription;
 
+        // The edit mode of the workflow.
         @NameInMap("FlowEditMode")
         public String flowEditMode;
 
+        // The ID of the workflow.
         @NameInMap("FlowId")
         public String flowId;
 
+        // The name of the workflow.
         @NameInMap("FlowName")
         public String flowName;
 
+        // The source of the workflow.
         @NameInMap("FlowSource")
         public String flowSource;
 
+        // The status of the workflow. Valid values:
+        // 
+        // *   **Enabled**: The workflow is enabled.
+        // *   **Disabled**: The workflow is disabled.
         @NameInMap("FlowStatus")
         public String flowStatus;
 
+        // The region to which the workflow belongs.
         @NameInMap("RegionId")
         public String regionId;
 
+        // The ID of the resource group.
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        // The template ID. You can call the ListTemplates operation to obtain the template ID.
         @NameInMap("TemplateId")
         public String templateId;
 
+        // The time when the workflow was last updated.
         @NameInMap("UpdateTime")
         public String updateTime;
 
+        // The latest version of the workflow.
         @NameInMap("VersionId")
-        public Integer versionId;
+        public String versionId;
 
         public static ListFlowsResponseBodyFlows build(java.util.Map<String, ?> map) throws Exception {
             ListFlowsResponseBodyFlows self = new ListFlowsResponseBodyFlows();
@@ -145,6 +166,14 @@ public class ListFlowsResponseBody extends TeaModel {
             return this.regionId;
         }
 
+        public ListFlowsResponseBodyFlows setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
         public ListFlowsResponseBodyFlows setTemplateId(String templateId) {
             this.templateId = templateId;
             return this;
@@ -161,11 +190,11 @@ public class ListFlowsResponseBody extends TeaModel {
             return this.updateTime;
         }
 
-        public ListFlowsResponseBodyFlows setVersionId(Integer versionId) {
+        public ListFlowsResponseBodyFlows setVersionId(String versionId) {
             this.versionId = versionId;
             return this;
         }
-        public Integer getVersionId() {
+        public String getVersionId() {
             return this.versionId;
         }
 

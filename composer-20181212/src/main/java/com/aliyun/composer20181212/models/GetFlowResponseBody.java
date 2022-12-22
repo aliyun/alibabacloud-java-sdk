@@ -4,42 +4,62 @@ package com.aliyun.composer20181212.models;
 import com.aliyun.tea.*;
 
 public class GetFlowResponseBody extends TeaModel {
+    // The time when the workflow was created.
     @NameInMap("CreateTime")
     public String createTime;
 
+    // The version ID of the workflow.
     @NameInMap("CurrentVersionId")
-    public Integer currentVersionId;
+    public String currentVersionId;
 
+    // The definition of the workflow.
     @NameInMap("Definition")
     public String definition;
 
+    // The description of the workflow.
     @NameInMap("FlowDescription")
     public String flowDescription;
 
+    // The edit mode of the workflow.
     @NameInMap("FlowEditMode")
     public String flowEditMode;
 
+    // The ID of the workflow.
     @NameInMap("FlowId")
     public String flowId;
 
+    // The name of the workflow.
     @NameInMap("FlowName")
     public String flowName;
 
+    // The source of the workflow.
     @NameInMap("FlowSource")
     public String flowSource;
 
+    // The status of the workflow. Valid values:
+    // 
+    // *   **Enabled**: The workflow is enabled.
+    // *   **Disabled**: The workflow is disabled.
     @NameInMap("FlowStatus")
     public String flowStatus;
 
+    // The ID of the region where the workflow resides.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The resource group ID.
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
+    // The template ID.
     @NameInMap("TemplateId")
     public String templateId;
 
+    // The time when the workflow was last updated.
     @NameInMap("UpdateTime")
     public String updateTime;
 
@@ -56,11 +76,11 @@ public class GetFlowResponseBody extends TeaModel {
         return this.createTime;
     }
 
-    public GetFlowResponseBody setCurrentVersionId(Integer currentVersionId) {
+    public GetFlowResponseBody setCurrentVersionId(String currentVersionId) {
         this.currentVersionId = currentVersionId;
         return this;
     }
-    public Integer getCurrentVersionId() {
+    public String getCurrentVersionId() {
         return this.currentVersionId;
     }
 
@@ -134,6 +154,14 @@ public class GetFlowResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public GetFlowResponseBody setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public GetFlowResponseBody setTemplateId(String templateId) {

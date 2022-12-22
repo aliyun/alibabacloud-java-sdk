@@ -4,9 +4,11 @@ package com.aliyun.composer20181212.models;
 import com.aliyun.tea.*;
 
 public class DeleteFlowResponseBody extends TeaModel {
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the operation was successful. Valid values: **true**: The operation was successful. **false**: The operation failed.
     @NameInMap("Success")
     public Boolean success;
 

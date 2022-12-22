@@ -4,12 +4,15 @@ package com.aliyun.composer20181212.models;
 import com.aliyun.tea.*;
 
 public class ListTemplatesResponseBody extends TeaModel {
+    // The unique identifier of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // A list of templates.
     @NameInMap("Templates")
     public java.util.List<ListTemplatesResponseBodyTemplates> templates;
 
+    // The total number of templates.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -43,42 +46,55 @@ public class ListTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListTemplatesResponseBodyTemplates extends TeaModel {
+        // The time when the template was created.
         @NameInMap("CreateTime")
         public String createTime;
 
+        // A list of connectors that are used in the template. The connectors are separated by commas.
         @NameInMap("TemplateConnector")
         public String templateConnector;
 
+        // The publisher of the template.
         @NameInMap("TemplateCreator")
         public String templateCreator;
 
+        // A brief introduction to the template.
         @NameInMap("TemplateDescription")
         public String templateDescription;
 
+        // The ID of the template.
         @NameInMap("TemplateId")
         public String templateId;
 
+        // The language that is used in the template. Chinese and English are supported.
         @NameInMap("TemplateLocale")
         public String templateLocale;
 
+        // The name of the template.
         @NameInMap("TemplateName")
         public String templateName;
 
+        // An overview of the template, which is a JSON string.
         @NameInMap("TemplateOverview")
         public String templateOverview;
 
+        // A description of the template.
         @NameInMap("TemplateSummary")
         public String templateSummary;
 
+        // A brief introduction to the template.
         @NameInMap("TemplateSummaryEn")
         public String templateSummaryEn;
 
+        // The tag of the template.
         @NameInMap("TemplateTag")
         public String templateTag;
 
+        // The version of the template, which is a number that increments from 0.
         @NameInMap("TemplateVersion")
         public Integer templateVersion;
 
+        // The time when the template was last updated.
         @NameInMap("UpdateTime")
         public String updateTime;
 

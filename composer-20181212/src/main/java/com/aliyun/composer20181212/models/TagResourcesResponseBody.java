@@ -4,9 +4,11 @@ package com.aliyun.composer20181212.models;
 import com.aliyun.tea.*;
 
 public class TagResourcesResponseBody extends TeaModel {
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request was successful.
     @NameInMap("Success")
     public Boolean success;
 
@@ -32,15 +34,21 @@ public class TagResourcesResponseBody extends TeaModel {
     }
 
     public static class ListTagResourcesResponseBodyTagResources extends TeaModel {
+        // The ID of the resource.
         @NameInMap("ResourceId")
         public String resourceId;
 
+        // The type of the resource.
+        // 
+        // *   Valid value: ALIYUN::LC::FLOW
         @NameInMap("ResourceType")
         public String resourceType;
 
+        // The key of the tag.
         @NameInMap("TagKey")
         public String tagKey;
 
+        // The value of the tag.
         @NameInMap("TagValue")
         public String tagValue;
 

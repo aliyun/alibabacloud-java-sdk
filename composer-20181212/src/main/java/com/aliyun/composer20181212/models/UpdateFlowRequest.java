@@ -4,15 +4,19 @@ package com.aliyun.composer20181212.models;
 import com.aliyun.tea.*;
 
 public class UpdateFlowRequest extends TeaModel {
+    // The new definition that you want to specify for the workflow.
     @NameInMap("Definition")
     public String definition;
 
+    // The new description that you want to specify for the workflow.
     @NameInMap("FlowDescription")
     public String flowDescription;
 
+    // The ID of the workflow whose information you want to update.
     @NameInMap("FlowId")
     public String flowId;
 
+    // The new name that you want to specify for the workflow.
     @NameInMap("FlowName")
     public String flowName;
 

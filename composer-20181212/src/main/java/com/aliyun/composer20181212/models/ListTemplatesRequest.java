@@ -4,18 +4,23 @@ package com.aliyun.composer20181212.models;
 import com.aliyun.tea.*;
 
 public class ListTemplatesRequest extends TeaModel {
+    // The language that is used in the templates.
     @NameInMap("Lang")
     public String lang;
 
+    // The keyword that is used to search for templates. This parameter is invalid if you specify a tag.
     @NameInMap("Name")
     public String name;
 
+    // The page number of current page.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of templates on each page. A page can contain a maximum of 100 templates. Default value: 10.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The tag that is used to search for templates.
     @NameInMap("Tag")
     public String tag;
 
