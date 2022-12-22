@@ -3,16 +3,15 @@ package com.aliyun.resellertrade20191227.models;
 
 import com.aliyun.tea.*;
 
-public class DiscardCouponListResponseBody extends TeaModel {
+public class OfflineActivityResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
     @NameInMap("ContextMap")
     public java.util.Map<String, ?> contextMap;
 
-    // result data
     @NameInMap("Data")
-    public Boolean data;
+    public java.util.List<Long> data;
 
     @NameInMap("Message")
     public String message;
@@ -23,12 +22,12 @@ public class DiscardCouponListResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    public static DiscardCouponListResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DiscardCouponListResponseBody self = new DiscardCouponListResponseBody();
+    public static OfflineActivityResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        OfflineActivityResponseBody self = new OfflineActivityResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DiscardCouponListResponseBody setCode(String code) {
+    public OfflineActivityResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -36,7 +35,7 @@ public class DiscardCouponListResponseBody extends TeaModel {
         return this.code;
     }
 
-    public DiscardCouponListResponseBody setContextMap(java.util.Map<String, ?> contextMap) {
+    public OfflineActivityResponseBody setContextMap(java.util.Map<String, ?> contextMap) {
         this.contextMap = contextMap;
         return this;
     }
@@ -44,15 +43,15 @@ public class DiscardCouponListResponseBody extends TeaModel {
         return this.contextMap;
     }
 
-    public DiscardCouponListResponseBody setData(Boolean data) {
+    public OfflineActivityResponseBody setData(java.util.List<Long> data) {
         this.data = data;
         return this;
     }
-    public Boolean getData() {
+    public java.util.List<Long> getData() {
         return this.data;
     }
 
-    public DiscardCouponListResponseBody setMessage(String message) {
+    public OfflineActivityResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -60,7 +59,7 @@ public class DiscardCouponListResponseBody extends TeaModel {
         return this.message;
     }
 
-    public DiscardCouponListResponseBody setRequestId(String requestId) {
+    public OfflineActivityResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -68,7 +67,7 @@ public class DiscardCouponListResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DiscardCouponListResponseBody setSuccess(Boolean success) {
+    public OfflineActivityResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
