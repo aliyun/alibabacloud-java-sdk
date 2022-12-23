@@ -65,6 +65,7 @@ public class CreateAgAccountResponseBody extends TeaModel {
     }
 
     public static class CreateAgAccountResponseBodyAgRelationDto extends TeaModel {
+        // MPK（UID）
         @NameInMap("Mpk")
         public String mpk;
 

@@ -104,6 +104,9 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
         @NameInMap("Cycle")
         public String cycle;
 
+        @NameInMap("DeductCycleType")
+        public String deductCycleType;
+
         @NameInMap("EndTime")
         public String endTime;
 
@@ -182,6 +185,14 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
         }
         public String getCycle() {
             return this.cycle;
+        }
+
+        public QuerySavingsPlansInstanceResponseBodyDataItems setDeductCycleType(String deductCycleType) {
+            this.deductCycleType = deductCycleType;
+            return this;
+        }
+        public String getDeductCycleType() {
+            return this.deductCycleType;
         }
 
         public QuerySavingsPlansInstanceResponseBodyDataItems setEndTime(String endTime) {

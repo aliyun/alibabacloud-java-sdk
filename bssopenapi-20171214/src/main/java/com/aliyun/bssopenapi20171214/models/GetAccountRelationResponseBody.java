@@ -7,6 +7,7 @@ public class GetAccountRelationResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    // data
     @NameInMap("Data")
     public GetAccountRelationResponseBodyData data;
 
