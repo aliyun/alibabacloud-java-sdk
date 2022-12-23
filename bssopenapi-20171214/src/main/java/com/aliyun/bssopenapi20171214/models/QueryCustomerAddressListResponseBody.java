@@ -80,6 +80,7 @@ public class QueryCustomerAddressListResponseBody extends TeaModel {
         @NameInMap("DeliveryAddress")
         public String deliveryAddress;
 
+        // ID。
         @NameInMap("Id")
         public Long id;
 

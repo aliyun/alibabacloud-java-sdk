@@ -65,6 +65,7 @@ public class RelieveAccountRelationResponseBody extends TeaModel {
     }
 
     public static class RelieveAccountRelationResponseBodyData extends TeaModel {
+        // hostid
         @NameInMap("HostId")
         public String hostId;
 

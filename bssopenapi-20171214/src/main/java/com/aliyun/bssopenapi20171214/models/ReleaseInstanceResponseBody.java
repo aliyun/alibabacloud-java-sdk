@@ -7,6 +7,7 @@ public class ReleaseInstanceResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    // data
     @NameInMap("Data")
     public ReleaseInstanceResponseBodyData data;
 

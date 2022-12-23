@@ -7,6 +7,7 @@ public class RefundInstanceResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    // data
     @NameInMap("Data")
     public RefundInstanceResponseBodyData data;
 
