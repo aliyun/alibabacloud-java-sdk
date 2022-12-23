@@ -7,6 +7,9 @@ public class UpgradeClusterNodepoolResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("task_id")
+    public String taskId;
+
     public static UpgradeClusterNodepoolResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpgradeClusterNodepoolResponseBody self = new UpgradeClusterNodepoolResponseBody();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class UpgradeClusterNodepoolResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public UpgradeClusterNodepoolResponseBody setTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public String getTaskId() {
+        return this.taskId;
     }
 
 }

@@ -3,7 +3,7 @@ package com.aliyun.cs20151215.models;
 
 import com.aliyun.tea.*;
 
-public class StopAlertResponse extends TeaModel {
+public class SyncClusterNodePoolResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class StopAlertResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public StopAlertResponseBody body;
+    public SyncClusterNodePoolResponseBody body;
 
-    public static StopAlertResponse build(java.util.Map<String, ?> map) throws Exception {
-        StopAlertResponse self = new StopAlertResponse();
+    public static SyncClusterNodePoolResponse build(java.util.Map<String, ?> map) throws Exception {
+        SyncClusterNodePoolResponse self = new SyncClusterNodePoolResponse();
         return TeaModel.build(map, self);
     }
 
-    public StopAlertResponse setHeaders(java.util.Map<String, String> headers) {
+    public SyncClusterNodePoolResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class StopAlertResponse extends TeaModel {
         return this.headers;
     }
 
-    public StopAlertResponse setStatusCode(Integer statusCode) {
+    public SyncClusterNodePoolResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class StopAlertResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public StopAlertResponse setBody(StopAlertResponseBody body) {
+    public SyncClusterNodePoolResponse setBody(SyncClusterNodePoolResponseBody body) {
         this.body = body;
         return this;
     }
-    public StopAlertResponseBody getBody() {
+    public SyncClusterNodePoolResponseBody getBody() {
         return this.body;
     }
 
