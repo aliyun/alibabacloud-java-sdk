@@ -4,15 +4,25 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class UpdateTranscodeTemplateGroupRequest extends TeaModel {
+    // The lock status of the template group. Valid values:
+    // 
+    // *   **Enabled**: The template group is locked.
+    // *   **Disabled**: The template group is not locked.
     @NameInMap("Locked")
     public String locked;
 
+    // The name of the transcoding template group.
+    // 
+    // *   The name can be up to 128 bytes in length.
+    // *   The value must be encoded in UTF-8.
     @NameInMap("Name")
     public String name;
 
+    // The ID of the transcoding template group.
     @NameInMap("TranscodeTemplateGroupId")
     public String transcodeTemplateGroupId;
 
+    // The configurations of the transcoding template. The value is a JSON-formatted string. For more information about the data structure, see the "TranscodeTemplate" section of the [Basic data types](~~52839~~) topic.
     @NameInMap("TranscodeTemplateList")
     public String transcodeTemplateList;
 

@@ -4,9 +4,11 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribeVodDomainConfigsResponseBody extends TeaModel {
+    // The configurations of the domain name.
     @NameInMap("DomainConfigs")
     public DescribeVodDomainConfigsResponseBodyDomainConfigs domainConfigs;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +34,11 @@ public class DescribeVodDomainConfigsResponseBody extends TeaModel {
     }
 
     public static class DescribeVodDomainConfigsResponseBodyDomainConfigsDomainConfigFunctionArgsFunctionArg extends TeaModel {
+        // The name of the parameter.
         @NameInMap("ArgName")
         public String argName;
 
+        // The value of the parameter.
         @NameInMap("ArgValue")
         public String argValue;
 
@@ -81,15 +85,23 @@ public class DescribeVodDomainConfigsResponseBody extends TeaModel {
     }
 
     public static class DescribeVodDomainConfigsResponseBodyDomainConfigsDomainConfig extends TeaModel {
+        // The ID of the configuration.
         @NameInMap("ConfigId")
         public String configId;
 
+        // The parameters of each feature.
         @NameInMap("FunctionArgs")
         public DescribeVodDomainConfigsResponseBodyDomainConfigsDomainConfigFunctionArgs functionArgs;
 
+        // The name of the function.
         @NameInMap("FunctionName")
         public String functionName;
 
+        // The status of the configuration. Valid values:
+        // - **success**
+        // - **testing**
+        // - **failed**
+        // - **configuring**
         @NameInMap("Status")
         public String status;
 

@@ -4,6 +4,7 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetMediaAuditResultRequest extends TeaModel {
+    // The ID of the video or image.
     @NameInMap("MediaId")
     public String mediaId;
 

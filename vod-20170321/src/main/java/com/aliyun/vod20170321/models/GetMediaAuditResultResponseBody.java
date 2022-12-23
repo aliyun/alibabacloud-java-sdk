@@ -4,9 +4,11 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetMediaAuditResultResponseBody extends TeaModel {
+    // The review results.
     @NameInMap("MediaAuditResult")
     public GetMediaAuditResultResponseBodyMediaAuditResult mediaAuditResult;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +34,34 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
     }
 
     public static class GetMediaAuditResultResponseBodyMediaAuditResultAudioResult extends TeaModel {
+        // The category of the review result.
+        // 
+        // *   **normal**
+        // *   **spam**
+        // *   **ad**
+        // *   **politics**
+        // *   **terrorism**
+        // *   **abuse**
+        // *   **porn**
+        // *   **flood**
+        // *   **contraband**
+        // *   **meaningless**
         @NameInMap("Label")
         public String label;
 
+        // The review scenario. The value is **antispam**.
         @NameInMap("Scene")
         public String scene;
 
+        // The score.
         @NameInMap("Score")
         public String score;
 
+        // The recommendation for review results. Valid values:
+        // 
+        // *   **block**
+        // *   **review**
+        // *   **pass**
         @NameInMap("Suggestion")
         public String suggestion;
 
@@ -84,15 +105,49 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
     }
 
     public static class GetMediaAuditResultResponseBodyMediaAuditResultImageResultResult extends TeaModel {
+        // The category of the review result.
+        // 
+        // Valid values if scene is **porn**:
+        // 
+        // *   **porn**
+        // *   **sexy**
+        // *   **normal**
+        // 
+        // Valid values if scene is **terrorism**:
+        // 
+        // *   **normal**
+        // *   **bloody**
+        // *   **explosion**
+        // *   **outfit**
+        // *   **logo**
+        // *   **weapon**
+        // *   **politics**
+        // *   **violence**
+        // *   **crowd**
+        // *   **parade**
+        // *   **carcrash**
+        // *   **flag**
+        // *   **location**
+        // *   **others**
         @NameInMap("Label")
         public String label;
 
+        // The review scenario. Valid values:
+        // 
+        // *   **terrorism**
+        // *   **porn**
         @NameInMap("Scene")
         public String scene;
 
+        // The score of the image of the category that is indicated by Label.
         @NameInMap("Score")
         public String score;
 
+        // The recommendation for review results. Valid values:
+        // 
+        // *   **block**
+        // *   **review**
+        // *   **pass**
         @NameInMap("Suggestion")
         public String suggestion;
 
@@ -136,18 +191,31 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
     }
 
     public static class GetMediaAuditResultResponseBodyMediaAuditResultImageResult extends TeaModel {
+        // The category of the review result. Separate multiple values with commas (,). Valid values:
+        // 
+        // *   **porn**
+        // *   **terrorism**
+        // *   **normal**
         @NameInMap("Label")
         public String label;
 
+        // Details of image review results.
         @NameInMap("Result")
         public java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultImageResultResult> result;
 
+        // The recommendation for review results. Valid values:
+        // 
+        // *   **block**
+        // *   **review**
+        // *   **pass**
         @NameInMap("Suggestion")
         public String suggestion;
 
+        // The type of the image. The value is **cover**.
         @NameInMap("Type")
         public String type;
 
+        // The URL of the image.
         @NameInMap("Url")
         public String url;
 
@@ -199,21 +267,39 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
     }
 
     public static class GetMediaAuditResultResponseBodyMediaAuditResultTextResult extends TeaModel {
+        // The text content for review.
         @NameInMap("Content")
         public String content;
 
+        // The category of the review result. Valid values:
+        // 
+        // - **spam**
+        // - **ad**
+        // - **abuse**
+        // - **flood**
+        // - **contraband**
+        // - **meaningless**
+        // - **normal**
         @NameInMap("Label")
         public String label;
 
+        // The review scenario. The value is **antispam**.
         @NameInMap("Scene")
         public String scene;
 
+        // The score of the image of the category that is indicated by Label.
         @NameInMap("Score")
         public String score;
 
+        // The recommendation for review results. Valid values:
+        // 
+        // - **block**
+        // - **review**
+        // - **pass**
         @NameInMap("Suggestion")
         public String suggestion;
 
+        // The type of the text. The value is **title**.
         @NameInMap("Type")
         public String type;
 
@@ -273,9 +359,14 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
     }
 
     public static class GetMediaAuditResultResponseBodyMediaAuditResultVideoResultAdResultCounterList extends TeaModel {
+        // The number of frames.
         @NameInMap("Count")
         public Integer count;
 
+        // The category of the review result. Valid values:
+        // 
+        // - **ad**
+        // - **normal**
         @NameInMap("Label")
         public String label;
 
@@ -303,15 +394,22 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
     }
 
     public static class GetMediaAuditResultResponseBodyMediaAuditResultVideoResultAdResultTopList extends TeaModel {
+        // The category of the review result. 
+        // 
+        // - **ad**
+        // - **normal**
         @NameInMap("Label")
         public String label;
 
+        // The score of the image of the category that is indicated by Label.
         @NameInMap("Score")
         public String score;
 
+        // The position in the video. Unit: milliseconds.
         @NameInMap("Timestamp")
         public String timestamp;
 
+        // The URL of the image.
         @NameInMap("Url")
         public String url;
 
@@ -355,21 +453,34 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
     }
 
     public static class GetMediaAuditResultResponseBodyMediaAuditResultVideoResultAdResult extends TeaModel {
+        // The average score of the review results.
         @NameInMap("AverageScore")
         public String averageScore;
 
+        // The statistics about tag frames.
         @NameInMap("CounterList")
         public java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultVideoResultAdResultCounterList> counterList;
 
+        // The category of the review result. Valid values:
+        // 
+        // - **ad**
+        // - **normal**
         @NameInMap("Label")
         public String label;
 
+        // The highest review score.
         @NameInMap("MaxScore")
         public String maxScore;
 
+        // The recommendation for review results. Valid values:
+        // 
+        // - **block**
+        // - **review**
+        // - **pass**
         @NameInMap("Suggestion")
         public String suggestion;
 
+        // The information about the image with the highest score of the category that is indicated by Label.
         @NameInMap("TopList")
         public java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultVideoResultAdResultTopList> topList;
 
@@ -429,9 +540,14 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
     }
 
     public static class GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLiveResultCounterList extends TeaModel {
+        // The number of frames.
         @NameInMap("Count")
         public Integer count;
 
+        // The category of the review result. Valid values:
+        // 
+        // - **live**: The content contains undesirable scenes.
+        // - **normal**: normal content.
         @NameInMap("Label")
         public String label;
 
@@ -459,15 +575,22 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
     }
 
     public static class GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLiveResultTopList extends TeaModel {
+        // The category of the review result. Valid values:
+        // 
+        // - **live**: The content contains undesirable scenes.
+        // - **normal**: normal content.
         @NameInMap("Label")
         public String label;
 
+        // The score of the image of the category that is indicated by Label.
         @NameInMap("Score")
         public String score;
 
+        // The position in the video. Unit: milliseconds.
         @NameInMap("Timestamp")
         public String timestamp;
 
+        // The URL of the image.
         @NameInMap("Url")
         public String url;
 
@@ -511,21 +634,34 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
     }
 
     public static class GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLiveResult extends TeaModel {
+        // The average score of the review results.
         @NameInMap("AverageScore")
         public String averageScore;
 
+        // The statistics about tag frames.
         @NameInMap("CounterList")
         public java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLiveResultCounterList> counterList;
 
+        // The category of the review result. Valid values:
+        // 
+        // - **live**: The content contains undesirable scenes.
+        // - **normal**: normal content.
         @NameInMap("Label")
         public String label;
 
+        // The highest review score.
         @NameInMap("MaxScore")
         public String maxScore;
 
+        // The recommendation for review results. Valid values:
+        // 
+        // - **block**
+        // - **review**
+        // - **pass**
         @NameInMap("Suggestion")
         public String suggestion;
 
+        // The information about the image with the highest score of the category that is indicated by Label.
         @NameInMap("TopList")
         public java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLiveResultTopList> topList;
 
@@ -585,9 +721,14 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
     }
 
     public static class GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResultCounterList extends TeaModel {
+        // The number of frames.
         @NameInMap("Count")
         public Integer count;
 
+        // The category of the review result. Valid values:
+        // 
+        // - **logo**
+        // - **normal**
         @NameInMap("Label")
         public String label;
 
@@ -615,15 +756,22 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
     }
 
     public static class GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResultTopList extends TeaModel {
+        // The category of the review result.
+        // 
+        // - **logo**
+        // - **normal**
         @NameInMap("Label")
         public String label;
 
+        // The score of the image of the category that is indicated by Label.
         @NameInMap("Score")
         public String score;
 
+        // The position in the video. Unit: milliseconds.
         @NameInMap("Timestamp")
         public String timestamp;
 
+        // The URL of the image.
         @NameInMap("Url")
         public String url;
 
@@ -667,21 +815,34 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
     }
 
     public static class GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResult extends TeaModel {
+        // The average score of the review results.
         @NameInMap("AverageScore")
         public String averageScore;
 
+        // The statistics about tag frames.
         @NameInMap("CounterList")
         public java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResultCounterList> counterList;
 
+        // The category of the review result. Valid values:
+        // 
+        // - **logo**
+        // - **normal**
         @NameInMap("Label")
         public String label;
 
+        // The highest review score.
         @NameInMap("MaxScore")
         public String maxScore;
 
+        // The recommendation for review results. Valid values:
+        // 
+        // - **block**
+        // - **review**
+        // - **pass**
         @NameInMap("Suggestion")
         public String suggestion;
 
+        // The information about the image with the highest score of the category that is indicated by Label.
         @NameInMap("TopList")
         public java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResultTopList> topList;
 
@@ -741,9 +902,15 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
     }
 
     public static class GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResultCounterList extends TeaModel {
+        // The number of frames.
         @NameInMap("Count")
         public Integer count;
 
+        // The category of the review result. Valid values:
+        // 
+        // - **porn**
+        // - **sexy**
+        // - **normal**
         @NameInMap("Label")
         public String label;
 
@@ -771,15 +938,23 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
     }
 
     public static class GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResultTopList extends TeaModel {
+        // The category of the review result. Valid values:
+        // 
+        // - **porn**
+        // - **sexy**
+        // - **normal**
         @NameInMap("Label")
         public String label;
 
+        // The score of the image of the category that is indicated by Label.
         @NameInMap("Score")
         public String score;
 
+        // The position in the video. Unit: milliseconds.
         @NameInMap("Timestamp")
         public String timestamp;
 
+        // The URL of the image.
         @NameInMap("Url")
         public String url;
 
@@ -823,21 +998,31 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
     }
 
     public static class GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResult extends TeaModel {
+        // The average score of the review results.
         @NameInMap("AverageScore")
         public String averageScore;
 
+        // The statistics about tag frames.
         @NameInMap("CounterList")
         public java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResultCounterList> counterList;
 
+        // The category of the review result. Valid values:
+        // 
+        // - **porn**
+        // - **sexy**
+        // - **normal**
         @NameInMap("Label")
         public String label;
 
+        // The highest review score.
         @NameInMap("MaxScore")
         public String maxScore;
 
+        // The recommendation for review results.
         @NameInMap("Suggestion")
         public String suggestion;
 
+        // The information about the image with the highest score of the category that is indicated by Label.
         @NameInMap("TopList")
         public java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResultTopList> topList;
 
@@ -897,9 +1082,26 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
     }
 
     public static class GetMediaAuditResultResponseBodyMediaAuditResultVideoResultTerrorismResultCounterList extends TeaModel {
+        // The number of frames.
         @NameInMap("Count")
         public Integer count;
 
+        // The category of the review result. Valid values:
+        // 
+        // - **normal**
+        // - **bloody**
+        // - **explosion**
+        // - **outfit**
+        // - **logo**
+        // - **weapon**
+        // - **politics**
+        // - **violence**
+        // - **crowd**
+        // - **parade**
+        // - **carcrash**
+        // - **flag**
+        // - **location**
+        // - **others**
         @NameInMap("Label")
         public String label;
 
@@ -927,15 +1129,34 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
     }
 
     public static class GetMediaAuditResultResponseBodyMediaAuditResultVideoResultTerrorismResultTopList extends TeaModel {
+        // The category of the review result. Valid values:
+        // 
+        // - **normal**
+        // - **bloody**
+        // - **explosion**
+        // - **outfit**
+        // - **logo**
+        // - **weapon**
+        // - **politics**
+        // - **violence**
+        // - **crowd**
+        // - **parade**
+        // - **carcrash**
+        // - **flag**
+        // - **location**
+        // - **others**
         @NameInMap("Label")
         public String label;
 
+        // The score of the image of the category that is indicated by Label.
         @NameInMap("Score")
         public String score;
 
+        // The position in the video. Unit: milliseconds.
         @NameInMap("Timestamp")
         public String timestamp;
 
+        // The URL of the image.
         @NameInMap("Url")
         public String url;
 
@@ -979,21 +1200,46 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
     }
 
     public static class GetMediaAuditResultResponseBodyMediaAuditResultVideoResultTerrorismResult extends TeaModel {
+        // The average score of the review results.
         @NameInMap("AverageScore")
         public String averageScore;
 
+        // The statistics about tag frames.
         @NameInMap("CounterList")
         public java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultVideoResultTerrorismResultCounterList> counterList;
 
+        // The category of the review result. Valid values:
+        // 
+        // - **normal**
+        // - **bloody**
+        // - **explosion**
+        // - **outfit**
+        // - **logo**
+        // - **weapon**
+        // - **politics**
+        // - **violence**
+        // - **crowd**
+        // - **parade**
+        // - **carcrash**
+        // - **flag**
+        // - **location**
+        // - **others**
         @NameInMap("Label")
         public String label;
 
+        // The highest review score.
         @NameInMap("MaxScore")
         public String maxScore;
 
+        // The recommendation for review results. Valid values:
+        // 
+        // - **block**
+        // - **review**
+        // - **pass**
         @NameInMap("Suggestion")
         public String suggestion;
 
+        // The information about the image with the highest score of the category that is indicated by Label.
         @NameInMap("TopList")
         public java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultVideoResultTerrorismResultTopList> topList;
 
@@ -1053,24 +1299,39 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
     }
 
     public static class GetMediaAuditResultResponseBodyMediaAuditResultVideoResult extends TeaModel {
+        // The results of ad review.
         @NameInMap("AdResult")
         public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultAdResult adResult;
 
+        // The category of the review result. Separate multiple values with commas (,). Valid values: 
+        // 
+        // - **porn**
+        // - **terrorism**
+        // - **normal**
         @NameInMap("Label")
         public String label;
 
+        // The results of undesired content review.
         @NameInMap("LiveResult")
         public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLiveResult liveResult;
 
+        // The results of logo review.
         @NameInMap("LogoResult")
         public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResult logoResult;
 
+        // The results of pornographic content review.
         @NameInMap("PornResult")
         public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResult pornResult;
 
+        // The recommendation for review results. Valid values:
+        // 
+        // - **block**
+        // - **review**
+        // - **pass**
         @NameInMap("Suggestion")
         public String suggestion;
 
+        // The results of terrorist content review.
         @NameInMap("TerrorismResult")
         public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultTerrorismResult terrorismResult;
 
@@ -1138,24 +1399,43 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
     }
 
     public static class GetMediaAuditResultResponseBodyMediaAuditResult extends TeaModel {
+        // The content that violates the regulations. Separate multiple values with commas (,). Valid values:
+        // 
+        // *   **video**
+        // *   **image-cover**
+        // *   **text-title**
         @NameInMap("AbnormalModules")
         public String abnormalModules;
 
+        // The results of audio review.
         @NameInMap("AudioResult")
         public java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultAudioResult> audioResult;
 
+        // The results of image review.
         @NameInMap("ImageResult")
         public java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultImageResult> imageResult;
 
+        // The category of the review result. Separate multiple values with commas (,). Valid values:
+        // 
+        // *   **porn**
+        // *   **terrorism**
+        // *   **normal**
         @NameInMap("Label")
         public String label;
 
+        // The recommendation for review results. Valid values:
+        // 
+        // *   **block**
+        // *   **review**
+        // *   **pass**
         @NameInMap("Suggestion")
         public String suggestion;
 
+        // The results of text review.
         @NameInMap("TextResult")
         public java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultTextResult> textResult;
 
+        // The results of video review.
         @NameInMap("VideoResult")
         public GetMediaAuditResultResponseBodyMediaAuditResultVideoResult videoResult;
 

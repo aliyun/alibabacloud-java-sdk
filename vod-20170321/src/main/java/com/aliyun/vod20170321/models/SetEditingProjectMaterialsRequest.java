@@ -4,6 +4,7 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class SetEditingProjectMaterialsRequest extends TeaModel {
+    // The ID of the material. A material is a media asset, such as a video, an image, or an auxiliary media asset. Separate multiple material IDs with commas (,).
     @NameInMap("MaterialIds")
     public String materialIds;
 
@@ -13,6 +14,7 @@ public class SetEditingProjectMaterialsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public String ownerId;
 
+    // The ID of the online editing project.
     @NameInMap("ProjectId")
     public String projectId;
 

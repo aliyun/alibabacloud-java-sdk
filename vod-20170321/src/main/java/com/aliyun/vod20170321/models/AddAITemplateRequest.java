@@ -4,12 +4,18 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class AddAITemplateRequest extends TeaModel {
+    // The detailed configurations of the AI template. The value is a JSON string.
     @NameInMap("TemplateConfig")
     public String templateConfig;
 
+    // The name of the AI template. The name can be up to 128 bytes in length.
     @NameInMap("TemplateName")
     public String templateName;
 
+    // The type of the AI template. Valid values:
+    // 
+    // *   **AIMediaAudit**: automated review
+    // *   **AIImage**: smart thumbnail
     @NameInMap("TemplateType")
     public String templateType;
 

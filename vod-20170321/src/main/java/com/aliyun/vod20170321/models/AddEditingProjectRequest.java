@@ -4,12 +4,15 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class AddEditingProjectRequest extends TeaModel {
+    // The thumbnail URL of the online editing project. If you do not specify this parameter and the video track in the timeline has mezzanine files, the thumbnail of the first mezzanine file in the timeline is used.
     @NameInMap("CoverURL")
     public String coverURL;
 
+    // The description of the online editing project.
     @NameInMap("Description")
     public String description;
 
+    // The region where you want to create the online editing project.
     @NameInMap("Division")
     public String division;
 
@@ -25,9 +28,13 @@ public class AddEditingProjectRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public String resourceOwnerId;
 
+    // The timeline of the online editing project, in JSON format. For more information about the structure, see [Timeline](~~52839~~).
+    // 
+    // If you do not specify this parameter, an empty timeline is created and the duration of the online editing project is zero.
     @NameInMap("Timeline")
     public String timeline;
 
+    // The title of the online editing project.
     @NameInMap("Title")
     public String title;
 

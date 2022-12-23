@@ -4,27 +4,39 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
+    // The region where the data was queried.
     @NameInMap("Area")
     public String area;
 
+    // The time interval between the returned entries. Unit: seconds.
     @NameInMap("DataInterval")
     public String dataInterval;
 
+    // The domain name for CDN.
     @NameInMap("DomainName")
     public String domainName;
 
+    // The end of the time range in which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
     @NameInMap("EndTime")
     public String endTime;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The beginning of the time range in which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
     @NameInMap("StartTime")
     public String startTime;
 
+    // The type of the content based on which the data is generated. Valid values:
+    // 
+    // *   **static**
+    // *   **dynamic**
+    // *   **all**
     @NameInMap("Type")
     public String type;
 
+    // The details of traffic or bandwidth data.
     @NameInMap("UsageDataPerInterval")
     public DescribeVodDomainUsageDataResponseBodyUsageDataPerInterval usageDataPerInterval;
 
@@ -98,9 +110,11 @@ public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
     }
 
     public static class DescribeVodDomainUsageDataResponseBodyUsageDataPerIntervalDataModule extends TeaModel {
+        // The timestamp of the returned data. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
         @NameInMap("TimeStamp")
         public String timeStamp;
 
+        // The traffic or bandwidth data. The unit of bandwidth is bit/s.
         @NameInMap("Value")
         public String value;
 

@@ -4,9 +4,11 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class ListDynamicImageResponseBody extends TeaModel {
+    // The list of animated stickers.
     @NameInMap("DynamicImageList")
     public java.util.List<ListDynamicImageResponseBodyDynamicImageList> dynamicImageList;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,36 +34,47 @@ public class ListDynamicImageResponseBody extends TeaModel {
     }
 
     public static class ListDynamicImageResponseBodyDynamicImageList extends TeaModel {
+        // The time when the animated sticker was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
         @NameInMap("CreationTime")
         public String creationTime;
 
+        // The duration of the animated sticker. Unit: seconds.
         @NameInMap("Duration")
         public String duration;
 
+        // The ID of the animated sticker.
         @NameInMap("DynamicImageId")
         public String dynamicImageId;
 
+        // The size of the animated sticker file. Unit: byte.
         @NameInMap("FileSize")
         public String fileSize;
 
+        // The URL of the animated sticker file.
         @NameInMap("FileURL")
         public String fileURL;
 
+        // The format of the animated sticker. Valid values: gif and webp.
         @NameInMap("Format")
         public String format;
 
+        // The frame rate of the animated sticker. Unit: frames per second.
         @NameInMap("Fps")
         public String fps;
 
+        // The height of the animated sticker. Unit: pixel.
         @NameInMap("Height")
         public String height;
 
+        // The job ID for creating the animated sticker.
         @NameInMap("JobId")
         public String jobId;
 
+        // The ID of the video.
         @NameInMap("VideoId")
         public String videoId;
 
+        // The width of the animated sticker. Unit: pixel.
         @NameInMap("Width")
         public String width;
 

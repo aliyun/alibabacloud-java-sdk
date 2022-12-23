@@ -4,6 +4,7 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DeleteMessageCallbackRequest extends TeaModel {
+    // The ID of the application. If you do not set this parameter, the default value **app-1000000** is used.
     @NameInMap("AppId")
     public String appId;
 

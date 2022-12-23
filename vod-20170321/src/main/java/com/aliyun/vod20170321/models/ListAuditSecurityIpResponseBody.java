@@ -4,9 +4,11 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class ListAuditSecurityIpResponseBody extends TeaModel {
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The details of the review security group.
     @NameInMap("SecurityIpList")
     public java.util.List<ListAuditSecurityIpResponseBodySecurityIpList> securityIpList;
 
@@ -32,15 +34,19 @@ public class ListAuditSecurityIpResponseBody extends TeaModel {
     }
 
     public static class ListAuditSecurityIpResponseBodySecurityIpList extends TeaModel {
+        // The time when the review security group was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
         @NameInMap("CreationTime")
         public String creationTime;
 
+        // The IP addresses in the review security group.
         @NameInMap("Ips")
         public String ips;
 
+        // The time when the review security group was last modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
         @NameInMap("ModificationTime")
         public String modificationTime;
 
+        // The name of the review security group.
         @NameInMap("SecurityGroupName")
         public String securityGroupName;
 

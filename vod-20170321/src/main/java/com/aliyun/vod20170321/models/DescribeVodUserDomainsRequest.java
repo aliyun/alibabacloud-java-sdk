@@ -4,27 +4,43 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribeVodUserDomainsRequest extends TeaModel {
+    // The domain name. The value of this parameter is used as a filter condition for a fuzzy match.
     @NameInMap("DomainName")
     public String domainName;
 
+    // The search method. Valid values:
+    // *   **fuzzy_match**: fuzzy match. This is the default value.
+    // *   **pre_match**: prefix match.
+    // *   **suf_match**: suffix match.
+    // *   **full_match**: exact match.
     @NameInMap("DomainSearchType")
     public String domainSearchType;
 
+    // The status of the domain name. The value of this parameter is used as a condition to filter domain names. Value values:
+    // *   **online**: indicates that the domain name is enabled.
+    // *   **offline**: indicates that the domain name is disabled.
+    // *   **configuring**: indicates that the domain name is being configured.
+    // *   **configure_failed**: indicates that the domain name failed to be configured.
+    // *   **checking**: indicates that the domain name is under review.
+    // *   **check_failed**: indicates that the domain name failed the review.
     @NameInMap("DomainStatus")
     public String domainStatus;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The number of the page to return.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries to return on each page. Default value: **20**. Maximum value: **50**. Valid values: integers in the range of **1** to **50**.
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    // Tag.
     @NameInMap("Tag")
     public java.util.List<DescribeVodUserDomainsRequestTag> tag;
 
@@ -98,9 +114,15 @@ public class DescribeVodUserDomainsRequest extends TeaModel {
     }
 
     public static class DescribeVodUserDomainsRequestTag extends TeaModel {
+        // The key of tag N. Valid values of N: **1** to **20**.
+        // 
+        // If you do not specify this parameter, all tag keys are queried.
         @NameInMap("Key")
         public String key;
 
+        // The value of tag N. Valid values of N: **1** to **20**.
+        // 
+        // If you do not specify this parameter, all tag values are queried.
         @NameInMap("Value")
         public String value;
 

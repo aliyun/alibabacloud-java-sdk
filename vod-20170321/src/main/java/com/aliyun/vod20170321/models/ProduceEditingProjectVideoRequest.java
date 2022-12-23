@@ -4,21 +4,26 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class ProduceEditingProjectVideoRequest extends TeaModel {
+    // The thumbnail URL of the online editing project.
     @NameInMap("CoverURL")
     public String coverURL;
 
+    // The description of the online editing project.
     @NameInMap("Description")
     public String description;
 
+    // The metadata of the produced video, in JSON format. For more information about the structure, see [MediaMetadata](~~52839~~).
     @NameInMap("MediaMetadata")
     public String mediaMetadata;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The configuration of video production, in JSON format. For more information about the structure, see [ProduceConfig](~~52839~~).
     @NameInMap("ProduceConfig")
     public String produceConfig;
 
+    // The ID of the online editing project.
     @NameInMap("ProjectId")
     public String projectId;
 
@@ -28,12 +33,17 @@ public class ProduceEditingProjectVideoRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    // The timeline of the online editing project, in JSON format. For more information about the structure, see [Timeline](~~52839~~).
     @NameInMap("Timeline")
     public String timeline;
 
+    // The title of the online editing project.
     @NameInMap("Title")
     public String title;
 
+    // The custom configuration, such as the callback configuration. The value is a JSON-formatted string. For more information about the structure, see [UserData](~~86952~~).
+    // 
+    // > To use the MessageCallback parameter, you must set an HTTP callback URL and select a callback event type in the ApsaraVideo VOD console. Otherwise, the callback configuration does not take effect.
     @NameInMap("UserData")
     public String userData;
 

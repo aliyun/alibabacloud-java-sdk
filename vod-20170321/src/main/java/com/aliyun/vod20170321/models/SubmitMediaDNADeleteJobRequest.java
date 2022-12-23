@@ -4,6 +4,7 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class SubmitMediaDNADeleteJobRequest extends TeaModel {
+    // The ID of the video.
     @NameInMap("MediaId")
     public String mediaId;
 

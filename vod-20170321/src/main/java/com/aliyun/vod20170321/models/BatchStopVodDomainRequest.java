@@ -4,6 +4,7 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class BatchStopVodDomainRequest extends TeaModel {
+    // The domain name for CDN. Separate multiple domain names with commas (,).
     @NameInMap("DomainNames")
     public String domainNames;
 

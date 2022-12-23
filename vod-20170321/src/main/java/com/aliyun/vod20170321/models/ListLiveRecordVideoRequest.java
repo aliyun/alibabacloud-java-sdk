@@ -4,27 +4,37 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class ListLiveRecordVideoRequest extends TeaModel {
+    // The name of the application that was used to record the live stream.
     @NameInMap("AppName")
     public String appName;
 
+    // The domain name of the recorded live stream.
     @NameInMap("DomainName")
     public String domainName;
 
+    // The end of the time range to query. The query is performed based on the time range during which the required live streams were recorded. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
     @NameInMap("EndTime")
     public String endTime;
 
+    // The number of the page to return. Default value: **1**.
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    // The number of entries to return on each page. Maximum value: **100**. Default value: **10**.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The sorting rule of results. Valid values:
+    // *   **CreationTime:Desc**: sorts the results based on the creation time in descending order. This is the default value.
+    // *   **CreationTime:Asc**: sorts the results based on the creation time in ascending order.
     @NameInMap("SortBy")
     public String sortBy;
 
+    // The beginning of the time range to query. The query is performed based on the time range during which the required live streams were recorded. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
     @NameInMap("StartTime")
     public String startTime;
 
+    // The name of the recorded live stream.
     @NameInMap("StreamName")
     public String streamName;
 

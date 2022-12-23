@@ -4,9 +4,11 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DeleteVodSpecificConfigRequest extends TeaModel {
+    // The ID of the configuration.
     @NameInMap("ConfigId")
     public String configId;
 
+    // The domain name for CDN.
     @NameInMap("DomainName")
     public String domainName;
 

@@ -4,12 +4,15 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DetachAppPolicyFromIdentityResponseBody extends TeaModel {
+    // The name of the policy that failed to be detached from the identity.
     @NameInMap("FailedPolicyNames")
     public java.util.List<String> failedPolicyNames;
 
+    // The name of the policy that was not found.
     @NameInMap("NonExistPolicyNames")
     public java.util.List<String> nonExistPolicyNames;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

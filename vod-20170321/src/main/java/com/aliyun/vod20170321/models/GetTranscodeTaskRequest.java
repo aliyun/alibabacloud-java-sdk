@@ -4,6 +4,10 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetTranscodeTaskRequest extends TeaModel {
+    // The ID of the transcoding task. You can use one of the following methods to obtain the ID:
+    // 
+    // *   Obtain the value of TranscodeTaskId from the response to the [SubmitTranscodeJobs](~~68570~~) operation.
+    // *   Obtain the value of TranscodeTaskId from the response to the [ListTranscodeTask](~~109120~~) operation.
     @NameInMap("TranscodeTaskId")
     public String transcodeTaskId;
 

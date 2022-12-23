@@ -4,18 +4,23 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribeVodUserDomainsResponseBody extends TeaModel {
+    // The detailed information about each domain name for CDN. The returned information is displayed in the format that is specified by the PageData parameter.
     @NameInMap("Domains")
     public DescribeVodUserDomainsResponseBodyDomains domains;
 
+    // The page number of the returned page.
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    // The number of entries returned per page.
     @NameInMap("PageSize")
     public Long pageSize;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The total number of entries returned.
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -65,15 +70,23 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
     }
 
     public static class DescribeVodUserDomainsResponseBodyDomainsPageDataSourcesSource extends TeaModel {
+        // The address of the origin server.
         @NameInMap("Content")
         public String content;
 
+        // The port number. Valid values: **443** and **80**.
         @NameInMap("Port")
         public Integer port;
 
+        // The priority of the origin server.
         @NameInMap("Priority")
         public String priority;
 
+        // The type of the origin server. Valid values:
+        // 
+        // *   **ipaddr**: a server that you can access by using an IP address.
+        // *   **domain**: a server that you can access by using a domain name.
+        // *   **oss**: an Object Storage Service (OSS) bucket.
         @NameInMap("Type")
         public String type;
 
@@ -136,30 +149,49 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
     }
 
     public static class DescribeVodUserDomainsResponseBodyDomainsPageData extends TeaModel {
+        // The canonical domain name that is assigned to the domain name for CDN.
         @NameInMap("Cname")
         public String cname;
 
+        // The remarks.
         @NameInMap("Description")
         public String description;
 
+        // The domain name for CDN.
         @NameInMap("DomainName")
         public String domainName;
 
+        // The status of the domain name for CDN. Valid values:
+        // 
+        // *   **online**: indicates that the domain name is enabled.
+        // *   **offline**: indicates that the domain name is disabled.
+        // *   **configuring**: indicates that the domain name is being configured.
+        // *   **configure_failed**: indicates that the domain name failed to be configured.
+        // *   **checking**: indicates that the domain name is under review.
+        // *   **check_failed**: indicates that the domain name failed the review.
         @NameInMap("DomainStatus")
         public String domainStatus;
 
+        // The time when the domain name for CDN was added. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
         @NameInMap("GmtCreated")
         public String gmtCreated;
 
+        // The last time when the domain name for CDN was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        // Indicates whether the domain name for CDN is in a sandbox environment.
         @NameInMap("Sandbox")
         public String sandbox;
 
+        // The information about the origin server.
         @NameInMap("Sources")
         public DescribeVodUserDomainsResponseBodyDomainsPageDataSources sources;
 
+        // Indicates whether HTTPS is enabled.
+        // 
+        // - **on**: indicates that HTTPS is enabled.
+        // - **off**: indicates that HTTPS is disabled.
         @NameInMap("SslProtocol")
         public String sslProtocol;
 

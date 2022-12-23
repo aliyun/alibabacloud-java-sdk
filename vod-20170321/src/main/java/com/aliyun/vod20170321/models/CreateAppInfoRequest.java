@@ -4,9 +4,16 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class CreateAppInfoRequest extends TeaModel {
+    // The name of the application, which must be unique. 
+    // 
+    // - The name can contain up to 128 characters in length, including Chinese letters, digits, and periods (.), dash (-), and at character (@).
+    // - The name can contain only UTF-8 characters.
     @NameInMap("AppName")
     public String appName;
 
+    // The description of the application. 
+    // - The description can contain up to 512 characters in length.
+    // - The description can contain only UTF-8 characters.
     @NameInMap("Description")
     public String description;
 

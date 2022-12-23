@@ -4,9 +4,11 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DeleteTranscodeTemplateGroupResponseBody extends TeaModel {
+    // The IDs of transcoding templates that were not found when the system removed transcoding templates based on the IDs.
     @NameInMap("NonExistTranscodeTemplateIds")
     public java.util.List<String> nonExistTranscodeTemplateIds;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

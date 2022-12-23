@@ -4,15 +4,19 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GenerateKMSDataKeyResponseBody extends TeaModel {
+    // The ciphertext of the encrypted data key. This is used as CipherText when you create a transcoding job.
     @NameInMap("CiphertextBlob")
     public String ciphertextBlob;
 
+    // The ID of the customer master key (CMK). The ID must be globally unique.
     @NameInMap("KeyId")
     public String keyId;
 
+    // The Base64-encoded plaintext of the data key.
     @NameInMap("Plaintext")
     public String plaintext;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

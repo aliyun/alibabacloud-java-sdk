@@ -4,9 +4,11 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetVodTemplateResponseBody extends TeaModel {
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The information about the snapshot template.
     @NameInMap("VodTemplateInfo")
     public GetVodTemplateResponseBodyVodTemplateInfo vodTemplateInfo;
 
@@ -32,24 +34,37 @@ public class GetVodTemplateResponseBody extends TeaModel {
     }
 
     public static class GetVodTemplateResponseBodyVodTemplateInfo extends TeaModel {
+        // The time when the template was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
         @NameInMap("CreationTime")
         public String creationTime;
 
+        // Indicates whether the template is the default one. Valid values:
+        // 
+        // *   **Default**: The template is the default one.
+        // *   **NotDefault**: The template is not the default one.
         @NameInMap("IsDefault")
         public String isDefault;
 
+        // The time when the template was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
         @NameInMap("ModifyTime")
         public String modifyTime;
 
+        // The name of the template.
         @NameInMap("Name")
         public String name;
 
+        // The detailed configurations of the template. The value is a JSON-formatted string. For more information about the data structure, see the "SnapshotTemplateConfig" section of the [Media processing parameters](~~98618~~) topic.
         @NameInMap("TemplateConfig")
         public String templateConfig;
 
+        // The type of the template. Valid values:
+        // 
+        // *   **Snapshot**
+        // *   **DynamicImage**
         @NameInMap("TemplateType")
         public String templateType;
 
+        // The ID of the template.
         @NameInMap("VodTemplateId")
         public String vodTemplateId;
 

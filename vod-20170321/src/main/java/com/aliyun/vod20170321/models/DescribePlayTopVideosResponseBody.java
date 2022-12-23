@@ -4,18 +4,23 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribePlayTopVideosResponseBody extends TeaModel {
+    // The page number of the returned page.
     @NameInMap("PageNo")
     public Long pageNo;
 
+    // The number of entries returned per page.
     @NameInMap("PageSize")
     public Long pageSize;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The daily playback statistics on each top video.
     @NameInMap("TopPlayVideos")
     public DescribePlayTopVideosResponseBodyTopPlayVideos topPlayVideos;
 
+    // The total number of entries that were collected in playback statistics on top videos.
     @NameInMap("TotalNum")
     public Long totalNum;
 
@@ -65,18 +70,23 @@ public class DescribePlayTopVideosResponseBody extends TeaModel {
     }
 
     public static class DescribePlayTopVideosResponseBodyTopPlayVideosTopPlayVideoStatis extends TeaModel {
+        // The playback duration. Unit: milliseconds.
         @NameInMap("PlayDuration")
         public String playDuration;
 
+        // The title of the video.
         @NameInMap("Title")
         public String title;
 
+        // The number of unique visitors.
         @NameInMap("UV")
         public String UV;
 
+        // The number of video views.
         @NameInMap("VV")
         public String VV;
 
+        // The ID of the video.
         @NameInMap("VideoId")
         public String videoId;
 

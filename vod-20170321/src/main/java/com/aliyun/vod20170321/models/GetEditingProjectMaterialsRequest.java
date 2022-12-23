@@ -4,6 +4,11 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetEditingProjectMaterialsRequest extends TeaModel {
+    // The type of the material. Valid values:
+    // 
+    // *   **video**
+    // *   **audio**
+    // *   **image**
     @NameInMap("MaterialType")
     public String materialType;
 
@@ -13,6 +18,10 @@ public class GetEditingProjectMaterialsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public String ownerId;
 
+    // The ID of the online editing project. You can use one of the following methods to obtain the ID of the online editing project:
+    // 
+    // *   Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Production Center** > **Video Editing** to obtain the ID of the specified online editing project.
+    // *   Call the **AddEditingProject** operation. The value of the response parameter ProjectId is the ID of the specified online editing project.
     @NameInMap("ProjectId")
     public String projectId;
 
@@ -22,6 +31,10 @@ public class GetEditingProjectMaterialsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public String resourceOwnerId;
 
+    // The type of the material. Valid values:
+    // 
+    // *   **video**
+    // *   **audio**
     @NameInMap("Type")
     public String type;
 

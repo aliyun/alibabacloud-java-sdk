@@ -4,12 +4,18 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribeVodAIDataResponseBody extends TeaModel {
+    // The statistics on video AI.
     @NameInMap("AIData")
     public DescribeVodAIDataResponseBodyAIData AIData;
 
+    // The time granularity at which the data was queried. Valid values:
+    // 
+    // - **hour**
+    // - **day**
     @NameInMap("DataInterval")
     public String dataInterval;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,9 +49,15 @@ public class DescribeVodAIDataResponseBody extends TeaModel {
     }
 
     public static class DescribeVodAIDataResponseBodyAIDataAIDataItemDataDataItem extends TeaModel {
+        // The type of video AI. Valid values:
+        // 
+        // - **AIVideoCensor**: automated review
+        // - **AIVideoFPShot**: media fingerprinting
+        // - **AIVideoTag**: smart tag
         @NameInMap("Name")
         public String name;
 
+        // The processing duration. Unit: seconds.
         @NameInMap("Value")
         public String value;
 
@@ -92,9 +104,11 @@ public class DescribeVodAIDataResponseBody extends TeaModel {
     }
 
     public static class DescribeVodAIDataResponseBodyAIDataAIDataItem extends TeaModel {
+        // The statistics on video AI of each type.
         @NameInMap("Data")
         public DescribeVodAIDataResponseBodyAIDataAIDataItemData data;
 
+        // The timestamp of the returned data. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
         @NameInMap("TimeStamp")
         public String timeStamp;
 

@@ -4,9 +4,11 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetMediaRefreshJobsResponseBody extends TeaModel {
+    // The media refresh or prefetch jobs.
     @NameInMap("MediaRefreshJobs")
     public java.util.List<GetMediaRefreshJobsResponseBodyMediaRefreshJobs> mediaRefreshJobs;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,39 +34,57 @@ public class GetMediaRefreshJobsResponseBody extends TeaModel {
     }
 
     public static class GetMediaRefreshJobsResponseBodyMediaRefreshJobs extends TeaModel {
+        // The error code. This parameter is returned if the refresh or prefetch task fails.
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        // The error message. This parameter is returned if the refresh or prefetch task fails.
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        // The filtering conditions for stream playback. The value is a JSON string. This parameter is used as a request parameter of the [RefreshMediaPlayUrls](~~RefreshMediaPlayUrls~~) operation.
         @NameInMap("FilterPolicy")
         public String filterPolicy;
 
+        // The time when the task was created.
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        // The time when the task was modified.
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        // The ID of the media file.
         @NameInMap("MediaId")
         public String mediaId;
 
+        // The ID of the job.
         @NameInMap("MediaRefreshJobId")
         public String mediaRefreshJobId;
 
+        // The status of the job. Valid values:
+        // 
+        // *   **success**
+        // *   **fail**
         @NameInMap("Status")
         public String status;
 
+        // The playback URLs that were refreshed or prefetched.
         @NameInMap("SuccessPlayUrls")
         public String successPlayUrls;
 
+        // The IDs of the refresh or prefetch tasks for the playback URLs of media files. Only one URL can be refreshed or prefetched in a task. This value is used in the [DescribeVodRefreshTasks](~~DescribeVodRefreshTasks~~) operation, which queries the status of refresh or prefetch tasks for playback URLs of media files.
         @NameInMap("TaskIds")
         public String taskIds;
 
+        // The type of the job. Valid values:
+        // 
+        // *   **Refresh**
+        // *   **Preload**
         @NameInMap("TaskType")
         public String taskType;
 
+        // The user data that you passed when you submit a refresh or prefetch task.
         @NameInMap("UserData")
         public String userData;
 

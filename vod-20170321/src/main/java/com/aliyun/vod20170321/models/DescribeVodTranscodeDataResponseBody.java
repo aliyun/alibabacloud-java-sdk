@@ -4,12 +4,18 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribeVodTranscodeDataResponseBody extends TeaModel {
+    // The time granularity at which the data was queried. Valid values:
+    // 
+    // *   **hour**
+    // *   **day**
     @NameInMap("DataInterval")
     public String dataInterval;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The statistics on transcoding.
     @NameInMap("TranscodeData")
     public DescribeVodTranscodeDataResponseBodyTranscodeData transcodeData;
 
@@ -43,9 +49,15 @@ public class DescribeVodTranscodeDataResponseBody extends TeaModel {
     }
 
     public static class DescribeVodTranscodeDataResponseBodyTranscodeDataTranscodeDataItemDataDataItem extends TeaModel {
+        // The transcoding specification. Valid values:
+        // 
+        // *   **Audio**: audio transcoding
+        // *   **Segmentation**: container format conversion
+        // *   H.264 and H.265-related video transcoding specifications, such as **H264.LD, H264.SD, H264.HD, H264.2K, and H264.4K**
         @NameInMap("Name")
         public String name;
 
+        // The transcoding length. Unit: seconds.
         @NameInMap("Value")
         public String value;
 
@@ -92,9 +104,11 @@ public class DescribeVodTranscodeDataResponseBody extends TeaModel {
     }
 
     public static class DescribeVodTranscodeDataResponseBodyTranscodeDataTranscodeDataItem extends TeaModel {
+        // The statistics on transcoding of different specifications.
         @NameInMap("Data")
         public DescribeVodTranscodeDataResponseBodyTranscodeDataTranscodeDataItemData data;
 
+        // The timestamp of the returned data. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
         @NameInMap("TimeStamp")
         public String timeStamp;
 

@@ -4,12 +4,18 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribeVodStorageDataResponseBody extends TeaModel {
+    // The time granularity at which the data was queried. Valid values:
+    // 
+    // *   **hour**
+    // *   **day**
     @NameInMap("DataInterval")
     public String dataInterval;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The detailed usage of storage-related resources.
     @NameInMap("StorageData")
     public DescribeVodStorageDataResponseBodyStorageData storageData;
 
@@ -43,12 +49,15 @@ public class DescribeVodStorageDataResponseBody extends TeaModel {
     }
 
     public static class DescribeVodStorageDataResponseBodyStorageDataStorageDataItem extends TeaModel {
+        // The outbound traffic. Unit: byte. The outbound traffic is generated when videos are directly downloaded or played from OSS buckets without Alibaba Cloud CDN acceleration.
         @NameInMap("NetworkOut")
         public String networkOut;
 
+        // The storage volume. Unit: byte.
         @NameInMap("StorageUtilization")
         public String storageUtilization;
 
+        // The timestamp of the returned data. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
         @NameInMap("TimeStamp")
         public String timeStamp;
 

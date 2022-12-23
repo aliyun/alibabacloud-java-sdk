@@ -4,6 +4,7 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribeVodCertificateListRequest extends TeaModel {
+    // The domain name for CDN.
     @NameInMap("DomainName")
     public String domainName;
 

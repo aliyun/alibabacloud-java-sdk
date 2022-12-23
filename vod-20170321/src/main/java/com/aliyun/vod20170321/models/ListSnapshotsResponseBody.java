@@ -4,9 +4,11 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class ListSnapshotsResponseBody extends TeaModel {
+    // The snapshot data of the media.
     @NameInMap("MediaSnapshot")
     public ListSnapshotsResponseBodyMediaSnapshot mediaSnapshot;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +34,11 @@ public class ListSnapshotsResponseBody extends TeaModel {
     }
 
     public static class ListSnapshotsResponseBodyMediaSnapshotSnapshotsSnapshot extends TeaModel {
+        // The index of the snapshot.
         @NameInMap("Index")
         public Long index;
 
+        // The URL of the snapshot.
         @NameInMap("Url")
         public String url;
 
@@ -81,18 +85,23 @@ public class ListSnapshotsResponseBody extends TeaModel {
     }
 
     public static class ListSnapshotsResponseBodyMediaSnapshot extends TeaModel {
+        // The time when the snapshot job was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
         @NameInMap("CreationTime")
         public String creationTime;
 
+        // The ID of the snapshot job.
         @NameInMap("JobId")
         public String jobId;
 
+        // The rule for generating snapshot URLs.
         @NameInMap("Regular")
         public String regular;
 
+        // The snapshot data.
         @NameInMap("Snapshots")
         public ListSnapshotsResponseBodyMediaSnapshotSnapshots snapshots;
 
+        // The total number of snapshots.
         @NameInMap("Total")
         public Long total;
 

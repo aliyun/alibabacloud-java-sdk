@@ -4,9 +4,13 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class ListAppPoliciesForIdentityResponseBody extends TeaModel {
+    // The details of each policy.
+    // 
+    // > A maximum of 100 entries can be returned.
     @NameInMap("AppPolicyList")
     public java.util.List<ListAppPoliciesForIdentityResponseBodyAppPolicyList> appPolicyList;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,24 +36,34 @@ public class ListAppPoliciesForIdentityResponseBody extends TeaModel {
     }
 
     public static class ListAppPoliciesForIdentityResponseBodyAppPolicyList extends TeaModel {
+        // The ID of the application.
         @NameInMap("AppId")
         public String appId;
 
+        // The time when the application policy was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
         @NameInMap("CreationTime")
         public String creationTime;
 
+        // The description of the policy.
         @NameInMap("Description")
         public String description;
 
+        // The last time when the application policy was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
         @NameInMap("ModificationTime")
         public String modificationTime;
 
+        // The name of the policy.
         @NameInMap("PolicyName")
         public String policyName;
 
+        // The type of the policy. Valid values:
+        // 
+        // *   **System**
+        // *   **Custom**
         @NameInMap("PolicyType")
         public String policyType;
 
+        // The content of the policy.
         @NameInMap("PolicyValue")
         public String policyValue;
 

@@ -4,9 +4,11 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetVideoInfoResponseBody extends TeaModel {
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The information about the video.
     @NameInMap("Video")
     public GetVideoInfoResponseBodyVideo video;
 
@@ -51,60 +53,90 @@ public class GetVideoInfoResponseBody extends TeaModel {
     }
 
     public static class GetVideoInfoResponseBodyVideo extends TeaModel {
+        // The ID of the application.
         @NameInMap("AppId")
         public String appId;
 
+        // The review status of the video. Valid values:
+        // 
+        // *   **Normal**: pass
+        // *   **Blocked**: failed
         @NameInMap("AuditStatus")
         public String auditStatus;
 
+        // The category ID of the video.
         @NameInMap("CateId")
         public Long cateId;
 
+        // The category of the video.
         @NameInMap("CateName")
         public String cateName;
 
+        // The thumbnail URL of the video.
         @NameInMap("CoverURL")
         public String coverURL;
 
+        // The time when the video was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
         @NameInMap("CreationTime")
         public String creationTime;
 
+        // The information about the custom media asset.
+        // > This parameter has been deprecated. This parameter is no longer returned when you call the API.
         @NameInMap("CustomMediaInfo")
         public String customMediaInfo;
 
+        // The description of the video.
         @NameInMap("Description")
         public String description;
 
+        // The duration of the video. Unit: seconds.
         @NameInMap("Duration")
         public Float duration;
 
+        // The time when the video was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
         @NameInMap("ModificationTime")
         public String modificationTime;
 
+        // The region ID of the Object Storage Service (OSS) bucket.
         @NameInMap("RegionId")
         public String regionId;
 
+        // The size of the source video file. Unit: byte.
         @NameInMap("Size")
         public Long size;
 
+        // The URL array of video snapshots.
         @NameInMap("Snapshots")
         public GetVideoInfoResponseBodyVideoSnapshots snapshots;
 
+        // The video status. Valid values:
+        // *   **Uploading**: The video is being uploaded.
+        // *   **UploadFail**: The video failed to be uploaded.
+        // *   **UploadSucc**: The video has been uploaded.
+        // *   **Transcoding**: The video is being transcoded.
+        // *   **TranscodeFail**: The video failed to be transcoded.
+        // *   **Blocked**: The video failed the review.
+        // *   **Normal**: The video passed the review.
         @NameInMap("Status")
         public String status;
 
+        // The OSS bucket where the video is stored.
         @NameInMap("StorageLocation")
         public String storageLocation;
 
+        // The tags of the video. Separate multiple tags with commas (,).
         @NameInMap("Tags")
         public String tags;
 
+        // The ID of the template group.
         @NameInMap("TemplateGroupId")
         public String templateGroupId;
 
+        // The title of the video.
         @NameInMap("Title")
         public String title;
 
+        // The ID of the video.
         @NameInMap("VideoId")
         public String videoId;
 

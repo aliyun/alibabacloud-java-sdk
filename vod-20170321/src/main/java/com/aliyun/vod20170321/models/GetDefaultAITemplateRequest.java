@@ -4,6 +4,7 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetDefaultAITemplateRequest extends TeaModel {
+    // The type of the AI template. Set the value to **AIMediaAudit**, which specifies intelligent review.
     @NameInMap("TemplateType")
     public String templateType;
 

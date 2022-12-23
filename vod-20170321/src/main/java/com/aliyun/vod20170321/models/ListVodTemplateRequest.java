@@ -4,9 +4,11 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class ListVodTemplateRequest extends TeaModel {
+    // The ID of the application. Set the value to **app-1000000**. For more information, see [Overview](~~113600~~).
     @NameInMap("AppId")
     public String appId;
 
+    // The type of the template. Set the value to **Snapshot**.
     @NameInMap("TemplateType")
     public String templateType;
 
