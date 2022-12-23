@@ -4,9 +4,11 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class SubmitDynamicImageJobResponseBody extends TeaModel {
+    // The information about the animated image job.
     @NameInMap("DynamicImageJob")
     public SubmitDynamicImageJobResponseBodyDynamicImageJob dynamicImageJob;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +34,7 @@ public class SubmitDynamicImageJobResponseBody extends TeaModel {
     }
 
     public static class SubmitDynamicImageJobResponseBodyDynamicImageJob extends TeaModel {
+        // The ID of the animated image job.
         @NameInMap("JobId")
         public String jobId;
 

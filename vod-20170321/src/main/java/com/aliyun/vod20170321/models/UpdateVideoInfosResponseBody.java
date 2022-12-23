@@ -4,12 +4,15 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class UpdateVideoInfosResponseBody extends TeaModel {
+    // The IDs of the videos that cannot be modified. Generally, videos cannot be modified if you do not have required [permissions](~~113600~~).
     @NameInMap("ForbiddenVideoIds")
     public java.util.List<String> forbiddenVideoIds;
 
+    // The IDs of the videos that do not exist.
     @NameInMap("NonExistVideoIds")
     public java.util.List<String> nonExistVideoIds;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

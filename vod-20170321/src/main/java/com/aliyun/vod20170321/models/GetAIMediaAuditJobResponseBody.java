@@ -4,9 +4,11 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetAIMediaAuditJobResponseBody extends TeaModel {
+    // The information about the intelligent review job.
     @NameInMap("MediaAuditJob")
     public GetAIMediaAuditJobResponseBodyMediaAuditJob mediaAuditJob;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +34,34 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
     }
 
     public static class GetAIMediaAuditJobResponseBodyMediaAuditJobDataAudioResult extends TeaModel {
+        // The category of the review result. Valid values:
+        // 
+        // *   **normal**
+        // *   **spam**
+        // *   **ad**
+        // *   **politics**
+        // *   **terrorism**
+        // *   **abuse**
+        // *   **porn**
+        // *   **flood**: spam posts
+        // *   **contraband**
+        // *   **meaningless**
         @NameInMap("Label")
         public String label;
 
+        // The review scenario. Valid value: **antispam**.
         @NameInMap("Scene")
         public String scene;
 
+        // The score.
         @NameInMap("Score")
         public String score;
 
+        // The recommendation for review results. Valid values:
+        // 
+        // *   **block**: The content violates the regulations.
+        // *   **review**: The content may violate the regulations.
+        // *   **pass**: The content passes the review.
         @NameInMap("Suggestion")
         public String suggestion;
 
@@ -84,15 +105,80 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
     }
 
     public static class GetAIMediaAuditJobResponseBodyMediaAuditJobDataImageResultResult extends TeaModel {
+        // The category of the review result.
+        // 
+        // Valid values if scene is **porn**:
+        // 
+        // *   **porn**
+        // *   **sexy**
+        // *   **normal**
+        // 
+        // Valid values if scene is **terrorism**:
+        // 
+        // *   **normal**
+        // *   **bloody**
+        // *   **explosion**
+        // *   **outfit**
+        // *   **logo**
+        // *   **weapon**
+        // *   **politics**
+        // *   **violence**
+        // *   **crowd**
+        // *   **parade**
+        // *   **carcrash**
+        // *   **flag**
+        // *   **location**
+        // *   **others**
+        // 
+        // Valid values if scene is **ad**:
+        // 
+        // *   **normal**
+        // *   **ad**
+        // *   **politics**
+        // *   **porn**
+        // *   **abuse**
+        // *   **terrorism**
+        // *   **contraband**
+        // *   **spam**
+        // *   **npx**: illegal ad
+        // *   **qrcode**: QR code
+        // *   **programCode**
+        // 
+        // Valid values if scene is **live**:
+        // 
+        // *   **normal**
+        // *   **meaningless**
+        // *   **PIP**
+        // *   **smoking**
+        // *   **drivelive**
+        // 
+        // Valid values if scene is **logo**:
+        // 
+        // *   **normal**
+        // *   **TV**
+        // *   **trademark**
         @NameInMap("Label")
         public String label;
 
+        // The review scenario. Valid values:
+        // 
+        // *   **porn**
+        // *   **terrorism**
+        // *   **ad**
+        // *   **live**: undesirable scenes
+        // *   **logo**
         @NameInMap("Scene")
         public String scene;
 
+        // The score of the image of the category that is indicated by Label. Valid values: `[0, 100]`. The score is representative of the confidence.
         @NameInMap("Score")
         public String score;
 
+        // The recommendation for review results. Valid values:
+        // 
+        // *   **block**: The content violates the regulations.
+        // *   **review**: The content may violate the regulations.
+        // *   **pass**: The content passes the review.
         @NameInMap("Suggestion")
         public String suggestion;
 
@@ -136,18 +222,35 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
     }
 
     public static class GetAIMediaAuditJobResponseBodyMediaAuditJobDataImageResult extends TeaModel {
+        // The category of the review result. Separate multiple values with commas (,). Valid values:
+        // 
+        // *   **porn**
+        // *   **terrorism**
+        // *   **ad**
+        // *   **live**: undesirable scenes
+        // *   **logo**
+        // *   **audio**: audio anti-spam
+        // *   **normal**
         @NameInMap("Label")
         public String label;
 
+        // Details of image review results.
         @NameInMap("Result")
         public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataImageResultResult> result;
 
+        // The recommendation for review results. Valid values:
+        // 
+        // *   **block**: The content violates the regulations.
+        // *   **review**: The content may violate the regulations.
+        // *   **pass**: The content passes the review.
         @NameInMap("Suggestion")
         public String suggestion;
 
+        // The type of the image. Valid value: **cover**.
         @NameInMap("Type")
         public String type;
 
+        // The URL of the image.
         @NameInMap("Url")
         public String url;
 
@@ -199,21 +302,39 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
     }
 
     public static class GetAIMediaAuditJobResponseBodyMediaAuditJobDataTextResult extends TeaModel {
+        // The text.
         @NameInMap("Content")
         public String content;
 
+        // The category of the review result. Valid values:
+        // 
+        // *   **spam**
+        // *   **ad**
+        // *   **abuse**
+        // *   **flood**: spam posts
+        // *   **contraband**
+        // *   **meaningless**
+        // *   **normal**
         @NameInMap("Label")
         public String label;
 
+        // The review scenario. Valid value: **antispam**.
         @NameInMap("Scene")
         public String scene;
 
+        // The score of the image of the category that is indicated by Label. Valid values: `[0, 100]`. The score is representative of the confidence.
         @NameInMap("Score")
         public String score;
 
+        // The recommendation for review results. Valid values:
+        // 
+        // *   **block**: The content violates the regulations.
+        // *   **review**: The content may violate the regulations.
+        // *   **pass**: The content passes the review.
         @NameInMap("Suggestion")
         public String suggestion;
 
+        // The type of the text. The value is **title**.
         @NameInMap("Type")
         public String type;
 
@@ -273,9 +394,14 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
     }
 
     public static class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResultCounterList extends TeaModel {
+        // The number of images.
         @NameInMap("Count")
         public Integer count;
 
+        // The category of the review result. Valid values:
+        // 
+        // *   **ad**
+        // *   **normal**
         @NameInMap("Label")
         public String label;
 
@@ -303,15 +429,22 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
     }
 
     public static class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResultTopList extends TeaModel {
+        // The category of the review result. Valid values:
+        // 
+        // *   **ad**
+        // *   **normal**
         @NameInMap("Label")
         public String label;
 
+        // The score of the image of the category that is indicated by Label.
         @NameInMap("Score")
         public String score;
 
+        // The position in the video. Unit: milliseconds.
         @NameInMap("Timestamp")
         public String timestamp;
 
+        // The URL of the image.
         @NameInMap("Url")
         public String url;
 
@@ -355,21 +488,34 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
     }
 
     public static class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResult extends TeaModel {
+        // The average score of the review results.
         @NameInMap("AverageScore")
         public String averageScore;
 
+        // The statistics about tag frames.
         @NameInMap("CounterList")
         public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResultCounterList> counterList;
 
+        // The category of the review result. Valid values:
+        // 
+        // *   **ad**
+        // *   **normal**
         @NameInMap("Label")
         public String label;
 
+        // The highest review score.
         @NameInMap("MaxScore")
         public String maxScore;
 
+        // The recommendation for review results. Valid values:
+        // 
+        // *   **block**: The content violates the regulations.
+        // *   **review**: The content may violate the regulations.
+        // *   **pass**: The content passes the review.
         @NameInMap("Suggestion")
         public String suggestion;
 
+        // The information about the image with the highest score of the category that is indicated by Label.
         @NameInMap("TopList")
         public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResultTopList> topList;
 
@@ -429,9 +575,14 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
     }
 
     public static class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResultCounterList extends TeaModel {
+        // The number of images.
         @NameInMap("Count")
         public Integer count;
 
+        // The category of the review result. Valid values:
+        // 
+        // *   **live**: The content contains undesirable scenes.
+        // *   **normal**
         @NameInMap("Label")
         public String label;
 
@@ -459,15 +610,22 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
     }
 
     public static class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResultTopList extends TeaModel {
+        // The category of the review result. Valid values:
+        // 
+        // *   **live**: The content contains undesirable scenes.
+        // *   **normal**
         @NameInMap("Label")
         public String label;
 
+        // The score of the image of the category that is indicated by Label.
         @NameInMap("Score")
         public String score;
 
+        // The position in the video. Unit: milliseconds.
         @NameInMap("Timestamp")
         public String timestamp;
 
+        // The URL of the image.
         @NameInMap("Url")
         public String url;
 
@@ -511,21 +669,34 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
     }
 
     public static class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResult extends TeaModel {
+        // The average score of the review results.
         @NameInMap("AverageScore")
         public String averageScore;
 
+        // The categories of the review results and the number of images.
         @NameInMap("CounterList")
         public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResultCounterList> counterList;
 
+        // The category of the review result. Valid values:
+        // 
+        // *   **live**: The content contains undesirable scenes.
+        // *   **normal**
         @NameInMap("Label")
         public String label;
 
+        // The highest review score.
         @NameInMap("MaxScore")
         public String maxScore;
 
+        // The recommendation for review results. Valid values:
+        // 
+        // *   **block**: The content violates the regulations.
+        // *   **review**: The content may violate the regulations.
+        // *   **pass**: The content passes the review.
         @NameInMap("Suggestion")
         public String suggestion;
 
+        // The information about the image with the highest score of the category that is indicated by Label.
         @NameInMap("TopList")
         public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResultTopList> topList;
 
@@ -585,9 +756,14 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
     }
 
     public static class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResultCounterList extends TeaModel {
+        // The number of images.
         @NameInMap("Count")
         public Integer count;
 
+        // The category of the review result. Valid values:
+        // 
+        // *   **logo**
+        // *   **normal**
         @NameInMap("Label")
         public String label;
 
@@ -615,15 +791,22 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
     }
 
     public static class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResultTopList extends TeaModel {
+        // The category of the review result. Valid values:
+        // 
+        // *   **logo**
+        // *   **normal**
         @NameInMap("Label")
         public String label;
 
+        // The score of the image of the category that is indicated by Label.
         @NameInMap("Score")
         public String score;
 
+        // The position in the video. Unit: milliseconds.
         @NameInMap("Timestamp")
         public String timestamp;
 
+        // The URL of the image.
         @NameInMap("Url")
         public String url;
 
@@ -667,21 +850,34 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
     }
 
     public static class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResult extends TeaModel {
+        // The average score of the images of the category that is indicated by Label.
         @NameInMap("AverageScore")
         public String averageScore;
 
+        // The categories of the review results and the number of images.
         @NameInMap("CounterList")
         public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResultCounterList> counterList;
 
+        // The category of the review result. Valid values:
+        // 
+        // *   **logo**
+        // *   **normal**
         @NameInMap("Label")
         public String label;
 
+        // The highest score of the image of the category that is indicated by Label.
         @NameInMap("MaxScore")
         public String maxScore;
 
+        // The recommendation for review results. Valid values:
+        // 
+        // *   **block**: The content violates the regulations.
+        // *   **review**: The content may violate the regulations.
+        // *   **pass**: The content passes the review.
         @NameInMap("Suggestion")
         public String suggestion;
 
+        // The information about the image with the highest score of the category that is indicated by Label.
         @NameInMap("TopList")
         public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResultTopList> topList;
 
@@ -741,9 +937,15 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
     }
 
     public static class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResultCounterList extends TeaModel {
+        // The number of images.
         @NameInMap("Count")
         public Integer count;
 
+        // The category of the review result. Valid values:
+        // 
+        // *   **porn**
+        // *   **sexy**
+        // *   **normal**
         @NameInMap("Label")
         public String label;
 
@@ -771,15 +973,23 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
     }
 
     public static class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResultTopList extends TeaModel {
+        // The category of the review result. Valid values:
+        // 
+        // *   **porn**
+        // *   **sexy**
+        // *   **normal**
         @NameInMap("Label")
         public String label;
 
+        // The score of the image of the category that is indicated by Label. Valid values: `[0, 100]`. The value is accurate to 10 decimal places. The score is representative of the confidence.
         @NameInMap("Score")
         public String score;
 
+        // The position in the video. Unit: milliseconds.
         @NameInMap("Timestamp")
         public String timestamp;
 
+        // The URL of the image.
         @NameInMap("Url")
         public String url;
 
@@ -823,21 +1033,35 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
     }
 
     public static class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResult extends TeaModel {
+        // The average score of the images of the category that is indicated by Label. Valid values: `[0, 100]`. The value is accurate to 10 decimal places. The score is representative of the confidence.
         @NameInMap("AverageScore")
         public String averageScore;
 
+        // The categories of the review results and the number of images.
         @NameInMap("CounterList")
         public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResultCounterList> counterList;
 
+        // The category of the review result. Valid values:
+        // 
+        // *   **porn**
+        // *   **sexy**
+        // *   **normal**
         @NameInMap("Label")
         public String label;
 
+        // The highest score of the image of the category that is indicated by Label. Valid values: `[0, 100]`. The value is accurate to 10 decimal places. The score is representative of the confidence.
         @NameInMap("MaxScore")
         public String maxScore;
 
+        // The recommendation for review results. Valid values:
+        // 
+        // *   **block**: The content violates the regulations.
+        // *   **review**: The content may violate the regulations.
+        // *   **pass**: The content passes the review.
         @NameInMap("Suggestion")
         public String suggestion;
 
+        // The information about the image with the highest score of the category that is indicated by Label.
         @NameInMap("TopList")
         public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResultTopList> topList;
 
@@ -897,9 +1121,19 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
     }
 
     public static class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResultCounterList extends TeaModel {
+        // The number of images.
         @NameInMap("Count")
         public Integer count;
 
+        // The category of the review result. Valid values:
+        // 
+        // *   **terrorism**
+        // *   **outfit**
+        // *   **logo**
+        // *   **weapon**
+        // *   **politics**
+        // *   **others**
+        // *   **normal**
         @NameInMap("Label")
         public String label;
 
@@ -927,15 +1161,34 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
     }
 
     public static class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResultTopList extends TeaModel {
+        // The category of the review result. Valid values:
+        // 
+        // *   **normal**
+        // *   **bloody**
+        // *   **explosion**
+        // *   **outfit**
+        // *   **logo**
+        // *   **weapon**
+        // *   **politics**
+        // *   **violence**
+        // *   **crowd**
+        // *   **parade**
+        // *   **carcrash**
+        // *   **flag**
+        // *   **location**
+        // *   **others**
         @NameInMap("Label")
         public String label;
 
+        // The score of the image of the category that is indicated by Label. Valid values: `[0, 100]`. The value is accurate to 10 decimal places. The score is representative of the confidence.
         @NameInMap("Score")
         public String score;
 
+        // The position in the video. Unit: milliseconds.
         @NameInMap("Timestamp")
         public String timestamp;
 
+        // The URL of the image.
         @NameInMap("Url")
         public String url;
 
@@ -979,21 +1232,46 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
     }
 
     public static class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResult extends TeaModel {
+        // The average score of the images of the category that is indicated by Label. Valid values: `[0, 100]`. The value is accurate to 10 decimal places. The score is representative of the confidence.
         @NameInMap("AverageScore")
         public String averageScore;
 
+        // The categories of the review results and the number of images.
         @NameInMap("CounterList")
         public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResultCounterList> counterList;
 
+        // The category of the review result. Valid values:
+        // 
+        // *   **normal**
+        // *   **bloody**
+        // *   **explosion**
+        // *   **outfit**
+        // *   **logo**
+        // *   **weapon**
+        // *   **politics**
+        // *   **violence**
+        // *   **crowd**
+        // *   **parade**
+        // *   **carcrash**
+        // *   **flag**
+        // *   **location**
+        // *   **others**
         @NameInMap("Label")
         public String label;
 
+        // The highest score of the image of the category that is indicated by Label. Valid values: `[0, 100]`. The value is accurate to 10 decimal places. The score is representative of the confidence.
         @NameInMap("MaxScore")
         public String maxScore;
 
+        // The recommendation for review results. Valid values:
+        // 
+        // *   **block**: The content violates the regulations.
+        // *   **review**: The content may violate the regulations.
+        // *   **pass**: The content passes the review.
         @NameInMap("Suggestion")
         public String suggestion;
 
+        // The information about the image with the highest score of the category that is indicated by Label.
         @NameInMap("TopList")
         public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResultTopList> topList;
 
@@ -1053,24 +1331,38 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
     }
 
     public static class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResult extends TeaModel {
+        // The results of ad review.
         @NameInMap("AdResult")
         public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResult adResult;
 
+        // The category of the review result. Valid values:
+        // 
+        // *   **ad**
+        // *   **normal**
         @NameInMap("Label")
         public String label;
 
+        // The results of undesired content review.
         @NameInMap("LiveResult")
         public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResult liveResult;
 
+        // The results of logo review.
         @NameInMap("LogoResult")
         public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResult logoResult;
 
+        // The results of pornography content review.
         @NameInMap("PornResult")
         public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResult pornResult;
 
+        // The recommendation for review results. Valid values:
+        // 
+        // *   **block**: The content violates the regulations.
+        // *   **review**: The content may violate the regulations.
+        // *   **pass**: The content passes the review.
         @NameInMap("Suggestion")
         public String suggestion;
 
+        // The results of terrorism content review.
         @NameInMap("TerrorismResult")
         public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResult terrorismResult;
 
@@ -1138,24 +1430,47 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
     }
 
     public static class GetAIMediaAuditJobResponseBodyMediaAuditJobData extends TeaModel {
+        // The content that violates the regulations. Separate multiple values with commas (,). Valid values:
+        // 
+        // *   **video**: the video.
+        // *   **image-cover**: the cover.
+        // *   **text-title**: the title.
         @NameInMap("AbnormalModules")
         public String abnormalModules;
 
+        // The results of audio review.
         @NameInMap("AudioResult")
         public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataAudioResult> audioResult;
 
+        // The results of image review.
         @NameInMap("ImageResult")
         public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataImageResult> imageResult;
 
+        // The category of the review result. Separate multiple values with commas (,). Valid values:
+        // 
+        // *   **porn**
+        // *   **terrorism**
+        // *   **ad**
+        // *   **live**: undesirable scenes
+        // *   **logo**
+        // *   **audio**: audio anti-spam
+        // *   **normal**
         @NameInMap("Label")
         public String label;
 
+        // The recommendation for review results. Valid values:
+        // 
+        // *   **block**: The content violates the regulations.
+        // *   **review**: The content may violate the regulations.
+        // *   **pass**: The content passes the review.
         @NameInMap("Suggestion")
         public String suggestion;
 
+        // The results of text review.
         @NameInMap("TextResult")
         public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataTextResult> textResult;
 
+        // The results of video review.
         @NameInMap("VideoResult")
         public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResult videoResult;
 
@@ -1223,30 +1538,44 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
     }
 
     public static class GetAIMediaAuditJobResponseBodyMediaAuditJob extends TeaModel {
+        // The error code. This parameter is returned if the value of Status is fail.
         @NameInMap("Code")
         public String code;
 
+        // The time when the job is complete. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
         @NameInMap("CompleteTime")
         public String completeTime;
 
+        // The time when the job started to run. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
         @NameInMap("CreationTime")
         public String creationTime;
 
+        // The job result data.
         @NameInMap("Data")
         public GetAIMediaAuditJobResponseBodyMediaAuditJobData data;
 
+        // The ID of the job.
         @NameInMap("JobId")
         public String jobId;
 
+        // The ID of the video.
         @NameInMap("MediaId")
         public String mediaId;
 
+        // The error message. This parameter is returned if the value of Status is fail.
         @NameInMap("Message")
         public String message;
 
+        // The status of the job. Valid values:
+        // 
+        // *   **success**: The job is successful.
+        // *   **fail**: The job failed.
+        // *   **init**: The job is being initialized.
+        // *   **Processing**: The job is in progress.
         @NameInMap("Status")
         public String status;
 
+        // Only the job type is supported.
         @NameInMap("Type")
         public String type;
 

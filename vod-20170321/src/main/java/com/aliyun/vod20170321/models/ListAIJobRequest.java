@@ -4,6 +4,9 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class ListAIJobRequest extends TeaModel {
+    // The list of job IDs. You can obtain the job ID from the PlayInfo parameter in the response to the [GetPlayInfo](~~56124~~) operation.
+    // 
+    // >  You can specify a maximum of 10 job IDs in a request. Separate multiple IDs with commas (,).
     @NameInMap("JobIds")
     public String jobIds;
 

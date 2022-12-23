@@ -4,9 +4,11 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class AddVodTemplateResponseBody extends TeaModel {
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The ID of the snapshot template. You can call the [SubmitSnapshotJob](~~72213~~) operation to take snapshots.
     @NameInMap("VodTemplateId")
     public String vodTemplateId;
 

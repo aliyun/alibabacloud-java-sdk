@@ -4,9 +4,11 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetEditingProjectMaterialsResponseBody extends TeaModel {
+    // The materials.
     @NameInMap("MaterialList")
     public GetEditingProjectMaterialsResponseBodyMaterialList materialList;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -70,54 +72,80 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
     }
 
     public static class GetEditingProjectMaterialsResponseBodyMaterialListMaterial extends TeaModel {
+        // The category ID of the material.
         @NameInMap("CateId")
         public Integer cateId;
 
+        // The category name of the material.
         @NameInMap("CateName")
         public String cateName;
 
+        // The thumbnail URL of the material.
         @NameInMap("CoverURL")
         public String coverURL;
 
+        // The time when the material was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
         @NameInMap("CreationTime")
         public String creationTime;
 
+        // The description of the material.
         @NameInMap("Description")
         public String description;
 
+        // The duration of the material. The value is rounded to four decimal places. Unit: seconds.
         @NameInMap("Duration")
         public Float duration;
 
+        // The ID of the material.
         @NameInMap("MaterialId")
         public String materialId;
 
+        // The type of the material. Valid values:
+        // 
+        // *   **video**
+        // *   **audio**
+        // *   **image**
         @NameInMap("MaterialType")
         public String materialType;
 
+        // The time when the material was last updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        // The size of the mezzanine file. Unit: byte.
         @NameInMap("Size")
         public Long size;
 
+        // The URLs of material snapshots. The value is an array.
         @NameInMap("Snapshots")
         public GetEditingProjectMaterialsResponseBodyMaterialListMaterialSnapshots snapshots;
 
+        // The source of the sprite.
         @NameInMap("Source")
         public String source;
 
+        // The configuration of the sprite.
         @NameInMap("SpriteConfig")
         public String spriteConfig;
 
+        // The URLs of material sprites. The value is an array.
         @NameInMap("Sprites")
         public GetEditingProjectMaterialsResponseBodyMaterialListMaterialSprites sprites;
 
+        // The status of the material. Valid values:
+        // 
+        // *   **Normal**: The material is in draft.
+        // *   **Producing**: The material is being produced.
+        // *   **Produced**: The material was produced.
+        // *   **ProduceFailed**: The material failed to be produced.
         @NameInMap("Status")
         public String status;
 
+        // The tag of the material. Multiple tags are separated by commas (,).
         @NameInMap("Tags")
         public String tags;
 
+        // The title of the material.
         @NameInMap("Title")
         public String title;
 

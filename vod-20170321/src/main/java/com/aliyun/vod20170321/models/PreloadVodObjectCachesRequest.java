@@ -4,6 +4,7 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class PreloadVodObjectCachesRequest extends TeaModel {
+    // The URL of the file to be prefetched. Separate multiple URLs with line breaks (\n or \r\n).
     @NameInMap("ObjectPath")
     public String objectPath;
 

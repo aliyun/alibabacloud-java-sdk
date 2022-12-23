@@ -4,18 +4,23 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribeVodRefreshTasksResponseBody extends TeaModel {
+    // The page number of the returned page.
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    // The number of entries returned per page.
     @NameInMap("PageSize")
     public Long pageSize;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The information about the returned tasks.
     @NameInMap("Tasks")
     public DescribeVodRefreshTasksResponseBodyTasks tasks;
 
+    // The total number of entries returned.
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -65,24 +70,44 @@ public class DescribeVodRefreshTasksResponseBody extends TeaModel {
     }
 
     public static class DescribeVodRefreshTasksResponseBodyTasksTask extends TeaModel {
+        // The time when the task was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
         @NameInMap("CreationTime")
         public String creationTime;
 
+        // The type of the error that was returned when the refresh or prefetch task failed. Valid values:
+        // 
+        // *   **Internal Error**: indicates that an internal error occurred.
+        // *   **Origin Timeout**: indicates that the response from the origin server timed out.
+        // *   **Origin Return StatusCode 5XX**: indicates that the origin server returned a 5XX error.
         @NameInMap("Description")
         public String description;
 
+        // The URL of the object to which the refresh or prefetch task is applied.
         @NameInMap("ObjectPath")
         public String objectPath;
 
+        // The type of the task. Valid values:
+        // 
+        // *   **file**: refreshes one or more files. This is the default value.
+        // *   **directory**: refreshes the files under one or more directories.
+        // *   **preload**: prefetches one or more files.
         @NameInMap("ObjectType")
         public String objectType;
 
+        // The progress of the task, in percentage.
         @NameInMap("Process")
         public String process;
 
+        // The status of the task. Valid values:
+        // 
+        // *   **Complete**: indicates that the task is complete.
+        // *   **Refreshing**: indicates that the task is in progress.
+        // *   **Failed**: indicates that the task failed.
+        // *   **Pending**: indicates that the task is pending.
         @NameInMap("Status")
         public String status;
 
+        // The ID of the task.
         @NameInMap("TaskId")
         public String taskId;
 

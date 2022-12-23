@@ -4,6 +4,7 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DeleteVodTemplateRequest extends TeaModel {
+    // The ID of the snapshot template.
     @NameInMap("VodTemplateId")
     public String vodTemplateId;
 

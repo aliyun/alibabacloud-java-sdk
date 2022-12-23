@@ -4,15 +4,23 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class CreateUploadVideoResponseBody extends TeaModel {
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The upload URL.
+    // 
+    // > The upload URL returned by this operation is Base64-encoded. Before you can use an SDK or an API operation to upload a media asset based on the upload URL, you must decode the upload URL by using the Base64 algorithm. You must parse the upload URL only if you use native OSS SDKs or OSS API for uploads.
     @NameInMap("UploadAddress")
     public String uploadAddress;
 
+    // The upload credential.
+    // 
+    // > The upload credential returned by this operation is Base64-encoded. Before you can use an SDK or an API operation to upload a media asset based on the upload credential, you must decode the upload credential by using the Base64 algorithm. You must parse the upload credential only if you use native OSS SDKs or OSS API for uploads.
     @NameInMap("UploadAuth")
     public String uploadAuth;
 
+    // The ID of the audio or video file. You can set the request parameter VideoId to this ID when you call an operation for media asset management, media processing, or media review.
     @NameInMap("VideoId")
     public String videoId;
 

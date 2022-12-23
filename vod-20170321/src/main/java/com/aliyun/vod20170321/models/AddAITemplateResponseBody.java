@@ -4,9 +4,11 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class AddAITemplateResponseBody extends TeaModel {
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The ID of the AI template.
     @NameInMap("TemplateId")
     public String templateId;
 

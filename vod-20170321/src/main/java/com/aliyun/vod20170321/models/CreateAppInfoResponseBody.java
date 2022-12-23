@@ -4,9 +4,11 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class CreateAppInfoResponseBody extends TeaModel {
+    // The ID of the application.
     @NameInMap("AppId")
     public String appId;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

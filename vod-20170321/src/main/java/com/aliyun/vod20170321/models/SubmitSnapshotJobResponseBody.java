@@ -4,9 +4,11 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class SubmitSnapshotJobResponseBody extends TeaModel {
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The information about the snapshot job.
     @NameInMap("SnapshotJob")
     public SubmitSnapshotJobResponseBodySnapshotJob snapshotJob;
 
@@ -32,6 +34,7 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
     }
 
     public static class SubmitSnapshotJobResponseBodySnapshotJob extends TeaModel {
+        // The ID of the snapshot job.
         @NameInMap("JobId")
         public String jobId;
 

@@ -4,15 +4,31 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class UpdateAppInfoRequest extends TeaModel {
+    // The ID of the application.
+    // 
+    // *   Default value: **app-1000000**.
+    // *   For more information, see [Overview](~~113600~~).
     @NameInMap("AppId")
     public String appId;
 
+    // The name of the application.
+    // 
+    // *   The name can contain up to 128 characters in length, including Chinese letters, digits, and periods (.), dash (-), and at character (@).
+    // *   The name can contain only UTF-8 characters.
     @NameInMap("AppName")
     public String appName;
 
+    // The description of the application.
+    // 
+    // *   The description can contain up to 512 characters in length.
+    // *   The description can contain only UTF-8 characters.
     @NameInMap("Description")
     public String description;
 
+    // The status of the application. Valid values:
+    // 
+    // *   **Normal**
+    // *   **Disable**
     @NameInMap("Status")
     public String status;
 

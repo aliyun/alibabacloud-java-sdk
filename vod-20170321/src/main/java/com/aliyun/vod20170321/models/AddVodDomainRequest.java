@@ -4,9 +4,11 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class AddVodDomainRequest extends TeaModel {
+    // The URL that is used for health checks.
     @NameInMap("CheckUrl")
     public String checkUrl;
 
+    // The domain name for CDN that you want to add to ApsaraVideo VOD. Wildcard domain names are supported. Start the domain name with a period (.). Example: .example.com.
     @NameInMap("DomainName")
     public String domainName;
 
@@ -16,15 +18,22 @@ public class AddVodDomainRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // This parameter is applicable to users of level 3 or higher in mainland China and users outside mainland China. Valid values:
+    // 
+    // - **domestic**: mainland China. This is the default value.
+    // - **overseas**: outside mainland China.
+    // - **global**: regions in and outside mainland China.
     @NameInMap("Scope")
     public String scope;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    // The information about the address of the origin server. For more information about the Sources parameter, see the **Sources** section.
     @NameInMap("Sources")
     public String sources;
 
+    // The top-level domain name.
     @NameInMap("TopLevelDomain")
     public String topLevelDomain;
 

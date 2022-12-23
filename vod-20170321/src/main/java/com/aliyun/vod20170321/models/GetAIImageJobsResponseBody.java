@@ -4,9 +4,11 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetAIImageJobsResponseBody extends TeaModel {
+    // The image AI processing jobs.
     @NameInMap("AIImageJobList")
     public java.util.List<GetAIImageJobsResponseBodyAIImageJobList> AIImageJobList;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,33 +34,54 @@ public class GetAIImageJobsResponseBody extends TeaModel {
     }
 
     public static class GetAIImageJobsResponseBodyAIImageJobList extends TeaModel {
+        // The Object Storage Service (OSS) URL of the image file.
+        // 
+        // > This parameter does not include the complete authentication information. To obtain the authentication information, you must generate a signed URL. Alternatively, you can call the [ListAIImage](~~ListAIImage~~) operation to obtain the image information.
         @NameInMap("AIImageResult")
         public String AIImageResult;
 
+        // The error code.
         @NameInMap("Code")
         public String code;
 
+        // The time when the image AI processing job was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
         @NameInMap("CreationTime")
         public String creationTime;
 
+        // The ID of the image AI processing job.
         @NameInMap("JobId")
         public String jobId;
 
+        // The error message.
         @NameInMap("Message")
         public String message;
 
+        // The status of the job. Valid values:
+        // 
+        // *   **success**
+        // *   **fail**
         @NameInMap("Status")
         public String status;
 
+        // The configurations of the AI template that was used to submit the job.
         @NameInMap("TemplateConfig")
         public String templateConfig;
 
+        // The ID of the AI template.
         @NameInMap("TemplateId")
         public String templateId;
 
+        // The user data.
+        // 
+        // *   The value must be a JSON string.
+        // *   The MessageCallback or Extend parameter is returned.
+        // *   The value contains a maximum of 512 bytes.
+        // 
+        // For more information, see the "UserData: specifies the custom configurations for media upload" section of the [Request parameters](~~86952~~) topic.
         @NameInMap("UserData")
         public String userData;
 
+        // The ID of the video.
         @NameInMap("VideoId")
         public String videoId;
 

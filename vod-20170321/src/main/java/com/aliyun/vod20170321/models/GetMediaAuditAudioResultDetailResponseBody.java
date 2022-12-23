@@ -4,9 +4,11 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetMediaAuditAudioResultDetailResponseBody extends TeaModel {
+    // Details of review results.
     @NameInMap("MediaAuditAudioResultDetail")
     public GetMediaAuditAudioResultDetailResponseBodyMediaAuditAudioResultDetail mediaAuditAudioResultDetail;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +34,26 @@ public class GetMediaAuditAudioResultDetailResponseBody extends TeaModel {
     }
 
     public static class GetMediaAuditAudioResultDetailResponseBodyMediaAuditAudioResultDetailList extends TeaModel {
+        // The end time of the audio that failed the review. Unit: seconds.
         @NameInMap("EndTime")
         public Long endTime;
 
+        // The review results. Valid values:
+        // *   **spam**
+        // *   **ad**
+        // *   **abuse**
+        // *   **flood**
+        // *   **contraband**
+        // *   **meaningless**
+        // *   **normal**
         @NameInMap("Label")
         public String label;
 
+        // The start time of the audio that failed the review. Unit: seconds.
         @NameInMap("StartTime")
         public Long startTime;
 
+        // The text that corresponds to the audio.
         @NameInMap("Text")
         public String text;
 
@@ -84,12 +97,15 @@ public class GetMediaAuditAudioResultDetailResponseBody extends TeaModel {
     }
 
     public static class GetMediaAuditAudioResultDetailResponseBodyMediaAuditAudioResultDetail extends TeaModel {
+        // The list of results.
         @NameInMap("List")
         public java.util.List<GetMediaAuditAudioResultDetailResponseBodyMediaAuditAudioResultDetailList> list;
 
+        // The page number of the returned page.
         @NameInMap("PageTotal")
         public Integer pageTotal;
 
+        // The total number of pages returned.
         @NameInMap("Total")
         public Integer total;
 

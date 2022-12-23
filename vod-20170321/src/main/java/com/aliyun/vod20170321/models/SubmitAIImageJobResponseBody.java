@@ -4,9 +4,11 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class SubmitAIImageJobResponseBody extends TeaModel {
+    // The ID of the image AI processing job.
     @NameInMap("JobId")
     public String jobId;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

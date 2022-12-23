@@ -4,12 +4,18 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class ListAppInfoRequest extends TeaModel {
+    // The number of the page to return. By default, pages start from page 1.
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    // The number of entries to return on each page. Default value: **10**. Maximum value: **100**.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The status of the application. After an application is created, it enters the **Normal** state. Valid values:
+    // 
+    // *   **Normal**
+    // *   **Disable**
     @NameInMap("Status")
     public String status;
 

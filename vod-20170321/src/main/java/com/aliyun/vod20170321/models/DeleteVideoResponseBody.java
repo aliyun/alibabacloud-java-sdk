@@ -4,12 +4,17 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DeleteVideoResponseBody extends TeaModel {
+    // The IDs of the videos that cannot be deleted.
+    // > Generally, videos cannot be deleted if you do not have the required [permissions](~~113600~~).
     @NameInMap("ForbiddenVideoIds")
     public java.util.List<String> forbiddenVideoIds;
 
+    // The IDs of the videos that do not exist.
+    // > If the list of videos to be deleted contains one or more videos that do not exist, the IDs of these non-existing videos are returned. If none of the videos in the list exists, a 404 error is returned.
     @NameInMap("NonExistVideoIds")
     public java.util.List<String> nonExistVideoIds;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

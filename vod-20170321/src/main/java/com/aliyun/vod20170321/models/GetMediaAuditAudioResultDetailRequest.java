@@ -4,6 +4,7 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetMediaAuditAudioResultDetailRequest extends TeaModel {
+    // The ID of the video. You can query the video ID by using the ApsaraVideo VOD console or calling the [SearchMedia](~~86044~~) operation.
     @NameInMap("MediaId")
     public String mediaId;
 
@@ -13,6 +14,7 @@ public class GetMediaAuditAudioResultDetailRequest extends TeaModel {
     @NameInMap("OwnerId")
     public String ownerId;
 
+    // The number of the page to return. This parameter is optional. If you do not specify this parameter, all results are returned without pagination.
     @NameInMap("PageNo")
     public Integer pageNo;
 

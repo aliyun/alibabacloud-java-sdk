@@ -4,21 +4,37 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class UpdateVideoInfoRequest extends TeaModel {
+    // The ID of the video category.
     @NameInMap("CateId")
     public Long cateId;
 
+    // The URL of the video thumbnail.
     @NameInMap("CoverURL")
     public String coverURL;
 
+    // The description of the video.
+    // 
+    // *   The value can be up to 1,024 bytes in length.
+    // *   The string must be encoded in the UTF-8 format.
     @NameInMap("Description")
     public String description;
 
+    // The tags of the video.
+    // 
+    // *   Each tag can be up to 32 bytes in length. A maximum of 16 tags can be specified.
+    // *   Separate multiple tags with commas (,).
+    // *   The string must be encoded in the UTF-8 format.
     @NameInMap("Tags")
     public String tags;
 
+    // The title of the video.
+    // 
+    // *   The value can be up to 128 bytes in length.
+    // *   The string must be encoded in the UTF-8 format.
     @NameInMap("Title")
     public String title;
 
+    // The ID of the video.
     @NameInMap("VideoId")
     public String videoId;
 

@@ -4,9 +4,11 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetMessageCallbackResponseBody extends TeaModel {
+    // The configuration of the event notification.
     @NameInMap("MessageCallback")
     public GetMessageCallbackResponseBodyMessageCallback messageCallback;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,27 +34,41 @@ public class GetMessageCallbackResponseBody extends TeaModel {
     }
 
     public static class GetMessageCallbackResponseBodyMessageCallback extends TeaModel {
+        // The ID of the application.
         @NameInMap("AppId")
         public String appId;
 
+        // The cryptographic key. This parameter is returned only for HTTP callbacks.
         @NameInMap("AuthKey")
         public String authKey;
 
+        // Indicates whether callback authentication is enabled. This parameter is returned only for HTTP callbacks. Valid values:
+        // 
+        // *   **on**: indicates that authentication is enabled.
+        // *   **off**: indicates that authentication is disabled.
         @NameInMap("AuthSwitch")
         public String authSwitch;
 
+        // The callback method. Valid values:
+        // 
+        // *   **HTTP**
+        // *   **MNS**
         @NameInMap("CallbackType")
         public String callbackType;
 
+        // The callback URL. This parameter is returned only for HTTP callbacks.
         @NameInMap("CallbackURL")
         public String callbackURL;
 
+        // The type of the callback event.
         @NameInMap("EventTypeList")
         public String eventTypeList;
 
+        // The public endpoint of Message Service (MNS). This parameter is returned only for MNS callbacks.
         @NameInMap("MnsEndpoint")
         public String mnsEndpoint;
 
+        // The name of the MNS queue. This parameter is returned only for MNS callbacks.
         @NameInMap("MnsQueueName")
         public String mnsQueueName;
 

@@ -4,12 +4,19 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class MoveAppResourceRequest extends TeaModel {
+    // The ID of the resource. You can specify a maximum of 20 IDs at a time. Separate them with commas (,).
     @NameInMap("ResourceIds")
     public String resourceIds;
 
+    // The type of the resource. Valid values:
+    // 
+    // *   **video**
+    // *   **image**
+    // *   **attached**
     @NameInMap("ResourceType")
     public String resourceType;
 
+    // The ID of the application to which resources are migrated. Default value: **app-1000000**. For more information, see [Overview](~~113600~~).
     @NameInMap("TargetAppId")
     public String targetAppId;
 

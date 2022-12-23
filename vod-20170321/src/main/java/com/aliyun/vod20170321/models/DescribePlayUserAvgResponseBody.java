@@ -4,9 +4,11 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribePlayUserAvgResponseBody extends TeaModel {
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The statistics on average playback each day.
     @NameInMap("UserPlayStatisAvgs")
     public DescribePlayUserAvgResponseBodyUserPlayStatisAvgs userPlayStatisAvgs;
 
@@ -32,12 +34,15 @@ public class DescribePlayUserAvgResponseBody extends TeaModel {
     }
 
     public static class DescribePlayUserAvgResponseBodyUserPlayStatisAvgsUserPlayStatisAvg extends TeaModel {
+        // The average number of video views.
         @NameInMap("AvgPlayCount")
         public String avgPlayCount;
 
+        // The average playback duration. Unit: milliseconds.
         @NameInMap("AvgPlayDuration")
         public String avgPlayDuration;
 
+        // The date when the statistics were generated. The date follows the *yyyy-MM-dd* format.
         @NameInMap("Date")
         public String date;
 

@@ -4,9 +4,11 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribePlayVideoStatisResponseBody extends TeaModel {
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The daily playback statistics on the video.
     @NameInMap("VideoPlayStatisDetails")
     public DescribePlayVideoStatisResponseBodyVideoPlayStatisDetails videoPlayStatisDetails;
 
@@ -32,21 +34,27 @@ public class DescribePlayVideoStatisResponseBody extends TeaModel {
     }
 
     public static class DescribePlayVideoStatisResponseBodyVideoPlayStatisDetailsVideoPlayStatisDetail extends TeaModel {
+        // The date when the statistics were generated. The date follows the *yyyy-MM-dd* format.
         @NameInMap("Date")
         public String date;
 
+        // The playback duration. Unit: milliseconds.
         @NameInMap("PlayDuration")
         public String playDuration;
 
+        // The distribution of the playback duration.
         @NameInMap("PlayRange")
         public String playRange;
 
+        // The title of the video.
         @NameInMap("Title")
         public String title;
 
+        // The number of unique visitors.
         @NameInMap("UV")
         public String UV;
 
+        // The number of video views.
         @NameInMap("VV")
         public String VV;
 

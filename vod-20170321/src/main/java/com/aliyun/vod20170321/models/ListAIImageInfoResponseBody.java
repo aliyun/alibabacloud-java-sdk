@@ -4,9 +4,11 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class ListAIImageInfoResponseBody extends TeaModel {
+    // The image files that are uploaded for AI processing.
     @NameInMap("AIImageInfoList")
     public java.util.List<ListAIImageInfoResponseBodyAIImageInfoList> AIImageInfoList;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,27 +34,35 @@ public class ListAIImageInfoResponseBody extends TeaModel {
     }
 
     public static class ListAIImageInfoResponseBodyAIImageInfoList extends TeaModel {
+        // The ID of the image information.
         @NameInMap("AIImageInfoId")
         public String AIImageInfoId;
 
+        // The time when the file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
         @NameInMap("CreationTime")
         public String creationTime;
 
+        // The URL of the image file.
         @NameInMap("FileURL")
         public String fileURL;
 
+        // The format of the image. Valid values: **gif** and **png**.
         @NameInMap("Format")
         public String format;
 
+        // The ID of the image AI processing job.
         @NameInMap("JobId")
         public String jobId;
 
+        // The score of the image.
         @NameInMap("Score")
         public String score;
 
+        // The data version ID.
         @NameInMap("Version")
         public String version;
 
+        // The ID of the video.
         @NameInMap("VideoId")
         public String videoId;
 

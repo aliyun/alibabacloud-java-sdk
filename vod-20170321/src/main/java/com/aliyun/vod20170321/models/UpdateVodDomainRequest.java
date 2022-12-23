@@ -4,6 +4,7 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class UpdateVodDomainRequest extends TeaModel {
+    // The domain name for CDN.
     @NameInMap("DomainName")
     public String domainName;
 
@@ -13,9 +14,11 @@ public class UpdateVodDomainRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    // The information about the address of the origin server.
     @NameInMap("Sources")
     public String sources;
 
+    // The top-level domain name.
     @NameInMap("TopLevelDomain")
     public String topLevelDomain;
 

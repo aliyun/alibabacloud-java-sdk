@@ -4,12 +4,15 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class SubmitAIMediaAuditJobResponseBody extends TeaModel {
+    // The ID of the task.
     @NameInMap("JobId")
     public String jobId;
 
+    // The ID of the video.
     @NameInMap("MediaId")
     public String mediaId;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

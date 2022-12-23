@@ -4,12 +4,15 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class ListAIJobResponseBody extends TeaModel {
+    // The information about the jobs.
     @NameInMap("AIJobList")
     public ListAIJobResponseBodyAIJobList AIJobList;
 
+    // The IDs of the jobs that do not exist.
     @NameInMap("NonExistAIJobIds")
     public ListAIJobResponseBodyNonExistAIJobIds nonExistAIJobIds;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,30 +46,47 @@ public class ListAIJobResponseBody extends TeaModel {
     }
 
     public static class ListAIJobResponseBodyAIJobListAIJob extends TeaModel {
+        // The error code. This parameter is returned if the value of Status is fail.
         @NameInMap("Code")
         public String code;
 
+        // The time when the job is complete. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
         @NameInMap("CompleteTime")
         public String completeTime;
 
+        // The time when the job was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
         @NameInMap("CreationTime")
         public String creationTime;
 
+        // The returned data. The value is a JSON string.
         @NameInMap("Data")
         public String data;
 
+        // The ID of the job.
         @NameInMap("JobId")
         public String jobId;
 
+        // The ID of the video.
         @NameInMap("MediaId")
         public String mediaId;
 
+        // The error message. This parameter is returned if the value of Status is fail.
         @NameInMap("Message")
         public String message;
 
+        // The status of the job. Valid values:
+        // 
+        // *   **success**: The job is complete.
+        // *   **fail**: The job failed.
+        // *   **init**: The job is being initialized.
+        // *   **Processing**: The job is in progress.
         @NameInMap("Status")
         public String status;
 
+        // The type of the job. Valid values:
+        // 
+        // *   **AIMediaDNA**: The media fingerprinting job.
+        // *   **AIVideoTag**: The smart tagging job.
         @NameInMap("Type")
         public String type;
 

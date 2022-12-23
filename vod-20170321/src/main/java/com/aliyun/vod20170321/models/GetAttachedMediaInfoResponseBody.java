@@ -4,12 +4,15 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetAttachedMediaInfoResponseBody extends TeaModel {
+    // The information about the media asset.
     @NameInMap("AttachedMediaList")
     public java.util.List<GetAttachedMediaInfoResponseBodyAttachedMediaList> attachedMediaList;
 
+    // The IDs of the auxiliary media assets that do not exist.
     @NameInMap("NonExistMediaIds")
     public java.util.List<String> nonExistMediaIds;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,15 +46,21 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
     }
 
     public static class GetAttachedMediaInfoResponseBodyAttachedMediaListCategories extends TeaModel {
+        // The ID of the video category.
         @NameInMap("CateId")
         public Long cateId;
 
+        // The name of the category.
+        // - The value can be up to 64 bytes in length.
+        // - The string must be encoded in the UTF-8 format.
         @NameInMap("CateName")
         public String cateName;
 
+        // The level of the category. A value of 0 indicates a level 1 category.
         @NameInMap("Level")
         public Long level;
 
+        // The ID of the parent category. The parent category ID of a level 1 category is -1.
         @NameInMap("ParentId")
         public Long parentId;
 
@@ -95,39 +104,58 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
     }
 
     public static class GetAttachedMediaInfoResponseBodyAttachedMediaList extends TeaModel {
+        // The ID of the application.
         @NameInMap("AppId")
         public String appId;
 
+        // The list of categories.
         @NameInMap("Categories")
         public java.util.List<GetAttachedMediaInfoResponseBodyAttachedMediaListCategories> categories;
 
+        // The time when the auxiliary media asset was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
         @NameInMap("CreationTime")
         public String creationTime;
 
+        // The description of the auxiliary media asset.
         @NameInMap("Description")
         public String description;
 
+        // The ID of the auxiliary media asset.
         @NameInMap("MediaId")
         public String mediaId;
 
+        // The time when the auxiliary media asset was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
         @NameInMap("ModificationTime")
         public String modificationTime;
 
+        // The status of the auxiliary media asset. Valid values:
+        // - **Uploading**: The auxiliary media asset is being uploaded. This is the initial status.
+        // - **Normal**: The auxiliary media asset is uploaded.
+        // - **UploadFail**: The auxiliary media asset fails to be uploaded.
         @NameInMap("Status")
         public String status;
 
+        // The OSS bucket where the auxiliary media asset is stored.
         @NameInMap("StorageLocation")
         public String storageLocation;
 
+        // The tags of the auxiliary media asset.
         @NameInMap("Tags")
         public String tags;
 
+        // The title of the auxiliary media asset.
         @NameInMap("Title")
         public String title;
 
+        // The type of the auxiliary media asset. Valid values:
+        // - **watermark**
+        // - **subtitle**
+        // - **material**
         @NameInMap("Type")
         public String type;
 
+        // The URL of the auxiliary media asset.
+        // > If a CDN domain name is specified, a CDN URL is returned. Otherwise, an OSS URL is returned.
         @NameInMap("URL")
         public String URL;
 

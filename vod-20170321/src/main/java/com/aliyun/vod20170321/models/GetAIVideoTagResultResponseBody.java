@@ -4,9 +4,11 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetAIVideoTagResultResponseBody extends TeaModel {
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The returned result.
     @NameInMap("VideoTagResult")
     public GetAIVideoTagResultResponseBodyVideoTagResult videoTagResult;
 
@@ -32,6 +34,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
     }
 
     public static class GetAIVideoTagResultResponseBodyVideoTagResultCategory extends TeaModel {
+        // The tag string.
         @NameInMap("Tag")
         public String tag;
 
@@ -51,9 +54,11 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
     }
 
     public static class GetAIVideoTagResultResponseBodyVideoTagResultKeyword extends TeaModel {
+        // The tag string.
         @NameInMap("Tag")
         public String tag;
 
+        // The points in time when the tags are displayed. Unit: milliseconds.
         @NameInMap("Times")
         public java.util.List<String> times;
 
@@ -81,9 +86,11 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
     }
 
     public static class GetAIVideoTagResultResponseBodyVideoTagResultLocation extends TeaModel {
+        // The tag string.
         @NameInMap("Tag")
         public String tag;
 
+        // The points in time when the tags are displayed. Unit: milliseconds.
         @NameInMap("Times")
         public java.util.List<String> times;
 
@@ -111,12 +118,17 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
     }
 
     public static class GetAIVideoTagResultResponseBodyVideoTagResultPerson extends TeaModel {
+        // The URL of the profile photo.
+        // 
+        // > This parameter is returned only when a figure tag was used.
         @NameInMap("FaceUrl")
         public String faceUrl;
 
+        // The tag string.
         @NameInMap("Tag")
         public String tag;
 
+        // The points in time when the tags are displayed. Unit: milliseconds.
         @NameInMap("Times")
         public java.util.List<String> times;
 
@@ -152,9 +164,11 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
     }
 
     public static class GetAIVideoTagResultResponseBodyVideoTagResultTime extends TeaModel {
+        // The tag string.
         @NameInMap("Tag")
         public String tag;
 
+        // The points in time when the tags are displayed. Unit: milliseconds.
         @NameInMap("Times")
         public java.util.List<String> times;
 
@@ -182,18 +196,23 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
     }
 
     public static class GetAIVideoTagResultResponseBodyVideoTagResult extends TeaModel {
+        // The video categories.
         @NameInMap("Category")
         public java.util.List<GetAIVideoTagResultResponseBodyVideoTagResultCategory> category;
 
+        // The keyword tags.
         @NameInMap("Keyword")
         public java.util.List<GetAIVideoTagResultResponseBodyVideoTagResultKeyword> keyword;
 
+        // The location tags.
         @NameInMap("Location")
         public java.util.List<GetAIVideoTagResultResponseBodyVideoTagResultLocation> location;
 
+        // The figure tags.
         @NameInMap("Person")
         public java.util.List<GetAIVideoTagResultResponseBodyVideoTagResultPerson> person;
 
+        // The time tags.
         @NameInMap("Time")
         public java.util.List<GetAIVideoTagResultResponseBodyVideoTagResultTime> time;
 

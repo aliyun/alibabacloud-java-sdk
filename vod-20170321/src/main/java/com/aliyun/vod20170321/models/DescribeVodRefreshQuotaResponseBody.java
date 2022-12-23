@@ -4,30 +4,39 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribeVodRefreshQuotaResponseBody extends TeaModel {
+    // The maximum number of Object Storage Service (OSS) buckets that can be refreshed each day.
     @NameInMap("BlockQuota")
     public String blockQuota;
 
+    // The maximum number of directories of files that can be refreshed each day.
     @NameInMap("DirQuota")
     public String dirQuota;
 
+    // The remaining number of directories of files that can be refreshed on the current day.
     @NameInMap("DirRemain")
     public String dirRemain;
 
+    // The maximum number of URLs of files that can be prefetched each day.
     @NameInMap("PreloadQuota")
     public String preloadQuota;
 
+    // The remaining number of URLs of files that can be prefetched on the current day.
     @NameInMap("PreloadRemain")
     public String preloadRemain;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The maximum number of URLs of files that can be refreshed each day.
     @NameInMap("UrlQuota")
     public String urlQuota;
 
+    // The remaining number of URLs of files that can be refreshed on the current day.
     @NameInMap("UrlRemain")
     public String urlRemain;
 
+    // The remaining number of OSS buckets that can be refreshed on the current day.
     @NameInMap("blockRemain")
     public String blockRemain;
 

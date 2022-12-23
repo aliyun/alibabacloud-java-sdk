@@ -4,9 +4,11 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetTranscodeTaskResponseBody extends TeaModel {
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Details about transcoding tasks.
     @NameInMap("TranscodeTask")
     public GetTranscodeTaskResponseBodyTranscodeTask transcodeTask;
 
@@ -32,42 +34,58 @@ public class GetTranscodeTaskResponseBody extends TeaModel {
     }
 
     public static class GetTranscodeTaskResponseBodyTranscodeTaskTranscodeJobInfoListOutputFile extends TeaModel {
+        // The audio streams.
         @NameInMap("AudioStreamList")
         public String audioStreamList;
 
+        // The average bitrate of the output file. Unit: Kbit/s.
         @NameInMap("Bitrate")
         public String bitrate;
 
+        // The length of the output file. Unit: seconds.
         @NameInMap("Duration")
         public String duration;
 
+        // The encryption method of the output file. Valid values:
+        // 
+        // *   **AliyunVoDEncryption**: Alibaba Cloud proprietary cryptography
+        // *   **HLSEncryption**: HTTP Live Streaming (HLS) encryption
         @NameInMap("Encryption")
         public String encryption;
 
+        // The size of the output file. Unit: byte.
         @NameInMap("Filesize")
         public Long filesize;
 
+        // The container format of the output file.
         @NameInMap("Format")
         public String format;
 
+        // The frame rate of the output file. Unit: frames per second.
         @NameInMap("Fps")
         public String fps;
 
+        // The height of the output video. Unit: pixels.
         @NameInMap("Height")
         public String height;
 
+        // The OSS URL of the output file.
         @NameInMap("OutputFileUrl")
         public String outputFileUrl;
 
+        // The subtitle streams.
         @NameInMap("SubtitleStreamList")
         public String subtitleStreamList;
 
+        // The video streams.
         @NameInMap("VideoStreamList")
         public String videoStreamList;
 
+        // The IDs of the watermarks used by the output file.
         @NameInMap("WatermarkIdList")
         public java.util.List<String> watermarkIdList;
 
+        // The width of the output video. Unit: pixels.
         @NameInMap("Width")
         public String width;
 
@@ -183,39 +201,68 @@ public class GetTranscodeTaskResponseBody extends TeaModel {
     }
 
     public static class GetTranscodeTaskResponseBodyTranscodeTaskTranscodeJobInfoList extends TeaModel {
+        // The time when the transcoding job was complete. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
         @NameInMap("CompleteTime")
         public String completeTime;
 
+        // The time when the transcoding job was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
         @NameInMap("CreationTime")
         public String creationTime;
 
+        // The video resolution. Valid values:
+        // 
+        // *   **LD**: low definition
+        // *   **SD**: standard definition
+        // *   **HD**: high definition
+        // *   **FHD**: ultra high definition
+        // *   **OD**: original definition
+        // *   **2K**: 2K
+        // *   **4K**: 4K
+        // *   **SQ**: standard sound quality
+        // *   **HQ**: high sound quality
+        // *   **AUTO**: adaptive bitrate Adaptive bitrate streams are returned only if PackageSetting is set in the transcoding template. For more information, see [Basic structures](~~52839~~).
+        // 
+        // > This parameter indicates the definition that is configured in the transcoding template and does not indicate the actual resolution of the output video.
         @NameInMap("Definition")
         public String definition;
 
+        // The error code returned when the transcoding job failed.
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        // The error message returned when the transcoding job failed.
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        // The Object Storage Service (OSS) URL of the input file.
         @NameInMap("InputFileUrl")
         public String inputFileUrl;
 
+        // The information about the output file.
         @NameInMap("OutputFile")
         public GetTranscodeTaskResponseBodyTranscodeTaskTranscodeJobInfoListOutputFile outputFile;
 
+        // The priority of the transcoding job.
         @NameInMap("Priority")
         public String priority;
 
+        // The ID of the transcoding job.
         @NameInMap("TranscodeJobId")
         public String transcodeJobId;
 
+        // The status of the transcoding job.
+        // 
+        // *   **Transcoding**
+        // *   **TranscodeSuccess**
+        // *   **TranscodeFail**
         @NameInMap("TranscodeJobStatus")
         public String transcodeJobStatus;
 
+        // The progress of the transcoding job. Valid values: `[0,100]`.
         @NameInMap("TranscodeProgress")
         public Long transcodeProgress;
 
+        // The ID of the transcoding template.
         @NameInMap("TranscodeTemplateId")
         public String transcodeTemplateId;
 
@@ -323,27 +370,44 @@ public class GetTranscodeTaskResponseBody extends TeaModel {
     }
 
     public static class GetTranscodeTaskResponseBodyTranscodeTask extends TeaModel {
+        // The time when the transcoding task was complete. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
         @NameInMap("CompleteTime")
         public String completeTime;
 
+        // The time when the transcoding task was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
         @NameInMap("CreationTime")
         public String creationTime;
 
+        // The status of the transcoding task. Valid values:
+        // 
+        // *   **Processing**: In progress.
+        // *   **Partial**: Some transcoding jobs were complete.
+        // *   **CompleteAllSucc**: All transcoding jobs were successful.
+        // *   **CompleteAllFail**: All transcoding jobs failed. If an exception occurs in the source file, no transcoding job is initiated and the transcoding task fails.
+        // *   **CompletePartialSucc**: All transcoding jobs were complete but only some were successful.
         @NameInMap("TaskStatus")
         public String taskStatus;
 
+        // Details about transcoding jobs.
         @NameInMap("TranscodeJobInfoList")
         public java.util.List<GetTranscodeTaskResponseBodyTranscodeTaskTranscodeJobInfoList> transcodeJobInfoList;
 
+        // The ID of the transcoding task.
         @NameInMap("TranscodeTaskId")
         public String transcodeTaskId;
 
+        // The ID of the transcoding template group.
         @NameInMap("TranscodeTemplateGroupId")
         public String transcodeTemplateGroupId;
 
+        // The mode in which the transcoding task is triggered. Valid values:
+        // 
+        // *   **Auto**: The transcoding task is automatically triggered when the video is uploaded.
+        // *   **Manual**: The transcoding task is triggered by calling the SubmitTranscodeJobs operation.
         @NameInMap("Trigger")
         public String trigger;
 
+        // The ID of the audio or video file.
         @NameInMap("VideoId")
         public String videoId;
 

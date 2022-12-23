@@ -4,9 +4,11 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetMediaAuditResultDetailRequest extends TeaModel {
+    // The ID of the video.
     @NameInMap("MediaId")
     public String mediaId;
 
+    // The page number of the review result to return. The default value is **1**. A maximum of **20** records can be returned on each page.
     @NameInMap("PageNo")
     public Integer pageNo;
 

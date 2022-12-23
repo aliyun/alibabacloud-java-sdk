@@ -4,6 +4,7 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetAIMediaAuditJobRequest extends TeaModel {
+    // The ID of the intelligent review job.
     @NameInMap("JobId")
     public String jobId;
 

@@ -4,6 +4,7 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetVideoInfosRequest extends TeaModel {
+    // The list of video IDs. Separate multiple IDs with commas (,). A maximum of 20 IDs can be specified.
     @NameInMap("VideoIds")
     public String videoIds;
 

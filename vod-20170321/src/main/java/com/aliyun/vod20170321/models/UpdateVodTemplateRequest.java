@@ -4,12 +4,18 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class UpdateVodTemplateRequest extends TeaModel {
+    // The name of the template.
+    // 
+    // *   The name can be up to 128 bytes in length.
+    // *   The value must be encoded in UTF-8.
     @NameInMap("Name")
     public String name;
 
+    // The configurations of the snapshot template. The value is a JSON-formatted string. For more information about the data structure, see the "SnapshotTemplateConfig" section of the [Media processing parameters](~~98618~~) topic.
     @NameInMap("TemplateConfig")
     public String templateConfig;
 
+    // The ID of the snapshot template.
     @NameInMap("VodTemplateId")
     public String vodTemplateId;
 

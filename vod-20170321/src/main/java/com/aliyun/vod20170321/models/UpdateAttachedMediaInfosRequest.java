@@ -4,6 +4,7 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class UpdateAttachedMediaInfosRequest extends TeaModel {
+    // The new information about auxiliary media assets. You can modify the information about up to 20 auxiliary media assets at a time. For more information, see the **UpdateContent** section of this topic.
     @NameInMap("UpdateContent")
     public String updateContent;
 

@@ -4,12 +4,18 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetAppInfosResponseBody extends TeaModel {
+    // The details of each application.
     @NameInMap("AppInfoList")
     public java.util.List<GetAppInfosResponseBodyAppInfoList> appInfoList;
 
+    @NameInMap("Code")
+    public String code;
+
+    // The ID of the application that was not found.
     @NameInMap("NonExistAppIds")
     public java.util.List<String> nonExistAppIds;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -24,6 +30,14 @@ public class GetAppInfosResponseBody extends TeaModel {
     }
     public java.util.List<GetAppInfosResponseBodyAppInfoList> getAppInfoList() {
         return this.appInfoList;
+    }
+
+    public GetAppInfosResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public GetAppInfosResponseBody setNonExistAppIds(java.util.List<String> nonExistAppIds) {
@@ -43,24 +57,35 @@ public class GetAppInfosResponseBody extends TeaModel {
     }
 
     public static class GetAppInfosResponseBodyAppInfoList extends TeaModel {
+        // The ID of the application.
         @NameInMap("AppId")
         public String appId;
 
+        // The name of the application.
         @NameInMap("AppName")
         public String appName;
 
+        // The time when the application was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
         @NameInMap("CreationTime")
         public String creationTime;
 
+        // The description of the application.
         @NameInMap("Description")
         public String description;
 
+        // The last time when the application was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
         @NameInMap("ModificationTime")
         public String modificationTime;
 
+        // The status of the application. Valid values:
+        // - **Normal**
+        // - **Disable**
         @NameInMap("Status")
         public String status;
 
+        // The type of the application. Valid values:
+        // - **System**
+        // - **Custom**
         @NameInMap("Type")
         public String type;
 

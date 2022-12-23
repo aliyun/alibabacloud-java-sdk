@@ -4,15 +4,19 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetCategoriesResponseBody extends TeaModel {
+    // The information about the specified category.
     @NameInMap("Category")
     public GetCategoriesResponseBodyCategory category;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The list of subcategories.
     @NameInMap("SubCategories")
     public GetCategoriesResponseBodySubCategories subCategories;
 
+    // The total number of subcategories.
     @NameInMap("SubTotal")
     public Long subTotal;
 
@@ -54,18 +58,27 @@ public class GetCategoriesResponseBody extends TeaModel {
     }
 
     public static class GetCategoriesResponseBodyCategory extends TeaModel {
+        // The ID of the video category.
         @NameInMap("CateId")
         public Long cateId;
 
+        // The name of the category.
+        // *   The value can be up to 64 bytes in length.
+        // *   The string must be encoded in the UTF-8 format.
         @NameInMap("CateName")
         public String cateName;
 
+        // The level of the category. A value of **0** indicates a level 1 category.
         @NameInMap("Level")
         public Long level;
 
+        // The ID of the parent category. The parent category ID of a level 1 category is **-1**.
         @NameInMap("ParentId")
         public Long parentId;
 
+        // The type of the category. Valid values:
+        // *   **default** (default): default category
+        // *   **material**: material category
         @NameInMap("Type")
         public String type;
 
@@ -117,21 +130,32 @@ public class GetCategoriesResponseBody extends TeaModel {
     }
 
     public static class GetCategoriesResponseBodySubCategoriesCategory extends TeaModel {
+        // The ID of the video category.
         @NameInMap("CateId")
         public Long cateId;
 
+        // The name of the category.
+        // *   The value can be up to 64 bytes in length.
+        // *   The string must be encoded in the UTF-8 format.
         @NameInMap("CateName")
         public String cateName;
 
+        // The level of the category. A value of **0** indicates a level 1 category.
         @NameInMap("Level")
         public Long level;
 
+        // The ID of the parent category. The parent category ID of a level 1 category is **-1**.
         @NameInMap("ParentId")
         public Long parentId;
 
+        // The total number of subcategories.
         @NameInMap("SubTotal")
         public Long subTotal;
 
+        // The type of the category. Valid values:
+        // 
+        // *   **default** (default): default category
+        // *   **material**: material category
         @NameInMap("Type")
         public String type;
 

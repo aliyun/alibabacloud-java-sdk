@@ -4,15 +4,19 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class RefreshMediaPlayUrlsResponseBody extends TeaModel {
+    // The IDs of the media files that cannot be operated on. In most cases, media files cannot be operated on because you are not authorized to perform the operations. For more information, see [Overview](~~113600~~).
     @NameInMap("ForbiddenMediaIds")
     public String forbiddenMediaIds;
 
+    // The ID of the refresh or prefetch task.
     @NameInMap("MediaRefreshJobId")
     public String mediaRefreshJobId;
 
+    // The IDs of the media files that do not exist.
     @NameInMap("NonExistMediaIds")
     public String nonExistMediaIds;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

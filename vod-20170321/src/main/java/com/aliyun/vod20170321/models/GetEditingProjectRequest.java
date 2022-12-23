@@ -10,6 +10,7 @@ public class GetEditingProjectRequest extends TeaModel {
     @NameInMap("OwnerId")
     public String ownerId;
 
+    // The ID of the online editing project.
     @NameInMap("ProjectId")
     public String projectId;
 

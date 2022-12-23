@@ -4,9 +4,11 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribePlayUserTotalResponseBody extends TeaModel {
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The statistics on total playback each day.
     @NameInMap("UserPlayStatisTotals")
     public DescribePlayUserTotalResponseBodyUserPlayStatisTotals userPlayStatisTotals;
 
@@ -32,15 +34,19 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
     }
 
     public static class DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotalUV extends TeaModel {
+        // The total number of unique visitors who use ApsaraVideo Player SDK for Android.
         @NameInMap("Android")
         public String android;
 
+        // The total number of unique visitors who use ApsaraVideo Player SDK for Flash.
         @NameInMap("Flash")
         public String flash;
 
+        // The total number of unique visitors who use ApsaraVideo Player SDK for HTML5.
         @NameInMap("HTML5")
         public String HTML5;
 
+        // The total number of unique visitors who use ApsaraVideo Player SDK for iOS.
         @NameInMap("iOS")
         public String iOS;
 
@@ -84,15 +90,19 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
     }
 
     public static class DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotalVV extends TeaModel {
+        // The total number of video views that is collected for videos that are played by using ApsaraVideo Player SDK for Android.
         @NameInMap("Android")
         public String android;
 
+        // The total number of video views that is collected for videos that are played by using ApsaraVideo Player SDK for Flash.
         @NameInMap("Flash")
         public String flash;
 
+        // The total number of video views that is collected for videos that are played by using ApsaraVideo Player SDK for HTML5.
         @NameInMap("HTML5")
         public String HTML5;
 
+        // The total number of video views that is collected for videos that are played by using ApsaraVideo Player SDK for iOS.
         @NameInMap("iOS")
         public String iOS;
 
@@ -136,18 +146,23 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
     }
 
     public static class DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotal extends TeaModel {
+        // The date when the statistics were generated. The date follows the *yyyy-MM-dd* format.
         @NameInMap("Date")
         public String date;
 
+        // The total playback duration. Unit: milliseconds.
         @NameInMap("PlayDuration")
         public String playDuration;
 
+        // The distribution of the playback duration.
         @NameInMap("PlayRange")
         public String playRange;
 
+        // The total number of unique visitors.
         @NameInMap("UV")
         public DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotalUV UV;
 
+        // The total number of video views.
         @NameInMap("VV")
         public DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotalVV VV;
 

@@ -4,15 +4,21 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetAuditHistoryResponseBody extends TeaModel {
+    // The review records.
     @NameInMap("Histories")
     public java.util.List<GetAuditHistoryResponseBodyHistories> histories;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The manual review result. Valid values:
+    // - **Normal**: The video can be played.
+    // - **Blocked**: The video is blocked.
     @NameInMap("Status")
     public String status;
 
+    // The total number of review records.
     @NameInMap("Total")
     public Long total;
 
@@ -54,18 +60,25 @@ public class GetAuditHistoryResponseBody extends TeaModel {
     }
 
     public static class GetAuditHistoryResponseBodyHistories extends TeaModel {
+        // The reviewer.
         @NameInMap("Auditor")
         public String auditor;
 
+        // The review comments, which are provided by the reviewer.
         @NameInMap("Comment")
         public String comment;
 
+        // The time when the review record was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
         @NameInMap("CreationTime")
         public String creationTime;
 
+        // The reason why the video failed the review. If the video failed the review, specify the reason.
         @NameInMap("Reason")
         public String reason;
 
+        // The manual review result. Valid values:
+        // - **Normal**: The video can be played.
+        // - **Blocked**: The video is blocked.
         @NameInMap("Status")
         public String status;
 

@@ -4,12 +4,15 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetImageInfosResponseBody extends TeaModel {
+    // The image information.
     @NameInMap("ImageInfo")
     public java.util.List<GetImageInfosResponseBodyImageInfo> imageInfo;
 
+    // The IDs of the images that do not exist.
     @NameInMap("NonExistImageIds")
     public java.util.List<String> nonExistImageIds;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,18 +46,23 @@ public class GetImageInfosResponseBody extends TeaModel {
     }
 
     public static class GetImageInfosResponseBodyImageInfoMezzanine extends TeaModel {
+        // The size of the image file. Unit: bytes.
         @NameInMap("FileSize")
         public String fileSize;
 
+        // The OSS URL of the image file.
         @NameInMap("FileURL")
         public String fileURL;
 
+        // The height of the image. Unit: pixels.
         @NameInMap("Height")
         public Integer height;
 
+        // The name of the source file.
         @NameInMap("OriginalFileName")
         public String originalFileName;
 
+        // The width of the image. Unit: pixels.
         @NameInMap("Width")
         public Integer width;
 
@@ -106,42 +114,65 @@ public class GetImageInfosResponseBody extends TeaModel {
     }
 
     public static class GetImageInfosResponseBodyImageInfo extends TeaModel {
+        // The ID of the application.
         @NameInMap("AppId")
         public String appId;
 
+        // The ID of the category to which the image belongs.
         @NameInMap("CateId")
         public Long cateId;
 
+        // The name of the category.
         @NameInMap("CateName")
         public String cateName;
 
+        // The time when the image was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
         @NameInMap("CreationTime")
         public String creationTime;
 
+        // The description of the image.
         @NameInMap("Description")
         public String description;
 
+        // The ID of the image file.
         @NameInMap("ImageId")
         public String imageId;
 
+        // The type of the image. Valid values:
+        // 
+        // *   **CoverSnapshot**: thumbnail snapshot
+        // *   **NormalSnapshot**: normal snapshot
+        // *   **SpriteSnapshot**: sprite snapshot
+        // *   **SpriteOriginSnapshot**: sprite source snapshot
+        // *   **All**: images of all the preceding types. If this parameter is not set to All, you can specify multiple types and separate the types with commas (,).
         @NameInMap("ImageType")
         public String imageType;
 
+        // The source information about the image.
         @NameInMap("Mezzanine")
         public GetImageInfosResponseBodyImageInfoMezzanine mezzanine;
 
+        // The status of the image file. Valid values:
+        // 
+        // *   **Uploading**: The image is being uploaded. This is the initial status.
+        // *   **Normal**: The image is uploaded.
+        // *   **UploadFail**: The image fails to be uploaded.
         @NameInMap("Status")
         public String status;
 
+        // The bucket in which the image is stored.
         @NameInMap("StorageLocation")
         public String storageLocation;
 
+        // The tags of the image. Separate multiple tags with commas (,).
         @NameInMap("Tags")
         public String tags;
 
+        // The title of the image.
         @NameInMap("Title")
         public String title;
 
+        // The image URL. If a domain name for CDN is specified, a CDN URL is returned. Otherwise, an OSS URL is returned.
         @NameInMap("URL")
         public String URL;
 
