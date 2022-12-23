@@ -12,6 +12,10 @@ public class StartAlertResponse extends TeaModel {
     @Validation(required = true)
     public Integer statusCode;
 
+    @NameInMap("body")
+    @Validation(required = true)
+    public StartAlertResponseBody body;
+
     public static StartAlertResponse build(java.util.Map<String, ?> map) throws Exception {
         StartAlertResponse self = new StartAlertResponse();
         return TeaModel.build(map, self);
@@ -31,6 +35,14 @@ public class StartAlertResponse extends TeaModel {
     }
     public Integer getStatusCode() {
         return this.statusCode;
+    }
+
+    public StartAlertResponse setBody(StartAlertResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public StartAlertResponseBody getBody() {
+        return this.body;
     }
 
 }
