@@ -1,3 +1,6 @@
+2022-12-23 Version: 3.0.3
+- Publish Swift.
+
 2022-12-22 Version: 3.0.2
 - Publish Swift.
 

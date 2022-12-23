@@ -35,6 +35,18 @@ public class CompareFaceResponseBody extends TeaModel {
         @NameInMap("Confidence")
         public Float confidence;
 
+        @NameInMap("IsMaskA")
+        public Long isMaskA;
+
+        @NameInMap("IsMaskB")
+        public Long isMaskB;
+
+        @NameInMap("LandmarksAList")
+        public java.util.List<Long> landmarksAList;
+
+        @NameInMap("LandmarksBList")
+        public java.util.List<Long> landmarksBList;
+
         @NameInMap("MessageTips")
         public String messageTips;
 
@@ -67,6 +79,38 @@ public class CompareFaceResponseBody extends TeaModel {
         }
         public Float getConfidence() {
             return this.confidence;
+        }
+
+        public CompareFaceResponseBodyData setIsMaskA(Long isMaskA) {
+            this.isMaskA = isMaskA;
+            return this;
+        }
+        public Long getIsMaskA() {
+            return this.isMaskA;
+        }
+
+        public CompareFaceResponseBodyData setIsMaskB(Long isMaskB) {
+            this.isMaskB = isMaskB;
+            return this;
+        }
+        public Long getIsMaskB() {
+            return this.isMaskB;
+        }
+
+        public CompareFaceResponseBodyData setLandmarksAList(java.util.List<Long> landmarksAList) {
+            this.landmarksAList = landmarksAList;
+            return this;
+        }
+        public java.util.List<Long> getLandmarksAList() {
+            return this.landmarksAList;
+        }
+
+        public CompareFaceResponseBodyData setLandmarksBList(java.util.List<Long> landmarksBList) {
+            this.landmarksBList = landmarksBList;
+            return this;
+        }
+        public java.util.List<Long> getLandmarksBList() {
+            return this.landmarksBList;
         }
 
         public CompareFaceResponseBodyData setMessageTips(String messageTips) {
