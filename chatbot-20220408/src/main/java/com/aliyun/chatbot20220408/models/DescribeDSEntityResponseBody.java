@@ -13,15 +13,12 @@ public class DescribeDSEntityResponseBody extends TeaModel {
     @NameInMap("CreateUserName")
     public String createUserName;
 
-    // 实体ID
     @NameInMap("EntityId")
     public Long entityId;
 
-    // 实体名称，仅支持中文、大小写字母、数字、下划线
     @NameInMap("EntityName")
     public String entityName;
 
-    // 实体类型：详见:,EntityTypeEnum[synonyms(同义词),regex(正则)]
     @NameInMap("EntityType")
     public String entityType;
 
@@ -37,7 +34,6 @@ public class DescribeDSEntityResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // 系统实体code，如@sys.date
     @NameInMap("SysEntityCode")
     public String sysEntityCode;
 

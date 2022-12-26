@@ -4,7 +4,6 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class UpdatePerspectiveResponseBody extends TeaModel {
-    // 请求Id
     @NameInMap("RequestId")
     public String requestId;
 

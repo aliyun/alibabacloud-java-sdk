@@ -4,15 +4,12 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class CancelInstancePublishTaskRequest extends TeaModel {
-    // 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
     @NameInMap("AgentKey")
     public String agentKey;
 
-    // 任务ID
     @NameInMap("Id")
     public Long id;
 
-    // 机器人ID
     @NameInMap("InstanceId")
     public String instanceId;
 

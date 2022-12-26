@@ -4,11 +4,9 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class CreatePerspectiveResponseBody extends TeaModel {
-    // 视角主键（code_id）
     @NameInMap("PerspectiveId")
     public String perspectiveId;
 
-    // 请求Id
     @NameInMap("RequestId")
     public String requestId;
 

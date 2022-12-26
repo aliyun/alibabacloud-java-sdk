@@ -4,43 +4,33 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class ContinueInstancePublishTaskResponseBody extends TeaModel {
-    // 业务类型列表
     @NameInMap("BizTypeList")
     public java.util.List<String> bizTypeList;
 
-    // 任务创建的 UTC 时间
     @NameInMap("CreateTime")
     public String createTime;
 
-    // job失败信息
     @NameInMap("Error")
     public String error;
 
-    // 各子发布模块的错误信息，key是子发布模块，value是错误信息
     @NameInMap("Errors")
     public java.util.Map<String, ?> errors;
 
-    // 任务Id
     @NameInMap("Id")
     public Long id;
 
-    // 任务修改的 UTC 时间
     @NameInMap("ModifyTime")
     public String modifyTime;
 
-    // 请求Id
     @NameInMap("RequestId")
     public String requestId;
 
-    // 任务Id
     @NameInMap("Response")
     public String response;
 
-    // 任务状态
     @NameInMap("Status")
     public String status;
 
-    // 各子发布模块的警告信息，key是子发布模块，value是警告信息
     @NameInMap("Warnings")
     public java.util.Map<String, ?> warnings;
 

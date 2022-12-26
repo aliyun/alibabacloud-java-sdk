@@ -7,7 +7,6 @@ public class CreateSimQuestionResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // 相似问ID
     @NameInMap("SimQuestionId")
     public Long simQuestionId;
 

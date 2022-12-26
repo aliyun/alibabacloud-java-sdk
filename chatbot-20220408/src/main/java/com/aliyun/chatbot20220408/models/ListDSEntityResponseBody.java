@@ -92,7 +92,6 @@ public class ListDSEntityResponseBody extends TeaModel {
         @NameInMap("ModifyUserName")
         public String modifyUserName;
 
-        // 系统实体code，如@sys.date
         @NameInMap("SysEntityCode")
         public String sysEntityCode;
 

@@ -4,71 +4,54 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class SearchFaqRequest extends TeaModel {
-    // 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
     @NameInMap("AgentKey")
     public String agentKey;
 
-    // 类目唯一标识
     @NameInMap("CategoryIds")
     public java.util.List<Long> categoryIds;
 
-    // 创建开始时间
     @NameInMap("CreateTimeBegin")
     public String createTimeBegin;
 
-    // 创建结束时间
     @NameInMap("CreateTimeEnd")
     public String createTimeEnd;
 
-    // 创建人
     @NameInMap("CreateUserName")
     public String createUserName;
 
-    // 失效开始时间
     @NameInMap("EndTimeBegin")
     public String endTimeBegin;
 
-    // 失效结束时间
     @NameInMap("EndTimeEnd")
     public String endTimeEnd;
 
-    // 关键字
     @NameInMap("Keyword")
     public String keyword;
 
-    // 修改开始时间
     @NameInMap("ModifyTimeBegin")
     public String modifyTimeBegin;
 
-    // 修改结束时间
     @NameInMap("ModifyTimeEnd")
     public String modifyTimeEnd;
 
-    // 修改人
     @NameInMap("ModifyUserName")
     public String modifyUserName;
 
-    // 页码 默认1
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // 每页数量，默认10，最大50
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 搜索范围： 1-搜索标题相似问, 2-搜索答案, 3-搜索全部
     @NameInMap("SearchScope")
     public Integer searchScope;
 
-    // 生效开始时间
     @NameInMap("StartTimeBegin")
     public String startTimeBegin;
 
-    // 生效结束时间
     @NameInMap("StartTimeEnd")
     public String startTimeEnd;
 
-    // 知识状态: -1-已删除未发布, 1-未发布, 2-已发布, 3-已更新未发布
     @NameInMap("Status")
     public Integer status;
 

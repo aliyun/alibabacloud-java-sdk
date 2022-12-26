@@ -4,19 +4,15 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class AssociateResponseBody extends TeaModel {
-    // 联想的列表
     @NameInMap("Associate")
     public java.util.List<AssociateResponseBodyAssociate> associate;
 
-    // 本条会话应答消息的ID
     @NameInMap("MessageId")
     public String messageId;
 
-    // 请求id
     @NameInMap("RequestId")
     public String requestId;
 
-    // 本次会话的ID
     @NameInMap("SessionId")
     public String sessionId;
 
@@ -58,11 +54,9 @@ public class AssociateResponseBody extends TeaModel {
     }
 
     public static class AssociateResponseBodyAssociate extends TeaModel {
-        // 附带信息
         @NameInMap("Meta")
         public String meta;
 
-        // 关联问题的标题
         @NameInMap("Title")
         public String title;
 

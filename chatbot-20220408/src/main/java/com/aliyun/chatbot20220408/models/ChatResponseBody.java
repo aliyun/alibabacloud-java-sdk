@@ -4,23 +4,18 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class ChatResponseBody extends TeaModel {
-    // 本条会话应答消息的ID
     @NameInMap("MessageId")
     public String messageId;
 
-    // 消息的列表
     @NameInMap("Messages")
     public java.util.List<ChatResponseBodyMessages> messages;
 
-    // query的分词结果，可能为空
     @NameInMap("QuerySegList")
     public java.util.List<String> querySegList;
 
-    // 请求id
     @NameInMap("RequestId")
     public String requestId;
 
-    // 本次会话的ID
     @NameInMap("SessionId")
     public String sessionId;
 
@@ -70,11 +65,9 @@ public class ChatResponseBody extends TeaModel {
     }
 
     public static class ChatResponseBodyMessagesKnowledgeRelatedKnowledges extends TeaModel {
-        // 知识关联知识的ID
         @NameInMap("KnowledgeId")
         public String knowledgeId;
 
-        // 知识的关联知识的标题
         @NameInMap("Title")
         public String title;
 
@@ -102,44 +95,33 @@ public class ChatResponseBody extends TeaModel {
     }
 
     public static class ChatResponseBodyMessagesKnowledge extends TeaModel {
-        // 区分答案类型。
-        // KnowledgeBase:知识库条；
         @NameInMap("AnswerSource")
         public String answerSource;
 
-        // 知识类目
         @NameInMap("Category")
         public String category;
 
-        // 命中问题的内容
         @NameInMap("Content")
         public String content;
 
-        // 纯文本/富文本答案的标示
         @NameInMap("ContentType")
         public String contentType;
 
-        // 命中语句
         @NameInMap("HitStatement")
         public String hitStatement;
 
-        // 命中问题在知识库中的ID
         @NameInMap("Id")
         public String id;
 
-        // 关联知识列表
         @NameInMap("RelatedKnowledges")
         public java.util.List<ChatResponseBodyMessagesKnowledgeRelatedKnowledges> relatedKnowledges;
 
-        // 分数
         @NameInMap("Score")
         public Double score;
 
-        // 命中问题的简介
         @NameInMap("Summary")
         public String summary;
 
-        // 命中问题的标题
         @NameInMap("Title")
         public String title;
 
@@ -231,22 +213,15 @@ public class ChatResponseBody extends TeaModel {
     }
 
     public static class ChatResponseBodyMessagesRecommends extends TeaModel {
-        // 澄清来源的标识
         @NameInMap("AnswerSource")
         public String answerSource;
 
-        // 澄清的知识id
         @NameInMap("KnowledgeId")
         public String knowledgeId;
 
-        // 推荐内容的分数，当AnswerSource为KNOWLEDGE时，此字段有值
         @NameInMap("Score")
         public Double score;
 
-        // 澄清内容，可能是
-        // 图谱问答的实体、
-        // 知识问答的知识标题、
-        // 表格问答的列值
         @NameInMap("Title")
         public String title;
 
@@ -342,66 +317,54 @@ public class ChatResponseBody extends TeaModel {
     }
 
     public static class ChatResponseBodyMessagesText extends TeaModel {
-        // 区分答案类型
         @NameInMap("AnswerSource")
         public String answerSource;
 
-        // 当AnswerSource为MACHINE_READ时，此字段返回命中文章标题
         @NameInMap("ArticleTitle")
         public String articleTitle;
 
-        // 指令参数，如转人工指令的转人工技能组
         @NameInMap("Commands")
         public java.util.Map<String, ?> commands;
 
-        // 文本消息的内容
         @NameInMap("Content")
         public String content;
 
-        // 纯文本/富文本答案的标示
         @NameInMap("ContentType")
         public String contentType;
 
-        // 当AnswerSource为BotFramework时，此字段返回对话单元名称
         @NameInMap("DialogName")
         public String dialogName;
 
-        // 此字段返回透传参数
         @NameInMap("Ext")
         public java.util.Map<String, ?> ext;
 
-        // 当AnswerSource为BotFramework时，此字段返回透传参数
         @NameInMap("ExternalFlags")
         public java.util.Map<String, ?> externalFlags;
 
-        // 命中语句
         @NameInMap("HitStatement")
         public String hitStatement;
 
-        // 当AnswerSource为BotFramework时，此字段返回意图名称
         @NameInMap("IntentName")
         public String intentName;
 
         @NameInMap("MetaData")
         public String metaData;
 
-        // 当AnswerSource为BotFramework时，此字段返回节点Id
         @NameInMap("NodeId")
         public String nodeId;
 
-        // 当AnswerSource为BotFramework时，此字段返回节点名称
         @NameInMap("NodeName")
         public String nodeName;
 
-        // 分数
+        @NameInMap("ResponseType")
+        public String responseType;
+
         @NameInMap("Score")
         public Double score;
 
-        // 当AnswerSource为BotFramework时，此字段返回专有名词列表
         @NameInMap("Slots")
         public java.util.List<ChatResponseBodyMessagesTextSlots> slots;
 
-        // 自定义闲聊主题title
         @NameInMap("UserDefinedChatTitle")
         public String userDefinedChatTitle;
 
@@ -514,6 +477,14 @@ public class ChatResponseBody extends TeaModel {
             return this.nodeName;
         }
 
+        public ChatResponseBodyMessagesText setResponseType(String responseType) {
+            this.responseType = responseType;
+            return this;
+        }
+        public String getResponseType() {
+            return this.responseType;
+        }
+
         public ChatResponseBodyMessagesText setScore(Double score) {
             this.score = score;
             return this;
@@ -541,31 +512,24 @@ public class ChatResponseBody extends TeaModel {
     }
 
     public static class ChatResponseBodyMessages extends TeaModel {
-        // 当AnswerType为Recommend时，此字段表示推荐的答案来源
         @NameInMap("AnswerSource")
         public String answerSource;
 
-        // 本条消息的类型
         @NameInMap("AnswerType")
         public String answerType;
 
-        // 当AnswerType为Knowledge时，此字段包含机器人返回的Knowledge对象
         @NameInMap("Knowledge")
         public ChatResponseBodyMessagesKnowledge knowledge;
 
-        // 当AnswerType为Recommend时，此字段包含机器人返回的Recommend的列表
         @NameInMap("Recommends")
         public java.util.List<ChatResponseBodyMessagesRecommends> recommends;
 
-        // 当AnswerType为Text时，此字段包含机器人返回的Text对象
         @NameInMap("Text")
         public ChatResponseBodyMessagesText text;
 
-        // 当AnswerType为Recommend时，此字段表示推荐或者反问的标题话术
         @NameInMap("Title")
         public String title;
 
-        // 当AnswerType为Recommend时，并且问答的机器人为语音机器人，此字段表示列表型答案在语音场景渲染之后的答案内容
         @NameInMap("VoiceTitle")
         public String voiceTitle;
 

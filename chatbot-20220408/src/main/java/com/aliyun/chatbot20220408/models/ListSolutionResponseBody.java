@@ -7,7 +7,6 @@ public class ListSolutionResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // 答案列表
     @NameInMap("Solutions")
     public java.util.List<ListSolutionResponseBodySolutions> solutions;
 
@@ -33,31 +32,24 @@ public class ListSolutionResponseBody extends TeaModel {
     }
 
     public static class ListSolutionResponseBodySolutions extends TeaModel {
-        // 答案内容
         @NameInMap("Content")
         public String content;
 
-        // 答案类型(0纯文本，1富文本）
         @NameInMap("ContentType")
         public Integer contentType;
 
-        // 创建时间(UTC 时间)
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 修改时间(UTC 时间)
         @NameInMap("ModifyTime")
         public String modifyTime;
 
-        // 视角code列表
         @NameInMap("PerspectiveCodes")
         public java.util.List<String> perspectiveCodes;
 
-        // 答案纯文本内容
         @NameInMap("PlainText")
         public String plainText;
 
-        // 答案ID
         @NameInMap("SolutionId")
         public Long solutionId;
 

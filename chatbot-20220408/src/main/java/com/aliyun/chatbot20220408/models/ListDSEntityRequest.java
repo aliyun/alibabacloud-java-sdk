@@ -4,19 +4,15 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class ListDSEntityRequest extends TeaModel {
-    // 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
     @NameInMap("AgentKey")
     public String agentKey;
 
-    // 为空：全量自定义实体（默认）
     @NameInMap("EntityType")
     public String entityType;
 
-    // 机器人ID
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 筛选项，contains匹配，范围：实体名称（未来扩展：实体成员、同义词）
     @NameInMap("Keyword")
     public String keyword;
 

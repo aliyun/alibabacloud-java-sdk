@@ -4,7 +4,6 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class CreateConnQuestionResponseBody extends TeaModel {
-    // 关联关系ID
     @NameInMap("OutlineId")
     public Long outlineId;
 

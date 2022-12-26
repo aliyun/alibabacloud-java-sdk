@@ -65,15 +65,12 @@ public class ListUserSayResponseBody extends TeaModel {
     }
 
     public static class ListUserSayResponseBodyUserSaysSlotInfos extends TeaModel {
-        // 槽位在意图话术中的下标
         @NameInMap("EndIndex")
         public Integer endIndex;
 
-        // 意图槽位ID
         @NameInMap("SlotId")
         public String slotId;
 
-        // 槽位在意图话术中的下标
         @NameInMap("StartIndex")
         public Integer startIndex;
 

@@ -4,23 +4,18 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class CreateInstanceRequest extends TeaModel {
-    // 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
     @NameInMap("AgentKey")
     public String agentKey;
 
-    // 机器人备注，不超过50字
     @NameInMap("Introduction")
     public String introduction;
 
-    // 机器人服务的语言，如zh-cn、en-us，参考 http://www.lingoes.net/zh/translator/langcode.htm   入参全小写，当前只支持 zh-cn、en-us
     @NameInMap("LanguageCode")
     public String languageCode;
 
-    // 机器人名称，不超过50字
     @NameInMap("Name")
     public String name;
 
-    // 机器人类型
     @NameInMap("RobotType")
     public String robotType;
 

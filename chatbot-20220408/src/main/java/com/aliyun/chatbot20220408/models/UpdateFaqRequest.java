@@ -4,27 +4,21 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class UpdateFaqRequest extends TeaModel {
-    // 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
     @NameInMap("AgentKey")
     public String agentKey;
 
-    // 知识的类目ID
     @NameInMap("CategoryId")
     public Long categoryId;
 
-    // 失效时间
     @NameInMap("EndDate")
     public String endDate;
 
-    // 知识ID
     @NameInMap("KnowledgeId")
     public Long knowledgeId;
 
-    // 生效时间
     @NameInMap("StartDate")
     public String startDate;
 
-    // 知识标题
     @NameInMap("Title")
     public String title;
 

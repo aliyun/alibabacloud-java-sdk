@@ -4,7 +4,6 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class CreateFaqResponseBody extends TeaModel {
-    // 知识ID
     @NameInMap("KnowledgeId")
     public Long knowledgeId;
 

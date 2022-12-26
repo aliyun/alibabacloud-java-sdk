@@ -4,19 +4,15 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class UpdateIntentRequest extends TeaModel {
-    // 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
     @NameInMap("AgentKey")
     public String agentKey;
 
-    // 机器人ID
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 意图定义结构体
     @NameInMap("IntentDefinition")
     public UpdateIntentRequestIntentDefinition intentDefinition;
 
-    // 意图ID
     @NameInMap("IntentId")
     public Long intentId;
 
@@ -58,26 +54,21 @@ public class UpdateIntentRequest extends TeaModel {
     }
 
     public static class UpdateIntentRequestIntentDefinitionSlotInfos extends TeaModel {
-        // 是否数组
         @NameInMap("Array")
         public Boolean array;
 
-        // 是否脱敏
         @NameInMap("Encrypt")
         public Boolean encrypt;
 
-        // 是否交互式
         @NameInMap("Interactive")
         public Boolean interactive;
 
-        // 槽位名
         @NameInMap("Name")
         public String name;
 
         @NameInMap("SlotId")
         public String slotId;
 
-        // 关联的实体名
         @NameInMap("Value")
         public String value;
 
@@ -137,15 +128,12 @@ public class UpdateIntentRequest extends TeaModel {
     }
 
     public static class UpdateIntentRequestIntentDefinition extends TeaModel {
-        // 意图别名
         @NameInMap("AliasName")
         public String aliasName;
 
-        // 意图名称
         @NameInMap("IntentName")
         public String intentName;
 
-        // 槽位信息
         @NameInMap("SlotInfos")
         public java.util.List<UpdateIntentRequestIntentDefinitionSlotInfos> slotInfos;
 

@@ -4,39 +4,30 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class DeleteInstanceResponseBody extends TeaModel {
-    // 业务类型列表
     @NameInMap("BizTypeList")
     public java.util.List<String> bizTypeList;
 
-    // 任务创建的 UTC 时间
     @NameInMap("CreateTime")
     public String createTime;
 
-    // 任务创建人Id
     @NameInMap("CreateUserId")
     public Long createUserId;
 
-    // 任务创建人
     @NameInMap("CreateUserName")
     public String createUserName;
 
-    // 错误信息
     @NameInMap("Error")
     public String error;
 
-    // 任务id
     @NameInMap("Id")
     public Long id;
 
-    // 请求Id
     @NameInMap("RequestId")
     public String requestId;
 
-    // 任务id
     @NameInMap("Response")
     public Long response;
 
-    // 任务状态，可以在GetInstancePublishTaskState API 了解更多的状态
     @NameInMap("Status")
     public String status;
 

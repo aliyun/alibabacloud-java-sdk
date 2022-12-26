@@ -4,27 +4,21 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class UpdateDSEntityValueShrinkRequest extends TeaModel {
-    // 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
     @NameInMap("AgentKey")
     public String agentKey;
 
-    // 实体类型为synonyms时，表示实体归一化值；当实体类型为regex时，表示正则表达式文本
     @NameInMap("Content")
     public String content;
 
-    // 实体ID，修改实体成员时可为空
     @NameInMap("EntityId")
     public Long entityId;
 
-    // 实体成员ID，创建实体成员时为空
     @NameInMap("EntityValueId")
     public Long entityValueId;
 
-    // 机器人ID
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 实体同义词
     @NameInMap("Synonyms")
     public String synonymsShrink;
 
