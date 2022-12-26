@@ -4,15 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeSecureSuggestionResponseBody extends TeaModel {
-    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
-    // An array that consists of the unhandled security risks.
     @NameInMap("Suggestions")
     public java.util.List<DescribeSecureSuggestionResponseBodySuggestions> suggestions;
 
-    // The total number of unhandled security risks.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -46,15 +43,12 @@ public class DescribeSecureSuggestionResponseBody extends TeaModel {
     }
 
     public static class DescribeSecureSuggestionResponseBodySuggestionsDetail extends TeaModel {
-        // The description of the suggestion.
         @NameInMap("Description")
         public String description;
 
-        // The subtype of the unhandled security risk.
         @NameInMap("SubType")
         public String subType;
 
-        // The name of the unhandled risk.
         @NameInMap("Title")
         public String title;
 
@@ -90,23 +84,12 @@ public class DescribeSecureSuggestionResponseBody extends TeaModel {
     }
 
     public static class DescribeSecureSuggestionResponseBodySuggestions extends TeaModel {
-        // An array that consists of the details about the suggestion.
         @NameInMap("Detail")
         public java.util.List<DescribeSecureSuggestionResponseBodySuggestionsDetail> detail;
 
-        // The penalty point of an item.
         @NameInMap("Points")
         public Integer points;
 
-        // The type of the unhandled security risk. Valid values:
-        // 
-        // *   **SS_REINFORCE**: missing configuration of key features, such as the antivirus feature
-        // *   **SS_ALARM**: unhandled alerts
-        // *   **SS_VUL**: unfixed vulnerabilities
-        // *   **SS_HC**: baseline risks
-        // *   **SS_AK**: AccessKey pair leaks
-        // *   **SS_CLOUD_HC**: configuration risks of cloud services
-        // *   **OTHER**: others
         @NameInMap("SuggestType")
         public String suggestType;
 

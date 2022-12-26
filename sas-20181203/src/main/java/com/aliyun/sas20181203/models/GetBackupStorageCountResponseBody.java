@@ -4,11 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetBackupStorageCountResponseBody extends TeaModel {
-    // The details about the anti-ransomware capacity.
     @NameInMap("BackupStorageCount")
     public GetBackupStorageCountResponseBodyBackupStorageCount backupStorageCount;
 
-    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,26 +32,18 @@ public class GetBackupStorageCountResponseBody extends TeaModel {
     }
 
     public static class GetBackupStorageCountResponseBodyBackupStorageCount extends TeaModel {
-        // The anti-ransomware capacity that you purchased. Unit: bytes.
         @NameInMap("BuyStorageByte")
         public Long buyStorageByte;
 
-        // The storage capacity that is occupied by the backup data of your servers. Unit: bytes.
         @NameInMap("EcsUsageStorageByte")
         public Long ecsUsageStorageByte;
 
-        // Indicates whether the anti-ransomware capacity that is used exceeds the anti-ransomware capacity that you purchased. Valid values:
-        // 
-        // *   **0**: no
-        // *   **1**: yes
         @NameInMap("Overflow")
         public Integer overflow;
 
-        // The storage capacity that is occupied by the backup data of your databases. Unit: bytes.
         @NameInMap("UniUsageStorageByte")
         public Long uniUsageStorageByte;
 
-        // The total anti-ransomware capacity that is used. Unit: bytes.
         @NameInMap("UsageStorageByte")
         public Long usageStorageByte;
 

@@ -4,15 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribePropertyPortDetailResponseBody extends TeaModel {
-    // The pagination information.
     @NameInMap("PageInfo")
     public DescribePropertyPortDetailResponseBodyPageInfo pageInfo;
 
-    // An array that consists of the fingerprints of the ports.
     @NameInMap("Propertys")
     public java.util.List<DescribePropertyPortDetailResponseBodyPropertys> propertys;
 
-    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -46,19 +43,15 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
     }
 
     public static class DescribePropertyPortDetailResponseBodyPageInfo extends TeaModel {
-        // The number of entries returned on the current page.
         @NameInMap("Count")
         public Integer count;
 
-        // The page number of the returned page.
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
-        // The number of entries returned per page. Default value: **10**.
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        // The total number of entries returned.
         @NameInMap("TotalCount")
         public Integer totalCount;
 
@@ -102,51 +95,39 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
     }
 
     public static class DescribePropertyPortDetailResponseBodyPropertys extends TeaModel {
-        // The IP address that is bound to the listening port.
         @NameInMap("BindIp")
         public String bindIp;
 
-        // The timestamp of the last fingerprint collection. Unit: milliseconds.
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
-        // The ID of the server.
         @NameInMap("InstanceId")
         public String instanceId;
 
-        // The name of the server.
         @NameInMap("InstanceName")
         public String instanceName;
 
-        // The public IP address of the server.
         @NameInMap("InternetIp")
         public String internetIp;
 
-        // The private IP address of the server.
         @NameInMap("IntranetIp")
         public String intranetIp;
 
-        // The IP address of the network interface controller (NIC) that is bound to the listening port.
         @NameInMap("Ip")
         public String ip;
 
-        // The ID of the server process that listens on the port.
         @NameInMap("Pid")
         public String pid;
 
-        // The listening port.
         @NameInMap("Port")
         public String port;
 
-        // The name of the server process.
         @NameInMap("ProcName")
         public String procName;
 
-        // The network protocol that is used by the listening port.
         @NameInMap("Proto")
         public String proto;
 
-        // The UUID of the server.
         @NameInMap("Uuid")
         public String uuid;
 

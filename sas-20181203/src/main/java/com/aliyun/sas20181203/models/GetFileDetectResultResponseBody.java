@@ -4,11 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetFileDetectResultResponseBody extends TeaModel {
-    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
-    // An array that consists of file detection results.
     @NameInMap("ResultList")
     public java.util.List<GetFileDetectResultResponseBodyResultList> resultList;
 
@@ -34,60 +32,24 @@ public class GetFileDetectResultResponseBody extends TeaModel {
     }
 
     public static class GetFileDetectResultResponseBodyResultList extends TeaModel {
-        // The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
         @NameInMap("Code")
         public String code;
 
-        // The extended information about the file detection result.
         @NameInMap("Ext")
         public String ext;
 
-        // The identifier of the file. Only MD5 hash values are supported.
         @NameInMap("HashKey")
         public String hashKey;
 
-        // The error message returned.
         @NameInMap("Message")
         public String message;
 
-        // The file detection result. Valid values:
-        // 
-        // *   **0**: normal file.
-        // *   **1**: suspicious file.
-        // *   **3**: The detection is in progress.
         @NameInMap("Result")
         public Integer result;
 
-        // The score of file detection result.
-        // 
-        // >  A higher score indicates a more suspicious file.
         @NameInMap("Score")
         public Integer score;
 
-        // The type of virus. Valid values:
-        // 
-        // *   **Trojan**: self-mutating trojan
-        // *   **WebShell**: webshell
-        // *   **Backdoor**: backdoor program
-        // *   **RansomWare**: ransomware
-        // *   **Scanner**: scanner
-        // *   **Stealer**: tool that is used to steal information
-        // *   **Malbaseware**: tainted basic software
-        // *   **Hacktool**: attacker tool
-        // *   **Engtest**: engine test program
-        // *   **Downloader**: trojan downloader
-        // *   **Virus**: infectious virus
-        // *   **Miner**: mining program
-        // *   **Worm**: worm
-        // *   **DDoS**: DDoS trojan
-        // *   **Malware**: malicious program
-        // *   **Backdoor**: reverse shell
-        // *   **RiskWare**: software that has risks
-        // *   **Proxytool**: proxy
-        // *   **Suspicious**: suspicious program
-        // *   **MalScript**: malicious script
-        // *   **Rootkit**: rootkit
-        // *   **Exploit**: exploit
         @NameInMap("VirusType")
         public String virusType;
 

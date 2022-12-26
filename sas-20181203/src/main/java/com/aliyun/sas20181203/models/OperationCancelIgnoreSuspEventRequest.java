@@ -4,7 +4,6 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class OperationCancelIgnoreSuspEventRequest extends TeaModel {
-    // The IDs of alert events.
     @NameInMap("SecurityEventIds")
     public java.util.List<Long> securityEventIds;
 

@@ -418,6 +418,10 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        // The subtype of the baselines.
+        @NameInMap("RiskSubTypeName")
+        public String riskSubTypeName;
+
         // An array that consists of the whitelist of risk items.
         @NameInMap("RiskTypeWhiteListQueryResultList")
         public java.util.List<DescribeStrategyDetailResponseBodyStrategyRiskTypeWhiteListQueryResultList> riskTypeWhiteListQueryResultList;
@@ -491,6 +495,14 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public DescribeStrategyDetailResponseBodyStrategy setRiskSubTypeName(String riskSubTypeName) {
+            this.riskSubTypeName = riskSubTypeName;
+            return this;
+        }
+        public String getRiskSubTypeName() {
+            return this.riskSubTypeName;
         }
 
         public DescribeStrategyDetailResponseBodyStrategy setRiskTypeWhiteListQueryResultList(java.util.List<DescribeStrategyDetailResponseBodyStrategyRiskTypeWhiteListQueryResultList> riskTypeWhiteListQueryResultList) {

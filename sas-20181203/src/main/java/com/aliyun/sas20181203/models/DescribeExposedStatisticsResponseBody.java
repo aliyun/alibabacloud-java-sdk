@@ -4,43 +4,33 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeExposedStatisticsResponseBody extends TeaModel {
-    // The total number of high-risk vulnerabilities that are exposed on the Internet and can be exploited by attackers.
     @NameInMap("ExposedAsapVulCount")
     public Integer exposedAsapVulCount;
 
-    // The total number of system components that are exposed on the Internet. The components include OpenSSL and OpenSSH.
     @NameInMap("ExposedComponentCount")
     public Integer exposedComponentCount;
 
-    // The total number of servers that are exposed on the Internet.
     @NameInMap("ExposedInstanceCount")
     public Integer exposedInstanceCount;
 
-    // The total number of IP addresses that are exposed on the Internet.
     @NameInMap("ExposedIpCount")
     public Integer exposedIpCount;
 
-    // The total number of medium-risk vulnerabilities that are exposed on the Internet and can be exploited by attackers.
     @NameInMap("ExposedLaterVulCount")
     public Integer exposedLaterVulCount;
 
-    // The total number of low-risk vulnerabilities that are exposed on the Internet and can be exploited by attackers.
     @NameInMap("ExposedNntfVulCount")
     public Integer exposedNntfVulCount;
 
-    // The total number of ports that are exposed on the Internet.
     @NameInMap("ExposedPortCount")
     public Integer exposedPortCount;
 
-    // The total number of system keys that are detected on your servers and are exposed on the Internet.
     @NameInMap("ExposedWeekPasswordMachineCount")
     public Integer exposedWeekPasswordMachineCount;
 
-    // The total number of gateway assets that are exposed on the Internet. The gateway assets include NAT gateways and Server Load Balancer (SLB) instances.
     @NameInMap("GatewayAssetCount")
     public Integer gatewayAssetCount;
 
-    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,11 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeVendorListResponseBody extends TeaModel {
-    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
-    // An array that consists of the service providers.
     @NameInMap("VendorNameList")
     public java.util.List<String> vendorNameList;
 

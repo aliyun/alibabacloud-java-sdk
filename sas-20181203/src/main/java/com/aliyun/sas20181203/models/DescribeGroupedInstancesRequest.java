@@ -52,6 +52,16 @@ public class DescribeGroupedInstancesRequest extends TeaModel {
     @NameInMap("Vendor")
     public Integer vendor;
 
+    // The source of the server. Separate multiple sources with commas (,).Valid values:
+    // 
+    // *   **0**: an asset provided by Alibaba Cloud.
+    // *   **1**: a third-party cloud server
+    // *   **2**: a server in a data center
+    // *   **3**, **4**, **5**, and **7**: other cloud asset
+    // *   **8**: a lightweight asset
+    @NameInMap("Vendors")
+    public String vendors;
+
     public static DescribeGroupedInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeGroupedInstancesRequest self = new DescribeGroupedInstancesRequest();
         return TeaModel.build(map, self);
@@ -119,6 +129,14 @@ public class DescribeGroupedInstancesRequest extends TeaModel {
     }
     public Integer getVendor() {
         return this.vendor;
+    }
+
+    public DescribeGroupedInstancesRequest setVendors(String vendors) {
+        this.vendors = vendors;
+        return this;
+    }
+    public String getVendors() {
+        return this.vendors;
     }
 
 }
