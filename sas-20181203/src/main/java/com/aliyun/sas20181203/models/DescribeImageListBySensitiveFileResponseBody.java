@@ -4,33 +4,24 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
-    // The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
     @NameInMap("Code")
     public String code;
 
-    // The HTTP status code.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // An array that consists of the information about the images.
     @NameInMap("ImageInfos")
     public java.util.List<DescribeImageListBySensitiveFileResponseBodyImageInfos> imageInfos;
 
-    // The error message returned.
     @NameInMap("Message")
     public String message;
 
-    // The pagination information.
     @NameInMap("PageInfo")
     public DescribeImageListBySensitiveFileResponseBodyPageInfo pageInfo;
 
-    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request was successful. Valid values:
-    // - **true**: The request was successful.
-    // - **false**: The request failed.
     @NameInMap("Success")
     public Boolean success;
 
@@ -96,46 +87,33 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
     }
 
     public static class DescribeImageListBySensitiveFileResponseBodyImageInfos extends TeaModel {
-        // The image digest.
         @NameInMap("Digest")
         public String digest;
 
-        // The UNIX timestamp of when the first scan was performed. Unit: milliseconds.
         @NameInMap("FirstScanTime")
         public Long firstScanTime;
 
-        // The ID of the image instance.
         @NameInMap("InstanceId")
         public String instanceId;
 
-        // The UNIX timestamp of when the last scan was performed. Unit: milliseconds.
         @NameInMap("LastScanTime")
         public Long lastScanTime;
 
-        // The region ID of the image instance.
         @NameInMap("RegionId")
         public String regionId;
 
-        // The name of the image repository.
         @NameInMap("RepoName")
         public String repoName;
 
-        // The namespace to which the image repository belongs.
         @NameInMap("RepoNamespace")
         public String repoNamespace;
 
-        // The risk level. Valid values:
-        // - **high**
-        // - **medium**
-        // - **low**
         @NameInMap("RiskLevel")
         public String riskLevel;
 
-        // The tag that is added to the image.
         @NameInMap("Tag")
         public String tag;
 
-        // The UUID of the image.
         @NameInMap("Uuid")
         public String uuid;
 
@@ -227,23 +205,18 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
     }
 
     public static class DescribeImageListBySensitiveFileResponseBodyPageInfo extends TeaModel {
-        // The number of entries returned on the current page.
         @NameInMap("Count")
         public Integer count;
 
-        // The page number of the returned page.
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
-        // The key of the last data entry.
         @NameInMap("LastRowKey")
         public String lastRowKey;
 
-        // The number of entries returned per page. Default value: 20.
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        // The total number of entries returned.
         @NameInMap("TotalCount")
         public Integer totalCount;
 

@@ -10,7 +10,6 @@ public class ModifyLoginBaseConfigResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,22 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetFileDetectResultRequest extends TeaModel {
-    // An array that consists of the identifiers of files. Only MD5 hash values are supported.
     @NameInMap("HashKeyList")
     public java.util.List<String> hashKeyList;
 
-    // The source IP address of the request.
     @NameInMap("SourceIp")
     public String sourceIp;
 
-    // The type of the file. Valid values:
-    // 
-    // *   **0**: unknown file
-    // *   **1**: binary file
-    // *   **2**: webshell file
-    // *   **4**: script file
-    // 
-    // >  If you do not know the type of the file, set this parameter to 0.
     @NameInMap("Type")
     public Integer type;
 

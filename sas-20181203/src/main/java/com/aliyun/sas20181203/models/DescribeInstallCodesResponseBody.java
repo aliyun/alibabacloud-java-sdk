@@ -4,11 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstallCodesResponseBody extends TeaModel {
-    // An array that consists of the information about the installation command.
     @NameInMap("InstallCodes")
     public java.util.List<DescribeInstallCodesResponseBodyInstallCodes> installCodes;
 
-    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,36 +32,24 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstallCodesResponseBodyInstallCodes extends TeaModel {
-        // The installation verification code for you to manually install the Security Center agent.
         @NameInMap("CaptchaCode")
         public String captchaCode;
 
-        // The timestamp when the installation command expires. Unit: milliseconds.
         @NameInMap("ExpiredDate")
         public Long expiredDate;
 
-        // The ID of the server group to which the server belongs.
         @NameInMap("GroupId")
         public Long groupId;
 
-        // The name of the server group to which the server belongs.
         @NameInMap("GroupName")
         public String groupName;
 
-        // Indicates whether an image is used to install the Security Center agent. Valid values:
-        // 
-        // *   **true**: An image is used to install the Security Center agent.
-        // *   **false**: An image is not used to install the Security Center agent.
         @NameInMap("OnlyImage")
         public Boolean onlyImage;
 
-        // The operating system of the server. Valid values:
-        // *   **linux**: Linux.
-        // *   **windows**: Windows.
         @NameInMap("Os")
         public String os;
 
-        // The name of the server provider.
         @NameInMap("VendorName")
         public String vendorName;
 

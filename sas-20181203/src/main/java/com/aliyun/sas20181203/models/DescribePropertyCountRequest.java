@@ -4,23 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribePropertyCountRequest extends TeaModel {
-    // The type of the asset fingerprints. Separate multiple types with commas (,). Valid values:
-    // 
-    // *   **port**: port
-    // *   **process**: process
-    // *   **software**: software
-    // *   **user**: account
-    // *   **cron**: scheduled task
-    // *   **sca**: middleware
-    // *   **web**: website
-    // *   **database**: database
-    // *   **lkm**: kernel module
-    // *   **autorun**: startup item
-    // *   **web_server**: web service
     @NameInMap("Type")
     public String type;
 
-    // The UUIDs of the assets. Separate multiple UUIDs with commas (,).
     @NameInMap("UuidList")
     public String uuidList;
 

@@ -30,6 +30,9 @@ public class DescribeWarningMachinesRequest extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    @NameInMap("GroupId")
+    public Long groupId;
+
     // Specifies whether risks were detected. Valid values:
     // 
     // *   **1**: yes
@@ -112,6 +115,14 @@ public class DescribeWarningMachinesRequest extends TeaModel {
     }
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    public DescribeWarningMachinesRequest setGroupId(Long groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public Long getGroupId() {
+        return this.groupId;
     }
 
     public DescribeWarningMachinesRequest setHaveRisk(Integer haveRisk) {

@@ -90,6 +90,9 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
         @NameInMap("CheckWarningId")
         public Long checkWarningId;
 
+        @NameInMap("ExecErrorMessage")
+        public String execErrorMessage;
+
         // The fixing status of the check item. Valid values:
         // 
         // *   **0**: disabled
@@ -150,6 +153,14 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
         }
         public Long getCheckWarningId() {
             return this.checkWarningId;
+        }
+
+        public DescribeCheckWarningsResponseBodyCheckWarnings setExecErrorMessage(String execErrorMessage) {
+            this.execErrorMessage = execErrorMessage;
+            return this;
+        }
+        public String getExecErrorMessage() {
+            return this.execErrorMessage;
         }
 
         public DescribeCheckWarningsResponseBodyCheckWarnings setFixStatus(Integer fixStatus) {

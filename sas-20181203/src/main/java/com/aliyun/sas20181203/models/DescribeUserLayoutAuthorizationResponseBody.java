@@ -4,13 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserLayoutAuthorizationResponseBody extends TeaModel {
-    // The result of the query. Valid values:
-    // - **true**: The brute-force attacks protection feature has been authorized.
-    // - **false**: The brute-force attacks protection feature is not authorized.
     @NameInMap("Authorized")
     public Boolean authorized;
 
-    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

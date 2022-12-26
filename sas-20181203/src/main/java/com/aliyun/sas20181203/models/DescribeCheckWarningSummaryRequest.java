@@ -27,6 +27,9 @@ public class DescribeCheckWarningSummaryRequest extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    @NameInMap("GroupId")
+    public Long groupId;
+
     // The language of the content within the request and the response. Valid values:
     // 
     // *   **zh**: Chinese
@@ -120,6 +123,14 @@ public class DescribeCheckWarningSummaryRequest extends TeaModel {
     }
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    public DescribeCheckWarningSummaryRequest setGroupId(Long groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public Long getGroupId() {
+        return this.groupId;
     }
 
     public DescribeCheckWarningSummaryRequest setLang(String lang) {

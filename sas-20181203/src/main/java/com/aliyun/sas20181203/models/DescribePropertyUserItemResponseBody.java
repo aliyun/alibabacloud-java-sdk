@@ -4,15 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribePropertyUserItemResponseBody extends TeaModel {
-    // The pagination information.
     @NameInMap("PageInfo")
     public DescribePropertyUserItemResponseBodyPageInfo pageInfo;
 
-    // An array that consists of the account information returned.
     @NameInMap("PropertyItems")
     public java.util.List<DescribePropertyUserItemResponseBodyPropertyItems> propertyItems;
 
-    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -46,19 +43,15 @@ public class DescribePropertyUserItemResponseBody extends TeaModel {
     }
 
     public static class DescribePropertyUserItemResponseBodyPageInfo extends TeaModel {
-        // The number of entries returned on the current page.
         @NameInMap("Count")
         public Integer count;
 
-        // The page number of the returned page.
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
-        // The number of entries returned per page.
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        // The total number of entries returned.
         @NameInMap("TotalCount")
         public Integer totalCount;
 
@@ -102,11 +95,9 @@ public class DescribePropertyUserItemResponseBody extends TeaModel {
     }
 
     public static class DescribePropertyUserItemResponseBodyPropertyItems extends TeaModel {
-        // The number of servers that belong to the account.
         @NameInMap("Count")
         public Integer count;
 
-        // The name of the account.
         @NameInMap("User")
         public String user;
 

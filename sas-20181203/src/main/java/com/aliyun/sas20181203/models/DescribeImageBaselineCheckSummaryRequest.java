@@ -4,47 +4,27 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageBaselineCheckSummaryRequest extends TeaModel {
-    // The ID of the container cluster.
-    // 
-    // >  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.
     @NameInMap("ClusterId")
     public String clusterId;
 
-    // The search condition for the image baseline.
     @NameInMap("Criteria")
     public String criteria;
 
-    // The type of the search condition. Valid values:
-    // 
-    // *   **BaselineNameAlias**: baseline name
-    // *   **BaselineClassAlias**: baseline category
     @NameInMap("CriteriaType")
     public String criteriaType;
 
-    // The number of the page to return. Pages start from page **1**. Default value: **1**.
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    // The language of the content within the request and response. Default value: **zh**. Valid values:
-    // 
-    // *   **zh**: Chinese
-    // *   **en**: English
     @NameInMap("Lang")
     public String lang;
 
-    // The number of entries to return on each page. Default value: **20**.
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The severity of the image baseline that you want to query. Separate multiple severities with commas (,). Valid values:
-    // 
-    // *   **high**
-    // *   **medium**
-    // *   **low**
     @NameInMap("RiskLevel")
     public String riskLevel;
 
-    // The types of the assets that you want to scan.
     @NameInMap("ScanRange")
     public java.util.List<String> scanRange;
 

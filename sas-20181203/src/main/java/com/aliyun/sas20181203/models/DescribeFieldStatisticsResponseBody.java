@@ -114,6 +114,10 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         @NameInMap("TestAssetCount")
         public Integer testAssetCount;
 
+        // The number of simple application servers.
+        @NameInMap("TripartiteInstanceCount")
+        public Integer tripartiteInstanceCount;
+
         // The number of assets whose statuses are unknown.
         @NameInMap("UnKnowStatusInstanceCount")
         public Integer unKnowStatusInstanceCount;
@@ -289,6 +293,14 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         }
         public Integer getTestAssetCount() {
             return this.testAssetCount;
+        }
+
+        public DescribeFieldStatisticsResponseBodyGroupedFields setTripartiteInstanceCount(Integer tripartiteInstanceCount) {
+            this.tripartiteInstanceCount = tripartiteInstanceCount;
+            return this;
+        }
+        public Integer getTripartiteInstanceCount() {
+            return this.tripartiteInstanceCount;
         }
 
         public DescribeFieldStatisticsResponseBodyGroupedFields setUnKnowStatusInstanceCount(Integer unKnowStatusInstanceCount) {

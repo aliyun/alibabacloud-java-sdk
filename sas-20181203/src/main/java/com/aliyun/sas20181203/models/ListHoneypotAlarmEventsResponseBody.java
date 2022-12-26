@@ -4,15 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
-    // An array that consists of the alert events.
     @NameInMap("HoneypotAlarmEvents")
     public java.util.List<ListHoneypotAlarmEventsResponseBodyHoneypotAlarmEvents> honeypotAlarmEvents;
 
-    // The pagination information.
     @NameInMap("PageInfo")
     public ListHoneypotAlarmEventsResponseBodyPageInfo pageInfo;
 
-    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -46,19 +43,15 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
     }
 
     public static class ListHoneypotAlarmEventsResponseBodyHoneypotAlarmEventsMergeFieldList extends TeaModel {
-        // The extended value that corresponds to the field key.
         @NameInMap("FieldExtInfo")
         public String fieldExtInfo;
 
-        // The key of the field.
         @NameInMap("FieldKey")
         public String fieldKey;
 
-        // The type of the field.
         @NameInMap("FieldType")
         public String fieldType;
 
-        // The value of the field key.
         @NameInMap("FieldValue")
         public String fieldValue;
 
@@ -102,51 +95,33 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
     }
 
     public static class ListHoneypotAlarmEventsResponseBodyHoneypotAlarmEvents extends TeaModel {
-        // The ID of the alert event.
         @NameInMap("AlarmEventId")
         public Long alarmEventId;
 
-        // The name of the alert event.
         @NameInMap("AlarmEventName")
         public String alarmEventName;
 
-        // The type of the alert event.
         @NameInMap("AlarmEventType")
         public String alarmEventType;
 
-        // The unique identifier of the alert event.
         @NameInMap("AlarmUniqueInfo")
         public String alarmUniqueInfo;
 
-        // The total number of times that the alert event was generated.
         @NameInMap("EventCount")
         public Integer eventCount;
 
-        // The timestamp when the alert event was first detected.
         @NameInMap("FirstTime")
         public Long firstTime;
 
-        // The timestamp when the alert event was last detected.
         @NameInMap("LastTime")
         public Long lastTime;
 
-        // An array that consists of risk information.
         @NameInMap("MergeFieldList")
         public java.util.List<ListHoneypotAlarmEventsResponseBodyHoneypotAlarmEventsMergeFieldList> mergeFieldList;
 
-        // The handling status of the alert event. Valid values:
-        // 
-        // *   **1**: pending handling
-        // *   **2**: ignored
-        // *   **4**: confirmed
         @NameInMap("OperateStatus")
         public Integer operateStatus;
 
-        // The risk level of the alert event. Valid values:
-        // 
-        // *   **2**: low
-        // *   **3**: medium
-        // *   **4**: high
         @NameInMap("RiskLevel")
         public String riskLevel;
 
@@ -238,19 +213,15 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
     }
 
     public static class ListHoneypotAlarmEventsResponseBodyPageInfo extends TeaModel {
-        // The number of entries returned on the current page.
         @NameInMap("Count")
         public Integer count;
 
-        // The page number of the returned page.
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
-        // The number of entries returned per page. Default value: 20.
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        // The total number of entries returned.
         @NameInMap("TotalCount")
         public Integer totalCount;
 
