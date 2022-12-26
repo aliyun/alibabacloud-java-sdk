@@ -1,3 +1,6 @@
+2022-12-26 Version: 2.0.3
+- 增加IP协议版本配置接口.
+
 2022-12-08 Version: 2.0.2
 - Generated java 2018-01-20 for Linkvisual.
 
