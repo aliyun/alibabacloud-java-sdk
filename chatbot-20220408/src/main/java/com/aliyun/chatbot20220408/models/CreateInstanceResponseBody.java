@@ -4,7 +4,6 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class CreateInstanceResponseBody extends TeaModel {
-    // 机器人唯一标识
     @NameInMap("InstanceId")
     public String instanceId;
 

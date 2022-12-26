@@ -32,23 +32,18 @@ public class ListConnQuestionResponseBody extends TeaModel {
     }
 
     public static class ListConnQuestionResponseBodyOutlines extends TeaModel {
-        // 关联知识ID
         @NameInMap("ConnQuestionId")
         public Long connQuestionId;
 
-        // 创建时间(UTC 时间)
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 修改时间(UTC 时间)
         @NameInMap("ModifyTime")
         public String modifyTime;
 
-        // 关联关系ID
         @NameInMap("OutlineId")
         public Long outlineId;
 
-        // 关联知识题目
         @NameInMap("Title")
         public String title;
 

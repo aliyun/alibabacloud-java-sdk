@@ -4,31 +4,24 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class ListDSEntityValueRequest extends TeaModel {
-    // 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
     @NameInMap("AgentKey")
     public String agentKey;
 
-    // 实体ID
     @NameInMap("EntityId")
     public Long entityId;
 
-    // 实体成员ID
     @NameInMap("EntityValueId")
     public Long entityValueId;
 
-    // 机器人ID
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 实体成员名称搜索关键词
     @NameInMap("Keyword")
     public String keyword;
 
-    // 页码
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // 分页大小
     @NameInMap("PageSize")
     public Integer pageSize;
 

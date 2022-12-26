@@ -65,11 +65,9 @@ public class ListLgfResponseBody extends TeaModel {
     }
 
     public static class ListLgfResponseBodyLgfs extends TeaModel {
-        // 创建时间
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 意图ID
         @NameInMap("IntentId")
         public Long intentId;
 
@@ -77,11 +75,9 @@ public class ListLgfResponseBody extends TeaModel {
         @NameInMap("LgfId")
         public Long lgfId;
 
-        // 修改时间
         @NameInMap("ModifyTime")
         public String modifyTime;
 
-        // LGF规则
         @NameInMap("RuleText")
         public String ruleText;
 

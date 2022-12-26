@@ -4,62 +4,48 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class DescribeFaqResponseBody extends TeaModel {
-    // 类目ID
     @NameInMap("CategoryId")
     public Long categoryId;
 
-    // 创建时间（UTC时间）
     @NameInMap("CreateTime")
     public String createTime;
 
-    // 创建人
     @NameInMap("CreateUserName")
     public String createUserName;
 
-    // 知识生效状态,根据StartDate, EndDate计算出来: 20-生效中, 21-已失效, 22-待生效
     @NameInMap("EffectStatus")
     public Integer effectStatus;
 
-    // 失效时间（UTC时间）
     @NameInMap("EndDate")
     public String endDate;
 
-    // 知识ID
     @NameInMap("KnowledgeId")
     public Long knowledgeId;
 
-    // 修改时间（UTC时间）
     @NameInMap("ModifyTime")
     public String modifyTime;
 
-    // 修改人
     @NameInMap("ModifyUserName")
     public String modifyUserName;
 
-    // 关联问列表
     @NameInMap("Outlines")
     public java.util.List<DescribeFaqResponseBodyOutlines> outlines;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    // 相似问列表
     @NameInMap("SimQuestions")
     public java.util.List<DescribeFaqResponseBodySimQuestions> simQuestions;
 
-    // 答案列表
     @NameInMap("Solutions")
     public java.util.List<DescribeFaqResponseBodySolutions> solutions;
 
-    // 生效时间（UTC时间）
     @NameInMap("StartDate")
     public String startDate;
 
-    // 知识状态: -1-已删除未发布, 1-未发布, 2-已发布, 3-已更新未发布
     @NameInMap("Status")
     public Integer status;
 
-    // 标题
     @NameInMap("Title")
     public String title;
 
@@ -189,23 +175,18 @@ public class DescribeFaqResponseBody extends TeaModel {
     }
 
     public static class DescribeFaqResponseBodyOutlines extends TeaModel {
-        // 关联知识ID
         @NameInMap("ConnQuestionId")
         public Long connQuestionId;
 
-        // 创建时间(UTC 时间)
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 修改时间(UTC 时间)
         @NameInMap("ModifyTime")
         public String modifyTime;
 
-        // 关联关系ID
         @NameInMap("OutlineId")
         public Long outlineId;
 
-        // 关联知识标题
         @NameInMap("Title")
         public String title;
 
@@ -257,19 +238,15 @@ public class DescribeFaqResponseBody extends TeaModel {
     }
 
     public static class DescribeFaqResponseBodySimQuestions extends TeaModel {
-        // 创建时间(UTC 时间)
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 修改时间(UTC 时间)
         @NameInMap("ModifyTime")
         public String modifyTime;
 
-        // 相似问ID
         @NameInMap("SimQuestionId")
         public Long simQuestionId;
 
-        // 相似问标题
         @NameInMap("Title")
         public String title;
 
@@ -313,31 +290,24 @@ public class DescribeFaqResponseBody extends TeaModel {
     }
 
     public static class DescribeFaqResponseBodySolutions extends TeaModel {
-        // 答案内容
         @NameInMap("Content")
         public String content;
 
-        // 答案类型(0纯文本，1富文本）
         @NameInMap("ContentType")
         public Integer contentType;
 
-        // 创建时间(UTC 时间)
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 修改时间(UTC 时间)
         @NameInMap("ModifyTime")
         public String modifyTime;
 
-        // 视角code列表
         @NameInMap("PerspectiveCodes")
         public java.util.List<String> perspectiveCodes;
 
-        // 答案纯文本内容
         @NameInMap("PlainText")
         public String plainText;
 
-        // 答案ID
         @NameInMap("SolutionId")
         public Long solutionId;
 

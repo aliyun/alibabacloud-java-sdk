@@ -4,11 +4,9 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class UpdateLgfRequest extends TeaModel {
-    // 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
     @NameInMap("AgentKey")
     public String agentKey;
 
-    // 机器人ID
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -57,11 +55,9 @@ public class UpdateLgfRequest extends TeaModel {
     }
 
     public static class UpdateLgfRequestLgfDefinition extends TeaModel {
-        // 意图ID
         @NameInMap("IntentId")
         public Long intentId;
 
-        // LGF配置
         @NameInMap("RuleText")
         public String ruleText;
 

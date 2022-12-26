@@ -4,11 +4,9 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class QueryPerspectivesResponseBody extends TeaModel {
-    // 视角列表
     @NameInMap("Perspectives")
     public java.util.List<QueryPerspectivesResponseBodyPerspectives> perspectives;
 
-    // 请求Id
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,31 +32,24 @@ public class QueryPerspectivesResponseBody extends TeaModel {
     }
 
     public static class QueryPerspectivesResponseBodyPerspectives extends TeaModel {
-        // 创建时间 UTC时间
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 修改时间 UTC时间
         @NameInMap("ModifyTime")
         public String modifyTime;
 
-        // 视角名称
         @NameInMap("Name")
         public String name;
 
-        // 视角编码（用于问答api）
         @NameInMap("PerspectiveCode")
         public String perspectiveCode;
 
-        // 视角主键（code_id）
         @NameInMap("PerspectiveId")
         public String perspectiveId;
 
-        // 是否自定义
         @NameInMap("SelfDefine")
         public Boolean selfDefine;
 
-        // 数据状态：3：选中；1：未选中
         @NameInMap("Status")
         public Integer status;
 

@@ -4,15 +4,12 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class UpdateSimQuestionRequest extends TeaModel {
-    // 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
     @NameInMap("AgentKey")
     public String agentKey;
 
-    // 相似问ID
     @NameInMap("SimQuestionId")
     public Long simQuestionId;
 
-    // 相似问标题，字数上限-120
     @NameInMap("Title")
     public String title;
 

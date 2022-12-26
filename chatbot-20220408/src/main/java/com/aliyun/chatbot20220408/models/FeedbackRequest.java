@@ -4,27 +4,21 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class FeedbackRequest extends TeaModel {
-    // 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
     @NameInMap("AgentKey")
     public String agentKey;
 
-    // good-点赞、bad-点踩
     @NameInMap("Feedback")
     public String feedback;
 
-    // 点赞、点踩的内容
     @NameInMap("FeedbackContent")
     public String feedbackContent;
 
-    // 机器人ID
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 会话窗单次会话标识
     @NameInMap("MessageId")
     public String messageId;
 
-    // 会话Session标识，标识：IM唯一标识会话
     @NameInMap("SessionId")
     public String sessionId;
 

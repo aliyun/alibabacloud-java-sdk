@@ -7,7 +7,6 @@ public class ListSimQuestionResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // 相似问列表
     @NameInMap("SimQuestions")
     public java.util.List<ListSimQuestionResponseBodySimQuestions> simQuestions;
 
@@ -33,19 +32,15 @@ public class ListSimQuestionResponseBody extends TeaModel {
     }
 
     public static class ListSimQuestionResponseBodySimQuestions extends TeaModel {
-        // 创建时间(UTC 时间)
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 修改时间(UTC 时间)
         @NameInMap("ModifyTime")
         public String modifyTime;
 
-        // 相似问ID
         @NameInMap("SimQuestionId")
         public Long simQuestionId;
 
-        // 相似问标题
         @NameInMap("Title")
         public String title;
 

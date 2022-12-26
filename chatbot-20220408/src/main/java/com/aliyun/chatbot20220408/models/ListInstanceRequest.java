@@ -4,23 +4,18 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class ListInstanceRequest extends TeaModel {
-    // 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
     @NameInMap("AgentKey")
     public String agentKey;
 
-    // 按机器人名称模糊搜索
     @NameInMap("Name")
     public String name;
 
-    // 分页-第几页，默认1
     @NameInMap("PageNumber")
     public Long pageNumber;
 
-    // 分页-页面大小，默认10
     @NameInMap("PageSize")
     public Long pageSize;
 
-    // 按机器人类型筛选
     @NameInMap("RobotType")
     public String robotType;
 

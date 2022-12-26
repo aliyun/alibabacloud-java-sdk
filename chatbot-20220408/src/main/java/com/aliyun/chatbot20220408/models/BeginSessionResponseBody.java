@@ -4,11 +4,9 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class BeginSessionResponseBody extends TeaModel {
-    // 请求id
     @NameInMap("RequestId")
     public String requestId;
 
-    // 欢迎语
     @NameInMap("WelcomeMessage")
     public String welcomeMessage;
 

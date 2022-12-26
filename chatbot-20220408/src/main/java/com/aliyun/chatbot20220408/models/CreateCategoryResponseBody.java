@@ -4,7 +4,6 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class CreateCategoryResponseBody extends TeaModel {
-    // 类目信息
     @NameInMap("Category")
     public CreateCategoryResponseBodyCategory category;
 
@@ -33,7 +32,6 @@ public class CreateCategoryResponseBody extends TeaModel {
     }
 
     public static class CreateCategoryResponseBodyCategory extends TeaModel {
-        // 类目ID
         @NameInMap("CategoryId")
         public Long categoryId;
 

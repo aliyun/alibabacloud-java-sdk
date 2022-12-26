@@ -7,7 +7,6 @@ public class CreateSolutionResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // 答案ID
     @NameInMap("SolutionId")
     public Long solutionId;
 

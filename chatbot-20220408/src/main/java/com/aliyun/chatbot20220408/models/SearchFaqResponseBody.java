@@ -7,18 +7,15 @@ public class SearchFaqResponseBody extends TeaModel {
     @NameInMap("FaqHits")
     public java.util.List<SearchFaqResponseBodyFaqHits> faqHits;
 
-    // 页码 默认1
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // 每页数量，默认10，最大500
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    // 总条数
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -68,55 +65,42 @@ public class SearchFaqResponseBody extends TeaModel {
     }
 
     public static class SearchFaqResponseBodyFaqHits extends TeaModel {
-        // 类目ID
         @NameInMap("CategoryId")
         public Long categoryId;
 
-        // 创建时间（UTC时间）
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 创建人ID
         @NameInMap("CreateUserId")
         public Long createUserId;
 
-        // 创建人
         @NameInMap("CreateUserName")
         public String createUserName;
 
-        // 知识生效状态,根据StartDate, EndDate计算出来: 20-生效中, 21-已失效, 22-待生效
         @NameInMap("EffectStatus")
         public Integer effectStatus;
 
-        // 命中的相似问
         @NameInMap("HitSimilarTitles")
         public java.util.List<String> hitSimilarTitles;
 
-        // 命中的答案
         @NameInMap("HitSolutions")
         public java.util.List<String> hitSolutions;
 
-        // 知识ID
         @NameInMap("KnowledgeId")
         public Long knowledgeId;
 
-        // 修改时间（UTC时间）
         @NameInMap("ModifyTime")
         public String modifyTime;
 
-        // 修改人ID
         @NameInMap("ModifyUserId")
         public Long modifyUserId;
 
-        // 修改人
         @NameInMap("ModifyUserName")
         public String modifyUserName;
 
-        // 知识状态: -1-已删除未发布, 1-未发布, 2-已发布, 3-已更新未发布
         @NameInMap("Status")
         public Integer status;
 
-        // 标题
         @NameInMap("Title")
         public String title;
 

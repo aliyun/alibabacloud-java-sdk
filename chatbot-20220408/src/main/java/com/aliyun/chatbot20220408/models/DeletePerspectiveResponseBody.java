@@ -4,11 +4,9 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class DeletePerspectiveResponseBody extends TeaModel {
-    // 请求Id
     @NameInMap("RequestId")
     public String requestId;
 
-    // 删除视角的结果
     @NameInMap("Result")
     public Boolean result;
 

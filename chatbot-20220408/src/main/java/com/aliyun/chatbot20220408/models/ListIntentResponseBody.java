@@ -65,27 +65,21 @@ public class ListIntentResponseBody extends TeaModel {
     }
 
     public static class ListIntentResponseBodyIntentsSlotInfos extends TeaModel {
-        // 是否数组
         @NameInMap("Array")
         public Boolean array;
 
-        // 是否敏感
         @NameInMap("Encrypt")
         public Boolean encrypt;
 
-        // 是否交互式收集
         @NameInMap("Interactive")
         public Boolean interactive;
 
-        // 槽位名
         @NameInMap("Name")
         public String name;
 
-        // 槽位ID
         @NameInMap("SlotId")
         public String slotId;
 
-        // 槽位值（实体名）
         @NameInMap("Value")
         public String value;
 
