@@ -19,6 +19,15 @@ public class ListConfigRuleEvaluationResultsRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    @NameInMap("Regions")
+    public String regions;
+
+    @NameInMap("ResourceGroupIds")
+    public String resourceGroupIds;
+
+    @NameInMap("ResourceTypes")
+    public String resourceTypes;
+
     public static ListConfigRuleEvaluationResultsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListConfigRuleEvaluationResultsRequest self = new ListConfigRuleEvaluationResultsRequest();
         return TeaModel.build(map, self);
@@ -62,6 +71,30 @@ public class ListConfigRuleEvaluationResultsRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public ListConfigRuleEvaluationResultsRequest setRegions(String regions) {
+        this.regions = regions;
+        return this;
+    }
+    public String getRegions() {
+        return this.regions;
+    }
+
+    public ListConfigRuleEvaluationResultsRequest setResourceGroupIds(String resourceGroupIds) {
+        this.resourceGroupIds = resourceGroupIds;
+        return this;
+    }
+    public String getResourceGroupIds() {
+        return this.resourceGroupIds;
+    }
+
+    public ListConfigRuleEvaluationResultsRequest setResourceTypes(String resourceTypes) {
+        this.resourceTypes = resourceTypes;
+        return this;
+    }
+    public String getResourceTypes() {
+        return this.resourceTypes;
     }
 
 }

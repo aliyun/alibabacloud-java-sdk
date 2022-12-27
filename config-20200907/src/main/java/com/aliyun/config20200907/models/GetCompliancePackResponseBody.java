@@ -146,6 +146,69 @@ public class GetCompliancePackResponseBody extends TeaModel {
 
     }
 
+    public static class GetCompliancePackResponseBodyCompliancePackScope extends TeaModel {
+        @NameInMap("ExcludeResourceIdsScope")
+        public String excludeResourceIdsScope;
+
+        @NameInMap("RegionIdsScope")
+        public String regionIdsScope;
+
+        @NameInMap("ResourceGroupIdsScope")
+        public String resourceGroupIdsScope;
+
+        @NameInMap("TagKeyScope")
+        public String tagKeyScope;
+
+        @NameInMap("TagValueScope")
+        public String tagValueScope;
+
+        public static GetCompliancePackResponseBodyCompliancePackScope build(java.util.Map<String, ?> map) throws Exception {
+            GetCompliancePackResponseBodyCompliancePackScope self = new GetCompliancePackResponseBodyCompliancePackScope();
+            return TeaModel.build(map, self);
+        }
+
+        public GetCompliancePackResponseBodyCompliancePackScope setExcludeResourceIdsScope(String excludeResourceIdsScope) {
+            this.excludeResourceIdsScope = excludeResourceIdsScope;
+            return this;
+        }
+        public String getExcludeResourceIdsScope() {
+            return this.excludeResourceIdsScope;
+        }
+
+        public GetCompliancePackResponseBodyCompliancePackScope setRegionIdsScope(String regionIdsScope) {
+            this.regionIdsScope = regionIdsScope;
+            return this;
+        }
+        public String getRegionIdsScope() {
+            return this.regionIdsScope;
+        }
+
+        public GetCompliancePackResponseBodyCompliancePackScope setResourceGroupIdsScope(String resourceGroupIdsScope) {
+            this.resourceGroupIdsScope = resourceGroupIdsScope;
+            return this;
+        }
+        public String getResourceGroupIdsScope() {
+            return this.resourceGroupIdsScope;
+        }
+
+        public GetCompliancePackResponseBodyCompliancePackScope setTagKeyScope(String tagKeyScope) {
+            this.tagKeyScope = tagKeyScope;
+            return this;
+        }
+        public String getTagKeyScope() {
+            return this.tagKeyScope;
+        }
+
+        public GetCompliancePackResponseBodyCompliancePackScope setTagValueScope(String tagValueScope) {
+            this.tagValueScope = tagValueScope;
+            return this;
+        }
+        public String getTagValueScope() {
+            return this.tagValueScope;
+        }
+
+    }
+
     public static class GetCompliancePackResponseBodyCompliancePack extends TeaModel {
         @NameInMap("AccountId")
         public Long accountId;
@@ -170,6 +233,9 @@ public class GetCompliancePackResponseBody extends TeaModel {
 
         @NameInMap("RiskLevel")
         public Integer riskLevel;
+
+        @NameInMap("Scope")
+        public GetCompliancePackResponseBodyCompliancePackScope scope;
 
         @NameInMap("Status")
         public String status;
@@ -241,6 +307,14 @@ public class GetCompliancePackResponseBody extends TeaModel {
         }
         public Integer getRiskLevel() {
             return this.riskLevel;
+        }
+
+        public GetCompliancePackResponseBodyCompliancePack setScope(GetCompliancePackResponseBodyCompliancePackScope scope) {
+            this.scope = scope;
+            return this;
+        }
+        public GetCompliancePackResponseBodyCompliancePackScope getScope() {
+            return this.scope;
         }
 
         public GetCompliancePackResponseBodyCompliancePack setStatus(String status) {

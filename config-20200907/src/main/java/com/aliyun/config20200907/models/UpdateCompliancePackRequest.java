@@ -19,8 +19,23 @@ public class UpdateCompliancePackRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("ExcludeResourceIdsScope")
+    public String excludeResourceIdsScope;
+
+    @NameInMap("RegionIdsScope")
+    public String regionIdsScope;
+
+    @NameInMap("ResourceGroupIdsScope")
+    public String resourceGroupIdsScope;
+
     @NameInMap("RiskLevel")
     public Integer riskLevel;
+
+    @NameInMap("TagKeyScope")
+    public String tagKeyScope;
+
+    @NameInMap("TagValueScope")
+    public String tagValueScope;
 
     public static UpdateCompliancePackRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateCompliancePackRequest self = new UpdateCompliancePackRequest();
@@ -67,12 +82,52 @@ public class UpdateCompliancePackRequest extends TeaModel {
         return this.description;
     }
 
+    public UpdateCompliancePackRequest setExcludeResourceIdsScope(String excludeResourceIdsScope) {
+        this.excludeResourceIdsScope = excludeResourceIdsScope;
+        return this;
+    }
+    public String getExcludeResourceIdsScope() {
+        return this.excludeResourceIdsScope;
+    }
+
+    public UpdateCompliancePackRequest setRegionIdsScope(String regionIdsScope) {
+        this.regionIdsScope = regionIdsScope;
+        return this;
+    }
+    public String getRegionIdsScope() {
+        return this.regionIdsScope;
+    }
+
+    public UpdateCompliancePackRequest setResourceGroupIdsScope(String resourceGroupIdsScope) {
+        this.resourceGroupIdsScope = resourceGroupIdsScope;
+        return this;
+    }
+    public String getResourceGroupIdsScope() {
+        return this.resourceGroupIdsScope;
+    }
+
     public UpdateCompliancePackRequest setRiskLevel(Integer riskLevel) {
         this.riskLevel = riskLevel;
         return this;
     }
     public Integer getRiskLevel() {
         return this.riskLevel;
+    }
+
+    public UpdateCompliancePackRequest setTagKeyScope(String tagKeyScope) {
+        this.tagKeyScope = tagKeyScope;
+        return this;
+    }
+    public String getTagKeyScope() {
+        return this.tagKeyScope;
+    }
+
+    public UpdateCompliancePackRequest setTagValueScope(String tagValueScope) {
+        this.tagValueScope = tagValueScope;
+        return this;
+    }
+    public String getTagValueScope() {
+        return this.tagValueScope;
     }
 
     public static class UpdateCompliancePackRequestConfigRulesConfigRuleParameters extends TeaModel {
