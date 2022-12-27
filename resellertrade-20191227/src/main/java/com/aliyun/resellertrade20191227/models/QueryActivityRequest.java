@@ -4,8 +4,8 @@ package com.aliyun.resellertrade20191227.models;
 import com.aliyun.tea.*;
 
 public class QueryActivityRequest extends TeaModel {
-    @NameInMap("ActivityIdList")
-    public java.util.List<Long> activityIdList;
+    @NameInMap("ActivityId")
+    public Long activityId;
 
     @NameInMap("BizId")
     public String bizId;
@@ -18,12 +18,12 @@ public class QueryActivityRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public QueryActivityRequest setActivityIdList(java.util.List<Long> activityIdList) {
-        this.activityIdList = activityIdList;
+    public QueryActivityRequest setActivityId(Long activityId) {
+        this.activityId = activityId;
         return this;
     }
-    public java.util.List<Long> getActivityIdList() {
-        return this.activityIdList;
+    public Long getActivityId() {
+        return this.activityId;
     }
 
     public QueryActivityRequest setBizId(String bizId) {

@@ -82,9 +82,6 @@ public class QueryActivityResponseBody extends TeaModel {
         @NameInMap("ActivityName")
         public String activityName;
 
-        @NameInMap("ActivityScope")
-        public String activityScope;
-
         @NameInMap("BlackList")
         public java.util.List<Long> blackList;
 
@@ -143,14 +140,6 @@ public class QueryActivityResponseBody extends TeaModel {
         }
         public String getActivityName() {
             return this.activityName;
-        }
-
-        public QueryActivityResponseBodyData setActivityScope(String activityScope) {
-            this.activityScope = activityScope;
-            return this;
-        }
-        public String getActivityScope() {
-            return this.activityScope;
         }
 
         public QueryActivityResponseBodyData setBlackList(java.util.List<Long> blackList) {

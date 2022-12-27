@@ -3,7 +3,7 @@ package com.aliyun.resellertrade20191227.models;
 
 import com.aliyun.tea.*;
 
-public class SaveActivityRequest extends TeaModel {
+public class SaveActivityShrinkRequest extends TeaModel {
     @NameInMap("ActivityName")
     public String activityName;
 
@@ -20,10 +20,10 @@ public class SaveActivityRequest extends TeaModel {
     public String endTime;
 
     @NameInMap("ExtendMap")
-    public java.util.Map<String, ?> extendMap;
+    public String extendMapShrink;
 
     @NameInMap("FusionPromotionParamList")
-    public java.util.List<SaveActivityRequestFusionPromotionParamList> fusionPromotionParamList;
+    public java.util.List<SaveActivityShrinkRequestFusionPromotionParamList> fusionPromotionParamList;
 
     @NameInMap("PublishTag")
     public String publishTag;
@@ -40,12 +40,12 @@ public class SaveActivityRequest extends TeaModel {
     @NameInMap("WhiteUidList")
     public java.util.List<Long> whiteUidList;
 
-    public static SaveActivityRequest build(java.util.Map<String, ?> map) throws Exception {
-        SaveActivityRequest self = new SaveActivityRequest();
+    public static SaveActivityShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        SaveActivityShrinkRequest self = new SaveActivityShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public SaveActivityRequest setActivityName(String activityName) {
+    public SaveActivityShrinkRequest setActivityName(String activityName) {
         this.activityName = activityName;
         return this;
     }
@@ -53,7 +53,7 @@ public class SaveActivityRequest extends TeaModel {
         return this.activityName;
     }
 
-    public SaveActivityRequest setBizId(String bizId) {
+    public SaveActivityShrinkRequest setBizId(String bizId) {
         this.bizId = bizId;
         return this;
     }
@@ -61,7 +61,7 @@ public class SaveActivityRequest extends TeaModel {
         return this.bizId;
     }
 
-    public SaveActivityRequest setBlackUidList(java.util.List<Long> blackUidList) {
+    public SaveActivityShrinkRequest setBlackUidList(java.util.List<Long> blackUidList) {
         this.blackUidList = blackUidList;
         return this;
     }
@@ -69,7 +69,7 @@ public class SaveActivityRequest extends TeaModel {
         return this.blackUidList;
     }
 
-    public SaveActivityRequest setDescription(String description) {
+    public SaveActivityShrinkRequest setDescription(String description) {
         this.description = description;
         return this;
     }
@@ -77,7 +77,7 @@ public class SaveActivityRequest extends TeaModel {
         return this.description;
     }
 
-    public SaveActivityRequest setEndTime(String endTime) {
+    public SaveActivityShrinkRequest setEndTime(String endTime) {
         this.endTime = endTime;
         return this;
     }
@@ -85,23 +85,23 @@ public class SaveActivityRequest extends TeaModel {
         return this.endTime;
     }
 
-    public SaveActivityRequest setExtendMap(java.util.Map<String, ?> extendMap) {
-        this.extendMap = extendMap;
+    public SaveActivityShrinkRequest setExtendMapShrink(String extendMapShrink) {
+        this.extendMapShrink = extendMapShrink;
         return this;
     }
-    public java.util.Map<String, ?> getExtendMap() {
-        return this.extendMap;
+    public String getExtendMapShrink() {
+        return this.extendMapShrink;
     }
 
-    public SaveActivityRequest setFusionPromotionParamList(java.util.List<SaveActivityRequestFusionPromotionParamList> fusionPromotionParamList) {
+    public SaveActivityShrinkRequest setFusionPromotionParamList(java.util.List<SaveActivityShrinkRequestFusionPromotionParamList> fusionPromotionParamList) {
         this.fusionPromotionParamList = fusionPromotionParamList;
         return this;
     }
-    public java.util.List<SaveActivityRequestFusionPromotionParamList> getFusionPromotionParamList() {
+    public java.util.List<SaveActivityShrinkRequestFusionPromotionParamList> getFusionPromotionParamList() {
         return this.fusionPromotionParamList;
     }
 
-    public SaveActivityRequest setPublishTag(String publishTag) {
+    public SaveActivityShrinkRequest setPublishTag(String publishTag) {
         this.publishTag = publishTag;
         return this;
     }
@@ -109,7 +109,7 @@ public class SaveActivityRequest extends TeaModel {
         return this.publishTag;
     }
 
-    public SaveActivityRequest setStartTime(String startTime) {
+    public SaveActivityShrinkRequest setStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
@@ -117,7 +117,7 @@ public class SaveActivityRequest extends TeaModel {
         return this.startTime;
     }
 
-    public SaveActivityRequest setTestAccountUidList(java.util.List<Long> testAccountUidList) {
+    public SaveActivityShrinkRequest setTestAccountUidList(java.util.List<Long> testAccountUidList) {
         this.testAccountUidList = testAccountUidList;
         return this;
     }
@@ -125,7 +125,7 @@ public class SaveActivityRequest extends TeaModel {
         return this.testAccountUidList;
     }
 
-    public SaveActivityRequest setToken(String token) {
+    public SaveActivityShrinkRequest setToken(String token) {
         this.token = token;
         return this;
     }
@@ -133,7 +133,7 @@ public class SaveActivityRequest extends TeaModel {
         return this.token;
     }
 
-    public SaveActivityRequest setWhiteUidList(java.util.List<Long> whiteUidList) {
+    public SaveActivityShrinkRequest setWhiteUidList(java.util.List<Long> whiteUidList) {
         this.whiteUidList = whiteUidList;
         return this;
     }
@@ -141,7 +141,7 @@ public class SaveActivityRequest extends TeaModel {
         return this.whiteUidList;
     }
 
-    public static class SaveActivityRequestFusionPromotionParamList extends TeaModel {
+    public static class SaveActivityShrinkRequestFusionPromotionParamList extends TeaModel {
         @NameInMap("CommodityCodeList")
         public java.util.List<String> commodityCodeList;
 
@@ -151,12 +151,12 @@ public class SaveActivityRequest extends TeaModel {
         @NameInMap("RestrictedRegionList")
         public java.util.List<String> restrictedRegionList;
 
-        public static SaveActivityRequestFusionPromotionParamList build(java.util.Map<String, ?> map) throws Exception {
-            SaveActivityRequestFusionPromotionParamList self = new SaveActivityRequestFusionPromotionParamList();
+        public static SaveActivityShrinkRequestFusionPromotionParamList build(java.util.Map<String, ?> map) throws Exception {
+            SaveActivityShrinkRequestFusionPromotionParamList self = new SaveActivityShrinkRequestFusionPromotionParamList();
             return TeaModel.build(map, self);
         }
 
-        public SaveActivityRequestFusionPromotionParamList setCommodityCodeList(java.util.List<String> commodityCodeList) {
+        public SaveActivityShrinkRequestFusionPromotionParamList setCommodityCodeList(java.util.List<String> commodityCodeList) {
             this.commodityCodeList = commodityCodeList;
             return this;
         }
@@ -164,7 +164,7 @@ public class SaveActivityRequest extends TeaModel {
             return this.commodityCodeList;
         }
 
-        public SaveActivityRequestFusionPromotionParamList setPromotionValue(Double promotionValue) {
+        public SaveActivityShrinkRequestFusionPromotionParamList setPromotionValue(Double promotionValue) {
             this.promotionValue = promotionValue;
             return this;
         }
@@ -172,7 +172,7 @@ public class SaveActivityRequest extends TeaModel {
             return this.promotionValue;
         }
 
-        public SaveActivityRequestFusionPromotionParamList setRestrictedRegionList(java.util.List<String> restrictedRegionList) {
+        public SaveActivityShrinkRequestFusionPromotionParamList setRestrictedRegionList(java.util.List<String> restrictedRegionList) {
             this.restrictedRegionList = restrictedRegionList;
             return this;
         }
