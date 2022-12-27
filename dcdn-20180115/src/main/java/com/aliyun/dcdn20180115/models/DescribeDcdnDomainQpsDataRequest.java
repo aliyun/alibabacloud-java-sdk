@@ -19,9 +19,6 @@ public class DescribeDcdnDomainQpsDataRequest extends TeaModel {
     @NameInMap("LocationNameEn")
     public String locationNameEn;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("StartTime")
     public String startTime;
 
@@ -68,14 +65,6 @@ public class DescribeDcdnDomainQpsDataRequest extends TeaModel {
     }
     public String getLocationNameEn() {
         return this.locationNameEn;
-    }
-
-    public DescribeDcdnDomainQpsDataRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeDcdnDomainQpsDataRequest setStartTime(String startTime) {

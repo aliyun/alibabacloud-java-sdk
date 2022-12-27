@@ -19,9 +19,6 @@ public class DescribeDcdnDomainWebsocketBpsDataRequest extends TeaModel {
     @NameInMap("LocationNameEn")
     public String locationNameEn;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("StartTime")
     public String startTime;
 
@@ -68,14 +65,6 @@ public class DescribeDcdnDomainWebsocketBpsDataRequest extends TeaModel {
     }
     public String getLocationNameEn() {
         return this.locationNameEn;
-    }
-
-    public DescribeDcdnDomainWebsocketBpsDataRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeDcdnDomainWebsocketBpsDataRequest setStartTime(String startTime) {

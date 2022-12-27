@@ -25,9 +25,6 @@ public class DescribeDcdnDomainRealTimeDetailDataRequest extends TeaModel {
     @NameInMap("MergeLocIsp")
     public String mergeLocIsp;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("StartTime")
     public String startTime;
 
@@ -90,14 +87,6 @@ public class DescribeDcdnDomainRealTimeDetailDataRequest extends TeaModel {
     }
     public String getMergeLocIsp() {
         return this.mergeLocIsp;
-    }
-
-    public DescribeDcdnDomainRealTimeDetailDataRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeDcdnDomainRealTimeDetailDataRequest setStartTime(String startTime) {

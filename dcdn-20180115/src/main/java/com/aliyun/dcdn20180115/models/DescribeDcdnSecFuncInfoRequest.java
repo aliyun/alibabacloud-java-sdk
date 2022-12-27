@@ -7,9 +7,6 @@ public class DescribeDcdnSecFuncInfoRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("SecFuncType")
     public String secFuncType;
 
@@ -24,14 +21,6 @@ public class DescribeDcdnSecFuncInfoRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
-    }
-
-    public DescribeDcdnSecFuncInfoRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeDcdnSecFuncInfoRequest setSecFuncType(String secFuncType) {

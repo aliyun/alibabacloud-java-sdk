@@ -4,9 +4,6 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeRDDomainsRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
@@ -16,14 +13,6 @@ public class DescribeRDDomainsRequest extends TeaModel {
     public static DescribeRDDomainsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeRDDomainsRequest self = new DescribeRDDomainsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeRDDomainsRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeRDDomainsRequest setPageNumber(Integer pageNumber) {

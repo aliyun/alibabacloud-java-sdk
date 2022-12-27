@@ -10,9 +10,6 @@ public class DescribeDcdnUserSecDropRequest extends TeaModel {
     @NameInMap("Metric")
     public String metric;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("SecFunc")
     public String secFunc;
 
@@ -35,14 +32,6 @@ public class DescribeDcdnUserSecDropRequest extends TeaModel {
     }
     public String getMetric() {
         return this.metric;
-    }
-
-    public DescribeDcdnUserSecDropRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeDcdnUserSecDropRequest setSecFunc(String secFunc) {

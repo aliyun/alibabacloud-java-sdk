@@ -7,9 +7,6 @@ public class DescribeDcdnDomainTopUrlVisitRequest extends TeaModel {
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("SortBy")
     public String sortBy;
 
@@ -27,14 +24,6 @@ public class DescribeDcdnDomainTopUrlVisitRequest extends TeaModel {
     }
     public String getDomainName() {
         return this.domainName;
-    }
-
-    public DescribeDcdnDomainTopUrlVisitRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeDcdnDomainTopUrlVisitRequest setSortBy(String sortBy) {

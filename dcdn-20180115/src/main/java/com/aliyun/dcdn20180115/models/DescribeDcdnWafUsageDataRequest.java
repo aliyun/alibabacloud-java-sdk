@@ -13,9 +13,6 @@ public class DescribeDcdnWafUsageDataRequest extends TeaModel {
     @NameInMap("Interval")
     public String interval;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("SplitBy")
     public String splitBy;
 
@@ -49,14 +46,6 @@ public class DescribeDcdnWafUsageDataRequest extends TeaModel {
     }
     public String getInterval() {
         return this.interval;
-    }
-
-    public DescribeDcdnWafUsageDataRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeDcdnWafUsageDataRequest setSplitBy(String splitBy) {

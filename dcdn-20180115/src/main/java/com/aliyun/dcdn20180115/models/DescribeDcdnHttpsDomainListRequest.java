@@ -7,9 +7,6 @@ public class DescribeDcdnHttpsDomainListRequest extends TeaModel {
     @NameInMap("Keyword")
     public String keyword;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
@@ -27,14 +24,6 @@ public class DescribeDcdnHttpsDomainListRequest extends TeaModel {
     }
     public String getKeyword() {
         return this.keyword;
-    }
-
-    public DescribeDcdnHttpsDomainListRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeDcdnHttpsDomainListRequest setPageNumber(Integer pageNumber) {
