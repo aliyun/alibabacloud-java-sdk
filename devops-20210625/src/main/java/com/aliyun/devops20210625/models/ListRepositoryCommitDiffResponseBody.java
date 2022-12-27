@@ -10,6 +10,7 @@ public class ListRepositoryCommitDiffResponseBody extends TeaModel {
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    // Id of the request
     @NameInMap("requestId")
     public String requestId;
 

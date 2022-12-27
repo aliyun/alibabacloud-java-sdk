@@ -107,6 +107,7 @@ public class UpdateRepositoryMemberResponseBody extends TeaModel {
         @NameInMap("username")
         public String username;
 
+        // web url
         @NameInMap("webUrl")
         public String webUrl;
 

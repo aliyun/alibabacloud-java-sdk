@@ -4,9 +4,11 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class CreateOAuthTokenRequest extends TeaModel {
+    // clientId
     @NameInMap("clientId")
     public String clientId;
 
+    // client_secret
     @NameInMap("clientSecret")
     public String clientSecret;
 

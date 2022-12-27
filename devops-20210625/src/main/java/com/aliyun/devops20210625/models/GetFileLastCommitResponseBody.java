@@ -116,6 +116,7 @@ public class GetFileLastCommitResponseBody extends TeaModel {
         @NameInMap("createdAt")
         public String createdAt;
 
+        // Commit ID
         @NameInMap("id")
         public String id;
 
