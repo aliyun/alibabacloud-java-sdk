@@ -4,18 +4,23 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
+    // The page number of the returned page.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries returned per page.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Details about the SCUs.
     @NameInMap("StorageCapacityUnits")
     public DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnits storageCapacityUnits;
 
+    // The total number of SCUs.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,9 +70,11 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
     }
 
     public static class DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnitTagsTag extends TeaModel {
+        // The tag key of the SCU.
         @NameInMap("TagKey")
         public String tagKey;
 
+        // The tag value of the SCU.
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -114,36 +121,50 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
     }
 
     public static class DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnit extends TeaModel {
+        // Indicates the allocation state of the SCU when the AllocationType parameter is set to Shared. Valid values:
+        // 
+        // *   allocated: The SCU is allocated to other accounts.
+        // *   BeAllocated: The SCU is allocated from another account.
         @NameInMap("AllocationStatus")
         public String allocationStatus;
 
+        // The capacity of the SCU.
         @NameInMap("Capacity")
         public Integer capacity;
 
+        // The time when the SCU was created.
         @NameInMap("CreationTime")
         public String creationTime;
 
+        // The description of the SCU.
         @NameInMap("Description")
         public String description;
 
+        // The time when the SCU expires.
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
+        // The name of the SCU.
         @NameInMap("Name")
         public String name;
 
+        // The region ID of the SCU.
         @NameInMap("RegionId")
         public String regionId;
 
+        // The time when the SCU took effect.
         @NameInMap("StartTime")
         public String startTime;
 
+        // The state of the SCU.
         @NameInMap("Status")
         public String status;
 
+        // The ID of the SCU.
         @NameInMap("StorageCapacityUnitId")
         public String storageCapacityUnitId;
 
+        // The tag key-value pairs of the SCU.
         @NameInMap("Tags")
         public DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnitTags tags;
 

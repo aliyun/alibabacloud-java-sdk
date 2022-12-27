@@ -7,12 +7,15 @@ public class AssignIpv6AddressesResponseBody extends TeaModel {
     @NameInMap("Ipv6PrefixSets")
     public AssignIpv6AddressesResponseBodyIpv6PrefixSets ipv6PrefixSets;
 
+    // The IPv6 addresses assigned to the ENI.
     @NameInMap("Ipv6Sets")
     public AssignIpv6AddressesResponseBodyIpv6Sets ipv6Sets;
 
+    // The ID of the ENI.
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

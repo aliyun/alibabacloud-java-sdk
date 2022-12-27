@@ -4,12 +4,14 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceTopologyRequest extends TeaModel {
+    // The IDs of one or more ECS instances. You can specify a maximum of 100 instance IDs.
     @NameInMap("InstanceIds")
     public String instanceIds;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The region ID of the ECS instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 

@@ -4,27 +4,35 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageSharePermissionResponseBody extends TeaModel {
+    // The Alibaba Cloud accounts.
     @NameInMap("Accounts")
     public DescribeImageSharePermissionResponseBodyAccounts accounts;
 
+    // The ID of the custom image.
     @NameInMap("ImageId")
     public String imageId;
 
+    // The page number of the returned page.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries returned per page.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The region ID of the image.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The shared groups.
     @NameInMap("ShareGroups")
     public DescribeImageSharePermissionResponseBodyShareGroups shareGroups;
 
+    // The total number of entries returned.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -98,6 +106,7 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
     }
 
     public static class DescribeImageSharePermissionResponseBodyAccountsAccount extends TeaModel {
+        // The ID of the Alibaba Cloud account.
         @NameInMap("AliyunId")
         public String aliyunId;
 
@@ -136,6 +145,7 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
     }
 
     public static class DescribeImageSharePermissionResponseBodyShareGroupsShareGroup extends TeaModel {
+        // The shared group.
         @NameInMap("Group")
         public String group;
 

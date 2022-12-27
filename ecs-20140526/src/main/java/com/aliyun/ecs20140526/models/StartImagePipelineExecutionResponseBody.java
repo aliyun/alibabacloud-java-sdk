@@ -4,9 +4,11 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class StartImagePipelineExecutionResponseBody extends TeaModel {
+    // The ID of the image creation task.
     @NameInMap("ExecutionId")
     public String executionId;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

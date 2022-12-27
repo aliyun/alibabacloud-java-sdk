@@ -4,9 +4,14 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeCloudAssistantStatusRequest extends TeaModel {
+    // The IDs of instances. You can specify up to 100 instance IDs in each request.
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
 
+    // The operating system type of the instance. Valid values:
+    // 
+    // *   Windows
+    // *   Linux
     @NameInMap("OSType")
     public String OSType;
 
@@ -16,12 +21,23 @@ public class DescribeCloudAssistantStatusRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The number of the page to return.
+    // 
+    // Pages start from page 1.
+    // 
+    // Default value: 1.
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    // The number of entries to return on each page.
+    // 
+    // Maximum value: 100.
+    // 
+    // Default value: 10.
     @NameInMap("PageSize")
     public Long pageSize;
 
+    // The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 

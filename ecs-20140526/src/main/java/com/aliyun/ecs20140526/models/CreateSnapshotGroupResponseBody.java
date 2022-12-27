@@ -4,9 +4,11 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateSnapshotGroupResponseBody extends TeaModel {
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The ID of the snapshot-consistent group.
     @NameInMap("SnapshotGroupId")
     public String snapshotGroupId;
 

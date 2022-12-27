@@ -4,21 +4,31 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateDedicatedBlockStorageClusterRequest extends TeaModel {
+    // The capacity of the dedicated block storage cluster. Valid values: 60 to 2304. Unit: TiB.
     @NameInMap("Capacity")
     public Integer capacity;
 
+    // The category of disks that can be created in the dedicated block storage cluster.
+    // 
+    // Valid value: cloud_essd. Only enhanced SSDs (ESSDs) can be created in dedicated block storage clusters.
     @NameInMap("Category")
     public String category;
 
+    // The client token that is used to ensure the idempotence of the request. You can use the client to generate a client token. Make sure that a unique client token is used for different requests.
+    // 
+    // The `ClientToken` value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
     @NameInMap("ClientToken")
     public String clientToken;
 
+    // The name of the dedicated block storage cluster.
     @NameInMap("DedicatedBlockStorageClusterName")
     public String dedicatedBlockStorageClusterName;
 
+    // The description of the dedicated block storage cluster.
     @NameInMap("Description")
     public String description;
 
+    // > This parameter will be offline soon, please use other parameters.
     @NameInMap("FromApp")
     public String fromApp;
 
@@ -28,12 +38,25 @@ public class CreateDedicatedBlockStorageClusterRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The subscription period of the dedicated block storage cluster. The unit is specified by the `PeriodUnit` parameter. Valid values:
+    // 
+    // *   When the `PeriodUnit` parameter is set to Year, valid values are 1, 2, 3, and 4.
+    // *   When the `PeriodUnit` parameter is set to Month, valid values are 6, 7, 8, 9, 10, and 11.
+    // 
+    // >  Dedicated Block Storage Cluster supports only the subscription billing method. Therefore, you must specify the `Period` and `PeriodUnit` parameters.
     @NameInMap("Period")
     public Integer period;
 
+    // The unit of the subscription period. Valid values:
+    // 
+    // *   Year
+    // *   Month
+    // 
+    // >  Dedicated Block Storage Cluster supports only the subscription billing method. Therefore, you must specify the `Period` and `PeriodUnit` parameters.
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
+    // The ID of the region in which to create the dedicated block storage cluster. You can call the [DescribeRegions](~~25609~~) operation to query thecurrent list of regions.
     @NameInMap("RegionId")
     public String regionId;
 
@@ -43,9 +66,16 @@ public class CreateDedicatedBlockStorageClusterRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    // The type of the dedicated block storage cluster. Valid values:
+    // 
+    // *   Standard: When you set Type to Standard, ESSDs at performance level 0 (PL0 ESSDs) can be created in the dedicated block storage cluster.
+    // *   Premium: When you set Type to Premium, ESSDs at performance level 1 (PL1 ESSDs) can be created in the dedicated block storage cluster.
+    // 
+    // Default value: Premium.
     @NameInMap("Type")
     public String type;
 
+    // The ID of the zone where the cluster is deployed. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.
     @NameInMap("ZoneId")
     public String zoneId;
 

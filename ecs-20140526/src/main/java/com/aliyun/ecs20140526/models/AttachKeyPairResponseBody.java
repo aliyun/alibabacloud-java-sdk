@@ -4,18 +4,23 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class AttachKeyPairResponseBody extends TeaModel {
+    // The number of instances to which the key pair fails to be attached.
     @NameInMap("FailCount")
     public String failCount;
 
+    // The name of the key pair.
     @NameInMap("KeyPairName")
     public String keyPairName;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // An array consisting of result data.
     @NameInMap("Results")
     public AttachKeyPairResponseBodyResults results;
 
+    // The total number of instances to which the SSH key pair is attached.
     @NameInMap("TotalCount")
     public String totalCount;
 
@@ -65,15 +70,19 @@ public class AttachKeyPairResponseBody extends TeaModel {
     }
 
     public static class AttachKeyPairResponseBodyResultsResult extends TeaModel {
+        // The operation status code returned. 200 indicates that the operation is successful.
         @NameInMap("Code")
         public String code;
 
+        // The ID of the instance.
         @NameInMap("InstanceId")
         public String instanceId;
 
+        // The operation information returned. When the value of Code is 200, the value of Message becomes successful.
         @NameInMap("Message")
         public String message;
 
+        // Indicates whether the operation is successful.
         @NameInMap("Success")
         public String success;
 

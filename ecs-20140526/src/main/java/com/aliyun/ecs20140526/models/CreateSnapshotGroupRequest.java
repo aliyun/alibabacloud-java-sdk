@@ -4,6 +4,7 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateSnapshotGroupRequest extends TeaModel {
+    // The description of the snapshot-consistent group. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
     @NameInMap("Description")
     public String description;
 
@@ -13,15 +14,28 @@ public class CreateSnapshotGroupRequest extends TeaModel {
     @NameInMap("ExcludeDiskId")
     public java.util.List<String> excludeDiskId;
 
+    // The ID of the instance.
     @NameInMap("InstanceId")
     public String instanceId;
 
+    // Specifies whether to enable the instant access feature. Valid values:
+    // 
+    // *   true: enables the instance access feature.
+    // *   false: disables the instance access feature.
+    // 
+    // Default value: false.
     @NameInMap("InstantAccess")
     public Boolean instantAccess;
 
+    // Specify the number of days for which the instant access feature is available. Unit: days. Valid values: 1 to 65535.
+    // 
+    // This parameter takes effect only when `InstantAccess` is set to true. The instant access feature is automatically disabled when the specified duration of instant access expires.
+    // 
+    // This parameter is empty by default, which indicates that the expiration time of the instant access feature is determined by the time when snapshots are released.
     @NameInMap("InstantAccessRetentionDays")
     public Integer instantAccessRetentionDays;
 
+    // The name of the snapshot-consistent group. The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), hyphens (-), and colons (:). It must start with a letter or a digit and cannot start with `http://` or `https://`.
     @NameInMap("Name")
     public String name;
 
@@ -31,9 +45,11 @@ public class CreateSnapshotGroupRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The ID of the resource group to which the snapshot-consistent group belongs.
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -175,9 +191,11 @@ public class CreateSnapshotGroupRequest extends TeaModel {
     }
 
     public static class CreateSnapshotGroupRequestTag extends TeaModel {
+        // The key of tag N of the snapshot-consistent group. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
         @NameInMap("Key")
         public String key;
 
+        // The value of tag N of the snapshot-consistent group. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with `acs:`. It cannot contain `http://` or `https://`.
         @NameInMap("Value")
         public String value;
 

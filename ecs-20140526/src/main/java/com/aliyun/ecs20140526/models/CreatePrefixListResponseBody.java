@@ -4,9 +4,11 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreatePrefixListResponseBody extends TeaModel {
+    // The ID of the prefix list.
     @NameInMap("PrefixListId")
     public String prefixListId;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

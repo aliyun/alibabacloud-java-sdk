@@ -4,9 +4,11 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DeleteHpcClusterRequest extends TeaModel {
+    // The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The **ClientToken** value must contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
     @NameInMap("ClientToken")
     public String clientToken;
 
+    // The ID of the HPC cluster.
     @NameInMap("HpcClusterId")
     public String hpcClusterId;
 
@@ -16,6 +18,7 @@ public class DeleteHpcClusterRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The region ID of the HPC cluster. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 

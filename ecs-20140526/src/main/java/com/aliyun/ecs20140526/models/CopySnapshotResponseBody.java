@@ -4,9 +4,11 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CopySnapshotResponseBody extends TeaModel {
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The ID of the new snapshot.
     @NameInMap("SnapshotId")
     public String snapshotId;
 

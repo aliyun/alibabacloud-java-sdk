@@ -4,9 +4,11 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceTypeFamiliesResponseBody extends TeaModel {
+    // Details about instance families.
     @NameInMap("InstanceTypeFamilies")
     public DescribeInstanceTypeFamiliesResponseBodyInstanceTypeFamilies instanceTypeFamilies;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +34,11 @@ public class DescribeInstanceTypeFamiliesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceTypeFamiliesResponseBodyInstanceTypeFamiliesInstanceTypeFamily extends TeaModel {
+        // The generation of the instance family.
         @NameInMap("Generation")
         public String generation;
 
+        // The ID of the instance family.
         @NameInMap("InstanceTypeFamilyId")
         public String instanceTypeFamilyId;
 

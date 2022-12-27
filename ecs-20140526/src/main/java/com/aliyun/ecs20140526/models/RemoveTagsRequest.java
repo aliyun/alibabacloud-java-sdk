@@ -7,9 +7,11 @@ public class RemoveTagsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The region ID of the resource. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The ID of the resource from which you want to unbind the tags. When the retrieved resources are instances, this parameter can be interpreted as InstanceId.
     @NameInMap("ResourceId")
     public String resourceId;
 
@@ -19,9 +21,19 @@ public class RemoveTagsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    // The type of the resource. Valid values:
+    // 
+    // *   disk
+    // *   instance
+    // *   image
+    // *   securitygroup
+    // *   snapshot
+    // 
+    // All the preceding values must be in lowercase.
     @NameInMap("ResourceType")
     public String resourceType;
 
+    // The tags.
     @NameInMap("Tag")
     public java.util.List<RemoveTagsRequestTag> tag;
 
@@ -87,9 +99,11 @@ public class RemoveTagsRequest extends TeaModel {
     }
 
     public static class RemoveTagsRequestTag extends TeaModel {
+        // The key of tag N of the resource. Valid values of N: 1 to 20. It cannot be an empty string. The tag key can be up to 64 characters in length and cannot contain http:// or https://. It cannot start with acs: or aliyun.
         @NameInMap("Key")
         public String key;
 
+        // The value of tag N of the resource. Valid values of N: 1 to 20. It can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://. It cannot start with acs: or aliyun.
         @NameInMap("Value")
         public String value;
 

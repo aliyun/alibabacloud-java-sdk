@@ -4,12 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
+    // The ID of the auto provisioning group.
     @NameInMap("AutoProvisioningGroupId")
     public String autoProvisioningGroupId;
 
+    // Details about the instances created by the auto provisioning group. The values of parameters in this array are returned only when AutoProvisioningGroupType is set to `instant`.
     @NameInMap("LaunchResults")
     public CreateAutoProvisioningGroupResponseBodyLaunchResults launchResults;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -62,21 +65,31 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
     }
 
     public static class CreateAutoProvisioningGroupResponseBodyLaunchResultsLaunchResult extends TeaModel {
+        // The error code returned when the instance cannot be created.
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        // The error message returned when the instance cannot be created.
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
+        // The IDs of created instances.
         @NameInMap("InstanceIds")
         public CreateAutoProvisioningGroupResponseBodyLaunchResultsLaunchResultInstanceIds instanceIds;
 
+        // The instance type of the instance.
         @NameInMap("InstanceType")
         public String instanceType;
 
+        // The bidding policy for the pay-as-you-go instance. Valid values:
+        // 
+        // *   NoSpot: The instance is created as a regular pay-as-you-go instance.
+        // *   SpotWithPriceLimit: The instance is created as a preemptible instance with a user-defined maximum hourly price.
+        // *   SpotAsPriceGo: The instance is created as a preemptible instance for which the market price at the time of purchase is automatically used as the bid price.
         @NameInMap("SpotStrategy")
         public String spotStrategy;
 
+        // The zone ID of the instance.
         @NameInMap("ZoneId")
         public String zoneId;
 

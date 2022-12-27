@@ -4,12 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeSnapshotsUsageResponseBody extends TeaModel {
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The number of snapshots stored in the current region.
     @NameInMap("SnapshotCount")
     public Integer snapshotCount;
 
+    // The total size of snapshots stored in the current region. Unit: byte.
     @NameInMap("SnapshotSize")
     public Long snapshotSize;
 

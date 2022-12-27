@@ -4,6 +4,7 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceAttachmentAttributesRequest extends TeaModel {
+    // The IDs of instances. The value can be a JSON array that consists of up to 100 instance IDs. Separate multiple instance IDs with commas (,).
     @NameInMap("InstanceIds")
     public String instanceIds;
 
@@ -13,12 +14,23 @@ public class DescribeInstanceAttachmentAttributesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The number of the page to return.
+    // 
+    // This value starts from 1.
+    // 
+    // Default value: 1.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries to return on each page.
+    // 
+    // Maximum value: 100
+    // 
+    // Default value: 10.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The region ID of the elasticity assurance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 

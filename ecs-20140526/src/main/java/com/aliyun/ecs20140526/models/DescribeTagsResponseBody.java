@@ -4,18 +4,23 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeTagsResponseBody extends TeaModel {
+    // The page number of the returned page.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries returned per page.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The tags that match all the filter conditions.
     @NameInMap("Tags")
     public DescribeTagsResponseBodyTags tags;
 
+    // The total number of tags.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,39 +70,49 @@ public class DescribeTagsResponseBody extends TeaModel {
     }
 
     public static class DescribeTagsResponseBodyTagsTagResourceTypeCount extends TeaModel {
+        // The number of dedicated hosts to which the tag is bound.
         @NameInMap("Ddh")
         public Integer ddh;
 
+        // The number of disks to which the tag is bound.
         @NameInMap("Disk")
         public Integer disk;
 
+        // The number of ENIs to which the tag is bound.
         @NameInMap("Eni")
         public Integer eni;
 
+        // The number of images to which the tag is bound.
         @NameInMap("Image")
         public Integer image;
 
+        // The number of instances to which the tag is bound.
         @NameInMap("Instance")
         public Integer instance;
 
+        // The number of key pairs to which the tag is bound.
         @NameInMap("KeyPair")
         public Integer keyPair;
 
+        // The number of launch templates to which the tag is bound.
         @NameInMap("LaunchTemplate")
         public Integer launchTemplate;
 
         @NameInMap("ReservedInstance")
         public Integer reservedInstance;
 
+        // The number of security groups to which the tag is bound.
         @NameInMap("Securitygroup")
         public Integer securitygroup;
 
+        // The number of snapshots to which the tag is bound.
         @NameInMap("Snapshot")
         public Integer snapshot;
 
         @NameInMap("SnapshotPolicy")
         public Integer snapshotPolicy;
 
+        // The number of extended volumes to which the tag is bound.
         @NameInMap("Volume")
         public Integer volume;
 
@@ -205,12 +220,15 @@ public class DescribeTagsResponseBody extends TeaModel {
     }
 
     public static class DescribeTagsResponseBodyTagsTag extends TeaModel {
+        // The number of resource types.
         @NameInMap("ResourceTypeCount")
         public DescribeTagsResponseBodyTagsTagResourceTypeCount resourceTypeCount;
 
+        // The tag key.
         @NameInMap("TagKey")
         public String tagKey;
 
+        // The tag value.
         @NameInMap("TagValue")
         public String tagValue;
 

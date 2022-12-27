@@ -4,18 +4,23 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeStorageSetsResponseBody extends TeaModel {
+    // The page number of the returned page.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries returned per page.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Details about the storage sets. The value of this parameter is an array that consists of StorageSet data.
     @NameInMap("StorageSets")
     public DescribeStorageSetsResponseBodyStorageSets storageSets;
 
+    // The total number of storage sets.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,24 +70,31 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
     }
 
     public static class DescribeStorageSetsResponseBodyStorageSetsStorageSet extends TeaModel {
+        // The time when the storage set was created.
         @NameInMap("CreationTime")
         public String creationTime;
 
+        // The description of the storage set.
         @NameInMap("Description")
         public String description;
 
+        // The ID of the region to which the storage set belongs.
         @NameInMap("RegionId")
         public String regionId;
 
+        // The ID of the storage set.
         @NameInMap("StorageSetId")
         public String storageSetId;
 
+        // The name of the storage set.
         @NameInMap("StorageSetName")
         public String storageSetName;
 
+        // The maximum number of partitions supported by the storage set.
         @NameInMap("StorageSetPartitionNumber")
         public Integer storageSetPartitionNumber;
 
+        // The ID of the zone to which the storage set belongs.
         @NameInMap("ZoneId")
         public String zoneId;
 

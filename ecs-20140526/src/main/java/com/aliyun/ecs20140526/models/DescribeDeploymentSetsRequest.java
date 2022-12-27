@@ -4,18 +4,23 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeDeploymentSetsRequest extends TeaModel {
+    // The IDs of deployment sets. The value can be a JSON array that consists of up to 100 deployment set IDs in the format of `["ds-xxxxxxxxx", "ds-yyyyyyyyy", … "ds-zzzzzzzzz"]`. Separate multiple deployment set IDs with commas (,).
     @NameInMap("DeploymentSetIds")
     public String deploymentSetIds;
 
+    // The name of the deployment set. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
     @NameInMap("DeploymentSetName")
     public String deploymentSetName;
 
+    // > The parameter is deprecated.
     @NameInMap("Domain")
     public String domain;
 
+    // > The parameter is deprecated.
     @NameInMap("Granularity")
     public String granularity;
 
+    // > The parameter is deprecated.
     @NameInMap("NetworkType")
     public String networkType;
 
@@ -25,12 +30,23 @@ public class DescribeDeploymentSetsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The number of the page to return.
+    // 
+    // Pages start from page 1.
+    // 
+    // Default value: 1.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries to return on each page.
+    // 
+    // Maximum value: 50.
+    // 
+    // Default value: 10.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The region ID of the deployment set. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 
@@ -40,6 +56,10 @@ public class DescribeDeploymentSetsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    // The deployment strategy. Valid values:
+    // 
+    // *   Availability: high availability strategy.
+    // *   AvailabilityGroup: high availability group strategy.
     @NameInMap("Strategy")
     public String strategy;
 

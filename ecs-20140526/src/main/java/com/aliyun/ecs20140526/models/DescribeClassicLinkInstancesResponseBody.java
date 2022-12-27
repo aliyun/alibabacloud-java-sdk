@@ -4,18 +4,23 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeClassicLinkInstancesResponseBody extends TeaModel {
+    // The details about the ClassicLink connections between the classic network-type instances and the VPC.
     @NameInMap("Links")
     public DescribeClassicLinkInstancesResponseBodyLinks links;
 
+    // The page number of the returned page.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries returned per page.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The total number of connections.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,9 +70,11 @@ public class DescribeClassicLinkInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeClassicLinkInstancesResponseBodyLinksLink extends TeaModel {
+        // The ID of the instance.
         @NameInMap("InstanceId")
         public String instanceId;
 
+        // The ID of the VPC.
         @NameInMap("VpcId")
         public String vpcId;
 

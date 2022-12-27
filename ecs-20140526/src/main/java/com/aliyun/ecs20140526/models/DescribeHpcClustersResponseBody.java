@@ -4,18 +4,23 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeHpcClustersResponseBody extends TeaModel {
+    // Details about the HPC clusters. The value is an array that consists of the information of each HPC cluster.
     @NameInMap("HpcClusters")
     public DescribeHpcClustersResponseBodyHpcClusters hpcClusters;
 
+    // The page number of the returned page.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries returned per page.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The total number of queried HPC clusters.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,12 +70,15 @@ public class DescribeHpcClustersResponseBody extends TeaModel {
     }
 
     public static class DescribeHpcClustersResponseBodyHpcClustersHpcCluster extends TeaModel {
+        // The description of the HPC cluster.
         @NameInMap("Description")
         public String description;
 
+        // The ID of the HPC cluster.
         @NameInMap("HpcClusterId")
         public String hpcClusterId;
 
+        // The name of the HPC cluster.
         @NameInMap("Name")
         public String name;
 

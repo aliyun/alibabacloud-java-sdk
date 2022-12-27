@@ -4,12 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribePrefixListAssociationsResponseBody extends TeaModel {
+    // The query token returned in this call. If the return value is empty, no more data is returned.
     @NameInMap("NextToken")
     public String nextToken;
 
+    // Details about the resources that are associated with the prefix list.
     @NameInMap("PrefixListAssociations")
     public DescribePrefixListAssociationsResponseBodyPrefixListAssociations prefixListAssociations;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,9 +46,11 @@ public class DescribePrefixListAssociationsResponseBody extends TeaModel {
     }
 
     public static class DescribePrefixListAssociationsResponseBodyPrefixListAssociationsPrefixListAssociation extends TeaModel {
+        // The ID of the resource.
         @NameInMap("ResourceId")
         public String resourceId;
 
+        // The type of the resource.
         @NameInMap("ResourceType")
         public String resourceType;
 

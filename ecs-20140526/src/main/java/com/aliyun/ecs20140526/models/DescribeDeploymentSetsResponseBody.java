@@ -4,21 +4,27 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeDeploymentSetsResponseBody extends TeaModel {
+    // Details about the deployment sets.
     @NameInMap("DeploymentSets")
     public DescribeDeploymentSetsResponseBodyDeploymentSets deploymentSets;
 
+    // The page number of the returned page.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries returned per page.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The region ID of the deployment set.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The total number of deployment sets returned.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -76,12 +82,15 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
     }
 
     public static class DescribeDeploymentSetsResponseBodyDeploymentSetsDeploymentSetCapacitiesCapacity extends TeaModel {
+        // The number of ECS instances that can be added to the deployment set within the zone.
         @NameInMap("AvailableAmount")
         public Integer availableAmount;
 
+        // The number of ECS instances that belong to the zone in the deployment set.
         @NameInMap("UsedAmount")
         public Integer usedAmount;
 
+        // The ID of the zone. Only the zone IDs of existing ECS instances in the deployment set are returned.
         @NameInMap("ZoneId")
         public String zoneId;
 
@@ -155,39 +164,53 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
     }
 
     public static class DescribeDeploymentSetsResponseBodyDeploymentSetsDeploymentSet extends TeaModel {
+        // Details of the capacities of the deployment set. This parameter is valid only when the deployment set contains Elastic Compute Service (ECS) instances. The value contains the capacities of the deployment set in different zones.
         @NameInMap("Capacities")
         public DescribeDeploymentSetsResponseBodyDeploymentSetsDeploymentSetCapacities capacities;
 
+        // The time when the deployment set was created.
         @NameInMap("CreationTime")
         public String creationTime;
 
+        // The description of the deployment set.
         @NameInMap("DeploymentSetDescription")
         public String deploymentSetDescription;
 
+        // The ID of the deployment set.
         @NameInMap("DeploymentSetId")
         public String deploymentSetId;
 
+        // The name of the deployment set.
         @NameInMap("DeploymentSetName")
         public String deploymentSetName;
 
+        // The deployment strategy. The value of this response parameter is that of the `Strategy` request parameter.
         @NameInMap("DeploymentStrategy")
         public String deploymentStrategy;
 
+        // The deployment domain.
         @NameInMap("Domain")
         public String domain;
 
+        // The deployment granularity.
         @NameInMap("Granularity")
         public String granularity;
 
+        // The number of deployment set groups in the deployment set.
+        // 
+        // >  This parameter is valid only when the Strategy request parameter is set to AvailabilityGroup.
         @NameInMap("GroupCount")
         public Integer groupCount;
 
+        // The number of instances in the deployment set.
         @NameInMap("InstanceAmount")
         public Integer instanceAmount;
 
+        // The IDs of the instances in the deployment set.
         @NameInMap("InstanceIds")
         public DescribeDeploymentSetsResponseBodyDeploymentSetsDeploymentSetInstanceIds instanceIds;
 
+        // The deployment strategy.
         @NameInMap("Strategy")
         public String strategy;
 

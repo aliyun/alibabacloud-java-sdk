@@ -4,30 +4,68 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeRecommendInstanceTypeRequest extends TeaModel {
+    // The number of vCPUs of the instance.
+    // 
+    // >  If the `Cores` and `Memory` parameters are both specified, all instance types that offer the vCPUs and memory size specified by the parameters are matched.
     @NameInMap("Cores")
     public Integer cores;
 
+    // The billing method of the instances of the instance type. For more information, see [Billing overview](~~25398~~). Valid values:
+    // 
+    // * PrePaid: subscription
+    // * PostPaid: pay-as-you-go
+    // 
+    // Default value: PostPaid.
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
 
+    // The level of the instance family. Valid values:
+    // 
+    // * EntryLevel
+    // * EnterpriseLevel.
+    // * CreditEntryLevel. For more information, see [Burstable instance families](~~59977~~).
     @NameInMap("InstanceFamilyLevel")
     public String instanceFamilyLevel;
 
+    // The specified instance type. For more information, see [Instance families](~~25378~~) or call the [DescribeInstanceTypes](~~25620~~) operation to query the most recent instance type list.
+    // 
+    // >  If the `InstanceType` parameter is specified, none of the `Cores` and `Memory` parameters can be specified.
     @NameInMap("InstanceType")
     public String instanceType;
 
+    // Instance families to be filtered out. You can specify up to 10 instance families.
     @NameInMap("InstanceTypeFamily")
     public java.util.List<String> instanceTypeFamily;
 
+    // Specifies whether to match I/O optimized instances. The IoOptimized parameter cannot be specified when the instance is not I/O optimized. Valid values:
+    // 
+    // * optimized: matches I/O optimized instances.
+    // * none: matches non-I/O optimized instances.
+    // 
+    // Default value: optimized.
+    // 
+    // If you query alternative instance types for retired instance types, this parameter is set to none by default. Default value: none.
     @NameInMap("IoOptimized")
     public String ioOptimized;
 
+    // The maximum hourly price for pay-as-you-go instances or preemptible instances.
+    // 
+    // >  If this parameter is specified, the `SpotStrategy` parameter must be set to `SpotWithPriceLimit`.
     @NameInMap("MaxPrice")
     public Float maxPrice;
 
+    // The memory size of the instance. Unit: GiB.
+    // 
+    // >  If the `Cores` and `Memory` parameters are both specified, all instance types that offer the vCPUs and memory size specified by the parameters are matched.
     @NameInMap("Memory")
     public Float memory;
 
+    // The network type of the ECS instance. Valid values:
+    // 
+    // *   classic: classic network
+    // *   vpc: VPC
+    // 
+    // Default value: vpc.
     @NameInMap("NetworkType")
     public String networkType;
 
@@ -37,9 +75,17 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The policy for recommending instance types. Valid values:
+    // 
+    // * InventoryFirst: Instance types are recommended in descending order based on resource availability.
+    // * PriceFirst: Instance types are recommended in ascending order based on hourly price per vCPU.
+    // * NewProductFirst: The latest instance types are recommended first.
+    // 
+    // Default value: InventoryFirst.
     @NameInMap("PriorityStrategy")
     public String priorityStrategy;
 
+    // The region ID of the alternative instance types. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 
@@ -49,18 +95,52 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    // Specifies the scenario in which the instance type is recommended. Valid values:
+    // 
+    // * UPGRADE: instance type upgrade or downgrade
+    // * CREATE: instance creation
+    // 
+    // Default value: CREATE.
     @NameInMap("Scene")
     public String scene;
 
+    // The bidding policy of preemptible instances. Valid values:
+    // 
+    // * NoSpot: applies to regular pay-as-you-go instances.
+    // * SpotWithPriceLimit: applies to preemptible instances that have user-defined maximum hourly prices.
+    // * SpotAsPriceGo: applies to preemptible instances that are of the market price at the time of purchase.
+    // 
+    // > If the `SpotStrategy` parameter is specified, the `InstanceChargeType` parameter must be set to `PostPaid`.
+    // 
+    // Default value: NoSpot.
     @NameInMap("SpotStrategy")
     public String spotStrategy;
 
+    // The category of the system disk. Valid values:
+    // 
+    // * cloud_efficiency: ultra disk
+    // * cloud_ssd: standard SSD
+    // * cloud_essd: enhanced SSD (ESSD)
+    // * cloud: basic disk
+    // 
+    // For non-I/O optimized instances, the default value is cloud.
+    // 
+    // For I/O optimized instances, the default value is cloud_efficiency.
     @NameInMap("SystemDiskCategory")
     public String systemDiskCategory;
 
+    // The zone ID of the alternative instance types. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.
+    // 
+    // When you specify this parameter, we recommend that you set ZoneMatchMode to the default value Include. This value indicates that instance types in the zone specified by ZoneId are preferentially recommended, and instance types in other zones in the same region are also listed.
     @NameInMap("ZoneId")
     public String zoneId;
 
+    // Specifies which alternative instance types are recommended. Valid values:
+    // 
+    // * Strict: recommends only alternative instance types in the zone specified by ZoneId.
+    // * Include: recommends all instance types in all the zones in the same region as the specified instance type.
+    // 
+    // When `ZoneId` is specified, the default value of this parameter is Strict. This value indicates that only alternative instance types in the zone specified by ZoneId are recommended.
     @NameInMap("ZoneMatchMode")
     public String zoneMatchMode;
 

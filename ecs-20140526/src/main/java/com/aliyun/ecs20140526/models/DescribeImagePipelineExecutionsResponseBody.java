@@ -4,18 +4,23 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
+    // Details of the image build task.
     @NameInMap("ImagePipelineExecution")
     public DescribeImagePipelineExecutionsResponseBodyImagePipelineExecution imagePipelineExecution;
 
+    // The maximum number of entries returned per page.
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    // The query token returned in this call. For information about how to use this return value, see the Description section in this topic.
     @NameInMap("NextToken")
     public String nextToken;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The total number of returned image components.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,9 +70,11 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
     }
 
     public static class DescribeImagePipelineExecutionsResponseBodyImagePipelineExecutionImagePipelineExecutionSetTagsTag extends TeaModel {
+        // The key of the tag.
         @NameInMap("TagKey")
         public String tagKey;
 
+        // The value of the tag.
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -114,30 +121,47 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
     }
 
     public static class DescribeImagePipelineExecutionsResponseBodyImagePipelineExecutionImagePipelineExecutionSet extends TeaModel {
+        // The time when the image build task was created.
         @NameInMap("CreationTime")
         public String creationTime;
 
+        // The ID of the image build task.
         @NameInMap("ExecutionId")
         public String executionId;
 
+        // The ID of the image to be created by using the image build task.
         @NameInMap("ImageId")
         public String imageId;
 
+        // The ID of the image template.
         @NameInMap("ImagePipelineId")
         public String imagePipelineId;
 
+        // The execution result of the image build task.
         @NameInMap("Message")
         public String message;
 
+        // The last time when the image build task was updated.
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        // The ID of the resource group.
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        // The status of the image build task. Valid values:
+        // 
+        // *   BUILDING: The image was being built.
+        // *   DISTRIBUTING: The image was being distributed.
+        // *   RELEASING: The image was being recycled.
+        // *   SUCCESS: The image was built.
+        // *   FAILED: The image failed to be built.
+        // *   CANCELLING: The image build task was being canceled.
+        // *   CANCELLED: The image build task was cancelled.
         @NameInMap("Status")
         public String status;
 
+        // The list of tag key-value pairs.
         @NameInMap("Tags")
         public DescribeImagePipelineExecutionsResponseBodyImagePipelineExecutionImagePipelineExecutionSetTags tags;
 

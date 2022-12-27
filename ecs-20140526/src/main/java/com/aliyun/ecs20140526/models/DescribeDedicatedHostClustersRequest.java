@@ -4,12 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeDedicatedHostClustersRequest extends TeaModel {
+    // The IDs of dedicated host clusters. The value can be a JSON array that consists of up to 100 dedicated host cluster IDs in the format of `["dc-xxxxxxxxx", "dc-yyyyyyyyy", ... "dc-zzzzzzzzz"]`. Separate the IDs with commas (,).
     @NameInMap("DedicatedHostClusterIds")
     public String dedicatedHostClusterIds;
 
+    // The name of the dedicated host cluster.
     @NameInMap("DedicatedHostClusterName")
     public String dedicatedHostClusterName;
 
+    // >  This parameter is unavailable for use.
     @NameInMap("LockReason")
     public String lockReason;
 
@@ -19,15 +22,29 @@ public class DescribeDedicatedHostClustersRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The number of the page to return.
+    // 
+    // Pages start from page 1.
+    // 
+    // Default value: 1.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries to return on each page.
+    // 
+    // Maximum value: 100.
+    // 
+    // Default value: 10.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The region ID of the dedicated host cluster. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The ID of the resource group to which the dedicated host cluster belongs. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.  
+    // 
+    // >  Resources in the default resource group are displayed in the response regardless of how this parameter is set.
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -37,12 +54,15 @@ public class DescribeDedicatedHostClustersRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    // >  This parameter is unavailable for use.
     @NameInMap("Status")
     public String status;
 
+    // The list of the tags.
     @NameInMap("Tag")
     public java.util.List<DescribeDedicatedHostClustersRequestTag> tag;
 
+    // The zone ID of the dedicated host cluster. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.
     @NameInMap("ZoneId")
     public String zoneId;
 
@@ -164,9 +184,13 @@ public class DescribeDedicatedHostClustersRequest extends TeaModel {
     }
 
     public static class DescribeDedicatedHostClustersRequestTag extends TeaModel {
+        // The key of tag N of the dedicated host cluster. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+        // 
+        // If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.
         @NameInMap("Key")
         public String key;
 
+        // The value of tag N of the dedicated host cluster. Valid values of N: 1 to 20. The tag value cannot be an empty string. It can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
         @NameInMap("Value")
         public String value;
 

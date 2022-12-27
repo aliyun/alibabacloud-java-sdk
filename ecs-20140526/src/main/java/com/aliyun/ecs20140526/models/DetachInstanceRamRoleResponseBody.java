@@ -4,18 +4,23 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DetachInstanceRamRoleResponseBody extends TeaModel {
+    // Details about the results of detaching the instance RAM role from the instances.
     @NameInMap("DetachInstanceRamRoleResults")
     public DetachInstanceRamRoleResponseBodyDetachInstanceRamRoleResults detachInstanceRamRoleResults;
 
+    // The number of the instances from which the RAM role failed to be detached.
     @NameInMap("FailCount")
     public Integer failCount;
 
+    // The name of the instance RAM role.
     @NameInMap("RamRoleName")
     public String ramRoleName;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The total number of the instances from which you detached the RAM role.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,9 +70,11 @@ public class DetachInstanceRamRoleResponseBody extends TeaModel {
     }
 
     public static class DetachInstanceRamRoleResponseBodyDetachInstanceRamRoleResultsDetachInstanceRamRoleResultInstanceRamRoleSetsInstanceRamRoleSet extends TeaModel {
+        // The ID of the instance from which the RAM role was detached.
         @NameInMap("InstanceId")
         public String instanceId;
 
+        // The name of the instance RAM role.
         @NameInMap("RamRoleName")
         public String ramRoleName;
 
@@ -114,18 +121,23 @@ public class DetachInstanceRamRoleResponseBody extends TeaModel {
     }
 
     public static class DetachInstanceRamRoleResponseBodyDetachInstanceRamRoleResultsDetachInstanceRamRoleResult extends TeaModel {
+        // The code that indicates whether the instance RAM role was detached. If 200 is returned, the instance RAM role was detached. If any other value is returned, the instance RAM role failed to be detached. For more information, see the "Error codes" section.
         @NameInMap("Code")
         public String code;
 
+        // The ID of the instance from which you attempted to detach the instance RAM role.
         @NameInMap("InstanceId")
         public String instanceId;
 
+        // The details about the instance RAM roles of the instances.
         @NameInMap("InstanceRamRoleSets")
         public DetachInstanceRamRoleResponseBodyDetachInstanceRamRoleResultsDetachInstanceRamRoleResultInstanceRamRoleSets instanceRamRoleSets;
 
+        // The message that indicates whether the instance RAM role was detached. If success is returned, the instance RAM role was detached. If any other value is returned, the instance RAM role failed to be detached. For more information, see the "Error codes" section.
         @NameInMap("Message")
         public String message;
 
+        // Indicates whether the RAM role was detached.
         @NameInMap("Success")
         public Boolean success;
 

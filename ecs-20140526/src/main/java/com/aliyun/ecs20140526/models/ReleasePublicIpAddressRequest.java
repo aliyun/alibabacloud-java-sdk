@@ -4,6 +4,7 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ReleasePublicIpAddressRequest extends TeaModel {
+    // The ID of the instance.
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -13,6 +14,7 @@ public class ReleasePublicIpAddressRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The public IP address of the instance.
     @NameInMap("PublicIpAddress")
     public String publicIpAddress;
 

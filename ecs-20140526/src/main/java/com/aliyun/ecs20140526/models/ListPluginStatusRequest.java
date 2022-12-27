@@ -4,9 +4,17 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ListPluginStatusRequest extends TeaModel {
+    // The IDs of ECS instances. You can specify up to 50 instance IDs in each request.
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
 
+    // The name of the Cloud Assistant plug-in. The name supports all character sets and must be 1 to 255 characters in length.
+    // 
+    // * If this parameter is not specified, the states of all Cloud Assistant plug-ins that are installed on the specified ECS instances are queried.
+    // 
+    //     > If this parameter is not specified, only a single instance ID can be specified.
+    // 
+    // * If this parameter is specified, the state of the specified Cloud Assistant plug-in is queried.
     @NameInMap("Name")
     public String name;
 
@@ -16,12 +24,21 @@ public class ListPluginStatusRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The number of the page to return.
+    // 
+    // *   Pages start from page 1.
+    // *   Default value: 1.
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    // The number of entries to return on each page.
+    // 
+    // *   Maximum value: 50.
+    // *   Default value: 10.
     @NameInMap("PageSize")
     public Long pageSize;
 
+    // The region ID of the ECS instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 

@@ -4,18 +4,23 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstancesFullStatusResponseBody extends TeaModel {
+    // Details about the instance full status data.
     @NameInMap("InstanceFullStatusSet")
     public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSet instanceFullStatusSet;
 
+    // The page number of the returned page.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries returned per page.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The total number of the returned entries.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,9 +70,11 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeHealthStatus extends TeaModel {
+        // The code of the health status.
         @NameInMap("Code")
         public Integer code;
 
+        // The name of the health status.
         @NameInMap("Name")
         public String name;
 
@@ -95,9 +102,11 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeEventCycleStatus extends TeaModel {
+        // The code of the system event status.
         @NameInMap("Code")
         public Integer code;
 
+        // The name of the system event status.
         @NameInMap("Name")
         public String name;
 
@@ -125,9 +134,11 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeEventType extends TeaModel {
+        // The code of the system event type.
         @NameInMap("Code")
         public Integer code;
 
+        // The name of the system event type.
         @NameInMap("Name")
         public String name;
 
@@ -155,18 +166,35 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeExtendedAttributeInactiveDisksInactiveDisk extends TeaModel {
+        // The time when the disk was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
         @NameInMap("CreationTime")
         public String creationTime;
 
+        // The category of the disk. Valid values:
+        // 
+        // *   cloud: basic disk.
+        // *   cloud_efficiency: ultra disk
+        // *   cloud_ssd: standard SSD
+        // *   cloud_essd: enhanced SSD (ESSD)
+        // *   local_ssd_pro: I/O intensive local disk
+        // *   local_hdd_pro: throughput intensive local disk
+        // *   ephemeral: retired local disk
+        // *   ephemeral_ssd: retired local SSD
         @NameInMap("DeviceCategory")
         public String deviceCategory;
 
+        // The size of the disk. Unit: GiB.
         @NameInMap("DeviceSize")
         public String deviceSize;
 
+        // The type of the disk. Valid values:
+        // 
+        // *   system: system disk
+        // *   data: data disk
         @NameInMap("DeviceType")
         public String deviceType;
 
+        // The time when the disk was released. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
         @NameInMap("ReleaseTime")
         public String releaseTime;
 
@@ -237,12 +265,15 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeExtendedAttribute extends TeaModel {
+        // The device name of the local disk.
         @NameInMap("Device")
         public String device;
 
+        // The ID of the local disk.
         @NameInMap("DiskId")
         public String diskId;
 
+        // Details about the inactive cloud disks or local disks that have been released but must be removed.
         @NameInMap("InactiveDisks")
         public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeExtendedAttributeInactiveDisks inactiveDisks;
 
@@ -278,27 +309,35 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventType extends TeaModel {
+        // The status of the system event.
         @NameInMap("EventCycleStatus")
         public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeEventCycleStatus eventCycleStatus;
 
+        // The ID of the instance event.
         @NameInMap("EventId")
         public String eventId;
 
+        // The time when the system event was published. The time is displayed in UTC.
         @NameInMap("EventPublishTime")
         public String eventPublishTime;
 
+        // The type of the system event. Valid values:
         @NameInMap("EventType")
         public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeEventType eventType;
 
+        // The extended attribute of system events for instances that have local disks attached.
         @NameInMap("ExtendedAttribute")
         public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeExtendedAttribute extendedAttribute;
 
+        // The level of the system event impact.
         @NameInMap("ImpactLevel")
         public String impactLevel;
 
+        // The scheduled execution time of the system event. The time is displayed in UTC.
         @NameInMap("NotBefore")
         public String notBefore;
 
+        // The reason for scheduling the system event.
         @NameInMap("Reason")
         public String reason;
 
@@ -393,9 +432,11 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeStatus extends TeaModel {
+        // The code of the instance lifecycle status.
         @NameInMap("Code")
         public Integer code;
 
+        // The name of the instance lifecycle status.
         @NameInMap("Name")
         public String name;
 
@@ -423,15 +464,19 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusType extends TeaModel {
+        // The health status of the instance.
         @NameInMap("HealthStatus")
         public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeHealthStatus healthStatus;
 
+        // The ID of the instance.
         @NameInMap("InstanceId")
         public String instanceId;
 
+        // Details about the scheduled system events.
         @NameInMap("ScheduledSystemEventSet")
         public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSet scheduledSystemEventSet;
 
+        // The lifecycle status of the instance.
         @NameInMap("Status")
         public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeStatus status;
 

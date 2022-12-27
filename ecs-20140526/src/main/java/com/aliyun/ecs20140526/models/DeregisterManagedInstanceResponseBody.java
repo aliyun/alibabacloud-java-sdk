@@ -4,9 +4,11 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DeregisterManagedInstanceResponseBody extends TeaModel {
+    // Details of the managed instance.
     @NameInMap("Instance")
     public DeregisterManagedInstanceResponseBodyInstance instance;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,42 +34,55 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
     }
 
     public static class DeregisterManagedInstanceResponseBodyInstance extends TeaModel {
+        // The ID of the activation code.
         @NameInMap("ActivationId")
         public String activationId;
 
+        // The version number of the Cloud Assistant client.
         @NameInMap("AgentVersion")
         public String agentVersion;
 
+        // The hostname of the managed instance.
         @NameInMap("Hostname")
         public String hostname;
 
+        // The ID of the managed instance.
         @NameInMap("InstanceId")
         public String instanceId;
 
+        // The name of the managed instance.
         @NameInMap("InstanceName")
         public String instanceName;
 
+        // The public IP address of the managed instance.
         @NameInMap("InternetIp")
         public String internetIp;
 
+        // The internal IP address of the managed instance.
         @NameInMap("IntranetIp")
         public String intranetIp;
 
+        // The number of times that Cloud Assistant tasks were executed on the managed instance.
         @NameInMap("InvocationCount")
         public Long invocationCount;
 
+        // The last Cloud Assistant task execution time.
         @NameInMap("LastInvokedTime")
         public String lastInvokedTime;
 
+        // The machine code of the managed instance.
         @NameInMap("MachineId")
         public String machineId;
 
+        // The operating system type of the managed instance.
         @NameInMap("OsType")
         public String osType;
 
+        // The version information of the operating system.
         @NameInMap("OsVersion")
         public String osVersion;
 
+        // The time when the managed instance was registered.
         @NameInMap("RegistrationTime")
         public String registrationTime;
 

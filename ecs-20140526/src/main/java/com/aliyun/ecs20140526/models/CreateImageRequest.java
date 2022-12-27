@@ -4,15 +4,24 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateImageRequest extends TeaModel {
+    // The system architecture of the system disk. If you specify a data disk snapshot to create the system disk of the custom image, you must use the Architecture parameter to specify the system architecture of the system disk. Valid values:
+    // 
+    // *   i386
+    // *   x86\_64
+    // *   arm64
+    // 
+    // Default value: x86\_64.
     @NameInMap("Architecture")
     public String architecture;
 
     @NameInMap("BootMode")
     public String bootMode;
 
+    // The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
     @NameInMap("ClientToken")
     public String clientToken;
 
+    // The description of the custom image. The description must be 2 to 256 characters in length and cannot start with http:// or https://.
     @NameInMap("Description")
     public String description;
 
@@ -22,15 +31,21 @@ public class CreateImageRequest extends TeaModel {
     @NameInMap("DiskDeviceMapping")
     public java.util.List<CreateImageRequestDiskDeviceMapping> diskDeviceMapping;
 
+    // The name of the image family of the custom image. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with acs: or aliyun. It cannot contain http:// or https://. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
     @NameInMap("ImageFamily")
     public String imageFamily;
 
+    // The name of the image. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
     @NameInMap("ImageName")
     public String imageName;
 
+    // The version of the image.
+    // 
+    // >  If you specify an instance by setting `InstanceId` and the instance uses an Alibaba Cloud Marketplace image or a custom image derived from an Alibaba Cloud Marketplace image, this parameter must be left empty or set to the value of the ImageVersion parameter of the instance.
     @NameInMap("ImageVersion")
     public String imageVersion;
 
+    // The ID of the instance.
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -40,12 +55,32 @@ public class CreateImageRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The distribution of the operating system for the system disk in the custom image. If you specify a data disk snapshot to create the system disk of the custom image, you must use the Platform parameter to specify the distribution of the operating system for the system disk. Valid values:
+    // 
+    // *   CentOS
+    // *   Ubuntu
+    // *   SUSE
+    // *   OpenSUSE
+    // *   RedHat
+    // *   Debian
+    // *   CoreOS
+    // *   Aliyun
+    // *   Windows Server 2012
+    // *   Windows 7
+    // *   Customized Linux
+    // *   Others Linux
+    // 
+    // Default value: Others Linux.
     @NameInMap("Platform")
     public String platform;
 
+    // The ID of the region in which to create the custom image. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The ID of the resource group to which to assign the custom image. If you do not specify this parameter, the image is assigned to the default resource group.
+    // 
+    // >  If you use a RAM user that is not authorized to manage the default resource group to call the CreateImage operation and do not specify the `ResourceGroupId` parameter, the `Forbbiden: User not authorized to operate on the specified resource` error message is returned. You must specify the ID of a resource group that the RAM user is authorized to manage or authorize the RAM user to manage the default resource group before you call the CreateImage operation again.
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -55,6 +90,7 @@ public class CreateImageRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    // The ID of the snapshot that is used to create the custom image.
     @NameInMap("SnapshotId")
     public String snapshotId;
 
@@ -219,15 +255,32 @@ public class CreateImageRequest extends TeaModel {
     }
 
     public static class CreateImageRequestDiskDeviceMapping extends TeaModel {
+        // The device name of disk N in the custom image. Valid values:
+        // 
+        // *   For disk categories other than basic disks, such as standard SSDs, ultra disks, and enhanced SSDs (ESSDs), the valid values are in alphabetical order from /dev/vda to /dev/vdz.
+        // *   For basic disks, the valid values are in alphabetical order from /dev/xvda to /dev/xvdz.
         @NameInMap("Device")
         public String device;
 
+        // The type of disk N in the custom image. You can set this parameter to create the system disk of the custom image from a data disk snapshot. If you do not set this parameter, the disk type is determined by the corresponding snapshot. Valid values:
+        // 
+        // *   system: system disk
+        // *   data: data disk
         @NameInMap("DiskType")
         public String diskType;
 
+        // The size of disk N in the custom image. Unit: GiB. The valid values and default value of DiskDeviceMapping.N.Size depend on DiskDeviceMapping.N.SnapshotId.
+        // 
+        // *   If no corresponding snapshot IDs are specified in the DiskDeviceMapping.N.SnapshotId value, the following valid values and default values are available for DiskDeviceMapping.N.Size:
+        // 
+        //     *   For basic disks, the valid values are 5 to 2000, and the default value is 5.
+        //     *   For other disk categories, the valid values are 20 to 32768, and the default value is 20.
+        // 
+        // *   If a corresponding snapshot ID is specified in the DiskDeviceMapping.N.SnapshotId value, the value of DiskDeviceMapping.N.Size must be greater than or equal to the size of the specified snapshot. The default value of DiskDeviceMapping.N.Size is the size of the specified snapshot.
         @NameInMap("Size")
         public Integer size;
 
+        // The ID of the snapshot that is used to create the custom image.
         @NameInMap("SnapshotId")
         public String snapshotId;
 
@@ -271,9 +324,11 @@ public class CreateImageRequest extends TeaModel {
     }
 
     public static class CreateImageRequestTag extends TeaModel {
+        // The key of tag N of the custom image. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
         @NameInMap("Key")
         public String key;
 
+        // The value of tag N of the custom image. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with `acs:`. It cannot contain `http://` or `https://`.
         @NameInMap("Value")
         public String value;
 

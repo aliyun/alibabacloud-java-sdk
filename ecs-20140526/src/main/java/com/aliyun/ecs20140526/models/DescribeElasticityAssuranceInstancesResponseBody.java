@@ -4,18 +4,23 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeElasticityAssuranceInstancesResponseBody extends TeaModel {
+    // Details about the instances that were created by using the elasticity assurance.
     @NameInMap("ElasticityAssuranceItem")
     public DescribeElasticityAssuranceInstancesResponseBodyElasticityAssuranceItem elasticityAssuranceItem;
 
+    // The number of entries returned per page.
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    // The token used to start the next query.
     @NameInMap("NextToken")
     public String nextToken;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The number of entries that meet the query criteria.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,6 +70,7 @@ public class DescribeElasticityAssuranceInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeElasticityAssuranceInstancesResponseBodyElasticityAssuranceItemInstanceIdSet extends TeaModel {
+        // The ID of the instance.
         @NameInMap("InstanceId")
         public String instanceId;
 

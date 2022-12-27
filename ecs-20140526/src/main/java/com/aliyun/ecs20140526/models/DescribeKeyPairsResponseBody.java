@@ -4,18 +4,23 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeKeyPairsResponseBody extends TeaModel {
+    // Details about the key pairs.
     @NameInMap("KeyPairs")
     public DescribeKeyPairsResponseBodyKeyPairs keyPairs;
 
+    // The page number of the returned page.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries returned per page.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The total number of key pairs.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,9 +70,11 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
     }
 
     public static class DescribeKeyPairsResponseBodyKeyPairsKeyPairTagsTag extends TeaModel {
+        // The tag key of the key pair.
         @NameInMap("TagKey")
         public String tagKey;
 
+        // The tag value of the key pair.
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -114,18 +121,23 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
     }
 
     public static class DescribeKeyPairsResponseBodyKeyPairsKeyPair extends TeaModel {
+        // The time when the key pair was created.
         @NameInMap("CreationTime")
         public String creationTime;
 
+        // The fingerprint of the key pair.
         @NameInMap("KeyPairFingerPrint")
         public String keyPairFingerPrint;
 
+        // The name of the key pair.
         @NameInMap("KeyPairName")
         public String keyPairName;
 
+        // The ID of the resource group.
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        // The tags of the key pair.
         @NameInMap("Tags")
         public DescribeKeyPairsResponseBodyKeyPairsKeyPairTags tags;
 

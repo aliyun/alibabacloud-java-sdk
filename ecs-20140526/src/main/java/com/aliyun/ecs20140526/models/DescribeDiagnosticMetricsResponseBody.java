@@ -4,12 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeDiagnosticMetricsResponseBody extends TeaModel {
+    // The list of diagnostic metrics.
     @NameInMap("Metrics")
     public java.util.List<DescribeDiagnosticMetricsResponseBodyMetrics> metrics;
 
+    // The query token returned in this call.
     @NameInMap("NextToken")
     public String nextToken;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,24 +46,35 @@ public class DescribeDiagnosticMetricsResponseBody extends TeaModel {
     }
 
     public static class DescribeDiagnosticMetricsResponseBodyMetrics extends TeaModel {
+        // The description of the diagnostic metric.
         @NameInMap("Description")
         public String description;
 
+        // Indicates whether the diagnostic metric needs to be assessed by running a Cloud Assistant command in a guest operating system.
         @NameInMap("GuestMetric")
         public Boolean guestMetric;
 
+        // The category of the diagnostic metric.
         @NameInMap("MetricCategory")
         public String metricCategory;
 
+        // The ID of the diagnostic metric.
         @NameInMap("MetricId")
         public String metricId;
 
+        // The name of the diagnostic metric.
         @NameInMap("MetricName")
         public String metricName;
 
+        // The resource type supported by the diagnostic metric.
         @NameInMap("ResourceType")
         public String resourceType;
 
+        // The operating system type supported by the diagnostic metric. Valid values:
+        // 
+        // *   Windows
+        // *   Linux
+        // *   All: both Windows and Linux
         @NameInMap("SupportedOperatingSystem")
         public String supportedOperatingSystem;
 

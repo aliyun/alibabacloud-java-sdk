@@ -4,12 +4,26 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateSimulatedSystemEventsRequest extends TeaModel {
+    // The type of the system event. Valid values:
+    // 
+    // *   SystemMaintenance.Reboot: The instance is restarted due to system maintenance.
+    // *   SystemFailure.Reboot: The instance is restarted due to a system failure.
+    // *   InstanceFailure.Reboot: The instance is restarted due to an instance failure.
+    // *   SystemMaintenance.Stop: The instance is stopped due to system maintenance.
+    // *   SystemMaintenance.Redeploy: The instance is redeployed due to system maintenance.
+    // *   SystemFailure.Redeploy: The instance is redeployed due to a system failure.
+    // *   SystemFailure.Stop: The instance is stopped due to a system failure.
+    // *   InstanceFailure.Reboot: The instance is restarted due to an instance failure.
     @NameInMap("EventType")
     public String eventType;
 
+    // The IDs of instances. You can specify up to 100 instance IDs.
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
 
+    // The start time of the scheduled event execution. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+    // 
+    // >  For exception events due to system failures or instance failures, the simulated events of these exception events enter the Executing (`Executing`) state when the simulated events are created. The value of `NotBefore` is the time when the simulated events enter the Executed (`Executed`) state.
     @NameInMap("NotBefore")
     public String notBefore;
 
@@ -19,6 +33,7 @@ public class CreateSimulatedSystemEventsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The region ID of the event. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 

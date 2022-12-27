@@ -4,12 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeEniMonitorDataRequest extends TeaModel {
+    // The end of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the time is rounded up to the next minute.
     @NameInMap("EndTime")
     public String endTime;
 
+    // The ID of the secondary ENI. By default, all secondary ENIs that are bound to the specified instance are queried.
     @NameInMap("EniId")
     public String eniId;
 
+    // The ID of the instance to which the secondary ENI is bound.
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -19,9 +22,17 @@ public class DescribeEniMonitorDataRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The interval at which to retrieve monitored data. Unit: seconds. Valid values:
+    // 
+    // *   60
+    // *   600
+    // *   3600
+    // 
+    // Default value: 60.
     @NameInMap("Period")
     public Integer period;
 
+    // The region ID of the secondary ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 
@@ -31,6 +42,7 @@ public class DescribeEniMonitorDataRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    // The beginning of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the time is rounded up to the next minute.
     @NameInMap("StartTime")
     public String startTime;
 

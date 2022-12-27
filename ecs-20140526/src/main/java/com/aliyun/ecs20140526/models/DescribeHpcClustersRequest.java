@@ -4,9 +4,13 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeHpcClustersRequest extends TeaModel {
+    // The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The **ClientToken** value must contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
     @NameInMap("ClientToken")
     public String clientToken;
 
+    // The IDs of the HPC clusters.
+    // 
+    // You can specify a JSON array that consists of up to 100 HPC cluster IDs. Separate multiple HPC cluster IDs with commas (,).
     @NameInMap("HpcClusterIds")
     public String hpcClusterIds;
 
@@ -16,12 +20,23 @@ public class DescribeHpcClustersRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The number of the page to return.
+    // 
+    // Pages start from page 1.
+    // 
+    // Default value: 1.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries to return on each page.
+    // 
+    // Maximum value: 100
+    // 
+    // Default value: 10.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The region ID of the HPC cluster. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 

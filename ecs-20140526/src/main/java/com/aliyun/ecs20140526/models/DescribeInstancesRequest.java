@@ -7,75 +7,138 @@ public class DescribeInstancesRequest extends TeaModel {
     @NameInMap("Filter")
     public java.util.List<DescribeInstancesRequestFilter> filter;
 
+    // The value of attribute N. Valid values of N: 1 to 20.
     @NameInMap("AdditionalAttributes")
     public java.util.List<String> additionalAttributes;
 
+    // >  This parameter is currently in invitational preview and unavailable for general users.
     @NameInMap("DeviceAvailable")
     public Boolean deviceAvailable;
 
+    // Specifies whether to check the validity of the request without actually making the request. Default value: false. Valid values:
+    // 
+    // *   true: The validity of the request is checked but the request is not made. Check items include whether your AccessKey pair is valid, whether RAM users are granted required permissions, and whether the required parameters are specified. If the check fails, the corresponding error is returned. If the check succeeds, the DryRunOperation error code is returned.
+    // *   false: The validity of the request is checked. If the check succeeds, a 2XX HTTP status code is returned and the request is made.
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    // The elastic IP addresses (EIPs) of instances. This parameter is valid when InstanceNetworkType is set to vpc. The value can be a JSON array that consists of up to 100 IP addresses. Separate the IP addresses with commas (,).
     @NameInMap("EipAddresses")
     public String eipAddresses;
 
+    // The ID of the High Performance Computing (HPC) cluster to which the instance belongs.
     @NameInMap("HpcClusterId")
     public String hpcClusterId;
 
+    // Specifies whether the access channel is enabled for instance metadata. Valid values:
+    // 
+    // *   enabled
+    // *   disabled
+    // 
+    // Default value: enabled.
+    // 
+    // >  For more information about instance metadata, see [Overview of ECS instance metadata](~~49122~~).
     @NameInMap("HttpEndpoint")
     public String httpEndpoint;
 
+    // >  This parameter is currently in invitational preview and unavailable for general users.
     @NameInMap("HttpPutResponseHopLimit")
     public Integer httpPutResponseHopLimit;
 
+    // Specifies whether the security hardening mode (IMDSv2) is forcefully used to access instance metadata. Valid values:
+    // 
+    // *   optional: The security hardening mode (IMDSv2) is not forcefully used.
+    // *   required: The security hardening mode (IMDSv2) is forcefully used. After you set this parameter to required, you cannot access instance metadata in normal mode.
+    // 
+    // Default value: optional.
+    // 
+    // >  For more information about modes of accessing instance metadata, see [Access mode of instance metadata](~~150575~~).
     @NameInMap("HttpTokens")
     public String httpTokens;
 
+    // The ID of the image.
     @NameInMap("ImageId")
     public String imageId;
 
+    // The internal IP addresses of instances located in the classic network. This parameter is valid when InstanceNetworkType is set to classic. The value can be a JSON array that consists of up to 100 IP addresses. Separate the IP addresses with commas (,).
     @NameInMap("InnerIpAddresses")
     public String innerIpAddresses;
 
+    // The billing method of the instance. Valid values:
+    // 
+    // *   PostPaid: pay-as-you-go
+    // *   PrePaid: subscription
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
 
+    // The IDs of instances. The value can be a JSON array that consists of up to 100 instance IDs. Separate the IDs with commas (,).
     @NameInMap("InstanceIds")
     public String instanceIds;
 
+    // The name of the instance. Fuzzy search with the asterisk (\*) wildcard characters is supported.
     @NameInMap("InstanceName")
     public String instanceName;
 
+    // The network type of the instance. Valid values:
+    // 
+    // *   classic: classic network
+    // *   vpc: VPC
     @NameInMap("InstanceNetworkType")
     public String instanceNetworkType;
 
+    // The instance type of the instance.
     @NameInMap("InstanceType")
     public String instanceType;
 
+    // The instance family of the instance.
     @NameInMap("InstanceTypeFamily")
     public String instanceTypeFamily;
 
+    // The billing method for network usage. Valid values:
+    // 
+    // *   PayByBandwidth: pay-by-bandwidth
+    // *   PayByTraffic: pay-by-traffic
+    // 
+    // >  When the **pay-by-traffic** billing method for network usage is used, the maximum inbound and outbound bandwidth values are used as upper limits of bandwidths instead of guaranteed performance specifications. In scenarios where demand outstrips resource supplies, these maximum bandwidth values may not be reached. If you want guaranteed bandwidths for your instances, use the **pay-by-bandwidth** billing method for network usage.
     @NameInMap("InternetChargeType")
     public String internetChargeType;
 
+    // Specifies whether the instance is I/O optimized.
     @NameInMap("IoOptimized")
     public Boolean ioOptimized;
 
+    // IPv6 address N of the elastic network interface (ENI). You can specify multiple IPv6 addresses. Valid values of N: 1 to 100.
     @NameInMap("Ipv6Address")
     public java.util.List<String> ipv6Address;
 
+    // The name of the SSH key pair bound to the instance.
     @NameInMap("KeyPairName")
     public String keyPairName;
 
+    // The reason why the instance is locked. Valid values:
+    // 
+    // *   financial: The instance is locked due to overdue payments.
+    // *   security: The instance is locked due to security reasons.
+    // *   recycling: The preemptible instance is locked and pending release.
+    // *   dedicatedhostfinancial: The instance is locked due to overdue payments for the dedicated host.
+    // *   refunded: The instance is locked because a refund is made for the instance.
     @NameInMap("LockReason")
     public String lockReason;
 
+    // The maximum number of entries to return on each page. Maximum value: 100.
+    // 
+    // Default value:
+    // 
+    // *   If this parameter is not specified or is set to a value smaller than 10, the default value is 10.
+    // *   If this parameter is set to a value greater than 100, the default value is 100.
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    // >  This parameter is currently in invitational preview and unavailable for general users.
     @NameInMap("NeedSaleCycle")
     public Boolean needSaleCycle;
 
+    // The query token. Set the value to the `NextToken` value returned in the last call to the DescribeInstances operation.
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -85,24 +148,41 @@ public class DescribeInstancesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The number of the page to return.
+    // 
+    // Pages start from page 1.
+    // 
+    // Default value: 1.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries to return on each page.
+    // 
+    // Maximum value: 100.
+    // 
+    // Default value: 10.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The private IP addresses of instances located in VPCs. This parameter is valid when InstanceNetworkType is set to vpc. The value can be a JSON array that consists of up to 100 IP addresses. Separate the IP addresses with commas (,).
     @NameInMap("PrivateIpAddresses")
     public String privateIpAddresses;
 
+    // The public IP addresses of instances. The value can be a JSON array that consists of up to 100 IP addresses. Separate the IP addresses with commas (,).
     @NameInMap("PublicIpAddresses")
     public String publicIpAddresses;
 
+    // The Remote Direct Memory Access (RDMA) IP address of the HPC instance.
     @NameInMap("RdmaIpAddresses")
     public String rdmaIpAddresses;
 
+    // The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The ID of the resource group to which the instance belongs. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.
+    // 
+    // >  Resources in the default resource group are displayed in the response regardless of how this parameter is set.
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -112,21 +192,33 @@ public class DescribeInstancesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    // The ID of the security group to which the instance belongs.
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
+    // The state of the instance. Valid values:
+    // 
+    // *   Pending: The instance is being created.
+    // *   Running: The instance is running.
+    // *   Starting: The instance is being started.
+    // *   Stopping: The instance is being stopped.
+    // *   Stopped: The instance is stopped.
     @NameInMap("Status")
     public String status;
 
+    // The tags.
     @NameInMap("Tag")
     public java.util.List<DescribeInstancesRequestTag> tag;
 
+    // The ID of the vSwitch to which the instance is connected.
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
+    // The ID of the virtual private cloud (VPC) to which the instance belongs.
     @NameInMap("VpcId")
     public String vpcId;
 
+    // The zone ID of the instance.
     @NameInMap("ZoneId")
     public String zoneId;
 
@@ -472,9 +564,11 @@ public class DescribeInstancesRequest extends TeaModel {
     }
 
     public static class DescribeInstancesRequestFilter extends TeaModel {
+        // The key of filter 1 used to query resources. Set the value to `CreationStartTime`. You can specify a time by setting both `Filter.1.Key` and `Filter.1.Value` to query resources that were created after the time.
         @NameInMap("Key")
         public String key;
 
+        // The value of filter 1 used to query resources. Set the value to a time. If you specify this parameter, you must also specify the `Filter.1.Key` parameter. Specify the time in the `yyyy-MM-ddTHH:mmZ` format. The time must be in UTC.
         @NameInMap("Value")
         public String value;
 
@@ -502,9 +596,13 @@ public class DescribeInstancesRequest extends TeaModel {
     }
 
     public static class DescribeInstancesRequestTag extends TeaModel {
+        // The key of tag N of the instance. Valid values of N: 1 to 20.
+        // 
+        // If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.
         @NameInMap("Key")
         public String key;
 
+        // The value of tag N of the instance. Valid values of N: 1 to 20.
         @NameInMap("Value")
         public String value;
 

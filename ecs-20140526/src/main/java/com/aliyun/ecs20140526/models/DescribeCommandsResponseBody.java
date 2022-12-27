@@ -4,18 +4,23 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeCommandsResponseBody extends TeaModel {
+    // Details about the commands.
     @NameInMap("Commands")
     public DescribeCommandsResponseBodyCommands commands;
 
+    // The number of the returned page.
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    // The number of entries returned per page.
     @NameInMap("PageSize")
     public Long pageSize;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The total number of commands.
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -84,18 +89,28 @@ public class DescribeCommandsResponseBody extends TeaModel {
     }
 
     public static class DescribeCommandsResponseBodyCommandsCommandParameterDefinitionsParameterDefinition extends TeaModel {
+        // The default value of the custom parameter.
         @NameInMap("DefaultValue")
         public String defaultValue;
 
+        // The description of the custom parameter.
         @NameInMap("Description")
         public String description;
 
+        // The name of the custom parameter.
         @NameInMap("ParameterName")
         public String parameterName;
 
+        // The valid values of the custom enumeration parameter.
         @NameInMap("PossibleValues")
         public DescribeCommandsResponseBodyCommandsCommandParameterDefinitionsParameterDefinitionPossibleValues possibleValues;
 
+        // Indicates whether the custom parameter is required. Valid values:
+        // 
+        // *   true
+        // *   false
+        // 
+        // Default value: false.
         @NameInMap("Required")
         public Boolean required;
 
@@ -185,9 +200,11 @@ public class DescribeCommandsResponseBody extends TeaModel {
     }
 
     public static class DescribeCommandsResponseBodyCommandsCommandTagsTag extends TeaModel {
+        // The tag key of the command.
         @NameInMap("TagKey")
         public String tagKey;
 
+        // The tag value of the command.
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -234,54 +251,71 @@ public class DescribeCommandsResponseBody extends TeaModel {
     }
 
     public static class DescribeCommandsResponseBodyCommandsCommand extends TeaModel {
+        // The category of the common command.
         @NameInMap("Category")
         public String category;
 
+        // The Base64-encoded command content.
         @NameInMap("CommandContent")
         public String commandContent;
 
+        // The ID of the command.
         @NameInMap("CommandId")
         public String commandId;
 
+        // The time when the command was created.
         @NameInMap("CreationTime")
         public String creationTime;
 
+        // The description of the command.
         @NameInMap("Description")
         public String description;
 
+        // Indicates whether the custom parameter feature was enabled for the command.
         @NameInMap("EnableParameter")
         public Boolean enableParameter;
 
+        // The number of tasks created by using the command.
         @NameInMap("InvokeTimes")
         public Integer invokeTimes;
 
+        // Indicates whether the common command is of the latest version. If multiple common commands from the same provider (`Provider`) belong to the same category and have the same name, these commands are of different versions of the same command. This parameter is not returned for the Cloud Assistant commands that you created.
         @NameInMap("Latest")
         public Boolean latest;
 
+        // The name of the command.
         @NameInMap("Name")
         public String name;
 
+        // Details about the custom parameters.
         @NameInMap("ParameterDefinitions")
         public DescribeCommandsResponseBodyCommandsCommandParameterDefinitions parameterDefinitions;
 
+        // A list of custom parameter names that are parsed from the command content specified when the command was being created. If the custom parameter feature is not enabled, an empty list is returned.
         @NameInMap("ParameterNames")
         public DescribeCommandsResponseBodyCommandsCommandParameterNames parameterNames;
 
+        // The provider of the common command.
         @NameInMap("Provider")
         public String provider;
 
+        // The list of tags added to the command.
         @NameInMap("Tags")
         public DescribeCommandsResponseBodyCommandsCommandTags tags;
 
+        // The timeout period.
         @NameInMap("Timeout")
         public Long timeout;
 
+        // The type of the command.
         @NameInMap("Type")
         public String type;
 
+        // The version of the common command. If multiple common commands from the same provider (`Provider`) belong to the same category and have the same name, these commands are of different versions of the same command. This parameter is not returned for the Cloud Assistant commands that you created.
         @NameInMap("Version")
         public Integer version;
 
+        // The working directory of the command on the Elastic Compute Service (ECS) instance.
         @NameInMap("WorkingDir")
         public String workingDir;
 

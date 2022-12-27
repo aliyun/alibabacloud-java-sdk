@@ -4,9 +4,11 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
+    // The monitoring data about the instance.
     @NameInMap("MonitorData")
     public DescribeInstanceMonitorDataResponseBodyMonitorData monitorData;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,54 +34,71 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData extends TeaModel {
+        // The read bandwidth of the disks (system disk and data disks). Unit: Byte/s.
         @NameInMap("BPSRead")
         public Integer BPSRead;
 
+        // The write bandwidth of the disks (system disk and data disks). Unit: Byte/s.
         @NameInMap("BPSWrite")
         public Integer BPSWrite;
 
+        // The vCPU utilization of the instance. Unit: percent (%).
         @NameInMap("CPU")
         public Integer CPU;
 
+        // The overdrawn CPU credits of the burstable instance.
         @NameInMap("CPUAdvanceCreditBalance")
         public Float CPUAdvanceCreditBalance;
 
+        // The total CPU credits of the burstable instance.
         @NameInMap("CPUCreditBalance")
         public Float CPUCreditBalance;
 
+        // The number of CPU credits consumed by the burstable instance.
         @NameInMap("CPUCreditUsage")
         public Float CPUCreditUsage;
 
+        // The unpaid excess credits.
         @NameInMap("CPUNotpaidSurplusCreditUsage")
         public Float CPUNotpaidSurplusCreditUsage;
 
+        // The number of read I/O operations per second on the disks (system disk and data disks).
         @NameInMap("IOPSRead")
         public Integer IOPSRead;
 
+        // The number of write I/O operations per second on the disks (system disk and data disks).
         @NameInMap("IOPSWrite")
         public Integer IOPSWrite;
 
+        // The ID of the instance.
         @NameInMap("InstanceId")
         public String instanceId;
 
+        // The public bandwidth of the instance. Unit: Kbit/s.
         @NameInMap("InternetBandwidth")
         public Integer internetBandwidth;
 
+        // The public data traffic received by the instance during the period specified by the `Period` parameter, which starts from the time specified by the `TimeStamp` parameter. Unit: Kbit/s.
         @NameInMap("InternetRX")
         public Integer internetRX;
 
+        // The public data traffic sent by the instance during the period specified by the `Period` parameter, which starts from the time specified by the `TimeStamp` parameter. Unit: Kbit/s.
         @NameInMap("InternetTX")
         public Integer internetTX;
 
+        // The internal bandwidth of the instance. Unit: Kbit/s.
         @NameInMap("IntranetBandwidth")
         public Integer intranetBandwidth;
 
+        // The internal data traffic received by the instance during the period specified by the `Period` parameter, which starts from the time specified by the `TimeStamp` parameter. Unit: Kbit/s.
         @NameInMap("IntranetRX")
         public Integer intranetRX;
 
+        // The internal data traffic sent by the instance during the period specified by the `Period` parameter, which starts from the time specified by the `TimeStamp` parameter. Unit: Kbit/s.
         @NameInMap("IntranetTX")
         public Integer intranetTX;
 
+        // The timestamp of monitoring data query.
         @NameInMap("TimeStamp")
         public String timeStamp;
 

@@ -4,9 +4,11 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DeleteSnapshotGroupResponseBody extends TeaModel {
+    // Details about the delete operation.
     @NameInMap("OperationProgressSet")
     public DeleteSnapshotGroupResponseBodyOperationProgressSet operationProgressSet;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +34,11 @@ public class DeleteSnapshotGroupResponseBody extends TeaModel {
     }
 
     public static class DeleteSnapshotGroupResponseBodyOperationProgressSetOperationProgressRelatedItemSetRelatedItem extends TeaModel {
+        // The name of the resource.
         @NameInMap("Name")
         public String name;
 
+        // The ID of the resource.
         @NameInMap("Value")
         public String value;
 
@@ -81,15 +85,23 @@ public class DeleteSnapshotGroupResponseBody extends TeaModel {
     }
 
     public static class DeleteSnapshotGroupResponseBodyOperationProgressSetOperationProgress extends TeaModel {
+        // The error code. This parameter is empty when the operation was successful.
+        // 
+        // For information about error codes and error messages, visit the [API error center](https://error-center.alibabacloud.com/status/product/Ecs).
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        // The error message. This parameter is empty when the operation was successful.
+        // 
+        // For information about error codes and error messages, visit the [API error center](https://error-center.alibabacloud.com/status/product/Ecs).
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
+        // Indicates whether the operation was successful. If the operation was successful, a value of Success is returned. If the operation failed, an error code and an error message are returned.
         @NameInMap("OperationStatus")
         public String operationStatus;
 
+        // Details about the resources.
         @NameInMap("RelatedItemSet")
         public DeleteSnapshotGroupResponseBodyOperationProgressSetOperationProgressRelatedItemSet relatedItemSet;
 

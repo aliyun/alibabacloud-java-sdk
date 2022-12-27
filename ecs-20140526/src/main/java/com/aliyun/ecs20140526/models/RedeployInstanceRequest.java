@@ -4,9 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class RedeployInstanceRequest extends TeaModel {
+    // Specifies whether to force stop the instance in the Running state.
+    // 
+    // Default value: false.
+    // 
+    // >  The effect of a forced stop is the same as a power failure. Data in the instance operating system that has not been written to local disks may be lost. We recommend that you redeploy instances when they are in the Stopped state.
     @NameInMap("ForceStop")
     public Boolean forceStop;
 
+    // The ID of the instance.
     @NameInMap("InstanceId")
     public String instanceId;
 

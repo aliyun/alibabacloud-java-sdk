@@ -4,18 +4,23 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeSnapshotPackageResponseBody extends TeaModel {
+    // The page number of the returned page.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries returned per page.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Details about the OSS storage plans.
     @NameInMap("SnapshotPackages")
     public DescribeSnapshotPackageResponseBodySnapshotPackages snapshotPackages;
 
+    // The total number of returned OSS storage plans.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,15 +70,19 @@ public class DescribeSnapshotPackageResponseBody extends TeaModel {
     }
 
     public static class DescribeSnapshotPackageResponseBodySnapshotPackagesSnapshotPackage extends TeaModel {
+        // The name of the OSS storage plan.
         @NameInMap("DisplayName")
         public String displayName;
 
+        // The time when the OSS storage plan expires. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
         @NameInMap("EndTime")
         public String endTime;
 
+        // The maximum storage capacity offered by the OSS storage plan.
         @NameInMap("InitCapacity")
         public Long initCapacity;
 
+        // The time when the OSS storage plan was purchased. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
         @NameInMap("StartTime")
         public String startTime;
 

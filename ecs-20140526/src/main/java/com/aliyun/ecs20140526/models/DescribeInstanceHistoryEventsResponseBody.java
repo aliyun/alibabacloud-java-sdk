@@ -4,18 +4,23 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
+    // Details about the instance system events.
     @NameInMap("InstanceSystemEventSet")
     public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSet instanceSystemEventSet;
 
+    // The page number of the returned page.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries returned per page.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The total number of instances.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,9 +70,11 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeEventCycleStatus extends TeaModel {
+        // The state code of the system event.
         @NameInMap("Code")
         public Integer code;
 
+        // The state name of the system event.
         @NameInMap("Name")
         public String name;
 
@@ -95,9 +102,11 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeEventType extends TeaModel {
+        // The code of the system event type.
         @NameInMap("Code")
         public Integer code;
 
+        // The name of the system event type.
         @NameInMap("Name")
         public String name;
 
@@ -125,18 +134,35 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttributeInactiveDisksInactiveDisk extends TeaModel {
+        // The time when the disk was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
         @NameInMap("CreationTime")
         public String creationTime;
 
+        // The category of the disk. Valid values:
+        // 
+        // *   cloud: basic disk
+        // *   cloud_efficiency: ultra disk
+        // *   cloud_ssd: standard SSD
+        // *   cloud_essd: enhanced SSD (ESSD)
+        // *   local_ssd_pro: I/O-intensive local disk
+        // *   local_hdd_pro: throughput-intensive local disk
+        // *   ephemeral: retired local disk
+        // *   ephemeral_ssd: retired local SSD
         @NameInMap("DeviceCategory")
         public String deviceCategory;
 
+        // The size of the disk. Unit: GiB.
         @NameInMap("DeviceSize")
         public String deviceSize;
 
+        // The type of the disk. Valid values:
+        // 
+        // *   system: system disk
+        // *   data: data disk
         @NameInMap("DeviceType")
         public String deviceType;
 
+        // The time when the disk was released. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
         @NameInMap("ReleaseTime")
         public String releaseTime;
 
@@ -226,27 +252,38 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttribute extends TeaModel {
+        // The device name of the local disk.
         @NameInMap("Device")
         public String device;
 
+        // The ID of the local disk.
         @NameInMap("DiskId")
         public String diskId;
 
+        // The ID of the host.
         @NameInMap("HostId")
         public String hostId;
 
+        // The type of the host. Valid values:
+        // 
+        // - ddh: dedicated host
+        // - managehost: physical machine in a smart hosting pool
         @NameInMap("HostType")
         public String hostType;
 
+        // Details about the inactive cloud disks or local disks that have been released and must be removed.
         @NameInMap("InactiveDisks")
         public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttributeInactiveDisks inactiveDisks;
 
+        // The migration solution of the instance. Valid value: MigrationPlan. Instances can be migrated only by using migration plans.
         @NameInMap("MigrationOptions")
         public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttributeMigrationOptions migrationOptions;
 
+        // The online repair policy of the damaged disk. Valid value: IsolateOnly, which indicates that damaged disks are isolated but not repaired.
         @NameInMap("OnlineRepairPolicy")
         public String onlineRepairPolicy;
 
+        // The rack number of the cloud box.
         @NameInMap("Rack")
         public String rack;
 
@@ -322,36 +359,51 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventType extends TeaModel {
+        // The lifecycle state of the system event.
         @NameInMap("EventCycleStatus")
         public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeEventCycleStatus eventCycleStatus;
 
+        // The time when the system event ended. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
         @NameInMap("EventFinishTime")
         public String eventFinishTime;
 
+        // The ID of the system event.
         @NameInMap("EventId")
         public String eventId;
 
+        // The time when the system event was published. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
         @NameInMap("EventPublishTime")
         public String eventPublishTime;
 
+        // The type of the system event.
         @NameInMap("EventType")
         public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeEventType eventType;
 
+        // The extended attribute of the system event.
         @NameInMap("ExtendedAttribute")
         public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttribute extendedAttribute;
 
+        // The impact level of the system event.
         @NameInMap("ImpactLevel")
         public String impactLevel;
 
+        // The ID of the instance.
         @NameInMap("InstanceId")
         public String instanceId;
 
+        // The scheduled start time of the system event. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
         @NameInMap("NotBefore")
         public String notBefore;
 
+        // The reason why the system event was scheduled.
         @NameInMap("Reason")
         public String reason;
 
+        // The type of the resource. Valid values:
+        // 
+        // *   instance: ECS instance
+        // *   ddh: dedicated host
+        // *   managehost: physical machine in a smart hosting pool
         @NameInMap("ResourceType")
         public String resourceType;
 

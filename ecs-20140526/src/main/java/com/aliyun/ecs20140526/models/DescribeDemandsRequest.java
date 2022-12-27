@@ -4,24 +4,47 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeDemandsRequest extends TeaModel {
+    // The ID of the filing ticket. If this parameter is specified, other optional request parameters are ignored.
     @NameInMap("DemandId")
     public String demandId;
 
+    // The status of the filing ticket or resource usage. Valid values:
+    // 
+    // *   Creating: The filing ticket is being created.
+    // *   Active: The filed resources are being supplied.
+    // *   Expired: The filing ticket expires.
+    // *   Finished: The filed resources are consumed.
+    // *   Refused: The filing request is denied. For reasons why the request is denied, see the `Comment` response parameter.
+    // *   Cancelled: The filing request is canceled.
     @NameInMap("DemandStatus")
     public java.util.List<String> demandStatus;
 
+    // The source of the filed instance. Default value: System. Valid values:
+    // 
+    // *   Custom: filed on your own.
+    // *   System: filed by Alibaba Cloud.
     @NameInMap("DemandType")
     public String demandType;
 
+    // Specifies whether to check the validity of the request without actually making the request. Default value: false. Valid values:
+    // 
+    // *   true: sends a check request, without querying the status of the filing ticket. The system checks whether your AccessKey pair is valid, whether RAM users are authorized, and whether the required parameters are set. If the check fails, the corresponding error is returned. If the check succeeds, the DryRunOperation error code is returned.
+    // *   false: sends an API request. If the request succeeds, a 2XX HTTP status code is returned and the status of the filing ticket is queried.
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    // The billing method of the instance. Valid values:
+    // 
+    // *   PostPaid: pay-as-you-go
+    // *   PrePaid: subscription
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
 
+    // The instance type of the filed instance.
     @NameInMap("InstanceType")
     public String instanceType;
 
+    // The instance family of the filed instance.
     @NameInMap("InstanceTypeFamily")
     public String instanceTypeFamily;
 
@@ -31,12 +54,19 @@ public class DescribeDemandsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The number of the page to return. Pages start from page 1.
+    // 
+    // Default value: 1.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries to return on each page. Valid values: 1 to 100.
+    // 
+    // Default value: 10.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 
@@ -46,9 +76,11 @@ public class DescribeDemandsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    // The tags.
     @NameInMap("Tag")
     public java.util.List<DescribeDemandsRequestTag> tag;
 
+    // The zone ID. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.
     @NameInMap("ZoneId")
     public String zoneId;
 
@@ -186,9 +218,11 @@ public class DescribeDemandsRequest extends TeaModel {
     }
 
     public static class DescribeDemandsRequestTag extends TeaModel {
+        // The key of the tag.
         @NameInMap("Key")
         public String key;
 
+        // The value of the tag.
         @NameInMap("Value")
         public String value;
 

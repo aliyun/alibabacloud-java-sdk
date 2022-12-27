@@ -4,15 +4,19 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageSupportInstanceTypesResponseBody extends TeaModel {
+    // The ID of the image.
     @NameInMap("ImageId")
     public String imageId;
 
+    // Details about the instance types that are supported by the image.
     @NameInMap("InstanceTypes")
     public DescribeImageSupportInstanceTypesResponseBodyInstanceTypes instanceTypes;
 
+    // The region ID of the image.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,15 +58,19 @@ public class DescribeImageSupportInstanceTypesResponseBody extends TeaModel {
     }
 
     public static class DescribeImageSupportInstanceTypesResponseBodyInstanceTypesInstanceType extends TeaModel {
+        // The number of vCPUs of the instance type.
         @NameInMap("CpuCoreCount")
         public Integer cpuCoreCount;
 
+        // The instance family.
         @NameInMap("InstanceTypeFamily")
         public String instanceTypeFamily;
 
+        // The ID of the instance type.
         @NameInMap("InstanceTypeId")
         public String instanceTypeId;
 
+        // The memory size of the instance type. Unit: GiB.
         @NameInMap("MemorySize")
         public Float memorySize;
 

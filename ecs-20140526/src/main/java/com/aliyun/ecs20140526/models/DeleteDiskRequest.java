@@ -4,18 +4,22 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DeleteDiskRequest extends TeaModel {
+    // The ID of the disk to be released.
     @NameInMap("DiskId")
     public String diskId;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
+    // RAM 用户的虚拟账号ID。
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // 资源主账号的账号名称。
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
+    // 资源主账号的ID，亦即UID。
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 

@@ -4,18 +4,28 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageComponentsRequest extends TeaModel {
+    // The IDs of the image components. You can specify up to 20 image components.
     @NameInMap("ImageComponentId")
     public java.util.List<String> imageComponentId;
 
+    // The maximum number of entries to return on each page. Valid values: 1 to 500.
+    // 
+    // Default value: 50.
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    // The name of the image component. You must specify an exact name to search for the image component.
     @NameInMap("Name")
     public String name;
 
+    // The query token. Set the value to the `NextToken` value returned in the last call to the DescribeImageComponents operation. Leave this parameter empty the first time you call this operation.
     @NameInMap("NextToken")
     public String nextToken;
 
+    // The type of the image component. Valid values:
+    // 
+    // *   SELF: the custom component that you created.
+    // *   ALIYUN: the system component provided by Alibaba Cloud.
     @NameInMap("Owner")
     public String owner;
 
@@ -25,9 +35,13 @@ public class DescribeImageComponentsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The region ID of the image component. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The ID of the resource group. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.
+    // 
+    // >  Resources in the default resource group are displayed in the response regardless of how this parameter is set.
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -37,6 +51,7 @@ public class DescribeImageComponentsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    // The tags
     @NameInMap("Tag")
     public java.util.List<DescribeImageComponentsRequestTag> tag;
 
@@ -142,9 +157,11 @@ public class DescribeImageComponentsRequest extends TeaModel {
     }
 
     public static class DescribeImageComponentsRequestTag extends TeaModel {
+        // The key of tag N of the image component. Valid values of N: 1 to 20.
         @NameInMap("Key")
         public String key;
 
+        // The value of tag N of the image component. Valid values of N: 1 to 20.
         @NameInMap("Value")
         public String value;
 

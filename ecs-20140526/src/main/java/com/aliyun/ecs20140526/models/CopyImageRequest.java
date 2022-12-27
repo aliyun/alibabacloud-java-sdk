@@ -4,24 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CopyImageRequest extends TeaModel {
+    // The description of the image copy. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
     @NameInMap("DestinationDescription")
     public String destinationDescription;
 
+    // The name of the image copy. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`. It can contain letters, digits, periods (.), colons (:), underscores (\_), and hyphens (-).
     @NameInMap("DestinationImageName")
     public String destinationImageName;
 
+    // The ID of the destination region to which to copy the source custom image.
     @NameInMap("DestinationRegionId")
     public String destinationRegionId;
 
+    // > This parameter is in invitational preview and is unavailable.
     @NameInMap("EncryptAlgorithm")
     public String encryptAlgorithm;
 
+    // Specifies whether to encrypt the image copy.
+    // 
+    // Default value: false.
     @NameInMap("Encrypted")
     public Boolean encrypted;
 
+    // The ID of the source custom image.
     @NameInMap("ImageId")
     public String imageId;
 
+    // The ID of the key used to encrypt the image copy.
     @NameInMap("KMSKeyId")
     public String KMSKeyId;
 
@@ -31,9 +40,13 @@ public class CopyImageRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The region ID of the source custom image. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The ID of the resource group to which the image copy belongs. If you do not specify this parameter, the image copy belongs to the default resource group.
+    // 
+    // >  If you use a RAM user that is not authorized to manage the default resource group to call the CopyImage operation and do not specify the `ResourceGroupId` parameter, the `Forbbiden: User not authorized to operate on the specified resource` error message is returned. You must specify the ID of a resource group that the RAM user is authorized to manage or authorize the RAM user to manage the default resource group before you call the CopyImage operation again.
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -43,6 +56,7 @@ public class CopyImageRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    // The tags of the image copy. You can specify up to 20 tags.
     @NameInMap("Tag")
     public java.util.List<CopyImageRequestTag> tag;
 
@@ -164,9 +178,15 @@ public class CopyImageRequest extends TeaModel {
     }
 
     public static class CopyImageRequestTag extends TeaModel {
+        // The key of tag of the image copy.
+        // 
+        // The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
         @NameInMap("Key")
         public String key;
 
+        // The value of tag of the image copy.
+        // 
+        // The tag value can be an empty string. It can be up to 128 characters in length and cannot start with `acs:`. It cannot contain `http://` or `https://`.
         @NameInMap("Value")
         public String value;
 

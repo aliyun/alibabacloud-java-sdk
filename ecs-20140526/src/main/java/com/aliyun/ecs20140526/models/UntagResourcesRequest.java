@@ -4,6 +4,12 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
+    // Specifies whether to remove all tags from the resource. This parameter is valid only when the TagKey.N parameter is not specified. Valid values:
+    // 
+    // *   true
+    // *   false
+    // 
+    // Default value: false.
     @NameInMap("All")
     public Boolean all;
 
@@ -13,9 +19,11 @@ public class UntagResourcesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The region ID of the resource. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The resource IDs.
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
@@ -25,9 +33,27 @@ public class UntagResourcesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    // The type of the resource. Valid values:
+    // 
+    // *   instance: ECS instance
+    // *   disk: disk
+    // *   snapshot: snapshot
+    // *   image: image
+    // *   securitygroup: security group
+    // *   volume: storage volume
+    // *   eni: elastic network interface (ENI)
+    // *   ddh: dedicated host
+    // *   ddhcluster: dedicated host cluster
+    // *   keypair: SSH key pair
+    // *   launchtemplate: launch template
+    // *   reservedinstance: reserved instance
+    // *   snapshotpolicy: automatic snapshot policy
+    // *   elasticityassurance: elasticity assurance
+    // *   capacityreservation: capacity reservation
     @NameInMap("ResourceType")
     public String resourceType;
 
+    // The tag keys of the resource.
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;
 

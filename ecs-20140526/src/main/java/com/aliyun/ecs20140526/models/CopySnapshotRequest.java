@@ -4,30 +4,47 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CopySnapshotRequest extends TeaModel {
+    // > This parameter is in invitational preview and is unavailable.
     @NameInMap("Arn")
     public java.util.List<CopySnapshotRequestArn> arn;
 
+    // The region ID of the new snapshot.
     @NameInMap("DestinationRegionId")
     public String destinationRegionId;
 
+    // The description of the new snapshot. The description must be 2 to 256 characters in length and cannot start with http:// or https://.
+    // 
+    // This parameter is empty by default.
     @NameInMap("DestinationSnapshotDescription")
     public String destinationSnapshotDescription;
 
+    // The name of the new snapshot. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-). It must start with a letter and cannot start with http:// or https://.
+    // 
+    // This parameter is empty by default.
     @NameInMap("DestinationSnapshotName")
     public String destinationSnapshotName;
 
+    // Specifies whether to query only encrypted cloud disks.
+    // 
+    // *   true: queries only encrypted cloud disks.
+    // *   false: does not query encrypted cloud disks.
+    // 
+    // Default value: false.
     @NameInMap("Encrypted")
     public Boolean encrypted;
 
+    // The ID of the Key Management Service (KMS) key used for the data disk.
     @NameInMap("KMSKeyId")
     public String KMSKeyId;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The region ID of the source snapshot. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The ID of the resource group.
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -37,12 +54,17 @@ public class CopySnapshotRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    // The retention period of the new snapshot. Unit: days. The new snapshot will be automatically released when it expires. Valid values: 1 to 65536.
+    // 
+    // This parameter is empty by default, which indicates that the snapshot will not be automatically released.
     @NameInMap("RetentionDays")
     public Integer retentionDays;
 
+    // The ID of the source snapshot.
     @NameInMap("SnapshotId")
     public String snapshotId;
 
+    // The tags of the new snapshot.
     @NameInMap("Tag")
     public java.util.List<CopySnapshotRequestTag> tag;
 
@@ -164,12 +186,15 @@ public class CopySnapshotRequest extends TeaModel {
     }
 
     public static class CopySnapshotRequestArn extends TeaModel {
+        // > This parameter is in invitational preview and is unavailable.
         @NameInMap("AssumeRoleFor")
         public Long assumeRoleFor;
 
+        // > This parameter is in invitational preview and is unavailable.
         @NameInMap("RoleType")
         public String roleType;
 
+        // > This parameter is in invitational preview and is unavailable.
         @NameInMap("Rolearn")
         public String rolearn;
 
@@ -205,9 +230,11 @@ public class CopySnapshotRequest extends TeaModel {
     }
 
     public static class CopySnapshotRequestTag extends TeaModel {
+        // The key of tag N to be bound to the new snapshot. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot contain http:// or https://. It cannot start with acs: or aliyun.
         @NameInMap("Key")
         public String key;
 
+        // The value of tag N to be bound to the new snapshot. The tag value can be an empty string. It can be up to 128 characters in length and cannot contain http:// or https://. It cannot start with acs: or aliyun.
         @NameInMap("Value")
         public String value;
 

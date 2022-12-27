@@ -4,12 +4,14 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ConvertNatPublicIpToEipRequest extends TeaModel {
+    // The ID of the instance for which you want to convert its public IP address to an EIP.
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 

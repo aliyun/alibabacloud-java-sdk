@@ -4,15 +4,21 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeImagePipelineExecutionsRequest extends TeaModel {
+    // The ID of the image build task.
     @NameInMap("ExecutionId")
     public String executionId;
 
+    // The ID of the image template.
     @NameInMap("ImagePipelineId")
     public String imagePipelineId;
 
+    // The maximum number of entries to return on each page. Valid values: 1 to 500.
+    // 
+    // Default value: 50.
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    // The query token. Set the value to the `NextToken` value that was returned when you last called the DescribeImagePipelineExecutions operation. Leave this parameter empty when you call this operation for the first time.
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -22,6 +28,7 @@ public class DescribeImagePipelineExecutionsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The region ID of the image build task. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 
@@ -31,9 +38,21 @@ public class DescribeImagePipelineExecutionsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    // The status of the image build task. You can specify multiple values at the same time. Separate the values with commas (,). Example format: `BUILDING,DISTRIBUTING`. Valid values: 
+    // 
+    // - BUILDING: The image is being built.
+    // - DISTRIBUTING: The image is being distributed.
+    // - RELEASING: The image is being recycled.
+    // - SUCCESS: The image is built.
+    // - FAILED: The image fails to be built.
+    // - CANCELLING: The image build task is being canceled.
+    // - CANCELLED: The image build task is canceled.
+    // 
+    // >  You cannot query the image build tasks in all status by leaving this parameter empty.
     @NameInMap("Status")
     public String status;
 
+    // > This parameter is deprecated.
     @NameInMap("Tag")
     public java.util.List<DescribeImagePipelineExecutionsRequestTag> tag;
 
@@ -131,9 +150,11 @@ public class DescribeImagePipelineExecutionsRequest extends TeaModel {
     }
 
     public static class DescribeImagePipelineExecutionsRequestTag extends TeaModel {
+        // > This parameter is deprecated.
         @NameInMap("Key")
         public String key;
 
+        // > This parameter is deprecated.
         @NameInMap("Value")
         public String value;
 

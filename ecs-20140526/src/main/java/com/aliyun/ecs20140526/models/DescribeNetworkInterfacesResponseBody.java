@@ -4,21 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeNetworkInterfacesResponseBody extends TeaModel {
+    // Details about the ENIs.
     @NameInMap("NetworkInterfaceSets")
     public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSets networkInterfaceSets;
 
+    // The query token returned in this call.
     @NameInMap("NextToken")
     public String nextToken;
 
+    // The page number of the returned page.
+    // 
+    // >  This parameter will be removed in the future. We recommend that you use the NextToken and MaxResults parameters for a paged query.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries returned per page.
+    // 
+    // >  This parameter will be removed in the future. We recommend that you use the NextToken and MaxResults parameters for a paged query.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The total number of ENIs.
+    // 
+    // >  If you specify the `MaxResults` and `NextToken` parameters to perform a paged query, the value of the `TotalCount` response parameter is invalid.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -76,9 +88,11 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetAssociatedPublicIp extends TeaModel {
+        // > This parameter is in invitational preview and is unavailable.
         @NameInMap("AllocationId")
         public String allocationId;
 
+        // The public IP address of the instance.
         @NameInMap("PublicIpAddress")
         public String publicIpAddress;
 
@@ -106,12 +120,15 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetAttachment extends TeaModel {
+        // > This parameter is in invitational preview and is unavailable.
         @NameInMap("DeviceIndex")
         public Integer deviceIndex;
 
+        // > This parameter is in invitational preview and is unavailable.
         @NameInMap("InstanceId")
         public String instanceId;
 
+        // > This parameter is in invitational preview and is unavailable.
         @NameInMap("TrunkNetworkInterfaceId")
         public String trunkNetworkInterfaceId;
 
@@ -147,6 +164,7 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetIpv4PrefixSetsIpv4PrefixSet extends TeaModel {
+        // The IPv4 prefix.
         @NameInMap("Ipv4Prefix")
         public String ipv4Prefix;
 
@@ -223,6 +241,7 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetIpv6SetsIpv6Set extends TeaModel {
+        // The IPv6 address.
         @NameInMap("Ipv6Address")
         public String ipv6Address;
 
@@ -261,9 +280,11 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSetsPrivateIpSetAssociatedPublicIp extends TeaModel {
+        // >  This parameter is in invitational preview and is unavailable for general users.
         @NameInMap("AllocationId")
         public String allocationId;
 
+        // The EIP of the ENI.
         @NameInMap("PublicIpAddress")
         public String publicIpAddress;
 
@@ -291,12 +312,18 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSetsPrivateIpSet extends TeaModel {
+        // The elastic IP address (EIP) associated with the ENI.
         @NameInMap("AssociatedPublicIp")
         public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSetsPrivateIpSetAssociatedPublicIp associatedPublicIp;
 
+        // Indicates whether the IP address is the primary private IP address. Valid values:
+        // 
+        // *   true: The IP address is the primary private IP address.
+        // *   false: The IP address is the secondary private IP address.
         @NameInMap("Primary")
         public Boolean primary;
 
+        // The private IP address of the instance to which the ENI is bound.
         @NameInMap("PrivateIpAddress")
         public String privateIpAddress;
 
@@ -422,15 +449,21 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         @NameInMap("AssociatedPublicIp")
         public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetAssociatedPublicIp associatedPublicIp;
 
+        // > This parameter is in invitational preview and is unavailable.
         @NameInMap("Attachment")
         public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetAttachment attachment;
 
+        // The time when the ENI was created.
         @NameInMap("CreationTime")
         public String creationTime;
 
+        // The description of the ENI.
         @NameInMap("Description")
         public String description;
 
+        // The ID of the instance to which the ENI is bound.
+        // 
+        // >  If the ENI is managed and controlled by other Alibaba Cloud services, no instance ID is returned.
         @NameInMap("InstanceId")
         public String instanceId;
 
@@ -440,63 +473,93 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         @NameInMap("Ipv6PrefixSets")
         public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetIpv6PrefixSets ipv6PrefixSets;
 
+        // The IPv6 addresses of the ENI.
         @NameInMap("Ipv6Sets")
         public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetIpv6Sets ipv6Sets;
 
+        // The media access control (MAC) address of the ENI.
         @NameInMap("MacAddress")
         public String macAddress;
 
+        // The ID of the ENI.
         @NameInMap("NetworkInterfaceId")
         public String networkInterfaceId;
 
+        // The name of the ENI.
         @NameInMap("NetworkInterfaceName")
         public String networkInterfaceName;
 
+        // The communication mode of the ENI. Valid values:
+        // 
+        // *   Standard: The TCP communication mode is used.
+        // 
+        // *   HighPerformance: The Elastic RDMA Interface (ERI) is enabled and the remote direct memory access (RDMA) communication mode is used.
+        // 
+        //     > The NetworkInterfaceTrafficMode parameter can be set to HighPerformance only when the instance to which the ENI is bound belongs to the c7re RDMA-enhanced instance family and is located within Beijing Zone K.
         @NameInMap("NetworkInterfaceTrafficMode")
         public String networkInterfaceTrafficMode;
 
+        // The ID of the account to which the ENI belongs.
         @NameInMap("OwnerId")
         public String ownerId;
 
+        // The private IP address of the ENI.
         @NameInMap("PrivateIpAddress")
         public String privateIpAddress;
 
+        // The private IP addresses of the ENI.
         @NameInMap("PrivateIpSets")
         public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSets privateIpSets;
 
+        // The number of queues supported by the ENI.
+        // 
+        // *   If the ENI is a secondary ENI in the InUse (InUse) state and the number of queues supported by this ENI has never been modified, the default number of queues per secondary ENI that the instance type supports is returned.
+        // *   If the number of queues supported by the secondary ENI has been modified, the new number of queues is returned.
+        // *   If the ENI is a secondary ENI in the Available (Available) state and the number of queues supported by this ENI has never been modified, an empty value is returned.
+        // *   If the ENI is a primary ENI, the default number of queues per primary ENI that the instance type supports is returned.
         @NameInMap("QueueNumber")
         public Integer queueNumber;
 
+        // >  This parameter is in invitational preview and unavailable for general users.
         @NameInMap("QueuePairNumber")
         public Integer queuePairNumber;
 
+        // The ID of the resource group to which the ENI belongs.
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        // The IDs of the security groups to which the ENI belongs.
         @NameInMap("SecurityGroupIds")
         public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetSecurityGroupIds securityGroupIds;
 
+        // The ID of the distributor to which the ENI belongs.
         @NameInMap("ServiceID")
         public Long serviceID;
 
+        // Indicates whether the user is an Alibaba Cloud service or a distributor.
         @NameInMap("ServiceManaged")
         public Boolean serviceManaged;
 
+        // The state of the ENI.
         @NameInMap("Status")
         public String status;
 
         @NameInMap("Tags")
         public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetTags tags;
 
+        // The type of the ENI.
         @NameInMap("Type")
         public String type;
 
+        // The ID of the vSwitch to which the ENI is connected.
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        // The ID of the VPC to which the ENI belongs.
         @NameInMap("VpcId")
         public String vpcId;
 
+        // The zone ID of the ENI.
         @NameInMap("ZoneId")
         public String zoneId;
 

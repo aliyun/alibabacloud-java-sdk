@@ -4,6 +4,7 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class StartTerminalSessionRequest extends TeaModel {
+    // The list of the instance ID.
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
 
@@ -13,9 +14,13 @@ public class StartTerminalSessionRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The port number of the ECS instance, which is used to forward data. After this parameter is specified, the Cloud Assistant client forwards data to the specified port for port forwarding. Example: 22.  
+    // 
+    // This parameter is empty by default, which indicates that no port number is configured to forward data.
     @NameInMap("PortNumber")
     public Integer portNumber;
 
+    // The region ID of the ECS instance. You can call the [DescribeRegions](~~DescribeRegions~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 

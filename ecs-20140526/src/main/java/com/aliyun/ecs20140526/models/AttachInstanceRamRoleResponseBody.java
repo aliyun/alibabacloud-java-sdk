@@ -4,18 +4,23 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class AttachInstanceRamRoleResponseBody extends TeaModel {
+    // Details about the results of binding the instance RAM role.
     @NameInMap("AttachInstanceRamRoleResults")
     public AttachInstanceRamRoleResponseBodyAttachInstanceRamRoleResults attachInstanceRamRoleResults;
 
+    // The number of RAM roles that fail to be bound.
     @NameInMap("FailCount")
     public Integer failCount;
 
+    // The name of the instance RAM role.
     @NameInMap("RamRoleName")
     public String ramRoleName;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The total number of instances to which you attempted to attach the instance RAM role.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,15 +70,19 @@ public class AttachInstanceRamRoleResponseBody extends TeaModel {
     }
 
     public static class AttachInstanceRamRoleResponseBodyAttachInstanceRamRoleResultsAttachInstanceRamRoleResult extends TeaModel {
+        // Indicates whether the instance RAM role was bound. If 200 is returned, the RAM role was bound. If any other value is returned, the RAM role failed to be bound. For more information, see the "Error codes" section of this topic.
         @NameInMap("Code")
         public String code;
 
+        // The ID of the instance.
         @NameInMap("InstanceId")
         public String instanceId;
 
+        // Indicates whether the instance RAM role was bound. If success is returned, the RAM role was bound. If any other value is returned, the RAM role failed to be bound. For more information, see the "Error codes" section of this topic.
         @NameInMap("Message")
         public String message;
 
+        // Indicates whether the RAM role was bound.
         @NameInMap("Success")
         public Boolean success;
 

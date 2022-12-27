@@ -4,21 +4,44 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeSpotPriceHistoryRequest extends TeaModel {
+    // The end of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC`.
+    // 
+    // This parameter is empty by default. If this parameter is empty, the current time is used.
     @NameInMap("EndTime")
     public String endTime;
 
+    // The instance type of the instance.
     @NameInMap("InstanceType")
     public String instanceType;
 
+    // Specifies whether the instance is I/O optimized. Valid values:
+    // 
+    // *   optimized: The instance is I/O optimized.
+    // *   none: The instance is not I/O optimized.
+    // 
+    // For generation I instance families, the default value is none.
+    // 
+    // For other instance families, the default value is optimized.
     @NameInMap("IoOptimized")
     public String ioOptimized;
 
+    // The network type of the preemptible instance. Valid values:
+    // 
+    // *   classic
+    // *   vpc
     @NameInMap("NetworkType")
     public String networkType;
 
+    // The type of the operating system platform. Valid values:
+    // 
+    // *   linux
+    // *   windows
     @NameInMap("OSType")
     public String OSType;
 
+    // The line from which the next query starts.
+    // 
+    // Default value: 0.
     @NameInMap("Offset")
     public Integer offset;
 
@@ -28,6 +51,7 @@ public class DescribeSpotPriceHistoryRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 
@@ -37,12 +61,22 @@ public class DescribeSpotPriceHistoryRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    // The protection period of the preemptible instance. Unit: hours. Valid values: 0, 1, 2, 3, 4, 5, and 6.
+    // 
+    // *   Protection periods of 2, 3, 4, 5, and 6 hours are in invitational preview. If you want to set this parameter to one of these values, submit a ticket.
+    // *   If this parameter is set to 0, no protection period is configured for the preemptible instance.
+    // 
+    // Default value: 1.
     @NameInMap("SpotDuration")
     public Integer spotDuration;
 
+    // The beginning of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC`.
+    // 
+    // This parameter is empty by default. If this parameter is empty, it indicates 3 hours earlier than the specified EndTime value. You can specify a StartTime value of up to 30 days earlier than the specified EndTime value.
     @NameInMap("StartTime")
     public String startTime;
 
+    // The zone ID of the instance.
     @NameInMap("ZoneId")
     public String zoneId;
 

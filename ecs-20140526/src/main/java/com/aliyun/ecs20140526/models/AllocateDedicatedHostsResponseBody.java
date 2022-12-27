@@ -4,9 +4,11 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class AllocateDedicatedHostsResponseBody extends TeaModel {
+    // The IDs of the dedicated hosts.
     @NameInMap("DedicatedHostIdSets")
     public AllocateDedicatedHostsResponseBodyDedicatedHostIdSets dedicatedHostIdSets;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

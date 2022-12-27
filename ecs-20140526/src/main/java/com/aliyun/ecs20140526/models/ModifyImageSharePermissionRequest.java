@@ -7,9 +7,16 @@ public class ModifyImageSharePermissionRequest extends TeaModel {
     @NameInMap("AddAccount")
     public java.util.List<String> addAccount;
 
+    // The ID of the custom image.
     @NameInMap("ImageId")
     public String imageId;
 
+    // Specifies whether to publish the specified custom image as a community image. Valid values:
+    // 
+    // *   true: publishes the image as a community image. When the image is published, it enters the public state
+    // *   false: unpublishes the community image. When the image is unpublished, it enters the private state.
+    // 
+    // >  If the parameter value is set to `true`, other optional parameters are not allowed to be specified.
     @NameInMap("IsPublic")
     public Boolean isPublic;
 
@@ -22,6 +29,7 @@ public class ModifyImageSharePermissionRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The region ID of the custom image. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 

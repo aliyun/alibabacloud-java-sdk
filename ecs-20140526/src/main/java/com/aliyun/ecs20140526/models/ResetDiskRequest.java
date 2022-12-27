@@ -4,9 +4,16 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ResetDiskRequest extends TeaModel {
+    // The ID of the disk that you want to restore.
     @NameInMap("DiskId")
     public String diskId;
 
+    // Specifies whether to check the validity of the request without actually making the request. Valid values:
+    // 
+    // *   true: The validity of the request is checked but the request is not made. Check items include the required parameters, request format, and resource state limits. If the check fails, the corresponding error message is returned. If the check succeeds, the `DryRunOperation` error code is returned.
+    // *   false: The validity of the request is checked. If the check succeeds, the request is made.
+    // 
+    // Default value: false.
     @NameInMap("DryRun")
     public Boolean dryRun;
 
@@ -22,6 +29,7 @@ public class ResetDiskRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    // The ID of the snapshot that you want to use to restore the disk.
     @NameInMap("SnapshotId")
     public String snapshotId;
 

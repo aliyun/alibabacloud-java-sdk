@@ -4,9 +4,11 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageFromFamilyResponseBody extends TeaModel {
+    // The image information.
     @NameInMap("Image")
     public DescribeImageFromFamilyResponseBodyImage image;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,24 +34,33 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
     }
 
     public static class DescribeImageFromFamilyResponseBodyImageDiskDeviceMappingsDiskDeviceMapping extends TeaModel {
+        // The device name of the disk. Example: /dev/xvdb.
+        // 
+        // >  This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.
         @NameInMap("Device")
         public String device;
 
+        // The format of the image.
         @NameInMap("Format")
         public String format;
 
+        // The OSS bucket that contains the imported image file.
         @NameInMap("ImportOSSBucket")
         public String importOSSBucket;
 
+        // The OSS object corresponding to the imported image file.
         @NameInMap("ImportOSSObject")
         public String importOSSObject;
 
+        // The size of the disk. Unit: GiB.
         @NameInMap("Size")
         public String size;
 
+        // The ID of the snapshot.
         @NameInMap("SnapshotId")
         public String snapshotId;
 
+        // The type of the image.
         @NameInMap("Type")
         public String type;
 
@@ -136,9 +147,11 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
     }
 
     public static class DescribeImageFromFamilyResponseBodyImageTagsTag extends TeaModel {
+        // The tag key of the image.
         @NameInMap("TagKey")
         public String tagKey;
 
+        // The tag value of the image.
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -185,72 +198,114 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
     }
 
     public static class DescribeImageFromFamilyResponseBodyImage extends TeaModel {
+        // The image architecture. Valid values:
+        // 
+        // *   i386
+        // *   x86\_64
         @NameInMap("Architecture")
         public String architecture;
 
+        // The time when the image was created.
         @NameInMap("CreationTime")
         public String creationTime;
 
+        // The description of the image.
         @NameInMap("Description")
         public String description;
 
+        // The mappings between the disks and snapshots under the image.
         @NameInMap("DiskDeviceMappings")
         public DescribeImageFromFamilyResponseBodyImageDiskDeviceMappings diskDeviceMappings;
 
+        // The name of the image family.
         @NameInMap("ImageFamily")
         public String imageFamily;
 
+        // The ID of the image.
         @NameInMap("ImageId")
         public String imageId;
 
+        // The name of the image.
         @NameInMap("ImageName")
         public String imageName;
 
+        // The alias of the image owner. Valid values:
+        // 
+        // - system: public images provided by Alibaba Cloud
+        // - self: your custom images
+        // - others: shared images from other Alibaba Cloud accounts
+        // - marketplace: Alibaba Cloud Marketplace images
         @NameInMap("ImageOwnerAlias")
         public String imageOwnerAlias;
 
+        // The version of the image.
         @NameInMap("ImageVersion")
         public String imageVersion;
 
+        // Indicates whether the image is a copy of another image.
         @NameInMap("IsCopied")
         public Boolean isCopied;
 
+        // Indicates whether the image has been shared to other Alibaba Cloud accounts.
         @NameInMap("IsSelfShared")
         public String isSelfShared;
 
+        // Indicates whether you have subscribed to the image corresponding to the specified product code.
         @NameInMap("IsSubscribed")
         public Boolean isSubscribed;
 
+        // Indicates whether the image supports cloud-init.
         @NameInMap("IsSupportCloudinit")
         public Boolean isSupportCloudinit;
 
+        // Indicates whether the image can be used on I/O optimized instances.
         @NameInMap("IsSupportIoOptimized")
         public Boolean isSupportIoOptimized;
 
+        // The name of the operating system.
         @NameInMap("OSName")
         public String OSName;
 
+        // The type of the operating system. Valid values:
+        // 
+        // - windows
+        // - linux
         @NameInMap("OSType")
         public String OSType;
 
+        // The platform of the operating system.
         @NameInMap("Platform")
         public String platform;
 
+        // The product code of the Alibaba Cloud Marketplace image.
         @NameInMap("ProductCode")
         public String productCode;
 
+        // The image creation progress. Unit: percent (%).
         @NameInMap("Progress")
         public String progress;
 
+        // The size of the image. Unit: GiB.
         @NameInMap("Size")
         public Integer size;
 
+        // The status of the image. Valid values:
+        // 
+        // - UnAvailable: The image is unavailable.
+        // - Available: The image is available.
+        // - Creating: The image is being created.
+        // - CreateFailed: The image failed to be created.
         @NameInMap("Status")
         public String status;
 
+        // An array that consists of Tag data.
         @NameInMap("Tags")
         public DescribeImageFromFamilyResponseBodyImageTags tags;
 
+        // Indicates whether the image has been used to create ECS instances. Valid values:
+        // 
+        // - instance: The image has been used to create one or more ECS instances.
+        // - none: The image has not been used to create ECS instances.
         @NameInMap("Usage")
         public String usage;
 

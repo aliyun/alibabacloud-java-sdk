@@ -4,18 +4,26 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeManagedInstancesRequest extends TeaModel {
+    // The ID of the activation code.
     @NameInMap("ActivationId")
     public String activationId;
 
+    // The IDs of managed instances. You can specify at most 50 managed instances.
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
 
+    // The internal or public IP address of the managed instance.
     @NameInMap("InstanceIp")
     public String instanceIp;
 
+    // The name of the managed instance.
     @NameInMap("InstanceName")
     public String instanceName;
 
+    // The operating system type of the managed instance. Valid values:
+    // 
+    // *   windows
+    // *   linux
     @NameInMap("OsType")
     public String osType;
 
@@ -25,12 +33,25 @@ public class DescribeManagedInstancesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The number of the page to return.
+    // 
+    // Pages start from page 1.
+    // 
+    // Default value: 1.
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    // The number of entries to return on each page.
+    // 
+    // Maximum value: 50.
+    // 
+    // Default value: 10.
     @NameInMap("PageSize")
     public Long pageSize;
 
+    // The region ID of the managed instance. The following regions are supported: China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Hangzhou), China (Shanghai), China (Shenzhen), China (Heyuan), and China (Hong Kong).
+    // 
+    // You can all the [DescribeRegions](~~25609~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 

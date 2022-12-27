@@ -4,6 +4,7 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ReActivateInstancesRequest extends TeaModel {
+    // The ID of the instance that you want to reactivate.
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -13,6 +14,7 @@ public class ReActivateInstancesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 

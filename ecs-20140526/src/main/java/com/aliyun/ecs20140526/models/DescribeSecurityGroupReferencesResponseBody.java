@@ -4,9 +4,11 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeSecurityGroupReferencesResponseBody extends TeaModel {
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Details about the security groups that reference the specified security group.
     @NameInMap("SecurityGroupReferences")
     public DescribeSecurityGroupReferencesResponseBodySecurityGroupReferences securityGroupReferences;
 
@@ -32,9 +34,11 @@ public class DescribeSecurityGroupReferencesResponseBody extends TeaModel {
     }
 
     public static class DescribeSecurityGroupReferencesResponseBodySecurityGroupReferencesSecurityGroupReferenceReferencingSecurityGroupsReferencingSecurityGroup extends TeaModel {
+        // The ID of the Alibaba Cloud account to which the security group belongs.
         @NameInMap("AliUid")
         public String aliUid;
 
+        // The ID of the security group.
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
@@ -81,9 +85,11 @@ public class DescribeSecurityGroupReferencesResponseBody extends TeaModel {
     }
 
     public static class DescribeSecurityGroupReferencesResponseBodySecurityGroupReferencesSecurityGroupReference extends TeaModel {
+        // Details about the security groups that referenced by the specified security group.
         @NameInMap("ReferencingSecurityGroups")
         public DescribeSecurityGroupReferencesResponseBodySecurityGroupReferencesSecurityGroupReferenceReferencingSecurityGroups referencingSecurityGroups;
 
+        // The ID of the queried security group.
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 

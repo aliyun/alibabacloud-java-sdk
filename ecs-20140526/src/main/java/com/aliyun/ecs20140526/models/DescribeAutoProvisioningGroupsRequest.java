@@ -4,12 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeAutoProvisioningGroupsRequest extends TeaModel {
+    // The IDs of auto provisioning groups. You can specify up to 20 auto provisioning group IDs.
     @NameInMap("AutoProvisioningGroupId")
     public java.util.List<String> autoProvisioningGroupId;
 
+    // The name of the auto provisioning group.
     @NameInMap("AutoProvisioningGroupName")
     public String autoProvisioningGroupName;
 
+    // The statuses of auto provisioning groups.
     @NameInMap("AutoProvisioningGroupStatus")
     public java.util.List<String> autoProvisioningGroupStatus;
 
@@ -19,12 +22,23 @@ public class DescribeAutoProvisioningGroupsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The number of the page to return.
+    // 
+    // Pages start from page 1.
+    // 
+    // Default value: 1.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries to return on each page.
+    // 
+    // Maximum value: 100.
+    // 
+    // Default value: 10.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The region ID of the auto provisioning group.
     @NameInMap("RegionId")
     public String regionId;
 

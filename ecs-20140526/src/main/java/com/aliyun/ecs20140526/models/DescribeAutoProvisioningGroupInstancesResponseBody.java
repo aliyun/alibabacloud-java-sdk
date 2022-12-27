@@ -4,18 +4,23 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel {
+    // An array consisting of Instance data.
     @NameInMap("Instances")
     public DescribeAutoProvisioningGroupInstancesResponseBodyInstances instances;
 
+    // The page number of the returned page.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries returned per page.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The number of queried instances in the auto provisioning group.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,39 +70,57 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
     }
 
     public static class DescribeAutoProvisioningGroupInstancesResponseBodyInstancesInstance extends TeaModel {
+        // The number of vCPUs.
         @NameInMap("CPU")
         public Integer CPU;
 
+        // The time when the instance was created.
         @NameInMap("CreationTime")
         public String creationTime;
 
+        // The ID of the instance.
         @NameInMap("InstanceId")
         public String instanceId;
 
+        // The instance type of the ECS instance.
         @NameInMap("InstanceType")
         public String instanceType;
 
+        // Indicates whether the instance is I/O optimized.
         @NameInMap("IoOptimized")
         public Boolean ioOptimized;
 
+        // Indicates whether the instance is a preemptible instance.
         @NameInMap("IsSpot")
         public Boolean isSpot;
 
+        // The memory size of the instance. Unit: MiB.
         @NameInMap("Memory")
         public Integer memory;
 
+        // The network type of the instance. Valid values:
+        // 
+        // *   vpc
+        // *   classic
         @NameInMap("NetworkType")
         public String networkType;
 
+        // The operating system type of the instance. Valid values:
+        // 
+        // *   windows
+        // *   linux
         @NameInMap("OsType")
         public String osType;
 
+        // The region ID of the instance.
         @NameInMap("RegionId")
         public String regionId;
 
+        // The status of the instance.
         @NameInMap("Status")
         public String status;
 
+        // The zone ID of the instance.
         @NameInMap("ZoneId")
         public String zoneId;
 

@@ -4,12 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class RenewReservedInstancesResponseBody extends TeaModel {
+    // The ID of the order.
     @NameInMap("OrderId")
     public String orderId;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The IDs of the reserved instances.
     @NameInMap("ReservedInstanceIdSets")
     public RenewReservedInstancesResponseBodyReservedInstanceIdSets reservedInstanceIdSets;
 

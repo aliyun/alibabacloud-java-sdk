@@ -4,39 +4,79 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateDiskRequest extends TeaModel {
+    // This parameter is unavailable.
     @NameInMap("AdvancedFeatures")
     public String advancedFeatures;
 
+    // 该参数暂未开放使用。
     @NameInMap("Arn")
     public java.util.List<CreateDiskRequestArn> arn;
 
+    // This parameter is unavailable.
     @NameInMap("BurstingEnabled")
     public Boolean burstingEnabled;
 
+    // The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
     @NameInMap("ClientToken")
     public String clientToken;
 
+    // The description of the disk. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
+    // 
+    // This parameter is empty by default.
     @NameInMap("Description")
     public String description;
 
+    // The category of the data disk. Valid values:
+    // 
+    // *   cloud: basic disk
+    // *   cloud_efficiency: ultra disk
+    // *   cloud_ssd: standard SSD
+    // *   cloud_essd: ESSD
+    // 
+    // Default value: cloud.
     @NameInMap("DiskCategory")
     public String diskCategory;
 
+    // The name of the disk. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+    // 
+    // This parameter is empty by default.
     @NameInMap("DiskName")
     public String diskName;
 
+    // This parameter is unavailable.
     @NameInMap("EncryptAlgorithm")
     public String encryptAlgorithm;
 
+    // Specifies whether to encrypt the disk. Valid values:
+    // 
+    // *   true: encrypts the disk.
+    // *   false: does not encrypt the disk.
+    // 
+    // Default value: false.
     @NameInMap("Encrypted")
     public Boolean encrypted;
 
+    // The ID of the instance to which the created subscription disk is automatically attached.
+    // 
+    // *   After you specify the instance ID, the specified ResourceGroupId, Tag.N.Key, Tag.N.Value, ClientToken, and KMSKeyId parameters are ignored.
+    // *   You cannot specify ZoneId and InstanceId at the same time.
+    // 
+    // This parameter is empty by default. This indicates that a pay-as-you-go disk is created. The RegionId and ZoneId parameters specify where the disk resides.
     @NameInMap("InstanceId")
     public String instanceId;
 
+    // The ID of the Key Management Service (KMS) key used by the disk.
     @NameInMap("KMSKeyId")
     public String KMSKeyId;
 
+    // Specifies whether to enable the multi-attach feature for the disk. Valid values:
+    // 
+    // *   Disabled: disables the multi-attach feature.
+    // *   Enabled: enables the multi-attach feature. Set the value to `Enabled` only for ESSDs.
+    // 
+    // Default value: Disabled.
+    // 
+    // >  Disks for which the multi-attach feature is enabled support only the pay-as-you-go billing method. When the `MultiAttach` parameter is set to Enabled, you cannot specify the `InstanceId` parameter. You can call the [AttachDisk](~~25515~~) operation to attach disks to instances after the disks are created. Disks for which the multi-attach feature is enabled can be attached only as data disks.
     @NameInMap("MultiAttach")
     public String multiAttach;
 
@@ -46,15 +86,28 @@ public class CreateDiskRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The performance level of the ESSD. Valid values:
+    // 
+    // *   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.
+    // *   PL1: An ESSD can deliver up to 50,000 random read/write IOPS.
+    // *   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.
+    // *   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.
+    // 
+    // Default value: PL1.
+    // 
+    // For more information about ESSD performance levels, see [ESSDs](~~122389~~).
     @NameInMap("PerformanceLevel")
     public String performanceLevel;
 
+    // This parameter is unavailable.
     @NameInMap("ProvisionedIops")
     public Long provisionedIops;
 
+    // The ID of the region in which to create the disk. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The ID of the resource group to which to assign the disk.
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -64,24 +117,63 @@ public class CreateDiskRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    // The size of the disk. Unit: GiB. This parameter is required. Valid values:
+    // 
+    // *   Valid values when DiskCategory is set to cloud: 5 to 2,000
+    // 
+    // *   Valid values when DiskCategory is set to cloud_efficiency: 20 to 32,768
+    // 
+    // *   Valid values when DiskCategory is set to cloud_ssd: 20 to 32,768
+    // 
+    // *   Valid values when DiskCategory is set to cloud_essd: depends on the `PerformanceLevel` value.
+    // 
+    //     *   Valid values when PerformanceLevel is set to PL0: 40 to 32,768
+    //     *   Valid values when PerformanceLevel is set to PL1: 20 to 32,768
+    //     *   Valid values when PerformanceLevel is set to PL2: 461 to 32,768
+    //     *   Valid values when PerformanceLevel is set to PL3: 1,261 to 32,768
+    // 
+    // If the `SnapshotId` parameter is specified, the following limits apply to the `SnapshotId` and `Size` parameters:
+    // 
+    // *   If the size of the snapshot specified by the `SnapshotId` parameter is greater than the specified `Size` value, the size of the created disk is equal to the specified snapshot size.
+    // *   If the size of the snapshot specified by the `SnapshotId` parameter is smaller than the specified `Size` value, the size of the created disk is equal to the specified `Size` value.
     @NameInMap("Size")
     public Integer size;
 
+    // The ID of the snapshot used to create the disk. Snapshots that were created on or before July 15, 2013 cannot be used to create disks.
+    // 
+    // The following limits apply to the `SnapshotId` and `Size` parameters:
+    // 
+    // *   If the size of the snapshot specified by the `SnapshotId` parameter is greater than the specified `Size` value, the size of the created disk is equal to the specified snapshot size.
+    // *   If the size of the snapshot specified by the `SnapshotId` parameter is smaller than the specified `Size` value, the size of the created disk is equal to the specified `Size` value.
     @NameInMap("SnapshotId")
     public String snapshotId;
 
+    // The ID of the dedicated block storage cluster. To create a disk in a specific dedicated block storage cluster, specify this parameter. For more information about dedicated block storage clusters, see [What is Dedicated Block Storage Cluster?](~~208883~~)
+    // 
+    // >  You can specify only one of the storage set-related parameters (`StorageSetId` and `StorageSetPartitionNumber`) and dedicated block storage cluster-related parameter (`StorageClusterId`). If you specify more than one of the preceding parameters, the call fails.
     @NameInMap("StorageClusterId")
     public String storageClusterId;
 
+    // The ID of the storage set.
+    // 
+    // >  You can specify only one of the storage set-related parameters (`StorageSetId` and `StorageSetPartitionNumber`) and dedicated block storage cluster-related parameter (`StorageClusterId`). If you specify more than one of the preceding parameters, the call fails.
     @NameInMap("StorageSetId")
     public String storageSetId;
 
+    // The number of partitions in the storage set. The value must be greater than or equal to 2, but cannot exceed the quota obtained by calling the [DescribeAccountAttributes](~~73772~~) operation.
+    // 
+    // Default value: 2.
     @NameInMap("StorageSetPartitionNumber")
     public Integer storageSetPartitionNumber;
 
+    // 云盘的标签信息列表。
     @NameInMap("Tag")
     public java.util.List<CreateDiskRequestTag> tag;
 
+    // The ID of the zone in which to create the pay-as-you-go disk.
+    // 
+    // *   If the InstanceId parameter is not specified, the ZoneId parameter is required.
+    // *   You cannot specify ZoneId and InstanceId at the same time.
     @NameInMap("ZoneId")
     public String zoneId;
 
@@ -307,12 +399,15 @@ public class CreateDiskRequest extends TeaModel {
     }
 
     public static class CreateDiskRequestArn extends TeaModel {
+        // This parameter is unavailable.
         @NameInMap("AssumeRoleFor")
         public Long assumeRoleFor;
 
+        // This parameter is unavailable.
         @NameInMap("RoleType")
         public String roleType;
 
+        // This parameter is unavailable.
         @NameInMap("Rolearn")
         public String rolearn;
 
@@ -348,9 +443,11 @@ public class CreateDiskRequest extends TeaModel {
     }
 
     public static class CreateDiskRequestTag extends TeaModel {
+        // The key of tag N of the disk. Valid values of N: 1 to 20. The key cannot be an empty string. It can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
         @NameInMap("Key")
         public String key;
 
+        // The value of tag N of the disk. Valid values of N: 1 to 20. The value can be an empty string. It can be up to 128 characters in length. It cannot start with `acs:` or contain `http://` or `https://`.
         @NameInMap("Value")
         public String value;
 

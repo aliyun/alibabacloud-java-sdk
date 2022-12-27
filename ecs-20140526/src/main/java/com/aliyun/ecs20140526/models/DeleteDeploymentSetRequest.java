@@ -4,6 +4,7 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DeleteDeploymentSetRequest extends TeaModel {
+    // The ID of the deployment set. You cannot delete a deployment set that contains instances.
     @NameInMap("DeploymentSetId")
     public String deploymentSetId;
 
@@ -13,6 +14,7 @@ public class DeleteDeploymentSetRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The region ID of the deployment set. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 

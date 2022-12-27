@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifySecurityGroupAttributeRequest extends TeaModel {
+    // The new description of the security group. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
+    // 
+    // This parameter is empty by default.
     @NameInMap("Description")
     public String description;
 
@@ -13,6 +16,7 @@ public class ModifySecurityGroupAttributeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The region ID of the security group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 
@@ -22,9 +26,13 @@ public class ModifySecurityGroupAttributeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    // The ID of the security group.
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
+    // The new name of the security group. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+    // 
+    // This parameter is empty by default.
     @NameInMap("SecurityGroupName")
     public String securityGroupName;
 

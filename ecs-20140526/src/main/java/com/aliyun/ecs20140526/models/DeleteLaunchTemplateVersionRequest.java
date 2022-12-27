@@ -4,12 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DeleteLaunchTemplateVersionRequest extends TeaModel {
+    // The version numbers of instance launch templates that to be deleted. You can specify at most 29 version numbers.
     @NameInMap("DeleteVersion")
     public java.util.List<Long> deleteVersion;
 
+    // The ID of the instance launch template. For more information, call the [DescribeLaunchTemplates](~~73759~~) operation.
     @NameInMap("LaunchTemplateId")
     public String launchTemplateId;
 
+    // The name of the instance launch template.
     @NameInMap("LaunchTemplateName")
     public String launchTemplateName;
 
@@ -19,6 +22,7 @@ public class DeleteLaunchTemplateVersionRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The ID of the region to which the instance lauch template belongs. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 

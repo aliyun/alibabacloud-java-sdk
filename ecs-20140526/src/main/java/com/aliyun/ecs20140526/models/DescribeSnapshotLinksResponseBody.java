@@ -4,18 +4,23 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeSnapshotLinksResponseBody extends TeaModel {
+    // The page number of the returned page.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries returned per page.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Details about the snapshot chains.
     @NameInMap("SnapshotLinks")
     public DescribeSnapshotLinksResponseBodySnapshotLinks snapshotLinks;
 
+    // The total number of snapshot chains.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,39 +70,59 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
     }
 
     public static class DescribeSnapshotLinksResponseBodySnapshotLinksSnapshotLink extends TeaModel {
+        // The type of the snapshot.
+        // 
+        // >  This parameter will be removed in the future. We recommend that you use the `InstantAccess` parameter to ensure future compatibility.
         @NameInMap("Category")
         public String category;
 
+        // The ID of the instance.
         @NameInMap("InstanceId")
         public String instanceId;
 
+        // The name of the instance.
         @NameInMap("InstanceName")
         public String instanceName;
 
+        // Indicates whether the instant access feature was enabled. Valid values:
+        // 
+        // *   true: The instant access feature was enabled. This feature can be enabled only for enhanced SSDs (ESSDs).
+        // *   false: The instant access feature was disabled. The snapshot is a normal snapshot for which the instant access feature was disabled.
         @NameInMap("InstantAccess")
         public Boolean instantAccess;
 
+        // The ID of the region where the source disk of the snapshot chain is located.
         @NameInMap("RegionId")
         public String regionId;
 
+        // The ID of the snapshot chain.
         @NameInMap("SnapshotLinkId")
         public String snapshotLinkId;
 
+        // The ID of the source disk. This parameter is retained even if the source disk is deleted.
         @NameInMap("SourceDiskId")
         public String sourceDiskId;
 
+        // The name of the source disk.
         @NameInMap("SourceDiskName")
         public String sourceDiskName;
 
+        // The size of the source disk. Unit: GiB.
         @NameInMap("SourceDiskSize")
         public Integer sourceDiskSize;
 
+        // The type of the source disk. Valid values:
+        // 
+        // *   system: system disk
+        // *   data: data disk
         @NameInMap("SourceDiskType")
         public String sourceDiskType;
 
+        // The total number of snapshots.
         @NameInMap("TotalCount")
         public Integer totalCount;
 
+        // The total size of all snapshots in the snapshot chain. Unit: bytes.
         @NameInMap("TotalSize")
         public Long totalSize;
 

@@ -4,9 +4,11 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class SendFileResponseBody extends TeaModel {
+    // The ID of the execution.
     @NameInMap("InvokeId")
     public String invokeId;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

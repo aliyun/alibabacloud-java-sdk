@@ -4,9 +4,11 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DeleteDemandRequest extends TeaModel {
+    // The client token that is used to ensure the idempotence of the request. You can use the client to generate the value that is unique among different requests. The `ClientToken` value can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
     @NameInMap("ClientToken")
     public String clientToken;
 
+    // The ID of the requirement.
     @NameInMap("DemandId")
     public String demandId;
 
@@ -16,9 +18,11 @@ public class DeleteDemandRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The reason for deleting the filing form. Enter details.
     @NameInMap("Reason")
     public String reason;
 
+    // The region ID of the filed instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 

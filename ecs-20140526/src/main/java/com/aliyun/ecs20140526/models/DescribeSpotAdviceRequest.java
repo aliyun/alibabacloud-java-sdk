@@ -4,30 +4,53 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeSpotAdviceRequest extends TeaModel {
+    // The number of vCPUs of the instance type. For information about the valid values, see [Instance families](~~25378~~).
     @NameInMap("Cores")
     public Integer cores;
 
+    // The number of GPUs per GPU-accelerated instance. For information about the valid values, see [GPU-accelerated compute optimized instance types](~~108496~~).
     @NameInMap("GpuAmount")
     public Integer gpuAmount;
 
+    // The GPU type. Valid values:
+    // 
+    // *   NVIDIA P4
+    // *   NVIDIA T4
+    // *   NVIDIA P100
+    // *   NVIDIA V100
+    // *   NVIDIA A100
+    // 
+    // This parameter is empty by default, which indicates that all GPU types are queried. For more information, see [GPU-accelerated compute optimized instance types](~~108496~~).
     @NameInMap("GpuSpec")
     public String gpuSpec;
 
+    // The level of the instance family. Valid values:
+    // 
+    // *   EntryLevel
+    // *   EnterpriseLevel
+    // *   CreditEntryLevel. For more information, see [Burstable instance overview](~~59977~~).
+    // 
+    // This parameter is empty by default, which indicates that instance families of all levels are queried.
     @NameInMap("InstanceFamilyLevel")
     public String instanceFamilyLevel;
 
+    // The instance family. For information about the valid values, see [Instance families](~~25378~~).
     @NameInMap("InstanceTypeFamily")
     public String instanceTypeFamily;
 
+    // The list of instance types. You can enter up to 10 instance types.
     @NameInMap("InstanceTypes")
     public java.util.List<String> instanceTypes;
 
+    // The memory size of the instance type. Unit: GiB. For information about the valid values, see [Instance families](~~25378~~).
     @NameInMap("Memory")
     public Float memory;
 
+    // The minimum number of vCPUs of the instance type. For information about the valid values, see [Instance families](~~25378~~).
     @NameInMap("MinCores")
     public Integer minCores;
 
+    // The minimum memory size of the instance type. For information about the valid values, see [Instance families](~~25378~~).
     @NameInMap("MinMemory")
     public Float minMemory;
 
@@ -37,6 +60,7 @@ public class DescribeSpotAdviceRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 
@@ -46,6 +70,9 @@ public class DescribeSpotAdviceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    // The ID of the zone.
+    // 
+    // This parameter is empty by default, which indicates that all zones in the specified region are queried.
     @NameInMap("ZoneId")
     public String zoneId;
 

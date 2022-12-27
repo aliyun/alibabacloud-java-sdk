@@ -4,15 +4,19 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class RunInstancesResponseBody extends TeaModel {
+    // The IDs of the instances (`InstanceIdSet`).
     @NameInMap("InstanceIdSets")
     public RunInstancesResponseBodyInstanceIdSets instanceIdSets;
 
+    // The ID of the order. This parameter is returned only when `InstanceChargeType` is set to PrePaid.
     @NameInMap("OrderId")
     public String orderId;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The transaction price.
     @NameInMap("TradePrice")
     public Float tradePrice;
 

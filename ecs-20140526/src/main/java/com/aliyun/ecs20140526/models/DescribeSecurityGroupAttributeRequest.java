@@ -4,9 +4,29 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeSecurityGroupAttributeRequest extends TeaModel {
+    // The direction in which the security group rule is applied. Valid values:
+    // 
+    // *   egress: outbound
+    // *   ingress: inbound
+    // *   all: outbound and inbound
+    // 
+    // Default value: all.
     @NameInMap("Direction")
     public String direction;
 
+    // The network interface controller (NIC) type of the security group rule.
+    // 
+    // *   Default value for rules of security groups in the classic network: internet. Valid values for rules of security groups in the classic network:
+    // 
+    //     *   internet
+    // 
+    //     *   intranet
+    // 
+    //         > You can query security group rules of only one NIC type in a single call. To query security group rules of both NIC types, call the operation twice.
+    // 
+    // *   When the security group is in a virtual private cloud (VPC), set the value to intranet. This is also the default value.
+    // 
+    //     > If you set this parameter to internet or leave this parameter empty, the intranet value is automatically used.
     @NameInMap("NicType")
     public String nicType;
 
@@ -16,6 +36,7 @@ public class DescribeSecurityGroupAttributeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The region ID of the security group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 
@@ -25,6 +46,7 @@ public class DescribeSecurityGroupAttributeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    // The ID of the security group.
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 

@@ -4,9 +4,11 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateLaunchTemplateVersionResponseBody extends TeaModel {
+    // The version number of the launch template.
     @NameInMap("LaunchTemplateVersionNumber")
     public Long launchTemplateVersionNumber;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

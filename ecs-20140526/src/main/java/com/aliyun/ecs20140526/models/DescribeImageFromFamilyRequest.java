@@ -4,6 +4,7 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageFromFamilyRequest extends TeaModel {
+    // The name of the image family. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (\_), and hyphens (-). It must start with a letter and cannot start with http://, https://, acs:, or aliyun.
     @NameInMap("ImageFamily")
     public String imageFamily;
 
@@ -13,6 +14,7 @@ public class DescribeImageFromFamilyRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The region ID of the image. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 

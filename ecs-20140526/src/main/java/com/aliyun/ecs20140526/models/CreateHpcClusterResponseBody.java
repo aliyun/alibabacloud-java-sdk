@@ -4,9 +4,11 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateHpcClusterResponseBody extends TeaModel {
+    // The ID of the HPC cluster.
     @NameInMap("HpcClusterId")
     public String hpcClusterId;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

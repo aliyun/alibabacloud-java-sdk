@@ -4,12 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel {
+    // Details about one or more dedicated block storage clusters.
     @NameInMap("DedicatedBlockStorageClusters")
     public DescribeDedicatedBlockStorageClustersResponseBodyDedicatedBlockStorageClusters dedicatedBlockStorageClusters;
 
+    // The pagination token returned in this call.
     @NameInMap("NextToken")
     public String nextToken;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,9 +46,11 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
     }
 
     public static class DescribeDedicatedBlockStorageClustersResponseBodyDedicatedBlockStorageClustersDedicatedBlockStorageClusterDedicatedBlockStorageClusterCapacity extends TeaModel {
+        // The available capacity of the dedicated block storage cluster. Unit: GiB.
         @NameInMap("AvailableCapacity")
         public Long availableCapacity;
 
+        // The total capacity of the dedicated block storage cluster. Unit: GiB.
         @NameInMap("TotalCapacity")
         public Long totalCapacity;
 
@@ -73,33 +78,51 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
     }
 
     public static class DescribeDedicatedBlockStorageClustersResponseBodyDedicatedBlockStorageClustersDedicatedBlockStorageCluster extends TeaModel {
+        // The category of the disks created in the dedicated block storage cluster.
         @NameInMap("Category")
         public String category;
 
+        // The time when the dedicated block storage cluster was created.
         @NameInMap("CreateTime")
         public String createTime;
 
+        // The storage capacity of the dedicated block storage cluster.
         @NameInMap("DedicatedBlockStorageClusterCapacity")
         public DescribeDedicatedBlockStorageClustersResponseBodyDedicatedBlockStorageClustersDedicatedBlockStorageClusterDedicatedBlockStorageClusterCapacity dedicatedBlockStorageClusterCapacity;
 
+        // The ID of the dedicated block storage cluster.
         @NameInMap("DedicatedBlockStorageClusterId")
         public String dedicatedBlockStorageClusterId;
 
+        // The name of the dedicated block storage cluster.
         @NameInMap("DedicatedBlockStorageClusterName")
         public String dedicatedBlockStorageClusterName;
 
+        // The description of the dedicated block storage cluster.
         @NameInMap("Description")
         public String description;
 
+        // The expiration time of the dedicated block storage cluster.
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
+        // The state of the dedicated block storage clusters. Valid values:
+        // 
+        // *   Preparing: The clusters are pending delivery.
+        // *   Running: The clusters are running.
+        // *   Expired: The clusters expire.
+        // *   Offline: The clusters are offline.
         @NameInMap("Status")
         public String status;
 
+        // The type of the dedicated block storage cluster. Valid values:
+        // 
+        // *   Standard: ESSDs at performance level 0 (PL0 ESSDs) can be created in basic dedicated block storage clusters.
+        // *   Premium: ESSDs at performance level 1 (PL1 ESSDs) can be created in basic dedicated block storage clusters.
         @NameInMap("Type")
         public String type;
 
+        // The zone ID of the dedicated block storage cluster.
         @NameInMap("ZoneId")
         public String zoneId;
 

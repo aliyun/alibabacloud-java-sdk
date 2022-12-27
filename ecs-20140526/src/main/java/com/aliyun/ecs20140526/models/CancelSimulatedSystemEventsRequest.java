@@ -4,6 +4,7 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CancelSimulatedSystemEventsRequest extends TeaModel {
+    // The IDs of system events. You can specify up to 100 system event IDs.
     @NameInMap("EventId")
     public java.util.List<String> eventId;
 
@@ -13,6 +14,7 @@ public class CancelSimulatedSystemEventsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The region ID of the system event. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 

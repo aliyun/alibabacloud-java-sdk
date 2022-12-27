@@ -4,6 +4,7 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeDedicatedHostTypesRequest extends TeaModel {
+    // The dedicated host type. For more information, see [Dedicated host types](~~68564~~).
     @NameInMap("DedicatedHostType")
     public String dedicatedHostType;
 
@@ -13,6 +14,7 @@ public class DescribeDedicatedHostTypesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The region ID of the dedicated host. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 
@@ -22,6 +24,7 @@ public class DescribeDedicatedHostTypesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    // The ECS instance family supported by the dedicated host type.
     @NameInMap("SupportedInstanceTypeFamily")
     public String supportedInstanceTypeFamily;
 
