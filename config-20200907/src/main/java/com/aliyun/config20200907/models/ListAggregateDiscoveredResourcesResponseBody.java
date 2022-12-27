@@ -35,6 +35,9 @@ public class ListAggregateDiscoveredResourcesResponseBody extends TeaModel {
         @NameInMap("AccountId")
         public Long accountId;
 
+        @NameInMap("AvailabilityZone")
+        public String availabilityZone;
+
         @NameInMap("Region")
         public String region;
 
@@ -76,6 +79,14 @@ public class ListAggregateDiscoveredResourcesResponseBody extends TeaModel {
         }
         public Long getAccountId() {
             return this.accountId;
+        }
+
+        public ListAggregateDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList setAvailabilityZone(String availabilityZone) {
+            this.availabilityZone = availabilityZone;
+            return this;
+        }
+        public String getAvailabilityZone() {
+            return this.availabilityZone;
         }
 
         public ListAggregateDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList setRegion(String region) {

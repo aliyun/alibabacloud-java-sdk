@@ -22,8 +22,17 @@ public class ListAggregateConfigRuleEvaluationResultsRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    @NameInMap("Regions")
+    public String regions;
+
+    @NameInMap("ResourceGroupIds")
+    public String resourceGroupIds;
+
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
+
+    @NameInMap("ResourceTypes")
+    public String resourceTypes;
 
     public static ListAggregateConfigRuleEvaluationResultsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAggregateConfigRuleEvaluationResultsRequest self = new ListAggregateConfigRuleEvaluationResultsRequest();
@@ -78,12 +87,36 @@ public class ListAggregateConfigRuleEvaluationResultsRequest extends TeaModel {
         return this.nextToken;
     }
 
+    public ListAggregateConfigRuleEvaluationResultsRequest setRegions(String regions) {
+        this.regions = regions;
+        return this;
+    }
+    public String getRegions() {
+        return this.regions;
+    }
+
+    public ListAggregateConfigRuleEvaluationResultsRequest setResourceGroupIds(String resourceGroupIds) {
+        this.resourceGroupIds = resourceGroupIds;
+        return this;
+    }
+    public String getResourceGroupIds() {
+        return this.resourceGroupIds;
+    }
+
     public ListAggregateConfigRuleEvaluationResultsRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public ListAggregateConfigRuleEvaluationResultsRequest setResourceTypes(String resourceTypes) {
+        this.resourceTypes = resourceTypes;
+        return this;
+    }
+    public String getResourceTypes() {
+        return this.resourceTypes;
     }
 
 }

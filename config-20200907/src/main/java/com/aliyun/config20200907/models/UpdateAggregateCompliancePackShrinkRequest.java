@@ -22,8 +22,23 @@ public class UpdateAggregateCompliancePackShrinkRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("ExcludeResourceIdsScope")
+    public String excludeResourceIdsScope;
+
+    @NameInMap("RegionIdsScope")
+    public String regionIdsScope;
+
+    @NameInMap("ResourceGroupIdsScope")
+    public String resourceGroupIdsScope;
+
     @NameInMap("RiskLevel")
     public Integer riskLevel;
+
+    @NameInMap("TagKeyScope")
+    public String tagKeyScope;
+
+    @NameInMap("TagValueScope")
+    public String tagValueScope;
 
     public static UpdateAggregateCompliancePackShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateAggregateCompliancePackShrinkRequest self = new UpdateAggregateCompliancePackShrinkRequest();
@@ -78,12 +93,52 @@ public class UpdateAggregateCompliancePackShrinkRequest extends TeaModel {
         return this.description;
     }
 
+    public UpdateAggregateCompliancePackShrinkRequest setExcludeResourceIdsScope(String excludeResourceIdsScope) {
+        this.excludeResourceIdsScope = excludeResourceIdsScope;
+        return this;
+    }
+    public String getExcludeResourceIdsScope() {
+        return this.excludeResourceIdsScope;
+    }
+
+    public UpdateAggregateCompliancePackShrinkRequest setRegionIdsScope(String regionIdsScope) {
+        this.regionIdsScope = regionIdsScope;
+        return this;
+    }
+    public String getRegionIdsScope() {
+        return this.regionIdsScope;
+    }
+
+    public UpdateAggregateCompliancePackShrinkRequest setResourceGroupIdsScope(String resourceGroupIdsScope) {
+        this.resourceGroupIdsScope = resourceGroupIdsScope;
+        return this;
+    }
+    public String getResourceGroupIdsScope() {
+        return this.resourceGroupIdsScope;
+    }
+
     public UpdateAggregateCompliancePackShrinkRequest setRiskLevel(Integer riskLevel) {
         this.riskLevel = riskLevel;
         return this;
     }
     public Integer getRiskLevel() {
         return this.riskLevel;
+    }
+
+    public UpdateAggregateCompliancePackShrinkRequest setTagKeyScope(String tagKeyScope) {
+        this.tagKeyScope = tagKeyScope;
+        return this;
+    }
+    public String getTagKeyScope() {
+        return this.tagKeyScope;
+    }
+
+    public UpdateAggregateCompliancePackShrinkRequest setTagValueScope(String tagValueScope) {
+        this.tagValueScope = tagValueScope;
+        return this;
+    }
+    public String getTagValueScope() {
+        return this.tagValueScope;
     }
 
 }
