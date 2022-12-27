@@ -1,3 +1,6 @@
+2022-12-27 Version: 2.1.0
+- Open Integrated Api.
+
 2022-08-11 Version: 2.0.9
 - Fix ListManagedRules bugs.
 
