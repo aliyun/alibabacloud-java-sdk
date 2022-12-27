@@ -4,9 +4,11 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnReportResponseBody extends TeaModel {
+    // The content of the operations report.
     @NameInMap("Content")
     public java.util.Map<String, ?> content;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

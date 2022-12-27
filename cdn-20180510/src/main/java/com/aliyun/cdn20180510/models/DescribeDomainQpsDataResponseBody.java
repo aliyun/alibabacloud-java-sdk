@@ -4,21 +4,27 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainQpsDataResponseBody extends TeaModel {
+    // The time interval between the data entries returned. Unit: seconds.
     @NameInMap("DataInterval")
     public String dataInterval;
 
+    // The accelerated domain name.
     @NameInMap("DomainName")
     public String domainName;
 
+    // The end of the time range that was queried.
     @NameInMap("EndTime")
     public String endTime;
 
+    // The number of queries per second at each time interval.
     @NameInMap("QpsDataInterval")
     public DescribeDomainQpsDataResponseBodyQpsDataInterval qpsDataInterval;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The beginning of the time range that was queried.
     @NameInMap("StartTime")
     public String startTime;
 
@@ -76,42 +82,55 @@ public class DescribeDomainQpsDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainQpsDataResponseBodyQpsDataIntervalDataModule extends TeaModel {
+        // The number of requests in the Chinese mainland.
         @NameInMap("AccDomesticValue")
         public String accDomesticValue;
 
+        // The number of requests outside the Chinese mainland.
         @NameInMap("AccOverseasValue")
         public String accOverseasValue;
 
+        // The total number of requests.
         @NameInMap("AccValue")
         public String accValue;
 
+        // The number of queries per second in the Chinese mainland.
         @NameInMap("DomesticValue")
         public String domesticValue;
 
+        // The number of HTTPS requests sent to L1 edge nodes in the Chinese mainland.
         @NameInMap("HttpsAccDomesticValue")
         public String httpsAccDomesticValue;
 
+        // The number of HTTPS requests sent to L1 edge nodes outside the Chinese mainland.
         @NameInMap("HttpsAccOverseasValue")
         public String httpsAccOverseasValue;
 
+        // The total number of HTTPS requests sent to L1 edge nodes.
         @NameInMap("HttpsAccValue")
         public String httpsAccValue;
 
+        // The number of queries per second that is calculated based on the HTTPS requests sent to L1 edge nodes in the Chinese mainland.
         @NameInMap("HttpsDomesticValue")
         public String httpsDomesticValue;
 
+        // The number of queries per second that is calculated based on the HTTPS requests sent to L1 edge nodes outside the Chinese mainland.
         @NameInMap("HttpsOverseasValue")
         public String httpsOverseasValue;
 
+        // The number of queries per second that is calculated based on the HTTPS requests sent to L1 edge nodes.
         @NameInMap("HttpsValue")
         public String httpsValue;
 
+        // The number of queries per second outside the Chinese mainland.
         @NameInMap("OverseasValue")
         public String overseasValue;
 
+        // The timestamp of the data returned.
         @NameInMap("TimeStamp")
         public String timeStamp;
 
+        // The total number of queries per second.
         @NameInMap("Value")
         public String value;
 

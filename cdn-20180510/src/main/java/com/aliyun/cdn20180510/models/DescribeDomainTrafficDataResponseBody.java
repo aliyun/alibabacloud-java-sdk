@@ -4,21 +4,27 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainTrafficDataResponseBody extends TeaModel {
+    // The time interval between the data entries returned. Unit: seconds.
     @NameInMap("DataInterval")
     public String dataInterval;
 
+    // The accelerated domain name.
     @NameInMap("DomainName")
     public String domainName;
 
+    // The end of the time range that was queried.
     @NameInMap("EndTime")
     public String endTime;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The beginning of the time range that was queried.
     @NameInMap("StartTime")
     public String startTime;
 
+    // The amount of network traffic at each time interval. Unit: bytes.
     @NameInMap("TrafficDataPerInterval")
     public DescribeDomainTrafficDataResponseBodyTrafficDataPerInterval trafficDataPerInterval;
 
@@ -76,24 +82,31 @@ public class DescribeDomainTrafficDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainTrafficDataResponseBodyTrafficDataPerIntervalDataModule extends TeaModel {
+        // The amount of network traffic in the Chinese mainland.
         @NameInMap("DomesticValue")
         public String domesticValue;
 
+        // The amount of HTTPS network traffic on L1 edge nodes in the Chinese mainland.
         @NameInMap("HttpsDomesticValue")
         public String httpsDomesticValue;
 
+        // The amount of HTTPS network traffic on L1 edge nodes outside the Chinese mainland.
         @NameInMap("HttpsOverseasValue")
         public String httpsOverseasValue;
 
+        // The total amount of HTTPS network traffic on L1 edge nodes.
         @NameInMap("HttpsValue")
         public String httpsValue;
 
+        // The amount of network traffic outside the Chinese mainland.
         @NameInMap("OverseasValue")
         public String overseasValue;
 
+        // The timestamp of the data returned.
         @NameInMap("TimeStamp")
         public String timeStamp;
 
+        // The total amount of network traffic.
         @NameInMap("Value")
         public String value;
 

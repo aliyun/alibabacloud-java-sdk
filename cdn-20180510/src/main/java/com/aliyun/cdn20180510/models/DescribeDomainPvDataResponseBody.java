@@ -4,21 +4,27 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainPvDataResponseBody extends TeaModel {
+    // The time interval between the data entries. Unit: seconds.
     @NameInMap("DataInterval")
     public String dataInterval;
 
+    // The accelerated domain name.
     @NameInMap("DomainName")
     public String domainName;
 
+    // The end of the time range during which data was queried.
     @NameInMap("EndTime")
     public String endTime;
 
+    // The number of PVs at each interval.
     @NameInMap("PvDataInterval")
     public DescribeDomainPvDataResponseBodyPvDataInterval pvDataInterval;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The beginning of the time range during which data was queried.
     @NameInMap("StartTime")
     public String startTime;
 
@@ -76,9 +82,11 @@ public class DescribeDomainPvDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainPvDataResponseBodyPvDataIntervalUsageData extends TeaModel {
+        // The timestamp of the returned data.
         @NameInMap("TimeStamp")
         public String timeStamp;
 
+        // The number of PVs.
         @NameInMap("Value")
         public String value;
 

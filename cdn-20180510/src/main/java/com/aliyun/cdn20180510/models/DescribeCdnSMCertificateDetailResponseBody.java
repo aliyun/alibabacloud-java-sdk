@@ -4,30 +4,39 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnSMCertificateDetailResponseBody extends TeaModel {
+    // The time when the certificate expires. The time is displayed in UTC.
     @NameInMap("CertExpireTime")
     public String certExpireTime;
 
+    // The ID of the certificate.
     @NameInMap("CertIdentifier")
     public String certIdentifier;
 
+    // The name of the certificate.
     @NameInMap("CertName")
     public String certName;
 
+    // The certificate authority (CA) that issued the certificate.
     @NameInMap("CertOrg")
     public String certOrg;
 
+    // The top-level domain name.
     @NameInMap("CommonName")
     public String commonName;
 
+    // The content of the encryption certificate.
     @NameInMap("EncryptCertificate")
     public String encryptCertificate;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The subdomain name.
     @NameInMap("Sans")
     public String sans;
 
+    // The content of the signature certificate.
     @NameInMap("SignCertificate")
     public String signCertificate;
 

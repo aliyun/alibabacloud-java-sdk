@@ -4,18 +4,23 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainCustomLogConfigResponseBody extends TeaModel {
+    // The ID of the log configuration.
     @NameInMap("ConfigId")
     public String configId;
 
+    // The format of the log configuration.
     @NameInMap("Remark")
     public String remark;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The sample log configuration.
     @NameInMap("Sample")
     public String sample;
 
+    // The tag information about the log configuration.
     @NameInMap("Tag")
     public String tag;
 

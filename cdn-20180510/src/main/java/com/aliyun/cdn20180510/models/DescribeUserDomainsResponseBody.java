@@ -4,18 +4,23 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserDomainsResponseBody extends TeaModel {
+    // The information about the accelerated domain name.
     @NameInMap("Domains")
     public DescribeUserDomainsResponseBodyDomains domains;
 
+    // The page number of the returned page.
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    // The number of entries returned per page.
     @NameInMap("PageSize")
     public Long pageSize;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates the total number of entries returned.
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -65,18 +70,23 @@ public class DescribeUserDomainsResponseBody extends TeaModel {
     }
 
     public static class DescribeUserDomainsResponseBodyDomainsPageDataSourcesSource extends TeaModel {
+        // The address of the origin server.
         @NameInMap("Content")
         public String content;
 
+        // The port of the origin server.
         @NameInMap("Port")
         public Integer port;
 
+        // The priority of the origin server.
         @NameInMap("Priority")
         public String priority;
 
+        // The type of the origin server.
         @NameInMap("Type")
         public String type;
 
+        // The weight of the origin server if multiple origin servers are specified.
         @NameInMap("Weight")
         public String weight;
 
@@ -147,42 +157,75 @@ public class DescribeUserDomainsResponseBody extends TeaModel {
     }
 
     public static class DescribeUserDomainsResponseBodyDomainsPageData extends TeaModel {
+        // The type of workload accelerated by Alibaba Cloud CDN. Valid values:
+        // 
+        // *   **web**: images and small files
+        // *   **download**: large files
+        // *   **video**: on-demand video and audio streaming
         @NameInMap("CdnType")
         public String cdnType;
 
+        // The CNAME assigned to the accelerated domain name.
         @NameInMap("Cname")
         public String cname;
 
+        // The acceleration region. Valid values:
+        // 
+        // *   **domestic**: Chinese mainland
+        // *   **global**
+        // *   **overseas**: global (excluding the Chinese mainland)
         @NameInMap("Coverage")
         public String coverage;
 
+        // The information about the Internet Content Provider (ICP) number.
         @NameInMap("Description")
         public String description;
 
+        // The ID of the accelerated domain name.
         @NameInMap("DomainId")
         public Long domainId;
 
+        // The accelerated domain names.
         @NameInMap("DomainName")
         public String domainName;
 
+        // The status of the accelerated domain name. Valid values:
+        // 
+        // *   **online**: enabled
+        // *   **offline**: disabled
+        // *   **configuring**: being configured
+        // *   **configure_failed**: failed to be configured
+        // *   **checking**: under review
+        // *   **check_failed**: failed the review
+        // *   **stopping**: being disabled
+        // *   **deleting**: deleting
         @NameInMap("DomainStatus")
         public String domainStatus;
 
+        // The time when the accelerated domain name was added to Alibaba Cloud CDN.
         @NameInMap("GmtCreated")
         public String gmtCreated;
 
+        // The time when the accelerated domain name was last modified.
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        // The ID of the resource group.
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        // Indicates whether the accelerated domain name is in a sandbox.
         @NameInMap("Sandbox")
         public String sandbox;
 
+        // The information about the origin server.
         @NameInMap("Sources")
         public DescribeUserDomainsResponseBodyDomainsPageDataSources sources;
 
+        // Indicates whether HTTPS is enabled. Valid values:
+        // 
+        // *   **on**: enabled
+        // *   **off**: disabled
         @NameInMap("SslProtocol")
         public String sslProtocol;
 

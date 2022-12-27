@@ -4,6 +4,7 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class BatchStopCdnDomainRequest extends TeaModel {
+    // You can specify one or more domain names and separate them with commas (,).
     @NameInMap("DomainNames")
     public String domainNames;
 

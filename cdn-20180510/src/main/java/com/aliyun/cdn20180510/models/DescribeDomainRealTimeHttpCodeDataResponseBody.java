@@ -4,21 +4,29 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainRealTimeHttpCodeDataResponseBody extends TeaModel {
+    // The time interval between the data entries returned. Unit: seconds.
+    // 
+    // The time granularity varies with the time range to query. Supported values: 60 (1 minute), 300 (5 minutes), and 3600(1 hour). For more information, see the usage notes.
     @NameInMap("DataInterval")
     public String dataInterval;
 
+    // The accelerated domain name.
     @NameInMap("DomainName")
     public String domainName;
 
+    // The end of the time range that was queried.
     @NameInMap("EndTime")
     public String endTime;
 
+    // The proportions of HTTP status codes at each time interval.
     @NameInMap("RealTimeHttpCodeData")
     public DescribeDomainRealTimeHttpCodeDataResponseBodyRealTimeHttpCodeData realTimeHttpCodeData;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The beginning of the time range that was queried.
     @NameInMap("StartTime")
     public String startTime;
 
@@ -76,12 +84,15 @@ public class DescribeDomainRealTimeHttpCodeDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainRealTimeHttpCodeDataResponseBodyRealTimeHttpCodeDataUsageDataValueRealTimeCodeProportionData extends TeaModel {
+        // The HTTP status code.
         @NameInMap("Code")
         public String code;
 
+        // The total number of HTTP status codes returned.
         @NameInMap("Count")
         public String count;
 
+        // The proportion of the HTTP status code.
         @NameInMap("Proportion")
         public String proportion;
 
@@ -136,9 +147,11 @@ public class DescribeDomainRealTimeHttpCodeDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainRealTimeHttpCodeDataResponseBodyRealTimeHttpCodeDataUsageData extends TeaModel {
+        // The timestamp of the data returned.
         @NameInMap("TimeStamp")
         public String timeStamp;
 
+        // The proportions of the HTTP status codes.
         @NameInMap("Value")
         public DescribeDomainRealTimeHttpCodeDataResponseBodyRealTimeHttpCodeDataUsageDataValue value;
 

@@ -4,9 +4,11 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnUserResourcePackageResponseBody extends TeaModel {
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The details about each resource plan. The details are organized in an array. The array consists of the subparameter values of the ResourcePackageInfo parameter.
     @NameInMap("ResourcePackageInfos")
     public DescribeCdnUserResourcePackageResponseBodyResourcePackageInfos resourcePackageInfos;
 
@@ -32,30 +34,48 @@ public class DescribeCdnUserResourcePackageResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnUserResourcePackageResponseBodyResourcePackageInfosResourcePackageInfo extends TeaModel {
+        // The ID of the resource plan.
         @NameInMap("CommodityCode")
         public String commodityCode;
 
+        // The remaining quota of the resource plan.
+        // 
+        // *   The total amount of data transfer provided by the resource plan. Unit: bytes.
+        // *   The remaining number of requests provided by the resource plan.
         @NameInMap("CurrCapacity")
         public String currCapacity;
 
+        // The name of the resource plan.
         @NameInMap("DisplayName")
         public String displayName;
 
+        // The time when the resource plan expires.
         @NameInMap("EndTime")
         public String endTime;
 
+        // The total quota of the resource plan.
+        // 
+        // *   The total amount of data transfer provided by the resource plan. Unit: bytes.
+        // *   The total number of requests provided by the resource plan.
         @NameInMap("InitCapacity")
         public String initCapacity;
 
+        // The ID of the instance.
         @NameInMap("InstanceId")
         public String instanceId;
 
+        // The time when the resource plan took effect.
         @NameInMap("StartTime")
         public String startTime;
 
+        // The status of the data transfer plan. Valid values:
+        // 
+        // *   **valid**: valid
+        // *   **closed**: invalid
         @NameInMap("Status")
         public String status;
 
+        // The name of the template.
         @NameInMap("TemplateName")
         public String templateName;
 

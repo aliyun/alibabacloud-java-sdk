@@ -4,18 +4,23 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainMultiUsageDataResponseBody extends TeaModel {
+    // The end of the time range that was queried.
     @NameInMap("EndTime")
     public String endTime;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The information about requests collected every 5 minutes.
     @NameInMap("RequestPerInterval")
     public DescribeDomainMultiUsageDataResponseBodyRequestPerInterval requestPerInterval;
 
+    // The beginning of the time range that was queried.
     @NameInMap("StartTime")
     public String startTime;
 
+    // The statistics about data transfer collected every 5 minutes.
     @NameInMap("TrafficPerInterval")
     public DescribeDomainMultiUsageDataResponseBodyTrafficPerInterval trafficPerInterval;
 
@@ -65,15 +70,21 @@ public class DescribeDomainMultiUsageDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainMultiUsageDataResponseBodyRequestPerIntervalRequestDataModule extends TeaModel {
+        // The information about the accelerated domain name.
         @NameInMap("Domain")
         public String domain;
 
+        // The number of requests.
         @NameInMap("Request")
         public Long request;
 
+        // The timestamp of the data returned.
         @NameInMap("TimeStamp")
         public String timeStamp;
 
+        // The type of data returned.
+        // 
+        // >  For Alibaba Cloud CDN, the valid value is Simple.
         @NameInMap("Type")
         public String type;
 
@@ -136,18 +147,29 @@ public class DescribeDomainMultiUsageDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainMultiUsageDataResponseBodyTrafficPerIntervalTrafficDataModule extends TeaModel {
+        // The name of the district.
         @NameInMap("Area")
         public String area;
 
+        // The bandwidth. Unit: bit/s.
         @NameInMap("Bps")
         public Float bps;
 
+        // The accelerated domain name.
         @NameInMap("Domain")
         public String domain;
 
+        // The timestamp of the data returned.
         @NameInMap("TimeStamp")
         public String timeStamp;
 
+        // The type of data returned. Valid values:
+        // 
+        // - **StaticHttps**: the number of HTTPS requests for static content.
+        // - **DynamicHttps**: the number of HTTPS requests for dynamic content.
+        // - **DynamicHttp**: the number of HTTP requests for dynamic content.
+        // - **StaticQuic**: the number of QUIC requests for static content.
+        // - **DynamicQuic**: the number of QUIC requests for dynamic content.
         @NameInMap("Type")
         public String type;
 

@@ -4,6 +4,11 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeBlockedRegionsRequest extends TeaModel {
+    // The language. Valid values:
+    // 
+    // - **zh**: simplified Chinese
+    // - **en**: English
+    // - **jp**: Japanese
     @NameInMap("Language")
     public String language;
 

@@ -4,6 +4,7 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnSMCertificateDetailRequest extends TeaModel {
+    // The ID of the certificate.
     @NameInMap("CertIdentifier")
     public String certIdentifier;
 

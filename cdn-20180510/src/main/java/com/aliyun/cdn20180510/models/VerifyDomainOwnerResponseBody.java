@@ -4,9 +4,13 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class VerifyDomainOwnerResponseBody extends TeaModel {
+    // The verification result.
+    // 
+    // >  This parameter is returned if the operation fails. The verification result is returned if the operation succeeds.
     @NameInMap("Content")
     public String content;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

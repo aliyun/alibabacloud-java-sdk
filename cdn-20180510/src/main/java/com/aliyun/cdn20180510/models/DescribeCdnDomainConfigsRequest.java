@@ -4,12 +4,15 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnDomainConfigsRequest extends TeaModel {
+    // The ID of the configuration. For more information about ConfigId, see [Usage notes on ConfigId](~~388994~~).
     @NameInMap("ConfigId")
     public String configId;
 
+    // The accelerated domain name. You can specify only one domain name in each call.
     @NameInMap("DomainName")
     public String domainName;
 
+    // The names of the features. Separate multiple feature names with commas (,). For more information, see [BatchSetCdnDomainConfig](~~388460~~).
     @NameInMap("FunctionNames")
     public String functionNames;
 

@@ -7,9 +7,13 @@ public class DescribeUserUsageDetailDataExportTaskRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The number of the page to return. Valid values: **1** to **100000**.
     @NameInMap("PageNumber")
     public String pageNumber;
 
+    // The number of entries to return on each page. Default value: **20**. Maximum value: **50**.
+    // 
+    // Valid values: **1** to **50**.
     @NameInMap("PageSize")
     public String pageSize;
 

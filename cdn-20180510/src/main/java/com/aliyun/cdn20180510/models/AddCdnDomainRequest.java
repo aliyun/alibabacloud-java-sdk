@@ -4,12 +4,21 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class AddCdnDomainRequest extends TeaModel {
+    // The workload type of the domain name. Valid values:
+    // 
+    // *   **web**: images and small files.
+    // *   **download**: large files.
+    // *   **video**: on-demand video and audio streaming.
     @NameInMap("CdnType")
     public String cdnType;
 
+    // The URL that is used for health checks.
     @NameInMap("CheckUrl")
     public String checkUrl;
 
+    // The domain names that you want to add to Alibaba Cloud CDN.
+    // 
+    // Wildcard domain names are supported.A wildcard domain name must start with a period (.), such as .example.com.
     @NameInMap("DomainName")
     public String domainName;
 
@@ -19,21 +28,34 @@ public class AddCdnDomainRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The ID of the resource group.
+    // 
+    // If you do not set this parameter, the system uses the ID of the default resource group.
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    // The accelerated region. Valid values:
+    // 
+    // *   **domestic**: regions in mainland China.
+    // *   **overseas**: regions outside mainland China.
+    // *   **global**: regions inside and outside mainland China.
+    // 
+    // Default value: **domestic**.
     @NameInMap("Scope")
     public String scope;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    // The information about the origin address.
     @NameInMap("Sources")
     public String sources;
 
+    // The tags.
     @NameInMap("Tag")
     public java.util.List<AddCdnDomainRequestTag> tag;
 
+    // The top-level domain name.
     @NameInMap("TopLevelDomain")
     public String topLevelDomain;
 
@@ -131,9 +153,11 @@ public class AddCdnDomainRequest extends TeaModel {
     }
 
     public static class AddCdnDomainRequestTag extends TeaModel {
+        // The key of tag.
         @NameInMap("Key")
         public String key;
 
+        // The value of tag.
         @NameInMap("Value")
         public String value;
 

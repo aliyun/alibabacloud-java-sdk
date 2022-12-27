@@ -4,18 +4,23 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeRefreshTasksResponseBody extends TeaModel {
+    // The page number of the returned page.
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    // The number of entries returned per page.
     @NameInMap("PageSize")
     public Long pageSize;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The details about the task.
     @NameInMap("Tasks")
     public DescribeRefreshTasksResponseBodyTasks tasks;
 
+    // The total number of entries returned.
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -65,24 +70,45 @@ public class DescribeRefreshTasksResponseBody extends TeaModel {
     }
 
     public static class DescribeRefreshTasksResponseBodyTasksCDNTask extends TeaModel {
+        // The time when the task was created. The time is displayed in UTC.
         @NameInMap("CreationTime")
         public String creationTime;
 
+        // The type of the error returned when the refresh or prefetch task failed. Valid values:
+        // 
+        // *   **InternalError**: An internal error occurred.
+        // *   **OriginTimeout**: The response from the origin server timed out.
+        // *   **OriginReturn StatusCode 5XX**: The origin server returned a 5XX error.
         @NameInMap("Description")
         public String description;
 
+        // The URL of the object to be refreshed.
         @NameInMap("ObjectPath")
         public String objectPath;
 
+        // The type of the task.
+        // 
+        // *   **file**: refreshes one or more files.
+        // *   **directory**: refreshes files under the specified directories.
+        // *   **regex**: refreshes content based on a regular expression.
+        // *   **preload**: prefetches one or more files.
         @NameInMap("ObjectType")
         public String objectType;
 
+        // The progress of the task, in percentage.
         @NameInMap("Process")
         public String process;
 
+        // The status. Valid values:
+        // 
+        // *   **Complete**: The task has completed.
+        // *   **Refreshing**: The task is running.
+        // *   **Failed**: The task failed.
+        // *   **Pending**: The task is pending.
         @NameInMap("Status")
         public String status;
 
+        // The ID of the task.
         @NameInMap("TaskId")
         public String taskId;
 

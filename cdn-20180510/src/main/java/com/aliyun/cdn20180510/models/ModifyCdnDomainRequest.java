@@ -4,21 +4,29 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class ModifyCdnDomainRequest extends TeaModel {
+    // The accelerated domain name. You can specify only one domain name in each call.
     @NameInMap("DomainName")
     public String domainName;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The ID of the resource group.
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    // The list of origin URLs.
+    // 
+    // >  You cannot set both the **Sources** and **TopLevelDomain** parameters in the same request. Otherwise, ********the **TopLevelDomain** parameter cannot take effect.
     @NameInMap("Sources")
     public String sources;
 
+    // The top-level domain name. To add a top-level domain name, set the parameter CDN_TOP_LEVEL_DOMAIN_GREY_USER_LIST. This feature is available to only selected users.
+    // 
+    // >  You cannot set both the **Sources** and **TopLevelDomain** parameters in the same request. Otherwise, ****the **TopLevelDomain** parameter cannot take effect.
     @NameInMap("TopLevelDomain")
     public String topLevelDomain;
 

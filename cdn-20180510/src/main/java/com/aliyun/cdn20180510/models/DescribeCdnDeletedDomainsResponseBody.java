@@ -4,18 +4,23 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnDeletedDomainsResponseBody extends TeaModel {
+    // The information about the accelerated domain names.
     @NameInMap("Domains")
     public DescribeCdnDeletedDomainsResponseBodyDomains domains;
 
+    // The page number of the returned page. It corresponds to the request parameter **PageNumber**.
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    // The number of entries returned per page. It corresponds to the request parameter **PageSize**.
     @NameInMap("PageSize")
     public Long pageSize;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The total number of domain names returned.
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -65,9 +70,11 @@ public class DescribeCdnDeletedDomainsResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnDeletedDomainsResponseBodyDomainsPageData extends TeaModel {
+        // The accelerated domain name.
         @NameInMap("DomainName")
         public String domainName;
 
+        // The last time when the accelerated domain name was modified. The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC+0.
         @NameInMap("GmtModified")
         public String gmtModified;
 

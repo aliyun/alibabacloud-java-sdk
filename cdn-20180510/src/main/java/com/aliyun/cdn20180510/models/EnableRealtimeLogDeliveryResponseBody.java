@@ -4,6 +4,7 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class EnableRealtimeLogDeliveryResponseBody extends TeaModel {
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

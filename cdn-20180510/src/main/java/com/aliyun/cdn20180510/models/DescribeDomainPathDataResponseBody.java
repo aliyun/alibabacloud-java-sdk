@@ -4,27 +4,35 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainPathDataResponseBody extends TeaModel {
+    // The time interval between the data entries. Unit: seconds.
     @NameInMap("DataInterval")
     public String dataInterval;
 
+    // The accelerated domain name.
     @NameInMap("DomainName")
     public String domainName;
 
+    // The end of the time range that was queried.
     @NameInMap("EndTime")
     public String endTime;
 
+    // The page number of the returned page. Pages start from page **1**.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries returned on each page.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // A list of bandwidth values collected at each time interval.
     @NameInMap("PathDataPerInterval")
     public DescribeDomainPathDataResponseBodyPathDataPerInterval pathDataPerInterval;
 
+    // The start of the time range that was queried.
     @NameInMap("StartTime")
     public String startTime;
 
+    // The total count.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -98,15 +106,19 @@ public class DescribeDomainPathDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainPathDataResponseBodyPathDataPerIntervalUsageData extends TeaModel {
+        // The number of visits to the specified path.
         @NameInMap("Acc")
         public Integer acc;
 
+        // The path.
         @NameInMap("Path")
         public String path;
 
+        // The point in time.
         @NameInMap("Time")
         public String time;
 
+        // The amount of network traffic. Unit: bytes.
         @NameInMap("Traffic")
         public Integer traffic;
 

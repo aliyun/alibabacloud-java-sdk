@@ -4,9 +4,11 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class CreateIllegalUrlExportTaskResponseBody extends TeaModel {
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The ID of the export task. You can use task IDs to query tasks.
     @NameInMap("TaskId")
     public String taskId;
 

@@ -4,15 +4,18 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnHttpsDomainListRequest extends TeaModel {
+    // The keyword used for search.
     @NameInMap("Keyword")
     public String keyword;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The number of the page to return. Valid values: **1** to **100000**.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The maximum number of entries to return on each page. Default value: **20**.
     @NameInMap("PageSize")
     public Integer pageSize;
 

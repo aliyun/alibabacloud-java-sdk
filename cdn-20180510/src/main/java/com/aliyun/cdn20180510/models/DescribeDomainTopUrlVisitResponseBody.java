@@ -4,27 +4,35 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainTopUrlVisitResponseBody extends TeaModel {
+    // A list of frequently requested URLs.
     @NameInMap("AllUrlList")
     public DescribeDomainTopUrlVisitResponseBodyAllUrlList allUrlList;
 
+    // The accelerated domain name.
     @NameInMap("DomainName")
     public String domainName;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The start of the time range that was queried.
     @NameInMap("StartTime")
     public String startTime;
 
+    // A list of URLs for which 2xx status codes were returned.
     @NameInMap("Url200List")
     public DescribeDomainTopUrlVisitResponseBodyUrl200List url200List;
 
+    // A list of URLs for which 3xx status codes were returned.
     @NameInMap("Url300List")
     public DescribeDomainTopUrlVisitResponseBodyUrl300List url300List;
 
+    // A list of URLs for which 4xx status codes were returned.
     @NameInMap("Url400List")
     public DescribeDomainTopUrlVisitResponseBodyUrl400List url400List;
 
+    // A list of URLs for which 5xx status codes were returned.
     @NameInMap("Url500List")
     public DescribeDomainTopUrlVisitResponseBodyUrl500List url500List;
 
@@ -98,18 +106,23 @@ public class DescribeDomainTopUrlVisitResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainTopUrlVisitResponseBodyAllUrlListUrlList extends TeaModel {
+        // The amount of network traffic. (Unit: bytes)
         @NameInMap("Flow")
         public String flow;
 
+        // The proportion of the amount of network traffic consumed for visiting the web page.
         @NameInMap("FlowProportion")
         public Float flowProportion;
 
+        // The complete URL.
         @NameInMap("UrlDetail")
         public String urlDetail;
 
+        // The number of visits to the specified path.
         @NameInMap("VisitData")
         public String visitData;
 
+        // The proportion of visits to the web page.
         @NameInMap("VisitProportion")
         public Float visitProportion;
 
@@ -180,18 +193,23 @@ public class DescribeDomainTopUrlVisitResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainTopUrlVisitResponseBodyUrl200ListUrlList extends TeaModel {
+        // The amount of network traffic. (Unit: bytes)
         @NameInMap("Flow")
         public String flow;
 
+        // The proportion of the amount of network traffic consumed for visiting the web page.
         @NameInMap("FlowProportion")
         public Float flowProportion;
 
+        // The complete URL.
         @NameInMap("UrlDetail")
         public String urlDetail;
 
+        // The number of visits to the specified path.
         @NameInMap("VisitData")
         public String visitData;
 
+        // The proportion of visits to the web page.
         @NameInMap("VisitProportion")
         public Float visitProportion;
 
@@ -262,18 +280,23 @@ public class DescribeDomainTopUrlVisitResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainTopUrlVisitResponseBodyUrl300ListUrlList extends TeaModel {
+        // The amount of network traffic. (Unit: bytes)
         @NameInMap("Flow")
         public String flow;
 
+        // The proportion of the amount of network traffic consumed for visiting the web page.
         @NameInMap("FlowProportion")
         public Float flowProportion;
 
+        // The complete URL.
         @NameInMap("UrlDetail")
         public String urlDetail;
 
+        // The number of visits to the URL.
         @NameInMap("VisitData")
         public String visitData;
 
+        // The proportion of visits to the web page.
         @NameInMap("VisitProportion")
         public Float visitProportion;
 
@@ -344,18 +367,23 @@ public class DescribeDomainTopUrlVisitResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainTopUrlVisitResponseBodyUrl400ListUrlList extends TeaModel {
+        // The amount of network traffic. (Unit: bytes)
         @NameInMap("Flow")
         public String flow;
 
+        // The proportion of the amount of network traffic consumed for visiting the web page.
         @NameInMap("FlowProportion")
         public Float flowProportion;
 
+        // The complete URL.
         @NameInMap("UrlDetail")
         public String urlDetail;
 
+        // The number of visits to the URL.
         @NameInMap("VisitData")
         public String visitData;
 
+        // The proportion of visits to the web page.
         @NameInMap("VisitProportion")
         public Float visitProportion;
 
@@ -426,18 +454,23 @@ public class DescribeDomainTopUrlVisitResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainTopUrlVisitResponseBodyUrl500ListUrlList extends TeaModel {
+        // The amount of network traffic. (Unit: bytes)
         @NameInMap("Flow")
         public String flow;
 
+        // The proportion of the amount of network traffic consumed for visiting the web page.
         @NameInMap("FlowProportion")
         public Float flowProportion;
 
+        // The complete URL.
         @NameInMap("UrlDetail")
         public String urlDetail;
 
+        // The number of visits to the URL.
         @NameInMap("VisitData")
         public String visitData;
 
+        // The proportion of visits to the web page.
         @NameInMap("VisitProportion")
         public Float visitProportion;
 

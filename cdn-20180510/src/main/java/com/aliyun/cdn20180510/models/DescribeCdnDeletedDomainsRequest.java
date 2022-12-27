@@ -7,9 +7,11 @@ public class DescribeCdnDeletedDomainsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The number of the page to return. Pages start from page **1**. Valid values: **1** to **100000**.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries to return on each page. Default value: **20**. Valid values: **1** to **500**. The value must be an integer.
     @NameInMap("PageSize")
     public Integer pageSize;
 

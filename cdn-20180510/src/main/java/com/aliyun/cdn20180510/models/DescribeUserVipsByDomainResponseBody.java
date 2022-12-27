@@ -4,12 +4,15 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserVipsByDomainResponseBody extends TeaModel {
+    // The domain name.
     @NameInMap("DomainName")
     public String domainName;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // A list of virtual IP addresses.
     @NameInMap("Vips")
     public DescribeUserVipsByDomainResponseBodyVips vips;
 

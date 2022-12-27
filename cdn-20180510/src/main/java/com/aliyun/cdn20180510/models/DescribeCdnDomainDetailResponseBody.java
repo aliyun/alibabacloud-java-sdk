@@ -4,9 +4,11 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnDomainDetailResponseBody extends TeaModel {
+    // The detailed information about the accelerated domain name.
     @NameInMap("GetDomainDetailModel")
     public DescribeCdnDomainDetailResponseBodyGetDomainDetailModel getDomainDetailModel;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +34,31 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnDomainDetailResponseBodyGetDomainDetailModelSourceModelsSourceModel extends TeaModel {
+        // The address of the origin server.
         @NameInMap("Content")
         public String content;
 
+        // The status of the origin server.
         @NameInMap("Enabled")
         public String enabled;
 
+        // The port over which requests are redirected to the origin server. Ports 443 and 80 are supported.
         @NameInMap("Port")
         public Integer port;
 
+        // The priority of the origin server if multiple origin servers are specified.
         @NameInMap("Priority")
         public String priority;
 
+        // The type of the origin server. Valid values:
+        // 
+        // *   **ipaddr**: IP address
+        // *   **domain**: domain name
+        // *   **oss**: Object Storage Service (OSS) bucket endpoint
         @NameInMap("Type")
         public String type;
 
+        // The weight of the origin server if multiple origin servers are specified.
         @NameInMap("Weight")
         public String weight;
 
@@ -125,39 +137,65 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnDomainDetailResponseBodyGetDomainDetailModel extends TeaModel {
+        // The workload type of the accelerated domain name. Valid values:
+        // 
+        // *   **web**: images and small files.
+        // *   **download**: large files.
+        // *   **video**: on-demand video and audio streaming.
         @NameInMap("CdnType")
         public String cdnType;
 
+        // The Canonical Name (CNAME) that is assigned to the accelerated domain name. You must add a CNAME record in the system of your DNS service provider to map the accelerated domain name to the CNAME.
         @NameInMap("Cname")
         public String cname;
 
+        // The remarks of the accelerated domain name.
         @NameInMap("Description")
         public String description;
 
+        // The accelerated domain name.
         @NameInMap("DomainName")
         public String domainName;
 
+        // The status of the accelerated domain name. Valid values:
+        // 
+        // *   **online**: The domain name is enabled.
+        // *   **offline**: The domain is disabled.
+        // *   **configuring**: The domain is being configured.
+        // *   **configure_failed**: The domain failed to be configured.
+        // *   **checking**: The domain name is under review.
+        // *   **check_failed**: The domain name failed the review.
         @NameInMap("DomainStatus")
         public String domainStatus;
 
+        // The time when the accelerated domain name was added to Alibaba Cloud CDN.
         @NameInMap("GmtCreated")
         public String gmtCreated;
 
+        // The last time when the accelerated domain name was modified.
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        // The CNAME for which HTTPS is enabled.
         @NameInMap("HttpsCname")
         public String httpsCname;
 
+        // The ID of the resource group.
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        // The accelerated region.
         @NameInMap("Scope")
         public String scope;
 
+        // Specifies whether to enable the Security Socket Layer (SSL) certificate. Valid values:
+        // 
+        // *   **on**: enables the SSL certificate.
+        // *   **off**: disables the SSL certificate.
         @NameInMap("ServerCertificateStatus")
         public String serverCertificateStatus;
 
+        // The information about the origin server.
         @NameInMap("SourceModels")
         public DescribeCdnDomainDetailResponseBodyGetDomainDetailModelSourceModels sourceModels;
 

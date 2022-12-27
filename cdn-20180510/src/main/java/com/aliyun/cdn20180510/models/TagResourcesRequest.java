@@ -7,12 +7,15 @@ public class TagResourcesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The list of resource ID.
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
+    // The type of resource. The resource type. Set the value to **DOMAIN**.
     @NameInMap("ResourceType")
     public String resourceType;
 
+    // The tags.
     @NameInMap("Tag")
     public java.util.List<TagResourcesRequestTag> tag;
 
@@ -54,9 +57,11 @@ public class TagResourcesRequest extends TeaModel {
     }
 
     public static class DescribeTagResourcesRequestTag extends TeaModel {
+        // The key of the tag. Valid values of N: **1** to **20**.
         @NameInMap("Key")
         public String key;
 
+        // The value of the tag. Valid values of N: **1** to **20**.
         @NameInMap("Value")
         public String value;
 
@@ -84,9 +89,11 @@ public class TagResourcesRequest extends TeaModel {
     }
 
     public static class TagResourcesRequestTag extends TeaModel {
+        // The key of the tag. Valid values of N: **1** to **20**.
         @NameInMap("Key")
         public String key;
 
+        // The value of the tag. Valid values of N: **1** to **20**.
         @NameInMap("Value")
         public String value;
 

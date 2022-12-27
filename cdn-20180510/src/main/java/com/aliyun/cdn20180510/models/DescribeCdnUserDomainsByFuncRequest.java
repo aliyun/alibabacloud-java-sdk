@@ -4,18 +4,28 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnUserDomainsByFuncRequest extends TeaModel {
+    // The ID of the feature.
+    // 
+    // For example, the ID of the origin host feature (set_req_host_header) is 18.
     @NameInMap("FuncId")
     public Integer funcId;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The number of the page to return. Default value: **1**.
+    // 
+    // Valid values: **1** to **100000**.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of domain names to return on each page. Default value: **20**.
+    // 
+    // Valid values: **1** to **50**.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The ID of the resource group.
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

@@ -4,18 +4,23 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainRealtimeLogDeliveryResponseBody extends TeaModel {
+    // The name of the Logstore that collects log data from Alibaba Cloud Content Delivery Network (CDN) in real time.
     @NameInMap("Logstore")
     public String logstore;
 
+    // The name of the Log Service project that is used for real-time log delivery.
     @NameInMap("Project")
     public String project;
 
+    // The ID of the region where the Log Service project is deployed.
     @NameInMap("Region")
     public String region;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The status of the real-time log delivery feature.
     @NameInMap("Status")
     public String status;
 

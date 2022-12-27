@@ -4,6 +4,7 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DisableRealtimeLogDeliveryRequest extends TeaModel {
+    // The accelerated domain name for which you want to disable real-time log delivery. You can specify multiple domain names and separate them with commas (,).
     @NameInMap("Domain")
     public String domain;
 

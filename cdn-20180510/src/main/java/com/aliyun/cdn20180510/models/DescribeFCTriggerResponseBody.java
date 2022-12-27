@@ -4,9 +4,11 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeFCTriggerResponseBody extends TeaModel {
+    // The Function Compute trigger that you want to query.
     @NameInMap("FCTrigger")
     public DescribeFCTriggerResponseBodyFCTrigger FCTrigger;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +34,27 @@ public class DescribeFCTriggerResponseBody extends TeaModel {
     }
 
     public static class DescribeFCTriggerResponseBodyFCTrigger extends TeaModel {
+        // The name of the event.
         @NameInMap("EventMetaName")
         public String eventMetaName;
 
+        // The version of the event.
         @NameInMap("EventMetaVersion")
         public String eventMetaVersion;
 
+        // The remarks.
         @NameInMap("Notes")
         public String notes;
 
+        // The assigned Resource Access Management (RAM) role.
         @NameInMap("RoleARN")
         public String roleARN;
 
+        // The resources and filters for event listening.
         @NameInMap("SourceArn")
         public String sourceArn;
 
+        // The trigger that corresponds to the Function Compute service.
         @NameInMap("TriggerARN")
         public String triggerARN;
 

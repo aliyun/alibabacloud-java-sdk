@@ -4,21 +4,30 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeIpInfoResponseBody extends TeaModel {
+    // Indicates whether the specified IP address is assigned to an Alibaba Cloud CDN node.
+    // 
+    // *   **True**: Yes
+    // *   **False**: No
     @NameInMap("CdnIp")
     public String cdnIp;
 
+    // The Chinese name of the Internet service provider (ISP).
     @NameInMap("ISP")
     public String ISP;
 
+    // The English name of the ISP.
     @NameInMap("IspEname")
     public String ispEname;
 
+    // The Chinese name of the region.
     @NameInMap("Region")
     public String region;
 
+    // The English name of the region.
     @NameInMap("RegionEname")
     public String regionEname;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

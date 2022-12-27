@@ -7,6 +7,7 @@ public class DescribeCdnUserBillTypeResponseBody extends TeaModel {
     @NameInMap("BillTypeData")
     public DescribeCdnUserBillTypeResponseBodyBillTypeData billTypeData;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

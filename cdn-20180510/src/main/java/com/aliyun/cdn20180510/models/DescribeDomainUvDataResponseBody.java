@@ -4,21 +4,27 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainUvDataResponseBody extends TeaModel {
+    // The time interval between the data entries. Unit: seconds.
     @NameInMap("DataInterval")
     public String dataInterval;
 
+    // The accelerated domain name.
     @NameInMap("DomainName")
     public String domainName;
 
+    // The end of the time range that was queried.
     @NameInMap("EndTime")
     public String endTime;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The beginning of the time range that was queried.
     @NameInMap("StartTime")
     public String startTime;
 
+    // The number of UVs at each interval.
     @NameInMap("UvDataInterval")
     public DescribeDomainUvDataResponseBodyUvDataInterval uvDataInterval;
 
@@ -76,9 +82,11 @@ public class DescribeDomainUvDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainUvDataResponseBodyUvDataIntervalUsageData extends TeaModel {
+        // The timestamp of the returned data.
         @NameInMap("TimeStamp")
         public String timeStamp;
 
+        // The number of UVs.
         @NameInMap("Value")
         public String value;
 

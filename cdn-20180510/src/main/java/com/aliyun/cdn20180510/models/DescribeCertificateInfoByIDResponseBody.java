@@ -4,9 +4,11 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCertificateInfoByIDResponseBody extends TeaModel {
+    // The information about the certificate.
     @NameInMap("CertInfos")
     public DescribeCertificateInfoByIDResponseBodyCertInfos certInfos;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,24 +34,35 @@ public class DescribeCertificateInfoByIDResponseBody extends TeaModel {
     }
 
     public static class DescribeCertificateInfoByIDResponseBodyCertInfosCertInfo extends TeaModel {
+        // The expiration time of the certificate.
         @NameInMap("CertExpireTime")
         public String certExpireTime;
 
+        // The ID of the certificate.
         @NameInMap("CertId")
         public String certId;
 
+        // The name of the certificate.
         @NameInMap("CertName")
         public String certName;
 
+        // The type of the certificate.
+        // 
+        // *   free: a free certificate.
+        // *   cas: a certificate purchased by using Certificate Management Service.
+        // *   upload: a user-uploaded certificate.
         @NameInMap("CertType")
         public String certType;
 
+        // The time when the certificate became effective.
         @NameInMap("CreateTime")
         public String createTime;
 
+        // A list of domain names that use the certificate.
         @NameInMap("DomainList")
         public String domainList;
 
+        // The content of the certificate.
         @NameInMap("HttpsCrt")
         public String httpsCrt;
 

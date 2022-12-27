@@ -7,6 +7,7 @@ public class DeleteFCTriggerRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The trigger that corresponds to the Function Compute service.
     @NameInMap("TriggerARN")
     public String triggerARN;
 

@@ -4,21 +4,27 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeTopDomainsByFlowResponseBody extends TeaModel {
+    // The total number of accelerated domain names that belong to the current Alibaba Cloud account.
     @NameInMap("DomainCount")
     public Long domainCount;
 
+    // The total number of accelerated domain names that are in the **Enabled** state within the current Alibaba Cloud account.
     @NameInMap("DomainOnlineCount")
     public Long domainOnlineCount;
 
+    // The end of the time range during which data was queried.
     @NameInMap("EndTime")
     public String endTime;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The beginning of the time range during which data was queried.
     @NameInMap("StartTime")
     public String startTime;
 
+    // The top N domain names ranked by network traffic.
     @NameInMap("TopDomains")
     public DescribeTopDomainsByFlowResponseBodyTopDomains topDomains;
 
@@ -76,24 +82,31 @@ public class DescribeTopDomainsByFlowResponseBody extends TeaModel {
     }
 
     public static class DescribeTopDomainsByFlowResponseBodyTopDomainsTopDomain extends TeaModel {
+        // The accelerated domain name.
         @NameInMap("DomainName")
         public String domainName;
 
+        // The peak bandwidth value.
         @NameInMap("MaxBps")
         public Float maxBps;
 
+        // The time when the bandwidth reached the peak value.
         @NameInMap("MaxBpsTime")
         public String maxBpsTime;
 
+        // The ranking of the accelerated domain name.
         @NameInMap("Rank")
         public Long rank;
 
+        // The number of visits to the accelerated domain name.
         @NameInMap("TotalAccess")
         public Long totalAccess;
 
+        // The total amount of network traffic.
         @NameInMap("TotalTraffic")
         public String totalTraffic;
 
+        // The proportion of the amount of network traffic consumed for visiting the web page.
         @NameInMap("TrafficPercent")
         public String trafficPercent;
 

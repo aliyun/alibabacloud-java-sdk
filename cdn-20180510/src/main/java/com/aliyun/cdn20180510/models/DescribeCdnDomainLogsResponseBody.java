@@ -4,9 +4,11 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnDomainLogsResponseBody extends TeaModel {
+    // The detailed log information, which is indicated by the DomainLogDetail parameter.
     @NameInMap("DomainLogDetails")
     public DescribeCdnDomainLogsResponseBodyDomainLogDetails domainLogDetails;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +34,23 @@ public class DescribeCdnDomainLogsResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnDomainLogsResponseBodyDomainLogDetailsDomainLogDetailLogInfosLogInfoDetail extends TeaModel {
+        // The end of the time range where the QPS data was queried.
         @NameInMap("EndTime")
         public String endTime;
 
+        // The name of the log file.
         @NameInMap("LogName")
         public String logName;
 
+        // The path of the log file.
         @NameInMap("LogPath")
         public String logPath;
 
+        // The size of the log file.
         @NameInMap("LogSize")
         public Long logSize;
 
+        // The start of the time range that was queried.
         @NameInMap("StartTime")
         public String startTime;
 
@@ -114,12 +121,15 @@ public class DescribeCdnDomainLogsResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnDomainLogsResponseBodyDomainLogDetailsDomainLogDetailPageInfos extends TeaModel {
+        // The page number of the returned page.
         @NameInMap("PageIndex")
         public Long pageIndex;
 
+        // The number of entries returned per page.
         @NameInMap("PageSize")
         public Long pageSize;
 
+        // The total number of entries returned.
         @NameInMap("Total")
         public Long total;
 
@@ -155,15 +165,19 @@ public class DescribeCdnDomainLogsResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnDomainLogsResponseBodyDomainLogDetailsDomainLogDetail extends TeaModel {
+        // The accelerated domain name.
         @NameInMap("DomainName")
         public String domainName;
 
+        // The total number of entries returned on the current page.
         @NameInMap("LogCount")
         public Long logCount;
 
+        // The detailed log information, which is indicated by the LogInfoDetail parameter.
         @NameInMap("LogInfos")
         public DescribeCdnDomainLogsResponseBodyDomainLogDetailsDomainLogDetailLogInfos logInfos;
 
+        // The detailed log information, which is indicated by the PageInfoDetail parameter.
         @NameInMap("PageInfos")
         public DescribeCdnDomainLogsResponseBodyDomainLogDetailsDomainLogDetailPageInfos pageInfos;
 

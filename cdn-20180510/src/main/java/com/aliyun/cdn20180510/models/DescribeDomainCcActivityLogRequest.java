@@ -4,30 +4,55 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainCcActivityLogRequest extends TeaModel {
+    // The accelerated domain name. You can specify multiple domain names and separate them with commas (,).
+    // 
+    // If you do not specify a domain name, data of all domain names is queried.
     @NameInMap("DomainName")
     public String domainName;
 
+    // The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.
+    // 
+    // The end time must be later than the start time.
     @NameInMap("EndTime")
     public String endTime;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The number of the page to return. Default value: **1**.
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    // The number of entries to return on each page. Default value: **30**.
     @NameInMap("PageSize")
     public Long pageSize;
 
+    // A custom rule name. Valid values:
+    // 
+    // *   Default mode: default_normal.
+    // *   Emergency mode: default_attack.
+    // 
+    // If you do not set this parameter, all events that triggered rate limiting are queried.
     @NameInMap("RuleName")
     public String ruleName;
 
+    // The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.
+    // 
+    // Data is collected every 5 minutes.
+    // 
+    // If you do not set this parameter, data within the last 24 hours is queried.
     @NameInMap("StartTime")
     public String startTime;
 
+    // The object that triggered rate limiting.
+    // 
+    // If you do not set this parameter, all events that triggered rate limiting are queried.
     @NameInMap("TriggerObject")
     public String triggerObject;
 
+    // The value of the object that triggered rate limiting.
+    // 
+    // If you do not set this parameter, the values of all events that triggered rate limiting are queried.
     @NameInMap("Value")
     public String value;
 

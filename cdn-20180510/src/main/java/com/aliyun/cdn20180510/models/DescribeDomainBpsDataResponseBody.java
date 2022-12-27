@@ -4,27 +4,35 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainBpsDataResponseBody extends TeaModel {
+    // The bandwidth values collected at each interval.
     @NameInMap("BpsDataPerInterval")
     public DescribeDomainBpsDataResponseBodyBpsDataPerInterval bpsDataPerInterval;
 
+    // The time interval between the returned entries. Unit: seconds.
     @NameInMap("DataInterval")
     public String dataInterval;
 
+    // The accelerated domain name.
     @NameInMap("DomainName")
     public String domainName;
 
+    // The end of the time range that was queried.
     @NameInMap("EndTime")
     public String endTime;
 
+    // The name of the ISP for your Alibaba Cloud CDN service.
     @NameInMap("IspNameEn")
     public String ispNameEn;
 
+    // The name of the region.
     @NameInMap("LocationNameEn")
     public String locationNameEn;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The beginning of the time range that was queried.
     @NameInMap("StartTime")
     public String startTime;
 
@@ -98,24 +106,31 @@ public class DescribeDomainBpsDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainBpsDataResponseBodyBpsDataPerIntervalDataModule extends TeaModel {
+        // The bandwidth values in the Chinese mainland. When the bandwidth data is queried by ISP, no value is returned.
         @NameInMap("DomesticValue")
         public String domesticValue;
 
+        // The bandwidth values for HTTPS requests in the Chinese mainland. When the bandwidth data is queried by ISP, no value is returned.
         @NameInMap("HttpsDomesticValue")
         public String httpsDomesticValue;
 
+        // The bandwidth values for HTTPS requests in regions outside the Chinese mainland. When the bandwidth data is queried by ISP, no value is returned.
         @NameInMap("HttpsOverseasValue")
         public String httpsOverseasValue;
 
+        // The bandwidth values for HTTPS requests. Unit: bit/s.
         @NameInMap("HttpsValue")
         public String httpsValue;
 
+        // The bandwidth values in regions outside the Chinese mainland. When the bandwidth data is queried by ISP, no value is returned.
         @NameInMap("OverseasValue")
         public String overseasValue;
 
+        // The timestamp of the data returned.
         @NameInMap("TimeStamp")
         public String timeStamp;
 
+        // The bandwidth value. Unit: bit/s.
         @NameInMap("Value")
         public String value;
 

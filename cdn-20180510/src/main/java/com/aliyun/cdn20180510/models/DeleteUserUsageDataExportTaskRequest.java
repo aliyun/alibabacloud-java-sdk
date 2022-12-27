@@ -7,6 +7,7 @@ public class DeleteUserUsageDataExportTaskRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The ID of the export task that you want to delete.
     @NameInMap("TaskId")
     public String taskId;
 

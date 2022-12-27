@@ -4,9 +4,11 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class BatchDeleteCdnDomainConfigRequest extends TeaModel {
+    // The accelerated domain names whose configurations you want to delete. Separate accelerated domain names with commas (,).
     @NameInMap("DomainNames")
     public String domainNames;
 
+    // The names of the features that you want to manage. Separate feature names with commas (,).
     @NameInMap("FunctionNames")
     public String functionNames;
 
