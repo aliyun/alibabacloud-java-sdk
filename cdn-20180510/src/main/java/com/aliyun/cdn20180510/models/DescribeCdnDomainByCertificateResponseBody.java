@@ -4,9 +4,11 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnDomainByCertificateResponseBody extends TeaModel {
+    // The information about the SSL certificate.
     @NameInMap("CertInfos")
     public DescribeCdnDomainByCertificateResponseBodyCertInfos certInfos;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,30 +34,45 @@ public class DescribeCdnDomainByCertificateResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnDomainByCertificateResponseBodyCertInfosCertInfo extends TeaModel {
+        // Indicates whether the SSL certificate is obsolete. Valid values:
+        // 
+        // *   **yes**: The SSL certificate is obsolete.
+        // *   **no**: The SSL certificate is working as expected.
         @NameInMap("CertCaIsLegacy")
         public String certCaIsLegacy;
 
+        // The time when the SSL certificate expires.
         @NameInMap("CertExpireTime")
         public String certExpireTime;
 
+        // Indicates whether the SSL certificate is expired. Valid values:
+        // 
+        // *   **yes**: The SSL certificate is expired.
+        // *   **no**: The SSL certificate is not expired.
         @NameInMap("CertExpired")
         public String certExpired;
 
+        // The time when the SSL certificate became effective.
         @NameInMap("CertStartTime")
         public String certStartTime;
 
+        // The name of the SSL certificate owner.
         @NameInMap("CertSubjectCommonName")
         public String certSubjectCommonName;
 
+        // The type of the certificate. Valid responses: **RSA**, **DSA**, and **ECDSA**.
         @NameInMap("CertType")
         public String certType;
 
+        // If a value is returned, the value matches the SSL certificate. Multiple domain names are separated with commas (,).
         @NameInMap("DomainList")
         public String domainList;
 
+        // The domain names (DNS fields) that match the SSL certificate. Multiple domain names are separated with commas (,).
         @NameInMap("DomainNames")
         public String domainNames;
 
+        // The certificate authority that issued the SSL certificate.
         @NameInMap("Issuer")
         public String issuer;
 

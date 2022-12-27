@@ -4,9 +4,11 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserTagsResponseBody extends TeaModel {
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The list of tags returned.
     @NameInMap("Tags")
     public java.util.List<DescribeUserTagsResponseBodyTags> tags;
 
@@ -32,9 +34,11 @@ public class DescribeUserTagsResponseBody extends TeaModel {
     }
 
     public static class DescribeUserTagsResponseBodyTags extends TeaModel {
+        // The key of the tag.
         @NameInMap("Key")
         public String key;
 
+        // The list of tag value.
         @NameInMap("Value")
         public java.util.List<String> value;
 

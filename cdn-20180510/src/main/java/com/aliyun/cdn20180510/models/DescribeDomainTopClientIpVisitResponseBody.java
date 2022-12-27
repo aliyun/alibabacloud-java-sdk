@@ -4,9 +4,11 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainTopClientIpVisitResponseBody extends TeaModel {
+    // A list of client IP addresses.
     @NameInMap("ClientIpList")
     public java.util.List<DescribeDomainTopClientIpVisitResponseBodyClientIpList> clientIpList;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +34,19 @@ public class DescribeDomainTopClientIpVisitResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainTopClientIpVisitResponseBodyClientIpList extends TeaModel {
+        // The total number of requests.
         @NameInMap("Acc")
         public Long acc;
 
+        // The client IP address returned. Only IPv4 addressed are supported.
         @NameInMap("ClientIp")
         public String clientIp;
 
+        // The ranking of the client IP address returned.
         @NameInMap("Rank")
         public Integer rank;
 
+        // The total amount of network traffic consumed. Unit: bytes.
         @NameInMap("Traffic")
         public Long traffic;
 

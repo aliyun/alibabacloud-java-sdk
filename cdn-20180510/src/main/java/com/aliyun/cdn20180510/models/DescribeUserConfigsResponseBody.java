@@ -7,6 +7,7 @@ public class DescribeUserConfigsResponseBody extends TeaModel {
     @NameInMap("Configs")
     public DescribeUserConfigsResponseBodyConfigs configs;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

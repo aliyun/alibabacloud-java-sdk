@@ -4,30 +4,38 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class CreateCdnCertificateSigningRequestRequest extends TeaModel {
+    // The city to which the organization belongs. Default value: Hangzhou.
     @NameInMap("City")
     public String city;
 
+    // The Common Name of the SSL certificate.
     @NameInMap("CommonName")
     public String commonName;
 
+    // The country to which the organization belongs. Default value: CN.
     @NameInMap("Country")
     public String country;
 
+    // The email address that can be used to contact the organization.
     @NameInMap("Email")
     public String email;
 
+    // The name of the organization. Default value: Alibaba Inc.
     @NameInMap("Organization")
     public String organization;
 
+    // The name of the organization unit. Default value: Aliyun CDN.
     @NameInMap("OrganizationUnit")
     public String organizationUnit;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The Subject Alternative Name (SAN) extension of the SSL certificate. This extension is used to add domain names to the certificate. Separate multiple domain names with commas (,).
     @NameInMap("SANs")
     public String SANs;
 
+    // The provincial district to which the organization belongs. Default value: Zhejiang.
     @NameInMap("State")
     public String state;
 

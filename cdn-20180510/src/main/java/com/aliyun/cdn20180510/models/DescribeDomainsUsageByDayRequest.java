@@ -4,15 +4,22 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainsUsageByDayRequest extends TeaModel {
+    // The accelerated domain name. You can specify only one domain name.
+    // 
+    // If you do not specify an accelerated domain name, the monitoring data of all accelerated domain names that belong to your account is queried.
     @NameInMap("DomainName")
     public String domainName;
 
+    // The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.
+    // 
+    // >  The end time must be later than the start time.
     @NameInMap("EndTime")
     public String endTime;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The start of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.
     @NameInMap("StartTime")
     public String startTime;
 

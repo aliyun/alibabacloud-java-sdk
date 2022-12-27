@@ -4,9 +4,11 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class ListRealtimeLogDeliveryInfosResponseBody extends TeaModel {
+    // The content of the log entry.
     @NameInMap("Content")
     public ListRealtimeLogDeliveryInfosResponseBodyContent content;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +34,15 @@ public class ListRealtimeLogDeliveryInfosResponseBody extends TeaModel {
     }
 
     public static class ListRealtimeLogDeliveryInfosResponseBodyContentRealtimeLogDeliveryInfos extends TeaModel {
+        // The name of the Logstore that collects log data from Alibaba Cloud Content Delivery Network (CDN) in real time.
         @NameInMap("Logstore")
         public String logstore;
 
+        // The name of the Log Service project that is used for real-time log delivery.
         @NameInMap("Project")
         public String project;
 
+        // The ID of the region where the Log Service project is deployed. For more information, see [Regions that support real-time log delivery](~~144883~~).
         @NameInMap("Region")
         public String region;
 

@@ -4,21 +4,27 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainSrcBpsDataResponseBody extends TeaModel {
+    // The time interval between the data entries returned. Unit: seconds.
     @NameInMap("DataInterval")
     public String dataInterval;
 
+    // The accelerated domain name.
     @NameInMap("DomainName")
     public String domainName;
 
+    // The end of the time range that was queried.
     @NameInMap("EndTime")
     public String endTime;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The bandwidth value at each time interval. Unit: bit/s.
     @NameInMap("SrcBpsDataPerInterval")
     public DescribeDomainSrcBpsDataResponseBodySrcBpsDataPerInterval srcBpsDataPerInterval;
 
+    // The beginning of the time range that was queried.
     @NameInMap("StartTime")
     public String startTime;
 
@@ -76,12 +82,15 @@ public class DescribeDomainSrcBpsDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainSrcBpsDataResponseBodySrcBpsDataPerIntervalDataModule extends TeaModel {
+        // The bandwidth values of HTTPS requests.
         @NameInMap("HttpsValue")
         public String httpsValue;
 
+        // The timestamp of the data returned.
         @NameInMap("TimeStamp")
         public String timeStamp;
 
+        // The bandwidth value.
         @NameInMap("Value")
         public String value;
 

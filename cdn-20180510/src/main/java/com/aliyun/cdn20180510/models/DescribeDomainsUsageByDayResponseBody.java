@@ -4,24 +4,31 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainsUsageByDayResponseBody extends TeaModel {
+    // The time interval between the data entries. Unit: seconds.
     @NameInMap("DataInterval")
     public String dataInterval;
 
+    // The information about the accelerated domain name.
     @NameInMap("DomainName")
     public String domainName;
 
+    // The end of the time range that was queried.
     @NameInMap("EndTime")
     public String endTime;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The start of the time range that was queried.
     @NameInMap("StartTime")
     public String startTime;
 
+    // The monitoring data collected at each time interval.
     @NameInMap("UsageByDays")
     public DescribeDomainsUsageByDayResponseBodyUsageByDays usageByDays;
 
+    // The summarized monitoring data.
     @NameInMap("UsageTotal")
     public DescribeDomainsUsageByDayResponseBodyUsageTotal usageTotal;
 
@@ -87,33 +94,43 @@ public class DescribeDomainsUsageByDayResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainsUsageByDayResponseBodyUsageByDaysUsageByDay extends TeaModel {
+        // The cache hit ratio that is calculated based on bytes. The cache hit ratio is measured in percentage.
         @NameInMap("BytesHitRate")
         public String bytesHitRate;
 
+        // The peak bandwidth value. Unit: bit/s.
         @NameInMap("MaxBps")
         public String maxBps;
 
+        // The time when the bandwidth reached the peak value.
         @NameInMap("MaxBpsTime")
         public String maxBpsTime;
 
+        // The peak bandwidth value during back-to-origin routing. Unit: bit/s.
         @NameInMap("MaxSrcBps")
         public String maxSrcBps;
 
+        // The time when the bandwidth during back-to-origin routing reached the peak value.
         @NameInMap("MaxSrcBpsTime")
         public String maxSrcBpsTime;
 
+        // The number of queries per second (QPS).
         @NameInMap("Qps")
         public String qps;
 
+        // The cache hit ratio that is calculated based on requests. The cache hit ratio is measured in percentage.
         @NameInMap("RequestHitRate")
         public String requestHitRate;
 
+        // The timestamp of the data returned.
         @NameInMap("TimeStamp")
         public String timeStamp;
 
+        // The total amount of requests.
         @NameInMap("TotalAccess")
         public String totalAccess;
 
+        // The total amount of network traffic. Unit: bytes.
         @NameInMap("TotalTraffic")
         public String totalTraffic;
 
@@ -224,27 +241,35 @@ public class DescribeDomainsUsageByDayResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainsUsageByDayResponseBodyUsageTotal extends TeaModel {
+        // The cache hit ratio that is calculated based on bytes. The cache hit ratio is measured in percentage.
         @NameInMap("BytesHitRate")
         public String bytesHitRate;
 
+        // The peak bandwidth value. Unit: bit/s.
         @NameInMap("MaxBps")
         public String maxBps;
 
+        // The time when the bandwidth reached the peak value.
         @NameInMap("MaxBpsTime")
         public String maxBpsTime;
 
+        // The peak bandwidth value during back-to-origin routing. Unit: bit/s.
         @NameInMap("MaxSrcBps")
         public String maxSrcBps;
 
+        // The time when the bandwidth during back-to-origin routing reached the peak value.
         @NameInMap("MaxSrcBpsTime")
         public String maxSrcBpsTime;
 
+        // The cache hit ratio that is calculated based on requests. The cache hit ratio is measured in percentage.
         @NameInMap("RequestHitRate")
         public String requestHitRate;
 
+        // The total number of requests.
         @NameInMap("TotalAccess")
         public String totalAccess;
 
+        // The total amount of network traffic. Unit: bytes.
         @NameInMap("TotalTraffic")
         public String totalTraffic;
 

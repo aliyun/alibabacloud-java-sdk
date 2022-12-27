@@ -4,9 +4,11 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class ListFCTriggerRequest extends TeaModel {
+    // The name of the event for which the Function Compute trigger is set. You can specify only one name.
     @NameInMap("EventMetaName")
     public String eventMetaName;
 
+    // The version number of the event. You can specify only one version number.
     @NameInMap("EventMetaVersion")
     public String eventMetaVersion;
 

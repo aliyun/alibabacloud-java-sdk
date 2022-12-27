@@ -4,6 +4,7 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnOrderCommodityCodeRequest extends TeaModel {
+    // The original commodity code.
     @NameInMap("CommodityCode")
     public String commodityCode;
 

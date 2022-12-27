@@ -7,6 +7,7 @@ public class DeleteUsageDetailDataExportTaskRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The ID of the task. You can call the [DescribeUserUsageDataExportTask](~~91062~~) operation to query the most recent task list.
     @NameInMap("TaskId")
     public String taskId;
 

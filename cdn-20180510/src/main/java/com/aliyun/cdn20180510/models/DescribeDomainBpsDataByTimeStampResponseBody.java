@@ -4,15 +4,19 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainBpsDataByTimeStampResponseBody extends TeaModel {
+    // A list of bandwidth values queried by ISP and region.
     @NameInMap("BpsDataList")
     public DescribeDomainBpsDataByTimeStampResponseBodyBpsDataList bpsDataList;
 
+    // The accelerated domain name.
     @NameInMap("DomainName")
     public String domainName;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The timestamp of the data.
     @NameInMap("TimeStamp")
     public String timeStamp;
 
@@ -54,15 +58,19 @@ public class DescribeDomainBpsDataByTimeStampResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainBpsDataByTimeStampResponseBodyBpsDataListBpsDataModel extends TeaModel {
+        // The bandwidth value.
         @NameInMap("Bps")
         public Long bps;
 
+        // The name of the ISP for your Content Delivery Network (CDN) service.
         @NameInMap("IspName")
         public String ispName;
 
+        // The name of the region.
         @NameInMap("LocationName")
         public String locationName;
 
+        // The timestamp of the data.
         @NameInMap("TimeStamp")
         public String timeStamp;
 

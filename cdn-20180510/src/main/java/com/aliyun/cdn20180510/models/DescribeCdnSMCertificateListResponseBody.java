@@ -4,9 +4,11 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnSMCertificateListResponseBody extends TeaModel {
+    // The type of the certificate information.
     @NameInMap("CertificateListModel")
     public DescribeCdnSMCertificateListResponseBodyCertificateListModel certificateListModel;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +34,19 @@ public class DescribeCdnSMCertificateListResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnSMCertificateListResponseBodyCertificateListModelCertListCert extends TeaModel {
+        // The ID of the certificate.
         @NameInMap("CertIdentifier")
         public String certIdentifier;
 
+        // The name of the certificate.
         @NameInMap("CertName")
         public String certName;
 
+        // The common name of the certificate.
         @NameInMap("Common")
         public String common;
 
+        // The certificate authority (CA) that issued the certificate.
         @NameInMap("Issuer")
         public String issuer;
 
@@ -103,9 +109,11 @@ public class DescribeCdnSMCertificateListResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnSMCertificateListResponseBodyCertificateListModel extends TeaModel {
+        // A list of certificates.
         @NameInMap("CertList")
         public DescribeCdnSMCertificateListResponseBodyCertificateListModelCertList certList;
 
+        // The number of certificates that are returned.
         @NameInMap("Count")
         public Integer count;
 

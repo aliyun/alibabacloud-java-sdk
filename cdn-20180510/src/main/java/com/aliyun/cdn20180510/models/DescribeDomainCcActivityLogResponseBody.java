@@ -4,18 +4,23 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainCcActivityLogResponseBody extends TeaModel {
+    // The log entry of the event that triggered rate limiting.
     @NameInMap("ActivityLog")
     public java.util.List<DescribeDomainCcActivityLogResponseBodyActivityLog> activityLog;
 
+    // The page number of the returned page.
     @NameInMap("PageIndex")
     public Long pageIndex;
 
+    // The number of entries returned per page.
     @NameInMap("PageSize")
     public Long pageSize;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The total number of entries returned.
     @NameInMap("Total")
     public Long total;
 
@@ -65,24 +70,31 @@ public class DescribeDomainCcActivityLogResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainCcActivityLogResponseBodyActivityLog extends TeaModel {
+        // The action that was triggered.
         @NameInMap("Action")
         public String action;
 
+        // The accelerated domain name.
         @NameInMap("DomainName")
         public String domainName;
 
+        // The name of the rule that was triggered
         @NameInMap("RuleName")
         public String ruleName;
 
+        // The timestamp of the data.
         @NameInMap("TimeStamp")
         public String timeStamp;
 
+        // The object that triggered rate limiting.
         @NameInMap("TriggerObject")
         public String triggerObject;
 
+        // The period of time that rate limiting remains effective.
         @NameInMap("Ttl")
         public Long ttl;
 
+        // The value of the object that triggered rate limiting.
         @NameInMap("Value")
         public String value;
 

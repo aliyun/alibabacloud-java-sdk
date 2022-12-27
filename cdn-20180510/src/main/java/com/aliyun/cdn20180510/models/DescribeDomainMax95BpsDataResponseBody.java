@@ -4,6 +4,7 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainMax95BpsDataResponseBody extends TeaModel {
+    // The accelerated domain name.
     @NameInMap("DomainName")
     public String domainName;
 
@@ -19,6 +20,7 @@ public class DescribeDomainMax95BpsDataResponseBody extends TeaModel {
     @NameInMap("OverseasMax95Bps")
     public String overseasMax95Bps;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,9 +4,11 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeTagResourcesResponseBody extends TeaModel {
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The tags that are attached to the specified resource.
     @NameInMap("TagResources")
     public java.util.List<DescribeTagResourcesResponseBodyTagResources> tagResources;
 
@@ -32,9 +34,11 @@ public class DescribeTagResourcesResponseBody extends TeaModel {
     }
 
     public static class DescribeTagResourcesResponseBodyTagResourcesTag extends TeaModel {
+        // The key of the tag.
         @NameInMap("Key")
         public String key;
 
+        // The value of the tag.
         @NameInMap("Value")
         public String value;
 
@@ -62,9 +66,11 @@ public class DescribeTagResourcesResponseBody extends TeaModel {
     }
 
     public static class DescribeTagResourcesResponseBodyTagResources extends TeaModel {
+        // The ID of the resource.
         @NameInMap("ResourceId")
         public String resourceId;
 
+        // The key-value pair of the tag.
         @NameInMap("Tag")
         public java.util.List<DescribeTagResourcesResponseBodyTagResourcesTag> tag;
 

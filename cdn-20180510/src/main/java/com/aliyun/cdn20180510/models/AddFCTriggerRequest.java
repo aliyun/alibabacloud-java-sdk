@@ -4,27 +4,35 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class AddFCTriggerRequest extends TeaModel {
+    // The name of the event.
     @NameInMap("EventMetaName")
     public String eventMetaName;
 
+    // The version of the event.
     @NameInMap("EventMetaVersion")
     public String eventMetaVersion;
 
+    // The feature trigger.
     @NameInMap("FunctionARN")
     public String functionARN;
 
+    // The remarks.
     @NameInMap("Notes")
     public String notes;
 
+    // 用户ID。
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The assigned Resource Access Management (RAM) role.
     @NameInMap("RoleARN")
     public String roleARN;
 
+    // The resources and filters for event listening.
     @NameInMap("SourceARN")
     public String sourceARN;
 
+    // The trigger that corresponds to the Function Compute service.
     @NameInMap("TriggerARN")
     public String triggerARN;
 

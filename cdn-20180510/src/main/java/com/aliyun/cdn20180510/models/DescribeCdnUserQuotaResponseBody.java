@@ -4,33 +4,43 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnUserQuotaResponseBody extends TeaModel {
+    // The maximum number of URLs and directories that can be blocked.
     @NameInMap("BlockQuota")
     public Integer blockQuota;
 
+    // The remaining number of URLs and directories that can be blocked.
     @NameInMap("BlockRemain")
     public Integer blockRemain;
 
+    // The maximum number of accelerated domain names that can be added to Alibaba Cloud CDN.
     @NameInMap("DomainQuota")
     public Integer domainQuota;
 
+    // The maximum number of URLs that can be prefetched.
     @NameInMap("PreloadQuota")
     public Integer preloadQuota;
 
+    // The remaining number of URLs that can be prefetched.
     @NameInMap("PreloadRemain")
     public Integer preloadRemain;
 
+    // The maximum number of directories that can be refreshed.
     @NameInMap("RefreshDirQuota")
     public Integer refreshDirQuota;
 
+    // The remaining number of directories that can be refreshed.
     @NameInMap("RefreshDirRemain")
     public Integer refreshDirRemain;
 
+    // The maximum number of URLs that can be refreshed.
     @NameInMap("RefreshUrlQuota")
     public Integer refreshUrlQuota;
 
+    // The remaining number of URLs that can be refreshed.
     @NameInMap("RefreshUrlRemain")
     public Integer refreshUrlRemain;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,6 +4,7 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class StartCdnDomainRequest extends TeaModel {
+    // The domain name that you want to enable. You can specify only one domain name.
     @NameInMap("DomainName")
     public String domainName;
 

@@ -4,12 +4,15 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnDomainStagingConfigResponseBody extends TeaModel {
+    // The configurations of the domain name.
     @NameInMap("DomainConfigs")
     public java.util.List<DescribeCdnDomainStagingConfigResponseBodyDomainConfigs> domainConfigs;
 
+    // The accelerated domain name.
     @NameInMap("DomainName")
     public String domainName;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,9 +46,11 @@ public class DescribeCdnDomainStagingConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnDomainStagingConfigResponseBodyDomainConfigsFunctionArgs extends TeaModel {
+        // The name of the configuration.
         @NameInMap("ArgName")
         public String argName;
 
+        // The value of the configuration.
         @NameInMap("ArgValue")
         public String argValue;
 
@@ -73,18 +78,30 @@ public class DescribeCdnDomainStagingConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnDomainStagingConfigResponseBodyDomainConfigs extends TeaModel {
+        // The ID of the configuration.
         @NameInMap("ConfigId")
         public String configId;
 
+        // The description of each feature.
         @NameInMap("FunctionArgs")
         public java.util.List<DescribeCdnDomainStagingConfigResponseBodyDomainConfigsFunctionArgs> functionArgs;
 
+        // The name of the feature.
         @NameInMap("FunctionName")
         public String functionName;
 
+        // The ID of the rule condition. This parameter is optional. To create a rule condition, you can configure the **condition** feature that is described in the [BatchSetCdnDomainConfig and SetCdnDomainStagingConfig](~~388460~~) topic. A rule condition can identify parameters that are included in requests and filter requests based on the identified parameters. Each rule condition has a [ConfigId](~~388994~~). You can use ConfigId as ParentId that is referenced by other features. This way, you can combine rule conditions and features for flexible configurations.
+        // 
+        // For more information, see [BatchSetCdnDomainConfig](~~90915~~) or ParentId configuration example in this topic.
         @NameInMap("ParentId")
         public String parentId;
 
+        // The status of the configuration. Valid values:
+        // 
+        // *   **testing**: being verified
+        // *   **configuring**: being configured
+        // *   **success**: configured
+        // *   **failed**: failed
         @NameInMap("Status")
         public String status;
 

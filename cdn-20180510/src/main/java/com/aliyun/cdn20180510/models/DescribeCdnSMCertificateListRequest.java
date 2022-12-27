@@ -4,6 +4,7 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnSMCertificateListRequest extends TeaModel {
+    // The accelerated domain name. You can specify only one domain name in each request.
     @NameInMap("DomainName")
     public String domainName;
 

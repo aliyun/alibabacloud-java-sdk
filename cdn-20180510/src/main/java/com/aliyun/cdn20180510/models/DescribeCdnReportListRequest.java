@@ -7,6 +7,7 @@ public class DescribeCdnReportListRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The ID of the operations report that you want to query. If you do not specify an ID, all operations reports are queried.
     @NameInMap("ReportId")
     public Long reportId;
 

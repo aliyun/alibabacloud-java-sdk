@@ -4,21 +4,27 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainAverageResponseTimeResponseBody extends TeaModel {
+    // The average response time collected at each time interval.
     @NameInMap("AvgRTPerInterval")
     public DescribeDomainAverageResponseTimeResponseBodyAvgRTPerInterval avgRTPerInterval;
 
+    // The time interval between the data entries returned.
     @NameInMap("DataInterval")
     public String dataInterval;
 
+    // The accelerated domain name.
     @NameInMap("DomainName")
     public String domainName;
 
+    // The end of the time range during which data was queried.
     @NameInMap("EndTime")
     public String endTime;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The beginning of the time range during which data was queried.
     @NameInMap("StartTime")
     public String startTime;
 
@@ -76,9 +82,11 @@ public class DescribeDomainAverageResponseTimeResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainAverageResponseTimeResponseBodyAvgRTPerIntervalDataModule extends TeaModel {
+        // The timestamp of the returned data.
         @NameInMap("TimeStamp")
         public String timeStamp;
 
+        // The average response time.
         @NameInMap("Value")
         public String value;
 

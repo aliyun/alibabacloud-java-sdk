@@ -4,12 +4,15 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainHttpCodeDataByLayerResponseBody extends TeaModel {
+    // The time interval between the data entries returned. Unit: seconds.
     @NameInMap("DataInterval")
     public String dataInterval;
 
+    // The number of HTTP status codes returned at each time interval.
     @NameInMap("HttpCodeDataInterval")
     public DescribeDomainHttpCodeDataByLayerResponseBodyHttpCodeDataInterval httpCodeDataInterval;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,12 +46,15 @@ public class DescribeDomainHttpCodeDataByLayerResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainHttpCodeDataByLayerResponseBodyHttpCodeDataIntervalDataModule extends TeaModel {
+        // The timestamp of the data returned.
         @NameInMap("TimeStamp")
         public String timeStamp;
 
+        // The total number of times that HTTP status codes were returned at each time interval.
         @NameInMap("TotalValue")
         public String totalValue;
 
+        // The number of times that the HTTP status code was returned.
         @NameInMap("Value")
         public String value;
 

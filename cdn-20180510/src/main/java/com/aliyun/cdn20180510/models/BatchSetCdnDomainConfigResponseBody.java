@@ -4,9 +4,11 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class BatchSetCdnDomainConfigResponseBody extends TeaModel {
+    // The list of domain configurations.
     @NameInMap("DomainConfigList")
     public BatchSetCdnDomainConfigResponseBodyDomainConfigList domainConfigList;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +34,15 @@ public class BatchSetCdnDomainConfigResponseBody extends TeaModel {
     }
 
     public static class BatchSetCdnDomainConfigResponseBodyDomainConfigListDomainConfigModel extends TeaModel {
+        // The ID of the configuration.
         @NameInMap("ConfigId")
         public Long configId;
 
+        // The domain name.
         @NameInMap("DomainName")
         public String domainName;
 
+        // The name of the feature.
         @NameInMap("FunctionName")
         public String functionName;
 

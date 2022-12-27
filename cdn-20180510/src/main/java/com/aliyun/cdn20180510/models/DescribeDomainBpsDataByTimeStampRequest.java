@@ -4,18 +4,28 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainBpsDataByTimeStampRequest extends TeaModel {
+    // The accelerated domain name. You can specify only one domain name in each query.
     @NameInMap("DomainName")
     public String domainName;
 
+    // The names of the Internet service providers (ISPs). Separate multiple ISP names with commas (,).
+    // 
+    // You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query regions.
     @NameInMap("IspNames")
     public String ispNames;
 
+    // The names of the regions. Separate multiple regions with commas (,).
+    // 
+    // You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query regions.
     @NameInMap("LocationNames")
     public String locationNames;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The beginning of the time range that was queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.
+    // 
+    // The data is collected at an interval of five minutes.
     @NameInMap("TimePoint")
     public String timePoint;
 

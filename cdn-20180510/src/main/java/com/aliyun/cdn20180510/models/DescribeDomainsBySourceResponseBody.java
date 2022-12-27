@@ -4,12 +4,15 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainsBySourceResponseBody extends TeaModel {
+    // The domain names corresponding to each origin server. The data is indicated by the DomainsData parameter. Data type: array.
     @NameInMap("DomainsList")
     public DescribeDomainsBySourceResponseBodyDomainsList domainsList;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The origin servers.
     @NameInMap("Sources")
     public String sources;
 
@@ -43,21 +46,39 @@ public class DescribeDomainsBySourceResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainsBySourceResponseBodyDomainsListDomainsDataDomainInfosDomainInfo extends TeaModel {
+        // The workload type of the accelerated domain name. Valid values:
+        // 
+        // *   **web**: images and small files.
+        // *   **download**: large files.
+        // *   **video**: on-demand video and audio streaming.
         @NameInMap("CdnType")
         public String cdnType;
 
+        // The time when the domain name was added to Alibaba Cloud CDN.
         @NameInMap("CreateTime")
         public String createTime;
 
+        // The CNAME assigned to the domain name.
         @NameInMap("DomainCname")
         public String domainCname;
 
+        // The domain name.
         @NameInMap("DomainName")
         public String domainName;
 
+        // The status of the accelerated domain name. Valid values:
+        // 
+        // *   **applying**: The domain name is under review.
+        // *   **configure_failed**: The domain name failed the review.
+        // *   **configuring**: The domain name is being configured.
+        // *   **online**: The domain name is working as expected.
+        // *   **stopping**: The domain name is being stopped.
+        // *   **offline**: The domain name is disabled.
+        // *   **disabling**: The domain name is being disabled.
         @NameInMap("Status")
         public String status;
 
+        // The time when the configuration was updated.
         @NameInMap("UpdateTime")
         public String updateTime;
 
@@ -155,12 +176,15 @@ public class DescribeDomainsBySourceResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainsBySourceResponseBodyDomainsListDomainsData extends TeaModel {
+        // The detailed information about the domain name. The data is indicated by the domainInfo parameter. Data type: array.
         @NameInMap("DomainInfos")
         public DescribeDomainsBySourceResponseBodyDomainsListDomainsDataDomainInfos domainInfos;
 
+        // The domain names that correspond to each origin server. The domain name is indicated by the domainNames parameter.
         @NameInMap("Domains")
         public DescribeDomainsBySourceResponseBodyDomainsListDomainsDataDomains domains;
 
+        // An origin server.
         @NameInMap("Source")
         public String source;
 

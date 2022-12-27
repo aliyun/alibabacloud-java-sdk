@@ -4,6 +4,7 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainRealtimeLogDeliveryRequest extends TeaModel {
+    // The accelerated domain name for which real-time log delivery is enabled. Only one domain name is supported.
     @NameInMap("Domain")
     public String domain;
 

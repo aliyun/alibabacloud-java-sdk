@@ -4,9 +4,11 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnUserBillHistoryResponseBody extends TeaModel {
+    // The billing history returned.
     @NameInMap("BillHistoryData")
     public DescribeCdnUserBillHistoryResponseBodyBillHistoryData billHistoryData;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +34,37 @@ public class DescribeCdnUserBillHistoryResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItemBillingDataBillingDataItem extends TeaModel {
+        // The bandwidth. Unit: bit/s.
         @NameInMap("Bandwidth")
         public Float bandwidth;
 
+        // The billable region. Valid values:
+        // 
+        // *   **CN**: mainland China
+        // *   **OverSeas**: regions outside mainland China
+        // *   **AP1**: Asia Pacific 1
+        // *   **AP2**: Asia Pacific 2
+        // *   **AP3**: Asia Pacific 3
+        // *   **NA**: North America
+        // *   **SA**: South America
+        // *   **EU**: Europe
+        // *   **MEAA**: Middle East and Africa
         @NameInMap("CdnRegion")
         public String cdnRegion;
 
+        // The billable item. Valid values:
+        // 
+        // *   **StaticHttp**: static HTTP requests
+        // *   **DynamicHttp**: dynamic HTTP requests
+        // *   **DynamicHttps**: dynamic HTTPS requests
         @NameInMap("ChargeType")
         public String chargeType;
 
+        // The number of requests.
         @NameInMap("Count")
         public Float count;
 
+        // The amount of network traffic. Unit: bytes.
         @NameInMap("Flow")
         public Float flow;
 
@@ -114,15 +135,19 @@ public class DescribeCdnUserBillHistoryResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItem extends TeaModel {
+        // The beginning of the time range that was queried.
         @NameInMap("BillTime")
         public String billTime;
 
+        // The billing method.
         @NameInMap("BillType")
         public String billType;
 
+        // The billable items.
         @NameInMap("BillingData")
         public DescribeCdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItemBillingData billingData;
 
+        // The dimension.
         @NameInMap("Dimension")
         public String dimension;
 

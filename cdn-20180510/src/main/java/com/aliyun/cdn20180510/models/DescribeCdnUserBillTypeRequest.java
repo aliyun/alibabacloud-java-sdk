@@ -4,12 +4,22 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnUserBillTypeRequest extends TeaModel {
+    // The end of the time range that was queried.
+    // 
+    // Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+    // 
+    // Example: 2016-10-20T04:00:00Z.
     @NameInMap("EndTime")
     public String endTime;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The start of the time range that was queried.
+    // 
+    // Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+    // 
+    // Example: 2016-10-20T04:00:00Z.
     @NameInMap("StartTime")
     public String startTime;
 

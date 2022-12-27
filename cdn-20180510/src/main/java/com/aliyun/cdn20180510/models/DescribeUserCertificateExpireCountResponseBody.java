@@ -4,12 +4,15 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserCertificateExpireCountResponseBody extends TeaModel {
+    // The number of domain names whose SSL certificates are about to expires within 30 days.
     @NameInMap("ExpireWithin30DaysCount")
     public Integer expireWithin30DaysCount;
 
+    // The number of domain names whose SSL certificates have already expired.
     @NameInMap("ExpiredCount")
     public Integer expiredCount;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

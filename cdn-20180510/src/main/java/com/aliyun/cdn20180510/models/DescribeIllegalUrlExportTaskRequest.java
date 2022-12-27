@@ -7,6 +7,7 @@ public class DescribeIllegalUrlExportTaskRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The ID of the task. You can call the [CreateIllegalUrlExportTask](~~156492~~) operation to query task IDs.
     @NameInMap("TaskId")
     public String taskId;
 

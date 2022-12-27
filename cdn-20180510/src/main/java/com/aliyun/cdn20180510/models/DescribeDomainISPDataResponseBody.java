@@ -4,21 +4,27 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainISPDataResponseBody extends TeaModel {
+    // The time interval between the data entries. Unit: seconds.
     @NameInMap("DataInterval")
     public String dataInterval;
 
+    // The accelerated domain name.
     @NameInMap("DomainName")
     public String domainName;
 
+    // The end of the time range that was queried.
     @NameInMap("EndTime")
     public String endTime;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The beginning of the time range that was queried.
     @NameInMap("StartTime")
     public String startTime;
 
+    // The access statistics by ISP.
     @NameInMap("Value")
     public DescribeDomainISPDataResponseBodyValue value;
 
@@ -76,39 +82,51 @@ public class DescribeDomainISPDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainISPDataResponseBodyValueISPProportionData extends TeaModel {
+        // The average response size. Unit: bytes.
         @NameInMap("AvgObjectSize")
         public String avgObjectSize;
 
+        // The average response speed. Unit: byte/ms.
         @NameInMap("AvgResponseRate")
         public String avgResponseRate;
 
+        // The average response time. Unit: milliseconds.
         @NameInMap("AvgResponseTime")
         public String avgResponseTime;
 
+        // The bandwidth value.
         @NameInMap("Bps")
         public String bps;
 
+        // The proportion of network traffic.
         @NameInMap("BytesProportion")
         public String bytesProportion;
 
+        // The information about the ISP.
         @NameInMap("ISP")
         public String ISP;
 
+        // The name of the ISP.
         @NameInMap("IspEname")
         public String ispEname;
 
+        // The proportion of the HTTP status code.
         @NameInMap("Proportion")
         public String proportion;
 
+        // The number of queries per second.
         @NameInMap("Qps")
         public String qps;
 
+        // The request error rate.
         @NameInMap("ReqErrRate")
         public String reqErrRate;
 
+        // The total amount of network traffic.
         @NameInMap("TotalBytes")
         public String totalBytes;
 
+        // The total number of requests.
         @NameInMap("TotalQuery")
         public String totalQuery;
 

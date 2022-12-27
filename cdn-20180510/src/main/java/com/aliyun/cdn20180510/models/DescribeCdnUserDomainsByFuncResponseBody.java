@@ -4,18 +4,23 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnUserDomainsByFuncResponseBody extends TeaModel {
+    // The configurations of the accelerated domain name.
     @NameInMap("Domains")
     public DescribeCdnUserDomainsByFuncResponseBodyDomains domains;
 
+    // The page number of the returned page.
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    // The number of entries returned per page.
     @NameInMap("PageSize")
     public Long pageSize;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The total number of entries returned.
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -65,18 +70,23 @@ public class DescribeCdnUserDomainsByFuncResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnUserDomainsByFuncResponseBodyDomainsPageDataSourcesSource extends TeaModel {
+        // The address of the origin server.
         @NameInMap("Content")
         public String content;
 
+        // The port of the origin server.
         @NameInMap("Port")
         public Integer port;
 
+        // The priority of the configuration item.
         @NameInMap("Priority")
         public String priority;
 
+        // The type of the origin server.
         @NameInMap("Type")
         public String type;
 
+        // The weight of the origin server if multiple origin servers have been specified.
         @NameInMap("Weight")
         public String weight;
 
@@ -147,33 +157,60 @@ public class DescribeCdnUserDomainsByFuncResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnUserDomainsByFuncResponseBodyDomainsPageData extends TeaModel {
+        // The type of workload accelerated by Alibaba Cloud CDN. Valid values:
+        // 
+        // *   **web**: image and small file distribution
+        // *   **download**: large file distribution
+        // *   **video**: on-demand video and audio streaming
+        // *   **liveStream**: live streaming
         @NameInMap("CdnType")
         public String cdnType;
 
+        // The CNAME assigned to the accelerated domain name.
         @NameInMap("Cname")
         public String cname;
 
+        // The description of the status.
         @NameInMap("Description")
         public String description;
 
+        // The accelerated domain name.
         @NameInMap("DomainName")
         public String domainName;
 
+        // The status of the accelerated domain name. Valid values:
+        // 
+        // *   **online**: The domain name is enabled.
+        // *   **offline**: The domain is disabled.
+        // *   **configuring**: The endpoint group is being configured.
+        // *   **configure_failed**: The domain failed to be configured.
+        // *   **checking**: The domain name is under review.
+        // *   **check_failed**: The domain name failed the review.
+        // *   **stopping**: The domain name is be disabled.
+        // *   **deleting**: being deleted
         @NameInMap("DomainStatus")
         public String domainStatus;
 
+        // The time when the accelerated domain name was added to Alibaba Cloud CDN.
         @NameInMap("GmtCreated")
         public String gmtCreated;
 
+        // The last time when the accelerated domain was modified.
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        // The ID of the resource group.
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        // The information about the origin server.
         @NameInMap("Sources")
         public DescribeCdnUserDomainsByFuncResponseBodyDomainsPageDataSources sources;
 
+        // The status of HTTPS. Valid values:
+        // 
+        // - **on**: enabled
+        // - **off**: disabled
         @NameInMap("SslProtocol")
         public String sslProtocol;
 

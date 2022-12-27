@@ -4,9 +4,11 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnDomainStagingConfigRequest extends TeaModel {
+    // The accelerated domain name. You can specify only one domain name in each call.
     @NameInMap("DomainName")
     public String domainName;
 
+    // The list of feature names. Separate multiple values with commas (,). For more information, see [A list of features](~~388460~~).
     @NameInMap("FunctionNames")
     public String functionNames;
 

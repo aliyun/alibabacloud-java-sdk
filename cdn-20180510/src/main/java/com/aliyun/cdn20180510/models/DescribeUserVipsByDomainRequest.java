@@ -4,9 +4,14 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserVipsByDomainRequest extends TeaModel {
+    // Specifies whether to query the virtual IP addresses of only healthy CDN edge nodes. Valid values: Valid values:
+    // 
+    // *   **on**: healthy CDN edge nodes
+    // *   **off**: all CDN edge nodes
     @NameInMap("Available")
     public String available;
 
+    // The accelerated domain name. You can specify only one domain name.
     @NameInMap("DomainName")
     public String domainName;
 

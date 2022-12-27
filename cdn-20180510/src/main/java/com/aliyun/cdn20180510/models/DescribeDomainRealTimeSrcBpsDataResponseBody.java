@@ -4,21 +4,29 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainRealTimeSrcBpsDataResponseBody extends TeaModel {
+    // The time interval between the data entries returned. Unit: seconds.
+    // 
+    // The time granularity varies with the time range to query. Supported values: 60 (1 minute), 300 (5 minutes), and 3600(1 hour). For more information, see **Usage notes**.
     @NameInMap("DataInterval")
     public String dataInterval;
 
+    // The accelerated domain name.
     @NameInMap("DomainName")
     public String domainName;
 
+    // The end of the time range to query.
     @NameInMap("EndTime")
     public String endTime;
 
+    // The back-to-origin bandwidth information at each interval.
     @NameInMap("RealTimeSrcBpsDataPerInterval")
     public DescribeDomainRealTimeSrcBpsDataResponseBodyRealTimeSrcBpsDataPerInterval realTimeSrcBpsDataPerInterval;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The beginning of the time range to query.
     @NameInMap("StartTime")
     public String startTime;
 
@@ -76,9 +84,11 @@ public class DescribeDomainRealTimeSrcBpsDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainRealTimeSrcBpsDataResponseBodyRealTimeSrcBpsDataPerIntervalDataModule extends TeaModel {
+        // The timestamp of the data returned.
         @NameInMap("TimeStamp")
         public String timeStamp;
 
+        // The bandwidth during back-to-origin routing. Unit: bit/s.
         @NameInMap("Value")
         public String value;
 

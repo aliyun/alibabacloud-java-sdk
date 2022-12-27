@@ -4,21 +4,27 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainHttpCodeDataResponseBody extends TeaModel {
+    // The interval at which the monitoring data is queried.
     @NameInMap("DataInterval")
     public String dataInterval;
 
+    // The accelerated domain name.
     @NameInMap("DomainName")
     public String domainName;
 
+    // The end of the time range that was queried.
     @NameInMap("EndTime")
     public String endTime;
 
+    // The proportions of HTTP status codes at each time interval.
     @NameInMap("HttpCodeData")
     public DescribeDomainHttpCodeDataResponseBodyHttpCodeData httpCodeData;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The beginning of the time range that was queried.
     @NameInMap("StartTime")
     public String startTime;
 
@@ -76,12 +82,15 @@ public class DescribeDomainHttpCodeDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainHttpCodeDataResponseBodyHttpCodeDataUsageDataValueCodeProportionData extends TeaModel {
+        // The HTTP status code.
         @NameInMap("Code")
         public String code;
 
+        // The total number of HTTP status code returned.
         @NameInMap("Count")
         public String count;
 
+        // The proportion of the HTTP status code.
         @NameInMap("Proportion")
         public String proportion;
 
@@ -136,9 +145,11 @@ public class DescribeDomainHttpCodeDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainHttpCodeDataResponseBodyHttpCodeDataUsageData extends TeaModel {
+        // The timestamp of the data returned.
         @NameInMap("TimeStamp")
         public String timeStamp;
 
+        // The proportions of HTTP status codes.
         @NameInMap("Value")
         public DescribeDomainHttpCodeDataResponseBodyHttpCodeDataUsageDataValue value;
 

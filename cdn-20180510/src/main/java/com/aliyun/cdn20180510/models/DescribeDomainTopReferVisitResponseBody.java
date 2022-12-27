@@ -4,15 +4,19 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainTopReferVisitResponseBody extends TeaModel {
+    // The accelerated domain name.
     @NameInMap("DomainName")
     public String domainName;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The beginning of the time range that was queried.
     @NameInMap("StartTime")
     public String startTime;
 
+    // The most frequently requested web pages.
     @NameInMap("TopReferList")
     public DescribeDomainTopReferVisitResponseBodyTopReferList topReferList;
 
@@ -54,18 +58,23 @@ public class DescribeDomainTopReferVisitResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainTopReferVisitResponseBodyTopReferListReferList extends TeaModel {
+        // The amount of network traffic. Unit: bytes.
         @NameInMap("Flow")
         public String flow;
 
+        // The proportion of the amount of network traffic consumed for visiting the web page.
         @NameInMap("FlowProportion")
         public Float flowProportion;
 
+        // The URLs to the most frequently requested web pages.
         @NameInMap("ReferDetail")
         public String referDetail;
 
+        // The number of visits to the web page.
         @NameInMap("VisitData")
         public String visitData;
 
+        // The proportion of visits to the web page.
         @NameInMap("VisitProportion")
         public Float visitProportion;
 

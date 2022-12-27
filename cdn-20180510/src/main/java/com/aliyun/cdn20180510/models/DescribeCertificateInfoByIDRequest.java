@@ -4,6 +4,7 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCertificateInfoByIDRequest extends TeaModel {
+    // The ID of the SSL certificate. You can query only one certificate in each call.
     @NameInMap("CertId")
     public String certId;
 

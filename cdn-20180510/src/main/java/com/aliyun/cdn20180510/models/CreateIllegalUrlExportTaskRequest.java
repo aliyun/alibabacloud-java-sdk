@@ -7,9 +7,11 @@ public class CreateIllegalUrlExportTaskRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The name of the export task.
     @NameInMap("TaskName")
     public String taskName;
 
+    // The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-DDThh:mm:ssZ format. The finest granularity is one day.
     @NameInMap("TimePoint")
     public String timePoint;
 

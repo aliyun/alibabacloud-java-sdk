@@ -4,6 +4,7 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeIpInfoRequest extends TeaModel {
+    // The IP address that you want to query. You can specify only one IP address in each request.
     @NameInMap("IP")
     public String IP;
 

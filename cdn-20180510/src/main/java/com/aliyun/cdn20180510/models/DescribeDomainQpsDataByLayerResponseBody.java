@@ -4,24 +4,31 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainQpsDataByLayerResponseBody extends TeaModel {
+    // The time interval between the data entries returned. Unit: seconds.
     @NameInMap("DataInterval")
     public String dataInterval;
 
+    // The accelerated domain name.
     @NameInMap("DomainName")
     public String domainName;
 
+    // The end of the time range that was queried.
     @NameInMap("EndTime")
     public String endTime;
 
+    // The layer at which the data was collected.
     @NameInMap("Layer")
     public String layer;
 
+    // The number of queries per second at each time interval.
     @NameInMap("QpsDataInterval")
     public DescribeDomainQpsDataByLayerResponseBodyQpsDataInterval qpsDataInterval;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The beginning of the time range that was queried.
     @NameInMap("StartTime")
     public String startTime;
 
@@ -87,24 +94,31 @@ public class DescribeDomainQpsDataByLayerResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainQpsDataByLayerResponseBodyQpsDataIntervalDataModule extends TeaModel {
+        // The number of requests in the Chinese mainland.
         @NameInMap("AccDomesticValue")
         public String accDomesticValue;
 
+        // The number of requests in the Chinese mainland.
         @NameInMap("AccOverseasValue")
         public String accOverseasValue;
 
+        // The total number of requests.
         @NameInMap("AccValue")
         public String accValue;
 
+        // The number of queries per second in the Chinese mainland.
         @NameInMap("DomesticValue")
         public String domesticValue;
 
+        // The number of queries per second outside the Chinese mainland.
         @NameInMap("OverseasValue")
         public String overseasValue;
 
+        // The timestamp of the data returned.
         @NameInMap("TimeStamp")
         public String timeStamp;
 
+        // The total number of queries per second in all regions.
         @NameInMap("Value")
         public String value;
 

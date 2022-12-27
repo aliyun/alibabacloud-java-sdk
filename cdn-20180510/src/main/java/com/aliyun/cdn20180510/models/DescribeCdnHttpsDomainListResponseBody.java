@@ -4,12 +4,15 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnHttpsDomainListResponseBody extends TeaModel {
+    // The information about the SSL certificate.
     @NameInMap("CertInfos")
     public DescribeCdnHttpsDomainListResponseBodyCertInfos certInfos;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The total number of entries returned.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -43,27 +46,44 @@ public class DescribeCdnHttpsDomainListResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnHttpsDomainListResponseBodyCertInfosCertInfo extends TeaModel {
+        // The Common Name on the SSL certificate.
         @NameInMap("CertCommonName")
         public String certCommonName;
 
+        // The time when the SSL certificate expires.
         @NameInMap("CertExpireTime")
         public String certExpireTime;
 
+        // The name of the SSL certificate.
         @NameInMap("CertName")
         public String certName;
 
+        // The time when the SSL certificate became effective.
         @NameInMap("CertStartTime")
         public String certStartTime;
 
+        // The status of the SSL certificate. Valid values:
+        // 
+        // *   **ok**: The SSL certificate is working as expected.
+        // *   **mismatch**: The SSL certificate does not match the specified domain name.
+        // *   **expired**: The SSL certificate has expired.
+        // *   **expire_soon**: The SSL certificate will expire soon.
         @NameInMap("CertStatus")
         public String certStatus;
 
+        // The type of the SSL certificate. Valid values:
+        // 
+        // *   **free**: a free SSL certificate.
+        // *   **cas**: an SSL certificate purchased from Alibaba Cloud SSL Certificates Service.
+        // *   **upload**: a user uploaded certificate.
         @NameInMap("CertType")
         public String certType;
 
+        // The time when the certificate was renewed.
         @NameInMap("CertUpdateTime")
         public String certUpdateTime;
 
+        // The accelerated domain name.
         @NameInMap("DomainName")
         public String domainName;
 

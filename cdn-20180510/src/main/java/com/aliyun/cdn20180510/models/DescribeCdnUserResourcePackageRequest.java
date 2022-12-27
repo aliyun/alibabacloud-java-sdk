@@ -10,6 +10,10 @@ public class DescribeCdnUserResourcePackageRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    // Resource plan status:
+    // 
+    // *   **valid**: valid
+    // *   **closed**: invalid
     @NameInMap("Status")
     public String status;
 

@@ -4,6 +4,10 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnUserConfigsRequest extends TeaModel {
+    // The configuration item that you want to query. Valid values:
+    // 
+    // *   **domain\_business\_control**: Alibaba Cloud CDN configurations
+    // *   **waf**: Web Application Firewall (WAF) configurations
     @NameInMap("FunctionName")
     public String functionName;
 

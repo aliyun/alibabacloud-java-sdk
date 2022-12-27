@@ -4,9 +4,11 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeIpStatusResponseBody extends TeaModel {
+    // The status of the node IP addresses.
     @NameInMap("IpStatus")
     public java.util.List<DescribeIpStatusResponseBodyIpStatus> ipStatus;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +34,15 @@ public class DescribeIpStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeIpStatusResponseBodyIpStatus extends TeaModel {
+        // The IP address of the node.
         @NameInMap("ip")
         public String ip;
 
+        // The status. Valid values:
+        // 
+        // *   **nonali**: The node is not an Alibaba Cloud CDN edge node.
+        // *   **normal**: The node is an available Alibaba Cloud CDN edge node.
+        // *   **abnormal**: The node is an unavailable Alibaba Cloud CDN edge node.
         @NameInMap("status")
         public String status;
 

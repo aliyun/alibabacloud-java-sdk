@@ -10,6 +10,7 @@ public class DescribeDomainsBySourceRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    // The origin servers. Separate origin servers with commas (,). Fuzzy match is not supported.
     @NameInMap("Sources")
     public String sources;
 

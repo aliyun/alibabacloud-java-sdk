@@ -4,15 +4,22 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainRegionDataRequest extends TeaModel {
+    // The accelerated domain name. Separate multiple accelerated domain names with commas (,).  
+    // 
+    // By default, this operation queries the geographic distribution of users for all accelerated domain names.
     @NameInMap("DomainName")
     public String domainName;
 
+    // The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.  
+    // 
+    // The end time must be later than the start time.
     @NameInMap("EndTime")
     public String endTime;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The start of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
     @NameInMap("StartTime")
     public String startTime;
 

@@ -4,24 +4,37 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnServiceResponseBody extends TeaModel {
+    // The time when the next billing method takes effect. The time is displayed in GMT.
     @NameInMap("ChangingAffectTime")
     public String changingAffectTime;
 
+    // The next billing method that Alibaba Cloud CDN will use. Valid values:
+    // 
+    // *   **PayByTraffic**: pay-by-data-transfer.
+    // *   **PayByBandwidth**: pay-by-bandwidth.
     @NameInMap("ChangingChargeType")
     public String changingChargeType;
 
+    // The ID of the instance.
     @NameInMap("InstanceId")
     public String instanceId;
 
+    // The current billing method of Alibaba Cloud CDN.
+    // 
+    // *   **PayByTraffic**: pay-by-data-transfer.
+    // *   **PayByBandwidth**: pay-by-bandwidth.
     @NameInMap("InternetChargeType")
     public String internetChargeType;
 
+    // The time when Alibaba Cloud CDN was activated. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mmZ format.
     @NameInMap("OpeningTime")
     public String openingTime;
 
+    // The lock status of Alibaba Cloud CDN.
     @NameInMap("OperationLocks")
     public DescribeCdnServiceResponseBodyOperationLocks operationLocks;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -87,6 +100,7 @@ public class DescribeCdnServiceResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnServiceResponseBodyOperationLocksLockReason extends TeaModel {
+        // The reason why Alibaba Cloud CDN is locked. A value of financial indicates that the service is locked due to overdue payments.
         @NameInMap("LockReason")
         public String lockReason;
 

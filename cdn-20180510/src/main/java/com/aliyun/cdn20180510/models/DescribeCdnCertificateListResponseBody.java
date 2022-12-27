@@ -4,9 +4,11 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnCertificateListResponseBody extends TeaModel {
+    // The data type of the SSL certificate information.
     @NameInMap("CertificateListModel")
     public DescribeCdnCertificateListResponseBodyCertificateListModel certificateListModel;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +34,27 @@ public class DescribeCdnCertificateListResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnCertificateListResponseBodyCertificateListModelCertListCert extends TeaModel {
+        // The ID of the SSL certificate.
         @NameInMap("CertId")
         public Long certId;
 
+        // The name of the SSL certificate.
         @NameInMap("CertName")
         public String certName;
 
+        // The Common Name (CN) attribute of the SSL certificate. In most cases, the value is a domain name.
         @NameInMap("Common")
         public String common;
 
+        // The fingerprint of the SSL certificate.
         @NameInMap("Fingerprint")
         public String fingerprint;
 
+        // The certificate authority (CA) that issued the SSL certificate.
         @NameInMap("Issuer")
         public String issuer;
 
+        // The timestamp when the SSL certificate was issued.
         @NameInMap("LastTime")
         public Long lastTime;
 
@@ -125,9 +133,11 @@ public class DescribeCdnCertificateListResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnCertificateListResponseBodyCertificateListModel extends TeaModel {
+        // The details about each SSL certificate.
         @NameInMap("CertList")
         public DescribeCdnCertificateListResponseBodyCertificateListModelCertList certList;
 
+        // The number of SSL certificates returned.
         @NameInMap("Count")
         public Integer count;
 

@@ -4,27 +4,35 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainUsageDataResponseBody extends TeaModel {
+    // The billable region where the usage information was collected.
     @NameInMap("Area")
     public String area;
 
+    // The time interval between the data entries. Unit: seconds.
     @NameInMap("DataInterval")
     public String dataInterval;
 
+    // The accelerated domain name.
     @NameInMap("DomainName")
     public String domainName;
 
+    // The end of the time range that was queried.
     @NameInMap("EndTime")
     public String endTime;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The beginning of the time range that was queried.
     @NameInMap("StartTime")
     public String startTime;
 
+    // The type of content based on which the usage information was collected.
     @NameInMap("Type")
     public String type;
 
+    // The network traffic that was collected at each interval.
     @NameInMap("UsageDataPerInterval")
     public DescribeDomainUsageDataResponseBodyUsageDataPerInterval usageDataPerInterval;
 
@@ -98,15 +106,25 @@ public class DescribeDomainUsageDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainUsageDataResponseBodyUsageDataPerIntervalDataModule extends TeaModel {
+        // If the **Field** parameter in the request is set to **bps**, this parameter returns the time of the peak bandwidth value. Otherwise, this parameter returns the same value as the **TimeStamp** parameter.
         @NameInMap("PeakTime")
         public String peakTime;
 
+        // The data usage in a specific scenario.
+        // 
+        // >  Indicates the data usage in a specific scenario. If no special billable item is specified, ignore this parameter.
         @NameInMap("SpecialValue")
         public String specialValue;
 
+        // The timestamp of the data returned.
+        // 
+        // >  The **TimeStamp** parameter may return multiple values.
         @NameInMap("TimeStamp")
         public String timeStamp;
 
+        // The usage.
+        // 
+        // >  Usage data includes network traffic (measured in bytes), bandwidth values (measured in bits/s), and the number of requests.
         @NameInMap("Value")
         public String value;
 

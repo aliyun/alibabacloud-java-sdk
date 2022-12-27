@@ -4,21 +4,27 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainReqHitRateDataResponseBody extends TeaModel {
+    // The time interval between the data entries returned. Unit: seconds.
     @NameInMap("DataInterval")
     public String dataInterval;
 
+    // The accelerated domain name.
     @NameInMap("DomainName")
     public String domainName;
 
+    // The end of the time range that was queried.
     @NameInMap("EndTime")
     public String endTime;
 
+    // The request hit ratio at each time interval. The hit ratio is measured in percentage.
     @NameInMap("ReqHitRateInterval")
     public DescribeDomainReqHitRateDataResponseBodyReqHitRateInterval reqHitRateInterval;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The beginning of the time range that was queried.
     @NameInMap("StartTime")
     public String startTime;
 
@@ -76,12 +82,15 @@ public class DescribeDomainReqHitRateDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainReqHitRateDataResponseBodyReqHitRateIntervalDataModule extends TeaModel {
+        // The hit ratio of HTTPS requests.
         @NameInMap("HttpsValue")
         public String httpsValue;
 
+        // The timestamp of the data returned.
         @NameInMap("TimeStamp")
         public String timeStamp;
 
+        // The byte hit ratio.
         @NameInMap("Value")
         public String value;
 

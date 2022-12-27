@@ -4,18 +4,27 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
+    // Specifies whether to delete all tags. Valid values:
+    // 
+    // *   **true**: yes.
+    // *   **false**: no.
+    // 
+    // Default value: **false**.
     @NameInMap("All")
     public Boolean all;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The list of resource ID. The max items count is up to 20.
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
+    // The type of resource. The resource type. Set the value to **DOMAIN**.
     @NameInMap("ResourceType")
     public String resourceType;
 
+    // The list of tag key.
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;
 

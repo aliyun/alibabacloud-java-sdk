@@ -4,12 +4,15 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeRefreshTaskByIdResponseBody extends TeaModel {
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The tasks.
     @NameInMap("Tasks")
     public java.util.List<DescribeRefreshTaskByIdResponseBodyTasks> tasks;
 
+    // The total number of tasks.
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -43,24 +46,45 @@ public class DescribeRefreshTaskByIdResponseBody extends TeaModel {
     }
 
     public static class DescribeRefreshTaskByIdResponseBodyTasks extends TeaModel {
+        // The time when the task was created. The time is displayed in UTC.
         @NameInMap("CreationTime")
         public String creationTime;
 
+        // The error returned when the refresh or prefetch task failed. Valid values:
+        // 
+        // *   **Internal Error**: An internal error occurred.
+        // *   **Origin Timeout**: The response from the origin server timed out.
+        // *   **Origin Return StatusCode 5XX**: The origin server returned a 5XX error.
         @NameInMap("Description")
         public String description;
 
+        // The path of the object refreshed by the refresh task.
         @NameInMap("ObjectPath")
         public String objectPath;
 
+        // The type of the task. Valid values:
+        // 
+        // *   **file**: refreshes an individual file.
+        // *   **directory**: refreshes files under the specified directory.
+        // *   **preload**: prefetches an individual file.
+        // *   **regex**: refreshes content based on a regular expression.
         @NameInMap("ObjectType")
         public String objectType;
 
+        // The progress of the task, in percentage.
         @NameInMap("Process")
         public String process;
 
+        // The status of the task. Valid values:
+        // 
+        // *   **Complete**: The task is complete.
+        // *   **Pending**: The task is pending.
+        // *   **Refreshing**: The task is running.
+        // *   **Failed**: The task failed.
         @NameInMap("Status")
         public String status;
 
+        // The ID of the task.
         @NameInMap("TaskId")
         public String taskId;
 
