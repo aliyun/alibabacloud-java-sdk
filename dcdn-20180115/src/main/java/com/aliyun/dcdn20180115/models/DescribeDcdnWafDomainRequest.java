@@ -7,9 +7,6 @@ public class DescribeDcdnWafDomainRequest extends TeaModel {
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("RegionId")
     public String regionId;
 
@@ -27,14 +24,6 @@ public class DescribeDcdnWafDomainRequest extends TeaModel {
     }
     public String getDomainName() {
         return this.domainName;
-    }
-
-    public DescribeDcdnWafDomainRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeDcdnWafDomainRequest setRegionId(String regionId) {

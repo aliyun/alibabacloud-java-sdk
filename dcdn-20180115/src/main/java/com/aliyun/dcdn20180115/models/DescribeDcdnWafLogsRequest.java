@@ -3,7 +3,7 @@ package com.aliyun.dcdn20180115.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeDcdnDomainLogRequest extends TeaModel {
+public class DescribeDcdnWafLogsRequest extends TeaModel {
     @NameInMap("DomainName")
     public String domainName;
 
@@ -19,12 +19,12 @@ public class DescribeDcdnDomainLogRequest extends TeaModel {
     @NameInMap("StartTime")
     public String startTime;
 
-    public static DescribeDcdnDomainLogRequest build(java.util.Map<String, ?> map) throws Exception {
-        DescribeDcdnDomainLogRequest self = new DescribeDcdnDomainLogRequest();
+    public static DescribeDcdnWafLogsRequest build(java.util.Map<String, ?> map) throws Exception {
+        DescribeDcdnWafLogsRequest self = new DescribeDcdnWafLogsRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDcdnDomainLogRequest setDomainName(String domainName) {
+    public DescribeDcdnWafLogsRequest setDomainName(String domainName) {
         this.domainName = domainName;
         return this;
     }
@@ -32,7 +32,7 @@ public class DescribeDcdnDomainLogRequest extends TeaModel {
         return this.domainName;
     }
 
-    public DescribeDcdnDomainLogRequest setEndTime(String endTime) {
+    public DescribeDcdnWafLogsRequest setEndTime(String endTime) {
         this.endTime = endTime;
         return this;
     }
@@ -40,7 +40,7 @@ public class DescribeDcdnDomainLogRequest extends TeaModel {
         return this.endTime;
     }
 
-    public DescribeDcdnDomainLogRequest setPageNumber(Long pageNumber) {
+    public DescribeDcdnWafLogsRequest setPageNumber(Long pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
@@ -48,7 +48,7 @@ public class DescribeDcdnDomainLogRequest extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeDcdnDomainLogRequest setPageSize(Long pageSize) {
+    public DescribeDcdnWafLogsRequest setPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
     }
@@ -56,7 +56,7 @@ public class DescribeDcdnDomainLogRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeDcdnDomainLogRequest setStartTime(String startTime) {
+    public DescribeDcdnWafLogsRequest setStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }

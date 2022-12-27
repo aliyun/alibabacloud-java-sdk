@@ -7,9 +7,6 @@ public class DescribeDcdnUserBillHistoryRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("StartTime")
     public String startTime;
 
@@ -24,14 +21,6 @@ public class DescribeDcdnUserBillHistoryRequest extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
-    }
-
-    public DescribeDcdnUserBillHistoryRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeDcdnUserBillHistoryRequest setStartTime(String startTime) {

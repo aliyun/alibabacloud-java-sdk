@@ -22,9 +22,6 @@ public class DescribeDcdnDomainIpaTrafficDataRequest extends TeaModel {
     @NameInMap("LocationNameEn")
     public String locationNameEn;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("StartTime")
     public String startTime;
 
@@ -82,14 +79,6 @@ public class DescribeDcdnDomainIpaTrafficDataRequest extends TeaModel {
     }
     public String getLocationNameEn() {
         return this.locationNameEn;
-    }
-
-    public DescribeDcdnDomainIpaTrafficDataRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeDcdnDomainIpaTrafficDataRequest setStartTime(String startTime) {

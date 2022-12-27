@@ -19,9 +19,6 @@ public class DescribeDcdnReportRequest extends TeaModel {
     @NameInMap("IsOverseas")
     public String isOverseas;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("ReportId")
     public Long reportId;
 
@@ -71,14 +68,6 @@ public class DescribeDcdnReportRequest extends TeaModel {
     }
     public String getIsOverseas() {
         return this.isOverseas;
-    }
-
-    public DescribeDcdnReportRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeDcdnReportRequest setReportId(Long reportId) {

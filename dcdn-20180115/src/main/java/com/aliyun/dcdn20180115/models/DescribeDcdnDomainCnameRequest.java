@@ -7,9 +7,6 @@ public class DescribeDcdnDomainCnameRequest extends TeaModel {
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     public static DescribeDcdnDomainCnameRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDcdnDomainCnameRequest self = new DescribeDcdnDomainCnameRequest();
         return TeaModel.build(map, self);
@@ -21,14 +18,6 @@ public class DescribeDcdnDomainCnameRequest extends TeaModel {
     }
     public String getDomainName() {
         return this.domainName;
-    }
-
-    public DescribeDcdnDomainCnameRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
 }

@@ -22,9 +22,6 @@ public class DescribeDcdnDomainHttpCodeDataByLayerRequest extends TeaModel {
     @NameInMap("LocationNameEn")
     public String locationNameEn;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("StartTime")
     public String startTime;
 
@@ -79,14 +76,6 @@ public class DescribeDcdnDomainHttpCodeDataByLayerRequest extends TeaModel {
     }
     public String getLocationNameEn() {
         return this.locationNameEn;
-    }
-
-    public DescribeDcdnDomainHttpCodeDataByLayerRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeDcdnDomainHttpCodeDataByLayerRequest setStartTime(String startTime) {

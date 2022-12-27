@@ -128,6 +128,7 @@ public class DescribeDcdnIpaDomainDetailResponseBody extends TeaModel {
         @NameInMap("CertName")
         public String certName;
 
+        // CNAME。
         @NameInMap("Cname")
         public String cname;
 

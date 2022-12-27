@@ -13,9 +13,6 @@ public class DescribeDcdnUserDomainsByFuncRequest extends TeaModel {
     @NameInMap("FuncId")
     public Integer funcId;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
@@ -52,14 +49,6 @@ public class DescribeDcdnUserDomainsByFuncRequest extends TeaModel {
     }
     public Integer getFuncId() {
         return this.funcId;
-    }
-
-    public DescribeDcdnUserDomainsByFuncRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeDcdnUserDomainsByFuncRequest setPageNumber(Integer pageNumber) {
