@@ -25,6 +25,7 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
     @NameInMap("SourcePortRange")
     public String sourcePortRange;
 
+    // 2017-11-10
     @NameInMap("Version")
     public String version;
 

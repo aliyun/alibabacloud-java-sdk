@@ -4,6 +4,7 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class CreateEnsRouteEntryResponseBody extends TeaModel {
+    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,6 +4,9 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceAttributeRequest extends TeaModel {
+    @NameInMap("HostName")
+    public String hostName;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -13,12 +16,20 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
     @NameInMap("Password")
     public String password;
 
-    @NameInMap("Version")
-    public String version;
+    @NameInMap("UserData")
+    public String userData;
 
     public static ModifyInstanceAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyInstanceAttributeRequest self = new ModifyInstanceAttributeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyInstanceAttributeRequest setHostName(String hostName) {
+        this.hostName = hostName;
+        return this;
+    }
+    public String getHostName() {
+        return this.hostName;
     }
 
     public ModifyInstanceAttributeRequest setInstanceId(String instanceId) {
@@ -45,12 +56,12 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
         return this.password;
     }
 
-    public ModifyInstanceAttributeRequest setVersion(String version) {
-        this.version = version;
+    public ModifyInstanceAttributeRequest setUserData(String userData) {
+        this.userData = userData;
         return this;
     }
-    public String getVersion() {
-        return this.version;
+    public String getUserData() {
+        return this.userData;
     }
 
 }

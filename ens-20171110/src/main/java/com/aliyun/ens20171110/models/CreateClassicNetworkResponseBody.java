@@ -7,6 +7,7 @@ public class CreateClassicNetworkResponseBody extends TeaModel {
     @NameInMap("NetworkId")
     public String networkId;
 
+    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
