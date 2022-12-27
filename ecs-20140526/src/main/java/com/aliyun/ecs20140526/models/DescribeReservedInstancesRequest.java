@@ -4,18 +4,35 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeReservedInstancesRequest extends TeaModel {
+    // The allocation type. Valid values:
+    // 
+    // *   Normal: queries all reserved instances that belong to the current account.
+    // *   Shared: queries reserved instances that are shared between the main account and linked accounts.
+    // 
+    // Default value: Normal.
     @NameInMap("AllocationType")
     public String allocationType;
 
+    // The instance type of the reserved instance. For more information about the valid values, see [Instance families](~~25378~~).
     @NameInMap("InstanceType")
     public String instanceType;
 
+    // The instance family of the reserved instance. For more information about the valid values, see [Instance families](~~25378~~).
     @NameInMap("InstanceTypeFamily")
     public String instanceTypeFamily;
 
+    // The reason why the reserved instance is locked. Valid values:
+    // 
+    // *   financial: You have an overdue payment in your account or the reserved instance has expired.
+    // *   security: The reserved instance is locked for security reasons.
     @NameInMap("LockReason")
     public String lockReason;
 
+    // The payment option of the reserved instance. Valid values:
+    // 
+    // *   No Upfront
+    // *   Partial Upfront
+    // *   All Upfront
     @NameInMap("OfferingType")
     public String offeringType;
 
@@ -25,18 +42,26 @@ public class DescribeReservedInstancesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The number of the page to return. Pages start from page 1.
+    // 
+    // Default value: 1.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries to return on each page. Maximum value: 100.
+    // 
+    // Default value: 10.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The region ID of the reserved instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("ReservedInstanceId")
     public java.util.List<String> reservedInstanceId;
 
+    // The name of the reserved instance.
     @NameInMap("ReservedInstanceName")
     public String reservedInstanceName;
 
@@ -46,6 +71,12 @@ public class DescribeReservedInstancesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    // The scope of the reserved instance. Valid values:
+    // 
+    // *   Region: regional
+    // *   Zone: zonal
+    // 
+    // Default value: Region.
     @NameInMap("Scope")
     public String scope;
 
@@ -55,6 +86,7 @@ public class DescribeReservedInstancesRequest extends TeaModel {
     @NameInMap("Tag")
     public java.util.List<DescribeReservedInstancesRequestTag> tag;
 
+    // The zone ID of the reserved instance. This parameter is required when Scope is set to Zone. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.
     @NameInMap("ZoneId")
     public String zoneId;
 
@@ -208,9 +240,13 @@ public class DescribeReservedInstancesRequest extends TeaModel {
     }
 
     public static class DescribeReservedInstancesRequestTag extends TeaModel {
+        // The key of tag N of the reserved instance. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length. It cannot start with aliyun or acs: or contain http:// or https://.
+        // 
+        // If a single tag is specified to query resources, up to 1,000 resources that are bound with this tag can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that are bound with all these tags can be displayed in the response. To query more than 1,000 resources that are bound with specified tags, call the [ListTagResources](~~110425~~) operation.
         @NameInMap("Key")
         public String key;
 
+        // The value of tag N of the reserved instance. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length. It cannot start with acs: or contain http:// or https://.
         @NameInMap("Value")
         public String value;
 

@@ -4,12 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeDiskMonitorDataResponseBody extends TeaModel {
+    // Details about the disk monitoring data.
     @NameInMap("MonitorData")
     public DescribeDiskMonitorDataResponseBodyMonitorData monitorData;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The total number of returned monitoring data entries.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -43,33 +46,43 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDiskMonitorDataResponseBodyMonitorDataDiskMonitorData extends TeaModel {
+        // The read bandwidth of the system disk. Unit: Byte/s.
         @NameInMap("BPSRead")
         public Integer BPSRead;
 
+        // The total read and write bandwidth of the system disk. Unit: Byte/s.
         @NameInMap("BPSTotal")
         public Integer BPSTotal;
 
+        // The write bandwidth of the system disk. Unit: Byte/s.
         @NameInMap("BPSWrite")
         public Integer BPSWrite;
 
+        // The ID of the disk.
         @NameInMap("DiskId")
         public String diskId;
 
+        // The number of read I/O operations per second on the system disk.
         @NameInMap("IOPSRead")
         public Integer IOPSRead;
 
+        // The total number of read and write I/O operations per second on the system disk.
         @NameInMap("IOPSTotal")
         public Integer IOPSTotal;
 
+        // The number of write I/O operations per second on the system disk.
         @NameInMap("IOPSWrite")
         public Integer IOPSWrite;
 
+        // The read latency of the disk. Unit: μs.
         @NameInMap("LatencyRead")
         public Integer latencyRead;
 
+        // The write latency of the disk. Unit: μs.
         @NameInMap("LatencyWrite")
         public Integer latencyWrite;
 
+        // The timestamp of monitoring data query. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
         @NameInMap("TimeStamp")
         public String timeStamp;
 

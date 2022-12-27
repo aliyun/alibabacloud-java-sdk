@@ -7,12 +7,19 @@ public class DescribeResourceByTagsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The number of the page to return. Pages start from page 1.
+    // 
+    // Default value: 1.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries to return on each page. Valid values: 1 to 100.
+    // 
+    // Default value: 50.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The region ID of the resource. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 
@@ -22,9 +29,24 @@ public class DescribeResourceByTagsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    // The type of the resource. Valid values:
+    // 
+    // *   instance: ECS instance
+    // *   disk: disk
+    // *   snapshot: snapshot
+    // *   image: image
+    // *   securitygroup: security group
+    // *   volume: storage volume
+    // *   eni: elastic network interface (ENI)
+    // *   ddh: dedicated host
+    // *   keypair: SSH key pair
+    // *   launchtemplate: launch template
+    // 
+    // All the preceding values must be lowercase.
     @NameInMap("ResourceType")
     public String resourceType;
 
+    // The tags.
     @NameInMap("Tag")
     public java.util.List<DescribeResourceByTagsRequestTag> tag;
 
@@ -98,9 +120,11 @@ public class DescribeResourceByTagsRequest extends TeaModel {
     }
 
     public static class DescribeResourceByTagsRequestTag extends TeaModel {
+        // The key of tag N of the resource. Valid values of N: 1 to 20 The tag key cannot be an empty string. It can be up to 128 characters in length.
         @NameInMap("Key")
         public String key;
 
+        // The value of tag N of the resource. Valid values of N: 1 to 20 The tag value can be an empty string. It can be up to 128 characters in length.
         @NameInMap("Value")
         public String value;
 

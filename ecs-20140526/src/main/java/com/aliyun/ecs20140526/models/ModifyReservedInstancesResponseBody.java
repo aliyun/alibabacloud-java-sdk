@@ -4,9 +4,11 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyReservedInstancesResponseBody extends TeaModel {
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The list of reserved instance IDs.
     @NameInMap("ReservedInstanceIdSets")
     public ModifyReservedInstancesResponseBodyReservedInstanceIdSets reservedInstanceIdSets;
 

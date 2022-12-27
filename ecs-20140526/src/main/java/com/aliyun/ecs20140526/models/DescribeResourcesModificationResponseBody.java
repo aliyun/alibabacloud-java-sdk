@@ -4,9 +4,11 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeResourcesModificationResponseBody extends TeaModel {
+    // Details about the available zones.
     @NameInMap("AvailableZones")
     public DescribeResourcesModificationResponseBodyAvailableZones availableZones;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +34,34 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
     }
 
     public static class DescribeResourcesModificationResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceSupportedResourcesSupportedResource extends TeaModel {
+        // The maximum resource specification value. This parameter is not returned if it has no value.
         @NameInMap("Max")
         public Integer max;
 
+        // The minimum resource specification value. This parameter is not returned if it has no value.
         @NameInMap("Min")
         public Integer min;
 
+        // The state of the resource. Valid values:
+        // 
+        // *   Available
+        // *   SoldOut
         @NameInMap("Status")
         public String status;
 
+        // The category of resource based on stock status. Valid values:
+        // 
+        // *   WithStock: resources that are in sufficient stock
+        // *   ClosedWithStock: resources that are ininsufficient stock
+        // *   WithoutStock: resources that are out of stock
         @NameInMap("StatusCategory")
         public String statusCategory;
 
+        // The resource specification unit. This parameter is not returned if it has no value.
         @NameInMap("Unit")
         public String unit;
 
+        // The resource value.
         @NameInMap("Value")
         public String value;
 
@@ -125,9 +140,18 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
     }
 
     public static class DescribeResourcesModificationResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResource extends TeaModel {
+        // Details about the resources.
         @NameInMap("SupportedResources")
         public DescribeResourcesModificationResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceSupportedResources supportedResources;
 
+        // The type of resource. Valid values:
+        // 
+        // *   Zone
+        // *   IoOptimized
+        // *   InstanceType
+        // *   SystemDisk
+        // *   DataDisk
+        // *   Network
         @NameInMap("Type")
         public String type;
 
@@ -174,18 +198,30 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
     }
 
     public static class DescribeResourcesModificationResponseBodyAvailableZonesAvailableZone extends TeaModel {
+        // Details about the resources available in the zone.
         @NameInMap("AvailableResources")
         public DescribeResourcesModificationResponseBodyAvailableZonesAvailableZoneAvailableResources availableResources;
 
+        // The region ID of the zone.
         @NameInMap("RegionId")
         public String regionId;
 
+        // The state of the resource. Valid values:
+        // 
+        // *   Available
+        // *   SoldOut
         @NameInMap("Status")
         public String status;
 
+        // The category of resource based on stock status. Valid values:
+        // 
+        // *   WithStock: resources that are in sufficient stock
+        // *   ClosedWithStock: resources that are in insufficient stock
+        // *   WithoutStock: resources that are out of stock
         @NameInMap("StatusCategory")
         public String statusCategory;
 
+        // The ID of the zone.
         @NameInMap("ZoneId")
         public String zoneId;
 

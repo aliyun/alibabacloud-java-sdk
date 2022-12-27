@@ -13,9 +13,11 @@ public class DeleteAutoSnapshotPolicyRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    // The ID of the automatic snapshot policy. You can call the [DescribeAutoSnapshotPolicyEx](~~25530~~) operation to query the available automatic snapshot policies.
     @NameInMap("autoSnapshotPolicyId")
     public String autoSnapshotPolicyId;
 
+    // The region ID of the automatic snapshot policy. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
     @NameInMap("regionId")
     public String regionId;
 

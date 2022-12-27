@@ -4,9 +4,11 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateDedicatedHostClusterResponseBody extends TeaModel {
+    // The ID of the dedicated host cluster.
     @NameInMap("DedicatedHostClusterId")
     public String dedicatedHostClusterId;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

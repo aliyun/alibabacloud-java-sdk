@@ -4,9 +4,16 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DeleteInstanceRequest extends TeaModel {
+    // Specifies whether to forcefully release the instance in the **Running** (`Running`) state. Valid values:
+    // 
+    // *   true: forcefully releases the instance in the **Running** (`Running`) state. When the Force parameter is set to true, this operation is equivalent to the power-off operation. Temporary data in the memory and storage of the instance is erased and cannot be restored.
+    // *   false: normally releases the instance. This value is valid only for instances in the **Stopped** (`Stopped`) state.
+    // 
+    // Default value: false.
     @NameInMap("Force")
     public Boolean force;
 
+    // The ID of the instance that you want to release.
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -22,6 +29,9 @@ public class DeleteInstanceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    // Specifies whether to release the expired subscription instance.
+    // 
+    // Default value: false.
     @NameInMap("TerminateSubscription")
     public Boolean terminateSubscription;
 

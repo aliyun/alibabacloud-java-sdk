@@ -4,18 +4,23 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeSendFileResultsResponseBody extends TeaModel {
+    // Details about the file sending records.
     @NameInMap("Invocations")
     public DescribeSendFileResultsResponseBodyInvocations invocations;
 
+    // The page number of the returned page.
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    // The number of entries returned per page.
     @NameInMap("PageSize")
     public Long pageSize;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The total number of file sending tasks.
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -65,27 +70,71 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
     }
 
     public static class DescribeSendFileResultsResponseBodyInvocationsInvocationInvokeInstancesInvokeInstance extends TeaModel {
+        // The creation time of the file sending task.
         @NameInMap("CreationTime")
         public String creationTime;
 
+        // The error code returned when the file failed to be sent to the instance. Valid values:
+        // 
+        // *   Null: The file is sent to the instance.
+        // *   InstanceNotExists: The instance does not exist or was released.
+        // *   InstanceReleased: The instance is released while the file is being sent.
+        // *   InstanceNotRunning: The instance is not running when the file sending task is being created.
+        // *   AccountNotExists: The specified account does not exist.
+        // *   ClientNotRunning: The Cloud Assistant client is not running.
+        // *   ClientNotResponse: The Cloud Assistant client is not responding.
+        // *   ClientIsUpgrading: The Cloud Assistant client is being upgraded.
+        // *   ClientNeedUpgrade: The Cloud Assistant client needs to be upgraded.
+        // *   DeliveryTimeout: The file sending task timed out.
+        // *   FileCreateFail: The file failed to be created.
+        // *   FileAlreadyExists: A file with the same name already exists in the specified directory.
+        // *   FileContentInvalid: The file content is invalid.
+        // *   FileNameInvalid: The file name is invalid.
+        // *   FilePathInvalid: The specified directory is invalid.
+        // *   FileAuthorityInvalid: The specified permissions on the file are invalid.
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        // The error message returned when the file failed to be sent to the instance or the file sending task failed to be executed on the instance. Valid values:
+        // 
+        // *   Null: The file is sent to the instance.
+        // *   the specified instance does not exists
+        // *   the instance has released when create task
+        // *   the instance is not running when create task
+        // *   the specified account does not exists
+        // *   the aliyun service is not running on the instance
+        // *   the aliyun service in the instance does not response
+        // *   the aliyun service in the instance is upgrading now
+        // *   the aliyun service in the instance need upgrade
+        // *   the command delivery has been timeout
+        // *   Unexpected error during creating
+        // *   File already exists
+        // *   File content error
+        // *   File name is invalid
+        // *   File path is invalid
+        // *   Owner not exists
+        // *   Group not exists
+        // *   Mode is invalid
         @NameInMap("ErrorInfo")
         public String errorInfo;
 
+        // The time when the file sending task finished being executed.
         @NameInMap("FinishTime")
         public String finishTime;
 
+        // The ID of instance.
         @NameInMap("InstanceId")
         public String instanceId;
 
+        // The status of the file sending task.
         @NameInMap("InvocationStatus")
         public String invocationStatus;
 
+        // The time when the file sending task started to be executed on the instance.
         @NameInMap("StartTime")
         public String startTime;
 
+        // The time when the task status was updated.
         @NameInMap("UpdateTime")
         public String updateTime;
 
@@ -180,45 +229,78 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
     }
 
     public static class DescribeSendFileResultsResponseBodyInvocationsInvocation extends TeaModel {
+        // The content of the file.
         @NameInMap("Content")
         public String content;
 
+        // The content type of the file. Valid values:
+        // 
+        // *   PlainText
+        // *   Base64
         @NameInMap("ContentType")
         public String contentType;
 
+        // The time when the file sending task was created.
         @NameInMap("CreationTime")
         public String creationTime;
 
+        // The description of the file.
         @NameInMap("Description")
         public String description;
 
+        // The user group of the file.
         @NameInMap("FileGroup")
         public String fileGroup;
 
+        // The permissions on the file.
         @NameInMap("FileMode")
         public String fileMode;
 
+        // The owner of the file.
         @NameInMap("FileOwner")
         public String fileOwner;
 
+        // The overall sending status of the file. The overall sending status of the file depends on its sending status on all destination instances. Valid values:
+        // 
+        // *   Pending: The file is being verified or sent. If the sending status of the file on at least one instance is Pending, the overall sending status of the file is Pending.
+        // 
+        // *   Running: The file creation task is running on the instances. If the sending status of the file on at least one instance is Running, the overall sending status of the file is Running.
+        // 
+        // *   Success: If the sending status of the file on all the instances is Success, the overall sending status of the file is Success.
+        // 
+        // *   Failed: If the sending status of the file on all the instances is Failed, the overall sending status of the file is Failed. If the sending status of the file on one or more instances is one of the following values, the overall sending status of the file is Failed:
+        // 
+        //     *   Invalid: The file is invalid.
+        //     *   Aborted: The file failed to be sent.
+        //     *   Failed: The file failed to be created.
+        //     *   Timeout: The file sending task timed out.
+        //     *   Error: An error occurred while the file is being sent.
+        // 
+        // *   PartialFailed: The file was sent to some of the specified instances and failed to be sent to the others. The overall sending status of the file is PartialFailed only when its sending status is Success on some instances and is Failed on the others.
         @NameInMap("InvocationStatus")
         public String invocationStatus;
 
+        // The ID of the execution.
         @NameInMap("InvokeId")
         public String invokeId;
 
+        // Details about the destination instances.
         @NameInMap("InvokeInstances")
         public DescribeSendFileResultsResponseBodyInvocationsInvocationInvokeInstances invokeInstances;
 
+        // The name of the file.
         @NameInMap("Name")
         public String name;
 
+        // Indicates whether a file in the destination directory is overwritten if the file has the same name as the sent file.
         @NameInMap("Overwrite")
         public String overwrite;
 
+        // The destination directory.
         @NameInMap("TargetDir")
         public String targetDir;
 
+        // The number of instances to which you want to send the file.
         @NameInMap("VmCount")
         public Integer vmCount;
 

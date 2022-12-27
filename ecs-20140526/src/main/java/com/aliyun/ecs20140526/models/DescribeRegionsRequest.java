@@ -4,9 +4,22 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsRequest extends TeaModel {
+    // The natural language that is used to filter responses. For more information, visit [RFC 7231](https://tools.ietf.org/html/rfc7231). Valid values:
+    // 
+    // *   zh-CN: Chinese
+    // *   en-US: English
+    // *   ja: Japanese
+    // 
+    // Default value: zh-CN.
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    // The billing method of the instance. For more information, see [Billing overview](~~25398~~). Valid values:
+    // 
+    // *   PrePaid: subscription. If this parameter is set to PrePaid, make sure that you have sufficient balance or credits in your account. Otherwise, the InvalidPayMethod error code is returned.
+    // *   PostPaid: pay-as-you-go.
+    // 
+    // Default value: PostPaid.
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
 
@@ -22,6 +35,14 @@ public class DescribeRegionsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    // The type of the resource. Valid values:
+    // 
+    // *   instance: Elastic Compute Service (ECS) instance
+    // *   disk: disk
+    // *   reservedinstance: reserved instance
+    // *   scu: storage capacity unit (SCU)
+    // 
+    // Default value: instance.
     @NameInMap("ResourceType")
     public String resourceType;
 

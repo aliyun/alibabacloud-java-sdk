@@ -4,24 +4,41 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeKeyPairsRequest extends TeaModel {
+    // The fingerprint of the key pair. The message-digest algorithm 5 (MD5) is used based on the public key fingerprint format defined in RFC 4716. For more information, see [RFC 4716](https://tools.ietf.org/html/rfc4716).
     @NameInMap("KeyPairFingerPrint")
     public String keyPairFingerPrint;
 
+    // The name of the key pair. You can use the asterisk (\*) symbol as a wildcard in regular expressions to perform a fuzzy search for key pairs. Sample patterns:
+    // 
+    // *   `*SshKey`: queries key pairs whose names end with SshKey, including the key pair named SshKey.
+    // *   `SshKey*`: queries key pairs whose names start with SshKey, including the key pair named SshKey.
+    // *   `*SshKey*`: queries key pairs whose names include SshKey, including the key pair named SshKey.
+    // *   `SshKey`: queries the key pair named SshKey.
     @NameInMap("KeyPairName")
     public String keyPairName;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The number of the page to return. Pages start from page 1.
+    // 
+    // Default value: 1.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries to return on each page. Maximum value: 50.
+    // 
+    // Default value: 10.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The region ID of the key pair. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The ID of the resource group. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.
+    // 
+    // >  Resources in the default resource group are displayed in the response regardless of how this parameter is set.
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -31,6 +48,7 @@ public class DescribeKeyPairsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    // The tags.
     @NameInMap("Tag")
     public java.util.List<DescribeKeyPairsRequestTag> tag;
 
@@ -120,9 +138,13 @@ public class DescribeKeyPairsRequest extends TeaModel {
     }
 
     public static class DescribeKeyPairsRequestTag extends TeaModel {
+        // The key of tag N of the key pair. Valid values of N: 1 to 20.
+        // 
+        // If a single tag is specified to query resources, up to 1,000 resources that are bound with this tag can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that are bound with all these tags can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.
         @NameInMap("Key")
         public String key;
 
+        // The value of tag N of the key pair. Valid values of N: 1 to 20.
         @NameInMap("Value")
         public String value;
 

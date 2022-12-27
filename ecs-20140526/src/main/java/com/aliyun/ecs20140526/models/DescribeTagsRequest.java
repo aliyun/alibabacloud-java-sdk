@@ -10,15 +10,27 @@ public class DescribeTagsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The number of the page to return.
+    // 
+    // Pages start from page 1.
+    // 
+    // Default value: 1.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries to return on each page.
+    // 
+    // Valid values: 1 to 100.
+    // 
+    // Default value: 50.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The region ID of the security group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The ID of the resource to which the tag is bound. When the resources are instances, this parameter can be interpreted as InstanceId.
     @NameInMap("ResourceId")
     public String resourceId;
 
@@ -28,6 +40,15 @@ public class DescribeTagsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    // The type of the resource. Valid values:
+    // 
+    // *   disk
+    // *   instance
+    // *   image
+    // *   securitygroup
+    // *   snapshot
+    // 
+    // All values must be lowercase.
     @NameInMap("ResourceType")
     public String resourceType;
 
@@ -120,9 +141,11 @@ public class DescribeTagsRequest extends TeaModel {
     }
 
     public static class DescribeTagsRequestTag extends TeaModel {
+        // The key of tag N to be bound to the resource. Valid values of N: 1 to 20 The tag key cannot be an empty string. It can be up to 64 characters in length and cannot contain http:// or https://. It cannot start with acs: or aliyun.
         @NameInMap("Key")
         public String key;
 
+        // The value of tag N to be bound to the resource. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot contain http:// and https://. It cannot start with acs: or aliyun.
         @NameInMap("Value")
         public String value;
 

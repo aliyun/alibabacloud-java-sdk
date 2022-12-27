@@ -10,6 +10,7 @@ public class DescribeSecurityGroupReferencesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The region ID of the security group.
     @NameInMap("RegionId")
     public String regionId;
 
@@ -19,6 +20,7 @@ public class DescribeSecurityGroupReferencesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    // The IDs of security groups that you want to query. You can specify up to 10 security group IDs.
     @NameInMap("SecurityGroupId")
     public java.util.List<String> securityGroupId;
 

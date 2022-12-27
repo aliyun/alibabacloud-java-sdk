@@ -4,6 +4,7 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DeleteCommandRequest extends TeaModel {
+    // The ID of the command. You can call the [DescribeCommands](~~64843~~) operation to query all available command IDs.
     @NameInMap("CommandId")
     public String commandId;
 
@@ -13,6 +14,7 @@ public class DeleteCommandRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The region ID of the command. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 

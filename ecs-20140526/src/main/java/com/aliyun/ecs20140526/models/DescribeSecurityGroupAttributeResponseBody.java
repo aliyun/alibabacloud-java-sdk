@@ -4,27 +4,38 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
+    // The description of the security group.
     @NameInMap("Description")
     public String description;
 
+    // The access control policy of the security group. Valid values:
+    // 
+    // *   Accept: All instances in the security group can communicate with each other.
+    // *   drop: All instances in the security group are isolated from each other.
     @NameInMap("InnerAccessPolicy")
     public String innerAccessPolicy;
 
+    // Details about the security group rules.
     @NameInMap("Permissions")
     public DescribeSecurityGroupAttributeResponseBodyPermissions permissions;
 
+    // The region ID.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The ID of the destination security group.
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
+    // The name of the destination security group.
     @NameInMap("SecurityGroupName")
     public String securityGroupName;
 
+    // The ID of the VPC. If a VPC ID is returned, the network type of the security group is VPC. If no VPC ID is returned, the network type of the security group is classic network.
     @NameInMap("VpcId")
     public String vpcId;
 
@@ -98,72 +109,95 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeSecurityGroupAttributeResponseBodyPermissionsPermission extends TeaModel {
+        // The time when the security group rule was created. The time is displayed in UTC.
         @NameInMap("CreateTime")
         public String createTime;
 
+        // The description of the security group.
         @NameInMap("Description")
         public String description;
 
+        // The destination CIDR blocks for outbound access control
         @NameInMap("DestCidrIp")
         public String destCidrIp;
 
+        // The ID of the destination security group for outbound access control.
         @NameInMap("DestGroupId")
         public String destGroupId;
 
+        // The name of the destination security group.
         @NameInMap("DestGroupName")
         public String destGroupName;
 
+        // The Alibaba Cloud account that manages the destination security group.
         @NameInMap("DestGroupOwnerAccount")
         public String destGroupOwnerAccount;
 
+        // The ID of the destination prefix list for outbound access control.
         @NameInMap("DestPrefixListId")
         public String destPrefixListId;
 
+        // The name of the destination prefix list.
         @NameInMap("DestPrefixListName")
         public String destPrefixListName;
 
+        // The direction in which the security group rule is applied.
         @NameInMap("Direction")
         public String direction;
 
+        // The transport layer protocol.
         @NameInMap("IpProtocol")
         public String ipProtocol;
 
+        // The destination IPv6 CIDR block.
         @NameInMap("Ipv6DestCidrIp")
         public String ipv6DestCidrIp;
 
+        // The source IPv6 CIDR block.
         @NameInMap("Ipv6SourceCidrIp")
         public String ipv6SourceCidrIp;
 
+        // The NIC type of the security group rule.
         @NameInMap("NicType")
         public String nicType;
 
+        // The access control policy.
         @NameInMap("Policy")
         public String policy;
 
+        // The port number range.
         @NameInMap("PortRange")
         public String portRange;
 
+        // The priority of the rule.
         @NameInMap("Priority")
         public String priority;
 
+        // The source CIDR block for inbound access control.
         @NameInMap("SourceCidrIp")
         public String sourceCidrIp;
 
+        // The source security group for inbound access control.
         @NameInMap("SourceGroupId")
         public String sourceGroupId;
 
+        // The name of the source security group.
         @NameInMap("SourceGroupName")
         public String sourceGroupName;
 
+        // The Alibaba Cloud account that manages the source security group.
         @NameInMap("SourceGroupOwnerAccount")
         public String sourceGroupOwnerAccount;
 
+        // The source port number range.
         @NameInMap("SourcePortRange")
         public String sourcePortRange;
 
+        // The ID of the source prefix list for inbound access control.
         @NameInMap("SourcePrefixListId")
         public String sourcePrefixListId;
 
+        // The name of the source prefix list.
         @NameInMap("SourcePrefixListName")
         public String sourcePrefixListName;
 

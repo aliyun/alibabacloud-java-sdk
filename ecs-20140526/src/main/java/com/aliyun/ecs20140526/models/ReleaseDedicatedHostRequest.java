@@ -4,6 +4,7 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ReleaseDedicatedHostRequest extends TeaModel {
+    // The ID of the dedicated host.
     @NameInMap("DedicatedHostId")
     public String dedicatedHostId;
 
@@ -13,6 +14,7 @@ public class ReleaseDedicatedHostRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The region ID of the dedicated host. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 

@@ -4,15 +4,18 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DetachKeyPairRequest extends TeaModel {
+    // The IDs of instances from which you want to unbind the SSH key pair. The value can be a JSON array that consists of up to 50 instance IDs. Separate multiple instance IDs with commas (,).
     @NameInMap("InstanceIds")
     public String instanceIds;
 
+    // The name of the SSH key pair.
     @NameInMap("KeyPairName")
     public String keyPairName;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The region ID of the SSH key pair. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 

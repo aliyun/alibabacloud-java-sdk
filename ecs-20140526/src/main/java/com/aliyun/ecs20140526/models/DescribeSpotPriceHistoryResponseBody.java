@@ -4,15 +4,23 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
+    // The currency unit of the price.
+    // 
+    // Alibaba Cloud China site (aliyun.com): CNY.
+    // 
+    // Alibaba Cloud International site (alibabacloud.com): USD.
     @NameInMap("Currency")
     public String currency;
 
+    // The start row of the next page. It is the value of the `Offset` parameter.
     @NameInMap("NextOffset")
     public Integer nextOffset;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Details about the spot prices.
     @NameInMap("SpotPrices")
     public DescribeSpotPriceHistoryResponseBodySpotPrices spotPrices;
 
@@ -54,24 +62,31 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
     }
 
     public static class DescribeSpotPriceHistoryResponseBodySpotPricesSpotPriceType extends TeaModel {
+        // The instance type of the preemptible instance.
         @NameInMap("InstanceType")
         public String instanceType;
 
+        // Indicates whether the preemptible instance is I/O optimized.
         @NameInMap("IoOptimized")
         public String ioOptimized;
 
+        // The network type of the preemptible instance.
         @NameInMap("NetworkType")
         public String networkType;
 
+        // The price for a pay-as-you-go instance that has the same configuration as the specified preemptible instance.
         @NameInMap("OriginPrice")
         public Float originPrice;
 
+        // The spot price of the preemptible instance.
         @NameInMap("SpotPrice")
         public Float spotPrice;
 
+        // The time that corresponds to the queried spot price. The time is in the `yyyy-MM-ddTHH:mm:ssZ` format.
         @NameInMap("Timestamp")
         public String timestamp;
 
+        // The zone ID of the preemptible instance.
         @NameInMap("ZoneId")
         public String zoneId;
 

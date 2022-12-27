@@ -4,18 +4,23 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ListPluginStatusResponseBody extends TeaModel {
+    // The states of the Cloud Assistant plug-ins on the ECS instances.
     @NameInMap("InstancePluginStatusSet")
     public ListPluginStatusResponseBodyInstancePluginStatusSet instancePluginStatusSet;
 
+    // The page number of the returned page.
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    // The number of entries returned per page.
     @NameInMap("PageSize")
     public Long pageSize;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The total number of entries returned.
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -65,18 +70,31 @@ public class ListPluginStatusResponseBody extends TeaModel {
     }
 
     public static class ListPluginStatusResponseBodyInstancePluginStatusSetInstancePluginStatusPluginStatusSetPluginStatus extends TeaModel {
+        // The first time when Cloud Assistant reported the state of the plug-in.
         @NameInMap("FirstHeartbeatTime")
         public String firstHeartbeatTime;
 
+        // The last time when Cloud Assistant reported the state of the plug-in.
         @NameInMap("LastHeartbeatTime")
         public String lastHeartbeatTime;
 
+        // The name of the plug-in.
         @NameInMap("PluginName")
         public String pluginName;
 
+        // The state of the Cloud Assistant plug-in. Valid values:
+        // 
+        // * NotInstalled: The plug-in is not installed.
+        // * Installed: The one-time plug-in is installed.
+        // * Running: The long-running plug-in is running.
+        // * Stopped: The long-running plug-in is not running.
+        // * Crashed: The plug-in is abnormal.
+        // * Removed: The plug-in is uninstalled.
+        // * Unknown: The state of the plug-in is unknown.
         @NameInMap("PluginStatus")
         public String pluginStatus;
 
+        // The version of the plug-in
         @NameInMap("PluginVersion")
         public String pluginVersion;
 
@@ -147,9 +165,11 @@ public class ListPluginStatusResponseBody extends TeaModel {
     }
 
     public static class ListPluginStatusResponseBodyInstancePluginStatusSetInstancePluginStatus extends TeaModel {
+        // The ID of the ECS instance.
         @NameInMap("InstanceId")
         public String instanceId;
 
+        // Details about the Cloud Assistant plug-in.
         @NameInMap("PluginStatusSet")
         public ListPluginStatusResponseBodyInstancePluginStatusSetInstancePluginStatusPluginStatusSet pluginStatusSet;
 

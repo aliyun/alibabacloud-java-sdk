@@ -4,9 +4,11 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateCapacityReservationResponseBody extends TeaModel {
+    // The ID of the capacity reservation.
     @NameInMap("PrivatePoolOptionsId")
     public String privatePoolOptionsId;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

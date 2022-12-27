@@ -4,12 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribePrefixListsResponseBody extends TeaModel {
+    // The query token returned in this call. If the return value is empty, no more data is returned.
     @NameInMap("NextToken")
     public String nextToken;
 
+    // Details about the prefix lists.
     @NameInMap("PrefixLists")
     public DescribePrefixListsResponseBodyPrefixLists prefixLists;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,24 +46,34 @@ public class DescribePrefixListsResponseBody extends TeaModel {
     }
 
     public static class DescribePrefixListsResponseBodyPrefixListsPrefixList extends TeaModel {
+        // The IP address family of the prefix list. Valid values:
+        // 
+        // *   IPv4
+        // *   IPv6
         @NameInMap("AddressFamily")
         public String addressFamily;
 
+        // The number of associated resources.
         @NameInMap("AssociationCount")
         public Integer associationCount;
 
+        // The time when the prefix list was created.
         @NameInMap("CreationTime")
         public String creationTime;
 
+        // The description of the prefix list.
         @NameInMap("Description")
         public String description;
 
+        // The maximum number of entries that the prefix list can contain.
         @NameInMap("MaxEntries")
         public Integer maxEntries;
 
+        // The ID of the prefix list.
         @NameInMap("PrefixListId")
         public String prefixListId;
 
+        // The name of the prefix list.
         @NameInMap("PrefixListName")
         public String prefixListName;
 

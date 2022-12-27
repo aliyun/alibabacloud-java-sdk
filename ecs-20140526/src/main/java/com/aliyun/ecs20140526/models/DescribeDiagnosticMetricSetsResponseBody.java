@@ -7,9 +7,11 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
     @NameInMap("MetricSets")
     public java.util.List<DescribeDiagnosticMetricSetsResponseBodyMetricSets> metricSets;
 
+    // The query token returned in this call.
     @NameInMap("NextToken")
     public String nextToken;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,21 +45,30 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
     }
 
     public static class DescribeDiagnosticMetricSetsResponseBodyMetricSets extends TeaModel {
+        // The description of the diagnostic metric set.
         @NameInMap("Description")
         public String description;
 
+        // The IDs of the diagnostic metrics.
         @NameInMap("MetricIds")
         public java.util.List<String> metricIds;
 
+        // The ID of the diagnostic metric set.
         @NameInMap("MetricSetId")
         public String metricSetId;
 
+        // The name of the diagnostic metric set.
         @NameInMap("MetricSetName")
         public String metricSetName;
 
+        // The resource type supported by the diagnostic metric set.
         @NameInMap("ResourceType")
         public String resourceType;
 
+        // The type of the diagnostic metric set. Valid values:
+        // 
+        // *   User: user-defined diagnostic metric set
+        // *   Common: common diagnostic metric set
         @NameInMap("Type")
         public String type;
 

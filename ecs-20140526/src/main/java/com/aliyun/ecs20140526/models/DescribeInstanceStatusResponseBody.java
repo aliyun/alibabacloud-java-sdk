@@ -4,18 +4,23 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceStatusResponseBody extends TeaModel {
+    // The status information of the instances.
     @NameInMap("InstanceStatuses")
     public DescribeInstanceStatusResponseBodyInstanceStatuses instanceStatuses;
 
+    // The page number of the returned page.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries returned per page.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The total number of instances.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,9 +70,17 @@ public class DescribeInstanceStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceStatusResponseBodyInstanceStatusesInstanceStatus extends TeaModel {
+        // The ID of instance.
         @NameInMap("InstanceId")
         public String instanceId;
 
+        // The state of the instance. Valid values:
+        // 
+        // * Pending: The instance is being created.
+        // * Running: The instance is running.
+        // * Starting: The instance is being started.
+        // * Stopping: The instance is being stopped.
+        // * Stopped: The instance is stopped.
         @NameInMap("Status")
         public String status;
 

@@ -4,6 +4,7 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeTasksRequest extends TeaModel {
+    // The end point of the time period for which to query created tasks. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
     @NameInMap("EndTime")
     public String endTime;
 
@@ -13,12 +14,23 @@ public class DescribeTasksRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The page number of the page to return.
+    // 
+    // Pages start from page 1.
+    // 
+    // Default value: 1.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries to return on each page.
+    // 
+    // Maximum value: 100.
+    // 
+    // Default value: 10.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The region ID of the task. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 
@@ -31,15 +43,32 @@ public class DescribeTasksRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    // The start point of the time period for which to query created tasks. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
     @NameInMap("StartTime")
     public String startTime;
 
+    // The name of the operation that generates the task. Valid values:
+    // 
+    // *   ImportImage
+    // *   ExportImage
+    // *   RedeployInstance
+    // *   ModifyDiskSpec
     @NameInMap("TaskAction")
     public String taskAction;
 
+    // The IDs of the tasks. You can specify up to 100 tasks at a time. Separate multiple task IDs with commas (,).
     @NameInMap("TaskIds")
     public String taskIds;
 
+    // The status of the task. Valid values:
+    // 
+    // *   Finished
+    // *   Processing
+    // *   Failed
+    // 
+    // This parameter has no default value.
+    // 
+    // >  The system only retrieves tasks in the Finished, Processing, and Failed states and ignores other values.
     @NameInMap("TaskStatus")
     public String taskStatus;
 

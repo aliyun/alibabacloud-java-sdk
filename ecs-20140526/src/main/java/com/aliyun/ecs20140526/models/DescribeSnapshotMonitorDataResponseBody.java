@@ -4,9 +4,11 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeSnapshotMonitorDataResponseBody extends TeaModel {
+    // The collection of monitoring data of snapshot sizes.
     @NameInMap("MonitorData")
     public DescribeSnapshotMonitorDataResponseBodyMonitorData monitorData;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +34,11 @@ public class DescribeSnapshotMonitorDataResponseBody extends TeaModel {
     }
 
     public static class DescribeSnapshotMonitorDataResponseBodyMonitorDataDataPoint extends TeaModel {
+        // The total size of the snapshots. Unit: bytes.
         @NameInMap("Size")
         public Long size;
 
+        // The timestamp that corresponds to a snapshot size.
         @NameInMap("TimeStamp")
         public String timeStamp;
 

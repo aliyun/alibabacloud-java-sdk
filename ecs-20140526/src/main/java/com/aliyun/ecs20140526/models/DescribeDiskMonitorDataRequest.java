@@ -4,9 +4,11 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeDiskMonitorDataRequest extends TeaModel {
+    // The ID of the disk.
     @NameInMap("DiskId")
     public String diskId;
 
+    // The end time of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the specified number of seconds (ss) is not 00, the time is automatically rounded up to the next minute.
     @NameInMap("EndTime")
     public String endTime;
 
@@ -16,6 +18,13 @@ public class DescribeDiskMonitorDataRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The interval at which to retrieve monitoring data. Unit: seconds. Valid values:
+    // 
+    // *   60
+    // *   600
+    // *   3600
+    // 
+    // Default value: 60.
     @NameInMap("Period")
     public Integer period;
 
@@ -25,6 +34,7 @@ public class DescribeDiskMonitorDataRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    // The start time of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the specified number of seconds (ss) is not 00, the time is automatically rounded up to the next minute.
     @NameInMap("StartTime")
     public String startTime;
 

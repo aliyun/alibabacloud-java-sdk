@@ -4,6 +4,7 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CancelImagePipelineExecutionRequest extends TeaModel {
+    // The ID of the image build task.
     @NameInMap("ExecutionId")
     public String executionId;
 
@@ -13,6 +14,7 @@ public class CancelImagePipelineExecutionRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The region ID of the image build task. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 
@@ -22,6 +24,7 @@ public class CancelImagePipelineExecutionRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    // > This parameter is deprecated.
     @NameInMap("TemplateTag")
     public java.util.List<CancelImagePipelineExecutionRequestTemplateTag> templateTag;
 
@@ -87,9 +90,11 @@ public class CancelImagePipelineExecutionRequest extends TeaModel {
     }
 
     public static class CancelImagePipelineExecutionRequestTemplateTag extends TeaModel {
+        // >  This parameter is deprecated.
         @NameInMap("Key")
         public String key;
 
+        // >  This parameter is deprecated.
         @NameInMap("Value")
         public String value;
 

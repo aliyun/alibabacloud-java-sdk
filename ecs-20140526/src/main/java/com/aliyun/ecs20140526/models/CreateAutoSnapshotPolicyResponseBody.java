@@ -4,9 +4,11 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateAutoSnapshotPolicyResponseBody extends TeaModel {
+    // The ID of the automatic snapshot policy.
     @NameInMap("AutoSnapshotPolicyId")
     public String autoSnapshotPolicyId;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,12 +4,19 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyDiskSpecResponseBody extends TeaModel {
+    // The ID of the order.
+    // 
+    // >  This parameter is returned only when the category of a subscription disk or the performance level of a subscription ESSD is modified.
     @NameInMap("OrderId")
     public String orderId;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The task ID of changing the disk category.
+    // 
+    // >  If you only modify the performance level of an ESSD, this parameter is not returned.
     @NameInMap("TaskId")
     public String taskId;
 

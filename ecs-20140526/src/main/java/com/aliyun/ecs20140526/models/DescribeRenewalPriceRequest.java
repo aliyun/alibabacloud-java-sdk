@@ -13,15 +13,29 @@ public class DescribeRenewalPriceRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The renewal period. The valid values of this parameter depend on the value specified for the PriceUnit parameter. Valid values:
+    // 
+    // *   When `PriceUnit` is set to `Month`: 1, 2, 3, 4, 5, 6, 7, 8, and 9.
+    // *   When `PriceUnit` is set to `Year`: 1, 2, and 3.
+    // 
+    // Default value: 1.
     @NameInMap("Period")
     public Integer period;
 
+    // The unit of the renewal period. Valid values:
+    // 
+    // *   Month
+    // *   Year
+    // 
+    // Default value: Month.
     @NameInMap("PriceUnit")
     public String priceUnit;
 
+    // The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The ID of the specified resource whose renewal price is to be queried. When the `ResourceType` parameter is set to `instance`, the value of `ResourceId` is that of `InstanceId`.
     @NameInMap("ResourceId")
     public String resourceId;
 
@@ -31,6 +45,9 @@ public class DescribeRenewalPriceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    // The type of the specified resource whose renewal price is to be queried. Set the value to instance.
+    // 
+    // Default value: instance.
     @NameInMap("ResourceType")
     public String resourceType;
 

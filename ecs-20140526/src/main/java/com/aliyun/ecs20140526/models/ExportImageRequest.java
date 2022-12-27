@@ -4,21 +4,34 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ExportImageRequest extends TeaModel {
+    // The format to export the custom image. Valid values:
+    // 
+    // - raw.
+    // - vhd.
+    // - qcow2.
+    // - vmdk.
+    // - vdi.
+    // 
+    // Default value: raw.
     @NameInMap("ImageFormat")
     public String imageFormat;
 
+    // The ID of the custom image.
     @NameInMap("ImageId")
     public String imageId;
 
+    // The OSS bucket to which to export the custom image.
     @NameInMap("OSSBucket")
     public String OSSBucket;
 
+    // The prefix of the object as which to store the custom image in the OSS bucket. The prefix must be 1 to 30 characters in length and can contain digits and letters.
     @NameInMap("OSSPrefix")
     public String OSSPrefix;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The region ID of the custom image. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 
@@ -28,6 +41,7 @@ public class ExportImageRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    // The name of the RAM role used to export the custom image.
     @NameInMap("RoleName")
     public String roleName;
 

@@ -4,18 +4,23 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
+    // Details about the dedicated host clusters.
     @NameInMap("DedicatedHostClusters")
     public DescribeDedicatedHostClustersResponseBodyDedicatedHostClusters dedicatedHostClusters;
 
+    // The page number of the returned page.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries returned per page.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The total number of dedicated host clusters.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,9 +70,11 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
     }
 
     public static class DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacityAvailableInstanceTypesAvailableInstanceType extends TeaModel {
+        // The available capacity of the ECS instance type.
         @NameInMap("AvailableInstanceCapacity")
         public Integer availableInstanceCapacity;
 
+        // The ECS instance type.
         @NameInMap("InstanceType")
         public String instanceType;
 
@@ -114,12 +121,21 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
     }
 
     public static class DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacityLocalStorageCapacitiesLocalStorageCapacity extends TeaModel {
+        // The available capacity of the local disk. Unit: GiB.
         @NameInMap("AvailableDisk")
         public Integer availableDisk;
 
+        // The category of the data disk. Valid values:
+        // 
+        // - cloud: basic disk
+        // - cloud_efficiency: ultra disk
+        // - cloud_ssd: standard SSD
+        // - ephemeral_ssd: local SSD
+        // - cloud_essd: enhanced SSD (ESSD)
         @NameInMap("DataDiskCategory")
         public String dataDiskCategory;
 
+        // The total capacity of the local disk. Unit: GiB.
         @NameInMap("TotalDisk")
         public Integer totalDisk;
 
@@ -174,21 +190,27 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
     }
 
     public static class DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacity extends TeaModel {
+        // The available capacity of the Elastic Compute Service (ECS) instance types in the dedicated host cluster.
         @NameInMap("AvailableInstanceTypes")
         public DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacityAvailableInstanceTypes availableInstanceTypes;
 
+        // The size of available memory. Unit: GiB.
         @NameInMap("AvailableMemory")
         public Integer availableMemory;
 
+        // The number of available vCPUs.
         @NameInMap("AvailableVcpus")
         public Integer availableVcpus;
 
+        // The local storage capacity.
         @NameInMap("LocalStorageCapacities")
         public DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacityLocalStorageCapacities localStorageCapacities;
 
+        // The total memory size. Unit: GiB.
         @NameInMap("TotalMemory")
         public Integer totalMemory;
 
+        // The total number of vCPUs.
         @NameInMap("TotalVcpus")
         public Integer totalVcpus;
 
@@ -267,9 +289,11 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
     }
 
     public static class DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterTagsTag extends TeaModel {
+        // The tag key of the dedicated host cluster.
         @NameInMap("TagKey")
         public String tagKey;
 
+        // The tag value of the dedicated host cluster.
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -316,30 +340,39 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
     }
 
     public static class DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostCluster extends TeaModel {
+        // The capacity of the dedicated host cluster.
         @NameInMap("DedicatedHostClusterCapacity")
         public DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacity dedicatedHostClusterCapacity;
 
+        // The ID of the dedicated host cluster.
         @NameInMap("DedicatedHostClusterId")
         public String dedicatedHostClusterId;
 
+        // The name of the dedicated host cluster.
         @NameInMap("DedicatedHostClusterName")
         public String dedicatedHostClusterName;
 
+        // The IDs of dedicated hosts in the dedicated host cluster.
         @NameInMap("DedicatedHostIds")
         public DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostIds dedicatedHostIds;
 
+        // The description of the dedicated host cluster.
         @NameInMap("Description")
         public String description;
 
+        // The region ID of the dedicated host cluster.
         @NameInMap("RegionId")
         public String regionId;
 
+        // The ID of the resource group to which the dedicated host cluster belongs.
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        // The tags of the dedicated host cluster.
         @NameInMap("Tags")
         public DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterTags tags;
 
+        // The zone ID of the dedicated host cluster.
         @NameInMap("ZoneId")
         public String zoneId;
 

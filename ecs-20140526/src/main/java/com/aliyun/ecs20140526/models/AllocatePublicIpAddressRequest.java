@@ -4,9 +4,11 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class AllocatePublicIpAddressRequest extends TeaModel {
+    // The ID of the instance.
     @NameInMap("InstanceId")
     public String instanceId;
 
+    // The public IP address to assign to the instance. This parameter is empty by default, which indicates that a public IP address is randomly assigned by the system.
     @NameInMap("IpAddress")
     public String ipAddress;
 
@@ -22,6 +24,9 @@ public class AllocatePublicIpAddressRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    // The virtual LAN (VLAN) ID of the instance. 
+    // 
+    // >  This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.
     @NameInMap("VlanId")
     public String vlanId;
 

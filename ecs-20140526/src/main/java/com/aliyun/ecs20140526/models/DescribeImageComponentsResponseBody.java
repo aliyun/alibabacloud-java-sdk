@@ -4,18 +4,23 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageComponentsResponseBody extends TeaModel {
+    // Details about the image components.
     @NameInMap("ImageComponent")
     public DescribeImageComponentsResponseBodyImageComponent imageComponent;
 
+    // The maximum number of entries returned per page.
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    // The query token returned in this call. For information about how to use this return value, see the "Description" section in this topic.
     @NameInMap("NextToken")
     public String nextToken;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The total number of image components returned.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,9 +70,11 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
     }
 
     public static class DescribeImageComponentsResponseBodyImageComponentImageComponentSetTagsTag extends TeaModel {
+        // The tag key of the image component.
         @NameInMap("TagKey")
         public String tagKey;
 
+        // The tag value of the image component.
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -114,33 +121,46 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
     }
 
     public static class DescribeImageComponentsResponseBodyImageComponentImageComponentSet extends TeaModel {
+        // The type of the image component.
         @NameInMap("ComponentType")
         public String componentType;
 
+        // The content of the image component.
         @NameInMap("Content")
         public String content;
 
+        // The time when the image component was created.
         @NameInMap("CreationTime")
         public String creationTime;
 
+        // The description of the image component.
         @NameInMap("Description")
         public String description;
 
+        // The ID of the image component.
         @NameInMap("ImageComponentId")
         public String imageComponentId;
 
+        // The name of the image component.
         @NameInMap("Name")
         public String name;
 
+        // The type of the image component. Valid values:
+        // 
+        // *   SELF: the custom component that you created.
+        // *   ALIYUN: the system component provided by Alibaba Cloud.
         @NameInMap("Owner")
         public String owner;
 
+        // The ID of the resource group.
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        // The operating system type supported by the image component.
         @NameInMap("SystemType")
         public String systemType;
 
+        // The tags of the image component.
         @NameInMap("Tags")
         public DescribeImageComponentsResponseBodyImageComponentImageComponentSetTags tags;
 

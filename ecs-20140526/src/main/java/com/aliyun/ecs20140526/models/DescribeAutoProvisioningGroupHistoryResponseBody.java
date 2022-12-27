@@ -4,18 +4,23 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
+    // An array consisting of AutoProvisioningGroupHistory data.
     @NameInMap("AutoProvisioningGroupHistories")
     public DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistories autoProvisioningGroupHistories;
 
+    // The page number of the returned page.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries returned per page.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The number of queried scheduling tasks in the auto provisioning group.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,9 +70,16 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
     }
 
     public static class DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetail extends TeaModel {
+        // The execution details of instance creation performed by the single scheduling task.
         @NameInMap("Detail")
         public String detail;
 
+        // The execution status of instance creation performed by the single scheduling task. Valid values:
+        // 
+        // *   Successful: Instances are created.
+        // *   Failed: Instances failed to be created.
+        // *   InProgress: Instances are being created.
+        // *   Warning: Partial instances are created.
         @NameInMap("Status")
         public String status;
 
@@ -114,6 +126,7 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
     }
 
     public static class DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistory extends TeaModel {
+        // An array consisting of ActivityDetail data.
         @NameInMap("ActivityDetails")
         public DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetails activityDetails;
 

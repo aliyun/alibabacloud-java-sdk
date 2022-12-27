@@ -4,6 +4,12 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DeleteSnapshotRequest extends TeaModel {
+    // Specifies whether to force delete the snapshot that has been used to create disks. Valid values:
+    // 
+    // *   true: force deletes the snapshot. After the snapshot is force deleted, the disks created from this snapshot cannot be re-initialized.
+    // *   false: does not force delete the snapshot.
+    // 
+    // Default value: false
     @NameInMap("Force")
     public Boolean force;
 
@@ -19,6 +25,7 @@ public class DeleteSnapshotRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    // The ID of the snapshot.
     @NameInMap("SnapshotId")
     public String snapshotId;
 

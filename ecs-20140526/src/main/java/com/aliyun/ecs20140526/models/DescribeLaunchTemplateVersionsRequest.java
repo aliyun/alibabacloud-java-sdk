@@ -4,24 +4,37 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeLaunchTemplateVersionsRequest extends TeaModel {
+    // Specifies whether to query the default version.
     @NameInMap("DefaultVersion")
     public Boolean defaultVersion;
 
+    // Specifies whether to query the configurations of the launch template. Valid values:
+    // 
+    // *   true: queries the basic information and other details of the launch template. The details include the image ID and system disk size.
+    // *   false: queries only the basic information of the launch template. The basic information includes the template ID, template name, and default version.
+    // 
+    // Default value: true.
     @NameInMap("DetailFlag")
     public Boolean detailFlag;
 
+    // The ID of the launch template.
+    // 
+    // You must specify LaunchTemplateId or LaunchTemplateName to determine a launch template.
     @NameInMap("LaunchTemplateId")
     public String launchTemplateId;
 
+    // The name of the launch template.
     @NameInMap("LaunchTemplateName")
     public String launchTemplateName;
 
     @NameInMap("LaunchTemplateVersion")
     public java.util.List<Long> launchTemplateVersion;
 
+    // The maximum version number in the version range to query.
     @NameInMap("MaxVersion")
     public Long maxVersion;
 
+    // The minimum version number in the version range to query.
     @NameInMap("MinVersion")
     public Long minVersion;
 
@@ -31,12 +44,23 @@ public class DescribeLaunchTemplateVersionsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The number of the page to return.
+    // 
+    // Pages start from page 1.
+    // 
+    // Default value: 1.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries to return on each page.
+    // 
+    // Default value: 10.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The region ID of the launch template.
+    // 
+    // You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 

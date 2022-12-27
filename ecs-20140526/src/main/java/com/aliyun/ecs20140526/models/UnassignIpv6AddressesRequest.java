@@ -10,6 +10,7 @@ public class UnassignIpv6AddressesRequest extends TeaModel {
     @NameInMap("Ipv6Prefix")
     public java.util.List<String> ipv6Prefix;
 
+    // The ID of the ENI.
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;
 
@@ -19,6 +20,7 @@ public class UnassignIpv6AddressesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 

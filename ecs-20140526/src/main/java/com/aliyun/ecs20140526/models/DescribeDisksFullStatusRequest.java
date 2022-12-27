@@ -7,15 +7,30 @@ public class DescribeDisksFullStatusRequest extends TeaModel {
     @NameInMap("EventTime")
     public DescribeDisksFullStatusRequestEventTime eventTime;
 
+    // The IDs of EBS devices. You can specify up to 100 EBS device IDs.
     @NameInMap("DiskId")
     public java.util.List<String> diskId;
 
+    // The list of event IDs.
     @NameInMap("EventId")
     public java.util.List<String> eventId;
 
+    // The event type. Valid values:
+    // 
+    // *   Degraded: The performance of the EBS device is degraded.
+    // *   SeverelyDegraded: The performance of the EBS device was severely degraded.
+    // *   Stalled: The performance of the EBS device is severely affected.
+    // *   ErrorDetected: The local disk is damaged.
     @NameInMap("EventType")
     public String eventType;
 
+    // The health status of the EBS device. Valid values:
+    // 
+    // *   Impaired: The EBS device is damaged.
+    // *   Warning: The performance of the EBS device may be degraded.
+    // *   Initializing: The EBS device is being initialized.
+    // *   InsufficientData: The status cannot be determined due to insufficient data.
+    // *   NotApplicable: The EBS device cannot be used.
     @NameInMap("HealthStatus")
     public String healthStatus;
 
@@ -25,15 +40,23 @@ public class DescribeDisksFullStatusRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The number of the page to return. The value must be a positive integer.
+    // 
+    // Default value: 1.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries to return on each page. Valid values: 1 to 100.
+    // 
+    // Default value: 10.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The region ID of the EBS device. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The ID of the resource group to which the EBS device belongs. When this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -43,9 +66,18 @@ public class DescribeDisksFullStatusRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    // The lifecycle status of the EBS device. For more information, see [Disk status](~~25689~~). Valid values:
+    // 
+    // *   In_use
+    // *   Available
+    // *   Attaching
+    // *   Detaching
+    // *   Creating
+    // *   ReIniting
     @NameInMap("Status")
     public String status;
 
+    // The tags.
     @NameInMap("Tag")
     public java.util.List<DescribeDisksFullStatusRequestTag> tag;
 
@@ -175,9 +207,15 @@ public class DescribeDisksFullStatusRequest extends TeaModel {
     }
 
     public static class DescribeDisksFullStatusRequestEventTime extends TeaModel {
+        // The end of the time range in which to query occurred events.
+        // 
+        // The time follows the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be displayed in UTC.
         @NameInMap("End")
         public String end;
 
+        // The start of the time range in which to query occurred events.
+        // 
+        // The time follows the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be displayed in UTC.
         @NameInMap("Start")
         public String start;
 
@@ -205,9 +243,13 @@ public class DescribeDisksFullStatusRequest extends TeaModel {
     }
 
     public static class DescribeDisksFullStatusRequestTag extends TeaModel {
+        // The key of tag N added to the EBS device. A key-value pair consists of a key specified by the `Tag.N.Key` parameter and a value specified by the `Tag.N.Value` parameter. The two parameters are associated with each other. Valid values of N: 1 to 20.
+        // 
+        // If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response.
         @NameInMap("Key")
         public String key;
 
+        // The value of tag N added to the EBS device. A key-value pair consists of a key specified by the `Tag.N.Key` parameter and a value specified by the `Tag.N.Value` parameter. The two parameters are associated with each other. Valid values of N: 1 to 20.
         @NameInMap("Value")
         public String value;
 

@@ -13,9 +13,28 @@ public class DescribeInstancesFullStatusRequest extends TeaModel {
     @NameInMap("EventId")
     public java.util.List<String> eventId;
 
+    // The type of the system event. This parameter takes effect only when the InstanceEventType.N parameter is not specified. Valid values:
+    // 
+    // *   SystemMaintenance.Reboot: The instance is restarted due to system maintenance.
+    // *   SystemFailure.Reboot: The instance is restarted due to a system failure.
+    // *   InstanceFailure.Reboot: The instance is restarted due to an instance failure.
+    // *   InstanceExpiration.Stop: The instance is stopped due to subscription expiration.
+    // *   InstanceExpiration.Delete: The instance is released due to subscription expiration.
+    // *   AccountUnbalanced.Stop: The pay-as-you-go instance is stopped due to overdue payments.
+    // *   AccountUnbalanced.Delete: The pay-as-you-go instance is released due to overdue payments.
     @NameInMap("EventType")
     public String eventType;
 
+    // The health status of the instance. Valid values:
+    // 
+    // *   Impaired: The instance is impaired.
+    // *   Warning: The instance performance may be degraded due to maintenance or technical issues.
+    // *   Maintaining: The instance is undergoing maintenance.
+    // *   Initializing: The instance is being initialized.
+    // *   InsufficientData: The status cannot be determined due to insufficient data.
+    // *   NotApplicable: The parameter is not applicable.
+    // 
+    // All the values are case-sensitive.
     @NameInMap("HealthStatus")
     public String healthStatus;
 
@@ -31,12 +50,19 @@ public class DescribeInstancesFullStatusRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The number of the page to return. Pages start from page 1.
+    // 
+    // Default value: 1.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries to return on each page. Valid values: 1 to 100.
+    // 
+    // Default value: 10.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 
@@ -46,6 +72,11 @@ public class DescribeInstancesFullStatusRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    // The lifecycle status of the instance. Valid values:
+    // 
+    // *   Starting
+    // *   Running
+    // *   Stopped
     @NameInMap("Status")
     public String status;
 
@@ -175,9 +206,11 @@ public class DescribeInstancesFullStatusRequest extends TeaModel {
     }
 
     public static class DescribeInstancesFullStatusRequestEventPublishTime extends TeaModel {
+        // The end time of the period during which a system event is published. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
         @NameInMap("End")
         public String end;
 
+        // The start time of the period during which a system event is published. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
         @NameInMap("Start")
         public String start;
 
@@ -205,9 +238,11 @@ public class DescribeInstancesFullStatusRequest extends TeaModel {
     }
 
     public static class DescribeInstancesFullStatusRequestNotBefore extends TeaModel {
+        // The end time of the scheduled event execution. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
         @NameInMap("End")
         public String end;
 
+        // The start time of the scheduled event execution. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
         @NameInMap("Start")
         public String start;
 

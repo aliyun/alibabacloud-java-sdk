@@ -10,12 +10,15 @@ public class JoinResourceGroupRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The region ID of the resource. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The ID of the resource group to which to add the resource.
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    // The ID of the resource. This parameter depends on the ResourceType value. For example, when ResourceType is set to instance, ResourceId can be interpreted as InstanceId.
     @NameInMap("ResourceId")
     public String resourceId;
 
@@ -25,6 +28,20 @@ public class JoinResourceGroupRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    // The type of the ECS resource. Valid values:
+    // 
+    // *   instance: instance
+    // *   disk: Elastic Block Storage device
+    // *   snapshot: snapshot
+    // *   image: image
+    // *   securitygroup: security group
+    // *   ddh: dedicated host
+    // *   ddhcluster: dedicated host cluster
+    // *   eni: ENI
+    // *   keypair: SSH key pair
+    // *   launchtemplate: launch template
+    // 
+    // These values are case-sensitive.
     @NameInMap("ResourceType")
     public String resourceType;
 

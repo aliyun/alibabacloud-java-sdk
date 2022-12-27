@@ -4,12 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
+    // The token used to start the next query.
     @NameInMap("NextToken")
     public String nextToken;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Details about resources and tags, including resource IDs, resource types, and tag key-value pairs.
     @NameInMap("TagResources")
     public ListTagResourcesResponseBodyTagResources tagResources;
 
@@ -43,15 +46,35 @@ public class ListTagResourcesResponseBody extends TeaModel {
     }
 
     public static class ListTagResourcesResponseBodyTagResourcesTagResource extends TeaModel {
+        // The ID of the resource.
         @NameInMap("ResourceId")
         public String resourceId;
 
+        // The type of the resource. Valid values:
+        // 
+        // *   instance: ECS instance
+        // *   disk: disk
+        // *   snapshot: snapshot
+        // *   image: image
+        // *   securitygroup: security group
+        // *   volume: storage volume
+        // *   eni: ENI
+        // *   ddh: dedicated host
+        // *   ddhcluster: dedicated host cluster
+        // *   keypair: SSH key pair
+        // *   launchtemplate: launch template
+        // *   reservedinstance: reserved instance
+        // *   snapshotpolicy: automatic snapshot policy
+        // *   elasticityassurance: elasticity assurance
+        // *   capacityreservation: capacity reservation
         @NameInMap("ResourceType")
         public String resourceType;
 
+        // The key of the tag.
         @NameInMap("TagKey")
         public String tagKey;
 
+        // The value of the tag.
         @NameInMap("TagValue")
         public String tagValue;
 

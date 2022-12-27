@@ -7,9 +7,11 @@ public class AddTagsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The ID of the region to which the ECS resource belongs. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The ID of the resource. When the resources are instances, this parameter can be interpreted as InstanceId.
     @NameInMap("ResourceId")
     public String resourceId;
 
@@ -19,9 +21,19 @@ public class AddTagsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    // The type of the resource. Valid values:
+    // 
+    // *   disk
+    // *   instance
+    // *   image
+    // *   securitygroup
+    // *   snapshot
+    // 
+    // All values must be lowercase.
     @NameInMap("ResourceType")
     public String resourceType;
 
+    // The tags.
     @NameInMap("Tag")
     public java.util.List<AddTagsRequestTag> tag;
 
@@ -87,9 +99,11 @@ public class AddTagsRequest extends TeaModel {
     }
 
     public static class AddTagsRequestTag extends TeaModel {
+        // The key of tag N to be bound to the resource. Valid values of N: 1 to 20 The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain http:// or https://.
         @NameInMap("Key")
         public String key;
 
+        // The value of tag N to be bound to the resource. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain http:// or https://.
         @NameInMap("Value")
         public String value;
 

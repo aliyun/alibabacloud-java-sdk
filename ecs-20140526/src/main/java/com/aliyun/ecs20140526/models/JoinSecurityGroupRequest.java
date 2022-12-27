@@ -4,9 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class JoinSecurityGroupRequest extends TeaModel {
+    // The ID of the instance.
+    // 
+    // >  If this parameter is specified, the `NetworkInterfaceId` parameter cannot be specified.
     @NameInMap("InstanceId")
     public String instanceId;
 
+    // The ID of the ENI.
+    // 
+    // >  If this parameter is specified, the `InstanceId` parameter cannot be specified.
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;
 
@@ -16,6 +22,10 @@ public class JoinSecurityGroupRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+    // 
+    // *   You do not need to specify a region ID when you add an instance to a security group.
+    // *   You must specify a region ID when you add an ENI to a security group.
     @NameInMap("RegionId")
     public String regionId;
 
@@ -25,6 +35,7 @@ public class JoinSecurityGroupRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    // The ID of the security group. You can call the [DescribeSecurityGroups](~~25556~~) operation to query available security groups.
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 

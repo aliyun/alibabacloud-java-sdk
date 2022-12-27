@@ -4,12 +4,17 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeSpotAdviceResponseBody extends TeaModel {
+    // Details about preemptible instances in the zones of the specified region.
+    // 
+    // >  The return values are sorted based on the historical percentages of average preemptible instance prices relative to pay-as-you-go instance prices for instance types.
     @NameInMap("AvailableSpotZones")
     public DescribeSpotAdviceResponseBodyAvailableSpotZones availableSpotZones;
 
+    // The ID of the region.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,15 +48,26 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
     }
 
     public static class DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZoneAvailableSpotResourcesAvailableSpotResource extends TeaModel {
+        // The percentage of the average preemptible instance relative to the pay-as-you-go instance price in the last 30 days. Unit: percent (%). Valid values: 1 to 100.
+        // 
+        // You can calculate the average preemptible instance price based on the return value. For example, if the pay-as-you-go instance price is 1 and the return value of this parameter is 20, the average preemptible instance price in the last 30 days is 0.2.
         @NameInMap("AverageSpotDiscount")
         public Integer averageSpotDiscount;
 
+        // The instance type.
         @NameInMap("InstanceType")
         public String instanceType;
 
+        // The release rate range of preemptible instances in the last 30 days, which corresponds to the `InterruptionRate` value. Valid values:
+        // 
+        // *   0-3%
+        // *   3-5%
+        // *   5-10%
+        // *   10-100%
         @NameInMap("InterruptRateDesc")
         public String interruptRateDesc;
 
+        // The average release rate of preemptible instances in the last 30 days. Unit: percent (%).
         @NameInMap("InterruptionRate")
         public Float interruptionRate;
 
@@ -114,9 +130,11 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
     }
 
     public static class DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZone extends TeaModel {
+        // Details about preemptible instances in the last 30 days, including release rates and percentages of average preemptible instance prices relative to pay-as-you-go instance prices.
         @NameInMap("AvailableSpotResources")
         public DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZoneAvailableSpotResources availableSpotResources;
 
+        // The ID of the zone.
         @NameInMap("ZoneId")
         public String zoneId;
 

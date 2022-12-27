@@ -4,15 +4,22 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeDedicatedBlockStorageClustersRequest extends TeaModel {
+    // The category of disks that can be created in the dedicated block storage cluster.
+    // 
+    // Valid value: cloud_essd. Only enhanced SSDs (ESSDs) can be created in dedicated block storage clusters.
     @NameInMap("Category")
     public String category;
 
     @NameInMap("DedicatedBlockStorageClusterId")
     public java.util.List<String> dedicatedBlockStorageClusterId;
 
+    // The maximum number of entries to return on each page. Maximum value: 500.
+    // 
+    // Default value: 10.
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    // The pagination token. Set the value to the NextToken value returned from a previous call to the DescribeDedicatedBlockStorageClusters operation. Leave this parameter empty when you call this operation for the first time.
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -22,6 +29,7 @@ public class DescribeDedicatedBlockStorageClustersRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The region ID of the dedicated block storage cluster. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 
@@ -31,9 +39,11 @@ public class DescribeDedicatedBlockStorageClustersRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    // The states of the dedicated block storage clusters. You can specify multiple cluster states to query dedicated block storage clusters in these states.
     @NameInMap("Status")
     public java.util.List<String> status;
 
+    // The zone ID of the dedicated block storage cluster. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.
     @NameInMap("ZoneId")
     public String zoneId;
 

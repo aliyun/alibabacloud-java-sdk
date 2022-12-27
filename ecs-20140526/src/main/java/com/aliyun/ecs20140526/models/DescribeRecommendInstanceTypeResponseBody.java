@@ -4,9 +4,11 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
+    // Details of recommended instance types.
     @NameInMap("Data")
     public DescribeRecommendInstanceTypeResponseBodyData data;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +34,27 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
     }
 
     public static class DescribeRecommendInstanceTypeResponseBodyDataRecommendInstanceTypeInstanceType extends TeaModel {
+        // The number of vCPUs of the instance type.
         @NameInMap("Cores")
         public Integer cores;
 
+        // The generation of the instance family.
         @NameInMap("Generation")
         public String generation;
 
+        // The name of the instance type.
         @NameInMap("InstanceType")
         public String instanceType;
 
+        // The instance family.
         @NameInMap("InstanceTypeFamily")
         public String instanceTypeFamily;
 
+        // The memory size of the instance type. Unit: MB.
         @NameInMap("Memory")
         public Integer memory;
 
+        // Indicates whether the instance type supports I/O optimization.
         @NameInMap("SupportIoOptimized")
         public String supportIoOptimized;
 
@@ -125,9 +133,11 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
     }
 
     public static class DescribeRecommendInstanceTypeResponseBodyDataRecommendInstanceTypeZonesZone extends TeaModel {
+        // Details of network types of the alternative instance types.
         @NameInMap("NetworkTypes")
         public DescribeRecommendInstanceTypeResponseBodyDataRecommendInstanceTypeZonesZoneNetworkTypes networkTypes;
 
+        // The zone ID of the specified instance type.
         @NameInMap("ZoneNo")
         public String zoneNo;
 
@@ -174,33 +184,43 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
     }
 
     public static class DescribeRecommendInstanceTypeResponseBodyDataRecommendInstanceType extends TeaModel {
+        // The commodity code of the instance type.
         @NameInMap("CommodityCode")
         public String commodityCode;
 
+        // The billing method of the instances of the instance type.
         @NameInMap("InstanceChargeType")
         public String instanceChargeType;
 
+        // The name of the instance type.
         @NameInMap("InstanceType")
         public DescribeRecommendInstanceTypeResponseBodyDataRecommendInstanceTypeInstanceType instanceType;
 
+        // The network type of the ECS instance.
         @NameInMap("NetworkType")
         public String networkType;
 
+        // The sorting priority.
         @NameInMap("Priority")
         public Integer priority;
 
+        // The region ID of the instance type.
         @NameInMap("RegionId")
         public String regionId;
 
+        // Indicates the scenario in which the instance type was recommended.
         @NameInMap("Scene")
         public String scene;
 
+        // The preemption policy for the preemptible instance.
         @NameInMap("SpotStrategy")
         public String spotStrategy;
 
+        // The zone ID of the instance type.
         @NameInMap("ZoneId")
         public String zoneId;
 
+        // Details of the zones where the alternative instance types are available.
         @NameInMap("Zones")
         public DescribeRecommendInstanceTypeResponseBodyDataRecommendInstanceTypeZones zones;
 

@@ -7,21 +7,32 @@ public class CreateCapacityReservationRequest extends TeaModel {
     @NameInMap("PrivatePoolOptions")
     public CreateCapacityReservationRequestPrivatePoolOptions privatePoolOptions;
 
+    // The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The `ClientToken` value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
     @NameInMap("ClientToken")
     public String clientToken;
 
+    // The description of the capacity reservation. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
+    // 
+    // This parameter is empty by default.
     @NameInMap("Description")
     public String description;
 
+    // The expiration time of the capacity reservation. Specify the time in the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC. For more information, see [ISO 8601](~~25696~~).
     @NameInMap("EndTime")
     public String endTime;
 
+    // The release mode of the capacity reservation. Valid values:
+    // 
+    // *   Limited: The capacity reservation is released at the specified time. If you specify this parameter, you must also specify the `EndTime` parameter.
+    // *   Unlimited: The capacity reservation must be manually released. You can release it at any time.
     @NameInMap("EndTimeType")
     public String endTimeType;
 
+    // The total number of instances for which to reserve capacity of an instance type.
     @NameInMap("InstanceAmount")
     public Integer instanceAmount;
 
+    // The instance type. A capacity reservation can be created to reserve the capacity of a single instance type.
     @NameInMap("InstanceType")
     public String instanceType;
 
@@ -31,12 +42,22 @@ public class CreateCapacityReservationRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The operating system of the image used by the instance. This parameter corresponds to the `Platform` parameter of regional reserved instances. If the operating system of a capacity reservation matches that of a regional reserved instance, the regional reserved instance can be applied to offset bills of the unused capacity of the capacity reservation. Valid values:
+    // 
+    // *   Windows: Windows Server operating systems
+    // *   Linux: Linux and Unix-like operating systems
+    // 
+    // Default value: Linux.
+    // 
+    // >  This parameter is unavailable.
     @NameInMap("Platform")
     public String platform;
 
+    // The ID of the region in which to create the capacity reservation. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The ID of the resource group to which to assign the capacity reservation.
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -46,12 +67,17 @@ public class CreateCapacityReservationRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    // The mode in which the capacity reservation takes effect. You can specify a time value for this parameter to create the capacity reservation as a scheduled capacity reservation that takes effect at the specified time. Only immediate capacity reservations are supported. You do not need to specify this parameter.
+    // 
+    // >  If this parameter is empty, the capacity reservation is created as an immediate capacity reservation.
     @NameInMap("StartTime")
     public String startTime;
 
+    // The tags to add to the capacity reservation. You can specify up to 20 tags.
     @NameInMap("Tag")
     public java.util.List<CreateCapacityReservationRequestTag> tag;
 
+    // The IDs of zones within the region in which to create the capacity reservation. A capacity reservation can reserve resources within a single zone.
     @NameInMap("ZoneId")
     public java.util.List<String> zoneId;
 
@@ -197,9 +223,16 @@ public class CreateCapacityReservationRequest extends TeaModel {
     }
 
     public static class CreateCapacityReservationRequestPrivatePoolOptions extends TeaModel {
+        // The type of the private pool to be generated after the capacity reservation takes effect. Valid values:
+        // 
+        // *   Open: open private pool
+        // *   Target: specified private pool
+        // 
+        // Default value: Open.
         @NameInMap("MatchCriteria")
         public String matchCriteria;
 
+        // The name of the capacity reservation. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
         @NameInMap("Name")
         public String name;
 
@@ -227,9 +260,11 @@ public class CreateCapacityReservationRequest extends TeaModel {
     }
 
     public static class CreateCapacityReservationRequestTag extends TeaModel {
+        // The key of tag N of the capacity reservation. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
         @NameInMap("Key")
         public String key;
 
+        // The value of tag N of the capacity reservation. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length. It cannot start with `acs:` or contain `http://` or `https://`.
         @NameInMap("Value")
         public String value;
 

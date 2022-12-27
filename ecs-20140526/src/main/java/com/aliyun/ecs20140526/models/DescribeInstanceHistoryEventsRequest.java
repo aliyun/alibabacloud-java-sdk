@@ -10,12 +10,35 @@ public class DescribeInstanceHistoryEventsRequest extends TeaModel {
     @NameInMap("NotBefore")
     public DescribeInstanceHistoryEventsRequestNotBefore notBefore;
 
+    // The lifecycle state of the system event. This parameter is valid only when the InstanceEventCycleStatus.N parameter is not specified. Valid values:
+    // 
+    // *   Scheduled
+    // *   Avoided
+    // *   Executing
+    // *   Executed
+    // *   Canceled
+    // *   Failed
+    // *   Inquiring
     @NameInMap("EventCycleStatus")
     public String eventCycleStatus;
 
     @NameInMap("EventId")
     public java.util.List<String> eventId;
 
+    // The type of the system event. This parameter is valid only when the InstanceEventType.N parameter is not specified. Valid values:
+    // 
+    // *   SystemMaintenance.Reboot: The instance is restarted due to system maintenance.
+    // *   SystemMaintenance.Redeploy: The instance is redeployed due to system maintenance.
+    // *   SystemFailure.Reboot: The instance is restarted due to a system failure.
+    // *   SystemFailure.Redeploy: The instance is redeployed due to a system failure.
+    // *   SystemFailure.Delete: The instance is released due to an instance creation failure.
+    // *   InstanceFailure.Reboot: The instance is restarted due to an instance failure.
+    // *   InstanceExpiration.Stop: The instance is stopped due to subscription expiration.
+    // *   InstanceExpiration.Delete: The instance is released due to subscription expiration.
+    // *   AccountUnbalanced.Stop: The pay-as-you-go instance is stopped due to an overdue payment.
+    // *   AccountUnbalanced.Delete: The pay-as-you-go instance is released due to an overdue payment.
+    // 
+    // >  For more information, see [Overview](~~66574~~). The values of this parameter are applicable to only instance system events, but not to disk system events.
     @NameInMap("EventType")
     public String eventType;
 
@@ -28,6 +51,7 @@ public class DescribeInstanceHistoryEventsRequest extends TeaModel {
     @NameInMap("InstanceEventType")
     public java.util.List<String> instanceEventType;
 
+    // The ID of the instance. If this parameter is not specified, the system events of all instances within the specified region are queried.
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -37,15 +61,23 @@ public class DescribeInstanceHistoryEventsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The number of the page to return. Pages start from page 1. The value must be a positive integer.
+    // 
+    // Default value: 1.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries to return on each page. Valid values: 1 to 100.
+    // 
+    // Default value: 10.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The region ID of the resource. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The ID of the resource group to which the resource belongs.
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -58,6 +90,13 @@ public class DescribeInstanceHistoryEventsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    // The type of the resource. Valid values:
+    // 
+    // *   instance: ECS instance
+    // *   ddh: dedicated host
+    // *   managehost: physical machine in a smart hosting pool
+    // 
+    // Default value: instance.
     @NameInMap("ResourceType")
     public String resourceType;
 
@@ -230,9 +269,11 @@ public class DescribeInstanceHistoryEventsRequest extends TeaModel {
     }
 
     public static class DescribeInstanceHistoryEventsRequestEventPublishTime extends TeaModel {
+        // The end of the time range in which to query published system events. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
         @NameInMap("End")
         public String end;
 
+        // The beginning of the time range in which to query published system events. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
         @NameInMap("Start")
         public String start;
 
@@ -260,9 +301,11 @@ public class DescribeInstanceHistoryEventsRequest extends TeaModel {
     }
 
     public static class DescribeInstanceHistoryEventsRequestNotBefore extends TeaModel {
+        // The end time of the scheduled execution period for the system event. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
         @NameInMap("End")
         public String end;
 
+        // The start time of the scheduled execution period for the system event. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
         @NameInMap("Start")
         public String start;
 
@@ -290,9 +333,11 @@ public class DescribeInstanceHistoryEventsRequest extends TeaModel {
     }
 
     public static class DescribeInstanceHistoryEventsRequestTag extends TeaModel {
+        // The key of tag N of the resource.
         @NameInMap("Key")
         public String key;
 
+        // The value of tag N of the resource.
         @NameInMap("Value")
         public String value;
 

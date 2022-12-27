@@ -4,18 +4,27 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageSupportInstanceTypesRequest extends TeaModel {
+    // The scenario in which the instance type is used. Default value: CreateEcs. Valid values:
+    // 
+    // *   CreateEcs: instance creation
+    // *   Upgrade: instance type upgrade
+    // *   Downgrade: instance type downgrade
+    // *   RenewDowngrade: renewal and configuration downgrade
     @NameInMap("ActionType")
     public String actionType;
 
+    // The list of filters to querying resources.
     @NameInMap("Filter")
     public java.util.List<DescribeImageSupportInstanceTypesRequestFilter> filter;
 
+    // The ID of the image.
     @NameInMap("ImageId")
     public String imageId;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The region ID of the image. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 
@@ -87,9 +96,14 @@ public class DescribeImageSupportInstanceTypesRequest extends TeaModel {
     }
 
     public static class DescribeImageSupportInstanceTypesRequestFilter extends TeaModel {
+        // The key of filter. Only the image ID can be used to filter instance types. Valid values:
+        // 
+        // * imagId: image ID
+        // * filter: image ID
         @NameInMap("Key")
         public String key;
 
+        // The value of filter.
         @NameInMap("Value")
         public String value;
 

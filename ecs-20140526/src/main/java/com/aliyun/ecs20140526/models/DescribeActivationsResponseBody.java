@@ -4,18 +4,23 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeActivationsResponseBody extends TeaModel {
+    // Details of the activation codes and their usage information.
     @NameInMap("ActivationList")
     public java.util.List<DescribeActivationsResponseBodyActivationList> activationList;
 
+    // The page number of the returned page.
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    // The number of entries returned per page.
     @NameInMap("PageSize")
     public Long pageSize;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The total number of entries returned.
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -65,33 +70,43 @@ public class DescribeActivationsResponseBody extends TeaModel {
     }
 
     public static class DescribeActivationsResponseBodyActivationList extends TeaModel {
+        // The ID of the activation code.
         @NameInMap("ActivationId")
         public String activationId;
 
+        // The time when the activation code was created.
         @NameInMap("CreationTime")
         public String creationTime;
 
+        // The number of instances that were deregistered.
         @NameInMap("DeregisteredCount")
         public Integer deregisteredCount;
 
+        // The description of the activation code.
         @NameInMap("Description")
         public String description;
 
+        // Indicates whether the activation code is disabled.
         @NameInMap("Disabled")
         public Boolean disabled;
 
+        // The maximum number of times that the activation code can be used to register managed instances.
         @NameInMap("InstanceCount")
         public Integer instanceCount;
 
+        // The default instance name prefix.
         @NameInMap("InstanceName")
         public String instanceName;
 
+        // The IP addresses of hosts that are allowed to use the activation code.
         @NameInMap("IpAddressRange")
         public String ipAddressRange;
 
+        // The number of instances that were registered.
         @NameInMap("RegisteredCount")
         public Integer registeredCount;
 
+        // The validity period of the activation code. Unit: hours.
         @NameInMap("TimeToLiveInHours")
         public Long timeToLiveInHours;
 

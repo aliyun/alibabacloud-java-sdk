@@ -4,18 +4,23 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateDiagnosticReportRequest extends TeaModel {
+    // The end of the reporting period. This parameter takes effect only for diagnostic metrics that do not need to be assessed by running Cloud Assistant commands in guest operating systems.
     @NameInMap("EndTime")
     public String endTime;
 
+    // The ID of the diagnostic metric set. If this parameter is left empty, the dms-instancedefault set is used, which is the default diagnostic metric set provided for Elastic Compute Service (ECS) instances.
     @NameInMap("MetricSetId")
     public String metricSetId;
 
+    // The ID of the region in which to create a diagnostic report. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The ID of the resource.
     @NameInMap("ResourceId")
     public String resourceId;
 
+    // The beginning of the reporting period. This parameter takes effect only for diagnostic metrics that do not need to be assessed by running Cloud Assistant commands in guest operating systems.
     @NameInMap("StartTime")
     public String startTime;
 

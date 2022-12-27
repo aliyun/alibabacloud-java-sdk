@@ -4,9 +4,11 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeAutoSnapshotPolicyExRequest extends TeaModel {
+    // The ID of the automatic snapshot policy.
     @NameInMap("AutoSnapshotPolicyId")
     public String autoSnapshotPolicyId;
 
+    // The name of the automatic snapshot policy.
     @NameInMap("AutoSnapshotPolicyName")
     public String autoSnapshotPolicyName;
 
@@ -16,15 +18,29 @@ public class DescribeAutoSnapshotPolicyExRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The number of the page to return.
+    // 
+    // Page start from page 1.
+    // 
+    // Default value: 1.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries to return on each page.
+    // 
+    // Maximum value: 100.
+    // 
+    // Default value: 10.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The region ID of the automatic snapshot policy. You can call the [DescribeRegions](~~25609~~) operation to query the current list of regions.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The ID of the resource group. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.
+    // 
+    // >  Resources in the default resource group are displayed in the response regardless of how this parameter is set.
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -34,6 +50,7 @@ public class DescribeAutoSnapshotPolicyExRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    // The tags.
     @NameInMap("Tag")
     public java.util.List<DescribeAutoSnapshotPolicyExRequestTag> tag;
 
@@ -131,9 +148,11 @@ public class DescribeAutoSnapshotPolicyExRequest extends TeaModel {
     }
 
     public static class DescribeAutoSnapshotPolicyExRequestTag extends TeaModel {
+        // The key of tag N of the automatic snapshot policy. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain http:// or https://.
         @NameInMap("Key")
         public String key;
 
+        // The value of tag N of the automatic snapshot policy. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with acs: or contain http:// or https://.
         @NameInMap("Value")
         public String value;
 

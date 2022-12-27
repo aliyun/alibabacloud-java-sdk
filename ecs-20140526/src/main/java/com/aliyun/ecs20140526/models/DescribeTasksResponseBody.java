@@ -4,21 +4,27 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeTasksResponseBody extends TeaModel {
+    // The page number of the returned page.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries returned per page.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The region ID of the task.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Details about the tasks.
     @NameInMap("TaskSet")
     public DescribeTasksResponseBodyTaskSet taskSet;
 
+    // The total number of entries returned.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -76,24 +82,30 @@ public class DescribeTasksResponseBody extends TeaModel {
     }
 
     public static class DescribeTasksResponseBodyTaskSetTask extends TeaModel {
+        // The time when the task was created.
         @NameInMap("CreationTime")
         public String creationTime;
 
+        // The time when the task was completed.
         @NameInMap("FinishedTime")
         public String finishedTime;
 
         @NameInMap("ResourceId")
         public String resourceId;
 
+        // Indicates whether the task can be canceled.
         @NameInMap("SupportCancel")
         public String supportCancel;
 
+        // The name of the task.
         @NameInMap("TaskAction")
         public String taskAction;
 
+        // The ID of the task.
         @NameInMap("TaskId")
         public String taskId;
 
+        // The status of the task.
         @NameInMap("TaskStatus")
         public String taskStatus;
 

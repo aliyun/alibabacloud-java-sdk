@@ -4,12 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeDiagnosticReportsResponseBody extends TeaModel {
+    // The query token returned in this call.
     @NameInMap("NextToken")
     public String nextToken;
 
+    // The list of reports.
     @NameInMap("Reports")
     public DescribeDiagnosticReportsResponseBodyReports reports;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,15 +46,23 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
     }
 
     public static class DescribeDiagnosticReportsResponseBodyReportsReportIssuesIssue extends TeaModel {
+        // The unique ID of the diagnosed issue.
         @NameInMap("IssueId")
         public String issueId;
 
+        // The category of the diagnostic metric.
         @NameInMap("MetricCategory")
         public String metricCategory;
 
+        // The ID of the diagnostic metric.
         @NameInMap("MetricId")
         public String metricId;
 
+        // The severity level of the diagnostic metric. Valid values:
+        // 
+        // *   Info: Diagnostic information was recorded and may be related to exceptions.
+        // *   Warn: Diagnostic information was recorded and may indicate exceptions.
+        // *   Critical: Critical exceptions were detected.
         @NameInMap("Severity")
         public String severity;
 
@@ -114,36 +125,53 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
     }
 
     public static class DescribeDiagnosticReportsResponseBodyReportsReport extends TeaModel {
+        // The time when the diagnostic report was created.
         @NameInMap("CreationTime")
         public String creationTime;
 
+        // The end of the reporting period of the diagnostic report. The value is the EndTime value that was passed in when you called the [CreateDiagnosticReport](~~442490~~) operation to create the diagnostic report.
         @NameInMap("EndTime")
         public String endTime;
 
+        // The time when the diagnostic was complete.
         @NameInMap("FinishedTime")
         public String finishedTime;
 
+        // The list of issues.
         @NameInMap("Issues")
         public DescribeDiagnosticReportsResponseBodyReportsReportIssues issues;
 
+        // The ID of the diagnostic metric set.
         @NameInMap("MetricSetId")
         public String metricSetId;
 
+        // The ID of the diagnostic report.
         @NameInMap("ReportId")
         public String reportId;
 
+        // The ID of the resource.
         @NameInMap("ResourceId")
         public String resourceId;
 
+        // The type of the resource.
         @NameInMap("ResourceType")
         public String resourceType;
 
+        // The severity level of the diagnostic report. Valid values:
+        // 
+        // *   Unknown: The diagnostic has not started, failed to run, or exited unexpectedly without a diagnosis.
+        // *   Normal: No exceptions were detected.
+        // *   Info: Diagnostic information was recorded and may be related to exceptions.
+        // *   Warn: Diagnostic information was recorded and may indicate exceptions.
+        // *   Critical: Critical exceptions were detected.
         @NameInMap("Severity")
         public String severity;
 
+        // The beginning of the reporting period of the diagnostic report. The value is the StartTime value that was passed in when you called the [CreateDiagnosticReport](~~442490~~) operation to create the diagnostic report.
         @NameInMap("StartTime")
         public String startTime;
 
+        // The state of the diagnostic report.
         @NameInMap("Status")
         public String status;
 

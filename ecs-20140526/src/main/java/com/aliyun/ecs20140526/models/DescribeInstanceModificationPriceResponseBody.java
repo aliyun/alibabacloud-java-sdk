@@ -4,9 +4,11 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
+    // Details about the prices and discount rules.
     @NameInMap("PriceInfo")
     public DescribeInstanceModificationPriceResponseBodyPriceInfo priceInfo;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +34,23 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceModificationPriceResponseBodyPriceInfoPrice extends TeaModel {
+        // The currency unit. 
+        // 
+        // Alibaba Cloud China site (aliyun.com): CNY. 
+        // 
+        // Alibaba Cloud International site (alibabacloud.com): USD.
         @NameInMap("Currency")
         public String currency;
 
+        // The discount.
         @NameInMap("DiscountPrice")
         public Float discountPrice;
 
+        // The original price.
         @NameInMap("OriginalPrice")
         public Float originalPrice;
 
+        // The transaction price, which is equal to the original price minus the discount.
         @NameInMap("TradePrice")
         public Float tradePrice;
 
@@ -84,9 +94,11 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceModificationPriceResponseBodyPriceInfoRulesRule extends TeaModel {
+        // The description of the promotion rule.
         @NameInMap("Description")
         public String description;
 
+        // The ID of the promotion rule.
         @NameInMap("RuleId")
         public Long ruleId;
 
@@ -133,9 +145,11 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceModificationPriceResponseBodyPriceInfo extends TeaModel {
+        // The price.
         @NameInMap("Price")
         public DescribeInstanceModificationPriceResponseBodyPriceInfoPrice price;
 
+        // Details about the promotion rules.
         @NameInMap("Rules")
         public DescribeInstanceModificationPriceResponseBodyPriceInfoRules rules;
 

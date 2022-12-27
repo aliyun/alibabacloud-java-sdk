@@ -4,18 +4,23 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeManagedInstancesResponseBody extends TeaModel {
+    // Details of the managed instances.
     @NameInMap("Instances")
     public java.util.List<DescribeManagedInstancesResponseBodyInstances> instances;
 
+    // The page number of the returned page.
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    // The number of entries returned per page.
     @NameInMap("PageSize")
     public Long pageSize;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The total number of managed instances returned.
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -65,45 +70,62 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeManagedInstancesResponseBodyInstances extends TeaModel {
+        // The ID of the activation code.
         @NameInMap("ActivationId")
         public String activationId;
 
+        // The version number of the Cloud Assistant client.
         @NameInMap("AgentVersion")
         public String agentVersion;
 
+        // Indicates whether the managed instance is connected. Valid values:
+        // 
+        // *   true: The managed instance is connected and you can manage the instance by using Cloud Assistant.
+        // *   false: The managed instance is not connected because the managed instance is down or because the Cloud Assistant client is not installed correctly.
         @NameInMap("Connected")
         public Boolean connected;
 
+        // The hostname of the managed instance.
         @NameInMap("Hostname")
         public String hostname;
 
+        // The ID of the managed instance.
         @NameInMap("InstanceId")
         public String instanceId;
 
+        // The name of the managed instance.
         @NameInMap("InstanceName")
         public String instanceName;
 
+        // The public IP address of the managed instance.
         @NameInMap("InternetIp")
         public String internetIp;
 
+        // The internal IP address of the managed instance.
         @NameInMap("IntranetIp")
         public String intranetIp;
 
+        // The number of times that Cloud Assistant tasks were executed on the managed instance.
         @NameInMap("InvocationCount")
         public Long invocationCount;
 
+        // The last Cloud Assistant task execution time.
         @NameInMap("LastInvokedTime")
         public String lastInvokedTime;
 
+        // The machine code of the managed instance.
         @NameInMap("MachineId")
         public String machineId;
 
+        // The operating system type of the managed instance.
         @NameInMap("OsType")
         public String osType;
 
+        // The version information of the operating system.
         @NameInMap("OsVersion")
         public String osVersion;
 
+        // The time when the managed instance was registered.
         @NameInMap("RegistrationTime")
         public String registrationTime;
 

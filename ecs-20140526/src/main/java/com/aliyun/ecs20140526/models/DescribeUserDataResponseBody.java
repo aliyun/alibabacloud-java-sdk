@@ -4,15 +4,19 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserDataResponseBody extends TeaModel {
+    // The ID of the instance.
     @NameInMap("InstanceId")
     public String instanceId;
 
+    // The region ID of the instance.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The user data of the instance.
     @NameInMap("UserData")
     public String userData;
 

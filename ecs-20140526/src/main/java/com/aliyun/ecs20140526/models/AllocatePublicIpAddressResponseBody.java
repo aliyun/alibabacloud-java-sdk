@@ -4,9 +4,11 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class AllocatePublicIpAddressResponseBody extends TeaModel {
+    // The public IP address of the instance.
     @NameInMap("IpAddress")
     public String ipAddress;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

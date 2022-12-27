@@ -4,12 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateDedicatedBlockStorageClusterResponseBody extends TeaModel {
+    // The ID of the dedicated block storage cluster.
     @NameInMap("DedicatedBlockStorageClusterId")
     public String dedicatedBlockStorageClusterId;
 
+    // The ID of the order.
     @NameInMap("DedicatedBlockStorageClusterOrderId")
     public String dedicatedBlockStorageClusterOrderId;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

@@ -10,6 +10,7 @@ public class RenewReservedInstancesRequest extends TeaModel {
     @NameInMap("AutoRenewPeriod")
     public Integer autoRenewPeriod;
 
+    // The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -19,12 +20,23 @@ public class RenewReservedInstancesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The term of the reserved instance.
+    // 
+    // Valid values: 1 and 3.
+    // 
+    // Default value: 1.
     @NameInMap("Period")
     public Integer period;
 
+    // The unit of the term of the reserved instance.
+    // 
+    // Valid value: Year.
+    // 
+    // Default value: Year.
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
+    // The region ID of the reserved instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 

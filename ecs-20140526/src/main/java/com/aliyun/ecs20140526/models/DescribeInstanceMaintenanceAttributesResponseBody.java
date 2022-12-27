@@ -4,18 +4,23 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel {
+    // Details of the maintenance properties.
     @NameInMap("MaintenanceAttributes")
     public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributes maintenanceAttributes;
 
+    // The page number of the returned page.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries returned per page.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The total number of queried maintenance properties.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -84,12 +89,19 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
     }
 
     public static class DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeActionOnMaintenance extends TeaModel {
+        // The default maintenance action.
         @NameInMap("DefaultValue")
         public String defaultValue;
 
+        // Details of the supported maintenance actions.
         @NameInMap("SupportedValues")
         public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeActionOnMaintenanceSupportedValues supportedValues;
 
+        // The current maintenance action. Valid values:
+        // 
+        // *   Stop: The instance is shutdown.
+        // *   AutoRecover: The instance is automatically recovered.
+        // *   AutoRedeploy: Failover is performed, which may cause damage to the data disks attached to the instance.
         @NameInMap("Value")
         public String value;
 
@@ -125,9 +137,11 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
     }
 
     public static class DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeMaintenanceWindowsMaintenanceWindow extends TeaModel {
+        // The end time of the maintenance window.
         @NameInMap("EndTime")
         public String endTime;
 
+        // The start time of the maintenance window.
         @NameInMap("StartTime")
         public String startTime;
 
@@ -174,15 +188,19 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
     }
 
     public static class DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttribute extends TeaModel {
+        // The property of the maintenance action of the instance.
         @NameInMap("ActionOnMaintenance")
         public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeActionOnMaintenance actionOnMaintenance;
 
+        // The ID of the instance.
         @NameInMap("InstanceId")
         public String instanceId;
 
+        // Details of the maintenance window.
         @NameInMap("MaintenanceWindows")
         public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeMaintenanceWindows maintenanceWindows;
 
+        // Indicates whether an event notification was sent before instance shutdown.
         @NameInMap("NotifyOnMaintenance")
         public Boolean notifyOnMaintenance;
 

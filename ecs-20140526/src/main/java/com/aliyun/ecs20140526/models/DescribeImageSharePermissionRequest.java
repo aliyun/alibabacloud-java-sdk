@@ -4,6 +4,7 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageSharePermissionRequest extends TeaModel {
+    // The ID of the custom image.
     @NameInMap("ImageId")
     public String imageId;
 
@@ -13,12 +14,19 @@ public class DescribeImageSharePermissionRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The number of the page to return. Pages start from page 1.
+    // 
+    // Default value: 1
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries to return on each page. Valid values: 1 to 100.
+    // 
+    // Default value: 10
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The region ID of the custom image. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 

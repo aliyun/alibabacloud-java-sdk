@@ -4,9 +4,11 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CopyImageResponseBody extends TeaModel {
+    // The ID of the image copy.
     @NameInMap("ImageId")
     public String imageId;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

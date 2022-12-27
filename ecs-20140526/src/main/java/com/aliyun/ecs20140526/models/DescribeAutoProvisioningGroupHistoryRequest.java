@@ -4,9 +4,11 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeAutoProvisioningGroupHistoryRequest extends TeaModel {
+    // The ID of the auto provisioning group.
     @NameInMap("AutoProvisioningGroupId")
     public String autoProvisioningGroupId;
 
+    // The end of the time range of the queried data. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
     @NameInMap("EndTime")
     public String endTime;
 
@@ -16,12 +18,19 @@ public class DescribeAutoProvisioningGroupHistoryRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The number of the page to return. Pages start from page 1.
+    // 
+    // Default value: 1.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries to return on each page. Maximum value: 100.
+    // 
+    // Default value: 10.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The region ID of the auto provisioning group.
     @NameInMap("RegionId")
     public String regionId;
 
@@ -31,6 +40,7 @@ public class DescribeAutoProvisioningGroupHistoryRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    // The beginning of the time range of the queried data. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
     @NameInMap("StartTime")
     public String startTime;
 

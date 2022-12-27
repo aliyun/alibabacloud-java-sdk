@@ -4,12 +4,19 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
+    // The description of the ENI. The description must be 2 to 255 characters in length and cannot start with http:// or https://.
+    // 
+    // This parameter is empty by default.
     @NameInMap("Description")
     public String description;
 
+    // The ID of the ENI.
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;
 
+    // The name of the ENI. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+    // 
+    // This parameter is empty by default.
     @NameInMap("NetworkInterfaceName")
     public String networkInterfaceName;
 
@@ -19,9 +26,15 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The number of queues per ENI. Valid values: 1 to 2048.
+    // 
+    // *   You can modify the number of queues supported only by the secondary ENI.
+    // *   You can modify the number of queues supported by the secondary ENI only when the ENI is in the `Available` state, or the secondary ENI is bound (`InUse`) to an instance that is in the `Stopped` state.
+    // *   The number of queues supported by the secondary ENI cannot exceed the maximum number of queues that the instance allows for each ENI. The total number of queues for all ENIs on the instance cannot exceed the queue quota that the instance allows. To obtain information about the maximum number of queues per ENI and the queue quota for an instance type, you can call the [DescribeInstanceTypes](~~25620~~) operation to query the `MaximumQueueNumberPerEni` and `TotalEniQueueQuantity` values.
     @NameInMap("QueueNumber")
     public Integer queueNumber;
 
+    // The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query thecurrent list of regions.
     @NameInMap("RegionId")
     public String regionId;
 
@@ -31,6 +44,12 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    // The list of security group IDs. You can specify up to 5 security group IDs.
+    // 
+    // - You can modify only the security groups to which the secondary ENI is added.
+    // - After you specify a security group, the secondary ENI is added to the specified security group and removed from the existing security group.
+    // 
+    // >  After you modify the security group, the modification takes effect after a short delay.
     @NameInMap("SecurityGroupId")
     public java.util.List<String> securityGroupId;
 

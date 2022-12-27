@@ -4,9 +4,11 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DetachNetworkInterfaceRequest extends TeaModel {
+    // The ID of the instance.
     @NameInMap("InstanceId")
     public String instanceId;
 
+    // The ID of the ENI.
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;
 
@@ -16,6 +18,7 @@ public class DetachNetworkInterfaceRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 
@@ -25,6 +28,9 @@ public class DetachNetworkInterfaceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    // The trunk network card ID.
+    // 
+    // > This parameter is not online yet and cannot be used.
     @NameInMap("TrunkNetworkInstanceId")
     public String trunkNetworkInstanceId;
 

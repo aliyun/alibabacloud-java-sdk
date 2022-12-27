@@ -4,12 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeSendFileResultsRequest extends TeaModel {
+    // The ID of the instance for which you want to query file sending results.
     @NameInMap("InstanceId")
     public String instanceId;
 
+    // The ID of the execution.
     @NameInMap("InvokeId")
     public String invokeId;
 
+    // The name of the file about which you want to query sending records.
     @NameInMap("Name")
     public String name;
 
@@ -19,15 +22,27 @@ public class DescribeSendFileResultsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The number of the page to return.
+    // 
+    // Pages start from page 1.
+    // 
+    // Default value: 1.
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    // The number of entries to return on each page.
+    // 
+    // Maximum value: 50.
+    // 
+    // Default value: 10.
     @NameInMap("PageSize")
     public Long pageSize;
 
+    // The region ID of the Elastic Compute Service (ECS) instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 
+    // 文件下发的资源组ID。传入该参数后，需要在下发文件时指定ResourceGroupId，支持筛选出对应的文件下发结果。
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

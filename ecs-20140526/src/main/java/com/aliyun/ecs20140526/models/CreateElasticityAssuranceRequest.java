@@ -7,21 +7,33 @@ public class CreateElasticityAssuranceRequest extends TeaModel {
     @NameInMap("PrivatePoolOptions")
     public CreateElasticityAssuranceRequestPrivatePoolOptions privatePoolOptions;
 
+    // The total number of times that the elasticity assurance can be applied. Set the value to Unlimited. This value indicates that the elasticity assurance can be applied an unlimited number of times within its effective duration.
+    // 
+    // Default value: Unlimited.
     @NameInMap("AssuranceTimes")
     public String assuranceTimes;
 
+    // The client token that you want to use to ensure the idempotency of the request. You can use the client to generate a client token. Make sure that a unique client token is used for different requests. The value of the `ClientToken` parameter can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
     @NameInMap("ClientToken")
     public String clientToken;
 
+    // The description of the elasticity assurance. The description must be 2 to 256 characters in length, and cannot start with `http://` or `https://`.
+    // 
+    // This parameter is empty by default.
     @NameInMap("Description")
     public String description;
 
+    // The total number of instances for which to reserve the capacity of an instance type.
+    // 
+    // Valid values: 1 to 1000.
     @NameInMap("InstanceAmount")
     public Integer instanceAmount;
 
+    // > The parameter was deprecated.
     @NameInMap("InstanceCpuCoreCount")
     public Integer instanceCpuCoreCount;
 
+    // Instance types. Currently, an elasticity assurance can be created to reserve the capacity of a single instance type.
     @NameInMap("InstanceType")
     public java.util.List<String> instanceType;
 
@@ -31,15 +43,29 @@ public class CreateElasticityAssuranceRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The effective duration of the elasticity assurance. The unit of the duration is determined by the `PeriodUnit` value. Valid values:
+    // 
+    // *   When the value of the `PeriodUnit` parameter is set to `Month`, valid values are: 1, 2, 3, 4, 5, 6, 7, 8, and 9.
+    // *   When the value of the `PeriodUnit` parameter is set to `Year`, valid values are: 1, 2, 3, 4, and 5.
+    // 
+    // Default: 1.
     @NameInMap("Period")
     public Integer period;
 
+    // The unit of the effective duration of the elasticity assurance. Valid values:
+    // 
+    // *   Month
+    // *   Year
+    // 
+    // Default value: Year.
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
+    // The ID of the region in which to create the elasticity assurance. You can call the [DescribeRegions](~~25609~~) operation to query the current list of regions.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The ID of the resource group to which to assign the elasticity assurance.
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -49,12 +75,15 @@ public class CreateElasticityAssuranceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    // The time when the elasticity assurance takes effect. The default value is the time when the CreateElasticityAssurance operation is called to create the elasticity assurance. Specify the time in the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC. For more information, see [ISO 8601](~~25696~~).
     @NameInMap("StartTime")
     public String startTime;
 
+    // The tags.
     @NameInMap("Tag")
     public java.util.List<CreateElasticityAssuranceRequestTag> tag;
 
+    // The IDs of the zones.
     @NameInMap("ZoneId")
     public java.util.List<String> zoneId;
 
@@ -208,9 +237,16 @@ public class CreateElasticityAssuranceRequest extends TeaModel {
     }
 
     public static class CreateElasticityAssuranceRequestPrivatePoolOptions extends TeaModel {
+        // The type of the private pool associated with the elasticity assurance. Valid values:
+        // 
+        // *   Open: open private pool
+        // *   Target: targeted private pool
+        // 
+        // Default value: Open.
         @NameInMap("MatchCriteria")
         public String matchCriteria;
 
+        // The name of the elasticity assurance. The description must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
         @NameInMap("Name")
         public String name;
 
@@ -238,9 +274,11 @@ public class CreateElasticityAssuranceRequest extends TeaModel {
     }
 
     public static class CreateElasticityAssuranceRequestTag extends TeaModel {
+        // The key of tag N of the elasticity assurance. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot contain `http://` or `https://`. It must not start with `acs:` or `aliyun`.
         @NameInMap("Key")
         public String key;
 
+        // The value of tag N of the elasticity assurance. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with `acs:`. It cannot contain `http://` or `https://`.
         @NameInMap("Value")
         public String value;
 

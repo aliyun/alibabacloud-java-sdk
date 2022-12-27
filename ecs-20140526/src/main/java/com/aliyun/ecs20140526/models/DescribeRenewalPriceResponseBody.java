@@ -4,9 +4,11 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeRenewalPriceResponseBody extends TeaModel {
+    // Details about the PriceInfo data, including the price and discount rules.
     @NameInMap("PriceInfo")
     public DescribeRenewalPriceResponseBodyPriceInfo priceInfo;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +34,11 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
     }
 
     public static class DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModelSubRulesRule extends TeaModel {
+        // The description of the pricing rule.
         @NameInMap("Description")
         public String description;
 
+        // The ID of the pricing rule.
         @NameInMap("RuleId")
         public Long ruleId;
 
@@ -81,18 +85,23 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
     }
 
     public static class DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModel extends TeaModel {
+        // The discount.
         @NameInMap("DiscountPrice")
         public Float discountPrice;
 
+        // The original price.
         @NameInMap("OriginalPrice")
         public Float originalPrice;
 
+        // The name of the resource corresponding to the price.
         @NameInMap("Resource")
         public String resource;
 
+        // Details about the pricing rules.
         @NameInMap("SubRules")
         public DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModelSubRules subRules;
 
+        // The transaction price.
         @NameInMap("TradePrice")
         public Float tradePrice;
 
@@ -163,18 +172,23 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
     }
 
     public static class DescribeRenewalPriceResponseBodyPriceInfoPrice extends TeaModel {
+        // The currency unit.
         @NameInMap("Currency")
         public String currency;
 
+        // Details about the resource prices.
         @NameInMap("DetailInfos")
         public DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfos detailInfos;
 
+        // The discount.
         @NameInMap("DiscountPrice")
         public Float discountPrice;
 
+        // The original price.
         @NameInMap("OriginalPrice")
         public Float originalPrice;
 
+        // The final transaction price after discounts are applied.
         @NameInMap("TradePrice")
         public Float tradePrice;
 
@@ -226,9 +240,11 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
     }
 
     public static class DescribeRenewalPriceResponseBodyPriceInfoRulesRule extends TeaModel {
+        // The description of the promotion rule.
         @NameInMap("Description")
         public String description;
 
+        // The ID of the rule.
         @NameInMap("RuleId")
         public Long ruleId;
 
@@ -275,9 +291,11 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
     }
 
     public static class DescribeRenewalPriceResponseBodyPriceInfo extends TeaModel {
+        // The price.
         @NameInMap("Price")
         public DescribeRenewalPriceResponseBodyPriceInfoPrice price;
 
+        // The promotion rules.
         @NameInMap("Rules")
         public DescribeRenewalPriceResponseBodyPriceInfoRules rules;
 

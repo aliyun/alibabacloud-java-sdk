@@ -4,9 +4,11 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateNetworkInterfacePermissionResponseBody extends TeaModel {
+    // Details about the permission on the ENI.
     @NameInMap("NetworkInterfacePermission")
     public CreateNetworkInterfacePermissionResponseBodyNetworkInterfacePermission networkInterfacePermission;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +34,32 @@ public class CreateNetworkInterfacePermissionResponseBody extends TeaModel {
     }
 
     public static class CreateNetworkInterfacePermissionResponseBodyNetworkInterfacePermission extends TeaModel {
+        // The ID of the Alibaba Cloud partner (a certified ISV).
         @NameInMap("AccountId")
         public Long accountId;
 
+        // The ID of the ENI.
         @NameInMap("NetworkInterfaceId")
         public String networkInterfaceId;
 
+        // The ID of the permission on the ENI.
         @NameInMap("NetworkInterfacePermissionId")
         public String networkInterfacePermissionId;
 
+        // The permission on the ENI.
         @NameInMap("Permission")
         public String permission;
 
+        // The status of the permission on the ENI. Valid values:
+        // 
+        // *   Pending: The permission is being granted.
+        // *   Granted: The permission has been granted.
+        // *   Revoking: The permission is being revoked.
+        // *   Revoked: The permission has been revoked.
         @NameInMap("PermissionState")
         public String permissionState;
 
+        // The name of the Alibaba Cloud service.
         @NameInMap("ServiceName")
         public String serviceName;
 

@@ -4,18 +4,26 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeDedicatedHostsRequest extends TeaModel {
+    // The ID of the dedicated host cluster.
     @NameInMap("DedicatedHostClusterId")
     public String dedicatedHostClusterId;
 
+    // The IDs of dedicated hosts. You can specify up to 100 dedicated host IDs in a single request. Separate the IDs with commas (,).
     @NameInMap("DedicatedHostIds")
     public String dedicatedHostIds;
 
+    // The name of the dedicated host.
     @NameInMap("DedicatedHostName")
     public String dedicatedHostName;
 
+    // The type of the dedicated host. You can call the [DescribeDedicatedHostTypes](~~134240~~) operation to obtain the most recent list of dedicated host types.
     @NameInMap("DedicatedHostType")
     public String dedicatedHostType;
 
+    // The reason why the dedicated host is locked. Valid values:
+    // 
+    // *   financial: The dedicated host is locked due to overdue payments.
+    // *   security: The dedicated host is locked due to security reasons.
     @NameInMap("LockReason")
     public String lockReason;
 
@@ -25,15 +33,27 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The number of the page to return.
+    // 
+    // Default value: 1.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries to return on each page.
+    // 
+    // Maximum value: 100.
+    // 
+    // Default value: 10.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The region ID of the dedicated host. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The ID of the resource group to which the dedicated host belongs. When this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.  
+    // 
+    // >  Resources in the default resource group are displayed in the response regardless of how this parameter is set.
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -43,12 +63,23 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    // The service state of the dedicated host. Valid values:
+    // 
+    // *   Available: The dedicated host is running normally.
+    // *   UnderAssessment: The dedicated host is at risk, which may cause issues to ECS instances on the dedicated host.
+    // *   PermanentFailure: The dedicated host has permanent failures and is unusable.
+    // *   TempUnavailable: The dedicated host is temporarily unusable.
+    // *   Redeploying: The dedicated host is being restored.
+    // 
+    // Default value: Available.
     @NameInMap("Status")
     public String status;
 
+    // 标签列表。
     @NameInMap("Tag")
     public java.util.List<DescribeDedicatedHostsRequestTag> tag;
 
+    // The zone ID of the dedicated host. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.
     @NameInMap("ZoneId")
     public String zoneId;
 
@@ -186,9 +217,11 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     }
 
     public static class DescribeDedicatedHostsRequestTag extends TeaModel {
+        // The key of tag N of the dedicated host. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
         @NameInMap("Key")
         public String key;
 
+        // The value of tag N of the dedicated host. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
         @NameInMap("Value")
         public String value;
 

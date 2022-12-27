@@ -4,33 +4,46 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeSnapshotLinksRequest extends TeaModel {
+    // The ID of the disk. The value is a JSON array that consists of up to 100 disk IDs. Separate multiple disk IDs with commas (,).
     @NameInMap("DiskIds")
     public String diskIds;
 
+    // The ID of the instance.
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
+    // RAM用户的虚拟账号ID。
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The number of the page to return. Pages start from page 1.
+    // 
+    // Default value: 1.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries to return on each page. Valid values: 1 to 100.
+    // 
+    // Default value: 10.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The region ID of the disk. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 
+    // 资源主账号的账号名称。
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
+    // 资源主账号的ID，亦即UID。
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    // The ID of the snapshot chain. The value is a JSON array that consists of up to 100 snapshot chain IDs. Separate multiple snapshot chain IDs with commas (,).
     @NameInMap("SnapshotLinkIds")
     public String snapshotLinkIds;
 
