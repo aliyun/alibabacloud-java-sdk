@@ -617,8 +617,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public QueryActivityResponse queryActivityWithOptions(QueryActivityRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.activityIdList)) {
-            body.put("ActivityIdList", request.activityIdList);
+        if (!com.aliyun.teautil.Common.isUnset(request.activityId)) {
+            body.put("ActivityId", request.activityId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
@@ -684,8 +684,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.queryEcoRelationWithOptions(request, runtime);
     }
 
-    public SaveActivityResponse saveActivityWithOptions(SaveActivityRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public SaveActivityResponse saveActivityWithOptions(SaveActivityRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        SaveActivityShrinkRequest request = new SaveActivityShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.extendMap)) {
+            request.extendMapShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.extendMap, "ExtendMap", "json");
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.activityName)) {
             body.put("ActivityName", request.activityName);
@@ -705,6 +711,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
             body.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extendMapShrink)) {
+            body.put("ExtendMap", request.extendMapShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.fusionPromotionParamList)) {
