@@ -68,6 +68,7 @@ public class CreateOAuthTokenResponseBody extends TeaModel {
         @NameInMap("accessToken")
         public String accessToken;
 
+        // id
         @NameInMap("id")
         public String id;
 

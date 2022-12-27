@@ -7,6 +7,7 @@ public class ListProjectsRequest extends TeaModel {
     @NameInMap("category")
     public String category;
 
+    // {"conditionGroups":[[]]}
     @NameInMap("conditions")
     public String conditions;
 

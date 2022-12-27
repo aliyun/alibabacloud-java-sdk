@@ -71,12 +71,15 @@ public class GetPipelineResponseBody extends TeaModel {
         @NameInMap("cloneDepth")
         public Long cloneDepth;
 
+        // Credential Id
         @NameInMap("credentialId")
         public Long credentialId;
 
+        // Credential Label
         @NameInMap("credentialLabel")
         public String credentialLabel;
 
+        // Credential Type
         @NameInMap("credentialType")
         public String credentialType;
 

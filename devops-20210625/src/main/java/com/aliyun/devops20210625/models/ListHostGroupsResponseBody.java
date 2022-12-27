@@ -111,6 +111,7 @@ public class ListHostGroupsResponseBody extends TeaModel {
         @NameInMap("hostNum")
         public Long hostNum;
 
+        // 323232
         @NameInMap("id")
         public Long id;
 

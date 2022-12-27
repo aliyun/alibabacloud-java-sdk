@@ -4,6 +4,7 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListRepositoryMemberWithInheritedRequest extends TeaModel {
+    // accessToken
     @NameInMap("accessToken")
     public String accessToken;
 

@@ -65,6 +65,7 @@ public class ListRepositoryMemberWithInheritedResponseBody extends TeaModel {
     }
 
     public static class ListRepositoryMemberWithInheritedResponseBodyResultInherited extends TeaModel {
+        // id
         @NameInMap("id")
         public Long id;
 
