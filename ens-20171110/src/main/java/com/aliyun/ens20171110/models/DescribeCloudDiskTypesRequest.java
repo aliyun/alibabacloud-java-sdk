@@ -4,6 +4,7 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeCloudDiskTypesRequest extends TeaModel {
+    // A short description of struct
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 

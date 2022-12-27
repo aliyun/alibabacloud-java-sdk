@@ -13,6 +13,7 @@ public class DescribeLoadBalancerSpecResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

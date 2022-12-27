@@ -10,6 +10,7 @@ public class ModifyImageAttributeRequest extends TeaModel {
     @NameInMap("ImageName")
     public String imageName;
 
+    // 2017-11-10
     @NameInMap("Version")
     public String version;
 
