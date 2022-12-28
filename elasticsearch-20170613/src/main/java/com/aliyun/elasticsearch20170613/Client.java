@@ -361,10 +361,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("clientToken", request.clientToken);
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.collectorPaths)) {
+            body.put("collectorPaths", request.collectorPaths);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configs)) {
+            body.put("configs", request.configs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            body.put("dryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extendConfigs)) {
+            body.put("extendConfigs", request.extendConfigs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resType)) {
+            body.put("resType", request.resType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resVersion)) {
+            body.put("resVersion", request.resVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
+            body.put("vpcId", request.vpcId);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", request.body)
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateCollector"),
@@ -524,10 +557,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ClientToken", request.clientToken);
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dataStream)) {
+            body.put("dataStream", request.dataStream);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ilmPolicy)) {
+            body.put("ilmPolicy", request.ilmPolicy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.indexPatterns)) {
+            body.put("indexPatterns", request.indexPatterns);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.indexTemplate)) {
+            body.put("indexTemplate", request.indexTemplate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.priority)) {
+            body.put("priority", request.priority);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.template)) {
+            body.put("template", request.template);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", request.body)
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateIndexTemplate"),
