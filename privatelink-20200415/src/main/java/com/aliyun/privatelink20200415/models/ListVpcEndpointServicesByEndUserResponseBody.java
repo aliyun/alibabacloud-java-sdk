@@ -4,15 +4,22 @@ package com.aliyun.privatelink20200415.models;
 import com.aliyun.tea.*;
 
 public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
+    // The number of entries to return on each page.
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    // The token that is used for the next query. Valid values:
+    // 
+    // *   If **NextToken** is empty, no next query is to be sent.
+    // *   If a value of **NextToken** is returned, the value is the token that is used for the next query.
     @NameInMap("NextToken")
     public String nextToken;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The list of endpoint services.
     @NameInMap("Services")
     public java.util.List<ListVpcEndpointServicesByEndUserResponseBodyServices> services;
 
@@ -54,9 +61,11 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
     }
 
     public static class ListVpcEndpointServicesByEndUserResponseBodyServicesTags extends TeaModel {
+        // The key of the tag.
         @NameInMap("Key")
         public String key;
 
+        // The value of the tag.
         @NameInMap("Value")
         public String value;
 
@@ -84,30 +93,47 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
     }
 
     public static class ListVpcEndpointServicesByEndUserResponseBodyServices extends TeaModel {
+        // The payer of the endpoint service. Valid values:
+        // 
+        // *   **Endpoint**: the service consumer.
+        // *   **EndpointService**: the service provider.
         @NameInMap("Payer")
         public String payer;
 
+        // The ID of the resource group to which the resource belong.
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        // The domain name of the endpoint service that can be associated with the endpoints when you create endpoints.
         @NameInMap("ServiceDomain")
         public String serviceDomain;
 
+        // The ID of the endpoint service that can be associated with the endpoints when you create endpoints.
         @NameInMap("ServiceId")
         public String serviceId;
 
+        // The name of the endpoint service that can be associated with the endpoints when you create endpoints.
         @NameInMap("ServiceName")
         public String serviceName;
 
+        // Indicates whether the endpoint service supports IPv6. Valid values:
+        // 
+        // *   **true**: supports IPv6.
+        // *   **false**: does not support IPv6.
         @NameInMap("ServiceSupportIPv6")
         public Boolean serviceSupportIPv6;
 
+        // The type of the endpoint service.
+        // 
+        // Set the value to **Interface**, which specifies **slb** for the **ServiceResourceType** parameter. The value slb specifies the Classic Load Balancer (CLB) endpoint type.
         @NameInMap("ServiceType")
         public String serviceType;
 
+        // The tags of the endpoint service.
         @NameInMap("Tags")
         public java.util.List<ListVpcEndpointServicesByEndUserResponseBodyServicesTags> tags;
 
+        // The zone of the endpoint service that can be associated with the endpoints when you create endpoints.
         @NameInMap("Zones")
         public java.util.List<String> zones;
 

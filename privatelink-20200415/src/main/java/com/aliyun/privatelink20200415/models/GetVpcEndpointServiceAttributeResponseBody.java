@@ -4,63 +4,108 @@ package com.aliyun.privatelink20200415.models;
 import com.aliyun.tea.*;
 
 public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
+    // Indicates whether endpoint connection requests are automatically accepted. Valid values:
+    // 
+    // *   **true**: automatically accepts endpoint connection requests.
+    // *   **false**: does not automatically accept endpoint connection requests.
     @NameInMap("AutoAcceptEnabled")
     public Boolean autoAcceptEnabled;
 
+    // The default maximum bandwidth of the endpoint connection. Unit: Mbit/s. Valid values: **100** to 10240.
     @NameInMap("ConnectBandwidth")
     public Integer connectBandwidth;
 
+    // The time when the endpoint service was created.
     @NameInMap("CreateTime")
     public String createTime;
 
+    // The maximum bandwidth of the endpoint connection. Unit: Mbit/s.
     @NameInMap("MaxBandwidth")
     public Integer maxBandwidth;
 
+    // The minimum bandwidth of the endpoint connection. Unit: Mbit/s.
     @NameInMap("MinBandwidth")
     public Integer minBandwidth;
 
+    // The payer of the endpoint service. Valid values:
+    // 
+    // *   **Endpoint**: the service consumer.
+    // *   **EndpointService**: the service provider.
     @NameInMap("Payer")
     public String payer;
 
+    // The region to which the endpoint service belongs.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Specifies the ID of the resource group.
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    // The business status of the endpoint service. Valid values:
+    // 
+    // *   **Normal**: The endpoint service runs as expected.
+    // *   **FinacialLocked**: The endpoint service is locked due to overdue payments.
     @NameInMap("ServiceBusinessStatus")
     public String serviceBusinessStatus;
 
+    // The description of the endpoint service.
     @NameInMap("ServiceDescription")
     public String serviceDescription;
 
+    // The domain name of the endpoint service.
     @NameInMap("ServiceDomain")
     public String serviceDomain;
 
+    // The ID of the endpoint service.
     @NameInMap("ServiceId")
     public String serviceId;
 
+    // The name of the endpoint service.
     @NameInMap("ServiceName")
     public String serviceName;
 
+    // The type of the service resource.
+    // 
+    // The value is set to **slb**, which indicates CLB.
     @NameInMap("ServiceResourceType")
     public String serviceResourceType;
 
+    // The state of the endpoint service. Valid values:
+    // 
+    // *   **Creating**: The endpoint service is being created.
+    // *   **Pending**: The endpoint service is being modified.
+    // *   **Active**: The endpoint service is available.
+    // *   **Deleting**: The endpoint service is being deleted.
+    // *   **Inactive**: The endpoint service is unavailable.
     @NameInMap("ServiceStatus")
     public String serviceStatus;
 
+    // Indicates whether the endpoint service supports IPv6. Valid values:
+    // 
+    // *   **true**: The endpoint service supports IPv6.
+    // *   **false**: The endpoint service does not support IPv6. This is the default value.
     @NameInMap("ServiceSupportIPv6")
     public Boolean serviceSupportIPv6;
 
+    // The type of the endpoint service.
+    // 
+    // The value is set to **Interface**. This value is used when **ServiceResourceType** is set to **slb**. The value indicates the Classic Load Balancer (CLB) type.
     @NameInMap("ServiceType")
     public String serviceType;
 
+    // Specifies whether to enable zone affinity. Valid values:
+    // 
+    // *   **true**: enables zone affinity.
+    // *   **false**: disables zone affinity.
     @NameInMap("ZoneAffinityEnabled")
     public Boolean zoneAffinityEnabled;
 
+    // The zones to which the service resource belongs.
     @NameInMap("Zones")
     public java.util.List<String> zones;
 

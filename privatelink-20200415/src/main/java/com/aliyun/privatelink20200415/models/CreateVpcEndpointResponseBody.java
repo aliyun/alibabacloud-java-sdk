@@ -4,42 +4,70 @@ package com.aliyun.privatelink20200415.models;
 import com.aliyun.tea.*;
 
 public class CreateVpcEndpointResponseBody extends TeaModel {
+    // The maximum bandwidth of the endpoint connection. Unit: Mbit/s.
     @NameInMap("Bandwidth")
     public Long bandwidth;
 
+    // The state of the endpoint connection. Valid values:
+    // 
+    // *   **Pending**: The connection is being modified.
+    // *   **Connecting**: The connection is being established.
+    // *   **Connected**: The connection is established.
+    // *   **Disconnecting**: The endpoint is being disconnected from the endpoint service.
+    // *   **Disconnected**: The endpoint is disconnected from the endpoint service.
+    // *   **Deleting**: The connection is being deleted.
     @NameInMap("ConnectionStatus")
     public String connectionStatus;
 
+    // The time when the endpoint was created.
     @NameInMap("CreateTime")
     public String createTime;
 
+    // The business state of the endpoint. Valid values:
+    // 
+    // *   **Normal**: The endpoint runs as expected.
+    // *   **FinacialLocked**: The endpoint is locked due to overdue payments.
     @NameInMap("EndpointBusinessStatus")
     public String endpointBusinessStatus;
 
+    // The description of the endpoint.
     @NameInMap("EndpointDescription")
     public String endpointDescription;
 
+    // The domain name of the endpoint.
     @NameInMap("EndpointDomain")
     public String endpointDomain;
 
+    // The ID of the endpoint.
     @NameInMap("EndpointId")
     public String endpointId;
 
+    // The name of the endpoint.
     @NameInMap("EndpointName")
     public String endpointName;
 
+    // The state of the endpoint. Valid values:
+    // 
+    // *   **Creating**: The endpoint is being created.
+    // *   **Active**: The endpoint is available.
+    // *   **Pending**: The endpoint is being modified.
+    // *   **Deleting**: The endpoint is being deleted.
     @NameInMap("EndpointStatus")
     public String endpointStatus;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The ID of the endpoint service with which the endpoint is associated.
     @NameInMap("ServiceId")
     public String serviceId;
 
+    // The name of the endpoint service with which the endpoint is associated.
     @NameInMap("ServiceName")
     public String serviceName;
 
+    // The VPC to which the endpoint belongs.
     @NameInMap("VpcId")
     public String vpcId;
 

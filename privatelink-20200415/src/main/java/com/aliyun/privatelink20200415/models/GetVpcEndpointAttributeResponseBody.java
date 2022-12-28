@@ -4,63 +4,109 @@ package com.aliyun.privatelink20200415.models;
 import com.aliyun.tea.*;
 
 public class GetVpcEndpointAttributeResponseBody extends TeaModel {
+    // The bandwidth of the endpoint connection. Unit: Mbit/s.
     @NameInMap("Bandwidth")
     public Integer bandwidth;
 
+    // The status of the endpoint connection. Valid values:
+    // 
+    // *   **Pending**: being modified
+    // *   **Connecting**: connecting
+    // *   **Connected**: connected
+    // *   **Disconnecting**: disconnecting
+    // *   **Disconnected**: disconnected
+    // *   **Deleting**: being deleted
     @NameInMap("ConnectionStatus")
     public String connectionStatus;
 
+    // The time when the endpoint was created.
     @NameInMap("CreateTime")
     public String createTime;
 
+    // The business status of the endpoint. Valid values:
+    // 
+    // *   **Normal**: normal
+    // *   **FinacialLocked**: locked due to overdue payments
     @NameInMap("EndpointBusinessStatus")
     public String endpointBusinessStatus;
 
+    // The description of the endpoint.
     @NameInMap("EndpointDescription")
     public String endpointDescription;
 
+    // The domain name of the endpoint.
     @NameInMap("EndpointDomain")
     public String endpointDomain;
 
+    // The ID of the endpoint.
     @NameInMap("EndpointId")
     public String endpointId;
 
+    // The name of the endpoint.
     @NameInMap("EndpointName")
     public String endpointName;
 
+    // The status of the endpoint. Valid values:
+    // 
+    // *   **Creating**: being created
+    // *   **Active**: available
+    // *   **Pending**: being modified
+    // *   **Deleting**: being deleted
     @NameInMap("EndpointStatus")
     public String endpointStatus;
 
+    // The type of the endpoint.
+    // 
+    // The value is set to **Interface**, which indicates that the resource type of **ServiceId** is Classic Load Balancer (CLB).
     @NameInMap("EndpointType")
     public String endpointType;
 
+    // The payer. Valid values:
+    // 
+    // *   **Endpoint**: the service consumer
+    // *   **EndpointService**: the service provider
     @NameInMap("Payer")
     public String payer;
 
+    // The region ID of the endpoint.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The ID of the resource group.
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    // Indicates whether the endpoint and the endpoint service belong to the same Alibaba Cloud account. Valid values:
+    // 
+    // *   **true**: yes
+    // *   **false**: no
     @NameInMap("ResourceOwner")
     public Boolean resourceOwner;
 
+    // The ID of the endpoint service with which the endpoint is associated.
     @NameInMap("ServiceId")
     public String serviceId;
 
+    // The name of the endpoint service that is associated with the endpoint.
     @NameInMap("ServiceName")
     public String serviceName;
 
+    // The ID of the virtual private cloud (VPC) to which the endpoint belongs.
     @NameInMap("VpcId")
     public String vpcId;
 
+    // Indicates whether zone affinity is enabled. Valid values:
+    // 
+    // *   **true**: yes
+    // *   **false**: no
     @NameInMap("ZoneAffinityEnabled")
     public Boolean zoneAffinityEnabled;
 
+    // The number of private IP addresses that can be used by an elastic network interface (ENI) in each zone. The value is set to **1**.
     @NameInMap("ZonePrivateIpAddressCount")
     public Long zonePrivateIpAddressCount;
 

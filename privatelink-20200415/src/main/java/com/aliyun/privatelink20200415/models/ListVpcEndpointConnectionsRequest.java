@@ -4,39 +4,66 @@ package com.aliyun.privatelink20200415.models;
 import com.aliyun.tea.*;
 
 public class ListVpcEndpointConnectionsRequest extends TeaModel {
+    // The ID of the endpoint connection.
+    // 
+    // >  This parameter is required only when a gateway is used for load balancing.
     @NameInMap("ConnectionId")
     public Long connectionId;
 
+    // The status of the endpoint connection. Valid values:
+    // 
+    // *   **Pending**: being modified.
+    // *   **Connecting**: connecting.
+    // *   **Connected**: connected.
+    // *   **Disconnecting**: disconnecting.
+    // *   **Disconnected**: disconnected.
+    // *   **Deleting**: being deleted.
+    // *   **ServiceDeleted**: The corresponding endpoint service is deleted.
     @NameInMap("ConnectionStatus")
     public String connectionStatus;
 
+    // The ID of the endpoint.
     @NameInMap("EndpointId")
     public String endpointId;
 
+    // The ID of the Alibaba Cloud account to which the endpoint belongs.
     @NameInMap("EndpointOwnerId")
     public Long endpointOwnerId;
 
+    // The ID of the endpoint elastic network interface (ENI).
     @NameInMap("EniId")
     public String eniId;
 
+    // The number of entries returned per page. Valid values: **1** to **50**. Default value: **50**.
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    // The token that is used for the next query. Valid values:
+    // 
+    // *   If this is your first query or no next query is to be sent, ignore this parameter.
+    // *   If a next query is to be sent, set the value to the value of **NextToken** that is returned from the last call.
     @NameInMap("NextToken")
     public String nextToken;
 
+    // The region ID of the endpoint connection.
+    // 
+    // You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The ID of the replaced service resource in smooth migration scenarios.
     @NameInMap("ReplacedResourceId")
     public String replacedResourceId;
 
+    // The ID of the resource group.
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    // The ID of the service resource.
     @NameInMap("ResourceId")
     public String resourceId;
 
+    // The ID of the endpoint service.
     @NameInMap("ServiceId")
     public String serviceId;
 
