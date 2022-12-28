@@ -4,15 +4,22 @@ package com.aliyun.privatelink20200415.models;
 import com.aliyun.tea.*;
 
 public class ListVpcEndpointServiceResourcesResponseBody extends TeaModel {
+    // The number of entries to return on each page.
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    // The token that is used for the next query. Valid values:
+    // 
+    // *   If **NextToken** is empty, no next query is to be sent.
+    // *   If a value of **NextToken** is returned, the value is the token that is used for the next query.
     @NameInMap("NextToken")
     public String nextToken;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The list of service resources.
     @NameInMap("Resources")
     public java.util.List<ListVpcEndpointServiceResourcesResponseBodyResources> resources;
 
@@ -54,36 +61,55 @@ public class ListVpcEndpointServiceResourcesResponseBody extends TeaModel {
     }
 
     public static class ListVpcEndpointServiceResourcesResponseBodyResources extends TeaModel {
+        // Indicates whether automatic resource allocation is allowed. Valid values:
+        // 
+        // *   **true**: yes
+        // *   **false**: no
         @NameInMap("AutoAllocatedEnabled")
         public Boolean autoAllocatedEnabled;
 
+        // The IP address of the service resource.
         @NameInMap("Ip")
         public String ip;
 
+        // The ID of the region where the service resource is deployed.
         @NameInMap("RegionId")
         public String regionId;
 
+        // The number of replaced connections to the endpoint associated with the endpoint service in smooth migration scenarios.
         @NameInMap("RelatedDeprecatedEndpointCount")
         public Long relatedDeprecatedEndpointCount;
 
+        // The number of connections to the endpoint associated with the service resource.
         @NameInMap("RelatedEndpointCount")
         public Long relatedEndpointCount;
 
+        // The ID of the service resource.
         @NameInMap("ResourceId")
         public String resourceId;
 
+        // Indicates whether the endpoint service supports IPv6. Valid values:
+        // 
+        // *   **true**: yes
+        // *   **false**: no
         @NameInMap("ResourceSupportIPv6")
         public Boolean resourceSupportIPv6;
 
+        // The type of the service resource.
+        // 
+        // The value is set to **slb**, which indicates Classic Load Balancer (CLB).
         @NameInMap("ResourceType")
         public String resourceType;
 
+        // The vSwitch to which the service resource belongs.
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        // The virtual private cloud (VPC) to which the service resource belongs.
         @NameInMap("VpcId")
         public String vpcId;
 
+        // The ID of the zone where the service resource is deployed.
         @NameInMap("ZoneId")
         public String zoneId;
 

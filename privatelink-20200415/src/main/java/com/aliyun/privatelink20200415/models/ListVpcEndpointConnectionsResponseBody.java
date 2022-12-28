@@ -4,15 +4,22 @@ package com.aliyun.privatelink20200415.models;
 import com.aliyun.tea.*;
 
 public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
+    // The information about the endpoint connections.
     @NameInMap("Connections")
     public java.util.List<ListVpcEndpointConnectionsResponseBodyConnections> connections;
 
+    // The number of entries returned per page.
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    // The token that is used for the next query. Valid values:
+    // 
+    // *   If **NextToken** is empty, no next query is to be sent.
+    // *   If a value of **NextToken** is returned, the value is the token that is used for the next query.
     @NameInMap("NextToken")
     public String nextToken;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,33 +61,57 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
     }
 
     public static class ListVpcEndpointConnectionsResponseBodyConnectionsZones extends TeaModel {
+        // The ID of the endpoint connection.
+        // 
+        // >  This parameter is returned only when a gateway is used for load balancing.
         @NameInMap("ConnectionId")
         public Long connectionId;
 
+        // The ID of the endpoint connection.
+        // 
+        // >  This parameter is returned only when a gateway is used for load balancing. This parameter returns the value of the **ConnectionId** parameter as a **string**.
         @NameInMap("ConnectionStringId")
         public String connectionStringId;
 
+        // The ID of the endpoint elastic network interface (ENI).
         @NameInMap("EniId")
         public String eniId;
 
+        // The ID of the replaced endpoint ENI in smooth migration scenarios.
         @NameInMap("ReplacedEniId")
         public String replacedEniId;
 
+        // The ID of the replaced service resource in smooth migration scenarios.
         @NameInMap("ReplacedResourceId")
         public String replacedResourceId;
 
+        // The ID of the service resource.
         @NameInMap("ResourceId")
         public String resourceId;
 
+        // The vSwitch to which the endpoint belongs.
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        // The domain name of the zone.
         @NameInMap("ZoneDomain")
         public String zoneDomain;
 
+        // The ID of the zone.
         @NameInMap("ZoneId")
         public String zoneId;
 
+        // The status of the zone. Valid values:
+        // 
+        // *   **Creating**: being created.
+        // *   **Wait**: to be connected.
+        // *   **Connected**: connected.
+        // *   **Deleting**: being deleted.
+        // *   **Disconnecting**: disconnecting.
+        // *   **Disconnected**: disconnected.
+        // *   **Connecting**: connecting.
+        // *   **Migrating**: being migrated.
+        // *   **Migrated**: migrated.
         @NameInMap("ZoneStatus")
         public String zoneStatus;
 
@@ -172,33 +203,54 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
     }
 
     public static class ListVpcEndpointConnectionsResponseBodyConnections extends TeaModel {
+        // The bandwidth of the endpoint connection. Unit: Mbit/s. Valid values: **1024 to 10240**.
         @NameInMap("Bandwidth")
         public Integer bandwidth;
 
+        // The status of the endpoint connection. Valid values:
+        // 
+        // *   **Pending**: being modified.
+        // *   **Connecting**: connecting.
+        // *   **Connected**: connected.
+        // *   **Disconnecting**: disconnecting.
+        // *   **Disconnected**: disconnected.
+        // *   **Deleting**: being deleted.
+        // *   **ServiceDeleted**: The corresponding endpoint service is deleted.
         @NameInMap("ConnectionStatus")
         public String connectionStatus;
 
+        // The ID of the endpoint.
         @NameInMap("EndpointId")
         public String endpointId;
 
+        // The ID of the Alibaba Cloud account to which the endpoint belongs.
         @NameInMap("EndpointOwnerId")
         public Long endpointOwnerId;
 
+        // The virtual private cloud (VPC) to which the endpoint belongs.
         @NameInMap("EndpointVpcId")
         public String endpointVpcId;
 
+        // The time when the endpoint connection was modified.
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        // The ID of the resource group to which the endpoint belongs.
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        // Indicates whether the endpoint and the endpoint service belong to the same Alibaba Cloud account. Valid values:
+        // 
+        // *   **true**: yes
+        // *   **false**: no
         @NameInMap("ResourceOwner")
         public Boolean resourceOwner;
 
+        // The ID of the endpoint service.
         @NameInMap("ServiceId")
         public String serviceId;
 
+        // The information about the zones.
         @NameInMap("Zones")
         public java.util.List<ListVpcEndpointConnectionsResponseBodyConnectionsZones> zones;
 

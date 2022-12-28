@@ -4,18 +4,25 @@ package com.aliyun.privatelink20200415.models;
 import com.aliyun.tea.*;
 
 public class ListVpcEndpointServiceUsersResponseBody extends TeaModel {
+    // The number of entries returned per page.
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    // The token that is used for the next query. Valid values:
+    // 
+    // *   If **NextToken** is empty, it indicates that no next query is to be sent.
+    // *   If a value of **NextToken** is returned, the value is the token that is used for the next query.
     @NameInMap("NextToken")
     public String nextToken;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("UserARNs")
     public java.util.List<ListVpcEndpointServiceUsersResponseBodyUserARNs> userARNs;
 
+    // The Alibaba Cloud accounts in the whitelist of the endpoint service.
     @NameInMap("Users")
     public java.util.List<ListVpcEndpointServiceUsersResponseBodyUsers> users;
 
@@ -84,6 +91,7 @@ public class ListVpcEndpointServiceUsersResponseBody extends TeaModel {
     }
 
     public static class ListVpcEndpointServiceUsersResponseBodyUsers extends TeaModel {
+        // The ID of the Alibaba Cloud account in the whitelist of the endpoint service.
         @NameInMap("UserId")
         public Long userId;
 

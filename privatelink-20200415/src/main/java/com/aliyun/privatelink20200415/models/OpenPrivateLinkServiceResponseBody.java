@@ -4,9 +4,11 @@ package com.aliyun.privatelink20200415.models;
 import com.aliyun.tea.*;
 
 public class OpenPrivateLinkServiceResponseBody extends TeaModel {
+    // The ID of the order.
     @NameInMap("OrderId")
     public String orderId;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,6 +4,7 @@ package com.aliyun.privatelink20200415.models;
 import com.aliyun.tea.*;
 
 public class RemoveUserFromVpcEndpointServiceResponseBody extends TeaModel {
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
