@@ -172,6 +172,7 @@ public class ListHotelAlarmResponseBody extends TeaModel {
         @NameInMap("Once")
         public ListHotelAlarmResponseBodyResultScheduleInfoOnce once;
 
+        // ONCE, WEEKLY
         @NameInMap("Type")
         public String type;
 
