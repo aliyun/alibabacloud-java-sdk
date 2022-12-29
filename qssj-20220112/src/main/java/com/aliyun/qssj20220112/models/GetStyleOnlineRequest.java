@@ -3,7 +3,7 @@ package com.aliyun.qssj20220112.models;
 
 import com.aliyun.tea.*;
 
-public class GetPriceRangeRequest extends TeaModel {
+public class GetStyleOnlineRequest extends TeaModel {
     @NameInMap("BrandNames")
     public String brandNames;
 
@@ -13,8 +13,8 @@ public class GetPriceRangeRequest extends TeaModel {
     @NameInMap("EndingDate")
     public String endingDate;
 
-    @NameInMap("Section")
-    public Long section;
+    @NameInMap("PageIndex")
+    public Long pageIndex;
 
     @NameInMap("ShopIds")
     public String shopIds;
@@ -22,12 +22,12 @@ public class GetPriceRangeRequest extends TeaModel {
     @NameInMap("StartDate")
     public String startDate;
 
-    public static GetPriceRangeRequest build(java.util.Map<String, ?> map) throws Exception {
-        GetPriceRangeRequest self = new GetPriceRangeRequest();
+    public static GetStyleOnlineRequest build(java.util.Map<String, ?> map) throws Exception {
+        GetStyleOnlineRequest self = new GetStyleOnlineRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetPriceRangeRequest setBrandNames(String brandNames) {
+    public GetStyleOnlineRequest setBrandNames(String brandNames) {
         this.brandNames = brandNames;
         return this;
     }
@@ -35,7 +35,7 @@ public class GetPriceRangeRequest extends TeaModel {
         return this.brandNames;
     }
 
-    public GetPriceRangeRequest setCateIds(String cateIds) {
+    public GetStyleOnlineRequest setCateIds(String cateIds) {
         this.cateIds = cateIds;
         return this;
     }
@@ -43,7 +43,7 @@ public class GetPriceRangeRequest extends TeaModel {
         return this.cateIds;
     }
 
-    public GetPriceRangeRequest setEndingDate(String endingDate) {
+    public GetStyleOnlineRequest setEndingDate(String endingDate) {
         this.endingDate = endingDate;
         return this;
     }
@@ -51,15 +51,15 @@ public class GetPriceRangeRequest extends TeaModel {
         return this.endingDate;
     }
 
-    public GetPriceRangeRequest setSection(Long section) {
-        this.section = section;
+    public GetStyleOnlineRequest setPageIndex(Long pageIndex) {
+        this.pageIndex = pageIndex;
         return this;
     }
-    public Long getSection() {
-        return this.section;
+    public Long getPageIndex() {
+        return this.pageIndex;
     }
 
-    public GetPriceRangeRequest setShopIds(String shopIds) {
+    public GetStyleOnlineRequest setShopIds(String shopIds) {
         this.shopIds = shopIds;
         return this;
     }
@@ -67,7 +67,7 @@ public class GetPriceRangeRequest extends TeaModel {
         return this.shopIds;
     }
 
-    public GetPriceRangeRequest setStartDate(String startDate) {
+    public GetStyleOnlineRequest setStartDate(String startDate) {
         this.startDate = startDate;
         return this;
     }

@@ -33,6 +33,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CateIds", request.cateIds);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.endingDate)) {
+            query.put("EndingDate", request.endingDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
+            query.put("StartDate", request.startDate);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -76,11 +84,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getAllTrendCategoryWithOptions(runtime);
     }
 
+    public GetCrowdDataResponse getCrowdDataWithOptions(GetCrowdDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cateIds)) {
+            body.put("CateIds", request.cateIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endingDate)) {
+            body.put("EndingDate", request.endingDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageIndex)) {
+            body.put("PageIndex", request.pageIndex);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
+            body.put("StartDate", request.startDate);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetCrowdData"),
+            new TeaPair("version", "2022-01-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetCrowdDataResponse());
+    }
+
+    public GetCrowdDataResponse getCrowdData(GetCrowdDataRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getCrowdDataWithOptions(request, runtime);
+    }
+
     public GetCrowdLabelResponse getCrowdLabelWithOptions(GetCrowdLabelRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.cateIds)) {
             body.put("CateIds", request.cateIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endingDate)) {
+            body.put("EndingDate", request.endingDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
+            body.put("StartDate", request.startDate);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -110,6 +167,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.cateIds)) {
             query.put("CateIds", request.cateIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endingDate)) {
+            query.put("EndingDate", request.endingDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
+            query.put("StartDate", request.startDate);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -170,8 +235,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetPriceRangeResponse getPriceRangeWithOptions(GetPriceRangeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.brandNames)) {
+            body.put("BrandNames", request.brandNames);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.cateIds)) {
             body.put("CateIds", request.cateIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endingDate)) {
+            body.put("EndingDate", request.endingDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.section)) {
+            body.put("Section", request.section);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.shopIds)) {
+            body.put("ShopIds", request.shopIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
+            body.put("StartDate", request.startDate);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -203,6 +288,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CateIds", request.cateIds);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.endingDate)) {
+            query.put("EndingDate", request.endingDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
+            query.put("StartDate", request.startDate);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -228,8 +321,44 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetStoreSalesVolumeTopResponse getStoreSalesVolumeTopWithOptions(GetStoreSalesVolumeTopRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.brandNames)) {
+            body.put("BrandNames", request.brandNames);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.cateIds)) {
             body.put("CateIds", request.cateIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endingDate)) {
+            body.put("EndingDate", request.endingDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endingPrice)) {
+            body.put("EndingPrice", request.endingPrice);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endingSalesVolume)) {
+            body.put("EndingSalesVolume", request.endingSalesVolume);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageIndex)) {
+            body.put("PageIndex", request.pageIndex);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.shopIds)) {
+            body.put("ShopIds", request.shopIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
+            body.put("StartDate", request.startDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startPrice)) {
+            body.put("StartPrice", request.startPrice);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startSalesVolume)) {
+            body.put("StartSalesVolume", request.startSalesVolume);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -257,8 +386,44 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetStoreSearchTopResponse getStoreSearchTopWithOptions(GetStoreSearchTopRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.brandNames)) {
+            body.put("BrandNames", request.brandNames);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.cateIds)) {
             body.put("CateIds", request.cateIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endingDate)) {
+            body.put("EndingDate", request.endingDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endingPrice)) {
+            body.put("EndingPrice", request.endingPrice);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endingSalesVolume)) {
+            body.put("EndingSalesVolume", request.endingSalesVolume);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageIndex)) {
+            body.put("PageIndex", request.pageIndex);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.shopIds)) {
+            body.put("ShopIds", request.shopIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
+            body.put("StartDate", request.startDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startPrice)) {
+            body.put("StartPrice", request.startPrice);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startSalesVolume)) {
+            body.put("StartSalesVolume", request.startSalesVolume);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -283,19 +448,92 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getStoreSearchTopWithOptions(request, runtime);
     }
 
+    public GetStyleOnlineResponse getStyleOnlineWithOptions(GetStyleOnlineRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.brandNames)) {
+            query.put("BrandNames", request.brandNames);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cateIds)) {
+            query.put("CateIds", request.cateIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endingDate)) {
+            query.put("EndingDate", request.endingDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageIndex)) {
+            query.put("PageIndex", request.pageIndex);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.shopIds)) {
+            query.put("ShopIds", request.shopIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
+            query.put("StartDate", request.startDate);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetStyleOnline"),
+            new TeaPair("version", "2022-01-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetStyleOnlineResponse());
+    }
+
+    public GetStyleOnlineResponse getStyleOnline(GetStyleOnlineRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getStyleOnlineWithOptions(request, runtime);
+    }
+
     public GetStyleTopResponse getStyleTopWithOptions(GetStyleTopRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.brandNames)) {
+            body.put("BrandNames", request.brandNames);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.cateIds)) {
             body.put("CateIds", request.cateIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endingDate)) {
+            body.put("EndingDate", request.endingDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endingPrice)) {
+            body.put("EndingPrice", request.endingPrice);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageIndex)) {
             body.put("PageIndex", request.pageIndex);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.shopIds)) {
+            body.put("ShopIds", request.shopIds);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.sortOrder)) {
             body.put("SortOrder", request.sortOrder);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
+            body.put("StartDate", request.startDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startPrice)) {
+            body.put("StartPrice", request.startPrice);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.timeDisplay)) {
@@ -451,8 +689,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetTrendStatisticResponse getTrendStatisticWithOptions(GetTrendStatisticRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.brandNames)) {
+            body.put("BrandNames", request.brandNames);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.cateIds)) {
             body.put("CateIds", request.cateIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endingDate)) {
+            body.put("EndingDate", request.endingDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.shopIds)) {
+            body.put("ShopIds", request.shopIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
+            body.put("StartDate", request.startDate);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -475,5 +729,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetTrendStatisticResponse getTrendStatistic(GetTrendStatisticRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getTrendStatisticWithOptions(request, runtime);
+    }
+
+    public GetTrendWordAndIndexResponse getTrendWordAndIndexWithOptions(GetTrendWordAndIndexRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cateIds)) {
+            body.put("CateIds", request.cateIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endingDate)) {
+            body.put("EndingDate", request.endingDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageIndex)) {
+            body.put("PageIndex", request.pageIndex);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
+            body.put("StartDate", request.startDate);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetTrendWordAndIndex"),
+            new TeaPair("version", "2022-01-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetTrendWordAndIndexResponse());
+    }
+
+    public GetTrendWordAndIndexResponse getTrendWordAndIndex(GetTrendWordAndIndexRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getTrendWordAndIndexWithOptions(request, runtime);
     }
 }

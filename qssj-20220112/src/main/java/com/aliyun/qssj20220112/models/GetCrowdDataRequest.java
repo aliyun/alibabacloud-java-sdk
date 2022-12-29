@@ -3,22 +3,25 @@ package com.aliyun.qssj20220112.models;
 
 import com.aliyun.tea.*;
 
-public class GetCrowdReginRequest extends TeaModel {
+public class GetCrowdDataRequest extends TeaModel {
     @NameInMap("CateIds")
     public String cateIds;
 
     @NameInMap("EndingDate")
     public String endingDate;
 
+    @NameInMap("PageIndex")
+    public Long pageIndex;
+
     @NameInMap("StartDate")
     public String startDate;
 
-    public static GetCrowdReginRequest build(java.util.Map<String, ?> map) throws Exception {
-        GetCrowdReginRequest self = new GetCrowdReginRequest();
+    public static GetCrowdDataRequest build(java.util.Map<String, ?> map) throws Exception {
+        GetCrowdDataRequest self = new GetCrowdDataRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetCrowdReginRequest setCateIds(String cateIds) {
+    public GetCrowdDataRequest setCateIds(String cateIds) {
         this.cateIds = cateIds;
         return this;
     }
@@ -26,7 +29,7 @@ public class GetCrowdReginRequest extends TeaModel {
         return this.cateIds;
     }
 
-    public GetCrowdReginRequest setEndingDate(String endingDate) {
+    public GetCrowdDataRequest setEndingDate(String endingDate) {
         this.endingDate = endingDate;
         return this;
     }
@@ -34,7 +37,15 @@ public class GetCrowdReginRequest extends TeaModel {
         return this.endingDate;
     }
 
-    public GetCrowdReginRequest setStartDate(String startDate) {
+    public GetCrowdDataRequest setPageIndex(Long pageIndex) {
+        this.pageIndex = pageIndex;
+        return this;
+    }
+    public Long getPageIndex() {
+        return this.pageIndex;
+    }
+
+    public GetCrowdDataRequest setStartDate(String startDate) {
         this.startDate = startDate;
         return this;
     }

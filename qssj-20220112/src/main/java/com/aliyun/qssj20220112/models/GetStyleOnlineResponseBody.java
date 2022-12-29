@@ -3,12 +3,12 @@ package com.aliyun.qssj20220112.models;
 
 import com.aliyun.tea.*;
 
-public class GetStyleTopResponseBody extends TeaModel {
+public class GetStyleOnlineResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
-    public java.util.List<GetStyleTopResponseBodyData> data;
+    public java.util.List<GetStyleOnlineResponseBodyData> data;
 
     @NameInMap("Message")
     public String message;
@@ -19,12 +19,12 @@ public class GetStyleTopResponseBody extends TeaModel {
     @NameInMap("SuccessResponse")
     public String successResponse;
 
-    public static GetStyleTopResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        GetStyleTopResponseBody self = new GetStyleTopResponseBody();
+    public static GetStyleOnlineResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        GetStyleOnlineResponseBody self = new GetStyleOnlineResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public GetStyleTopResponseBody setCode(String code) {
+    public GetStyleOnlineResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -32,15 +32,15 @@ public class GetStyleTopResponseBody extends TeaModel {
         return this.code;
     }
 
-    public GetStyleTopResponseBody setData(java.util.List<GetStyleTopResponseBodyData> data) {
+    public GetStyleOnlineResponseBody setData(java.util.List<GetStyleOnlineResponseBodyData> data) {
         this.data = data;
         return this;
     }
-    public java.util.List<GetStyleTopResponseBodyData> getData() {
+    public java.util.List<GetStyleOnlineResponseBodyData> getData() {
         return this.data;
     }
 
-    public GetStyleTopResponseBody setMessage(String message) {
+    public GetStyleOnlineResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -48,7 +48,7 @@ public class GetStyleTopResponseBody extends TeaModel {
         return this.message;
     }
 
-    public GetStyleTopResponseBody setRequestId(String requestId) {
+    public GetStyleOnlineResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -56,7 +56,7 @@ public class GetStyleTopResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetStyleTopResponseBody setSuccessResponse(String successResponse) {
+    public GetStyleOnlineResponseBody setSuccessResponse(String successResponse) {
         this.successResponse = successResponse;
         return this;
     }
@@ -64,7 +64,7 @@ public class GetStyleTopResponseBody extends TeaModel {
         return this.successResponse;
     }
 
-    public static class GetStyleTopResponseBodyData extends TeaModel {
+    public static class GetStyleOnlineResponseBodyData extends TeaModel {
         @NameInMap("AttributeContent")
         public String attributeContent;
 
@@ -113,12 +113,12 @@ public class GetStyleTopResponseBody extends TeaModel {
         @NameInMap("Title")
         public String title;
 
-        public static GetStyleTopResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            GetStyleTopResponseBodyData self = new GetStyleTopResponseBodyData();
+        public static GetStyleOnlineResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            GetStyleOnlineResponseBodyData self = new GetStyleOnlineResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public GetStyleTopResponseBodyData setAttributeContent(String attributeContent) {
+        public GetStyleOnlineResponseBodyData setAttributeContent(String attributeContent) {
             this.attributeContent = attributeContent;
             return this;
         }
@@ -126,7 +126,7 @@ public class GetStyleTopResponseBody extends TeaModel {
             return this.attributeContent;
         }
 
-        public GetStyleTopResponseBodyData setBrandName(String brandName) {
+        public GetStyleOnlineResponseBodyData setBrandName(String brandName) {
             this.brandName = brandName;
             return this;
         }
@@ -134,7 +134,7 @@ public class GetStyleTopResponseBody extends TeaModel {
             return this.brandName;
         }
 
-        public GetStyleTopResponseBodyData setBuyerTags(String buyerTags) {
+        public GetStyleOnlineResponseBodyData setBuyerTags(String buyerTags) {
             this.buyerTags = buyerTags;
             return this;
         }
@@ -142,7 +142,7 @@ public class GetStyleTopResponseBody extends TeaModel {
             return this.buyerTags;
         }
 
-        public GetStyleTopResponseBodyData setCateName(String cateName) {
+        public GetStyleOnlineResponseBodyData setCateName(String cateName) {
             this.cateName = cateName;
             return this;
         }
@@ -150,7 +150,7 @@ public class GetStyleTopResponseBody extends TeaModel {
             return this.cateName;
         }
 
-        public GetStyleTopResponseBodyData setColor(String color) {
+        public GetStyleOnlineResponseBodyData setColor(String color) {
             this.color = color;
             return this;
         }
@@ -158,7 +158,7 @@ public class GetStyleTopResponseBody extends TeaModel {
             return this.color;
         }
 
-        public GetStyleTopResponseBodyData setExposureValue(Long exposureValue) {
+        public GetStyleOnlineResponseBodyData setExposureValue(Long exposureValue) {
             this.exposureValue = exposureValue;
             return this;
         }
@@ -166,7 +166,7 @@ public class GetStyleTopResponseBody extends TeaModel {
             return this.exposureValue;
         }
 
-        public GetStyleTopResponseBodyData setImages(java.util.List<String> images) {
+        public GetStyleOnlineResponseBodyData setImages(java.util.List<String> images) {
             this.images = images;
             return this;
         }
@@ -174,7 +174,7 @@ public class GetStyleTopResponseBody extends TeaModel {
             return this.images;
         }
 
-        public GetStyleTopResponseBodyData setMaterial(String material) {
+        public GetStyleOnlineResponseBodyData setMaterial(String material) {
             this.material = material;
             return this;
         }
@@ -182,7 +182,7 @@ public class GetStyleTopResponseBody extends TeaModel {
             return this.material;
         }
 
-        public GetStyleTopResponseBodyData setPrice(Double price) {
+        public GetStyleOnlineResponseBodyData setPrice(Double price) {
             this.price = price;
             return this;
         }
@@ -190,7 +190,7 @@ public class GetStyleTopResponseBody extends TeaModel {
             return this.price;
         }
 
-        public GetStyleTopResponseBodyData setProductLink(String productLink) {
+        public GetStyleOnlineResponseBodyData setProductLink(String productLink) {
             this.productLink = productLink;
             return this;
         }
@@ -198,7 +198,7 @@ public class GetStyleTopResponseBody extends TeaModel {
             return this.productLink;
         }
 
-        public GetStyleTopResponseBodyData setSalesVolume(Double salesVolume) {
+        public GetStyleOnlineResponseBodyData setSalesVolume(Double salesVolume) {
             this.salesVolume = salesVolume;
             return this;
         }
@@ -206,7 +206,7 @@ public class GetStyleTopResponseBody extends TeaModel {
             return this.salesVolume;
         }
 
-        public GetStyleTopResponseBodyData setSearchVolume(Double searchVolume) {
+        public GetStyleOnlineResponseBodyData setSearchVolume(Double searchVolume) {
             this.searchVolume = searchVolume;
             return this;
         }
@@ -214,7 +214,7 @@ public class GetStyleTopResponseBody extends TeaModel {
             return this.searchVolume;
         }
 
-        public GetStyleTopResponseBodyData setShopId(Long shopId) {
+        public GetStyleOnlineResponseBodyData setShopId(Long shopId) {
             this.shopId = shopId;
             return this;
         }
@@ -222,7 +222,7 @@ public class GetStyleTopResponseBody extends TeaModel {
             return this.shopId;
         }
 
-        public GetStyleTopResponseBodyData setShopName(String shopName) {
+        public GetStyleOnlineResponseBodyData setShopName(String shopName) {
             this.shopName = shopName;
             return this;
         }
@@ -230,7 +230,7 @@ public class GetStyleTopResponseBody extends TeaModel {
             return this.shopName;
         }
 
-        public GetStyleTopResponseBodyData setStyle(String style) {
+        public GetStyleOnlineResponseBodyData setStyle(String style) {
             this.style = style;
             return this;
         }
@@ -238,7 +238,7 @@ public class GetStyleTopResponseBody extends TeaModel {
             return this.style;
         }
 
-        public GetStyleTopResponseBodyData setTitle(String title) {
+        public GetStyleOnlineResponseBodyData setTitle(String title) {
             this.title = title;
             return this;
         }

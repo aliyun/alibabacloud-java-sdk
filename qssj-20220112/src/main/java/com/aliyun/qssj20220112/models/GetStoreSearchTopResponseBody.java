@@ -65,12 +65,59 @@ public class GetStoreSearchTopResponseBody extends TeaModel {
     }
 
     public static class GetStoreSearchTopResponseBodyData extends TeaModel {
+        @NameInMap("CommodityQuantity")
+        public Long commodityQuantity;
+
+        @NameInMap("SalesVolume")
+        public Long salesVolume;
+
+        @NameInMap("SearchVolume")
+        public Long searchVolume;
+
+        @NameInMap("ShopId")
+        public Long shopId;
+
         @NameInMap("ShopName")
         public String shopName;
+
+        @NameInMap("TotalSales")
+        public Double totalSales;
 
         public static GetStoreSearchTopResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetStoreSearchTopResponseBodyData self = new GetStoreSearchTopResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetStoreSearchTopResponseBodyData setCommodityQuantity(Long commodityQuantity) {
+            this.commodityQuantity = commodityQuantity;
+            return this;
+        }
+        public Long getCommodityQuantity() {
+            return this.commodityQuantity;
+        }
+
+        public GetStoreSearchTopResponseBodyData setSalesVolume(Long salesVolume) {
+            this.salesVolume = salesVolume;
+            return this;
+        }
+        public Long getSalesVolume() {
+            return this.salesVolume;
+        }
+
+        public GetStoreSearchTopResponseBodyData setSearchVolume(Long searchVolume) {
+            this.searchVolume = searchVolume;
+            return this;
+        }
+        public Long getSearchVolume() {
+            return this.searchVolume;
+        }
+
+        public GetStoreSearchTopResponseBodyData setShopId(Long shopId) {
+            this.shopId = shopId;
+            return this;
+        }
+        public Long getShopId() {
+            return this.shopId;
         }
 
         public GetStoreSearchTopResponseBodyData setShopName(String shopName) {
@@ -79,6 +126,14 @@ public class GetStoreSearchTopResponseBody extends TeaModel {
         }
         public String getShopName() {
             return this.shopName;
+        }
+
+        public GetStoreSearchTopResponseBodyData setTotalSales(Double totalSales) {
+            this.totalSales = totalSales;
+            return this;
+        }
+        public Double getTotalSales() {
+            return this.totalSales;
         }
 
     }
