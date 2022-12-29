@@ -4,18 +4,23 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeParameterTemplatesResponseBody extends TeaModel {
+    // The database engine of the instance.
     @NameInMap("Engine")
     public String engine;
 
+    // The database engine version of the instance.
     @NameInMap("EngineVersion")
     public String engineVersion;
 
+    // The number of parameters that are supported by the instance.
     @NameInMap("ParameterCount")
     public String parameterCount;
 
+    // Details about the parameter templates.
     @NameInMap("Parameters")
     public DescribeParameterTemplatesResponseBodyParameters parameters;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -65,21 +70,33 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
     }
 
     public static class DescribeParameterTemplatesResponseBodyParametersTemplateRecord extends TeaModel {
+        // The value range of modifiable parameters.
         @NameInMap("CheckingCode")
         public String checkingCode;
 
+        // Indicates whether the parameter is modifiable.
+        // 
+        // *   **false**: The parameter cannot be modified.
+        // *   **true**: The parameter can be modified.
         @NameInMap("ForceModify")
         public Boolean forceModify;
 
+        // Indicates whether a restart is required for parameter modifications to take effect.
+        // 
+        // *   **false**: A restart is not required. Parameter modifications immediately take effect.
+        // *   **true**: A restart is required for parameter modifications to take effect.
         @NameInMap("ForceRestart")
         public Boolean forceRestart;
 
+        // The description of the parameter.
         @NameInMap("ParameterDescription")
         public String parameterDescription;
 
+        // The name of the parameter.
         @NameInMap("ParameterName")
         public String parameterName;
 
+        // The default value of the parameter.
         @NameInMap("ParameterValue")
         public String parameterValue;
 

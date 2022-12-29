@@ -4,21 +4,43 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribePriceRequest extends TeaModel {
+    // The business information. This is an additional parameter.
     @NameInMap("BusinessInfo")
     public String businessInfo;
 
+    // The code of the cluster. Valid values:
+    // 
+    // *   dds: a replica set instance that uses the pay-as-you-go billing method
+    // *   badds: a replica set instance that uses the subscription billing method
+    // *   dds_sharding: a sharded cluster instance that uses the pay-as-you-go billing method
+    // *   badds_sharding: a sharded cluster instance that uses the subscription billing method
+    // *   badds_sharding_intl: a sharded cluster instance that uses the subscription billing method and is available on the International site (alibabacloud.com)
+    // *   badds_sharding_jp: a sharded cluster instance that uses the subscription billing method and is available on the Japan site (jp.alibabacloud.com)
     @NameInMap("CommodityCode")
     public String commodityCode;
 
+    // The coupon code. Default value: **youhuiquan_promotion_option_id_for_blank**.
     @NameInMap("CouponNo")
     public String couponNo;
 
+    // A JSON string that contains the details of the ApsaraDB for MongoDB instance. For more information, see Details of the [DBInstances](~~197291~~) parameter in the DescribePrice operation.
     @NameInMap("DBInstances")
     public String DBInstances;
 
+    // Specifies whether to return the parameters about the order. Valid values:
+    // 
+    // *   false
+    // *   true
+    // 
+    // Default value: **false**.
     @NameInMap("OrderParamOut")
     public String orderParamOut;
 
+    // The type of the order. Valid values:
+    // 
+    // *   BUY: instance creation
+    // *   UPGRADE: instance configuration change
+    // *   RENEW: instance renewal
     @NameInMap("OrderType")
     public String orderType;
 
@@ -28,12 +50,15 @@ public class DescribePriceRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The code of the service to which the instance belongs. Default value: **dds**.
     @NameInMap("ProductCode")
     public String productCode;
 
+    // The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The ID of the resource group. For more information, see [View basic information of a resource group](~~151181~~).
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

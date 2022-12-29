@@ -4,30 +4,42 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
+    // The UID of the key creator.
     @NameInMap("Creator")
     public String creator;
 
+    // The scheduled time when the key for the instance will be deleted. If the value is empty, the key will not be deleted.
     @NameInMap("DeleteDate")
     public String deleteDate;
 
+    // The description of the key for the instance.
     @NameInMap("Description")
     public String description;
 
+    // The key for the instance.
     @NameInMap("EncryptionKey")
     public String encryptionKey;
 
+    // Indicates whether the key for the instance is enabled. Valid values:
+    // 
+    // *   **Enabled**
+    // *   **Disabled**
     @NameInMap("EncryptionKeyStatus")
     public String encryptionKeyStatus;
 
+    // The purpose of the key for the instance.
     @NameInMap("KeyUsage")
     public String keyUsage;
 
+    // The expiration time of the key for the instance. The time is displayed in UTC. If the value is empty, the key for the instance will not expire.
     @NameInMap("MaterialExpireTime")
     public String materialExpireTime;
 
+    // The source of the key for the instance.
     @NameInMap("Origin")
     public String origin;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

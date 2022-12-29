@@ -4,21 +4,27 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeSlowLogRecordsResponseBody extends TeaModel {
+    // The database engine.
     @NameInMap("Engine")
     public String engine;
 
+    // Details about the slow query logs.
     @NameInMap("Items")
     public DescribeSlowLogRecordsResponseBodyItems items;
 
+    // The page number of the returned page. The value must be an integer that is greater than 0. Default value: **1**.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of slow query log entries returned on the page.
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The total number of entries.
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
 
@@ -76,33 +82,43 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     }
 
     public static class DescribeSlowLogRecordsResponseBodyItemsLogRecords extends TeaModel {
+        // The username of the database account that performs the operation.
         @NameInMap("AccountName")
         public String accountName;
 
+        // The name of the database.
         @NameInMap("DBName")
         public String DBName;
 
+        // The number of documents that are scanned during the operation.
         @NameInMap("DocsExamined")
         public Long docsExamined;
 
+        // The start time of the operation. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
         @NameInMap("ExecutionStartTime")
         public String executionStartTime;
 
+        // The host IP address that is used to connect to the database.
         @NameInMap("HostAddress")
         public String hostAddress;
 
+        // The data entries that are scanned during indexing.
         @NameInMap("KeysExamined")
         public Long keysExamined;
 
+        // The execution time of the statement. Unit: milliseconds.
         @NameInMap("QueryTimes")
         public String queryTimes;
 
+        // The number of entries returned.
         @NameInMap("ReturnRowCounts")
         public Long returnRowCounts;
 
+        // The SQL statement that is executed during the slow operation.
         @NameInMap("SQLText")
         public String SQLText;
 
+        // The name of the collection.
         @NameInMap("TableName")
         public String tableName;
 

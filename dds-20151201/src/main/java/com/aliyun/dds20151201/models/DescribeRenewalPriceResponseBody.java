@@ -4,15 +4,19 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeRenewalPriceResponseBody extends TeaModel {
+    // The list of orders.
     @NameInMap("Order")
     public DescribeRenewalPriceResponseBodyOrder order;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Details about the promotion rules.
     @NameInMap("Rules")
     public DescribeRenewalPriceResponseBodyRules rules;
 
+    // The rules matching the coupons.
     @NameInMap("SubOrders")
     public DescribeRenewalPriceResponseBodySubOrders subOrders;
 
@@ -54,15 +58,19 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
     }
 
     public static class DescribeRenewalPriceResponseBodyOrderCouponsCoupon extends TeaModel {
+        // The coupon number.
         @NameInMap("CouponNo")
         public String couponNo;
 
+        // The description of the coupon.
         @NameInMap("Description")
         public String description;
 
+        // Indicates whether the coupon was selected.
         @NameInMap("IsSelected")
         public String isSelected;
 
+        // The name of the coupon.
         @NameInMap("Name")
         public String name;
 
@@ -144,21 +152,30 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
     }
 
     public static class DescribeRenewalPriceResponseBodyOrder extends TeaModel {
+        // Details about the coupons.
         @NameInMap("Coupons")
         public DescribeRenewalPriceResponseBodyOrderCoupons coupons;
 
+        // The type of the currency. Valid values:
+        // 
+        // *   USD: United States dollar
+        // *   JPY: Japanese Yen
         @NameInMap("Currency")
         public String currency;
 
+        // The discount amount of the order.
         @NameInMap("DiscountAmount")
         public Float discountAmount;
 
+        // The original price of the order.
         @NameInMap("OriginalAmount")
         public Float originalAmount;
 
+        // The IDs of the matched rules.
         @NameInMap("RuleIds")
         public DescribeRenewalPriceResponseBodyOrderRuleIds ruleIds;
 
+        // The actual price of the order.
         @NameInMap("TradeAmount")
         public Float tradeAmount;
 
@@ -218,12 +235,15 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
     }
 
     public static class DescribeRenewalPriceResponseBodyRulesRule extends TeaModel {
+        // The name of the rule.
         @NameInMap("Name")
         public String name;
 
+        // The ID of the rule.
         @NameInMap("RuleDescId")
         public Long ruleDescId;
 
+        // The title of the rule.
         @NameInMap("Title")
         public String title;
 
@@ -297,18 +317,23 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
     }
 
     public static class DescribeRenewalPriceResponseBodySubOrdersSubOrder extends TeaModel {
+        // The discount amount of the order.
         @NameInMap("DiscountAmount")
         public Float discountAmount;
 
+        // The ID of the instance.
         @NameInMap("InstanceId")
         public String instanceId;
 
+        // The original price of the order.
         @NameInMap("OriginalAmount")
         public Float originalAmount;
 
+        // The IDs of the matched rules.
         @NameInMap("RuleIds")
         public DescribeRenewalPriceResponseBodySubOrdersSubOrderRuleIds ruleIds;
 
+        // The actual price of the order.
         @NameInMap("TradeAmount")
         public Float tradeAmount;
 

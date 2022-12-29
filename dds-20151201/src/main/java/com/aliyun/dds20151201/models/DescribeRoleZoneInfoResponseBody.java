@@ -4,9 +4,11 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeRoleZoneInfoResponseBody extends TeaModel {
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // An array that consists of information of nodes in the zone.
     @NameInMap("ZoneInfos")
     public DescribeRoleZoneInfoResponseBodyZoneInfos zoneInfos;
 
@@ -32,18 +34,34 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeRoleZoneInfoResponseBodyZoneInfosZoneInfo extends TeaModel {
+        // The ID of the node.
         @NameInMap("InsName")
         public String insName;
 
+        // The type of the node. Valid values:
+        // 
+        // *   **normal**
+        // *   **configServer**
+        // *   **shard**
+        // *   **mongos**
+        // 
+        // >  Valid value for replica set instances: **normal**. Valid values for replica set instances: **configServer**, **shard**, and **mongos**.
         @NameInMap("NodeType")
         public String nodeType;
 
+        // The ID of the role.
         @NameInMap("RoleId")
         public String roleId;
 
+        // The role of the node. Valid values:
+        // 
+        // *   **Primary**
+        // *   **Secondary**
+        // *   **Hidden**
         @NameInMap("RoleType")
         public String roleType;
 
+        // The zone ID.
         @NameInMap("ZoneId")
         public String zoneId;
 

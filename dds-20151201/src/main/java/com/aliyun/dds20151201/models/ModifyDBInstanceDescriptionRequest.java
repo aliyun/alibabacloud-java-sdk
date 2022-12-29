@@ -4,12 +4,23 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBInstanceDescriptionRequest extends TeaModel {
+    // The name of the instance.
+    // 
+    // > * The name cannot start with `http://` or `https://`.
+    // > * The name must start with a letter.
+    // > * The name must be 2 to 256 characters in length, and can contain letters, underscores (\_), hyphens (-), and digits.
     @NameInMap("DBInstanceDescription")
     public String DBInstanceDescription;
 
+    // The ID of the instance.
+    // 
+    // >  To modify the name of a shard or mongos node in a sharded cluster instance, you must also specify the **NodeId** parameter.
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    // The ID of the shard or mongos node in the sharded cluster instance.
+    // 
+    // >  This parameter is valid only if you set the **DBInstanceId** parameter to the ID of a sharded cluster instance.
     @NameInMap("NodeId")
     public String nodeId;
 

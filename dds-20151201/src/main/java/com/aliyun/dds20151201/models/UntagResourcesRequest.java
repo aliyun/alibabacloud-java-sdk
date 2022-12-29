@@ -4,6 +4,13 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
+    // Specifies whether to unbind all tags from the instance. Valid values:
+    // 
+    // *   **true**
+    // *   **false**
+    // 
+    // > * Default value: **false**.
+    // > * If you specify both this parameter and **TagKey.N**, this parameter is invalid.
     @NameInMap("All")
     public Boolean all;
 
@@ -13,12 +20,15 @@ public class UntagResourcesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The region ID of the instance. You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to query the region ID of the instance.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The ID of the resource group.
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    // The resource IDs.
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
@@ -28,9 +38,11 @@ public class UntagResourcesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    // The resource type. Set the value to **INSTANCE**.
     @NameInMap("ResourceType")
     public String resourceType;
 
+    // The keys of the tags.
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;
 

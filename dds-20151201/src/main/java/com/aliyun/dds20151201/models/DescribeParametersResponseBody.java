@@ -4,18 +4,23 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeParametersResponseBody extends TeaModel {
+    // The list of instance parameters in the configuration template.
     @NameInMap("ConfigParameters")
     public DescribeParametersResponseBodyConfigParameters configParameters;
 
+    // The database engine. Default value: **mongodb**.
     @NameInMap("Engine")
     public String engine;
 
+    // The version number of the database.
     @NameInMap("EngineVersion")
     public String engineVersion;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The list of instance parameters that have taken effect.
     @NameInMap("RunningParameters")
     public DescribeParametersResponseBodyRunningParameters runningParameters;
 
@@ -65,21 +70,33 @@ public class DescribeParametersResponseBody extends TeaModel {
     }
 
     public static class DescribeParametersResponseBodyConfigParametersParameter extends TeaModel {
+        // The valid values of the parameter.
         @NameInMap("CheckingCode")
         public String checkingCode;
 
+        // Indicates whether a restart is required for parameter modifications to take effect.
+        // 
+        // *   **false**: A restart is not required. Modifications take effect immediately.
+        // *   **true**: A restart is required for modifications to take effect.
         @NameInMap("ForceRestart")
         public Boolean forceRestart;
 
+        // Indicates whether the parameter is modifiable.
+        // 
+        // *   **false**: The parameter is not modifiable.
+        // *   **true**: The parameter is modifiable.
         @NameInMap("ModifiableStatus")
         public Boolean modifiableStatus;
 
+        // The description of the parameter.
         @NameInMap("ParameterDescription")
         public String parameterDescription;
 
+        // The name of the parameter.
         @NameInMap("ParameterName")
         public String parameterName;
 
+        // The value of the parameter.
         @NameInMap("ParameterValue")
         public String parameterValue;
 
@@ -158,21 +175,33 @@ public class DescribeParametersResponseBody extends TeaModel {
     }
 
     public static class DescribeParametersResponseBodyRunningParametersParameter extends TeaModel {
+        // The valid values of the parameter.
         @NameInMap("CheckingCode")
         public String checkingCode;
 
+        // Indicates whether a restart is required for parameter modifications to take effect.
+        // 
+        // *   **false**: A restart is not required. Modifications take effect immediately.
+        // *   **true**: A restart is required for modifications to take effect.
         @NameInMap("ForceRestart")
         public String forceRestart;
 
+        // Indicates whether the parameter is modifiable.
+        // 
+        // *   **false**: The parameter is not modifiable.
+        // *   **true**: The parameter is modifiable.
         @NameInMap("ModifiableStatus")
         public String modifiableStatus;
 
+        // The description of the parameter.
         @NameInMap("ParameterDescription")
         public String parameterDescription;
 
+        // The name of the parameter.
         @NameInMap("ParameterName")
         public String parameterName;
 
+        // The value of the parameter.
         @NameInMap("ParameterValue")
         public String parameterValue;
 

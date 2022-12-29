@@ -4,9 +4,11 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeKernelReleaseNotesResponseBody extends TeaModel {
+    // The list of version release notes.
     @NameInMap("ReleaseNotes")
     public DescribeKernelReleaseNotesResponseBodyReleaseNotes releaseNotes;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +34,11 @@ public class DescribeKernelReleaseNotesResponseBody extends TeaModel {
     }
 
     public static class DescribeKernelReleaseNotesResponseBodyReleaseNotesReleaseNote extends TeaModel {
+        // The version number.
         @NameInMap("KernelVersion")
         public String kernelVersion;
 
+        // Publishes the log.
         @NameInMap("ReleaseNote")
         public String releaseNote;
 

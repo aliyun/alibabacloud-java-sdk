@@ -4,9 +4,17 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeParameterTemplatesRequest extends TeaModel {
+    // The database engine of the instance. Set the value to **MongoDB**.
     @NameInMap("Engine")
     public String engine;
 
+    // The database engine version of the instance. Valid values:
+    // 
+    // *   **5.0**
+    // *   **4.4**
+    // *   **4.2**
+    // *   **4.0**
+    // *   **3.4**
     @NameInMap("EngineVersion")
     public String engineVersion;
 
@@ -16,6 +24,7 @@ public class DescribeParameterTemplatesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 

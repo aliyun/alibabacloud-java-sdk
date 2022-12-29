@@ -4,15 +4,28 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class AllocateNodePrivateNetworkAddressRequest extends TeaModel {
+    // The name of the account.
+    // 
+    // > * The name must be 4 to 16 characters in length and can contain lowercase letters, digits, and underscores (\_). It must start with a lowercase letter.
+    // > * You need to set the account name and password only when you apply for an endpoint for a shard or Configserver node for the first time. In this case, the account name and password are used for all shard and Configserver nodes.
+    // > * The permissions of this account are fixed to read-only.
     @NameInMap("AccountName")
     public String accountName;
 
+    // The password of the account.
+    // 
+    // *   The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include `!#$%^&*()_+-=`
+    // *   The password must be 8 to 32 characters in length.
     @NameInMap("AccountPassword")
     public String accountPassword;
 
+    // The ID of the sharded cluster instance.
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    // The ID of the shard or Configserver node.
+    // 
+    // >  You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to query the ID of the shard or Configserver node.
     @NameInMap("NodeId")
     public String nodeId;
 
@@ -31,6 +44,9 @@ public class AllocateNodePrivateNetworkAddressRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    // The zone ID of the instance.
+    // 
+    // >  You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to query the zone ID of the instance.
     @NameInMap("ZoneId")
     public String zoneId;
 

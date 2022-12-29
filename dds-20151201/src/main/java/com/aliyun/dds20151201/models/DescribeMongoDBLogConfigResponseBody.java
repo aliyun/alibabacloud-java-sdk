@@ -4,39 +4,63 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeMongoDBLogConfigResponseBody extends TeaModel {
+    // Indicates whether to enable the audit log feature is enabled.
+    // 
+    // *   **true**
+    // *   **false**
     @NameInMap("EnableAudit")
     public Boolean enableAudit;
 
+    // Indicates whether a rule to distribute logs to Logtail is created. For more information, see [Logtail overview](~~28979~~). Valid values:
+    // 
+    // *   **1**: A rule to distribute logs to Logtail is created.
+    // *   **0** or **null**: A rule to distribute logs to Logtail is not created.
     @NameInMap("IsEtlMetaExist")
     public Integer isEtlMetaExist;
 
+    // Indicates whether a Log Service project exists in the current region. Valid values:
+    // 
+    // *   **1**: A Log Service project exists in the current region.
+    // *   **0** or **null**: A Log Service project does not exist in the current region.
     @NameInMap("IsUserProjectLogstoreExist")
     public Integer isUserProjectLogstoreExist;
 
+    // The maximum storage space for the formal edition of the audit log feature. If the value is **-1**, no maximum is set.
     @NameInMap("PreserveStorageForStandard")
     public Long preserveStorageForStandard;
 
+    // The maximum storage space for the free trial edition of the audit log feature. Unit: bytes. You can set the maximum up to 107,374,182,400 bytes.
     @NameInMap("PreserveStorageForTrail")
     public Long preserveStorageForTrail;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The type of the audit log feature. Valid values:
+    // 
+    // *   **Trail**: the free trial edition
+    // *   **Standard**: the official edition
     @NameInMap("ServiceType")
     public String serviceType;
 
+    // The retention period for the official edition of the audit log feature. Valid values: 1 to 365 days.
     @NameInMap("TtlForStandard")
     public Long ttlForStandard;
 
+    // The retention period for the free trial edition of the audit log feature.
     @NameInMap("TtlForTrail")
     public Long ttlForTrail;
 
+    // The used storage space for the formal edition of the audit log feature. Unit: bytes.
     @NameInMap("UsedStorageForStandard")
     public Long usedStorageForStandard;
 
+    // The used storage space for the free trial edition of the audit log feature. Unit: bytes.
     @NameInMap("UsedStorageForTrail")
     public Long usedStorageForTrail;
 
+    // The name of the Log Service project.
     @NameInMap("UserProjectName")
     public String userProjectName;
 

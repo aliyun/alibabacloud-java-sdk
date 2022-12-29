@@ -4,6 +4,12 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeActiveOperationTaskTypeRequest extends TeaModel {
+    // Specifies whether to return all O\&M tasks. Valid values:
+    // 
+    // *   **0**: returns only pending tasks.
+    // *   **1**: returns all tasks.
+    // 
+    // Default value: **0**.
     @NameInMap("IsHistory")
     public Integer isHistory;
 
@@ -13,6 +19,7 @@ public class DescribeActiveOperationTaskTypeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The ID of the resource group.
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

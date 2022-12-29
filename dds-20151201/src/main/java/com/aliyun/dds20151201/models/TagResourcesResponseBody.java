@@ -4,6 +4,7 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class TagResourcesResponseBody extends TeaModel {
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -21,15 +22,19 @@ public class TagResourcesResponseBody extends TeaModel {
     }
 
     public static class ListTagResourcesResponseBodyTagResourcesTagResource extends TeaModel {
+        // The ID of the resource. It is the ID of the ApsaraDB for MongoDB instance.
         @NameInMap("ResourceId")
         public String resourceId;
 
+        // The resource type. The return value is fixed to **ALIYUN: KVSTORE: INSTANCE**, indicating an ApsaraDB for MongoDB instance.
         @NameInMap("ResourceType")
         public String resourceType;
 
+        // The key of the tag.
         @NameInMap("TagKey")
         public String tagKey;
 
+        // The value of the tag.
         @NameInMap("TagValue")
         public String tagValue;
 

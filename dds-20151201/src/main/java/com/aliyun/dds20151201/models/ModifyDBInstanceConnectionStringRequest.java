@@ -4,15 +4,25 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
+    // The current connection string, which is to be modified.
     @NameInMap("CurrentConnectionString")
     public String currentConnectionString;
 
+    // The ID of the instance.
+    // 
+    // >  If you set this parameter to the ID of a sharded cluster instance, you must also specify the **NodeId** parameter.
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    // The new connection string. It must be 8 to 64 characters in length and can contain letters and digits. It must start with a lowercase letter.
+    // 
+    // >  You need only to specify the prefix of the connection string. The content other than the prefix cannot be modified.
     @NameInMap("NewConnectionString")
     public String newConnectionString;
 
+    // The ID of the mongos in the specified sharded cluster instance. Only one mongos ID can be specified in each call.
+    // 
+    // >  This parameter is valid only if you set the **DBInstanceId** parameter to the ID of a sharded cluster instance.
     @NameInMap("NodeId")
     public String nodeId;
 

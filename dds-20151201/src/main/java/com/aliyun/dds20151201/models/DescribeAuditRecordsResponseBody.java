@@ -4,18 +4,23 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeAuditRecordsResponseBody extends TeaModel {
+    // An array that consists of the information of audit log entries.
     @NameInMap("Items")
     public DescribeAuditRecordsResponseBodyItems items;
 
+    // The number of the page to return.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The maximum number of entries on the current page.
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The total number of entries.
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
 
@@ -65,30 +70,39 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
     }
 
     public static class DescribeAuditRecordsResponseBodyItemsSQLRecord extends TeaModel {
+        // The account of the database.
         @NameInMap("AccountName")
         public String accountName;
 
+        // The name of the database.
         @NameInMap("DBName")
         public String DBName;
 
+        // The time when the statement was executed. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
         @NameInMap("ExecuteTime")
         public String executeTime;
 
+        // The IP address of the client.
         @NameInMap("HostAddress")
         public String hostAddress;
 
+        // The number of SQL audit log entries that are returned.
         @NameInMap("ReturnRowCounts")
         public Long returnRowCounts;
 
+        // The statement that was executed.
         @NameInMap("Syntax")
         public String syntax;
 
+        // The name of the collection.
         @NameInMap("TableName")
         public String tableName;
 
+        // The ID of the thread that is recorded in the SQL audit log entry.
         @NameInMap("ThreadID")
         public String threadID;
 
+        // The duration of the statement execution. Unit: microseconds.
         @NameInMap("TotalExecutionTimes")
         public Long totalExecutionTimes;
 

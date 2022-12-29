@@ -4,12 +4,15 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeRenewalPriceRequest extends TeaModel {
+    // The business information. This is an additional parameter.
     @NameInMap("BusinessInfo")
     public String businessInfo;
 
+    // The coupon code. Default value: **youhuiquan_promotion_option_id_for_blank**.
     @NameInMap("CouponNo")
     public String couponNo;
 
+    // The ID of the instance.
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 

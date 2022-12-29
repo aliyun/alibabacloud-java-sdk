@@ -4,18 +4,23 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupsResponseBody extends TeaModel {
+    // Details about backup sets.
     @NameInMap("Backups")
     public DescribeBackupsResponseBodyBackups backups;
 
+    // The number of the page to return.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries to return on each page.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The total number of backup sets that were returned.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,36 +70,62 @@ public class DescribeBackupsResponseBody extends TeaModel {
     }
 
     public static class DescribeBackupsResponseBodyBackupsBackup extends TeaModel {
+        // The name of the database that has been backed up.
         @NameInMap("BackupDBNames")
         public String backupDBNames;
 
+        // The Internet download URL of the backup set. If the download URL is unavailable, this parameter is an empty string.
         @NameInMap("BackupDownloadURL")
         public String backupDownloadURL;
 
+        // The end of the backup time range. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format and displayed in UTC.
         @NameInMap("BackupEndTime")
         public String backupEndTime;
 
+        // The ID of the backup set.
         @NameInMap("BackupId")
         public Integer backupId;
 
+        // The internal download URL of the backup set.
+        // 
+        // >  You can use this URL to download the backup set from on the ECS instance which is on the same network as the ApsaraDB for MongoDB instance.
         @NameInMap("BackupIntranetDownloadURL")
         public String backupIntranetDownloadURL;
 
+        // The backup method. Valid values:
+        // 
+        // *   **Snapshot**
+        // *   **Physical**
+        // *   **Logical**
         @NameInMap("BackupMethod")
         public String backupMethod;
 
+        // The backup mode.
+        // 
+        // *   **Automated**: automatic backup
+        // *   **Manual**: manual backup
         @NameInMap("BackupMode")
         public String backupMode;
 
+        // The size of the backup set. Unit: bytes.
         @NameInMap("BackupSize")
         public Long backupSize;
 
+        // The beginning of the backup time range. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format and displayed in UTC.
         @NameInMap("BackupStartTime")
         public String backupStartTime;
 
+        // The status of the backup. Valid values:
+        // 
+        // *   **Success**: The backup task is successful.
+        // *   **Failed**: The backup task failed.
         @NameInMap("BackupStatus")
         public String backupStatus;
 
+        // The backup method.
+        // 
+        // *   **FullBackup**: a full backup
+        // *   **IncrementalBackup**: an incremental backup
         @NameInMap("BackupType")
         public String backupType;
 

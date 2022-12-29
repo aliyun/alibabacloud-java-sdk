@@ -4,15 +4,19 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
+    // The end of the time range to query. The time is in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.
     @NameInMap("EndTime")
     public String endTime;
 
+    // Details about the performance metrics.
     @NameInMap("PerformanceKeys")
     public DescribeDBInstancePerformanceResponseBodyPerformanceKeys performanceKeys;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The beginning of the time range to query. The time is in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.
     @NameInMap("StartTime")
     public String startTime;
 
@@ -54,9 +58,11 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKeyPerformanceValuesPerformanceValue extends TeaModel {
+        // The date and time when the metric value was generated.
         @NameInMap("Date")
         public String date;
 
+        // The value of the performance metric.
         @NameInMap("Value")
         public String value;
 
@@ -103,15 +109,21 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKey extends TeaModel {
+        // The performance metric.
         @NameInMap("Key")
         public String key;
 
+        // Details about the performance metric values.
         @NameInMap("PerformanceValues")
         public DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKeyPerformanceValues performanceValues;
 
+        // The unit of the performance metric.
         @NameInMap("Unit")
         public String unit;
 
+        // The format of the performance metric value. If the performance metric contains multiple fields, the fields are separated with **\&amp;** symbols.
+        // 
+        // For example, if you query disk usage, the returned **ValueFormat** value is in the **ins_size\&amp;data_size\&amp;log_size** format.
         @NameInMap("ValueFormat")
         public String valueFormat;
 

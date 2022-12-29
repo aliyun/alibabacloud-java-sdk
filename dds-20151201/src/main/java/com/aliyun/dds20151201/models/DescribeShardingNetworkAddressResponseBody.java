@@ -4,12 +4,15 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
+    // An array that consists of the endpoints of DynamoDB instances.
     @NameInMap("CompatibleConnections")
     public DescribeShardingNetworkAddressResponseBodyCompatibleConnections compatibleConnections;
 
+    // An array that consists of the endpoints of ApsaraDB for MongoDB instances.
     @NameInMap("NetworkAddresses")
     public DescribeShardingNetworkAddressResponseBodyNetworkAddresses networkAddresses;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,24 +46,39 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
     }
 
     public static class DescribeShardingNetworkAddressResponseBodyCompatibleConnectionsCompatibleConnection extends TeaModel {
+        // The remaining duration of the classic network address. Unit: seconds.
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
+        // The IP address of the instance.
         @NameInMap("IPAddress")
         public String IPAddress;
 
+        // The endpoint of the instance.
         @NameInMap("NetworkAddress")
         public String networkAddress;
 
+        // The network type. Valid values:
+        // 
+        // *   **VPC**
+        // *   **Classic**
+        // *   **Public**: pubic endpoint
         @NameInMap("NetworkType")
         public String networkType;
 
+        // The port number.
         @NameInMap("Port")
         public String port;
 
+        // The ID of the VPC.
+        // 
+        // >  This parameter is returned when the network type is **VPC**.
         @NameInMap("VPCId")
         public String VPCId;
 
+        // The vSwitch ID of the VPC.
+        // 
+        // >  This parameter is returned when the network type is **VPC**.
         @NameInMap("VswitchId")
         public String vswitchId;
 
@@ -147,33 +165,58 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
     }
 
     public static class DescribeShardingNetworkAddressResponseBodyNetworkAddressesNetworkAddress extends TeaModel {
+        // The remaining duration of the classic network address. Unit: seconds.
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
+        // The IP address of the instance.
         @NameInMap("IPAddress")
         public String IPAddress;
 
+        // The endpoint of the instance.
         @NameInMap("NetworkAddress")
         public String networkAddress;
 
+        // The network type. Valid values:
+        // 
+        // - **VPC**
+        // - **Classic**
+        // - **Public**: pubic endpoint
         @NameInMap("NetworkType")
         public String networkType;
 
+        // The ID of the mongos.
         @NameInMap("NodeId")
         public String nodeId;
 
+        // The type of the node. Valid values:
+        // 
+        // - **mongos**
+        // - **shard**
+        // - **configserver**
         @NameInMap("NodeType")
         public String nodeType;
 
+        // The port number.
         @NameInMap("Port")
         public String port;
 
+        // The role of the node. Valid values:
+        // 
+        // - Primary
+        // - Secondary
         @NameInMap("Role")
         public String role;
 
+        // The ID of the VPC.
+        // 
+        // >  This parameter is returned when the network type is **VPC**.
         @NameInMap("VPCId")
         public String VPCId;
 
+        // The vSwitch ID of the VPC.
+        // 
+        // >  This parameter is returned when the network type is **VPC**.
         @NameInMap("VswitchId")
         public String vswitchId;
 

@@ -4,24 +4,50 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstancesOverviewRequest extends TeaModel {
+    // The billing method of the instance. Valid values:
+    // 
+    // *   **PrePaid**: subscription
+    // *   **PostPaid**: pay-as-you-go
     @NameInMap("ChargeType")
     public String chargeType;
 
+    // The database engine version of the instance. Valid values: **5.0**, **4.4**, **4.2**, **4.0**, and **3.4**.
     @NameInMap("EngineVersion")
     public String engineVersion;
 
+    // The instance type of the instance. The instance type varies based on the instance architecture. For more information about instance types supported by different instance architectures, see the following topics:
+    // 
+    // *   [Standalone instance types](~~311407~~)
+    // *   [Replica set instance types](~~311410~~)
+    // *   [Sharded cluster instance types](~~311414~~)
     @NameInMap("InstanceClass")
     public String instanceClass;
 
+    // The ID of the instance for which you want to query the overview information.
+    // 
+    // > * If you do not specify this parameter, the overview information of all instances under this account is queried.
+    // > * Separate the instance IDs with commas (,).
     @NameInMap("InstanceIds")
     public String instanceIds;
 
+    // The state of the instance. For more information about valid values, see [Instance states](~~63870~~).
     @NameInMap("InstanceStatus")
     public String instanceStatus;
 
+    // The category of the instance. Valid values:
+    // 
+    // - **sharding**: sharded cluster instance
+    // - **replicate**: replica set or standalone instance
+    // 
+    // > * To query the overview information of a sharded cluster instance, you must set the parameter to **sharding**.
+    // > * If you do not specify this parameter, the overview information of all instances under this account is queried.
     @NameInMap("InstanceType")
     public String instanceType;
 
+    // The network type of the instance. Valid values:
+    // 
+    // *   **Classic**
+    // *   **VPC**
     @NameInMap("NetworkType")
     public String networkType;
 
@@ -31,9 +57,11 @@ public class DescribeDBInstancesOverviewRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The ID of the resource group. For more information, see [View basic information of a resource group](~~151181~~).
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -46,12 +74,15 @@ public class DescribeDBInstancesOverviewRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    // The ID of the vSwitch.
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
+    // The ID of the virtual private cloud (VPC).
     @NameInMap("VpcId")
     public String vpcId;
 
+    // The ID of the zone.
     @NameInMap("ZoneId")
     public String zoneId;
 

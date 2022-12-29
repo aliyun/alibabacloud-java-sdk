@@ -4,21 +4,27 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeRunningLogRecordsResponseBody extends TeaModel {
+    // The database engine.
     @NameInMap("Engine")
     public String engine;
 
+    // Details about the operational log entries.
     @NameInMap("Items")
     public DescribeRunningLogRecordsResponseBodyItems items;
 
+    // The number of the page to return.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries returned per page.
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The total number of entries.
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
 
@@ -76,20 +82,21 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
     }
 
     public static class DescribeRunningLogRecordsResponseBodyItemsLogRecords extends TeaModel {
+        // The category of the log entry. Valid values:
         @NameInMap("Category")
         public String category;
 
+        // The connection information of the log entry.
         @NameInMap("ConnInfo")
         public String connInfo;
 
+        // The content of the log entry.
         @NameInMap("Content")
         public String content;
 
+        // The time when the log entry was generated. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
         @NameInMap("CreateTime")
         public String createTime;
-
-        @NameInMap("Id")
-        public Integer id;
 
         public static DescribeRunningLogRecordsResponseBodyItemsLogRecords build(java.util.Map<String, ?> map) throws Exception {
             DescribeRunningLogRecordsResponseBodyItemsLogRecords self = new DescribeRunningLogRecordsResponseBodyItemsLogRecords();
@@ -126,14 +133,6 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
-        }
-
-        public DescribeRunningLogRecordsResponseBodyItemsLogRecords setId(Integer id) {
-            this.id = id;
-            return this;
-        }
-        public Integer getId() {
-            return this.id;
         }
 
     }

@@ -4,9 +4,19 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class ModifyAuditLogFilterRequest extends TeaModel {
+    // The ID of the instance.
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    // The type of the audit log entries to be collected. Valid values:
+    // 
+    // *   **admin**: O\&M and management operations
+    // *   **slow**: slow query logs
+    // *   **query**: query operations
+    // *   **insert**: insert operations
+    // *   **update**: update operations
+    // *   **delete**: delete operations
+    // *   **command**: protocol commands such as the aggregate method
     @NameInMap("Filter")
     public String filter;
 
@@ -22,6 +32,10 @@ public class ModifyAuditLogFilterRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    // The role of the node in the instance. Valid values:
+    // 
+    // *   **primary**
+    // *   **secondary**
     @NameInMap("RoleType")
     public String roleType;
 

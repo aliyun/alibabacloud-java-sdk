@@ -4,12 +4,15 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeReplicaSetRoleResponseBody extends TeaModel {
+    // The ID of the instance.
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    // Details about the replica set roles.
     @NameInMap("ReplicaSets")
     public DescribeReplicaSetRoleResponseBodyReplicaSets replicaSets;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,21 +46,34 @@ public class DescribeReplicaSetRoleResponseBody extends TeaModel {
     }
 
     public static class DescribeReplicaSetRoleResponseBodyReplicaSetsReplicaSet extends TeaModel {
+        // The endpoint of the node.
         @NameInMap("ConnectionDomain")
         public String connectionDomain;
 
+        // The port of the node.
         @NameInMap("ConnectionPort")
         public String connectionPort;
 
+        // The remaining duration of the classic network endpoint. Unit: seconds.
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
+        // The network type. Valid values:
+        // 
+        // *   **VPC**
+        // *   **Classic**
+        // *   **Public**
         @NameInMap("NetworkType")
         public String networkType;
 
+        // The role of the node in the replica set.
+        // 
+        // *   **Primary**
+        // *   **Secondary**
         @NameInMap("ReplicaSetRole")
         public String replicaSetRole;
 
+        // The role ID of the node.
         @NameInMap("RoleId")
         public String roleId;
 

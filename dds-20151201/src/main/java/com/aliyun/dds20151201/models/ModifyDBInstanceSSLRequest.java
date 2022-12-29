@@ -4,6 +4,7 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBInstanceSSLRequest extends TeaModel {
+    // The ID of the instance.
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
@@ -19,6 +20,11 @@ public class ModifyDBInstanceSSLRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    // The operation on the SSL feature. Valid values: Valid values:
+    // 
+    // *   **Open**: enables SSL encryption.
+    // *   **Close**: disables SSL encryption.
+    // *   **Update**: updates the SSL certificate.
     @NameInMap("SSLAction")
     public String SSLAction;
 

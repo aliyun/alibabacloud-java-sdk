@@ -4,9 +4,16 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class CreateBackupRequest extends TeaModel {
+    // The backup method of the instance. Default value: Physical. Valid values:
+    // 
+    // *   **Logical**
+    // *   **Physical**
+    // 
+    // >  Only replica set instances and sharded cluster instances support this parameter. You do not need to specify this parameter for standalone instances. All standalone instances use snapshot backup.
     @NameInMap("BackupMethod")
     public String backupMethod;
 
+    // The ID of the instance.
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 

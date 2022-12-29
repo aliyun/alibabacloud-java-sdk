@@ -4,39 +4,81 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstancesRequest extends TeaModel {
+    // The billing method of the instance. Valid values:
+    // 
+    // *   **PrePaid**: subscription
+    // *   **PostPaid**: pay-as-you-go
     @NameInMap("ChargeType")
     public String chargeType;
 
+    // The endpoint of the node. You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to query the endpoint of the node.
     @NameInMap("ConnectionDomain")
     public String connectionDomain;
 
+    // The instance type. For more information about valid values, see [Instance types](~~57141~~).
     @NameInMap("DBInstanceClass")
     public String DBInstanceClass;
 
+    // The name of the instance. Valid values:
+    // 
+    // *   The name must start with a letter.
+    // *   The name can contain digits, letters, underscores (\_), and hyphens (-).
+    // *   The name must be 2 to 256 characters in length.
     @NameInMap("DBInstanceDescription")
     public String DBInstanceDescription;
 
+    // The ID of the instance.
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    // The state of the instance. For more information about valid values, see [Instance states](~~63870~~).
     @NameInMap("DBInstanceStatus")
     public String DBInstanceStatus;
 
+    // The architecture of the instance. Default value: replicate. Valid values:
+    // 
+    // *   **sharding**: sharded cluster instance
+    // *   **replicate**: replica set or standalone instance
     @NameInMap("DBInstanceType")
     public String DBInstanceType;
 
+    // Used to filter standard instances or test instances
+    // 
+    // 1. Single node instance and dbfs instance: customized
+    // 2. Standard instance (replicaset and shard cluster): standard
+    // 3. Default (showing all instances): default
+    @NameInMap("DBNodeType")
+    public String DBNodeType;
+
+    // The database engine of the instance. Set the value to **MongoDB**.
     @NameInMap("Engine")
     public String engine;
 
+    // The database engine version of the instance. Valid values:
+    // 
+    // * **5.0**
+    // * **4.4**
+    // * **4.2**
+    // * **4.0**
+    // * **3.4**
     @NameInMap("EngineVersion")
     public String engineVersion;
 
+    // The time when the instance expires.
     @NameInMap("ExpireTime")
     public String expireTime;
 
+    // Specifies whether the instance has expired. Valid values:
+    // 
+    // *   **true**: The instance has expired.
+    // *   **false**: The instance has not expired.
     @NameInMap("Expired")
     public String expired;
 
+    // The network type of the instance. Valid values:
+    // 
+    // *   **Classic**: classic network
+    // *   **VPC**: Virtual Private Cloud (VPC)
     @NameInMap("NetworkType")
     public String networkType;
 
@@ -46,18 +88,31 @@ public class DescribeDBInstancesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The number of the page to return. The value of this parameter must be an integer that is greater than 0. Default value: **1**.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries to return on each page. Default value: 30. Valid values:
+    // 
+    // *   **30**
+    // *   **50**
+    // *   **100**
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The number of nodes in the replica set instance. Valid values:
+    // 
+    // *   **3**
+    // *   **5**
+    // *   **7**
     @NameInMap("ReplicationFactor")
     public String replicationFactor;
 
+    // The ID of the resource group.
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -70,15 +125,19 @@ public class DescribeDBInstancesRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    // The tags of instances.
     @NameInMap("Tag")
     public java.util.List<DescribeDBInstancesRequestTag> tag;
 
+    // The ID of the vSwitch.
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
+    // The ID of the VPC.
     @NameInMap("VpcId")
     public String vpcId;
 
+    // The zone ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent zone list.
     @NameInMap("ZoneId")
     public String zoneId;
 
@@ -141,6 +200,14 @@ public class DescribeDBInstancesRequest extends TeaModel {
     }
     public String getDBInstanceType() {
         return this.DBInstanceType;
+    }
+
+    public DescribeDBInstancesRequest setDBNodeType(String DBNodeType) {
+        this.DBNodeType = DBNodeType;
+        return this;
+    }
+    public String getDBNodeType() {
+        return this.DBNodeType;
     }
 
     public DescribeDBInstancesRequest setEngine(String engine) {
@@ -296,9 +363,19 @@ public class DescribeDBInstancesRequest extends TeaModel {
     }
 
     public static class DescribeDBInstancesRequestTag extends TeaModel {
+        // The key of tag N of the instance. Valid values of N: **1** to **20**.
+        // 
+        // *   The key cannot start with `aliyun`, `acs:`, `http://`, or `https://`.
+        // *   The key can be up to 64 characters in length.
+        // *   The key cannot be an empty string.
         @NameInMap("Key")
         public String key;
 
+        // The value of tag N of the instance. Valid values of N: **1** to **20**.
+        // 
+        // *   The value cannot start with `aliyun`, `acs:`, `http://`, or `https://`.
+        // *   The value can be up to 128 characters in length.
+        // *   The value can be an empty string.
         @NameInMap("Value")
         public String value;
 

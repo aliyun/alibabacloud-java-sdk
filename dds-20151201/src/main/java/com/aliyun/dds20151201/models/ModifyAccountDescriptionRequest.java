@@ -4,12 +4,19 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class ModifyAccountDescriptionRequest extends TeaModel {
+    // The description of the account.
+    // 
+    // *   It cannot start with http:// or https://.
+    // *   It must start with a letter.
+    // *   It must be 2 to 256 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-).
     @NameInMap("AccountDescription")
     public String accountDescription;
 
+    // The name of the account for which you want to modify the description.
     @NameInMap("AccountName")
     public String accountName;
 
+    // The ID of the instance.
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 

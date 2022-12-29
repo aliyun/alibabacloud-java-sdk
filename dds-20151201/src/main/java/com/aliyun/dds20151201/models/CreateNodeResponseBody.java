@@ -4,12 +4,15 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class CreateNodeResponseBody extends TeaModel {
+    // The ID of the node.
     @NameInMap("NodeId")
     public String nodeId;
 
+    // The ID of the order.
     @NameInMap("OrderId")
     public String orderId;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

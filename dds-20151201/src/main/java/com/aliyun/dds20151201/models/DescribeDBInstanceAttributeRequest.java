@@ -4,9 +4,11 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstanceAttributeRequest extends TeaModel {
+    // The ID of the instance.
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    // The database engine of the instance. The value is set to **MongoDB**.
     @NameInMap("Engine")
     public String engine;
 
@@ -16,6 +18,9 @@ public class DescribeDBInstanceAttributeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The ID of the resource group. For more information, see [View basic information of a resource group](~~151181~~).
+    // 
+    // >  This parameter is available only if you use the China site (aliyun.com).
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

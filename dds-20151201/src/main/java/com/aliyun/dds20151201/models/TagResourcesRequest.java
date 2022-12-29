@@ -10,12 +10,15 @@ public class TagResourcesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The region ID of the instance. You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to query the region ID of the instance.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The ID of the resource group.
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    // The resource IDs.
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
@@ -25,9 +28,11 @@ public class TagResourcesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    // The resource type. Set the value to **INSTANCE**.
     @NameInMap("ResourceType")
     public String resourceType;
 
+    // The list of tags that you want to associate with the resources. You can specify up to 20 tags.
     @NameInMap("Tag")
     public java.util.List<TagResourcesRequestTag> tag;
 
@@ -109,9 +114,11 @@ public class TagResourcesRequest extends TeaModel {
     }
 
     public static class ListTagResourcesRequestTag extends TeaModel {
+        // The key of tag.
         @NameInMap("Key")
         public String key;
 
+        // The value of tag.
         @NameInMap("Value")
         public String value;
 
@@ -139,9 +146,19 @@ public class TagResourcesRequest extends TeaModel {
     }
 
     public static class TagResourcesRequestTag extends TeaModel {
+        // The key of tag.
+        // 
+        // * The key cannot start with `aliyun`, `acs:`, `http://`, or `https://`.
+        // * It can be up to 64 characters in length.
+        // * The key cannot be an empty string.
         @NameInMap("Key")
         public String key;
 
+        // The value of tag.
+        // 
+        // - The value cannot start with `aliyun`, `acs:`, `http://`, or `https://`.
+        // - It can be up to 128 characters in length.
+        // - The value can be an empty string.
         @NameInMap("Value")
         public String value;
 

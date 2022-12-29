@@ -4,6 +4,7 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserEncryptionKeyListRequest extends TeaModel {
+    // The ID of the instance.
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
@@ -22,6 +23,7 @@ public class DescribeUserEncryptionKeyListRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    // The zone ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent zone list.
     @NameInMap("TargetRegionId")
     public String targetRegionId;
 

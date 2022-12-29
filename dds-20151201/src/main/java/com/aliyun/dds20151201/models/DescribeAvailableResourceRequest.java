@@ -4,9 +4,17 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeAvailableResourceRequest extends TeaModel {
+    // The architecture of the instance. Valid values:
+    // 
+    // *   **normal**: replica set instance
+    // *   **sharding**: sharded cluster instance
     @NameInMap("DbType")
     public String dbType;
 
+    // The billing method of the instance. Default value: PrePaid. Valid values:
+    // 
+    // *   **PrePaid**: subscription
+    // *   **PostPaid**: pay-as-you-go
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
 
@@ -16,9 +24,11 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The ID of the resource group.
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -31,6 +41,7 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    // The zone ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent zone list.
     @NameInMap("ZoneId")
     public String zoneId;
 

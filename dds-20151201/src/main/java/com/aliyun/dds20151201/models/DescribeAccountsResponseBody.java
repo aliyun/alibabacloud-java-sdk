@@ -4,9 +4,11 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccountsResponseBody extends TeaModel {
+    // Details about the accounts.
     @NameInMap("Accounts")
     public DescribeAccountsResponseBodyAccounts accounts;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +34,32 @@ public class DescribeAccountsResponseBody extends TeaModel {
     }
 
     public static class DescribeAccountsResponseBodyAccountsAccount extends TeaModel {
+        // The description of the account.
         @NameInMap("AccountDescription")
         public String accountDescription;
 
+        // The name of the account.
         @NameInMap("AccountName")
         public String accountName;
 
+        // The status of the account.
+        // 
+        // *   Unavailable
+        // *   Available
         @NameInMap("AccountStatus")
         public String accountStatus;
 
+        // The role of the account. Valid values:
+        // 
+        // *   db: shard
+        // *   cs: Configserver
+        // *   mongos: mongos
+        // *   logic: sharded cluster instance
+        // *   normal: replica set instance
         @NameInMap("CharacterType")
         public String characterType;
 
+        // The name of the instance to which the account belongs.
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 

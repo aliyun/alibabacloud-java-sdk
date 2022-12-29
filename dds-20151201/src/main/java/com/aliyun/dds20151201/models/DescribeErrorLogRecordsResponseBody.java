@@ -4,21 +4,27 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeErrorLogRecordsResponseBody extends TeaModel {
+    // The database engine.
     @NameInMap("Engine")
     public String engine;
 
+    // Details about the log entries returned.
     @NameInMap("Items")
     public DescribeErrorLogRecordsResponseBodyItems items;
 
+    // The page number of the returned page.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries returned per page.
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The total number of entries.
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
 
@@ -76,18 +82,33 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
     }
 
     public static class DescribeErrorLogRecordsResponseBodyItemsLogRecords extends TeaModel {
+        // The category of the log entry. Valid values:
+        // 
+        // *   NETWORK: network connection log
+        // *   ACCESS: access control log
+        // *   \-: general log
+        // *   COMMAND: slow query log
+        // *   SHARDING: sharded cluster log
+        // *   STORAGE: storage engine log
+        // *   CONNPOOL: connection pool log
+        // *   ASIO: asynchronous I/O operation log
+        // *   WRITE: slow update log
         @NameInMap("Category")
         public String category;
 
+        // The connection information of the log entry.
         @NameInMap("ConnInfo")
         public String connInfo;
 
+        // The content of the log entry.
         @NameInMap("Content")
         public String content;
 
+        // The time when the log entry was generated. The time is in the *yyyy-MM-dd*T*HH:mm:ss***Z format. The time is displayed in UTC.
         @NameInMap("CreateTime")
         public String createTime;
 
+        // The ID of the log entry.
         @NameInMap("Id")
         public Integer id;
 

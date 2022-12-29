@@ -4,18 +4,23 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupDBsResponseBody extends TeaModel {
+    // Details about the databases.
     @NameInMap("Databases")
     public DescribeBackupDBsResponseBodyDatabases databases;
 
+    // The page number of the returned page.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries returned per page.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The number of returned databases.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,6 +70,7 @@ public class DescribeBackupDBsResponseBody extends TeaModel {
     }
 
     public static class DescribeBackupDBsResponseBodyDatabasesDatabase extends TeaModel {
+        // The name of the database.
         @NameInMap("DBName")
         public String DBName;
 
