@@ -1,3 +1,7 @@
+2022-12-29 Version: 1.0.16
+- Add welcome text api.
+- Add screen setting api.
+
 2022-11-04 Version: 1.0.12
 - Add api.
 - Tianao open api.

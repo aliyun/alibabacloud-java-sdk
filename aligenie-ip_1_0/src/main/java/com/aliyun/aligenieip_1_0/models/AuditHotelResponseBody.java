@@ -10,6 +10,7 @@ public class AuditHotelResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    // RequestId
     @NameInMap("RequestId")
     public String requestId;
 

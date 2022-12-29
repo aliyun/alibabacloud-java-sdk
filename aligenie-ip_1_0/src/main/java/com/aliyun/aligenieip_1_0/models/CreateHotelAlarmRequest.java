@@ -161,6 +161,7 @@ public class CreateHotelAlarmRequest extends TeaModel {
         @NameInMap("Once")
         public CreateHotelAlarmRequestScheduleInfoOnce once;
 
+        // ONCE, WEEKLY
         @NameInMap("Type")
         public String type;
 
