@@ -65,8 +65,17 @@ public class GetTrendStatisticResponseBody extends TeaModel {
     }
 
     public static class GetTrendStatisticResponseBodyData extends TeaModel {
+        @NameInMap("BrandCount")
+        public Long brandCount;
+
         @NameInMap("CommodityCount")
         public Long commodityCount;
+
+        @NameInMap("ExposureValue")
+        public Long exposureValue;
+
+        @NameInMap("Hits")
+        public Long hits;
 
         @NameInMap("Sales")
         public Double sales;
@@ -79,12 +88,36 @@ public class GetTrendStatisticResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public GetTrendStatisticResponseBodyData setBrandCount(Long brandCount) {
+            this.brandCount = brandCount;
+            return this;
+        }
+        public Long getBrandCount() {
+            return this.brandCount;
+        }
+
         public GetTrendStatisticResponseBodyData setCommodityCount(Long commodityCount) {
             this.commodityCount = commodityCount;
             return this;
         }
         public Long getCommodityCount() {
             return this.commodityCount;
+        }
+
+        public GetTrendStatisticResponseBodyData setExposureValue(Long exposureValue) {
+            this.exposureValue = exposureValue;
+            return this;
+        }
+        public Long getExposureValue() {
+            return this.exposureValue;
+        }
+
+        public GetTrendStatisticResponseBodyData setHits(Long hits) {
+            this.hits = hits;
+            return this;
+        }
+        public Long getHits() {
+            return this.hits;
         }
 
         public GetTrendStatisticResponseBodyData setSales(Double sales) {

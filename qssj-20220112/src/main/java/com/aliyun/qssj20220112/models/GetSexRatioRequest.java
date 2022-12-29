@@ -7,6 +7,12 @@ public class GetSexRatioRequest extends TeaModel {
     @NameInMap("CateIds")
     public String cateIds;
 
+    @NameInMap("EndingDate")
+    public String endingDate;
+
+    @NameInMap("StartDate")
+    public String startDate;
+
     public static GetSexRatioRequest build(java.util.Map<String, ?> map) throws Exception {
         GetSexRatioRequest self = new GetSexRatioRequest();
         return TeaModel.build(map, self);
@@ -18,6 +24,22 @@ public class GetSexRatioRequest extends TeaModel {
     }
     public String getCateIds() {
         return this.cateIds;
+    }
+
+    public GetSexRatioRequest setEndingDate(String endingDate) {
+        this.endingDate = endingDate;
+        return this;
+    }
+    public String getEndingDate() {
+        return this.endingDate;
+    }
+
+    public GetSexRatioRequest setStartDate(String startDate) {
+        this.startDate = startDate;
+        return this;
+    }
+    public String getStartDate() {
+        return this.startDate;
     }
 
 }

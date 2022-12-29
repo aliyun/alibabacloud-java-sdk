@@ -65,12 +65,59 @@ public class GetStoreSalesVolumeTopResponseBody extends TeaModel {
     }
 
     public static class GetStoreSalesVolumeTopResponseBodyData extends TeaModel {
+        @NameInMap("CommodityQuantity")
+        public Long commodityQuantity;
+
+        @NameInMap("SalesVolume")
+        public Long salesVolume;
+
+        @NameInMap("SearchVolume")
+        public Long searchVolume;
+
+        @NameInMap("ShopId")
+        public Long shopId;
+
         @NameInMap("ShopName")
         public String shopName;
+
+        @NameInMap("TotalSales")
+        public Double totalSales;
 
         public static GetStoreSalesVolumeTopResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetStoreSalesVolumeTopResponseBodyData self = new GetStoreSalesVolumeTopResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetStoreSalesVolumeTopResponseBodyData setCommodityQuantity(Long commodityQuantity) {
+            this.commodityQuantity = commodityQuantity;
+            return this;
+        }
+        public Long getCommodityQuantity() {
+            return this.commodityQuantity;
+        }
+
+        public GetStoreSalesVolumeTopResponseBodyData setSalesVolume(Long salesVolume) {
+            this.salesVolume = salesVolume;
+            return this;
+        }
+        public Long getSalesVolume() {
+            return this.salesVolume;
+        }
+
+        public GetStoreSalesVolumeTopResponseBodyData setSearchVolume(Long searchVolume) {
+            this.searchVolume = searchVolume;
+            return this;
+        }
+        public Long getSearchVolume() {
+            return this.searchVolume;
+        }
+
+        public GetStoreSalesVolumeTopResponseBodyData setShopId(Long shopId) {
+            this.shopId = shopId;
+            return this;
+        }
+        public Long getShopId() {
+            return this.shopId;
         }
 
         public GetStoreSalesVolumeTopResponseBodyData setShopName(String shopName) {
@@ -79,6 +126,14 @@ public class GetStoreSalesVolumeTopResponseBody extends TeaModel {
         }
         public String getShopName() {
             return this.shopName;
+        }
+
+        public GetStoreSalesVolumeTopResponseBodyData setTotalSales(Double totalSales) {
+            this.totalSales = totalSales;
+            return this;
+        }
+        public Double getTotalSales() {
+            return this.totalSales;
         }
 
     }
