@@ -4,9 +4,18 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class MigrateAvailableZoneRequest extends TeaModel {
+    // The ID of the instance.
+    // 
+    // >  If the instance is deployed in a VPC, you must specify the **Vswitch** parameter.
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    // The time when the instance is migrated to the destination zone. Valid values:
+    // 
+    // *   **Immediately**: The instance is immediately migrated to the destination zone.
+    // *   **MaintainTime**: The instance is migrated to the destination zone during the maintenance window of the instance.
+    // 
+    // Default value: **Immediately**.
     @NameInMap("EffectiveTime")
     public String effectiveTime;
 
@@ -22,9 +31,16 @@ public class MigrateAvailableZoneRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    // The ID of the vSwitch in the destination zone.
+    // 
+    // >  If the instance is deployed in a VPC, you must specify this parameter.
     @NameInMap("Vswitch")
     public String vswitch;
 
+    // The ID of the destination zone.
+    // 
+    // > * The source zone and the destination zone belong to the same region.
+    // > * You can call the [DescribeRegions](~~61933~~) operation to query the most recent zone list.
     @NameInMap("ZoneId")
     public String zoneId;
 

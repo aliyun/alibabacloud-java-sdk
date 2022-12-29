@@ -4,36 +4,66 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class ModifyNodeSpecRequest extends TeaModel {
+    // Specifies whether to enable automatic payment. Default value: true. Valid values:
+    // 
+    // *   **true**: enables automatic payment. Make sure that you have sufficient balance within your account.
+    // *   **false**: disables automatic payment. In this case, you must manually pay for the instance.
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
+    // The business information. This is an additional parameter.
     @NameInMap("BusinessInfo")
     public String businessInfo;
 
+    // The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.
     @NameInMap("ClientToken")
     public String clientToken;
 
+    // The coupon code. Default value: `youhuiquan_promotion_option_id_for_blank`.
     @NameInMap("CouponNo")
     public String couponNo;
 
+    // The ID of the instance.
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    // The time when the changed configurations take effect. Default value: Immediately. Valid values:
+    // 
+    // *   **Immediately**: The new configurations immediately take effect
+    // *   **MaintainTime**: The new configurations take effect during the maintenance window of the instance.
     @NameInMap("EffectiveTime")
     public String effectiveTime;
 
+    // The source of the request. Valid values:
+    // 
+    // *   **OpenApi**: the ApsaraDB for MongoDB API
+    // *   **mongo_buy**: the ApsaraDB for MongoDB console
     @NameInMap("FromApp")
     public String fromApp;
 
+    // The instance type of the shard or mongos node. For more information, see [Instance types](~~57141~~).
     @NameInMap("NodeClass")
     public String nodeClass;
 
+    // The ID of the shard or mongos node in the sharded cluster instance. You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to query the node ID.
+    // 
+    // >  If you set this parameter to the ID of a shard node, you must also specify the **NodeStorage** parameter.
     @NameInMap("NodeId")
     public String nodeId;
 
+    // The storage capacity of the shard node. Unit: GB.
+    // 
+    // *   Valid values are **10** to **2000** if the instance uses local SSDs.
+    // *   Valid values are **20** to **16000** if the instance uses enhanced SSDs (ESSDs) at PL1.
+    // 
+    // >  The value must be a multiple of 10.
     @NameInMap("NodeStorage")
     public Integer nodeStorage;
 
+    // The order type. Valid values:
+    // 
+    // *   **UPGRADE**
+    // *   **DOWNGRADE**
     @NameInMap("OrderType")
     public String orderType;
 
@@ -43,6 +73,9 @@ public class ModifyNodeSpecRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The number of read-only nodes in the shard node.
+    // 
+    // Valid values: **0** to **5**. The value must be an integer. Default value: **0**.
     @NameInMap("ReadonlyReplicas")
     public Integer readonlyReplicas;
 
@@ -55,6 +88,7 @@ public class ModifyNodeSpecRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    // The execution time. Specify the time in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
     @NameInMap("SwitchTime")
     public String switchTime;
 

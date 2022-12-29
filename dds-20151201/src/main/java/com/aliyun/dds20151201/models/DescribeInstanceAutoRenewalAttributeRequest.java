@@ -4,9 +4,16 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceAutoRenewalAttributeRequest extends TeaModel {
+    // The ID of the instance.
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    // The category of the instance. Valid values:
+    // 
+    // *   **replicate**: the standalone or replica set instance
+    // *   **sharding**: the sharded cluster instance
+    // 
+    // Default value: **replicate**.
     @NameInMap("DBInstanceType")
     public String DBInstanceType;
 
@@ -16,12 +23,17 @@ public class DescribeInstanceAutoRenewalAttributeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The number of the page to return. The value must be a positive integer that does not exceed the maximum value of the Integer parameter. Default value: **1**.
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    // The number of entries to return on each page. Valid values: **30**, **50**, and **100**.
+    // 
+    // >  Default value: **30**.
     @NameInMap("PageSize")
     public Long pageSize;
 
+    // The region ID of the instance. You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to query the region ID of the instance.
     @NameInMap("RegionId")
     public String regionId;
 

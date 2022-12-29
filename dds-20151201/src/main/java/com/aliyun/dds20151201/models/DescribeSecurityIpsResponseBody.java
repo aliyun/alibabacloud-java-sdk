@@ -4,12 +4,15 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeSecurityIpsResponseBody extends TeaModel {
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // An array that consists of the information of IP whitelists.
     @NameInMap("SecurityIpGroups")
     public DescribeSecurityIpsResponseBodySecurityIpGroups securityIpGroups;
 
+    // The IP addresses in the default whitelist.
     @NameInMap("SecurityIps")
     public String securityIps;
 
@@ -43,12 +46,15 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
     }
 
     public static class DescribeSecurityIpsResponseBodySecurityIpGroupsSecurityIpGroup extends TeaModel {
+        // The attribute of the IP whitelist. This parameter is empty by default.
         @NameInMap("SecurityIpGroupAttribute")
         public String securityIpGroupAttribute;
 
+        // The name of the IP whitelist.
         @NameInMap("SecurityIpGroupName")
         public String securityIpGroupName;
 
+        // The IP addresses in the whitelist.
         @NameInMap("SecurityIpList")
         public String securityIpList;
 

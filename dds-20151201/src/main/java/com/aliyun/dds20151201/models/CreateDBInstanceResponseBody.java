@@ -4,12 +4,15 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class CreateDBInstanceResponseBody extends TeaModel {
+    // The ID of the instance.
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    // The ID of the order.
     @NameInMap("OrderId")
     public String orderId;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

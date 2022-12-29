@@ -4,6 +4,7 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class UpgradeDBInstanceEngineVersionResponseBody extends TeaModel {
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

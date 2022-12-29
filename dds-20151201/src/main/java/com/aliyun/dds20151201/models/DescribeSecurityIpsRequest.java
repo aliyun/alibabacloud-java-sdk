@@ -4,6 +4,7 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeSecurityIpsRequest extends TeaModel {
+    // The ID of the instance.
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 

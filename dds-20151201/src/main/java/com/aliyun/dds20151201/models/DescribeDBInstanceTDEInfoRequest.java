@@ -4,6 +4,7 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstanceTDEInfoRequest extends TeaModel {
+    // The ID of the Message Queue for Apache Kafka instance to be deleted.
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 

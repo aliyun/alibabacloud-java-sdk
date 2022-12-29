@@ -4,9 +4,17 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class CheckRecoveryConditionRequest extends TeaModel {
+    // The ID of the backup.
+    // 
+    // > * You can call the [DescribeBackups](~~62172~~) operation to query the ID of the backup.
+    // > * You must specify one of the **RestoreTime** and BackupId parameters.
+    // > * This parameter is not applicable to sharded cluster instances.
     @NameInMap("BackupId")
     public String backupId;
 
+    // The name of the source database. The value is a JSON array.
+    // 
+    // >  If you do not specify this parameter, all databases are restored.
     @NameInMap("DatabaseNames")
     public String databaseNames;
 
@@ -16,6 +24,7 @@ public class CheckRecoveryConditionRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The ID of the resource group.
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -25,12 +34,17 @@ public class CheckRecoveryConditionRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    // The point in time to which the instance is restored. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+    // 
+    // > * The value can be any time within the past seven days. The time must be earlier than the current time, but later than the time when the instance was created.
+    // > * You must specify one of the RestoreTime and **BackupId** parameters.
     @NameInMap("RestoreTime")
     public String restoreTime;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    // The ID of the source instance.
     @NameInMap("SourceDBInstance")
     public String sourceDBInstance;
 

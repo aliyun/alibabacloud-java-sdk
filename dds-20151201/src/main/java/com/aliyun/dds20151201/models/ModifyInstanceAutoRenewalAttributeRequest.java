@@ -4,12 +4,22 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceAutoRenewalAttributeRequest extends TeaModel {
+    // Specifies whether to enable auto-renewal. Valid values:
+    // 
+    // *   **true**
+    // *   **false**
+    // 
+    // >  If this parameter is set to **true**, you must set the **Duration** parameter.
     @NameInMap("AutoRenew")
     public String autoRenew;
 
+    // The ID of the instance.
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    // The auto-renewal period. Valid values: **1** to **12**. Unit: month.
+    // 
+    // >  This parameter is valid only when **AutoRenew** is set to **true**.
     @NameInMap("Duration")
     public String duration;
 
@@ -19,6 +29,7 @@ public class ModifyInstanceAutoRenewalAttributeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The region ID of the instance. You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to query the region ID of the instance.
     @NameInMap("RegionId")
     public String regionId;
 

@@ -3,7 +3,7 @@ package com.aliyun.dds20151201.models;
 
 import com.aliyun.tea.*;
 
-public class RenewDBInstanceResponseBody extends TeaModel {
+public class TransformInstanceChargeTypeResponseBody extends TeaModel {
     // The ID of the order.
     @NameInMap("OrderId")
     public String orderId;
@@ -12,12 +12,12 @@ public class RenewDBInstanceResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static RenewDBInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        RenewDBInstanceResponseBody self = new RenewDBInstanceResponseBody();
+    public static TransformInstanceChargeTypeResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        TransformInstanceChargeTypeResponseBody self = new TransformInstanceChargeTypeResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public RenewDBInstanceResponseBody setOrderId(String orderId) {
+    public TransformInstanceChargeTypeResponseBody setOrderId(String orderId) {
         this.orderId = orderId;
         return this;
     }
@@ -25,7 +25,7 @@ public class RenewDBInstanceResponseBody extends TeaModel {
         return this.orderId;
     }
 
-    public RenewDBInstanceResponseBody setRequestId(String requestId) {
+    public TransformInstanceChargeTypeResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

@@ -4,9 +4,11 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
+    // The list of custom keys.
     @NameInMap("KeyIds")
     public DescribeUserEncryptionKeyListResponseBodyKeyIds keyIds;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

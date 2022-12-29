@@ -4,9 +4,11 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class CreateBackupResponseBody extends TeaModel {
+    // The ID of the backup set.
     @NameInMap("BackupId")
     public String backupId;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

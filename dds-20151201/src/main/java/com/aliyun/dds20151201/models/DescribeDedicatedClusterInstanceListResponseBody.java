@@ -4,18 +4,23 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
+    // Details about the instances.
     @NameInMap("Instances")
     public DescribeDedicatedClusterInstanceListResponseBodyInstances instances;
 
+    // The number of the page to return.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries returned per page.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The number of instances in the response.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,27 +70,38 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
     }
 
     public static class DescribeDedicatedClusterInstanceListResponseBodyInstancesDbInstanceInstanceNodeListInstanceNodes extends TeaModel {
+        // The ID of the host to which the instances in a dedicated cluster belong.
         @NameInMap("DedicatedHostName")
         public String dedicatedHostName;
 
+        // The name of the shard.
         @NameInMap("InsName")
         public String insName;
 
+        // The ID of the node.
         @NameInMap("NodeId")
         public Integer nodeId;
 
+        // The IP address of the node.
         @NameInMap("NodeIp")
         public String nodeIp;
 
+        // The type of the node.
         @NameInMap("NodeType")
         public String nodeType;
 
+        // The port number corresponding to the node.
         @NameInMap("Port")
         public Integer port;
 
+        // The role of the node. Valid values:
+        // 
+        // *   **master**: a primary node.
+        // *   **slave**: a secondary node.
         @NameInMap("Role")
         public String role;
 
+        // The zone ID of the instance.
         @NameInMap("ZoneId")
         public String zoneId;
 
@@ -180,63 +196,85 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
     }
 
     public static class DescribeDedicatedClusterInstanceListResponseBodyInstancesDbInstance extends TeaModel {
+        // The type of the ApsaraDB for MongoDB instance. Valid value: **normal**.
+        // 
+        // **normal**: a replica set instance.
         @NameInMap("CharacterType")
         public String characterType;
 
+        // The ID of the dedicated cluster to which the instance belongs.
         @NameInMap("ClusterId")
         public String clusterId;
 
+        // The name of the dedicated cluster to which the instance belongs.
         @NameInMap("ClusterName")
         public String clusterName;
 
+        // The time when the instance was created. The time is displayed in the *yyyy*-*MM*-*dd*T*HH*:*mm*:*ss*Z format.
         @NameInMap("CreateTime")
         public String createTime;
 
+        // The instance ID of the backend O\&M platform.
         @NameInMap("CustomId")
         public String customId;
 
+        // The database engine. Valid value: **MongoDB**.
         @NameInMap("Engine")
         public String engine;
 
+        // The version number of the database engine. Valid value: **4.2**.
         @NameInMap("EngineVersion")
         public String engineVersion;
 
+        // The instance type. For more information, see **Table 1. Standalone or replica set instance types** in [Instance types](~~57141~~).
         @NameInMap("InstanceClass")
         public String instanceClass;
 
+        // The ID of the ApsaraDB for MongoDB instance.
         @NameInMap("InstanceId")
         public String instanceId;
 
+        // The name of the ApsaraDB for MongoDB instance.
         @NameInMap("InstanceName")
         public String instanceName;
 
+        // Details about the instance nodes.
         @NameInMap("InstanceNodeList")
         public DescribeDedicatedClusterInstanceListResponseBodyInstancesDbInstanceInstanceNodeList instanceNodeList;
 
+        // The status of the instance. More details of status, please see [instance status list](~~190071~~).
         @NameInMap("InstanceStatus")
         public String instanceStatus;
 
+        // The end time of the maintenance window. The time is in the *HH:mmZ* format. The time is displayed in UTC.
         @NameInMap("MaintainEndTime")
         public String maintainEndTime;
 
+        // The start time of the maintenance window. The time is in the *HH:mm*Z format. The time is displayed in UTC.
         @NameInMap("MaintainStartTime")
         public String maintainStartTime;
 
+        // The region where the instance is deployed.
         @NameInMap("Region")
         public String region;
 
+        // The ID of the region where the instance is deployed.
         @NameInMap("RegionId")
         public String regionId;
 
+        // The type of the storage.
         @NameInMap("StorageType")
         public String storageType;
 
+        // The ID of the VPC.
         @NameInMap("VpcId")
         public String vpcId;
 
+        // The vSwitch ID of the VPC.
         @NameInMap("VswitchId")
         public String vswitchId;
 
+        // The zone ID of the instance.
         @NameInMap("ZoneId")
         public String zoneId;
 

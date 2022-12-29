@@ -4,24 +4,43 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeDedicatedClusterInstanceListRequest extends TeaModel {
+    // The ID of the dedicated cluster to which the instance belongs.
+    // 
+    // >  Separate multiple IDs with commas (,).
     @NameInMap("ClusterId")
     public String clusterId;
 
+    // The name of the dedicated host.
+    // 
+    // >  Separate multiple names with commas (,).
     @NameInMap("DedicatedHostName")
     public String dedicatedHostName;
 
+    // The database engine. Set the value to MongoDB.
     @NameInMap("Engine")
     public String engine;
 
+    // The version number of the database engine. Set the value to **4.2**.
     @NameInMap("EngineVersion")
     public String engineVersion;
 
+    // The ID of the ApsaraDB for MongoDB instance.
+    // 
+    // >  Separate multiple IDs with commas (,).
     @NameInMap("InstanceId")
     public String instanceId;
 
+    // The network type of the instance. Valid values:
+    // 
+    // *   0: The instance is connected over the Internet.
+    // *   1: The instance is connected over an internal network.
+    // *   2\. The instance is deployed in a VPC.
+    // 
+    // Default value: 1.
     @NameInMap("InstanceNetType")
     public String instanceNetType;
 
+    // The status of the instance. For information about the valid values of this parameter, see [Valid values of the InstanceStatus parameter for DescribeDedicatedClusterInstanceList](~~190071~~).
     @NameInMap("InstanceStatus")
     public String instanceStatus;
 
@@ -31,12 +50,15 @@ public class DescribeDedicatedClusterInstanceListRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    // The number of the page to return. Valid values: any non-zero positive integer. Default value: **1**.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries to return on each page. Valid values: **30**, **50**, and **100**. Default value: **30**.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The ID of the region. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.
     @NameInMap("RegionId")
     public String regionId;
 
@@ -49,6 +71,7 @@ public class DescribeDedicatedClusterInstanceListRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    // The ID of the zone. You can call [DescribeZones](~~61933~~) to query the zone ID.
     @NameInMap("ZoneId")
     public String zoneId;
 

@@ -4,9 +4,16 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class ReleasePublicNetworkAddressRequest extends TeaModel {
+    // The ID of the instance.
+    // 
+    // >  If you set this parameter to the ID of a sharded cluster instance, you must also specify the **NodeId** parameter.
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    // A sharded cluster instance consists of three components: mongos, shard, and Configserver.
+    // 
+    // > * This parameter is valid only if you set the **DBInstanceId** parameter to the ID of a sharded cluster instance.
+    // > * You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to query the ID of the mongos, shard, or Configserver node.
     @NameInMap("NodeId")
     public String nodeId;
 

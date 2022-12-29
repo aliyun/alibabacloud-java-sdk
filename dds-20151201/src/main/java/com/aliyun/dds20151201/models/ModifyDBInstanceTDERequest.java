@@ -4,12 +4,17 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBInstanceTDERequest extends TeaModel {
+    // The ID of an instance.
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    // The custom key.
     @NameInMap("EncryptionKey")
     public String encryptionKey;
 
+    // The encryption method. Set the value to **AES-256-CBC**.
+    // 
+    // >  This parameter is valid only when you specify the **TEDStatus** parameter to **enabled**.
     @NameInMap("EncryptorName")
     public String encryptorName;
 
@@ -25,12 +30,19 @@ public class ModifyDBInstanceTDERequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    // The ARN of the role. It is in the format of `acs:ram::$accountID:role/$roleName`.
+    // 
+    // > * `$accountID`: indicates the ID of the Alibaba Cloud account that owns the RAM role. To view the account ID, log on to the Alibaba Cloud Management Console, move your pointer over your profile picture in the upper-right corner, and then click Security Settings.
+    // > * `$roleName`: indicates the name of the RAM role. To view the RAM role name, perform the following steps: Log on to the RAM console. In the left-side navigation pane, click RAM Roles. In the RAM Role Name column on the page that appears, you can view the name of the RAM role.
     @NameInMap("RoleARN")
     public String roleARN;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    // The TDE status. Set the value to **Enabled**.
+    // 
+    // >  Exercise caution when enabling TDE. After TDE is enabled, it cannot be disabled.
     @NameInMap("TDEStatus")
     public String TDEStatus;
 

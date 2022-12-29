@@ -4,12 +4,17 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeTagsResponseBody extends TeaModel {
+    // The token used to start the next query.
+    // 
+    // >  If not all results are returned in the first query, this parameter is returned. You can pass in the value of this parameter in the next query.
     @NameInMap("NextToken")
     public String nextToken;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Details about the tags.
     @NameInMap("Tags")
     public java.util.List<DescribeTagsResponseBodyTags> tags;
 
@@ -43,9 +48,11 @@ public class DescribeTagsResponseBody extends TeaModel {
     }
 
     public static class DescribeTagsResponseBodyTags extends TeaModel {
+        // The key of the tag.
         @NameInMap("TagKey")
         public String tagKey;
 
+        // The values of the tags.
         @NameInMap("TagValues")
         public java.util.List<String> tagValues;
 

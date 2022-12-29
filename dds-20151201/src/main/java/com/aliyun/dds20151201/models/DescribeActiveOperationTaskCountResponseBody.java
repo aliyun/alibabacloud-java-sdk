@@ -4,12 +4,18 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeActiveOperationTaskCountResponseBody extends TeaModel {
+    // Indicates whether any O&M tasks need pop-up windows to notify users actions. Valid values: 
+    // 
+    // - **0**: No O&M tasks need pop-up windows to notify users actions.
+    // - **1**: Some O&M tasks need pop-up windows to notify users actions.
     @NameInMap("NeedPop")
     public Integer needPop;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The number of pending O&M tasks.
     @NameInMap("TaskCount")
     public Integer taskCount;
 

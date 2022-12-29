@@ -4,21 +4,27 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribePriceResponseBody extends TeaModel {
+    // The list of orders.
     @NameInMap("Order")
     public DescribePriceResponseBodyOrder order;
 
+    // The order parameters. This parameter is returned if the `OrderParamOut` parameter is set to `true`.
     @NameInMap("OrderParams")
     public String orderParams;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Details about the promotion rules.
     @NameInMap("Rules")
     public DescribePriceResponseBodyRules rules;
 
+    // Details about the rules that match the coupon.
     @NameInMap("SubOrders")
     public DescribePriceResponseBodySubOrders subOrders;
 
+    // The ID of the trace.
     @NameInMap("TraceId")
     public String traceId;
 
@@ -75,22 +81,65 @@ public class DescribePriceResponseBody extends TeaModel {
         return this.traceId;
     }
 
+    public static class DescribePriceResponseBodyOrderCouponsCouponPromotionRuleIdList extends TeaModel {
+        @NameInMap("PromotionRuleId")
+        public java.util.List<Long> promotionRuleId;
+
+        public static DescribePriceResponseBodyOrderCouponsCouponPromotionRuleIdList build(java.util.Map<String, ?> map) throws Exception {
+            DescribePriceResponseBodyOrderCouponsCouponPromotionRuleIdList self = new DescribePriceResponseBodyOrderCouponsCouponPromotionRuleIdList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribePriceResponseBodyOrderCouponsCouponPromotionRuleIdList setPromotionRuleId(java.util.List<Long> promotionRuleId) {
+            this.promotionRuleId = promotionRuleId;
+            return this;
+        }
+        public java.util.List<Long> getPromotionRuleId() {
+            return this.promotionRuleId;
+        }
+
+    }
+
     public static class DescribePriceResponseBodyOrderCouponsCoupon extends TeaModel {
+        @NameInMap("ActivityCategory")
+        public String activityCategory;
+
+        // The coupon number.
         @NameInMap("CouponNo")
         public String couponNo;
 
+        // The description of the topic.
         @NameInMap("Description")
         public String description;
 
+        // Indicates whether the coupon was selected.
         @NameInMap("IsSelected")
         public String isSelected;
 
+        // The name of the coupon.
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("OptionCode")
+        public String optionCode;
+
+        @NameInMap("PromotionOptionCode")
+        public String promotionOptionCode;
+
+        @NameInMap("PromotionRuleIdList")
+        public DescribePriceResponseBodyOrderCouponsCouponPromotionRuleIdList promotionRuleIdList;
 
         public static DescribePriceResponseBodyOrderCouponsCoupon build(java.util.Map<String, ?> map) throws Exception {
             DescribePriceResponseBodyOrderCouponsCoupon self = new DescribePriceResponseBodyOrderCouponsCoupon();
             return TeaModel.build(map, self);
+        }
+
+        public DescribePriceResponseBodyOrderCouponsCoupon setActivityCategory(String activityCategory) {
+            this.activityCategory = activityCategory;
+            return this;
+        }
+        public String getActivityCategory() {
+            return this.activityCategory;
         }
 
         public DescribePriceResponseBodyOrderCouponsCoupon setCouponNo(String couponNo) {
@@ -123,6 +172,30 @@ public class DescribePriceResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public DescribePriceResponseBodyOrderCouponsCoupon setOptionCode(String optionCode) {
+            this.optionCode = optionCode;
+            return this;
+        }
+        public String getOptionCode() {
+            return this.optionCode;
+        }
+
+        public DescribePriceResponseBodyOrderCouponsCoupon setPromotionOptionCode(String promotionOptionCode) {
+            this.promotionOptionCode = promotionOptionCode;
+            return this;
+        }
+        public String getPromotionOptionCode() {
+            return this.promotionOptionCode;
+        }
+
+        public DescribePriceResponseBodyOrderCouponsCoupon setPromotionRuleIdList(DescribePriceResponseBodyOrderCouponsCouponPromotionRuleIdList promotionRuleIdList) {
+            this.promotionRuleIdList = promotionRuleIdList;
+            return this;
+        }
+        public DescribePriceResponseBodyOrderCouponsCouponPromotionRuleIdList getPromotionRuleIdList() {
+            return this.promotionRuleIdList;
         }
 
     }
@@ -166,21 +239,30 @@ public class DescribePriceResponseBody extends TeaModel {
     }
 
     public static class DescribePriceResponseBodyOrder extends TeaModel {
+        // Details about the coupons.
         @NameInMap("Coupons")
         public DescribePriceResponseBodyOrderCoupons coupons;
 
+        // The type of the currency. Valid values:
+        // 
+        // *   USD: United States dollar
+        // *   JPY: Japanese Yen.
         @NameInMap("Currency")
         public String currency;
 
+        // The discount amount of the order.
         @NameInMap("DiscountAmount")
         public String discountAmount;
 
+        // The original price of the order.
         @NameInMap("OriginalAmount")
         public String originalAmount;
 
+        // The list of one or more promotion rule IDs.
         @NameInMap("RuleIds")
         public DescribePriceResponseBodyOrderRuleIds ruleIds;
 
+        // The actual price of the order.
         @NameInMap("TradeAmount")
         public String tradeAmount;
 
@@ -240,12 +322,15 @@ public class DescribePriceResponseBody extends TeaModel {
     }
 
     public static class DescribePriceResponseBodyRulesRule extends TeaModel {
+        // The name of the rule. Valid values
         @NameInMap("Name")
         public String name;
 
+        // The ID of the policy.
         @NameInMap("RuleDescId")
         public Long ruleDescId;
 
+        // The title of the rule.
         @NameInMap("Title")
         public String title;
 
@@ -319,18 +404,23 @@ public class DescribePriceResponseBody extends TeaModel {
     }
 
     public static class DescribePriceResponseBodySubOrdersSubOrder extends TeaModel {
+        // The discount amount of the order.
         @NameInMap("DiscountAmount")
         public String discountAmount;
 
+        // The ID of the instance.
         @NameInMap("InstanceId")
         public String instanceId;
 
+        // The original price of the order.
         @NameInMap("OriginalAmount")
         public String originalAmount;
 
+        // The list of one or more promotion rule IDs.
         @NameInMap("RuleIds")
         public DescribePriceResponseBodySubOrdersSubOrderRuleIds ruleIds;
 
+        // The actual price of the order.
         @NameInMap("TradeAmount")
         public String tradeAmount;
 

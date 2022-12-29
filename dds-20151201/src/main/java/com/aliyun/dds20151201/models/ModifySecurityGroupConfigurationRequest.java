@@ -4,6 +4,7 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class ModifySecurityGroupConfigurationRequest extends TeaModel {
+    // The ID of the instance.
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
@@ -19,6 +20,10 @@ public class ModifySecurityGroupConfigurationRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    // The ID of the ECS security group.
+    // 
+    // > * You can bind up to 10 ECS security groups to an ApsaraDB for MongoDB instance.
+    // > * You can call the [DescribeSecurityGroup](~~25556~~) operation of ECS to query the security groups in the specified region.
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 

@@ -4,9 +4,11 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstanceMonitorResponseBody extends TeaModel {
+    // The collection frequency of monitoring data. The value is **1** or **300**. Unit: seconds.
     @NameInMap("Granularity")
     public String granularity;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

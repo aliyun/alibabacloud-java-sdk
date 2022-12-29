@@ -4,18 +4,23 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
+    // Details about returned entries.
     @NameInMap("Items")
     public DescribeInstanceAutoRenewalAttributeResponseBodyItems items;
 
+    // The total number of entries returned.
     @NameInMap("ItemsNumbers")
     public Integer itemsNumbers;
 
+    // The page number of the returned page.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries that were returned on the current page.
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -65,18 +70,32 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceAutoRenewalAttributeResponseBodyItemsItem extends TeaModel {
+        // Indicates whether auto-renewal is enabled for the instance. Valid values:
+        // 
+        // *   **true**: Auto-renewal is enabled for the instance.
+        // *   **false**: Auto-renewal is disabled for the instance.
         @NameInMap("AutoRenew")
         public String autoRenew;
 
+        // The category of the instance. Valid values:
+        // 
+        // *   **replicate**: the standalone or replica set instance
+        // *   **sharding**: the sharded cluster instance
         @NameInMap("DBInstanceType")
         public String DBInstanceType;
 
+        // The ID of the instance.
         @NameInMap("DbInstanceId")
         public String dbInstanceId;
 
+        // The auto-renewal period. Unit: months.
+        // 
+        // > * This parameter is ruturned only when the returned value of the **AutoRenew** parameter is **true**.
+        // > * You can call the [ModifyInstanceAutoRenewalAttribute](~~145979~~) operation to modify the auto-renewal period.
         @NameInMap("Duration")
         public String duration;
 
+        // The region ID of the instance.
         @NameInMap("RegionId")
         public String regionId;
 

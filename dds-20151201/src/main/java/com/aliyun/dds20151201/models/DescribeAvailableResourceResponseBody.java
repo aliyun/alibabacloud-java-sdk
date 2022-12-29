@@ -4,9 +4,11 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeAvailableResourceResponseBody extends TeaModel {
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The available database types.
     @NameInMap("SupportedDBTypes")
     public DescribeAvailableResourceResponseBodySupportedDBTypes supportedDBTypes;
 
@@ -32,12 +34,15 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     }
 
     public static class DBInstanceStorageRange extends TeaModel {
+        // The maximum storage capacity. Unit: GB.
         @NameInMap("Max")
         public Integer max;
 
+        // The minimum storage capacity. Unit: GB.
         @NameInMap("Min")
         public Integer min;
 
+        // The step size for adjusting the storage capacity. Unit: GB.
         @NameInMap("Step")
         public Integer step;
 
@@ -73,12 +78,15 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     }
 
     public static class AvailableResource extends TeaModel {
+        // The storage capacity range of the instance.
         @NameInMap("DBInstanceStorageRange")
         public DBInstanceStorageRange DBInstanceStorageRange;
 
+        // The instance class.
         @NameInMap("InstanceClass")
         public String instanceClass;
 
+        // The instance type.
         @NameInMap("InstanceClassRemark")
         public String instanceClassRemark;
 
@@ -133,12 +141,15 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableResourceResponseBodySupportedDBTypesSupportedDBTypeAvailableZonesAvailableZoneSupportedEngineVersionsSupportedEngineVersionSupportedEnginesSupportedEngineSupportedNodeTypesSupportedNodeType extends TeaModel {
+        // Details about the available resources.
         @NameInMap("AvailableResources")
         public AvailableResources availableResources;
 
+        // The network type of the instance.
         @NameInMap("NetworkTypes")
         public String networkTypes;
 
+        // The number of nodes in the instance.
         @NameInMap("NodeType")
         public String nodeType;
 
@@ -193,9 +204,11 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableResourceResponseBodySupportedDBTypesSupportedDBTypeAvailableZonesAvailableZoneSupportedEngineVersionsSupportedEngineVersionSupportedEnginesSupportedEngine extends TeaModel {
+        // The storage engine of the instance.
         @NameInMap("Engine")
         public String engine;
 
+        // The available node types.
         @NameInMap("SupportedNodeTypes")
         public DescribeAvailableResourceResponseBodySupportedDBTypesSupportedDBTypeAvailableZonesAvailableZoneSupportedEngineVersionsSupportedEngineVersionSupportedEnginesSupportedEngineSupportedNodeTypes supportedNodeTypes;
 
@@ -242,9 +255,11 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableResourceResponseBodySupportedDBTypesSupportedDBTypeAvailableZonesAvailableZoneSupportedEngineVersionsSupportedEngineVersion extends TeaModel {
+        // The available storage engines.
         @NameInMap("SupportedEngines")
         public DescribeAvailableResourceResponseBodySupportedDBTypesSupportedDBTypeAvailableZonesAvailableZoneSupportedEngineVersionsSupportedEngineVersionSupportedEngines supportedEngines;
 
+        // The database engine version of the instance.
         @NameInMap("Version")
         public String version;
 
@@ -291,12 +306,15 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableResourceResponseBodySupportedDBTypesSupportedDBTypeAvailableZonesAvailableZone extends TeaModel {
+        // The region ID of the instance.
         @NameInMap("RegionId")
         public String regionId;
 
+        // The available storage engine versions.
         @NameInMap("SupportedEngineVersions")
         public DescribeAvailableResourceResponseBodySupportedDBTypesSupportedDBTypeAvailableZonesAvailableZoneSupportedEngineVersions supportedEngineVersions;
 
+        // The zone ID of the instance.
         @NameInMap("ZoneId")
         public String zoneId;
 
@@ -351,9 +369,14 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableResourceResponseBodySupportedDBTypesSupportedDBType extends TeaModel {
+        // The available zones.
         @NameInMap("AvailableZones")
         public DescribeAvailableResourceResponseBodySupportedDBTypesSupportedDBTypeAvailableZones availableZones;
 
+        // The architecture of the instance. Valid values:
+        // 
+        // - **normal**: replica set instance
+        // - **sharding**: sharded cluster instance
         @NameInMap("DbType")
         public String dbType;
 

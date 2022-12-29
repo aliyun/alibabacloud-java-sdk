@@ -4,9 +4,16 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeAuditPolicyResponseBody extends TeaModel {
+    // Indicates whether the log audit feature is enabled. Valid values:
+    // 
+    // *   Enable
+    // *   Disabled
+    // 
+    // Default value: Disabled.
     @NameInMap("LogAuditStatus")
     public String logAuditStatus;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

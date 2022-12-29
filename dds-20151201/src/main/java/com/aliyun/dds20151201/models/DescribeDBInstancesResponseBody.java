@@ -4,18 +4,23 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstancesResponseBody extends TeaModel {
+    // Details of the instances.
     @NameInMap("DBInstances")
     public DescribeDBInstancesResponseBodyDBInstances DBInstances;
 
+    // The number of the returned page.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries to return on each page.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The number of instances in the query results.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,12 +70,15 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstancesResponseBodyDBInstancesDBInstanceMongosListMongosAttribute extends TeaModel {
+        // The type of the mongos node.
         @NameInMap("NodeClass")
         public String nodeClass;
 
+        // The description of the mongos node.
         @NameInMap("NodeDescription")
         public String nodeDescription;
 
+        // The ID of the mongos node.
         @NameInMap("NodeId")
         public String nodeId;
 
@@ -125,18 +133,23 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstancesResponseBodyDBInstancesDBInstanceShardListShardAttribute extends TeaModel {
+        // The type of the shard node.
         @NameInMap("NodeClass")
         public String nodeClass;
 
+        // The description of the shard node.
         @NameInMap("NodeDescription")
         public String nodeDescription;
 
+        // The ID of the shard node.
         @NameInMap("NodeId")
         public String nodeId;
 
+        // The storage capacity of the shard node. Unit: GB.
         @NameInMap("NodeStorage")
         public Integer nodeStorage;
 
+        // The number of read-only nodes in the shard node. Valid values: **0** to **5**.
         @NameInMap("ReadonlyReplicas")
         public Integer readonlyReplicas;
 
@@ -207,9 +220,11 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstancesResponseBodyDBInstancesDBInstanceTagsTag extends TeaModel {
+        // The tag key of the resource.
         @NameInMap("Key")
         public String key;
 
+        // The tag value of the resource.
         @NameInMap("Value")
         public String value;
 
@@ -256,87 +271,207 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstancesResponseBodyDBInstancesDBInstance extends TeaModel {
+        // The I/O throughput consumed by the instance.
+        // 
+        // >  This parameter is returned when the instance is a serverless instance.
         @NameInMap("CapacityUnit")
         public String capacityUnit;
 
+        // The billing method of the instance. Valid values:
+        // 
+        // *   **PrePaid**: subscription
+        // *   **PostPaid**: pay-as-you-go
         @NameInMap("ChargeType")
         public String chargeType;
 
+        // The time when the instance was created. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
         @NameInMap("CreationTime")
         public String creationTime;
 
+        // The instance type.
         @NameInMap("DBInstanceClass")
         public String DBInstanceClass;
 
+        // The description of the instance.
         @NameInMap("DBInstanceDescription")
         public String DBInstanceDescription;
 
+        // The ID of the instance.
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
+        // The state of the instance. For more information, see [Instance states](~~63870~~).
         @NameInMap("DBInstanceStatus")
         public String DBInstanceStatus;
 
+        // The storage capacity of the instance.
         @NameInMap("DBInstanceStorage")
         public Integer DBInstanceStorage;
 
+        // The architecture of the instance.
+        // 
+        // *   **sharding**: sharded cluster instance
+        // *   **replicate**: replica set or standalone instance
         @NameInMap("DBInstanceType")
         public String DBInstanceType;
 
+        // The time when the instance data was destroyed. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.  
+        // 
+        // > - Subscription instances are released 15 days after expiration. After an instance is released, its data is deleted and cannot be restored.
+        // > - Pay-as-you-go instances are locked after the payments have been overdue for longer than 24 hours. The instances are released after the payments have been overdue for longer than 15 days. The data of released instances is deleted and cannot be restored.
         @NameInMap("DestroyTime")
         public String destroyTime;
 
+        // The database engine of the instance.
         @NameInMap("Engine")
         public String engine;
 
+        // The database engine version of the instance. Valid values:
+        // 
+        // *   **5.0**
+        // *   **4.4**
+        // *   **4.2**
+        // *   **4.0**
+        // *   **3.4**
         @NameInMap("EngineVersion")
         public String engineVersion;
 
+        // The time when the instance expires. The time is in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.
         @NameInMap("ExpireTime")
         public String expireTime;
 
+        // The ID of the secondary zone 2 of the instance. Valid values:
+        // 
+        // *   **cn-hangzhou-g**: Hangzhou Zone G
+        // *   **cn-hangzhou-h**: Hangzhou Zone H
+        // *   **cn-hangzhou-i**: Hangzhou Zone I
+        // *   **cn-hongkong-b**: Hongkong Zone B
+        // *   **cn-hongkong-c**: Hongkong Zone C
+        // *   **cn-hongkong-d**: Hongkong Zone D
+        // *   **cn-wulanchabu-a**: Ulanqab Zone A
+        // *   **cn-wulanchabu-b**: Ulanqab Zone B
+        // *   **cn-wulanchabu-c**: Ulanqab Zone C
+        // *   **ap-southeast-1a**: Singapore Zone A
+        // *   **ap-southeast-1b**: Singapore Zone B
+        // *   **ap-southeast-1c**: Singapore Zone C
+        // *   **ap-southeast-5a**: Jakarta Zone A
+        // *   **ap-southeast-5b**: Jakarta Zone B
+        // *   **ap-southeast-5c**: Jakarta Zone C
+        // *   **eu-central-1a**: Frankfurt Zone A
+        // *   **eu-central-1b**: Frankfurt Zone B
+        // *   **eu-central-1c**: Frankfurt Zone C
+        // 
+        // > 
+        // 
+        // *   This parameter is returned if the instance is a replica set or sharded cluster instance that runs MongoDB 4.4 or 5.0 and uses multi-zone deployment.
+        // *   This parameter is returned only if you use the Chine site (aliyun.com).
         @NameInMap("HiddenZoneId")
         public String hiddenZoneId;
 
+        // The kind code of the instance. Valid values:
+        // 
+        // *   **0**: physical machine
+        // *   **1**: Elastic Compute Service (ECS) instance
+        // *   **2**: Docker cluster
+        // *   **18**: Kubernetes cluster
         @NameInMap("KindCode")
         public String kindCode;
 
+        // The date when the last downgrade operation was performed.
         @NameInMap("LastDowngradeTime")
         public String lastDowngradeTime;
 
+        // The lock state of the instance. Valid values:
+        // 
+        // *   **Unlock**: The cluster is not locked.
+        // *   **ManualLock**: The instance is manually locked.
+        // *   **LockByExpiration**: The instance is automatically locked due to instance expiration.
+        // *   **LockByRestoration**: The instance is automatically locked before it is rolled back.
+        // *   **LockByDiskQuota**: The instance is automatically locked due to exhausted storage capacity.
+        // *   **Released**: The instance is released. After an instance is released, the instance cannot be unlocked. You can only restore the backup data of the instance to a new instance. This process requires a long period of time.
         @NameInMap("LockMode")
         public String lockMode;
 
+        // Details of the mongos nodes.
+        // 
+        // >  This parameter is returned if the instance is a sharded cluster instance.
         @NameInMap("MongosList")
         public DescribeDBInstancesResponseBodyDBInstancesDBInstanceMongosList mongosList;
 
+        // The network type of the instance. Valid values:
+        // 
+        // *   **Classic**: classic network
+        // *   **VPC**: VPC
         @NameInMap("NetworkType")
         public String networkType;
 
+        // The region ID of the instance.
         @NameInMap("RegionId")
         public String regionId;
 
+        // The number of nodes in the instance.
+        // 
+        // >  This parameter is returned if the instance is a replica set instance.
         @NameInMap("ReplicationFactor")
         public String replicationFactor;
 
+        // The ID of the resource group.
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        // The ID of the secondary zone 1 of the instance. Valid values:
+        // 
+        // *   **cn-hangzhou-g**: Hangzhou Zone G
+        // *   **cn-hangzhou-h**: Hangzhou Zone H
+        // *   **cn-hangzhou-i**: Hangzhou Zone I
+        // *   **cn-hongkong-b**: Hongkong Zone B
+        // *   **cn-hongkong-c**: Hongkong Zone C
+        // *   **cn-hongkong-d**: Hongkong Zone D
+        // *   **cn-wulanchabu-a**: Ulanqab Zone A
+        // *   **cn-wulanchabu-b**: Ulanqab Zone B
+        // *   **cn-wulanchabu-c**: Ulanqab Zone C
+        // *   **ap-southeast-1a**: Singapore Zone A
+        // *   **ap-southeast-1b**: Singapore Zone B
+        // *   **ap-southeast-1c**: Singapore Zone C
+        // *   **ap-southeast-5a**: Jakarta Zone A
+        // *   **ap-southeast-5b**: Jakarta Zone B
+        // *   **ap-southeast-5c**: Jakarta Zone C
+        // *   **eu-central-1a**: Frankfurt Zone A
+        // *   **eu-central-1b**: Frankfurt Zone B
+        // *   **eu-central-1c**: Frankfurt Zone C
+        // 
+        // > 
+        // 
+        // *   This parameter is returned if the instance is a replica set or sharded cluster instance that runs MongoDB 4.4 or 5.0 and uses multi-zone deployment.
+        // *   This parameter is returned only if you use the Chine site (aliyun.com).
         @NameInMap("SecondaryZoneId")
         public String secondaryZoneId;
 
+        // Details of the shard nodes.
+        // 
+        // >  This parameter is returned if the instance is a sharded cluster instance.
         @NameInMap("ShardList")
         public DescribeDBInstancesResponseBodyDBInstancesDBInstanceShardList shardList;
 
+        // The storage type of the instance. Valid values:
+        // 
+        // *   **cloud_essd**: enhanced SSD (ESSD)
+        // *   **local_ssd**: local SSD
         @NameInMap("StorageType")
         public String storageType;
 
+        // Details of the resource tags.
         @NameInMap("Tags")
         public DescribeDBInstancesResponseBodyDBInstancesDBInstanceTags tags;
 
+        // Indicates whether password-free access within a VPC is enabled. Valid values:
+        // 
+        // - **Open**: Password-free access is enabled.
+        // - **Close**: Password-free access is disabled.
         @NameInMap("VpcAuthMode")
         public String vpcAuthMode;
 
+        // The zone ID of the instance.
         @NameInMap("ZoneId")
         public String zoneId;
 

@@ -4,9 +4,11 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsResponseBody extends TeaModel {
+    // Details about the regions.
     @NameInMap("Regions")
     public DescribeRegionsResponseBodyRegions regions;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +34,20 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeRegionsResponseBodyRegionsDdsRegionZonesZone extends TeaModel {
+        // Indicates whether a virtual private cloud (VPC) is supported. Valid values:
+        // 
+        // *   **true**: VPC is supported.
+        // *   **false**: VPC is not supported.
         @NameInMap("VpcEnabled")
         public Boolean vpcEnabled;
 
+        // The ID of the zone.
         @NameInMap("ZoneId")
         public String zoneId;
 
+        // The name of the zone.
+        // 
+        // The return value of the LocalName parameter is in the language that is specified by the **AcceptLanguage** parameter.
         @NameInMap("ZoneName")
         public String zoneName;
 
@@ -92,12 +102,17 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeRegionsResponseBodyRegionsDdsRegion extends TeaModel {
+        // The ID of the region.
         @NameInMap("RegionId")
         public String regionId;
 
+        // The name of the region.
+        // 
+        // The return value of the LocalName parameter is in the language that is specified by the **AcceptLanguage** parameter.
         @NameInMap("RegionName")
         public String regionName;
 
+        // Details about the zones.
         @NameInMap("Zones")
         public DescribeRegionsResponseBodyRegionsDdsRegionZones zones;
 
