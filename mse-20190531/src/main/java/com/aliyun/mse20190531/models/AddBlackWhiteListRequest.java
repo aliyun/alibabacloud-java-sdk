@@ -4,6 +4,10 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class AddBlackWhiteListRequest extends TeaModel {
+    // The language of the response. Valid values:
+    // 
+    // *   zh: Chinese
+    // *   en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
@@ -15,16 +19,19 @@ public class AddBlackWhiteListRequest extends TeaModel {
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
-    // Specifies whether to enable the whitelist mode for authorization.
+    // Specifies whether to create a whitelist.
     @NameInMap("IsWhite")
     public Boolean isWhite;
 
+    // The name.
     @NameInMap("Name")
     public String name;
 
+    // The description.
     @NameInMap("Note")
     public String note;
 
+    // The resource IDs in the JSON format.
     @NameInMap("ResourceIdJsonList")
     public String resourceIdJsonList;
 
@@ -33,6 +40,9 @@ public class AddBlackWhiteListRequest extends TeaModel {
     public String resourceType;
 
     // The status of the blacklist.
+    // 
+    // *   on: enabled
+    // *   off: disabled
     @NameInMap("Status")
     public String status;
 

@@ -4,18 +4,34 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class TagResourcesRequest extends TeaModel {
+    // The language of the response. Valid values:
+    // 
+    // *   zh: Chinese
+    // *   en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    // The region ID.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The ID of the instance.
+    // 
+    // > This parameter specifies the instance ID that is passed. Examples:
+    // 
+    // *   **ResourceId.1** indicates the ID of the first instance.
+    // *   **ResourceId.2** indicates the ID of the second instance.
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
+    // The type of the resources. Valid values:
+    // 
+    // *   CLUSTER: MSE instance
+    // *   GATEWAY: cloud-native gateway
     @NameInMap("ResourceType")
     public String resourceType;
 
+    // The list of tags. You can specify a maximum of 20 tags.
     @NameInMap("Tag")
     public java.util.List<TagResourcesRequestTag> tag;
 
@@ -100,6 +116,7 @@ public class TagResourcesRequest extends TeaModel {
         @NameInMap("Key")
         public String key;
 
+        // The value of a tag.
         @NameInMap("Value")
         public String value;
 

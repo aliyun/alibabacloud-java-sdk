@@ -10,10 +10,10 @@ public class GetPluginsRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // The plug-in directory.
+    // The type of the plug-in. Valid values:
     // 
-    // *   0: user-defined
-    // *   1: permission authentication
+    // *   0: custom
+    // *   1: permission authorization
     // *   2: security protection
     // *   3: transmission protocol
     // *   4: traffic control
