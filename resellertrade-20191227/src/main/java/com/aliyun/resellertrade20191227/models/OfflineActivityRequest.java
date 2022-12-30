@@ -10,9 +10,6 @@ public class OfflineActivityRequest extends TeaModel {
     @NameInMap("BizId")
     public String bizId;
 
-    @NameInMap("SnapType")
-    public String snapType;
-
     @NameInMap("Token")
     public String token;
 
@@ -35,14 +32,6 @@ public class OfflineActivityRequest extends TeaModel {
     }
     public String getBizId() {
         return this.bizId;
-    }
-
-    public OfflineActivityRequest setSnapType(String snapType) {
-        this.snapType = snapType;
-        return this;
-    }
-    public String getSnapType() {
-        return this.snapType;
     }
 
     public OfflineActivityRequest setToken(String token) {

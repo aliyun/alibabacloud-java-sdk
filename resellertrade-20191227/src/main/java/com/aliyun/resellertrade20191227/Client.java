@@ -502,10 +502,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("BizId", request.bizId);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.snapType)) {
-            body.put("SnapType", request.snapType);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.token)) {
             body.put("Token", request.token);
         }
