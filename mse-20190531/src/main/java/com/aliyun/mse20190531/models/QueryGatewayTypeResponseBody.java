@@ -4,11 +4,11 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class QueryGatewayTypeResponseBody extends TeaModel {
-    // The status code returned. A value of 200 indicates that the request is successful. Other values indicate that the request fails.
+    // The status code returned. The value 200 indicates that the request was successful. Other values indicate that the request failed.
     @NameInMap("Code")
     public Integer code;
 
-    // The information about gateway types.
+    // The information about the gateway type. The data type of this parameter is List.
     @NameInMap("Data")
     public java.util.List<String> data;
 
@@ -24,9 +24,10 @@ public class QueryGatewayTypeResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request is successful. Valid values:
-    // - `true`: The request is successful. 
-    // - `false`: The request fails.
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // *   `true`: The request was successful.
+    // *   `false`: The request failed.
     @NameInMap("Success")
     public Boolean success;
 

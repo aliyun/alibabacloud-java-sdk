@@ -8,7 +8,7 @@ public class GetPluginsResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
-    // The returned data.
+    // The data entries returned.
     @NameInMap("Data")
     public java.util.List<GetPluginsResponseBodyData> data;
 
@@ -20,7 +20,7 @@ public class GetPluginsResponseBody extends TeaModel {
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
-    // The error code returned.
+    // The error code returned if the request failed.
     @NameInMap("ErrorCode")
     public String errorCode;
 
@@ -118,11 +118,11 @@ public class GetPluginsResponseBody extends TeaModel {
     }
 
     public static class GetPluginsResponseBodyData extends TeaModel {
-        // The directory of the plug-in.
+        // The type of the plug-in. Valid values:
         // 
-        // 0: user-defined
+        // 0: custom
         // 
-        // 1: permission authentication
+        // 1: permission authorization
         // 
         // 2: security protection
         // 
@@ -134,7 +134,7 @@ public class GetPluginsResponseBody extends TeaModel {
         @NameInMap("Category")
         public Integer category;
 
-        // The information about the configuration check.
+        // The information about the plug-in configuration used for checking.
         @NameInMap("ConfigCheck")
         public String configCheck;
 
@@ -155,7 +155,7 @@ public class GetPluginsResponseBody extends TeaModel {
         @NameInMap("NewVersionPublishingFlag")
         public Boolean newVersionPublishingFlag;
 
-        // The plug-in execution stage.
+        // The execution stage of the plug-in.
         // 
         // *   0: default stage
         // *   1: authorization stage
@@ -168,7 +168,7 @@ public class GetPluginsResponseBody extends TeaModel {
         @NameInMap("PrimaryUser")
         public String primaryUser;
 
-        // The plug-in execution priority. A larger value indicates a higher priority.
+        // The execution priority of the plug-in. A larger value indicates a higher priority.
         @NameInMap("Priority")
         public Integer priority;
 
@@ -191,11 +191,11 @@ public class GetPluginsResponseBody extends TeaModel {
         @NameInMap("Version")
         public String version;
 
-        // The Object Storage Service (OSS) of the WebAssembly plug-in.
+        // The URL of the Object Storage Service (OSS) bucket that stores the WebAssembly plug-in.
         @NameInMap("WasmFile")
         public String wasmFile;
 
-        // The WebAssembly language.
+        // The WebAssembly language. Valid values:
         // 
         // *   0: C++
         // *   1: TinyGo

@@ -4,30 +4,45 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetServiceListenersResponseBody extends TeaModel {
+    // The returned data.
     @NameInMap("Data")
     public java.util.List<GetServiceListenersResponseBodyData> data;
 
+    // The error code returned if the request failed.
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    // The HTTP status code returned.
     @NameInMap("HttpCode")
     public String httpCode;
 
+    // The message returned.
+    // 
+    // *   If the request is successful, a success message is returned.
+    // *   If the request fails, an error message is returned.
     @NameInMap("Message")
     public String message;
 
+    // The page number of the returned page.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries returned per page.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // *   `true`: The request was successful.
+    // *   `false`: The request failed.
     @NameInMap("Success")
     public Boolean success;
 
+    // The number of listeners that are queried.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -109,27 +124,35 @@ public class GetServiceListenersResponseBody extends TeaModel {
     }
 
     public static class GetServiceListenersResponseBodyData extends TeaModel {
+        // The address of the listener.
         @NameInMap("Addr")
         public String addr;
 
+        // The listener client version.
         @NameInMap("Agent")
         public String agent;
 
+        // The application name of the listener.
         @NameInMap("App")
         public String app;
 
+        // The name of the cluster to which the monitored service belongs.
         @NameInMap("Cluster")
         public String cluster;
 
+        // The IP address of the monitored service.
         @NameInMap("IP")
         public String IP;
 
+        // The ID of the namespace.
         @NameInMap("NamespaceId")
         public String namespaceId;
 
+        // The port number of the monitored service.
         @NameInMap("Port")
         public String port;
 
+        // The name of the monitored service.
         @NameInMap("ServiceName")
         public String serviceName;
 

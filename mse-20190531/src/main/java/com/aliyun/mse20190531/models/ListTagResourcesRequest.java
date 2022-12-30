@@ -15,7 +15,7 @@ public class ListTagResourcesRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
-    // The ID of the region.
+    // The region ID.
     @NameInMap("RegionId")
     public String regionId;
 

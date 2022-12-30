@@ -4,39 +4,60 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetServiceListenersRequest extends TeaModel {
+    // The language of the response. Valid values:
+    // 
+    // *   zh: Chinese
+    // *   en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    // The ID of the MSE instance to which the service belongs.
+    // 
+    // > You must specify InstanceId or ClusterId.
     @NameInMap("ClusterId")
     public String clusterId;
 
+    // The name of the cluster to which the service belongs.
+    // 
+    // > The cluster is a concept for Nacos services and does not refer to a Microservices Engine (MSE) instance.
     @NameInMap("ClusterName")
     public String clusterName;
 
+    // The group to which the service belongs.
     @NameInMap("GroupName")
     public String groupName;
 
+    // A reserved parameter.
     @NameInMap("HasIpCount")
     public String hasIpCount;
 
+    // The ID of the instance to which the service belongs.
+    // 
+    // > You must specify InstanceId or ClusterId.
     @NameInMap("InstanceId")
     public String instanceId;
 
+    // The namespace to which the service belongs.
     @NameInMap("NamespaceId")
     public String namespaceId;
 
+    // The number of the page to return.
     @NameInMap("PageNum")
     public Integer pageNum;
 
+    // The number of entries to return on each page.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The region ID.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The extended request parameters in the JSON format.
     @NameInMap("RequestPars")
     public String requestPars;
 
+    // The name of the service whose listeners you want to query.
     @NameInMap("ServiceName")
     public String serviceName;
 

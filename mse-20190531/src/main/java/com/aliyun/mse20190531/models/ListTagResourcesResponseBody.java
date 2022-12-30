@@ -4,7 +4,7 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
-    // The error code returned.
+    // The error code returned if the request failed.
     @NameInMap("ErrorCode")
     public String errorCode;
 

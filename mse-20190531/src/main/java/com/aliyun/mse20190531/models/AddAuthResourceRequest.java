@@ -11,6 +11,9 @@ public class AddAuthResourceRequest extends TeaModel {
     @NameInMap("AuthId")
     public Long authId;
 
+    @NameInMap("AuthResourceHeaderList")
+    public java.util.List<AddAuthResourceRequestAuthResourceHeaderList> authResourceHeaderList;
+
     // The ID of the domain name.
     @NameInMap("DomainId")
     public Long domainId;
@@ -18,6 +21,9 @@ public class AddAuthResourceRequest extends TeaModel {
     // The unique ID of the gateway.
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
+
+    @NameInMap("IgnoreCase")
+    public Boolean ignoreCase;
 
     @NameInMap("MatchType")
     public String matchType;
@@ -47,6 +53,14 @@ public class AddAuthResourceRequest extends TeaModel {
         return this.authId;
     }
 
+    public AddAuthResourceRequest setAuthResourceHeaderList(java.util.List<AddAuthResourceRequestAuthResourceHeaderList> authResourceHeaderList) {
+        this.authResourceHeaderList = authResourceHeaderList;
+        return this;
+    }
+    public java.util.List<AddAuthResourceRequestAuthResourceHeaderList> getAuthResourceHeaderList() {
+        return this.authResourceHeaderList;
+    }
+
     public AddAuthResourceRequest setDomainId(Long domainId) {
         this.domainId = domainId;
         return this;
@@ -63,6 +77,14 @@ public class AddAuthResourceRequest extends TeaModel {
         return this.gatewayUniqueId;
     }
 
+    public AddAuthResourceRequest setIgnoreCase(Boolean ignoreCase) {
+        this.ignoreCase = ignoreCase;
+        return this;
+    }
+    public Boolean getIgnoreCase() {
+        return this.ignoreCase;
+    }
+
     public AddAuthResourceRequest setMatchType(String matchType) {
         this.matchType = matchType;
         return this;
@@ -77,6 +99,47 @@ public class AddAuthResourceRequest extends TeaModel {
     }
     public String getPath() {
         return this.path;
+    }
+
+    public static class AddAuthResourceRequestAuthResourceHeaderList extends TeaModel {
+        @NameInMap("HeaderKey")
+        public String headerKey;
+
+        @NameInMap("HeaderMethod")
+        public String headerMethod;
+
+        @NameInMap("HeaderValue")
+        public String headerValue;
+
+        public static AddAuthResourceRequestAuthResourceHeaderList build(java.util.Map<String, ?> map) throws Exception {
+            AddAuthResourceRequestAuthResourceHeaderList self = new AddAuthResourceRequestAuthResourceHeaderList();
+            return TeaModel.build(map, self);
+        }
+
+        public AddAuthResourceRequestAuthResourceHeaderList setHeaderKey(String headerKey) {
+            this.headerKey = headerKey;
+            return this;
+        }
+        public String getHeaderKey() {
+            return this.headerKey;
+        }
+
+        public AddAuthResourceRequestAuthResourceHeaderList setHeaderMethod(String headerMethod) {
+            this.headerMethod = headerMethod;
+            return this;
+        }
+        public String getHeaderMethod() {
+            return this.headerMethod;
+        }
+
+        public AddAuthResourceRequestAuthResourceHeaderList setHeaderValue(String headerValue) {
+            this.headerValue = headerValue;
+            return this;
+        }
+        public String getHeaderValue() {
+            return this.headerValue;
+        }
+
     }
 
 }
