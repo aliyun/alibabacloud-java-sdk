@@ -7,6 +7,7 @@ public class GetPublicMediaInfoResponseBody extends TeaModel {
     @NameInMap("MediaInfo")
     public GetPublicMediaInfoResponseBodyMediaInfo mediaInfo;
 
+    // RequestId
     @NameInMap("RequestId")
     public String requestId;
 
@@ -857,6 +858,7 @@ public class GetPublicMediaInfoResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        // MediaId
         @NameInMap("MediaId")
         public String mediaId;
 
@@ -1015,9 +1017,11 @@ public class GetPublicMediaInfoResponseBody extends TeaModel {
         @NameInMap("DynamicMetaData")
         public GetPublicMediaInfoResponseBodyMediaInfoDynamicMetaData dynamicMetaData;
 
+        // FileInfos
         @NameInMap("FileInfoList")
         public java.util.List<GetPublicMediaInfoResponseBodyMediaInfoFileInfoList> fileInfoList;
 
+        // BasicInfo
         @NameInMap("MediaBasicInfo")
         public GetPublicMediaInfoResponseBodyMediaInfoMediaBasicInfo mediaBasicInfo;
 

@@ -234,6 +234,7 @@ public class ListPublicMediaBasicInfosResponseBody extends TeaModel {
         @NameInMap("InputURL")
         public String inputURL;
 
+        // MediaId
         @NameInMap("MediaId")
         public String mediaId;
 
@@ -408,9 +409,11 @@ public class ListPublicMediaBasicInfosResponseBody extends TeaModel {
     }
 
     public static class ListPublicMediaBasicInfosResponseBodyMediaInfos extends TeaModel {
+        // FileInfos
         @NameInMap("FileInfoList")
         public java.util.List<ListPublicMediaBasicInfosResponseBodyMediaInfosFileInfoList> fileInfoList;
 
+        // BasicInfo
         @NameInMap("MediaBasicInfo")
         public ListPublicMediaBasicInfosResponseBodyMediaInfosMediaBasicInfo mediaBasicInfo;
 

@@ -32,6 +32,12 @@ public class GetMediaInfoResponseBody extends TeaModel {
     }
 
     public static class GetMediaInfoResponseBodyMediaInfoAiRoughData extends TeaModel {
+        @NameInMap("AiCategory")
+        public String aiCategory;
+
+        @NameInMap("AiJobId")
+        public String aiJobId;
+
         @NameInMap("Result")
         public String result;
 
@@ -44,6 +50,22 @@ public class GetMediaInfoResponseBody extends TeaModel {
         public static GetMediaInfoResponseBodyMediaInfoAiRoughData build(java.util.Map<String, ?> map) throws Exception {
             GetMediaInfoResponseBodyMediaInfoAiRoughData self = new GetMediaInfoResponseBodyMediaInfoAiRoughData();
             return TeaModel.build(map, self);
+        }
+
+        public GetMediaInfoResponseBodyMediaInfoAiRoughData setAiCategory(String aiCategory) {
+            this.aiCategory = aiCategory;
+            return this;
+        }
+        public String getAiCategory() {
+            return this.aiCategory;
+        }
+
+        public GetMediaInfoResponseBodyMediaInfoAiRoughData setAiJobId(String aiJobId) {
+            this.aiJobId = aiJobId;
+            return this;
+        }
+        public String getAiJobId() {
+            return this.aiJobId;
         }
 
         public GetMediaInfoResponseBodyMediaInfoAiRoughData setResult(String result) {
@@ -902,6 +924,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
         @NameInMap("InputURL")
         public String inputURL;
 
+        // MediaId
         @NameInMap("MediaId")
         public String mediaId;
 
@@ -1117,6 +1140,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
         @NameInMap("FileInfoList")
         public java.util.List<GetMediaInfoResponseBodyMediaInfoFileInfoList> fileInfoList;
 
+        // BasicInfo
         @NameInMap("MediaBasicInfo")
         public GetMediaInfoResponseBodyMediaInfoMediaBasicInfo mediaBasicInfo;
 

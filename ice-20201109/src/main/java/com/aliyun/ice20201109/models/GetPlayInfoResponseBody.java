@@ -153,6 +153,9 @@ public class GetPlayInfoResponseBody extends TeaModel {
         @NameInMap("Height")
         public Long height;
 
+        @NameInMap("JobId")
+        public String jobId;
+
         @NameInMap("ModificationTime")
         public String modificationTime;
 
@@ -282,6 +285,14 @@ public class GetPlayInfoResponseBody extends TeaModel {
         }
         public Long getHeight() {
             return this.height;
+        }
+
+        public GetPlayInfoResponseBodyPlayInfoList setJobId(String jobId) {
+            this.jobId = jobId;
+            return this;
+        }
+        public String getJobId() {
+            return this.jobId;
         }
 
         public GetPlayInfoResponseBodyPlayInfoList setModificationTime(String modificationTime) {

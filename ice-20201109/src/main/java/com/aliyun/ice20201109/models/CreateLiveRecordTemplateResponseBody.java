@@ -7,6 +7,7 @@ public class CreateLiveRecordTemplateResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    // 代表资源一级ID的资源属性字段
     @NameInMap("TemplateId")
     public String templateId;
 

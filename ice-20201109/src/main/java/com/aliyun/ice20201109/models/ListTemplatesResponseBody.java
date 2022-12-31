@@ -43,6 +43,7 @@ public class ListTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListTemplatesResponseBodyTemplates extends TeaModel {
+        // ClipsParam
         @NameInMap("ClipsParam")
         public String clipsParam;
 

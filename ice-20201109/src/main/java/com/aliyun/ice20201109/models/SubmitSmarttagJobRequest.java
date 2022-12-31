@@ -13,6 +13,7 @@ public class SubmitSmarttagJobRequest extends TeaModel {
     @NameInMap("ContentType")
     public String contentType;
 
+    // input
     @NameInMap("Input")
     public SubmitSmarttagJobRequestInput input;
 
@@ -22,6 +23,7 @@ public class SubmitSmarttagJobRequest extends TeaModel {
     @NameInMap("Params")
     public String params;
 
+    // scheduleConfig
     @NameInMap("ScheduleConfig")
     public SubmitSmarttagJobRequestScheduleConfig scheduleConfig;
 

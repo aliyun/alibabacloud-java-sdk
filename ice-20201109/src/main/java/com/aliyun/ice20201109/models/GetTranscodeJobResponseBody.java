@@ -7,6 +7,7 @@ public class GetTranscodeJobResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    // TranscodeParentJobWithSubJobDTO
     @NameInMap("TranscodeParentJob")
     public GetTranscodeJobResponseBodyTranscodeParentJob transcodeParentJob;
 

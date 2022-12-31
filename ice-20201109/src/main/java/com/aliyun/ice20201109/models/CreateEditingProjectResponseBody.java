@@ -7,6 +7,7 @@ public class CreateEditingProjectResponseBody extends TeaModel {
     @NameInMap("Project")
     public CreateEditingProjectResponseBodyProject project;
 
+    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
