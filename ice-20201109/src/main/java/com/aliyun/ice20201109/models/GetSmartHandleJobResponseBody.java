@@ -95,9 +95,11 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
     }
 
     public static class GetSmartHandleJobResponseBodySmartJobInfoOutputConfig extends TeaModel {
+        // OSS Bucket
         @NameInMap("Bucket")
         public String bucket;
 
+        // OSS Object
         @NameInMap("Object")
         public String object;
 
@@ -146,6 +148,7 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
         @NameInMap("Title")
         public String title;
 
+        // userid。
         @NameInMap("UserId")
         public String userId;
 

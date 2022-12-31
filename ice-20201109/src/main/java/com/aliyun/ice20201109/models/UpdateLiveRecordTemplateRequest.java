@@ -4,12 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class UpdateLiveRecordTemplateRequest extends TeaModel {
+    // 代表资源名称的资源属性字段
     @NameInMap("Name")
     public String name;
 
+    // 录制格式
     @NameInMap("RecordFormat")
     public java.util.List<UpdateLiveRecordTemplateRequestRecordFormat> recordFormat;
 
+    // 代表资源一级ID的资源属性字段
     @NameInMap("TemplateId")
     public String templateId;
 
@@ -46,15 +49,19 @@ public class UpdateLiveRecordTemplateRequest extends TeaModel {
         @NameInMap("CycleDuration")
         public Integer cycleDuration;
 
+        // 格式
         @NameInMap("Format")
         public String format;
 
+        // Oss对象名，不包含后缀
         @NameInMap("OssObjectPrefix")
         public String ossObjectPrefix;
 
+        // 切片时长
         @NameInMap("SliceDuration")
         public Integer sliceDuration;
 
+        // 切片Oss对象名，不包含后缀
         @NameInMap("SliceOssObjectPrefix")
         public String sliceOssObjectPrefix;
 

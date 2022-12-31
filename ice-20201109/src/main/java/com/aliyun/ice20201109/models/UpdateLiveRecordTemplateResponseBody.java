@@ -4,6 +4,7 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class UpdateLiveRecordTemplateResponseBody extends TeaModel {
+    // 代表资源一级ID的资源属性字段
     @NameInMap("RequestId")
     public String requestId;
 

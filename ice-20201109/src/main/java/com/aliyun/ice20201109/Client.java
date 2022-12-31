@@ -522,8 +522,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateLiveTranscodeTemplateShrinkRequest request = new CreateLiveTranscodeTemplateShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.templateConfig))) {
-            request.templateConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.templateConfig), "TemplateConfig", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.templateConfig)) {
+            request.templateConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.templateConfig, "TemplateConfig", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2341,6 +2341,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
             query.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.requestSource)) {
+            query.put("RequestSource", request.requestSource);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -4841,20 +4845,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         SubmitDynamicImageJobShrinkRequest request = new SubmitDynamicImageJobShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.input))) {
-            request.inputShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.input), "Input", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.input)) {
+            request.inputShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.input, "Input", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.output))) {
-            request.outputShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.output), "Output", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.output)) {
+            request.outputShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.output, "Output", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.scheduleConfig))) {
-            request.scheduleConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.scheduleConfig), "ScheduleConfig", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.scheduleConfig)) {
+            request.scheduleConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.scheduleConfig, "ScheduleConfig", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.templateConfig))) {
-            request.templateConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.templateConfig), "TemplateConfig", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.templateConfig)) {
+            request.templateConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.templateConfig, "TemplateConfig", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4908,16 +4912,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         SubmitIProductionJobShrinkRequest request = new SubmitIProductionJobShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.input))) {
-            request.inputShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.input), "Input", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.input)) {
+            request.inputShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.input, "Input", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.output))) {
-            request.outputShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.output), "Output", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.output)) {
+            request.outputShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.output, "Output", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.scheduleConfig))) {
-            request.scheduleConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.scheduleConfig), "ScheduleConfig", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.scheduleConfig)) {
+            request.scheduleConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.scheduleConfig, "ScheduleConfig", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5032,12 +5036,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         SubmitLiveRecordJobShrinkRequest request = new SubmitLiveRecordJobShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.recordOutput))) {
-            request.recordOutputShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.recordOutput), "RecordOutput", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.recordOutput)) {
+            request.recordOutputShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.recordOutput, "RecordOutput", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.streamInput))) {
-            request.streamInputShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.streamInput), "StreamInput", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.streamInput)) {
+            request.streamInputShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.streamInput, "StreamInput", "json");
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -5087,12 +5091,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         SubmitLiveSnapshotJobShrinkRequest request = new SubmitLiveSnapshotJobShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.snapshotOutput))) {
-            request.snapshotOutputShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.snapshotOutput), "SnapshotOutput", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.snapshotOutput)) {
+            request.snapshotOutputShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.snapshotOutput, "SnapshotOutput", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.streamInput))) {
-            request.streamInputShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.streamInput), "StreamInput", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.streamInput)) {
+            request.streamInputShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.streamInput, "StreamInput", "json");
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -5142,16 +5146,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         SubmitLiveTranscodeJobShrinkRequest request = new SubmitLiveTranscodeJobShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.streamInput))) {
-            request.streamInputShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.streamInput), "StreamInput", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.streamInput)) {
+            request.streamInputShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.streamInput, "StreamInput", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.timedConfig))) {
-            request.timedConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.timedConfig), "TimedConfig", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.timedConfig)) {
+            request.timedConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.timedConfig, "TimedConfig", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.transcodeOutput))) {
-            request.transcodeOutputShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.transcodeOutput), "TranscodeOutput", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.transcodeOutput)) {
+            request.transcodeOutputShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.transcodeOutput, "TranscodeOutput", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5205,12 +5209,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         SubmitMediaCensorJobShrinkRequest request = new SubmitMediaCensorJobShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.input))) {
-            request.inputShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.input), "Input", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.input)) {
+            request.inputShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.input, "Input", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.scheduleConfig))) {
-            request.scheduleConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.scheduleConfig), "ScheduleConfig", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.scheduleConfig)) {
+            request.scheduleConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.scheduleConfig, "ScheduleConfig", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5280,12 +5284,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         SubmitMediaInfoJobShrinkRequest request = new SubmitMediaInfoJobShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.input))) {
-            request.inputShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.input), "Input", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.input)) {
+            request.inputShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.input, "Input", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.scheduleConfig))) {
-            request.scheduleConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.scheduleConfig), "ScheduleConfig", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.scheduleConfig)) {
+            request.scheduleConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.scheduleConfig, "ScheduleConfig", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5404,12 +5408,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.inputsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.inputs, "Inputs", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.output))) {
-            request.outputShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.output), "Output", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.output)) {
+            request.outputShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.output, "Output", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.scheduleConfig))) {
-            request.scheduleConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.scheduleConfig), "ScheduleConfig", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.scheduleConfig)) {
+            request.scheduleConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.scheduleConfig, "ScheduleConfig", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5459,12 +5463,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         SubmitSmarttagJobShrinkRequest request = new SubmitSmarttagJobShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.input))) {
-            request.inputShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.input), "Input", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.input)) {
+            request.inputShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.input, "Input", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.scheduleConfig))) {
-            request.scheduleConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.scheduleConfig), "ScheduleConfig", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.scheduleConfig)) {
+            request.scheduleConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.scheduleConfig, "ScheduleConfig", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5534,20 +5538,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         SubmitSnapshotJobShrinkRequest request = new SubmitSnapshotJobShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.input))) {
-            request.inputShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.input), "Input", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.input)) {
+            request.inputShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.input, "Input", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.output))) {
-            request.outputShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.output), "Output", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.output)) {
+            request.outputShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.output, "Output", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.scheduleConfig))) {
-            request.scheduleConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.scheduleConfig), "ScheduleConfig", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.scheduleConfig)) {
+            request.scheduleConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.scheduleConfig, "ScheduleConfig", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.templateConfig))) {
-            request.templateConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.templateConfig), "TemplateConfig", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.templateConfig)) {
+            request.templateConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.templateConfig, "TemplateConfig", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5597,6 +5601,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.submitSnapshotJobWithOptions(request, runtime);
     }
 
+    /**
+      * @deprecated
+      *
+      * @param request SubmitSubtitleProduceJobRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return SubmitSubtitleProduceJobResponse
+     */
     public SubmitSubtitleProduceJobResponse submitSubtitleProduceJobWithOptions(SubmitSubtitleProduceJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5649,6 +5660,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitSubtitleProduceJobResponse());
     }
 
+    /**
+      * @deprecated
+      *
+      * @param request SubmitSubtitleProduceJobRequest
+      * @return SubmitSubtitleProduceJobResponse
+     */
     public SubmitSubtitleProduceJobResponse submitSubtitleProduceJob(SubmitSubtitleProduceJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.submitSubtitleProduceJobWithOptions(request, runtime);
@@ -5658,12 +5675,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         SubmitSyncMediaInfoJobShrinkRequest request = new SubmitSyncMediaInfoJobShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.input))) {
-            request.inputShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.input), "Input", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.input)) {
+            request.inputShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.input, "Input", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.scheduleConfig))) {
-            request.scheduleConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.scheduleConfig), "ScheduleConfig", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.scheduleConfig)) {
+            request.scheduleConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.scheduleConfig, "ScheduleConfig", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5717,8 +5734,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.outputGroupShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.outputGroup, "OutputGroup", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.scheduleConfig))) {
-            request.scheduleConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.scheduleConfig), "ScheduleConfig", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.scheduleConfig)) {
+            request.scheduleConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.scheduleConfig, "ScheduleConfig", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5983,16 +6000,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         UpdateLiveTranscodeJobShrinkRequest request = new UpdateLiveTranscodeJobShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.streamInput))) {
-            request.streamInputShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.streamInput), "StreamInput", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.streamInput)) {
+            request.streamInputShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.streamInput, "StreamInput", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.timedConfig))) {
-            request.timedConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.timedConfig), "TimedConfig", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.timedConfig)) {
+            request.timedConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.timedConfig, "TimedConfig", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.transcodeOutput))) {
-            request.transcodeOutputShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.transcodeOutput), "TranscodeOutput", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.transcodeOutput)) {
+            request.transcodeOutputShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.transcodeOutput, "TranscodeOutput", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6042,8 +6059,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         UpdateLiveTranscodeTemplateShrinkRequest request = new UpdateLiveTranscodeTemplateShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.templateConfig))) {
-            request.templateConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.templateConfig), "TemplateConfig", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.templateConfig)) {
+            request.templateConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.templateConfig, "TemplateConfig", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6195,6 +6212,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updatePipelineWithOptions(request, runtime);
     }
 
+    /**
+      * @deprecated
+      *
+      * @param request UpdateSmartJobRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateSmartJobResponse
+     */
     public UpdateSmartJobResponse updateSmartJobWithOptions(UpdateSmartJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6223,6 +6247,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateSmartJobResponse());
     }
 
+    /**
+      * @deprecated
+      *
+      * @param request UpdateSmartJobRequest
+      * @return UpdateSmartJobResponse
+     */
     public UpdateSmartJobResponse updateSmartJob(UpdateSmartJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateSmartJobWithOptions(request, runtime);

@@ -52,6 +52,7 @@ public class ListLiveSnapshotFilesResponseBody extends TeaModel {
         @NameInMap("IsOverlay")
         public Boolean isOverlay;
 
+        // OSS bucket。
         @NameInMap("OssBucket")
         public String ossBucket;
 

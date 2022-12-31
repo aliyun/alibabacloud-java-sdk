@@ -32,12 +32,15 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
     }
 
     public static class GetDynamicImageJobResponseBodyDynamicImageJobInputOssFile extends TeaModel {
+        // OSS Bucket
         @NameInMap("Bucket")
         public String bucket;
 
+        // OSS Location
         @NameInMap("Location")
         public String location;
 
+        // OSS Object
         @NameInMap("Object")
         public String object;
 
@@ -114,12 +117,15 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
     }
 
     public static class GetDynamicImageJobResponseBodyDynamicImageJobOutputOssFile extends TeaModel {
+        // OSS Bucket
         @NameInMap("Bucket")
         public String bucket;
 
+        // OSS Location
         @NameInMap("Location")
         public String location;
 
+        // OSS Object
         @NameInMap("Object")
         public String object;
 

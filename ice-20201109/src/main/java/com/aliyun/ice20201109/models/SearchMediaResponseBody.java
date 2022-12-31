@@ -476,8 +476,8 @@ public class SearchMediaResponseBody extends TeaModel {
     }
 
     public static class SearchMediaResponseBodyMediaInfoListAiRoughData extends TeaModel {
-        @NameInMap("AiCategoryLevel1")
-        public String aiCategoryLevel1;
+        @NameInMap("AiCategory")
+        public String aiCategory;
 
         @NameInMap("AiJobId")
         public String aiJobId;
@@ -496,12 +496,12 @@ public class SearchMediaResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public SearchMediaResponseBodyMediaInfoListAiRoughData setAiCategoryLevel1(String aiCategoryLevel1) {
-            this.aiCategoryLevel1 = aiCategoryLevel1;
+        public SearchMediaResponseBodyMediaInfoListAiRoughData setAiCategory(String aiCategory) {
+            this.aiCategory = aiCategory;
             return this;
         }
-        public String getAiCategoryLevel1() {
-            return this.aiCategoryLevel1;
+        public String getAiCategory() {
+            return this.aiCategory;
         }
 
         public SearchMediaResponseBodyMediaInfoListAiRoughData setAiJobId(String aiJobId) {
@@ -976,6 +976,7 @@ public class SearchMediaResponseBody extends TeaModel {
         @NameInMap("AiRoughData")
         public SearchMediaResponseBodyMediaInfoListAiRoughData aiRoughData;
 
+        // FileInfos。
         @NameInMap("FileInfoList")
         public java.util.List<SearchMediaResponseBodyMediaInfoListFileInfoList> fileInfoList;
 

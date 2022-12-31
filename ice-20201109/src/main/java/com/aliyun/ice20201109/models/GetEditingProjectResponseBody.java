@@ -80,6 +80,12 @@ public class GetEditingProjectResponseBody extends TeaModel {
         @NameInMap("Timeline")
         public String timeline;
 
+        @NameInMap("TimelineConvertErrorMessage")
+        public String timelineConvertErrorMessage;
+
+        @NameInMap("TimelineConvertStatus")
+        public String timelineConvertStatus;
+
         @NameInMap("Title")
         public String title;
 
@@ -214,6 +220,22 @@ public class GetEditingProjectResponseBody extends TeaModel {
         }
         public String getTimeline() {
             return this.timeline;
+        }
+
+        public GetEditingProjectResponseBodyProject setTimelineConvertErrorMessage(String timelineConvertErrorMessage) {
+            this.timelineConvertErrorMessage = timelineConvertErrorMessage;
+            return this;
+        }
+        public String getTimelineConvertErrorMessage() {
+            return this.timelineConvertErrorMessage;
+        }
+
+        public GetEditingProjectResponseBodyProject setTimelineConvertStatus(String timelineConvertStatus) {
+            this.timelineConvertStatus = timelineConvertStatus;
+            return this;
+        }
+        public String getTimelineConvertStatus() {
+            return this.timelineConvertStatus;
         }
 
         public GetEditingProjectResponseBodyProject setTitle(String title) {

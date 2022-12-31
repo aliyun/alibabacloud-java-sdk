@@ -4,6 +4,7 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class DeleteLiveRecordTemplateRequest extends TeaModel {
+    // 代表资源一级ID的资源属性字段
     @NameInMap("TemplateId")
     public String templateId;
 
