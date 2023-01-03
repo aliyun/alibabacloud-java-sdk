@@ -4,36 +4,67 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ApplyScenarioShrinkRequest extends TeaModel {
+    // The ID of the application.
     @NameInMap("AppId")
     public String appId;
 
+    // The configuration of the business monitoring job. The value is a JSON string. For more information about this parameter, see the following additional information about the **Config** parameter.
     @NameInMap("Config")
     public String configShrink;
 
+    // The name of the business monitoring job.
     @NameInMap("Name")
     public String name;
 
+    // The ID of the region.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The scenario where you want to use the business monitoring job. Valid values:
+    // 
+    // *   `USER-DEFINED`: user-defined. This is the default value.
+    // *   `EDAS-ROLLOUT`: application release in Enterprise Distributed Application Service (EDAS)
+    // *   `OAM-ROLLOUT`: application release based on Open Application Model (OAM)
+    // *   `MSC-CANARY`: canary release based on Microservice Engine (MSE)
     @NameInMap("Scenario")
     public String scenario;
 
+    // The code of the business monitoring job. This parameter is not required when you create a business monitoring job. However, this parameter is required when you update a business monitoring job.
     @NameInMap("Sign")
     public String sign;
 
+    // Specifies whether to record business parameters to the trace marked with the coloring sign.
+    // 
+    // *   `true`
+    // *   `false`: This is the default value.
     @NameInMap("SnDump")
     public Boolean snDump;
 
+    // Specifies whether traffic in the trace marked with the coloring sign is all collected.
+    // 
+    // *   `true`
+    // *   `false`: This is the default value.
     @NameInMap("SnForce")
     public Boolean snForce;
 
+    // Specifies whether to count traffic based on the coloring sign.
+    // 
+    // *   `true`
+    // *   `false`: This is the default value.
     @NameInMap("SnStat")
     public Boolean snStat;
 
+    // Specifies whether the coloring sign is transparently passed down to downstream application nodes in the trace.
+    // 
+    // *   `true`
+    // *   `false`: This is the default value.
     @NameInMap("SnTransfer")
     public Boolean snTransfer;
 
+    // Specifies whether the operation is an update operation.
+    // 
+    // *   `true`: update
+    // *   `false`: insert
     @NameInMap("UpdateOption")
     public Boolean updateOption;
 

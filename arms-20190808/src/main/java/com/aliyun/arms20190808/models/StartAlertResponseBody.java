@@ -4,9 +4,14 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class StartAlertResponseBody extends TeaModel {
+    // Indicates whether the call was successful.
+    // 
+    // *   `true`: The call was successful.
+    // *   `false`: The call failed.
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

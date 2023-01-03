@@ -4,11 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListRetcodeAppsRequest extends TeaModel {
+    // The ID of the region.
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
+    @NameInMap("Tags")
+    public java.util.List<ListRetcodeAppsRequestTags> tags;
 
     public static ListRetcodeAppsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListRetcodeAppsRequest self = new ListRetcodeAppsRequest();
@@ -23,12 +27,50 @@ public class ListRetcodeAppsRequest extends TeaModel {
         return this.regionId;
     }
 
-    public ListRetcodeAppsRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public ListRetcodeAppsRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public ListRetcodeAppsRequest setTags(java.util.List<ListRetcodeAppsRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<ListRetcodeAppsRequestTags> getTags() {
+        return this.tags;
+    }
+
+    public static class ListRetcodeAppsRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListRetcodeAppsRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            ListRetcodeAppsRequestTags self = new ListRetcodeAppsRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListRetcodeAppsRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListRetcodeAppsRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

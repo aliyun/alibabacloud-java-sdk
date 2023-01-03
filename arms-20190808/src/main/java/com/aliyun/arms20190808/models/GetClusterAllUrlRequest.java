@@ -4,9 +4,11 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GetClusterAllUrlRequest extends TeaModel {
+    // The ID of the cluster.
     @NameInMap("ClusterId")
     public String clusterId;
 
+    // The ID of the region. Default value: cn-hangzhou.
     @NameInMap("RegionId")
     public String regionId;
 

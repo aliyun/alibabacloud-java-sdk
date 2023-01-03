@@ -4,18 +4,31 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListTraceAppsResponseBody extends TeaModel {
+    // The HTTP status code returned for the request. Valid values:
+    // 
+    // *   `2XX`: The request is successful.
+    // *   `3XX`: A redirection message is returned.
+    // *   `4XX`: The request is invalid.
+    // *   `5XX`: A server error occurs.
     @NameInMap("Code")
     public Integer code;
 
+    // The error message returned when the request parameters are invalid.
     @NameInMap("Message")
     public String message;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the call is successful. Valid values:
+    // 
+    // *   `true`: The call is successful.
+    // *   `false`: The call fails.
     @NameInMap("Success")
     public Boolean success;
 
+    // The list of application monitoring tasks.
     @NameInMap("TraceApps")
     public java.util.List<ListTraceAppsResponseBodyTraceApps> traceApps;
 
@@ -64,34 +77,89 @@ public class ListTraceAppsResponseBody extends TeaModel {
         return this.traceApps;
     }
 
+    public static class ListTraceAppsResponseBodyTraceAppsTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListTraceAppsResponseBodyTraceAppsTags build(java.util.Map<String, ?> map) throws Exception {
+            ListTraceAppsResponseBodyTraceAppsTags self = new ListTraceAppsResponseBodyTraceAppsTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListTraceAppsResponseBodyTraceAppsTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListTraceAppsResponseBodyTraceAppsTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListTraceAppsResponseBodyTraceApps extends TeaModel {
+        // The ID of the application.
         @NameInMap("AppId")
         public Long appId;
 
+        // The name of the application.
         @NameInMap("AppName")
         public String appName;
 
+        // The timestamp when the application was created. Unit: milliseconds.
         @NameInMap("CreateTime")
         public Long createTime;
 
+        // The tag of the application.
         @NameInMap("Labels")
         public java.util.List<String> labels;
 
+        // The process identifier (PID) of the application.
         @NameInMap("Pid")
         public String pid;
 
+        // The ID of the region.
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        // Indicates whether the application is displayed in the Application Real-Time Monitoring Service (ARMS) console. Valid values:
+        // 
+        // *   `true`: The application is displayed in the ARMS console.
+        // *   `false`: The application is not displayed in the ARMS console.
         @NameInMap("Show")
         public Boolean show;
 
+        @NameInMap("Source")
+        public String source;
+
+        @NameInMap("Tags")
+        public java.util.List<ListTraceAppsResponseBodyTraceAppsTags> tags;
+
+        // The type of the monitoring task. Valid values:
+        // 
+        // *   `TRACE`: application monitoring
+        // *   `RETCODE`: frontend monitoring
         @NameInMap("Type")
         public String type;
 
+        // The timestamp when the task was updated. Unit: milliseconds.
         @NameInMap("UpdateTime")
         public Long updateTime;
 
+        // The ID of the user.
         @NameInMap("UserId")
         public String userId;
 
@@ -148,12 +216,36 @@ public class ListTraceAppsResponseBody extends TeaModel {
             return this.regionId;
         }
 
+        public ListTraceAppsResponseBodyTraceApps setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
         public ListTraceAppsResponseBodyTraceApps setShow(Boolean show) {
             this.show = show;
             return this;
         }
         public Boolean getShow() {
             return this.show;
+        }
+
+        public ListTraceAppsResponseBodyTraceApps setSource(String source) {
+            this.source = source;
+            return this;
+        }
+        public String getSource() {
+            return this.source;
+        }
+
+        public ListTraceAppsResponseBodyTraceApps setTags(java.util.List<ListTraceAppsResponseBodyTraceAppsTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListTraceAppsResponseBodyTraceAppsTags> getTags() {
+            return this.tags;
         }
 
         public ListTraceAppsResponseBodyTraceApps setType(String type) {

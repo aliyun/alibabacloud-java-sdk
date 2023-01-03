@@ -4,9 +4,11 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListSilencePoliciesResponseBody extends TeaModel {
+    // An array of returned objects.
     @NameInMap("PageBean")
     public ListSilencePoliciesResponseBodyPageBean pageBean;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +34,22 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
     }
 
     public static class ListSilencePoliciesResponseBodyPageBeanSilencePoliciesMatchingRulesMatchingConditions extends TeaModel {
+        // The key of the matching condition.
         @NameInMap("Key")
         public String key;
 
+        // The logical operator of the matching condition. Valid values:
+        // 
+        // *   `eq`: equal to.
+        // *   `neq`: not equal to.
+        // *   `in`: contains.
+        // *   `nin`: does not contain.
+        // *   `re`: regular expression match.
+        // *   `nre`: regular expression mismatch.
         @NameInMap("Operator")
         public String operator;
 
+        // The value of the matching condition.
         @NameInMap("Value")
         public String value;
 
@@ -73,6 +85,7 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
     }
 
     public static class ListSilencePoliciesResponseBodyPageBeanSilencePoliciesMatchingRules extends TeaModel {
+        // An array of matching condition objects.
         @NameInMap("MatchingConditions")
         public java.util.List<ListSilencePoliciesResponseBodyPageBeanSilencePoliciesMatchingRulesMatchingConditions> matchingConditions;
 
@@ -92,12 +105,15 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
     }
 
     public static class ListSilencePoliciesResponseBodyPageBeanSilencePolicies extends TeaModel {
+        // The ID of the silence policy.
         @NameInMap("Id")
         public Long id;
 
+        // An array of matching rule objects.
         @NameInMap("MatchingRules")
         public java.util.List<ListSilencePoliciesResponseBodyPageBeanSilencePoliciesMatchingRules> matchingRules;
 
+        // The name of the silence policy.
         @NameInMap("Name")
         public String name;
 
@@ -133,15 +149,19 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
     }
 
     public static class ListSilencePoliciesResponseBodyPageBean extends TeaModel {
+        // The number of pages that were returned.
         @NameInMap("Page")
         public Long page;
 
+        // An array of silence policy objects.
         @NameInMap("SilencePolicies")
         public java.util.List<ListSilencePoliciesResponseBodyPageBeanSilencePolicies> silencePolicies;
 
+        // The number of entries that were returned on each page.
         @NameInMap("Size")
         public Long size;
 
+        // The number of silence policies that were returned.
         @NameInMap("Total")
         public Long total;
 

@@ -4,9 +4,11 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListClusterFromGrafanaResponseBody extends TeaModel {
+    // The cluster information.
     @NameInMap("PromClusterList")
     public java.util.List<ListClusterFromGrafanaResponseBodyPromClusterList> promClusterList;
 
+    // The ID of the request. You can query logs and troubleshoot issues based on the ID.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,57 +34,78 @@ public class ListClusterFromGrafanaResponseBody extends TeaModel {
     }
 
     public static class ListClusterFromGrafanaResponseBodyPromClusterList extends TeaModel {
+        // The status of the Prometheus agent on the cluster.
         @NameInMap("AgentStatus")
         public String agentStatus;
 
+        // The ID of cluster.
         @NameInMap("ClusterId")
         public String clusterId;
 
+        // The name of the cluster.
         @NameInMap("ClusterName")
         public String clusterName;
 
+        // The type of the instance.
         @NameInMap("ClusterType")
         public String clusterType;
 
+        // The ID of the controller.
         @NameInMap("ControllerId")
         public String controllerId;
 
+        // The time when the dashboard was created.
         @NameInMap("CreateTime")
         public Long createTime;
 
+        // The extended fields. This parameter is a JSON string.
         @NameInMap("Extra")
         public String extra;
 
+        // The ID of a database in the cluster.
         @NameInMap("Id")
         public Long id;
 
+        // The timestamp when the Prometheus agent was installed.
         @NameInMap("InstallTime")
         public Long installTime;
 
+        // Indicates whether the Prometheus agent was installed. Valid values:
+        // 
+        // *   true: The Prometheus agent was installed.
+        // *   false: The Prometheus agent was not installed.
         @NameInMap("IsControllerInstalled")
         public Boolean isControllerInstalled;
 
+        // The time when the last heartbeat was reported.
         @NameInMap("LastHeartBeatTime")
         public Long lastHeartBeatTime;
 
+        // The number of nodes.
         @NameInMap("NodeNum")
         public Integer nodeNum;
 
+        // The custom parameters.
         @NameInMap("Options")
         public String options;
 
+        // The list of nodejsonar logs.
         @NameInMap("PluginsJsonArray")
         public String pluginsJsonArray;
 
+        // The ID of the region.
         @NameInMap("RegionId")
         public String regionId;
 
+        // The information about applications deployed in the cluster.
         @NameInMap("StateJson")
         public String stateJson;
 
+        // The time when the dashboard was updated.
         @NameInMap("UpdateTime")
         public Long updateTime;
 
+        // The ID of the Alibaba Cloud account to which the cluster belongs.
         @NameInMap("UserId")
         public String userId;
 

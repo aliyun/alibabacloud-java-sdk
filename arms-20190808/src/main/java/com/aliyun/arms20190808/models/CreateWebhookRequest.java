@@ -4,27 +4,38 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class CreateWebhookRequest extends TeaModel {
+    // The notification template that is sent when an alert is triggered. This parameter is required if the **Method** parameter is set to **Post**. You can use the $content placeholder to specify the notification content. The content cannot exceed 500 characters in length.
     @NameInMap("Body")
     public String body;
 
+    // The name of the contact.
     @NameInMap("ContactName")
     public String contactName;
 
+    // The HTTP request header.
     @NameInMap("HttpHeaders")
     public String httpHeaders;
 
+    // The parameters in the HTTP request.
     @NameInMap("HttpParams")
     public String httpParams;
 
+    // The HTTP request method.
+    // 
+    // *   `Get`
+    // *   `Post`
     @NameInMap("Method")
     public String method;
 
+    // The notification template that is sent when an alert is resolved. This parameter is required if the **Method** parameter is set to **Post**. You can use the $content placeholder to specify the notification content. The content cannot exceed 500 characters in length.
     @NameInMap("RecoverBody")
     public String recoverBody;
 
+    // The region ID.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The URL of the request **method**.
     @NameInMap("Url")
     public String url;
 

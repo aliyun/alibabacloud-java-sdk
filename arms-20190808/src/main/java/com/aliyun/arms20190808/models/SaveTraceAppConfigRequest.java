@@ -4,9 +4,11 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class SaveTraceAppConfigRequest extends TeaModel {
+    // The process identifier (PID) of the application. For more information about how to obtain the PID, see [Obtain the PID of an application](~~186100~~#title-imy-7gj-qhr).
     @NameInMap("Pid")
     public String pid;
 
+    // The settings of Application Monitoring.
     @NameInMap("Settings")
     public java.util.List<SaveTraceAppConfigRequestSettings> settings;
 
@@ -32,9 +34,31 @@ public class SaveTraceAppConfigRequest extends TeaModel {
     }
 
     public static class SaveTraceAppConfigRequestSettings extends TeaModel {
+        // The value of the settings that you want to modify. For more information about the supported settings, see the following sections.
+        // 
+        // *   Trace sampling settings
+        // *   Main switch settings
+        // *   Threshold settings
+        // *   Advanced setting
+        // *   Thread settings
+        // *   Memory snapshot settings
+        // *   URL convergence settings
+        // *   Business log association settings
+        // *   Business monitoring settings
         @NameInMap("Key")
         public String key;
 
+        // The value of the settings that you want to modify. For more information about the supported settings, see the following sections.
+        // 
+        // *   Trace sampling settings
+        // *   Main switch settings
+        // *   Threshold settings
+        // *   Advanced setting
+        // *   Thread settings
+        // *   Memory snapshot settings
+        // *   URL convergence settings
+        // *   Business log association settings
+        // *   Business monitoring settings
         @NameInMap("Value")
         public String value;
 

@@ -4,9 +4,11 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GetStackResponseBody extends TeaModel {
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The information of the method stack.
     @NameInMap("StackInfo")
     public java.util.List<GetStackResponseBodyStackInfo> stackInfo;
 
@@ -32,9 +34,11 @@ public class GetStackResponseBody extends TeaModel {
     }
 
     public static class GetStackResponseBodyStackInfoExtInfo extends TeaModel {
+        // The content of the custom parameter.
         @NameInMap("Info")
         public String info;
 
+        // The type of the custom parameter.
         @NameInMap("Type")
         public String type;
 
@@ -62,27 +66,35 @@ public class GetStackResponseBody extends TeaModel {
     }
 
     public static class GetStackResponseBodyStackInfo extends TeaModel {
+        // The name of the operation.
         @NameInMap("Api")
         public String api;
 
+        // The duration. Unit: milliseconds.
         @NameInMap("Duration")
         public Long duration;
 
+        // The error message.
         @NameInMap("Exception")
         public String exception;
 
+        // The extended information.
         @NameInMap("ExtInfo")
         public GetStackResponseBodyStackInfoExtInfo extInfo;
 
+        // The number of rows in the method stack information.
         @NameInMap("Line")
         public String line;
 
+        // RPC ID。
         @NameInMap("RpcId")
         public String rpcId;
 
+        // The name of the service.
         @NameInMap("ServiceName")
         public String serviceName;
 
+        // The start time of the call method.
         @NameInMap("StartTime")
         public Long startTime;
 

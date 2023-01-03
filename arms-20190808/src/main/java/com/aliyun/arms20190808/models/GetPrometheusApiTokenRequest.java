@@ -4,6 +4,7 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GetPrometheusApiTokenRequest extends TeaModel {
+    // The region ID of the instance.
     @NameInMap("RegionId")
     public String regionId;
 

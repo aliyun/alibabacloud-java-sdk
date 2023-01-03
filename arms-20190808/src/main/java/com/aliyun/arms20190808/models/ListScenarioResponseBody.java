@@ -4,9 +4,11 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListScenarioResponseBody extends TeaModel {
+    // The detailed information of the business monitoring job.
     @NameInMap("ArmsScenarios")
     public java.util.List<ListScenarioResponseBodyArmsScenarios> armsScenarios;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,30 +34,39 @@ public class ListScenarioResponseBody extends TeaModel {
     }
 
     public static class ListScenarioResponseBodyArmsScenarios extends TeaModel {
+        // The ID of the application.
         @NameInMap("AppId")
         public String appId;
 
+        // The time when the business monitoring job was created.
         @NameInMap("CreateTime")
         public String createTime;
 
+        // The extended information. The value is a JSON string.
         @NameInMap("Extensions")
         public String extensions;
 
+        // The ID of the business monitoring job.
         @NameInMap("Id")
         public Long id;
 
+        // The name of the business monitoring job.
         @NameInMap("Name")
         public String name;
 
+        // The ID of the region.
         @NameInMap("RegionId")
         public String regionId;
 
+        // The code of the business monitoring job.
         @NameInMap("Sign")
         public String sign;
 
+        // The time when the business monitoring job was updated.
         @NameInMap("UpdateTime")
         public String updateTime;
 
+        // The ID of the user.
         @NameInMap("UserId")
         public String userId;
 

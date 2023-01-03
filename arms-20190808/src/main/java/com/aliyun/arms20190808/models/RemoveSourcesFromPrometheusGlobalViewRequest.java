@@ -4,15 +4,19 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class RemoveSourcesFromPrometheusGlobalViewRequest extends TeaModel {
+    // The ID of the aggregation instance.
     @NameInMap("GlobalViewClusterId")
     public String globalViewClusterId;
 
+    // The name of the aggregation instance.
     @NameInMap("GroupName")
     public String groupName;
 
+    // The ID of the region.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The list of custom data sources. You can specify multiple data sources and separate them with commas (,).
     @NameInMap("SourceNames")
     public String sourceNames;
 

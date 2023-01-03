@@ -4,9 +4,11 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DescribeContactsResponseBody extends TeaModel {
+    // The objects that were returned.
     @NameInMap("PageBean")
     public DescribeContactsResponseBodyPageBean pageBean;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,27 +34,55 @@ public class DescribeContactsResponseBody extends TeaModel {
     }
 
     public static class DescribeContactsResponseBodyPageBeanAlertContacts extends TeaModel {
+        @NameInMap("ArmsContactId")
+        public Long armsContactId;
+
+        // The ID of the alert contact.
         @NameInMap("ContactId")
         public Float contactId;
 
+        // The name of the alert contact.
         @NameInMap("ContactName")
         public String contactName;
 
+        // The email address of the alert contact.
         @NameInMap("Email")
         public String email;
 
+        @NameInMap("IsEmailVerify")
+        public Boolean isEmailVerify;
+
+        // Indicates whether the mobile number is verified. Valid values:
+        // 
+        // *   `false`: The mobile number is not verified.
+        // *   `true`: The mobile number is verified.
         @NameInMap("IsVerify")
         public Boolean isVerify;
 
+        // The mobile number of the alert contact.
         @NameInMap("Phone")
         public String phone;
 
+        // The method to resend notifications if phone notifications fail. Valid values:
+        // 
+        // *   0: do not resend notifications
+        // *   1: make a phone call again
+        // *   2: send a text message
+        // *   3 (default value): use the global default value
         @NameInMap("ReissueSendNotice")
         public Long reissueSendNotice;
 
         public static DescribeContactsResponseBodyPageBeanAlertContacts build(java.util.Map<String, ?> map) throws Exception {
             DescribeContactsResponseBodyPageBeanAlertContacts self = new DescribeContactsResponseBodyPageBeanAlertContacts();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeContactsResponseBodyPageBeanAlertContacts setArmsContactId(Long armsContactId) {
+            this.armsContactId = armsContactId;
+            return this;
+        }
+        public Long getArmsContactId() {
+            return this.armsContactId;
         }
 
         public DescribeContactsResponseBodyPageBeanAlertContacts setContactId(Float contactId) {
@@ -77,6 +107,14 @@ public class DescribeContactsResponseBody extends TeaModel {
         }
         public String getEmail() {
             return this.email;
+        }
+
+        public DescribeContactsResponseBodyPageBeanAlertContacts setIsEmailVerify(Boolean isEmailVerify) {
+            this.isEmailVerify = isEmailVerify;
+            return this;
+        }
+        public Boolean getIsEmailVerify() {
+            return this.isEmailVerify;
         }
 
         public DescribeContactsResponseBodyPageBeanAlertContacts setIsVerify(Boolean isVerify) {
@@ -106,15 +144,19 @@ public class DescribeContactsResponseBody extends TeaModel {
     }
 
     public static class DescribeContactsResponseBodyPageBean extends TeaModel {
+        // The alert contacts.
         @NameInMap("AlertContacts")
         public java.util.List<DescribeContactsResponseBodyPageBeanAlertContacts> alertContacts;
 
+        // The page number of the returned page.
         @NameInMap("Page")
         public Long page;
 
+        // The number of alert contacts returned per page.
         @NameInMap("Size")
         public Long size;
 
+        // The total number of alert contacts.
         @NameInMap("Total")
         public Long total;
 

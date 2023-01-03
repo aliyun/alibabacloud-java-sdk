@@ -4,21 +4,30 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListPrometheusAlertRulesRequest extends TeaModel {
+    // The ID of the cluster.
     @NameInMap("ClusterId")
     public String clusterId;
 
+    // The tag match conditions that are described in a JSON string. For more information about this parameter, see the **Additional description of the MatchExpressions parameter** section.
     @NameInMap("MatchExpressions")
     public String matchExpressions;
 
+    // The name of the alert rule.
     @NameInMap("Name")
     public String name;
 
+    // The ID of the region.
     @NameInMap("RegionId")
     public String regionId;
 
+    // Specifies whether the alert rule is enabled. Valid values:
+    // 
+    // *   `1`: The alert rule is enabled.
+    // *   `0`: The alert rule is disabled.
     @NameInMap("Status")
     public Integer status;
 
+    // The type of the alert rule.
     @NameInMap("Type")
     public String type;
 

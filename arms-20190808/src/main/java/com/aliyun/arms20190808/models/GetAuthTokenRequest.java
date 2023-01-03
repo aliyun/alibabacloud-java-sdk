@@ -4,9 +4,11 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GetAuthTokenRequest extends TeaModel {
+    // The ID of the ACK cluster.
     @NameInMap("ClusterId")
     public String clusterId;
 
+    // The region ID of the cluster.
     @NameInMap("RegionId")
     public String regionId;
 

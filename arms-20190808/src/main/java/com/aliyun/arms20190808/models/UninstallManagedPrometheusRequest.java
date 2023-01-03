@@ -4,15 +4,19 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class UninstallManagedPrometheusRequest extends TeaModel {
+    // The ID of the ASK cluster.
     @NameInMap("ClusterId")
     public String clusterId;
 
+    // The type of the cluster. You can query the dashboards of a virtual cluster by specifying the cluster type.
     @NameInMap("ClusterType")
     public String clusterType;
 
+    // The ID of the region.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The VPC of the ASK cluster.
     @NameInMap("VpcId")
     public String vpcId;
 

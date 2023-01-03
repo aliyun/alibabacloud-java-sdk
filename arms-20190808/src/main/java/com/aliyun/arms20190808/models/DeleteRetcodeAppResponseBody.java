@@ -4,9 +4,14 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DeleteRetcodeAppResponseBody extends TeaModel {
+    // Indicates whether the browser monitoring task was deleted. Valid values:
+    // 
+    // *   `true`: The browser monitoring task was deleted.
+    // *   `false`: The browser monitoring task failed to be deleted.
     @NameInMap("Data")
     public String data;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

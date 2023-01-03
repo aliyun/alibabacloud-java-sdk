@@ -4,9 +4,11 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class CreateOrUpdateWebhookContactResponseBody extends TeaModel {
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The returned WebhookContact object.
     @NameInMap("WebhookContact")
     public CreateOrUpdateWebhookContactResponseBodyWebhookContact webhookContact;
 
@@ -32,21 +34,30 @@ public class CreateOrUpdateWebhookContactResponseBody extends TeaModel {
     }
 
     public static class CreateOrUpdateWebhookContactResponseBodyWebhookContactWebhook extends TeaModel {
+        // The header of the HTTP request.
         @NameInMap("BizHeaders")
         public String bizHeaders;
 
+        // The parameters in the HTTP request.
         @NameInMap("BizParams")
         public String bizParams;
 
+        // The alert notification template.
         @NameInMap("Body")
         public String body;
 
+        // The HTTP request method. Valid values:
+        // 
+        // *   Post
+        // *   Get
         @NameInMap("Method")
         public String method;
 
+        // The alert recovery template.
         @NameInMap("RecoverBody")
         public String recoverBody;
 
+        // The URL of the request method.
         @NameInMap("Url")
         public String url;
 
@@ -106,12 +117,15 @@ public class CreateOrUpdateWebhookContactResponseBody extends TeaModel {
     }
 
     public static class CreateOrUpdateWebhookContactResponseBodyWebhookContact extends TeaModel {
+        // The returned Webhook object.
         @NameInMap("Webhook")
         public CreateOrUpdateWebhookContactResponseBodyWebhookContactWebhook webhook;
 
+        // The ID of the contact for webhook alerts.
         @NameInMap("WebhookId")
         public Float webhookId;
 
+        // The name of the webhook alert contact.
         @NameInMap("WebhookName")
         public String webhookName;
 

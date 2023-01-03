@@ -4,9 +4,11 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListDashboardsResponseBody extends TeaModel {
+    // The information about the Grafana dashboards.
     @NameInMap("DashboardVos")
     public java.util.List<ListDashboardsResponseBodyDashboardVos> dashboardVos;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,54 +34,94 @@ public class ListDashboardsResponseBody extends TeaModel {
     }
 
     public static class ListDashboardsResponseBodyDashboardVosI18nChild extends TeaModel {
+        // The type of the Grafana dashboard. This parameter has the same effect as the Exporter parameter whereas provides clearer implication.
         @NameInMap("DashboardType")
         public String dashboardType;
 
+        // The type of the exporter access source. Valid values:
+        // 
+        // *   Prometheus
+        // *   Node
+        // *   GPU
+        // *   Redis
+        // *   MySQL
+        // *   Kafka
+        // *   NGINX V2
+        // *   Nginx
+        // *   ZooKeeper
+        // *   MongoDB
+        // *   RabbitMQ
+        // *   PostgreSQL
+        // *   Kubernetes
+        // *   Client Library
+        // *   Elasticsearch
+        // *   RocketMQ
         @NameInMap("Exporter")
         public String exporter;
 
+        // The URL of the Grafana dashboard.
         @NameInMap("HttpUrl")
         public String httpUrl;
 
+        // The URL of the Grafana dashboard.
         @NameInMap("HttpsUrl")
         public String httpsUrl;
 
+        // The ID of the Grafana dashboard. The value is unique only when you install the Grafana dashboard.
         @NameInMap("Id")
         public String id;
 
+        // Indicates whether the exporter was provided by ARMS. Valid values:
+        // 
+        // *   `true`: The exporter is provided by ARMS.
+        // *   `false`: The exporter is not provided by ARMS.
         @NameInMap("IsArmsExporter")
         public Boolean isArmsExporter;
 
+        // The category of the Grafana dashboard. Valid values: BASIC, THIRD, LIMIT, and CUSTOM.
         @NameInMap("Kind")
         public String kind;
 
+        // The language of the Grafana dashboard.
         @NameInMap("Language")
         public String language;
 
+        // The name of the Grafana dashboard. This parameter is different from the **Title** parameter as this parameter cannot be changed.
         @NameInMap("Name")
         public String name;
 
+        // Indicates whether the Grafana dashboard had a new version that was available for upgrade.
         @NameInMap("NeedUpdate")
         public Boolean needUpdate;
 
+        // The tags of the Grafana dashboard.
         @NameInMap("Tags")
         public java.util.List<String> tags;
 
+        // The timestamp when the Grafana dashboard was created.
         @NameInMap("Time")
         public String time;
 
+        // The title of the Grafana dashboard.
         @NameInMap("Title")
         public String title;
 
+        // The type of the Grafana dashboard. Valid values:
+        // 
+        // *   `dash-db`: a dashboard
+        // *   `dash-folder`: a folder that can include a dashboard
         @NameInMap("Type")
         public String type;
 
+        // The unique identifier of a dashboard when multiple Grafana dashboards were installed. It is a unique business ID displayed on the page.
         @NameInMap("Uid")
         public String uid;
 
+        // The complete URL of the Grafana dashboard.
         @NameInMap("Url")
         public String url;
 
+        // The version of the Grafana dashboard. The combination of version and name uniquely identifies a dashboard.
         @NameInMap("Version")
         public String version;
 
@@ -227,57 +269,98 @@ public class ListDashboardsResponseBody extends TeaModel {
     }
 
     public static class ListDashboardsResponseBodyDashboardVos extends TeaModel {
+        // The type of the Grafana dashboard. This parameter has the same effect as the Exporter parameter whereas provides clearer implication.
         @NameInMap("DashboardType")
         public String dashboardType;
 
+        // The type of the exporter access source. Valid values:
+        // 
+        // *   Prometheus
+        // *   Node
+        // *   GPU
+        // *   Redis
+        // *   MySQL
+        // *   Kafka
+        // *   NGINX V2
+        // *   Nginx
+        // *   ZooKeeper
+        // *   MongoDB
+        // *   RabbitMQ
+        // *   PostgreSQL
+        // *   Kubernetes
+        // *   Client Library
+        // *   Elasticsearch
+        // *   RocketMQ
         @NameInMap("Exporter")
         public String exporter;
 
+        // The URL of the Grafana dashboard.
         @NameInMap("HttpUrl")
         public String httpUrl;
 
+        // The URL of the Grafana dashboard.
         @NameInMap("HttpsUrl")
         public String httpsUrl;
 
+        // The information about the Grafana dashboard.
         @NameInMap("I18nChild")
         public ListDashboardsResponseBodyDashboardVosI18nChild i18nChild;
 
+        // The ID of the Grafana dashboard. The value is unique only when you install the Grafana dashboard.
         @NameInMap("Id")
         public String id;
 
+        // Indicates whether the exporter was provided by ARMS. Valid values:
+        // 
+        // *   `true`: The exporter is provided by ARMS.
+        // *   `false`: The exporter is not provided by ARMS.
         @NameInMap("IsArmsExporter")
         public Boolean isArmsExporter;
 
+        // The type of the dashboard. Valid values: BASIC, THIRD, LIMIT, and CUSTOM. BASIC indicates a basic dashboard. THIRD indicates a third-party dashboard. LIMIT indicates a time-limited free dashboard. CUSTOM indicates a custom dashboard.
         @NameInMap("Kind")
         public String kind;
 
+        // The language of the Grafana dashboard.
         @NameInMap("Language")
         public String language;
 
+        // The name of the Grafana dashboard. This parameter is different from the **Title** parameter as this parameter cannot be changed.
         @NameInMap("Name")
         public String name;
 
+        // Indicates whether the Grafana dashboard had a new version that was available for upgrade.
         @NameInMap("NeedUpdate")
         public Boolean needUpdate;
 
+        // The tags of the Grafana dashboard.
         @NameInMap("Tags")
         public java.util.List<String> tags;
 
+        // The timestamp when the Grafana dashboard was created.
         @NameInMap("Time")
         public String time;
 
+        // The title of the Grafana dashboard.
         @NameInMap("Title")
         public String title;
 
+        // The type of the Grafana dashboard. Valid values:
+        // 
+        // *   `dash-db`: a dashboard
+        // *   `dash-folder`: a folder that can include a dashboard
         @NameInMap("Type")
         public String type;
 
+        // The unique identifier of a dashboard when multiple Grafana dashboards were installed. It is a unique business ID displayed on the page.
         @NameInMap("Uid")
         public String uid;
 
+        // The complete URL of the Grafana dashboard.
         @NameInMap("Url")
         public String url;
 
+        // The version of the Grafana dashboard. The combination of version and name uniquely identifies a dashboard.
         @NameInMap("Version")
         public String version;
 

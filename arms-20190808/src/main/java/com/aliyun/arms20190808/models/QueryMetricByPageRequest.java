@@ -4,39 +4,56 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class QueryMetricByPageRequest extends TeaModel {
+    // The number of the page to return. Default value: `1`.
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    // Custom filter conditions.
     @NameInMap("CustomFilters")
     public java.util.List<String> customFilters;
 
+    // The dimensions of the metric that you want to query.
     @NameInMap("Dimensions")
     public java.util.List<String> dimensions;
 
+    // The end of the time range to query. Unit: milliseconds.
     @NameInMap("EndTime")
     public Long endTime;
 
+    // The filter conditions.
     @NameInMap("Filters")
     public java.util.List<QueryMetricByPageRequestFilters> filters;
 
+    // The time interval at which data entries are aggregated. Unit: milliseconds. Minimum value: 60000.
     @NameInMap("IntervalInSec")
     public Integer intervalInSec;
 
+    // The measures of the metric that you want to query.
     @NameInMap("Measures")
     public java.util.List<String> measures;
 
+    // The metric that you want to query. You cannot specify a custom metric. For more information, see the "Application monitoring metrics that can be queried" section.
     @NameInMap("Metric")
     public String metric;
 
+    // The order in which measures are sorted. Valid values:
+    // 
+    // *   `ASC`: ascending order
+    // *   `DESC`: descending order
+    // 
+    // > If you do not specify the parameter, data is not sorted.
     @NameInMap("Order")
     public String order;
 
+    // The dimension from which metrics are sorted. You can set this parameter to a supported dimension.
     @NameInMap("OrderBy")
     public String orderBy;
 
+    // The number of entries to return on each page. This parameter is no longer supported. The number of entries to return on each page.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The start of the time range to query. Unit: milliseconds.
     @NameInMap("StartTime")
     public Long startTime;
 
@@ -142,9 +159,11 @@ public class QueryMetricByPageRequest extends TeaModel {
     }
 
     public static class QueryMetricByPageRequestFilters extends TeaModel {
+        // The key of the filter condition. You must set the key to `pid` or `regionId`.
         @NameInMap("Key")
         public String key;
 
+        // The value of the filter condition. You must set the value of the `pid` or `regionId` condition. For information about how to obtain the `pid`, see the "Obtain the PID of an application" section.
         @NameInMap("Value")
         public String value;
 

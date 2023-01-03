@@ -4,12 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class SyncRecordingRulesRequest extends TeaModel {
+    // The ID of the cluster whose aggregation rule you want to synchronize.
     @NameInMap("ClusterId")
     public String clusterId;
 
+    // The ID of the region. The destination region can be the same as the source region.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The IDs of clusters to which you want to synchronize the aggregation rule.
     @NameInMap("TargetClusters")
     public String targetClusters;
 

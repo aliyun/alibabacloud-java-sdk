@@ -4,21 +4,30 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ImportAppAlertRulesRequest extends TeaModel {
+    // The IDs of the alert contact groups. The value must be a JSON array.
     @NameInMap("ContactGroupIds")
     public String contactGroupIds;
 
+    // Specifies whether to enable the alert rule after it is created. Default value: `false`.
+    // 
+    // *   `true`: enables the alert rule.
+    // *   `false`: disables the alert rule.
     @NameInMap("IsAutoStart")
     public Boolean isAutoStart;
 
+    // The process identifiers (PIDs) of the applications associated with the alert rule. The value must be a JSON array. For more information about how to obtain the PID, see [Obtain the PID of an application](~~186100#section-bkl-3j6-ezg~~).
     @NameInMap("Pids")
     public String pids;
 
+    // The ID of the region where the associated applications reside.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The configurations of the alert template based on which you want to create an alert rule. The value must be a JSON string. You must set at least one of the **TemplateAlertId** and **TemplageAlertConfig** parameters. If you set both parameters, the **TemplateAlertId** parameter prevails. For more information about the TemplageAlertConfig parameter, see the following **additional information about the TemplageAlertConfig parameter**.
     @NameInMap("TemplageAlertConfig")
     public String templageAlertConfig;
 
+    // The ID of the alert template. You must set at least one of the **TemplateAlertId** and **TemplageAlertConfig** parameters. If you set both parameters, the **TemplateAlertId** parameter prevails.
     @NameInMap("TemplateAlertId")
     public String templateAlertId;
 

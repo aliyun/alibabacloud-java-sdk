@@ -4,9 +4,14 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListPrometheusInstancesRequest extends TeaModel {
+    // The ID of the region.
     @NameInMap("RegionId")
     public String regionId;
 
+    // Specifies whether to obtain global aggregation instances. Valid values:
+    // 
+    // *   true
+    // *   false
     @NameInMap("ShowGlobalView")
     public Boolean showGlobalView;
 

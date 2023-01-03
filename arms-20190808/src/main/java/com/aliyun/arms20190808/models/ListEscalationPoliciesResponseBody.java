@@ -4,9 +4,11 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListEscalationPoliciesResponseBody extends TeaModel {
+    // The objects that were returned.
     @NameInMap("PageBean")
     public ListEscalationPoliciesResponseBodyPageBean pageBean;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +34,11 @@ public class ListEscalationPoliciesResponseBody extends TeaModel {
     }
 
     public static class ListEscalationPoliciesResponseBodyPageBeanEscalationPolicies extends TeaModel {
+        // The ID of the escalation policy.
         @NameInMap("Id")
         public Long id;
 
+        // The name of the escalation policy.
         @NameInMap("Name")
         public String name;
 
@@ -62,15 +66,19 @@ public class ListEscalationPoliciesResponseBody extends TeaModel {
     }
 
     public static class ListEscalationPoliciesResponseBodyPageBean extends TeaModel {
+        // The list of escalation policies.
         @NameInMap("EscalationPolicies")
         public java.util.List<ListEscalationPoliciesResponseBodyPageBeanEscalationPolicies> escalationPolicies;
 
+        // The page number of the returned page.
         @NameInMap("Page")
         public Long page;
 
+        // The number of entries returned per page.
         @NameInMap("Size")
         public Long size;
 
+        // The total number of returned entries.
         @NameInMap("Total")
         public Long total;
 

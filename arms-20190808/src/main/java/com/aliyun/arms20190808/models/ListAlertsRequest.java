@@ -4,36 +4,77 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListAlertsRequest extends TeaModel {
+    // The name of the alert rule.
     @NameInMap("AlertName")
     public String alertName;
 
+    // The ID of the notification policy.
     @NameInMap("DispatchRuleId")
     public Long dispatchRuleId;
 
+    // The end time of the alert sending history that you want to query. Specify the time in the `YYYY-MM-DD HH:mm:ss` format.
     @NameInMap("EndTime")
     public String endTime;
 
+    // The type of the integration. Valid values:
+    // 
+    // *   ARMS
+    // *   CLOUD_MONITOR
+    // *   MSE
+    // *   ARMS_CLOUD_DIALTEST
+    // *   PROMETHEUS
+    // *   LOG_SERVICE
+    // *   CUSTOM
+    // *   ARMS_PROMETHEUS
+    // *   ARMS_APP_MON
+    // *   ARMS_FRONT_MON
+    // *   ARMS_CUSTOM
+    // *   XTRACE
+    // *   GRAFANA
+    // *   ZABBIX
+    // *   SKYWALKING
+    // *   EVENT_BRIDGE
+    // *   NAGIOS
+    // *   OPENFALCON
+    // *   ARMS_INSIGHTS
     @NameInMap("IntegrationType")
     public String integrationType;
 
+    // The number of the page to return.
     @NameInMap("Page")
     public Long page;
 
+    // The severity level of the alert. Valid values: P6, P5, P4, P3, P2, and P1. The preceding values are listed in ascending order of severity.
     @NameInMap("Severity")
     public String severity;
 
+    // Specifies whether to query the activities that correspond to alerts. Valid values:
+    // 
+    // *   `false` (default value): The activities are not queried.
+    // *   `true`: The activities in the last three days are queried.
     @NameInMap("ShowActivities")
     public Boolean showActivities;
 
+    // Specifies whether to query the events that correspond to alerts. Valid values:
+    // 
+    // *   `false` (default value): The events are not queried.
+    // *   `true`: The events are queried.
     @NameInMap("ShowEvents")
     public Boolean showEvents;
 
+    // The number of alerts to return on each page.
     @NameInMap("Size")
     public Long size;
 
+    // The start time of the alert sending history that you want to query. Specify the time in the `YYYY-MM-DD HH:mm:ss` format.
     @NameInMap("StartTime")
     public String startTime;
 
+    // The status of the alert. Valid values:
+    // 
+    // *   0: The alert is waiting to be handled.
+    // *   1: The alert is being handled.
+    // *   2: The alert is handled.
     @NameInMap("State")
     public Long state;
 

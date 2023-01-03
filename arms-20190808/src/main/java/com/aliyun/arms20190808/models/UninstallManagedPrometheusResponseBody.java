@@ -4,18 +4,23 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class UninstallManagedPrometheusResponseBody extends TeaModel {
+    // The status code returned. 200 indicates that the Prometheus agent was uninstalled. Otherwise, the Prometheus agent fails to be uninstalled.
     @NameInMap("Code")
     public Integer code;
 
+    // The content of the response. The installation status of the Prometheus agent was returned.
     @NameInMap("Data")
     public String data;
 
+    // The error message returned if the Prometheus agent fails to be uninstalled.
     @NameInMap("Message")
     public String message;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the Prometheus agent was uninstalled.
     @NameInMap("Success")
     public Boolean success;
 

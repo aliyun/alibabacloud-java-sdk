@@ -4,9 +4,14 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class UpdateWebhookResponseBody extends TeaModel {
+    // The result of the request. Valid values:
+    // 
+    // *   `true`: The request was successful.
+    // *   `false`: The request failed.
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

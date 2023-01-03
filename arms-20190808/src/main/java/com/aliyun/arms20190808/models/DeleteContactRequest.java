@@ -4,6 +4,7 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DeleteContactRequest extends TeaModel {
+    // The ID of the alert contact.
     @NameInMap("ContactId")
     public Long contactId;
 

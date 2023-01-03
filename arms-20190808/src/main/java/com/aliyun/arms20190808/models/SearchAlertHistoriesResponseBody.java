@@ -4,9 +4,11 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class SearchAlertHistoriesResponseBody extends TeaModel {
+    // The struct returned.
     @NameInMap("PageBean")
     public SearchAlertHistoriesResponseBodyPageBean pageBean;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,36 +34,56 @@ public class SearchAlertHistoriesResponseBody extends TeaModel {
     }
 
     public static class SearchAlertHistoriesResponseBodyPageBeanAlarmHistories extends TeaModel {
+        // The content of the alert notification.
         @NameInMap("AlarmContent")
         public String alarmContent;
 
+        // The response code returned after the alert notification was sent.
         @NameInMap("AlarmResponseCode")
         public Integer alarmResponseCode;
 
+        // The webhook URL used for the alert contact, such as that of a DingTalk chatbot.
         @NameInMap("AlarmSources")
         public String alarmSources;
 
+        // The time when the alert notification was sent.
         @NameInMap("AlarmTime")
         public Long alarmTime;
 
+        // The type of the alert rule. Default value: 4. Valid values:
+        // 
+        // *   `1`: custom alert rules to monitor drill-down data sets
+        // *   `3`: custom alert rules to monitor tiled data sets
+        // *   `4`: alert rules to monitor the frontend, including the default frontend alert rules
+        // *   `5`: alert rules to monitor applications, including the default application alert rules
+        // *   `6`: the default frontend alert rules
+        // *   `7`: the default application alert rules
+        // *   `8`: Tracing Analysis alert rules
+        // *   `101`: Prometheus alert rules
         @NameInMap("AlarmType")
         public Integer alarmType;
 
+        // The email address of the alert contact.
         @NameInMap("Emails")
         public String emails;
 
+        // The ID of the alert notification.
         @NameInMap("Id")
         public Long id;
 
+        // The mobile number of the alert contact.
         @NameInMap("Phones")
         public String phones;
 
+        // An internal parameter.
         @NameInMap("StrategyId")
         public String strategyId;
 
+        // An internal parameter.
         @NameInMap("Target")
         public String target;
 
+        // The ID of the user.
         @NameInMap("UserId")
         public String userId;
 
@@ -161,15 +183,19 @@ public class SearchAlertHistoriesResponseBody extends TeaModel {
     }
 
     public static class SearchAlertHistoriesResponseBodyPageBean extends TeaModel {
+        // The information about alert records.
         @NameInMap("AlarmHistories")
         public java.util.List<SearchAlertHistoriesResponseBodyPageBeanAlarmHistories> alarmHistories;
 
+        // The page number of the returned page.
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        // The number of entries returned per page.
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        // The total number of entries returned.
         @NameInMap("TotalCount")
         public Integer totalCount;
 

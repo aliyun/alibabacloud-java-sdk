@@ -4,42 +4,58 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class SearchTracesByPageRequest extends TeaModel {
+    // The end of the time range to query. Unit: milliseconds.
     @NameInMap("EndTime")
     public Long endTime;
 
+    // The filter conditions.
     @NameInMap("ExclusionFilters")
     public java.util.List<SearchTracesByPageRequestExclusionFilters> exclusionFilters;
 
+    // The minimum amount of time consumed by traces. Unit: milliseconds.
     @NameInMap("MinDuration")
     public Long minDuration;
 
+    // The name of the traced span.
     @NameInMap("OperationName")
     public String operationName;
 
+    // The number of the page to return.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // The number of entries to return on each page. Maximum value: 100.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The ID of the application.
     @NameInMap("Pid")
     public String pid;
 
+    // The ID of the region.
     @NameInMap("RegionId")
     public String regionId;
 
+    // Specifies whether to sort the query results in chronological order or reverse chronological order. Default value: `false`.
+    // 
+    // *   `true`: sorts the query results in reverse chronological order.
+    // *   `false`: sorts the query results in chronological order.
     @NameInMap("Reverse")
     public Boolean reverse;
 
+    // The IP address of the host where the application resides.
     @NameInMap("ServiceIp")
     public String serviceIp;
 
+    // The name of the application.
     @NameInMap("ServiceName")
     public String serviceName;
 
+    // The beginning of the time range to query. Unit: milliseconds.
     @NameInMap("StartTime")
     public Long startTime;
 
+    // The tags of the instances you want to query.
     @NameInMap("Tags")
     public java.util.List<SearchTracesByPageRequestTags> tags;
 
@@ -153,9 +169,11 @@ public class SearchTracesByPageRequest extends TeaModel {
     }
 
     public static class SearchTracesByPageRequestExclusionFilters extends TeaModel {
+        // The key that is used to filter the query results.
         @NameInMap("Key")
         public String key;
 
+        // The value of the key that is used to filter the query results.
         @NameInMap("Value")
         public String value;
 
@@ -183,9 +201,11 @@ public class SearchTracesByPageRequest extends TeaModel {
     }
 
     public static class SearchTracesByPageRequestTags extends TeaModel {
+        // The key of the tag.
         @NameInMap("Key")
         public String key;
 
+        // The value of the tag.
         @NameInMap("Value")
         public String value;
 

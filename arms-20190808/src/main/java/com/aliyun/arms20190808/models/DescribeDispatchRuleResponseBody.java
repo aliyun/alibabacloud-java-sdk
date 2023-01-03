@@ -4,9 +4,11 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DescribeDispatchRuleResponseBody extends TeaModel {
+    // The struct returned.
     @NameInMap("DispatchRule")
     public DescribeDispatchRuleResponseBodyDispatchRule dispatchRule;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +34,19 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
     }
 
     public static class DescribeDispatchRuleResponseBodyDispatchRuleGroupRules extends TeaModel {
+        // The ID of the group.
         @NameInMap("GroupId")
         public Long groupId;
 
+        // The grouping interval.
         @NameInMap("GroupInterval")
         public Long groupInterval;
 
+        // The waiting time for grouping.
         @NameInMap("GroupWaitTime")
         public Long groupWaitTime;
 
+        // The grouping fields.
         @NameInMap("GroupingFields")
         public java.util.List<String> groupingFields;
 
@@ -95,12 +101,27 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
     }
 
     public static class DescribeDispatchRuleResponseBodyDispatchRuleLabelMatchExpressionGridLabelMatchExpressionGroupsLabelMatchExpressions extends TeaModel {
+        // The key of the tag of the dispatch rule. Valid values:
+        // 
+        // *   `_aliyun_arms_userid`: user ID
+        // *   `_aliyun_arms_involvedObject_kind`: type of the associated object
+        // *   `_aliyun_arms_involvedObject_id`: ID of the associated object
+        // *   `_aliyun_arms_involvedObject_name`: name of the associated object
+        // *   `_aliyun_arms_alert_name`: alert name
+        // *   `_aliyun_arms_alert_rule_id`: alert rule ID
+        // *   `_aliyun_arms_alert_type`: alert type
+        // *   `_aliyun_arms_alert_level`: alert severity
         @NameInMap("Key")
         public String key;
 
+        // The operator used in the dispatch rule. Valid values:
+        // 
+        // *   `eq`: equals to.
+        // *   `re`: matches a regular expression.
         @NameInMap("Operator")
         public String operator;
 
+        // The value of the tag.
         @NameInMap("Value")
         public String value;
 
@@ -136,6 +157,7 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
     }
 
     public static class DescribeDispatchRuleResponseBodyDispatchRuleLabelMatchExpressionGridLabelMatchExpressionGroups extends TeaModel {
+        // The collection of conditions of the dispatch rule.
         @NameInMap("LabelMatchExpressions")
         public java.util.List<DescribeDispatchRuleResponseBodyDispatchRuleLabelMatchExpressionGridLabelMatchExpressionGroupsLabelMatchExpressions> labelMatchExpressions;
 
@@ -155,6 +177,7 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
     }
 
     public static class DescribeDispatchRuleResponseBodyDispatchRuleLabelMatchExpressionGrid extends TeaModel {
+        // The collection of dispatch rules.
         @NameInMap("LabelMatchExpressionGroups")
         public java.util.List<DescribeDispatchRuleResponseBodyDispatchRuleLabelMatchExpressionGridLabelMatchExpressionGroups> labelMatchExpressionGroups;
 
@@ -174,12 +197,18 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
     }
 
     public static class DescribeDispatchRuleResponseBodyDispatchRuleNotifyRulesNotifyObjects extends TeaModel {
+        // The name of the contact or contact group.
         @NameInMap("Name")
         public String name;
 
+        // The ID of the contact or contact group.
         @NameInMap("NotifyObjectId")
         public String notifyObjectId;
 
+        // The type of the alert contact. Valid values:
+        // 
+        // - `CONTACT`: contact
+        // - `CONTACT_GROUP`: contact group
         @NameInMap("NotifyType")
         public String notifyType;
 
@@ -215,9 +244,17 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
     }
 
     public static class DescribeDispatchRuleResponseBodyDispatchRuleNotifyRules extends TeaModel {
+        // The notification method. Valid values:
+        // 
+        // - `dingTalk`
+        // - `sms`
+        // - `webhook`
+        // - `email`
+        // - `wechat`
         @NameInMap("NotifyChannels")
         public java.util.List<String> notifyChannels;
 
+        // The collection of alert contacts.
         @NameInMap("NotifyObjects")
         public java.util.List<DescribeDispatchRuleResponseBodyDispatchRuleNotifyRulesNotifyObjects> notifyObjects;
 
@@ -248,24 +285,33 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
         @NameInMap("DispatchType")
         public String dispatchType;
 
+        // The information about groups.
         @NameInMap("GroupRules")
         public java.util.List<DescribeDispatchRuleResponseBodyDispatchRuleGroupRules> groupRules;
 
         @NameInMap("IsRecover")
         public Boolean isRecover;
 
+        // The information about the dispatch rule.
         @NameInMap("LabelMatchExpressionGrid")
         public DescribeDispatchRuleResponseBodyDispatchRuleLabelMatchExpressionGrid labelMatchExpressionGrid;
 
+        // The name of the dispatch policy.
         @NameInMap("Name")
         public String name;
 
+        // The collection of notification methods.
         @NameInMap("NotifyRules")
         public java.util.List<DescribeDispatchRuleResponseBodyDispatchRuleNotifyRules> notifyRules;
 
+        // The ID of the dispatch rule.
         @NameInMap("RuleId")
         public Long ruleId;
 
+        // Indicates whether the dispatch policy is enabled. Valid values: 
+        // 
+        // - `true`: enabled
+        // - `false`: disabled
         @NameInMap("State")
         public String state;
 

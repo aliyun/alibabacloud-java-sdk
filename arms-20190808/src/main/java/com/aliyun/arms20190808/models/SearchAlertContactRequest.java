@@ -4,24 +4,31 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class SearchAlertContactRequest extends TeaModel {
+    // The ID of the alert contact.
     @NameInMap("ContactIds")
     public String contactIds;
 
+    // The name of the alert contact.
     @NameInMap("ContactName")
     public String contactName;
 
+    // The number of the page to return.
     @NameInMap("CurrentPage")
     public String currentPage;
 
+    // The email address of the alert contact.
     @NameInMap("Email")
     public String email;
 
+    // The number of entries to return on each page.
     @NameInMap("PageSize")
     public String pageSize;
 
+    // The mobile number of the alert contact.
     @NameInMap("Phone")
     public String phone;
 
+    // The ID of the region. Set the value to `cn-hangzhou`.
     @NameInMap("RegionId")
     public String regionId;
 

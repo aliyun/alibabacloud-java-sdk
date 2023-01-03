@@ -4,9 +4,11 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListCmsInstancesResponseBody extends TeaModel {
+    // The struct returned.
     @NameInMap("Data")
     public ListCmsInstancesResponseBodyData data;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,33 +34,46 @@ public class ListCmsInstancesResponseBody extends TeaModel {
     }
 
     public static class ListCmsInstancesResponseBodyDataProducts extends TeaModel {
+        // The description of the cloud service.
         @NameInMap("Descr")
         public String descr;
 
+        // The ID of the instance.
         @NameInMap("Id")
         public String id;
 
+        // The name of the instance.
         @NameInMap("Instance")
         public String instance;
 
+        // The name of the cloud service.
         @NameInMap("Name")
         public String name;
 
+        // The code of the cloud service.
         @NameInMap("Prod")
         public String prod;
 
+        // The event source.
         @NameInMap("Source")
         public String source;
 
+        // The status of the integration. Valid values:
+        // 
+        // *   `true`: The integration was enabled.
+        // *   `false`: The integration was disabled.
         @NameInMap("State")
         public String state;
 
+        // The timestamp when the Grafana dashboard was created.
         @NameInMap("Time")
         public String time;
 
+        // The type of the cloud service.
         @NameInMap("Type")
         public String type;
 
+        // The complete URL of the Grafana dashboard.
         @NameInMap("Url")
         public String url;
 
@@ -150,9 +165,11 @@ public class ListCmsInstancesResponseBody extends TeaModel {
     }
 
     public static class ListCmsInstancesResponseBodyData extends TeaModel {
+        // Indicates whether to collect the aliyun tags attached to each cloud service.
         @NameInMap("EnableTag")
         public Boolean enableTag;
 
+        // The struct returned.
         @NameInMap("Products")
         public java.util.List<ListCmsInstancesResponseBodyDataProducts> products;
 

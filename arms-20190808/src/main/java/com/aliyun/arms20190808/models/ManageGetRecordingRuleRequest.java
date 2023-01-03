@@ -4,12 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ManageGetRecordingRuleRequest extends TeaModel {
+    // The ID of the cluster.
     @NameInMap("ClusterId")
     public String clusterId;
 
+    // The ID of the user.
     @NameInMap("QueryUserId")
     public String queryUserId;
 
+    // The ID of the region.
     @NameInMap("RegionId")
     public String regionId;
 

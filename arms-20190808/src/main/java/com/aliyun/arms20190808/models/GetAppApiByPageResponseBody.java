@@ -4,18 +4,31 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GetAppApiByPageResponseBody extends TeaModel {
+    // The HTTP status code returned for the request. Valid values:
+    // 
+    // *   2XX: The request is successful.
+    // *   3XX: A redirection message is returned.
+    // *   4XX: The request is invalid.
+    // *   5XX: A server error occurs.
     @NameInMap("Code")
     public Integer code;
 
+    // The struct returned.
     @NameInMap("Data")
     public GetAppApiByPageResponseBodyData data;
 
+    // The message returned.
     @NameInMap("Message")
     public String message;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the call is successful. Valid values:
+    // 
+    // *   `true`: The call is successful.
+    // *   `false`: The call fails.
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,15 +78,19 @@ public class GetAppApiByPageResponseBody extends TeaModel {
     }
 
     public static class GetAppApiByPageResponseBodyData extends TeaModel {
+        // The information about the API operation.
         @NameInMap("Items")
         public java.util.List<java.util.Map<String, ?>> items;
 
+        // The page number of the returned page.
         @NameInMap("Page")
         public Integer page;
 
+        // The number of entries returned per page.
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        // The total number of entries returned.
         @NameInMap("Total")
         public String total;
 

@@ -4,9 +4,11 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GetMultipleTraceResponseBody extends TeaModel {
+    // The information about the queried traces.
     @NameInMap("MultiCallChainInfos")
     public java.util.List<GetMultipleTraceResponseBodyMultiCallChainInfos> multiCallChainInfos;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +34,11 @@ public class GetMultipleTraceResponseBody extends TeaModel {
     }
 
     public static class GetMultipleTraceResponseBodyMultiCallChainInfosSpansLogEventListTagEntryList extends TeaModel {
+        // The key of the tag.
         @NameInMap("Key")
         public String key;
 
+        // The value of the tag.
         @NameInMap("Value")
         public String value;
 
@@ -62,9 +66,11 @@ public class GetMultipleTraceResponseBody extends TeaModel {
     }
 
     public static class GetMultipleTraceResponseBodyMultiCallChainInfosSpansLogEventList extends TeaModel {
+        // The tags of the trace.
         @NameInMap("TagEntryList")
         public java.util.List<GetMultipleTraceResponseBodyMultiCallChainInfosSpansLogEventListTagEntryList> tagEntryList;
 
+        // The timestamp when the trace was returned.
         @NameInMap("Timestamp")
         public Long timestamp;
 
@@ -92,9 +98,11 @@ public class GetMultipleTraceResponseBody extends TeaModel {
     }
 
     public static class GetMultipleTraceResponseBodyMultiCallChainInfosSpansTagEntryList extends TeaModel {
+        // The key of the tag.
         @NameInMap("Key")
         public String key;
 
+        // The value of the tag.
         @NameInMap("Value")
         public String value;
 
@@ -122,45 +130,85 @@ public class GetMultipleTraceResponseBody extends TeaModel {
     }
 
     public static class GetMultipleTraceResponseBodyMultiCallChainInfosSpans extends TeaModel {
+        // The amount of time consumed by the trace. Unit: milliseconds.
         @NameInMap("Duration")
         public Long duration;
 
+        // Indicates whether a method stack was provided.
+        // 
+        // - `true`: A method stack was provided.
+        // - `false` : No method stack was provided.
         @NameInMap("HaveStack")
         public Boolean haveStack;
 
+        // The log events in the trace.
         @NameInMap("LogEventList")
         public java.util.List<GetMultipleTraceResponseBodyMultiCallChainInfosSpansLogEventList> logEventList;
 
+        // The name of the traced span.
         @NameInMap("OperationName")
         public String operationName;
 
+        // The ID of the parent span.
         @NameInMap("ParentSpanId")
         public String parentSpanId;
 
+        // The response code.
         @NameInMap("ResultCode")
         public String resultCode;
 
+        // The ID of the remote procedure call (RPC).
         @NameInMap("RpcId")
         public String rpcId;
 
+        // The type of the remote procedure call (RPC) mode.
+        // 
+        // *   0: HTTP entry
+        // *   25: HTTP call
+        // *   1: High-speed Service Framework (HSF) call
+        // *   2: HSF provision
+        // *   40: on-premises API call
+        // *   60: MySQL call
+        // *   62: Oracle call
+        // *   63: PostgreSQL call
+        // *   70: Redis call
+        // *   4: Taobao Distributed Data Layer (TDDL) call
+        // *   5: Tair call
+        // *   13: MetaQ message sending
+        // *   252: MetaQ message receiving
+        // *   3: notification sending
+        // *   254: notification receiving
+        // *   7: Apache Dubbo call
+        // *   8: Apache Dubbo provision
+        // *   19: SOFARPC call
+        // *   18: SOFARPC provision
+        // *   11: Distributed Service Framework (DSF) call
+        // *   12: DSF provision
+        // *   \-1: unknown call
         @NameInMap("RpcType")
         public Integer rpcType;
 
+        // The IP address of the host where the application resides.
         @NameInMap("ServiceIp")
         public String serviceIp;
 
+        // The name of the application.
         @NameInMap("ServiceName")
         public String serviceName;
 
+        // Span ID。
         @NameInMap("SpanId")
         public String spanId;
 
+        // The tags of the trace.
         @NameInMap("TagEntryList")
         public java.util.List<GetMultipleTraceResponseBodyMultiCallChainInfosSpansTagEntryList> tagEntryList;
 
+        // The timestamp when the trace was returned.
         @NameInMap("Timestamp")
         public Long timestamp;
 
+        // The ID of the trace.
         @NameInMap("TraceID")
         public String traceID;
 
@@ -284,9 +332,11 @@ public class GetMultipleTraceResponseBody extends TeaModel {
     }
 
     public static class GetMultipleTraceResponseBodyMultiCallChainInfos extends TeaModel {
+        // The information about the trace.
         @NameInMap("Spans")
         public java.util.List<GetMultipleTraceResponseBodyMultiCallChainInfosSpans> spans;
 
+        // The ID of the trace.
         @NameInMap("TraceID")
         public String traceID;
 

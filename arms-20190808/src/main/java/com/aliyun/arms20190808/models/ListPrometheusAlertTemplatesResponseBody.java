@@ -4,9 +4,11 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListPrometheusAlertTemplatesResponseBody extends TeaModel {
+    // The struct returned.
     @NameInMap("PrometheusAlertTemplates")
     public java.util.List<ListPrometheusAlertTemplatesResponseBodyPrometheusAlertTemplates> prometheusAlertTemplates;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +34,11 @@ public class ListPrometheusAlertTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListPrometheusAlertTemplatesResponseBodyPrometheusAlertTemplatesAnnotations extends TeaModel {
+        // The name of the annotation.
         @NameInMap("Name")
         public String name;
 
+        // The value of the annotation.
         @NameInMap("Value")
         public String value;
 
@@ -62,9 +66,11 @@ public class ListPrometheusAlertTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListPrometheusAlertTemplatesResponseBodyPrometheusAlertTemplatesLabels extends TeaModel {
+        // The name of the tag.
         @NameInMap("Name")
         public String name;
 
+        // The value of the tag.
         @NameInMap("Value")
         public String value;
 
@@ -92,27 +98,35 @@ public class ListPrometheusAlertTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListPrometheusAlertTemplatesResponseBodyPrometheusAlertTemplates extends TeaModel {
+        // The name of the alert rule.
         @NameInMap("AlertName")
         public String alertName;
 
+        // The annotations of the alert rule.
         @NameInMap("Annotations")
         public java.util.List<ListPrometheusAlertTemplatesResponseBodyPrometheusAlertTemplatesAnnotations> annotations;
 
+        // The message of the alert notification. Tags can be referenced in the {{$labels.xxx}} format.
         @NameInMap("Description")
         public String description;
 
+        // The duration of the alert. Valid values: 1 to 1440. Unit: minutes.
         @NameInMap("Duration")
         public String duration;
 
+        // The expression of the alert rule.
         @NameInMap("Expression")
         public String expression;
 
+        // The tags of the alert rule.
         @NameInMap("Labels")
         public java.util.List<ListPrometheusAlertTemplatesResponseBodyPrometheusAlertTemplatesLabels> labels;
 
+        // The type of the alert rule.
         @NameInMap("Type")
         public String type;
 
+        // The version of the alert rule.
         @NameInMap("Version")
         public String version;
 

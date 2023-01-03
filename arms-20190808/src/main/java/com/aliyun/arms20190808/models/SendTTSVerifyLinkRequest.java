@@ -4,9 +4,11 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class SendTTSVerifyLinkRequest extends TeaModel {
+    // The ID of the alert contact.
     @NameInMap("ContactId")
     public Long contactId;
 
+    // The mobile number of the alert contact.
     @NameInMap("Phone")
     public String phone;
 

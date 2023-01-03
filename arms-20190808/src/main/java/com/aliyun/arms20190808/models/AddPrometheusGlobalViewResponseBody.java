@@ -31,9 +31,50 @@ public class AddPrometheusGlobalViewResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class AddPrometheusGlobalViewResponseBodyDataInfo extends TeaModel {
+        @NameInMap("FailedInstances")
+        public String failedInstances;
+
+        @NameInMap("GlobalViewClusterId")
+        public String globalViewClusterId;
+
+        @NameInMap("RegionId")
+        public String regionId;
+
+        public static AddPrometheusGlobalViewResponseBodyDataInfo build(java.util.Map<String, ?> map) throws Exception {
+            AddPrometheusGlobalViewResponseBodyDataInfo self = new AddPrometheusGlobalViewResponseBodyDataInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public AddPrometheusGlobalViewResponseBodyDataInfo setFailedInstances(String failedInstances) {
+            this.failedInstances = failedInstances;
+            return this;
+        }
+        public String getFailedInstances() {
+            return this.failedInstances;
+        }
+
+        public AddPrometheusGlobalViewResponseBodyDataInfo setGlobalViewClusterId(String globalViewClusterId) {
+            this.globalViewClusterId = globalViewClusterId;
+            return this;
+        }
+        public String getGlobalViewClusterId() {
+            return this.globalViewClusterId;
+        }
+
+        public AddPrometheusGlobalViewResponseBodyDataInfo setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+    }
+
     public static class AddPrometheusGlobalViewResponseBodyData extends TeaModel {
         @NameInMap("Info")
-        public String info;
+        public AddPrometheusGlobalViewResponseBodyDataInfo info;
 
         @NameInMap("Msg")
         public String msg;
@@ -46,11 +87,11 @@ public class AddPrometheusGlobalViewResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public AddPrometheusGlobalViewResponseBodyData setInfo(String info) {
+        public AddPrometheusGlobalViewResponseBodyData setInfo(AddPrometheusGlobalViewResponseBodyDataInfo info) {
             this.info = info;
             return this;
         }
-        public String getInfo() {
+        public AddPrometheusGlobalViewResponseBodyDataInfo getInfo() {
             return this.info;
         }
 

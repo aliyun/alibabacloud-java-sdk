@@ -4,12 +4,18 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GetIntegrationStateRequest extends TeaModel {
+    // The abbreviation of the software that is supported by Application Real-Time Monitoring Service (ARMS). Valid values (case-insensitive): `ASM`, `IoT`, and `Flink`.
     @NameInMap("ClusterId")
     public String clusterId;
 
+    // The integration state of Prometheus dashboards and collection rules. Valid values:
+    // 
+    // *   `true`: Prometheus dashboards and collection rules are integrated.
+    // *   `false`: Prometheus dashboards and collection rules are not integrated.
     @NameInMap("Integration")
     public String integration;
 
+    // The ID of the request.
     @NameInMap("RegionId")
     public String regionId;
 

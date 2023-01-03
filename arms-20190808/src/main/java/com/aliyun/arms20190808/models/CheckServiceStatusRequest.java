@@ -4,9 +4,11 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class CheckServiceStatusRequest extends TeaModel {
+    // The ID of the region.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The service code of an Alibaba Cloud service. The service code of Prometheus Service is prometheus.
     @NameInMap("SvcCode")
     public String svcCode;
 

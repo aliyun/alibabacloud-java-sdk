@@ -4,9 +4,11 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class CreateOrUpdateEventBridgeIntegrationResponseBody extends TeaModel {
+    // The information about the EventBridge integration.
     @NameInMap("EventBridgeIntegration")
     public CreateOrUpdateEventBridgeIntegrationResponseBodyEventBridgeIntegration eventBridgeIntegration;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,30 +34,39 @@ public class CreateOrUpdateEventBridgeIntegrationResponseBody extends TeaModel {
     }
 
     public static class CreateOrUpdateEventBridgeIntegrationResponseBodyEventBridgeIntegration extends TeaModel {
+        // The AccessKey ID that is used to connect to EventBridge.
         @NameInMap("AccessKey")
         public String accessKey;
 
+        // The AccessKey secret that is used to connect to EventBridge.
         @NameInMap("AccessSecret")
         public String accessSecret;
 
+        // The description of the EventBridge integration.
         @NameInMap("Description")
         public String description;
 
+        // The public endpoint of EventBridge.
         @NameInMap("Endpoint")
         public String endpoint;
 
+        // The name of the event bus.
         @NameInMap("EventBusName")
         public String eventBusName;
 
+        // The region ID of the event bus.
         @NameInMap("EventBusRegionId")
         public String eventBusRegionId;
 
+        // The ID of the EventBridge integration.
         @NameInMap("Id")
         public Long id;
 
+        // The name of the EventBridge integration.
         @NameInMap("Name")
         public String name;
 
+        // The event source.
         @NameInMap("Source")
         public String source;
 

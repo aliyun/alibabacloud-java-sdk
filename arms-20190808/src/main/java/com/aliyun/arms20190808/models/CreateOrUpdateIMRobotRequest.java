@@ -7,9 +7,14 @@ public class CreateOrUpdateIMRobotRequest extends TeaModel {
     @NameInMap("CardTemplate")
     public String cardTemplate;
 
+    // Specifies whether to send daily statistics.
+    // 
+    // *   `false` (default): does not send statistics.
+    // *   `true`: sends statistics. After you select `true`, **DailyNocTime** parameters are required.
     @NameInMap("DailyNoc")
     public Boolean dailyNoc;
 
+    // The time point at which the daily statistics are sent. Separate multiple sending time points with commas (,). The time point is in the HH:SS format. ARMS Alert Management sends the total number of alerts generated today, the number of resolved alerts, and the number of pending alerts at the specified time point.
     @NameInMap("DailyNocTime")
     public String dailyNocTime;
 
@@ -19,18 +24,28 @@ public class CreateOrUpdateIMRobotRequest extends TeaModel {
     @NameInMap("EnableOutgoing")
     public Boolean enableOutgoing;
 
+    // The webhook address of the IM bot.
     @NameInMap("RobotAddress")
     public String robotAddress;
 
+    // The ID of the IM bot.
+    // 
+    // *   If you do not specify this parameter, a new IM bot is created.
+    // *   Enter information that represents modifying the specified IM bot.
     @NameInMap("RobotId")
     public Long robotId;
 
+    // The name of the IM robot.
     @NameInMap("RobotName")
     public String robotName;
 
     @NameInMap("Token")
     public String token;
 
+    // IM Robot Type:
+    // 
+    // *   `dingding`: DingTalk robot.
+    // *   `wechat`: Enterprise WeChat Robot.
     @NameInMap("Type")
     public String type;
 

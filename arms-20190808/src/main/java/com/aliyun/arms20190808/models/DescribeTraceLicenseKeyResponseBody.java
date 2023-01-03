@@ -4,9 +4,11 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DescribeTraceLicenseKeyResponseBody extends TeaModel {
+    // The license key for the application.
     @NameInMap("LicenseKey")
     public String licenseKey;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

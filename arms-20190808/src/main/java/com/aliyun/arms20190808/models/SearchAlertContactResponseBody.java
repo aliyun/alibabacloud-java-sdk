@@ -4,9 +4,11 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class SearchAlertContactResponseBody extends TeaModel {
+    // The struct returned.
     @NameInMap("PageBean")
     public SearchAlertContactResponseBodyPageBean pageBean;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,36 +34,53 @@ public class SearchAlertContactResponseBody extends TeaModel {
     }
 
     public static class SearchAlertContactResponseBodyPageBeanContacts extends TeaModel {
+        // The ID of the alert contact.
         @NameInMap("ContactId")
         public Long contactId;
 
+        // The name of the alert contact.
         @NameInMap("ContactName")
         public String contactName;
 
+        // The contact group to which the contact belongs. If your contacts are added to multiple contact groups, the contact groups are separated by vertical bars (|).
         @NameInMap("Content")
         public String content;
 
+        // The timestamp when the alert contact was created.
         @NameInMap("CreateTime")
         public Long createTime;
 
+        // The webhook URL of the DingTalk chatbot.
         @NameInMap("DingRobot")
         public String dingRobot;
 
+        // The email address of the alert contact.
         @NameInMap("Email")
         public String email;
 
+        // The mobile number of the alert contact.
         @NameInMap("Phone")
         public String phone;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        // Indicates whether the alert contact receives system notifications. Valid values:
+        // 
+        // *   `true`: The alert contact receives system notifications.
+        // *   `false`: The alert contact does not receive system notifications.
         @NameInMap("SystemNoc")
         public Boolean systemNoc;
 
+        // The timestamp when the alert contact was updated.
         @NameInMap("UpdateTime")
         public Long updateTime;
 
+        // The ID of the user.
         @NameInMap("UserId")
         public String userId;
 
+        // The information about the webhook.
         @NameInMap("Webhook")
         public String webhook;
 
@@ -126,6 +145,14 @@ public class SearchAlertContactResponseBody extends TeaModel {
             return this.phone;
         }
 
+        public SearchAlertContactResponseBodyPageBeanContacts setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
         public SearchAlertContactResponseBodyPageBeanContacts setSystemNoc(Boolean systemNoc) {
             this.systemNoc = systemNoc;
             return this;
@@ -161,15 +188,19 @@ public class SearchAlertContactResponseBody extends TeaModel {
     }
 
     public static class SearchAlertContactResponseBodyPageBean extends TeaModel {
+        // The information about the alert contacts.
         @NameInMap("Contacts")
         public java.util.List<SearchAlertContactResponseBodyPageBeanContacts> contacts;
 
+        // The page number of the returned page.
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        // The number of entries returned per page.
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        // The total number of returned entries.
         @NameInMap("TotalCount")
         public Integer totalCount;
 

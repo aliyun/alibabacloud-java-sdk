@@ -4,9 +4,11 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
+    // The object of the alert rule.
     @NameInMap("AlertRule")
     public CreateOrUpdateAlertRuleResponseBodyAlertRule alertRule;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +34,37 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
     }
 
     public static class CreateOrUpdateAlertRuleResponseBodyAlertRuleAlertRuleContentAlertRuleItems extends TeaModel {
+        // The aggregation method of the alert condition.
+        // 
+        // *   AVG: calculates the average value
+        // *   SUM: calculates the total value
+        // *   MAX: selects the maximum value
+        // *   MIN: selects the minimum value
         @NameInMap("Aggregate")
         public String aggregate;
 
+        // The metric of the alert condition.
         @NameInMap("MetricKey")
         public String metricKey;
 
+        // Indicates the last N minutes.
         @NameInMap("N")
         public Float n;
 
+        // The comparison operator that is used to compare the metric value with the threshold.
+        // 
+        // *   CURRENT_GTE: greater than or equal to
+        // *   CURRENT_LTE: less than or equal to
+        // *   PREVIOUS_UP: the minute-to-minute increase percentage
+        // *   PREVIOUS_DOWN: the minute-to-minute decrease percentage
+        // *   HOH_UP: the increase percentage compared with the previous hour
+        // *   HOH_DOWN: the decrease percentage compared with the previous hour
+        // *   DOD_UP: the increase percentage compared with the last day
+        // *   DOD_DOWN: the decrease percentage compared with the last day
         @NameInMap("Operator")
         public String operator;
 
+        // The threshold of the alert condition.
         @NameInMap("Value")
         public String value;
 
@@ -95,9 +116,14 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
     }
 
     public static class CreateOrUpdateAlertRuleResponseBodyAlertRuleAlertRuleContent extends TeaModel {
+        // The trigger conditions of the Application Monitoring or Browser Monitoring alert rule.
         @NameInMap("AlertRuleItems")
         public java.util.List<CreateOrUpdateAlertRuleResponseBodyAlertRuleAlertRuleContentAlertRuleItems> alertRuleItems;
 
+        // The relationship between multiple alert conditions specified for the Application Monitoring or Browser Monitoring alert rule.
+        // 
+        // *   OR: meets any of the specified conditions.
+        // *   AND: meets all the specified conditions.
         @NameInMap("Condition")
         public String condition;
 
@@ -125,9 +151,11 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
     }
 
     public static class CreateOrUpdateAlertRuleResponseBodyAlertRuleAnnotations extends TeaModel {
+        // The key of the annotation.
         @NameInMap("Name")
         public String name;
 
+        // The value of the annotation.
         @NameInMap("Value")
         public String value;
 
@@ -155,18 +183,26 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
     }
 
     public static class CreateOrUpdateAlertRuleResponseBodyAlertRuleFiltersCustomSLSFilters extends TeaModel {
+        // The key of the filter condition.
         @NameInMap("Key")
         public String key;
 
+        // The logical operator of the filter condition. 
+        // 
+        // - =: equal to
+        // - not: not equal to
         @NameInMap("Opt")
         public String opt;
 
+        // Indicates whether this filter condition is displayed on the frontend.
         @NameInMap("Show")
         public Boolean show;
 
+        // This field is used only to distinguish the type of Browser Monitoring logs. Other filter conditions do not include this field.
         @NameInMap("T")
         public String t;
 
+        // The value of the filter condition.
         @NameInMap("Value")
         public String value;
 
@@ -218,12 +254,15 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
     }
 
     public static class CreateOrUpdateAlertRuleResponseBodyAlertRuleFiltersDimFilters extends TeaModel {
+        // The key of the filter condition.
         @NameInMap("FilterKey")
         public String filterKey;
 
+        // The logical operator of the filter condition.
         @NameInMap("FilterOpt")
         public String filterOpt;
 
+        // The value of the filter condition.
         @NameInMap("FilterValues")
         public java.util.List<String> filterValues;
 
@@ -259,15 +298,19 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
     }
 
     public static class CreateOrUpdateAlertRuleResponseBodyAlertRuleFilters extends TeaModel {
+        // The custom filter condition of the Browser Monitoring alert rule.
         @NameInMap("CustomSLSFilters")
         public java.util.List<CreateOrUpdateAlertRuleResponseBodyAlertRuleFiltersCustomSLSFilters> customSLSFilters;
 
+        // The value of the aggregation dimension.
         @NameInMap("CustomSLSGroupByDimensions")
         public java.util.List<String> customSLSGroupByDimensions;
 
+        // The value of the custom filter condition.
         @NameInMap("CustomSLSWheres")
         public java.util.List<String> customSLSWheres;
 
+        // The information about each filter condition of the Application Monitoring or Browser Monitoring alert rule.
         @NameInMap("DimFilters")
         public java.util.List<CreateOrUpdateAlertRuleResponseBodyAlertRuleFiltersDimFilters> dimFilters;
 
@@ -311,9 +354,11 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
     }
 
     public static class CreateOrUpdateAlertRuleResponseBodyAlertRuleLabels extends TeaModel {
+        // The key of the tag.
         @NameInMap("Name")
         public String name;
 
+        // The value of the tag.
         @NameInMap("Value")
         public String value;
 
@@ -341,75 +386,125 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
     }
 
     public static class CreateOrUpdateAlertRuleResponseBodyAlertRule extends TeaModel {
+        // The alert check type of the Prometheus alert rule. 
+        // 
+        // - STATIC: a static threshold value.
+        // - CUSTOM: a custom PromQL statement.
         @NameInMap("AlertCheckType")
         public String alertCheckType;
 
+        // The alert contact group ID of the Prometheus alert rule. 
+        // 
+        // - -1: custom PromQL
+        // - 1: Kubernetes load
+        // - 15: Kubernetes node
         @NameInMap("AlertGroup")
         public Long alertGroup;
 
+        // The ID of the alert rule.
         @NameInMap("AlertId")
         public Float alertId;
 
+        // The name of the alert rule.
         @NameInMap("AlertName")
         public String alertName;
 
+        // The content of the Application Monitoring or Browser Monitoring alert rule.
         @NameInMap("AlertRuleContent")
         public CreateOrUpdateAlertRuleResponseBodyAlertRuleAlertRuleContent alertRuleContent;
 
+        // The status of the alert rule.
+        // 
+        // *   RUNNING
+        // *   STOPPED
+        // *   PAUSED
+        // 
+        // >  The **PAUSED** status indicates that the alert rule is abnormal and is actively paused by the system. The alert rule may be paused because that it is not unique or the associated cluster has been deleted.
         @NameInMap("AlertStatus")
         public String alertStatus;
 
+        // The type of the alert rule. Valid values:
+        // 
+        // *   APPLICATION_MONITORING_ALERT_RULE: alert rule for Application Monitoring
+        // *   BROWSER_MONITORING_ALERT_RULE: alert rule for Browser Monitoring
+        // *   PROMETHEUS_MONITORING_ALERT_RULE: alert rule for Prometheus Service
         @NameInMap("AlertType")
         public String alertType;
 
+        // The annotations of the Prometheus alert rule.
         @NameInMap("Annotations")
         public java.util.List<CreateOrUpdateAlertRuleResponseBodyAlertRuleAnnotations> annotations;
 
+        // Indicates whether the alert rule is applied to new applications that are created in Application Monitoring or Browser Monitoring.
+        // 
+        // *   `true`: yes
+        // *   `false`: no
         @NameInMap("AutoAddNewApplication")
         public Boolean autoAddNewApplication;
 
+        // The cluster ID of the Prometheus alert rule.
         @NameInMap("ClusterId")
         public String clusterId;
 
+        // The time when the alert rule was created.
         @NameInMap("CreatedTime")
         public Long createdTime;
 
+        // The duration of the Prometheus alert rule. Unit: minutes.
         @NameInMap("Duration")
         public String duration;
 
+        // The extended field.
         @NameInMap("Extend")
         public String extend;
 
+        // The filter conditions of the Application Monitoring or Browser Monitoring alert rule.
         @NameInMap("Filters")
         public CreateOrUpdateAlertRuleResponseBodyAlertRuleFilters filters;
 
+        // The tags of the Prometheus alert rule.
         @NameInMap("Labels")
         public java.util.List<CreateOrUpdateAlertRuleResponseBodyAlertRuleLabels> labels;
 
+        // The level of the Prometheus alert rule. 
+        // 
+        // - P1: Alert notifications are sent for major issues that affect the availability of core business, have huge impact, and may lead to serious consequences.
+        // - P2: Alert notifications are sent for service errors that affect the system availability with relatively limited impact.
+        // - P3: Alert notifications are sent for issues that may cause service errors or negative effects, or alert notifications for services that are relatively less important.
+        // - P4: Alert notifications are sent for low-priority issues that do not affect your business.
+        // - Default: Alert notifications are sent without distinguishing between alert levels.
         @NameInMap("Level")
         public String level;
 
+        // The alert message of the Prometheus alert rule.
         @NameInMap("Message")
         public String message;
 
+        // The metric type of the Application Monitoring or Browser Monitoring alert rule.
         @NameInMap("MetricsType")
         public String metricsType;
 
+        // The name of the notification policy.
         @NameInMap("NotifyStrategy")
         public String notifyStrategy;
 
+        // The PID of the application.
         @NameInMap("Pids")
         public java.util.List<String> pids;
 
+        // The PromQL statement of the Prometheus alert rule.
         @NameInMap("PromQL")
         public String promQL;
 
+        // The ID of the region.
         @NameInMap("RegionId")
         public String regionId;
 
+        // The time when the alert rule was updated.
         @NameInMap("UpdatedTime")
         public Long updatedTime;
 
+        // The ID of the Alibaba Cloud account.
         @NameInMap("UserId")
         public String userId;
 
