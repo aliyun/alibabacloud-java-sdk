@@ -4,9 +4,6 @@ package com.aliyun.smartag20180313.models;
 import com.aliyun.tea.*;
 
 public class UpdateProbeTaskRequest extends TeaModel {
-    @NameInMap("AddressType")
-    public String addressType;
-
     @NameInMap("Domain")
     public String domain;
 
@@ -43,14 +40,6 @@ public class UpdateProbeTaskRequest extends TeaModel {
     public static UpdateProbeTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateProbeTaskRequest self = new UpdateProbeTaskRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateProbeTaskRequest setAddressType(String addressType) {
-        this.addressType = addressType;
-        return this;
-    }
-    public String getAddressType() {
-        return this.addressType;
     }
 
     public UpdateProbeTaskRequest setDomain(String domain) {
