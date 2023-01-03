@@ -282,9 +282,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteInstanceWithOptions(InstanceId, headers, runtime);
     }
 
-    public DeleteSlotResponse deleteSlotWithOptions(String SlotId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public DeleteSlotResponse deleteSlotWithOptions(String SlotId, DeleteSlotRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.force)) {
+            query.put("Force", request.force);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DeleteSlot"),
@@ -300,10 +307,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteSlotResponse());
     }
 
-    public DeleteSlotResponse deleteSlot(String SlotId) throws Exception {
+    public DeleteSlotResponse deleteSlot(String SlotId, DeleteSlotRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deleteSlotWithOptions(SlotId, headers, runtime);
+        return this.deleteSlotWithOptions(SlotId, request, headers, runtime);
     }
 
     public DeleteTagResponse deleteTagWithOptions(DeleteTagRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {

@@ -4,6 +4,9 @@ package com.aliyun.paielasticdatasetaccelerator20220801.models;
 import com.aliyun.tea.*;
 
 public class CreateSlotResponseBody extends TeaModel {
+    @NameInMap("EndpointIds")
+    public String endpointIds;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -13,6 +16,14 @@ public class CreateSlotResponseBody extends TeaModel {
     public static CreateSlotResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateSlotResponseBody self = new CreateSlotResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateSlotResponseBody setEndpointIds(String endpointIds) {
+        this.endpointIds = endpointIds;
+        return this;
+    }
+    public String getEndpointIds() {
+        return this.endpointIds;
     }
 
     public CreateSlotResponseBody setRequestId(String requestId) {
