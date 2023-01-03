@@ -113,6 +113,58 @@ public class ListDbfsResponseBody extends TeaModel {
 
     }
 
+    public static class ListDbfsResponseBodyDBFSInfoSnapshotInfo extends TeaModel {
+        @NameInMap("LinkId")
+        public String linkId;
+
+        @NameInMap("PolicyId")
+        public String policyId;
+
+        @NameInMap("SnapshotCount")
+        public Integer snapshotCount;
+
+        @NameInMap("TotalSize")
+        public Long totalSize;
+
+        public static ListDbfsResponseBodyDBFSInfoSnapshotInfo build(java.util.Map<String, ?> map) throws Exception {
+            ListDbfsResponseBodyDBFSInfoSnapshotInfo self = new ListDbfsResponseBodyDBFSInfoSnapshotInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public ListDbfsResponseBodyDBFSInfoSnapshotInfo setLinkId(String linkId) {
+            this.linkId = linkId;
+            return this;
+        }
+        public String getLinkId() {
+            return this.linkId;
+        }
+
+        public ListDbfsResponseBodyDBFSInfoSnapshotInfo setPolicyId(String policyId) {
+            this.policyId = policyId;
+            return this;
+        }
+        public String getPolicyId() {
+            return this.policyId;
+        }
+
+        public ListDbfsResponseBodyDBFSInfoSnapshotInfo setSnapshotCount(Integer snapshotCount) {
+            this.snapshotCount = snapshotCount;
+            return this;
+        }
+        public Integer getSnapshotCount() {
+            return this.snapshotCount;
+        }
+
+        public ListDbfsResponseBodyDBFSInfoSnapshotInfo setTotalSize(Long totalSize) {
+            this.totalSize = totalSize;
+            return this;
+        }
+        public Long getTotalSize() {
+            return this.totalSize;
+        }
+
+    }
+
     public static class ListDbfsResponseBodyDBFSInfoTags extends TeaModel {
         @NameInMap("Id")
         public Long id;
@@ -214,6 +266,9 @@ public class ListDbfsResponseBody extends TeaModel {
 
         @NameInMap("SizeG")
         public Integer sizeG;
+
+        @NameInMap("SnapshotInfo")
+        public ListDbfsResponseBodyDBFSInfoSnapshotInfo snapshotInfo;
 
         @NameInMap("Status")
         public String status;
@@ -390,6 +445,14 @@ public class ListDbfsResponseBody extends TeaModel {
         }
         public Integer getSizeG() {
             return this.sizeG;
+        }
+
+        public ListDbfsResponseBodyDBFSInfo setSnapshotInfo(ListDbfsResponseBodyDBFSInfoSnapshotInfo snapshotInfo) {
+            this.snapshotInfo = snapshotInfo;
+            return this;
+        }
+        public ListDbfsResponseBodyDBFSInfoSnapshotInfo getSnapshotInfo() {
+            return this.snapshotInfo;
         }
 
         public ListDbfsResponseBodyDBFSInfo setStatus(String status) {
