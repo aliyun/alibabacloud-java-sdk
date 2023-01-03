@@ -4,6 +4,9 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class RRpcRequest extends TeaModel {
+    @NameInMap("ContentType")
+    public String contentType;
+
     @NameInMap("DeviceName")
     public String deviceName;
 
@@ -25,6 +28,14 @@ public class RRpcRequest extends TeaModel {
     public static RRpcRequest build(java.util.Map<String, ?> map) throws Exception {
         RRpcRequest self = new RRpcRequest();
         return TeaModel.build(map, self);
+    }
+
+    public RRpcRequest setContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
+    public String getContentType() {
+        return this.contentType;
     }
 
     public RRpcRequest setDeviceName(String deviceName) {
