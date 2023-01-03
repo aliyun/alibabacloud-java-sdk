@@ -153,6 +153,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteResourceWithOptions(resourcePath, request, headers, runtime);
     }
 
+    public GetResourceTypeResponse getResourceTypeWithOptions(String resourcePath, GetResourceTypeHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsAcceptLanguage)) {
+            realHeaders.put("x-acs-accept-language", com.aliyun.teautil.Common.toJSONString(headers.xAcsAcceptLanguage));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetResourceType"),
+            new TeaPair("version", "2022-08-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "" + resourcePath + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetResourceTypeResponse());
+    }
+
+    public GetResourceTypeResponse getResourceType(String resourcePath) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        GetResourceTypeHeaders headers = new GetResourceTypeHeaders();
+        return this.getResourceTypeWithOptions(resourcePath, headers, runtime);
+    }
+
     public GetResourcesResponse getResourcesWithOptions(String resourcePath, GetResourcesRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         GetResourcesShrinkRequest request = new GetResourcesShrinkRequest();
