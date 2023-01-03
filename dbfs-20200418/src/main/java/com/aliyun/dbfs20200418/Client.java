@@ -106,6 +106,49 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.addTagsBatchWithOptions(request, runtime);
     }
 
+    public ApplyAutoSnapshotPolicyResponse applyAutoSnapshotPolicyWithOptions(ApplyAutoSnapshotPolicyRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ApplyAutoSnapshotPolicyShrinkRequest request = new ApplyAutoSnapshotPolicyShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.dbfsIds)) {
+            request.dbfsIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.dbfsIds, "DbfsIds", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dbfsIdsShrink)) {
+            query.put("DbfsIds", request.dbfsIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policyId)) {
+            query.put("PolicyId", request.policyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ApplyAutoSnapshotPolicy"),
+            new TeaPair("version", "2020-04-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ApplyAutoSnapshotPolicyResponse());
+    }
+
+    public ApplyAutoSnapshotPolicyResponse applyAutoSnapshotPolicy(ApplyAutoSnapshotPolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.applyAutoSnapshotPolicyWithOptions(request, runtime);
+    }
+
     public AttachDbfsResponse attachDbfsWithOptions(AttachDbfsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -424,6 +467,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createSnapshotWithOptions(request, runtime);
     }
 
+    public DeleteAutoSnapshotPolicyResponse deleteAutoSnapshotPolicyWithOptions(DeleteAutoSnapshotPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.policyId)) {
+            query.put("PolicyId", request.policyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteAutoSnapshotPolicy"),
+            new TeaPair("version", "2020-04-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAutoSnapshotPolicyResponse());
+    }
+
+    public DeleteAutoSnapshotPolicyResponse deleteAutoSnapshotPolicy(DeleteAutoSnapshotPolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteAutoSnapshotPolicyWithOptions(request, runtime);
+    }
+
     public DeleteDbfsResponse deleteDbfsWithOptions(DeleteDbfsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -634,6 +710,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.detachDbfsWithOptions(request, runtime);
     }
 
+    public GetAutoSnapshotPolicyResponse getAutoSnapshotPolicyWithOptions(GetAutoSnapshotPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.policyId)) {
+            query.put("PolicyId", request.policyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAutoSnapshotPolicy"),
+            new TeaPair("version", "2020-04-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAutoSnapshotPolicyResponse());
+    }
+
+    public GetAutoSnapshotPolicyResponse getAutoSnapshotPolicy(GetAutoSnapshotPolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getAutoSnapshotPolicyWithOptions(request, runtime);
+    }
+
     public GetDbfsResponse getDbfsWithOptions(GetDbfsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -694,6 +803,145 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetServiceLinkedRoleResponse getServiceLinkedRole(GetServiceLinkedRoleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getServiceLinkedRoleWithOptions(request, runtime);
+    }
+
+    public ListAutoSnapshotPoliciesResponse listAutoSnapshotPoliciesWithOptions(ListAutoSnapshotPoliciesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.filterKey)) {
+            query.put("FilterKey", request.filterKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filterValue)) {
+            query.put("FilterValue", request.filterValue);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAutoSnapshotPolicies"),
+            new TeaPair("version", "2020-04-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAutoSnapshotPoliciesResponse());
+    }
+
+    public ListAutoSnapshotPoliciesResponse listAutoSnapshotPolicies(ListAutoSnapshotPoliciesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listAutoSnapshotPoliciesWithOptions(request, runtime);
+    }
+
+    public ListAutoSnapshotPolicyAppliedDbfsResponse listAutoSnapshotPolicyAppliedDbfsWithOptions(ListAutoSnapshotPolicyAppliedDbfsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.filterKey)) {
+            query.put("FilterKey", request.filterKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filterValue)) {
+            query.put("FilterValue", request.filterValue);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policyId)) {
+            query.put("PolicyId", request.policyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAutoSnapshotPolicyAppliedDbfs"),
+            new TeaPair("version", "2020-04-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAutoSnapshotPolicyAppliedDbfsResponse());
+    }
+
+    public ListAutoSnapshotPolicyAppliedDbfsResponse listAutoSnapshotPolicyAppliedDbfs(ListAutoSnapshotPolicyAppliedDbfsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listAutoSnapshotPolicyAppliedDbfsWithOptions(request, runtime);
+    }
+
+    public ListAutoSnapshotPolicyUnappliedDbfsResponse listAutoSnapshotPolicyUnappliedDbfsWithOptions(ListAutoSnapshotPolicyUnappliedDbfsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.filterKey)) {
+            query.put("FilterKey", request.filterKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filterValue)) {
+            query.put("FilterValue", request.filterValue);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAutoSnapshotPolicyUnappliedDbfs"),
+            new TeaPair("version", "2020-04-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAutoSnapshotPolicyUnappliedDbfsResponse());
+    }
+
+    public ListAutoSnapshotPolicyUnappliedDbfsResponse listAutoSnapshotPolicyUnappliedDbfs(ListAutoSnapshotPolicyUnappliedDbfsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listAutoSnapshotPolicyUnappliedDbfsWithOptions(request, runtime);
     }
 
     public ListDbfsResponse listDbfsWithOptions(ListDbfsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -964,6 +1212,106 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListTagValuesResponse listTagValues(ListTagValuesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listTagValuesWithOptions(request, runtime);
+    }
+
+    public ModifyAutoSnapshotPolicyResponse modifyAutoSnapshotPolicyWithOptions(ModifyAutoSnapshotPolicyRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ModifyAutoSnapshotPolicyShrinkRequest request = new ModifyAutoSnapshotPolicyShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.repeatWeekdays)) {
+            request.repeatWeekdaysShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.repeatWeekdays, "RepeatWeekdays", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.timePoints)) {
+            request.timePointsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.timePoints, "TimePoints", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.policyId)) {
+            query.put("PolicyId", request.policyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policyName)) {
+            query.put("PolicyName", request.policyName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.repeatWeekdaysShrink)) {
+            query.put("RepeatWeekdays", request.repeatWeekdaysShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.retentionDays)) {
+            query.put("RetentionDays", request.retentionDays);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timePointsShrink)) {
+            query.put("TimePoints", request.timePointsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyAutoSnapshotPolicy"),
+            new TeaPair("version", "2020-04-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyAutoSnapshotPolicyResponse());
+    }
+
+    public ModifyAutoSnapshotPolicyResponse modifyAutoSnapshotPolicy(ModifyAutoSnapshotPolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyAutoSnapshotPolicyWithOptions(request, runtime);
+    }
+
+    public ModifySnapshotAttributeResponse modifySnapshotAttributeWithOptions(ModifySnapshotAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.snapshotId)) {
+            query.put("SnapshotId", request.snapshotId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.snapshotName)) {
+            query.put("SnapshotName", request.snapshotName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifySnapshotAttribute"),
+            new TeaPair("version", "2020-04-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifySnapshotAttributeResponse());
+    }
+
+    public ModifySnapshotAttributeResponse modifySnapshotAttribute(ModifySnapshotAttributeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifySnapshotAttributeWithOptions(request, runtime);
     }
 
     public RenameDbfsResponse renameDbfsWithOptions(RenameDbfsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
