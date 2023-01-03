@@ -4,6 +4,9 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class SetRetcodeShareStatusRequest extends TeaModel {
+    @NameInMap("AppName")
+    public String appName;
+
     // The process identifier (PID) of the application. For more information about how to obtain the PID, see [Obtain the PID of an application](~~186100~~#title-imy-7gj-qhr).
     @NameInMap("Pid")
     public String pid;
@@ -18,6 +21,14 @@ public class SetRetcodeShareStatusRequest extends TeaModel {
     public static SetRetcodeShareStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         SetRetcodeShareStatusRequest self = new SetRetcodeShareStatusRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SetRetcodeShareStatusRequest setAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
+    public String getAppName() {
+        return this.appName;
     }
 
     public SetRetcodeShareStatusRequest setPid(String pid) {

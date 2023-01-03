@@ -16,6 +16,12 @@ public class SearchTraceAppByPageRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
+    @NameInMap("Tags")
+    public java.util.List<SearchTraceAppByPageRequestTags> tags;
+
     // The name of the application.
     @NameInMap("TraceAppName")
     public String traceAppName;
@@ -49,12 +55,58 @@ public class SearchTraceAppByPageRequest extends TeaModel {
         return this.regionId;
     }
 
+    public SearchTraceAppByPageRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public SearchTraceAppByPageRequest setTags(java.util.List<SearchTraceAppByPageRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<SearchTraceAppByPageRequestTags> getTags() {
+        return this.tags;
+    }
+
     public SearchTraceAppByPageRequest setTraceAppName(String traceAppName) {
         this.traceAppName = traceAppName;
         return this;
     }
     public String getTraceAppName() {
         return this.traceAppName;
+    }
+
+    public static class SearchTraceAppByPageRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static SearchTraceAppByPageRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            SearchTraceAppByPageRequestTags self = new SearchTraceAppByPageRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public SearchTraceAppByPageRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public SearchTraceAppByPageRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }
