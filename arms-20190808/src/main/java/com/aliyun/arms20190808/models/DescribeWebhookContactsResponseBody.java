@@ -4,9 +4,11 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DescribeWebhookContactsResponseBody extends TeaModel {
+    // Paging object.
     @NameInMap("PageBean")
     public DescribeWebhookContactsResponseBodyPageBean pageBean;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +34,30 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
     }
 
     public static class DescribeWebhookContactsResponseBodyPageBeanWebhookContactsWebhook extends TeaModel {
+        // The header of the HTTP request.
         @NameInMap("BizHeaders")
         public java.util.Map<String, ?> bizHeaders;
 
+        // The parameters in the HTTP request.
         @NameInMap("BizParams")
         public java.util.Map<String, ?> bizParams;
 
+        // The alert notification template.
         @NameInMap("Body")
         public String body;
 
+        // The HTTP request method. Valid values:
+        // 
+        // *   Get
+        // *   Post
         @NameInMap("Method")
         public String method;
 
+        // The alert recovery template.
         @NameInMap("RecoverBody")
         public String recoverBody;
 
+        // The URL of the request method.
         @NameInMap("Url")
         public String url;
 
@@ -106,12 +117,15 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
     }
 
     public static class DescribeWebhookContactsResponseBodyPageBeanWebhookContacts extends TeaModel {
+        // Webhook alert contact details.
         @NameInMap("Webhook")
         public DescribeWebhookContactsResponseBodyPageBeanWebhookContactsWebhook webhook;
 
+        // The ID of the contact for webhook alerts.
         @NameInMap("WebhookId")
         public Float webhookId;
 
+        // The name of the webhook alert contact.
         @NameInMap("WebhookName")
         public String webhookName;
 
@@ -147,15 +161,19 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
     }
 
     public static class DescribeWebhookContactsResponseBodyPageBean extends TeaModel {
+        // The number of pages to query.
         @NameInMap("Page")
         public Long page;
 
+        // The number of webhook alert contacts on each page.
         @NameInMap("Size")
         public Long size;
 
+        // The total number of webhook alert contacts that were queried.
         @NameInMap("Total")
         public Long total;
 
+        // Webhook alert contacts.
         @NameInMap("WebhookContacts")
         public java.util.List<DescribeWebhookContactsResponseBodyPageBeanWebhookContacts> webhookContacts;
 

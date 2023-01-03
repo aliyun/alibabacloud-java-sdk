@@ -4,9 +4,11 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GetAgentDownloadUrlResponseBody extends TeaModel {
+    // The download URL of the ARMS agent.
     @NameInMap("ArmsAgentDownloadUrl")
     public String armsAgentDownloadUrl;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

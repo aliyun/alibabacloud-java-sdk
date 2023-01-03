@@ -4,9 +4,11 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class AddPrometheusGlobalViewByAliClusterIdsResponseBody extends TeaModel {
+    // The struct returned.
     @NameInMap("Data")
     public AddPrometheusGlobalViewByAliClusterIdsResponseBodyData data;
 
+    // The ID of the request. You can query logs and troubleshoot issues based on the ID.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +34,18 @@ public class AddPrometheusGlobalViewByAliClusterIdsResponseBody extends TeaModel
     }
 
     public static class AddPrometheusGlobalViewByAliClusterIdsResponseBodyData extends TeaModel {
+        // The Info-level information.
         @NameInMap("Info")
         public String info;
 
+        // The additional information.
         @NameInMap("Msg")
         public String msg;
 
+        // Indicates whether the call was successful. Valid values:
+        // 
+        // *   `true`: The call was successful.
+        // *   `false`: The call failed.
         @NameInMap("Success")
         public Boolean success;
 

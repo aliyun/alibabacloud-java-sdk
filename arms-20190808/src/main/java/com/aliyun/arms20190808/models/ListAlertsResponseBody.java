@@ -4,9 +4,11 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListAlertsResponseBody extends TeaModel {
+    // The struct returned.
     @NameInMap("PageBean")
     public ListAlertsResponseBodyPageBean pageBean;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +34,29 @@ public class ListAlertsResponseBody extends TeaModel {
     }
 
     public static class ListAlertsResponseBodyPageBeanListAlertsActivities extends TeaModel {
+        // The content of the alert notification.
         @NameInMap("Content")
         public String content;
 
+        // The description of the activity.
         @NameInMap("Description")
         public String description;
 
+        // The name of the handler.
         @NameInMap("HandlerName")
         public String handlerName;
 
+        // The operation time of the activity.
         @NameInMap("Time")
         public String time;
 
+        // The type of the activity. Valid values:
+        // 
+        // *   1: The alert is claimed.
+        // *   2: The alert is disclaimed.
+        // *   3: A comment is added for the alert.
+        // *   4: The alert is disabled.
+        // *   5: An alert notification is sent.
         @NameInMap("Type")
         public Long type;
 
@@ -95,39 +108,80 @@ public class ListAlertsResponseBody extends TeaModel {
     }
 
     public static class ListAlertsResponseBodyPageBeanListAlertsAlertEvents extends TeaModel {
+        // The name of the event.
         @NameInMap("AlertName")
         public String alertName;
 
+        // The list of annotations.
         @NameInMap("Annotations")
         public String annotations;
 
+        // The description of the event.
         @NameInMap("Description")
         public String description;
 
+        // The time when the event ended.
         @NameInMap("EndTime")
         public String endTime;
 
+        // The URL of the event.
         @NameInMap("GeneratorURL")
         public String generatorURL;
 
+        // The name of the integration that corresponds to the alert event.
         @NameInMap("IntegrationName")
         public String integrationName;
 
+        // The type of the integration that corresponds to the alert event. Valid values:
+        // 
+        // *   ARMS
+        // *   CLOUD_MONITOR
+        // *   MSE
+        // *   ARMS_CLOUD_DIALTEST
+        // *   PROMETHEUS
+        // *   LOG_SERVICE
+        // *   CUSTOM
+        // *   ARMS_PROMETHEUS
+        // *   ARMS_APP_MON
+        // *   ARMS_FRONT_MON
+        // *   ARMS_CUSTOM
+        // *   XTRACE
+        // *   GRAFANA
+        // *   ZABBIX
+        // *   SKYWALKING
+        // *   EVENT_BRIDGE
+        // *   NAGIOS
+        // *   OPENFALCON
+        // *   ARMS_INSIGHTS
         @NameInMap("IntegrationType")
         public String integrationType;
 
+        // The list of tags.
         @NameInMap("Labels")
         public String labels;
 
+        // The time when the event was created.
         @NameInMap("ReceiveTime")
         public String receiveTime;
 
+        // The severity level of the event. Valid values:
+        // 
+        // *   critical
+        // *   error
+        // *   warning
+        // *   info
         @NameInMap("Severity")
         public String severity;
 
+        // The time when the event started.
         @NameInMap("StartTime")
         public String startTime;
 
+        // The status of the event. Valid values:
+        // 
+        // *   Active: The event is not cleared.
+        // *   Silenced: The event is silenced.
+        // *   Resolved: The event is cleared.
         @NameInMap("State")
         public String state;
 
@@ -235,30 +289,43 @@ public class ListAlertsResponseBody extends TeaModel {
     }
 
     public static class ListAlertsResponseBodyPageBeanListAlerts extends TeaModel {
+        // The list of activities.
         @NameInMap("Activities")
         public java.util.List<ListAlertsResponseBodyPageBeanListAlertsActivities> activities;
 
+        // The list of events.
         @NameInMap("AlertEvents")
         public java.util.List<ListAlertsResponseBodyPageBeanListAlertsAlertEvents> alertEvents;
 
+        // The ID of the alert.
         @NameInMap("AlertId")
         public Long alertId;
 
+        // The name of the alert.
         @NameInMap("AlertName")
         public String alertName;
 
+        // The time when the alert was created.
         @NameInMap("CreateTime")
         public String createTime;
 
+        // The ID of the notification policy.
         @NameInMap("DispatchRuleId")
         public Float dispatchRuleId;
 
+        // The name of the notification policy.
         @NameInMap("DispatchRuleName")
         public String dispatchRuleName;
 
+        // The severity level of the alert. Valid values: P6, P5, P4, P3, P2, and P1. The preceding values are listed in ascending order of severity.
         @NameInMap("Severity")
         public String severity;
 
+        // The status of the alert. Valid values:
+        // 
+        // *   0: The alert is waiting to be handled.
+        // *   1: The alert is being handled.
+        // *   2: The alert is handled.
         @NameInMap("State")
         public Long state;
 
@@ -342,15 +409,19 @@ public class ListAlertsResponseBody extends TeaModel {
     }
 
     public static class ListAlertsResponseBodyPageBean extends TeaModel {
+        // The alerts for which the alert sending history is queried.
         @NameInMap("ListAlerts")
         public java.util.List<ListAlertsResponseBodyPageBeanListAlerts> listAlerts;
 
+        // The page number of the returned page.
         @NameInMap("Page")
         public Long page;
 
+        // The number of alerts returned per page.
         @NameInMap("Size")
         public Long size;
 
+        // The total number of queried alerts.
         @NameInMap("Total")
         public Long total;
 

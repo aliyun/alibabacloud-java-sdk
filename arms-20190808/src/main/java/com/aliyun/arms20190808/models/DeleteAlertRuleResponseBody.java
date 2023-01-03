@@ -4,9 +4,14 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DeleteAlertRuleResponseBody extends TeaModel {
+    // Indicates whether the alert rule was successfully deleted.
+    // 
+    // *   `true`: The specified data is deleted.
+    // *   `false`: The specified data fails to be deleted.
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

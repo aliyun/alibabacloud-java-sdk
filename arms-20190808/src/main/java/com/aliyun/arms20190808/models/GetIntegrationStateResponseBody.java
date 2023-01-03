@@ -4,9 +4,11 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GetIntegrationStateResponseBody extends TeaModel {
+    // auditing
     @NameInMap("RequestId")
     public String requestId;
 
+    // Queries the integration state of Prometheus dashboards and collection rules for a Container Service for Kubernetes (ACK) cluster.
     @NameInMap("State")
     public Boolean state;
 

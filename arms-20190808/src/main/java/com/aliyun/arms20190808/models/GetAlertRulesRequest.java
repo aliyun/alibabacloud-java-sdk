@@ -4,30 +4,55 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GetAlertRulesRequest extends TeaModel {
+    // The unique identifiers (IDs) of alert rules.
+    // 
+    // *   If you do not specify this parameter, the API operation does not filter alert rules based on their IDs.
+    // *   If you specify this parameter, the API operation returns only the information of the specified alert rules. Other filter conditions also take effect.
+    // 
+    // > When you call the GetAlertRules operation, you can specify other request parameters to obtain the AlertIds parameter from the response. Then, you can specify the AlertIds parameter to query the specified alert rules.
     @NameInMap("AlertIds")
     public String alertIds;
 
+    // The names of alert rules. When you create alert rules of the new version, you cannot specify duplicate names. However, existing alert rules may have duplicate names. Therefore, the **AlertName** parameter does not uniquely identify an alert rule.
+    // 
+    // *   If you do not specify this parameter, the API operation does not filter alert rules based on their names.
+    // *   If you specify this parameter, the API operation returns only the information of the specified alert rules. Other filter conditions also take effect.
     @NameInMap("AlertNames")
     public String alertNames;
 
+    // The status of the alert rule. Valid values:
+    // 
+    // *   RUNNING
+    // *   STOPPED
+    // *   PAUSED
+    // 
+    // > The **PAUSED** status indicates that the alert rule is abnormal and is actively paused by the system. The alert rule may be paused because that it is not unique or the associated cluster has been deleted.
     @NameInMap("AlertStatus")
     public String alertStatus;
 
+    // The type of the alert rule. Valid values:
+    // 
+    // *   APPLICATION_MONITORING_ALERT_RULE: an alert rule of Application Monitoring
+    // *   BROWSER_MONITORING_ALERT_RULE: an alert rule of Browser Monitoring
+    // *   PROMETHEUS_MONITORING_ALERT_RULE: an alert rule of Prometheus Service
     @NameInMap("AlertType")
     public String alertType;
 
     @NameInMap("ClusterId")
     public String clusterId;
 
+    // The number of the page to return.
     @NameInMap("Page")
     public Long page;
 
     @NameInMap("ProductCode")
     public String productCode;
 
+    // The ID of the region
     @NameInMap("RegionId")
     public String regionId;
 
+    // The number of alert rules to return on each page.
     @NameInMap("Size")
     public Long size;
 

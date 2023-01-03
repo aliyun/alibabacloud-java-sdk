@@ -4,9 +4,11 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class SearchTracesResponseBody extends TeaModel {
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The details of the returned traces.
     @NameInMap("TraceInfos")
     public java.util.List<SearchTracesResponseBodyTraceInfos> traceInfos;
 
@@ -32,21 +34,27 @@ public class SearchTracesResponseBody extends TeaModel {
     }
 
     public static class SearchTracesResponseBodyTraceInfos extends TeaModel {
+        // The amount of time consumed by the trace. Unit: milliseconds.
         @NameInMap("Duration")
         public Long duration;
 
+        // The name of the traced span.
         @NameInMap("OperationName")
         public String operationName;
 
+        // The IP address of the host where the application resides.
         @NameInMap("ServiceIp")
         public String serviceIp;
 
+        // The name of the application.
         @NameInMap("ServiceName")
         public String serviceName;
 
+        // The timestamp.
         @NameInMap("Timestamp")
         public Long timestamp;
 
+        // The ID of the trace.
         @NameInMap("TraceID")
         public String traceID;
 

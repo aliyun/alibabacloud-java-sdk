@@ -4,9 +4,11 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DeleteIntegrationResponseBody extends TeaModel {
+    // Indicates whether the call was successful.
     @NameInMap("Data")
     public String data;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

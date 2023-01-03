@@ -4,9 +4,14 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class UpdateAlertContactResponseBody extends TeaModel {
+    // Indicates whether the update was successful. Valid values:
+    // 
+    // *   true: The update was successful.
+    // *   false: The update failed.
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

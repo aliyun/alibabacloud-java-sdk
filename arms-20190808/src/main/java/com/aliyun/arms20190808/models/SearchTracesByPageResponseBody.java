@@ -4,9 +4,11 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class SearchTracesByPageResponseBody extends TeaModel {
+    // The struct returned.
     @NameInMap("PageBean")
     public SearchTracesByPageResponseBodyPageBean pageBean;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +34,27 @@ public class SearchTracesByPageResponseBody extends TeaModel {
     }
 
     public static class SearchTracesByPageResponseBodyPageBeanTraceInfos extends TeaModel {
+        // The amount of time consumed by the trace. Unit: milliseconds.
         @NameInMap("Duration")
         public Long duration;
 
+        // The name of the traced span.
         @NameInMap("OperationName")
         public String operationName;
 
+        // The IP address of the host where the application resides.
         @NameInMap("ServiceIp")
         public String serviceIp;
 
+        // The name of the application.
         @NameInMap("ServiceName")
         public String serviceName;
 
+        // The timestamp.
         @NameInMap("Timestamp")
         public Long timestamp;
 
+        // The ID of the trace.
         @NameInMap("TraceID")
         public String traceID;
 
@@ -106,15 +114,19 @@ public class SearchTracesByPageResponseBody extends TeaModel {
     }
 
     public static class SearchTracesByPageResponseBodyPageBean extends TeaModel {
+        // The page number of the returned page.
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        // The number of entries returned per page.
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        // The total number of returned entries.
         @NameInMap("Total")
         public Integer total;
 
+        // The details of the returned traces.
         @NameInMap("TraceInfos")
         public java.util.List<SearchTracesByPageResponseBodyPageBeanTraceInfos> traceInfos;
 

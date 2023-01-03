@@ -4,9 +4,11 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ConfigAppResponseBody extends TeaModel {
+    // The result of turning on or turning off the main switch of the ARMS agent or the main switch status of the ARMS agent.
     @NameInMap("Data")
     public String data;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,9 +4,11 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class UpdateIntegrationResponseBody extends TeaModel {
+    // The Information about the alert integration.
     @NameInMap("Integration")
     public UpdateIntegrationResponseBodyIntegration integration;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,51 +34,80 @@ public class UpdateIntegrationResponseBody extends TeaModel {
     }
 
     public static class UpdateIntegrationResponseBodyIntegration extends TeaModel {
+        // The endpoint of the alert integration.
         @NameInMap("ApiEndpoint")
         public String apiEndpoint;
 
+        // Indicates whether alert events are automatically cleared. Valid values:
+        // 
+        // *   true (default)
+        // *   false
         @NameInMap("AutoRecover")
         public Boolean autoRecover;
 
+        // The description of the alert integration.
         @NameInMap("Description")
         public String description;
 
+        // The fields whose values are deduplicated.
         @NameInMap("DuplicateKey")
         public String duplicateKey;
 
+        // The extended mapped fields of the alert source.
         @NameInMap("ExtendedFieldRedefineRules")
         public java.util.List<java.util.Map<String, ?>> extendedFieldRedefineRules;
 
+        // The predefined mapped fields of the alert source.
         @NameInMap("FieldRedefineRules")
         public java.util.List<java.util.Map<String, ?>> fieldRedefineRules;
 
+        // The field for clearing alert events. The system queries alert events based on the field of alert clearing events and clears the alert events.
+        // 
+        // > Only Log Service supports this parameter.
         @NameInMap("InitiativeRecoverField")
         public String initiativeRecoverField;
 
+        // The value of the field for clearing alert events. The system queries alert events based on the field of alert clearing events and clears the alert events.
+        // 
+        // > Only Log Service supports this parameter.
         @NameInMap("InitiativeRecoverValue")
         public String initiativeRecoverValue;
 
+        // The ID of the alert integration.
         @NameInMap("IntegrationId")
         public Long integrationId;
 
+        // The name of the alert integration.
         @NameInMap("IntegrationName")
         public String integrationName;
 
+        // The service of the alert integration. Valid values:
+        // 
+        // *   CLOUD_MONITOR: CloudMonitor
+        // *   LOG_SERVICE: Log Service
         @NameInMap("IntegrationProductType")
         public String integrationProductType;
 
+        // The activity of the alert integration
         @NameInMap("Liveness")
         public String liveness;
 
+        // The period of time within which alert events are automatically cleared. Unit: seconds. Default value: 300.
         @NameInMap("RecoverTime")
         public Long recoverTime;
 
+        // The authentication token of the alert integration.
         @NameInMap("ShortToken")
         public String shortToken;
 
+        // The total number of alert events and the number of abnormal alert events in the last hour.
         @NameInMap("Stat")
         public java.util.List<Long> stat;
 
+        // Indicates whether the alert integration is enabled. Valid values:
+        // 
+        // *   true
+        // *   false
         @NameInMap("State")
         public Boolean state;
 

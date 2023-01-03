@@ -4,24 +4,40 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class UpdateAlertContactRequest extends TeaModel {
+    // The ID of the alert contact to be updated. You can call the SearchAlertContact operation to query the contact ID. For more information, see [SearchAlertContact](~~130703~~).
     @NameInMap("ContactId")
     public Long contactId;
 
+    // The new name of the alert contact.
     @NameInMap("ContactName")
     public String contactName;
 
+    // The new webhook URL of the DingTalk bot. For more information, see [Configure a DingTalk chatbot to send alert notifications](~~106247~~). You must specify at least one of the following parameters: PhoneNum, Email, and DingRobotWebhookUrl.
+    // 
+    // >  If you do not specify this parameter, the original webhook URL of the DingTalk bot is deleted. If you specify this parameter, the original webhook URL of the DingTalk bot is updated.
     @NameInMap("DingRobotWebhookUrl")
     public String dingRobotWebhookUrl;
 
+    // The new email address of the alert contact. You must specify at least one of the following parameters: PhoneNum, Email, and DingRobotWebhookUrl.
+    // 
+    // >  If you do not specify this parameter, the original email address of the alert contact is deleted. If you specify this parameter, the original email address of the alert contact is updated.
     @NameInMap("Email")
     public String email;
 
+    // The new mobile phone number of the alert contact. You must specify at least one of the following parameters: PhoneNum, Email, and DingRobotWebhookUrl.
+    // 
+    // >  If you do not specify this parameter, the original mobile phone number of the alert contact is deleted. If you specify this parameter, the original mobile phone number of the alert contact is updated.
     @NameInMap("PhoneNum")
     public String phoneNum;
 
+    // The ID of the region. Set the value to `cn-hangzhou`.
     @NameInMap("RegionId")
     public String regionId;
 
+    // Specifies whether the alert contact receives system notifications. Valid values:
+    // 
+    // *   `true`: receives system notifications.
+    // *   `false`: does not receive system notifications.
     @NameInMap("SystemNoc")
     public Boolean systemNoc;
 

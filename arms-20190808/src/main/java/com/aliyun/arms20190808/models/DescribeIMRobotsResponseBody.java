@@ -4,9 +4,11 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DescribeIMRobotsResponseBody extends TeaModel {
+    // Paging object.
     @NameInMap("PageBean")
     public DescribeIMRobotsResponseBodyPageBean pageBean;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,24 +34,36 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
     }
 
     public static class DescribeIMRobotsResponseBodyPageBeanAlertIMRobots extends TeaModel {
+        // Specifies whether to send daily statistics.
+        // 
+        // *   `false` (default): does not send statistics.
+        // *   `true`: sends statistics.
         @NameInMap("DailyNoc")
         public Boolean dailyNoc;
 
+        // The time when the daily statistics are sent. ARMS Alert Management sends the total number of alerts generated today, the number of resolved alerts, and the number of pending alerts at the specified time point.
         @NameInMap("DailyNocTime")
         public String dailyNocTime;
 
         @NameInMap("DingSignKey")
         public String dingSignKey;
 
+        // The webhook address of the IM bot.
         @NameInMap("RobotAddr")
         public String robotAddr;
 
+        // The ID of the IM bot.
         @NameInMap("RobotId")
         public Float robotId;
 
+        // The name of the IM robot.
         @NameInMap("RobotName")
         public String robotName;
 
+        // IM Robot Type:
+        // 
+        // *   `dingding`: DingTalk robot.
+        // *   `wechat`: Enterprise WeChat Robot.
         @NameInMap("Type")
         public String type;
 
@@ -117,15 +131,19 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
     }
 
     public static class DescribeIMRobotsResponseBodyPageBean extends TeaModel {
+        // The details of the IM robot.
         @NameInMap("AlertIMRobots")
         public java.util.List<DescribeIMRobotsResponseBodyPageBeanAlertIMRobots> alertIMRobots;
 
+        // The number of pages to query.
         @NameInMap("Page")
         public Long page;
 
+        // Number of IM robots per page.
         @NameInMap("Size")
         public Long size;
 
+        // The total number of IM robots queried.
         @NameInMap("Total")
         public Long total;
 

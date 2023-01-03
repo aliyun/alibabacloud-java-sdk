@@ -4,12 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class AddIntegrationRequest extends TeaModel {
+    // The ID of an Alibaba Cloud Container Service for Kubernetes cluster.
     @NameInMap("ClusterId")
     public String clusterId;
 
+    // The software abbreviation that is supported by ARMS. Valid values (case-insensitive): `ASM`, `IoT`, and `Flink`.
     @NameInMap("Integration")
     public String integration;
 
+    // The region ID of the instance.
     @NameInMap("RegionId")
     public String regionId;
 

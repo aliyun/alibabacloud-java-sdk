@@ -4,12 +4,33 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class CreateOrUpdateSilencePolicyRequest extends TeaModel {
+    // The ID of the silence policy.
+    // 
+    // *   If you do not specify this parameter, a new silence policy is created.
+    // *   If you specify this parameter, the specified silence policy is modified.
     @NameInMap("Id")
     public Long id;
 
+    // The matching rules. Sample statement:
+    // 
+    // ```
+    // 
+    // [
+    //      {
+    // 	 "matchingConditions": [
+    // 	 {
+    // 	 "value": "test", // The value of the matching condition. 
+    // 	 "key": "altertname", // The key of the matching condition. 
+    // 	 "operator": "eq" // The logical operator of the matching condition, including eq (equal to), neq (not equal to), in (contains), nin (does not contain), re (regular expression match), and nre (regular expression mismatch).   
+    // 	 }
+    // 	 ]
+    //      }
+    // 	 ]
+    // ```
     @NameInMap("MatchingRules")
     public String matchingRules;
 
+    // The name of the silence policy.
     @NameInMap("Name")
     public String name;
 

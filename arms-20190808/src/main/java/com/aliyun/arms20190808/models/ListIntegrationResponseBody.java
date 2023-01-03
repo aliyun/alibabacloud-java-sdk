@@ -4,9 +4,11 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListIntegrationResponseBody extends TeaModel {
+    // The pagination information.
     @NameInMap("PageInfo")
     public ListIntegrationResponseBodyPageInfo pageInfo;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,30 +34,46 @@ public class ListIntegrationResponseBody extends TeaModel {
     }
 
     public static class ListIntegrationResponseBodyPageInfoIntegrationsIntegrationDetail extends TeaModel {
+        // Indicates whether alert events are automatically cleared. Valid values:
+        // 
+        // *   true (default)
+        // *   false
         @NameInMap("AutoRecover")
         public Boolean autoRecover;
 
+        // The description of the alert integration.
         @NameInMap("Description")
         public String description;
 
+        // The fields whose values are deduplicated.
         @NameInMap("DuplicateKey")
         public String duplicateKey;
 
+        // The extended mapped fields of the alert source.
         @NameInMap("ExtendedFieldRedefineRules")
         public java.util.List<java.util.Map<String, ?>> extendedFieldRedefineRules;
 
+        // The predefined mapped fields of the alert source.
         @NameInMap("FieldRedefineRules")
         public java.util.List<java.util.Map<String, ?>> fieldRedefineRules;
 
+        // The field for clearing alert events. The system queries alert events based on the field of alert clearing events and clears the alert events.
+        // 
+        // > Only the Log Service alert integration supports the parameter.
         @NameInMap("InitiativeRecoverField")
         public String initiativeRecoverField;
 
+        // The value of the field for clearing alert events. The system queries alert events based on the field of alert clearing events and clears the alert events.
+        // 
+        // > Only the Log Service alert integration supports the parameter.
         @NameInMap("InitiativeRecoverValue")
         public String initiativeRecoverValue;
 
+        // The time when alert events are automatically cleared. Unit: seconds. Default value: 300.
         @NameInMap("RecoverTime")
         public Long recoverTime;
 
+        // The total number of alert events and the number of abnormal alert events in the last hour.
         @NameInMap("Stat")
         public java.util.List<Long> stat;
 
@@ -139,30 +157,45 @@ public class ListIntegrationResponseBody extends TeaModel {
     }
 
     public static class ListIntegrationResponseBodyPageInfoIntegrations extends TeaModel {
+        // The endpoint of the alert integration.
         @NameInMap("ApiEndpoint")
         public String apiEndpoint;
 
+        // The time when the alert integration was created.
         @NameInMap("CreateTime")
         public String createTime;
 
+        // The information about the alert events.
         @NameInMap("IntegrationDetail")
         public ListIntegrationResponseBodyPageInfoIntegrationsIntegrationDetail integrationDetail;
 
+        // The ID of the alert integration.
         @NameInMap("IntegrationId")
         public Long integrationId;
 
+        // The name of the alert integration.
         @NameInMap("IntegrationName")
         public String integrationName;
 
+        // The service of the alert integration. Valid values:
+        // 
+        // *   CLOUD_MONITOR: CloudMonitor
+        // *   LOG_SERVICE: Log Service
         @NameInMap("IntegrationProductType")
         public String integrationProductType;
 
+        // The activity of the alert integration
         @NameInMap("Liveness")
         public String liveness;
 
+        // The authentication token of the alert integration.
         @NameInMap("ShortToken")
         public String shortToken;
 
+        // Indicates whether the alert integration was enabled. Valid values:
+        // 
+        // *   true
+        // *   false
         @NameInMap("State")
         public Boolean state;
 
@@ -246,15 +279,19 @@ public class ListIntegrationResponseBody extends TeaModel {
     }
 
     public static class ListIntegrationResponseBodyPageInfo extends TeaModel {
+        // The information about each alert integration.
         @NameInMap("Integrations")
         public java.util.List<ListIntegrationResponseBodyPageInfoIntegrations> integrations;
 
+        // The page number of the returned page.
         @NameInMap("Page")
         public Long page;
 
+        // The number of alert integrations returned per page.
         @NameInMap("Size")
         public Long size;
 
+        // The total number of alert integrations.
         @NameInMap("Total")
         public Long total;
 

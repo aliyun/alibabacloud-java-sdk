@@ -4,9 +4,11 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class SearchTraceAppByNameResponseBody extends TeaModel {
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The information about the application monitoring job.
     @NameInMap("TraceApps")
     public java.util.List<SearchTraceAppByNameResponseBodyTraceApps> traceApps;
 
@@ -32,33 +34,49 @@ public class SearchTraceAppByNameResponseBody extends TeaModel {
     }
 
     public static class SearchTraceAppByNameResponseBodyTraceApps extends TeaModel {
+        // The ID of the application.
         @NameInMap("AppId")
         public Long appId;
 
+        // The name of the application.
         @NameInMap("AppName")
         public String appName;
 
+        // The timestamp when the application was created.
         @NameInMap("CreateTime")
         public Long createTime;
 
+        // The tag of the application.
         @NameInMap("Labels")
         public java.util.List<String> labels;
 
+        // The process identifier (PID) of the application.
         @NameInMap("Pid")
         public String pid;
 
+        // The ID of the region.
         @NameInMap("RegionId")
         public String regionId;
 
+        // Indicates whether the application is displayed in the Application Real-Time Monitoring Service (ARMS) console. Valid values:
+        // 
+        // *   `true`: The application is displayed in the ARMS console.
+        // *   `false`: The application is not displayed in the ARMS console.
         @NameInMap("Show")
         public Boolean show;
 
+        // The type of the monitoring job. Valid values:
+        // 
+        // *   `TRACE`: application monitoring
+        // *   `RETCODE`: frontend monitoring
         @NameInMap("Type")
         public String type;
 
+        // The timestamp when the application was updated.
         @NameInMap("UpdateTime")
         public Long updateTime;
 
+        // The ID of the user.
         @NameInMap("UserId")
         public String userId;
 

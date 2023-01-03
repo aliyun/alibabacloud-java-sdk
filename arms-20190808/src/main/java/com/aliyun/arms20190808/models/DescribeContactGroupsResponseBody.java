@@ -4,9 +4,11 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DescribeContactGroupsResponseBody extends TeaModel {
+    // Paging object.
     @NameInMap("PageBean")
     public DescribeContactGroupsResponseBodyPageBean pageBean;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +34,36 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeContactGroupsResponseBodyPageBeanAlertContactGroupsContacts extends TeaModel {
+        @NameInMap("ArmsContactId")
+        public Long armsContactId;
+
+        // The ID of the alert contact.
         @NameInMap("ContactId")
         public Float contactId;
 
+        // The name of the contact.
         @NameInMap("ContactName")
         public String contactName;
 
+        // The email address of the alert contact.
         @NameInMap("Email")
         public String email;
 
+        // The mobile number of the alert contact.
         @NameInMap("Phone")
         public String phone;
 
         public static DescribeContactGroupsResponseBodyPageBeanAlertContactGroupsContacts build(java.util.Map<String, ?> map) throws Exception {
             DescribeContactGroupsResponseBodyPageBeanAlertContactGroupsContacts self = new DescribeContactGroupsResponseBodyPageBeanAlertContactGroupsContacts();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeContactGroupsResponseBodyPageBeanAlertContactGroupsContacts setArmsContactId(Long armsContactId) {
+            this.armsContactId = armsContactId;
+            return this;
+        }
+        public Long getArmsContactId() {
+            return this.armsContactId;
         }
 
         public DescribeContactGroupsResponseBodyPageBeanAlertContactGroupsContacts setContactId(Float contactId) {
@@ -84,18 +101,32 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeContactGroupsResponseBodyPageBeanAlertContactGroups extends TeaModel {
+        @NameInMap("ArmsContactGroupId")
+        public Long armsContactGroupId;
+
+        // The ID of the alert contact group.
         @NameInMap("ContactGroupId")
         public Float contactGroupId;
 
+        // The name of the alert contact group.
         @NameInMap("ContactGroupName")
         public String contactGroupName;
 
+        // The contact information. No **Contacts** is displayed when the **IsDetail** is set to `false`.
         @NameInMap("Contacts")
         public java.util.List<DescribeContactGroupsResponseBodyPageBeanAlertContactGroupsContacts> contacts;
 
         public static DescribeContactGroupsResponseBodyPageBeanAlertContactGroups build(java.util.Map<String, ?> map) throws Exception {
             DescribeContactGroupsResponseBodyPageBeanAlertContactGroups self = new DescribeContactGroupsResponseBodyPageBeanAlertContactGroups();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeContactGroupsResponseBodyPageBeanAlertContactGroups setArmsContactGroupId(Long armsContactGroupId) {
+            this.armsContactGroupId = armsContactGroupId;
+            return this;
+        }
+        public Long getArmsContactGroupId() {
+            return this.armsContactGroupId;
         }
 
         public DescribeContactGroupsResponseBodyPageBeanAlertContactGroups setContactGroupId(Float contactGroupId) {
@@ -125,15 +156,19 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeContactGroupsResponseBodyPageBean extends TeaModel {
+        // The list of alert contact groups.
         @NameInMap("AlertContactGroups")
         public java.util.List<DescribeContactGroupsResponseBodyPageBeanAlertContactGroups> alertContactGroups;
 
+        // The number of pages to query.
         @NameInMap("Page")
         public Long page;
 
+        // The number of contact groups on each page.
         @NameInMap("Size")
         public Long size;
 
+        // The total number of contact groups queried.
         @NameInMap("Total")
         public Long total;
 

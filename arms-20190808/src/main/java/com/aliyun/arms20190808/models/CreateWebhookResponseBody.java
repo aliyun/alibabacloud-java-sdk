@@ -4,9 +4,11 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class CreateWebhookResponseBody extends TeaModel {
+    // The ID of the contact for webhook alerts.
     @NameInMap("ContactId")
     public String contactId;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

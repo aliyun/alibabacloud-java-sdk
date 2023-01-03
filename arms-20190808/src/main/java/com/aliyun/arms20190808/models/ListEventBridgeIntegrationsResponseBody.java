@@ -4,9 +4,11 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListEventBridgeIntegrationsResponseBody extends TeaModel {
+    // The information about EventBridge integrations on each page.
     @NameInMap("PageBean")
     public ListEventBridgeIntegrationsResponseBodyPageBean pageBean;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +34,15 @@ public class ListEventBridgeIntegrationsResponseBody extends TeaModel {
     }
 
     public static class ListEventBridgeIntegrationsResponseBodyPageBeanEventBridgeIntegrations extends TeaModel {
+        // The description of the EventBridge integration.
         @NameInMap("Description")
         public String description;
 
+        // The ID of the EventBridge integration.
         @NameInMap("Id")
         public Long id;
 
+        // The name of the EventBridge integration.
         @NameInMap("Name")
         public String name;
 
@@ -73,15 +78,19 @@ public class ListEventBridgeIntegrationsResponseBody extends TeaModel {
     }
 
     public static class ListEventBridgeIntegrationsResponseBodyPageBean extends TeaModel {
+        // The EventBridge integrations.
         @NameInMap("EventBridgeIntegrations")
         public java.util.List<ListEventBridgeIntegrationsResponseBodyPageBeanEventBridgeIntegrations> eventBridgeIntegrations;
 
+        // The number of the page returned.
         @NameInMap("Page")
         public Long page;
 
+        // The number of entries that are returned on each page.
         @NameInMap("Size")
         public Long size;
 
+        // The total number of EventBridge integrations that are returned.
         @NameInMap("Total")
         public Long total;
 

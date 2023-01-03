@@ -4,36 +4,50 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class CreatePrometheusAlertRuleRequest extends TeaModel {
+    // The name of the alert rule.
     @NameInMap("AlertName")
     public String alertName;
 
+    // The annotations that are described in a JSON string. You must specify the name and value of each annotation.
     @NameInMap("Annotations")
     public String annotations;
 
+    // The ID of the cluster.
     @NameInMap("ClusterId")
     public String clusterId;
 
+    // The ID of the notification policy. This parameter is required if the **NotifyType** parameter is set to `DISPATCH_RULE`.
     @NameInMap("DispatchRuleId")
     public Long dispatchRuleId;
 
+    // The duration of the alert. Valid values: 1 to 1440. Unit: minutes.
     @NameInMap("Duration")
     public String duration;
 
+    // The alert rule expression that follows the PromQL syntax.
     @NameInMap("Expression")
     public String expression;
 
+    // The tags that are described in a JSON string. You must specify the name and value of each tag.
     @NameInMap("Labels")
     public String labels;
 
+    // The message of the alert notification. Tags can be referenced in the {{$labels.xxx}} format.
     @NameInMap("Message")
     public String message;
 
+    // The method of that is used to send alert notifications. Valid values:
+    // 
+    // *   `ALERT_MANAGER`: Alert notifications are sent by Operation Center. This is the default value.
+    // *   `DISPATCH_RULE`: Alert notifications are sent based on the specified notification policy.
     @NameInMap("NotifyType")
     public String notifyType;
 
+    // The ID of the region.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The type of the alert rule.
     @NameInMap("Type")
     public String type;
 

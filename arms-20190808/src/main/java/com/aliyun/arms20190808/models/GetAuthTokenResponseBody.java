@@ -4,9 +4,11 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GetAuthTokenResponseBody extends TeaModel {
+    // The returned authentication token.
     @NameInMap("Data")
     public String data;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,9 +4,11 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class SearchRetcodeAppByPageResponseBody extends TeaModel {
+    // The returned page information.
     @NameInMap("PageBean")
     public SearchRetcodeAppByPageResponseBodyPageBean pageBean;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -31,34 +33,90 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class SearchRetcodeAppByPageResponseBodyPageBeanRetcodeAppsTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static SearchRetcodeAppByPageResponseBodyPageBeanRetcodeAppsTags build(java.util.Map<String, ?> map) throws Exception {
+            SearchRetcodeAppByPageResponseBodyPageBeanRetcodeAppsTags self = new SearchRetcodeAppByPageResponseBodyPageBeanRetcodeAppsTags();
+            return TeaModel.build(map, self);
+        }
+
+        public SearchRetcodeAppByPageResponseBodyPageBeanRetcodeAppsTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public SearchRetcodeAppByPageResponseBodyPageBeanRetcodeAppsTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class SearchRetcodeAppByPageResponseBodyPageBeanRetcodeApps extends TeaModel {
+        // The ID of the application. The parameter is an auto-increment parameter.
         @NameInMap("AppId")
         public Long appId;
 
+        // The name of the application.
         @NameInMap("AppName")
         public String appName;
 
+        // The time when the task was created.
         @NameInMap("CreateTime")
         public Long createTime;
 
+        // The alias of the application.
         @NameInMap("NickName")
         public String nickName;
 
+        // The PID of the application.
         @NameInMap("Pid")
         public String pid;
 
+        // The ID of the region.
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        // The type of the application. Valid values:
+        // 
+        // *   `web`: web application
+        // *   `weex`: Weex mobile app
+        // *   `mini_dd`: DingTalk mini program
+        // *   `mini_alipay`: Alipay mini program
+        // *   `mini_wx`: WeChat mini program
+        // *   `mini_common`: mini program on other platforms
         @NameInMap("RetcodeAppType")
         public String retcodeAppType;
 
+        @NameInMap("Tags")
+        public java.util.List<SearchRetcodeAppByPageResponseBodyPageBeanRetcodeAppsTags> tags;
+
+        // The monitoring type. Valid values:
+        // 
+        // *   `TRACE`: application monitoring
+        // *   `RETCODE`: browser monitoring
         @NameInMap("Type")
         public String type;
 
+        // The time when the task was updated.
         @NameInMap("UpdateTime")
         public Long updateTime;
 
+        // The ID of the user.
         @NameInMap("UserId")
         public String userId;
 
@@ -115,12 +173,28 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
             return this.regionId;
         }
 
+        public SearchRetcodeAppByPageResponseBodyPageBeanRetcodeApps setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
         public SearchRetcodeAppByPageResponseBodyPageBeanRetcodeApps setRetcodeAppType(String retcodeAppType) {
             this.retcodeAppType = retcodeAppType;
             return this;
         }
         public String getRetcodeAppType() {
             return this.retcodeAppType;
+        }
+
+        public SearchRetcodeAppByPageResponseBodyPageBeanRetcodeApps setTags(java.util.List<SearchRetcodeAppByPageResponseBodyPageBeanRetcodeAppsTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<SearchRetcodeAppByPageResponseBodyPageBeanRetcodeAppsTags> getTags() {
+            return this.tags;
         }
 
         public SearchRetcodeAppByPageResponseBodyPageBeanRetcodeApps setType(String type) {
@@ -150,15 +224,19 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
     }
 
     public static class SearchRetcodeAppByPageResponseBodyPageBean extends TeaModel {
+        // The page number of the returned page.
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        // The number of entries returned per page.
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        // The browser monitoring tasks that are returned.
         @NameInMap("RetcodeApps")
         public java.util.List<SearchRetcodeAppByPageResponseBodyPageBeanRetcodeApps> retcodeApps;
 
+        // The total number of returned entries.
         @NameInMap("TotalCount")
         public Integer totalCount;
 

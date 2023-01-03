@@ -4,9 +4,14 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GetTraceAppResponseBody extends TeaModel {
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
+    // The struct returned.
     @NameInMap("TraceApp")
     public GetTraceAppResponseBodyTraceApp traceApp;
 
@@ -23,6 +28,14 @@ public class GetTraceAppResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public GetTraceAppResponseBody setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public GetTraceAppResponseBody setTraceApp(GetTraceAppResponseBodyTraceApp traceApp) {
         this.traceApp = traceApp;
         return this;
@@ -31,34 +44,89 @@ public class GetTraceAppResponseBody extends TeaModel {
         return this.traceApp;
     }
 
+    public static class GetTraceAppResponseBodyTraceAppTags extends TeaModel {
+        // The key of the tag.
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        // The value of the tag.
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static GetTraceAppResponseBodyTraceAppTags build(java.util.Map<String, ?> map) throws Exception {
+            GetTraceAppResponseBodyTraceAppTags self = new GetTraceAppResponseBodyTraceAppTags();
+            return TeaModel.build(map, self);
+        }
+
+        public GetTraceAppResponseBodyTraceAppTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public GetTraceAppResponseBodyTraceAppTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
     public static class GetTraceAppResponseBodyTraceApp extends TeaModel {
+        // The ID of the application.
         @NameInMap("AppId")
         public Long appId;
 
+        // The name of the application.
         @NameInMap("AppName")
         public String appName;
 
+        // The timestamp generated when the monitoring task was created.
         @NameInMap("CreateTime")
         public Long createTime;
 
+        // The labels of the application.
         @NameInMap("Labels")
         public java.util.List<String> labels;
 
+        // The PID of the application.
         @NameInMap("Pid")
         public String pid;
 
+        // The ID of the region.
         @NameInMap("RegionId")
         public String regionId;
 
+        // Indicates whether the application was displayed in the Application Real-Time Monitoring Service (ARMS) console. Valid values:
+        // 
+        // *   `true`: The application was displayed in the ARMS console.
+        // *   `false`: The application was not displayed in the ARMS console.
         @NameInMap("Show")
         public Boolean show;
 
+        @NameInMap("Source")
+        public String source;
+
+        // The tags of the application.
+        @NameInMap("Tags")
+        public java.util.List<GetTraceAppResponseBodyTraceAppTags> tags;
+
+        // The type of the monitoring task. Valid values:
+        // 
+        // *   `TRACE`: application monitoring
+        // *   `RETCODE`: browser monitoring
         @NameInMap("Type")
         public String type;
 
+        // The timestamp generated when the monitoring task was updated.
         @NameInMap("UpdateTime")
         public Long updateTime;
 
+        // The ID of the user.
         @NameInMap("UserId")
         public String userId;
 
@@ -121,6 +189,22 @@ public class GetTraceAppResponseBody extends TeaModel {
         }
         public Boolean getShow() {
             return this.show;
+        }
+
+        public GetTraceAppResponseBodyTraceApp setSource(String source) {
+            this.source = source;
+            return this;
+        }
+        public String getSource() {
+            return this.source;
+        }
+
+        public GetTraceAppResponseBodyTraceApp setTags(java.util.List<GetTraceAppResponseBodyTraceAppTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<GetTraceAppResponseBodyTraceAppTags> getTags() {
+            return this.tags;
         }
 
         public GetTraceAppResponseBodyTraceApp setType(String type) {

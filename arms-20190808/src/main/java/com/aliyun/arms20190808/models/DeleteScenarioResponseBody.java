@@ -4,9 +4,14 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DeleteScenarioResponseBody extends TeaModel {
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request is successful.
+    // 
+    // *   `true`: successful
+    // *   `false`: failed
     @NameInMap("Result")
     public Boolean result;
 

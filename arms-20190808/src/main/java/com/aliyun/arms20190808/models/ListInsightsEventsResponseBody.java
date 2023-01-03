@@ -4,9 +4,11 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListInsightsEventsResponseBody extends TeaModel {
+    // The description of the event.
     @NameInMap("InsightsEvents")
     public java.util.List<ListInsightsEventsResponseBodyInsightsEvents> insightsEvents;
 
+    // The title of the event.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -35,18 +37,23 @@ public class ListInsightsEventsResponseBody extends TeaModel {
         @NameInMap("Date")
         public Long date;
 
+        // The ID of the application associated with the event.
         @NameInMap("Desc")
         public String desc;
 
+        // Queries the abnormal Insights events within a specified period of time.
         @NameInMap("Level")
         public String level;
 
+        // auditing
         @NameInMap("Pid")
         public String pid;
 
+        // The overall response time of the \[HTTP] service of the application \[sd] spikes at \[2022-07-27 10:57:00]
         @NameInMap("Title")
         public String title;
 
+        // The time at which the event occurred. The value is a timestamp.
         @NameInMap("Type")
         public String type;
 

@@ -4,18 +4,25 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListSilencePoliciesRequest extends TeaModel {
+    // Specifies whether to query the details of a silence policy. Valid values:
+    // 
+    // *   `true`: Details of the silence policy are queried.
+    // *   `false`: Details of the silence policy are not queried.
     @NameInMap("IsDetail")
     public Boolean isDetail;
 
+    // The name of the silence policy.
     @NameInMap("Name")
     public String name;
 
+    // The number of pages to return.
     @NameInMap("Page")
     public Long page;
 
     @NameInMap("RegionId")
     public String regionId;
 
+    // The number of entries to return on each page.
     @NameInMap("Size")
     public Long size;
 

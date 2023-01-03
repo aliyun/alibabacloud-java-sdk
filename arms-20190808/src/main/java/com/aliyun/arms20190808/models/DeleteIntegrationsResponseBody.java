@@ -4,9 +4,14 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DeleteIntegrationsResponseBody extends TeaModel {
+    // Indicates whether the alert integration was deleted. Valid values:
+    // 
+    // *   true
+    // *   false
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

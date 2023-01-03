@@ -4,27 +4,41 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class CreateOrUpdateWebhookContactRequest extends TeaModel {
+    // The header of the HTTP request.
     @NameInMap("BizHeaders")
     public String bizHeaders;
 
+    // The parameters in the HTTP request.
     @NameInMap("BizParams")
     public String bizParams;
 
+    // The notification template that is sent when an alert is triggered. This parameter is required when the **Method** is set to **Post**. You can use `$content` placeholders to output the notification content. The notification content cannot exceed 500 characters in length. For more information, see [Notification template variables](~~251834~~).
     @NameInMap("Body")
     public String body;
 
+    // The HTTP request method. Valid values:
+    // 
+    // *   Post
+    // *   Get
     @NameInMap("Method")
     public String method;
 
+    // The notification template that is sent when the alert resumes. This parameter is required when the **Method** is set to **Post**. You can use `$content` placeholders to output the notification content. The notification content cannot exceed 500 characters in length. For more information, see [Notification template variables](~~251834~~).
     @NameInMap("RecoverBody")
     public String recoverBody;
 
+    // The URL of the request method.
     @NameInMap("Url")
     public String url;
 
+    // The ID of the contact for webhook alerts.
+    // 
+    // *   If you do not specify this parameter, a new webhook alert contact is created.
+    // *   Enter information that represents modifying the contact information of the specified Webhook alert.
     @NameInMap("WebhookId")
     public Long webhookId;
 
+    // The name of the webhook alert contact.
     @NameInMap("WebhookName")
     public String webhookName;
 

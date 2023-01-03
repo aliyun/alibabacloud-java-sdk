@@ -4,12 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DeleteSourceMapRequest extends TeaModel {
+    // The IDs of the SourceMap files.
     @NameInMap("FidList")
     public java.util.List<String> fidList;
 
+    // The process identifier (PID) of the application.
     @NameInMap("Pid")
     public String pid;
 
+    // The ID of the region.
     @NameInMap("RegionId")
     public String regionId;
 

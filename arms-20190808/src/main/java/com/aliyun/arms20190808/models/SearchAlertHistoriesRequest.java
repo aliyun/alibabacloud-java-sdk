@@ -4,24 +4,40 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class SearchAlertHistoriesRequest extends TeaModel {
+    // The ID of the alert rule. You can call the SearchAlertRules operation and view the `Id` parameter in the response. For more information, see [SearchAlertRules](~~175825~~).
     @NameInMap("AlertId")
     public Long alertId;
 
+    // The type of the alert rule. Valid values:
+    // 
+    // *   `1`: custom alert rules to monitor drill-down data sets
+    // *   `3`: custom alert rules to monitor tiled data sets
+    // *   `4`: alert rules to monitor the frontend, including the default frontend alert rules
+    // *   `5`: alert rules to monitor applications, including the default application alert rules
+    // *   `6`: the default frontend alert rules
+    // *   `7`: the default application alert rules
+    // *   `8`: Tracing Analysis alert rules
+    // *   `101`: Prometheus alert rules
     @NameInMap("AlertType")
     public Integer alertType;
 
+    // The number of the page to return. Default value: `1`.
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    // The end of the time range to query. Specify a UNIX timestamp of the LONG data type, in milliseconds. The default value is the current time.
     @NameInMap("EndTime")
     public Long endTime;
 
+    // The number of entries to return on each page. Default value: `10`.
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // The ID of the region. Default value: `cn-hangzhou`.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The beginning of the time range to query. Specify a UNIX timestamp of the LONG data type, in milliseconds. The default value is 10 minutes before the current time.
     @NameInMap("StartTime")
     public Long startTime;
 

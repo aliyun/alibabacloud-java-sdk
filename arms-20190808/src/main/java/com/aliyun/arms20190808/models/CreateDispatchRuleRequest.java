@@ -4,9 +4,11 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class CreateDispatchRuleRequest extends TeaModel {
+    // The dispatch rule configuration. The value is a JSON string. For more information about this parameter, see the following **additional information about the DispatchRule parameter**.
     @NameInMap("DispatchRule")
     public String dispatchRule;
 
+    // The ID of the region.
     @NameInMap("RegionId")
     public String regionId;
 

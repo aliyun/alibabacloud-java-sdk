@@ -4,6 +4,7 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DeleteIntegrationsRequest extends TeaModel {
+    // The ID of the alert integration.
     @NameInMap("IntegrationId")
     public Long integrationId;
 

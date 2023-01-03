@@ -4,9 +4,11 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class CreatePrometheusAlertRuleResponseBody extends TeaModel {
+    // The struct returned.
     @NameInMap("PrometheusAlertRule")
     public CreatePrometheusAlertRuleResponseBodyPrometheusAlertRule prometheusAlertRule;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +34,11 @@ public class CreatePrometheusAlertRuleResponseBody extends TeaModel {
     }
 
     public static class CreatePrometheusAlertRuleResponseBodyPrometheusAlertRuleAnnotations extends TeaModel {
+        // The name of the annotation.
         @NameInMap("Name")
         public String name;
 
+        // The value of the annotation.
         @NameInMap("Value")
         public String value;
 
@@ -62,9 +66,11 @@ public class CreatePrometheusAlertRuleResponseBody extends TeaModel {
     }
 
     public static class CreatePrometheusAlertRuleResponseBodyPrometheusAlertRuleLabels extends TeaModel {
+        // The name of the tag.
         @NameInMap("Name")
         public String name;
 
+        // The value of the tag.
         @NameInMap("Value")
         public String value;
 
@@ -92,39 +98,57 @@ public class CreatePrometheusAlertRuleResponseBody extends TeaModel {
     }
 
     public static class CreatePrometheusAlertRuleResponseBodyPrometheusAlertRule extends TeaModel {
+        // The ID of the alert rule.
         @NameInMap("AlertId")
         public Long alertId;
 
+        // The name of the alert rule.
         @NameInMap("AlertName")
         public String alertName;
 
+        // The annotations of the alert rule.
         @NameInMap("Annotations")
         public java.util.List<CreatePrometheusAlertRuleResponseBodyPrometheusAlertRuleAnnotations> annotations;
 
+        // The ID of the cluster.
         @NameInMap("ClusterId")
         public String clusterId;
 
+        // The ID of the notification policy.
         @NameInMap("DispatchRuleId")
         public Long dispatchRuleId;
 
+        // The duration of the alert. Valid values: 1 to 1440. Unit: minutes.
         @NameInMap("Duration")
         public String duration;
 
+        // The expression of the alert rule.
         @NameInMap("Expression")
         public String expression;
 
+        // The tags of the alert rule.
         @NameInMap("Labels")
         public java.util.List<CreatePrometheusAlertRuleResponseBodyPrometheusAlertRuleLabels> labels;
 
+        // The message of the alert notification. Tags can be referenced in the {{$labels.xxx}} format.
         @NameInMap("Message")
         public String message;
 
+        // The method of that is used to send alert notifications. Valid values:
+        // 
+        // *   `ALERT_MANAGER`: Alert notifications are sent by Operation Center.
+        // *   `DISPATCH_RULE`: Alert notifications are sent based on the specified notification policy.
         @NameInMap("NotifyType")
         public String notifyType;
 
+        // Indicates whether the alert rule is enabled. Valid values:
+        // 
+        // *   `1`: The alert rule is enabled.
+        // *   `0`: The alert rule is disabled.
         @NameInMap("Status")
         public Integer status;
 
+        // The type of the alert rule.
         @NameInMap("Type")
         public String type;
 

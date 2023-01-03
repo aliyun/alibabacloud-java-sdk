@@ -4,9 +4,11 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class CreateOrUpdateIMRobotResponseBody extends TeaModel {
+    // Returns an AlertRobot object.
     @NameInMap("AlertRobot")
     public CreateOrUpdateIMRobotResponseBodyAlertRobot alertRobot;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -35,27 +37,39 @@ public class CreateOrUpdateIMRobotResponseBody extends TeaModel {
         @NameInMap("CardTemplate")
         public String cardTemplate;
 
+        // Specifies whether to send daily statistics.
+        // 
+        // *   `false` (default): does not send statistics.
+        // *   `true`: sends statistics.
         @NameInMap("DailyNoc")
         public Boolean dailyNoc;
 
+        // The time when the daily statistics are sent. ARMS Alert Management sends the total number of alerts generated today, the number of resolved alerts, and the number of pending alerts at the specified time point.
         @NameInMap("DailyNocTime")
         public String dailyNocTime;
 
         @NameInMap("EnableOutgoing")
         public Boolean enableOutgoing;
 
+        // The webhook address of the IM bot.
         @NameInMap("RobotAddress")
         public String robotAddress;
 
+        // The ID of the IM bot.
         @NameInMap("RobotId")
         public Float robotId;
 
+        // The name of the IM robot.
         @NameInMap("RobotName")
         public String robotName;
 
         @NameInMap("Token")
         public String token;
 
+        // IM Robot Type:
+        // 
+        // *   `dingding`: DingTalk robot.
+        // *   `wechat`: Enterprise WeChat Robot.
         @NameInMap("Type")
         public String type;
 

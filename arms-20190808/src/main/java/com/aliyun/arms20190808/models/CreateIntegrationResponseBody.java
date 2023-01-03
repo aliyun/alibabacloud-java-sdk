@@ -4,9 +4,11 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class CreateIntegrationResponseBody extends TeaModel {
+    // The returned information about the alert integration.
     @NameInMap("Integration")
     public CreateIntegrationResponseBodyIntegration integration;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +34,33 @@ public class CreateIntegrationResponseBody extends TeaModel {
     }
 
     public static class CreateIntegrationResponseBodyIntegration extends TeaModel {
+        // Indicates whether alert events are automatically cleared. Valid values:
+        // 
+        // *   true (default)
+        // *   false
         @NameInMap("AutoRecover")
         public Boolean autoRecover;
 
+        // The description of the alert integration.
         @NameInMap("Description")
         public String description;
 
+        // The ID of the alert integration.
         @NameInMap("IntegrationId")
         public Long integrationId;
 
+        // The name of the alert integration.
         @NameInMap("IntegrationName")
         public String integrationName;
 
+        // The service of the alert integration. Valid values:
+        // 
+        // *   CLOUD_MONITOR: CloudMonitor
+        // *   LOG_SERVICE: Log Service
         @NameInMap("IntegrationProductType")
         public String integrationProductType;
 
+        // The time when alert events are automatically cleared. Unit: seconds. Default value: 300.
         @NameInMap("RecoverTime")
         public Long recoverTime;
 

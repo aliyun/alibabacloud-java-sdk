@@ -4,12 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListEventBridgeIntegrationsRequest extends TeaModel {
+    // The name of the EventBridge integration.
     @NameInMap("Name")
     public String name;
 
+    // The number of the page to return.
     @NameInMap("Page")
     public Long page;
 
+    // The number of entries to return on each page.
     @NameInMap("Size")
     public Long size;
 

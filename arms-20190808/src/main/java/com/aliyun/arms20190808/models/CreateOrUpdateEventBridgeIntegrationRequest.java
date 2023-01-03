@@ -4,30 +4,42 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class CreateOrUpdateEventBridgeIntegrationRequest extends TeaModel {
+    // The AccessKey ID that is used to connect to EventBridge.
     @NameInMap("AccessKey")
     public String accessKey;
 
+    // The AccessKey secret that is used to connect to EventBridge.
     @NameInMap("AccessSecret")
     public String accessSecret;
 
+    // The description of the EventBridge integration.
     @NameInMap("Description")
     public String description;
 
+    // The public endpoint of EventBridge.
     @NameInMap("Endpoint")
     public String endpoint;
 
+    // The name of the event bus.
     @NameInMap("EventBusName")
     public String eventBusName;
 
+    // The region ID of the event bus.
     @NameInMap("EventBusRegionId")
     public String eventBusRegionId;
 
+    // The ID of the EventBridge integration.
+    // 
+    // *   If you do not specify this parameter, an EventBridge integration is created.
+    // *   If you specify this parameter, the specified EventBridge integration is modified.
     @NameInMap("Id")
     public Long id;
 
+    // The name of the EventBridge integration.
     @NameInMap("Name")
     public String name;
 
+    // The event source.
     @NameInMap("Source")
     public String source;
 

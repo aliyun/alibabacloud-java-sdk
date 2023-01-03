@@ -4,9 +4,14 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class SendTTSVerifyLinkResponseBody extends TeaModel {
+    // Indicates whether the mobile phone number verification text message was successfully sent.
+    // 
+    // *   `true`: Sent successfully
+    // *   `false`: Failed to send
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

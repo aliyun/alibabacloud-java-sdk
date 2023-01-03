@@ -4,9 +4,11 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListDispatchRuleResponseBody extends TeaModel {
+    // The struct returned.
     @NameInMap("DispatchRules")
     public java.util.List<ListDispatchRuleResponseBodyDispatchRules> dispatchRules;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +34,18 @@ public class ListDispatchRuleResponseBody extends TeaModel {
     }
 
     public static class ListDispatchRuleResponseBodyDispatchRules extends TeaModel {
+        // The name of the notification policy.
         @NameInMap("Name")
         public String name;
 
+        // The ID of the notification policy.
         @NameInMap("RuleId")
         public Long ruleId;
 
+        // Indicates whether the notification policy is enabled.
+        // 
+        // *   `true`: The notification policy is enabled.
+        // *   `false`: The notification policy is disabled.
         @NameInMap("State")
         public String state;
 

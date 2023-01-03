@@ -4,9 +4,11 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DeletePrometheusGlobalViewResponseBody extends TeaModel {
+    // The response parameters in the JSON format.
     @NameInMap("Data")
     public String data;
 
+    // The ID of the request. You can use the ID to query logs and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,9 +4,13 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class UninstallPromClusterResponseBody extends TeaModel {
+    // Indicates whether the call was successful. Valid values:
+    // 
+    // true: The call was successful. false: The call failed.
     @NameInMap("Data")
     public Boolean data;
 
+    // The ID of the request. You can query logs and troubleshoot issues based on the ID.
     @NameInMap("RequestId")
     public String requestId;
 

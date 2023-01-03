@@ -4,9 +4,17 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class OpenArmsServiceSecondVersionRequest extends TeaModel {
+    // The ID of the region.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The type of the service. Valid values:
+    // 
+    // *   `arms`: ARMS
+    // *   `arms_app`: Application Monitoring
+    // *   `arms_web`: Browser Monitoring
+    // *   `prometheus_monitor`: Prometheus Service
+    // *   `synthetic_post`: Synthetic Monitoring
     @NameInMap("Type")
     public String type;
 

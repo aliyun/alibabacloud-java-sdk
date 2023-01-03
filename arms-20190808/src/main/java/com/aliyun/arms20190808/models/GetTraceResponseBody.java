@@ -4,9 +4,11 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GetTraceResponseBody extends TeaModel {
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The details of the trace.
     @NameInMap("Spans")
     public java.util.List<GetTraceResponseBodySpans> spans;
 
@@ -32,9 +34,11 @@ public class GetTraceResponseBody extends TeaModel {
     }
 
     public static class GetTraceResponseBodySpansLogEventListTagEntryList extends TeaModel {
+        // The key of the tag.
         @NameInMap("Key")
         public String key;
 
+        // The value of the tag.
         @NameInMap("Value")
         public String value;
 
@@ -62,9 +66,11 @@ public class GetTraceResponseBody extends TeaModel {
     }
 
     public static class GetTraceResponseBodySpansLogEventList extends TeaModel {
+        // The tags of the trace.
         @NameInMap("TagEntryList")
         public java.util.List<GetTraceResponseBodySpansLogEventListTagEntryList> tagEntryList;
 
+        // The timestamp when the log event was generated.
         @NameInMap("Timestamp")
         public Long timestamp;
 
@@ -92,9 +98,11 @@ public class GetTraceResponseBody extends TeaModel {
     }
 
     public static class GetTraceResponseBodySpansTagEntryList extends TeaModel {
+        // The key of the tag.
         @NameInMap("Key")
         public String key;
 
+        // The value of the tag.
         @NameInMap("Value")
         public String value;
 
@@ -122,48 +130,66 @@ public class GetTraceResponseBody extends TeaModel {
     }
 
     public static class GetTraceResponseBodySpans extends TeaModel {
+        // The child spans of the current span.
         @NameInMap("Children")
         public java.util.List<java.util.Map<String, ?>> children;
 
+        // The amount of time consumed by the trace. Unit: milliseconds.
         @NameInMap("Duration")
         public Long duration;
 
+        // Indicates whether a method stack was provided.
+        // 
+        // - `true`: A method stack was provided.
+        // - `false` : No method stack was provided.
         @NameInMap("HaveStack")
         public Boolean haveStack;
 
+        // The log events in the trace.
         @NameInMap("LogEventList")
         public java.util.List<GetTraceResponseBodySpansLogEventList> logEventList;
 
+        // The name of the traced span.
         @NameInMap("OperationName")
         public String operationName;
 
+        // The ID of the parent span.
         @NameInMap("ParentSpanId")
         public String parentSpanId;
 
+        // The returned code.
         @NameInMap("ResultCode")
         public String resultCode;
 
+        // The ID of the remote procedure call (RPC) mode.
         @NameInMap("RpcId")
         public String rpcId;
 
+        // The type of the remote procedure call (RPC) mode.
         @NameInMap("RpcType")
         public Integer rpcType;
 
+        // The IP address of the host where the application resides.
         @NameInMap("ServiceIp")
         public String serviceIp;
 
+        // The name of the application.
         @NameInMap("ServiceName")
         public String serviceName;
 
+        // Span ID。
         @NameInMap("SpanId")
         public String spanId;
 
+        // The tags of the trace.
         @NameInMap("TagEntryList")
         public java.util.List<GetTraceResponseBodySpansTagEntryList> tagEntryList;
 
+        // The timestamp when the span was generated.
         @NameInMap("Timestamp")
         public Long timestamp;
 
+        // The ID of the trace.
         @NameInMap("TraceID")
         public String traceID;
 

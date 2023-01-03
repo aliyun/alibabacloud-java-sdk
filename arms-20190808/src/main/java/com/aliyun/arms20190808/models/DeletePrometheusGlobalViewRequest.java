@@ -4,9 +4,11 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DeletePrometheusGlobalViewRequest extends TeaModel {
+    // The ID of the aggregation instance.
     @NameInMap("GlobalViewClusterId")
     public String globalViewClusterId;
 
+    // The ID of the region.
     @NameInMap("RegionId")
     public String regionId;
 

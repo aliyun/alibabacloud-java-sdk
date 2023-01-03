@@ -4,9 +4,11 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListActivatedAlertsResponseBody extends TeaModel {
+    // The struct returned.
     @NameInMap("Page")
     public ListActivatedAlertsResponseBodyPage page;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +34,11 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
     }
 
     public static class ListActivatedAlertsResponseBodyPageAlertsDispatchRules extends TeaModel {
+        // The ID of the notification policy.
         @NameInMap("RuleId")
         public Integer ruleId;
 
+        // The name of the notification policy.
         @NameInMap("RuleName")
         public String ruleName;
 
@@ -62,51 +66,81 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
     }
 
     public static class ListActivatedAlertsResponseBodyPageAlerts extends TeaModel {
+        // The ID of the alert rule.
         @NameInMap("AlertId")
         public String alertId;
 
+        // The name of the alert rule.
         @NameInMap("AlertName")
         public String alertName;
 
+        // The type of the alert.
         @NameInMap("AlertType")
         public String alertType;
 
+        // The number of times that the alert event was received.
         @NameInMap("Count")
         public Integer count;
 
+        // The timestamp when the alert rule was created.
         @NameInMap("CreateTime")
         public Long createTime;
 
+        // The notification policies.
         @NameInMap("DispatchRules")
         public java.util.List<ListActivatedAlertsResponseBodyPageAlertsDispatchRules> dispatchRules;
 
+        // The timestamp when the alert was ended.
         @NameInMap("EndsAt")
         public Long endsAt;
 
+        // The extended fields that indicate the following tags:
+        // 
+        // *   The tags that are carried in the metrics of the alert rule expression.
+        // *   The tags that are created based on the alert rule.
+        // *   The default tags of Application Real-Time Monitoring Service (ARMS).
         @NameInMap("ExpandFields")
         public java.util.Map<String, ?> expandFields;
 
+        // The name of the object that is associated with the alert.
         @NameInMap("IntegrationName")
         public String integrationName;
 
+        // The type of the service integration that generated the alert.
         @NameInMap("IntegrationType")
         public String integrationType;
 
+        // The type of the object that is associated with the alert.
         @NameInMap("InvolvedObjectKind")
         public String involvedObjectKind;
 
+        // The name of the service integration that generated the alert.
         @NameInMap("InvolvedObjectName")
         public String involvedObjectName;
 
+        // The description of the alert.
         @NameInMap("Message")
         public String message;
 
+        // The level of the alert. Valid values:
+        // 
+        // *   `critical`
+        // *   `error`
+        // *   `warn`
+        // *   `page`
         @NameInMap("Severity")
         public String severity;
 
+        // The timestamp when the alert was generated.
         @NameInMap("StartsAt")
         public Long startsAt;
 
+        // The status of the alert. Valid values:
+        // 
+        // *   `Active`
+        // *   `Inhibited`
+        // *   `Silenced`
+        // *   `Resolved`
         @NameInMap("Status")
         public String status;
 
@@ -246,15 +280,19 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
     }
 
     public static class ListActivatedAlertsResponseBodyPage extends TeaModel {
+        // The alerts that have been triggered.
         @NameInMap("Alerts")
         public java.util.List<ListActivatedAlertsResponseBodyPageAlerts> alerts;
 
+        // The page number of the returned page.
         @NameInMap("Page")
         public Integer page;
 
+        // The number of entries returned per page.
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        // The total number of entries returned.
         @NameInMap("Total")
         public Integer total;
 

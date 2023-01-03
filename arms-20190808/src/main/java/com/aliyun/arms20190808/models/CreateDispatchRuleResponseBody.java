@@ -4,9 +4,11 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class CreateDispatchRuleResponseBody extends TeaModel {
+    // The ID of the dispatch policy.
     @NameInMap("DispatchRuleId")
     public Long dispatchRuleId;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

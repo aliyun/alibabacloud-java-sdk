@@ -4,12 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class AddGrafanaRequest extends TeaModel {
+    // The ID of a Container Service for Kubernetes cluster.
     @NameInMap("ClusterId")
     public String clusterId;
 
+    // The software abbreviation that is supported by ARMS. Valid values (case-insensitive): `ASM`, `IoT`, and `Flink`.
     @NameInMap("Integration")
     public String integration;
 
+    // The ID of the region.
     @NameInMap("RegionId")
     public String regionId;
 
