@@ -6739,6 +6739,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getCloudConnectNetworkUseLimitWithOptions(request, runtime);
     }
 
+    /**
+      * ****
+      *
+      * @param request GetQosAttributeRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetQosAttributeResponse
+     */
     public GetQosAttributeResponse getQosAttributeWithOptions(GetQosAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6767,6 +6774,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetQosAttributeResponse());
     }
 
+    /**
+      * ****
+      *
+      * @param request GetQosAttributeRequest
+      * @return GetQosAttributeResponse
+     */
     public GetQosAttributeResponse getQosAttribute(GetQosAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getQosAttributeWithOptions(request, runtime);
@@ -10612,10 +10625,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateProbeTaskResponse updateProbeTaskWithOptions(UpdateProbeTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.addressType)) {
-            query.put("AddressType", request.addressType);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.domain)) {
             query.put("Domain", request.domain);
         }
