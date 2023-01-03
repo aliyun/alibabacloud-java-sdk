@@ -4,30 +4,55 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class CreateChatappTemplateShrinkRequest extends TeaModel {
+    // The category of the message template. Valid values:
+    // 
+    // *   **ACCOUNT_UPDATE**: account update
+    // *   **PAYMENT_UPDATE**: payment update
+    // *   **PERSONAL_FINANCE\_UPDATE**: personal finance update
+    // *   **SHIPPING_UPDATE**: traffic update
+    // *   **RESERVATION_UPDATE**: reservation update
+    // *   **ISSUE_RESOLUTION**: issue resolution
+    // *   **APPOINTMENT_UPDATE**: appointment update
+    // *   **TRANSPORTATION_UPDATE**: logistics information update
+    // *   **TICKET_UPDATE**: ticket update
+    // *   **ALERT_UPDATE**: alert update
+    // *   **AUTO_REPLY**: auto reply
     @NameInMap("Category")
     public String category;
 
+    // The components of the message template.
     @NameInMap("Components")
     public String componentsShrink;
 
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
+    // The unique identifier of the WhatsApp account that you register.
     @NameInMap("CustWabaId")
+    @Deprecated
     public String custWabaId;
 
+    // The examples of variables that are used when you create the message template.
     @NameInMap("Example")
     public String exampleShrink;
 
+    // Assigned by ISV for RAM user authentication and authorization.
     @NameInMap("IsvCode")
     public String isvCode;
 
+    // The language that is used in the message template.
     @NameInMap("Language")
     public String language;
 
+    // The name of the message template.
     @NameInMap("Name")
     public String name;
 
+    // The type of the message template. Valid values:
+    // 
+    // *   **WHATSAPP**
+    // *   VIBER (under development)
+    // *   LINE (under development)
     @NameInMap("TemplateType")
     public String templateType;
 

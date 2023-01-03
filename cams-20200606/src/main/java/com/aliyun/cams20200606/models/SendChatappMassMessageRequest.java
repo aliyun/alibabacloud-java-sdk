@@ -4,36 +4,53 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class SendChatappMassMessageRequest extends TeaModel {
+    // The type of the message channel. Valid values:
+    // 
+    // *   **whatsapp**
+    // *   viber (under development)
+    // *   line (under development)
     @NameInMap("ChannelType")
     public String channelType;
 
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
+    // The unique identifier of the WhatsApp account that you register.
     @NameInMap("CustWabaId")
+    @Deprecated
     public String custWabaId;
 
+    // Fallback message content.
     @NameInMap("FallBackContent")
     public String fallBackContent;
 
+    // Fallback strategy id. Fallback Strategy can be created on the ChatApp console.
     @NameInMap("FallBackId")
     public String fallBackId;
 
+    // The mobile phone number of the message sender.
+    // 
+    // <notice>You can specify a mobile phone number that is registered for a WhatsApp account and is approved in the ChatApp console.</notice>
     @NameInMap("From")
     public String from;
 
+    // Assigned by ISV for RAM user authentication and authorization.
     @NameInMap("IsvCode")
     public String isvCode;
 
+    // The language that is used in the message template.
     @NameInMap("Language")
     public String language;
 
+    // Target number and parameter list.
     @NameInMap("SenderList")
     public java.util.List<SendChatappMassMessageRequestSenderList> senderList;
 
+    // User-define ID to identify a single batch of messages.
     @NameInMap("TaskId")
     public String taskId;
 
+    // The code of the message template.
     @NameInMap("TemplateCode")
     public String templateCode;
 
@@ -131,12 +148,15 @@ public class SendChatappMassMessageRequest extends TeaModel {
     }
 
     public static class SendChatappMassMessageRequestSenderList extends TeaModel {
+        // Payload list.
         @NameInMap("Payload")
         public java.util.List<String> payload;
 
+        // Template parameters.
         @NameInMap("TemplateParams")
         public java.util.Map<String, String> templateParams;
 
+        // Target number.
         @NameInMap("To")
         public String to;
 

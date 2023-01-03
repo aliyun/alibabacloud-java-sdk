@@ -4,36 +4,46 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class BeeBotChatRequest extends TeaModel {
+    // The ID of chatbot instance.
     @NameInMap("ChatBotInstanceId")
     public String chatBotInstanceId;
 
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
+    // The name of the intent in the dialog flow. When this parameter is specified, the bot will conduct a Q\&A according to the intent.
     @NameInMap("IntentName")
     public String intentName;
 
+    // ISV verification code, which is used to verify whether the sub-account is authorized by ISV.
     @NameInMap("IsvCode")
     public String isvCode;
 
+    // The ID of the knowledge title in the knowledge base.
     @NameInMap("KnowledgeId")
     public String knowledgeId;
 
+    // The list of codes for answers from different perspectives.
     @NameInMap("Perspective")
     public java.util.List<String> perspective;
 
+    // The ID of the visitor, which is used to identify users in the current session.
     @NameInMap("SenderId")
     public String senderId;
 
+    // The nickname of the visitor in the current session.
     @NameInMap("SenderNick")
     public String senderNick;
 
+    // The ID of the session, which identifies the session and context information of the visitor.
     @NameInMap("SessionId")
     public String sessionId;
 
+    // The input of the visitor.
     @NameInMap("Utterance")
     public String utterance;
 
+    // The user-defined parameter set in JSON format. You can specify user-defined parameters for conversation engines.
     @NameInMap("VendorParam")
     public java.util.Map<String, ?> vendorParam;
 

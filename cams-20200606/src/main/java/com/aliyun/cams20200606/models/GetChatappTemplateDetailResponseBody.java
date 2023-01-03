@@ -4,15 +4,22 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class GetChatappTemplateDetailResponseBody extends TeaModel {
+    // The HTTP status code returned.
+    // 
+    // *   A code of OK indicates that the call is successful.
+    // *   Other codes indicate that the call fails. For more information, see [Error codes](~~196974~~).
     @NameInMap("Code")
     public String code;
 
+    // The data returned.
     @NameInMap("Data")
     public GetChatappTemplateDetailResponseBodyData data;
 
+    // The error message returned.
     @NameInMap("Message")
     public String message;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,18 +61,38 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
     }
 
     public static class GetChatappTemplateDetailResponseBodyDataComponentsButtons extends TeaModel {
+        // The mobile phone number. This parameter is valid only if the Type parameter is set to **PHONE_NUMBER**.
         @NameInMap("PhoneNumber")
         public String phoneNumber;
 
+        // The display name of the button.
         @NameInMap("Text")
         public String text;
 
+        // The type of the button. Valid values:
+        // 
+        // *   **PHONE_NUMBER**: a phone call button
+        // *   **URL**: a URL button
+        // *   **QUICK_REPLY**: a quick reply button
+        // 
+        // **
+        // 
+        // **Note**
+        // 
+        // *   A quick reply button cannot coexist with a phone call button or a URL button in a message template.
+        // 
+        // *   You can add a combination of two URL buttons or a combination of a URL button and a phone call button to a message template.
         @NameInMap("Type")
         public String type;
 
+        // The URL to be accessed when you click the URL button.
         @NameInMap("Url")
         public String url;
 
+        // The type of the URL. Valid values:
+        // 
+        // *   **static**: a static URL
+        // *   **dynamic**: a dynamic URL
         @NameInMap("UrlType")
         public String urlType;
 
@@ -117,24 +144,40 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
     }
 
     public static class GetChatappTemplateDetailResponseBodyDataComponents extends TeaModel {
+        // This parameter applies only to components of the **BUTTONS** type. This parameter is passed in by converting its original JSON structure into a string.
         @NameInMap("Buttons")
         public java.util.List<GetChatappTemplateDetailResponseBodyDataComponentsButtons> buttons;
 
+        // The description of the file.
         @NameInMap("Caption")
         public String caption;
 
+        // The name of the file.
         @NameInMap("FileName")
         public String fileName;
 
+        // The format.
         @NameInMap("Format")
         public String format;
 
+        // The text of the message to be sent.
         @NameInMap("Text")
         public String text;
 
+        // The type of the component. Valid values:
+        // 
+        // *   **BODY**
+        // *   **HEADER**
+        // *   **FOOTER**
+        // *   **BUTTONS**
+        // 
+        // **
+        // 
+        // **Note** A component of the **BODY** type cannot exceed 1,024 characters in length. A component of the **HEADER** or **FOOTER** type cannot exceed 60 characters in length.
         @NameInMap("Type")
         public String type;
 
+        // The URL of the material.
         @NameInMap("Url")
         public String url;
 
@@ -202,24 +245,48 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
     }
 
     public static class GetChatappTemplateDetailResponseBodyData extends TeaModel {
+        // The review status of the message template. Valid values:
+        // 
+        // *   **pass**: The message template is approved.
+        // *   **fail**: The message template is rejected.
+        // *   **auditing**: The message template is being reviewed.
+        // *   **unaudit**: The review is suspended.
         @NameInMap("AuditStatus")
         public String auditStatus;
 
+        // The category of the message template. Valid values:
+        // 
+        // *   **ACCOUNT_UPDATE**: account update
+        // *   **PAYMENT_UPDATE**: payment update
+        // *   **PERSONAL_FINANCE\_UPDATE**: personal finance update
+        // *   **SHIPPING_UPDATE**: traffic update
+        // *   **RESERVATION_UPDATE**: reservation update
+        // *   **ISSUE_RESOLUTION**: issue resolution
+        // *   **APPOINTMENT_UPDATE**: appointment update
+        // *   **TRANSPORTATION_UPDATE**: logistics information update
+        // *   **TICKET_UPDATE**: ticket update
+        // *   **ALERT_UPDATE**: alert update
+        // *   **AUTO_REPLY**: auto reply
         @NameInMap("Category")
         public String category;
 
+        // The components of the message template.
         @NameInMap("Components")
         public java.util.List<GetChatappTemplateDetailResponseBodyDataComponents> components;
 
+        // The examples of variables.
         @NameInMap("Example")
         public java.util.Map<String, String> example;
 
+        // The language that is used in the message template.
         @NameInMap("Language")
         public String language;
 
+        // The name of the message template.
         @NameInMap("Name")
         public String name;
 
+        // The code of the message template.
         @NameInMap("TemplateCode")
         public String templateCode;
 

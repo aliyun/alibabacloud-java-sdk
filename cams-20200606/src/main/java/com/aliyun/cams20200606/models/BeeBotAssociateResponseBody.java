@@ -4,15 +4,19 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class BeeBotAssociateResponseBody extends TeaModel {
+    // If OK is returned, the request is successful.
     @NameInMap("Code")
     public String code;
 
+    // The returned data.
     @NameInMap("Data")
     public BeeBotAssociateResponseBodyData data;
 
+    // The error message.
     @NameInMap("Message")
     public String message;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,9 +58,11 @@ public class BeeBotAssociateResponseBody extends TeaModel {
     }
 
     public static class BeeBotAssociateResponseBodyDataAssociate extends TeaModel {
+        // The additional information.
         @NameInMap("Meta")
         public String meta;
 
+        // The title of the associated question.
         @NameInMap("Title")
         public String title;
 
@@ -84,12 +90,15 @@ public class BeeBotAssociateResponseBody extends TeaModel {
     }
 
     public static class BeeBotAssociateResponseBodyData extends TeaModel {
+        // The list of associated recommendations.
         @NameInMap("Associate")
         public java.util.List<BeeBotAssociateResponseBodyDataAssociate> associate;
 
+        // The ID of the response message.
         @NameInMap("MessageId")
         public String messageId;
 
+        // The ID of the session.
         @NameInMap("SessionId")
         public String sessionId;
 
