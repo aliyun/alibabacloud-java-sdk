@@ -19,6 +19,7 @@ public class ListDistributionItemResponseBody extends TeaModel {
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    // pageSize
     @NameInMap("PageSize")
     public Long pageSize;
 
@@ -193,6 +194,102 @@ public class ListDistributionItemResponseBody extends TeaModel {
 
     }
 
+    public static class ListDistributionItemResponseBodyModelLmAttributeModels extends TeaModel {
+        @NameInMap("AttrId")
+        public Long attrId;
+
+        @NameInMap("Category")
+        public Integer category;
+
+        @NameInMap("DataType")
+        public String dataType;
+
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Restriction")
+        public String restriction;
+
+        @NameInMap("ScopeList")
+        public java.util.List<String> scopeList;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListDistributionItemResponseBodyModelLmAttributeModels build(java.util.Map<String, ?> map) throws Exception {
+            ListDistributionItemResponseBodyModelLmAttributeModels self = new ListDistributionItemResponseBodyModelLmAttributeModels();
+            return TeaModel.build(map, self);
+        }
+
+        public ListDistributionItemResponseBodyModelLmAttributeModels setAttrId(Long attrId) {
+            this.attrId = attrId;
+            return this;
+        }
+        public Long getAttrId() {
+            return this.attrId;
+        }
+
+        public ListDistributionItemResponseBodyModelLmAttributeModels setCategory(Integer category) {
+            this.category = category;
+            return this;
+        }
+        public Integer getCategory() {
+            return this.category;
+        }
+
+        public ListDistributionItemResponseBodyModelLmAttributeModels setDataType(String dataType) {
+            this.dataType = dataType;
+            return this;
+        }
+        public String getDataType() {
+            return this.dataType;
+        }
+
+        public ListDistributionItemResponseBodyModelLmAttributeModels setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public ListDistributionItemResponseBodyModelLmAttributeModels setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public ListDistributionItemResponseBodyModelLmAttributeModels setRestriction(String restriction) {
+            this.restriction = restriction;
+            return this;
+        }
+        public String getRestriction() {
+            return this.restriction;
+        }
+
+        public ListDistributionItemResponseBodyModelLmAttributeModels setScopeList(java.util.List<String> scopeList) {
+            this.scopeList = scopeList;
+            return this;
+        }
+        public java.util.List<String> getScopeList() {
+            return this.scopeList;
+        }
+
+        public ListDistributionItemResponseBodyModelLmAttributeModels setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListDistributionItemResponseBodyModelSkuListLmAttributeModels extends TeaModel {
         @NameInMap("AttrId")
         public Long attrId;
@@ -349,6 +446,9 @@ public class ListDistributionItemResponseBody extends TeaModel {
 
         @NameInMap("Tips")
         public String tips;
+
+        @NameInMap("lmSkuAttributeMap")
+        public java.util.Map<String, String> lmSkuAttributeMap;
 
         public static ListDistributionItemResponseBodyModelSkuList build(java.util.Map<String, ?> map) throws Exception {
             ListDistributionItemResponseBodyModelSkuList self = new ListDistributionItemResponseBodyModelSkuList();
@@ -515,6 +615,14 @@ public class ListDistributionItemResponseBody extends TeaModel {
             return this.tips;
         }
 
+        public ListDistributionItemResponseBodyModelSkuList setLmSkuAttributeMap(java.util.Map<String, String> lmSkuAttributeMap) {
+            this.lmSkuAttributeMap = lmSkuAttributeMap;
+            return this;
+        }
+        public java.util.Map<String, String> getLmSkuAttributeMap() {
+            return this.lmSkuAttributeMap;
+        }
+
     }
 
     public static class ListDistributionItemResponseBodyModel extends TeaModel {
@@ -562,6 +670,12 @@ public class ListDistributionItemResponseBody extends TeaModel {
 
         @NameInMap("ItemTitle")
         public String itemTitle;
+
+        @NameInMap("LmAttributeMap")
+        public java.util.Map<String, String> lmAttributeMap;
+
+        @NameInMap("LmAttributeModels")
+        public java.util.List<ListDistributionItemResponseBodyModelLmAttributeModels> lmAttributeModels;
 
         @NameInMap("LmItemId")
         public String lmItemId;
@@ -728,6 +842,22 @@ public class ListDistributionItemResponseBody extends TeaModel {
         }
         public String getItemTitle() {
             return this.itemTitle;
+        }
+
+        public ListDistributionItemResponseBodyModel setLmAttributeMap(java.util.Map<String, String> lmAttributeMap) {
+            this.lmAttributeMap = lmAttributeMap;
+            return this;
+        }
+        public java.util.Map<String, String> getLmAttributeMap() {
+            return this.lmAttributeMap;
+        }
+
+        public ListDistributionItemResponseBodyModel setLmAttributeModels(java.util.List<ListDistributionItemResponseBodyModelLmAttributeModels> lmAttributeModels) {
+            this.lmAttributeModels = lmAttributeModels;
+            return this;
+        }
+        public java.util.List<ListDistributionItemResponseBodyModelLmAttributeModels> getLmAttributeModels() {
+            return this.lmAttributeModels;
         }
 
         public ListDistributionItemResponseBodyModel setLmItemId(String lmItemId) {

@@ -16,6 +16,7 @@ public class CancelDistributionTradeResponseBody extends TeaModel {
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    // pageSize
     @NameInMap("PageSize")
     public Long pageSize;
 
