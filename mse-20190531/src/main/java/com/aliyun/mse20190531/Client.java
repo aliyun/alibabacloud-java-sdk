@@ -6299,6 +6299,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ConfigType", request.configType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.extendedTypesEnable)) {
+            query.put("ExtendedTypesEnable", request.extendedTypesEnable);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.initLimit)) {
             query.put("InitLimit", request.initLimit);
         }

@@ -147,6 +147,9 @@ public class QueryConfigResponseBody extends TeaModel {
         @NameInMap("ConfigSecretSupported")
         public Boolean configSecretSupported;
 
+        @NameInMap("ExtendedTypesEnable")
+        public Boolean extendedTypesEnable;
+
         // The maximum connection duration of the instance. This parameter is valid for ZooKeeper instances. Unit: seconds.
         @NameInMap("InitLimit")
         public String initLimit;
@@ -311,6 +314,14 @@ public class QueryConfigResponseBody extends TeaModel {
         }
         public Boolean getConfigSecretSupported() {
             return this.configSecretSupported;
+        }
+
+        public QueryConfigResponseBodyData setExtendedTypesEnable(Boolean extendedTypesEnable) {
+            this.extendedTypesEnable = extendedTypesEnable;
+            return this;
+        }
+        public Boolean getExtendedTypesEnable() {
+            return this.extendedTypesEnable;
         }
 
         public QueryConfigResponseBodyData setInitLimit(String initLimit) {

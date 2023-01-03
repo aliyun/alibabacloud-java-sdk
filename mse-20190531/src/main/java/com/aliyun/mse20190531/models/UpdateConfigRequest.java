@@ -45,6 +45,9 @@ public class UpdateConfigRequest extends TeaModel {
     @NameInMap("ConfigType")
     public String configType;
 
+    @NameInMap("ExtendedTypesEnable")
+    public String extendedTypesEnable;
+
     // The maximum connection duration of the instance. This parameter is valid for ZooKeeper instances. Unit: seconds.
     @NameInMap("InitLimit")
     public String initLimit;
@@ -182,6 +185,14 @@ public class UpdateConfigRequest extends TeaModel {
     }
     public String getConfigType() {
         return this.configType;
+    }
+
+    public UpdateConfigRequest setExtendedTypesEnable(String extendedTypesEnable) {
+        this.extendedTypesEnable = extendedTypesEnable;
+        return this;
+    }
+    public String getExtendedTypesEnable() {
+        return this.extendedTypesEnable;
     }
 
     public UpdateConfigRequest setInitLimit(String initLimit) {
