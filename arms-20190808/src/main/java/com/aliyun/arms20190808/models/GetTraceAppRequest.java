@@ -12,9 +12,6 @@ public class GetTraceAppRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
-
     public static GetTraceAppRequest build(java.util.Map<String, ?> map) throws Exception {
         GetTraceAppRequest self = new GetTraceAppRequest();
         return TeaModel.build(map, self);
@@ -34,14 +31,6 @@ public class GetTraceAppRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
-    }
-
-    public GetTraceAppRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
     }
 
 }

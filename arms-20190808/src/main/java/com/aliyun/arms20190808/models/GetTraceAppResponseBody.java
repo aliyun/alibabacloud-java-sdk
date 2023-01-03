@@ -8,9 +8,6 @@ public class GetTraceAppResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
-
     // The struct returned.
     @NameInMap("TraceApp")
     public GetTraceAppResponseBodyTraceApp traceApp;
@@ -28,14 +25,6 @@ public class GetTraceAppResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetTraceAppResponseBody setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
-    }
-
     public GetTraceAppResponseBody setTraceApp(GetTraceAppResponseBodyTraceApp traceApp) {
         this.traceApp = traceApp;
         return this;
@@ -45,33 +34,31 @@ public class GetTraceAppResponseBody extends TeaModel {
     }
 
     public static class GetTraceAppResponseBodyTraceAppTags extends TeaModel {
-        // The key of the tag.
-        @NameInMap("TagKey")
-        public String tagKey;
+        @NameInMap("Key")
+        public String key;
 
-        // The value of the tag.
-        @NameInMap("TagValue")
-        public String tagValue;
+        @NameInMap("Value")
+        public String value;
 
         public static GetTraceAppResponseBodyTraceAppTags build(java.util.Map<String, ?> map) throws Exception {
             GetTraceAppResponseBodyTraceAppTags self = new GetTraceAppResponseBodyTraceAppTags();
             return TeaModel.build(map, self);
         }
 
-        public GetTraceAppResponseBodyTraceAppTags setTagKey(String tagKey) {
-            this.tagKey = tagKey;
+        public GetTraceAppResponseBodyTraceAppTags setKey(String key) {
+            this.key = key;
             return this;
         }
-        public String getTagKey() {
-            return this.tagKey;
+        public String getKey() {
+            return this.key;
         }
 
-        public GetTraceAppResponseBodyTraceAppTags setTagValue(String tagValue) {
-            this.tagValue = tagValue;
+        public GetTraceAppResponseBodyTraceAppTags setValue(String value) {
+            this.value = value;
             return this;
         }
-        public String getTagValue() {
-            return this.tagValue;
+        public String getValue() {
+            return this.value;
         }
 
     }
@@ -100,6 +87,9 @@ public class GetTraceAppResponseBody extends TeaModel {
         // The ID of the region.
         @NameInMap("RegionId")
         public String regionId;
+
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
 
         // Indicates whether the application was displayed in the Application Real-Time Monitoring Service (ARMS) console. Valid values:
         // 
@@ -181,6 +171,14 @@ public class GetTraceAppResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public GetTraceAppResponseBodyTraceApp setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public GetTraceAppResponseBodyTraceApp setShow(Boolean show) {

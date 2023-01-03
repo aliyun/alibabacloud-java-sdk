@@ -33,6 +33,36 @@ public class SearchTraceAppByNameResponseBody extends TeaModel {
         return this.traceApps;
     }
 
+    public static class SearchTraceAppByNameResponseBodyTraceAppsTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static SearchTraceAppByNameResponseBodyTraceAppsTags build(java.util.Map<String, ?> map) throws Exception {
+            SearchTraceAppByNameResponseBodyTraceAppsTags self = new SearchTraceAppByNameResponseBodyTraceAppsTags();
+            return TeaModel.build(map, self);
+        }
+
+        public SearchTraceAppByNameResponseBodyTraceAppsTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public SearchTraceAppByNameResponseBodyTraceAppsTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class SearchTraceAppByNameResponseBodyTraceApps extends TeaModel {
         // The ID of the application.
         @NameInMap("AppId")
@@ -58,12 +88,18 @@ public class SearchTraceAppByNameResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         // Indicates whether the application is displayed in the Application Real-Time Monitoring Service (ARMS) console. Valid values:
         // 
         // *   `true`: The application is displayed in the ARMS console.
         // *   `false`: The application is not displayed in the ARMS console.
         @NameInMap("Show")
         public Boolean show;
+
+        @NameInMap("Tags")
+        public java.util.List<SearchTraceAppByNameResponseBodyTraceAppsTags> tags;
 
         // The type of the monitoring job. Valid values:
         // 
@@ -133,12 +169,28 @@ public class SearchTraceAppByNameResponseBody extends TeaModel {
             return this.regionId;
         }
 
+        public SearchTraceAppByNameResponseBodyTraceApps setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
         public SearchTraceAppByNameResponseBodyTraceApps setShow(Boolean show) {
             this.show = show;
             return this;
         }
         public Boolean getShow() {
             return this.show;
+        }
+
+        public SearchTraceAppByNameResponseBodyTraceApps setTags(java.util.List<SearchTraceAppByNameResponseBodyTraceAppsTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<SearchTraceAppByNameResponseBodyTraceAppsTags> getTags() {
+            return this.tags;
         }
 
         public SearchTraceAppByNameResponseBodyTraceApps setType(String type) {
