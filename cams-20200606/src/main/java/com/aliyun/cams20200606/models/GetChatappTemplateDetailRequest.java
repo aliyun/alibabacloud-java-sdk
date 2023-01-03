@@ -7,15 +7,20 @@ public class GetChatappTemplateDetailRequest extends TeaModel {
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
+    // The unique identifier of the WhatsApp account that you register.
     @NameInMap("CustWabaId")
+    @Deprecated
     public String custWabaId;
 
+    // Assigned by ISV for RAM user authentication and authorization.
     @NameInMap("IsvCode")
     public String isvCode;
 
+    // The language that is used in the message template.
     @NameInMap("Language")
     public String language;
 
+    // The code of the message template.
     @NameInMap("TemplateCode")
     public String templateCode;
 

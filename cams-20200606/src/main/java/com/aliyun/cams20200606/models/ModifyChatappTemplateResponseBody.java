@@ -4,15 +4,22 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class ModifyChatappTemplateResponseBody extends TeaModel {
+    // The HTTP status code.
+    // 
+    // *   If OK is returned, the request is successful.
+    // *   Other codes indicate that the call fails. For more information, see [Error codes](~~196974~~).
     @NameInMap("Code")
     public String code;
 
+    // The returned data.
     @NameInMap("Data")
     public ModifyChatappTemplateResponseBodyData data;
 
+    // The error message.
     @NameInMap("Message")
     public String message;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,9 +61,11 @@ public class ModifyChatappTemplateResponseBody extends TeaModel {
     }
 
     public static class ModifyChatappTemplateResponseBodyData extends TeaModel {
+        // The code of the message template.
         @NameInMap("TemplateCode")
         public String templateCode;
 
+        // The name of the template.
         @NameInMap("TemplateName")
         public String templateName;
 

@@ -4,15 +4,22 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class SendChatappMessageResponseBody extends TeaModel {
+    // The HTTP status code returned.
+    // 
+    // *   A code of OK indicates that the call is successful.
+    // *   Other codes indicate that the call fails. For more information, see [Error codes](~~196974~~).
     @NameInMap("Code")
     public String code;
 
+    // The error message returned.
     @NameInMap("Message")
     public String message;
 
+    // The ID of the message.
     @NameInMap("MessageId")
     public String messageId;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,24 +4,32 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class ModifyChatappTemplateRequest extends TeaModel {
+    // The list of components of the message template.
     @NameInMap("Components")
     public java.util.List<ModifyChatappTemplateRequestComponents> components;
 
+    // Isv customer space id
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
+    // The ID of the WhatApp Business account of the ISV customer.
     @NameInMap("CustWabaId")
+    @Deprecated
     public String custWabaId;
 
+    // The examples of variables that are used when you create the message template.
     @NameInMap("Example")
     public java.util.Map<String, String> example;
 
+    // ISV verification code, which is used to verify whether the sub-account is authorized by ISV.
     @NameInMap("IsvCode")
     public String isvCode;
 
+    // The language.
     @NameInMap("Language")
     public String language;
 
+    // The code of the message template.
     @NameInMap("TemplateCode")
     public String templateCode;
 
@@ -87,18 +95,30 @@ public class ModifyChatappTemplateRequest extends TeaModel {
     }
 
     public static class ModifyChatappTemplateRequestComponentsButtons extends TeaModel {
+        // The phone number.
         @NameInMap("PhoneNumber")
         public String phoneNumber;
 
+        // The text of the message to be sent.
         @NameInMap("Text")
         public String text;
 
+        // The type of the button.
+        // 
+        // *   **PHONE_NUMBER**: the phone call button
+        // *   **URL**: the URL button
+        // *   **QUICK_REPLY**: the quick reply button
         @NameInMap("Type")
         public String type;
 
+        // The URL to be visited after clicking the button.
         @NameInMap("Url")
         public String url;
 
+        // The type of the URL. Valid values:
+        // 
+        // *   **static**: the static URL
+        // *   **dynamic**: the dynamic URL
         @NameInMap("UrlType")
         public String urlType;
 
@@ -150,24 +170,45 @@ public class ModifyChatappTemplateRequest extends TeaModel {
     }
 
     public static class ModifyChatappTemplateRequestComponents extends TeaModel {
+        // The list of buttons, which applies only to the **BUTTONS** component.
         @NameInMap("Buttons")
         public java.util.List<ModifyChatappTemplateRequestComponentsButtons> buttons;
 
+        // The description.
+        // 
+        // >  When the Type parameter is set to **HEADER** and the Format parameter is set to **IMAGE/DOCUMENT/VIDEO**, you can specify the description.
         @NameInMap("Caption")
         public String caption;
 
+        // The name of the file.
+        // 
+        // > : When the Type parameter is set to **HEADER** and the Format parameter is set to **DOCUMENT**, you can specify a name of the file.
         @NameInMap("FileName")
         public String fileName;
 
+        // The type of the media resource.
+        // 
+        // *   **TEXT**: text
+        // *   **IMAGE**: image
+        // *   **DOCUMENT**: document
+        // *   **VIDEO**: video
         @NameInMap("Format")
         public String format;
 
+        // The text of the message to be sent.
         @NameInMap("Text")
         public String text;
 
+        // The type of the component.
+        // 
+        // *   **BODY**
+        // *   **HEADER**
+        // *   **FOOTER**
+        // *   **BUTTONS**
         @NameInMap("Type")
         public String type;
 
+        // The URL of the material.
         @NameInMap("Url")
         public String url;
 

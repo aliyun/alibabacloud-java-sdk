@@ -4,24 +4,30 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class BeeBotAssociateShrinkRequest extends TeaModel {
+    // The ID of chatbot instance.
     @NameInMap("ChatBotInstanceId")
     public String chatBotInstanceId;
 
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
+    // ISV verification code, which is used to verify whether the sub-account is authorized by ISV.
     @NameInMap("IsvCode")
     public String isvCode;
 
+    // The list of codes for answers from different perspectives.
     @NameInMap("Perspective")
     public String perspectiveShrink;
 
+    // The number of recommended questions, which ranges from 1 to 10.
     @NameInMap("RecommendNum")
     public Integer recommendNum;
 
+    // The ID of the session, which identifies the session and context information of the visitor.
     @NameInMap("SessionId")
     public String sessionId;
 
+    // The input of the visitor.
     @NameInMap("Utterance")
     public String utterance;
 

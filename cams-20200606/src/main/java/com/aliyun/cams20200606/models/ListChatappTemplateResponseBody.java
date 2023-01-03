@@ -4,15 +4,22 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class ListChatappTemplateResponseBody extends TeaModel {
+    // The HTTP status code returned.
+    // 
+    // *   A code of OK indicates that the call is successful.
+    // *   Other codes indicate that the call fails. For more information, see [Error codes](~~196974~~).
     @NameInMap("Code")
     public String code;
 
+    // The message templates.
     @NameInMap("ListTemplate")
     public java.util.List<ListChatappTemplateResponseBodyListTemplate> listTemplate;
 
+    // The error message returned.
     @NameInMap("Message")
     public String message;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,18 +61,40 @@ public class ListChatappTemplateResponseBody extends TeaModel {
     }
 
     public static class ListChatappTemplateResponseBodyListTemplate extends TeaModel {
+        // The review status of the message template. Valid values:
+        // 
+        // *   **pass**: The message template is approved.
+        // *   **fail**: The message template is rejected.
+        // *   **auditing**: The message template is being reviewed.
+        // *   **unaudit**: The review is suspended.
         @NameInMap("AuditStatus")
         public String auditStatus;
 
+        // The category of the message template. Valid values:
+        // 
+        // *   **ACCOUNT_UPDATE**: account update
+        // *   **PAYMENT_UPDATE**: payment update
+        // *   **PERSONAL_FINANCE\_UPDATE**: personal finance update
+        // *   **SHIPPING_UPDATE**: traffic update
+        // *   **RESERVATION_UPDATE**: reservation update
+        // *   **ISSUE_RESOLUTION**: issue resolution
+        // *   **APPOINTMENT_UPDATE**: appointment update
+        // *   **TRANSPORTATION_UPDATE**: logistics information update
+        // *   **TICKET_UPDATE**: ticket update
+        // *   **ALERT_UPDATE**: alert update
+        // *   **AUTO_REPLY**: auto reply
         @NameInMap("Category")
         public String category;
 
+        // The language that is used in the message template.
         @NameInMap("Language")
         public String language;
 
+        // The code of the message template.
         @NameInMap("TemplateCode")
         public String templateCode;
 
+        // The name of the message template.
         @NameInMap("TemplateName")
         public String templateName;
 

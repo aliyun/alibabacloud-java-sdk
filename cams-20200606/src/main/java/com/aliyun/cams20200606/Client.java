@@ -26,6 +26,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    /**
+      * You can call this operation up to 100 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param tmpReq BeeBotAssociateRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return BeeBotAssociateResponse
+     */
     public BeeBotAssociateResponse beeBotAssociateWithOptions(BeeBotAssociateRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         BeeBotAssociateShrinkRequest request = new BeeBotAssociateShrinkRequest();
@@ -80,11 +87,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new BeeBotAssociateResponse());
     }
 
+    /**
+      * You can call this operation up to 100 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request BeeBotAssociateRequest
+      * @return BeeBotAssociateResponse
+     */
     public BeeBotAssociateResponse beeBotAssociate(BeeBotAssociateRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.beeBotAssociateWithOptions(request, runtime);
     }
 
+    /**
+      * You can call this operation up to 100 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param tmpReq BeeBotChatRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return BeeBotChatResponse
+     */
     public BeeBotChatResponse beeBotChatWithOptions(BeeBotChatRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         BeeBotChatShrinkRequest request = new BeeBotChatShrinkRequest();
@@ -159,11 +179,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new BeeBotChatResponse());
     }
 
+    /**
+      * You can call this operation up to 100 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request BeeBotChatRequest
+      * @return BeeBotChatResponse
+     */
     public BeeBotChatResponse beeBotChat(BeeBotChatRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.beeBotChatWithOptions(request, runtime);
     }
 
+    /**
+      * ### QPS limit
+      * You can call this operation up to 5 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.
+      *
+      * @param tmpReq CreateChatappTemplateRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateChatappTemplateResponse
+     */
     public CreateChatappTemplateResponse createChatappTemplateWithOptions(CreateChatappTemplateRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateChatappTemplateShrinkRequest request = new CreateChatappTemplateShrinkRequest();
@@ -232,11 +266,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateChatappTemplateResponse());
     }
 
+    /**
+      * ### QPS limit
+      * You can call this operation up to 5 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.
+      *
+      * @param request CreateChatappTemplateRequest
+      * @return CreateChatappTemplateResponse
+     */
     public CreateChatappTemplateResponse createChatappTemplate(CreateChatappTemplateRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createChatappTemplateWithOptions(request, runtime);
     }
 
+    /**
+      * ### QPS limit
+      * You can call this operation up to 5 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.
+      *
+      * @param request DeleteChatappTemplateRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteChatappTemplateResponse
+     */
     public DeleteChatappTemplateResponse deleteChatappTemplateWithOptions(DeleteChatappTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -273,11 +322,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteChatappTemplateResponse());
     }
 
+    /**
+      * ### QPS limit
+      * You can call this operation up to 5 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.
+      *
+      * @param request DeleteChatappTemplateRequest
+      * @return DeleteChatappTemplateResponse
+     */
     public DeleteChatappTemplateResponse deleteChatappTemplate(DeleteChatappTemplateRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteChatappTemplateWithOptions(request, runtime);
     }
 
+    /**
+      * ### QPS limit
+      * You can call this operation up to 5 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.
+      *
+      * @param request GetChatappTemplateDetailRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetChatappTemplateDetailResponse
+     */
     public GetChatappTemplateDetailResponse getChatappTemplateDetailWithOptions(GetChatappTemplateDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -318,17 +382,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetChatappTemplateDetailResponse());
     }
 
+    /**
+      * ### QPS limit
+      * You can call this operation up to 5 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.
+      *
+      * @param request GetChatappTemplateDetailRequest
+      * @return GetChatappTemplateDetailResponse
+     */
     public GetChatappTemplateDetailResponse getChatappTemplateDetail(GetChatappTemplateDetailRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getChatappTemplateDetailWithOptions(request, runtime);
     }
 
+    /**
+      * ### QPS limit
+      * You can call this operation up to 5 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.
+      *
+      * @param tmpReq ListChatappTemplateRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListChatappTemplateResponse
+     */
     public ListChatappTemplateResponse listChatappTemplateWithOptions(ListChatappTemplateRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         ListChatappTemplateShrinkRequest request = new ListChatappTemplateShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.page))) {
-            request.pageShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.page), "Page", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.page)) {
+            request.pageShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.page, "Page", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -377,6 +456,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListChatappTemplateResponse());
     }
 
+    /**
+      * ### QPS limit
+      * You can call this operation up to 5 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.
+      *
+      * @param request ListChatappTemplateRequest
+      * @return ListChatappTemplateResponse
+     */
     public ListChatappTemplateResponse listChatappTemplate(ListChatappTemplateRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listChatappTemplateWithOptions(request, runtime);
@@ -445,6 +531,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifyChatappTemplateWithOptions(request, runtime);
     }
 
+    /**
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request QueryChatappBindWabaRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryChatappBindWabaResponse
+     */
     public QueryChatappBindWabaResponse queryChatappBindWabaWithOptions(QueryChatappBindWabaRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -473,11 +566,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryChatappBindWabaResponse());
     }
 
+    /**
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request QueryChatappBindWabaRequest
+      * @return QueryChatappBindWabaResponse
+     */
     public QueryChatappBindWabaResponse queryChatappBindWaba(QueryChatappBindWabaRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryChatappBindWabaWithOptions(request, runtime);
     }
 
+    /**
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request QueryChatappPhoneNumbersRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryChatappPhoneNumbersResponse
+     */
     public QueryChatappPhoneNumbersResponse queryChatappPhoneNumbersWithOptions(QueryChatappPhoneNumbersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -506,11 +612,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryChatappPhoneNumbersResponse());
     }
 
+    /**
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request QueryChatappPhoneNumbersRequest
+      * @return QueryChatappPhoneNumbersResponse
+     */
     public QueryChatappPhoneNumbersResponse queryChatappPhoneNumbers(QueryChatappPhoneNumbersRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryChatappPhoneNumbersWithOptions(request, runtime);
     }
 
+    /**
+      * You can call this operation up to 10 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.
+      * Can support up to 1,000 numbers per request.
+      *
+      * @param tmpReq SendChatappMassMessageRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return SendChatappMassMessageResponse
+     */
     public SendChatappMassMessageResponse sendChatappMassMessageWithOptions(SendChatappMassMessageRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         SendChatappMassMessageShrinkRequest request = new SendChatappMassMessageShrinkRequest();
@@ -581,11 +701,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SendChatappMassMessageResponse());
     }
 
+    /**
+      * You can call this operation up to 10 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.
+      * Can support up to 1,000 numbers per request.
+      *
+      * @param request SendChatappMassMessageRequest
+      * @return SendChatappMassMessageResponse
+     */
     public SendChatappMassMessageResponse sendChatappMassMessage(SendChatappMassMessageRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.sendChatappMassMessageWithOptions(request, runtime);
     }
 
+    /**
+      * You can call this operation up to 200 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.
+      *
+      * @param tmpReq SendChatappMessageRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return SendChatappMessageResponse
+     */
     public SendChatappMessageResponse sendChatappMessageWithOptions(SendChatappMessageRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         SendChatappMessageShrinkRequest request = new SendChatappMessageShrinkRequest();
@@ -612,6 +746,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ChannelType", request.channelType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.contextMessageId)) {
+            body.put("ContextMessageId", request.contextMessageId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.custSpaceId)) {
             body.put("CustSpaceId", request.custSpaceId);
         }
@@ -636,12 +774,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("IsvCode", request.isvCode);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.label)) {
+            body.put("Label", request.label);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.language)) {
             body.put("Language", request.language);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.messageType)) {
             body.put("MessageType", request.messageType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            body.put("Tag", request.tag);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.templateCode)) {
@@ -654,6 +800,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.to)) {
             body.put("To", request.to);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.trackingData)) {
+            body.put("TrackingData", request.trackingData);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ttl)) {
+            body.put("Ttl", request.ttl);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.type)) {
@@ -678,6 +832,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SendChatappMessageResponse());
     }
 
+    /**
+      * You can call this operation up to 200 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.
+      *
+      * @param request SendChatappMessageRequest
+      * @return SendChatappMessageResponse
+     */
     public SendChatappMessageResponse sendChatappMessage(SendChatappMessageRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.sendChatappMessageWithOptions(request, runtime);

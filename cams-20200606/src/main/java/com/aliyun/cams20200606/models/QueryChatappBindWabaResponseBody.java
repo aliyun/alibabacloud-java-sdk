@@ -4,15 +4,22 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class QueryChatappBindWabaResponseBody extends TeaModel {
+    // The HTTP status code returned.
+    // 
+    // *   A value of OK indicates that the call is successful.
+    // *   Other values indicate that the call fails. For more information, see [Error codes](~~196974~~).
     @NameInMap("Code")
     public String code;
 
+    // The returned data.
     @NameInMap("Data")
     public QueryChatappBindWabaResponseBodyData data;
 
+    // The error message returned.
     @NameInMap("Message")
     public String message;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,18 +61,23 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
     }
 
     public static class QueryChatappBindWabaResponseBodyData extends TeaModel {
+        // The audit status of the WhatApp Business account.
         @NameInMap("AccountReviewStatus")
         public String accountReviewStatus;
 
+        // Currency
         @NameInMap("Currency")
         public String currency;
 
+        // WabaID
         @NameInMap("Id")
         public String id;
 
+        // The namespace of the message template.
         @NameInMap("MessageTemplateNamespace")
         public String messageTemplateNamespace;
 
+        // The name of the WhatApp Business account.
         @NameInMap("Name")
         public String name;
 

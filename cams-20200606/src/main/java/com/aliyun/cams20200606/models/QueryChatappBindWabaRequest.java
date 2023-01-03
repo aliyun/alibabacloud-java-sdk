@@ -4,9 +4,11 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class QueryChatappBindWabaRequest extends TeaModel {
+    // The space ID of the user under the ISV account.
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
+    // The ISV verification code, which is used to verify whether the user is authorized by ISV.
     @NameInMap("IsvCode")
     public String isvCode;
 
