@@ -4,9 +4,11 @@ package com.aliyun.adcp20220101.models;
 import com.aliyun.tea.*;
 
 public class DeleteHubClusterRequest extends TeaModel {
+    // The ID of the master instance.
     @NameInMap("ClusterId")
     public String clusterId;
 
+    // Specifies whether to forcefully delete the master instance. Valid values: - true: forcefully delete the master instance. - false: does not forcefully delete the master instance. Default value: false.
     @NameInMap("Force")
     public Boolean force;
 

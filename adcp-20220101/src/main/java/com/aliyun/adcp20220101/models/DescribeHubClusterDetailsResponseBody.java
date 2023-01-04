@@ -4,9 +4,11 @@ package com.aliyun.adcp20220101.models;
 import com.aliyun.tea.*;
 
 public class DescribeHubClusterDetailsResponseBody extends TeaModel {
+    // The details about the master instance.
     @NameInMap("Cluster")
     public DescribeHubClusterDetailsResponseBodyCluster cluster;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +34,15 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
     }
 
     public static class DescribeHubClusterDetailsResponseBodyClusterApiServer extends TeaModel {
+        // The ID of the elastic IP address (EIP).
         @NameInMap("ApiServerEipId")
         public String apiServerEipId;
 
+        // Indicates whether a public endpoint is used to expose the API server. Valid values: - true: a public endpoint is used to expose the API server. - false: no public endpoint is used to expose the API server.
         @NameInMap("EnabledPublic")
         public Boolean enabledPublic;
 
+        // The ID of the Server Load Balancer (SLB) instance.
         @NameInMap("LoadBalancerId")
         public String loadBalancerId;
 
@@ -73,33 +78,43 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
     }
 
     public static class DescribeHubClusterDetailsResponseBodyClusterClusterInfo extends TeaModel {
+        // The ID of the master instance.
         @NameInMap("ClusterId")
         public String clusterId;
 
+        // The specification of the master instance. Valid values: - ack.pro.small: ACK Pro
         @NameInMap("ClusterSpec")
         public String clusterSpec;
 
+        // The time when the master instance was created.
         @NameInMap("CreationTime")
         public String creationTime;
 
+        // The error message that is returned when the system fails to create the master instance.
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        // The name of the master instance.
         @NameInMap("Name")
         public String name;
 
+        // The configurations of the master instance.
         @NameInMap("Profile")
         public String profile;
 
+        // The ID of the region in which the master instance resides.
         @NameInMap("RegionId")
         public String regionId;
 
+        // The status of the master instance. Valid values: - initial: The master instance is being initialized. - failed: The master instance failed to be created. - running: The master instance is running. - inactive: The master instance is inactive. - deleting: The master instance is being deleted. - delete_failed: The master instance failed to be deleted. - deleted: The master instance is deleted.
         @NameInMap("State")
         public String state;
 
+        // The time when the master instance was updated.
         @NameInMap("UpdateTime")
         public String updateTime;
 
+        // The Kubernetes version of the master instance.
         @NameInMap("Version")
         public String version;
 
@@ -191,15 +206,22 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
     }
 
     public static class DescribeHubClusterDetailsResponseBodyClusterConditions extends TeaModel {
+        // 删除条件错误信息
         @NameInMap("Message")
         public String message;
 
+        // 删除条件原因
         @NameInMap("Reason")
         public String reason;
 
+        // 删除条件状态，取值
+        // - True 不能删除
+        // - False 允许删除
+        // - Unknow 未知
         @NameInMap("Status")
         public String status;
 
+        // 删除条件类型
         @NameInMap("Type")
         public String type;
 
@@ -243,9 +265,11 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
     }
 
     public static class DescribeHubClusterDetailsResponseBodyClusterEndpoints extends TeaModel {
+        // The internal endpoint of the API server of the master instance.
         @NameInMap("IntranetApiServerEndpoint")
         public String intranetApiServerEndpoint;
 
+        // The public endpoint of the API server of the master instance.
         @NameInMap("PublicApiServerEndpoint")
         public String publicApiServerEndpoint;
 
@@ -273,12 +297,15 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
     }
 
     public static class DescribeHubClusterDetailsResponseBodyClusterLogConfig extends TeaModel {
+        // Indicates whether audit logs are enabled. Valid values: - true: audit logs are enabled. - false: audit logs are disabled.
         @NameInMap("EnableLog")
         public Boolean enableLog;
 
+        // The name of the Log Service project.
         @NameInMap("LogProject")
         public String logProject;
 
+        // The retention period of the logs.
         @NameInMap("LogStoreTTL")
         public String logStoreTTL;
 
@@ -314,9 +341,11 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
     }
 
     public static class DescribeHubClusterDetailsResponseBodyClusterMeshConfig extends TeaModel {
+        // Indicates whether ASM is enabled. Valid values: - true: ASM is enabled. - false: ASM is disabled.
         @NameInMap("EnableMesh")
         public Boolean enableMesh;
 
+        // The ID of the ASM instance.
         @NameInMap("MeshId")
         public String meshId;
 
@@ -344,18 +373,23 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
     }
 
     public static class DescribeHubClusterDetailsResponseBodyClusterNetwork extends TeaModel {
+        // The domain name of the master instance.
         @NameInMap("ClusterDomain")
         public String clusterDomain;
 
+        // The IP version that is supported by the master instance. Valid values: - ipv4: IPv4. - ipv6: IPv6. - dual: IPv4 and IPv6.
         @NameInMap("IPStack")
         public String IPStack;
 
+        // The ID of the associated security group.
         @NameInMap("SecurityGroupIDs")
         public java.util.List<String> securityGroupIDs;
 
+        // A list of the vSwitches that are used by the master instance.
         @NameInMap("VSwitches")
         public java.util.List<String> vSwitches;
 
+        // The ID of the virtual private cloud (VPC) in which the master instance resides.
         @NameInMap("VpcId")
         public String vpcId;
 
@@ -407,24 +441,31 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
     }
 
     public static class DescribeHubClusterDetailsResponseBodyCluster extends TeaModel {
+        // Information about the API server of the master instance.
         @NameInMap("ApiServer")
         public DescribeHubClusterDetailsResponseBodyClusterApiServer apiServer;
 
+        // The details about the master instance.
         @NameInMap("ClusterInfo")
         public DescribeHubClusterDetailsResponseBodyClusterClusterInfo clusterInfo;
 
+        // 集群删除条件信息列表
         @NameInMap("Conditions")
         public java.util.List<DescribeHubClusterDetailsResponseBodyClusterConditions> conditions;
 
+        // The endpoint of the master instance.
         @NameInMap("Endpoints")
         public DescribeHubClusterDetailsResponseBodyClusterEndpoints endpoints;
 
+        // The logging configuration.
         @NameInMap("LogConfig")
         public DescribeHubClusterDetailsResponseBodyClusterLogConfig logConfig;
 
+        // The Service Mesh (ASM) configurations.
         @NameInMap("MeshConfig")
         public DescribeHubClusterDetailsResponseBodyClusterMeshConfig meshConfig;
 
+        // The network configurations of the master instance.
         @NameInMap("Network")
         public DescribeHubClusterDetailsResponseBodyClusterNetwork network;
 

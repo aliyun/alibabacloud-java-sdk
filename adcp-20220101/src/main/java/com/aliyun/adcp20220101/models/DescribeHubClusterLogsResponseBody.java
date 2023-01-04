@@ -4,9 +4,11 @@ package com.aliyun.adcp20220101.models;
 import com.aliyun.tea.*;
 
 public class DescribeHubClusterLogsResponseBody extends TeaModel {
+    // Brief information about operation logs.
     @NameInMap("Logs")
     public java.util.List<DescribeHubClusterLogsResponseBodyLogs> logs;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +34,19 @@ public class DescribeHubClusterLogsResponseBody extends TeaModel {
     }
 
     public static class DescribeHubClusterLogsResponseBodyLogs extends TeaModel {
+        // The ID of the master instance.
         @NameInMap("ClusterId")
         public String clusterId;
 
+        // A log of the master instance.
         @NameInMap("ClusterLog")
         public String clusterLog;
 
+        // The time when the log was created. Format: <i>yyyy-mm-dd</i>t<i>hh:mm:ss</i>z (UTC time).
         @NameInMap("CreationTime")
         public String creationTime;
 
+        // The severity level of the log. Valid values: - error: errors. - warn: warnings. - info: information.
         @NameInMap("LogLevel")
         public String logLevel;
 

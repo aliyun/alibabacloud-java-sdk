@@ -4,27 +4,40 @@ package com.aliyun.adcp20220101.models;
 import com.aliyun.tea.*;
 
 public class CreateHubClusterRequest extends TeaModel {
+    // Specifies whether to use a public IP address to expose the API server. Valid values: - true: uses a public IP address to expose the API server. - true: uses an internal IP address to expose the API server.
     @NameInMap("ApiServerPublicEip")
     public Boolean apiServerPublicEip;
 
+    // Specifies whether to enable audit logs. Valid values: - true: enables audit logs. - false: disables audit logs.
     @NameInMap("AuditLogEnabled")
     public Boolean auditLogEnabled;
 
+    // Specifies whether the security group is an advanced security group.
     @NameInMap("IsEnterpriseSecurityGroup")
     public Boolean isEnterpriseSecurityGroup;
 
+    // The name of the master instance.
     @NameInMap("Name")
     public String name;
 
+    // Scenario-oriented master control type. The value can be:
+    // 
+    // - `Default`: Standard scenario Master instance.
+    // - `XFlow`: Workflow scenario master instance.
+    // 
+    // Default Value: `Default`.
     @NameInMap("Profile")
     public String profile;
 
+    // The ID of the region. You can call the DescribeRegions operation to query available regions.
     @NameInMap("RegionId")
     public String regionId;
 
+    // The ID of the vSwitch.
     @NameInMap("VSwitches")
     public String vSwitches;
 
+    // The ID of the virtual private cloud (VPC) to which the master instance belongs. You can call the DescribeVpcs operation to query available VPCs.
     @NameInMap("VpcId")
     public String vpcId;
 
