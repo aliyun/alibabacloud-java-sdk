@@ -99,6 +99,9 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
         @NameInMap("HybridCloudEnable")
         public Boolean hybridCloudEnable;
 
+        @NameInMap("NameSpaceShortId")
+        public String nameSpaceShortId;
+
         @NameInMap("NamespaceId")
         public String namespaceId;
 
@@ -154,6 +157,14 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
         }
         public Boolean getHybridCloudEnable() {
             return this.hybridCloudEnable;
+        }
+
+        public DescribeNamespaceListResponseBodyData setNameSpaceShortId(String nameSpaceShortId) {
+            this.nameSpaceShortId = nameSpaceShortId;
+            return this;
+        }
+        public String getNameSpaceShortId() {
+            return this.nameSpaceShortId;
         }
 
         public DescribeNamespaceListResponseBodyData setNamespaceId(String namespaceId) {

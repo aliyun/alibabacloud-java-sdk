@@ -93,6 +93,9 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         @NameInMap("AddressServerHost")
         public String addressServerHost;
 
+        @NameInMap("NameSpaceShortId")
+        public String nameSpaceShortId;
+
         @NameInMap("NamespaceDescription")
         public String namespaceDescription;
 
@@ -130,6 +133,14 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         }
         public String getAddressServerHost() {
             return this.addressServerHost;
+        }
+
+        public DescribeNamespacesResponseBodyDataNamespaces setNameSpaceShortId(String nameSpaceShortId) {
+            this.nameSpaceShortId = nameSpaceShortId;
+            return this;
+        }
+        public String getNameSpaceShortId() {
+            return this.nameSpaceShortId;
         }
 
         public DescribeNamespacesResponseBodyDataNamespaces setNamespaceDescription(String namespaceDescription) {

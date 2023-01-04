@@ -4,6 +4,9 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class UpdateNamespaceRequest extends TeaModel {
+    @NameInMap("NameSpaceShortId")
+    public String nameSpaceShortId;
+
     @NameInMap("NamespaceDescription")
     public String namespaceDescription;
 
@@ -16,6 +19,14 @@ public class UpdateNamespaceRequest extends TeaModel {
     public static UpdateNamespaceRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateNamespaceRequest self = new UpdateNamespaceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateNamespaceRequest setNameSpaceShortId(String nameSpaceShortId) {
+        this.nameSpaceShortId = nameSpaceShortId;
+        return this;
+    }
+    public String getNameSpaceShortId() {
+        return this.nameSpaceShortId;
     }
 
     public UpdateNamespaceRequest setNamespaceDescription(String namespaceDescription) {

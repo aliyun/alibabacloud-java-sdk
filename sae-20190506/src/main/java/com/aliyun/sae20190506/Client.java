@@ -592,6 +592,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateGreyTagRouteResponse createGreyTagRouteWithOptions(CreateGreyTagRouteRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.albRules)) {
+            query.put("AlbRules", request.albRules);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
             query.put("AppId", request.appId);
         }
@@ -905,6 +909,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ConfigMapMountDesc", request.configMapMountDesc);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.enableImageAccl)) {
+            body.put("EnableImageAccl", request.enableImageAccl);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ossAkId)) {
             body.put("OssAkId", request.ossAkId);
         }
@@ -949,6 +957,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateNamespaceResponse createNamespaceWithOptions(CreateNamespaceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.nameSpaceShortId)) {
+            query.put("NameSpaceShortId", request.nameSpaceShortId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.namespaceDescription)) {
             query.put("NamespaceDescription", request.namespaceDescription);
         }
@@ -1258,6 +1270,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteNamespaceResponse deleteNamespaceWithOptions(DeleteNamespaceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.nameSpaceShortId)) {
+            query.put("NameSpaceShortId", request.nameSpaceShortId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.namespaceId)) {
             query.put("NamespaceId", request.namespaceId);
         }
@@ -1430,6 +1446,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.nasId)) {
             query.put("NasId", request.nasId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.packageType)) {
+            query.put("PackageType", request.packageType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.packageUrl)) {
@@ -2278,6 +2298,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeNamespaceResponse describeNamespaceWithOptions(DescribeNamespaceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.nameSpaceShortId)) {
+            query.put("NameSpaceShortId", request.nameSpaceShortId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.namespaceId)) {
             query.put("NamespaceId", request.namespaceId);
         }
@@ -2344,6 +2368,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeNamespaceResourcesResponse describeNamespaceResourcesWithOptions(DescribeNamespaceResourcesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.nameSpaceShortId)) {
+            query.put("NameSpaceShortId", request.nameSpaceShortId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.namespaceId)) {
             query.put("NamespaceId", request.namespaceId);
         }
@@ -4002,6 +4030,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateGreyTagRouteResponse updateGreyTagRouteWithOptions(UpdateGreyTagRouteRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.albRules)) {
+            query.put("AlbRules", request.albRules);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             query.put("Description", request.description);
         }
@@ -4267,6 +4299,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ConfigMapMountDesc", request.configMapMountDesc);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.enableImageAccl)) {
+            body.put("EnableImageAccl", request.enableImageAccl);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ossAkId)) {
             body.put("OssAkId", request.ossAkId);
         }
@@ -4315,6 +4351,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateNamespaceResponse updateNamespaceWithOptions(UpdateNamespaceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.nameSpaceShortId)) {
+            query.put("NameSpaceShortId", request.nameSpaceShortId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.namespaceDescription)) {
             query.put("NamespaceDescription", request.namespaceDescription);
         }
@@ -4354,6 +4394,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateNamespaceVpcResponse updateNamespaceVpcWithOptions(UpdateNamespaceVpcRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.nameSpaceShortId)) {
+            query.put("NameSpaceShortId", request.nameSpaceShortId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.namespaceId)) {
             query.put("NamespaceId", request.namespaceId);
         }

@@ -103,6 +103,9 @@ public class DeployApplicationRequest extends TeaModel {
     @NameInMap("OssMountDescs")
     public String ossMountDescs;
 
+    @NameInMap("PackageType")
+    public String packageType;
+
     @NameInMap("PackageUrl")
     public String packageUrl;
 
@@ -424,6 +427,14 @@ public class DeployApplicationRequest extends TeaModel {
     }
     public String getOssMountDescs() {
         return this.ossMountDescs;
+    }
+
+    public DeployApplicationRequest setPackageType(String packageType) {
+        this.packageType = packageType;
+        return this;
+    }
+    public String getPackageType() {
+        return this.packageType;
     }
 
     public DeployApplicationRequest setPackageUrl(String packageUrl) {

@@ -34,6 +34,9 @@ public class UpdateJobRequest extends TeaModel {
     @NameInMap("EdasContainerVersion")
     public String edasContainerVersion;
 
+    @NameInMap("EnableImageAccl")
+    public Boolean enableImageAccl;
+
     @NameInMap("Envs")
     public String envs;
 
@@ -219,6 +222,14 @@ public class UpdateJobRequest extends TeaModel {
     }
     public String getEdasContainerVersion() {
         return this.edasContainerVersion;
+    }
+
+    public UpdateJobRequest setEnableImageAccl(Boolean enableImageAccl) {
+        this.enableImageAccl = enableImageAccl;
+        return this;
+    }
+    public Boolean getEnableImageAccl() {
+        return this.enableImageAccl;
     }
 
     public UpdateJobRequest setEnvs(String envs) {

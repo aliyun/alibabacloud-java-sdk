@@ -86,6 +86,143 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
         return this.traceId;
     }
 
+    public static class ListGreyTagRouteResponseBodyDataResultAlbRulesItems extends TeaModel {
+        @NameInMap("cond")
+        public String cond;
+
+        @NameInMap("expr")
+        public String expr;
+
+        @NameInMap("index")
+        public Integer index;
+
+        @NameInMap("name")
+        public String name;
+
+        @NameInMap("operator")
+        public String operator;
+
+        @NameInMap("type")
+        public String type;
+
+        @NameInMap("value")
+        public String value;
+
+        public static ListGreyTagRouteResponseBodyDataResultAlbRulesItems build(java.util.Map<String, ?> map) throws Exception {
+            ListGreyTagRouteResponseBodyDataResultAlbRulesItems self = new ListGreyTagRouteResponseBodyDataResultAlbRulesItems();
+            return TeaModel.build(map, self);
+        }
+
+        public ListGreyTagRouteResponseBodyDataResultAlbRulesItems setCond(String cond) {
+            this.cond = cond;
+            return this;
+        }
+        public String getCond() {
+            return this.cond;
+        }
+
+        public ListGreyTagRouteResponseBodyDataResultAlbRulesItems setExpr(String expr) {
+            this.expr = expr;
+            return this;
+        }
+        public String getExpr() {
+            return this.expr;
+        }
+
+        public ListGreyTagRouteResponseBodyDataResultAlbRulesItems setIndex(Integer index) {
+            this.index = index;
+            return this;
+        }
+        public Integer getIndex() {
+            return this.index;
+        }
+
+        public ListGreyTagRouteResponseBodyDataResultAlbRulesItems setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public ListGreyTagRouteResponseBodyDataResultAlbRulesItems setOperator(String operator) {
+            this.operator = operator;
+            return this;
+        }
+        public String getOperator() {
+            return this.operator;
+        }
+
+        public ListGreyTagRouteResponseBodyDataResultAlbRulesItems setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public ListGreyTagRouteResponseBodyDataResultAlbRulesItems setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class ListGreyTagRouteResponseBodyDataResultAlbRules extends TeaModel {
+        @NameInMap("condition")
+        public String condition;
+
+        @NameInMap("ingressId")
+        public String ingressId;
+
+        @NameInMap("items")
+        public java.util.List<ListGreyTagRouteResponseBodyDataResultAlbRulesItems> items;
+
+        @NameInMap("serviceId")
+        public String serviceId;
+
+        public static ListGreyTagRouteResponseBodyDataResultAlbRules build(java.util.Map<String, ?> map) throws Exception {
+            ListGreyTagRouteResponseBodyDataResultAlbRules self = new ListGreyTagRouteResponseBodyDataResultAlbRules();
+            return TeaModel.build(map, self);
+        }
+
+        public ListGreyTagRouteResponseBodyDataResultAlbRules setCondition(String condition) {
+            this.condition = condition;
+            return this;
+        }
+        public String getCondition() {
+            return this.condition;
+        }
+
+        public ListGreyTagRouteResponseBodyDataResultAlbRules setIngressId(String ingressId) {
+            this.ingressId = ingressId;
+            return this;
+        }
+        public String getIngressId() {
+            return this.ingressId;
+        }
+
+        public ListGreyTagRouteResponseBodyDataResultAlbRules setItems(java.util.List<ListGreyTagRouteResponseBodyDataResultAlbRulesItems> items) {
+            this.items = items;
+            return this;
+        }
+        public java.util.List<ListGreyTagRouteResponseBodyDataResultAlbRulesItems> getItems() {
+            return this.items;
+        }
+
+        public ListGreyTagRouteResponseBodyDataResultAlbRules setServiceId(String serviceId) {
+            this.serviceId = serviceId;
+            return this;
+        }
+        public String getServiceId() {
+            return this.serviceId;
+        }
+
+    }
+
     public static class ListGreyTagRouteResponseBodyDataResultDubboRulesItems extends TeaModel {
         @NameInMap("cond")
         public String cond;
@@ -372,6 +509,9 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
     }
 
     public static class ListGreyTagRouteResponseBodyDataResult extends TeaModel {
+        @NameInMap("AlbRules")
+        public java.util.List<ListGreyTagRouteResponseBodyDataResultAlbRules> albRules;
+
         @NameInMap("CreateTime")
         public Long createTime;
 
@@ -396,6 +536,14 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
         public static ListGreyTagRouteResponseBodyDataResult build(java.util.Map<String, ?> map) throws Exception {
             ListGreyTagRouteResponseBodyDataResult self = new ListGreyTagRouteResponseBodyDataResult();
             return TeaModel.build(map, self);
+        }
+
+        public ListGreyTagRouteResponseBodyDataResult setAlbRules(java.util.List<ListGreyTagRouteResponseBodyDataResultAlbRules> albRules) {
+            this.albRules = albRules;
+            return this;
+        }
+        public java.util.List<ListGreyTagRouteResponseBodyDataResultAlbRules> getAlbRules() {
+            return this.albRules;
         }
 
         public ListGreyTagRouteResponseBodyDataResult setCreateTime(Long createTime) {
