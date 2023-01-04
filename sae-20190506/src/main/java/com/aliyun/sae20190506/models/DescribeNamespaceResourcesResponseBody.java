@@ -111,6 +111,9 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
         @NameInMap("LastChangeOrderStatus")
         public String lastChangeOrderStatus;
 
+        @NameInMap("NameSpaceShortId")
+        public String nameSpaceShortId;
+
         @NameInMap("NamespaceId")
         public String namespaceId;
 
@@ -210,6 +213,14 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
         }
         public String getLastChangeOrderStatus() {
             return this.lastChangeOrderStatus;
+        }
+
+        public DescribeNamespaceResourcesResponseBodyData setNameSpaceShortId(String nameSpaceShortId) {
+            this.nameSpaceShortId = nameSpaceShortId;
+            return this;
+        }
+        public String getNameSpaceShortId() {
+            return this.nameSpaceShortId;
         }
 
         public DescribeNamespaceResourcesResponseBodyData setNamespaceId(String namespaceId) {

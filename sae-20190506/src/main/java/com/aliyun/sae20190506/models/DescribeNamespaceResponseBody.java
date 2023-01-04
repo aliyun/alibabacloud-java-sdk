@@ -87,6 +87,9 @@ public class DescribeNamespaceResponseBody extends TeaModel {
     }
 
     public static class DescribeNamespaceResponseBodyData extends TeaModel {
+        @NameInMap("NameSpaceShortId")
+        public String nameSpaceShortId;
+
         @NameInMap("NamespaceDescription")
         public String namespaceDescription;
 
@@ -102,6 +105,14 @@ public class DescribeNamespaceResponseBody extends TeaModel {
         public static DescribeNamespaceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeNamespaceResponseBodyData self = new DescribeNamespaceResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeNamespaceResponseBodyData setNameSpaceShortId(String nameSpaceShortId) {
+            this.nameSpaceShortId = nameSpaceShortId;
+            return this;
+        }
+        public String getNameSpaceShortId() {
+            return this.nameSpaceShortId;
         }
 
         public DescribeNamespaceResponseBodyData setNamespaceDescription(String namespaceDescription) {
