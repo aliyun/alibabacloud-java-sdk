@@ -4,9 +4,11 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class GetApplicationProvisioningConfigRequest extends TeaModel {
+    // IDaaS的应用资源ID。
     @NameInMap("ApplicationId")
     public String applicationId;
 
+    // IDaaS EIAM的实例id
     @NameInMap("InstanceId")
     public String instanceId;
 

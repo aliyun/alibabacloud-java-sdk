@@ -1468,7 +1468,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ApplicationId", request.applicationId);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.callbackProvisioningConfig))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.callbackProvisioningConfig)) {
             query.put("CallbackProvisioningConfig", request.callbackProvisioningConfig);
         }
 
@@ -1482,6 +1482,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.provisionProtocolType)) {
             query.put("ProvisionProtocolType", request.provisionProtocolType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scimProvisioningConfig)) {
+            query.put("ScimProvisioningConfig", request.scimProvisioningConfig);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -1562,11 +1566,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceId", request.instanceId);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.oidcSsoConfig))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.oidcSsoConfig)) {
             query.put("OidcSsoConfig", request.oidcSsoConfig);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.samlSsoConfig))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.samlSsoConfig)) {
             query.put("SamlSsoConfig", request.samlSsoConfig);
         }
 

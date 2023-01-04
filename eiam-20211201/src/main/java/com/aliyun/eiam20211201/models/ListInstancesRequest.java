@@ -4,15 +4,19 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class ListInstancesRequest extends TeaModel {
+    // 实例ID列表，支持0到100个
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
+    // 当前查询的列表页码，默认为1
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    // 当前查询的列表页码，默认为20
     @NameInMap("PageSize")
     public Long pageSize;
 
+    // 实例状态
     @NameInMap("Status")
     public String status;
 

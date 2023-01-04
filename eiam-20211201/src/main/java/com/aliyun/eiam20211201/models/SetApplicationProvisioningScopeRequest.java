@@ -4,12 +4,15 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class SetApplicationProvisioningScopeRequest extends TeaModel {
+    // IDaaS的应用主键id
     @NameInMap("ApplicationId")
     public String applicationId;
 
+    // IDaaS EIAM的实例id
     @NameInMap("InstanceId")
     public String instanceId;
 
+    // 授权同步出的组织机构列表
     @NameInMap("OrganizationalUnitIds")
     public java.util.List<String> organizationalUnitIds;
 

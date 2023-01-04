@@ -4,12 +4,15 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class SetApplicationGrantScopeRequest extends TeaModel {
+    // IDaaS的应用主键id
     @NameInMap("ApplicationId")
     public String applicationId;
 
+    // api调用的授权范围
     @NameInMap("GrantScopes")
     public java.util.List<String> grantScopes;
 
+    // IDaaS EIAM的实例id
     @NameInMap("InstanceId")
     public String instanceId;
 

@@ -43,6 +43,7 @@ public class ListApplicationsForOrganizationalUnitResponseBody extends TeaModel 
     }
 
     public static class ListApplicationsForOrganizationalUnitResponseBodyApplications extends TeaModel {
+        // 应用的唯一标识。
         @NameInMap("ApplicationId")
         public String applicationId;
 

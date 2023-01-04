@@ -43,30 +43,39 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
     }
 
     public static class ListOrganizationalUnitsResponseBodyOrganizationalUnits extends TeaModel {
+        // 创建时间
         @NameInMap("CreateTime")
         public Long createTime;
 
+        // 描述
         @NameInMap("Description")
         public String description;
 
+        // 实例Id
         @NameInMap("InstanceId")
         public String instanceId;
 
+        // 外部ID
         @NameInMap("OrganizationalUnitExternalId")
         public String organizationalUnitExternalId;
 
+        // 机构ID
         @NameInMap("OrganizationalUnitId")
         public String organizationalUnitId;
 
+        // 来源ID
         @NameInMap("OrganizationalUnitSourceId")
         public String organizationalUnitSourceId;
 
+        // 来源类型, build_in[自建],ding_talk[钉钉导入],ad[AD导入],ldap[LDAP导]
         @NameInMap("OrganizationalUnitSourceType")
         public String organizationalUnitSourceType;
 
+        // 父机构ID
         @NameInMap("ParentId")
         public String parentId;
 
+        // 最近一次更新时间
         @NameInMap("UpdateTime")
         public Long updateTime;
 

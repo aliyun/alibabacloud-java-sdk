@@ -32,6 +32,7 @@ public class GetApplicationProvisioningScopeResponseBody extends TeaModel {
     }
 
     public static class GetApplicationProvisioningScopeResponseBodyApplicationProvisioningScope extends TeaModel {
+        // 同步授权的组织机构列表
         @NameInMap("OrganizationalUnitIds")
         public java.util.List<String> organizationalUnitIds;
 

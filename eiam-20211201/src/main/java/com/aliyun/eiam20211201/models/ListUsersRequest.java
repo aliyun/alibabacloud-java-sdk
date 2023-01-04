@@ -4,36 +4,47 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class ListUsersRequest extends TeaModel {
+    // 邮箱
     @NameInMap("Email")
     public String email;
 
+    // IDaaS EIAM实例的ID。
     @NameInMap("InstanceId")
     public String instanceId;
 
+    // 机构ID
     @NameInMap("OrganizationalUnitId")
     public String organizationalUnitId;
 
+    // 当前查询的列表页码，默认为1。
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    // 当前查询的列表页码，默认为20。
     @NameInMap("PageSize")
     public Long pageSize;
 
+    // 手机区号
     @NameInMap("PhoneNumber")
     public String phoneNumber;
 
+    // 手机区号
     @NameInMap("PhoneRegion")
     public String phoneRegion;
 
+    // 账户状态
     @NameInMap("Status")
     public String status;
 
+    // 外部关联ID
     @NameInMap("UserExternalId")
     public String userExternalId;
 
+    // 自建类型为实例ID，非自建类型，为对应企业ID，比如钉钉，对应的corpId
     @NameInMap("UserSourceId")
     public String userSourceId;
 
+    // build_in(自建),ding_talk(钉钉导入),ad(AD导入),ldap(LDAP导入)
     @NameInMap("UserSourceType")
     public String userSourceType;
 

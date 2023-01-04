@@ -43,6 +43,7 @@ public class ListOrganizationalUnitsForApplicationResponseBody extends TeaModel 
     }
 
     public static class ListOrganizationalUnitsForApplicationResponseBodyOrganizationalUnits extends TeaModel {
+        // 组织的唯一标识.
         @NameInMap("OrganizationalUnitId")
         public String organizationalUnitId;
 
