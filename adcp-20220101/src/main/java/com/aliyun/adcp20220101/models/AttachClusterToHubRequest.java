@@ -4,12 +4,15 @@ package com.aliyun.adcp20220101.models;
 import com.aliyun.tea.*;
 
 public class AttachClusterToHubRequest extends TeaModel {
+    // Specifies whether to associate the clusters with Service Mesh (ASM) instances. Valid values:
     @NameInMap("AttachToMesh")
     public Boolean attachToMesh;
 
+    // The ID of the master instance.
     @NameInMap("ClusterId")
     public String clusterId;
 
+    // A JSON string that can be parsed into a string array. The string specifies the clusters that you want to associate with the master instance.
     @NameInMap("ClusterIds")
     public String clusterIds;
 

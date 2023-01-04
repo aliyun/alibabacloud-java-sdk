@@ -4,6 +4,7 @@ package com.aliyun.adcp20220101.models;
 import com.aliyun.tea.*;
 
 public class UpdateHubClusterFeatureResponseBody extends TeaModel {
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

@@ -394,8 +394,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.detachClusterFromHubWithOptions(request, runtime);
     }
 
-    public UpdateHubClusterFeatureResponse updateHubClusterFeatureWithOptions(UpdateHubClusterFeatureRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public UpdateHubClusterFeatureResponse updateHubClusterFeatureWithOptions(UpdateHubClusterFeatureRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateHubClusterFeatureShrinkRequest request = new UpdateHubClusterFeatureShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.units)) {
+            request.unitsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.units, "Units", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.apiServerEipId)) {
             query.put("ApiServerEipId", request.apiServerEipId);
@@ -421,12 +427,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EnableMesh", request.enableMesh);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.enabled)) {
+            query.put("Enabled", request.enabled);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             query.put("Name", request.name);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.priceLimit)) {
+            query.put("PriceLimit", request.priceLimit);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.publicApiServerEnabled)) {
             query.put("PublicApiServerEnabled", request.publicApiServerEnabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scheduleMode)) {
+            query.put("ScheduleMode", request.scheduleMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serverEnabled)) {
+            query.put("ServerEnabled", request.serverEnabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.unitsShrink)) {
+            query.put("Units", request.unitsShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

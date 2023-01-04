@@ -4,6 +4,12 @@ package com.aliyun.adcp20220101.models;
 import com.aliyun.tea.*;
 
 public class DescribeHubClustersRequest extends TeaModel {
+    // The scenario where master instances are used. Valid values:
+    // 
+    // *   `Default`: standard scenarios.
+    // *   `XFlow`: workflow scenarios.
+    // 
+    // Default value: `Default`.
     @NameInMap("Profile")
     public String profile;
 

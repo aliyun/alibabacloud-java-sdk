@@ -4,6 +4,7 @@ package com.aliyun.adcp20220101.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsRequest extends TeaModel {
+    // The language. Valid values: zh, en, and jp.
     @NameInMap("Language")
     public String language;
 
