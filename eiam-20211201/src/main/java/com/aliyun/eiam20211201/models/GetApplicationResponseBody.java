@@ -32,54 +32,71 @@ public class GetApplicationResponseBody extends TeaModel {
     }
 
     public static class GetApplicationResponseBodyApplication extends TeaModel {
+        // IDaaS EIAM 应用apiInvoke能力启用状态
         @NameInMap("ApiInvokeStatus")
         public String apiInvokeStatus;
 
+        // IDaaS EIAM 应用Id
         @NameInMap("ApplicationId")
         public String applicationId;
 
+        // IDaaS EIAM 应用名称
         @NameInMap("ApplicationName")
         public String applicationName;
 
+        // 创建应用的来源类型，标准协议 or 模板应用 or 自建应用
         @NameInMap("ApplicationSourceType")
         public String applicationSourceType;
 
+        // 创建来源应用模板id。当且仅当创建来源为应用模板时才返回。
         @NameInMap("ApplicationTemplateId")
         public String applicationTemplateId;
 
+        // IDaaS EIAM 应用授权类型，default or authorize_required
         @NameInMap("AuthorizationType")
         public String authorizationType;
 
+        // IDaaS EIAM 客户端ID
         @NameInMap("ClientId")
         public String clientId;
 
+        // IDaaS EIAM 应用创建时间
         @NameInMap("CreateTime")
         public Long createTime;
 
+        // IDaaS EIAM 应用描述信息
         @NameInMap("Description")
         public String description;
 
+        // IDaaS EIAM 应用支持的特性，provisioning、permission_system、api_invoke等
         @NameInMap("Features")
         public String features;
 
+        // IDaaS EIAM 实例Id
         @NameInMap("InstanceId")
         public String instanceId;
 
+        // IDaaS EIAM 应用图标URL地址
         @NameInMap("LogoUrl")
         public String logoUrl;
 
+        // 托管应用模板的云产品ServiceCode。当且仅当ServiceManaged为true是返回。
         @NameInMap("ManagedServiceCode")
         public String managedServiceCode;
 
+        // 应用模板是否被云产品托管。
         @NameInMap("ServiceManaged")
         public Boolean serviceManaged;
 
+        // IDaaS EIAM 应用支持的sso协议类型，oidc、saml2
         @NameInMap("SsoType")
         public String ssoType;
 
+        // IDaaS EIAM 应用状态
         @NameInMap("Status")
         public String status;
 
+        // IDaaS EIAM 应用最近更新时间
         @NameInMap("UpdateTime")
         public Long updateTime;
 

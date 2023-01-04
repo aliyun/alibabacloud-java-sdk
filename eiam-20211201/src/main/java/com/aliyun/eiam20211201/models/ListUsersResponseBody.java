@@ -43,63 +43,83 @@ public class ListUsersResponseBody extends TeaModel {
     }
 
     public static class ListUsersResponseBodyUsers extends TeaModel {
+        // 账户过期时间
         @NameInMap("AccountExpireTime")
         public Long accountExpireTime;
 
+        // 创建时间
         @NameInMap("CreateTime")
         public Long createTime;
 
+        // 账号描述
         @NameInMap("Description")
         public String description;
 
+        // 账户显示名
         @NameInMap("DisplayName")
         public String displayName;
 
+        // 邮箱
         @NameInMap("Email")
         public String email;
 
+        // 邮箱是否已验证
         @NameInMap("EmailVerified")
         public Boolean emailVerified;
 
+        // 实例Id
         @NameInMap("InstanceId")
         public String instanceId;
 
+        // 锁定过期时间
         @NameInMap("LockExpireTime")
         public Long lockExpireTime;
 
+        // 密码是否已设置
         @NameInMap("PasswordSet")
         public Boolean passwordSet;
 
+        // 手机号码
         @NameInMap("PhoneNumber")
         public String phoneNumber;
 
+        // 手机号是否已验证
         @NameInMap("PhoneNumberVerified")
         public Boolean phoneNumberVerified;
 
+        // 手机地区编号,示例：中国大陆手区号为86，不带 00 或 +
         @NameInMap("PhoneRegion")
         public String phoneRegion;
 
+        // 账户注册时间
         @NameInMap("RegisterTime")
         public Long registerTime;
 
+        // 账户状态, enabled:启用,disabled:禁用
         @NameInMap("Status")
         public String status;
 
+        // 最近一次更新时间
         @NameInMap("UpdateTime")
         public Long updateTime;
 
+        // 外部ID
         @NameInMap("UserExternalId")
         public String userExternalId;
 
+        // 账户ID
         @NameInMap("UserId")
         public String userId;
 
+        // 来源ID
         @NameInMap("UserSourceId")
         public String userSourceId;
 
+        // 来源类型，build_in[自建],ding_talk[钉钉导入],ad[AD导入],ldap[LDAP导入]
         @NameInMap("UserSourceType")
         public String userSourceType;
 
+        // 账户名
         @NameInMap("Username")
         public String username;
 

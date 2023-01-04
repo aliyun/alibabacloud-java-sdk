@@ -4,9 +4,11 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class UpdateInstanceDescriptionRequest extends TeaModel {
+    // 实例的描述信息
     @NameInMap("Description")
     public String description;
 
+    // IDaaS EIAM的实例id
     @NameInMap("InstanceId")
     public String instanceId;
 

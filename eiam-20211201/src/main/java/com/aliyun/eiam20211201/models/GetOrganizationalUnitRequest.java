@@ -4,9 +4,11 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class GetOrganizationalUnitRequest extends TeaModel {
+    // IDaaS EIAM实例的ID。
     @NameInMap("InstanceId")
     public String instanceId;
 
+    // 机构Id
     @NameInMap("OrganizationalUnitId")
     public String organizationalUnitId;
 

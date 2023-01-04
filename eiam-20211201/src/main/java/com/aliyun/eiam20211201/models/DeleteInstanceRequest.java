@@ -4,6 +4,7 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class DeleteInstanceRequest extends TeaModel {
+    // IDaaS EIAM的实例id
     @NameInMap("InstanceId")
     public String instanceId;
 

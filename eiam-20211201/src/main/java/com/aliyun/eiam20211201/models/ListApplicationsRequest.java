@@ -4,24 +4,31 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class ListApplicationsRequest extends TeaModel {
+    // 应用Id列表
     @NameInMap("ApplicationIds")
     public java.util.List<String> applicationIds;
 
+    // 应用的表示名称
     @NameInMap("ApplicationName")
     public String applicationName;
 
+    // 应用的授权类型。
     @NameInMap("AuthorizationType")
     public String authorizationType;
 
+    // IDaaS EIAM的实例id
     @NameInMap("InstanceId")
     public String instanceId;
 
+    // 当前查询的列表页码，默认为1
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    // 当前查询的列表页码，默认为20
     @NameInMap("PageSize")
     public Long pageSize;
 
+    // 应用状态检索条件
     @NameInMap("Status")
     public String status;
 

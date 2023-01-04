@@ -32,21 +32,27 @@ public class GetRootOrganizationalUnitResponseBody extends TeaModel {
     }
 
     public static class GetRootOrganizationalUnitResponseBodyOrganizationalUnit extends TeaModel {
+        // 创建时间
         @NameInMap("CreateTime")
         public Long createTime;
 
+        // 描述
         @NameInMap("Description")
         public String description;
 
+        // 实例Id
         @NameInMap("InstanceId")
         public String instanceId;
 
+        // 机构ID
         @NameInMap("OrganizationalUnitId")
         public String organizationalUnitId;
 
+        // 机构名称
         @NameInMap("OrganizationalUnitName")
         public String organizationalUnitName;
 
+        // 最近一次更新时间
         @NameInMap("UpdateTime")
         public Long updateTime;
 

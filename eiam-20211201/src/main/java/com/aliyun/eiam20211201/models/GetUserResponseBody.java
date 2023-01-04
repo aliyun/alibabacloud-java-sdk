@@ -31,67 +31,175 @@ public class GetUserResponseBody extends TeaModel {
         return this.user;
     }
 
+    public static class GetUserResponseBodyUserCustomFields extends TeaModel {
+        // 字段标识
+        @NameInMap("FieldName")
+        public String fieldName;
+
+        // 字段数据值
+        @NameInMap("FieldValue")
+        public String fieldValue;
+
+        public static GetUserResponseBodyUserCustomFields build(java.util.Map<String, ?> map) throws Exception {
+            GetUserResponseBodyUserCustomFields self = new GetUserResponseBodyUserCustomFields();
+            return TeaModel.build(map, self);
+        }
+
+        public GetUserResponseBodyUserCustomFields setFieldName(String fieldName) {
+            this.fieldName = fieldName;
+            return this;
+        }
+        public String getFieldName() {
+            return this.fieldName;
+        }
+
+        public GetUserResponseBodyUserCustomFields setFieldValue(String fieldValue) {
+            this.fieldValue = fieldValue;
+            return this;
+        }
+        public String getFieldValue() {
+            return this.fieldValue;
+        }
+
+    }
+
+    public static class GetUserResponseBodyUserOrganizationalUnits extends TeaModel {
+        // 机构ID
+        @NameInMap("OrganizationalUnitId")
+        public String organizationalUnitId;
+
+        // 机构名称
+        @NameInMap("OrganizationalUnitName")
+        public String organizationalUnitName;
+
+        // 是否主机构
+        @NameInMap("Primary")
+        public Boolean primary;
+
+        public static GetUserResponseBodyUserOrganizationalUnits build(java.util.Map<String, ?> map) throws Exception {
+            GetUserResponseBodyUserOrganizationalUnits self = new GetUserResponseBodyUserOrganizationalUnits();
+            return TeaModel.build(map, self);
+        }
+
+        public GetUserResponseBodyUserOrganizationalUnits setOrganizationalUnitId(String organizationalUnitId) {
+            this.organizationalUnitId = organizationalUnitId;
+            return this;
+        }
+        public String getOrganizationalUnitId() {
+            return this.organizationalUnitId;
+        }
+
+        public GetUserResponseBodyUserOrganizationalUnits setOrganizationalUnitName(String organizationalUnitName) {
+            this.organizationalUnitName = organizationalUnitName;
+            return this;
+        }
+        public String getOrganizationalUnitName() {
+            return this.organizationalUnitName;
+        }
+
+        public GetUserResponseBodyUserOrganizationalUnits setPrimary(Boolean primary) {
+            this.primary = primary;
+            return this;
+        }
+        public Boolean getPrimary() {
+            return this.primary;
+        }
+
+    }
+
     public static class GetUserResponseBodyUser extends TeaModel {
+        // 账户过期时间
         @NameInMap("AccountExpireTime")
         public Long accountExpireTime;
 
+        // 创建时间
         @NameInMap("CreateTime")
         public Long createTime;
 
+        // 账户扩展字段列表
+        @NameInMap("CustomFields")
+        public java.util.List<GetUserResponseBodyUserCustomFields> customFields;
+
+        // 账号描述
         @NameInMap("Description")
         public String description;
 
+        // 账户显示名
         @NameInMap("DisplayName")
         public String displayName;
 
+        // 邮箱
         @NameInMap("Email")
         public String email;
 
+        // 邮箱是否已验证
         @NameInMap("EmailVerified")
         public Boolean emailVerified;
 
+        // 实例Id
         @NameInMap("InstanceId")
         public String instanceId;
 
+        // 锁定过期时间
         @NameInMap("LockExpireTime")
         public Long lockExpireTime;
+
+        // 账户所属组织列表
+        @NameInMap("OrganizationalUnits")
+        public java.util.List<GetUserResponseBodyUserOrganizationalUnits> organizationalUnits;
 
         @NameInMap("PasswordExpireTime")
         public Long passwordExpireTime;
 
+        // 密码是否已设置
+        @NameInMap("PasswordSet")
+        public Boolean passwordSet;
+
+        // 手机号码
         @NameInMap("PhoneNumber")
         public String phoneNumber;
 
+        // 手机号是否已验证
         @NameInMap("PhoneNumberVerified")
         public Boolean phoneNumberVerified;
 
+        // 手机地区编号,示例：中国大陆手区号为86，不带 00 或 +
         @NameInMap("PhoneRegion")
         public String phoneRegion;
 
+        // 账户主机构ID
         @NameInMap("PrimaryOrganizationalUnitId")
         public String primaryOrganizationalUnitId;
 
+        // 账户注册时间
         @NameInMap("RegisterTime")
         public Long registerTime;
 
+        // 账户状态, enabled:启用,disabled:禁用
         @NameInMap("Status")
         public String status;
 
+        // 最近一次更新时间
         @NameInMap("UpdateTime")
         public Long updateTime;
 
+        // 外部ID
         @NameInMap("UserExternalId")
         public String userExternalId;
 
+        // 账户ID
         @NameInMap("UserId")
         public String userId;
 
+        // 来源ID
         @NameInMap("UserSourceId")
         public String userSourceId;
 
+        // 来源类型，build_in[自建],ding_talk[钉钉导入],ad[AD导入],ldap[LDAP导入]
         @NameInMap("UserSourceType")
         public String userSourceType;
 
+        // 账户名
         @NameInMap("Username")
         public String username;
 
@@ -114,6 +222,14 @@ public class GetUserResponseBody extends TeaModel {
         }
         public Long getCreateTime() {
             return this.createTime;
+        }
+
+        public GetUserResponseBodyUser setCustomFields(java.util.List<GetUserResponseBodyUserCustomFields> customFields) {
+            this.customFields = customFields;
+            return this;
+        }
+        public java.util.List<GetUserResponseBodyUserCustomFields> getCustomFields() {
+            return this.customFields;
         }
 
         public GetUserResponseBodyUser setDescription(String description) {
@@ -164,12 +280,28 @@ public class GetUserResponseBody extends TeaModel {
             return this.lockExpireTime;
         }
 
+        public GetUserResponseBodyUser setOrganizationalUnits(java.util.List<GetUserResponseBodyUserOrganizationalUnits> organizationalUnits) {
+            this.organizationalUnits = organizationalUnits;
+            return this;
+        }
+        public java.util.List<GetUserResponseBodyUserOrganizationalUnits> getOrganizationalUnits() {
+            return this.organizationalUnits;
+        }
+
         public GetUserResponseBodyUser setPasswordExpireTime(Long passwordExpireTime) {
             this.passwordExpireTime = passwordExpireTime;
             return this;
         }
         public Long getPasswordExpireTime() {
             return this.passwordExpireTime;
+        }
+
+        public GetUserResponseBodyUser setPasswordSet(Boolean passwordSet) {
+            this.passwordSet = passwordSet;
+            return this;
+        }
+        public Boolean getPasswordSet() {
+            return this.passwordSet;
         }
 
         public GetUserResponseBodyUser setPhoneNumber(String phoneNumber) {

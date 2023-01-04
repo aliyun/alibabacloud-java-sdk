@@ -32,12 +32,15 @@ public class ListRegionsResponseBody extends TeaModel {
     }
 
     public static class ListRegionsResponseBodyRegions extends TeaModel {
+        // 地域名称
         @NameInMap("LocalName")
         public String localName;
 
+        // 地域对应的接入地址
         @NameInMap("RegionEndpoint")
         public String regionEndpoint;
 
+        // 地域ID
         @NameInMap("RegionId")
         public String regionId;
 

@@ -43,6 +43,7 @@ public class ListUsersForApplicationResponseBody extends TeaModel {
     }
 
     public static class ListUsersForApplicationResponseBodyUsers extends TeaModel {
+        // 账户的唯一标识。
         @NameInMap("UserId")
         public String userId;
 

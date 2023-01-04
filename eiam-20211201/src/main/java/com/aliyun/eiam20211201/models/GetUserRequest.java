@@ -4,9 +4,11 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class GetUserRequest extends TeaModel {
+    // IDaaS EIAM实例的ID。
     @NameInMap("InstanceId")
     public String instanceId;
 
+    // 账号ID
     @NameInMap("UserId")
     public String userId;
 
