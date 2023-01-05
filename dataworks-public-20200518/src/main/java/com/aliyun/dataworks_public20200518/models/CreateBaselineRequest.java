@@ -13,6 +13,9 @@ public class CreateBaselineRequest extends TeaModel {
     @NameInMap("BaselineType")
     public String baselineType;
 
+    @NameInMap("NodeIds")
+    public String nodeIds;
+
     @NameInMap("OvertimeSettings")
     public java.util.List<CreateBaselineRequestOvertimeSettings> overtimeSettings;
 
@@ -24,9 +27,6 @@ public class CreateBaselineRequest extends TeaModel {
 
     @NameInMap("ProjectId")
     public Long projectId;
-
-    @NameInMap("TaskIds")
-    public String taskIds;
 
     public static CreateBaselineRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateBaselineRequest self = new CreateBaselineRequest();
@@ -55,6 +55,14 @@ public class CreateBaselineRequest extends TeaModel {
     }
     public String getBaselineType() {
         return this.baselineType;
+    }
+
+    public CreateBaselineRequest setNodeIds(String nodeIds) {
+        this.nodeIds = nodeIds;
+        return this;
+    }
+    public String getNodeIds() {
+        return this.nodeIds;
     }
 
     public CreateBaselineRequest setOvertimeSettings(java.util.List<CreateBaselineRequestOvertimeSettings> overtimeSettings) {
@@ -87,14 +95,6 @@ public class CreateBaselineRequest extends TeaModel {
     }
     public Long getProjectId() {
         return this.projectId;
-    }
-
-    public CreateBaselineRequest setTaskIds(String taskIds) {
-        this.taskIds = taskIds;
-        return this;
-    }
-    public String getTaskIds() {
-        return this.taskIds;
     }
 
     public static class CreateBaselineRequestOvertimeSettings extends TeaModel {

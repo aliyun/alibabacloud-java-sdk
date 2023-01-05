@@ -25,6 +25,9 @@ public class UpdateBaselineShrinkRequest extends TeaModel {
     @NameInMap("Enabled")
     public Boolean enabled;
 
+    @NameInMap("NodeIds")
+    public String nodeIds;
+
     @NameInMap("OvertimeSettings")
     public String overtimeSettingsShrink;
 
@@ -37,11 +40,8 @@ public class UpdateBaselineShrinkRequest extends TeaModel {
     @NameInMap("ProjectId")
     public Long projectId;
 
-    @NameInMap("RemoveTaskIds")
-    public String removeTaskIds;
-
-    @NameInMap("TaskIds")
-    public String taskIds;
+    @NameInMap("RemoveNodeIds")
+    public String removeNodeIds;
 
     public static UpdateBaselineShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateBaselineShrinkRequest self = new UpdateBaselineShrinkRequest();
@@ -104,6 +104,14 @@ public class UpdateBaselineShrinkRequest extends TeaModel {
         return this.enabled;
     }
 
+    public UpdateBaselineShrinkRequest setNodeIds(String nodeIds) {
+        this.nodeIds = nodeIds;
+        return this;
+    }
+    public String getNodeIds() {
+        return this.nodeIds;
+    }
+
     public UpdateBaselineShrinkRequest setOvertimeSettingsShrink(String overtimeSettingsShrink) {
         this.overtimeSettingsShrink = overtimeSettingsShrink;
         return this;
@@ -136,20 +144,12 @@ public class UpdateBaselineShrinkRequest extends TeaModel {
         return this.projectId;
     }
 
-    public UpdateBaselineShrinkRequest setRemoveTaskIds(String removeTaskIds) {
-        this.removeTaskIds = removeTaskIds;
+    public UpdateBaselineShrinkRequest setRemoveNodeIds(String removeNodeIds) {
+        this.removeNodeIds = removeNodeIds;
         return this;
     }
-    public String getRemoveTaskIds() {
-        return this.removeTaskIds;
-    }
-
-    public UpdateBaselineShrinkRequest setTaskIds(String taskIds) {
-        this.taskIds = taskIds;
-        return this;
-    }
-    public String getTaskIds() {
-        return this.taskIds;
+    public String getRemoveNodeIds() {
+        return this.removeNodeIds;
     }
 
 }
