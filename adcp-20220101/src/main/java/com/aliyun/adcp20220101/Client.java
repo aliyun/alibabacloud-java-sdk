@@ -148,8 +148,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createHubClusterWithOptions(request, runtime);
     }
 
-    public DeleteHubClusterResponse deleteHubClusterWithOptions(DeleteHubClusterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public DeleteHubClusterResponse deleteHubClusterWithOptions(DeleteHubClusterRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DeleteHubClusterShrinkRequest request = new DeleteHubClusterShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.retainResources)) {
+            request.retainResourcesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.retainResources, "RetainResources", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
             query.put("ClusterId", request.clusterId);
@@ -157,6 +163,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.force)) {
             query.put("Force", request.force);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.retainResourcesShrink)) {
+            query.put("RetainResources", request.retainResourcesShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
