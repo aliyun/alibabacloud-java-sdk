@@ -102,6 +102,9 @@ public class ModifySecurityGroupRuleRequest extends TeaModel {
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
+    @NameInMap("SecurityGroupRuleId")
+    public String securityGroupRuleId;
+
     // The source IPv4 CIDR block to which you want to control access. CIDR blocks and IPv4 addresses are supported.
     // 
     // This parameter is empty by default.
@@ -275,6 +278,14 @@ public class ModifySecurityGroupRuleRequest extends TeaModel {
     }
     public String getSecurityGroupId() {
         return this.securityGroupId;
+    }
+
+    public ModifySecurityGroupRuleRequest setSecurityGroupRuleId(String securityGroupRuleId) {
+        this.securityGroupRuleId = securityGroupRuleId;
+        return this;
+    }
+    public String getSecurityGroupRuleId() {
+        return this.securityGroupRuleId;
     }
 
     public ModifySecurityGroupRuleRequest setSourceCidrIp(String sourceCidrIp) {

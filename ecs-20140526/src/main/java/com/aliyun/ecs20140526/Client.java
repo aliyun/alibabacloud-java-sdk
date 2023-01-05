@@ -24519,6 +24519,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SecurityGroupId", request.securityGroupId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.securityGroupRuleId)) {
+            query.put("SecurityGroupRuleId", request.securityGroupRuleId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.sourceCidrIp)) {
             query.put("SourceCidrIp", request.sourceCidrIp);
         }
@@ -24784,6 +24788,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.securityGroupId)) {
             query.put("SecurityGroupId", request.securityGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityGroupRuleId)) {
+            query.put("SecurityGroupRuleId", request.securityGroupRuleId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sourceCidrIp)) {
@@ -27444,6 +27452,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SecurityGroupId", request.securityGroupId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.securityGroupRuleId)) {
+            query.put("SecurityGroupRuleId", request.securityGroupRuleId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.sourceCidrIp)) {
             query.put("SourceCidrIp", request.sourceCidrIp);
         }
@@ -27686,6 +27698,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.securityGroupId)) {
             query.put("SecurityGroupId", request.securityGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityGroupRuleId)) {
+            query.put("SecurityGroupRuleId", request.securityGroupRuleId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sourceCidrIp)) {

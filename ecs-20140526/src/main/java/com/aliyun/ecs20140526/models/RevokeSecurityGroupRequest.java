@@ -67,6 +67,9 @@ public class RevokeSecurityGroupRequest extends TeaModel {
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
+    @NameInMap("SecurityGroupRuleId")
+    public java.util.List<String> securityGroupRuleId;
+
     // This parameter is discontinued. Use `Permissions.N.SourceCidrIp` to specify the source IPv4 CIDR block.
     @NameInMap("SourceCidrIp")
     public String sourceCidrIp;
@@ -230,6 +233,14 @@ public class RevokeSecurityGroupRequest extends TeaModel {
     }
     public String getSecurityGroupId() {
         return this.securityGroupId;
+    }
+
+    public RevokeSecurityGroupRequest setSecurityGroupRuleId(java.util.List<String> securityGroupRuleId) {
+        this.securityGroupRuleId = securityGroupRuleId;
+        return this;
+    }
+    public java.util.List<String> getSecurityGroupRuleId() {
+        return this.securityGroupRuleId;
     }
 
     public RevokeSecurityGroupRequest setSourceCidrIp(String sourceCidrIp) {
