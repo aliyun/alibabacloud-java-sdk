@@ -95,8 +95,11 @@ public class GetStyleTopResponseBody extends TeaModel {
         @NameInMap("ProductLink")
         public String productLink;
 
+        @NameInMap("Sales")
+        public Double sales;
+
         @NameInMap("SalesVolume")
-        public Double salesVolume;
+        public Long salesVolume;
 
         @NameInMap("SearchVolume")
         public Double searchVolume;
@@ -198,11 +201,19 @@ public class GetStyleTopResponseBody extends TeaModel {
             return this.productLink;
         }
 
-        public GetStyleTopResponseBodyData setSalesVolume(Double salesVolume) {
+        public GetStyleTopResponseBodyData setSales(Double sales) {
+            this.sales = sales;
+            return this;
+        }
+        public Double getSales() {
+            return this.sales;
+        }
+
+        public GetStyleTopResponseBodyData setSalesVolume(Long salesVolume) {
             this.salesVolume = salesVolume;
             return this;
         }
-        public Double getSalesVolume() {
+        public Long getSalesVolume() {
             return this.salesVolume;
         }
 
