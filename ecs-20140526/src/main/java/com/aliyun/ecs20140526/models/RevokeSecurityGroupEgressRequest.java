@@ -84,6 +84,12 @@ public class RevokeSecurityGroupEgressRequest extends TeaModel {
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
+    // The IDs of security group rules. You can specify up to 100 rule IDs.
+    // 
+    // When you revoke security group egress by security group rule ID, the parameter is required.
+    @NameInMap("SecurityGroupRuleId")
+    public java.util.List<String> securityGroupRuleId;
+
     // This parameter is discontinued. Use `Permissions.N.SourceCidrIp` to specify the source IPv4 CIDR block.
     @NameInMap("SourceCidrIp")
     public String sourceCidrIp;
@@ -263,6 +269,14 @@ public class RevokeSecurityGroupEgressRequest extends TeaModel {
     }
     public String getSecurityGroupId() {
         return this.securityGroupId;
+    }
+
+    public RevokeSecurityGroupEgressRequest setSecurityGroupRuleId(java.util.List<String> securityGroupRuleId) {
+        this.securityGroupRuleId = securityGroupRuleId;
+        return this;
+    }
+    public java.util.List<String> getSecurityGroupRuleId() {
+        return this.securityGroupRuleId;
     }
 
     public RevokeSecurityGroupEgressRequest setSourceCidrIp(String sourceCidrIp) {

@@ -173,6 +173,9 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
         @NameInMap("Priority")
         public String priority;
 
+        @NameInMap("SecurityGroupRuleId")
+        public String securityGroupRuleId;
+
         // The source CIDR block for inbound access control.
         @NameInMap("SourceCidrIp")
         public String sourceCidrIp;
@@ -332,6 +335,14 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
         }
         public String getPriority() {
             return this.priority;
+        }
+
+        public DescribeSecurityGroupAttributeResponseBodyPermissionsPermission setSecurityGroupRuleId(String securityGroupRuleId) {
+            this.securityGroupRuleId = securityGroupRuleId;
+            return this;
+        }
+        public String getSecurityGroupRuleId() {
+            return this.securityGroupRuleId;
         }
 
         public DescribeSecurityGroupAttributeResponseBodyPermissionsPermission setSourceCidrIp(String sourceCidrIp) {
