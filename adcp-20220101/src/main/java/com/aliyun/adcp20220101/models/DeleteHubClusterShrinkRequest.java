@@ -3,7 +3,7 @@ package com.aliyun.adcp20220101.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteHubClusterRequest extends TeaModel {
+public class DeleteHubClusterShrinkRequest extends TeaModel {
     // The ID of the master instance.
     @NameInMap("ClusterId")
     public String clusterId;
@@ -13,14 +13,14 @@ public class DeleteHubClusterRequest extends TeaModel {
     public Boolean force;
 
     @NameInMap("RetainResources")
-    public java.util.List<String> retainResources;
+    public String retainResourcesShrink;
 
-    public static DeleteHubClusterRequest build(java.util.Map<String, ?> map) throws Exception {
-        DeleteHubClusterRequest self = new DeleteHubClusterRequest();
+    public static DeleteHubClusterShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        DeleteHubClusterShrinkRequest self = new DeleteHubClusterShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public DeleteHubClusterRequest setClusterId(String clusterId) {
+    public DeleteHubClusterShrinkRequest setClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
     }
@@ -28,7 +28,7 @@ public class DeleteHubClusterRequest extends TeaModel {
         return this.clusterId;
     }
 
-    public DeleteHubClusterRequest setForce(Boolean force) {
+    public DeleteHubClusterShrinkRequest setForce(Boolean force) {
         this.force = force;
         return this;
     }
@@ -36,12 +36,12 @@ public class DeleteHubClusterRequest extends TeaModel {
         return this.force;
     }
 
-    public DeleteHubClusterRequest setRetainResources(java.util.List<String> retainResources) {
-        this.retainResources = retainResources;
+    public DeleteHubClusterShrinkRequest setRetainResourcesShrink(String retainResourcesShrink) {
+        this.retainResourcesShrink = retainResourcesShrink;
         return this;
     }
-    public java.util.List<String> getRetainResources() {
-        return this.retainResources;
+    public String getRetainResourcesShrink() {
+        return this.retainResourcesShrink;
     }
 
 }
