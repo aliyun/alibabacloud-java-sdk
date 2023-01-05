@@ -80,6 +80,9 @@ public class GetTrendStatisticResponseBody extends TeaModel {
         @NameInMap("Sales")
         public Double sales;
 
+        @NameInMap("SalesVolume")
+        public Long salesVolume;
+
         @NameInMap("ShopCount")
         public Long shopCount;
 
@@ -126,6 +129,14 @@ public class GetTrendStatisticResponseBody extends TeaModel {
         }
         public Double getSales() {
             return this.sales;
+        }
+
+        public GetTrendStatisticResponseBodyData setSalesVolume(Long salesVolume) {
+            this.salesVolume = salesVolume;
+            return this;
+        }
+        public Long getSalesVolume() {
+            return this.salesVolume;
         }
 
         public GetTrendStatisticResponseBodyData setShopCount(Long shopCount) {
