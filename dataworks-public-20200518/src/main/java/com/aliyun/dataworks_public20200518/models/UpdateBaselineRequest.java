@@ -25,6 +25,9 @@ public class UpdateBaselineRequest extends TeaModel {
     @NameInMap("Enabled")
     public Boolean enabled;
 
+    @NameInMap("NodeIds")
+    public String nodeIds;
+
     @NameInMap("OvertimeSettings")
     public java.util.List<UpdateBaselineRequestOvertimeSettings> overtimeSettings;
 
@@ -37,11 +40,8 @@ public class UpdateBaselineRequest extends TeaModel {
     @NameInMap("ProjectId")
     public Long projectId;
 
-    @NameInMap("RemoveTaskIds")
-    public String removeTaskIds;
-
-    @NameInMap("TaskIds")
-    public String taskIds;
+    @NameInMap("RemoveNodeIds")
+    public String removeNodeIds;
 
     public static UpdateBaselineRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateBaselineRequest self = new UpdateBaselineRequest();
@@ -104,6 +104,14 @@ public class UpdateBaselineRequest extends TeaModel {
         return this.enabled;
     }
 
+    public UpdateBaselineRequest setNodeIds(String nodeIds) {
+        this.nodeIds = nodeIds;
+        return this;
+    }
+    public String getNodeIds() {
+        return this.nodeIds;
+    }
+
     public UpdateBaselineRequest setOvertimeSettings(java.util.List<UpdateBaselineRequestOvertimeSettings> overtimeSettings) {
         this.overtimeSettings = overtimeSettings;
         return this;
@@ -136,20 +144,12 @@ public class UpdateBaselineRequest extends TeaModel {
         return this.projectId;
     }
 
-    public UpdateBaselineRequest setRemoveTaskIds(String removeTaskIds) {
-        this.removeTaskIds = removeTaskIds;
+    public UpdateBaselineRequest setRemoveNodeIds(String removeNodeIds) {
+        this.removeNodeIds = removeNodeIds;
         return this;
     }
-    public String getRemoveTaskIds() {
-        return this.removeTaskIds;
-    }
-
-    public UpdateBaselineRequest setTaskIds(String taskIds) {
-        this.taskIds = taskIds;
-        return this;
-    }
-    public String getTaskIds() {
-        return this.taskIds;
+    public String getRemoveNodeIds() {
+        return this.removeNodeIds;
     }
 
     public static class UpdateBaselineRequestAlertSettingsDingRobots extends TeaModel {
