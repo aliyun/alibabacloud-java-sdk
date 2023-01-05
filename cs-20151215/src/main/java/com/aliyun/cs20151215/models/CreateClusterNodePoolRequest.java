@@ -497,6 +497,36 @@ public class CreateClusterNodePoolRequest extends TeaModel {
 
     }
 
+    public static class CreateClusterNodePoolRequestScalingGroupPrivatePoolOptions extends TeaModel {
+        @NameInMap("id")
+        public String id;
+
+        @NameInMap("match_criteria")
+        public String matchCriteria;
+
+        public static CreateClusterNodePoolRequestScalingGroupPrivatePoolOptions build(java.util.Map<String, ?> map) throws Exception {
+            CreateClusterNodePoolRequestScalingGroupPrivatePoolOptions self = new CreateClusterNodePoolRequestScalingGroupPrivatePoolOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateClusterNodePoolRequestScalingGroupPrivatePoolOptions setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
+        public CreateClusterNodePoolRequestScalingGroupPrivatePoolOptions setMatchCriteria(String matchCriteria) {
+            this.matchCriteria = matchCriteria;
+            return this;
+        }
+        public String getMatchCriteria() {
+            return this.matchCriteria;
+        }
+
+    }
+
     public static class CreateClusterNodePoolRequestScalingGroupSpotPriceLimit extends TeaModel {
         @NameInMap("instance_type")
         public String instanceType;
@@ -617,6 +647,9 @@ public class CreateClusterNodePoolRequest extends TeaModel {
 
         @NameInMap("platform")
         public String platform;
+
+        @NameInMap("private_pool_options")
+        public CreateClusterNodePoolRequestScalingGroupPrivatePoolOptions privatePoolOptions;
 
         @NameInMap("rds_instances")
         public java.util.List<String> rdsInstances;
@@ -820,6 +853,14 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         }
         public String getPlatform() {
             return this.platform;
+        }
+
+        public CreateClusterNodePoolRequestScalingGroup setPrivatePoolOptions(CreateClusterNodePoolRequestScalingGroupPrivatePoolOptions privatePoolOptions) {
+            this.privatePoolOptions = privatePoolOptions;
+            return this;
+        }
+        public CreateClusterNodePoolRequestScalingGroupPrivatePoolOptions getPrivatePoolOptions() {
+            return this.privatePoolOptions;
         }
 
         public CreateClusterNodePoolRequestScalingGroup setRdsInstances(java.util.List<String> rdsInstances) {

@@ -7,6 +7,9 @@ public class UpgradeClusterRequest extends TeaModel {
     @NameInMap("component_name")
     public String componentName;
 
+    @NameInMap("master_only")
+    public Boolean masterOnly;
+
     @NameInMap("next_version")
     public String nextVersion;
 
@@ -24,6 +27,14 @@ public class UpgradeClusterRequest extends TeaModel {
     }
     public String getComponentName() {
         return this.componentName;
+    }
+
+    public UpgradeClusterRequest setMasterOnly(Boolean masterOnly) {
+        this.masterOnly = masterOnly;
+        return this;
+    }
+    public Boolean getMasterOnly() {
+        return this.masterOnly;
     }
 
     public UpgradeClusterRequest setNextVersion(String nextVersion) {
