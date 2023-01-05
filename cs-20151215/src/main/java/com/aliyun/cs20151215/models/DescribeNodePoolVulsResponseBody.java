@@ -87,6 +87,9 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
         @NameInMap("instance_id")
         public String instanceId;
 
+        @NameInMap("node_name")
+        public String nodeName;
+
         @NameInMap("vul_list")
         public java.util.List<DescribeNodePoolVulsResponseBodyVulRecordsVulList> vulList;
 
@@ -101,6 +104,14 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public DescribeNodePoolVulsResponseBodyVulRecords setNodeName(String nodeName) {
+            this.nodeName = nodeName;
+            return this;
+        }
+        public String getNodeName() {
+            return this.nodeName;
         }
 
         public DescribeNodePoolVulsResponseBodyVulRecords setVulList(java.util.List<DescribeNodePoolVulsResponseBodyVulRecordsVulList> vulList) {

@@ -552,6 +552,36 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeClusterNodePoolDetailResponseBodyScalingGroupPrivatePoolOptions extends TeaModel {
+        @NameInMap("id")
+        public String id;
+
+        @NameInMap("match_criteria")
+        public String matchCriteria;
+
+        public static DescribeClusterNodePoolDetailResponseBodyScalingGroupPrivatePoolOptions build(java.util.Map<String, ?> map) throws Exception {
+            DescribeClusterNodePoolDetailResponseBodyScalingGroupPrivatePoolOptions self = new DescribeClusterNodePoolDetailResponseBodyScalingGroupPrivatePoolOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeClusterNodePoolDetailResponseBodyScalingGroupPrivatePoolOptions setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
+        public DescribeClusterNodePoolDetailResponseBodyScalingGroupPrivatePoolOptions setMatchCriteria(String matchCriteria) {
+            this.matchCriteria = matchCriteria;
+            return this;
+        }
+        public String getMatchCriteria() {
+            return this.matchCriteria;
+        }
+
+    }
+
     public static class DescribeClusterNodePoolDetailResponseBodyScalingGroupSpotPriceLimit extends TeaModel {
         @NameInMap("instance_type")
         public String instanceType;
@@ -639,6 +669,9 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
 
         @NameInMap("platform")
         public String platform;
+
+        @NameInMap("private_pool_options")
+        public DescribeClusterNodePoolDetailResponseBodyScalingGroupPrivatePoolOptions privatePoolOptions;
 
         @NameInMap("ram_policy")
         public String ramPolicy;
@@ -840,6 +873,14 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         }
         public String getPlatform() {
             return this.platform;
+        }
+
+        public DescribeClusterNodePoolDetailResponseBodyScalingGroup setPrivatePoolOptions(DescribeClusterNodePoolDetailResponseBodyScalingGroupPrivatePoolOptions privatePoolOptions) {
+            this.privatePoolOptions = privatePoolOptions;
+            return this;
+        }
+        public DescribeClusterNodePoolDetailResponseBodyScalingGroupPrivatePoolOptions getPrivatePoolOptions() {
+            return this.privatePoolOptions;
         }
 
         public DescribeClusterNodePoolDetailResponseBodyScalingGroup setRamPolicy(String ramPolicy) {
