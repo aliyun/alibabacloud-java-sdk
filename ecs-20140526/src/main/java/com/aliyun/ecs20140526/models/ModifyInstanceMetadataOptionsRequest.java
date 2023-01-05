@@ -34,6 +34,9 @@ public class ModifyInstanceMetadataOptionsRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("InstanceMetadataTags")
+    public String instanceMetadataTags;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -82,6 +85,14 @@ public class ModifyInstanceMetadataOptionsRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public ModifyInstanceMetadataOptionsRequest setInstanceMetadataTags(String instanceMetadataTags) {
+        this.instanceMetadataTags = instanceMetadataTags;
+        return this;
+    }
+    public String getInstanceMetadataTags() {
+        return this.instanceMetadataTags;
     }
 
     public ModifyInstanceMetadataOptionsRequest setOwnerId(Long ownerId) {

@@ -4,6 +4,7 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class AssignIpv6AddressesResponseBody extends TeaModel {
+    // The IPv6 address prefixes assigned to the ENI.
     @NameInMap("Ipv6PrefixSets")
     public AssignIpv6AddressesResponseBodyIpv6PrefixSets ipv6PrefixSets;
 

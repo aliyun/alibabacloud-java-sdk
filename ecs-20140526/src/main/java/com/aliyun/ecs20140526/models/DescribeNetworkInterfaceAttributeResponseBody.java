@@ -465,6 +465,9 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         @NameInMap("MemberNetworkInterfaceIds")
         public DescribeNetworkInterfaceAttributeResponseBodyAttachmentMemberNetworkInterfaceIds memberNetworkInterfaceIds;
 
+        @NameInMap("NetworkCardIndex")
+        public Integer networkCardIndex;
+
         // >  This parameter is in invitational preview and unavailable for general users.
         @NameInMap("TrunkNetworkInterfaceId")
         public String trunkNetworkInterfaceId;
@@ -496,6 +499,14 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         }
         public DescribeNetworkInterfaceAttributeResponseBodyAttachmentMemberNetworkInterfaceIds getMemberNetworkInterfaceIds() {
             return this.memberNetworkInterfaceIds;
+        }
+
+        public DescribeNetworkInterfaceAttributeResponseBodyAttachment setNetworkCardIndex(Integer networkCardIndex) {
+            this.networkCardIndex = networkCardIndex;
+            return this;
+        }
+        public Integer getNetworkCardIndex() {
+            return this.networkCardIndex;
         }
 
         public DescribeNetworkInterfaceAttributeResponseBodyAttachment setTrunkNetworkInterfaceId(String trunkNetworkInterfaceId) {

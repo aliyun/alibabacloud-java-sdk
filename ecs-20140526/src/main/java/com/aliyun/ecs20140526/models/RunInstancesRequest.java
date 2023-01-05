@@ -1782,6 +1782,9 @@ public class RunInstancesRequest extends TeaModel {
         @NameInMap("Ipv6AddressCount")
         public Long ipv6AddressCount;
 
+        @NameInMap("NetworkCardIndex")
+        public Integer networkCardIndex;
+
         // The name of ENI N.
         // 
         // Take note of the following items:
@@ -1902,6 +1905,14 @@ public class RunInstancesRequest extends TeaModel {
         }
         public Long getIpv6AddressCount() {
             return this.ipv6AddressCount;
+        }
+
+        public RunInstancesRequestNetworkInterface setNetworkCardIndex(Integer networkCardIndex) {
+            this.networkCardIndex = networkCardIndex;
+            return this;
+        }
+        public Integer getNetworkCardIndex() {
+            return this.networkCardIndex;
         }
 
         public RunInstancesRequestNetworkInterface setNetworkInterfaceName(String networkInterfaceName) {

@@ -4,18 +4,25 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class AssignIpv6AddressesRequest extends TeaModel {
+    // One or more IPv6 addresses to assign to the ENI. Valid values of N: 1 to 10.
+    // 
+    // Example: Ipv6Address.1=2001:db8:1234:1a00::\*\*\*\*
+    // 
+    // >  You must specify `Ipv6Addresses.N` or `Ipv6AddressCount` but cannot specify both.
     @NameInMap("Ipv6Address")
     public java.util.List<String> ipv6Address;
 
     // The number of IPv6 addresses to randomly generate for the ENI. Valid values: 1 to 10.
     // 
-    // >  You must specify `Ipv6Addresses.N` or `Ipv6AddressCount` but not both.
+    // >  You must specify `Ipv6Addresses.N` or `Ipv6AddressCount` but cannot specify both.
     @NameInMap("Ipv6AddressCount")
     public Integer ipv6AddressCount;
 
+    // One or more IPv6 address prefixes to assign to the ENI.
     @NameInMap("Ipv6Prefix")
     public java.util.List<String> ipv6Prefix;
 
+    // The number of IPv6 address prefixes.
     @NameInMap("Ipv6PrefixCount")
     public Integer ipv6PrefixCount;
 

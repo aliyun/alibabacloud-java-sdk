@@ -634,6 +634,9 @@ public class CreateLaunchTemplateRequest extends TeaModel {
         @NameInMap("DiskName")
         public String diskName;
 
+        @NameInMap("Encrypted")
+        public String encrypted;
+
         @NameInMap("Iops")
         public Integer iops;
 
@@ -708,6 +711,14 @@ public class CreateLaunchTemplateRequest extends TeaModel {
         }
         public String getDiskName() {
             return this.diskName;
+        }
+
+        public CreateLaunchTemplateRequestSystemDisk setEncrypted(String encrypted) {
+            this.encrypted = encrypted;
+            return this;
+        }
+        public String getEncrypted() {
+            return this.encrypted;
         }
 
         public CreateLaunchTemplateRequestSystemDisk setIops(Integer iops) {
