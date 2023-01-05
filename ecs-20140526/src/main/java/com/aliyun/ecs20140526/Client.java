@@ -694,13 +694,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * ## Description
-      * You can specify IPv6 addresses within the CIDR block of the vSwitch with which the ENI is associated, or specify the number of IPv6 addresses to automatically assign. Take note of the following items:
+      * You can specify IPv6 addresses within the CIDR block of the vSwitch with which the ENI is associated, or specify the number of IPv6 addresses to automatically generate for the ENI. When you call this operation, take note of the following items:
       * *   IPv6 must be enabled for the vSwitch with which the ENI is associated. For more information, see [Enable IPv6 for a vSwitch](~~98923~~).
-      * *   The ENI must be in the Available (Available) or Bound (InUse) state.
+      * *   The ENI must be in the Available (Available) or InUse (InUse) state.
       * *   The Elastic Compute Service (ECS) instance to which the primary ENI is bound must be in the Running (Running) or Stopped (Stopped) state.
       * *   The maximum number of IPv6 addresses that can be assigned to an ENI varies per instance type.
       *     *   If the ENI is in the Available (Available) state, it can be assigned a maximum of 10 IPv6 addresses.
-      *     *   If the ENI is already bound to an ECS instance, the maximum number of IPv6 addresses that can be assigned to the ENI is determined based on the instance type. For more information, see [Instance families](~~25378~~).
+      *     *   If the ENI is already bound to an ECS instance, the maximum number of IPv6 addresses that can be assigned to the ENI is determined based on the instance type. For more information, see [Overview of instance families](~~25378~~).
       * *   After the operation is called, you can obtain the IPv6 addresses assigned to the ENI from the response.
       *
       * @param request AssignIpv6AddressesRequest
@@ -773,13 +773,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * ## Description
-      * You can specify IPv6 addresses within the CIDR block of the vSwitch with which the ENI is associated, or specify the number of IPv6 addresses to automatically assign. Take note of the following items:
+      * You can specify IPv6 addresses within the CIDR block of the vSwitch with which the ENI is associated, or specify the number of IPv6 addresses to automatically generate for the ENI. When you call this operation, take note of the following items:
       * *   IPv6 must be enabled for the vSwitch with which the ENI is associated. For more information, see [Enable IPv6 for a vSwitch](~~98923~~).
-      * *   The ENI must be in the Available (Available) or Bound (InUse) state.
+      * *   The ENI must be in the Available (Available) or InUse (InUse) state.
       * *   The Elastic Compute Service (ECS) instance to which the primary ENI is bound must be in the Running (Running) or Stopped (Stopped) state.
       * *   The maximum number of IPv6 addresses that can be assigned to an ENI varies per instance type.
       *     *   If the ENI is in the Available (Available) state, it can be assigned a maximum of 10 IPv6 addresses.
-      *     *   If the ENI is already bound to an ECS instance, the maximum number of IPv6 addresses that can be assigned to the ENI is determined based on the instance type. For more information, see [Instance families](~~25378~~).
+      *     *   If the ENI is already bound to an ECS instance, the maximum number of IPv6 addresses that can be assigned to the ENI is determined based on the instance type. For more information, see [Overview of instance families](~~25378~~).
       * *   After the operation is called, you can obtain the IPv6 addresses assigned to the ENI from the response.
       *
       * @param request AssignIpv6AddressesRequest
@@ -1340,6 +1340,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.networkCardIndex)) {
+            query.put("NetworkCardIndex", request.networkCardIndex);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.networkInterfaceId)) {
@@ -3210,108 +3214,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateCommandResponse createCommand(CreateCommandRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createCommandWithOptions(request, runtime);
-    }
-
-    /**
-      * >  Dedicated Block Storage Cluster is available in the China (Heyuan), Indonesia (Jakarta), and China South 1 Finance regions.
-      * Dedicated block storage clusters are physically isolated from public block storage clusters. The owner of each dedicated block storage cluster has exclusive access to all resources in the cluster. For more information, see [Overview](~~208883~~).
-      * Disks created in a dedicated block storage cluster can be attached only to Elastic Compute Service (ECS) instances that reside in the same zone as the cluster. Before you create a dedicated block storage cluster, decide the regions and zones in which to deploy your cloud resources.
-      *
-      * @param request CreateDedicatedBlockStorageClusterRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CreateDedicatedBlockStorageClusterResponse
-     */
-    public CreateDedicatedBlockStorageClusterResponse createDedicatedBlockStorageClusterWithOptions(CreateDedicatedBlockStorageClusterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.capacity)) {
-            query.put("Capacity", request.capacity);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.category)) {
-            query.put("Category", request.category);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
-            query.put("ClientToken", request.clientToken);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.dedicatedBlockStorageClusterName)) {
-            query.put("DedicatedBlockStorageClusterName", request.dedicatedBlockStorageClusterName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
-            query.put("Description", request.description);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.fromApp)) {
-            query.put("FromApp", request.fromApp);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
-            query.put("OwnerAccount", request.ownerAccount);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
-            query.put("OwnerId", request.ownerId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.period)) {
-            query.put("Period", request.period);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.periodUnit)) {
-            query.put("PeriodUnit", request.periodUnit);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
-            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
-            query.put("ResourceOwnerId", request.resourceOwnerId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
-            query.put("Type", request.type);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.zoneId)) {
-            query.put("ZoneId", request.zoneId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "CreateDedicatedBlockStorageCluster"),
-            new TeaPair("version", "2014-05-26"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDedicatedBlockStorageClusterResponse());
-    }
-
-    /**
-      * >  Dedicated Block Storage Cluster is available in the China (Heyuan), Indonesia (Jakarta), and China South 1 Finance regions.
-      * Dedicated block storage clusters are physically isolated from public block storage clusters. The owner of each dedicated block storage cluster has exclusive access to all resources in the cluster. For more information, see [Overview](~~208883~~).
-      * Disks created in a dedicated block storage cluster can be attached only to Elastic Compute Service (ECS) instances that reside in the same zone as the cluster. Before you create a dedicated block storage cluster, decide the regions and zones in which to deploy your cloud resources.
-      *
-      * @param request CreateDedicatedBlockStorageClusterRequest
-      * @return CreateDedicatedBlockStorageClusterResponse
-     */
-    public CreateDedicatedBlockStorageClusterResponse createDedicatedBlockStorageCluster(CreateDedicatedBlockStorageClusterRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.createDedicatedBlockStorageClusterWithOptions(request, runtime);
     }
 
     public CreateDedicatedHostClusterResponse createDedicatedHostClusterWithOptions(CreateDedicatedHostClusterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -5498,7 +5400,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Description
       * *   An ENI enters the Available (Available) state after it is created.
       * *   An ENI can be bound only to a single instance of the Virtual Private Cloud (VPC) type within the same zone.
       * *   An ENI can be bound only to a single instance. Before you can bind an ENI to another instance, you must unbind the ENI from the current instance.
@@ -5647,7 +5548,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Description
       * *   An ENI enters the Available (Available) state after it is created.
       * *   An ENI can be bound only to a single instance of the Virtual Private Cloud (VPC) type within the same zone.
       * *   An ENI can be bound only to a single instance. Before you can bind an ENI to another instance, you must unbind the ENI from the current instance.
@@ -10490,94 +10390,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeCommandsResponse describeCommands(DescribeCommandsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeCommandsWithOptions(request, runtime);
-    }
-
-    /**
-      * ## Description
-      * >  Dedicated Block Storage Cluster is available in the China (Heyuan), Indonesia (Jakarta), and China South 1 Finance regions.
-      * *   You can specify multiple request parameters to be queried. Specified parameters have logical AND relations. Only the specified parameters are included in the filter conditions.
-      * *   We recommend that you use the NextToken and MaxResults parameters for a paged query. During a paged query, when you call the DescribeDedicatedBlockStorageClusters operation to retrieve the first page of results, set MaxResults to specify the maximum number of entries to return in the call. The return value of NextToken is a pagination token, which can be used in the next call to retrieve a new page of results. When you call the DescribeDedicatedBlockStorageClusters operation to retrieve a new page of results, set NextToken to the NextToken value returned in the previous call and set MaxResults to specify the maximum number of entries to return in this call.
-      *
-      * @param request DescribeDedicatedBlockStorageClustersRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DescribeDedicatedBlockStorageClustersResponse
-     */
-    public DescribeDedicatedBlockStorageClustersResponse describeDedicatedBlockStorageClustersWithOptions(DescribeDedicatedBlockStorageClustersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.category)) {
-            query.put("Category", request.category);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.dedicatedBlockStorageClusterId)) {
-            query.put("DedicatedBlockStorageClusterId", request.dedicatedBlockStorageClusterId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
-            query.put("MaxResults", request.maxResults);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
-            query.put("NextToken", request.nextToken);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
-            query.put("OwnerAccount", request.ownerAccount);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
-            query.put("OwnerId", request.ownerId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
-            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
-            query.put("ResourceOwnerId", request.resourceOwnerId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
-            query.put("Status", request.status);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.zoneId)) {
-            query.put("ZoneId", request.zoneId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DescribeDedicatedBlockStorageClusters"),
-            new TeaPair("version", "2014-05-26"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDedicatedBlockStorageClustersResponse());
-    }
-
-    /**
-      * ## Description
-      * >  Dedicated Block Storage Cluster is available in the China (Heyuan), Indonesia (Jakarta), and China South 1 Finance regions.
-      * *   You can specify multiple request parameters to be queried. Specified parameters have logical AND relations. Only the specified parameters are included in the filter conditions.
-      * *   We recommend that you use the NextToken and MaxResults parameters for a paged query. During a paged query, when you call the DescribeDedicatedBlockStorageClusters operation to retrieve the first page of results, set MaxResults to specify the maximum number of entries to return in the call. The return value of NextToken is a pagination token, which can be used in the next call to retrieve a new page of results. When you call the DescribeDedicatedBlockStorageClusters operation to retrieve a new page of results, set NextToken to the NextToken value returned in the previous call and set MaxResults to specify the maximum number of entries to return in this call.
-      *
-      * @param request DescribeDedicatedBlockStorageClustersRequest
-      * @return DescribeDedicatedBlockStorageClustersResponse
-     */
-    public DescribeDedicatedBlockStorageClustersResponse describeDedicatedBlockStorageClusters(DescribeDedicatedBlockStorageClustersRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeDedicatedBlockStorageClustersWithOptions(request, runtime);
     }
 
     public DescribeDedicatedHostAutoRenewResponse describeDedicatedHostAutoRenewWithOptions(DescribeDedicatedHostAutoRenewRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -23236,6 +23048,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceId", request.instanceId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceMetadataTags)) {
+            query.put("InstanceMetadataTags", request.instanceMetadataTags);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
             query.put("OwnerId", request.ownerId);
         }
@@ -26643,28 +26459,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ReleasePublicIpAddressResponse releasePublicIpAddressWithOptions(ReleasePublicIpAddressRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
-            query.put("OwnerAccount", request.ownerAccount);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
-            query.put("OwnerId", request.ownerId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.publicIpAddress)) {
             query.put("PublicIpAddress", request.publicIpAddress);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
-            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
-            query.put("ResourceOwnerId", request.resourceOwnerId);
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

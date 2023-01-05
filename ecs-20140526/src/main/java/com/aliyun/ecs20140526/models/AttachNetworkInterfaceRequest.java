@@ -8,6 +8,9 @@ public class AttachNetworkInterfaceRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("NetworkCardIndex")
+    public Integer networkCardIndex;
+
     // The ID of the ENI.
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;
@@ -49,6 +52,14 @@ public class AttachNetworkInterfaceRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public AttachNetworkInterfaceRequest setNetworkCardIndex(Integer networkCardIndex) {
+        this.networkCardIndex = networkCardIndex;
+        return this;
+    }
+    public Integer getNetworkCardIndex() {
+        return this.networkCardIndex;
     }
 
     public AttachNetworkInterfaceRequest setNetworkInterfaceId(String networkInterfaceId) {

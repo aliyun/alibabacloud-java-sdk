@@ -88,6 +88,9 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         @NameInMap("DiskName")
         public String diskName;
 
+        @NameInMap("Encrypted")
+        public String encrypted;
+
         @NameInMap("Iops")
         public Integer iops;
 
@@ -151,6 +154,14 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         }
         public String getDiskName() {
             return this.diskName;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataSystemDisk setEncrypted(String encrypted) {
+            this.encrypted = encrypted;
+            return this;
+        }
+        public String getEncrypted() {
+            return this.encrypted;
         }
 
         public DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataSystemDisk setIops(Integer iops) {

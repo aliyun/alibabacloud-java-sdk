@@ -1,3 +1,9 @@
+2023-01-05 Version: 3.1.4
+- Deprecate DescribeDedicatedBlockStorageClusters API.
+- Deprecate CreateDedicatedBlockStorageCluster API.
+- Add ErrorCode to ReplaceSystemDisk API.
+- Supported SystemDiskEncrypted for DescribeLaunchTemplateVersions CreateLaunchTemplateVersion and CreateLaunchTemplate.
+
 2022-12-27 Version: 3.1.3
 - CreateImage support system tag.
 - Fixed ModifyImageAttribute error code.
