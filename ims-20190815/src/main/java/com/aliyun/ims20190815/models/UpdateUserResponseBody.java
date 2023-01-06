@@ -50,6 +50,9 @@ public class UpdateUserResponseBody extends TeaModel {
         @NameInMap("MobilePhone")
         public String mobilePhone;
 
+        @NameInMap("ProvisionType")
+        public String provisionType;
+
         @NameInMap("UpdateDate")
         public String updateDate;
 
@@ -110,6 +113,14 @@ public class UpdateUserResponseBody extends TeaModel {
         }
         public String getMobilePhone() {
             return this.mobilePhone;
+        }
+
+        public UpdateUserResponseBodyUser setProvisionType(String provisionType) {
+            this.provisionType = provisionType;
+            return this;
+        }
+        public String getProvisionType() {
+            return this.provisionType;
         }
 
         public UpdateUserResponseBodyUser setUpdateDate(String updateDate) {

@@ -31,6 +31,55 @@ public class GetUserResponseBody extends TeaModel {
         return this.user;
     }
 
+    public static class GetUserResponseBodyUserTagsTag extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static GetUserResponseBodyUserTagsTag build(java.util.Map<String, ?> map) throws Exception {
+            GetUserResponseBodyUserTagsTag self = new GetUserResponseBodyUserTagsTag();
+            return TeaModel.build(map, self);
+        }
+
+        public GetUserResponseBodyUserTagsTag setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public GetUserResponseBodyUserTagsTag setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
+    public static class GetUserResponseBodyUserTags extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<GetUserResponseBodyUserTagsTag> tag;
+
+        public static GetUserResponseBodyUserTags build(java.util.Map<String, ?> map) throws Exception {
+            GetUserResponseBodyUserTags self = new GetUserResponseBodyUserTags();
+            return TeaModel.build(map, self);
+        }
+
+        public GetUserResponseBodyUserTags setTag(java.util.List<GetUserResponseBodyUserTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<GetUserResponseBodyUserTagsTag> getTag() {
+            return this.tag;
+        }
+
+    }
+
     public static class GetUserResponseBodyUser extends TeaModel {
         @NameInMap("Comments")
         public String comments;
@@ -49,6 +98,12 @@ public class GetUserResponseBody extends TeaModel {
 
         @NameInMap("MobilePhone")
         public String mobilePhone;
+
+        @NameInMap("ProvisionType")
+        public String provisionType;
+
+        @NameInMap("Tags")
+        public GetUserResponseBodyUserTags tags;
 
         @NameInMap("UpdateDate")
         public String updateDate;
@@ -110,6 +165,22 @@ public class GetUserResponseBody extends TeaModel {
         }
         public String getMobilePhone() {
             return this.mobilePhone;
+        }
+
+        public GetUserResponseBodyUser setProvisionType(String provisionType) {
+            this.provisionType = provisionType;
+            return this;
+        }
+        public String getProvisionType() {
+            return this.provisionType;
+        }
+
+        public GetUserResponseBodyUser setTags(GetUserResponseBodyUserTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public GetUserResponseBodyUserTags getTags() {
+            return this.tags;
         }
 
         public GetUserResponseBodyUser setUpdateDate(String updateDate) {
