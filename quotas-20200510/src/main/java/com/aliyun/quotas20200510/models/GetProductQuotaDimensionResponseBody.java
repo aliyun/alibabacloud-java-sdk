@@ -4,9 +4,11 @@ package com.aliyun.quotas20200510.models;
 import com.aliyun.tea.*;
 
 public class GetProductQuotaDimensionResponseBody extends TeaModel {
+    // The details about the quota dimension.
     @NameInMap("QuotaDimension")
     public GetProductQuotaDimensionResponseBodyQuotaDimension quotaDimension;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +34,11 @@ public class GetProductQuotaDimensionResponseBody extends TeaModel {
     }
 
     public static class GetProductQuotaDimensionResponseBodyQuotaDimensionDimensionValueDetail extends TeaModel {
+        // The name of the dimension value.
         @NameInMap("Name")
         public String name;
 
+        // The dimension value.
         @NameInMap("Value")
         public String value;
 
@@ -62,18 +66,28 @@ public class GetProductQuotaDimensionResponseBody extends TeaModel {
     }
 
     public static class GetProductQuotaDimensionResponseBodyQuotaDimension extends TeaModel {
+        // The quota dimensions that are supported by the cloud service.
         @NameInMap("DependentDimensions")
         public java.util.List<String> dependentDimensions;
 
+        // The dimension key. Valid values:
+        // 
+        // *   regionId: region ID
+        // *   zoneId: zone ID
+        // *   chargeType: billing method
+        // *   networkType: network type
         @NameInMap("DimensionKey")
         public String dimensionKey;
 
+        // The details about the dimension value.
         @NameInMap("DimensionValueDetail")
         public java.util.List<GetProductQuotaDimensionResponseBodyQuotaDimensionDimensionValueDetail> dimensionValueDetail;
 
+        // The dimension values.
         @NameInMap("DimensionValues")
         public java.util.List<String> dimensionValues;
 
+        // The name of the dimension.
         @NameInMap("Name")
         public String name;
 

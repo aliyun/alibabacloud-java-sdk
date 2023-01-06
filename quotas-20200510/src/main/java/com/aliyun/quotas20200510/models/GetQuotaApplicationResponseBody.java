@@ -4,9 +4,11 @@ package com.aliyun.quotas20200510.models;
 import com.aliyun.tea.*;
 
 public class GetQuotaApplicationResponseBody extends TeaModel {
+    // The details about the application.
     @NameInMap("QuotaApplication")
     public GetQuotaApplicationResponseBodyQuotaApplication quotaApplication;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,54 +34,82 @@ public class GetQuotaApplicationResponseBody extends TeaModel {
     }
 
     public static class GetQuotaApplicationResponseBodyQuotaApplication extends TeaModel {
+        // The ID of the application.
         @NameInMap("ApplicationId")
         public String applicationId;
 
+        // The time when the application was submitted.
         @NameInMap("ApplyTime")
         public String applyTime;
 
+        // The approved quota value.
         @NameInMap("ApproveValue")
         public Float approveValue;
 
+        // The result of the application.
         @NameInMap("AuditReason")
         public String auditReason;
 
+        // The quota for which you apply.
         @NameInMap("DesireValue")
         public Integer desireValue;
 
+        // The quota dimensions.
+        // 
+        // Format: `{"regionId":"Region"}`.
         @NameInMap("Dimension")
         public java.util.Map<String, ?> dimension;
 
+        // The time when the quota took effect.
         @NameInMap("EffectiveTime")
         public String effectiveTime;
 
+        // The time when the quota expired.
         @NameInMap("ExpireTime")
         public String expireTime;
 
+        // The notification method. Valid values:
+        // 
+        // *   0: Quota Center does not send a notification.
+        // *   1: Quota Center sends an email notification.
+        // *   2: Quota Center sends an SMS notification.
         @NameInMap("NoticeType")
         public Long noticeType;
 
+        // The abbreviation of the cloud service name.
         @NameInMap("ProductCode")
         public String productCode;
 
+        // The ID of the quota.
         @NameInMap("QuotaActionCode")
         public String quotaActionCode;
 
+        // The Alibaba Cloud Resource Name (ARN) of the quota.
         @NameInMap("QuotaArn")
         public String quotaArn;
 
+        // The description of the quota.
         @NameInMap("QuotaDescription")
         public String quotaDescription;
 
+        // The name of the quota.
         @NameInMap("QuotaName")
         public String quotaName;
 
+        // The unit of the quota.
         @NameInMap("QuotaUnit")
         public String quotaUnit;
 
+        // The reason for the application.
         @NameInMap("Reason")
         public String reason;
 
+        // The status of the application. Valid values:
+        // 
+        // *   Disagree: The application is rejected.
+        // *   Agree: The application is approved.
+        // *   Process: The application is pending approval.
+        // *   Cancel: The application is closed.
         @NameInMap("Status")
         public String status;
 

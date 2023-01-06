@@ -7,24 +7,43 @@ public class ListQuotaApplicationsRequest extends TeaModel {
     @NameInMap("Dimensions")
     public java.util.List<ListQuotaApplicationsRequestDimensions> dimensions;
 
+    // The keyword that you want to use to search for the application.
     @NameInMap("KeyWord")
     public String keyWord;
 
+    // The maximum number of records that you want to return for the query.
+    // 
+    // Valid values: 1 to 200. Default value: 30.
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    // The token that marks the position from which you want to start the query. An empty value indicates that the query starts from the beginning.
     @NameInMap("NextToken")
     public String nextToken;
 
+    // The abbreviation of the cloud service name.
+    // 
+    // >  For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).
     @NameInMap("ProductCode")
     public String productCode;
 
+    // The ID of the quota.
     @NameInMap("QuotaActionCode")
     public String quotaActionCode;
 
+    // The type of the quota. Valid values:
+    // 
+    // *   FlowControl: API rate limit
+    // *   CommonQuota: general quota
     @NameInMap("QuotaCategory")
     public String quotaCategory;
 
+    // The status of the application. Valid values:
+    // 
+    // *   Disagree: The application is rejected.
+    // *   Agree: The application is approved.
+    // *   Process: The application is pending approval.
+    // *   Cancel: The application is closed.
     @NameInMap("Status")
     public String status;
 
@@ -98,9 +117,15 @@ public class ListQuotaApplicationsRequest extends TeaModel {
     }
 
     public static class ListQuotaApplicationsRequestDimensions extends TeaModel {
+        // The dimension keys.
+        // 
+        // >  The value range of N varies based on the number of dimensions that are supported by the related cloud service.
         @NameInMap("Key")
         public String key;
 
+        // The dimension values.
+        // 
+        // >  The value range of N varies based on the number of dimensions that are supported by the related cloud service.
         @NameInMap("Value")
         public String value;
 

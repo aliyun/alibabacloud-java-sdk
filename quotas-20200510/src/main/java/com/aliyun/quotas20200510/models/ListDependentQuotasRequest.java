@@ -4,9 +4,13 @@ package com.aliyun.quotas20200510.models;
 import com.aliyun.tea.*;
 
 public class ListDependentQuotasRequest extends TeaModel {
+    // The abbreviation of the cloud service name.
+    // 
+    // >  For more information about the Alibaba Cloud services that support Quota Center, see [Alibaba Cloud services that support Quota Center](~~182368~~).
     @NameInMap("ProductCode")
     public String productCode;
 
+    // The ID of the quota.
     @NameInMap("QuotaActionCode")
     public String quotaActionCode;
 

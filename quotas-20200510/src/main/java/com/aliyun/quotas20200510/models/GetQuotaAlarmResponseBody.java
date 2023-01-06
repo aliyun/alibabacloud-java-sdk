@@ -4,9 +4,11 @@ package com.aliyun.quotas20200510.models;
 import com.aliyun.tea.*;
 
 public class GetQuotaAlarmResponseBody extends TeaModel {
+    // The details of the quota alert.
     @NameInMap("QuotaAlarm")
     public GetQuotaAlarmResponseBodyQuotaAlarm quotaAlarm;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,42 +34,61 @@ public class GetQuotaAlarmResponseBody extends TeaModel {
     }
 
     public static class GetQuotaAlarmResponseBodyQuotaAlarm extends TeaModel {
+        // The ID of the quota alert.
         @NameInMap("AlarmId")
         public String alarmId;
 
+        // The name of the quota alert.
         @NameInMap("AlarmName")
         public String alarmName;
 
+        // The time when the quota alert was created.
         @NameInMap("CreateTime")
         public String createTime;
 
+        // The notification methods of the quota alert. Valid values:
+        // 
+        // *   sms: SMS messages
+        // *   email: emails
         @NameInMap("NotifyChannels")
         public java.util.List<String> notifyChannels;
 
+        // The alert contact.
         @NameInMap("NotifyTarget")
         public String notifyTarget;
 
+        // The abbreviation of the cloud service name.
         @NameInMap("ProductCode")
         public String productCode;
 
+        // The ID of the quota.
         @NameInMap("QuotaActionCode")
         public String quotaActionCode;
 
+        // The quota dimension.
         @NameInMap("QuotaDimension")
         public java.util.Map<String, ?> quotaDimension;
 
+        // The used quota.
         @NameInMap("QuotaUsage")
         public Float quotaUsage;
 
+        // The quota value.
         @NameInMap("QuotaValue")
         public Float quotaValue;
 
+        // The numeric value of the alert threshold.
         @NameInMap("Threshold")
         public Float threshold;
 
+        // The percentage of the alert threshold.
         @NameInMap("ThresholdPercent")
         public Float thresholdPercent;
 
+        // The type of the quota alert. Valid values:
+        // 
+        // *   used: The alert is created for the used quota.
+        // *   usable: The alert is created for the available quota.
         @NameInMap("ThresholdType")
         public String thresholdType;
 

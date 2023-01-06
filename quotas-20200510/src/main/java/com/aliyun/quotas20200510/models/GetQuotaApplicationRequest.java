@@ -4,6 +4,7 @@ package com.aliyun.quotas20200510.models;
 import com.aliyun.tea.*;
 
 public class GetQuotaApplicationRequest extends TeaModel {
+    // The ID of the application.
     @NameInMap("ApplicationId")
     public String applicationId;
 

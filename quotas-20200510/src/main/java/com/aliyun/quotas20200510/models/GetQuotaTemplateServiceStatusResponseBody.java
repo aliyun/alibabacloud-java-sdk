@@ -4,9 +4,11 @@ package com.aliyun.quotas20200510.models;
 import com.aliyun.tea.*;
 
 public class GetQuotaTemplateServiceStatusResponseBody extends TeaModel {
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The status of the quota template.
     @NameInMap("TemplateServiceStatus")
     public GetQuotaTemplateServiceStatusResponseBodyTemplateServiceStatus templateServiceStatus;
 
@@ -32,9 +34,14 @@ public class GetQuotaTemplateServiceStatusResponseBody extends TeaModel {
     }
 
     public static class GetQuotaTemplateServiceStatusResponseBodyTemplateServiceStatus extends TeaModel {
+        // The ID of the resource directory.
         @NameInMap("ResourceDirectoryId")
         public String resourceDirectoryId;
 
+        // The status of the quota template. Valid values:
+        // 
+        // *   \-1: disabled
+        // *   1: enabled
         @NameInMap("ServiceStatus")
         public Integer serviceStatus;
 

@@ -4,18 +4,29 @@ package com.aliyun.quotas20200510.models;
 import com.aliyun.tea.*;
 
 public class ListQuotaAlarmsRequest extends TeaModel {
+    // The name of the quota alert.
     @NameInMap("AlarmName")
     public String alarmName;
 
+    // The maximum number of records that you want to return for the query.
+    // 
+    // Valid values: 1 to 200. Default value: 30.
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    // The token that marks the position from which you want to start the query.
+    // 
+    // >  An empty value indicates that the query starts from the beginning.
     @NameInMap("NextToken")
     public String nextToken;
 
+    // The abbreviation of the cloud service name.
+    // 
+    // >  For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).
     @NameInMap("ProductCode")
     public String productCode;
 
+    // The ID of the quota.
     @NameInMap("QuotaActionCode")
     public String quotaActionCode;
 
@@ -76,9 +87,15 @@ public class ListQuotaAlarmsRequest extends TeaModel {
     }
 
     public static class ListQuotaAlarmsRequestQuotaDimensions extends TeaModel {
+        // The dimension keys.
+        // 
+        // >  The value range of N varies based on the number of dimensions that are supported by the related cloud service.
         @NameInMap("Key")
         public String key;
 
+        // The dimension values.
+        // 
+        // >  The value range of N varies based on the number of dimensions that are supported by the related cloud service.
         @NameInMap("Value")
         public String value;
 

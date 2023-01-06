@@ -4,9 +4,11 @@ package com.aliyun.quotas20200510.models;
 import com.aliyun.tea.*;
 
 public class ListDependentQuotasResponseBody extends TeaModel {
+    // The list of quotas on which the specified quota depends.
     @NameInMap("Quotas")
     public java.util.List<ListDependentQuotasResponseBodyQuotas> quotas;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +34,15 @@ public class ListDependentQuotasResponseBody extends TeaModel {
     }
 
     public static class ListDependentQuotasResponseBodyQuotasDimensions extends TeaModel {
+        // The dimension of a quota on which the specified quota depends.
         @NameInMap("DependentDimension")
         public java.util.List<String> dependentDimension;
 
+        // The dimension key.
         @NameInMap("DimensionKey")
         public String dimensionKey;
 
+        // The dimension values.
         @NameInMap("DimensionValues")
         public java.util.List<String> dimensionValues;
 
@@ -73,15 +78,19 @@ public class ListDependentQuotasResponseBody extends TeaModel {
     }
 
     public static class ListDependentQuotasResponseBodyQuotas extends TeaModel {
+        // The dimensions of a quota on which the specified quota depends.
         @NameInMap("Dimensions")
         public java.util.List<ListDependentQuotasResponseBodyQuotasDimensions> dimensions;
 
+        // The abbreviation of the cloud service name.
         @NameInMap("ProductCode")
         public String productCode;
 
+        // The ID of the quota.
         @NameInMap("QuotaActionCode")
         public String quotaActionCode;
 
+        // The relationship percentage between the specified quota and the quotas on which the specified quota depends.
         @NameInMap("Scale")
         public Float scale;
 

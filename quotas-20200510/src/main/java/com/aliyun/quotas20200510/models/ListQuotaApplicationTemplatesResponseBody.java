@@ -4,18 +4,25 @@ package com.aliyun.quotas20200510.models;
 import com.aliyun.tea.*;
 
 public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
+    // The maximum number of records that are returned for the query.
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    // The token that marks the position at which the query ends.
+    // 
+    // > An empty value indicates that all data is returned.
     @NameInMap("NextToken")
     public String nextToken;
 
+    // The quota templates that are returned.
     @NameInMap("QuotaApplicationTemplates")
     public java.util.List<ListQuotaApplicationTemplatesResponseBodyQuotaApplicationTemplates> quotaApplicationTemplates;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The total number of records that are returned for the query.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,36 +72,72 @@ public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListQuotaApplicationTemplatesResponseBodyQuotaApplicationTemplates extends TeaModel {
+        // None
         @NameInMap("ApplicableRange")
         public java.util.List<Float> applicableRange;
 
+        // The type of the adjustable value. Valid values:
+        // 
+        // *   continuous
+        // *   discontinuous
         @NameInMap("ApplicableType")
         public String applicableType;
 
+        // The requested value of the quota.
         @NameInMap("DesireValue")
         public Float desireValue;
 
+        // The quota dimensions.
+        // 
+        // Format: {"regionId":"Region"}.
         @NameInMap("Dimensions")
         public java.util.Map<String, ?> dimensions;
 
+        // 配额生效的UTC时间。
+        @NameInMap("EffectiveTime")
+        public String effectiveTime;
+
+        // The language of the quota alert notification. Valid values:
+        // 
+        // *   zh: Chinese
+        // *   en: English
         @NameInMap("EnvLanguage")
         public String envLanguage;
 
+        // 配额失效的UTC时间。
+        @NameInMap("ExpireTime")
+        public String expireTime;
+
+        // The ID of the quota template.
         @NameInMap("Id")
         public String id;
 
+        // Indicates whether Quota Center sends a notification about the application result. Valid values:
+        // 
+        // *   0: no
+        // *   3: yes
         @NameInMap("NoticeType")
         public Integer noticeType;
 
+        // The abbreviation of the Alibaba Cloud service name.
         @NameInMap("ProductCode")
         public String productCode;
 
+        // The ID of the quota.
         @NameInMap("QuotaActionCode")
         public String quotaActionCode;
 
+        // 配额类型。
+        // - CommonQuota：通用配额。
+        // - WhiteListLabel：权益配额。
+        @NameInMap("QuotaCategory")
+        public String quotaCategory;
+
+        // The description of the quota.
         @NameInMap("QuotaDescription")
         public String quotaDescription;
 
+        // The name of the quota.
         @NameInMap("QuotaName")
         public String quotaName;
 
@@ -135,12 +178,28 @@ public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
             return this.dimensions;
         }
 
+        public ListQuotaApplicationTemplatesResponseBodyQuotaApplicationTemplates setEffectiveTime(String effectiveTime) {
+            this.effectiveTime = effectiveTime;
+            return this;
+        }
+        public String getEffectiveTime() {
+            return this.effectiveTime;
+        }
+
         public ListQuotaApplicationTemplatesResponseBodyQuotaApplicationTemplates setEnvLanguage(String envLanguage) {
             this.envLanguage = envLanguage;
             return this;
         }
         public String getEnvLanguage() {
             return this.envLanguage;
+        }
+
+        public ListQuotaApplicationTemplatesResponseBodyQuotaApplicationTemplates setExpireTime(String expireTime) {
+            this.expireTime = expireTime;
+            return this;
+        }
+        public String getExpireTime() {
+            return this.expireTime;
         }
 
         public ListQuotaApplicationTemplatesResponseBodyQuotaApplicationTemplates setId(String id) {
@@ -173,6 +232,14 @@ public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
         }
         public String getQuotaActionCode() {
             return this.quotaActionCode;
+        }
+
+        public ListQuotaApplicationTemplatesResponseBodyQuotaApplicationTemplates setQuotaCategory(String quotaCategory) {
+            this.quotaCategory = quotaCategory;
+            return this;
+        }
+        public String getQuotaCategory() {
+            return this.quotaCategory;
         }
 
         public ListQuotaApplicationTemplatesResponseBodyQuotaApplicationTemplates setQuotaDescription(String quotaDescription) {
