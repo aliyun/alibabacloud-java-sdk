@@ -53,9 +53,61 @@ public class ListUserBasicInfosResponseBody extends TeaModel {
         return this.userBasicInfos;
     }
 
+    public static class ListUserBasicInfosResponseBodyUserBasicInfosUserBasicInfoTagsTag extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static ListUserBasicInfosResponseBodyUserBasicInfosUserBasicInfoTagsTag build(java.util.Map<String, ?> map) throws Exception {
+            ListUserBasicInfosResponseBodyUserBasicInfosUserBasicInfoTagsTag self = new ListUserBasicInfosResponseBodyUserBasicInfosUserBasicInfoTagsTag();
+            return TeaModel.build(map, self);
+        }
+
+        public ListUserBasicInfosResponseBodyUserBasicInfosUserBasicInfoTagsTag setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public ListUserBasicInfosResponseBodyUserBasicInfosUserBasicInfoTagsTag setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
+    public static class ListUserBasicInfosResponseBodyUserBasicInfosUserBasicInfoTags extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<ListUserBasicInfosResponseBodyUserBasicInfosUserBasicInfoTagsTag> tag;
+
+        public static ListUserBasicInfosResponseBodyUserBasicInfosUserBasicInfoTags build(java.util.Map<String, ?> map) throws Exception {
+            ListUserBasicInfosResponseBodyUserBasicInfosUserBasicInfoTags self = new ListUserBasicInfosResponseBodyUserBasicInfosUserBasicInfoTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListUserBasicInfosResponseBodyUserBasicInfosUserBasicInfoTags setTag(java.util.List<ListUserBasicInfosResponseBodyUserBasicInfosUserBasicInfoTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<ListUserBasicInfosResponseBodyUserBasicInfosUserBasicInfoTagsTag> getTag() {
+            return this.tag;
+        }
+
+    }
+
     public static class ListUserBasicInfosResponseBodyUserBasicInfosUserBasicInfo extends TeaModel {
         @NameInMap("DisplayName")
         public String displayName;
+
+        @NameInMap("Tags")
+        public ListUserBasicInfosResponseBodyUserBasicInfosUserBasicInfoTags tags;
 
         @NameInMap("UserId")
         public String userId;
@@ -74,6 +126,14 @@ public class ListUserBasicInfosResponseBody extends TeaModel {
         }
         public String getDisplayName() {
             return this.displayName;
+        }
+
+        public ListUserBasicInfosResponseBodyUserBasicInfosUserBasicInfo setTags(ListUserBasicInfosResponseBodyUserBasicInfosUserBasicInfoTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public ListUserBasicInfosResponseBodyUserBasicInfosUserBasicInfoTags getTags() {
+            return this.tags;
         }
 
         public ListUserBasicInfosResponseBodyUserBasicInfosUserBasicInfo setUserId(String userId) {

@@ -16,6 +16,9 @@ public class CreateUserRequest extends TeaModel {
     @NameInMap("MobilePhone")
     public String mobilePhone;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateUserRequestTag> tag;
+
     @NameInMap("UserPrincipalName")
     public String userPrincipalName;
 
@@ -56,12 +59,50 @@ public class CreateUserRequest extends TeaModel {
         return this.mobilePhone;
     }
 
+    public CreateUserRequest setTag(java.util.List<CreateUserRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateUserRequestTag> getTag() {
+        return this.tag;
+    }
+
     public CreateUserRequest setUserPrincipalName(String userPrincipalName) {
         this.userPrincipalName = userPrincipalName;
         return this;
     }
     public String getUserPrincipalName() {
         return this.userPrincipalName;
+    }
+
+    public static class CreateUserRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateUserRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateUserRequestTag self = new CreateUserRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateUserRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateUserRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }
