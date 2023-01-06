@@ -4,18 +4,23 @@ package com.aliyun.quotas20200510.models;
 import com.aliyun.tea.*;
 
 public class ListAlarmHistoriesResponseBody extends TeaModel {
+    // The details of the alert records.
     @NameInMap("AlarmHistories")
     public java.util.List<ListAlarmHistoriesResponseBodyAlarmHistories> alarmHistories;
 
+    // The maximum number of records returned for the query.
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    // The token that is used to mark the location where the query is ended. An empty value indicates that all the data is queried.
     @NameInMap("NextToken")
     public String nextToken;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The total number of records returned for the query.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,30 +70,42 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
     }
 
     public static class ListAlarmHistoriesResponseBodyAlarmHistories extends TeaModel {
+        // The name of the quota alert.
         @NameInMap("AlarmName")
         public String alarmName;
 
+        // The time when the quota alert was created.
         @NameInMap("CreateTime")
         public String createTime;
 
+        // The notification methods of the quota alert. Valid values:
+        // 
+        // *   sms: short messages
+        // *   email: emails
         @NameInMap("NotifyChannels")
         public java.util.List<String> notifyChannels;
 
+        // The alert contact.
         @NameInMap("NotifyTarget")
         public String notifyTarget;
 
+        // The abbreviation of the cloud service name.
         @NameInMap("ProductCode")
         public String productCode;
 
+        // The ID of the quota.
         @NameInMap("QuotaActionCode")
         public String quotaActionCode;
 
+        // The used quota.
         @NameInMap("QuotaUsage")
         public Float quotaUsage;
 
+        // The numeric value of the alert threshold.
         @NameInMap("Threshold")
         public Float threshold;
 
+        // The percentage of the alert threshold.
         @NameInMap("ThresholdPercent")
         public Float thresholdPercent;
 

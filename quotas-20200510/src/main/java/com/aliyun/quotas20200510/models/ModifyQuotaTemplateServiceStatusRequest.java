@@ -4,6 +4,10 @@ package com.aliyun.quotas20200510.models;
 import com.aliyun.tea.*;
 
 public class ModifyQuotaTemplateServiceStatusRequest extends TeaModel {
+    // The status of the quota template. Valid values:
+    // 
+    // *   \-1: disabled
+    // *   1: enabled
     @NameInMap("ServiceStatus")
     public Integer serviceStatus;
 

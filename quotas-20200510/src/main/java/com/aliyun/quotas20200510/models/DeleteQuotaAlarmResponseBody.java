@@ -4,6 +4,7 @@ package com.aliyun.quotas20200510.models;
 import com.aliyun.tea.*;
 
 public class DeleteQuotaAlarmResponseBody extends TeaModel {
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

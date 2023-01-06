@@ -4,18 +4,23 @@ package com.aliyun.quotas20200510.models;
 import com.aliyun.tea.*;
 
 public class ListProductDimensionGroupsResponseBody extends TeaModel {
+    // The dimension groups.
     @NameInMap("DimensionGroups")
     public java.util.List<ListProductDimensionGroupsResponseBodyDimensionGroups> dimensionGroups;
 
+    // The number of entries returned per page.
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    // The token that marks the position at which the query ends. An empty value indicates that all data is returned.
     @NameInMap("NextToken")
     public String nextToken;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The total number of records that are returned for the query.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,15 +70,19 @@ public class ListProductDimensionGroupsResponseBody extends TeaModel {
     }
 
     public static class ListProductDimensionGroupsResponseBodyDimensionGroups extends TeaModel {
+        // The keys of the dimension group.
         @NameInMap("DimensionKeys")
         public java.util.List<String> dimensionKeys;
 
+        // The code of the dimension group.
         @NameInMap("GroupCode")
         public String groupCode;
 
+        // The name of the dimension group.
         @NameInMap("GroupName")
         public String groupName;
 
+        // The service code.
         @NameInMap("ProductCode")
         public String productCode;
 

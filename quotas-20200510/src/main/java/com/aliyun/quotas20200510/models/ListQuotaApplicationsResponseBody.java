@@ -4,18 +4,23 @@ package com.aliyun.quotas20200510.models;
 import com.aliyun.tea.*;
 
 public class ListQuotaApplicationsResponseBody extends TeaModel {
+    // The number of records that are returned for the query.
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    // The token that marks the position at which the query ends. An empty value indicates that all data is returned.
     @NameInMap("NextToken")
     public String nextToken;
 
+    // The details about the applications.
     @NameInMap("QuotaApplications")
     public java.util.List<ListQuotaApplicationsResponseBodyQuotaApplications> quotaApplications;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The total number of applications.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,9 +70,17 @@ public class ListQuotaApplicationsResponseBody extends TeaModel {
     }
 
     public static class ListQuotaApplicationsResponseBodyQuotaApplicationsPeriod extends TeaModel {
+        // The unit of the calculation cycle of the quota. Valid values:
+        // 
+        // *   second
+        // *   minute
+        // *   hour
+        // *   day
+        // *   week
         @NameInMap("PeriodUnit")
         public String periodUnit;
 
+        // The value of the calculation cycle of the quota.
         @NameInMap("PeriodValue")
         public Long periodValue;
 
@@ -95,60 +108,87 @@ public class ListQuotaApplicationsResponseBody extends TeaModel {
     }
 
     public static class ListQuotaApplicationsResponseBodyQuotaApplications extends TeaModel {
+        // The ID of the application.
         @NameInMap("ApplicationId")
         public String applicationId;
 
+        // The time when the application was submitted.
         @NameInMap("ApplyTime")
         public String applyTime;
 
+        // The quota value that is approved.
         @NameInMap("ApproveValue")
         public Float approveValue;
 
+        // The result of the application.
         @NameInMap("AuditReason")
         public String auditReason;
 
+        // The remarks of the application.
         @NameInMap("Comment")
         public String comment;
 
+        // The quota value that is approved.
         @NameInMap("DesireValue")
         public Float desireValue;
 
+        // The quota dimension of the application.
         @NameInMap("Dimension")
         public java.util.Map<String, ?> dimension;
 
+        // The time when the application took effect.
         @NameInMap("EffectiveTime")
         public String effectiveTime;
 
+        // The time when the application expired.
         @NameInMap("ExpireTime")
         public String expireTime;
 
+        // Indicates whether Quota Center sends a notification about the application result. Valid values:
+        // 
+        // *   0: Quota Center sends a notification.
+        // *   3: Quota Center does not send a notification.
         @NameInMap("NoticeType")
         public Integer noticeType;
 
+        // The calculation cycle of the quota.
         @NameInMap("Period")
         public ListQuotaApplicationsResponseBodyQuotaApplicationsPeriod period;
 
+        // The abbreviation of the cloud service name.
         @NameInMap("ProductCode")
         public String productCode;
 
+        // The ID of the quota.
         @NameInMap("QuotaActionCode")
         public String quotaActionCode;
 
+        // The Alibaba Cloud Resource Name (ARN) of the quota.
         @NameInMap("QuotaArn")
         public String quotaArn;
 
+        // The description of the quota.
         @NameInMap("QuotaDescription")
         public String quotaDescription;
 
+        // The name of the quota.
         @NameInMap("QuotaName")
         public String quotaName;
 
+        // The unit of the quota.
         @NameInMap("QuotaUnit")
         public String quotaUnit;
 
+        // The reason for the application.
         @NameInMap("Reason")
         public String reason;
 
+        // The status of the application. Valid values:
+        // 
+        // *   Disagree: The application is rejected.
+        // *   Agree: The application is approved.
+        // *   Process: The application is pending approval.
+        // *   Cancel: The application is closed.
         @NameInMap("Status")
         public String status;
 

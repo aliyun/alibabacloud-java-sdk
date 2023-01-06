@@ -4,57 +4,83 @@ package com.aliyun.quotas20200510.models;
 import com.aliyun.tea.*;
 
 public class CreateQuotaApplicationResponseBody extends TeaModel {
+    // The ID of the application.
     @NameInMap("ApplicationId")
     public String applicationId;
 
+    // The time when the application was submitted.
     @NameInMap("ApplyTime")
     public String applyTime;
 
+    // The quota value that is approved.
     @NameInMap("ApproveValue")
     public Float approveValue;
 
+    // The result of the application.
     @NameInMap("AuditReason")
     public String auditReason;
 
+    // The requested value of the quota.
     @NameInMap("DesireValue")
     public Integer desireValue;
 
+    // The quota dimensions.
     @NameInMap("Dimension")
     public java.util.Map<String, ?> dimension;
 
+    // The time when the new quota value takes effect.
     @NameInMap("EffectiveTime")
     public String effectiveTime;
 
+    // The time when the new quota expires.
     @NameInMap("ExpireTime")
     public String expireTime;
 
+    // Indicates whether Quota Center sends a notification about the application result. Valid values:
+    // 
+    // *   0: Quota Center sends a notification.
+    // *   3: Quota Center does not send a notification.
     @NameInMap("NoticeType")
     public Long noticeType;
 
+    // The abbreviation of the Alibaba Cloud service name.
     @NameInMap("ProductCode")
     public String productCode;
 
+    // The ID of the quota.
     @NameInMap("QuotaActionCode")
     public String quotaActionCode;
 
+    // The Alibaba Cloud Resource Name (ARN) of the quota.
     @NameInMap("QuotaArn")
     public String quotaArn;
 
+    // The description of the quota.
     @NameInMap("QuotaDescription")
     public String quotaDescription;
 
+    // The name of the quota.
     @NameInMap("QuotaName")
     public String quotaName;
 
+    // The unit of the new quota value.
     @NameInMap("QuotaUnit")
     public String quotaUnit;
 
+    // The reason for the application.
     @NameInMap("Reason")
     public String reason;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The status of the application. Valid values:
+    // 
+    // *   Disagree: The application is rejected.
+    // *   Agree: The application is approved.
+    // *   Process: The application is being reviewed.
+    // *   Cancel: The application is canceled.
     @NameInMap("Status")
     public String status;
 

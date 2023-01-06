@@ -4,18 +4,23 @@ package com.aliyun.quotas20200510.models;
 import com.aliyun.tea.*;
 
 public class ListProductsResponseBody extends TeaModel {
+    // The maximum number of records returned for the query.
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    // The token that is used to mark the location where the query is ended. An empty value indicates that all the data is queried.
     @NameInMap("NextToken")
     public String nextToken;
 
+    // The information of the cloud service.
     @NameInMap("ProductInfo")
     public java.util.List<ListProductsResponseBodyProductInfo> productInfo;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The total number of records returned for the query.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,32 +70,53 @@ public class ListProductsResponseBody extends TeaModel {
     }
 
     public static class ListProductsResponseBodyProductInfo extends TeaModel {
+        // Indicates whether the cloud service supports general quotas. Valid values:
+        // 
+        // *   support: The cloud service supports general quotas.
+        // *   unsupport: The cloud service does not support general quotas.
         @NameInMap("CommonQuotaSupport")
         public String commonQuotaSupport;
 
+        // Indicates whether the cloud service supports dynamic quota adjustment. Valid values:
+        // 
+        // *   true
+        // *   false
         @NameInMap("Dynamic")
         public Boolean dynamic;
 
+        // Indicates whether the cloud service supports API rate limits. Valid values:
+        // 
+        // *   support: The cloud service supports API rate limits.
+        // *   unsupport: The cloud service does not support API rate limits.
         @NameInMap("FlowControlSupport")
         public String flowControlSupport;
 
+        // The abbreviation of the cloud service name.
         @NameInMap("ProductCode")
         public String productCode;
 
+        // The name of the cloud service.
         @NameInMap("ProductName")
         public String productName;
 
+        // The name of the cloud service.
         @NameInMap("ProductNameEn")
         public String productNameEn;
 
+        // The ID of the service category.
         @NameInMap("SecondCategoryId")
         public Long secondCategoryId;
 
+        // The name of the service category.
         @NameInMap("SecondCategoryName")
         public String secondCategoryName;
 
+        // The name of the service category.
         @NameInMap("SecondCategoryNameEn")
         public String secondCategoryNameEn;
+
+        @NameInMap("WhiteListLabelQuotaSupport")
+        public String whiteListLabelQuotaSupport;
 
         public static ListProductsResponseBodyProductInfo build(java.util.Map<String, ?> map) throws Exception {
             ListProductsResponseBodyProductInfo self = new ListProductsResponseBodyProductInfo();
@@ -167,6 +193,14 @@ public class ListProductsResponseBody extends TeaModel {
         }
         public String getSecondCategoryNameEn() {
             return this.secondCategoryNameEn;
+        }
+
+        public ListProductsResponseBodyProductInfo setWhiteListLabelQuotaSupport(String whiteListLabelQuotaSupport) {
+            this.whiteListLabelQuotaSupport = whiteListLabelQuotaSupport;
+            return this;
+        }
+        public String getWhiteListLabelQuotaSupport() {
+            return this.whiteListLabelQuotaSupport;
         }
 
     }

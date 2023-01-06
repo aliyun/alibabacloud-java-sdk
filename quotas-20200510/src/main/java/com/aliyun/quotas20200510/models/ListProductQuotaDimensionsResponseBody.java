@@ -4,18 +4,23 @@ package com.aliyun.quotas20200510.models;
 import com.aliyun.tea.*;
 
 public class ListProductQuotaDimensionsResponseBody extends TeaModel {
+    // The number of records returned for the query.
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    // The token that marks the position where the query ends. An empty value indicates that all the data is returned.
     @NameInMap("NextToken")
     public String nextToken;
 
+    // The quota dimensions.
     @NameInMap("QuotaDimensions")
     public java.util.List<ListProductQuotaDimensionsResponseBodyQuotaDimensions> quotaDimensions;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // The total number of records returned for the query.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,9 +70,11 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
     }
 
     public static class ListProductQuotaDimensionsResponseBodyQuotaDimensionsDimensionValueDetail extends TeaModel {
+        // The name of the dimension value.
         @NameInMap("Name")
         public String name;
 
+        // The dimension value.
         @NameInMap("Value")
         public String value;
 
@@ -95,21 +102,35 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
     }
 
     public static class ListProductQuotaDimensionsResponseBodyQuotaDimensions extends TeaModel {
+        // The quota dimensions that are supported by the cloud service.
         @NameInMap("DependentDimensions")
         public java.util.List<String> dependentDimensions;
 
+        // The dimension key. Valid values:
+        // 
+        // *   RegionId: the region ID
+        // *   zoneId: the zone ID
+        // *   chargeType: the billing method
+        // *   networkType: the network type
         @NameInMap("DimensionKey")
         public String dimensionKey;
 
+        // The details about the dimension value.
         @NameInMap("DimensionValueDetail")
         public java.util.List<ListProductQuotaDimensionsResponseBodyQuotaDimensionsDimensionValueDetail> dimensionValueDetail;
 
+        // The list of the dimension values.
         @NameInMap("DimensionValues")
         public java.util.List<String> dimensionValues;
 
+        // The name of the quota dimension.
         @NameInMap("Name")
         public String name;
 
+        // Indicates whether the quota dimension is required when you query quota dimensions. Valid values:
+        // 
+        // *   true
+        // *   false
         @NameInMap("Requisite")
         public Boolean requisite;
 
