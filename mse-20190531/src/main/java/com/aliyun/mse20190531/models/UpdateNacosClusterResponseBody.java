@@ -8,15 +8,15 @@ public class UpdateNacosClusterResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
-    // The returned result.
+    // The result returned.
     @NameInMap("Data")
     public String data;
 
-    // The HTTP status code.
+    // The HTTP status code returned.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // The response message.
+    // The message returned.
     @NameInMap("Message")
     public String message;
 

@@ -15,7 +15,7 @@ public class DeleteAuthResourceRequest extends TeaModel {
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
-    // The ID of the authorization record.
+    // The destination ID.
     @NameInMap("Id")
     public Long id;
 

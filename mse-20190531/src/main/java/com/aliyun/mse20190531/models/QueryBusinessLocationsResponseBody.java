@@ -8,7 +8,7 @@ public class QueryBusinessLocationsResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.List<QueryBusinessLocationsResponseBodyData> data;
 
-    // The error code returned if the request fails.
+    // The error code returned if the request failed.
     @NameInMap("ErrorCode")
     public String errorCode;
 
@@ -20,7 +20,7 @@ public class QueryBusinessLocationsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request is successful.
+    // The result of the request.
     @NameInMap("Success")
     public String success;
 
@@ -74,7 +74,7 @@ public class QueryBusinessLocationsResponseBody extends TeaModel {
         @NameInMap("CnName")
         public String cnName;
 
-        // The description of the region.
+        // The description.
         @NameInMap("Description")
         public String description;
 
@@ -86,7 +86,7 @@ public class QueryBusinessLocationsResponseBody extends TeaModel {
         @NameInMap("DistrictEnName")
         public String districtEnName;
 
-        // The ID of the district.
+        // The ID of the region.
         @NameInMap("DistrictId")
         public String districtId;
 
@@ -106,7 +106,7 @@ public class QueryBusinessLocationsResponseBody extends TeaModel {
         @NameInMap("EnName")
         public String enName;
 
-        // The ID of the region.
+        // The name.
         @NameInMap("Name")
         public String name;
 
@@ -114,11 +114,11 @@ public class QueryBusinessLocationsResponseBody extends TeaModel {
         @NameInMap("Ordering")
         public Integer ordering;
 
-        // The display name of the region.
+        // The display name.
         @NameInMap("ShowName")
         public String showName;
 
-        // The type of the data.
+        // The type.
         @NameInMap("Type")
         public String type;
 

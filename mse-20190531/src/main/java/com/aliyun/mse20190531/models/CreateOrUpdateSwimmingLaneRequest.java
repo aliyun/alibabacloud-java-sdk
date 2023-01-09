@@ -4,10 +4,10 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
-    // The language of the response. Valid values:****
+    // The language that the value of the **LocalName** response parameter uses. Valid values:
     // 
-    // *   **zh-CN**: Chinese
-    // *   **en-US**: English.
+    // *   **zh-cn**: Chinese
+    // *   **en-us**: English.
     // 
     // > Default value: **zh-CN**.
     @NameInMap("AcceptLanguage")
@@ -21,11 +21,11 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
     @NameInMap("EnableRules")
     public Boolean enableRules;
 
-    // json string.
+    // The JSON string.
     @NameInMap("EntryRule")
     public String entryRule;
 
-    // SwimmingLane.
+    // The lane.
     @NameInMap("EntryRules")
     public java.util.List<CreateOrUpdateSwimmingLaneRequestEntryRules> entryRules;
 
@@ -341,8 +341,8 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
 
         // Specifies whether to enable the rule. Valid values:
         // 
-        // *   `true`: yes
-        // *   `false`: no
+        // *   `true`: enables the rule.
+        // *   `false`: disables the rule.
         @NameInMap("Enable")
         public Boolean enable;
 

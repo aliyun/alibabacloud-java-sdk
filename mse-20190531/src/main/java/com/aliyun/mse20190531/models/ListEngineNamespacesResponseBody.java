@@ -8,7 +8,7 @@ public class ListEngineNamespacesResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.List<ListEngineNamespacesResponseBodyData> data;
 
-    // The error code returned if the request fails.
+    // The error code returned if the request failed.
     @NameInMap("ErrorCode")
     public String errorCode;
 
@@ -32,13 +32,14 @@ public class ListEngineNamespacesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request is successful. Valid values:
-    // - `true`: The request is successful. 
-    // - `false`: The request fails.
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // *   `true`: The request was successful.
+    // *   `false`: The request failed.
     @NameInMap("Success")
     public Boolean success;
 
-    // The total number of entries returned.
+    // The total number of instances.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -120,11 +121,11 @@ public class ListEngineNamespacesResponseBody extends TeaModel {
     }
 
     public static class ListEngineNamespacesResponseBodyData extends TeaModel {
-        // The number of configurations.
+        // The quota value.
         @NameInMap("ConfigCount")
         public Integer configCount;
 
-        // The name of the namespace.
+        // The namespace.
         @NameInMap("Namespace")
         public String namespace;
 
@@ -132,7 +133,7 @@ public class ListEngineNamespacesResponseBody extends TeaModel {
         @NameInMap("NamespaceDesc")
         public String namespaceDesc;
 
-        // The display name of the namespace.
+        // The name of the namespace.
         @NameInMap("NamespaceShowName")
         public String namespaceShowName;
 
@@ -145,9 +146,10 @@ public class ListEngineNamespacesResponseBody extends TeaModel {
         public String serviceCount;
 
         // The type of the namespace. Valid values:
-        // - `0`: global configuration
-        // - `1`: default namespace
-        // - `2`: custom namespace
+        // 
+        // *   `0`: global configuration
+        // *   `1`: default namespace
+        // *   `2`: custom namespace
         @NameInMap("Type")
         public Integer type;
 

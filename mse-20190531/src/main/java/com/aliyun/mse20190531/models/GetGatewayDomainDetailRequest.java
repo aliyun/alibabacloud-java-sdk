@@ -15,7 +15,7 @@ public class GetGatewayDomainDetailRequest extends TeaModel {
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
-    // The ID of the domain name.
+    // The domain ID.
     @NameInMap("Id")
     public String id;
 

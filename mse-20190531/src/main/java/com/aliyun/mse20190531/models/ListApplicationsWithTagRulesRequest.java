@@ -6,8 +6,8 @@ import com.aliyun.tea.*;
 public class ListApplicationsWithTagRulesRequest extends TeaModel {
     // The language of the response. Valid values:
     // 
-    // - zh: Chinese
-    // - en: English
+    // *   zh: Chinese
+    // *   en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
@@ -15,7 +15,7 @@ public class ListApplicationsWithTagRulesRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
-    // The name of the application.
+    // The names of the applications.
     @NameInMap("AppName")
     public String appName;
 
@@ -27,7 +27,7 @@ public class ListApplicationsWithTagRulesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The ID of the region.
+    // The region ID.
     @NameInMap("Region")
     public String region;
 

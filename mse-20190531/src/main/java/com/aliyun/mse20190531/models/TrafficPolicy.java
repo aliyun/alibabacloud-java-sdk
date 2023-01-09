@@ -325,7 +325,7 @@ public class TrafficPolicy extends TeaModel {
         @NameInMap("LoadbalancerType")
         public String loadbalancerType;
 
-        // The prefetch time of least connection load balancing.
+        // The prefetch time of the least connection load balancing.
         @NameInMap("WarmupDuration")
         public Integer warmupDuration;
 

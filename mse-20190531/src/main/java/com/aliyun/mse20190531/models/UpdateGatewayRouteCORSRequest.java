@@ -5,9 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateGatewayRouteCORSRequest extends TeaModel {
     // The language of the response. In compliance with [RFC 7231](https://tools.ietf.org/html/rfc7231), the backend service must return a response based on the language used by the user.
-    // This parameter is empty by default. Valid values:
-    // * zh-CN: Chinese
-    // * en-US: English
+    // 
+    // *   No default value
+    // *   zh-CN: Chinese
+    // *   en-US: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
@@ -23,7 +24,7 @@ public class UpdateGatewayRouteCORSRequest extends TeaModel {
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
-    // The ID of the route.
+    // The ID of the associated record.
     @NameInMap("Id")
     public Long id;
 

@@ -16,10 +16,10 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // The message returned. Valid values: 
+    // The message returned.
     // 
-    // - If the request is successful, a success message is returned. 
-    // - If the request fails, an error message is returned.
+    // *   If the request is successful, a success message is returned.
+    // *   If the request fails, an error message is returned.
     @NameInMap("Message")
     public String message;
 
@@ -27,7 +27,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request is successful. Valid values: -[unk]true[unk]: The request is successful. -[unk]false[unk]: The request fails.
+    // Indicates whether the request is successful. Valid values: -\[unk]true\[unk]: The request is successful. -\[unk]false\[unk]: The request fails.
     @NameInMap("Success")
     public Boolean success;
 
@@ -85,22 +85,22 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
     }
 
     public static class ListApplicationsWithTagRulesResponseBodyDataResultRouteRules extends TeaModel {
-        // Indicates whether pass-through is enabled.
+        // Indicates whether the field is a primary key.
         @NameInMap("CarryData")
         public Boolean carryData;
 
-        // Indicates whether the routing rule is enabled. Valid values:
+        // Indicates whether the alert rule is enabled. Valid values:
         // 
-        // - `true`: enabled 
-        // - `false`: disabled
+        // *   `true`: enabled
+        // *   `false`: disabled
         @NameInMap("Enable")
         public Boolean enable;
 
-        // The time when the routing rule was last modified.
+        // The modification time.
         @NameInMap("GmtModified")
         public String gmtModified;
 
-        // The ID of the routing rule.
+        // The ID of the rule.
         @NameInMap("Id")
         public Long id;
 
@@ -108,7 +108,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         @NameInMap("InstanceNum")
         public Integer instanceNum;
 
-        // The name of the routing rule.
+        // The name of the rule.
         @NameInMap("Name")
         public String name;
 
@@ -124,11 +124,11 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         @NameInMap("Rules")
         public String rules;
 
-        // The status of the routing rule.
+        // The status.
         @NameInMap("Status")
         public Integer status;
 
-        // The tag of the routing rule.
+        // The tag.
         @NameInMap("Tag")
         public String tag;
 
@@ -236,7 +236,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         @NameInMap("AppName")
         public String appName;
 
-        // The information about routing rules.
+        // An array that consists of the rules.
         @NameInMap("RouteRules")
         public java.util.List<ListApplicationsWithTagRulesResponseBodyDataResultRouteRules> routeRules;
 

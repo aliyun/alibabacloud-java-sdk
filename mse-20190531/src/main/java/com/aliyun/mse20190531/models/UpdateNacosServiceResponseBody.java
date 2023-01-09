@@ -4,7 +4,7 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class UpdateNacosServiceResponseBody extends TeaModel {
-    // The response code returned.
+    // The status code returned.
     @NameInMap("Code")
     public Integer code;
 
@@ -12,11 +12,11 @@ public class UpdateNacosServiceResponseBody extends TeaModel {
     @NameInMap("Data")
     public String data;
 
-    // The HTTP status code.
+    // The HTTP status code returned.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // The returned message.
+    // The message returned.
     @NameInMap("Message")
     public String message;
 

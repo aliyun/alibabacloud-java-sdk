@@ -16,7 +16,7 @@ public class DeleteGatewayRouteResponseBody extends TeaModel {
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // The message returned.
+    // The error message.
     @NameInMap("Message")
     public String message;
 
@@ -24,9 +24,10 @@ public class DeleteGatewayRouteResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request is successful. Valid values:
-    // - `true`: The request is successful. 
-    // - `false`: The request fails.
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // *   `true`: The request was successful.
+    // *   `false`: The request failed.
     @NameInMap("Success")
     public Boolean success;
 
@@ -84,7 +85,7 @@ public class DeleteGatewayRouteResponseBody extends TeaModel {
     }
 
     public static class DeleteGatewayRouteResponseBodyData extends TeaModel {
-        // The ID of the default service.
+        // The default service ID.
         @NameInMap("DefaultServiceId")
         public Long defaultServiceId;
 
@@ -96,23 +97,23 @@ public class DeleteGatewayRouteResponseBody extends TeaModel {
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 
-        // The time when the route was created.
+        // The creation time.
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
-        // The time when the route was last modified.
+        // The modification time.
         @NameInMap("GmtModified")
         public String gmtModified;
 
-        // ID.
+        // The ID.
         @NameInMap("Id")
         public Long id;
 
-        // The name of the route.
+        // The name.
         @NameInMap("Name")
         public String name;
 
-        // The matching rules of the route.
+        // The matching rules.
         @NameInMap("Predicates")
         public String predicates;
 
@@ -120,7 +121,7 @@ public class DeleteGatewayRouteResponseBody extends TeaModel {
         @NameInMap("RouteOrder")
         public Integer routeOrder;
 
-        // The status of the route.
+        // The status.
         @NameInMap("Status")
         public Integer status;
 

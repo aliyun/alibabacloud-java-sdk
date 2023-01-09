@@ -6,12 +6,14 @@ import com.aliyun.tea.*;
 public class ListAnsServiceClustersRequest extends TeaModel {
     // The language of the response. Valid values:
     // 
-    // - zh: Chinese
-    // - en: English
+    // *   zh: Chinese
+    // *   en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // The ID of the cluster.
+    // The ID of the MSE cluster.
+    // 
+    // > The MSE cluster is different from the cluster of the Nacos service.
     @NameInMap("ClusterId")
     public String clusterId;
 
@@ -19,7 +21,7 @@ public class ListAnsServiceClustersRequest extends TeaModel {
     @NameInMap("ClusterName")
     public String clusterName;
 
-    // The name of the contact group.
+    // The name of the group.
     @NameInMap("GroupName")
     public String groupName;
 

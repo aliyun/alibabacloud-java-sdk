@@ -4,7 +4,7 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListListenersByConfigResponseBody extends TeaModel {
-    // The error code returned.
+    // The error code returned if the request failed.
     @NameInMap("ErrorCode")
     public String errorCode;
 
@@ -16,11 +16,11 @@ public class ListListenersByConfigResponseBody extends TeaModel {
     @NameInMap("Listeners")
     public java.util.List<ListListenersByConfigResponseBodyListeners> listeners;
 
-    // The response message.
+    // The message returned.
     @NameInMap("Message")
     public String message;
 
-    // The number of the returned page.
+    // The page number of the returned page.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
@@ -34,7 +34,7 @@ public class ListListenersByConfigResponseBody extends TeaModel {
 
     // Indicates whether the request was successful. Valid values:
     // 
-    // *   `true`: The call was successful.
+    // *   `true`: The request was successful.
     // *   `false`: The request failed.
     @NameInMap("Success")
     public Boolean success;
@@ -121,7 +121,7 @@ public class ListListenersByConfigResponseBody extends TeaModel {
     }
 
     public static class ListListenersByConfigResponseBodyListeners extends TeaModel {
-        // IP.
+        // The IP address.
         @NameInMap("Ip")
         public String ip;
 

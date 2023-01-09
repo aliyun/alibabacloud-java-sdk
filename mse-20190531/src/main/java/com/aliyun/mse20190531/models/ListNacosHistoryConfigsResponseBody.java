@@ -4,11 +4,11 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListNacosHistoryConfigsResponseBody extends TeaModel {
-    // The error code returned if the request fails.
+    // The error code returned if the request failed.
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // The information about configurations.
+    // The configuration items.
     @NameInMap("HistoryItems")
     public java.util.List<ListNacosHistoryConfigsResponseBodyHistoryItems> historyItems;
 
@@ -32,9 +32,10 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request is successful. Valid values:
-    // - `true`: The request is successful. 
-    // - `false`: The request fails.
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // *   `true`: The request was successful.
+    // *   `false`: The request failed.
     @NameInMap("Success")
     public Boolean success;
 
@@ -120,11 +121,11 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
     }
 
     public static class ListNacosHistoryConfigsResponseBodyHistoryItems extends TeaModel {
-        // The name of the application.
+        // The tags of the application.
         @NameInMap("AppName")
         public String appName;
 
-        // The ID of the configuration.
+        // The ID of the data.
         @NameInMap("DataId")
         public String dataId;
 
@@ -140,7 +141,7 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
         @NameInMap("LastModifiedTime")
         public Long lastModifiedTime;
 
-        // The type of the configuration.
+        // The type of the configuration file.
         @NameInMap("OpType")
         public String opType;
 

@@ -8,11 +8,11 @@ public class ListNacosConfigsResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
-    // The information about configurations.
+    // The configurations.
     @NameInMap("Configurations")
     public java.util.List<ListNacosConfigsResponseBodyConfigurations> configurations;
 
-    // The error code returned if the request fails.
+    // The error code returned if the request failed.
     @NameInMap("ErrorCode")
     public String errorCode;
 
@@ -36,13 +36,14 @@ public class ListNacosConfigsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request is successful. Valid values:
-    // - `true`: The request is successful. 
-    // - `false`: The request fails.
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // *   `true`: The request was successful.
+    // *   `false`: The request failed.
     @NameInMap("Success")
     public Boolean success;
 
-    // The total number of entries returned.
+    // The total number of instances.
     @NameInMap("TotalCount")
     public Integer totalCount;
 

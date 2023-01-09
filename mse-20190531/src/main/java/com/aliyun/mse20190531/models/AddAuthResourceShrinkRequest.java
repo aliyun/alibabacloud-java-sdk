@@ -4,6 +4,10 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class AddAuthResourceShrinkRequest extends TeaModel {
+    // The language of the response. Valid values:
+    // 
+    // *   zh: Chinese
+    // *   en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
@@ -14,7 +18,7 @@ public class AddAuthResourceShrinkRequest extends TeaModel {
     @NameInMap("AuthResourceHeaderList")
     public String authResourceHeaderListShrink;
 
-    // The ID of the domain name.
+    // The domain ID.
     @NameInMap("DomainId")
     public Long domainId;
 
@@ -25,6 +29,11 @@ public class AddAuthResourceShrinkRequest extends TeaModel {
     @NameInMap("IgnoreCase")
     public Boolean ignoreCase;
 
+    // The matching type.
+    // 
+    // *   exact: exact matching
+    // *   prefix: prefix matching
+    // *   regex: regular expression matching
     @NameInMap("MatchType")
     public String matchType;
 

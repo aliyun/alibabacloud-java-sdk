@@ -16,7 +16,7 @@ public class AddGatewayDomainResponseBody extends TeaModel {
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // The message returned.
+    // The error message.
     @NameInMap("Message")
     public String message;
 

@@ -16,7 +16,7 @@ public class ListSSLCertResponseBody extends TeaModel {
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // The error message returned if the request fails.
+    // The error message returned.
     @NameInMap("Message")
     public String message;
 
@@ -24,9 +24,10 @@ public class ListSSLCertResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request is successful. Valid values:
-    // - `true`: The request is successful. 
-    // - `false`: The request fails.
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // *   `true`: The request was successful.
+    // *   `false`: The request failed.
     @NameInMap("Success")
     public Boolean success;
 
@@ -84,15 +85,15 @@ public class ListSSLCertResponseBody extends TeaModel {
     }
 
     public static class ListSSLCertResponseBodyData extends TeaModel {
-        // The effective time of the certificate.
+        // The validation time.
         @NameInMap("AfterDate")
         public String afterDate;
 
-        // The algorithm of the certificate.
+        // The algorithm.
         @NameInMap("Algorithm")
         public String algorithm;
 
-        // The expiration time of the certificate.
+        // The expiration time.
         @NameInMap("BeforeDate")
         public String beforeDate;
 
@@ -108,15 +109,15 @@ public class ListSSLCertResponseBody extends TeaModel {
         @NameInMap("CommonName")
         public String commonName;
 
-        // The effective time of the certificate.
+        // The validation time.
         @NameInMap("GmtAfter")
         public String gmtAfter;
 
-        // The expiration time of the certificate.
+        // The expiration time.
         @NameInMap("GmtBefore")
         public String gmtBefore;
 
-        // The issuer of the certificate.
+        // The issuer.
         @NameInMap("Issuer")
         public String issuer;
 

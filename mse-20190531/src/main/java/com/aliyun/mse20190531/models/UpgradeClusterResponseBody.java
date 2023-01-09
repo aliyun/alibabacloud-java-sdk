@@ -4,18 +4,18 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class UpgradeClusterResponseBody extends TeaModel {
-    // The error code returned if the request fails.
+    // The error code returned if the request failed.
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // The status code returned.
+    // The response code returned.
     @NameInMap("HttpCode")
     public String httpCode;
 
-    // The message returned. Valid values: 
+    // The message returned.
     // 
-    // - If the request is successful, a success message is returned. 
-    // - If the request fails, an error message is returned.
+    // *   If the request is successful, a success message is returned.
+    // *   If the request fails, an error message is returned.
     @NameInMap("Message")
     public String message;
 
@@ -23,9 +23,10 @@ public class UpgradeClusterResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request is successful. Valid values:
-    // - `true`: The request is successful. 
-    // - `false`: The request fails.
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // *   `true`: The request was successful.
+    // *   `false`: The request failed.
     @NameInMap("Success")
     public Boolean success;
 

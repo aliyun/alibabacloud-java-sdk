@@ -19,7 +19,7 @@ public class QueryGovernanceKubernetesClusterRequest extends TeaModel {
     @NameInMap("ClusterName")
     public String clusterName;
 
-    // The number of the page to return.
+    // The page number of the page to return.
     @NameInMap("PageNumber")
     public Integer pageNumber;
 

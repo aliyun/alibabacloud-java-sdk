@@ -93,7 +93,7 @@ public class ListGatewaySlbResponseBody extends TeaModel {
         @NameInMap("GatewayId")
         public String gatewayId;
 
-        // The service source.
+        // The mode of the SLB instance.
         @NameInMap("GatewaySlbMode")
         public String gatewaySlbMode;
 

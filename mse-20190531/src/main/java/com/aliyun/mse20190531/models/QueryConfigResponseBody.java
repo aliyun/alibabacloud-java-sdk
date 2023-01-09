@@ -12,7 +12,7 @@ public class QueryConfigResponseBody extends TeaModel {
     @NameInMap("Data")
     public QueryConfigResponseBodyData data;
 
-    // The HTTP status code.
+    // The HTTP status code returned.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
@@ -112,18 +112,18 @@ public class QueryConfigResponseBody extends TeaModel {
         @NameInMap("AutopurgeSnapRetainCount")
         public String autopurgeSnapRetainCount;
 
-        // The name of the cluster.
+        // The name of the instance.
         @NameInMap("ClusterName")
         public String clusterName;
 
-        // Indicates whether RAM authentication of a configuration center is enabled. This parameter is valid for Nacos instances. Valid values:
+        // Indicates whether RAM authorization of a configuration center is enabled. This parameter is valid for Nacos instances. Valid values:
         // 
         // *   `true`: enabled
         // *   `false`: disabled
         @NameInMap("ConfigAuthEnabled")
         public Boolean configAuthEnabled;
 
-        // Indicates whether RAM authentication is supported by a configuration center of the instance. This parameter is valid for Nacos instances. Valid values:
+        // Indicates whether RAM authorization is supported by a configuration center of the instance. This parameter is valid for Nacos instances. Valid values:
         // 
         // *   `true`: supported
         // *   `false`: not supported
@@ -150,7 +150,7 @@ public class QueryConfigResponseBody extends TeaModel {
         @NameInMap("ExtendedTypesEnable")
         public Boolean extendedTypesEnable;
 
-        // The maximum connection duration of the instance. This parameter is valid for ZooKeeper instances. Unit: seconds.
+        // The maximum connection duration of the instance. Unit: seconds. This parameter is valid for ZooKeeper instances.
         @NameInMap("InitLimit")
         public String initLimit;
 
@@ -192,14 +192,14 @@ public class QueryConfigResponseBody extends TeaModel {
         @NameInMap("NacosRunningEnv")
         public QueryConfigResponseBodyDataNacosRunningEnv nacosRunningEnv;
 
-        // Indicates whether RAM authentication of a registry is enabled. This parameter is valid for Nacos instances. Valid values:
+        // Indicates whether RAM authorization of a registry is enabled. This parameter is valid for Nacos instances. Valid values:
         // 
         // *   `true`: enabled
         // *   `false`: disabled
         @NameInMap("NamingAuthEnabled")
         public Boolean namingAuthEnabled;
 
-        // Indicates whether RAM authentication of services is supported by the instance. This parameter is valid for Nacos instances. Valid values:
+        // Indicates whether RAM authorization of services is supported by the instance. This parameter is valid for Nacos instances. Valid values:
         // 
         // *   `true`: supported
         // *   `false`: not supported
@@ -220,7 +220,7 @@ public class QueryConfigResponseBody extends TeaModel {
         @NameInMap("OpenSuperAcl")
         public Boolean openSuperAcl;
 
-        // The password of the user. This parameter is valid only if OpenSuperAcl is set to true.
+        // The user password. This parameter is valid only if OpenSuperAcl is set to true.
         @NameInMap("PassWord")
         public String passWord;
 
@@ -243,7 +243,7 @@ public class QueryConfigResponseBody extends TeaModel {
         @NameInMap("TickTime")
         public String tickTime;
 
-        // The username of the user. This parameter is valid only if OpenSuperAcl is set to true.
+        // The username. This parameter is valid only if OpenSuperAcl is set to true.
         @NameInMap("UserName")
         public String userName;
 

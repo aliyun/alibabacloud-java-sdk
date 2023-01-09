@@ -4,30 +4,42 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListZkTrackResponseBody extends TeaModel {
+    // The error code returned if the request failed.
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    // The HTTP status code returned.
     @NameInMap("HttpCode")
     public String httpCode;
 
+    // The message returned.
     @NameInMap("Message")
     public String message;
 
+    // The page number of the returned page.
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    // The number of entries returned per page.
     @NameInMap("PageSize")
     public Long pageSize;
 
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // *   true: The request was successful.
+    // *   false: The request failed.
     @NameInMap("Success")
     public Boolean success;
 
+    // The total number of entries returned.
     @NameInMap("TotalCount")
     public Long totalCount;
 
+    // The trajectory data.
     @NameInMap("Traces")
     public java.util.List<ListZkTrackResponseBodyTraces> traces;
 
@@ -109,48 +121,83 @@ public class ListZkTrackResponseBody extends TeaModel {
     }
 
     public static class ListZkTrackResponseBodyTraces extends TeaModel {
-        // ACL。
+        // The access control list (ACL).
         @NameInMap("Acl")
         public String acl;
 
+        // The data type. Valid values:
+        // 
+        // *   persist
+        // *   ephemeral
         @NameInMap("DataType")
         public String dataType;
 
+        // The type of the event. For trajectory of the notify type:
+        // 
+        // *   NodeCreated
+        // *   NodeDeleted
+        // *   NodeDataChanged
+        // *   NodeChildrenChanged
         @NameInMap("EventType")
         public String eventType;
 
+        // Indicates whether the transaction ended.
         @NameInMap("Finished")
         public Boolean finished;
 
+        // The recorded time.
         @NameInMap("LogDate")
         public String logDate;
 
+        // The transaction size.
         @NameInMap("MultiSize")
         public Long multiSize;
 
+        // The operation type. For trajectory of the push type:
+        // 
+        // *   Create
+        // *   Update
+        // *   Delete
+        // *   SetAcl
+        // *   Multi
+        // 
+        // For trajectory of the pull type:
+        // 
+        // *   GetData
+        // *   GetChild
+        // *   GetStat
         @NameInMap("OpType")
         public String opType;
 
+        // The path.
         @NameInMap("Path")
         public String path;
 
+        // The returned message.
         @NameInMap("Result")
         public String result;
 
-        // SessionId。
+        // The session ID.
         @NameInMap("SessionId")
         public String sessionId;
 
+        // The timestamp (not available).
         @NameInMap("Timestamp")
         public String timestamp;
 
+        // The type of the trajectory. Valid values:
+        // 
+        // *   Push
+        // *   Pull
+        // *   Notify
         @NameInMap("TraceType")
         public String traceType;
 
-        // TTL。
+        // The time to live (TTL).
         @NameInMap("Ttl")
         public Long ttl;
 
+        // Indicates whether to enable the listener.
         @NameInMap("Watch")
         public Boolean watch;
 

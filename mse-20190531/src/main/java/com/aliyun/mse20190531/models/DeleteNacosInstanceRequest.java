@@ -11,13 +11,13 @@ public class DeleteNacosInstanceRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // The name of the instance.
+    // The alias of the instance.
     @NameInMap("ClusterName")
     public String clusterName;
 
-    // Specifies whether the instance is a temporary node. Valid values:
+    // Specifies whether the instance is marked as a temporary node. Valid values:
     // 
-    // *   `true`: yes
+    // *   `true`: monitors the task status.
     // *   `false`: no
     @NameInMap("Ephemeral")
     public Boolean ephemeral;
@@ -30,7 +30,7 @@ public class DeleteNacosInstanceRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // The IP address of the instance.
+    // The IP address of the Nacos instance.
     @NameInMap("Ip")
     public String ip;
 
@@ -38,7 +38,7 @@ public class DeleteNacosInstanceRequest extends TeaModel {
     @NameInMap("NamespaceId")
     public String namespaceId;
 
-    // The port number of the instance.
+    // The port of the Nacos instance.
     @NameInMap("Port")
     public Integer port;
 

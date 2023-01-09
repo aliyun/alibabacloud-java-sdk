@@ -8,7 +8,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
     @NameInMap("Data")
     public QueryClusterDetailResponseBodyData data;
 
-    // The error code returned if the request fails.
+    // The error code returned if the request failed.
     @NameInMap("ErrorCode")
     public String errorCode;
 
@@ -20,9 +20,10 @@ public class QueryClusterDetailResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request is successful. Valid values:
-    // - `true`: The request is successful. 
-    // - `false`: The request fails.
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // *   `true`: The request was successful.
+    // *   `false`: The request failed.
     @NameInMap("Success")
     public Boolean success;
 
@@ -72,11 +73,11 @@ public class QueryClusterDetailResponseBody extends TeaModel {
     }
 
     public static class QueryClusterDetailResponseBodyDataInstanceModels extends TeaModel {
-        // The timestamp when the node was created.
+        // The timestamp when the instance node was created.
         @NameInMap("CreationTimestamp")
         public String creationTimestamp;
 
-        // The health status of the node.
+        // The health status of the instance node.
         @NameInMap("HealthStatus")
         public String healthStatus;
 
@@ -92,7 +93,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
         @NameInMap("PodName")
         public String podName;
 
-        // The role of the node.
+        // The role.
         @NameInMap("Role")
         public String role;
 
@@ -100,6 +101,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
         @NameInMap("SingleTunnelVip")
         public String singleTunnelVip;
 
+        // The zone.
         @NameInMap("Zone")
         public String zone;
 
@@ -175,7 +177,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
     }
 
     public static class QueryClusterDetailResponseBodyData extends TeaModel {
-        // The whitelist of the cluster.
+        // The whitelist.
         @NameInMap("AclEntryList")
         public String aclEntryList;
 
@@ -183,7 +185,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
         @NameInMap("AclId")
         public String aclId;
 
-        // The version of the application.
+        // The application version.
         @NameInMap("AppVersion")
         public String appVersion;
 
@@ -191,38 +193,38 @@ public class QueryClusterDetailResponseBody extends TeaModel {
         @NameInMap("ChargeType")
         public String chargeType;
 
-        // The alias of the cluster.
+        // The alias of the instance.
         @NameInMap("ClusterAliasName")
         public String clusterAliasName;
 
-        // The name of the cluster.
+        // The name of the instance.
         @NameInMap("ClusterName")
         public String clusterName;
 
-        // The specifications of the engine.
+        // The engine specifications.
         @NameInMap("ClusterSpecification")
         public String clusterSpecification;
 
-        // The type of the cluster. Valid values: ZooKeeper, Nacos-Ans, and Eureka.
+        // The type of the instance. Valid values: ZooKeeper, Nacos-Ans, and Eureka.
         @NameInMap("ClusterType")
         public String clusterType;
 
-        // The version of the cluster.
+        // The version of the instance.
         @NameInMap("ClusterVersion")
         public String clusterVersion;
 
-        // The connection type. Valid values:
+        // The network connection type. Valid values:
         // 
-        // - slb
-        // - eni
+        // *   slb
+        // *   eni
         @NameInMap("ConnectionType")
         public String connectionType;
 
-        // The number of CPUs.
+        // The number of vCPUs.
         @NameInMap("Cpu")
         public Integer cpu;
 
-        // The time when the cluster was created.
+        // The time when the instance was created.
         @NameInMap("CreateTime")
         public String createTime;
 
@@ -234,19 +236,19 @@ public class QueryClusterDetailResponseBody extends TeaModel {
         @NameInMap("DiskType")
         public String diskType;
 
-        // The health status of the cluster.
+        // The health status of the instance.
         @NameInMap("HealthStatus")
         public String healthStatus;
 
-        // The amount of time taken to create the cluster. Unit: milliseconds.
+        // The amount of time taken to create the instance. Unit: milliseconds.
         @NameInMap("InitCostTime")
         public Long initCostTime;
 
-        // The creation status of the cluster.
+        // The creation status of the instance.
         @NameInMap("InitStatus")
         public String initStatus;
 
-        // The number of nodes.
+        // The number of instance nodes.
         @NameInMap("InstanceCount")
         public Integer instanceCount;
 
@@ -254,31 +256,31 @@ public class QueryClusterDetailResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
-        // The information about nodes.
+        // The list of instance nodes.
         @NameInMap("InstanceModels")
         public java.util.List<QueryClusterDetailResponseBodyDataInstanceModels> instanceModels;
 
-        // The public IP address.
+        // The public IP address of the instance.
         @NameInMap("InternetAddress")
         public String internetAddress;
 
-        // The public domain name.
+        // The public endpoint of the instance.
         @NameInMap("InternetDomain")
         public String internetDomain;
 
-        // The private port.
+        // The private port number.
         @NameInMap("InternetPort")
         public String internetPort;
 
-        // The private IP address.
+        // The internal IP address.
         @NameInMap("IntranetAddress")
         public String intranetAddress;
 
-        // The private domain name.
+        // The internal endpoint of the instance.
         @NameInMap("IntranetDomain")
         public String intranetDomain;
 
-        // The private port.
+        // The private port number.
         @NameInMap("IntranetPort")
         public String intranetPort;
 
@@ -286,17 +288,18 @@ public class QueryClusterDetailResponseBody extends TeaModel {
         @NameInMap("MemoryCapacity")
         public Long memoryCapacity;
 
-        // The version category of the cluster.
+        // The edition of Microservices Engine (MSE).
         @NameInMap("MseVersion")
         public String mseVersion;
 
-        // The network type of the cluster. Valid values:
+        // The network type of the instance. Valid values:
         // 
-        // - `privatenet`: private network 
-        // - `pubnet`: the Internet
+        // *   `privatenet`: VPC
+        // *   `pubnet`: Internet
         @NameInMap("NetType")
         public String netType;
 
+        // The version number of the original order.
         @NameInMap("OrderClusterVersion")
         public String orderClusterVersion;
 
@@ -304,18 +307,20 @@ public class QueryClusterDetailResponseBody extends TeaModel {
         @NameInMap("PayInfo")
         public String payInfo;
 
-        // The public bandwidth. Unit: Mbit/s.    
-        // Valid values: 0 to 5000. A value of 0 indicates no access to the Internet.
+        // The public bandwidth. Unit: Mbit/s.\
+        // Valid values: 0 to 5000. The value 0 indicates no access to the Internet.
         @NameInMap("PubNetworkFlow")
         public String pubNetworkFlow;
 
-        // The ID of the region.
+        // The region ID.
         @NameInMap("RegionId")
         public String regionId;
 
+        // The ID of the resource group.
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        // The tags that are attached to the instance.
         @NameInMap("Tags")
         public java.util.Map<String, ?> tags;
 
@@ -323,7 +328,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
-        // VPC ID.
+        // The ID of the virtual private cloud (VPC).
         @NameInMap("VpcId")
         public String vpcId;
 

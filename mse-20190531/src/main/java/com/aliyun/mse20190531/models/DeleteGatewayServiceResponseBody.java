@@ -4,7 +4,7 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class DeleteGatewayServiceResponseBody extends TeaModel {
-    // The status code returned.
+    // The response code returned.
     @NameInMap("Code")
     public Integer code;
 
@@ -20,14 +20,14 @@ public class DeleteGatewayServiceResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    // The ID of the request.
+    // The unique ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request is successful. Valid values:
+    // Indicates whether the request was successful. Valid values:
     // 
-    // - `true`: The request is successful. 
-    // - `false`: The request fails.
+    // *   `true`: The request was successful.
+    // *   `false`: The request failed.
     @NameInMap("Success")
     public Boolean success;
 
@@ -97,7 +97,7 @@ public class DeleteGatewayServiceResponseBody extends TeaModel {
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
-        // The time when the domain name was last modified.
+        // The last modification time.
         @NameInMap("GmtModified")
         public String gmtModified;
 
@@ -121,7 +121,7 @@ public class DeleteGatewayServiceResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
-        // The namespace in which the service resides.
+        // The namespace.
         @NameInMap("Namespace")
         public String namespace;
 
@@ -129,7 +129,7 @@ public class DeleteGatewayServiceResponseBody extends TeaModel {
         @NameInMap("ServiceNameInRegistry")
         public String serviceNameInRegistry;
 
-        // The source ID of the service.
+        // The ID of the service source.
         @NameInMap("SourceId")
         public Long sourceId;
 

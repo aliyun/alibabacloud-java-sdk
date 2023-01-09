@@ -8,7 +8,7 @@ public class DeleteNacosConfigResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    // The error code returned.
+    // The error code returned if the request failed.
     @NameInMap("ErrorCode")
     public String errorCode;
 

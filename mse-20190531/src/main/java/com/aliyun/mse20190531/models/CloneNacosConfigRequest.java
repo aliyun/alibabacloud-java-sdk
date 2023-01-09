@@ -6,8 +6,8 @@ import com.aliyun.tea.*;
 public class CloneNacosConfigRequest extends TeaModel {
     // The language of the response. Valid values:
     // 
-    // - zh: Chinese
-    // - en: English
+    // *   zh: Chinese
+    // *   en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
@@ -23,7 +23,11 @@ public class CloneNacosConfigRequest extends TeaModel {
     @NameInMap("OriginNamespaceId")
     public String originNamespaceId;
 
-    // The policy used to handle write conflicts.
+    // The policy used when a write conflict occurs.
+    // 
+    // *   ABORT
+    // *   SKIP
+    // *   OVERWRITE
     @NameInMap("Policy")
     public String policy;
 

@@ -4,11 +4,11 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class CreateApplicationResponseBody extends TeaModel {
-    // The status code returned.
+    // The response code returned.
     @NameInMap("Code")
     public Integer code;
 
-    // The details of the data.
+    // The data of the node.
     @NameInMap("Data")
     public CreateApplicationResponseBodyData data;
 
@@ -24,10 +24,10 @@ public class CreateApplicationResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request is successful. Valid values:
+    // Indicates whether the request was successful. Valid values:
     // 
-    // - `true`: The request is successful. 
-    // - `false`: The request fails.
+    // *   `true`: The request was successful.
+    // *   `false`: The request failed.
     @NameInMap("Success")
     public String success;
 
@@ -93,7 +93,7 @@ public class CreateApplicationResponseBody extends TeaModel {
         @NameInMap("AppName")
         public String appName;
 
-        // The time when the application was created.
+        // The creation time.
         @NameInMap("CreateTime")
         public Long createTime;
 
@@ -109,14 +109,14 @@ public class CreateApplicationResponseBody extends TeaModel {
         @NameInMap("LicenseKey")
         public String licenseKey;
 
-        // The ID of the region.
+        // The region ID.
         @NameInMap("RegionId")
         public String regionId;
 
-        // The service where the application is deployed. Valid values: 
+        // The service where the application is deployed. Valid values:
         // 
-        // - ACK: Container Service for Kubernetes 
-        // - Normal: another service
+        // *   \- ACK: Container Service for Kubernetes
+        // *   \- Normal: another service
         @NameInMap("Source")
         public String source;
 
@@ -124,7 +124,7 @@ public class CreateApplicationResponseBody extends TeaModel {
         @NameInMap("Status")
         public Integer status;
 
-        // The time when the application was last modified.
+        // The update time.
         @NameInMap("UpdateTime")
         public Long updateTime;
 

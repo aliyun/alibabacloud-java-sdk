@@ -20,7 +20,7 @@ public class UpdateSSLCertResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
+    // The request ID.
     @NameInMap("RequestId")
     public String requestId;
 

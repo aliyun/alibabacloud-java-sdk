@@ -4,11 +4,11 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class QuerySlbSpecResponseBody extends TeaModel {
-    // The status code returned.
+    // The return value.
     @NameInMap("Code")
     public Integer code;
 
-    // The returned data.
+    // The data entries returned.
     @NameInMap("Data")
     public java.util.List<QuerySlbSpecResponseBodyData> data;
 
@@ -24,9 +24,10 @@ public class QuerySlbSpecResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request is successful. Valid values:
-    // - `true`: The request is successful. 
-    // - `false`: The request fails.
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // *   `true`: The request was successful.
+    // *   `false`: The request failed.
     @NameInMap("Success")
     public Boolean success;
 
@@ -92,7 +93,7 @@ public class QuerySlbSpecResponseBody extends TeaModel {
         @NameInMap("MaxConnection")
         public String maxConnection;
 
-        // The name of the instance type.
+        // The name.
         @NameInMap("Name")
         public String name;
 
@@ -100,11 +101,11 @@ public class QuerySlbSpecResponseBody extends TeaModel {
         @NameInMap("NewConnectionPerSecond")
         public String newConnectionPerSecond;
 
-        // The maximum queries per second (QPS).
+        // The number of queries per second (QPS).
         @NameInMap("Qps")
         public String qps;
 
-        // The instance type of the SLB instance.
+        // The specifications.
         @NameInMap("Spec")
         public String spec;
 

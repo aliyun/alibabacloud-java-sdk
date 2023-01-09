@@ -13,7 +13,7 @@ public class ListAnsInstancesRequest extends TeaModel {
 
     // The ID of the cluster.
     // 
-    // > This operation contains both the InstanceId and ClusterId parameters. You must configure either InstanceId or ClusterId.
+    // > This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.
     @NameInMap("ClusterId")
     public String clusterId;
 
@@ -27,7 +27,7 @@ public class ListAnsInstancesRequest extends TeaModel {
 
     // The ID of the instance.
     // 
-    // > This operation contains both the InstanceId and ClusterId parameters. You must configure either InstanceId or ClusterId.
+    // >  This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -43,7 +43,7 @@ public class ListAnsInstancesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The extended request parameter in the JSON format.
+    // The extended request parameters in the JSON format.
     @NameInMap("RequestPars")
     public String requestPars;
 

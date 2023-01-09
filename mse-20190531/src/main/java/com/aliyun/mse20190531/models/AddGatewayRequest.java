@@ -15,11 +15,11 @@ public class AddGatewayRequest extends TeaModel {
     @NameInMap("EnableHardwareAcceleration")
     public Boolean enableHardwareAcceleration;
 
-    // Specifies whether to enable Log Service.
+    // Specifies whether to activate Log Service.
     @NameInMap("EnableSls")
     public Boolean enableSls;
 
-    // Specifies whether to enable Tracing Analysis.
+    // Specifies whether to activate Tracing Analysis.
     @NameInMap("EnableXtrace")
     public Boolean enableXtrace;
 
@@ -27,7 +27,7 @@ public class AddGatewayRequest extends TeaModel {
     @NameInMap("EnterpriseSecurityGroup")
     public Boolean enterpriseSecurityGroup;
 
-    // The specifications of the Internet-facing SLB instance.
+    // The specifications of the Internet-facing SLB instance. Valid values:
     // 
     // *   slb.s1.small
     // *   slb.s2.small
@@ -42,7 +42,7 @@ public class AddGatewayRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
-    // The ID of the region.
+    // The region ID.
     @NameInMap("Region")
     public String region;
 
@@ -54,7 +54,7 @@ public class AddGatewayRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    // The specifications of the internal-facing Server Load Balancer (SLB) instance.
+    // The specifications of the internal-facing Server Load Balancer (SLB) instance. Valid values:
     // 
     // *   slb.s1.small
     // *   slb.s2.small
@@ -65,7 +65,7 @@ public class AddGatewayRequest extends TeaModel {
     @NameInMap("SlbSpec")
     public String slbSpec;
 
-    // The node specifications.
+    // The node specifications. Valid values:
     // 
     // *   MSE_GTW\_16\_32\_200\_c(16C32G)
     // *   MSE_GTW\_2\_4\_200\_c(2C4G)

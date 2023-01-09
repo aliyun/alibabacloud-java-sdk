@@ -4,7 +4,7 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class QueryClusterSpecificationResponseBody extends TeaModel {
-    // The status code returned.
+    // The return value.
     @NameInMap("Code")
     public Integer code;
 
@@ -12,11 +12,11 @@ public class QueryClusterSpecificationResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.List<QueryClusterSpecificationResponseBodyData> data;
 
-    // The error code returned.
+    // The error code returned if the request failed.
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // The HTTP status code.
+    // The HTTP status code returned.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 

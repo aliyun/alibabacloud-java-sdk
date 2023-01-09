@@ -4,7 +4,10 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ImportServicesRequest extends TeaModel {
-    // The data structure.
+    // The language of the response. Valid values:
+    // 
+    // *   zh: Chinese
+    // *   en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
@@ -16,10 +19,22 @@ public class ImportServicesRequest extends TeaModel {
     @NameInMap("ServiceList")
     public java.util.List<ImportServicesRequestServiceList> serviceList;
 
-    // The source type of the service.
+    // The service source. Valid values:
+    // 
+    // *   MSE: MSE Nacos instance
+    // *   K8s: ACK cluster
+    // *   VIP: fixed address
+    // *   DNS: DNS domain
     @NameInMap("SourceType")
     public String sourceType;
 
+    // The Transport Layer Security (TLS) settings. Valid values:
+    // 
+    // *   mode: TLS mode
+    // *   certId: certificate ID
+    // *   caCertId: CA certificate ID
+    // *   caCertContent: CA certificate public key
+    // *   sni: service name identification
     @NameInMap("TlsSetting")
     public String tlsSetting;
 
@@ -69,7 +84,7 @@ public class ImportServicesRequest extends TeaModel {
     }
 
     public static class ImportServicesRequestServiceList extends TeaModel {
-        // The name of the group.
+        // The group.
         @NameInMap("GroupName")
         public String groupName;
 
@@ -81,7 +96,7 @@ public class ImportServicesRequest extends TeaModel {
         @NameInMap("Name")
         public String name;
 
-        // The name of the namespace.
+        // The namespace.
         @NameInMap("Namespace")
         public String namespace;
 

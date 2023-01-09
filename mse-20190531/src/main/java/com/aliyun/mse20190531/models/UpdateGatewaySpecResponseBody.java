@@ -8,11 +8,11 @@ public class UpdateGatewaySpecResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
-    // The returned data.
+    // The returned message.
     @NameInMap("Data")
     public String data;
 
-    // The HTTP status code.
+    // The HTTP status code returned.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
@@ -20,7 +20,7 @@ public class UpdateGatewaySpecResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    // ID of the Request.
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

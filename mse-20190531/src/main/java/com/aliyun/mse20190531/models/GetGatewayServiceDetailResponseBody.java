@@ -4,7 +4,7 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetGatewayServiceDetailResponseBody extends TeaModel {
-    // The status code returned.
+    // The response code returned.
     @NameInMap("Code")
     public Integer code;
 
@@ -24,9 +24,10 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request is successful. Valid values:
-    // - `true`: The request is successful. 
-    // - `false`: The request fails.
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // *   `true`: The request was successful.
+    // *   `false`: The request failed.
     @NameInMap("Success")
     public Boolean success;
 
@@ -84,11 +85,11 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
     }
 
     public static class GetGatewayServiceDetailResponseBodyDataLabelDetails extends TeaModel {
-        // The key of the tag.
+        // The tag.
         @NameInMap("Key")
         public String key;
 
-        // The values of the tag.
+        // The key of the tag.
         @NameInMap("Values")
         public java.util.List<String> values;
 
@@ -116,24 +117,31 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
     }
 
     public static class GetGatewayServiceDetailResponseBodyDataPortTrafficPolicyList extends TeaModel {
+        // The unique ID of the gateway.
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 
+        // The creation time.
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        // The modification time.
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        // The ID of the port configuration.
         @NameInMap("Id")
         public Long id;
 
+        // The ID of the service.
         @NameInMap("ServiceId")
         public Long serviceId;
 
+        // The service port number.
         @NameInMap("ServicePort")
         public Integer servicePort;
 
+        // The traffic policy.
         @NameInMap("TrafficPolicy")
         public TrafficPolicy trafficPolicy;
 
@@ -201,11 +209,11 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
     }
 
     public static class GetGatewayServiceDetailResponseBodyDataVersionDetailsServiceVersionLabels extends TeaModel {
-        // The key of the tag.
+        // The tag.
         @NameInMap("Key")
         public String key;
 
-        // The value of the tag.
+        // The key of the tag.
         @NameInMap("Value")
         public String value;
 
@@ -233,11 +241,11 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
     }
 
     public static class GetGatewayServiceDetailResponseBodyDataVersionDetailsServiceVersion extends TeaModel {
-        // The tags of the version.
+        // The tag.
         @NameInMap("Labels")
         public java.util.List<GetGatewayServiceDetailResponseBodyDataVersionDetailsServiceVersionLabels> labels;
 
-        // The name of the version.
+        // The version number.
         @NameInMap("Name")
         public String name;
 
@@ -309,15 +317,15 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
     }
 
     public static class GetGatewayServiceDetailResponseBodyDataVersions extends TeaModel {
-        // The key of the tag.
+        // The tag.
         @NameInMap("Label")
         public String label;
 
-        // The type of the version.
+        // The type.
         @NameInMap("Type")
         public String type;
 
-        // The value of the tag.
+        // The key of the tag.
         @NameInMap("Value")
         public String value;
 
@@ -365,11 +373,11 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 
-        // The time when the service was added.
+        // The creation time.
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
-        // The time when the service was last modified.
+        // The last modification time.
         @NameInMap("GmtModified")
         public String gmtModified;
 
@@ -377,9 +385,11 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         @NameInMap("GroupName")
         public String groupName;
 
+        // Indicates whether the health check is enabled.
         @NameInMap("HealthCheck")
         public String healthCheck;
 
+        // The status of the health check. Valid values:
         @NameInMap("HealthStatus")
         public String healthStatus;
 
@@ -387,11 +397,11 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         @NameInMap("Id")
         public Long id;
 
-        // The IP addresses of the service.
+        // The IP address of the service.
         @NameInMap("Ips")
         public java.util.List<String> ips;
 
-        // The details of tags.
+        // The details of the tag.
         @NameInMap("LabelDetails")
         public java.util.List<GetGatewayServiceDetailResponseBodyDataLabelDetails> labelDetails;
 
@@ -403,13 +413,15 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
-        // The name of the namespace.
+        // The namespace.
         @NameInMap("Namespace")
         public String namespace;
 
+        // The traffic policy of service ports.
         @NameInMap("PortTrafficPolicyList")
         public java.util.List<GetGatewayServiceDetailResponseBodyDataPortTrafficPolicyList> portTrafficPolicyList;
 
+        // The array of service ports.
         @NameInMap("Ports")
         public java.util.List<Integer> ports;
 
@@ -417,10 +429,11 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         @NameInMap("ServiceNameInRegistry")
         public String serviceNameInRegistry;
 
+        // The protocol of the service.
         @NameInMap("ServiceProtocol")
         public String serviceProtocol;
 
-        // The source ID of the service.
+        // The ID of the service source.
         @NameInMap("SourceId")
         public Long sourceId;
 
@@ -432,7 +445,7 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         @NameInMap("VersionDetails")
         public java.util.List<GetGatewayServiceDetailResponseBodyDataVersionDetails> versionDetails;
 
-        // The versions of the service.
+        // The version of the service.
         @NameInMap("Versions")
         public java.util.List<GetGatewayServiceDetailResponseBodyDataVersions> versions;
 

@@ -27,11 +27,11 @@ public class ListClustersRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    // The extended request parameter in the JSON format.
+    // The extended request parameters in the JSON format.
     @NameInMap("RequestPars")
     public String requestPars;
 
-    // The ID of the resource group. For more information about resource groups, see the topic "View basic information of a resource group."
+    // The ID of the resource group to which the instance belongs. For more information about resource groups, see the topic "View basic information of a resource group."
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -109,11 +109,11 @@ public class ListClustersRequest extends TeaModel {
     }
 
     public static class ListClustersRequestTag extends TeaModel {
-        // The key of a tag.
+        // The tag key.
         @NameInMap("Key")
         public String key;
 
-        // The value of a tag.
+        // The tag value.
         @NameInMap("Value")
         public String value;
 

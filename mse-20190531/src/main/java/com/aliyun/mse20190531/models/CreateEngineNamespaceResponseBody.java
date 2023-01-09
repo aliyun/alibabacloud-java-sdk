@@ -4,7 +4,7 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class CreateEngineNamespaceResponseBody extends TeaModel {
-    // The ID of the cluster.
+    // The ID of the instance.
     @NameInMap("ClusterId")
     public String clusterId;
 
@@ -12,7 +12,7 @@ public class CreateEngineNamespaceResponseBody extends TeaModel {
     @NameInMap("Data")
     public CreateEngineNamespaceResponseBodyData data;
 
-    // The error code returned.
+    // The error code returned if the request failed.
     @NameInMap("ErrorCode")
     public String errorCode;
 

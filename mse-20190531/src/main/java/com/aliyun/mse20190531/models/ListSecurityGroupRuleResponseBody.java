@@ -8,7 +8,7 @@ public class ListSecurityGroupRuleResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
-    // The returned results.
+    // The returned data.
     @NameInMap("Data")
     public java.util.List<ListSecurityGroupRuleResponseBodyData> data;
 
@@ -20,13 +20,14 @@ public class ListSecurityGroupRuleResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request is successful. Valid values:
-    // - `true`: The request is successful. 
-    // - `false`: The request fails.
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // *   `true`: The request was successful.
+    // *   `false`: The request failed.
     @NameInMap("Success")
     public Boolean success;
 
@@ -96,23 +97,23 @@ public class ListSecurityGroupRuleResponseBody extends TeaModel {
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 
-        // The time when the security group rule was created.
+        // The creation time.
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
-        // The time when the security group rule was last modified.
+        // The last modification time.
         @NameInMap("GmtModified")
         public String gmtModified;
 
-        // ID.
+        // The ID.
         @NameInMap("Id")
         public String id;
 
-        // The type of the protocol.
+        // The protocol type.
         @NameInMap("IpProtocol")
         public String ipProtocol;
 
-        // The range of ports.
+        // The port range.
         @NameInMap("PortRange")
         public String portRange;
 

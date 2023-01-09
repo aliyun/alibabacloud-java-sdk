@@ -4,7 +4,7 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListGatewayServiceResponseBody extends TeaModel {
-    // The status code returned.
+    // The return value.
     @NameInMap("Code")
     public Integer code;
 
@@ -203,7 +203,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
         @NameInMap("LoadbalancerType")
         public String loadbalancerType;
 
-        // The prefetch time of least connection load balancing.
+        // The prefetch time of the least connection load balancing.
         @NameInMap("WarmupDuration")
         public Integer warmupDuration;
 
@@ -328,7 +328,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
         @NameInMap("LoadBalancerSettings")
         public ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicyLoadBalancerSettings loadBalancerSettings;
 
-        // TLS.
+        // The Transport Layer Security (TLS).
         @NameInMap("Tls")
         public ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicyTls tls;
 
@@ -540,7 +540,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
         @NameInMap("HealthStatus")
         public String healthStatus;
 
-        // ID.
+        // The ID.
         @NameInMap("Id")
         public Long id;
 
@@ -788,7 +788,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
-        // The maximum number of entries returned per page. Default value: 10.
+        // The number of entries returned per page. Default value: 10.
         @NameInMap("PageSize")
         public Integer pageSize;
 

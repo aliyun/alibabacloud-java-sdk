@@ -8,7 +8,13 @@ public class GetGatewayOptionResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
-    // The returned data.
+    // The detailed configurations of the gateway.
+    // 
+    // *   **TraceDetails**: the sampling description of Tracing Analysis. Content: TraceEnabled indicates whether Tracing Analysis is activated. Sample indicates the sampling rate of Tracing Analysis.
+    // *   **LogConfigDetails**: the description of Log Service. Content: LogEnabled indicates whether Log Service is activated. ProjectName indicates the Log Service project to which logs are delivered. LogStoreName indicates the name of the Logstore.
+    // *   **EnableHardwareAcceleration**: indicates whether hardware acceleration is enabled.
+    // *   **DisableHttp2Alpn**: indicates whether the HTTP/2 protocol is disabled.
+    // *   **EnableWaf**: indicates whether Web Application Firewall (WAF) is enabled.
     @NameInMap("Data")
     public GatewayOption data;
 

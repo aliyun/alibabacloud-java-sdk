@@ -113,7 +113,7 @@ public class CreateMseServiceApplicationResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
-        // The type of the service source.
+        // The source type.
         @NameInMap("Source")
         public String source;
 
@@ -121,7 +121,7 @@ public class CreateMseServiceApplicationResponseBody extends TeaModel {
         @NameInMap("Status")
         public Integer status;
 
-        // The time of the last modification.
+        // The last modification time.
         @NameInMap("UpdateTime")
         public Long updateTime;
 

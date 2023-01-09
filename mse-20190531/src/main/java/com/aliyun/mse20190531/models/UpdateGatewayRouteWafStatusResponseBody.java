@@ -12,15 +12,15 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
     @NameInMap("Data")
     public UpdateGatewayRouteWafStatusResponseBodyData data;
 
-    // The HTTP status code.
+    // The HTTP status code returned.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // The response message.
+    // The message returned.
     @NameInMap("Message")
     public String message;
 
-    // ID of the Request.
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -193,7 +193,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
         @NameInMap("Body")
         public String body;
 
-        // The return value.
+        // The status code returned.
         @NameInMap("Code")
         public Integer code;
 
@@ -305,7 +305,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
         @NameInMap("DirectionType")
         public String directionType;
 
-        // Header Key.
+        // The header key.
         @NameInMap("Key")
         public String key;
 
@@ -437,7 +437,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
         @NameInMap("Attempts")
         public Integer attempts;
 
-        // The HTTP status code.
+        // The HTTP status code returned.
         @NameInMap("HttpCodes")
         public java.util.List<String> httpCodes;
 
@@ -845,11 +845,11 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
         @NameInMap("DirectResponse")
         public UpdateGatewayRouteWafStatusResponseBodyDataDirectResponse directResponse;
 
-        // The ID of the domain name.
+        // The domain ID.
         @NameInMap("DomainId")
         public Long domainId;
 
-        // The IDs of the domain names.
+        // The IDs of domains.
         @NameInMap("DomainIdList")
         public java.util.List<Long> domainIdList;
 
@@ -857,11 +857,11 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
         @NameInMap("DomainName")
         public String domainName;
 
-        // The domain names.
+        // The list of domain names.
         @NameInMap("DomainNameList")
         public java.util.List<String> domainNameList;
 
-        // Indicates whether WAF is enabled.
+        // Indicates whether WAF is activated.
         @NameInMap("EnableWaf")
         public Boolean enableWaf;
 
@@ -885,7 +885,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
         @NameInMap("HTTPRewrite")
         public UpdateGatewayRouteWafStatusResponseBodyDataHTTPRewrite HTTPRewrite;
 
-        // The information about the header configuration policy.
+        // The header settings.
         @NameInMap("HeaderOp")
         public UpdateGatewayRouteWafStatusResponseBodyDataHeaderOp headerOp;
 

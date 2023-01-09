@@ -6,12 +6,12 @@ import com.aliyun.tea.*;
 public class UpdateGatewayRouteShrinkRequest extends TeaModel {
     // The language of the response. Valid values:
     // 
-    // - zh: Chinese
-    // - en: English
+    // *   zh: Chinese
+    // *   en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // The type of the destination service.
+    // The destination service type.
     @NameInMap("DestinationType")
     public String destinationType;
 
@@ -19,16 +19,19 @@ public class UpdateGatewayRouteShrinkRequest extends TeaModel {
     @NameInMap("DirectResponseJSON")
     public String directResponseJSONShrink;
 
-    // The IDs of domain names with which the route is associated.
+    // The associated domain name.
     @NameInMap("DomainIdListJSON")
     public String domainIdListJSON;
 
+    // Specifies whether to enable Web Application Firewall (WAF).
     @NameInMap("EnableWaf")
     public Boolean enableWaf;
 
+    // Specifies whether to enable the Fallback service.
     @NameInMap("Fallback")
     public Boolean fallback;
 
+    // The information about the Fallback service.
     @NameInMap("FallbackServices")
     public String fallbackServicesShrink;
 
@@ -48,11 +51,11 @@ public class UpdateGatewayRouteShrinkRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
-    // The matching rules of the route.
+    // The route matching conditions.
     @NameInMap("Predicates")
     public String predicatesShrink;
 
-    // The configuration of the redirect action.
+    // The information about redirection.
     @NameInMap("RedirectJSON")
     public String redirectJSONShrink;
 
@@ -60,7 +63,7 @@ public class UpdateGatewayRouteShrinkRequest extends TeaModel {
     @NameInMap("RouteOrder")
     public Integer routeOrder;
 
-    // The information about services.
+    // The information about destination services.
     @NameInMap("Services")
     public String servicesShrink;
 

@@ -6,8 +6,8 @@ import com.aliyun.tea.*;
 public class UpdateBlackWhiteListRequest extends TeaModel {
     // The language of the response. Valid values:
     // 
-    // - zh: Chinese
-    // - en: English
+    // *   zh: Chinese
+    // *   en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
@@ -27,12 +27,15 @@ public class UpdateBlackWhiteListRequest extends TeaModel {
     @NameInMap("IsWhite")
     public Boolean isWhite;
 
+    // The name.
     @NameInMap("Name")
     public String name;
 
+    // The description.
     @NameInMap("Note")
     public String note;
 
+    // The resource IDs in the JSON format.
     @NameInMap("ResourceIdJsonList")
     public String resourceIdJsonList;
 

@@ -6,16 +6,16 @@ import com.aliyun.tea.*;
 public class GetNacosHistoryConfigRequest extends TeaModel {
     // The language of the response. Valid values:
     // 
-    // - zh: Chinese
-    // - en: English
+    // *   zh: Chinese
+    // *   en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // The ID of the configuration.
+    // The ID of the data.
     @NameInMap("DataId")
     public String dataId;
 
-    // The name of the group.
+    // The group.
     @NameInMap("Group")
     public String group;
 
@@ -27,7 +27,7 @@ public class GetNacosHistoryConfigRequest extends TeaModel {
     @NameInMap("NamespaceId")
     public String namespaceId;
 
-    // The historical version ID of the configuration.
+    // The version ID of the configuration.
     @NameInMap("Nid")
     public String nid;
 

@@ -23,6 +23,9 @@ public class GetApplicationListRequest extends TeaModel {
     @NameInMap("Language")
     public String language;
 
+    @NameInMap("Namespace")
+    public String namespace;
+
     // The number of the page to return.
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -82,6 +85,14 @@ public class GetApplicationListRequest extends TeaModel {
     }
     public String getLanguage() {
         return this.language;
+    }
+
+    public GetApplicationListRequest setNamespace(String namespace) {
+        this.namespace = namespace;
+        return this;
+    }
+    public String getNamespace() {
+        return this.namespace;
     }
 
     public GetApplicationListRequest setPageNumber(Integer pageNumber) {

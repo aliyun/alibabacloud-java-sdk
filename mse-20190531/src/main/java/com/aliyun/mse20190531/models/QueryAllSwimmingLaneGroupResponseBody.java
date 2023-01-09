@@ -16,7 +16,7 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
-    // The error code returned if the request fails.
+    // The error code returned if the request failed.
     @NameInMap("ErrorCode")
     public String errorCode;
 
@@ -24,10 +24,10 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // The message returned. Valid values: 
+    // The message returned.
     // 
-    // - If the request is successful, a success message is returned. 
-    // - If the request fails, an error message is returned.
+    // *   If the request is successful, a success message is returned.
+    // *   If the request fails, an error message is returned.
     @NameInMap("Message")
     public String message;
 
@@ -35,9 +35,10 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request is successful. Valid values:
-    // - `true`: The request is successful. 
-    // - `false`: The request fails.
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // *   `true`: The request was successful.
+    // *   `false`: The request failed.
     @NameInMap("Success")
     public Boolean success;
 

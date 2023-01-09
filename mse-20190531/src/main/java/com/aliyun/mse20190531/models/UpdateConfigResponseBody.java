@@ -4,7 +4,7 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class UpdateConfigResponseBody extends TeaModel {
-    // The return code.
+    // The status code returned.
     @NameInMap("Code")
     public Integer code;
 

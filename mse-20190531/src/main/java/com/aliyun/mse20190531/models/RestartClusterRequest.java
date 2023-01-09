@@ -4,6 +4,10 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class RestartClusterRequest extends TeaModel {
+    // The language of the response. Valid values:
+    // 
+    // *   zh: Chinese
+    // *   en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
@@ -15,8 +19,7 @@ public class RestartClusterRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // The name of the pod. You can specify the names of multiple pods at a time. Separate multiple pod names with commas (,).
-    // Example: mse-a8aba010-1629719288255-reg-center-0-1,mse-a8aba010-1629719288255-reg-center-0-2.
+    // The names of pods. You can specify the names of multiple pods at a time. Separate multiple pod names with commas (,). Example: mse-a8aba010-1629719288255-reg-center-0-1,mse-a8aba010-1629719288255-reg-center-0-2.
     // 
     // The specified pods must belong to the current cluster and be associated with the specified instance. Otherwise, a restart exception occurs.
     @NameInMap("PodNameList")

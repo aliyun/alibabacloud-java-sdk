@@ -24,9 +24,10 @@ public class AddMockRuleResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request is successful. Valid values:
-    // - `true`: The request is successful. 
-    // - `false`: The request fails.
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // *   `true`: The request was successful.
+    // *   `false`: The request failed.
     @NameInMap("Success")
     public Boolean success;
 
@@ -96,10 +97,10 @@ public class AddMockRuleResponseBody extends TeaModel {
         @NameInMap("ConsumerAppName")
         public String consumerAppName;
 
-        // Indicates whether the rule is enabled. 
+        // Indicates whether the mock rule is enabled.
         // 
-        // - `true`: enabled 
-        // - `false`: disabled
+        // *   `true`: enabled
+        // *   `false`: disabled
         @NameInMap("Enable")
         public Boolean enable;
 
@@ -111,14 +112,14 @@ public class AddMockRuleResponseBody extends TeaModel {
         @NameInMap("Id")
         public Long id;
 
-        // The type of the model. Valid values:
+        // The mock type. Valid values:
         // 
-        // - `[unk]0[unk]`: desktop client
-        // - `[unk]1[unk]`: mobile client
+        // *   \- `[unk]0[unk]`: desktop client
+        // *   \- `[unk]1[unk]`: mobile client
         @NameInMap("MockType")
         public Long mockType;
 
-        // The name of the rule.
+        // The name.
         @NameInMap("Name")
         public String name;
 
@@ -134,7 +135,7 @@ public class AddMockRuleResponseBody extends TeaModel {
         @NameInMap("ProviderAppName")
         public String providerAppName;
 
-        // The ID of the region.
+        // The region ID.
         @NameInMap("Region")
         public String region;
 
@@ -142,7 +143,7 @@ public class AddMockRuleResponseBody extends TeaModel {
         @NameInMap("ScMockItemJson")
         public String scMockItemJson;
 
-        // The source.
+        // The service source.
         @NameInMap("Source")
         public String source;
 

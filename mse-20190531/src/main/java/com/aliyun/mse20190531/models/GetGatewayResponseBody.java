@@ -12,7 +12,7 @@ public class GetGatewayResponseBody extends TeaModel {
     @NameInMap("Data")
     public GetGatewayResponseBodyData data;
 
-    // The HTTP status code.
+    // The HTTP status code returned.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
@@ -85,7 +85,7 @@ public class GetGatewayResponseBody extends TeaModel {
     }
 
     public static class GetGatewayResponseBodyDataLogConfigDetails extends TeaModel {
-        // Indicates whether log shipping is enabled.
+        // Indicates whether Log Service is activated.
         @NameInMap("LogEnabled")
         public Boolean logEnabled;
 
@@ -193,7 +193,7 @@ public class GetGatewayResponseBody extends TeaModel {
         @NameInMap("LogConfigDetails")
         public GetGatewayResponseBodyDataLogConfigDetails logConfigDetails;
 
-        // The tag of the instance.
+        // The tag of the resource.
         @NameInMap("MseTag")
         public String mseTag;
 
@@ -205,7 +205,7 @@ public class GetGatewayResponseBody extends TeaModel {
         @NameInMap("PrimaryUser")
         public String primaryUser;
 
-        // The ID of the region.
+        // The region ID.
         @NameInMap("Region")
         public String region;
 

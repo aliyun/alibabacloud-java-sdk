@@ -19,7 +19,7 @@ public class AddGatewayRouteShrinkRequest extends TeaModel {
     @NameInMap("DirectResponseJSON")
     public String directResponseJSONShrink;
 
-    // The ID of the domain name.
+    // The domain ID.
     @NameInMap("DomainId")
     public Long domainId;
 
@@ -27,7 +27,7 @@ public class AddGatewayRouteShrinkRequest extends TeaModel {
     @NameInMap("DomainIdListJSON")
     public String domainIdListJSON;
 
-    // Specifies whether to enable Web Application Firewall (WAF).
+    // Specifies whether to activate Web Application Firewall (WAF).
     @NameInMap("EnableWaf")
     public Boolean enableWaf;
 
@@ -35,7 +35,7 @@ public class AddGatewayRouteShrinkRequest extends TeaModel {
     @NameInMap("Fallback")
     public Boolean fallback;
 
-    // The information of the Fallback service.
+    // The information about the Fallback service.
     @NameInMap("FallbackServices")
     public String fallbackServicesShrink;
 

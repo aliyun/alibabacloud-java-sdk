@@ -6,8 +6,8 @@ import com.aliyun.tea.*;
 public class UpdateGatewayRouteTimeoutRequest extends TeaModel {
     // The language of the response. Valid values:
     // 
-    // - zh: Chinese
-    // - en: English
+    // *   zh: Chinese
+    // *   en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
@@ -19,7 +19,7 @@ public class UpdateGatewayRouteTimeoutRequest extends TeaModel {
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
-    // The ID of the route.
+    // The ID of the associated record.
     @NameInMap("Id")
     public Long id;
 

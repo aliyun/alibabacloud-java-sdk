@@ -6,24 +6,31 @@ import com.aliyun.tea.*;
 public class ExportNacosConfigRequest extends TeaModel {
     // The language of the response. Valid values:
     // 
-    // - zh: Chinese
-    // - en: English
+    // *   zh: Chinese
+    // *   en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // The name of the application.
+    // The tag of the application.
     @NameInMap("AppName")
     public String appName;
 
-    // The data ID.
+    // The ID of the data that you want to export.
+    // 
+    // > :
+    // 
+    // *   Multiple export methods are supported.
+    // *   If you want to export a single configuration, you must leave the Ids parameter empty and specify the DataID and Group parameters.
     @NameInMap("DataId")
     public String dataId;
 
-    // The name of the group.
+    // The name of the configuration group.
     @NameInMap("Group")
     public String group;
 
-    // The IDs of configurations.
+    // The ID of the primary key of a configuration item.
+    // 
+    // > : - Multiple export methods are supported. You must specify this parameter if you want to export multiple configurations. - You can obtain the value of this parameter by calling the ListNacosConfigs operation. - If you specify this parameter, multiple configurations are exported. The DataId and Group parameters are invalid.
     @NameInMap("Ids")
     public String ids;
 

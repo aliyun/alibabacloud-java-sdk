@@ -11,7 +11,7 @@ public class ListAnsServicesRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // The ID of the cluster.
+    // The ID of the instance.
     // 
     // > This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.
     @NameInMap("ClusterId")
@@ -43,7 +43,7 @@ public class ListAnsServicesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The extended request parameter in the JSON format.
+    // The extended request parameters in the JSON format.
     @NameInMap("RequestPars")
     public String requestPars;
 

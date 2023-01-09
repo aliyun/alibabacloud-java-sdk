@@ -8,11 +8,11 @@ public class ListAnsInstancesResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.List<ListAnsInstancesResponseBodyData> data;
 
-    // The error code returned.
+    // The error code returned if the request failed.
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // The HTTP status code.
+    // The HTTP status code returned.
     @NameInMap("HttpCode")
     public String httpCode;
 
@@ -144,7 +144,7 @@ public class ListAnsInstancesResponseBody extends TeaModel {
         @NameInMap("Enabled")
         public Boolean enabled;
 
-        // Indicates whether the service is marked as a temporary node. Valid values:
+        // Indicates whether the information about the temporary node is obtained. Valid values:
         // 
         // *   `true`: yes
         // *   `false`: no
@@ -182,7 +182,7 @@ public class ListAnsInstancesResponseBody extends TeaModel {
         @NameInMap("IpDeleteTimeout")
         public Integer ipDeleteTimeout;
 
-        // The time when the instance heartbeat was last checked.
+        // The last heartbeat time.
         @NameInMap("LastBeat")
         public Long lastBeat;
 

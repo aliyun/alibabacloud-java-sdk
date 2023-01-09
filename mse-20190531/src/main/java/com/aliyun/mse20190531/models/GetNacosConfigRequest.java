@@ -6,23 +6,23 @@ import com.aliyun.tea.*;
 public class GetNacosConfigRequest extends TeaModel {
     // The language of the response. Valid values:
     // 
-    // - zh: Chinese
-    // - en: English
+    // *   zh: Chinese
+    // *   en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // Specifies whether to perform a beta release. Valid values: 
+    // Specifies whether to perform a beta release. Valid values:
     // 
-    // - `true`
-    // - `false`
+    // *   `true`: yes
+    // *   `false`: no
     @NameInMap("Beta")
     public Boolean beta;
 
-    // The ID of the configuration.
+    // The ID of the data.
     @NameInMap("DataId")
     public String dataId;
 
-    // The name of the group.
+    // The name of the configuration group.
     @NameInMap("Group")
     public String group;
 

@@ -4,7 +4,7 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class SelectGatewaySlbResponseBody extends TeaModel {
-    // The HTTP status code returned.
+    // The status code returned.
     @NameInMap("Code")
     public Integer code;
 
@@ -85,7 +85,7 @@ public class SelectGatewaySlbResponseBody extends TeaModel {
     }
 
     public static class SelectGatewaySlbResponseBodyData extends TeaModel {
-        // SLB ID.
+        // The ID of the SLB instance.
         @NameInMap("SlbId")
         public String slbId;
 

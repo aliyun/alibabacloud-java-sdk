@@ -8,7 +8,7 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.List<ListEurekaInstancesResponseBodyData> data;
 
-    // The error code returned if the request fails.
+    // The error code returned if the request failed.
     @NameInMap("ErrorCode")
     public String errorCode;
 
@@ -32,13 +32,14 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request is successful. Valid values:
-    // - `true`: The request is successful. 
-    // - `false`: The request fails.
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // *   `true`: The request was successful.
+    // *   `false`: The request failed.
     @NameInMap("Success")
     public Boolean success;
 
-    // The total number of entries returned.
+    // The total number of returned instances.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -124,8 +125,8 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
         @NameInMap("App")
         public String app;
 
-        // The timeout period of the instance.   
-        // After the specified timeout period expires, the service is unavailable by default and therefore is deleted.
+        // The timeout period of the instance.\
+        // After the specified timeout period expires, the service is unavailable by default and is deleted.
         @NameInMap("DurationInSecs")
         public Integer durationInSecs;
 
@@ -141,7 +142,7 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
-        // The IP address of the instance.
+        // The IP address.
         @NameInMap("IpAddr")
         public String ipAddr;
 
@@ -157,11 +158,11 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
         @NameInMap("Metadata")
         public java.util.Map<String, ?> metadata;
 
-        // The port of the service.
+        // The service port number.
         @NameInMap("Port")
         public Integer port;
 
-        // The maximum interval between two heartbeat checks after a heartbeat check times out.   
+        // The maximum interval between two heartbeat checks after a heartbeat check times out.\
         // Default value: 10.
         @NameInMap("RenewalIntervalInSecs")
         public Integer renewalIntervalInSecs;
@@ -174,7 +175,7 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
-        // The virtual hostname.
+        // The virtual IP address (VIP).
         @NameInMap("VipAddress")
         public String vipAddress;
 

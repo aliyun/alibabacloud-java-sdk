@@ -85,7 +85,7 @@ public class DeleteAuthResourceResponseBody extends TeaModel {
     }
 
     public static class DeleteAuthResourceResponseBodyData extends TeaModel {
-        // The ID of the authorization record.
+        // The authentication ID.
         @NameInMap("AuthId")
         public Long authId;
 

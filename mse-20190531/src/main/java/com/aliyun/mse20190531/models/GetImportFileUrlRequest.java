@@ -6,12 +6,12 @@ import com.aliyun.tea.*;
 public class GetImportFileUrlRequest extends TeaModel {
     // The language of the response. Valid values:
     // 
-    // - zh: Chinese
-    // - en: English
+    // *   zh: Chinese
+    // *   en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // The type of the configuration file.
+    // The type of the file.
     @NameInMap("ContentType")
     public String contentType;
 

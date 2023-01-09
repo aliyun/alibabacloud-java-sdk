@@ -141,7 +141,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
         @NameInMap("Http2")
         public String http2;
 
-        // ID.
+        // The ID.
         @NameInMap("Id")
         public Long id;
 
