@@ -57,14 +57,17 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
         @NameInMap("EnableSaveMFATicket")
         public Boolean enableSaveMFATicket;
 
-        @NameInMap("EnforceMFAForLogin")
-        public Boolean enforceMFAForLogin;
-
         @NameInMap("LoginNetworkMasks")
         public String loginNetworkMasks;
 
         @NameInMap("LoginSessionDuration")
         public Integer loginSessionDuration;
+
+        @NameInMap("MFAOperationForLogin")
+        public String MFAOperationForLogin;
+
+        @NameInMap("OperationForRiskLogin")
+        public String operationForRiskLogin;
 
         public static GetSecurityPreferenceResponseBodySecurityPreferenceLoginProfilePreference build(java.util.Map<String, ?> map) throws Exception {
             GetSecurityPreferenceResponseBodySecurityPreferenceLoginProfilePreference self = new GetSecurityPreferenceResponseBodySecurityPreferenceLoginProfilePreference();
@@ -87,14 +90,6 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             return this.enableSaveMFATicket;
         }
 
-        public GetSecurityPreferenceResponseBodySecurityPreferenceLoginProfilePreference setEnforceMFAForLogin(Boolean enforceMFAForLogin) {
-            this.enforceMFAForLogin = enforceMFAForLogin;
-            return this;
-        }
-        public Boolean getEnforceMFAForLogin() {
-            return this.enforceMFAForLogin;
-        }
-
         public GetSecurityPreferenceResponseBodySecurityPreferenceLoginProfilePreference setLoginNetworkMasks(String loginNetworkMasks) {
             this.loginNetworkMasks = loginNetworkMasks;
             return this;
@@ -109,6 +104,22 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
         }
         public Integer getLoginSessionDuration() {
             return this.loginSessionDuration;
+        }
+
+        public GetSecurityPreferenceResponseBodySecurityPreferenceLoginProfilePreference setMFAOperationForLogin(String MFAOperationForLogin) {
+            this.MFAOperationForLogin = MFAOperationForLogin;
+            return this;
+        }
+        public String getMFAOperationForLogin() {
+            return this.MFAOperationForLogin;
+        }
+
+        public GetSecurityPreferenceResponseBodySecurityPreferenceLoginProfilePreference setOperationForRiskLogin(String operationForRiskLogin) {
+            this.operationForRiskLogin = operationForRiskLogin;
+            return this;
+        }
+        public String getOperationForRiskLogin() {
+            return this.operationForRiskLogin;
         }
 
     }
