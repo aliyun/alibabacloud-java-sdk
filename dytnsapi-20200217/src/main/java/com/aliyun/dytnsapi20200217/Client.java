@@ -474,6 +474,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Mask", request.mask);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.numberType)) {
+            query.put("NumberType", request.numberType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
             query.put("OwnerId", request.ownerId);
         }
