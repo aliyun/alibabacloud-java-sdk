@@ -64,6 +64,36 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolListTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolListTags build(java.util.Map<String, ?> map) throws Exception {
+            ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolListTags self = new ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolListTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolListTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolListTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolList extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
@@ -89,11 +119,17 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         @NameInMap("ShareType")
         public String shareType;
 
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("Tags")
+        public java.util.List<ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolListTags> tags;
 
         @NameInMap("TotalIpNum")
         public Integer totalIpNum;
@@ -170,6 +206,14 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
             return this.regionId;
         }
 
+        public ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolList setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
         public ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolList setShareType(String shareType) {
             this.shareType = shareType;
             return this;
@@ -184,6 +228,14 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolList setTags(java.util.List<ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolListTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolListTags> getTags() {
+            return this.tags;
         }
 
         public ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolList setTotalIpNum(Integer totalIpNum) {

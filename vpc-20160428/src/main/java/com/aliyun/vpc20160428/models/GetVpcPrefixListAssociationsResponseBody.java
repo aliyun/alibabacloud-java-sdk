@@ -83,6 +83,9 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
         @NameInMap("ResourceType")
         public String resourceType;
 
+        @NameInMap("ResourceUid")
+        public String resourceUid;
+
         @NameInMap("Status")
         public String status;
 
@@ -137,6 +140,14 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
         }
         public String getResourceType() {
             return this.resourceType;
+        }
+
+        public GetVpcPrefixListAssociationsResponseBodyPrefixListAssociation setResourceUid(String resourceUid) {
+            this.resourceUid = resourceUid;
+            return this;
+        }
+        public String getResourceUid() {
+            return this.resourceUid;
         }
 
         public GetVpcPrefixListAssociationsResponseBodyPrefixListAssociation setStatus(String status) {

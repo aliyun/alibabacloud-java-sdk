@@ -25,11 +25,17 @@ public class ListPrefixListsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
+
+    @NameInMap("Tags")
+    public java.util.List<ListPrefixListsRequestTags> tags;
 
     public static ListPrefixListsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListPrefixListsRequest self = new ListPrefixListsRequest();
@@ -92,6 +98,14 @@ public class ListPrefixListsRequest extends TeaModel {
         return this.regionId;
     }
 
+    public ListPrefixListsRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public ListPrefixListsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -106,6 +120,44 @@ public class ListPrefixListsRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public ListPrefixListsRequest setTags(java.util.List<ListPrefixListsRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<ListPrefixListsRequestTags> getTags() {
+        return this.tags;
+    }
+
+    public static class ListPrefixListsRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListPrefixListsRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            ListPrefixListsRequestTags self = new ListPrefixListsRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListPrefixListsRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListPrefixListsRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }
