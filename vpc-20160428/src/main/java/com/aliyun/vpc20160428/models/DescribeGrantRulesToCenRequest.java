@@ -19,6 +19,12 @@ public class DescribeGrantRulesToCenRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
     @NameInMap("RegionId")
     public String regionId;
 
@@ -74,6 +80,22 @@ public class DescribeGrantRulesToCenRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DescribeGrantRulesToCenRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeGrantRulesToCenRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public DescribeGrantRulesToCenRequest setRegionId(String regionId) {

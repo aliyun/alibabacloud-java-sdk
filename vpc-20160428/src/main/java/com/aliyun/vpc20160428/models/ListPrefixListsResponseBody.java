@@ -64,6 +64,36 @@ public class ListPrefixListsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListPrefixListsResponseBodyPrefixListsTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListPrefixListsResponseBodyPrefixListsTags build(java.util.Map<String, ?> map) throws Exception {
+            ListPrefixListsResponseBodyPrefixListsTags self = new ListPrefixListsResponseBodyPrefixListsTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListPrefixListsResponseBodyPrefixListsTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListPrefixListsResponseBodyPrefixListsTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListPrefixListsResponseBodyPrefixLists extends TeaModel {
         @NameInMap("CidrBlocks")
         public java.util.List<String> cidrBlocks;
@@ -95,11 +125,17 @@ public class ListPrefixListsResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         @NameInMap("ShareType")
         public String shareType;
 
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("Tags")
+        public java.util.List<ListPrefixListsResponseBodyPrefixListsTags> tags;
 
         public static ListPrefixListsResponseBodyPrefixLists build(java.util.Map<String, ?> map) throws Exception {
             ListPrefixListsResponseBodyPrefixLists self = new ListPrefixListsResponseBodyPrefixLists();
@@ -186,6 +222,14 @@ public class ListPrefixListsResponseBody extends TeaModel {
             return this.regionId;
         }
 
+        public ListPrefixListsResponseBodyPrefixLists setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
         public ListPrefixListsResponseBodyPrefixLists setShareType(String shareType) {
             this.shareType = shareType;
             return this;
@@ -200,6 +244,14 @@ public class ListPrefixListsResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public ListPrefixListsResponseBodyPrefixLists setTags(java.util.List<ListPrefixListsResponseBodyPrefixListsTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListPrefixListsResponseBodyPrefixListsTags> getTags() {
+            return this.tags;
         }
 
     }

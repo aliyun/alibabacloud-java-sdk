@@ -10,6 +10,9 @@ public class CreateVpcPrefixListResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static CreateVpcPrefixListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateVpcPrefixListResponseBody self = new CreateVpcPrefixListResponseBody();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class CreateVpcPrefixListResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public CreateVpcPrefixListResponseBody setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

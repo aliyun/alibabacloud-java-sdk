@@ -10,6 +10,9 @@ public class CreatePublicIpAddressPoolResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static CreatePublicIpAddressPoolResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreatePublicIpAddressPoolResponseBody self = new CreatePublicIpAddressPoolResponseBody();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class CreatePublicIpAddressPoolResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public CreatePublicIpAddressPoolResponseBody setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

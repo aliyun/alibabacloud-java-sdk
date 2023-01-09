@@ -34,6 +34,9 @@ public class CreateVpcPrefixListRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -123,6 +126,14 @@ public class CreateVpcPrefixListRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public CreateVpcPrefixListRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public CreateVpcPrefixListRequest setResourceOwnerAccount(String resourceOwnerAccount) {
