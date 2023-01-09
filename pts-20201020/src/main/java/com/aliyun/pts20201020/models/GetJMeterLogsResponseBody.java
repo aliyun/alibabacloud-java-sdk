@@ -4,14 +4,12 @@ package com.aliyun.pts20201020.models;
 import com.aliyun.tea.*;
 
 public class GetJMeterLogsResponseBody extends TeaModel {
-    // 引擎数量，想要获得第几台引擎的日志可以根据引擎数量传值
     @NameInMap("AgentCount")
     public Integer agentCount;
 
     @NameInMap("Code")
     public String code;
 
-    // 日志内容
     @NameInMap("Logs")
     public java.util.List<java.util.Map<String, ?>> logs;
 

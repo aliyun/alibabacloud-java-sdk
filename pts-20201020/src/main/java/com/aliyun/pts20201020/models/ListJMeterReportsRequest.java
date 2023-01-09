@@ -4,15 +4,12 @@ package com.aliyun.pts20201020.models;
 import com.aliyun.tea.*;
 
 public class ListJMeterReportsRequest extends TeaModel {
-    // 报告的起始时间，单位为ms
     @NameInMap("BeginTime")
     public Long beginTime;
 
-    // 报告的结束时间
     @NameInMap("EndTime")
     public Long endTime;
 
-    // 报告关键字
     @NameInMap("Keyword")
     public String keyword;
 
@@ -22,11 +19,9 @@ public class ListJMeterReportsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 报告ID
     @NameInMap("ReportId")
     public String reportId;
 
-    // 要查看的报告的场景id
     @NameInMap("SceneId")
     public String sceneId;
 

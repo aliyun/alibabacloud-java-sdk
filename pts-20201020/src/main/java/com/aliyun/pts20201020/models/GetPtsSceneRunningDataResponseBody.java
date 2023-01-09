@@ -64,6 +64,9 @@ public class GetPtsSceneRunningDataResponseBody extends TeaModel {
     @NameInMap("TotalAgents")
     public Integer totalAgents;
 
+    @NameInMap("TotalRealQps")
+    public Integer totalRealQps;
+
     @NameInMap("TotalRequestCount")
     public Long totalRequestCount;
 
@@ -236,6 +239,14 @@ public class GetPtsSceneRunningDataResponseBody extends TeaModel {
     }
     public Integer getTotalAgents() {
         return this.totalAgents;
+    }
+
+    public GetPtsSceneRunningDataResponseBody setTotalRealQps(Integer totalRealQps) {
+        this.totalRealQps = totalRealQps;
+        return this;
+    }
+    public Integer getTotalRealQps() {
+        return this.totalRealQps;
     }
 
     public GetPtsSceneRunningDataResponseBody setTotalRequestCount(Long totalRequestCount) {

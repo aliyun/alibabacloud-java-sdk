@@ -13,11 +13,9 @@ public class GetJMeterSampleMetricsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // 采样器聚合数据列表
     @NameInMap("SampleMetricList")
     public java.util.List<String> sampleMetricList;
 
-    // 采样器列表，可根据该列表传递需要查询的采样器
     @NameInMap("SamplerMap")
     public java.util.Map<String, ?> samplerMap;
 

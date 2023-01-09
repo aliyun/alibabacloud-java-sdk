@@ -4,7 +4,6 @@ package com.aliyun.pts20201020.models;
 import com.aliyun.tea.*;
 
 public class SavePtsSceneShrinkRequest extends TeaModel {
-    // 场景详细信息
     @NameInMap("Scene")
     public String sceneShrink;
 

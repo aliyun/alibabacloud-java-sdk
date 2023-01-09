@@ -4,11 +4,9 @@ package com.aliyun.pts20201020.models;
 import com.aliyun.tea.*;
 
 public class ListEnvsRequest extends TeaModel {
-    // 环境ID
     @NameInMap("EnvId")
     public String envId;
 
-    // 环境名
     @NameInMap("EnvName")
     public String envName;
 

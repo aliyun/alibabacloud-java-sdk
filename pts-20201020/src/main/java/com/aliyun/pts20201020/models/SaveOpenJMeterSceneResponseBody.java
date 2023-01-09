@@ -16,7 +16,6 @@ public class SaveOpenJMeterSceneResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // 场景id
     @NameInMap("SceneId")
     public String sceneId;
 

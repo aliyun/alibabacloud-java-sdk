@@ -4,7 +4,6 @@ package com.aliyun.pts20201020.models;
 import com.aliyun.tea.*;
 
 public class StopTestingJMeterSceneRequest extends TeaModel {
-    // 场景id
     @NameInMap("SceneId")
     public String sceneId;
 

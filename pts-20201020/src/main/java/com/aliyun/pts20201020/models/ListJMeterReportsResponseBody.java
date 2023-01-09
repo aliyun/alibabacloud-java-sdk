@@ -109,23 +109,18 @@ public class ListJMeterReportsResponseBody extends TeaModel {
     }
 
     public static class ListJMeterReportsResponseBodyReports extends TeaModel {
-        // 压测开始时间
         @NameInMap("ActualStartTime")
         public Long actualStartTime;
 
-        // 压测持续时间
         @NameInMap("Duration")
         public String duration;
 
-        // 报告id
         @NameInMap("ReportId")
         public String reportId;
 
-        // 报告名称
         @NameInMap("ReportName")
         public String reportName;
 
-        // 消耗的vum
         @NameInMap("Vum")
         public Long vum;
 

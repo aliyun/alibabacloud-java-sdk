@@ -109,15 +109,12 @@ public class ListOpenJMeterScenesResponseBody extends TeaModel {
     }
 
     public static class ListOpenJMeterScenesResponseBodyJMeterScene extends TeaModel {
-        // 压测持续时间
         @NameInMap("DurationStr")
         public String durationStr;
 
-        // 场景id
         @NameInMap("SceneId")
         public String sceneId;
 
-        // 场景名
         @NameInMap("SceneName")
         public String sceneName;
 
