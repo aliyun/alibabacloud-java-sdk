@@ -20,13 +20,14 @@ public class AddSecurityGroupRuleResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request is successful. Valid values:
-    // - `true`: The request is successful. 
-    // - `false`: The request fails.
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // *   `true`: The request was successful.
+    // *   `false`: The request failed.
     @NameInMap("Success")
     public Boolean success;
 

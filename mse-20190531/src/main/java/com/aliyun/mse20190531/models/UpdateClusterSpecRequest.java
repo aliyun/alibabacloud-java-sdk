@@ -15,11 +15,11 @@ public class UpdateClusterSpecRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
-    // The specifications of the engine.
+    // The destination engine specifications.
     @NameInMap("ClusterSpecification")
     public String clusterSpecification;
 
-    // The number of nodes.
+    // The number of destination nodes.
     @NameInMap("InstanceCount")
     public Integer instanceCount;
 

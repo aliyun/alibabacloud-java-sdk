@@ -4,29 +4,30 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListServiceSourceResponseBody extends TeaModel {
-    // Indicates whether the request is successful. Valid values:
-    // - `true`: The request is successful. 
-    // - `false`: The request fails.
+    // The response code returned.
     @NameInMap("Code")
     public Integer code;
 
-    // The data structure.
+    // The returned data.
     @NameInMap("Data")
     public java.util.List<ListServiceSourceResponseBodyData> data;
 
-    // The error message returned if the request fails.
+    // The HTTP status code returned.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // The status code returned.
+    // The error message.
     @NameInMap("Message")
     public String message;
 
-    // The HTTP status code returned.
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
-    // The returned results.
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // *   `true`: The request was successful.
+    // *   `false`: The request failed.
     @NameInMap("Success")
     public Boolean success;
 
@@ -84,18 +85,19 @@ public class ListServiceSourceResponseBody extends TeaModel {
     }
 
     public static class ListServiceSourceResponseBodyDataIngressOptions extends TeaModel {
-        // Alibaba Cloud provides SDKs for multiple programming languages to help you integrate Alibaba Cloud products and services by using APIs. We recommend that you use an SDK to call API operations. This frees you from manual signature verification.
+        // Indicates whether Ingresses are enabled.
         @NameInMap("EnableIngress")
         public Boolean enableIngress;
 
+        // Indicates whether the Ingress gateway status is updated.
         @NameInMap("EnableStatus")
         public Boolean enableStatus;
 
-        // ingress class
+        // The Ingress class.
         @NameInMap("IngressClass")
         public String ingressClass;
 
-        // Alibaba Cloud CLI allows you to search for API operations, call and debug API operations online, and dynamically generate executable sample code for SDKs.
+        // The namespace whose resources you want to monitor.
         @NameInMap("WatchNamespace")
         public String watchNamespace;
 
@@ -139,56 +141,59 @@ public class ListServiceSourceResponseBody extends TeaModel {
     }
 
     public static class ListServiceSourceResponseBodyData extends TeaModel {
-        // The type of the service source.
+        // The ID of the Container Service for Kubernetes (ACK) cluster or the endpoint of the Microservices Engine (MSE) registry.
         @NameInMap("Address")
         public String address;
 
-        // The ID of the gateway.
+        // Indicates whether the service source is associated with the gateway. The value 1 indicates that the service source is associated with the gateway.
         @NameInMap("BindingWithGateway")
         public Integer bindingWithGateway;
 
-        // The time when the service source was added.
+        // The ID of the gateway.
         @NameInMap("GatewayId")
         public Long gatewayId;
 
+        // The unique ID of the gateway.
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 
-        // The time when the service source was last modified.
+        // The creation time.
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
-        // The unique ID of the service source.
+        // The update time.
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        // The array of service groups.
         @NameInMap("GroupList")
         public java.util.List<String> groupList;
 
-        // The name of the service source.
+        // The ID.
         @NameInMap("Id")
         public Long id;
 
-        // Programming language
+        // Support for Ingresses of applications.
         @NameInMap("IngressOptions")
         public ListServiceSourceResponseBodyDataIngressOptions ingressOptions;
 
-        // The ID of the Container Service for Kubernetes (ACK) cluster, or the endpoint of the Microservices Engine (MSE) Nacos registry.
+        // The name.
         @NameInMap("Name")
         public String name;
 
+        // The array of root paths of service lists.
         @NameInMap("PathList")
         public java.util.List<String> pathList;
 
-        // Indicates whether the service source is associated with the gateway.
+        // The type of the service source.
         @NameInMap("Source")
         public String source;
 
-        // Query service sources
+        // The unique ID of the service source.
         @NameInMap("SourceUniqueId")
         public String sourceUniqueId;
 
-        // The source of the service source.
+        // The type.
         @NameInMap("Type")
         public String type;
 

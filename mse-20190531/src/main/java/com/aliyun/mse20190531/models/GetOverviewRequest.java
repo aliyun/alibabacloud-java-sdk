@@ -6,8 +6,8 @@ import com.aliyun.tea.*;
 public class GetOverviewRequest extends TeaModel {
     // The language of the response. Valid values:
     // 
-    // - zh: Chinese
-    // - en: English
+    // *   zh: Chinese
+    // *   en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
@@ -15,7 +15,7 @@ public class GetOverviewRequest extends TeaModel {
     @NameInMap("Period")
     public Integer period;
 
-    // The ID of the region.
+    // The region ID.
     @NameInMap("Region")
     public String region;
 

@@ -8,7 +8,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
     @NameInMap("Data")
     public ListAnsServiceClustersResponseBodyData data;
 
-    // The error code returned if the request fails.
+    // The error code returned if the request failed.
     @NameInMap("ErrorCode")
     public String errorCode;
 
@@ -20,9 +20,10 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request is successful. Valid values:
-    // - `true`: The request is successful. 
-    // - `false`: The request fails.
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // *   `true`: The request was successful.
+    // *   `false`: The request failed.
     @NameInMap("Success")
     public Boolean success;
 
@@ -80,11 +81,11 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
         @NameInMap("DefaultPort")
         public Integer defaultPort;
 
-        // The type of health check.
+        // The type of health checks.
         @NameInMap("HealthCheckerType")
         public String healthCheckerType;
 
-        // The metadata.
+        // The metadata of the cluster.
         @NameInMap("Metadata")
         public java.util.Map<String, ?> metadata;
 
@@ -92,11 +93,11 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
-        // The name of the service.
+        // The complete name of the service.
         @NameInMap("ServiceName")
         public String serviceName;
 
-        // Indicates whether the IP address is used for a health check.
+        // Indicates whether the health check is initiated by the server. This parameter is valid only when the service is a temporary service.
         @NameInMap("UseIPPort4Check")
         public Boolean useIPPort4Check;
 
@@ -164,13 +165,14 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
     }
 
     public static class ListAnsServiceClustersResponseBodyData extends TeaModel {
-        // The information about clusters.
+        // The information about the clusters.
         @NameInMap("Clusters")
         public java.util.List<ListAnsServiceClustersResponseBodyDataClusters> clusters;
 
-        // Indicates whether the service is marked as a temporary node. Valid values:
-        // - `true` 
-        // - `false`
+        // Indicates whether the service is a temporary service. Valid values:
+        // 
+        // *   `true`: The service is a temporary service.
+        // *   `false`: The service is not a temporary service.
         @NameInMap("Ephemeral")
         public Boolean ephemeral;
 
@@ -178,7 +180,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
         @NameInMap("GroupName")
         public String groupName;
 
-        // The metadata.
+        // The metadata of the service.
         @NameInMap("Metadata")
         public java.util.Map<String, ?> metadata;
 

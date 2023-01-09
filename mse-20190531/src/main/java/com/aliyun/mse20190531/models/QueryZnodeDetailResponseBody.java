@@ -8,7 +8,7 @@ public class QueryZnodeDetailResponseBody extends TeaModel {
     @NameInMap("Data")
     public QueryZnodeDetailResponseBodyData data;
 
-    // The error code returned if the request fails.
+    // The error code returned if the request failed.
     @NameInMap("ErrorCode")
     public String errorCode;
 
@@ -20,9 +20,10 @@ public class QueryZnodeDetailResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request is successful. Valid values:
-    // - `true`: The request is successful. 
-    // - `false`: The request fails.
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // *   `true`: The request was successful.
+    // *   `false`: The request failed.
     @NameInMap("Success")
     public String success;
 
@@ -76,9 +77,10 @@ public class QueryZnodeDetailResponseBody extends TeaModel {
         @NameInMap("Data")
         public String data;
 
-        // Indicates whether the node directory information is returned. Valid values:
-        // - `true`: The information is returned. 
-        // - `false`: The information fails to be returned.
+        // Indicates whether the node information was returned. Valid values:
+        // 
+        // *   `true`: The node information was returned.
+        // *   `false`: The node information failed to be returned.
         @NameInMap("Dir")
         public Boolean dir;
 

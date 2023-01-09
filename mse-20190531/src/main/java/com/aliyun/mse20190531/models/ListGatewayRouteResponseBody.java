@@ -169,7 +169,7 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         @NameInMap("ServicePort")
         public Integer servicePort;
 
-        // The type of the service source.
+        // The source type.
         @NameInMap("SourceType")
         public String sourceType;
 
@@ -317,7 +317,7 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         @NameInMap("Type")
         public String type;
 
-        // The header value.
+        // The value.
         @NameInMap("Value")
         public String value;
 
@@ -859,7 +859,7 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         @NameInMap("DefaultServiceName")
         public String defaultServiceName;
 
-        // The destination type.
+        // The destination service type.
         @NameInMap("DestinationType")
         public String destinationType;
 
@@ -871,7 +871,7 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         @NameInMap("DomainId")
         public Long domainId;
 
-        // The list of domain IDs.
+        // The IDs of domains.
         @NameInMap("DomainIdList")
         public java.util.List<Long> domainIdList;
 
@@ -883,11 +883,11 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         @NameInMap("DomainNameList")
         public java.util.List<String> domainNameList;
 
-        // Indicates whether Web Application Firewall (WAF) is activated.
+        // Specifies whether to activate Web Application Firewall (WAF).
         @NameInMap("EnableWaf")
         public String enableWaf;
 
-        // Indicates whether the Fallback service is enabled.
+        // Specifies whether to enable the Fallback service.
         @NameInMap("Fallback")
         public Boolean fallback;
 
@@ -911,7 +911,7 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         @NameInMap("GmtModified")
         public String gmtModified;
 
-        // ID.
+        // The ID.
         @NameInMap("Id")
         public Long id;
 

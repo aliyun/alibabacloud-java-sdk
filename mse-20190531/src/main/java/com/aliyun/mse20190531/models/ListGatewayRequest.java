@@ -97,6 +97,7 @@ public class ListGatewayRequest extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
+        // The tag of the instance.
         @NameInMap("MseTag")
         public String mseTag;
 
@@ -104,6 +105,7 @@ public class ListGatewayRequest extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        // The ID of the resource group.
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 

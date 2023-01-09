@@ -12,11 +12,11 @@ public class GetAppMessageQueueRouteResponseBody extends TeaModel {
     @NameInMap("Data")
     public GetAppMessageQueueRouteResponseBodyData data;
 
-    // The HTTP status code.
+    // The HTTP status code returned.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // The returned message.
+    // The message returned.
     // 
     // *   If the request is successful, a success message is returned.
     // *   If the request fails, an error message is returned.
@@ -100,7 +100,7 @@ public class GetAppMessageQueueRouteResponseBody extends TeaModel {
         @NameInMap("FilterSide")
         public String filterSide;
 
-        // The ID of the region.
+        // The region ID.
         @NameInMap("Region")
         public String region;
 

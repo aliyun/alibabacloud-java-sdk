@@ -11,7 +11,7 @@ public class UpdateClusterRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // The alias of the cluster.
+    // The alias of the instance.
     @NameInMap("ClusterAliasName")
     public String clusterAliasName;
 
@@ -19,7 +19,7 @@ public class UpdateClusterRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // The extended request parameter in the JSON format.
+    // The extended request parameters in the JSON format.
     @NameInMap("RequestPars")
     public String requestPars;
 

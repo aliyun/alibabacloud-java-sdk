@@ -8,7 +8,7 @@ public class UpdateClusterSpecResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
-    // The data returned.
+    // A reserved parameter.
     @NameInMap("Data")
     public String data;
 
@@ -20,14 +20,14 @@ public class UpdateClusterSpecResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    // ID of the Request.
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the call was successful. Valid values:
+    // Indicates whether the request was successful. Valid values:
     // 
-    // *   `true`: The call was successful.
-    // *   `false`: The call failed.
+    // *   `true`: The request was successful.
+    // *   `false`: The request failed.
     @NameInMap("Success")
     public Boolean success;
 

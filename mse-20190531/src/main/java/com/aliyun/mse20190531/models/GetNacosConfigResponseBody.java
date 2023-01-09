@@ -4,11 +4,11 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetNacosConfigResponseBody extends TeaModel {
-    // The information about the configuration.
+    // The configuration information.
     @NameInMap("Configuration")
     public GetNacosConfigResponseBodyConfiguration configuration;
 
-    // The error code returned if the request fails.
+    // The error code returned if the request failed.
     @NameInMap("ErrorCode")
     public String errorCode;
 
@@ -20,9 +20,10 @@ public class GetNacosConfigResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request is successful. Valid values:
-    // - `true`: The request is successful. 
-    // - `false`: The request fails.
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // *   `true`: The request was successful.
+    // *   `false`: The request failed.
     @NameInMap("Success")
     public Boolean success;
 
@@ -96,7 +97,7 @@ public class GetNacosConfigResponseBody extends TeaModel {
         @NameInMap("EncryptedDataKey")
         public String encryptedDataKey;
 
-        // The name of the group.
+        // The name of the configuration group.
         @NameInMap("Group")
         public String group;
 

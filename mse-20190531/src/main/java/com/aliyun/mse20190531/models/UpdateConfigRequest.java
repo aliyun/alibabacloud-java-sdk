@@ -23,7 +23,7 @@ public class UpdateConfigRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
-    // Specifies whether to enable RAM authentication for a configuration center. This parameter is valid for Nacos instances. Valid values:
+    // Specifies whether to enable RAM authorization for a configuration center. This parameter is valid for Nacos instances. Valid values:
     // 
     // *   `true`: yes
     // *   `false`: no
@@ -45,6 +45,7 @@ public class UpdateConfigRequest extends TeaModel {
     @NameInMap("ConfigType")
     public String configType;
 
+    // zookeeper参数，是否开启TTL配置。
     @NameInMap("ExtendedTypesEnable")
     public String extendedTypesEnable;
 
@@ -82,7 +83,7 @@ public class UpdateConfigRequest extends TeaModel {
     @NameInMap("MinSessionTimeout")
     public String minSessionTimeout;
 
-    // Specifies whether to enable RAM authentication for a registry. This parameter is valid for Nacos instances. Valid values:
+    // Specifies whether to enable RAM authorization for a registry. This parameter is valid for Nacos instances. Valid values:
     // 
     // *   `true`: yes
     // *   `false`: no
@@ -104,7 +105,7 @@ public class UpdateConfigRequest extends TeaModel {
     @NameInMap("PassWord")
     public String passWord;
 
-    // The extended request parameter in the JSON format.
+    // The extended request parameters in the JSON format.
     @NameInMap("RequestPars")
     public String requestPars;
 
@@ -120,7 +121,7 @@ public class UpdateConfigRequest extends TeaModel {
     @NameInMap("TickTime")
     public String tickTime;
 
-    // The name of the user.
+    // The username.
     // 
     // > You must specify this parameter if OpenSuperAcl is set to true.
     @NameInMap("UserName")

@@ -4,7 +4,7 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetMseSourceResponseBody extends TeaModel {
-    // The status code returned.
+    // The response code returned.
     @NameInMap("Code")
     public Integer code;
 
@@ -16,10 +16,10 @@ public class GetMseSourceResponseBody extends TeaModel {
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // The message returned. Valid values: 
+    // The message returned.
     // 
-    // - If the request is successful, a success message is returned. 
-    // - If the request fails, an error message is returned, such as the "TaskId not found" message.
+    // *   If the request is successful, a success message is returned.
+    // *   If the request fails, an error message is returned, such as the "TaskId not found" message.
     @NameInMap("Message")
     public String message;
 
@@ -27,9 +27,10 @@ public class GetMseSourceResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request is successful. Valid values:
-    // - `true`: The request is successful. 
-    // - `false`: The request fails.
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // *   `true`: The request was successful.
+    // *   `false`: The request failed.
     @NameInMap("Success")
     public Boolean success;
 
@@ -91,7 +92,7 @@ public class GetMseSourceResponseBody extends TeaModel {
         @NameInMap("Address")
         public String address;
 
-        // The ID of the cluster.
+        // The ID of the instance.
         @NameInMap("ClusterId")
         public String clusterId;
 
@@ -99,11 +100,11 @@ public class GetMseSourceResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
-        // The name of the service source.
+        // The name.
         @NameInMap("Name")
         public String name;
 
-        // The type of the service source.
+        // The type.
         @NameInMap("Type")
         public String type;
 

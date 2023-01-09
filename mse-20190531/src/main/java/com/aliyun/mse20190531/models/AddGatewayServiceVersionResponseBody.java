@@ -8,7 +8,7 @@ public class AddGatewayServiceVersionResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
-    // The ID of the created gateway.
+    // The ID of the created service version.
     @NameInMap("Data")
     public Long data;
 

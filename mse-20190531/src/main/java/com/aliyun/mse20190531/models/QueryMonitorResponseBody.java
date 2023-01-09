@@ -8,7 +8,7 @@ public class QueryMonitorResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.List<QueryMonitorResponseBodyData> data;
 
-    // The error code returned.
+    // The error code returned if the request failed.
     @NameInMap("ErrorCode")
     public String errorCode;
 

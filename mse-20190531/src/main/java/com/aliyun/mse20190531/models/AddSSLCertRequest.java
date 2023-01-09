@@ -15,7 +15,7 @@ public class AddSSLCertRequest extends TeaModel {
     @NameInMap("CertIdentifier")
     public String certIdentifier;
 
-    // The ID of the domain name.
+    // The domain ID.
     @NameInMap("DomainId")
     public Long domainId;
 

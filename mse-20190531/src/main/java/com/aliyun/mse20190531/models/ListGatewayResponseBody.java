@@ -12,11 +12,11 @@ public class ListGatewayResponseBody extends TeaModel {
     @NameInMap("Data")
     public ListGatewayResponseBodyData data;
 
-    // The HTTP status code.
+    // The HTTP status code returned.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // The returned message.
+    // The message returned.
     @NameInMap("Message")
     public String message;
 
@@ -129,11 +129,11 @@ public class ListGatewayResponseBody extends TeaModel {
         @NameInMap("InternetNetworkFlow")
         public String internetNetworkFlow;
 
-        // SLB ID.
+        // The ID of the SLB instance.
         @NameInMap("SlbId")
         public String slbId;
 
-        // SLB IP.
+        // The IP address of the SLB instance.
         @NameInMap("SlbIp")
         public String slbIp;
 
@@ -241,11 +241,11 @@ public class ListGatewayResponseBody extends TeaModel {
         @NameInMap("GatewaySlbStatus")
         public String gatewaySlbStatus;
 
-        // SLB ID.
+        // The ID of the SLB instance.
         @NameInMap("SlbId")
         public String slbId;
 
-        // SLB IP.
+        // The IP address of the SLB instance.
         @NameInMap("SlbIp")
         public String slbIp;
 
@@ -337,7 +337,7 @@ public class ListGatewayResponseBody extends TeaModel {
     }
 
     public static class ListGatewayResponseBodyDataResult extends TeaModel {
-        // Indicates whether Application High Availability Service (AHAS) is enabled.
+        // Indicates whether Application High Availability Service (AHAS) is activated.
         @NameInMap("AhasOn")
         public Boolean ahasOn;
 
@@ -345,7 +345,7 @@ public class ListGatewayResponseBody extends TeaModel {
         @NameInMap("AppVersion")
         public String appVersion;
 
-        // Indicates whether Application Real-Time Monitoring Service (ARMS) is enabled.
+        // Indicates whether Application Real-Time Monitoring Service (ARMS) is activated.
         @NameInMap("ArmsOn")
         public Boolean armsOn;
 
@@ -369,6 +369,7 @@ public class ListGatewayResponseBody extends TeaModel {
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 
+        // The version of the gateway.
         @NameInMap("GatewayVersion")
         public String gatewayVersion;
 
@@ -400,6 +401,7 @@ public class ListGatewayResponseBody extends TeaModel {
         @NameInMap("LatestVersion")
         public String latestVersion;
 
+        // The tag of the instance.
         @NameInMap("MseTag")
         public String mseTag;
 
@@ -415,7 +417,7 @@ public class ListGatewayResponseBody extends TeaModel {
         @NameInMap("PrimaryUser")
         public String primaryUser;
 
-        // The ID of the region.
+        // The region ID.
         @NameInMap("Region")
         public String region;
 
@@ -423,9 +425,11 @@ public class ListGatewayResponseBody extends TeaModel {
         @NameInMap("Replica")
         public Integer replica;
 
+        // The ID of the resource group.
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        // Indicates whether rollbacks are allowed.
         @NameInMap("RollBack")
         public Boolean rollBack;
 
@@ -746,7 +750,7 @@ public class ListGatewayResponseBody extends TeaModel {
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        // The returned data.
+        // The data entries returned.
         @NameInMap("Result")
         public java.util.List<ListGatewayResponseBodyDataResult> result;
 

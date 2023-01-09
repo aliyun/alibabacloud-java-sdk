@@ -6,13 +6,13 @@ import com.aliyun.tea.*;
 public class AddServiceSourceShrinkRequest extends TeaModel {
     // The language in which the returned information is displayed. Valid values:
     // 
-    // - zh-CN: Chinese. This is the default value.
-    // - en-US: English.
-    // - ja: Japanese.
+    // *   zh-CN: Chinese. This is the default value.
+    // *   en-US: English.
+    // *   ja: Japanese.
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // The address of the service.
+    // The endpoint.
     @NameInMap("Address")
     public String address;
 
@@ -20,7 +20,7 @@ public class AddServiceSourceShrinkRequest extends TeaModel {
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
-    // GroupList.
+    // The list of service groups.
     @NameInMap("GroupList")
     public String groupListShrink;
 
@@ -28,19 +28,31 @@ public class AddServiceSourceShrinkRequest extends TeaModel {
     @NameInMap("IngressOptionsRequest")
     public String ingressOptionsRequestShrink;
 
-    // The name of the service.
+    // The name.
+    // 
+    // >  The parameter value varies based on the source type.
+    // 
+    // *   If Type is set to K8S, this parameter specifies the name of the ACK cluster.
+    // 
+    // *   If Type is set to NACOS, this parameter specifies the ID of the instance.
     @NameInMap("Name")
     public String name;
 
-    // Service root path array.
+    // An array of service root paths.
     @NameInMap("PathList")
     public String pathListShrink;
 
-    // The type of the service source.
+    // The service source.
+    // 
+    // *   K8S: ACK cluster
+    // *   MSE: Nacos instance
     @NameInMap("Source")
     public String source;
 
-    // The service type.
+    // The type of the service source. Valid values:
+    // 
+    // *   K8S: ACK cluster
+    // *   NACOS: Nacos instance
     @NameInMap("Type")
     public String type;
 

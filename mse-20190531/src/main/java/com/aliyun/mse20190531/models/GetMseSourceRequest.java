@@ -4,6 +4,10 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetMseSourceRequest extends TeaModel {
+    // The language of the response. Valid values:
+    // 
+    // *   zh: Chinese
+    // *   en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
@@ -11,6 +15,10 @@ public class GetMseSourceRequest extends TeaModel {
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
+    // The MSE engine type. Valid values:
+    // 
+    // *   NACOS
+    // *   ZOOKEEPER
     @NameInMap("Type")
     public String type;
 

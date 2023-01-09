@@ -12,7 +12,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
     @NameInMap("Data")
     public GetGatewayRouteDetailResponseBodyData data;
 
-    // The HTTP status code.
+    // The HTTP status code returned.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
@@ -249,11 +249,11 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         @NameInMap("ServiceName")
         public String serviceName;
 
-        // The service port.
+        // The service port number.
         @NameInMap("ServicePort")
         public Integer servicePort;
 
-        // The type of the service source.
+        // The source type.
         @NameInMap("SourceType")
         public String sourceType;
 
@@ -365,7 +365,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         @NameInMap("Pattern")
         public String pattern;
 
-        // The status of the policy.
+        // The status.
         @NameInMap("Status")
         public String status;
 
@@ -433,7 +433,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         @NameInMap("DirectionType")
         public String directionType;
 
-        // Header Key.
+        // The header key.
         @NameInMap("Key")
         public String key;
 
@@ -565,7 +565,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         @NameInMap("Attempts")
         public Integer attempts;
 
-        // The HTTP status code.
+        // The HTTP status code returned.
         @NameInMap("HttpCodes")
         public java.util.List<String> httpCodes;
 
@@ -833,7 +833,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         @NameInMap("ServiceName")
         public String serviceName;
 
-        // The service port.
+        // The service port number.
         @NameInMap("ServicePort")
         public Integer servicePort;
 
@@ -1001,11 +1001,11 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         @NameInMap("DirectResponse")
         public GetGatewayRouteDetailResponseBodyDataDirectResponse directResponse;
 
-        // The ID of the domain name.
+        // The domain ID.
         @NameInMap("DomainId")
         public Long domainId;
 
-        // The domain names.
+        // The IDs of domains.
         @NameInMap("DomainIdList")
         public java.util.List<Long> domainIdList;
 
@@ -1013,11 +1013,11 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         @NameInMap("DomainName")
         public String domainName;
 
-        // The domain names.
+        // The list of domain names.
         @NameInMap("DomainNameList")
         public java.util.List<String> domainNameList;
 
-        // Indicates whether Web Application Firewall (WAF) is enabled.
+        // Indicates whether WAF is activated.
         @NameInMap("EnableWaf")
         public Boolean enableWaf;
 
@@ -1025,7 +1025,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         @NameInMap("Fallback")
         public Boolean fallback;
 
-        // The information of the Fallback service.
+        // The information about the Fallback service.
         @NameInMap("FallbackServices")
         public java.util.List<GetGatewayRouteDetailResponseBodyDataFallbackServices> fallbackServices;
 
@@ -1049,11 +1049,11 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         @NameInMap("HTTPRewrite")
         public GetGatewayRouteDetailResponseBodyDataHTTPRewrite HTTPRewrite;
 
-        // The information about the header configuration policy.
+        // The header settings.
         @NameInMap("HeaderOp")
         public GetGatewayRouteDetailResponseBodyDataHeaderOp headerOp;
 
-        // ID.
+        // The ID.
         @NameInMap("Id")
         public Long id;
 
@@ -1089,7 +1089,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         @NameInMap("Services")
         public String services;
 
-        // The status of the route.
+        // The status of the route. Valid values:
         // 
         // *   0: unpublished
         // *   2: publishing

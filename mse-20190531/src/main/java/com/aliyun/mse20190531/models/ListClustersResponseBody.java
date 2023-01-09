@@ -8,11 +8,11 @@ public class ListClustersResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.List<ListClustersResponseBodyData> data;
 
-    // The error code returned.
+    // The error code returned if the request failed.
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // The HTTP status code.
+    // The HTTP status code returned.
     @NameInMap("HttpCode")
     public String httpCode;
 
@@ -39,7 +39,7 @@ public class ListClustersResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    // The total number of instances.
+    // The total number of returned instances.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -153,7 +153,7 @@ public class ListClustersResponseBody extends TeaModel {
         @NameInMap("EndDate")
         public String endDate;
 
-        // The initialization status of the instance.
+        // The initial status of the instance.
         @NameInMap("InitStatus")
         public String initStatus;
 

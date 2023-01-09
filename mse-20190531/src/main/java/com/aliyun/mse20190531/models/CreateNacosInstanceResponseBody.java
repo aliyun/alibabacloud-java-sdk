@@ -4,27 +4,27 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class CreateNacosInstanceResponseBody extends TeaModel {
-    // The message returned.
+    // The response code returned.
     @NameInMap("Code")
     public Integer code;
 
-    // Indicates whether the request is successful.
+    // The result returned.
     @NameInMap("Data")
     public String data;
 
-    // The data structure.
+    // The HTTP status code returned.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // The ID of the request.
+    // The message returned.
     @NameInMap("Message")
     public String message;
 
-    // The HTTP status code returned.
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
-    // The status code returned.
+    // Indicates whether the request was successful.
     @NameInMap("Success")
     public Boolean success;
 

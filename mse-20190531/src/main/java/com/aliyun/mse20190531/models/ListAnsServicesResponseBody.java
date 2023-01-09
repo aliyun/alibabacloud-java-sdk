@@ -8,11 +8,11 @@ public class ListAnsServicesResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.List<ListAnsServicesResponseBodyData> data;
 
-    // The error code returned.
+    // The error code returned if the request failed.
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // The HTTP status code.
+    // The HTTP status code returned.
     @NameInMap("HttpCode")
     public String httpCode;
 

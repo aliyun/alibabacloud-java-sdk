@@ -6,12 +6,12 @@ import com.aliyun.tea.*;
 public class CreateZnodeRequest extends TeaModel {
     // The language of the response. Valid values:
     // 
-    // - zh: Chinese
-    // - en: English
+    // *   zh: Chinese
+    // *   en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // The ID of the cluster.
+    // The ID of the instance.
     @NameInMap("ClusterId")
     public String clusterId;
 

@@ -8,15 +8,15 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
-    // The data returned.
+    // The response data.
     @NameInMap("Data")
     public QueryGovernanceKubernetesClusterResponseBodyData data;
 
-    // HttpCode
+    // The HTTP status code returned.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // Message
+    // The message returned.
     @NameInMap("Message")
     public String message;
 
@@ -82,15 +82,15 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
     }
 
     public static class QueryGovernanceKubernetesClusterResponseBodyDataResult extends TeaModel {
-        // The ID of the cluster.
+        // The ID of the instance.
         @NameInMap("ClusterId")
         public String clusterId;
 
-        // The name of the cluster.
+        // The name of the instance.
         @NameInMap("ClusterName")
         public String clusterName;
 
-        // The version of the cluster.
+        // The Kubernetes version of the instance.
         @NameInMap("K8sVersion")
         public String k8sVersion;
 
@@ -98,11 +98,11 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
         @NameInMap("NamespaceInfos")
         public String namespaceInfos;
 
-        // The time when the ack-one-pilot component was started.
+        // The time when the ack-onepilot component was started.
         @NameInMap("PilotStartTime")
         public String pilotStartTime;
 
-        // Region
+        // The region where the cluster resides.
         @NameInMap("Region")
         public String region;
 
@@ -170,10 +170,11 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        // The data structure.
         @NameInMap("Result")
         public java.util.List<QueryGovernanceKubernetesClusterResponseBodyDataResult> result;
 
-        // The number of clusters.
+        // The total number of clusters.
         @NameInMap("TotalSize")
         public Integer totalSize;
 

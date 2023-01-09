@@ -8,7 +8,7 @@ public class UpdateEngineNamespaceResponseBody extends TeaModel {
     @NameInMap("Data")
     public UpdateEngineNamespaceResponseBodyData data;
 
-    // The error code returned if the request fails.
+    // The error code returned if the request failed.
     @NameInMap("ErrorCode")
     public String errorCode;
 
@@ -20,9 +20,10 @@ public class UpdateEngineNamespaceResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request is successful. Valid values:
-    // - `true`: The request is successful. 
-    // - `false`: The request fails.
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // *   `true`: The request was successful.
+    // *   `false`: The request failed.
     @NameInMap("Success")
     public Boolean success;
 
@@ -72,11 +73,11 @@ public class UpdateEngineNamespaceResponseBody extends TeaModel {
     }
 
     public static class UpdateEngineNamespaceResponseBodyData extends TeaModel {
-        // The number of configurations.
+        // The quota value.
         @NameInMap("ConfigCount")
         public Integer configCount;
 
-        // The name of the namespace.
+        // The namespace.
         @NameInMap("Namespace")
         public String namespace;
 
@@ -93,9 +94,10 @@ public class UpdateEngineNamespaceResponseBody extends TeaModel {
         public Integer quota;
 
         // The type of the namespace. Valid values:
-        // - `0`: global configuration
-        // - `1`: default namespace
-        // - `2`: custom namespace
+        // 
+        // *   `0`: global configuration
+        // *   `1`: default namespace
+        // *   `2`: custom namespace
         @NameInMap("Type")
         public Integer type;
 

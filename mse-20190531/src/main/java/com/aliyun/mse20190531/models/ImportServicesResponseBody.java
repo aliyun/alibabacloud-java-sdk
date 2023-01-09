@@ -4,30 +4,30 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ImportServicesResponseBody extends TeaModel {
-    // Indicates whether the request is successful. Valid values:
-    // 
-    // - `true`: The request is successful. 
-    // - `false`: The request fails.
+    // The status code returned.
     @NameInMap("Code")
     public Integer code;
 
-    // Import services
+    // The result returned.
     @NameInMap("Data")
     public Boolean data;
 
-    // The message returned.
+    // The HTTP status code returned.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // The request is processed successfully.
+    // The message returned.
     @NameInMap("Message")
     public String message;
 
-    // The HTTP status code returned.
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
-    // The returned results.
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // *   `true`: The request was successful.
+    // *   `false`: The request failed.
     @NameInMap("Success")
     public Boolean success;
 

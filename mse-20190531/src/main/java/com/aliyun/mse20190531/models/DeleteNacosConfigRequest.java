@@ -13,8 +13,8 @@ public class DeleteNacosConfigRequest extends TeaModel {
 
     // Specifies whether to perform a beta release. Valid values:
     // 
-    // *   `true`: yes
-    // *   `false`: no
+    // *   `true`: performs a beta release.
+    // *   `false`: not performs a beta release.
     @NameInMap("Beta")
     public Boolean beta;
 

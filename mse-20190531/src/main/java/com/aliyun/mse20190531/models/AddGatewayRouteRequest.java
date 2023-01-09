@@ -19,7 +19,7 @@ public class AddGatewayRouteRequest extends TeaModel {
     @NameInMap("DirectResponseJSON")
     public AddGatewayRouteRequestDirectResponseJSON directResponseJSON;
 
-    // The ID of the domain name.
+    // The domain ID.
     @NameInMap("DomainId")
     public Long domainId;
 
@@ -27,7 +27,7 @@ public class AddGatewayRouteRequest extends TeaModel {
     @NameInMap("DomainIdListJSON")
     public String domainIdListJSON;
 
-    // Specifies whether to enable Web Application Firewall (WAF).
+    // Specifies whether to activate Web Application Firewall (WAF).
     @NameInMap("EnableWaf")
     public Boolean enableWaf;
 
@@ -35,7 +35,7 @@ public class AddGatewayRouteRequest extends TeaModel {
     @NameInMap("Fallback")
     public Boolean fallback;
 
-    // The information of the Fallback service.
+    // The information about the Fallback service.
     @NameInMap("FallbackServices")
     public java.util.List<AddGatewayRouteRequestFallbackServices> fallbackServices;
 
@@ -233,7 +233,7 @@ public class AddGatewayRouteRequest extends TeaModel {
         @NameInMap("GroupName")
         public String groupName;
 
-        // The name.
+        // The name of the application.
         @NameInMap("Name")
         public String name;
 
@@ -249,7 +249,7 @@ public class AddGatewayRouteRequest extends TeaModel {
         @NameInMap("ServiceId")
         public Long serviceId;
 
-        // The service port.
+        // The service port number.
         @NameInMap("ServicePort")
         public Integer servicePort;
 
@@ -533,7 +533,7 @@ public class AddGatewayRouteRequest extends TeaModel {
     }
 
     public static class AddGatewayRouteRequestRedirectJSON extends TeaModel {
-        // The return code.
+        // The status code returned.
         @NameInMap("Code")
         public Integer code;
 
@@ -813,7 +813,7 @@ public class AddGatewayRouteRequest extends TeaModel {
         @NameInMap("ServiceId")
         public Long serviceId;
 
-        // The service port.
+        // The service port number.
         @NameInMap("ServicePort")
         public Integer servicePort;
 

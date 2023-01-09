@@ -4,7 +4,7 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListClusterVersionsResponseBody extends TeaModel {
-    // The status code returned.
+    // The response code returned.
     @NameInMap("Code")
     public Integer code;
 
@@ -16,7 +16,7 @@ public class ListClusterVersionsResponseBody extends TeaModel {
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
-    // The error code returned if the request fails.
+    // The error code returned if the request failed.
     @NameInMap("ErrorCode")
     public String errorCode;
 
@@ -32,9 +32,10 @@ public class ListClusterVersionsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request is successful. Valid values:
-    // - `true`: The request is successful. 
-    // - `false`: The request fails.
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // *   `true`: The request was successful.
+    // *   `false`: The request failed.
     @NameInMap("Success")
     public Boolean success;
 
@@ -108,15 +109,15 @@ public class ListClusterVersionsResponseBody extends TeaModel {
     }
 
     public static class ListClusterVersionsResponseBodyData extends TeaModel {
-        // The type of the cluster.
+        // The type of the instance.
         @NameInMap("ClusterType")
         public String clusterType;
 
-        // The code of the cluster type.
+        // The code of the instance type.
         @NameInMap("Code")
         public String code;
 
-        // The display name of the cluster type.
+        // The type of the instance.
         @NameInMap("ShowName")
         public String showName;
 

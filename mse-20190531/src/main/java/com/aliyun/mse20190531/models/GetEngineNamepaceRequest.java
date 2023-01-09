@@ -6,8 +6,8 @@ import com.aliyun.tea.*;
 public class GetEngineNamepaceRequest extends TeaModel {
     // The language of the response. Valid values:
     // 
-    // - zh: Chinese
-    // - en: English
+    // *   zh: Chinese
+    // *   en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
@@ -15,7 +15,7 @@ public class GetEngineNamepaceRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
-    // The ID of the namespace.
+    // The destination ID.
     @NameInMap("Id")
     public String id;
 

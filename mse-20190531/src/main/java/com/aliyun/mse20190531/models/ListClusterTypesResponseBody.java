@@ -4,17 +4,17 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListClusterTypesResponseBody extends TeaModel {
-    // The return value.
+    // The status code returned.
     @NameInMap("Code")
     public Integer code;
 
-    // The returned data.
+    // The data entries returned.
     @NameInMap("Data")
     public java.util.List<ListClusterTypesResponseBodyData> data;
 
     // The dynamic part in the error message. This parameter is used to replace the \*\*%s\*\* variable in the **ErrMessage** parameter.
     // 
-    // >  If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.
+    // > If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
@@ -22,11 +22,11 @@ public class ListClusterTypesResponseBody extends TeaModel {
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // The HTTP status code.
+    // The HTTP status code returned.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // The returned message.
+    // The message returned.
     @NameInMap("Message")
     public String message;
 

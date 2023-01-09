@@ -49,7 +49,7 @@ public class UpdateNacosInstanceRequest extends TeaModel {
     @NameInMap("NamespaceId")
     public String namespaceId;
 
-    // The port of the Nacos instance.
+    // The port number of the Nacos instance.
     @NameInMap("Port")
     public Integer port;
 

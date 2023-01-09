@@ -4,7 +4,7 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class DeleteGatewayServiceVersionResponseBody extends TeaModel {
-    // The status code returned.
+    // The response code returned.
     @NameInMap("Code")
     public Integer code;
 
@@ -16,21 +16,21 @@ public class DeleteGatewayServiceVersionResponseBody extends TeaModel {
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // The message returned. 
+    // The message returned.
     // 
-    // - If the request is successful, a success message is returned. 
-    // - If the request fails, an error message is returned, such as the "TaskId not found" message.
+    // *   If the request is successful, a success message is returned.
+    // *   If the request fails, an error message is returned, such as the "TaskId not found" message.
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request is successful. Valid values:
+    // Indicates whether the request was successful. Valid values:
     // 
-    // - `true`: The request is successful. 
-    // - `false`: The request fails.
+    // *   `true`: The request was successful.
+    // *   `false`: The request failed.
     @NameInMap("Success")
     public Boolean success;
 

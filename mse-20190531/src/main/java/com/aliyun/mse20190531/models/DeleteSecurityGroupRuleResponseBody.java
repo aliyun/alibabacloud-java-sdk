@@ -20,13 +20,14 @@ public class DeleteSecurityGroupRuleResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request is successful. Valid values:
-    // - `true`: The request is successful. 
-    // - `false`: The request fails.
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // *   `true`: The request was successful.
+    // *   `false`: The request failed.
     @NameInMap("Success")
     public Boolean success;
 
@@ -96,34 +97,34 @@ public class DeleteSecurityGroupRuleResponseBody extends TeaModel {
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 
-        // The time when the security group rule was created.
+        // The creation time.
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
-        // The time when the security group rule was last modified.
+        // The modification time.
         @NameInMap("GmtModified")
         public String gmtModified;
 
-        // ID.
+        // The ID.
         @NameInMap("Id")
         public Long id;
 
-        // The transport layer protocol. The value of this parameter is case-insensitive. Valid values: 
-        //          
-        // - icmp
-        // - gre
-        // - tcp
-        // - udp
-        // - all: All protocols are supported.
+        // The transport layer protocol. The value of this parameter is case-insensitive. Valid values:
+        // 
+        // *   icmp
+        // *   gre
+        // *   tcp
+        // *   udp
+        // *   all: All protocols are supported.
         @NameInMap("IpProtocol")
         public String ipProtocol;
 
-        // The range of destination ports that correspond to the transport layer protocol. Valid values: 
-        //          
-        // - When the value of the IpProtocol parameter is tcp or udp, the port number range is 1 to 65535. The start port number and the end port number are separated by a forward slash (/). Example: 1/200.
-        // - When the value of the IpProtocol parameter is icmp, the port number range is -1/-1, which indicates all ports.
-        // - When the value of the IpProtocol parameter is gre, the port number range is -1/-1, which indicates all ports.
-        // - When the value of the IpProtocol parameter is all, the port number range is -1/-1, which indicates all ports.
+        // The range of ports for the transport layer protocol in the destination security group. Valid values:
+        // 
+        // *   When the IpProtocol parameter is set to tcp or udp, the port number range is 1 to 65535. The start port number and the end port number are separated by a forward slash (/). Example: 1/200.
+        // *   If the IpProtocol parameter is set to icmp, the port number range is -1/-1, which indicates all ports.
+        // *   If the IpProtocol parameter is set to gre, the port number range is -1/-1, which indicates all ports.
+        // *   If the IpProtocol parameter is set to all, the port number range is -1/-1, which indicates all ports.
         @NameInMap("PortRange")
         public String portRange;
 

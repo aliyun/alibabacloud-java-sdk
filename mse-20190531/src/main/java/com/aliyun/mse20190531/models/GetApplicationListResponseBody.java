@@ -109,7 +109,10 @@ public class GetApplicationListResponseBody extends TeaModel {
         @NameInMap("LicenseKey")
         public String licenseKey;
 
-        // The region ID.
+        @NameInMap("Namespace")
+        public String namespace;
+
+        // The ID of the region.
         @NameInMap("RegionId")
         public String regionId;
 
@@ -176,6 +179,14 @@ public class GetApplicationListResponseBody extends TeaModel {
         }
         public String getLicenseKey() {
             return this.licenseKey;
+        }
+
+        public GetApplicationListResponseBodyDataResult setNamespace(String namespace) {
+            this.namespace = namespace;
+            return this;
+        }
+        public String getNamespace() {
+            return this.namespace;
         }
 
         public GetApplicationListResponseBodyDataResult setRegionId(String regionId) {

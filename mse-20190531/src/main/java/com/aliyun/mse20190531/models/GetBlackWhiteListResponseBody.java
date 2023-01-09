@@ -8,7 +8,7 @@ public class GetBlackWhiteListResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
-    // The details of the data.
+    // The data of the node.
     @NameInMap("Data")
     public GetBlackWhiteListResponseBodyData data;
 
@@ -24,9 +24,10 @@ public class GetBlackWhiteListResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request is successful. Valid values:
-    // - `true`: The request is successful. 
-    // - `false`: The request fails.
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // *   `true`: The request was successful.
+    // *   `false`: The request failed.
     @NameInMap("Success")
     public Boolean success;
 
@@ -96,19 +97,19 @@ public class GetBlackWhiteListResponseBody extends TeaModel {
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 
-        // The time when the blacklist or whitelist was created.
+        // The creation time.
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
-        // The time when the blacklist or whitelist was last modified.
+        // The modification time.
         @NameInMap("GmtModified")
         public String gmtModified;
 
-        // ID.
+        // The ID.
         @NameInMap("Id")
         public Long id;
 
-        // Indicates whether the whitelist is queried.
+        // Indicates whether the whitelist is enabled.
         @NameInMap("IsWhite")
         public Boolean isWhite;
 
@@ -116,7 +117,7 @@ public class GetBlackWhiteListResponseBody extends TeaModel {
         @NameInMap("ResourceId")
         public Long resourceId;
 
-        // The type of the resource.
+        // The type of a resource.
         @NameInMap("ResourceType")
         public String resourceType;
 
@@ -124,7 +125,7 @@ public class GetBlackWhiteListResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
-        // The type of the blacklist or whitelist.
+        // The type.
         @NameInMap("Type")
         public String type;
 

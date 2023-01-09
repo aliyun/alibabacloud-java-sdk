@@ -15,7 +15,7 @@ public class GetAppMessageQueueRouteRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
-    // The region where the cluster resides. Examples:
+    // The region where the instance resides. Examples:
     // 
     // *   `cn-hangzhou`: China (Hangzhou)
     // *   `cn-beijing`: China (Beijing)

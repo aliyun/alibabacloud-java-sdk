@@ -18,14 +18,14 @@ public class ListClusterTypesRequest extends TeaModel {
     @NameInMap("ConnectType")
     public String connectType;
 
-    // The edition of the MSE instance that you want to activate.
+    // The edition of the MSE instance that you want to purchase.
     // 
     // *   mse_pro: Professional Edition
     // *   mse_dev: Developer Edition
     @NameInMap("MseVersion")
     public String mseVersion;
 
-    // The ID of the region in which the instance resides. The region is supported by Microservices Engine (MSE).
+    // The ID of the region in which the instance resides. The region is supported by MSE.
     @NameInMap("RegionId")
     public String regionId;
 

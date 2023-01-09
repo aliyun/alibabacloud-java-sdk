@@ -8,7 +8,7 @@ public class ListGatewayDomainResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
-    // The details of the data.
+    // The data of the node.
     @NameInMap("Data")
     public java.util.List<ListGatewayDomainResponseBodyData> data;
 
@@ -16,7 +16,7 @@ public class ListGatewayDomainResponseBody extends TeaModel {
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // The error message returned if the request fails.
+    // The error message returned.
     @NameInMap("Message")
     public String message;
 
@@ -24,9 +24,10 @@ public class ListGatewayDomainResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request is successful. Valid values:
-    // - `true`: The request is successful. 
-    // - `false`: The request fails.
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // *   `true`: The request was successful.
+    // *   `false`: The request failed.
     @NameInMap("Success")
     public Boolean success;
 
@@ -84,6 +85,7 @@ public class ListGatewayDomainResponseBody extends TeaModel {
     }
 
     public static class ListGatewayDomainResponseBodyDataComment extends TeaModel {
+        // The status.
         @NameInMap("Status")
         public String status;
 
@@ -103,7 +105,7 @@ public class ListGatewayDomainResponseBody extends TeaModel {
     }
 
     public static class ListGatewayDomainResponseBodyData extends TeaModel {
-        // The expiration time of the certificate.
+        // The expiration time.
         @NameInMap("CertBeforeDate")
         public String certBeforeDate;
 
@@ -111,6 +113,7 @@ public class ListGatewayDomainResponseBody extends TeaModel {
         @NameInMap("CertIdentifier")
         public String certIdentifier;
 
+        // The route comment (ingress).
         @NameInMap("Comment")
         public ListGatewayDomainResponseBodyDataComment comment;
 
@@ -118,18 +121,19 @@ public class ListGatewayDomainResponseBody extends TeaModel {
         @NameInMap("GatewayId")
         public Long gatewayId;
 
-        // The time when the domain name was associated.
+        // The creation time.
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
-        // The time when the domain name was last modified.
+        // The update time.
         @NameInMap("GmtModified")
         public String gmtModified;
 
-        // Specifies whether to enable `Http2`.
-        // - `open`: enables `Http2`.
-        // - `close`: disables `Http2`.
-        // - `globalConfig`: uses global configurations.
+        // Indicates whether `HTTP/2` is enabled.
+        // 
+        // *   `open`: `HTTP/2` is enabled.
+        // *   `close`: `HTTP/2` is disabled.
+        // *   `globalConfig`: Global configurations are used.
         @NameInMap("Http2")
         public String http2;
 
@@ -137,7 +141,7 @@ public class ListGatewayDomainResponseBody extends TeaModel {
         @NameInMap("Id")
         public Long id;
 
-        // Indicates whether HTTPS is forcibly used.
+        // Indicates whether HTTPS is forcefully used.
         @NameInMap("MustHttps")
         public Boolean mustHttps;
 
@@ -145,10 +149,18 @@ public class ListGatewayDomainResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
-        // The type of the protocol.
+        // The protocol.
         @NameInMap("Protocol")
         public String protocol;
 
+        // The status of the domain name. Valid values:
+        // 
+        // *   0: unpublish
+        // *   2: publishing
+        // *   3: published
+        // *   4: editing
+        // *   5: unpublishing
+        // *   6: unavailable
         @NameInMap("Status")
         public Integer status;
 
@@ -160,6 +172,7 @@ public class ListGatewayDomainResponseBody extends TeaModel {
         @NameInMap("TlsMin")
         public String tlsMin;
 
+        // The type.
         @NameInMap("Type")
         public String type;
 

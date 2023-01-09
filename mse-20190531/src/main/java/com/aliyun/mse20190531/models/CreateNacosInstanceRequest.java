@@ -4,10 +4,14 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class CreateNacosInstanceRequest extends TeaModel {
+    // The language of the response. Valid values:
+    // 
+    // *   zh: Chinese
+    // *   en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // The name of the Nacos cluster.
+    // The name of the Nacos instance.
     @NameInMap("ClusterName")
     public String clusterName;
 
@@ -31,7 +35,7 @@ public class CreateNacosInstanceRequest extends TeaModel {
     @NameInMap("Ip")
     public String ip;
 
-    // The node metadata of the instance.
+    // The metadata of the instance.
     @NameInMap("Metadata")
     public String metadata;
 
@@ -47,7 +51,7 @@ public class CreateNacosInstanceRequest extends TeaModel {
     @NameInMap("ServiceName")
     public String serviceName;
 
-    // The weight of the instance.
+    // The weight. Valid values: 0 to 10000. The value must be an integer. A larger value indicates a higher frequency at which the instance is accessed.
     @NameInMap("Weight")
     public String weight;
 

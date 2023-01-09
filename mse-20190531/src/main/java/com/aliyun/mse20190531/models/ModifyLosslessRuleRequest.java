@@ -41,6 +41,9 @@ public class ModifyLosslessRuleRequest extends TeaModel {
     @NameInMap("LossLessDetail")
     public Boolean lossLessDetail;
 
+    @NameInMap("Namespace")
+    public String namespace;
+
     @NameInMap("Notice")
     public Boolean notice;
 
@@ -131,6 +134,14 @@ public class ModifyLosslessRuleRequest extends TeaModel {
     }
     public Boolean getLossLessDetail() {
         return this.lossLessDetail;
+    }
+
+    public ModifyLosslessRuleRequest setNamespace(String namespace) {
+        this.namespace = namespace;
+        return this;
+    }
+    public String getNamespace() {
+        return this.namespace;
     }
 
     public ModifyLosslessRuleRequest setNotice(Boolean notice) {

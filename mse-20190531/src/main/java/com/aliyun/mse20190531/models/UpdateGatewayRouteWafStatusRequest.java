@@ -11,7 +11,7 @@ public class UpdateGatewayRouteWafStatusRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // Specifies whether to enable Web Application Firewall (WAF).
+    // Specifies whether to activate Web Application Firewall (WAF).
     @NameInMap("EnableWaf")
     public Boolean enableWaf;
 
@@ -19,7 +19,7 @@ public class UpdateGatewayRouteWafStatusRequest extends TeaModel {
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
-    // The ID of the route entry.
+    // The ID of the route.
     @NameInMap("RouteId")
     public Long routeId;
 

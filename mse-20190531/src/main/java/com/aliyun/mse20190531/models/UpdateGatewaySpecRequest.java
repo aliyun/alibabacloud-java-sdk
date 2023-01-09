@@ -19,7 +19,7 @@ public class UpdateGatewaySpecRequest extends TeaModel {
     @NameInMap("Replica")
     public Integer replica;
 
-    // The node specifications.
+    // The node specifications of the gateway.
     @NameInMap("Spec")
     public String spec;
 

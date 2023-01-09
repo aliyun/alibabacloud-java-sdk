@@ -4,29 +4,30 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class DeleteGatewayDomainResponseBody extends TeaModel {
-    // The error message returned if the request fails.
+    // The status code returned.
     @NameInMap("Code")
     public Integer code;
 
-    // Indicates whether the request is successful. Valid values:
-    // - `true`: The request is successful. 
-    // - `false`: The request fails.
+    // The returned data.
     @NameInMap("Data")
     public DeleteGatewayDomainResponseBodyData data;
 
-    // The ID of the request.
+    // The HTTP status code returned.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // The HTTP status code returned.
+    // The error message.
     @NameInMap("Message")
     public String message;
 
-    // The data structure.
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
-    // The status code returned.
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // *   `true`: The request was successful.
+    // *   `false`: The request failed.
     @NameInMap("Success")
     public Boolean success;
 
@@ -84,39 +85,39 @@ public class DeleteGatewayDomainResponseBody extends TeaModel {
     }
 
     public static class DeleteGatewayDomainResponseBodyData extends TeaModel {
-        // Indicates whether HTTP probing is allowed.
+        // The ID of the certificate.
         @NameInMap("CertIdentifier")
         public String certIdentifier;
 
-        // The unique ID of the gateway.
+        // The ID of the gateway.
         @NameInMap("GatewayId")
         public Long gatewayId;
 
-        // The name of the gateway.
+        // The unique ID of the gateway.
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 
-        // The ID of the certificate.
+        // The time when the domain name was added.
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
-        // The time when the domain name was added.
+        // The last modification time.
         @NameInMap("GmtModified")
         public String gmtModified;
 
-        // The returned data.
+        // The domain ID.
         @NameInMap("Id")
         public Long id;
 
-        // The protocol used by the gateway.
+        // Indicates whether HTTP probing is allowed.
         @NameInMap("MustHttps")
         public Boolean mustHttps;
 
-        // The ID of the domain name.
+        // The name.
         @NameInMap("Name")
         public String name;
 
-        // The ID of the gateway.
+        // The protocol.
         @NameInMap("Protocol")
         public String protocol;
 

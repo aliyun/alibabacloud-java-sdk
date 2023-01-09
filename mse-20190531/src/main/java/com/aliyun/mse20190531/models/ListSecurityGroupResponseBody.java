@@ -4,7 +4,7 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListSecurityGroupResponseBody extends TeaModel {
-    // The status code returned.
+    // The response code returned.
     @NameInMap("Code")
     public Integer code;
 
@@ -20,13 +20,14 @@ public class ListSecurityGroupResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
+    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request is successful. Valid values:
-    // - `true`: The request is successful. 
-    // - `false`: The request fails.
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // *   `true`: The request was successful.
+    // *   `false`: The request failed.
     @NameInMap("Success")
     public Boolean success;
 
@@ -94,12 +95,12 @@ public class ListSecurityGroupResponseBody extends TeaModel {
 
         // The type of the security group. Valid values:
         // 
-        // - normal: basic security group 
-        // - enterprise: advanced security group For more information, see [Overview](~~120621~~).
+        // *   normal: basic security group
+        // *   enterprise: advanced security group For more information, see [Advanced security groups](~~120621~~).
         @NameInMap("SecurityGroupType")
         public String securityGroupType;
 
-        // VPC ID.
+        // The ID of the virtual private cloud (VPC).
         @NameInMap("VpcId")
         public String vpcId;
 

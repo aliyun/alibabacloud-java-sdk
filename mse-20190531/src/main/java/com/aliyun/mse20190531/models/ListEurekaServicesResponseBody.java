@@ -8,7 +8,7 @@ public class ListEurekaServicesResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.List<ListEurekaServicesResponseBodyData> data;
 
-    // The error code returned if the request fails.
+    // The error code returned if the request failed.
     @NameInMap("ErrorCode")
     public String errorCode;
 
@@ -32,13 +32,14 @@ public class ListEurekaServicesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request is successful. Valid values:
-    // - `true`: The request is successful. 
-    // - `false`: The request fails.
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // *   `true`: The request was successful.
+    // *   `false`: The request failed.
     @NameInMap("Success")
     public Boolean success;
 
-    // The total number of entries returned.
+    // The total number of returned instances.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -120,7 +121,7 @@ public class ListEurekaServicesResponseBody extends TeaModel {
     }
 
     public static class ListEurekaServicesResponseBodyData extends TeaModel {
-        // The information about instances.
+        // The details of the instance.
         @NameInMap("InstancesId")
         public java.util.List<String> instancesId;
 

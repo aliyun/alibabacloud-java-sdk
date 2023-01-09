@@ -21,13 +21,13 @@ public class UpdateGatewayDomainRequest extends TeaModel {
 
     // Specifies whether to enable `HTTP/2`.
     // 
-    // *   `open`: enables `HTTP/2`
-    // *   `close`: disables `HTTP/2`
-    // *   `globalConfig`: uses global configurations
+    // *   `open`: `HTTP/2` is enabled.
+    // *   `close`: `HTTP/2` is disabled.
+    // *   `globalConfig`: Global configurations are used.
     @NameInMap("Http2")
     public String http2;
 
-    // The ID of the domain name.
+    // The ID of the domain name that you want to update.
     @NameInMap("Id")
     public Long id;
 

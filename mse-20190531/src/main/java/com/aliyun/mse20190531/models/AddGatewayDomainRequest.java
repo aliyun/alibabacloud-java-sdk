@@ -35,7 +35,10 @@ public class AddGatewayDomainRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
-    // The type of the protocol.
+    // The type of the protocol. Valid values:
+    // 
+    // *   `HTTP`
+    // *   `HTTPS`
     @NameInMap("Protocol")
     public String protocol;
 

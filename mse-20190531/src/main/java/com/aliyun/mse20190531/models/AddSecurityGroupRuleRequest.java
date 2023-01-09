@@ -6,12 +6,12 @@ import com.aliyun.tea.*;
 public class AddSecurityGroupRuleRequest extends TeaModel {
     // The language of the response. Valid values:
     // 
-    // - zh: Chinese
-    // - en: English
+    // *   zh: Chinese
+    // *   en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // The description of the rule.
+    // The description.
     @NameInMap("Description")
     public String description;
 
@@ -19,7 +19,7 @@ public class AddSecurityGroupRuleRequest extends TeaModel {
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
-    // The port range.
+    // The range of port numbers.
     @NameInMap("PortRange")
     public String portRange;
 

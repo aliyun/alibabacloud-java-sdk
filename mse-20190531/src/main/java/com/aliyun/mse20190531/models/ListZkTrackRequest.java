@@ -4,35 +4,46 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListZkTrackRequest extends TeaModel {
+    // The language of the response. Valid values:
+    // 
+    // *   zh: Chinese
+    // *   en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    // The end timestamp. Unit: seconds.
     @NameInMap("EndTs")
     public Long endTs;
 
+    // The ID of the instance.
     @NameInMap("InstanceId")
     public String instanceId;
 
+    // The number of the page to return.
     @NameInMap("PageNum")
     public Long pageNum;
 
+    // The number of entries to return on each page.
     @NameInMap("PageSize")
     public Long pageSize;
 
+    // The path.
     @NameInMap("Path")
     public String path;
 
-    // RequestPars。
+    // The request parameters.
     @NameInMap("RequestPars")
     public String requestPars;
 
+    // Specifies whether entries are sorted in reverse chronological order.
     @NameInMap("Reverse")
     public Boolean reverse;
 
-    // SessionId。
+    // The session ID.
     @NameInMap("SessionId")
     public String sessionId;
 
+    // The start timestamp. Unit: seconds.
     @NameInMap("StartTs")
     public Long startTs;
 

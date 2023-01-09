@@ -72,7 +72,7 @@ public class CreateClusterRequest extends TeaModel {
     @NameInMap("InstanceCount")
     public Integer instanceCount;
 
-    // The name of the instance.
+    // The name of the MSE instance.
     @NameInMap("InstanceName")
     public String instanceName;
 
@@ -119,7 +119,7 @@ public class CreateClusterRequest extends TeaModel {
     @NameInMap("Region")
     public String region;
 
-    // The extended request parameter in the JSON format.
+    // The extended request parameters in the JSON format.
     @NameInMap("RequestPars")
     public String requestPars;
 
@@ -135,7 +135,7 @@ public class CreateClusterRequest extends TeaModel {
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
-    // VPC ID.
+    // The ID of the virtual private cloud (VPC).
     @NameInMap("VpcId")
     public String vpcId;
 

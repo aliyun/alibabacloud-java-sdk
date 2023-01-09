@@ -16,15 +16,15 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
-    // The error code returned.
+    // The error code returned if the request failed.
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // The HTTP status code.
+    // The HTTP status code returned.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // The returned message.
+    // The message returned.
     @NameInMap("Message")
     public String message;
 

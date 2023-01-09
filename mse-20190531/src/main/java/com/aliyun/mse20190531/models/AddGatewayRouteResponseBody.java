@@ -4,7 +4,7 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class AddGatewayRouteResponseBody extends TeaModel {
-    // The code returned.
+    // The status code returned.
     @NameInMap("Code")
     public Integer code;
 
@@ -12,11 +12,11 @@ public class AddGatewayRouteResponseBody extends TeaModel {
     @NameInMap("Data")
     public Long data;
 
-    // The HTTP status code.
+    // The HTTP status code returned.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // The response message.
+    // The message returned.
     @NameInMap("Message")
     public String message;
 

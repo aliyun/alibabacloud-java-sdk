@@ -6,8 +6,8 @@ import com.aliyun.tea.*;
 public class ApplyTagPoliciesRequest extends TeaModel {
     // The language of the response. Valid values:
     // 
-    // - zh: Chinese
-    // - en: English
+    // *   zh: Chinese
+    // *   en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
@@ -23,7 +23,7 @@ public class ApplyTagPoliciesRequest extends TeaModel {
     @NameInMap("NamespaceId")
     public String namespaceId;
 
-    // The ID of the region.
+    // The region ID.
     @NameInMap("Region")
     public String region;
 
@@ -31,7 +31,7 @@ public class ApplyTagPoliciesRequest extends TeaModel {
     @NameInMap("Rules")
     public String rules;
 
-    // The source of the routing rule.
+    // The service source.
     @NameInMap("Source")
     public String source;
 

@@ -6,8 +6,8 @@ import com.aliyun.tea.*;
 public class AddMockRuleRequest extends TeaModel {
     // The language of the response. Valid values:
     // 
-    // - zh: Chinese
-    // - en: English
+    // *   zh: Chinese
+    // *   en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
@@ -19,10 +19,10 @@ public class AddMockRuleRequest extends TeaModel {
     @NameInMap("DubboMockItems")
     public String dubboMockItems;
 
-    // Specifies whether to enable the rule. Valid values:
+    // Specifies whether to enable the alert rule. Valid values:
     // 
-    // - `true`: enables the rule. 
-    // - `false`: disables the rule.
+    // *   `true`: enables the alert rule.
+    // *   `false`: disables the alert rule.
     @NameInMap("Enable")
     public Boolean enable;
 
@@ -30,12 +30,12 @@ public class AddMockRuleRequest extends TeaModel {
     @NameInMap("ExtraJson")
     public String extraJson;
 
-    // The response time threshold of slow calls. Valid values:
+    // The response time (RT) threshold of slow calls. Valid values:
     // 
-    // - 15: 15 ms
-    // - 30: 30 ms
-    // - 60: 60 ms
-    // - 120: 120 ms
+    // *   \- 15: 15 ms
+    // *   \- 30: 30 ms
+    // *   \- 60: 60 ms
+    // *   \- 120: 120 ms
     @NameInMap("MockType")
     public Long mockType;
 
@@ -59,7 +59,7 @@ public class AddMockRuleRequest extends TeaModel {
     @NameInMap("ScMockItems")
     public String scMockItems;
 
-    // The source of the rule. Valid values: -custom_fc: The rule is based on a custom function. -system_custom: The rule is based on a system function.
+    // The rule source.
     @NameInMap("Source")
     public String source;
 

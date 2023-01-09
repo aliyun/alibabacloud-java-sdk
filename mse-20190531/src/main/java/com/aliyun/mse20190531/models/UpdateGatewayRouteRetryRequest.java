@@ -6,8 +6,8 @@ import com.aliyun.tea.*;
 public class UpdateGatewayRouteRetryRequest extends TeaModel {
     // The language of the response. Valid values:
     // 
-    // - zh: Chinese
-    // - en: English
+    // *   zh: Chinese
+    // *   en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
@@ -19,7 +19,7 @@ public class UpdateGatewayRouteRetryRequest extends TeaModel {
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
-    // The ID of the route.
+    // The ID of the associated record.
     @NameInMap("Id")
     public Long id;
 
@@ -73,11 +73,11 @@ public class UpdateGatewayRouteRetryRequest extends TeaModel {
     }
 
     public static class UpdateGatewayRouteRetryRequestRetryJSON extends TeaModel {
-        // The number of retries allowed.
+        // The number of retries.
         @NameInMap("Attempts")
         public Integer attempts;
 
-        // The HTTP status codes returned.
+        // The HTTP status codes.
         @NameInMap("HttpCodes")
         public java.util.List<String> httpCodes;
 

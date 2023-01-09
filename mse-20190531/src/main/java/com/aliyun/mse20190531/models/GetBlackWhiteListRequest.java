@@ -6,8 +6,8 @@ import com.aliyun.tea.*;
 public class GetBlackWhiteListRequest extends TeaModel {
     // The language of the response. Valid values:
     // 
-    // - zh: Chinese
-    // - en: English
+    // *   zh: Chinese
+    // *   en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
@@ -15,7 +15,7 @@ public class GetBlackWhiteListRequest extends TeaModel {
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
-    // Specifies whether to query the whitelist.
+    // Specifies whether to enable the whitelist.
     @NameInMap("IsWhite")
     public Boolean isWhite;
 
@@ -23,7 +23,7 @@ public class GetBlackWhiteListRequest extends TeaModel {
     @NameInMap("ResourceType")
     public String resourceType;
 
-    // The type of the blacklist or whitelist.
+    // The type.
     @NameInMap("Type")
     public String type;
 

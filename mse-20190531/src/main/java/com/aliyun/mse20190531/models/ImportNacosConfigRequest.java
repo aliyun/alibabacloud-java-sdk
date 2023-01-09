@@ -6,8 +6,8 @@ import com.aliyun.tea.*;
 public class ImportNacosConfigRequest extends TeaModel {
     // The language of the response. Valid values:
     // 
-    // - zh: Chinese
-    // - en: English
+    // *   zh: Chinese
+    // *   en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
@@ -23,7 +23,7 @@ public class ImportNacosConfigRequest extends TeaModel {
     @NameInMap("NamespaceId")
     public String namespaceId;
 
-    // The policy used to handle write conflicts.
+    // The policy.
     @NameInMap("Policy")
     public String policy;
 

@@ -6,8 +6,8 @@ import com.aliyun.tea.*;
 public class ListNacosConfigsRequest extends TeaModel {
     // The language of the response. Valid values:
     // 
-    // - zh: Chinese
-    // - en: English
+    // *   zh: Chinese
+    // *   en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
@@ -15,11 +15,11 @@ public class ListNacosConfigsRequest extends TeaModel {
     @NameInMap("AppName")
     public String appName;
 
-    // The ID of the configuration.
+    // The ID of the data.
     @NameInMap("DataId")
     public String dataId;
 
-    // The name of the group. Default value: `default`.
+    // The name of the group. Default value: `default`
     @NameInMap("Group")
     public String group;
 
@@ -39,7 +39,7 @@ public class ListNacosConfigsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The ID of the region in which the cluster resides.
+    // The ID of the region in which the instance resides. The region is supported by Microservices Engine (MSE).
     @NameInMap("RegionId")
     public String regionId;
 
@@ -47,7 +47,7 @@ public class ListNacosConfigsRequest extends TeaModel {
     @NameInMap("RequestPars")
     public String requestPars;
 
-    // The tags of the configuration.
+    // The tags.
     @NameInMap("Tags")
     public String tags;
 

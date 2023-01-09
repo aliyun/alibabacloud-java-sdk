@@ -8,7 +8,7 @@ public class GetEngineNamepaceResponseBody extends TeaModel {
     @NameInMap("ConfigCount")
     public String configCount;
 
-    // The error code returned if the request fails.
+    // The error code returned if the request failed.
     @NameInMap("ErrorCode")
     public String errorCode;
 
@@ -20,7 +20,7 @@ public class GetEngineNamepaceResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    // The name of the namespace.
+    // The ID of the namespace.
     @NameInMap("Namespace")
     public String namespace;
 
@@ -40,17 +40,18 @@ public class GetEngineNamepaceResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request is successful. Valid values:
-    // - `true`: The request is successful. 
-    // - `false`: The request fails.
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // *   `true`: The request was successful.
+    // *   `false`: The request failed.
     @NameInMap("Success")
     public Boolean success;
 
     // The type of the namespace. Valid values:
     // 
-    // - 0: global configuration                                 
-    // - 1: default namespace                                 
-    // - 2: custom namespace
+    // *   0: global configuration
+    // *   1: default namespace
+    // *   2: custom namespace
     @NameInMap("Type")
     public String type;
 

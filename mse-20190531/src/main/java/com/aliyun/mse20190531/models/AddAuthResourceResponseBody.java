@@ -8,7 +8,7 @@ public class AddAuthResourceResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
-    // The returned data.
+    // The data structure.
     @NameInMap("Data")
     public Long data;
 
@@ -16,7 +16,7 @@ public class AddAuthResourceResponseBody extends TeaModel {
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // The error message returned if the request fails.
+    // The error message.
     @NameInMap("Message")
     public String message;
 
@@ -24,9 +24,10 @@ public class AddAuthResourceResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request is successful. Valid values:
-    // - `true`: The request is successful. 
-    // - `false`: The request fails.
+    // Indicates whether the request was successful. Valid values:
+    // 
+    // *   `true`: The request was successful.
+    // *   `false`: The request failed.
     @NameInMap("Success")
     public Boolean success;
 

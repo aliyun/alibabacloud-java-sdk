@@ -6,16 +6,16 @@ import com.aliyun.tea.*;
 public class ListNacosHistoryConfigsRequest extends TeaModel {
     // The language of the response. Valid values:
     // 
-    // - zh: Chinese
-    // - en: English
+    // *   zh: Chinese
+    // *   en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // The ID of the configuration.
+    // The ID of the data.
     @NameInMap("DataId")
     public String dataId;
 
-    // The name of the group.
+    // The name of the configuration group.
     @NameInMap("Group")
     public String group;
 
@@ -35,7 +35,7 @@ public class ListNacosHistoryConfigsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The ID of the region in which the cluster resides.
+    // The ID of the region in which the instance resides. The region is supported by Microservices Engine (MSE).
     @NameInMap("RegionId")
     public String regionId;
 

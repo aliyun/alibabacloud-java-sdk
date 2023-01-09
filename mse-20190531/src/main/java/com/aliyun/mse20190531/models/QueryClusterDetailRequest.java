@@ -6,11 +6,12 @@ import com.aliyun.tea.*;
 public class QueryClusterDetailRequest extends TeaModel {
     // The language of the response. Valid values:
     // 
-    // - zh: Chinese
-    // - en: English
+    // *   zh: Chinese
+    // *   en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    // Specifies whether to query access control lists (ACLs).
     @NameInMap("AclSwitch")
     public Boolean aclSwitch;
 

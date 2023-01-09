@@ -6,8 +6,8 @@ import com.aliyun.tea.*;
 public class UpdateGatewayRouteHeaderOpRequest extends TeaModel {
     // The language of the response. Valid values:
     // 
-    // - zh: Chinese
-    // - en: English
+    // *   zh: Chinese
+    // *   en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
@@ -23,7 +23,7 @@ public class UpdateGatewayRouteHeaderOpRequest extends TeaModel {
     @NameInMap("HeaderOpJSON")
     public String headerOpJSON;
 
-    // The ID of the route.
+    // The ID of the record.
     @NameInMap("Id")
     public Long id;
 

@@ -8,7 +8,7 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
-    // The returned data.
+    // The details of the data.
     @NameInMap("Data")
     public java.util.List<ApplyTagPoliciesResponseBodyData> data;
 
@@ -82,14 +82,14 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
     }
 
     public static class ApplyTagPoliciesResponseBodyData extends TeaModel {
-        // Indicates whether pass-through is enabled.
+        // Indicates whether the field is the primary key.
         @NameInMap("CarryData")
         public Boolean carryData;
 
-        // Indicates whether the routing rule is enabled. 
+        // Indicates whether the routing rule is enabled.
         // 
-        // - `true`: enabled 
-        // - `false`: disabled
+        // *   `true`: enabled
+        // *   `false`: disabled
         @NameInMap("Enable")
         public Boolean enable;
 
@@ -101,7 +101,7 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
         @NameInMap("InstanceNum")
         public Integer instanceNum;
 
-        // The name of the routing rule.
+        // The policy name.
         @NameInMap("Name")
         public String name;
 
@@ -117,7 +117,7 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
         @NameInMap("Rules")
         public String rules;
 
-        // The status of the routing rule.
+        // The status.
         @NameInMap("Status")
         public Integer status;
 

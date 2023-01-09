@@ -31,7 +31,7 @@ public class AddGatewaySlbRequest extends TeaModel {
     @NameInMap("ServiceWeight")
     public Integer serviceWeight;
 
-    // SLB ID.
+    // The ID of the SLB instance.
     @NameInMap("SlbId")
     public String slbId;
 

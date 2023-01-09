@@ -6,7 +6,8 @@ import com.aliyun.tea.*;
 public class CreateOrUpdateSwimmingLaneGroupRequest extends TeaModel {
     // The language of the response. Valid values:
     // 
-    // zh: Chinese en: English Default value: zh
+    // *   zh: Chinese
+    // *   en: English
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
@@ -54,15 +55,18 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
-    // Region.
+    @NameInMap("Namespace")
+    public String namespace;
+
+    // The region ID.
     @NameInMap("Region")
     public String region;
 
-    // The service source. Set the value to edasmsc.
+    // The service source. Valid value: edasmsc.
     @NameInMap("Source")
     public String source;
 
-    // The status of the lane group. The value 0 indicates that the lane group is disabled. The value 1 indicates that the lane group is enabled.
+    // The status of the lane group. The value 0 specifies that the lane group is disabled. The value 1 specifies that the lane group is enabled.
     @NameInMap("Status")
     public Integer status;
 
@@ -169,6 +173,14 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public CreateOrUpdateSwimmingLaneGroupRequest setNamespace(String namespace) {
+        this.namespace = namespace;
+        return this;
+    }
+    public String getNamespace() {
+        return this.namespace;
     }
 
     public CreateOrUpdateSwimmingLaneGroupRequest setRegion(String region) {

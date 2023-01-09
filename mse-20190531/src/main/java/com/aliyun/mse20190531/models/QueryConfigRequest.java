@@ -11,7 +11,7 @@ public class QueryConfigRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // The ID of the cluster.
+    // The ID of the instance.
     @NameInMap("ClusterId")
     public String clusterId;
 
@@ -26,7 +26,7 @@ public class QueryConfigRequest extends TeaModel {
     @NameInMap("NeedRunningConf")
     public Boolean needRunningConf;
 
-    // The extended request parameter in the JSON format.
+    // The extended request parameters in the JSON format.
     @NameInMap("RequestPars")
     public String requestPars;
 
