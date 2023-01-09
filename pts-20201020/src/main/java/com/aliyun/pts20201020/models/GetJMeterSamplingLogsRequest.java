@@ -4,27 +4,21 @@ package com.aliyun.pts20201020.models;
 import com.aliyun.tea.*;
 
 public class GetJMeterSamplingLogsRequest extends TeaModel {
-    // 压测引擎编号
     @NameInMap("AgentId")
     public Long agentId;
 
-    // 开始时间
     @NameInMap("BeginTime")
     public Long beginTime;
 
-    // 结束时间
     @NameInMap("EndTime")
     public Long endTime;
 
-    // 关键字
     @NameInMap("Keyword")
     public String keyword;
 
-    // 最大响应时间，单位ms
     @NameInMap("MaxRT")
     public Integer maxRT;
 
-    // 最小响应时间，单位ms
     @NameInMap("MinRT")
     public Integer minRT;
 
@@ -34,22 +28,18 @@ public class GetJMeterSamplingLogsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 报告ID
     @NameInMap("ReportId")
     public String reportId;
 
     @NameInMap("ResponseCode")
     public String responseCode;
 
-    // 第几个采样器，从0开始
     @NameInMap("SamplerId")
     public Integer samplerId;
 
-    // 采样结果是否成功
     @NameInMap("Success")
     public Boolean success;
 
-    // 线程
     @NameInMap("Thread")
     public String thread;
 

@@ -19,7 +19,6 @@ public class GetJMeterSceneRunningDataResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // 运行中的数据
     @NameInMap("RunningData")
     public GetJMeterSceneRunningDataResponseBodyRunningData runningData;
 
@@ -88,59 +87,45 @@ public class GetJMeterSceneRunningDataResponseBody extends TeaModel {
     }
 
     public static class GetJMeterSceneRunningDataResponseBodyRunningData extends TeaModel {
-        // 压测引擎数量
         @NameInMap("AgentCount")
         public Integer agentCount;
 
-        // 压测引擎列表
         @NameInMap("AgentIdList")
         public java.util.List<String> agentIdList;
 
-        // 场景整体的采样状态
         @NameInMap("AllSampleStat")
         public java.util.Map<String, ?> allSampleStat;
 
-        // 并发量
         @NameInMap("Concurrency")
         public Integer concurrency;
 
-        // 是否生成了报告
         @NameInMap("HasReport")
         public Boolean hasReport;
 
-        // 压测计划持续时间，单位s
         @NameInMap("HoldFor")
         public Integer holdFor;
 
-        // 是否是调试
         @NameInMap("IsDebugging")
         public Boolean isDebugging;
 
-        // 每一个采样器的状态
         @NameInMap("SampleStatList")
         public java.util.List<java.util.Map<String, ?>> sampleStatList;
 
-        // 场景id
         @NameInMap("SceneId")
         public String sceneId;
 
-        // 场景名称
         @NameInMap("SceneName")
         public String sceneName;
 
-        // 当前所处阶段
         @NameInMap("StageName")
         public String stageName;
 
-        // 压测计划开始时间戳，单位ms
         @NameInMap("StartTimeTS")
         public Long startTimeTS;
 
-        // 状态
         @NameInMap("Status")
         public String status;
 
-        // 目前消耗的vum
         @NameInMap("Vum")
         public Long vum;
 

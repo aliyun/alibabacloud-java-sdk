@@ -4,7 +4,6 @@ package com.aliyun.pts20201020.models;
 import com.aliyun.tea.*;
 
 public class RemoveEnvRequest extends TeaModel {
-    // 要删除的环境ID
     @NameInMap("EnvId")
     public String envId;
 

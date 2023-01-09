@@ -16,7 +16,6 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // 场景详情
     @NameInMap("Scene")
     public GetOpenJMeterSceneResponseBodyScene scene;
 
@@ -77,27 +76,21 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
     }
 
     public static class GetOpenJMeterSceneResponseBodySceneBaseInfo extends TeaModel {
-        // 创建人名
         @NameInMap("CreateName")
         public String createName;
 
-        // 修改人名
         @NameInMap("ModifyName")
         public String modifyName;
 
-        // 操作类型
         @NameInMap("OperateType")
         public String operateType;
 
-        // 场景压测负责人
         @NameInMap("Principal")
         public String principal;
 
-        // 备注
         @NameInMap("Remark")
         public String remark;
 
-        // 场景来源
         @NameInMap("Resource")
         public String resource;
 
@@ -157,15 +150,12 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
     }
 
     public static class GetOpenJMeterSceneResponseBodySceneDnsCacheConfig extends TeaModel {
-        // 是否清除缓存
         @NameInMap("ClearCacheEachIteration")
         public Boolean clearCacheEachIteration;
 
-        // DNS服务器
         @NameInMap("DnsServers")
         public java.util.List<String> dnsServers;
 
-        // 域名绑定
         @NameInMap("HostTable")
         public java.util.Map<String, ?> hostTable;
 
@@ -201,31 +191,24 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
     }
 
     public static class GetOpenJMeterSceneResponseBodySceneFileList extends TeaModel {
-        // 文件名
         @NameInMap("FileName")
         public String fileName;
 
-        // 文件地址
         @NameInMap("FileOssAddress")
         public String fileOssAddress;
 
-        // 文件大小
         @NameInMap("FileSize")
         public Long fileSize;
 
-        // 文件类型
         @NameInMap("FileType")
         public String fileType;
 
-        // 文件ID
         @NameInMap("Id")
         public Long id;
 
-        // 文件的md5值
         @NameInMap("Md5")
         public String md5;
 
-        // csv文件是否切分
         @NameInMap("SplitCsv")
         public Boolean splitCsv;
 
@@ -293,70 +276,54 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
     }
 
     public static class GetOpenJMeterSceneResponseBodyScene extends TeaModel {
-        // 施压机数量
         @NameInMap("AgentCount")
         public Integer agentCount;
 
-        // 基本信息
         @NameInMap("BaseInfo")
         public GetOpenJMeterSceneResponseBodySceneBaseInfo baseInfo;
 
-        // 最大并发，并发模式下生效
         @NameInMap("Concurrency")
         public Integer concurrency;
 
-        // constantThroughputTimerType
         @NameInMap("ConstantThroughputTimerType")
         public String constantThroughputTimerType;
 
-        // DNS配置
         @NameInMap("DnsCacheConfig")
         public GetOpenJMeterSceneResponseBodySceneDnsCacheConfig dnsCacheConfig;
 
-        // 压测持续时间，单位为s
         @NameInMap("Duration")
         public Integer duration;
 
-        // 环境id
         @NameInMap("EnvironmentId")
         public String environmentId;
 
-        // 文件列表
         @NameInMap("FileList")
         public java.util.List<GetOpenJMeterSceneResponseBodySceneFileList> fileList;
 
-        // 是否为VPC压测
         @NameInMap("IsVpcTest")
         public Boolean isVpcTest;
 
         @NameInMap("MaxRps")
         public Integer maxRps;
 
-        // 施压模式，concurrency_mode表示并发压测,tps_mode表示RPS压测
         @NameInMap("Mode")
         public String mode;
 
-        // 压力来源。“”表示公网，intranet-vpc表示VPC
         @NameInMap("Pool")
         public String pool;
 
-        // 递增时间，单位s
         @NameInMap("RampUp")
         public Integer rampUp;
 
-        // VPC压测时配置
         @NameInMap("RegionId")
         public String regionId;
 
-        // 场景id
         @NameInMap("SceneId")
         public String sceneId;
 
-        // 场景名
         @NameInMap("SceneName")
         public String sceneName;
 
-        // 安全组id，VPC压测时配置
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
@@ -366,23 +333,18 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
         @NameInMap("StartRps")
         public Integer startRps;
 
-        // 递增阶梯数。预热时间和预热阶段数都不配置时 使用固定压力值 只配置预热时间，不配置阶段数时 使用均匀递增 预热时间和阶段数都配置时，并且steps<rampUp 使用阶梯递增 不能只配置steps，不配置rampUp 如果这样配置，默认使用固定压力值
         @NameInMap("Steps")
         public Integer steps;
 
-        // synchronizing timer 类型
         @NameInMap("SyncTimerType")
         public String syncTimerType;
 
-        // 测试文件
         @NameInMap("TestFile")
         public String testFile;
 
-        // 交换机id，VPC压测时配置
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
-        // vpc的id，VPC压测时配置
         @NameInMap("VpcId")
         public String vpcId;
 

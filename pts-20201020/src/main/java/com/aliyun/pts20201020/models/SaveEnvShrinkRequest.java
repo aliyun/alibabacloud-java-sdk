@@ -4,7 +4,6 @@ package com.aliyun.pts20201020.models;
 import com.aliyun.tea.*;
 
 public class SaveEnvShrinkRequest extends TeaModel {
-    // 环境
     @NameInMap("Env")
     public String envShrink;
 

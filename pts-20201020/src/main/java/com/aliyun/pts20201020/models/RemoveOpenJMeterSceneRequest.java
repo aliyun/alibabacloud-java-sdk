@@ -4,7 +4,6 @@ package com.aliyun.pts20201020.models;
 import com.aliyun.tea.*;
 
 public class RemoveOpenJMeterSceneRequest extends TeaModel {
-    // 场景ID
     @NameInMap("SceneId")
     public String sceneId;
 

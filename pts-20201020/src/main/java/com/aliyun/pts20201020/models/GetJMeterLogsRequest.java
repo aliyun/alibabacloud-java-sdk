@@ -4,23 +4,18 @@ package com.aliyun.pts20201020.models;
 import com.aliyun.tea.*;
 
 public class GetJMeterLogsRequest extends TeaModel {
-    // 第几台引擎，起始为0
     @NameInMap("AgentIndex")
     public Integer agentIndex;
 
-    // 开始时间
     @NameInMap("BeginTime")
     public Long beginTime;
 
-    // 结束时间
     @NameInMap("EndTime")
     public Long endTime;
 
-    // 关键字
     @NameInMap("Keyword")
     public String keyword;
 
-    // 日志等级
     @NameInMap("Level")
     public String level;
 
@@ -30,11 +25,9 @@ public class GetJMeterLogsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 报告ID
     @NameInMap("ReportId")
     public String reportId;
 
-    // 线程名
     @NameInMap("Thread")
     public String thread;
 

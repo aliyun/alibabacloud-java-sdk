@@ -13,7 +13,6 @@ public class AdjustJMeterSceneSpeedResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    // 报告ID
     @NameInMap("ReportId")
     public String reportId;
 

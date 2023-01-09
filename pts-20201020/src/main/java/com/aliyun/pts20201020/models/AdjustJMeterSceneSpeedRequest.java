@@ -4,11 +4,9 @@ package com.aliyun.pts20201020.models;
 import com.aliyun.tea.*;
 
 public class AdjustJMeterSceneSpeedRequest extends TeaModel {
-    // 报告id
     @NameInMap("ReportId")
     public String reportId;
 
-    // 要调整到的压力值
     @NameInMap("Speed")
     public Integer speed;
 

@@ -10,11 +10,9 @@ public class ListOpenJMeterScenesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 场景id
     @NameInMap("SceneId")
     public String sceneId;
 
-    // 场景名
     @NameInMap("SceneName")
     public String sceneName;
 

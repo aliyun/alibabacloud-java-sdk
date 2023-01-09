@@ -4,19 +4,15 @@ package com.aliyun.pts20201020.models;
 import com.aliyun.tea.*;
 
 public class GetJMeterSampleMetricsRequest extends TeaModel {
-    // 开始时间
     @NameInMap("BeginTime")
     public Long beginTime;
 
-    // 结束时间
     @NameInMap("EndTime")
     public Long endTime;
 
-    // 报告ID
     @NameInMap("ReportId")
     public String reportId;
 
-    // 采样器索引，从0开始。-1返回全场景
     @NameInMap("SamplerId")
     public Integer samplerId;
 

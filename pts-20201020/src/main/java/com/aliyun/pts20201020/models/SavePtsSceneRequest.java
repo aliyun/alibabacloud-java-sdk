@@ -4,7 +4,6 @@ package com.aliyun.pts20201020.models;
 import com.aliyun.tea.*;
 
 public class SavePtsSceneRequest extends TeaModel {
-    // 场景详细信息
     @NameInMap("Scene")
     public SavePtsSceneRequestScene scene;
 
@@ -22,11 +21,9 @@ public class SavePtsSceneRequest extends TeaModel {
     }
 
     public static class SavePtsSceneRequestSceneAdvanceSettingDomainBindingList extends TeaModel {
-        // 域名
         @NameInMap("Domain")
         public String domain;
 
-        // 对应的IP
         @NameInMap("Ips")
         public java.util.List<String> ips;
 
@@ -54,19 +51,15 @@ public class SavePtsSceneRequest extends TeaModel {
     }
 
     public static class SavePtsSceneRequestSceneAdvanceSetting extends TeaModel {
-        // 超时时间，单位秒
         @NameInMap("ConnectionTimeoutInSecond")
         public Integer connectionTimeoutInSecond;
 
-        // 域名绑定IP关系
         @NameInMap("DomainBindingList")
         public java.util.List<SavePtsSceneRequestSceneAdvanceSettingDomainBindingList> domainBindingList;
 
-        // 日志采样率，[1,50]，且是10的倍数
         @NameInMap("LogRate")
         public Integer logRate;
 
-        // 新增成功状态码，多个用英文逗号隔开
         @NameInMap("SuccessCode")
         public String successCode;
 
@@ -110,11 +103,9 @@ public class SavePtsSceneRequest extends TeaModel {
     }
 
     public static class SavePtsSceneRequestSceneFileParameterList extends TeaModel {
-        // 文件名
         @NameInMap("FileName")
         public String fileName;
 
-        // 文件的oss地址，必须是公网可访问的
         @NameInMap("FileOssAddress")
         public String fileOssAddress;
 
@@ -142,11 +133,9 @@ public class SavePtsSceneRequest extends TeaModel {
     }
 
     public static class SavePtsSceneRequestSceneGlobalParameterList extends TeaModel {
-        // 参数名
         @NameInMap("ParamName")
         public String paramName;
 
-        // 全局参数值，不可参数化
         @NameInMap("ParamValue")
         public String paramValue;
 
@@ -174,15 +163,13 @@ public class SavePtsSceneRequest extends TeaModel {
     }
 
     public static class SavePtsSceneRequestSceneLoadConfigApiLoadConfigList extends TeaModel {
-        // apiId
+        // API ID。
         @NameInMap("ApiId")
         public String apiId;
 
-        // 起始RPS值
         @NameInMap("RpsBegin")
         public Integer rpsBegin;
 
-        // 最大RPS值
         @NameInMap("RpsLimit")
         public Integer rpsLimit;
 
@@ -218,19 +205,15 @@ public class SavePtsSceneRequest extends TeaModel {
     }
 
     public static class SavePtsSceneRequestSceneLoadConfigConfiguration extends TeaModel {
-        // 所有链路的起始并发总值，均分给每个链路，在并发模式下使用，若不设置该值，则relationLoadConfig必须填写
         @NameInMap("AllConcurrencyBegin")
         public Integer allConcurrencyBegin;
 
-        // 所有链路的最大并发总值，均分给每个链路，在并发模式下使用，若不设置该值，则relationLoadConfig必须填写
         @NameInMap("AllConcurrencyLimit")
         public Integer allConcurrencyLimit;
 
-        // 所有API的起始RPS总值，均分给每个API，在RPS模式下使用，若不设置该值，则apiLoadConfig必须填写
         @NameInMap("AllRpsBegin")
         public Integer allRpsBegin;
 
-        // 所有API的最大RPS总值，均分给每个API，在RPS模式下使用，若不设置该值，则apiLoadConfig必须填写
         @NameInMap("AllRpsLimit")
         public Integer allRpsLimit;
 
@@ -274,15 +257,12 @@ public class SavePtsSceneRequest extends TeaModel {
     }
 
     public static class SavePtsSceneRequestSceneLoadConfigRelationLoadConfigList extends TeaModel {
-        // concurrencyBegin
         @NameInMap("ConcurrencyBegin")
         public Integer concurrencyBegin;
 
-        // 最大并发
         @NameInMap("ConcurrencyLimit")
         public Integer concurrencyLimit;
 
-        // 链路id
         @NameInMap("RelationId")
         public String relationId;
 
@@ -318,19 +298,16 @@ public class SavePtsSceneRequest extends TeaModel {
     }
 
     public static class SavePtsSceneRequestSceneLoadConfigVpcLoadConfig extends TeaModel {
-        // regionId
         @NameInMap("RegionId")
         public String regionId;
 
-        // 安全组的Id
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
-        // 交换机的Id
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
-        // vpcId
+        // VPC ID。
         @NameInMap("VpcId")
         public String vpcId;
 
@@ -374,43 +351,33 @@ public class SavePtsSceneRequest extends TeaModel {
     }
 
     public static class SavePtsSceneRequestSceneLoadConfig extends TeaModel {
-        // 指定机器数，并发必须大于250(RPS大于2000)才能使用，最大扩展机器数不能超过 最大并发/250(最大RPS/2000)
         @NameInMap("AgentCount")
         public Integer agentCount;
 
-        // API的起始、最大RPS值设置，在RPS模式下使用
         @NameInMap("ApiLoadConfigList")
         public java.util.List<SavePtsSceneRequestSceneLoadConfigApiLoadConfigList> apiLoadConfigList;
 
-        // 是否自动递增，只有在并发模式下有效，即 testMode=concurrency_mode 时
         @NameInMap("AutoStep")
         public Boolean autoStep;
 
-        // 场景施压量级配置信息
         @NameInMap("Configuration")
         public SavePtsSceneRequestSceneLoadConfigConfiguration configuration;
 
-        // 递增百分比，取值范围[10,100]，且是整十倍；只有在并发模式且是自动递增模式下有效，即 testMode=concurrency_mode 且 autoStep=true 时
         @NameInMap("Increment")
         public Integer increment;
 
-        // 单量级持续时长，单位分钟，一定是小于施压时长 maxRunningTime
         @NameInMap("KeepTime")
         public Integer keepTime;
 
-        // 施压时长，单位分钟，[1-1440]
         @NameInMap("MaxRunningTime")
         public Integer maxRunningTime;
 
-        // 链路的起始、最大并发值设置，在并发模式下使用
         @NameInMap("RelationLoadConfigList")
         public java.util.List<SavePtsSceneRequestSceneLoadConfigRelationLoadConfigList> relationLoadConfigList;
 
-        // 施压模式，并发模式(concurrency_mode) 和RPS模式(tps_mode)
         @NameInMap("TestMode")
         public String testMode;
 
-        // VPC配置
         @NameInMap("VpcLoadConfig")
         public SavePtsSceneRequestSceneLoadConfigVpcLoadConfig vpcLoadConfig;
 
@@ -502,11 +469,9 @@ public class SavePtsSceneRequest extends TeaModel {
     }
 
     public static class SavePtsSceneRequestSceneRelationListApiListBody extends TeaModel {
-        // body 的实际内容 形式 {"key1":"value2","key2":"value2"}
         @NameInMap("BodyValue")
         public String bodyValue;
 
-        // body 类型，默认 application/x-www-form-urlencoded
         @NameInMap("ContentType")
         public String contentType;
 
@@ -534,19 +499,15 @@ public class SavePtsSceneRequest extends TeaModel {
     }
 
     public static class SavePtsSceneRequestSceneRelationListApiListCheckPointList extends TeaModel {
-        // 检查对象 type=HEADER 时，表示header中的字段，type=EXPORTED_PARAM ，表示出参名
         @NameInMap("CheckPoint")
         public String checkPoint;
 
-        // 检查点类型 响应body(BODY_TEXT)，响应header(HEADER)， 响应状态码(STATUS_CODE) ，出参（EXPORTED_PARAM）
         @NameInMap("CheckType")
         public String checkType;
 
-        // 检查内容，即期望值
         @NameInMap("ExpectValue")
         public String expectValue;
 
-        // 检查条件 CheckPointOperator 中
         @NameInMap("Operator")
         public String operator;
 
@@ -590,19 +551,15 @@ public class SavePtsSceneRequest extends TeaModel {
     }
 
     public static class SavePtsSceneRequestSceneRelationListApiListExportList extends TeaModel {
-        // 第几个匹配项，可以是数字 或 random（ BODY_TEXT情况下才需要count）
         @NameInMap("Count")
         public String count;
 
-        // 出参名
         @NameInMap("ExportName")
         public String exportName;
 
-        // 出参来源 请求体(BODY_TEXT)，请求体(BODY_JSON)，请求头(HEADER)，响应状态码(STATUS_CODE)
         @NameInMap("ExportType")
         public String exportType;
 
-        // 出参的解析表达式
         @NameInMap("ExportValue")
         public String exportValue;
 
@@ -646,11 +603,9 @@ public class SavePtsSceneRequest extends TeaModel {
     }
 
     public static class SavePtsSceneRequestSceneRelationListApiListHeaderList extends TeaModel {
-        // header参数名
         @NameInMap("HeaderName")
         public String headerName;
 
-        // 参数对应的值
         @NameInMap("HeaderValue")
         public String headerValue;
 
@@ -678,43 +633,33 @@ public class SavePtsSceneRequest extends TeaModel {
     }
 
     public static class SavePtsSceneRequestSceneRelationListApiList extends TeaModel {
-        // API的id
         @NameInMap("ApiId")
         public String apiId;
 
-        // API名
         @NameInMap("ApiName")
         public String apiName;
 
-        // 请求body
         @NameInMap("Body")
         public SavePtsSceneRequestSceneRelationListApiListBody body;
 
-        // 检查点
         @NameInMap("CheckPointList")
         public java.util.List<SavePtsSceneRequestSceneRelationListApiListCheckPointList> checkPointList;
 
-        // 出参
         @NameInMap("ExportList")
         public java.util.List<SavePtsSceneRequestSceneRelationListApiListExportList> exportList;
 
-        // headerList
         @NameInMap("HeaderList")
         public java.util.List<SavePtsSceneRequestSceneRelationListApiListHeaderList> headerList;
 
-        // 请求方法
         @NameInMap("Method")
         public String method;
 
-        // 重定向次数，只能是0（允许重定向）或者10（不允许重定向）
         @NameInMap("RedirectCountLimit")
         public Integer redirectCountLimit;
 
-        // API超时时间，单位秒，默认5s，范围[1-60]
         @NameInMap("TimeoutInSecond")
         public Integer timeoutInSecond;
 
-        // 压测URL
         @NameInMap("Url")
         public String url;
 
@@ -806,19 +751,15 @@ public class SavePtsSceneRequest extends TeaModel {
     }
 
     public static class SavePtsSceneRequestSceneRelationListFileParameterExplainList extends TeaModel {
-        // 是否作为基准文件
         @NameInMap("BaseFile")
         public Boolean baseFile;
 
-        // 文件是否轮询一次
         @NameInMap("CycleOnce")
         public Boolean cycleOnce;
 
-        // 文件名
         @NameInMap("FileName")
         public String fileName;
 
-        // 文件使用的参数列名
         @NameInMap("FileParamName")
         public String fileParamName;
 
@@ -862,19 +803,15 @@ public class SavePtsSceneRequest extends TeaModel {
     }
 
     public static class SavePtsSceneRequestSceneRelationList extends TeaModel {
-        // 链路下的API信息
         @NameInMap("ApiList")
         public java.util.List<SavePtsSceneRequestSceneRelationListApiList> apiList;
 
-        // 链路中的文件参数配置信息
         @NameInMap("FileParameterExplainList")
         public java.util.List<SavePtsSceneRequestSceneRelationListFileParameterExplainList> fileParameterExplainList;
 
-        // 链路id
         @NameInMap("RelationId")
         public String relationId;
 
-        // 链路名
         @NameInMap("RelationName")
         public String relationName;
 
@@ -918,31 +855,24 @@ public class SavePtsSceneRequest extends TeaModel {
     }
 
     public static class SavePtsSceneRequestScene extends TeaModel {
-        // 高级设置
         @NameInMap("AdvanceSetting")
         public SavePtsSceneRequestSceneAdvanceSetting advanceSetting;
 
-        // 文件参数
         @NameInMap("FileParameterList")
         public java.util.List<SavePtsSceneRequestSceneFileParameterList> fileParameterList;
 
-        // 全局自定义参数
         @NameInMap("GlobalParameterList")
         public java.util.List<SavePtsSceneRequestSceneGlobalParameterList> globalParameterList;
 
-        // 施压配置
         @NameInMap("LoadConfig")
         public SavePtsSceneRequestSceneLoadConfig loadConfig;
 
-        // 链路配置
         @NameInMap("RelationList")
         public java.util.List<SavePtsSceneRequestSceneRelationList> relationList;
 
-        // 场景ID，不传为新建，传递为修改
         @NameInMap("SceneId")
         public String sceneId;
 
-        // 场景名
         @NameInMap("SceneName")
         public String sceneName;
 

@@ -7,7 +7,6 @@ public class ListEnvsResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    // 环境列表
     @NameInMap("Envs")
     public java.util.List<ListEnvsResponseBodyEnvs> envs;
 
@@ -110,23 +109,18 @@ public class ListEnvsResponseBody extends TeaModel {
     }
 
     public static class ListEnvsResponseBodyEnvsFiles extends TeaModel {
-        // 文件ID
         @NameInMap("FileId")
         public Long fileId;
 
-        // 文件名
         @NameInMap("FileName")
         public String fileName;
 
-        // 文件的oss地址
         @NameInMap("FileOssAddress")
         public String fileOssAddress;
 
-        // 文件大小，单位为Byte
         @NameInMap("FileSize")
         public Long fileSize;
 
-        // jar包的md5值
         @NameInMap("Md5")
         public String md5;
 
@@ -178,15 +172,12 @@ public class ListEnvsResponseBody extends TeaModel {
     }
 
     public static class ListEnvsResponseBodyEnvsProperties extends TeaModel {
-        // 描述
         @NameInMap("Description")
         public String description;
 
-        // 属性名
         @NameInMap("Name")
         public String name;
 
-        // 属性值
         @NameInMap("Value")
         public String value;
 
@@ -222,43 +213,33 @@ public class ListEnvsResponseBody extends TeaModel {
     }
 
     public static class ListEnvsResponseBodyEnvs extends TeaModel {
-        // 创建时间
         @NameInMap("CreateTime")
         public Long createTime;
 
-        // 环境ID
         @NameInMap("EnvId")
         public String envId;
 
-        // 环境名
         @NameInMap("EnvName")
         public String envName;
 
-        // 依赖的jmeter版本
         @NameInMap("EnvVersion")
         public String envVersion;
 
-        // 包含的jar包
         @NameInMap("Files")
         public java.util.List<ListEnvsResponseBodyEnvsFiles> files;
 
-        // 修改时间
         @NameInMap("ModifiedTime")
         public Long modifiedTime;
 
-        // jmeter属性
         @NameInMap("Properties")
         public java.util.List<ListEnvsResponseBodyEnvsProperties> properties;
 
-        // 关联的场景
         @NameInMap("RelatedScenes")
         public java.util.List<String> relatedScenes;
 
-        // 关联的场景id
         @NameInMap("RunningScenes")
         public java.util.List<String> runningScenes;
 
-        // 环境的文件总大小
         @NameInMap("UsedCapacity")
         public Long usedCapacity;
 

@@ -22,7 +22,6 @@ public class GetJMeterSamplingLogsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // 采样器的采样结果
     @NameInMap("SampleResults")
     public java.util.List<String> sampleResults;
 

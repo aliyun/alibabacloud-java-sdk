@@ -4,7 +4,6 @@ package com.aliyun.pts20201020.models;
 import com.aliyun.tea.*;
 
 public class SaveOpenJMeterSceneRequest extends TeaModel {
-    // 场景详情
     @NameInMap("OpenJMeterScene")
     public SaveOpenJMeterSceneRequestOpenJMeterScene openJMeterScene;
 
@@ -63,31 +62,24 @@ public class SaveOpenJMeterSceneRequest extends TeaModel {
     }
 
     public static class SaveOpenJMeterSceneRequestOpenJMeterSceneFileList extends TeaModel {
-        // 文件id
         @NameInMap("FileId")
         public Long fileId;
 
-        // 文件名
         @NameInMap("FileName")
         public String fileName;
 
-        // 文件公网可访问的oss地址
         @NameInMap("FileOssAddress")
         public String fileOssAddress;
 
-        // 文件大小，单位byte
         @NameInMap("FileSize")
         public Long fileSize;
 
-        // 文件的MD5
         @NameInMap("Md5")
         public String md5;
 
-        // 是否切分，仅针对csv有效
         @NameInMap("SplitCsv")
         public Boolean splitCsv;
 
-        // 文件tag
         @NameInMap("Tags")
         public String tags;
 
@@ -185,70 +177,54 @@ public class SaveOpenJMeterSceneRequest extends TeaModel {
     }
 
     public static class SaveOpenJMeterSceneRequestOpenJMeterScene extends TeaModel {
-        // 施压引擎数量
         @NameInMap("AgentCount")
         public Integer agentCount;
 
-        // 最大并发
         @NameInMap("Concurrency")
         public Integer concurrency;
 
-        // constantThroughputTimerType
         @NameInMap("ConstantThroughputTimerType")
         public String constantThroughputTimerType;
 
-        // DNS配置
         @NameInMap("DnsCacheConfig")
         public SaveOpenJMeterSceneRequestOpenJMeterSceneDnsCacheConfig dnsCacheConfig;
 
-        // 压测持续时间
         @NameInMap("Duration")
         public Integer duration;
 
-        // 关联的环境id
         @NameInMap("EnvironmentId")
         public String environmentId;
 
-        // 文件列表
         @NameInMap("FileList")
         public java.util.List<SaveOpenJMeterSceneRequestOpenJMeterSceneFileList> fileList;
 
-        // 是否为VPC测试，默认为false表示公网测试，此值为true时VPC相关配置才生效
         @NameInMap("IsVpcTest")
         public Boolean isVpcTest;
 
-        // Jmeter属性
         @NameInMap("JMeterProperties")
         public java.util.List<SaveOpenJMeterSceneRequestOpenJMeterSceneJMeterProperties> JMeterProperties;
 
-        // jmeter插件的环境标签
         @NameInMap("JmeterPluginLabel")
         public String jmeterPluginLabel;
 
         @NameInMap("MaxRps")
         public Integer maxRps;
 
-        // 压力模式
         @NameInMap("Mode")
         public String mode;
 
-        // 预热时间
         @NameInMap("RampUp")
         public Integer rampUp;
 
-        // region的id，VPC压测时配置
         @NameInMap("RegionId")
         public String regionId;
 
-        // 场景ID
         @NameInMap("SceneId")
         public String sceneId;
 
-        // 场景名
         @NameInMap("SceneName")
         public String sceneName;
 
-        // 安全组id，VPC压测时配置
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
@@ -258,23 +234,18 @@ public class SaveOpenJMeterSceneRequest extends TeaModel {
         @NameInMap("StartRps")
         public Integer startRps;
 
-        // 预热阶段
         @NameInMap("Steps")
         public Integer steps;
 
-        // synchronizing timer 类型
         @NameInMap("SyncTimerType")
         public String syncTimerType;
 
-        // 测试文件
         @NameInMap("TestFile")
         public String testFile;
 
-        // 交换机id，VPC压测时配置
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
-        // vpc的id，VPC压测时配置
         @NameInMap("VpcId")
         public String vpcId;
 

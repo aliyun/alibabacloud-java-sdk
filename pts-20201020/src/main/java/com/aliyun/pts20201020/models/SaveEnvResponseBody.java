@@ -7,7 +7,6 @@ public class SaveEnvResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    // 操作的环境id
     @NameInMap("EnvId")
     public String envId;
 

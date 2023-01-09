@@ -4,7 +4,6 @@ package com.aliyun.pts20201020.models;
 import com.aliyun.tea.*;
 
 public class SaveEnvRequest extends TeaModel {
-    // 环境
     @NameInMap("Env")
     public SaveEnvRequestEnv env;
 
@@ -22,11 +21,9 @@ public class SaveEnvRequest extends TeaModel {
     }
 
     public static class SaveEnvRequestEnvFiles extends TeaModel {
-        // 文件名
         @NameInMap("FileName")
         public String fileName;
 
-        // 文件oss地址，目前只支持上海region的oss地址
         @NameInMap("FileOssAddress")
         public String fileOssAddress;
 
@@ -54,15 +51,12 @@ public class SaveEnvRequest extends TeaModel {
     }
 
     public static class SaveEnvRequestEnvProperties extends TeaModel {
-        // 描述
         @NameInMap("Description")
         public String description;
 
-        // 属性名
         @NameInMap("Name")
         public String name;
 
-        // 属性值
         @NameInMap("Value")
         public String value;
 
@@ -98,23 +92,18 @@ public class SaveEnvRequest extends TeaModel {
     }
 
     public static class SaveEnvRequestEnv extends TeaModel {
-        // 环境id，不填表示新建环境，填了表示修改该环境
         @NameInMap("EnvId")
         public String envId;
 
-        // 环境名称
         @NameInMap("EnvName")
         public String envName;
 
-        // 环境依赖的文件
         @NameInMap("Files")
         public java.util.List<SaveEnvRequestEnvFiles> files;
 
-        // jmeter插件的环境标签
         @NameInMap("JmeterPluginLabel")
         public String jmeterPluginLabel;
 
-        // jmeter属性
         @NameInMap("Properties")
         public java.util.List<SaveEnvRequestEnvProperties> properties;
 

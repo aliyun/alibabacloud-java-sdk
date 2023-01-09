@@ -16,7 +16,6 @@ public class SavePtsSceneResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // 场景ID
     @NameInMap("SceneId")
     public String sceneId;
 

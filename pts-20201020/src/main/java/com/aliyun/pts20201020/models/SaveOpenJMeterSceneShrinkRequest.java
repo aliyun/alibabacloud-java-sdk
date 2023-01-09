@@ -4,7 +4,6 @@ package com.aliyun.pts20201020.models;
 import com.aliyun.tea.*;
 
 public class SaveOpenJMeterSceneShrinkRequest extends TeaModel {
-    // 场景详情
     @NameInMap("OpenJMeterScene")
     public String openJMeterSceneShrink;
 
