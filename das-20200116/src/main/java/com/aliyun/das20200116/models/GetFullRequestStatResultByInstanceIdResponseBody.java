@@ -146,6 +146,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
         @NameInMap("SqlCount")
         public Long sqlCount;
 
+        // SQL ID。
         @NameInMap("SqlId")
         public String sqlId;
 
@@ -158,6 +159,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
         @NameInMap("Version")
         public Long version;
 
+        // VPC ID。
         @NameInMap("VpcId")
         public String vpcId;
 

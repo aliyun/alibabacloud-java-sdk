@@ -37,6 +37,7 @@ public class AddHDMInstanceRequest extends TeaModel {
     @NameInMap("Username")
     public String username;
 
+    // VPC ID。
     @NameInMap("VpcId")
     public String vpcId;
 

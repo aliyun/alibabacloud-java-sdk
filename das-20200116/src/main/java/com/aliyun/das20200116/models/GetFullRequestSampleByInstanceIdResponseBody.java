@@ -107,6 +107,7 @@ public class GetFullRequestSampleByInstanceIdResponseBody extends TeaModel {
         @NameInMap("Sql")
         public String sql;
 
+        // SQL ID。
         @NameInMap("SqlId")
         public String sqlId;
 

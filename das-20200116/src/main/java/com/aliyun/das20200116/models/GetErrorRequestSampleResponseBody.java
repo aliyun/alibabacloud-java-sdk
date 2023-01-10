@@ -80,6 +80,7 @@ public class GetErrorRequestSampleResponseBody extends TeaModel {
         @NameInMap("sql")
         public String sql;
 
+        // SQL ID。
         @NameInMap("sqlId")
         public String sqlId;
 
