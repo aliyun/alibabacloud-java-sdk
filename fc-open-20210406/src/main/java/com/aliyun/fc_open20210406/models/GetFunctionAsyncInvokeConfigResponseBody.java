@@ -4,30 +4,42 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class GetFunctionAsyncInvokeConfigResponseBody extends TeaModel {
+    // The time when the desktop group was created.
     @NameInMap("createdTime")
     public String createdTime;
 
+    // The configuration structure of the destination for asynchronous invocations.
     @NameInMap("destinationConfig")
     public DestinationConfig destinationConfig;
 
+    // The name of the function.
     @NameInMap("function")
     public String function;
 
+    // The time when the configuration was last modified.
     @NameInMap("lastModifiedTime")
     public String lastModifiedTime;
 
+    // The maximum validity period of a message.
     @NameInMap("maxAsyncEventAgeInSeconds")
     public Long maxAsyncEventAgeInSeconds;
 
+    // The maximum number of retries allowed after an asynchronous invocation fails.
     @NameInMap("maxAsyncRetryAttempts")
     public Long maxAsyncRetryAttempts;
 
+    // The version or alias of the service to which the function belongs.
     @NameInMap("qualifier")
     public String qualifier;
 
+    // The name of the service.
     @NameInMap("service")
     public String service;
 
+    // Indicates whether the asynchronous task feature is enabled.
+    // 
+    // *   **true**: The asynchronous task feature is enabled.
+    // *   **false**: The asynchronous task feature is disabled.
     @NameInMap("statefulInvocation")
     public Boolean statefulInvocation;
 

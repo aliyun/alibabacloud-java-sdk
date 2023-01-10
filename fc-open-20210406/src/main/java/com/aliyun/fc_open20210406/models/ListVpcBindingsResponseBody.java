@@ -4,6 +4,7 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class ListVpcBindingsResponseBody extends TeaModel {
+    // The IDs of bound VPCs.
     @NameInMap("vpcIds")
     public java.util.List<String> vpcIds;
 

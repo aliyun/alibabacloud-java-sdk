@@ -24,6 +24,9 @@ public class OSSMountConfig extends TeaModel {
         @NameInMap("bucketName")
         public String bucketName;
 
+        @NameInMap("bucketPath")
+        public String bucketPath;
+
         @NameInMap("endpoint")
         public String endpoint;
 
@@ -44,6 +47,14 @@ public class OSSMountConfig extends TeaModel {
         }
         public String getBucketName() {
             return this.bucketName;
+        }
+
+        public OSSMountConfigMountPoints setBucketPath(String bucketPath) {
+            this.bucketPath = bucketPath;
+            return this;
+        }
+        public String getBucketPath() {
+            return this.bucketPath;
         }
 
         public OSSMountConfigMountPoints setEndpoint(String endpoint) {

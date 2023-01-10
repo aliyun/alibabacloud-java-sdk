@@ -4,9 +4,11 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class ListLayerVersionsResponseBody extends TeaModel {
+    // The information about layer versions.
     @NameInMap("layers")
     public java.util.List<Layer> layers;
 
+    // The initial version of the layer for the next query.
     @NameInMap("nextVersion")
     public Integer nextVersion;
 

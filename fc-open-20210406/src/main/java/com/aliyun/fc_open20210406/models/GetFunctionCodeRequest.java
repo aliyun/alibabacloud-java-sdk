@@ -4,6 +4,7 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class GetFunctionCodeRequest extends TeaModel {
+    // The version or alias of the service.
     @NameInMap("qualifier")
     public String qualifier;
 

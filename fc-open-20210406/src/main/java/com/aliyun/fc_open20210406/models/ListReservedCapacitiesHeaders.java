@@ -7,12 +7,15 @@ public class ListReservedCapacitiesHeaders extends TeaModel {
     @NameInMap("commonHeaders")
     public java.util.Map<String, String> commonHeaders;
 
+    // The ID of your Alibaba Cloud account.
     @NameInMap("X-Fc-Account-Id")
     public String xFcAccountId;
 
+    // The time when the Function Compute API is called. The format is **EEE,d MMM yyyy HH:mm:ss GMT**.
     @NameInMap("X-Fc-Date")
     public String xFcDate;
 
+    // The custom request ID.
     @NameInMap("X-Fc-Trace-Id")
     public String xFcTraceId;
 

@@ -7,6 +7,7 @@ public class ListInstancesHeaders extends TeaModel {
     @NameInMap("commonHeaders")
     public java.util.Map<String, String> commonHeaders;
 
+    // The ID of your Alibaba Cloud account.
     @NameInMap("X-Fc-Account-Id")
     public String xFcAccountId;
 

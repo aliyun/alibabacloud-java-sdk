@@ -4,9 +4,11 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class ListOnDemandConfigsResponseBody extends TeaModel {
+    // The information about the provisioned configuration.
     @NameInMap("configs")
     public java.util.List<OnDemandConfig> configs;
 
+    // The token used to obtain more results. If this parameter is left empty, all the results are returned.
     @NameInMap("nextToken")
     public String nextToken;
 

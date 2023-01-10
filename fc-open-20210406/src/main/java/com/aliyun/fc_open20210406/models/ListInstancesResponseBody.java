@@ -4,6 +4,7 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class ListInstancesResponseBody extends TeaModel {
+    // The information about instances.
     @NameInMap("instances")
     public java.util.List<ListInstancesResponseBodyInstances> instances;
 
@@ -21,9 +22,11 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyInstances extends TeaModel {
+        // The ID of the instance.
         @NameInMap("instanceId")
         public String instanceId;
 
+        // The version of the service to which the instance belongs. If the instance belongs to the LATEST alias, 0 is returned as the version.
         @NameInMap("versionId")
         public String versionId;
 

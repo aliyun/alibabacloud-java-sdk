@@ -4,6 +4,9 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class GetResourceTagsRequest extends TeaModel {
+    // The Alibaba Cloud Resource Name (ARN) of the resource. 
+    // 
+    // > You can use the value of this parameter to query the information about the resource, such as the account, service, and region information of the resource. You can manage tags only for services for top level resources.
     @NameInMap("resourceArn")
     public String resourceArn;
 

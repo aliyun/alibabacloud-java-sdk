@@ -7,12 +7,15 @@ public class CreateAliasHeaders extends TeaModel {
     @NameInMap("commonHeaders")
     public java.util.Map<String, String> commonHeaders;
 
+    // The ID of your Alibaba Cloud account.
     @NameInMap("X-Fc-Account-Id")
     public String xFcAccountId;
 
+    // The time on which the function is invoked. The format of the value is: **EEE,d MMM yyyy HH:mm:ss GMT**.
     @NameInMap("X-Fc-Date")
     public String xFcDate;
 
+    // The trace ID of the invocation request of Function Compute.
     @NameInMap("X-Fc-Trace-Id")
     public String xFcTraceId;
 

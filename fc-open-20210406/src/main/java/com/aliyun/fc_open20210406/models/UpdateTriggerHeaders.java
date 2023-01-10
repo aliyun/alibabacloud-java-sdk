@@ -7,15 +7,19 @@ public class UpdateTriggerHeaders extends TeaModel {
     @NameInMap("commonHeaders")
     public java.util.Map<String, String> commonHeaders;
 
+    // This parameter is used to ensure that the modified resource is consistent with the resource to be modified. You can obtain the parameter value from the responses of [CreateTrigger](~~190054~~), [GetTrigger](~~190056~~), and [UpdateTrigger](~~190055~~) operations.
     @NameInMap("If-Match")
     public String ifMatch;
 
+    // The ID of your Alibaba Cloud account.
     @NameInMap("X-Fc-Account-Id")
     public String xFcAccountId;
 
+    // The time when the request is initiated on the client. The format of the value is: **EEE,d MMM yyyy HH:mm:ss GMT**.
     @NameInMap("X-Fc-Date")
     public String xFcDate;
 
+    // The custom request ID.
     @NameInMap("X-Fc-Trace-Id")
     public String xFcTraceId;
 

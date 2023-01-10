@@ -4,9 +4,11 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class ListReservedCapacitiesResponseBody extends TeaModel {
+    // The pagination token to request the next page of results.
     @NameInMap("nextToken")
     public String nextToken;
 
+    // The information about subscription instances.
     @NameInMap("reservedCapacities")
     public java.util.List<OpenReservedCapacity> reservedCapacities;
 

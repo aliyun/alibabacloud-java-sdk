@@ -4,12 +4,17 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class ListInstancesRequest extends TeaModel {
+    // The IDs of the instance.
     @NameInMap("instanceIds")
     public java.util.List<String> instanceIds;
 
+    // The maximum number of resources to return. Valid values: \[0,1000].
+    // 
+    // The number of returned resources is less than or equal to the specified number.
     @NameInMap("limit")
     public Integer limit;
 
+    // The version or alias.
     @NameInMap("qualifier")
     public String qualifier;
 

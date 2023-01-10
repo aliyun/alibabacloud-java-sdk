@@ -49,12 +49,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
-    public ClaimGPUInstanceResponse claimGPUInstance(ClaimGPUInstanceRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        ClaimGPUInstanceHeaders headers = new ClaimGPUInstanceHeaders();
-        return this.claimGPUInstanceWithOptions(request, headers, runtime);
-    }
-
     public ClaimGPUInstanceResponse claimGPUInstanceWithOptions(ClaimGPUInstanceRequest request, ClaimGPUInstanceHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -82,6 +76,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("password", request.password);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.role)) {
+            body.put("role", request.role);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sgId)) {
+            body.put("sgId", request.sgId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.sourceCidrIp)) {
             body.put("sourceCidrIp", request.sourceCidrIp);
         }
@@ -92,6 +94,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.udpPortRange)) {
             body.put("udpPortRange", request.udpPortRange);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
+            body.put("vpcId", request.vpcId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vswId)) {
+            body.put("vswId", request.vswId);
         }
 
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
@@ -129,10 +139,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ClaimGPUInstanceResponse());
     }
 
-    public CreateAliasResponse createAlias(String serviceName, CreateAliasRequest request) throws Exception {
+    public ClaimGPUInstanceResponse claimGPUInstance(ClaimGPUInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        CreateAliasHeaders headers = new CreateAliasHeaders();
-        return this.createAliasWithOptions(serviceName, request, headers, runtime);
+        ClaimGPUInstanceHeaders headers = new ClaimGPUInstanceHeaders();
+        return this.claimGPUInstanceWithOptions(request, headers, runtime);
     }
 
     public CreateAliasResponse createAliasWithOptions(String serviceName, CreateAliasRequest request, CreateAliasHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -154,7 +164,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("resolvePolicy", request.resolvePolicy);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.routePolicy))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.routePolicy)) {
             body.put("routePolicy", request.routePolicy);
         }
 
@@ -197,16 +207,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAliasResponse());
     }
 
-    public CreateCustomDomainResponse createCustomDomain(CreateCustomDomainRequest request) throws Exception {
+    public CreateAliasResponse createAlias(String serviceName, CreateAliasRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        CreateCustomDomainHeaders headers = new CreateCustomDomainHeaders();
-        return this.createCustomDomainWithOptions(request, headers, runtime);
+        CreateAliasHeaders headers = new CreateAliasHeaders();
+        return this.createAliasWithOptions(serviceName, request, headers, runtime);
     }
 
     public CreateCustomDomainResponse createCustomDomainWithOptions(CreateCustomDomainRequest request, CreateCustomDomainHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.certConfig))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.certConfig)) {
             body.put("certConfig", request.certConfig);
         }
 
@@ -218,11 +228,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("protocol", request.protocol);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.routeConfig))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.routeConfig)) {
             body.put("routeConfig", request.routeConfig);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.tlsConfig))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.tlsConfig)) {
             body.put("tlsConfig", request.tlsConfig);
         }
 
@@ -261,10 +271,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateCustomDomainResponse());
     }
 
-    public CreateFunctionResponse createFunction(String serviceName, CreateFunctionRequest request) throws Exception {
+    public CreateCustomDomainResponse createCustomDomain(CreateCustomDomainRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        CreateFunctionHeaders headers = new CreateFunctionHeaders();
-        return this.createFunctionWithOptions(serviceName, request, headers, runtime);
+        CreateCustomDomainHeaders headers = new CreateCustomDomainHeaders();
+        return this.createCustomDomainWithOptions(request, headers, runtime);
     }
 
     public CreateFunctionResponse createFunctionWithOptions(String serviceName, CreateFunctionRequest request, CreateFunctionHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -274,7 +284,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("caPort", request.caPort);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.code))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.code)) {
             body.put("code", request.code);
         }
 
@@ -282,19 +292,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("cpu", request.cpu);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.customContainerConfig))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.customContainerConfig)) {
             body.put("customContainerConfig", request.customContainerConfig);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.customDNS))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.customDNS)) {
             body.put("customDNS", request.customDNS);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.customHealthCheckConfig))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.customHealthCheckConfig)) {
             body.put("customHealthCheckConfig", request.customHealthCheckConfig);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.customRuntimeConfig))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.customRuntimeConfig)) {
             body.put("customRuntimeConfig", request.customRuntimeConfig);
         }
 
@@ -330,7 +340,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("instanceConcurrency", request.instanceConcurrency);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.instanceLifecycleConfig))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceLifecycleConfig)) {
             body.put("instanceLifecycleConfig", request.instanceLifecycleConfig);
         }
 
@@ -397,16 +407,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateFunctionResponse());
     }
 
-    public CreateLayerVersionResponse createLayerVersion(String layerName, CreateLayerVersionRequest request) throws Exception {
+    public CreateFunctionResponse createFunction(String serviceName, CreateFunctionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        CreateLayerVersionHeaders headers = new CreateLayerVersionHeaders();
-        return this.createLayerVersionWithOptions(layerName, request, headers, runtime);
+        CreateFunctionHeaders headers = new CreateFunctionHeaders();
+        return this.createFunctionWithOptions(serviceName, request, headers, runtime);
     }
 
     public CreateLayerVersionResponse createLayerVersionWithOptions(String layerName, CreateLayerVersionRequest request, CreateLayerVersionHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.code))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.code)) {
             body.put("Code", request.code);
         }
 
@@ -453,10 +463,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateLayerVersionResponse());
     }
 
-    public CreateServiceResponse createService(CreateServiceRequest request) throws Exception {
+    public CreateLayerVersionResponse createLayerVersion(String layerName, CreateLayerVersionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        CreateServiceHeaders headers = new CreateServiceHeaders();
-        return this.createServiceWithOptions(request, headers, runtime);
+        CreateLayerVersionHeaders headers = new CreateLayerVersionHeaders();
+        return this.createLayerVersionWithOptions(layerName, request, headers, runtime);
     }
 
     public CreateServiceResponse createServiceWithOptions(CreateServiceRequest request, CreateServiceHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -470,15 +480,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("internetAccess", request.internetAccess);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.logConfig))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.logConfig)) {
             body.put("logConfig", request.logConfig);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.nasConfig))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.nasConfig)) {
             body.put("nasConfig", request.nasConfig);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.ossMountConfig))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.ossMountConfig)) {
             body.put("ossMountConfig", request.ossMountConfig);
         }
 
@@ -490,11 +500,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("serviceName", request.serviceName);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.tracingConfig))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.tracingConfig)) {
             body.put("tracingConfig", request.tracingConfig);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.vpcConfig))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcConfig)) {
             body.put("vpcConfig", request.vpcConfig);
         }
 
@@ -533,10 +543,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateServiceResponse());
     }
 
-    public CreateTriggerResponse createTrigger(String serviceName, String functionName, CreateTriggerRequest request) throws Exception {
+    public CreateServiceResponse createService(CreateServiceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        CreateTriggerHeaders headers = new CreateTriggerHeaders();
-        return this.createTriggerWithOptions(serviceName, functionName, request, headers, runtime);
+        CreateServiceHeaders headers = new CreateServiceHeaders();
+        return this.createServiceWithOptions(request, headers, runtime);
     }
 
     public CreateTriggerResponse createTriggerWithOptions(String serviceName, String functionName, CreateTriggerRequest request, CreateTriggerHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -605,10 +615,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateTriggerResponse());
     }
 
-    public CreateVpcBindingResponse createVpcBinding(String serviceName, CreateVpcBindingRequest request) throws Exception {
+    public CreateTriggerResponse createTrigger(String serviceName, String functionName, CreateTriggerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        CreateVpcBindingHeaders headers = new CreateVpcBindingHeaders();
-        return this.createVpcBindingWithOptions(serviceName, request, headers, runtime);
+        CreateTriggerHeaders headers = new CreateTriggerHeaders();
+        return this.createTriggerWithOptions(serviceName, functionName, request, headers, runtime);
     }
 
     public CreateVpcBindingResponse createVpcBindingWithOptions(String serviceName, CreateVpcBindingRequest request, CreateVpcBindingHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -653,10 +663,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateVpcBindingResponse());
     }
 
-    public DeleteAliasResponse deleteAlias(String serviceName, String aliasName) throws Exception {
+    public CreateVpcBindingResponse createVpcBinding(String serviceName, CreateVpcBindingRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        DeleteAliasHeaders headers = new DeleteAliasHeaders();
-        return this.deleteAliasWithOptions(serviceName, aliasName, headers, runtime);
+        CreateVpcBindingHeaders headers = new CreateVpcBindingHeaders();
+        return this.createVpcBindingWithOptions(serviceName, request, headers, runtime);
     }
 
     public DeleteAliasResponse deleteAliasWithOptions(String serviceName, String aliasName, DeleteAliasHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -698,10 +708,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAliasResponse());
     }
 
-    public DeleteCustomDomainResponse deleteCustomDomain(String domainName) throws Exception {
+    public DeleteAliasResponse deleteAlias(String serviceName, String aliasName) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        DeleteCustomDomainHeaders headers = new DeleteCustomDomainHeaders();
-        return this.deleteCustomDomainWithOptions(domainName, headers, runtime);
+        DeleteAliasHeaders headers = new DeleteAliasHeaders();
+        return this.deleteAliasWithOptions(serviceName, aliasName, headers, runtime);
     }
 
     public DeleteCustomDomainResponse deleteCustomDomainWithOptions(String domainName, DeleteCustomDomainHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -739,10 +749,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteCustomDomainResponse());
     }
 
-    public DeleteFunctionResponse deleteFunction(String serviceName, String functionName) throws Exception {
+    public DeleteCustomDomainResponse deleteCustomDomain(String domainName) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        DeleteFunctionHeaders headers = new DeleteFunctionHeaders();
-        return this.deleteFunctionWithOptions(serviceName, functionName, headers, runtime);
+        DeleteCustomDomainHeaders headers = new DeleteCustomDomainHeaders();
+        return this.deleteCustomDomainWithOptions(domainName, headers, runtime);
     }
 
     public DeleteFunctionResponse deleteFunctionWithOptions(String serviceName, String functionName, DeleteFunctionHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -784,10 +794,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteFunctionResponse());
     }
 
-    public DeleteFunctionAsyncInvokeConfigResponse deleteFunctionAsyncInvokeConfig(String serviceName, String functionName, DeleteFunctionAsyncInvokeConfigRequest request) throws Exception {
+    public DeleteFunctionResponse deleteFunction(String serviceName, String functionName) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        DeleteFunctionAsyncInvokeConfigHeaders headers = new DeleteFunctionAsyncInvokeConfigHeaders();
-        return this.deleteFunctionAsyncInvokeConfigWithOptions(serviceName, functionName, request, headers, runtime);
+        DeleteFunctionHeaders headers = new DeleteFunctionHeaders();
+        return this.deleteFunctionWithOptions(serviceName, functionName, headers, runtime);
     }
 
     public DeleteFunctionAsyncInvokeConfigResponse deleteFunctionAsyncInvokeConfigWithOptions(String serviceName, String functionName, DeleteFunctionAsyncInvokeConfigRequest request, DeleteFunctionAsyncInvokeConfigHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -832,10 +842,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteFunctionAsyncInvokeConfigResponse());
     }
 
-    public DeleteFunctionOnDemandConfigResponse deleteFunctionOnDemandConfig(String serviceName, String functionName, DeleteFunctionOnDemandConfigRequest request) throws Exception {
+    public DeleteFunctionAsyncInvokeConfigResponse deleteFunctionAsyncInvokeConfig(String serviceName, String functionName, DeleteFunctionAsyncInvokeConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        DeleteFunctionOnDemandConfigHeaders headers = new DeleteFunctionOnDemandConfigHeaders();
-        return this.deleteFunctionOnDemandConfigWithOptions(serviceName, functionName, request, headers, runtime);
+        DeleteFunctionAsyncInvokeConfigHeaders headers = new DeleteFunctionAsyncInvokeConfigHeaders();
+        return this.deleteFunctionAsyncInvokeConfigWithOptions(serviceName, functionName, request, headers, runtime);
     }
 
     public DeleteFunctionOnDemandConfigResponse deleteFunctionOnDemandConfigWithOptions(String serviceName, String functionName, DeleteFunctionOnDemandConfigRequest request, DeleteFunctionOnDemandConfigHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -884,10 +894,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteFunctionOnDemandConfigResponse());
     }
 
-    public DeleteLayerVersionResponse deleteLayerVersion(String layerName, String version) throws Exception {
+    public DeleteFunctionOnDemandConfigResponse deleteFunctionOnDemandConfig(String serviceName, String functionName, DeleteFunctionOnDemandConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        DeleteLayerVersionHeaders headers = new DeleteLayerVersionHeaders();
-        return this.deleteLayerVersionWithOptions(layerName, version, headers, runtime);
+        DeleteFunctionOnDemandConfigHeaders headers = new DeleteFunctionOnDemandConfigHeaders();
+        return this.deleteFunctionOnDemandConfigWithOptions(serviceName, functionName, request, headers, runtime);
     }
 
     public DeleteLayerVersionResponse deleteLayerVersionWithOptions(String layerName, String version, DeleteLayerVersionHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -925,10 +935,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteLayerVersionResponse());
     }
 
-    public DeleteServiceResponse deleteService(String serviceName) throws Exception {
+    public DeleteLayerVersionResponse deleteLayerVersion(String layerName, String version) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        DeleteServiceHeaders headers = new DeleteServiceHeaders();
-        return this.deleteServiceWithOptions(serviceName, headers, runtime);
+        DeleteLayerVersionHeaders headers = new DeleteLayerVersionHeaders();
+        return this.deleteLayerVersionWithOptions(layerName, version, headers, runtime);
     }
 
     public DeleteServiceResponse deleteServiceWithOptions(String serviceName, DeleteServiceHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -970,10 +980,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteServiceResponse());
     }
 
-    public DeleteServiceVersionResponse deleteServiceVersion(String serviceName, String versionId) throws Exception {
+    public DeleteServiceResponse deleteService(String serviceName) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        DeleteServiceVersionHeaders headers = new DeleteServiceVersionHeaders();
-        return this.deleteServiceVersionWithOptions(serviceName, versionId, headers, runtime);
+        DeleteServiceHeaders headers = new DeleteServiceHeaders();
+        return this.deleteServiceWithOptions(serviceName, headers, runtime);
     }
 
     public DeleteServiceVersionResponse deleteServiceVersionWithOptions(String serviceName, String versionId, DeleteServiceVersionHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1011,10 +1021,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteServiceVersionResponse());
     }
 
-    public DeleteTriggerResponse deleteTrigger(String serviceName, String functionName, String triggerName) throws Exception {
+    public DeleteServiceVersionResponse deleteServiceVersion(String serviceName, String versionId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        DeleteTriggerHeaders headers = new DeleteTriggerHeaders();
-        return this.deleteTriggerWithOptions(serviceName, functionName, triggerName, headers, runtime);
+        DeleteServiceVersionHeaders headers = new DeleteServiceVersionHeaders();
+        return this.deleteServiceVersionWithOptions(serviceName, versionId, headers, runtime);
     }
 
     public DeleteTriggerResponse deleteTriggerWithOptions(String serviceName, String functionName, String triggerName, DeleteTriggerHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1056,10 +1066,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteTriggerResponse());
     }
 
-    public DeleteVpcBindingResponse deleteVpcBinding(String serviceName, String vpcId) throws Exception {
+    public DeleteTriggerResponse deleteTrigger(String serviceName, String functionName, String triggerName) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        DeleteVpcBindingHeaders headers = new DeleteVpcBindingHeaders();
-        return this.deleteVpcBindingWithOptions(serviceName, vpcId, headers, runtime);
+        DeleteTriggerHeaders headers = new DeleteTriggerHeaders();
+        return this.deleteTriggerWithOptions(serviceName, functionName, triggerName, headers, runtime);
     }
 
     public DeleteVpcBindingResponse deleteVpcBindingWithOptions(String serviceName, String vpcId, DeleteVpcBindingHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1097,10 +1107,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteVpcBindingResponse());
     }
 
-    public DeregisterEventSourceResponse deregisterEventSource(String serviceName, String functionName, String sourceArn, DeregisterEventSourceRequest request) throws Exception {
+    public DeleteVpcBindingResponse deleteVpcBinding(String serviceName, String vpcId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        DeregisterEventSourceHeaders headers = new DeregisterEventSourceHeaders();
-        return this.deregisterEventSourceWithOptions(serviceName, functionName, sourceArn, request, headers, runtime);
+        DeleteVpcBindingHeaders headers = new DeleteVpcBindingHeaders();
+        return this.deleteVpcBindingWithOptions(serviceName, vpcId, headers, runtime);
     }
 
     public DeregisterEventSourceResponse deregisterEventSourceWithOptions(String serviceName, String functionName, String sourceArn, DeregisterEventSourceRequest request, DeregisterEventSourceHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1145,10 +1155,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeregisterEventSourceResponse());
     }
 
-    public GetAccountSettingsResponse getAccountSettings() throws Exception {
+    public DeregisterEventSourceResponse deregisterEventSource(String serviceName, String functionName, String sourceArn, DeregisterEventSourceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        GetAccountSettingsHeaders headers = new GetAccountSettingsHeaders();
-        return this.getAccountSettingsWithOptions(headers, runtime);
+        DeregisterEventSourceHeaders headers = new DeregisterEventSourceHeaders();
+        return this.deregisterEventSourceWithOptions(serviceName, functionName, sourceArn, request, headers, runtime);
     }
 
     public GetAccountSettingsResponse getAccountSettingsWithOptions(GetAccountSettingsHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1186,10 +1196,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetAccountSettingsResponse());
     }
 
-    public GetAliasResponse getAlias(String serviceName, String aliasName) throws Exception {
+    public GetAccountSettingsResponse getAccountSettings() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        GetAliasHeaders headers = new GetAliasHeaders();
-        return this.getAliasWithOptions(serviceName, aliasName, headers, runtime);
+        GetAccountSettingsHeaders headers = new GetAccountSettingsHeaders();
+        return this.getAccountSettingsWithOptions(headers, runtime);
     }
 
     public GetAliasResponse getAliasWithOptions(String serviceName, String aliasName, GetAliasHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1227,10 +1237,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetAliasResponse());
     }
 
-    public GetCustomDomainResponse getCustomDomain(String domainName) throws Exception {
+    public GetAliasResponse getAlias(String serviceName, String aliasName) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        GetCustomDomainHeaders headers = new GetCustomDomainHeaders();
-        return this.getCustomDomainWithOptions(domainName, headers, runtime);
+        GetAliasHeaders headers = new GetAliasHeaders();
+        return this.getAliasWithOptions(serviceName, aliasName, headers, runtime);
     }
 
     public GetCustomDomainResponse getCustomDomainWithOptions(String domainName, GetCustomDomainHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1268,10 +1278,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetCustomDomainResponse());
     }
 
-    public GetFunctionResponse getFunction(String serviceName, String functionName, GetFunctionRequest request) throws Exception {
+    public GetCustomDomainResponse getCustomDomain(String domainName) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        GetFunctionHeaders headers = new GetFunctionHeaders();
-        return this.getFunctionWithOptions(serviceName, functionName, request, headers, runtime);
+        GetCustomDomainHeaders headers = new GetCustomDomainHeaders();
+        return this.getCustomDomainWithOptions(domainName, headers, runtime);
     }
 
     public GetFunctionResponse getFunctionWithOptions(String serviceName, String functionName, GetFunctionRequest request, GetFunctionHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1316,12 +1326,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetFunctionResponse());
     }
 
-    public GetFunctionAsyncInvokeConfigResponse getFunctionAsyncInvokeConfig(String serviceName, String functionName, GetFunctionAsyncInvokeConfigRequest request) throws Exception {
+    public GetFunctionResponse getFunction(String serviceName, String functionName, GetFunctionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        GetFunctionAsyncInvokeConfigHeaders headers = new GetFunctionAsyncInvokeConfigHeaders();
-        return this.getFunctionAsyncInvokeConfigWithOptions(serviceName, functionName, request, headers, runtime);
+        GetFunctionHeaders headers = new GetFunctionHeaders();
+        return this.getFunctionWithOptions(serviceName, functionName, request, headers, runtime);
     }
 
+    /**
+      * StatefulAsyncInvocation indicates whether the asynchronous task feature is enabled. If the value of StatefulAsyncInvocation is true, the asynchronous task feature is enabled. All asynchronous invocations change to asynchronous task mode.
+      *
+      * @param request GetFunctionAsyncInvokeConfigRequest
+      * @param headers GetFunctionAsyncInvokeConfigHeaders
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetFunctionAsyncInvokeConfigResponse
+     */
     public GetFunctionAsyncInvokeConfigResponse getFunctionAsyncInvokeConfigWithOptions(String serviceName, String functionName, GetFunctionAsyncInvokeConfigRequest request, GetFunctionAsyncInvokeConfigHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1364,10 +1382,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetFunctionAsyncInvokeConfigResponse());
     }
 
-    public GetFunctionCodeResponse getFunctionCode(String serviceName, String functionName, GetFunctionCodeRequest request) throws Exception {
+    /**
+      * StatefulAsyncInvocation indicates whether the asynchronous task feature is enabled. If the value of StatefulAsyncInvocation is true, the asynchronous task feature is enabled. All asynchronous invocations change to asynchronous task mode.
+      *
+      * @param request GetFunctionAsyncInvokeConfigRequest
+      * @return GetFunctionAsyncInvokeConfigResponse
+     */
+    public GetFunctionAsyncInvokeConfigResponse getFunctionAsyncInvokeConfig(String serviceName, String functionName, GetFunctionAsyncInvokeConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        GetFunctionCodeHeaders headers = new GetFunctionCodeHeaders();
-        return this.getFunctionCodeWithOptions(serviceName, functionName, request, headers, runtime);
+        GetFunctionAsyncInvokeConfigHeaders headers = new GetFunctionAsyncInvokeConfigHeaders();
+        return this.getFunctionAsyncInvokeConfigWithOptions(serviceName, functionName, request, headers, runtime);
     }
 
     public GetFunctionCodeResponse getFunctionCodeWithOptions(String serviceName, String functionName, GetFunctionCodeRequest request, GetFunctionCodeHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1412,10 +1436,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetFunctionCodeResponse());
     }
 
-    public GetFunctionOnDemandConfigResponse getFunctionOnDemandConfig(String serviceName, String functionName, GetFunctionOnDemandConfigRequest request) throws Exception {
+    public GetFunctionCodeResponse getFunctionCode(String serviceName, String functionName, GetFunctionCodeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        GetFunctionOnDemandConfigHeaders headers = new GetFunctionOnDemandConfigHeaders();
-        return this.getFunctionOnDemandConfigWithOptions(serviceName, functionName, request, headers, runtime);
+        GetFunctionCodeHeaders headers = new GetFunctionCodeHeaders();
+        return this.getFunctionCodeWithOptions(serviceName, functionName, request, headers, runtime);
     }
 
     public GetFunctionOnDemandConfigResponse getFunctionOnDemandConfigWithOptions(String serviceName, String functionName, GetFunctionOnDemandConfigRequest request, GetFunctionOnDemandConfigHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1460,10 +1484,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetFunctionOnDemandConfigResponse());
     }
 
-    public GetLayerVersionResponse getLayerVersion(String layerName, String version) throws Exception {
+    public GetFunctionOnDemandConfigResponse getFunctionOnDemandConfig(String serviceName, String functionName, GetFunctionOnDemandConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        GetLayerVersionHeaders headers = new GetLayerVersionHeaders();
-        return this.getLayerVersionWithOptions(layerName, version, headers, runtime);
+        GetFunctionOnDemandConfigHeaders headers = new GetFunctionOnDemandConfigHeaders();
+        return this.getFunctionOnDemandConfigWithOptions(serviceName, functionName, request, headers, runtime);
     }
 
     public GetLayerVersionResponse getLayerVersionWithOptions(String layerName, String version, GetLayerVersionHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1501,10 +1525,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetLayerVersionResponse());
     }
 
-    public GetProvisionConfigResponse getProvisionConfig(String serviceName, String functionName, GetProvisionConfigRequest request) throws Exception {
+    public GetLayerVersionResponse getLayerVersion(String layerName, String version) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        GetProvisionConfigHeaders headers = new GetProvisionConfigHeaders();
-        return this.getProvisionConfigWithOptions(serviceName, functionName, request, headers, runtime);
+        GetLayerVersionHeaders headers = new GetLayerVersionHeaders();
+        return this.getLayerVersionWithOptions(layerName, version, headers, runtime);
     }
 
     public GetProvisionConfigResponse getProvisionConfigWithOptions(String serviceName, String functionName, GetProvisionConfigRequest request, GetProvisionConfigHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1549,10 +1573,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetProvisionConfigResponse());
     }
 
-    public GetResourceTagsResponse getResourceTags(GetResourceTagsRequest request) throws Exception {
+    public GetProvisionConfigResponse getProvisionConfig(String serviceName, String functionName, GetProvisionConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        GetResourceTagsHeaders headers = new GetResourceTagsHeaders();
-        return this.getResourceTagsWithOptions(request, headers, runtime);
+        GetProvisionConfigHeaders headers = new GetProvisionConfigHeaders();
+        return this.getProvisionConfigWithOptions(serviceName, functionName, request, headers, runtime);
     }
 
     public GetResourceTagsResponse getResourceTagsWithOptions(GetResourceTagsRequest request, GetResourceTagsHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1597,10 +1621,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetResourceTagsResponse());
     }
 
-    public GetServiceResponse getService(String serviceName, GetServiceRequest request) throws Exception {
+    public GetResourceTagsResponse getResourceTags(GetResourceTagsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        GetServiceHeaders headers = new GetServiceHeaders();
-        return this.getServiceWithOptions(serviceName, request, headers, runtime);
+        GetResourceTagsHeaders headers = new GetResourceTagsHeaders();
+        return this.getResourceTagsWithOptions(request, headers, runtime);
     }
 
     public GetServiceResponse getServiceWithOptions(String serviceName, GetServiceRequest request, GetServiceHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1645,12 +1669,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetServiceResponse());
     }
 
-    public GetStatefulAsyncInvocationResponse getStatefulAsyncInvocation(String serviceName, String functionName, String invocationId, GetStatefulAsyncInvocationRequest request) throws Exception {
+    public GetServiceResponse getService(String serviceName, GetServiceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        GetStatefulAsyncInvocationHeaders headers = new GetStatefulAsyncInvocationHeaders();
-        return this.getStatefulAsyncInvocationWithOptions(serviceName, functionName, invocationId, request, headers, runtime);
+        GetServiceHeaders headers = new GetServiceHeaders();
+        return this.getServiceWithOptions(serviceName, request, headers, runtime);
     }
 
+    /**
+      * StatefulAsyncInvocation: asynchronous task. Asynchronous tasks allow you to manage the states on the basis of common asynchronous invocations, which is more suitable for task scenarios.
+      *
+      * @param request GetStatefulAsyncInvocationRequest
+      * @param headers GetStatefulAsyncInvocationHeaders
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetStatefulAsyncInvocationResponse
+     */
     public GetStatefulAsyncInvocationResponse getStatefulAsyncInvocationWithOptions(String serviceName, String functionName, String invocationId, GetStatefulAsyncInvocationRequest request, GetStatefulAsyncInvocationHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1705,10 +1737,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetStatefulAsyncInvocationResponse());
     }
 
-    public GetTriggerResponse getTrigger(String serviceName, String functionName, String triggerName) throws Exception {
+    /**
+      * StatefulAsyncInvocation: asynchronous task. Asynchronous tasks allow you to manage the states on the basis of common asynchronous invocations, which is more suitable for task scenarios.
+      *
+      * @param request GetStatefulAsyncInvocationRequest
+      * @return GetStatefulAsyncInvocationResponse
+     */
+    public GetStatefulAsyncInvocationResponse getStatefulAsyncInvocation(String serviceName, String functionName, String invocationId, GetStatefulAsyncInvocationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        GetTriggerHeaders headers = new GetTriggerHeaders();
-        return this.getTriggerWithOptions(serviceName, functionName, triggerName, headers, runtime);
+        GetStatefulAsyncInvocationHeaders headers = new GetStatefulAsyncInvocationHeaders();
+        return this.getStatefulAsyncInvocationWithOptions(serviceName, functionName, invocationId, request, headers, runtime);
     }
 
     public GetTriggerResponse getTriggerWithOptions(String serviceName, String functionName, String triggerName, GetTriggerHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1746,10 +1784,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetTriggerResponse());
     }
 
-    public InvokeFunctionResponse invokeFunction(String serviceName, String functionName, InvokeFunctionRequest request) throws Exception {
+    public GetTriggerResponse getTrigger(String serviceName, String functionName, String triggerName) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        InvokeFunctionHeaders headers = new InvokeFunctionHeaders();
-        return this.invokeFunctionWithOptions(serviceName, functionName, request, headers, runtime);
+        GetTriggerHeaders headers = new GetTriggerHeaders();
+        return this.getTriggerWithOptions(serviceName, functionName, triggerName, headers, runtime);
     }
 
     public InvokeFunctionResponse invokeFunctionWithOptions(String serviceName, String functionName, InvokeFunctionRequest request, InvokeFunctionHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1812,10 +1850,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new InvokeFunctionResponse());
     }
 
-    public ListAliasesResponse listAliases(String serviceName, ListAliasesRequest request) throws Exception {
+    public InvokeFunctionResponse invokeFunction(String serviceName, String functionName, InvokeFunctionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        ListAliasesHeaders headers = new ListAliasesHeaders();
-        return this.listAliasesWithOptions(serviceName, request, headers, runtime);
+        InvokeFunctionHeaders headers = new InvokeFunctionHeaders();
+        return this.invokeFunctionWithOptions(serviceName, functionName, request, headers, runtime);
     }
 
     public ListAliasesResponse listAliasesWithOptions(String serviceName, ListAliasesRequest request, ListAliasesHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1872,10 +1910,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListAliasesResponse());
     }
 
-    public ListCustomDomainsResponse listCustomDomains(ListCustomDomainsRequest request) throws Exception {
+    public ListAliasesResponse listAliases(String serviceName, ListAliasesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        ListCustomDomainsHeaders headers = new ListCustomDomainsHeaders();
-        return this.listCustomDomainsWithOptions(request, headers, runtime);
+        ListAliasesHeaders headers = new ListAliasesHeaders();
+        return this.listAliasesWithOptions(serviceName, request, headers, runtime);
     }
 
     public ListCustomDomainsResponse listCustomDomainsWithOptions(ListCustomDomainsRequest request, ListCustomDomainsHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1932,10 +1970,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListCustomDomainsResponse());
     }
 
-    public ListEventSourcesResponse listEventSources(String serviceName, String functionName, ListEventSourcesRequest request) throws Exception {
+    public ListCustomDomainsResponse listCustomDomains(ListCustomDomainsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        ListEventSourcesHeaders headers = new ListEventSourcesHeaders();
-        return this.listEventSourcesWithOptions(serviceName, functionName, request, headers, runtime);
+        ListCustomDomainsHeaders headers = new ListCustomDomainsHeaders();
+        return this.listCustomDomainsWithOptions(request, headers, runtime);
     }
 
     public ListEventSourcesResponse listEventSourcesWithOptions(String serviceName, String functionName, ListEventSourcesRequest request, ListEventSourcesHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1980,12 +2018,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListEventSourcesResponse());
     }
 
-    public ListFunctionAsyncInvokeConfigsResponse listFunctionAsyncInvokeConfigs(String serviceName, String functionName, ListFunctionAsyncInvokeConfigsRequest request) throws Exception {
+    public ListEventSourcesResponse listEventSources(String serviceName, String functionName, ListEventSourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        ListFunctionAsyncInvokeConfigsHeaders headers = new ListFunctionAsyncInvokeConfigsHeaders();
-        return this.listFunctionAsyncInvokeConfigsWithOptions(serviceName, functionName, request, headers, runtime);
+        ListEventSourcesHeaders headers = new ListEventSourcesHeaders();
+        return this.listEventSourcesWithOptions(serviceName, functionName, request, headers, runtime);
     }
 
+    /**
+      * StatefulAsyncInvocation indicates whether the asynchronous task feature is enabled. If StatefulAsyncInvocation is set to true, the asynchronous task is enabled. All asynchronous invocations to the function corresponding to this configuration change to asynchronous task mode.
+      *
+      * @param request ListFunctionAsyncInvokeConfigsRequest
+      * @param headers ListFunctionAsyncInvokeConfigsHeaders
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListFunctionAsyncInvokeConfigsResponse
+     */
     public ListFunctionAsyncInvokeConfigsResponse listFunctionAsyncInvokeConfigsWithOptions(String serviceName, String functionName, ListFunctionAsyncInvokeConfigsRequest request, ListFunctionAsyncInvokeConfigsHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2044,10 +2090,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListFunctionAsyncInvokeConfigsResponse());
     }
 
-    public ListFunctionsResponse listFunctions(String serviceName, ListFunctionsRequest request) throws Exception {
+    /**
+      * StatefulAsyncInvocation indicates whether the asynchronous task feature is enabled. If StatefulAsyncInvocation is set to true, the asynchronous task is enabled. All asynchronous invocations to the function corresponding to this configuration change to asynchronous task mode.
+      *
+      * @param request ListFunctionAsyncInvokeConfigsRequest
+      * @return ListFunctionAsyncInvokeConfigsResponse
+     */
+    public ListFunctionAsyncInvokeConfigsResponse listFunctionAsyncInvokeConfigs(String serviceName, String functionName, ListFunctionAsyncInvokeConfigsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        ListFunctionsHeaders headers = new ListFunctionsHeaders();
-        return this.listFunctionsWithOptions(serviceName, request, headers, runtime);
+        ListFunctionAsyncInvokeConfigsHeaders headers = new ListFunctionAsyncInvokeConfigsHeaders();
+        return this.listFunctionAsyncInvokeConfigsWithOptions(serviceName, functionName, request, headers, runtime);
     }
 
     public ListFunctionsResponse listFunctionsWithOptions(String serviceName, ListFunctionsRequest request, ListFunctionsHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2108,12 +2160,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListFunctionsResponse());
     }
 
-    public ListInstancesResponse listInstances(String serviceName, String functionName, ListInstancesRequest request) throws Exception {
+    public ListFunctionsResponse listFunctions(String serviceName, ListFunctionsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        ListInstancesHeaders headers = new ListInstancesHeaders();
-        return this.listInstancesWithOptions(serviceName, functionName, request, headers, runtime);
+        ListFunctionsHeaders headers = new ListFunctionsHeaders();
+        return this.listFunctionsWithOptions(serviceName, request, headers, runtime);
     }
 
+    /**
+      * The ListInstances operation allows you to query the available instances of a function.
+      * Available instances are instances that are processing requests or can be scheduled to process requests. Available instances queried by the ListInstances operation are the same as those that can be used when you call the InvokeFunction operation with the same values specified for the `serviceName`, `functionName`, and `qualifier` parameters.
+      *
+      * @param request ListInstancesRequest
+      * @param headers ListInstancesHeaders
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListInstancesResponse
+     */
     public ListInstancesResponse listInstancesWithOptions(String serviceName, String functionName, ListInstancesRequest request, ListInstancesHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2156,10 +2217,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListInstancesResponse());
     }
 
-    public ListLayerVersionsResponse listLayerVersions(String layerName, ListLayerVersionsRequest request) throws Exception {
+    /**
+      * The ListInstances operation allows you to query the available instances of a function.
+      * Available instances are instances that are processing requests or can be scheduled to process requests. Available instances queried by the ListInstances operation are the same as those that can be used when you call the InvokeFunction operation with the same values specified for the `serviceName`, `functionName`, and `qualifier` parameters.
+      *
+      * @param request ListInstancesRequest
+      * @return ListInstancesResponse
+     */
+    public ListInstancesResponse listInstances(String serviceName, String functionName, ListInstancesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        ListLayerVersionsHeaders headers = new ListLayerVersionsHeaders();
-        return this.listLayerVersionsWithOptions(layerName, request, headers, runtime);
+        ListInstancesHeaders headers = new ListInstancesHeaders();
+        return this.listInstancesWithOptions(serviceName, functionName, request, headers, runtime);
     }
 
     public ListLayerVersionsResponse listLayerVersionsWithOptions(String layerName, ListLayerVersionsRequest request, ListLayerVersionsHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2208,10 +2276,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListLayerVersionsResponse());
     }
 
-    public ListLayersResponse listLayers(ListLayersRequest request) throws Exception {
+    public ListLayerVersionsResponse listLayerVersions(String layerName, ListLayerVersionsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        ListLayersHeaders headers = new ListLayersHeaders();
-        return this.listLayersWithOptions(request, headers, runtime);
+        ListLayerVersionsHeaders headers = new ListLayerVersionsHeaders();
+        return this.listLayerVersionsWithOptions(layerName, request, headers, runtime);
     }
 
     public ListLayersResponse listLayersWithOptions(ListLayersRequest request, ListLayersHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2276,10 +2344,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListLayersResponse());
     }
 
-    public ListOnDemandConfigsResponse listOnDemandConfigs(ListOnDemandConfigsRequest request) throws Exception {
+    public ListLayersResponse listLayers(ListLayersRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        ListOnDemandConfigsHeaders headers = new ListOnDemandConfigsHeaders();
-        return this.listOnDemandConfigsWithOptions(request, headers, runtime);
+        ListLayersHeaders headers = new ListLayersHeaders();
+        return this.listLayersWithOptions(request, headers, runtime);
     }
 
     public ListOnDemandConfigsResponse listOnDemandConfigsWithOptions(ListOnDemandConfigsRequest request, ListOnDemandConfigsHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2336,10 +2404,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListOnDemandConfigsResponse());
     }
 
-    public ListProvisionConfigsResponse listProvisionConfigs(ListProvisionConfigsRequest request) throws Exception {
+    public ListOnDemandConfigsResponse listOnDemandConfigs(ListOnDemandConfigsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        ListProvisionConfigsHeaders headers = new ListProvisionConfigsHeaders();
-        return this.listProvisionConfigsWithOptions(request, headers, runtime);
+        ListOnDemandConfigsHeaders headers = new ListOnDemandConfigsHeaders();
+        return this.listOnDemandConfigsWithOptions(request, headers, runtime);
     }
 
     public ListProvisionConfigsResponse listProvisionConfigsWithOptions(ListProvisionConfigsRequest request, ListProvisionConfigsHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2396,10 +2464,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListProvisionConfigsResponse());
     }
 
-    public ListReservedCapacitiesResponse listReservedCapacities(ListReservedCapacitiesRequest request) throws Exception {
+    public ListProvisionConfigsResponse listProvisionConfigs(ListProvisionConfigsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        ListReservedCapacitiesHeaders headers = new ListReservedCapacitiesHeaders();
-        return this.listReservedCapacitiesWithOptions(request, headers, runtime);
+        ListProvisionConfigsHeaders headers = new ListProvisionConfigsHeaders();
+        return this.listProvisionConfigsWithOptions(request, headers, runtime);
     }
 
     public ListReservedCapacitiesResponse listReservedCapacitiesWithOptions(ListReservedCapacitiesRequest request, ListReservedCapacitiesHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2448,10 +2516,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListReservedCapacitiesResponse());
     }
 
-    public ListServiceVersionsResponse listServiceVersions(String serviceName, ListServiceVersionsRequest request) throws Exception {
+    public ListReservedCapacitiesResponse listReservedCapacities(ListReservedCapacitiesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        ListServiceVersionsHeaders headers = new ListServiceVersionsHeaders();
-        return this.listServiceVersionsWithOptions(serviceName, request, headers, runtime);
+        ListReservedCapacitiesHeaders headers = new ListReservedCapacitiesHeaders();
+        return this.listReservedCapacitiesWithOptions(request, headers, runtime);
     }
 
     public ListServiceVersionsResponse listServiceVersionsWithOptions(String serviceName, ListServiceVersionsRequest request, ListServiceVersionsHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2508,10 +2576,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListServiceVersionsResponse());
     }
 
-    public ListServicesResponse listServices(ListServicesRequest request) throws Exception {
+    public ListServiceVersionsResponse listServiceVersions(String serviceName, ListServiceVersionsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        ListServicesHeaders headers = new ListServicesHeaders();
-        return this.listServicesWithOptions(request, headers, runtime);
+        ListServiceVersionsHeaders headers = new ListServiceVersionsHeaders();
+        return this.listServiceVersionsWithOptions(serviceName, request, headers, runtime);
     }
 
     public ListServicesResponse listServicesWithOptions(ListServicesRequest request, ListServicesHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2568,12 +2636,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListServicesResponse());
     }
 
-    public ListStatefulAsyncInvocationFunctionsResponse listStatefulAsyncInvocationFunctions(ListStatefulAsyncInvocationFunctionsRequest request) throws Exception {
+    public ListServicesResponse listServices(ListServicesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        ListStatefulAsyncInvocationFunctionsHeaders headers = new ListStatefulAsyncInvocationFunctionsHeaders();
-        return this.listStatefulAsyncInvocationFunctionsWithOptions(request, headers, runtime);
+        ListServicesHeaders headers = new ListServicesHeaders();
+        return this.listServicesWithOptions(request, headers, runtime);
     }
 
+    /**
+      * StatefulAsyncInvocation: asynchronous task. Asynchronous tasks allow you to manage the states on the basis of common asynchronous invocations, which is more suitable for task scenarios.
+      *
+      * @param request ListStatefulAsyncInvocationFunctionsRequest
+      * @param headers ListStatefulAsyncInvocationFunctionsHeaders
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListStatefulAsyncInvocationFunctionsResponse
+     */
     public ListStatefulAsyncInvocationFunctionsResponse listStatefulAsyncInvocationFunctionsWithOptions(ListStatefulAsyncInvocationFunctionsRequest request, ListStatefulAsyncInvocationFunctionsHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2620,12 +2696,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListStatefulAsyncInvocationFunctionsResponse());
     }
 
-    public ListStatefulAsyncInvocationsResponse listStatefulAsyncInvocations(String serviceName, String functionName, ListStatefulAsyncInvocationsRequest request) throws Exception {
+    /**
+      * StatefulAsyncInvocation: asynchronous task. Asynchronous tasks allow you to manage the states on the basis of common asynchronous invocations, which is more suitable for task scenarios.
+      *
+      * @param request ListStatefulAsyncInvocationFunctionsRequest
+      * @return ListStatefulAsyncInvocationFunctionsResponse
+     */
+    public ListStatefulAsyncInvocationFunctionsResponse listStatefulAsyncInvocationFunctions(ListStatefulAsyncInvocationFunctionsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        ListStatefulAsyncInvocationsHeaders headers = new ListStatefulAsyncInvocationsHeaders();
-        return this.listStatefulAsyncInvocationsWithOptions(serviceName, functionName, request, headers, runtime);
+        ListStatefulAsyncInvocationFunctionsHeaders headers = new ListStatefulAsyncInvocationFunctionsHeaders();
+        return this.listStatefulAsyncInvocationFunctionsWithOptions(request, headers, runtime);
     }
 
+    /**
+      * StatefulAsyncInvocation: asynchronous task. Asynchronous tasks allow you to manage the states on the basis of common asynchronous invocations, which is more suitable for task scenarios.
+      *
+      * @param request ListStatefulAsyncInvocationsRequest
+      * @param headers ListStatefulAsyncInvocationsHeaders
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListStatefulAsyncInvocationsResponse
+     */
     public ListStatefulAsyncInvocationsResponse listStatefulAsyncInvocationsWithOptions(String serviceName, String functionName, ListStatefulAsyncInvocationsRequest request, ListStatefulAsyncInvocationsHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2712,10 +2802,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListStatefulAsyncInvocationsResponse());
     }
 
-    public ListTaggedResourcesResponse listTaggedResources(ListTaggedResourcesRequest request) throws Exception {
+    /**
+      * StatefulAsyncInvocation: asynchronous task. Asynchronous tasks allow you to manage the states on the basis of common asynchronous invocations, which is more suitable for task scenarios.
+      *
+      * @param request ListStatefulAsyncInvocationsRequest
+      * @return ListStatefulAsyncInvocationsResponse
+     */
+    public ListStatefulAsyncInvocationsResponse listStatefulAsyncInvocations(String serviceName, String functionName, ListStatefulAsyncInvocationsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        ListTaggedResourcesHeaders headers = new ListTaggedResourcesHeaders();
-        return this.listTaggedResourcesWithOptions(request, headers, runtime);
+        ListStatefulAsyncInvocationsHeaders headers = new ListStatefulAsyncInvocationsHeaders();
+        return this.listStatefulAsyncInvocationsWithOptions(serviceName, functionName, request, headers, runtime);
     }
 
     public ListTaggedResourcesResponse listTaggedResourcesWithOptions(ListTaggedResourcesRequest request, ListTaggedResourcesHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2764,10 +2860,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListTaggedResourcesResponse());
     }
 
-    public ListTriggersResponse listTriggers(String serviceName, String functionName, ListTriggersRequest request) throws Exception {
+    public ListTaggedResourcesResponse listTaggedResources(ListTaggedResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        ListTriggersHeaders headers = new ListTriggersHeaders();
-        return this.listTriggersWithOptions(serviceName, functionName, request, headers, runtime);
+        ListTaggedResourcesHeaders headers = new ListTaggedResourcesHeaders();
+        return this.listTaggedResourcesWithOptions(request, headers, runtime);
     }
 
     public ListTriggersResponse listTriggersWithOptions(String serviceName, String functionName, ListTriggersRequest request, ListTriggersHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2824,10 +2920,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListTriggersResponse());
     }
 
-    public ListVpcBindingsResponse listVpcBindings(String serviceName) throws Exception {
+    public ListTriggersResponse listTriggers(String serviceName, String functionName, ListTriggersRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        ListVpcBindingsHeaders headers = new ListVpcBindingsHeaders();
-        return this.listVpcBindingsWithOptions(serviceName, headers, runtime);
+        ListTriggersHeaders headers = new ListTriggersHeaders();
+        return this.listTriggersWithOptions(serviceName, functionName, request, headers, runtime);
     }
 
     public ListVpcBindingsResponse listVpcBindingsWithOptions(String serviceName, ListVpcBindingsHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2865,10 +2961,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListVpcBindingsResponse());
     }
 
-    public PublishServiceVersionResponse publishServiceVersion(String serviceName, PublishServiceVersionRequest request) throws Exception {
+    public ListVpcBindingsResponse listVpcBindings(String serviceName) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        PublishServiceVersionHeaders headers = new PublishServiceVersionHeaders();
-        return this.publishServiceVersionWithOptions(serviceName, request, headers, runtime);
+        ListVpcBindingsHeaders headers = new ListVpcBindingsHeaders();
+        return this.listVpcBindingsWithOptions(serviceName, headers, runtime);
     }
 
     public PublishServiceVersionResponse publishServiceVersionWithOptions(String serviceName, PublishServiceVersionRequest request, PublishServiceVersionHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2917,12 +3013,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new PublishServiceVersionResponse());
     }
 
-    public PutFunctionAsyncInvokeConfigResponse putFunctionAsyncInvokeConfig(String serviceName, String functionName, PutFunctionAsyncInvokeConfigRequest request) throws Exception {
+    public PublishServiceVersionResponse publishServiceVersion(String serviceName, PublishServiceVersionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        PutFunctionAsyncInvokeConfigHeaders headers = new PutFunctionAsyncInvokeConfigHeaders();
-        return this.putFunctionAsyncInvokeConfigWithOptions(serviceName, functionName, request, headers, runtime);
+        PublishServiceVersionHeaders headers = new PublishServiceVersionHeaders();
+        return this.publishServiceVersionWithOptions(serviceName, request, headers, runtime);
     }
 
+    /**
+      * StatefulAsyncInvocation specifies the configurations of the asynchronous task. Asynchronous tasks allow you to manage the states on the basis of common asynchronous invocations, which is more suitable for task scenarios.
+      *
+      * @param request PutFunctionAsyncInvokeConfigRequest
+      * @param headers PutFunctionAsyncInvokeConfigHeaders
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return PutFunctionAsyncInvokeConfigResponse
+     */
     public PutFunctionAsyncInvokeConfigResponse putFunctionAsyncInvokeConfigWithOptions(String serviceName, String functionName, PutFunctionAsyncInvokeConfigRequest request, PutFunctionAsyncInvokeConfigHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2931,7 +3035,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.destinationConfig))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.destinationConfig)) {
             body.put("destinationConfig", request.destinationConfig);
         }
 
@@ -2983,10 +3087,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new PutFunctionAsyncInvokeConfigResponse());
     }
 
-    public PutFunctionOnDemandConfigResponse putFunctionOnDemandConfig(String serviceName, String functionName, PutFunctionOnDemandConfigRequest request) throws Exception {
+    /**
+      * StatefulAsyncInvocation specifies the configurations of the asynchronous task. Asynchronous tasks allow you to manage the states on the basis of common asynchronous invocations, which is more suitable for task scenarios.
+      *
+      * @param request PutFunctionAsyncInvokeConfigRequest
+      * @return PutFunctionAsyncInvokeConfigResponse
+     */
+    public PutFunctionAsyncInvokeConfigResponse putFunctionAsyncInvokeConfig(String serviceName, String functionName, PutFunctionAsyncInvokeConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        PutFunctionOnDemandConfigHeaders headers = new PutFunctionOnDemandConfigHeaders();
-        return this.putFunctionOnDemandConfigWithOptions(serviceName, functionName, request, headers, runtime);
+        PutFunctionAsyncInvokeConfigHeaders headers = new PutFunctionAsyncInvokeConfigHeaders();
+        return this.putFunctionAsyncInvokeConfigWithOptions(serviceName, functionName, request, headers, runtime);
     }
 
     public PutFunctionOnDemandConfigResponse putFunctionOnDemandConfigWithOptions(String serviceName, String functionName, PutFunctionOnDemandConfigRequest request, PutFunctionOnDemandConfigHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -3041,10 +3151,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new PutFunctionOnDemandConfigResponse());
     }
 
-    public PutLayerACLResponse putLayerACL(String layerName, PutLayerACLRequest request) throws Exception {
+    public PutFunctionOnDemandConfigResponse putFunctionOnDemandConfig(String serviceName, String functionName, PutFunctionOnDemandConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        PutLayerACLHeaders headers = new PutLayerACLHeaders();
-        return this.putLayerACLWithOptions(layerName, request, headers, runtime);
+        PutFunctionOnDemandConfigHeaders headers = new PutFunctionOnDemandConfigHeaders();
+        return this.putFunctionOnDemandConfigWithOptions(serviceName, functionName, request, headers, runtime);
     }
 
     public PutLayerACLResponse putLayerACLWithOptions(String layerName, PutLayerACLRequest request, PutLayerACLHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -3089,10 +3199,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new PutLayerACLResponse());
     }
 
-    public PutProvisionConfigResponse putProvisionConfig(String serviceName, String functionName, PutProvisionConfigRequest request) throws Exception {
+    public PutLayerACLResponse putLayerACL(String layerName, PutLayerACLRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        PutProvisionConfigHeaders headers = new PutProvisionConfigHeaders();
-        return this.putProvisionConfigWithOptions(serviceName, functionName, request, headers, runtime);
+        PutLayerACLHeaders headers = new PutLayerACLHeaders();
+        return this.putLayerACLWithOptions(layerName, request, headers, runtime);
     }
 
     public PutProvisionConfigResponse putProvisionConfigWithOptions(String serviceName, String functionName, PutProvisionConfigRequest request, PutProvisionConfigHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -3155,10 +3265,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new PutProvisionConfigResponse());
     }
 
-    public RegisterEventSourceResponse registerEventSource(String serviceName, String functionName, RegisterEventSourceRequest request) throws Exception {
+    public PutProvisionConfigResponse putProvisionConfig(String serviceName, String functionName, PutProvisionConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        RegisterEventSourceHeaders headers = new RegisterEventSourceHeaders();
-        return this.registerEventSourceWithOptions(serviceName, functionName, request, headers, runtime);
+        PutProvisionConfigHeaders headers = new PutProvisionConfigHeaders();
+        return this.putProvisionConfigWithOptions(serviceName, functionName, request, headers, runtime);
     }
 
     public RegisterEventSourceResponse registerEventSourceWithOptions(String serviceName, String functionName, RegisterEventSourceRequest request, RegisterEventSourceHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -3209,10 +3319,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RegisterEventSourceResponse());
     }
 
-    public ReleaseGPUInstanceResponse releaseGPUInstance(String instanceId) throws Exception {
+    public RegisterEventSourceResponse registerEventSource(String serviceName, String functionName, RegisterEventSourceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        ReleaseGPUInstanceHeaders headers = new ReleaseGPUInstanceHeaders();
-        return this.releaseGPUInstanceWithOptions(instanceId, headers, runtime);
+        RegisterEventSourceHeaders headers = new RegisterEventSourceHeaders();
+        return this.registerEventSourceWithOptions(serviceName, functionName, request, headers, runtime);
     }
 
     public ReleaseGPUInstanceResponse releaseGPUInstanceWithOptions(String instanceId, ReleaseGPUInstanceHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -3250,12 +3360,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ReleaseGPUInstanceResponse());
     }
 
-    public StopStatefulAsyncInvocationResponse stopStatefulAsyncInvocation(String serviceName, String functionName, String invocationId, StopStatefulAsyncInvocationRequest request) throws Exception {
+    public ReleaseGPUInstanceResponse releaseGPUInstance(String instanceId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        StopStatefulAsyncInvocationHeaders headers = new StopStatefulAsyncInvocationHeaders();
-        return this.stopStatefulAsyncInvocationWithOptions(serviceName, functionName, invocationId, request, headers, runtime);
+        ReleaseGPUInstanceHeaders headers = new ReleaseGPUInstanceHeaders();
+        return this.releaseGPUInstanceWithOptions(instanceId, headers, runtime);
     }
 
+    /**
+      * StatefulAsyncInvocation: asynchronous task. Asynchronous tasks allow you to manage the states on the basis of common asynchronous invocations, which is more suitable for task scenarios.
+      *
+      * @param request StopStatefulAsyncInvocationRequest
+      * @param headers StopStatefulAsyncInvocationHeaders
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return StopStatefulAsyncInvocationResponse
+     */
     public StopStatefulAsyncInvocationResponse stopStatefulAsyncInvocationWithOptions(String serviceName, String functionName, String invocationId, StopStatefulAsyncInvocationRequest request, StopStatefulAsyncInvocationHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3298,10 +3416,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new StopStatefulAsyncInvocationResponse());
     }
 
-    public TagResourceResponse tagResource(TagResourceRequest request) throws Exception {
+    /**
+      * StatefulAsyncInvocation: asynchronous task. Asynchronous tasks allow you to manage the states on the basis of common asynchronous invocations, which is more suitable for task scenarios.
+      *
+      * @param request StopStatefulAsyncInvocationRequest
+      * @return StopStatefulAsyncInvocationResponse
+     */
+    public StopStatefulAsyncInvocationResponse stopStatefulAsyncInvocation(String serviceName, String functionName, String invocationId, StopStatefulAsyncInvocationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        TagResourceHeaders headers = new TagResourceHeaders();
-        return this.tagResourceWithOptions(request, headers, runtime);
+        StopStatefulAsyncInvocationHeaders headers = new StopStatefulAsyncInvocationHeaders();
+        return this.stopStatefulAsyncInvocationWithOptions(serviceName, functionName, invocationId, request, headers, runtime);
     }
 
     public TagResourceResponse tagResourceWithOptions(TagResourceRequest request, TagResourceHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -3350,10 +3474,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new TagResourceResponse());
     }
 
-    public UntagResourceResponse untagResource(UntagResourceRequest request) throws Exception {
+    public TagResourceResponse tagResource(TagResourceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        UntagResourceHeaders headers = new UntagResourceHeaders();
-        return this.untagResourceWithOptions(request, headers, runtime);
+        TagResourceHeaders headers = new TagResourceHeaders();
+        return this.tagResourceWithOptions(request, headers, runtime);
     }
 
     public UntagResourceResponse untagResourceWithOptions(UntagResourceRequest request, UntagResourceHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -3406,10 +3530,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UntagResourceResponse());
     }
 
-    public UpdateAliasResponse updateAlias(String serviceName, String aliasName, UpdateAliasRequest request) throws Exception {
+    public UntagResourceResponse untagResource(UntagResourceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        UpdateAliasHeaders headers = new UpdateAliasHeaders();
-        return this.updateAliasWithOptions(serviceName, aliasName, request, headers, runtime);
+        UntagResourceHeaders headers = new UntagResourceHeaders();
+        return this.untagResourceWithOptions(request, headers, runtime);
     }
 
     public UpdateAliasResponse updateAliasWithOptions(String serviceName, String aliasName, UpdateAliasRequest request, UpdateAliasHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -3427,7 +3551,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("resolvePolicy", request.resolvePolicy);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.routePolicy))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.routePolicy)) {
             body.put("routePolicy", request.routePolicy);
         }
 
@@ -3474,16 +3598,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAliasResponse());
     }
 
-    public UpdateCustomDomainResponse updateCustomDomain(String domainName, UpdateCustomDomainRequest request) throws Exception {
+    public UpdateAliasResponse updateAlias(String serviceName, String aliasName, UpdateAliasRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        UpdateCustomDomainHeaders headers = new UpdateCustomDomainHeaders();
-        return this.updateCustomDomainWithOptions(domainName, request, headers, runtime);
+        UpdateAliasHeaders headers = new UpdateAliasHeaders();
+        return this.updateAliasWithOptions(serviceName, aliasName, request, headers, runtime);
     }
 
     public UpdateCustomDomainResponse updateCustomDomainWithOptions(String domainName, UpdateCustomDomainRequest request, UpdateCustomDomainHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.certConfig))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.certConfig)) {
             body.put("certConfig", request.certConfig);
         }
 
@@ -3491,11 +3615,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("protocol", request.protocol);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.routeConfig))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.routeConfig)) {
             body.put("routeConfig", request.routeConfig);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.tlsConfig))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.tlsConfig)) {
             body.put("tlsConfig", request.tlsConfig);
         }
 
@@ -3534,10 +3658,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateCustomDomainResponse());
     }
 
-    public UpdateFunctionResponse updateFunction(String serviceName, String functionName, UpdateFunctionRequest request) throws Exception {
+    public UpdateCustomDomainResponse updateCustomDomain(String domainName, UpdateCustomDomainRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        UpdateFunctionHeaders headers = new UpdateFunctionHeaders();
-        return this.updateFunctionWithOptions(serviceName, functionName, request, headers, runtime);
+        UpdateCustomDomainHeaders headers = new UpdateCustomDomainHeaders();
+        return this.updateCustomDomainWithOptions(domainName, request, headers, runtime);
     }
 
     public UpdateFunctionResponse updateFunctionWithOptions(String serviceName, String functionName, UpdateFunctionRequest request, UpdateFunctionHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -3551,7 +3675,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("caPort", request.caPort);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.code))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.code)) {
             body.put("code", request.code);
         }
 
@@ -3559,19 +3683,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("cpu", request.cpu);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.customContainerConfig))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.customContainerConfig)) {
             body.put("customContainerConfig", request.customContainerConfig);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.customDNS))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.customDNS)) {
             body.put("customDNS", request.customDNS);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.customHealthCheckConfig))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.customHealthCheckConfig)) {
             body.put("customHealthCheckConfig", request.customHealthCheckConfig);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.customRuntimeConfig))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.customRuntimeConfig)) {
             body.put("customRuntimeConfig", request.customRuntimeConfig);
         }
 
@@ -3599,7 +3723,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("initializer", request.initializer);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.instanceLifecycleConfig))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceLifecycleConfig)) {
             body.put("instanceLifecycleConfig", request.instanceLifecycleConfig);
         }
 
@@ -3670,10 +3794,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateFunctionResponse());
     }
 
-    public UpdateServiceResponse updateService(String serviceName, UpdateServiceRequest request) throws Exception {
+    public UpdateFunctionResponse updateFunction(String serviceName, String functionName, UpdateFunctionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        UpdateServiceHeaders headers = new UpdateServiceHeaders();
-        return this.updateServiceWithOptions(serviceName, request, headers, runtime);
+        UpdateFunctionHeaders headers = new UpdateFunctionHeaders();
+        return this.updateFunctionWithOptions(serviceName, functionName, request, headers, runtime);
     }
 
     public UpdateServiceResponse updateServiceWithOptions(String serviceName, UpdateServiceRequest request, UpdateServiceHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -3687,15 +3811,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("internetAccess", request.internetAccess);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.logConfig))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.logConfig)) {
             body.put("logConfig", request.logConfig);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.nasConfig))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.nasConfig)) {
             body.put("nasConfig", request.nasConfig);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.ossMountConfig))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.ossMountConfig)) {
             body.put("ossMountConfig", request.ossMountConfig);
         }
 
@@ -3703,11 +3827,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("role", request.role);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.tracingConfig))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.tracingConfig)) {
             body.put("tracingConfig", request.tracingConfig);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.vpcConfig))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcConfig)) {
             body.put("vpcConfig", request.vpcConfig);
         }
 
@@ -3750,10 +3874,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateServiceResponse());
     }
 
-    public UpdateTriggerResponse updateTrigger(String serviceName, String functionName, String triggerName, UpdateTriggerRequest request) throws Exception {
+    public UpdateServiceResponse updateService(String serviceName, UpdateServiceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        UpdateTriggerHeaders headers = new UpdateTriggerHeaders();
-        return this.updateTriggerWithOptions(serviceName, functionName, triggerName, request, headers, runtime);
+        UpdateServiceHeaders headers = new UpdateServiceHeaders();
+        return this.updateServiceWithOptions(serviceName, request, headers, runtime);
     }
 
     public UpdateTriggerResponse updateTriggerWithOptions(String serviceName, String functionName, String triggerName, UpdateTriggerRequest request, UpdateTriggerHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -3812,6 +3936,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateTriggerResponse());
+    }
+
+    public UpdateTriggerResponse updateTrigger(String serviceName, String functionName, String triggerName, UpdateTriggerRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        UpdateTriggerHeaders headers = new UpdateTriggerHeaders();
+        return this.updateTriggerWithOptions(serviceName, functionName, triggerName, request, headers, runtime);
     }
 
     public okhttp3.Response InvokeHTTPTrigger(String url, String method, byte[] body, okhttp3.Headers headers) throws Exception {

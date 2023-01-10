@@ -4,12 +4,17 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class ListServiceVersionsResponseBody extends TeaModel {
+    // The order in which the returned versions are sorted. Valid values:
+    //   - **FORWARD**: in ascending order. 
+    //   - **BACKWARD**: in descending order. This is the default value.
     @NameInMap("direction")
     public String direction;
 
+    // The token used to obtain more results. If the number of resources exceeds the limit, the nextToken parameter is returned. You can include the parameter in subsequent calls to obtain more results. You do not need to provide this parameter in the first call.
     @NameInMap("nextToken")
     public String nextToken;
 
+    // The list of versions.
     @NameInMap("versions")
     public java.util.List<ListServiceVersionsResponseBodyVersions> versions;
 
@@ -43,15 +48,19 @@ public class ListServiceVersionsResponseBody extends TeaModel {
     }
 
     public static class ListServiceVersionsResponseBodyVersions extends TeaModel {
+        // The time when the service version was created.
         @NameInMap("createdTime")
         public String createdTime;
 
+        // The description of the service version.
         @NameInMap("description")
         public String description;
 
+        // The time when the service version was last modified.
         @NameInMap("lastModifiedTime")
         public String lastModifiedTime;
 
+        // The version of the service.
         @NameInMap("versionId")
         public String versionId;
 

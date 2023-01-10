@@ -4,18 +4,23 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class PutProvisionConfigRequest extends TeaModel {
+    // Specifies whether to always allocate CPU resources. Default value: true.
     @NameInMap("alwaysAllocateCPU")
     public Boolean alwaysAllocateCPU;
 
+    // The configurations of scheduled auto scaling.
     @NameInMap("scheduledActions")
     public java.util.List<ScheduledActions> scheduledActions;
 
+    // The number of provisioned instances. Value range: [1,100000].
     @NameInMap("target")
     public Long target;
 
+    // The configurations of metric-based auto scaling.
     @NameInMap("targetTrackingPolicies")
     public java.util.List<TargetTrackingPolicies> targetTrackingPolicies;
 
+    // The name of the alias.
     @NameInMap("qualifier")
     public String qualifier;
 
