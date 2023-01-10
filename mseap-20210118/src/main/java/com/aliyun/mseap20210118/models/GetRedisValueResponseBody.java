@@ -4,43 +4,63 @@ package com.aliyun.mseap20210118.models;
 import com.aliyun.tea.*;
 
 public class GetRedisValueResponseBody extends TeaModel {
-    // allowRetry
+    /**
+     * <p>allowRetry</p>
+     */
     @NameInMap("AllowRetry")
     public Boolean allowRetry;
 
-    // appName
+    /**
+     * <p>appName</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
-    // dynamicCode
+    /**
+     * <p>dynamicCode</p>
+     */
     @NameInMap("DynamicCode")
     public String dynamicCode;
 
-    // dynamicMessage
+    /**
+     * <p>dynamicMessage</p>
+     */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
-    // errorCode
+    /**
+     * <p>errorCode</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // errorMsg
+    /**
+     * <p>errorMsg</p>
+     */
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
-    // httpStatusCode
+    /**
+     * <p>httpStatusCode</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // module
+    /**
+     * <p>module</p>
+     */
     @NameInMap("Module")
     public String module;
 
-    // requestId
+    /**
+     * <p>requestId</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // success
+    /**
+     * <p>success</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

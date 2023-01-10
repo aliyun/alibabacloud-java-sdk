@@ -4,127 +4,183 @@ package com.aliyun.mseap20210118.models;
 import com.aliyun.tea.*;
 
 public class GetRedisValueRequest extends TeaModel {
-    // aliyunKp
+    /**
+     * <p>aliyunKp</p>
+     */
     @NameInMap("AliyunKp")
     public String aliyunKp;
 
-    // aliyunKpLong
+    /**
+     * <p>aliyunKpLong</p>
+     */
     @NameInMap("AliyunKpLong")
     public Long aliyunKpLong;
 
-    // apiType
+    /**
+     * <p>apiType</p>
+     */
     @NameInMap("ApiType")
     public String apiType;
 
-    // bid
+    /**
+     * <p>bid</p>
+     */
     @NameInMap("Bid")
     public String bid;
 
-    // callerParentId
+    /**
+     * <p>callerParentId</p>
+     */
     @NameInMap("CallerParentId")
     public Long callerParentId;
 
-    // callerSecurityTransport
+    /**
+     * <p>callerSecurityTransport</p>
+     */
     @NameInMap("CallerSecurityTransport")
     public Boolean callerSecurityTransport;
 
-    // callerType
+    /**
+     * <p>callerType</p>
+     */
     @NameInMap("CallerType")
     public String callerType;
 
-    // clientIp
+    /**
+     * <p>clientIp</p>
+     */
     @NameInMap("ClientIp")
     public String clientIp;
 
-    // key
+    /**
+     * <p>key</p>
+     */
     @NameInMap("Key")
     public String key;
 
-    // lang
+    /**
+     * <p>lang</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
-    // mfaPresent
+    /**
+     * <p>mfaPresent</p>
+     */
     @NameInMap("MfaPresent")
     public Boolean mfaPresent;
 
-    // originalRequest
+    /**
+     * <p>originalRequest</p>
+     */
     @NameInMap("OriginalRequest")
     public String originalRequest;
 
-    // popAction
+    /**
+     * <p>popAction</p>
+     */
     @NameInMap("PopAction")
     public String popAction;
 
-    // proxyCallerIp
+    /**
+     * <p>proxyCallerIp</p>
+     */
     @NameInMap("ProxyCallerIp")
     public String proxyCallerIp;
 
-    // proxyCallerSecurityTransport
+    /**
+     * <p>proxyCallerSecurityTransport</p>
+     */
     @NameInMap("ProxyCallerSecurityTransport")
     public Boolean proxyCallerSecurityTransport;
 
-    // proxyTrustTransportInfo
+    /**
+     * <p>proxyTrustTransportInfo</p>
+     */
     @NameInMap("ProxyTrustTransportInfo")
     public Boolean proxyTrustTransportInfo;
 
-    // requestId
+    /**
+     * <p>requestId</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // securityToken
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    // stsTokenCallerBid
+    /**
+     * <p>stsTokenCallerBid</p>
+     */
     @NameInMap("StsTokenCallerBid")
     public Long stsTokenCallerBid;
 
-    // stsTokenCallerUid
+    /**
+     * <p>stsTokenCallerUid</p>
+     */
     @NameInMap("StsTokenCallerUid")
     public Long stsTokenCallerUid;
 
-    // timeout
+    /**
+     * <p>timeout</p>
+     */
     @NameInMap("Timeout")
     public Long timeout;
 
-    // userAccessKeyId
+    /**
+     * <p>userAccessKeyId</p>
+     */
     @NameInMap("UserAccessKeyId")
     public String userAccessKeyId;
 
-    // userBid
+    /**
+     * <p>userBid</p>
+     */
     @NameInMap("UserBid")
     public String userBid;
 
-    // userCallerParentId
+    /**
+     * <p>userCallerParentId</p>
+     */
     @NameInMap("UserCallerParentId")
     public Long userCallerParentId;
 
-    // userCallerSecurityTransport
+    /**
+     * <p>userCallerSecurityTransport</p>
+     */
     @NameInMap("UserCallerSecurityTransport")
     public Boolean userCallerSecurityTransport;
 
-    // userCallerType
+    /**
+     * <p>userCallerType</p>
+     */
     @NameInMap("UserCallerType")
     public String userCallerType;
 
-    // userClientIp
+    /**
+     * <p>userClientIp</p>
+     */
     @NameInMap("UserClientIp")
     public String userClientIp;
 
-    // userKp
+    /**
+     * <p>userKp</p>
+     */
     @NameInMap("UserKp")
     public String userKp;
 
-    // userMfaPresent
+    /**
+     * <p>userMfaPresent</p>
+     */
     @NameInMap("UserMfaPresent")
     public Boolean userMfaPresent;
 
-    // userSecurityToken
+    /**
+     * <p>userSecurityToken</p>
+     */
     @NameInMap("UserSecurityToken")
     public String userSecurityToken;
 
-    // value
     @NameInMap("Value")
     public String value;
 
