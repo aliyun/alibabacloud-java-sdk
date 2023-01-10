@@ -5287,6 +5287,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeDcdnWafServiceWithOptions(request, runtime);
     }
 
+    /**
+      * You can call this operation up to 20 times per second per account.
+      *
+      * @param request DescribeDcdnWafSpecInfoRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnWafSpecInfoResponse
+     */
     public DescribeDcdnWafSpecInfoResponse describeDcdnWafSpecInfoWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -5303,6 +5310,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnWafSpecInfoResponse());
     }
 
+    /**
+      * You can call this operation up to 20 times per second per account.
+      *
+      * @return DescribeDcdnWafSpecInfoResponse
+     */
     public DescribeDcdnWafSpecInfoResponse describeDcdnWafSpecInfo() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnWafSpecInfoWithOptions(runtime);
@@ -6573,6 +6585,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.tagDcdnResourcesWithOptions(request, runtime);
     }
 
+    /**
+      * >  You can call this API operation up to 100 times per second per account.
+      *
+      * @param request UntagDcdnResourcesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UntagDcdnResourcesResponse
+     */
     public UntagDcdnResourcesResponse untagDcdnResourcesWithOptions(UntagDcdnResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6609,6 +6628,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UntagDcdnResourcesResponse());
     }
 
+    /**
+      * >  You can call this API operation up to 100 times per second per account.
+      *
+      * @param request UntagDcdnResourcesRequest
+      * @return UntagDcdnResourcesResponse
+     */
     public UntagDcdnResourcesResponse untagDcdnResources(UntagDcdnResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.untagDcdnResourcesWithOptions(request, runtime);

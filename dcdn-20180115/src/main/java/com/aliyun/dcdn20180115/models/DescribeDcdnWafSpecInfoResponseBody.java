@@ -4,12 +4,21 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnWafSpecInfoResponseBody extends TeaModel {
+    /**
+     * <p>The version of WAF.</p>
+     */
     @NameInMap("Edition")
     public String edition;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The supported types of protection policies and the configuration information of protection rules.</p>
+     */
     @NameInMap("SpecInfos")
     public java.util.List<DescribeDcdnWafSpecInfoResponseBodySpecInfos> specInfos;
 
@@ -43,12 +52,21 @@ public class DescribeDcdnWafSpecInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnWafSpecInfoResponseBodySpecInfosConfigs extends TeaModel {
+        /**
+         * <p>The configuration code of the protection rule.</p>
+         */
         @NameInMap("Config")
         public String config;
 
+        /**
+         * <p>The configuration expression of the protection rule.</p>
+         */
         @NameInMap("Expr")
         public String expr;
 
+        /**
+         * <p>The value of the configuration expression of the protection rule.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -84,9 +102,22 @@ public class DescribeDcdnWafSpecInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnWafSpecInfoResponseBodySpecInfos extends TeaModel {
+        /**
+         * <p>The configuration information of the protection rule.</p>
+         */
         @NameInMap("Configs")
         public java.util.List<DescribeDcdnWafSpecInfoResponseBodySpecInfosConfigs> configs;
 
+        /**
+         * <p>The type of the protection policy. Valid values:</p>
+         * <br>
+         * <p>*   waf_group: basic web protection</p>
+         * <p>*   custom_acl: custom protection</p>
+         * <p>*   whitelist: IP address whitelist</p>
+         * <p>*   ip_blacklist: IP address blacklist</p>
+         * <p>*   region_block: region blacklist</p>
+         * <p>*   bot: bot management</p>
+         */
         @NameInMap("DefenseScene")
         public String defenseScene;
 

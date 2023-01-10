@@ -128,7 +128,9 @@ public class DescribeDcdnIpaDomainDetailResponseBody extends TeaModel {
         @NameInMap("CertName")
         public String certName;
 
-        // CNAME。
+        /**
+         * <p>CNAME。</p>
+         */
         @NameInMap("Cname")
         public String cname;
 
