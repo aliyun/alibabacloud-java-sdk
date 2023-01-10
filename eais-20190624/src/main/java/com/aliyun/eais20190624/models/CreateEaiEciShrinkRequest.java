@@ -3,15 +3,18 @@ package com.aliyun.eais20190624.models;
 
 import com.aliyun.tea.*;
 
-public class CreateEaiJupyterShrinkRequest extends TeaModel {
+public class CreateEaiEciShrinkRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
+
+    @NameInMap("EaisName")
+    public String eaisName;
 
     @NameInMap("EaisType")
     public String eaisType;
 
-    @NameInMap("EnvironmentVar")
-    public String environmentVarShrink;
+    @NameInMap("Eci")
+    public String eciShrink;
 
     @NameInMap("RegionId")
     public String regionId;
@@ -25,12 +28,12 @@ public class CreateEaiJupyterShrinkRequest extends TeaModel {
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
-    public static CreateEaiJupyterShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateEaiJupyterShrinkRequest self = new CreateEaiJupyterShrinkRequest();
+    public static CreateEaiEciShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateEaiEciShrinkRequest self = new CreateEaiEciShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateEaiJupyterShrinkRequest setClientToken(String clientToken) {
+    public CreateEaiEciShrinkRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
@@ -38,7 +41,15 @@ public class CreateEaiJupyterShrinkRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public CreateEaiJupyterShrinkRequest setEaisType(String eaisType) {
+    public CreateEaiEciShrinkRequest setEaisName(String eaisName) {
+        this.eaisName = eaisName;
+        return this;
+    }
+    public String getEaisName() {
+        return this.eaisName;
+    }
+
+    public CreateEaiEciShrinkRequest setEaisType(String eaisType) {
         this.eaisType = eaisType;
         return this;
     }
@@ -46,15 +57,15 @@ public class CreateEaiJupyterShrinkRequest extends TeaModel {
         return this.eaisType;
     }
 
-    public CreateEaiJupyterShrinkRequest setEnvironmentVarShrink(String environmentVarShrink) {
-        this.environmentVarShrink = environmentVarShrink;
+    public CreateEaiEciShrinkRequest setEciShrink(String eciShrink) {
+        this.eciShrink = eciShrink;
         return this;
     }
-    public String getEnvironmentVarShrink() {
-        return this.environmentVarShrink;
+    public String getEciShrink() {
+        return this.eciShrink;
     }
 
-    public CreateEaiJupyterShrinkRequest setRegionId(String regionId) {
+    public CreateEaiEciShrinkRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -62,7 +73,7 @@ public class CreateEaiJupyterShrinkRequest extends TeaModel {
         return this.regionId;
     }
 
-    public CreateEaiJupyterShrinkRequest setResourceGroupId(String resourceGroupId) {
+    public CreateEaiEciShrinkRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
     }
@@ -70,7 +81,7 @@ public class CreateEaiJupyterShrinkRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
-    public CreateEaiJupyterShrinkRequest setSecurityGroupId(String securityGroupId) {
+    public CreateEaiEciShrinkRequest setSecurityGroupId(String securityGroupId) {
         this.securityGroupId = securityGroupId;
         return this;
     }
@@ -78,7 +89,7 @@ public class CreateEaiJupyterShrinkRequest extends TeaModel {
         return this.securityGroupId;
     }
 
-    public CreateEaiJupyterShrinkRequest setVSwitchId(String vSwitchId) {
+    public CreateEaiEciShrinkRequest setVSwitchId(String vSwitchId) {
         this.vSwitchId = vSwitchId;
         return this;
     }
