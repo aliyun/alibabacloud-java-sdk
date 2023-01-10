@@ -13,6 +13,7 @@ public class GetFullRequestSampleByInstanceIdRequest extends TeaModel {
     @NameInMap("Role")
     public String role;
 
+    // SQL ID。
     @NameInMap("SqlId")
     public String sqlId;
 
