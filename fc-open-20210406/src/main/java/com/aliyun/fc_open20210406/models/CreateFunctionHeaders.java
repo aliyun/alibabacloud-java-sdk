@@ -7,15 +7,19 @@ public class CreateFunctionHeaders extends TeaModel {
     @NameInMap("commonHeaders")
     public java.util.Map<String, String> commonHeaders;
 
+    // The ID of your Alibaba Cloud account.
     @NameInMap("X-Fc-Account-Id")
     public String xFcAccountId;
 
+    // The CRC-64 value of the function code package.
     @NameInMap("X-Fc-Code-Checksum")
     public String xFcCodeChecksum;
 
+    // The time on which the function is invoked. The format of the value is: **EEE,d MMM yyyy HH:mm:ss GMT**.
     @NameInMap("X-Fc-Date")
     public String xFcDate;
 
+    // The trace ID of the request. The value is the same as that of the requestId parameter in the response.
     @NameInMap("X-Fc-Trace-Id")
     public String xFcTraceId;
 

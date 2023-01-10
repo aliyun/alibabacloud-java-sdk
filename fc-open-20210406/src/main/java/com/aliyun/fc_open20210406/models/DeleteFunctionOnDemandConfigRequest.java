@@ -4,6 +4,7 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class DeleteFunctionOnDemandConfigRequest extends TeaModel {
+    // The alias of the service or LATEST.
     @NameInMap("qualifier")
     public String qualifier;
 

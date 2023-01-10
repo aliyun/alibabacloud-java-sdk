@@ -4,9 +4,11 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class ListStatefulAsyncInvocationsResponseBody extends TeaModel {
+    // The information about asynchronous tasks.
     @NameInMap("invocations")
     public java.util.List<StatefulAsyncInvocation> invocations;
 
+    // The token used to obtain more results. If this parameter is left empty, all the results are returned.
     @NameInMap("nextToken")
     public String nextToken;
 

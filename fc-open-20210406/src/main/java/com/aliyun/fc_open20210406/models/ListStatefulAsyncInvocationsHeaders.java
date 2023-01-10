@@ -7,21 +7,33 @@ public class ListStatefulAsyncInvocationsHeaders extends TeaModel {
     @NameInMap("commonHeaders")
     public java.util.Map<String, String> commonHeaders;
 
+    // The ID of your Alibaba Cloud account.
     @NameInMap("X-Fc-Account-Id")
     public String xFcAccountId;
 
+    // The CRC-64 value of the function code package. This value is used to check data integrity. The value is automatically calculated by the tool.
     @NameInMap("X-Fc-Code-Checksum")
     public String xFcCodeChecksum;
 
+    // The time when Function Compute API is called. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
     @NameInMap("X-Fc-Date")
     public String xFcDate;
 
+    // The invocation method. 
+    // 
+    // - **Sync**: synchronous invocation 
+    // - **Async**: asynchronous invocation
     @NameInMap("X-Fc-Invocation-Type")
     public String xFcInvocationType;
 
+    // The method used to return logs. Valid values: 
+    // 
+    // - **Tail**: returns the last 4 KB of logs that are generated for the current request. 
+    // - **None**: does not return logs for the current request. This is the default value.
     @NameInMap("X-Fc-Log-Type")
     public String xFcLogType;
 
+    // The trace ID of the invocation request of Function Compute.
     @NameInMap("X-Fc-Trace-Id")
     public String xFcTraceId;
 

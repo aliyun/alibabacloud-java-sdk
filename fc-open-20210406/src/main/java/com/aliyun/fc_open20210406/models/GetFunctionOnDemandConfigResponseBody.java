@@ -4,9 +4,11 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class GetFunctionOnDemandConfigResponseBody extends TeaModel {
+    // The maximum number of instances.
     @NameInMap("maximumInstanceCount")
     public Long maximumInstanceCount;
 
+    // The description of the resource.
     @NameInMap("resource")
     public String resource;
 

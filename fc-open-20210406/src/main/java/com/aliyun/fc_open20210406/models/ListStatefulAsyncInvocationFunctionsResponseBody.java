@@ -4,9 +4,11 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class ListStatefulAsyncInvocationFunctionsResponseBody extends TeaModel {
+    // The details of returned data.
     @NameInMap("data")
     public java.util.List<AsyncConfigMeta> data;
 
+    // The token used to obtain more results. If this parameter is left empty, all the results are returned.
     @NameInMap("nextToken")
     public String nextToken;
 

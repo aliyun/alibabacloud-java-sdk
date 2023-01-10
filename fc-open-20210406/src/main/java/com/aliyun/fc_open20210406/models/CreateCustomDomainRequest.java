@@ -4,18 +4,27 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class CreateCustomDomainRequest extends TeaModel {
+    // The configurations of the HTTPS certificate.
     @NameInMap("certConfig")
     public CertConfig certConfig;
 
+    // The domain name.
     @NameInMap("domainName")
     public String domainName;
 
+    // The protocol types supported by the domain name. Valid values:
+    // 
+    // - **HTTP**: Only HTTP is supported. 
+    // - **HTTPS**: Only HTTPS is supported. 
+    // - **HTTP,HTTPS**: Both HTTP and HTTPS are supported.
     @NameInMap("protocol")
     public String protocol;
 
+    // The route table that maps the paths to functions when the functions are invoked by using the custom domain name.
     @NameInMap("routeConfig")
     public RouteConfig routeConfig;
 
+    // The configurations of the TLS.
     @NameInMap("tlsConfig")
     public TLSConfig tlsConfig;
 

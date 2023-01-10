@@ -4,15 +4,19 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class PublishServiceVersionResponseBody extends TeaModel {
+    // The time when the service version was created.
     @NameInMap("createdTime")
     public String createdTime;
 
+    // The description of the service version.
     @NameInMap("description")
     public String description;
 
+    // The time when the service version was last modified.
     @NameInMap("lastModifiedTime")
     public String lastModifiedTime;
 
+    // The version of the service.
     @NameInMap("versionId")
     public String versionId;
 

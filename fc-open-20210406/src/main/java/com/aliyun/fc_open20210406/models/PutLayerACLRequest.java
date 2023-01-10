@@ -4,6 +4,10 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class PutLayerACLRequest extends TeaModel {
+    // Specifies whether the layer is public.
+    // 
+    // *   **true**: Public.
+    // *   **false**: Not public.
     @NameInMap("public")
     public Boolean _public;
 

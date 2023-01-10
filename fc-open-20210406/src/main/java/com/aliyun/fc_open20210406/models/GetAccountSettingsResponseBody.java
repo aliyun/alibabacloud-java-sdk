@@ -4,9 +4,11 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class GetAccountSettingsResponseBody extends TeaModel {
+    // The list of zones.
     @NameInMap("availableAZs")
     public java.util.List<String> availableAZs;
 
+    // The default RAM role.
     @NameInMap("defaultRole")
     public String defaultRole;
 

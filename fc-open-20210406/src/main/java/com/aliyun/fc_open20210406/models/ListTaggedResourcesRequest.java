@@ -4,9 +4,11 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class ListTaggedResourcesRequest extends TeaModel {
+    // The maximum number of resources to return. Default value: 20. Maximum value: 100. The number of returned resources is less than or equal to the specified number.
     @NameInMap("limit")
     public Integer limit;
 
+    // The token used to obtain more results. You do not need to provide this parameter in the first call. The tokens for subsequent queries are obtained from the returned results.
     @NameInMap("nextToken")
     public String nextToken;
 

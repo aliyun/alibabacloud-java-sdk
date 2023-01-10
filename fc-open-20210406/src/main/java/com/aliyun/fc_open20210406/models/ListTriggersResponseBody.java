@@ -4,9 +4,11 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class ListTriggersResponseBody extends TeaModel {
+    // The token used to obtain more results. If this parameter is left empty, all the results are returned.
     @NameInMap("nextToken")
     public String nextToken;
 
+    // The information about triggers.
     @NameInMap("triggers")
     public java.util.List<ListTriggersResponseBodyTriggers> triggers;
 
@@ -32,42 +34,63 @@ public class ListTriggersResponseBody extends TeaModel {
     }
 
     public static class ListTriggersResponseBodyTriggers extends TeaModel {
+        // The time when the trigger was created.
         @NameInMap("createdTime")
         public String createdTime;
 
+        // The description of the trigger.
         @NameInMap("description")
         public String description;
 
+        // The domain name used to invoke the function by using HTTP. You can add this domain name as the prefix to the endpoint of Function Compute. This way, you can invoke the function that corresponds to the trigger by using HTTP. For example, `{domainName}.cn-shanghai.fc.aliyuncs.com`.
         @NameInMap("domainName")
         public String domainName;
 
+        // The ARN of the RAM role that is used by the event source to invoke the function.
         @NameInMap("invocationRole")
         public String invocationRole;
 
+        // The time when the trigger was last modified.
         @NameInMap("lastModifiedTime")
         public String lastModifiedTime;
 
+        // The version or alias of the service.
         @NameInMap("qualifier")
         public String qualifier;
 
+        // The ARN of the event source.
         @NameInMap("sourceArn")
         public String sourceArn;
 
+        // The configurations of the trigger. The configurations vary based on the trigger type. For more information about the format, see the following topics:
+        // 
+        // *   OSS trigger: [OSSTriggerConfig](javascript:void\(0\)).
+        // *   Log Service trigger: [LogTriggerConfig](javascript:void\(0\)).
+        // *   Time trigger: [TimeTriggerConfig](javascript:void\(0\)).
+        // *   HTTP trigger: [HTTPTriggerConfig](javascript:void\(0\)).
+        // *   Tablestore trigger: Specify the **SourceArn** parameter and leave this parameter empty.
+        // *   Alibaba Cloud CDN event trigger: [CDNEventsTriggerConfig](javascript:void\(0\)).
+        // *   MNS topic trigger: [MnsTopicTriggerConfig](javascript:void\(0\)).
         @NameInMap("triggerConfig")
         public String triggerConfig;
 
+        // The unique ID of the trigger.
         @NameInMap("triggerId")
         public String triggerId;
 
+        // The name of the trigger.
         @NameInMap("triggerName")
         public String triggerName;
 
+        // The trigger type, such as **oss**, **log**, **tablestore**, **timer**, **http**, **cdn_events**, and **mns_topic**.
         @NameInMap("triggerType")
         public String triggerType;
 
+        // The public domain address. You can access HTTP triggers over the Internet by using HTTP or HTTPS.
         @NameInMap("urlInternet")
         public String urlInternet;
 
+        // The private endpoint. In a VPC, you can access HTTP triggers by using HTTP or HTTPS.
         @NameInMap("urlIntranet")
         public String urlIntranet;
 

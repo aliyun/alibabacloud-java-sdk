@@ -4,9 +4,11 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class ListLayersResponseBody extends TeaModel {
+    // The information about layers.
     @NameInMap("layers")
     public java.util.List<Layer> layers;
 
+    // The name of the start layer for the next query, which is also the token used to obtain more results.
     @NameInMap("nextToken")
     public String nextToken;
 

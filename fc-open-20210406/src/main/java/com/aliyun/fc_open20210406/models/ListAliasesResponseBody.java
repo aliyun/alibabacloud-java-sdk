@@ -4,9 +4,11 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class ListAliasesResponseBody extends TeaModel {
+    // The list of aliases.
     @NameInMap("aliases")
     public java.util.List<ListAliasesResponseBodyAliases> aliases;
 
+    // The token used to obtain more results.
     @NameInMap("nextToken")
     public String nextToken;
 
@@ -32,18 +34,23 @@ public class ListAliasesResponseBody extends TeaModel {
     }
 
     public static class ListAliasesResponseBodyAliases extends TeaModel {
+        // The weight of the canary release version.
         @NameInMap("additionalVersionWeight")
         public java.util.Map<String, Float> additionalVersionWeight;
 
+        // The name of the alias.
         @NameInMap("aliasName")
         public String aliasName;
 
+        // The creation time.
         @NameInMap("createdTime")
         public String createdTime;
 
+        // The description of the alias.
         @NameInMap("description")
         public String description;
 
+        // The last update time.
         @NameInMap("lastModifiedTime")
         public String lastModifiedTime;
 
@@ -53,6 +60,7 @@ public class ListAliasesResponseBody extends TeaModel {
         @NameInMap("routePolicy")
         public RoutePolicy routePolicy;
 
+        // The ID of the version.
         @NameInMap("versionId")
         public String versionId;
 

@@ -4,18 +4,26 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class PutFunctionAsyncInvokeConfigRequest extends TeaModel {
+    // The configuration structure of the destination for asynchronous invocation.
     @NameInMap("destinationConfig")
     public DestinationConfig destinationConfig;
 
+    // The maximum validity period of messages. Valid values: 1 to 2592000. Unit: seconds.
     @NameInMap("maxAsyncEventAgeInSeconds")
     public Long maxAsyncEventAgeInSeconds;
 
+    // The maximum number of retries allowed after an asynchronous invocation fails. Default value: 3. Valid values: 0 to 8.
     @NameInMap("maxAsyncRetryAttempts")
     public Long maxAsyncRetryAttempts;
 
+    // Specifies whether to enable the asynchronous task feature. 
+    // 
+    // - **true**: enables the asynchronous task feature. 
+    // - **false**: does not enable the asynchronous task feature.
     @NameInMap("statefulInvocation")
     public Boolean statefulInvocation;
 
+    // The version or alias of the service.
     @NameInMap("qualifier")
     public String qualifier;
 

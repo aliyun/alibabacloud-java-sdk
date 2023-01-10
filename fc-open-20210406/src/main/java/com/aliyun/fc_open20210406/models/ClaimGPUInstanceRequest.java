@@ -22,6 +22,12 @@ public class ClaimGPUInstanceRequest extends TeaModel {
     @NameInMap("password")
     public String password;
 
+    @NameInMap("role")
+    public String role;
+
+    @NameInMap("sgId")
+    public String sgId;
+
     @NameInMap("sourceCidrIp")
     public String sourceCidrIp;
 
@@ -30,6 +36,12 @@ public class ClaimGPUInstanceRequest extends TeaModel {
 
     @NameInMap("udpPortRange")
     public java.util.List<String> udpPortRange;
+
+    @NameInMap("vpcId")
+    public String vpcId;
+
+    @NameInMap("vswId")
+    public String vswId;
 
     public static ClaimGPUInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         ClaimGPUInstanceRequest self = new ClaimGPUInstanceRequest();
@@ -84,6 +96,22 @@ public class ClaimGPUInstanceRequest extends TeaModel {
         return this.password;
     }
 
+    public ClaimGPUInstanceRequest setRole(String role) {
+        this.role = role;
+        return this;
+    }
+    public String getRole() {
+        return this.role;
+    }
+
+    public ClaimGPUInstanceRequest setSgId(String sgId) {
+        this.sgId = sgId;
+        return this;
+    }
+    public String getSgId() {
+        return this.sgId;
+    }
+
     public ClaimGPUInstanceRequest setSourceCidrIp(String sourceCidrIp) {
         this.sourceCidrIp = sourceCidrIp;
         return this;
@@ -106,6 +134,22 @@ public class ClaimGPUInstanceRequest extends TeaModel {
     }
     public java.util.List<String> getUdpPortRange() {
         return this.udpPortRange;
+    }
+
+    public ClaimGPUInstanceRequest setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    public String getVpcId() {
+        return this.vpcId;
+    }
+
+    public ClaimGPUInstanceRequest setVswId(String vswId) {
+        this.vswId = vswId;
+        return this;
+    }
+    public String getVswId() {
+        return this.vswId;
     }
 
 }

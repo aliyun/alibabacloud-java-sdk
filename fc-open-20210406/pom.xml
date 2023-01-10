@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>fc_open20210406</artifactId>
-  <version>2.0.0</version>
+  <version>2.0.2</version>
   <packaging>jar</packaging>
   <name>fc_open20210406</name>
   <description>Alibaba Cloud FC-Open (20210406) SDK for Java
@@ -76,7 +76,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>credentials-java</artifactId>
-      <version>0.2.4</version>
+      <version>0.2.9</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
@@ -169,6 +169,10 @@
                 <relocation>
                   <pattern>org.apache</pattern>
                   <shadedPattern>com.aliyun.fc_open20210406.external.org.apache</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>org.slf4j</pattern>
+                  <shadedPattern>com.aliyun.fc_open20210406.external.org.slf4j</shadedPattern>
                 </relocation>
               </relocations>
               <artifactSet>

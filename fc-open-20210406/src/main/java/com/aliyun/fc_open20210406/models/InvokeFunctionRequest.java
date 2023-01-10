@@ -4,9 +4,11 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class InvokeFunctionRequest extends TeaModel {
+    // The event to be processed by the function. Set this parameter to a binary string. Function Compute passes the event to the function for processing.
     @NameInMap("body")
     public byte[] body;
 
+    // The version or alias of the service.
     @NameInMap("qualifier")
     public String qualifier;
 
