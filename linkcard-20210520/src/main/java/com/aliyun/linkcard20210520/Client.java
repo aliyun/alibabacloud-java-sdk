@@ -443,6 +443,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getCardFlowInfoWithOptions(request, runtime);
     }
 
+    public GetCardLatestFlowResponse getCardLatestFlowWithOptions(GetCardLatestFlowRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.iccid)) {
+            query.put("Iccid", request.iccid);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetCardLatestFlow"),
+            new TeaPair("version", "2021-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetCardLatestFlowResponse());
+    }
+
+    public GetCardLatestFlowResponse getCardLatestFlow(GetCardLatestFlowRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getCardLatestFlowWithOptions(request, runtime);
+    }
+
+    public GetCardStatusStatisticsResponse getCardStatusStatisticsWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetCardStatusStatistics"),
+            new TeaPair("version", "2021-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetCardStatusStatisticsResponse());
+    }
+
+    public GetCardStatusStatisticsResponse getCardStatusStatistics() throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getCardStatusStatisticsWithOptions(runtime);
+    }
+
     public GetCredentialPoolStatisticsResponse getCredentialPoolStatisticsWithOptions(GetCredentialPoolStatisticsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -474,6 +524,115 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetCredentialPoolStatisticsResponse getCredentialPoolStatistics(GetCredentialPoolStatisticsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getCredentialPoolStatisticsWithOptions(request, runtime);
+    }
+
+    public GetOperateResultResponse getOperateResultWithOptions(GetOperateResultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.apiProduct)) {
+            query.put("ApiProduct", request.apiProduct);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resId)) {
+            query.put("ResId", request.resId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serialNo)) {
+            query.put("SerialNo", request.serialNo);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetOperateResult"),
+            new TeaPair("version", "2021-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetOperateResultResponse());
+    }
+
+    public GetOperateResultResponse getOperateResult(GetOperateResultRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getOperateResultWithOptions(request, runtime);
+    }
+
+    public GetRealNameStatusResponse getRealNameStatusWithOptions(GetRealNameStatusRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GetRealNameStatusShrinkRequest request = new GetRealNameStatusShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.listMsisdns)) {
+            request.listMsisdnsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.listMsisdns, "ListMsisdns", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.iccid)) {
+            query.put("Iccid", request.iccid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.listMsisdnsShrink)) {
+            query.put("ListMsisdns", request.listMsisdnsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetRealNameStatus"),
+            new TeaPair("version", "2021-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetRealNameStatusResponse());
+    }
+
+    public GetRealNameStatusResponse getRealNameStatus(GetRealNameStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getRealNameStatusWithOptions(request, runtime);
+    }
+
+    public GetSimCardStateDistributionResponse getSimCardStateDistributionWithOptions(GetSimCardStateDistributionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.credentialNO)) {
+            query.put("CredentialNO", request.credentialNO);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.date)) {
+            query.put("Date", request.date);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetSimCardStateDistribution"),
+            new TeaPair("version", "2021-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSimCardStateDistributionResponse());
+    }
+
+    public GetSimCardStateDistributionResponse getSimCardStateDistribution(GetSimCardStateDistributionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getSimCardStateDistributionWithOptions(request, runtime);
     }
 
     public ListCardInfoResponse listCardInfoWithOptions(ListCardInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
