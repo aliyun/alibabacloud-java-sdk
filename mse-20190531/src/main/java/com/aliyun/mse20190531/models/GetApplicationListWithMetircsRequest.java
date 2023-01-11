@@ -4,43 +4,57 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetApplicationListWithMetircsRequest extends TeaModel {
-    // The language of the response. Valid values:
-    // 
-    // *   zh: Chinese
-    // *   en: English
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // The ID of the application.
+    /**
+     * <p>The ID of the application.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
-    // The name of the application.
+    /**
+     * <p>The name of the application.</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
     @NameInMap("Namespace")
     public String namespace;
 
-    // The number of the page to return.
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // The number of entries to return on each page. Default value: 10.
+    /**
+     * <p>The number of entries to return on each page. Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The ID of the region where the instance resides. Examples:
-    // 
-    // *   cn-hangzhou: China (Hangzhou)
-    // *   cn-beijing: China (Beijing)
-    // *   cn-shanghai: China (Shanghai)
-    // *   cn-zhangjiakou: China (Zhangjiakou)
-    // *   cn-shenzhen: China (Shenzhen)
+    /**
+     * <p>The ID of the region where the instance resides. Examples:</p>
+     * <br>
+     * <p>*   cn-hangzhou: China (Hangzhou)</p>
+     * <p>*   cn-beijing: China (Beijing)</p>
+     * <p>*   cn-shanghai: China (Shanghai)</p>
+     * <p>*   cn-zhangjiakou: China (Zhangjiakou)</p>
+     * <p>*   cn-shenzhen: China (Shenzhen)</p>
+     */
     @NameInMap("Region")
     public String region;
 
-    // The service source. Valid values:
+    /**
+     * <p>The service source. Valid values:</p>
+     */
     @NameInMap("Source")
     public String source;
 

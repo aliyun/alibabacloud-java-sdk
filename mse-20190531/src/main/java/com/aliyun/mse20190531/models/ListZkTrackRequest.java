@@ -4,46 +4,66 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListZkTrackRequest extends TeaModel {
-    // The language of the response. Valid values:
-    // 
-    // *   zh: Chinese
-    // *   en: English
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // The end timestamp. Unit: seconds.
+    /**
+     * <p>The end timestamp. Unit: seconds.</p>
+     */
     @NameInMap("EndTs")
     public Long endTs;
 
-    // The ID of the instance.
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // The number of the page to return.
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("PageNum")
     public Long pageNum;
 
-    // The number of entries to return on each page.
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
-    // The path.
+    /**
+     * <p>The path.</p>
+     */
     @NameInMap("Path")
     public String path;
 
-    // The request parameters.
+    /**
+     * <p>The request parameters.</p>
+     */
     @NameInMap("RequestPars")
     public String requestPars;
 
-    // Specifies whether entries are sorted in reverse chronological order.
+    /**
+     * <p>Specifies whether entries are sorted in reverse chronological order.</p>
+     */
     @NameInMap("Reverse")
     public Boolean reverse;
 
-    // The session ID.
+    /**
+     * <p>The session ID.</p>
+     */
     @NameInMap("SessionId")
     public String sessionId;
 
-    // The start timestamp. Unit: seconds.
+    /**
+     * <p>The start timestamp. Unit: seconds.</p>
+     */
     @NameInMap("StartTs")
     public Long startTs;
 

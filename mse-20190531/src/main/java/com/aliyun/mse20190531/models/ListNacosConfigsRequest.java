@@ -4,50 +4,72 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListNacosConfigsRequest extends TeaModel {
-    // The language of the response. Valid values:
-    // 
-    // *   zh: Chinese
-    // *   en: English
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // The name of the application.
+    /**
+     * <p>The name of the application.</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
-    // The ID of the data.
+    /**
+     * <p>The ID of the data.</p>
+     */
     @NameInMap("DataId")
     public String dataId;
 
-    // The name of the group. Default value: `default`
+    /**
+     * <p>The name of the group. Default value: `default`</p>
+     */
     @NameInMap("Group")
     public String group;
 
-    // The ID of the instance.
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // The ID of the namespace.
+    /**
+     * <p>The ID of the namespace.</p>
+     */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
-    // The number of the page to return.
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("PageNum")
     public Integer pageNum;
 
-    // The number of entries to return on each page.
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The ID of the region in which the instance resides. The region is supported by Microservices Engine (MSE).
+    /**
+     * <p>The ID of the region in which the instance resides. The region is supported by Microservices Engine (MSE).</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The extended request parameters. The JSON format is supported.
+    /**
+     * <p>The extended request parameters. The JSON format is supported.</p>
+     */
     @NameInMap("RequestPars")
     public String requestPars;
 
-    // The tags.
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tags")
     public String tags;
 

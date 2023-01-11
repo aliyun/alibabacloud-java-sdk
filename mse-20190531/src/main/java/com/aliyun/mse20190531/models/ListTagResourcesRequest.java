@@ -4,33 +4,45 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
-    // The language of the response. Valid values:
-    // 
-    // *   zh: Chinese
-    // *   en: English
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // The token that is required for the next query.
+    /**
+     * <p>The token that is required for the next query.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    // The region ID.
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The resource IDs. You can specify a maximum of 50 resource IDs.
+    /**
+     * <p>The resource IDs. You can specify a maximum of 50 resource IDs.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
-    // The type of the resources. Valid values:
-    // 
-    // *   CLUSTER: MSE instance
-    // *   GATEWAY: cloud-native gateway
+    /**
+     * <p>The type of the resources. Valid values:</p>
+     * <br>
+     * <p>*   CLUSTER: MSE instance</p>
+     * <p>*   GATEWAY: cloud-native gateway</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
-    // The list of tags. You can specify a maximum of 20 tags.
+    /**
+     * <p>The list of tags. You can specify a maximum of 20 tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
 
@@ -88,11 +100,15 @@ public class ListTagResourcesRequest extends TeaModel {
     }
 
     public static class ListTagResourcesRequestTag extends TeaModel {
-        // The key of a tag.
+        /**
+         * <p>The key of a tag.</p>
+         */
         @NameInMap("Key")
         public String key;
 
-        // The value of a tag.
+        /**
+         * <p>The value of a tag.</p>
+         */
         @NameInMap("Value")
         public String value;
 

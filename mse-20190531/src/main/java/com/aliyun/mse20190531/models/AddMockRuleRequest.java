@@ -4,62 +4,86 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class AddMockRuleRequest extends TeaModel {
-    // The language of the response. Valid values:
-    // 
-    // *   zh: Chinese
-    // *   en: English
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // The ID of the custom application.
+    /**
+     * <p>The ID of the custom application.</p>
+     */
     @NameInMap("ConsumerAppIds")
     public String consumerAppIds;
 
-    // The items in the recycle bin.
+    /**
+     * <p>The items in the recycle bin.</p>
+     */
     @NameInMap("DubboMockItems")
     public String dubboMockItems;
 
-    // Specifies whether to enable the alert rule. Valid values:
-    // 
-    // *   `true`: enables the alert rule.
-    // *   `false`: disables the alert rule.
+    /**
+     * <p>Specifies whether to enable the alert rule. Valid values:</p>
+     * <br>
+     * <p>*   `true`: enables the alert rule.</p>
+     * <p>*   `false`: disables the alert rule.</p>
+     */
     @NameInMap("Enable")
     public Boolean enable;
 
-    // The description.
+    /**
+     * <p>The description.</p>
+     */
     @NameInMap("ExtraJson")
     public String extraJson;
 
-    // The response time (RT) threshold of slow calls. Valid values:
-    // 
-    // *   \- 15: 15 ms
-    // *   \- 30: 30 ms
-    // *   \- 60: 60 ms
-    // *   \- 120: 120 ms
+    /**
+     * <p>The response time (RT) threshold of slow calls. Valid values:</p>
+     * <br>
+     * <p>*   \- 15: 15 ms</p>
+     * <p>*   \- 30: 30 ms</p>
+     * <p>*   \- 60: 60 ms</p>
+     * <p>*   \- 120: 120 ms</p>
+     */
     @NameInMap("MockType")
     public Long mockType;
 
-    // The name of the rule.
+    /**
+     * <p>The name of the rule.</p>
+     */
     @NameInMap("Name")
     public String name;
 
-    // The ID of the service provider application.
+    /**
+     * <p>The ID of the service provider application.</p>
+     */
     @NameInMap("ProviderAppId")
     public String providerAppId;
 
-    // The name of the service provider application.
+    /**
+     * <p>The name of the service provider application.</p>
+     */
     @NameInMap("ProviderAppName")
     public String providerAppName;
 
-    // The ID of the region.
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("Region")
     public String region;
 
-    // The input parameters. The JSON format is supported.
+    /**
+     * <p>The input parameters. The JSON format is supported.</p>
+     */
     @NameInMap("ScMockItems")
     public String scMockItems;
 
-    // The rule source.
+    /**
+     * <p>The rule source.</p>
+     */
     @NameInMap("Source")
     public String source;
 

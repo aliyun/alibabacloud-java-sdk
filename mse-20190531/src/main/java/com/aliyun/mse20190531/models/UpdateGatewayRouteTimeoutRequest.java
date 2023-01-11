@@ -4,26 +4,36 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class UpdateGatewayRouteTimeoutRequest extends TeaModel {
-    // The language of the response. Valid values:
-    // 
-    // *   zh: Chinese
-    // *   en: English
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // The ID of the gateway.
+    /**
+     * <p>The ID of the gateway.</p>
+     */
     @NameInMap("GatewayId")
     public Long gatewayId;
 
-    // The unique ID of the gateway.
+    /**
+     * <p>The unique ID of the gateway.</p>
+     */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
-    // The ID of the associated record.
+    /**
+     * <p>The ID of the associated record.</p>
+     */
     @NameInMap("Id")
     public Long id;
 
-    // The timeout period.
+    /**
+     * <p>The timeout period.</p>
+     */
     @NameInMap("TimeoutJSON")
     public UpdateGatewayRouteTimeoutRequestTimeoutJSON timeoutJSON;
 
@@ -73,15 +83,21 @@ public class UpdateGatewayRouteTimeoutRequest extends TeaModel {
     }
 
     public static class UpdateGatewayRouteTimeoutRequestTimeoutJSON extends TeaModel {
-        // The status of the policy.
+        /**
+         * <p>The status of the policy.</p>
+         */
         @NameInMap("Status")
         public String status;
 
-        // The unit of time. A value of s indicates seconds.
+        /**
+         * <p>The unit of time. A value of s indicates seconds.</p>
+         */
         @NameInMap("TimeUnit")
         public String timeUnit;
 
-        // The value of the timeout period.
+        /**
+         * <p>The value of the timeout period.</p>
+         */
         @NameInMap("UnitNum")
         public Integer unitNum;
 

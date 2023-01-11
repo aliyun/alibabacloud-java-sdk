@@ -4,138 +4,176 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class CreateClusterRequest extends TeaModel {
-    // The language of the response. Valid values:
-    // 
-    // *   zh: Chinese
-    // *   en: English
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // The engine specifications. Valid values:
-    // 
-    // \[Professional Edition]
-    // 
-    // *   `MSE_SC_2_4_60_c`: 2 CPU cores and 4 GB of memory
-    // *   `MSE_SC_1_2_60_c`: 1 CPU core and 2 GB of memory
-    // *   `MSE_SC_4_8_60_c`: 4 CPU cores and 8 GB of memory
-    // *   `MSE_SC_8_16_60_c`: 8 CPU cores and 16 GB of memory
-    // *   `MSE_SC_16_32_60_c`: 16 CPU cores and 32 GB of memory
-    // 
-    // \[Developer Edition]
-    // 
-    // *   `MSE_SC_1_2_60_c`: 1 CPU core and 2 GB of memory
-    // *   `MSE_SC_2_4_60_c`: 2 CPU cores and 4 GB of memory
+    /**
+     * <p>The engine specifications. Valid values:</p>
+     * <br>
+     * <p>\[Professional Edition]</p>
+     * <br>
+     * <p>*   `MSE_SC_2_4_60_c`: 2 CPU cores and 4 GB of memory</p>
+     * <p>*   `MSE_SC_1_2_60_c`: 1 CPU core and 2 GB of memory</p>
+     * <p>*   `MSE_SC_4_8_60_c`: 4 CPU cores and 8 GB of memory</p>
+     * <p>*   `MSE_SC_8_16_60_c`: 8 CPU cores and 16 GB of memory</p>
+     * <p>*   `MSE_SC_16_32_60_c`: 16 CPU cores and 32 GB of memory</p>
+     * <br>
+     * <p>\[Developer Edition]</p>
+     * <br>
+     * <p>*   `MSE_SC_1_2_60_c`: 1 CPU core and 2 GB of memory</p>
+     * <p>*   `MSE_SC_2_4_60_c`: 2 CPU cores and 4 GB of memory</p>
+     */
     @NameInMap("ClusterSpecification")
     public String clusterSpecification;
 
-    // The type of the instance. Valid values: ZooKeeper and Nacos-Ans.
+    /**
+     * <p>The type of the instance. Valid values: ZooKeeper and Nacos-Ans.</p>
+     */
     @NameInMap("ClusterType")
     public String clusterType;
 
-    // The engine version of the instance. Valid values:
-    // 
-    // \[Professional Edition]
-    // 
-    // *   `NACOS_2_0_0`: Nacos 2.0.0
-    // *   `ZooKeeper_3_8_0`: ZooKeeper 3.8.0
-    // 
-    // \[Developer Edition]
-    // 
-    // *   `NACOS_2_0_0`: Nacos 2.0.0
-    // *   `ZooKeeper_3_8_0`: ZooKeeper 3.8.0
+    /**
+     * <p>The engine version of the instance. Valid values:</p>
+     * <br>
+     * <p>\[Professional Edition]</p>
+     * <br>
+     * <p>*   `NACOS_2_0_0`: Nacos 2.0.0</p>
+     * <p>*   `ZooKeeper_3_8_0`: ZooKeeper 3.8.0</p>
+     * <br>
+     * <p>\[Developer Edition]</p>
+     * <br>
+     * <p>*   `NACOS_2_0_0`: Nacos 2.0.0</p>
+     * <p>*   `ZooKeeper_3_8_0`: ZooKeeper 3.8.0</p>
+     */
     @NameInMap("ClusterVersion")
     public String clusterVersion;
 
-    // The network connection type. Valid values:
-    // 
-    // *   slb
-    // *   eni
+    /**
+     * <p>The network connection type. Valid values:</p>
+     * <br>
+     * <p>*   slb</p>
+     * <p>*   eni</p>
+     */
     @NameInMap("ConnectionType")
     public String connectionType;
 
-    // The disk type. Valid values:
-    // 
-    // *   alicloud-disk-ssd
-    // *   alicloud-disk-essd-pl1
+    /**
+     * <p>The disk type. Valid values:</p>
+     * <br>
+     * <p>*   alicloud-disk-ssd</p>
+     * <p>*   alicloud-disk-essd-pl1</p>
+     */
     @NameInMap("DiskType")
     public String diskType;
 
-    // The number of nodes in the instance. Valid values: 1 to 9.
-    // 
-    // \[Professional Edition]
-    // 
-    // *   The number of nodes in an instance is greater than or equal to 3 and must be an odd number.
-    // 
-    // \[Developer Edition]
-    // 
-    // *   Only one node can be deployed for an instance.
+    /**
+     * <p>The number of nodes in the instance. Valid values: 1 to 9.</p>
+     * <br>
+     * <p>\[Professional Edition]</p>
+     * <br>
+     * <p>*   The number of nodes in an instance is greater than or equal to 3 and must be an odd number.</p>
+     * <br>
+     * <p>\[Developer Edition]</p>
+     * <br>
+     * <p>*   Only one node can be deployed for an instance.</p>
+     */
     @NameInMap("InstanceCount")
     public Integer instanceCount;
 
-    // The name of the MSE instance.
+    /**
+     * <p>The name of the MSE instance.</p>
+     */
     @NameInMap("InstanceName")
     public String instanceName;
 
-    // Set this parameter unless otherwise specified. Valid values:
-    // 
-    // *   `mse_pro`: Professional Edition
-    // *   `mse_dev`: Developer Edition
+    /**
+     * <p>Set this parameter unless otherwise specified. Valid values:</p>
+     * <br>
+     * <p>*   `mse_pro`: Professional Edition</p>
+     * <p>*   `mse_dev`: Developer Edition</p>
+     */
     @NameInMap("MseVersion")
     public String mseVersion;
 
-    // The network type of the instance. Valid values:
-    // 
-    // *   `privatenet`: VPC
-    // *   `pubnet`: Internet
+    /**
+     * <p>The network type of the instance. Valid values:</p>
+     * <br>
+     * <p>*   `privatenet`: VPC</p>
+     * <p>*   `pubnet`: Internet</p>
+     */
     @NameInMap("NetType")
     public String netType;
 
-    // The specifications of the internal-facing SLB instance. Valid values:
-    // 
-    // *   `slb.s1.small`
-    // *   `slb.s3.medium`
+    /**
+     * <p>The specifications of the internal-facing SLB instance. Valid values:</p>
+     * <br>
+     * <p>*   `slb.s1.small`</p>
+     * <p>*   `slb.s3.medium`</p>
+     */
     @NameInMap("PrivateSlbSpecification")
     public String privateSlbSpecification;
 
-    // The public bandwidth. Unit: Mbit/s.\
-    // Valid values: 0 to 5000. The value 0 indicates no access to the Internet.
+    /**
+     * <p>The public bandwidth. Unit: Mbit/s.\</p>
+     * <p>Valid values: 0 to 5000. The value 0 indicates no access to the Internet.</p>
+     */
     @NameInMap("PubNetworkFlow")
     public String pubNetworkFlow;
 
-    // The specifications of the Internet-facing Server Load Balancer (SLB) instance. Valid values:
-    // 
-    // *   `slb.s1.small`
-    // *   `slb.s3.medium`
+    /**
+     * <p>The specifications of the Internet-facing Server Load Balancer (SLB) instance. Valid values:</p>
+     * <br>
+     * <p>*   `slb.s1.small`</p>
+     * <p>*   `slb.s3.medium`</p>
+     */
     @NameInMap("PubSlbSpecification")
     public String pubSlbSpecification;
 
-    // The region where the MSE instance resides. Examples:
-    // 
-    // *   `cn-hangzhou`: China (Hangzhou)
-    // *   `cn-beijing`: China (Beijing)
-    // *   `cn-shanghai`: China (Shanghai)
-    // *   `cn-zhangjiakou`: China (Zhangjiakou)
-    // *   `cn-shenzhen`: China (Shenzhen)
+    /**
+     * <p>The region where the MSE instance resides. Examples:</p>
+     * <br>
+     * <p>*   `cn-hangzhou`: China (Hangzhou)</p>
+     * <p>*   `cn-beijing`: China (Beijing)</p>
+     * <p>*   `cn-shanghai`: China (Shanghai)</p>
+     * <p>*   `cn-zhangjiakou`: China (Zhangjiakou)</p>
+     * <p>*   `cn-shenzhen`: China (Shenzhen)</p>
+     */
     @NameInMap("Region")
     public String region;
 
-    // The extended request parameters in the JSON format.
+    /**
+     * <p>The extended request parameters in the JSON format.</p>
+     */
     @NameInMap("RequestPars")
     public String requestPars;
 
-    // The ID of the resource group. For more information about resource groups, see the topic "View basic information of a resource group."
+    /**
+     * <p>The ID of the resource group. For more information about resource groups, see the topic "View basic information of a resource group."</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    // The list of the tags that you want to add.
+    /**
+     * <p>The list of the tags that you want to add.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateClusterRequestTag> tag;
 
-    // The ID of the vSwitch.
+    /**
+     * <p>The ID of the vSwitch.</p>
+     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
-    // The ID of the virtual private cloud (VPC).
+    /**
+     * <p>The ID of the virtual private cloud (VPC).</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 
@@ -297,11 +335,15 @@ public class CreateClusterRequest extends TeaModel {
     }
 
     public static class CreateClusterRequestTag extends TeaModel {
-        // The key of a tag.
+        /**
+         * <p>The key of a tag.</p>
+         */
         @NameInMap("Key")
         public String key;
 
-        // The value of a tag.
+        /**
+         * <p>The value of a tag.</p>
+         */
         @NameInMap("Value")
         public String value;
 

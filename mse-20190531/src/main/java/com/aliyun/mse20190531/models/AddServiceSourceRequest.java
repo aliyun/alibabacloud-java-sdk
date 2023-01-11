@@ -4,55 +4,72 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class AddServiceSourceRequest extends TeaModel {
-    // The language in which the returned information is displayed. Valid values:
-    // 
-    // *   zh-CN: Chinese. This is the default value.
-    // *   en-US: English.
-    // *   ja: Japanese.
+    /**
+     * <p>The language in which the returned information is displayed. Valid values:</p>
+     * <br>
+     * <p>*   zh-CN: Chinese. This is the default value.</p>
+     * <p>*   en-US: English.</p>
+     * <p>*   ja: Japanese.</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // The endpoint.
+    /**
+     * <p>The endpoint.</p>
+     */
     @NameInMap("Address")
     public String address;
 
-    // The unique ID of the gateway.
+    /**
+     * <p>The unique ID of the gateway.</p>
+     */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
-    // The list of service groups.
+    /**
+     * <p>The list of service groups.</p>
+     */
     @NameInMap("GroupList")
     public java.util.List<String> groupList;
 
-    // The Ingress configuration.
+    /**
+     * <p>The Ingress configuration.</p>
+     */
     @NameInMap("IngressOptionsRequest")
     public AddServiceSourceRequestIngressOptionsRequest ingressOptionsRequest;
 
-    // The name.
-    // 
-    // >  The parameter value varies based on the source type.
-    // 
-    // *   If Type is set to K8S, this parameter specifies the name of the ACK cluster.
-    // 
-    // *   If Type is set to NACOS, this parameter specifies the ID of the instance.
+    /**
+     * <p>The name.</p>
+     * <br>
+     * <p>> The parameter value varies based on the source type.</p>
+     * <br>
+     * <p>*   If Type is set to K8S, this parameter specifies the name of the ACK cluster.</p>
+     * <p>*   If Type is set to NACOS, this parameter specifies the ID of the instance.</p>
+     */
     @NameInMap("Name")
     public String name;
 
-    // An array of service root paths.
+    /**
+     * <p>An array of service root paths.</p>
+     */
     @NameInMap("PathList")
     public java.util.List<String> pathList;
 
-    // The service source.
-    // 
-    // *   K8S: ACK cluster
-    // *   MSE: Nacos instance
+    /**
+     * <p>The service source.</p>
+     * <br>
+     * <p>*   K8S: ACK cluster</p>
+     * <p>*   MSE: Nacos instance</p>
+     */
     @NameInMap("Source")
     public String source;
 
-    // The type of the service source. Valid values:
-    // 
-    // *   K8S: ACK cluster
-    // *   NACOS: Nacos instance
+    /**
+     * <p>The type of the service source. Valid values:</p>
+     * <br>
+     * <p>*   K8S: ACK cluster</p>
+     * <p>*   NACOS: Nacos instance</p>
+     */
     @NameInMap("Type")
     public String type;
 
@@ -134,19 +151,27 @@ public class AddServiceSourceRequest extends TeaModel {
     }
 
     public static class AddServiceSourceRequestIngressOptionsRequest extends TeaModel {
-        // Specifies whether to enable Ingress.
+        /**
+         * <p>Specifies whether to enable Ingress.</p>
+         */
         @NameInMap("EnableIngress")
         public Boolean enableIngress;
 
-        // Specifies whether to update the Ingress status.
+        /**
+         * <p>Specifies whether to update the Ingress status.</p>
+         */
         @NameInMap("EnableStatus")
         public Boolean enableStatus;
 
-        // Specifies whether to monitor Ingress classes.
+        /**
+         * <p>Specifies whether to monitor Ingress classes.</p>
+         */
         @NameInMap("IngressClass")
         public String ingressClass;
 
-        // The namespace whose resources you want to monitor.
+        /**
+         * <p>The namespace whose resources you want to monitor.</p>
+         */
         @NameInMap("WatchNamespace")
         public String watchNamespace;
 

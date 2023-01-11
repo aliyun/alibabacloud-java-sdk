@@ -4,27 +4,37 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class UpdateGatewayRouteCORSRequest extends TeaModel {
-    // The language of the response. In compliance with [RFC 7231](https://tools.ietf.org/html/rfc7231), the backend service must return a response based on the language used by the user.
-    // 
-    // *   No default value
-    // *   zh-CN: Chinese
-    // *   en-US: English
+    /**
+     * <p>The language of the response. In compliance with [RFC 7231](https://tools.ietf.org/html/rfc7231), the backend service must return a response based on the language used by the user.</p>
+     * <br>
+     * <p>*   No default value</p>
+     * <p>*   zh-CN: Chinese</p>
+     * <p>*   en-US: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // The information about the CORS policy.
+    /**
+     * <p>The information about the CORS policy.</p>
+     */
     @NameInMap("CorsJSON")
     public UpdateGatewayRouteCORSRequestCorsJSON corsJSON;
 
-    // The ID of the gateway.
+    /**
+     * <p>The ID of the gateway.</p>
+     */
     @NameInMap("GatewayId")
     public Long gatewayId;
 
-    // The unique ID of the gateway.
+    /**
+     * <p>The unique ID of the gateway.</p>
+     */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
-    // The ID of the associated record.
+    /**
+     * <p>The ID of the associated record.</p>
+     */
     @NameInMap("Id")
     public Long id;
 
@@ -74,35 +84,51 @@ public class UpdateGatewayRouteCORSRequest extends TeaModel {
     }
 
     public static class UpdateGatewayRouteCORSRequestCorsJSON extends TeaModel {
-        // The credentials allowed.
+        /**
+         * <p>The credentials allowed.</p>
+         */
         @NameInMap("AllowCredentials")
         public Boolean allowCredentials;
 
-        // The request headers allowed.
+        /**
+         * <p>The request headers allowed.</p>
+         */
         @NameInMap("AllowHeaders")
         public String allowHeaders;
 
-        // The HTTP methods allowed.
+        /**
+         * <p>The HTTP methods allowed.</p>
+         */
         @NameInMap("AllowMethods")
         public String allowMethods;
 
-        // The origins from which access is allowed.
+        /**
+         * <p>The origins from which access is allowed.</p>
+         */
         @NameInMap("AllowOrigins")
         public String allowOrigins;
 
-        // The response headers allowed.
+        /**
+         * <p>The response headers allowed.</p>
+         */
         @NameInMap("ExposeHeaders")
         public String exposeHeaders;
 
-        // The status of the policy.
+        /**
+         * <p>The status of the policy.</p>
+         */
         @NameInMap("Status")
         public String status;
 
-        // The unit of time.
+        /**
+         * <p>The unit of time.</p>
+         */
         @NameInMap("TimeUnit")
         public String timeUnit;
 
-        // The value of time.
+        /**
+         * <p>The value of time.</p>
+         */
         @NameInMap("UnitNum")
         public Long unitNum;
 

@@ -4,49 +4,69 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class UpdatePluginConfigRequest extends TeaModel {
-    // The language of the response. Valid values:
-    // 
-    // zh: Chinese en: English
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>zh: Chinese en: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // The plug-in configuration.
+    /**
+     * <p>The plug-in configuration.</p>
+     */
     @NameInMap("Config")
     public String config;
 
-    // The application scope of the plug-in.
-    // 
-    // *   0: global
-    // *   1: domain names
-    // *   2: routes
+    /**
+     * <p>The application scope of the plug-in.</p>
+     * <br>
+     * <p>*   0: global</p>
+     * <p>*   1: domain names</p>
+     * <p>*   2: routes</p>
+     */
     @NameInMap("ConfigLevel")
     public Integer configLevel;
 
-    // Specifies whether to enable the plug-in.
+    /**
+     * <p>Specifies whether to enable the plug-in.</p>
+     */
     @NameInMap("Enable")
     public Boolean enable;
 
-    // The ID of the gateway.
+    /**
+     * <p>The ID of the gateway.</p>
+     */
     @NameInMap("GatewayId")
     public Long gatewayId;
 
-    // The unique ID of the gateway.
+    /**
+     * <p>The unique ID of the gateway.</p>
+     */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
-    // The creation time.
+    /**
+     * <p>The creation time.</p>
+     */
     @NameInMap("GmtCreate")
     public String gmtCreate;
 
-    // The update time.
+    /**
+     * <p>The update time.</p>
+     */
     @NameInMap("GmtModified")
     public String gmtModified;
 
-    // The ID of the plug-in configuration.
+    /**
+     * <p>The ID of the plug-in configuration.</p>
+     */
     @NameInMap("Id")
     public Long id;
 
-    // The ID of the gateway plug-in.
+    /**
+     * <p>The ID of the gateway plug-in.</p>
+     */
     @NameInMap("PluginId")
     public Long pluginId;
 

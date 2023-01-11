@@ -4,52 +4,72 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class UpdateServiceSourceShrinkRequest extends TeaModel {
-    // The language of the response. Valid values:
-    // 
-    // *   zh: Chinese
-    // *   en: English
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // The address.
+    /**
+     * <p>The address.</p>
+     */
     @NameInMap("Address")
     public String address;
 
-    // The ID of the gateway.
+    /**
+     * <p>The ID of the gateway.</p>
+     */
     @NameInMap("GatewayId")
     public Long gatewayId;
 
-    // The unique ID of the gateway.
+    /**
+     * <p>The unique ID of the gateway.</p>
+     */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
-    // The ID of the service source.
+    /**
+     * <p>The ID of the service source.</p>
+     */
     @NameInMap("Id")
     public Long id;
 
-    // The configurations of Ingress resources.
+    /**
+     * <p>The configurations of Ingress resources.</p>
+     */
     @NameInMap("IngressOptionsRequest")
     public String ingressOptionsRequestShrink;
 
-    // The name.
+    /**
+     * <p>The name.</p>
+     */
     @NameInMap("Name")
     public String name;
 
-    // An array of service root paths.
+    /**
+     * <p>An array of service root paths.</p>
+     */
     @NameInMap("PathList")
     public String pathListShrink;
 
-    // The service source. Valid values:
-    // 
-    // *   K8S: ACK cluster
-    // *   MSE: Nacos instance
+    /**
+     * <p>The service source. Valid values:</p>
+     * <br>
+     * <p>*   K8S: ACK cluster</p>
+     * <p>*   MSE: Nacos instance</p>
+     */
     @NameInMap("Source")
     public String source;
 
-    // The type of the service source. Valid values:
-    // 
-    // *   K8S: ACK cluster
-    // *   NACOS: Nacos instance
+    /**
+     * <p>The type of the service source. Valid values:</p>
+     * <br>
+     * <p>*   K8S: ACK cluster</p>
+     * <p>*   NACOS: Nacos instance</p>
+     */
     @NameInMap("Type")
     public String type;
 

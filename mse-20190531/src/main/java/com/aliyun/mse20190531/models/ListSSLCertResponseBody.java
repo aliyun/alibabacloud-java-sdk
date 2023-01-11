@@ -4,30 +4,42 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListSSLCertResponseBody extends TeaModel {
-    // The status code returned. A value of 200 indicates that the request is successful.
+    /**
+     * <p>The status code returned. A value of 200 indicates that the request is successful.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
-    // The returned data.
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListSSLCertResponseBodyData> data;
 
-    // The HTTP status code returned.
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // The error message returned.
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request was successful. Valid values:
-    // 
-    // *   `true`: The request was successful.
-    // *   `false`: The request failed.
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request was successful.</p>
+     * <p>*   `false`: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -85,43 +97,63 @@ public class ListSSLCertResponseBody extends TeaModel {
     }
 
     public static class ListSSLCertResponseBodyData extends TeaModel {
-        // The validation time.
+        /**
+         * <p>The validation time.</p>
+         */
         @NameInMap("AfterDate")
         public String afterDate;
 
-        // The algorithm.
+        /**
+         * <p>The algorithm.</p>
+         */
         @NameInMap("Algorithm")
         public String algorithm;
 
-        // The expiration time.
+        /**
+         * <p>The expiration time.</p>
+         */
         @NameInMap("BeforeDate")
         public String beforeDate;
 
-        // The ID of the certificate.
+        /**
+         * <p>The ID of the certificate.</p>
+         */
         @NameInMap("CertIdentifier")
         public String certIdentifier;
 
-        // The name of the certificate.
+        /**
+         * <p>The name of the certificate.</p>
+         */
         @NameInMap("CertName")
         public String certName;
 
-        // The domain name with which the certificate is associated.
+        /**
+         * <p>The domain name with which the certificate is associated.</p>
+         */
         @NameInMap("CommonName")
         public String commonName;
 
-        // The validation time.
+        /**
+         * <p>The validation time.</p>
+         */
         @NameInMap("GmtAfter")
         public String gmtAfter;
 
-        // The expiration time.
+        /**
+         * <p>The expiration time.</p>
+         */
         @NameInMap("GmtBefore")
         public String gmtBefore;
 
-        // The issuer.
+        /**
+         * <p>The issuer.</p>
+         */
         @NameInMap("Issuer")
         public String issuer;
 
-        // The SSL certificate.
+        /**
+         * <p>The SSL certificate.</p>
+         */
         @NameInMap("Sans")
         public String sans;
 

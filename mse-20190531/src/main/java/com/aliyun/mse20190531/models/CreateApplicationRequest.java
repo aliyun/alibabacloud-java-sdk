@@ -4,38 +4,51 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class CreateApplicationRequest extends TeaModel {
-    // The language of the response. Valid values:
-    // 
-    // *   zh: Chinese
-    // *   en: English
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // The name of the application.
+    /**
+     * <p>The name of the application.</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
-    // The additional information.
-    @NameInMap("ExtraInfo")
-    public String extraInfo;
-
-    // The programming language of the application.
+    /**
+     * <p>The programming language of the application.</p>
+     */
     @NameInMap("Language")
     public String language;
 
-    // The region to which the application belongs.
+    @NameInMap("Namespace")
+    public String namespace;
+
+    /**
+     * <p>The region to which the application belongs.</p>
+     */
     @NameInMap("Region")
     public String region;
 
-    // Specifies whether to enable the Sentinel-compatible mode.
+    /**
+     * <p>Specifies whether to enable the Sentinel-compatible mode.</p>
+     */
     @NameInMap("SentinelEnable")
     public String sentinelEnable;
 
-    // The service where the application is deployed. A value of ACK indicates Container Service for Kubernetes.
+    /**
+     * <p>The service where the application is deployed. A value of ACK indicates Container Service for Kubernetes.</p>
+     */
     @NameInMap("Source")
     public String source;
 
-    // Specifies whether to enable switching.
+    /**
+     * <p>Specifies whether to enable switching.</p>
+     */
     @NameInMap("SwitchEnable")
     public String switchEnable;
 
@@ -60,20 +73,20 @@ public class CreateApplicationRequest extends TeaModel {
         return this.appName;
     }
 
-    public CreateApplicationRequest setExtraInfo(String extraInfo) {
-        this.extraInfo = extraInfo;
-        return this;
-    }
-    public String getExtraInfo() {
-        return this.extraInfo;
-    }
-
     public CreateApplicationRequest setLanguage(String language) {
         this.language = language;
         return this;
     }
     public String getLanguage() {
         return this.language;
+    }
+
+    public CreateApplicationRequest setNamespace(String namespace) {
+        this.namespace = namespace;
+        return this;
+    }
+    public String getNamespace() {
+        return this.namespace;
     }
 
     public CreateApplicationRequest setRegion(String region) {

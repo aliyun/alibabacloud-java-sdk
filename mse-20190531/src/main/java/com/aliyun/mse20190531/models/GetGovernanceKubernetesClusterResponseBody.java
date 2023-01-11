@@ -4,30 +4,42 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
-    // The response code returned.
+    /**
+     * <p>The response code returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
-    // The details of the data.
+    /**
+     * <p>The details of the data.</p>
+     */
     @NameInMap("Data")
     public GetGovernanceKubernetesClusterResponseBodyData data;
 
-    // The HTTP status code returned.
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // The message returned.
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request was successful. Valid values:
-    // 
-    // *   `true`: The request was successful.
-    // *   `false`: The request failed.
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request was successful.</p>
+     * <p>*   `false`: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -85,11 +97,15 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
     }
 
     public static class GetGovernanceKubernetesClusterResponseBodyDataNamespaces extends TeaModel {
-        // The name.
+        /**
+         * <p>The name.</p>
+         */
         @NameInMap("Name")
         public String name;
 
-        // The tags.
+        /**
+         * <p>The tags.</p>
+         */
         @NameInMap("Tags")
         public String tags;
 
@@ -117,35 +133,51 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
     }
 
     public static class GetGovernanceKubernetesClusterResponseBodyData extends TeaModel {
-        // The ID of the instance.
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
-        // The name of the instance.
+        /**
+         * <p>The name of the instance.</p>
+         */
         @NameInMap("ClusterName")
         public String clusterName;
 
-        // The version of Kubernetes.
+        /**
+         * <p>The version of Kubernetes.</p>
+         */
         @NameInMap("K8sVersion")
         public String k8sVersion;
 
-        // The information of the namespace.
+        /**
+         * <p>The information of the namespace.</p>
+         */
         @NameInMap("NamespaceInfos")
         public String namespaceInfos;
 
-        // The list of namespaces.
+        /**
+         * <p>The list of namespaces.</p>
+         */
         @NameInMap("Namespaces")
         public java.util.List<GetGovernanceKubernetesClusterResponseBodyDataNamespaces> namespaces;
 
-        // The time when the ack-onepilot component was started.
+        /**
+         * <p>The time when the ack-onepilot component was started.</p>
+         */
         @NameInMap("PilotStartTime")
         public String pilotStartTime;
 
-        // The ID of the region in which the instance resides. The region is supported by MSE.
+        /**
+         * <p>The ID of the region in which the instance resides. The region is supported by MSE.</p>
+         */
         @NameInMap("Region")
         public String region;
 
-        // The time of the last modification.
+        /**
+         * <p>The time of the last modification.</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

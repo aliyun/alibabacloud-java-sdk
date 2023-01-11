@@ -4,26 +4,36 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetNacosConfigResponseBody extends TeaModel {
-    // The configuration information.
+    /**
+     * <p>The configuration information.</p>
+     */
     @NameInMap("Configuration")
     public GetNacosConfigResponseBodyConfiguration configuration;
 
-    // The error code returned if the request failed.
+    /**
+     * <p>The error code returned if the request failed.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // The message returned.
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request was successful. Valid values:
-    // 
-    // *   `true`: The request was successful.
-    // *   `false`: The request failed.
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request was successful.</p>
+     * <p>*   `false`: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -73,43 +83,63 @@ public class GetNacosConfigResponseBody extends TeaModel {
     }
 
     public static class GetNacosConfigResponseBodyConfiguration extends TeaModel {
-        // The name of the application.
+        /**
+         * <p>The name of the application.</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
-        // The list of IP addresses where the beta release of the configuration is performed.
+        /**
+         * <p>The list of IP addresses where the beta release of the configuration is performed.</p>
+         */
         @NameInMap("BetaIps")
         public String betaIps;
 
-        // The content of the configuration.
+        /**
+         * <p>The content of the configuration.</p>
+         */
         @NameInMap("Content")
         public String content;
 
-        // The ID of the configuration.
+        /**
+         * <p>The ID of the configuration.</p>
+         */
         @NameInMap("DataId")
         public String dataId;
 
-        // The description of the configuration.
+        /**
+         * <p>The description of the configuration.</p>
+         */
         @NameInMap("Desc")
         public String desc;
 
-        // The encryption key.
+        /**
+         * <p>The encryption key.</p>
+         */
         @NameInMap("EncryptedDataKey")
         public String encryptedDataKey;
 
-        // The name of the configuration group.
+        /**
+         * <p>The name of the configuration group.</p>
+         */
         @NameInMap("Group")
         public String group;
 
-        // The MD5 value of the configuration.
+        /**
+         * <p>The MD5 value of the configuration.</p>
+         */
         @NameInMap("Md5")
         public String md5;
 
-        // The tags of the configuration.
+        /**
+         * <p>The tags of the configuration.</p>
+         */
         @NameInMap("Tags")
         public String tags;
 
-        // The format of the configuration.
+        /**
+         * <p>The format of the configuration.</p>
+         */
         @NameInMap("Type")
         public String type;
 

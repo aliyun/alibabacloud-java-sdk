@@ -4,30 +4,42 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetApplicationListWithMetircsResponseBody extends TeaModel {
-    // The response code returned.
+    /**
+     * <p>The response code returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
-    // The details of the data.
+    /**
+     * <p>The details of the data.</p>
+     */
     @NameInMap("Data")
     public GetApplicationListWithMetircsResponseBodyData data;
 
-    // The HTTP status code returned.
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // The message returned.
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request was successful. Valid values:
-    // 
-    // *   `true`: The request was successful.
-    // *   `false`: The request failed.
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request was successful.</p>
+     * <p>*   `false`: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -85,31 +97,45 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
     }
 
     public static class GetApplicationListWithMetircsResponseBodyDataResultCurMetrics extends TeaModel {
-        // The number of blocked QPS.
+        /**
+         * <p>The number of blocked QPS.</p>
+         */
         @NameInMap("BlockQps")
         public Double blockQps;
 
-        // The number of abnormal QPS.
+        /**
+         * <p>The number of abnormal QPS.</p>
+         */
         @NameInMap("ExpQps")
         public Double expQps;
 
-        // The number of passed QPS.
+        /**
+         * <p>The number of passed QPS.</p>
+         */
         @NameInMap("PassQps")
         public Double passQps;
 
-        // The number of queries per second (QPS).
+        /**
+         * <p>The number of queries per second (QPS).</p>
+         */
         @NameInMap("Qps")
         public Double qps;
 
-        // The response time (RT).
+        /**
+         * <p>The response time (RT).</p>
+         */
         @NameInMap("Rt")
         public Double rt;
 
-        // The number of threads.
+        /**
+         * <p>The number of threads.</p>
+         */
         @NameInMap("Thread")
         public Double thread;
 
-        // The timestamp.
+        /**
+         * <p>The timestamp.</p>
+         */
         @NameInMap("Timestamp")
         public Long timestamp;
 
@@ -177,31 +203,45 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
     }
 
     public static class GetApplicationListWithMetircsResponseBodyDataResultCurMetricsFm extends TeaModel {
-        // The number of blocked QPS.
+        /**
+         * <p>The number of blocked QPS.</p>
+         */
         @NameInMap("BlockQps")
         public Double blockQps;
 
-        // The number of abnormal QPS.
+        /**
+         * <p>The number of abnormal QPS.</p>
+         */
         @NameInMap("ExpQps")
         public Double expQps;
 
-        // The number of passed QPS.
+        /**
+         * <p>The number of passed QPS.</p>
+         */
         @NameInMap("PassQps")
         public Double passQps;
 
-        // The QPS.
+        /**
+         * <p>The QPS.</p>
+         */
         @NameInMap("Qps")
         public Double qps;
 
-        // The RT.
+        /**
+         * <p>The RT.</p>
+         */
         @NameInMap("Rt")
         public Double rt;
 
-        // The number of concurrent threads.
+        /**
+         * <p>The number of concurrent threads.</p>
+         */
         @NameInMap("Thread")
         public Double thread;
 
-        // The timestamp.
+        /**
+         * <p>The timestamp.</p>
+         */
         @NameInMap("Timestamp")
         public Long timestamp;
 
@@ -269,58 +309,84 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
     }
 
     public static class GetApplicationListWithMetircsResponseBodyDataResult extends TeaModel {
-        // The ID of the application.
+        /**
+         * <p>The ID of the application.</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
-        // The name of the application.
+        /**
+         * <p>The name of the application.</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
-        // The metric about the application.
+        /**
+         * <p>The metric about the application.</p>
+         */
         @NameInMap("CurMetrics")
         public java.util.List<GetApplicationListWithMetircsResponseBodyDataResultCurMetrics> curMetrics;
 
-        // The sum of metrics about the application.
+        /**
+         * <p>The sum of metrics about the application.</p>
+         */
         @NameInMap("CurMetricsFm")
         public GetApplicationListWithMetircsResponseBodyDataResultCurMetricsFm curMetricsFm;
 
-        // The additional information.
+        /**
+         * <p>The additional information.</p>
+         */
         @NameInMap("ExtraInfo")
         public String extraInfo;
 
-        // The number of instances.
+        /**
+         * <p>The number of instances.</p>
+         */
         @NameInMap("InstancesNumber")
         public Integer instancesNumber;
 
-        // The programming language of the application.
+        /**
+         * <p>The programming language of the application.</p>
+         */
         @NameInMap("Language")
         public String language;
 
-        // The license key in use.
+        /**
+         * <p>The license key in use.</p>
+         */
         @NameInMap("LicenseKey")
         public String licenseKey;
 
         @NameInMap("Namespace")
         public String namespace;
 
-        // The ID of the region where the instance resides.
+        /**
+         * <p>The ID of the region where the instance resides.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
-        // The service source.
+        /**
+         * <p>The service source.</p>
+         */
         @NameInMap("Source")
         public String source;
 
-        // The status.
+        /**
+         * <p>The status.</p>
+         */
         @NameInMap("Status")
         public Long status;
 
-        // The tags.
+        /**
+         * <p>The tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<String> tags;
 
-        // The ID of the user.
+        /**
+         * <p>The ID of the user.</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
@@ -444,19 +510,27 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
     }
 
     public static class GetApplicationListWithMetircsResponseBodyData extends TeaModel {
-        // The page number of the returned page.
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
-        // The number of entries returned per page.
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        // The returned information.
+        /**
+         * <p>The returned information.</p>
+         */
         @NameInMap("Result")
         public java.util.List<GetApplicationListWithMetircsResponseBodyDataResult> result;
 
-        // The total number of entries returned.
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalSize")
         public Integer totalSize;
 

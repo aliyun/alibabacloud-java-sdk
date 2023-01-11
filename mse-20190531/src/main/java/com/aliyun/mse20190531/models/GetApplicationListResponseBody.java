@@ -4,30 +4,42 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetApplicationListResponseBody extends TeaModel {
-    // The status code returned.
+    /**
+     * <p>The status code returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
-    // The data structure.
+    /**
+     * <p>The data structure.</p>
+     */
     @NameInMap("Data")
     public GetApplicationListResponseBodyData data;
 
-    // The HTTP status code returned.
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // The message returned.
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request was successful. Valid values:
-    // 
-    // *   `true`: The request was successful.
-    // *   `false`: The request failed.
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request was successful.</p>
+     * <p>*   `false`: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -85,46 +97,66 @@ public class GetApplicationListResponseBody extends TeaModel {
     }
 
     public static class GetApplicationListResponseBodyDataResult extends TeaModel {
-        // The ID of the application.
+        /**
+         * <p>The ID of the application.</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
-        // The name of the application.
+        /**
+         * <p>The name of the application.</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
-        // The additional information.
+        /**
+         * <p>The additional information.</p>
+         */
         @NameInMap("ExtraInfo")
         public String extraInfo;
 
-        // The number of instances.
+        /**
+         * <p>The number of instances.</p>
+         */
         @NameInMap("InstancesNumber")
         public Integer instancesNumber;
 
-        // The programming language of the application.
+        /**
+         * <p>The programming language of the application.</p>
+         */
         @NameInMap("Language")
         public String language;
 
-        // The license key in use.
+        /**
+         * <p>The license key in use.</p>
+         */
         @NameInMap("LicenseKey")
         public String licenseKey;
 
         @NameInMap("Namespace")
         public String namespace;
 
-        // The ID of the region.
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
-        // The source of the application.
+        /**
+         * <p>The source of the application.</p>
+         */
         @NameInMap("Source")
         public String source;
 
-        // The status.
+        /**
+         * <p>The status.</p>
+         */
         @NameInMap("Status")
         public Long status;
 
-        // The ID of the user.
+        /**
+         * <p>The ID of the user.</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
@@ -224,19 +256,27 @@ public class GetApplicationListResponseBody extends TeaModel {
     }
 
     public static class GetApplicationListResponseBodyData extends TeaModel {
-        // The page number of the returned page.
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
-        // The number of entries returned per page.
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        // The returned information.
+        /**
+         * <p>The returned information.</p>
+         */
         @NameInMap("Result")
         public java.util.List<GetApplicationListResponseBodyDataResult> result;
 
-        // The total number of entries returned.
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalSize")
         public Integer totalSize;
 

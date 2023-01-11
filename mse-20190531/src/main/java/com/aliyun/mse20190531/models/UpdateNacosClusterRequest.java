@@ -4,42 +4,60 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class UpdateNacosClusterRequest extends TeaModel {
-    // The language of the response. Valid values:
-    // 
-    // *   zh: Chinese
-    // *   en: English
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // The port used for health checks.
+    /**
+     * <p>The port used for health checks.</p>
+     */
     @NameInMap("CheckPort")
     public Integer checkPort;
 
-    // The name of the Nacos cluster.
+    /**
+     * <p>The name of the Nacos cluster.</p>
+     */
     @NameInMap("ClusterName")
     public String clusterName;
 
-    // The name of the group.
+    /**
+     * <p>The name of the group.</p>
+     */
     @NameInMap("GroupName")
     public String groupName;
 
-    // The type of the health check.
+    /**
+     * <p>The type of the health check.</p>
+     */
     @NameInMap("HealthChecker")
     public String healthChecker;
 
-    // The ID of the instance.
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // The ID of the namespace.
+    /**
+     * <p>The ID of the namespace.</p>
+     */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
-    // The name of the service.
+    /**
+     * <p>The name of the service.</p>
+     */
     @NameInMap("ServiceName")
     public String serviceName;
 
-    // Specifies whether to use the port of the instance for a health check.
+    /**
+     * <p>Specifies whether to use the port of the instance for a health check.</p>
+     */
     @NameInMap("UseInstancePortForCheck")
     public Boolean useInstancePortForCheck;
 

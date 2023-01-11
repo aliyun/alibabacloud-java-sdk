@@ -4,38 +4,54 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListClustersRequest extends TeaModel {
-    // The language of the response. Valid values:
-    // 
-    // *   zh: Chinese
-    // *   en: English
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // The alias of the instance. Fuzzy match is supported.
+    /**
+     * <p>The alias of the instance. Fuzzy match is supported.</p>
+     */
     @NameInMap("ClusterAliasName")
     public String clusterAliasName;
 
-    // The number of the page to return.
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("PageNum")
     public Integer pageNum;
 
-    // The number of entries to return on each page.
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The ID of the region in which the instance resides. The region is supported by MSE.
+    /**
+     * <p>The ID of the region in which the instance resides. The region is supported by MSE.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The extended request parameters in the JSON format.
+    /**
+     * <p>The extended request parameters in the JSON format.</p>
+     */
     @NameInMap("RequestPars")
     public String requestPars;
 
-    // The ID of the resource group to which the instance belongs. For more information about resource groups, see the topic "View basic information of a resource group."
+    /**
+     * <p>The ID of the resource group to which the instance belongs. For more information about resource groups, see the topic "View basic information of a resource group."</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    // The list of tags. A maximum number of 20 tags are supported.
+    /**
+     * <p>The list of tags. A maximum number of 20 tags are supported.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ListClustersRequestTag> tag;
 
@@ -109,11 +125,15 @@ public class ListClustersRequest extends TeaModel {
     }
 
     public static class ListClustersRequestTag extends TeaModel {
-        // The tag key.
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
-        // The tag value.
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 

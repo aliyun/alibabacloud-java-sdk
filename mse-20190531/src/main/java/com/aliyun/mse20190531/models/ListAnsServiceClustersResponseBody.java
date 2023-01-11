@@ -4,26 +4,36 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListAnsServiceClustersResponseBody extends TeaModel {
-    // The details of the data.
+    /**
+     * <p>The details of the data.</p>
+     */
     @NameInMap("Data")
     public ListAnsServiceClustersResponseBodyData data;
 
-    // The error code returned if the request failed.
+    /**
+     * <p>The error code returned if the request failed.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // The message returned.
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request was successful. Valid values:
-    // 
-    // *   `true`: The request was successful.
-    // *   `false`: The request failed.
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request was successful.</p>
+     * <p>*   `false`: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -73,31 +83,45 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
     }
 
     public static class ListAnsServiceClustersResponseBodyDataClusters extends TeaModel {
-        // The default port used for a health check.
+        /**
+         * <p>The default port used for a health check.</p>
+         */
         @NameInMap("DefaultCheckPort")
         public Integer defaultCheckPort;
 
-        // The default port.
+        /**
+         * <p>The default port.</p>
+         */
         @NameInMap("DefaultPort")
         public Integer defaultPort;
 
-        // The type of health checks.
+        /**
+         * <p>The type of health checks.</p>
+         */
         @NameInMap("HealthCheckerType")
         public String healthCheckerType;
 
-        // The metadata of the cluster.
+        /**
+         * <p>The metadata of the cluster.</p>
+         */
         @NameInMap("Metadata")
         public java.util.Map<String, ?> metadata;
 
-        // The name of the cluster.
+        /**
+         * <p>The name of the cluster.</p>
+         */
         @NameInMap("Name")
         public String name;
 
-        // The complete name of the service.
+        /**
+         * <p>The complete name of the service.</p>
+         */
         @NameInMap("ServiceName")
         public String serviceName;
 
-        // Indicates whether the health check is initiated by the server. This parameter is valid only when the service is a temporary service.
+        /**
+         * <p>Indicates whether the health check is initiated by the server. This parameter is valid only when the service is a temporary service.</p>
+         */
         @NameInMap("UseIPPort4Check")
         public Boolean useIPPort4Check;
 
@@ -165,34 +189,48 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
     }
 
     public static class ListAnsServiceClustersResponseBodyData extends TeaModel {
-        // The information about the clusters.
+        /**
+         * <p>The information about the clusters.</p>
+         */
         @NameInMap("Clusters")
         public java.util.List<ListAnsServiceClustersResponseBodyDataClusters> clusters;
 
-        // Indicates whether the service is a temporary service. Valid values:
-        // 
-        // *   `true`: The service is a temporary service.
-        // *   `false`: The service is not a temporary service.
+        /**
+         * <p>Indicates whether the service is a temporary service. Valid values:</p>
+         * <br>
+         * <p>*   `true`: The service is a temporary service.</p>
+         * <p>*   `false`: The service is not a temporary service.</p>
+         */
         @NameInMap("Ephemeral")
         public Boolean ephemeral;
 
-        // The name of the contact group.
+        /**
+         * <p>The name of the contact group.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
-        // The metadata of the service.
+        /**
+         * <p>The metadata of the service.</p>
+         */
         @NameInMap("Metadata")
         public java.util.Map<String, ?> metadata;
 
-        // The name of the service.
+        /**
+         * <p>The name of the service.</p>
+         */
         @NameInMap("Name")
         public String name;
 
-        // The protection threshold.
+        /**
+         * <p>The protection threshold.</p>
+         */
         @NameInMap("ProtectThreshold")
         public Float protectThreshold;
 
-        // The election mode.
+        /**
+         * <p>The election mode.</p>
+         */
         @NameInMap("SelectorType")
         public String selectorType;
 

@@ -4,33 +4,45 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetMseSourceResponseBody extends TeaModel {
-    // The response code returned.
+    /**
+     * <p>The response code returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
-    // The data structure.
+    /**
+     * <p>The data structure.</p>
+     */
     @NameInMap("Data")
     public java.util.List<GetMseSourceResponseBodyData> data;
 
-    // The HTTP status code returned.
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // The message returned.
-    // 
-    // *   If the request is successful, a success message is returned.
-    // *   If the request fails, an error message is returned, such as the "TaskId not found" message.
+    /**
+     * <p>The message returned.</p>
+     * <br>
+     * <p>*   If the request is successful, a success message is returned.</p>
+     * <p>*   If the request fails, an error message is returned, such as the "TaskId not found" message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request was successful. Valid values:
-    // 
-    // *   `true`: The request was successful.
-    // *   `false`: The request failed.
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request was successful.</p>
+     * <p>*   `false`: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -88,23 +100,33 @@ public class GetMseSourceResponseBody extends TeaModel {
     }
 
     public static class GetMseSourceResponseBodyData extends TeaModel {
-        // The endpoint of the instance.
+        /**
+         * <p>The endpoint of the instance.</p>
+         */
         @NameInMap("Address")
         public String address;
 
-        // The ID of the instance.
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
-        // The ID of the instance.
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        // The name.
+        /**
+         * <p>The name.</p>
+         */
         @NameInMap("Name")
         public String name;
 
-        // The type.
+        /**
+         * <p>The type.</p>
+         */
         @NameInMap("Type")
         public String type;
 

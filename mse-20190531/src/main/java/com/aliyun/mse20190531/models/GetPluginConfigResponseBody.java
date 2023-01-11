@@ -4,39 +4,57 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetPluginConfigResponseBody extends TeaModel {
-    // Code.
+    /**
+     * <p>Code.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
-    // The returned data.
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public GetPluginConfigResponseBodyData data;
 
-    // The dynamic error code.
+    /**
+     * <p>The dynamic error code.</p>
+     */
     @NameInMap("DynamicCode")
     public String dynamicCode;
 
-    // The dynamic error message.
+    /**
+     * <p>The dynamic error message.</p>
+     */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
-    // The error code returned if the request failed.
+    /**
+     * <p>The error code returned if the request failed.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // The HTTP status code returned.
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // The message returned.
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request was successful.
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -118,45 +136,63 @@ public class GetPluginConfigResponseBody extends TeaModel {
     }
 
     public static class GetPluginConfigResponseBodyDataGatewayConfigList extends TeaModel {
-        // The plug-in configuration.
+        /**
+         * <p>The plug-in configuration.</p>
+         */
         @NameInMap("Config")
         public String config;
 
-        // The application scope of the plug-in.
-        // 
-        // 0: global
-        // 
-        // 1: domain names
-        // 
-        // 2: routes
+        /**
+         * <p>The application scope of the plug-in.</p>
+         * <br>
+         * <p>0: global</p>
+         * <br>
+         * <p>1: domain names</p>
+         * <br>
+         * <p>2: routes</p>
+         */
         @NameInMap("ConfigLevel")
         public Integer configLevel;
 
-        // Indicates whether the plug-in is enabled.
+        /**
+         * <p>Indicates whether the plug-in is enabled.</p>
+         */
         @NameInMap("Enable")
         public Boolean enable;
 
-        // The ID of the gateway.
+        /**
+         * <p>The ID of the gateway.</p>
+         */
         @NameInMap("GatewayId")
         public Long gatewayId;
 
-        // The unique ID of the gateway.
+        /**
+         * <p>The unique ID of the gateway.</p>
+         */
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 
-        // The creation time.
+        /**
+         * <p>The creation time.</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
-        // The update time.
+        /**
+         * <p>The update time.</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
-        // The ID of the plug-in configuration.
+        /**
+         * <p>The ID of the plug-in configuration.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
-        // The ID of the gateway plug-in.
+        /**
+         * <p>The ID of the gateway plug-in.</p>
+         */
         @NameInMap("PluginId")
         public Long pluginId;
 
@@ -240,112 +276,148 @@ public class GetPluginConfigResponseBody extends TeaModel {
     }
 
     public static class GetPluginConfigResponseBodyData extends TeaModel {
-        // The category of the plug-in.
-        // 
-        // 0: custom
-        // 
-        // 1: permission authorization
-        // 
-        // 2: security protection
-        // 
-        // 3: transmission protocol
-        // 
-        // 4: traffic control
-        // 
-        // 5: traffic observation
+        /**
+         * <p>The category of the plug-in.</p>
+         * <br>
+         * <p>0: custom</p>
+         * <br>
+         * <p>1: permission authorization</p>
+         * <br>
+         * <p>2: security protection</p>
+         * <br>
+         * <p>3: transmission protocol</p>
+         * <br>
+         * <p>4: traffic control</p>
+         * <br>
+         * <p>5: traffic observation</p>
+         */
         @NameInMap("Category")
         public Integer category;
 
-        // The information about the plug-in configuration used for checking.
+        /**
+         * <p>The information about the plug-in configuration used for checking.</p>
+         */
         @NameInMap("ConfigCheck")
         public String configCheck;
 
-        // The list of gateway plug-in configurations.
+        /**
+         * <p>The list of gateway plug-in configurations.</p>
+         */
         @NameInMap("GatewayConfigList")
         public java.util.List<GetPluginConfigResponseBodyDataGatewayConfigList> gatewayConfigList;
 
-        // The ID of the plug-in.
+        /**
+         * <p>The ID of the plug-in.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
-        // The name of the image.
+        /**
+         * <p>The name of the image.</p>
+         */
         @NameInMap("ImageName")
         public String imageName;
 
-        // The mode.
+        /**
+         * <p>The mode.</p>
+         */
         @NameInMap("Mode")
         public Integer mode;
 
-        // The name of the plug-in.
+        /**
+         * <p>The name of the plug-in.</p>
+         */
         @NameInMap("Name")
         public String name;
 
-        // The execution stage of the plug-in.
-        // 
-        // 0: default stage
-        // 
-        // 1: authorization stage
-        // 
-        // 2: authentication stage
-        // 
-        // 3: statistics stage
+        /**
+         * <p>The execution stage of the plug-in.</p>
+         * <br>
+         * <p>0: default stage</p>
+         * <br>
+         * <p>1: authorization stage</p>
+         * <br>
+         * <p>2: authentication stage</p>
+         * <br>
+         * <p>3: statistics stage</p>
+         */
         @NameInMap("Phase")
         public Integer phase;
 
-        // The ID of the creator.
+        /**
+         * <p>The ID of the creator.</p>
+         */
         @NameInMap("PrimaryUser")
         public String primaryUser;
 
-        // The execution priority of the plug-in. A larger value indicates a higher priority.
+        /**
+         * <p>The execution priority of the plug-in. A larger value indicates a higher priority.</p>
+         */
         @NameInMap("Priority")
         public Integer priority;
 
-        // The publish status.
+        /**
+         * <p>The publish status.</p>
+         */
         @NameInMap("PublishState")
         public Integer publishState;
 
-        // The description of the README file.
+        /**
+         * <p>The description of the README file.</p>
+         */
         @NameInMap("Readme")
         public String readme;
 
-        // The description of the README file that is edited in English.
+        /**
+         * <p>The description of the README file that is edited in English.</p>
+         */
         @NameInMap("ReadmeEn")
         public String readmeEn;
 
-        // Indicates whether the plug-in is enabled.
-        // 
-        // 0: disabled
-        // 
-        // 1: enabled
+        /**
+         * <p>Indicates whether the plug-in is enabled.</p>
+         * <br>
+         * <p>0: disabled</p>
+         * <br>
+         * <p>1: enabled</p>
+         */
         @NameInMap("Status")
         public String status;
 
-        // The summary of the plug-in.
+        /**
+         * <p>The summary of the plug-in.</p>
+         */
         @NameInMap("Summary")
         public String summary;
 
-        // The type.
+        /**
+         * <p>The type.</p>
+         */
         @NameInMap("Type")
         public Integer type;
 
-        // The version of the plug-in.
+        /**
+         * <p>The version of the plug-in.</p>
+         */
         @NameInMap("Version")
         public String version;
 
         @NameInMap("VersionJson")
         public String versionJson;
 
-        // The WebAssembly language.
-        // 
-        // 0: C++
-        // 
-        // 1: TinyGo
-        // 
-        // 2: Rust
-        // 
-        // 3: AssemblyScript
-        // 
-        // 4: Zig
+        /**
+         * <p>The WebAssembly language.</p>
+         * <br>
+         * <p>0: C++</p>
+         * <br>
+         * <p>1: TinyGo</p>
+         * <br>
+         * <p>2: Rust</p>
+         * <br>
+         * <p>3: AssemblyScript</p>
+         * <br>
+         * <p>4: Zig</p>
+         */
         @NameInMap("WasmLang")
         public Integer wasmLang;
 

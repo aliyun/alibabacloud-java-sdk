@@ -4,73 +4,105 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class CreateOrUpdateSwimmingLaneGroupRequest extends TeaModel {
-    // The language of the response. Valid values:
-    // 
-    // *   zh: Chinese
-    // *   en: English
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // The IDs of applications. Separate application IDs with commas (,).
+    /**
+     * <p>The IDs of applications. Separate application IDs with commas (,).</p>
+     */
     @NameInMap("AppIds")
     public String appIds;
 
-    // Specifies whether to enable database canary release.
+    /**
+     * <p>Specifies whether to enable database canary release.</p>
+     */
     @NameInMap("DbGrayEnable")
     public Boolean dbGrayEnable;
 
-    // Specifies whether to enable a lane group.
+    /**
+     * <p>Specifies whether to enable a lane group.</p>
+     */
     @NameInMap("Enable")
     public Boolean enable;
 
-    // The ingress application.
+    /**
+     * <p>The ingress application.</p>
+     */
     @NameInMap("EntryApp")
     public String entryApp;
 
-    // The creation time.
+    /**
+     * <p>The creation time.</p>
+     */
     @NameInMap("GmtCreate")
     public String gmtCreate;
 
-    // The update time.
+    /**
+     * <p>The update time.</p>
+     */
     @NameInMap("GmtModified")
     public String gmtModified;
 
-    // The ID of the primary key. The primary key is auto-increment.
+    /**
+     * <p>The ID of the primary key. The primary key is auto-increment.</p>
+     */
     @NameInMap("Id")
     public Long id;
 
-    // The license key in use.
+    /**
+     * <p>The license key in use.</p>
+     */
     @NameInMap("LicenseKey")
     public String licenseKey;
 
-    // The side for message filtering when the canary release for messaging feature is enabled.
+    /**
+     * <p>The side for message filtering when the canary release for messaging feature is enabled.</p>
+     */
     @NameInMap("MessageQueueFilterSide")
     public String messageQueueFilterSide;
 
-    // Specifies whether to enable canary release for messaging.
+    /**
+     * <p>Specifies whether to enable canary release for messaging.</p>
+     */
     @NameInMap("MessageQueueGrayEnable")
     public Boolean messageQueueGrayEnable;
 
-    // The name.
+    /**
+     * <p>The name.</p>
+     */
     @NameInMap("Name")
     public String name;
 
     @NameInMap("Namespace")
     public String namespace;
 
-    // The region ID.
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("Region")
     public String region;
 
-    // The service source. Valid value: edasmsc.
+    /**
+     * <p>The service source. Valid value: edasmsc.</p>
+     */
     @NameInMap("Source")
     public String source;
 
-    // The status of the lane group. The value 0 specifies that the lane group is disabled. The value 1 specifies that the lane group is enabled.
+    /**
+     * <p>The status of the lane group. The value 0 specifies that the lane group is disabled. The value 1 specifies that the lane group is enabled.</p>
+     */
     @NameInMap("Status")
     public Integer status;
 
-    // The Alibaba Cloud account. The value is a number, such as 136246\*\*\*\*\*\*809. You can leave this parameter empty.
+    /**
+     * <p>The Alibaba Cloud account. The value is a number, such as 136246\*\*\*\*\*\*809. You can leave this parameter empty.</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

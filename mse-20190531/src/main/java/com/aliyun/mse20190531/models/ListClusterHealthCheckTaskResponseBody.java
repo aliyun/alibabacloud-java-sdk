@@ -112,7 +112,9 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
-        // ID。
+        /**
+         * <p>ID。</p>
+         */
         @NameInMap("Id")
         public Integer id;
 
@@ -295,7 +297,9 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
-        // ID。
+        /**
+         * <p>ID。</p>
+         */
         @NameInMap("Id")
         public Integer id;
 

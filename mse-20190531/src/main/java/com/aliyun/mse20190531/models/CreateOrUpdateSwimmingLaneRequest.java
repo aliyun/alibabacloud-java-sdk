@@ -4,72 +4,104 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
-    // The language that the value of the **LocalName** response parameter uses. Valid values:
-    // 
-    // *   **zh-cn**: Chinese
-    // *   **en-us**: English.
-    // 
-    // > Default value: **zh-CN**.
+    /**
+     * <p>The language that the value of the **LocalName** response parameter uses. Valid values:</p>
+     * <br>
+     * <p>*   **zh-cn**: Chinese</p>
+     * <p>*   **en-us**: English.</p>
+     * <br>
+     * <p>> Default value: **zh-CN**.</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // Specifies whether to enable a lane.
+    /**
+     * <p>Specifies whether to enable a lane.</p>
+     */
     @NameInMap("Enable")
     public Boolean enable;
 
-    // Specifies whether to set a routing rule for the lane. If an Ingress gateway is used, this parameter is not required.
+    /**
+     * <p>Specifies whether to set a routing rule for the lane. If an Ingress gateway is used, this parameter is not required.</p>
+     */
     @NameInMap("EnableRules")
     public Boolean enableRules;
 
-    // The JSON string.
+    /**
+     * <p>The JSON string.</p>
+     */
     @NameInMap("EntryRule")
     public String entryRule;
 
-    // The lane.
+    /**
+     * <p>The lane.</p>
+     */
     @NameInMap("EntryRules")
     public java.util.List<CreateOrUpdateSwimmingLaneRequestEntryRules> entryRules;
 
-    // Optional. The time when the lane was created.
+    /**
+     * <p>Optional. The time when the lane was created.</p>
+     */
     @NameInMap("GmtCreate")
     public String gmtCreate;
 
-    // Optional. The time when the lane was last modified.
+    /**
+     * <p>Optional. The time when the lane was last modified.</p>
+     */
     @NameInMap("GmtModified")
     public String gmtModified;
 
-    // The group to which the lane belongs.
+    /**
+     * <p>The group to which the lane belongs.</p>
+     */
     @NameInMap("GroupId")
     public Long groupId;
 
-    // The ID of the primary key. A value -1 specifies a request that is used to create a lane. A value greater than 0 specifies a request that is used to modify a lane.
+    /**
+     * <p>The ID of the primary key. A value -1 specifies a request that is used to create a lane. A value greater than 0 specifies a request that is used to modify a lane.</p>
+     */
     @NameInMap("Id")
     public Long id;
 
-    // The license key in use.
+    /**
+     * <p>The license key in use.</p>
+     */
     @NameInMap("LicenseKey")
     public String licenseKey;
 
-    // The name of the lane.
+    /**
+     * <p>The name of the lane.</p>
+     */
     @NameInMap("Name")
     public String name;
 
-    // The ID of the region.
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The service source. Valid value: edasmsc.
+    /**
+     * <p>The service source. Valid value: edasmsc.</p>
+     */
     @NameInMap("Source")
     public String source;
 
-    // The value 0 indicates that the lane is disabled.
+    /**
+     * <p>The value 0 indicates that the lane is disabled.</p>
+     */
     @NameInMap("Status")
     public Integer status;
 
-    // The tag.
+    /**
+     * <p>The tag.</p>
+     */
     @NameInMap("Tag")
     public String tag;
 
-    // The Alibaba Cloud account. The format is a number, such as 136246975637\*\*\*\*. You can leave this parameter empty.
+    /**
+     * <p>The Alibaba Cloud account. The format is a number, such as 136246975637\*\*\*\*. You can leave this parameter empty.</p>
+     */
     @NameInMap("UserId")
     public String userId;
 
@@ -207,43 +239,63 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
     }
 
     public static class CreateOrUpdateSwimmingLaneRequestEntryRulesRestItems extends TeaModel {
-        // The expression. =, >, <, >=, <=
+        /**
+         * <p>The expression. =, >, <, >=, <=</p>
+         */
         @NameInMap("Cond")
         public String cond;
 
-        // The base value used for the rawvalue operator.
+        /**
+         * <p>The base value used for the rawvalue operator.</p>
+         */
         @NameInMap("Datum")
         public String datum;
 
-        // The divisor used for the mod operator.
+        /**
+         * <p>The divisor used for the mod operator.</p>
+         */
         @NameInMap("Divisor")
         public Integer divisor;
 
-        // The name of the rule. This parameter corresponds to the key of the type parameter.
+        /**
+         * <p>The name of the rule. This parameter corresponds to the key of the type parameter.</p>
+         */
         @NameInMap("Name")
         public String name;
 
-        // The list of names.
+        /**
+         * <p>The list of names.</p>
+         */
         @NameInMap("NameList")
         public java.util.List<String> nameList;
 
-        // The operator type. Valid values: mod, list, rawvalue, and rate.
+        /**
+         * <p>The operator type. Valid values: mod, list, rawvalue, and rate.</p>
+         */
         @NameInMap("Operator")
         public String operator;
 
-        // The rate.
+        /**
+         * <p>The rate.</p>
+         */
         @NameInMap("Rate")
         public Integer rate;
 
-        // The remainder used for the mod operator.
+        /**
+         * <p>The remainder used for the mod operator.</p>
+         */
         @NameInMap("Remainder")
         public Integer remainder;
 
-        // The type of the rule. Valid values: cookie, param, and header.
+        /**
+         * <p>The type of the rule. Valid values: cookie, param, and header.</p>
+         */
         @NameInMap("Type")
         public String type;
 
-        // The content of the rule.
+        /**
+         * <p>The content of the rule.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -335,30 +387,42 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
     }
 
     public static class CreateOrUpdateSwimmingLaneRequestEntryRules extends TeaModel {
-        // The common parameters in the JSON format.
+        /**
+         * <p>The common parameters in the JSON format.</p>
+         */
         @NameInMap("Condition")
         public String condition;
 
-        // Specifies whether to enable the rule. Valid values:
-        // 
-        // *   `true`: enables the rule.
-        // *   `false`: disables the rule.
+        /**
+         * <p>Specifies whether to enable the rule. Valid values:</p>
+         * <br>
+         * <p>*   `true`: enables the rule.</p>
+         * <p>*   `false`: disables the rule.</p>
+         */
         @NameInMap("Enable")
         public Boolean enable;
 
-        // The path.
+        /**
+         * <p>The path.</p>
+         */
         @NameInMap("Path")
         public String path;
 
-        // The list of paths.
+        /**
+         * <p>The list of paths.</p>
+         */
         @NameInMap("Paths")
         public java.util.List<String> paths;
 
-        // The priority. A smaller value of this parameter indicates a higher priority.
+        /**
+         * <p>The priority. A smaller value of this parameter indicates a higher priority.</p>
+         */
         @NameInMap("Priority")
         public Integer priority;
 
-        // The information about the rule for the REST method.
+        /**
+         * <p>The information about the rule for the REST method.</p>
+         */
         @NameInMap("RestItems")
         public java.util.List<CreateOrUpdateSwimmingLaneRequestEntryRulesRestItems> restItems;
 

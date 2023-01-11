@@ -4,30 +4,42 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
-    // The status code returned.
+    /**
+     * <p>The status code returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
-    // The details of the data.
+    /**
+     * <p>The details of the data.</p>
+     */
     @NameInMap("Data")
     public ListApplicationsWithTagRulesResponseBodyData data;
 
-    // The HTTP status code returned.
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // The message returned.
-    // 
-    // *   If the request is successful, a success message is returned.
-    // *   If the request fails, an error message is returned.
+    /**
+     * <p>The message returned.</p>
+     * <br>
+     * <p>*   If the request is successful, a success message is returned.</p>
+     * <p>*   If the request fails, an error message is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request is successful. Valid values: -\[unk]true\[unk]: The request is successful. -\[unk]false\[unk]: The request fails.
+    /**
+     * <p>Indicates whether the request is successful. Valid values: -\[unk]true\[unk]: The request is successful. -\[unk]false\[unk]: The request fails.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -85,50 +97,72 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
     }
 
     public static class ListApplicationsWithTagRulesResponseBodyDataResultRouteRules extends TeaModel {
-        // Indicates whether the field is a primary key.
+        /**
+         * <p>Indicates whether the field is a primary key.</p>
+         */
         @NameInMap("CarryData")
         public Boolean carryData;
 
-        // Indicates whether the alert rule is enabled. Valid values:
-        // 
-        // *   `true`: enabled
-        // *   `false`: disabled
+        /**
+         * <p>Indicates whether the alert rule is enabled. Valid values:</p>
+         * <br>
+         * <p>*   `true`: enabled</p>
+         * <p>*   `false`: disabled</p>
+         */
         @NameInMap("Enable")
         public Boolean enable;
 
-        // The modification time.
+        /**
+         * <p>The modification time.</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
-        // The ID of the rule.
+        /**
+         * <p>The ID of the rule.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
-        // The number of instances.
+        /**
+         * <p>The number of instances.</p>
+         */
         @NameInMap("InstanceNum")
         public Integer instanceNum;
 
-        // The name of the rule.
+        /**
+         * <p>The name of the rule.</p>
+         */
         @NameInMap("Name")
         public String name;
 
-        // The rate.
+        /**
+         * <p>The rate.</p>
+         */
         @NameInMap("Rate")
         public Integer rate;
 
-        // Indicates whether the routing rule is deleted.
+        /**
+         * <p>Indicates whether the routing rule is deleted.</p>
+         */
         @NameInMap("Remove")
         public Boolean remove;
 
-        // The details of the routing rule.
+        /**
+         * <p>The details of the routing rule.</p>
+         */
         @NameInMap("Rules")
         public String rules;
 
-        // The status.
+        /**
+         * <p>The status.</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
-        // The tag.
+        /**
+         * <p>The tag.</p>
+         */
         @NameInMap("Tag")
         public String tag;
 
@@ -228,19 +262,27 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
     }
 
     public static class ListApplicationsWithTagRulesResponseBodyDataResult extends TeaModel {
-        // The ID of the application.
+        /**
+         * <p>The ID of the application.</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
-        // The name of the application.
+        /**
+         * <p>The name of the application.</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
-        // An array that consists of the rules.
+        /**
+         * <p>An array that consists of the rules.</p>
+         */
         @NameInMap("RouteRules")
         public java.util.List<ListApplicationsWithTagRulesResponseBodyDataResultRouteRules> routeRules;
 
-        // The status of the route. Valid values: -0: disabled. -1: enabled.
+        /**
+         * <p>The status of the route. Valid values: -0: disabled. -1: enabled.</p>
+         */
         @NameInMap("RouteStatus")
         public Long routeStatus;
 
@@ -284,19 +326,27 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
     }
 
     public static class ListApplicationsWithTagRulesResponseBodyData extends TeaModel {
-        // The page number of the returned page.
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
-        // The number of entries returned per page.
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        // The data structure.
+        /**
+         * <p>The data structure.</p>
+         */
         @NameInMap("Result")
         public java.util.List<ListApplicationsWithTagRulesResponseBodyDataResult> result;
 
-        // The total number of entries returned.
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalSize")
         public Integer totalSize;
 

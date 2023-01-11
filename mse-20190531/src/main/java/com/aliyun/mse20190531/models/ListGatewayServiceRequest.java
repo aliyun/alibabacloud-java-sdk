@@ -4,30 +4,42 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListGatewayServiceRequest extends TeaModel {
-    // The language of the response. Valid values:
-    // 
-    // *   zh: Chinese
-    // *   en: English
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // Specifies whether to enable sorting.
+    /**
+     * <p>Specifies whether to enable sorting.</p>
+     */
     @NameInMap("DescSort")
     public Boolean descSort;
 
-    // The parameters that specify filter conditions, which are in the format of {"key1":"value1"}.
+    /**
+     * <p>The parameters that specify filter conditions, which are in the format of {"key1":"value1"}.</p>
+     */
     @NameInMap("FilterParams")
     public ListGatewayServiceRequestFilterParams filterParams;
 
-    // The item based on which entries are sorted.
+    /**
+     * <p>The item based on which entries are sorted.</p>
+     */
     @NameInMap("OrderItem")
     public String orderItem;
 
-    // The number of the page to return.
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // The number of entries to return on each page.
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -85,33 +97,45 @@ public class ListGatewayServiceRequest extends TeaModel {
     }
 
     public static class ListGatewayServiceRequestFilterParams extends TeaModel {
-        // The unique ID of the gateway.
+        /**
+         * <p>The unique ID of the gateway.</p>
+         */
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 
-        // The group.
+        /**
+         * <p>The group.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
-        // The name of the service.
+        /**
+         * <p>The name of the service.</p>
+         */
         @NameInMap("Name")
         public String name;
 
-        // The namespace.
+        /**
+         * <p>The namespace.</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
-        // The protocol of the service.
-        // 
-        // *   HTTP
-        // *   HTTPS
-        // *   HTTP2
-        // *   GRPC
-        // *   DUBBO
+        /**
+         * <p>The protocol of the service.</p>
+         * <br>
+         * <p>*   HTTP</p>
+         * <p>*   HTTPS</p>
+         * <p>*   HTTP2</p>
+         * <p>*   GRPC</p>
+         * <p>*   DUBBO</p>
+         */
         @NameInMap("ServiceProtocol")
         public String serviceProtocol;
 
-        // The type of the service source.
+        /**
+         * <p>The type of the service source.</p>
+         */
         @NameInMap("SourceType")
         public String sourceType;
 

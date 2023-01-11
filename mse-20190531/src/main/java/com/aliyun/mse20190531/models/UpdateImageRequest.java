@@ -4,20 +4,26 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class UpdateImageRequest extends TeaModel {
-    // The language of the response. Valid values:
-    // 
-    // *   zh: Chinese
-    // *   en: English
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // The ID of the cluster.
+    /**
+     * <p>The ID of the cluster.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
-    // The destination version number.
-    // 
-    // > You must call the GetImage operation to obtain the maximum destination version number that corresponds to MaxVersionCode.
+    /**
+     * <p>The destination version number.</p>
+     * <br>
+     * <p>> You must call the GetImage operation to obtain the maximum destination version number that corresponds to MaxVersionCode.</p>
+     */
     @NameInMap("VersionCode")
     public String versionCode;
 

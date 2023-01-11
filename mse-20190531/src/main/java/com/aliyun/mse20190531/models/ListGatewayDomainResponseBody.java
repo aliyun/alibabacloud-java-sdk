@@ -4,30 +4,42 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListGatewayDomainResponseBody extends TeaModel {
-    // The status code returned.
+    /**
+     * <p>The status code returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
-    // The data of the node.
+    /**
+     * <p>The data of the node.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListGatewayDomainResponseBodyData> data;
 
-    // The HTTP status code returned.
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // The error message returned.
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request was successful. Valid values:
-    // 
-    // *   `true`: The request was successful.
-    // *   `false`: The request failed.
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request was successful.</p>
+     * <p>*   `false`: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -85,7 +97,9 @@ public class ListGatewayDomainResponseBody extends TeaModel {
     }
 
     public static class ListGatewayDomainResponseBodyDataComment extends TeaModel {
-        // The status.
+        /**
+         * <p>The status.</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -105,74 +119,104 @@ public class ListGatewayDomainResponseBody extends TeaModel {
     }
 
     public static class ListGatewayDomainResponseBodyData extends TeaModel {
-        // The expiration time.
+        /**
+         * <p>The expiration time.</p>
+         */
         @NameInMap("CertBeforeDate")
         public String certBeforeDate;
 
-        // The ID of the certificate.
+        /**
+         * <p>The ID of the certificate.</p>
+         */
         @NameInMap("CertIdentifier")
         public String certIdentifier;
 
-        // The route comment (ingress).
+        /**
+         * <p>The route comment (ingress).</p>
+         */
         @NameInMap("Comment")
         public ListGatewayDomainResponseBodyDataComment comment;
 
-        // The ID of the gateway.
+        /**
+         * <p>The ID of the gateway.</p>
+         */
         @NameInMap("GatewayId")
         public Long gatewayId;
 
-        // The creation time.
+        /**
+         * <p>The creation time.</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
-        // The update time.
+        /**
+         * <p>The update time.</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
-        // Indicates whether `HTTP/2` is enabled.
-        // 
-        // *   `open`: `HTTP/2` is enabled.
-        // *   `close`: `HTTP/2` is disabled.
-        // *   `globalConfig`: Global configurations are used.
+        /**
+         * <p>Indicates whether `HTTP/2` is enabled.</p>
+         * <br>
+         * <p>*   `open`: `HTTP/2` is enabled.</p>
+         * <p>*   `close`: `HTTP/2` is disabled.</p>
+         * <p>*   `globalConfig`: Global configurations are used.</p>
+         */
         @NameInMap("Http2")
         public String http2;
 
-        // ID
+        /**
+         * <p>ID</p>
+         */
         @NameInMap("Id")
         public Long id;
 
-        // Indicates whether HTTPS is forcefully used.
+        /**
+         * <p>Indicates whether HTTPS is forcefully used.</p>
+         */
         @NameInMap("MustHttps")
         public Boolean mustHttps;
 
-        // The domain name.
+        /**
+         * <p>The domain name.</p>
+         */
         @NameInMap("Name")
         public String name;
 
-        // The protocol.
+        /**
+         * <p>The protocol.</p>
+         */
         @NameInMap("Protocol")
         public String protocol;
 
-        // The status of the domain name. Valid values:
-        // 
-        // *   0: unpublish
-        // *   2: publishing
-        // *   3: published
-        // *   4: editing
-        // *   5: unpublishing
-        // *   6: unavailable
+        /**
+         * <p>The status of the domain name. Valid values:</p>
+         * <br>
+         * <p>*   0: unpublish</p>
+         * <p>*   2: publishing</p>
+         * <p>*   3: published</p>
+         * <p>*   4: editing</p>
+         * <p>*   5: unpublishing</p>
+         * <p>*   6: unavailable</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
-        // The maximum version of Transport Layer Security (TLS).
+        /**
+         * <p>The maximum version of Transport Layer Security (TLS).</p>
+         */
         @NameInMap("TlsMax")
         public String tlsMax;
 
-        // The minimum version of TLS.
+        /**
+         * <p>The minimum version of TLS.</p>
+         */
         @NameInMap("TlsMin")
         public String tlsMin;
 
-        // The type.
+        /**
+         * <p>The type.</p>
+         */
         @NameInMap("Type")
         public String type;
 

@@ -4,23 +4,33 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class QueryBusinessLocationsResponseBody extends TeaModel {
-    // The details of the data.
+    /**
+     * <p>The details of the data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<QueryBusinessLocationsResponseBodyData> data;
 
-    // The error code returned if the request failed.
+    /**
+     * <p>The error code returned if the request failed.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // The message returned.
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The result of the request.
+    /**
+     * <p>The result of the request.</p>
+     */
     @NameInMap("Success")
     public String success;
 
@@ -70,55 +80,81 @@ public class QueryBusinessLocationsResponseBody extends TeaModel {
     }
 
     public static class QueryBusinessLocationsResponseBodyData extends TeaModel {
-        // The Chinese name of the region.
+        /**
+         * <p>The Chinese name of the region.</p>
+         */
         @NameInMap("CnName")
         public String cnName;
 
-        // The description.
+        /**
+         * <p>The description.</p>
+         */
         @NameInMap("Description")
         public String description;
 
-        // The Chinese name of the district.
+        /**
+         * <p>The Chinese name of the district.</p>
+         */
         @NameInMap("DistrictCnName")
         public String districtCnName;
 
-        // The English name of the district.
+        /**
+         * <p>The English name of the district.</p>
+         */
         @NameInMap("DistrictEnName")
         public String districtEnName;
 
-        // The ID of the region.
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("DistrictId")
         public String districtId;
 
-        // The ordering information of the district.
+        /**
+         * <p>The ordering information of the district.</p>
+         */
         @NameInMap("DistrictOrdering")
         public Integer districtOrdering;
 
-        // The display name of the district.
+        /**
+         * <p>The display name of the district.</p>
+         */
         @NameInMap("DistrictShowName")
         public String districtShowName;
 
-        // The complete description of the region.
+        /**
+         * <p>The complete description of the region.</p>
+         */
         @NameInMap("EnDescription")
         public String enDescription;
 
-        // The English name of the region.
+        /**
+         * <p>The English name of the region.</p>
+         */
         @NameInMap("EnName")
         public String enName;
 
-        // The name.
+        /**
+         * <p>The name.</p>
+         */
         @NameInMap("Name")
         public String name;
 
-        // The ordering information.
+        /**
+         * <p>The ordering information.</p>
+         */
         @NameInMap("Ordering")
         public Integer ordering;
 
-        // The display name.
+        /**
+         * <p>The display name.</p>
+         */
         @NameInMap("ShowName")
         public String showName;
 
-        // The type.
+        /**
+         * <p>The type.</p>
+         */
         @NameInMap("Type")
         public String type;
 

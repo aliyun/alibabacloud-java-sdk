@@ -4,30 +4,42 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListGatewaySlbResponseBody extends TeaModel {
-    // The status code returned.
+    /**
+     * <p>The status code returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
-    // The data entries returned.
+    /**
+     * <p>The data entries returned.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListGatewaySlbResponseBodyData> data;
 
-    // The HTTP status code returned.
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // The message returned.
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request was successful. Valid values:
-    // 
-    // *   `true`: The request was successful.
-    // *   `false`: The request failed.
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request was successful.</p>
+     * <p>*   `false`: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -85,67 +97,99 @@ public class ListGatewaySlbResponseBody extends TeaModel {
     }
 
     public static class ListGatewaySlbResponseBodyData extends TeaModel {
-        // Indicates whether the edit operation is supported.
+        /**
+         * <p>Indicates whether the edit operation is supported.</p>
+         */
         @NameInMap("EditEnable")
         public Boolean editEnable;
 
-        // The ID of the gateway.
+        /**
+         * <p>The ID of the gateway.</p>
+         */
         @NameInMap("GatewayId")
         public String gatewayId;
 
-        // The mode of the SLB instance.
+        /**
+         * <p>The mode of the SLB instance.</p>
+         */
         @NameInMap("GatewaySlbMode")
         public String gatewaySlbMode;
 
-        // The association status.
+        /**
+         * <p>The association status.</p>
+         */
         @NameInMap("GatewaySlbStatus")
         public String gatewaySlbStatus;
 
-        // The creation time.
+        /**
+         * <p>The creation time.</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
-        // The port number of the HTTP virtual service group.
+        /**
+         * <p>The port number of the HTTP virtual service group.</p>
+         */
         @NameInMap("HttpPort")
         public Integer httpPort;
 
-        // The port number of the HTTPS virtual service group.
+        /**
+         * <p>The port number of the HTTPS virtual service group.</p>
+         */
         @NameInMap("HttpsPort")
         public Integer httpsPort;
 
-        // The ID of the HTTPS virtual service group.
+        /**
+         * <p>The ID of the HTTPS virtual service group.</p>
+         */
         @NameInMap("HttpsVServerGroupId")
         public String httpsVServerGroupId;
 
-        // ID
+        /**
+         * <p>ID</p>
+         */
         @NameInMap("Id")
         public String id;
 
-        // The service weight.
+        /**
+         * <p>The service weight.</p>
+         */
         @NameInMap("ServiceWeight")
         public Integer serviceWeight;
 
-        // SLB ID
+        /**
+         * <p>SLB ID</p>
+         */
         @NameInMap("SlbId")
         public String slbId;
 
-        // SLB IP
+        /**
+         * <p>SLB IP</p>
+         */
         @NameInMap("SlbIp")
         public String slbIp;
 
-        // The port number of the SLB instance.
+        /**
+         * <p>The port number of the SLB instance.</p>
+         */
         @NameInMap("SlbPort")
         public String slbPort;
 
-        // The description of the status.
+        /**
+         * <p>The description of the status.</p>
+         */
         @NameInMap("StatusDesc")
         public String statusDesc;
 
-        // The type.
+        /**
+         * <p>The type.</p>
+         */
         @NameInMap("Type")
         public String type;
 
-        // The ID of the HTTP virtual service group.
+        /**
+         * <p>The ID of the HTTP virtual service group.</p>
+         */
         @NameInMap("VServerGroupId")
         public String VServerGroupId;
 

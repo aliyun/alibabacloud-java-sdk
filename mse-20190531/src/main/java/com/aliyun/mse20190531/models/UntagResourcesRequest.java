@@ -4,38 +4,50 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
-    // The language of the response. Valid values:
-    // 
-    // *   zh: Chinese
-    // *   en: English
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // Specifies whether to delete all tags. This parameter takes effect only when the TagKey.N parameter is not specified. Valid values:
-    // 
-    // *   true
-    // *   false
-    // 
-    // Default value: false.
+    /**
+     * <p>Specifies whether to delete all tags. This parameter takes effect only when the TagKey.N parameter is not specified. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     * <br>
+     * <p>Default value: false.</p>
+     */
     @NameInMap("All")
     public Boolean all;
 
-    // The region ID.
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The resource IDs. A maximum of 50 resource IDs can be specified.
+    /**
+     * <p>The resource IDs. A maximum of 50 resource IDs can be specified.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
-    // The type of the resources. Valid values:
-    // 
-    // *   CLUSTER: MSE instance
-    // *   GATEWAY: cloud-native gateway
+    /**
+     * <p>The type of the resources. Valid values:</p>
+     * <br>
+     * <p>*   CLUSTER: MSE instance</p>
+     * <p>*   GATEWAY: cloud-native gateway</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
-    // The tag keys. A maximum of 20 tag keys are supported.
+    /**
+     * <p>The tag keys. A maximum of 20 tag keys are supported.</p>
+     */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;
 

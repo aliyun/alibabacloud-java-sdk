@@ -984,12 +984,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AppName", request.appName);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.extraInfo)) {
-            query.put("ExtraInfo", request.extraInfo);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.language)) {
             query.put("Language", request.language);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            query.put("Namespace", request.namespace);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.region)) {
@@ -1197,6 +1197,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createEngineNamespaceWithOptions(request, runtime);
     }
 
+    /**
+      * @deprecated : CreateMseServiceApplication is deprecated, please use mse::2019-05-31::CreateApplication instead.
+      *
+      * @param request CreateMseServiceApplicationRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateMseServiceApplicationResponse
+     */
+    // Deprecated
     public CreateMseServiceApplicationResponse createMseServiceApplicationWithOptions(CreateMseServiceApplicationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1253,6 +1261,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateMseServiceApplicationResponse());
     }
 
+    /**
+      * @deprecated : CreateMseServiceApplication is deprecated, please use mse::2019-05-31::CreateApplication instead.
+      *
+      * @param request CreateMseServiceApplicationRequest
+      * @return CreateMseServiceApplicationResponse
+     */
+    // Deprecated
     public CreateMseServiceApplicationResponse createMseServiceApplication(CreateMseServiceApplicationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createMseServiceApplicationWithOptions(request, runtime);
@@ -7282,12 +7297,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AppId", request.appId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.appName)) {
+            query.put("AppName", request.appName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.enable)) {
             query.put("Enable", request.enable);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.filterSide)) {
             query.put("FilterSide", request.filterSide);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            query.put("Namespace", request.namespace);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.region)) {

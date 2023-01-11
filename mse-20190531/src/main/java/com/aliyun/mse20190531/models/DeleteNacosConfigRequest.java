@@ -4,33 +4,45 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class DeleteNacosConfigRequest extends TeaModel {
-    // The language of the response. Valid values:
-    // 
-    // *   zh: Chinese
-    // *   en: English
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // Specifies whether to perform a beta release. Valid values:
-    // 
-    // *   `true`: performs a beta release.
-    // *   `false`: not performs a beta release.
+    /**
+     * <p>Specifies whether to perform a beta release. Valid values:</p>
+     * <br>
+     * <p>*   `true`: performs a beta release.</p>
+     * <p>*   `false`: not performs a beta release.</p>
+     */
     @NameInMap("Beta")
     public Boolean beta;
 
-    // The ID of the configuration.
+    /**
+     * <p>The ID of the configuration.</p>
+     */
     @NameInMap("DataId")
     public String dataId;
 
-    // The type of the group.
+    /**
+     * <p>The type of the group.</p>
+     */
     @NameInMap("Group")
     public String group;
 
-    // The ID of the instance.
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // The ID of the namespace.
+    /**
+     * <p>The ID of the namespace.</p>
+     */
     @NameInMap("NamespaceId")
     public String namespaceId;
 

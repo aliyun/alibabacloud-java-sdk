@@ -4,34 +4,48 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class QueryClusterSpecificationResponseBody extends TeaModel {
-    // The return value.
+    /**
+     * <p>The return value.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
-    // The details of the data.
+    /**
+     * <p>The details of the data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<QueryClusterSpecificationResponseBodyData> data;
 
-    // The error code returned if the request failed.
+    /**
+     * <p>The error code returned if the request failed.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // The HTTP status code returned.
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // The message returned.
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request was successful. Valid values:
-    // 
-    // *   `true`: The request was successful.
-    // *   `false`: The request failed.
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request was successful.</p>
+     * <p>*   `false`: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -97,15 +111,21 @@ public class QueryClusterSpecificationResponseBody extends TeaModel {
     }
 
     public static class QueryClusterSpecificationResponseBodyData extends TeaModel {
-        // The engine specifications that can be used.
+        /**
+         * <p>The engine specifications that can be used.</p>
+         */
         @NameInMap("ClusterSpecificationName")
         public String clusterSpecificationName;
 
-        // The number of vCPUs in the specifications.
+        /**
+         * <p>The number of vCPUs in the specifications.</p>
+         */
         @NameInMap("CpuCapacity")
         public String cpuCapacity;
 
-        // The memory size in the specifications. Unit: GB.
+        /**
+         * <p>The memory size in the specifications. Unit: GB.</p>
+         */
         @NameInMap("MemoryCapacity")
         public String memoryCapacity;
 

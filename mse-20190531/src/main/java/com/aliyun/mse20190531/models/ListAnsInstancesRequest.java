@@ -4,50 +4,70 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListAnsInstancesRequest extends TeaModel {
-    // The language of the response. Valid values:
-    // 
-    // *   zh: Chinese
-    // *   en: English
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // The ID of the cluster.
-    // 
-    // > This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.
+    /**
+     * <p>The ID of the cluster.</p>
+     * <br>
+     * <p>> This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
-    // The alias of the cluster.
+    /**
+     * <p>The alias of the cluster.</p>
+     */
     @NameInMap("ClusterName")
     public String clusterName;
 
-    // The name of the contact group.
+    /**
+     * <p>The name of the contact group.</p>
+     */
     @NameInMap("GroupName")
     public String groupName;
 
-    // The ID of the instance.
-    // 
-    // >  This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.
+    /**
+     * <p>The ID of the instance.</p>
+     * <br>
+     * <p>>  This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // The ID of the namespace.
+    /**
+     * <p>The ID of the namespace.</p>
+     */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
-    // The number of the page to return.
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("PageNum")
     public Integer pageNum;
 
-    // The number of entries to return on each page.
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The extended request parameters in the JSON format.
+    /**
+     * <p>The extended request parameters in the JSON format.</p>
+     */
     @NameInMap("RequestPars")
     public String requestPars;
 
-    // The name of the service.
+    /**
+     * <p>The name of the service.</p>
+     */
     @NameInMap("ServiceName")
     public String serviceName;
 

@@ -4,40 +4,56 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ImportNacosConfigResponseBody extends TeaModel {
-    // The status code returned.
+    /**
+     * <p>The status code returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
-    // The details of the data.
+    /**
+     * <p>The details of the data.</p>
+     */
     @NameInMap("Data")
     public ImportNacosConfigResponseBodyData data;
 
-    // The dynamic part in the error message. This parameter is used to replace the \*\*%s\*\* variable in the **ErrMessage** parameter.
-    // 
-    // > If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.
+    /**
+     * <p>The dynamic part in the error message. This parameter is used to replace the \*\*%s\*\* variable in the **ErrMessage** parameter.</p>
+     * <br>
+     * <p>> If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.</p>
+     */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
-    // The error code returned if the request failed.
+    /**
+     * <p>The error code returned if the request failed.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // The HTTP status code returned.
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // The message returned.
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request was successful. Valid values:
-    // 
-    // *   `true`: The request was successful.
-    // *   `false`: The request failed.
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request was successful.</p>
+     * <p>*   `false`: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -111,11 +127,15 @@ public class ImportNacosConfigResponseBody extends TeaModel {
     }
 
     public static class ImportNacosConfigResponseBodyDataFailData extends TeaModel {
-        // The ID of the data.
+        /**
+         * <p>The ID of the data.</p>
+         */
         @NameInMap("DataId")
         public String dataId;
 
-        // The ID of the group.
+        /**
+         * <p>The ID of the group.</p>
+         */
         @NameInMap("Group")
         public String group;
 
@@ -143,11 +163,15 @@ public class ImportNacosConfigResponseBody extends TeaModel {
     }
 
     public static class ImportNacosConfigResponseBodyDataSkipData extends TeaModel {
-        // The ID of the data.
+        /**
+         * <p>The ID of the data.</p>
+         */
         @NameInMap("DataId")
         public String dataId;
 
-        // The ID of the group.
+        /**
+         * <p>The ID of the group.</p>
+         */
         @NameInMap("Group")
         public String group;
 
@@ -175,19 +199,27 @@ public class ImportNacosConfigResponseBody extends TeaModel {
     }
 
     public static class ImportNacosConfigResponseBodyData extends TeaModel {
-        // The information about configurations failed to be imported.
+        /**
+         * <p>The information about configurations failed to be imported.</p>
+         */
         @NameInMap("FailData")
         public java.util.List<ImportNacosConfigResponseBodyDataFailData> failData;
 
-        // The number of configurations that are skipped.
+        /**
+         * <p>The number of configurations that are skipped.</p>
+         */
         @NameInMap("SkipCount")
         public Integer skipCount;
 
-        // The information about skipped configurations.
+        /**
+         * <p>The information about skipped configurations.</p>
+         */
         @NameInMap("SkipData")
         public java.util.List<ImportNacosConfigResponseBodyDataSkipData> skipData;
 
-        // The number of configurations that are imported.
+        /**
+         * <p>The number of configurations that are imported.</p>
+         */
         @NameInMap("SuccCount")
         public Integer succCount;
 

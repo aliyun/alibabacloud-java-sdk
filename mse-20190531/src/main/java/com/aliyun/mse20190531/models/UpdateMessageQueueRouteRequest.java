@@ -4,33 +4,51 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class UpdateMessageQueueRouteRequest extends TeaModel {
-    // The language of the response. Valid values:
-    // 
-    // *   zh: Chinese
-    // *   en: English
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // The ID of the application.
+    /**
+     * <p>The ID of the application.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
-    // Specifies whether the canary release for messaging feature is enabled for the application. Valid values:
-    // 
-    // *   `true`: enabled
-    // *   `false`: disabled
+    @NameInMap("AppName")
+    public String appName;
+
+    /**
+     * <p>Specifies whether the canary release for messaging feature is enabled for the application. Valid values:</p>
+     * <br>
+     * <p>*   `true`: enabled</p>
+     * <p>*   `false`: disabled</p>
+     */
     @NameInMap("Enable")
     public Boolean enable;
 
-    // The side for message filtering when the canary release for messaging feature is enabled.
+    /**
+     * <p>The side for message filtering when the canary release for messaging feature is enabled.</p>
+     */
     @NameInMap("FilterSide")
     public String filterSide;
 
-    // The region ID.
+    @NameInMap("Namespace")
+    public String namespace;
+
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("Region")
     public String region;
 
-    // The tag that is negligible for the untagged environment of the application.
+    /**
+     * <p>The tag that is negligible for the untagged environment of the application.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<String> tags;
 
@@ -55,6 +73,14 @@ public class UpdateMessageQueueRouteRequest extends TeaModel {
         return this.appId;
     }
 
+    public UpdateMessageQueueRouteRequest setAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
+    public String getAppName() {
+        return this.appName;
+    }
+
     public UpdateMessageQueueRouteRequest setEnable(Boolean enable) {
         this.enable = enable;
         return this;
@@ -69,6 +95,14 @@ public class UpdateMessageQueueRouteRequest extends TeaModel {
     }
     public String getFilterSide() {
         return this.filterSide;
+    }
+
+    public UpdateMessageQueueRouteRequest setNamespace(String namespace) {
+        this.namespace = namespace;
+        return this;
+    }
+    public String getNamespace() {
+        return this.namespace;
     }
 
     public UpdateMessageQueueRouteRequest setRegion(String region) {

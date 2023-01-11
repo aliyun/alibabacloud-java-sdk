@@ -4,14 +4,18 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class QueryClusterDiskSpecificationRequest extends TeaModel {
-    // The language of the response. Valid values:
-    // 
-    // *   zh: Chinese
-    // *   en: English
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // The type of the instance. Valid values: ZooKeeper, Nacos-Ans, and Eureka.
+    /**
+     * <p>The type of the instance. Valid values: ZooKeeper, Nacos-Ans, and Eureka.</p>
+     */
     @NameInMap("ClusterType")
     public String clusterType;
 

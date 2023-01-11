@@ -4,93 +4,127 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class AddGatewayRequest extends TeaModel {
-    // The language of the response. Valid values:
-    // 
-    // *   zh: Chinese
-    // *   en: English
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // Specifies whether to enable hardware acceleration.
+    /**
+     * <p>Specifies whether to enable hardware acceleration.</p>
+     */
     @NameInMap("EnableHardwareAcceleration")
     public Boolean enableHardwareAcceleration;
 
-    // Specifies whether to activate Log Service.
+    /**
+     * <p>Specifies whether to activate Log Service.</p>
+     */
     @NameInMap("EnableSls")
     public Boolean enableSls;
 
-    // Specifies whether to activate Tracing Analysis.
+    /**
+     * <p>Specifies whether to activate Tracing Analysis.</p>
+     */
     @NameInMap("EnableXtrace")
     public Boolean enableXtrace;
 
-    // Specifies whether to use an advanced security group.
+    /**
+     * <p>Specifies whether to use an advanced security group.</p>
+     */
     @NameInMap("EnterpriseSecurityGroup")
     public Boolean enterpriseSecurityGroup;
 
-    // The specifications of the Internet-facing SLB instance. Valid values:
-    // 
-    // *   slb.s1.small
-    // *   slb.s2.small
-    // *   slb.s2.medium
-    // *   slb.s3.small
-    // *   slb.s3.medium
-    // *   slb.s3.large
+    /**
+     * <p>The specifications of the Internet-facing SLB instance. Valid values:</p>
+     * <br>
+     * <p>*   slb.s1.small</p>
+     * <p>*   slb.s2.small</p>
+     * <p>*   slb.s2.medium</p>
+     * <p>*   slb.s3.small</p>
+     * <p>*   slb.s3.medium</p>
+     * <p>*   slb.s3.large</p>
+     */
     @NameInMap("InternetSlbSpec")
     public String internetSlbSpec;
 
-    // The name of the gateway.
+    /**
+     * <p>The name of the gateway.</p>
+     */
     @NameInMap("Name")
     public String name;
 
-    // The region ID.
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("Region")
     public String region;
 
-    // The number of nodes.
+    /**
+     * <p>The number of nodes.</p>
+     */
     @NameInMap("Replica")
     public Integer replica;
 
-    // The ID of the resource group.
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    // The specifications of the internal-facing Server Load Balancer (SLB) instance. Valid values:
-    // 
-    // *   slb.s1.small
-    // *   slb.s2.small
-    // *   slb.s2.medium
-    // *   slb.s3.small
-    // *   slb.s3.medium
-    // *   slb.s3.large
+    /**
+     * <p>The specifications of the internal-facing Server Load Balancer (SLB) instance. Valid values:</p>
+     * <br>
+     * <p>*   slb.s1.small</p>
+     * <p>*   slb.s2.small</p>
+     * <p>*   slb.s2.medium</p>
+     * <p>*   slb.s3.small</p>
+     * <p>*   slb.s3.medium</p>
+     * <p>*   slb.s3.large</p>
+     */
     @NameInMap("SlbSpec")
     public String slbSpec;
 
-    // The node specifications. Valid values:
-    // 
-    // *   MSE_GTW\_16\_32\_200\_c(16C32G)
-    // *   MSE_GTW\_2\_4\_200\_c(2C4G)
-    // *   MSE_GTW\_4\_8\_200\_c(4C8G)
-    // *   MSE_GTW\_8\_16\_200\_c(8C16G)
+    /**
+     * <p>The node specifications. Valid values:</p>
+     * <br>
+     * <p>*   MSE_GTW\_16\_32\_200\_c(16C32G)</p>
+     * <p>*   MSE_GTW\_2\_4\_200\_c(2C4G)</p>
+     * <p>*   MSE_GTW\_4\_8\_200\_c(4C8G)</p>
+     * <p>*   MSE_GTW\_8\_16\_200\_c(8C16G)</p>
+     */
     @NameInMap("Spec")
     public String spec;
 
-    // The tag of the gateway.
+    /**
+     * <p>The tag of the gateway.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<AddGatewayRequestTag> tag;
 
-    // The ID of the primary vSwitch.
+    /**
+     * <p>The ID of the primary vSwitch.</p>
+     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
-    // The ID of the secondary vSwitch.
+    /**
+     * <p>The ID of the secondary vSwitch.</p>
+     */
     @NameInMap("VSwitchId2")
     public String vSwitchId2;
 
-    // The ID of the virtual private cloud (VPC).
+    /**
+     * <p>The ID of the virtual private cloud (VPC).</p>
+     */
     @NameInMap("Vpc")
     public String vpc;
 
-    // The sample rate of Tracing Analysis. Valid values: \[1,100].
+    /**
+     * <p>The sample rate of Tracing Analysis. Valid values: \[1,100].</p>
+     */
     @NameInMap("XtraceRatio")
     public String xtraceRatio;
 
@@ -236,11 +270,15 @@ public class AddGatewayRequest extends TeaModel {
     }
 
     public static class AddGatewayRequestTag extends TeaModel {
-        // The key of the tag.
+        /**
+         * <p>The key of the tag.</p>
+         */
         @NameInMap("Key")
         public String key;
 
-        // The value of the tag.
+        /**
+         * <p>The value of the tag.</p>
+         */
         @NameInMap("Value")
         public String value;
 

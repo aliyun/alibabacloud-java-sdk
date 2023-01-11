@@ -4,37 +4,53 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
-    // The status code. The value 200 is returned if the request is successful.
+    /**
+     * <p>The status code. The value 200 is returned if the request is successful.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
-    // The details of the data.
+    /**
+     * <p>The details of the data.</p>
+     */
     @NameInMap("Data")
     public Object data;
 
-    // The dynamic part in the error message.
+    /**
+     * <p>The dynamic part in the error message.</p>
+     */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
-    // The error code returned if the request failed.
+    /**
+     * <p>The error code returned if the request failed.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // The HTTP status code returned.
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // The message returned.
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request was successful. Valid values:
-    // 
-    // true: The request was successful. false: The request failed.
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>true: The request was successful. false: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

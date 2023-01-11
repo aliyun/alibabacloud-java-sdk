@@ -4,30 +4,42 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetGatewayResponseBody extends TeaModel {
-    // The status code returned. A value of 200 indicates that the request is successful.
+    /**
+     * <p>The status code returned. A value of 200 indicates that the request is successful.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
-    // The information about the gateway.
+    /**
+     * <p>The information about the gateway.</p>
+     */
     @NameInMap("Data")
     public GetGatewayResponseBodyData data;
 
-    // The HTTP status code returned.
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // The message returned.
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request was successful. Valid values:
-    // 
-    // *   `true`: The request was successful.
-    // *   `false`: The request failed.
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request was successful.</p>
+     * <p>*   `false`: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -85,15 +97,21 @@ public class GetGatewayResponseBody extends TeaModel {
     }
 
     public static class GetGatewayResponseBodyDataLogConfigDetails extends TeaModel {
-        // Indicates whether Log Service is activated.
+        /**
+         * <p>Indicates whether Log Service is activated.</p>
+         */
         @NameInMap("LogEnabled")
         public Boolean logEnabled;
 
-        // The name of the Logstore.
+        /**
+         * <p>The name of the Logstore.</p>
+         */
         @NameInMap("LogStoreName")
         public String logStoreName;
 
-        // The name of the project.
+        /**
+         * <p>The name of the project.</p>
+         */
         @NameInMap("ProjectName")
         public String projectName;
 
@@ -129,11 +147,15 @@ public class GetGatewayResponseBody extends TeaModel {
     }
 
     public static class GetGatewayResponseBodyDataXtraceDetails extends TeaModel {
-        // The sampling rate of Tracing Analysis.
+        /**
+         * <p>The sampling rate of Tracing Analysis.</p>
+         */
         @NameInMap("Sample")
         public Integer sample;
 
-        // Indicates whether sampling by using Tracing Analysis is enabled.
+        /**
+         * <p>Indicates whether sampling by using Tracing Analysis is enabled.</p>
+         */
         @NameInMap("TraceOn")
         public Boolean traceOn;
 
@@ -161,91 +183,135 @@ public class GetGatewayResponseBody extends TeaModel {
     }
 
     public static class GetGatewayResponseBodyData extends TeaModel {
-        // The billing method, such as subscription or pay-as-you-go.
+        /**
+         * <p>The billing method, such as subscription or pay-as-you-go.</p>
+         */
         @NameInMap("ChargeType")
         public String chargeType;
 
-        // The time when the gateway expires.
+        /**
+         * <p>The time when the gateway expires.</p>
+         */
         @NameInMap("EndDate")
         public String endDate;
 
-        // The unique ID of the gateway.
+        /**
+         * <p>The unique ID of the gateway.</p>
+         */
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 
-        // The time when the gateway was created. The time is displayed in GMT. The time is the local time of the region in which the gateway resides.
+        /**
+         * <p>The time when the gateway was created. The time is displayed in GMT. The time is the local time of the region in which the gateway resides.</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
-        // The time when the gateway was last modified.
+        /**
+         * <p>The time when the gateway was last modified.</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
-        // The ID of the gateway.
+        /**
+         * <p>The ID of the gateway.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
-        // The ID of the instance.
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        // The log configuration.
+        /**
+         * <p>The log configuration.</p>
+         */
         @NameInMap("LogConfigDetails")
         public GetGatewayResponseBodyDataLogConfigDetails logConfigDetails;
 
-        // The tag of the resource.
+        /**
+         * <p>The tag of the resource.</p>
+         */
         @NameInMap("MseTag")
         public String mseTag;
 
-        // The name of the gateway.
+        /**
+         * <p>The name of the gateway.</p>
+         */
         @NameInMap("Name")
         public String name;
 
-        // The Alibaba Cloud account ID of the user who created the gateway.
+        /**
+         * <p>The Alibaba Cloud account ID of the user who created the gateway.</p>
+         */
         @NameInMap("PrimaryUser")
         public String primaryUser;
 
-        // The region ID.
+        /**
+         * <p>The region ID.</p>
+         */
         @NameInMap("Region")
         public String region;
 
-        // The number of gateway replicas.
+        /**
+         * <p>The number of gateway replicas.</p>
+         */
         @NameInMap("Replica")
         public Integer replica;
 
-        // The ID of the resource group.
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        // The ID of the security group.
+        /**
+         * <p>The ID of the security group.</p>
+         */
         @NameInMap("SecurityGroup")
         public String securityGroup;
 
-        // The specifications of the gateway.
+        /**
+         * <p>The specifications of the gateway.</p>
+         */
         @NameInMap("Spec")
         public String spec;
 
-        // The status of the gateway. Valid values: 0: The gateway is being created. 1: The gateway fails to be created. 2: The gateway is running. 3: The gateway is changing. 4: The gateway is scaling down. 6: The gateway is scaling up. 8: The gateway is being deleted. 10: The gateway is restarting. 11: The gateway is being rebuilt. 12: The gateway is updating. 13: The gateway fails to be updated.
+        /**
+         * <p>The status of the gateway. Valid values: 0: The gateway is being created. 1: The gateway fails to be created. 2: The gateway is running. 3: The gateway is changing. 4: The gateway is scaling down. 6: The gateway is scaling up. 8: The gateway is being deleted. 10: The gateway is restarting. 11: The gateway is being rebuilt. 12: The gateway is updating. 13: The gateway fails to be updated.</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
-        // The description of the status.
+        /**
+         * <p>The description of the status.</p>
+         */
         @NameInMap("StatusDesc")
         public String statusDesc;
 
-        // The ID of the VPC.
+        /**
+         * <p>The ID of the VPC.</p>
+         */
         @NameInMap("Vpc")
         public String vpc;
 
-        // The ID of the vSwitch.
+        /**
+         * <p>The ID of the vSwitch.</p>
+         */
         @NameInMap("Vswitch")
         public String vswitch;
 
-        // The ID of the secondary vSwitch.
+        /**
+         * <p>The ID of the secondary vSwitch.</p>
+         */
         @NameInMap("Vswitch2")
         public String vswitch2;
 
-        // The details of Tracing Analysis.
+        /**
+         * <p>The details of Tracing Analysis.</p>
+         */
         @NameInMap("XtraceDetails")
         public GetGatewayResponseBodyDataXtraceDetails xtraceDetails;
 

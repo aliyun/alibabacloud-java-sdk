@@ -4,30 +4,42 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetAppMessageQueueRouteResponseBody extends TeaModel {
-    // The response code returned.
+    /**
+     * <p>The response code returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
-    // The returned data.
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public GetAppMessageQueueRouteResponseBodyData data;
 
-    // The HTTP status code returned.
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // The message returned.
-    // 
-    // *   If the request is successful, a success message is returned.
-    // *   If the request fails, an error message is returned.
+    /**
+     * <p>The message returned.</p>
+     * <br>
+     * <p>*   If the request is successful, a success message is returned.</p>
+     * <p>*   If the request fails, an error message is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request was successful. Valid values: true and false. The value true indicates that the request was successful. The value false indicates that the request failed.
+    /**
+     * <p>Indicates whether the request was successful. Valid values: true and false. The value true indicates that the request was successful. The value false indicates that the request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -85,26 +97,36 @@ public class GetAppMessageQueueRouteResponseBody extends TeaModel {
     }
 
     public static class GetAppMessageQueueRouteResponseBodyData extends TeaModel {
-        // The ID of the application.
+        /**
+         * <p>The ID of the application.</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
-        // Indicates whether the canary release for messaging feature is enabled.
-        // 
-        // *   `true`: enabled
-        // *   `false`: disabled
+        /**
+         * <p>Indicates whether the canary release for messaging feature is enabled.</p>
+         * <br>
+         * <p>*   `true`: enabled</p>
+         * <p>*   `false`: disabled</p>
+         */
         @NameInMap("Enable")
         public Boolean enable;
 
-        // The side for message filtering when the canary release for messaging feature is enabled.
+        /**
+         * <p>The side for message filtering when the canary release for messaging feature is enabled.</p>
+         */
         @NameInMap("FilterSide")
         public String filterSide;
 
-        // The region ID.
+        /**
+         * <p>The region ID.</p>
+         */
         @NameInMap("Region")
         public String region;
 
-        // The tags used to ignore message consumption for nodes in untagged environments.
+        /**
+         * <p>The tags used to ignore message consumption for nodes in untagged environments.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<String> tags;
 

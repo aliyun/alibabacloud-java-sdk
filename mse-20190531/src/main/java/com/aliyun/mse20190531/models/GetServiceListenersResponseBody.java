@@ -4,45 +4,63 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetServiceListenersResponseBody extends TeaModel {
-    // The returned data.
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<GetServiceListenersResponseBodyData> data;
 
-    // The error code returned if the request failed.
+    /**
+     * <p>The error code returned if the request failed.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // The HTTP status code returned.
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpCode")
     public String httpCode;
 
-    // The message returned.
-    // 
-    // *   If the request is successful, a success message is returned.
-    // *   If the request fails, an error message is returned.
+    /**
+     * <p>The message returned.</p>
+     * <br>
+     * <p>*   If the request is successful, a success message is returned.</p>
+     * <p>*   If the request fails, an error message is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
-    // The page number of the returned page.
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // The number of entries returned per page.
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request was successful. Valid values:
-    // 
-    // *   `true`: The request was successful.
-    // *   `false`: The request failed.
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request was successful.</p>
+     * <p>*   `false`: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
-    // The number of listeners that are queried.
+    /**
+     * <p>The number of listeners that are queried.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -124,35 +142,51 @@ public class GetServiceListenersResponseBody extends TeaModel {
     }
 
     public static class GetServiceListenersResponseBodyData extends TeaModel {
-        // The address of the listener.
+        /**
+         * <p>The address of the listener.</p>
+         */
         @NameInMap("Addr")
         public String addr;
 
-        // The listener client version.
+        /**
+         * <p>The listener client version.</p>
+         */
         @NameInMap("Agent")
         public String agent;
 
-        // The application name of the listener.
+        /**
+         * <p>The application name of the listener.</p>
+         */
         @NameInMap("App")
         public String app;
 
-        // The name of the cluster to which the monitored service belongs.
+        /**
+         * <p>The name of the cluster to which the monitored service belongs.</p>
+         */
         @NameInMap("Cluster")
         public String cluster;
 
-        // The IP address of the monitored service.
+        /**
+         * <p>The IP address of the monitored service.</p>
+         */
         @NameInMap("IP")
         public String IP;
 
-        // The ID of the namespace.
+        /**
+         * <p>The ID of the namespace.</p>
+         */
         @NameInMap("NamespaceId")
         public String namespaceId;
 
-        // The port number of the monitored service.
+        /**
+         * <p>The port number of the monitored service.</p>
+         */
         @NameInMap("Port")
         public String port;
 
-        // The name of the monitored service.
+        /**
+         * <p>The name of the monitored service.</p>
+         */
         @NameInMap("ServiceName")
         public String serviceName;
 

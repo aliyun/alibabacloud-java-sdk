@@ -4,26 +4,36 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class UpdateGatewayRouteRetryRequest extends TeaModel {
-    // The language of the response. Valid values:
-    // 
-    // *   zh: Chinese
-    // *   en: English
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // The ID of the gateway.
+    /**
+     * <p>The ID of the gateway.</p>
+     */
     @NameInMap("GatewayId")
     public Long gatewayId;
 
-    // The unique ID of the gateway.
+    /**
+     * <p>The unique ID of the gateway.</p>
+     */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
-    // The ID of the associated record.
+    /**
+     * <p>The ID of the associated record.</p>
+     */
     @NameInMap("Id")
     public Long id;
 
-    // The information about the retry policy.
+    /**
+     * <p>The information about the retry policy.</p>
+     */
     @NameInMap("RetryJSON")
     public UpdateGatewayRouteRetryRequestRetryJSON retryJSON;
 
@@ -73,19 +83,27 @@ public class UpdateGatewayRouteRetryRequest extends TeaModel {
     }
 
     public static class UpdateGatewayRouteRetryRequestRetryJSON extends TeaModel {
-        // The number of retries.
+        /**
+         * <p>The number of retries.</p>
+         */
         @NameInMap("Attempts")
         public Integer attempts;
 
-        // The HTTP status codes.
+        /**
+         * <p>The HTTP status codes.</p>
+         */
         @NameInMap("HttpCodes")
         public java.util.List<String> httpCodes;
 
-        // The retry conditions.
+        /**
+         * <p>The retry conditions.</p>
+         */
         @NameInMap("RetryOn")
         public java.util.List<String> retryOn;
 
-        // The status of the policy.
+        /**
+         * <p>The status of the policy.</p>
+         */
         @NameInMap("Status")
         public String status;
 

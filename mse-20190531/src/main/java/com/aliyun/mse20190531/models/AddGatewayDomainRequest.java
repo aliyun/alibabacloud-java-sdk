@@ -4,49 +4,67 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class AddGatewayDomainRequest extends TeaModel {
-    // The language of the response. Valid values:
-    // 
-    // *   zh: Chinese
-    // *   en: English
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // The ID of the certificate.
+    /**
+     * <p>The ID of the certificate.</p>
+     */
     @NameInMap("CertIdentifier")
     public String certIdentifier;
 
-    // The unique ID of the gateway.
+    /**
+     * <p>The unique ID of the gateway.</p>
+     */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
-    // Specifies whether to enable `HTTP/2`.
-    // 
-    // *   `open`: enables `HTTP/2`
-    // *   `close`: disables `HTTP/2`
-    // *   `globalConfig`: uses global configurations
+    /**
+     * <p>Specifies whether to enable `HTTP/2`.</p>
+     * <br>
+     * <p>*   `open`: enables `HTTP/2`</p>
+     * <p>*   `close`: disables `HTTP/2`</p>
+     * <p>*   `globalConfig`: uses global configurations</p>
+     */
     @NameInMap("Http2")
     public String http2;
 
-    // Specifies whether to enable HTTPS.
+    /**
+     * <p>Specifies whether to enable HTTPS.</p>
+     */
     @NameInMap("MustHttps")
     public Boolean mustHttps;
 
-    // The domain name.
+    /**
+     * <p>The domain name.</p>
+     */
     @NameInMap("Name")
     public String name;
 
-    // The type of the protocol. Valid values:
-    // 
-    // *   `HTTP`
-    // *   `HTTPS`
+    /**
+     * <p>The type of the protocol. Valid values:</p>
+     * <br>
+     * <p>*   `HTTP`</p>
+     * <p>*   `HTTPS`</p>
+     */
     @NameInMap("Protocol")
     public String protocol;
 
-    // The maximum version of Transport Layer Security (TLS).
+    /**
+     * <p>The maximum version of Transport Layer Security (TLS).</p>
+     */
     @NameInMap("TlsMax")
     public String tlsMax;
 
-    // The minimum version of TLS.
+    /**
+     * <p>The minimum version of TLS.</p>
+     */
     @NameInMap("TlsMin")
     public String tlsMin;
 

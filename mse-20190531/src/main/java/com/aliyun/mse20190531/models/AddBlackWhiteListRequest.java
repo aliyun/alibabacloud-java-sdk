@@ -4,49 +4,69 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class AddBlackWhiteListRequest extends TeaModel {
-    // The language of the response. Valid values:
-    // 
-    // *   zh: Chinese
-    // *   en: English
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // The content of the blacklist.
+    /**
+     * <p>The content of the blacklist.</p>
+     */
     @NameInMap("Content")
     public String content;
 
-    // The unique ID of the gateway.
+    /**
+     * <p>The unique ID of the gateway.</p>
+     */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
-    // Specifies whether to create a whitelist.
+    /**
+     * <p>Specifies whether to create a whitelist.</p>
+     */
     @NameInMap("IsWhite")
     public Boolean isWhite;
 
-    // The name.
+    /**
+     * <p>The name.</p>
+     */
     @NameInMap("Name")
     public String name;
 
-    // The description.
+    /**
+     * <p>The description.</p>
+     */
     @NameInMap("Note")
     public String note;
 
-    // The resource IDs in the JSON format.
+    /**
+     * <p>The resource IDs in the JSON format.</p>
+     */
     @NameInMap("ResourceIdJsonList")
     public String resourceIdJsonList;
 
-    // The resource type to which the blacklist or whitelist applies.
+    /**
+     * <p>The resource type to which the blacklist or whitelist applies.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
-    // The status of the blacklist.
-    // 
-    // *   on: enabled
-    // *   off: disabled
+    /**
+     * <p>The status of the blacklist.</p>
+     * <br>
+     * <p>*   on: enabled</p>
+     * <p>*   off: disabled</p>
+     */
     @NameInMap("Status")
     public String status;
 
-    // The type of object in the blacklist or whitelist.
+    /**
+     * <p>The type of object in the blacklist or whitelist.</p>
+     */
     @NameInMap("Type")
     public String type;
 

@@ -4,45 +4,63 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class DeleteNacosInstanceRequest extends TeaModel {
-    // The language of the response. Valid values:
-    // 
-    // *   zh: Chinese
-    // *   en: English
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // The alias of the instance.
+    /**
+     * <p>The alias of the instance.</p>
+     */
     @NameInMap("ClusterName")
     public String clusterName;
 
-    // Specifies whether the instance is marked as a temporary node. Valid values:
-    // 
-    // *   `true`: monitors the task status.
-    // *   `false`: no
+    /**
+     * <p>Specifies whether the instance is marked as a temporary node. Valid values:</p>
+     * <br>
+     * <p>*   `true`: monitors the task status.</p>
+     * <p>*   `false`: no</p>
+     */
     @NameInMap("Ephemeral")
     public Boolean ephemeral;
 
-    // The name of the group.
+    /**
+     * <p>The name of the group.</p>
+     */
     @NameInMap("GroupName")
     public String groupName;
 
-    // The ID of the instance.
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // The IP address of the Nacos instance.
+    /**
+     * <p>The IP address of the Nacos instance.</p>
+     */
     @NameInMap("Ip")
     public String ip;
 
-    // The ID of the namespace.
+    /**
+     * <p>The ID of the namespace.</p>
+     */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
-    // The port of the Nacos instance.
+    /**
+     * <p>The port of the Nacos instance.</p>
+     */
     @NameInMap("Port")
     public Integer port;
 
-    // The name of the service.
+    /**
+     * <p>The name of the service.</p>
+     */
     @NameInMap("ServiceName")
     public String serviceName;
 

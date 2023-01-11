@@ -4,54 +4,76 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetEngineNamepaceResponseBody extends TeaModel {
-    // The number of configurations.
+    /**
+     * <p>The number of configurations.</p>
+     */
     @NameInMap("ConfigCount")
     public String configCount;
 
-    // The error code returned if the request failed.
+    /**
+     * <p>The error code returned if the request failed.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // The HTTP status code returned.
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpCode")
     public String httpCode;
 
-    // The message returned.
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
-    // The ID of the namespace.
+    /**
+     * <p>The ID of the namespace.</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
-    // The description of the namespace.
+    /**
+     * <p>The description of the namespace.</p>
+     */
     @NameInMap("NamespaceDesc")
     public String namespaceDesc;
 
-    // The display name of the namespace.
+    /**
+     * <p>The display name of the namespace.</p>
+     */
     @NameInMap("NamespaceShowName")
     public String namespaceShowName;
 
-    // The quota of configurations.
+    /**
+     * <p>The quota of configurations.</p>
+     */
     @NameInMap("Quota")
     public String quota;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request was successful. Valid values:
-    // 
-    // *   `true`: The request was successful.
-    // *   `false`: The request failed.
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request was successful.</p>
+     * <p>*   `false`: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
-    // The type of the namespace. Valid values:
-    // 
-    // *   0: global configuration
-    // *   1: default namespace
-    // *   2: custom namespace
+    /**
+     * <p>The type of the namespace. Valid values:</p>
+     * <br>
+     * <p>*   0: global configuration</p>
+     * <p>*   1: default namespace</p>
+     * <p>*   2: custom namespace</p>
+     */
     @NameInMap("Type")
     public String type;
 

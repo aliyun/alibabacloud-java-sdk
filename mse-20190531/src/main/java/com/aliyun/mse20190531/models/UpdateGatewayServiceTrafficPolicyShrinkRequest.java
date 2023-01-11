@@ -4,26 +4,36 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class UpdateGatewayServiceTrafficPolicyShrinkRequest extends TeaModel {
-    // The language of the response. Valid values:
-    // 
-    // *   **zh-CN**: Chinese. This is the default value.
-    // *   **en-US**: English
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   **zh-CN**: Chinese. This is the default value.</p>
+     * <p>*   **en-US**: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // The ID of the gateway.
+    /**
+     * <p>The ID of the gateway.</p>
+     */
     @NameInMap("GatewayId")
     public Long gatewayId;
 
-    // The traffic policy of the service.
+    /**
+     * <p>The traffic policy of the service.</p>
+     */
     @NameInMap("GatewayTrafficPolicy")
     public String gatewayTrafficPolicyShrink;
 
-    // The unique ID of the gateway.
+    /**
+     * <p>The unique ID of the gateway.</p>
+     */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
-    // The ID of the service.
+    /**
+     * <p>The ID of the service.</p>
+     */
     @NameInMap("ServiceId")
     public Long serviceId;
 
