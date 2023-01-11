@@ -32,63 +32,123 @@ public class RecognizeVATInvoiceResponseBody extends TeaModel {
     }
 
     public static class RecognizeVATInvoiceResponseBodyDataBox extends TeaModel {
+        /**
+         * <p>1</p>
+         */
         @NameInMap("Checkers")
         public java.util.List<Float> checkers;
 
+        /**
+         * <p>1</p>
+         */
         @NameInMap("Clerks")
         public java.util.List<Float> clerks;
 
+        /**
+         * <p>1</p>
+         */
         @NameInMap("InvoiceAmounts")
         public java.util.List<Float> invoiceAmounts;
 
+        /**
+         * <p>1</p>
+         */
         @NameInMap("InvoiceCodes")
         public java.util.List<Float> invoiceCodes;
 
+        /**
+         * <p>1</p>
+         */
         @NameInMap("InvoiceDates")
         public java.util.List<Float> invoiceDates;
 
+        /**
+         * <p>1</p>
+         */
         @NameInMap("InvoiceFakeCodes")
         public java.util.List<Float> invoiceFakeCodes;
 
+        /**
+         * <p>1</p>
+         */
         @NameInMap("InvoiceNoes")
         public java.util.List<Float> invoiceNoes;
 
+        /**
+         * <p>1</p>
+         */
         @NameInMap("ItemNames")
         public java.util.List<Integer> itemNames;
 
+        /**
+         * <p>1</p>
+         */
         @NameInMap("PayeeAddresses")
         public java.util.List<Float> payeeAddresses;
 
+        /**
+         * <p>1</p>
+         */
         @NameInMap("PayeeBankNames")
         public java.util.List<Float> payeeBankNames;
 
+        /**
+         * <p>1</p>
+         */
         @NameInMap("PayeeNames")
         public java.util.List<Float> payeeNames;
 
+        /**
+         * <p>1</p>
+         */
         @NameInMap("PayeeRegisterNoes")
         public java.util.List<Float> payeeRegisterNoes;
 
+        /**
+         * <p>1</p>
+         */
         @NameInMap("Payees")
         public java.util.List<Float> payees;
 
+        /**
+         * <p>1</p>
+         */
         @NameInMap("PayerAddresses")
         public java.util.List<Float> payerAddresses;
 
+        /**
+         * <p>1</p>
+         */
         @NameInMap("PayerBankNames")
         public java.util.List<Float> payerBankNames;
 
+        /**
+         * <p>1</p>
+         */
         @NameInMap("PayerNames")
         public java.util.List<Float> payerNames;
 
+        /**
+         * <p>1</p>
+         */
         @NameInMap("PayerRegisterNoes")
         public java.util.List<Float> payerRegisterNoes;
 
+        /**
+         * <p>1</p>
+         */
         @NameInMap("SumAmounts")
         public java.util.List<Float> sumAmounts;
 
+        /**
+         * <p>1</p>
+         */
         @NameInMap("TaxAmounts")
         public java.util.List<Float> taxAmounts;
 
+        /**
+         * <p>1</p>
+         */
         @NameInMap("WithoutTaxAmounts")
         public java.util.List<Float> withoutTaxAmounts;
 
@@ -281,6 +341,9 @@ public class RecognizeVATInvoiceResponseBody extends TeaModel {
         @NameInMap("InvoiceNo")
         public String invoiceNo;
 
+        /**
+         * <p>1</p>
+         */
         @NameInMap("ItemName")
         public java.util.List<String> itemName;
 

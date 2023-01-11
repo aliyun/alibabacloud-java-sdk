@@ -4,6 +4,9 @@ package com.aliyun.ocr20191230.models;
 import com.aliyun.tea.*;
 
 public class RecognizeQrCodeAdvanceRequest extends TeaModel {
+    /**
+     * <p>1</p>
+     */
     @NameInMap("Tasks")
     public java.util.List<RecognizeQrCodeAdvanceRequestTasks> tasks;
 

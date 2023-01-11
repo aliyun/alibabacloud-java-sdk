@@ -35,6 +35,9 @@ public class RecognizeQrCodeResponseBody extends TeaModel {
         @NameInMap("Label")
         public String label;
 
+        /**
+         * <p>1</p>
+         */
         @NameInMap("QrCodesData")
         public java.util.List<String> qrCodesData;
 
