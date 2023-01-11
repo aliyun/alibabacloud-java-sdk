@@ -4,30 +4,42 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetBlackWhiteListResponseBody extends TeaModel {
-    // The status code returned. A value of 200 indicates that the request is successful.
+    /**
+     * <p>The status code returned. A value of 200 indicates that the request is successful.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
-    // The data of the node.
+    /**
+     * <p>The data of the node.</p>
+     */
     @NameInMap("Data")
     public GetBlackWhiteListResponseBodyData data;
 
-    // The HTTP status code returned.
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // The message returned.
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request was successful. Valid values:
-    // 
-    // *   `true`: The request was successful.
-    // *   `false`: The request failed.
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request was successful.</p>
+     * <p>*   `false`: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -85,47 +97,69 @@ public class GetBlackWhiteListResponseBody extends TeaModel {
     }
 
     public static class GetBlackWhiteListResponseBodyData extends TeaModel {
-        // The content of the blacklist.
+        /**
+         * <p>The content of the blacklist.</p>
+         */
         @NameInMap("Content")
         public String content;
 
-        // The ID of the gateway.
+        /**
+         * <p>The ID of the gateway.</p>
+         */
         @NameInMap("GatewayId")
         public Long gatewayId;
 
-        // The unique ID of the gateway.
+        /**
+         * <p>The unique ID of the gateway.</p>
+         */
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 
-        // The creation time.
+        /**
+         * <p>The creation time.</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
-        // The modification time.
+        /**
+         * <p>The modification time.</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
-        // The ID.
+        /**
+         * <p>The ID.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
-        // Indicates whether the whitelist is enabled.
+        /**
+         * <p>Indicates whether the whitelist is enabled.</p>
+         */
         @NameInMap("IsWhite")
         public Boolean isWhite;
 
-        // The ID of the resource.
+        /**
+         * <p>The ID of the resource.</p>
+         */
         @NameInMap("ResourceId")
         public Long resourceId;
 
-        // The type of a resource.
+        /**
+         * <p>The type of a resource.</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
-        // The status of the blacklist or whitelist.
+        /**
+         * <p>The status of the blacklist or whitelist.</p>
+         */
         @NameInMap("Status")
         public String status;
 
-        // The type.
+        /**
+         * <p>The type.</p>
+         */
         @NameInMap("Type")
         public String type;
 

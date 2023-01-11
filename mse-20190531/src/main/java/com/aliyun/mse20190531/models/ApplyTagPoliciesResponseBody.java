@@ -4,27 +4,39 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ApplyTagPoliciesResponseBody extends TeaModel {
-    // The status code returned.
+    /**
+     * <p>The status code returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
-    // The details of the data.
+    /**
+     * <p>The details of the data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ApplyTagPoliciesResponseBodyData> data;
 
-    // The HTTP status code returned.
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // The message returned.
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request is successful.
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -82,46 +94,66 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
     }
 
     public static class ApplyTagPoliciesResponseBodyData extends TeaModel {
-        // Indicates whether the field is the primary key.
+        /**
+         * <p>Indicates whether the field is the primary key.</p>
+         */
         @NameInMap("CarryData")
         public Boolean carryData;
 
-        // Indicates whether the routing rule is enabled.
-        // 
-        // *   `true`: enabled
-        // *   `false`: disabled
+        /**
+         * <p>Indicates whether the routing rule is enabled.</p>
+         * <br>
+         * <p>*   `true`: enabled</p>
+         * <p>*   `false`: disabled</p>
+         */
         @NameInMap("Enable")
         public Boolean enable;
 
-        // The ID of the primary key.
+        /**
+         * <p>The ID of the primary key.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
-        // The number of instances.
+        /**
+         * <p>The number of instances.</p>
+         */
         @NameInMap("InstanceNum")
         public Integer instanceNum;
 
-        // The policy name.
+        /**
+         * <p>The policy name.</p>
+         */
         @NameInMap("Name")
         public String name;
 
-        // The rate.
+        /**
+         * <p>The rate.</p>
+         */
         @NameInMap("Rate")
         public Integer rate;
 
-        // Indicates whether the routing rule is deleted.
+        /**
+         * <p>Indicates whether the routing rule is deleted.</p>
+         */
         @NameInMap("Remove")
         public Boolean remove;
 
-        // The details of the routing rule.
+        /**
+         * <p>The details of the routing rule.</p>
+         */
         @NameInMap("Rules")
         public String rules;
 
-        // The status.
+        /**
+         * <p>The status.</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
-        // The tag.
+        /**
+         * <p>The tag.</p>
+         */
         @NameInMap("Tag")
         public String tag;
 

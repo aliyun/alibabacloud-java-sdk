@@ -4,46 +4,66 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListNacosConfigsResponseBody extends TeaModel {
-    // The status code returned.
+    /**
+     * <p>The status code returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
-    // The configurations.
+    /**
+     * <p>The configurations.</p>
+     */
     @NameInMap("Configurations")
     public java.util.List<ListNacosConfigsResponseBodyConfigurations> configurations;
 
-    // The error code returned if the request failed.
+    /**
+     * <p>The error code returned if the request failed.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // The HTTP status code returned.
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpCode")
     public String httpCode;
 
-    // The message returned.
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
-    // The page number of the returned page.
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // The number of entries returned per page.
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request was successful. Valid values:
-    // 
-    // *   `true`: The request was successful.
-    // *   `false`: The request failed.
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request was successful.</p>
+     * <p>*   `false`: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
-    // The total number of instances.
+    /**
+     * <p>The total number of instances.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -133,19 +153,27 @@ public class ListNacosConfigsResponseBody extends TeaModel {
     }
 
     public static class ListNacosConfigsResponseBodyConfigurations extends TeaModel {
-        // The name of the application.
+        /**
+         * <p>The name of the application.</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
-        // The ID of the configuration.
+        /**
+         * <p>The ID of the configuration.</p>
+         */
         @NameInMap("DataId")
         public String dataId;
 
-        // The ID of the group.
+        /**
+         * <p>The ID of the group.</p>
+         */
         @NameInMap("Group")
         public String group;
 
-        // The ID of the application.
+        /**
+         * <p>The ID of the application.</p>
+         */
         @NameInMap("Id")
         public String id;
 

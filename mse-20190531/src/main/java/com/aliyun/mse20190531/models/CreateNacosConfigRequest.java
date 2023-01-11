@@ -4,50 +4,72 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class CreateNacosConfigRequest extends TeaModel {
-    // The language of the response. Valid values:
-    // 
-    // *   zh: Chinese
-    // *   en: English
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // The name of the application.
+    /**
+     * <p>The name of the application.</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
-    // The list of IP addresses where the beta release of the configuration is performed.
+    /**
+     * <p>The list of IP addresses where the beta release of the configuration is performed.</p>
+     */
     @NameInMap("BetaIps")
     public String betaIps;
 
-    // The content of the configuration.
+    /**
+     * <p>The content of the configuration.</p>
+     */
     @NameInMap("Content")
     public String content;
 
-    // The ID of the data.
+    /**
+     * <p>The ID of the data.</p>
+     */
     @NameInMap("DataId")
     public String dataId;
 
-    // The description of the configuration.
+    /**
+     * <p>The description of the configuration.</p>
+     */
     @NameInMap("Desc")
     public String desc;
 
-    // The ID of the group.
+    /**
+     * <p>The ID of the group.</p>
+     */
     @NameInMap("Group")
     public String group;
 
-    // The ID of the instance.
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // The ID of the namespace.
+    /**
+     * <p>The ID of the namespace.</p>
+     */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
-    // The tags of the configuration.
+    /**
+     * <p>The tags of the configuration.</p>
+     */
     @NameInMap("Tags")
     public String tags;
 
-    // The format of the configuration. Supported formats include TEXT, JSON, and XML.
+    /**
+     * <p>The format of the configuration. Supported formats include TEXT, JSON, and XML.</p>
+     */
     @NameInMap("Type")
     public String type;
 

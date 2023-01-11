@@ -4,49 +4,67 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class UpdateGatewayDomainRequest extends TeaModel {
-    // The language of the response. Valid values:
-    // 
-    // *   zh: Chinese
-    // *   en: English
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // The ID of the certificate.
+    /**
+     * <p>The ID of the certificate.</p>
+     */
     @NameInMap("CertIdentifier")
     public String certIdentifier;
 
-    // The unique ID of the gateway.
+    /**
+     * <p>The unique ID of the gateway.</p>
+     */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
-    // Specifies whether to enable `HTTP/2`.
-    // 
-    // *   `open`: `HTTP/2` is enabled.
-    // *   `close`: `HTTP/2` is disabled.
-    // *   `globalConfig`: Global configurations are used.
+    /**
+     * <p>Specifies whether to enable `HTTP/2`.</p>
+     * <br>
+     * <p>*   `open`: `HTTP/2` is enabled.</p>
+     * <p>*   `close`: `HTTP/2` is disabled.</p>
+     * <p>*   `globalConfig`: Global configurations are used.</p>
+     */
     @NameInMap("Http2")
     public String http2;
 
-    // The ID of the domain name that you want to update.
+    /**
+     * <p>The ID of the domain name that you want to update.</p>
+     */
     @NameInMap("Id")
     public Long id;
 
-    // Specifies whether to forcibly use HTTPS.
+    /**
+     * <p>Specifies whether to forcibly use HTTPS.</p>
+     */
     @NameInMap("MustHttps")
     public Boolean mustHttps;
 
-    // The type of the protocol. Valid values:
-    // 
-    // *   HTTPS
-    // *   HTTP
+    /**
+     * <p>The type of the protocol. Valid values:</p>
+     * <br>
+     * <p>*   HTTPS</p>
+     * <p>*   HTTP</p>
+     */
     @NameInMap("Protocol")
     public String protocol;
 
-    // The maximum version of Transport Layer Security (TLS).
+    /**
+     * <p>The maximum version of Transport Layer Security (TLS).</p>
+     */
     @NameInMap("TlsMax")
     public String tlsMax;
 
-    // The minimum version of TLS.
+    /**
+     * <p>The minimum version of TLS.</p>
+     */
     @NameInMap("TlsMin")
     public String tlsMin;
 

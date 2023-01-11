@@ -4,22 +4,30 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class QueryClusterDetailRequest extends TeaModel {
-    // The language of the response. Valid values:
-    // 
-    // *   zh: Chinese
-    // *   en: English
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // Specifies whether to query access control lists (ACLs).
+    /**
+     * <p>Specifies whether to query access control lists (ACLs).</p>
+     */
     @NameInMap("AclSwitch")
     public Boolean aclSwitch;
 
-    // The ID of the instance.
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // The ID of the order.
+    /**
+     * <p>The ID of the order.</p>
+     */
     @NameInMap("OrderId")
     public String orderId;
 

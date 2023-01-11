@@ -4,24 +4,30 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class QueryClusterSpecificationRequest extends TeaModel {
-    // The language of the response. Valid values:
-    // 
-    // *   zh: Chinese
-    // *   en: English
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // The network type. Valid values:
-    // 
-    // *   slb
-    // *   eni
+    /**
+     * <p>The network type. Valid values:</p>
+     * <br>
+     * <p>*   slb</p>
+     * <p>*   eni</p>
+     */
     @NameInMap("ConnectType")
     public String connectType;
 
-    // The edition of the MSE instance that you want to purchase.
-    // 
-    // *   mse_pro: Professional Edition
-    // *   mse_dev: Developer Edition
+    /**
+     * <p>The edition of the MSE instance that you want to purchase.</p>
+     * <br>
+     * <p>*   mse_pro: Professional Edition</p>
+     * <p>*   mse_dev: Developer Edition</p>
+     */
     @NameInMap("MseVersion")
     public String mseVersion;
 

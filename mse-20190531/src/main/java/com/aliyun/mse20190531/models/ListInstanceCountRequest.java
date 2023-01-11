@@ -4,35 +4,45 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListInstanceCountRequest extends TeaModel {
-    // The language of the response. Valid values:
-    // 
-    // *   zh: Chinese
-    // *   en: English
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // The type of the instance. Valid values: ZooKeeper and Nacos-Ans.
+    /**
+     * <p>The type of the instance. Valid values: ZooKeeper and Nacos-Ans.</p>
+     */
     @NameInMap("ClusterType")
     public String clusterType;
 
-    // The edition type of the instance. Valid values:
-    // 
-    // *   `mse_dev`: Developer Edition
-    // *   `mse_pro`: Professional Edition
+    /**
+     * <p>The edition type of the instance. Valid values:</p>
+     * <br>
+     * <p>*   `mse_dev`: Developer Edition</p>
+     * <p>*   `mse_pro`: Professional Edition</p>
+     */
     @NameInMap("MseVersion")
     public String mseVersion;
 
-    // The ID of the region where the instance resides. Examples:
-    // 
-    // *   cn-hangzhou: China (Hangzhou)
-    // *   cn-beijing: China (Beijing)
-    // *   cn-shanghai: China (Shanghai)
-    // *   cn-zhangjiakou: China (Zhangjiakou)
-    // *   cn-shenzhen: China (Shenzhen)
+    /**
+     * <p>The ID of the region where the instance resides. Examples:</p>
+     * <br>
+     * <p>*   cn-hangzhou: China (Hangzhou)</p>
+     * <p>*   cn-beijing: China (Beijing)</p>
+     * <p>*   cn-shanghai: China (Shanghai)</p>
+     * <p>*   cn-zhangjiakou: China (Zhangjiakou)</p>
+     * <p>*   cn-shenzhen: China (Shenzhen)</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The extended request parameters in the JSON format.
+    /**
+     * <p>The extended request parameters in the JSON format.</p>
+     */
     @NameInMap("RequestPars")
     public String requestPars;
 

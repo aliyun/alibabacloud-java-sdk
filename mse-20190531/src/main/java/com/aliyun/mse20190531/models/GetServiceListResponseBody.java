@@ -4,27 +4,39 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetServiceListResponseBody extends TeaModel {
-    // The status code returned.
+    /**
+     * <p>The status code returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
-    // The data entries returned.
+    /**
+     * <p>The data entries returned.</p>
+     */
     @NameInMap("Data")
     public java.util.List<GetServiceListResponseBodyData> data;
 
-    // The HTTP status code returned.
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // The message returned.
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request was successful.
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -82,27 +94,39 @@ public class GetServiceListResponseBody extends TeaModel {
     }
 
     public static class GetServiceListResponseBodyDataMethods extends TeaModel {
-        // The controller of the method.
+        /**
+         * <p>The controller of the method.</p>
+         */
         @NameInMap("MethodController")
         public String methodController;
 
-        // The name of the method.
+        /**
+         * <p>The name of the method.</p>
+         */
         @NameInMap("Name")
         public String name;
 
-        // The data types of the parameters.
+        /**
+         * <p>The data types of the parameters.</p>
+         */
         @NameInMap("ParameterTypes")
         public java.util.List<String> parameterTypes;
 
-        // The paths.
+        /**
+         * <p>The paths.</p>
+         */
         @NameInMap("Paths")
         public java.util.List<String> paths;
 
-        // The methods.
+        /**
+         * <p>The methods.</p>
+         */
         @NameInMap("RequestMethods")
         public java.util.List<String> requestMethods;
 
-        // The type of the return value.
+        /**
+         * <p>The type of the return value.</p>
+         */
         @NameInMap("ReturnType")
         public String returnType;
 
@@ -162,43 +186,63 @@ public class GetServiceListResponseBody extends TeaModel {
     }
 
     public static class GetServiceListResponseBodyData extends TeaModel {
-        // The name of the Dubbo application.
+        /**
+         * <p>The name of the Dubbo application.</p>
+         */
         @NameInMap("DubboApplicationName")
         public String dubboApplicationName;
 
-        // The name of the application.
+        /**
+         * <p>The name of the application.</p>
+         */
         @NameInMap("EdasAppName")
         public String edasAppName;
 
-        // The group.
+        /**
+         * <p>The group.</p>
+         */
         @NameInMap("Group")
         public String group;
 
-        // The metadata.
+        /**
+         * <p>The metadata.</p>
+         */
         @NameInMap("Metadata")
         public java.util.Map<String, ?> metadata;
 
-        // The methods.
+        /**
+         * <p>The methods.</p>
+         */
         @NameInMap("Methods")
         public java.util.List<GetServiceListResponseBodyDataMethods> methods;
 
-        // The type of the service registry.
+        /**
+         * <p>The type of the service registry.</p>
+         */
         @NameInMap("RegistryType")
         public String registryType;
 
-        // The name of the service.
+        /**
+         * <p>The name of the service.</p>
+         */
         @NameInMap("ServiceName")
         public String serviceName;
 
-        // The type of the service.
+        /**
+         * <p>The type of the service.</p>
+         */
         @NameInMap("ServiceType")
         public String serviceType;
 
-        // The name of the Spring application.
+        /**
+         * <p>The name of the Spring application.</p>
+         */
         @NameInMap("SpringApplicationName")
         public String springApplicationName;
 
-        // The version information.
+        /**
+         * <p>The version information.</p>
+         */
         @NameInMap("Version")
         public String version;
 

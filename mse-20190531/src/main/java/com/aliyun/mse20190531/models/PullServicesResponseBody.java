@@ -4,30 +4,42 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class PullServicesResponseBody extends TeaModel {
-    // The response code returned.
+    /**
+     * <p>The response code returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
-    // The data entries returned.
+    /**
+     * <p>The data entries returned.</p>
+     */
     @NameInMap("Data")
     public java.util.List<PullServicesResponseBodyData> data;
 
-    // The HTTP status code returned.
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // The message returned.
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request was successful. Valid values:
-    // 
-    // *   `true`: The request was successful.
-    // *   `false`: The request failed.
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request was successful.</p>
+     * <p>*   `false`: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -85,23 +97,33 @@ public class PullServicesResponseBody extends TeaModel {
     }
 
     public static class PullServicesResponseBodyDataServices extends TeaModel {
-        // The group.
+        /**
+         * <p>The group.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
-        // The name of the service.
+        /**
+         * <p>The name of the service.</p>
+         */
         @NameInMap("Name")
         public String name;
 
-        // The namespace.
+        /**
+         * <p>The namespace.</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
-        // The ID of the service source.
+        /**
+         * <p>The ID of the service source.</p>
+         */
         @NameInMap("SourceId")
         public String sourceId;
 
-        // The type of the service source.
+        /**
+         * <p>The type of the service source.</p>
+         */
         @NameInMap("SourceType")
         public String sourceType;
 
@@ -153,19 +175,27 @@ public class PullServicesResponseBody extends TeaModel {
     }
 
     public static class PullServicesResponseBodyData extends TeaModel {
-        // The group.
+        /**
+         * <p>The group.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
-        // The namespace.
+        /**
+         * <p>The namespace.</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
-        // The alias of the namespace.
+        /**
+         * <p>The alias of the namespace.</p>
+         */
         @NameInMap("NamespaceShowName")
         public String namespaceShowName;
 
-        // The information about services.
+        /**
+         * <p>The information about services.</p>
+         */
         @NameInMap("Services")
         public java.util.List<PullServicesResponseBodyDataServices> services;
 

@@ -4,26 +4,36 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetNacosHistoryConfigResponseBody extends TeaModel {
-    // The configuration information.
+    /**
+     * <p>The configuration information.</p>
+     */
     @NameInMap("Configuration")
     public GetNacosHistoryConfigResponseBodyConfiguration configuration;
 
-    // The error code returned if the request failed.
+    /**
+     * <p>The error code returned if the request failed.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // The message returned.
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request was successful. Valid values:
-    // 
-    // *   `true`: The request was successful.
-    // *   `false`: The request failed.
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request was successful.</p>
+     * <p>*   `false`: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -73,31 +83,45 @@ public class GetNacosHistoryConfigResponseBody extends TeaModel {
     }
 
     public static class GetNacosHistoryConfigResponseBodyConfiguration extends TeaModel {
-        // The name of the application.
+        /**
+         * <p>The name of the application.</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
-        // The content of the configuration.
+        /**
+         * <p>The content of the configuration.</p>
+         */
         @NameInMap("Content")
         public String content;
 
-        // The ID of the configuration.
+        /**
+         * <p>The ID of the configuration.</p>
+         */
         @NameInMap("DataId")
         public String dataId;
 
-        // The encryption key.
+        /**
+         * <p>The encryption key.</p>
+         */
         @NameInMap("EncryptedDataKey")
         public String encryptedDataKey;
 
-        // The name of the configuration group.
+        /**
+         * <p>The name of the configuration group.</p>
+         */
         @NameInMap("Group")
         public String group;
 
-        // The MD5 value of the configuration.
+        /**
+         * <p>The MD5 value of the configuration.</p>
+         */
         @NameInMap("Md5")
         public String md5;
 
-        // The configuration type.
+        /**
+         * <p>The configuration type.</p>
+         */
         @NameInMap("OpType")
         public String opType;
 

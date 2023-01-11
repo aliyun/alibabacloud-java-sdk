@@ -4,22 +4,30 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class UpdateGatewaySpecRequest extends TeaModel {
-    // The language of the response. Valid values:
-    // 
-    // *   zh: Chinese
-    // *   en: English
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // The ID of the gateway.
+    /**
+     * <p>The ID of the gateway.</p>
+     */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
-    // The number of nodes.
+    /**
+     * <p>The number of nodes.</p>
+     */
     @NameInMap("Replica")
     public Integer replica;
 
-    // The node specifications of the gateway.
+    /**
+     * <p>The node specifications of the gateway.</p>
+     */
     @NameInMap("Spec")
     public String spec;
 

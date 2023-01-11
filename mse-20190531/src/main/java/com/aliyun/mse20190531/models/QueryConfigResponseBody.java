@@ -4,30 +4,42 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class QueryConfigResponseBody extends TeaModel {
-    // The status code returned.
+    /**
+     * <p>The status code returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
-    // The details of the data.
+    /**
+     * <p>The details of the data.</p>
+     */
     @NameInMap("Data")
     public QueryConfigResponseBodyData data;
 
-    // The HTTP status code returned.
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // The message returned.
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request was successful. Valid values:
-    // 
-    // *   `true`: The request was successful.
-    // *   `false`: The request failed.
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request was successful.</p>
+     * <p>*   `false`: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -104,146 +116,196 @@ public class QueryConfigResponseBody extends TeaModel {
     }
 
     public static class QueryConfigResponseBodyData extends TeaModel {
-        // A reserved parameter.
+        /**
+         * <p>A reserved parameter.</p>
+         */
         @NameInMap("AutopurgePurgeInterval")
         public String autopurgePurgeInterval;
 
-        // A reserved parameter.
+        /**
+         * <p>A reserved parameter.</p>
+         */
         @NameInMap("AutopurgeSnapRetainCount")
         public String autopurgeSnapRetainCount;
 
-        // The name of the instance.
+        /**
+         * <p>The name of the instance.</p>
+         */
         @NameInMap("ClusterName")
         public String clusterName;
 
-        // Indicates whether RAM authorization of a configuration center is enabled. This parameter is valid for Nacos instances. Valid values:
-        // 
-        // *   `true`: enabled
-        // *   `false`: disabled
+        /**
+         * <p>Indicates whether RAM authorization of a configuration center is enabled. This parameter is valid for Nacos instances. Valid values:</p>
+         * <br>
+         * <p>*   `true`: enabled</p>
+         * <p>*   `false`: disabled</p>
+         */
         @NameInMap("ConfigAuthEnabled")
         public Boolean configAuthEnabled;
 
-        // Indicates whether RAM authorization is supported by a configuration center of the instance. This parameter is valid for Nacos instances. Valid values:
-        // 
-        // *   `true`: supported
-        // *   `false`: not supported
+        /**
+         * <p>Indicates whether RAM authorization is supported by a configuration center of the instance. This parameter is valid for Nacos instances. Valid values:</p>
+         * <br>
+         * <p>*   `true`: supported</p>
+         * <p>*   `false`: not supported</p>
+         */
         @NameInMap("ConfigAuthSupported")
         public Boolean configAuthSupported;
 
         @NameInMap("ConfigContentLimit")
         public Long configContentLimit;
 
-        // Indicates whether configuration encryption of a configuration center is enabled by the instance. This parameter is valid for Nacos instances. Valid values:
-        // 
-        // *   `true`: enabled
-        // *   `false`: disabled
+        /**
+         * <p>Indicates whether configuration encryption of a configuration center is enabled by the instance. This parameter is valid for Nacos instances. Valid values:</p>
+         * <br>
+         * <p>*   `true`: enabled</p>
+         * <p>*   `false`: disabled</p>
+         */
         @NameInMap("ConfigSecretEnabled")
         public Boolean configSecretEnabled;
 
-        // Indicates whether configuration encryption of a configuration center is supported by the instance. This parameter is valid for Nacos instances. Valid values:
-        // 
-        // *   `true`: supported
-        // *   `false`: not supported
+        /**
+         * <p>Indicates whether configuration encryption of a configuration center is supported by the instance. This parameter is valid for Nacos instances. Valid values:</p>
+         * <br>
+         * <p>*   `true`: supported</p>
+         * <p>*   `false`: not supported</p>
+         */
         @NameInMap("ConfigSecretSupported")
         public Boolean configSecretSupported;
 
         @NameInMap("ExtendedTypesEnable")
         public Boolean extendedTypesEnable;
 
-        // The maximum connection duration of the instance. Unit: seconds. This parameter is valid for ZooKeeper instances.
+        /**
+         * <p>The maximum connection duration of the instance. Unit: seconds. This parameter is valid for ZooKeeper instances.</p>
+         */
         @NameInMap("InitLimit")
         public String initLimit;
 
-        // The maximum amount of data on each node. This parameter is valid for ZooKeeper instances. Unit: bytes.
+        /**
+         * <p>The maximum amount of data on each node. This parameter is valid for ZooKeeper instances. Unit: bytes.</p>
+         */
         @NameInMap("JuteMaxbuffer")
         public String juteMaxbuffer;
 
-        // A reserved parameter.
+        /**
+         * <p>A reserved parameter.</p>
+         */
         @NameInMap("JvmFlagsCustom")
         public String jvmFlagsCustom;
 
-        // Indicates whether Mesh Configuration Protocol (MCP) is enabled. This parameter is valid for Nacos instances. Valid values:
-        // 
-        // *   `true`: enabled
-        // *   `false`: disabled
+        /**
+         * <p>Indicates whether Mesh Configuration Protocol (MCP) is enabled. This parameter is valid for Nacos instances. Valid values:</p>
+         * <br>
+         * <p>*   `true`: enabled</p>
+         * <p>*   `false`: disabled</p>
+         */
         @NameInMap("MCPEnabled")
         public Boolean MCPEnabled;
 
-        // Indicates whether MCP is supported. This parameter is valid for Nacos instances. Valid values:
-        // 
-        // *   `true`: supported
-        // *   `false`: not supported
+        /**
+         * <p>Indicates whether MCP is supported. This parameter is valid for Nacos instances. Valid values:</p>
+         * <br>
+         * <p>*   `true`: supported</p>
+         * <p>*   `false`: not supported</p>
+         */
         @NameInMap("MCPSupported")
         public Boolean MCPSupported;
 
-        // The number of connections between a client and a server. This parameter is valid for ZooKeeper instances.\
-        // If this parameter is set to 0, no limits are imposed on the number of connections.
+        /**
+         * <p>The number of connections between a client and a server. This parameter is valid for ZooKeeper instances.\</p>
+         * <p>If this parameter is set to 0, no limits are imposed on the number of connections.</p>
+         */
         @NameInMap("MaxClientCnxns")
         public String maxClientCnxns;
 
-        // The maximum timeout period. This parameter is valid for ZooKeeper instances.
+        /**
+         * <p>The maximum timeout period. This parameter is valid for ZooKeeper instances.</p>
+         */
         @NameInMap("MaxSessionTimeout")
         public String maxSessionTimeout;
 
-        // The minimum timeout period. This parameter is valid for ZooKeeper instances.
+        /**
+         * <p>The minimum timeout period. This parameter is valid for ZooKeeper instances.</p>
+         */
         @NameInMap("MinSessionTimeout")
         public String minSessionTimeout;
 
         @NameInMap("NacosRunningEnv")
         public QueryConfigResponseBodyDataNacosRunningEnv nacosRunningEnv;
 
-        // Indicates whether RAM authorization of a registry is enabled. This parameter is valid for Nacos instances. Valid values:
-        // 
-        // *   `true`: enabled
-        // *   `false`: disabled
+        /**
+         * <p>Indicates whether RAM authorization of a registry is enabled. This parameter is valid for Nacos instances. Valid values:</p>
+         * <br>
+         * <p>*   `true`: enabled</p>
+         * <p>*   `false`: disabled</p>
+         */
         @NameInMap("NamingAuthEnabled")
         public Boolean namingAuthEnabled;
 
-        // Indicates whether RAM authorization of services is supported by the instance. This parameter is valid for Nacos instances. Valid values:
-        // 
-        // *   `true`: supported
-        // *   `false`: not supported
+        /**
+         * <p>Indicates whether RAM authorization of services is supported by the instance. This parameter is valid for Nacos instances. Valid values:</p>
+         * <br>
+         * <p>*   `true`: supported</p>
+         * <p>*   `false`: not supported</p>
+         */
         @NameInMap("NamingAuthSupported")
         public Boolean namingAuthSupported;
 
-        // Indicates whether service creation is supported for the instance. This parameter is valid for Nacos instances. Valid values:
-        // 
-        // *   `true`: supported
-        // *   `false`: not supported
+        /**
+         * <p>Indicates whether service creation is supported for the instance. This parameter is valid for Nacos instances. Valid values:</p>
+         * <br>
+         * <p>*   `true`: supported</p>
+         * <p>*   `false`: not supported</p>
+         */
         @NameInMap("NamingCreateServiceSupported")
         public Boolean namingCreateServiceSupported;
 
-        // Indicates whether super permissions are enabled. This parameter is valid for ZooKeeper instances. Valid values:
-        // 
-        // *   `true`: enabled
-        // *   `false`: disabled
+        /**
+         * <p>Indicates whether super permissions are enabled. This parameter is valid for ZooKeeper instances. Valid values:</p>
+         * <br>
+         * <p>*   `true`: enabled</p>
+         * <p>*   `false`: disabled</p>
+         */
         @NameInMap("OpenSuperAcl")
         public Boolean openSuperAcl;
 
-        // The user password. This parameter is valid only if OpenSuperAcl is set to true.
+        /**
+         * <p>The user password. This parameter is valid only if OpenSuperAcl is set to true.</p>
+         */
         @NameInMap("PassWord")
         public String passWord;
 
-        // Indicates whether the instance was restarted and new configurations have taken effect. Valid values:
-        // 
-        // *   `true`: The restart was successful.
-        // *   `false`: The restart failed.
+        /**
+         * <p>Indicates whether the instance was restarted and new configurations have taken effect. Valid values:</p>
+         * <br>
+         * <p>*   `true`: The restart was successful.</p>
+         * <p>*   `false`: The restart failed.</p>
+         */
         @NameInMap("RestartFlag")
         public Boolean restartFlag;
 
-        // The frequency for generating snapshots. This parameter is valid for ZooKeeper instances.
+        /**
+         * <p>The frequency for generating snapshots. This parameter is valid for ZooKeeper instances.</p>
+         */
         @NameInMap("SnapshotCount")
         public String snapshotCount;
 
-        // The connection timeout period of the instance. This parameter is valid for ZooKeeper instances. Unit: seconds.
+        /**
+         * <p>The connection timeout period of the instance. This parameter is valid for ZooKeeper instances. Unit: seconds.</p>
+         */
         @NameInMap("SyncLimit")
         public String syncLimit;
 
-        // The time unit of the engine. This parameter is valid for ZooKeeper instances. Default value: 2000. Unit: milliseconds.
+        /**
+         * <p>The time unit of the engine. This parameter is valid for ZooKeeper instances. Default value: 2000. Unit: milliseconds.</p>
+         */
         @NameInMap("TickTime")
         public String tickTime;
 
-        // The username. This parameter is valid only if OpenSuperAcl is set to true.
+        /**
+         * <p>The username. This parameter is valid only if OpenSuperAcl is set to true.</p>
+         */
         @NameInMap("UserName")
         public String userName;
 

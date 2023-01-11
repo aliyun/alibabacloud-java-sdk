@@ -4,51 +4,69 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class CreateMseServiceApplicationRequest extends TeaModel {
-    // The language of the response. Valid values:
-    // 
-    // *   zh: Chinese
-    // *   en: English
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // The name of the application.
+    /**
+     * <p>The name of the application.</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
-    // The additional information.
+    /**
+     * <p>The additional information.</p>
+     */
     @NameInMap("ExtraInfo")
     public String extraInfo;
 
-    // The programming language of the application.
+    /**
+     * <p>The programming language of the application.</p>
+     */
     @NameInMap("Language")
     public String language;
 
-    // The edition of the MSE instance that you want to purchase.
-    // 
-    // *   mse_pro: Professional Edition
-    // *   mse_dev: Developer Edition
+    /**
+     * <p>The edition of the MSE instance that you want to purchase.</p>
+     * <br>
+     * <p>*   mse_pro: Professional Edition</p>
+     * <p>*   mse_dev: Developer Edition</p>
+     */
     @NameInMap("MseVersion")
     public String mseVersion;
 
-    // The ID of the region where the Microservices Engine (MSE) instance resides. Examples:
-    // 
-    // *   cn-hangzhou: China (Hangzhou)
-    // *   cn-beijing: China (Beijing)
-    // *   cn-shanghai: China (Shanghai)
-    // *   cn-zhangjiakou: China (Zhangjiakou)
-    // *   cn-shenzhen: China (Shenzhen)
+    /**
+     * <p>The ID of the region where the Microservices Engine (MSE) instance resides. Examples:</p>
+     * <br>
+     * <p>*   cn-hangzhou: China (Hangzhou)</p>
+     * <p>*   cn-beijing: China (Beijing)</p>
+     * <p>*   cn-shanghai: China (Shanghai)</p>
+     * <p>*   cn-zhangjiakou: China (Zhangjiakou)</p>
+     * <p>*   cn-shenzhen: China (Shenzhen)</p>
+     */
     @NameInMap("Region")
     public String region;
 
-    // Specifies whether to enable the Sentinel-compatible mode.
+    /**
+     * <p>Specifies whether to enable the Sentinel-compatible mode.</p>
+     */
     @NameInMap("SentinelEnable")
     public String sentinelEnable;
 
-    // The service source.
+    /**
+     * <p>The service source.</p>
+     */
     @NameInMap("Source")
     public String source;
 
-    // Specifies whether to enable switching.
+    /**
+     * <p>Specifies whether to enable switching.</p>
+     */
     @NameInMap("SwitchEnable")
     public String switchEnable;
 

@@ -4,33 +4,45 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class AddGatewaySlbResponseBody extends TeaModel {
-    // The response code returned.
+    /**
+     * <p>The response code returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
-    // The returned data.
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public String data;
 
-    // The HTTP status code returned.
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // The message returned.
-    // 
-    // *   If the request is successful, a success message is returned.
-    // *   If the request fails, an error message is returned.
+    /**
+     * <p>The message returned.</p>
+     * <br>
+     * <p>*   If the request is successful, a success message is returned.</p>
+     * <p>*   If the request fails, an error message is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request was successful. Valid values:
-    // 
-    // *   `true`: The request was successful.
-    // *   `false`: The request failed.
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request was successful.</p>
+     * <p>*   `false`: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

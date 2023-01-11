@@ -4,26 +4,36 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ImportNacosConfigRequest extends TeaModel {
-    // The language of the response. Valid values:
-    // 
-    // *   zh: Chinese
-    // *   en: English
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // The download URL of the configuration file.
+    /**
+     * <p>The download URL of the configuration file.</p>
+     */
     @NameInMap("FileUrl")
     public String fileUrl;
 
-    // The ID of the instance.
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // The ID of the namespace.
+    /**
+     * <p>The ID of the namespace.</p>
+     */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
-    // The policy.
+    /**
+     * <p>The policy.</p>
+     */
     @NameInMap("Policy")
     public String policy;
 

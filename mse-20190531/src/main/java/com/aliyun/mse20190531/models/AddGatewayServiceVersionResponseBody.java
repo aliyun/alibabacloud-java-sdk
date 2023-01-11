@@ -4,30 +4,42 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class AddGatewayServiceVersionResponseBody extends TeaModel {
-    // The status code returned. The value 200 indicates that the request is successfully processed.
+    /**
+     * <p>The status code returned. The value 200 indicates that the request is successfully processed.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
-    // The ID of the created service version.
+    /**
+     * <p>The ID of the created service version.</p>
+     */
     @NameInMap("Data")
     public Long data;
 
-    // The HTTP status code returned.
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // The error message returned if the request failed.
+    /**
+     * <p>The error message returned if the request failed.</p>
+     */
     @NameInMap("Message")
     public String message;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request was successful. Valid values:
-    // 
-    // *   `true`: The request was successful.
-    // *   `false`: The request failed.
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request was successful.</p>
+     * <p>*   `false`: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

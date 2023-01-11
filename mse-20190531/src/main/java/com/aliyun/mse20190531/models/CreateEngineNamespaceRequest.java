@@ -4,34 +4,48 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class CreateEngineNamespaceRequest extends TeaModel {
-    // The language of the response. Valid values:
-    // 
-    // *   zh: Chinese
-    // *   en: English
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // The ID of the cluster.
+    /**
+     * <p>The ID of the cluster.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
-    // The description of the namespace.
+    /**
+     * <p>The description of the namespace.</p>
+     */
     @NameInMap("Desc")
     public String desc;
 
-    // The custom ID of the namespace. If you do not specify this parameter, the automatically generated Universally Unique Identifier (UUID) is returned.
+    /**
+     * <p>The custom ID of the namespace. If you do not specify this parameter, the automatically generated Universally Unique Identifier (UUID) is returned.</p>
+     */
     @NameInMap("Id")
     public String id;
 
-    // The ID of the instance.
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // The display name of the namespace.
+    /**
+     * <p>The display name of the namespace.</p>
+     */
     @NameInMap("Name")
     public String name;
 
-    // The maximum number of services that can run in the namespace.
+    /**
+     * <p>The maximum number of services that can run in the namespace.</p>
+     */
     @NameInMap("ServiceCount")
     public Integer serviceCount;
 

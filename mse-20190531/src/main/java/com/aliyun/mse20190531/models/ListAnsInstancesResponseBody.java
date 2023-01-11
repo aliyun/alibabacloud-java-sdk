@@ -4,42 +4,60 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListAnsInstancesResponseBody extends TeaModel {
-    // The details of the data.
+    /**
+     * <p>The details of the data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListAnsInstancesResponseBodyData> data;
 
-    // The error code returned if the request failed.
+    /**
+     * <p>The error code returned if the request failed.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // The HTTP status code returned.
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpCode")
     public String httpCode;
 
-    // The message returned.
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
-    // The page number of the returned page.
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // The number of entries returned per page.
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request was successful. Valid values:
-    // 
-    // *   `true`: The request was successful.
-    // *   `false`: The request failed.
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request was successful.</p>
+     * <p>*   `false`: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
-    // The total number of returned instances.
+    /**
+     * <p>The total number of returned instances.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -121,95 +139,135 @@ public class ListAnsInstancesResponseBody extends TeaModel {
     }
 
     public static class ListAnsInstancesResponseBodyData extends TeaModel {
-        // The name of the application.
+        /**
+         * <p>The name of the application.</p>
+         */
         @NameInMap("App")
         public String app;
 
-        // The name of the cluster.
+        /**
+         * <p>The name of the cluster.</p>
+         */
         @NameInMap("ClusterName")
         public String clusterName;
 
-        // The reference key.
+        /**
+         * <p>The reference key.</p>
+         */
         @NameInMap("DatumKey")
         public String datumKey;
 
-        // The default key.
+        /**
+         * <p>The default key.</p>
+         */
         @NameInMap("DefaultKey")
         public String defaultKey;
 
-        // The effective status of the instance. Valid values:
-        // 
-        // *   `true`: The instance takes effect.
-        // *   `false`: The instance does not take effect.
+        /**
+         * <p>The effective status of the instance. Valid values:</p>
+         * <br>
+         * <p>*   `true`: The instance takes effect.</p>
+         * <p>*   `false`: The instance does not take effect.</p>
+         */
         @NameInMap("Enabled")
         public Boolean enabled;
 
-        // Indicates whether the information about the temporary node is obtained. Valid values:
-        // 
-        // *   `true`: yes
-        // *   `false`: no
+        /**
+         * <p>Indicates whether the information about the temporary node is obtained. Valid values:</p>
+         * <br>
+         * <p>*   `true`: yes</p>
+         * <p>*   `false`: no</p>
+         */
         @NameInMap("Ephemeral")
         public Boolean ephemeral;
 
-        // The number of failed checks.
+        /**
+         * <p>The number of failed checks.</p>
+         */
         @NameInMap("FailCount")
         public Integer failCount;
 
-        // The health status of the instance. Valid values:
-        // 
-        // *   `true`: The instance is healthy.
-        // *   `false`: The instance is unhealthy.
+        /**
+         * <p>The health status of the instance. Valid values:</p>
+         * <br>
+         * <p>*   `true`: The instance is healthy.</p>
+         * <p>*   `false`: The instance is unhealthy.</p>
+         */
         @NameInMap("Healthy")
         public Boolean healthy;
 
-        // The heartbeat interval of the instance. Unit: seconds.
+        /**
+         * <p>The heartbeat interval of the instance. Unit: seconds.</p>
+         */
         @NameInMap("InstanceHeartBeatInterval")
         public Integer instanceHeartBeatInterval;
 
-        // The timeout period of the instance heartbeat.
+        /**
+         * <p>The timeout period of the instance heartbeat.</p>
+         */
         @NameInMap("InstanceHeartBeatTimeOut")
         public Integer instanceHeartBeatTimeOut;
 
-        // The ID of the instance.
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        // The public IP address.
+        /**
+         * <p>The public IP address.</p>
+         */
         @NameInMap("Ip")
         public String ip;
 
-        // The timeout period for removing an IP address.
+        /**
+         * <p>The timeout period for removing an IP address.</p>
+         */
         @NameInMap("IpDeleteTimeout")
         public Integer ipDeleteTimeout;
 
-        // The last heartbeat time.
+        /**
+         * <p>The last heartbeat time.</p>
+         */
         @NameInMap("LastBeat")
         public Long lastBeat;
 
-        // Indicates whether the instance was marked. Valid values:
-        // 
-        // *   `true`: The instance marking was successful.
-        // *   `false`: The instance marking failed.
+        /**
+         * <p>Indicates whether the instance was marked. Valid values:</p>
+         * <br>
+         * <p>*   `true`: The instance marking was successful.</p>
+         * <p>*   `false`: The instance marking failed.</p>
+         */
         @NameInMap("Marked")
         public Boolean marked;
 
-        // The metadata.
+        /**
+         * <p>The metadata.</p>
+         */
         @NameInMap("Metadata")
         public java.util.Map<String, ?> metadata;
 
-        // The number of successful checks.
+        /**
+         * <p>The number of successful checks.</p>
+         */
         @NameInMap("OkCount")
         public Integer okCount;
 
-        // The port number.
+        /**
+         * <p>The port number.</p>
+         */
         @NameInMap("Port")
         public Integer port;
 
-        // The name of the service.
+        /**
+         * <p>The name of the service.</p>
+         */
         @NameInMap("ServiceName")
         public String serviceName;
 
-        // The weight.
+        /**
+         * <p>The weight.</p>
+         */
         @NameInMap("Weight")
         public Integer weight;
 

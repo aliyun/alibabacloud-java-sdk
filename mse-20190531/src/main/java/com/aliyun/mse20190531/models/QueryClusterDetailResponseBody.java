@@ -4,26 +4,36 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class QueryClusterDetailResponseBody extends TeaModel {
-    // The details of the data.
+    /**
+     * <p>The details of the data.</p>
+     */
     @NameInMap("Data")
     public QueryClusterDetailResponseBodyData data;
 
-    // The error code returned if the request failed.
+    /**
+     * <p>The error code returned if the request failed.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // The message returned.
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request was successful. Valid values:
-    // 
-    // *   `true`: The request was successful.
-    // *   `false`: The request failed.
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request was successful.</p>
+     * <p>*   `false`: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -73,35 +83,51 @@ public class QueryClusterDetailResponseBody extends TeaModel {
     }
 
     public static class QueryClusterDetailResponseBodyDataInstanceModels extends TeaModel {
-        // The timestamp when the instance node was created.
+        /**
+         * <p>The timestamp when the instance node was created.</p>
+         */
         @NameInMap("CreationTimestamp")
         public String creationTimestamp;
 
-        // The health status of the instance node.
+        /**
+         * <p>The health status of the instance node.</p>
+         */
         @NameInMap("HealthStatus")
         public String healthStatus;
 
-        // The public IP address.
+        /**
+         * <p>The public IP address.</p>
+         */
         @NameInMap("InternetIp")
         public String internetIp;
 
-        // The IP address of the node.
+        /**
+         * <p>The IP address of the node.</p>
+         */
         @NameInMap("Ip")
         public String ip;
 
-        // The name of the pod.
+        /**
+         * <p>The name of the pod.</p>
+         */
         @NameInMap("PodName")
         public String podName;
 
-        // The role.
+        /**
+         * <p>The role.</p>
+         */
         @NameInMap("Role")
         public String role;
 
-        // The single-thread IP address.
+        /**
+         * <p>The single-thread IP address.</p>
+         */
         @NameInMap("SingleTunnelVip")
         public String singleTunnelVip;
 
-        // The zone.
+        /**
+         * <p>The zone.</p>
+         */
         @NameInMap("Zone")
         public String zone;
 
@@ -177,158 +203,232 @@ public class QueryClusterDetailResponseBody extends TeaModel {
     }
 
     public static class QueryClusterDetailResponseBodyData extends TeaModel {
-        // The whitelist.
+        /**
+         * <p>The whitelist.</p>
+         */
         @NameInMap("AclEntryList")
         public String aclEntryList;
 
-        // The ID of the whitelist.
+        /**
+         * <p>The ID of the whitelist.</p>
+         */
         @NameInMap("AclId")
         public String aclId;
 
-        // The application version.
+        /**
+         * <p>The application version.</p>
+         */
         @NameInMap("AppVersion")
         public String appVersion;
 
-        // The billing method, such as subscription or pay-as-you-go.
+        /**
+         * <p>The billing method, such as subscription or pay-as-you-go.</p>
+         */
         @NameInMap("ChargeType")
         public String chargeType;
 
-        // The alias of the instance.
+        /**
+         * <p>The alias of the instance.</p>
+         */
         @NameInMap("ClusterAliasName")
         public String clusterAliasName;
 
-        // The name of the instance.
+        /**
+         * <p>The name of the instance.</p>
+         */
         @NameInMap("ClusterName")
         public String clusterName;
 
-        // The engine specifications.
+        /**
+         * <p>The engine specifications.</p>
+         */
         @NameInMap("ClusterSpecification")
         public String clusterSpecification;
 
-        // The type of the instance. Valid values: ZooKeeper, Nacos-Ans, and Eureka.
+        /**
+         * <p>The type of the instance. Valid values: ZooKeeper, Nacos-Ans, and Eureka.</p>
+         */
         @NameInMap("ClusterType")
         public String clusterType;
 
-        // The version of the instance.
+        /**
+         * <p>The version of the instance.</p>
+         */
         @NameInMap("ClusterVersion")
         public String clusterVersion;
 
-        // The network connection type. Valid values:
-        // 
-        // *   slb
-        // *   eni
+        /**
+         * <p>The network connection type. Valid values:</p>
+         * <br>
+         * <p>*   slb</p>
+         * <p>*   eni</p>
+         */
         @NameInMap("ConnectionType")
         public String connectionType;
 
-        // The number of vCPUs.
+        /**
+         * <p>The number of vCPUs.</p>
+         */
         @NameInMap("Cpu")
         public Integer cpu;
 
-        // The time when the instance was created.
+        /**
+         * <p>The time when the instance was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        // The capacity of the disk. Unit: GB.
+        /**
+         * <p>The capacity of the disk. Unit: GB.</p>
+         */
         @NameInMap("DiskCapacity")
         public Long diskCapacity;
 
-        // The type of the disk.
+        /**
+         * <p>The type of the disk.</p>
+         */
         @NameInMap("DiskType")
         public String diskType;
 
-        // The health status of the instance.
+        /**
+         * <p>The health status of the instance.</p>
+         */
         @NameInMap("HealthStatus")
         public String healthStatus;
 
-        // The amount of time taken to create the instance. Unit: milliseconds.
+        /**
+         * <p>The amount of time taken to create the instance. Unit: milliseconds.</p>
+         */
         @NameInMap("InitCostTime")
         public Long initCostTime;
 
-        // The creation status of the instance.
+        /**
+         * <p>The creation status of the instance.</p>
+         */
         @NameInMap("InitStatus")
         public String initStatus;
 
-        // The number of instance nodes.
+        /**
+         * <p>The number of instance nodes.</p>
+         */
         @NameInMap("InstanceCount")
         public Integer instanceCount;
 
-        // The ID of the instance.
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        // The list of instance nodes.
+        /**
+         * <p>The list of instance nodes.</p>
+         */
         @NameInMap("InstanceModels")
         public java.util.List<QueryClusterDetailResponseBodyDataInstanceModels> instanceModels;
 
-        // The public IP address of the instance.
+        /**
+         * <p>The public IP address of the instance.</p>
+         */
         @NameInMap("InternetAddress")
         public String internetAddress;
 
-        // The public endpoint of the instance.
+        /**
+         * <p>The public endpoint of the instance.</p>
+         */
         @NameInMap("InternetDomain")
         public String internetDomain;
 
-        // The private port number.
+        /**
+         * <p>The private port number.</p>
+         */
         @NameInMap("InternetPort")
         public String internetPort;
 
-        // The internal IP address.
+        /**
+         * <p>The internal IP address.</p>
+         */
         @NameInMap("IntranetAddress")
         public String intranetAddress;
 
-        // The internal endpoint of the instance.
+        /**
+         * <p>The internal endpoint of the instance.</p>
+         */
         @NameInMap("IntranetDomain")
         public String intranetDomain;
 
-        // The private port number.
+        /**
+         * <p>The private port number.</p>
+         */
         @NameInMap("IntranetPort")
         public String intranetPort;
 
-        // The size of the memory. Unit: GB.
+        /**
+         * <p>The size of the memory. Unit: GB.</p>
+         */
         @NameInMap("MemoryCapacity")
         public Long memoryCapacity;
 
-        // The edition of Microservices Engine (MSE).
+        /**
+         * <p>The edition of Microservices Engine (MSE).</p>
+         */
         @NameInMap("MseVersion")
         public String mseVersion;
 
-        // The network type of the instance. Valid values:
-        // 
-        // *   `privatenet`: VPC
-        // *   `pubnet`: Internet
+        /**
+         * <p>The network type of the instance. Valid values:</p>
+         * <br>
+         * <p>*   `privatenet`: VPC</p>
+         * <p>*   `pubnet`: Internet</p>
+         */
         @NameInMap("NetType")
         public String netType;
 
-        // The version number of the original order.
+        /**
+         * <p>The version number of the original order.</p>
+         */
         @NameInMap("OrderClusterVersion")
         public String orderClusterVersion;
 
-        // The billing method, such as subscription or pay-as-you-go.
+        /**
+         * <p>The billing method, such as subscription or pay-as-you-go.</p>
+         */
         @NameInMap("PayInfo")
         public String payInfo;
 
-        // The public bandwidth. Unit: Mbit/s.\
-        // Valid values: 0 to 5000. The value 0 indicates no access to the Internet.
+        /**
+         * <p>The public bandwidth. Unit: Mbit/s.\</p>
+         * <p>Valid values: 0 to 5000. The value 0 indicates no access to the Internet.</p>
+         */
         @NameInMap("PubNetworkFlow")
         public String pubNetworkFlow;
 
-        // The region ID.
+        /**
+         * <p>The region ID.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
-        // The ID of the resource group.
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        // The tags that are attached to the instance.
+        /**
+         * <p>The tags that are attached to the instance.</p>
+         */
         @NameInMap("Tags")
         public java.util.Map<String, ?> tags;
 
-        // The ID of the vSwitch.
+        /**
+         * <p>The ID of the vSwitch.</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
-        // The ID of the virtual private cloud (VPC).
+        /**
+         * <p>The ID of the virtual private cloud (VPC).</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 

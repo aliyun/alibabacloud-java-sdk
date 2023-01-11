@@ -4,34 +4,48 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ApplyTagPoliciesRequest extends TeaModel {
-    // The language of the response. Valid values:
-    // 
-    // *   zh: Chinese
-    // *   en: English
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // The ID of the application.
+    /**
+     * <p>The ID of the application.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
-    // Specifies whether to enable the routing rule.
+    /**
+     * <p>Specifies whether to enable the routing rule.</p>
+     */
     @NameInMap("Enable")
     public Boolean enable;
 
-    // Optional. The ID of the namespace.
+    /**
+     * <p>Optional. The ID of the namespace.</p>
+     */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
-    // The region ID.
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("Region")
     public String region;
 
-    // The details of the routing rule.
+    /**
+     * <p>The details of the routing rule.</p>
+     */
     @NameInMap("Rules")
     public String rules;
 
-    // The service source.
+    /**
+     * <p>The service source.</p>
+     */
     @NameInMap("Source")
     public String source;
 

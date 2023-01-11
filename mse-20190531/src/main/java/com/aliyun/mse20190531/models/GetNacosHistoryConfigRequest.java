@@ -4,30 +4,42 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetNacosHistoryConfigRequest extends TeaModel {
-    // The language of the response. Valid values:
-    // 
-    // *   zh: Chinese
-    // *   en: English
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // The ID of the data.
+    /**
+     * <p>The ID of the data.</p>
+     */
     @NameInMap("DataId")
     public String dataId;
 
-    // The group.
+    /**
+     * <p>The group.</p>
+     */
     @NameInMap("Group")
     public String group;
 
-    // The ID of the instance.
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // The ID of the namespace.
+    /**
+     * <p>The ID of the namespace.</p>
+     */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
-    // The version ID of the configuration.
+    /**
+     * <p>The version ID of the configuration.</p>
+     */
     @NameInMap("Nid")
     public String nid;
 

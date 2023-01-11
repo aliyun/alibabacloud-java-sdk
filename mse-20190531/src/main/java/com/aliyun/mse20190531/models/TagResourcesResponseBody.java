@@ -4,22 +4,30 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class TagResourcesResponseBody extends TeaModel {
-    // The error code returned if the request failed.
+    /**
+     * <p>The error code returned if the request failed.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // The message returned.
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request was successful. Valid values:
-    // 
-    // *   `true`: The request was successful.
-    // *   `false`: The request failed.
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request was successful.</p>
+     * <p>*   `false`: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -58,81 +66,6 @@ public class TagResourcesResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public static class ListTagResourcesResponseBodyTagResourcesTagResource extends TeaModel {
-        // The ID of a resource.
-        @NameInMap("ResourceId")
-        public String resourceId;
-
-        // The type of a resource.
-        @NameInMap("ResourceType")
-        public String resourceType;
-
-        // The key of a tag.
-        @NameInMap("TagKey")
-        public String tagKey;
-
-        // The value of a tag.
-        @NameInMap("TagValue")
-        public String tagValue;
-
-        public static ListTagResourcesResponseBodyTagResourcesTagResource build(java.util.Map<String, ?> map) throws Exception {
-            ListTagResourcesResponseBodyTagResourcesTagResource self = new ListTagResourcesResponseBodyTagResourcesTagResource();
-            return TeaModel.build(map, self);
-        }
-
-        public ListTagResourcesResponseBodyTagResourcesTagResource setResourceId(String resourceId) {
-            this.resourceId = resourceId;
-            return this;
-        }
-        public String getResourceId() {
-            return this.resourceId;
-        }
-
-        public ListTagResourcesResponseBodyTagResourcesTagResource setResourceType(String resourceType) {
-            this.resourceType = resourceType;
-            return this;
-        }
-        public String getResourceType() {
-            return this.resourceType;
-        }
-
-        public ListTagResourcesResponseBodyTagResourcesTagResource setTagKey(String tagKey) {
-            this.tagKey = tagKey;
-            return this;
-        }
-        public String getTagKey() {
-            return this.tagKey;
-        }
-
-        public ListTagResourcesResponseBodyTagResourcesTagResource setTagValue(String tagValue) {
-            this.tagValue = tagValue;
-            return this;
-        }
-        public String getTagValue() {
-            return this.tagValue;
-        }
-
-    }
-
-    public static class ListTagResourcesResponseBodyTagResources extends TeaModel {
-        @NameInMap("TagResource")
-        public java.util.List<ListTagResourcesResponseBodyTagResourcesTagResource> tagResource;
-
-        public static ListTagResourcesResponseBodyTagResources build(java.util.Map<String, ?> map) throws Exception {
-            ListTagResourcesResponseBodyTagResources self = new ListTagResourcesResponseBodyTagResources();
-            return TeaModel.build(map, self);
-        }
-
-        public ListTagResourcesResponseBodyTagResources setTagResource(java.util.List<ListTagResourcesResponseBodyTagResourcesTagResource> tagResource) {
-            this.tagResource = tagResource;
-            return this;
-        }
-        public java.util.List<ListTagResourcesResponseBodyTagResourcesTagResource> getTagResource() {
-            return this.tagResource;
-        }
-
     }
 
 }

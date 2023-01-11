@@ -4,54 +4,78 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class CreateNacosInstanceRequest extends TeaModel {
-    // The language of the response. Valid values:
-    // 
-    // *   zh: Chinese
-    // *   en: English
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // The name of the Nacos instance.
+    /**
+     * <p>The name of the Nacos instance.</p>
+     */
     @NameInMap("ClusterName")
     public String clusterName;
 
-    // Specifies whether to enable the service for the instance.
+    /**
+     * <p>Specifies whether to enable the service for the instance.</p>
+     */
     @NameInMap("Enabled")
     public Boolean enabled;
 
-    // Specifies whether to mark the instance as a temporary node.
+    /**
+     * <p>Specifies whether to mark the instance as a temporary node.</p>
+     */
     @NameInMap("Ephemeral")
     public Boolean ephemeral;
 
-    // The name of the group.
+    /**
+     * <p>The name of the group.</p>
+     */
     @NameInMap("GroupName")
     public String groupName;
 
-    // The ID of the instance.
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // The IP address of the Nacos instance.
+    /**
+     * <p>The IP address of the Nacos instance.</p>
+     */
     @NameInMap("Ip")
     public String ip;
 
-    // The metadata of the instance.
+    /**
+     * <p>The metadata of the instance.</p>
+     */
     @NameInMap("Metadata")
     public String metadata;
 
-    // The ID of the namespace.
+    /**
+     * <p>The ID of the namespace.</p>
+     */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
-    // The port of the Nacos instance.
+    /**
+     * <p>The port of the Nacos instance.</p>
+     */
     @NameInMap("Port")
     public Integer port;
 
-    // The name of the service.
+    /**
+     * <p>The name of the service.</p>
+     */
     @NameInMap("ServiceName")
     public String serviceName;
 
-    // The weight. Valid values: 0 to 10000. The value must be an integer. A larger value indicates a higher frequency at which the instance is accessed.
+    /**
+     * <p>The weight. Valid values: 0 to 10000. The value must be an integer. A larger value indicates a higher frequency at which the instance is accessed.</p>
+     */
     @NameInMap("Weight")
     public String weight;
 

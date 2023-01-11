@@ -4,30 +4,42 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class DeleteGatewayDomainResponseBody extends TeaModel {
-    // The status code returned.
+    /**
+     * <p>The status code returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
-    // The returned data.
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public DeleteGatewayDomainResponseBodyData data;
 
-    // The HTTP status code returned.
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // The error message.
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request was successful. Valid values:
-    // 
-    // *   `true`: The request was successful.
-    // *   `false`: The request failed.
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request was successful.</p>
+     * <p>*   `false`: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -85,39 +97,57 @@ public class DeleteGatewayDomainResponseBody extends TeaModel {
     }
 
     public static class DeleteGatewayDomainResponseBodyData extends TeaModel {
-        // The ID of the certificate.
+        /**
+         * <p>The ID of the certificate.</p>
+         */
         @NameInMap("CertIdentifier")
         public String certIdentifier;
 
-        // The ID of the gateway.
+        /**
+         * <p>The ID of the gateway.</p>
+         */
         @NameInMap("GatewayId")
         public Long gatewayId;
 
-        // The unique ID of the gateway.
+        /**
+         * <p>The unique ID of the gateway.</p>
+         */
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 
-        // The time when the domain name was added.
+        /**
+         * <p>The time when the domain name was added.</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
-        // The last modification time.
+        /**
+         * <p>The last modification time.</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
-        // The domain ID.
+        /**
+         * <p>The domain ID.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
-        // Indicates whether HTTP probing is allowed.
+        /**
+         * <p>Indicates whether HTTP probing is allowed.</p>
+         */
         @NameInMap("MustHttps")
         public Boolean mustHttps;
 
-        // The name.
+        /**
+         * <p>The name.</p>
+         */
         @NameInMap("Name")
         public String name;
 
-        // The protocol.
+        /**
+         * <p>The protocol.</p>
+         */
         @NameInMap("Protocol")
         public String protocol;
 

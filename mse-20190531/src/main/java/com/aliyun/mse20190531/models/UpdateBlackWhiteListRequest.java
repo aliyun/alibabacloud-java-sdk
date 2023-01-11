@@ -4,50 +4,72 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class UpdateBlackWhiteListRequest extends TeaModel {
-    // The language of the response. Valid values:
-    // 
-    // *   zh: Chinese
-    // *   en: English
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // The content of the blacklist.
+    /**
+     * <p>The content of the blacklist.</p>
+     */
     @NameInMap("Content")
     public String content;
 
-    // The unique ID of the gateway.
+    /**
+     * <p>The unique ID of the gateway.</p>
+     */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
-    // The ID of the blacklist.
+    /**
+     * <p>The ID of the blacklist.</p>
+     */
     @NameInMap("Id")
     public Long id;
 
-    // Specifies whether to modify the whitelist.
+    /**
+     * <p>Specifies whether to modify the whitelist.</p>
+     */
     @NameInMap("IsWhite")
     public Boolean isWhite;
 
-    // The name.
+    /**
+     * <p>The name.</p>
+     */
     @NameInMap("Name")
     public String name;
 
-    // The description.
+    /**
+     * <p>The description.</p>
+     */
     @NameInMap("Note")
     public String note;
 
-    // The resource IDs in the JSON format.
+    /**
+     * <p>The resource IDs in the JSON format.</p>
+     */
     @NameInMap("ResourceIdJsonList")
     public String resourceIdJsonList;
 
-    // The type of the resource.
+    /**
+     * <p>The type of the resource.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
-    // Specifies whether to enable the blacklist or whitelist.
+    /**
+     * <p>Specifies whether to enable the blacklist or whitelist.</p>
+     */
     @NameInMap("Status")
     public String status;
 
-    // The type of the blacklist or whitelist.
+    /**
+     * <p>The type of the blacklist or whitelist.</p>
+     */
     @NameInMap("Type")
     public String type;
 

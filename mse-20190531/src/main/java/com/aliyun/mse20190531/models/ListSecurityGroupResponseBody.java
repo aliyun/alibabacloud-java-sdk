@@ -4,30 +4,42 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListSecurityGroupResponseBody extends TeaModel {
-    // The response code returned.
+    /**
+     * <p>The response code returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
-    // The data structure.
+    /**
+     * <p>The data structure.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListSecurityGroupResponseBodyData> data;
 
-    // The HTTP status code returned.
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // The message returned.
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request was successful. Valid values:
-    // 
-    // *   `true`: The request was successful.
-    // *   `false`: The request failed.
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request was successful.</p>
+     * <p>*   `false`: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -85,22 +97,30 @@ public class ListSecurityGroupResponseBody extends TeaModel {
     }
 
     public static class ListSecurityGroupResponseBodyData extends TeaModel {
-        // The ID of the security group.
+        /**
+         * <p>The ID of the security group.</p>
+         */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
-        // The name of the security group.
+        /**
+         * <p>The name of the security group.</p>
+         */
         @NameInMap("SecurityGroupName")
         public String securityGroupName;
 
-        // The type of the security group. Valid values:
-        // 
-        // *   normal: basic security group
-        // *   enterprise: advanced security group For more information, see [Advanced security groups](~~120621~~).
+        /**
+         * <p>The type of the security group. Valid values:</p>
+         * <br>
+         * <p>*   normal: basic security group</p>
+         * <p>*   enterprise: advanced security group For more information, see [Advanced security groups](~~120621~~).</p>
+         */
         @NameInMap("SecurityGroupType")
         public String securityGroupType;
 
-        // The ID of the virtual private cloud (VPC).
+        /**
+         * <p>The ID of the virtual private cloud (VPC).</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 

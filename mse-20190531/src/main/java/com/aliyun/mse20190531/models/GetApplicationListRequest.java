@@ -4,49 +4,69 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetApplicationListRequest extends TeaModel {
-    // The language of the response. Valid values:
-    // 
-    // *   zh: Chinese
-    // *   en: English
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // The ID of the application.
+    /**
+     * <p>The ID of the application.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
-    // The name of the application.
+    /**
+     * <p>The name of the application.</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
-    // The programming language of the application, such as Java and Go.
+    /**
+     * <p>The programming language of the application, such as Java and Go.</p>
+     */
     @NameInMap("Language")
     public String language;
 
     @NameInMap("Namespace")
     public String namespace;
 
-    // The number of the page to return.
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // The number of entries to return on each page.
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The region ID.
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("Region")
     public String region;
 
-    // Specifies whether to enable the Sentinel-compatible mode.
+    /**
+     * <p>Specifies whether to enable the Sentinel-compatible mode.</p>
+     */
     @NameInMap("SentinelEnable")
     public Boolean sentinelEnable;
 
-    // The source of the application. The value is fixed as edasmsc.
+    /**
+     * <p>The source of the application. The value is fixed as edasmsc.</p>
+     */
     @NameInMap("Source")
     public String source;
 
-    // Specifies whether to enable switching.
+    /**
+     * <p>Specifies whether to enable switching.</p>
+     */
     @NameInMap("SwitchEnable")
     public Boolean switchEnable;
 

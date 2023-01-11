@@ -4,30 +4,42 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class CreateApplicationResponseBody extends TeaModel {
-    // The response code returned.
+    /**
+     * <p>The response code returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
-    // The data of the node.
+    /**
+     * <p>The data of the node.</p>
+     */
     @NameInMap("Data")
     public CreateApplicationResponseBodyData data;
 
-    // The HTTP status code returned.
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // The message returned.
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request was successful. Valid values:
-    // 
-    // *   `true`: The request was successful.
-    // *   `false`: The request failed.
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request was successful.</p>
+     * <p>*   `false`: The request failed.</p>
+     */
     @NameInMap("Success")
     public String success;
 
@@ -85,52 +97,80 @@ public class CreateApplicationResponseBody extends TeaModel {
     }
 
     public static class CreateApplicationResponseBodyData extends TeaModel {
-        // The ID of the application.
+        /**
+         * <p>The ID of the application.</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
-        // The name of the application.
+        /**
+         * <p>The name of the application.</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
-        // The creation time.
+        /**
+         * <p>The creation time.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
-        // The additional information.
+        /**
+         * <p>The additional information.</p>
+         */
         @NameInMap("ExtraInfo")
         public String extraInfo;
 
-        // The programming language of the application.
+        /**
+         * <p>The programming language of the application.</p>
+         */
         @NameInMap("Language")
         public String language;
 
-        // The license key in use.
+        /**
+         * <p>The license key in use.</p>
+         */
         @NameInMap("LicenseKey")
         public String licenseKey;
 
-        // The region ID.
+        @NameInMap("Namespace")
+        public String namespace;
+
+        /**
+         * <p>The region ID.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
-        // The service where the application is deployed. Valid values:
-        // 
-        // *   \- ACK: Container Service for Kubernetes
-        // *   \- Normal: another service
+        /**
+         * <p>The service where the application is deployed. Valid values:</p>
+         * <br>
+         * <p>*   \- ACK: Container Service for Kubernetes</p>
+         * <p>*   \- Normal: another service</p>
+         */
         @NameInMap("Source")
         public String source;
 
-        // The status of the application. A value of 1 indicates that the application is in a normal state.
+        /**
+         * <p>The status of the application. A value of 1 indicates that the application is in a normal state.</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
-        // The update time.
+        /**
+         * <p>The update time.</p>
+         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
-        // The ID of the Alibaba Cloud account.
+        /**
+         * <p>The ID of the Alibaba Cloud account.</p>
+         */
         @NameInMap("UserId")
         public String userId;
+
+        @NameInMap("Version")
+        public String version;
 
         public static CreateApplicationResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             CreateApplicationResponseBodyData self = new CreateApplicationResponseBodyData();
@@ -185,6 +225,14 @@ public class CreateApplicationResponseBody extends TeaModel {
             return this.licenseKey;
         }
 
+        public CreateApplicationResponseBodyData setNamespace(String namespace) {
+            this.namespace = namespace;
+            return this;
+        }
+        public String getNamespace() {
+            return this.namespace;
+        }
+
         public CreateApplicationResponseBodyData setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
@@ -223,6 +271,14 @@ public class CreateApplicationResponseBody extends TeaModel {
         }
         public String getUserId() {
             return this.userId;
+        }
+
+        public CreateApplicationResponseBodyData setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
         }
 
     }

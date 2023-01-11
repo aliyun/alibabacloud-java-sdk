@@ -4,30 +4,42 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class CreateMseServiceApplicationResponseBody extends TeaModel {
-    // The status code returned.
+    /**
+     * <p>The status code returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
-    // The data structure.
+    /**
+     * <p>The data structure.</p>
+     */
     @NameInMap("Data")
     public CreateMseServiceApplicationResponseBodyData data;
 
-    // The HTTP status code returned.
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // The message returned.
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request was successful. Valid values:
-    // 
-    // *   `true`: The request was successful.
-    // *   `false`: The request failed.
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request was successful.</p>
+     * <p>*   `false`: The request failed.</p>
+     */
     @NameInMap("Success")
     public String success;
 
@@ -85,51 +97,75 @@ public class CreateMseServiceApplicationResponseBody extends TeaModel {
     }
 
     public static class CreateMseServiceApplicationResponseBodyData extends TeaModel {
-        // The ID of the application.
+        /**
+         * <p>The ID of the application.</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
-        // The name of the application.
+        /**
+         * <p>The name of the application.</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
-        // The creation time.
+        /**
+         * <p>The creation time.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
-        // The additional information.
+        /**
+         * <p>The additional information.</p>
+         */
         @NameInMap("ExtraInfo")
         public String extraInfo;
 
-        // The programming language of the application.
+        /**
+         * <p>The programming language of the application.</p>
+         */
         @NameInMap("Language")
         public String language;
 
-        // The license key in use.
+        /**
+         * <p>The license key in use.</p>
+         */
         @NameInMap("LicenseKey")
         public String licenseKey;
 
-        // The region ID.
+        /**
+         * <p>The region ID.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
-        // The source type.
+        /**
+         * <p>The source type.</p>
+         */
         @NameInMap("Source")
         public String source;
 
-        // The status.
+        /**
+         * <p>The status.</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
-        // The last modification time.
+        /**
+         * <p>The last modification time.</p>
+         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
-        // The ID of the user.
+        /**
+         * <p>The ID of the user.</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
-        // The version information.
+        /**
+         * <p>The version information.</p>
+         */
         @NameInMap("Version")
         public String version;
 

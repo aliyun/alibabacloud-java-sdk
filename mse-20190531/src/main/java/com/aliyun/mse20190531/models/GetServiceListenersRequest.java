@@ -4,60 +4,84 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetServiceListenersRequest extends TeaModel {
-    // The language of the response. Valid values:
-    // 
-    // *   zh: Chinese
-    // *   en: English
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // The ID of the MSE instance to which the service belongs.
-    // 
-    // > You must specify InstanceId or ClusterId.
+    /**
+     * <p>The ID of the MSE instance to which the service belongs.</p>
+     * <br>
+     * <p>> You must specify InstanceId or ClusterId.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
-    // The name of the cluster to which the service belongs.
-    // 
-    // > The cluster is a concept for Nacos services and does not refer to a Microservices Engine (MSE) instance.
+    /**
+     * <p>The name of the cluster to which the service belongs.</p>
+     * <br>
+     * <p>> The cluster is a concept for Nacos services and does not refer to a Microservices Engine (MSE) instance.</p>
+     */
     @NameInMap("ClusterName")
     public String clusterName;
 
-    // The group to which the service belongs.
+    /**
+     * <p>The group to which the service belongs.</p>
+     */
     @NameInMap("GroupName")
     public String groupName;
 
-    // A reserved parameter.
+    /**
+     * <p>A reserved parameter.</p>
+     */
     @NameInMap("HasIpCount")
     public String hasIpCount;
 
-    // The ID of the instance to which the service belongs.
-    // 
-    // > You must specify InstanceId or ClusterId.
+    /**
+     * <p>The ID of the instance to which the service belongs.</p>
+     * <br>
+     * <p>> You must specify InstanceId or ClusterId.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // The namespace to which the service belongs.
+    /**
+     * <p>The namespace to which the service belongs.</p>
+     */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
-    // The number of the page to return.
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("PageNum")
     public Integer pageNum;
 
-    // The number of entries to return on each page.
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The region ID.
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The extended request parameters in the JSON format.
+    /**
+     * <p>The extended request parameters in the JSON format.</p>
+     */
     @NameInMap("RequestPars")
     public String requestPars;
 
-    // The name of the service whose listeners you want to query.
+    /**
+     * <p>The name of the service whose listeners you want to query.</p>
+     */
     @NameInMap("ServiceName")
     public String serviceName;
 

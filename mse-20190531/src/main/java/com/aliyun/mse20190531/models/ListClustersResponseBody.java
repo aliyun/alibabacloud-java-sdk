@@ -4,42 +4,60 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListClustersResponseBody extends TeaModel {
-    // The details of the data.
+    /**
+     * <p>The details of the data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListClustersResponseBodyData> data;
 
-    // The error code returned if the request failed.
+    /**
+     * <p>The error code returned if the request failed.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // The HTTP status code returned.
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpCode")
     public String httpCode;
 
-    // The message returned.
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
-    // The page number of the returned page.
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // The number of entries returned per page.
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request was successful. Valid values:
-    // 
-    // *   `true`: The request was successful.
-    // *   `false`: The request failed.
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request was successful.</p>
+     * <p>*   `false`: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
-    // The total number of returned instances.
+    /**
+     * <p>The total number of returned instances.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -121,79 +139,117 @@ public class ListClustersResponseBody extends TeaModel {
     }
 
     public static class ListClustersResponseBodyData extends TeaModel {
-        // The application version.
+        /**
+         * <p>The application version.</p>
+         */
         @NameInMap("AppVersion")
         public String appVersion;
 
-        // Indicates whether the instance can be upgraded.
+        /**
+         * <p>Indicates whether the instance can be upgraded.</p>
+         */
         @NameInMap("CanUpdate")
         public Boolean canUpdate;
 
-        // The billing method, such as subscription or pay-as-you-go.
+        /**
+         * <p>The billing method, such as subscription or pay-as-you-go.</p>
+         */
         @NameInMap("ChargeType")
         public String chargeType;
 
-        // The alias of the instance.
+        /**
+         * <p>The alias of the instance.</p>
+         */
         @NameInMap("ClusterAliasName")
         public String clusterAliasName;
 
-        // The name of the instance.
+        /**
+         * <p>The name of the instance.</p>
+         */
         @NameInMap("ClusterName")
         public String clusterName;
 
-        // The type of the instance. Valid values: ZooKeeper, Nacos-Ans, and Eureka.
+        /**
+         * <p>The type of the instance. Valid values: ZooKeeper, Nacos-Ans, and Eureka.</p>
+         */
         @NameInMap("ClusterType")
         public String clusterType;
 
-        // The time when the instance was created.
+        /**
+         * <p>The time when the instance was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        // The time when the instance expires.
+        /**
+         * <p>The time when the instance expires.</p>
+         */
         @NameInMap("EndDate")
         public String endDate;
 
-        // The initial status of the instance.
+        /**
+         * <p>The initial status of the instance.</p>
+         */
         @NameInMap("InitStatus")
         public String initStatus;
 
-        // The number of instances.
+        /**
+         * <p>The number of instances.</p>
+         */
         @NameInMap("InstanceCount")
         public Long instanceCount;
 
-        // The ID of the instance.
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        // The public IP address of the instance.
+        /**
+         * <p>The public IP address of the instance.</p>
+         */
         @NameInMap("InternetAddress")
         public String internetAddress;
 
-        // The public endpoint of the instance.
+        /**
+         * <p>The public endpoint of the instance.</p>
+         */
         @NameInMap("InternetDomain")
         public String internetDomain;
 
-        // The internal IP address of the instance.
+        /**
+         * <p>The internal IP address of the instance.</p>
+         */
         @NameInMap("IntranetAddress")
         public String intranetAddress;
 
-        // The internal endpoint of the instance.
+        /**
+         * <p>The internal endpoint of the instance.</p>
+         */
         @NameInMap("IntranetDomain")
         public String intranetDomain;
 
-        // The edition of the instance.
+        /**
+         * <p>The edition of the instance.</p>
+         */
         @NameInMap("MseVersion")
         public String mseVersion;
 
-        // The ID of the resource group to which the instance belongs.
+        /**
+         * <p>The ID of the resource group to which the instance belongs.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        // The tags that are attached to the instance.
+        /**
+         * <p>The tags that are attached to the instance.</p>
+         */
         @NameInMap("Tags")
         public java.util.Map<String, ?> tags;
 
-        // The version information.
+        /**
+         * <p>The version information.</p>
+         */
         @NameInMap("VersionCode")
         public String versionCode;
 

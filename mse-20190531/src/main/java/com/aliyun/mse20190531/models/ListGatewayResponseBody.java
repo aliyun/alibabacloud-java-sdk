@@ -4,30 +4,42 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListGatewayResponseBody extends TeaModel {
-    // The return value.
+    /**
+     * <p>The return value.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
-    // The returned data.
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public ListGatewayResponseBodyData data;
 
-    // The HTTP status code returned.
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // The message returned.
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request was successful. Valid values:
-    // 
-    // *   `true`: The request was successful.
-    // *   `false`: The request failed.
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request was successful.</p>
+     * <p>*   `false`: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -85,11 +97,15 @@ public class ListGatewayResponseBody extends TeaModel {
     }
 
     public static class ListGatewayResponseBodyDataResultInitConfig extends TeaModel {
-        // Indicates whether Web Application Firewall (WAF) is enabled.
+        /**
+         * <p>Indicates whether Web Application Firewall (WAF) is enabled.</p>
+         */
         @NameInMap("EnableWaf")
         public Boolean enableWaf;
 
-        // Indicates whether WAF is supported.
+        /**
+         * <p>Indicates whether WAF is supported.</p>
+         */
         @NameInMap("SupportWaf")
         public Boolean supportWaf;
 
@@ -117,39 +133,57 @@ public class ListGatewayResponseBody extends TeaModel {
     }
 
     public static class ListGatewayResponseBodyDataResultInternetSlb extends TeaModel {
-        // The mode of the SLB instance.
+        /**
+         * <p>The mode of the SLB instance.</p>
+         */
         @NameInMap("GatewaySlbMode")
         public String gatewaySlbMode;
 
-        // The status of the SLB instance.
+        /**
+         * <p>The status of the SLB instance.</p>
+         */
         @NameInMap("GatewaySlbStatus")
         public String gatewaySlbStatus;
 
-        // The traffic of the gateway.
+        /**
+         * <p>The traffic of the gateway.</p>
+         */
         @NameInMap("InternetNetworkFlow")
         public String internetNetworkFlow;
 
-        // The ID of the SLB instance.
+        /**
+         * <p>The ID of the SLB instance.</p>
+         */
         @NameInMap("SlbId")
         public String slbId;
 
-        // The IP address of the SLB instance.
+        /**
+         * <p>The IP address of the SLB instance.</p>
+         */
         @NameInMap("SlbIp")
         public String slbIp;
 
-        // The port number of the SLB instance.
+        /**
+         * <p>The port number of the SLB instance.</p>
+         */
         @NameInMap("SlbPort")
         public String slbPort;
 
-        // The specifications of the SLB instance.
+        /**
+         * <p>The specifications of the SLB instance.</p>
+         */
         @NameInMap("SlbSpec")
         public String slbSpec;
 
-        // The description of the status.
+        /**
+         * <p>The description of the status.</p>
+         */
         @NameInMap("StatusDesc")
         public String statusDesc;
 
-        // The type.
+        /**
+         * <p>The type.</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -233,35 +267,51 @@ public class ListGatewayResponseBody extends TeaModel {
     }
 
     public static class ListGatewayResponseBodyDataResultSlb extends TeaModel {
-        // The mode of the SLB instance.
+        /**
+         * <p>The mode of the SLB instance.</p>
+         */
         @NameInMap("GatewaySlbMode")
         public String gatewaySlbMode;
 
-        // The status of the SLB instance.
+        /**
+         * <p>The status of the SLB instance.</p>
+         */
         @NameInMap("GatewaySlbStatus")
         public String gatewaySlbStatus;
 
-        // The ID of the SLB instance.
+        /**
+         * <p>The ID of the SLB instance.</p>
+         */
         @NameInMap("SlbId")
         public String slbId;
 
-        // The IP address of the SLB instance.
+        /**
+         * <p>The IP address of the SLB instance.</p>
+         */
         @NameInMap("SlbIp")
         public String slbIp;
 
-        // The port number of the SLB instance.
+        /**
+         * <p>The port number of the SLB instance.</p>
+         */
         @NameInMap("SlbPort")
         public String slbPort;
 
-        // The specifications of the SLB instance.
+        /**
+         * <p>The specifications of the SLB instance.</p>
+         */
         @NameInMap("SlbSpec")
         public String slbSpec;
 
-        // The description of the status.
+        /**
+         * <p>The description of the status.</p>
+         */
         @NameInMap("StatusDesc")
         public String statusDesc;
 
-        // The type.
+        /**
+         * <p>The type.</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -337,144 +387,208 @@ public class ListGatewayResponseBody extends TeaModel {
     }
 
     public static class ListGatewayResponseBodyDataResult extends TeaModel {
-        // Indicates whether Application High Availability Service (AHAS) is activated.
+        /**
+         * <p>Indicates whether Application High Availability Service (AHAS) is activated.</p>
+         */
         @NameInMap("AhasOn")
         public Boolean ahasOn;
 
-        // The version of the application.
+        /**
+         * <p>The version of the application.</p>
+         */
         @NameInMap("AppVersion")
         public String appVersion;
 
-        // Indicates whether Application Real-Time Monitoring Service (ARMS) is activated.
+        /**
+         * <p>Indicates whether Application Real-Time Monitoring Service (ARMS) is activated.</p>
+         */
         @NameInMap("ArmsOn")
         public Boolean armsOn;
 
-        // The billing method.
+        /**
+         * <p>The billing method.</p>
+         */
         @NameInMap("ChargeType")
         public String chargeType;
 
-        // The current version of the gateway.
+        /**
+         * <p>The current version of the gateway.</p>
+         */
         @NameInMap("CurrentVersion")
         public String currentVersion;
 
-        // The time when the subscription gateway expires.
+        /**
+         * <p>The time when the subscription gateway expires.</p>
+         */
         @NameInMap("EndDate")
         public String endDate;
 
-        // The type of the gateway.
+        /**
+         * <p>The type of the gateway.</p>
+         */
         @NameInMap("GatewayType")
         public String gatewayType;
 
-        // The unique ID of the gateway.
+        /**
+         * <p>The unique ID of the gateway.</p>
+         */
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 
-        // The version of the gateway.
+        /**
+         * <p>The version of the gateway.</p>
+         */
         @NameInMap("GatewayVersion")
         public String gatewayVersion;
 
-        // The creation time.
+        /**
+         * <p>The creation time.</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
-        // The modification time.
+        /**
+         * <p>The modification time.</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
-        // The ID of the gateway.
+        /**
+         * <p>The ID of the gateway.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
-        // The configurations.
+        /**
+         * <p>The configurations.</p>
+         */
         @NameInMap("InitConfig")
         public ListGatewayResponseBodyDataResultInitConfig initConfig;
 
-        // The ID of the instance.
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        // The details of the Internet-facing SLB instances.
+        /**
+         * <p>The details of the Internet-facing SLB instances.</p>
+         */
         @NameInMap("InternetSlb")
         public java.util.List<ListGatewayResponseBodyDataResultInternetSlb> internetSlb;
 
-        // The latest version of the gateway.
+        /**
+         * <p>The latest version of the gateway.</p>
+         */
         @NameInMap("LatestVersion")
         public String latestVersion;
 
-        // The tag of the instance.
+        /**
+         * <p>The tag of the instance.</p>
+         */
         @NameInMap("MseTag")
         public String mseTag;
 
-        // Indicates whether the gateway can be forcefully updated.
+        /**
+         * <p>Indicates whether the gateway can be forcefully updated.</p>
+         */
         @NameInMap("MustUpgrade")
         public Boolean mustUpgrade;
 
-        // The name of the gateway.
+        /**
+         * <p>The name of the gateway.</p>
+         */
         @NameInMap("Name")
         public String name;
 
-        // The information about the user.
+        /**
+         * <p>The information about the user.</p>
+         */
         @NameInMap("PrimaryUser")
         public String primaryUser;
 
-        // The region ID.
+        /**
+         * <p>The region ID.</p>
+         */
         @NameInMap("Region")
         public String region;
 
-        // The number of replicas.
+        /**
+         * <p>The number of replicas.</p>
+         */
         @NameInMap("Replica")
         public Integer replica;
 
-        // The ID of the resource group.
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        // Indicates whether rollbacks are allowed.
+        /**
+         * <p>Indicates whether rollbacks are allowed.</p>
+         */
         @NameInMap("RollBack")
         public Boolean rollBack;
 
-        // The details of the Server Load Balancer (SLB) instances.
+        /**
+         * <p>The details of the Server Load Balancer (SLB) instances.</p>
+         */
         @NameInMap("Slb")
         public java.util.List<ListGatewayResponseBodyDataResultSlb> slb;
 
-        // The specifications of the gateway.
+        /**
+         * <p>The specifications of the gateway.</p>
+         */
         @NameInMap("Spec")
         public String spec;
 
-        // The gateway status.
-        // 
-        // *   0: The gateway is being created.
-        // *   1: The gateway fails to be created.
-        // *   2: The gateway is running.
-        // *   3: The gateway is changing.
-        // *   4: The gateway is scaling down.
-        // *   6: The gateway is scaling up.
-        // *   8: The gateway is being deleted.
-        // *   9: The gateway is suspended and to be released.
-        // *   10: The gateway is restarting.
-        // *   11: The gateway is being rebuilt.
-        // *   12: The gateway is updating.
-        // *   13: The gateway fails to be updated.
+        /**
+         * <p>The gateway status.</p>
+         * <br>
+         * <p>*   0: The gateway is being created.</p>
+         * <p>*   1: The gateway fails to be created.</p>
+         * <p>*   2: The gateway is running.</p>
+         * <p>*   3: The gateway is changing.</p>
+         * <p>*   4: The gateway is scaling down.</p>
+         * <p>*   6: The gateway is scaling up.</p>
+         * <p>*   8: The gateway is being deleted.</p>
+         * <p>*   9: The gateway is suspended and to be released.</p>
+         * <p>*   10: The gateway is restarting.</p>
+         * <p>*   11: The gateway is being rebuilt.</p>
+         * <p>*   12: The gateway is updating.</p>
+         * <p>*   13: The gateway fails to be updated.</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
-        // The description of the status.
+        /**
+         * <p>The description of the status.</p>
+         */
         @NameInMap("StatusDesc")
         public String statusDesc;
 
-        // Indicates whether WebAssembly (Wasm) is supported.
+        /**
+         * <p>Indicates whether WebAssembly (Wasm) is supported.</p>
+         */
         @NameInMap("SupportWasm")
         public Boolean supportWasm;
 
-        // The tag.
+        /**
+         * <p>The tag.</p>
+         */
         @NameInMap("Tag")
         public String tag;
 
-        // Indicates whether the gateway can be updated.
+        /**
+         * <p>Indicates whether the gateway can be updated.</p>
+         */
         @NameInMap("Upgrade")
         public Boolean upgrade;
 
-        // The ID of the secondary vSwitch.
+        /**
+         * <p>The ID of the secondary vSwitch.</p>
+         */
         @NameInMap("Vswitch2")
         public String vswitch2;
 
@@ -742,19 +856,27 @@ public class ListGatewayResponseBody extends TeaModel {
     }
 
     public static class ListGatewayResponseBodyData extends TeaModel {
-        // The page number of the returned page.
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
-        // The number of entries returned per page.
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        // The data entries returned.
+        /**
+         * <p>The data entries returned.</p>
+         */
         @NameInMap("Result")
         public java.util.List<ListGatewayResponseBodyDataResult> result;
 
-        // The total number of entries returned.
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalSize")
         public Long totalSize;
 

@@ -4,14 +4,18 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListSecurityGroupRuleRequest extends TeaModel {
-    // The language of the response. Valid values:
-    // 
-    // *   zh: Chinese
-    // *   en: English
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // The unique ID of the gateway.
+    /**
+     * <p>The unique ID of the gateway.</p>
+     */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 

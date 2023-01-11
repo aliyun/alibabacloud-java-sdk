@@ -4,30 +4,42 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListServiceSourceResponseBody extends TeaModel {
-    // The response code returned.
+    /**
+     * <p>The response code returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
-    // The returned data.
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListServiceSourceResponseBodyData> data;
 
-    // The HTTP status code returned.
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // The error message.
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request was successful. Valid values:
-    // 
-    // *   `true`: The request was successful.
-    // *   `false`: The request failed.
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request was successful.</p>
+     * <p>*   `false`: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -85,19 +97,27 @@ public class ListServiceSourceResponseBody extends TeaModel {
     }
 
     public static class ListServiceSourceResponseBodyDataIngressOptions extends TeaModel {
-        // Indicates whether Ingresses are enabled.
+        /**
+         * <p>Indicates whether Ingresses are enabled.</p>
+         */
         @NameInMap("EnableIngress")
         public Boolean enableIngress;
 
-        // Indicates whether the Ingress gateway status is updated.
+        /**
+         * <p>Indicates whether the Ingress gateway status is updated.</p>
+         */
         @NameInMap("EnableStatus")
         public Boolean enableStatus;
 
-        // The Ingress class.
+        /**
+         * <p>The Ingress class.</p>
+         */
         @NameInMap("IngressClass")
         public String ingressClass;
 
-        // The namespace whose resources you want to monitor.
+        /**
+         * <p>The namespace whose resources you want to monitor.</p>
+         */
         @NameInMap("WatchNamespace")
         public String watchNamespace;
 
@@ -141,59 +161,87 @@ public class ListServiceSourceResponseBody extends TeaModel {
     }
 
     public static class ListServiceSourceResponseBodyData extends TeaModel {
-        // The ID of the Container Service for Kubernetes (ACK) cluster or the endpoint of the Microservices Engine (MSE) registry.
+        /**
+         * <p>The ID of the Container Service for Kubernetes (ACK) cluster or the endpoint of the Microservices Engine (MSE) registry.</p>
+         */
         @NameInMap("Address")
         public String address;
 
-        // Indicates whether the service source is associated with the gateway. The value 1 indicates that the service source is associated with the gateway.
+        /**
+         * <p>Indicates whether the service source is associated with the gateway. The value 1 indicates that the service source is associated with the gateway.</p>
+         */
         @NameInMap("BindingWithGateway")
         public Integer bindingWithGateway;
 
-        // The ID of the gateway.
+        /**
+         * <p>The ID of the gateway.</p>
+         */
         @NameInMap("GatewayId")
         public Long gatewayId;
 
-        // The unique ID of the gateway.
+        /**
+         * <p>The unique ID of the gateway.</p>
+         */
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 
-        // The creation time.
+        /**
+         * <p>The creation time.</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
-        // The update time.
+        /**
+         * <p>The update time.</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
-        // The array of service groups.
+        /**
+         * <p>The array of service groups.</p>
+         */
         @NameInMap("GroupList")
         public java.util.List<String> groupList;
 
-        // The ID.
+        /**
+         * <p>The ID.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
-        // Support for Ingresses of applications.
+        /**
+         * <p>Support for Ingresses of applications.</p>
+         */
         @NameInMap("IngressOptions")
         public ListServiceSourceResponseBodyDataIngressOptions ingressOptions;
 
-        // The name.
+        /**
+         * <p>The name.</p>
+         */
         @NameInMap("Name")
         public String name;
 
-        // The array of root paths of service lists.
+        /**
+         * <p>The array of root paths of service lists.</p>
+         */
         @NameInMap("PathList")
         public java.util.List<String> pathList;
 
-        // The type of the service source.
+        /**
+         * <p>The type of the service source.</p>
+         */
         @NameInMap("Source")
         public String source;
 
-        // The unique ID of the service source.
+        /**
+         * <p>The unique ID of the service source.</p>
+         */
         @NameInMap("SourceUniqueId")
         public String sourceUniqueId;
 
-        // The type.
+        /**
+         * <p>The type.</p>
+         */
         @NameInMap("Type")
         public String type;
 

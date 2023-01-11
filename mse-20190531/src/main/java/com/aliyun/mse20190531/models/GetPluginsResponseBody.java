@@ -4,39 +4,57 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetPluginsResponseBody extends TeaModel {
-    // Code.
+    /**
+     * <p>Code.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
-    // The data entries returned.
+    /**
+     * <p>The data entries returned.</p>
+     */
     @NameInMap("Data")
     public java.util.List<GetPluginsResponseBodyData> data;
 
-    // The dynamic part in the error message.
+    /**
+     * <p>The dynamic part in the error message.</p>
+     */
     @NameInMap("DynamicCode")
     public String dynamicCode;
 
-    // The dynamic error message.
+    /**
+     * <p>The dynamic error message.</p>
+     */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
-    // The error code returned if the request failed.
+    /**
+     * <p>The error code returned if the request failed.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // The HTTP status code returned.
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // The message returned.
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request was successful.
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -118,27 +136,33 @@ public class GetPluginsResponseBody extends TeaModel {
     }
 
     public static class GetPluginsResponseBodyData extends TeaModel {
-        // The type of the plug-in. Valid values:
-        // 
-        // 0: custom
-        // 
-        // 1: permission authorization
-        // 
-        // 2: security protection
-        // 
-        // 3: transmission protocol
-        // 
-        // 4: traffic control
-        // 
-        // 5: traffic observation
+        /**
+         * <p>The type of the plug-in. Valid values:</p>
+         * <br>
+         * <p>0: custom</p>
+         * <br>
+         * <p>1: permission authorization</p>
+         * <br>
+         * <p>2: security protection</p>
+         * <br>
+         * <p>3: transmission protocol</p>
+         * <br>
+         * <p>4: traffic control</p>
+         * <br>
+         * <p>5: traffic observation</p>
+         */
         @NameInMap("Category")
         public Integer category;
 
-        // The information about the plug-in configuration used for checking.
+        /**
+         * <p>The information about the plug-in configuration used for checking.</p>
+         */
         @NameInMap("ConfigCheck")
         public String configCheck;
 
-        // The ID of the plug-in.
+        /**
+         * <p>The ID of the plug-in.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
@@ -148,60 +172,80 @@ public class GetPluginsResponseBody extends TeaModel {
         @NameInMap("Mode")
         public Integer mode;
 
-        // The name of the plug-in.
+        /**
+         * <p>The name of the plug-in.</p>
+         */
         @NameInMap("Name")
         public String name;
 
         @NameInMap("NewVersionPublishingFlag")
         public Boolean newVersionPublishingFlag;
 
-        // The execution stage of the plug-in.
-        // 
-        // *   0: default stage
-        // *   1: authorization stage
-        // *   2: authentication stage
-        // *   3: statistics stage
+        /**
+         * <p>The execution stage of the plug-in.</p>
+         * <br>
+         * <p>*   0: default stage</p>
+         * <p>*   1: authorization stage</p>
+         * <p>*   2: authentication stage</p>
+         * <p>*   3: statistics stage</p>
+         */
         @NameInMap("Phase")
         public Integer phase;
 
-        // The ID of the creator.
+        /**
+         * <p>The ID of the creator.</p>
+         */
         @NameInMap("PrimaryUser")
         public String primaryUser;
 
-        // The execution priority of the plug-in. A larger value indicates a higher priority.
+        /**
+         * <p>The execution priority of the plug-in. A larger value indicates a higher priority.</p>
+         */
         @NameInMap("Priority")
         public Integer priority;
 
-        // The publish status.
+        /**
+         * <p>The publish status.</p>
+         */
         @NameInMap("PublishState")
         public Integer publishState;
 
-        // Indicates whether the plug-in is enabled.
-        // 
-        // *   0: disabled
-        // *   1: enabled
+        /**
+         * <p>Indicates whether the plug-in is enabled.</p>
+         * <br>
+         * <p>*   0: disabled</p>
+         * <p>*   1: enabled</p>
+         */
         @NameInMap("Status")
         public String status;
 
-        // The summary of the plug-in.
+        /**
+         * <p>The summary of the plug-in.</p>
+         */
         @NameInMap("Summary")
         public String summary;
 
-        // The version of the plug-in.
+        /**
+         * <p>The version of the plug-in.</p>
+         */
         @NameInMap("Version")
         public String version;
 
-        // The URL of the Object Storage Service (OSS) bucket that stores the WebAssembly plug-in.
+        /**
+         * <p>The URL of the Object Storage Service (OSS) bucket that stores the WebAssembly plug-in.</p>
+         */
         @NameInMap("WasmFile")
         public String wasmFile;
 
-        // The WebAssembly language. Valid values:
-        // 
-        // *   0: C++
-        // *   1: TinyGo
-        // *   2: Rust
-        // *   3: AssemblyScript
-        // *   4: Zig
+        /**
+         * <p>The WebAssembly language. Valid values:</p>
+         * <br>
+         * <p>*   0: C++</p>
+         * <p>*   1: TinyGo</p>
+         * <p>*   2: Rust</p>
+         * <p>*   3: AssemblyScript</p>
+         * <p>*   4: Zig</p>
+         */
         @NameInMap("WasmLang")
         public Integer wasmLang;
 

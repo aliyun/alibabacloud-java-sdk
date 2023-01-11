@@ -4,42 +4,60 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListZkTrackResponseBody extends TeaModel {
-    // The error code returned if the request failed.
+    /**
+     * <p>The error code returned if the request failed.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // The HTTP status code returned.
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpCode")
     public String httpCode;
 
-    // The message returned.
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
-    // The page number of the returned page.
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
-    // The number of entries returned per page.
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request was successful. Valid values:
-    // 
-    // *   true: The request was successful.
-    // *   false: The request failed.
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   true: The request was successful.</p>
+     * <p>*   false: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
-    // The total number of entries returned.
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
-    // The trajectory data.
+    /**
+     * <p>The trajectory data.</p>
+     */
     @NameInMap("Traces")
     public java.util.List<ListZkTrackResponseBodyTraces> traces;
 
@@ -121,83 +139,111 @@ public class ListZkTrackResponseBody extends TeaModel {
     }
 
     public static class ListZkTrackResponseBodyTraces extends TeaModel {
-        // The access control list (ACL).
+        /**
+         * <p>The access control list (ACL).</p>
+         */
         @NameInMap("Acl")
         public String acl;
 
-        // The data type. Valid values:
-        // 
-        // *   persist
-        // *   ephemeral
+        /**
+         * <p>The data type. Valid values:</p>
+         * <br>
+         * <p>*   persist</p>
+         * <p>*   ephemeral</p>
+         */
         @NameInMap("DataType")
         public String dataType;
 
-        // The type of the event. For trajectory of the notify type:
-        // 
-        // *   NodeCreated
-        // *   NodeDeleted
-        // *   NodeDataChanged
-        // *   NodeChildrenChanged
+        /**
+         * <p>The type of the event. For trajectory of the notify type:</p>
+         * <br>
+         * <p>*   NodeCreated</p>
+         * <p>*   NodeDeleted</p>
+         * <p>*   NodeDataChanged</p>
+         * <p>*   NodeChildrenChanged</p>
+         */
         @NameInMap("EventType")
         public String eventType;
 
-        // Indicates whether the transaction ended.
+        /**
+         * <p>Indicates whether the transaction ended.</p>
+         */
         @NameInMap("Finished")
         public Boolean finished;
 
-        // The recorded time.
+        /**
+         * <p>The recorded time.</p>
+         */
         @NameInMap("LogDate")
         public String logDate;
 
-        // The transaction size.
+        /**
+         * <p>The transaction size.</p>
+         */
         @NameInMap("MultiSize")
         public Long multiSize;
 
-        // The operation type. For trajectory of the push type:
-        // 
-        // *   Create
-        // *   Update
-        // *   Delete
-        // *   SetAcl
-        // *   Multi
-        // 
-        // For trajectory of the pull type:
-        // 
-        // *   GetData
-        // *   GetChild
-        // *   GetStat
+        /**
+         * <p>The operation type. For trajectory of the push type:</p>
+         * <br>
+         * <p>*   Create</p>
+         * <p>*   Update</p>
+         * <p>*   Delete</p>
+         * <p>*   SetAcl</p>
+         * <p>*   Multi</p>
+         * <br>
+         * <p>For trajectory of the pull type:</p>
+         * <br>
+         * <p>*   GetData</p>
+         * <p>*   GetChild</p>
+         * <p>*   GetStat</p>
+         */
         @NameInMap("OpType")
         public String opType;
 
-        // The path.
+        /**
+         * <p>The path.</p>
+         */
         @NameInMap("Path")
         public String path;
 
-        // The returned message.
+        /**
+         * <p>The returned message.</p>
+         */
         @NameInMap("Result")
         public String result;
 
-        // The session ID.
+        /**
+         * <p>The session ID.</p>
+         */
         @NameInMap("SessionId")
         public String sessionId;
 
-        // The timestamp (not available).
+        /**
+         * <p>The timestamp (not available).</p>
+         */
         @NameInMap("Timestamp")
         public String timestamp;
 
-        // The type of the trajectory. Valid values:
-        // 
-        // *   Push
-        // *   Pull
-        // *   Notify
+        /**
+         * <p>The type of the trajectory. Valid values:</p>
+         * <br>
+         * <p>*   Push</p>
+         * <p>*   Pull</p>
+         * <p>*   Notify</p>
+         */
         @NameInMap("TraceType")
         public String traceType;
 
-        // The time to live (TTL).
+        /**
+         * <p>The time to live (TTL).</p>
+         */
         @NameInMap("Ttl")
         public Long ttl;
 
-        // Indicates whether to enable the listener.
+        /**
+         * <p>Indicates whether to enable the listener.</p>
+         */
         @NameInMap("Watch")
         public Boolean watch;
 

@@ -4,30 +4,42 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListGatewayRequest extends TeaModel {
-    // The language of the response. Valid values:
-    // 
-    // *   zh: Chinese
-    // *   en: English
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // Specifies whether to enable the sorting feature. This feature is not available.
+    /**
+     * <p>Specifies whether to enable the sorting feature. This feature is not available.</p>
+     */
     @NameInMap("DescSort")
     public Boolean descSort;
 
-    // The details of parameters.
+    /**
+     * <p>The details of parameters.</p>
+     */
     @NameInMap("FilterParams")
     public ListGatewayRequestFilterParams filterParams;
 
-    // The order information.
+    /**
+     * <p>The order information.</p>
+     */
     @NameInMap("OrderItem")
     public String orderItem;
 
-    // The number of the page to return.
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // The number of entries to return on each page.
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -85,31 +97,45 @@ public class ListGatewayRequest extends TeaModel {
     }
 
     public static class ListGatewayRequestFilterParams extends TeaModel {
-        // The type of the gateway.
+        /**
+         * <p>The type of the gateway.</p>
+         */
         @NameInMap("GatewayType")
         public String gatewayType;
 
-        // The unique ID of the gateway.
+        /**
+         * <p>The unique ID of the gateway.</p>
+         */
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 
-        // The ID of the instance.
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        // The tag of the instance.
+        /**
+         * <p>The tag of the instance.</p>
+         */
         @NameInMap("MseTag")
         public String mseTag;
 
-        // The name of the gateway.
+        /**
+         * <p>The name of the gateway.</p>
+         */
         @NameInMap("Name")
         public String name;
 
-        // The ID of the resource group.
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        // The ID of the virtual private cloud (VPC).
+        /**
+         * <p>The ID of the virtual private cloud (VPC).</p>
+         */
         @NameInMap("Vpc")
         public String vpc;
 

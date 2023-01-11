@@ -4,33 +4,45 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetNacosConfigRequest extends TeaModel {
-    // The language of the response. Valid values:
-    // 
-    // *   zh: Chinese
-    // *   en: English
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // Specifies whether to perform a beta release. Valid values:
-    // 
-    // *   `true`: yes
-    // *   `false`: no
+    /**
+     * <p>Specifies whether to perform a beta release. Valid values:</p>
+     * <br>
+     * <p>*   `true`: yes</p>
+     * <p>*   `false`: no</p>
+     */
     @NameInMap("Beta")
     public Boolean beta;
 
-    // The ID of the data.
+    /**
+     * <p>The ID of the data.</p>
+     */
     @NameInMap("DataId")
     public String dataId;
 
-    // The name of the configuration group.
+    /**
+     * <p>The name of the configuration group.</p>
+     */
     @NameInMap("Group")
     public String group;
 
-    // The ID of the instance.
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // The ID of the namespace.
+    /**
+     * <p>The ID of the namespace.</p>
+     */
     @NameInMap("NamespaceId")
     public String namespaceId;
 

@@ -4,42 +4,60 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListAnsServicesResponseBody extends TeaModel {
-    // The details of the data.
+    /**
+     * <p>The details of the data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListAnsServicesResponseBodyData> data;
 
-    // The error code returned if the request failed.
+    /**
+     * <p>The error code returned if the request failed.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // The HTTP status code returned.
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpCode")
     public String httpCode;
 
-    // The message returned.
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
-    // The page number of the returned page.
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // The number of entries returned per page.
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request was successful. Valid values:
-    // 
-    // *   `true`: The request was successful.
-    // *   `false`: The request failed.
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request was successful.</p>
+     * <p>*   `false`: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
-    // The total number of returned instances.
+    /**
+     * <p>The total number of returned instances.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -121,23 +139,33 @@ public class ListAnsServicesResponseBody extends TeaModel {
     }
 
     public static class ListAnsServicesResponseBodyData extends TeaModel {
-        // The total number of clusters.
+        /**
+         * <p>The total number of clusters.</p>
+         */
         @NameInMap("ClusterCount")
         public Integer clusterCount;
 
-        // The name of the contact group.
+        /**
+         * <p>The name of the contact group.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
-        // The total number of instances with healthy heartbeats.
+        /**
+         * <p>The total number of instances with healthy heartbeats.</p>
+         */
         @NameInMap("HealthyInstanceCount")
         public Integer healthyInstanceCount;
 
-        // The total number of instances that are used for the current service.
+        /**
+         * <p>The total number of instances that are used for the current service.</p>
+         */
         @NameInMap("IpCount")
         public Integer ipCount;
 
-        // The name of the service.
+        /**
+         * <p>The name of the service.</p>
+         */
         @NameInMap("Name")
         public String name;
 

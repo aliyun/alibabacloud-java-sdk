@@ -4,37 +4,51 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ModifyLosslessRuleRequest extends TeaModel {
-    // The language of the response. Valid values:
-    // 
-    // *   zh: Chinese
-    // *   en: English
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // Specifies whether to align the lifecycle of the application in the Kubernetes cluster with that of the microservice.
+    /**
+     * <p>Specifies whether to align the lifecycle of the application in the Kubernetes cluster with that of the microservice.</p>
+     */
     @NameInMap("Aligned")
     public Boolean aligned;
 
-    // The ID of the application.
+    /**
+     * <p>The ID of the application.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
-    // The name of the application.
+    /**
+     * <p>The name of the application.</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
-    // The registration latency.
+    /**
+     * <p>The registration latency.</p>
+     */
     @NameInMap("DelayTime")
     public Long delayTime;
 
-    // Specifies whether to enable the alert rule. Valid values:
-    // 
-    // *   `true`: enables the rule.
-    // *   `false`: disables the rule.
+    /**
+     * <p>Specifies whether to enable the alert rule. Valid values:</p>
+     * <br>
+     * <p>*   `true`: enables the rule.</p>
+     * <p>*   `false`: disables the rule.</p>
+     */
     @NameInMap("Enable")
     public Boolean enable;
 
-    // The slope of the prefetching curve.
+    /**
+     * <p>The slope of the prefetching curve.</p>
+     */
     @NameInMap("FuncType")
     public Long funcType;
 
@@ -47,23 +61,33 @@ public class ModifyLosslessRuleRequest extends TeaModel {
     @NameInMap("Notice")
     public Boolean notice;
 
-    // The region ID.
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // Specifies whether to associate readiness probe with service prefetching.
+    /**
+     * <p>Specifies whether to associate readiness probe with service prefetching.</p>
+     */
     @NameInMap("Related")
     public Boolean related;
 
-    // The cooldown duration. Unit: seconds.
+    /**
+     * <p>The cooldown duration. Unit: seconds.</p>
+     */
     @NameInMap("ShutdownWaitSeconds")
     public Integer shutdownWaitSeconds;
 
-    // The service source. Valid values:
+    /**
+     * <p>The service source. Valid values:</p>
+     */
     @NameInMap("Source")
     public String source;
 
-    // The prefetching duration.
+    /**
+     * <p>The prefetching duration.</p>
+     */
     @NameInMap("WarmupTime")
     public Long warmupTime;
 

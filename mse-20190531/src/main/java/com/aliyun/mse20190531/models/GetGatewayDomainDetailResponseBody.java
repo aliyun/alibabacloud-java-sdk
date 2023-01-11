@@ -4,30 +4,42 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetGatewayDomainDetailResponseBody extends TeaModel {
-    // The status code returned.
+    /**
+     * <p>The status code returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
-    // The returned data.
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public GetGatewayDomainDetailResponseBodyData data;
 
-    // The HTTP status code returned.
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // The message returned.
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request was successful. Valid values:
-    // 
-    // *   `true`: The request was successful.
-    // *   `false`: The request failed.
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request was successful.</p>
+     * <p>*   `false`: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -85,91 +97,133 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
     }
 
     public static class GetGatewayDomainDetailResponseBodyData extends TeaModel {
-        // The start time.
+        /**
+         * <p>The start time.</p>
+         */
         @NameInMap("AfterDate")
         public Long afterDate;
 
-        // The algorithm.
+        /**
+         * <p>The algorithm.</p>
+         */
         @NameInMap("Algorithm")
         public String algorithm;
 
-        // The expiration time.
+        /**
+         * <p>The expiration time.</p>
+         */
         @NameInMap("BeforeDate")
         public Long beforeDate;
 
-        // The ID of the certificate.
+        /**
+         * <p>The ID of the certificate.</p>
+         */
         @NameInMap("CertIdentifier")
         public String certIdentifier;
 
-        // The name of the certificate.
+        /**
+         * <p>The name of the certificate.</p>
+         */
         @NameInMap("CertName")
         public String certName;
 
-        // The public domain name.
+        /**
+         * <p>The public domain name.</p>
+         */
         @NameInMap("CommonName")
         public String commonName;
 
-        // The ID of the gateway.
+        /**
+         * <p>The ID of the gateway.</p>
+         */
         @NameInMap("GatewayId")
         public Long gatewayId;
 
-        // The unique ID of the gateway.
+        /**
+         * <p>The unique ID of the gateway.</p>
+         */
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 
-        // The start time.
+        /**
+         * <p>The start time.</p>
+         */
         @NameInMap("GmtAfter")
         public String gmtAfter;
 
-        // The expiration time.
+        /**
+         * <p>The expiration time.</p>
+         */
         @NameInMap("GmtBefore")
         public String gmtBefore;
 
-        // The creation time.
+        /**
+         * <p>The creation time.</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
-        // The update time.
+        /**
+         * <p>The update time.</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
-        // Indicates whether `HTTP/2` is enabled.
-        // 
-        // *   `open`: `HTTP/2` is enabled.
-        // *   `close`: `HTTP/2` is disabled.
-        // *   `globalConfig`: Global configurations are used.
+        /**
+         * <p>Indicates whether `HTTP/2` is enabled.</p>
+         * <br>
+         * <p>*   `open`: `HTTP/2` is enabled.</p>
+         * <p>*   `close`: `HTTP/2` is disabled.</p>
+         * <p>*   `globalConfig`: Global configurations are used.</p>
+         */
         @NameInMap("Http2")
         public String http2;
 
-        // The ID.
+        /**
+         * <p>The ID.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
-        // The issuer.
+        /**
+         * <p>The issuer.</p>
+         */
         @NameInMap("Issuer")
         public String issuer;
 
-        // Indicates whether HTTPS is forcibly used.
+        /**
+         * <p>Indicates whether HTTPS is forcibly used.</p>
+         */
         @NameInMap("MustHttps")
         public Boolean mustHttps;
 
-        // The domain name.
+        /**
+         * <p>The domain name.</p>
+         */
         @NameInMap("Name")
         public String name;
 
-        // The protocol of the gateway.
+        /**
+         * <p>The protocol of the gateway.</p>
+         */
         @NameInMap("Protocol")
         public String protocol;
 
-        // The name of the extended field.
+        /**
+         * <p>The name of the extended field.</p>
+         */
         @NameInMap("Sans")
         public String sans;
 
-        // The maximum version of Transport Layer Security (TLS).
+        /**
+         * <p>The maximum version of Transport Layer Security (TLS).</p>
+         */
         @NameInMap("TlsMax")
         public String tlsMax;
 
-        // The minimum version of TLS.
+        /**
+         * <p>The minimum version of TLS.</p>
+         */
         @NameInMap("TlsMin")
         public String tlsMin;
 

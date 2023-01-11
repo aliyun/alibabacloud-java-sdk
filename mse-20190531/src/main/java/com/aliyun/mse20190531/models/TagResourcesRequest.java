@@ -4,34 +4,44 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class TagResourcesRequest extends TeaModel {
-    // The language of the response. Valid values:
-    // 
-    // *   zh: Chinese
-    // *   en: English
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // The region ID.
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The ID of the instance.
-    // 
-    // > This parameter specifies the instance ID that is passed. Examples:
-    // 
-    // *   **ResourceId.1** indicates the ID of the first instance.
-    // *   **ResourceId.2** indicates the ID of the second instance.
+    /**
+     * <p>The ID of the instance.</p>
+     * <br>
+     * <p>> This parameter specifies the instance ID that is passed. Examples:</p>
+     * <br>
+     * <p>*   **ResourceId.1** indicates the ID of the first instance.</p>
+     * <p>*   **ResourceId.2** indicates the ID of the second instance.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
-    // The type of the resources. Valid values:
-    // 
-    // *   CLUSTER: MSE instance
-    // *   GATEWAY: cloud-native gateway
+    /**
+     * <p>The type of the resources. Valid values:</p>
+     * <br>
+     * <p>*   CLUSTER: MSE instance</p>
+     * <p>*   GATEWAY: cloud-native gateway</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
-    // The list of tags. You can specify a maximum of 20 tags.
+    /**
+     * <p>The list of tags. You can specify a maximum of 20 tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<TagResourcesRequestTag> tag;
 
@@ -80,43 +90,13 @@ public class TagResourcesRequest extends TeaModel {
         return this.tag;
     }
 
-    public static class ListTagResourcesRequestTag extends TeaModel {
-        // The key of a tag.
-        @NameInMap("Key")
-        public String key;
-
-        // The value of a tag.
-        @NameInMap("Value")
-        public String value;
-
-        public static ListTagResourcesRequestTag build(java.util.Map<String, ?> map) throws Exception {
-            ListTagResourcesRequestTag self = new ListTagResourcesRequestTag();
-            return TeaModel.build(map, self);
-        }
-
-        public ListTagResourcesRequestTag setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public ListTagResourcesRequestTag setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
-    }
-
     public static class TagResourcesRequestTag extends TeaModel {
         @NameInMap("Key")
         public String key;
 
-        // The value of a tag.
+        /**
+         * <p>The value of a tag.</p>
+         */
         @NameInMap("Value")
         public String value;
 

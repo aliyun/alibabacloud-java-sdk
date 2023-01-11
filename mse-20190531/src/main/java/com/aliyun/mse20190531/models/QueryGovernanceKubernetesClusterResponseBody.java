@@ -4,27 +4,39 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
-    // The status code returned.
+    /**
+     * <p>The status code returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
-    // The response data.
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("Data")
     public QueryGovernanceKubernetesClusterResponseBodyData data;
 
-    // The HTTP status code returned.
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // The message returned.
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request was successful.
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -82,27 +94,39 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
     }
 
     public static class QueryGovernanceKubernetesClusterResponseBodyDataResult extends TeaModel {
-        // The ID of the instance.
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
-        // The name of the instance.
+        /**
+         * <p>The name of the instance.</p>
+         */
         @NameInMap("ClusterName")
         public String clusterName;
 
-        // The Kubernetes version of the instance.
+        /**
+         * <p>The Kubernetes version of the instance.</p>
+         */
         @NameInMap("K8sVersion")
         public String k8sVersion;
 
-        // The information of the namespace.
+        /**
+         * <p>The information of the namespace.</p>
+         */
         @NameInMap("NamespaceInfos")
         public String namespaceInfos;
 
-        // The time when the ack-onepilot component was started.
+        /**
+         * <p>The time when the ack-onepilot component was started.</p>
+         */
         @NameInMap("PilotStartTime")
         public String pilotStartTime;
 
-        // The region where the cluster resides.
+        /**
+         * <p>The region where the cluster resides.</p>
+         */
         @NameInMap("Region")
         public String region;
 
@@ -162,19 +186,27 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
     }
 
     public static class QueryGovernanceKubernetesClusterResponseBodyData extends TeaModel {
-        // The page number of the returned page.
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
-        // The number of entries returned per page.
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        // The data structure.
+        /**
+         * <p>The data structure.</p>
+         */
         @NameInMap("Result")
         public java.util.List<QueryGovernanceKubernetesClusterResponseBodyDataResult> result;
 
-        // The total number of clusters.
+        /**
+         * <p>The total number of clusters.</p>
+         */
         @NameInMap("TotalSize")
         public Integer totalSize;
 
