@@ -854,7 +854,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         RecognizeLogoRequest recognizeLogoReq = new RecognizeLogoRequest();
         com.aliyun.openapiutil.Client.convert(request, recognizeLogoReq);
         if (!com.aliyun.teautil.Common.isUnset(request.tasks)) {
-            Integer i = 0;
+            Integer i0 = 0;
             for (RecognizeLogoAdvanceRequest.RecognizeLogoAdvanceRequestTasks item0 : request.tasks) {
                 if (!com.aliyun.teautil.Common.isUnset(item0.imageURLObject)) {
                     authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
@@ -879,9 +879,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
                         new TeaPair("header", ossHeader)
                     ));
                     ossClient.postObject(uploadRequest, ossRuntime);
-                    RecognizeLogoRequest.RecognizeLogoRequestTasks tmp = recognizeLogoReq.tasks.get(i);
+                    RecognizeLogoRequest.RecognizeLogoRequestTasks tmp = recognizeLogoReq.tasks.get(i0);
                     tmp.imageURL = "http://" + authResponse.body.bucket + "." + authResponse.body.endpoint + "/" + authResponse.body.objectKey + "";
-                    i = com.aliyun.darabonbanumber.Client.ltoi(com.aliyun.darabonbanumber.Client.add(com.aliyun.darabonbanumber.Client.itol(i), com.aliyun.darabonbanumber.Client.itol(1)));
+                    i0 = com.aliyun.darabonbanumber.Client.ltoi(com.aliyun.darabonbanumber.Client.add(com.aliyun.darabonbanumber.Client.itol(i0), com.aliyun.darabonbanumber.Client.itol(1)));
                 }
 
             }
