@@ -4,11 +4,15 @@ package com.aliyun.imageaudit20191230.models;
 import com.aliyun.tea.*;
 
 public class ScanTextRequest extends TeaModel {
-    // 1
+    /**
+     * <p>1</p>
+     */
     @NameInMap("Labels")
     public java.util.List<ScanTextRequestLabels> labels;
 
-    // 1
+    /**
+     * <p>1</p>
+     */
     @NameInMap("Tasks")
     public java.util.List<ScanTextRequestTasks> tasks;
 
