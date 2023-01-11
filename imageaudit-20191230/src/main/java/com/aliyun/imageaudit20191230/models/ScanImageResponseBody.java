@@ -323,7 +323,9 @@ public class ScanImageResponseBody extends TeaModel {
         @NameInMap("LogoDataList")
         public java.util.List<ScanImageResponseBodyDataResultsSubResultsLogoDataList> logoDataList;
 
-        // 1
+        /**
+         * <p>1</p>
+         */
         @NameInMap("OCRDataList")
         public java.util.List<String> OCRDataList;
 
