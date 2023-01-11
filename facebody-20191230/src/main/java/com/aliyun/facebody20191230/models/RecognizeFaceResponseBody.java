@@ -32,35 +32,51 @@ public class RecognizeFaceResponseBody extends TeaModel {
     }
 
     public static class RecognizeFaceResponseBodyDataQualities extends TeaModel {
-        // 1
+        /**
+         * <p>1</p>
+         */
         @NameInMap("BlurList")
         public java.util.List<Float> blurList;
 
-        // 1
+        /**
+         * <p>1</p>
+         */
         @NameInMap("FnfList")
         public java.util.List<Float> fnfList;
 
-        // 1
+        /**
+         * <p>1</p>
+         */
         @NameInMap("GlassList")
         public java.util.List<Float> glassList;
 
-        // 1
+        /**
+         * <p>1</p>
+         */
         @NameInMap("IlluList")
         public java.util.List<Float> illuList;
 
-        // 1
+        /**
+         * <p>1</p>
+         */
         @NameInMap("MaskList")
         public java.util.List<Float> maskList;
 
-        // 1
+        /**
+         * <p>1</p>
+         */
         @NameInMap("NoiseList")
         public java.util.List<Float> noiseList;
 
-        // 1
+        /**
+         * <p>1</p>
+         */
         @NameInMap("PoseList")
         public java.util.List<Float> poseList;
 
-        // 1
+        /**
+         * <p>1</p>
+         */
         @NameInMap("ScoreList")
         public java.util.List<Float> scoreList;
 
@@ -136,64 +152,90 @@ public class RecognizeFaceResponseBody extends TeaModel {
     }
 
     public static class RecognizeFaceResponseBodyData extends TeaModel {
-        // 1
+        /**
+         * <p>1</p>
+         */
         @NameInMap("AgeList")
         public java.util.List<Integer> ageList;
 
-        // 1
+        /**
+         * <p>1</p>
+         */
         @NameInMap("BeautyList")
         public java.util.List<Float> beautyList;
 
         @NameInMap("DenseFeatureLength")
         public Integer denseFeatureLength;
 
-        // 1
+        /**
+         * <p>1</p>
+         */
         @NameInMap("DenseFeatures")
         public java.util.List<String> denseFeatures;
 
-        // 1
+        /**
+         * <p>1</p>
+         */
         @NameInMap("Expressions")
         public java.util.List<Integer> expressions;
 
         @NameInMap("FaceCount")
         public Integer faceCount;
 
-        // 1
+        /**
+         * <p>1</p>
+         */
         @NameInMap("FaceProbabilityList")
         public java.util.List<Float> faceProbabilityList;
 
-        // 1
+        /**
+         * <p>1</p>
+         */
         @NameInMap("FaceRectangles")
         public java.util.List<Integer> faceRectangles;
 
-        // 1
+        /**
+         * <p>1</p>
+         */
         @NameInMap("GenderList")
         public java.util.List<Integer> genderList;
 
-        // 1
+        /**
+         * <p>1</p>
+         */
         @NameInMap("Glasses")
         public java.util.List<Integer> glasses;
 
-        // 1
+        /**
+         * <p>1</p>
+         */
         @NameInMap("HatList")
         public java.util.List<Integer> hatList;
 
         @NameInMap("LandmarkCount")
         public Integer landmarkCount;
 
-        // 1
+        /**
+         * <p>1</p>
+         */
         @NameInMap("Landmarks")
         public java.util.List<Float> landmarks;
 
-        // 1
+        /**
+         * <p>1</p>
+         */
         @NameInMap("Masks")
         public java.util.List<Long> masks;
 
-        // 1
+        /**
+         * <p>1</p>
+         */
         @NameInMap("PoseList")
         public java.util.List<Float> poseList;
 
-        // 1
+        /**
+         * <p>1</p>
+         */
         @NameInMap("Pupils")
         public java.util.List<Float> pupils;
 

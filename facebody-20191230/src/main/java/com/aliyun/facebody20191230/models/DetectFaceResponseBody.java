@@ -32,35 +32,51 @@ public class DetectFaceResponseBody extends TeaModel {
     }
 
     public static class DetectFaceResponseBodyDataQualities extends TeaModel {
-        // 1
+        /**
+         * <p>1</p>
+         */
         @NameInMap("BlurList")
         public java.util.List<Float> blurList;
 
-        // 1
+        /**
+         * <p>1</p>
+         */
         @NameInMap("FnfList")
         public java.util.List<Float> fnfList;
 
-        // 1
+        /**
+         * <p>1</p>
+         */
         @NameInMap("GlassList")
         public java.util.List<Float> glassList;
 
-        // 1
+        /**
+         * <p>1</p>
+         */
         @NameInMap("IlluList")
         public java.util.List<Float> illuList;
 
-        // 1
+        /**
+         * <p>1</p>
+         */
         @NameInMap("MaskList")
         public java.util.List<Float> maskList;
 
-        // 1
+        /**
+         * <p>1</p>
+         */
         @NameInMap("NoiseList")
         public java.util.List<Float> noiseList;
 
-        // 1
+        /**
+         * <p>1</p>
+         */
         @NameInMap("PoseList")
         public java.util.List<Float> poseList;
 
-        // 1
+        /**
+         * <p>1</p>
+         */
         @NameInMap("ScoreList")
         public java.util.List<Float> scoreList;
 
@@ -139,26 +155,36 @@ public class DetectFaceResponseBody extends TeaModel {
         @NameInMap("FaceCount")
         public Integer faceCount;
 
-        // 1
+        /**
+         * <p>1</p>
+         */
         @NameInMap("FaceProbabilityList")
         public java.util.List<Float> faceProbabilityList;
 
-        // 1
+        /**
+         * <p>1</p>
+         */
         @NameInMap("FaceRectangles")
         public java.util.List<Integer> faceRectangles;
 
         @NameInMap("LandmarkCount")
         public Integer landmarkCount;
 
-        // 1
+        /**
+         * <p>1</p>
+         */
         @NameInMap("Landmarks")
         public java.util.List<Float> landmarks;
 
-        // 1
+        /**
+         * <p>1</p>
+         */
         @NameInMap("PoseList")
         public java.util.List<Float> poseList;
 
-        // 1
+        /**
+         * <p>1</p>
+         */
         @NameInMap("Pupils")
         public java.util.List<Float> pupils;
 

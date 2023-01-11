@@ -4,7 +4,9 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class RecognizePublicFaceAdvanceRequest extends TeaModel {
-    // 1
+    /**
+     * <p>1</p>
+     */
     @NameInMap("Task")
     public java.util.List<RecognizePublicFaceAdvanceRequestTask> task;
 
