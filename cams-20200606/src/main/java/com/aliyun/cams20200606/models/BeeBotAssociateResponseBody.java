@@ -4,19 +4,27 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class BeeBotAssociateResponseBody extends TeaModel {
-    // If OK is returned, the request is successful.
+    /**
+     * <p>If OK is returned, the request is successful.</p>
+     */
     @NameInMap("Code")
     public String code;
 
-    // The returned data.
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public BeeBotAssociateResponseBodyData data;
 
-    // The error message.
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -58,11 +66,15 @@ public class BeeBotAssociateResponseBody extends TeaModel {
     }
 
     public static class BeeBotAssociateResponseBodyDataAssociate extends TeaModel {
-        // The additional information.
+        /**
+         * <p>The additional information.</p>
+         */
         @NameInMap("Meta")
         public String meta;
 
-        // The title of the associated question.
+        /**
+         * <p>The title of the associated question.</p>
+         */
         @NameInMap("Title")
         public String title;
 
@@ -90,15 +102,21 @@ public class BeeBotAssociateResponseBody extends TeaModel {
     }
 
     public static class BeeBotAssociateResponseBodyData extends TeaModel {
-        // The list of associated recommendations.
+        /**
+         * <p>The list of associated recommendations.</p>
+         */
         @NameInMap("Associate")
         public java.util.List<BeeBotAssociateResponseBodyDataAssociate> associate;
 
-        // The ID of the response message.
+        /**
+         * <p>The ID of the response message.</p>
+         */
         @NameInMap("MessageId")
         public String messageId;
 
-        // The ID of the session.
+        /**
+         * <p>The ID of the session.</p>
+         */
         @NameInMap("SessionId")
         public String sessionId;
 

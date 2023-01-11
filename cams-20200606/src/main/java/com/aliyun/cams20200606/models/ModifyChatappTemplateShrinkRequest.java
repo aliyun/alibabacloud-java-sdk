@@ -4,32 +4,46 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class ModifyChatappTemplateShrinkRequest extends TeaModel {
-    // The list of components of the message template.
+    /**
+     * <p>The list of components of the message template.</p>
+     */
     @NameInMap("Components")
     public String componentsShrink;
 
-    // Isv customer space id
+    /**
+     * <p>Isv customer space id</p>
+     */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
-    // The ID of the WhatApp Business account of the ISV customer.
+    /**
+     * <p>The ID of the WhatApp Business account of the ISV customer.</p>
+     */
     @NameInMap("CustWabaId")
     @Deprecated
     public String custWabaId;
 
-    // The examples of variables that are used when you create the message template.
+    /**
+     * <p>The examples of variables that are used when you create the message template.</p>
+     */
     @NameInMap("Example")
     public String exampleShrink;
 
-    // ISV verification code, which is used to verify whether the sub-account is authorized by ISV.
+    /**
+     * <p>ISV verification code, which is used to verify whether the sub-account is authorized by ISV.</p>
+     */
     @NameInMap("IsvCode")
     public String isvCode;
 
-    // The language.
+    /**
+     * <p>The language.</p>
+     */
     @NameInMap("Language")
     public String language;
 
-    // The code of the message template.
+    /**
+     * <p>The code of the message template.</p>
+     */
     @NameInMap("TemplateCode")
     public String templateCode;
 

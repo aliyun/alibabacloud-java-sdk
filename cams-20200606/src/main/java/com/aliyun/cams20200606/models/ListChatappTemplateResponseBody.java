@@ -4,22 +4,30 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class ListChatappTemplateResponseBody extends TeaModel {
-    // The HTTP status code returned.
-    // 
-    // *   A code of OK indicates that the call is successful.
-    // *   Other codes indicate that the call fails. For more information, see [Error codes](~~196974~~).
+    /**
+     * <p>The HTTP status code returned.</p>
+     * <br>
+     * <p>*   A code of OK indicates that the call is successful.</p>
+     * <p>*   Other codes indicate that the call fails. For more information, see [Error codes](~~196974~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
-    // The message templates.
+    /**
+     * <p>The message templates.</p>
+     */
     @NameInMap("ListTemplate")
     public java.util.List<ListChatappTemplateResponseBodyListTemplate> listTemplate;
 
-    // The error message returned.
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -61,40 +69,50 @@ public class ListChatappTemplateResponseBody extends TeaModel {
     }
 
     public static class ListChatappTemplateResponseBodyListTemplate extends TeaModel {
-        // The review status of the message template. Valid values:
-        // 
-        // *   **pass**: The message template is approved.
-        // *   **fail**: The message template is rejected.
-        // *   **auditing**: The message template is being reviewed.
-        // *   **unaudit**: The review is suspended.
+        /**
+         * <p>The review status of the message template. Valid values:</p>
+         * <br>
+         * <p>*   **pass**: The message template is approved.</p>
+         * <p>*   **fail**: The message template is rejected.</p>
+         * <p>*   **auditing**: The message template is being reviewed.</p>
+         * <p>*   **unaudit**: The review is suspended.</p>
+         */
         @NameInMap("AuditStatus")
         public String auditStatus;
 
-        // The category of the message template. Valid values:
-        // 
-        // *   **ACCOUNT_UPDATE**: account update
-        // *   **PAYMENT_UPDATE**: payment update
-        // *   **PERSONAL_FINANCE\_UPDATE**: personal finance update
-        // *   **SHIPPING_UPDATE**: traffic update
-        // *   **RESERVATION_UPDATE**: reservation update
-        // *   **ISSUE_RESOLUTION**: issue resolution
-        // *   **APPOINTMENT_UPDATE**: appointment update
-        // *   **TRANSPORTATION_UPDATE**: logistics information update
-        // *   **TICKET_UPDATE**: ticket update
-        // *   **ALERT_UPDATE**: alert update
-        // *   **AUTO_REPLY**: auto reply
+        /**
+         * <p>The category of the message template. Valid values:</p>
+         * <br>
+         * <p>*   **ACCOUNT_UPDATE**: account update</p>
+         * <p>*   **PAYMENT_UPDATE**: payment update</p>
+         * <p>*   **PERSONAL_FINANCE\_UPDATE**: personal finance update</p>
+         * <p>*   **SHIPPING_UPDATE**: traffic update</p>
+         * <p>*   **RESERVATION_UPDATE**: reservation update</p>
+         * <p>*   **ISSUE_RESOLUTION**: issue resolution</p>
+         * <p>*   **APPOINTMENT_UPDATE**: appointment update</p>
+         * <p>*   **TRANSPORTATION_UPDATE**: logistics information update</p>
+         * <p>*   **TICKET_UPDATE**: ticket update</p>
+         * <p>*   **ALERT_UPDATE**: alert update</p>
+         * <p>*   **AUTO_REPLY**: auto reply</p>
+         */
         @NameInMap("Category")
         public String category;
 
-        // The language that is used in the message template.
+        /**
+         * <p>The language that is used in the message template.</p>
+         */
         @NameInMap("Language")
         public String language;
 
-        // The code of the message template.
+        /**
+         * <p>The code of the message template.</p>
+         */
         @NameInMap("TemplateCode")
         public String templateCode;
 
-        // The name of the message template.
+        /**
+         * <p>The name of the message template.</p>
+         */
         @NameInMap("TemplateName")
         public String templateName;
 

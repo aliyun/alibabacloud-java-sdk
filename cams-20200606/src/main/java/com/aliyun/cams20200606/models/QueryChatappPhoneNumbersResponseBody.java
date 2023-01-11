@@ -4,22 +4,30 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
-    // The HTTP status code returned.
-    // 
-    // *   A value of OK indicates that the call is successful.
-    // *   Other values indicate that the call fails. For more information, see [Error codes](~~196974~~).
+    /**
+     * <p>The HTTP status code returned.</p>
+     * <br>
+     * <p>*   A value of OK indicates that the call is successful.</p>
+     * <p>*   Other values indicate that the call fails. For more information, see [Error codes](~~196974~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
-    // The message returned.
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
-    // The list of phone numbers.
+    /**
+     * <p>The list of phone numbers.</p>
+     */
     @NameInMap("PhoneNumbers")
     public java.util.List<QueryChatappPhoneNumbersResponseBodyPhoneNumbers> phoneNumbers;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -61,51 +69,75 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
     }
 
     public static class QueryChatappPhoneNumbersResponseBodyPhoneNumbers extends TeaModel {
-        // 号码校验状态。
+        /**
+         * <p>号码校验状态。</p>
+         */
         @NameInMap("CodeVerificationStatus")
         public String codeVerificationStatus;
 
-        // 号码发送量。
+        /**
+         * <p>号码发送量。</p>
+         */
         @NameInMap("MessagingLimitTier")
         public String messagingLimitTier;
 
-        // 名称状态。
+        /**
+         * <p>名称状态。</p>
+         */
         @NameInMap("NameStatus")
         public String nameStatus;
 
-        // 新名称审核状态。
+        /**
+         * <p>新名称审核状态。</p>
+         */
         @NameInMap("NewNameStatus")
         public String newNameStatus;
 
-        // The phone number.
+        /**
+         * <p>The phone number.</p>
+         */
         @NameInMap("PhoneNumber")
         public String phoneNumber;
 
-        // The quality rating of the phone number. Valid values: GREEN, YELLOW, RED, and UNKNOWN.
+        /**
+         * <p>The quality rating of the phone number. Valid values: GREEN, YELLOW, RED, and UNKNOWN.</p>
+         */
         @NameInMap("QualityRating")
         public String qualityRating;
 
-        // The status of the phone number. Valid values: PENDING, DELETED, MIGRATED, BANNED, RESTRICTED, RATE_LIMITED, FLAGGED, CONNECTED, DISCONNECTED, UNKNOWN, and UNVERIFIED.
+        /**
+         * <p>The status of the phone number. Valid values: PENDING, DELETED, MIGRATED, BANNED, RESTRICTED, RATE_LIMITED, FLAGGED, CONNECTED, DISCONNECTED, UNKNOWN, and UNVERIFIED.</p>
+         */
         @NameInMap("Status")
         public String status;
 
-        // The status report notification URL.
+        /**
+         * <p>The status report notification URL.</p>
+         */
         @NameInMap("StatusCallbackUrl")
         public String statusCallbackUrl;
 
-        // The status report notification queue.
+        /**
+         * <p>The status report notification queue.</p>
+         */
         @NameInMap("StatusQueue")
         public String statusQueue;
 
-        // The MO message notification URL.
+        /**
+         * <p>The MO message notification URL.</p>
+         */
         @NameInMap("UpCallbackUrl")
         public String upCallbackUrl;
 
-        // The mobile originated (MO) message notification queue.
+        /**
+         * <p>The mobile originated (MO) message notification queue.</p>
+         */
         @NameInMap("UpQueue")
         public String upQueue;
 
-        // The name of the company to which the phone number is associated with.
+        /**
+         * <p>The name of the company to which the phone number is associated with.</p>
+         */
         @NameInMap("VerifiedName")
         public String verifiedName;
 

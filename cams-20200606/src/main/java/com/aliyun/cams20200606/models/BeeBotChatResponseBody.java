@@ -4,19 +4,27 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class BeeBotChatResponseBody extends TeaModel {
-    // If OK is returned, the request is successful.
+    /**
+     * <p>If OK is returned, the request is successful.</p>
+     */
     @NameInMap("Code")
     public String code;
 
-    // The returned data.
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public BeeBotChatResponseBodyData data;
 
-    // The error message.
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -58,11 +66,15 @@ public class BeeBotChatResponseBody extends TeaModel {
     }
 
     public static class BeeBotChatResponseBodyDataMessagesKnowledgeRelatedKnowledges extends TeaModel {
-        // The ID of the related knowledge.
+        /**
+         * <p>The ID of the related knowledge.</p>
+         */
         @NameInMap("KnowledgeId")
         public String knowledgeId;
 
-        // The title of the related knowledge.
+        /**
+         * <p>The title of the related knowledge.</p>
+         */
         @NameInMap("Title")
         public String title;
 
@@ -90,39 +102,57 @@ public class BeeBotChatResponseBody extends TeaModel {
     }
 
     public static class BeeBotChatResponseBodyDataMessagesKnowledge extends TeaModel {
-        // The source of the answer.
+        /**
+         * <p>The source of the answer.</p>
+         */
         @NameInMap("AnswerSource")
         public String answerSource;
 
-        // The category of the knowledge.
+        /**
+         * <p>The category of the knowledge.</p>
+         */
         @NameInMap("Category")
         public String category;
 
-        // The content of the hit question.
+        /**
+         * <p>The content of the hit question.</p>
+         */
         @NameInMap("Content")
         public String content;
 
-        // Indicates whether the answer is in plain text or rich text.
+        /**
+         * <p>Indicates whether the answer is in plain text or rich text.</p>
+         */
         @NameInMap("ContentType")
         public String contentType;
 
-        // The hit text.
+        /**
+         * <p>The hit text.</p>
+         */
         @NameInMap("HitStatement")
         public String hitStatement;
 
-        // The ID of the hit problem in the knowledge base.
+        /**
+         * <p>The ID of the hit problem in the knowledge base.</p>
+         */
         @NameInMap("Id")
         public String id;
 
-        // The list of the related knowledge.
+        /**
+         * <p>The list of the related knowledge.</p>
+         */
         @NameInMap("RelatedKnowledges")
         public java.util.List<BeeBotChatResponseBodyDataMessagesKnowledgeRelatedKnowledges> relatedKnowledges;
 
-        // The summary to the hit question.
+        /**
+         * <p>The summary to the hit question.</p>
+         */
         @NameInMap("Summary")
         public String summary;
 
-        // The title of the hit question.
+        /**
+         * <p>The title of the hit question.</p>
+         */
         @NameInMap("Title")
         public String title;
 
@@ -206,15 +236,21 @@ public class BeeBotChatResponseBody extends TeaModel {
     }
 
     public static class BeeBotChatResponseBodyDataMessagesRecommends extends TeaModel {
-        // The source of the recommended answer.
+        /**
+         * <p>The source of the recommended answer.</p>
+         */
         @NameInMap("AnswerSource")
         public String answerSource;
 
-        // The ID of the recommended knowledge.
+        /**
+         * <p>The ID of the recommended knowledge.</p>
+         */
         @NameInMap("KnowledgeId")
         public String knowledgeId;
 
-        // The recommended content, which may be the entity in graph-based question answering, the standard knowledge in knowledge-based question answering, or the column value in table-based question answering.
+        /**
+         * <p>The recommended content, which may be the entity in graph-based question answering, the standard knowledge in knowledge-based question answering, or the column value in table-based question answering.</p>
+         */
         @NameInMap("Title")
         public String title;
 
@@ -250,19 +286,27 @@ public class BeeBotChatResponseBody extends TeaModel {
     }
 
     public static class BeeBotChatResponseBodyDataMessagesTextSlots extends TeaModel {
-        // Indicates whether the slot is hit.
+        /**
+         * <p>Indicates whether the slot is hit.</p>
+         */
         @NameInMap("Hit")
         public Boolean hit;
 
-        // The name of the slot.
+        /**
+         * <p>The name of the slot.</p>
+         */
         @NameInMap("Name")
         public String name;
 
-        // The original value.
+        /**
+         * <p>The original value.</p>
+         */
         @NameInMap("Origin")
         public String origin;
 
-        // The specific value.
+        /**
+         * <p>The specific value.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -306,55 +350,81 @@ public class BeeBotChatResponseBody extends TeaModel {
     }
 
     public static class BeeBotChatResponseBodyDataMessagesText extends TeaModel {
-        // The source of the answer.
+        /**
+         * <p>The source of the answer.</p>
+         */
         @NameInMap("AnswerSource")
         public String answerSource;
 
-        // The content of the text message.
+        /**
+         * <p>The content of the text message.</p>
+         */
         @NameInMap("Content")
         public String content;
 
-        // Indicates whether the answer is in plain text or rich text.
+        /**
+         * <p>Indicates whether the answer is in plain text or rich text.</p>
+         */
         @NameInMap("ContentType")
         public String contentType;
 
-        // When the AnswerSource parameter is set to BotFramework, the value of this parameter is returned.
+        /**
+         * <p>When the AnswerSource parameter is set to BotFramework, the value of this parameter is returned.</p>
+         */
         @NameInMap("DialogName")
         public String dialogName;
 
-        // The passthrough parameters are returned.
+        /**
+         * <p>The passthrough parameters are returned.</p>
+         */
         @NameInMap("Ext")
         public java.util.Map<String, ?> ext;
 
-        // When the AnswerSource parameter is set to BotFramework, the value of this parameter is returned.
+        /**
+         * <p>When the AnswerSource parameter is set to BotFramework, the value of this parameter is returned.</p>
+         */
         @NameInMap("ExternalFlags")
         public java.util.Map<String, ?> externalFlags;
 
-        // The hit text.
+        /**
+         * <p>The hit text.</p>
+         */
         @NameInMap("HitStatement")
         public String hitStatement;
 
-        // When the AnswerSource parameter is set to BotFramework, the value of this parameter is returned.
+        /**
+         * <p>When the AnswerSource parameter is set to BotFramework, the value of this parameter is returned.</p>
+         */
         @NameInMap("IntentName")
         public String intentName;
 
-        // The metadata.
+        /**
+         * <p>The metadata.</p>
+         */
         @NameInMap("MetaData")
         public String metaData;
 
-        // When the AnswerSource parameter is set to BotFramework, the value of this parameter is returned.
+        /**
+         * <p>When the AnswerSource parameter is set to BotFramework, the value of this parameter is returned.</p>
+         */
         @NameInMap("NodeId")
         public String nodeId;
 
-        // When the AnswerSource parameter is set to BotFramework, the value of this parameter is returned.
+        /**
+         * <p>When the AnswerSource parameter is set to BotFramework, the value of this parameter is returned.</p>
+         */
         @NameInMap("NodeName")
         public String nodeName;
 
-        // The list of slots.
+        /**
+         * <p>The list of slots.</p>
+         */
         @NameInMap("Slots")
         public java.util.List<BeeBotChatResponseBodyDataMessagesTextSlots> slots;
 
-        // The title of the chitchat.
+        /**
+         * <p>The title of the chitchat.</p>
+         */
         @NameInMap("UserDefinedChatTitle")
         public String userDefinedChatTitle;
 
@@ -470,23 +540,33 @@ public class BeeBotChatResponseBody extends TeaModel {
     }
 
     public static class BeeBotChatResponseBodyDataMessages extends TeaModel {
-        // If the AnswerType parameter is set to Recommend, this parameter indicates the source of the recommended answer.
+        /**
+         * <p>If the AnswerType parameter is set to Recommend, this parameter indicates the source of the recommended answer.</p>
+         */
         @NameInMap("AnswerSource")
         public String answerSource;
 
-        // The type of the message.
+        /**
+         * <p>The type of the message.</p>
+         */
         @NameInMap("AnswerType")
         public String answerType;
 
-        // When the AnswerType parameter is set to Knowledge, this parameter contains the Knowledge object returned by the bot.
+        /**
+         * <p>When the AnswerType parameter is set to Knowledge, this parameter contains the Knowledge object returned by the bot.</p>
+         */
         @NameInMap("Knowledge")
         public BeeBotChatResponseBodyDataMessagesKnowledge knowledge;
 
-        // When the AnswerType parameter is set to Recommend, this parameter contains a list of recommends returned by the bot.
+        /**
+         * <p>When the AnswerType parameter is set to Recommend, this parameter contains a list of recommends returned by the bot.</p>
+         */
         @NameInMap("Recommends")
         public java.util.List<BeeBotChatResponseBodyDataMessagesRecommends> recommends;
 
-        // When the AnswerType parameter is set to Text, this parameter contains the Text object returned by the bot.
+        /**
+         * <p>When the AnswerType parameter is set to Text, this parameter contains the Text object returned by the bot.</p>
+         */
         @NameInMap("Text")
         public BeeBotChatResponseBodyDataMessagesText text;
 
@@ -538,15 +618,21 @@ public class BeeBotChatResponseBody extends TeaModel {
     }
 
     public static class BeeBotChatResponseBodyData extends TeaModel {
-        // The ID of the response message.
+        /**
+         * <p>The ID of the response message.</p>
+         */
         @NameInMap("MessageId")
         public String messageId;
 
-        // The list of the message.
+        /**
+         * <p>The list of the message.</p>
+         */
         @NameInMap("Messages")
         public java.util.List<BeeBotChatResponseBodyDataMessages> messages;
 
-        // The ID of the session.
+        /**
+         * <p>The ID of the session.</p>
+         */
         @NameInMap("SessionId")
         public String sessionId;
 
