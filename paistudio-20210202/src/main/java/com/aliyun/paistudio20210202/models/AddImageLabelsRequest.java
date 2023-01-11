@@ -4,7 +4,6 @@ package com.aliyun.paistudio20210202.models;
 import com.aliyun.tea.*;
 
 public class AddImageLabelsRequest extends TeaModel {
-    // 标签
     @NameInMap("Labels")
     public java.util.List<AddImageLabelsRequestLabels> labels;
 
@@ -22,11 +21,9 @@ public class AddImageLabelsRequest extends TeaModel {
     }
 
     public static class AddImageLabelsRequestLabels extends TeaModel {
-        // Key
         @NameInMap("Key")
         public String key;
 
-        // Value
         @NameInMap("Value")
         public String value;
 

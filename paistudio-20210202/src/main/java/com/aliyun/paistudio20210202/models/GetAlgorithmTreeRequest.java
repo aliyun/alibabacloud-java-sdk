@@ -7,6 +7,9 @@ public class GetAlgorithmTreeRequest extends TeaModel {
     @NameInMap("Source")
     public String source;
 
+    @NameInMap("WorkspaceId")
+    public String workspaceId;
+
     public static GetAlgorithmTreeRequest build(java.util.Map<String, ?> map) throws Exception {
         GetAlgorithmTreeRequest self = new GetAlgorithmTreeRequest();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class GetAlgorithmTreeRequest extends TeaModel {
     }
     public String getSource() {
         return this.source;
+    }
+
+    public GetAlgorithmTreeRequest setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
 }

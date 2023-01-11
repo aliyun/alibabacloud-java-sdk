@@ -4,7 +4,6 @@ package com.aliyun.paistudio20210202.models;
 import com.aliyun.tea.*;
 
 public class RemoveImageLabelsResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("requestId")
     public String requestId;
 

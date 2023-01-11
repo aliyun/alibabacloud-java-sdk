@@ -16,7 +16,6 @@ public class GetNodeOutputResponseBody extends TeaModel {
     @NameInMap("NodeName")
     public String nodeName;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

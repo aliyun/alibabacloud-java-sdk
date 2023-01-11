@@ -4,15 +4,12 @@ package com.aliyun.paistudio20210202.models;
 import com.aliyun.tea.*;
 
 public class ListImageLabelsRequest extends TeaModel {
-    // 镜像id
     @NameInMap("ImageId")
     public String imageId;
 
-    // image过滤条件，获取满足条件的image的所有label
     @NameInMap("LabelFilter")
     public String labelFilter;
 
-    // 标签列表，以逗号分隔
     @NameInMap("LabelKeys")
     public String labelKeys;
 

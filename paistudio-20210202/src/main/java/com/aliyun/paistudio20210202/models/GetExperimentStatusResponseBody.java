@@ -7,7 +7,6 @@ public class GetExperimentStatusResponseBody extends TeaModel {
     @NameInMap("Nodes")
     public java.util.List<GetExperimentStatusResponseBodyNodes> nodes;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

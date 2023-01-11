@@ -28,7 +28,6 @@ public class GetJobResponseBody extends TeaModel {
     @NameInMap("PaiflowNodeId")
     public String paiflowNodeId;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

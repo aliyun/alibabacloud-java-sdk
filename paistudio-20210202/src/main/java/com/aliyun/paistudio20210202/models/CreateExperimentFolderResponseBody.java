@@ -7,7 +7,6 @@ public class CreateExperimentFolderResponseBody extends TeaModel {
     @NameInMap("FolderId")
     public String folderId;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

@@ -7,7 +7,6 @@ public class ListJobsResponseBody extends TeaModel {
     @NameInMap("Jobs")
     public java.util.List<ListJobsResponseBodyJobs> jobs;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

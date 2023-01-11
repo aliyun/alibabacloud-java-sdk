@@ -4,15 +4,12 @@ package com.aliyun.paistudio20210202.models;
 import com.aliyun.tea.*;
 
 public class ListImageLabelsResponseBody extends TeaModel {
-    // 镜像标签
     @NameInMap("Labels")
     public java.util.List<ListImageLabelsResponseBodyLabels> labels;
 
-    // 符合过滤条件的数量
     @NameInMap("TotalCount")
     public Long totalCount;
 
-    // Id of the request
     @NameInMap("requestId")
     public String requestId;
 
@@ -46,11 +43,9 @@ public class ListImageLabelsResponseBody extends TeaModel {
     }
 
     public static class ListImageLabelsResponseBodyLabels extends TeaModel {
-        // 键
         @NameInMap("Key")
         public String key;
 
-        // 值
         @NameInMap("Value")
         public String value;
 

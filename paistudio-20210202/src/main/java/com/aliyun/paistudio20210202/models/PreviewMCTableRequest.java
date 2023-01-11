@@ -7,6 +7,9 @@ public class PreviewMCTableRequest extends TeaModel {
     @NameInMap("Endpoint")
     public String endpoint;
 
+    @NameInMap("Limit")
+    public Integer limit;
+
     @NameInMap("Partition")
     public String partition;
 
@@ -24,6 +27,14 @@ public class PreviewMCTableRequest extends TeaModel {
     }
     public String getEndpoint() {
         return this.endpoint;
+    }
+
+    public PreviewMCTableRequest setLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    public Integer getLimit() {
+        return this.limit;
     }
 
     public PreviewMCTableRequest setPartition(String partition) {

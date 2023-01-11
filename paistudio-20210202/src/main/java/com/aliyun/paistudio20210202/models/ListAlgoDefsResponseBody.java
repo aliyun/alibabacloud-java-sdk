@@ -7,7 +7,6 @@ public class ListAlgoDefsResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.List<java.util.Map<String, ?>> data;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

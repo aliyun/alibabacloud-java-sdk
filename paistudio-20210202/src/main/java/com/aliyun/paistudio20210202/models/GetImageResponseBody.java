@@ -4,39 +4,30 @@ package com.aliyun.paistudio20210202.models;
 import com.aliyun.tea.*;
 
 public class GetImageResponseBody extends TeaModel {
-    // 描述
     @NameInMap("Description")
     public String description;
 
-    // 创建 UTC 时间，日期格式 iso8601
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
-    // 创建 UTC 时间，日期格式 iso8601
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
-    // 镜像地址，包含版本号
     @NameInMap("ImageUri")
     public String imageUri;
 
-    // 镜像标签
     @NameInMap("Labels")
     public java.util.List<GetImageResponseBodyLabels> labels;
 
-    // 镜像名称
     @NameInMap("Name")
     public String name;
 
-    // 创建人
     @NameInMap("OperatorCreate")
     public String operatorCreate;
 
-    // 创建人父账户
     @NameInMap("ParentOperatorCreate")
     public String parentOperatorCreate;
 
-    // Id of the request
     @NameInMap("requestId")
     public String requestId;
 
@@ -118,11 +109,9 @@ public class GetImageResponseBody extends TeaModel {
     }
 
     public static class GetImageResponseBodyLabels extends TeaModel {
-        // Key
         @NameInMap("Key")
         public String key;
 
-        // Value
         @NameInMap("Value")
         public String value;
 

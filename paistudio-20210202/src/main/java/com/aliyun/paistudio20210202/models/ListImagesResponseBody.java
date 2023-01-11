@@ -4,15 +4,12 @@ package com.aliyun.paistudio20210202.models;
 import com.aliyun.tea.*;
 
 public class ListImagesResponseBody extends TeaModel {
-    // 镜像列表
     @NameInMap("Images")
     public java.util.List<ListImagesResponseBodyImages> images;
 
-    // 总数
     @NameInMap("TotalCount")
     public Long totalCount;
 
-    // Id of the request
     @NameInMap("requestId")
     public String requestId;
 
@@ -46,11 +43,9 @@ public class ListImagesResponseBody extends TeaModel {
     }
 
     public static class ListImagesResponseBodyImagesLabels extends TeaModel {
-        // Key
         @NameInMap("Key")
         public String key;
 
-        // Value
         @NameInMap("Value")
         public String value;
 
@@ -78,27 +73,21 @@ public class ListImagesResponseBody extends TeaModel {
     }
 
     public static class ListImagesResponseBodyImages extends TeaModel {
-        // 镜像描述
         @NameInMap("Description")
         public String description;
 
-        // 创建 UTC 时间，日期格式 iso8601
         @NameInMap("GmtCreateTime")
         public String gmtCreateTime;
 
-        // 镜像id
         @NameInMap("ImageId")
         public String imageId;
 
-        // 镜像地址，包含版本号
         @NameInMap("ImageUri")
         public String imageUri;
 
-        // 镜像标签，是个map
         @NameInMap("Labels")
         public java.util.List<ListImagesResponseBodyImagesLabels> labels;
 
-        // 镜像名称
         @NameInMap("Name")
         public String name;
 

@@ -19,15 +19,26 @@ public class GetTemplateResponseBody extends TeaModel {
     @NameInMap("ImageLink")
     public String imageLink;
 
+    @NameInMap("Labels")
+    public java.util.List<java.util.Map<String, ?>> labels;
+
     @NameInMap("Name")
     public String name;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("SourceId")
+    public String sourceId;
+
+    @NameInMap("SourceType")
+    public String sourceType;
+
     @NameInMap("TemplateId")
     public String templateId;
+
+    @NameInMap("TemplateType")
+    public String templateType;
 
     public static GetTemplateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetTemplateResponseBody self = new GetTemplateResponseBody();
@@ -74,6 +85,14 @@ public class GetTemplateResponseBody extends TeaModel {
         return this.imageLink;
     }
 
+    public GetTemplateResponseBody setLabels(java.util.List<java.util.Map<String, ?>> labels) {
+        this.labels = labels;
+        return this;
+    }
+    public java.util.List<java.util.Map<String, ?>> getLabels() {
+        return this.labels;
+    }
+
     public GetTemplateResponseBody setName(String name) {
         this.name = name;
         return this;
@@ -90,12 +109,36 @@ public class GetTemplateResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public GetTemplateResponseBody setSourceId(String sourceId) {
+        this.sourceId = sourceId;
+        return this;
+    }
+    public String getSourceId() {
+        return this.sourceId;
+    }
+
+    public GetTemplateResponseBody setSourceType(String sourceType) {
+        this.sourceType = sourceType;
+        return this;
+    }
+    public String getSourceType() {
+        return this.sourceType;
+    }
+
     public GetTemplateResponseBody setTemplateId(String templateId) {
         this.templateId = templateId;
         return this;
     }
     public String getTemplateId() {
         return this.templateId;
+    }
+
+    public GetTemplateResponseBody setTemplateType(String templateType) {
+        this.templateType = templateType;
+        return this;
+    }
+    public String getTemplateType() {
+        return this.templateType;
     }
 
 }

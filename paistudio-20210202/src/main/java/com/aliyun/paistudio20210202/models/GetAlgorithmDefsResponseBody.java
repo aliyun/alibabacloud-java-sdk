@@ -4,7 +4,6 @@ package com.aliyun.paistudio20210202.models;
 import com.aliyun.tea.*;
 
 public class GetAlgorithmDefsResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

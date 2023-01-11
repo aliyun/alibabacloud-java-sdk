@@ -7,7 +7,6 @@ public class QueryExperimentVisualizationDataResponseBody extends TeaModel {
     @NameInMap("VisualizationData")
     public java.util.List<QueryExperimentVisualizationDataResponseBodyVisualizationData> visualizationData;
 
-    // Id of the request
     @NameInMap("requestId")
     public String requestId;
 

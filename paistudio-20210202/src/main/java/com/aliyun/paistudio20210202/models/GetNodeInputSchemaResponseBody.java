@@ -10,7 +10,6 @@ public class GetNodeInputSchemaResponseBody extends TeaModel {
     @NameInMap("ColTypes")
     public java.util.List<String> colTypes;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

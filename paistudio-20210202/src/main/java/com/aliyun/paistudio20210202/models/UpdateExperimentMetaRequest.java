@@ -4,7 +4,6 @@ package com.aliyun.paistudio20210202.models;
 import com.aliyun.tea.*;
 
 public class UpdateExperimentMetaRequest extends TeaModel {
-    // 工作空间内可见性 PUBLIC; PRIVATE 默认PUBLIC
     @NameInMap("Accessibility")
     public String accessibility;
 

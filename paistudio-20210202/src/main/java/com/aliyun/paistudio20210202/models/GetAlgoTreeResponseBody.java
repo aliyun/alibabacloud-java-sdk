@@ -7,7 +7,6 @@ public class GetAlgoTreeResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.Map<String, ?> data;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

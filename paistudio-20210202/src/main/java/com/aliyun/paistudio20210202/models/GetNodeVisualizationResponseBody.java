@@ -7,7 +7,6 @@ public class GetNodeVisualizationResponseBody extends TeaModel {
     @NameInMap("Content")
     public String content;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

@@ -7,7 +7,6 @@ public class ListNodeOutputsResponseBody extends TeaModel {
     @NameInMap("Outputs")
     public java.util.List<ListNodeOutputsResponseBodyOutputs> outputs;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

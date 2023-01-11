@@ -21,19 +21,15 @@ public class QueryExperimentVisualizationDataRequest extends TeaModel {
     }
 
     public static class QueryExperimentVisualizationDataRequestBody extends TeaModel {
-        // 结束时间，UTC 时间，日期格式 iso8601，闭区间，对流算法必填
         @NameInMap("EndTime")
         public String endTime;
 
-        // node id
         @NameInMap("NodeId")
         public String nodeId;
 
-        // 开始时间，UTC 时间，日期格式 iso8601，闭区间，对流算法必选
         @NameInMap("StartTime")
         public String startTime;
 
-        // dataId列表
         @NameInMap("VisualizationDataIds")
         public java.util.List<String> visualizationDataIds;
 
