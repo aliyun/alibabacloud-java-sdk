@@ -7,6 +7,9 @@ public class AddCardToDirectionalGroupRequest extends TeaModel {
     @NameInMap("AddType")
     public String addType;
 
+    /**
+     * <p>Linkcard</p>
+     */
     @NameInMap("ApiProduct")
     public String apiProduct;
 
