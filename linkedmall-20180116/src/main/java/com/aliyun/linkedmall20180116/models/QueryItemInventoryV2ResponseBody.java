@@ -109,6 +109,9 @@ public class QueryItemInventoryV2ResponseBody extends TeaModel {
         @NameInMap("Inventory")
         public QueryItemInventoryV2ResponseBodyItemListItemSkuListSkuInventory inventory;
 
+        /**
+         * <p>skuid</p>
+         */
         @NameInMap("SkuId")
         public Long skuId;
 

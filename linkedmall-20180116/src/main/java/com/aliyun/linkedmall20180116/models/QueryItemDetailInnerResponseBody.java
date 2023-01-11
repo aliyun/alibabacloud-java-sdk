@@ -155,6 +155,9 @@ public class QueryItemDetailInnerResponseBody extends TeaModel {
         @NameInMap("SkuDesc")
         public String skuDesc;
 
+        /**
+         * <p>skuid</p>
+         */
         @NameInMap("SkuId")
         public Long skuId;
 

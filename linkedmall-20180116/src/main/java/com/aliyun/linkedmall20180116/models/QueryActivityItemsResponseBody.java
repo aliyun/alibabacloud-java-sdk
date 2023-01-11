@@ -108,6 +108,9 @@ public class QueryActivityItemsResponseBody extends TeaModel {
         @NameInMap("ReservedPrice")
         public Long reservedPrice;
 
+        /**
+         * <p>skuID</p>
+         */
         @NameInMap("SkuId")
         public Long skuId;
 

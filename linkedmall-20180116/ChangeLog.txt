@@ -1,3 +1,6 @@
+2023-01-11 Version: 1.1.1
+- Add ModifyBasicItemSupplierPrice.
+
 2022-10-26 Version: 1.1.0
 - Add series of interfaces for designated taobaoid trade.
 

@@ -3,7 +3,7 @@ package com.aliyun.linkedmall20180116.models;
 
 import com.aliyun.tea.*;
 
-public class ModifySupplierPriceAndPriceCentResponseBody extends TeaModel {
+public class ModifyBasicItemSupplierPriceResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
@@ -13,18 +13,15 @@ public class ModifySupplierPriceAndPriceCentResponseBody extends TeaModel {
     @NameInMap("Model")
     public Boolean model;
 
-    /**
-     * <p>Id of the request</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    public static ModifySupplierPriceAndPriceCentResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        ModifySupplierPriceAndPriceCentResponseBody self = new ModifySupplierPriceAndPriceCentResponseBody();
+    public static ModifyBasicItemSupplierPriceResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ModifyBasicItemSupplierPriceResponseBody self = new ModifyBasicItemSupplierPriceResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ModifySupplierPriceAndPriceCentResponseBody setCode(String code) {
+    public ModifyBasicItemSupplierPriceResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -32,7 +29,7 @@ public class ModifySupplierPriceAndPriceCentResponseBody extends TeaModel {
         return this.code;
     }
 
-    public ModifySupplierPriceAndPriceCentResponseBody setMessage(String message) {
+    public ModifyBasicItemSupplierPriceResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -40,7 +37,7 @@ public class ModifySupplierPriceAndPriceCentResponseBody extends TeaModel {
         return this.message;
     }
 
-    public ModifySupplierPriceAndPriceCentResponseBody setModel(Boolean model) {
+    public ModifyBasicItemSupplierPriceResponseBody setModel(Boolean model) {
         this.model = model;
         return this;
     }
@@ -48,7 +45,7 @@ public class ModifySupplierPriceAndPriceCentResponseBody extends TeaModel {
         return this.model;
     }
 
-    public ModifySupplierPriceAndPriceCentResponseBody setRequestId(String requestId) {
+    public ModifyBasicItemSupplierPriceResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
