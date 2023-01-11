@@ -4,7 +4,9 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class BeautifyBodyResponseBody extends TeaModel {
-    // Id of the request
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("Data")
     public BeautifyBodyResponseBodyData data;
 
