@@ -8,7 +8,7 @@ public class GetOssMetaListResponseBody extends TeaModel {
     public Long code;
 
     @NameInMap("Data")
-    public String data;
+    public java.util.List<GetOssMetaListResponseBodyData> data;
 
     @NameInMap("ErrorCode")
     public String errorCode;
@@ -35,11 +35,11 @@ public class GetOssMetaListResponseBody extends TeaModel {
         return this.code;
     }
 
-    public GetOssMetaListResponseBody setData(String data) {
+    public GetOssMetaListResponseBody setData(java.util.List<GetOssMetaListResponseBodyData> data) {
         this.data = data;
         return this;
     }
-    public String getData() {
+    public java.util.List<GetOssMetaListResponseBodyData> getData() {
         return this.data;
     }
 
@@ -73,6 +73,58 @@ public class GetOssMetaListResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public static class GetOssMetaListResponseBodyData extends TeaModel {
+        @NameInMap("ds")
+        public String ds;
+
+        @NameInMap("fileNames")
+        public java.util.List<String> fileNames;
+
+        @NameInMap("fileSize")
+        public String fileSize;
+
+        @NameInMap("rows")
+        public String rows;
+
+        public static GetOssMetaListResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            GetOssMetaListResponseBodyData self = new GetOssMetaListResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public GetOssMetaListResponseBodyData setDs(String ds) {
+            this.ds = ds;
+            return this;
+        }
+        public String getDs() {
+            return this.ds;
+        }
+
+        public GetOssMetaListResponseBodyData setFileNames(java.util.List<String> fileNames) {
+            this.fileNames = fileNames;
+            return this;
+        }
+        public java.util.List<String> getFileNames() {
+            return this.fileNames;
+        }
+
+        public GetOssMetaListResponseBodyData setFileSize(String fileSize) {
+            this.fileSize = fileSize;
+            return this;
+        }
+        public String getFileSize() {
+            return this.fileSize;
+        }
+
+        public GetOssMetaListResponseBodyData setRows(String rows) {
+            this.rows = rows;
+            return this;
+        }
+        public String getRows() {
+            return this.rows;
+        }
+
     }
 
 }
