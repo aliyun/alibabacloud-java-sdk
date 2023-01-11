@@ -22,6 +22,9 @@ public class CreateStackInstancesShrinkRequest extends TeaModel {
     @NameInMap("OperationPreferences")
     public String operationPreferencesShrink;
 
+    /**
+     * <p>test</p>
+     */
     @NameInMap("ParameterOverrides")
     public java.util.List<CreateStackInstancesShrinkRequestParameterOverrides> parameterOverrides;
 

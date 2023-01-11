@@ -31,6 +31,9 @@ public class UpdateStackGroupShrinkRequest extends TeaModel {
     @NameInMap("OperationPreferences")
     public String operationPreferencesShrink;
 
+    /**
+     * <p>test</p>
+     */
     @NameInMap("Parameters")
     public java.util.List<UpdateStackGroupShrinkRequestParameters> parameters;
 

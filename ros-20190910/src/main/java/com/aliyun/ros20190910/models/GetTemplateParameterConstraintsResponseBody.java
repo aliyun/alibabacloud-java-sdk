@@ -31,6 +31,36 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class GetTemplateParameterConstraintsResponseBodyParameterConstraintsNotSupportResources extends TeaModel {
+        @NameInMap("PropertyName")
+        public String propertyName;
+
+        @NameInMap("ResourceType")
+        public String resourceType;
+
+        public static GetTemplateParameterConstraintsResponseBodyParameterConstraintsNotSupportResources build(java.util.Map<String, ?> map) throws Exception {
+            GetTemplateParameterConstraintsResponseBodyParameterConstraintsNotSupportResources self = new GetTemplateParameterConstraintsResponseBodyParameterConstraintsNotSupportResources();
+            return TeaModel.build(map, self);
+        }
+
+        public GetTemplateParameterConstraintsResponseBodyParameterConstraintsNotSupportResources setPropertyName(String propertyName) {
+            this.propertyName = propertyName;
+            return this;
+        }
+        public String getPropertyName() {
+            return this.propertyName;
+        }
+
+        public GetTemplateParameterConstraintsResponseBodyParameterConstraintsNotSupportResources setResourceType(String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+    }
+
     public static class GetTemplateParameterConstraintsResponseBodyParameterConstraints extends TeaModel {
         @NameInMap("AllowedValues")
         public java.util.List<String> allowedValues;
@@ -49,6 +79,9 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
 
         @NameInMap("IllegalValueByRules")
         public java.util.List<?> illegalValueByRules;
+
+        @NameInMap("NotSupportResources")
+        public java.util.List<GetTemplateParameterConstraintsResponseBodyParameterConstraintsNotSupportResources> notSupportResources;
 
         @NameInMap("ParameterKey")
         public String parameterKey;
@@ -107,6 +140,14 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
         }
         public java.util.List<?> getIllegalValueByRules() {
             return this.illegalValueByRules;
+        }
+
+        public GetTemplateParameterConstraintsResponseBodyParameterConstraints setNotSupportResources(java.util.List<GetTemplateParameterConstraintsResponseBodyParameterConstraintsNotSupportResources> notSupportResources) {
+            this.notSupportResources = notSupportResources;
+            return this;
+        }
+        public java.util.List<GetTemplateParameterConstraintsResponseBodyParameterConstraintsNotSupportResources> getNotSupportResources() {
+            return this.notSupportResources;
         }
 
         public GetTemplateParameterConstraintsResponseBodyParameterConstraints setParameterKey(String parameterKey) {

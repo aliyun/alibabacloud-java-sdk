@@ -16,6 +16,9 @@ public class PreviewStackRequest extends TeaModel {
     @NameInMap("Parallelism")
     public Long parallelism;
 
+    /**
+     * <p>test</p>
+     */
     @NameInMap("Parameters")
     public java.util.List<PreviewStackRequestParameters> parameters;
 

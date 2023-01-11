@@ -22,6 +22,9 @@ public class CreateStackRequest extends TeaModel {
     @NameInMap("Parallelism")
     public Long parallelism;
 
+    /**
+     * <p>test</p>
+     */
     @NameInMap("Parameters")
     public java.util.List<CreateStackRequestParameters> parameters;
 
@@ -43,6 +46,9 @@ public class CreateStackRequest extends TeaModel {
     @NameInMap("StackPolicyURL")
     public String stackPolicyURL;
 
+    /**
+     * <p>test</p>
+     */
     @NameInMap("Tags")
     public java.util.List<CreateStackRequestTags> tags;
 
@@ -238,36 +244,6 @@ public class CreateStackRequest extends TeaModel {
     }
     public Long getTimeoutInMinutes() {
         return this.timeoutInMinutes;
-    }
-
-    public static class ContinueCreateStackRequestParameters extends TeaModel {
-        @NameInMap("ParameterKey")
-        public String parameterKey;
-
-        @NameInMap("ParameterValue")
-        public String parameterValue;
-
-        public static ContinueCreateStackRequestParameters build(java.util.Map<String, ?> map) throws Exception {
-            ContinueCreateStackRequestParameters self = new ContinueCreateStackRequestParameters();
-            return TeaModel.build(map, self);
-        }
-
-        public ContinueCreateStackRequestParameters setParameterKey(String parameterKey) {
-            this.parameterKey = parameterKey;
-            return this;
-        }
-        public String getParameterKey() {
-            return this.parameterKey;
-        }
-
-        public ContinueCreateStackRequestParameters setParameterValue(String parameterValue) {
-            this.parameterValue = parameterValue;
-            return this;
-        }
-        public String getParameterValue() {
-            return this.parameterValue;
-        }
-
     }
 
     public static class CreateStackRequestParameters extends TeaModel {
