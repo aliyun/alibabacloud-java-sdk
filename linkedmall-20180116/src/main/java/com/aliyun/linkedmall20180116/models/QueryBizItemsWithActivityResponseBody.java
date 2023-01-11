@@ -57,6 +57,9 @@ public class QueryBizItemsWithActivityResponseBody extends TeaModel {
         @NameInMap("ActivityPrice")
         public Long activityPrice;
 
+        /**
+         * <p>skuId</p>
+         */
         @NameInMap("SkuId")
         public Long skuId;
 
@@ -153,6 +156,9 @@ public class QueryBizItemsWithActivityResponseBody extends TeaModel {
         @NameInMap("PriceCent")
         public Long priceCent;
 
+        /**
+         * <p>skuId</p>
+         */
         @NameInMap("SkuId")
         public Long skuId;
 
@@ -488,6 +494,9 @@ public class QueryBizItemsWithActivityResponseBody extends TeaModel {
         @NameInMap("Quantity")
         public Long quantity;
 
+        /**
+         * <p>skuId</p>
+         */
         @NameInMap("SkuId")
         public Long skuId;
 

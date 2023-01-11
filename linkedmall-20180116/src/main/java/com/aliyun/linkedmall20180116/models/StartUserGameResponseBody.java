@@ -13,6 +13,9 @@ public class StartUserGameResponseBody extends TeaModel {
     @NameInMap("Model")
     public StartUserGameResponseBodyModel model;
 
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
