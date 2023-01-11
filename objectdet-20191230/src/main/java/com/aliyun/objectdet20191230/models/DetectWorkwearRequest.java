@@ -10,7 +10,9 @@ public class DetectWorkwearRequest extends TeaModel {
     @NameInMap("ImageUrl")
     public String imageUrl;
 
-    // 1
+    /**
+     * <p>1</p>
+     */
     @NameInMap("Labels")
     public java.util.List<String> labels;
 
