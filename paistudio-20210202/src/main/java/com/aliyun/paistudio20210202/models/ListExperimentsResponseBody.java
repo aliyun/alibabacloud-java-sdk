@@ -7,7 +7,6 @@ public class ListExperimentsResponseBody extends TeaModel {
     @NameInMap("Experiments")
     public java.util.List<ListExperimentsResponseBodyExperiments> experiments;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

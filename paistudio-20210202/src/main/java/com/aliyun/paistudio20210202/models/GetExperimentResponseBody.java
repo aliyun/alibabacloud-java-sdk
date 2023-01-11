@@ -31,7 +31,6 @@ public class GetExperimentResponseBody extends TeaModel {
     @NameInMap("Options")
     public String options;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

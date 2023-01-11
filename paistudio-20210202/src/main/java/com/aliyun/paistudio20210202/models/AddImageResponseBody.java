@@ -4,11 +4,9 @@ package com.aliyun.paistudio20210202.models;
 import com.aliyun.tea.*;
 
 public class AddImageResponseBody extends TeaModel {
-    // 镜像 id
     @NameInMap("ImageId")
     public String imageId;
 
-    // Id of the request
     @NameInMap("requestId")
     public String requestId;
 

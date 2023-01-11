@@ -7,7 +7,6 @@ public class GetExperimentFolderChildrenResponseBody extends TeaModel {
     @NameInMap("Items")
     public java.util.List<GetExperimentFolderChildrenResponseBodyItems> items;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -47,6 +46,12 @@ public class GetExperimentFolderChildrenResponseBody extends TeaModel {
         @NameInMap("Empty")
         public Boolean empty;
 
+        @NameInMap("GmtCreateTime")
+        public String gmtCreateTime;
+
+        @NameInMap("GmtModifiedTime")
+        public String gmtModifiedTime;
+
         @NameInMap("Icon")
         public String icon;
 
@@ -70,6 +75,22 @@ public class GetExperimentFolderChildrenResponseBody extends TeaModel {
         }
         public Boolean getEmpty() {
             return this.empty;
+        }
+
+        public GetExperimentFolderChildrenResponseBodyItems setGmtCreateTime(String gmtCreateTime) {
+            this.gmtCreateTime = gmtCreateTime;
+            return this;
+        }
+        public String getGmtCreateTime() {
+            return this.gmtCreateTime;
+        }
+
+        public GetExperimentFolderChildrenResponseBodyItems setGmtModifiedTime(String gmtModifiedTime) {
+            this.gmtModifiedTime = gmtModifiedTime;
+            return this;
+        }
+        public String getGmtModifiedTime() {
+            return this.gmtModifiedTime;
         }
 
         public GetExperimentFolderChildrenResponseBodyItems setIcon(String icon) {

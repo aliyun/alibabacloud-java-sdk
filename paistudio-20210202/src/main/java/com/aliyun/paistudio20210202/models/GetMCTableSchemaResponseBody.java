@@ -10,7 +10,6 @@ public class GetMCTableSchemaResponseBody extends TeaModel {
     @NameInMap("PartitionColumns")
     public java.util.List<String> partitionColumns;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

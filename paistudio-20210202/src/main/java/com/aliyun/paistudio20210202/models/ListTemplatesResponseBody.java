@@ -4,7 +4,6 @@ package com.aliyun.paistudio20210202.models;
 import com.aliyun.tea.*;
 
 public class ListTemplatesResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -47,6 +46,9 @@ public class ListTemplatesResponseBody extends TeaModel {
         @NameInMap("Content")
         public String content;
 
+        @NameInMap("Creator")
+        public String creator;
+
         @NameInMap("Description")
         public String description;
 
@@ -56,8 +58,17 @@ public class ListTemplatesResponseBody extends TeaModel {
         @NameInMap("DocLink")
         public String docLink;
 
+        @NameInMap("GmtCreateTime")
+        public String gmtCreateTime;
+
+        @NameInMap("GmtModifiedTime")
+        public String gmtModifiedTime;
+
         @NameInMap("ImageLink")
         public String imageLink;
+
+        @NameInMap("Labels")
+        public java.util.List<java.util.Map<String, ?>> labels;
 
         @NameInMap("Name")
         public String name;
@@ -76,6 +87,14 @@ public class ListTemplatesResponseBody extends TeaModel {
         }
         public String getContent() {
             return this.content;
+        }
+
+        public ListTemplatesResponseBodyTemplateDataTemplate setCreator(String creator) {
+            this.creator = creator;
+            return this;
+        }
+        public String getCreator() {
+            return this.creator;
         }
 
         public ListTemplatesResponseBodyTemplateDataTemplate setDescription(String description) {
@@ -102,12 +121,36 @@ public class ListTemplatesResponseBody extends TeaModel {
             return this.docLink;
         }
 
+        public ListTemplatesResponseBodyTemplateDataTemplate setGmtCreateTime(String gmtCreateTime) {
+            this.gmtCreateTime = gmtCreateTime;
+            return this;
+        }
+        public String getGmtCreateTime() {
+            return this.gmtCreateTime;
+        }
+
+        public ListTemplatesResponseBodyTemplateDataTemplate setGmtModifiedTime(String gmtModifiedTime) {
+            this.gmtModifiedTime = gmtModifiedTime;
+            return this;
+        }
+        public String getGmtModifiedTime() {
+            return this.gmtModifiedTime;
+        }
+
         public ListTemplatesResponseBodyTemplateDataTemplate setImageLink(String imageLink) {
             this.imageLink = imageLink;
             return this;
         }
         public String getImageLink() {
             return this.imageLink;
+        }
+
+        public ListTemplatesResponseBodyTemplateDataTemplate setLabels(java.util.List<java.util.Map<String, ?>> labels) {
+            this.labels = labels;
+            return this;
+        }
+        public java.util.List<java.util.Map<String, ?>> getLabels() {
+            return this.labels;
         }
 
         public ListTemplatesResponseBodyTemplateDataTemplate setName(String name) {

@@ -7,7 +7,6 @@ public class CreateExperimentResponseBody extends TeaModel {
     @NameInMap("ExperimentId")
     public String experimentId;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

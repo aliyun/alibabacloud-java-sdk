@@ -4,7 +4,6 @@ package com.aliyun.paistudio20210202.models;
 import com.aliyun.tea.*;
 
 public class PublishExperimentRequest extends TeaModel {
-    // 公共目录Id
     @NameInMap("FolderId")
     public String folderId;
 

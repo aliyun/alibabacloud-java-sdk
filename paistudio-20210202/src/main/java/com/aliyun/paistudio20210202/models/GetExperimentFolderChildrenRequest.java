@@ -4,7 +4,6 @@ package com.aliyun.paistudio20210202.models;
 import com.aliyun.tea.*;
 
 public class GetExperimentFolderChildrenRequest extends TeaModel {
-    // 工作空间内可见性 PUBLIC; PRIVATE 默认PUBLIC
     @NameInMap("Accessibility")
     public String accessibility;
 
@@ -14,7 +13,6 @@ public class GetExperimentFolderChildrenRequest extends TeaModel {
     @NameInMap("Source")
     public String source;
 
-    // 若FolderId为root，Accessibility为PRIVATE，这里代表私有根路径的所有者，默认为访问者自己
     @NameInMap("UserId")
     public String userId;
 

@@ -3,16 +3,16 @@ package com.aliyun.paistudio20210202.models;
 
 import com.aliyun.tea.*;
 
-public class GetImageRequest extends TeaModel {
+public class GetTemplateRequest extends TeaModel {
     @NameInMap("Verbose")
     public Boolean verbose;
 
-    public static GetImageRequest build(java.util.Map<String, ?> map) throws Exception {
-        GetImageRequest self = new GetImageRequest();
+    public static GetTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
+        GetTemplateRequest self = new GetTemplateRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetImageRequest setVerbose(Boolean verbose) {
+    public GetTemplateRequest setVerbose(Boolean verbose) {
         this.verbose = verbose;
         return this;
     }

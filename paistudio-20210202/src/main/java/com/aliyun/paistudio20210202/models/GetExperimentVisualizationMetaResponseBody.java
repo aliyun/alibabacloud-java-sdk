@@ -7,7 +7,6 @@ public class GetExperimentVisualizationMetaResponseBody extends TeaModel {
     @NameInMap("VisualizationMeta")
     public java.util.List<GetExperimentVisualizationMetaResponseBodyVisualizationMeta> visualizationMeta;
 
-    // Id of the request
     @NameInMap("requestId")
     public String requestId;
 

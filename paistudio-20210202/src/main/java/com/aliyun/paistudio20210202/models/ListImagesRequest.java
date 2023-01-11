@@ -4,31 +4,24 @@ package com.aliyun.paistudio20210202.models;
 import com.aliyun.tea.*;
 
 public class ListImagesRequest extends TeaModel {
-    // 过滤值 以逗号分隔
     @NameInMap("Labels")
     public String labels;
 
-    // 镜像名称，支持模糊搜索
     @NameInMap("Name")
     public String name;
 
-    // 排序方向： ASC - 升序 DESC - 降序
     @NameInMap("Order")
     public String order;
 
-    // 分页，从1开始，默认1
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // 页大小，默认20
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 排序字段
     @NameInMap("SortBy")
     public String sortBy;
 
-    // 是否显示非必要信息：Labels
     @NameInMap("Verbose")
     public Boolean verbose;
 
