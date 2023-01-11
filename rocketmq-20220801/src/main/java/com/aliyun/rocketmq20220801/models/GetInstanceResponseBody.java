@@ -528,7 +528,9 @@ public class GetInstanceResponseBody extends TeaModel {
         @NameInMap("aclInfo")
         public GetInstanceResponseBodyDataAclInfo aclInfo;
 
-        // BID
+        /**
+         * <p>BID</p>
+         */
         @NameInMap("bid")
         public String bid;
 

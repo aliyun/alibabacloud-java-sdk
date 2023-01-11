@@ -3,12 +3,12 @@ package com.aliyun.rocketmq20220801.models;
 
 import com.aliyun.tea.*;
 
-public class ListTopicsRequest extends TeaModel {
+public class ListTopicsShrinkRequest extends TeaModel {
     @NameInMap("filter")
     public String filter;
 
     @NameInMap("messageTypes")
-    public java.util.List<String> messageTypes;
+    public String messageTypesShrink;
 
     @NameInMap("pageNumber")
     public Integer pageNumber;
@@ -16,12 +16,12 @@ public class ListTopicsRequest extends TeaModel {
     @NameInMap("pageSize")
     public Integer pageSize;
 
-    public static ListTopicsRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListTopicsRequest self = new ListTopicsRequest();
+    public static ListTopicsShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListTopicsShrinkRequest self = new ListTopicsShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListTopicsRequest setFilter(String filter) {
+    public ListTopicsShrinkRequest setFilter(String filter) {
         this.filter = filter;
         return this;
     }
@@ -29,15 +29,15 @@ public class ListTopicsRequest extends TeaModel {
         return this.filter;
     }
 
-    public ListTopicsRequest setMessageTypes(java.util.List<String> messageTypes) {
-        this.messageTypes = messageTypes;
+    public ListTopicsShrinkRequest setMessageTypesShrink(String messageTypesShrink) {
+        this.messageTypesShrink = messageTypesShrink;
         return this;
     }
-    public java.util.List<String> getMessageTypes() {
-        return this.messageTypes;
+    public String getMessageTypesShrink() {
+        return this.messageTypesShrink;
     }
 
-    public ListTopicsRequest setPageNumber(Integer pageNumber) {
+    public ListTopicsShrinkRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
@@ -45,7 +45,7 @@ public class ListTopicsRequest extends TeaModel {
         return this.pageNumber;
     }
 
-    public ListTopicsRequest setPageSize(Integer pageSize) {
+    public ListTopicsShrinkRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }

@@ -98,6 +98,9 @@ public class GetConsumerGroupResponseBody extends TeaModel {
     }
 
     public static class GetConsumerGroupResponseBodyDataConsumeRetryPolicy extends TeaModel {
+        @NameInMap("deadLetterTargetTopic")
+        public String deadLetterTargetTopic;
+
         @NameInMap("maxRetryTimes")
         public Integer maxRetryTimes;
 
@@ -107,6 +110,14 @@ public class GetConsumerGroupResponseBody extends TeaModel {
         public static GetConsumerGroupResponseBodyDataConsumeRetryPolicy build(java.util.Map<String, ?> map) throws Exception {
             GetConsumerGroupResponseBodyDataConsumeRetryPolicy self = new GetConsumerGroupResponseBodyDataConsumeRetryPolicy();
             return TeaModel.build(map, self);
+        }
+
+        public GetConsumerGroupResponseBodyDataConsumeRetryPolicy setDeadLetterTargetTopic(String deadLetterTargetTopic) {
+            this.deadLetterTargetTopic = deadLetterTargetTopic;
+            return this;
+        }
+        public String getDeadLetterTargetTopic() {
+            return this.deadLetterTargetTopic;
         }
 
         public GetConsumerGroupResponseBodyDataConsumeRetryPolicy setMaxRetryTimes(Integer maxRetryTimes) {

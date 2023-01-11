@@ -407,11 +407,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listInstancesWithOptions(request, headers, runtime);
     }
 
-    public ListTopicsResponse listTopicsWithOptions(String instanceId, ListTopicsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public ListTopicsResponse listTopicsWithOptions(String instanceId, ListTopicsRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListTopicsShrinkRequest request = new ListTopicsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.messageTypes)) {
+            request.messageTypesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.messageTypes, "messageTypes", "simple");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.filter)) {
             query.put("filter", request.filter);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.messageTypesShrink)) {
+            query.put("messageTypes", request.messageTypesShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
