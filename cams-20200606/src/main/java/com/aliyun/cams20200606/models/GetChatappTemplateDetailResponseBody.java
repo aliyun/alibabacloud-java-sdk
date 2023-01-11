@@ -4,22 +4,30 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class GetChatappTemplateDetailResponseBody extends TeaModel {
-    // The HTTP status code returned.
-    // 
-    // *   A code of OK indicates that the call is successful.
-    // *   Other codes indicate that the call fails. For more information, see [Error codes](~~196974~~).
+    /**
+     * <p>The HTTP status code returned.</p>
+     * <br>
+     * <p>*   A code of OK indicates that the call is successful.</p>
+     * <p>*   Other codes indicate that the call fails. For more information, see [Error codes](~~196974~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
-    // The data returned.
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public GetChatappTemplateDetailResponseBodyData data;
 
-    // The error message returned.
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -61,38 +69,48 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
     }
 
     public static class GetChatappTemplateDetailResponseBodyDataComponentsButtons extends TeaModel {
-        // The mobile phone number. This parameter is valid only if the Type parameter is set to **PHONE_NUMBER**.
+        /**
+         * <p>The mobile phone number. This parameter is valid only if the Type parameter is set to **PHONE_NUMBER**.</p>
+         */
         @NameInMap("PhoneNumber")
         public String phoneNumber;
 
-        // The display name of the button.
+        /**
+         * <p>The display name of the button.</p>
+         */
         @NameInMap("Text")
         public String text;
 
-        // The type of the button. Valid values:
-        // 
-        // *   **PHONE_NUMBER**: a phone call button
-        // *   **URL**: a URL button
-        // *   **QUICK_REPLY**: a quick reply button
-        // 
-        // **
-        // 
-        // **Note**
-        // 
-        // *   A quick reply button cannot coexist with a phone call button or a URL button in a message template.
-        // 
-        // *   You can add a combination of two URL buttons or a combination of a URL button and a phone call button to a message template.
+        /**
+         * <p>The type of the button. Valid values:</p>
+         * <br>
+         * <p>*   **PHONE_NUMBER**: a phone call button</p>
+         * <p>*   **URL**: a URL button</p>
+         * <p>*   **QUICK_REPLY**: a quick reply button</p>
+         * <br>
+         * <p>**</p>
+         * <br>
+         * <p>**Note**</p>
+         * <br>
+         * <p>*   A quick reply button cannot coexist with a phone call button or a URL button in a message template.</p>
+         * <br>
+         * <p>*   You can add a combination of two URL buttons or a combination of a URL button and a phone call button to a message template.</p>
+         */
         @NameInMap("Type")
         public String type;
 
-        // The URL to be accessed when you click the URL button.
+        /**
+         * <p>The URL to be accessed when you click the URL button.</p>
+         */
         @NameInMap("Url")
         public String url;
 
-        // The type of the URL. Valid values:
-        // 
-        // *   **static**: a static URL
-        // *   **dynamic**: a dynamic URL
+        /**
+         * <p>The type of the URL. Valid values:</p>
+         * <br>
+         * <p>*   **static**: a static URL</p>
+         * <p>*   **dynamic**: a dynamic URL</p>
+         */
         @NameInMap("UrlType")
         public String urlType;
 
@@ -144,40 +162,54 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
     }
 
     public static class GetChatappTemplateDetailResponseBodyDataComponents extends TeaModel {
-        // This parameter applies only to components of the **BUTTONS** type. This parameter is passed in by converting its original JSON structure into a string.
+        /**
+         * <p>This parameter applies only to components of the **BUTTONS** type. This parameter is passed in by converting its original JSON structure into a string.</p>
+         */
         @NameInMap("Buttons")
         public java.util.List<GetChatappTemplateDetailResponseBodyDataComponentsButtons> buttons;
 
-        // The description of the file.
+        /**
+         * <p>The description of the file.</p>
+         */
         @NameInMap("Caption")
         public String caption;
 
-        // The name of the file.
+        /**
+         * <p>The name of the file.</p>
+         */
         @NameInMap("FileName")
         public String fileName;
 
-        // The format.
+        /**
+         * <p>The format.</p>
+         */
         @NameInMap("Format")
         public String format;
 
-        // The text of the message to be sent.
+        /**
+         * <p>The text of the message to be sent.</p>
+         */
         @NameInMap("Text")
         public String text;
 
-        // The type of the component. Valid values:
-        // 
-        // *   **BODY**
-        // *   **HEADER**
-        // *   **FOOTER**
-        // *   **BUTTONS**
-        // 
-        // **
-        // 
-        // **Note** A component of the **BODY** type cannot exceed 1,024 characters in length. A component of the **HEADER** or **FOOTER** type cannot exceed 60 characters in length.
+        /**
+         * <p>The type of the component. Valid values:</p>
+         * <br>
+         * <p>*   **BODY**</p>
+         * <p>*   **HEADER**</p>
+         * <p>*   **FOOTER**</p>
+         * <p>*   **BUTTONS**</p>
+         * <br>
+         * <p>**</p>
+         * <br>
+         * <p>**Note** A component of the **BODY** type cannot exceed 1,024 characters in length. A component of the **HEADER** or **FOOTER** type cannot exceed 60 characters in length.</p>
+         */
         @NameInMap("Type")
         public String type;
 
-        // The URL of the material.
+        /**
+         * <p>The URL of the material.</p>
+         */
         @NameInMap("Url")
         public String url;
 
@@ -245,48 +277,62 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
     }
 
     public static class GetChatappTemplateDetailResponseBodyData extends TeaModel {
-        // The review status of the message template. Valid values:
-        // 
-        // *   **pass**: The message template is approved.
-        // *   **fail**: The message template is rejected.
-        // *   **auditing**: The message template is being reviewed.
-        // *   **unaudit**: The review is suspended.
+        /**
+         * <p>The review status of the message template. Valid values:</p>
+         * <br>
+         * <p>*   **pass**: The message template is approved.</p>
+         * <p>*   **fail**: The message template is rejected.</p>
+         * <p>*   **auditing**: The message template is being reviewed.</p>
+         * <p>*   **unaudit**: The review is suspended.</p>
+         */
         @NameInMap("AuditStatus")
         public String auditStatus;
 
-        // The category of the message template. Valid values:
-        // 
-        // *   **ACCOUNT_UPDATE**: account update
-        // *   **PAYMENT_UPDATE**: payment update
-        // *   **PERSONAL_FINANCE\_UPDATE**: personal finance update
-        // *   **SHIPPING_UPDATE**: traffic update
-        // *   **RESERVATION_UPDATE**: reservation update
-        // *   **ISSUE_RESOLUTION**: issue resolution
-        // *   **APPOINTMENT_UPDATE**: appointment update
-        // *   **TRANSPORTATION_UPDATE**: logistics information update
-        // *   **TICKET_UPDATE**: ticket update
-        // *   **ALERT_UPDATE**: alert update
-        // *   **AUTO_REPLY**: auto reply
+        /**
+         * <p>The category of the message template. Valid values:</p>
+         * <br>
+         * <p>*   **ACCOUNT_UPDATE**: account update</p>
+         * <p>*   **PAYMENT_UPDATE**: payment update</p>
+         * <p>*   **PERSONAL_FINANCE\_UPDATE**: personal finance update</p>
+         * <p>*   **SHIPPING_UPDATE**: traffic update</p>
+         * <p>*   **RESERVATION_UPDATE**: reservation update</p>
+         * <p>*   **ISSUE_RESOLUTION**: issue resolution</p>
+         * <p>*   **APPOINTMENT_UPDATE**: appointment update</p>
+         * <p>*   **TRANSPORTATION_UPDATE**: logistics information update</p>
+         * <p>*   **TICKET_UPDATE**: ticket update</p>
+         * <p>*   **ALERT_UPDATE**: alert update</p>
+         * <p>*   **AUTO_REPLY**: auto reply</p>
+         */
         @NameInMap("Category")
         public String category;
 
-        // The components of the message template.
+        /**
+         * <p>The components of the message template.</p>
+         */
         @NameInMap("Components")
         public java.util.List<GetChatappTemplateDetailResponseBodyDataComponents> components;
 
-        // The examples of variables.
+        /**
+         * <p>The examples of variables.</p>
+         */
         @NameInMap("Example")
         public java.util.Map<String, String> example;
 
-        // The language that is used in the message template.
+        /**
+         * <p>The language that is used in the message template.</p>
+         */
         @NameInMap("Language")
         public String language;
 
-        // The name of the message template.
+        /**
+         * <p>The name of the message template.</p>
+         */
         @NameInMap("Name")
         public String name;
 
-        // The code of the message template.
+        /**
+         * <p>The code of the message template.</p>
+         */
         @NameInMap("TemplateCode")
         public String templateCode;
 

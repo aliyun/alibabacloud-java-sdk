@@ -4,53 +4,73 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class SendChatappMassMessageRequest extends TeaModel {
-    // The type of the message channel. Valid values:
-    // 
-    // *   **whatsapp**
-    // *   viber (under development)
-    // *   line (under development)
+    /**
+     * <p>The type of the message channel. Valid values:</p>
+     * <br>
+     * <p>*   **whatsapp**</p>
+     * <p>*   viber (under development)</p>
+     * <p>*   line (under development)</p>
+     */
     @NameInMap("ChannelType")
     public String channelType;
 
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
-    // The unique identifier of the WhatsApp account that you register.
+    /**
+     * <p>The unique identifier of the WhatsApp account that you register.</p>
+     */
     @NameInMap("CustWabaId")
     @Deprecated
     public String custWabaId;
 
-    // Fallback message content.
+    /**
+     * <p>Fallback message content.</p>
+     */
     @NameInMap("FallBackContent")
     public String fallBackContent;
 
-    // Fallback strategy id. Fallback Strategy can be created on the ChatApp console.
+    /**
+     * <p>Fallback strategy id. Fallback Strategy can be created on the ChatApp console.</p>
+     */
     @NameInMap("FallBackId")
     public String fallBackId;
 
-    // The mobile phone number of the message sender.
-    // 
-    // <notice>You can specify a mobile phone number that is registered for a WhatsApp account and is approved in the ChatApp console.</notice>
+    /**
+     * <p>The mobile phone number of the message sender.</p>
+     * <br>
+     * <p><notice>You can specify a mobile phone number that is registered for a WhatsApp account and is approved in the ChatApp console.</notice></p>
+     */
     @NameInMap("From")
     public String from;
 
-    // Assigned by ISV for RAM user authentication and authorization.
+    /**
+     * <p>Assigned by ISV for RAM user authentication and authorization.</p>
+     */
     @NameInMap("IsvCode")
     public String isvCode;
 
-    // The language that is used in the message template.
+    /**
+     * <p>The language that is used in the message template.</p>
+     */
     @NameInMap("Language")
     public String language;
 
-    // Target number and parameter list.
+    /**
+     * <p>Target number and parameter list.</p>
+     */
     @NameInMap("SenderList")
     public java.util.List<SendChatappMassMessageRequestSenderList> senderList;
 
-    // User-define ID to identify a single batch of messages.
+    /**
+     * <p>User-define ID to identify a single batch of messages.</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 
-    // The code of the message template.
+    /**
+     * <p>The code of the message template.</p>
+     */
     @NameInMap("TemplateCode")
     public String templateCode;
 
@@ -148,15 +168,21 @@ public class SendChatappMassMessageRequest extends TeaModel {
     }
 
     public static class SendChatappMassMessageRequestSenderList extends TeaModel {
-        // Payload list.
+        /**
+         * <p>Payload list.</p>
+         */
         @NameInMap("Payload")
         public java.util.List<String> payload;
 
-        // Template parameters.
+        /**
+         * <p>Template parameters.</p>
+         */
         @NameInMap("TemplateParams")
         public java.util.Map<String, String> templateParams;
 
-        // Target number.
+        /**
+         * <p>Target number.</p>
+         */
         @NameInMap("To")
         public String to;
 

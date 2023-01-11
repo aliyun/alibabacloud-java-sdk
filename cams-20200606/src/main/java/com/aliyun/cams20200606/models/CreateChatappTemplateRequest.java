@@ -4,55 +4,71 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class CreateChatappTemplateRequest extends TeaModel {
-    // The category of the message template. Valid values:
-    // 
-    // *   **ACCOUNT_UPDATE**: account update
-    // *   **PAYMENT_UPDATE**: payment update
-    // *   **PERSONAL_FINANCE\_UPDATE**: personal finance update
-    // *   **SHIPPING_UPDATE**: traffic update
-    // *   **RESERVATION_UPDATE**: reservation update
-    // *   **ISSUE_RESOLUTION**: issue resolution
-    // *   **APPOINTMENT_UPDATE**: appointment update
-    // *   **TRANSPORTATION_UPDATE**: logistics information update
-    // *   **TICKET_UPDATE**: ticket update
-    // *   **ALERT_UPDATE**: alert update
-    // *   **AUTO_REPLY**: auto reply
+    /**
+     * <p>The category of the message template. Valid values:</p>
+     * <br>
+     * <p>*   **ACCOUNT_UPDATE**: account update</p>
+     * <p>*   **PAYMENT_UPDATE**: payment update</p>
+     * <p>*   **PERSONAL_FINANCE\_UPDATE**: personal finance update</p>
+     * <p>*   **SHIPPING_UPDATE**: traffic update</p>
+     * <p>*   **RESERVATION_UPDATE**: reservation update</p>
+     * <p>*   **ISSUE_RESOLUTION**: issue resolution</p>
+     * <p>*   **APPOINTMENT_UPDATE**: appointment update</p>
+     * <p>*   **TRANSPORTATION_UPDATE**: logistics information update</p>
+     * <p>*   **TICKET_UPDATE**: ticket update</p>
+     * <p>*   **ALERT_UPDATE**: alert update</p>
+     * <p>*   **AUTO_REPLY**: auto reply</p>
+     */
     @NameInMap("Category")
     public String category;
 
-    // The components of the message template.
+    /**
+     * <p>The components of the message template.</p>
+     */
     @NameInMap("Components")
     public java.util.List<CreateChatappTemplateRequestComponents> components;
 
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
-    // The unique identifier of the WhatsApp account that you register.
+    /**
+     * <p>The unique identifier of the WhatsApp account that you register.</p>
+     */
     @NameInMap("CustWabaId")
     @Deprecated
     public String custWabaId;
 
-    // The examples of variables that are used when you create the message template.
+    /**
+     * <p>The examples of variables that are used when you create the message template.</p>
+     */
     @NameInMap("Example")
     public java.util.Map<String, String> example;
 
-    // Assigned by ISV for RAM user authentication and authorization.
+    /**
+     * <p>Assigned by ISV for RAM user authentication and authorization.</p>
+     */
     @NameInMap("IsvCode")
     public String isvCode;
 
-    // The language that is used in the message template.
+    /**
+     * <p>The language that is used in the message template.</p>
+     */
     @NameInMap("Language")
     public String language;
 
-    // The name of the message template.
+    /**
+     * <p>The name of the message template.</p>
+     */
     @NameInMap("Name")
     public String name;
 
-    // The type of the message template. Valid values:
-    // 
-    // *   **WHATSAPP**
-    // *   VIBER (under development)
-    // *   LINE (under development)
+    /**
+     * <p>The type of the message template. Valid values:</p>
+     * <br>
+     * <p>*   **WHATSAPP**</p>
+     * <p>*   VIBER (under development)</p>
+     * <p>*   LINE (under development)</p>
+     */
     @NameInMap("TemplateType")
     public String templateType;
 
@@ -134,33 +150,43 @@ public class CreateChatappTemplateRequest extends TeaModel {
     }
 
     public static class CreateChatappTemplateRequestComponentsButtons extends TeaModel {
-        // The mobile phone number. This parameter is valid only if the Type parameter is set to **PHONE_NUMBER**.
+        /**
+         * <p>The mobile phone number. This parameter is valid only if the Type parameter is set to **PHONE_NUMBER**.</p>
+         */
         @NameInMap("PhoneNumber")
         public String phoneNumber;
 
-        // The display name of the button.
+        /**
+         * <p>The display name of the button.</p>
+         */
         @NameInMap("Text")
         public String text;
 
-        // The type of the button. Valid values:
-        // 
-        // *   **PHONE_NUMBER**: a phone call button
-        // *   **URL**: a URL button
-        // *   **QUICK_REPLY**: a quick reply button
-        // 
-        // > *   A quick reply button cannot coexist with a phone call button or a URL button in a message template.
-        // > *   You can add a combination of two URL buttons or a combination of a URL button and a phone call button to a message template.
+        /**
+         * <p>The type of the button. Valid values:</p>
+         * <br>
+         * <p>*   **PHONE_NUMBER**: a phone call button</p>
+         * <p>*   **URL**: a URL button</p>
+         * <p>*   **QUICK_REPLY**: a quick reply button</p>
+         * <br>
+         * <p>> *   A quick reply button cannot coexist with a phone call button or a URL button in a message template.</p>
+         * <p>> *   You can add a combination of two URL buttons or a combination of a URL button and a phone call button to a message template.</p>
+         */
         @NameInMap("Type")
         public String type;
 
-        // The URL to be accessed when you click the URL button.
+        /**
+         * <p>The URL to be accessed when you click the URL button.</p>
+         */
         @NameInMap("Url")
         public String url;
 
-        // The type of the URL. Valid values:
-        // 
-        // *   **static**: a static URL
-        // *   **dynamic**: a dynamic URL
+        /**
+         * <p>The type of the URL. Valid values:</p>
+         * <br>
+         * <p>*   **static**: a static URL</p>
+         * <p>*   **dynamic**: a dynamic URL</p>
+         */
         @NameInMap("UrlType")
         public String urlType;
 
@@ -212,43 +238,57 @@ public class CreateChatappTemplateRequest extends TeaModel {
     }
 
     public static class CreateChatappTemplateRequestComponents extends TeaModel {
-        // This parameter applies only to components of the **BUTTONS** type.
+        /**
+         * <p>This parameter applies only to components of the **BUTTONS** type.</p>
+         */
         @NameInMap("Buttons")
         public java.util.List<CreateChatappTemplateRequestComponentsButtons> buttons;
 
-        // The description of the file.
+        /**
+         * <p>The description of the file.</p>
+         */
         @NameInMap("Caption")
         public String caption;
 
-        // The name of the file.
+        /**
+         * <p>The name of the file.</p>
+         */
         @NameInMap("FileName")
         public String fileName;
 
-        // The format of the message.
-        // 
-        // *   **TEXT**: text
-        // *   **IMGAGE**: image
-        // *   **DOCUMENT**: document
-        // *   **VIDEO**: video
+        /**
+         * <p>The format of the message.</p>
+         * <br>
+         * <p>*   **TEXT**: text</p>
+         * <p>*   **IMGAGE**: image</p>
+         * <p>*   **DOCUMENT**: document</p>
+         * <p>*   **VIDEO**: video</p>
+         */
         @NameInMap("Format")
         public String format;
 
-        // The text of the message to be sent.
+        /**
+         * <p>The text of the message to be sent.</p>
+         */
         @NameInMap("Text")
         public String text;
 
-        // The type of the component. Valid values:
-        // 
-        // *   **BODY**
-        // *   **HEADER**
-        // *   **FOOTER**
-        // *   **BUTTONS**
-        // 
-        // > A component of the **BODY** type cannot exceed 1,024 characters in length. A component of the **HEADER** or **FOOTER** type cannot exceed 60 characters in length.
+        /**
+         * <p>The type of the component. Valid values:</p>
+         * <br>
+         * <p>*   **BODY**</p>
+         * <p>*   **HEADER**</p>
+         * <p>*   **FOOTER**</p>
+         * <p>*   **BUTTONS**</p>
+         * <br>
+         * <p>> A component of the **BODY** type cannot exceed 1,024 characters in length. A component of the **HEADER** or **FOOTER** type cannot exceed 60 characters in length.</p>
+         */
         @NameInMap("Type")
         public String type;
 
-        // The URL of the material.
+        /**
+         * <p>The URL of the material.</p>
+         */
         @NameInMap("Url")
         public String url;
 

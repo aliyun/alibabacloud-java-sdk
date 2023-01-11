@@ -4,19 +4,23 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class SendChatappMessageShrinkRequest extends TeaModel {
-    // The type of the message channel. Valid values:
-    // 
-    // *   **whatsapp**
-    // *   viber (under development)
-    // *   line (under development)
+    /**
+     * <p>The type of the message channel. Valid values:</p>
+     * <br>
+     * <p>*   **whatsapp**</p>
+     * <p>*   viber (under development)</p>
+     * <p>*   line (under development)</p>
+     */
     @NameInMap("ChannelType")
     public String channelType;
 
-    // The content of the message.
-    // 
-    // **
-    // 
-    // **Note** The **Content** parameter is required if you set the **Type** parameter to **message**.
+    /**
+     * <p>The content of the message.</p>
+     * <br>
+     * <p>**</p>
+     * <br>
+     * <p>**Note** The **Content** parameter is required if you set the **Type** parameter to **message**.</p>
+     */
     @NameInMap("Content")
     public String content;
 
@@ -26,62 +30,84 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
-    // The unique identifier of the WhatsApp account that you register.
+    /**
+     * <p>The unique identifier of the WhatsApp account that you register.</p>
+     */
     @NameInMap("CustWabaId")
     @Deprecated
     public String custWabaId;
 
-    // Fallback message content.
+    /**
+     * <p>Fallback message content.</p>
+     */
     @NameInMap("FallBackContent")
     public String fallBackContent;
 
-    // Fallback strategy id. Fallback Strategy can be created on the ChatApp console.
+    /**
+     * <p>Fallback strategy id. Fallback Strategy can be created on the ChatApp console.</p>
+     */
     @NameInMap("FallBackId")
     public String fallBackId;
 
-    // The mobile phone number of the message sender.
-    // 
-    // <notice>You can specify a mobile phone number that is registered for a WhatsApp account and is approved in the ChatApp console.</notice>
+    /**
+     * <p>The mobile phone number of the message sender.</p>
+     * <br>
+     * <p><notice>You can specify a mobile phone number that is registered for a WhatsApp account and is approved in the ChatApp console.</notice></p>
+     */
     @NameInMap("From")
     public String from;
 
-    // Assigned by ISV for RAM user authentication and authorization.
+    /**
+     * <p>Assigned by ISV for RAM user authentication and authorization.</p>
+     */
     @NameInMap("IsvCode")
     public String isvCode;
 
     @NameInMap("Label")
     public String label;
 
-    // The language that is used in the message template.
+    /**
+     * <p>The language that is used in the message template.</p>
+     */
     @NameInMap("Language")
     public String language;
 
-    // The type of the message. This parameter is required if you set the Type parameter to **message**. Valid values:
-    // 
-    // *   **text**: a text message. The **Text** parameter is required if you set the MessageType parameter to text.
-    // *   **image**: an image message. The **Link** parameter is required and the **Caption** parameter is optional if you set the MessageType parameter to image.
-    // *   **video**: a video message. The **Link** parameter is required and the **Caption** parameter is optional if you set the MessageType parameter to video.
-    // *   **audio**: an audio message. The **Link** parameter is required and the **Caption** parameter is invalid if you set the MessageType parameter to audio.
-    // *   **document**: a document message. The **Link** and **FileName** parameters are required and the **Caption** parameter is invalid if you set the MessageType parameter to document.
+    /**
+     * <p>The type of the message. This parameter is required if you set the Type parameter to **message**. Valid values:</p>
+     * <br>
+     * <p>*   **text**: a text message. The **Text** parameter is required if you set the MessageType parameter to text.</p>
+     * <p>*   **image**: an image message. The **Link** parameter is required and the **Caption** parameter is optional if you set the MessageType parameter to image.</p>
+     * <p>*   **video**: a video message. The **Link** parameter is required and the **Caption** parameter is optional if you set the MessageType parameter to video.</p>
+     * <p>*   **audio**: an audio message. The **Link** parameter is required and the **Caption** parameter is invalid if you set the MessageType parameter to audio.</p>
+     * <p>*   **document**: a document message. The **Link** and **FileName** parameters are required and the **Caption** parameter is invalid if you set the MessageType parameter to document.</p>
+     */
     @NameInMap("MessageType")
     public String messageType;
 
-    // The payload of the button.
+    /**
+     * <p>The payload of the button.</p>
+     */
     @NameInMap("Payload")
     public String payloadShrink;
 
     @NameInMap("Tag")
     public String tag;
 
-    // The code of the message template. This parameter is required if you set the Type parameter to **template**.
+    /**
+     * <p>The code of the message template. This parameter is required if you set the Type parameter to **template**.</p>
+     */
     @NameInMap("TemplateCode")
     public String templateCode;
 
-    // The variables of the message template.
+    /**
+     * <p>The variables of the message template.</p>
+     */
     @NameInMap("TemplateParams")
     public String templateParamsShrink;
 
-    // The mobile phone number of the message recipient.
+    /**
+     * <p>The mobile phone number of the message recipient.</p>
+     */
     @NameInMap("To")
     public String to;
 
@@ -91,10 +117,12 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
     @NameInMap("Ttl")
     public Integer ttl;
 
-    // The type of the message. Valid values:
-    // 
-    // *   **template**: a template message. A template message is sent based on a template that is created in the ChatApp console and is approved. You can send template messages based on your business requirements.
-    // *   **message**: a custom message. You can send a custom message to a user only within 24 hours after you receive the last message from the user.
+    /**
+     * <p>The type of the message. Valid values:</p>
+     * <br>
+     * <p>*   **template**: a template message. A template message is sent based on a template that is created in the ChatApp console and is approved. You can send template messages based on your business requirements.</p>
+     * <p>*   **message**: a custom message. You can send a custom message to a user only within 24 hours after you receive the last message from the user.</p>
+     */
     @NameInMap("Type")
     public String type;
 

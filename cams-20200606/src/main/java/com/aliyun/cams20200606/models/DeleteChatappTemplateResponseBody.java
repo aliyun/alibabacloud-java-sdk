@@ -4,18 +4,24 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class DeleteChatappTemplateResponseBody extends TeaModel {
-    // The HTTP status code returned.
-    // 
-    // *   A code of OK indicates that the call is successful.
-    // *   Other codes indicate that the call fails. For more information, see [Error codes](~~196974~~).
+    /**
+     * <p>The HTTP status code returned.</p>
+     * <br>
+     * <p>*   A code of OK indicates that the call is successful.</p>
+     * <p>*   Other codes indicate that the call fails. For more information, see [Error codes](~~196974~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
-    // The error message returned.
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

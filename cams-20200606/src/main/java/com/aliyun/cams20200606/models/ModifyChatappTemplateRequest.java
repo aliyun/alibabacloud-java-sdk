@@ -4,32 +4,46 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class ModifyChatappTemplateRequest extends TeaModel {
-    // The list of components of the message template.
+    /**
+     * <p>The list of components of the message template.</p>
+     */
     @NameInMap("Components")
     public java.util.List<ModifyChatappTemplateRequestComponents> components;
 
-    // Isv customer space id
+    /**
+     * <p>Isv customer space id</p>
+     */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
-    // The ID of the WhatApp Business account of the ISV customer.
+    /**
+     * <p>The ID of the WhatApp Business account of the ISV customer.</p>
+     */
     @NameInMap("CustWabaId")
     @Deprecated
     public String custWabaId;
 
-    // The examples of variables that are used when you create the message template.
+    /**
+     * <p>The examples of variables that are used when you create the message template.</p>
+     */
     @NameInMap("Example")
     public java.util.Map<String, String> example;
 
-    // ISV verification code, which is used to verify whether the sub-account is authorized by ISV.
+    /**
+     * <p>ISV verification code, which is used to verify whether the sub-account is authorized by ISV.</p>
+     */
     @NameInMap("IsvCode")
     public String isvCode;
 
-    // The language.
+    /**
+     * <p>The language.</p>
+     */
     @NameInMap("Language")
     public String language;
 
-    // The code of the message template.
+    /**
+     * <p>The code of the message template.</p>
+     */
     @NameInMap("TemplateCode")
     public String templateCode;
 
@@ -95,30 +109,40 @@ public class ModifyChatappTemplateRequest extends TeaModel {
     }
 
     public static class ModifyChatappTemplateRequestComponentsButtons extends TeaModel {
-        // The phone number.
+        /**
+         * <p>The phone number.</p>
+         */
         @NameInMap("PhoneNumber")
         public String phoneNumber;
 
-        // The text of the message to be sent.
+        /**
+         * <p>The text of the message to be sent.</p>
+         */
         @NameInMap("Text")
         public String text;
 
-        // The type of the button.
-        // 
-        // *   **PHONE_NUMBER**: the phone call button
-        // *   **URL**: the URL button
-        // *   **QUICK_REPLY**: the quick reply button
+        /**
+         * <p>The type of the button.</p>
+         * <br>
+         * <p>*   **PHONE_NUMBER**: the phone call button</p>
+         * <p>*   **URL**: the URL button</p>
+         * <p>*   **QUICK_REPLY**: the quick reply button</p>
+         */
         @NameInMap("Type")
         public String type;
 
-        // The URL to be visited after clicking the button.
+        /**
+         * <p>The URL to be visited after clicking the button.</p>
+         */
         @NameInMap("Url")
         public String url;
 
-        // The type of the URL. Valid values:
-        // 
-        // *   **static**: the static URL
-        // *   **dynamic**: the dynamic URL
+        /**
+         * <p>The type of the URL. Valid values:</p>
+         * <br>
+         * <p>*   **static**: the static URL</p>
+         * <p>*   **dynamic**: the dynamic URL</p>
+         */
         @NameInMap("UrlType")
         public String urlType;
 
@@ -170,45 +194,59 @@ public class ModifyChatappTemplateRequest extends TeaModel {
     }
 
     public static class ModifyChatappTemplateRequestComponents extends TeaModel {
-        // The list of buttons, which applies only to the **BUTTONS** component.
+        /**
+         * <p>The list of buttons, which applies only to the **BUTTONS** component.</p>
+         */
         @NameInMap("Buttons")
         public java.util.List<ModifyChatappTemplateRequestComponentsButtons> buttons;
 
-        // The description.
-        // 
-        // >  When the Type parameter is set to **HEADER** and the Format parameter is set to **IMAGE/DOCUMENT/VIDEO**, you can specify the description.
+        /**
+         * <p>The description.</p>
+         * <br>
+         * <p>>  When the Type parameter is set to **HEADER** and the Format parameter is set to **IMAGE/DOCUMENT/VIDEO**, you can specify the description.</p>
+         */
         @NameInMap("Caption")
         public String caption;
 
-        // The name of the file.
-        // 
-        // > : When the Type parameter is set to **HEADER** and the Format parameter is set to **DOCUMENT**, you can specify a name of the file.
+        /**
+         * <p>The name of the file.</p>
+         * <br>
+         * <p>> : When the Type parameter is set to **HEADER** and the Format parameter is set to **DOCUMENT**, you can specify a name of the file.</p>
+         */
         @NameInMap("FileName")
         public String fileName;
 
-        // The type of the media resource.
-        // 
-        // *   **TEXT**: text
-        // *   **IMAGE**: image
-        // *   **DOCUMENT**: document
-        // *   **VIDEO**: video
+        /**
+         * <p>The type of the media resource.</p>
+         * <br>
+         * <p>*   **TEXT**: text</p>
+         * <p>*   **IMAGE**: image</p>
+         * <p>*   **DOCUMENT**: document</p>
+         * <p>*   **VIDEO**: video</p>
+         */
         @NameInMap("Format")
         public String format;
 
-        // The text of the message to be sent.
+        /**
+         * <p>The text of the message to be sent.</p>
+         */
         @NameInMap("Text")
         public String text;
 
-        // The type of the component.
-        // 
-        // *   **BODY**
-        // *   **HEADER**
-        // *   **FOOTER**
-        // *   **BUTTONS**
+        /**
+         * <p>The type of the component.</p>
+         * <br>
+         * <p>*   **BODY**</p>
+         * <p>*   **HEADER**</p>
+         * <p>*   **FOOTER**</p>
+         * <p>*   **BUTTONS**</p>
+         */
         @NameInMap("Type")
         public String type;
 
-        // The URL of the material.
+        /**
+         * <p>The URL of the material.</p>
+         */
         @NameInMap("Url")
         public String url;
 

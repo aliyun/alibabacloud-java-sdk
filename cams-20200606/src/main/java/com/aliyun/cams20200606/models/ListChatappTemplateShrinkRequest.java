@@ -4,36 +4,48 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class ListChatappTemplateShrinkRequest extends TeaModel {
-    // The review status of the message template. Valid values:
-    // 
-    // *   **pass**: The message template is approved.
-    // *   **fail**: The message template is rejected.
-    // *   **auditing**: The message template is being reviewed.
-    // *   **unaudit**: The review is suspended.
+    /**
+     * <p>The review status of the message template. Valid values:</p>
+     * <br>
+     * <p>*   **pass**: The message template is approved.</p>
+     * <p>*   **fail**: The message template is rejected.</p>
+     * <p>*   **auditing**: The message template is being reviewed.</p>
+     * <p>*   **unaudit**: The review is suspended.</p>
+     */
     @NameInMap("AuditStatus")
     public String auditStatus;
 
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
-    // The unique identifier of the WhatsApp account that you register.
+    /**
+     * <p>The unique identifier of the WhatsApp account that you register.</p>
+     */
     @NameInMap("CustWabaId")
     @Deprecated
     public String custWabaId;
 
-    // Assigned by ISV for RAM user authentication and authorization.
+    /**
+     * <p>Assigned by ISV for RAM user authentication and authorization.</p>
+     */
     @NameInMap("IsvCode")
     public String isvCode;
 
-    // The language that is used in the message template.
+    /**
+     * <p>The language that is used in the message template.</p>
+     */
     @NameInMap("Language")
     public String language;
 
-    // The name of the message template.
+    /**
+     * <p>The name of the message template.</p>
+     */
     @NameInMap("Name")
     public String name;
 
-    // The paging settings.
+    /**
+     * <p>The paging settings.</p>
+     */
     @NameInMap("Page")
     public String pageShrink;
 

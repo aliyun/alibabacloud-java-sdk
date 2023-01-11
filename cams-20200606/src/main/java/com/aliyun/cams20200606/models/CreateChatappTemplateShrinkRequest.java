@@ -4,55 +4,71 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class CreateChatappTemplateShrinkRequest extends TeaModel {
-    // The category of the message template. Valid values:
-    // 
-    // *   **ACCOUNT_UPDATE**: account update
-    // *   **PAYMENT_UPDATE**: payment update
-    // *   **PERSONAL_FINANCE\_UPDATE**: personal finance update
-    // *   **SHIPPING_UPDATE**: traffic update
-    // *   **RESERVATION_UPDATE**: reservation update
-    // *   **ISSUE_RESOLUTION**: issue resolution
-    // *   **APPOINTMENT_UPDATE**: appointment update
-    // *   **TRANSPORTATION_UPDATE**: logistics information update
-    // *   **TICKET_UPDATE**: ticket update
-    // *   **ALERT_UPDATE**: alert update
-    // *   **AUTO_REPLY**: auto reply
+    /**
+     * <p>The category of the message template. Valid values:</p>
+     * <br>
+     * <p>*   **ACCOUNT_UPDATE**: account update</p>
+     * <p>*   **PAYMENT_UPDATE**: payment update</p>
+     * <p>*   **PERSONAL_FINANCE\_UPDATE**: personal finance update</p>
+     * <p>*   **SHIPPING_UPDATE**: traffic update</p>
+     * <p>*   **RESERVATION_UPDATE**: reservation update</p>
+     * <p>*   **ISSUE_RESOLUTION**: issue resolution</p>
+     * <p>*   **APPOINTMENT_UPDATE**: appointment update</p>
+     * <p>*   **TRANSPORTATION_UPDATE**: logistics information update</p>
+     * <p>*   **TICKET_UPDATE**: ticket update</p>
+     * <p>*   **ALERT_UPDATE**: alert update</p>
+     * <p>*   **AUTO_REPLY**: auto reply</p>
+     */
     @NameInMap("Category")
     public String category;
 
-    // The components of the message template.
+    /**
+     * <p>The components of the message template.</p>
+     */
     @NameInMap("Components")
     public String componentsShrink;
 
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
-    // The unique identifier of the WhatsApp account that you register.
+    /**
+     * <p>The unique identifier of the WhatsApp account that you register.</p>
+     */
     @NameInMap("CustWabaId")
     @Deprecated
     public String custWabaId;
 
-    // The examples of variables that are used when you create the message template.
+    /**
+     * <p>The examples of variables that are used when you create the message template.</p>
+     */
     @NameInMap("Example")
     public String exampleShrink;
 
-    // Assigned by ISV for RAM user authentication and authorization.
+    /**
+     * <p>Assigned by ISV for RAM user authentication and authorization.</p>
+     */
     @NameInMap("IsvCode")
     public String isvCode;
 
-    // The language that is used in the message template.
+    /**
+     * <p>The language that is used in the message template.</p>
+     */
     @NameInMap("Language")
     public String language;
 
-    // The name of the message template.
+    /**
+     * <p>The name of the message template.</p>
+     */
     @NameInMap("Name")
     public String name;
 
-    // The type of the message template. Valid values:
-    // 
-    // *   **WHATSAPP**
-    // *   VIBER (under development)
-    // *   LINE (under development)
+    /**
+     * <p>The type of the message template. Valid values:</p>
+     * <br>
+     * <p>*   **WHATSAPP**</p>
+     * <p>*   VIBER (under development)</p>
+     * <p>*   LINE (under development)</p>
+     */
     @NameInMap("TemplateType")
     public String templateType;
 

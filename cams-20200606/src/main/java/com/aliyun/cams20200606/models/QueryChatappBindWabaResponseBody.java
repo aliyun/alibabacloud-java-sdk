@@ -4,22 +4,30 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class QueryChatappBindWabaResponseBody extends TeaModel {
-    // The HTTP status code returned.
-    // 
-    // *   A value of OK indicates that the call is successful.
-    // *   Other values indicate that the call fails. For more information, see [Error codes](~~196974~~).
+    /**
+     * <p>The HTTP status code returned.</p>
+     * <br>
+     * <p>*   A value of OK indicates that the call is successful.</p>
+     * <p>*   Other values indicate that the call fails. For more information, see [Error codes](~~196974~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
-    // The returned data.
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public QueryChatappBindWabaResponseBodyData data;
 
-    // The error message returned.
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -61,23 +69,33 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
     }
 
     public static class QueryChatappBindWabaResponseBodyData extends TeaModel {
-        // The audit status of the WhatApp Business account.
+        /**
+         * <p>The audit status of the WhatApp Business account.</p>
+         */
         @NameInMap("AccountReviewStatus")
         public String accountReviewStatus;
 
-        // Currency
+        /**
+         * <p>Currency</p>
+         */
         @NameInMap("Currency")
         public String currency;
 
-        // WabaID
+        /**
+         * <p>WabaID</p>
+         */
         @NameInMap("Id")
         public String id;
 
-        // The namespace of the message template.
+        /**
+         * <p>The namespace of the message template.</p>
+         */
         @NameInMap("MessageTemplateNamespace")
         public String messageTemplateNamespace;
 
-        // The name of the WhatApp Business account.
+        /**
+         * <p>The name of the WhatApp Business account.</p>
+         */
         @NameInMap("Name")
         public String name;
 

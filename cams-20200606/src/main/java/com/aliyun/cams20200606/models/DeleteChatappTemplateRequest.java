@@ -7,16 +7,22 @@ public class DeleteChatappTemplateRequest extends TeaModel {
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
-    // The unique identifier of the WhatsApp account that you register.
+    /**
+     * <p>The unique identifier of the WhatsApp account that you register.</p>
+     */
     @NameInMap("CustWabaId")
     @Deprecated
     public String custWabaId;
 
-    // Assigned by ISV for RAM user authentication and authorization.
+    /**
+     * <p>Assigned by ISV for RAM user authentication and authorization.</p>
+     */
     @NameInMap("IsvCode")
     public String isvCode;
 
-    // The code of the message template.
+    /**
+     * <p>The code of the message template.</p>
+     */
     @NameInMap("TemplateCode")
     public String templateCode;
 

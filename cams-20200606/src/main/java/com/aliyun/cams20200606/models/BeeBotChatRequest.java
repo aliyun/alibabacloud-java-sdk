@@ -4,46 +4,66 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class BeeBotChatRequest extends TeaModel {
-    // The ID of chatbot instance.
+    /**
+     * <p>The ID of chatbot instance.</p>
+     */
     @NameInMap("ChatBotInstanceId")
     public String chatBotInstanceId;
 
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
-    // The name of the intent in the dialog flow. When this parameter is specified, the bot will conduct a Q\&A according to the intent.
+    /**
+     * <p>The name of the intent in the dialog flow. When this parameter is specified, the bot will conduct a Q\&A according to the intent.</p>
+     */
     @NameInMap("IntentName")
     public String intentName;
 
-    // ISV verification code, which is used to verify whether the sub-account is authorized by ISV.
+    /**
+     * <p>ISV verification code, which is used to verify whether the sub-account is authorized by ISV.</p>
+     */
     @NameInMap("IsvCode")
     public String isvCode;
 
-    // The ID of the knowledge title in the knowledge base.
+    /**
+     * <p>The ID of the knowledge title in the knowledge base.</p>
+     */
     @NameInMap("KnowledgeId")
     public String knowledgeId;
 
-    // The list of codes for answers from different perspectives.
+    /**
+     * <p>The list of codes for answers from different perspectives.</p>
+     */
     @NameInMap("Perspective")
     public java.util.List<String> perspective;
 
-    // The ID of the visitor, which is used to identify users in the current session.
+    /**
+     * <p>The ID of the visitor, which is used to identify users in the current session.</p>
+     */
     @NameInMap("SenderId")
     public String senderId;
 
-    // The nickname of the visitor in the current session.
+    /**
+     * <p>The nickname of the visitor in the current session.</p>
+     */
     @NameInMap("SenderNick")
     public String senderNick;
 
-    // The ID of the session, which identifies the session and context information of the visitor.
+    /**
+     * <p>The ID of the session, which identifies the session and context information of the visitor.</p>
+     */
     @NameInMap("SessionId")
     public String sessionId;
 
-    // The input of the visitor.
+    /**
+     * <p>The input of the visitor.</p>
+     */
     @NameInMap("Utterance")
     public String utterance;
 
-    // The user-defined parameter set in JSON format. You can specify user-defined parameters for conversation engines.
+    /**
+     * <p>The user-defined parameter set in JSON format. You can specify user-defined parameters for conversation engines.</p>
+     */
     @NameInMap("VendorParam")
     public java.util.Map<String, ?> vendorParam;
 
