@@ -8,7 +8,7 @@ public class GetOssMetaDownloadResponseBody extends TeaModel {
     public Long code;
 
     @NameInMap("Data")
-    public String data;
+    public java.util.List<String> data;
 
     @NameInMap("ErrorCode")
     public String errorCode;
@@ -35,11 +35,11 @@ public class GetOssMetaDownloadResponseBody extends TeaModel {
         return this.code;
     }
 
-    public GetOssMetaDownloadResponseBody setData(String data) {
+    public GetOssMetaDownloadResponseBody setData(java.util.List<String> data) {
         this.data = data;
         return this;
     }
-    public String getData() {
+    public java.util.List<String> getData() {
         return this.data;
     }
 
