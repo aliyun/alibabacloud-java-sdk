@@ -31,6 +31,9 @@ public class UpdateStackGroupRequest extends TeaModel {
     @NameInMap("OperationPreferences")
     public java.util.Map<String, ?> operationPreferences;
 
+    /**
+     * <p>test</p>
+     */
     @NameInMap("Parameters")
     public java.util.List<UpdateStackGroupRequestParameters> parameters;
 
@@ -241,6 +244,9 @@ public class UpdateStackGroupRequest extends TeaModel {
         @NameInMap("AccountIds")
         public java.util.List<String> accountIds;
 
+        /**
+         * <p>test</p>
+         */
         @NameInMap("RdFolderIds")
         public java.util.List<String> rdFolderIds;
 

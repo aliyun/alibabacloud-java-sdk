@@ -35,6 +35,9 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
         @NameInMap("AccountIds")
         public java.util.List<String> accountIds;
 
+        /**
+         * <p>test</p>
+         */
         @NameInMap("RdFolderIds")
         public java.util.List<String> rdFolderIds;
 
@@ -74,6 +77,9 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
         @NameInMap("MaxConcurrentPercentage")
         public Integer maxConcurrentPercentage;
 
+        /**
+         * <p>test</p>
+         */
         @NameInMap("RegionIdsOrder")
         public java.util.List<String> regionIdsOrder;
 

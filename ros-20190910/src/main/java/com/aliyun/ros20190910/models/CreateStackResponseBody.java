@@ -31,45 +31,4 @@ public class CreateStackResponseBody extends TeaModel {
         return this.stackId;
     }
 
-    public static class ContinueCreateStackResponseBodyDryRunResult extends TeaModel {
-        @NameInMap("ParametersAllowedToBeModified")
-        public java.util.List<String> parametersAllowedToBeModified;
-
-        @NameInMap("ParametersConditionallyAllowedToBeModified")
-        public java.util.List<String> parametersConditionallyAllowedToBeModified;
-
-        @NameInMap("ParametersNotAllowedToBeModified")
-        public java.util.List<String> parametersNotAllowedToBeModified;
-
-        public static ContinueCreateStackResponseBodyDryRunResult build(java.util.Map<String, ?> map) throws Exception {
-            ContinueCreateStackResponseBodyDryRunResult self = new ContinueCreateStackResponseBodyDryRunResult();
-            return TeaModel.build(map, self);
-        }
-
-        public ContinueCreateStackResponseBodyDryRunResult setParametersAllowedToBeModified(java.util.List<String> parametersAllowedToBeModified) {
-            this.parametersAllowedToBeModified = parametersAllowedToBeModified;
-            return this;
-        }
-        public java.util.List<String> getParametersAllowedToBeModified() {
-            return this.parametersAllowedToBeModified;
-        }
-
-        public ContinueCreateStackResponseBodyDryRunResult setParametersConditionallyAllowedToBeModified(java.util.List<String> parametersConditionallyAllowedToBeModified) {
-            this.parametersConditionallyAllowedToBeModified = parametersConditionallyAllowedToBeModified;
-            return this;
-        }
-        public java.util.List<String> getParametersConditionallyAllowedToBeModified() {
-            return this.parametersConditionallyAllowedToBeModified;
-        }
-
-        public ContinueCreateStackResponseBodyDryRunResult setParametersNotAllowedToBeModified(java.util.List<String> parametersNotAllowedToBeModified) {
-            this.parametersNotAllowedToBeModified = parametersNotAllowedToBeModified;
-            return this;
-        }
-        public java.util.List<String> getParametersNotAllowedToBeModified() {
-            return this.parametersNotAllowedToBeModified;
-        }
-
-    }
-
 }

@@ -22,6 +22,9 @@ public class CreateStackInstancesRequest extends TeaModel {
     @NameInMap("OperationPreferences")
     public java.util.Map<String, ?> operationPreferences;
 
+    /**
+     * <p>test</p>
+     */
     @NameInMap("ParameterOverrides")
     public java.util.List<CreateStackInstancesRequestParameterOverrides> parameterOverrides;
 

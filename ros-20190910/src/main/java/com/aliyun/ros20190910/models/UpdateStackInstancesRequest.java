@@ -19,6 +19,9 @@ public class UpdateStackInstancesRequest extends TeaModel {
     @NameInMap("OperationPreferences")
     public java.util.Map<String, ?> operationPreferences;
 
+    /**
+     * <p>test</p>
+     */
     @NameInMap("ParameterOverrides")
     public java.util.List<UpdateStackInstancesRequestParameterOverrides> parameterOverrides;
 
@@ -123,6 +126,9 @@ public class UpdateStackInstancesRequest extends TeaModel {
         @NameInMap("AccountIds")
         public java.util.List<String> accountIds;
 
+        /**
+         * <p>test</p>
+         */
         @NameInMap("RdFolderIds")
         public java.util.List<String> rdFolderIds;
 
