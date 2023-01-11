@@ -10,7 +10,9 @@ public class GenerateVideoRequest extends TeaModel {
     @NameInMap("DurationAdaption")
     public Boolean durationAdaption;
 
-    // 1
+    /**
+     * <p>1</p>
+     */
     @NameInMap("FileList")
     public java.util.List<GenerateVideoRequestFileList> fileList;
 
