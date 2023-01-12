@@ -1513,8 +1513,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createNacosServiceWithOptions(request, runtime);
     }
 
-    public CreateOrUpdateSwimmingLaneResponse createOrUpdateSwimmingLaneWithOptions(CreateOrUpdateSwimmingLaneRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public CreateOrUpdateSwimmingLaneResponse createOrUpdateSwimmingLaneWithOptions(CreateOrUpdateSwimmingLaneRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateOrUpdateSwimmingLaneShrinkRequest request = new CreateOrUpdateSwimmingLaneShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.gatewaySwimmingLaneRouteJson)) {
+            request.gatewaySwimmingLaneRouteJsonShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.gatewaySwimmingLaneRouteJson, "GatewaySwimmingLaneRouteJson", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
             query.put("AcceptLanguage", request.acceptLanguage);
@@ -1534,6 +1540,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.entryRules)) {
             query.put("EntryRules", request.entryRules);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gatewaySwimmingLaneRouteJsonShrink)) {
+            query.put("GatewaySwimmingLaneRouteJson", request.gatewaySwimmingLaneRouteJsonShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.gmtCreate)) {
