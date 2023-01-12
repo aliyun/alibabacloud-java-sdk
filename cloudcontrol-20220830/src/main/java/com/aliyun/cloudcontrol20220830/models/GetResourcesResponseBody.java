@@ -77,7 +77,7 @@ public class GetResourcesResponseBody extends TeaModel {
 
     public static class GetResourcesResponseBodyResource extends TeaModel {
         @NameInMap("resourceAttributes")
-        public String resourceAttributes;
+        public java.util.Map<String, ?> resourceAttributes;
 
         @NameInMap("resourceId")
         public String resourceId;
@@ -87,11 +87,11 @@ public class GetResourcesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public GetResourcesResponseBodyResource setResourceAttributes(String resourceAttributes) {
+        public GetResourcesResponseBodyResource setResourceAttributes(java.util.Map<String, ?> resourceAttributes) {
             this.resourceAttributes = resourceAttributes;
             return this;
         }
-        public String getResourceAttributes() {
+        public java.util.Map<String, ?> getResourceAttributes() {
             return this.resourceAttributes;
         }
 
@@ -107,7 +107,7 @@ public class GetResourcesResponseBody extends TeaModel {
 
     public static class GetResourcesResponseBodyResources extends TeaModel {
         @NameInMap("resourceAttributes")
-        public String resourceAttributes;
+        public java.util.Map<String, ?> resourceAttributes;
 
         @NameInMap("resourceId")
         public String resourceId;
@@ -117,11 +117,11 @@ public class GetResourcesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public GetResourcesResponseBodyResources setResourceAttributes(String resourceAttributes) {
+        public GetResourcesResponseBodyResources setResourceAttributes(java.util.Map<String, ?> resourceAttributes) {
             this.resourceAttributes = resourceAttributes;
             return this;
         }
-        public String getResourceAttributes() {
+        public java.util.Map<String, ?> getResourceAttributes() {
             return this.resourceAttributes;
         }
 
