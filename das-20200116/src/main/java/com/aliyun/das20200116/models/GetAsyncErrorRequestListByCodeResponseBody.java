@@ -68,7 +68,9 @@ public class GetAsyncErrorRequestListByCodeResponseBody extends TeaModel {
         @NameInMap("instanceId")
         public String instanceId;
 
-        // SQL ID。
+        /**
+         * <p>SQL ID。</p>
+         */
         @NameInMap("sqlId")
         public String sqlId;
 
