@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>marketplaceintl20221230</artifactId>
-  <version>1.0.7</version>
+  <version>1.0.9</version>
   <packaging>jar</packaging>
   <name>marketplaceintl20221230</name>
   <description>Alibaba Cloud marketplaceIntl (20221230) SDK for Java
@@ -57,6 +57,11 @@
       <groupId>com.aliyun</groupId>
       <artifactId>tea</artifactId>
       <version>1.2.0</version>
+    </dependency>
+    <dependency>
+      <groupId>com.aliyun</groupId>
+      <artifactId>openapiutil</artifactId>
+      <version>0.2.0</version>
     </dependency>
   </dependencies>
   <build>
