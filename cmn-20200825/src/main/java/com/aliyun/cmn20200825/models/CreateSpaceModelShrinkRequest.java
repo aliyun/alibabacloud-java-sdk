@@ -13,6 +13,9 @@ public class CreateSpaceModelShrinkRequest extends TeaModel {
     @NameInMap("Sort")
     public String sortShrink;
 
+    /**
+     * <p>物理空间类型</p>
+     */
     @NameInMap("SpaceType")
     public String spaceType;
 

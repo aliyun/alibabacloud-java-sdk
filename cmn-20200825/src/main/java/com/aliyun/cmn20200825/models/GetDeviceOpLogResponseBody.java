@@ -65,21 +65,33 @@ public class GetDeviceOpLogResponseBody extends TeaModel {
     }
 
     public static class GetDeviceOpLogResponseBodyOperationLogs extends TeaModel {
+        /**
+         * <p>设备ID</p>
+         */
         @NameInMap("DeviceId")
         public String deviceId;
 
         @NameInMap("GmtModifiedTime")
         public String gmtModifiedTime;
 
+        /**
+         * <p>SNMP Privacy Protocol</p>
+         */
         @NameInMap("Keyword")
         public String keyword;
 
         @NameInMap("NewValue")
         public String newValue;
 
+        /**
+         * <p>设备额外属性(JSON)</p>
+         */
         @NameInMap("OldValue")
         public String oldValue;
 
+        /**
+         * <p>SNMP Privacy Passphrase</p>
+         */
         @NameInMap("Operator")
         public String operator;
 

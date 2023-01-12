@@ -4,27 +4,48 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class UpdateSetupProjectShrinkRequest extends TeaModel {
+    /**
+     * <p>架构id</p>
+     */
     @NameInMap("ArchitectureId")
     public String architectureId;
 
+    /**
+     * <p>预计交付时间</p>
+     */
     @NameInMap("DeliveryTime")
     public String deliveryTime;
 
+    /**
+     * <p>描述</p>
+     */
     @NameInMap("Description")
     public String description;
 
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>节点</p>
+     */
     @NameInMap("Nodes")
     public String nodes;
 
+    /**
+     * <p>套餐</p>
+     */
     @NameInMap("Packages")
     public String packagesShrink;
 
+    /**
+     * <p>代表资源一级ID的资源属性字段</p>
+     */
     @NameInMap("SetupProjectId")
     public String setupProjectId;
 
+    /**
+     * <p>物理空间uId</p>
+     */
     @NameInMap("SpaceId")
     public String spaceId;
 

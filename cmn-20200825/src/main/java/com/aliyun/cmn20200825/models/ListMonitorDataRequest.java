@@ -31,6 +31,9 @@ public class ListMonitorDataRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>key</p>
+     */
     @NameInMap("Key")
     public String key;
 

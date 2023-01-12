@@ -108,58 +108,6 @@ public class Script extends TeaModel {
         return this.versionId;
     }
 
-    public static class InspectionScriptInspectionAlarmRules extends TeaModel {
-        @NameInMap("AlarmExpression")
-        public String alarmExpression;
-
-        @NameInMap("AlarmLevel")
-        public String alarmLevel;
-
-        @NameInMap("AlarmOperator")
-        public String alarmOperator;
-
-        @NameInMap("AlarmValue")
-        public String alarmValue;
-
-        public static InspectionScriptInspectionAlarmRules build(java.util.Map<String, ?> map) throws Exception {
-            InspectionScriptInspectionAlarmRules self = new InspectionScriptInspectionAlarmRules();
-            return TeaModel.build(map, self);
-        }
-
-        public InspectionScriptInspectionAlarmRules setAlarmExpression(String alarmExpression) {
-            this.alarmExpression = alarmExpression;
-            return this;
-        }
-        public String getAlarmExpression() {
-            return this.alarmExpression;
-        }
-
-        public InspectionScriptInspectionAlarmRules setAlarmLevel(String alarmLevel) {
-            this.alarmLevel = alarmLevel;
-            return this;
-        }
-        public String getAlarmLevel() {
-            return this.alarmLevel;
-        }
-
-        public InspectionScriptInspectionAlarmRules setAlarmOperator(String alarmOperator) {
-            this.alarmOperator = alarmOperator;
-            return this;
-        }
-        public String getAlarmOperator() {
-            return this.alarmOperator;
-        }
-
-        public InspectionScriptInspectionAlarmRules setAlarmValue(String alarmValue) {
-            this.alarmValue = alarmValue;
-            return this;
-        }
-        public String getAlarmValue() {
-            return this.alarmValue;
-        }
-
-    }
-
     public static class ScriptInput extends TeaModel {
         @NameInMap("Description")
         public String description;

@@ -98,12 +98,21 @@ public class ListSpaceModelsResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>层级</p>
+         */
         @NameInMap("Sort")
         public java.util.List<ListSpaceModelsResponseBodySpaceModelSort> sort;
 
+        /**
+         * <p>代表资源一级ID的资源属性字段</p>
+         */
         @NameInMap("SpaceModelId")
         public String spaceModelId;
 
+        /**
+         * <p>物理空间类型</p>
+         */
         @NameInMap("SpaceType")
         public String spaceType;
 

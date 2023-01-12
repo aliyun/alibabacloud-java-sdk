@@ -86,6 +86,9 @@ public class ListDeviceResourcesResponseBody extends TeaModel {
         @NameInMap("DeviceNumber")
         public String deviceNumber;
 
+        /**
+         * <p>代表资源一级ID的资源属性字段</p>
+         */
         @NameInMap("DeviceResourceId")
         public String deviceResourceId;
 
@@ -116,6 +119,9 @@ public class ListDeviceResourcesResponseBody extends TeaModel {
         @NameInMap("Role")
         public String role;
 
+        /**
+         * <p>建设项目id</p>
+         */
         @NameInMap("SetupProjectId")
         public String setupProjectId;
 

@@ -71,6 +71,9 @@ public class ListConfigurationVariateResponseBody extends TeaModel {
         @NameInMap("ConfigurationVariateId")
         public String configurationVariateId;
 
+        /**
+         * <p>代表创建时间的资源属性字段</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 

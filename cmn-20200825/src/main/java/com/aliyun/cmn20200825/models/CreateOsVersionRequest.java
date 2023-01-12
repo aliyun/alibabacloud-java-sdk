@@ -7,27 +7,48 @@ public class CreateOsVersionRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>代表创建时间的资源属性字段</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <p>文件名</p>
+     */
     @NameInMap("FileName")
     public String fileName;
 
+    /**
+     * <p>文件路径</p>
+     */
     @NameInMap("FilePath")
     public String filePath;
 
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>型号</p>
+     */
     @NameInMap("Model")
     public String model;
 
+    /**
+     * <p>系统版本</p>
+     */
     @NameInMap("OsVersion")
     public String osVersion;
 
+    /**
+     * <p>状态</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>厂商</p>
+     */
     @NameInMap("Vendor")
     public String vendor;
 

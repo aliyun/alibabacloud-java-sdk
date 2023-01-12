@@ -74,9 +74,15 @@ public class ListConnectionPoliciesResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>上联设备uid</p>
+         */
         @NameInMap("DownlinkArchitectureDeviceId")
         public String downlinkArchitectureDeviceId;
 
+        /**
+         * <p>下联设备uid</p>
+         */
         @NameInMap("DownlinkArchitectureModuleId")
         public String downlinkArchitectureModuleId;
 
@@ -92,9 +98,15 @@ public class ListConnectionPoliciesResponseBody extends TeaModel {
         @NameInMap("UpdateTime")
         public String updateTime;
 
+        /**
+         * <p>上联模块uid</p>
+         */
         @NameInMap("UplinkArchitectureDeviceId")
         public String uplinkArchitectureDeviceId;
 
+        /**
+         * <p>下联模块uid</p>
+         */
         @NameInMap("UplinkArchitectureModuleId")
         public String uplinkArchitectureModuleId;
 

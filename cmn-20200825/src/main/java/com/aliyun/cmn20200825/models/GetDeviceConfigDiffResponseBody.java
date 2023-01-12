@@ -7,6 +7,9 @@ public class GetDeviceConfigDiffResponseBody extends TeaModel {
     @NameInMap("DeviceConfigDiff")
     public GetDeviceConfigDiffResponseBodyDeviceConfigDiff deviceConfigDiff;
 
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

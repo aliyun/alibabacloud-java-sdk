@@ -4,6 +4,9 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class UpdateDevicesRequest extends TeaModel {
+    /**
+     * <p>设备ID</p>
+     */
     @NameInMap("DeviceIds")
     public java.util.List<String> deviceIds;
 
@@ -16,12 +19,21 @@ public class UpdateDevicesRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>设备TELNET账号</p>
+     */
     @NameInMap("LoginPassword")
     public String loginPassword;
 
+    /**
+     * <p>设备SSH登录账号</p>
+     */
     @NameInMap("LoginType")
     public String loginType;
 
+    /**
+     * <p>设备SSH登录密码</p>
+     */
     @NameInMap("LoginUsername")
     public String loginUsername;
 
@@ -40,30 +52,57 @@ public class UpdateDevicesRequest extends TeaModel {
     @NameInMap("ServiceStatus")
     public String serviceStatus;
 
+    /**
+     * <p>账号类型</p>
+     */
     @NameInMap("SnmpAccountType")
     public String snmpAccountType;
 
+    /**
+     * <p>SNMP版本号</p>
+     */
     @NameInMap("SnmpAccountVersion")
     public String snmpAccountVersion;
 
+    /**
+     * <p>SNMP Auth PassPhrase</p>
+     */
     @NameInMap("SnmpAuthPassphrase")
     public String snmpAuthPassphrase;
 
+    /**
+     * <p>SNMP Auth Protocol</p>
+     */
     @NameInMap("SnmpAuthProtocol")
     public String snmpAuthProtocol;
 
+    /**
+     * <p>SNMP Community</p>
+     */
     @NameInMap("SnmpCommunity")
     public String snmpCommunity;
 
+    /**
+     * <p>Privacy Passphase</p>
+     */
     @NameInMap("SnmpPrivacyPassphrase")
     public String snmpPrivacyPassphrase;
 
+    /**
+     * <p>SNMP Privacy Protocol</p>
+     */
     @NameInMap("SnmpPrivacyProtocol")
     public String snmpPrivacyProtocol;
 
+    /**
+     * <p>安全级别</p>
+     */
     @NameInMap("SnmpSecurityLevel")
     public String snmpSecurityLevel;
 
+    /**
+     * <p>用户名</p>
+     */
     @NameInMap("SnmpUsername")
     public String snmpUsername;
 

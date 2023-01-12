@@ -77,6 +77,9 @@ public class GetDeviceResourceResponseBody extends TeaModel {
         @NameInMap("Role")
         public String role;
 
+        /**
+         * <p>建设项目id</p>
+         */
         @NameInMap("SetupProjectId")
         public String setupProjectId;
 

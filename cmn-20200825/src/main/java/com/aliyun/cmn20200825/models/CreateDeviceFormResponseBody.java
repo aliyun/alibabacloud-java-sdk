@@ -7,6 +7,9 @@ public class CreateDeviceFormResponseBody extends TeaModel {
     @NameInMap("DeviceFormId")
     public String deviceFormId;
 
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

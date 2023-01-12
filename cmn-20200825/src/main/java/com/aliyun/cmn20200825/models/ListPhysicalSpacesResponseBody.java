@@ -13,6 +13,9 @@ public class ListPhysicalSpacesResponseBody extends TeaModel {
     @NameInMap("PhysicalSpaces")
     public java.util.List<ListPhysicalSpacesResponseBodyPhysicalSpaces> physicalSpaces;
 
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

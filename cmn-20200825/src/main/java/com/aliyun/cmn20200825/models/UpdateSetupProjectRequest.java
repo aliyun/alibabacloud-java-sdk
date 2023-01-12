@@ -4,27 +4,48 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class UpdateSetupProjectRequest extends TeaModel {
+    /**
+     * <p>架构id</p>
+     */
     @NameInMap("ArchitectureId")
     public String architectureId;
 
+    /**
+     * <p>预计交付时间</p>
+     */
     @NameInMap("DeliveryTime")
     public String deliveryTime;
 
+    /**
+     * <p>描述</p>
+     */
     @NameInMap("Description")
     public String description;
 
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>节点</p>
+     */
     @NameInMap("Nodes")
     public String nodes;
 
+    /**
+     * <p>套餐</p>
+     */
     @NameInMap("Packages")
     public java.util.List<UpdateSetupProjectRequestPackages> packages;
 
+    /**
+     * <p>代表资源一级ID的资源属性字段</p>
+     */
     @NameInMap("SetupProjectId")
     public String setupProjectId;
 
+    /**
+     * <p>物理空间uId</p>
+     */
     @NameInMap("SpaceId")
     public String spaceId;
 
@@ -98,15 +119,27 @@ public class UpdateSetupProjectRequest extends TeaModel {
     }
 
     public static class UpdateSetupProjectRequestPackages extends TeaModel {
+        /**
+         * <p>设备号</p>
+         */
         @NameInMap("DeviceNumber")
         public Long deviceNumber;
 
+        /**
+         * <p>型号</p>
+         */
         @NameInMap("Model")
         public String model;
 
+        /**
+         * <p>角色</p>
+         */
         @NameInMap("Role")
         public String role;
 
+        /**
+         * <p>厂商</p>
+         */
         @NameInMap("Vendor")
         public String vendor;
 

@@ -13,6 +13,9 @@ public class ListDedicatedLinesResponseBody extends TeaModel {
     @NameInMap("NextToken")
     public Integer nextToken;
 
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

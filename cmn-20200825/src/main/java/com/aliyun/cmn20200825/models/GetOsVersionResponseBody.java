@@ -32,6 +32,9 @@ public class GetOsVersionResponseBody extends TeaModel {
     }
 
     public static class GetOsVersionResponseBodyOsVersion extends TeaModel {
+        /**
+         * <p>系统版本</p>
+         */
         @NameInMap("DownloadPath")
         public String downloadPath;
 

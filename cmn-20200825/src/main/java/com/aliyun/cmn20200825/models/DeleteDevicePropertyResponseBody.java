@@ -4,6 +4,9 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class DeleteDevicePropertyResponseBody extends TeaModel {
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

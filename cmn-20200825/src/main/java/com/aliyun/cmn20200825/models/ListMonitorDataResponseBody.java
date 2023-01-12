@@ -7,6 +7,9 @@ public class ListMonitorDataResponseBody extends TeaModel {
     @NameInMap("MonitorData")
     public java.util.List<ListMonitorDataResponseBodyMonitorData> monitorData;
 
+    /**
+     * <p>Request Id</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -35,6 +38,9 @@ public class ListMonitorDataResponseBody extends TeaModel {
         @NameInMap("DataItem")
         public String dataItem;
 
+        /**
+         * <p>key</p>
+         */
         @NameInMap("Key")
         public String key;
 

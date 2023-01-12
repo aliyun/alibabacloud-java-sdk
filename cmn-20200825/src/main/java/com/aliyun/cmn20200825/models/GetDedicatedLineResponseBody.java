@@ -7,6 +7,9 @@ public class GetDedicatedLineResponseBody extends TeaModel {
     @NameInMap("DedicatedLine")
     public GetDedicatedLineResponseBodyDedicatedLine dedicatedLine;
 
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

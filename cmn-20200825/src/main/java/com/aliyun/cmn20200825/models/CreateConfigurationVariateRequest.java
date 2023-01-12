@@ -16,6 +16,9 @@ public class CreateConfigurationVariateRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>代表资源名称的资源属性字段</p>
+     */
     @NameInMap("VariateName")
     public String variateName;
 

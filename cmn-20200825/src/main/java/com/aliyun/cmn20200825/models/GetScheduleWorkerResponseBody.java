@@ -32,21 +32,36 @@ public class GetScheduleWorkerResponseBody extends TeaModel {
     }
 
     public static class GetScheduleWorkerResponseBodyScheduleWorker extends TeaModel {
+        /**
+         * <p>代表创建时间的资源属性字段</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>代表资源一级ID的资源属性字段</p>
+         */
         @NameInMap("ScheduleWorkerId")
         public String scheduleWorkerId;
 
+        /**
+         * <p>更新时间</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
         @NameInMap("WorkerContact")
         public String workerContact;
 
+        /**
+         * <p>值班人员工号</p>
+         */
         @NameInMap("WorkerId")
         public String workerId;
 
+        /**
+         * <p>值班人员姓名</p>
+         */
         @NameInMap("WorkerName")
         public String workerName;
 

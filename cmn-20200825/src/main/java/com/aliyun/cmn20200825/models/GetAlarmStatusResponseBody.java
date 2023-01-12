@@ -7,6 +7,9 @@ public class GetAlarmStatusResponseBody extends TeaModel {
     @NameInMap("AlarmStatus")
     public GetAlarmStatusResponseBodyAlarmStatus alarmStatus;
 
+    /**
+     * <p>request Id</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,27 +35,51 @@ public class GetAlarmStatusResponseBody extends TeaModel {
     }
 
     public static class GetAlarmStatusResponseBodyAlarmStatusAggregateData extends TeaModel {
+        /**
+         * <p>描述</p>
+         */
         @NameInMap("AggregateDataDescription")
         public String aggregateDataDescription;
 
+        /**
+         * <p>聚合数据ID</p>
+         */
         @NameInMap("AggregateDataId")
         public String aggregateDataId;
 
+        /**
+         * <p>聚合数据名称</p>
+         */
         @NameInMap("AggregateDataName")
         public String aggregateDataName;
 
+        /**
+         * <p>聚合方式</p>
+         */
         @NameInMap("AggregateMode")
         public String aggregateMode;
 
+        /**
+         * <p>数据项</p>
+         */
         @NameInMap("DataItem")
         public String dataItem;
 
+        /**
+         * <p>设备ID</p>
+         */
         @NameInMap("DeviceId")
         public String deviceId;
 
+        /**
+         * <p>是否聚合全部设备</p>
+         */
         @NameInMap("IsAllDevice")
         public Integer isAllDevice;
 
+        /**
+         * <p>监控项ID</p>
+         */
         @NameInMap("MonitorItemId")
         public String monitorItemId;
 
@@ -140,6 +167,9 @@ public class GetAlarmStatusResponseBody extends TeaModel {
         @NameInMap("DeviceId")
         public String deviceId;
 
+        /**
+         * <p>IP</p>
+         */
         @NameInMap("Ip")
         public String ip;
 
@@ -545,6 +575,9 @@ public class GetAlarmStatusResponseBody extends TeaModel {
         @NameInMap("HostName")
         public String hostName;
 
+        /**
+         * <p>IP</p>
+         */
         @NameInMap("Ip")
         public String ip;
 
@@ -554,6 +587,9 @@ public class GetAlarmStatusResponseBody extends TeaModel {
         @NameInMap("SecurityDomain")
         public String securityDomain;
 
+        /**
+         * <p>sn</p>
+         */
         @NameInMap("Sn")
         public String sn;
 

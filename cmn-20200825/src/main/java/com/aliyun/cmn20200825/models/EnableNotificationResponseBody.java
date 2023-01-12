@@ -4,6 +4,9 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class EnableNotificationResponseBody extends TeaModel {
+    /**
+     * <p>request id</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

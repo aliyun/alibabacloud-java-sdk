@@ -13,6 +13,9 @@ public class ListNotificationHistoriesResponseBody extends TeaModel {
     @NameInMap("NotificationHistories")
     public java.util.List<ListNotificationHistoriesResponseBodyNotificationHistories> notificationHistories;
 
+    /**
+     * <p>request Id</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -13,6 +13,9 @@ public class ListIpBlocksResponseBody extends TeaModel {
     @NameInMap("NextToken")
     public Integer nextToken;
 
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -71,12 +74,18 @@ public class ListIpBlocksResponseBody extends TeaModel {
         @NameInMap("DevName")
         public String devName;
 
+        /**
+         * <p>Ip</p>
+         */
         @NameInMap("Ip")
         public String ip;
 
         @NameInMap("Origin")
         public String origin;
 
+        /**
+         * <p>Ping</p>
+         */
         @NameInMap("Ping")
         public String ping;
 
@@ -137,6 +146,9 @@ public class ListIpBlocksResponseBody extends TeaModel {
         @NameInMap("GmtModifiedTime")
         public String gmtModifiedTime;
 
+        /**
+         * <p>Ip</p>
+         */
         @NameInMap("Ip")
         public String ip;
 
@@ -235,9 +247,15 @@ public class ListIpBlocksResponseBody extends TeaModel {
     }
 
     public static class ListIpBlocksResponseBodyIpBlockZoneLayer extends TeaModel {
+        /**
+         * <p>园区层级名称</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>园区层级值</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -268,12 +286,21 @@ public class ListIpBlocksResponseBody extends TeaModel {
         @NameInMap("Abbr")
         public String abbr;
 
+        /**
+         * <p>IP用途</p>
+         */
         @NameInMap("Application")
         public String application;
 
+        /**
+         * <p>备份设备名称</p>
+         */
         @NameInMap("BackupDeviceName")
         public String backupDeviceName;
 
+        /**
+         * <p>业务类型UID</p>
+         */
         @NameInMap("BusinessTypeId")
         public String businessTypeId;
 
@@ -283,9 +310,15 @@ public class ListIpBlocksResponseBody extends TeaModel {
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <p>备注</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>设备名称</p>
+         */
         @NameInMap("DeviceName")
         public String deviceName;
 
@@ -304,12 +337,21 @@ public class ListIpBlocksResponseBody extends TeaModel {
         @NameInMap("LimitZoneTypes")
         public String limitZoneTypes;
 
+        /**
+         * <p>公网地址类型 INC GUEST VIP</p>
+         */
         @NameInMap("NetBusiness")
         public String netBusiness;
 
+        /**
+         * <p>公网私网标志 PUBLIC PRIVATE</p>
+         */
         @NameInMap("NetType")
         public String netType;
 
+        /**
+         * <p>IP归属</p>
+         */
         @NameInMap("Ownership")
         public String ownership;
 
@@ -331,6 +373,9 @@ public class ListIpBlocksResponseBody extends TeaModel {
         @NameInMap("Tasks")
         public java.util.List<ListIpBlocksResponseBodyIpBlockTasks> tasks;
 
+        /**
+         * <p>园区层级</p>
+         */
         @NameInMap("ZoneLayer")
         public java.util.List<ListIpBlocksResponseBodyIpBlockZoneLayer> zoneLayer;
 

@@ -71,6 +71,9 @@ public class ListConfigurationSpecificationsResponseBody extends TeaModel {
         @NameInMap("ConfigurationSpecificationId")
         public String configurationSpecificationId;
 
+        /**
+         * <p>代表创建时间的资源属性字段</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
