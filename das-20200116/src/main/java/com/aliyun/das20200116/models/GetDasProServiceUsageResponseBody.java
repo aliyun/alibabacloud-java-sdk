@@ -116,7 +116,9 @@ public class GetDasProServiceUsageResponseBody extends TeaModel {
         @NameInMap("uuid")
         public String uuid;
 
-        // VPC ID。
+        /**
+         * <p>VPC ID。</p>
+         */
         @NameInMap("vpcId")
         public String vpcId;
 

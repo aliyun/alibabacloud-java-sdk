@@ -158,7 +158,9 @@ public class GetFullRequestOriginStatByInstanceIdResponseBody extends TeaModel {
         @NameInMap("Version")
         public Long version;
 
-        // VPC ID。
+        /**
+         * <p>VPC ID。</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 

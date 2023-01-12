@@ -109,7 +109,9 @@ public class AddHDMInstanceResponseBody extends TeaModel {
         @NameInMap("Uuid")
         public String uuid;
 
-        // VPC ID。
+        /**
+         * <p>VPC ID。</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
