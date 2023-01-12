@@ -4,21 +4,41 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class CreateBasicAccelerateIpResponseBody extends TeaModel {
+    /**
+     * <p>The accelerated IP address.</p>
+     */
     @NameInMap("AccelerateIpAddress")
     public String accelerateIpAddress;
 
+    /**
+     * <p>The ID of the accelerated IP address.</p>
+     */
     @NameInMap("AccelerateIpId")
     public String accelerateIpId;
 
+    /**
+     * <p>The ID of the basic GA instance.</p>
+     */
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
+    /**
+     * <p>The ID of the acceleration region.</p>
+     */
     @NameInMap("IpSetId")
     public String ipSetId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The status of the accelerated IP address.</p>
+     * <br>
+     * <p>>  This parameter returns an empty string because the parameter is not in use.</p>
+     */
     @NameInMap("State")
     public String state;
 

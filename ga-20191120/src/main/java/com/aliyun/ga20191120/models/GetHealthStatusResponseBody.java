@@ -4,15 +4,31 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class GetHealthStatusResponseBody extends TeaModel {
+    /**
+     * <p>The information about the endpoint group.</p>
+     */
     @NameInMap("EndpointGroups")
     public java.util.List<GetHealthStatusResponseBodyEndpointGroups> endpointGroups;
 
+    /**
+     * <p>The health status of the listener. Valid values:</p>
+     * <br>
+     * <p>*   **normal**: The listener is normal.</p>
+     * <p>*   **Abnormal**: The listener is abnormal.</p>
+     * <p>*   **partiallyAbnormal**: Some exceptions occur to the listener.</p>
+     */
     @NameInMap("HealthStatus")
     public String healthStatus;
 
+    /**
+     * <p>The ID of the listener.</p>
+     */
     @NameInMap("ListenerId")
     public String listenerId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,21 +70,53 @@ public class GetHealthStatusResponseBody extends TeaModel {
     }
 
     public static class GetHealthStatusResponseBodyEndpointGroupsEndpoints extends TeaModel {
+        /**
+         * <p>The IP address of the endpoint.</p>
+         */
         @NameInMap("Address")
         public String address;
 
+        /**
+         * <p>The ID of the endpoint.</p>
+         */
         @NameInMap("EndpointId")
         public String endpointId;
 
+        /**
+         * <p>The health check details of the endpoint.</p>
+         * <br>
+         * <p>>  This parameter is unavailable.</p>
+         */
         @NameInMap("HealthDetail")
         public String healthDetail;
 
+        /**
+         * <p>The health status of the endpoint. Valid values:</p>
+         * <br>
+         * <p>*   **init**: The endpoint is being initialized.</p>
+         * <p>*   **normal**: The endpoint is normal.</p>
+         * <p>*   **Abnormal**: The endpoint is abnormal.</p>
+         */
         @NameInMap("HealthStatus")
         public String healthStatus;
 
+        /**
+         * <p>The port that is used to connect to the endpoint.</p>
+         */
         @NameInMap("Port")
         public Long port;
 
+        /**
+         * <p>The type of the endpoint. Valid values:</p>
+         * <br>
+         * <p>*   **Domain**: a custom domain name</p>
+         * <p>*   **Ip**: a custom IP address</p>
+         * <p>*   **PublicIp**: a public IP address provided by Alibaba Cloud</p>
+         * <p>*   **ECS**: an Elastic Compute Service (ECS) instance</p>
+         * <p>*   **SLB**: a Server Load Balancer (SLB) instance</p>
+         * <p>*   **ALB**: an Application Load Balancer (ALB) instance</p>
+         * <p>*   **OSS**: an Object Storage Service (OSS) bucket</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -128,18 +176,41 @@ public class GetHealthStatusResponseBody extends TeaModel {
     }
 
     public static class GetHealthStatusResponseBodyEndpointGroups extends TeaModel {
+        /**
+         * <p>The ID of the endpoint group.</p>
+         */
         @NameInMap("EndpointGroupId")
         public String endpointGroupId;
 
+        /**
+         * <p>The type of the endpoint group. Valid values:</p>
+         * <br>
+         * <p>*   **default**: a default endpoint group</p>
+         * <p>*   **virtual**: a virtual endpoint group</p>
+         */
         @NameInMap("EndpointGroupType")
         public String endpointGroupType;
 
+        /**
+         * <p>The information about the endpoints.</p>
+         */
         @NameInMap("Endpoints")
         public java.util.List<GetHealthStatusResponseBodyEndpointGroupsEndpoints> endpoints;
 
+        /**
+         * <p>The IDs of the forwarding rules.</p>
+         */
         @NameInMap("ForwardingRuleIds")
         public java.util.List<String> forwardingRuleIds;
 
+        /**
+         * <p>The health status of the endpoint group. Valid values:</p>
+         * <br>
+         * <p>*   **init**: The endpoint group is being initialized.</p>
+         * <p>*   **normal**: The endpoint group is normal.</p>
+         * <p>*   **Abnormal**: The endpoint group is abnormal.</p>
+         * <p>*   **partiallyAbnormal**: Some endpoint groups that are associated with the listener are abnormal.</p>
+         */
         @NameInMap("HealthStatus")
         public String healthStatus;
 

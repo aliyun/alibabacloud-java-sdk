@@ -4,15 +4,27 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class UpdateBandwidthPackageResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the bandwidth plan.</p>
+     */
     @NameInMap("BandwidthPackage")
     public String bandwidthPackage;
 
+    /**
+     * <p>The description of the bandwidth plan.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The name of the bandwidth plan.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

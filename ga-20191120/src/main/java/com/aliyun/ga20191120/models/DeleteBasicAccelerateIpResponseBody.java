@@ -4,9 +4,15 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class DeleteBasicAccelerateIpResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the accelerated IP address that is deleted.</p>
+     */
     @NameInMap("AccelerateIpId")
     public String accelerateIpId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

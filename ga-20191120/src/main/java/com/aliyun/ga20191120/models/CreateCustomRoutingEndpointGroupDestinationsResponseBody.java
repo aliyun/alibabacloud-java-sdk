@@ -4,9 +4,15 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class CreateCustomRoutingEndpointGroupDestinationsResponseBody extends TeaModel {
+    /**
+     * <p>The IDs of the endpoint group mapping configurations.</p>
+     */
     @NameInMap("DestinationIds")
     public java.util.List<String> destinationIds;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

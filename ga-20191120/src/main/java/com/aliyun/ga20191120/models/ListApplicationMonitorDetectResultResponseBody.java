@@ -4,18 +4,33 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class ListApplicationMonitorDetectResultResponseBody extends TeaModel {
+    /**
+     * <p>The diagnostic results of the origin probing tasks.</p>
+     */
     @NameInMap("ApplicationMonitorDetectResultList")
     public java.util.List<ListApplicationMonitorDetectResultResponseBodyApplicationMonitorDetectResultList> applicationMonitorDetectResultList;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,33 +80,84 @@ public class ListApplicationMonitorDetectResultResponseBody extends TeaModel {
     }
 
     public static class ListApplicationMonitorDetectResultResponseBodyApplicationMonitorDetectResultList extends TeaModel {
+        /**
+         * <p>The ID of the GA instance on which the origin probing task runs.</p>
+         */
         @NameInMap("AcceleratorId")
         public String acceleratorId;
 
+        /**
+         * <p>The response content returned by the origin probing task.</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>The description of the diagnostic result of the origin probing task. Valid values:</p>
+         * <br>
+         * <p>*   **All forward nodes work well**: The origin is normal.</p>
+         * <p>*   **Endpoint network error.**: The origin is abnormal. You must check whether the origin is running as expected.</p>
+         * <p>*   **Public network error.**: An Internet error occurred. This refers to a network error that occurred when the client connects to the acceleration region.</p>
+         * <p>*   **Ga internal error.**: An internal error occurred. For example, an exception occurred when a request is processed by GA.</p>
+         * <p>*   **Ga has been deleted.**: The current GA instance is deleted.</p>
+         * <p>*   **Ga state is not stable**: The current GA instance is in an unstable state, such as the Configuring state.</p>
+         * <p>*   **Ga has no listener configuration.**: The current GA instance does not have a listener.</p>
+         * <p>*   **Missing endpoint configuration.**: No endpoint is configured.</p>
+         * <p>*   **Missing acceleration region configuration.**: No acceleration region is configured.</p>
+         * <p>*   **Missing endpointgroup configuration.**: No endpoint group is configured.</p>
+         */
         @NameInMap("Detail")
         public String detail;
 
+        /**
+         * <p>The time when the diagnosis of the origin detection task ends.</p>
+         */
         @NameInMap("DetectTime")
         public String detectTime;
 
+        /**
+         * <p>The diagnostic result of the origin probing task.</p>
+         * <br>
+         * <p>*   **success**: The origin probing task succeeded.</p>
+         * <p>*   **failed**: The origin probing task failed.</p>
+         */
         @NameInMap("DiagStatus")
         public String diagStatus;
 
+        /**
+         * <p>The ID of the listener on which the origin probing task runs.</p>
+         */
         @NameInMap("ListenerId")
         public String listenerId;
 
+        /**
+         * <p>The listening port.</p>
+         */
         @NameInMap("Port")
         public String port;
 
+        /**
+         * <p>The network transmission protocol that is used by the listener. Valid values:</p>
+         * <br>
+         * <p>*   **tcp**: TCP</p>
+         * <p>*   **udp**: UDP</p>
+         * <p>*   **http**: HTTP</p>
+         * <p>*   **https**: HTTPS</p>
+         * <br>
+         * <p>>  UDP listeners do not support probing.</p>
+         */
         @NameInMap("Protocol")
         public String protocol;
 
+        /**
+         * <p>The error code returned by the origin probing task.</p>
+         */
         @NameInMap("StatusCode")
         public String statusCode;
 
+        /**
+         * <p>The ID of the origin probing task.</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 

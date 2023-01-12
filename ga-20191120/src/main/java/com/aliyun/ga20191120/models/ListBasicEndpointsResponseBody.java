@@ -4,18 +4,36 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class ListBasicEndpointsResponseBody extends TeaModel {
+    /**
+     * <p>The endpoints that are associated with the basic GA instance.</p>
+     */
     @NameInMap("Endpoints")
     public java.util.List<ListBasicEndpointsResponseBodyEndpoints> endpoints;
 
+    /**
+     * <p>The number of entries returned on each page.</p>
+     */
     @NameInMap("MaxResults")
     public String maxResults;
 
+    /**
+     * <p>The token that determines the start point of the query. Valid values:</p>
+     * <br>
+     * <p>*   If **NextToken** is not returned, it indicates that no additional results exist.</p>
+     * <p>*   If **NextToken** is returned, the value is the token that is used for the next query.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public String totalCount;
 
@@ -68,21 +86,45 @@ public class ListBasicEndpointsResponseBody extends TeaModel {
         @NameInMap("AcceleratorId")
         public String acceleratorId;
 
+        /**
+         * <p>The address of the endpoint.</p>
+         */
         @NameInMap("EndpointAddress")
         public String endpointAddress;
 
+        /**
+         * <p>The ID of the endpoint group to which the endpoints belong.</p>
+         */
         @NameInMap("EndpointGroupId")
         public String endpointGroupId;
 
+        /**
+         * <p>The ID of the endpoint that is associated with the basic GA instance.</p>
+         */
         @NameInMap("EndpointId")
         public String endpointId;
 
+        /**
+         * <p>The secondary address of the endpoint.</p>
+         * <br>
+         * <p>This parameter is returned when the accelerated IP address is associated with the secondary private IP address of an ECS instance or ENI.</p>
+         * <br>
+         * <p>*   When the endpoint type is **ECS**, **EndpointSubAddress** returns the secondary private IP address of the primary ENI. If the parameter is left empty, the primary private IP address of the primary ENI is returned.</p>
+         * <p>*   When the endpoint type is **ENI**, **EndpointSubAddress** returns the secondary private IP address of the secondary ENI. If the parameter is left empty, the primary private IP address of the secondary ENI is returned.</p>
+         */
         @NameInMap("EndpointSubAddress")
         public String endpointSubAddress;
 
         @NameInMap("EndpointSubAddressType")
         public String endpointSubAddressType;
 
+        /**
+         * <p>The type of endpoint. Valid values:</p>
+         * <br>
+         * <p>*   **ENI**: ENI</p>
+         * <p>*   **SLB**: CLB</p>
+         * <p>*   **ECS**: ECS</p>
+         */
         @NameInMap("EndpointType")
         public String endpointType;
 
@@ -92,6 +134,17 @@ public class ListBasicEndpointsResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The status of the endpoint. Valid values:</p>
+         * <br>
+         * <p>*   **init**: The endpoint is being initialized.</p>
+         * <p>*   **active**: The endpoint is available.</p>
+         * <p>*   **updating**: The endpoint is being configured.</p>
+         * <p>*   **binding**: The endpoint is being associated.</p>
+         * <p>*   **unbinding**: The endpoint is being disassociated.</p>
+         * <p>*   **deleting**: The endpoint is being deleted.</p>
+         * <p>*   **bound**: The endpoint is associated.</p>
+         */
         @NameInMap("State")
         public String state;
 

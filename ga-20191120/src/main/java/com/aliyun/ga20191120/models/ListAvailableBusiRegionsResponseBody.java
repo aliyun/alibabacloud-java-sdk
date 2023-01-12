@@ -4,9 +4,15 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class ListAvailableBusiRegionsResponseBody extends TeaModel {
+    /**
+     * <p>Information about the region.</p>
+     */
     @NameInMap("Regions")
     public java.util.List<ListAvailableBusiRegionsResponseBodyRegions> regions;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +38,24 @@ public class ListAvailableBusiRegionsResponseBody extends TeaModel {
     }
 
     public static class ListAvailableBusiRegionsResponseBodyRegions extends TeaModel {
+        /**
+         * <p>The name of the region.</p>
+         */
         @NameInMap("LocalName")
         public String localName;
 
+        /**
+         * <p>Indicates whether it is a point of presence (PoP). Valid values:</p>
+         * <br>
+         * <p>*   **true**: It is a PoP.</p>
+         * <p>*   **false**: It is not a PoP.</p>
+         */
         @NameInMap("Pop")
         public Boolean pop;
 
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 

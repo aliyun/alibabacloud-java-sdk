@@ -4,9 +4,15 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class UpdateForwardingRulesResponseBody extends TeaModel {
+    /**
+     * <p>Details about the forwarding rules.</p>
+     */
     @NameInMap("ForwardingRules")
     public java.util.List<UpdateForwardingRulesResponseBodyForwardingRules> forwardingRules;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +38,9 @@ public class UpdateForwardingRulesResponseBody extends TeaModel {
     }
 
     public static class UpdateForwardingRulesResponseBodyForwardingRules extends TeaModel {
+        /**
+         * <p>The ID of the forwarding rule.</p>
+         */
         @NameInMap("ForwardingRuleId")
         public String forwardingRuleId;
 

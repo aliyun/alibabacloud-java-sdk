@@ -4,18 +4,35 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class DeleteBasicAccelerateIpEndpointRelationResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the accelerated IP address of the basic GA instance.</p>
+     */
     @NameInMap("AccelerateIpId")
     public String accelerateIpId;
 
+    /**
+     * <p>The ID of the basic GA instance.</p>
+     */
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
+    /**
+     * <p>The ID of the endpoint that is associated with the basic GA instance.</p>
+     */
     @NameInMap("EndpointId")
     public String endpointId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The status of the mapping between the accelerated IP address and endpoint.</p>
+     * <br>
+     * <p>>  This parameter is not in use and empty.</p>
+     */
     @NameInMap("State")
     public String state;
 

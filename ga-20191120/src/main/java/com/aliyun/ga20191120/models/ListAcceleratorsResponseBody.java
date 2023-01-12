@@ -4,18 +4,33 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class ListAcceleratorsResponseBody extends TeaModel {
+    /**
+     * <p>Details about the GA instances.</p>
+     */
     @NameInMap("Accelerators")
     public java.util.List<ListAcceleratorsResponseBodyAccelerators> accelerators;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,12 +80,25 @@ public class ListAcceleratorsResponseBody extends TeaModel {
     }
 
     public static class ListAcceleratorsResponseBodyAcceleratorsBasicBandwidthPackage extends TeaModel {
+        /**
+         * <p>The bandwidth value of the basic bandwidth plan. Unit: Mbit/s.</p>
+         */
         @NameInMap("Bandwidth")
         public Integer bandwidth;
 
+        /**
+         * <p>The type of the bandwidth that is provided by the basic bandwidth plan. Valid values:</p>
+         * <br>
+         * <p>*   **Basic**: standard bandwidth plans</p>
+         * <p>*   **Enhanced**: enhanced bandwidth plans</p>
+         * <p>*   **Advanced**: premium bandwidth plans</p>
+         */
         @NameInMap("BandwidthType")
         public String bandwidthType;
 
+        /**
+         * <p>The ID of the basic bandwidth plan.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
@@ -106,9 +134,15 @@ public class ListAcceleratorsResponseBody extends TeaModel {
     }
 
     public static class ListAcceleratorsResponseBodyAcceleratorsCrossDomainBandwidthPackage extends TeaModel {
+        /**
+         * <p>The bandwidth that is provided by the cross-region acceleration bandwidth plan. Unit: Mbit /s.</p>
+         */
         @NameInMap("Bandwidth")
         public Integer bandwidth;
 
+        /**
+         * <p>The ID of the cross-region acceleration bandwidth plan.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
@@ -136,6 +170,12 @@ public class ListAcceleratorsResponseBody extends TeaModel {
     }
 
     public static class ListAcceleratorsResponseBodyAcceleratorsIpSetConfig extends TeaModel {
+        /**
+         * <p>The access mode of the acceleration area. Valid values:</p>
+         * <br>
+         * <p>*   **UserDefine**: custom nearby access mode. You can select acceleration areas and regions based on your business requirements. GA allocates a separate elastic IP address (EIP) to each acceleration region.</p>
+         * <p>*   **Anycast**: automatic nearby access mode. You do not need to specify an acceleration area. GA allocates an Anycast EIP to multiple regions across the globe. Users can connect to the nearest access point of the Alibaba Cloud global transmission network by sending requests to the Anycast EIP.</p>
+         */
         @NameInMap("AccessMode")
         public String accessMode;
 
@@ -185,66 +225,155 @@ public class ListAcceleratorsResponseBody extends TeaModel {
     }
 
     public static class ListAcceleratorsResponseBodyAccelerators extends TeaModel {
+        /**
+         * <p>The ID of the GA instance.</p>
+         */
         @NameInMap("AcceleratorId")
         public String acceleratorId;
 
+        /**
+         * <p>The bandwidth value of the GA instance. Unit: Mbit/s.</p>
+         */
         @NameInMap("Bandwidth")
         public Integer bandwidth;
 
         @NameInMap("BandwidthBillingType")
         public String bandwidthBillingType;
 
+        /**
+         * <p>Details about the basic bandwidth plan that is associated with the GA instance.</p>
+         */
         @NameInMap("BasicBandwidthPackage")
         public ListAcceleratorsResponseBodyAcceleratorsBasicBandwidthPackage basicBandwidthPackage;
 
+        /**
+         * <p>The ID of the Cloud Enterprise Network (CEN) instance that is associated with the GA instance.</p>
+         */
         @NameInMap("CenId")
         public String cenId;
 
+        /**
+         * <p>The timestamp that indicates the time when the GA instance was created.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        @NameInMap("CrossBorderMode")
+        public String crossBorderMode;
+
+        /**
+         * <p>Details about the cross-region acceleration bandwidth plan that is associated with the GA instance.</p>
+         * <br>
+         * <p>This array is returned only for GA instances that are created on the International site (alibabacloud.com).</p>
+         */
         @NameInMap("CrossDomainBandwidthPackage")
         public ListAcceleratorsResponseBodyAcceleratorsCrossDomainBandwidthPackage crossDomainBandwidthPackage;
 
+        /**
+         * <p>The ID of the Anti-DDoS Pro or Anti-DDoS Premium instance that is associated with the GA instance.</p>
+         */
         @NameInMap("DdosId")
         public String ddosId;
 
+        /**
+         * <p>The description of the GA instance.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The canonical name (CNAME) that is assigned to the GA instance.</p>
+         */
         @NameInMap("DnsName")
         public String dnsName;
 
+        /**
+         * <p>The timestamp that indicates the time when the GA instance expires.</p>
+         */
         @NameInMap("ExpiredTime")
         public Long expiredTime;
 
+        /**
+         * <p>The billing method of the GA instance. Only **PREPAY** is returned. This value indicates the subscription billing method.</p>
+         */
         @NameInMap("InstanceChargeType")
         public String instanceChargeType;
 
+        /**
+         * <p>The configurations of the acceleration area.</p>
+         */
         @NameInMap("IpSetConfig")
         public ListAcceleratorsResponseBodyAcceleratorsIpSetConfig ipSetConfig;
 
+        /**
+         * <p>The name of the GA instance.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The CNAME that is used to associate the GA instance with an Anti-DDoS Pro instance or an Anti-DDoS Premium instance.</p>
+         */
         @NameInMap("SecondDnsName")
         public String secondDnsName;
 
+        /**
+         * <p>The specification of the GA instance. Valid values:</p>
+         * <br>
+         * <p>*   **1**: Small Ⅰ</p>
+         * <p>*   **2**: Small Ⅱ</p>
+         * <p>*   **3**: Small Ⅲ</p>
+         * <p>*   **5**: Medium Ⅰ</p>
+         * <p>*   **8**: Medium Ⅱ</p>
+         * <p>*   **10**: Medium Ⅲ</p>
+         * <p>*   **20**: Large Ⅰ</p>
+         * <p>*   **30**: Large Ⅱ</p>
+         * <p>*   **40**: Large Ⅲ</p>
+         * <p>*   **50**: Large Ⅳ</p>
+         * <p>*   **60**: Large Ⅴ</p>
+         * <p>*   **70**: Large Ⅵ</p>
+         * <p>*   **80**: Large VⅡ</p>
+         * <p>*   **90**: Large VⅢ</p>
+         * <p>*   **100**: Super Large Ⅰ</p>
+         * <p>*   **200**: Super Large Ⅱ</p>
+         * <p>*   **300**: Super Large Ⅲ</p>
+         * <br>
+         * <p>>  The Large Ⅲ specification and higher specifications are available only for accounts that are added to the whitelist. To use other specifications of GA instances, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).</p>
+         * <br>
+         * <p>Each instance specification provides different capabilities. For more information, see the "Specifications of standard GA instances" section in [Overview](~~153127~~).</p>
+         */
         @NameInMap("Spec")
         public String spec;
 
+        /**
+         * <p>The state of the GA instance. Valid values:</p>
+         * <br>
+         * <p>*   **init**: The GA instance is being initialized.</p>
+         * <p>*   **active**: The GA instance is available.</p>
+         * <p>*   **configuring**: The GA instance is being configured.</p>
+         * <p>*   **binding**: The GA instance is being associated.</p>
+         * <p>*   **unbinding**: The GA instance is being disassociated.</p>
+         * <p>*   **deleting**: The GA instance is being deleted.</p>
+         * <p>*   **finacialLocked**: The GA instance is locked due to overdue payments.</p>
+         */
         @NameInMap("State")
         public String state;
 
         @NameInMap("Tags")
         public java.util.List<ListAcceleratorsResponseBodyAcceleratorsTags> tags;
 
+        /**
+         * <p>An invalid parameter.</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -299,6 +428,14 @@ public class ListAcceleratorsResponseBody extends TeaModel {
         }
         public Long getCreateTime() {
             return this.createTime;
+        }
+
+        public ListAcceleratorsResponseBodyAccelerators setCrossBorderMode(String crossBorderMode) {
+            this.crossBorderMode = crossBorderMode;
+            return this;
+        }
+        public String getCrossBorderMode() {
+            return this.crossBorderMode;
         }
 
         public ListAcceleratorsResponseBodyAccelerators setCrossDomainBandwidthPackage(ListAcceleratorsResponseBodyAcceleratorsCrossDomainBandwidthPackage crossDomainBandwidthPackage) {

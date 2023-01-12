@@ -4,18 +4,33 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaModel {
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned on each page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The list of traffic policies.</p>
+     */
     @NameInMap("Policies")
     public java.util.List<ListCustomRoutingEndpointTrafficPoliciesResponseBodyPolicies> policies;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,9 +80,15 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
     }
 
     public static class ListCustomRoutingEndpointTrafficPoliciesResponseBodyPoliciesPortRanges extends TeaModel {
+        /**
+         * <p>The first port of the port range.</p>
+         */
         @NameInMap("FromPort")
         public Integer fromPort;
 
+        /**
+         * <p>The last port of the port range.</p>
+         */
         @NameInMap("ToPort")
         public Integer toPort;
 
@@ -95,24 +116,45 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
     }
 
     public static class ListCustomRoutingEndpointTrafficPoliciesResponseBodyPolicies extends TeaModel {
+        /**
+         * <p>The ID of the GA instance to which the endpoint belongs.</p>
+         */
         @NameInMap("AcceleratorId")
         public String acceleratorId;
 
+        /**
+         * <p>The IP address of the traffic policy.</p>
+         */
         @NameInMap("Address")
         public String address;
 
+        /**
+         * <p>The ID of the endpoint group to which the endpoint belongs.</p>
+         */
         @NameInMap("EndpointGroupId")
         public String endpointGroupId;
 
+        /**
+         * <p>The ID of the endpoint to which the traffic policy belongs.</p>
+         */
         @NameInMap("EndpointId")
         public String endpointId;
 
+        /**
+         * <p>The ID of the custom routing listener to which the endpoint belongs.</p>
+         */
         @NameInMap("ListenerId")
         public String listenerId;
 
+        /**
+         * <p>The ID of the traffic policy.</p>
+         */
         @NameInMap("PolicyId")
         public String policyId;
 
+        /**
+         * <p>The port range of the traffic policy.</p>
+         */
         @NameInMap("PortRanges")
         public java.util.List<ListCustomRoutingEndpointTrafficPoliciesResponseBodyPoliciesPortRanges> portRanges;
 

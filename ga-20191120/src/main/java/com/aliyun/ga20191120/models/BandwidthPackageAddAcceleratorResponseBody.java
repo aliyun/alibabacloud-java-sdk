@@ -4,12 +4,21 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class BandwidthPackageAddAcceleratorResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the GA instance.</p>
+     */
     @NameInMap("Accelerators")
     public java.util.List<String> accelerators;
 
+    /**
+     * <p>The ID of the bandwidth plan.</p>
+     */
     @NameInMap("BandwidthPackageId")
     public String bandwidthPackageId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

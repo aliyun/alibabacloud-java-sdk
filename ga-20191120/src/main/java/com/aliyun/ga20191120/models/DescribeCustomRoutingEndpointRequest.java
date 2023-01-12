@@ -4,15 +4,32 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class DescribeCustomRoutingEndpointRequest extends TeaModel {
+    @NameInMap("EndpointGroup")
+    public String endpointGroup;
+
+    /**
+     * <p>The ID of the endpoint.</p>
+     */
     @NameInMap("EndpointId")
     public String endpointId;
 
+    /**
+     * <p>The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to **cn-hangzhou**.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     public static DescribeCustomRoutingEndpointRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCustomRoutingEndpointRequest self = new DescribeCustomRoutingEndpointRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeCustomRoutingEndpointRequest setEndpointGroup(String endpointGroup) {
+        this.endpointGroup = endpointGroup;
+        return this;
+    }
+    public String getEndpointGroup() {
+        return this.endpointGroup;
     }
 
     public DescribeCustomRoutingEndpointRequest setEndpointId(String endpointId) {

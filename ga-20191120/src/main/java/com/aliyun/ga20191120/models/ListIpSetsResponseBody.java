@@ -4,18 +4,33 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class ListIpSetsResponseBody extends TeaModel {
+    /**
+     * <p>Details of the acceleration region.</p>
+     */
     @NameInMap("IpSets")
     public java.util.List<ListIpSetsResponseBodyIpSets> ipSets;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,24 +80,50 @@ public class ListIpSetsResponseBody extends TeaModel {
     }
 
     public static class ListIpSetsResponseBodyIpSets extends TeaModel {
+        /**
+         * <p>The ID of the region that is accelerated.</p>
+         */
         @NameInMap("AccelerateRegionId")
         public String accelerateRegionId;
 
+        /**
+         * <p>The bandwidth that is allocated to the acceleration region. Unit: **Mbit/s**.</p>
+         */
         @NameInMap("Bandwidth")
         public Integer bandwidth;
 
+        /**
+         * <p>The list of accelerated IP addresses in the acceleration region.</p>
+         */
         @NameInMap("IpAddressList")
         public java.util.List<String> ipAddressList;
 
+        /**
+         * <p>The ID of the acceleration region.</p>
+         */
         @NameInMap("IpSetId")
         public String ipSetId;
 
+        /**
+         * <p>The version of the accelerated IP address. Valid values:</p>
+         * <br>
+         * <p>*   **IPv4**</p>
+         * <p>*   **IPv6**</p>
+         */
         @NameInMap("IpVersion")
         public String ipVersion;
 
         @NameInMap("IspType")
         public String ispType;
 
+        /**
+         * <p>The status of the acceleration region. Valid values:</p>
+         * <br>
+         * <p>*   **init**: The acceleration region is being initialized.</p>
+         * <p>*   **active**: The acceleration region is in the running state.</p>
+         * <p>*   **updating**: The acceleration region is being configured.</p>
+         * <p>*   **Deleting**: The acceleration region is being deleted.</p>
+         */
         @NameInMap("State")
         public String state;
 

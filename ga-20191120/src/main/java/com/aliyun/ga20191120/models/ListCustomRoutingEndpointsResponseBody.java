@@ -4,18 +4,33 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class ListCustomRoutingEndpointsResponseBody extends TeaModel {
+    /**
+     * <p>Details about the endpoints.</p>
+     */
     @NameInMap("Endpoints")
     public java.util.List<ListCustomRoutingEndpointsResponseBodyEndpoints> endpoints;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,24 +80,51 @@ public class ListCustomRoutingEndpointsResponseBody extends TeaModel {
     }
 
     public static class ListCustomRoutingEndpointsResponseBodyEndpoints extends TeaModel {
+        /**
+         * <p>The ID of the GA instance with which the endpoint is associated.</p>
+         */
         @NameInMap("AcceleratorId")
         public String acceleratorId;
 
+        /**
+         * <p>The name of the endpoint (vSwitch).</p>
+         */
         @NameInMap("Endpoint")
         public String endpoint;
 
+        /**
+         * <p>The ID of the endpoint group to which the endpoint belongs.</p>
+         */
         @NameInMap("EndpointGroupId")
         public String endpointGroupId;
 
+        /**
+         * <p>The ID of the endpoint.</p>
+         */
         @NameInMap("EndpointId")
         public String endpointId;
 
+        /**
+         * <p>The ID of the listener with which the endpoint is associated.</p>
+         */
         @NameInMap("ListenerId")
         public String listenerId;
 
+        /**
+         * <p>The access policy of traffic for the specified endpoint. Valid values:</p>
+         * <br>
+         * <p>*   **AllowAll**: allows all traffic to the endpoint.</p>
+         * <p>*   **DenyAll**: denies all traffic to the endpoint.</p>
+         * <p>*   **AllowCustom**: allows traffic only to specified destinations.</p>
+         */
         @NameInMap("TrafficToEndpointPolicy")
         public String trafficToEndpointPolicy;
 
+        /**
+         * <p>The backend service type of the endpoint.</p>
+         * <br>
+         * <p>Set the value to **PrivateSubNet**, which indicates private CIDR blocks.</p>
+         */
         @NameInMap("Type")
         public String type;
 

@@ -4,18 +4,33 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class ListEndpointGroupsResponseBody extends TeaModel {
+    /**
+     * <p>The configurations of the endpoint group.</p>
+     */
     @NameInMap("EndpointGroups")
     public java.util.List<ListEndpointGroupsResponseBodyEndpointGroups> endpointGroups;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,24 +80,59 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
     }
 
     public static class ListEndpointGroupsResponseBodyEndpointGroupsEndpointConfigurations extends TeaModel {
+        /**
+         * <p>Indicates whether the client IP address preservation feature is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **true**: The client IP address preservation feature is enabled.</p>
+         * <p>*   **false**: The client IP address preservation feature is disabled.</p>
+         */
         @NameInMap("EnableClientIPPreservation")
         public Boolean enableClientIPPreservation;
 
+        /**
+         * <p>The IP address or domain name of the endpoint.</p>
+         */
         @NameInMap("Endpoint")
         public String endpoint;
 
+        /**
+         * <p>The ID of the endpoint.</p>
+         */
         @NameInMap("EndpointId")
         public String endpointId;
 
+        /**
+         * <p>The port that is used to monitor latency.</p>
+         */
         @NameInMap("ProbePort")
         public Integer probePort;
 
+        /**
+         * <p>The protocol that is used to monitor latency. Valid values:</p>
+         * <br>
+         * <p>*   **icmp**: ICMP</p>
+         * <p>*   **tcp**: TCP</p>
+         */
         @NameInMap("ProbeProtocol")
         public String probeProtocol;
 
+        /**
+         * <p>The type of the endpoint. Valid values:</p>
+         * <br>
+         * <p>*   **Domain**: a custom domain name</p>
+         * <p>*   **Ip**: a custom IP address</p>
+         * <p>*   **PublicIp**: a public IP address provided by Alibaba Cloud</p>
+         * <p>*   **ECS**: an Elastic Compute Service (ECS) instance</p>
+         * <p>*   **SLB**: a Server Load Balancer (SLB) instance</p>
+         * <p>*   **ALB**: an Application Load Balancer (ALB) instance</p>
+         * <p>*   **OSS**: an Object Storage Service (OSS) bucket</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The weight of the endpoint.</p>
+         */
         @NameInMap("Weight")
         public Integer weight;
 
@@ -150,9 +200,15 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
     }
 
     public static class ListEndpointGroupsResponseBodyEndpointGroupsPortOverrides extends TeaModel {
+        /**
+         * <p>The endpoint port.</p>
+         */
         @NameInMap("EndpointPort")
         public Integer endpointPort;
 
+        /**
+         * <p>The listener port.</p>
+         */
         @NameInMap("ListenerPort")
         public Integer listenerPort;
 
@@ -210,69 +266,150 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
     }
 
     public static class ListEndpointGroupsResponseBodyEndpointGroups extends TeaModel {
+        /**
+         * <p>The ID of the GA instance.</p>
+         */
         @NameInMap("AcceleratorId")
         public String acceleratorId;
 
+        /**
+         * <p>The description of the endpoint group.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The configurations of the endpoint.</p>
+         */
         @NameInMap("EndpointConfigurations")
         public java.util.List<ListEndpointGroupsResponseBodyEndpointGroupsEndpointConfigurations> endpointConfigurations;
 
+        /**
+         * <p>The ID of an endpoint group.</p>
+         */
         @NameInMap("EndpointGroupId")
         public String endpointGroupId;
 
+        /**
+         * <p>The list of endpoint group IP addresses.</p>
+         */
         @NameInMap("EndpointGroupIpList")
         public java.util.List<String> endpointGroupIpList;
 
+        /**
+         * <p>The ID of the region where the endpoint group is deployed.</p>
+         */
         @NameInMap("EndpointGroupRegion")
         public String endpointGroupRegion;
 
+        /**
+         * <p>The type of the endpoint group. Valid values:</p>
+         * <br>
+         * <p>*   **default**: a default endpoint group</p>
+         * <p>*   **virtual**: a virtual endpoint group</p>
+         */
         @NameInMap("EndpointGroupType")
         public String endpointGroupType;
 
+        /**
+         * <p>The endpoint group IP addresses to be confirmed after the GA instance is upgraded.</p>
+         */
         @NameInMap("EndpointGroupUnconfirmedIpList")
         public java.util.List<String> endpointGroupUnconfirmedIpList;
 
+        /**
+         * <p>The protocol that is used by the backend service. Valid values:</p>
+         * <br>
+         * <p>*   **HTTP**: HTTP</p>
+         * <p>*   **HTTPS**: HTTPS</p>
+         */
         @NameInMap("EndpointRequestProtocol")
         public String endpointRequestProtocol;
 
+        /**
+         * <p>The ID of the forwarding rule that is associated with the endpoint group.</p>
+         */
         @NameInMap("ForwardingRuleIds")
         public java.util.List<String> forwardingRuleIds;
 
+        /**
+         * <p>Indicates whether the health check feature is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **true**: The health check feature is enabled.</p>
+         * <p>*   **false**: The health check feature is disabled.</p>
+         */
         @NameInMap("HealthCheckEnabled")
         public Boolean healthCheckEnabled;
 
+        /**
+         * <p>The interval at which health checks are performed. Unit: seconds.</p>
+         */
         @NameInMap("HealthCheckIntervalSeconds")
         public Integer healthCheckIntervalSeconds;
 
+        /**
+         * <p>The path to which health check requests are sent.</p>
+         */
         @NameInMap("HealthCheckPath")
         public String healthCheckPath;
 
+        /**
+         * <p>The port that is used for health checks.</p>
+         */
         @NameInMap("HealthCheckPort")
         public Integer healthCheckPort;
 
+        /**
+         * <p>The protocol over which health check requests are sent. Valid values:</p>
+         * <br>
+         * <p>*   **tcp**: TCP</p>
+         * <p>*   **http**: HTTP</p>
+         * <p>*   **https**: HTTPS</p>
+         */
         @NameInMap("HealthCheckProtocol")
         public String healthCheckProtocol;
 
+        /**
+         * <p>The ID of the listener.</p>
+         */
         @NameInMap("ListenerId")
         public String listenerId;
 
+        /**
+         * <p>The name of the endpoint group.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The mappings between ports.</p>
+         */
         @NameInMap("PortOverrides")
         public java.util.List<ListEndpointGroupsResponseBodyEndpointGroupsPortOverrides> portOverrides;
 
+        /**
+         * <p>The state of the endpoint group. Valid values:</p>
+         * <br>
+         * <p>*   **init**: The endpoint group is being initialized.</p>
+         * <p>*   **active**: The endpoint group is running normally.</p>
+         * <p>*   **updating**:The endpoint group is being updated.</p>
+         * <p>*   **deleteing**: The endpoint group is being deleted.</p>
+         */
         @NameInMap("State")
         public String state;
 
         @NameInMap("Tags")
         public java.util.List<ListEndpointGroupsResponseBodyEndpointGroupsTags> tags;
 
+        /**
+         * <p>The number of consecutive failed health checks that must occur before an endpoint is considered unhealthy.</p>
+         */
         @NameInMap("ThresholdCount")
         public Integer thresholdCount;
 
+        /**
+         * <p>The weight of the endpoint group when the listener is associated with multiple endpoint groups.</p>
+         */
         @NameInMap("TrafficPercentage")
         public Integer trafficPercentage;
 

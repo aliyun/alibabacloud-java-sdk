@@ -4,18 +4,36 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class ListAclsResponseBody extends TeaModel {
+    /**
+     * <p>The network ACLs.</p>
+     */
     @NameInMap("Acls")
     public java.util.List<ListAclsResponseBodyAcls> acls;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token that determines the start point of the next query. Valid values:</p>
+     * <br>
+     * <p>*   If **NextToken** was not returned, it indicates that no additional results exist.</p>
+     * <p>*   If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -95,15 +113,36 @@ public class ListAclsResponseBody extends TeaModel {
     }
 
     public static class ListAclsResponseBodyAcls extends TeaModel {
+        /**
+         * <p>The ID of the network ACL.</p>
+         */
         @NameInMap("AclId")
         public String aclId;
 
+        /**
+         * <p>The name of the network ACL.</p>
+         */
         @NameInMap("AclName")
         public String aclName;
 
+        /**
+         * <p>The state of the network ACL. Valid values:</p>
+         * <br>
+         * <p>*   **init**: The network ACL is being initialized.</p>
+         * <p>*   **active**: The network ACL is available.</p>
+         * <p>*   **configuring**: The network ACL is being configured.</p>
+         * <p>*   **updating**: The network ACL is being updated.</p>
+         * <p>*   **deleting**: The GA instance is being deleted.</p>
+         */
         @NameInMap("AclStatus")
         public String aclStatus;
 
+        /**
+         * <p>The IP version of the network ACL. Valid values:</p>
+         * <br>
+         * <p>*   **IPv4**</p>
+         * <p>*   **IPv6**</p>
+         */
         @NameInMap("AddressIPVersion")
         public String addressIPVersion;
 

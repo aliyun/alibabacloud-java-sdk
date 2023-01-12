@@ -4,18 +4,33 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class ListBasicAcceleratorsResponseBody extends TeaModel {
+    /**
+     * <p>The information about basic GA instances.</p>
+     */
     @NameInMap("Accelerators")
     public java.util.List<ListBasicAcceleratorsResponseBodyAccelerators> accelerators;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned on each page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of basic GA instances returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,12 +80,25 @@ public class ListBasicAcceleratorsResponseBody extends TeaModel {
     }
 
     public static class ListBasicAcceleratorsResponseBodyAcceleratorsBasicBandwidthPackage extends TeaModel {
+        /**
+         * <p>The bandwidth value of the basic bandwidth plan. Unit: Mbit/s.</p>
+         */
         @NameInMap("Bandwidth")
         public Integer bandwidth;
 
+        /**
+         * <p>The type of the bandwidth that is provided by the basic bandwidth plan. Valid values:</p>
+         * <br>
+         * <p>*   **Basic**: basic</p>
+         * <p>*   **Enhanced**: enhanced</p>
+         * <p>*   **Advanced**: premium</p>
+         */
         @NameInMap("BandwidthType")
         public String bandwidthType;
 
+        /**
+         * <p>The ID of the basic bandwidth plan.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
@@ -106,9 +134,15 @@ public class ListBasicAcceleratorsResponseBody extends TeaModel {
     }
 
     public static class ListBasicAcceleratorsResponseBodyAcceleratorsCrossDomainBandwidthPackage extends TeaModel {
+        /**
+         * <p>The bandwidth value of the cross-region acceleration bandwidth plan. Unit: Mbit/s.</p>
+         */
         @NameInMap("Bandwidth")
         public Integer bandwidth;
 
+        /**
+         * <p>The ID of the cross-region acceleration bandwidth plan.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
@@ -166,51 +200,100 @@ public class ListBasicAcceleratorsResponseBody extends TeaModel {
     }
 
     public static class ListBasicAcceleratorsResponseBodyAccelerators extends TeaModel {
+        /**
+         * <p>The ID of the basic GA instance.</p>
+         */
         @NameInMap("AcceleratorId")
         public String acceleratorId;
 
         @NameInMap("BandwidthBillingType")
         public String bandwidthBillingType;
 
+        /**
+         * <p>The details about the basic bandwidth plan that is associated with the basic GA instance.</p>
+         */
         @NameInMap("BasicBandwidthPackage")
         public ListBasicAcceleratorsResponseBodyAcceleratorsBasicBandwidthPackage basicBandwidthPackage;
 
+        /**
+         * <p>The ID of the endpoint group that is associated with the basic GA instance.</p>
+         */
         @NameInMap("BasicEndpointGroupId")
         public String basicEndpointGroupId;
 
+        /**
+         * <p>The ID of the acceleration region.</p>
+         */
         @NameInMap("BasicIpSetId")
         public String basicIpSetId;
 
+        /**
+         * <p>The timestamp that indicates when the basic GA instance was created.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The details about the cross-region acceleration bandwidth plan that is associated with the GA instance.</p>
+         * <br>
+         * <p>This array is returned only for GA instances that are created on the International site (alibabacloud.com).</p>
+         */
         @NameInMap("CrossDomainBandwidthPackage")
         public ListBasicAcceleratorsResponseBodyAcceleratorsCrossDomainBandwidthPackage crossDomainBandwidthPackage;
 
+        /**
+         * <p>The description of the basic GA instance.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The timestamp that indicates when the basic GA instance expires.</p>
+         */
         @NameInMap("ExpiredTime")
         public Long expiredTime;
 
+        /**
+         * <p>The billing method of the basic GA instance. Only **PREPAY** is returned, which indicates the subscription billing method.</p>
+         */
         @NameInMap("InstanceChargeType")
         public String instanceChargeType;
 
+        /**
+         * <p>The name of the basic GA instance.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The ID of the region where the basic GA instance is deployed.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The status of the basic GA instance. Valid values:</p>
+         * <br>
+         * <p>*   **init**: initializing</p>
+         * <p>*   **active**: available</p>
+         * <p>*   **configuring**: being configured</p>
+         * <p>*   **binding**: being associated</p>
+         * <p>*   **unbinding**: being disassociated</p>
+         * <p>*   **Deleting**: being deleted</p>
+         * <p>*   **finacialLocked**: locked due to overdue payments</p>
+         */
         @NameInMap("State")
         public String state;
 
         @NameInMap("Tags")
         public java.util.List<ListBasicAcceleratorsResponseBodyAcceleratorsTags> tags;
 
+        /**
+         * <p>Ignore this parameter.</p>
+         */
         @NameInMap("Type")
         public String type;
 

@@ -4,18 +4,36 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class ListListenerCertificatesResponseBody extends TeaModel {
+    /**
+     * <p>Details about the certificates.</p>
+     */
     @NameInMap("Certificates")
     public java.util.List<ListListenerCertificatesResponseBodyCertificates> certificates;
 
+    /**
+     * <p>The maximum number of entries returned.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token that determines the start point of the next query. Valid values:</p>
+     * <br>
+     * <p>*   If **NextToken** is not returned, it indicates that no additional results exist.</p>
+     * <p>*   If **NextToken** is returned, the value is the token that is used for the next query.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,15 +83,35 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
     }
 
     public static class ListListenerCertificatesResponseBodyCertificates extends TeaModel {
+        /**
+         * <p>The ID of the certificate.</p>
+         */
         @NameInMap("CertificateId")
         public String certificateId;
 
+        /**
+         * <p>The domain name associated with the additional certificate.</p>
+         * <br>
+         * <p>This parameter is not returned if the certificate is a default one.</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>Indicates whether the certificate is a default one:</p>
+         * <br>
+         * <p>*   **true**: a default certificate</p>
+         * <p>*   **false**: an additional certificate</p>
+         */
         @NameInMap("IsDefault")
         public Boolean isDefault;
 
+        /**
+         * <p>The state of the certificate.</p>
+         * <br>
+         * <p>*   **active**: The certificate is associated with a listener and takes effect.</p>
+         * <p>*   **updating**: The additional certificate is being replaced.</p>
+         */
         @NameInMap("State")
         public String state;
 

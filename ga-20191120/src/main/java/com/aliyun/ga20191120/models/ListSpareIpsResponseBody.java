@@ -4,9 +4,15 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class ListSpareIpsResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The secondary IP addresses that are associated with the CNAME.</p>
+     */
     @NameInMap("SpareIps")
     public java.util.List<ListSpareIpsResponseBodySpareIps> spareIps;
 
@@ -32,9 +38,18 @@ public class ListSpareIpsResponseBody extends TeaModel {
     }
 
     public static class ListSpareIpsResponseBodySpareIps extends TeaModel {
+        /**
+         * <p>The secondary IP address that is associated with the CNAME. If the acceleration area becomes unavailable, GA redirects traffic to the secondary IP address.</p>
+         */
         @NameInMap("SpareIp")
         public String spareIp;
 
+        /**
+         * <p>The status of the secondary IP address. Valid values:</p>
+         * <br>
+         * <p>*   **active**: The secondary IP address is available.</p>
+         * <p>*   **inuse**: The secondary IP address is in use.</p>
+         */
         @NameInMap("State")
         public String state;
 

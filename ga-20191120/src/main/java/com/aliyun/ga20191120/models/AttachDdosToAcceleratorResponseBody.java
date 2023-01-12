@@ -4,12 +4,21 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class AttachDdosToAcceleratorResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the Anti-DDoS Pro/Premium instance that is associated with the GA instance.</p>
+     */
     @NameInMap("DdosId")
     public String ddosId;
 
+    /**
+     * <p>The ID of the GA instance that is associated with the Anti-DDoS Pro/Premium instance.</p>
+     */
     @NameInMap("GaId")
     public String gaId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

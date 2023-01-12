@@ -4,21 +4,44 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class ListBasicAcceleratorsRequest extends TeaModel {
+    /**
+     * <p>The ID of the basic GA instance.</p>
+     */
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
+    /**
+     * <p>The page number of the page to return. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Maximum value: **50**. Default value: **10**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the region where the basic GA instance is deployed. Set the value to **cn-hangzhou**.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The status of the basic GA instance. Valid values:</p>
+     * <br>
+     * <p>*   **init**: initializing</p>
+     * <p>*   **active**: available</p>
+     * <p>*   **configuring**: being configured</p>
+     * <p>*   **binding**: being associated</p>
+     * <p>*   **unbinding**: being disassociated</p>
+     * <p>*   **Deleting**: being deleted</p>
+     * <p>*   **finacialLocked**: locked due to overdue payments</p>
+     */
     @NameInMap("State")
     public String state;
 

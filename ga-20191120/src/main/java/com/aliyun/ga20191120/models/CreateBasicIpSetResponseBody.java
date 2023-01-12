@@ -4,9 +4,15 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class CreateBasicIpSetResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the acceleration region of the basic GA instance.</p>
+     */
     @NameInMap("IpSetId")
     public String ipSetId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

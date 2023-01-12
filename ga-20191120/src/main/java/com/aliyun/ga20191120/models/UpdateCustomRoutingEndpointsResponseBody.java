@@ -4,9 +4,15 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class UpdateCustomRoutingEndpointsResponseBody extends TeaModel {
+    /**
+     * <p>The IDs of the endpoints.</p>
+     */
     @NameInMap("EndpointIds")
     public java.util.List<String> endpointIds;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

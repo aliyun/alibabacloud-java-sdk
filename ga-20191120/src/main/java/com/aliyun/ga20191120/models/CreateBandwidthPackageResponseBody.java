@@ -4,12 +4,23 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class CreateBandwidthPackageResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the bandwidth plan.</p>
+     */
     @NameInMap("BandwidthPackageId")
     public String bandwidthPackageId;
 
+    /**
+     * <p>The ID of the order.</p>
+     * <br>
+     * <p>If bills are not automatically paid, you must go to the Order Center to complete the payments.</p>
+     */
     @NameInMap("OrderId")
     public String orderId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

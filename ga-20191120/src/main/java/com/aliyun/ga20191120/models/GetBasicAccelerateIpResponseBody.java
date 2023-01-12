@@ -4,21 +4,47 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class GetBasicAccelerateIpResponseBody extends TeaModel {
+    /**
+     * <p>The accelerated IP address.</p>
+     */
     @NameInMap("AccelerateIpAddress")
     public String accelerateIpAddress;
 
+    /**
+     * <p>The ID of the accelerated IP address.</p>
+     */
     @NameInMap("AccelerateIpId")
     public String accelerateIpId;
 
+    /**
+     * <p>The ID of the basic GA instance to which the queried accelerated IP address belongs.</p>
+     */
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
+    /**
+     * <p>The ID of the acceleration region of the basic GA instance.</p>
+     */
     @NameInMap("IpSetId")
     public String ipSetId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The status of the accelerated IP address. Valid values:</p>
+     * <br>
+     * <p>*   **active**: The accelerated IP address is available.</p>
+     * <p>*   **binding**: The accelerated IP address is being associated.</p>
+     * <p>*   **bound**: The accelerated IP address is associated.</p>
+     * <p>*   **unbinding**: The basic GA instance is being disassociated.</p>
+     * <p>*   **deleting**: The accelerated IP address is being deleted.</p>
+     * <br>
+     * <p>>  This parameter is not returned when the queried accelerated IP address is being created.</p>
+     */
     @NameInMap("State")
     public String state;
 

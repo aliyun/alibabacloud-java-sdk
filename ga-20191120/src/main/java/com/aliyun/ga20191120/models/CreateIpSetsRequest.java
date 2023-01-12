@@ -7,12 +7,25 @@ public class CreateIpSetsRequest extends TeaModel {
     @NameInMap("AccelerateRegion")
     public java.util.List<CreateIpSetsRequestAccelerateRegion> accelerateRegion;
 
+    /**
+     * <p>The ID of the GA instance.</p>
+     */
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.</p>
+     * <br>
+     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -54,12 +67,30 @@ public class CreateIpSetsRequest extends TeaModel {
     }
 
     public static class CreateIpSetsRequestAccelerateRegion extends TeaModel {
+        /**
+         * <p>The ID of the region that requires acceleration.</p>
+         * <br>
+         * <p>The number of regions that can be added varies based on the specification of the GA instance. For more information, see [Overview](~~153127~~).</p>
+         */
         @NameInMap("AccelerateRegionId")
         public String accelerateRegionId;
 
+        /**
+         * <p>The bandwidth to be allocated to the acceleration region. Unit: **Mbit/s**.</p>
+         * <br>
+         * <p>> </p>
+         * <p>*   Each acceleration region must be allocated a minimum of 2 Mbit/s of bandwidth.</p>
+         * <p>*   The total bandwidth for all acceleration regions cannot exceed the bandwidth limit of your basic bandwidth plan.</p>
+         */
         @NameInMap("Bandwidth")
         public Integer bandwidth;
 
+        /**
+         * <p>The IP version used to connect to the GA instance. Valid values:</p>
+         * <br>
+         * <p>*   **IPv4** (default): IPv4</p>
+         * <p>*   **IPv6**: IPv6</p>
+         */
         @NameInMap("IpVersion")
         public String ipVersion;
 
