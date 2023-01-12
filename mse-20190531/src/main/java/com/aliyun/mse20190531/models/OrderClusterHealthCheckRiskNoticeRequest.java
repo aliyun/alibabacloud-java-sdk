@@ -4,24 +4,51 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class OrderClusterHealthCheckRiskNoticeRequest extends TeaModel {
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>Specifies whether to disable the risk item notification feature.</p>
+     * <br>
+     * <p>*   true: disabled</p>
+     * <p>*   false: enabled</p>
+     */
     @NameInMap("Mute")
     public Boolean mute;
 
+    /**
+     * <p>A reserved parameter.</p>
+     */
     @NameInMap("NoticeType")
     public String noticeType;
 
+    /**
+     * <p>The region in which the cluster resides.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The extended request parameters in the JSON format.</p>
+     */
     @NameInMap("RequestPars")
     public String requestPars;
 
+    /**
+     * <p>The code of the risk.</p>
+     */
     @NameInMap("RiskCode")
     public String riskCode;
 

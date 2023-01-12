@@ -4,30 +4,60 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListMigrationTaskResponseBody extends TeaModel {
+    /**
+     * <p>The array structure.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListMigrationTaskResponseBodyData> data;
 
+    /**
+     * <p>The error code returned if the request failed.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpCode")
     public String httpCode;
 
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request was successful.</p>
+     * <p>*   `false`: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -109,39 +139,79 @@ public class ListMigrationTaskResponseBody extends TeaModel {
     }
 
     public static class ListMigrationTaskResponseBodyData extends TeaModel {
+        /**
+         * <p>The type of the instance.</p>
+         * <br>
+         * <p>*   Nacos-Ans</p>
+         * <p>*   ZooKeeper</p>
+         * <p>*   Eureka</p>
+         */
         @NameInMap("ClusterType")
         public String clusterType;
 
+        /**
+         * <p>The creation time.</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>The update time.</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>The ID of the task.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The source instance node address.</p>
+         */
         @NameInMap("OriginInstanceAddress")
         public String originInstanceAddress;
 
+        /**
+         * <p>The name of the source instance.</p>
+         */
         @NameInMap("OriginInstanceName")
         public String originInstanceName;
 
+        /**
+         * <p>The list of namespaces. This parameter is optional if the source instance is a Nacos instance.</p>
+         */
         @NameInMap("OriginInstanceNamespace")
         public String originInstanceNamespace;
 
+        /**
+         * <p>The description.</p>
+         */
         @NameInMap("ProjectDesc")
         public String projectDesc;
 
+        /**
+         * <p>The name of the destination instance.</p>
+         */
         @NameInMap("TargetClusterName")
         public String targetClusterName;
 
+        /**
+         * <p>The URL of the destination instance.</p>
+         */
         @NameInMap("TargetClusterUrl")
         public String targetClusterUrl;
 
+        /**
+         * <p>The ID of the destination instance.</p>
+         */
         @NameInMap("TargetInstanceId")
         public String targetInstanceId;
 
+        /**
+         * <p>The ID of the user.</p>
+         */
         @NameInMap("UserId")
         public String userId;
 

@@ -34,10 +34,10 @@ public class UpdateConfigRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable RAM authorization for a configuration center. This parameter is valid for Nacos instances. Valid values:</p>
      * <br>
-     * <p>*   `true`: yes</p>
-     * <p>*   `false`: no</p>
+     * <p>*   `true`: enabled</p>
+     * <p>*   `false`: disabled</p>
      * <br>
-     * <p>> Before you set this parameter, you must call the QueryConfig operation to obtain the ConfigAuthSupported parameter value to check whether the instance supports this feature.</p>
+     * <p>> Before you configure this parameter, you must call the QueryConfig operation to obtain the ConfigAuthSupported parameter value to check whether the instance supports this feature.</p>
      */
     @NameInMap("ConfigAuthEnabled")
     public Boolean configAuthEnabled;
@@ -45,10 +45,10 @@ public class UpdateConfigRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable configuration encryption for a configuration center. This parameter is valid for Nacos instances. Valid values:</p>
      * <br>
-     * <p>*   `true`: yes</p>
-     * <p>*   `false`: no</p>
+     * <p>*   `true`: enabled</p>
+     * <p>*   `false`: disabled</p>
      * <br>
-     * <p>> Before you set this parameter, you must call the QueryConfig operation to obtain the ConfigSecretSupported parameter value to check whether the instance supports this feature.</p>
+     * <p>> Before you configure this parameter, you must call the QueryConfig operation to obtain the ConfigSecretSupported parameter value to check whether the instance supports this feature.</p>
      */
     @NameInMap("ConfigSecretEnabled")
     public Boolean configSecretEnabled;
@@ -60,7 +60,7 @@ public class UpdateConfigRequest extends TeaModel {
     public String configType;
 
     /**
-     * <p>zookeeper参数，是否开启TTL配置。</p>
+     * <p>Specifies whether to enable the time to live (TTL) configuration.</p>
      */
     @NameInMap("ExtendedTypesEnable")
     public String extendedTypesEnable;
@@ -86,10 +86,10 @@ public class UpdateConfigRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable Mesh Configuration Protocol (MCP). This parameter is valid for Nacos instances. Valid values:</p>
      * <br>
-     * <p>*   `true`: yes</p>
-     * <p>*   `false`: no</p>
+     * <p>*   `true`: enabled</p>
+     * <p>*   `false`: disabled</p>
      * <br>
-     * <p>> Before you set this parameter, you must call the QueryConfig operation to obtain the MCPSupported parameter value to check whether the instance supports this feature.</p>
+     * <p>> Before you configure this parameter, you must call the QueryConfig operation to obtain the MCPSupported parameter value to check whether the instance supports this feature.</p>
      */
     @NameInMap("MCPEnabled")
     public Boolean MCPEnabled;
@@ -116,10 +116,10 @@ public class UpdateConfigRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable RAM authorization for a registry. This parameter is valid for Nacos instances. Valid values:</p>
      * <br>
-     * <p>*   `true`: yes</p>
-     * <p>*   `false`: no</p>
+     * <p>*   `true`: enabled</p>
+     * <p>*   `false`: disabled</p>
      * <br>
-     * <p>> Before you set this parameter, you must call the QueryConfig operation to obtain the NamingAuthSupported parameter value to check whether the instance supports this feature.</p>
+     * <p>> Before you configure this parameter, you must call the QueryConfig operation to obtain the NamingAuthSupporte parameter value to check whether the instance supports this feature.</p>
      */
     @NameInMap("NamingAuthEnabled")
     public Boolean namingAuthEnabled;
@@ -127,8 +127,8 @@ public class UpdateConfigRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable super permissions. This parameter is valid for ZooKeeper instances. Valid values:</p>
      * <br>
-     * <p>*   `true`: yes</p>
-     * <p>*   `false`: no</p>
+     * <p>*   `true`: enabled</p>
+     * <p>*   `false`: disabled</p>
      */
     @NameInMap("OpenSuperAcl")
     public String openSuperAcl;
@@ -166,7 +166,7 @@ public class UpdateConfigRequest extends TeaModel {
     public String tickTime;
 
     /**
-     * <p>The username.</p>
+     * <p>The name of the user.</p>
      * <br>
      * <p>> You must specify this parameter if OpenSuperAcl is set to true.</p>
      */

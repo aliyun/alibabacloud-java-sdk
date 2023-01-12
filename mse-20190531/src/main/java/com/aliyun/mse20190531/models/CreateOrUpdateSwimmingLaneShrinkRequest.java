@@ -3,7 +3,7 @@ package com.aliyun.mse20190531.models;
 
 import com.aliyun.tea.*;
 
-public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
+public class CreateOrUpdateSwimmingLaneShrinkRequest extends TeaModel {
     /**
      * <p>The language that the value of the **LocalName** response parameter uses. Valid values:</p>
      * <br>
@@ -37,10 +37,10 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
      * <p>The lane.</p>
      */
     @NameInMap("EntryRules")
-    public java.util.List<CreateOrUpdateSwimmingLaneRequestEntryRules> entryRules;
+    public java.util.List<CreateOrUpdateSwimmingLaneShrinkRequestEntryRules> entryRules;
 
     @NameInMap("GatewaySwimmingLaneRouteJson")
-    public CreateOrUpdateSwimmingLaneRequestGatewaySwimmingLaneRouteJson gatewaySwimmingLaneRouteJson;
+    public String gatewaySwimmingLaneRouteJsonShrink;
 
     /**
      * <p>Optional. The time when the lane was created.</p>
@@ -108,12 +108,12 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
     @NameInMap("UserId")
     public String userId;
 
-    public static CreateOrUpdateSwimmingLaneRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateOrUpdateSwimmingLaneRequest self = new CreateOrUpdateSwimmingLaneRequest();
+    public static CreateOrUpdateSwimmingLaneShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateOrUpdateSwimmingLaneShrinkRequest self = new CreateOrUpdateSwimmingLaneShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateOrUpdateSwimmingLaneRequest setAcceptLanguage(String acceptLanguage) {
+    public CreateOrUpdateSwimmingLaneShrinkRequest setAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
     }
@@ -121,7 +121,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
         return this.acceptLanguage;
     }
 
-    public CreateOrUpdateSwimmingLaneRequest setEnable(Boolean enable) {
+    public CreateOrUpdateSwimmingLaneShrinkRequest setEnable(Boolean enable) {
         this.enable = enable;
         return this;
     }
@@ -129,7 +129,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
         return this.enable;
     }
 
-    public CreateOrUpdateSwimmingLaneRequest setEnableRules(Boolean enableRules) {
+    public CreateOrUpdateSwimmingLaneShrinkRequest setEnableRules(Boolean enableRules) {
         this.enableRules = enableRules;
         return this;
     }
@@ -137,7 +137,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
         return this.enableRules;
     }
 
-    public CreateOrUpdateSwimmingLaneRequest setEntryRule(String entryRule) {
+    public CreateOrUpdateSwimmingLaneShrinkRequest setEntryRule(String entryRule) {
         this.entryRule = entryRule;
         return this;
     }
@@ -145,23 +145,23 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
         return this.entryRule;
     }
 
-    public CreateOrUpdateSwimmingLaneRequest setEntryRules(java.util.List<CreateOrUpdateSwimmingLaneRequestEntryRules> entryRules) {
+    public CreateOrUpdateSwimmingLaneShrinkRequest setEntryRules(java.util.List<CreateOrUpdateSwimmingLaneShrinkRequestEntryRules> entryRules) {
         this.entryRules = entryRules;
         return this;
     }
-    public java.util.List<CreateOrUpdateSwimmingLaneRequestEntryRules> getEntryRules() {
+    public java.util.List<CreateOrUpdateSwimmingLaneShrinkRequestEntryRules> getEntryRules() {
         return this.entryRules;
     }
 
-    public CreateOrUpdateSwimmingLaneRequest setGatewaySwimmingLaneRouteJson(CreateOrUpdateSwimmingLaneRequestGatewaySwimmingLaneRouteJson gatewaySwimmingLaneRouteJson) {
-        this.gatewaySwimmingLaneRouteJson = gatewaySwimmingLaneRouteJson;
+    public CreateOrUpdateSwimmingLaneShrinkRequest setGatewaySwimmingLaneRouteJsonShrink(String gatewaySwimmingLaneRouteJsonShrink) {
+        this.gatewaySwimmingLaneRouteJsonShrink = gatewaySwimmingLaneRouteJsonShrink;
         return this;
     }
-    public CreateOrUpdateSwimmingLaneRequestGatewaySwimmingLaneRouteJson getGatewaySwimmingLaneRouteJson() {
-        return this.gatewaySwimmingLaneRouteJson;
+    public String getGatewaySwimmingLaneRouteJsonShrink() {
+        return this.gatewaySwimmingLaneRouteJsonShrink;
     }
 
-    public CreateOrUpdateSwimmingLaneRequest setGmtCreate(String gmtCreate) {
+    public CreateOrUpdateSwimmingLaneShrinkRequest setGmtCreate(String gmtCreate) {
         this.gmtCreate = gmtCreate;
         return this;
     }
@@ -169,7 +169,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
         return this.gmtCreate;
     }
 
-    public CreateOrUpdateSwimmingLaneRequest setGmtModified(String gmtModified) {
+    public CreateOrUpdateSwimmingLaneShrinkRequest setGmtModified(String gmtModified) {
         this.gmtModified = gmtModified;
         return this;
     }
@@ -177,7 +177,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
         return this.gmtModified;
     }
 
-    public CreateOrUpdateSwimmingLaneRequest setGroupId(Long groupId) {
+    public CreateOrUpdateSwimmingLaneShrinkRequest setGroupId(Long groupId) {
         this.groupId = groupId;
         return this;
     }
@@ -185,7 +185,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
         return this.groupId;
     }
 
-    public CreateOrUpdateSwimmingLaneRequest setId(Long id) {
+    public CreateOrUpdateSwimmingLaneShrinkRequest setId(Long id) {
         this.id = id;
         return this;
     }
@@ -193,7 +193,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
         return this.id;
     }
 
-    public CreateOrUpdateSwimmingLaneRequest setLicenseKey(String licenseKey) {
+    public CreateOrUpdateSwimmingLaneShrinkRequest setLicenseKey(String licenseKey) {
         this.licenseKey = licenseKey;
         return this;
     }
@@ -201,7 +201,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
         return this.licenseKey;
     }
 
-    public CreateOrUpdateSwimmingLaneRequest setName(String name) {
+    public CreateOrUpdateSwimmingLaneShrinkRequest setName(String name) {
         this.name = name;
         return this;
     }
@@ -209,7 +209,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
         return this.name;
     }
 
-    public CreateOrUpdateSwimmingLaneRequest setRegionId(String regionId) {
+    public CreateOrUpdateSwimmingLaneShrinkRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -217,7 +217,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
         return this.regionId;
     }
 
-    public CreateOrUpdateSwimmingLaneRequest setSource(String source) {
+    public CreateOrUpdateSwimmingLaneShrinkRequest setSource(String source) {
         this.source = source;
         return this;
     }
@@ -225,7 +225,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
         return this.source;
     }
 
-    public CreateOrUpdateSwimmingLaneRequest setStatus(Integer status) {
+    public CreateOrUpdateSwimmingLaneShrinkRequest setStatus(Integer status) {
         this.status = status;
         return this;
     }
@@ -233,7 +233,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
         return this.status;
     }
 
-    public CreateOrUpdateSwimmingLaneRequest setTag(String tag) {
+    public CreateOrUpdateSwimmingLaneShrinkRequest setTag(String tag) {
         this.tag = tag;
         return this;
     }
@@ -241,7 +241,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
         return this.tag;
     }
 
-    public CreateOrUpdateSwimmingLaneRequest setUserId(String userId) {
+    public CreateOrUpdateSwimmingLaneShrinkRequest setUserId(String userId) {
         this.userId = userId;
         return this;
     }
@@ -249,7 +249,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
         return this.userId;
     }
 
-    public static class CreateOrUpdateSwimmingLaneRequestEntryRulesRestItems extends TeaModel {
+    public static class CreateOrUpdateSwimmingLaneShrinkRequestEntryRulesRestItems extends TeaModel {
         /**
          * <p>The expression. =, >, <, >=, <=</p>
          */
@@ -310,12 +310,12 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
         @NameInMap("Value")
         public String value;
 
-        public static CreateOrUpdateSwimmingLaneRequestEntryRulesRestItems build(java.util.Map<String, ?> map) throws Exception {
-            CreateOrUpdateSwimmingLaneRequestEntryRulesRestItems self = new CreateOrUpdateSwimmingLaneRequestEntryRulesRestItems();
+        public static CreateOrUpdateSwimmingLaneShrinkRequestEntryRulesRestItems build(java.util.Map<String, ?> map) throws Exception {
+            CreateOrUpdateSwimmingLaneShrinkRequestEntryRulesRestItems self = new CreateOrUpdateSwimmingLaneShrinkRequestEntryRulesRestItems();
             return TeaModel.build(map, self);
         }
 
-        public CreateOrUpdateSwimmingLaneRequestEntryRulesRestItems setCond(String cond) {
+        public CreateOrUpdateSwimmingLaneShrinkRequestEntryRulesRestItems setCond(String cond) {
             this.cond = cond;
             return this;
         }
@@ -323,7 +323,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
             return this.cond;
         }
 
-        public CreateOrUpdateSwimmingLaneRequestEntryRulesRestItems setDatum(String datum) {
+        public CreateOrUpdateSwimmingLaneShrinkRequestEntryRulesRestItems setDatum(String datum) {
             this.datum = datum;
             return this;
         }
@@ -331,7 +331,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
             return this.datum;
         }
 
-        public CreateOrUpdateSwimmingLaneRequestEntryRulesRestItems setDivisor(Integer divisor) {
+        public CreateOrUpdateSwimmingLaneShrinkRequestEntryRulesRestItems setDivisor(Integer divisor) {
             this.divisor = divisor;
             return this;
         }
@@ -339,7 +339,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
             return this.divisor;
         }
 
-        public CreateOrUpdateSwimmingLaneRequestEntryRulesRestItems setName(String name) {
+        public CreateOrUpdateSwimmingLaneShrinkRequestEntryRulesRestItems setName(String name) {
             this.name = name;
             return this;
         }
@@ -347,7 +347,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
             return this.name;
         }
 
-        public CreateOrUpdateSwimmingLaneRequestEntryRulesRestItems setNameList(java.util.List<String> nameList) {
+        public CreateOrUpdateSwimmingLaneShrinkRequestEntryRulesRestItems setNameList(java.util.List<String> nameList) {
             this.nameList = nameList;
             return this;
         }
@@ -355,7 +355,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
             return this.nameList;
         }
 
-        public CreateOrUpdateSwimmingLaneRequestEntryRulesRestItems setOperator(String operator) {
+        public CreateOrUpdateSwimmingLaneShrinkRequestEntryRulesRestItems setOperator(String operator) {
             this.operator = operator;
             return this;
         }
@@ -363,7 +363,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
             return this.operator;
         }
 
-        public CreateOrUpdateSwimmingLaneRequestEntryRulesRestItems setRate(Integer rate) {
+        public CreateOrUpdateSwimmingLaneShrinkRequestEntryRulesRestItems setRate(Integer rate) {
             this.rate = rate;
             return this;
         }
@@ -371,7 +371,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
             return this.rate;
         }
 
-        public CreateOrUpdateSwimmingLaneRequestEntryRulesRestItems setRemainder(Integer remainder) {
+        public CreateOrUpdateSwimmingLaneShrinkRequestEntryRulesRestItems setRemainder(Integer remainder) {
             this.remainder = remainder;
             return this;
         }
@@ -379,7 +379,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
             return this.remainder;
         }
 
-        public CreateOrUpdateSwimmingLaneRequestEntryRulesRestItems setType(String type) {
+        public CreateOrUpdateSwimmingLaneShrinkRequestEntryRulesRestItems setType(String type) {
             this.type = type;
             return this;
         }
@@ -387,7 +387,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
             return this.type;
         }
 
-        public CreateOrUpdateSwimmingLaneRequestEntryRulesRestItems setValue(String value) {
+        public CreateOrUpdateSwimmingLaneShrinkRequestEntryRulesRestItems setValue(String value) {
             this.value = value;
             return this;
         }
@@ -397,7 +397,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
 
     }
 
-    public static class CreateOrUpdateSwimmingLaneRequestEntryRules extends TeaModel {
+    public static class CreateOrUpdateSwimmingLaneShrinkRequestEntryRules extends TeaModel {
         /**
          * <p>The common parameters in the JSON format.</p>
          */
@@ -435,14 +435,14 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
          * <p>The information about the rule for the REST method.</p>
          */
         @NameInMap("RestItems")
-        public java.util.List<CreateOrUpdateSwimmingLaneRequestEntryRulesRestItems> restItems;
+        public java.util.List<CreateOrUpdateSwimmingLaneShrinkRequestEntryRulesRestItems> restItems;
 
-        public static CreateOrUpdateSwimmingLaneRequestEntryRules build(java.util.Map<String, ?> map) throws Exception {
-            CreateOrUpdateSwimmingLaneRequestEntryRules self = new CreateOrUpdateSwimmingLaneRequestEntryRules();
+        public static CreateOrUpdateSwimmingLaneShrinkRequestEntryRules build(java.util.Map<String, ?> map) throws Exception {
+            CreateOrUpdateSwimmingLaneShrinkRequestEntryRules self = new CreateOrUpdateSwimmingLaneShrinkRequestEntryRules();
             return TeaModel.build(map, self);
         }
 
-        public CreateOrUpdateSwimmingLaneRequestEntryRules setCondition(String condition) {
+        public CreateOrUpdateSwimmingLaneShrinkRequestEntryRules setCondition(String condition) {
             this.condition = condition;
             return this;
         }
@@ -450,7 +450,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
             return this.condition;
         }
 
-        public CreateOrUpdateSwimmingLaneRequestEntryRules setEnable(Boolean enable) {
+        public CreateOrUpdateSwimmingLaneShrinkRequestEntryRules setEnable(Boolean enable) {
             this.enable = enable;
             return this;
         }
@@ -458,7 +458,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
             return this.enable;
         }
 
-        public CreateOrUpdateSwimmingLaneRequestEntryRules setPath(String path) {
+        public CreateOrUpdateSwimmingLaneShrinkRequestEntryRules setPath(String path) {
             this.path = path;
             return this;
         }
@@ -466,7 +466,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
             return this.path;
         }
 
-        public CreateOrUpdateSwimmingLaneRequestEntryRules setPaths(java.util.List<String> paths) {
+        public CreateOrUpdateSwimmingLaneShrinkRequestEntryRules setPaths(java.util.List<String> paths) {
             this.paths = paths;
             return this;
         }
@@ -474,7 +474,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
             return this.paths;
         }
 
-        public CreateOrUpdateSwimmingLaneRequestEntryRules setPriority(Integer priority) {
+        public CreateOrUpdateSwimmingLaneShrinkRequestEntryRules setPriority(Integer priority) {
             this.priority = priority;
             return this;
         }
@@ -482,116 +482,12 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
             return this.priority;
         }
 
-        public CreateOrUpdateSwimmingLaneRequestEntryRules setRestItems(java.util.List<CreateOrUpdateSwimmingLaneRequestEntryRulesRestItems> restItems) {
+        public CreateOrUpdateSwimmingLaneShrinkRequestEntryRules setRestItems(java.util.List<CreateOrUpdateSwimmingLaneShrinkRequestEntryRulesRestItems> restItems) {
             this.restItems = restItems;
             return this;
         }
-        public java.util.List<CreateOrUpdateSwimmingLaneRequestEntryRulesRestItems> getRestItems() {
+        public java.util.List<CreateOrUpdateSwimmingLaneShrinkRequestEntryRulesRestItems> getRestItems() {
             return this.restItems;
-        }
-
-    }
-
-    public static class CreateOrUpdateSwimmingLaneRequestGatewaySwimmingLaneRouteJsonConditions extends TeaModel {
-        @NameInMap("Cond")
-        public String cond;
-
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("Type")
-        public String type;
-
-        @NameInMap("Value")
-        public String value;
-
-        public static CreateOrUpdateSwimmingLaneRequestGatewaySwimmingLaneRouteJsonConditions build(java.util.Map<String, ?> map) throws Exception {
-            CreateOrUpdateSwimmingLaneRequestGatewaySwimmingLaneRouteJsonConditions self = new CreateOrUpdateSwimmingLaneRequestGatewaySwimmingLaneRouteJsonConditions();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateOrUpdateSwimmingLaneRequestGatewaySwimmingLaneRouteJsonConditions setCond(String cond) {
-            this.cond = cond;
-            return this;
-        }
-        public String getCond() {
-            return this.cond;
-        }
-
-        public CreateOrUpdateSwimmingLaneRequestGatewaySwimmingLaneRouteJsonConditions setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public CreateOrUpdateSwimmingLaneRequestGatewaySwimmingLaneRouteJsonConditions setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public CreateOrUpdateSwimmingLaneRequestGatewaySwimmingLaneRouteJsonConditions setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
-    }
-
-    public static class CreateOrUpdateSwimmingLaneRequestGatewaySwimmingLaneRouteJson extends TeaModel {
-        @NameInMap("Conditions")
-        public java.util.List<CreateOrUpdateSwimmingLaneRequestGatewaySwimmingLaneRouteJsonConditions> conditions;
-
-        @NameInMap("GatewayId")
-        public Long gatewayId;
-
-        @NameInMap("GatewayUniqueId")
-        public String gatewayUniqueId;
-
-        @NameInMap("RouteIdList")
-        public java.util.List<Long> routeIdList;
-
-        public static CreateOrUpdateSwimmingLaneRequestGatewaySwimmingLaneRouteJson build(java.util.Map<String, ?> map) throws Exception {
-            CreateOrUpdateSwimmingLaneRequestGatewaySwimmingLaneRouteJson self = new CreateOrUpdateSwimmingLaneRequestGatewaySwimmingLaneRouteJson();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateOrUpdateSwimmingLaneRequestGatewaySwimmingLaneRouteJson setConditions(java.util.List<CreateOrUpdateSwimmingLaneRequestGatewaySwimmingLaneRouteJsonConditions> conditions) {
-            this.conditions = conditions;
-            return this;
-        }
-        public java.util.List<CreateOrUpdateSwimmingLaneRequestGatewaySwimmingLaneRouteJsonConditions> getConditions() {
-            return this.conditions;
-        }
-
-        public CreateOrUpdateSwimmingLaneRequestGatewaySwimmingLaneRouteJson setGatewayId(Long gatewayId) {
-            this.gatewayId = gatewayId;
-            return this;
-        }
-        public Long getGatewayId() {
-            return this.gatewayId;
-        }
-
-        public CreateOrUpdateSwimmingLaneRequestGatewaySwimmingLaneRouteJson setGatewayUniqueId(String gatewayUniqueId) {
-            this.gatewayUniqueId = gatewayUniqueId;
-            return this;
-        }
-        public String getGatewayUniqueId() {
-            return this.gatewayUniqueId;
-        }
-
-        public CreateOrUpdateSwimmingLaneRequestGatewaySwimmingLaneRouteJson setRouteIdList(java.util.List<Long> routeIdList) {
-            this.routeIdList = routeIdList;
-            return this;
-        }
-        public java.util.List<Long> getRouteIdList() {
-            return this.routeIdList;
         }
 
     }

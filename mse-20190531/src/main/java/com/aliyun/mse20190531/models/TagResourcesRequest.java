@@ -24,8 +24,8 @@ public class TagResourcesRequest extends TeaModel {
      * <br>
      * <p>> This parameter specifies the instance ID that is passed. Examples:</p>
      * <br>
-     * <p>*   **ResourceId.1** indicates the ID of the first instance.</p>
-     * <p>*   **ResourceId.2** indicates the ID of the second instance.</p>
+     * <p>*   **ResourceId.1** specifies that the first instance ID is passed.</p>
+     * <p>*   **ResourceId.2** specifies that the second instance ID is passed.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -33,7 +33,7 @@ public class TagResourcesRequest extends TeaModel {
     /**
      * <p>The type of the resources. Valid values:</p>
      * <br>
-     * <p>*   CLUSTER: MSE instance</p>
+     * <p>*   CLUSTER: Microservices Engine (MSE) instance</p>
      * <p>*   GATEWAY: cloud-native gateway</p>
      */
     @NameInMap("ResourceType")
@@ -91,6 +91,9 @@ public class TagResourcesRequest extends TeaModel {
     }
 
     public static class TagResourcesRequestTag extends TeaModel {
+        /**
+         * <p>The key of a tag that you want to attach to the specified resource. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key must be 1 to 128 characters in length. The tag key cannot start with acs: or aliyun or contain [http:// or https://.](http://https://。)</p>
+         */
         @NameInMap("Key")
         public String key;
 
