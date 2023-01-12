@@ -7,6 +7,9 @@ public class UpdateIpSetsRequest extends TeaModel {
     @NameInMap("IpSets")
     public java.util.List<UpdateIpSetsRequestIpSets> ipSets;
 
+    /**
+     * <p>The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -32,9 +35,19 @@ public class UpdateIpSetsRequest extends TeaModel {
     }
 
     public static class UpdateIpSetsRequestIpSets extends TeaModel {
+        /**
+         * <p>The new bandwidth to be allocated to the acceleration region. Unit: Mbit/s.</p>
+         * <br>
+         * <p>You can specify the bandwidth for up to 100 acceleration regions.</p>
+         */
         @NameInMap("Bandwidth")
         public Integer bandwidth;
 
+        /**
+         * <p>The ID of the acceleration region that you want to modify.</p>
+         * <br>
+         * <p>You can specify the IDs of up to 100 acceleration regions.</p>
+         */
         @NameInMap("IpSetId")
         public String ipSetId;
 

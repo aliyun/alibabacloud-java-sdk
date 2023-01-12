@@ -4,9 +4,15 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class DetachDdosFromAcceleratorResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the Anti-DDoS Pro/Premium instance that was disassociated from the GA instance.</p>
+     */
     @NameInMap("DdosId")
     public String ddosId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -7,6 +7,9 @@ public class DeleteIpSetsRequest extends TeaModel {
     @NameInMap("IpSetIds")
     public java.util.List<String> ipSetIds;
 
+    /**
+     * <p>The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

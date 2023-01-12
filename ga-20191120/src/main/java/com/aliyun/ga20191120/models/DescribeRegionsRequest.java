@@ -4,6 +4,9 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsRequest extends TeaModel {
+    /**
+     * <p>The ID of the region to query.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

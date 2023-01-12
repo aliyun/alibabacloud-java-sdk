@@ -4,27 +4,51 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class ListCustomRoutingEndpointTrafficPoliciesRequest extends TeaModel {
+    /**
+     * <p>The ID of the GA instance to which the traffic policies belong.</p>
+     */
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
+    /**
+     * <p>The IP addresses of the traffic policies.</p>
+     */
     @NameInMap("Address")
     public String address;
 
+    /**
+     * <p>The ID of the endpoint group to which the traffic policies belong.</p>
+     */
     @NameInMap("EndpointGroupId")
     public String endpointGroupId;
 
+    /**
+     * <p>The ID of the endpoint to which the traffic policies belong.</p>
+     */
     @NameInMap("EndpointId")
     public String endpointId;
 
+    /**
+     * <p>The ID of the listener to which the traffic policies belong.</p>
+     */
     @NameInMap("ListenerId")
     public String listenerId;
 
+    /**
+     * <p>The number of the page to return. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public String pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Maximum value: **50**. Default value: **10**.</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
+    /**
+     * <p>The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to **cn-hangzhou**.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -4,27 +4,58 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class ListEndpointGroupsRequest extends TeaModel {
+    /**
+     * <p>The ID of the GA instance.</p>
+     */
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
+    /**
+     * <p>Specifies whether the access logging feature is enabled. Default value: off. Valid values:</p>
+     * <br>
+     * <p>*   **on**: The access logging feature is enabled.</p>
+     * <p>*   **off**: The access logging feature is disabled.</p>
+     */
     @NameInMap("AccessLogSwitch")
     public String accessLogSwitch;
 
+    /**
+     * <p>The ID of the endpoint group.</p>
+     */
     @NameInMap("EndpointGroupId")
     public String endpointGroupId;
 
+    /**
+     * <p>The type of the endpoint group. Valid values:</p>
+     * <br>
+     * <p>*   **default**: a default endpoint group</p>
+     * <p>*   **virtual**: a virtual endpoint group</p>
+     * <p>*   If you leave this parameter empty, all default and virtual endpoint groups are queried.</p>
+     */
     @NameInMap("EndpointGroupType")
     public String endpointGroupType;
 
+    /**
+     * <p>The ID of the listener.</p>
+     */
     @NameInMap("ListenerId")
     public String listenerId;
 
+    /**
+     * <p>The number of the page to return. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Maximum value: **50**. Default value: **10**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to **cn-hangzhou**.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

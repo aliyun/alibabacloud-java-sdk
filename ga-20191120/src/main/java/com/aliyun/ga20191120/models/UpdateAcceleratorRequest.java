@@ -4,27 +4,87 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class UpdateAcceleratorRequest extends TeaModel {
+    /**
+     * <p>The ID of the GA instance.</p>
+     */
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
+    /**
+     * <p>Specifies whether to enable automatic payment. Default value: false. Valid values:</p>
+     * <br>
+     * <p>*   **false**: disables automatic payment. If you select this option, you must go to the Order Center to complete the payment after an order is generated.</p>
+     * <p>*   **true**: enables automatic payment. Payments are automatically completed.</p>
+     */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
+    /**
+     * <p>Specifies whether to automatically pay bills by using coupons. Default value: false. Valid values:</p>
+     * <br>
+     * <p>*   **true**: yes</p>
+     * <p>*   **false**: no</p>
+     * <br>
+     * <p>>  This parameter is required only if **AutoPay** is set to **true**.</p>
+     */
     @NameInMap("AutoUseCoupon")
     public Boolean autoUseCoupon;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <br>
+     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The description of the GA instance. The description can be up to 200 characters in length.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The name of the GA instance.</p>
+     * <br>
+     * <p>The name must be 2 to 128 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The region where the GA instance is deployed. Set the value to **cn-hangzhou**.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The specification of the GA instance. Valid values:</p>
+     * <br>
+     * <p>*   **1**: Small Ⅰ</p>
+     * <p>*   **2**: Small Ⅱ</p>
+     * <p>*   **3**: Small Ⅲ</p>
+     * <p>*   **5**: Medium Ⅰ</p>
+     * <p>*   **8**: Medium Ⅱ</p>
+     * <p>*   **10**: Medium Ⅲ</p>
+     * <p>*   **20**: Large Ⅰ</p>
+     * <p>*   **30**: Large Ⅱ</p>
+     * <p>*   **40**: Large Ⅲ</p>
+     * <p>*   **50**: Large Ⅳ</p>
+     * <p>*   **60**: Large Ⅴ</p>
+     * <p>*   **70**: Large Ⅵ</p>
+     * <p>*   **80**: Large VⅡ</p>
+     * <p>*   **90**: Large VⅢ</p>
+     * <p>*   **100**: Super Large Ⅰ</p>
+     * <p>*   **200**: Super Large Ⅱ</p>
+     * <p>*   **300**: Super Large Ⅲ</p>
+     * <br>
+     * <p>>  The Large Ⅲ specification and higher specifications are available only for accounts that are added to the whitelist. To use other specifications of GA instances, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).</p>
+     * <br>
+     * <p>Each instance specification provides different capabilities. For more information, see the "Specifications of standard GA instances" section in [Overview](~~153127~~).</p>
+     */
     @NameInMap("Spec")
     public String spec;
 

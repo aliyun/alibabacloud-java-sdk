@@ -4,27 +4,52 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class AttachLogStoreToEndpointGroupRequest extends TeaModel {
+    /**
+     * <p>The ID of the GA instance.</p>
+     */
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.</p>
+     * <br>
+     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("EndpointGroupIds")
     public java.util.List<String> endpointGroupIds;
 
+    /**
+     * <p>The ID of the listener.</p>
+     */
     @NameInMap("ListenerId")
     public String listenerId;
 
+    /**
+     * <p>The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The name of the Logstore.</p>
+     */
     @NameInMap("SlsLogStoreName")
     public String slsLogStoreName;
 
+    /**
+     * <p>The name of the Log Service project.</p>
+     */
     @NameInMap("SlsProjectName")
     public String slsProjectName;
 
+    /**
+     * <p>The region ID of the Log Service project.</p>
+     */
     @NameInMap("SlsRegionId")
     public String slsRegionId;
 

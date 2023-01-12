@@ -4,57 +4,162 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class DescribeListenerResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the GA instance.</p>
+     */
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
+    /**
+     * <p>The type of the ACL. Valid values:</p>
+     * <br>
+     * <p>*   **white**: a whitelist. Only requests from the IP addresses or CIDR blocks in the ACL are forwarded. Whitelists apply to scenarios in which you want to allow only specified IP addresses to access an application. Your service may be adversely affected if the whitelist is not properly configured. After you configure a whitelist for a listener, only requests from the IP addresses that are added to the whitelist are forwarded by the listener. If the whitelist is enabled but no IP addresses are added to the ACL, the listener does not forward requests.</p>
+     * <p>*   **black**: a blacklist. All requests from the IP addresses or CIDR blocks in the ACL are blocked. Blacklists apply to scenarios in which you want to deny access from specific IP addresses to an application. If the blacklist is enabled but no IP addresses are added to the ACL, the listener forwards all requests.</p>
+     * <br>
+     * <p>If the value of **Status** is **on**, this parameter is returned.</p>
+     */
     @NameInMap("AclType")
     public String aclType;
 
+    /**
+     * <p>Details about the backend ports.</p>
+     */
     @NameInMap("BackendPorts")
     public java.util.List<DescribeListenerResponseBodyBackendPorts> backendPorts;
 
+    /**
+     * <p>The SSL certificates.</p>
+     */
     @NameInMap("Certificates")
     public java.util.List<DescribeListenerResponseBodyCertificates> certificates;
 
+    /**
+     * <p>Indicates whether client affinity is enabled for the listener.</p>
+     * <br>
+     * <p>*   If **NONE** is returned, client affinity is disabled. In this case, requests from the same client may be forwarded to different endpoints.</p>
+     * <p>*   If **SOURCE_IP** is returned, client affinity is enabled. In this case, when a client accesses stateful applications, requests from the same client are always forwarded to the same endpoint regardless of the source port or protocol.</p>
+     */
     @NameInMap("ClientAffinity")
     public String clientAffinity;
 
+    /**
+     * <p>The timestamp when the listener was created. Unit: milliseconds.</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <p>The description of the listener.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The ID of the listener.</p>
+     */
     @NameInMap("ListenerId")
     public String listenerId;
 
+    /**
+     * <p>The name of the listener.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>Details about the listener ports.</p>
+     */
     @NameInMap("PortRanges")
     public java.util.List<DescribeListenerResponseBodyPortRanges> portRanges;
 
+    /**
+     * <p>The network transmission protocol that is used by the listener. Valid values:</p>
+     * <br>
+     * <p>*   **tcp**: TCP</p>
+     * <p>*   **udp**: UDP</p>
+     * <p>*   **http**: HTTP</p>
+     * <p>*   **https**: HTTPS</p>
+     */
     @NameInMap("Protocol")
     public String protocol;
 
+    /**
+     * <p>Indicates whether the client IP address preservation feature is enabled. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The client IP address preservation feature is enabled. After client IP addresses are reserved, you can view the source IP addresses of clients over the backend service.</p>
+     * <p>*   **false**: The client IP address preservation feature is disabled.</p>
+     */
     @NameInMap("ProxyProtocol")
     public Boolean proxyProtocol;
 
+    /**
+     * <p>The information about the access control list (ACL) that is associated with the listener.</p>
+     */
     @NameInMap("RelatedAcls")
     public java.util.List<DescribeListenerResponseBodyRelatedAcls> relatedAcls;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the security policy.</p>
+     * <br>
+     * <p>*   **tls_cipher_policy\_1\_0**</p>
+     * <br>
+     * <p>    *   Supported Transport Layer Security (TLS) versions: TLS 1.0, TLS 1.1, and TLS 1.2</p>
+     * <p>    *   Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA</p>
+     * <br>
+     * <p>*   **tls_cipher_policy\_1\_1**</p>
+     * <br>
+     * <p>    *   Supported TLS versions: TLS 1.1 and TLS 1.2</p>
+     * <p>    *   Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA</p>
+     * <br>
+     * <p>*   **tls_cipher_policy\_1\_2**</p>
+     * <br>
+     * <p>    *   Supported TLS version: TLS 1.2</p>
+     * <p>    *   Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA</p>
+     * <br>
+     * <p>*   **tls_cipher_policy\_1\_2\_strict**</p>
+     * <br>
+     * <p>    *   Supported TLS version: TLS 1.2</p>
+     * <p>    *   Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, ECDHE-RSA-AES128-SHA, and ECDHE-RSA-AES256-SHA</p>
+     * <br>
+     * <p>*   **tls_cipher_policy\_1\_2\_strict_with\_1\_3**</p>
+     * <br>
+     * <p>    *   Supported TLS versions: TLS 1.2 and TLS 1.3</p>
+     * <p>    *   Supported cipher suites: TLS_AES\_128\_GCM_SHA256, TLS_AES\_256\_GCM_SHA384, TLS_CHACHA20\_POLY1305\_SHA256, TLS_AES\_128\_CCM_SHA256, TLS_AES\_128\_CCM\_8\_SHA256, ECDHE-ECDSA-AES128-GCM-SHA256, ECDHE-ECDSA-AES256-GCM-SHA384, ECDHE-ECDSA-AES128-SHA256, ECDHE-ECDSA-AES256-SHA384, ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, ECDHE-ECDSA-AES128-SHA, ECDHE-ECDSA-AES256-SHA, ECDHE-RSA-AES128-SHA, and ECDHE-RSA-AES256-SHA</p>
+     * <br>
+     * <p>>  This parameter is returned only for HTTPS listeners.</p>
+     */
     @NameInMap("SecurityPolicyId")
     public String securityPolicyId;
 
+    /**
+     * <p>The state of the listener. Valid values:</p>
+     * <br>
+     * <p>*   **configuring**: The listener is being configured.</p>
+     * <p>*   **init**: The listener is being initialized.</p>
+     * <p>*   **updating**: The listener is being updated.</p>
+     * <p>*   **deleting**: The listener is being deleted.</p>
+     */
     @NameInMap("State")
     public String state;
 
+    /**
+     * <p>The routing type of the listener. Valid values:</p>
+     * <br>
+     * <p>*   **Standard**: intelligent routing</p>
+     * <p>*   **CustomRouting**: custom routing</p>
+     */
     @NameInMap("Type")
     public String type;
 
+    /**
+     * <p>The configurations of the `XForward` headers.</p>
+     */
     @NameInMap("XForwardedForConfig")
     public DescribeListenerResponseBodyXForwardedForConfig XForwardedForConfig;
 
@@ -208,9 +313,17 @@ public class DescribeListenerResponseBody extends TeaModel {
     }
 
     public static class DescribeListenerResponseBodyBackendPorts extends TeaModel {
+        /**
+         * <p>The start port in the range of ports used by the backend server to receive requests.</p>
+         * <br>
+         * <p>This parameter is returned only when you configure an HTTPS listener and the listening port is the same port used by the backend server to provide services.</p>
+         */
         @NameInMap("FromPort")
         public String fromPort;
 
+        /**
+         * <p>The end port in the range of ports used by the backend server to receive requests.</p>
+         */
         @NameInMap("ToPort")
         public String toPort;
 
@@ -238,9 +351,17 @@ public class DescribeListenerResponseBody extends TeaModel {
     }
 
     public static class DescribeListenerResponseBodyCertificates extends TeaModel {
+        /**
+         * <p>The ID of the SSL certificate.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The type of the certificate.</p>
+         * <br>
+         * <p>Only **Server** can be returned. This value Server indicates a server certificate.</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -268,9 +389,15 @@ public class DescribeListenerResponseBody extends TeaModel {
     }
 
     public static class DescribeListenerResponseBodyPortRanges extends TeaModel {
+        /**
+         * <p>The start port in the range of listening ports used to receive and forward requests to endpoints.</p>
+         */
         @NameInMap("FromPort")
         public Integer fromPort;
 
+        /**
+         * <p>The end port in the range of listening ports used to receive and forward requests to endpoints.</p>
+         */
         @NameInMap("ToPort")
         public Integer toPort;
 
@@ -298,9 +425,18 @@ public class DescribeListenerResponseBody extends TeaModel {
     }
 
     public static class DescribeListenerResponseBodyRelatedAcls extends TeaModel {
+        /**
+         * <p>The ID of the ACL that is associated with the listener.</p>
+         */
         @NameInMap("AclId")
         public String aclId;
 
+        /**
+         * <p>Indicates whether the access control feature is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **on**: enabled</p>
+         * <p>*   **off**: disabled</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -328,18 +464,58 @@ public class DescribeListenerResponseBody extends TeaModel {
     }
 
     public static class DescribeListenerResponseBodyXForwardedForConfig extends TeaModel {
+        /**
+         * <p>Indicates whether the `GA-AP` header is used to retrieve the information about acceleration regions. Valid values:</p>
+         * <br>
+         * <p>*   **true**: yes</p>
+         * <p>*   **false**: no</p>
+         * <br>
+         * <p>>  This parameter is returned only for HTTP and HTTPS listeners.</p>
+         */
         @NameInMap("XForwardedForGaApEnabled")
         public Boolean XForwardedForGaApEnabled;
 
+        /**
+         * <p>Indicates whether the `GA-ID` header is used to retrieve the ID of the GA instance. Valid values:</p>
+         * <br>
+         * <p>*   **true**: yes</p>
+         * <p>*   **false**: no</p>
+         * <br>
+         * <p>>  This parameter is returned only for HTTP and HTTPS listeners.</p>
+         */
         @NameInMap("XForwardedForGaIdEnabled")
         public Boolean XForwardedForGaIdEnabled;
 
+        /**
+         * <p>Indicates whether the `GA-X-Forward-Port` header is used to retrieve the listener ports of the GA instance. Valid values:</p>
+         * <br>
+         * <p>*   **true**: yes</p>
+         * <p>*   **false**: no</p>
+         * <br>
+         * <p>>  This parameter is returned only for HTTP and HTTPS listeners.</p>
+         */
         @NameInMap("XForwardedForPortEnabled")
         public Boolean XForwardedForPortEnabled;
 
+        /**
+         * <p>Indicates whether the `GA-X-Forward-Proto` header is used to retrieve the listener protocol of the GA instance. Valid values:</p>
+         * <br>
+         * <p>*   **true**: yes</p>
+         * <p>*   **false**: no</p>
+         * <br>
+         * <p>>  This parameter is returned only for HTTP and HTTPS listeners.</p>
+         */
         @NameInMap("XForwardedForProtoEnabled")
         public Boolean XForwardedForProtoEnabled;
 
+        /**
+         * <p>Indicates whether the `X-Real-IP` header is used to retrieve client IP addresses. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         * <br>
+         * <p>>  This parameter is returned only for HTTP and HTTPS listeners.</p>
+         */
         @NameInMap("XRealIpEnabled")
         public Boolean XRealIpEnabled;
 

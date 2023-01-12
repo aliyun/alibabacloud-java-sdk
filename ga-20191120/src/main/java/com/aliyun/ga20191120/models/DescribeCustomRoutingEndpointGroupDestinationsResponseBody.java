@@ -4,27 +4,58 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class DescribeCustomRoutingEndpointGroupDestinationsResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the GA instance.</p>
+     */
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
+    /**
+     * <p>The ID of the endpoint group mapping configuration.</p>
+     */
     @NameInMap("DestinationId")
     public String destinationId;
 
+    /**
+     * <p>The ID of the endpoint group.</p>
+     */
     @NameInMap("EndpointGroupId")
     public String endpointGroupId;
 
+    /**
+     * <p>The start port of the backend service port range of the endpoint group.</p>
+     */
     @NameInMap("FromPort")
     public Integer fromPort;
 
+    /**
+     * <p>The ID of the listener.</p>
+     */
     @NameInMap("ListenerId")
     public String listenerId;
 
+    /**
+     * <p>The backend service protocol of the endpoint group.</p>
+     * <br>
+     * <p>*   **tcp**: TCP</p>
+     * <p>*   **udp**: UDP</p>
+     * <p>*   **tcp,udp**: TCP and UDP</p>
+     */
     @NameInMap("Protocols")
     public java.util.List<String> protocols;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("State")
+    public String state;
+
+    /**
+     * <p>The end port of the backend service port range of the endpoint group.</p>
+     */
     @NameInMap("ToPort")
     public Integer toPort;
 
@@ -87,6 +118,14 @@ public class DescribeCustomRoutingEndpointGroupDestinationsResponseBody extends 
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeCustomRoutingEndpointGroupDestinationsResponseBody setState(String state) {
+        this.state = state;
+        return this;
+    }
+    public String getState() {
+        return this.state;
     }
 
     public DescribeCustomRoutingEndpointGroupDestinationsResponseBody setToPort(Integer toPort) {

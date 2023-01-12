@@ -4,12 +4,25 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class GetBasicAccelerateIpRequest extends TeaModel {
+    /**
+     * <p>The ID of the accelerated IP address that you want to query.</p>
+     */
     @NameInMap("AccelerateIpId")
     public String accelerateIpId;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the value, but you must ensure that it is unique among all requests. The token can contain only ASCII characters.</p>
+     * <br>
+     * <p>>  If you do not specify this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

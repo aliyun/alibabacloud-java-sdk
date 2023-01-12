@@ -4,32 +4,62 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class DescribeCustomRoutingEndPointTrafficPolicyResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the GA instance to which the endpoint belongs.</p>
+     */
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
+    /**
+     * <p>The IP address of the traffic policy.</p>
+     */
     @NameInMap("Address")
     public String address;
 
+    /**
+     * <p>The name of the vSwitch to which the traffic policy belongs.</p>
+     */
     @NameInMap("Endpoint")
     public String endpoint;
 
+    /**
+     * <p>The ID of the endpoint group to which the endpoint belongs.</p>
+     */
     @NameInMap("EndpointGroupId")
     public String endpointGroupId;
 
+    /**
+     * <p>The ID of the endpoint to which the traffic policy belongs.</p>
+     */
     @NameInMap("EndpointId")
     public String endpointId;
 
+    /**
+     * <p>The ID of the listener to which the endpoint belongs.</p>
+     */
     @NameInMap("ListenerId")
     public String listenerId;
 
+    /**
+     * <p>The ID of the traffic policy.</p>
+     */
     @NameInMap("PolicyId")
     public String policyId;
 
+    /**
+     * <p>The port range of the traffic policy.</p>
+     */
     @NameInMap("PortRanges")
     public java.util.List<DescribeCustomRoutingEndPointTrafficPolicyResponseBodyPortRanges> portRanges;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("State")
+    public String state;
 
     public static DescribeCustomRoutingEndPointTrafficPolicyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCustomRoutingEndPointTrafficPolicyResponseBody self = new DescribeCustomRoutingEndPointTrafficPolicyResponseBody();
@@ -108,10 +138,24 @@ public class DescribeCustomRoutingEndPointTrafficPolicyResponseBody extends TeaM
         return this.requestId;
     }
 
+    public DescribeCustomRoutingEndPointTrafficPolicyResponseBody setState(String state) {
+        this.state = state;
+        return this;
+    }
+    public String getState() {
+        return this.state;
+    }
+
     public static class DescribeCustomRoutingEndPointTrafficPolicyResponseBodyPortRanges extends TeaModel {
+        /**
+         * <p>The first port of the port range.</p>
+         */
         @NameInMap("FromPort")
         public Integer fromPort;
 
+        /**
+         * <p>The last port of the port range.</p>
+         */
         @NameInMap("ToPort")
         public Integer toPort;
 

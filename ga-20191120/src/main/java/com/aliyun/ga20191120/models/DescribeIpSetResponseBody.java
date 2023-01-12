@@ -4,30 +4,62 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class DescribeIpSetResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the region that is accelerated.</p>
+     */
     @NameInMap("AccelerateRegionId")
     public String accelerateRegionId;
 
+    /**
+     * <p>The ID of the GA instance.</p>
+     */
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
+    /**
+     * <p>The bandwidth that is allocated to the acceleration region. Unit: Mbit/s.</p>
+     */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
 
+    /**
+     * <p>The list of accelerated IP addresses in the acceleration region.</p>
+     */
     @NameInMap("IpAddressList")
     public java.util.List<String> ipAddressList;
 
+    /**
+     * <p>The ID of the acceleration region.</p>
+     */
     @NameInMap("IpSetId")
     public String ipSetId;
 
+    /**
+     * <p>The version of the accelerated IP address. Valid values:</p>
+     * <br>
+     * <p>*   **IPv4**</p>
+     * <p>*   **IPv6**</p>
+     */
     @NameInMap("IpVersion")
     public String ipVersion;
 
     @NameInMap("IspType")
     public String ispType;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The status of the acceleration region. Valid values:</p>
+     * <br>
+     * <p>*   **init**: The acceleration region is being initialized.</p>
+     * <p>*   **active**: The acceleration region is in the running state.</p>
+     * <p>*   **updating**: The acceleration region is being configured.</p>
+     * <p>*   **Deleting**: The acceleration region is being deleted.</p>
+     */
     @NameInMap("State")
     public String state;
 

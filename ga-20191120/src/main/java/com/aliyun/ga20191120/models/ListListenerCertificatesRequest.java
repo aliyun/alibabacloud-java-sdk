@@ -4,21 +4,49 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class ListListenerCertificatesRequest extends TeaModel {
+    /**
+     * <p>The ID of the GA instance.</p>
+     */
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
+    /**
+     * <p>The ID of the listener.</p>
+     */
     @NameInMap("ListenerId")
     public String listenerId;
 
+    /**
+     * <p>The number of entries to return.</p>
+     * <br>
+     * <p>Valid values: **1** to **50**. Default value: **20**.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token that determines the start point of the next query. Valid values:</p>
+     * <br>
+     * <p>*   If this is your first and only query, ignore this parameter.</p>
+     * <p>*   If a next query is to be performed, set the value to the NextToken value returned in the last call to the ListListenerCertificates operation.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to **cn-hangzhou**.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The type of the certificate. Valid values:</p>
+     * <br>
+     * <p>*   **default**: a default certificate</p>
+     * <p>*   **additional**: an additional certificate</p>
+     * <br>
+     * <p>If you do not set this parameter, default and additional certificates are returned by default.</p>
+     */
     @NameInMap("Role")
     public String role;
 

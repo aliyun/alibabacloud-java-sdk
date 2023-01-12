@@ -4,9 +4,15 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class ListAvailableAccelerateAreasResponseBody extends TeaModel {
+    /**
+     * <p>The information about acceleration areas.</p>
+     */
     @NameInMap("Areas")
     public java.util.List<ListAvailableAccelerateAreasResponseBodyAreas> areas;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,15 @@ public class ListAvailableAccelerateAreasResponseBody extends TeaModel {
     }
 
     public static class ListAvailableAccelerateAreasResponseBodyAreasRegionList extends TeaModel {
+        /**
+         * <p>The name of the acceleration region.</p>
+         */
         @NameInMap("LocalName")
         public String localName;
 
+        /**
+         * <p>The ID of the acceleration region.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
@@ -62,12 +74,21 @@ public class ListAvailableAccelerateAreasResponseBody extends TeaModel {
     }
 
     public static class ListAvailableAccelerateAreasResponseBodyAreas extends TeaModel {
+        /**
+         * <p>The ID of the acceleration area.</p>
+         */
         @NameInMap("AreaId")
         public String areaId;
 
+        /**
+         * <p>The name of the acceleration area.</p>
+         */
         @NameInMap("LocalName")
         public String localName;
 
+        /**
+         * <p>The information about acceleration regions.</p>
+         */
         @NameInMap("RegionList")
         public java.util.List<ListAvailableAccelerateAreasResponseBodyAreasRegionList> regionList;
 

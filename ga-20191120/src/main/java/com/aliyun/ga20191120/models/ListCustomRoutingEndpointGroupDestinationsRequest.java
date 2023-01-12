@@ -4,30 +4,58 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class ListCustomRoutingEndpointGroupDestinationsRequest extends TeaModel {
+    /**
+     * <p>The ID of the GA instance.</p>
+     */
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
+    /**
+     * <p>The ID of the endpoint group.</p>
+     */
     @NameInMap("EndpointGroupId")
     public String endpointGroupId;
 
+    /**
+     * <p>The start port of the backend service port range of the endpoint group.</p>
+     * <br>
+     * <p>Valid values: **1** to **65499**. The **FromPort** value must be smaller than or equal to the **ToPort** value.</p>
+     */
     @NameInMap("FromPort")
     public Integer fromPort;
 
+    /**
+     * <p>The ID of the listener.</p>
+     */
     @NameInMap("ListenerId")
     public String listenerId;
 
+    /**
+     * <p>The number of the page to return. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public String pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Maximum value: **50**. Default value: **10**.</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
     @NameInMap("Protocols")
     public java.util.List<String> protocols;
 
+    /**
+     * <p>The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The end port of the backend service port range of the endpoint group.</p>
+     * <br>
+     * <p>Valid values: **1** to **65499**. The **FromPort** value must be smaller than or equal to the **ToPort** value.</p>
+     */
     @NameInMap("ToPort")
     public Integer toPort;
 

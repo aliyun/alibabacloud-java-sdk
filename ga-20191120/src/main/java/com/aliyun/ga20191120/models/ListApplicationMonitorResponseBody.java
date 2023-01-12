@@ -4,18 +4,33 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class ListApplicationMonitorResponseBody extends TeaModel {
+    /**
+     * <p>The list of origin probing tasks.</p>
+     */
     @NameInMap("ApplicationMonitors")
     public java.util.List<ListApplicationMonitorResponseBodyApplicationMonitors> applicationMonitors;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,36 +80,81 @@ public class ListApplicationMonitorResponseBody extends TeaModel {
     }
 
     public static class ListApplicationMonitorResponseBodyApplicationMonitors extends TeaModel {
+        /**
+         * <p>The ID of the GA instance on which the origin probing task runs.</p>
+         */
         @NameInMap("AcceleratorId")
         public String acceleratorId;
 
+        /**
+         * <p>The URL or IP address that is probed.</p>
+         */
         @NameInMap("Address")
         public String address;
 
+        /**
+         * <p>Indicates whether the automatic diagnostics feature is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **true**: yes</p>
+         * <p>*   **false**: no</p>
+         */
         @NameInMap("DetectEnable")
         public Boolean detectEnable;
 
+        /**
+         * <p>The threshold that is used to trigger the automatic diagnostics feature.</p>
+         */
         @NameInMap("DetectThreshold")
         public Integer detectThreshold;
 
+        /**
+         * <p>The number of times that are required to reach the threshold before the automatic diagnostics feature can be triggered.</p>
+         */
         @NameInMap("DetectTimes")
         public Integer detectTimes;
 
+        /**
+         * <p>The ID of the listener on which the origin probing task runs.</p>
+         */
         @NameInMap("ListenerId")
         public String listenerId;
 
+        /**
+         * <p>The extended options of the listener protocol that is used by the origin probing task. The options vary based on the listener protocol.</p>
+         */
         @NameInMap("OptionsJson")
         public String optionsJson;
 
+        /**
+         * <p>The silence period of the automatic diagnostics feature. This parameter indicates the interval at which the automatic diagnostics feature is triggered. If the availability rate does not return to normal after GA triggers an automatic diagnostic, GA must wait until the silence period ends before GA can trigger another automatic diagnostic.</p>
+         * <br>
+         * <p>If the number of consecutive times that the availability rate drops below the threshold of automatic diagnostics reaches the value of the **DetectTimes** parameter, the automatic diagnostics feature is triggered. The automatic diagnostics feature is not triggered again within the silence period even if the availability rate stays below the threshold. If the availability rate does not return to normal after the silence period ends, the automatic diagnostics feature is triggered again.</p>
+         * <br>
+         * <p>Unit: seconds.</p>
+         */
         @NameInMap("SilenceTime")
         public Integer silenceTime;
 
+        /**
+         * <p>The state of the origin probing task. Valid values:</p>
+         * <br>
+         * <p>*   **active**: The origin probing task is running.</p>
+         * <p>*   **inactive**: The origin probing task is stopped.</p>
+         * <p>*   **init**: The origin probing task is being initialized.</p>
+         * <p>*   **deleting**: The origin probing task is being deleted.</p>
+         */
         @NameInMap("State")
         public String state;
 
+        /**
+         * <p>The ID of the origin probing task.</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <p>The name of the origin probing task.</p>
+         */
         @NameInMap("TaskName")
         public String taskName;
 

@@ -4,30 +4,59 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class GetBasicIpSetResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the region where the basic GA instance is deployed.</p>
+     */
     @NameInMap("AccelerateRegionId")
     public String accelerateRegionId;
 
+    /**
+     * <p>The ID of the basic GA instance.</p>
+     */
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
+    /**
+     * <p>The bandwidth of the acceleration region of the basic GA instance. Unit: Mbit/s.</p>
+     */
     @NameInMap("Bandwidth")
     public Long bandwidth;
 
+    /**
+     * <p>The accelerated IP address.</p>
+     */
     @NameInMap("IpAddress")
     public String ipAddress;
 
+    /**
+     * <p>The ID of the acceleration region of the basic GA instance.</p>
+     */
     @NameInMap("IpSetId")
     public String ipSetId;
 
+    /**
+     * <p>The version of the accelerated IP address. Only **IPv4** is returned. This indicates that an IPv4 address is used.</p>
+     */
     @NameInMap("IpVersion")
     public String ipVersion;
 
     @NameInMap("IspType")
     public String ispType;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The status of the acceleration region of the basic GA instance. Valid values:</p>
+     * <br>
+     * <p>*   **init**: The acceleration region is being initialized.</p>
+     * <p>*   **active**: The acceleration region is in the running state.</p>
+     * <p>*   **updating**: The acceleration region is being configured.</p>
+     * <p>*   **Deleting**: The acceleration region is being deleted.</p>
+     */
     @NameInMap("State")
     public String state;
 

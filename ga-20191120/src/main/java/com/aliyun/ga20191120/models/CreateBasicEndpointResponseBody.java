@@ -4,12 +4,21 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class CreateBasicEndpointResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the endpoint group.</p>
+     */
     @NameInMap("EndpointGroupId")
     public String endpointGroupId;
 
+    /**
+     * <p>The ID of the endpoint.</p>
+     */
     @NameInMap("EndpointId")
     public String endpointId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,57 +4,136 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class CreateEndpointGroupRequest extends TeaModel {
+    /**
+     * <p>The ID of the GA instance.</p>
+     */
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.</p>
+     * <br>
+     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The description of the endpoint group.</p>
+     * <br>
+     * <p>The description cannot exceed 256 characters in length and cannot contain `http://` or `https://`.</p>
+     */
     @NameInMap("Description")
     public String description;
 
     @NameInMap("EndpointConfigurations")
     public java.util.List<CreateEndpointGroupRequestEndpointConfigurations> endpointConfigurations;
 
+    /**
+     * <p>The ID of the region in which to create the endpoint group.</p>
+     */
     @NameInMap("EndpointGroupRegion")
     public String endpointGroupRegion;
 
+    /**
+     * <p>The type of the endpoint group. Default value: default. Valid values:</p>
+     * <br>
+     * <p>*   **default**: a default endpoint group.</p>
+     * <p>*   **virtual**: a virtual endpoint group.</p>
+     * <br>
+     * <p>>  Only HTTP and HTTPS listeners support virtual endpoint groups.</p>
+     */
     @NameInMap("EndpointGroupType")
     public String endpointGroupType;
 
+    /**
+     * <p>The protocol that is used by the backend service. Default value: HTTP. Valid values:</p>
+     * <br>
+     * <p>*   **HTTP**</p>
+     * <p>*   **HTTPS**</p>
+     * <br>
+     * <p>> </p>
+     * <p>*   You can set this parameter only when the listener that is associated with the endpoint group uses **HTTP** or **HTTPS**.</p>
+     * <p>*   For an **HTTP** listener, the backend service protocol must be **HTTP**.</p>
+     */
     @NameInMap("EndpointRequestProtocol")
     public String endpointRequestProtocol;
 
+    /**
+     * <p>Specifies whether to enable the health check feature. Default value: true. Valid values:</p>
+     * <br>
+     * <p>*   **true**: enables the health check feature.</p>
+     * <p>*   **false**: disables the health check feature.</p>
+     */
     @NameInMap("HealthCheckEnabled")
     public Boolean healthCheckEnabled;
 
+    /**
+     * <p>The interval at which health checks are performed. Unit: seconds.</p>
+     */
     @NameInMap("HealthCheckIntervalSeconds")
     public Integer healthCheckIntervalSeconds;
 
+    /**
+     * <p>The path to which to send health check requests.</p>
+     */
     @NameInMap("HealthCheckPath")
     public String healthCheckPath;
 
+    /**
+     * <p>The port that is used for health checks.</p>
+     */
     @NameInMap("HealthCheckPort")
     public Integer healthCheckPort;
 
+    /**
+     * <p>The protocol over which to send health check requests. Valid values:</p>
+     * <br>
+     * <p>*   **tcp**: TCP</p>
+     * <p>*   **http**: HTTP</p>
+     * <p>*   **https**: HTTPS</p>
+     */
     @NameInMap("HealthCheckProtocol")
     public String healthCheckProtocol;
 
+    /**
+     * <p>The ID of the listener.</p>
+     */
     @NameInMap("ListenerId")
     public String listenerId;
 
+    /**
+     * <p>The name of the endpoint group.</p>
+     * <br>
+     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.</p>
+     */
     @NameInMap("Name")
     public String name;
 
     @NameInMap("PortOverrides")
     public java.util.List<CreateEndpointGroupRequestPortOverrides> portOverrides;
 
+    /**
+     * <p>The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The number of consecutive health check failures that must occur before a healthy endpoint group is considered unhealthy, or the number of consecutive health check successes that must occur before an unhealthy endpoint group is considered healthy.</p>
+     * <br>
+     * <p>Valid values: **2** to **10**. Default value: **3**.</p>
+     */
     @NameInMap("ThresholdCount")
     public Integer thresholdCount;
 
+    /**
+     * <p>The traffic ratio for the endpoint group when the specified listener is associated with multiple endpoint groups.</p>
+     * <br>
+     * <p>Valid values: **1** to **100**.</p>
+     */
     @NameInMap("TrafficPercentage")
     public Integer trafficPercentage;
 
@@ -208,15 +287,49 @@ public class CreateEndpointGroupRequest extends TeaModel {
     }
 
     public static class CreateEndpointGroupRequestEndpointConfigurations extends TeaModel {
+        /**
+         * <p>Specifies whether to preserve client IP addresses by using the TCP Option Address (TOA) module. Default value: false. Valid values:</p>
+         * <br>
+         * <p>*   **true**: preserves client IP addresses by using the TOA module.</p>
+         * <p>*   **false**: does not preserve client IP addresses by using the TOA module.</p>
+         */
         @NameInMap("EnableClientIPPreservation")
         public Boolean enableClientIPPreservation;
 
+        /**
+         * <p>The IP address or domain name of the endpoint.</p>
+         */
         @NameInMap("Endpoint")
         public String endpoint;
 
+        /**
+         * <p>The type of the endpoint. Valid values:</p>
+         * <br>
+         * <p>*   **Domain**: a custom domain name</p>
+         * <p>*   **Ip**: a custom IP address</p>
+         * <p>*   **PublicIp**: a public IP address provided by Alibaba Cloud</p>
+         * <p>*   **ECS**: an Elastic Compute Service (ECS) instance</p>
+         * <p>*   **SLB**: a Server Load Balancer (SLB) instance</p>
+         * <p>*   **ALB**: an Application Load Balancer (ALB) instance</p>
+         * <p>*   **OSS**: an Object Storage Service (OSS) bucket</p>
+         * <br>
+         * <p>> </p>
+         * <p>*   If you set this parameter to **ECS** or **SLB** and the service-linked role AliyunServiceRoleForGaVpcEndpoint does not exist, the system automatically creates the service-linked role.</p>
+         * <p>*   If you set this parameter to **ALB** and the service-linked role AliyunServiceRoleForGaAlb does not exist, the system automatically creates the service-linked role.</p>
+         * <p>*   If you set this parameter to **OSS** and the service-linked role AliyunServiceRoleForGaOss does not exist, the system automatically creates the service-linked role.</p>
+         * <br>
+         * <p>    For more information, see [Service-linked roles](~~178360~~).</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The weight of the endpoint.</p>
+         * <br>
+         * <p>Valid values: **0** to **255**.</p>
+         * <br>
+         * <p>>  If the weight of an endpoint is set to 0, GA stops distributing network traffic to the endpoint. Proceed with caution.</p>
+         */
         @NameInMap("Weight")
         public Integer weight;
 
@@ -260,9 +373,19 @@ public class CreateEndpointGroupRequest extends TeaModel {
     }
 
     public static class CreateEndpointGroupRequestPortOverrides extends TeaModel {
+        /**
+         * <p>The endpoint port that is mapped to the listener port.</p>
+         */
         @NameInMap("EndpointPort")
         public Integer endpointPort;
 
+        /**
+         * <p>The listener port that is mapped to the endpoint port.</p>
+         * <br>
+         * <p>> </p>
+         * <p>*   Only HTTP and HTTPS listeners support port mappings.</p>
+         * <p>*   The listener port must be the one used by the current listener.</p>
+         */
         @NameInMap("ListenerPort")
         public Integer listenerPort;
 

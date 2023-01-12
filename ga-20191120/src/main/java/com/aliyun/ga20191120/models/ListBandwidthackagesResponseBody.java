@@ -4,18 +4,33 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class ListBandwidthackagesResponseBody extends TeaModel {
+    /**
+     * <p>Details about the bandwidth plans.</p>
+     */
     @NameInMap("BandwidthPackages")
     public java.util.List<ListBandwidthackagesResponseBodyBandwidthPackages> bandwidthPackages;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -95,36 +110,75 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
     }
 
     public static class ListBandwidthackagesResponseBodyBandwidthPackages extends TeaModel {
+        /**
+         * <p>The ID of the GA instance that is associated with the bandwidth plan.</p>
+         */
         @NameInMap("Accelerators")
         public java.util.List<String> accelerators;
 
+        /**
+         * <p>The bandwidth value of the bandwidth plan. Unit: Mbit/s.</p>
+         */
         @NameInMap("Bandwidth")
         public Integer bandwidth;
 
+        /**
+         * <p>The ID of the bandwidth plan.</p>
+         */
         @NameInMap("BandwidthPackageId")
         public String bandwidthPackageId;
 
+        /**
+         * <p>The billing method of the bandwidth plan. Only **PREPAY** is returned, which indicates the subscription billing method.</p>
+         */
         @NameInMap("ChargeType")
         public String chargeType;
 
+        /**
+         * <p>The timestamp when the bandwidth plan was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The description of the bandwidth plan.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The timestamp when the bandwidth plan expires.</p>
+         */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
+        /**
+         * <p>The name of the GA instance.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The ID of the request.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The state of the bandwidth plan. Valid values:</p>
+         * <br>
+         * <p>*   **init**: The bandwidth plan is being initialized.</p>
+         * <p>*   **active**: The bandwidth plan is available.</p>
+         * <p>*   **binded**: The bandwidth plan is associated with a GA instance.</p>
+         * <p>*   **binding**: The bandwidth plan is being associated.</p>
+         * <p>*   **unbinding**: The bandwidth plan is being disassociated.</p>
+         * <p>*   **updating**: The bandwidth plan is being updated.</p>
+         * <p>*   **finacialLocked**: The bandwidth plan is locked due to overdue payments.</p>
+         * <p>*   **Locked**: The bandwidth plan is locked.</p>
+         */
         @NameInMap("State")
         public String state;
 

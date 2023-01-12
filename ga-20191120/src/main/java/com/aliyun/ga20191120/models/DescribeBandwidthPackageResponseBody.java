@@ -4,60 +4,136 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class DescribeBandwidthPackageResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the GA instance that is associated with the bandwidth plan.</p>
+     */
     @NameInMap("Accelerators")
     public java.util.List<String> accelerators;
 
+    /**
+     * <p>The bandwidth value of the bandwidth plan. Unit: Mbit/s.</p>
+     */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
 
+    /**
+     * <p>The ID of the bandwidth plan.</p>
+     */
     @NameInMap("BandwidthPackageId")
     public String bandwidthPackageId;
 
+    /**
+     * <p>The type of the bandwidth. Valid values:</p>
+     * <br>
+     * <p>*   **Basic**: basic bandwidth</p>
+     * <p>*   **Enhanced**: enhanced bandwidth</p>
+     * <p>*   **Advanced**: premium bandwidth</p>
+     */
     @NameInMap("BandwidthType")
     public String bandwidthType;
 
+    /**
+     * <p>The metering method that is used when you use the pay-as-you-go billing method. Valid values:</p>
+     * <br>
+     * <p>*   **PayByTraffic**: pay-by-data-transfer</p>
+     * <p>*   **PayBY95**: pay-by-95th-percentile</p>
+     */
     @NameInMap("BillingType")
     public String billingType;
 
+    /**
+     * <p>Area A specified in the cross-region acceleration bandwidth plan. Only **China-mainland** (the Chinese mainland) is returned.</p>
+     * <br>
+     * <p>This parameter is returned only if you call this operation on the International site (alibabacloud.com).</p>
+     */
     @NameInMap("CbnGeographicRegionIdA")
     public String cbnGeographicRegionIdA;
 
+    /**
+     * <p>Area B specified in the cross-region acceleration bandwidth plan. Only **Global** (global) is returned.</p>
+     * <br>
+     * <p>This parameter is returned only if you call this operation on the International site (alibabacloud.com).</p>
+     */
     @NameInMap("CbnGeographicRegionIdB")
     public String cbnGeographicRegionIdB;
 
+    /**
+     * <p>The billing method of the bandwidth plan. Only **PREPAY** is returned, which indicates the subscription billing method.</p>
+     */
     @NameInMap("ChargeType")
     public String chargeType;
 
+    /**
+     * <p>The timestamp that indicates when the bandwidth plan was created.</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <p>The description of the bandwidth plan.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The timestamp that indicates when the bandwidth plan expires.</p>
+     */
     @NameInMap("ExpiredTime")
     public String expiredTime;
 
+    /**
+     * <p>The name of the bandwidth plan.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The percentage of the minimum bandwidth guaranteed if the pay-by-95th-percentile-bandwidth metering method is used. Valid values: **30** to **100**.</p>
+     */
     @NameInMap("Ratio")
     public Integer ratio;
 
+    /**
+     * <p>The ID of the region where GA instance is deployed. **cn-hangzhou** is returned.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The state of the bandwidth plan. Valid values:</p>
+     * <br>
+     * <p>*   **init**: The bandwidth plan is being initialized.</p>
+     * <p>*   **active**: The bandwidth plan is available.</p>
+     * <p>*   **binded**: The bandwidth plan is associated with a GA instance.</p>
+     * <p>*   **binding**: The bandwidth plan is being associated.</p>
+     * <p>*   **unbinding**: The bandwidth plan is being disassociated.</p>
+     * <p>*   **updating**: The bandwidth plan is being updated.</p>
+     * <p>*   **finacialLocked**: The bandwidth plan is locked due to overdue payments.</p>
+     * <p>*   **Locked**: The bandwidth plan is locked.</p>
+     */
     @NameInMap("State")
     public String state;
 
     @NameInMap("Tags")
     public java.util.List<DescribeBandwidthPackageResponseBodyTags> tags;
 
+    /**
+     * <p>The type of the bandwidth plan. Valid values:</p>
+     * <br>
+     * <p>*   **Basic**: a basic bandwidth plan</p>
+     * <p>*   **CrossDomain**: a cross-region acceleration bandwidth plan</p>
+     * <br>
+     * <p>If you call this operation on the Alibaba Cloud China Site (aliyun.com), only **Basic** is returned.</p>
+     */
     @NameInMap("Type")
     public String type;
 

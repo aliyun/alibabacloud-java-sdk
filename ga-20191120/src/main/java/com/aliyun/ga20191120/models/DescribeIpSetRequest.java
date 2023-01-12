@@ -4,9 +4,17 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class DescribeIpSetRequest extends TeaModel {
+    /**
+     * <p>The ID of the acceleration region.</p>
+     * <br>
+     * <p>You can call the [ListIpSets](~~153247~~) operation to query IDs of acceleration regions of a specified GA instance.</p>
+     */
     @NameInMap("IpSetId")
     public String ipSetId;
 
+    /**
+     * <p>The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to **cn-hangzhou**.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -4,18 +4,36 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class ListBasicAccelerateIpEndpointRelationsResponseBody extends TeaModel {
+    /**
+     * <p>The mappings between the accelerated IP addresses and endpoints.</p>
+     */
     @NameInMap("AccelerateIpEndpointRelations")
     public java.util.List<ListBasicAccelerateIpEndpointRelationsResponseBodyAccelerateIpEndpointRelations> accelerateIpEndpointRelations;
 
+    /**
+     * <p>The number of entries returned on each page.</p>
+     */
     @NameInMap("MaxResults")
     public String maxResults;
 
+    /**
+     * <p>The token that is used for the next query. Valid values:</p>
+     * <br>
+     * <p>*   If **NextToken** is not returned, it indicates that no additional results exist.</p>
+     * <p>*   If **NextToken** is returned, the value is the token that is used for the next query.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public String totalCount;
 
@@ -65,36 +83,89 @@ public class ListBasicAccelerateIpEndpointRelationsResponseBody extends TeaModel
     }
 
     public static class ListBasicAccelerateIpEndpointRelationsResponseBodyAccelerateIpEndpointRelations extends TeaModel {
+        /**
+         * <p>The ID of the accelerated IP address.</p>
+         */
         @NameInMap("AccelerateIpId")
         public String accelerateIpId;
 
+        /**
+         * <p>The ID of the basic GA instance.</p>
+         */
         @NameInMap("AcceleratorId")
         public String acceleratorId;
 
+        /**
+         * <p>The address of the endpoint.</p>
+         */
         @NameInMap("EndpointAddress")
         public String endpointAddress;
 
+        /**
+         * <p>The ID of the endpoint that is associated with the basic GA instance.</p>
+         */
         @NameInMap("EndpointId")
         public String endpointId;
 
+        /**
+         * <p>The name of the endpoint that is associated with the basic GA instance.</p>
+         */
         @NameInMap("EndpointName")
         public String endpointName;
 
+        /**
+         * <p>The secondary address of the endpoint.</p>
+         * <br>
+         * <p>This parameter is returned if the endpoint type is **ECS**, **ENI**, or **NLB**.</p>
+         * <br>
+         * <p>*   If the endpoint type is **ECS**, **EndpointSubAddress** returns the secondary private IP address of the primary ENI. If the parameter is empty, the primary private IP address of the primary ENI is returned.</p>
+         * <p>*   If the endpoint type is **ENI**, **EndpointSubAddress** returns the secondary private IP address of the secondary ENI. If the parameter is empty, the primary private IP address of the secondary ENI is returned.</p>
+         * <p>*   If the endpoint type is **NLB**, **EndpointSubAddress** returns the primary private IP address of the NLB backend server.</p>
+         */
         @NameInMap("EndpointSubAddress")
         public String endpointSubAddress;
 
+        /**
+         * <p>The secondary address type of the endpoint.</p>
+         * <br>
+         * <p>*   **primary**: a primary private IP address.</p>
+         * <p>*   **secondary**: a secondary private IP address.</p>
+         * <br>
+         * <p>This parameter is returned if the endpoint type is **ECS**, **ENI**, or **NLB**. If the endpoint type is **NLB**, only **primary** is returned.</p>
+         */
         @NameInMap("EndpointSubAddressType")
         public String endpointSubAddressType;
 
+        /**
+         * <p>The type of endpoint.</p>
+         * <br>
+         * <p>*   **ENI**: elastic network interface (ENI)</p>
+         * <p>*   **SLB**: Classic Load Balancer (CLB) instance</p>
+         * <p>*   **ECS**: Elastic Compute Service (ECS) instance</p>
+         * <p>*   **NLB**: Network Load Balancer (NLB) instance</p>
+         */
         @NameInMap("EndpointType")
         public String endpointType;
 
+        /**
+         * <p>The zone ID of the endpoint.</p>
+         * <br>
+         * <p>This parameter is returned only when the endpoint type is **NLB**.</p>
+         */
         @NameInMap("EndpointZoneId")
         public String endpointZoneId;
 
+        /**
+         * <p>The accelerated IP address.</p>
+         */
         @NameInMap("IpAddress")
         public String ipAddress;
 
+        /**
+         * <p>The status of the mapping between the accelerated IP address and endpoint.</p>
+         * <br>
+         * <p>A value of **active** indicates that the accelerated IP address is associated with the endpoint.</p>
+         */
         @NameInMap("State")
         public String state;
 

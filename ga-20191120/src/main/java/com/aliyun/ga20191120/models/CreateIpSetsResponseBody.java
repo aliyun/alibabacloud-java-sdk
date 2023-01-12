@@ -4,12 +4,21 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class CreateIpSetsResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the GA instance.</p>
+     */
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
+    /**
+     * <p>Details about the acceleration regions.</p>
+     */
     @NameInMap("IpSets")
     public java.util.List<CreateIpSetsResponseBodyIpSets> ipSets;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,12 +52,21 @@ public class CreateIpSetsResponseBody extends TeaModel {
     }
 
     public static class CreateIpSetsResponseBodyIpSets extends TeaModel {
+        /**
+         * <p>The ID of the region that requires acceleration.</p>
+         */
         @NameInMap("AccelerateRegionId")
         public String accelerateRegionId;
 
+        /**
+         * <p>The bandwidth allocated to the acceleration region. Unit: **Mbit/s**.</p>
+         */
         @NameInMap("Bandwidth")
         public Integer bandwidth;
 
+        /**
+         * <p>The ID of the acceleration region.</p>
+         */
         @NameInMap("IpSetId")
         public String ipSetId;
 

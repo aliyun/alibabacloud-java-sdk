@@ -4,18 +4,42 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class DescribeAcceleratorAutoRenewAttributeResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the GA instance.</p>
+     */
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
+    /**
+     * <p>Indicates whether auto-renewal is enabled. Valid values:</p>
+     * <br>
+     * <p>*   **true**: yes</p>
+     * <p>*   **false** (default): no</p>
+     */
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
+    /**
+     * <p>The auto-renewal period. Unit: months.</p>
+     * <br>
+     * <p>This parameter is returned only if **AutoRenew** is set to **true**.</p>
+     */
     @NameInMap("AutoRenewDuration")
     public Integer autoRenewDuration;
 
+    /**
+     * <p>Indicates how the GA instance is renewed. Valid values:</p>
+     * <br>
+     * <p>*   **AutoRenewal**: The GA instance is automatically renewed.</p>
+     * <p>*   **Normal**: The GA instance is manually renewed.</p>
+     * <p>*   **NotRenewal**: The GA instance is not renewed after the instance expires. The system sends only a non-renewal reminder three days before the expiration date. The system no longer sends notifications to remind you to renew the GA instance.</p>
+     */
     @NameInMap("RenewalStatus")
     public String renewalStatus;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

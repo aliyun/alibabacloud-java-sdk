@@ -4,9 +4,15 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class CreateAclResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the ACL.</p>
+     */
     @NameInMap("AclId")
     public String aclId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

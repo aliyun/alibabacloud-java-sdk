@@ -4,15 +4,31 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class CreateBasicAccelerateIpEndpointRelationsRequest extends TeaModel {
+    /**
+     * <p>A list of accelerated IP addresses and the endpoints with which the accelerated IP addresses are associated.</p>
+     */
     @NameInMap("AccelerateIpEndpointRelations")
     public java.util.List<CreateBasicAccelerateIpEndpointRelationsRequestAccelerateIpEndpointRelations> accelerateIpEndpointRelations;
 
+    /**
+     * <p>The ID of the basic GA instance.</p>
+     */
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <br>
+     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -54,9 +70,19 @@ public class CreateBasicAccelerateIpEndpointRelationsRequest extends TeaModel {
     }
 
     public static class CreateBasicAccelerateIpEndpointRelationsRequestAccelerateIpEndpointRelations extends TeaModel {
+        /**
+         * <p>The IDs of the accelerated IP addresses.</p>
+         * <br>
+         * <p>You can specify at most 20 IP address IDs.</p>
+         */
         @NameInMap("AccelerateIpId")
         public String accelerateIpId;
 
+        /**
+         * <p>The IDs of the endpoints.</p>
+         * <br>
+         * <p>You can specify up to 20 endpoint IDs.</p>
+         */
         @NameInMap("EndpointId")
         public String endpointId;
 

@@ -4,27 +4,69 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class UpdateBandwidthPackageRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to enable automatic payment. Default value: false. Valid values:</p>
+     * <br>
+     * <p>*   **false**: disables automatic payment. If you select this option, you must go to the Order Center to complete the payment after an order is generated.</p>
+     * <p>*   **true**: enables automatic payment. Payments are automatically completed.</p>
+     */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
+    /**
+     * <p>Specifies whether to use coupons. Default value: false. Valid values:</p>
+     * <br>
+     * <p>*   **true**: uses coupons.</p>
+     * <p>*   **false**: does not use coupons.</p>
+     */
     @NameInMap("AutoUseCoupon")
     public Boolean autoUseCoupon;
 
+    /**
+     * <p>The bandwidth value of the bandwidth plan. Unit: Mbit/s.</p>
+     * <br>
+     * <p>Valid values: **2** to **2000**.</p>
+     */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
 
+    /**
+     * <p>The ID of the bandwidth plan that you want to modify.</p>
+     */
     @NameInMap("BandwidthPackageId")
     public String bandwidthPackageId;
 
+    /**
+     * <p>The type of bandwidth. Valid values:</p>
+     * <br>
+     * <p>*   **Basic**: basic</p>
+     * <p>*   **Enhanced**: enhanced</p>
+     * <p>*   **Advanced**: premium</p>
+     * <br>
+     * <p>>  You can only upgrade **Basic** bandwidth to **Enhanced** bandwidth. You cannot change **Enhanced** bandwidth or **Advanced** bandwidth to another type.</p>
+     */
     @NameInMap("BandwidthType")
     public String bandwidthType;
 
+    /**
+     * <p>The description of the bandwidth plan.</p>
+     * <br>
+     * <p>The description can be up to 256 characters in length.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The name of the bandwidth plan.</p>
+     * <br>
+     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

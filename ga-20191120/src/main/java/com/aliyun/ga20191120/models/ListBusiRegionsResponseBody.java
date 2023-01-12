@@ -4,9 +4,15 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class ListBusiRegionsResponseBody extends TeaModel {
+    /**
+     * <p>Information about the region.</p>
+     */
     @NameInMap("Regions")
     public java.util.List<ListBusiRegionsResponseBodyRegions> regions;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,15 @@ public class ListBusiRegionsResponseBody extends TeaModel {
     }
 
     public static class ListBusiRegionsResponseBodyRegions extends TeaModel {
+        /**
+         * <p>The name of the region.</p>
+         */
         @NameInMap("LocalName")
         public String localName;
 
+        /**
+         * <p>The ID of the region where the GA instance is deployed. Only **cn-hangzhou** is returned.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 

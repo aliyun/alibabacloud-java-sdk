@@ -4,9 +4,18 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class DescribeCustomRoutingEndpointGroupDestinationsRequest extends TeaModel {
+    /**
+     * <p>The ID of the endpoint group mapping configuration.</p>
+     */
     @NameInMap("DestinationId")
     public String destinationId;
 
+    @NameInMap("EndpointGroupId")
+    public String endpointGroupId;
+
+    /**
+     * <p>The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to **cn-hangzhou**.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -21,6 +30,14 @@ public class DescribeCustomRoutingEndpointGroupDestinationsRequest extends TeaMo
     }
     public String getDestinationId() {
         return this.destinationId;
+    }
+
+    public DescribeCustomRoutingEndpointGroupDestinationsRequest setEndpointGroupId(String endpointGroupId) {
+        this.endpointGroupId = endpointGroupId;
+        return this;
+    }
+    public String getEndpointGroupId() {
+        return this.endpointGroupId;
     }
 
     public DescribeCustomRoutingEndpointGroupDestinationsRequest setRegionId(String regionId) {
