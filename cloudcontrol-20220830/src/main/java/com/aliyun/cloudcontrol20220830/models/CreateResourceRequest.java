@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateResourceRequest extends TeaModel {
     @NameInMap("body")
-    public String body;
+    public java.util.Map<String, ?> body;
 
     @NameInMap("clientToken")
     public String clientToken;
@@ -18,11 +18,11 @@ public class CreateResourceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateResourceRequest setBody(String body) {
+    public CreateResourceRequest setBody(java.util.Map<String, ?> body) {
         this.body = body;
         return this;
     }
-    public String getBody() {
+    public java.util.Map<String, ?> getBody() {
         return this.body;
     }
 

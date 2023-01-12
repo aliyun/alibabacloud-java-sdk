@@ -53,13 +53,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * POST /api/v1/providers/{provider}/products/{product}/resources/{parentResourcePath}/{resourceTypeCode}。
       *
-      * @param resourcePath the whole path of resource string
+      * @param requestPath the whole path of resource string
       * @param request CreateResourceRequest
       * @param headers map
       * @param runtime runtime options for this request RuntimeOptions
       * @return CreateResourceResponse
      */
-    public CreateResourceResponse createResourceWithOptions(String resourcePath, CreateResourceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public CreateResourceResponse createResourceWithOptions(String requestPath, CreateResourceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
@@ -73,13 +73,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", request.body)
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateResource"),
             new TeaPair("version", "2022-08-30"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "" + resourcePath + ""),
+            new TeaPair("pathname", "" + requestPath + ""),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -92,26 +92,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * POST /api/v1/providers/{provider}/products/{product}/resources/{parentResourcePath}/{resourceTypeCode}。
       *
-      * @param resourcePath the whole path of resource string
+      * @param requestPath the whole path of resource string
       * @param request CreateResourceRequest
       * @return CreateResourceResponse
      */
-    public CreateResourceResponse createResource(String resourcePath, CreateResourceRequest request) throws Exception {
+    public CreateResourceResponse createResource(String requestPath, CreateResourceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.createResourceWithOptions(resourcePath, request, headers, runtime);
+        return this.createResourceWithOptions(requestPath, request, headers, runtime);
     }
 
     /**
       * DELETE /api/v1/providers/{provider}/products/{product}/resources/{parentResourcePath}/{resourceTypeCode}/{resourceId}。
       *
-      * @param resourcePath the whole path of resource string
+      * @param requestPath the whole path of resource string
       * @param request DeleteResourceRequest
       * @param headers map
       * @param runtime runtime options for this request RuntimeOptions
       * @return DeleteResourceResponse
      */
-    public DeleteResourceResponse deleteResourceWithOptions(String resourcePath, DeleteResourceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public DeleteResourceResponse deleteResourceWithOptions(String requestPath, DeleteResourceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
@@ -130,7 +130,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "DeleteResource"),
             new TeaPair("version", "2022-08-30"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "" + resourcePath + ""),
+            new TeaPair("pathname", "" + requestPath + ""),
             new TeaPair("method", "DELETE"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -143,17 +143,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * DELETE /api/v1/providers/{provider}/products/{product}/resources/{parentResourcePath}/{resourceTypeCode}/{resourceId}。
       *
-      * @param resourcePath the whole path of resource string
+      * @param requestPath the whole path of resource string
       * @param request DeleteResourceRequest
       * @return DeleteResourceResponse
      */
-    public DeleteResourceResponse deleteResource(String resourcePath, DeleteResourceRequest request) throws Exception {
+    public DeleteResourceResponse deleteResource(String requestPath, DeleteResourceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deleteResourceWithOptions(resourcePath, request, headers, runtime);
+        return this.deleteResourceWithOptions(requestPath, request, headers, runtime);
     }
 
-    public GetResourceTypeResponse getResourceTypeWithOptions(String resourcePath, GetResourceTypeHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetResourceTypeResponse getResourceTypeWithOptions(String requestPath, GetResourceTypeHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
             realHeaders = headers.commonHeaders;
@@ -170,7 +170,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "GetResourceType"),
             new TeaPair("version", "2022-08-30"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "" + resourcePath + ""),
+            new TeaPair("pathname", "" + requestPath + ""),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -180,13 +180,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetResourceTypeResponse());
     }
 
-    public GetResourceTypeResponse getResourceType(String resourcePath) throws Exception {
+    public GetResourceTypeResponse getResourceType(String requestPath) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         GetResourceTypeHeaders headers = new GetResourceTypeHeaders();
-        return this.getResourceTypeWithOptions(resourcePath, headers, runtime);
+        return this.getResourceTypeWithOptions(requestPath, headers, runtime);
     }
 
-    public GetResourcesResponse getResourcesWithOptions(String resourcePath, GetResourcesRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetResourcesResponse getResourcesWithOptions(String requestPath, GetResourcesRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         GetResourcesShrinkRequest request = new GetResourcesShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
@@ -219,7 +219,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "GetResources"),
             new TeaPair("version", "2022-08-30"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "" + resourcePath + ""),
+            new TeaPair("pathname", "" + requestPath + ""),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -229,10 +229,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetResourcesResponse());
     }
 
-    public GetResourcesResponse getResources(String resourcePath, GetResourcesRequest request) throws Exception {
+    public GetResourcesResponse getResources(String requestPath, GetResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getResourcesWithOptions(resourcePath, request, headers, runtime);
+        return this.getResourcesWithOptions(requestPath, request, headers, runtime);
     }
 
     /**
@@ -274,13 +274,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * GET /api/v1/providers/{provider}/products/{product}/dataSources/{resourceType}。
       *
-      * @param resourcePath the whole path of resource string
+      * @param requestPath the whole path of resource string
       * @param tmpReq ListDataSourcesRequest
       * @param headers map
       * @param runtime runtime options for this request RuntimeOptions
       * @return ListDataSourcesResponse
      */
-    public ListDataSourcesResponse listDataSourcesWithOptions(String resourcePath, ListDataSourcesRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public ListDataSourcesResponse listDataSourcesWithOptions(String requestPath, ListDataSourcesRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         ListDataSourcesShrinkRequest request = new ListDataSourcesShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
@@ -305,7 +305,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "ListDataSources"),
             new TeaPair("version", "2022-08-30"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "" + resourcePath + ""),
+            new TeaPair("pathname", "" + requestPath + ""),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -318,14 +318,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * GET /api/v1/providers/{provider}/products/{product}/dataSources/{resourceType}。
       *
-      * @param resourcePath the whole path of resource string
+      * @param requestPath the whole path of resource string
       * @param request ListDataSourcesRequest
       * @return ListDataSourcesResponse
      */
-    public ListDataSourcesResponse listDataSources(String resourcePath, ListDataSourcesRequest request) throws Exception {
+    public ListDataSourcesResponse listDataSources(String requestPath, ListDataSourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.listDataSourcesWithOptions(resourcePath, request, headers, runtime);
+        return this.listDataSourcesWithOptions(requestPath, request, headers, runtime);
     }
 
     /**
@@ -454,7 +454,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listResourceTypesWithOptions(provider, product, request, headers, runtime);
     }
 
-    public UpdateResourceResponse updateResourceWithOptions(String resourcePath, UpdateResourceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public UpdateResourceResponse updateResourceWithOptions(String requestPath, UpdateResourceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
@@ -468,13 +468,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", request.body)
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "UpdateResource"),
             new TeaPair("version", "2022-08-30"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "" + resourcePath + ""),
+            new TeaPair("pathname", "" + requestPath + ""),
             new TeaPair("method", "PUT"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -484,9 +484,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateResourceResponse());
     }
 
-    public UpdateResourceResponse updateResource(String resourcePath, UpdateResourceRequest request) throws Exception {
+    public UpdateResourceResponse updateResource(String requestPath, UpdateResourceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.updateResourceWithOptions(resourcePath, request, headers, runtime);
+        return this.updateResourceWithOptions(requestPath, request, headers, runtime);
     }
 }
