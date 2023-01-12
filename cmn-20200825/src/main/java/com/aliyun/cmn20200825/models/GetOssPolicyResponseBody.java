@@ -4,6 +4,9 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class GetOssPolicyResponseBody extends TeaModel {
+    /**
+     * <p>资源上传规则</p>
+     */
     @NameInMap("OssPolicy")
     public GetOssPolicyResponseBodyOssPolicy ossPolicy;
 
@@ -32,21 +35,39 @@ public class GetOssPolicyResponseBody extends TeaModel {
     }
 
     public static class GetOssPolicyResponseBodyOssPolicy extends TeaModel {
+        /**
+         * <p>通行id</p>
+         */
         @NameInMap("AccessId")
         public String accessId;
 
+        /**
+         * <p>目录</p>
+         */
         @NameInMap("Directory")
         public String directory;
 
+        /**
+         * <p>过期时间</p>
+         */
         @NameInMap("ExpireTime")
         public String expireTime;
 
+        /**
+         * <p>主机名</p>
+         */
         @NameInMap("Host")
         public String host;
 
+        /**
+         * <p>通行规则</p>
+         */
         @NameInMap("Policy")
         public String policy;
 
+        /**
+         * <p>签名</p>
+         */
         @NameInMap("Signature")
         public String signature;
 

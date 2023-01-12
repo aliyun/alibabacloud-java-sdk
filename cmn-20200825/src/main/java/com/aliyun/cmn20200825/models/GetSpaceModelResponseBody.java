@@ -7,6 +7,9 @@ public class GetSpaceModelResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>物理空间模型</p>
+     */
     @NameInMap("SpaceModel")
     public GetSpaceModelResponseBodySpaceModel spaceModel;
 
@@ -62,21 +65,39 @@ public class GetSpaceModelResponseBody extends TeaModel {
     }
 
     public static class GetSpaceModelResponseBodySpaceModel extends TeaModel {
+        /**
+         * <p>创建时间</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>模型实例</p>
+         */
         @NameInMap("Sort")
         public java.util.List<GetSpaceModelResponseBodySpaceModelSort> sort;
 
+        /**
+         * <p>物理空间模型id</p>
+         */
         @NameInMap("SpaceModelId")
         public String spaceModelId;
 
+        /**
+         * <p>物理空间类型</p>
+         */
         @NameInMap("SpaceType")
         public String spaceType;
 
+        /**
+         * <p>模型状态</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>更新时间</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

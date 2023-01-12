@@ -4,18 +4,27 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class CreateDeviceFormRequest extends TeaModel {
+    /**
+     * <p>是否需要账号配置</p>
+     */
     @NameInMap("AccountConfig")
     public Boolean accountConfig;
 
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>是否支持配置生成</p>
+     */
     @NameInMap("ConfigCompare")
     public Boolean configCompare;
 
     @NameInMap("DetailDisplay")
     public Boolean detailDisplay;
 
+    /**
+     * <p>设备形态名称</p>
+     */
     @NameInMap("DeviceFormName")
     public String deviceFormName;
 

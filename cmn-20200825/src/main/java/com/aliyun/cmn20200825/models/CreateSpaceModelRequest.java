@@ -13,6 +13,9 @@ public class CreateSpaceModelRequest extends TeaModel {
     @NameInMap("Sort")
     public java.util.List<CreateSpaceModelRequestSort> sort;
 
+    /**
+     * <p>物理空间类型</p>
+     */
     @NameInMap("SpaceType")
     public String spaceType;
 

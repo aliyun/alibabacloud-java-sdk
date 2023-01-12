@@ -13,6 +13,9 @@ public class ListAlarmStatusResponseBody extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -289,6 +292,9 @@ public class ListAlarmStatusResponseBody extends TeaModel {
     }
 
     public static class ListAlarmStatusResponseBodyAlarmStatusResourceDevice extends TeaModel {
+        @NameInMap("City")
+        public String city;
+
         @NameInMap("DeviceForm")
         public String deviceForm;
 
@@ -301,6 +307,14 @@ public class ListAlarmStatusResponseBody extends TeaModel {
         public static ListAlarmStatusResponseBodyAlarmStatusResourceDevice build(java.util.Map<String, ?> map) throws Exception {
             ListAlarmStatusResponseBodyAlarmStatusResourceDevice self = new ListAlarmStatusResponseBodyAlarmStatusResourceDevice();
             return TeaModel.build(map, self);
+        }
+
+        public ListAlarmStatusResponseBodyAlarmStatusResourceDevice setCity(String city) {
+            this.city = city;
+            return this;
+        }
+        public String getCity() {
+            return this.city;
         }
 
         public ListAlarmStatusResponseBodyAlarmStatusResourceDevice setDeviceForm(String deviceForm) {

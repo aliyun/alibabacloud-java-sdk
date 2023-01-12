@@ -7,6 +7,9 @@ public class GetDeviceFormResponseBody extends TeaModel {
     @NameInMap("DeviceForm")
     public GetDeviceFormResponseBodyDeviceForm deviceForm;
 
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,42 +35,78 @@ public class GetDeviceFormResponseBody extends TeaModel {
     }
 
     public static class GetDeviceFormResponseBodyDeviceFormAttributeList extends TeaModel {
+        /**
+         * <p>内置属性不可修改和删除</p>
+         */
         @NameInMap("AttributeBuiltIn")
         public Boolean attributeBuiltIn;
 
+        /**
+         * <p>设备形态属性值格式</p>
+         */
         @NameInMap("AttributeFormat")
         public String attributeFormat;
 
+        /**
+         * <p>前端查询控件是否支持模糊搜索</p>
+         */
         @NameInMap("AttributeFuzzyQuery")
         public Boolean attributeFuzzyQuery;
 
+        /**
+         * <p>设备形态属性主键</p>
+         */
         @NameInMap("AttributeKey")
         public String attributeKey;
 
+        /**
+         * <p>设备形态属性名称</p>
+         */
         @NameInMap("AttributeName")
         public String attributeName;
 
+        /**
+         * <p>前端查询控件占位符</p>
+         */
         @NameInMap("AttributePlaceholder")
         public String attributePlaceholder;
 
+        /**
+         * <p>前端是否展示对应的查询控件</p>
+         */
         @NameInMap("AttributeQuery")
         public Boolean attributeQuery;
 
+        /**
+         * <p>设备形态属性关联对象</p>
+         */
         @NameInMap("AttributeReference")
         public String attributeReference;
 
+        /**
+         * <p>设备形态属性是否必填</p>
+         */
         @NameInMap("AttributeRequirement")
         public Boolean attributeRequirement;
 
         @NameInMap("AttributeSequence")
         public Integer attributeSequence;
 
+        /**
+         * <p>设备形态属性是否表格可见</p>
+         */
         @NameInMap("AttributeTableDisplay")
         public Boolean attributeTableDisplay;
 
+        /**
+         * <p>设备形态属性值类型</p>
+         */
         @NameInMap("AttributeType")
         public String attributeType;
 
+        /**
+         * <p>设备形态属性是否唯一</p>
+         */
         @NameInMap("AttributeUniqueness")
         public Boolean attributeUniqueness;
 
@@ -183,24 +222,42 @@ public class GetDeviceFormResponseBody extends TeaModel {
     }
 
     public static class GetDeviceFormResponseBodyDeviceForm extends TeaModel {
+        /**
+         * <p>是否需要账号配置</p>
+         */
         @NameInMap("AccountConfig")
         public Boolean accountConfig;
 
+        /**
+         * <p>设备形态属性列表</p>
+         */
         @NameInMap("AttributeList")
         public java.util.List<GetDeviceFormResponseBodyDeviceFormAttributeList> attributeList;
 
+        /**
+         * <p>是否支持配置生成</p>
+         */
         @NameInMap("ConfigCompare")
         public Boolean configCompare;
 
         @NameInMap("DetailDisplay")
         public Boolean detailDisplay;
 
+        /**
+         * <p>设备形态ID</p>
+         */
         @NameInMap("DeviceFormId")
         public String deviceFormId;
 
+        /**
+         * <p>设备形态名称</p>
+         */
         @NameInMap("DeviceFormName")
         public String deviceFormName;
 
+        /**
+         * <p>内置形态不可修改和删除</p>
+         */
         @NameInMap("FormBuiltIn")
         public Boolean formBuiltIn;
 

@@ -7,6 +7,9 @@ public class UpdateSpaceModelRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>层级</p>
+     */
     @NameInMap("Sort")
     public java.util.List<UpdateSpaceModelRequestSort> sort;
 

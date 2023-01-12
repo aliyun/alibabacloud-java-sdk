@@ -4,18 +4,27 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class UpdateResourceInformationShrinkRequest extends TeaModel {
+    /**
+     * <p>信息</p>
+     */
     @NameInMap("Information")
     public String informationShrink;
 
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>资源属性</p>
+     */
     @NameInMap("ResourceAttribute")
     public String resourceAttribute;
 
     @NameInMap("ResourceInformationId")
     public String resourceInformationId;
 
+    /**
+     * <p>资源类型</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 

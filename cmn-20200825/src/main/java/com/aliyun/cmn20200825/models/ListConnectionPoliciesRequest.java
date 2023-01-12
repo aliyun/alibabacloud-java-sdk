@@ -4,15 +4,27 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ListConnectionPoliciesRequest extends TeaModel {
+    /**
+     * <p>架构迭代uid</p>
+     */
     @NameInMap("ArchitectureIterationId")
     public String architectureIterationId;
 
+    /**
+     * <p>连接策略名字</p>
+     */
     @NameInMap("ConnectionPolicyId")
     public String connectionPolicyId;
 
+    /**
+     * <p>下联设备uid</p>
+     */
     @NameInMap("DownlinkArchitectureDeviceId")
     public String downlinkArchitectureDeviceId;
 
+    /**
+     * <p>下联模块uid</p>
+     */
     @NameInMap("DownlinkArchitectureModuleId")
     public String downlinkArchitectureModuleId;
 
@@ -25,9 +37,15 @@ public class ListConnectionPoliciesRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>上联设备uid</p>
+     */
     @NameInMap("UplinkArchitectureDeviceId")
     public String uplinkArchitectureDeviceId;
 
+    /**
+     * <p>上联模块uid</p>
+     */
     @NameInMap("UplinkArchitectureModuleId")
     public String uplinkArchitectureModuleId;
 

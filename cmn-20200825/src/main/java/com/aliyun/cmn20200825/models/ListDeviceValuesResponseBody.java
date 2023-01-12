@@ -7,6 +7,9 @@ public class ListDeviceValuesResponseBody extends TeaModel {
     @NameInMap("DeviceValues")
     public java.util.List<String> deviceValues;
 
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

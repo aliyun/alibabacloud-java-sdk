@@ -7,6 +7,9 @@ public class UpdateSpaceModelShrinkRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>层级</p>
+     */
     @NameInMap("Sort")
     public String sortShrink;
 

@@ -4,18 +4,30 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class UpdateDeviceFormShrinkRequest extends TeaModel {
+    /**
+     * <p>是否需要账号配置</p>
+     */
     @NameInMap("AccountConfig")
     public Boolean accountConfig;
 
+    /**
+     * <p>设备形态属性列表</p>
+     */
     @NameInMap("AttributeList")
     public String attributeListShrink;
 
+    /**
+     * <p>是否支持配置生成</p>
+     */
     @NameInMap("ConfigCompare")
     public Boolean configCompare;
 
     @NameInMap("DetailDisplay")
     public Boolean detailDisplay;
 
+    /**
+     * <p>设备形态ID</p>
+     */
     @NameInMap("DeviceFormId")
     public String deviceFormId;
 

@@ -10,15 +10,24 @@ public class CreateResourceInformationRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>信息</p>
+     */
     @NameInMap("Information")
     public java.util.List<CreateResourceInformationRequestInformation> information;
 
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>资源属性</p>
+     */
     @NameInMap("ResourceAttribute")
     public String resourceAttribute;
 
+    /**
+     * <p>资源类型</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
@@ -76,15 +85,27 @@ public class CreateResourceInformationRequest extends TeaModel {
     }
 
     public static class CreateResourceInformationRequestInformation extends TeaModel {
+        /**
+         * <p>键</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>键动作</p>
+         */
         @NameInMap("KeyAction")
         public String keyAction;
 
+        /**
+         * <p>键属性</p>
+         */
         @NameInMap("KeyAttribute")
         public String keyAttribute;
 
+        /**
+         * <p>键描述</p>
+         */
         @NameInMap("KeyDescription")
         public String keyDescription;
 

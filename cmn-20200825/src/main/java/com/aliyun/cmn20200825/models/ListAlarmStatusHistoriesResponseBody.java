@@ -7,6 +7,9 @@ public class ListAlarmStatusHistoriesResponseBody extends TeaModel {
     @NameInMap("AlarmStatusHistories")
     public java.util.List<ListAlarmStatusHistoriesResponseBodyAlarmStatusHistories> alarmStatusHistories;
 
+    /**
+     * <p>request id</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

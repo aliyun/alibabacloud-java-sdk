@@ -7,6 +7,9 @@ public class UpdateConfigurationVariateRequest extends TeaModel {
     @NameInMap("Comment")
     public String comment;
 
+    /**
+     * <p>代表资源一级ID的资源属性字段</p>
+     */
     @NameInMap("ConfigurationVariateId")
     public String configurationVariateId;
 

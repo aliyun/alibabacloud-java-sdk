@@ -7,6 +7,9 @@ public class CreatePhysicalSpaceResponseBody extends TeaModel {
     @NameInMap("PhysicalSpaceId")
     public String physicalSpaceId;
 
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

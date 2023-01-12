@@ -4,15 +4,24 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class CreateSetupProjectRequest extends TeaModel {
+    /**
+     * <p>代表创建时间的资源属性字段</p>
+     */
     @NameInMap("DeliveryTime")
     public String deliveryTime;
 
+    /**
+     * <p>描述</p>
+     */
     @NameInMap("Description")
     public String description;
 
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>物理空间uId</p>
+     */
     @NameInMap("SpaceId")
     public String spaceId;
 

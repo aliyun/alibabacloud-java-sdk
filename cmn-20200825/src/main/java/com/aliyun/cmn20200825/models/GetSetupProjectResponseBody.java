@@ -32,15 +32,27 @@ public class GetSetupProjectResponseBody extends TeaModel {
     }
 
     public static class GetSetupProjectResponseBodySetupProjectPackages extends TeaModel {
+        /**
+         * <p>设备号</p>
+         */
         @NameInMap("DeviceNumber")
         public String deviceNumber;
 
+        /**
+         * <p>型号</p>
+         */
         @NameInMap("Model")
         public String model;
 
+        /**
+         * <p>角色</p>
+         */
         @NameInMap("Role")
         public String role;
 
+        /**
+         * <p>厂商</p>
+         */
         @NameInMap("Vendor")
         public String vendor;
 
@@ -84,24 +96,42 @@ public class GetSetupProjectResponseBody extends TeaModel {
     }
 
     public static class GetSetupProjectResponseBodySetupProject extends TeaModel {
+        /**
+         * <p>代表创建时间的资源属性字段</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>预计交付时间</p>
+         */
         @NameInMap("DeliveryTime")
         public String deliveryTime;
 
+        /**
+         * <p>节点</p>
+         */
         @NameInMap("Nodes")
         public String nodes;
 
+        /**
+         * <p>套餐</p>
+         */
         @NameInMap("Packages")
         public java.util.List<GetSetupProjectResponseBodySetupProjectPackages> packages;
 
         @NameInMap("Progress")
         public String progress;
 
+        /**
+         * <p>代表资源一级ID的资源属性字段</p>
+         */
         @NameInMap("SetupProjectId")
         public String setupProjectId;
 
+        /**
+         * <p>物理空间uId</p>
+         */
         @NameInMap("SpaceId")
         public String spaceId;
 

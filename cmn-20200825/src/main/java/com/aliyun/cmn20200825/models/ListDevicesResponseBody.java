@@ -31,6 +31,9 @@ public class ListDevicesResponseBody extends TeaModel {
     @NameInMap("OtherCoefficient")
     public Integer otherCoefficient;
 
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -159,12 +162,18 @@ public class ListDevicesResponseBody extends TeaModel {
         @NameInMap("DeviceFormName")
         public String deviceFormName;
 
+        /**
+         * <p>设备ID</p>
+         */
         @NameInMap("DeviceId")
         public String deviceId;
 
         @NameInMap("EnablePassword")
         public String enablePassword;
 
+        /**
+         * <p>设备额外属性(JSON)</p>
+         */
         @NameInMap("ExtAttributes")
         public String extAttributes;
 
@@ -174,69 +183,135 @@ public class ListDevicesResponseBody extends TeaModel {
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>主机名</p>
+         */
         @NameInMap("HostName")
         public String hostName;
 
+        /**
+         * <p>设备IP</p>
+         */
         @NameInMap("Ip")
         public String ip;
 
+        /**
+         * <p>登录账号</p>
+         */
         @NameInMap("LoginPassword")
         public String loginPassword;
 
+        /**
+         * <p>登录类型，SSH或者TELNET</p>
+         */
         @NameInMap("LoginType")
         public String loginType;
 
+        /**
+         * <p>登录账号</p>
+         */
         @NameInMap("LoginUsername")
         public String loginUsername;
 
+        /**
+         * <p>设备MAC地址</p>
+         */
         @NameInMap("Mac")
         public String mac;
 
+        /**
+         * <p>设备型号</p>
+         */
         @NameInMap("Model")
         public String model;
 
+        /**
+         * <p>物理空间ID</p>
+         */
         @NameInMap("PhysicalSpaceId")
         public String physicalSpaceId;
 
+        /**
+         * <p>物理空间名称</p>
+         */
         @NameInMap("PhysicalSpaceName")
         public String physicalSpaceName;
 
+        /**
+         * <p>设备安全域</p>
+         */
         @NameInMap("SecurityDomain")
         public String securityDomain;
 
+        /**
+         * <p>设备状态</p>
+         */
         @NameInMap("ServiceStatus")
         public String serviceStatus;
 
+        /**
+         * <p>设备SN</p>
+         */
         @NameInMap("Sn")
         public String sn;
 
+        /**
+         * <p>SNMP 账号类型</p>
+         */
         @NameInMap("SnmpAccountType")
         public String snmpAccountType;
 
+        /**
+         * <p>SNMP版本号</p>
+         */
         @NameInMap("SnmpAccountVersion")
         public String snmpAccountVersion;
 
+        /**
+         * <p>SNMP Auth PassPhrase</p>
+         */
         @NameInMap("SnmpAuthPassphrase")
         public String snmpAuthPassphrase;
 
+        /**
+         * <p>SNMP Auth Protocol</p>
+         */
         @NameInMap("SnmpAuthProtocol")
         public String snmpAuthProtocol;
 
+        /**
+         * <p>SNMP Community</p>
+         */
         @NameInMap("SnmpCommunity")
         public String snmpCommunity;
 
+        /**
+         * <p>SNMP Privacy Passphrase</p>
+         */
         @NameInMap("SnmpPrivacyPassphrase")
         public String snmpPrivacyPassphrase;
 
+        /**
+         * <p>SNMP Privacy Protocol</p>
+         */
         @NameInMap("SnmpPrivacyProtocol")
         public String snmpPrivacyProtocol;
 
+        /**
+         * <p>SNMP 安全级别</p>
+         */
         @NameInMap("SnmpSecurityLevel")
         public String snmpSecurityLevel;
 
+        /**
+         * <p>SNMP 用户名</p>
+         */
         @NameInMap("SnmpUsername")
         public String snmpUsername;
 
+        /**
+         * <p>设备厂商</p>
+         */
         @NameInMap("Vendor")
         public String vendor;
 

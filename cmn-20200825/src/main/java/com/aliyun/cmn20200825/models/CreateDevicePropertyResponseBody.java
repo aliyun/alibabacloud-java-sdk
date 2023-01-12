@@ -7,6 +7,9 @@ public class CreateDevicePropertyResponseBody extends TeaModel {
     @NameInMap("DevicePropertyId")
     public String devicePropertyId;
 
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -65,15 +65,27 @@ public class ListResourceInformationsResponseBody extends TeaModel {
     }
 
     public static class ListResourceInformationsResponseBodyResourceInformationInformation extends TeaModel {
+        /**
+         * <p>键</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>键动作</p>
+         */
         @NameInMap("KeyAction")
         public String keyAction;
 
+        /**
+         * <p>键属性</p>
+         */
         @NameInMap("KeyAttribute")
         public String keyAttribute;
 
+        /**
+         * <p>键描述</p>
+         */
         @NameInMap("KeyDescription")
         public String keyDescription;
 
@@ -117,15 +129,27 @@ public class ListResourceInformationsResponseBody extends TeaModel {
     }
 
     public static class ListResourceInformationsResponseBodyResourceInformation extends TeaModel {
+        /**
+         * <p>信息</p>
+         */
         @NameInMap("Information")
         public java.util.List<ListResourceInformationsResponseBodyResourceInformationInformation> information;
 
+        /**
+         * <p>资源属性</p>
+         */
         @NameInMap("ResourceAttribute")
         public String resourceAttribute;
 
+        /**
+         * <p>代表资源一级ID的资源属性字段</p>
+         */
         @NameInMap("ResourceInformationId")
         public String resourceInformationId;
 
+        /**
+         * <p>资源类型</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 

@@ -54,51 +54,99 @@ public class ListLinksResponseBody extends TeaModel {
     }
 
     public static class ListLinksResponseBodyContent extends TeaModel {
+        /**
+         * <p>A端设备名</p>
+         */
         @NameInMap("DeviceNameA")
         public String deviceNameA;
 
+        /**
+         * <p>B端设备名</p>
+         */
         @NameInMap("DeviceNameB")
         public String deviceNameB;
 
+        /**
+         * <p>创建时间</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>修改时间</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>A端端口索引</p>
+         */
         @NameInMap("IdxA")
         public String idxA;
 
+        /**
+         * <p>B端端口索引</p>
+         */
         @NameInMap("IdxB")
         public String idxB;
 
+        /**
+         * <p>A端IP</p>
+         */
         @NameInMap("IpA")
         public String ipA;
 
+        /**
+         * <p>B端IP</p>
+         */
         @NameInMap("IpB")
         public String ipB;
 
+        /**
+         * <p>链路发现任务</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <p>链路名称</p>
+         */
         @NameInMap("LinkName")
         public String linkName;
 
+        /**
+         * <p>链路编号</p>
+         */
         @NameInMap("LinkNo")
         public String linkNo;
 
+        /**
+         * <p>链路状态</p>
+         */
         @NameInMap("LinkStatus")
         public String linkStatus;
 
+        /**
+         * <p>链路类型（单端、双端）</p>
+         */
         @NameInMap("LinkType")
         public String linkType;
 
+        /**
+         * <p>报错信息或者日志</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>A端端口名</p>
+         */
         @NameInMap("PortA")
         public String portA;
 
+        /**
+         * <p>B端端口名</p>
+         */
         @NameInMap("PortB")
         public String portB;
 
@@ -108,18 +156,33 @@ public class ListLinksResponseBody extends TeaModel {
         @NameInMap("PortDescB")
         public String portDescB;
 
+        /**
+         * <p>A端端口状态</p>
+         */
         @NameInMap("PortStatusA")
         public String portStatusA;
 
+        /**
+         * <p>B端端口状态</p>
+         */
         @NameInMap("PortStatusB")
         public String portStatusB;
 
+        /**
+         * <p>A端端口类型</p>
+         */
         @NameInMap("PortTypeA")
         public String portTypeA;
 
+        /**
+         * <p>B端端口类型</p>
+         */
         @NameInMap("PortTypeB")
         public String portTypeB;
 
+        /**
+         * <p>代表region的资源属性字段</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
