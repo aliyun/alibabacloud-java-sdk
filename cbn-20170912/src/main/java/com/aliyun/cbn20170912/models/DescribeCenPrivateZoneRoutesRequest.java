@@ -4,18 +4,35 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DescribeCenPrivateZoneRoutesRequest extends TeaModel {
+    /**
+     * <p>The ID of the region where PrivateZone is accessed.</p>
+     * <br>
+     * <p>You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("AccessRegionId")
     public String accessRegionId;
 
+    /**
+     * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+     */
     @NameInMap("CenId")
     public String cenId;
 
+    /**
+     * <p>The ID of the region where PrivateZone is deployed.</p>
+     */
     @NameInMap("HostRegionId")
     public String hostRegionId;
 
+    /**
+     * <p>The number of the page to return. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Default value: **10**. Valid values: **1** to **50**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

@@ -4,12 +4,21 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class CreateCenBandwidthPackageResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the bandwidth plan.</p>
+     */
     @NameInMap("CenBandwidthPackageId")
     public String cenBandwidthPackageId;
 
+    /**
+     * <p>The ID of the order for the bandwidth plan.</p>
+     */
     @NameInMap("CenBandwidthPackageOrderId")
     public String cenBandwidthPackageOrderId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

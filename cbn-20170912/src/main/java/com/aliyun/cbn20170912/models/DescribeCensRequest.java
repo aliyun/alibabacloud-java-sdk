@@ -4,6 +4,9 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DescribeCensRequest extends TeaModel {
+    /**
+     * <p>The list of the filter conditions.</p>
+     */
     @NameInMap("Filter")
     public java.util.List<DescribeCensRequestFilter> filter;
 
@@ -13,9 +16,15 @@ public class DescribeCensRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Valid values: **1** to **50**. Default value: **10**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -25,6 +34,9 @@ public class DescribeCensRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeCensRequestTag> tag;
 
@@ -98,9 +110,22 @@ public class DescribeCensRequest extends TeaModel {
     }
 
     public static class DescribeCensRequestFilter extends TeaModel {
+        /**
+         * <p>The filter condition. Valid values:</p>
+         * <br>
+         * <p>*   **CenId**: the ID of a CEN instance.</p>
+         * <p>*   **Name**: the name of a CEN instance.</p>
+         * <br>
+         * <p>By default, the logical operator among filter conditions is **AND**. Information about a CEN instance is returned only if the CEN instance matches all filter conditions.</p>
+         * <br>
+         * <p>You can specify at most five filter conditions in each call.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The values of the filter condition.</p>
+         */
         @NameInMap("Value")
         public java.util.List<String> value;
 
@@ -128,9 +153,23 @@ public class DescribeCensRequest extends TeaModel {
     }
 
     public static class DescribeCensRequestTag extends TeaModel {
+        /**
+         * <p>The tag keys of the resources.</p>
+         * <br>
+         * <p>The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         * <br>
+         * <p>You can specify at most 20 tag keys.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag values of the resources.</p>
+         * <br>
+         * <p>The tag values can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
+         * <br>
+         * <p>Each tag key has a unique tag value. You can specify at most 20 tag values in each call.</p>
+         */
         @NameInMap("Value")
         public String value;
 

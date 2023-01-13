@@ -4,21 +4,48 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DeleteCenChildInstanceRouteEntryToCenRequest extends TeaModel {
+    /**
+     * <p>The ID of the CEN instance.</p>
+     */
     @NameInMap("CenId")
     public String cenId;
 
+    /**
+     * <p>The ID of the Alibaba Cloud account to which the network instance belongs.</p>
+     * <br>
+     * <p>>  If the network instance belongs to another Alibaba Cloud account, this parameter is required.</p>
+     */
     @NameInMap("ChildInstanceAliUid")
     public Long childInstanceAliUid;
 
+    /**
+     * <p>The ID of the network instance.</p>
+     */
     @NameInMap("ChildInstanceId")
     public String childInstanceId;
 
+    /**
+     * <p>The ID of the region where the network instance is deployed.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("ChildInstanceRegionId")
     public String childInstanceRegionId;
 
+    /**
+     * <p>The type of the attached network instance. Valid values:</p>
+     * <br>
+     * <p>*   **VPC**: a virtual private cloud (VPC)</p>
+     * <p>*   **VBR**: a virtual border router (VBR)</p>
+     */
     @NameInMap("ChildInstanceType")
     public String childInstanceType;
 
+    /**
+     * <p>The destination CIDR block of the route entry.</p>
+     * <br>
+     * <p>Specify the value of this parameter in CIDR notation. Example: 192.168.10.0/24.</p>
+     */
     @NameInMap("DestinationCidrBlock")
     public String destinationCidrBlock;
 
@@ -34,6 +61,9 @@ public class DeleteCenChildInstanceRouteEntryToCenRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the route table of the network instance.</p>
+     */
     @NameInMap("RouteTableId")
     public String routeTableId;
 

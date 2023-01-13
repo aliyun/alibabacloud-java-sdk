@@ -4,18 +4,36 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token that is used for the next query. Valid values:</p>
+     * <br>
+     * <p>*   If the returned value of **NextToken** is empty, it indicates that no next query is to be sent.</p>
+     * <p>*   If the returned value of **NextToken** is not empty, the value indicates the token that is used for the next query.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>The list of cross-region connections.</p>
+     */
     @NameInMap("TransitRouterAttachments")
     public java.util.List<ListTransitRouterPeerAttachmentsResponseBodyTransitRouterAttachments> transitRouterAttachments;
 
@@ -65,9 +83,15 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
     }
 
     public static class ListTransitRouterPeerAttachmentsResponseBodyTransitRouterAttachmentsTags extends TeaModel {
+        /**
+         * <p>The key of tag.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -95,54 +119,127 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
     }
 
     public static class ListTransitRouterPeerAttachmentsResponseBodyTransitRouterAttachments extends TeaModel {
+        /**
+         * <p>Indicates whether the local Enterprise Edition transit router automatically advertises routes of the cross-region connection to the peer transit router. Valid values:</p>
+         * <br>
+         * <p>*   **false** (default): no</p>
+         * <p>*   **true**: yes</p>
+         */
         @NameInMap("AutoPublishRouteEnabled")
         public Boolean autoPublishRouteEnabled;
 
+        /**
+         * <p>The bandwidth value of the cross-region connection. Unit: Mbit/s.</p>
+         * <br>
+         * <p>*   If **BandwidthType** is set to **BandwidthPackage**, this parameter indicates the bandwidth that is available for the cross-region connection.</p>
+         * <p>*   If **BandwidthType** is set to **DataTransfer**, this parameter indicates the bandwidth limit of the cross-region connection.</p>
+         */
         @NameInMap("Bandwidth")
         public Integer bandwidth;
 
+        /**
+         * <p>The bandwidth allocation method. Valid values:</p>
+         * <br>
+         * <p>**BandwidthPackage**: allocates bandwidth from a bandwidth plan.</p>
+         * <br>
+         * <p>**DataTransfer**: uses pay-by-data-transfer bandwidth.</p>
+         */
         @NameInMap("BandwidthType")
         public String bandwidthType;
 
+        /**
+         * <p>The ID of the bandwidth plan that is used to allocate bandwidth to the cross-region connection.</p>
+         */
         @NameInMap("CenBandwidthPackageId")
         public String cenBandwidthPackageId;
 
+        /**
+         * <p>The time when the cross-region connection was created.</p>
+         * <br>
+         * <p>The time follows the ISO8601 standard in the `YYYY-MM-ddTHH:mmZ` format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The areas that are connected by the bandwidth plan.</p>
+         */
         @NameInMap("GeographicSpanId")
         public String geographicSpanId;
 
+        /**
+         * <p>The ID of the peer transit router.</p>
+         */
         @NameInMap("PeerTransitRouterId")
         public String peerTransitRouterId;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account to which the peer transit router belongs.</p>
+         */
         @NameInMap("PeerTransitRouterOwnerId")
         public Long peerTransitRouterOwnerId;
 
+        /**
+         * <p>The ID of the region where the peer transit router is deployed.</p>
+         */
         @NameInMap("PeerTransitRouterRegionId")
         public String peerTransitRouterRegionId;
 
+        /**
+         * <p>The ID of the region where the Enterprise Edition transit router is deployed.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The type of the resource to which the transit router is connected. Valid values:</p>
+         * <br>
+         * <p>*   **VPC**: virtual private cloud (VPC)</p>
+         * <p>*   **CCN**: Cloud Connect Network (CCN) instance</p>
+         * <p>*   **VBR**: virtual border router (VBR)</p>
+         * <p>*   **TR**: transit router</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
+        /**
+         * <p>The status of the cross-region connection. Valid values:</p>
+         * <br>
+         * <p>*   **Attached**: The local transit router is connected to the peer transit router.</p>
+         * <p>*   **Attaching**: The local transit router is connecting to the peer transit router.</p>
+         * <p>*   **Detaching**: The local transit router is disconnecting from the peer transit router.</p>
+         * <p>*   **Detached**: The local transit router is disconnected from the peer transit router.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The list of tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListTransitRouterPeerAttachmentsResponseBodyTransitRouterAttachmentsTags> tags;
 
+        /**
+         * <p>The description of the cross-region connection.</p>
+         */
         @NameInMap("TransitRouterAttachmentDescription")
         public String transitRouterAttachmentDescription;
 
+        /**
+         * <p>The ID of the cross-region connection.</p>
+         */
         @NameInMap("TransitRouterAttachmentId")
         public String transitRouterAttachmentId;
 
+        /**
+         * <p>The name of the cross-region connection.</p>
+         */
         @NameInMap("TransitRouterAttachmentName")
         public String transitRouterAttachmentName;
 
+        /**
+         * <p>The ID of the Enterprise Edition transit router.</p>
+         */
         @NameInMap("TransitRouterId")
         public String transitRouterId;
 

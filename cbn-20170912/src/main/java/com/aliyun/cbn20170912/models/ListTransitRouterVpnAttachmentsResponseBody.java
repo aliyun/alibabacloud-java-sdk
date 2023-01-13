@@ -4,18 +4,36 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token that determines the start point of the query. Valid values:</p>
+     * <br>
+     * <p>- If **NextToken** was not returned, it indicates that no additional results exist.</p>
+     * <p>- If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>The information about the VPN attachment.</p>
+     */
     @NameInMap("TransitRouterAttachments")
     public java.util.List<ListTransitRouterVpnAttachmentsResponseBodyTransitRouterAttachments> transitRouterAttachments;
 
@@ -65,9 +83,15 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
     }
 
     public static class ListTransitRouterVpnAttachmentsResponseBodyTransitRouterAttachmentsTags extends TeaModel {
+        /**
+         * <p>The key of tag.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of tag.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -95,6 +119,11 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
     }
 
     public static class ListTransitRouterVpnAttachmentsResponseBodyTransitRouterAttachmentsZones extends TeaModel {
+        /**
+         * <p>The zone ID. </p>
+         * <br>
+         * <p>You can call [DescribeZones](https://www.alibabacloud.com/help/en/virtual-private-cloud/latest/describezones) to query zones by ID.</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 
@@ -114,45 +143,103 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
     }
 
     public static class ListTransitRouterVpnAttachmentsResponseBodyTransitRouterAttachments extends TeaModel {
+        /**
+         * <p>Indicates whether to allow the transit router to automatically advertise routes to the IPsec connection. Valid values:</p>
+         * <br>
+         * <p>*   **true**: yes</p>
+         * <p>*   **false**: no</p>
+         */
         @NameInMap("AutoPublishRouteEnabled")
         public Boolean autoPublishRouteEnabled;
 
+        /**
+         * <p>The billing method of the VPC connection.</p>
+         * <br>
+         * <p>Valid value: **POSTPAY**, which is the default value and specifies the pay-as-you-go billing method.</p>
+         */
         @NameInMap("ChargeType")
         public String chargeType;
 
+        /**
+         * <p>The time when the VPN attachment was created. </p>
+         * <br>
+         * <p>The time follows the ISO8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The type of resource to which the transit router is connected. </p>
+         * <br>
+         * <p>Valid value: **VPN**, which indicates that an IPsec-VPN connection is attached to the transit router.</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
+        /**
+         * <p>The status of the VPN attachment. Valid values: </p>
+         * <br>
+         * <p>- **Attached**: The VPC attachment has been created on the transit router.</p>
+         * <p>- **Attaching**: The VPC attachment is being created on the transit router.</p>
+         * <p>- **Detaching**: The VPC attachment is being deleted from the transit router.</p>
+         * <p>- **Detached**: The local transit router is disconnected from the peer transit router.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListTransitRouterVpnAttachmentsResponseBodyTransitRouterAttachmentsTags> tags;
 
+        /**
+         * <p>The description of the VPN attachment.</p>
+         */
         @NameInMap("TransitRouterAttachmentDescription")
         public String transitRouterAttachmentDescription;
 
+        /**
+         * <p>The ID of the VPN attachment.</p>
+         */
         @NameInMap("TransitRouterAttachmentId")
         public String transitRouterAttachmentId;
 
+        /**
+         * <p>The name of the VPN attachment.</p>
+         */
         @NameInMap("TransitRouterAttachmentName")
         public String transitRouterAttachmentName;
 
+        /**
+         * <p>The ID of the transit router.</p>
+         */
         @NameInMap("TransitRouterId")
         public String transitRouterId;
 
+        /**
+         * <p>The ID of the IPsec-VPN connection.</p>
+         */
         @NameInMap("VpnId")
         public String vpnId;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account that owns the IPsec-VPN connection.</p>
+         */
         @NameInMap("VpnOwnerId")
         public Long vpnOwnerId;
 
+        /**
+         * <p>The ID of the region to which the IPsec-VPN connection belongs. </p>
+         * <br>
+         * <p>You can call the [DescribeRegions](https://www.alibabacloud.com/help/en/virtual-private-cloud/latest/describeregions) operation to query the most recent region list.</p>
+         */
         @NameInMap("VpnRegionId")
         public String vpnRegionId;
 
+        /**
+         * <p>The zones where the VPN attachment is deployed.</p>
+         */
         @NameInMap("Zones")
         public java.util.List<ListTransitRouterVpnAttachmentsResponseBodyTransitRouterAttachmentsZones> zones;
 

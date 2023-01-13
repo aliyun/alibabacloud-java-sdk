@@ -4,6 +4,9 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DescribeCenVbrHealthCheckRequest extends TeaModel {
+    /**
+     * <p>The ID of the CEN instance.</p>
+     */
     @NameInMap("CenId")
     public String cenId;
 
@@ -13,9 +16,15 @@ public class DescribeCenVbrHealthCheckRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Valid values: **1** to **50**. Default value: **10**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -25,12 +34,25 @@ public class DescribeCenVbrHealthCheckRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the VBR.</p>
+     */
     @NameInMap("VbrInstanceId")
     public String vbrInstanceId;
 
+    /**
+     * <p>The ID of the Alibaba Cloud account that owns the VBR.</p>
+     * <br>
+     * <p>>  The parameter is required if the VBR and the CEN instance belong to different Alibaba Cloud accounts.</p>
+     */
     @NameInMap("VbrInstanceOwnerId")
     public Long vbrInstanceOwnerId;
 
+    /**
+     * <p>The ID of the region where the VBR is deployed.</p>
+     * <br>
+     * <p>You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("VbrInstanceRegionId")
     public String vbrInstanceRegionId;
 

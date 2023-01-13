@@ -4,15 +4,33 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DescribeCenAttachedChildInstanceAttributeRequest extends TeaModel {
+    /**
+     * <p>The ID of the CEN instance.</p>
+     */
     @NameInMap("CenId")
     public String cenId;
 
+    /**
+     * <p>The ID of the network instance that is attached to the CEN instance.</p>
+     */
     @NameInMap("ChildInstanceId")
     public String childInstanceId;
 
+    /**
+     * <p>The region ID of the network instance.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("ChildInstanceRegionId")
     public String childInstanceRegionId;
 
+    /**
+     * <p>The type of the network instance. Valid values:</p>
+     * <br>
+     * <p>*   **VPC**: virtual private cloud (VPC)</p>
+     * <p>*   **VBR**: virtual border router (VBR)</p>
+     * <p>*   **CCN**: Cloud Connect Network (CCN) instance</p>
+     */
     @NameInMap("ChildInstanceType")
     public String childInstanceType;
 

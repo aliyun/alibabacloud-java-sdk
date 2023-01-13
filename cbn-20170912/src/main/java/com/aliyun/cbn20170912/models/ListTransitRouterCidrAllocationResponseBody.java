@@ -4,18 +4,39 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class ListTransitRouterCidrAllocationResponseBody extends TeaModel {
+    /**
+     * <p>The number of entries returned on each page.</p>
+     * <br>
+     * <p>*   If no value is specified for **MaxResults**, query results are returned in one batch. The value of **MaxResults** indicates the total number of entries.</p>
+     * <p>*   If a value is specified for **MaxResults**, query results are returned in batches. The value of **MaxResults** in the response indicates the number of entries in the current batch.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token that determines the start point of the query. Valid values:</p>
+     * <br>
+     * <p>*   If **NextToken** was not returned, it indicates that no additional results exist.</p>
+     * <p>*   If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>The information about the allocated CIDR blocks.</p>
+     */
     @NameInMap("TransitRouterCidrAllocations")
     public java.util.List<ListTransitRouterCidrAllocationResponseBodyTransitRouterCidrAllocations> transitRouterCidrAllocations;
 
@@ -65,18 +86,33 @@ public class ListTransitRouterCidrAllocationResponseBody extends TeaModel {
     }
 
     public static class ListTransitRouterCidrAllocationResponseBodyTransitRouterCidrAllocations extends TeaModel {
+        /**
+         * <p>The CIDR blocks that have been allocated to network instances.</p>
+         */
         @NameInMap("AllocatedCidrBlock")
         public String allocatedCidrBlock;
 
+        /**
+         * <p>The ID of the network instance connection.</p>
+         */
         @NameInMap("AttachmentId")
         public String attachmentId;
 
+        /**
+         * <p>The name of the network instance connection.</p>
+         */
         @NameInMap("AttachmentName")
         public String attachmentName;
 
+        /**
+         * <p>The ID of the transit router CIDR block.</p>
+         */
         @NameInMap("Cidr")
         public String cidr;
 
+        /**
+         * <p>The ID of the transit router CIDR block.</p>
+         */
         @NameInMap("TransitRouterCidrId")
         public String transitRouterCidrId;
 

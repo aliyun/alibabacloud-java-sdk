@@ -4,12 +4,21 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class ListTransitRouterVbrAttachmentsRequest extends TeaModel {
+    /**
+     * <p>The ID of the CEN instance.</p>
+     */
     @NameInMap("CenId")
     public String cenId;
 
+    /**
+     * <p>The number of entries to return per page. Default value: **20**.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token for returning the next page when the data is returned in more than one page.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -19,6 +28,11 @@ public class ListTransitRouterVbrAttachmentsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the Enterprise Edition transit router.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -28,12 +42,23 @@ public class ListTransitRouterVbrAttachmentsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The tags.</p>
+     * <br>
+     * <p>You can specify at most 20 tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ListTransitRouterVbrAttachmentsRequestTag> tag;
 
+    /**
+     * <p>The ID of the VBR connection.</p>
+     */
     @NameInMap("TransitRouterAttachmentId")
     public String transitRouterAttachmentId;
 
+    /**
+     * <p>The ID of the Enterprise Edition transit router.</p>
+     */
     @NameInMap("TransitRouterId")
     public String transitRouterId;
 
@@ -131,9 +156,23 @@ public class ListTransitRouterVbrAttachmentsRequest extends TeaModel {
     }
 
     public static class ListTransitRouterVbrAttachmentsRequestTag extends TeaModel {
+        /**
+         * <p>The tag keys of the resources. </p>
+         * <br>
+         * <p>The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.  </p>
+         * <br>
+         * <p>You can specify at most 20 tag keys.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag values of the resources. </p>
+         * <br>
+         * <p>The tag values can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.  </p>
+         * <br>
+         * <p>Each tag key has a unique tag value. You can specify at most 20 tag values in each call.</p>
+         */
         @NameInMap("Value")
         public String value;
 

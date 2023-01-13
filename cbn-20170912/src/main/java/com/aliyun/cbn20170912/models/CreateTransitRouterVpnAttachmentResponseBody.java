@@ -4,9 +4,15 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class CreateTransitRouterVpnAttachmentResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the VPN attachment.</p>
+     */
     @NameInMap("TransitRouterAttachmentId")
     public String transitRouterAttachmentId;
 

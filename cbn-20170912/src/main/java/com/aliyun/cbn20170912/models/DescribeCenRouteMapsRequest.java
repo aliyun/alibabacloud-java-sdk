@@ -4,9 +4,17 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DescribeCenRouteMapsRequest extends TeaModel {
+    /**
+     * <p>The ID of the CEN instance.</p>
+     */
     @NameInMap("CenId")
     public String cenId;
 
+    /**
+     * <p>The ID of the region where the routing policy is applied.</p>
+     * <br>
+     * <p>You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("CenRegionId")
     public String cenRegionId;
 
@@ -16,9 +24,15 @@ public class DescribeCenRouteMapsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Default value: **10**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -28,12 +42,29 @@ public class DescribeCenRouteMapsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the routing policy.</p>
+     */
     @NameInMap("RouteMapId")
     public String routeMapId;
 
+    /**
+     * <p>The route table ID of the transit router with which the routing policy is associated.</p>
+     */
     @NameInMap("TransitRouterRouteTableId")
     public String transitRouterRouteTableId;
 
+    /**
+     * <p>The direction in which the routing policy is applied. Valid values:</p>
+     * <br>
+     * <p>*   **RegionIn**: Routes are advertised to the gateways in the regions that are connected by the CEN instance.</p>
+     * <br>
+     * <p>    For example, routes are advertised from network instances deployed in the current region or other regions to the gateway deployed in the current region.</p>
+     * <br>
+     * <p>*   **RegionOut**: Routes are advertised from the gateways in the regions that are connected by the CEN instance.</p>
+     * <br>
+     * <p>    For example, routes are advertised from the gateway deployed in the current region to network instances deployed in the current region, or to gateways deployed in other regions.</p>
+     */
     @NameInMap("TransmitDirection")
     public String transmitDirection;
 

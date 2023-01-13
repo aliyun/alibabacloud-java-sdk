@@ -4,12 +4,24 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
+    /**
+     * <p>The token that is used for the next query. Valid values:</p>
+     * <br>
+     * <p>*   If **NextToken** is empty, it indicates that no next query is to be sent.</p>
+     * <p>*   If a value of **NextToken** is returned, the value is the token that is used for the next query.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The resources and tags.</p>
+     */
     @NameInMap("TagResources")
     public ListTagResourcesResponseBodyTagResources tagResources;
 
@@ -43,15 +55,29 @@ public class ListTagResourcesResponseBody extends TeaModel {
     }
 
     public static class ListTagResourcesResponseBodyTagResourcesTagResource extends TeaModel {
+        /**
+         * <p>The ID of the CEN instance.</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <p>The type of the resource.</p>
+         * <br>
+         * <p>The value is **cen**, which specifies CEN instances.</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 

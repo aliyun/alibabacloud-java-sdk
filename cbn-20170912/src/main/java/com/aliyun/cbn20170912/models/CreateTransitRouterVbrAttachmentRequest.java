@@ -4,15 +4,37 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class CreateTransitRouterVbrAttachmentRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to enable the Enterprise Edition transit router to automatically advertise routes to the VBR. Valid values:</p>
+     * <br>
+     * <p>*   **false** (default): no.</p>
+     * <p>*   **true**: yes.</p>
+     */
     @NameInMap("AutoPublishRouteEnabled")
     public Boolean autoPublishRouteEnabled;
 
+    /**
+     * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+     */
     @NameInMap("CenId")
     public String cenId;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.</p>
+     * <br>
+     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** of each API request may be different.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>Specifies whether to perform a precheck to check information such as the permissions and instance status. Valid values:</p>
+     * <br>
+     * <p>*   **false** (default): sends the request. If the request passes the precheck, the VBR connection is created.</p>
+     * <p>*   **true**: sends a precheck request. No VBR connection is created after the request passes the precheck. If you use this value, the system checks the required parameters and the request syntax. If the request fails to pass the precheck, an error message is returned. If the request passes the check, the system returns the ID of the request.</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
@@ -22,6 +44,11 @@ public class CreateTransitRouterVbrAttachmentRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the VBR is deployed.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -31,21 +58,45 @@ public class CreateTransitRouterVbrAttachmentRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The tags of the resources.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateTransitRouterVbrAttachmentRequestTag> tag;
 
+    /**
+     * <p>The description of the VBR connection.</p>
+     * <br>
+     * <p>The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("TransitRouterAttachmentDescription")
     public String transitRouterAttachmentDescription;
 
+    /**
+     * <p>The name of the VBR connection.</p>
+     * <br>
+     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter.</p>
+     */
     @NameInMap("TransitRouterAttachmentName")
     public String transitRouterAttachmentName;
 
+    /**
+     * <p>The ID of the Enterprise Edition transit router.</p>
+     */
     @NameInMap("TransitRouterId")
     public String transitRouterId;
 
+    /**
+     * <p>The ID of the VBR.</p>
+     */
     @NameInMap("VbrId")
     public String vbrId;
 
+    /**
+     * <p>The ID of the Alibaba Cloud account to which the VBR belongs. The default value is the ID of the current Alibaba Cloud account.</p>
+     * <br>
+     * <p>>  If you want to connect to a network instance that belongs to another account, this parameter is required.</p>
+     */
     @NameInMap("VbrOwnerId")
     public Long vbrOwnerId;
 
@@ -175,9 +226,23 @@ public class CreateTransitRouterVbrAttachmentRequest extends TeaModel {
     }
 
     public static class CreateTransitRouterVbrAttachmentRequestTag extends TeaModel {
+        /**
+         * <p>The tag keys of the resources. </p>
+         * <br>
+         * <p>The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.  </p>
+         * <br>
+         * <p>You can specify at most 20 tag keys.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag values of the resources. </p>
+         * <br>
+         * <p>The tag values can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.  </p>
+         * <br>
+         * <p>Each tag key has a unique tag value. You can specify at most 20 tag values in each call.</p>
+         */
         @NameInMap("Value")
         public String value;
 

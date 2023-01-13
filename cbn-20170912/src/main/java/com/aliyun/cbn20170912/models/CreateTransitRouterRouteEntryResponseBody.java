@@ -4,9 +4,15 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class CreateTransitRouterRouteEntryResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the route.</p>
+     */
     @NameInMap("TransitRouterRouteEntryId")
     public String transitRouterRouteEntryId;
 

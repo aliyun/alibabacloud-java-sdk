@@ -4,9 +4,22 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class ListTransitRouterPrefixListAssociationRequest extends TeaModel {
+    /**
+     * <p>The ID of the next hop.</p>
+     * <br>
+     * <p>>  Enter **BlackHole** if you want to query the prefix list that generates blackhole routes.</p>
+     */
     @NameInMap("NextHop")
     public String nextHop;
 
+    /**
+     * <p>The type of the next hop. Valid values:</p>
+     * <br>
+     * <p>*   **BlackHole**: The prefix list that generates blackhole routes.</p>
+     * <p>*   **VPC**: The prefix list whose next hop is a virtual private cloud (VPC) connection.</p>
+     * <p>*   **VBR**: The prefix list whose next hop is a virtual border router (VBR) connection.</p>
+     * <p>*   **TR**: The prefix list whose next hop is an inter-region connection on the transit router.</p>
+     */
     @NameInMap("NextHopType")
     public String nextHopType;
 
@@ -16,18 +29,35 @@ public class ListTransitRouterPrefixListAssociationRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the Alibaba Cloud account to which the prefix list belongs.</p>
+     */
     @NameInMap("OwnerUid")
     public Long ownerUid;
 
+    /**
+     * <p>The number of the page to return. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Maximum value: **100**. Default value: **10**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the prefix list.</p>
+     */
     @NameInMap("PrefixListId")
     public String prefixListId;
 
+    /**
+     * <p>The ID of the region where the transit router is deployed.</p>
+     * <br>
+     * <p>You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -37,9 +67,15 @@ public class ListTransitRouterPrefixListAssociationRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the transit router.</p>
+     */
     @NameInMap("TransitRouterId")
     public String transitRouterId;
 
+    /**
+     * <p>The ID of the route table of the transit router.</p>
+     */
     @NameInMap("TransitRouterTableId")
     public String transitRouterTableId;
 

@@ -4,9 +4,17 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DescribeCenRegionDomainRouteEntriesRequest extends TeaModel {
+    /**
+     * <p>The ID of the CEN instance.</p>
+     */
     @NameInMap("CenId")
     public String cenId;
 
+    /**
+     * <p>The ID of the region that you want to query.</p>
+     * <br>
+     * <p>You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("CenRegionId")
     public String cenRegionId;
 
@@ -16,9 +24,15 @@ public class DescribeCenRegionDomainRouteEntriesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Default value: **10**. Valid values: **1** to **50**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -28,6 +42,15 @@ public class DescribeCenRegionDomainRouteEntriesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The status of the routes that you want to query. Valid values:</p>
+     * <br>
+     * <p>*   **Active** (default value): active routes</p>
+     * <p>*   **Candidate**: standby routes</p>
+     * <p>*   **Rejected**: rejected routes</p>
+     * <p>*   **Prohibited**: prohibited routes</p>
+     * <p>*   **All**: all routes</p>
+     */
     @NameInMap("Status")
     public String status;
 

@@ -4,18 +4,33 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DescribeCenRouteMapsResponseBody extends TeaModel {
+    /**
+     * <p>The number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the routing policy.</p>
+     */
     @NameInMap("RouteMaps")
     public DescribeCenRouteMapsResponseBodyRouteMaps routeMaps;
 
+    /**
+     * <p>The number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -312,96 +327,251 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
     }
 
     public static class DescribeCenRouteMapsResponseBodyRouteMapsRouteMap extends TeaModel {
+        /**
+         * <p>The match method that is used to match routes based on the AS path.</p>
+         * <br>
+         * <p>*   **Include**: fuzzy match. A route is a match if the AS path of the route overlaps with the AS path specified in the match condition.</p>
+         * <p>*   **Complete**: exact match. A route is a match only if the AS path of the route is the same as the AS path specified in the match condition.</p>
+         */
         @NameInMap("AsPathMatchMode")
         public String asPathMatchMode;
 
+        /**
+         * <p>The ID of the CEN instance.</p>
+         */
         @NameInMap("CenId")
         public String cenId;
 
+        /**
+         * <p>The ID of the region where the routing policy is applied.</p>
+         */
         @NameInMap("CenRegionId")
         public String cenRegionId;
 
+        /**
+         * <p>The match method that is used to match routes based on the prefix. Valid values:</p>
+         * <br>
+         * <p>*   **Include**: fuzzy match. A route is a match if the route prefix is included in the match conditions.</p>
+         * <br>
+         * <p>    For example, if you set the match condition to 10.10.0.0/16 and fuzzy match is enabled, the route whose prefix is 10.10.1.0/24 is a match.</p>
+         * <br>
+         * <p>*   **Complete**: exact match. A route is a match only if the route prefix is the same as the prefix specified in the match condition.</p>
+         * <br>
+         * <p>    For example, if you set the match condition to 10.10.0.0/16 and exact match is enabled, a route is a match only if the prefix is 10.10.0.0/16.</p>
+         */
         @NameInMap("CidrMatchMode")
         public String cidrMatchMode;
 
+        /**
+         * <p>The match method that is used to match routes based on the community.</p>
+         * <br>
+         * <p>*   **Include**: fuzzy match. A route is a match if the community of the route overlaps with the community specified in the match condition.</p>
+         * <p>*   **Complete**: exact match. A route is a match only if the community of the route is the same as the community specified in the match condition.</p>
+         */
         @NameInMap("CommunityMatchMode")
         public String communityMatchMode;
 
+        /**
+         * <p>The action that is performed on the community of the route.</p>
+         * <br>
+         * <p>*   **Additive**: adds the community to the route.</p>
+         * <p>*   **Replace**: replaces the original community of the route.</p>
+         * <br>
+         * <p>This parameter indicates the action to be performed when a route meets the match condition.</p>
+         */
         @NameInMap("CommunityOperateMode")
         public String communityOperateMode;
 
+        /**
+         * <p>The description of the routing policy.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The types of destination network instance to which the routes belong.</p>
+         * <br>
+         * <p>*   **VPC**: VPC</p>
+         * <p>*   **VBR**: VBR</p>
+         * <p>*   **CCN**: CCN instance</p>
+         * <p>*   **VPN**: IPsec-VPN connection</p>
+         * <br>
+         * <p>>  The destination network instance types are valid only when the routing policy is applied to scenarios where routes are advertised from the gateway in the current region to network instances in the current region.</p>
+         */
         @NameInMap("DestinationChildInstanceTypes")
         public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationChildInstanceTypes destinationChildInstanceTypes;
 
+        /**
+         * <p>The prefixes of the routes.</p>
+         */
         @NameInMap("DestinationCidrBlocks")
         public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationCidrBlocks destinationCidrBlocks;
 
+        /**
+         * <p>The IDs of the destination network instances to which the routes belong.</p>
+         * <br>
+         * <p>>  The destination network instance IDs are valid only when the routing policy is applied to scenarios where routes are advertised from the gateway in the current region to network instances in the current region.</p>
+         */
         @NameInMap("DestinationInstanceIds")
         public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationInstanceIds destinationInstanceIds;
 
+        /**
+         * <p>Indicates whether the destination network instance IDs are excluded.</p>
+         * <br>
+         * <p>*   **false** (default): A route is a match if its destination network instance ID is in the list specified by **DestinationInstanceIds.N**.</p>
+         * <p>*   **true**: A route is a match if its destination network instance ID is not in the list specified by **DestinationInstanceIds.N**.</p>
+         */
         @NameInMap("DestinationInstanceIdsReverseMatch")
         public Boolean destinationInstanceIdsReverseMatch;
 
+        /**
+         * <p>The IDs of the destination route tables to which the routes belong. You can enter at most 32 route table IDs.</p>
+         * <br>
+         * <p>>  The destination route table IDs are valid only when the routing policy is applied to scenarios where routes are advertised from the gateway in the current region to route tables in the current region.</p>
+         */
         @NameInMap("DestinationRouteTableIds")
         public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationRouteTableIds destinationRouteTableIds;
 
+        /**
+         * <p>The action performed on a route that meets the match conditions.</p>
+         * <br>
+         * <p>*   **Permit**: the route is permitted.</p>
+         * <p>*   **Deny**: the route is denied.</p>
+         */
         @NameInMap("MapResult")
         public String mapResult;
 
+        /**
+         * <p>The type of IP address to be matched against the match condition. Valid values:</p>
+         * <br>
+         * <p>*   **IPv4**: IPv4 addresses</p>
+         * <p>*   **IPv6**: IPv6 addresses</p>
+         * <p>*   If no value is returned, both IPv4 and IPv6 addresses are matched against the match condition.</p>
+         */
         @NameInMap("MatchAddressType")
         public String matchAddressType;
 
+        /**
+         * <p>The AS paths based on which the routes are compared.</p>
+         */
         @NameInMap("MatchAsns")
         public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapMatchAsns matchAsns;
 
+        /**
+         * <p>The community set based on which the routes are compared.</p>
+         */
         @NameInMap("MatchCommunitySet")
         public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapMatchCommunitySet matchCommunitySet;
 
+        /**
+         * <p>The priority of the routing policy that you want to associate with the current one.</p>
+         */
         @NameInMap("NextPriority")
         public Integer nextPriority;
 
+        /**
+         * <p>The community set on which actions are performed.</p>
+         */
         @NameInMap("OperateCommunitySet")
         public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapOperateCommunitySet operateCommunitySet;
 
+        /**
+         * <p>The new priority of the route.</p>
+         * <br>
+         * <p>A smaller value indicates a higher priority.</p>
+         * <br>
+         * <p>This parameter indicates the action to be performed when a route meets the match condition.</p>
+         */
         @NameInMap("Preference")
         public Integer preference;
 
+        /**
+         * <p>The AS paths that are prepended by using an action statement when regional gateways receive or advertise routes.</p>
+         * <br>
+         * <p>This parameter indicates the action to be performed when a route meets the match condition.</p>
+         */
         @NameInMap("PrependAsPath")
         public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapPrependAsPath prependAsPath;
 
+        /**
+         * <p>The priority of the routing policy. A smaller value indicates a higher priority.</p>
+         */
         @NameInMap("Priority")
         public Integer priority;
 
+        /**
+         * <p>The ID of the routing policy.</p>
+         */
         @NameInMap("RouteMapId")
         public String routeMapId;
 
+        /**
+         * <p>The types of routes that is compared. Valid values:</p>
+         * <br>
+         * <p>*   **System**: system routes that are automatically generated by the system.</p>
+         * <p>*   **Custom**: custom routes that are manually added.</p>
+         * <p>*   **BGP**: routes that are advertised over Border Gateway Protocol (BGP).</p>
+         */
         @NameInMap("RouteTypes")
         public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapRouteTypes routeTypes;
 
+        /**
+         * <p>The types of source network instance to which the routes belong.</p>
+         * <br>
+         * <p>*   **VPC**: virtual private cloud (VPC)</p>
+         * <p>*   **VBR**: virtual border router (VBR)</p>
+         * <p>*   **CCN**: Cloud Connect Network (CCN) instance</p>
+         * <p>*   **VPN**: IPsec-VPN connection</p>
+         */
         @NameInMap("SourceChildInstanceTypes")
         public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceChildInstanceTypes sourceChildInstanceTypes;
 
+        /**
+         * <p>The IDs of the source network instances to which the routes belong.</p>
+         */
         @NameInMap("SourceInstanceIds")
         public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceInstanceIds sourceInstanceIds;
 
+        /**
+         * <p>Indicates whether the source network instance IDs are excluded.</p>
+         * <br>
+         * <p>*   **false** (default): A route is a match if its source network instance ID is in the list specified by **SourceInstanceIds.N**.</p>
+         * <p>*   **true**: A route is match if its source network instance ID is not in the list specified by **SourceInstanceIds.N**.</p>
+         */
         @NameInMap("SourceInstanceIdsReverseMatch")
         public Boolean sourceInstanceIdsReverseMatch;
 
+        /**
+         * <p>The IDs of the source regions to which the routes belong.</p>
+         */
         @NameInMap("SourceRegionIds")
         public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceRegionIds sourceRegionIds;
 
+        /**
+         * <p>The IDs of the source route tables to which the routes belong.</p>
+         */
         @NameInMap("SourceRouteTableIds")
         public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapSourceRouteTableIds sourceRouteTableIds;
 
+        /**
+         * <p>The status of the routing policy. Valid values:</p>
+         * <br>
+         * <p>*   **Creating**: The routing policy is being created.</p>
+         * <p>*   **Active**: The routing policy is available.</p>
+         * <p>*   **Deleting**: The routing policy is being deleted.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The route table ID of the transit router with which the routing policy is associated.</p>
+         */
         @NameInMap("TransitRouterRouteTableId")
         public String transitRouterRouteTableId;
 
+        /**
+         * <p>The direction in which the routing policy is applied.</p>
+         */
         @NameInMap("TransmitDirection")
         public String transmitDirection;
 

@@ -4,12 +4,26 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class ListTransitRouterMulticastDomainAssociationsRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. </p>
+     * <br>
+     * <p>You can use the client to generate the value, but you must ensure that it is unique among all requests. The token can contain only ASCII characters.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The number of entries to return on each page. Default value: **20**.</p>
+     */
     @NameInMap("MaxResults")
     public Long maxResults;
 
+    /**
+     * <p>The token that determines the start point of the query. Valid values:</p>
+     * <br>
+     * <p>- If this is your first query or no subsequent query is to be sent, ignore this parameter.</p>
+     * <p>- If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -19,6 +33,9 @@ public class ListTransitRouterMulticastDomainAssociationsRequest extends TeaMode
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the resource associated with the multicast domain.</p>
+     */
     @NameInMap("ResourceId")
     public String resourceId;
 
@@ -28,15 +45,31 @@ public class ListTransitRouterMulticastDomainAssociationsRequest extends TeaMode
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The type of resource associated with the multicast domain.</p>
+     * <br>
+     * <p>Valid value: **VPC**.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The ID of the network instance connection.</p>
+     */
     @NameInMap("TransitRouterAttachmentId")
     public String transitRouterAttachmentId;
 
+    /**
+     * <p>The ID of the multicast domain.</p>
+     */
     @NameInMap("TransitRouterMulticastDomainId")
     public String transitRouterMulticastDomainId;
 
+    /**
+     * <p>The IDs of the vSwitches.</p>
+     * <br>
+     * <p>You can specify at most 20 IDs.</p>
+     */
     @NameInMap("VSwitchIds")
     public java.util.List<String> vSwitchIds;
 

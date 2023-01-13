@@ -4,9 +4,15 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class ListTransitRouterRouteTableAssociationsRequest extends TeaModel {
+    /**
+     * <p>The number of entries to return on each page. Default value: **50**.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token for returning the next page when the data is returned in more than one page.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -22,9 +28,24 @@ public class ListTransitRouterRouteTableAssociationsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("Status")
+    public String status;
+
+    /**
+     * <p>The ID of the network instance connection.</p>
+     */
     @NameInMap("TransitRouterAttachmentId")
     public String transitRouterAttachmentId;
 
+    @NameInMap("TransitRouterAttachmentResourceId")
+    public String transitRouterAttachmentResourceId;
+
+    @NameInMap("TransitRouterAttachmentResourceType")
+    public String transitRouterAttachmentResourceType;
+
+    /**
+     * <p>The ID of the route table of the Enterprise Edition transit router.</p>
+     */
     @NameInMap("TransitRouterRouteTableId")
     public String transitRouterRouteTableId;
 
@@ -81,12 +102,36 @@ public class ListTransitRouterRouteTableAssociationsRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
+    public ListTransitRouterRouteTableAssociationsRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
+    }
+
     public ListTransitRouterRouteTableAssociationsRequest setTransitRouterAttachmentId(String transitRouterAttachmentId) {
         this.transitRouterAttachmentId = transitRouterAttachmentId;
         return this;
     }
     public String getTransitRouterAttachmentId() {
         return this.transitRouterAttachmentId;
+    }
+
+    public ListTransitRouterRouteTableAssociationsRequest setTransitRouterAttachmentResourceId(String transitRouterAttachmentResourceId) {
+        this.transitRouterAttachmentResourceId = transitRouterAttachmentResourceId;
+        return this;
+    }
+    public String getTransitRouterAttachmentResourceId() {
+        return this.transitRouterAttachmentResourceId;
+    }
+
+    public ListTransitRouterRouteTableAssociationsRequest setTransitRouterAttachmentResourceType(String transitRouterAttachmentResourceType) {
+        this.transitRouterAttachmentResourceType = transitRouterAttachmentResourceType;
+        return this;
+    }
+    public String getTransitRouterAttachmentResourceType() {
+        return this.transitRouterAttachmentResourceType;
     }
 
     public ListTransitRouterRouteTableAssociationsRequest setTransitRouterRouteTableId(String transitRouterRouteTableId) {

@@ -4,27 +4,57 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DescribePublishedRouteEntriesRequest extends TeaModel {
+    /**
+     * <p>The ID of the CEN instance.</p>
+     */
     @NameInMap("CenId")
     public String cenId;
 
+    /**
+     * <p>The ID of the network instance attached to the CEN instance.</p>
+     */
     @NameInMap("ChildInstanceId")
     public String childInstanceId;
 
+    /**
+     * <p>The ID of the region where the network instance is deployed.</p>
+     * <br>
+     * <p>You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("ChildInstanceRegionId")
     public String childInstanceRegionId;
 
+    /**
+     * <p>The ID of the route table configured on the network instance.</p>
+     */
     @NameInMap("ChildInstanceRouteTableId")
     public String childInstanceRouteTableId;
 
+    /**
+     * <p>The type of the network instance. Valid values:</p>
+     * <br>
+     * <p>*   **VPC**</p>
+     * <p>*   **VBR**</p>
+     * <p>*   **CCN**</p>
+     */
     @NameInMap("ChildInstanceType")
     public String childInstanceType;
 
+    /**
+     * <p>The destination CIDR block of the route that you want to query.</p>
+     */
     @NameInMap("DestinationCidrBlock")
     public String destinationCidrBlock;
 
+    /**
+     * <p>The number of the page to return. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Default value: **10**. Valid values: **1** to **50**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

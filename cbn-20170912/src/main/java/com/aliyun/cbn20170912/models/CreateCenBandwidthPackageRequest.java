@@ -4,6 +4,14 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class CreateCenBandwidthPackageRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to automatically complete the payment of the bandwidth plan. Valid values:</p>
+     * <br>
+     * <p>*   **true**: yes</p>
+     * <p>*   **false** (default): no</p>
+     * <br>
+     * <p>If you set the parameter to false, go to Billing Management to complete the payment after you call this operation. The instance is created only after you complete the payment.</p>
+     */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
@@ -13,24 +21,61 @@ public class CreateCenBandwidthPackageRequest extends TeaModel {
     @NameInMap("AutoRenewDuration")
     public Integer autoRenewDuration;
 
+    /**
+     * <p>The maximum bandwidth value of the bandwidth plan. Unit: Mbit/s. Valid values: **2** to **10000**.</p>
+     */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
 
+    /**
+     * <p>The billing method of the bandwidth plan. Valid value: **PREPAY**, which indicates that the billing method is pay-as-you-go.</p>
+     */
     @NameInMap("BandwidthPackageChargeType")
     public String bandwidthPackageChargeType;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate a token, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The description of the bandwidth plan.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The area where the network instance is deployed. Valid values:</p>
+     * <br>
+     * <p>*   **China**: Chinese mainland</p>
+     * <p>*   **North-America**: North America</p>
+     * <p>*   **Asia-Pacific**: Asia Pacific</p>
+     * <p>*   **Europe**: Europe</p>
+     * <p>*   **Australia**: Australia</p>
+     */
     @NameInMap("GeographicRegionAId")
     public String geographicRegionAId;
 
+    /**
+     * <p>The area where the other network instance is deployed. Valid values: Valid values:</p>
+     * <br>
+     * <p>*   **China**: Chinese mainland</p>
+     * <p>*   **North-America**: North America</p>
+     * <p>*   **Asia-Pacific**: Asia Pacific</p>
+     * <p>*   **Europe**: Europe</p>
+     * <p>*   **Australia**: Australia</p>
+     */
     @NameInMap("GeographicRegionBId")
     public String geographicRegionBId;
 
+    /**
+     * <p>The name of the bandwidth plan.</p>
+     * <br>
+     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter and cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("Name")
     public String name;
 
@@ -40,9 +85,23 @@ public class CreateCenBandwidthPackageRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The subscription duration of the bandwidth plan. Default value: 1.</p>
+     * <br>
+     * <p>*   If **PricingCycle** is set to **Month**, set **Period** to a value from **1** to **3** or **6**.</p>
+     * <p>*   If **PricingCycle** is set to **Year**, set **Period** to a value from **1** to **3**.</p>
+     * <br>
+     * <p>>  This parameter is required when **BandwidthPackageChargeType** is set to **PREPAY**.</p>
+     */
     @NameInMap("Period")
     public Integer period;
 
+    /**
+     * <p>The billing cycle of the bandwidth plan. Valid values:</p>
+     * <br>
+     * <p>*   **Month** (default): billed on a monthly basis.</p>
+     * <p>*   **Year**: billed on an annual basis.</p>
+     */
     @NameInMap("PricingCycle")
     public String pricingCycle;
 
@@ -52,6 +111,9 @@ public class CreateCenBandwidthPackageRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateCenBandwidthPackageRequestTag> tag;
 
@@ -197,9 +259,23 @@ public class CreateCenBandwidthPackageRequest extends TeaModel {
     }
 
     public static class CreateCenBandwidthPackageRequestTag extends TeaModel {
+        /**
+         * <p>The tag keys of the resources.</p>
+         * <br>
+         * <p>The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         * <br>
+         * <p>You can specify at most 20 tag keys.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag values of the resources.</p>
+         * <br>
+         * <p>The tag values can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
+         * <br>
+         * <p>Each tag key has a unique tag value. You can specify at most 20 tag values in each call.</p>
+         */
         @NameInMap("Value")
         public String value;
 

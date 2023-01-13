@@ -4,18 +4,33 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DescribeCenGeographicSpansResponseBody extends TeaModel {
+    /**
+     * <p>The information about area combinations.</p>
+     */
     @NameInMap("GeographicSpanModels")
     public DescribeCenGeographicSpansResponseBodyGeographicSpanModels geographicSpanModels;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,12 +80,21 @@ public class DescribeCenGeographicSpansResponseBody extends TeaModel {
     }
 
     public static class DescribeCenGeographicSpansResponseBodyGeographicSpanModelsGeographicSpanModel extends TeaModel {
+        /**
+         * <p>The ID of the area combination.</p>
+         */
         @NameInMap("GeographicSpanId")
         public String geographicSpanId;
 
+        /**
+         * <p>The ID of the local area.</p>
+         */
         @NameInMap("LocalGeoRegionId")
         public String localGeoRegionId;
 
+        /**
+         * <p>The ID of the peer area.</p>
+         */
         @NameInMap("OppositeGeoRegionId")
         public String oppositeGeoRegionId;
 

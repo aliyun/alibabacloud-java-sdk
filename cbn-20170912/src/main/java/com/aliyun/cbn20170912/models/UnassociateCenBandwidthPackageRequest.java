@@ -4,9 +4,15 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class UnassociateCenBandwidthPackageRequest extends TeaModel {
+    /**
+     * <p>The ID of the bandwidth plan.</p>
+     */
     @NameInMap("CenBandwidthPackageId")
     public String cenBandwidthPackageId;
 
+    /**
+     * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+     */
     @NameInMap("CenId")
     public String cenId;
 

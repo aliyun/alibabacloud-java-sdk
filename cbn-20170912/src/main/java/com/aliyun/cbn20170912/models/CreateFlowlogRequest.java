@@ -4,21 +4,58 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class CreateFlowlogRequest extends TeaModel {
+    /**
+     * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+     */
     @NameInMap("CenId")
     public String cenId;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.</p>
+     * <br>
+     * <p>>  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The description of the flow log.</p>
+     * <br>
+     * <p>The description must be 2 to 256 characters in length. It must start with a letter but cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The name of the flow log.</p>
+     * <br>
+     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("FlowLogName")
     public String flowLogName;
 
+    /**
+     * <p>The time window for collecting log data. Unit: seconds. Valid values: **60** and **600**. Default value: **600**.</p>
+     */
     @NameInMap("Interval")
     public Long interval;
 
+    /**
+     * <p>The Logstore where the flow log is stored.</p>
+     * <br>
+     * <p>*   If a Logstore is already created in the selected region, enter the name of the Logstore.</p>
+     * <br>
+     * <p>*   If no Logstores are created in the selected region, enter a name and the system automatically creates a Logstore.</p>
+     * <br>
+     * <p>    The name of the Logstore. The naming conventions are:</p>
+     * <br>
+     * <p>    *   The name must be unique in a project.</p>
+     * <p>    *   The name can contain only lowercase letters, digits, hyphens (-), and underscores (\_).</p>
+     * <p>    *   The name must start and end with a lowercase letter or a digit.</p>
+     * <p>    *   The name must be 3 to 63 characters in length.</p>
+     */
     @NameInMap("LogStoreName")
     public String logStoreName;
 
@@ -28,9 +65,28 @@ public class CreateFlowlogRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The Log Service project where the flow log is stored.</p>
+     * <br>
+     * <p>*   If a project is already created in the selected region, enter the name of the project.</p>
+     * <br>
+     * <p>*   If no projects are created in the selected region, enter a name and the system automatically creates a project.</p>
+     * <br>
+     * <p>    The project name must be unique in a region. You cannot change the name after you create the project. The naming conventions are:</p>
+     * <br>
+     * <p>    *   The name must be globally unique.</p>
+     * <p>    *   The name can contain only lowercase letters, digits, and hyphens (-).</p>
+     * <p>    *   The name must start and end with a lowercase letter or a digit.</p>
+     * <p>    *   The name must be 3 to 63 characters in length.</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 
+    /**
+     * <p>The ID of the region where the flow log is deployed.</p>
+     * <br>
+     * <p>You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -40,9 +96,17 @@ public class CreateFlowlogRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The tags of the resource. You can enter most at 20 tags for the resource.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateFlowlogRequestTag> tag;
 
+    /**
+     * <p>The ID of the inter-region connection or the VBR connection.</p>
+     * <br>
+     * <p>>  This parameter is required.</p>
+     */
     @NameInMap("TransitRouterAttachmentId")
     public String transitRouterAttachmentId;
 
@@ -164,9 +228,19 @@ public class CreateFlowlogRequest extends TeaModel {
     }
 
     public static class CreateFlowlogRequestTag extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * <br>
+         * <p>The key cannot exceed 64 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         * <br>
+         * <p>The value cannot exceed 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Value")
         public String value;
 

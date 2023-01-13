@@ -4,18 +4,36 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token that determines the start point of the query. Valid values:</p>
+     * <br>
+     * <p>*   If **NextToken** was not returned in the previous query, it indicates that no additional results exist.</p>
+     * <p>*   If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>A list of route tables.</p>
+     */
     @NameInMap("TransitRouterRouteTables")
     public java.util.List<ListTransitRouterRouteTablesResponseBodyTransitRouterRouteTables> transitRouterRouteTables;
 
@@ -64,10 +82,35 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
         return this.transitRouterRouteTables;
     }
 
+    public static class ListTransitRouterRouteTablesResponseBodyTransitRouterRouteTablesRouteTableOptions extends TeaModel {
+        @NameInMap("MultiRegionECMP")
+        public String multiRegionECMP;
+
+        public static ListTransitRouterRouteTablesResponseBodyTransitRouterRouteTablesRouteTableOptions build(java.util.Map<String, ?> map) throws Exception {
+            ListTransitRouterRouteTablesResponseBodyTransitRouterRouteTablesRouteTableOptions self = new ListTransitRouterRouteTablesResponseBodyTransitRouterRouteTablesRouteTableOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public ListTransitRouterRouteTablesResponseBodyTransitRouterRouteTablesRouteTableOptions setMultiRegionECMP(String multiRegionECMP) {
+            this.multiRegionECMP = multiRegionECMP;
+            return this;
+        }
+        public String getMultiRegionECMP() {
+            return this.multiRegionECMP;
+        }
+
+    }
+
     public static class ListTransitRouterRouteTablesResponseBodyTransitRouterRouteTablesTags extends TeaModel {
+        /**
+         * <p>The key of the tag.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -95,24 +138,60 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
     }
 
     public static class ListTransitRouterRouteTablesResponseBodyTransitRouterRouteTables extends TeaModel {
+        /**
+         * <p>The time when the route table was created.</p>
+         * <br>
+         * <p>The time follows the ISO8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        @NameInMap("RegionId")
+        public String regionId;
+
+        @NameInMap("RouteTableOptions")
+        public ListTransitRouterRouteTablesResponseBodyTransitRouterRouteTablesRouteTableOptions routeTableOptions;
+
+        /**
+         * <p>The tags of the resource.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListTransitRouterRouteTablesResponseBodyTransitRouterRouteTablesTags> tags;
 
+        /**
+         * <p>The description of the route table.</p>
+         */
         @NameInMap("TransitRouterRouteTableDescription")
         public String transitRouterRouteTableDescription;
 
+        /**
+         * <p>The ID of the route table.</p>
+         */
         @NameInMap("TransitRouterRouteTableId")
         public String transitRouterRouteTableId;
 
+        /**
+         * <p>The name of the route table.</p>
+         */
         @NameInMap("TransitRouterRouteTableName")
         public String transitRouterRouteTableName;
 
+        /**
+         * <p>The status of the route table.</p>
+         * <br>
+         * <p>*   **Creating**: being created</p>
+         * <p>*   **Deleting**: being deleted</p>
+         * <p>*   **Active**: available</p>
+         */
         @NameInMap("TransitRouterRouteTableStatus")
         public String transitRouterRouteTableStatus;
 
+        /**
+         * <p>The type of the route table.</p>
+         * <br>
+         * <p>*   **Custom**: a custom route table</p>
+         * <p>*   **System**: the default route table</p>
+         */
         @NameInMap("TransitRouterRouteTableType")
         public String transitRouterRouteTableType;
 
@@ -127,6 +206,22 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        public ListTransitRouterRouteTablesResponseBodyTransitRouterRouteTables setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public ListTransitRouterRouteTablesResponseBodyTransitRouterRouteTables setRouteTableOptions(ListTransitRouterRouteTablesResponseBodyTransitRouterRouteTablesRouteTableOptions routeTableOptions) {
+            this.routeTableOptions = routeTableOptions;
+            return this;
+        }
+        public ListTransitRouterRouteTablesResponseBodyTransitRouterRouteTablesRouteTableOptions getRouteTableOptions() {
+            return this.routeTableOptions;
         }
 
         public ListTransitRouterRouteTablesResponseBodyTransitRouterRouteTables setTags(java.util.List<ListTransitRouterRouteTablesResponseBodyTransitRouterRouteTablesTags> tags) {

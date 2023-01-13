@@ -4,9 +4,15 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DescribeChildInstanceRegionsResponseBody extends TeaModel {
+    /**
+     * <p>The list of regions.</p>
+     */
     @NameInMap("Regions")
     public DescribeChildInstanceRegionsResponseBodyRegions regions;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,15 @@ public class DescribeChildInstanceRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeChildInstanceRegionsResponseBodyRegionsRegion extends TeaModel {
+        /**
+         * <p>The name of the region.</p>
+         */
         @NameInMap("LocalName")
         public String localName;
 
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 

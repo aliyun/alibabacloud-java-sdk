@@ -4,15 +4,34 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
+    /**
+     * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+     */
     @NameInMap("CenId")
     public String cenId;
 
+    /**
+     * <p>The billing method. Default value: **POSTPAY**, which specifies the pay-as-you-go billing method.</p>
+     */
     @NameInMap("ChargeType")
     public String chargeType;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.</p>
+     * <br>
+     * <p>>  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>Specifies whether to perform a precheck to check information such as the permissions and instance status. Valid values:</p>
+     * <br>
+     * <p>*   **false** (default): sends the request. If the request passes the precheck, the VPC connection is created.</p>
+     * <p>*   **true**: sends a precheck request but does not create the VPC connection. If you use this value, the system checks the required parameters and the request syntax. If the request fails to pass the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
@@ -22,6 +41,11 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the VPC is deployed.</p>
+     * <br>
+     * <p>You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -31,24 +55,51 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateTransitRouterVpcAttachmentRequestTag> tag;
 
+    /**
+     * <p>The description of the VPC connection.</p>
+     * <br>
+     * <p>The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("TransitRouterAttachmentDescription")
     public String transitRouterAttachmentDescription;
 
+    /**
+     * <p>The name of the VPC connection.</p>
+     * <br>
+     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter.</p>
+     */
     @NameInMap("TransitRouterAttachmentName")
     public String transitRouterAttachmentName;
 
+    /**
+     * <p>The ID of the Enterprise Edition transit router.</p>
+     */
     @NameInMap("TransitRouterId")
     public String transitRouterId;
 
+    /**
+     * <p>The ID of the VPC.</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 
+    /**
+     * <p>The ID of the Alibaba Cloud account to which the VPC belongs. The default value is the ID of the current Alibaba Cloud account.</p>
+     * <br>
+     * <p>>  If you want to connect to a network instance that belongs to another account, this parameter is required.</p>
+     */
     @NameInMap("VpcOwnerId")
     public Long vpcOwnerId;
 
+    /**
+     * <p>The mappings of zones.</p>
+     */
     @NameInMap("ZoneMappings")
     public java.util.List<CreateTransitRouterVpcAttachmentRequestZoneMappings> zoneMappings;
 
@@ -186,9 +237,23 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
     }
 
     public static class CreateTransitRouterVpcAttachmentRequestTag extends TeaModel {
+        /**
+         * <p>The tag keys of the resources. </p>
+         * <br>
+         * <p>The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.  </p>
+         * <br>
+         * <p>You can specify at most 20 tag keys.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag values of the resources. </p>
+         * <br>
+         * <p>The tag values can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.  </p>
+         * <br>
+         * <p>Each tag key has a unique tag value. You can specify at most 20 tag values in each call.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -216,9 +281,21 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
     }
 
     public static class CreateTransitRouterVpcAttachmentRequestZoneMappings extends TeaModel {
+        /**
+         * <p>Select a vSwitch that is deployed in a zone supported by Enterprise Edition transit routers.</p>
+         * <br>
+         * <p>You can specify vSwitches for at most 10 zones in each call.</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <p>The ID of the zone supported by Enterprise Edition transit routers.</p>
+         * <br>
+         * <p>You can call the [DescribeZones](~~36064~~) operation to query zone IDs.</p>
+         * <br>
+         * <p>You can specify at most 10 zones in each call.</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

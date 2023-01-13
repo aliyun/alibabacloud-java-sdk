@@ -4,21 +4,54 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class EnableCenVbrHealthCheckRequest extends TeaModel {
+    /**
+     * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+     */
     @NameInMap("CenId")
     public String cenId;
 
+    /**
+     * <p>The time interval at which probe packets are sent during health check. Unit: seconds. Default value: **2**. Valid values: **2 to 3**.</p>
+     */
     @NameInMap("HealthCheckInterval")
     public Integer healthCheckInterval;
 
+    /**
+     * <p>Specifies whether to enable probing during the health check. Valid values:</p>
+     * <br>
+     * <p>*   **true**: yes</p>
+     * <br>
+     * <p>    If you enable probing, the system does not switch to another route if the route detected is not reachable.</p>
+     * <br>
+     * <p>> Make sure that a redundant route is available. Otherwise, network disconnections may occur.</p>
+     * <br>
+     * <p>*   **false** (default): no</p>
+     * <br>
+     * <p>    Probing is disabled by default. If a redundant route is specified, the system switches to the redundant route when the detected route is not reachable.</p>
+     */
     @NameInMap("HealthCheckOnly")
     public Boolean healthCheckOnly;
 
+    /**
+     * <p>The source IP address of the health check. You can set the source IP address in the following ways:</p>
+     * <br>
+     * <p>*   **Automatic IP Address** (recommended): The system automatically assigns an IP address from the 100.96.0.0/16 CIDR block.</p>
+     * <p>*   **Custom IP Address**: You must specify an idle IP address from the 10.0.0.0/8, 192.168.0.0/16, or 172.16.0.0/12 CIDR block. The specified IP address cannot be the IP address of the VBR on the Alibaba Cloud side, the IP address of the VBR on the customer side, or other IP addresses with which the VBR communicates through the CEN instance.</p>
+     */
     @NameInMap("HealthCheckSourceIp")
     public String healthCheckSourceIp;
 
+    /**
+     * <p>The destination IP address of health check.</p>
+     * <br>
+     * <p>Set the destination IP address to the IP address of the VBR on the customer side.</p>
+     */
     @NameInMap("HealthCheckTargetIp")
     public String healthCheckTargetIp;
 
+    /**
+     * <p>The number of probe packets that are sent during health check. Unit: connections. Valid values: **3 to 8**. Default value: **8**.</p>
+     */
     @NameInMap("HealthyThreshold")
     public Integer healthyThreshold;
 
@@ -34,12 +67,25 @@ public class EnableCenVbrHealthCheckRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the VBR.</p>
+     */
     @NameInMap("VbrInstanceId")
     public String vbrInstanceId;
 
+    /**
+     * <p>The ID of the Alibaba Cloud account to which the VBR belongs.</p>
+     * <br>
+     * <p>>  The parameter is required if the VBR and the CEN instance belong to different Alibaba Cloud accounts.</p>
+     */
     @NameInMap("VbrInstanceOwnerId")
     public Long vbrInstanceOwnerId;
 
+    /**
+     * <p>The ID of the region where the VBR is deployed.</p>
+     * <br>
+     * <p>You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("VbrInstanceRegionId")
     public String vbrInstanceRegionId;
 

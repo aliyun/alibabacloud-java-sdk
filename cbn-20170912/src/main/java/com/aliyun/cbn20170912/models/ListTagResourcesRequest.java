@@ -4,6 +4,12 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
+    /**
+     * <p>The token that is used for the next query. Valid values:</p>
+     * <br>
+     * <p>*   If this is your first query or no next query is to be sent, ignore this parameter.</p>
+     * <p>*   If a next query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -13,12 +19,23 @@ public class ListTagResourcesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of entries to return on each page. Valid values: **1** to **50**. Default value: **10**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The IDs of the CEN instances.</p>
+     * <br>
+     * <p>You can specify at most 20 IDs in each call.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
@@ -28,9 +45,17 @@ public class ListTagResourcesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The type of the resource. Set the value to **cen**, which specifies CEN instances.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The tags.</p>
+     * <br>
+     * <p>You can specify at most 20 tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
 
@@ -120,9 +145,23 @@ public class ListTagResourcesRequest extends TeaModel {
     }
 
     public static class ListTagResourcesRequestTag extends TeaModel {
+        /**
+         * <p>The key of the tag.</p>
+         * <br>
+         * <p>The key cannot exceed 64 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
+         * <br>
+         * <p>You can specify at most 20 tag keys.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         * <br>
+         * <p>The value cannot exceed 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
+         * <br>
+         * <p>You can specify at most 20 tag values.</p>
+         */
         @NameInMap("Value")
         public String value;
 

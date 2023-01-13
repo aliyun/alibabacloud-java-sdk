@@ -4,15 +4,29 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class ListTransitRouterAvailableResourceResponseBody extends TeaModel {
+    /**
+     * <p>A list of zones.</p>
+     */
     @NameInMap("AvailableZones")
     public java.util.List<String> availableZones;
 
+    /**
+     * <p>A list of primary zones.</p>
+     */
     @NameInMap("MasterZones")
     public java.util.List<String> masterZones;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>A list of zone IDs.</p>
+     * <br>
+     * <p>You can call [DescribeZones](~~36064~~) to query zones by ID.</p>
+     */
     @NameInMap("SlaveZones")
     public java.util.List<String> slaveZones;
 

@@ -4,18 +4,36 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token that is used for the next query. Valid values:</p>
+     * <br>
+     * <p>*   If **NextToken** is empty, it indicates that no next query is to be sent.</p>
+     * <p>*   If **NextToken** is not empty, the value indicates the token that is used for the next query.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>The information about the multicast domain.</p>
+     */
     @NameInMap("TransitRouterMulticastDomains")
     public java.util.List<ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomains> transitRouterMulticastDomains;
 
@@ -65,9 +83,15 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
     }
 
     public static class ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomainsTags extends TeaModel {
+        /**
+         * <p>The tag key of the multicast domain.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value of the multicast domain.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -95,21 +119,41 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
     }
 
     public static class ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomains extends TeaModel {
+        /**
+         * <p>The status of the multicast domain.</p>
+         * <br>
+         * <p>Valid value: **Active**, which indicates that the multicast domain is available.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The tags of the multicast domain.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomainsTags> tags;
 
+        /**
+         * <p>The ID of the transit router.</p>
+         */
         @NameInMap("TransitRouterId")
         public String transitRouterId;
 
+        /**
+         * <p>The description of the multicast domain.</p>
+         */
         @NameInMap("TransitRouterMulticastDomainDescription")
         public String transitRouterMulticastDomainDescription;
 
+        /**
+         * <p>The ID of the multicast domain.</p>
+         */
         @NameInMap("TransitRouterMulticastDomainId")
         public String transitRouterMulticastDomainId;
 
+        /**
+         * <p>The name of the multicast domain.</p>
+         */
         @NameInMap("TransitRouterMulticastDomainName")
         public String transitRouterMulticastDomainName;
 
