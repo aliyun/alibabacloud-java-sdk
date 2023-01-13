@@ -115,6 +115,9 @@ public class GetQualityRuleResponseBody extends TeaModel {
         @NameInMap("OnDutyAccountName")
         public String onDutyAccountName;
 
+        @NameInMap("OpenSwitch")
+        public Boolean openSwitch;
+
         @NameInMap("Operator")
         public String operator;
 
@@ -252,6 +255,14 @@ public class GetQualityRuleResponseBody extends TeaModel {
         }
         public String getOnDutyAccountName() {
             return this.onDutyAccountName;
+        }
+
+        public GetQualityRuleResponseBodyData setOpenSwitch(Boolean openSwitch) {
+            this.openSwitch = openSwitch;
+            return this;
+        }
+        public Boolean getOpenSwitch() {
+            return this.openSwitch;
         }
 
         public GetQualityRuleResponseBodyData setOperator(String operator) {

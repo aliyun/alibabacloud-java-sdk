@@ -4,7 +4,9 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class TestDataServiceApiRequest extends TeaModel {
-    // API Id
+    /**
+     * <p>API Id</p>
+     */
     @NameInMap("ApiId")
     public Long apiId;
 

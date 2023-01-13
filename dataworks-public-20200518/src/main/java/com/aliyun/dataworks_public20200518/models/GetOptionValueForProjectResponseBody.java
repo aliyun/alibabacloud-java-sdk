@@ -7,7 +7,9 @@ public class GetOptionValueForProjectResponseBody extends TeaModel {
     @NameInMap("OptionValue")
     public String optionValue;
 
-    // Id of the request
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
