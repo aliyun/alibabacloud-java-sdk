@@ -4,23 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeTagsResponseBody extends TeaModel {
-    // The page number of the returned page.
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // The number of entries returned per page.
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The tags that match all the filter conditions.
+    /**
+     * <p>The tags that match all filter conditions.</p>
+     */
     @NameInMap("Tags")
     public DescribeTagsResponseBodyTags tags;
 
-    // The total number of tags.
+    /**
+     * <p>The total number of tags.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -70,49 +80,75 @@ public class DescribeTagsResponseBody extends TeaModel {
     }
 
     public static class DescribeTagsResponseBodyTagsTagResourceTypeCount extends TeaModel {
-        // The number of dedicated hosts to which the tag is bound.
+        /**
+         * <p>The number of dedicated hosts to which the tag is added.</p>
+         */
         @NameInMap("Ddh")
         public Integer ddh;
 
-        // The number of disks to which the tag is bound.
+        /**
+         * <p>The number of disks to which the tag is added.</p>
+         */
         @NameInMap("Disk")
         public Integer disk;
 
-        // The number of ENIs to which the tag is bound.
+        /**
+         * <p>The number of ENIs to which the tag is added.</p>
+         */
         @NameInMap("Eni")
         public Integer eni;
 
-        // The number of images to which the tag is bound.
+        /**
+         * <p>The number of images to which the tag is added.</p>
+         */
         @NameInMap("Image")
         public Integer image;
 
-        // The number of instances to which the tag is bound.
+        /**
+         * <p>The number of instances to which the tag is added.</p>
+         */
         @NameInMap("Instance")
         public Integer instance;
 
-        // The number of key pairs to which the tag is bound.
+        /**
+         * <p>The number of key pairs to which the tag is added.</p>
+         */
         @NameInMap("KeyPair")
         public Integer keyPair;
 
-        // The number of launch templates to which the tag is bound.
+        /**
+         * <p>The number of launch templates to which the tag is added.</p>
+         */
         @NameInMap("LaunchTemplate")
         public Integer launchTemplate;
 
+        /**
+         * <p>The number of reserved instances to which the tag is added.</p>
+         */
         @NameInMap("ReservedInstance")
         public Integer reservedInstance;
 
-        // The number of security groups to which the tag is bound.
+        /**
+         * <p>The number of security groups to which the tag is added.</p>
+         */
         @NameInMap("Securitygroup")
         public Integer securitygroup;
 
-        // The number of snapshots to which the tag is bound.
+        /**
+         * <p>The number of snapshots to which the tag is added.</p>
+         */
         @NameInMap("Snapshot")
         public Integer snapshot;
 
+        /**
+         * <p>The number of automatic snapshot policies to which the tag is added.</p>
+         */
         @NameInMap("SnapshotPolicy")
         public Integer snapshotPolicy;
 
-        // The number of extended volumes to which the tag is bound.
+        /**
+         * <p>The number of storage volumes to which the tag is added.</p>
+         */
         @NameInMap("Volume")
         public Integer volume;
 
@@ -220,15 +256,21 @@ public class DescribeTagsResponseBody extends TeaModel {
     }
 
     public static class DescribeTagsResponseBodyTagsTag extends TeaModel {
-        // The number of resource types.
+        /**
+         * <p>The number of resource types.</p>
+         */
         @NameInMap("ResourceTypeCount")
         public DescribeTagsResponseBodyTagsTagResourceTypeCount resourceTypeCount;
 
-        // The tag key.
+        /**
+         * <p>The key of the tag.</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        // The tag value.
+        /**
+         * <p>The key of the tag.</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 

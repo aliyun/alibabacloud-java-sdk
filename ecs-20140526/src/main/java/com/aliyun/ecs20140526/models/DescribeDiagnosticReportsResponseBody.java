@@ -4,15 +4,21 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeDiagnosticReportsResponseBody extends TeaModel {
-    // The query token returned in this call.
+    /**
+     * <p>The query token returned in this call.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    // The list of reports.
+    /**
+     * <p>The list of reports.</p>
+     */
     @NameInMap("Reports")
     public DescribeDiagnosticReportsResponseBodyReports reports;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -46,23 +52,31 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
     }
 
     public static class DescribeDiagnosticReportsResponseBodyReportsReportIssuesIssue extends TeaModel {
-        // The unique ID of the diagnosed issue.
+        /**
+         * <p>The unique ID of the diagnosed issue.</p>
+         */
         @NameInMap("IssueId")
         public String issueId;
 
-        // The category of the diagnostic metric.
+        /**
+         * <p>The category of the diagnostic metric.</p>
+         */
         @NameInMap("MetricCategory")
         public String metricCategory;
 
-        // The ID of the diagnostic metric.
+        /**
+         * <p>The ID of the diagnostic metric.</p>
+         */
         @NameInMap("MetricId")
         public String metricId;
 
-        // The severity level of the diagnostic metric. Valid values:
-        // 
-        // *   Info: Diagnostic information was recorded and may be related to exceptions.
-        // *   Warn: Diagnostic information was recorded and may indicate exceptions.
-        // *   Critical: Critical exceptions were detected.
+        /**
+         * <p>The severity level of the diagnostic metric. Valid values:</p>
+         * <br>
+         * <p>*   Info: Diagnostic information was recorded and may be related to exceptions.</p>
+         * <p>*   Warn: Diagnostic information was recorded and may indicate exceptions.</p>
+         * <p>*   Critical: Critical exceptions were detected.</p>
+         */
         @NameInMap("Severity")
         public String severity;
 
@@ -125,53 +139,75 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
     }
 
     public static class DescribeDiagnosticReportsResponseBodyReportsReport extends TeaModel {
-        // The time when the diagnostic report was created.
+        /**
+         * <p>The time when the diagnostic report was created.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        // The end of the reporting period of the diagnostic report. The value is the EndTime value that was passed in when you called the [CreateDiagnosticReport](~~442490~~) operation to create the diagnostic report.
+        /**
+         * <p>The end of the reporting period of the diagnostic report. The value is the EndTime value that was passed in when you called the [CreateDiagnosticReport](~~442490~~) operation to create the diagnostic report.</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
-        // The time when the diagnostic was complete.
+        /**
+         * <p>The time when the diagnostic was complete.</p>
+         */
         @NameInMap("FinishedTime")
         public String finishedTime;
 
-        // The list of issues.
+        /**
+         * <p>The list of issues.</p>
+         */
         @NameInMap("Issues")
         public DescribeDiagnosticReportsResponseBodyReportsReportIssues issues;
 
-        // The ID of the diagnostic metric set.
+        /**
+         * <p>The ID of the diagnostic metric set.</p>
+         */
         @NameInMap("MetricSetId")
         public String metricSetId;
 
-        // The ID of the diagnostic report.
+        /**
+         * <p>The ID of the diagnostic report.</p>
+         */
         @NameInMap("ReportId")
         public String reportId;
 
-        // The ID of the resource.
+        /**
+         * <p>The ID of the resource.</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
-        // The type of the resource.
+        /**
+         * <p>The type of the resource.</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
-        // The severity level of the diagnostic report. Valid values:
-        // 
-        // *   Unknown: The diagnostic has not started, failed to run, or exited unexpectedly without a diagnosis.
-        // *   Normal: No exceptions were detected.
-        // *   Info: Diagnostic information was recorded and may be related to exceptions.
-        // *   Warn: Diagnostic information was recorded and may indicate exceptions.
-        // *   Critical: Critical exceptions were detected.
+        /**
+         * <p>The severity level of the diagnostic report. Valid values:</p>
+         * <br>
+         * <p>*   Unknown: The diagnostic has not started, failed to run, or exited unexpectedly without a diagnosis.</p>
+         * <p>*   Normal: No exceptions were detected.</p>
+         * <p>*   Info: Diagnostic information was recorded and may be related to exceptions.</p>
+         * <p>*   Warn: Diagnostic information was recorded and may indicate exceptions.</p>
+         * <p>*   Critical: Critical exceptions were detected.</p>
+         */
         @NameInMap("Severity")
         public String severity;
 
-        // The beginning of the reporting period of the diagnostic report. The value is the StartTime value that was passed in when you called the [CreateDiagnosticReport](~~442490~~) operation to create the diagnostic report.
+        /**
+         * <p>The beginning of the reporting period of the diagnostic report. The value is the StartTime value that was passed in when you called the [CreateDiagnosticReport](~~442490~~) operation to create the diagnostic report.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
-        // The state of the diagnostic report.
+        /**
+         * <p>The state of the diagnostic report.</p>
+         */
         @NameInMap("Status")
         public String status;
 

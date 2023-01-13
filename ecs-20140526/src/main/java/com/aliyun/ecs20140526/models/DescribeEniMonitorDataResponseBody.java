@@ -4,15 +4,21 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeEniMonitorDataResponseBody extends TeaModel {
-    // Details about the monitored data of the ENI.
+    /**
+     * <p>Details about the monitored data of the ENI.</p>
+     */
     @NameInMap("MonitorData")
     public DescribeEniMonitorDataResponseBodyMonitorData monitorData;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The total number of returned entries.
+    /**
+     * <p>The total number of returned entries.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -46,35 +52,51 @@ public class DescribeEniMonitorDataResponseBody extends TeaModel {
     }
 
     public static class DescribeEniMonitorDataResponseBodyMonitorDataEniMonitorData extends TeaModel {
-        // The number of dropped packets received by the secondary ENI over the internal network.
+        /**
+         * <p>The number of dropped packets received by the secondary ENI over the internal network.</p>
+         */
         @NameInMap("DropPacketRx")
         public String dropPacketRx;
 
-        // The number of dropped packets sent by the secondary ENI over the internal network.
+        /**
+         * <p>The number of dropped packets sent by the secondary ENI over the internal network.</p>
+         */
         @NameInMap("DropPacketTx")
         public String dropPacketTx;
 
-        // The ID of the secondary ENI.
+        /**
+         * <p>The ID of the secondary ENI.</p>
+         */
         @NameInMap("EniId")
         public String eniId;
 
-        // The average rate of data traffic received by the secondary ENI over the internal network. Unit: Kbit/s.
+        /**
+         * <p>The average rate of data traffic received by the secondary ENI over the internal network. Unit: Kbit/s.</p>
+         */
         @NameInMap("IntranetRx")
         public String intranetRx;
 
-        // The average rate of data traffic sent by the secondary ENI over the internal network. Unit: Kbit/s.
+        /**
+         * <p>The average rate of data traffic sent by the secondary ENI over the internal network. Unit: Kbit/s.</p>
+         */
         @NameInMap("IntranetTx")
         public String intranetTx;
 
-        // The number of packets received by the secondary ENI over the internal network.
+        /**
+         * <p>The number of packets received by the secondary ENI over the internal network.</p>
+         */
         @NameInMap("PacketRx")
         public String packetRx;
 
-        // The number of packets sent by the secondary ENI over the internal network.
+        /**
+         * <p>The number of packets sent by the secondary ENI over the internal network.</p>
+         */
         @NameInMap("PacketTx")
         public String packetTx;
 
-        // The timestamp of the monitored data. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+        /**
+         * <p>The timestamp of the monitored data. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 

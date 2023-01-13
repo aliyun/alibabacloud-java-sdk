@@ -4,16 +4,20 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DeleteInstanceRequest extends TeaModel {
-    // Specifies whether to forcefully release the instance in the **Running** (`Running`) state. Valid values:
-    // 
-    // *   true: forcefully releases the instance in the **Running** (`Running`) state. When the Force parameter is set to true, this operation is equivalent to the power-off operation. Temporary data in the memory and storage of the instance is erased and cannot be restored.
-    // *   false: normally releases the instance. This value is valid only for instances in the **Stopped** (`Stopped`) state.
-    // 
-    // Default value: false.
+    /**
+     * <p>Specifies whether to forcefully release the instance in the **Running** (`Running`) state. Valid values:</p>
+     * <br>
+     * <p>*   true: forcefully releases the instance in the **Running** (`Running`) state. When the Force parameter is set to true, this operation is equivalent to the power-off operation. Temporary data in the memory and storage of the instance is erased and cannot be restored.</p>
+     * <p>*   false: normally releases the instance. This value is valid only for instances in the **Stopped** (`Stopped`) state.</p>
+     * <br>
+     * <p>Default value: false.</p>
+     */
     @NameInMap("Force")
     public Boolean force;
 
-    // The ID of the instance that you want to release.
+    /**
+     * <p>The ID of the instance that you want to release.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -29,9 +33,11 @@ public class DeleteInstanceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    // Specifies whether to release the expired subscription instance.
-    // 
-    // Default value: false.
+    /**
+     * <p>Specifies whether to release the expired subscription instance.</p>
+     * <br>
+     * <p>Default value: false.</p>
+     */
     @NameInMap("TerminateSubscription")
     public Boolean terminateSubscription;
 

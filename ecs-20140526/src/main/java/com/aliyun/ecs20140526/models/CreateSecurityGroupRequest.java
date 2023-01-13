@@ -4,13 +4,17 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateSecurityGroupRequest extends TeaModel {
-    // The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // The description of the security group. The description must be 2 to 256 characters in length and cannot start with http:// or https://.
-    // 
-    // This parameter is empty by default.
+    /**
+     * <p>The description of the security group. The description must be 2 to 256 characters in length and cannot start with http:// or https://.</p>
+     * <br>
+     * <p>This parameter is empty by default.</p>
+     */
     @NameInMap("Description")
     public String description;
 
@@ -20,11 +24,15 @@ public class CreateSecurityGroupRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The region ID of the security group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+    /**
+     * <p>The region ID of the security group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The ID of the resource group to which the security group belongs.
+    /**
+     * <p>The ID of the resource group to which the security group belongs.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -34,28 +42,38 @@ public class CreateSecurityGroupRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    // The name of the security group. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-). This parameter is empty by default.
+    /**
+     * <p>The name of the security group. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-). This parameter is empty by default.</p>
+     */
     @NameInMap("SecurityGroupName")
     public String securityGroupName;
 
-    // The type of the security group. Valid values:
-    // 
-    // *   normal: basic security group
-    // *   enterprise: advanced security group. For more information, see [Advanced security groups](~~120621~~).
+    /**
+     * <p>The type of the security group. Valid values:</p>
+     * <br>
+     * <p>*   normal: basic security group</p>
+     * <p>*   enterprise: advanced security group. For more information, see [Advanced security groups](~~120621~~).</p>
+     */
     @NameInMap("SecurityGroupType")
     public String securityGroupType;
 
-    // This parameter is unavailable.
+    /**
+     * <p>This parameter is unavailable.</p>
+     */
     @NameInMap("ServiceManaged")
     public Boolean serviceManaged;
 
-    // The tags of the new security group.
+    /**
+     * <p>The tags of the new security group.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateSecurityGroupRequestTag> tag;
 
-    // The ID of the VPC in which to create the security group.
-    // 
-    // >  If the specified region supports the classic network, you can create security groups of the classic network type without specifying the VpcId parameter. If the specified region does not support the classic network, you must specify the VpcId parameter to create security groups of the VPC type.
+    /**
+     * <p>The ID of the VPC in which to create the security group.</p>
+     * <br>
+     * <p>>  If the specified region supports the classic network, you can create security groups of the classic network type without specifying the VpcId parameter. If the specified region does not support the classic network, you must specify the VpcId parameter to create security groups of the VPC type.</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 
@@ -169,11 +187,15 @@ public class CreateSecurityGroupRequest extends TeaModel {
     }
 
     public static class CreateSecurityGroupRequestTag extends TeaModel {
-        // The key of tag N of the security group. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain http:// or https://.
+        /**
+         * <p>The key of tag N of the security group. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain http:// or https://.</p>
+         */
         @NameInMap("Key")
         public String key;
 
-        // The value of tag N of the security group. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with acs: or contain http:// or https://.
+        /**
+         * <p>The value of tag N of the security group. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with acs: or contain http:// or https://.</p>
+         */
         @NameInMap("Value")
         public String value;
 

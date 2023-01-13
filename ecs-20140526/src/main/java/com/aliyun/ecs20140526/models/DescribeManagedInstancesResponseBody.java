@@ -4,23 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeManagedInstancesResponseBody extends TeaModel {
-    // Details of the managed instances.
+    /**
+     * <p>Details of the managed instances.</p>
+     */
     @NameInMap("Instances")
     public java.util.List<DescribeManagedInstancesResponseBodyInstances> instances;
 
-    // The page number of the returned page.
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
-    // The number of entries returned per page.
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The total number of managed instances returned.
+    /**
+     * <p>The total number of managed instances returned.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -69,65 +79,126 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeManagedInstancesResponseBodyInstancesTags extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static DescribeManagedInstancesResponseBodyInstancesTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeManagedInstancesResponseBodyInstancesTags self = new DescribeManagedInstancesResponseBodyInstancesTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeManagedInstancesResponseBodyInstancesTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public DescribeManagedInstancesResponseBodyInstancesTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
     public static class DescribeManagedInstancesResponseBodyInstances extends TeaModel {
-        // The ID of the activation code.
+        /**
+         * <p>The ID of the activation code.</p>
+         */
         @NameInMap("ActivationId")
         public String activationId;
 
-        // The version number of the Cloud Assistant client.
+        /**
+         * <p>The version number of the Cloud Assistant client.</p>
+         */
         @NameInMap("AgentVersion")
         public String agentVersion;
 
-        // Indicates whether the managed instance is connected. Valid values:
-        // 
-        // *   true: The managed instance is connected and you can manage the instance by using Cloud Assistant.
-        // *   false: The managed instance is not connected because the managed instance is down or because the Cloud Assistant client is not installed correctly.
+        /**
+         * <p>Indicates whether the managed instance is connected. Valid values:</p>
+         * <br>
+         * <p>*   true: The managed instance is connected and you can manage the instance by using Cloud Assistant.</p>
+         * <p>*   false: The managed instance is not connected because the managed instance is down or because the Cloud Assistant client is not installed correctly.</p>
+         */
         @NameInMap("Connected")
         public Boolean connected;
 
-        // The hostname of the managed instance.
+        /**
+         * <p>The hostname of the managed instance.</p>
+         */
         @NameInMap("Hostname")
         public String hostname;
 
-        // The ID of the managed instance.
+        /**
+         * <p>The ID of the managed instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        // The name of the managed instance.
+        /**
+         * <p>The name of the managed instance.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
-        // The public IP address of the managed instance.
+        /**
+         * <p>The public IP address of the managed instance.</p>
+         */
         @NameInMap("InternetIp")
         public String internetIp;
 
-        // The internal IP address of the managed instance.
+        /**
+         * <p>The internal IP address of the managed instance.</p>
+         */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
-        // The number of times that Cloud Assistant tasks were executed on the managed instance.
+        /**
+         * <p>The number of times that Cloud Assistant tasks were executed on the managed instance.</p>
+         */
         @NameInMap("InvocationCount")
         public Long invocationCount;
 
-        // The last Cloud Assistant task execution time.
+        /**
+         * <p>The last Cloud Assistant task execution time.</p>
+         */
         @NameInMap("LastInvokedTime")
         public String lastInvokedTime;
 
-        // The machine code of the managed instance.
+        /**
+         * <p>The machine code of the managed instance.</p>
+         */
         @NameInMap("MachineId")
         public String machineId;
 
-        // The operating system type of the managed instance.
+        /**
+         * <p>The operating system type of the managed instance.</p>
+         */
         @NameInMap("OsType")
         public String osType;
 
-        // The version information of the operating system.
+        /**
+         * <p>The version information of the operating system.</p>
+         */
         @NameInMap("OsVersion")
         public String osVersion;
 
-        // The time when the managed instance was registered.
+        /**
+         * <p>The time when the managed instance was registered.</p>
+         */
         @NameInMap("RegistrationTime")
         public String registrationTime;
+
+        @NameInMap("Tags")
+        public java.util.List<DescribeManagedInstancesResponseBodyInstancesTags> tags;
 
         public static DescribeManagedInstancesResponseBodyInstances build(java.util.Map<String, ?> map) throws Exception {
             DescribeManagedInstancesResponseBodyInstances self = new DescribeManagedInstancesResponseBodyInstances();
@@ -244,6 +315,14 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
         }
         public String getRegistrationTime() {
             return this.registrationTime;
+        }
+
+        public DescribeManagedInstancesResponseBodyInstances setTags(java.util.List<DescribeManagedInstancesResponseBodyInstancesTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<DescribeManagedInstancesResponseBodyInstancesTags> getTags() {
+            return this.tags;
         }
 
     }

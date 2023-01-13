@@ -4,11 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeResourcesModificationResponseBody extends TeaModel {
-    // Details about the available zones.
+    /**
+     * <p>Details about the available zones.</p>
+     */
     @NameInMap("AvailableZones")
     public DescribeResourcesModificationResponseBodyAvailableZones availableZones;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,34 +38,46 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
     }
 
     public static class DescribeResourcesModificationResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceSupportedResourcesSupportedResource extends TeaModel {
-        // The maximum resource specification value. This parameter is not returned if it has no value.
+        /**
+         * <p>The maximum resource specification value. This parameter is not returned if it has no value.</p>
+         */
         @NameInMap("Max")
         public Integer max;
 
-        // The minimum resource specification value. This parameter is not returned if it has no value.
+        /**
+         * <p>The minimum resource specification value. This parameter is not returned if it has no value.</p>
+         */
         @NameInMap("Min")
         public Integer min;
 
-        // The state of the resource. Valid values:
-        // 
-        // *   Available
-        // *   SoldOut
+        /**
+         * <p>The state of the resource. Valid values:</p>
+         * <br>
+         * <p>*   Available</p>
+         * <p>*   SoldOut</p>
+         */
         @NameInMap("Status")
         public String status;
 
-        // The category of resource based on stock status. Valid values:
-        // 
-        // *   WithStock: resources that are in sufficient stock
-        // *   ClosedWithStock: resources that are ininsufficient stock
-        // *   WithoutStock: resources that are out of stock
+        /**
+         * <p>The category of resource based on stock status. Valid values:</p>
+         * <br>
+         * <p>*   WithStock: resources that are in sufficient stock</p>
+         * <p>*   ClosedWithStock: resources that are ininsufficient stock</p>
+         * <p>*   WithoutStock: resources that are out of stock</p>
+         */
         @NameInMap("StatusCategory")
         public String statusCategory;
 
-        // The resource specification unit. This parameter is not returned if it has no value.
+        /**
+         * <p>The resource specification unit. This parameter is not returned if it has no value.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
-        // The resource value.
+        /**
+         * <p>The resource value.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -140,18 +156,22 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
     }
 
     public static class DescribeResourcesModificationResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResource extends TeaModel {
-        // Details about the resources.
+        /**
+         * <p>Details about the resources.</p>
+         */
         @NameInMap("SupportedResources")
         public DescribeResourcesModificationResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceSupportedResources supportedResources;
 
-        // The type of resource. Valid values:
-        // 
-        // *   Zone
-        // *   IoOptimized
-        // *   InstanceType
-        // *   SystemDisk
-        // *   DataDisk
-        // *   Network
+        /**
+         * <p>The type of resource. Valid values:</p>
+         * <br>
+         * <p>*   Zone</p>
+         * <p>*   IoOptimized</p>
+         * <p>*   InstanceType</p>
+         * <p>*   SystemDisk</p>
+         * <p>*   DataDisk</p>
+         * <p>*   Network</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -198,30 +218,40 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
     }
 
     public static class DescribeResourcesModificationResponseBodyAvailableZonesAvailableZone extends TeaModel {
-        // Details about the resources available in the zone.
+        /**
+         * <p>Details about the resources available in the zone.</p>
+         */
         @NameInMap("AvailableResources")
         public DescribeResourcesModificationResponseBodyAvailableZonesAvailableZoneAvailableResources availableResources;
 
-        // The region ID of the zone.
+        /**
+         * <p>The region ID of the zone.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
-        // The state of the resource. Valid values:
-        // 
-        // *   Available
-        // *   SoldOut
+        /**
+         * <p>The state of the resource. Valid values:</p>
+         * <br>
+         * <p>*   Available</p>
+         * <p>*   SoldOut</p>
+         */
         @NameInMap("Status")
         public String status;
 
-        // The category of resource based on stock status. Valid values:
-        // 
-        // *   WithStock: resources that are in sufficient stock
-        // *   ClosedWithStock: resources that are in insufficient stock
-        // *   WithoutStock: resources that are out of stock
+        /**
+         * <p>The category of resource based on stock status. Valid values:</p>
+         * <br>
+         * <p>*   WithStock: resources that are in sufficient stock</p>
+         * <p>*   ClosedWithStock: resources that are in insufficient stock</p>
+         * <p>*   WithoutStock: resources that are out of stock</p>
+         */
         @NameInMap("StatusCategory")
         public String statusCategory;
 
-        // The ID of the zone.
+        /**
+         * <p>The ID of the zone.</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

@@ -4,27 +4,39 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeImagesResponseBody extends TeaModel {
-    // Details about the images.
+    /**
+     * <p>Details about the images.</p>
+     */
     @NameInMap("Images")
     public DescribeImagesResponseBodyImages images;
 
-    // The page number of the returned page.
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // The number of entries returned per page.
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The region ID of the image.
+    /**
+     * <p>The region ID of the image.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The total number of images.
+    /**
+     * <p>The total number of images.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -82,24 +94,32 @@ public class DescribeImagesResponseBody extends TeaModel {
     }
 
     public static class DescribeImagesResponseBodyImagesImageDetectionOptionsItemsItem extends TeaModel {
-        // The name of the check item.
+        /**
+         * <p>The name of the check item.</p>
+         */
         @NameInMap("Name")
         public String name;
 
-        // The risk that the check item may have.
+        /**
+         * <p>The risk that the check item may have.</p>
+         */
         @NameInMap("RiskCode")
         public String riskCode;
 
-        // Indicates the severity of the risk that the check item of the imported custom image has. If the check item is at risk, this parameter is returned. If the check item is not at risk, this parameter is not returned.  
-        // 
-        // Valid values:
-        // 
-        // - High: The check item has a high risk, which may affect instance startup. We strongly recommended that you handle the risk.
-        // - Medium: The check item has a medium risk, which may affect the startup performance or configurations of the instance. We recommend that you handle the risk.
+        /**
+         * <p>Indicates the severity of the risk that the check item of the imported custom image has. If the check item is at risk, this parameter is returned. If the check item is not at risk, this parameter is not returned.  </p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>- High: The check item has a high risk, which may affect instance startup. We strongly recommended that you handle the risk.</p>
+         * <p>- Medium: The check item has a medium risk, which may affect the startup performance or configurations of the instance. We recommend that you handle the risk.</p>
+         */
         @NameInMap("RiskLevel")
         public String riskLevel;
 
-        // The result of the check item.
+        /**
+         * <p>The result of the check item.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -162,14 +182,18 @@ public class DescribeImagesResponseBody extends TeaModel {
     }
 
     public static class DescribeImagesResponseBodyImagesImageDetectionOptions extends TeaModel {
-        // The check items.
+        /**
+         * <p>The check items.</p>
+         */
         @NameInMap("Items")
         public DescribeImagesResponseBodyImagesImageDetectionOptionsItems items;
 
-        // The state of the image check task. Valid values:
-        // 
-        // - Processing: The image check task is in progress.
-        // - Finished: The image check task is completed.
+        /**
+         * <p>The state of the image check task. Valid values:</p>
+         * <br>
+         * <p>- Processing: The image check task is in progress.</p>
+         * <p>- Finished: The image check task is completed.</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -197,41 +221,59 @@ public class DescribeImagesResponseBody extends TeaModel {
     }
 
     public static class DescribeImagesResponseBodyImagesImageDiskDeviceMappingsDiskDeviceMapping extends TeaModel {
-        // The device name of the disk. Example: /dev/xvdb.
-        // 
-        // >  This parameter will be removed in the future. We recommend that you use other parameters to ensure compatibility.
+        /**
+         * <p>The device name of the disk. Example: /dev/xvdb.</p>
+         * <br>
+         * <p>>  This parameter will be removed in the future. We recommend that you use other parameters to ensure compatibility.</p>
+         */
         @NameInMap("Device")
         public String device;
 
-        // The format of the image.
+        /**
+         * <p>The format of the image.</p>
+         */
         @NameInMap("Format")
         public String format;
 
-        // The Object Storage Service (OSS) bucket that contains the imported image file.
+        /**
+         * <p>The Object Storage Service (OSS) bucket that contains the imported image file.</p>
+         */
         @NameInMap("ImportOSSBucket")
         public String importOSSBucket;
 
-        // The OSS object that corresponds to the imported image file.
+        /**
+         * <p>The OSS object that corresponds to the imported image file.</p>
+         */
         @NameInMap("ImportOSSObject")
         public String importOSSObject;
 
-        // The progress of an image copy task.
+        /**
+         * <p>The progress of an image copy task.</p>
+         */
         @NameInMap("Progress")
         public String progress;
 
-        // The amount of remaining time required for an image copy task. Unit: seconds.
+        /**
+         * <p>The amount of remaining time required for an image copy task. Unit: seconds.</p>
+         */
         @NameInMap("RemainTime")
         public Integer remainTime;
 
-        // The size of the disk.
+        /**
+         * <p>The size of the disk.</p>
+         */
         @NameInMap("Size")
         public String size;
 
-        // The ID of the snapshot.
+        /**
+         * <p>The ID of the snapshot.</p>
+         */
         @NameInMap("SnapshotId")
         public String snapshotId;
 
-        // The type of the image.
+        /**
+         * <p>The type of the image.</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -334,10 +376,12 @@ public class DescribeImagesResponseBody extends TeaModel {
     }
 
     public static class DescribeImagesResponseBodyImagesImageFeatures extends TeaModel {
-        // Indicates whether the image supports Non-Volatile Memory Express (NVMe). Valid values:
-        // 
-        // - supported: The image supports NVMe. Instances created from this image support the NVMe protocol.
-        // - unsupported: The image does not support NVMe. Instances created from this image do not support the NVMe protocol.
+        /**
+         * <p>Indicates whether the image supports Non-Volatile Memory Express (NVMe). Valid values:</p>
+         * <br>
+         * <p>- supported: The image supports NVMe. Instances created from this image support the NVMe protocol.</p>
+         * <p>- unsupported: The image does not support NVMe. Instances created from this image do not support the NVMe protocol.</p>
+         */
         @NameInMap("NvmeSupport")
         public String nvmeSupport;
 
@@ -357,11 +401,15 @@ public class DescribeImagesResponseBody extends TeaModel {
     }
 
     public static class DescribeImagesResponseBodyImagesImageTagsTag extends TeaModel {
-        // The tag key of the image.
+        /**
+         * <p>The tag key of the image.</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        // The tag value of the image.
+        /**
+         * <p>The tag value of the image.</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -408,162 +456,226 @@ public class DescribeImagesResponseBody extends TeaModel {
     }
 
     public static class DescribeImagesResponseBodyImagesImage extends TeaModel {
-        // The image architecture. Valid values:
-        // 
-        // *   i386
-        // *   x86\_64
-        // *   arm64
+        /**
+         * <p>The image architecture. Valid values:</p>
+         * <br>
+         * <p>*   i386</p>
+         * <p>*   x86\_64</p>
+         * <p>*   arm64</p>
+         */
         @NameInMap("Architecture")
         public String architecture;
 
-        // The boot mode of the custom image. Valid values:
-        // 
-        // *   BIOS
-        // *   UEFI
-        // 
-        // >  You must know which boot modes the specified image supports. When you use this parameter to change the boot mode of the image, specify a boot mode supported by the image to ensure that instances which use this image can start normally.
+        /**
+         * <p>The boot mode of the custom image. Valid values:</p>
+         * <br>
+         * <p>*   BIOS</p>
+         * <p>*   UEFI</p>
+         * <br>
+         * <p>>  You must know which boot modes the specified image supports. When you use this parameter to change the boot mode of the image, specify a boot mode supported by the image to ensure that instances which use this image can start normally.</p>
+         */
         @NameInMap("BootMode")
         public String bootMode;
 
-        // The time when the image was created.
+        /**
+         * <p>The time when the image was created.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        // The description of the image.
+        /**
+         * <p>The description of the image.</p>
+         */
         @NameInMap("Description")
         public String description;
 
-        // Details about the check performed on the image.
+        /**
+         * <p>Details about the check performed on the image.</p>
+         */
         @NameInMap("DetectionOptions")
         public DescribeImagesResponseBodyImagesImageDetectionOptions detectionOptions;
 
-        // The mappings between disks and snapshots in the image.
+        /**
+         * <p>The mappings between disks and snapshots in the image.</p>
+         */
         @NameInMap("DiskDeviceMappings")
         public DescribeImagesResponseBodyImagesImageDiskDeviceMappings diskDeviceMappings;
 
-        // The attributes of the image.
+        /**
+         * <p>The attributes of the image.</p>
+         */
         @NameInMap("Features")
         public DescribeImagesResponseBodyImagesImageFeatures features;
 
-        // The name of the image family.
+        /**
+         * <p>The name of the image family.</p>
+         */
         @NameInMap("ImageFamily")
         public String imageFamily;
 
-        // The ID of the image.
+        /**
+         * <p>The ID of the image.</p>
+         */
         @NameInMap("ImageId")
         public String imageId;
 
-        // The name of the image.
+        /**
+         * <p>The name of the image.</p>
+         */
         @NameInMap("ImageName")
         public String imageName;
 
-        // The source of the image. Valid values:
-        // 
-        // *   system: public images provided by Alibaba Cloud.
-        // *   self: your custom images.
-        // *   others: shared images from other Alibaba Cloud accounts or community images published by other Alibaba Cloud accounts.
-        // *   marketplace: Alibaba Cloud Marketplace images.
+        /**
+         * <p>The source of the image. Valid values:</p>
+         * <br>
+         * <p>*   system: public images provided by Alibaba Cloud.</p>
+         * <p>*   self: your custom images.</p>
+         * <p>*   others: shared images from other Alibaba Cloud accounts or community images published by other Alibaba Cloud accounts.</p>
+         * <p>*   marketplace: Alibaba Cloud Marketplace images.</p>
+         */
         @NameInMap("ImageOwnerAlias")
         public String imageOwnerAlias;
 
-        // The ID of the Alibaba Cloud account to which the image belongs. This parameter takes effect only when you query shared images or community images.
+        /**
+         * <p>The ID of the Alibaba Cloud account to which the image belongs. This parameter takes effect only when you query shared images or community images.</p>
+         */
         @NameInMap("ImageOwnerId")
         public Long imageOwnerId;
 
-        // The version of the image.
+        /**
+         * <p>The version of the image.</p>
+         */
         @NameInMap("ImageVersion")
         public String imageVersion;
 
-        // Indicates whether the image is a copy of another image.
+        /**
+         * <p>Indicates whether the image is a copy of another image.</p>
+         */
         @NameInMap("IsCopied")
         public Boolean isCopied;
 
-        // Indicates whether the image is publicly available. Publicly available images include public images provided by Alibaba Cloud and custom images published as community images. Valid values: 
-        // 
-        // - true: The image is publicly available.
-        // - false: The image is not publicly available.
+        /**
+         * <p>Indicates whether the image is publicly available. Publicly available images include public images provided by Alibaba Cloud and custom images published as community images. Valid values: </p>
+         * <br>
+         * <p>- true: The image is publicly available.</p>
+         * <p>- false: The image is not publicly available.</p>
+         */
         @NameInMap("IsPublic")
         public Boolean isPublic;
 
-        // Indicates whether the custom image was shared to other Alibaba Cloud accounts.
+        /**
+         * <p>Indicates whether the custom image was shared to other Alibaba Cloud accounts.</p>
+         */
         @NameInMap("IsSelfShared")
         public String isSelfShared;
 
-        // Indicates whether you have subscribed to the image that corresponds to the specified product code.
+        /**
+         * <p>Indicates whether you have subscribed to the image that corresponds to the specified product code.</p>
+         */
         @NameInMap("IsSubscribed")
         public Boolean isSubscribed;
 
-        // Indicates whether the image supports cloud-init.
+        /**
+         * <p>Indicates whether the image supports cloud-init.</p>
+         */
         @NameInMap("IsSupportCloudinit")
         public Boolean isSupportCloudinit;
 
-        // Indicates whether the image can be used on I/O optimized instances.
+        /**
+         * <p>Indicates whether the image can be used on I/O optimized instances.</p>
+         */
         @NameInMap("IsSupportIoOptimized")
         public Boolean isSupportIoOptimized;
 
-        // Indicates whether the image supports logons of non-root users. Valid values:
-        // 
-        // - true: The image supports logons of non-root users.
-        // - false: The image does not support logons of non-root users.
+        /**
+         * <p>Indicates whether the image supports logons of non-root users. Valid values:</p>
+         * <br>
+         * <p>- true: The image supports logons of non-root users.</p>
+         * <p>- false: The image does not support logons of non-root users.</p>
+         */
         @NameInMap("LoginAsNonRootSupported")
         public Boolean loginAsNonRootSupported;
 
-        // The Chinese name of the operating system.
+        /**
+         * <p>The Chinese name of the operating system.</p>
+         */
         @NameInMap("OSName")
         public String OSName;
 
-        // The English name of the operating system.
+        /**
+         * <p>The English name of the operating system.</p>
+         */
         @NameInMap("OSNameEn")
         public String OSNameEn;
 
-        // The type of the operating system. Valid values:
-        // 
-        // *   windows
-        // *   linux
+        /**
+         * <p>The type of the operating system. Valid values:</p>
+         * <br>
+         * <p>*   windows</p>
+         * <p>*   linux</p>
+         */
         @NameInMap("OSType")
         public String OSType;
 
-        // The operating system.
+        /**
+         * <p>The operating system.</p>
+         */
         @NameInMap("Platform")
         public String platform;
 
-        // The product code of the Alibaba Cloud Marketplace image.
+        /**
+         * <p>The product code of the Alibaba Cloud Marketplace image.</p>
+         */
         @NameInMap("ProductCode")
         public String productCode;
 
-        // The image creation progress. Unit: percent (%).
+        /**
+         * <p>The image creation progress. Unit: percent (%).</p>
+         */
         @NameInMap("Progress")
         public String progress;
 
-        // The ID of the resource group to which the image belongs.
+        /**
+         * <p>The ID of the resource group to which the image belongs.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        // The size of the image. Unit: GiB.
+        /**
+         * <p>The size of the image. Unit: GiB.</p>
+         */
         @NameInMap("Size")
         public Integer size;
 
-        // The state of the image. Valid values:
-        // 
-        // *   UnAvailable: The image is unavailable.
-        // *   Available: The image is available.
-        // *   Creating: The image is being created.
-        // *   CreateFailed: The image cannot be created.
+        /**
+         * <p>The state of the image. Valid values:</p>
+         * <br>
+         * <p>*   UnAvailable: The image is unavailable.</p>
+         * <p>*   Available: The image is available.</p>
+         * <p>*   Creating: The image is being created.</p>
+         * <p>*   CreateFailed: The image cannot be created.</p>
+         */
         @NameInMap("Status")
         public String status;
 
-        // The name of the supplier that certified the community image.
+        /**
+         * <p>The name of the supplier that certified the community image.</p>
+         */
         @NameInMap("SupplierName")
         public String supplierName;
 
-        // The tags of the image.
+        /**
+         * <p>The tags of the image.</p>
+         */
         @NameInMap("Tags")
         public DescribeImagesResponseBodyImagesImageTags tags;
 
-        // Indicates whether the image has been used to create ECS instances. Valid values:
-        // 
-        // *   instance: The image has been used to create one or more ECS instances.
-        // *   none: The image has not been used to create ECS instances.
+        /**
+         * <p>Indicates whether the image has been used to create ECS instances. Valid values:</p>
+         * <br>
+         * <p>*   instance: The image has been used to create one or more ECS instances.</p>
+         * <p>*   none: The image has not been used to create ECS instances.</p>
+         */
         @NameInMap("Usage")
         public String usage;
 

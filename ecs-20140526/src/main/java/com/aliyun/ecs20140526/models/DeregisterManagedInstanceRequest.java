@@ -4,7 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DeregisterManagedInstanceRequest extends TeaModel {
-    // The ID of the managed instance.
+    /**
+     * <p>The ID of the managed instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -14,9 +16,11 @@ public class DeregisterManagedInstanceRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The region ID of the secondary ENI. The following regions are supported: China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Hangzhou), China (Shanghai), China (Shenzhen), China (Heyuan), and China (Hong Kong).
-    // 
-    // You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+    /**
+     * <p>The region ID of the secondary ENI. The following regions are supported: China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Hangzhou), China (Shanghai), China (Shenzhen), China (Heyuan), and China (Hong Kong).</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

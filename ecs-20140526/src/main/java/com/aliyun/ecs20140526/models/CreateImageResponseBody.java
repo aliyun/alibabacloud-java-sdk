@@ -4,11 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateImageResponseBody extends TeaModel {
-    // The ID of the image.
+    /**
+     * <p>The ID of the custom image.</p>
+     */
     @NameInMap("ImageId")
     public String imageId;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

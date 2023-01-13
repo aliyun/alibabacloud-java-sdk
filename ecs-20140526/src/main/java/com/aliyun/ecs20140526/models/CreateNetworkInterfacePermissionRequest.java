@@ -4,11 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateNetworkInterfacePermissionRequest extends TeaModel {
-    // The ID of the Alibaba Cloud partner (a certified ISV) or individual user.
+    /**
+     * <p>The ID of the Alibaba Cloud partner (a certified ISV) or individual user.</p>
+     */
     @NameInMap("AccountId")
     public Long accountId;
 
-    // The ID of the ENI.
+    /**
+     * <p>The ID of the ENI.</p>
+     */
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;
 
@@ -18,13 +22,17 @@ public class CreateNetworkInterfacePermissionRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The permission on the ENI. Valid values:
-    // 
-    // InstanceAttach: allows authorized users to attach the ENI to an ECS instance. The ENI and the ECS instance must be in the same zone.
+    /**
+     * <p>The permission on the ENI. Valid values:</p>
+     * <br>
+     * <p>InstanceAttach: allows authorized users to attach the ENI to an ECS instance. The ENI and the ECS instance must be in the same zone.</p>
+     */
     @NameInMap("Permission")
     public String permission;
 
-    // The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+    /**
+     * <p>The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

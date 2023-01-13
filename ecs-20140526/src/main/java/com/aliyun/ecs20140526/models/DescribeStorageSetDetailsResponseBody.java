@@ -4,23 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeStorageSetDetailsResponseBody extends TeaModel {
-    // Details about the disks or Shared Block Storage devices in the storage set.
+    /**
+     * <p>Details about the disks or Shared Block Storage devices in the storage set.</p>
+     */
     @NameInMap("Disks")
     public DescribeStorageSetDetailsResponseBodyDisks disks;
 
-    // The page number of the returned page.
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // The number of entries returned per page.
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The total number of storage sets.
+    /**
+     * <p>The total number of storage sets.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -70,35 +80,51 @@ public class DescribeStorageSetDetailsResponseBody extends TeaModel {
     }
 
     public static class DescribeStorageSetDetailsResponseBodyDisksDisk extends TeaModel {
-        // The category of the disk or Shared Block Storage device.
+        /**
+         * <p>The category of the disk or Shared Block Storage device.</p>
+         */
         @NameInMap("Category")
         public String category;
 
-        // The time when the disk or Shared Block Storage device was created.
+        /**
+         * <p>The time when the disk or Shared Block Storage device was created.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        // The ID of the disk or Shared Block Storage device.
+        /**
+         * <p>The ID of the disk or Shared Block Storage device.</p>
+         */
         @NameInMap("DiskId")
         public String diskId;
 
-        // The name of the disk or Shared Block Storage device.
+        /**
+         * <p>The name of the disk or Shared Block Storage device.</p>
+         */
         @NameInMap("DiskName")
         public String diskName;
 
-        // The region to which the disk or Shared Block Storage device belongs.
+        /**
+         * <p>The region to which the disk or Shared Block Storage device belongs.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
-        // The ID of the storage set.
+        /**
+         * <p>The ID of the storage set.</p>
+         */
         @NameInMap("StorageSetId")
         public String storageSetId;
 
-        // The number of partitions in the storage set.
+        /**
+         * <p>The number of partitions in the storage set.</p>
+         */
         @NameInMap("StorageSetPartitionNumber")
         public Integer storageSetPartitionNumber;
 
-        // The zone to which the disk or Shared Block Storage device belongs.
+        /**
+         * <p>The zone to which the disk or Shared Block Storage device belongs.</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

@@ -4,11 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class AssignPrivateIpAddressesResponseBody extends TeaModel {
-    // Details about the ENI.
+    /**
+     * <p>Details about the ENI.</p>
+     */
     @NameInMap("AssignedPrivateIpAddressesSet")
     public AssignPrivateIpAddressesResponseBodyAssignedPrivateIpAddressesSet assignedPrivateIpAddressesSet;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -72,15 +76,21 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
     }
 
     public static class AssignPrivateIpAddressesResponseBodyAssignedPrivateIpAddressesSet extends TeaModel {
-        // The IPv4 prefix set assigned.
+        /**
+         * <p>The IPv4 prefix set assigned.</p>
+         */
         @NameInMap("Ipv4PrefixSet")
         public AssignPrivateIpAddressesResponseBodyAssignedPrivateIpAddressesSetIpv4PrefixSet ipv4PrefixSet;
 
-        // The ID of the ENI.
+        /**
+         * <p>The ID of the ENI.</p>
+         */
         @NameInMap("NetworkInterfaceId")
         public String networkInterfaceId;
 
-        // The private IP addresses assigned.
+        /**
+         * <p>The private IP addresses assigned.</p>
+         */
         @NameInMap("PrivateIpSet")
         public AssignPrivateIpAddressesResponseBodyAssignedPrivateIpAddressesSetPrivateIpSet privateIpSet;
 

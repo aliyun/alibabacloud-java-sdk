@@ -4,7 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DeleteAutoProvisioningGroupRequest extends TeaModel {
-    // The ID of the auto provisioning group to be deleted.
+    /**
+     * <p>The ID of the auto provisioning group to be deleted.</p>
+     */
     @NameInMap("AutoProvisioningGroupId")
     public String autoProvisioningGroupId;
 
@@ -14,7 +16,9 @@ public class DeleteAutoProvisioningGroupRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The region ID of the auto provisioning group.
+    /**
+     * <p>The region ID of the auto provisioning group.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -24,10 +28,12 @@ public class DeleteAutoProvisioningGroupRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    // Specifies whether to release instances in the auto provisioning group. Valid values:
-    // 
-    // *   true: releases instances in the auto provisioning group.
-    // *   false: retains instances in the auto provisioning group.
+    /**
+     * <p>Specifies whether to release instances in the auto provisioning group. Valid values:</p>
+     * <br>
+     * <p>*   true: releases instances in the auto provisioning group.</p>
+     * <p>*   false: retains instances in the auto provisioning group.</p>
+     */
     @NameInMap("TerminateInstances")
     public Boolean terminateInstances;
 

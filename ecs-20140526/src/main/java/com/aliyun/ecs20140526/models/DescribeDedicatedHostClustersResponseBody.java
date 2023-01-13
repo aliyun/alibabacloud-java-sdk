@@ -4,23 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
-    // Details about the dedicated host clusters.
+    /**
+     * <p>Details about the dedicated host clusters.</p>
+     */
     @NameInMap("DedicatedHostClusters")
     public DescribeDedicatedHostClustersResponseBodyDedicatedHostClusters dedicatedHostClusters;
 
-    // The page number of the returned page.
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // The number of entries returned per page.
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The total number of dedicated host clusters.
+    /**
+     * <p>The total number of dedicated host clusters.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -70,11 +80,15 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
     }
 
     public static class DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacityAvailableInstanceTypesAvailableInstanceType extends TeaModel {
-        // The available capacity of the ECS instance type.
+        /**
+         * <p>The available capacity of the ECS instance type.</p>
+         */
         @NameInMap("AvailableInstanceCapacity")
         public Integer availableInstanceCapacity;
 
-        // The ECS instance type.
+        /**
+         * <p>The ECS instance type.</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
@@ -121,21 +135,27 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
     }
 
     public static class DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacityLocalStorageCapacitiesLocalStorageCapacity extends TeaModel {
-        // The available capacity of the local disk. Unit: GiB.
+        /**
+         * <p>The available capacity of the local disk. Unit: GiB.</p>
+         */
         @NameInMap("AvailableDisk")
         public Integer availableDisk;
 
-        // The category of the data disk. Valid values:
-        // 
-        // - cloud: basic disk
-        // - cloud_efficiency: ultra disk
-        // - cloud_ssd: standard SSD
-        // - ephemeral_ssd: local SSD
-        // - cloud_essd: enhanced SSD (ESSD)
+        /**
+         * <p>The category of the data disk. Valid values:</p>
+         * <br>
+         * <p>- cloud: basic disk</p>
+         * <p>- cloud_efficiency: ultra disk</p>
+         * <p>- cloud_ssd: standard SSD</p>
+         * <p>- ephemeral_ssd: local SSD</p>
+         * <p>- cloud_essd: enhanced SSD (ESSD)</p>
+         */
         @NameInMap("DataDiskCategory")
         public String dataDiskCategory;
 
-        // The total capacity of the local disk. Unit: GiB.
+        /**
+         * <p>The total capacity of the local disk. Unit: GiB.</p>
+         */
         @NameInMap("TotalDisk")
         public Integer totalDisk;
 
@@ -190,27 +210,39 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
     }
 
     public static class DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacity extends TeaModel {
-        // The available capacity of the Elastic Compute Service (ECS) instance types in the dedicated host cluster.
+        /**
+         * <p>The available capacity of the Elastic Compute Service (ECS) instance types in the dedicated host cluster.</p>
+         */
         @NameInMap("AvailableInstanceTypes")
         public DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacityAvailableInstanceTypes availableInstanceTypes;
 
-        // The size of available memory. Unit: GiB.
+        /**
+         * <p>The size of available memory. Unit: GiB.</p>
+         */
         @NameInMap("AvailableMemory")
         public Integer availableMemory;
 
-        // The number of available vCPUs.
+        /**
+         * <p>The number of available vCPUs.</p>
+         */
         @NameInMap("AvailableVcpus")
         public Integer availableVcpus;
 
-        // The local storage capacity.
+        /**
+         * <p>The local storage capacity.</p>
+         */
         @NameInMap("LocalStorageCapacities")
         public DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacityLocalStorageCapacities localStorageCapacities;
 
-        // The total memory size. Unit: GiB.
+        /**
+         * <p>The total memory size. Unit: GiB.</p>
+         */
         @NameInMap("TotalMemory")
         public Integer totalMemory;
 
-        // The total number of vCPUs.
+        /**
+         * <p>The total number of vCPUs.</p>
+         */
         @NameInMap("TotalVcpus")
         public Integer totalVcpus;
 
@@ -289,11 +321,15 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
     }
 
     public static class DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterTagsTag extends TeaModel {
-        // The tag key of the dedicated host cluster.
+        /**
+         * <p>The tag key of the dedicated host cluster.</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        // The tag value of the dedicated host cluster.
+        /**
+         * <p>The tag value of the dedicated host cluster.</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -340,39 +376,57 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
     }
 
     public static class DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostCluster extends TeaModel {
-        // The capacity of the dedicated host cluster.
+        /**
+         * <p>The capacity of the dedicated host cluster.</p>
+         */
         @NameInMap("DedicatedHostClusterCapacity")
         public DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacity dedicatedHostClusterCapacity;
 
-        // The ID of the dedicated host cluster.
+        /**
+         * <p>The ID of the dedicated host cluster.</p>
+         */
         @NameInMap("DedicatedHostClusterId")
         public String dedicatedHostClusterId;
 
-        // The name of the dedicated host cluster.
+        /**
+         * <p>The name of the dedicated host cluster.</p>
+         */
         @NameInMap("DedicatedHostClusterName")
         public String dedicatedHostClusterName;
 
-        // The IDs of dedicated hosts in the dedicated host cluster.
+        /**
+         * <p>The IDs of dedicated hosts in the dedicated host cluster.</p>
+         */
         @NameInMap("DedicatedHostIds")
         public DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostIds dedicatedHostIds;
 
-        // The description of the dedicated host cluster.
+        /**
+         * <p>The description of the dedicated host cluster.</p>
+         */
         @NameInMap("Description")
         public String description;
 
-        // The region ID of the dedicated host cluster.
+        /**
+         * <p>The region ID of the dedicated host cluster.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
-        // The ID of the resource group to which the dedicated host cluster belongs.
+        /**
+         * <p>The ID of the resource group to which the dedicated host cluster belongs.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        // The tags of the dedicated host cluster.
+        /**
+         * <p>The tags of the dedicated host cluster.</p>
+         */
         @NameInMap("Tags")
         public DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterTags tags;
 
-        // The zone ID of the dedicated host cluster.
+        /**
+         * <p>The zone ID of the dedicated host cluster.</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

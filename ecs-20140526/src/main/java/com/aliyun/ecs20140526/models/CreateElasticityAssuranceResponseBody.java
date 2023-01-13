@@ -4,15 +4,21 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateElasticityAssuranceResponseBody extends TeaModel {
-    // The ID of the order.
+    /**
+     * <p>The ID of the order.</p>
+     */
     @NameInMap("OrderId")
     public String orderId;
 
-    // The ID of the elasticity assurance.
+    /**
+     * <p>The ID of the elasticity assurance.</p>
+     */
     @NameInMap("PrivatePoolOptionsId")
     public String privatePoolOptionsId;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

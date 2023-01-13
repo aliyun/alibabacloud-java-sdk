@@ -4,38 +4,63 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateSnapshotGroupRequest extends TeaModel {
-    // The description of the snapshot-consistent group. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
+    /**
+     * <p>The description of the snapshot-consistent group. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The ID of disk N for which you want to create snapshots. You can specify multiple disk IDs across instances within the same zone. Valid values of N: 1 to 16. A single snapshot-consistent group can contain snapshots of up to 16 disks and cannot exceed 32 TiB in size.</p>
+     * <br>
+     * <p>Take note of the following items:</p>
+     * <br>
+     * <p>*   You cannot specify both DiskId.N and `ExcludeDiskId.N`.</p>
+     * <p>*   If `InstanceId` is set, you can use DiskId.N to specify only disks attached to the instance specified by InstanceId, and you cannot use DiskId.N to specify disks attached to multiple instances.</p>
+     */
     @NameInMap("DiskId")
     public java.util.List<String> diskId;
 
+    /**
+     * <p>The ID of disk N for which you do not need to create snapshots. After this parameter is specified, the created snapshot-consistent group does not contain snapshots of the disk. Valid values of N: 1 to 16.</p>
+     * <br>
+     * <p>This parameter is empty by default, which indicates that snapshots are created for all the disks of the instance.</p>
+     * <br>
+     * <p>> You cannot specify ExcludeDiskId.N and `DiskId.N`.</p>
+     */
     @NameInMap("ExcludeDiskId")
     public java.util.List<String> excludeDiskId;
 
-    // The ID of the instance.
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // Specifies whether to enable the instant access feature. Valid values:
-    // 
-    // *   true: enables the instance access feature.
-    // *   false: disables the instance access feature.
-    // 
-    // Default value: false.
+    /**
+     * <p>Specify whether to enable the instant access feature. Valid values:</p>
+     * <br>
+     * <p>*   true: enables the instant access feature.</p>
+     * <p>*   false: disables the instant access feature.</p>
+     * <br>
+     * <p>Default value: false.</p>
+     */
     @NameInMap("InstantAccess")
     public Boolean instantAccess;
 
-    // Specify the number of days for which the instant access feature is available. Unit: days. Valid values: 1 to 65535.
-    // 
-    // This parameter takes effect only when `InstantAccess` is set to true. The instant access feature is automatically disabled when the specified duration of instant access expires.
-    // 
-    // This parameter is empty by default, which indicates that the expiration time of the instant access feature is determined by the time when snapshots are released.
+    /**
+     * <p>Specify the number of days for which the instant access feature is available. Unit: days. Valid values: 1 to 65535.</p>
+     * <br>
+     * <p>This parameter takes effect only when `InstantAccess` is set to true. The instant access feature is automatically disabled when the specified duration of the instant access feature expires.</p>
+     * <br>
+     * <p>This parameter is empty by default, which indicates that the expiration time of the instant access feature is determined by the time when snapshots are released.</p>
+     */
     @NameInMap("InstantAccessRetentionDays")
     public Integer instantAccessRetentionDays;
 
-    // The name of the snapshot-consistent group. The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), hyphens (-), and colons (:). It must start with a letter or a digit and cannot start with `http://` or `https://`.
+    /**
+     * <p>The name of the snapshot-consistent group. The name must be 2 to 128 characters in length, and contain letters, digits, periods (.), underscores (\_), hyphens (-), and colons (:). It must start with a letter and cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("Name")
     public String name;
 
@@ -45,11 +70,15 @@ public class CreateSnapshotGroupRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+    /**
+     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The ID of the resource group to which the snapshot-consistent group belongs.
+    /**
+     * <p>The ID of the resource group to which the snapshot-consistent group belongs.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -59,9 +88,15 @@ public class CreateSnapshotGroupRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>> This parameter is unavailable.</p>
+     */
     @NameInMap("StorageLocationArn")
     public String storageLocationArn;
 
+    /**
+     * <p>The list of tags that are associated with the instances.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateSnapshotGroupRequestTag> tag;
 
@@ -191,11 +226,15 @@ public class CreateSnapshotGroupRequest extends TeaModel {
     }
 
     public static class CreateSnapshotGroupRequestTag extends TeaModel {
-        // The key of tag N of the snapshot-consistent group. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+        /**
+         * <p>The key of tag N of the snapshot-consistent group. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
-        // The value of tag N of the snapshot-consistent group. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with `acs:`. It cannot contain `http://` or `https://`.
+        /**
+         * <p>The value of tag N of the snapshot-consistent group. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with `acs:`. It cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Value")
         public String value;
 

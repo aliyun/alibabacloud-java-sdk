@@ -4,15 +4,19 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class LeaveSecurityGroupRequest extends TeaModel {
-    // The ID of the instance.
-    // 
-    // >  When this parameter is specified, the `NetworkInterfaceId` parameter cannot be specified.
+    /**
+     * <p>The ID of the instance.</p>
+     * <br>
+     * <p>>  When this parameter is specified, the `NetworkInterfaceId` parameter cannot be specified.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // The ID of the ENI.
-    // 
-    // >  When this parameter is specified, the `InstanceId` parameter cannot be specified.
+    /**
+     * <p>The ID of the ENI.</p>
+     * <br>
+     * <p>>  When this parameter is specified, the `InstanceId` parameter cannot be specified.</p>
+     */
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;
 
@@ -22,10 +26,12 @@ public class LeaveSecurityGroupRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
-    // 
-    // *   If you remove an instance from a security group, you do not need to specify a region ID.
-    // *   If you remove an ENI from a security group, you must specify the ID of the region to which the ENI belongs.
+    /**
+     * <p>The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <br>
+     * <p>*   If you remove an instance from a security group, you do not need to specify a region ID.</p>
+     * <p>*   If you remove an ENI from a security group, you must specify the ID of the region to which the ENI belongs.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -35,7 +41,9 @@ public class LeaveSecurityGroupRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    // The ID of the security group.
+    /**
+     * <p>The ID of the security group.</p>
+     */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 

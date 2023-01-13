@@ -7,28 +7,36 @@ public class DescribeCapacityReservationsRequest extends TeaModel {
     @NameInMap("PrivatePoolOptions")
     public DescribeCapacityReservationsRequestPrivatePoolOptions privatePoolOptions;
 
-    // The billing method of instances to be created by using the capacity reservation. Valid values:
-    // 
-    // *   PostPaid: pay-as-you-go
-    // *   PrePaid: subscription
-    // 
-    // Default value: PostPaid.
+    /**
+     * <p>The billing method of instances to be created by using the capacity reservation. Valid values:</p>
+     * <br>
+     * <p>*   PostPaid: pay-as-you-go</p>
+     * <p>*   PrePaid: subscription</p>
+     * <br>
+     * <p>Default value: PostPaid.</p>
+     */
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
 
-    // The instance type.
+    /**
+     * <p>The instance type.</p>
+     */
     @NameInMap("InstanceType")
     public String instanceType;
 
-    // The maximum number of entries to return on each page.
-    // 
-    // Maximum value: 100.
-    // 
-    // Default value: 10.
+    /**
+     * <p>The maximum number of entries to return on each page.</p>
+     * <br>
+     * <p>Maximum value: 100.</p>
+     * <br>
+     * <p>Default value: 10.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // The token used to start the next query. Set the value to the NextToken value obtained from the response to the previous request.
+    /**
+     * <p>The token used to start the next query. Set the value to the NextToken value obtained from the response to the previous request.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -38,23 +46,29 @@ public class DescribeCapacityReservationsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The operating system type of instances to be created by using the capacity reservation. Valid values:
-    // 
-    // *   windows: Windows operating systems
-    // *   linux: Linux operating systems
-    // *   all: all operating system types
-    // 
-    // Default value: all.
+    /**
+     * <p>The operating system type of instances to be created by using the capacity reservation. Valid values:</p>
+     * <br>
+     * <p>*   windows: Windows operating systems</p>
+     * <p>*   linux: Linux operating systems</p>
+     * <p>*   all: all operating system types</p>
+     * <br>
+     * <p>Default value: all.</p>
+     */
     @NameInMap("Platform")
     public String platform;
 
-    // The region ID of the capacity reservation. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+    /**
+     * <p>The region ID of the capacity reservation. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The ID of the resource group to which the capacity reservation belongs. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.  
-    // 
-    // >  Resources in the default resource group are displayed in the response regardless of how this parameter is set.
+    /**
+     * <p>The ID of the resource group to which the capacity reservation belongs. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.  </p>
+     * <br>
+     * <p>>  Resources in the default resource group are displayed in the response regardless of how this parameter is set.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -64,24 +78,30 @@ public class DescribeCapacityReservationsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    // The state of the capacity reservation. Valid values:
-    // 
-    // *   All: All states.
-    // *   Pending: The capacity reservation is being initialized. Scheduled capacity reservations enter the Pending state after they are created.
-    // *   Preparing: The capacity reservation is being prepared. Scheduled capacity reservations are in the Preparing state while resources are being provisioned.
-    // *   Prepared: The capacity reservation is to take effect. After resources are provisioned, scheduled capacity reservations remain in the Prepared state until they take effect.
-    // *   Active: The capacity reservation is in effect.
-    // *   Released: The capacity reservation has been released manually or automatically when it expired.
-    // 
-    // Default value: Active.
+    /**
+     * <p>The state of the capacity reservation. Valid values:</p>
+     * <br>
+     * <p>*   All: All states.</p>
+     * <p>*   Pending: The capacity reservation is being initialized. Scheduled capacity reservations enter the Pending state after they are created.</p>
+     * <p>*   Preparing: The capacity reservation is being prepared. Scheduled capacity reservations are in the Preparing state while resources are being provisioned.</p>
+     * <p>*   Prepared: The capacity reservation is to take effect. After resources are provisioned, scheduled capacity reservations remain in the Prepared state until they take effect.</p>
+     * <p>*   Active: The capacity reservation is in effect.</p>
+     * <p>*   Released: The capacity reservation has been released manually or automatically when it expired.</p>
+     * <br>
+     * <p>Default value: Active.</p>
+     */
     @NameInMap("Status")
     public String status;
 
-    // The tags.
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeCapacityReservationsRequestTag> tag;
 
-    // The zone ID of the capacity reservation.
+    /**
+     * <p>The zone ID of the capacity reservation.</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 
@@ -211,7 +231,9 @@ public class DescribeCapacityReservationsRequest extends TeaModel {
     }
 
     public static class DescribeCapacityReservationsRequestPrivatePoolOptions extends TeaModel {
-        // The IDs of capacity reservations. The value can be a JSON array that consists of up to 100 capacity reservation IDs. Separate the IDs with commas (,).
+        /**
+         * <p>The IDs of capacity reservations. The value can be a JSON array that consists of up to 100 capacity reservation IDs. Separate the IDs with commas (,).</p>
+         */
         @NameInMap("Ids")
         public String ids;
 
@@ -231,13 +253,17 @@ public class DescribeCapacityReservationsRequest extends TeaModel {
     }
 
     public static class DescribeCapacityReservationsRequestTag extends TeaModel {
-        // The key of tag N of the capacity reservation. Valid values of N: 1 to 20.
-        // 
-        // If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.
+        /**
+         * <p>The key of tag N of the capacity reservation. Valid values of N: 1 to 20.</p>
+         * <br>
+         * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.</p>
+         */
         @NameInMap("Key")
         public String key;
 
-        // The value of tag N of the capacity reservation. Valid values of N: 1 to 20.
+        /**
+         * <p>The value of tag N of the capacity reservation. Valid values of N: 1 to 20.</p>
+         */
         @NameInMap("Value")
         public String value;
 

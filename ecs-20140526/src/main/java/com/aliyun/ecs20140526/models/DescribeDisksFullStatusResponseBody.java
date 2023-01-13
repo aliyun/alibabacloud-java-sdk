@@ -4,23 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeDisksFullStatusResponseBody extends TeaModel {
-    // The collection of full status information of the EBS devices.
+    /**
+     * <p>The collection of full status information of the EBS devices.</p>
+     */
     @NameInMap("DiskFullStatusSet")
     public DescribeDisksFullStatusResponseBodyDiskFullStatusSet diskFullStatusSet;
 
-    // The page number of the returned page.
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // The number of entries returned per page.
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The total number of EBS devices for which full status information is returned.
+    /**
+     * <p>The total number of EBS devices for which full status information is returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -70,16 +80,20 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeDiskEventSetDiskEventTypeEventType extends TeaModel {
-        // The code of the event type.
+        /**
+         * <p>The code of the event type.</p>
+         */
         @NameInMap("Code")
         public Integer code;
 
-        // The name of the event type. Valid values:
-        // 
-        // *   Degraded: The performance of the EBS device was degraded.
-        // *   SeverelyDegraded: The performance of the EBS device was severely degraded.
-        // *   Stalled: The performance of the EBS device was severely affected.
-        // *   ErrorDetected: The local disk was damaged.
+        /**
+         * <p>The name of the event type. Valid values:</p>
+         * <br>
+         * <p>*   Degraded: The performance of the EBS device was degraded.</p>
+         * <p>*   SeverelyDegraded: The performance of the EBS device was severely degraded.</p>
+         * <p>*   Stalled: The performance of the EBS device was severely affected.</p>
+         * <p>*   ErrorDetected: The local disk was damaged.</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -107,23 +121,33 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeDiskEventSetDiskEventType extends TeaModel {
-        // The time when the event ended.
+        /**
+         * <p>The time when the event ended.</p>
+         */
         @NameInMap("EventEndTime")
         public String eventEndTime;
 
-        // The ID of the event.
+        /**
+         * <p>The ID of the event.</p>
+         */
         @NameInMap("EventId")
         public String eventId;
 
-        // The time when the event started.
+        /**
+         * <p>The time when the event started.</p>
+         */
         @NameInMap("EventTime")
         public String eventTime;
 
-        // The event type.
+        /**
+         * <p>The event type.</p>
+         */
         @NameInMap("EventType")
         public DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeDiskEventSetDiskEventTypeEventType eventType;
 
-        // The impact level of the event.
+        /**
+         * <p>The impact level of the event.</p>
+         */
         @NameInMap("ImpactLevel")
         public String impactLevel;
 
@@ -194,11 +218,15 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeHealthStatus extends TeaModel {
-        // The code of the health status of the EBS device.
+        /**
+         * <p>The code of the health status of the EBS device.</p>
+         */
         @NameInMap("Code")
         public Integer code;
 
-        // The name of the health status of the EBS device.
+        /**
+         * <p>The name of the health status of the EBS device.</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -226,11 +254,15 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeStatus extends TeaModel {
-        // The code of the lifecycle status of the EBS device.
+        /**
+         * <p>The code of the lifecycle status of the EBS device.</p>
+         */
         @NameInMap("Code")
         public Integer code;
 
-        // The name of the lifecycle status of the EBS device.
+        /**
+         * <p>The name of the lifecycle status of the EBS device.</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -258,31 +290,43 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusType extends TeaModel {
-        // The name of the EBS device that is attached to an instance. Example: /dev/xvdb.
-        // 
-        // This parameter has a value only when the value of `Status` is `In_use`.
-        // 
-        // >  This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.
+        /**
+         * <p>The name of the EBS device that is attached to an instance. Example: /dev/xvdb.</p>
+         * <br>
+         * <p>This parameter has a value only when the value of `Status` is `In_use`.</p>
+         * <br>
+         * <p>>  This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.</p>
+         */
         @NameInMap("Device")
         public String device;
 
-        // The events about the EBS device.
+        /**
+         * <p>The events about the EBS device.</p>
+         */
         @NameInMap("DiskEventSet")
         public DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeDiskEventSet diskEventSet;
 
-        // The ID of the EBS device.
+        /**
+         * <p>The ID of the EBS device.</p>
+         */
         @NameInMap("DiskId")
         public String diskId;
 
-        // The health status of the EBS device.
+        /**
+         * <p>The health status of the EBS device.</p>
+         */
         @NameInMap("HealthStatus")
         public DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeHealthStatus healthStatus;
 
-        // The ID of the instance.
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        // The lifecycle status of the EBS device.
+        /**
+         * <p>The lifecycle status of the EBS device.</p>
+         */
         @NameInMap("Status")
         public DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeStatus status;
 

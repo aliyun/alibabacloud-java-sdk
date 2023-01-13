@@ -4,23 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeReservedInstancesResponseBody extends TeaModel {
-    // The page number of the returned page.
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // The number of entries returned per page.
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Details about the reserved instances.
+    /**
+     * <p>Details about the reserved instances.</p>
+     */
     @NameInMap("ReservedInstances")
     public DescribeReservedInstancesResponseBodyReservedInstances reservedInstances;
 
-    // The total number of reserved instances.
+    /**
+     * <p>The total number of reserved instances.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -70,7 +80,9 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceOperationLocksOperationLock extends TeaModel {
-        // The reason why the reserved instance was locked.
+        /**
+         * <p>The reason why the reserved instance was locked.</p>
+         */
         @NameInMap("LockReason")
         public String lockReason;
 
@@ -109,11 +121,15 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceTagsTag extends TeaModel {
-        // The tag key of the reserved instance.
+        /**
+         * <p>The tag key of the reserved instance.</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        // The tag value of the reserved instance.
+        /**
+         * <p>The tag value of the reserved instance.</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -160,81 +176,117 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeReservedInstancesResponseBodyReservedInstancesReservedInstance extends TeaModel {
-        // Indicates the sharing status of the reserved instance when the AllocationType parameter is set to Shared. Valid values:
-        // 
-        // *   allocated: The reserved instance is allocated to another account.
-        // *   beAllocated: The reserved instance is allocated by another account.
+        /**
+         * <p>Indicates the sharing status of the reserved instance when the AllocationType parameter is set to Shared. Valid values:</p>
+         * <br>
+         * <p>*   allocated: The reserved instance is allocated to another account.</p>
+         * <p>*   beAllocated: The reserved instance is allocated by another account.</p>
+         */
         @NameInMap("AllocationStatus")
         public String allocationStatus;
 
-        // The time when the reserved instance was created.
+        /**
+         * <p>The time when the reserved instance was created.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        // The description of the reserved instance.
+        /**
+         * <p>The description of the reserved instance.</p>
+         */
         @NameInMap("Description")
         public String description;
 
-        // The time when the reserved instance expires.
+        /**
+         * <p>The time when the reserved instance expires.</p>
+         */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
-        // The number of pay-as-you-go instances that are of the same instance type as the reserved instance and can be matched to the reserved instance.
+        /**
+         * <p>The number of pay-as-you-go instances that are of the same instance type as the reserved instance and can be matched to the reserved instance.</p>
+         */
         @NameInMap("InstanceAmount")
         public Integer instanceAmount;
 
-        // The instance type of the pay-as-you-go instances that can be matched to the reserved instance.
+        /**
+         * <p>The instance type of the pay-as-you-go instances that can be matched to the reserved instance.</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
-        // The payment option of the reserved instance.
+        /**
+         * <p>The payment option of the reserved instance.</p>
+         */
         @NameInMap("OfferingType")
         public String offeringType;
 
-        // Details about the lock status of the reserved instance.
+        /**
+         * <p>Details about the lock status of the reserved instance.</p>
+         */
         @NameInMap("OperationLocks")
         public DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceOperationLocks operationLocks;
 
-        // The operating system of the reserved instance. Valid values:
-        // 
-        // - Windows: Windows Server operating systems
-        // - Linux: Linux and Unix-like operating systems
+        /**
+         * <p>The operating system of the reserved instance. Valid values:</p>
+         * <br>
+         * <p>- Windows: Windows Server operating systems</p>
+         * <p>- Linux: Linux and Unix-like operating systems</p>
+         */
         @NameInMap("Platform")
         public String platform;
 
-        // The region ID of the reserved instance.
+        /**
+         * <p>The region ID of the reserved instance.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
-        // The ID of the reserved instance.
+        /**
+         * <p>The ID of the reserved instance.</p>
+         */
         @NameInMap("ReservedInstanceId")
         public String reservedInstanceId;
 
-        // The name of the reserved instance.
+        /**
+         * <p>The name of the reserved instance.</p>
+         */
         @NameInMap("ReservedInstanceName")
         public String reservedInstanceName;
 
-        // The ID of the resource group.
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        // The scope of the reserved instance.
+        /**
+         * <p>The scope of the reserved instance.</p>
+         */
         @NameInMap("Scope")
         public String scope;
 
-        // The time when the reserved instance took effect.
+        /**
+         * <p>The time when the reserved instance took effect.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
-        // The status of the reserved instance.
+        /**
+         * <p>The status of the reserved instance.</p>
+         */
         @NameInMap("Status")
         public String status;
 
-        // Details about the tags of the reserved instance.
+        /**
+         * <p>Details about the tags of the reserved instance.</p>
+         */
         @NameInMap("Tags")
         public DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceTags tags;
 
-        // The zone ID of the reserved instance.
+        /**
+         * <p>The zone ID of the reserved instance.</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

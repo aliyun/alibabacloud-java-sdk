@@ -4,22 +4,30 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class AttachInstanceRamRoleRequest extends TeaModel {
-    // The IDs of instances to which you want to bind the instance RAM role. It can be a JSON array that consists of up to 100 instance IDs. Separate multiple instance IDs with commas (,).
+    /**
+     * <p>The IDs of instances to which you want to bind the instance RAM role. It can be a JSON array that consists of up to 100 instance IDs. Separate multiple instance IDs with commas (,).</p>
+     */
     @NameInMap("InstanceIds")
     public String instanceIds;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The permission policy. The policy must be 1 to 1,024 characters in length. When you bind a RAM role to one or more instances, you can specify an additional policy to further restrict the permissions of the RAM role. For more information, see [Policy overview](~~93732~~).
+    /**
+     * <p>The permission policy. The policy must be 1 to 1,024 characters in length. When you bind a RAM role to one or more instances, you can specify an additional policy to further restrict the permissions of the RAM role. For more information, see [Policy overview](~~93732~~).</p>
+     */
     @NameInMap("Policy")
     public String policy;
 
-    // The name of the instance RAM role. You can call the [ListRoles](~~28713~~) operation provided by RAM to query the RAM roles that you have created.
+    /**
+     * <p>The name of the instance RAM role. You can call the [ListRoles](~~28713~~) operation provided by RAM to query the RAM roles that you have created.</p>
+     */
     @NameInMap("RamRoleName")
     public String ramRoleName;
 
-    // The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+    /**
+     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

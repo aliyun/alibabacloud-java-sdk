@@ -4,23 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeCapacityReservationsResponseBody extends TeaModel {
-    // Details about the capacity reservations.
+    /**
+     * <p>Details about the capacity reservations.</p>
+     */
     @NameInMap("CapacityReservationSet")
     public DescribeCapacityReservationsResponseBodyCapacityReservationSet capacityReservationSet;
 
-    // The maximum number of entries returned per page.
+    /**
+     * <p>The maximum number of entries returned per page.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // The token used to start the next query.
+    /**
+     * <p>The token used to start the next query.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The total number of entries returned.
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -70,19 +80,27 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
     }
 
     public static class DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemAllocatedResourcesAllocatedResource extends TeaModel {
-        // The instance type.
+        /**
+         * <p>The instance type.</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
-        // The total number of instances for which capacity of an instance type is reserved.
+        /**
+         * <p>The total number of instances for which capacity of an instance type is reserved.</p>
+         */
         @NameInMap("TotalAmount")
         public Integer totalAmount;
 
-        // The number of instances that have used the capacity reservation.
+        /**
+         * <p>The number of instances that have used the capacity reservation.</p>
+         */
         @NameInMap("UsedAmount")
         public Integer usedAmount;
 
-        // The zone ID.
+        /**
+         * <p>The zone ID.</p>
+         */
         @NameInMap("zoneId")
         public String zoneId;
 
@@ -145,11 +163,15 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
     }
 
     public static class DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemTagsTag extends TeaModel {
-        // The tag key of the capacity reservation.
+        /**
+         * <p>The tag key of the capacity reservation.</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        // The tag value of the capacity reservation.
+        /**
+         * <p>The tag value of the capacity reservation.</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -196,96 +218,132 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
     }
 
     public static class DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItem extends TeaModel {
-        // Details about the allocated resources.
+        /**
+         * <p>Details about the allocated resources.</p>
+         */
         @NameInMap("AllocatedResources")
         public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemAllocatedResources allocatedResources;
 
-        // The description of the capacity reservation.
+        /**
+         * <p>The description of the capacity reservation.</p>
+         */
         @NameInMap("Description")
         public String description;
 
-        // The time when the capacity reservation expires.
+        /**
+         * <p>The time when the capacity reservation expires.</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
-        // The release mode of the capacity reservation. Valid values:
-        // 
-        // *   Limited: The capacity reservation is automatically released at the specified time.
-        // *   Unlimited: The capacity reservation is manually released. You can release it at anytime.
+        /**
+         * <p>The release mode of the capacity reservation. Valid values:</p>
+         * <br>
+         * <p>*   Limited: The capacity reservation is automatically released at the specified time.</p>
+         * <p>*   Unlimited: The capacity reservation is manually released. You can release it at anytime.</p>
+         */
         @NameInMap("EndTimeType")
         public String endTimeType;
 
-        // The billing method of instances to be created by using the capacity reservation. Valid values:
-        // 
-        // *   PostPaid: pay-as-you-go
-        // *   PrePaid: subscription
+        /**
+         * <p>The billing method of instances to be created by using the capacity reservation. Valid values:</p>
+         * <br>
+         * <p>*   PostPaid: pay-as-you-go</p>
+         * <p>*   PrePaid: subscription</p>
+         */
         @NameInMap("InstanceChargeType")
         public String instanceChargeType;
 
-        // The operating system type of instances to be created by using the capacity reservation. Valid values:
-        // 
-        // *   windows
-        // *   linux
+        /**
+         * <p>The operating system type of instances to be created by using the capacity reservation. Valid values:</p>
+         * <br>
+         * <p>*   windows</p>
+         * <p>*   linux</p>
+         */
         @NameInMap("Platform")
         public String platform;
 
-        // The ID of the capacity reservation.
+        /**
+         * <p>The ID of the capacity reservation.</p>
+         */
         @NameInMap("PrivatePoolOptionsId")
         public String privatePoolOptionsId;
 
-        // The type of the private pool associated with the capacity reservation. Valid values:
-        // 
-        // *   Open: open private pool
-        // *   Target: targeted private pool
+        /**
+         * <p>The type of the private pool associated with the capacity reservation. Valid values:</p>
+         * <br>
+         * <p>*   Open: open private pool</p>
+         * <p>*   Target: targeted private pool</p>
+         */
         @NameInMap("PrivatePoolOptionsMatchCriteria")
         public String privatePoolOptionsMatchCriteria;
 
-        // The name of the capacity reservation.
+        /**
+         * <p>The name of the capacity reservation.</p>
+         */
         @NameInMap("PrivatePoolOptionsName")
         public String privatePoolOptionsName;
 
-        // The region ID of the capacity reservation.
+        /**
+         * <p>The region ID of the capacity reservation.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
-        // The ID of the reserved instance used with the capacity reservation.
+        /**
+         * <p>The ID of the reserved instance used with the capacity reservation.</p>
+         */
         @NameInMap("ReservedInstanceId")
         public String reservedInstanceId;
 
-        // The ID of the resource group to which the capacity reservation belongs.
+        /**
+         * <p>The ID of the resource group to which the capacity reservation belongs.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        // The ID of the savings plan used with the capacity reservation.
+        /**
+         * <p>The ID of the savings plan used with the capacity reservation.</p>
+         */
         @NameInMap("SavingPlanId")
         public String savingPlanId;
 
-        // The time when the capacity reservation takes effect.
+        /**
+         * <p>The time when the capacity reservation takes effect.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
-        // The mode in which the capacity reservation takes effect. Valid values:
-        // 
-        // - Now: The capacity reservation takes effect as soon as it is created.
-        // - Later: The capacity reservation takes effect at the specified time.
+        /**
+         * <p>The mode in which the capacity reservation takes effect. Valid values:</p>
+         * <br>
+         * <p>- Now: The capacity reservation takes effect as soon as it is created.</p>
+         * <p>- Later: The capacity reservation takes effect at the specified time.</p>
+         */
         @NameInMap("StartTimeType")
         public String startTimeType;
 
-        // The state of the capacity reservation. Valid values:
-        // 
-        // *   Pending: The capacity reservation is being initialized.
-        // *   Preparing: The capacity reservation is being prepared.
-        // *   Prepared: The capacity reservation is to take effect.
-        // *   Active: The capacity reservation is in effect.
-        // *   Released: The capacity reservation has been released manually or automatically when it expired.
+        /**
+         * <p>The state of the capacity reservation. Valid values:</p>
+         * <br>
+         * <p>*   Pending: The capacity reservation is being initialized.</p>
+         * <p>*   Preparing: The capacity reservation is being prepared.</p>
+         * <p>*   Prepared: The capacity reservation is to take effect.</p>
+         * <p>*   Active: The capacity reservation is in effect.</p>
+         * <p>*   Released: The capacity reservation has been released manually or automatically when it expired.</p>
+         */
         @NameInMap("Status")
         public String status;
 
-        // The tags of the capacity reservation.
+        /**
+         * <p>The tags of the capacity reservation.</p>
+         */
         @NameInMap("Tags")
         public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemTags tags;
 
-        // >  This parameter is currently in invitational preview and unavailable for general users.
+        /**
+         * <p>>  This parameter is currently in invitational preview and unavailable for general users.</p>
+         */
         @NameInMap("TimeSlot")
         public String timeSlot;
 

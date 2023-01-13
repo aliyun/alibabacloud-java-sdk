@@ -4,35 +4,45 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeReservedInstancesRequest extends TeaModel {
-    // The allocation type. Valid values:
-    // 
-    // *   Normal: queries all reserved instances that belong to the current account.
-    // *   Shared: queries reserved instances that are shared between the main account and linked accounts.
-    // 
-    // Default value: Normal.
+    /**
+     * <p>The allocation type. Valid values:</p>
+     * <br>
+     * <p>*   Normal: queries all reserved instances that belong to the current account.</p>
+     * <p>*   Shared: queries reserved instances that are shared between the main account and linked accounts.</p>
+     * <br>
+     * <p>Default value: Normal.</p>
+     */
     @NameInMap("AllocationType")
     public String allocationType;
 
-    // The instance type of the reserved instance. For more information about the valid values, see [Instance families](~~25378~~).
+    /**
+     * <p>The instance type of the reserved instance. For more information about the valid values, see [Instance families](~~25378~~).</p>
+     */
     @NameInMap("InstanceType")
     public String instanceType;
 
-    // The instance family of the reserved instance. For more information about the valid values, see [Instance families](~~25378~~).
+    /**
+     * <p>The instance family of the reserved instance. For more information about the valid values, see [Instance families](~~25378~~).</p>
+     */
     @NameInMap("InstanceTypeFamily")
     public String instanceTypeFamily;
 
-    // The reason why the reserved instance is locked. Valid values:
-    // 
-    // *   financial: You have an overdue payment in your account or the reserved instance has expired.
-    // *   security: The reserved instance is locked for security reasons.
+    /**
+     * <p>The reason why the reserved instance is locked. Valid values:</p>
+     * <br>
+     * <p>*   financial: You have an overdue payment in your account or the reserved instance has expired.</p>
+     * <p>*   security: The reserved instance is locked for security reasons.</p>
+     */
     @NameInMap("LockReason")
     public String lockReason;
 
-    // The payment option of the reserved instance. Valid values:
-    // 
-    // *   No Upfront
-    // *   Partial Upfront
-    // *   All Upfront
+    /**
+     * <p>The payment option of the reserved instance. Valid values:</p>
+     * <br>
+     * <p>*   No Upfront</p>
+     * <p>*   Partial Upfront</p>
+     * <p>*   All Upfront</p>
+     */
     @NameInMap("OfferingType")
     public String offeringType;
 
@@ -42,26 +52,34 @@ public class DescribeReservedInstancesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The number of the page to return. Pages start from page 1.
-    // 
-    // Default value: 1.
+    /**
+     * <p>The number of the page to return. Pages start from page 1.</p>
+     * <br>
+     * <p>Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // The number of entries to return on each page. Maximum value: 100.
-    // 
-    // Default value: 10.
+    /**
+     * <p>The number of entries to return on each page. Maximum value: 100.</p>
+     * <br>
+     * <p>Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The region ID of the reserved instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+    /**
+     * <p>The region ID of the reserved instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("ReservedInstanceId")
     public java.util.List<String> reservedInstanceId;
 
-    // The name of the reserved instance.
+    /**
+     * <p>The name of the reserved instance.</p>
+     */
     @NameInMap("ReservedInstanceName")
     public String reservedInstanceName;
 
@@ -71,12 +89,14 @@ public class DescribeReservedInstancesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    // The scope of the reserved instance. Valid values:
-    // 
-    // *   Region: regional
-    // *   Zone: zonal
-    // 
-    // Default value: Region.
+    /**
+     * <p>The scope of the reserved instance. Valid values:</p>
+     * <br>
+     * <p>*   Region: regional</p>
+     * <p>*   Zone: zonal</p>
+     * <br>
+     * <p>Default value: Region.</p>
+     */
     @NameInMap("Scope")
     public String scope;
 
@@ -86,7 +106,9 @@ public class DescribeReservedInstancesRequest extends TeaModel {
     @NameInMap("Tag")
     public java.util.List<DescribeReservedInstancesRequestTag> tag;
 
-    // The zone ID of the reserved instance. This parameter is required when Scope is set to Zone. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.
+    /**
+     * <p>The zone ID of the reserved instance. This parameter is required when Scope is set to Zone. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 
@@ -240,13 +262,17 @@ public class DescribeReservedInstancesRequest extends TeaModel {
     }
 
     public static class DescribeReservedInstancesRequestTag extends TeaModel {
-        // The key of tag N of the reserved instance. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length. It cannot start with aliyun or acs: or contain http:// or https://.
-        // 
-        // If a single tag is specified to query resources, up to 1,000 resources that are bound with this tag can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that are bound with all these tags can be displayed in the response. To query more than 1,000 resources that are bound with specified tags, call the [ListTagResources](~~110425~~) operation.
+        /**
+         * <p>The key of tag N of the reserved instance. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length. It cannot start with aliyun or acs: or contain http:// or https://.</p>
+         * <br>
+         * <p>If a single tag is specified to query resources, up to 1,000 resources that are bound with this tag can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that are bound with all these tags can be displayed in the response. To query more than 1,000 resources that are bound with specified tags, call the [ListTagResources](~~110425~~) operation.</p>
+         */
         @NameInMap("Key")
         public String key;
 
-        // The value of tag N of the reserved instance. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length. It cannot start with acs: or contain http:// or https://.
+        /**
+         * <p>The value of tag N of the reserved instance. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length. It cannot start with acs: or contain http:// or https://.</p>
+         */
         @NameInMap("Value")
         public String value;
 

@@ -13,9 +13,11 @@ public class ModifyReservedInstancesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The region ID of the reserved instance.
-    // 
-    // You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+    /**
+     * <p>The region ID of the reserved instance.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -90,38 +92,48 @@ public class ModifyReservedInstancesRequest extends TeaModel {
     }
 
     public static class ModifyReservedInstancesRequestConfiguration extends TeaModel {
-        // The number of pay-as-you-go instances that are of the instance type matched with reserved instance N. The value must be greater than or equal to 1. Valid values of N: 1 to 100.
+        /**
+         * <p>The number of pay-as-you-go instances that are of the instance type matched with reserved instance N. The value must be greater than or equal to 1. Valid values of N: 1 to 100.</p>
+         */
         @NameInMap("InstanceAmount")
         public Integer instanceAmount;
 
-        // The number of instance types that reserved instance N can match. Valid values of N: 1 to 100.
-        // 
-        // >  The applicable instance types are continuously updated. For more information, see the "Attributes" section in [Reserved instance overview](~~100370~~).
+        /**
+         * <p>The number of instance types that reserved instance N can match. Valid values of N: 1 to 100.</p>
+         * <br>
+         * <p>>  The applicable instance types are continuously updated. For more information, see the "Attributes" section in [Reserved instance overview](~~100370~~).</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
-        // The name of reserved instance N. Valid values of N: 1 to 100.
-        // 
-        // The name must be 2 to 128 characters in length. It must start with a letter but cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+        /**
+         * <p>The name of reserved instance N. Valid values of N: 1 to 100.</p>
+         * <br>
+         * <p>The name must be 2 to 128 characters in length. It must start with a letter but cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+         */
         @NameInMap("ReservedInstanceName")
         public String reservedInstanceName;
 
-        // The scope of reserved instance N. Valid values:
-        // 
-        // *   Region: regional
-        // *   Zone: zonal
-        // 
-        // Valid values of N: 1 to 100.
-        // 
-        // Default value: Region.
+        /**
+         * <p>The scope of reserved instance N. Valid values:</p>
+         * <br>
+         * <p>*   Region: regional</p>
+         * <p>*   Zone: zonal</p>
+         * <br>
+         * <p>Valid values of N: 1 to 100.</p>
+         * <br>
+         * <p>Default value: Region.</p>
+         */
         @NameInMap("Scope")
         public String scope;
 
-        // The zone ID of reserved instance N. Valid values of N: 1 to 100.
-        // 
-        // This parameter is required when `Scope` is set to `Zone`.
-        // 
-        // You can call the [DescribeZones](~~25609~~) operation to query the most recent zone list.
+        /**
+         * <p>The zone ID of reserved instance N. Valid values of N: 1 to 100.</p>
+         * <br>
+         * <p>This parameter is required when `Scope` is set to `Zone`.</p>
+         * <br>
+         * <p>You can call the [DescribeZones](~~25609~~) operation to query the most recent zone list.</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

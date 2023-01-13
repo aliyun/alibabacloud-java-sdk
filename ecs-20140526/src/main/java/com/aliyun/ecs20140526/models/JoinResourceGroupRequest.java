@@ -10,15 +10,21 @@ public class JoinResourceGroupRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The region ID of the resource. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+    /**
+     * <p>The region ID of the resource. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The ID of the resource group to which to add the resource.
+    /**
+     * <p>The ID of the resource group to which to add the resource.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    // The ID of the resource. This parameter depends on the ResourceType value. For example, when ResourceType is set to instance, ResourceId can be interpreted as InstanceId.
+    /**
+     * <p>The ID of the resource. This parameter depends on the ResourceType value. For example, when ResourceType is set to instance, ResourceId can be interpreted as InstanceId.</p>
+     */
     @NameInMap("ResourceId")
     public String resourceId;
 
@@ -28,20 +34,22 @@ public class JoinResourceGroupRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    // The type of the ECS resource. Valid values:
-    // 
-    // *   instance: instance
-    // *   disk: Elastic Block Storage device
-    // *   snapshot: snapshot
-    // *   image: image
-    // *   securitygroup: security group
-    // *   ddh: dedicated host
-    // *   ddhcluster: dedicated host cluster
-    // *   eni: ENI
-    // *   keypair: SSH key pair
-    // *   launchtemplate: launch template
-    // 
-    // These values are case-sensitive.
+    /**
+     * <p>The type of the ECS resource. Valid values:</p>
+     * <br>
+     * <p>*   instance: instance</p>
+     * <p>*   disk: Elastic Block Storage device</p>
+     * <p>*   snapshot: snapshot</p>
+     * <p>*   image: image</p>
+     * <p>*   securitygroup: security group</p>
+     * <p>*   ddh: dedicated host</p>
+     * <p>*   ddhcluster: dedicated host cluster</p>
+     * <p>*   eni: ENI</p>
+     * <p>*   keypair: SSH key pair</p>
+     * <p>*   launchtemplate: launch template</p>
+     * <br>
+     * <p>These values are case-sensitive.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 

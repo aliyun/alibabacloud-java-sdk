@@ -4,14 +4,18 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccountAttributesRequest extends TeaModel {
-    // The list of attribute names.
+    /**
+     * <p>The list of attribute names.</p>
+     */
     @NameInMap("AttributeName")
     public java.util.List<String> attributeName;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+    /**
+     * <p>The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -21,7 +25,9 @@ public class DescribeAccountAttributesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    // The ID of the zone.
+    /**
+     * <p>The ID of the zone.</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 

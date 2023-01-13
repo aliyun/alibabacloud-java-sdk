@@ -4,11 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceStatusRequest extends TeaModel {
-    // The cluster ID of the instance.
+    /**
+     * <p>The cluster ID of the instance.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
-    // The IDs of the instances.
+    /**
+     * <p>The IDs of the instances.</p>
+     */
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
 
@@ -18,21 +22,27 @@ public class DescribeInstanceStatusRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The number of the page to return.
-    // 
-    // Pages start from page 1.
-    // 
-    // Default value: 1.
+    /**
+     * <p>The number of the page to return.</p>
+     * <br>
+     * <p>Pages start from page 1.</p>
+     * <br>
+     * <p>Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // The number of entries to return on each page. Valid values: 1 to 50.
-    // 
-    // Default value: 10.
+    /**
+     * <p>The number of entries to return on each page. Valid values: 1 to 50.</p>
+     * <br>
+     * <p>Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+    /**
+     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -42,7 +52,9 @@ public class DescribeInstanceStatusRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    // The zone ID of the instance. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.
+    /**
+     * <p>The zone ID of the instance. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 

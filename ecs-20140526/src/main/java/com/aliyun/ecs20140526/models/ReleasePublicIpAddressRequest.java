@@ -7,11 +7,15 @@ public class ReleasePublicIpAddressRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
-    // The ID of the instance.
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // The public IP address of the instance.
+    /**
+     * <p>The public IP address of the instance.</p>
+     */
     @NameInMap("PublicIpAddress")
     public String publicIpAddress;
 

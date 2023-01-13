@@ -4,23 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DetachKeyPairResponseBody extends TeaModel {
-    // The number of instances from which the SSH key pair failed to be unbound.
+    /**
+     * <p>The number of instances from which the SSH key pair failed to be unbound.</p>
+     */
     @NameInMap("FailCount")
     public String failCount;
 
-    // The name of the SSH key pair.
+    /**
+     * <p>The name of the SSH key pair.</p>
+     */
     @NameInMap("KeyPairName")
     public String keyPairName;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The result set of the unbind operation.
+    /**
+     * <p>The result set of the unbind operation.</p>
+     */
     @NameInMap("Results")
     public DetachKeyPairResponseBodyResults results;
 
-    // The total number of instances from which you attempted to unbind the SSH key pair.
+    /**
+     * <p>The total number of instances from which you attempted to unbind the SSH key pair.</p>
+     */
     @NameInMap("TotalCount")
     public String totalCount;
 
@@ -70,19 +80,27 @@ public class DetachKeyPairResponseBody extends TeaModel {
     }
 
     public static class DetachKeyPairResponseBodyResultsResult extends TeaModel {
-        // The operation status code returned. 200 indicates that the operation was successful.
+        /**
+         * <p>The operation status code returned. 200 indicates that the operation was successful.</p>
+         */
         @NameInMap("Code")
         public String code;
 
-        // The ID of the instance.
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        // The operation information returned. For example, when the value of `Code` is 200, the value of `Message` is `successful`.
+        /**
+         * <p>The operation information returned. For example, when the value of `Code` is 200, the value of `Message` is `successful`.</p>
+         */
         @NameInMap("Message")
         public String message;
 
-        // Indicates whether the operation was successful.
+        /**
+         * <p>Indicates whether the operation was successful.</p>
+         */
         @NameInMap("Success")
         public String success;
 

@@ -4,27 +4,39 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeDeploymentSetsResponseBody extends TeaModel {
-    // Details about the deployment sets.
+    /**
+     * <p>Details about the deployment sets.</p>
+     */
     @NameInMap("DeploymentSets")
     public DescribeDeploymentSetsResponseBodyDeploymentSets deploymentSets;
 
-    // The page number of the returned page.
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // The number of entries returned per page.
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The region ID of the deployment set.
+    /**
+     * <p>The region ID of the deployment set.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The total number of deployment sets returned.
+    /**
+     * <p>The total number of deployment sets returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -82,15 +94,21 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
     }
 
     public static class DescribeDeploymentSetsResponseBodyDeploymentSetsDeploymentSetCapacitiesCapacity extends TeaModel {
-        // The number of ECS instances that can be added to the deployment set within the zone.
+        /**
+         * <p>The number of ECS instances that can be added to the deployment set within the zone.</p>
+         */
         @NameInMap("AvailableAmount")
         public Integer availableAmount;
 
-        // The number of ECS instances that belong to the zone in the deployment set.
+        /**
+         * <p>The number of ECS instances that belong to the zone in the deployment set.</p>
+         */
         @NameInMap("UsedAmount")
         public Integer usedAmount;
 
-        // The ID of the zone. Only the zone IDs of existing ECS instances in the deployment set are returned.
+        /**
+         * <p>The ID of the zone. Only the zone IDs of existing ECS instances in the deployment set are returned.</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 
@@ -164,53 +182,77 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
     }
 
     public static class DescribeDeploymentSetsResponseBodyDeploymentSetsDeploymentSet extends TeaModel {
-        // Details of the capacities of the deployment set. This parameter is valid only when the deployment set contains Elastic Compute Service (ECS) instances. The value contains the capacities of the deployment set in different zones.
+        /**
+         * <p>Details of the capacities of the deployment set. This parameter is valid only when the deployment set contains Elastic Compute Service (ECS) instances. The value contains the capacities of the deployment set in different zones.</p>
+         */
         @NameInMap("Capacities")
         public DescribeDeploymentSetsResponseBodyDeploymentSetsDeploymentSetCapacities capacities;
 
-        // The time when the deployment set was created.
+        /**
+         * <p>The time when the deployment set was created.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        // The description of the deployment set.
+        /**
+         * <p>The description of the deployment set.</p>
+         */
         @NameInMap("DeploymentSetDescription")
         public String deploymentSetDescription;
 
-        // The ID of the deployment set.
+        /**
+         * <p>The ID of the deployment set.</p>
+         */
         @NameInMap("DeploymentSetId")
         public String deploymentSetId;
 
-        // The name of the deployment set.
+        /**
+         * <p>The name of the deployment set.</p>
+         */
         @NameInMap("DeploymentSetName")
         public String deploymentSetName;
 
-        // The deployment strategy. The value of this response parameter is that of the `Strategy` request parameter.
+        /**
+         * <p>The deployment strategy. The value of this response parameter is that of the `Strategy` request parameter.</p>
+         */
         @NameInMap("DeploymentStrategy")
         public String deploymentStrategy;
 
-        // The deployment domain.
+        /**
+         * <p>The deployment domain.</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
-        // The deployment granularity.
+        /**
+         * <p>The deployment granularity.</p>
+         */
         @NameInMap("Granularity")
         public String granularity;
 
-        // The number of deployment set groups in the deployment set.
-        // 
-        // >  This parameter is valid only when the Strategy request parameter is set to AvailabilityGroup.
+        /**
+         * <p>The number of deployment set groups in the deployment set.</p>
+         * <br>
+         * <p>>  This parameter is valid only when the Strategy request parameter is set to AvailabilityGroup.</p>
+         */
         @NameInMap("GroupCount")
         public Integer groupCount;
 
-        // The number of instances in the deployment set.
+        /**
+         * <p>The number of instances in the deployment set.</p>
+         */
         @NameInMap("InstanceAmount")
         public Integer instanceAmount;
 
-        // The IDs of the instances in the deployment set.
+        /**
+         * <p>The IDs of the instances in the deployment set.</p>
+         */
         @NameInMap("InstanceIds")
         public DescribeDeploymentSetsResponseBodyDeploymentSetsDeploymentSetInstanceIds instanceIds;
 
-        // The deployment strategy.
+        /**
+         * <p>The deployment strategy.</p>
+         */
         @NameInMap("Strategy")
         public String strategy;
 

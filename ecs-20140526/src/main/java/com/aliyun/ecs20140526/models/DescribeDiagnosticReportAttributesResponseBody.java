@@ -7,61 +7,85 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
     @NameInMap("Attributes")
     public String attributes;
 
-    // The time when the diagnostic report was created.
+    /**
+     * <p>The time when the diagnostic report was created.</p>
+     */
     @NameInMap("CreationTime")
     public String creationTime;
 
-    // The end of the reporting period of the diagnostic report. The value is the EndTime value that was passed in when you called the [CreateDiagnosticReport](https://www.alibabacloud.com/help/en/elastic-compute-service/latest/creatediagnosticreport) operation to create the diagnostic report.
+    /**
+     * <p>The end of the reporting period of the diagnostic report. The value is the EndTime value that was passed in when you called the [CreateDiagnosticReport](https://www.alibabacloud.com/help/en/elastic-compute-service/latest/creatediagnosticreport) operation to create the diagnostic report.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
-    // The time when the diagnostic report was complete.
+    /**
+     * <p>The time when the diagnostic report was complete.</p>
+     */
     @NameInMap("FinishedTime")
     public String finishedTime;
 
-    // The results of metrics.
+    /**
+     * <p>The results of metrics.</p>
+     */
     @NameInMap("MetricResults")
     public DescribeDiagnosticReportAttributesResponseBodyMetricResults metricResults;
 
-    // The ID of the diagnostic metric set.
+    /**
+     * <p>The ID of the diagnostic metric set.</p>
+     */
     @NameInMap("MetricSetId")
     public String metricSetId;
 
-    // The ID of the diagnostic report, which is the unique identifier of the report.
+    /**
+     * <p>The ID of the diagnostic report, which is the unique identifier of the report.</p>
+     */
     @NameInMap("ReportId")
     public String reportId;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The ID of the resource that was diagnosed.
+    /**
+     * <p>The ID of the resource that was diagnosed.</p>
+     */
     @NameInMap("ResourceId")
     public String resourceId;
 
-    // The type of the resource. The ResourceType parameter can only be set to instance, which indicates that only instances are supported.
+    /**
+     * <p>The type of the resource. The ResourceType parameter can only be set to instance, which indicates that only instances are supported.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
-    // The severity level of the diagnostic report. The value of this parameter is determined by the most severe level of all diagnostic metrics. Valid values: 
-    // 
-    // - Unknown: The diagnostic has not started, failed to run, or exited unexpectedly without a diagnosis.
-    // - Normal: No exceptions were detected.
-    // - Info: Diagnostic information was recorded and may be related to exceptions.
-    // - Warn: Diagnostic information was recorded and may indicate potential exceptions.
-    // - Critical: Critical exceptions were detected.
+    /**
+     * <p>The severity level of the diagnostic report. The value of this parameter is determined by the most severe level of all diagnostic metrics. Valid values: </p>
+     * <br>
+     * <p>- Unknown: The diagnostic has not started, failed to run, or exited unexpectedly without a diagnosis.</p>
+     * <p>- Normal: No exceptions were detected.</p>
+     * <p>- Info: Diagnostic information was recorded and may be related to exceptions.</p>
+     * <p>- Warn: Diagnostic information was recorded and may indicate potential exceptions.</p>
+     * <p>- Critical: Critical exceptions were detected.</p>
+     */
     @NameInMap("Severity")
     public String severity;
 
-    // The beginning of the reporting period of the diagnostic report. The value is the StartTime value that was passed in when you called the [CreateDiagnosticReport](https://www.alibabacloud.com/help/en/elastic-compute-service/latest/creatediagnosticreport) operation to create the diagnostic report.
+    /**
+     * <p>The beginning of the reporting period of the diagnostic report. The value is the StartTime value that was passed in when you called the [CreateDiagnosticReport](https://www.alibabacloud.com/help/en/elastic-compute-service/latest/creatediagnosticreport) operation to create the diagnostic report.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
-    // The state of the diagnostic report. Valid values:
-    // 
-    // - InProgress: The diagnostic is in progress.
-    // - Finished: The diagnostic is complete.
-    // - Failed: The diagnostic failed.
+    /**
+     * <p>The state of the diagnostic report. Valid values:</p>
+     * <br>
+     * <p>- InProgress: The diagnostic is in progress.</p>
+     * <p>- Finished: The diagnostic is complete.</p>
+     * <p>- Failed: The diagnostic failed.</p>
+     */
     @NameInMap("Status")
     public String status;
 
@@ -175,23 +199,31 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
     }
 
     public static class DescribeDiagnosticReportAttributesResponseBodyMetricResultsMetricResultIssuesIssue extends TeaModel {
-        // Additional data carried by the diagnosis of the problem to help understand more information about the problem. The data format is JSON string.
+        /**
+         * <p>Additional data carried by the diagnosis of the problem to help understand more information about the problem. The data format is JSON string.</p>
+         */
         @NameInMap("Additional")
         public String additional;
 
-        // The ID of the diagnosed issue, which is the unique identifier of the issue.
+        /**
+         * <p>The ID of the diagnosed issue, which is the unique identifier of the issue.</p>
+         */
         @NameInMap("IssueId")
         public String issueId;
 
-        // The time when the problem occurred.
+        /**
+         * <p>The time when the problem occurred.</p>
+         */
         @NameInMap("OccurrenceTime")
         public String occurrenceTime;
 
-        // Valid values:
-        // 
-        // - Info: Diagnostic information was recorded and may be related to exceptions.
-        // - Warn: Diagnostic information was recorded and may indicate potential exceptions.
-        // - Critical: Critical exceptions were detected.
+        /**
+         * <p>Valid values:</p>
+         * <br>
+         * <p>- Info: Diagnostic information was recorded and may be related to exceptions.</p>
+         * <p>- Warn: Diagnostic information was recorded and may indicate potential exceptions.</p>
+         * <p>- Critical: Critical exceptions were detected.</p>
+         */
         @NameInMap("Severity")
         public String severity;
 
@@ -254,34 +286,44 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
     }
 
     public static class DescribeDiagnosticReportAttributesResponseBodyMetricResultsMetricResult extends TeaModel {
-        // The list of diagnostic issues.
+        /**
+         * <p>The list of diagnostic issues.</p>
+         */
         @NameInMap("Issues")
         public DescribeDiagnosticReportAttributesResponseBodyMetricResultsMetricResultIssues issues;
 
-        // The category of the diagnostic metric.
+        /**
+         * <p>The category of the diagnostic metric.</p>
+         */
         @NameInMap("MetricCategory")
         public String metricCategory;
 
-        // The ID of the diagnostic metric.
+        /**
+         * <p>The ID of the diagnostic metric.</p>
+         */
         @NameInMap("MetricId")
         public String metricId;
 
-        // The severity level of the diagnostic metric. Valid values:
-        // 
-        // - Unknown: The diagnostic has not started, failed to run, or exited unexpectedly without a diagnosis.
-        // - Normal: No exceptions were detected.
-        // - Info: Diagnostic information was recorded and may be related to exceptions.
-        // - NotSupport: The version of the guest operating system does support diagnosing the metric.
-        // - Warn: Diagnostic information was recorded and may indicate potential exceptions.
-        // - Critical: Critical exceptions were detected.
+        /**
+         * <p>The severity level of the diagnostic metric. Valid values:</p>
+         * <br>
+         * <p>- Unknown: The diagnostic has not started, failed to run, or exited unexpectedly without a diagnosis.</p>
+         * <p>- Normal: No exceptions were detected.</p>
+         * <p>- Info: Diagnostic information was recorded and may be related to exceptions.</p>
+         * <p>- NotSupport: The version of the guest operating system does support diagnosing the metric.</p>
+         * <p>- Warn: Diagnostic information was recorded and may indicate potential exceptions.</p>
+         * <p>- Critical: Critical exceptions were detected.</p>
+         */
         @NameInMap("Severity")
         public String severity;
 
-        // The state of the diagnostic metric. Valid values:
-        // 
-        // - InProgress: The diagnostic is in progress.
-        // - Finished: The diagnostic is complete.
-        // - Failed: The diagnostic failed.
+        /**
+         * <p>The state of the diagnostic metric. Valid values:</p>
+         * <br>
+         * <p>- InProgress: The diagnostic is in progress.</p>
+         * <p>- Finished: The diagnostic is complete.</p>
+         * <p>- Failed: The diagnostic failed.</p>
+         */
         @NameInMap("Status")
         public String status;
 

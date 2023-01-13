@@ -4,23 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
-    // Details about the launch template versions.
+    /**
+     * <p>Details about the launch template versions.</p>
+     */
     @NameInMap("LaunchTemplateVersionSets")
     public DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSets launchTemplateVersionSets;
 
-    // The page number of the returned page.
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // The number of entries returned per page.
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The total number of launch templates.
+    /**
+     * <p>The total number of launch templates.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -205,49 +215,67 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         @NameInMap("BurstingEnabled")
         public Boolean burstingEnabled;
 
-        // The category of the data disk.
+        /**
+         * <p>The category of the data disk.</p>
+         */
         @NameInMap("Category")
         public String category;
 
-        // Indicates whether to release the data disk when the instance is released.
+        /**
+         * <p>Indicates whether to release the data disk when the instance is released.</p>
+         */
         @NameInMap("DeleteWithInstance")
         public Boolean deleteWithInstance;
 
-        // The description of the data disk.
+        /**
+         * <p>The description of the data disk.</p>
+         */
         @NameInMap("Description")
         public String description;
 
-        // The device name of the data disk.
-        // 
-        // >  This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.
+        /**
+         * <p>The device name of the data disk.</p>
+         * <br>
+         * <p>>  This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.</p>
+         */
         @NameInMap("Device")
         public String device;
 
-        // The name of the data disk.
+        /**
+         * <p>The name of the data disk.</p>
+         */
         @NameInMap("DiskName")
         public String diskName;
 
-        // Specifies whether to encrypt the data disk.
+        /**
+         * <p>Specifies whether to encrypt the data disk.</p>
+         */
         @NameInMap("Encrypted")
         public String encrypted;
 
-        // The performance level of ESSD used as the data disk. This parameter is returned only when `Category` is set to cloud_essd. Valid values:
-        // 
-        // *   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.
-        // *   PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.
-        // *   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.
-        // *   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.
+        /**
+         * <p>The performance level of ESSD used as the data disk. This parameter is returned only when `Category` is set to cloud_essd. Valid values:</p>
+         * <br>
+         * <p>*   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</p>
+         * <p>*   PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.</p>
+         * <p>*   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</p>
+         * <p>*   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</p>
+         */
         @NameInMap("PerformanceLevel")
         public String performanceLevel;
 
         @NameInMap("ProvisionedIops")
         public Long provisionedIops;
 
-        // The size of the data disk.
+        /**
+         * <p>The size of the data disk.</p>
+         */
         @NameInMap("Size")
         public Integer size;
 
-        // The ID of the snapshot used to create the data disk.
+        /**
+         * <p>The ID of the snapshot used to create the data disk.</p>
+         */
         @NameInMap("SnapshotId")
         public String snapshotId;
 
@@ -393,37 +421,49 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
     }
 
     public static class DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataNetworkInterfacesNetworkInterface extends TeaModel {
-        // The description of the secondary ENI.
+        /**
+         * <p>The description of the secondary ENI.</p>
+         */
         @NameInMap("Description")
         public String description;
 
         @NameInMap("InstanceType")
         public String instanceType;
 
-        // The name of the secondary ENI.
+        /**
+         * <p>The name of the secondary ENI.</p>
+         */
         @NameInMap("NetworkInterfaceName")
         public String networkInterfaceName;
 
         @NameInMap("NetworkInterfaceTrafficMode")
         public String networkInterfaceTrafficMode;
 
-        // The primary private IP address of the secondary ENI.
+        /**
+         * <p>The primary private IP address of the secondary ENI.</p>
+         */
         @NameInMap("PrimaryIpAddress")
         public String primaryIpAddress;
 
-        // The ID of the security group to which to assign the secondary ENI. The security group and the ENI must belong to the same VPC.  
-        // 
-        // >  The SecurityGroupId and SecurityGroupIds parameters are mutually exclusive in the response.
+        /**
+         * <p>The ID of the security group to which to assign the secondary ENI. The security group and the ENI must belong to the same VPC.  </p>
+         * <br>
+         * <p>>  The SecurityGroupId and SecurityGroupIds parameters are mutually exclusive in the response.</p>
+         */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
-        // The IDs of the security groups to which to assign the secondary ENI. 
-        // 
-        // >  The SecurityGroupId and SecurityGroupIds parameters are mutually exclusive in the response.
+        /**
+         * <p>The IDs of the security groups to which to assign the secondary ENI. </p>
+         * <br>
+         * <p>>  The SecurityGroupId and SecurityGroupIds parameters are mutually exclusive in the response.</p>
+         */
         @NameInMap("SecurityGroupIds")
         public DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataNetworkInterfacesNetworkInterfaceSecurityGroupIds securityGroupIds;
 
-        // The ID of the vSwitch to which to connect the ENI.
+        /**
+         * <p>The ID of the vSwitch to which to connect the ENI.</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
@@ -537,11 +577,15 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
     }
 
     public static class DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataTagsInstanceTag extends TeaModel {
-        // The tag key of the instance.
+        /**
+         * <p>The tag key of the instance.</p>
+         */
         @NameInMap("Key")
         public String key;
 
-        // The tag value of the instance.
+        /**
+         * <p>The tag value of the instance.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -592,167 +636,237 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         @Validation(required = true)
         public DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataSystemDisk systemDisk;
 
-        // The automatic release time of the instance.
+        /**
+         * <p>The automatic release time of the instance.</p>
+         */
         @NameInMap("AutoReleaseTime")
         public String autoReleaseTime;
 
-        // Details about the data disks.
+        /**
+         * <p>Details about the data disks.</p>
+         */
         @NameInMap("DataDisks")
         public DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataDataDisks dataDisks;
 
-        // The ID of the deployment set.
+        /**
+         * <p>The ID of the deployment set.</p>
+         */
         @NameInMap("DeploymentSetId")
         public String deploymentSetId;
 
-        // The description of the instance.
+        /**
+         * <p>The description of the instance.</p>
+         */
         @NameInMap("Description")
         public String description;
 
-        // Indicates whether to enable the operating system configuration of the instance.
+        /**
+         * <p>Indicates whether to enable the operating system configuration of the instance.</p>
+         */
         @NameInMap("EnableVmOsConfig")
         public Boolean enableVmOsConfig;
 
-        // The hostname of the instance.
+        /**
+         * <p>The hostname of the instance.</p>
+         */
         @NameInMap("HostName")
         public String hostName;
 
-        // The ID of the image.
+        /**
+         * <p>The ID of the image.</p>
+         */
         @NameInMap("ImageId")
         public String imageId;
 
-        // The source of the image. Valid values:
-        // 
-        // *   system: public images provided by Alibaba Cloud.
-        // *   self: custom images that you create.
-        // *   others: shared images from other Alibaba Cloud accounts.
-        // *   marketplace: Alibaba Cloud Marketplace images.
+        /**
+         * <p>The source of the image. Valid values:</p>
+         * <br>
+         * <p>*   system: public images provided by Alibaba Cloud.</p>
+         * <p>*   self: custom images that you create.</p>
+         * <p>*   others: shared images from other Alibaba Cloud accounts.</p>
+         * <p>*   marketplace: Alibaba Cloud Marketplace images.</p>
+         */
         @NameInMap("ImageOwnerAlias")
         public String imageOwnerAlias;
 
-        // The billing method of the instance. Valid values:
-        // 
-        // *   PrePaid: subscription
-        // *   PostPaid: pay-as-you-go
+        /**
+         * <p>The billing method of the instance. Valid values:</p>
+         * <br>
+         * <p>*   PrePaid: subscription</p>
+         * <p>*   PostPaid: pay-as-you-go</p>
+         */
         @NameInMap("InstanceChargeType")
         public String instanceChargeType;
 
-        // The name of the instance.
+        /**
+         * <p>The name of the instance.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
-        // The instance type.
+        /**
+         * <p>The instance type.</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
-        // The billing method for network usage.
+        /**
+         * <p>The billing method for network usage.</p>
+         */
         @NameInMap("InternetChargeType")
         public String internetChargeType;
 
-        // The maximum inbound public bandwidth.
+        /**
+         * <p>The maximum inbound public bandwidth.</p>
+         */
         @NameInMap("InternetMaxBandwidthIn")
         public Integer internetMaxBandwidthIn;
 
-        // The maximum outbound public bandwidth.
+        /**
+         * <p>The maximum outbound public bandwidth.</p>
+         */
         @NameInMap("InternetMaxBandwidthOut")
         public Integer internetMaxBandwidthOut;
 
-        // Specifies whether the instance is I/O optimized.
+        /**
+         * <p>Specifies whether the instance is I/O optimized.</p>
+         */
         @NameInMap("IoOptimized")
         public String ioOptimized;
 
-        // The number of IPv6 addresses to assign to the instance.
+        /**
+         * <p>The number of IPv6 addresses to assign to the instance.</p>
+         */
         @NameInMap("Ipv6AddressCount")
         public Integer ipv6AddressCount;
 
-        // The name of the key pair.
+        /**
+         * <p>The name of the key pair.</p>
+         */
         @NameInMap("KeyPairName")
         public String keyPairName;
 
-        // Details about the secondary elastic network interfaces (ENIs).
+        /**
+         * <p>Details about the secondary elastic network interfaces (ENIs).</p>
+         */
         @NameInMap("NetworkInterfaces")
         public DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataNetworkInterfaces networkInterfaces;
 
-        // The network type. Valid values:
-        // 
-        // *   classic: classic network
-        // *   vpc: VPC
+        /**
+         * <p>The network type. Valid values:</p>
+         * <br>
+         * <p>*   classic: classic network</p>
+         * <p>*   vpc: VPC</p>
+         */
         @NameInMap("NetworkType")
         public String networkType;
 
-        // Indicates whether the username and password pair preset in the image is used.
+        /**
+         * <p>Indicates whether the username and password pair preset in the image is used.</p>
+         */
         @NameInMap("PasswordInherit")
         public Boolean passwordInherit;
 
-        // The subscription duration.
+        /**
+         * <p>The subscription duration.</p>
+         */
         @NameInMap("Period")
         public Integer period;
 
-        // The private IP address of the instance.
+        /**
+         * <p>The private IP address of the instance.</p>
+         */
         @NameInMap("PrivateIpAddress")
         public String privateIpAddress;
 
-        // The name of the instance RAM role.
+        /**
+         * <p>The name of the instance RAM role.</p>
+         */
         @NameInMap("RamRoleName")
         public String ramRoleName;
 
-        // The ID of the resource group to which the launch template belongs.
+        /**
+         * <p>The ID of the resource group to which the launch template belongs.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        // Indicates whether to enable security hardening.
+        /**
+         * <p>Indicates whether to enable security hardening.</p>
+         */
         @NameInMap("SecurityEnhancementStrategy")
         public String securityEnhancementStrategy;
 
-        // The ID of the security group to which to assign the instance.
-        // 
-        // >  The `SecurityGroupId` and `SecurityGroupIds` parameters are mutually exclusive in the response.
+        /**
+         * <p>The ID of the security group to which to assign the instance.</p>
+         * <br>
+         * <p>>  The `SecurityGroupId` and `SecurityGroupIds` parameters are mutually exclusive in the response.</p>
+         */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
-        // The IDs of the security groups to which to assign the instance. 
-        // 
-        // >  The `SecurityGroupId` and `SecurityGroupIds` parameters are mutually exclusive in the response.
+        /**
+         * <p>The IDs of the security groups to which to assign the instance. </p>
+         * <br>
+         * <p>>  The `SecurityGroupId` and `SecurityGroupIds` parameters are mutually exclusive in the response.</p>
+         */
         @NameInMap("SecurityGroupIds")
         public DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataSecurityGroupIds securityGroupIds;
 
-        // The protection period of the preemptible instance. Unit: hours. Valid values: 0, 1, 2, 3, 4, 5, and 6.
-        // 
-        // Take note of the following items:
-        // 
-        // *   Protection periods of 2, 3, 4, 5, and 6 hours are in invitational preview. If you want to set this parameter to one of these values, submit a ticket.
-        // *   A value of 0 indicates that no protection period is configured for the preemptible instance.
+        /**
+         * <p>The protection period of the preemptible instance. Unit: hours. Valid values: 0, 1, 2, 3, 4, 5, and 6.</p>
+         * <br>
+         * <p>Take note of the following items:</p>
+         * <br>
+         * <p>*   Protection periods of 2, 3, 4, 5, and 6 hours are in invitational preview. If you want to set this parameter to one of these values, submit a ticket.</p>
+         * <p>*   A value of 0 indicates that no protection period is configured for the preemptible instance.</p>
+         */
         @NameInMap("SpotDuration")
         public Integer spotDuration;
 
-        // The maximum hourly price of the preemptible instance.
+        /**
+         * <p>The maximum hourly price of the preemptible instance.</p>
+         */
         @NameInMap("SpotPriceLimit")
         public Float spotPriceLimit;
 
-        // The bidding policy for the pay-as-you-go instance. Valid values:
-        // 
-        // *   NoSpot: The instance is a regular pay-as-you-go instance.
-        // *   SpotWithPriceLimit: The instance is a preemptible instance with a user-defined maximum hourly price.
-        // *   SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bid price.
+        /**
+         * <p>The bidding policy for the pay-as-you-go instance. Valid values:</p>
+         * <br>
+         * <p>*   NoSpot: The instance is a regular pay-as-you-go instance.</p>
+         * <p>*   SpotWithPriceLimit: The instance is a preemptible instance with a user-defined maximum hourly price.</p>
+         * <p>*   SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bid price.</p>
+         */
         @NameInMap("SpotStrategy")
         public String spotStrategy;
 
-        // The tags of the instance.
+        /**
+         * <p>The tags of the instance.</p>
+         */
         @NameInMap("Tags")
         public DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataTags tags;
 
-        // The user data of the instance, which is Base64-encoded.
+        /**
+         * <p>The user data of the instance, which is Base64-encoded.</p>
+         */
         @NameInMap("UserData")
         public String userData;
 
-        // The ID of the vSwitch to which to connect the instance.
+        /**
+         * <p>The ID of the vSwitch to which to connect the instance.</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
-        // The ID of the virtual private cloud (VPC).
+        /**
+         * <p>The ID of the virtual private cloud (VPC).</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
-        // The ID of the zone.
+        /**
+         * <p>The ID of the zone.</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 
@@ -1052,39 +1166,57 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
     }
 
     public static class DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSet extends TeaModel {
-        // The time when the launch template was created.
+        /**
+         * <p>The time when the launch template was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        // The creator of the launch template.
+        /**
+         * <p>The creator of the launch template.</p>
+         */
         @NameInMap("CreatedBy")
         public String createdBy;
 
-        // Indicates whether the launch template version is the default version.
+        /**
+         * <p>Indicates whether the launch template version is the default version.</p>
+         */
         @NameInMap("DefaultVersion")
         public Boolean defaultVersion;
 
-        // The configurations of the launch template.
+        /**
+         * <p>The configurations of the launch template.</p>
+         */
         @NameInMap("LaunchTemplateData")
         public DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateData launchTemplateData;
 
-        // The ID of the template.
+        /**
+         * <p>The ID of the template.</p>
+         */
         @NameInMap("LaunchTemplateId")
         public String launchTemplateId;
 
-        // The name of the launch template.
+        /**
+         * <p>The name of the launch template.</p>
+         */
         @NameInMap("LaunchTemplateName")
         public String launchTemplateName;
 
-        // The time when the launch template was modified.
+        /**
+         * <p>The time when the launch template was modified.</p>
+         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
-        // The description of the launch template version.
+        /**
+         * <p>The description of the launch template version.</p>
+         */
         @NameInMap("VersionDescription")
         public String versionDescription;
 
-        // The number of the launch template version.
+        /**
+         * <p>The number of the launch template version.</p>
+         */
         @NameInMap("VersionNumber")
         public Long versionNumber;
 

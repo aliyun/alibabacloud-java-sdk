@@ -4,23 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
-    // Details about the permissions on ENIs.
+    /**
+     * <p>Details about the permissions on ENIs.</p>
+     */
     @NameInMap("NetworkInterfacePermissions")
     public DescribeNetworkInterfacePermissionsResponseBodyNetworkInterfacePermissions networkInterfacePermissions;
 
-    // The number of the returned page.
+    /**
+     * <p>The number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // The number of entries returned per page.
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The total number of entries returned.
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -70,32 +80,44 @@ public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworkInterfacePermissionsResponseBodyNetworkInterfacePermissionsNetworkInterfacePermission extends TeaModel {
-        // The ID of the Alibaba Cloud partner (a certified ISV) or individual user.
+        /**
+         * <p>The ID of the Alibaba Cloud partner (a certified ISV) or individual user.</p>
+         */
         @NameInMap("AccountId")
         public Long accountId;
 
-        // The ID of the ENI.
+        /**
+         * <p>The ID of the ENI.</p>
+         */
         @NameInMap("NetworkInterfaceId")
         public String networkInterfaceId;
 
-        // The ID of the permission on the ENI.
+        /**
+         * <p>The ID of the permission on the ENI.</p>
+         */
         @NameInMap("NetworkInterfacePermissionId")
         public String networkInterfacePermissionId;
 
-        // The permission on the ENI.
+        /**
+         * <p>The permission on the ENI.</p>
+         */
         @NameInMap("Permission")
         public String permission;
 
-        // The status of the permission on the ENI. Valid values:
-        // 
-        // *   Pending: The permission is being granted.
-        // *   Granted: The permission has been granted.
-        // *   Revoking: The permission is being revoked.
-        // *   Revoked: The permission has been revoked.
+        /**
+         * <p>The status of the permission on the ENI. Valid values:</p>
+         * <br>
+         * <p>*   Pending: The permission is being granted.</p>
+         * <p>*   Granted: The permission has been granted.</p>
+         * <p>*   Revoking: The permission is being revoked.</p>
+         * <p>*   Revoked: The permission has been revoked.</p>
+         */
         @NameInMap("PermissionState")
         public String permissionState;
 
-        // The name of the Alibaba Cloud service.
+        /**
+         * <p>The name of the Alibaba Cloud service.</p>
+         */
         @NameInMap("ServiceName")
         public String serviceName;
 

@@ -4,11 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsResponseBody extends TeaModel {
-    // Details about the regions.
+    /**
+     * <p>Details about the regions.</p>
+     */
     @NameInMap("Regions")
     public DescribeRegionsResponseBodyRegions regions;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,22 +38,30 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeRegionsResponseBodyRegionsRegion extends TeaModel {
-        // The name of the region.
+        /**
+         * <p>The name of the region.</p>
+         */
         @NameInMap("LocalName")
         public String localName;
 
-        // The endpoint of the region.
+        /**
+         * <p>The endpoint of the region.</p>
+         */
         @NameInMap("RegionEndpoint")
         public String regionEndpoint;
 
-        // The ID of the region.
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
-        // Indicates whether clusters are sold out. Valid values:
-        // 
-        // *   available
-        // *   soldOut
+        /**
+         * <p>Indicates whether clusters are sold out. Valid values:</p>
+         * <br>
+         * <p>*   available</p>
+         * <p>*   soldOut</p>
+         */
         @NameInMap("Status")
         public String status;
 

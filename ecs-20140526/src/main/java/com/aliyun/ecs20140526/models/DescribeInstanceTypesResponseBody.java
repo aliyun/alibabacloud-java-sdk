@@ -4,15 +4,21 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceTypesResponseBody extends TeaModel {
-    // Details about the instance types.
+    /**
+     * <p>Details about the instance types.</p>
+     */
     @NameInMap("InstanceTypes")
     public DescribeInstanceTypesResponseBodyInstanceTypes instanceTypes;
 
-    // The query token returned in this call.
+    /**
+     * <p>The query token returned in this call.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -46,7 +52,9 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeNetworkCardsNetworkCardInfo extends TeaModel {
-        // The index of the network card.
+        /**
+         * <p>The index of the network card.</p>
+         */
         @NameInMap("NetworkCardIndex")
         public Integer networkCardIndex;
 
@@ -85,193 +93,269 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceTypesResponseBodyInstanceTypesInstanceType extends TeaModel {
-        // The baseline CPU performance (overall baseline performance of all vCPUs) per t5 or t6 burstable instance.
+        /**
+         * <p>The baseline CPU performance (overall baseline performance of all vCPUs) per t5 or t6 burstable instance.</p>
+         */
         @NameInMap("BaselineCredit")
         public Integer baselineCredit;
 
-        // The CPU architecture. Valid values:
-        // 
-        // *   X86: x86
-        // *   ARM: ARM
+        /**
+         * <p>The CPU architecture. Valid values:</p>
+         * <br>
+         * <p>*   X86: x86</p>
+         * <p>*   ARM: ARM</p>
+         */
         @NameInMap("CpuArchitecture")
         public String cpuArchitecture;
 
-        // The number of vCPUs.
+        /**
+         * <p>The number of vCPUs.</p>
+         */
         @NameInMap("CpuCoreCount")
         public Integer cpuCoreCount;
 
-        // The CPU base frequency. Unit: GHz.
+        /**
+         * <p>The CPU base frequency. Unit: GHz.</p>
+         */
         @NameInMap("CpuSpeedFrequency")
         public Float cpuSpeedFrequency;
 
-        // The CPU turbo frequency. Unit: GHz.
+        /**
+         * <p>The CPU turbo frequency. Unit: GHz.</p>
+         */
         @NameInMap("CpuTurboFrequency")
         public Float cpuTurboFrequency;
 
-        // The maximum number of cloud disks.
+        /**
+         * <p>The maximum number of cloud disks.</p>
+         */
         @NameInMap("DiskQuantity")
         public Integer diskQuantity;
 
-        // The maximum number of IPv6 addresses per ENI.
+        /**
+         * <p>The maximum number of IPv6 addresses per ENI.</p>
+         */
         @NameInMap("EniIpv6AddressQuantity")
         public Integer eniIpv6AddressQuantity;
 
-        // The maximum number of IPv4 addresses per ENI.
+        /**
+         * <p>The maximum number of IPv4 addresses per ENI.</p>
+         */
         @NameInMap("EniPrivateIpAddressQuantity")
         public Integer eniPrivateIpAddressQuantity;
 
-        // The maximum number of ENIs.
+        /**
+         * <p>The maximum number of ENIs.</p>
+         */
         @NameInMap("EniQuantity")
         public Integer eniQuantity;
 
-        // The maximum number of NICs, including the primary NIC, ENIs, and trunk NICs.
-        // 
-        // > This parameter is in invitational preview and is unavailable.
+        /**
+         * <p>The maximum number of NICs, including the primary NIC, ENIs, and trunk NICs.</p>
+         * <br>
+         * <p>> This parameter is in invitational preview and is unavailable.</p>
+         */
         @NameInMap("EniTotalQuantity")
         public Integer eniTotalQuantity;
 
-        // Indicates whether NICs on instances of the instance type support trunking.
-        // 
-        // > This parameter is in invitational preview and is unavailable.
+        /**
+         * <p>Indicates whether NICs on instances of the instance type support trunking.</p>
+         * <br>
+         * <p>> This parameter is in invitational preview and is unavailable.</p>
+         */
         @NameInMap("EniTrunkSupported")
         public Boolean eniTrunkSupported;
 
-        // The number of ERIs.
-        // 
-        // > This parameter is in invitational preview and is unavailable.
+        /**
+         * <p>The number of ERIs.</p>
+         * <br>
+         * <p>> This parameter is in invitational preview and is unavailable.</p>
+         */
         @NameInMap("EriQuantity")
         public Integer eriQuantity;
 
-        // The number of GPUs.
+        /**
+         * <p>The number of GPUs.</p>
+         */
         @NameInMap("GPUAmount")
         public Integer GPUAmount;
 
-        // The amount of GPU memory per GPU. Unit: GiB.
+        /**
+         * <p>The amount of GPU memory per GPU. Unit: GiB.</p>
+         */
         @NameInMap("GPUMemorySize")
         public Float GPUMemorySize;
 
-        // The type of the GPU.
+        /**
+         * <p>The type of the GPU.</p>
+         */
         @NameInMap("GPUSpec")
         public String GPUSpec;
 
-        // The initial vCPU credits per t5 or t6 burstable instance.
+        /**
+         * <p>The initial vCPU credits per t5 or t6 burstable instance.</p>
+         */
         @NameInMap("InitialCredit")
         public Integer initialCredit;
 
-        // The maximum inbound internal bandwidth. Unit: Kbit/s.
+        /**
+         * <p>The maximum inbound internal bandwidth. Unit: Kbit/s.</p>
+         */
         @NameInMap("InstanceBandwidthRx")
         public Integer instanceBandwidthRx;
 
-        // The maximum outbound internal bandwidth. Unit: Kbit/s.
+        /**
+         * <p>The maximum outbound internal bandwidth. Unit: Kbit/s.</p>
+         */
         @NameInMap("InstanceBandwidthTx")
         public Integer instanceBandwidthTx;
 
-        // The category of the instance type. Valid values:
-        // 
-        // *   General-purpose: general-purpose instance type
-        // *   Compute-optimized: compute-optimized instance type
-        // *   Memory-optimized: memory-optimized instance type
-        // *   Big data: big data instance type
-        // *   Local SSDs: instance type with local SSDs
-        // *   High Clock Speed: instance type with high clock speeds
-        // *   Enhanced: enhanced instance type
-        // *   Shared: shared instance type
-        // *   Compute-optimized with GPU: GPU-accelerated compute-optimized instance type
-        // *   Visual Compute-optimized: visual compute-optimized instance type
-        // *   Heterogeneous Service: heterogeneous service instance type
-        // *   Compute-optimized with FPGA: FPGA-accelerated compute-optimized instance type
-        // *   Compute-optimized with NPU: NPU-accelerated compute-optimized instance type
-        // *   ECS Bare Metal: ECS Bare Metal Instance type
-        // *   Super Computing Cluster: SCC instance type
+        /**
+         * <p>The category of the instance type. Valid values:</p>
+         * <br>
+         * <p>*   General-purpose: general-purpose instance type</p>
+         * <p>*   Compute-optimized: compute-optimized instance type</p>
+         * <p>*   Memory-optimized: memory-optimized instance type</p>
+         * <p>*   Big data: big data instance type</p>
+         * <p>*   Local SSDs: instance type with local SSDs</p>
+         * <p>*   High Clock Speed: instance type with high clock speeds</p>
+         * <p>*   Enhanced: enhanced instance type</p>
+         * <p>*   Shared: shared instance type</p>
+         * <p>*   Compute-optimized with GPU: GPU-accelerated compute-optimized instance type</p>
+         * <p>*   Visual Compute-optimized: visual compute-optimized instance type</p>
+         * <p>*   Heterogeneous Service: heterogeneous service instance type</p>
+         * <p>*   Compute-optimized with FPGA: FPGA-accelerated compute-optimized instance type</p>
+         * <p>*   Compute-optimized with NPU: NPU-accelerated compute-optimized instance type</p>
+         * <p>*   ECS Bare Metal: ECS Bare Metal Instance type</p>
+         * <p>*   Super Computing Cluster: SCC instance type</p>
+         */
         @NameInMap("InstanceCategory")
         public String instanceCategory;
 
-        // The level of the instance family. Valid values:
-        // 
-        // *   EntryLevel
-        // *   EnterpriseLevel
-        // *   CreditEntryLevel For more information, see [Overview](~~59977~~).
+        /**
+         * <p>The level of the instance family. Valid values:</p>
+         * <br>
+         * <p>*   EntryLevel</p>
+         * <p>*   EnterpriseLevel</p>
+         * <p>*   CreditEntryLevel For more information, see [Overview](~~59977~~).</p>
+         */
         @NameInMap("InstanceFamilyLevel")
         public String instanceFamilyLevel;
 
-        // The inbound packet forwarding rate over the internal network. Unit: pps.
+        /**
+         * <p>The inbound packet forwarding rate over the internal network. Unit: pps.</p>
+         */
         @NameInMap("InstancePpsRx")
         public Long instancePpsRx;
 
-        // The outbound packet forwarding rate over the internal network. Unit: pps.
+        /**
+         * <p>The outbound packet forwarding rate over the internal network. Unit: pps.</p>
+         */
         @NameInMap("InstancePpsTx")
         public Long instancePpsTx;
 
-        // The instance family.
+        /**
+         * <p>The instance family.</p>
+         */
         @NameInMap("InstanceTypeFamily")
         public String instanceTypeFamily;
 
-        // The ID of the instance type.
+        /**
+         * <p>The ID of the instance type.</p>
+         */
         @NameInMap("InstanceTypeId")
         public String instanceTypeId;
 
-        // The number of local disks.
+        /**
+         * <p>The number of local disks.</p>
+         */
         @NameInMap("LocalStorageAmount")
         public Integer localStorageAmount;
 
-        // The capacity of each local disk. Unit: GiB.
+        /**
+         * <p>The capacity of each local disk. Unit: GiB.</p>
+         */
         @NameInMap("LocalStorageCapacity")
         public Long localStorageCapacity;
 
-        // The category of local disks. For more information, see [Local disks](~~63138~~). Valid values:
-        // 
-        // *   local_hdd_pro: local SATA HDDs, which are used by d1ne or d1 instances
-        // *   local_ssd_pro: local NVMe SSDs, which are used by i2, i2g, i1, ga1, or gn5 instances
+        /**
+         * <p>The category of local disks. For more information, see [Local disks](~~63138~~). Valid values:</p>
+         * <br>
+         * <p>*   local_hdd_pro: local SATA HDDs, which are used by d1ne or d1 instances</p>
+         * <p>*   local_ssd_pro: local NVMe SSDs, which are used by i2, i2g, i1, ga1, or gn5 instances</p>
+         */
         @NameInMap("LocalStorageCategory")
         public String localStorageCategory;
 
-        // The maximum number of queues per ENI (including primary ENI and secondary ENI).
+        /**
+         * <p>The maximum number of queues per ENI (including primary ENI and secondary ENI).</p>
+         */
         @NameInMap("MaximumQueueNumberPerEni")
         public Integer maximumQueueNumberPerEni;
 
-        // The memory size. Unit: GiB.
+        /**
+         * <p>The memory size. Unit: GiB.</p>
+         */
         @NameInMap("MemorySize")
         public Float memorySize;
 
-        // The quantity of network cards.
+        /**
+         * <p>The quantity of network cards.</p>
+         */
         @NameInMap("NetworkCardQuantity")
         public Integer networkCardQuantity;
 
-        // The list of network cards.
+        /**
+         * <p>The list of network cards.</p>
+         */
         @NameInMap("NetworkCards")
         public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeNetworkCards networkCards;
 
-        // Indicates whether to allow network traffic transmitted over virtual private clouds (VPCs) to be encrypted. Valid values:
-        // 
-        // *   true: allows network traffic transmitted over VPCs to be encrypted.
-        // *   false: does not allow network traffic transmitted over VPCs to be encrypted.
+        /**
+         * <p>Indicates whether to allow network traffic transmitted over virtual private clouds (VPCs) to be encrypted. Valid values:</p>
+         * <br>
+         * <p>*   true: allows network traffic transmitted over VPCs to be encrypted.</p>
+         * <p>*   false: does not allow network traffic transmitted over VPCs to be encrypted.</p>
+         */
         @NameInMap("NetworkEncryptionSupport")
         public Boolean networkEncryptionSupport;
 
-        // Indicates whether cloud disks can be attached by using the NVMe protocol. Valid values:
-        // 
-        // *   required: Cloud disks can be attached by using the NVMe protocol.
-        // *   unsupported: Cloud disk cannot be attached by using the NVMe protocol.
+        /**
+         * <p>Indicates whether cloud disks can be attached by using the NVMe protocol. Valid values:</p>
+         * <br>
+         * <p>*   required: Cloud disks can be attached by using the NVMe protocol.</p>
+         * <p>*   unsupported: Cloud disk cannot be attached by using the NVMe protocol.</p>
+         */
         @NameInMap("NvmeSupport")
         public String nvmeSupport;
 
-        // The CPU model.
+        /**
+         * <p>The CPU model.</p>
+         */
         @NameInMap("PhysicalProcessorModel")
         public String physicalProcessorModel;
 
-        // The default number of queues per primary NIC.
+        /**
+         * <p>The default number of queues per primary NIC.</p>
+         */
         @NameInMap("PrimaryEniQueueNumber")
         public Integer primaryEniQueueNumber;
 
-        // The maximum number of QP queues per ERI.
+        /**
+         * <p>The maximum number of QP queues per ERI.</p>
+         */
         @NameInMap("QueuePairNumber")
         public Integer queuePairNumber;
 
-        // The default number of queues per secondary ENI.
+        /**
+         * <p>The default number of queues per secondary ENI.</p>
+         */
         @NameInMap("SecondaryEniQueueNumber")
         public Integer secondaryEniQueueNumber;
 
-        // The maximum number of queues on ENIs that the instance type supports.
+        /**
+         * <p>The maximum number of queues on ENIs that the instance type supports.</p>
+         */
         @NameInMap("TotalEniQueueQuantity")
         public Integer totalEniQueueQuantity;
 

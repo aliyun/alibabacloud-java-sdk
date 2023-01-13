@@ -4,7 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ReportInstancesStatusRequest extends TeaModel {
-    // The detailed description of the exception.
+    /**
+     * <p>The detailed description of the exception.</p>
+     */
     @NameInMap("Description")
     public String description;
 
@@ -14,24 +16,28 @@ public class ReportInstancesStatusRequest extends TeaModel {
     @NameInMap("DiskId")
     public java.util.List<String> diskId;
 
-    // The end time of the instance exception. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+    /**
+     * <p>The end time of the instance exception. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
 
-    // The category of the exception. This parameter is applicable only to ECS bare metal instances. Valid values:
-    // 
-    // *   hardware-cpu-error: CPU failure
-    // *   hardware-motherboard-error: motherboard failure
-    // *   hardware-mem-error: memory failure
-    // *   hardware-power-error: power failure
-    // *   hardware-disk-error: disk failure
-    // *   hardware-networkcard-error: network interface controller (NIC) failure
-    // *   hardware-raidcard-error: SAS/RAID card failure
-    // *   hardware-fan-error: fan failure
-    // *   others: other failures
+    /**
+     * <p>The category of the exception. This parameter is applicable only to ECS bare metal instances. Valid values:</p>
+     * <br>
+     * <p>*   hardware-cpu-error: CPU failure</p>
+     * <p>*   hardware-motherboard-error: motherboard failure</p>
+     * <p>*   hardware-mem-error: memory failure</p>
+     * <p>*   hardware-power-error: power failure</p>
+     * <p>*   hardware-disk-error: disk failure</p>
+     * <p>*   hardware-networkcard-error: network interface controller (NIC) failure</p>
+     * <p>*   hardware-raidcard-error: SAS/RAID card failure</p>
+     * <p>*   hardware-fan-error: fan failure</p>
+     * <p>*   others: other failures</p>
+     */
     @NameInMap("IssueCategory")
     public String issueCategory;
 
@@ -41,18 +47,22 @@ public class ReportInstancesStatusRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The reason why the exception occurs to the ECS instance. Valid values:
-    // 
-    // *   instance-hang: The instance is unavailable or cannot be connected.
-    // *   instance-stuck-in-status: The instance is stuck in a state such as Starting or Stopping.
-    // *   abnormal-network: The instance has a network exception.
-    // *   abnormal-local-disk: A local disk attached to the instance has an exception.
-    // *   abnormal-cloud-disk: A disk or a Shared Block Storage device attached to the instance has an exception.
-    // *   others: other exception types. If the exception is not of the preceding types, you can set `Reason` to others and specify the `Description` parameter.
+    /**
+     * <p>The reason why the exception occurs to the ECS instance. Valid values:</p>
+     * <br>
+     * <p>*   instance-hang: The instance is unavailable or cannot be connected.</p>
+     * <p>*   instance-stuck-in-status: The instance is stuck in a state such as Starting or Stopping.</p>
+     * <p>*   abnormal-network: The instance has a network exception.</p>
+     * <p>*   abnormal-local-disk: A local disk attached to the instance has an exception.</p>
+     * <p>*   abnormal-cloud-disk: A disk or a Shared Block Storage device attached to the instance has an exception.</p>
+     * <p>*   others: other exception types. If the exception is not of the preceding types, you can set `Reason` to others and specify the `Description` parameter.</p>
+     */
     @NameInMap("Reason")
     public String reason;
 
-    // The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+    /**
+     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -62,7 +72,9 @@ public class ReportInstancesStatusRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    // The start time of the instance exception. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+    /**
+     * <p>The start time of the instance exception. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

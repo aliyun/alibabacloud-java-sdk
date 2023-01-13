@@ -4,11 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyManagedInstanceResponseBody extends TeaModel {
-    // Details about the managed instance.
+    /**
+     * <p>Details about the managed instance.</p>
+     */
     @NameInMap("Instance")
     public ModifyManagedInstanceResponseBodyInstance instance;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,11 +38,15 @@ public class ModifyManagedInstanceResponseBody extends TeaModel {
     }
 
     public static class ModifyManagedInstanceResponseBodyInstance extends TeaModel {
-        // The ID of the managed instance.
+        /**
+         * <p>The ID of the managed instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        // The name of the managed instance.
+        /**
+         * <p>The name of the managed instance.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 

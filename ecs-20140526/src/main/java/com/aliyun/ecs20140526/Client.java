@@ -127,6 +127,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return ActivateRouterInterfaceResponse
      */
+    // Deprecated
     public ActivateRouterInterfaceResponse activateRouterInterfaceWithOptions(ActivateRouterInterfaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -173,6 +174,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request ActivateRouterInterfaceRequest
       * @return ActivateRouterInterfaceResponse
      */
+    // Deprecated
     public ActivateRouterInterfaceResponse activateRouterInterface(ActivateRouterInterfaceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.activateRouterInterfaceWithOptions(request, runtime);
@@ -185,6 +187,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return AddBandwidthPackageIpsResponse
      */
+    // Deprecated
     public AddBandwidthPackageIpsResponse addBandwidthPackageIpsWithOptions(AddBandwidthPackageIpsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -243,6 +246,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request AddBandwidthPackageIpsRequest
       * @return AddBandwidthPackageIpsResponse
      */
+    // Deprecated
     public AddBandwidthPackageIpsResponse addBandwidthPackageIps(AddBandwidthPackageIpsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.addBandwidthPackageIpsWithOptions(request, runtime);
@@ -477,6 +481,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return AllocateEipAddressResponse
      */
+    // Deprecated
     public AllocateEipAddressResponse allocateEipAddressWithOptions(AllocateEipAddressRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -543,6 +548,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request AllocateEipAddressRequest
       * @return AllocateEipAddressResponse
      */
+    // Deprecated
     public AllocateEipAddressResponse allocateEipAddress(AllocateEipAddressRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.allocateEipAddressWithOptions(request, runtime);
@@ -889,6 +895,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return AssociateEipAddressResponse
      */
+    // Deprecated
     public AssociateEipAddressResponse associateEipAddressWithOptions(AssociateEipAddressRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -947,6 +954,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request AssociateEipAddressRequest
       * @return AssociateEipAddressResponse
      */
+    // Deprecated
     public AssociateEipAddressResponse associateEipAddress(AssociateEipAddressRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.associateEipAddressWithOptions(request, runtime);
@@ -959,6 +967,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return AssociateHaVipResponse
      */
+    // Deprecated
     public AssociateHaVipResponse associateHaVipWithOptions(AssociateHaVipRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1017,6 +1026,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request AssociateHaVipRequest
       * @return AssociateHaVipResponse
      */
+    // Deprecated
     public AssociateHaVipResponse associateHaVip(AssociateHaVipRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.associateHaVipWithOptions(request, runtime);
@@ -2093,6 +2103,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return CancelPhysicalConnectionResponse
      */
+    // Deprecated
     public CancelPhysicalConnectionResponse cancelPhysicalConnectionWithOptions(CancelPhysicalConnectionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2151,6 +2162,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request CancelPhysicalConnectionRequest
       * @return CancelPhysicalConnectionResponse
      */
+    // Deprecated
     public CancelPhysicalConnectionResponse cancelPhysicalConnection(CancelPhysicalConnectionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.cancelPhysicalConnectionWithOptions(request, runtime);
@@ -2261,6 +2273,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return ConnectRouterInterfaceResponse
      */
+    // Deprecated
     public ConnectRouterInterfaceResponse connectRouterInterfaceWithOptions(ConnectRouterInterfaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2307,6 +2320,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request ConnectRouterInterfaceRequest
       * @return ConnectRouterInterfaceResponse
      */
+    // Deprecated
     public ConnectRouterInterfaceResponse connectRouterInterface(ConnectRouterInterfaceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.connectRouterInterfaceWithOptions(request, runtime);
@@ -2655,6 +2669,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
             query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.timeToLiveInHours)) {
@@ -3843,6 +3861,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return CreateForwardEntryResponse
      */
+    // Deprecated
     public CreateForwardEntryResponse createForwardEntryWithOptions(CreateForwardEntryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3913,6 +3932,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request CreateForwardEntryRequest
       * @return CreateForwardEntryResponse
      */
+    // Deprecated
     public CreateForwardEntryResponse createForwardEntry(CreateForwardEntryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createForwardEntryWithOptions(request, runtime);
@@ -3925,6 +3945,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return CreateHaVipResponse
      */
+    // Deprecated
     public CreateHaVipResponse createHaVipWithOptions(CreateHaVipRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3987,6 +4008,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request CreateHaVipRequest
       * @return CreateHaVipResponse
      */
+    // Deprecated
     public CreateHaVipResponse createHaVip(CreateHaVipRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createHaVipWithOptions(request, runtime);
@@ -4055,9 +4077,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * ## Description
-      * When you call this operation, take note of the following items:
+      * When you call this operation, take note of the following points:
       * *   The created custom image can be used only when it is in the Available (Available) state.
-      * *   If a response contains `{"OperationLocks": {"LockReason" : "security"}}` when you query instance information, the instance is locked for security reasons and all operations are prohibited on it.
+      * *   If the response contains `{"OperationLocks": {"LockReason" : "security"}}` when you query the information of the instance, the instance is locked for security reasons and all operations are prohibited on it.
       * You can call the CreateImage operation to create a custom image by using one of the following methods. The following request parameters are sorted by priority: `InstanceId` > `DiskDeviceMapping` > `SnapshotId`. If your request contains two or more parameters, the custom image is created based on the parameter that has a higher priority by default.
       * *   **Method 1**: Create a custom image from an instance. You need to only specify the instance ID (`InstanceId`). The instance must be in the Running (`Running`) or Stopped (`Stopped`) state. After the CreateImage operation is called, a snapshot is created for each disk of the instance. When you create a custom image from a running instance, some cache data may not be written to the disks. As a result, the data of the created custom image may be slightly inconsistent with that of the instance. We recommend that you create custom images from instances after you stop the instances ([StopInstances](~~155372~~)).
       * *   **Method 2**: Create a custom image from the system disk snapshot of an instance. You need to only specify the ID of the system disk snapshot (`SnapshotId`). The specified snapshot cannot be created on or before July 15, 2013.
@@ -4170,9 +4192,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * ## Description
-      * When you call this operation, take note of the following items:
+      * When you call this operation, take note of the following points:
       * *   The created custom image can be used only when it is in the Available (Available) state.
-      * *   If a response contains `{"OperationLocks": {"LockReason" : "security"}}` when you query instance information, the instance is locked for security reasons and all operations are prohibited on it.
+      * *   If the response contains `{"OperationLocks": {"LockReason" : "security"}}` when you query the information of the instance, the instance is locked for security reasons and all operations are prohibited on it.
       * You can call the CreateImage operation to create a custom image by using one of the following methods. The following request parameters are sorted by priority: `InstanceId` > `DiskDeviceMapping` > `SnapshotId`. If your request contains two or more parameters, the custom image is created based on the parameter that has a higher priority by default.
       * *   **Method 1**: Create a custom image from an instance. You need to only specify the instance ID (`InstanceId`). The instance must be in the Running (`Running`) or Stopped (`Stopped`) state. After the CreateImage operation is called, a snapshot is created for each disk of the instance. When you create a custom image from a running instance, some cache data may not be written to the disks. As a result, the data of the created custom image may be slightly inconsistent with that of the instance. We recommend that you create custom images from instances after you stop the instances ([StopInstances](~~155372~~)).
       * *   **Method 2**: Create a custom image from the system disk snapshot of an instance. You need to only specify the ID of the system disk snapshot (`SnapshotId`). The specified snapshot cannot be created on or before July 15, 2013.
@@ -5328,6 +5350,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return CreateNatGatewayResponse
      */
+    // Deprecated
     public CreateNatGatewayResponse createNatGatewayWithOptions(CreateNatGatewayRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5394,6 +5417,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request CreateNatGatewayRequest
       * @return CreateNatGatewayResponse
      */
+    // Deprecated
     public CreateNatGatewayResponse createNatGateway(CreateNatGatewayRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createNatGatewayWithOptions(request, runtime);
@@ -5646,6 +5670,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return CreatePhysicalConnectionResponse
      */
+    // Deprecated
     public CreatePhysicalConnectionResponse createPhysicalConnectionWithOptions(CreatePhysicalConnectionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5744,6 +5769,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request CreatePhysicalConnectionRequest
       * @return CreatePhysicalConnectionResponse
      */
+    // Deprecated
     public CreatePhysicalConnectionResponse createPhysicalConnection(CreatePhysicalConnectionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createPhysicalConnectionWithOptions(request, runtime);
@@ -5856,6 +5882,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return CreateRouteEntryResponse
      */
+    // Deprecated
     public CreateRouteEntryResponse createRouteEntryWithOptions(CreateRouteEntryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5926,6 +5953,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request CreateRouteEntryRequest
       * @return CreateRouteEntryResponse
      */
+    // Deprecated
     public CreateRouteEntryResponse createRouteEntry(CreateRouteEntryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createRouteEntryWithOptions(request, runtime);
@@ -5938,6 +5966,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return CreateRouterInterfaceResponse
      */
+    // Deprecated
     public CreateRouterInterfaceResponse createRouterInterfaceWithOptions(CreateRouterInterfaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6072,6 +6101,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request CreateRouterInterfaceRequest
       * @return CreateRouterInterfaceResponse
      */
+    // Deprecated
     public CreateRouterInterfaceResponse createRouterInterface(CreateRouterInterfaceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createRouterInterfaceWithOptions(request, runtime);
@@ -6388,7 +6418,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * ## Description
       * You can specify `InstanceId` to create a snapshot-consistent group for the specified disks in an instance. You can also specify `DiskId.N` to create a snapshot-consistent group for multiple disks that are attached to multiple instances within the same zone.
-      * >  You cannot specify both `DiskId.N` and `ExcludeDiskId.N`. If `InstanceId` is set, you can use `DiskId.N` to specify only disks attached to the instance specified by InstanceId. You cannot use DiskId.N to specify disks attached to multiple instances.
+      * > You cannot specify both `DiskId.N` and `ExcludeDiskId.N`. If `InstanceId` is set, you can use `DiskId.N` to specify only disks attached to the instance specified by InstanceId. You cannot use DiskId.N to specify disks attached to multiple instances.
       * When you call this operation, take note of the following items:
       * *   The disk for which you want to create a snapshot must be in the **In Use** (`In_use`) or **Unattached** (`Available`) state.
       *     *   If the disk is in the **In Use** (`In_use`) state, the instance to which the disk is attached must be in the **Running** (`Running`) or **Stopped** (`Stopped`) state.
@@ -6486,7 +6516,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * ## Description
       * You can specify `InstanceId` to create a snapshot-consistent group for the specified disks in an instance. You can also specify `DiskId.N` to create a snapshot-consistent group for multiple disks that are attached to multiple instances within the same zone.
-      * >  You cannot specify both `DiskId.N` and `ExcludeDiskId.N`. If `InstanceId` is set, you can use `DiskId.N` to specify only disks attached to the instance specified by InstanceId. You cannot use DiskId.N to specify disks attached to multiple instances.
+      * > You cannot specify both `DiskId.N` and `ExcludeDiskId.N`. If `InstanceId` is set, you can use `DiskId.N` to specify only disks attached to the instance specified by InstanceId. You cannot use DiskId.N to specify disks attached to multiple instances.
       * When you call this operation, take note of the following items:
       * *   The disk for which you want to create a snapshot must be in the **In Use** (`In_use`) or **Unattached** (`Available`) state.
       *     *   If the disk is in the **In Use** (`In_use`) state, the instance to which the disk is attached must be in the **Running** (`Running`) or **Stopped** (`Stopped`) state.
@@ -6598,6 +6628,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return CreateVSwitchResponse
      */
+    // Deprecated
     public CreateVSwitchResponse createVSwitchWithOptions(CreateVSwitchRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6668,6 +6699,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request CreateVSwitchRequest
       * @return CreateVSwitchResponse
      */
+    // Deprecated
     public CreateVSwitchResponse createVSwitch(CreateVSwitchRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createVSwitchWithOptions(request, runtime);
@@ -6680,6 +6712,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return CreateVirtualBorderRouterResponse
      */
+    // Deprecated
     public CreateVirtualBorderRouterResponse createVirtualBorderRouterWithOptions(CreateVirtualBorderRouterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6774,6 +6807,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request CreateVirtualBorderRouterRequest
       * @return CreateVirtualBorderRouterResponse
      */
+    // Deprecated
     public CreateVirtualBorderRouterResponse createVirtualBorderRouter(CreateVirtualBorderRouterRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createVirtualBorderRouterWithOptions(request, runtime);
@@ -6786,6 +6820,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return CreateVpcResponse
      */
+    // Deprecated
     public CreateVpcResponse createVpcWithOptions(CreateVpcRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6852,6 +6887,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request CreateVpcRequest
       * @return CreateVpcResponse
      */
+    // Deprecated
     public CreateVpcResponse createVpc(CreateVpcRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createVpcWithOptions(request, runtime);
@@ -6864,6 +6900,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return DeactivateRouterInterfaceResponse
      */
+    // Deprecated
     public DeactivateRouterInterfaceResponse deactivateRouterInterfaceWithOptions(DeactivateRouterInterfaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6910,6 +6947,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request DeactivateRouterInterfaceRequest
       * @return DeactivateRouterInterfaceResponse
      */
+    // Deprecated
     public DeactivateRouterInterfaceResponse deactivateRouterInterface(DeactivateRouterInterfaceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deactivateRouterInterfaceWithOptions(request, runtime);
@@ -7088,6 +7126,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return DeleteBandwidthPackageResponse
      */
+    // Deprecated
     public DeleteBandwidthPackageResponse deleteBandwidthPackageWithOptions(DeleteBandwidthPackageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -7138,6 +7177,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request DeleteBandwidthPackageRequest
       * @return DeleteBandwidthPackageResponse
      */
+    // Deprecated
     public DeleteBandwidthPackageResponse deleteBandwidthPackage(DeleteBandwidthPackageRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteBandwidthPackageWithOptions(request, runtime);
@@ -7518,6 +7558,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return DeleteForwardEntryResponse
      */
+    // Deprecated
     public DeleteForwardEntryResponse deleteForwardEntryWithOptions(DeleteForwardEntryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -7572,6 +7613,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request DeleteForwardEntryRequest
       * @return DeleteForwardEntryResponse
      */
+    // Deprecated
     public DeleteForwardEntryResponse deleteForwardEntry(DeleteForwardEntryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteForwardEntryWithOptions(request, runtime);
@@ -7584,6 +7626,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return DeleteHaVipResponse
      */
+    // Deprecated
     public DeleteHaVipResponse deleteHaVipWithOptions(DeleteHaVipRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -7638,6 +7681,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request DeleteHaVipRequest
       * @return DeleteHaVipResponse
      */
+    // Deprecated
     public DeleteHaVipResponse deleteHaVip(DeleteHaVipRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteHaVipWithOptions(request, runtime);
@@ -8242,6 +8286,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return DeleteNatGatewayResponse
      */
+    // Deprecated
     public DeleteNatGatewayResponse deleteNatGatewayWithOptions(DeleteNatGatewayRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -8292,6 +8337,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request DeleteNatGatewayRequest
       * @return DeleteNatGatewayResponse
      */
+    // Deprecated
     public DeleteNatGatewayResponse deleteNatGateway(DeleteNatGatewayRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteNatGatewayWithOptions(request, runtime);
@@ -8380,6 +8426,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return DeleteNetworkInterfacePermissionResponse
      */
+    // Deprecated
     public DeleteNetworkInterfacePermissionResponse deleteNetworkInterfacePermissionWithOptions(DeleteNetworkInterfacePermissionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -8438,6 +8485,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request DeleteNetworkInterfacePermissionRequest
       * @return DeleteNetworkInterfacePermissionResponse
      */
+    // Deprecated
     public DeleteNetworkInterfacePermissionResponse deleteNetworkInterfacePermission(DeleteNetworkInterfacePermissionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteNetworkInterfacePermissionWithOptions(request, runtime);
@@ -8450,6 +8498,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return DeletePhysicalConnectionResponse
      */
+    // Deprecated
     public DeletePhysicalConnectionResponse deletePhysicalConnectionWithOptions(DeletePhysicalConnectionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -8504,6 +8553,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request DeletePhysicalConnectionRequest
       * @return DeletePhysicalConnectionResponse
      */
+    // Deprecated
     public DeletePhysicalConnectionResponse deletePhysicalConnection(DeletePhysicalConnectionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deletePhysicalConnectionWithOptions(request, runtime);
@@ -8584,6 +8634,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return DeleteRouteEntryResponse
      */
+    // Deprecated
     public DeleteRouteEntryResponse deleteRouteEntryWithOptions(DeleteRouteEntryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -8646,6 +8697,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request DeleteRouteEntryRequest
       * @return DeleteRouteEntryResponse
      */
+    // Deprecated
     public DeleteRouteEntryResponse deleteRouteEntry(DeleteRouteEntryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteRouteEntryWithOptions(request, runtime);
@@ -8658,6 +8710,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return DeleteRouterInterfaceResponse
      */
+    // Deprecated
     public DeleteRouterInterfaceResponse deleteRouterInterfaceWithOptions(DeleteRouterInterfaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -8716,6 +8769,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request DeleteRouterInterfaceRequest
       * @return DeleteRouterInterfaceResponse
      */
+    // Deprecated
     public DeleteRouterInterfaceResponse deleteRouterInterface(DeleteRouterInterfaceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteRouterInterfaceWithOptions(request, runtime);
@@ -8979,6 +9033,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return DeleteVSwitchResponse
      */
+    // Deprecated
     public DeleteVSwitchResponse deleteVSwitchWithOptions(DeleteVSwitchRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -9029,6 +9084,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request DeleteVSwitchRequest
       * @return DeleteVSwitchResponse
      */
+    // Deprecated
     public DeleteVSwitchResponse deleteVSwitch(DeleteVSwitchRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteVSwitchWithOptions(request, runtime);
@@ -9041,6 +9097,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return DeleteVirtualBorderRouterResponse
      */
+    // Deprecated
     public DeleteVirtualBorderRouterResponse deleteVirtualBorderRouterWithOptions(DeleteVirtualBorderRouterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -9099,6 +9156,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request DeleteVirtualBorderRouterRequest
       * @return DeleteVirtualBorderRouterResponse
      */
+    // Deprecated
     public DeleteVirtualBorderRouterResponse deleteVirtualBorderRouter(DeleteVirtualBorderRouterRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteVirtualBorderRouterWithOptions(request, runtime);
@@ -9111,6 +9169,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return DeleteVpcResponse
      */
+    // Deprecated
     public DeleteVpcResponse deleteVpcWithOptions(DeleteVpcRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -9161,6 +9220,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request DeleteVpcRequest
       * @return DeleteVpcResponse
      */
+    // Deprecated
     public DeleteVpcResponse deleteVpc(DeleteVpcRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteVpcWithOptions(request, runtime);
@@ -9226,6 +9286,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return DescribeAccessPointsResponse
      */
+    // Deprecated
     public DescribeAccessPointsResponse describeAccessPointsWithOptions(DescribeAccessPointsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -9284,6 +9345,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request DescribeAccessPointsRequest
       * @return DescribeAccessPointsResponse
      */
+    // Deprecated
     public DescribeAccessPointsResponse describeAccessPoints(DescribeAccessPointsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeAccessPointsWithOptions(request, runtime);
@@ -9394,6 +9456,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
             query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -9878,6 +9944,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return DescribeBandwidthPackagesResponse
      */
+    // Deprecated
     public DescribeBandwidthPackagesResponse describeBandwidthPackagesWithOptions(DescribeBandwidthPackagesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -9940,6 +10007,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request DescribeBandwidthPackagesRequest
       * @return DescribeBandwidthPackagesResponse
      */
+    // Deprecated
     public DescribeBandwidthPackagesResponse describeBandwidthPackages(DescribeBandwidthPackagesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeBandwidthPackagesWithOptions(request, runtime);
@@ -10237,6 +10305,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return DescribeClustersResponse
      */
+    // Deprecated
     public DescribeClustersResponse describeClustersWithOptions(DescribeClustersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -10283,6 +10352,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request DescribeClustersRequest
       * @return DescribeClustersResponse
      */
+    // Deprecated
     public DescribeClustersResponse describeClusters(DescribeClustersRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeClustersWithOptions(request, runtime);
@@ -11508,6 +11578,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return DescribeEipAddressesResponse
      */
+    // Deprecated
     public DescribeEipAddressesResponse describeEipAddressesWithOptions(DescribeEipAddressesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -11598,6 +11669,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request DescribeEipAddressesRequest
       * @return DescribeEipAddressesResponse
      */
+    // Deprecated
     public DescribeEipAddressesResponse describeEipAddresses(DescribeEipAddressesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeEipAddressesWithOptions(request, runtime);
@@ -11610,6 +11682,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return DescribeEipMonitorDataResponse
      */
+    // Deprecated
     public DescribeEipMonitorDataResponse describeEipMonitorDataWithOptions(DescribeEipMonitorDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -11672,6 +11745,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request DescribeEipMonitorDataRequest
       * @return DescribeEipMonitorDataResponse
      */
+    // Deprecated
     public DescribeEipMonitorDataResponse describeEipMonitorData(DescribeEipMonitorDataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeEipMonitorDataWithOptions(request, runtime);
@@ -11925,6 +11999,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return DescribeForwardTableEntriesResponse
      */
+    // Deprecated
     public DescribeForwardTableEntriesResponse describeForwardTableEntriesWithOptions(DescribeForwardTableEntriesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -11987,6 +12062,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request DescribeForwardTableEntriesRequest
       * @return DescribeForwardTableEntriesResponse
      */
+    // Deprecated
     public DescribeForwardTableEntriesResponse describeForwardTableEntries(DescribeForwardTableEntriesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeForwardTableEntriesWithOptions(request, runtime);
@@ -11999,6 +12075,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return DescribeHaVipsResponse
      */
+    // Deprecated
     public DescribeHaVipsResponse describeHaVipsWithOptions(DescribeHaVipsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -12057,6 +12134,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request DescribeHaVipsRequest
       * @return DescribeHaVipsResponse
      */
+    // Deprecated
     public DescribeHaVipsResponse describeHaVips(DescribeHaVipsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeHaVipsWithOptions(request, runtime);
@@ -12808,6 +12886,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return DescribeInstanceAttributeResponse
      */
+    // Deprecated
     public DescribeInstanceAttributeResponse describeInstanceAttributeWithOptions(DescribeInstanceAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -12854,6 +12933,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request DescribeInstanceAttributeRequest
       * @return DescribeInstanceAttributeResponse
      */
+    // Deprecated
     public DescribeInstanceAttributeResponse describeInstanceAttribute(DescribeInstanceAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeInstanceAttributeWithOptions(request, runtime);
@@ -13771,6 +13851,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return DescribeInstanceVncPasswdResponse
      */
+    // Deprecated
     public DescribeInstanceVncPasswdResponse describeInstanceVncPasswdWithOptions(DescribeInstanceVncPasswdRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -13821,6 +13902,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request DescribeInstanceVncPasswdRequest
       * @return DescribeInstanceVncPasswdResponse
      */
+    // Deprecated
     public DescribeInstanceVncPasswdResponse describeInstanceVncPasswd(DescribeInstanceVncPasswdRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeInstanceVncPasswdWithOptions(request, runtime);
@@ -14698,6 +14780,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return DescribeLimitationResponse
      */
+    // Deprecated
     public DescribeLimitationResponse describeLimitationWithOptions(DescribeLimitationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -14744,6 +14827,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request DescribeLimitationRequest
       * @return DescribeLimitationResponse
      */
+    // Deprecated
     public DescribeLimitationResponse describeLimitation(DescribeLimitationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeLimitationWithOptions(request, runtime);
@@ -14804,6 +14888,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceOwnerId", request.resourceOwnerId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -14833,6 +14921,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return DescribeNatGatewaysResponse
      */
+    // Deprecated
     public DescribeNatGatewaysResponse describeNatGatewaysWithOptions(DescribeNatGatewaysRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -14895,6 +14984,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request DescribeNatGatewaysRequest
       * @return DescribeNatGatewaysResponse
      */
+    // Deprecated
     public DescribeNatGatewaysResponse describeNatGateways(DescribeNatGatewaysRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeNatGatewaysWithOptions(request, runtime);
@@ -15173,6 +15263,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return DescribeNewProjectEipMonitorDataResponse
      */
+    // Deprecated
     public DescribeNewProjectEipMonitorDataResponse describeNewProjectEipMonitorDataWithOptions(DescribeNewProjectEipMonitorDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -15235,6 +15326,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request DescribeNewProjectEipMonitorDataRequest
       * @return DescribeNewProjectEipMonitorDataResponse
      */
+    // Deprecated
     public DescribeNewProjectEipMonitorDataResponse describeNewProjectEipMonitorData(DescribeNewProjectEipMonitorDataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeNewProjectEipMonitorDataWithOptions(request, runtime);
@@ -15247,6 +15339,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return DescribePhysicalConnectionsResponse
      */
+    // Deprecated
     public DescribePhysicalConnectionsResponse describePhysicalConnectionsWithOptions(DescribePhysicalConnectionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -15313,6 +15406,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request DescribePhysicalConnectionsRequest
       * @return DescribePhysicalConnectionsResponse
      */
+    // Deprecated
     public DescribePhysicalConnectionsResponse describePhysicalConnections(DescribePhysicalConnectionsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describePhysicalConnectionsWithOptions(request, runtime);
@@ -15863,6 +15957,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeRegionsWithOptions(request, runtime);
     }
 
+    /**
+      * ## Description
+      * *   You can call this operation to query the price for renewing a subscription instance for a specific period of time or to a synchronized expiration date.
+      * *   Take note of the following items:
+      *     *   If you set only the required parameters, the price for renewing a specified instance for one month is queried by default.
+      *     *   The renewal period-related parameter pair (`Period` and `PeriodUnit`) and the synchronized expiration date-related parameter (`ExpectedRenewDay`) are mutually exclusive. You cannot set these parameters together to query the prices for renewing a specified instance for a period of time and to a synchronized expiration date at the same time.
+      *
+      * @param request DescribeRenewalPriceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeRenewalPriceResponse
+     */
     public DescribeRenewalPriceResponse describeRenewalPriceWithOptions(DescribeRenewalPriceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -15923,6 +16028,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeRenewalPriceResponse());
     }
 
+    /**
+      * ## Description
+      * *   You can call this operation to query the price for renewing a subscription instance for a specific period of time or to a synchronized expiration date.
+      * *   Take note of the following items:
+      *     *   If you set only the required parameters, the price for renewing a specified instance for one month is queried by default.
+      *     *   The renewal period-related parameter pair (`Period` and `PeriodUnit`) and the synchronized expiration date-related parameter (`ExpectedRenewDay`) are mutually exclusive. You cannot set these parameters together to query the prices for renewing a specified instance for a period of time and to a synchronized expiration date at the same time.
+      *
+      * @param request DescribeRenewalPriceRequest
+      * @return DescribeRenewalPriceResponse
+     */
     public DescribeRenewalPriceResponse describeRenewalPrice(DescribeRenewalPriceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeRenewalPriceWithOptions(request, runtime);
@@ -16170,6 +16285,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return DescribeRouteTablesResponse
      */
+    // Deprecated
     public DescribeRouteTablesResponse describeRouteTablesWithOptions(DescribeRouteTablesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -16244,6 +16360,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request DescribeRouteTablesRequest
       * @return DescribeRouteTablesResponse
      */
+    // Deprecated
     public DescribeRouteTablesResponse describeRouteTables(DescribeRouteTablesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeRouteTablesWithOptions(request, runtime);
@@ -16256,6 +16373,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return DescribeRouterInterfacesResponse
      */
+    // Deprecated
     public DescribeRouterInterfacesResponse describeRouterInterfacesWithOptions(DescribeRouterInterfacesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -16310,6 +16428,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request DescribeRouterInterfacesRequest
       * @return DescribeRouterInterfacesResponse
      */
+    // Deprecated
     public DescribeRouterInterfacesResponse describeRouterInterfaces(DescribeRouterInterfacesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeRouterInterfacesWithOptions(request, runtime);
@@ -16565,8 +16684,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * - When you send a file, the file may fail to be sent to specified instances. You must call this operation to check the file sending results.
-      * - You can call this operation to query the file sending records within the last six weeks.
+      * ## Usage notes
+      * *   When you send a file, the file may fail to be sent to specified Elastic Compute Service (ECS) instances. You can call this operation to check whether the file is successfully sent.
+      * *   You can call this operation to query the records of files sent in the last six weeks.
       *
       * @param request DescribeSendFileResultsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -16641,8 +16761,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * - When you send a file, the file may fail to be sent to specified instances. You must call this operation to check the file sending results.
-      * - You can call this operation to query the file sending records within the last six weeks.
+      * ## Usage notes
+      * *   When you send a file, the file may fail to be sent to specified Elastic Compute Service (ECS) instances. You can call this operation to check whether the file is successfully sent.
+      * *   You can call this operation to query the records of files sent in the last six weeks.
       *
       * @param request DescribeSendFileResultsRequest
       * @return DescribeSendFileResultsResponse
@@ -17792,6 +17913,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return DescribeUserBusinessBehaviorResponse
      */
+    // Deprecated
     public DescribeUserBusinessBehaviorResponse describeUserBusinessBehaviorWithOptions(DescribeUserBusinessBehaviorRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -17842,6 +17964,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request DescribeUserBusinessBehaviorRequest
       * @return DescribeUserBusinessBehaviorResponse
      */
+    // Deprecated
     public DescribeUserBusinessBehaviorResponse describeUserBusinessBehavior(DescribeUserBusinessBehaviorRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeUserBusinessBehaviorWithOptions(request, runtime);
@@ -17916,6 +18039,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return DescribeVRoutersResponse
      */
+    // Deprecated
     public DescribeVRoutersResponse describeVRoutersWithOptions(DescribeVRoutersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -17974,6 +18098,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request DescribeVRoutersRequest
       * @return DescribeVRoutersResponse
      */
+    // Deprecated
     public DescribeVRoutersResponse describeVRouters(DescribeVRoutersRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeVRoutersWithOptions(request, runtime);
@@ -17986,6 +18111,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return DescribeVSwitchesResponse
      */
+    // Deprecated
     public DescribeVSwitchesResponse describeVSwitchesWithOptions(DescribeVSwitchesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -18056,6 +18182,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request DescribeVSwitchesRequest
       * @return DescribeVSwitchesResponse
      */
+    // Deprecated
     public DescribeVSwitchesResponse describeVSwitches(DescribeVSwitchesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeVSwitchesWithOptions(request, runtime);
@@ -18068,6 +18195,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return DescribeVirtualBorderRoutersResponse
      */
+    // Deprecated
     public DescribeVirtualBorderRoutersResponse describeVirtualBorderRoutersWithOptions(DescribeVirtualBorderRoutersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -18122,6 +18250,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request DescribeVirtualBorderRoutersRequest
       * @return DescribeVirtualBorderRoutersResponse
      */
+    // Deprecated
     public DescribeVirtualBorderRoutersResponse describeVirtualBorderRouters(DescribeVirtualBorderRoutersRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeVirtualBorderRoutersWithOptions(request, runtime);
@@ -18134,6 +18263,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return DescribeVirtualBorderRoutersForPhysicalConnectionResponse
      */
+    // Deprecated
     public DescribeVirtualBorderRoutersForPhysicalConnectionResponse describeVirtualBorderRoutersForPhysicalConnectionWithOptions(DescribeVirtualBorderRoutersForPhysicalConnectionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -18192,6 +18322,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request DescribeVirtualBorderRoutersForPhysicalConnectionRequest
       * @return DescribeVirtualBorderRoutersForPhysicalConnectionResponse
      */
+    // Deprecated
     public DescribeVirtualBorderRoutersForPhysicalConnectionResponse describeVirtualBorderRoutersForPhysicalConnection(DescribeVirtualBorderRoutersForPhysicalConnectionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeVirtualBorderRoutersForPhysicalConnectionWithOptions(request, runtime);
@@ -18204,6 +18335,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return DescribeVpcsResponse
      */
+    // Deprecated
     public DescribeVpcsResponse describeVpcsWithOptions(DescribeVpcsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -18266,6 +18398,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request DescribeVpcsRequest
       * @return DescribeVpcsResponse
      */
+    // Deprecated
     public DescribeVpcsResponse describeVpcs(DescribeVpcsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeVpcsWithOptions(request, runtime);
@@ -18744,6 +18877,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return EipFillParamsResponse
      */
+    // Deprecated
     public EipFillParamsResponse eipFillParamsWithOptions(EipFillParamsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -18798,6 +18932,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request EipFillParamsRequest
       * @return EipFillParamsResponse
      */
+    // Deprecated
     public EipFillParamsResponse eipFillParams(EipFillParamsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.eipFillParamsWithOptions(request, runtime);
@@ -18810,6 +18945,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return EipFillProductResponse
      */
+    // Deprecated
     public EipFillProductResponse eipFillProductWithOptions(EipFillProductRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -18864,6 +19000,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request EipFillProductRequest
       * @return EipFillProductResponse
      */
+    // Deprecated
     public EipFillProductResponse eipFillProduct(EipFillProductRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.eipFillProductWithOptions(request, runtime);
@@ -18876,6 +19013,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return EipNotifyPaidResponse
      */
+    // Deprecated
     public EipNotifyPaidResponse eipNotifyPaidWithOptions(EipNotifyPaidRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -18930,6 +19068,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request EipNotifyPaidRequest
       * @return EipNotifyPaidResponse
      */
+    // Deprecated
     public EipNotifyPaidResponse eipNotifyPaid(EipNotifyPaidRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.eipNotifyPaidWithOptions(request, runtime);
@@ -18942,6 +19081,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return EnablePhysicalConnectionResponse
      */
+    // Deprecated
     public EnablePhysicalConnectionResponse enablePhysicalConnectionWithOptions(EnablePhysicalConnectionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -19000,6 +19140,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request EnablePhysicalConnectionRequest
       * @return EnablePhysicalConnectionResponse
      */
+    // Deprecated
     public EnablePhysicalConnectionResponse enablePhysicalConnection(EnablePhysicalConnectionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.enablePhysicalConnectionWithOptions(request, runtime);
@@ -19178,6 +19319,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return ExportSnapshotResponse
      */
+    // Deprecated
     public ExportSnapshotResponse exportSnapshotWithOptions(ExportSnapshotRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -19232,6 +19374,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request ExportSnapshotRequest
       * @return ExportSnapshotResponse
      */
+    // Deprecated
     public ExportSnapshotResponse exportSnapshot(ExportSnapshotRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.exportSnapshotWithOptions(request, runtime);
@@ -19710,6 +19853,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return ImportSnapshotResponse
      */
+    // Deprecated
     public ImportSnapshotResponse importSnapshotWithOptions(ImportSnapshotRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -19768,6 +19912,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request ImportSnapshotRequest
       * @return ImportSnapshotResponse
      */
+    // Deprecated
     public ImportSnapshotResponse importSnapshot(ImportSnapshotRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.importSnapshotWithOptions(request, runtime);
@@ -20314,8 +20459,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * Specify at least one of the following parameters or parameter pairs in a request to determine a query object:
       * *   `ResourceId.N`
       * *   `Tag.N` parameter pair (`Tag.N.Key` and `Tag.N.Value`)
-      * *   `TagFilter.N` parameter pair (TagFilter.N.TagKey and TagFilter.N.TagValues.N)
-      * If one of the following sets of request parameters is specified as filter conditions, only ECS resources that meet all the specified filter conditions are returned:
+      * *   `TagFilter.N`
+      * If one of the following sets of request parameters is specified as filter conditions, only ECS resources that meet all of the specified filter conditions are returned:
       * *   Set 1: `Tag.N.Key, Tag.N.Value`, and `ResourceId.N`
       * *   Set 2: `TagFilter.N.TagKey, TagFilter.N.TagValues.N`, and `ResourceId.N`
       *
@@ -20392,8 +20537,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * Specify at least one of the following parameters or parameter pairs in a request to determine a query object:
       * *   `ResourceId.N`
       * *   `Tag.N` parameter pair (`Tag.N.Key` and `Tag.N.Value`)
-      * *   `TagFilter.N` parameter pair (TagFilter.N.TagKey and TagFilter.N.TagValues.N)
-      * If one of the following sets of request parameters is specified as filter conditions, only ECS resources that meet all the specified filter conditions are returned:
+      * *   `TagFilter.N`
+      * If one of the following sets of request parameters is specified as filter conditions, only ECS resources that meet all of the specified filter conditions are returned:
       * *   Set 1: `Tag.N.Key, Tag.N.Value`, and `ResourceId.N`
       * *   Set 2: `TagFilter.N.TagKey, TagFilter.N.TagValues.N`, and `ResourceId.N`
       *
@@ -20516,6 +20661,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return ModifyAutoSnapshotPolicyResponse
      */
+    // Deprecated
     public ModifyAutoSnapshotPolicyResponse modifyAutoSnapshotPolicyWithOptions(ModifyAutoSnapshotPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -20590,6 +20736,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request ModifyAutoSnapshotPolicyRequest
       * @return ModifyAutoSnapshotPolicyResponse
      */
+    // Deprecated
     public ModifyAutoSnapshotPolicyResponse modifyAutoSnapshotPolicy(ModifyAutoSnapshotPolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyAutoSnapshotPolicyWithOptions(request, runtime);
@@ -20675,6 +20822,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return ModifyBandwidthPackageSpecResponse
      */
+    // Deprecated
     public ModifyBandwidthPackageSpecResponse modifyBandwidthPackageSpecWithOptions(ModifyBandwidthPackageSpecRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -20729,6 +20877,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request ModifyBandwidthPackageSpecRequest
       * @return ModifyBandwidthPackageSpecResponse
      */
+    // Deprecated
     public ModifyBandwidthPackageSpecResponse modifyBandwidthPackageSpec(ModifyBandwidthPackageSpecRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyBandwidthPackageSpecWithOptions(request, runtime);
@@ -21786,6 +21935,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return ModifyEipAddressAttributeResponse
      */
+    // Deprecated
     public ModifyEipAddressAttributeResponse modifyEipAddressAttributeWithOptions(ModifyEipAddressAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -21840,6 +21990,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request ModifyEipAddressAttributeRequest
       * @return ModifyEipAddressAttributeResponse
      */
+    // Deprecated
     public ModifyEipAddressAttributeResponse modifyEipAddressAttribute(ModifyEipAddressAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyEipAddressAttributeWithOptions(request, runtime);
@@ -21905,6 +22056,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return ModifyForwardEntryResponse
      */
+    // Deprecated
     public ModifyForwardEntryResponse modifyForwardEntryWithOptions(ModifyForwardEntryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -21979,6 +22131,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request ModifyForwardEntryRequest
       * @return ModifyForwardEntryResponse
      */
+    // Deprecated
     public ModifyForwardEntryResponse modifyForwardEntry(ModifyForwardEntryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyForwardEntryWithOptions(request, runtime);
@@ -21991,6 +22144,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return ModifyHaVipAttributeResponse
      */
+    // Deprecated
     public ModifyHaVipAttributeResponse modifyHaVipAttributeWithOptions(ModifyHaVipAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -22049,6 +22203,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request ModifyHaVipAttributeRequest
       * @return ModifyHaVipAttributeResponse
      */
+    // Deprecated
     public ModifyHaVipAttributeResponse modifyHaVipAttribute(ModifyHaVipAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyHaVipAttributeWithOptions(request, runtime);
@@ -22203,6 +22358,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return ModifyImageShareGroupPermissionResponse
      */
+    // Deprecated
     public ModifyImageShareGroupPermissionResponse modifyImageShareGroupPermissionWithOptions(ModifyImageShareGroupPermissionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -22261,6 +22417,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request ModifyImageShareGroupPermissionRequest
       * @return ModifyImageShareGroupPermissionResponse
      */
+    // Deprecated
     public ModifyImageShareGroupPermissionResponse modifyImageShareGroupPermission(ModifyImageShareGroupPermissionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyImageShareGroupPermissionWithOptions(request, runtime);
@@ -23719,6 +23876,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return ModifyPhysicalConnectionAttributeResponse
      */
+    // Deprecated
     public ModifyPhysicalConnectionAttributeResponse modifyPhysicalConnectionAttributeWithOptions(ModifyPhysicalConnectionAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -23813,6 +23971,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request ModifyPhysicalConnectionAttributeRequest
       * @return ModifyPhysicalConnectionAttributeResponse
      */
+    // Deprecated
     public ModifyPhysicalConnectionAttributeResponse modifyPhysicalConnectionAttribute(ModifyPhysicalConnectionAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyPhysicalConnectionAttributeWithOptions(request, runtime);
@@ -24174,6 +24333,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return ModifyRouterInterfaceAttributeResponse
      */
+    // Deprecated
     public ModifyRouterInterfaceAttributeResponse modifyRouterInterfaceAttributeWithOptions(ModifyRouterInterfaceAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -24252,6 +24412,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request ModifyRouterInterfaceAttributeRequest
       * @return ModifyRouterInterfaceAttributeResponse
      */
+    // Deprecated
     public ModifyRouterInterfaceAttributeResponse modifyRouterInterfaceAttribute(ModifyRouterInterfaceAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyRouterInterfaceAttributeWithOptions(request, runtime);
@@ -24264,6 +24425,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return ModifyRouterInterfaceSpecResponse
      */
+    // Deprecated
     public ModifyRouterInterfaceSpecResponse modifyRouterInterfaceSpecWithOptions(ModifyRouterInterfaceSpecRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -24326,6 +24488,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request ModifyRouterInterfaceSpecRequest
       * @return ModifyRouterInterfaceSpecResponse
      */
+    // Deprecated
     public ModifyRouterInterfaceSpecResponse modifyRouterInterfaceSpec(ModifyRouterInterfaceSpecRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyRouterInterfaceSpecWithOptions(request, runtime);
@@ -25123,6 +25286,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return ModifyUserBusinessBehaviorResponse
      */
+    // Deprecated
     public ModifyUserBusinessBehaviorResponse modifyUserBusinessBehaviorWithOptions(ModifyUserBusinessBehaviorRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -25177,6 +25341,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request ModifyUserBusinessBehaviorRequest
       * @return ModifyUserBusinessBehaviorResponse
      */
+    // Deprecated
     public ModifyUserBusinessBehaviorResponse modifyUserBusinessBehavior(ModifyUserBusinessBehaviorRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyUserBusinessBehaviorWithOptions(request, runtime);
@@ -25189,6 +25354,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return ModifyVRouterAttributeResponse
      */
+    // Deprecated
     public ModifyVRouterAttributeResponse modifyVRouterAttributeWithOptions(ModifyVRouterAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -25247,6 +25413,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request ModifyVRouterAttributeRequest
       * @return ModifyVRouterAttributeResponse
      */
+    // Deprecated
     public ModifyVRouterAttributeResponse modifyVRouterAttribute(ModifyVRouterAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyVRouterAttributeWithOptions(request, runtime);
@@ -25259,6 +25426,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return ModifyVSwitchAttributeResponse
      */
+    // Deprecated
     public ModifyVSwitchAttributeResponse modifyVSwitchAttributeWithOptions(ModifyVSwitchAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -25317,6 +25485,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request ModifyVSwitchAttributeRequest
       * @return ModifyVSwitchAttributeResponse
      */
+    // Deprecated
     public ModifyVSwitchAttributeResponse modifyVSwitchAttribute(ModifyVSwitchAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyVSwitchAttributeWithOptions(request, runtime);
@@ -25329,6 +25498,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return ModifyVirtualBorderRouterAttributeResponse
      */
+    // Deprecated
     public ModifyVirtualBorderRouterAttributeResponse modifyVirtualBorderRouterAttributeWithOptions(ModifyVirtualBorderRouterAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -25415,6 +25585,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request ModifyVirtualBorderRouterAttributeRequest
       * @return ModifyVirtualBorderRouterAttributeResponse
      */
+    // Deprecated
     public ModifyVirtualBorderRouterAttributeResponse modifyVirtualBorderRouterAttribute(ModifyVirtualBorderRouterAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyVirtualBorderRouterAttributeWithOptions(request, runtime);
@@ -25427,6 +25598,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return ModifyVpcAttributeResponse
      */
+    // Deprecated
     public ModifyVpcAttributeResponse modifyVpcAttributeWithOptions(ModifyVpcAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -25493,13 +25665,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request ModifyVpcAttributeRequest
       * @return ModifyVpcAttributeResponse
      */
+    // Deprecated
     public ModifyVpcAttributeResponse modifyVpcAttribute(ModifyVpcAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyVpcAttributeWithOptions(request, runtime);
     }
 
     /**
-      * ## Description
+      * ## Usage notes
       * *   Before you call this operation, make sure that you fully understand the billing method of reserved instances. For more information, see [Reserved instances](~~100371~~).
       * *   Before you purchase a reserved instance, you can call the [DescribeAvailableResource](~~66186~~) operation to query available instance resources.
       *
@@ -25608,7 +25781,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Description
+      * ## Usage notes
       * *   Before you call this operation, make sure that you fully understand the billing method of reserved instances. For more information, see [Reserved instances](~~100371~~).
       * *   Before you purchase a reserved instance, you can call the [DescribeAvailableResource](~~66186~~) operation to query available instance resources.
       *
@@ -26043,6 +26216,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return RecoverVirtualBorderRouterResponse
      */
+    // Deprecated
     public RecoverVirtualBorderRouterResponse recoverVirtualBorderRouterWithOptions(RecoverVirtualBorderRouterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -26101,6 +26275,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request RecoverVirtualBorderRouterRequest
       * @return RecoverVirtualBorderRouterResponse
      */
+    // Deprecated
     public RecoverVirtualBorderRouterResponse recoverVirtualBorderRouter(RecoverVirtualBorderRouterRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.recoverVirtualBorderRouterWithOptions(request, runtime);
@@ -26409,6 +26584,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return ReleaseEipAddressResponse
      */
+    // Deprecated
     public ReleaseEipAddressResponse releaseEipAddressWithOptions(ReleaseEipAddressRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -26459,6 +26635,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request ReleaseEipAddressRequest
       * @return ReleaseEipAddressResponse
      */
+    // Deprecated
     public ReleaseEipAddressResponse releaseEipAddress(ReleaseEipAddressRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.releaseEipAddressWithOptions(request, runtime);
@@ -26512,6 +26689,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return RemoveBandwidthPackageIpsResponse
      */
+    // Deprecated
     public RemoveBandwidthPackageIpsResponse removeBandwidthPackageIpsWithOptions(RemoveBandwidthPackageIpsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -26570,6 +26748,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request RemoveBandwidthPackageIpsRequest
       * @return RemoveBandwidthPackageIpsResponse
      */
+    // Deprecated
     public RemoveBandwidthPackageIpsResponse removeBandwidthPackageIps(RemoveBandwidthPackageIpsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.removeBandwidthPackageIpsWithOptions(request, runtime);
@@ -26787,7 +26966,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Description
       * *   Before you call this operation, make sure that you understand how reserved instances are billed. For more information, see [Reserved instances](~~100371~~).
       * *   You can call the [DescribeReservedInstances](~~100065~~) operation to query the reserved instances that you purchased.
       *
@@ -26860,7 +27038,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Description
       * *   Before you call this operation, make sure that you understand how reserved instances are billed. For more information, see [Reserved instances](~~100371~~).
       * *   You can call the [DescribeReservedInstances](~~100065~~) operation to query the reserved instances that you purchased.
       *
@@ -28464,6 +28641,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return StartElasticityAssuranceResponse
      */
+    // Deprecated
     public StartElasticityAssuranceResponse startElasticityAssuranceWithOptions(StartElasticityAssuranceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -28514,6 +28692,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request StartElasticityAssuranceRequest
       * @return StartElasticityAssuranceResponse
      */
+    // Deprecated
     public StartElasticityAssuranceResponse startElasticityAssurance(StartElasticityAssuranceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.startElasticityAssuranceWithOptions(request, runtime);
@@ -29148,6 +29327,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return TerminatePhysicalConnectionResponse
      */
+    // Deprecated
     public TerminatePhysicalConnectionResponse terminatePhysicalConnectionWithOptions(TerminatePhysicalConnectionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -29206,6 +29386,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request TerminatePhysicalConnectionRequest
       * @return TerminatePhysicalConnectionResponse
      */
+    // Deprecated
     public TerminatePhysicalConnectionResponse terminatePhysicalConnection(TerminatePhysicalConnectionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.terminatePhysicalConnectionWithOptions(request, runtime);
@@ -29218,6 +29399,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return TerminateVirtualBorderRouterResponse
      */
+    // Deprecated
     public TerminateVirtualBorderRouterResponse terminateVirtualBorderRouterWithOptions(TerminateVirtualBorderRouterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -29276,6 +29458,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request TerminateVirtualBorderRouterRequest
       * @return TerminateVirtualBorderRouterResponse
      */
+    // Deprecated
     public TerminateVirtualBorderRouterResponse terminateVirtualBorderRouter(TerminateVirtualBorderRouterRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.terminateVirtualBorderRouterWithOptions(request, runtime);
@@ -29446,6 +29629,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return UnassociateEipAddressResponse
      */
+    // Deprecated
     public UnassociateEipAddressResponse unassociateEipAddressWithOptions(UnassociateEipAddressRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -29504,6 +29688,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request UnassociateEipAddressRequest
       * @return UnassociateEipAddressResponse
      */
+    // Deprecated
     public UnassociateEipAddressResponse unassociateEipAddress(UnassociateEipAddressRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.unassociateEipAddressWithOptions(request, runtime);
@@ -29516,6 +29701,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return UnassociateHaVipResponse
      */
+    // Deprecated
     public UnassociateHaVipResponse unassociateHaVipWithOptions(UnassociateHaVipRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -29578,6 +29764,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request UnassociateHaVipRequest
       * @return UnassociateHaVipResponse
      */
+    // Deprecated
     public UnassociateHaVipResponse unassociateHaVip(UnassociateHaVipRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.unassociateHaVipWithOptions(request, runtime);

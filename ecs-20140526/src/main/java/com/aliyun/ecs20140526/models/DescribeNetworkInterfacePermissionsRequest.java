@@ -4,11 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeNetworkInterfacePermissionsRequest extends TeaModel {
-    // The ID of the ENI. You must specify `NetworkInterfaceId` or `NetworkInterfacePermissionId.N` to determine the ENIs to query.
+    /**
+     * <p>The ID of the ENI. You must specify `NetworkInterfaceId` or `NetworkInterfacePermissionId.N` to determine the ENIs to query.</p>
+     */
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;
 
-    // The IDs of permissions on the ENI. You can specify up to 100 ENI permission IDs.
+    /**
+     * <p>The IDs of permissions on the ENI. You can specify up to 100 ENI permission IDs.</p>
+     */
     @NameInMap("NetworkInterfacePermissionId")
     public java.util.List<String> networkInterfacePermissionId;
 
@@ -18,23 +22,29 @@ public class DescribeNetworkInterfacePermissionsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The number of the page to return.
-    // 
-    // Pages start from page 1.
-    // 
-    // Default: 1.
+    /**
+     * <p>The number of the page to return.</p>
+     * <br>
+     * <p>Pages start from page 1.</p>
+     * <br>
+     * <p>Default: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // The number of entries to return on each page.
-    // 
-    // Maximum value: 100.
-    // 
-    // Default value: 10.
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>Maximum value: 100.</p>
+     * <br>
+     * <p>Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+    /**
+     * <p>The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

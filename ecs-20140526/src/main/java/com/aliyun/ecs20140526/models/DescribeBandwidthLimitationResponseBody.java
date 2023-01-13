@@ -4,11 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeBandwidthLimitationResponseBody extends TeaModel {
-    // Details about the maximum public bandwidth.
+    /**
+     * <p>Details about the maximum public bandwidth.</p>
+     */
     @NameInMap("Bandwidths")
     public DescribeBandwidthLimitationResponseBodyBandwidths bandwidths;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,22 +38,30 @@ public class DescribeBandwidthLimitationResponseBody extends TeaModel {
     }
 
     public static class DescribeBandwidthLimitationResponseBodyBandwidthsBandwidth extends TeaModel {
-        // The billing method for network usage. Valid values:
-        // 
-        // *   PayByBandwidth
-        // *   PayByTraffic
+        /**
+         * <p>The billing method for network usage. Valid values:</p>
+         * <br>
+         * <p>*   PayByBandwidth</p>
+         * <p>*   PayByTraffic</p>
+         */
         @NameInMap("InternetChargeType")
         public String internetChargeType;
 
-        // The maximum public bandwidth.
+        /**
+         * <p>The maximum public bandwidth.</p>
+         */
         @NameInMap("Max")
         public Integer max;
 
-        // The minimum public bandwidth.
+        /**
+         * <p>The minimum public bandwidth.</p>
+         */
         @NameInMap("Min")
         public Integer min;
 
-        // The unit of the public bandwidth.
+        /**
+         * <p>The unit of the public bandwidth.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 

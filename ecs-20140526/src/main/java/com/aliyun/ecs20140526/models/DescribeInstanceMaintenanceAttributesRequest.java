@@ -4,7 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceMaintenanceAttributesRequest extends TeaModel {
-    // The IDs of instances. You can specify up to 100 instance IDs.
+    /**
+     * <p>The IDs of instances. You can specify up to 100 instance IDs.</p>
+     */
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
 
@@ -14,21 +16,27 @@ public class DescribeInstanceMaintenanceAttributesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The number of the page to return.
-    // 
-    // Pages start from page 1.
-    // 
-    // Default value: 1.
+    /**
+     * <p>The number of the page to return.</p>
+     * <br>
+     * <p>Pages start from page 1.</p>
+     * <br>
+     * <p>Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
-    // The number of entries to return on each page. Valid values: 1 to 100.
-    // 
-    // Default value: 10.
+    /**
+     * <p>The number of entries to return on each page. Valid values: 1 to 100.</p>
+     * <br>
+     * <p>Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
-    // The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+    /**
+     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

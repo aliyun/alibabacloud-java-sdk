@@ -4,27 +4,39 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeSnapshotsResponseBody extends TeaModel {
-    // The token used to start the next query.
+    /**
+     * <p>The token used to start the next query.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    // The page number of the returned page.
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // The number of entries returned per page.
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Details about the snapshots.
+    /**
+     * <p>Details about the snapshots.</p>
+     */
     @NameInMap("Snapshots")
     public DescribeSnapshotsResponseBodySnapshots snapshots;
 
-    // The total number of snapshots.
+    /**
+     * <p>The total number of snapshots.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -82,11 +94,15 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
     }
 
     public static class DescribeSnapshotsResponseBodySnapshotsSnapshotTagsTag extends TeaModel {
-        // The tag key of the snapshot.
+        /**
+         * <p>The tag key of the snapshot.</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        // The tag value of the snapshot.
+        /**
+         * <p>The tag value of the snapshot.</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -133,132 +149,184 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
     }
 
     public static class DescribeSnapshotsResponseBodySnapshotsSnapshot extends TeaModel {
-        // The category of the snapshot.
-        // 
-        // >  This parameter will be removed in the future. We recommend that you use the `InstantAccess` parameter to ensure future compatibility.
+        /**
+         * <p>The category of the snapshot.</p>
+         * <br>
+         * <p>>  This parameter will be removed in the future. We recommend that you use the `InstantAccess` parameter to ensure future compatibility.</p>
+         */
         @NameInMap("Category")
         public String category;
 
-        // The time when the snapshot was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+        /**
+         * <p>The time when the snapshot was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        // The description of the snapshot.
+        /**
+         * <p>The description of the snapshot.</p>
+         */
         @NameInMap("Description")
         public String description;
 
-        // Indicates whether the snapshot was encrypted.
+        /**
+         * <p>Indicates whether the snapshot was encrypted.</p>
+         */
         @NameInMap("Encrypted")
         public Boolean encrypted;
 
-        // Indicates whether the instant access feature was enabled. Valid values:
-        // 
-        // *   true: The instant access feature was enabled. This feature can be enabled only for enhanced SSDs (ESSDs).
-        // *   false: The instant access feature was disabled. The snapshot is a normal snapshot for which the instant access feature was disabled.
+        /**
+         * <p>Indicates whether the instant access feature was enabled. Valid values:</p>
+         * <br>
+         * <p>*   true: The instant access feature was enabled. This feature can be enabled only for enhanced SSDs (ESSDs).</p>
+         * <p>*   false: The instant access feature was disabled. The snapshot is a normal snapshot for which the instant access feature was disabled.</p>
+         */
         @NameInMap("InstantAccess")
         public Boolean instantAccess;
 
-        // The duration of the instant access feature. The instant access feature is automatically disabled when the specified duration expires.
-        // 
-        // By default, the value of this parameter is the same as that of `RetentionDays`.
+        /**
+         * <p>The duration of the instant access feature. The instant access feature is automatically disabled when the specified duration expires.</p>
+         * <br>
+         * <p>By default, the value of this parameter is the same as that of `RetentionDays`.</p>
+         */
         @NameInMap("InstantAccessRetentionDays")
         public Integer instantAccessRetentionDays;
 
-        // The ID of the KMS key used for the data disk.
+        /**
+         * <p>The ID of the KMS key used for the data disk.</p>
+         */
         @NameInMap("KMSKeyId")
         public String KMSKeyId;
 
-        // The time when the snapshot was last changed. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+        /**
+         * <p>The time when the snapshot was last changed. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         */
         @NameInMap("LastModifiedTime")
         public String lastModifiedTime;
 
-        // The product code of the Alibaba Cloud Marketplace image.
+        /**
+         * <p>The product code of the Alibaba Cloud Marketplace image.</p>
+         */
         @NameInMap("ProductCode")
         public String productCode;
 
-        // The progress of the snapshot creation task. Unit: percent (%).
+        /**
+         * <p>The progress of the snapshot creation task. Unit: percent (%).</p>
+         */
         @NameInMap("Progress")
         public String progress;
 
-        // The remaining time required to create the snapshot. Unit: seconds.
+        /**
+         * <p>The remaining time required to create the snapshot. Unit: seconds.</p>
+         */
         @NameInMap("RemainTime")
         public Integer remainTime;
 
-        // The ID of the resource group to which the snapshot belongs.
+        /**
+         * <p>The ID of the resource group to which the snapshot belongs.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        // The retention period of the automatic snapshot. Unit: days.
+        /**
+         * <p>The retention period of the automatic snapshot. Unit: days.</p>
+         */
         @NameInMap("RetentionDays")
         public Integer retentionDays;
 
-        // The ID of the snapshot.
+        /**
+         * <p>The ID of the snapshot.</p>
+         */
         @NameInMap("SnapshotId")
         public String snapshotId;
 
-        // The name of the snapshot. This parameter is returned only if a snapshot name was specified when the snapshot was created.
+        /**
+         * <p>The name of the snapshot. This parameter is returned only if a snapshot name was specified when the snapshot was created.</p>
+         */
         @NameInMap("SnapshotName")
         public String snapshotName;
 
-        // The serial number of the snapshot.
+        /**
+         * <p>The serial number of the snapshot.</p>
+         */
         @NameInMap("SnapshotSN")
         public String snapshotSN;
 
-        // The type of the snapshot. Valid values:
-        // 
-        // *   auto or timer: automatic snapshot
-        // *   user: manual snapshot
-        // *   all: all snapshot types
+        /**
+         * <p>The type of the snapshot. Valid values:</p>
+         * <br>
+         * <p>*   auto or timer: automatic snapshot</p>
+         * <p>*   user: manual snapshot</p>
+         * <p>*   all: all snapshot types</p>
+         */
         @NameInMap("SnapshotType")
         public String snapshotType;
 
-        // The ID of the source disk. This parameter is retained even after the source disk for which the snapshot was created is released.
+        /**
+         * <p>The ID of the source disk. This parameter is retained even after the source disk for which the snapshot was created is released.</p>
+         */
         @NameInMap("SourceDiskId")
         public String sourceDiskId;
 
-        // The capacity of the source disk. Unit: GiB.
+        /**
+         * <p>The capacity of the source disk. Unit: GiB.</p>
+         */
         @NameInMap("SourceDiskSize")
         public String sourceDiskSize;
 
-        // The type of the source disk. Valid values:
-        // 
-        // *   system
-        // *   data
+        /**
+         * <p>The type of the source disk. Valid values:</p>
+         * <br>
+         * <p>*   system</p>
+         * <p>*   data</p>
+         */
         @NameInMap("SourceDiskType")
         public String sourceDiskType;
 
-        // The region ID of the source snapshot.
+        /**
+         * <p>The region ID of the source snapshot.</p>
+         */
         @NameInMap("SourceRegionId")
         public String sourceRegionId;
 
-        // The ID of the source snapshot.
+        /**
+         * <p>The ID of the source snapshot.</p>
+         */
         @NameInMap("SourceSnapshotId")
         public String sourceSnapshotId;
 
-        // The type of the source disk.
-        // 
-        // >  This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.
+        /**
+         * <p>The type of the source disk.</p>
+         * <br>
+         * <p>>  This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.</p>
+         */
         @NameInMap("SourceStorageType")
         public String sourceStorageType;
 
-        // The state of the snapshot. Valid values:
-        // 
-        // *   progressing
-        // *   accomplished
-        // *   failed
+        /**
+         * <p>The state of the snapshot. Valid values:</p>
+         * <br>
+         * <p>*   progressing</p>
+         * <p>*   accomplished</p>
+         * <p>*   failed</p>
+         */
         @NameInMap("Status")
         public String status;
 
-        // The tags of the snapshot.
+        /**
+         * <p>The tags of the snapshot.</p>
+         */
         @NameInMap("Tags")
         public DescribeSnapshotsResponseBodySnapshotsSnapshotTags tags;
 
-        // Indicates whether the snapshot has been used to create images or disks. Valid values:
-        // 
-        // *   image
-        // *   disk
-        // *   image_disk
-        // *   none
+        /**
+         * <p>Indicates whether the snapshot has been used to create images or disks. Valid values:</p>
+         * <br>
+         * <p>*   image</p>
+         * <p>*   disk</p>
+         * <p>*   image_disk</p>
+         * <p>*   none</p>
+         */
         @NameInMap("Usage")
         public String usage;
 

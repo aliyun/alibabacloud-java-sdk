@@ -4,16 +4,20 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ResetDisksRequest extends TeaModel {
-    // 云盘列表。
+    /**
+     * <p>云盘列表。</p>
+     */
     @NameInMap("Disk")
     public java.util.List<ResetDisksRequestDisk> disk;
 
-    // Specifies whether to check the validity of the request without actually making the request. Valid values:
-    // 
-    // *   true: The validity of the request is checked but the request is not made. Check items include the required parameters, request format, and resource status limits. If the check fails, the corresponding error message is returned. If the check succeeds, the `DryRunOperation` error code is returned.
-    // *   false: The validity of the request is checked. If the check succeeds, the request is made.
-    // 
-    // Default value: false.
+    /**
+     * <p>Specifies whether to check the validity of the request without actually making the request. Valid values:</p>
+     * <br>
+     * <p>*   true: The validity of the request is checked but the request is not made. Check items include the required parameters, request format, and resource status limits. If the check fails, the corresponding error message is returned. If the check succeeds, the `DryRunOperation` error code is returned.</p>
+     * <p>*   false: The validity of the request is checked. If the check succeeds, the request is made.</p>
+     * <br>
+     * <p>Default value: false.</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
@@ -23,7 +27,9 @@ public class ResetDisksRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+    /**
+     * <p>The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -95,11 +101,15 @@ public class ResetDisksRequest extends TeaModel {
     }
 
     public static class ResetDisksRequestDisk extends TeaModel {
-        // The ID of disk N to be rolled back. Valid values of N: 1 to 10.
+        /**
+         * <p>The ID of disk N to be rolled back. Valid values of N: 1 to 10.</p>
+         */
         @NameInMap("DiskId")
         public String diskId;
 
-        // The ID of the snapshot contained in the instance snapshot for disk N. Valid values of N: 1 to 10.
+        /**
+         * <p>The ID of the snapshot contained in the instance snapshot for disk N. Valid values of N: 1 to 10.</p>
+         */
         @NameInMap("SnapshotId")
         public String snapshotId;
 

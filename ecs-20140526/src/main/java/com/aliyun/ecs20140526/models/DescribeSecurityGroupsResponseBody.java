@@ -4,38 +4,52 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeSecurityGroupsResponseBody extends TeaModel {
-    // The token that is used for the next query. Valid values:
-    // 
-    // *   If the value returned of **NextToken** is empty, it indicates that no next query is to be sent.
-    // *   If **NextToken** is not empty, the value indicates the token that is used for the next query.
+    /**
+     * <p>The token that is used for the next query. Valid values:</p>
+     * <br>
+     * <p>*   If the value returned of **NextToken** is empty, it indicates that no next query is to be sent.</p>
+     * <p>*   If **NextToken** is not empty, the value indicates the token that is used for the next query.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    // The page number of the returned page.
-    // 
-    // >  This parameter will be removed in the future. We recommend that you use the NextToken and MaxResults parameters for a paged query.
+    /**
+     * <p>The page number of the returned page.</p>
+     * <br>
+     * <p>>  This parameter will be removed in the future. We recommend that you use the NextToken and MaxResults parameters for a paged query.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // The number of entries returned per page.
-    // 
-    // >  This parameter will be removed in the future. We recommend that you use the NextToken and MaxResults parameters for a paged query.
+    /**
+     * <p>The number of entries returned per page.</p>
+     * <br>
+     * <p>>  This parameter will be removed in the future. We recommend that you use the NextToken and MaxResults parameters for a paged query.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The region ID of the security group.
+    /**
+     * <p>The region ID of the security group.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Details about the security groups.
+    /**
+     * <p>Details about the security groups.</p>
+     */
     @NameInMap("SecurityGroups")
     public DescribeSecurityGroupsResponseBodySecurityGroups securityGroups;
 
-    // The total number of security groups. If the `MaxResults` and `NextToken` parameters are specified in the request, the value of this parameter is not returned.
+    /**
+     * <p>The total number of security groups. If the `MaxResults` and `NextToken` parameters are specified in the request, the value of this parameter is not returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -101,11 +115,15 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroupTagsTag extends TeaModel {
-        // The tag key of the security group.
+        /**
+         * <p>The tag key of the security group.</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        // The tag value of the security group.
+        /**
+         * <p>The tag value of the security group.</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -152,54 +170,78 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroup extends TeaModel {
-        // >  This parameter is in invitational preview and unavailable for general users.
+        /**
+         * <p>>  This parameter is in invitational preview and unavailable for general users.</p>
+         */
         @NameInMap("AvailableInstanceAmount")
         public Integer availableInstanceAmount;
 
-        // The time when the security group was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddThh:mmZ format. The time is displayed in UTC.
+        /**
+         * <p>The time when the security group was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddThh:mmZ format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        // The description of the security group.
+        /**
+         * <p>The description of the security group.</p>
+         */
         @NameInMap("Description")
         public String description;
 
-        // >  This parameter is in invitational preview and unavailable for general users.
+        /**
+         * <p>>  This parameter is in invitational preview and unavailable for general users.</p>
+         */
         @NameInMap("EcsCount")
         public Integer ecsCount;
 
-        // The ID of the resource group to which the security group belongs.
+        /**
+         * <p>The ID of the resource group to which the security group belongs.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        // The ID of the security group.
+        /**
+         * <p>The ID of the security group.</p>
+         */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
-        // The new name of the security group.
+        /**
+         * <p>The new name of the security group.</p>
+         */
         @NameInMap("SecurityGroupName")
         public String securityGroupName;
 
-        // The type of the security group. Valid values:
-        // 
-        // *   normal: basic security group
-        // *   enterprise: advanced security group
+        /**
+         * <p>The type of the security group. Valid values:</p>
+         * <br>
+         * <p>*   normal: basic security group</p>
+         * <p>*   enterprise: advanced security group</p>
+         */
         @NameInMap("SecurityGroupType")
         public String securityGroupType;
 
-        // The ID of the distributor to which the security group belongs.
+        /**
+         * <p>The ID of the distributor to which the security group belongs.</p>
+         */
         @NameInMap("ServiceID")
         public Long serviceID;
 
-        // Indicates whether the user of the security group is an Alibaba Cloud service or a distributor.
+        /**
+         * <p>Indicates whether the user of the security group is an Alibaba Cloud service or a distributor.</p>
+         */
         @NameInMap("ServiceManaged")
         public Boolean serviceManaged;
 
-        // The tags of the security group.
+        /**
+         * <p>The tags of the security group.</p>
+         */
         @NameInMap("Tags")
         public DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroupTags tags;
 
-        // The ID of the VPC to which the security group belongs.
+        /**
+         * <p>The ID of the VPC to which the security group belongs.</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 

@@ -4,19 +4,27 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceRamRoleResponseBody extends TeaModel {
-    // Details about the instance RAM roles.
+    /**
+     * <p>Details about the instance RAM roles.</p>
+     */
     @NameInMap("InstanceRamRoleSets")
     public DescribeInstanceRamRoleResponseBodyInstanceRamRoleSets instanceRamRoleSets;
 
-    // The region ID of the instance RAM role.
+    /**
+     * <p>The region ID of the instance RAM role.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The total number of returned instance RAM roles.
+    /**
+     * <p>The total number of returned instance RAM roles.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -58,11 +66,15 @@ public class DescribeInstanceRamRoleResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceRamRoleResponseBodyInstanceRamRoleSetsInstanceRamRoleSet extends TeaModel {
-        // The ID of the instance.
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        // The name of the instance RAM role.
+        /**
+         * <p>The name of the instance RAM role.</p>
+         */
         @NameInMap("RamRoleName")
         public String ramRoleName;
 

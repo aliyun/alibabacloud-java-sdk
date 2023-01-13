@@ -4,11 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageFromFamilyResponseBody extends TeaModel {
-    // The image information.
+    /**
+     * <p>The image information.</p>
+     */
     @NameInMap("Image")
     public DescribeImageFromFamilyResponseBodyImage image;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,33 +38,47 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
     }
 
     public static class DescribeImageFromFamilyResponseBodyImageDiskDeviceMappingsDiskDeviceMapping extends TeaModel {
-        // The device name of the disk. Example: /dev/xvdb.
-        // 
-        // >  This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.
+        /**
+         * <p>The device name of the disk. Example: /dev/xvdb.</p>
+         * <br>
+         * <p>>  This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.</p>
+         */
         @NameInMap("Device")
         public String device;
 
-        // The format of the image.
+        /**
+         * <p>The format of the image.</p>
+         */
         @NameInMap("Format")
         public String format;
 
-        // The OSS bucket that contains the imported image file.
+        /**
+         * <p>The OSS bucket that contains the imported image file.</p>
+         */
         @NameInMap("ImportOSSBucket")
         public String importOSSBucket;
 
-        // The OSS object corresponding to the imported image file.
+        /**
+         * <p>The OSS object corresponding to the imported image file.</p>
+         */
         @NameInMap("ImportOSSObject")
         public String importOSSObject;
 
-        // The size of the disk. Unit: GiB.
+        /**
+         * <p>The size of the disk. Unit: GiB.</p>
+         */
         @NameInMap("Size")
         public String size;
 
-        // The ID of the snapshot.
+        /**
+         * <p>The ID of the snapshot.</p>
+         */
         @NameInMap("SnapshotId")
         public String snapshotId;
 
-        // The type of the image.
+        /**
+         * <p>The type of the image.</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -147,11 +165,15 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
     }
 
     public static class DescribeImageFromFamilyResponseBodyImageTagsTag extends TeaModel {
-        // The tag key of the image.
+        /**
+         * <p>The tag key of the image.</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        // The tag value of the image.
+        /**
+         * <p>The tag value of the image.</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -198,114 +220,160 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
     }
 
     public static class DescribeImageFromFamilyResponseBodyImage extends TeaModel {
-        // The image architecture. Valid values:
-        // 
-        // *   i386
-        // *   x86\_64
+        /**
+         * <p>The image architecture. Valid values:</p>
+         * <br>
+         * <p>*   i386</p>
+         * <p>*   x86\_64</p>
+         */
         @NameInMap("Architecture")
         public String architecture;
 
-        // The time when the image was created.
+        /**
+         * <p>The time when the image was created.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        // The description of the image.
+        /**
+         * <p>The description of the image.</p>
+         */
         @NameInMap("Description")
         public String description;
 
-        // The mappings between the disks and snapshots under the image.
+        /**
+         * <p>The mappings between the disks and snapshots under the image.</p>
+         */
         @NameInMap("DiskDeviceMappings")
         public DescribeImageFromFamilyResponseBodyImageDiskDeviceMappings diskDeviceMappings;
 
-        // The name of the image family.
+        /**
+         * <p>The name of the image family.</p>
+         */
         @NameInMap("ImageFamily")
         public String imageFamily;
 
-        // The ID of the image.
+        /**
+         * <p>The ID of the image.</p>
+         */
         @NameInMap("ImageId")
         public String imageId;
 
-        // The name of the image.
+        /**
+         * <p>The name of the image.</p>
+         */
         @NameInMap("ImageName")
         public String imageName;
 
-        // The alias of the image owner. Valid values:
-        // 
-        // - system: public images provided by Alibaba Cloud
-        // - self: your custom images
-        // - others: shared images from other Alibaba Cloud accounts
-        // - marketplace: Alibaba Cloud Marketplace images
+        /**
+         * <p>The alias of the image owner. Valid values:</p>
+         * <br>
+         * <p>- system: public images provided by Alibaba Cloud</p>
+         * <p>- self: your custom images</p>
+         * <p>- others: shared images from other Alibaba Cloud accounts</p>
+         * <p>- marketplace: Alibaba Cloud Marketplace images</p>
+         */
         @NameInMap("ImageOwnerAlias")
         public String imageOwnerAlias;
 
-        // The version of the image.
+        /**
+         * <p>The version of the image.</p>
+         */
         @NameInMap("ImageVersion")
         public String imageVersion;
 
-        // Indicates whether the image is a copy of another image.
+        /**
+         * <p>Indicates whether the image is a copy of another image.</p>
+         */
         @NameInMap("IsCopied")
         public Boolean isCopied;
 
-        // Indicates whether the image has been shared to other Alibaba Cloud accounts.
+        /**
+         * <p>Indicates whether the image has been shared to other Alibaba Cloud accounts.</p>
+         */
         @NameInMap("IsSelfShared")
         public String isSelfShared;
 
-        // Indicates whether you have subscribed to the image corresponding to the specified product code.
+        /**
+         * <p>Indicates whether you have subscribed to the image corresponding to the specified product code.</p>
+         */
         @NameInMap("IsSubscribed")
         public Boolean isSubscribed;
 
-        // Indicates whether the image supports cloud-init.
+        /**
+         * <p>Indicates whether the image supports cloud-init.</p>
+         */
         @NameInMap("IsSupportCloudinit")
         public Boolean isSupportCloudinit;
 
-        // Indicates whether the image can be used on I/O optimized instances.
+        /**
+         * <p>Indicates whether the image can be used on I/O optimized instances.</p>
+         */
         @NameInMap("IsSupportIoOptimized")
         public Boolean isSupportIoOptimized;
 
-        // The name of the operating system.
+        /**
+         * <p>The name of the operating system.</p>
+         */
         @NameInMap("OSName")
         public String OSName;
 
-        // The type of the operating system. Valid values:
-        // 
-        // - windows
-        // - linux
+        /**
+         * <p>The type of the operating system. Valid values:</p>
+         * <br>
+         * <p>- windows</p>
+         * <p>- linux</p>
+         */
         @NameInMap("OSType")
         public String OSType;
 
-        // The platform of the operating system.
+        /**
+         * <p>The platform of the operating system.</p>
+         */
         @NameInMap("Platform")
         public String platform;
 
-        // The product code of the Alibaba Cloud Marketplace image.
+        /**
+         * <p>The product code of the Alibaba Cloud Marketplace image.</p>
+         */
         @NameInMap("ProductCode")
         public String productCode;
 
-        // The image creation progress. Unit: percent (%).
+        /**
+         * <p>The image creation progress. Unit: percent (%).</p>
+         */
         @NameInMap("Progress")
         public String progress;
 
-        // The size of the image. Unit: GiB.
+        /**
+         * <p>The size of the image. Unit: GiB.</p>
+         */
         @NameInMap("Size")
         public Integer size;
 
-        // The status of the image. Valid values:
-        // 
-        // - UnAvailable: The image is unavailable.
-        // - Available: The image is available.
-        // - Creating: The image is being created.
-        // - CreateFailed: The image failed to be created.
+        /**
+         * <p>The status of the image. Valid values:</p>
+         * <br>
+         * <p>- UnAvailable: The image is unavailable.</p>
+         * <p>- Available: The image is available.</p>
+         * <p>- Creating: The image is being created.</p>
+         * <p>- CreateFailed: The image failed to be created.</p>
+         */
         @NameInMap("Status")
         public String status;
 
-        // An array that consists of Tag data.
+        /**
+         * <p>An array that consists of Tag data.</p>
+         */
         @NameInMap("Tags")
         public DescribeImageFromFamilyResponseBodyImageTags tags;
 
-        // Indicates whether the image has been used to create ECS instances. Valid values:
-        // 
-        // - instance: The image has been used to create one or more ECS instances.
-        // - none: The image has not been used to create ECS instances.
+        /**
+         * <p>Indicates whether the image has been used to create ECS instances. Valid values:</p>
+         * <br>
+         * <p>- instance: The image has been used to create one or more ECS instances.</p>
+         * <p>- none: The image has not been used to create ECS instances.</p>
+         */
         @NameInMap("Usage")
         public String usage;
 

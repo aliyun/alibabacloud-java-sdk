@@ -4,15 +4,19 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class JoinSecurityGroupRequest extends TeaModel {
-    // The ID of the instance.
-    // 
-    // >  If this parameter is specified, the `NetworkInterfaceId` parameter cannot be specified.
+    /**
+     * <p>The ID of the instance.</p>
+     * <br>
+     * <p>>  If this parameter is specified, the `NetworkInterfaceId` parameter cannot be specified.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // The ID of the ENI.
-    // 
-    // >  If this parameter is specified, the `InstanceId` parameter cannot be specified.
+    /**
+     * <p>The ID of the ENI.</p>
+     * <br>
+     * <p>>  If this parameter is specified, the `InstanceId` parameter cannot be specified.</p>
+     */
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;
 
@@ -22,10 +26,12 @@ public class JoinSecurityGroupRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
-    // 
-    // *   You do not need to specify a region ID when you add an instance to a security group.
-    // *   You must specify a region ID when you add an ENI to a security group.
+    /**
+     * <p>The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <br>
+     * <p>*   You do not need to specify a region ID when you add an instance to a security group.</p>
+     * <p>*   You must specify a region ID when you add an ENI to a security group.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -35,7 +41,9 @@ public class JoinSecurityGroupRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    // The ID of the security group. You can call the [DescribeSecurityGroups](~~25556~~) operation to query available security groups.
+    /**
+     * <p>The ID of the security group. You can call the [DescribeSecurityGroups](~~25556~~) operation to query available security groups.</p>
+     */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 

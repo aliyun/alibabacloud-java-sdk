@@ -4,26 +4,36 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeManagedInstancesRequest extends TeaModel {
-    // The ID of the activation code.
+    /**
+     * <p>The ID of the activation code.</p>
+     */
     @NameInMap("ActivationId")
     public String activationId;
 
-    // The IDs of managed instances. You can specify at most 50 managed instances.
+    /**
+     * <p>The IDs of managed instances. You can specify at most 50 managed instances.</p>
+     */
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
 
-    // The internal or public IP address of the managed instance.
+    /**
+     * <p>The internal or public IP address of the managed instance.</p>
+     */
     @NameInMap("InstanceIp")
     public String instanceIp;
 
-    // The name of the managed instance.
+    /**
+     * <p>The name of the managed instance.</p>
+     */
     @NameInMap("InstanceName")
     public String instanceName;
 
-    // The operating system type of the managed instance. Valid values:
-    // 
-    // *   windows
-    // *   linux
+    /**
+     * <p>The operating system type of the managed instance. Valid values:</p>
+     * <br>
+     * <p>*   windows</p>
+     * <p>*   linux</p>
+     */
     @NameInMap("OsType")
     public String osType;
 
@@ -33,25 +43,31 @@ public class DescribeManagedInstancesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The number of the page to return.
-    // 
-    // Pages start from page 1.
-    // 
-    // Default value: 1.
+    /**
+     * <p>The number of the page to return.</p>
+     * <br>
+     * <p>Pages start from page 1.</p>
+     * <br>
+     * <p>Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
-    // The number of entries to return on each page.
-    // 
-    // Maximum value: 50.
-    // 
-    // Default value: 10.
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>Maximum value: 50.</p>
+     * <br>
+     * <p>Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
-    // The region ID of the managed instance. The following regions are supported: China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Hangzhou), China (Shanghai), China (Shenzhen), China (Heyuan), and China (Hong Kong).
-    // 
-    // You can all the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+    /**
+     * <p>The region ID of the managed instance. The following regions are supported: China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Hangzhou), China (Shanghai), China (Shenzhen), China (Heyuan), and China (Hong Kong).</p>
+     * <br>
+     * <p>You can all the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -60,6 +76,9 @@ public class DescribeManagedInstancesRequest extends TeaModel {
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
+
+    @NameInMap("Tag")
+    public java.util.List<DescribeManagedInstancesRequestTag> tag;
 
     public static DescribeManagedInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeManagedInstancesRequest self = new DescribeManagedInstancesRequest();
@@ -160,6 +179,44 @@ public class DescribeManagedInstancesRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public DescribeManagedInstancesRequest setTag(java.util.List<DescribeManagedInstancesRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeManagedInstancesRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class DescribeManagedInstancesRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeManagedInstancesRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeManagedInstancesRequestTag self = new DescribeManagedInstancesRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeManagedInstancesRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeManagedInstancesRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

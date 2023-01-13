@@ -10,7 +10,9 @@ public class DeleteSecurityGroupRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The region ID of the security group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+    /**
+     * <p>The region ID of the security group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -20,7 +22,9 @@ public class DeleteSecurityGroupRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    // The ID of the security group. You can call the [DescribeSecurityGroups](~~25556~~) to query the most recent list of security group IDs.
+    /**
+     * <p>The ID of the security group. You can call the [DescribeSecurityGroups](~~25556~~) to query the most recent list of security group IDs.</p>
+     */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 

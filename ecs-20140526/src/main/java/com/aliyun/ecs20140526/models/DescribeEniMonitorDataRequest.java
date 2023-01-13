@@ -4,15 +4,21 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeEniMonitorDataRequest extends TeaModel {
-    // The end of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the time is rounded up to the next minute.
+    /**
+     * <p>The end of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the time is rounded up to the next minute.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
-    // The ID of the secondary ENI. By default, all secondary ENIs that are bound to the specified instance are queried.
+    /**
+     * <p>The ID of the secondary ENI. By default, all secondary ENIs that are bound to the specified instance are queried.</p>
+     */
     @NameInMap("EniId")
     public String eniId;
 
-    // The ID of the instance to which the secondary ENI is bound.
+    /**
+     * <p>The ID of the instance to which the secondary ENI is bound.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -22,17 +28,21 @@ public class DescribeEniMonitorDataRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The interval at which to retrieve monitored data. Unit: seconds. Valid values:
-    // 
-    // *   60
-    // *   600
-    // *   3600
-    // 
-    // Default value: 60.
+    /**
+     * <p>The interval at which to retrieve monitored data. Unit: seconds. Valid values:</p>
+     * <br>
+     * <p>*   60</p>
+     * <p>*   600</p>
+     * <p>*   3600</p>
+     * <br>
+     * <p>Default value: 60.</p>
+     */
     @NameInMap("Period")
     public Integer period;
 
-    // The region ID of the secondary ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+    /**
+     * <p>The region ID of the secondary ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -42,7 +52,9 @@ public class DescribeEniMonitorDataRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    // The beginning of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the time is rounded up to the next minute.
+    /**
+     * <p>The beginning of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the time is rounded up to the next minute.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

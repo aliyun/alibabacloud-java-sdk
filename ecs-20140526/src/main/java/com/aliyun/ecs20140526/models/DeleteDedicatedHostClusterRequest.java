@@ -4,7 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DeleteDedicatedHostClusterRequest extends TeaModel {
-    // The ID of the dedicated host cluster.
+    /**
+     * <p>The ID of the dedicated host cluster.</p>
+     */
     @NameInMap("DedicatedHostClusterId")
     public String dedicatedHostClusterId;
 
@@ -14,7 +16,9 @@ public class DeleteDedicatedHostClusterRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The region ID of the dedicated host cluster. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+    /**
+     * <p>The region ID of the dedicated host cluster. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

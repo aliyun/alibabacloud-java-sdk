@@ -4,15 +4,21 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeDiskMonitorDataResponseBody extends TeaModel {
-    // Details about the disk monitoring data.
+    /**
+     * <p>Details about the disk monitoring data.</p>
+     */
     @NameInMap("MonitorData")
     public DescribeDiskMonitorDataResponseBodyMonitorData monitorData;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The total number of returned monitoring data entries.
+    /**
+     * <p>The total number of returned monitoring data entries.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -46,43 +52,63 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDiskMonitorDataResponseBodyMonitorDataDiskMonitorData extends TeaModel {
-        // The read bandwidth of the system disk. Unit: Byte/s.
+        /**
+         * <p>The read bandwidth of the system disk. Unit: Byte/s.</p>
+         */
         @NameInMap("BPSRead")
         public Integer BPSRead;
 
-        // The total read and write bandwidth of the system disk. Unit: Byte/s.
+        /**
+         * <p>The total read and write bandwidth of the system disk. Unit: Byte/s.</p>
+         */
         @NameInMap("BPSTotal")
         public Integer BPSTotal;
 
-        // The write bandwidth of the system disk. Unit: Byte/s.
+        /**
+         * <p>The write bandwidth of the system disk. Unit: Byte/s.</p>
+         */
         @NameInMap("BPSWrite")
         public Integer BPSWrite;
 
-        // The ID of the disk.
+        /**
+         * <p>The ID of the disk.</p>
+         */
         @NameInMap("DiskId")
         public String diskId;
 
-        // The number of read I/O operations per second on the system disk.
+        /**
+         * <p>The number of read I/O operations per second on the system disk.</p>
+         */
         @NameInMap("IOPSRead")
         public Integer IOPSRead;
 
-        // The total number of read and write I/O operations per second on the system disk.
+        /**
+         * <p>The total number of read and write I/O operations per second on the system disk.</p>
+         */
         @NameInMap("IOPSTotal")
         public Integer IOPSTotal;
 
-        // The number of write I/O operations per second on the system disk.
+        /**
+         * <p>The number of write I/O operations per second on the system disk.</p>
+         */
         @NameInMap("IOPSWrite")
         public Integer IOPSWrite;
 
-        // The read latency of the disk. Unit: μs.
+        /**
+         * <p>The read latency of the disk. Unit: μs.</p>
+         */
         @NameInMap("LatencyRead")
         public Integer latencyRead;
 
-        // The write latency of the disk. Unit: μs.
+        /**
+         * <p>The write latency of the disk. Unit: μs.</p>
+         */
         @NameInMap("LatencyWrite")
         public Integer latencyWrite;
 
-        // The timestamp of monitoring data query. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+        /**
+         * <p>The timestamp of monitoring data query. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 

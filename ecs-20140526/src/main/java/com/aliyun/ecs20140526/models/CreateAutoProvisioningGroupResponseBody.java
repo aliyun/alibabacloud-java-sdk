@@ -4,15 +4,21 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
-    // The ID of the auto provisioning group.
+    /**
+     * <p>The ID of the auto provisioning group.</p>
+     */
     @NameInMap("AutoProvisioningGroupId")
     public String autoProvisioningGroupId;
 
-    // Details about the instances created by the auto provisioning group. The values of parameters in this array are returned only when AutoProvisioningGroupType is set to `instant`.
+    /**
+     * <p>Details about the instances created by the auto provisioning group. The values of parameters in this array are returned only when AutoProvisioningGroupType is set to `instant`.</p>
+     */
     @NameInMap("LaunchResults")
     public CreateAutoProvisioningGroupResponseBodyLaunchResults launchResults;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -65,31 +71,43 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
     }
 
     public static class CreateAutoProvisioningGroupResponseBodyLaunchResultsLaunchResult extends TeaModel {
-        // The error code returned when the instance cannot be created.
+        /**
+         * <p>The error code returned when the instance cannot be created.</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
-        // The error message returned when the instance cannot be created.
+        /**
+         * <p>The error message returned when the instance cannot be created.</p>
+         */
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
-        // The IDs of created instances.
+        /**
+         * <p>The IDs of created instances.</p>
+         */
         @NameInMap("InstanceIds")
         public CreateAutoProvisioningGroupResponseBodyLaunchResultsLaunchResultInstanceIds instanceIds;
 
-        // The instance type of the instance.
+        /**
+         * <p>The instance type of the instance.</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
-        // The bidding policy for the pay-as-you-go instance. Valid values:
-        // 
-        // *   NoSpot: The instance is created as a regular pay-as-you-go instance.
-        // *   SpotWithPriceLimit: The instance is created as a preemptible instance with a user-defined maximum hourly price.
-        // *   SpotAsPriceGo: The instance is created as a preemptible instance for which the market price at the time of purchase is automatically used as the bid price.
+        /**
+         * <p>The bidding policy for the pay-as-you-go instance. Valid values:</p>
+         * <br>
+         * <p>*   NoSpot: The instance is created as a regular pay-as-you-go instance.</p>
+         * <p>*   SpotWithPriceLimit: The instance is created as a preemptible instance with a user-defined maximum hourly price.</p>
+         * <p>*   SpotAsPriceGo: The instance is created as a preemptible instance for which the market price at the time of purchase is automatically used as the bid price.</p>
+         */
         @NameInMap("SpotStrategy")
         public String spotStrategy;
 
-        // The zone ID of the instance.
+        /**
+         * <p>The zone ID of the instance.</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

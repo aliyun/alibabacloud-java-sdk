@@ -4,27 +4,39 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyDiagnosticMetricSetRequest extends TeaModel {
-    // The new description of the diagnostic metric set.
+    /**
+     * <p>The new description of the diagnostic metric set.</p>
+     */
     @NameInMap("Description")
     public String description;
 
-    // The IDs of diagnostic metrics.
+    /**
+     * <p>The IDs of diagnostic metrics.</p>
+     */
     @NameInMap("MetricIds")
     public java.util.List<String> metricIds;
 
-    // The ID of the diagnostic metric set.
+    /**
+     * <p>The ID of the diagnostic metric set.</p>
+     */
     @NameInMap("MetricSetId")
     public String metricSetId;
 
-    // The new name of the diagnostic metric set.
+    /**
+     * <p>The new name of the diagnostic metric set.</p>
+     */
     @NameInMap("MetricSetName")
     public String metricSetName;
 
-    // The region ID of the diagnostic metric set. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+    /**
+     * <p>The region ID of the diagnostic metric set. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The type of the resource.
+    /**
+     * <p>The type of the resource.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 

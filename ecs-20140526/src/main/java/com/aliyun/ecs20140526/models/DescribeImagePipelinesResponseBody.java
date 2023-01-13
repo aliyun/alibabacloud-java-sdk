@@ -4,23 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeImagePipelinesResponseBody extends TeaModel {
-    // Details of the image templates.
+    /**
+     * <p>Details of the image templates.</p>
+     */
     @NameInMap("ImagePipeline")
     public DescribeImagePipelinesResponseBodyImagePipeline imagePipeline;
 
-    // The maximum number of entries returned per page.
+    /**
+     * <p>The maximum number of entries returned per page.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // The query token returned in this call. For information about how to use this return value, see the "Description" section in this topic.
+    /**
+     * <p>The query token returned in this call. For information about how to use this return value, see the "Description" section in this topic.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The total number of image templates returned.
+    /**
+     * <p>The total number of image templates returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -89,11 +99,15 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
     }
 
     public static class DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetTagsTag extends TeaModel {
-        // The tag key of the image template.
+        /**
+         * <p>The tag key of the image template.</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        // The tag value of the image template.
+        /**
+         * <p>The tag value of the image template.</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -159,77 +173,111 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
     }
 
     public static class DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet extends TeaModel {
-        // The IDs of Alibaba Cloud accounts to which to share the created image.
+        /**
+         * <p>The IDs of Alibaba Cloud accounts to which to share the created image.</p>
+         */
         @NameInMap("AddAccounts")
         public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetAddAccounts addAccounts;
 
-        // The source image.
-        // 
-        // *   When `BaseImageType` is set to IMAGE, the value of this parameter is the ID of a custom image.
-        // *   When `BaseImageType` is set to IMAGE_FAMILY, the value of this parameter is the name of an image family.
+        /**
+         * <p>The source image.</p>
+         * <br>
+         * <p>*   When `BaseImageType` is set to IMAGE, the value of this parameter is the ID of a custom image.</p>
+         * <p>*   When `BaseImageType` is set to IMAGE_FAMILY, the value of this parameter is the name of an image family.</p>
+         */
         @NameInMap("BaseImage")
         public String baseImage;
 
-        // The type of the source image. Valid values:
-        // 
-        // *   IMAGE: custom image
-        // *   IMAGE_FAMILY: image family
+        /**
+         * <p>The type of the source image. Valid values:</p>
+         * <br>
+         * <p>*   IMAGE: custom image</p>
+         * <p>*   IMAGE_FAMILY: image family</p>
+         */
         @NameInMap("BaseImageType")
         public String baseImageType;
 
-        // The content of the image template.
+        /**
+         * <p>The content of the image template.</p>
+         */
         @NameInMap("BuildContent")
         public String buildContent;
 
-        // The time when the image template was created.
+        /**
+         * <p>The time when the image template was created.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        // Indicates whether to release the intermediate instance when the image fails to be created.
+        /**
+         * <p>Indicates whether to release the intermediate instance when the image fails to be created.</p>
+         */
         @NameInMap("DeleteInstanceOnFailure")
         public Boolean deleteInstanceOnFailure;
 
-        // The description of the image template.
+        /**
+         * <p>The description of the image template.</p>
+         */
         @NameInMap("Description")
         public String description;
 
-        // The name prefix of the created image.
+        /**
+         * <p>The name prefix of the created image.</p>
+         */
         @NameInMap("ImageName")
         public String imageName;
 
-        // The ID of the image template.
+        /**
+         * <p>The ID of the image template.</p>
+         */
         @NameInMap("ImagePipelineId")
         public String imagePipelineId;
 
-        // The instance type of the intermediate instance.
+        /**
+         * <p>The instance type of the intermediate instance.</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
-        // The size of the outbound public bandwidth for the intermediate instance. Unit: Mbit/s.
+        /**
+         * <p>The size of the outbound public bandwidth for the intermediate instance. Unit: Mbit/s.</p>
+         */
         @NameInMap("InternetMaxBandwidthOut")
         public Integer internetMaxBandwidthOut;
 
-        // The name of the image template.
+        /**
+         * <p>The name of the image template.</p>
+         */
         @NameInMap("Name")
         public String name;
 
-        // The ID of the resource group.
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        // The system disk size of the intermediate instance. Unit: GiB.
+        /**
+         * <p>The system disk size of the intermediate instance. Unit: GiB.</p>
+         */
         @NameInMap("SystemDiskSize")
         public Integer systemDiskSize;
 
-        // The tags of the image template.
+        /**
+         * <p>The tags of the image template.</p>
+         */
         @NameInMap("Tags")
         public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetTags tags;
 
-        // The IDs of regions to which to distribute the created image.
+        /**
+         * <p>The IDs of regions to which to distribute the created image.</p>
+         */
         @NameInMap("ToRegionIds")
         public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetToRegionIds toRegionIds;
 
-        // The ID of the vSwitch.
+        /**
+         * <p>The ID of the vSwitch.</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 

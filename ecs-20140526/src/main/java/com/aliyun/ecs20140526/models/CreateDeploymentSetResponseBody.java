@@ -4,11 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateDeploymentSetResponseBody extends TeaModel {
-    // The ID of the deployment set.
+    /**
+     * <p>The ID of the deployment set.</p>
+     */
     @NameInMap("DeploymentSetId")
     public String deploymentSetId;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

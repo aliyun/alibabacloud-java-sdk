@@ -4,23 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeDedicatedHostsResponseBody extends TeaModel {
-    // Details about the dedicated hosts.
+    /**
+     * <p>Details about the dedicated hosts.</p>
+     */
     @NameInMap("DedicatedHosts")
     public DescribeDedicatedHostsResponseBodyDedicatedHosts dedicatedHosts;
 
-    // The page number of the returned page.
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // The number of entries returned per page.
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The total number of dedicated hosts.
+    /**
+     * <p>The total number of dedicated hosts.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -89,39 +99,57 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
     }
 
     public static class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacity extends TeaModel {
-        // The amount of available space on the local disks. Unit: GiB.
+        /**
+         * <p>The amount of available space on the local disks. Unit: GiB.</p>
+         */
         @NameInMap("AvailableLocalStorage")
         public Integer availableLocalStorage;
 
-        // The amount of available memory space. Unit: GiB.
+        /**
+         * <p>The amount of available memory space. Unit: GiB.</p>
+         */
         @NameInMap("AvailableMemory")
         public Float availableMemory;
 
-        // The number of available vCPUs.
+        /**
+         * <p>The number of available vCPUs.</p>
+         */
         @NameInMap("AvailableVcpus")
         public Integer availableVcpus;
 
-        // The number of available vGPUs.
+        /**
+         * <p>The number of available vGPUs.</p>
+         */
         @NameInMap("AvailableVgpus")
         public Integer availableVgpus;
 
-        // The category of the local disks.
+        /**
+         * <p>The category of the local disks.</p>
+         */
         @NameInMap("LocalStorageCategory")
         public String localStorageCategory;
 
-        // The total capacity of the local disks. Unit: GiB.
+        /**
+         * <p>The total capacity of the local disks. Unit: GiB.</p>
+         */
         @NameInMap("TotalLocalStorage")
         public Integer totalLocalStorage;
 
-        // The total capacity of the memory. Unit: GiB.
+        /**
+         * <p>The total capacity of the memory. Unit: GiB.</p>
+         */
         @NameInMap("TotalMemory")
         public Float totalMemory;
 
-        // The total number of vCPUs.
+        /**
+         * <p>The total number of vCPUs.</p>
+         */
         @NameInMap("TotalVcpus")
         public Integer totalVcpus;
 
-        // The total number of vGPUs.
+        /**
+         * <p>The total number of vGPUs.</p>
+         */
         @NameInMap("TotalVgpus")
         public Integer totalVgpus;
 
@@ -205,7 +233,9 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
     }
 
     public static class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostHostDetailInfo extends TeaModel {
-        // This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.
+        /**
+         * <p>This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.</p>
+         */
         @NameInMap("SerialNumber")
         public String serialNumber;
 
@@ -225,11 +255,15 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
     }
 
     public static class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostInstancesInstance extends TeaModel {
-        // The ID of the ECS instance created on the dedicated host.
+        /**
+         * <p>The ID of the ECS instance created on the dedicated host.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        // The instance type of the ECS instance created on the dedicated host.
+        /**
+         * <p>The instance type of the ECS instance created on the dedicated host.</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
@@ -276,11 +310,15 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
     }
 
     public static class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostNetworkAttributes extends TeaModel {
-        // The timeout period of the UDP session that was established between Server Load Balancer (SLB) and the dedicated host. Unit: seconds. Valid value: 60.
+        /**
+         * <p>The timeout period of the UDP session that was established between Server Load Balancer (SLB) and the dedicated host. Unit: seconds. Valid value: 60.</p>
+         */
         @NameInMap("SlbUdpTimeout")
         public Integer slbUdpTimeout;
 
-        // The timeout period of the UDP session that was established between a user and an Alibaba Cloud service on the dedicated host. Unit: seconds. Valid value: 60.
+        /**
+         * <p>The timeout period of the UDP session that was established between a user and an Alibaba Cloud service on the dedicated host. Unit: seconds. Valid value: 60.</p>
+         */
         @NameInMap("UdpTimeout")
         public Integer udpTimeout;
 
@@ -308,10 +346,12 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
     }
 
     public static class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostOperationLocksOperationLock extends TeaModel {
-        // The reason why the dedicated host was locked. Valid values:
-        // 
-        // - financial: The dedicated host was locked due to overdue payments.
-        // - security: The dedicated host was locked due to security reasons.
+        /**
+         * <p>The reason why the dedicated host was locked. Valid values:</p>
+         * <br>
+         * <p>- financial: The dedicated host was locked due to overdue payments.</p>
+         * <p>- security: The dedicated host was locked due to security reasons.</p>
+         */
         @NameInMap("LockReason")
         public String lockReason;
 
@@ -407,11 +447,15 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
     }
 
     public static class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostTagsTag extends TeaModel {
-        // The tag key of the dedicated host.
+        /**
+         * <p>The tag key of the dedicated host.</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        // The tag value of the dedicated host.
+        /**
+         * <p>The tag value of the dedicated host.</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -462,144 +506,206 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         @Validation(required = true)
         public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostSchedulerOptions schedulerOptions;
 
-        // The policy used to migrate the instances deployed on the dedicated host when the dedicated host fails. Valid values:
-        // 
-        // *   Migrate: The instances are migrated to another physical server. Instances that are not in the Stopped state when the dedicated host fails are restarted after migration.
-        // *   Stop: The instances are stopped. If the dedicated host cannot be repaired, the instances are migrated to another physical server and restarted.
-        // 
-        // If the dedicated host has cloud disks attached, the default value is Migrate. If the dedicated host has local disks attached, the default value is Stop.
+        /**
+         * <p>The policy used to migrate the instances deployed on the dedicated host when the dedicated host fails. Valid values:</p>
+         * <br>
+         * <p>*   Migrate: The instances are migrated to another physical server. Instances that are not in the Stopped state when the dedicated host fails are restarted after migration.</p>
+         * <p>*   Stop: The instances are stopped. If the dedicated host cannot be repaired, the instances are migrated to another physical server and restarted.</p>
+         * <br>
+         * <p>If the dedicated host has cloud disks attached, the default value is Migrate. If the dedicated host has local disks attached, the default value is Stop.</p>
+         */
         @NameInMap("ActionOnMaintenance")
         public String actionOnMaintenance;
 
-        // Indicates whether the dedicated host was added to the resource pool for automatic deployment. Valid values:
-        // 
-        // *   on: The dedicated host was added to the resource pool for automatic deployment.
-        // *   off: The dedicated host was not added to the resource pool for automatic deployment.
-        // 
-        // For more information about automatic deployment, see the "[Automatic deployment](~~118938~~)" section in the Functions and features topic.
+        /**
+         * <p>Indicates whether the dedicated host was added to the resource pool for automatic deployment. Valid values:</p>
+         * <br>
+         * <p>*   on: The dedicated host was added to the resource pool for automatic deployment.</p>
+         * <p>*   off: The dedicated host was not added to the resource pool for automatic deployment.</p>
+         * <br>
+         * <p>For more information about automatic deployment, see the "[Automatic deployment](~~118938~~)" section in the Functions and features topic.</p>
+         */
         @NameInMap("AutoPlacement")
         public String autoPlacement;
 
-        // The automatic release time of the dedicated host. The time follows the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mmZ` format. The time is displayed in UTC.
+        /**
+         * <p>The automatic release time of the dedicated host. The time follows the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mmZ` format. The time is displayed in UTC.</p>
+         */
         @NameInMap("AutoReleaseTime")
         public String autoReleaseTime;
 
-        // The performance specifications of the dedicated host.
+        /**
+         * <p>The performance specifications of the dedicated host.</p>
+         */
         @NameInMap("Capacity")
         public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacity capacity;
 
-        // The billing method of the dedicated host.
+        /**
+         * <p>The billing method of the dedicated host.</p>
+         */
         @NameInMap("ChargeType")
         public String chargeType;
 
-        // The number of cores in a single CPU.
+        /**
+         * <p>The number of cores in a single CPU.</p>
+         */
         @NameInMap("Cores")
         public Integer cores;
 
-        // The CPU overcommit ratio.
+        /**
+         * <p>The CPU overcommit ratio.</p>
+         */
         @NameInMap("CpuOverCommitRatio")
         public Float cpuOverCommitRatio;
 
-        // The time when the dedicated host was created. The time follows the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mmZ` format. The time is displayed in UTC.
+        /**
+         * <p>The time when the dedicated host was created. The time follows the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mmZ` format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        // The ID of the dedicated host cluster to which the dedicated host belongs.
+        /**
+         * <p>The ID of the dedicated host cluster to which the dedicated host belongs.</p>
+         */
         @NameInMap("DedicatedHostClusterId")
         public String dedicatedHostClusterId;
 
-        // The ID of the dedicated host.
+        /**
+         * <p>The ID of the dedicated host.</p>
+         */
         @NameInMap("DedicatedHostId")
         public String dedicatedHostId;
 
-        // The name of the dedicated host.
+        /**
+         * <p>The name of the dedicated host.</p>
+         */
         @NameInMap("DedicatedHostName")
         public String dedicatedHostName;
 
-        // The type of the dedicated host.
+        /**
+         * <p>The type of the dedicated host.</p>
+         */
         @NameInMap("DedicatedHostType")
         public String dedicatedHostType;
 
-        // The description of the dedicated host.
+        /**
+         * <p>The description of the dedicated host.</p>
+         */
         @NameInMap("Description")
         public String description;
 
-        // The expiration time of the subscription dedicated host. The time follows the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mmZ` format. The time is displayed in UTC.
+        /**
+         * <p>The expiration time of the subscription dedicated host. The time follows the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mmZ` format. The time is displayed in UTC.</p>
+         */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
-        // The GPU model.
+        /**
+         * <p>The GPU model.</p>
+         */
         @NameInMap("GPUSpec")
         public String GPUSpec;
 
-        // This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.
+        /**
+         * <p>This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.</p>
+         */
         @NameInMap("HostDetailInfo")
         public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostHostDetailInfo hostDetailInfo;
 
-        // Details about the ECS instances that were created on the dedicated host.
+        /**
+         * <p>Details about the ECS instances that were created on the dedicated host.</p>
+         */
         @NameInMap("Instances")
         public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostInstances instances;
 
-        // The machine code of the dedicated host.
+        /**
+         * <p>The machine code of the dedicated host.</p>
+         */
         @NameInMap("MachineId")
         public String machineId;
 
-        // The network attributes of the dedicated host.
+        /**
+         * <p>The network attributes of the dedicated host.</p>
+         */
         @NameInMap("NetworkAttributes")
         public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostNetworkAttributes networkAttributes;
 
-        // The reasons why the resources of the dedicated host were locked.
+        /**
+         * <p>The reasons why the resources of the dedicated host were locked.</p>
+         */
         @NameInMap("OperationLocks")
         public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostOperationLocks operationLocks;
 
-        // The number of physical GPUs.
+        /**
+         * <p>The number of physical GPUs.</p>
+         */
         @NameInMap("PhysicalGpus")
         public Integer physicalGpus;
 
-        // The region ID of the dedicated host.
+        /**
+         * <p>The region ID of the dedicated host.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
-        // The ID of the resource group to which the dedicated host belongs.
+        /**
+         * <p>The ID of the resource group to which the dedicated host belongs.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        // The unit of the subscription period. Valid values:
-        // 
-        // *   Month
-        // *   Year
+        /**
+         * <p>The unit of the subscription period. Valid values:</p>
+         * <br>
+         * <p>*   Month</p>
+         * <p>*   Year</p>
+         */
         @NameInMap("SaleCycle")
         public String saleCycle;
 
-        // The number of physical CPUs.
+        /**
+         * <p>The number of physical CPUs.</p>
+         */
         @NameInMap("Sockets")
         public Integer sockets;
 
-        // The service state of the dedicated host. Valid values:
-        // 
-        // *   Available: The dedicated host is running normally.
-        // *   UnderAssessment: The dedicated host is at risk, which may cause issues to ECS instances on the dedicated host.
-        // *   PermanentFailure: The dedicated host has permanent failures and is unusable.
+        /**
+         * <p>The service state of the dedicated host. Valid values:</p>
+         * <br>
+         * <p>*   Available: The dedicated host is running normally.</p>
+         * <p>*   UnderAssessment: The dedicated host is at risk, which may cause issues to ECS instances on the dedicated host.</p>
+         * <p>*   PermanentFailure: The dedicated host has permanent failures and is unusable.</p>
+         */
         @NameInMap("Status")
         public String status;
 
-        // The custom ECS instance families supported by the dedicated host.
+        /**
+         * <p>The custom ECS instance families supported by the dedicated host.</p>
+         */
         @NameInMap("SupportedCustomInstanceTypeFamilies")
         public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostSupportedCustomInstanceTypeFamilies supportedCustomInstanceTypeFamilies;
 
-        // The ECS instance families supported by the dedicated host.
+        /**
+         * <p>The ECS instance families supported by the dedicated host.</p>
+         */
         @NameInMap("SupportedInstanceTypeFamilies")
         public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostSupportedInstanceTypeFamilies supportedInstanceTypeFamilies;
 
-        // The ECS instance types supported by the dedicated host.
+        /**
+         * <p>The ECS instance types supported by the dedicated host.</p>
+         */
         @NameInMap("SupportedInstanceTypesList")
         public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostSupportedInstanceTypesList supportedInstanceTypesList;
 
-        // The tags of the dedicated host.
+        /**
+         * <p>The tags of the dedicated host.</p>
+         */
         @NameInMap("Tags")
         public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostTags tags;
 
-        // The zone ID of the dedicated host.
+        /**
+         * <p>The zone ID of the dedicated host.</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

@@ -4,15 +4,21 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeSendFileResultsRequest extends TeaModel {
-    // The ID of the instance for which you want to query file sending results.
+    /**
+     * <p>The ID of the instance whose records you want to query.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // The ID of the execution.
+    /**
+     * <p>The ID of the file sending task.</p>
+     */
     @NameInMap("InvokeId")
     public String invokeId;
 
-    // The name of the file about which you want to query sending records.
+    /**
+     * <p>The name of the file whose records you want to query.</p>
+     */
     @NameInMap("Name")
     public String name;
 
@@ -22,27 +28,35 @@ public class DescribeSendFileResultsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The number of the page to return.
-    // 
-    // Pages start from page 1.
-    // 
-    // Default value: 1.
+    /**
+     * <p>The page number of the page to return.</p>
+     * <br>
+     * <p>Pages start from page 1.</p>
+     * <br>
+     * <p>Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
-    // The number of entries to return on each page.
-    // 
-    // Maximum value: 50.
-    // 
-    // Default value: 10.
+    /**
+     * <p>The number of entries returned per page.</p>
+     * <br>
+     * <p>Maximum value: 50.</p>
+     * <br>
+     * <p>Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
-    // The region ID of the Elastic Compute Service (ECS) instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+    /**
+     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // 文件下发的资源组ID。传入该参数后，需要在下发文件时指定ResourceGroupId，支持筛选出对应的文件下发结果。
+    /**
+     * <p>The ID of the resource group. After you set this parameter, you need to specify ResourceGroupId when you send files to query the file sending results in the specified resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

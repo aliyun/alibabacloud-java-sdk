@@ -4,26 +4,34 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeClassicLinkInstancesRequest extends TeaModel {
-    // The ID of the instance. You can specify a maximum of 100 instance IDs in a single request. Separate multiple IDs with commas (,).
+    /**
+     * <p>The ID of the instance. You can specify a maximum of 100 instance IDs in a single request. Separate multiple IDs with commas (,).</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The number of the page to return. Pages start from page 1.
-    // 
-    // Default value: 1
+    /**
+     * <p>The number of the page to return. Pages start from page 1.</p>
+     * <br>
+     * <p>Default value: 1</p>
+     */
     @NameInMap("PageNumber")
     public String pageNumber;
 
-    // The number of entries to return on each page. Valid values: 1 to 100.
-    // 
-    // Default value: 10
+    /**
+     * <p>The number of entries to return on each page. Valid values: 1 to 100.</p>
+     * <br>
+     * <p>Default value: 10</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
-    // The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+    /**
+     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -33,7 +41,9 @@ public class DescribeClassicLinkInstancesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    // The ID of the VPC. The ClassicLink feature must be enabled for the specified VPC. For more information, see [Establish a ClassicLink connection](~~65413~~).
+    /**
+     * <p>The ID of the VPC. The ClassicLink feature must be enabled for the specified VPC. For more information, see [Establish a ClassicLink connection](~~65413~~).</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 

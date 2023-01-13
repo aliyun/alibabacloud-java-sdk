@@ -7,11 +7,15 @@ public class AddTagsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The ID of the region to which the ECS resource belongs. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+    /**
+     * <p>The ID of the region to which the ECS resource belongs. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The ID of the resource. When the resources are instances, this parameter can be interpreted as InstanceId.
+    /**
+     * <p>The ID of the resource. When the resources are instances, this parameter can be interpreted as InstanceId.</p>
+     */
     @NameInMap("ResourceId")
     public String resourceId;
 
@@ -21,19 +25,23 @@ public class AddTagsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    // The type of the resource. Valid values:
-    // 
-    // *   disk
-    // *   instance
-    // *   image
-    // *   securitygroup
-    // *   snapshot
-    // 
-    // All values must be lowercase.
+    /**
+     * <p>The type of the resource. Valid values:</p>
+     * <br>
+     * <p>*   disk</p>
+     * <p>*   instance</p>
+     * <p>*   image</p>
+     * <p>*   securitygroup</p>
+     * <p>*   snapshot</p>
+     * <br>
+     * <p>All values must be lowercase.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
-    // The tags.
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<AddTagsRequestTag> tag;
 
@@ -99,11 +107,15 @@ public class AddTagsRequest extends TeaModel {
     }
 
     public static class AddTagsRequestTag extends TeaModel {
-        // The key of tag N to be bound to the resource. Valid values of N: 1 to 20 The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain http:// or https://.
+        /**
+         * <p>The key of tag N to be bound to the resource. Valid values of N: 1 to 20 The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain http:// or https://.</p>
+         */
         @NameInMap("Key")
         public String key;
 
-        // The value of tag N to be bound to the resource. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain http:// or https://.
+        /**
+         * <p>The value of tag N to be bound to the resource. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain http:// or https://.</p>
+         */
         @NameInMap("Value")
         public String value;
 

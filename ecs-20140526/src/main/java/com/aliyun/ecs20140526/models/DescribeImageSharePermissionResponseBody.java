@@ -4,35 +4,51 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageSharePermissionResponseBody extends TeaModel {
-    // The Alibaba Cloud accounts.
+    /**
+     * <p>The Alibaba Cloud accounts.</p>
+     */
     @NameInMap("Accounts")
     public DescribeImageSharePermissionResponseBodyAccounts accounts;
 
-    // The ID of the custom image.
+    /**
+     * <p>The ID of the custom image.</p>
+     */
     @NameInMap("ImageId")
     public String imageId;
 
-    // The page number of the returned page.
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // The number of entries returned per page.
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The region ID of the image.
+    /**
+     * <p>The region ID of the image.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The shared groups.
+    /**
+     * <p>The shared groups.</p>
+     */
     @NameInMap("ShareGroups")
     public DescribeImageSharePermissionResponseBodyShareGroups shareGroups;
 
-    // The total number of entries returned.
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -106,7 +122,9 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
     }
 
     public static class DescribeImageSharePermissionResponseBodyAccountsAccount extends TeaModel {
-        // The ID of the Alibaba Cloud account.
+        /**
+         * <p>The ID of the Alibaba Cloud account.</p>
+         */
         @NameInMap("AliyunId")
         public String aliyunId;
 
@@ -145,7 +163,9 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
     }
 
     public static class DescribeImageSharePermissionResponseBodyShareGroupsShareGroup extends TeaModel {
-        // The shared group.
+        /**
+         * <p>The shared group.</p>
+         */
         @NameInMap("Group")
         public String group;
 

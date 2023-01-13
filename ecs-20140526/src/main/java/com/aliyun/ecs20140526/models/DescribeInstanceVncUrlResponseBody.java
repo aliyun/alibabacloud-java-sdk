@@ -4,11 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceVncUrlResponseBody extends TeaModel {
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The URL of the VNC management terminal.
+    /**
+     * <p>The URL of the VNC management terminal.</p>
+     */
     @NameInMap("VncUrl")
     public String vncUrl;
 

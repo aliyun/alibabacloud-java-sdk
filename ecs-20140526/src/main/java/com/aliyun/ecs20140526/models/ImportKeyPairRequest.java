@@ -4,22 +4,30 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ImportKeyPairRequest extends TeaModel {
-    // The name of the key pair. The name must be globally unique. It must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+    /**
+     * <p>The name of the key pair. The name must be globally unique. It must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+     */
     @NameInMap("KeyPairName")
     public String keyPairName;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The public key of the key pair.
+    /**
+     * <p>The public key of the key pair.</p>
+     */
     @NameInMap("PublicKeyBody")
     public String publicKeyBody;
 
-    // The region ID of the key pair. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+    /**
+     * <p>The region ID of the key pair. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The ID of the resource group to which to assign the key pair.
+    /**
+     * <p>The ID of the resource group to which to assign the key pair.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -29,7 +37,9 @@ public class ImportKeyPairRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    // The tags.
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ImportKeyPairRequestTag> tag;
 
@@ -103,11 +113,15 @@ public class ImportKeyPairRequest extends TeaModel {
     }
 
     public static class ImportKeyPairRequestTag extends TeaModel {
-        // The key of tag N to be bound to the key pair. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length. It cannot start with acs: or aliyun, or contain http:// or https://.
+        /**
+         * <p>The key of tag N to be bound to the key pair. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length. It cannot start with acs: or aliyun, or contain http:// or https://.</p>
+         */
         @NameInMap("Key")
         public String key;
 
-        // The value of tag N to be bound to the key pair. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with acs: or contain http:// or https://.
+        /**
+         * <p>The value of tag N to be bound to the key pair. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with acs: or contain http:// or https://.</p>
+         */
         @NameInMap("Value")
         public String value;
 

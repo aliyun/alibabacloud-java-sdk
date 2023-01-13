@@ -4,57 +4,73 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ReInitDiskRequest extends TeaModel {
-    // Specifies whether to automatically start the instance after the disk is re-initialized.
-    // 
-    // Default value: false.
+    /**
+     * <p>Specifies whether to automatically start the instance after the disk is re-initialized.</p>
+     * <br>
+     * <p>Default value: false.</p>
+     */
     @NameInMap("AutoStartInstance")
     public Boolean autoStartInstance;
 
-    // The ID of the disk.
+    /**
+     * <p>The ID of the disk.</p>
+     */
     @NameInMap("DiskId")
     public String diskId;
 
-    // The name of the key pair.
-    // 
-    // >  The parameter is applicable only to Linux instances. You can bind an SSH key pair to an instance as the logon credential when you re-initialize its system disk. After the SSH key pair is bound, the username and password logon method is disabled for the instance.
+    /**
+     * <p>The name of the key pair.</p>
+     * <br>
+     * <p>>  The parameter is applicable only to Linux instances. You can bind an SSH key pair to an instance as the logon credential when you re-initialize its system disk. After the SSH key pair is bound, the username and password logon method is disabled for the instance.</p>
+     */
     @NameInMap("KeyPairName")
     public String keyPairName;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    // RAM用户的虚拟账号ID。
+    /**
+     * <p>RAM用户的虚拟账号ID。</p>
+     */
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // Specifies whether to reset the password of the instance when you re-initialize its system disk. The password must be 8 to 30 characters in length. It must include at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include
-    // 
-    // ```
-    // 
-    // ( ) ` ~ ! @ # $ % ^ & * - _ + = | { } [ ] : ; \" < > , . ? /
-    //                                 
-    // ```
-    // 
-    // For a Windows instance, the password cannot start with a forward slash (/).
-    // 
-    // >  If the `Password` parameter is specified, we recommend that you send requests over HTTPS to secure your password.
+    /**
+     * <p>Specifies whether to reset the password of the instance when you re-initialize its system disk. The password must be 8 to 30 characters in length. It must include at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include</p>
+     * <br>
+     * <p>```</p>
+     * <br>
+     * <p>( ) ` ~ ! @ # $ % ^ & * - _ + = | { } [ ] : ; \" < > , . ? /</p>
+     * <p>                                </p>
+     * <p>```</p>
+     * <br>
+     * <p>For a Windows instance, the password cannot start with a forward slash (/).</p>
+     * <br>
+     * <p>>  If the `Password` parameter is specified, we recommend that you send requests over HTTPS to secure your password.</p>
+     */
     @NameInMap("Password")
     public String password;
 
-    // 资源主账号的账号名称。
+    /**
+     * <p>资源主账号的账号名称。</p>
+     */
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
-    // 资源主账号的ID，亦即UID。
+    /**
+     * <p>资源主账号的ID，亦即UID。</p>
+     */
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    // Specifies whether to use Security Center for free after the system disk is re-initialized. Valid values:
-    // 
-    // *   Active: Security Center is used for free after the system disk is replaced. This value is applicable only to public images.
-    // *   Deactive: Security Center is not used for free after the system disk is replaced. This value is applicable to all images.
-    // 
-    // Default value: Deactive.
+    /**
+     * <p>Specifies whether to use Security Center for free after the system disk is re-initialized. Valid values:</p>
+     * <br>
+     * <p>*   Active: Security Center is used for free after the system disk is replaced. This value is applicable only to public images.</p>
+     * <p>*   Deactive: Security Center is not used for free after the system disk is replaced. This value is applicable to all images.</p>
+     * <br>
+     * <p>Default value: Deactive.</p>
+     */
     @NameInMap("SecurityEnhancementStrategy")
     public String securityEnhancementStrategy;
 

@@ -4,23 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeCapacityReservationInstancesResponseBody extends TeaModel {
-    // Details about the instances that were created by using the capacity reservation.
+    /**
+     * <p>Details about the instances that were created by using the capacity reservation.</p>
+     */
     @NameInMap("CapacityReservationItem")
     public DescribeCapacityReservationInstancesResponseBodyCapacityReservationItem capacityReservationItem;
 
-    // The number of entries returned per page.
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // The token used to start the next query.
+    /**
+     * <p>The token used to start the next query.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The number of entries that meet the query criteria.
+    /**
+     * <p>The number of entries that meet the query criteria.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -70,7 +80,9 @@ public class DescribeCapacityReservationInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeCapacityReservationInstancesResponseBodyCapacityReservationItemInstanceIdSet extends TeaModel {
-        // The ID of the instance.
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 

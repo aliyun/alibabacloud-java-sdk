@@ -4,27 +4,39 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeTasksResponseBody extends TeaModel {
-    // The page number of the returned page.
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // The number of entries returned per page.
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The region ID of the task.
+    /**
+     * <p>The region ID of the task.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Details about the tasks.
+    /**
+     * <p>Details about the tasks.</p>
+     */
     @NameInMap("TaskSet")
     public DescribeTasksResponseBodyTaskSet taskSet;
 
-    // The total number of entries returned.
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -82,30 +94,42 @@ public class DescribeTasksResponseBody extends TeaModel {
     }
 
     public static class DescribeTasksResponseBodyTaskSetTask extends TeaModel {
-        // The time when the task was created.
+        /**
+         * <p>The time when the task was created.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        // The time when the task was completed.
+        /**
+         * <p>The time when the task was completed.</p>
+         */
         @NameInMap("FinishedTime")
         public String finishedTime;
 
         @NameInMap("ResourceId")
         public String resourceId;
 
-        // Indicates whether the task can be canceled.
+        /**
+         * <p>Indicates whether the task can be canceled.</p>
+         */
         @NameInMap("SupportCancel")
         public String supportCancel;
 
-        // The name of the task.
+        /**
+         * <p>The name of the task.</p>
+         */
         @NameInMap("TaskAction")
         public String taskAction;
 
-        // The ID of the task.
+        /**
+         * <p>The ID of the task.</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
-        // The status of the task.
+        /**
+         * <p>The status of the task.</p>
+         */
         @NameInMap("TaskStatus")
         public String taskStatus;
 

@@ -4,23 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeElasticityAssurancesResponseBody extends TeaModel {
-    // Details about the elasticity assurances.
+    /**
+     * <p>Details about the elasticity assurances.</p>
+     */
     @NameInMap("ElasticityAssuranceSet")
     public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSet elasticityAssuranceSet;
 
-    // The number of entries returned per page.
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // The token used to start the next query.
+    /**
+     * <p>The token used to start the next query.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The total number of entries returned.
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -70,19 +80,27 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
     }
 
     public static class DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResource extends TeaModel {
-        // The instance type.
+        /**
+         * <p>The instance type.</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
-        // The total number of instances for which capacity of an instance type is reserved.
+        /**
+         * <p>The total number of instances for which capacity of an instance type is reserved.</p>
+         */
         @NameInMap("TotalAmount")
         public Integer totalAmount;
 
-        // The number of instances that have used the elasticity assurance.
+        /**
+         * <p>The number of instances that have used the elasticity assurance.</p>
+         */
         @NameInMap("UsedAmount")
         public Integer usedAmount;
 
-        // The zone ID.
+        /**
+         * <p>The zone ID.</p>
+         */
         @NameInMap("zoneId")
         public String zoneId;
 
@@ -145,11 +163,15 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
     }
 
     public static class DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemTagsTag extends TeaModel {
-        // The tag key of the elasticity assurance.
+        /**
+         * <p>The tag key of the elasticity assurance.</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        // The tag value of the elasticity assurance.
+        /**
+         * <p>The tag value of the elasticity assurance.</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -196,78 +218,110 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
     }
 
     public static class DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItem extends TeaModel {
-        // Details about the allocated resources.
+        /**
+         * <p>Details about the allocated resources.</p>
+         */
         @NameInMap("AllocatedResources")
         public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResources allocatedResources;
 
-        // The description of the elasticity assurance.
+        /**
+         * <p>The description of the elasticity assurance.</p>
+         */
         @NameInMap("Description")
         public String description;
 
-        // The time when the elasticity assurance expires.
+        /**
+         * <p>The time when the elasticity assurance expires.</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
-        // The billing method of the instances to be created by using the elasticity assurance. Set the value to PostPaid. Only pay-as-you-go instances can be created by using elasticity assurances.
+        /**
+         * <p>The billing method of the instances to be created by using the elasticity assurance. Set the value to PostPaid. Only pay-as-you-go instances can be created by using elasticity assurances.</p>
+         */
         @NameInMap("InstanceChargeType")
         public String instanceChargeType;
 
-        // >  This parameter is unavailable.
+        /**
+         * <p>>  This parameter is unavailable.</p>
+         */
         @NameInMap("LatestStartTime")
         public String latestStartTime;
 
-        // The ID of the elasticity assurance.
+        /**
+         * <p>The ID of the elasticity assurance.</p>
+         */
         @NameInMap("PrivatePoolOptionsId")
         public String privatePoolOptionsId;
 
-        // The type of the private pool associated with the elasticity assurance. Valid values:
-        // 
-        // - Open: open private pool
-        // - Target: targeted private pool
+        /**
+         * <p>The type of the private pool associated with the elasticity assurance. Valid values:</p>
+         * <br>
+         * <p>- Open: open private pool</p>
+         * <p>- Target: targeted private pool</p>
+         */
         @NameInMap("PrivatePoolOptionsMatchCriteria")
         public String privatePoolOptionsMatchCriteria;
 
-        // The name of the elasticity assurance.
+        /**
+         * <p>The name of the elasticity assurance.</p>
+         */
         @NameInMap("PrivatePoolOptionsName")
         public String privatePoolOptionsName;
 
-        // The region ID of the elasticity assurance.
+        /**
+         * <p>The region ID of the elasticity assurance.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
-        // The ID of the resource group to which the elasticity assurance belongs.
+        /**
+         * <p>The ID of the resource group to which the elasticity assurance belongs.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        // The time when the elasticity assurance takes effect.
+        /**
+         * <p>The time when the elasticity assurance takes effect.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
-        // Indicates when the elasticity assurance takes effect. Valid values:
-        // 
-        // - Now: The elasticity assurance takes effect as soon as it is created.
-        // - Later: The elasticity assurance takes effect at the specified time.
+        /**
+         * <p>Indicates when the elasticity assurance takes effect. Valid values:</p>
+         * <br>
+         * <p>- Now: The elasticity assurance takes effect as soon as it is created.</p>
+         * <p>- Later: The elasticity assurance takes effect at the specified time.</p>
+         */
         @NameInMap("StartTimeType")
         public String startTimeType;
 
-        // The state of the elasticity assurance. Valid values:
-        // 
-        // - Preparing: The elasticity assurance is being prepared.
-        // - Prepared: The elasticity assurance is to take effect.
-        // - Active: The elasticity assurance is in effect.
-        // - Released: The elasticity assurance is released.
+        /**
+         * <p>The state of the elasticity assurance. Valid values:</p>
+         * <br>
+         * <p>- Preparing: The elasticity assurance is being prepared.</p>
+         * <p>- Prepared: The elasticity assurance is to take effect.</p>
+         * <p>- Active: The elasticity assurance is in effect.</p>
+         * <p>- Released: The elasticity assurance is released.</p>
+         */
         @NameInMap("Status")
         public String status;
 
-        // The tags of the elasticity assurance.
+        /**
+         * <p>The tags of the elasticity assurance.</p>
+         */
         @NameInMap("Tags")
         public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemTags tags;
 
-        // The total number of times that the elasticity assurance has been applied.
+        /**
+         * <p>The total number of times that the elasticity assurance has been applied.</p>
+         */
         @NameInMap("TotalAssuranceTimes")
         public String totalAssuranceTimes;
 
-        // >  This parameter is unavailable.
+        /**
+         * <p>>  This parameter is unavailable.</p>
+         */
         @NameInMap("UsedAssuranceTimes")
         public Integer usedAssuranceTimes;
 

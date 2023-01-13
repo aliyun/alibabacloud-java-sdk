@@ -4,23 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel {
-    // Details of the maintenance properties.
+    /**
+     * <p>Details of the maintenance properties.</p>
+     */
     @NameInMap("MaintenanceAttributes")
     public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributes maintenanceAttributes;
 
-    // The page number of the returned page.
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // The number of entries returned per page.
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The total number of queried maintenance properties.
+    /**
+     * <p>The total number of queried maintenance properties.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -89,19 +99,25 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
     }
 
     public static class DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeActionOnMaintenance extends TeaModel {
-        // The default maintenance action.
+        /**
+         * <p>The default maintenance action.</p>
+         */
         @NameInMap("DefaultValue")
         public String defaultValue;
 
-        // Details of the supported maintenance actions.
+        /**
+         * <p>Details of the supported maintenance actions.</p>
+         */
         @NameInMap("SupportedValues")
         public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeActionOnMaintenanceSupportedValues supportedValues;
 
-        // The current maintenance action. Valid values:
-        // 
-        // *   Stop: The instance is shutdown.
-        // *   AutoRecover: The instance is automatically recovered.
-        // *   AutoRedeploy: Failover is performed, which may cause damage to the data disks attached to the instance.
+        /**
+         * <p>The current maintenance action. Valid values:</p>
+         * <br>
+         * <p>*   Stop: The instance is shutdown.</p>
+         * <p>*   AutoRecover: The instance is automatically recovered.</p>
+         * <p>*   AutoRedeploy: Failover is performed, which may cause damage to the data disks attached to the instance.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -137,11 +153,15 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
     }
 
     public static class DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeMaintenanceWindowsMaintenanceWindow extends TeaModel {
-        // The end time of the maintenance window.
+        /**
+         * <p>The end time of the maintenance window.</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
-        // The start time of the maintenance window.
+        /**
+         * <p>The start time of the maintenance window.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
@@ -188,19 +208,27 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
     }
 
     public static class DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttribute extends TeaModel {
-        // The property of the maintenance action of the instance.
+        /**
+         * <p>The property of the maintenance action of the instance.</p>
+         */
         @NameInMap("ActionOnMaintenance")
         public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeActionOnMaintenance actionOnMaintenance;
 
-        // The ID of the instance.
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        // Details of the maintenance window.
+        /**
+         * <p>Details of the maintenance window.</p>
+         */
         @NameInMap("MaintenanceWindows")
         public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeMaintenanceWindows maintenanceWindows;
 
-        // Indicates whether an event notification was sent before instance shutdown.
+        /**
+         * <p>Indicates whether an event notification was sent before instance shutdown.</p>
+         */
         @NameInMap("NotifyOnMaintenance")
         public Boolean notifyOnMaintenance;
 

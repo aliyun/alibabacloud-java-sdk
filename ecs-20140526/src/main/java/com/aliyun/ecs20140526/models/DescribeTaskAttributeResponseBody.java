@@ -4,58 +4,84 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeTaskAttributeResponseBody extends TeaModel {
-    // The time when the task was created.
+    /**
+     * <p>The time when the task was created.</p>
+     */
     @NameInMap("CreationTime")
     public String creationTime;
 
-    // The number of failed tasks.
+    /**
+     * <p>The number of failed tasks.</p>
+     */
     @NameInMap("FailedCount")
     public Integer failedCount;
 
-    // The time when the task was complete.
+    /**
+     * <p>The time when the task was complete.</p>
+     */
     @NameInMap("FinishedTime")
     public String finishedTime;
 
-    // An array consisting of OperationProgress data of each subtask.
+    /**
+     * <p>An array consisting of OperationProgress data of each subtask.</p>
+     */
     @NameInMap("OperationProgressSet")
     public DescribeTaskAttributeResponseBodyOperationProgressSet operationProgressSet;
 
-    // The region ID of the task.
+    /**
+     * <p>The region ID of the task.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The number of completed tasks.
+    /**
+     * <p>The number of completed tasks.</p>
+     */
     @NameInMap("SuccessCount")
     public Integer successCount;
 
-    // Indicates whether the task can be canceled ([CancelTask](https://www.alibabacloud.com/help/en/elastic-compute-service/latest/canceltask)). Valid values: 
-    // 
-    // - true: The task can be canceled.
-    // - false: The task cannot be canceled.
+    /**
+     * <p>Indicates whether the task can be canceled ([CancelTask](https://www.alibabacloud.com/help/en/elastic-compute-service/latest/canceltask)). Valid values: </p>
+     * <br>
+     * <p>- true: The task can be canceled.</p>
+     * <p>- false: The task cannot be canceled.</p>
+     */
     @NameInMap("SupportCancel")
     public String supportCancel;
 
-    // The operation name of the task.
+    /**
+     * <p>The operation name of the task.</p>
+     */
     @NameInMap("TaskAction")
     public String taskAction;
 
-    // The ID of the task.
+    /**
+     * <p>The ID of the task.</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 
-    // The progress of the task.
+    /**
+     * <p>The progress of the task.</p>
+     */
     @NameInMap("TaskProcess")
     public String taskProcess;
 
-    // The status of the task.
+    /**
+     * <p>The status of the task.</p>
+     */
     @NameInMap("TaskStatus")
     public String taskStatus;
 
-    // The total number of tasks.
+    /**
+     * <p>The total number of tasks.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -169,11 +195,15 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeTaskAttributeResponseBodyOperationProgressSetOperationProgressRelatedItemSetRelatedItem extends TeaModel {
-        // The name of the related item.
+        /**
+         * <p>The name of the related item.</p>
+         */
         @NameInMap("Name")
         public String name;
 
-        // The value of the related item.
+        /**
+         * <p>The value of the related item.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -220,19 +250,27 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeTaskAttributeResponseBodyOperationProgressSetOperationProgress extends TeaModel {
-        // The error code.
+        /**
+         * <p>The error code.</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
-        // The error message.
+        /**
+         * <p>The error message.</p>
+         */
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
-        // The status of the operation.
+        /**
+         * <p>The status of the operation.</p>
+         */
         @NameInMap("OperationStatus")
         public String operationStatus;
 
-        // An array consisting of RelatedItem data.
+        /**
+         * <p>An array consisting of RelatedItem data.</p>
+         */
         @NameInMap("RelatedItemSet")
         public DescribeTaskAttributeResponseBodyOperationProgressSetOperationProgressRelatedItemSet relatedItemSet;
 

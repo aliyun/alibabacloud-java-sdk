@@ -4,33 +4,43 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class StopInstanceRequest extends TeaModel {
-    // >  This parameter will be removed in the future and is retained only to ensure compatibility. We recommend that you ignore this parameter.
+    /**
+     * <p>>  This parameter will be removed in the future and is retained only to ensure compatibility. We recommend that you ignore this parameter.</p>
+     */
     @NameInMap("ConfirmStop")
     public Boolean confirmStop;
 
-    // Specifies whether to check the validity of the request without actually making the request. Valid values:
-    // 
-    // *   true: The validity of the request is checked, but the request is not made. Check items include the required parameters, service limits, available ECS resources, and the request format. If the check fails, the corresponding error message is returned. If the check succeeds, the `DryRunOperation` error code is returned.
-    // *   false: The validity of the request is checked, and the request is made if the check succeeds.
-    // 
-    // Default value: false.
+    /**
+     * <p>Specifies whether to check the validity of the request without actually making the request. Valid values:</p>
+     * <br>
+     * <p>*   true: The validity of the request is checked, but the request is not made. Check items include the required parameters, service limits, available ECS resources, and the request format. If the check fails, the corresponding error message is returned. If the check succeeds, the `DryRunOperation` error code is returned.</p>
+     * <p>*   false: The validity of the request is checked, and the request is made if the check succeeds.</p>
+     * <br>
+     * <p>Default value: false.</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
-    // Specifies whether to forcibly stop the instance. Valid values:
-    // 
-    // *   true: forcibly stops the instance.
-    // *   false: normally stops the instance.
-    // 
-    // Default value: false.
+    /**
+     * <p>Specifies whether to forcibly stop the instance. Valid values:</p>
+     * <br>
+     * <p>*   true: forcibly stops the instance.</p>
+     * <p>*   false: normally stops the instance.</p>
+     * <br>
+     * <p>Default value: false.</p>
+     */
     @NameInMap("ForceStop")
     public Boolean forceStop;
 
-    // >  This parameter is currently in invitational preview and unavailable for general users.
+    /**
+     * <p>>  This parameter is currently in invitational preview and unavailable for general users.</p>
+     */
     @NameInMap("Hibernate")
     public Boolean hibernate;
 
-    // The ID of the instance.
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -46,12 +56,14 @@ public class StopInstanceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    // The stop mode of the pay-as-you-go instance. Valid values:
-    // 
-    // *   StopCharging: economical mode. For information about how `StopCharging` takes effect, see the "Prerequisites" section in [Economical mode](~~63353~~).
-    // *   KeepCharging: standard mode. After the instance is stopped in standard mode, you continue to be charged for it.
-    // 
-    // Default value: If the prerequisites required for enabling economical mode are met and you have enabled this mode in the ECS console, the default value is [StopCharging](~~63353#default~~). For more information, see the "Enable economical mode" section in `Economical mode`. Otherwise, the default value is `KeepCharging`.
+    /**
+     * <p>The stop mode of the pay-as-you-go instance. Valid values:</p>
+     * <br>
+     * <p>*   StopCharging: economical mode. For information about how `StopCharging` takes effect, see the "Prerequisites" section in [Economical mode](~~63353~~).</p>
+     * <p>*   KeepCharging: standard mode. After the instance is stopped in standard mode, you continue to be charged for it.</p>
+     * <br>
+     * <p>Default value: If the prerequisites required for enabling economical mode are met and you have enabled this mode in the ECS console, the default value is [StopCharging](~~63353#default~~). For more information, see the "Enable economical mode" section in `Economical mode`. Otherwise, the default value is `KeepCharging`.</p>
+     */
     @NameInMap("StoppedMode")
     public String stoppedMode;
 

@@ -4,19 +4,27 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageSupportInstanceTypesResponseBody extends TeaModel {
-    // The ID of the image.
+    /**
+     * <p>The ID of the image.</p>
+     */
     @NameInMap("ImageId")
     public String imageId;
 
-    // Details about the instance types that are supported by the image.
+    /**
+     * <p>Details about the instance types that are supported by the image.</p>
+     */
     @NameInMap("InstanceTypes")
     public DescribeImageSupportInstanceTypesResponseBodyInstanceTypes instanceTypes;
 
-    // The region ID of the image.
+    /**
+     * <p>The region ID of the image.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -58,19 +66,27 @@ public class DescribeImageSupportInstanceTypesResponseBody extends TeaModel {
     }
 
     public static class DescribeImageSupportInstanceTypesResponseBodyInstanceTypesInstanceType extends TeaModel {
-        // The number of vCPUs of the instance type.
+        /**
+         * <p>The number of vCPUs of the instance type.</p>
+         */
         @NameInMap("CpuCoreCount")
         public Integer cpuCoreCount;
 
-        // The instance family.
+        /**
+         * <p>The instance family.</p>
+         */
         @NameInMap("InstanceTypeFamily")
         public String instanceTypeFamily;
 
-        // The ID of the instance type.
+        /**
+         * <p>The ID of the instance type.</p>
+         */
         @NameInMap("InstanceTypeId")
         public String instanceTypeId;
 
-        // The memory size of the instance type. Unit: GiB.
+        /**
+         * <p>The memory size of the instance type. Unit: GiB.</p>
+         */
         @NameInMap("MemorySize")
         public Float memorySize;
 
