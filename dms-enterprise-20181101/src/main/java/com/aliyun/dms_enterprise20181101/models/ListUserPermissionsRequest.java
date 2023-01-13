@@ -4,64 +4,84 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListUserPermissionsRequest extends TeaModel {
-    // The name of the database.
+    /**
+     * <p>The name of the database.</p>
+     */
     @NameInMap("DatabaseName")
     public String databaseName;
 
-    // The type of the database. For more information about the valid values of this parameter, see [DbType parameter](~~198106~~).
+    /**
+     * <p>The type of the database. For more information about the valid values of this parameter, see [DbType parameter](~~198106~~).</p>
+     */
     @NameInMap("DbType")
     public String dbType;
 
-    // The type of the environment to which the database belongs. Valid values:
-    // 
-    // *   product: production environment
-    // *   dev: development environment
-    // *   pre: staging environment
-    // *   test: test environment
-    // *   sit: SIT environment
-    // *   uat: user acceptance testing (UAT) environment
-    // *   pet: stress testing environment
-    // *   stag: STAG environment
+    /**
+     * <p>The type of the environment to which the database belongs. Valid values:</p>
+     * <br>
+     * <p>*   product: production environment</p>
+     * <p>*   dev: development environment</p>
+     * <p>*   pre: staging environment</p>
+     * <p>*   test: test environment</p>
+     * <p>*   sit: SIT environment</p>
+     * <p>*   uat: user acceptance testing (UAT) environment</p>
+     * <p>*   pet: stress testing environment</p>
+     * <p>*   stag: STAG environment</p>
+     */
     @NameInMap("EnvType")
     public String envType;
 
-    // Specifies whether the database is a logical database. Valid values:
-    // 
-    // *   true: The database is a logical database.
-    // *   false: The database is a physical database.
+    /**
+     * <p>Specifies whether the database is a logical database. Valid values:</p>
+     * <br>
+     * <p>*   true: The database is a logical database.</p>
+     * <p>*   false: The database is a physical database.</p>
+     */
     @NameInMap("Logic")
     public Boolean logic;
 
-    // The number of the page to return.
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // The number of entries to return on each page.
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The permissions on a specific type of resources that you want to query. Valid values:
-    // 
-    // *   DATABASE: permissions on databases
-    // *   TABLE: permissions on tables
-    // *   COLUMN: permissions on fields
-    // *   INSTANCE: permissions on instances
+    /**
+     * <p>The permissions on a specific type of resources that you want to query. Valid values:</p>
+     * <br>
+     * <p>*   DATABASE: permissions on databases</p>
+     * <p>*   TABLE: permissions on tables</p>
+     * <p>*   COLUMN: permissions on fields</p>
+     * <p>*   INSTANCE: permissions on instances</p>
+     */
     @NameInMap("PermType")
     public String permType;
 
-    // The keyword used in the query. For example, if you want to query permissions on an instance, you can specify the endpoint of the instance, such as rm-bp144d5ky4l4r****.
+    /**
+     * <p>The keyword used in the query. For example, if you want to query permissions on an instance, you can specify the endpoint of the instance, such as rm-bp144d5ky4l4r****.</p>
+     */
     @NameInMap("SearchKey")
     public String searchKey;
 
-    // The ID of the tenant.
-    // 
-    // >  To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](~~181330~~) topic.
+    /**
+     * <p>The ID of the tenant.</p>
+     * <br>
+     * <p>>  To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](~~181330~~) topic.</p>
+     */
     @NameInMap("Tid")
     public Long tid;
 
-    // The ID of the user. You can call the [GetUser](~~147098~~) or [ListUsers](~~141938~~) operation to query the ID of the user.
-    // 
-    // >  The user ID is different from the ID of your Alibaba Cloud account.
+    /**
+     * <p>The ID of the user. You can call the [GetUser](~~147098~~) or [ListUsers](~~141938~~) operation to query the ID of the user.</p>
+     * <br>
+     * <p>>  The user ID is different from the ID of your Alibaba Cloud account.</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

@@ -4,7 +4,9 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListStandardGroupsRequest extends TeaModel {
-    // The ID of the tenant.
+    /**
+     * <p>The ID of the tenant.</p>
+     */
     @NameInMap("Tid")
     public Long tid;
 

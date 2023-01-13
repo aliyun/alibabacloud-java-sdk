@@ -4,18 +4,24 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListColumnsRequest extends TeaModel {
-    // Specifies whether the database is a logical database. Valid values:
-    // 
-    // *   **true**: The database is a logical database.
-    // *   **false**: The database is a physical database.
+    /**
+     * <p>Specifies whether the database is a logical database. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The database is a logical database.</p>
+     * <p>*   **false**: The database is a physical database.</p>
+     */
     @NameInMap("Logic")
     public Boolean logic;
 
-    // The ID of the table. You can call the [ListTables](~~141878~~) operation to obtain the table ID.
+    /**
+     * <p>The ID of the table. You can call the [ListTables](~~141878~~) operation to obtain the table ID.</p>
+     */
     @NameInMap("TableId")
     public String tableId;
 
-    // The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to obtain the tenant ID.
+    /**
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to obtain the tenant ID.</p>
+     */
     @NameInMap("Tid")
     public Long tid;
 

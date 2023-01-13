@@ -4,23 +4,33 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class CreateProxyAccessRequest extends TeaModel {
-    // The database account.
+    /**
+     * <p>The database account.</p>
+     */
     @NameInMap("IndepAccount")
     public String indepAccount;
 
-    // The password that is used to log on to the database.
+    /**
+     * <p>The password that is used to log on to the database.</p>
+     */
     @NameInMap("IndepPassword")
     public String indepPassword;
 
-    // The ID of the security protection agent. You can call the [ListProxies](https://www.alibabacloud.com/help/en/data-management-service/latest/listproxies) or [GetProxy](https://www.alibabacloud.com/help/en/data-management-service/latest/getproxy) operation to obtain this parameter.
+    /**
+     * <p>The ID of the security protection agent. You can call the [ListProxies](https://www.alibabacloud.com/help/en/data-management-service/latest/listproxies) or [GetProxy](https://www.alibabacloud.com/help/en/data-management-service/latest/getproxy) operation to obtain this parameter.</p>
+     */
     @NameInMap("ProxyId")
     public Long proxyId;
 
-    // The ID of the tenant. You can call the [GetUserActiveTenant](https://www.alibabacloud.com/help/en/data-management-service/latest/getuseractivetenant) or [ListUserTenants](https://www.alibabacloud.com/help/en/data-management-service/latest/listusertenants) operation to obtain this parameter.
+    /**
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](https://www.alibabacloud.com/help/en/data-management-service/latest/getuseractivetenant) or [ListUserTenants](https://www.alibabacloud.com/help/en/data-management-service/latest/listusertenants) operation to obtain this parameter.</p>
+     */
     @NameInMap("Tid")
     public Long tid;
 
-    // The ID of the user. You can call the [ListUsers](https://www.alibabacloud.com/help/en/data-management-service/latest/listusers) or [GetUser](https://www.alibabacloud.com/help/en/data-management-service/latest/getuser) operation to obtain this parameter.
+    /**
+     * <p>The ID of the user. You can call the [ListUsers](https://www.alibabacloud.com/help/en/data-management-service/latest/listusers) or [GetUser](https://www.alibabacloud.com/help/en/data-management-service/latest/getuser) operation to obtain this parameter.</p>
+     */
     @NameInMap("UserId")
     public Long userId;
 

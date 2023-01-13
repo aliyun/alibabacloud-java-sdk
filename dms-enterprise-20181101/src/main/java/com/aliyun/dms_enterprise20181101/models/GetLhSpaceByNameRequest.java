@@ -4,11 +4,15 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetLhSpaceByNameRequest extends TeaModel {
-    // The name of the workspace.
+    /**
+     * <p>The name of the workspace.</p>
+     */
     @NameInMap("SpaceName")
     public String spaceName;
 
-    // The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
+    /**
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.</p>
+     */
     @NameInMap("Tid")
     public Long tid;
 

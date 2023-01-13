@@ -4,23 +4,33 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class CreateProxyAccessResponseBody extends TeaModel {
-    // The error code returned to the query task.
+    /**
+     * <p>The error code returned to the query task.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // The error message that is returned.
+    /**
+     * <p>The error message that is returned.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    // The ID of the security protection authorization. After the security protection agent authorizes the target user, the system automatically generates a security protection authorization ID. The ID is globally unique.
+    /**
+     * <p>The ID of the security protection authorization. After the security protection agent authorizes the target user, the system automatically generates a security protection authorization ID. The ID is globally unique.</p>
+     */
     @NameInMap("ProxyAccessId")
     public Long proxyAccessId;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the call was successful.
+    /**
+     * <p>Indicates whether the call was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

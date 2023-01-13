@@ -4,26 +4,36 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListSensitiveColumnsDetailResponseBody extends TeaModel {
-    // The error code returned.
+    /**
+     * <p>The error code returned.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // The error message returned.
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The details of the sensitive field.
+    /**
+     * <p>The details of the sensitive field.</p>
+     */
     @NameInMap("SensitiveColumnsDetailList")
     public ListSensitiveColumnsDetailResponseBodySensitiveColumnsDetailList sensitiveColumnsDetailList;
 
-    // Indicates whether the request was successful. Valid values:
-    // 
-    // - **true**: The request was successful.
-    // - **false**: The request failed.
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>- **true**: The request was successful.</p>
+     * <p>- **false**: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -73,46 +83,66 @@ public class ListSensitiveColumnsDetailResponseBody extends TeaModel {
     }
 
     public static class ListSensitiveColumnsDetailResponseBodySensitiveColumnsDetailListSensitiveColumnsDetail extends TeaModel {
-        // The description of the field.
+        /**
+         * <p>The description of the field.</p>
+         */
         @NameInMap("ColumnDescription")
         public String columnDescription;
 
-        // The name of the field.
+        /**
+         * <p>The name of the field.</p>
+         */
         @NameInMap("ColumnName")
         public String columnName;
 
-        // The data type of the field.
+        /**
+         * <p>The data type of the field.</p>
+         */
         @NameInMap("ColumnType")
         public String columnType;
 
-        // The ID of the database.
+        /**
+         * <p>The ID of the database.</p>
+         */
         @NameInMap("DbId")
         public Long dbId;
 
-        // The type of the database.
+        /**
+         * <p>The type of the database.</p>
+         */
         @NameInMap("DbType")
         public String dbType;
 
-        // The type of the environment to which the database belongs.
+        /**
+         * <p>The type of the environment to which the database belongs.</p>
+         */
         @NameInMap("EnvType")
         public String envType;
 
-        // Indicates whether the database is a logical database. Valid values:
-        // 
-        // *   **true**: The database is a logical database.
-        // *   **false**: The database is not a logical database.
+        /**
+         * <p>Indicates whether the database is a logical database. Valid values:</p>
+         * <br>
+         * <p>*   **true**: The database is a logical database.</p>
+         * <p>*   **false**: The database is not a logical database.</p>
+         */
         @NameInMap("Logic")
         public Boolean logic;
 
-        // The name of the database.
+        /**
+         * <p>The name of the database.</p>
+         */
         @NameInMap("SchemaName")
         public String schemaName;
 
-        // The name that is used to search for the database.
+        /**
+         * <p>The name that is used to search for the database.</p>
+         */
         @NameInMap("SearchName")
         public String searchName;
 
-        // The name of the table.
+        /**
+         * <p>The name of the table.</p>
+         */
         @NameInMap("TableName")
         public String tableName;
 

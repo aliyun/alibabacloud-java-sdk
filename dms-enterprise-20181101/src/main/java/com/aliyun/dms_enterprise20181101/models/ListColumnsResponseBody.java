@@ -4,26 +4,36 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListColumnsResponseBody extends TeaModel {
-    // The information about the columns returned.
+    /**
+     * <p>The information about the columns returned.</p>
+     */
     @NameInMap("ColumnList")
     public ListColumnsResponseBodyColumnList columnList;
 
-    // The error code returned.
+    /**
+     * <p>The error code returned.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // The error message returned.
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request was successful. Valid values:
-    // 
-    // - **true**: The request was successful.
-    // - **false**: The request failed.
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>- **true**: The request was successful.</p>
+     * <p>- **false**: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -73,75 +83,101 @@ public class ListColumnsResponseBody extends TeaModel {
     }
 
     public static class ListColumnsResponseBodyColumnListColumn extends TeaModel {
-        // Indicates whether the field is an auto-increment field. Valid values:
-        // 
-        // *   true: The field is an auto-increment field.
-        // *   false: The field is not an auto-increment field.
+        /**
+         * <p>Indicates whether the field is an auto-increment field. Valid values:</p>
+         * <br>
+         * <p>*   true: The field is an auto-increment field.</p>
+         * <p>*   false: The field is not an auto-increment field.</p>
+         */
         @NameInMap("AutoIncrement")
         public Boolean autoIncrement;
 
-        // The ID of the field.
+        /**
+         * <p>The ID of the field.</p>
+         */
         @NameInMap("ColumnId")
         public String columnId;
 
-        // The name of the field.
+        /**
+         * <p>The name of the field.</p>
+         */
         @NameInMap("ColumnName")
         public String columnName;
 
-        // The data type of the field.
+        /**
+         * <p>The data type of the field.</p>
+         */
         @NameInMap("ColumnType")
         public String columnType;
 
-        // The length of the field.
+        /**
+         * <p>The length of the field.</p>
+         */
         @NameInMap("DataLength")
         public Long dataLength;
 
-        // The number of valid digits for the field.
+        /**
+         * <p>The number of valid digits for the field.</p>
+         */
         @NameInMap("DataPrecision")
         public Integer dataPrecision;
 
-        // The number of decimal places for the field.
+        /**
+         * <p>The number of decimal places for the field.</p>
+         */
         @NameInMap("DataScale")
         public Integer dataScale;
 
-        // The default value of the field.
+        /**
+         * <p>The default value of the field.</p>
+         */
         @NameInMap("DefaultValue")
         public String defaultValue;
 
-        // The description of the field.
+        /**
+         * <p>The description of the field.</p>
+         */
         @NameInMap("Description")
         public String description;
 
-        // The type of the masking algorithm that is used for the field. Valid values:
-        // 
-        // *   null: No masking algorithm is used.
-        // *   DEFAULT: A full masking algorithm is used.
-        // *   FIX_POS: The fixed position is masked.
-        // *   FIX_CHAR: The fixed characters are replaced.
+        /**
+         * <p>The type of the masking algorithm that is used for the field. Valid values:</p>
+         * <br>
+         * <p>*   null: No masking algorithm is used.</p>
+         * <p>*   DEFAULT: A full masking algorithm is used.</p>
+         * <p>*   FIX_POS: The fixed position is masked.</p>
+         * <p>*   FIX_CHAR: The fixed characters are replaced.</p>
+         */
         @NameInMap("FunctionType")
         public String functionType;
 
-        // Indicates whether the field can be empty. Valid values:
-        // 
-        // *   **true**: The field can be empty.
-        // *   **false**: The field cannot be empty.
+        /**
+         * <p>Indicates whether the field can be empty. Valid values:</p>
+         * <br>
+         * <p>*   **true**: The field can be empty.</p>
+         * <p>*   **false**: The field cannot be empty.</p>
+         */
         @NameInMap("Nullable")
         public Boolean nullable;
 
-        // The security level of the field. Valid values:
-        // 
-        // *   INNER: The field is an internal field but not sensitive.
-        // *   SENSITIVE: The field is a sensitive field.
-        // *   CONFIDENTIAL: The field is a confidential field.
-        // 
-        // >  For more information, see [Adjust the sensitivity level of one or more fields](~~66091~~).
+        /**
+         * <p>The security level of the field. Valid values:</p>
+         * <br>
+         * <p>*   INNER: The field is an internal field but not sensitive.</p>
+         * <p>*   SENSITIVE: The field is a sensitive field.</p>
+         * <p>*   CONFIDENTIAL: The field is a confidential field.</p>
+         * <br>
+         * <p>>  For more information, see [Adjust the sensitivity level of one or more fields](~~66091~~).</p>
+         */
         @NameInMap("SecurityLevel")
         public String securityLevel;
 
-        // Indicates whether the field is a sensitive field. Valid values:
-        // 
-        // *   **true**: The field is a sensitive field.
-        // *   **false**: The field is not a sensitive field.
+        /**
+         * <p>Indicates whether the field is a sensitive field. Valid values:</p>
+         * <br>
+         * <p>*   **true**: The field is a sensitive field.</p>
+         * <p>*   **false**: The field is not a sensitive field.</p>
+         */
         @NameInMap("Sensitive")
         public Boolean sensitive;
 

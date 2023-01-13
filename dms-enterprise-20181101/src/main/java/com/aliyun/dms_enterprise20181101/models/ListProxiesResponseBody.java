@@ -4,26 +4,36 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListProxiesResponseBody extends TeaModel {
-    // The error code returned.
+    /**
+     * <p>The error code returned.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // The error message returned.
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    // An array that consists of secure access proxies.
+    /**
+     * <p>An array that consists of secure access proxies.</p>
+     */
     @NameInMap("ProxyList")
     public java.util.List<ListProxiesResponseBodyProxyList> proxyList;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request was successful. Valid values:
-    // 
-    // - **true**: The request was successful.
-    // - **false**: The request failed.
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>- **true**: The request was successful.</p>
+     * <p>- **false**: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -73,27 +83,39 @@ public class ListProxiesResponseBody extends TeaModel {
     }
 
     public static class ListProxiesResponseBodyProxyList extends TeaModel {
-        // The ID of the user who enabled the secure access proxy feature.
+        /**
+         * <p>The ID of the user who enabled the secure access proxy feature.</p>
+         */
         @NameInMap("CreatorId")
         public Long creatorId;
 
-        // The nickname of the user who enabled the secure access proxy feature.
+        /**
+         * <p>The nickname of the user who enabled the secure access proxy feature.</p>
+         */
         @NameInMap("CreatorName")
         public String creatorName;
 
-        // The port that was used by HTTPS clients to connect to the database instance.
+        /**
+         * <p>The port that was used by HTTPS clients to connect to the database instance.</p>
+         */
         @NameInMap("HttpsPort")
         public Integer httpsPort;
 
-        // The ID of the database instance.
+        /**
+         * <p>The ID of the database instance.</p>
+         */
         @NameInMap("InstanceId")
         public Long instanceId;
 
-        // Indicates whether the internal endpoint is enabled. Default value: **true**.
+        /**
+         * <p>Indicates whether the internal endpoint is enabled. Default value: **true**.</p>
+         */
         @NameInMap("PrivateEnable")
         public Boolean privateEnable;
 
-        // The internal endpoint.
+        /**
+         * <p>The internal endpoint.</p>
+         */
         @NameInMap("PrivateHost")
         public String privateHost;
 
@@ -103,23 +125,32 @@ public class ListProxiesResponseBody extends TeaModel {
         @NameInMap("ProtocolType")
         public String protocolType;
 
-        // The ID of the secure access proxy.
+        /**
+         * <p>The ID of the secure access proxy.</p>
+         */
         @NameInMap("ProxyId")
         public Long proxyId;
 
-        // Indicates whether the public endpoint is enabled. Valid values:
-        // 
-        // - **true**: The public endpoint is enabled.
-        // - **false**: The public endpoint is disabled.
+        /**
+         * <p>Indicates whether the public endpoint is enabled. Valid values:</p>
+         * <br>
+         * <p>- **true**: The public endpoint is enabled.</p>
+         * <p>- **false**: The public endpoint is disabled.</p>
+         */
         @NameInMap("PublicEnable")
         public Boolean publicEnable;
 
-        // The public endpoint. A public endpoint is returned no matter whether the public endpoint is enabled or disabled.  
-        // 
-        // > - If the value of the PublicEnable parameter is **true**, a valid public endpoint that can be resolved by using Alibaba Cloud DNS (DNS) is returned.
-        // - If the value of the PublicEnable parameter is **false**, an invalid public endpoint that cannot be resolved by using DNS is returned.
+        /**
+         * <p>The public endpoint. A public endpoint is returned no matter whether the public endpoint is enabled or disabled.  </p>
+         * <br>
+         * <p>> - If the value of the PublicEnable parameter is **true**, a valid public endpoint that can be resolved by using Alibaba Cloud DNS (DNS) is returned.</p>
+         * <p>> - If the value of the PublicEnable parameter is **false**, an invalid public endpoint that cannot be resolved by using DNS is returned.</p>
+         */
         @NameInMap("PublicHost")
         public String publicHost;
+
+        @NameInMap("RegionId")
+        public String regionId;
 
         public static ListProxiesResponseBodyProxyList build(java.util.Map<String, ?> map) throws Exception {
             ListProxiesResponseBodyProxyList self = new ListProxiesResponseBodyProxyList();
@@ -212,6 +243,14 @@ public class ListProxiesResponseBody extends TeaModel {
         }
         public String getPublicHost() {
             return this.publicHost;
+        }
+
+        public ListProxiesResponseBodyProxyList setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
         }
 
     }

@@ -4,26 +4,36 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListDataCorrectPreCheckSQLResponseBody extends TeaModel {
-    // The error code returned.
+    /**
+     * <p>The error code returned.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // The error message returned.
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    // The precheck information about SQL statements.
+    /**
+     * <p>The precheck information about SQL statements.</p>
+     */
     @NameInMap("PreCheckSQLList")
     public java.util.List<ListDataCorrectPreCheckSQLResponseBodyPreCheckSQLList> preCheckSQLList;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request is successful. Valid values:
-    // 
-    // *   **true**: The request is successful.
-    // *   **false**: The request fails.
+    /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The request is successful.</p>
+     * <p>*   **false**: The request fails.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -73,37 +83,51 @@ public class ListDataCorrectPreCheckSQLResponseBody extends TeaModel {
     }
 
     public static class ListDataCorrectPreCheckSQLResponseBodyPreCheckSQLList extends TeaModel {
-        // The estimated number of affected rows.
+        /**
+         * <p>The estimated number of affected rows.</p>
+         */
         @NameInMap("AffectRows")
         public Long affectRows;
 
-        // The SQL statement.
+        /**
+         * <p>The SQL statement.</p>
+         */
         @NameInMap("CheckSQL")
         public String checkSQL;
 
-        // The ID of the database.
+        /**
+         * <p>The ID of the database.</p>
+         */
         @NameInMap("DbId")
         public Long dbId;
 
-        // The key that is used to query the details of optimization suggestions. You can call the [GetSQLReviewOptimizeDetail](~~265977~~) operation to query the details of optimization suggestions based on the key.
+        /**
+         * <p>The key that is used to query the details of optimization suggestions. You can call the [GetSQLReviewOptimizeDetail](~~265977~~) operation to query the details of optimization suggestions based on the key.</p>
+         */
         @NameInMap("SQLReviewQueryKey")
         public String SQLReviewQueryKey;
 
-        // The review status of the SQL statement. Valid values:
-        // 
-        // *   **WAITING**: The SQL statement is pending for review.
-        // *   **RUNNING**: The SQL statement is being reviewed.
-        // *   **IGNORE**: The SQL statement review is skipped.
-        // *   **PASS**: The SQL statement passed the review.
-        // *   **BLOCK**: The SQL statement failed the review.
+        /**
+         * <p>The review status of the SQL statement. Valid values:</p>
+         * <br>
+         * <p>*   **WAITING**: The SQL statement is pending for review.</p>
+         * <p>*   **RUNNING**: The SQL statement is being reviewed.</p>
+         * <p>*   **IGNORE**: The SQL statement review is skipped.</p>
+         * <p>*   **PASS**: The SQL statement passed the review.</p>
+         * <p>*   **BLOCK**: The SQL statement failed the review.</p>
+         */
         @NameInMap("SqlReviewStatus")
         public String sqlReviewStatus;
 
-        // The type of the SQL statement, such as DELETE, UPDATE, or ALTER_TABLE.
+        /**
+         * <p>The type of the SQL statement, such as DELETE, UPDATE, or ALTER_TABLE.</p>
+         */
         @NameInMap("SqlType")
         public String sqlType;
 
-        // The name of the table whose data is changed.
+        /**
+         * <p>The name of the table whose data is changed.</p>
+         */
         @NameInMap("TableNames")
         public String tableNames;
 

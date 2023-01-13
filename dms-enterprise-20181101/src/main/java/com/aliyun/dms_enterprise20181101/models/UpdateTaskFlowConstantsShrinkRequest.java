@@ -4,15 +4,21 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class UpdateTaskFlowConstantsShrinkRequest extends TeaModel {
-    // The constants for the task flow.
+    /**
+     * <p>The constants for the task flow.</p>
+     */
     @NameInMap("DagConstants")
     public String dagConstantsShrink;
 
-    // The ID of the task flow. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to query the task flow ID.
+    /**
+     * <p>The ID of the task flow. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to query the task flow ID.</p>
+     */
     @NameInMap("DagId")
     public Long dagId;
 
-    // The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to query the tenant ID.
+    /**
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to query the tenant ID.</p>
+     */
     @NameInMap("Tid")
     public Long tid;
 

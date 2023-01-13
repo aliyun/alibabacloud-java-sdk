@@ -4,30 +4,42 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class SearchDatabaseResponseBody extends TeaModel {
-    // The error code returned.
+    /**
+     * <p>The error code returned.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // The error message returned.
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The information about the databases.
+    /**
+     * <p>The information about the databases.</p>
+     */
     @NameInMap("SearchDatabaseList")
     public SearchDatabaseResponseBodySearchDatabaseList searchDatabaseList;
 
-    // Indicates whether the request was successful. Valid values:
-    // 
-    // - **true**: The request was successful.
-    // - **false**: The request failed.
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>- **true**: The request was successful.</p>
+     * <p>- **false**: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
-    // The total number of entries returned.
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -123,66 +135,99 @@ public class SearchDatabaseResponseBody extends TeaModel {
     }
 
     public static class SearchDatabaseResponseBodySearchDatabaseListSearchDatabase extends TeaModel {
-        // The alias of the database.
+        /**
+         * <p>The alias of the database.</p>
+         */
         @NameInMap("Alias")
         public String alias;
 
-        // The ID of the database.
+        @NameInMap("CatalogName")
+        public String catalogName;
+
+        /**
+         * <p>The ID of the database.</p>
+         */
         @NameInMap("DatabaseId")
         public String databaseId;
 
-        // The name of the data link for cross-database queries.
+        /**
+         * <p>The name of the data link for cross-database queries.</p>
+         */
         @NameInMap("DatalinkName")
         public String datalinkName;
 
-        // The type of the database.
+        /**
+         * <p>The type of the database.</p>
+         */
         @NameInMap("DbType")
         public String dbType;
 
-        // The ID of the user who assumes the database administrator (DBA) role.
+        /**
+         * <p>The ID of the user who assumes the database administrator (DBA) role.</p>
+         */
         @NameInMap("DbaId")
         public String dbaId;
 
-        // The encoding method of the database.
+        /**
+         * <p>The encoding method of the database.</p>
+         */
         @NameInMap("Encoding")
         public String encoding;
 
-        // The type of the environment to which the database belongs. For more information, see [Change the environment type of an instance](~~163309~~).
+        /**
+         * <p>The type of the environment to which the database belongs. For more information, see [Change the environment type of an instance](~~163309~~).</p>
+         */
         @NameInMap("EnvType")
         public String envType;
 
-        // The endpoint of the instance in which the database resides.
+        /**
+         * <p>The endpoint of the instance in which the database resides.</p>
+         */
         @NameInMap("Host")
         public String host;
 
-        // Indicates whether the database is a logical database. Valid values:
-        // 
-        // *   **true**: The database is a logical database.
-        // *   **false**: The database is not a logical database.
+        /**
+         * <p>Indicates whether the database is a logical database. Valid values:</p>
+         * <br>
+         * <p>*   **true**: The database is a logical database.</p>
+         * <p>*   **false**: The database is not a logical database.</p>
+         */
         @NameInMap("Logic")
         public Boolean logic;
 
-        // The IDs of the owners of the database.
+        /**
+         * <p>The IDs of the owners of the database.</p>
+         */
         @NameInMap("OwnerIdList")
         public SearchDatabaseResponseBodySearchDatabaseListSearchDatabaseOwnerIdList ownerIdList;
 
-        // The nicknames of the database owners.
+        /**
+         * <p>The nicknames of the database owners.</p>
+         */
         @NameInMap("OwnerNameList")
         public SearchDatabaseResponseBodySearchDatabaseListSearchDatabaseOwnerNameList ownerNameList;
 
-        // The port number of the instance in which the database resides.
+        /**
+         * <p>The port number of the instance in which the database resides.</p>
+         */
         @NameInMap("Port")
         public Integer port;
 
-        // The name of the database.
+        /**
+         * <p>The name of the database.</p>
+         */
         @NameInMap("SchemaName")
         public String schemaName;
 
-        // The name that is used to search for the database.
+        /**
+         * <p>The name that is used to search for the database.</p>
+         */
         @NameInMap("SearchName")
         public String searchName;
 
-        // The system ID (Sid) of the instance in which the database resides.
+        /**
+         * <p>The system ID (Sid) of the instance in which the database resides.</p>
+         */
         @NameInMap("Sid")
         public String sid;
 
@@ -197,6 +242,14 @@ public class SearchDatabaseResponseBody extends TeaModel {
         }
         public String getAlias() {
             return this.alias;
+        }
+
+        public SearchDatabaseResponseBodySearchDatabaseListSearchDatabase setCatalogName(String catalogName) {
+            this.catalogName = catalogName;
+            return this;
+        }
+        public String getCatalogName() {
+            return this.catalogName;
         }
 
         public SearchDatabaseResponseBodySearchDatabaseListSearchDatabase setDatabaseId(String databaseId) {

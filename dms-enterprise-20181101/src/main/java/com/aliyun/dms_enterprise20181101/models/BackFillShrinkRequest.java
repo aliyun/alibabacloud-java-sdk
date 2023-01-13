@@ -4,48 +4,68 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class BackFillShrinkRequest extends TeaModel {
-    // The running sequence of task flows for data backfill. Valid values:
-    // 
-    // *   **0**: reverse chronological order.
-    // *   **1**: chronological order. This is the default value.
+    /**
+     * <p>The running sequence of task flows for data backfill. Valid values:</p>
+     * <br>
+     * <p>*   **0**: reverse chronological order.</p>
+     * <p>*   **1**: chronological order. This is the default value.</p>
+     */
     @NameInMap("Asc")
     public Boolean asc;
 
-    // The date for the data to be backfilled. This parameter is required if you specify a date for data backfill.
+    /**
+     * <p>The date for the data to be backfilled. This parameter is required if you specify a date for data backfill.</p>
+     */
     @NameInMap("BackFillDate")
     public String backFillDate;
 
-    // The start date of the date range for the data to be backfilled. This parameter is required if you specify a date range for data backfill.
+    /**
+     * <p>The start date of the date range for the data to be backfilled. This parameter is required if you specify a date range for data backfill.</p>
+     */
     @NameInMap("BackFillDateBegin")
     public String backFillDateBegin;
 
-    // The end date of the date range for the data to be backfilled. This parameter is required if you specify a date range for data backfill.
+    /**
+     * <p>The end date of the date range for the data to be backfilled. This parameter is required if you specify a date range for data backfill.</p>
+     */
     @NameInMap("BackFillDateEnd")
     public String backFillDateEnd;
 
-    // The ID of the task flow. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to query the task flow ID.
+    /**
+     * <p>The ID of the task flow. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to query the task flow ID.</p>
+     */
     @NameInMap("DagId")
     public Long dagId;
 
-    // The ID of the historical task flow.
+    /**
+     * <p>The ID of the historical task flow.</p>
+     */
     @NameInMap("HistoryDagId")
     public Long historyDagId;
 
-    // The interval at which data backfill is performed. Unit: hours. Minimum value: 1. Default value: 24.
+    /**
+     * <p>The interval at which data backfill is performed. Unit: hours. Minimum value: 1. Default value: 24.</p>
+     */
     @NameInMap("Interval")
     public Integer interval;
 
-    // Specifies whether to run descendant nodes. Default value: true.
+    /**
+     * <p>Specifies whether to run descendant nodes. Default value: true.</p>
+     */
     @NameInMap("IsTriggerSubTree")
     public Boolean isTriggerSubTree;
 
-    // The number of nodes for which you want to backfill data.
+    /**
+     * <p>The number of nodes for which you want to backfill data.</p>
+     */
     @NameInMap("StartNodeIds")
     public String startNodeIdsShrink;
 
-    // The ID of the tenant.
-    // 
-    // >  To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).
+    /**
+     * <p>The ID of the tenant.</p>
+     * <br>
+     * <p>>  To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).</p>
+     */
     @NameInMap("Tid")
     public Long tid;
 

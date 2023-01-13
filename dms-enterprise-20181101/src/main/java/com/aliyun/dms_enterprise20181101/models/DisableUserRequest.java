@@ -7,6 +7,9 @@ public class DisableUserRequest extends TeaModel {
     @NameInMap("Tid")
     public Long tid;
 
+    /**
+     * <p>The UID of the Alibaba Cloud account.</p>
+     */
     @NameInMap("Uid")
     public String uid;
 

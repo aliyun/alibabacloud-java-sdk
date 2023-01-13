@@ -4,44 +4,60 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class CreateLakeHouseSpaceRequest extends TeaModel {
-    // The description of the workspace.
+    /**
+     * <p>The description of the workspace.</p>
+     */
     @NameInMap("Description")
     public String description;
 
-    // The ID of the development database. You can call the [ListDatabases](~~141873~~) or [SearchDatabase](~~141876~~) operation to obtain the ID.
+    /**
+     * <p>The ID of the development database. You can call the [ListDatabases](~~141873~~) or [SearchDatabase](~~141876~~) operation to obtain the ID.</p>
+     */
     @NameInMap("DevDbId")
     public String devDbId;
 
-    // The type of the database. Valid values:
-    // 
-    // *   **14**: AnalyticDB for MySQL
-    // *   **18**: AnalyticDB for PostgreSQL
+    /**
+     * <p>The type of the database. Valid values:</p>
+     * <br>
+     * <p>*   **14**: AnalyticDB for MySQL</p>
+     * <p>*   **18**: AnalyticDB for PostgreSQL</p>
+     */
     @NameInMap("DwDbType")
     public String dwDbType;
 
-    // The mode in which the workspace runs. Valid values:
-    // 
-    // *   **0**: basic mode. This mode is unavailable.
-    // *   **1**: standard mode.
+    /**
+     * <p>The mode in which the workspace runs. Valid values:</p>
+     * <br>
+     * <p>*   **0**: basic mode. This mode is unavailable.</p>
+     * <p>*   **1**: standard mode.</p>
+     */
     @NameInMap("Mode")
     public String mode;
 
-    // The ID of the production database. You can call the [ListDatabases](~~141873~~) or [SearchDatabase](~~141876~~) operation to obtain the ID.
+    /**
+     * <p>The ID of the production database. You can call the [ListDatabases](~~141873~~) or [SearchDatabase](~~141876~~) operation to obtain the ID.</p>
+     */
     @NameInMap("ProdDbId")
     public String prodDbId;
 
-    // The configuration of the workspace. Valid values:
-    // 
-    // *   **skipManualRunCheck**: No security rule check is required in the trial run phase.
-    // *   **skipPublishApprove**: No approval is required for publishing and O\&M.
+    /**
+     * <p>The configuration of the workspace. Valid values:</p>
+     * <br>
+     * <p>*   **skipManualRunCheck**: No security rule check is required in the trial run phase.</p>
+     * <p>*   **skipPublishApprove**: No approval is required for publishing and O\&M.</p>
+     */
     @NameInMap("SpaceConfig")
     public String spaceConfig;
 
-    // The name of the workspace.
+    /**
+     * <p>The name of the workspace.</p>
+     */
     @NameInMap("SpaceName")
     public String spaceName;
 
-    // The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
+    /**
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.</p>
+     */
     @NameInMap("Tid")
     public Long tid;
 

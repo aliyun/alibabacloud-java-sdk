@@ -4,18 +4,36 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListTaskFlowConstantsResponseBody extends TeaModel {
+    /**
+     * <p>A list of constant key-value pairs for the task flow.</p>
+     */
     @NameInMap("DagConstants")
     public ListTaskFlowConstantsResponseBodyDagConstants dagConstants;
 
+    /**
+     * <p>The error code returned if the request failed.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message returned if the request failed.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The request was successful.</p>
+     * <p>*   **false**: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,9 +83,15 @@ public class ListTaskFlowConstantsResponseBody extends TeaModel {
     }
 
     public static class ListTaskFlowConstantsResponseBodyDagConstantsDagConstant extends TeaModel {
+        /**
+         * <p>The constant key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The constant value.</p>
+         */
         @NameInMap("Value")
         public String value;
 

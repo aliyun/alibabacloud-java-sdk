@@ -4,30 +4,42 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListProxySQLExecAuditLogResponseBody extends TeaModel {
-    // The error code returned.
+    /**
+     * <p>The error code returned.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // The error message returned.
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    // The audit information about the database instance that is provided by the secure access proxy feature.
+    /**
+     * <p>The audit information about the database instance that is provided by the secure access proxy feature.</p>
+     */
     @NameInMap("ProxySQLExecAuditLogList")
     public ListProxySQLExecAuditLogResponseBodyProxySQLExecAuditLogList proxySQLExecAuditLogList;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request was successful. Valid values:
-    // 
-    // *   **true**: The request was successful.
-    // *   **false**: The request failed.
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The request was successful.</p>
+     * <p>*   **false**: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
-    // The number of entries returned.
+    /**
+     * <p>The number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -85,62 +97,86 @@ public class ListProxySQLExecAuditLogResponseBody extends TeaModel {
     }
 
     public static class ListProxySQLExecAuditLogResponseBodyProxySQLExecAuditLogListProxySQLExecAuditLog extends TeaModel {
-        // Indicates the total number of rows returned after the SQL statement was executed. If an SELECT SQL statement is executed, the return value of this parameter indicates the total number of the queried data rows.
+        /**
+         * <p>Indicates the total number of rows returned after the SQL statement was executed. If an SELECT SQL statement is executed, the return value of this parameter indicates the total number of the queried data rows.</p>
+         */
         @NameInMap("AffectRows")
         public Long affectRows;
 
-        // The amount of time that is consumed to execute the SQL statement. Unit: milliseconds.
+        /**
+         * <p>The amount of time that is consumed to execute the SQL statement. Unit: milliseconds.</p>
+         */
         @NameInMap("ElapsedTime")
         public Long elapsedTime;
 
-        // The execution status of the SQL statement. Valid values:
-        // 
-        // *   **FAIL**: The execution of the SQL statement fails.
-        // *   **CANCEL**: The execution of the SQL statement is canceled.
-        // *   **SUCCESS**: The SQL statement is executed.
+        /**
+         * <p>The execution status of the SQL statement. Valid values:</p>
+         * <br>
+         * <p>*   **FAIL**: The execution of the SQL statement fails.</p>
+         * <p>*   **CANCEL**: The execution of the SQL statement is canceled.</p>
+         * <p>*   **SUCCESS**: The SQL statement is executed.</p>
+         */
         @NameInMap("ExecState")
         public String execState;
 
-        // The ID of the database instance.
+        /**
+         * <p>The ID of the database instance.</p>
+         */
         @NameInMap("InstanceId")
         public Long instanceId;
 
-        // The name of the database instance.
+        /**
+         * <p>The name of the database instance.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
-        // The time at which the user executes the SQL statement on the database instance. The value of this parameter must be a timestamp that follows the UNIX time format.
+        /**
+         * <p>The time at which the user executes the SQL statement on the database instance. The value of this parameter must be a timestamp that follows the UNIX time format.</p>
+         */
         @NameInMap("OpTime")
         public String opTime;
 
-        // The description.
+        /**
+         * <p>The description.</p>
+         */
         @NameInMap("Remark")
         public String remark;
 
-        // The SQL statement that was executed.
+        /**
+         * <p>The SQL statement that was executed.</p>
+         */
         @NameInMap("SQL")
         public String SQL;
 
-        // The type of the SQL statement. Valid values:
-        // 
-        // *   **SELECT**
-        // *   **INSERT**
-        // *   **DELETE**
-        // *   **CREATE_TABLE**
-        // 
-        // >  You can choose Operation Audit > Secure Access Proxy in the top navigation bar of the DMS console to view more types of SQL statements.
+        /**
+         * <p>The type of the SQL statement. Valid values:</p>
+         * <br>
+         * <p>*   **SELECT**</p>
+         * <p>*   **INSERT**</p>
+         * <p>*   **DELETE**</p>
+         * <p>*   **CREATE_TABLE**</p>
+         * <br>
+         * <p>>  You can choose Operation Audit > Secure Access Proxy in the top navigation bar of the DMS console to view more types of SQL statements.</p>
+         */
         @NameInMap("SQLType")
         public String SQLType;
 
-        // The name of the database.
+        /**
+         * <p>The name of the database.</p>
+         */
         @NameInMap("SchemaName")
         public String schemaName;
 
-        // The ID of the user.
+        /**
+         * <p>The ID of the user.</p>
+         */
         @NameInMap("UserId")
         public Long userId;
 
-        // The nickname of the user.
+        /**
+         * <p>The nickname of the user.</p>
+         */
         @NameInMap("UserName")
         public String userName;
 

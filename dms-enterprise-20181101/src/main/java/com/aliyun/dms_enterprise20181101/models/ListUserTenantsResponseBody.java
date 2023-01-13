@@ -4,26 +4,36 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListUserTenantsResponseBody extends TeaModel {
-    // The error code.
+    /**
+     * <p>The error code.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // The error message.
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request is successful. Valid values:
-    // 
-    // *   **true**: The request is successful.
-    // *   **false**: The request fails.
+    /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The request is successful.</p>
+     * <p>*   **false**: The request fails.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
-    // The details of the tenants that were returned.
+    /**
+     * <p>The details of the tenants that were returned.</p>
+     */
     @NameInMap("TenantList")
     public java.util.List<ListUserTenantsResponseBodyTenantList> tenantList;
 
@@ -73,18 +83,24 @@ public class ListUserTenantsResponseBody extends TeaModel {
     }
 
     public static class ListUserTenantsResponseBodyTenantList extends TeaModel {
-        // The status of the tenant. Valid values:
-        // 
-        // *   **ACTIVE**: The tenant is used to access DMS.
-        // *   **IN_ACTIVE**: The tenant is not used.
+        /**
+         * <p>The status of the tenant. Valid values:</p>
+         * <br>
+         * <p>*   **ACTIVE**: The tenant is used to access DMS.</p>
+         * <p>*   **IN_ACTIVE**: The tenant is not used.</p>
+         */
         @NameInMap("Status")
         public String status;
 
-        // The name of the tenant.
+        /**
+         * <p>The name of the tenant.</p>
+         */
         @NameInMap("TenantName")
         public String tenantName;
 
-        // The ID of the tenant.
+        /**
+         * <p>The ID of the tenant.</p>
+         */
         @NameInMap("Tid")
         public Long tid;
 

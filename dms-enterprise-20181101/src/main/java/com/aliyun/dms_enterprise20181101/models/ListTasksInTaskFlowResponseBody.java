@@ -4,26 +4,36 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListTasksInTaskFlowResponseBody extends TeaModel {
-    // The error code returned if the request failed.
+    /**
+     * <p>The error code returned if the request failed.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // The error message returned if the request failed.
+    /**
+     * <p>The error message returned if the request failed.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    // The ID of the request. You can use the ID to locate logs and troubleshoot issues.
+    /**
+     * <p>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request was successful. Valid values:
-    // 
-    // *   **true**: The request was successful.
-    // *   **false**: The request failed.
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The request was successful.</p>
+     * <p>*   **false**: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
-    // The tasks in the task flow.
+    /**
+     * <p>The tasks in the task flow.</p>
+     */
     @NameInMap("Tasks")
     public ListTasksInTaskFlowResponseBodyTasks tasks;
 
@@ -73,35 +83,51 @@ public class ListTasksInTaskFlowResponseBody extends TeaModel {
     }
 
     public static class ListTasksInTaskFlowResponseBodyTasksTask extends TeaModel {
-        // The position of the node on the Directed Acyclic Graph (DAG).
+        /**
+         * <p>The position of the node on the Directed Acyclic Graph (DAG).</p>
+         */
         @NameInMap("GraphParam")
         public String graphParam;
 
-        // The advanced configuration for the node.
+        /**
+         * <p>The advanced configuration for the node.</p>
+         */
         @NameInMap("NodeConfig")
         public String nodeConfig;
 
-        // The configuration for the node.
+        /**
+         * <p>The configuration for the node.</p>
+         */
         @NameInMap("NodeContent")
         public String nodeContent;
 
-        // The ID of the node.
+        /**
+         * <p>The ID of the node.</p>
+         */
         @NameInMap("NodeId")
         public String nodeId;
 
-        // The name of the node.
+        /**
+         * <p>The name of the node.</p>
+         */
         @NameInMap("NodeName")
         public String nodeName;
 
-        // The output variables for the task.
+        /**
+         * <p>The output variables for the task.</p>
+         */
         @NameInMap("NodeOutput")
         public String nodeOutput;
 
-        // The type of the node. For more information about the valid values for this parameter, see [NodeType parameter](~~424705~~).
+        /**
+         * <p>The type of the node. For more information about the valid values for this parameter, see [NodeType parameter](~~424705~~).</p>
+         */
         @NameInMap("NodeType")
         public String nodeType;
 
-        // The time variables configured for the node.
+        /**
+         * <p>The time variables configured for the node.</p>
+         */
         @NameInMap("TimeVariables")
         public String timeVariables;
 

@@ -4,23 +4,33 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class InspectProxyAccessSecretResponseBody extends TeaModel {
-    // The authorization password of the security protection agent.
+    /**
+     * <p>The authorization password of the security protection agent.</p>
+     */
     @NameInMap("AccessSecret")
     public String accessSecret;
 
-    // The error code returned to the query task.
+    /**
+     * <p>The error code returned to the query task.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // The error message that is returned.
+    /**
+     * <p>The error message that is returned.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the call was successful.
+    /**
+     * <p>Indicates whether the call was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

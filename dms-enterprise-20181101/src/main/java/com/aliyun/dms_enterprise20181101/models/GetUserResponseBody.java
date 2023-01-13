@@ -4,26 +4,36 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetUserResponseBody extends TeaModel {
-    // The error code returned.
+    /**
+     * <p>The error code returned.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // The error message returned.
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request was successful. Valid values:
-    // 
-    // *   **true**: The request was successful.
-    // *   **false**: The request failed.
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The request was successful.</p>
+     * <p>*   **false**: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
-    // The information about the user.
+    /**
+     * <p>The information about the user.</p>
+     */
     @NameInMap("User")
     public GetUserResponseBodyUser user;
 
@@ -111,118 +121,150 @@ public class GetUserResponseBody extends TeaModel {
     }
 
     public static class GetUserResponseBodyUser extends TeaModel {
-        // The number of queries that are performed on the current day.
+        /**
+         * <p>The number of queries that are performed on the current day.</p>
+         */
         @NameInMap("CurExecuteCount")
         public Long curExecuteCount;
 
-        // The number of rows that are queried on the current day.
+        /**
+         * <p>The number of rows that are queried on the current day.</p>
+         */
         @NameInMap("CurResultCount")
         public Long curResultCount;
 
-        // The DingTalk chatbot URL that is used to receive notifications.
-        // 
-        // > 
-        // *   The system returns this parameter if the user has set a DingTalk chatbot URL in the console. To set a DingTalk chatbot URL in the console, move the pointer over the profile picture in the upper-right corner and click the Edit icon next to **Notice**.
-        // *   The system does not return this parameter if the user has not set a DingTalk chatbot URL.
+        /**
+         * <p>The DingTalk chatbot URL that is used to receive notifications.</p>
+         * <br>
+         * <p>> * The system returns this parameter if the user has set a DingTalk chatbot URL in the console. To set a DingTalk chatbot URL in the console, move the pointer over the profile picture in the upper-right corner and click the Edit icon next to **Notice**.</p>
+         * <p>> * The system does not return this parameter if the user has not set a DingTalk chatbot URL.</p>
+         */
         @NameInMap("DingRobot")
         public String dingRobot;
 
-        // The email address that is used to receive notifications.
-        // 
-        // > 
-        // *   The system returns this parameter if the user has set an email address in the console. To set an email address in the console, move the pointer over the profile picture in the upper-right corner and click the Edit icon next to **Notice**.
-        // *   The system does not return this parameter if the user has not set an email address.
+        /**
+         * <p>The email address that is used to receive notifications.</p>
+         * <br>
+         * <p>> * The system returns this parameter if the user has set an email address in the console. To set an email address in the console, move the pointer over the profile picture in the upper-right corner and click the Edit icon next to **Notice**.</p>
+         * <p>> * The system does not return this parameter if the user has not set an email address.</p>
+         */
         @NameInMap("Email")
         public String email;
 
-        // The last time when the user logged on to the console.
+        /**
+         * <p>The last time when the user logged on to the console.</p>
+         */
         @NameInMap("LastLoginTime")
         public String lastLoginTime;
 
-        // The maximum number of queries that can be performed on the current day.
+        /**
+         * <p>The maximum number of queries that can be performed on the current day.</p>
+         */
         @NameInMap("MaxExecuteCount")
         public Long maxExecuteCount;
 
-        // The maximum number of rows that can be queried on the current day.
+        /**
+         * <p>The maximum number of rows that can be queried on the current day.</p>
+         */
         @NameInMap("MaxResultCount")
         public Long maxResultCount;
 
-        // The mobile phone number that is used to receive notifications.
-        // 
-        // > 
-        // *   The system returns this parameter if the user has set a mobile phone number in the console. To set a mobile phone number in the console, move the pointer over the profile picture in the upper-right corner and click the Edit icon next to **Notice**.
-        // *   The system does not return this parameter if the user has not set a mobile phone number.
+        /**
+         * <p>The mobile phone number that is used to receive notifications.</p>
+         * <br>
+         * <p>> * The system returns this parameter if the user has set a mobile phone number in the console. To set a mobile phone number in the console, move the pointer over the profile picture in the upper-right corner and click the Edit icon next to **Notice**.</p>
+         * <p>> * The system does not return this parameter if the user has not set a mobile phone number.</p>
+         */
         @NameInMap("Mobile")
         public String mobile;
 
-        // The nickname of the user.
+        /**
+         * <p>The nickname of the user.</p>
+         */
         @NameInMap("NickName")
         public String nickName;
 
-        // The notification method. The system returns one or more values. Valid values:
-        // 
-        // *   **SMS**: text message.
-        // *   **EMAIL**: email.
-        // *   **DingTalk**: DingTalk.
-        // *   **DINGROBOT**: DingTalk chatbot.
-        // *   **WEBHOOK**: webhook.
+        /**
+         * <p>The notification method. The system returns one or more values. Valid values:</p>
+         * <br>
+         * <p>*   **SMS**: text message.</p>
+         * <p>*   **EMAIL**: email.</p>
+         * <p>*   **DingTalk**: DingTalk.</p>
+         * <p>*   **DINGROBOT**: DingTalk chatbot.</p>
+         * <p>*   **WEBHOOK**: webhook.</p>
+         */
         @NameInMap("NotificationMode")
         public String notificationMode;
 
-        // The UID of the Alibaba Cloud account of the user.
-        // 
-        // >  An Alibaba Cloud account can contain one or more RAM users.
+        /**
+         * <p>The UID of the Alibaba Cloud account of the user.</p>
+         * <br>
+         * <p>>  An Alibaba Cloud account can contain one or more RAM users.</p>
+         */
         @NameInMap("ParentUid")
         public Long parentUid;
 
-        // The ID of the role that is assigned to the user. Valid values:
-        // 
-        // *   **1**: a regular user role.
-        // *   **2**: a database administrator (DBA) role.
-        // *   **3**: a DMS administrator role.
-        // *   **4**: a security administrator role.
-        // *   **6**: a schema read-only user role.
+        /**
+         * <p>The ID of the role that is assigned to the user. Valid values:</p>
+         * <br>
+         * <p>*   **1**: a regular user role.</p>
+         * <p>*   **2**: a database administrator (DBA) role.</p>
+         * <p>*   **3**: a DMS administrator role.</p>
+         * <p>*   **4**: a security administrator role.</p>
+         * <p>*   **6**: a schema read-only user role.</p>
+         */
         @NameInMap("RoleIdList")
         public GetUserResponseBodyUserRoleIdList roleIdList;
 
-        // The name of the role that is assigned to the user. Valid values:
-        // 
-        // *   **USER**: a regular user.
-        // *   **DBA** : a DBA.
-        // *   **ADMIN**: a DMS administrator.
-        // *   **SECURITY_ADMIN**: a security administrator.
-        // *   **STRUCT_READ_ONLY**: a schema read-only user.
+        /**
+         * <p>The name of the role that is assigned to the user. Valid values:</p>
+         * <br>
+         * <p>*   **USER**: a regular user.</p>
+         * <p>*   **DBA** : a DBA.</p>
+         * <p>*   **ADMIN**: a DMS administrator.</p>
+         * <p>*   **SECURITY_ADMIN**: a security administrator.</p>
+         * <p>*   **STRUCT_READ_ONLY**: a schema read-only user.</p>
+         */
         @NameInMap("RoleNameList")
         public GetUserResponseBodyUserRoleNameList roleNameList;
 
-        // The signature method that is used to secure connections when a webhook URL is used. Valid values:
-        // 
-        // *   **NONE**: no signature.
-        // *   **HMAC_SHA1**: HMAC_SHA1.
+        /**
+         * <p>The signature method that is used to secure connections when a webhook URL is used. Valid values:</p>
+         * <br>
+         * <p>*   **NONE**: no signature.</p>
+         * <p>*   **HMAC\_SHA1**: HMAC_SHA1.</p>
+         */
         @NameInMap("SignatureMethod")
         public String signatureMethod;
 
-        // The status of the user. Valid values:
-        // 
-        // *   **NORMAL**: The user is normal.
-        // *   **DISABLE**: The user is disabled.
-        // *   **DELETE**: The user is deleted.
+        /**
+         * <p>The status of the user. Valid values:</p>
+         * <br>
+         * <p>*   **NORMAL**: The user is normal.</p>
+         * <p>*   **DISABLE**: The user is disabled.</p>
+         * <p>*   **DELETE**: The user is deleted.</p>
+         */
         @NameInMap("State")
         public String state;
 
-        // The UID of the user.
+        /**
+         * <p>The UID of the user.</p>
+         */
         @NameInMap("Uid")
         public String uid;
 
-        // The ID of the user.
+        /**
+         * <p>The ID of the user.</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
-        // The webhook URL that is used to receive notifications.
-        // 
-        // > 
-        // *   If the user has set a webhook URL, DMS sends notifications to the specified URL.
-        // *   The system does not return this parameter if the user has not set a webhook URL.
+        /**
+         * <p>The webhook URL that is used to receive notifications.</p>
+         * <br>
+         * <p>> * If the user has set a webhook URL, DMS sends notifications to the specified URL.</p>
+         * <p>> * The system does not return this parameter if the user has not set a webhook URL.</p>
+         */
         @NameInMap("Webhook")
         public String webhook;
 

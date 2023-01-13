@@ -4,30 +4,42 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListInstanceUserPermissionsResponseBody extends TeaModel {
-    // The error code.
+    /**
+     * <p>The error code.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // The error message.
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request is successful. Valid values:
-    // 
-    // - true: The request is successful.
-    // - false: The request fails.
+    /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <br>
+     * <p>- true: The request is successful.</p>
+     * <p>- false: The request fails.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
-    // The total number of returned entries.
+    /**
+     * <p>The total number of returned entries.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
-    // The permissions of the user on the instance.
+    /**
+     * <p>The permissions of the user on the instance.</p>
+     */
     @NameInMap("UserPermissions")
     public ListInstanceUserPermissionsResponseBodyUserPermissions userPermissions;
 
@@ -85,30 +97,42 @@ public class ListInstanceUserPermissionsResponseBody extends TeaModel {
     }
 
     public static class ListInstanceUserPermissionsResponseBodyUserPermissionsUserPermissionPermDetailsPermDetail extends TeaModel {
-        // The time when the permissions were granted.
+        /**
+         * <p>The time when the permissions were granted.</p>
+         */
         @NameInMap("CreateDate")
         public String createDate;
 
-        // The time when the permissions expire.
+        /**
+         * <p>The time when the permissions expire.</p>
+         */
         @NameInMap("ExpireDate")
         public String expireDate;
 
-        // This parameter is reserved.
+        /**
+         * <p>This parameter is reserved.</p>
+         */
         @NameInMap("ExtraData")
         public String extraData;
 
-        // The user who grants the permissions.
+        /**
+         * <p>The user who grants the permissions.</p>
+         */
         @NameInMap("OriginFrom")
         public String originFrom;
 
-        // The type of the permissions. Valid values:
-        // 
-        // *   LOGIN: the logon permissions
-        // *   PERF: the query permissions on the instance
+        /**
+         * <p>The type of the permissions. Valid values:</p>
+         * <br>
+         * <p>*   LOGIN: the logon permissions</p>
+         * <p>*   PERF: the query permissions on the instance</p>
+         */
         @NameInMap("PermType")
         public String permType;
 
-        // The ID of the authorization record.
+        /**
+         * <p>The ID of the authorization record.</p>
+         */
         @NameInMap("UserAccessId")
         public String userAccessId;
 
@@ -187,19 +211,27 @@ public class ListInstanceUserPermissionsResponseBody extends TeaModel {
     }
 
     public static class ListInstanceUserPermissionsResponseBodyUserPermissionsUserPermission extends TeaModel {
-        // The ID of the instance.
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        // The details of permissions.
+        /**
+         * <p>The details of permissions.</p>
+         */
         @NameInMap("PermDetails")
         public ListInstanceUserPermissionsResponseBodyUserPermissionsUserPermissionPermDetails permDetails;
 
-        // The ID of the user.
+        /**
+         * <p>The ID of the user.</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
-        // The nickname of the user.
+        /**
+         * <p>The nickname of the user.</p>
+         */
         @NameInMap("UserNickName")
         public String userNickName;
 

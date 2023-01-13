@@ -4,30 +4,42 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListInstanceLoginAuditLogResponseBody extends TeaModel {
-    // The error code returned.
+    /**
+     * <p>The error code returned.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // The error message returned.
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    // The logon records of the instance.
+    /**
+     * <p>The logon records of the instance.</p>
+     */
     @NameInMap("InstanceLoginAuditLogList")
     public ListInstanceLoginAuditLogResponseBodyInstanceLoginAuditLogList instanceLoginAuditLogList;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request was successful. Valid values:
-    // 
-    // *   **true**: The request was successful.
-    // *   **false**: The request failed.
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The request was successful.</p>
+     * <p>*   **false**: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
-    // The number of entries returned.
+    /**
+     * <p>The number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -85,31 +97,45 @@ public class ListInstanceLoginAuditLogResponseBody extends TeaModel {
     }
 
     public static class ListInstanceLoginAuditLogResponseBodyInstanceLoginAuditLogListInstanceLoginAuditLog extends TeaModel {
-        // The database account that is used to log on to the instance.
+        /**
+         * <p>The database account that is used to log on to the instance.</p>
+         */
         @NameInMap("DbUser")
         public String dbUser;
 
-        // The ID of the instance.
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public Long instanceId;
 
-        // The name of the instance.
+        /**
+         * <p>The name of the instance.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
-        // The time when the user performed an operation on the instance.
+        /**
+         * <p>The time when the user performed an operation on the instance.</p>
+         */
         @NameInMap("OpTime")
         public String opTime;
 
-        // The source IP address of the request.
+        /**
+         * <p>The source IP address of the request.</p>
+         */
         @NameInMap("RequestIp")
         public String requestIp;
 
-        // The ID of the user.
+        /**
+         * <p>The ID of the user.</p>
+         */
         @NameInMap("UserId")
         public Long userId;
 
-        // The alias of the user.
+        /**
+         * <p>The alias of the user.</p>
+         */
         @NameInMap("UserName")
         public String userName;
 

@@ -4,26 +4,36 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetMetaTableColumnResponseBody extends TeaModel {
-    // The details about fields in the table.
+    /**
+     * <p>The details about fields in the table.</p>
+     */
     @NameInMap("ColumnList")
     public java.util.List<GetMetaTableColumnResponseBodyColumnList> columnList;
 
-    // The error code returned.
+    /**
+     * <p>The error code returned.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // The error message returned.
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request was successful. Valid values:
-    // 
-    // *   **true**: The request was successful.
-    // *   **false**: The request failed.
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The request was successful.</p>
+     * <p>*   **false**: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -73,68 +83,92 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
     }
 
     public static class GetMetaTableColumnResponseBodyColumnList extends TeaModel {
-        // Indicates whether the field is an auto-increment field. Valid values:
-        // 
-        // *   **true**: The field is an auto-increment field.
-        // *   **false**: The field is not an auto-increment field.
+        /**
+         * <p>Indicates whether the field is an auto-increment field. Valid values:</p>
+         * <br>
+         * <p>*   **true**: The field is an auto-increment field.</p>
+         * <p>*   **false**: The field is not an auto-increment field.</p>
+         */
         @NameInMap("AutoIncrement")
         public Boolean autoIncrement;
 
-        // The ID of the field.
+        /**
+         * <p>The ID of the field.</p>
+         */
         @NameInMap("ColumnId")
         public String columnId;
 
-        // The name of the field.
+        /**
+         * <p>The name of the field.</p>
+         */
         @NameInMap("ColumnName")
         public String columnName;
 
-        // The data type of the field.
-        // 
-        // >  The returned data type is not unique. For example, the returned data type can be **bigint** or **int**.
+        /**
+         * <p>The data type of the field.</p>
+         * <br>
+         * <p>>  The returned data type is not unique. For example, the returned data type can be **bigint** or **int**.</p>
+         */
         @NameInMap("ColumnType")
         public String columnType;
 
-        // The length of the field.
+        /**
+         * <p>The length of the field.</p>
+         */
         @NameInMap("DataLength")
         public Long dataLength;
 
-        // The precision of the field.
+        /**
+         * <p>The precision of the field.</p>
+         */
         @NameInMap("DataPrecision")
         public Integer dataPrecision;
 
-        // The number of decimal places that the field shows.
+        /**
+         * <p>The number of decimal places that the field shows.</p>
+         */
         @NameInMap("DataScale")
         public Integer dataScale;
 
-        // The description of the field.
+        /**
+         * <p>The description of the field.</p>
+         */
         @NameInMap("Description")
         public String description;
 
-        // Indicates whether the field can be empty. Valid values:
-        // 
-        // *   **true**: The field can be empty.
-        // *   **false**: The field cannot be empty.
+        /**
+         * <p>Indicates whether the field can be empty. Valid values:</p>
+         * <br>
+         * <p>*   **true**: The field can be empty.</p>
+         * <p>*   **false**: The field cannot be empty.</p>
+         */
         @NameInMap("Nullable")
         public Boolean nullable;
 
-        // The position of the field in the table.
+        /**
+         * <p>The position of the field in the table.</p>
+         */
         @NameInMap("Position")
         public Integer position;
 
-        // Indicates whether the field is the primary key. Valid values:
-        // 
-        // *   **true**: The field is the primary key.
-        // *   **false**: The field is not the primary key.
+        /**
+         * <p>Indicates whether the field is the primary key. Valid values:</p>
+         * <br>
+         * <p>*   **true**: The field is the primary key.</p>
+         * <p>*   **false**: The field is not the primary key.</p>
+         */
         @NameInMap("PrimaryKey")
         public String primaryKey;
 
-        // The sensitivity level of the field. Valid values:
-        // 
-        // *   **INNER**: The field is not sensitive.
-        // *   **SENSITIVE**: The field is sensitive.
-        // *   **CONFIDENTIAL**: The field is confidential.
-        // 
-        // >  For more information, see [Sensitivity levels of fields](~~66091~~).
+        /**
+         * <p>The sensitivity level of the field. Valid values:</p>
+         * <br>
+         * <p>*   **INNER**: The field is not sensitive.</p>
+         * <p>*   **SENSITIVE**: The field is sensitive.</p>
+         * <p>*   **CONFIDENTIAL**: The field is confidential.</p>
+         * <br>
+         * <p>>  For more information, see [Sensitivity levels of fields](~~66091~~).</p>
+         */
         @NameInMap("SecurityLevel")
         public String securityLevel;
 

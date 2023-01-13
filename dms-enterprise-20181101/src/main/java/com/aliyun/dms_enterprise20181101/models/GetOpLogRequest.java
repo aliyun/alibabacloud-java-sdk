@@ -4,48 +4,60 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetOpLogRequest extends TeaModel {
-    // The end of the time range to query. Specify the time in the yyyy-MM-DD HH:mm:ss format.
+    /**
+     * <p>The end of the time range to query. Specify the time in the yyyy-MM-DD HH:mm:ss format.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
-    // The functional module for which you want to query operation logs. If you do not specify this parameter, operation logs for all functional modules are returned. Valid values:
-    // 
-    // *   **PERMISSION**: permissions
-    // *   **OWNER**: data owner
-    // *   **SQL_CONSOLE**: data query
-    // *   **SQL_CONSOLE_EXPORT**: query result export
-    // *   **DATA_CHANGE**: data change
-    // *   **DATA_EXPORT**: data export
-    // *   **SQL_REVIEW**: SQL review
-    // *   **DT_SYNC**: database and table synchronization
-    // *   **DT_DETAIL**: database and table details
-    // *   **DB_TASK**: task management
-    // *   **INSTANCE_MANAGE**: instance management
-    // *   **USER_MANAGE**: user management
-    // *   **SECURITY_RULE**: security rule
-    // *   **CONFIG_MANAGE**: configuration management
-    // *   **RESOURCE_AUTH**: resource authorization
-    // *   **ACCESS_WHITE_IP**: access IP address allowlist
+    /**
+     * <p>The functional module for which you want to query operation logs. If you do not specify this parameter, operation logs for all functional modules are returned. Valid values:</p>
+     * <br>
+     * <p>*   **PERMISSION**: permissions</p>
+     * <p>*   **OWNER**: data owner</p>
+     * <p>*   **SQL_CONSOLE**: data query</p>
+     * <p>*   **SQL\_CONSOLE\_EXPORT**: query result export</p>
+     * <p>*   **DATA_CHANGE**: data change</p>
+     * <p>*   **DATA_EXPORT**: data export</p>
+     * <p>*   **SQL_REVIEW**: SQL review</p>
+     * <p>*   **DT_SYNC**: database and table synchronization</p>
+     * <p>*   **DT_DETAIL**: database and table details</p>
+     * <p>*   **DB_TASK**: task management</p>
+     * <p>*   **INSTANCE_MANAGE**: instance management</p>
+     * <p>*   **USER_MANAGE**: user management</p>
+     * <p>*   **SECURITY_RULE**: security rule</p>
+     * <p>*   **CONFIG_MANAGE**: configuration management</p>
+     * <p>*   **RESOURCE_AUTH**: resource authorization</p>
+     * <p>*   **ACCESS\_WHITE\_IP**: access IP address allowlist</p>
+     */
     @NameInMap("Module")
     public String module;
 
-    // The number of the page to return. Pages start from page 1.
+    /**
+     * <p>The number of the page to return. Pages start from page 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // The number of entries to return on each page. Valid values:
-    // 
-    // *   30
-    // *   50
-    // *   100
+    /**
+     * <p>The number of entries to return on each page. Valid values:</p>
+     * <br>
+     * <p>*   30</p>
+     * <p>*   50</p>
+     * <p>*   100</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The beginning of the time range to query. Specify the time in the yyyy-MM-DD HH:mm:ss format.
+    /**
+     * <p>The beginning of the time range to query. Specify the time in the yyyy-MM-DD HH:mm:ss format.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
-    // The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
+    /**
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.</p>
+     */
     @NameInMap("Tid")
     public Long tid;
 

@@ -4,23 +4,33 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetStructSyncJobDetailResponseBody extends TeaModel {
-    // The error code that is returned.
+    /**
+     * <p>The error code that is returned.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // The error message that is returned.
+    /**
+     * <p>The error message that is returned.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The details of the schema synchronization task.
+    /**
+     * <p>The details of the schema synchronization task.</p>
+     */
     @NameInMap("StructSyncJobDetail")
     public GetStructSyncJobDetailResponseBodyStructSyncJobDetail structSyncJobDetail;
 
-    // Indicates whether the call was successful.
+    /**
+     * <p>Indicates whether the call was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -70,49 +80,65 @@ public class GetStructSyncJobDetailResponseBody extends TeaModel {
     }
 
     public static class GetStructSyncJobDetailResponseBodyStructSyncJobDetail extends TeaModel {
-        // The ID of the task queue.
+        /**
+         * <p>The ID of the task queue.</p>
+         */
         @NameInMap("DBTaskGroupId")
         public Long DBTaskGroupId;
 
-        // The number of SQL statements that have been executed.
+        /**
+         * <p>The number of SQL statements that have been executed.</p>
+         */
         @NameInMap("ExecuteCount")
         public Long executeCount;
 
-        // The status of the task. Valid values:
-        // 
-        // *   **NEW**: The task was created.
-        // *   **COMPARING**: The schemas of tables were being compared.
-        // *   **COMPARE_BREAK**: The schema comparison was interrupted.
-        // *   **COMPARE_FINISH**: The schema comparison was complete.
-        // *   **NOT_SCRIPTS**: The schema comparison was complete. No scripts were available.
-        // *   **SUBMITED_DBTASK**: The task was submitted.
-        // *   **DBTASK_SUCCESS**: The task was complete.
-        // *   **SUBMITED_WORKFLOW**: The ticket was submitted for approval.
-        // *   **WORKFLOW_SUCCESS**: The ticket was approved.
+        /**
+         * <p>The status of the task. Valid values:</p>
+         * <br>
+         * <p>*   **NEW**: The task was created.</p>
+         * <p>*   **COMPARING**: The schemas of tables were being compared.</p>
+         * <p>*   **COMPARE_BREAK**: The schema comparison was interrupted.</p>
+         * <p>*   **COMPARE_FINISH**: The schema comparison was complete.</p>
+         * <p>*   **NOT_SCRIPTS**: The schema comparison was complete. No scripts were available.</p>
+         * <p>*   **SUBMITED_DBTASK**: The task was submitted.</p>
+         * <p>*   **DBTASK_SUCCESS**: The task was complete.</p>
+         * <p>*   **SUBMITED_WORKFLOW**: The ticket was submitted for approval.</p>
+         * <p>*   **WORKFLOW_SUCCESS**: The ticket was approved.</p>
+         */
         @NameInMap("JobStatus")
         public String jobStatus;
 
-        // The description of the task.
+        /**
+         * <p>The description of the task.</p>
+         */
         @NameInMap("Message")
         public String message;
 
-        // The type of security rule. Valid values:
-        // 
-        // *   **CANNOT_SYNC**: The schema synchronization is not allowed.
-        // *   **WITH_APPROVE**: The schema synchronization can be performed after the ticket is approved. You can call the [SubmitStructSyncOrderApproval](~~206166~~) operation to submit the ticket for approval.
-        // *   **WITHOUT_APPROVE**: The schema synchronization can be performed without approval.
+        /**
+         * <p>The type of security rule. Valid values:</p>
+         * <br>
+         * <p>*   **CANNOT_SYNC**: The schema synchronization is not allowed.</p>
+         * <p>*   **WITH_APPROVE**: The schema synchronization can be performed after the ticket is approved. You can call the [SubmitStructSyncOrderApproval](~~206166~~) operation to submit the ticket for approval.</p>
+         * <p>*   **WITHOUT_APPROVE**: The schema synchronization can be performed without approval.</p>
+         */
         @NameInMap("SecurityRule")
         public String securityRule;
 
-        // The total number of SQL statements.
+        /**
+         * <p>The total number of SQL statements.</p>
+         */
         @NameInMap("SqlCount")
         public Long sqlCount;
 
-        // The number of tables that have been analyzed.
+        /**
+         * <p>The number of tables that have been analyzed.</p>
+         */
         @NameInMap("TableAnalyzed")
         public Long tableAnalyzed;
 
-        // The total number of tables.
+        /**
+         * <p>The total number of tables.</p>
+         */
         @NameInMap("TableCount")
         public Long tableCount;
 

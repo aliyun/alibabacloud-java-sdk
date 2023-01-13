@@ -4,27 +4,37 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class CreateDataCronClearOrderRequest extends TeaModel {
-    // The key of the attachment for the ticket. The attachment provides more instructions for this operation.
-    // 
-    // You can call the [GetUserUploadFileJob](~~206069~~) operation to query the key of the attachment.
+    /**
+     * <p>The key of the attachment for the ticket. The attachment provides more instructions for this operation.</p>
+     * <br>
+     * <p>You can call the [GetUserUploadFileJob](~~206069~~) operation to query the key of the attachment.</p>
+     */
     @NameInMap("AttachmentKey")
     public String attachmentKey;
 
-    // The purpose or objective of the data change. This reduces unnecessary communication.
+    /**
+     * <p>The purpose or objective of the data change. This reduces unnecessary communication.</p>
+     */
     @NameInMap("Comment")
     public String comment;
 
-    // The parameters of the ticket.
+    /**
+     * <p>The parameters of the ticket.</p>
+     */
     @NameInMap("Param")
     public CreateDataCronClearOrderRequestParam param;
 
-    // The stakeholders of this operation. All stakeholders can view the ticket details and assist in the approval process. Irrelevant users other than Data Management (DMS) administrators and database administrators (DBAs) are not allowed to view the ticket details.
+    /**
+     * <p>The stakeholders of this operation. All stakeholders can view the ticket details and assist in the approval process. Irrelevant users other than Data Management (DMS) administrators and database administrators (DBAs) are not allowed to view the ticket details.</p>
+     */
     @NameInMap("RelatedUserList")
     public java.util.List<Long> relatedUserList;
 
-    // The ID of the tenant.
-    // 
-    // >  The ID of the tenant is displayed when you move the pointer over the profile picture in the upper-right corner of the DMS console. For more information, see the [View information about the current tenant](~~181330~~) section of the Manage DMS tenants topic.
+    /**
+     * <p>The ID of the tenant.</p>
+     * <br>
+     * <p>>  The ID of the tenant is displayed when you move the pointer over the profile picture in the upper-right corner of the DMS console. For more information, see the [View information about the current tenant](~~181330~~) section of the Manage DMS tenants topic.</p>
+     */
     @NameInMap("Tid")
     public Long tid;
 
@@ -74,26 +84,36 @@ public class CreateDataCronClearOrderRequest extends TeaModel {
     }
 
     public static class CreateDataCronClearOrderRequestParamCronClearItemList extends TeaModel {
-        // The name of the field.
+        /**
+         * <p>The name of the field.</p>
+         */
         @NameInMap("ColumnName")
         public String columnName;
 
-        // The filter conditions.
+        /**
+         * <p>The filter conditions.</p>
+         */
         @NameInMap("FilterSQL")
         public String filterSQL;
 
-        // The retention period of the historical data. Unit: days. For example, if you set the parameter to 7, DMS deletes the data that is retained for more than seven days.
+        /**
+         * <p>The retention period of the historical data. Unit: days. For example, if you set the parameter to 7, DMS deletes the data that is retained for more than seven days.</p>
+         */
         @NameInMap("RemainDays")
         public Long remainDays;
 
-        // The name of the table. You can call the [ListTables](~~141878~~) operation to query the name of the table.
+        /**
+         * <p>The name of the table. You can call the [ListTables](~~141878~~) operation to query the name of the table.</p>
+         */
         @NameInMap("TableName")
         public String tableName;
 
-        // The type of time granularity. If the ColumnName parameter specifies a field of a time type, this parameter is required. Valid values:
-        // 
-        // *   **MILLISECONDS**: milliseconds
-        // *   **SECONDS**: seconds
+        /**
+         * <p>The type of time granularity. If the ColumnName parameter specifies a field of a time type, this parameter is required. Valid values:</p>
+         * <br>
+         * <p>*   **MILLISECONDS**: milliseconds</p>
+         * <p>*   **SECONDS**: seconds</p>
+         */
         @NameInMap("TimeUnit")
         public String timeUnit;
 
@@ -145,14 +165,18 @@ public class CreateDataCronClearOrderRequest extends TeaModel {
     }
 
     public static class CreateDataCronClearOrderRequestParamDbItemList extends TeaModel {
-        // The ID of the database. You can call the [SearchDatabases](~~141876~~) operation to query the ID of the database.
+        /**
+         * <p>The ID of the database. You can call the [SearchDatabases](~~141876~~) operation to query the ID of the database.</p>
+         */
         @NameInMap("DbId")
         public Long dbId;
 
-        // Indicates whether the database is a logical database. Valid values:
-        // 
-        // *   **true**: The database is a logical database.
-        // *   **false**: The database is not a logical database.
+        /**
+         * <p>Indicates whether the database is a logical database. Valid values:</p>
+         * <br>
+         * <p>*   **true**: The database is a logical database.</p>
+         * <p>*   **false**: The database is not a logical database.</p>
+         */
         @NameInMap("Logic")
         public Boolean logic;
 
@@ -180,32 +204,44 @@ public class CreateDataCronClearOrderRequest extends TeaModel {
     }
 
     public static class CreateDataCronClearOrderRequestParam extends TeaModel {
-        // The reason for the data change.
+        /**
+         * <p>The reason for the data change.</p>
+         */
         @NameInMap("Classify")
         public String classify;
 
-        // The tables for which you want to clear historical data.
+        /**
+         * <p>The tables for which you want to clear historical data.</p>
+         */
         @NameInMap("CronClearItemList")
         public java.util.List<CreateDataCronClearOrderRequestParamCronClearItemList> cronClearItemList;
 
-        // The crontab expression that you can use to run the task at a specified time. For more information, see [Crontab expression](~~206581~~).
+        /**
+         * <p>The crontab expression that you can use to run the task at a specified time. For more information, see [Crontab expression](~~206581~~).</p>
+         */
         @NameInMap("CronFormat")
         public String cronFormat;
 
-        // The databases for which you want to clear historical data.
+        /**
+         * <p>The databases for which you want to clear historical data.</p>
+         */
         @NameInMap("DbItemList")
         public java.util.List<CreateDataCronClearOrderRequestParamDbItemList> dbItemList;
 
-        // The amount of time taken to run the task. Unit: hours.
-        // 
-        // >  If the **specifyDuration** parameter is set to **true**, this parameter is required.
+        /**
+         * <p>The amount of time taken to run the task. Unit: hours.</p>
+         * <br>
+         * <p>>  If the **specifyDuration** parameter is set to **true**, this parameter is required.</p>
+         */
         @NameInMap("DurationHour")
         public Long durationHour;
 
-        // Specifies whether to specify an end time for the task. Valid values:
-        // 
-        // *   **true**: specifies an end time for the task. The task is automatically suspended after this end time.
-        // *   **false**: does not specify an end time for the task. The task is stopped after the historical data is cleared.
+        /**
+         * <p>Specifies whether to specify an end time for the task. Valid values:</p>
+         * <br>
+         * <p>*   **true**: specifies an end time for the task. The task is automatically suspended after this end time.</p>
+         * <p>*   **false**: does not specify an end time for the task. The task is stopped after the historical data is cleared.</p>
+         */
         @NameInMap("specifyDuration")
         public Boolean specifyDuration;
 

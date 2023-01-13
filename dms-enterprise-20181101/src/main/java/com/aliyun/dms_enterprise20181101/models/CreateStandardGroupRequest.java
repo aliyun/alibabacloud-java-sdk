@@ -4,19 +4,27 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class CreateStandardGroupRequest extends TeaModel {
-    // The type of the database engine. For more information about the valid values of this parameter, see [DbType parameter](~~198106~~).
+    /**
+     * <p>The type of the database engine. For more information about the valid values of this parameter, see [DbType parameter](~~198106~~).</p>
+     */
     @NameInMap("DbType")
     public String dbType;
 
-    // The description of the security rule set.
+    /**
+     * <p>The description of the security rule set.</p>
+     */
     @NameInMap("Description")
     public String description;
 
-    // The name of the security rule set.
+    /**
+     * <p>The name of the security rule set.</p>
+     */
     @NameInMap("GroupName")
     public String groupName;
 
-    // The ID of the tenant.
+    /**
+     * <p>The ID of the tenant.</p>
+     */
     @NameInMap("Tid")
     public Long tid;
 

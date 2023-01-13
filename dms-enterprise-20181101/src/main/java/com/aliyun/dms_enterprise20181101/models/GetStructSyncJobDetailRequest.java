@@ -4,13 +4,17 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetStructSyncJobDetailRequest extends TeaModel {
-    // The ID of the ticket.
+    /**
+     * <p>The ID of the ticket.</p>
+     */
     @NameInMap("OrderId")
     public Long orderId;
 
-    // The ID of the tenant.
-    // 
-    // >  The ID of the tenant is displayed when you move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [Tenant information](~~181330~~).
+    /**
+     * <p>The ID of the tenant.</p>
+     * <br>
+     * <p>>  The ID of the tenant is displayed when you move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [Tenant information](~~181330~~).</p>
+     */
     @NameInMap("Tid")
     public Long tid;
 
