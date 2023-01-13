@@ -4,6 +4,14 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class DescribeScalingGroupsRequest extends TeaModel {
+    /**
+     * <p>The type of instances that are managed by the scaling group. Valid values:</p>
+     * <br>
+     * <p>*   ECS: ECS instances</p>
+     * <p>*   ECI: elastic container instances</p>
+     * <br>
+     * <p>Default value: ECS.</p>
+     */
     @NameInMap("GroupType")
     public String groupType;
 
@@ -13,14 +21,30 @@ public class DescribeScalingGroupsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return. Pages start from page 1.</p>
+     * <br>
+     * <p>Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Maximum value: 50.</p>
+     * <br>
+     * <p>Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The region ID of the scaling group.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -28,12 +52,25 @@ public class DescribeScalingGroupsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The IDs of the scaling groups that you want to query.</p>
+     * <br>
+     * <p>The IDs of inactive scaling groups are not displayed in the query results, and no error is reported.</p>
+     */
     @NameInMap("ScalingGroupIds")
     public java.util.List<String> scalingGroupIds;
 
+    /**
+     * <p>The name of the scaling group.</p>
+     */
     @NameInMap("ScalingGroupName")
     public String scalingGroupName;
 
+    /**
+     * <p>The names of the scaling groups that you want to query.</p>
+     * <br>
+     * <p>The names of inactive scaling groups are not displayed in the query results, and no error is reported.</p>
+     */
     @NameInMap("ScalingGroupNames")
     public java.util.List<String> scalingGroupNames;
 
@@ -88,6 +125,14 @@ public class DescribeScalingGroupsRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeScalingGroupsRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public DescribeScalingGroupsRequest setResourceOwnerAccount(String resourceOwnerAccount) {

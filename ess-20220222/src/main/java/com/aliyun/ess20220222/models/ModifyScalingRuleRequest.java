@@ -4,27 +4,79 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class ModifyScalingRuleRequest extends TeaModel {
+    /**
+     * <p>The target value specified in the scaling rule. This parameter is required when the ScalingRuleType parameter is set to SimpleScalingRule or StepScalingRule. The number of ECS instances that are scaled in a single scaling activity cannot exceed 1,000.</p>
+     * <br>
+     * <p>*   Valid values if you set the AdjustmentType parameter to QuantityChangeInCapacity: -1000 to 1000.</p>
+     * <p>*   Valid values if you set the AdjustmentType parameter to PercentChangeInCapacity: -100 to 10000.</p>
+     * <p>*   Valid values if you set the AdjustmentType parameter to TotalCapacity: 0 to 2000.</p>
+     */
     @NameInMap("AdjustmentType")
     public String adjustmentType;
 
+    /**
+     * <p>The warmup period of an instance. This parameter is available only if you set the ScalingRuleType parameter to TargetTrackingScalingRule or PredictiveScalingRule. Auto Scaling adds ECS instances that are in the warmup state to a scaling group but does not report monitoring data to CloudMonitor during the warmup period.</p>
+     * <br>
+     * <p>> Auto Scaling calculates the number of ECS instances that need to be scaled. ECS instances in the warmup state are not counted towards the current capacity of the scaling group.</p>
+     * <br>
+     * <p>Valid values: 0 to 86400. Unit: seconds.</p>
+     */
     @NameInMap("AdjustmentValue")
     public Integer adjustmentValue;
 
+    /**
+     * <p>The minimum number of instances that must be scaled when the AdjustmentType parameter is set to PercentChangeInCapacity. This parameter takes effect only if you set the ScalingRuleType parameter to SimpleScalingRule or StepScalingRule.</p>
+     */
     @NameInMap("Cooldown")
     public Integer cooldown;
 
+    /**
+     * <p>The number of consecutive times that the event-triggered task created for scale-in activities must meet the threshold conditions before an alert is triggered. After a target tracking scaling rule is created, an event-triggered task is automatically created and then associated with the target tracking scaling rule.</p>
+     */
     @NameInMap("DisableScaleIn")
     public Boolean disableScaleIn;
 
+    /**
+     * <p>The predefined metric that you want to monitor. This parameter is required only if you set the ScalingRuleType parameter to TargetTrackingScalingRule or PredictiveScalingRule.</p>
+     * <br>
+     * <p>Valid values if you set the ScalingRuleType parameter to TargetTrackingScalingRule:</p>
+     * <br>
+     * <p>*   CpuUtilization: the average CPU utilization</p>
+     * <p>*   ClassicInternetRx: the average inbound Internet traffic over the classic network</p>
+     * <p>*   ClassicInternetTx: the average outbound Internet traffic over the classic network</p>
+     * <p>*   VpcInternetRx: the average inbound Internet traffic over the virtual private cloud (VPC)</p>
+     * <p>*   VpcInternetTx: the average outbound Internet traffic over the VPC</p>
+     * <p>*   IntranetRx: the average inbound traffic over the internal network</p>
+     * <p>*   IntranetTx: the average outbound traffic over the internal network</p>
+     * <br>
+     * <p>Valid values if you set the ScalingRuleType parameter to PredictiveScalingRule:</p>
+     * <br>
+     * <p>*   CpuUtilization: the average CPU utilization</p>
+     * <p>*   IntranetRx: the average inbound traffic over the internal network</p>
+     * <p>*   IntranetTx: the average outbound traffic over the internal network</p>
+     */
     @NameInMap("EstimatedInstanceWarmup")
     public Integer estimatedInstanceWarmup;
 
+    /**
+     * <p>Details of the step adjustments.</p>
+     */
     @NameInMap("InitialMaxSize")
     public Integer initialMaxSize;
 
+    /**
+     * <p>The target value. This parameter is available only if you set the ScalingRuleType parameter to TargetTrackingScalingRule or PredictiveScalingRule. The value must be greater than 0 and can have up to three decimal places.</p>
+     */
     @NameInMap("MetricName")
     public String metricName;
 
+    /**
+     * <p>The adjustment method of the scaling rule. This is required when the ScalingRuleType parameter is set to SimpleScalingRule or StepScalingRule. Valid values:</p>
+     * <br>
+     * <p>*   QuantityChangeInCapacity: adds the specified number of ECS instances to or removes the specified number of ECS instances from the scaling group.</p>
+     * <p>*   PercentChangeInCapacity: adds the specified percentage of ECS instances to or removes the specified percentage of ECS instances from the scaling group.</p>
+     * <p>*   TotalCapacity: adjusts the number of ECS instances in the scaling group to the specified number.</p>
+     */
     @NameInMap("MinAdjustmentMagnitude")
     public Integer minAdjustmentMagnitude;
 
@@ -34,15 +86,31 @@ public class ModifyScalingRuleRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>Specifies which one of the initial maximum capacity and the predicted value can be used as the maximum value for prediction tasks. Valid values:</p>
+     * <br>
+     * <p>*   MaxOverridePredictiveValue: uses the initial maximum capacity as the maximum value for prediction tasks if the predicted value is greater than the initial maximum capacity.</p>
+     * <p>*   PredictiveValueOverrideMax: uses the predicted value as the maximum value for prediction tasks when the predicted value is greater than the initial maximum capacity.</p>
+     * <p>*   PredictiveValueOverrideMaxWithBuffer: increases the predicted value by a percentage that is specified by the PredictiveValueBuffer parameter. If the predicted value that is increased by the percentage is greater than the initial maximum capacity, the increased value is used as the maximum value for prediction tasks.</p>
+     */
     @NameInMap("PredictiveScalingMode")
     public String predictiveScalingMode;
 
+    /**
+     * <p>The maximum number of ECS instances in the scaling group. If you specify this parameter, you must also specify the PredictiveValueBehavior parameter.</p>
+     */
     @NameInMap("PredictiveTaskBufferTime")
     public Integer predictiveTaskBufferTime;
 
+    /**
+     * <p>The percentage of the increment to the predicted value when the PredictiveValueBehavior parameter is set to PredictiveValueOverrideMaxWithBuffer. If the predicted value increased by this percentage is greater than the initial maximum capacity, the increased value is used as the maximum value for prediction tasks. Valid values: 0 to 100.</p>
+     */
     @NameInMap("PredictiveValueBehavior")
     public String predictiveValueBehavior;
 
+    /**
+     * <p>The amount of buffer time before the prediction task is executed. By default, all prediction tasks that are automatically created for a predictive scaling rule are executed on the hour. You can specify an amount of buffer time for resource preparation before the prediction tasks are executed. Valid values: 0 to 60.</p>
+     */
     @NameInMap("PredictiveValueBuffer")
     public Integer predictiveValueBuffer;
 
@@ -52,21 +120,44 @@ public class ModifyScalingRuleRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The number of consecutive times that the event-triggered task created for scale-out activities must meet the threshold conditions before an alert is triggered. After a target tracking scaling rule is created, an event-triggered task is automatically created and then associated with the target tracking scaling rule.</p>
+     */
     @NameInMap("ScaleInEvaluationCount")
     public Integer scaleInEvaluationCount;
 
+    /**
+     * <p>The mode of the predictive scaling rule. Valid values:</p>
+     * <br>
+     * <p>*   PredictAndScale: produces predictions and creates prediction tasks.</p>
+     * <p>*   PredictOnly: produces predictions but does not create prediction tasks.</p>
+     */
     @NameInMap("ScaleOutEvaluationCount")
     public Integer scaleOutEvaluationCount;
 
+    /**
+     * <p>The name of the scaling rule. The name must be 2 to 64 characters in length, and can contain letters, digits, underscores (\_), hyphens (-), and periods (.). The name must start with a letter or a digit. The name of a scaling rule must be unique in the scaling group to which the scaling rule belongs and within an Alibaba Cloud account.</p>
+     */
     @NameInMap("ScalingRuleId")
     public String scalingRuleId;
 
+    /**
+     * <p>The cooldown time of the scaling rule. This parameter is available only if you set the ScalingRuleType parameter to SimpleScalingRule.</p>
+     * <br>
+     * <p>Valid values: 0 to 86400. Unit: seconds.</p>
+     */
     @NameInMap("ScalingRuleName")
     public String scalingRuleName;
 
+    /**
+     * <p>Details of the step adjustments.</p>
+     */
     @NameInMap("StepAdjustments")
     public java.util.List<ModifyScalingRuleRequestStepAdjustments> stepAdjustments;
 
+    /**
+     * <p>Specifies whether to disable scale-in. This parameter is available only if you set the ScalingRuleType parameter to TargetTrackingScalingRule.</p>
+     */
     @NameInMap("TargetValue")
     public Float targetValue;
 
@@ -252,12 +343,21 @@ public class ModifyScalingRuleRequest extends TeaModel {
     }
 
     public static class ModifyScalingRuleRequestStepAdjustments extends TeaModel {
+        /**
+         * <p>The ID of the request.</p>
+         */
         @NameInMap("MetricIntervalLowerBound")
         public Float metricIntervalLowerBound;
 
+        /**
+         * <p>The number of ECS instances that you want to scale in a step adjustment. This parameter is available only if you set the ScalingRuleType parameter to StepScalingRule.</p>
+         */
         @NameInMap("MetricIntervalUpperBound")
         public Float metricIntervalUpperBound;
 
+        /**
+         * <p>The lower limit that is specified in a step adjustment. This parameter is available only if you set the ScalingRuleType parameter to StepScalingRule. Valid values: -9.999999E18 to 9.999999E18.</p>
+         */
         @NameInMap("ScalingAdjustment")
         public Integer scalingAdjustment;
 

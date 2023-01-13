@@ -10,75 +10,187 @@ public class ModifyScalingConfigurationShrinkRequest extends TeaModel {
     @NameInMap("SystemDisk")
     public ModifyScalingConfigurationShrinkRequestSystemDisk systemDisk;
 
+    /**
+     * <p>Specifies whether to associate the instance on a dedicated host with the dedicated host. Valid values:</p>
+     * <br>
+     * <p>*   default: does not associate the instance with the dedicated host. If you start an instance that was stopped in economical mode and the original dedicated host of the instance has insufficient resources, the instance is automatically deployed to another dedicated host in the automatic deployment resource pool.</p>
+     * <p>*   host: associates the instance with the dedicated host. If you start an instance that was stopped in economical mode, the instance remains on the original dedicated host. If the original dedicated host of the instance has insufficient resources, you cannot start the instance.</p>
+     */
     @NameInMap("Affinity")
     public String affinity;
 
+    /**
+     * <p>The number of vCPUs.</p>
+     * <br>
+     * <p>You can specify the number of vCPUs and the memory size to determine the range of instance types. For example, you can set the Cpu parameter to 2 and the Memory parameter to 16 to specify the instance types that have 2 vCPUs and 16 GiB of memory. Auto Scaling determines the available instance types based on factors such as I/O optimization requirements and zones. Then, Auto Scaling preferentially creates instances of the instance type that is provided at the lowest price.</p>
+     * <br>
+     * <p>> You can specify the Cpu and Memory parameters to determine the range of instance types only if the Scaling Policy parameter is set to Cost Optimization Policy and no instance type is specified in the scaling configuration.</p>
+     */
     @NameInMap("Cpu")
     public Integer cpu;
 
+    /**
+     * <p>The performance mode of the burstable instance. Valid values:</p>
+     * <br>
+     * <p>*   Standard: standard mode. For more information, see the "Standard mode" section in [Burstable instances](~~59977~~).</p>
+     * <p>*   Unlimited: unlimited mode. For more information, see the "Unlimited mode" section in [Burstable instances](~~59977~~).</p>
+     */
     @NameInMap("CreditSpecification")
     public String creditSpecification;
 
+    /**
+     * <p>Details of the data disks.</p>
+     */
     @NameInMap("DataDisks")
     public java.util.List<ModifyScalingConfigurationShrinkRequestDataDisks> dataDisks;
 
+    /**
+     * <p>The ID of the dedicated host on which you want to create the ECS instance. You cannot create preemptible instances on dedicated hosts. If you specify the DedicatedHostId parameter, the SpotStrategy and SpotPriceLimit parameters are ignored.</p>
+     * <br>
+     * <p>You can call the DescribeDedicatedHosts operation to query dedicated host IDs.</p>
+     */
     @NameInMap("DedicatedHostId")
     public String dedicatedHostId;
 
+    /**
+     * <p>The ID of the deployment set to which the ECS instance belongs.</p>
+     */
     @NameInMap("DeploymentSetId")
     public String deploymentSetId;
 
+    /**
+     * <p>The hostname of the ECS instance. The hostname cannot start or end with a period (.) or a hyphen (-). The hostname cannot contain consecutive periods (.) or hyphens (-). Naming conventions for different types of instances:</p>
+     * <br>
+     * <p>*   Windows instances: The hostname must be 2 to 15 characters in length, and can contain letters, digits, and hyphens (-). The hostname cannot contain periods (.) or contain only digits.</p>
+     * <p>*   Other instances such as Linux instances: The hostname must be 2 to 64 characters in length. You can use periods (.) to separate a hostname into multiple segments. Each segment can contain letters, digits, and hyphens (-).</p>
+     */
     @NameInMap("HostName")
     public String hostName;
 
+    /**
+     * <p>The ID of the Elastic High Performance Computing (E-HPC) cluster to which the ECS instance belongs.</p>
+     */
     @NameInMap("HpcClusterId")
     public String hpcClusterId;
 
+    /**
+     * <p>The name of the image family. You can specify this parameter to obtain the latest custom images that are available in the specified image family. The images are used to create instances. If the ImageId parameter is specified, you cannot specify the ImageFamily parameter.</p>
+     */
     @NameInMap("ImageFamily")
     public String imageFamily;
 
+    /**
+     * <p>The ID of the image that is used by Auto Scaling to automatically create instances.</p>
+     * <br>
+     * <p>> If the image that is specified in the scaling configuration contains system disks and data disks, the data that is stored in the data disks is cleared after you modify the image.</p>
+     */
     @NameInMap("ImageId")
     public String imageId;
 
+    /**
+     * <p>The name of the image. Each image name must be unique in a region. If you specify the ImageId parameter, the ImageName parameter is ignored.</p>
+     * <br>
+     * <p>You cannot use the ImageName parameter to specify Alibaba Cloud Marketplace images.</p>
+     */
     @NameInMap("ImageName")
     public String imageName;
 
+    /**
+     * <p>The description of the ECS instance. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("InstanceDescription")
     public String instanceDescription;
 
+    /**
+     * <p>The name of the ECS instance that is automatically created based on the scaling configuration.</p>
+     */
     @NameInMap("InstanceName")
     public String instanceName;
 
+    /**
+     * <p>Information about the intelligent configuration settings, which determines the available instance types.</p>
+     */
     @NameInMap("InstancePatternInfos")
     public java.util.List<ModifyScalingConfigurationShrinkRequestInstancePatternInfos> instancePatternInfos;
 
+    /**
+     * <p>Information about the instance type.</p>
+     */
     @NameInMap("InstanceTypeOverrides")
     public java.util.List<ModifyScalingConfigurationShrinkRequestInstanceTypeOverrides> instanceTypeOverrides;
 
+    /**
+     * <p>The instance types. If you specify this parameter, the InstanceType parameter is ignored. You can specify up to 10 instance types in a scaling configuration.</p>
+     * <br>
+     * <p>The first instance type has the highest priority. The priority decreases based on the specified order of instance types. Auto Scaling creates instances based on the priorities of the instance types. If Auto Scaling cannot create instances of the instance type that has the highest priority, Auto Scaling creates instances of the instance type that has the next highest priority.</p>
+     */
     @NameInMap("InstanceTypes")
     public java.util.List<String> instanceTypes;
 
+    /**
+     * <p>The billing method for network usage. Valid values:</p>
+     * <br>
+     * <p>*   PayByBandwidth: You are charged for the maximum available bandwidth that is specified by the InternetMaxBandwidthOut parameter.</p>
+     * <p>*   PayByTraffic: You are charged for the actual traffic that is used. The InternetMaxBandwidthOut parameter specifies only the maximum available bandwidth.</p>
+     */
     @NameInMap("InternetChargeType")
     public String internetChargeType;
 
+    /**
+     * <p>The maximum outbound public bandwidth. Unit: Mbit/s. Valid values:</p>
+     * <br>
+     * <p>*   0 to 100 if you set the InternetChargeType parameter to PayByBandwidth. If you leave this parameter empty, this parameter is automatically set to 0.</p>
+     * <p>*   0 to 100 if you set the InternetChargeType parameter to PayByTraffic. If you leave this parameter empty, an error will be reported.</p>
+     */
     @NameInMap("InternetMaxBandwidthOut")
     public Integer internetMaxBandwidthOut;
 
+    /**
+     * <p>Specifies whether to create an I/O optimized instance. Valid values:</p>
+     * <br>
+     * <p>*   none: does not create an I/O optimized instance.</p>
+     * <p>*   optimized: creates an I/O optimized instance.</p>
+     */
     @NameInMap("IoOptimized")
     public String ioOptimized;
 
+    /**
+     * <p>The number of randomly generated IPv6 addresses that you want to allocate to the elastic network interface (ENI).</p>
+     */
     @NameInMap("Ipv6AddressCount")
     public Integer ipv6AddressCount;
 
+    /**
+     * <p>The name of the key pair that is used to log on to the ECS instance.</p>
+     * <br>
+     * <p>*   Windows instances do not use this parameter.</p>
+     * <p>*   By default, the username and password authentication method is disabled for Linux instances.</p>
+     */
     @NameInMap("KeyPairName")
     public String keyPairName;
 
+    /**
+     * <p>The weight of the ECS instance as a backend server. Valid values: 1 to 100.</p>
+     */
     @NameInMap("LoadBalancerWeight")
     public Integer loadBalancerWeight;
 
+    /**
+     * <p>The size of the memory. Unit: GiB.</p>
+     * <br>
+     * <p>You can specify the number of vCPUs and the memory size to determine the range of instance types. For example, you can set the Cpu parameter to 2 and the Memory parameter to 16 to specify the instance types that have 2 vCPUs and 16 GiB of memory. Auto Scaling determines the available instance types based on factors such as I/O optimization requirements and zones. Then, Auto Scaling preferentially creates instances of the instance type that is provided at the lowest price.</p>
+     * <br>
+     * <p>> You can specify the Cpu and Memory parameters to determine the range of instance types only if the Scaling Policy parameter is set to Cost Optimization Policy and no instance type is specified in the scaling configuration.</p>
+     */
     @NameInMap("Memory")
     public Integer memory;
 
+    /**
+     * <p>Specifies whether to overwrite existing data. Valid values:</p>
+     * <br>
+     * <p>*   true: overwrites existing data.</p>
+     * <p>*   false: does not overwrite existing data.</p>
+     */
     @NameInMap("Override")
     public Boolean override;
 
@@ -88,57 +200,130 @@ public class ModifyScalingConfigurationShrinkRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>Specifies whether to use the password that is preconfigured in the image. Before you use this parameter, make sure that a password is configured for the image.</p>
+     */
     @NameInMap("PasswordInherit")
     public Boolean passwordInherit;
 
+    /**
+     * <p>The name of the RAM role that is associated with the ECS instance. The name is provided and maintained by Resource Access Management (RAM). You can call the ListRoles operation to query the available RAM roles. You can call the CreateRole operation to create RAM roles.</p>
+     */
     @NameInMap("RamRoleName")
     public String ramRoleName;
 
+    /**
+     * <p>The ID of the resource group to which the ECS instance belongs.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
+    /**
+     * <p>The ID of the scaling configuration that you want to modify.</p>
+     */
     @NameInMap("ScalingConfigurationId")
     public String scalingConfigurationId;
 
+    /**
+     * <p>The name of the scaling configuration. The name must be 2 to 64 characters in length and can contain letters, digits, underscores (\_), hyphens (-), and periods (.). It must start with a letter or a digit.</p>
+     * <br>
+     * <p>The name of the scaling configuration must be unique within a scaling group in a region. If you do not specify the ScalingConfigurationName parameter, the scaling configuration ID is used.</p>
+     */
     @NameInMap("ScalingConfigurationName")
     public String scalingConfigurationName;
 
+    /**
+     * <p>The options of the scheduler.</p>
+     */
     @NameInMap("SchedulerOptions")
     public String schedulerOptionsShrink;
 
+    /**
+     * <p>The ID of the security group with which the ECS instance is associated. The ECS instances that are associated with the same security group can access each other.</p>
+     */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
+    /**
+     * <p>The IDs of the security groups.</p>
+     */
     @NameInMap("SecurityGroupIds")
     public java.util.List<String> securityGroupIds;
 
+    /**
+     * <p>The retention period of the preemptible instance. Unit: hours. Valid values: 0, 1, 2, 3, 4, 5, and 6.</p>
+     * <br>
+     * <p>*   The following retention periods are available in invitational preview: 2, 3, 4, 5, and 6 hours. If you want to set this parameter to one of these values, submit a ticket.</p>
+     * <p>*   If you set this parameter to 0, no retention period is specified for the preemptible instance.</p>
+     */
     @NameInMap("SpotDuration")
     public Integer spotDuration;
 
+    /**
+     * <p>The interruption event of the preemptible instance. Default value: Terminate. Set the value to Terminate, which specifies that the preemptible instance is to be released.</p>
+     */
     @NameInMap("SpotInterruptionBehavior")
     public String spotInterruptionBehavior;
 
+    /**
+     * <p>Information about the instance types of preemptible instances.</p>
+     */
     @NameInMap("SpotPriceLimits")
     public java.util.List<ModifyScalingConfigurationShrinkRequestSpotPriceLimits> spotPriceLimits;
 
+    /**
+     * <p>The preemption policy that you want to apply to pay-as-you-go instances and preemptible instances. Valid values:</p>
+     * <br>
+     * <p>*   NoSpot: The instance is created as a pay-as-you-go instance.</p>
+     * <p>*   SpotWithPriceLimit: The instance is a preemptible instance that has a user-defined maximum hourly price.</p>
+     * <p>*   SpotAsPriceGo: The instance is created as a preemptible instance for which the market price at the time of purchase is automatically used as the bid price.</p>
+     */
     @NameInMap("SpotStrategy")
     public String spotStrategy;
 
+    /**
+     * <p>The categories of the system disks. You can specify one to four disk categories in a scaling configuration. The first disk category that is specified in a scaling configuration has the highest priority. The priority deceases based on the specified order of disk categories. If Auto Scaling cannot create instances by using the disk category that has the highest priority, Auto Scaling creates instances by using the disk category that has the next highest priority. Valid values:</p>
+     * <br>
+     * <p>*   cloud: basic disk.</p>
+     * <p>*   cloud_efficiency: ultra disk.</p>
+     * <p>*   cloud_ssd: standard SSD.</p>
+     * <p>*   cloud_essd: ESSD.</p>
+     * <br>
+     * <p>> You cannot specify the SystemDiskCategories and `SystemDisk.Category` parameters at the same time.</p>
+     */
     @NameInMap("SystemDiskCategories")
     public java.util.List<String> systemDiskCategories;
 
+    /**
+     * <p>The tags of the ECS instance. The tags must be specified in the key-value pair format. You can specify up to 20 tags. When you specify tag keys and tag values, take note of the following items:</p>
+     * <br>
+     * <p>*   A tag key can be up to 64 characters in length. The key cannot start with `acs:` or `aliyun`, and cannot contain `http://` or `https://`. You cannot specify an empty string as a tag key.</p>
+     * <p>*   A tag value can be up to 128 characters in length. The value cannot start with `acs:` or `aliyun`, and cannot contain `http://` or `https://`. You can specify an empty string as a tag value.</p>
+     */
     @NameInMap("Tags")
     public String tags;
 
+    /**
+     * <p>Specifies whether to create the instance on a dedicated host. Valid values:</p>
+     * <br>
+     * <p>*   default: does not create the instance on a dedicated host.</p>
+     * <p>*   host: creates the instance on a dedicated host. If you do not specify the DedicatedHostId parameter, Alibaba Cloud selects a dedicated host for the instance that you want to create.</p>
+     */
     @NameInMap("Tenancy")
     public String tenancy;
 
+    /**
+     * <p>The user data of the ECS instance. The data must be encoded in Base64. The maximum size of the data before encoding is 16 KB.</p>
+     */
     @NameInMap("UserData")
     public String userData;
 
+    /**
+     * <p>The zone ID of the ECS instance.</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 
@@ -516,9 +701,19 @@ public class ModifyScalingConfigurationShrinkRequest extends TeaModel {
     }
 
     public static class ModifyScalingConfigurationShrinkRequestPrivatePoolOptions extends TeaModel {
+        /**
+         * <p>The ID of the private pool. The ID of a private pool is the same as the ID of the elasticity assurance or capacity reservation for which the private pool is generated.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The type of the private pool that you want to use to create instances. A private pool is generated when an elasticity assurance or a capacity reservation takes effect. You can select a private pool when you create instances. Valid values:</p>
+         * <br>
+         * <p>*   Open: open private pool. The system selects an open private pool for instance startup. If no open private pool meets your business requirements, the resources in the public pool are used for instance startup. In this case, you do not need to specify the PrivatePoolOptions.Id parameter.</p>
+         * <p>*   Target: specified private pool. The resources in the specified private pool are used for instance startup. If the specified private pool is unavailable, the instance startup fails. If you set this parameter to Target, you must specify the PrivatePoolOptions.Id parameter.</p>
+         * <p>*   None: no private pool. The resources of private pools are not used for instance startup.</p>
+         */
         @NameInMap("MatchCriteria")
         public String matchCriteria;
 
@@ -546,36 +741,111 @@ public class ModifyScalingConfigurationShrinkRequest extends TeaModel {
     }
 
     public static class ModifyScalingConfigurationShrinkRequestSystemDisk extends TeaModel {
+        /**
+         * <p>The ID of the automatic snapshot policy that you want to apply to the system disk.</p>
+         */
         @NameInMap("AutoSnapshotPolicyId")
         public String autoSnapshotPolicyId;
 
+        /**
+         * <p>Specifies whether to enable the burst feature for the system disk. Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
+         * <br>
+         * <p>> This parameter is available only if you set the `SystemDisk.Category` parameter to `cloud_auto`.</p>
+         * <br>
+         * <p>For more information, see [ESSD AutoPL disks](~~368372~~).</p>
+         */
         @NameInMap("BurstingEnabled")
         public Boolean burstingEnabled;
 
+        /**
+         * <p>The category of the system disk. Valid values:</p>
+         * <br>
+         * <p>*   cloud: basic disk.</p>
+         * <p>*   cloud_efficiency: ultra disk.</p>
+         * <p>*   cloud_ssd: standard SSD.</p>
+         * <p>*   cloud_essd: ESSD.</p>
+         * <p>*   ephemeral_ssd: local SSD.</p>
+         * <br>
+         * <p>You cannot specify the SystemDisk.Category and `SystemDiskCategories` parameters at the same time. If you do not specify the Category and `SystemDiskCategories` parameters, the default value of the Category parameter is used. For non-I/O optimized instances of Generation I instance types, the default value is cloud. For instances of other instance types, the default value is cloud_efficiency.</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <p>The description of the system disk. The description must be 2 to 256 characters in length. The description can contain letters but cannot start with `http://` or `https://`.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the system disk. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+         */
         @NameInMap("DiskName")
         public String diskName;
 
+        /**
+         * <p>The algorithm that is used to encrypt the system disk. Valid values:</p>
+         * <br>
+         * <p>*   AES-256</p>
+         * <p>*   SM4-128</p>
+         * <br>
+         * <p>Default value: AES-256.</p>
+         */
         @NameInMap("EncryptAlgorithm")
         public String encryptAlgorithm;
 
+        /**
+         * <p>Specifies whether to encrypt the system disk. Valid values:</p>
+         * <br>
+         * <p>*   true: encrypts the system disk.</p>
+         * <p>*   false: does not encrypt the system disk.</p>
+         * <br>
+         * <p>Default value: false.</p>
+         */
         @NameInMap("Encrypted")
         public Boolean encrypted;
 
+        /**
+         * <p>The ID of the KMS key that is used to encrypt the system disk.</p>
+         */
         @NameInMap("KMSKeyId")
         public String KMSKeyId;
 
+        /**
+         * <p>The PL of the system disk of the ESSD category. Valid values:</p>
+         * <br>
+         * <p>*   PL0: An ESSD can deliver up to 10,000 random read/write IOPS.</p>
+         * <p>*   PL1: An ESSD can deliver up to 50,000 random read/write IOPS.</p>
+         * <p>*   PL2: An ESSD can deliver up to 100,000 random read/write IOPS.</p>
+         * <p>*   PL3: An ESSD can deliver up to 1,000,000 random read/write IOPS.</p>
+         * <br>
+         * <p>> For more information about how to choose ESSD PLs, see [ESSD](~~122389~~).</p>
+         */
         @NameInMap("PerformanceLevel")
         public String performanceLevel;
 
+        /**
+         * <p>The IOPS metric that is preconfigured for the system disk.</p>
+         * <br>
+         * <p>> IOPS measures the number of read and write operations that an EBS device can process per second.</p>
+         */
         @NameInMap("ProvisionedIops")
         public Long provisionedIops;
 
+        /**
+         * <p>The size of the system disk. Unit: GiB.</p>
+         * <br>
+         * <p>*   Valid values if you set the SystemDisk.Category parameter to cloud: 20 to 500.</p>
+         * <p>*   Valid values if you set the SystemDisk.Category parameter to cloud_efficiency: 20 to 500</p>
+         * <p>*   Valid values if you set the SystemDisk.Category parameter to cloud_ssd: 20 to 500</p>
+         * <p>*   Valid values if you set the SystemDisk.Category parameter to cloud_essd: 20 to 500</p>
+         * <p>*   Valid values if you set the SystemDisk.Category parameter to ephemeral_ssd: 20 to 500</p>
+         * <br>
+         * <p>The value of SystemDisk.Size must be greater than or equal to max{20, ImageSize}.</p>
+         */
         @NameInMap("Size")
         public Integer size;
 
@@ -675,45 +945,139 @@ public class ModifyScalingConfigurationShrinkRequest extends TeaModel {
     }
 
     public static class ModifyScalingConfigurationShrinkRequestDataDisks extends TeaModel {
+        /**
+         * <p>The ID of the automatic snapshot policy that you want to apply to the data disk.</p>
+         */
         @NameInMap("AutoSnapshotPolicyId")
         public String autoSnapshotPolicyId;
 
+        /**
+         * <p>Specifies whether to enable the burst feature for the system disk. Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
+         * <br>
+         * <p>> This parameter is available only if you set the `SystemDisk.Category` parameter to `cloud_auto`.</p>
+         * <br>
+         * <p>For more information, see [ESSD AutoPL disks](~~368372~~).</p>
+         */
         @NameInMap("BurstingEnabled")
         public Boolean burstingEnabled;
 
+        /**
+         * <p>The categories of the data disks. You can specify 1 to 16 data disks. You can specify 1 to 4 disk categories in a scaling configuration. The first disk category that is specified in a scaling configuration has the highest priority. The priority deceases based on the specified order of disk categories. If Auto Scaling cannot create instances by using the data disk that has the highest priority, Auto Scaling creates instances by using the data disk that has the next highest priority. Valid values:</p>
+         * <br>
+         * <p>*   cloud: basic disk. The DeleteWithInstance attribute of a basic disk that is created together with the instance is set to true.</p>
+         * <p>*   cloud_efficiency: ultra disk.</p>
+         * <p>*   cloud_ssd: standard SSD.</p>
+         * <p>*   cloud_essd: ESSD.</p>
+         * <br>
+         * <p>> You cannot specify the Categories and `Category` parameters at the same time.</p>
+         */
         @NameInMap("Categories")
         public java.util.List<String> categories;
 
+        /**
+         * <p>The category of the data disk. You can specify 1 to 16 data disks. Valid values:</p>
+         * <br>
+         * <p>*   cloud: basic disk. The DeleteWithInstance attribute of a basic disk that is created together with the instance is set to true.</p>
+         * <p>*   cloud_efficiency: ultra disk.</p>
+         * <p>*   cloud_ssd: standard SSD.</p>
+         * <p>*   ephemeral_ssd: local standard SSD.</p>
+         * <p>*   cloud_essd: ESSD.</p>
+         * <br>
+         * <p>You cannot specify the Category and `Categories` parameters at the same time. If you do not specify the Category and `Categories` parameters, the default value of the Category parameter is:</p>
+         * <br>
+         * <p>*   cloud_efficiency for I/O optimized instances.</p>
+         * <p>*   cloud for non-I/O optimized instances.</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <p>Specifies whether to release the data disk when the instance to which the data disk is attached is released. Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
+         * <br>
+         * <p>This parameter is available only for independent disks whose Category parameter is set to cloud, cloud_efficiency, cloud_ssd, cloud_essd, or cloud_auto. If you specify this parameter for disks of other categories, an error will be reported.</p>
+         */
         @NameInMap("DeleteWithInstance")
         public Boolean deleteWithInstance;
 
+        /**
+         * <p>The description of the system disk. The description must be 2 to 256 characters in length. The description can contain letters but cannot start with `http://` or `https://`.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The mount target of the data disk. If you do not specify the Device parameter, a mount target is automatically created when Auto Scaling creates ECS instance. The name of the mount target ranges from /dev/xvdb to /dev/xvdz.</p>
+         */
         @NameInMap("Device")
         public String device;
 
+        /**
+         * <p>The name of the system disk. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.</p>
+         */
         @NameInMap("DiskName")
         public String diskName;
 
+        /**
+         * <p>Specifies whether to encrypt the system disk. Valid values:</p>
+         * <br>
+         * <p>*   true: encrypts the system disk.</p>
+         * <p>*   false: does not encrypt the system disk.</p>
+         */
         @NameInMap("Encrypted")
         public String encrypted;
 
+        /**
+         * <p>The ID of the KMS key of the data disk.</p>
+         */
         @NameInMap("KMSKeyId")
         public String KMSKeyId;
 
+        /**
+         * <p>The PL of the data disk of the ESSD category. If you set the Category parameter to cloud_essd, you must also specify the PerformanceLevel parameter. Valid values:</p>
+         * <br>
+         * <p>*   PL0: An ESSD can deliver up to 10,000 random read/write IOPS.</p>
+         * <p>*   PL1: An ESSD can deliver up to 50,000 random read/write IOPS.</p>
+         * <p>*   PL2: An ESSD can deliver up to 100,000 random read/write IOPS.</p>
+         * <p>*   PL3: An ESSD can deliver up to 1,000,000 random read/write IOPS.</p>
+         * <br>
+         * <p>> For more information about how to choose ESSD PLs, see [ESSD](~~122389~~).</p>
+         */
         @NameInMap("PerformanceLevel")
         public String performanceLevel;
 
+        /**
+         * <p>The input/output operations per second (IOPS) metric that is preconfigured for the data disk.</p>
+         * <br>
+         * <p>> IOPS measures the number of read and write operations that an EBS device can process per second.</p>
+         */
         @NameInMap("ProvisionedIops")
         public Long provisionedIops;
 
+        /**
+         * <p>The size of the data disk. Unit: GiB.</p>
+         * <br>
+         * <p>*   Valid values if you set the Category parameter to cloud: 5 to 2000.</p>
+         * <p>*   Valid values if you set the Category parameter to cloud_efficiency: 20 to 32768.</p>
+         * <p>*   Valid values if you set the Category parameter to cloud_ssd: 20 to 32768.</p>
+         * <p>*   Valid values if you set the Category parameter to cloud_essd: 20 to 32768.</p>
+         * <p>*   Valid values if you set the Category parameter to ephemeral_ssd: 5 to 800.</p>
+         * <br>
+         * <p>The value of the Size parameter must be greater than or equal to the size of the snapshot that is specified by the SnapshotId parameter.</p>
+         */
         @NameInMap("Size")
         public Integer size;
 
+        /**
+         * <p>The ID of the snapshot that you want to use to create data disks. If you specify this parameter, the Size parameter is ignored. The size of the disk is the same as the size of the specified snapshot.</p>
+         * <br>
+         * <p>If you specify a snapshot created on or before July 15, 2013, the operation fails and the system returns InvalidSnapshot.TooOld.</p>
+         */
         @NameInMap("SnapshotId")
         public String snapshotId;
 
@@ -837,24 +1201,74 @@ public class ModifyScalingConfigurationShrinkRequest extends TeaModel {
     }
 
     public static class ModifyScalingConfigurationShrinkRequestInstancePatternInfos extends TeaModel {
+        /**
+         * <p>The architectures of the instance types. Valid values:</p>
+         * <br>
+         * <p>*   X86: x86 architecture.</p>
+         * <p>*   Heterogeneous: heterogeneous architecture, such as GPUs and FPGAs.</p>
+         * <p>*   BareMetal: ECS Bare Metal Instance architecture.</p>
+         * <p>*   Arm: ARM architecture.</p>
+         * <p>*   SuperComputeCluster: Super Computing Cluster architecture.</p>
+         * <br>
+         * <p>By default, all values are selected.</p>
+         */
         @NameInMap("Architectures")
         public java.util.List<String> architectures;
 
+        /**
+         * <p>Specifies whether to include burstable instance types. Valid values:</p>
+         * <br>
+         * <p>*   Exclude: excludes burstable instance types.</p>
+         * <p>*   Include: includes burstable instance types.</p>
+         * <p>*   Required: includes only burstable instance types.</p>
+         * <br>
+         * <p>Default value: Include.</p>
+         */
         @NameInMap("BurstablePerformance")
         public String burstablePerformance;
 
+        /**
+         * <p>The number of vCPUs that is specified for an instance type in the intelligent configuration mode. This parameter is used to filter the available instance types that meet the specified criteria. For more information, see [Instance family](~~25378~~).</p>
+         * <br>
+         * <p>Take note of the following items:</p>
+         * <br>
+         * <p>*   The InstancePatternInfos parameter is available only for scaling groups that reside in VPCs.</p>
+         * <p>*   You must specify the InstancePatternInfos, Cores, and Memory parameters at the same time.</p>
+         * <p>*   If you specify an instance type by using the InstanceType or InstanceTypes parameter, Auto Scaling preferentially uses the instance type that is specified by the InstanceType or InstanceTypes parameter for scale-out activities. If the specified instance type does not have sufficient inventory, Auto Scaling creates instances of the instance type that is specified by the InstancePatternInfos parameter based on the price in ascending order.</p>
+         */
         @NameInMap("Cores")
         public Integer cores;
 
+        /**
+         * <p>The instance types that you want to filter out. You can use wildcard characters such as an asterisk (\*) to filter out a single instance type or an instance family. Example:</p>
+         * <br>
+         * <p>*   ecs.c6.large: The ecs.c6.large instance type is filtered out.</p>
+         * <p>*   ecs.c6.\*: The c6 instance family is filtered out.</p>
+         */
         @NameInMap("ExcludedInstanceTypes")
         public java.util.List<String> excludedInstanceTypes;
 
+        /**
+         * <p>The level of the instance type, which is used to filter the instance types that meet the specified criteria. This parameter takes effect only if you set the `CostOptimization` parameter to true. Valid values:</p>
+         * <br>
+         * <p>*   EntryLevel: shared instance type. Instances of this level are the most cost-effective but may not provide stable computing performance in a consistent manner. Instances of this level are suitable for business scenarios in which the CPU utilization is low. For more information, see [Shared instance families](~~108489~~).</p>
+         * <p>*   EnterpriseLevel: Instances of this level provide stable performance and dedicated resources, and are suitable for business scenarios that require high stability. For more information, see [Instance family](~~25378~~).</p>
+         * <p>*   CreditEntryLevel: This value is valid only for burstable instances. CPU credits are used to ensure computing performance. Instances of this level are suitable for scenarios in which the CPU utilization is low but may fluctuate in specific cases. For more information, see the [Overview](~~59977~~) topic of burstable instances.</p>
+         */
         @NameInMap("InstanceFamilyLevel")
         public String instanceFamilyLevel;
 
+        /**
+         * <p>The maximum hourly price for a pay-as-you-go instance or a preemptible instance in the intelligent configuration mode. This parameter is used to filter the available instance types that meet the specified criteria.</p>
+         * <br>
+         * <p>> If you set the SpotStrategy parameter to SpotWithPriceLimit, you must specify the MaxPrice parameter. In other cases, you do not need to specify the MaxPrice parameter.</p>
+         */
         @NameInMap("MaxPrice")
         public Float maxPrice;
 
+        /**
+         * <p>The memory size that is specified for an instance type in the intelligent configuration mode. Unit: GiB. This parameter is used to filter the available instance types that meet the specified criteria.</p>
+         */
         @NameInMap("Memory")
         public Float memory;
 
@@ -922,9 +1336,37 @@ public class ModifyScalingConfigurationShrinkRequest extends TeaModel {
     }
 
     public static class ModifyScalingConfigurationShrinkRequestInstanceTypeOverrides extends TeaModel {
+        /**
+         * <p>The instance type. If you want to specify the weight of the instance type in the scaling configuration, you must specify the InstanceType and WeightedCapacity parameters at the same time.</p>
+         * <br>
+         * <p>You can use the InstanceType parameter to specify 1 to 10 instance types. You can use the WeightedCapacity parameter to specify weights of instance types.</p>
+         * <br>
+         * <p>> You cannot specify the InstanceType and InstanceTypes parameters at the same time.</p>
+         * <br>
+         * <p>You can specify instance types that are available for purchase as the values of the InstanceType parameter.</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
+        /**
+         * <p>The weight of the instance type. The weight of the instance type indicates the capacity of the instance of the specified instance type in the scaling group. If you want Auto Scaling to scale instances based on the instance type weight, you must specify the WeightedCapacity parameter after you specify the InstanceType parameter.</p>
+         * <br>
+         * <p>A higher weight specifies that a smaller number of instances of the specified instance type are required to meet the expected capacity.</p>
+         * <br>
+         * <p>Performance metrics, such as the number of vCPUs and the memory size of each instance type, may vary. You can specify different weights for different instance types based on your business requirements.</p>
+         * <br>
+         * <p>Example:</p>
+         * <br>
+         * <p>*   Current capacity: 0</p>
+         * <p>*   Expected capacity: 6</p>
+         * <p>*   Capacity of ecs.c5.xlarge: 4</p>
+         * <br>
+         * <p>To meet the expected capacity requirement, Auto Scaling must create and add two ecs.c5.xlarge instances.</p>
+         * <br>
+         * <p>> The capacity of the scaling group cannot exceed the sum of the maximum number of instances that is specified by the MaxSize parameter and the maximum weight of the instance types.</p>
+         * <br>
+         * <p>Valid values of the WeightedCapacity parameter: 1 to 500.</p>
+         */
         @NameInMap("WeightedCapacity")
         public Integer weightedCapacity;
 
@@ -952,9 +1394,15 @@ public class ModifyScalingConfigurationShrinkRequest extends TeaModel {
     }
 
     public static class ModifyScalingConfigurationShrinkRequestSpotPriceLimits extends TeaModel {
+        /**
+         * <p>The instance type of the preemptible instance. This parameter takes effect only if you set the SpotStrategy parameter to SpotWithPriceLimit.</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
+        /**
+         * <p>The price limit of the preemptible instance. This parameter takes effect only if you set the SpotStrategy parameter to SpotWithPriceLimit.</p>
+         */
         @NameInMap("PriceLimit")
         public Float priceLimit;
 

@@ -4,9 +4,15 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class ModifyAlarmResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("AlarmTaskId")
     public String alarmTaskId;
 
+    /**
+     * <p>auditing</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

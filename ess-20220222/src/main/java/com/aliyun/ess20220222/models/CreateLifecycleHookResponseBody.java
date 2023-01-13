@@ -4,9 +4,15 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class CreateLifecycleHookResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the lifecycle hook.</p>
+     */
     @NameInMap("LifecycleHookId")
     public String lifecycleHookId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

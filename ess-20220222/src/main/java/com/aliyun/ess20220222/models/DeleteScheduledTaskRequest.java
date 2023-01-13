@@ -10,12 +10,18 @@ public class DeleteScheduledTaskRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
+    /**
+     * <p>The region ID of the scheduled task.</p>
+     */
     @NameInMap("ScheduledTaskId")
     public String scheduledTaskId;
 

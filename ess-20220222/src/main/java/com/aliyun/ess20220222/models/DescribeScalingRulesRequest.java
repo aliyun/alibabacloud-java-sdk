@@ -10,12 +10,25 @@ public class DescribeScalingRulesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of entries to return on each page. Maximum value: 50.</p>
+     * <br>
+     * <p>Default value: 10.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The ID of the scaling group.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The number of the page to return. Pages start from page 1.</p>
+     * <br>
+     * <p>Default value: 1.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -25,21 +38,49 @@ public class DescribeScalingRulesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The type of the scaling rule. Valid values:</p>
+     * <br>
+     * <p>*   SimpleScalingRule: adjusts the number of ECS instances based on the values of the AdjustmentType and AdjustmentValue parameters.</p>
+     * <p>*   TargetTrackingScalingRule: calculates the number of ECS instances that need to be scaled in a dynamic manner and maintains the value of a predefined metric close to the value of the TargetValue parameter.</p>
+     * <p>*   StepScalingRule: scales ECS instances in steps based on the specified thresholds and metric values.</p>
+     * <p>*   PredictiveScalingRule: uses machine learning to analyze historical monitoring data of the scaling group and predicts the future values of metrics. In addition, Auto Scaling automatically creates scheduled tasks to adjust the boundary values for the scaling group.</p>
+     */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;
 
+    /**
+     * <p>The unique identifiers of the scaling rules that you want to query.</p>
+     */
     @NameInMap("ScalingRuleAris")
     public java.util.List<String> scalingRuleAris;
 
+    /**
+     * <p>The IDs of the scaling rules that you want to query.</p>
+     */
     @NameInMap("ScalingRuleIds")
     public java.util.List<String> scalingRuleIds;
 
+    /**
+     * <p>The names of the scaling rules that you want to query.</p>
+     */
     @NameInMap("ScalingRuleNames")
     public java.util.List<String> scalingRuleNames;
 
+    /**
+     * <p>Specifies whether to return CloudMonitor event-triggered tasks associated with scaling rules. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     * <br>
+     * <p>Default value: false.</p>
+     */
     @NameInMap("ScalingRuleType")
     public String scalingRuleType;
 
+    /**
+     * <p>The IDs of the scaling rules that you want to query.</p>
+     */
     @NameInMap("ShowAlarmRules")
     public Boolean showAlarmRules;
 

@@ -4,9 +4,15 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsResponseBody extends TeaModel {
+    /**
+     * <p>Details of the regions.</p>
+     */
     @NameInMap("Regions")
     public java.util.List<DescribeRegionsResponseBodyRegions> regions;
 
+    /**
+     * <p>Details of the regions.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +38,33 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeRegionsResponseBodyRegions extends TeaModel {
+        /**
+         * <p>The endpoint of the region.</p>
+         */
         @NameInMap("ClassicUnavailable")
         public Boolean classicUnavailable;
 
+        /**
+         * <p>China (Beijing)</p>
+         */
         @NameInMap("LocalName")
         public String localName;
 
+        /**
+         * <p>The name of the region.</p>
+         */
         @NameInMap("RegionEndpoint")
         public String regionEndpoint;
 
+        /**
+         * <p>auditing</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("VpcUnavailable")
         public Boolean vpcUnavailable;
 

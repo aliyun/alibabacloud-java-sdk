@@ -4,6 +4,9 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class DeleteNotificationConfigurationResponseBody extends TeaModel {
+    /**
+     * <p>auditing</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
