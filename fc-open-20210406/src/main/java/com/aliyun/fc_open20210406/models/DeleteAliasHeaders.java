@@ -7,21 +7,29 @@ public class DeleteAliasHeaders extends TeaModel {
     @NameInMap("commonHeaders")
     public java.util.Map<String, String> commonHeaders;
 
-    // If the ETag specified in the request matches the ETag value of the object, OSS transmits the object and returns 200 OK. If the ETag specified in the request does not match the ETag value of the object, OSS returns 412 Precondition Failed. 
-    // The ETag value of a resource is used to check whether the resource has changed. You can check data integrity by using the ETag value. 
-    // Default value: null
+    /**
+     * <p>If the ETag specified in the request matches the ETag value of the object, OSS transmits the object and returns 200 OK. If the ETag specified in the request does not match the ETag value of the object, OSS returns 412 Precondition Failed. </p>
+     * <p>The ETag value of a resource is used to check whether the resource has changed. You can check data integrity by using the ETag value. </p>
+     * <p>Default value: null</p>
+     */
     @NameInMap("If-Match")
     public String ifMatch;
 
-    // The ID of your Alibaba Cloud account.
+    /**
+     * <p>The ID of your Alibaba Cloud account.</p>
+     */
     @NameInMap("X-Fc-Account-Id")
     public String xFcAccountId;
 
-    // The time when Function Compute API is called. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
+    /**
+     * <p>The time when Function Compute API is called. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.</p>
+     */
     @NameInMap("X-Fc-Date")
     public String xFcDate;
 
-    // The trace ID of the invocation request of Function Compute.
+    /**
+     * <p>The trace ID of the invocation request of Function Compute.</p>
+     */
     @NameInMap("X-Fc-Trace-Id")
     public String xFcTraceId;
 

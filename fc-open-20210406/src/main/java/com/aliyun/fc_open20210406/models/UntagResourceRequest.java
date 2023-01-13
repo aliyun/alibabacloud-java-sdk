@@ -4,19 +4,25 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class UntagResourceRequest extends TeaModel {
-    // Specifies whether to remove all tags. This parameter takes effect only when no tag key is specified. Valid values:
-    //   - **true**: removes all tags. 
-    //   - **false**: does not remove all tags.
+    /**
+     * <p>Specifies whether to remove all tags. This parameter takes effect only when no tag key is specified. Valid values:</p>
+     * <p>  - **true**: removes all tags. </p>
+     * <p>  - **false**: does not remove all tags.</p>
+     */
     @NameInMap("all")
     public Boolean all;
 
-    // The ARN of the resource. 
-    // 
-    // > You can use the value of this parameter to query the information about the resource, such as the account, service, and region information of the resource. You can manage tags only for services for top level resources.
+    /**
+     * <p>The ARN of the resource. </p>
+     * <br>
+     * <p>> You can use the value of this parameter to query the information about the resource, such as the account, service, and region information of the resource. You can manage tags only for services for top level resources.</p>
+     */
     @NameInMap("resourceArn")
     public String resourceArn;
 
-    // The keys of the tags that you want to remove.
+    /**
+     * <p>The keys of the tags that you want to remove.</p>
+     */
     @NameInMap("tagKeys")
     public java.util.List<String> tagKeys;
 

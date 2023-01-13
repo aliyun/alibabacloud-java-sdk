@@ -7,7 +7,9 @@ public class HTTPTriggerConfig extends TeaModel {
     @NameInMap("authType")
     public String authType;
 
-    // 禁用默认公网域名访问的开关，设置为true 时，访问函数默认提供的公网URL地址会返回403错误。设置为 false 则不会有任何影响。
+    /**
+     * <p>禁用默认公网域名访问的开关，设置为true 时，访问函数默认提供的公网URL地址会返回403错误。设置为 false 则不会有任何影响。</p>
+     */
     @NameInMap("disableURLInternet")
     public Boolean disableURLInternet;
 

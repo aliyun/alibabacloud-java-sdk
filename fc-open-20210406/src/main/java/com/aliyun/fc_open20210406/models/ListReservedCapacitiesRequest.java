@@ -4,11 +4,15 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class ListReservedCapacitiesRequest extends TeaModel {
-    // The maximum number of resources to return. Valid values: \[1, 100].
+    /**
+     * <p>The maximum number of resources to return. Valid values: \[1, 100].</p>
+     */
     @NameInMap("limit")
     public String limit;
 
-    // The token that is required for pagination.
+    /**
+     * <p>The token that is required for pagination.</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 

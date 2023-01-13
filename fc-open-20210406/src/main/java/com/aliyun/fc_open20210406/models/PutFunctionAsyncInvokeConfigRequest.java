@@ -4,26 +4,36 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class PutFunctionAsyncInvokeConfigRequest extends TeaModel {
-    // The configuration structure of the destination for asynchronous invocation.
+    /**
+     * <p>The configuration structure of the destination for asynchronous invocation.</p>
+     */
     @NameInMap("destinationConfig")
     public DestinationConfig destinationConfig;
 
-    // The maximum validity period of messages. Valid values: 1 to 2592000. Unit: seconds.
+    /**
+     * <p>The maximum validity period of messages. Valid values: 1 to 2592000. Unit: seconds.</p>
+     */
     @NameInMap("maxAsyncEventAgeInSeconds")
     public Long maxAsyncEventAgeInSeconds;
 
-    // The maximum number of retries allowed after an asynchronous invocation fails. Default value: 3. Valid values: 0 to 8.
+    /**
+     * <p>The maximum number of retries allowed after an asynchronous invocation fails. Default value: 3. Valid values: 0 to 8.</p>
+     */
     @NameInMap("maxAsyncRetryAttempts")
     public Long maxAsyncRetryAttempts;
 
-    // Specifies whether to enable the asynchronous task feature. 
-    // 
-    // - **true**: enables the asynchronous task feature. 
-    // - **false**: does not enable the asynchronous task feature.
+    /**
+     * <p>Specifies whether to enable the asynchronous task feature. </p>
+     * <br>
+     * <p>- **true**: enables the asynchronous task feature. </p>
+     * <p>- **false**: does not enable the asynchronous task feature.</p>
+     */
     @NameInMap("statefulInvocation")
     public Boolean statefulInvocation;
 
-    // The version or alias of the service.
+    /**
+     * <p>The version or alias of the service.</p>
+     */
     @NameInMap("qualifier")
     public String qualifier;
 

@@ -4,41 +4,57 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class UpdateServiceRequest extends TeaModel {
-    // The description of the service.
+    /**
+     * <p>The description of the service.</p>
+     */
     @NameInMap("description")
     public String description;
 
-    // Specifies whether to allow functions to access the Internet. Valid values:
-    // 
-    // *   **true**: allows functions in the specified service to access the Internet.
-    // *   **false**: does not allow functions in the specified service to access the Internet.
+    /**
+     * <p>Specifies whether to allow functions to access the Internet. Valid values:</p>
+     * <br>
+     * <p>*   **true**: allows functions in the specified service to access the Internet.</p>
+     * <p>*   **false**: does not allow functions in the specified service to access the Internet.</p>
+     */
     @NameInMap("internetAccess")
     public Boolean internetAccess;
 
-    // The log configuration. Function Compute writes function execution logs to the specified Logstore.
+    /**
+     * <p>The log configuration. Function Compute writes function execution logs to the specified Logstore.</p>
+     */
     @NameInMap("logConfig")
     public LogConfig logConfig;
 
-    // The configurations of the NAS file system. The configurations allow functions to access the specified NAS resources.
+    /**
+     * <p>The configurations of the NAS file system. The configurations allow functions to access the specified NAS resources.</p>
+     */
     @NameInMap("nasConfig")
     public NASConfig nasConfig;
 
-    // The OSS mount configurations.
+    /**
+     * <p>The OSS mount configurations.</p>
+     */
     @NameInMap("ossMountConfig")
     public OSSMountConfig ossMountConfig;
 
-    // The RAM role that is used to grant required permissions to Function Compute. The RAM role is used in the following scenarios:
-    // 
-    // *   Sends function execution logs to your Logstore.
-    // *   Generates a token for a function to access other cloud resources during function execution.
+    /**
+     * <p>The RAM role that is used to grant required permissions to Function Compute. The RAM role is used in the following scenarios:</p>
+     * <br>
+     * <p>*   Sends function execution logs to your Logstore.</p>
+     * <p>*   Generates a token for a function to access other cloud resources during function execution.</p>
+     */
     @NameInMap("role")
     public String role;
 
-    // The configurations of Tracing Analysis. After you configure Tracing Analysis for a service in Function Compute, you can record the execution duration of a request, view the amount of cold start time for a function, and record the execution duration of a function. For more information, see [Overview](~~189804~~).
+    /**
+     * <p>The configurations of Tracing Analysis. After you configure Tracing Analysis for a service in Function Compute, you can record the execution duration of a request, view the amount of cold start time for a function, and record the execution duration of a function. For more information, see [Overview](~~189804~~).</p>
+     */
     @NameInMap("tracingConfig")
     public TracingConfig tracingConfig;
 
-    // The virtual private cloud (VPC) configuration, which allows functions in the specified service in Function Compute to access the specified VPC.
+    /**
+     * <p>The virtual private cloud (VPC) configuration, which allows functions in the specified service in Function Compute to access the specified VPC.</p>
+     */
     @NameInMap("vpcConfig")
     public VPCConfig vpcConfig;
 

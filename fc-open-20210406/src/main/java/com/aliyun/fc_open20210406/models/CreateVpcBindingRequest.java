@@ -4,7 +4,9 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class CreateVpcBindingRequest extends TeaModel {
-    // The ID of the VPC to be bound.
+    /**
+     * <p>The ID of the VPC to be bound.</p>
+     */
     @NameInMap("vpcId")
     public String vpcId;
 

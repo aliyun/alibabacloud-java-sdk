@@ -4,15 +4,21 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class CreateLayerVersionRequest extends TeaModel {
-    // The code of the layer.
+    /**
+     * <p>The code of the layer.</p>
+     */
     @NameInMap("Code")
     public Code code;
 
-    // The list of runtime environments that are supported by the layer.
+    /**
+     * <p>The list of runtime environments that are supported by the layer.</p>
+     */
     @NameInMap("compatibleRuntime")
     public java.util.List<String> compatibleRuntime;
 
-    // The description of the layer.
+    /**
+     * <p>The description of the layer.</p>
+     */
     @NameInMap("description")
     public String description;
 

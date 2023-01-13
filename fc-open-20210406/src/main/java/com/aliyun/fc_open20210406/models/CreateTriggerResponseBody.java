@@ -4,55 +4,81 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class CreateTriggerResponseBody extends TeaModel {
-    // The time when the trigger was created.
+    /**
+     * <p>The time when the trigger was created.</p>
+     */
     @NameInMap("createdTime")
     public String createdTime;
 
-    // The description of the trigger.
+    /**
+     * <p>The description of the trigger.</p>
+     */
     @NameInMap("description")
     public String description;
 
-    // The domain name used to invoke the function by using HTTP. You can add this domain name as the prefix to the endpoint of Function Compute. This way, you can invoke the function that corresponds to the trigger by using HTTP. For example, `{domainName}.cn-shanghai.fc.aliyuncs.com`.
+    /**
+     * <p>The domain name used to invoke the function by using HTTP. You can add this domain name as the prefix to the endpoint of Function Compute. This way, you can invoke the function that corresponds to the trigger by using HTTP. For example, `{domainName}.cn-shanghai.fc.aliyuncs.com`.</p>
+     */
     @NameInMap("domainName")
     public String domainName;
 
-    // The ARN of the RAM role that is used by the event source to invoke the function.
+    /**
+     * <p>The ARN of the RAM role that is used by the event source to invoke the function.</p>
+     */
     @NameInMap("invocationRole")
     public String invocationRole;
 
-    // The time when the trigger was last modified.
+    /**
+     * <p>The time when the trigger was last modified.</p>
+     */
     @NameInMap("lastModifiedTime")
     public String lastModifiedTime;
 
-    // The version of the service.
+    /**
+     * <p>The version of the service.</p>
+     */
     @NameInMap("qualifier")
     public String qualifier;
 
-    // The ARN of the event source.
+    /**
+     * <p>The ARN of the event source.</p>
+     */
     @NameInMap("sourceArn")
     public String sourceArn;
 
-    // The configurations of the trigger. The configurations vary based on the trigger type.
+    /**
+     * <p>The configurations of the trigger. The configurations vary based on the trigger type.</p>
+     */
     @NameInMap("triggerConfig")
     public String triggerConfig;
 
-    // The unique ID of the trigger.
+    /**
+     * <p>The unique ID of the trigger.</p>
+     */
     @NameInMap("triggerId")
     public String triggerId;
 
-    // The name of the trigger. The name contains only letters, digits, hyphens (-), and underscores (\_). The name must be 1 to 128 characters in length and cannot start with a digit or hyphen (-).
+    /**
+     * <p>The name of the trigger. The name contains only letters, digits, hyphens (-), and underscores (\_). The name must be 1 to 128 characters in length and cannot start with a digit or hyphen (-).</p>
+     */
     @NameInMap("triggerName")
     public String triggerName;
 
-    // The trigger type, such as **oss**, **log**, **tablestore**, **timer**, **http**, **cdn_events**, and **mns_topic**.
+    /**
+     * <p>The trigger type, such as **oss**, **log**, **tablestore**, **timer**, **http**, **cdn_events**, and **mns_topic**.</p>
+     */
     @NameInMap("triggerType")
     public String triggerType;
 
-    // The public domain address. You can access HTTP triggers over the Internet by using HTTP or HTTPS.
+    /**
+     * <p>The public domain address. You can access HTTP triggers over the Internet by using HTTP or HTTPS.</p>
+     */
     @NameInMap("urlInternet")
     public String urlInternet;
 
-    // The private endpoint. In a VPC, you can access HTTP triggers by using HTTP or HTTPS.
+    /**
+     * <p>The private endpoint. In a VPC, you can access HTTP triggers by using HTTP or HTTPS.</p>
+     */
     @NameInMap("urlIntranet")
     public String urlIntranet;
 

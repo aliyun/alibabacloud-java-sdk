@@ -4,13 +4,17 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class GetResourceTagsResponseBody extends TeaModel {
-    // The ARN of the resource. 
-    // 
-    // > You can use the value of this parameter to query the information about the resource, such as the account, service, and region information of the resource.
+    /**
+     * <p>The ARN of the resource. </p>
+     * <br>
+     * <p>> You can use the value of this parameter to query the information about the resource, such as the account, service, and region information of the resource.</p>
+     */
     @NameInMap("resourceArn")
     public String resourceArn;
 
-    // The tag dictionary.
+    /**
+     * <p>The tag dictionary.</p>
+     */
     @NameInMap("tags")
     public java.util.Map<String, String> tags;
 

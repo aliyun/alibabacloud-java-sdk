@@ -4,47 +4,61 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class CreateTriggerRequest extends TeaModel {
-    // The description of the trigger.
+    /**
+     * <p>The description of the trigger.</p>
+     */
     @NameInMap("description")
     public String description;
 
-    // The role that is used by the event source such as OSS to invoke the function. For more information, see [Overview](~~53102~~).
+    /**
+     * <p>The role that is used by the event source such as OSS to invoke the function. For more information, see [Overview](~~53102~~).</p>
+     */
     @NameInMap("invocationRole")
     public String invocationRole;
 
-    // The version or alias of the service.
+    /**
+     * <p>The version or alias of the service.</p>
+     */
     @NameInMap("qualifier")
     public String qualifier;
 
-    // The Alibaba Cloud Resource Name (ARN) of the event source for the trigger.
+    /**
+     * <p>The Alibaba Cloud Resource Name (ARN) of the event source for the trigger.</p>
+     */
     @NameInMap("sourceArn")
     public String sourceArn;
 
-    // The configurations of the trigger. The configurations vary based on the trigger type. For more information about the format, see the following topics:
-    // 
-    // *   OSS trigger: [OSSTriggerConfig](javascript:void\(0\)).
-    // *   Log Service trigger: [LogTriggerConfig](javascript:void\(0\)).
-    // *   Time trigger: [TimeTriggerConfig](javascript:void\(0\)).
-    // *   HTTP trigger: [HTTPTriggerConfig](javascript:void\(0\)).
-    // *   Tablestore trigger: Specify the **SourceArn** parameter and leave this parameter empty.
-    // *   Alibaba Cloud CDN event trigger: [CDNEventsTriggerConfig](javascript:void\(0\)).
-    // *   MNS topic trigger: [MnsTopicTriggerConfig](javascript:void\(0\)).
+    /**
+     * <p>The configurations of the trigger. The configurations vary based on the trigger type. For more information about the format, see the following topics:</p>
+     * <br>
+     * <p>*   OSS trigger: [OSSTriggerConfig](javascript:void\(0\)).</p>
+     * <p>*   Log Service trigger: [LogTriggerConfig](javascript:void\(0\)).</p>
+     * <p>*   Time trigger: [TimeTriggerConfig](javascript:void\(0\)).</p>
+     * <p>*   HTTP trigger: [HTTPTriggerConfig](javascript:void\(0\)).</p>
+     * <p>*   Tablestore trigger: Specify the **SourceArn** parameter and leave this parameter empty.</p>
+     * <p>*   Alibaba Cloud CDN event trigger: [CDNEventsTriggerConfig](javascript:void\(0\)).</p>
+     * <p>*   MNS topic trigger: [MnsTopicTriggerConfig](javascript:void\(0\)).</p>
+     */
     @NameInMap("triggerConfig")
     public String triggerConfig;
 
-    // The name of the trigger. The name contains only letters, digits, hyphens (-), and underscores (\_). The name must be 1 to 128 characters in length and cannot start with a digit or hyphen (-).
+    /**
+     * <p>The name of the trigger. The name contains only letters, digits, hyphens (-), and underscores (\_). The name must be 1 to 128 characters in length and cannot start with a digit or hyphen (-).</p>
+     */
     @NameInMap("triggerName")
     public String triggerName;
 
-    // The type of the trigger. Valid values:
-    // 
-    // *   **oss**: OSS event trigger. For more information, see [Overview](~~62922~~).
-    // *   **log**: Log Service trigger. For more information, see [Overview](~~84386~~).
-    // *   **timer**: time trigger. For more information, see [Overview](~~68172~~).
-    // *   **http**: HTTP trigger. For more information, see [Overview](~~71229~~).
-    // *   **tablestore**: Tablestore trigger. For more information, see [Overview](~~100092~~).
-    // *   **cdn_events**: CDN event trigger. For more information, see [Overview](~~73333~~).
-    // *   **mns_topic**: MNS topic trigger. For more information, see [Overview](~~97032~~).
+    /**
+     * <p>The type of the trigger. Valid values:</p>
+     * <br>
+     * <p>*   **oss**: OSS event trigger. For more information, see [Overview](~~62922~~).</p>
+     * <p>*   **log**: Log Service trigger. For more information, see [Overview](~~84386~~).</p>
+     * <p>*   **timer**: time trigger. For more information, see [Overview](~~68172~~).</p>
+     * <p>*   **http**: HTTP trigger. For more information, see [Overview](~~71229~~).</p>
+     * <p>*   **tablestore**: Tablestore trigger. For more information, see [Overview](~~100092~~).</p>
+     * <p>*   **cdn_events**: CDN event trigger. For more information, see [Overview](~~73333~~).</p>
+     * <p>*   **mns_topic**: MNS topic trigger. For more information, see [Overview](~~97032~~).</p>
+     */
     @NameInMap("triggerType")
     public String triggerType;
 

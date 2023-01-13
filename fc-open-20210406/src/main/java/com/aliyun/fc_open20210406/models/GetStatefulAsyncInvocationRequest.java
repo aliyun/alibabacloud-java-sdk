@@ -4,7 +4,9 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class GetStatefulAsyncInvocationRequest extends TeaModel {
-    // The version or alias of the service to which the asynchronous task belongs.
+    /**
+     * <p>The version or alias of the service to which the asynchronous task belongs.</p>
+     */
     @NameInMap("qualifier")
     public String qualifier;
 

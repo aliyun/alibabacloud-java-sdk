@@ -7,15 +7,21 @@ public class GetFunctionOnDemandConfigHeaders extends TeaModel {
     @NameInMap("commonHeaders")
     public java.util.Map<String, String> commonHeaders;
 
-    // The ID of your Alibaba Cloud account.
+    /**
+     * <p>The ID of your Alibaba Cloud account.</p>
+     */
     @NameInMap("X-Fc-Account-Id")
     public String xFcAccountId;
 
-    // The time when Function Compute API is called. Specify the time in the yyyy-mm-ddhh:mm:ss format.
+    /**
+     * <p>The time when Function Compute API is called. Specify the time in the yyyy-mm-ddhh:mm:ss format.</p>
+     */
     @NameInMap("X-Fc-Date")
     public String xFcDate;
 
-    // The trace ID of the request for Function Compute API, which is also the unique ID of the request.
+    /**
+     * <p>The trace ID of the request for Function Compute API, which is also the unique ID of the request.</p>
+     */
     @NameInMap("X-Fc-Trace-Id")
     public String xFcTraceId;
 

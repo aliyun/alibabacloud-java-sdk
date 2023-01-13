@@ -4,7 +4,9 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class PublishServiceVersionRequest extends TeaModel {
-    // The description of the service version.
+    /**
+     * <p>The description of the service version.</p>
+     */
     @NameInMap("description")
     public String description;
 

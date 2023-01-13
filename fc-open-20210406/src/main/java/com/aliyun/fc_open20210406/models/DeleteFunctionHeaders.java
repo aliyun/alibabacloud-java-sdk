@@ -7,19 +7,27 @@ public class DeleteFunctionHeaders extends TeaModel {
     @NameInMap("commonHeaders")
     public java.util.Map<String, String> commonHeaders;
 
-    // The ETag value of the resource. This value is used to ensure that the modified resource is consistent with the resource to be modified. The ETag value is returned in the responses of the CREATE, GET, and UPDATE operations.
+    /**
+     * <p>The ETag value of the resource. This value is used to ensure that the modified resource is consistent with the resource to be modified. The ETag value is returned in the responses of the CREATE, GET, and UPDATE operations.</p>
+     */
     @NameInMap("If-Match")
     public String ifMatch;
 
-    // The ID of your Alibaba Cloud account.
+    /**
+     * <p>The ID of your Alibaba Cloud account.</p>
+     */
     @NameInMap("X-Fc-Account-Id")
     public String xFcAccountId;
 
-    // The time when Function Compute API is called. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
+    /**
+     * <p>The time when Function Compute API is called. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.</p>
+     */
     @NameInMap("X-Fc-Date")
     public String xFcDate;
 
-    // The trace ID of the request for Function Compute API. The value is the same as that of the requestId parameter in the response.
+    /**
+     * <p>The trace ID of the request for Function Compute API. The value is the same as that of the requestId parameter in the response.</p>
+     */
     @NameInMap("X-Fc-Trace-Id")
     public String xFcTraceId;
 

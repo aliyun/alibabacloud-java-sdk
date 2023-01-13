@@ -7,23 +7,33 @@ public class UpdateFunctionHeaders extends TeaModel {
     @NameInMap("commonHeaders")
     public java.util.Map<String, String> commonHeaders;
 
-    // The ETag value of the resource. The value is used to ensure that the modified resource is consistent with the resource to be modified. The ETag value is returned in the responses of the [CreateFunction](~~415747~~), [GetFunction](~~415750~~), and [UpdateFunction](~~415749~~) operations.
+    /**
+     * <p>The ETag value of the resource. The value is used to ensure that the modified resource is consistent with the resource to be modified. The ETag value is returned in the responses of the [CreateFunction](~~415747~~), [GetFunction](~~415750~~), and [UpdateFunction](~~415749~~) operations.</p>
+     */
     @NameInMap("If-Match")
     public String ifMatch;
 
-    // The ID of your Alibaba Cloud account.
+    /**
+     * <p>The ID of your Alibaba Cloud account.</p>
+     */
     @NameInMap("X-Fc-Account-Id")
     public String xFcAccountId;
 
-    // The CRC-64 value of the function code package.
+    /**
+     * <p>The CRC-64 value of the function code package.</p>
+     */
     @NameInMap("X-Fc-Code-Checksum")
     public String xFcCodeChecksum;
 
-    // The time on which the function is invoked. The format of the value is: **EEE,d MMM yyyy HH:mm:ss GMT**.
+    /**
+     * <p>The time on which the function is invoked. The format of the value is: **EEE,d MMM yyyy HH:mm:ss GMT**.</p>
+     */
     @NameInMap("X-Fc-Date")
     public String xFcDate;
 
-    // The trace ID of the request. The value is the same as that of the requestId parameter in the response.
+    /**
+     * <p>The trace ID of the request. The value is the same as that of the requestId parameter in the response.</p>
+     */
     @NameInMap("X-Fc-Trace-Id")
     public String xFcTraceId;
 

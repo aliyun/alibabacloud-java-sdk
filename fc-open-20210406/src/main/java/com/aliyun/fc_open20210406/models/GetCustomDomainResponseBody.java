@@ -4,45 +4,66 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class GetCustomDomainResponseBody extends TeaModel {
-    // The version number of the API.
+    /**
+     * <p>The version number of the API.</p>
+     */
     @NameInMap("accountId")
     public String accountId;
 
-    // The version number of the API.
+    /**
+     * <p>The version number of the API.</p>
+     */
     @NameInMap("apiVersion")
     public String apiVersion;
 
-    // The configurations of the HTTPS certificate.
+    /**
+     * <p>The configurations of the HTTPS certificate.</p>
+     */
     @NameInMap("certConfig")
     public CertConfig certConfig;
 
-    // The time when the domain name was added.
+    /**
+     * <p>The time when the domain name was added.</p>
+     */
     @NameInMap("createdTime")
     public String createdTime;
 
-    // The domain name.
+    /**
+     * <p>The domain name.</p>
+     */
     @NameInMap("domainName")
     public String domainName;
 
-    // The time when the domain name was last modified.
+    /**
+     * <p>The time when the domain name was last modified.</p>
+     */
     @NameInMap("lastModifiedTime")
     public String lastModifiedTime;
 
-    // The protocol types supported by the domain name. Valid values:
-    // 
-    // - **HTTP**: Only HTTP is supported. 
-    // - **HTTPS**: Only HTTPS is supported. 
-    // - **HTTP,HTTPS**: Both HTTP and HTTPS are supported.
+    /**
+     * <p>The protocol types supported by the domain name. Valid values:</p>
+     * <br>
+     * <p>- **HTTP**: Only HTTP is supported. </p>
+     * <p>- **HTTPS**: Only HTTPS is supported. </p>
+     * <p>- **HTTP,HTTPS**: Both HTTP and HTTPS are supported.</p>
+     */
     @NameInMap("protocol")
     public String protocol;
 
-    // The route table that maps the paths to functions when the functions are invoked by using the custom domain name.
+    /**
+     * <p>The route table that maps the paths to functions when the functions are invoked by using the custom domain name.</p>
+     */
     @NameInMap("routeConfig")
     public RouteConfig routeConfig;
 
-    // The configurations of the TLS.
+    /**
+     * <p>The configurations of the TLS.</p>
+     */
     @NameInMap("tlsConfig")
     public TLSConfig tlsConfig;
+
+    @NameInMap("wafConfig")
+    public WAFConfig wafConfig;
 
     public static GetCustomDomainResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetCustomDomainResponseBody self = new GetCustomDomainResponseBody();
@@ -119,6 +140,14 @@ public class GetCustomDomainResponseBody extends TeaModel {
     }
     public TLSConfig getTlsConfig() {
         return this.tlsConfig;
+    }
+
+    public GetCustomDomainResponseBody setWafConfig(WAFConfig wafConfig) {
+        this.wafConfig = wafConfig;
+        return this;
+    }
+    public WAFConfig getWafConfig() {
+        return this.wafConfig;
     }
 
 }

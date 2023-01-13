@@ -4,12 +4,21 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class ClaimGPUInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The time when the product instance was created.</p>
+     */
     @NameInMap("createdTime")
     public String createdTime;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("instanceId")
     public String instanceId;
 
+    /**
+     * <p>The public IP address.</p>
+     */
     @NameInMap("publicIp")
     public String publicIp;
 

@@ -4,11 +4,15 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class ListAliasesResponseBody extends TeaModel {
-    // The list of aliases.
+    /**
+     * <p>The list of aliases.</p>
+     */
     @NameInMap("aliases")
     public java.util.List<ListAliasesResponseBodyAliases> aliases;
 
-    // The token used to obtain more results.
+    /**
+     * <p>The token used to obtain more results.</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
@@ -34,23 +38,33 @@ public class ListAliasesResponseBody extends TeaModel {
     }
 
     public static class ListAliasesResponseBodyAliases extends TeaModel {
-        // The weight of the canary release version.
+        /**
+         * <p>The weight of the canary release version.</p>
+         */
         @NameInMap("additionalVersionWeight")
         public java.util.Map<String, Float> additionalVersionWeight;
 
-        // The name of the alias.
+        /**
+         * <p>The name of the alias.</p>
+         */
         @NameInMap("aliasName")
         public String aliasName;
 
-        // The creation time.
+        /**
+         * <p>The creation time.</p>
+         */
         @NameInMap("createdTime")
         public String createdTime;
 
-        // The description of the alias.
+        /**
+         * <p>The description of the alias.</p>
+         */
         @NameInMap("description")
         public String description;
 
-        // The last update time.
+        /**
+         * <p>The last update time.</p>
+         */
         @NameInMap("lastModifiedTime")
         public String lastModifiedTime;
 
@@ -60,7 +74,9 @@ public class ListAliasesResponseBody extends TeaModel {
         @NameInMap("routePolicy")
         public RoutePolicy routePolicy;
 
-        // The ID of the version.
+        /**
+         * <p>The ID of the version.</p>
+         */
         @NameInMap("versionId")
         public String versionId;
 
