@@ -4,38 +4,54 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribePrefixListAttributesResponseBody extends TeaModel {
-    // The IP address family of the prefix list. Valid values:
-    // 
-    // *   IPv4
-    // *   IPv6
+    /**
+     * <p>The IP address family of the prefix list. Valid values:</p>
+     * <br>
+     * <p>*   IPv4</p>
+     * <p>*   IPv6</p>
+     */
     @NameInMap("AddressFamily")
     public String addressFamily;
 
-    // The time when the prefix list was created.
+    /**
+     * <p>The time when the prefix list was created.</p>
+     */
     @NameInMap("CreationTime")
     public String creationTime;
 
-    // The description of the prefix list.
+    /**
+     * <p>The description of the prefix list.</p>
+     */
     @NameInMap("Description")
     public String description;
 
-    // Details about the entries in the prefix list.
+    /**
+     * <p>Details about the entries in the prefix list.</p>
+     */
     @NameInMap("Entries")
     public DescribePrefixListAttributesResponseBodyEntries entries;
 
-    // The maximum number of entries that the prefix list can contain.
+    /**
+     * <p>The maximum number of entries that the prefix list can contain.</p>
+     */
     @NameInMap("MaxEntries")
     public Integer maxEntries;
 
-    // The ID of the prefix list.
+    /**
+     * <p>The ID of the prefix list.</p>
+     */
     @NameInMap("PrefixListId")
     public String prefixListId;
 
-    // The name of the prefix list.
+    /**
+     * <p>The name of the prefix list.</p>
+     */
     @NameInMap("PrefixListName")
     public String prefixListName;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -109,11 +125,15 @@ public class DescribePrefixListAttributesResponseBody extends TeaModel {
     }
 
     public static class DescribePrefixListAttributesResponseBodyEntriesEntry extends TeaModel {
-        // The CIDR block in the entry in the prefix list.
+        /**
+         * <p>The CIDR block in the entry in the prefix list.</p>
+         */
         @NameInMap("Cidr")
         public String cidr;
 
-        // The description of the entry in the prefix list.
+        /**
+         * <p>The description of the entry in the prefix list.</p>
+         */
         @NameInMap("Description")
         public String description;
 

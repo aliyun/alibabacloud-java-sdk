@@ -4,23 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceStatusResponseBody extends TeaModel {
-    // The status information of the instances.
+    /**
+     * <p>The status information of the instances.</p>
+     */
     @NameInMap("InstanceStatuses")
     public DescribeInstanceStatusResponseBodyInstanceStatuses instanceStatuses;
 
-    // The page number of the returned page.
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // The number of entries returned per page.
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The total number of instances.
+    /**
+     * <p>The total number of instances.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -70,17 +80,21 @@ public class DescribeInstanceStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceStatusResponseBodyInstanceStatusesInstanceStatus extends TeaModel {
-        // The ID of instance.
+        /**
+         * <p>The ID of instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        // The state of the instance. Valid values:
-        // 
-        // * Pending: The instance is being created.
-        // * Running: The instance is running.
-        // * Starting: The instance is being started.
-        // * Stopping: The instance is being stopped.
-        // * Stopped: The instance is stopped.
+        /**
+         * <p>The state of the instance. Valid values:</p>
+         * <br>
+         * <p>* Pending: The instance is being created.</p>
+         * <p>* Running: The instance is running.</p>
+         * <p>* Starting: The instance is being started.</p>
+         * <p>* Stopping: The instance is being stopped.</p>
+         * <p>* Stopped: The instance is stopped.</p>
+         */
         @NameInMap("Status")
         public String status;
 

@@ -7,50 +7,66 @@ public class DescribeSnapshotsRequest extends TeaModel {
     @NameInMap("Filter")
     public java.util.List<DescribeSnapshotsRequestFilter> filter;
 
-    // The category of the snapshot. Valid values:
-    // 
-    // *   Standard: normal snapshot
-    // *   Flash: local snapshot
-    // 
-    // The local snapshot feature is replaced by the instant access feature. When you specify this parameter, take note of the following items:
-    // 
-    // *   If you have used local snapshots before December 14, 2020, you can use this parameter.
-    // *   If you have not used local snapshots before December 14, 2020, you cannot use this parameter.
-    // 
-    // >  This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.
+    /**
+     * <p>The category of the snapshot. Valid values:</p>
+     * <br>
+     * <p>*   Standard: normal snapshot</p>
+     * <p>*   Flash: local snapshot</p>
+     * <br>
+     * <p>The local snapshot feature is replaced by the instant access feature. When you specify this parameter, take note of the following items:</p>
+     * <br>
+     * <p>*   If you have used local snapshots before December 14, 2020, you can use this parameter.</p>
+     * <p>*   If you have not used local snapshots before December 14, 2020, you cannot use this parameter.</p>
+     * <br>
+     * <p>>  This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.</p>
+     */
     @NameInMap("Category")
     public String category;
 
-    // The ID of the disk.
+    /**
+     * <p>The ID of the disk.</p>
+     */
     @NameInMap("DiskId")
     public String diskId;
 
-    // Specifies whether to check the validity of the request without actually making the request. Valid values:
-    // 
-    // *   true: The validity of the request is checked but the request is not made. Check items include whether your AccessKey pair is valid, whether Resource Access Management (RAM) users are granted required permissions, and whether the required parameters are specified. If the check fails, the corresponding error is returned. If the check succeeds, the DryRunOperation error code is returned.
-    // *   false: The validity of the request is checked. If the check succeeds, a 2XX HTTP status code is returned, and the request is made.
+    /**
+     * <p>Specifies whether to check the validity of the request without actually making the request. Valid values:</p>
+     * <br>
+     * <p>*   true: The validity of the request is checked but the request is not made. Check items include whether your AccessKey pair is valid, whether Resource Access Management (RAM) users are granted required permissions, and whether the required parameters are specified. If the check fails, the corresponding error is returned. If the check succeeds, the DryRunOperation error code is returned.</p>
+     * <p>*   false: The validity of the request is checked. If the check succeeds, a 2XX HTTP status code is returned, and the request is made.</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
-    // Specifies whether the snapshot is encrypted. Default value: false.
+    /**
+     * <p>Specifies whether the snapshot is encrypted. Default value: false.</p>
+     */
     @NameInMap("Encrypted")
     public Boolean encrypted;
 
-    // The ID of the instance.
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // The ID of the Key Management Service (KMS) key used for the data disk.
+    /**
+     * <p>The ID of the Key Management Service (KMS) key used for the data disk.</p>
+     */
     @NameInMap("KMSKeyId")
     public String KMSKeyId;
 
-    // The maximum number of entries to return on each page. Maximum value: 100.
-    // 
-    // Default value: 10.
+    /**
+     * <p>The maximum number of entries to return on each page. Maximum value: 100.</p>
+     * <br>
+     * <p>Default value: 10.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // The token used to start the query. Set the value to the NextToken value obtained from the response to the previous request.
+    /**
+     * <p>The token used to start the query. Set the value to the NextToken value obtained from the response to the previous request.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -60,25 +76,33 @@ public class DescribeSnapshotsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The number of the page to return. Pages start from page 1.
-    // 
-    // Default value: 1.
+    /**
+     * <p>The number of the page to return. Pages start from page 1.</p>
+     * <br>
+     * <p>Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // The number of entries to return on each page. Maximum value: 100.
-    // 
-    // Default value: 10.
+    /**
+     * <p>The number of entries to return on each page. Maximum value: 100.</p>
+     * <br>
+     * <p>Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The region ID of the disk. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+    /**
+     * <p>The region ID of the disk. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The ID of the resource group to which the snapshot belongs. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.
-    // 
-    // >  Resources in the default resource group are displayed in the response regardless of how this parameter is set.
+    /**
+     * <p>The ID of the resource group to which the snapshot belongs. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.</p>
+     * <br>
+     * <p>>  Resources in the default resource group are displayed in the response regardless of how this parameter is set.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -88,54 +112,70 @@ public class DescribeSnapshotsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    // The IDs of snapshots. The value can be a JSON array that consists of up to 100 snapshot IDs. Separate the snapshot IDs with commas (,).
+    /**
+     * <p>The IDs of snapshots. The value can be a JSON array that consists of up to 100 snapshot IDs. Separate the snapshot IDs with commas (,).</p>
+     */
     @NameInMap("SnapshotIds")
     public String snapshotIds;
 
-    // The ID of the snapshot chain. The value is a JSON array that consists of up to 100 snapshot chain IDs. Separate multiple snapshot chain IDs with commas (,).
+    /**
+     * <p>The ID of the snapshot chain. The value is a JSON array that consists of up to 100 snapshot chain IDs. Separate multiple snapshot chain IDs with commas (,).</p>
+     */
     @NameInMap("SnapshotLinkId")
     public String snapshotLinkId;
 
-    // The name of the snapshot.
+    /**
+     * <p>The name of the snapshot.</p>
+     */
     @NameInMap("SnapshotName")
     public String snapshotName;
 
-    // The type of the snapshot. Default value: all. Valid values:
-    // 
-    // *   auto: automatic snapshot
-    // *   user: manual snapshot
-    // *   all: all snapshot types
+    /**
+     * <p>The type of the snapshot. Default value: all. Valid values:</p>
+     * <br>
+     * <p>*   auto: automatic snapshot</p>
+     * <p>*   user: manual snapshot</p>
+     * <p>*   all: all snapshot types</p>
+     */
     @NameInMap("SnapshotType")
     public String snapshotType;
 
-    // The type of the source disk for which the snapshot was created. Valid values:
-    // 
-    // *   System: system disk
-    // *   data: data disk
-    // 
-    // >  The value of this parameter is case-insensitive.
+    /**
+     * <p>The type of the source disk for which the snapshot was created. Valid values:</p>
+     * <br>
+     * <p>*   System: system disk</p>
+     * <p>*   data: data disk</p>
+     * <br>
+     * <p>>  The value of this parameter is case-insensitive.</p>
+     */
     @NameInMap("SourceDiskType")
     public String sourceDiskType;
 
-    // The state of the snapshot. Default value: all. Valid values:
-    // 
-    // *   progressing: The snapshot is being created.
-    // *   accomplished: The snapshot is created.
-    // *   failed: The snapshot fails to be created.
-    // *   all: This parameter indicates all snapshot states.
+    /**
+     * <p>The state of the snapshot. Default value: all. Valid values:</p>
+     * <br>
+     * <p>*   progressing: The snapshot is being created.</p>
+     * <p>*   accomplished: The snapshot is created.</p>
+     * <p>*   failed: The snapshot fails to be created.</p>
+     * <p>*   all: This parameter indicates all snapshot states.</p>
+     */
     @NameInMap("Status")
     public String status;
 
-    // The tags.
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeSnapshotsRequestTag> tag;
 
-    // Specifies whether the snapshot has been used to create images or disks. Valid values:
-    // 
-    // *   image: The snapshot has been used to create custom images.
-    // *   disk: The snapshot has been used to create disks.
-    // *   image_disk: The snapshot has been used to create both custom images and data disks.
-    // *   none: The snapshot has not been used to create images or disks.
+    /**
+     * <p>Specifies whether the snapshot has been used to create images or disks. Valid values:</p>
+     * <br>
+     * <p>*   image: The snapshot has been used to create custom images.</p>
+     * <p>*   disk: The snapshot has been used to create disks.</p>
+     * <p>*   image_disk: The snapshot has been used to create both custom images and data disks.</p>
+     * <p>*   none: The snapshot has not been used to create images or disks.</p>
+     */
     @NameInMap("Usage")
     public String usage;
 
@@ -345,11 +385,15 @@ public class DescribeSnapshotsRequest extends TeaModel {
     }
 
     public static class DescribeSnapshotsRequestFilter extends TeaModel {
-        // The key of filter 1 used to query resources. Set the value to `CreationStartTime`. You can specify a time by setting both `Filter.1.Key` and `Filter.1.Value` to query resources that were created after the time.
+        /**
+         * <p>The key of filter 1 used to query resources. Set the value to `CreationStartTime`. You can specify a time by setting both `Filter.1.Key` and `Filter.1.Value` to query resources that were created after the time.</p>
+         */
         @NameInMap("Key")
         public String key;
 
-        // The value of filter 1 used to query resources. Set the value to a time. If you specify this parameter, you must also specify the `Filter.1.Key` parameter. Specify the time in the `yyyy-MM-ddTHH:mmZ` format. The time must be in UTC.
+        /**
+         * <p>The value of filter 1 used to query resources. Set the value to a time. If you specify this parameter, you must also specify the `Filter.1.Key` parameter. Specify the time in the `yyyy-MM-ddTHH:mmZ` format. The time must be in UTC.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -377,13 +421,17 @@ public class DescribeSnapshotsRequest extends TeaModel {
     }
 
     public static class DescribeSnapshotsRequestTag extends TeaModel {
-        // The key of tag N of the snapshot. Valid values of N: 1 to 20.
-        // 
-        // If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.
+        /**
+         * <p>The key of tag N of the snapshot. Valid values of N: 1 to 20.</p>
+         * <br>
+         * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.</p>
+         */
         @NameInMap("Key")
         public String key;
 
-        // The value of tag N of the snapshot. Valid values of N: 1 to 20.
+        /**
+         * <p>The value of tag N of the snapshot. Valid values of N: 1 to 20.</p>
+         */
         @NameInMap("Value")
         public String value;
 

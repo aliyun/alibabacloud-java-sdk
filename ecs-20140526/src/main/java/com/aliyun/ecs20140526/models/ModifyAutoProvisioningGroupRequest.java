@@ -4,35 +4,47 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyAutoProvisioningGroupRequest extends TeaModel {
-    // The ID of the auto provisioning group.
+    /**
+     * <p>The ID of the auto provisioning group.</p>
+     */
     @NameInMap("AutoProvisioningGroupId")
     public String autoProvisioningGroupId;
 
-    // The name of the auto provisioning group. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+    /**
+     * <p>The name of the auto provisioning group. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+     */
     @NameInMap("AutoProvisioningGroupName")
     public String autoProvisioningGroupName;
 
-    // The billing method of supplemental instances. The target capacity of the auto provisioning group must be at least the sum of the capacity of pay-as-you-go instances specified by the PayAsYouGoTargetCapacity parameter and the capacity of preemptible instances specified by the SpotTargetCapacity parameter. Valid values:
-    // 
-    // *   PayAsYouGo: pay-as-you-go
-    // *   Spot: preemptible instance
+    /**
+     * <p>The billing method of supplemental instances. The target capacity of the auto provisioning group must be at least the sum of the capacity of pay-as-you-go instances specified by the PayAsYouGoTargetCapacity parameter and the capacity of preemptible instances specified by the SpotTargetCapacity parameter. Valid values:</p>
+     * <br>
+     * <p>*   PayAsYouGo: pay-as-you-go</p>
+     * <p>*   Spot: preemptible instance</p>
+     */
     @NameInMap("DefaultTargetCapacityType")
     public String defaultTargetCapacityType;
 
-    // Specifies whether to release scaled-in instances when the real-time capacity of the auto provisioning group exceeds the target capacity and the group is triggered to scale in. Valid values:
-    // 
-    // *   termination: releases the scaled-in instances.
-    // *   no-termination: removes the scaled-in instances from the auto provisioning group but not releases the instances.
+    /**
+     * <p>Specifies whether to release scaled-in instances when the real-time capacity of the auto provisioning group exceeds the target capacity and the group is triggered to scale in. Valid values:</p>
+     * <br>
+     * <p>*   termination: releases the scaled-in instances.</p>
+     * <p>*   no-termination: removes the scaled-in instances from the auto provisioning group but not releases the instances.</p>
+     */
     @NameInMap("ExcessCapacityTerminationPolicy")
     public String excessCapacityTerminationPolicy;
 
-    // The extended configurations of launch template.
+    /**
+     * <p>The extended configurations of launch template.</p>
+     */
     @NameInMap("LaunchTemplateConfig")
     public java.util.List<ModifyAutoProvisioningGroupRequestLaunchTemplateConfig> launchTemplateConfig;
 
-    // The maximum price of preemptible instances in the auto provisioning group.
-    // 
-    // >  If both the MaxSpotPrice and LaunchTemplateConfig.N.MaxPrice parameters are specified, the maximum price is the lower value of the two parameters. The LaunchTemplateConfig.N.MaxPrice parameter is set when the auto provisioning group is created, and cannot be modified.
+    /**
+     * <p>The maximum price of preemptible instances in the auto provisioning group.</p>
+     * <br>
+     * <p>>  If both the MaxSpotPrice and LaunchTemplateConfig.N.MaxPrice parameters are specified, the maximum price is the lower value of the two parameters. The LaunchTemplateConfig.N.MaxPrice parameter is set when the auto provisioning group is created, and cannot be modified.</p>
+     */
     @NameInMap("MaxSpotPrice")
     public Float maxSpotPrice;
 
@@ -42,11 +54,15 @@ public class ModifyAutoProvisioningGroupRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The target capacity of pay-as-you-go instances in the auto provisioning group. Valid values: Set this parameter to a value smaller than the TotalTargetCapacity value.
+    /**
+     * <p>The target capacity of pay-as-you-go instances in the auto provisioning group. Valid values: Set this parameter to a value smaller than the TotalTargetCapacity value.</p>
+     */
     @NameInMap("PayAsYouGoTargetCapacity")
     public String payAsYouGoTargetCapacity;
 
-    // The region ID of the auto provisioning group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+    /**
+     * <p>The region ID of the auto provisioning group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -56,20 +72,26 @@ public class ModifyAutoProvisioningGroupRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    // The target capacity of preemptible instances in the auto provisioning group. Valid values: Set this parameter to a value smaller than the TotalTargetCapacity value.
+    /**
+     * <p>The target capacity of preemptible instances in the auto provisioning group. Valid values: Set this parameter to a value smaller than the TotalTargetCapacity value.</p>
+     */
     @NameInMap("SpotTargetCapacity")
     public String spotTargetCapacity;
 
-    // Specifies whether to release instances in the auto provisioning group when the auto provisioning group expires. Valid values:
-    // 
-    // *   true: releases instances in the auto provisioning group.
-    // *   false: removes the instances in the group from the auto provisioning group but not releases the instances.
+    /**
+     * <p>Specifies whether to release instances in the auto provisioning group when the auto provisioning group expires. Valid values:</p>
+     * <br>
+     * <p>*   true: releases instances in the auto provisioning group.</p>
+     * <p>*   false: removes the instances in the group from the auto provisioning group but not releases the instances.</p>
+     */
     @NameInMap("TerminateInstancesWithExpiration")
     public Boolean terminateInstancesWithExpiration;
 
-    // The target capacity of the auto provisioning group. The parameter value is a positive integer.
-    // 
-    // The target capacity of the auto provisioning group must be at least the sum of the capacity of pay-as-you-go instances specified by the PayAsYouGoTargetCapacity parameter and the capacity of preemptible instances specified by the SpotTargetCapacity parameter.
+    /**
+     * <p>The target capacity of the auto provisioning group. The parameter value is a positive integer.</p>
+     * <br>
+     * <p>The target capacity of the auto provisioning group must be at least the sum of the capacity of pay-as-you-go instances specified by the PayAsYouGoTargetCapacity parameter and the capacity of preemptible instances specified by the SpotTargetCapacity parameter.</p>
+     */
     @NameInMap("TotalTargetCapacity")
     public String totalTargetCapacity;
 
@@ -199,28 +221,38 @@ public class ModifyAutoProvisioningGroupRequest extends TeaModel {
     }
 
     public static class ModifyAutoProvisioningGroupRequestLaunchTemplateConfig extends TeaModel {
-        // The instance type of extended configuration N. Valid values of N: 1 to 20. For more information about valid values of this parameter, see [Instance families](~~25378~~).
+        /**
+         * <p>The instance type of extended configuration N. Valid values of N: 1 to 20. For more information about valid values of this parameter, see [Instance families](~~25378~~).</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
-        // The maximum price of preemptible instances in extended configuration N.
+        /**
+         * <p>The maximum price of preemptible instances in extended configuration N.</p>
+         */
         @NameInMap("MaxPrice")
         public Double maxPrice;
 
-        // The priority of extended configuration N. A value of 0 indicates the highest priority. This parameter value must be greater than 0.
+        /**
+         * <p>The priority of extended configuration N. A value of 0 indicates the highest priority. This parameter value must be greater than 0.</p>
+         */
         @NameInMap("Priority")
         public Integer priority;
 
-        // The ID of the vSwitch in extended configuration N. The zone of the ECS instances created from the extended configurations is determined by the vSwitch.
+        /**
+         * <p>The ID of the vSwitch in extended configuration N. The zone of the ECS instances created from the extended configurations is determined by the vSwitch.</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
-        // The weight of the instance type specified in extended configuration N. A greater weight indicates that a single instance has more computing power, and as a result fewer instances are required. This parameter value must be greater than 0.
-        // 
-        // The weight is calculated based on the computing power of the specified instance type and the minimum computing power of a single node of the cluster. For example, if the minimum computing power of a single node is 8 vCPUs and 60 GiB:
-        // 
-        // *   The weight of the instance type with 8 vCPUs and 60 GiB can be set to 1.
-        // *   The weight of the instance type with 16 vCPUs and 120 GiB can be set to 2.
+        /**
+         * <p>The weight of the instance type specified in extended configuration N. A greater weight indicates that a single instance has more computing power, and as a result fewer instances are required. This parameter value must be greater than 0.</p>
+         * <br>
+         * <p>The weight is calculated based on the computing power of the specified instance type and the minimum computing power of a single node of the cluster. For example, if the minimum computing power of a single node is 8 vCPUs and 60 GiB:</p>
+         * <br>
+         * <p>*   The weight of the instance type with 8 vCPUs and 60 GiB can be set to 1.</p>
+         * <p>*   The weight of the instance type with 16 vCPUs and 120 GiB can be set to 2.</p>
+         */
         @NameInMap("WeightedCapacity")
         public Double weightedCapacity;
 

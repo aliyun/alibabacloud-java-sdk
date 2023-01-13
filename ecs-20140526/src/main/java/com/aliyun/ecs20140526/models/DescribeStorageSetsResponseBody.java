@@ -4,23 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeStorageSetsResponseBody extends TeaModel {
-    // The page number of the returned page.
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // The number of entries returned per page.
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Details about the storage sets. The value of this parameter is an array that consists of StorageSet data.
+    /**
+     * <p>Details about the storage sets. The value of this parameter is an array that consists of StorageSet data.</p>
+     */
     @NameInMap("StorageSets")
     public DescribeStorageSetsResponseBodyStorageSets storageSets;
 
-    // The total number of storage sets.
+    /**
+     * <p>The total number of storage sets.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -70,31 +80,45 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
     }
 
     public static class DescribeStorageSetsResponseBodyStorageSetsStorageSet extends TeaModel {
-        // The time when the storage set was created.
+        /**
+         * <p>The time when the storage set was created.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        // The description of the storage set.
+        /**
+         * <p>The description of the storage set.</p>
+         */
         @NameInMap("Description")
         public String description;
 
-        // The ID of the region to which the storage set belongs.
+        /**
+         * <p>The ID of the region to which the storage set belongs.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
-        // The ID of the storage set.
+        /**
+         * <p>The ID of the storage set.</p>
+         */
         @NameInMap("StorageSetId")
         public String storageSetId;
 
-        // The name of the storage set.
+        /**
+         * <p>The name of the storage set.</p>
+         */
         @NameInMap("StorageSetName")
         public String storageSetName;
 
-        // The maximum number of partitions supported by the storage set.
+        /**
+         * <p>The maximum number of partitions supported by the storage set.</p>
+         */
         @NameInMap("StorageSetPartitionNumber")
         public Integer storageSetPartitionNumber;
 
-        // The ID of the zone to which the storage set belongs.
+        /**
+         * <p>The ID of the zone to which the storage set belongs.</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

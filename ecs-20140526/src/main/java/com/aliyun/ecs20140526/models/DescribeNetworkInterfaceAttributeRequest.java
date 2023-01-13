@@ -4,11 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeNetworkInterfaceAttributeRequest extends TeaModel {
-    // The attributes of the ENI.
+    /**
+     * <p>The attributes of the ENI.</p>
+     */
     @NameInMap("Attribute")
     public String attribute;
 
-    // The ID of the ENI.
+    /**
+     * <p>The ID of the ENI.</p>
+     */
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;
 
@@ -18,7 +22,9 @@ public class DescribeNetworkInterfaceAttributeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+    /**
+     * <p>The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -101,11 +107,15 @@ public class DescribeNetworkInterfaceAttributeRequest extends TeaModel {
     }
 
     public static class DescribeNetworkInterfaceAttributeRequestTag extends TeaModel {
-        // >  This parameter is unavailable.
+        /**
+         * <p>>  This parameter is unavailable.</p>
+         */
         @NameInMap("Key")
         public String key;
 
-        // >  This parameter is unavailable.
+        /**
+         * <p>>  This parameter is unavailable.</p>
+         */
         @NameInMap("Value")
         public String value;
 

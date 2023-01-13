@@ -4,15 +4,21 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeDiagnosticMetricsResponseBody extends TeaModel {
-    // The list of diagnostic metrics.
+    /**
+     * <p>The list of diagnostic metrics.</p>
+     */
     @NameInMap("Metrics")
     public java.util.List<DescribeDiagnosticMetricsResponseBodyMetrics> metrics;
 
-    // The query token returned in this call.
+    /**
+     * <p>The query token returned in this call.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -46,35 +52,49 @@ public class DescribeDiagnosticMetricsResponseBody extends TeaModel {
     }
 
     public static class DescribeDiagnosticMetricsResponseBodyMetrics extends TeaModel {
-        // The description of the diagnostic metric.
+        /**
+         * <p>The description of the diagnostic metric.</p>
+         */
         @NameInMap("Description")
         public String description;
 
-        // Indicates whether the diagnostic metric needs to be assessed by running a Cloud Assistant command in a guest operating system.
+        /**
+         * <p>Indicates whether the diagnostic metric needs to be assessed by running a Cloud Assistant command in a guest operating system.</p>
+         */
         @NameInMap("GuestMetric")
         public Boolean guestMetric;
 
-        // The category of the diagnostic metric.
+        /**
+         * <p>The category of the diagnostic metric.</p>
+         */
         @NameInMap("MetricCategory")
         public String metricCategory;
 
-        // The ID of the diagnostic metric.
+        /**
+         * <p>The ID of the diagnostic metric.</p>
+         */
         @NameInMap("MetricId")
         public String metricId;
 
-        // The name of the diagnostic metric.
+        /**
+         * <p>The name of the diagnostic metric.</p>
+         */
         @NameInMap("MetricName")
         public String metricName;
 
-        // The resource type supported by the diagnostic metric.
+        /**
+         * <p>The resource type supported by the diagnostic metric.</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
-        // The operating system type supported by the diagnostic metric. Valid values:
-        // 
-        // *   Windows
-        // *   Linux
-        // *   All: both Windows and Linux
+        /**
+         * <p>The operating system type supported by the diagnostic metric. Valid values:</p>
+         * <br>
+         * <p>*   Windows</p>
+         * <p>*   Linux</p>
+         * <p>*   All: both Windows and Linux</p>
+         */
         @NameInMap("SupportedOperatingSystem")
         public String supportedOperatingSystem;
 

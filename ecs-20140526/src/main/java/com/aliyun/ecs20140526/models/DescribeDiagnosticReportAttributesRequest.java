@@ -4,11 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeDiagnosticReportAttributesRequest extends TeaModel {
-    // The region ID of the diagnostic report. You can call the [DescribeRegions](https://www.alibabacloud.com/help/en/elastic-compute-service/latest/regions-describeregions) operation to query the most recent region list.
+    /**
+     * <p>The region ID of the diagnostic report. You can call the [DescribeRegions](https://www.alibabacloud.com/help/en/elastic-compute-service/latest/regions-describeregions) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The ID of the diagnostic report.
+    /**
+     * <p>The ID of the diagnostic report.</p>
+     */
     @NameInMap("ReportId")
     public String reportId;
 

@@ -4,94 +4,122 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeImagesRequest extends TeaModel {
-    // The scenario in which to use the image. Default value: CreateEcs. Valid values:
-    // 
-    // *   CreateEcs: instance creation
-    // *   ChangeOS: replacement of the system disk or operating system
+    /**
+     * <p>The scenario in which to use the image. Default value: CreateEcs. Valid values:</p>
+     * <br>
+     * <p>*   CreateEcs: instance creation</p>
+     * <p>*   ChangeOS: replacement of the system disk or operating system</p>
+     */
     @NameInMap("ActionType")
     public String actionType;
 
-    // The image architecture. Valid values:
-    // 
-    // *   i386
-    // *   x86\_64
-    // *   arm64
+    /**
+     * <p>The image architecture. Valid values:</p>
+     * <br>
+     * <p>*   i386</p>
+     * <p>*   x86\_64</p>
+     * <p>*   arm64</p>
+     */
     @NameInMap("Architecture")
     public String architecture;
 
-    // Specifies whether to check the validity of the request without actually making the request. Valid values:
-    // 
-    // *   true: The validity of the request is checked but the request is not made. Check items include whether your AccessKey pair is valid, whether RAM users are granted required permissions, and whether the required parameters are specified. If the check fails, the corresponding error is returned. If the check succeeds, the DryRunOperation error code is returned.
-    // *   false: The validity of the request is checked. If the check succeeds, a 2XX HTTP status code is returned, and the request is made.
-    // 
-    // Default value: false.
+    /**
+     * <p>Specifies whether to check the validity of the request without actually making the request. Valid values:</p>
+     * <br>
+     * <p>*   true: The validity of the request is checked but the request is not made. Check items include whether your AccessKey pair is valid, whether RAM users are granted required permissions, and whether the required parameters are specified. If the check fails, the corresponding error is returned. If the check succeeds, the DryRunOperation error code is returned.</p>
+     * <p>*   false: The validity of the request is checked. If the check succeeds, a 2XX HTTP status code is returned, and the request is made.</p>
+     * <br>
+     * <p>Default value: false.</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
-    // The filters that used to query resources.
+    /**
+     * <p>The filters that used to query resources.</p>
+     */
     @NameInMap("Filter")
     public java.util.List<DescribeImagesRequestFilter> filter;
 
-    // The name of the image family. You can set this parameter to query images of the specified image family.
-    // 
-    // This parameter is empty by default.
+    /**
+     * <p>The name of the image family. You can set this parameter to query images of the specified image family.</p>
+     * <br>
+     * <p>This parameter is empty by default.</p>
+     */
     @NameInMap("ImageFamily")
     public String imageFamily;
 
-    // The ID of the image.
+    /**
+     * <p>The ID of the image.</p>
+     */
     @NameInMap("ImageId")
     public String imageId;
 
-    // The name of the image.
+    /**
+     * <p>The name of the image.</p>
+     */
     @NameInMap("ImageName")
     public String imageName;
 
-    // The source of the image. Valid values:
-    // 
-    // *   system: public images provided by Alibaba Cloud.
-    // 
-    // *   self: your custom images.
-    // 
-    // *   others: shared images from other Alibaba Cloud accounts or community images published by other Alibaba Cloud accounts. Take note of the following items:
-    // 
-    //     *   To query community images, you must set IsPublic to true.
-    //     *   To query shared images, you must set IsPublic to false or leave the IsPublic parameter empty.
-    // 
-    // *   marketplace: Alibaba Cloud Marketplace images. If Alibaba Cloud Marketplace images are returned in the response, you can use the images without subscription. You must pay attention to the billing details of Alibaba Cloud Marketplace images.
-    // 
-    // This parameter is empty by default, which indicates that your custom images, public images provided by Alibaba Cloud, shared images from other Alibaba Cloud accounts, and community images published by other Alibaba Cloud accounts are queried.
+    /**
+     * <p>The source of the image. Valid values:</p>
+     * <br>
+     * <p>*   system: public images provided by Alibaba Cloud.</p>
+     * <br>
+     * <p>*   self: your custom images.</p>
+     * <br>
+     * <p>*   others: shared images from other Alibaba Cloud accounts or community images published by other Alibaba Cloud accounts. Take note of the following items:</p>
+     * <br>
+     * <p>    *   To query community images, you must set IsPublic to true.</p>
+     * <p>    *   To query shared images, you must set IsPublic to false or leave the IsPublic parameter empty.</p>
+     * <br>
+     * <p>*   marketplace: Alibaba Cloud Marketplace images. If Alibaba Cloud Marketplace images are returned in the response, you can use the images without subscription. You must pay attention to the billing details of Alibaba Cloud Marketplace images.</p>
+     * <br>
+     * <p>This parameter is empty by default, which indicates that your custom images, public images provided by Alibaba Cloud, shared images from other Alibaba Cloud accounts, and community images published by other Alibaba Cloud accounts are queried.</p>
+     */
     @NameInMap("ImageOwnerAlias")
     public String imageOwnerAlias;
 
-    // The ID of the Alibaba Cloud account to which the image belongs. This parameter takes effect only when you query shared images or community images.
+    /**
+     * <p>The ID of the Alibaba Cloud account to which the image belongs. This parameter takes effect only when you query shared images or community images.</p>
+     */
     @NameInMap("ImageOwnerId")
     public Long imageOwnerId;
 
-    // The instance type for which the image can be used.
+    /**
+     * <p>The instance type for which the image can be used.</p>
+     */
     @NameInMap("InstanceType")
     public String instanceType;
 
-    // Specifies whether to query published community images. Valid values:
-    // 
-    // *   true: queries published community images. When you set this parameter to true, you must set ImageOwnerAlias to others.
-    // *   false: queries other image types than community images. The specific image types to be queried are determined by the ImageOwnerAlias value.
-    // 
-    // Default value: false.
+    /**
+     * <p>Specifies whether to query published community images. Valid values:</p>
+     * <br>
+     * <p>*   true: queries published community images. When you set this parameter to true, you must set ImageOwnerAlias to others.</p>
+     * <p>*   false: queries other image types than community images. The specific image types to be queried are determined by the ImageOwnerAlias value.</p>
+     * <br>
+     * <p>Default value: false.</p>
+     */
     @NameInMap("IsPublic")
     public Boolean isPublic;
 
-    // Specifies whether the image supports cloud-init.
+    /**
+     * <p>Specifies whether the image supports cloud-init.</p>
+     */
     @NameInMap("IsSupportCloudinit")
     public Boolean isSupportCloudinit;
 
-    // Specifies whether the image can be used on I/O optimized instances.
+    /**
+     * <p>Specifies whether the image can be used on I/O optimized instances.</p>
+     */
     @NameInMap("IsSupportIoOptimized")
     public Boolean isSupportIoOptimized;
 
-    // The operating system type of the image. Valid values:
-    // 
-    // *   windows
-    // *   linux
+    /**
+     * <p>The operating system type of the image. Valid values:</p>
+     * <br>
+     * <p>*   windows</p>
+     * <p>*   linux</p>
+     */
     @NameInMap("OSType")
     public String OSType;
 
@@ -101,27 +129,35 @@ public class DescribeImagesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The number of the page to return.
-    // 
-    // Pages start from page 1.
-    // 
-    // Default value: 1.
+    /**
+     * <p>The number of the page to return.</p>
+     * <br>
+     * <p>Pages start from page 1.</p>
+     * <br>
+     * <p>Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // The number of entries to return on each page.
-    // 
-    // Maximum value: 100.
-    // 
-    // Default value: 10.
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>Maximum value: 100.</p>
+     * <br>
+     * <p>Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The region ID of the image. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+    /**
+     * <p>The region ID of the image. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The ID of the resource group to which the custom image belongs. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.
+    /**
+     * <p>The ID of the resource group to which the custom image belongs. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -131,37 +167,47 @@ public class DescribeImagesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    // Specifies whether the subscription image has expired.
-    // 
-    // >  This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.
+    /**
+     * <p>Specifies whether the subscription image has expired.</p>
+     * <br>
+     * <p>>  This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.</p>
+     */
     @NameInMap("ShowExpired")
     public Boolean showExpired;
 
-    // The ID of the snapshot used to create the custom image.
+    /**
+     * <p>The ID of the snapshot used to create the custom image.</p>
+     */
     @NameInMap("SnapshotId")
     public String snapshotId;
 
-    // The state of the image. Default value: Available. Valid values:
-    // 
-    // * Creating: The image is being created.
-    // * Waiting: The image is waiting to be processed.
-    // * Available: The image is available.
-    // * UnAvailable: The image is unavailable.
-    // * CreateFailed: The image cannot be created.
-    // * Deprecated: The image is discontinued.
-    // 
-    // You can specify multiple values. Separate the values with commas (,).
+    /**
+     * <p>The state of the image. Default value: Available. Valid values:</p>
+     * <br>
+     * <p>* Creating: The image is being created.</p>
+     * <p>* Waiting: The image is waiting to be processed.</p>
+     * <p>* Available: The image is available.</p>
+     * <p>* UnAvailable: The image is unavailable.</p>
+     * <p>* CreateFailed: The image cannot be created.</p>
+     * <p>* Deprecated: The image is discontinued.</p>
+     * <br>
+     * <p>You can specify multiple values. Separate the values with commas (,).</p>
+     */
     @NameInMap("Status")
     public String status;
 
-    // The tags that used to query resources. You can specify up to 20 tags.
+    /**
+     * <p>The tags that used to query resources. You can specify up to 20 tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeImagesRequestTag> tag;
 
-    // Specifies whether the image is running on an Elastic Compute Service (ECS) instance. Valid values:
-    // 
-    // *   instance: The image is already in use and running on an ECS instance.
-    // *   none: The image is not in use.
+    /**
+     * <p>Specifies whether the image is running on an Elastic Compute Service (ECS) instance. Valid values:</p>
+     * <br>
+     * <p>*   instance: The image is already in use and running on an ECS instance.</p>
+     * <p>*   none: The image is not in use.</p>
+     */
     @NameInMap("Usage")
     public String usage;
 
@@ -387,14 +433,18 @@ public class DescribeImagesRequest extends TeaModel {
     }
 
     public static class DescribeImagesRequestFilter extends TeaModel {
-        // The key of filter N used to query resources. Valid values:
-        // 
-        // *   If you set this parameter to `CreationStartTime`, you can query the resources that were created after the point in time specified by the `Filter.N.Value` value.
-        // *   If you set this parameter to `CreationEndTime`, you can query the resources that were created before the point in time specified by the `Filter.N.Value` value.
+        /**
+         * <p>The key of filter N used to query resources. Valid values:</p>
+         * <br>
+         * <p>*   If you set this parameter to `CreationStartTime`, you can query the resources that were created after the point in time specified by the `Filter.N.Value` value.</p>
+         * <p>*   If you set this parameter to `CreationEndTime`, you can query the resources that were created before the point in time specified by the `Filter.N.Value` value.</p>
+         */
         @NameInMap("Key")
         public String key;
 
-        // The value of filter N used to query resources. When you specify this parameter, you must also specify the `Filter.N.Key` parameter. Specify the time in the `yyyy-MM-ddTHH:mmZ` format. The time must be in UTC.
+        /**
+         * <p>The value of filter N used to query resources. When you specify this parameter, you must also specify the `Filter.N.Key` parameter. Specify the time in the `yyyy-MM-ddTHH:mmZ` format. The time must be in UTC.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -422,13 +472,17 @@ public class DescribeImagesRequest extends TeaModel {
     }
 
     public static class DescribeImagesRequestTag extends TeaModel {
-        // The key of tag of the image.
-        // 
-        // If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.
+        /**
+         * <p>The key of tag of the image.</p>
+         * <br>
+         * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.</p>
+         */
         @NameInMap("Key")
         public String key;
 
-        // The value of tag of the image.
+        /**
+         * <p>The value of tag of the image.</p>
+         */
         @NameInMap("Value")
         public String value;
 

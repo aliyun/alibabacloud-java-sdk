@@ -4,23 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeLaunchTemplatesResponseBody extends TeaModel {
-    // Details about the launch templates.
+    /**
+     * <p>Details about the launch templates.</p>
+     */
     @NameInMap("LaunchTemplateSets")
     public DescribeLaunchTemplatesResponseBodyLaunchTemplateSets launchTemplateSets;
 
-    // The page number of the returned page.
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // The number of entries returned per page.
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The total number of launch templates.
+    /**
+     * <p>The total number of launch templates.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -70,11 +80,15 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
     }
 
     public static class DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSetTagsTag extends TeaModel {
-        // The tag key of the launch template.
+        /**
+         * <p>The tag key of the launch template.</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        // The tag value of the launch template.
+        /**
+         * <p>The tag value of the launch template.</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -121,39 +135,57 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
     }
 
     public static class DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSet extends TeaModel {
-        // The time when the launch template was created.
+        /**
+         * <p>The time when the launch template was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        // The creator of the launch template.
+        /**
+         * <p>The creator of the launch template.</p>
+         */
         @NameInMap("CreatedBy")
         public String createdBy;
 
-        // The default version number of the launch template.
+        /**
+         * <p>The default version number of the launch template.</p>
+         */
         @NameInMap("DefaultVersionNumber")
         public Long defaultVersionNumber;
 
-        // The latest version number of the launch template.
+        /**
+         * <p>The latest version number of the launch template.</p>
+         */
         @NameInMap("LatestVersionNumber")
         public Long latestVersionNumber;
 
-        // The ID of the launch template.
+        /**
+         * <p>The ID of the launch template.</p>
+         */
         @NameInMap("LaunchTemplateId")
         public String launchTemplateId;
 
-        // The name of the launch template.
+        /**
+         * <p>The name of the launch template.</p>
+         */
         @NameInMap("LaunchTemplateName")
         public String launchTemplateName;
 
-        // The time when the launch template was modified.
+        /**
+         * <p>The time when the launch template was modified.</p>
+         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
-        // The ID of the resource group to which the launch template belongs.
+        /**
+         * <p>The ID of the resource group to which the launch template belongs.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        // The tags of the launch template.
+        /**
+         * <p>The tags of the launch template.</p>
+         */
         @NameInMap("Tags")
         public DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSetTags tags;
 

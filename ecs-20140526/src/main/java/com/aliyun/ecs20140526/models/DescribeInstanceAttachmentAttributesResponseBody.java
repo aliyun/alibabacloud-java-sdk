@@ -4,23 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
-    // Details about the private pools from which the instances are created.
+    /**
+     * <p>Details about the private pools from which the instances are created.</p>
+     */
     @NameInMap("Instances")
     public DescribeInstanceAttachmentAttributesResponseBodyInstances instances;
 
-    // The number of the page returned.
+    /**
+     * <p>The number of the page returned.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // The number of entries returned per page.
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The number of entries that meet the query criteria.
+    /**
+     * <p>The number of entries that meet the query criteria.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -70,19 +80,25 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceAttachmentAttributesResponseBodyInstancesInstance extends TeaModel {
-        // The ID of the instance.
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        // The ID of the private pool. When the value of `PrivatePoolOptionsMatchCriteria` is `Open`, the private pool ID is the ID that was allocated by the system for automatic match.
+        /**
+         * <p>The ID of the private pool. When the value of `PrivatePoolOptionsMatchCriteria` is `Open`, the private pool ID is the ID that was allocated by the system for automatic match.</p>
+         */
         @NameInMap("PrivatePoolOptionsId")
         public String privatePoolOptionsId;
 
-        // The match mode of the private pool. Valid values:
-        // 
-        // *   Open: Instances automatically match an open private pool.
-        // *   Target: Instances match a specified private pool.
-        // *   None: Instances do not use private pools.
+        /**
+         * <p>The match mode of the private pool. Valid values:</p>
+         * <br>
+         * <p>*   Open: Instances automatically match an open private pool.</p>
+         * <p>*   Target: Instances match a specified private pool.</p>
+         * <p>*   None: Instances do not use private pools.</p>
+         */
         @NameInMap("PrivatePoolOptionsMatchCriteria")
         public String privatePoolOptionsMatchCriteria;
 

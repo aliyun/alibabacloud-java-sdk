@@ -4,14 +4,18 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DeleteKeyPairsRequest extends TeaModel {
-    // The names of SSH key pairs. The value can be a JSON array that consists of up to 100 key pair names. Separate multiple key pair names with commas (,).
+    /**
+     * <p>The names of SSH key pairs. The value can be a JSON array that consists of up to 100 key pair names. Separate multiple key pair names with commas (,).</p>
+     */
     @NameInMap("KeyPairNames")
     public String keyPairNames;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+    /**
+     * <p>The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

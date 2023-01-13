@@ -4,20 +4,26 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeStorageCapacityUnitsRequest extends TeaModel {
-    // The allocation type. Valid values:
-    // 
-    // *   Normal: queries SCUs within the current Alibaba Cloud account.
-    // *   Shared: queries SCUs shared between the Alibaba Cloud account and RAM users.
-    // 
-    // Default value: Normal.
+    /**
+     * <p>The allocation type. Valid values:</p>
+     * <br>
+     * <p>*   Normal: queries SCUs within the current Alibaba Cloud account.</p>
+     * <p>*   Shared: queries SCUs shared between the Alibaba Cloud account and RAM users.</p>
+     * <br>
+     * <p>Default value: Normal.</p>
+     */
     @NameInMap("AllocationType")
     public String allocationType;
 
-    // The capacity of the SCU. Unit: GiB. Valid values: 20, 40, 100, 200, 500, 1024, 2048, 5120, 10240, 20480, and 51200.
+    /**
+     * <p>The capacity of the SCU. Unit: GiB. Valid values: 20, 40, 100, 200, 500, 1024, 2048, 5120, 10240, 20480, and 51200.</p>
+     */
     @NameInMap("Capacity")
     public Integer capacity;
 
-    // The name of the SCU. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+    /**
+     * <p>The name of the SCU. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+     */
     @NameInMap("Name")
     public String name;
 
@@ -27,23 +33,29 @@ public class DescribeStorageCapacityUnitsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The number of the page to return.
-    // 
-    // Pages start from page 1.
-    // 
-    // Default value: 1.
+    /**
+     * <p>The number of the page to return.</p>
+     * <br>
+     * <p>Pages start from page 1.</p>
+     * <br>
+     * <p>Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // The number of entries to return on each page.
-    // 
-    // Maximum value: 100.
-    // 
-    // Default value: 10.
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>Maximum value: 100.</p>
+     * <br>
+     * <p>Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The region ID of the SCU. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+    /**
+     * <p>The region ID of the SCU. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -53,15 +65,21 @@ public class DescribeStorageCapacityUnitsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    // The statuses of SCUs.
+    /**
+     * <p>The statuses of SCUs.</p>
+     */
     @NameInMap("Status")
     public java.util.List<String> status;
 
-    // The IDs of the SCUs. You can enter at most 100 SCU IDs.
+    /**
+     * <p>The IDs of the SCUs. You can enter at most 100 SCU IDs.</p>
+     */
     @NameInMap("StorageCapacityUnitId")
     public java.util.List<String> storageCapacityUnitId;
 
-    // The tags.
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeStorageCapacityUnitsRequestTag> tag;
 
@@ -175,11 +193,15 @@ public class DescribeStorageCapacityUnitsRequest extends TeaModel {
     }
 
     public static class DescribeStorageCapacityUnitsRequestTag extends TeaModel {
-        // The key of tag N of the SCU. N indicates that you can set multiple tag keys to query. Valid values of N: 1 to 20.
+        /**
+         * <p>The key of tag N of the SCU. N indicates that you can set multiple tag keys to query. Valid values of N: 1 to 20.</p>
+         */
         @NameInMap("Key")
         public String key;
 
-        // The value of tag N of the SCU. N indicates that you can set multiple tag values to query and corresponds to N of `Tag.N.Key`. Valid values of N: 1 to 20.
+        /**
+         * <p>The value of tag N of the SCU. N indicates that you can set multiple tag values to query and corresponds to N of `Tag.N.Key`. Valid values of N: 1 to 20.</p>
+         */
         @NameInMap("Value")
         public String value;
 

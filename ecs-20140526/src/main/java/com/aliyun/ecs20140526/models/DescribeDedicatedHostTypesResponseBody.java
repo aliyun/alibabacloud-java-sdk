@@ -4,11 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
-    // The information about the dedicated host type.
+    /**
+     * <p>The information about the dedicated host type.</p>
+     */
     @NameInMap("DedicatedHostTypes")
     public DescribeDedicatedHostTypesResponseBodyDedicatedHostTypes dedicatedHostTypes;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -72,63 +76,93 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
     }
 
     public static class DescribeDedicatedHostTypesResponseBodyDedicatedHostTypesDedicatedHostType extends TeaModel {
-        // The number of cores in a single physical CPU.
+        /**
+         * <p>The number of cores in a single physical CPU.</p>
+         */
         @NameInMap("Cores")
         public Integer cores;
 
-        // The supported CPU overcommit ratio range.
+        /**
+         * <p>The supported CPU overcommit ratio range.</p>
+         */
         @NameInMap("CpuOverCommitRatioRange")
         public String cpuOverCommitRatioRange;
 
-        // The type of the dedicated host. You can submit a ticket to request more dedicated host types.
+        /**
+         * <p>The type of the dedicated host. You can submit a ticket to request more dedicated host types.</p>
+         */
         @NameInMap("DedicatedHostType")
         public String dedicatedHostType;
 
-        // The GPU model.
+        /**
+         * <p>The GPU model.</p>
+         */
         @NameInMap("GPUSpec")
         public String GPUSpec;
 
-        // The number of local disks on a dedicated host.
+        /**
+         * <p>The number of local disks on a dedicated host.</p>
+         */
         @NameInMap("LocalStorageAmount")
         public Integer localStorageAmount;
 
-        // The capacity of a local disk. Unit: GiB.
+        /**
+         * <p>The capacity of a local disk. Unit: GiB.</p>
+         */
         @NameInMap("LocalStorageCapacity")
         public Long localStorageCapacity;
 
-        // The category of the local disks.
+        /**
+         * <p>The category of the local disks.</p>
+         */
         @NameInMap("LocalStorageCategory")
         public String localStorageCategory;
 
-        // The size of the memory. Unit: GiB.
+        /**
+         * <p>The size of the memory. Unit: GiB.</p>
+         */
         @NameInMap("MemorySize")
         public Float memorySize;
 
-        // The number of physical GPUs.
+        /**
+         * <p>The number of physical GPUs.</p>
+         */
         @NameInMap("PhysicalGpus")
         public Integer physicalGpus;
 
-        // The number of physical CPUs.
+        /**
+         * <p>The number of physical CPUs.</p>
+         */
         @NameInMap("Sockets")
         public Integer sockets;
 
-        // Indicates whether the CPU overcommit ratio setting is supported.
+        /**
+         * <p>Indicates whether the CPU overcommit ratio setting is supported.</p>
+         */
         @NameInMap("SupportCpuOverCommitRatio")
         public Boolean supportCpuOverCommitRatio;
 
-        // The ECS instance families supported by the dedicated host.
+        /**
+         * <p>The ECS instance families supported by the dedicated host.</p>
+         */
         @NameInMap("SupportedInstanceTypeFamilies")
         public DescribeDedicatedHostTypesResponseBodyDedicatedHostTypesDedicatedHostTypeSupportedInstanceTypeFamilies supportedInstanceTypeFamilies;
 
-        // The ECS instance types supported by the dedicated host.
+        /**
+         * <p>The ECS instance types supported by the dedicated host.</p>
+         */
         @NameInMap("SupportedInstanceTypesList")
         public DescribeDedicatedHostTypesResponseBodyDedicatedHostTypesDedicatedHostTypeSupportedInstanceTypesList supportedInstanceTypesList;
 
-        // The total number of vCPUs.
+        /**
+         * <p>The total number of vCPUs.</p>
+         */
         @NameInMap("TotalVcpus")
         public Integer totalVcpus;
 
-        // The total number of vGPUs.
+        /**
+         * <p>The total number of vGPUs.</p>
+         */
         @NameInMap("TotalVgpus")
         public Integer totalVgpus;
 

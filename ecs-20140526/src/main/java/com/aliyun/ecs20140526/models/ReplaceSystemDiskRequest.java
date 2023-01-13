@@ -7,61 +7,81 @@ public class ReplaceSystemDiskRequest extends TeaModel {
     @NameInMap("SystemDisk")
     public ReplaceSystemDiskRequestSystemDisk systemDisk;
 
-    // The system architecture. Valid values:
-    // 
-    // *   i386
-    // *   x86\_64
+    /**
+     * <p>The system architecture. Valid values:</p>
+     * <br>
+     * <p>*   i386</p>
+     * <p>*   x86\_64</p>
+     */
     @NameInMap("Architecture")
     public String architecture;
 
-    // > This parameter is in invitational preview and is unavailable.
+    /**
+     * <p>> This parameter is in invitational preview and is unavailable.</p>
+     */
     @NameInMap("Arn")
     public java.util.List<ReplaceSystemDiskRequestArn> arn;
 
-    // The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // The ID of the disk to be used to replace the operating system.
-    // 
-    // If the `ImageId` parameter is not specified, this parameter is required.
-    // 
-    // If the DiskId parameter is specified, the `Platform` and `Architecture` parameters must be specified. The specified values of `Platform` and `Architecture` must be consistent with those of `Platform` and `Architecture` of the instance.
-    // 
-    // >  This feature is in invitational preview. To use this feature, [submit a ticket](https://workorder-intl.console.aliyun.com/console.htm).
+    /**
+     * <p>The ID of the disk to be used to replace the operating system.</p>
+     * <br>
+     * <p>If the `ImageId` parameter is not specified, this parameter is required.</p>
+     * <br>
+     * <p>If the DiskId parameter is specified, the `Platform` and `Architecture` parameters must be specified. The specified values of `Platform` and `Architecture` must be consistent with those of `Platform` and `Architecture` of the instance.</p>
+     * <br>
+     * <p>>  This feature is in invitational preview. To use this feature, [submit a ticket](https://workorder-intl.console.aliyun.com/console.htm).</p>
+     */
     @NameInMap("DiskId")
     public String diskId;
 
-    // > This parameter is in invitational preview and is unavailable.
+    /**
+     * <p>> This parameter is in invitational preview and is unavailable.</p>
+     */
     @NameInMap("EncryptAlgorithm")
     public String encryptAlgorithm;
 
-    // Specifies whether to encrypt the disk. Valid values:
-    // 
-    // *   true: encrypts the disk.
-    // *   false: does not encrypt the disk.
-    // 
-    // Default value: false.
+    /**
+     * <p>Specifies whether to encrypt the disk. Valid values:</p>
+     * <br>
+     * <p>*   true: encrypts the disk.</p>
+     * <p>*   false: does not encrypt the disk.</p>
+     * <br>
+     * <p>Default value: false.</p>
+     */
     @NameInMap("Encrypted")
     public Boolean encrypted;
 
-    // The ID of the image to be used to replace the system disk.
-    // 
-    // If the `DiskId` parameter is not specified, this parameter is required.
+    /**
+     * <p>The ID of the image to be used to replace the system disk.</p>
+     * <br>
+     * <p>If the `DiskId` parameter is not specified, this parameter is required.</p>
+     */
     @NameInMap("ImageId")
     public String imageId;
 
-    // The ID of the instance.
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // The ID of the Key Management Service (KMS) key used by the disk.
+    /**
+     * <p>The ID of the Key Management Service (KMS) key used by the disk.</p>
+     */
     @NameInMap("KMSKeyId")
     public String KMSKeyId;
 
-    // The name of the key pair bound to the instance.
-    // 
-    // >  This parameter is applicable to only Linux instances. You can bind an SSH key pair to the instance as a logon credential. After the SSH key pair is bound, the username and password logon method is disabled for the instance.
+    /**
+     * <p>The name of the key pair bound to the instance.</p>
+     * <br>
+     * <p>>  This parameter is applicable to only Linux instances. You can bind an SSH key pair to the instance as a logon credential. After the SSH key pair is bound, the username and password logon method is disabled for the instance.</p>
+     */
     @NameInMap("KeyPairName")
     public String keyPairName;
 
@@ -71,34 +91,40 @@ public class ReplaceSystemDiskRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // Specifies whether to reset the password for the instance. The password must be 8 to 30 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include:
-    // 
-    // ```
-    // 
-    // ()`~!@#$%^&*-_+=|{}[]:;\"<>,.?/
-    //                                 
-    // ```
-    // 
-    // The password of a Windows instance cannot start with a forward slash (/).
-    // 
-    // This parameter is empty by default, which indicates that the current password remains unchanged.
-    // 
-    // >  For security reasons, we recommend that you use HTTPS to send requests if the `Password` parameter is specified.
+    /**
+     * <p>Specifies whether to reset the password for the instance. The password must be 8 to 30 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include:</p>
+     * <br>
+     * <p>```</p>
+     * <br>
+     * <p>()`~!@#$%^&*-_+=|{}[]:;\"<>,.?/</p>
+     * <p>                                </p>
+     * <p>```</p>
+     * <br>
+     * <p>The password of a Windows instance cannot start with a forward slash (/).</p>
+     * <br>
+     * <p>This parameter is empty by default, which indicates that the current password remains unchanged.</p>
+     * <br>
+     * <p>>  For security reasons, we recommend that you use HTTPS to send requests if the `Password` parameter is specified.</p>
+     */
     @NameInMap("Password")
     public String password;
 
-    // Specifies whether to use the password preset in the image.
-    // 
-    // Default value: false.
-    // 
-    // >  If the PasswordInherit parameter is specified, you must leave the Password parameter empty and make sure that the selected image has a password preset.
+    /**
+     * <p>Specifies whether to use the password preset in the image.</p>
+     * <br>
+     * <p>Default value: false.</p>
+     * <br>
+     * <p>>  If the PasswordInherit parameter is specified, you must leave the Password parameter empty and make sure that the selected image has a password preset.</p>
+     */
     @NameInMap("PasswordInherit")
     public Boolean passwordInherit;
 
-    // The distribution of the operating system. Valid values:
-    // 
-    // *   CentOS
-    // *   Ubuntu
+    /**
+     * <p>The distribution of the operating system. Valid values:</p>
+     * <br>
+     * <p>*   CentOS</p>
+     * <p>*   Ubuntu</p>
+     */
     @NameInMap("Platform")
     public String platform;
 
@@ -108,18 +134,22 @@ public class ReplaceSystemDiskRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    // Specifies whether to activate Security Center for free after the system disk is replaced. Valid values:
-    // 
-    // *   Active: Security Center is activated for free after the system disk is replaced. This value is applicable to only public images.
-    // *   Deactive: Security Center is not activated for free after the system disk is replaced. This value is applicable to all images.
-    // 
-    // Default value: Deactive.
+    /**
+     * <p>Specifies whether to activate Security Center for free after the system disk is replaced. Valid values:</p>
+     * <br>
+     * <p>*   Active: Security Center is activated for free after the system disk is replaced. This value is applicable to only public images.</p>
+     * <p>*   Deactive: Security Center is not activated for free after the system disk is replaced. This value is applicable to all images.</p>
+     * <br>
+     * <p>Default value: Deactive.</p>
+     */
     @NameInMap("SecurityEnhancementStrategy")
     public String securityEnhancementStrategy;
 
-    // Specifies whether to use the system configurations for virtual machines provided by Alibaba Cloud (Windows: NTP and KMS. Linux: NTP and YUM).
-    // 
-    // >  This parameter takes effect only when you attach a system disk whose device name is /dev/xvda.
+    /**
+     * <p>Specifies whether to use the system configurations for virtual machines provided by Alibaba Cloud (Windows: NTP and KMS. Linux: NTP and YUM).</p>
+     * <br>
+     * <p>>  This parameter takes effect only when you attach a system disk whose device name is /dev/xvda.</p>
+     */
     @NameInMap("UseAdditionalService")
     public Boolean useAdditionalService;
 
@@ -289,11 +319,13 @@ public class ReplaceSystemDiskRequest extends TeaModel {
     }
 
     public static class ReplaceSystemDiskRequestSystemDisk extends TeaModel {
-        // The capacity of the new system disk. Unit: GiB. Valid values: Max{20, Size of the image specified by ImageId} to 500.
-        // 
-        // Default value: Max{40, Size of the image specified by ImageId}.
-        // 
-        // >  If the capacity of the new system disk exceeds `Max{20, Capacity of the original system disk}`, you are charged for excess capacity.
+        /**
+         * <p>The capacity of the new system disk. Unit: GiB. Valid values: Max{20, Size of the image specified by ImageId} to 500.</p>
+         * <br>
+         * <p>Default value: Max{40, Size of the image specified by ImageId}.</p>
+         * <br>
+         * <p>>  If the capacity of the new system disk exceeds `Max{20, Capacity of the original system disk}`, you are charged for excess capacity.</p>
+         */
         @NameInMap("Size")
         public Integer size;
 
@@ -313,15 +345,21 @@ public class ReplaceSystemDiskRequest extends TeaModel {
     }
 
     public static class ReplaceSystemDiskRequestArn extends TeaModel {
-        // > This parameter is in invitational preview and is unavailable.
+        /**
+         * <p>> This parameter is in invitational preview and is unavailable.</p>
+         */
         @NameInMap("AssumeRoleFor")
         public Long assumeRoleFor;
 
-        // > This parameter is in invitational preview and is unavailable.
+        /**
+         * <p>> This parameter is in invitational preview and is unavailable.</p>
+         */
         @NameInMap("RoleType")
         public String roleType;
 
-        // > This parameter is in invitational preview and is unavailable.
+        /**
+         * <p>> This parameter is in invitational preview and is unavailable.</p>
+         */
         @NameInMap("Rolearn")
         public String rolearn;
 

@@ -4,11 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DeregisterManagedInstanceResponseBody extends TeaModel {
-    // Details of the managed instance.
+    /**
+     * <p>Details of the managed instance.</p>
+     */
     @NameInMap("Instance")
     public DeregisterManagedInstanceResponseBodyInstance instance;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,55 +38,81 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
     }
 
     public static class DeregisterManagedInstanceResponseBodyInstance extends TeaModel {
-        // The ID of the activation code.
+        /**
+         * <p>The ID of the activation code.</p>
+         */
         @NameInMap("ActivationId")
         public String activationId;
 
-        // The version number of the Cloud Assistant client.
+        /**
+         * <p>The version number of the Cloud Assistant client.</p>
+         */
         @NameInMap("AgentVersion")
         public String agentVersion;
 
-        // The hostname of the managed instance.
+        /**
+         * <p>The hostname of the managed instance.</p>
+         */
         @NameInMap("Hostname")
         public String hostname;
 
-        // The ID of the managed instance.
+        /**
+         * <p>The ID of the managed instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        // The name of the managed instance.
+        /**
+         * <p>The name of the managed instance.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
-        // The public IP address of the managed instance.
+        /**
+         * <p>The public IP address of the managed instance.</p>
+         */
         @NameInMap("InternetIp")
         public String internetIp;
 
-        // The internal IP address of the managed instance.
+        /**
+         * <p>The internal IP address of the managed instance.</p>
+         */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
-        // The number of times that Cloud Assistant tasks were executed on the managed instance.
+        /**
+         * <p>The number of times that Cloud Assistant tasks were executed on the managed instance.</p>
+         */
         @NameInMap("InvocationCount")
         public Long invocationCount;
 
-        // The last Cloud Assistant task execution time.
+        /**
+         * <p>The last Cloud Assistant task execution time.</p>
+         */
         @NameInMap("LastInvokedTime")
         public String lastInvokedTime;
 
-        // The machine code of the managed instance.
+        /**
+         * <p>The machine code of the managed instance.</p>
+         */
         @NameInMap("MachineId")
         public String machineId;
 
-        // The operating system type of the managed instance.
+        /**
+         * <p>The operating system type of the managed instance.</p>
+         */
         @NameInMap("OsType")
         public String osType;
 
-        // The version information of the operating system.
+        /**
+         * <p>The version information of the operating system.</p>
+         */
         @NameInMap("OsVersion")
         public String osVersion;
 
-        // The time when the managed instance was registered.
+        /**
+         * <p>The time when the managed instance was registered.</p>
+         */
         @NameInMap("RegistrationTime")
         public String registrationTime;
 

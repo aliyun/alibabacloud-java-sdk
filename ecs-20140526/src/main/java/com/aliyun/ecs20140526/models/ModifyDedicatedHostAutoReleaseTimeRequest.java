@@ -4,16 +4,20 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyDedicatedHostAutoReleaseTimeRequest extends TeaModel {
-    // The automatic release time of the dedicated host. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.
-    // 
-    // *   The scheduled release time must be at least 30 minutes from the current time.
-    // *   The scheduled release time must be at most 3 years from the current time.
-    // *   If the value of the seconds (ss) is not 00, it is automatically set to 00.
-    // *   If you do not specify the `AutoReleaseTime` parameter, the automatic release is disabled. The dedicated host will not be released when the scheduled time is reached.
+    /**
+     * <p>The automatic release time of the dedicated host. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p>
+     * <br>
+     * <p>*   The scheduled release time must be at least 30 minutes from the current time.</p>
+     * <p>*   The scheduled release time must be at most 3 years from the current time.</p>
+     * <p>*   If the value of the seconds (ss) is not 00, it is automatically set to 00.</p>
+     * <p>*   If you do not specify the `AutoReleaseTime` parameter, the automatic release is disabled. The dedicated host will not be released when the scheduled time is reached.</p>
+     */
     @NameInMap("AutoReleaseTime")
     public String autoReleaseTime;
 
-    // The ID of the dedicated host that you want to automatically release.
+    /**
+     * <p>The ID of the dedicated host that you want to automatically release.</p>
+     */
     @NameInMap("DedicatedHostId")
     public String dedicatedHostId;
 
@@ -23,7 +27,9 @@ public class ModifyDedicatedHostAutoReleaseTimeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The region ID of the dedicated host. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+    /**
+     * <p>The region ID of the dedicated host. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -4,27 +4,39 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ApplyAutoSnapshotPolicyRequest extends TeaModel {
-    // RAM用户的虚拟账号ID。
+    /**
+     * <p>RAM用户的虚拟账号ID。</p>
+     */
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // 资源主账号的账号名称。
+    /**
+     * <p>资源主账号的账号名称。</p>
+     */
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
-    // 资源主账号的ID，亦即UID。
+    /**
+     * <p>资源主账号的ID，亦即UID。</p>
+     */
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    // The ID of the automatic snapshot policy.
+    /**
+     * <p>The ID of the automatic snapshot policy.</p>
+     */
     @NameInMap("autoSnapshotPolicyId")
     public String autoSnapshotPolicyId;
 
-    // The IDs of one or more disks. The value is a JSON array that consists of disk IDs. Separate the disk IDs with commas (,).
+    /**
+     * <p>The IDs of one or more disks. The value is a JSON array that consists of disk IDs. Separate the disk IDs with commas (,).</p>
+     */
     @NameInMap("diskIds")
     public String diskIds;
 
-    // The region ID of the automatic snapshot policy and the disks. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+    /**
+     * <p>The region ID of the automatic snapshot policy and the disks. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("regionId")
     public String regionId;
 

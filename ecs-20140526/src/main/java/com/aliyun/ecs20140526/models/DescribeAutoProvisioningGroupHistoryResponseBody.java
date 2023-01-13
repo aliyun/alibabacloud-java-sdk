@@ -4,23 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
-    // An array consisting of AutoProvisioningGroupHistory data.
+    /**
+     * <p>An array consisting of AutoProvisioningGroupHistory data.</p>
+     */
     @NameInMap("AutoProvisioningGroupHistories")
     public DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistories autoProvisioningGroupHistories;
 
-    // The page number of the returned page.
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // The number of entries returned per page.
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The number of queried scheduling tasks in the auto provisioning group.
+    /**
+     * <p>The number of queried scheduling tasks in the auto provisioning group.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -70,16 +80,20 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
     }
 
     public static class DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetail extends TeaModel {
-        // The execution details of instance creation performed by the single scheduling task.
+        /**
+         * <p>The execution details of instance creation performed by the single scheduling task.</p>
+         */
         @NameInMap("Detail")
         public String detail;
 
-        // The execution status of instance creation performed by the single scheduling task. Valid values:
-        // 
-        // *   Successful: Instances are created.
-        // *   Failed: Instances failed to be created.
-        // *   InProgress: Instances are being created.
-        // *   Warning: Partial instances are created.
+        /**
+         * <p>The execution status of instance creation performed by the single scheduling task. Valid values:</p>
+         * <br>
+         * <p>*   Successful: Instances are created.</p>
+         * <p>*   Failed: Instances failed to be created.</p>
+         * <p>*   InProgress: Instances are being created.</p>
+         * <p>*   Warning: Some instances are created.</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -126,19 +140,37 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
     }
 
     public static class DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistory extends TeaModel {
-        // An array consisting of ActivityDetail data.
+        /**
+         * <p>An array consisting of ActivityDetail data.</p>
+         */
         @NameInMap("ActivityDetails")
         public DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetails activityDetails;
 
+        /**
+         * <p>The execution time of the last instance creation performed by the single scheduling task.</p>
+         */
         @NameInMap("LastEventTime")
         public String lastEventTime;
 
+        /**
+         * <p>The start time of executing the single scheduling task.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <p>The execution status of the single scheduling task. Valid values:</p>
+         * <br>
+         * <p>*   prepare: The scheduling task is being executed.</p>
+         * <p>*   success: The scheduling task is executed.</p>
+         * <p>*   failed: The scheduling task failed to be executed.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The ID of the scheduling task.</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 

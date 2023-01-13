@@ -4,23 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageComponentsResponseBody extends TeaModel {
-    // Details about the image components.
+    /**
+     * <p>Details about the image components.</p>
+     */
     @NameInMap("ImageComponent")
     public DescribeImageComponentsResponseBodyImageComponent imageComponent;
 
-    // The maximum number of entries returned per page.
+    /**
+     * <p>The maximum number of entries returned per page.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // The query token returned in this call. For information about how to use this return value, see the "Description" section in this topic.
+    /**
+     * <p>The query token returned in this call. For information about how to use this return value, see the "Description" section in this topic.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The total number of image components returned.
+    /**
+     * <p>The total number of image components returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -70,11 +80,15 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
     }
 
     public static class DescribeImageComponentsResponseBodyImageComponentImageComponentSetTagsTag extends TeaModel {
-        // The tag key of the image component.
+        /**
+         * <p>The tag key of the image component.</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        // The tag value of the image component.
+        /**
+         * <p>The tag value of the image component.</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -121,46 +135,66 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
     }
 
     public static class DescribeImageComponentsResponseBodyImageComponentImageComponentSet extends TeaModel {
-        // The type of the image component.
+        /**
+         * <p>The type of the image component.</p>
+         */
         @NameInMap("ComponentType")
         public String componentType;
 
-        // The content of the image component.
+        /**
+         * <p>The content of the image component.</p>
+         */
         @NameInMap("Content")
         public String content;
 
-        // The time when the image component was created.
+        /**
+         * <p>The time when the image component was created.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        // The description of the image component.
+        /**
+         * <p>The description of the image component.</p>
+         */
         @NameInMap("Description")
         public String description;
 
-        // The ID of the image component.
+        /**
+         * <p>The ID of the image component.</p>
+         */
         @NameInMap("ImageComponentId")
         public String imageComponentId;
 
-        // The name of the image component.
+        /**
+         * <p>The name of the image component.</p>
+         */
         @NameInMap("Name")
         public String name;
 
-        // The type of the image component. Valid values:
-        // 
-        // *   SELF: the custom component that you created.
-        // *   ALIYUN: the system component provided by Alibaba Cloud.
+        /**
+         * <p>The type of the image component. Valid values:</p>
+         * <br>
+         * <p>*   SELF: the custom component that you created.</p>
+         * <p>*   ALIYUN: the system component provided by Alibaba Cloud.</p>
+         */
         @NameInMap("Owner")
         public String owner;
 
-        // The ID of the resource group.
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        // The operating system type supported by the image component.
+        /**
+         * <p>The operating system type supported by the image component.</p>
+         */
         @NameInMap("SystemType")
         public String systemType;
 
-        // The tags of the image component.
+        /**
+         * <p>The tags of the image component.</p>
+         */
         @NameInMap("Tags")
         public DescribeImageComponentsResponseBodyImageComponentImageComponentSetTags tags;
 

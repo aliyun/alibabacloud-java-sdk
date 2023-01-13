@@ -4,22 +4,26 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsRequest extends TeaModel {
-    // The natural language that is used to filter responses. For more information, visit [RFC 7231](https://tools.ietf.org/html/rfc7231). Valid values:
-    // 
-    // *   zh-CN: Chinese
-    // *   en-US: English
-    // *   ja: Japanese
-    // 
-    // Default value: zh-CN.
+    /**
+     * <p>The natural language that is used to filter responses. For more information, visit [RFC 7231](https://tools.ietf.org/html/rfc7231). Valid values:</p>
+     * <br>
+     * <p>*   zh-CN: Chinese</p>
+     * <p>*   en-US: English</p>
+     * <p>*   ja: Japanese</p>
+     * <br>
+     * <p>Default value: zh-CN.</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // The billing method of the instance. For more information, see [Billing overview](~~25398~~). Valid values:
-    // 
-    // *   PrePaid: subscription. If this parameter is set to PrePaid, make sure that you have sufficient balance or credits in your account. Otherwise, the InvalidPayMethod error code is returned.
-    // *   PostPaid: pay-as-you-go.
-    // 
-    // Default value: PostPaid.
+    /**
+     * <p>The billing method of the instance. For more information, see [Billing overview](~~25398~~). Valid values:</p>
+     * <br>
+     * <p>*   PrePaid: subscription. If this parameter is set to PrePaid, make sure that you have sufficient balance or credits in your account. Otherwise, the InvalidPayMethod error code is returned.</p>
+     * <p>*   PostPaid: pay-as-you-go.</p>
+     * <br>
+     * <p>Default value: PostPaid.</p>
+     */
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
 
@@ -35,14 +39,16 @@ public class DescribeRegionsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    // The type of the resource. Valid values:
-    // 
-    // *   instance: Elastic Compute Service (ECS) instance
-    // *   disk: disk
-    // *   reservedinstance: reserved instance
-    // *   scu: storage capacity unit (SCU)
-    // 
-    // Default value: instance.
+    /**
+     * <p>The type of the resource. Valid values:</p>
+     * <br>
+     * <p>*   instance: Elastic Compute Service (ECS) instance</p>
+     * <p>*   disk: disk</p>
+     * <p>*   reservedinstance: reserved instance</p>
+     * <p>*   scu: storage capacity unit (SCU)</p>
+     * <br>
+     * <p>Default value: instance.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 

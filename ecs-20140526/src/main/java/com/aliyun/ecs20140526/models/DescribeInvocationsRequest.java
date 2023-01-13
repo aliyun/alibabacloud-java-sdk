@@ -4,67 +4,83 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeInvocationsRequest extends TeaModel {
-    // The ID of the command. You can call the [DescribeCommands](~~64843~~) operation to query all available command IDs.
+    /**
+     * <p>The ID of the command. You can call the [DescribeCommands](~~64843~~) operation to query all available command IDs.</p>
+     */
     @NameInMap("CommandId")
     public String commandId;
 
-    // The name of the command.
+    /**
+     * <p>The name of the command.</p>
+     */
     @NameInMap("CommandName")
     public String commandName;
 
-    // The type of the command. If this parameter and `InstanceId` are both specified, this parameter does not take effect.
+    /**
+     * <p>The type of the command. If this parameter and `InstanceId` are both specified, this parameter does not take effect.</p>
+     */
     @NameInMap("CommandType")
     public String commandType;
 
-    // The encoding mode of the `CommandContent` and `Output` response parameters. Valid values:
-    // 
-    // *   PlainText: returns the original command content and command outputs.
-    // *   Base64: returns the Base64-encoded command content and command outputs.
-    // 
-    // Default value: Base64.
+    /**
+     * <p>The encoding mode of the `CommandContent` and `Output` response parameters. Valid values:</p>
+     * <br>
+     * <p>*   PlainText: returns the original command content and command outputs.</p>
+     * <p>*   Base64: returns the Base64-encoded command content and command outputs.</p>
+     * <br>
+     * <p>Default value: Base64.</p>
+     */
     @NameInMap("ContentEncoding")
     public String contentEncoding;
 
-    // Specifies whether to return the command outputs in the response.
-    // 
-    // *   true: The command outputs are returned. When this parameter is set to true, you must specify `InvokeId`, `InstanceId`, or both.
-    // *   false: The command outputs are not returned.
-    // 
-    // Default value: false.
+    /**
+     * <p>Specifies whether to return the command outputs in the response.</p>
+     * <br>
+     * <p>*   true: The command outputs are returned. When this parameter is set to true, you must specify `InvokeId`, `InstanceId`, or both.</p>
+     * <p>*   false: The command outputs are not returned.</p>
+     * <br>
+     * <p>Default value: false.</p>
+     */
     @NameInMap("IncludeOutput")
     public Boolean includeOutput;
 
-    // The ID of the instance. When you specify this parameter, the system queries all the execution records of all the commands that run on the instance.
+    /**
+     * <p>The ID of the instance. When you specify this parameter, the system queries all the execution records of all the commands that run on the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // The ID of the command task.
+    /**
+     * <p>The ID of the command task.</p>
+     */
     @NameInMap("InvokeId")
     public String invokeId;
 
-    // The overall execution state of the command. The value of this parameter depends on the execution states of all involved instances. Valid values:
-    // 
-    // *   Running:
-    // 
-    //     *   Scheduled execution: Before you manually stop the execution of the command, the overall execution state is always Running.
-    //     *   One-time execution: If the execution is in progress on one or more instances, the overall execution state is Running.
-    // 
-    // *   Finished:
-    // 
-    //     *   Scheduled execution: The overall execution state can never be Finished.
-    //     *   One-time execution: The execution is complete on all instances, or the execution is manually stopped on some instances and is complete on other instances.
-    // 
-    // *   Failed:
-    // 
-    //     *   Scheduled execution: The overall execution state can never be Failed.
-    //     *   One-time execution: The execution fails on all instances.
-    // 
-    // *   PartialFailed:
-    // 
-    //     *   Scheduled execution: The overall execution state can never be PartialFailed.
-    //     *   One-time execution: The execution fails on some instances.
-    // 
-    // *   Stopped: The execution is stopped.
+    /**
+     * <p>The overall execution state of the command. The value of this parameter depends on the execution states of all involved instances. Valid values:</p>
+     * <br>
+     * <p>*   Running:</p>
+     * <br>
+     * <p>    *   Scheduled execution: Before you manually stop the execution of the command, the overall execution state is always Running.</p>
+     * <p>    *   One-time execution: If the execution is in progress on one or more instances, the overall execution state is Running.</p>
+     * <br>
+     * <p>*   Finished:</p>
+     * <br>
+     * <p>    *   Scheduled execution: The overall execution state can never be Finished.</p>
+     * <p>    *   One-time execution: The execution is complete on all instances, or the execution is manually stopped on some instances and is complete on other instances.</p>
+     * <br>
+     * <p>*   Failed:</p>
+     * <br>
+     * <p>    *   Scheduled execution: The overall execution state can never be Failed.</p>
+     * <p>    *   One-time execution: The execution fails on all instances.</p>
+     * <br>
+     * <p>*   PartialFailed:</p>
+     * <br>
+     * <p>    *   Scheduled execution: The overall execution state can never be PartialFailed.</p>
+     * <p>    *   One-time execution: The execution fails on some instances.</p>
+     * <br>
+     * <p>*   Stopped: The execution is stopped.</p>
+     */
     @NameInMap("InvokeStatus")
     public String invokeStatus;
 
@@ -74,40 +90,50 @@ public class DescribeInvocationsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The number of the page to return.
-    // 
-    // Page start from page 1.
-    // 
-    // Default value: 1.
+    /**
+     * <p>The number of the page to return.</p>
+     * <br>
+     * <p>Page start from page 1.</p>
+     * <br>
+     * <p>Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
-    // The number of entries to return on each page.
-    // 
-    // Maximum value: 50.
-    // 
-    // Default value: 10.
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>Maximum value: 50.</p>
+     * <br>
+     * <p>Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
-    // The region ID of the command. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+    /**
+     * <p>The region ID of the command. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The execution mode of the command. Valid values:
-    // 
-    // *   Once: The command is immediately run.
-    // *   Period: The command is run on a schedule.
-    // *   NextRebootOnly: The command is automatically run the next time the instance starts.
-    // *   EveryReboot: The command is automatically run every time the instance starts.
-    // 
-    // This parameter is empty by default, which indicates that the commands in all the modes are queried.
+    /**
+     * <p>The execution mode of the command. Valid values:</p>
+     * <br>
+     * <p>*   Once: The command is immediately run.</p>
+     * <p>*   Period: The command is run on a schedule.</p>
+     * <p>*   NextRebootOnly: The command is automatically run the next time the instance starts.</p>
+     * <p>*   EveryReboot: The command is automatically run every time the instance starts.</p>
+     * <br>
+     * <p>This parameter is empty by default, which indicates that the commands in all the modes are queried.</p>
+     */
     @NameInMap("RepeatMode")
     public String repeatMode;
 
-    // The ID of the resource group to which the key pair belongs. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.
-    // 
-    // >  Resources in the default resource group are displayed in the response regardless of how this parameter is set.
+    /**
+     * <p>The ID of the resource group to which the key pair belongs. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.</p>
+     * <br>
+     * <p>>  Resources in the default resource group are displayed in the response regardless of how this parameter is set.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -117,20 +143,24 @@ public class DescribeInvocationsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    // The tags.
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeInvocationsRequestTag> tag;
 
-    // Specifies whether to query the commands that are to be automatically run. Valid values:
-    // 
-    // *   true: queries the commands that meet the following requirements: The commands are run by calling the `RunCommand` or `InvokeCommand` operation with `RepeatMode` set to `Period`, `NextRebootOnly`, or `EveryReboot`. The executions of the commands are not canceled and not complete or are not stopped and not complete.
-    // 
-    // *   false: queries commands that meet the following requirements:
-    // 
-    //     *   The commands are run by calling the `RunCommand` or `InvokeCommand` operation with `RepeatMode` set to `Once`.
-    //     *   The executions of the commands are canceled, stopped, or complete.
-    // 
-    // Default value: false.
+    /**
+     * <p>Specifies whether to query the commands that are to be automatically run. Valid values:</p>
+     * <br>
+     * <p>*   true: queries the commands that meet the following requirements: The commands are run by calling the `RunCommand` or `InvokeCommand` operation with `RepeatMode` set to `Period`, `NextRebootOnly`, or `EveryReboot`. The executions of the commands are not canceled and not complete or are not stopped and not complete.</p>
+     * <br>
+     * <p>*   false: queries commands that meet the following requirements:</p>
+     * <br>
+     * <p>    *   The commands are run by calling the `RunCommand` or `InvokeCommand` operation with `RepeatMode` set to `Once`.</p>
+     * <p>    *   The executions of the commands are canceled, stopped, or complete.</p>
+     * <br>
+     * <p>Default value: false.</p>
+     */
     @NameInMap("Timed")
     public Boolean timed;
 
@@ -292,17 +322,21 @@ public class DescribeInvocationsRequest extends TeaModel {
     }
 
     public static class DescribeInvocationsRequestTag extends TeaModel {
-        // The key of tag N of the command. Valid values of N: 1 to 20. The tag key cannot be an empty string.
-        // 
-        // If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.
-        // 
-        // The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+        /**
+         * <p>The key of tag N of the command. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
+         * <br>
+         * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.</p>
+         * <br>
+         * <p>The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
-        // The value of tag N of the command. Valid values of N: 1 to 20. The tag value can be an empty string.
-        // 
-        // The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`.
+        /**
+         * <p>The value of tag N of the command. Valid values of N: 1 to 20. The tag value can be an empty string.</p>
+         * <br>
+         * <p>The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Value")
         public String value;
 

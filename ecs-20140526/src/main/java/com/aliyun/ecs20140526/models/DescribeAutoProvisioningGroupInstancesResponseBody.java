@@ -4,23 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel {
-    // An array consisting of Instance data.
+    /**
+     * <p>An array consisting of Instance data.</p>
+     */
     @NameInMap("Instances")
     public DescribeAutoProvisioningGroupInstancesResponseBodyInstances instances;
 
-    // The page number of the returned page.
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // The number of entries returned per page.
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The number of queried instances in the auto provisioning group.
+    /**
+     * <p>The number of queried instances in the auto provisioning group.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -70,57 +80,81 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
     }
 
     public static class DescribeAutoProvisioningGroupInstancesResponseBodyInstancesInstance extends TeaModel {
-        // The number of vCPUs.
+        /**
+         * <p>The number of vCPUs.</p>
+         */
         @NameInMap("CPU")
         public Integer CPU;
 
-        // The time when the instance was created.
+        /**
+         * <p>The time when the instance was created.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        // The ID of the instance.
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        // The instance type of the ECS instance.
+        /**
+         * <p>The instance type of the ECS instance.</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
-        // Indicates whether the instance is I/O optimized.
+        /**
+         * <p>Indicates whether the instance is I/O optimized.</p>
+         */
         @NameInMap("IoOptimized")
         public Boolean ioOptimized;
 
-        // Indicates whether the instance is a preemptible instance.
+        /**
+         * <p>Indicates whether the instance is a preemptible instance.</p>
+         */
         @NameInMap("IsSpot")
         public Boolean isSpot;
 
-        // The memory size of the instance. Unit: MiB.
+        /**
+         * <p>The memory size of the instance. Unit: MiB.</p>
+         */
         @NameInMap("Memory")
         public Integer memory;
 
-        // The network type of the instance. Valid values:
-        // 
-        // *   vpc
-        // *   classic
+        /**
+         * <p>The network type of the instance. Valid values:</p>
+         * <br>
+         * <p>*   vpc</p>
+         * <p>*   classic</p>
+         */
         @NameInMap("NetworkType")
         public String networkType;
 
-        // The operating system type of the instance. Valid values:
-        // 
-        // *   windows
-        // *   linux
+        /**
+         * <p>The operating system type of the instance. Valid values:</p>
+         * <br>
+         * <p>*   windows</p>
+         * <p>*   linux</p>
+         */
         @NameInMap("OsType")
         public String osType;
 
-        // The region ID of the instance.
+        /**
+         * <p>The region ID of the instance.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
-        // The status of the instance.
+        /**
+         * <p>The status of the instance.</p>
+         */
         @NameInMap("Status")
         public String status;
 
-        // The zone ID of the instance.
+        /**
+         * <p>The zone ID of the instance.</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

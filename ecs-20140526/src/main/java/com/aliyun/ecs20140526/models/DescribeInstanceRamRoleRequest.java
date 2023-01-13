@@ -4,34 +4,44 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceRamRoleRequest extends TeaModel {
-    // The IDs of instances. A maximum of 100 instance IDs can be entered at a time. You must specify at least one of the `InstanceIds` and `RamRoleName` parameters.
+    /**
+     * <p>The IDs of instances. A maximum of 100 instance IDs can be entered at a time. You must specify at least one of the `InstanceIds` and `RamRoleName` parameters.</p>
+     */
     @NameInMap("InstanceIds")
     public String instanceIds;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The number of the page to return.
-    // 
-    // Pages start from page 1.
-    // 
-    // Default value: 1.
+    /**
+     * <p>The number of the page to return.</p>
+     * <br>
+     * <p>Pages start from page 1.</p>
+     * <br>
+     * <p>Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // The number of entries to return on each page.
-    // 
-    // Valid values: 1 to 50.
-    // 
-    // Default value: 10.
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>Valid values: 1 to 50.</p>
+     * <br>
+     * <p>Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The name of the instance RAM role. This parameter can be used to query all the ECS instances to which the instance RAM role is assigned. You can call the [ListRoles](~~28713~~) operation provided by RAM to query the instance RAM roles that you have created. You must specify at least one of the `InstanceIds` and `RamRoleName` parameters.
+    /**
+     * <p>The name of the instance RAM role. This parameter can be used to query all the ECS instances to which the instance RAM role is assigned. You can call the [ListRoles](~~28713~~) operation provided by RAM to query the instance RAM roles that you have created. You must specify at least one of the `InstanceIds` and `RamRoleName` parameters.</p>
+     */
     @NameInMap("RamRoleName")
     public String ramRoleName;
 
-    // The region ID of the instance RAM role. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+    /**
+     * <p>The region ID of the instance RAM role. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

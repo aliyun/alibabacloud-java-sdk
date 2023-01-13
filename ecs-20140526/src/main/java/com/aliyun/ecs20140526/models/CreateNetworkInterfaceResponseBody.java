@@ -4,7 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateNetworkInterfaceResponseBody extends TeaModel {
-    // The description of the ENI.
+    /**
+     * <p>The description of the ENI.</p>
+     */
     @NameInMap("Description")
     public String description;
 
@@ -14,75 +16,111 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     @NameInMap("Ipv6PrefixSets")
     public CreateNetworkInterfaceResponseBodyIpv6PrefixSets ipv6PrefixSets;
 
-    // The IPv6 addresses of the ENI.
+    /**
+     * <p>The IPv6 addresses of the ENI.</p>
+     */
     @NameInMap("Ipv6Sets")
     public CreateNetworkInterfaceResponseBodyIpv6Sets ipv6Sets;
 
-    // The media access control (MAC) address of the ENI.
+    /**
+     * <p>The media access control (MAC) address of the ENI.</p>
+     */
     @NameInMap("MacAddress")
     public String macAddress;
 
-    // The ID of the ENI.
+    /**
+     * <p>The ID of the ENI.</p>
+     */
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;
 
-    // The name of the ENI.
+    /**
+     * <p>The name of the ENI.</p>
+     */
     @NameInMap("NetworkInterfaceName")
     public String networkInterfaceName;
 
-    // The ID of the account to which the ENI belongs.
+    /**
+     * <p>The ID of the account to which the ENI belongs.</p>
+     */
     @NameInMap("OwnerId")
     public String ownerId;
 
-    // The private IP address of the ENI.
+    /**
+     * <p>The private IP address of the ENI.</p>
+     */
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
 
-    // Private IP addresses of the ENI.
+    /**
+     * <p>Private IP addresses of the ENI.</p>
+     */
     @NameInMap("PrivateIpSets")
     public CreateNetworkInterfaceResponseBodyPrivateIpSets privateIpSets;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The ID of the resource group to which the ENI belongs.
+    /**
+     * <p>The ID of the resource group to which the ENI belongs.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    // The IDs of the security groups to which the ENI belongs.
+    /**
+     * <p>The IDs of the security groups to which the ENI belongs.</p>
+     */
     @NameInMap("SecurityGroupIds")
     public CreateNetworkInterfaceResponseBodySecurityGroupIds securityGroupIds;
 
-    // The ID of the distributor to which the ENI belongs.
+    /**
+     * <p>The ID of the distributor to which the ENI belongs.</p>
+     */
     @NameInMap("ServiceID")
     public Long serviceID;
 
-    // Indicates whether the user is an Alibaba Cloud service or a distributor.
+    /**
+     * <p>Indicates whether the user is an Alibaba Cloud service or a distributor.</p>
+     */
     @NameInMap("ServiceManaged")
     public Boolean serviceManaged;
 
-    // The state of the ENI.
+    /**
+     * <p>The state of the ENI.</p>
+     */
     @NameInMap("Status")
     public String status;
 
-    // The tags of the ENI.
+    /**
+     * <p>The tags of the ENI.</p>
+     */
     @NameInMap("Tags")
     public CreateNetworkInterfaceResponseBodyTags tags;
 
-    // The type of the ENI.
+    /**
+     * <p>The type of the ENI.</p>
+     */
     @NameInMap("Type")
     public String type;
 
-    // The ID of the vSwitch with which the ENI is associated.
+    /**
+     * <p>The ID of the vSwitch with which the ENI is associated.</p>
+     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
-    // The ID of the VPC to which the ENI belongs.
+    /**
+     * <p>The ID of the VPC to which the ENI belongs.</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 
-    // The zone ID of the ENI.
+    /**
+     * <p>The zone ID of the ENI.</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 
@@ -336,7 +374,9 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     }
 
     public static class CreateNetworkInterfaceResponseBodyIpv6SetsIpv6Set extends TeaModel {
-        // The IPv6 address.
+        /**
+         * <p>The IPv6 address.</p>
+         */
         @NameInMap("Ipv6Address")
         public String ipv6Address;
 
@@ -375,11 +415,15 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     }
 
     public static class CreateNetworkInterfaceResponseBodyPrivateIpSetsPrivateIpSet extends TeaModel {
-        // Indicates whether the IP address is the primary private IP address.
+        /**
+         * <p>Indicates whether the IP address is the primary private IP address.</p>
+         */
         @NameInMap("Primary")
         public Boolean primary;
 
-        // The private IP address of the instance to which the ENI is bound.
+        /**
+         * <p>The private IP address of the instance to which the ENI is bound.</p>
+         */
         @NameInMap("PrivateIpAddress")
         public String privateIpAddress;
 
@@ -445,11 +489,15 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     }
 
     public static class CreateNetworkInterfaceResponseBodyTagsTag extends TeaModel {
-        // The tag key of the ENI.
+        /**
+         * <p>The tag key of the ENI.</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        // The tag value of the ENI.
+        /**
+         * <p>The tag value of the ENI.</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 

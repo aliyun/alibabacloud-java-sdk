@@ -4,11 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeSnapshotMonitorDataResponseBody extends TeaModel {
-    // The collection of monitoring data of snapshot sizes.
+    /**
+     * <p>The collection of monitoring data of snapshot sizes.</p>
+     */
     @NameInMap("MonitorData")
     public DescribeSnapshotMonitorDataResponseBodyMonitorData monitorData;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,11 +38,15 @@ public class DescribeSnapshotMonitorDataResponseBody extends TeaModel {
     }
 
     public static class DescribeSnapshotMonitorDataResponseBodyMonitorDataDataPoint extends TeaModel {
-        // The total size of the snapshots. Unit: bytes.
+        /**
+         * <p>The total size of the snapshots. Unit: bytes.</p>
+         */
         @NameInMap("Size")
         public Long size;
 
-        // The timestamp that corresponds to a snapshot size.
+        /**
+         * <p>The timestamp that corresponds to a snapshot size.</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 

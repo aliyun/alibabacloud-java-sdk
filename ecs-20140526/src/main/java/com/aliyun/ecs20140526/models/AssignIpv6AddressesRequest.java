@@ -4,29 +4,39 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class AssignIpv6AddressesRequest extends TeaModel {
-    // One or more IPv6 addresses to assign to the ENI. Valid values of N: 1 to 10.
-    // 
-    // Example: Ipv6Address.1=2001:db8:1234:1a00::\*\*\*\*
-    // 
-    // >  You must specify `Ipv6Addresses.N` or `Ipv6AddressCount` but cannot specify both.
+    /**
+     * <p>One or more IPv6 addresses to assign to the ENI. Valid values of N: 1 to 10.</p>
+     * <br>
+     * <p>Example: Ipv6Address.1=2001:db8:1234:1a00::\*\*\*\*</p>
+     * <br>
+     * <p>>  You must specify `Ipv6Addresses.N` or `Ipv6AddressCount` but cannot specify both.</p>
+     */
     @NameInMap("Ipv6Address")
     public java.util.List<String> ipv6Address;
 
-    // The number of IPv6 addresses to randomly generate for the ENI. Valid values: 1 to 10.
-    // 
-    // >  You must specify `Ipv6Addresses.N` or `Ipv6AddressCount` but cannot specify both.
+    /**
+     * <p>The number of IPv6 addresses to randomly generate for the ENI. Valid values: 1 to 10.</p>
+     * <br>
+     * <p>>  You must specify `Ipv6Addresses.N` or `Ipv6AddressCount` but cannot specify both.</p>
+     */
     @NameInMap("Ipv6AddressCount")
     public Integer ipv6AddressCount;
 
-    // One or more IPv6 address prefixes to assign to the ENI.
+    /**
+     * <p>One or more IPv6 address prefixes to assign to the ENI.</p>
+     */
     @NameInMap("Ipv6Prefix")
     public java.util.List<String> ipv6Prefix;
 
-    // The number of IPv6 address prefixes.
+    /**
+     * <p>The number of IPv6 address prefixes.</p>
+     */
     @NameInMap("Ipv6PrefixCount")
     public Integer ipv6PrefixCount;
 
-    // The ID of the ENI.
+    /**
+     * <p>The ID of the ENI.</p>
+     */
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;
 
@@ -36,7 +46,9 @@ public class AssignIpv6AddressesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+    /**
+     * <p>The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

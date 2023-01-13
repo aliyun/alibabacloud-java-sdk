@@ -4,11 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateDiagnosticReportResponseBody extends TeaModel {
-    // The ID of the diagnostic report, which is the unique identifier of the report.
+    /**
+     * <p>The ID of the diagnostic report, which is the unique identifier of the report.</p>
+     */
     @NameInMap("ReportId")
     public String reportId;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

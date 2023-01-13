@@ -4,53 +4,69 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyDiskAttributeRequest extends TeaModel {
-    // 是否开启Burst（性能突发）。取值范围：
-    // 
-    // - true：是。
-    // - false：否。
+    /**
+     * <p>是否开启Burst（性能突发）。取值范围：</p>
+     * <br>
+     * <p>- true：是。</p>
+     * <p>- false：否。</p>
+     */
     @NameInMap("BurstingEnabled")
     public Boolean burstingEnabled;
 
-    // Specifies whether to delete the automatic snapshots of the disk when the disk is released. This parameter is empty by default, which indicates that the current value remains unchanged.
+    /**
+     * <p>Specifies whether to delete the automatic snapshots of the disk when the disk is released. This parameter is empty by default, which indicates that the current value remains unchanged.</p>
+     */
     @NameInMap("DeleteAutoSnapshot")
     public Boolean deleteAutoSnapshot;
 
-    // Specifies whether to release the disk along with its associated instance. This parameter is empty by default, which indicates that the current value remains unchanged.
-    // 
-    // An error is returned if you set this parameter to false in the following cases:
-    // 
-    // *   Category is set to ephemeral.
-    // *   Category is set to cloud and Portable is set to false.
+    /**
+     * <p>Specifies whether to release the disk along with its associated instance. This parameter is empty by default, which indicates that the current value remains unchanged.</p>
+     * <br>
+     * <p>An error is returned if you set this parameter to false in the following cases:</p>
+     * <br>
+     * <p>*   Category is set to ephemeral.</p>
+     * <p>*   Category is set to cloud and Portable is set to false.</p>
+     */
     @NameInMap("DeleteWithInstance")
     public Boolean deleteWithInstance;
 
-    // The description of the disk. It must be 2 to 256 characters in length and cannot start with http:// or https://.
+    /**
+     * <p>The description of the disk. It must be 2 to 256 characters in length and cannot start with http:// or https://.</p>
+     */
     @NameInMap("Description")
     public String description;
 
-    // The ID of the disk.
-    // 
-    // >  You can specify `DiskId` or `DiskIds.N`, but you cannot specify both of them.
+    /**
+     * <p>The ID of the disk.</p>
+     * <br>
+     * <p>>  You can specify `DiskId` or `DiskIds.N`, but you cannot specify both of them.</p>
+     */
     @NameInMap("DiskId")
     public String diskId;
 
-    // 待修改明细的多个磁盘ID。N的取值范围为0 ~ 100。
-    // > `DiskId`和`DiskIds.N`两个参数不能同时被调用，请您根据需求任选其一传值。
+    /**
+     * <p>待修改明细的多个磁盘ID。N的取值范围为0 ~ 100。</p>
+     * <p>> `DiskId`和`DiskIds.N`两个参数不能同时被调用，请您根据需求任选其一传值。</p>
+     */
     @NameInMap("DiskIds")
     public java.util.List<String> diskIds;
 
-    // The name of the disk. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+    /**
+     * <p>The name of the disk. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+     */
     @NameInMap("DiskName")
     public String diskName;
 
-    // Specifies whether to enable the automatic snapshot policy feature for the disk.
-    // 
-    // *   true: enables the automatic snapshot policy feature for the disk.
-    // *   false: disables the automatic snapshot policy feature for the disk.
-    // 
-    // This parameter is empty by default, which indicates that the current value remains unchanged.
-    // 
-    // >  By default, the automatic snapshot policy feature is enabled for created disks. You need only to apply an automatic snapshot policy to a disk before you can use the policy.
+    /**
+     * <p>Specifies whether to enable the automatic snapshot policy feature for the disk.</p>
+     * <br>
+     * <p>*   true: enables the automatic snapshot policy feature for the disk.</p>
+     * <p>*   false: disables the automatic snapshot policy feature for the disk.</p>
+     * <br>
+     * <p>This parameter is empty by default, which indicates that the current value remains unchanged.</p>
+     * <br>
+     * <p>>  By default, the automatic snapshot policy feature is enabled for created disks. You need only to apply an automatic snapshot policy to a disk before you can use the policy.</p>
+     */
     @NameInMap("EnableAutoSnapshot")
     public Boolean enableAutoSnapshot;
 
@@ -60,7 +76,9 @@ public class ModifyDiskAttributeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The region ID of the disk. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+    /**
+     * <p>The region ID of the disk. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

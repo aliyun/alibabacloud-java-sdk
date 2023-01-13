@@ -4,16 +4,20 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeSnapshotMonitorDataRequest extends TeaModel {
-    // The type of the snapshot. Valid values:
-    // 
-    // *   Standard: normal snapshot
-    // *   Flash: local snapshot
-    // 
-    // Default value: Standard.
+    /**
+     * <p>The type of the snapshot. Valid values:</p>
+     * <br>
+     * <p>*   Standard: normal snapshot</p>
+     * <p>*   Flash: local snapshot</p>
+     * <br>
+     * <p>Default value: Standard.</p>
+     */
     @NameInMap("Category")
     public String category;
 
-    // The end of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the specified value of seconds (ss) is not 00, the time is rounded up to the next minute.
+    /**
+     * <p>The end of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the specified value of seconds (ss) is not 00, the time is rounded up to the next minute.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
@@ -23,17 +27,21 @@ public class DescribeSnapshotMonitorDataRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The interval at which to query the monitoring data of snapshot sizes. Unit: seconds. Valid values:
-    // 
-    // *   60
-    // *   600
-    // *   3600
-    // 
-    // Default value: 60.
+    /**
+     * <p>The interval at which to query the monitoring data of snapshot sizes. Unit: seconds. Valid values:</p>
+     * <br>
+     * <p>*   60</p>
+     * <p>*   600</p>
+     * <p>*   3600</p>
+     * <br>
+     * <p>Default value: 60.</p>
+     */
     @NameInMap("Period")
     public Integer period;
 
-    // The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+    /**
+     * <p>The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -43,7 +51,9 @@ public class DescribeSnapshotMonitorDataRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    // The beginning of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the specified value of seconds (ss) is not 00, the time is rounded up to the next minute.
+    /**
+     * <p>The beginning of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the specified value of seconds (ss) is not 00, the time is rounded up to the next minute.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

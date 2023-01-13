@@ -7,30 +7,38 @@ public class DescribeDisksFullStatusRequest extends TeaModel {
     @NameInMap("EventTime")
     public DescribeDisksFullStatusRequestEventTime eventTime;
 
-    // The IDs of EBS devices. You can specify up to 100 EBS device IDs.
+    /**
+     * <p>The IDs of EBS devices. You can specify up to 100 EBS device IDs.</p>
+     */
     @NameInMap("DiskId")
     public java.util.List<String> diskId;
 
-    // The list of event IDs.
+    /**
+     * <p>The list of event IDs.</p>
+     */
     @NameInMap("EventId")
     public java.util.List<String> eventId;
 
-    // The event type. Valid values:
-    // 
-    // *   Degraded: The performance of the EBS device is degraded.
-    // *   SeverelyDegraded: The performance of the EBS device was severely degraded.
-    // *   Stalled: The performance of the EBS device is severely affected.
-    // *   ErrorDetected: The local disk is damaged.
+    /**
+     * <p>The event type. Valid values:</p>
+     * <br>
+     * <p>*   Degraded: The performance of the EBS device is degraded.</p>
+     * <p>*   SeverelyDegraded: The performance of the EBS device was severely degraded.</p>
+     * <p>*   Stalled: The performance of the EBS device is severely affected.</p>
+     * <p>*   ErrorDetected: The local disk is damaged.</p>
+     */
     @NameInMap("EventType")
     public String eventType;
 
-    // The health status of the EBS device. Valid values:
-    // 
-    // *   Impaired: The EBS device is damaged.
-    // *   Warning: The performance of the EBS device may be degraded.
-    // *   Initializing: The EBS device is being initialized.
-    // *   InsufficientData: The status cannot be determined due to insufficient data.
-    // *   NotApplicable: The EBS device cannot be used.
+    /**
+     * <p>The health status of the EBS device. Valid values:</p>
+     * <br>
+     * <p>*   Impaired: The EBS device is damaged.</p>
+     * <p>*   Warning: The performance of the EBS device may be degraded.</p>
+     * <p>*   Initializing: The EBS device is being initialized.</p>
+     * <p>*   InsufficientData: The status cannot be determined due to insufficient data.</p>
+     * <p>*   NotApplicable: The EBS device cannot be used.</p>
+     */
     @NameInMap("HealthStatus")
     public String healthStatus;
 
@@ -40,23 +48,31 @@ public class DescribeDisksFullStatusRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The number of the page to return. The value must be a positive integer.
-    // 
-    // Default value: 1.
+    /**
+     * <p>The number of the page to return. The value must be a positive integer.</p>
+     * <br>
+     * <p>Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // The number of entries to return on each page. Valid values: 1 to 100.
-    // 
-    // Default value: 10.
+    /**
+     * <p>The number of entries to return on each page. Valid values: 1 to 100.</p>
+     * <br>
+     * <p>Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The region ID of the EBS device. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+    /**
+     * <p>The region ID of the EBS device. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The ID of the resource group to which the EBS device belongs. When this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.
+    /**
+     * <p>The ID of the resource group to which the EBS device belongs. When this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -66,18 +82,22 @@ public class DescribeDisksFullStatusRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    // The lifecycle status of the EBS device. For more information, see [Disk status](~~25689~~). Valid values:
-    // 
-    // *   In_use
-    // *   Available
-    // *   Attaching
-    // *   Detaching
-    // *   Creating
-    // *   ReIniting
+    /**
+     * <p>The lifecycle status of the EBS device. For more information, see [Disk status](~~25689~~). Valid values:</p>
+     * <br>
+     * <p>*   In_use</p>
+     * <p>*   Available</p>
+     * <p>*   Attaching</p>
+     * <p>*   Detaching</p>
+     * <p>*   Creating</p>
+     * <p>*   ReIniting</p>
+     */
     @NameInMap("Status")
     public String status;
 
-    // The tags.
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeDisksFullStatusRequestTag> tag;
 
@@ -207,15 +227,19 @@ public class DescribeDisksFullStatusRequest extends TeaModel {
     }
 
     public static class DescribeDisksFullStatusRequestEventTime extends TeaModel {
-        // The end of the time range in which to query occurred events.
-        // 
-        // The time follows the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be displayed in UTC.
+        /**
+         * <p>The end of the time range in which to query occurred events.</p>
+         * <br>
+         * <p>The time follows the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be displayed in UTC.</p>
+         */
         @NameInMap("End")
         public String end;
 
-        // The start of the time range in which to query occurred events.
-        // 
-        // The time follows the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be displayed in UTC.
+        /**
+         * <p>The start of the time range in which to query occurred events.</p>
+         * <br>
+         * <p>The time follows the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be displayed in UTC.</p>
+         */
         @NameInMap("Start")
         public String start;
 
@@ -243,13 +267,17 @@ public class DescribeDisksFullStatusRequest extends TeaModel {
     }
 
     public static class DescribeDisksFullStatusRequestTag extends TeaModel {
-        // The key of tag N added to the EBS device. A key-value pair consists of a key specified by the `Tag.N.Key` parameter and a value specified by the `Tag.N.Value` parameter. The two parameters are associated with each other. Valid values of N: 1 to 20.
-        // 
-        // If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response.
+        /**
+         * <p>The key of tag N added to the EBS device. A key-value pair consists of a key specified by the `Tag.N.Key` parameter and a value specified by the `Tag.N.Value` parameter. The two parameters are associated with each other. Valid values of N: 1 to 20.</p>
+         * <br>
+         * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response.</p>
+         */
         @NameInMap("Key")
         public String key;
 
-        // The value of tag N added to the EBS device. A key-value pair consists of a key specified by the `Tag.N.Key` parameter and a value specified by the `Tag.N.Value` parameter. The two parameters are associated with each other. Valid values of N: 1 to 20.
+        /**
+         * <p>The value of tag N added to the EBS device. A key-value pair consists of a key specified by the `Tag.N.Key` parameter and a value specified by the `Tag.N.Value` parameter. The two parameters are associated with each other. Valid values of N: 1 to 20.</p>
+         */
         @NameInMap("Value")
         public String value;
 

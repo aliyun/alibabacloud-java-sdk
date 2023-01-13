@@ -4,15 +4,21 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateActivationResponseBody extends TeaModel {
-    // The value of the activation code. The value is returned only once after the CreateActivation operation is called and cannot be subsequently queried. Make sure that you properly save the return value.
+    /**
+     * <p>The value of the activation code. The value is returned only once after the CreateActivation operation is called and cannot be subsequently queried. Make sure that you properly save the return value.</p>
+     */
     @NameInMap("ActivationCode")
     public String activationCode;
 
-    // The ID of the activation code.
+    /**
+     * <p>The ID of the activation code.</p>
+     */
     @NameInMap("ActivationId")
     public String activationId;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

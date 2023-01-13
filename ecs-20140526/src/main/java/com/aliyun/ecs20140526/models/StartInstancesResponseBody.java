@@ -4,11 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class StartInstancesResponseBody extends TeaModel {
-    // Details about the responses returned for the instances, which contains the state of each instance before and after the operation is called and the operation results.
+    /**
+     * <p>Details about the responses returned for the instances, which contains the state of each instance before and after the operation is called and the operation results.</p>
+     */
     @NameInMap("InstanceResponses")
     public StartInstancesResponseBodyInstanceResponses instanceResponses;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,23 +38,33 @@ public class StartInstancesResponseBody extends TeaModel {
     }
 
     public static class StartInstancesResponseBodyInstanceResponsesInstanceResponse extends TeaModel {
-        // The error code returned for the instance. A return value of 200 indicates success. For more information, see the "Error codes" section in this topic.
+        /**
+         * <p>The error code returned for the instance. A return value of 200 indicates success. For more information, see the "Error codes" section in this topic.</p>
+         */
         @NameInMap("Code")
         public String code;
 
-        // The current state of the instance.
+        /**
+         * <p>The current state of the instance.</p>
+         */
         @NameInMap("CurrentStatus")
         public String currentStatus;
 
-        // The ID of the instance.
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        // The error message returned for the instance. A return value of success indicates operation success. For more information, see the "Error codes" section in this topic.
+        /**
+         * <p>The error message returned for the instance. A return value of success indicates operation success. For more information, see the "Error codes" section in this topic.</p>
+         */
         @NameInMap("Message")
         public String message;
 
-        // The state of the instance before the operation is called.
+        /**
+         * <p>The state of the instance before the operation is called.</p>
+         */
         @NameInMap("PreviousStatus")
         public String previousStatus;
 

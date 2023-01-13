@@ -7,11 +7,15 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
     @NameInMap("MetricSets")
     public java.util.List<DescribeDiagnosticMetricSetsResponseBodyMetricSets> metricSets;
 
-    // The query token returned in this call.
+    /**
+     * <p>The query token returned in this call.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -45,30 +49,42 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
     }
 
     public static class DescribeDiagnosticMetricSetsResponseBodyMetricSets extends TeaModel {
-        // The description of the diagnostic metric set.
+        /**
+         * <p>The description of the diagnostic metric set.</p>
+         */
         @NameInMap("Description")
         public String description;
 
-        // The IDs of the diagnostic metrics.
+        /**
+         * <p>The IDs of the diagnostic metrics.</p>
+         */
         @NameInMap("MetricIds")
         public java.util.List<String> metricIds;
 
-        // The ID of the diagnostic metric set.
+        /**
+         * <p>The ID of the diagnostic metric set.</p>
+         */
         @NameInMap("MetricSetId")
         public String metricSetId;
 
-        // The name of the diagnostic metric set.
+        /**
+         * <p>The name of the diagnostic metric set.</p>
+         */
         @NameInMap("MetricSetName")
         public String metricSetName;
 
-        // The resource type supported by the diagnostic metric set.
+        /**
+         * <p>The resource type supported by the diagnostic metric set.</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
-        // The type of the diagnostic metric set. Valid values:
-        // 
-        // *   User: user-defined diagnostic metric set
-        // *   Common: common diagnostic metric set
+        /**
+         * <p>The type of the diagnostic metric set. Valid values:</p>
+         * <br>
+         * <p>*   User: user-defined diagnostic metric set</p>
+         * <p>*   Common: common diagnostic metric set</p>
+         */
         @NameInMap("Type")
         public String type;
 

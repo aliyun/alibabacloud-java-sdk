@@ -4,46 +4,64 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeSnapshotLinksRequest extends TeaModel {
-    // The ID of the disk. The value is a JSON array that consists of up to 100 disk IDs. Separate multiple disk IDs with commas (,).
+    /**
+     * <p>The ID of the disk. The value is a JSON array that consists of up to 100 disk IDs. Separate multiple disk IDs with commas (,).</p>
+     */
     @NameInMap("DiskIds")
     public String diskIds;
 
-    // The ID of the instance.
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    // RAM用户的虚拟账号ID。
+    /**
+     * <p>RAM用户的虚拟账号ID。</p>
+     */
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The number of the page to return. Pages start from page 1.
-    // 
-    // Default value: 1.
+    /**
+     * <p>The number of the page to return. Pages start from page 1.</p>
+     * <br>
+     * <p>Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // The number of entries to return on each page. Valid values: 1 to 100.
-    // 
-    // Default value: 10.
+    /**
+     * <p>The number of entries to return on each page. Valid values: 1 to 100.</p>
+     * <br>
+     * <p>Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The region ID of the disk. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+    /**
+     * <p>The region ID of the disk. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // 资源主账号的账号名称。
+    /**
+     * <p>资源主账号的账号名称。</p>
+     */
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
-    // 资源主账号的ID，亦即UID。
+    /**
+     * <p>资源主账号的ID，亦即UID。</p>
+     */
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    // The ID of the snapshot chain. The value is a JSON array that consists of up to 100 snapshot chain IDs. Separate multiple snapshot chain IDs with commas (,).
+    /**
+     * <p>The ID of the snapshot chain. The value is a JSON array that consists of up to 100 snapshot chain IDs. Separate multiple snapshot chain IDs with commas (,).</p>
+     */
     @NameInMap("SnapshotLinkIds")
     public String snapshotLinkIds;
 

@@ -4,13 +4,17 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class RedeployInstanceResponseBody extends TeaModel {
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The ID of the redeployment task.
-    // 
-    // You can call the [DescribeTasks](~~25622~~) operation to query the migration result.
+    /**
+     * <p>The ID of the redeployment task.</p>
+     * <br>
+     * <p>You can call the [DescribeTasks](~~25622~~) operation to query the migration result.</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

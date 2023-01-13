@@ -4,11 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeAutoProvisioningGroupHistoryRequest extends TeaModel {
-    // The ID of the auto provisioning group.
+    /**
+     * <p>The ID of the auto provisioning group.</p>
+     */
     @NameInMap("AutoProvisioningGroupId")
     public String autoProvisioningGroupId;
 
-    // The end of the time range of the queried data. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+    /**
+     * <p>The end of the time range of the queried data. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
@@ -18,19 +22,25 @@ public class DescribeAutoProvisioningGroupHistoryRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The number of the page to return. Pages start from page 1.
-    // 
-    // Default value: 1.
+    /**
+     * <p>The page number of the returned page. Pages start from page 1.</p>
+     * <br>
+     * <p>Default value: 1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // The number of entries to return on each page. Maximum value: 100.
-    // 
-    // Default value: 10.
+    /**
+     * <p>The number of entries returned per page. Maximum value: 100.</p>
+     * <br>
+     * <p>Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The region ID of the auto provisioning group.
+    /**
+     * <p>The region ID of the auto provisioning group.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -40,7 +50,9 @@ public class DescribeAutoProvisioningGroupHistoryRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    // The beginning of the time range of the queried data. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+    /**
+     * <p>The beginning of the time range of the queried data. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

@@ -4,23 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
-    // Details about the installation status of the Cloud Assistant client.
+    /**
+     * <p>Details about the installation status of the Cloud Assistant client.</p>
+     */
     @NameInMap("InstanceCloudAssistantStatusSet")
     public DescribeCloudAssistantStatusResponseBodyInstanceCloudAssistantStatusSet instanceCloudAssistantStatusSet;
 
-    // The page number of the returned page.
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
-    // The number of entries returned per page.
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The total number of instances.
+    /**
+     * <p>The total number of instances.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -70,42 +80,60 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeCloudAssistantStatusResponseBodyInstanceCloudAssistantStatusSetInstanceCloudAssistantStatus extends TeaModel {
-        // The number of commands that are being run.
+        /**
+         * <p>The number of commands that are being run.</p>
+         */
         @NameInMap("ActiveTaskCount")
         public Long activeTaskCount;
 
-        // Indicates whether the Cloud Assistant client is installed on the instance.
+        /**
+         * <p>Indicates whether the Cloud Assistant client is installed on the instance.</p>
+         */
         @NameInMap("CloudAssistantStatus")
         public String cloudAssistantStatus;
 
-        // The version number of the Cloud Assistant client.
+        /**
+         * <p>The version number of the Cloud Assistant client.</p>
+         */
         @NameInMap("CloudAssistantVersion")
         public String cloudAssistantVersion;
 
-        // The ID of the instance.
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        // The total number of commands that have been run.
+        /**
+         * <p>The total number of commands that have been run.</p>
+         */
         @NameInMap("InvocationCount")
         public Long invocationCount;
 
-        // The last heartbeat time of Cloud Assistant.
+        /**
+         * <p>The last heartbeat time of Cloud Assistant.</p>
+         */
         @NameInMap("LastHeartbeatTime")
         public String lastHeartbeatTime;
 
-        // The time when commands were last run.
+        /**
+         * <p>The time when commands were last run.</p>
+         */
         @NameInMap("LastInvokedTime")
         public String lastInvokedTime;
 
-        // The operating system type of the instance. Valid values:
-        // 
-        // *   Windows
-        // *   Linux
+        /**
+         * <p>The operating system type of the instance. Valid values:</p>
+         * <br>
+         * <p>*   Windows</p>
+         * <p>*   Linux</p>
+         */
         @NameInMap("OSType")
         public String OSType;
 
-        // Indicates whether the version of the Cloud Assistant client supports the session management feature.
+        /**
+         * <p>Indicates whether the version of the Cloud Assistant client supports the session management feature.</p>
+         */
         @NameInMap("SupportSessionManager")
         public Boolean supportSessionManager;
 

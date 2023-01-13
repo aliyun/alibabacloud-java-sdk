@@ -4,17 +4,23 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeSnapshotGroupsResponseBody extends TeaModel {
-    // The token used to start the next query.
-    // 
-    // >  If this parameter is empty, no more data is returned.
+    /**
+     * <p>The token used to start the next query.</p>
+     * <br>
+     * <p>>  If this parameter is empty, no more data is returned.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Details of the snapshot-consistent groups.
+    /**
+     * <p>Details of the snapshot-consistent groups.</p>
+     */
     @NameInMap("SnapshotGroups")
     public DescribeSnapshotGroupsResponseBodySnapshotGroups snapshotGroups;
 
@@ -48,11 +54,15 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeSnapshotGroupsResponseBodySnapshotGroupsSnapshotGroupSnapshotsSnapshotTagsTag extends TeaModel {
-        // The tag key of each snapshot in the snapshot-consistent group. The default values of Key and Value contain the details of the instance to which the snapshot-consistent group belongs.
+        /**
+         * <p>The tag key of each snapshot in the snapshot-consistent group. The default values of Key and Value contain the details of the instance to which the snapshot-consistent group belongs.</p>
+         */
         @NameInMap("Key")
         public String key;
 
-        // The tag value of each snapshot in the snapshot-consistent group. The default values of Key and Value contain the details of the instance to which the snapshot-consistent group belongs.
+        /**
+         * <p>The tag value of each snapshot in the snapshot-consistent group. The default values of Key and Value contain the details of the instance to which the snapshot-consistent group belongs.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -99,37 +109,51 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeSnapshotGroupsResponseBodySnapshotGroupsSnapshotGroupSnapshotsSnapshot extends TeaModel {
-        // Indicates whether the instant access feature is enabled. Valid values:
-        // 
-        // - true: The instant access feature is enabled. This feature can be enabled only for enhanced SSDs (ESSDs).
-        // - false: The instant access feature is disabled. The snapshot is a normal snapshot for which the instant access feature is disabled.
+        /**
+         * <p>Indicates whether the instant access feature is enabled. Valid values:</p>
+         * <br>
+         * <p>- true: The instant access feature is enabled. This feature can be enabled only for enhanced SSDs (ESSDs).</p>
+         * <p>- false: The instant access feature is disabled. The snapshot is a normal snapshot for which the instant access feature is disabled.</p>
+         */
         @NameInMap("InstantAccess")
         public Boolean instantAccess;
 
-        // The retention period of the instant access feature. After the retention period ends, the snapshot is automatically released.
+        /**
+         * <p>The retention period of the instant access feature. After the retention period ends, the snapshot is automatically released.</p>
+         */
         @NameInMap("InstantAccessRetentionDays")
         public Integer instantAccessRetentionDays;
 
-        // The progress of the snapshot creation task. Unit: percent (%).
+        /**
+         * <p>The progress of the snapshot creation task. Unit: percent (%).</p>
+         */
         @NameInMap("Progress")
         public String progress;
 
-        // The ID of the snapshot.
+        /**
+         * <p>The ID of the snapshot.</p>
+         */
         @NameInMap("SnapshotId")
         public String snapshotId;
 
-        // The ID of the source disk. This parameter is retained even after the source disk of the snapshot is released.
+        /**
+         * <p>The ID of the source disk. This parameter is retained even after the source disk of the snapshot is released.</p>
+         */
         @NameInMap("SourceDiskId")
         public String sourceDiskId;
 
-        // The type of the source disk. Valid values:
-        // 
-        // - system: system disk
-        // - data: data disk
+        /**
+         * <p>The type of the source disk. Valid values:</p>
+         * <br>
+         * <p>- system: system disk</p>
+         * <p>- data: data disk</p>
+         */
         @NameInMap("SourceDiskType")
         public String sourceDiskType;
 
-        // The tags of the snapshots in the snapshot-consistent group. The default value contains the details of the instance to which the snapshot-consistent group belongs.
+        /**
+         * <p>The tags of the snapshots in the snapshot-consistent group. The default value contains the details of the instance to which the snapshot-consistent group belongs.</p>
+         */
         @NameInMap("Tags")
         public DescribeSnapshotGroupsResponseBodySnapshotGroupsSnapshotGroupSnapshotsSnapshotTags tags;
 
@@ -216,11 +240,15 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeSnapshotGroupsResponseBodySnapshotGroupsSnapshotGroupTagsTag extends TeaModel {
-        // The tag key of the snapshot-consistent group.
+        /**
+         * <p>The tag key of the snapshot-consistent group.</p>
+         */
         @NameInMap("Key")
         public String key;
 
-        // The tag value of the snapshot-consistent group.
+        /**
+         * <p>The tag value of the snapshot-consistent group.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -267,47 +295,67 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeSnapshotGroupsResponseBodySnapshotGroupsSnapshotGroup extends TeaModel {
-        // The time when the snapshot-consistent group was created.
+        /**
+         * <p>The time when the snapshot-consistent group was created.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        // The description of the snapshot-consistent group.
+        /**
+         * <p>The description of the snapshot-consistent group.</p>
+         */
         @NameInMap("Description")
         public String description;
 
-        // The ID of the instance to which the snapshot-consistent group belongs. This parameter has a value only when all disk snapshots in the snapshot-consistent group belong to the same instance. If disk snapshots in the snapshot-consistent group belong to different instances, you can use parameters starting with `Snapshots.Snapshot.Tags.` in the response to view the ID of the instance to which each snapshot in the snapshot-consistent group belongs.
+        /**
+         * <p>The ID of the instance to which the snapshot-consistent group belongs. This parameter has a value only when all disk snapshots in the snapshot-consistent group belong to the same instance. If disk snapshots in the snapshot-consistent group belong to different instances, you can use parameters starting with `Snapshots.Snapshot.Tags.` in the response to view the ID of the instance to which each snapshot in the snapshot-consistent group belongs.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        // The name of the snapshot-consistent group.
+        /**
+         * <p>The name of the snapshot-consistent group.</p>
+         */
         @NameInMap("Name")
         public String name;
 
-        // >  This parameter is unavailable.
+        /**
+         * <p>>  This parameter is unavailable.</p>
+         */
         @NameInMap("ProgressStatus")
         public String progressStatus;
 
-        // The ID of the resource group to which the snapshot-consistent group belongs.
+        /**
+         * <p>The ID of the resource group to which the snapshot-consistent group belongs.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        // The ID of the snapshot-consistent group.
+        /**
+         * <p>The ID of the snapshot-consistent group.</p>
+         */
         @NameInMap("SnapshotGroupId")
         public String snapshotGroupId;
 
-        // Details of the snapshots in the snapshot-consistent group.
+        /**
+         * <p>Details of the snapshots in the snapshot-consistent group.</p>
+         */
         @NameInMap("Snapshots")
         public DescribeSnapshotGroupsResponseBodySnapshotGroupsSnapshotGroupSnapshots snapshots;
 
-        // The state of the snapshot-consistent group. Valid values:
-        // 
-        // *   progressing: The snapshot-consistent group is being created.
-        // *   accomplished: The snapshot-consistent group is created.
-        // *   failed: The snapshot-consistent group fails to be created.
+        /**
+         * <p>The state of the snapshot-consistent group. Valid values:</p>
+         * <br>
+         * <p>*   progressing: The snapshot-consistent group is being created.</p>
+         * <p>*   accomplished: The snapshot-consistent group is created.</p>
+         * <p>*   failed: The snapshot-consistent group fails to be created.</p>
+         */
         @NameInMap("Status")
         public String status;
 
-        // The tags of the snapshot-consistent group.
+        /**
+         * <p>The tags of the snapshot-consistent group.</p>
+         */
         @NameInMap("Tags")
         public DescribeSnapshotGroupsResponseBodySnapshotGroupsSnapshotGroupTags tags;
 

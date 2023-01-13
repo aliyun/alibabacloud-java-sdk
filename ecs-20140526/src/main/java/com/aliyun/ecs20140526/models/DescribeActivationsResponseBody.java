@@ -4,23 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeActivationsResponseBody extends TeaModel {
-    // Details of the activation codes and their usage information.
+    /**
+     * <p>Details of the activation codes and their usage information.</p>
+     */
     @NameInMap("ActivationList")
     public java.util.List<DescribeActivationsResponseBodyActivationList> activationList;
 
-    // The page number of the returned page.
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
-    // The number of entries returned per page.
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The total number of entries returned.
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -69,44 +79,97 @@ public class DescribeActivationsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeActivationsResponseBodyActivationListTags extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static DescribeActivationsResponseBodyActivationListTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeActivationsResponseBodyActivationListTags self = new DescribeActivationsResponseBodyActivationListTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeActivationsResponseBodyActivationListTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public DescribeActivationsResponseBodyActivationListTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
     public static class DescribeActivationsResponseBodyActivationList extends TeaModel {
-        // The ID of the activation code.
+        /**
+         * <p>The ID of the activation code.</p>
+         */
         @NameInMap("ActivationId")
         public String activationId;
 
-        // The time when the activation code was created.
+        /**
+         * <p>The time when the activation code was created.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        // The number of instances that were deregistered.
+        /**
+         * <p>The number of instances that were deregistered.</p>
+         */
         @NameInMap("DeregisteredCount")
         public Integer deregisteredCount;
 
-        // The description of the activation code.
+        /**
+         * <p>The description of the activation code.</p>
+         */
         @NameInMap("Description")
         public String description;
 
-        // Indicates whether the activation code is disabled.
+        /**
+         * <p>Indicates whether the activation code is disabled.</p>
+         */
         @NameInMap("Disabled")
         public Boolean disabled;
 
-        // The maximum number of times that the activation code can be used to register managed instances.
+        /**
+         * <p>The maximum number of times that the activation code can be used to register managed instances.</p>
+         */
         @NameInMap("InstanceCount")
         public Integer instanceCount;
 
-        // The default instance name prefix.
+        /**
+         * <p>The default instance name prefix.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
-        // The IP addresses of hosts that are allowed to use the activation code.
+        /**
+         * <p>The IP addresses of hosts that are allowed to use the activation code.</p>
+         */
         @NameInMap("IpAddressRange")
         public String ipAddressRange;
 
-        // The number of instances that were registered.
+        /**
+         * <p>The number of instances that were registered.</p>
+         */
         @NameInMap("RegisteredCount")
         public Integer registeredCount;
 
-        // The validity period of the activation code. Unit: hours.
+        @NameInMap("Tags")
+        public java.util.List<DescribeActivationsResponseBodyActivationListTags> tags;
+
+        /**
+         * <p>The validity period of the activation code. Unit: hours.</p>
+         */
         @NameInMap("TimeToLiveInHours")
         public Long timeToLiveInHours;
 
@@ -185,6 +248,14 @@ public class DescribeActivationsResponseBody extends TeaModel {
         }
         public Integer getRegisteredCount() {
             return this.registeredCount;
+        }
+
+        public DescribeActivationsResponseBodyActivationList setTags(java.util.List<DescribeActivationsResponseBodyActivationListTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<DescribeActivationsResponseBodyActivationListTags> getTags() {
+            return this.tags;
         }
 
         public DescribeActivationsResponseBodyActivationList setTimeToLiveInHours(Long timeToLiveInHours) {

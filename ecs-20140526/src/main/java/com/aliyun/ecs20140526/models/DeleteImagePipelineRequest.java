@@ -4,7 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DeleteImagePipelineRequest extends TeaModel {
-    // The ID of the image template.
+    /**
+     * <p>The ID of the image template.</p>
+     */
     @NameInMap("ImagePipelineId")
     public String imagePipelineId;
 
@@ -14,7 +16,9 @@ public class DeleteImagePipelineRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The region ID of the image template. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+    /**
+     * <p>The region ID of the image template. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

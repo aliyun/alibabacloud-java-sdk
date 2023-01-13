@@ -4,11 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DeleteSnapshotGroupResponseBody extends TeaModel {
-    // Details about the delete operation.
+    /**
+     * <p>Details about the delete operation.</p>
+     */
     @NameInMap("OperationProgressSet")
     public DeleteSnapshotGroupResponseBodyOperationProgressSet operationProgressSet;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,11 +38,15 @@ public class DeleteSnapshotGroupResponseBody extends TeaModel {
     }
 
     public static class DeleteSnapshotGroupResponseBodyOperationProgressSetOperationProgressRelatedItemSetRelatedItem extends TeaModel {
-        // The name of the resource.
+        /**
+         * <p>The name of the resource.</p>
+         */
         @NameInMap("Name")
         public String name;
 
-        // The ID of the resource.
+        /**
+         * <p>The ID of the resource.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -85,23 +93,31 @@ public class DeleteSnapshotGroupResponseBody extends TeaModel {
     }
 
     public static class DeleteSnapshotGroupResponseBodyOperationProgressSetOperationProgress extends TeaModel {
-        // The error code. This parameter is empty when the operation was successful.
-        // 
-        // For information about error codes and error messages, visit the [API error center](https://error-center.alibabacloud.com/status/product/Ecs).
+        /**
+         * <p>The error code. This parameter is empty when the operation was successful.</p>
+         * <br>
+         * <p>For information about error codes and error messages, visit the [API error center](https://error-center.alibabacloud.com/status/product/Ecs).</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
-        // The error message. This parameter is empty when the operation was successful.
-        // 
-        // For information about error codes and error messages, visit the [API error center](https://error-center.alibabacloud.com/status/product/Ecs).
+        /**
+         * <p>The error message. This parameter is empty when the operation was successful.</p>
+         * <br>
+         * <p>For information about error codes and error messages, visit the [API error center](https://error-center.alibabacloud.com/status/product/Ecs).</p>
+         */
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
-        // Indicates whether the operation was successful. If the operation was successful, a value of Success is returned. If the operation failed, an error code and an error message are returned.
+        /**
+         * <p>Indicates whether the operation was successful. If the operation was successful, a value of Success is returned. If the operation failed, an error code and an error message are returned.</p>
+         */
         @NameInMap("OperationStatus")
         public String operationStatus;
 
-        // Details about the resources.
+        /**
+         * <p>Details about the resources.</p>
+         */
         @NameInMap("RelatedItemSet")
         public DeleteSnapshotGroupResponseBodyOperationProgressSetOperationProgressRelatedItemSet relatedItemSet;
 

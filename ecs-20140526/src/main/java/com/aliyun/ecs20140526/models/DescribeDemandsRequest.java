@@ -4,47 +4,61 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeDemandsRequest extends TeaModel {
-    // The ID of the filing ticket. If this parameter is specified, other optional request parameters are ignored.
+    /**
+     * <p>The ID of the filing ticket. If this parameter is specified, other optional request parameters are ignored.</p>
+     */
     @NameInMap("DemandId")
     public String demandId;
 
-    // The status of the filing ticket or resource usage. Valid values:
-    // 
-    // *   Creating: The filing ticket is being created.
-    // *   Active: The filed resources are being supplied.
-    // *   Expired: The filing ticket expires.
-    // *   Finished: The filed resources are consumed.
-    // *   Refused: The filing request is denied. For reasons why the request is denied, see the `Comment` response parameter.
-    // *   Cancelled: The filing request is canceled.
+    /**
+     * <p>The status of the filing ticket or resource usage. Valid values:</p>
+     * <br>
+     * <p>*   Creating: The filing ticket is being created.</p>
+     * <p>*   Active: The filed resources are being supplied.</p>
+     * <p>*   Expired: The filing ticket expires.</p>
+     * <p>*   Finished: The filed resources are consumed.</p>
+     * <p>*   Refused: The filing request is denied. For reasons why the request is denied, see the `Comment` response parameter.</p>
+     * <p>*   Cancelled: The filing request is canceled.</p>
+     */
     @NameInMap("DemandStatus")
     public java.util.List<String> demandStatus;
 
-    // The source of the filed instance. Default value: System. Valid values:
-    // 
-    // *   Custom: filed on your own.
-    // *   System: filed by Alibaba Cloud.
+    /**
+     * <p>The source of the filed instance. Default value: System. Valid values:</p>
+     * <br>
+     * <p>*   Custom: filed on your own.</p>
+     * <p>*   System: filed by Alibaba Cloud.</p>
+     */
     @NameInMap("DemandType")
     public String demandType;
 
-    // Specifies whether to check the validity of the request without actually making the request. Default value: false. Valid values:
-    // 
-    // *   true: sends a check request, without querying the status of the filing ticket. The system checks whether your AccessKey pair is valid, whether RAM users are authorized, and whether the required parameters are set. If the check fails, the corresponding error is returned. If the check succeeds, the DryRunOperation error code is returned.
-    // *   false: sends an API request. If the request succeeds, a 2XX HTTP status code is returned and the status of the filing ticket is queried.
+    /**
+     * <p>Specifies whether to check the validity of the request without actually making the request. Default value: false. Valid values:</p>
+     * <br>
+     * <p>*   true: sends a check request, without querying the status of the filing ticket. The system checks whether your AccessKey pair is valid, whether RAM users are authorized, and whether the required parameters are set. If the check fails, the corresponding error is returned. If the check succeeds, the DryRunOperation error code is returned.</p>
+     * <p>*   false: sends an API request. If the request succeeds, a 2XX HTTP status code is returned and the status of the filing ticket is queried.</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
-    // The billing method of the instance. Valid values:
-    // 
-    // *   PostPaid: pay-as-you-go
-    // *   PrePaid: subscription
+    /**
+     * <p>The billing method of the instance. Valid values:</p>
+     * <br>
+     * <p>*   PostPaid: pay-as-you-go</p>
+     * <p>*   PrePaid: subscription</p>
+     */
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
 
-    // The instance type of the filed instance.
+    /**
+     * <p>The instance type of the filed instance.</p>
+     */
     @NameInMap("InstanceType")
     public String instanceType;
 
-    // The instance family of the filed instance.
+    /**
+     * <p>The instance family of the filed instance.</p>
+     */
     @NameInMap("InstanceTypeFamily")
     public String instanceTypeFamily;
 
@@ -54,19 +68,25 @@ public class DescribeDemandsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The number of the page to return. Pages start from page 1.
-    // 
-    // Default value: 1.
+    /**
+     * <p>The number of the page to return. Pages start from page 1.</p>
+     * <br>
+     * <p>Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // The number of entries to return on each page. Valid values: 1 to 100.
-    // 
-    // Default value: 10.
+    /**
+     * <p>The number of entries to return on each page. Valid values: 1 to 100.</p>
+     * <br>
+     * <p>Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+    /**
+     * <p>The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -76,11 +96,15 @@ public class DescribeDemandsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    // The tags.
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeDemandsRequestTag> tag;
 
-    // The zone ID. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.
+    /**
+     * <p>The zone ID. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 
@@ -218,11 +242,15 @@ public class DescribeDemandsRequest extends TeaModel {
     }
 
     public static class DescribeDemandsRequestTag extends TeaModel {
-        // The key of the tag.
+        /**
+         * <p>The key of the tag.</p>
+         */
         @NameInMap("Key")
         public String key;
 
-        // The value of the tag.
+        /**
+         * <p>The value of the tag.</p>
+         */
         @NameInMap("Value")
         public String value;
 

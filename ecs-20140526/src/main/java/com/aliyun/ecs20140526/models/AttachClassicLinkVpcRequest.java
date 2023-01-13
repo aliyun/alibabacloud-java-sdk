@@ -4,14 +4,18 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class AttachClassicLinkVpcRequest extends TeaModel {
-    // The ID of the classic network-type instance. You can call the [DescribeInstances](~~25506~~) operation to query available instances.
+    /**
+     * <p>The ID of the classic network-type instance. You can call the [DescribeInstances](~~25506~~) operation to query available instances.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+    /**
+     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -21,7 +25,9 @@ public class AttachClassicLinkVpcRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    // The ID of the VPC for which the ClassicLink feature is enabled. You can call the [DescribeVpcs](~~35739~~) operation to query available VPCs.
+    /**
+     * <p>The ID of the VPC for which the ClassicLink feature is enabled. You can call the [DescribeVpcs](~~35739~~) operation to query available VPCs.</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 

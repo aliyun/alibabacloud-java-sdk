@@ -4,29 +4,41 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstancesResponseBody extends TeaModel {
-    // Details about the instances.
+    /**
+     * <p>Details about the instances.</p>
+     */
     @NameInMap("Instances")
     public DescribeInstancesResponseBodyInstances instances;
 
-    // The query token returned in this call.
+    /**
+     * <p>The query token returned in this call.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    // The page number of the returned page.
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // The number of entries returned per page.
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The total number of instances returned.
-    // 
-    // >  If you specify the `MaxResults` and `NextToken` parameters to perform a paged query, the value of the `TotalCount` response parameter is invalid.
+    /**
+     * <p>The total number of instances returned.</p>
+     * <br>
+     * <p>>  If you specify the `MaxResults` and `NextToken` parameters to perform a paged query, the value of the `TotalCount` response parameter is invalid.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -84,15 +96,21 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesInstanceCpuOptions extends TeaModel {
-        // The number of physical CPU cores.
+        /**
+         * <p>The number of physical CPU cores.</p>
+         */
         @NameInMap("CoreCount")
         public Integer coreCount;
 
-        // The number of threads allocated. Valid value: 2.
+        /**
+         * <p>The number of threads allocated. Valid value: 2.</p>
+         */
         @NameInMap("Numa")
         public String numa;
 
-        // The number of threads per CPU core.
+        /**
+         * <p>The number of threads per CPU core.</p>
+         */
         @NameInMap("ThreadsPerCore")
         public Integer threadsPerCore;
 
@@ -128,15 +146,21 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesInstanceDedicatedHostAttribute extends TeaModel {
-        // The ID of the dedicated host cluster.
+        /**
+         * <p>The ID of the dedicated host cluster.</p>
+         */
         @NameInMap("DedicatedHostClusterId")
         public String dedicatedHostClusterId;
 
-        // The ID of the dedicated host.
+        /**
+         * <p>The ID of the dedicated host.</p>
+         */
         @NameInMap("DedicatedHostId")
         public String dedicatedHostId;
 
-        // The name of the dedicated host.
+        /**
+         * <p>The name of the dedicated host.</p>
+         */
         @NameInMap("DedicatedHostName")
         public String dedicatedHostName;
 
@@ -172,17 +196,21 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesInstanceDedicatedInstanceAttribute extends TeaModel {
-        // Indicates whether the instance on the dedicated host is associated with the dedicated host. Valid values: 
-        // 
-        // - default: The instance is not associated with the dedicated host. When the instance is started from economical mode, the instance may be automatically deployed on another dedicated host in the automatic deployment resource pool.
-        // - host: The instance is associated with the dedicated host. When the instance is started from economical mode, the instance is still deployed on the original dedicated host.
+        /**
+         * <p>Indicates whether the instance on the dedicated host is associated with the dedicated host. Valid values: </p>
+         * <br>
+         * <p>- default: The instance is not associated with the dedicated host. When the instance is started from economical mode, the instance may be automatically deployed on another dedicated host in the automatic deployment resource pool.</p>
+         * <p>- host: The instance is associated with the dedicated host. When the instance is started from economical mode, the instance is still deployed on the original dedicated host.</p>
+         */
         @NameInMap("Affinity")
         public String affinity;
 
-        // Indicates whether the instance is hosted on a dedicated host. Valid values:
-        // 
-        // - default: The instance is not hosted on a dedicated host.
-        // - host: The instance is hosted on a dedicated host.
+        /**
+         * <p>Indicates whether the instance is hosted on a dedicated host. Valid values:</p>
+         * <br>
+         * <p>- default: The instance is not hosted on a dedicated host.</p>
+         * <p>- host: The instance is hosted on a dedicated host.</p>
+         */
         @NameInMap("Tenancy")
         public String tenancy;
 
@@ -210,11 +238,15 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesInstanceEcsCapacityReservationAttr extends TeaModel {
-        // The ID of the capacity reservation.
+        /**
+         * <p>The ID of the capacity reservation.</p>
+         */
         @NameInMap("CapacityReservationId")
         public String capacityReservationId;
 
-        // The preference of the capacity reservation.
+        /**
+         * <p>The preference of the capacity reservation.</p>
+         */
         @NameInMap("CapacityReservationPreference")
         public String capacityReservationPreference;
 
@@ -242,26 +274,36 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesInstanceEipAddress extends TeaModel {
-        // The ID of the EIP.
+        /**
+         * <p>The ID of the EIP.</p>
+         */
         @NameInMap("AllocationId")
         public String allocationId;
 
-        // The maximum public bandwidth of the EIP. Unit: Mbit/s.
+        /**
+         * <p>The maximum public bandwidth of the EIP. Unit: Mbit/s.</p>
+         */
         @NameInMap("Bandwidth")
         public Integer bandwidth;
 
-        // The billing method of the EIP. Valid values: 
-        // 
-        // - PayByBandwidth
-        // - PayByTraffic
+        /**
+         * <p>The billing method of the EIP. Valid values: </p>
+         * <br>
+         * <p>- PayByBandwidth</p>
+         * <p>- PayByTraffic</p>
+         */
         @NameInMap("InternetChargeType")
         public String internetChargeType;
 
-        // The EIP.
+        /**
+         * <p>The EIP.</p>
+         */
         @NameInMap("IpAddress")
         public String ipAddress;
 
-        // Indicates whether the EIP can be disassociated.
+        /**
+         * <p>Indicates whether the EIP can be disassociated.</p>
+         */
         @NameInMap("IsSupportUnassociate")
         public Boolean isSupportUnassociate;
 
@@ -313,7 +355,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesInstanceHibernationOptions extends TeaModel {
-        // >  This parameter is in invitational preview and is unavailable for general users.
+        /**
+         * <p>>  This parameter is in invitational preview and is unavailable for general users.</p>
+         */
         @NameInMap("Configured")
         public Boolean configured;
 
@@ -333,10 +377,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesInstanceImageOptions extends TeaModel {
-        // Indicates whether the instance that uses the image supports logons of the ecs-user user. Valid values: 
-        // 
-        // - true: The instance that uses the image supports logons of the ecs-user user.
-        // - false: The instance that uses the image does not support logons of the ecs-user user.
+        /**
+         * <p>Indicates whether the instance that uses the image supports logons of the ecs-user user. Valid values: </p>
+         * <br>
+         * <p>- true: The instance that uses the image supports logons of the ecs-user user.</p>
+         * <p>- false: The instance that uses the image does not support logons of the ecs-user user.</p>
+         */
         @NameInMap("LoginAsNonRoot")
         public Boolean loginAsNonRoot;
 
@@ -375,21 +421,27 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesInstanceMetadataOptions extends TeaModel {
-        // Indicates whether the access channel is enabled for instance metadata. Valid values:
-        // 
-        // - enabled
-        // - disabled
+        /**
+         * <p>Indicates whether the access channel is enabled for instance metadata. Valid values:</p>
+         * <br>
+         * <p>- enabled</p>
+         * <p>- disabled</p>
+         */
         @NameInMap("HttpEndpoint")
         public String httpEndpoint;
 
-        // >  This parameter is unavailable.
+        /**
+         * <p>>  This parameter is unavailable.</p>
+         */
         @NameInMap("HttpPutResponseHopLimit")
         public Integer httpPutResponseHopLimit;
 
-        // Indicates whether the security hardening mode (IMDSv2) is forcefully used to access instance metadata. Valid values: 
-        // 
-        // - optional: The security hardening mode (IMDSv2) is not forcefully used.
-        // - required: The security hardening mode (IMDSv2) is forcefully used.
+        /**
+         * <p>Indicates whether the security hardening mode (IMDSv2) is forcefully used to access instance metadata. Valid values: </p>
+         * <br>
+         * <p>- optional: The security hardening mode (IMDSv2) is not forcefully used.</p>
+         * <p>- required: The security hardening mode (IMDSv2) is forcefully used.</p>
+         */
         @NameInMap("HttpTokens")
         public String httpTokens;
 
@@ -425,7 +477,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfaceIpv4PrefixSetsIpv4PrefixSet extends TeaModel {
-        // The IPv4 prefix.
+        /**
+         * <p>The IPv4 prefix.</p>
+         */
         @NameInMap("Ipv4Prefix")
         public String ipv4Prefix;
 
@@ -464,7 +518,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfaceIpv6PrefixSetsIpv6PrefixSet extends TeaModel {
-        // The IPv6 prefix.
+        /**
+         * <p>The IPv6 prefix.</p>
+         */
         @NameInMap("Ipv6Prefix")
         public String ipv6Prefix;
 
@@ -503,7 +559,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfaceIpv6SetsIpv6Set extends TeaModel {
-        // The IPv6 address assigned to the ENI.
+        /**
+         * <p>The IPv6 address assigned to the ENI.</p>
+         */
         @NameInMap("Ipv6Address")
         public String ipv6Address;
 
@@ -542,11 +600,15 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacePrivateIpSetsPrivateIpSet extends TeaModel {
-        // Indicates whether the IP address is the primary private IP address.
+        /**
+         * <p>Indicates whether the IP address is the primary private IP address.</p>
+         */
         @NameInMap("Primary")
         public Boolean primary;
 
-        // The private IP address of the instance to which the ENI is bound.
+        /**
+         * <p>The private IP address of the instance to which the ENI is bound.</p>
+         */
         @NameInMap("PrivateIpAddress")
         public String privateIpAddress;
 
@@ -593,38 +655,54 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterface extends TeaModel {
-        // The sets of IPv4 prefix.
+        /**
+         * <p>The sets of IPv4 prefix.</p>
+         */
         @NameInMap("Ipv4PrefixSets")
         public DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfaceIpv4PrefixSets ipv4PrefixSets;
 
-        // The sets of IPv6 prefix.
+        /**
+         * <p>The sets of IPv6 prefix.</p>
+         */
         @NameInMap("Ipv6PrefixSets")
         public DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfaceIpv6PrefixSets ipv6PrefixSets;
 
-        // The IPv6 addresses assigned to the ENI. This parameter has a value only when the `AdditionalAttributes.N` request parameter is set to `NETWORK_PRIMARY_ENI_IP`.
+        /**
+         * <p>The IPv6 addresses assigned to the ENI. This parameter has a value only when the `AdditionalAttributes.N` request parameter is set to `NETWORK_PRIMARY_ENI_IP`.</p>
+         */
         @NameInMap("Ipv6Sets")
         public DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfaceIpv6Sets ipv6Sets;
 
-        // The media access control (MAC) address of the ENI.
+        /**
+         * <p>The media access control (MAC) address of the ENI.</p>
+         */
         @NameInMap("MacAddress")
         public String macAddress;
 
-        // The ID of the ENI.
+        /**
+         * <p>The ID of the ENI.</p>
+         */
         @NameInMap("NetworkInterfaceId")
         public String networkInterfaceId;
 
-        // The primary private IP address of the ENI.
+        /**
+         * <p>The primary private IP address of the ENI.</p>
+         */
         @NameInMap("PrimaryIpAddress")
         public String primaryIpAddress;
 
-        // Details about the private IP address.
+        /**
+         * <p>Details about the private IP address.</p>
+         */
         @NameInMap("PrivateIpSets")
         public DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacePrivateIpSets privateIpSets;
 
-        // The type of the ENI. Valid values:
-        // 
-        // *   Primary
-        // *   Secondary
+        /**
+         * <p>The type of the ENI. Valid values:</p>
+         * <br>
+         * <p>*   Primary</p>
+         * <p>*   Secondary</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -719,17 +797,21 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesInstanceOperationLocksLockReason extends TeaModel {
-        // The message returned when the instance was locked.
+        /**
+         * <p>The message returned when the instance was locked.</p>
+         */
         @NameInMap("LockMsg")
         public String lockMsg;
 
-        // The reason why the instance was locked. Valid values:
-        // 
-        // - financial: The instance was locked due to overdue payments.
-        // - security: The instance was locked due to security reasons.
-        // - recycling: The preemptible instance was locked and pending release.
-        // - dedicatedhostfinancial: The instance was locked due to overdue payments for the dedicated host.
-        // - refunded: The instance was locked because a refund was made for the instance.
+        /**
+         * <p>The reason why the instance was locked. Valid values:</p>
+         * <br>
+         * <p>- financial: The instance was locked due to overdue payments.</p>
+         * <p>- security: The instance was locked due to security reasons.</p>
+         * <p>- recycling: The preemptible instance was locked and pending release.</p>
+         * <p>- dedicatedhostfinancial: The instance was locked due to overdue payments for the dedicated host.</p>
+         * <p>- refunded: The instance was locked because a refund was made for the instance.</p>
+         */
         @NameInMap("LockReason")
         public String lockReason;
 
@@ -833,11 +915,15 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesInstanceTagsTag extends TeaModel {
-        // The tag key of the instance.
+        /**
+         * <p>The tag key of the instance.</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        // The tag value of the instance.
+        /**
+         * <p>The tag value of the instance.</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -903,19 +989,27 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesInstanceVpcAttributes extends TeaModel {
-        // The NAT IP address of the instance. It is used by ECS instances in different VPCs for communication.
+        /**
+         * <p>The NAT IP address of the instance. It is used by ECS instances in different VPCs for communication.</p>
+         */
         @NameInMap("NatIpAddress")
         public String natIpAddress;
 
-        // The private IP addresses of the instance.
+        /**
+         * <p>The private IP addresses of the instance.</p>
+         */
         @NameInMap("PrivateIpAddress")
         public DescribeInstancesResponseBodyInstancesInstanceVpcAttributesPrivateIpAddress privateIpAddress;
 
-        // The ID of the vSwitch.
+        /**
+         * <p>The ID of the vSwitch.</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
-        // The ID of the VPC.
+        /**
+         * <p>The ID of the VPC.</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
@@ -959,292 +1053,418 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesInstance extends TeaModel {
-        // The time when to automatically release the pay-as-you-go instance.
+        /**
+         * <p>The time when to automatically release the pay-as-you-go instance.</p>
+         */
         @NameInMap("AutoReleaseTime")
         public String autoReleaseTime;
 
-        // The ID of the cluster to which the instance belongs.
-        // 
-        // >  This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.
+        /**
+         * <p>The ID of the cluster to which the instance belongs.</p>
+         * <br>
+         * <p>>  This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
-        // The number of vCPUs.
+        /**
+         * <p>The number of vCPUs.</p>
+         */
         @NameInMap("Cpu")
         public Integer cpu;
 
-        // Details about the CPU options.
+        /**
+         * <p>Details about the CPU options.</p>
+         */
         @NameInMap("CpuOptions")
         public DescribeInstancesResponseBodyInstancesInstanceCpuOptions cpuOptions;
 
-        // The time when the instance was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. For more information, see [ISO 8601](~~25696~~).
+        /**
+         * <p>The time when the instance was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. For more information, see [ISO 8601](~~25696~~).</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        // The performance mode of the burstable instance. Valid values:
-        // 
-        // *   Standard: standard mode. For more information, see the "Standard mode" section in [Overview](~~59977~~).
-        // *   Unlimited: unlimited mode. For more information, see the "Unlimited mode" section in [Overview](~~59977~~).
+        /**
+         * <p>The performance mode of the burstable instance. Valid values:</p>
+         * <br>
+         * <p>*   Standard: standard mode. For more information, see the "Standard mode" section in [Overview](~~59977~~).</p>
+         * <p>*   Unlimited: unlimited mode. For more information, see the "Unlimited mode" section in [Overview](~~59977~~).</p>
+         */
         @NameInMap("CreditSpecification")
         public String creditSpecification;
 
-        // Details about the dedicated host. It is an array that consists of the DedicatedHostClusterId, DedicatedHostId, and DedicatedHostName parameters.
+        /**
+         * <p>Details about the dedicated host. It is an array that consists of the DedicatedHostClusterId, DedicatedHostId, and DedicatedHostName parameters.</p>
+         */
         @NameInMap("DedicatedHostAttribute")
         public DescribeInstancesResponseBodyInstancesInstanceDedicatedHostAttribute dedicatedHostAttribute;
 
-        // The attributes of the instance on the dedicated host.
+        /**
+         * <p>The attributes of the instance on the dedicated host.</p>
+         */
         @NameInMap("DedicatedInstanceAttribute")
         public DescribeInstancesResponseBodyInstancesInstanceDedicatedInstanceAttribute dedicatedInstanceAttribute;
 
-        // The release protection attribute of the instance. This parameter indicates whether you can use the ECS console or call the DeleteInstance operation to release the instance.
-        // 
-        // *   true: Release protection is enabled for the instance.
-        // *   false: Release protection is disabled for the instance.
-        // 
-        // >  This parameter is applicable only to pay-as-you-go instances. It can protect instances against manual releases, but not against automatic releases.
+        /**
+         * <p>The release protection attribute of the instance. This parameter indicates whether you can use the ECS console or call the DeleteInstance operation to release the instance.</p>
+         * <br>
+         * <p>*   true: Release protection is enabled for the instance.</p>
+         * <p>*   false: Release protection is disabled for the instance.</p>
+         * <br>
+         * <p>>  This parameter is applicable only to pay-as-you-go instances. It can protect instances against manual releases, but not against automatic releases.</p>
+         */
         @NameInMap("DeletionProtection")
         public Boolean deletionProtection;
 
-        // The number of the deployment set group to which the instance belongs in a deployment set.
+        /**
+         * <p>The number of the deployment set group to which the instance belongs in a deployment set.</p>
+         */
         @NameInMap("DeploymentSetGroupNo")
         public Integer deploymentSetGroupNo;
 
-        // The ID of the deployment set in which the instance is deployed.
+        /**
+         * <p>The ID of the deployment set in which the instance is deployed.</p>
+         */
         @NameInMap("DeploymentSetId")
         public String deploymentSetId;
 
-        // The description of the instance.
+        /**
+         * <p>The description of the instance.</p>
+         */
         @NameInMap("Description")
         public String description;
 
-        // Indicates whether data disks can be attached to the instance.
+        /**
+         * <p>Indicates whether data disks can be attached to the instance.</p>
+         */
         @NameInMap("DeviceAvailable")
         public Boolean deviceAvailable;
 
-        // Details about the capacity reservation related to the instance.
+        /**
+         * <p>Details about the capacity reservation related to the instance.</p>
+         */
         @NameInMap("EcsCapacityReservationAttr")
         public DescribeInstancesResponseBodyInstancesInstanceEcsCapacityReservationAttr ecsCapacityReservationAttr;
 
-        // Details about the EIP associated with the instance.
+        /**
+         * <p>Details about the EIP associated with the instance.</p>
+         */
         @NameInMap("EipAddress")
         public DescribeInstancesResponseBodyInstancesInstanceEipAddress eipAddress;
 
-        // The time when the instance expires. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. For more information, see [ISO 8601](~~25696~~).
+        /**
+         * <p>The time when the instance expires. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. For more information, see [ISO 8601](~~25696~~).</p>
+         */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
-        // The number of GPUs for the instance type.
+        /**
+         * <p>The number of GPUs for the instance type.</p>
+         */
         @NameInMap("GPUAmount")
         public Integer GPUAmount;
 
-        // The category of GPUs for the instance type.
+        /**
+         * <p>The category of GPUs for the instance type.</p>
+         */
         @NameInMap("GPUSpec")
         public String GPUSpec;
 
-        // >  This parameter is in invitational preview and is unavailable for general users.
+        /**
+         * <p>>  This parameter is in invitational preview and is unavailable for general users.</p>
+         */
         @NameInMap("HibernationOptions")
         public DescribeInstancesResponseBodyInstancesInstanceHibernationOptions hibernationOptions;
 
-        // The hostname of the instance.
+        /**
+         * <p>The hostname of the instance.</p>
+         */
         @NameInMap("HostName")
         public String hostName;
 
-        // The ID of the HPC cluster to which the instance belongs.
+        /**
+         * <p>The ID of the HPC cluster to which the instance belongs.</p>
+         */
         @NameInMap("HpcClusterId")
         public String hpcClusterId;
 
-        // >  This parameter is in invitational preview and is unavailable for general users.
+        /**
+         * <p>>  This parameter is in invitational preview and is unavailable for general users.</p>
+         */
         @NameInMap("ISP")
         public String ISP;
 
-        // The ID of the image that the instance is running.
+        /**
+         * <p>The ID of the image that the instance is running.</p>
+         */
         @NameInMap("ImageId")
         public String imageId;
 
-        // Details about the image options.
+        /**
+         * <p>Details about the image options.</p>
+         */
         @NameInMap("ImageOptions")
         public DescribeInstancesResponseBodyInstancesInstanceImageOptions imageOptions;
 
-        // The internal IP addresses of the instance located in the classic network.
+        /**
+         * <p>The internal IP addresses of the instance located in the classic network.</p>
+         */
         @NameInMap("InnerIpAddress")
         public DescribeInstancesResponseBodyInstancesInstanceInnerIpAddress innerIpAddress;
 
-        // The billing method of the instance. Valid values:
-        // 
-        // *   PrePaid: subscription
-        // *   PostPaid: pay-as-you-go
+        /**
+         * <p>The billing method of the instance. Valid values:</p>
+         * <br>
+         * <p>*   PrePaid: subscription</p>
+         * <p>*   PostPaid: pay-as-you-go</p>
+         */
         @NameInMap("InstanceChargeType")
         public String instanceChargeType;
 
-        // The ID of the instance.
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        // The name of the instance.
+        /**
+         * <p>The name of the instance.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
-        // The network type of the instance. Valid values:
-        // 
-        // *   classic
-        // *   vpc
+        /**
+         * <p>The network type of the instance. Valid values:</p>
+         * <br>
+         * <p>*   classic</p>
+         * <p>*   vpc</p>
+         */
         @NameInMap("InstanceNetworkType")
         public String instanceNetworkType;
 
-        // The instance type of the instance.
+        /**
+         * <p>The instance type of the instance.</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
-        // The instance family of the instance.
+        /**
+         * <p>The instance family of the instance.</p>
+         */
         @NameInMap("InstanceTypeFamily")
         public String instanceTypeFamily;
 
-        // The billing method for network usage. Valid values:
-        // 
-        // *   PayByBandwidth: pay-by-bandwidth
-        // *   PayByTraffic: pay-by-traffic
+        /**
+         * <p>The billing method for network usage. Valid values:</p>
+         * <br>
+         * <p>*   PayByBandwidth: pay-by-bandwidth</p>
+         * <p>*   PayByTraffic: pay-by-traffic</p>
+         */
         @NameInMap("InternetChargeType")
         public String internetChargeType;
 
-        // The maximum inbound public bandwidth. Unit: Mbit/s.
+        /**
+         * <p>The maximum inbound public bandwidth. Unit: Mbit/s.</p>
+         */
         @NameInMap("InternetMaxBandwidthIn")
         public Integer internetMaxBandwidthIn;
 
-        // The maximum outbound public bandwidth. Unit: Mbit/s.
+        /**
+         * <p>The maximum outbound public bandwidth. Unit: Mbit/s.</p>
+         */
         @NameInMap("InternetMaxBandwidthOut")
         public Integer internetMaxBandwidthOut;
 
-        // Indicates whether the instance is I/O optimized.
+        /**
+         * <p>Indicates whether the instance is I/O optimized.</p>
+         */
         @NameInMap("IoOptimized")
         public Boolean ioOptimized;
 
-        // The name of the key pair bound to the instance.
+        /**
+         * <p>The name of the key pair bound to the instance.</p>
+         */
         @NameInMap("KeyPairName")
         public String keyPairName;
 
-        // The number of local disks attached to the instance.
+        /**
+         * <p>The number of local disks attached to the instance.</p>
+         */
         @NameInMap("LocalStorageAmount")
         public Integer localStorageAmount;
 
-        // The capacity of local disks attached to the instance.
+        /**
+         * <p>The capacity of local disks attached to the instance.</p>
+         */
         @NameInMap("LocalStorageCapacity")
         public Long localStorageCapacity;
 
-        // The memory size of the instance. Unit: MiB.
+        /**
+         * <p>The memory size of the instance. Unit: MiB.</p>
+         */
         @NameInMap("Memory")
         public Integer memory;
 
-        // Details about the metadata options.
+        /**
+         * <p>Details about the metadata options.</p>
+         */
         @NameInMap("MetadataOptions")
         public DescribeInstancesResponseBodyInstancesInstanceMetadataOptions metadataOptions;
 
-        // Details about the ENIs bound to the instance.
+        /**
+         * <p>Details about the ENIs bound to the instance.</p>
+         */
         @NameInMap("NetworkInterfaces")
         public DescribeInstancesResponseBodyInstancesInstanceNetworkInterfaces networkInterfaces;
 
-        // The name of the operating system of the instance.
+        /**
+         * <p>The name of the operating system of the instance.</p>
+         */
         @NameInMap("OSName")
         public String OSName;
 
-        // The English name of the operating system of the instance.
+        /**
+         * <p>The English name of the operating system of the instance.</p>
+         */
         @NameInMap("OSNameEn")
         public String OSNameEn;
 
-        // The type of the operating system of the instance. Valid values:
-        // 
-        // *   windows
-        // *   linux
+        /**
+         * <p>The type of the operating system of the instance. Valid values:</p>
+         * <br>
+         * <p>*   windows</p>
+         * <p>*   linux</p>
+         */
         @NameInMap("OSType")
         public String OSType;
 
-        // The reasons why the instance was locked.
+        /**
+         * <p>The reasons why the instance was locked.</p>
+         */
         @NameInMap("OperationLocks")
         public DescribeInstancesResponseBodyInstancesInstanceOperationLocks operationLocks;
 
-        // The public IP addresses of the instance.
+        /**
+         * <p>The public IP addresses of the instance.</p>
+         */
         @NameInMap("PublicIpAddress")
         public DescribeInstancesResponseBodyInstancesInstancePublicIpAddress publicIpAddress;
 
-        // The RDMA IP addresses of the HPC instance.
+        /**
+         * <p>The RDMA IP addresses of the HPC instance.</p>
+         */
         @NameInMap("RdmaIpAddress")
         public DescribeInstancesResponseBodyInstancesInstanceRdmaIpAddress rdmaIpAddress;
 
-        // Indicates whether the instance can be recycled.
+        /**
+         * <p>Indicates whether the instance can be recycled.</p>
+         */
         @NameInMap("Recyclable")
         public Boolean recyclable;
 
-        // The region ID of the instance.
+        /**
+         * <p>The region ID of the instance.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
-        // The ID of the resource group to which the instance belongs.
+        /**
+         * <p>The ID of the resource group to which the instance belongs.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        // >  The parameter is discontinued.
+        /**
+         * <p>>  The parameter is discontinued.</p>
+         */
         @NameInMap("SaleCycle")
         public String saleCycle;
 
-        // The IDs of the security groups to which the instance belongs.
+        /**
+         * <p>The IDs of the security groups to which the instance belongs.</p>
+         */
         @NameInMap("SecurityGroupIds")
         public DescribeInstancesResponseBodyInstancesInstanceSecurityGroupIds securityGroupIds;
 
-        // The serial number of the instance.
+        /**
+         * <p>The serial number of the instance.</p>
+         */
         @NameInMap("SerialNumber")
         public String serialNumber;
 
-        // The protection period of the preemptible instance. Unit: hours. Valid values: 0, 1, 2, 3, 4, 5, and 6.
-        // 
-        // *   Protection periods of 2, 3, 4, 5, and 6 hours are in invitational preview. If you want to set this parameter to one of these values, submit a ticket.
-        // *   A value of 0 indicates that the preemptible instance has no protection period.
-        // 
-        // >  This parameter is returned when the SpotStrategy parameter is set to SpotWithPriceLimit or SpotAsPriceGo.
+        /**
+         * <p>The protection period of the preemptible instance. Unit: hours. Valid values: 0, 1, 2, 3, 4, 5, and 6.</p>
+         * <br>
+         * <p>*   Protection periods of 2, 3, 4, 5, and 6 hours are in invitational preview. If you want to set this parameter to one of these values, submit a ticket.</p>
+         * <p>*   A value of 0 indicates that the preemptible instance has no protection period.</p>
+         * <br>
+         * <p>>  This parameter is returned when the SpotStrategy parameter is set to SpotWithPriceLimit or SpotAsPriceGo.</p>
+         */
         @NameInMap("SpotDuration")
         public Integer spotDuration;
 
-        // The maximum hourly price of the instance. It can be accurate to three decimal places. This parameter is valid only when the SpotStrategy parameter is set to SpotWithPriceLimit.
+        /**
+         * <p>The maximum hourly price of the instance. It can be accurate to three decimal places. This parameter is valid only when the SpotStrategy parameter is set to SpotWithPriceLimit.</p>
+         */
         @NameInMap("SpotPriceLimit")
         public Float spotPriceLimit;
 
-        // The bidding policy for the pay-as-you-go instance. Valid values:
-        // 
-        // *   NoSpot: The instance is a regular pay-as-you-go instance.
-        // *   SpotWithPriceLimit: The instance is a preemptible instance with a user-defined maximum hourly price.
-        // *   SpotAsPriceGo: The instance is a preemptible instance for which the market price is automatically used as the bid price. The market price can be up to the pay-as-you-go price.
+        /**
+         * <p>The bidding policy for the pay-as-you-go instance. Valid values:</p>
+         * <br>
+         * <p>*   NoSpot: The instance is a regular pay-as-you-go instance.</p>
+         * <p>*   SpotWithPriceLimit: The instance is a preemptible instance with a user-defined maximum hourly price.</p>
+         * <p>*   SpotAsPriceGo: The instance is a preemptible instance for which the market price is automatically used as the bid price. The market price can be up to the pay-as-you-go price.</p>
+         */
         @NameInMap("SpotStrategy")
         public String spotStrategy;
 
-        // The time when the instance was last started. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. For more information, see [ISO 8601](~~25696~~).
+        /**
+         * <p>The time when the instance was last started. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. For more information, see [ISO 8601](~~25696~~).</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
-        // The state of the instance.
+        /**
+         * <p>The state of the instance.</p>
+         */
         @NameInMap("Status")
         public String status;
 
-        // Indicates whether the instance continues to be billed after it is stopped. Valid values:
-        // 
-        // *   KeepCharging: The instance is stopped in standard mode. The billing of the instance continues after the instance is stopped, and resources are retained for the instance.
-        // *   StopCharging: The instance is stopped in economical mode. The billing of some resources of the instance stops after the instance is stopped. When the instance is stopped, its resources such as vCPUs, memory, and public IP address are released. The instance may be unable to start again if some required resources are out of stock in the current region.
-        // *   Not-applicable: The instance does not support economical mode.
+        /**
+         * <p>Indicates whether the instance continues to be billed after it is stopped. Valid values:</p>
+         * <br>
+         * <p>*   KeepCharging: The instance is stopped in standard mode. The billing of the instance continues after the instance is stopped, and resources are retained for the instance.</p>
+         * <p>*   StopCharging: The instance is stopped in economical mode. The billing of some resources of the instance stops after the instance is stopped. When the instance is stopped, its resources such as vCPUs, memory, and public IP address are released. The instance may be unable to start again if some required resources are out of stock in the current region.</p>
+         * <p>*   Not-applicable: The instance does not support economical mode.</p>
+         */
         @NameInMap("StoppedMode")
         public String stoppedMode;
 
-        // The tags of the instance.
+        /**
+         * <p>The tags of the instance.</p>
+         */
         @NameInMap("Tags")
         public DescribeInstancesResponseBodyInstancesInstanceTags tags;
 
-        // The virtual LAN (VLAN) ID of the instance.
-        // 
-        // >  This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.
+        /**
+         * <p>The virtual LAN (VLAN) ID of the instance.</p>
+         * <br>
+         * <p>>  This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.</p>
+         */
         @NameInMap("VlanId")
         public String vlanId;
 
-        // The VPC attributes of the instance.
+        /**
+         * <p>The VPC attributes of the instance.</p>
+         */
         @NameInMap("VpcAttributes")
         public DescribeInstancesResponseBodyInstancesInstanceVpcAttributes vpcAttributes;
 
-        // The zone ID of the instance.
+        /**
+         * <p>The zone ID of the instance.</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

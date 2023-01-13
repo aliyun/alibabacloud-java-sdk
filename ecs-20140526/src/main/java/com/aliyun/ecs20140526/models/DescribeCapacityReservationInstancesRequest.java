@@ -7,15 +7,19 @@ public class DescribeCapacityReservationInstancesRequest extends TeaModel {
     @NameInMap("PrivatePoolOptions")
     public DescribeCapacityReservationInstancesRequestPrivatePoolOptions privatePoolOptions;
 
-    // The number of entries to return on each page.
-    // 
-    // Maximum value: 100
-    // 
-    // Default value: 10.
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>Maximum value: 100</p>
+     * <br>
+     * <p>Default value: 10.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // The token used to start the query. The token is obtained from the response of the previous request.
+    /**
+     * <p>The token used to start the query. The token is obtained from the response of the previous request.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -25,7 +29,9 @@ public class DescribeCapacityReservationInstancesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The region ID of the capacity reservation. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+    /**
+     * <p>The region ID of the capacity reservation. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -105,7 +111,9 @@ public class DescribeCapacityReservationInstancesRequest extends TeaModel {
     }
 
     public static class DescribeCapacityReservationInstancesRequestPrivatePoolOptions extends TeaModel {
-        // The ID of the capacity reservation.
+        /**
+         * <p>The ID of the capacity reservation.</p>
+         */
         @NameInMap("Id")
         public String id;
 

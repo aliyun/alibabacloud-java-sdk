@@ -7,7 +7,9 @@ public class ModifyElasticityAssuranceRequest extends TeaModel {
     @NameInMap("PrivatePoolOptions")
     public ModifyElasticityAssuranceRequestPrivatePoolOptions privatePoolOptions;
 
-    // The description of the elasticity assurance. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
+    /**
+     * <p>The description of the elasticity assurance. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("Description")
     public String description;
 
@@ -17,7 +19,9 @@ public class ModifyElasticityAssuranceRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The region ID of the elasticity assurance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+    /**
+     * <p>The region ID of the elasticity assurance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -89,11 +93,15 @@ public class ModifyElasticityAssuranceRequest extends TeaModel {
     }
 
     public static class ModifyElasticityAssuranceRequestPrivatePoolOptions extends TeaModel {
-        // The ID of the elasticity assurance.
+        /**
+         * <p>The ID of the elasticity assurance.</p>
+         */
         @NameInMap("Id")
         public String id;
 
-        // The name of the elasticity assurance. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+        /**
+         * <p>The name of the elasticity assurance. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+         */
         @NameInMap("Name")
         public String name;
 

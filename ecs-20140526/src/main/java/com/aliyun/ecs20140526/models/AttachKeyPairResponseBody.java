@@ -4,23 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class AttachKeyPairResponseBody extends TeaModel {
-    // The number of instances to which the key pair fails to be attached.
+    /**
+     * <p>The number of instances to which the key pair fails to be attached.</p>
+     */
     @NameInMap("FailCount")
     public String failCount;
 
-    // The name of the key pair.
+    /**
+     * <p>The name of the key pair.</p>
+     */
     @NameInMap("KeyPairName")
     public String keyPairName;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // An array consisting of result data.
+    /**
+     * <p>An array consisting of result data.</p>
+     */
     @NameInMap("Results")
     public AttachKeyPairResponseBodyResults results;
 
-    // The total number of instances to which the SSH key pair is attached.
+    /**
+     * <p>The total number of instances to which the SSH key pair is attached.</p>
+     */
     @NameInMap("TotalCount")
     public String totalCount;
 
@@ -70,19 +80,27 @@ public class AttachKeyPairResponseBody extends TeaModel {
     }
 
     public static class AttachKeyPairResponseBodyResultsResult extends TeaModel {
-        // The operation status code returned. 200 indicates that the operation is successful.
+        /**
+         * <p>The operation status code returned. 200 indicates that the operation is successful.</p>
+         */
         @NameInMap("Code")
         public String code;
 
-        // The ID of the instance.
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        // The operation information returned. When the value of Code is 200, the value of Message becomes successful.
+        /**
+         * <p>The operation information returned. When the value of Code is 200, the value of Message becomes successful.</p>
+         */
         @NameInMap("Message")
         public String message;
 
-        // Indicates whether the operation is successful.
+        /**
+         * <p>Indicates whether the operation is successful.</p>
+         */
         @NameInMap("Success")
         public String success;
 

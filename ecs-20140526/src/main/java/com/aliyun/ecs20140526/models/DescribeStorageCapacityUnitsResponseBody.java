@@ -4,23 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
-    // The page number of the returned page.
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // The number of entries returned per page.
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Details about the SCUs.
+    /**
+     * <p>Details about the SCUs.</p>
+     */
     @NameInMap("StorageCapacityUnits")
     public DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnits storageCapacityUnits;
 
-    // The total number of SCUs.
+    /**
+     * <p>The total number of SCUs.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -70,11 +80,15 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
     }
 
     public static class DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnitTagsTag extends TeaModel {
-        // The tag key of the SCU.
+        /**
+         * <p>The tag key of the SCU.</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        // The tag value of the SCU.
+        /**
+         * <p>The tag value of the SCU.</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -121,50 +135,72 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
     }
 
     public static class DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnit extends TeaModel {
-        // Indicates the allocation state of the SCU when the AllocationType parameter is set to Shared. Valid values:
-        // 
-        // *   allocated: The SCU is allocated to other accounts.
-        // *   BeAllocated: The SCU is allocated from another account.
+        /**
+         * <p>Indicates the allocation state of the SCU when the AllocationType parameter is set to Shared. Valid values:</p>
+         * <br>
+         * <p>*   allocated: The SCU is allocated to other accounts.</p>
+         * <p>*   BeAllocated: The SCU is allocated from another account.</p>
+         */
         @NameInMap("AllocationStatus")
         public String allocationStatus;
 
-        // The capacity of the SCU.
+        /**
+         * <p>The capacity of the SCU.</p>
+         */
         @NameInMap("Capacity")
         public Integer capacity;
 
-        // The time when the SCU was created.
+        /**
+         * <p>The time when the SCU was created.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        // The description of the SCU.
+        /**
+         * <p>The description of the SCU.</p>
+         */
         @NameInMap("Description")
         public String description;
 
-        // The time when the SCU expires.
+        /**
+         * <p>The time when the SCU expires.</p>
+         */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
-        // The name of the SCU.
+        /**
+         * <p>The name of the SCU.</p>
+         */
         @NameInMap("Name")
         public String name;
 
-        // The region ID of the SCU.
+        /**
+         * <p>The region ID of the SCU.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
-        // The time when the SCU took effect.
+        /**
+         * <p>The time when the SCU took effect.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
-        // The state of the SCU.
+        /**
+         * <p>The state of the SCU.</p>
+         */
         @NameInMap("Status")
         public String status;
 
-        // The ID of the SCU.
+        /**
+         * <p>The ID of the SCU.</p>
+         */
         @NameInMap("StorageCapacityUnitId")
         public String storageCapacityUnitId;
 
-        // The tag key-value pairs of the SCU.
+        /**
+         * <p>The tag key-value pairs of the SCU.</p>
+         */
         @NameInMap("Tags")
         public DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnitTags tags;
 

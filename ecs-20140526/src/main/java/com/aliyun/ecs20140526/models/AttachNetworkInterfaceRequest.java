@@ -4,14 +4,18 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class AttachNetworkInterfaceRequest extends TeaModel {
-    // The ID of the instance.
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("NetworkCardIndex")
     public Integer networkCardIndex;
 
-    // The ID of the ENI.
+    /**
+     * <p>The ID of the ENI.</p>
+     */
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;
 
@@ -21,7 +25,9 @@ public class AttachNetworkInterfaceRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+    /**
+     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -31,13 +37,17 @@ public class AttachNetworkInterfaceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    // The trunk network card ID.
-    // 
-    // > This parameter is not online yet and cannot be used.
+    /**
+     * <p>The trunk network card ID.</p>
+     * <br>
+     * <p>> This parameter is not online yet and cannot be used.</p>
+     */
     @NameInMap("TrunkNetworkInstanceId")
     public String trunkNetworkInstanceId;
 
-    // > The parameter is deprecated.
+    /**
+     * <p>> The parameter is deprecated.</p>
+     */
     @NameInMap("WaitForNetworkConfigurationReady")
     public Boolean waitForNetworkConfigurationReady;
 

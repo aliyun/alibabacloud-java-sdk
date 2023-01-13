@@ -7,23 +7,31 @@ public class DescribeSnapshotGroupsRequest extends TeaModel {
     @NameInMap("AdditionalAttributes")
     public java.util.List<String> additionalAttributes;
 
-    // The ID of the instance.
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // The number of entries to return on each page.
-    // 
-    // Maximum value: 100.
-    // 
-    // Default value: 10.
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>Maximum value: 100.</p>
+     * <br>
+     * <p>Default value: 10.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // The name of the snapshot-consistent group.
+    /**
+     * <p>The name of the snapshot-consistent group.</p>
+     */
     @NameInMap("Name")
     public String name;
 
-    // The query token. Set the value to the NextToken value that is returned in the last call to the DescribeSnapshotGroups operation.
+    /**
+     * <p>The query token. Set the value to the NextToken value that is returned in the last call to the DescribeSnapshotGroups operation.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -33,11 +41,15 @@ public class DescribeSnapshotGroupsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The region ID of the snapshot-consistent group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+    /**
+     * <p>The region ID of the snapshot-consistent group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The ID of the resource group to which the snapshot-consistent group belongs.
+    /**
+     * <p>The ID of the resource group to which the snapshot-consistent group belongs.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -174,11 +186,15 @@ public class DescribeSnapshotGroupsRequest extends TeaModel {
     }
 
     public static class DescribeSnapshotGroupsRequestTag extends TeaModel {
-        // The key of tag N of the snapshot-consistent group. Valid values of N: 1 to 20.
+        /**
+         * <p>The key of tag N of the snapshot-consistent group. Valid values of N: 1 to 20.</p>
+         */
         @NameInMap("Key")
         public String key;
 
-        // The value of tag N of the snapshot-consistent group. Valid values of N: 1 to 20.
+        /**
+         * <p>The value of tag N of the snapshot-consistent group. Valid values of N: 1 to 20.</p>
+         */
         @NameInMap("Value")
         public String value;
 

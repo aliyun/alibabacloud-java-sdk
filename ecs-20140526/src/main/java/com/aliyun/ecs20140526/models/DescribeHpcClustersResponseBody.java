@@ -4,23 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeHpcClustersResponseBody extends TeaModel {
-    // Details about the HPC clusters. The value is an array that consists of the information of each HPC cluster.
+    /**
+     * <p>Details about the HPC clusters. The value is an array that consists of the information of each HPC cluster.</p>
+     */
     @NameInMap("HpcClusters")
     public DescribeHpcClustersResponseBodyHpcClusters hpcClusters;
 
-    // The page number of the returned page.
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // The number of entries returned per page.
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The total number of queried HPC clusters.
+    /**
+     * <p>The total number of queried HPC clusters.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -70,15 +80,21 @@ public class DescribeHpcClustersResponseBody extends TeaModel {
     }
 
     public static class DescribeHpcClustersResponseBodyHpcClustersHpcCluster extends TeaModel {
-        // The description of the HPC cluster.
+        /**
+         * <p>The description of the HPC cluster.</p>
+         */
         @NameInMap("Description")
         public String description;
 
-        // The ID of the HPC cluster.
+        /**
+         * <p>The ID of the HPC cluster.</p>
+         */
         @NameInMap("HpcClusterId")
         public String hpcClusterId;
 
-        // The name of the HPC cluster.
+        /**
+         * <p>The name of the HPC cluster.</p>
+         */
         @NameInMap("Name")
         public String name;
 

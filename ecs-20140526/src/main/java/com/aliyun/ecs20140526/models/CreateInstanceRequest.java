@@ -13,202 +13,264 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("SystemDisk")
     public CreateInstanceRequestSystemDisk systemDisk;
 
-    // Specifies whether to associate the instance on a dedicated host with the dedicated host. Valid values:
-    // 
-    // *   default: does not associate the instance with the dedicated host. When you start an instance that was stopped in economical mode, the instance is automatically deployed to another dedicated host in the automatic deployment resource pool if the available resources of the original dedicated host are insufficient.
-    // *   host: associates the instance with the dedicated host. When you start an instance that was stopped in economical mode, the instance remains on the original dedicated host. If the available resources of the original dedicated host are insufficient, the instance cannot start.
-    // 
-    // Default value: default.
+    /**
+     * <p>Specifies whether to associate the instance on a dedicated host with the dedicated host. Valid values:</p>
+     * <br>
+     * <p>*   default: does not associate the instance with the dedicated host. When you start an instance that was stopped in economical mode, the instance is automatically deployed to another dedicated host in the automatic deployment resource pool if the available resources of the original dedicated host are insufficient.</p>
+     * <p>*   host: associates the instance with the dedicated host. When you start an instance that was stopped in economical mode, the instance remains on the original dedicated host. If the available resources of the original dedicated host are insufficient, the instance cannot start.</p>
+     * <br>
+     * <p>Default value: default.</p>
+     */
     @NameInMap("Affinity")
     public String affinity;
 
-    // > This parameter is in invitational preview and is unavailable.
+    /**
+     * <p>> This parameter is in invitational preview and is unavailable.</p>
+     */
     @NameInMap("Arn")
     public java.util.List<CreateInstanceRequestArn> arn;
 
-    // Specifies whether to enable auto-renewal for the instance. This parameter is valid only when the `InstanceChargeType` parameter is set to `PrePaid`. Default value: false. Valid values:
-    // 
-    // * true: enables auto-renewal.
-    // * false: does not enable auto-renewal.
+    /**
+     * <p>Specifies whether to enable auto-renewal for the instance. This parameter is valid only when the `InstanceChargeType` parameter is set to `PrePaid`. Default value: false. Valid values:</p>
+     * <br>
+     * <p>* true: enables auto-renewal.</p>
+     * <p>* false: does not enable auto-renewal.</p>
+     */
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
-    // The auto-renewal cycle of the instance. This parameter is required when AutoRenew is set to true.
-    // 
-    // Valid values when PeriodUnit is set to Month: 1, 2, 3, 6, and 12
+    /**
+     * <p>The auto-renewal cycle of the instance. This parameter is required when AutoRenew is set to true.</p>
+     * <br>
+     * <p>Valid values when PeriodUnit is set to Month: 1, 2, 3, 6, and 12</p>
+     */
     @NameInMap("AutoRenewPeriod")
     public Integer autoRenewPeriod;
 
-    // The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // The ID of the cluster in which to create the instance.
-    // 
-    // > This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.
+    /**
+     * <p>The ID of the cluster in which to create the instance.</p>
+     * <br>
+     * <p>> This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
-    // The performance mode of the burstable instance. Valid values:
-    // 
-    // *   Standard: the standard mode. For more information, see the "Standard mode" section in [Burstable instances](~~59977~~).
-    // *   Unlimited: the unlimited mode. For more information, see the "Unlimited mode" section in [Burstable instances](~~59977~~).
+    /**
+     * <p>The performance mode of the burstable instance. Valid values:</p>
+     * <br>
+     * <p>*   Standard: the standard mode. For more information, see the "Standard mode" section in [Burstable instances](~~59977~~).</p>
+     * <p>*   Unlimited: the unlimited mode. For more information, see the "Unlimited mode" section in [Burstable instances](~~59977~~).</p>
+     */
     @NameInMap("CreditSpecification")
     public String creditSpecification;
 
-    // The list of data disks.
+    /**
+     * <p>The list of data disks.</p>
+     */
     @NameInMap("DataDisk")
     public java.util.List<CreateInstanceRequestDataDisk> dataDisk;
 
-    // The ID of the dedicated host on which to create the instance.
-    // 
-    // You can call the [DescribeDedicatedHosts](~~134242~~) operation to query the list of dedicated host IDs.
-    // 
-    // If the `DedicatedHostId` parameter is specified, the `SpotStrategy` and `SpotPriceLimit` parameters are ignored. This is because preemptible instances cannot be created on dedicated hosts.
+    /**
+     * <p>The ID of the dedicated host on which to create the instance.</p>
+     * <br>
+     * <p>You can call the [DescribeDedicatedHosts](~~134242~~) operation to query the list of dedicated host IDs.</p>
+     * <br>
+     * <p>If the `DedicatedHostId` parameter is specified, the `SpotStrategy` and `SpotPriceLimit` parameters are ignored. This is because preemptible instances cannot be created on dedicated hosts.</p>
+     */
     @NameInMap("DedicatedHostId")
     public String dedicatedHostId;
 
-    // Specifies whether to enable release protection for the instance. This parameter determines whether you can use the ECS console or call the [DeleteInstance](~~25507~~) operation to release the instance. Default value: false. Valid values:
-    // 
-    // *   true: enables release protection.
-    // *   false: disables release protection.
-    // 
-    // >  This parameter is applicable only to pay-as-you-go instances. It can protect instances against manual releases, but not against automatic releases.
+    /**
+     * <p>Specifies whether to enable release protection for the instance. This parameter determines whether you can use the ECS console or call the [DeleteInstance](~~25507~~) operation to release the instance. Default value: false. Valid values:</p>
+     * <br>
+     * <p>*   true: enables release protection.</p>
+     * <p>*   false: disables release protection.</p>
+     * <br>
+     * <p>>  This parameter is applicable only to pay-as-you-go instances. It can protect instances against manual releases, but not against automatic releases.</p>
+     */
     @NameInMap("DeletionProtection")
     public Boolean deletionProtection;
 
-    // The number of the deployment set group to which to deploy the instance. If the deployment set specified by the DeploymentSetId parameter uses the high availability group strategy (AvailabilityGroup), you can use the DeploymentSetGroupNo parameter to specify a deployment set group in the deployment set. Valid values: 1 to 7.
+    /**
+     * <p>The number of the deployment set group to which to deploy the instance. If the deployment set specified by the DeploymentSetId parameter uses the high availability group strategy (AvailabilityGroup), you can use the DeploymentSetGroupNo parameter to specify a deployment set group in the deployment set. Valid values: 1 to 7.</p>
+     */
     @NameInMap("DeploymentSetGroupNo")
     public Integer deploymentSetGroupNo;
 
-    // The ID of the deployment set to which to deploy the instance.
+    /**
+     * <p>The ID of the deployment set to which to deploy the instance.</p>
+     */
     @NameInMap("DeploymentSetId")
     public String deploymentSetId;
 
-    // The description of the instance. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
-    // 
-    // This parameter is empty by default.
+    /**
+     * <p>The description of the instance. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.</p>
+     * <br>
+     * <p>This parameter is empty by default.</p>
+     */
     @NameInMap("Description")
     public String description;
 
-    // Specifies whether to check the validity of the request without actually making the request. Default value: false. Valid values:
-    // 
-    // *   true: The validity of the request is checked but the request is not made. Check items include whether required parameters are specified, the request format, service limits, and available ECS resources. If the check fails, the corresponding error code is returned. If the check succeeds, the `DryRunOperation` error code is returned.
-    // *   false: The validity of the request is checked, and the request is made if the check succeeds.
+    /**
+     * <p>Specifies whether to check the validity of the request without actually making the request. Default value: false. Valid values:</p>
+     * <br>
+     * <p>*   true: The validity of the request is checked but the request is not made. Check items include whether required parameters are specified, the request format, service limits, and available ECS resources. If the check fails, the corresponding error code is returned. If the check succeeds, the `DryRunOperation` error code is returned.</p>
+     * <p>*   false: The validity of the request is checked, and the request is made if the check succeeds.</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
-    // The hostname of the instance.
-    // 
-    // * The hostname cannot start or end with a period (.) or hyphen (-). It cannot contain consecutive periods (.) or hyphens (-).
-    // * For a Windows instance, the hostname must be 2 to 15 characters in length and cannot contain periods (.) or contain only digits. It can contain letters, digits, and hyphens (-).
-    // * For an instance that runs another type of operating system such as Linux, the hostname must be 2 to 64 characters in length. You can use periods (.) to separate the hostname into multiple segments. Each segment can contain letters, digits, and hyphens (-).
+    /**
+     * <p>The hostname of the instance.</p>
+     * <br>
+     * <p>* The hostname cannot start or end with a period (.) or hyphen (-). It cannot contain consecutive periods (.) or hyphens (-).</p>
+     * <p>* For a Windows instance, the hostname must be 2 to 15 characters in length and cannot contain periods (.) or contain only digits. It can contain letters, digits, and hyphens (-).</p>
+     * <p>* For an instance that runs another type of operating system such as Linux, the hostname must be 2 to 64 characters in length. You can use periods (.) to separate the hostname into multiple segments. Each segment can contain letters, digits, and hyphens (-).</p>
+     */
     @NameInMap("HostName")
     public String hostName;
 
-    // The ID of the HPC cluster to which to assign the instance.
+    /**
+     * <p>The ID of the HPC cluster to which to assign the instance.</p>
+     */
     @NameInMap("HpcClusterId")
     public String hpcClusterId;
 
-    // Specifies whether to enable the access channel for instance metadata. Valid values:
-    // 
-    // *   enabled: enables the access channel for instance metadata.
-    // *   disabled: disables the access channel for instance metadata.
-    // 
-    // Default value: enabled.
-    // 
-    // >  For more information about instance metadata, see [Overview of ECS instance metadata](~~49122~~).
+    /**
+     * <p>Specifies whether to enable the access channel for instance metadata. Valid values:</p>
+     * <br>
+     * <p>*   enabled: enables the access channel for instance metadata.</p>
+     * <p>*   disabled: disables the access channel for instance metadata.</p>
+     * <br>
+     * <p>Default value: enabled.</p>
+     * <br>
+     * <p>>  For more information about instance metadata, see [Overview of ECS instance metadata](~~49122~~).</p>
+     */
     @NameInMap("HttpEndpoint")
     public String httpEndpoint;
 
-    // >  This parameter is currently in invitational preview and unavailable for general users.
+    /**
+     * <p>>  This parameter is currently in invitational preview and unavailable for general users.</p>
+     */
     @NameInMap("HttpPutResponseHopLimit")
     public Integer httpPutResponseHopLimit;
 
-    // Specifies whether to forcefully use the security-enhanced mode (IMDSv2) to access instance metadata. Valid values:
-    // 
-    // *   optional: does not forcibly use the security-enhanced mode (IMDSv2).
-    // *   required: forcefully uses the security-enhanced mode (IMDSv2). After you set this parameter to required, you cannot access instance metadata in normal mode.
-    // 
-    // Default value: optional.
-    // 
-    // >  For more information about modes of accessing instance metadata, see [Access mode of instance metadata](~~150575~~).
+    /**
+     * <p>Specifies whether to forcefully use the security-enhanced mode (IMDSv2) to access instance metadata. Valid values:</p>
+     * <br>
+     * <p>*   optional: does not forcibly use the security-enhanced mode (IMDSv2).</p>
+     * <p>*   required: forcefully uses the security-enhanced mode (IMDSv2). After you set this parameter to required, you cannot access instance metadata in normal mode.</p>
+     * <br>
+     * <p>Default value: optional.</p>
+     * <br>
+     * <p>>  For more information about modes of accessing instance metadata, see [Access mode of instance metadata](~~150575~~).</p>
+     */
     @NameInMap("HttpTokens")
     public String httpTokens;
 
-    // The name of the image family. You can set this parameter to obtain the latest available custom image from the specified image family to create the instance.
-    // 
-    // * ImageFamily must be empty if `ImageId` is specified.
-    // * ImageFamily can be specified if `ImageId` is not specified.
+    /**
+     * <p>The name of the image family. You can set this parameter to obtain the latest available custom image from the specified image family to create the instance.</p>
+     * <br>
+     * <p>* ImageFamily must be empty if `ImageId` is specified.</p>
+     * <p>* ImageFamily can be specified if `ImageId` is not specified.</p>
+     */
     @NameInMap("ImageFamily")
     public String imageFamily;
 
-    // The ID of the image to use to create the instance. To use an Alibaba Cloud Marketplace image, you can view the `image ID` on the product page of the Alibaba Cloud Marketplace image. This parameter is required if you do not specify the `ImageFamily` parameter to obtain the latest available custom image from the specified image family.
+    /**
+     * <p>The ID of the image to use to create the instance. To use an Alibaba Cloud Marketplace image, you can view the `image ID` on the product page of the Alibaba Cloud Marketplace image. This parameter is required if you do not specify the `ImageFamily` parameter to obtain the latest available custom image from the specified image family.</p>
+     */
     @NameInMap("ImageId")
     public String imageId;
 
-    // The internal IP address to assign to the instance.
+    /**
+     * <p>The internal IP address to assign to the instance.</p>
+     */
     @NameInMap("InnerIpAddress")
     public String innerIpAddress;
 
-    // The billing method of the instance. Default value: PostPaid. Valid values:
-    // 
-    // * PrePaid: subscription. If you set this parameter to PrePaid, make sure that you have sufficient balance or credit in your account. Otherwise, an `InvalidPayMethod` error is returned.
-    // * PostPaid: pay-as-you-go.
+    /**
+     * <p>The billing method of the instance. Default value: PostPaid. Valid values:</p>
+     * <br>
+     * <p>* PrePaid: subscription. If you set this parameter to PrePaid, make sure that you have sufficient balance or credit in your account. Otherwise, an `InvalidPayMethod` error is returned.</p>
+     * <p>* PostPaid: pay-as-you-go.</p>
+     */
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
 
-    // The name of the instance. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-). If you do not specify this parameter, the instance ID is used as the instance name by default.
+    /**
+     * <p>The name of the instance. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-). If you do not specify this parameter, the instance ID is used as the instance name by default.</p>
+     */
     @NameInMap("InstanceName")
     public String instanceName;
 
-    // The instance type.
-    // 
-    // * Select an instance type. See [Instance families](~~25378~~) or call the [DescribeInstanceTypes](~~25620~~) operation to query the performance data of an instance type, or see [Best practices for instance type selection](~~58291~~) to learn about how to select instance types.
-    // * Query available resources. You can call the [DescribeAvailableResource](~~66186~~) operation to query available resources in a specific region or zone.
+    /**
+     * <p>The instance type.</p>
+     * <br>
+     * <p>* Select an instance type. See [Instance families](~~25378~~) or call the [DescribeInstanceTypes](~~25620~~) operation to query the performance data of an instance type, or see [Best practices for instance type selection](~~58291~~) to learn about how to select instance types.</p>
+     * <p>* Query available resources. You can call the [DescribeAvailableResource](~~66186~~) operation to query available resources in a specific region or zone.</p>
+     */
     @NameInMap("InstanceType")
     public String instanceType;
 
-    // The billing method for network usage. Default value: PayByTraffic. Valid values:
-    // 
-    // * PayByBandwidth: pay-by-bandwidth
-    // * PayByTraffic: pay-by-traffic
-    // 
-    // > When the **pay-by-traffic** billing method for network usage is used, the maximum inbound and outbound bandwidth values are used as upper limits of bandwidths instead of guaranteed performance specifications. In scenarios where demand outstrips resource supplies, these maximum bandwidth values may not be reached. If you want guaranteed bandwidths for your instance, use the **pay-by-bandwidth** billing method for network usage.
+    /**
+     * <p>The billing method for network usage. Default value: PayByTraffic. Valid values:</p>
+     * <br>
+     * <p>* PayByBandwidth: pay-by-bandwidth</p>
+     * <p>* PayByTraffic: pay-by-traffic</p>
+     * <br>
+     * <p>> When the **pay-by-traffic** billing method for network usage is used, the maximum inbound and outbound bandwidth values are used as upper limits of bandwidths instead of guaranteed performance specifications. In scenarios where demand outstrips resource supplies, these maximum bandwidth values may not be reached. If you want guaranteed bandwidths for your instance, use the **pay-by-bandwidth** billing method for network usage.</p>
+     */
     @NameInMap("InternetChargeType")
     public String internetChargeType;
 
-    // The maximum inbound public bandwidth. Unit: Mbit/s. Valid values:
-    // 
-    // * When the purchased outbound public bandwidth is less than or equal to 10 Mbit/s, the valid values of this parameter are 1 to 10 and the default value is 10.
-    // * When the purchased outbound public bandwidth is greater than 10 Mbit/s, the valid values of this parameter are 1 to the `InternetMaxBandwidthOut` value and the default value is the `InternetMaxBandwidthOut` value.
+    /**
+     * <p>The maximum inbound public bandwidth. Unit: Mbit/s. Valid values:</p>
+     * <br>
+     * <p>* When the purchased outbound public bandwidth is less than or equal to 10 Mbit/s, the valid values of this parameter are 1 to 10 and the default value is 10.</p>
+     * <p>* When the purchased outbound public bandwidth is greater than 10 Mbit/s, the valid values of this parameter are 1 to the `InternetMaxBandwidthOut` value and the default value is the `InternetMaxBandwidthOut` value.</p>
+     */
     @NameInMap("InternetMaxBandwidthIn")
     public Integer internetMaxBandwidthIn;
 
-    // The maximum outbound public bandwidth. Unit: Mbit/s. Valid values: 0 to 100.
-    // 
-    // Default value: 0.
+    /**
+     * <p>The maximum outbound public bandwidth. Unit: Mbit/s. Valid values: 0 to 100.</p>
+     * <br>
+     * <p>Default value: 0.</p>
+     */
     @NameInMap("InternetMaxBandwidthOut")
     public Integer internetMaxBandwidthOut;
 
-    // Specifies whether the instance is I/O optimized. Valid values:
-    // 
-    // *   none: The instance is not I/O optimized.
-    // *   optimized: The instance is I/O optimized.
-    // 
-    // For retired instance types, the default value is none. For more information, see [Retired instance types](~~55263~~).
-    // 
-    // For other instance types, the default value is optimized.
+    /**
+     * <p>Specifies whether the instance is I/O optimized. Valid values:</p>
+     * <br>
+     * <p>*   none: The instance is not I/O optimized.</p>
+     * <p>*   optimized: The instance is I/O optimized.</p>
+     * <br>
+     * <p>For retired instance types, the default value is none. For more information, see [Retired instance types](~~55263~~).</p>
+     * <br>
+     * <p>For other instance types, the default value is optimized.</p>
+     */
     @NameInMap("IoOptimized")
     public String ioOptimized;
 
-    // The name of the key pair.
-    // 
-    // >  For Windows instances, this parameter is ignored. This parameter is empty by default. The `Password` parameter takes effect even if the KeyPairName parameter is specified.
+    /**
+     * <p>The name of the key pair.</p>
+     * <br>
+     * <p>>  For Windows instances, this parameter is ignored. This parameter is empty by default. The `Password` parameter takes effect even if the KeyPairName parameter is specified.</p>
+     */
     @NameInMap("KeyPairName")
     public String keyPairName;
 
-    // > This parameter is in invitational preview and is unavailable.
+    /**
+     * <p>> This parameter is in invitational preview and is unavailable.</p>
+     */
     @NameInMap("NodeControllerId")
     public String nodeControllerId;
 
@@ -218,51 +280,67 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The password of the instance. The password must be 8 to 30 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include:
-    // 
-    // ```plain
-    // ( ) ` ~ ! @ # $ % ^ & * - _ + = | { } [ ] : ; \" < > , . ? /
-    // ```
-    // 
-    // Take note of the following items:
-    // 
-    // * For security reasons, we recommend that you use HTTPS to send requests if the Password parameter is specified.
-    // * Passwords of Windows instances cannot start with a forward slash (/).
-    // * Passwords cannot be set for instances that run some types of operating systems such as Others Linux and Fedora CoreOS. For these instances, only key pairs can be set.
+    /**
+     * <p>The password of the instance. The password must be 8 to 30 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include:</p>
+     * <br>
+     * <p>```plain</p>
+     * <p>( ) ` ~ ! @ # $ % ^ & * - _ + = | { } [ ] : ; \" < > , . ? /</p>
+     * <p>```</p>
+     * <br>
+     * <p>Take note of the following items:</p>
+     * <br>
+     * <p>* For security reasons, we recommend that you use HTTPS to send requests if the Password parameter is specified.</p>
+     * <p>* Passwords of Windows instances cannot start with a forward slash (/).</p>
+     * <p>* Passwords cannot be set for instances that run some types of operating systems such as Others Linux and Fedora CoreOS. For these instances, only key pairs can be set.</p>
+     */
     @NameInMap("Password")
     public String password;
 
-    // Specifies whether to use the password preset in the image. When you use this parameter, leave Password empty and make sure that the selected image has a password preset.
+    /**
+     * <p>Specifies whether to use the password preset in the image. When you use this parameter, leave Password empty and make sure that the selected image has a password preset.</p>
+     */
     @NameInMap("PasswordInherit")
     public Boolean passwordInherit;
 
-    // The subscription period of the instance. The unit is specified by the `PeriodUnit` parameter. This parameter is valid and required only when `InstanceChargeType` is set to `PrePaid`. If the `DedicatedHostId` parameter is specified, the value of Period must not exceed the subscription period of the specified dedicated host. Valid values:
-    // 
-    // Valid values when PeriodUnit is set to Month: 1, 2, 3, 6, and 12
+    /**
+     * <p>The subscription period of the instance. The unit is specified by the `PeriodUnit` parameter. This parameter is valid and required only when `InstanceChargeType` is set to `PrePaid`. If the `DedicatedHostId` parameter is specified, the value of Period must not exceed the subscription period of the specified dedicated host. Valid values:</p>
+     * <br>
+     * <p>Valid values when PeriodUnit is set to Month: 1, 2, 3, 6, and 12</p>
+     */
     @NameInMap("Period")
     public Integer period;
 
-    // The unit of the subscription period. Valid values:
-    // 
-    // Month
-    // 
-    // Default value: Month.
+    /**
+     * <p>The unit of the subscription period. Valid values:</p>
+     * <br>
+     * <p>Month</p>
+     * <br>
+     * <p>Default value: Month.</p>
+     */
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
-    // The private IP address to assign to the instance. The private IP address must be an available IP address within the CIDR block of the specified vSwitch.
+    /**
+     * <p>The private IP address to assign to the instance. The private IP address must be an available IP address within the CIDR block of the specified vSwitch.</p>
+     */
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
 
-    // The name of the instance Resource Access Management (RAM) role. You can call the [ListRoles](~~28713~~) operation provided by RAM to query the instance RAM roles that you created.
+    /**
+     * <p>The name of the instance Resource Access Management (RAM) role. You can call the [ListRoles](~~28713~~) operation provided by RAM to query the instance RAM roles that you created.</p>
+     */
     @NameInMap("RamRoleName")
     public String ramRoleName;
 
-    // The ID of the region in which to create the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+    /**
+     * <p>The ID of the region in which to create the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The ID of the resource group to which to assign the instance.
+    /**
+     * <p>The ID of the resource group to which to assign the instance.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -272,86 +350,116 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    // Specifies whether to enable security hardening. Valid values:
-    // 
-    // *   Active: enables security hardening. This value is applicable only to public images.
-    // *   Deactive: does not enable security hardening. This value is applicable to all images.
+    /**
+     * <p>Specifies whether to enable security hardening. Valid values:</p>
+     * <br>
+     * <p>*   Active: enables security hardening. This value is applicable only to public images.</p>
+     * <p>*   Deactive: does not enable security hardening. This value is applicable to all images.</p>
+     */
     @NameInMap("SecurityEnhancementStrategy")
     public String securityEnhancementStrategy;
 
-    // The ID of the security group to which to assign the instance. Instances in the same security group can communicate with each other.
+    /**
+     * <p>The ID of the security group to which to assign the instance. Instances in the same security group can communicate with each other.</p>
+     */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
-    // The protection period of the preemptible instance. Unit: hours. Valid values: 0, 1, 2, 3, 4, 5, and 6.
-    // 
-    // *   Protection periods of 2, 3, 4, 5, and 6 hours are in invitational preview. If you want to set this parameter to one of these values, submit a ticket.
-    // *   If this parameter is set to 0, no protection period is configured for the preemptible instance.
-    // 
-    // Default value: 1.
+    /**
+     * <p>The protection period of the preemptible instance. Unit: hours. Valid values: 0, 1, 2, 3, 4, 5, and 6.</p>
+     * <br>
+     * <p>*   Protection periods of 2, 3, 4, 5, and 6 hours are in invitational preview. If you want to set this parameter to one of these values, submit a ticket.</p>
+     * <p>*   If this parameter is set to 0, no protection period is configured for the preemptible instance.</p>
+     * <br>
+     * <p>Default value: 1.</p>
+     */
     @NameInMap("SpotDuration")
     public Integer spotDuration;
 
-    // The interruption mode of the preemptible instance. Default value: Terminate. Set the value to Terminate, which specifies to release the instance.
+    /**
+     * <p>The interruption mode of the preemptible instance. Default value: Terminate. Set the value to Terminate, which specifies to release the instance.</p>
+     */
     @NameInMap("SpotInterruptionBehavior")
     public String spotInterruptionBehavior;
 
-    // The maximum hourly price of the instance. The value is accurate to three decimal places. This parameter is valid only when the `SpotStrategy` parameter is set to `SpotWithPriceLimit`.
+    /**
+     * <p>The maximum hourly price of the instance. The value is accurate to three decimal places. This parameter is valid only when the `SpotStrategy` parameter is set to `SpotWithPriceLimit`.</p>
+     */
     @NameInMap("SpotPriceLimit")
     public Float spotPriceLimit;
 
-    // The bidding policy for the pay-as-you-go instance. This parameter is valid only when the `InstanceChargeType` parameter is set to `PostPaid`. Default value: NoSpot. Valid values:
-    // 
-    // *   NoSpot: The instance is created as a regular pay-as-you-go instance.
-    // *   SpotWithPriceLimit: The instance is created as a preemptible instance with a user-defined maximum hourly price.
-    // *   SpotAsPriceGo: The instance is created as a preemptible instance for which the market price at the time of purchase is automatically used as the bid price.
+    /**
+     * <p>The bidding policy for the pay-as-you-go instance. This parameter is valid only when the `InstanceChargeType` parameter is set to `PostPaid`. Default value: NoSpot. Valid values:</p>
+     * <br>
+     * <p>*   NoSpot: The instance is created as a regular pay-as-you-go instance.</p>
+     * <p>*   SpotWithPriceLimit: The instance is created as a preemptible instance with a user-defined maximum hourly price.</p>
+     * <p>*   SpotAsPriceGo: The instance is created as a preemptible instance for which the market price at the time of purchase is automatically used as the bid price.</p>
+     */
     @NameInMap("SpotStrategy")
     public String spotStrategy;
 
-    // The ID of the storage set.
+    /**
+     * <p>The ID of the storage set.</p>
+     */
     @NameInMap("StorageSetId")
     public String storageSetId;
 
-    // The maximum number of partitions in the storage set. Valid values: greater than or equal to 2.
+    /**
+     * <p>The maximum number of partitions in the storage set. Valid values: greater than or equal to 2.</p>
+     */
     @NameInMap("StorageSetPartitionNumber")
     public Integer storageSetPartitionNumber;
 
-    // The tags.
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateInstanceRequestTag> tag;
 
-    // Specifies whether to create the instance on a dedicated host. Valid values:
-    // 
-    // *   default: creates the instance on a non-dedicated host.
-    // *   host: creates the instance on a dedicated host. If you do not specify the `DedicatedHostId` parameter, Alibaba Cloud selects a dedicated host for the instance.
-    // 
-    // Default value: default.
+    /**
+     * <p>Specifies whether to create the instance on a dedicated host. Valid values:</p>
+     * <br>
+     * <p>*   default: creates the instance on a non-dedicated host.</p>
+     * <p>*   host: creates the instance on a dedicated host. If you do not specify the `DedicatedHostId` parameter, Alibaba Cloud selects a dedicated host for the instance.</p>
+     * <br>
+     * <p>Default value: default.</p>
+     */
     @NameInMap("Tenancy")
     public String tenancy;
 
-    // Specifies whether to use the system configurations for virtual machines provided by Alibaba Cloud (Windows: NTP and KMS. Linux: NTP and YUM).
+    /**
+     * <p>Specifies whether to use the system configurations for virtual machines provided by Alibaba Cloud (Windows: NTP and KMS. Linux: NTP and YUM).</p>
+     */
     @NameInMap("UseAdditionalService")
     public Boolean useAdditionalService;
 
-    // The user data of the instance. The user data must be encoded in Base64. The maximum size of raw data is 16 KB.
+    /**
+     * <p>The user data of the instance. The user data must be encoded in Base64. The maximum size of raw data is 16 KB.</p>
+     */
     @NameInMap("UserData")
     public String userData;
 
-    // The ID of the vSwitch to which to connect the instance. This parameter is required when you create an instance in a VPC. You can call the [DescribeVSwitches](~~35748~~) operation to query available vSwitches.
-    // 
-    // >  If the `VSwitchId` parameter is specified, the zone specified by the `ZoneId` parameter must be the zone where the specified vSwitch is located. You can also leave the `ZoneId` parameter empty. Then, the system selects the zone where the specified vSwitch is located.
+    /**
+     * <p>The ID of the vSwitch to which to connect the instance. This parameter is required when you create an instance in a VPC. You can call the [DescribeVSwitches](~~35748~~) operation to query available vSwitches.</p>
+     * <br>
+     * <p>>  If the `VSwitchId` parameter is specified, the zone specified by the `ZoneId` parameter must be the zone where the specified vSwitch is located. You can also leave the `ZoneId` parameter empty. Then, the system selects the zone where the specified vSwitch is located.</p>
+     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
-    // The ID of the virtual LAN (VLAN).
+    /**
+     * <p>The ID of the virtual LAN (VLAN).</p>
+     */
     @NameInMap("VlanId")
     public String vlanId;
 
-    // The ID of the zone in which to create the instance. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.
-    // 
-    // >  If the `VSwitchId` parameter is specified, the zone specified by the `ZoneId` parameter must be the zone where the specified vSwitch is located. You can also leave the `ZoneId` parameter empty. Then, the system selects the zone where the specified vSwitch is located.
-    // 
-    // This parameter is empty by default.
+    /**
+     * <p>The ID of the zone in which to create the instance. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.</p>
+     * <br>
+     * <p>>  If the `VSwitchId` parameter is specified, the zone specified by the `ZoneId` parameter must be the zone where the specified vSwitch is located. You can also leave the `ZoneId` parameter empty. Then, the system selects the zone where the specified vSwitch is located.</p>
+     * <br>
+     * <p>This parameter is empty by default.</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 
@@ -849,7 +957,9 @@ public class CreateInstanceRequest extends TeaModel {
     }
 
     public static class CreateInstanceRequestHibernationOptions extends TeaModel {
-        // > This parameter is in invitational preview and is unavailable.
+        /**
+         * <p>> This parameter is in invitational preview and is unavailable.</p>
+         */
         @NameInMap("Configured")
         public Boolean configured;
 
@@ -869,23 +979,27 @@ public class CreateInstanceRequest extends TeaModel {
     }
 
     public static class CreateInstanceRequestPrivatePoolOptions extends TeaModel {
-        // The ID of the private pool to use to create the instance. The ID of a private pool is the same as that of the elasticity assurance or capacity reservation for which the private pool is generated.
+        /**
+         * <p>The ID of the private pool to use to create the instance. The ID of a private pool is the same as that of the elasticity assurance or capacity reservation for which the private pool is generated.</p>
+         */
         @NameInMap("Id")
         public String id;
 
-        // The type of the private pool to use to create the instance. A private pool is generated when an elasticity assurance or a capacity reservation takes effect. You can select a private pool when you create an instance. Valid values:
-        // 
-        // * Open: open private pool. The system selects a matching open private pool to create the instance. If no matching open private pools are found, resources in the public pool are used. When you set this parameter to Open, you can leave the `PrivatePoolOptions.Id` parameter empty.
-        // * Target: specified private pool. The system uses the capacity in a specified private pool to create the instance. If the specified private pool is unavailable, the instance cannot be created. If you set this parameter to Target, you must specify the `PrivatePoolOptions.Id` parameter.
-        // * None: no private pool. The capacity in private pools is not used.
-        // 
-        // Default value: None.
-        // 
-        // In the following scenarios, the PrivatePoolOptions.MatchCriteria parameter can be set only to `None` or left empty:
-        // 
-        // * Create a preemptible instance.
-        // * Create an instance in the classic network.
-        // * Create an instance on a dedicated host.
+        /**
+         * <p>The type of the private pool to use to create the instance. A private pool is generated when an elasticity assurance or a capacity reservation takes effect. You can select a private pool when you create an instance. Valid values:</p>
+         * <br>
+         * <p>* Open: open private pool. The system selects a matching open private pool to create the instance. If no matching open private pools are found, resources in the public pool are used. When you set this parameter to Open, you can leave the `PrivatePoolOptions.Id` parameter empty.</p>
+         * <p>* Target: specified private pool. The system uses the capacity in a specified private pool to create the instance. If the specified private pool is unavailable, the instance cannot be created. If you set this parameter to Target, you must specify the `PrivatePoolOptions.Id` parameter.</p>
+         * <p>* None: no private pool. The capacity in private pools is not used.</p>
+         * <br>
+         * <p>Default value: None.</p>
+         * <br>
+         * <p>In the following scenarios, the PrivatePoolOptions.MatchCriteria parameter can be set only to `None` or left empty:</p>
+         * <br>
+         * <p>* Create a preemptible instance.</p>
+         * <p>* Create an instance in the classic network.</p>
+         * <p>* Create an instance on a dedicated host.</p>
+         */
         @NameInMap("MatchCriteria")
         public String matchCriteria;
 
@@ -913,49 +1027,61 @@ public class CreateInstanceRequest extends TeaModel {
     }
 
     public static class CreateInstanceRequestSystemDisk extends TeaModel {
-        // The category of the system disk. Valid values:
-        // 
-        // * cloud_essd: ESSD. When the parameter is set to this value, you can use the `SystemDisk.PerformanceLevel` parameter to specify the performance level of the disk.
-        // * cloud_efficiency: ultra disk.
-        // * cloud_ssd: standard SSD.
-        // * cloud: basic disk.
-        // 
-        // For non-I/O optimized instances of retired instance types, the default value is cloud. For other instances, the default value is cloud_efficiency.
+        /**
+         * <p>The category of the system disk. Valid values:</p>
+         * <br>
+         * <p>* cloud_essd: ESSD. When the parameter is set to this value, you can use the `SystemDisk.PerformanceLevel` parameter to specify the performance level of the disk.</p>
+         * <p>* cloud_efficiency: ultra disk.</p>
+         * <p>* cloud_ssd: standard SSD.</p>
+         * <p>* cloud: basic disk.</p>
+         * <br>
+         * <p>For non-I/O optimized instances of retired instance types, the default value is cloud. For other instances, the default value is cloud_efficiency.</p>
+         */
         @NameInMap("Category")
         public String category;
 
-        // The description of the system disk. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
-        // 
-        // This parameter is empty by default.
+        /**
+         * <p>The description of the system disk. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.</p>
+         * <br>
+         * <p>This parameter is empty by default.</p>
+         */
         @NameInMap("Description")
         public String description;
 
-        // The name of the system disk. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
-        // 
-        // This parameter is empty by default.
+        /**
+         * <p>The name of the system disk. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+         * <br>
+         * <p>This parameter is empty by default.</p>
+         */
         @NameInMap("DiskName")
         public String diskName;
 
-        // The performance level of the ESSD to use as the system disk. Default value: PL1. Valid values:
-        // 
-        // * PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.
-        // * PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.
-        // * PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.
-        // * PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.
-        // 
-        // For more information about ESSD performance levels, see [ESSDs](~~122389~~).
+        /**
+         * <p>The performance level of the ESSD to use as the system disk. Default value: PL1. Valid values:</p>
+         * <br>
+         * <p>* PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</p>
+         * <p>* PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.</p>
+         * <p>* PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</p>
+         * <p>* PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</p>
+         * <br>
+         * <p>For more information about ESSD performance levels, see [ESSDs](~~122389~~).</p>
+         */
         @NameInMap("PerformanceLevel")
         public String performanceLevel;
 
-        // The size of the system disk. Unit: GiB. Valid values: 20 to 500.
-        // 
-        // The value of this parameter must be at least 20 and greater than or equal to the size of the specified image.
-        // 
-        // Default value: 40 or the size of the image, whichever is greater.
+        /**
+         * <p>The size of the system disk. Unit: GiB. Valid values: 20 to 500.</p>
+         * <br>
+         * <p>The value of this parameter must be at least 20 and greater than or equal to the size of the specified image.</p>
+         * <br>
+         * <p>Default value: 40 or the size of the image, whichever is greater.</p>
+         */
         @NameInMap("Size")
         public Integer size;
 
-        // The ID of the dedicated block storage cluster. If you want to use a disk in a dedicated block storage cluster as the system disk when you create the instance, you must specify this parameter. For more information about dedicated block storage clusters, see [What is Dedicated Block Storage Cluster?](~~208883~~)
+        /**
+         * <p>The ID of the dedicated block storage cluster. If you want to use a disk in a dedicated block storage cluster as the system disk when you create the instance, you must specify this parameter. For more information about dedicated block storage clusters, see [What is Dedicated Block Storage Cluster?](~~208883~~)</p>
+         */
         @NameInMap("StorageClusterId")
         public String storageClusterId;
 
@@ -1015,15 +1141,21 @@ public class CreateInstanceRequest extends TeaModel {
     }
 
     public static class CreateInstanceRequestArn extends TeaModel {
-        // > This parameter is in invitational preview and is unavailable.
+        /**
+         * <p>> This parameter is in invitational preview and is unavailable.</p>
+         */
         @NameInMap("AssumeRoleFor")
         public Long assumeRoleFor;
 
-        // > This parameter is in invitational preview and is unavailable.
+        /**
+         * <p>> This parameter is in invitational preview and is unavailable.</p>
+         */
         @NameInMap("RoleType")
         public String roleType;
 
-        // > This parameter is in invitational preview and is unavailable.
+        /**
+         * <p>> This parameter is in invitational preview and is unavailable.</p>
+         */
         @NameInMap("Rolearn")
         public String rolearn;
 
@@ -1059,89 +1191,113 @@ public class CreateInstanceRequest extends TeaModel {
     }
 
     public static class CreateInstanceRequestDataDisk extends TeaModel {
-        // The category of data disk N. Valid values:
-        // 
-        // *   cloud_efficiency: ultra disk
-        // *   cloud_ssd: standard SSD
-        // *   cloud_essd: ESSD
-        // *   cloud: basic disk
-        // 
-        // For I/O optimized instances, the default value is cloud_efficiency. For non-I/O optimized instances, the default value is cloud.
+        /**
+         * <p>The category of data disk N. Valid values:</p>
+         * <br>
+         * <p>*   cloud_efficiency: ultra disk</p>
+         * <p>*   cloud_ssd: standard SSD</p>
+         * <p>*   cloud_essd: ESSD</p>
+         * <p>*   cloud: basic disk</p>
+         * <br>
+         * <p>For I/O optimized instances, the default value is cloud_efficiency. For non-I/O optimized instances, the default value is cloud.</p>
+         */
         @NameInMap("Category")
         public String category;
 
-        // Specifies whether to release data disk N when the instance is released.
-        // 
-        // Default value: true.
+        /**
+         * <p>Specifies whether to release data disk N when the instance is released.</p>
+         * <br>
+         * <p>Default value: true.</p>
+         */
         @NameInMap("DeleteWithInstance")
         public Boolean deleteWithInstance;
 
-        // The description of data disk N. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
+        /**
+         * <p>The description of data disk N. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.</p>
+         */
         @NameInMap("Description")
         public String description;
 
-        // The mount point of data disk N.
-        // 
-        // >  This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.
+        /**
+         * <p>The mount point of data disk N.</p>
+         * <br>
+         * <p>>  This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.</p>
+         */
         @NameInMap("Device")
         public String device;
 
-        // The name of data disk N. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+        /**
+         * <p>The name of data disk N. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+         */
         @NameInMap("DiskName")
         public String diskName;
 
-        // The algorithm to use to encrypt data disk N.
+        /**
+         * <p>The algorithm to use to encrypt data disk N.</p>
+         */
         @NameInMap("EncryptAlgorithm")
         public String encryptAlgorithm;
 
-        // Specifies whether to encrypt data disk N.
-        // 
-        // Default value: false.
+        /**
+         * <p>Specifies whether to encrypt data disk N.</p>
+         * <br>
+         * <p>Default value: false.</p>
+         */
         @NameInMap("Encrypted")
         public Boolean encrypted;
 
-        // The ID of the Key Management Service (KMS) key to use for data disk N.
+        /**
+         * <p>The ID of the Key Management Service (KMS) key to use for data disk N.</p>
+         */
         @NameInMap("KMSKeyId")
         public String KMSKeyId;
 
-        // The performance level of the ESSD to use as data disk N. The N value must be the same as that in `DataDisk.N.Category` when DataDisk.N.Category is set to cloud_essd. Default value: PL1. Valid values:
-        // 
-        // *   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.
-        // *   PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.
-        // *   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.
-        // *   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.
-        // 
-        // For more information about ESSD performance levels, see [ESSDs](~~122389~~).
+        /**
+         * <p>The performance level of the ESSD to use as data disk N. The N value must be the same as that in `DataDisk.N.Category` when DataDisk.N.Category is set to cloud_essd. Default value: PL1. Valid values:</p>
+         * <br>
+         * <p>*   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</p>
+         * <p>*   PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.</p>
+         * <p>*   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</p>
+         * <p>*   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</p>
+         * <br>
+         * <p>For more information about ESSD performance levels, see [ESSDs](~~122389~~).</p>
+         */
         @NameInMap("PerformanceLevel")
         public String performanceLevel;
 
-        // The size of data disk N. Valid values of N: 1 to 16. Unit: GiB. Valid values:
-        // 
-        // * Valid values when DataDisk.N.Category is set to cloud_efficiency: 20 to 32768.
-        // 
-        // * Valid values when DataDisk.N.Category is set to cloud_ssd: 20 to 32768.
-        // 
-        // * Valid values when DataDisk.N.Category is set to cloud_essd: depend on the `DataDisk.N.PerformanceLevel` value.
-        // 
-        //     * Valid values when the DataDisk.N.PerformanceLevel parameter is set to PL0: 40 to 32768.
-        //     * Valid values when the DataDisk.N.PerformanceLevel parameter is set to PL1: 20 to 32768.
-        //     * Valid values when the DataDisk.N.PerformanceLevel parameter is set to PL2: 461 to 32768.
-        //     * Valid values when the DataDisk.N.PerformanceLevel parameter is set to PL3: 1261 to 32768.
-        // 
-        // * Valid values when DataDisk.N.Category is set to cloud: 5 to 2000.
-        // 
-        // The value of this parameter must be greater than or equal to the size of the snapshot specified by the `SnapshotId` parameter.
+        /**
+         * <p>The size of data disk N. Valid values of N: 1 to 16. Unit: GiB. Valid values:</p>
+         * <br>
+         * <p>* Valid values when DataDisk.N.Category is set to cloud_efficiency: 20 to 32768.</p>
+         * <br>
+         * <p>* Valid values when DataDisk.N.Category is set to cloud_ssd: 20 to 32768.</p>
+         * <br>
+         * <p>* Valid values when DataDisk.N.Category is set to cloud_essd: depend on the `DataDisk.N.PerformanceLevel` value.</p>
+         * <br>
+         * <p>    * Valid values when the DataDisk.N.PerformanceLevel parameter is set to PL0: 40 to 32768.</p>
+         * <p>    * Valid values when the DataDisk.N.PerformanceLevel parameter is set to PL1: 20 to 32768.</p>
+         * <p>    * Valid values when the DataDisk.N.PerformanceLevel parameter is set to PL2: 461 to 32768.</p>
+         * <p>    * Valid values when the DataDisk.N.PerformanceLevel parameter is set to PL3: 1261 to 32768.</p>
+         * <br>
+         * <p>* Valid values when DataDisk.N.Category is set to cloud: 5 to 2000.</p>
+         * <br>
+         * <p>The value of this parameter must be greater than or equal to the size of the snapshot specified by the `SnapshotId` parameter.</p>
+         */
         @NameInMap("Size")
         public Integer size;
 
-        // The ID of the snapshot to use to create data disk N. Valid values of N: 1 to 16.
-        // 
-        // *   If the `DataDisk.N.SnapshotId` parameter is specified, the `DataDisk.N.Size` parameter is ignored and the data disk is created with the size of the specified snapshot.
-        // *   Use snapshots created after July 15, 2013. Otherwise, an error is returned and your request is rejected.
+        /**
+         * <p>The ID of the snapshot to use to create data disk N. Valid values of N: 1 to 16.</p>
+         * <br>
+         * <p>*   If the `DataDisk.N.SnapshotId` parameter is specified, the `DataDisk.N.Size` parameter is ignored and the data disk is created with the size of the specified snapshot.</p>
+         * <p>*   Use snapshots created after July 15, 2013. Otherwise, an error is returned and your request is rejected.</p>
+         */
         @NameInMap("SnapshotId")
         public String snapshotId;
 
-        // The ID of the dedicated block storage cluster. If you want to use a disk in a dedicated block storage cluster as data disk N when you create the instance, you must specify this parameter.
+        /**
+         * <p>The ID of the dedicated block storage cluster. If you want to use a disk in a dedicated block storage cluster as data disk N when you create the instance, you must specify this parameter.</p>
+         */
         @NameInMap("StorageClusterId")
         public String storageClusterId;
 
@@ -1249,11 +1405,15 @@ public class CreateInstanceRequest extends TeaModel {
     }
 
     public static class CreateInstanceRequestTag extends TeaModel {
-        // The key of tag N to add to the instance, disks, and primary elastic network interface (ENI). Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+        /**
+         * <p>The key of tag N to add to the instance, disks, and primary elastic network interface (ENI). Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
-        // The value of tag N to add to the instance, disks, and primary ENI. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length. It cannot start with `acs:` or contain `http://` or `https://`.
+        /**
+         * <p>The value of tag N to add to the instance, disks, and primary ENI. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length. It cannot start with `acs:` or contain `http://` or `https://`.</p>
+         */
         @NameInMap("Value")
         public String value;
 

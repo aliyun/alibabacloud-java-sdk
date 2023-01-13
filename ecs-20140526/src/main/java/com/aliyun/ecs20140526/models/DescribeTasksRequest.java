@@ -4,7 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeTasksRequest extends TeaModel {
-    // The end point of the time period for which to query created tasks. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+    /**
+     * <p>The end point of the time period for which to query created tasks. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
@@ -14,23 +16,29 @@ public class DescribeTasksRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The page number of the page to return.
-    // 
-    // Pages start from page 1.
-    // 
-    // Default value: 1.
+    /**
+     * <p>The page number of the page to return.</p>
+     * <br>
+     * <p>Pages start from page 1.</p>
+     * <br>
+     * <p>Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // The number of entries to return on each page.
-    // 
-    // Maximum value: 100.
-    // 
-    // Default value: 10.
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>Maximum value: 100.</p>
+     * <br>
+     * <p>Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The region ID of the task. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+    /**
+     * <p>The region ID of the task. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -43,32 +51,40 @@ public class DescribeTasksRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    // The start point of the time period for which to query created tasks. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+    /**
+     * <p>The start point of the time period for which to query created tasks. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
-    // The name of the operation that generates the task. Valid values:
-    // 
-    // *   ImportImage
-    // *   ExportImage
-    // *   RedeployInstance
-    // *   ModifyDiskSpec
+    /**
+     * <p>The name of the operation that generates the task. Valid values:</p>
+     * <br>
+     * <p>*   ImportImage</p>
+     * <p>*   ExportImage</p>
+     * <p>*   RedeployInstance</p>
+     * <p>*   ModifyDiskSpec</p>
+     */
     @NameInMap("TaskAction")
     public String taskAction;
 
-    // The IDs of the tasks. You can specify up to 100 tasks at a time. Separate multiple task IDs with commas (,).
+    /**
+     * <p>The IDs of the tasks. You can specify up to 100 tasks at a time. Separate multiple task IDs with commas (,).</p>
+     */
     @NameInMap("TaskIds")
     public String taskIds;
 
-    // The status of the task. Valid values:
-    // 
-    // *   Finished
-    // *   Processing
-    // *   Failed
-    // 
-    // This parameter has no default value.
-    // 
-    // >  The system only retrieves tasks in the Finished, Processing, and Failed states and ignores other values.
+    /**
+     * <p>The status of the task. Valid values:</p>
+     * <br>
+     * <p>*   Finished</p>
+     * <p>*   Processing</p>
+     * <p>*   Failed</p>
+     * <br>
+     * <p>This parameter has no default value.</p>
+     * <br>
+     * <p>>  The system only retrieves tasks in the Finished, Processing, and Failed states and ignores other values.</p>
+     */
     @NameInMap("TaskStatus")
     public String taskStatus;
 

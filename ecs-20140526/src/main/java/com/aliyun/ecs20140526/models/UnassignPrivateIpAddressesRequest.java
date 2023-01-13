@@ -4,11 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class UnassignPrivateIpAddressesRequest extends TeaModel {
-    // The list of the IPv4 prefixes.
+    /**
+     * <p>The list of the IPv4 prefixes.</p>
+     */
     @NameInMap("Ipv4Prefix")
     public java.util.List<String> ipv4Prefix;
 
-    // The ID of the ENI.
+    /**
+     * <p>The ID of the ENI.</p>
+     */
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;
 
@@ -21,7 +25,9 @@ public class UnassignPrivateIpAddressesRequest extends TeaModel {
     @NameInMap("PrivateIpAddress")
     public java.util.List<String> privateIpAddress;
 
-    // The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+    /**
+     * <p>The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

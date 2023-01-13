@@ -4,11 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribePriceResponseBody extends TeaModel {
-    // Details about the prices and discount rules.
+    /**
+     * <p>Details about the prices and discount rules.</p>
+     */
     @NameInMap("PriceInfo")
     public DescribePriceResponseBodyPriceInfo priceInfo;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,11 +38,15 @@ public class DescribePriceResponseBody extends TeaModel {
     }
 
     public static class DescribePriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModelSubRulesRule extends TeaModel {
-        // The description of the pricing rule.
+        /**
+         * <p>The description of the pricing rule.</p>
+         */
         @NameInMap("Description")
         public String description;
 
-        // The ID of the pricing rule.
+        /**
+         * <p>The ID of the pricing rule.</p>
+         */
         @NameInMap("RuleId")
         public Long ruleId;
 
@@ -85,23 +93,33 @@ public class DescribePriceResponseBody extends TeaModel {
     }
 
     public static class DescribePriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModel extends TeaModel {
-        // The discount.
+        /**
+         * <p>The discount.</p>
+         */
         @NameInMap("DiscountPrice")
         public Float discountPrice;
 
-        // The original price.
+        /**
+         * <p>The original price.</p>
+         */
         @NameInMap("OriginalPrice")
         public Float originalPrice;
 
-        // The name of the resource.
+        /**
+         * <p>The name of the resource.</p>
+         */
         @NameInMap("Resource")
         public String resource;
 
-        // Details about the pricing rules.
+        /**
+         * <p>Details about the pricing rules.</p>
+         */
         @NameInMap("SubRules")
         public DescribePriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModelSubRules subRules;
 
-        // The transaction price.
+        /**
+         * <p>The transaction price.</p>
+         */
         @NameInMap("TradePrice")
         public Float tradePrice;
 
@@ -172,33 +190,45 @@ public class DescribePriceResponseBody extends TeaModel {
     }
 
     public static class DescribePriceResponseBodyPriceInfoPrice extends TeaModel {
-        // The currency unit. 
-        // 
-        // Alibaba Cloud China site (aliyun.com): CNY. 
-        // 
-        // Alibaba Cloud International site (alibabacloud.com): USD.
+        /**
+         * <p>The currency unit. </p>
+         * <br>
+         * <p>Alibaba Cloud China site (aliyun.com): CNY. </p>
+         * <br>
+         * <p>Alibaba Cloud International site (alibabacloud.com): USD.</p>
+         */
         @NameInMap("Currency")
         public String currency;
 
-        // Details about the price. 
-        // 
-        // >  This parameter is in invitational preview and unavailable.
+        /**
+         * <p>Details about the price. </p>
+         * <br>
+         * <p>>  This parameter is in invitational preview and unavailable.</p>
+         */
         @NameInMap("DetailInfos")
         public DescribePriceResponseBodyPriceInfoPriceDetailInfos detailInfos;
 
-        // The discount.
+        /**
+         * <p>The discount.</p>
+         */
         @NameInMap("DiscountPrice")
         public Float discountPrice;
 
-        // The original price.
+        /**
+         * <p>The original price.</p>
+         */
         @NameInMap("OriginalPrice")
         public Float originalPrice;
 
-        // The hourly price of the reserved instance for which the No Upfront or Partial Upfront payment option is used.
+        /**
+         * <p>The hourly price of the reserved instance for which the No Upfront or Partial Upfront payment option is used.</p>
+         */
         @NameInMap("ReservedInstanceHourPrice")
         public Float reservedInstanceHourPrice;
 
-        // The transaction price, which is equal to the original price minus the discount.
+        /**
+         * <p>The transaction price, which is equal to the original price minus the discount.</p>
+         */
         @NameInMap("TradePrice")
         public Float tradePrice;
 
@@ -258,11 +288,15 @@ public class DescribePriceResponseBody extends TeaModel {
     }
 
     public static class DescribePriceResponseBodyPriceInfoRulesRule extends TeaModel {
-        // The description of the promotion rule.
+        /**
+         * <p>The description of the promotion rule.</p>
+         */
         @NameInMap("Description")
         public String description;
 
-        // The ID of the promotion rule.
+        /**
+         * <p>The ID of the promotion rule.</p>
+         */
         @NameInMap("RuleId")
         public Long ruleId;
 
@@ -309,11 +343,15 @@ public class DescribePriceResponseBody extends TeaModel {
     }
 
     public static class DescribePriceResponseBodyPriceInfo extends TeaModel {
-        // The price.
+        /**
+         * <p>The price.</p>
+         */
         @NameInMap("Price")
         public DescribePriceResponseBodyPriceInfoPrice price;
 
-        // Details about the promotion rules.
+        /**
+         * <p>Details about the promotion rules.</p>
+         */
         @NameInMap("Rules")
         public DescribePriceResponseBodyPriceInfoRules rules;
 

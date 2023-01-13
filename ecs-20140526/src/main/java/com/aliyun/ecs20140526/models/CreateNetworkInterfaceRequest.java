@@ -4,21 +4,29 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateNetworkInterfaceRequest extends TeaModel {
-    // >  This parameter is deprecated.
+    /**
+     * <p>>  This parameter is deprecated.</p>
+     */
     @NameInMap("BusinessType")
     public String businessType;
 
-    // The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // The description of the ENI. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
-    // 
-    // This parameter is empty by default.
+    /**
+     * <p>The description of the ENI. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.</p>
+     * <br>
+     * <p>This parameter is empty by default.</p>
+     */
     @NameInMap("Description")
     public String description;
 
-    // >  This parameter is deprecated.
+    /**
+     * <p>>  This parameter is deprecated.</p>
+     */
     @NameInMap("InstanceType")
     public String instanceType;
 
@@ -31,9 +39,11 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     @NameInMap("Ipv6Address")
     public java.util.List<String> ipv6Address;
 
-    // The number of IPv6 addresses to generate at random for the ENI. Valid values: 1 to 10.
-    // 
-    // >  To assign IPv6 addresses to the ENI, you must specify `Ipv6Addresses.N` or `Ipv6AddressCount` but not both.
+    /**
+     * <p>The number of IPv6 addresses to generate at random for the ENI. Valid values: 1 to 10.</p>
+     * <br>
+     * <p>>  To assign IPv6 addresses to the ENI, you must specify `Ipv6Addresses.N` or `Ipv6AddressCount` but not both.</p>
+     */
     @NameInMap("Ipv6AddressCount")
     public Integer ipv6AddressCount;
 
@@ -43,20 +53,24 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     @NameInMap("Ipv6PrefixCount")
     public Integer ipv6PrefixCount;
 
-    // The name of the ENI. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (.), underscores (\_), and hyphens (-).
-    // 
-    // This parameter is empty by default.
+    /**
+     * <p>The name of the ENI. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (.), underscores (\_), and hyphens (-).</p>
+     * <br>
+     * <p>This parameter is empty by default.</p>
+     */
     @NameInMap("NetworkInterfaceName")
     public String networkInterfaceName;
 
-    // The communication mode of the ENI. Valid values:
-    // 
-    // *   Standard: uses the TCP communication mode.
-    // *   HighPerformance: enables the Elastic RDMA Interface (ERI) and uses the remote direct memory access (RDMA) communication mode.
-    // 
-    // >  A value of HighPerformance supports only the c7re RDMA-enhanced instance family. The maximum number of ENIs in RDMA mode that can be bound to a c7re instance is determined based on the instance type. The c7re instance family is in invitational preview in Beijing Zone K. For more information, see [Instance families](~~25378~~).
-    // 
-    // Default value: Standard.
+    /**
+     * <p>The communication mode of the ENI. Valid values:</p>
+     * <br>
+     * <p>*   Standard: uses the TCP communication mode.</p>
+     * <p>*   HighPerformance: enables the Elastic RDMA Interface (ERI) and uses the remote direct memory access (RDMA) communication mode.</p>
+     * <br>
+     * <p>>  A value of HighPerformance supports only the c7re RDMA-enhanced instance family. The maximum number of ENIs in RDMA mode that can be bound to a c7re instance is determined based on the instance type. The c7re instance family is in invitational preview in Beijing Zone K. For more information, see [Instance families](~~25378~~).</p>
+     * <br>
+     * <p>Default value: Standard.</p>
+     */
     @NameInMap("NetworkInterfaceTrafficMode")
     public String networkInterfaceTrafficMode;
 
@@ -66,32 +80,42 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The primary private IP address to assign to the ENI.
-    // 
-    // The specified IP address must be an idle IP address within the CIDR block of the vSwitch with which to associate the ENI. If this parameter is not specified, an idle IP address is assigned from within the vSwitch CIDR block at random.
+    /**
+     * <p>The primary private IP address to assign to the ENI.</p>
+     * <br>
+     * <p>The specified IP address must be an idle IP address within the CIDR block of the vSwitch with which to associate the ENI. If this parameter is not specified, an idle IP address is assigned from within the vSwitch CIDR block at random.</p>
+     */
     @NameInMap("PrimaryIpAddress")
     public String primaryIpAddress;
 
     @NameInMap("PrivateIpAddress")
     public java.util.List<String> privateIpAddress;
 
-    // The number of queues supported by the ENI. Valid values: 1 to 2048.
-    // 
-    // When you bind an ENI to an instance, make sure that the value of this parameter for the ENI is smaller than the maximum number of queues per ENI allowed for the instance type. To view the maximum number of queues per ENI allowed for an instance type, you can call the [DescribeInstanceTypes](~~25620~~) operation to query the `MaximumQueueNumberPerEni` parameter.
-    // 
-    // By default, this parameter is empty. If you do not specify this parameter for the ENI, the default number of queues per ENI for the instance type of an instance is used when you bind the ENI to the instance. To view the default number of queues per ENI for an instance type, you can call the [DescribeInstanceTypes](~~25620~~) operation to query the `SecondaryEniQueueNumber` parameter.
+    /**
+     * <p>The number of queues supported by the ENI. Valid values: 1 to 2048.</p>
+     * <br>
+     * <p>When you bind an ENI to an instance, make sure that the value of this parameter for the ENI is smaller than the maximum number of queues per ENI allowed for the instance type. To view the maximum number of queues per ENI allowed for an instance type, you can call the [DescribeInstanceTypes](~~25620~~) operation to query the `MaximumQueueNumberPerEni` parameter.</p>
+     * <br>
+     * <p>By default, this parameter is empty. If you do not specify this parameter for the ENI, the default number of queues per ENI for the instance type of an instance is used when you bind the ENI to the instance. To view the default number of queues per ENI for an instance type, you can call the [DescribeInstanceTypes](~~25620~~) operation to query the `SecondaryEniQueueNumber` parameter.</p>
+     */
     @NameInMap("QueueNumber")
     public Integer queueNumber;
 
-    // >  This parameter is in invitational preview and unavailable for general users.
+    /**
+     * <p>>  This parameter is in invitational preview and unavailable for general users.</p>
+     */
     @NameInMap("QueuePairNumber")
     public Integer queuePairNumber;
 
-    // The ID of the region in which to create the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+    /**
+     * <p>The ID of the region in which to create the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The ID of the resource group to which to assign the ENI. You can call the [ListResourceGroups](~~158855~~) operation to query the most recent resource group list.
+    /**
+     * <p>The ID of the resource group to which to assign the ENI. You can call the [ListResourceGroups](~~158855~~) operation to query the most recent resource group list.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -101,13 +125,17 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    // The number of private IP addresses to be automatically created by ECS.
+    /**
+     * <p>The number of private IP addresses to be automatically created by ECS.</p>
+     */
     @NameInMap("SecondaryPrivateIpAddressCount")
     public Integer secondaryPrivateIpAddressCount;
 
-    // The ID of the security group to which to assign the ENI. The security group and the ENI must belong to the same VPC.
-    // 
-    // >  You must specify `SecurityGroupId` or `SecurityGroupIds.N` but not both.
+    /**
+     * <p>The ID of the security group to which to assign the ENI. The security group and the ENI must belong to the same VPC.</p>
+     * <br>
+     * <p>>  You must specify `SecurityGroupId` or `SecurityGroupIds.N` but not both.</p>
+     */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
@@ -117,11 +145,15 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     @NameInMap("Tag")
     public java.util.List<CreateNetworkInterfaceRequestTag> tag;
 
-    // The ID of the vSwitch with which to associate the ENI. Private IP addresses are assigned to the ENI from within the CIDR block of the vSwitch.
+    /**
+     * <p>The ID of the vSwitch with which to associate the ENI. Private IP addresses are assigned to the ENI from within the CIDR block of the vSwitch.</p>
+     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
-    // >  This parameter is deprecated.
+    /**
+     * <p>>  This parameter is deprecated.</p>
+     */
     @NameInMap("Visible")
     public Boolean visible;
 
@@ -355,11 +387,15 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     }
 
     public static class CreateNetworkInterfaceRequestTag extends TeaModel {
-        // The key of tag N to add to the ENI. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain `http://` or `https://`.
+        /**
+         * <p>The key of tag N to add to the ENI. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
-        // The value of tag N to add to the ENI. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length. It cannot start with acs: or contain `http://` or `https://`.
+        /**
+         * <p>The value of tag N to add to the ENI. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length. It cannot start with acs: or contain `http://` or `https://`.</p>
+         */
         @NameInMap("Value")
         public String value;
 

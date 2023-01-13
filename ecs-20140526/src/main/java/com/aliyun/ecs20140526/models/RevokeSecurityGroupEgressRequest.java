@@ -4,47 +4,69 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class RevokeSecurityGroupEgressRequest extends TeaModel {
-    // The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // This parameter is discontinued. Use `Permissions.N.Description` to specify the description of security group rule N.
+    /**
+     * <p>This parameter is discontinued. Use `Permissions.N.Description` to specify the description of security group rule N.</p>
+     */
     @NameInMap("Description")
     public String description;
 
-    // This parameter is discontinued. Use `Permissions.N.DestCidrIp` to specify the destination IPv4 CIDR block.
+    /**
+     * <p>This parameter is discontinued. Use `Permissions.N.DestCidrIp` to specify the destination IPv4 CIDR block.</p>
+     */
     @NameInMap("DestCidrIp")
     public String destCidrIp;
 
-    // This parameter is discontinued. Use `Permissions.N.DestGroupId` to specify the ID of the destination security group.
+    /**
+     * <p>This parameter is discontinued. Use `Permissions.N.DestGroupId` to specify the ID of the destination security group.</p>
+     */
     @NameInMap("DestGroupId")
     public String destGroupId;
 
-    // This parameter is discontinued. Use `Permissions.N.DestGroupOwnerAccount` to specify the Alibaba Cloud account that manages the destination security group.
+    /**
+     * <p>This parameter is discontinued. Use `Permissions.N.DestGroupOwnerAccount` to specify the Alibaba Cloud account that manages the destination security group.</p>
+     */
     @NameInMap("DestGroupOwnerAccount")
     public String destGroupOwnerAccount;
 
-    // This parameter is discontinued. Use `Permissions.N.DestGroupOwnerId` to specify the ID of the Alibaba Cloud account that manages the destination security group.
+    /**
+     * <p>This parameter is discontinued. Use `Permissions.N.DestGroupOwnerId` to specify the ID of the Alibaba Cloud account that manages the destination security group.</p>
+     */
     @NameInMap("DestGroupOwnerId")
     public Long destGroupOwnerId;
 
-    // This parameter is discontinued. Use `Permissions.N.DestPrefixListId` to specify the ID of the destination prefix list.
+    /**
+     * <p>This parameter is discontinued. Use `Permissions.N.DestPrefixListId` to specify the ID of the destination prefix list.</p>
+     */
     @NameInMap("DestPrefixListId")
     public String destPrefixListId;
 
-    // This parameter is discontinued. Use `Permissions.N.IpProtocol` to specify the transport layer protocol.
+    /**
+     * <p>This parameter is discontinued. Use `Permissions.N.IpProtocol` to specify the transport layer protocol.</p>
+     */
     @NameInMap("IpProtocol")
     public String ipProtocol;
 
-    // This parameter is discontinued. Use `Permissions.N.Ipv6DestCidrIp` to specify the destination IPv6 CIDR block.
+    /**
+     * <p>This parameter is discontinued. Use `Permissions.N.Ipv6DestCidrIp` to specify the destination IPv6 CIDR block.</p>
+     */
     @NameInMap("Ipv6DestCidrIp")
     public String ipv6DestCidrIp;
 
-    // This parameter is discontinued. Use `Permissions.N.Ipv6SourceCidrIp` to specify the source IPv6 CIDR block.
+    /**
+     * <p>This parameter is discontinued. Use `Permissions.N.Ipv6SourceCidrIp` to specify the source IPv6 CIDR block.</p>
+     */
     @NameInMap("Ipv6SourceCidrIp")
     public String ipv6SourceCidrIp;
 
-    // This parameter is discontinued. Use `Permissions.N.NicType` to specify the NIC type.
+    /**
+     * <p>This parameter is discontinued. Use `Permissions.N.NicType` to specify the NIC type.</p>
+     */
     @NameInMap("NicType")
     public String nicType;
 
@@ -54,23 +76,33 @@ public class RevokeSecurityGroupEgressRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // Details about the security group rules.
+    /**
+     * <p>Details about the security group rules.</p>
+     */
     @NameInMap("Permissions")
     public java.util.List<RevokeSecurityGroupEgressRequestPermissions> permissions;
 
-    // This parameter is discontinued. Use `Permissions.N.Policy` to specify whether to allow outbound access.
+    /**
+     * <p>This parameter is discontinued. Use `Permissions.N.Policy` to specify whether to allow outbound access.</p>
+     */
     @NameInMap("Policy")
     public String policy;
 
-    // This parameter is discontinued. Use `Permissions.N.PortRange` to specify the range of destination ports.
+    /**
+     * <p>This parameter is discontinued. Use `Permissions.N.PortRange` to specify the range of destination ports.</p>
+     */
     @NameInMap("PortRange")
     public String portRange;
 
-    // This parameter is discontinued. Use `Permissions.N.Priority` to specify the rule priority.
+    /**
+     * <p>This parameter is discontinued. Use `Permissions.N.Priority` to specify the rule priority.</p>
+     */
     @NameInMap("Priority")
     public String priority;
 
-    // The region ID of the security group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+    /**
+     * <p>The region ID of the security group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -80,21 +112,29 @@ public class RevokeSecurityGroupEgressRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    // The ID of the security group.
+    /**
+     * <p>The ID of the security group.</p>
+     */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
-    // The IDs of security group rules. You can specify up to 100 rule IDs.
-    // 
-    // When you revoke security group egress by security group rule ID, the parameter is required.
+    /**
+     * <p>The IDs of security group rules. You can specify up to 100 rule IDs.</p>
+     * <br>
+     * <p>When you revoke security group egress by security group rule ID, the parameter is required.</p>
+     */
     @NameInMap("SecurityGroupRuleId")
     public java.util.List<String> securityGroupRuleId;
 
-    // This parameter is discontinued. Use `Permissions.N.SourceCidrIp` to specify the source IPv4 CIDR block.
+    /**
+     * <p>This parameter is discontinued. Use `Permissions.N.SourceCidrIp` to specify the source IPv4 CIDR block.</p>
+     */
     @NameInMap("SourceCidrIp")
     public String sourceCidrIp;
 
-    // This parameter is discontinued. Use `Permissions.N.SourcePortRange` to specify the range of source ports.
+    /**
+     * <p>This parameter is discontinued. Use `Permissions.N.SourcePortRange` to specify the range of source ports.</p>
+     */
     @NameInMap("SourcePortRange")
     public String sourcePortRange;
 
@@ -296,156 +336,186 @@ public class RevokeSecurityGroupEgressRequest extends TeaModel {
     }
 
     public static class RevokeSecurityGroupEgressRequestPermissions extends TeaModel {
-        // The description of security group rule N. The description must be 1 to 512 characters in length.
-        // 
-        // Valid values of N: 1 to 100.
+        /**
+         * <p>The description of security group rule N. The description must be 1 to 512 characters in length.</p>
+         * <br>
+         * <p>Valid values of N: 1 to 100.</p>
+         */
         @NameInMap("Description")
         public String description;
 
-        // The destination IPv4 CIDR block for security group rule N. CIDR blocks and IPv4 addresses are supported.
-        // 
-        // Valid values of N: 1 to 100.
+        /**
+         * <p>The destination IPv4 CIDR block for security group rule N. CIDR blocks and IPv4 addresses are supported.</p>
+         * <br>
+         * <p>Valid values of N: 1 to 100.</p>
+         */
         @NameInMap("DestCidrIp")
         public String destCidrIp;
 
-        // The ID of the source security group that is referenced in security group rule N.
-        // 
-        // *   At least one of `DestGroupId`, `DestCidrIp`, `Ipv6DestCidrIp`, and `DestPrefixListId` must be specified.
-        // *   If `DestGroupId` is specified but `DestCidrIp` is not specified, the `NicType` parameter must be set to intranet.
-        // *   If both `DestGroupId` and `DestCidrIp` are specified, `DestCidrIp` takes precedence.
-        // 
-        // Take note of the following items:
-        // 
-        // *   For advanced security groups, security groups cannot be used as authorization objects.
-        // *   For each basic security group, a maximum of 20 security groups can be used as authorization objects.
-        // 
-        // Valid values of N: 1 to 100.
+        /**
+         * <p>The ID of the source security group that is referenced in security group rule N.</p>
+         * <br>
+         * <p>*   At least one of `DestGroupId`, `DestCidrIp`, `Ipv6DestCidrIp`, and `DestPrefixListId` must be specified.</p>
+         * <p>*   If `DestGroupId` is specified but `DestCidrIp` is not specified, the `NicType` parameter must be set to intranet.</p>
+         * <p>*   If both `DestGroupId` and `DestCidrIp` are specified, `DestCidrIp` takes precedence.</p>
+         * <br>
+         * <p>Take note of the following items:</p>
+         * <br>
+         * <p>*   For advanced security groups, security groups cannot be used as authorization objects.</p>
+         * <p>*   For each basic security group, a maximum of 20 security groups can be used as authorization objects.</p>
+         * <br>
+         * <p>Valid values of N: 1 to 100.</p>
+         */
         @NameInMap("DestGroupId")
         public String destGroupId;
 
-        // The Alibaba Cloud account that manages the destination security group when you delete security group rules N across accounts.
-        // 
-        // *   If both `DestGroupOwnerAccount` and `DestGroupOwnerId` are not specified, the access control is revoked from another security group managed by your account.
-        // *   If `DestCidrIp` is specified, `DestGroupOwnerAccount` is ignored.
-        // 
-        // Valid values of N: 1 to 100.
+        /**
+         * <p>The Alibaba Cloud account that manages the destination security group when you delete security group rules N across accounts.</p>
+         * <br>
+         * <p>*   If both `DestGroupOwnerAccount` and `DestGroupOwnerId` are not specified, the access control is revoked from another security group managed by your account.</p>
+         * <p>*   If `DestCidrIp` is specified, `DestGroupOwnerAccount` is ignored.</p>
+         * <br>
+         * <p>Valid values of N: 1 to 100.</p>
+         */
         @NameInMap("DestGroupOwnerAccount")
         public String destGroupOwnerAccount;
 
-        // The Alibaba Cloud account that manages the destination security group when you delete security group rule N across accounts.
-        // 
-        // *   If both `DestGroupOwnerId` and `DestGroupOwnerAccount` are not specified, the access control is revoked from another security group managed by your account.
-        // *   If `DestCidrIp` is specified, `DestGroupOwnerId` is invalid.
-        // 
-        // Valid values of N: 1 to 100.
+        /**
+         * <p>The Alibaba Cloud account that manages the destination security group when you delete security group rule N across accounts.</p>
+         * <br>
+         * <p>*   If both `DestGroupOwnerId` and `DestGroupOwnerAccount` are not specified, the access control is revoked from another security group managed by your account.</p>
+         * <p>*   If `DestCidrIp` is specified, `DestGroupOwnerId` is invalid.</p>
+         * <br>
+         * <p>Valid values of N: 1 to 100.</p>
+         */
         @NameInMap("DestGroupOwnerId")
         public String destGroupOwnerId;
 
-        // The ID of the destination prefix list that is referenced in security group rule N. You can call the [DescribePrefixLists](~~205046~~) operation to query the IDs of available prefix lists.
-        // 
-        // Take note of the following items:
-        // 
-        // *   If a security group is in the classic network, you cannot reference prefix lists in the security group rules. For information about the limits on security groups and prefix lists, see the "Security group limits" section in [Limits](~~25412#SecurityGroupQuota1~~).
-        // *   If you specify `DestCidrIp`, `Ipv6DestCidrIp`, or `DestGroupId`, Permissions.N.DestPrefixListId is ignored.
-        // 
-        // Valid values of N: 1 to 100.
+        /**
+         * <p>The ID of the destination prefix list that is referenced in security group rule N. You can call the [DescribePrefixLists](~~205046~~) operation to query the IDs of available prefix lists.</p>
+         * <br>
+         * <p>Take note of the following items:</p>
+         * <br>
+         * <p>*   If a security group is in the classic network, you cannot reference prefix lists in the security group rules. For information about the limits on security groups and prefix lists, see the "Security group limits" section in [Limits](~~25412#SecurityGroupQuota1~~).</p>
+         * <p>*   If you specify `DestCidrIp`, `Ipv6DestCidrIp`, or `DestGroupId`, Permissions.N.DestPrefixListId is ignored.</p>
+         * <br>
+         * <p>Valid values of N: 1 to 100.</p>
+         */
         @NameInMap("DestPrefixListId")
         public String destPrefixListId;
 
-        // The transport layer protocol of security group rule N. The value of this parameter is case-insensitive. Valid values:
-        // 
-        // *   TCP
-        // *   UDP
-        // *   ICMP
-        // *   ICMPv6
-        // *   GRE
-        // *   ALL: All protocols are supported.
-        // 
-        // Valid values of N: 1 to 100.
+        /**
+         * <p>The transport layer protocol of security group rule N. The value of this parameter is case-insensitive. Valid values:</p>
+         * <br>
+         * <p>*   TCP</p>
+         * <p>*   UDP</p>
+         * <p>*   ICMP</p>
+         * <p>*   ICMPv6</p>
+         * <p>*   GRE</p>
+         * <p>*   ALL: All protocols are supported.</p>
+         * <br>
+         * <p>Valid values of N: 1 to 100.</p>
+         */
         @NameInMap("IpProtocol")
         public String ipProtocol;
 
-        // The destination IPv6 CIDR block for security group rule N. CIDR blocks and IPv6 addresses are supported.
-        // 
-        // Valid values of N: 1 to 100.
-        // 
-        // >  The Permissions.N.Ipv6DestCidrIp parameter is valid only when the destination is ECS instances that reside in virtual private clouds (VPCs) and that support IPv6 CIDR blocks. You cannot specify both this parameter and the `DestCidrIp` parameter.
+        /**
+         * <p>The destination IPv6 CIDR block for security group rule N. CIDR blocks and IPv6 addresses are supported.</p>
+         * <br>
+         * <p>Valid values of N: 1 to 100.</p>
+         * <br>
+         * <p>>  The Permissions.N.Ipv6DestCidrIp parameter is valid only when the destination is ECS instances that reside in virtual private clouds (VPCs) and that support IPv6 CIDR blocks. You cannot specify both this parameter and the `DestCidrIp` parameter.</p>
+         */
         @NameInMap("Ipv6DestCidrIp")
         public String ipv6DestCidrIp;
 
-        // The source IPv6 CIDR block for security group rule N. CIDR blocks and IPv6 addresses are supported.
-        // 
-        // This parameter is specified to meet quintuple rules. For more information, see [Security group quintuple rules](~~97439~~).
-        // 
-        // Valid values of N: 1 to 100.
-        // 
-        // >  The Permissions.N.Ipv6SourceCidrIp parameter is valid only when the source is ECS instances that reside in VPCs and that support IPv6 CIDR blocks. You cannot specify both this parameter and the `DestCidrIp` parameter.
+        /**
+         * <p>The source IPv6 CIDR block for security group rule N. CIDR blocks and IPv6 addresses are supported.</p>
+         * <br>
+         * <p>This parameter is specified to meet quintuple rules. For more information, see [Security group quintuple rules](~~97439~~).</p>
+         * <br>
+         * <p>Valid values of N: 1 to 100.</p>
+         * <br>
+         * <p>>  The Permissions.N.Ipv6SourceCidrIp parameter is valid only when the source is ECS instances that reside in VPCs and that support IPv6 CIDR blocks. You cannot specify both this parameter and the `DestCidrIp` parameter.</p>
+         */
         @NameInMap("Ipv6SourceCidrIp")
         public String ipv6SourceCidrIp;
 
-        // The network interface controller (NIC) type of security group rule N when the security group is in the classic network. Valid values:
-        // 
-        // *   internet: public NIC
-        // *   intranet: internal NIC
-        // 
-        // If the security group is in a VPC, this parameter is set to intranet by default and cannot be modified.
-        // 
-        // If you specify only `SourceGroupId` when you configure access between security groups, this parameter must be set to intranet.
-        // 
-        // Default value: internet.
-        // 
-        // Valid values of N: 1 to 100.
+        /**
+         * <p>The network interface controller (NIC) type of security group rule N when the security group is in the classic network. Valid values:</p>
+         * <br>
+         * <p>*   internet: public NIC</p>
+         * <p>*   intranet: internal NIC</p>
+         * <br>
+         * <p>If the security group is in a VPC, this parameter is set to intranet by default and cannot be modified.</p>
+         * <br>
+         * <p>If you specify only `SourceGroupId` when you configure access between security groups, this parameter must be set to intranet.</p>
+         * <br>
+         * <p>Default value: internet.</p>
+         * <br>
+         * <p>Valid values of N: 1 to 100.</p>
+         */
         @NameInMap("NicType")
         public String nicType;
 
-        // The action of security group rule N that determines whether to allow outbound access. Valid values:
-        // 
-        // *   accept: allows access.
-        // *   drop: denies access and returns no responses. In this case, the request times out or the connection cannot be established.
-        // 
-        // Default value: accept.
-        // 
-        // Valid values of N: 1 to 100.
+        /**
+         * <p>The action of security group rule N that determines whether to allow outbound access. Valid values:</p>
+         * <br>
+         * <p>*   accept: allows access.</p>
+         * <p>*   drop: denies access and returns no responses. In this case, the request times out or the connection cannot be established.</p>
+         * <br>
+         * <p>Default value: accept.</p>
+         * <br>
+         * <p>Valid values of N: 1 to 100.</p>
+         */
         @NameInMap("Policy")
         public String policy;
 
-        // The range of destination ports that correspond to the transport layer protocol for security group rule N. Valid values:
-        // 
-        // *   When the Permissions.N.IpProtocol parameter is set to TCP or UDP, the port number range is 1 to 65535. Specify a port range in the format of \<Start port number>/\<End port number>. Example: 1/200.
-        // *   When the Permissions.N.IpProtocol parameter is set to ICMP, the port number range is -1/-1, which indicates all ports.
-        // *   When the Permissions.N.IpProtocol parameter is set to GRE, the port number range is -1/-1, which indicates all ports.
-        // *   When the Permissions.N.IpProtocol parameter is set to ALL, the port number range is -1/-1, which indicates all ports.
-        // 
-        // Valid values of N: 1 to 100.
+        /**
+         * <p>The range of destination ports that correspond to the transport layer protocol for security group rule N. Valid values:</p>
+         * <br>
+         * <p>*   When the Permissions.N.IpProtocol parameter is set to TCP or UDP, the port number range is 1 to 65535. Specify a port range in the format of \<Start port number>/\<End port number>. Example: 1/200.</p>
+         * <p>*   When the Permissions.N.IpProtocol parameter is set to ICMP, the port number range is -1/-1, which indicates all ports.</p>
+         * <p>*   When the Permissions.N.IpProtocol parameter is set to GRE, the port number range is -1/-1, which indicates all ports.</p>
+         * <p>*   When the Permissions.N.IpProtocol parameter is set to ALL, the port number range is -1/-1, which indicates all ports.</p>
+         * <br>
+         * <p>Valid values of N: 1 to 100.</p>
+         */
         @NameInMap("PortRange")
         public String portRange;
 
-        // The priority of security group rule N. A smaller value indicates a higher priority. Valid values: 1 to 100.
-        // 
-        // Default value: 1.
-        // 
-        // Valid values of N: 1 to 100.
+        /**
+         * <p>The priority of security group rule N. A smaller value indicates a higher priority. Valid values: 1 to 100.</p>
+         * <br>
+         * <p>Default value: 1.</p>
+         * <br>
+         * <p>Valid values of N: 1 to 100.</p>
+         */
         @NameInMap("Priority")
         public String priority;
 
-        // The source IPv4 CIDR block for security group rule N. CIDR blocks and IPv4 addresses are supported.
-        // 
-        // This parameter is specified to meet quintuple rules. For more information, see [Security group quintuple rules](~~97439~~).
-        // 
-        // Valid values of N: 1 to 100.
+        /**
+         * <p>The source IPv4 CIDR block for security group rule N. CIDR blocks and IPv4 addresses are supported.</p>
+         * <br>
+         * <p>This parameter is specified to meet quintuple rules. For more information, see [Security group quintuple rules](~~97439~~).</p>
+         * <br>
+         * <p>Valid values of N: 1 to 100.</p>
+         */
         @NameInMap("SourceCidrIp")
         public String sourceCidrIp;
 
-        // The range of source ports that correspond to the transport layer protocol for security group rule N. Valid values:
-        // 
-        // *   When the Permissions.N.IpProtocol parameter is set to TCP or UDP, the port number range is 1 to 65535. Specify a port range in the format of \<Start port number>/\<End port number>. Example: 1/200.
-        // *   When the Permissions.N.IpProtocol parameter is set to ICMP, the port number range is -1/-1, which indicates all ports.
-        // *   When the Permissions.N.IpProtocol parameter is set to GRE, the port number range is -1/-1, which indicates all ports.
-        // *   When the Permissions.N.IpProtocol parameter is set to ALL, the port number range is -1/-1, which indicates all ports.
-        // 
-        // This parameter is specified to meet quintuple rules. For more information, see [Security group quintuple rules](~~97439~~).
-        // 
-        // Valid values of N: 1 to 100.
+        /**
+         * <p>The range of source ports that correspond to the transport layer protocol for security group rule N. Valid values:</p>
+         * <br>
+         * <p>*   When the Permissions.N.IpProtocol parameter is set to TCP or UDP, the port number range is 1 to 65535. Specify a port range in the format of \<Start port number>/\<End port number>. Example: 1/200.</p>
+         * <p>*   When the Permissions.N.IpProtocol parameter is set to ICMP, the port number range is -1/-1, which indicates all ports.</p>
+         * <p>*   When the Permissions.N.IpProtocol parameter is set to GRE, the port number range is -1/-1, which indicates all ports.</p>
+         * <p>*   When the Permissions.N.IpProtocol parameter is set to ALL, the port number range is -1/-1, which indicates all ports.</p>
+         * <br>
+         * <p>This parameter is specified to meet quintuple rules. For more information, see [Security group quintuple rules](~~97439~~).</p>
+         * <br>
+         * <p>Valid values of N: 1 to 100.</p>
+         */
         @NameInMap("SourcePortRange")
         public String sourcePortRange;
 

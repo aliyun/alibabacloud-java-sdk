@@ -4,11 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeActivationsRequest extends TeaModel {
-    // The ID of the activation code.
+    /**
+     * <p>The ID of the activation code.</p>
+     */
     @NameInMap("ActivationId")
     public String activationId;
 
-    // The default instance name prefix.
+    /**
+     * <p>The default instance name prefix.</p>
+     */
     @NameInMap("InstanceName")
     public String instanceName;
 
@@ -18,25 +22,31 @@ public class DescribeActivationsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The number of the page to return.
-    // 
-    // Pages start from page 1.
-    // 
-    // Default value: 1.
+    /**
+     * <p>The number of the page to return.</p>
+     * <br>
+     * <p>Pages start from page 1.</p>
+     * <br>
+     * <p>Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
-    // The number of entries to return on each page.
-    // 
-    // Maximum value: 50.
-    // 
-    // Default value: 10.
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>Maximum value: 50.</p>
+     * <br>
+     * <p>Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
-    // The region ID of the activation code. The following regions are supported: China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Hangzhou), China (Shanghai), China (Shenzhen), China (Heyuan), and China (Hong Kong).
-    // 
-    // You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+    /**
+     * <p>The region ID of the activation code. The following regions are supported: China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Hangzhou), China (Shanghai), China (Shenzhen), China (Heyuan), and China (Hong Kong).</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -45,6 +55,9 @@ public class DescribeActivationsRequest extends TeaModel {
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
+
+    @NameInMap("Tag")
+    public java.util.List<DescribeActivationsRequestTag> tag;
 
     public static DescribeActivationsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeActivationsRequest self = new DescribeActivationsRequest();
@@ -121,6 +134,44 @@ public class DescribeActivationsRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public DescribeActivationsRequest setTag(java.util.List<DescribeActivationsRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeActivationsRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class DescribeActivationsRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeActivationsRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeActivationsRequestTag self = new DescribeActivationsRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeActivationsRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeActivationsRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

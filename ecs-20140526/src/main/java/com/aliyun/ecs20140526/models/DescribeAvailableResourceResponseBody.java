@@ -4,11 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeAvailableResourceResponseBody extends TeaModel {
-    // Details about the zones in which resources are available.
+    /**
+     * <p>Details about the zones in which resources are available.</p>
+     */
     @NameInMap("AvailableZones")
     public DescribeAvailableResourceResponseBodyAvailableZones availableZones;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,35 +38,47 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceSupportedResourcesSupportedResource extends TeaModel {
-        // The maximum number of available resources of a specific type. No value is returned when the parameter is empty.
+        /**
+         * <p>The maximum number of available resources of a specific type. No value is returned when the parameter is empty.</p>
+         */
         @NameInMap("Max")
         public Integer max;
 
-        // The minimum number of available resources of a specific type. No value is returned when the parameter is empty.
+        /**
+         * <p>The minimum number of available resources of a specific type. No value is returned when the parameter is empty.</p>
+         */
         @NameInMap("Min")
         public Integer min;
 
-        // The state of the resource. Valid values:
-        // 
-        // *   Available
-        // *   SoldOut
+        /**
+         * <p>The state of the resource. Valid values:</p>
+         * <br>
+         * <p>*   Available</p>
+         * <p>*   SoldOut</p>
+         */
         @NameInMap("Status")
         public String status;
 
-        // The resource category based on the stock. Valid values:
-        // 
-        // *   WithStock: Resources are in sufficient stock.
-        // *   ClosedWithStock: Resources are insufficient. We recommend that you use other resources that are in sufficient stock.
-        // *   WithoutStock: Resources are sold out and will be replenished. We recommend that you use other resources that are in sufficient stock.
-        // *   ClosedWithoutStock: Resources are sold out and will not be replenished. We recommend that you use other resources that are in sufficient stock.
+        /**
+         * <p>The resource category based on the stock. Valid values:</p>
+         * <br>
+         * <p>*   WithStock: Resources are in sufficient stock.</p>
+         * <p>*   ClosedWithStock: Resources are insufficient. We recommend that you use other resources that are in sufficient stock.</p>
+         * <p>*   WithoutStock: Resources are sold out and will be replenished. We recommend that you use other resources that are in sufficient stock.</p>
+         * <p>*   ClosedWithoutStock: Resources are sold out and will not be replenished. We recommend that you use other resources that are in sufficient stock.</p>
+         */
         @NameInMap("StatusCategory")
         public String statusCategory;
 
-        // The unit of the resource type. No value is returned when the parameter is empty.
+        /**
+         * <p>The unit of the resource type. No value is returned when the parameter is empty.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
-        // The resource type.
+        /**
+         * <p>The resource type.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -141,19 +157,23 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResource extends TeaModel {
-        // Details about the resources.
+        /**
+         * <p>Details about the resources.</p>
+         */
         @NameInMap("SupportedResources")
         public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceSupportedResources supportedResources;
 
-        // The type of the resource. Valid values:
-        // 
-        // *   Zone: zone
-        // *   IoOptimized: I/O optimized resource
-        // *   InstanceType: instance type
-        // *   SystemDisk: system disk
-        // *   DataDisk: data disk
-        // *   Network: network type
-        // *   ddh: dedicated host
+        /**
+         * <p>The type of the resource. Valid values:</p>
+         * <br>
+         * <p>*   Zone: zone</p>
+         * <p>*   IoOptimized: I/O optimized resource</p>
+         * <p>*   InstanceType: instance type</p>
+         * <p>*   SystemDisk: system disk</p>
+         * <p>*   DataDisk: data disk</p>
+         * <p>*   Network: network type</p>
+         * <p>*   ddh: dedicated host</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -200,31 +220,41 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableResourceResponseBodyAvailableZonesAvailableZone extends TeaModel {
-        // Details about the resources available in the zone.
+        /**
+         * <p>Details about the resources available in the zone.</p>
+         */
         @NameInMap("AvailableResources")
         public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResources availableResources;
 
-        // The ID of the region.
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
-        // The state of resources in the zone. Valid values:
-        // 
-        // *   Available
-        // *   SoldOut
+        /**
+         * <p>The state of resources in the zone. Valid values:</p>
+         * <br>
+         * <p>*   Available</p>
+         * <p>*   SoldOut</p>
+         */
         @NameInMap("Status")
         public String status;
 
-        // The resource category based on the stock. Valid values:
-        // 
-        // *   WithStock: Resources are in sufficient stock.
-        // *   ClosedWithStock: Resources are insufficient. We recommend that you use other resources that are in sufficient stock.
-        // *   WithoutStock: Resources are sold out and will be replenished. We recommend that you use other resources that are in sufficient stock.
-        // *   ClosedWithoutStock: Resources are sold out and will not be replenished. We recommend that you use other resources that are in sufficient stock.
+        /**
+         * <p>The resource category based on the stock. Valid values:</p>
+         * <br>
+         * <p>*   WithStock: Resources are in sufficient stock.</p>
+         * <p>*   ClosedWithStock: Resources are insufficient. We recommend that you use other resources that are in sufficient stock.</p>
+         * <p>*   WithoutStock: Resources are sold out and will be replenished. We recommend that you use other resources that are in sufficient stock.</p>
+         * <p>*   ClosedWithoutStock: Resources are sold out and will not be replenished. We recommend that you use other resources that are in sufficient stock.</p>
+         */
         @NameInMap("StatusCategory")
         public String statusCategory;
 
-        // The ID of the zone.
+        /**
+         * <p>The ID of the zone.</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

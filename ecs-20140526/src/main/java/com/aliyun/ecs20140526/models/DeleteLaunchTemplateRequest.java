@@ -4,15 +4,19 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DeleteLaunchTemplateRequest extends TeaModel {
-    // The ID of the instance launch template. For more information, call the [DescribeLaunchTemplates](~~73759~~) operation.
-    // 
-    // You must specify the `LaunchTemplateId` parameter or the `LaunchTemplateName` parameter to determine an instance launch template.
+    /**
+     * <p>The ID of the instance launch template. For more information, call the [DescribeLaunchTemplates](~~73759~~) operation.</p>
+     * <br>
+     * <p>You must specify the `LaunchTemplateId` parameter or the `LaunchTemplateName` parameter to determine an instance launch template.</p>
+     */
     @NameInMap("LaunchTemplateId")
     public String launchTemplateId;
 
-    // The name of the instance launch template.
-    // 
-    // You must specify the `LaunchTemplateId` parameter or the `LaunchTemplateName` parameter to determine an instance launch template.
+    /**
+     * <p>The name of the instance launch template.</p>
+     * <br>
+     * <p>You must specify the `LaunchTemplateId` parameter or the `LaunchTemplateName` parameter to determine an instance launch template.</p>
+     */
     @NameInMap("LaunchTemplateName")
     public String launchTemplateName;
 
@@ -22,7 +26,9 @@ public class DeleteLaunchTemplateRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The region ID of the instance launch template. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+    /**
+     * <p>The region ID of the instance launch template. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
