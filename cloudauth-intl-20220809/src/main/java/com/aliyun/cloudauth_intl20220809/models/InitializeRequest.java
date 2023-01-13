@@ -7,6 +7,12 @@ public class InitializeRequest extends TeaModel {
     @NameInMap("DocType")
     public String docType;
 
+    @NameInMap("FacePictureBase64")
+    public String facePictureBase64;
+
+    @NameInMap("FacePictureUrl")
+    public String facePictureUrl;
+
     @NameInMap("FlowType")
     public String flowType;
 
@@ -48,6 +54,22 @@ public class InitializeRequest extends TeaModel {
     }
     public String getDocType() {
         return this.docType;
+    }
+
+    public InitializeRequest setFacePictureBase64(String facePictureBase64) {
+        this.facePictureBase64 = facePictureBase64;
+        return this;
+    }
+    public String getFacePictureBase64() {
+        return this.facePictureBase64;
+    }
+
+    public InitializeRequest setFacePictureUrl(String facePictureUrl) {
+        this.facePictureUrl = facePictureUrl;
+        return this;
+    }
+    public String getFacePictureUrl() {
+        return this.facePictureUrl;
     }
 
     public InitializeRequest setFlowType(String flowType) {

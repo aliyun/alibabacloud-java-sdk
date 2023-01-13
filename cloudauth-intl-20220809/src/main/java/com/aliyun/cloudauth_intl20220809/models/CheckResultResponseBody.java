@@ -69,6 +69,12 @@ public class CheckResultResponseBody extends TeaModel {
         @NameInMap("ExtRiskInfo")
         public String extRiskInfo;
 
+        @NameInMap("Passed")
+        public String passed;
+
+        @NameInMap("SubCode")
+        public String subCode;
+
         public static CheckResultResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             CheckResultResponseBodyResult self = new CheckResultResponseBodyResult();
             return TeaModel.build(map, self);
@@ -112,6 +118,22 @@ public class CheckResultResponseBody extends TeaModel {
         }
         public String getExtRiskInfo() {
             return this.extRiskInfo;
+        }
+
+        public CheckResultResponseBodyResult setPassed(String passed) {
+            this.passed = passed;
+            return this;
+        }
+        public String getPassed() {
+            return this.passed;
+        }
+
+        public CheckResultResponseBodyResult setSubCode(String subCode) {
+            this.subCode = subCode;
+            return this;
+        }
+        public String getSubCode() {
+            return this.subCode;
         }
 
     }
