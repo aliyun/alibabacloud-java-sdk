@@ -4,12 +4,26 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class CreateTransitRouterMulticastDomainRequest extends TeaModel {
+    /**
+     * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+     */
     @NameInMap("CenId")
     public String cenId;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the value, but you must ensure that it is unique among all requests. The token can contain only ASCII characters.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>Specifies whether only to precheck the request. Valid values:</p>
+     * <br>
+     * <p>*   **true**: prechecks the request but does not create the multicast domain. The system checks the required parameters, the request format, and the service limits. If the request fails the check, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.</p>
+     * <p>*   **false** (default): sends the request. After the request passes the precheck, the multicast domain is created.</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
@@ -19,6 +33,11 @@ public class CreateTransitRouterMulticastDomainRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the transit router is deployed.</p>
+     * <br>
+     * <p>You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -28,15 +47,33 @@ public class CreateTransitRouterMulticastDomainRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The information about the tags.</p>
+     * <br>
+     * <p>You can specify at most 20 tags in each call.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateTransitRouterMulticastDomainRequestTag> tag;
 
+    /**
+     * <p>The ID of the transit router.</p>
+     */
     @NameInMap("TransitRouterId")
     public String transitRouterId;
 
+    /**
+     * <p>The description of the multicast domain.</p>
+     * <br>
+     * <p>The description must be 0 to 256 characters in length, and can contain letters, digits, commas (,), periods (.), semicolons (;), forward slashes (/), at signs (@), underscores (\_), and hyphens (-).</p>
+     */
     @NameInMap("TransitRouterMulticastDomainDescription")
     public String transitRouterMulticastDomainDescription;
 
+    /**
+     * <p>The name of the multicast domain.</p>
+     * <br>
+     * <p>The name must be 0 to 128 characters in length, and can contain letters, digits, commas (,), periods (.), semicolons (;), forward slashes (/), at signs (@), underscores (\_), and hyphens (-).</p>
+     */
     @NameInMap("TransitRouterMulticastDomainName")
     public String transitRouterMulticastDomainName;
 
@@ -142,9 +179,23 @@ public class CreateTransitRouterMulticastDomainRequest extends TeaModel {
     }
 
     public static class CreateTransitRouterMulticastDomainRequestTag extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * <br>
+         * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length, and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         * <br>
+         * <p>You can specify at most 20 tag keys.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         * <br>
+         * <p>The tag value can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
+         * <br>
+         * <p>Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.</p>
+         */
         @NameInMap("Value")
         public String value;
 

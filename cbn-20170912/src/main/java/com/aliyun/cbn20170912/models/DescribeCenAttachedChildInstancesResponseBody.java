@@ -4,18 +4,33 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DescribeCenAttachedChildInstancesResponseBody extends TeaModel {
+    /**
+     * <p>The information about the network instances.</p>
+     */
     @NameInMap("ChildInstances")
     public DescribeCenAttachedChildInstancesResponseBodyChildInstances childInstances;
 
+    /**
+     * <p>The number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,24 +80,55 @@ public class DescribeCenAttachedChildInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeCenAttachedChildInstancesResponseBodyChildInstancesChildInstance extends TeaModel {
+        /**
+         * <p>The ID of the CEN instance.</p>
+         */
         @NameInMap("CenId")
         public String cenId;
 
+        /**
+         * <p>The time when the network instance was attached to the CEN instance.</p>
+         * <br>
+         * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mmZ format. The time is displayed in UTC.</p>
+         */
         @NameInMap("ChildInstanceAttachTime")
         public String childInstanceAttachTime;
 
+        /**
+         * <p>The ID of the network instance.</p>
+         */
         @NameInMap("ChildInstanceId")
         public String childInstanceId;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account to which the network instance belongs.</p>
+         */
         @NameInMap("ChildInstanceOwnerId")
         public Long childInstanceOwnerId;
 
+        /**
+         * <p>The region ID of the network instance.</p>
+         */
         @NameInMap("ChildInstanceRegionId")
         public String childInstanceRegionId;
 
+        /**
+         * <p>The type of the network instance. Valid values:</p>
+         * <br>
+         * <p>*   **VPC**: VPC</p>
+         * <p>*   **VBR**: VBR</p>
+         * <p>*   **CCN**: CCN instance</p>
+         */
         @NameInMap("ChildInstanceType")
         public String childInstanceType;
 
+        /**
+         * <p>The status of the network instance. Valid values:</p>
+         * <br>
+         * <p>*   **Attaching**: The network instance is being attached to the CEN instance.</p>
+         * <p>*   **Attached**: The network instance is attached to the CEN instance.</p>
+         * <p>*   **Detaching**: The network instance is being detached from the CEN instance.</p>
+         */
         @NameInMap("Status")
         public String status;
 

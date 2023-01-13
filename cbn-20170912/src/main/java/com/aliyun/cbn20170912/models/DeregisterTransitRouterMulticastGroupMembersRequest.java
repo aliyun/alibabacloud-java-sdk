@@ -4,15 +4,34 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DeregisterTransitRouterMulticastGroupMembersRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>Specifies whether only to precheck the request. Valid values:</p>
+     * <br>
+     * <p>*   **true**: only prechecks the request but does not remove the multicast members. The system checks the required parameters, the request format, and the service limits. If the request fails to pass the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.</p>
+     * <p>*   **false** (default): sends the API request. After the request passes the precheck, the multicast members are removed.</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    /**
+     * <p>The IP address of the multicast group to which the multicast members belong.</p>
+     */
     @NameInMap("GroupIpAddress")
     public String groupIpAddress;
 
+    /**
+     * <p>The IDs of the elastic network interfaces (ENI).</p>
+     * <br>
+     * <p>You can specify multiple ENIs. Make sure that the total number of specified ENIs and multicast domains does not exceed five.</p>
+     */
     @NameInMap("NetworkInterfaceIds")
     public java.util.List<String> networkInterfaceIds;
 
@@ -22,6 +41,11 @@ public class DeregisterTransitRouterMulticastGroupMembersRequest extends TeaMode
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The IDs of the multicast domains that is in a different region.</p>
+     * <br>
+     * <p>You can specify multiple multicast domains. Make sure that the total number of specified ENIs and multicast domains does not exceed five.</p>
+     */
     @NameInMap("PeerTransitRouterMulticastDomains")
     public java.util.List<String> peerTransitRouterMulticastDomains;
 
@@ -31,6 +55,9 @@ public class DeregisterTransitRouterMulticastGroupMembersRequest extends TeaMode
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the multicast domain to which the multicast members belong.</p>
+     */
     @NameInMap("TransitRouterMulticastDomainId")
     public String transitRouterMulticastDomainId;
 

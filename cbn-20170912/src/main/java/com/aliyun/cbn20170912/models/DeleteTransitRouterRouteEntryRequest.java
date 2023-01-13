@@ -4,9 +4,22 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DeleteTransitRouterRouteEntryRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.</p>
+     * <br>
+     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>Specifies whether to perform a precheck to check information such as the permissions and instance status. Valid values:</p>
+     * <br>
+     * <p>*   **false** (default): sends the request. If the request passes the precheck, the route is deleted.</p>
+     * <p>*   **true**: sends a precheck request. The route is not deleted after the request passes the precheck. If you use this value, the system checks the required parameters and the request syntax. If the request fails to pass the precheck, an error message is returned. If the request passes the check, the system returns the ID of the request.</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
@@ -22,18 +35,36 @@ public class DeleteTransitRouterRouteEntryRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The destination CIDR block.</p>
+     */
     @NameInMap("TransitRouterRouteEntryDestinationCidrBlock")
     public String transitRouterRouteEntryDestinationCidrBlock;
 
+    /**
+     * <p>The ID of the route entry.</p>
+     */
     @NameInMap("TransitRouterRouteEntryId")
     public String transitRouterRouteEntryId;
 
+    /**
+     * <p>The ID of the network instance connection that you want to specify as the next hop.</p>
+     */
     @NameInMap("TransitRouterRouteEntryNextHopId")
     public String transitRouterRouteEntryNextHopId;
 
+    /**
+     * <p>The type of the next hop. Valid values:</p>
+     * <br>
+     * <p>*   **BlackHole**: a blackhole route. You do not need to specify a next hop.</p>
+     * <p>*   **Attachment**: a network instance connection. You must specify a network instance connection as the next hop.</p>
+     */
     @NameInMap("TransitRouterRouteEntryNextHopType")
     public String transitRouterRouteEntryNextHopType;
 
+    /**
+     * <p>The ID of the route table of the Enterprise Edition transit router.</p>
+     */
     @NameInMap("TransitRouterRouteTableId")
     public String transitRouterRouteTableId;
 

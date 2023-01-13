@@ -4,21 +4,42 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DescribeFlowlogsResponseBody extends TeaModel {
+    /**
+     * <p>The information about the flow log.</p>
+     */
     @NameInMap("FlowLogs")
     public DescribeFlowlogsResponseBodyFlowLogs flowLogs;
 
+    /**
+     * <p>The number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public String pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call is successful.</p>
+     * <br>
+     * <p>*   **true**: yes</p>
+     * <p>*   **false**: no</p>
+     */
     @NameInMap("Success")
     public String success;
 
+    /**
+     * <p>The number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public String totalCount;
 
@@ -76,9 +97,15 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
     }
 
     public static class DescribeFlowlogsResponseBodyFlowLogsFlowLogTagsTag extends TeaModel {
+        /**
+         * <p>The key of the tag.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -125,35 +152,76 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
     }
 
     public static class DescribeFlowlogsResponseBodyFlowLogsFlowLog extends TeaModel {
+        /**
+         * <p>The ID of the CEN instance.</p>
+         */
         @NameInMap("CenId")
         public String cenId;
 
+        /**
+         * <p>The time when the flow log was created.</p>
+         * <br>
+         * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The description of the flow log.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the flow log.</p>
+         */
         @NameInMap("FlowLogId")
         public String flowLogId;
 
+        /**
+         * <p>The name of the flow log.</p>
+         */
         @NameInMap("FlowLogName")
         public String flowLogName;
 
+        @NameInMap("Interval")
+        public Long interval;
+
+        /**
+         * <p>The name of the Logstore where the flow log is stored.</p>
+         */
         @NameInMap("LogStoreName")
         public String logStoreName;
 
+        /**
+         * <p>The name of the project where the flow log is stored.</p>
+         */
         @NameInMap("ProjectName")
         public String projectName;
 
+        /**
+         * <p>The ID of the region where the flow log is deployed.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The status of the flow log.</p>
+         * <br>
+         * <p>*   **Active**: The flow log is enabled.</p>
+         * <p>*   **Inactive**: The flow log is disabled.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The tags.</p>
+         */
         @NameInMap("Tags")
         public DescribeFlowlogsResponseBodyFlowLogsFlowLogTags tags;
+
+        @NameInMap("TransitRouterAttachmentId")
+        public String transitRouterAttachmentId;
 
         public static DescribeFlowlogsResponseBodyFlowLogsFlowLog build(java.util.Map<String, ?> map) throws Exception {
             DescribeFlowlogsResponseBodyFlowLogsFlowLog self = new DescribeFlowlogsResponseBodyFlowLogsFlowLog();
@@ -200,6 +268,14 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
             return this.flowLogName;
         }
 
+        public DescribeFlowlogsResponseBodyFlowLogsFlowLog setInterval(Long interval) {
+            this.interval = interval;
+            return this;
+        }
+        public Long getInterval() {
+            return this.interval;
+        }
+
         public DescribeFlowlogsResponseBodyFlowLogsFlowLog setLogStoreName(String logStoreName) {
             this.logStoreName = logStoreName;
             return this;
@@ -238,6 +314,14 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
         }
         public DescribeFlowlogsResponseBodyFlowLogsFlowLogTags getTags() {
             return this.tags;
+        }
+
+        public DescribeFlowlogsResponseBodyFlowLogsFlowLog setTransitRouterAttachmentId(String transitRouterAttachmentId) {
+            this.transitRouterAttachmentId = transitRouterAttachmentId;
+            return this;
+        }
+        public String getTransitRouterAttachmentId() {
+            return this.transitRouterAttachmentId;
         }
 
     }

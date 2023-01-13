@@ -4,9 +4,18 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class ListCenInterRegionTrafficQosPoliciesRequest extends TeaModel {
+    /**
+     * <p>The number of entries o return on each page. Valid values: **1** to **100**. Default value: **20**.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token that determines the start point of the query. Valid values:</p>
+     * <br>
+     * <p>- If this is your first query or no subsequent query is to be sent, ignore this parameter.</p>
+     * <p>- If a subsequent query is to be sent, set the value to the value of **NextToken** that was returned from the last call.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -22,18 +31,37 @@ public class ListCenInterRegionTrafficQosPoliciesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The description of the QoS policy. </p>
+     * <br>
+     * <p>The description must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The description must start with a letter.</p>
+     */
     @NameInMap("TrafficQosPolicyDescription")
     public String trafficQosPolicyDescription;
 
+    /**
+     * <p>The ID of the QoS policy.</p>
+     */
     @NameInMap("TrafficQosPolicyId")
     public String trafficQosPolicyId;
 
+    /**
+     * <p>The name of the QoS policy. </p>
+     * <br>
+     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). It must start with a letter.</p>
+     */
     @NameInMap("TrafficQosPolicyName")
     public String trafficQosPolicyName;
 
+    /**
+     * <p>The ID of the inter-region connection.</p>
+     */
     @NameInMap("TransitRouterAttachmentId")
     public String transitRouterAttachmentId;
 
+    /**
+     * <p>The ID of the transit router.</p>
+     */
     @NameInMap("TransitRouterId")
     public String transitRouterId;
 

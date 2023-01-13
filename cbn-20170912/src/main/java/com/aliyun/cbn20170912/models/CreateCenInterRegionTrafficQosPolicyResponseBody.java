@@ -4,9 +4,15 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class CreateCenInterRegionTrafficQosPolicyResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the QoS policy.</p>
+     */
     @NameInMap("TrafficQosPolicyId")
     public String trafficQosPolicyId;
 

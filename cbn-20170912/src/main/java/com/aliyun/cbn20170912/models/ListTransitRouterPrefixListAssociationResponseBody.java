@@ -4,18 +4,33 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class ListTransitRouterPrefixListAssociationResponseBody extends TeaModel {
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The information about the prefix list.</p>
+     */
     @NameInMap("PrefixLists")
     public java.util.List<ListTransitRouterPrefixListAssociationResponseBodyPrefixLists> prefixLists;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,27 +80,61 @@ public class ListTransitRouterPrefixListAssociationResponseBody extends TeaModel
     }
 
     public static class ListTransitRouterPrefixListAssociationResponseBodyPrefixLists extends TeaModel {
+        /**
+         * <p>The ID of the next hop.</p>
+         * <br>
+         * <p>>  If the value is **BlackHole**, all the CIDR blocks in the prefix list are blackhole routes. Packets destined for the CIDR blocks are dropped.</p>
+         */
         @NameInMap("NextHop")
         public String nextHop;
 
+        /**
+         * <p>The ID of the network instance associated with the next hop connection.</p>
+         */
         @NameInMap("NextHopInstanceId")
         public String nextHopInstanceId;
 
+        /**
+         * <p>The type of the next hop.</p>
+         * <br>
+         * <p>*   **BlackHole**: All the CIDR blocks in the prefix list are blackhole routes. Packets destined for the CIDR blocks are dropped.</p>
+         * <p>*   **VPC**: The next hop of the CIDR blocks in the prefix list is a VPC connection.</p>
+         * <p>*   **VBR**: The next hop of the CIDR blocks in the prefix list is a VBR connection.</p>
+         * <p>*   **TR**: The next hop of the CIDR blocks in the prefix list is an inter-region connection.</p>
+         */
         @NameInMap("NextHopType")
         public String nextHopType;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account to which the prefix list belongs.</p>
+         */
         @NameInMap("OwnerUid")
         public Long ownerUid;
 
+        /**
+         * <p>The ID of the prefix list.</p>
+         */
         @NameInMap("PrefixListId")
         public String prefixListId;
 
+        /**
+         * <p>The status of the prefix list. Valid values:</p>
+         * <br>
+         * <p>*   **Active**: The prefix list is effective.</p>
+         * <p>*   **Updating**: The prefix list is being updated.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The ID of the transit router.</p>
+         */
         @NameInMap("TransitRouterId")
         public String transitRouterId;
 
+        /**
+         * <p>The ID of the route table of the transit router.</p>
+         */
         @NameInMap("TransitRouterTableId")
         public String transitRouterTableId;
 

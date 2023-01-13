@@ -4,30 +4,75 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class ListTransitRouterCidrAllocationRequest extends TeaModel {
+    /**
+     * <p>The ID of the network instance connection.</p>
+     */
     @NameInMap("AttachmentId")
     public String attachmentId;
 
+    /**
+     * <p>The name of the network instance connection.</p>
+     */
     @NameInMap("AttachmentName")
     public String attachmentName;
 
+    /**
+     * <p>The CIDR block of the transit router.</p>
+     */
     @NameInMap("Cidr")
     public String cidr;
 
+    /**
+     * <p>The CIDR block that has been allocated to network instances.</p>
+     */
     @NameInMap("CidrBlock")
     public String cidrBlock;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.</p>
+     * <br>
+     * <p>>  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The CIDR block that is for exclusive use.</p>
+     * <br>
+     * <p>Set the value to **VPN**, which specifies the CIDR block that is reserved for VPN connections.</p>
+     */
     @NameInMap("DedicatedOwnerId")
     public String dedicatedOwnerId;
 
+    /**
+     * <p>Specifies whether only to precheck the request. Valid values:</p>
+     * <br>
+     * <p>*   **true**: prechecks the request but does not query how IP addresses within the CIDR block of a transit router are allocated. The system checks the required parameters, the request format, and the service limits. If the request fails to pass the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.</p>
+     * <p>*   **false** (default): sends the request. After the request passes the precheck, allocated IP addresses are queried.</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    /**
+     * <p>The number of entries returned on each page.</p>
+     * <br>
+     * <p>*   If you do not set **MaxResults**, it indicates that you do not need to query results in batches. The value of **MaxResults** indicates the total number of entries.</p>
+     * <br>
+     * <p>*   If a value is specified for **MaxResults**, it indicates that you need to query results in batches. Valid values: **1** to **100**. We recommend that you set **MaxResults** to **20**.</p>
+     * <br>
+     * <p>    The value of **MaxResults** in the response indicates the number of entries in the current batch.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token that determines the start point of the query. Valid values:</p>
+     * <br>
+     * <p>*   If this is your first query or no subsequent query is to be sent, ignore this parameter.</p>
+     * <p>*   If a subsequent query is to be sent, set the value to the value of **NextToken** that was returned from the last call.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -37,6 +82,11 @@ public class ListTransitRouterCidrAllocationRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the transit router is deployed.</p>
+     * <br>
+     * <p>You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -46,9 +96,17 @@ public class ListTransitRouterCidrAllocationRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the CIDR block.</p>
+     * <br>
+     * <p>You can call [ListTransitRouterCidr](~~462772~~) to query the ID of a CIDR block.</p>
+     */
     @NameInMap("TransitRouterCidrId")
     public String transitRouterCidrId;
 
+    /**
+     * <p>The ID of the transit router.</p>
+     */
     @NameInMap("TransitRouterId")
     public String transitRouterId;
 

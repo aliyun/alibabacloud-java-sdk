@@ -4,18 +4,36 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class ListTransitRouterMulticastDomainAssociationsResponseBody extends TeaModel {
+    /**
+     * <p>The number of entries returned on each page.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token that determines the start point of the query. Valid values:</p>
+     * <br>
+     * <p>- If **NextToken** was not returned in the previous query, it indicates that no additional results exist.</p>
+     * <p>- If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>The information about the resource associated with the multicast domain.</p>
+     */
     @NameInMap("TransitRouterMulticastAssociations")
     public java.util.List<ListTransitRouterMulticastDomainAssociationsResponseBodyTransitRouterMulticastAssociations> transitRouterMulticastAssociations;
 
@@ -65,24 +83,51 @@ public class ListTransitRouterMulticastDomainAssociationsResponseBody extends Te
     }
 
     public static class ListTransitRouterMulticastDomainAssociationsResponseBodyTransitRouterMulticastAssociations extends TeaModel {
+        /**
+         * <p>The ID of the resource associated with the multicast domain.</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account to which the resource associated with the multicast domain belongs.</p>
+         */
         @NameInMap("ResourceOwnerId")
         public Long resourceOwnerId;
 
+        /**
+         * <p>The type of resource associated with the multicast domain.</p>
+         * <br>
+         * <p>Valid value: **VPC**.</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
+        /**
+         * <p>The status of the associated resource. Valid values: </p>
+         * <br>
+         * <p>- **Associated**: The resource is associated with the multicast domain.</p>
+         * <p>- **Associating**: The resource is being associated with the multicast domain.</p>
+         * <p>- **Dissociating**: The resource is being disassociated from the multicast domain.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The ID of the network instance connection.</p>
+         */
         @NameInMap("TransitRouterAttachmentId")
         public String transitRouterAttachmentId;
 
+        /**
+         * <p>The ID of the multicast domain.</p>
+         */
         @NameInMap("TransitRouterMulticastDomainId")
         public String transitRouterMulticastDomainId;
 
+        /**
+         * <p>The IDs of the vSwitches.</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 

@@ -4,18 +4,36 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token that determines the start point of the query. </p>
+     * <br>
+     * <p>- If **NextToken** was not returned in the previous query, it indicates that no additional results exist.</p>
+     * <p>- If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>A list of QoS policies.</p>
+     */
     @NameInMap("TrafficQosPolicies")
     public java.util.List<ListCenInterRegionTrafficQosPoliciesResponseBodyTrafficQosPolicies> trafficQosPolicies;
 
@@ -65,18 +83,33 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
     }
 
     public static class ListCenInterRegionTrafficQosPoliciesResponseBodyTrafficQosPoliciesTrafficQosQueues extends TeaModel {
+        /**
+         * <p>The differentiated services code point (DSCP) value used to match packets in the queue.</p>
+         */
         @NameInMap("Dscps")
         public java.util.List<Integer> dscps;
 
+        /**
+         * <p>The description of the queue.</p>
+         */
         @NameInMap("QosQueueDescription")
         public String qosQueueDescription;
 
+        /**
+         * <p>The ID of the queue.</p>
+         */
         @NameInMap("QosQueueId")
         public String qosQueueId;
 
+        /**
+         * <p>The name of the queue.</p>
+         */
         @NameInMap("QosQueueName")
         public String qosQueueName;
 
+        /**
+         * <p>The percentage of the inter-region bandwidth that can be used by the queue.</p>
+         */
         @NameInMap("RemainBandwidthPercent")
         public Integer remainBandwidthPercent;
 
@@ -128,24 +161,51 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
     }
 
     public static class ListCenInterRegionTrafficQosPoliciesResponseBodyTrafficQosPolicies extends TeaModel {
+        /**
+         * <p>The description of the QoS policy.</p>
+         */
         @NameInMap("TrafficQosPolicyDescription")
         public String trafficQosPolicyDescription;
 
+        /**
+         * <p>The ID of the QoS policy.</p>
+         */
         @NameInMap("TrafficQosPolicyId")
         public String trafficQosPolicyId;
 
+        /**
+         * <p>The name of the QoS policy.</p>
+         */
         @NameInMap("TrafficQosPolicyName")
         public String trafficQosPolicyName;
 
+        /**
+         * <p>The status of the QoS policy. </p>
+         * <br>
+         * <p>- **Creating**: The QoS policy is being created.</p>
+         * <p>- **Active**: The QoS policy is available.</p>
+         * <p>- **Modifying**: The QoS policy is being modified</p>
+         * <p>- **Deleting**: The QoS policy is being deleted.</p>
+         * <p>- **Deleted**: The QoS policy is deleted.</p>
+         */
         @NameInMap("TrafficQosPolicyStatus")
         public String trafficQosPolicyStatus;
 
+        /**
+         * <p>A list of queues.</p>
+         */
         @NameInMap("TrafficQosQueues")
         public java.util.List<ListCenInterRegionTrafficQosPoliciesResponseBodyTrafficQosPoliciesTrafficQosQueues> trafficQosQueues;
 
+        /**
+         * <p>The ID of the network instance connection.</p>
+         */
         @NameInMap("TransitRouterAttachmentId")
         public String transitRouterAttachmentId;
 
+        /**
+         * <p>The ID of the transit router.</p>
+         */
         @NameInMap("TransitRouterId")
         public String transitRouterId;
 

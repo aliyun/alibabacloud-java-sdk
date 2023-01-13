@@ -4,18 +4,36 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DescribeGrantRulesToCenResponseBody extends TeaModel {
+    /**
+     * <p>The permissions that are granted to the CEN instance.</p>
+     */
     @NameInMap("GrantRules")
     public DescribeGrantRulesToCenResponseBodyGrantRules grantRules;
 
+    /**
+     * <p>The number of entries returned on each page.</p>
+     */
     @NameInMap("MaxResults")
     public Long maxResults;
 
+    /**
+     * <p>The token that determines the start point of the query. Valid values:</p>
+     * <br>
+     * <p>- If **NextToken** was not returned, it indicates that no additional results exist.</p>
+     * <p>- If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -65,24 +83,53 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
     }
 
     public static class DescribeGrantRulesToCenResponseBodyGrantRulesGrantRule extends TeaModel {
+        /**
+         * <p>The ID of the CEN instance.</p>
+         */
         @NameInMap("CenId")
         public String cenId;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account to which the CEN instance belongs.</p>
+         */
         @NameInMap("CenOwnerId")
         public Long cenOwnerId;
 
+        /**
+         * <p>The ID of the network instance.</p>
+         */
         @NameInMap("ChildInstanceId")
         public String childInstanceId;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account to which the network instance belongs.</p>
+         */
         @NameInMap("ChildInstanceOwnerId")
         public Long childInstanceOwnerId;
 
+        /**
+         * <p>The ID of the region where the network instance is deployed.</p>
+         */
         @NameInMap("ChildInstanceRegionId")
         public String childInstanceRegionId;
 
+        /**
+         * <p>The type of the network instance. Valid values:</p>
+         * <br>
+         * <p>*   **VPC**: VPC</p>
+         * <p>*   **VBR**: VBR</p>
+         * <p>*   **CCN**: CCN instance</p>
+         * <p>*   **VPN**: IPsec-VPN connection</p>
+         */
         @NameInMap("ChildInstanceType")
         public String childInstanceType;
 
+        /**
+         * <p>The entity that pays the fees of the network instance. Valid values:</p>
+         * <br>
+         * <p>*   **PayByCenOwner**: the Alibaba Cloud account that owns the CEN instance.</p>
+         * <p>*   **PayByResourceOwner**: the Alibaba Cloud account that owns the network instance.</p>
+         */
         @NameInMap("OrderType")
         public String orderType;
 

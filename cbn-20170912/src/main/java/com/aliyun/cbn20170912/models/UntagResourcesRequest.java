@@ -4,6 +4,14 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to remove all tags. Valid values:</p>
+     * <br>
+     * <p>*   **true**: yes</p>
+     * <p>*   **false** (default): no</p>
+     * <br>
+     * <p>>  This parameter takes effect only when the **TagKey.N** parameter is not specified.</p>
+     */
     @NameInMap("All")
     public Boolean all;
 
@@ -13,9 +21,15 @@ public class UntagResourcesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the resource.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The IDs of the resources. You can specify at most 50 resource IDs.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
@@ -25,9 +39,17 @@ public class UntagResourcesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The type of the resource. Set the value to **cen**.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The keys of the tags. You can specify at most 20 tag keys.</p>
+     * <br>
+     * <p>If multiple tag keys are specified, the logical relation among these tag keys is **AND**.</p>
+     */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;
 

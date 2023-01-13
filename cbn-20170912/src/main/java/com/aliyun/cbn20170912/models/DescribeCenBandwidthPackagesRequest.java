@@ -4,12 +4,27 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DescribeCenBandwidthPackagesRequest extends TeaModel {
+    /**
+     * <p>The filter conditions.</p>
+     */
     @NameInMap("Filter")
     public java.util.List<DescribeCenBandwidthPackagesRequestFilter> filter;
 
+    /**
+     * <p>Specifies whether to include renewal data. Valid values:</p>
+     * <br>
+     * <p>*   **true**: yes</p>
+     * <p>*   **false**: no</p>
+     */
     @NameInMap("IncludeReservationData")
     public Boolean includeReservationData;
 
+    /**
+     * <p>The logical operator between the filter conditions. Valid values:</p>
+     * <br>
+     * <p>*   **false** (default): **AND** Bandwidth plans that meet all filter conditions are returned.</p>
+     * <p>*   **true**: **OR** Bandwidth plans that meet one of the filter conditions are returned.</p>
+     */
     @NameInMap("IsOrKey")
     public Boolean isOrKey;
 
@@ -19,9 +34,15 @@ public class DescribeCenBandwidthPackagesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Maximum value: **50**. Default value: **10**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -109,9 +130,30 @@ public class DescribeCenBandwidthPackagesRequest extends TeaModel {
     }
 
     public static class DescribeCenBandwidthPackagesRequestFilter extends TeaModel {
+        /**
+         * <p>The filter condition.</p>
+         * <br>
+         * <p>You can use filter conditions to filter the bandwidth plans that you want to query. The following filter conditions are supported:</p>
+         * <br>
+         * <p>*   **CenId**: CEN instance ID</p>
+         * <br>
+         * <p>*   **Status**: bandwidth plan status. Valid values:</p>
+         * <br>
+         * <p>    *   **Idle**: not associated with a CEN instance.</p>
+         * <p>    *   **InUse**: associated with a CEN instance.</p>
+         * <br>
+         * <p>*   **CenBandwidthPackageId**: bandwidth plan ID</p>
+         * <br>
+         * <p>*   **Name**: bandwidth plan name</p>
+         * <br>
+         * <p>    You can specify one or more filter conditions. The maximum value of **N** is **5**.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The values of condition.</p>
+         */
         @NameInMap("Value")
         public java.util.List<String> value;
 

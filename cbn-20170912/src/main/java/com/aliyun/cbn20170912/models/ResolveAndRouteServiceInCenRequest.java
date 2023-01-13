@@ -4,24 +4,55 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class ResolveAndRouteServiceInCenRequest extends TeaModel {
+    /**
+     * <p>The IDs of the regions in which the network instance of the cloud service that you want to access is deployed.</p>
+     * <br>
+     * <p>You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("AccessRegionIds")
     public java.util.List<String> accessRegionIds;
 
+    /**
+     * <p>The ID of the CEN instance.</p>
+     */
     @NameInMap("CenId")
     public String cenId;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.</p>
+     * <br>
+     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The description of the cloud service.</p>
+     * <br>
+     * <p>The description can be empty or 2 to 256 characters in length. It must start with a letter, and can contain digits, hyphens (-), periods (.), and underscores (\_). It cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The IP addresses or CIDR blocks of the cloud service.</p>
+     * <br>
+     * <p>>  In most cases, multiple IP addresses or CIDR blocks are attached to the cloud service. We recommend that you call this operation multiple times to add all IP addresses and CIDR blocks of the cloud service.</p>
+     */
     @NameInMap("Host")
     public String host;
 
+    /**
+     * <p>The ID of the region in which the cloud service is deployed.</p>
+     */
     @NameInMap("HostRegionId")
     public String hostRegionId;
 
+    /**
+     * <p>The ID of the VPC that is associated with the cloud service.</p>
+     */
     @NameInMap("HostVpcId")
     public String hostVpcId;
 

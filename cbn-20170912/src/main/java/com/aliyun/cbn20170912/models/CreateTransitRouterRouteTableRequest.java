@@ -4,9 +4,22 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class CreateTransitRouterRouteTableRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.</p>
+     * <br>
+     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>Specifies whether to precheck the request. Check items include permissions and the status of the specified cloud resources. Valid values:</p>
+     * <br>
+     * <p>*   **false** (default): sends the request. If the request passes the precheck, the custom route table is created.</p>
+     * <p>*   **true**: prechecks the request but does not create the custom route table. If you use this value, the system checks the required parameters and the request syntax. If the request fails to pass the precheck, an error message is returned. If the request passes the check, the system returns the ID of the request.</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
@@ -22,15 +35,34 @@ public class CreateTransitRouterRouteTableRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("RouteTableOptions")
+    public CreateTransitRouterRouteTableRequestRouteTableOptions routeTableOptions;
+
+    /**
+     * <p>The tags of the resources.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateTransitRouterRouteTableRequestTag> tag;
 
+    /**
+     * <p>The ID of the Enterprise Edition transit router.</p>
+     */
     @NameInMap("TransitRouterId")
     public String transitRouterId;
 
+    /**
+     * <p>The description of the custom route table.</p>
+     * <br>
+     * <p>The description must be 2 to 256 characters in length, and can contain letters, digits, and the following special characters: , . ; / @ \_ -. You can also leave the description empty.</p>
+     */
     @NameInMap("TransitRouterRouteTableDescription")
     public String transitRouterRouteTableDescription;
 
+    /**
+     * <p>The name of the custom route table.</p>
+     * <br>
+     * <p>The name must be 1 to 128 characters in length, and can contain letters, digits, and the following special characters: , . ; / @ \_ -. You can also leave the name empty.</p>
+     */
     @NameInMap("TransitRouterRouteTableName")
     public String transitRouterRouteTableName;
 
@@ -87,6 +119,14 @@ public class CreateTransitRouterRouteTableRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
+    public CreateTransitRouterRouteTableRequest setRouteTableOptions(CreateTransitRouterRouteTableRequestRouteTableOptions routeTableOptions) {
+        this.routeTableOptions = routeTableOptions;
+        return this;
+    }
+    public CreateTransitRouterRouteTableRequestRouteTableOptions getRouteTableOptions() {
+        return this.routeTableOptions;
+    }
+
     public CreateTransitRouterRouteTableRequest setTag(java.util.List<CreateTransitRouterRouteTableRequestTag> tag) {
         this.tag = tag;
         return this;
@@ -119,10 +159,43 @@ public class CreateTransitRouterRouteTableRequest extends TeaModel {
         return this.transitRouterRouteTableName;
     }
 
+    public static class CreateTransitRouterRouteTableRequestRouteTableOptions extends TeaModel {
+        @NameInMap("MultiRegionECMP")
+        public String multiRegionECMP;
+
+        public static CreateTransitRouterRouteTableRequestRouteTableOptions build(java.util.Map<String, ?> map) throws Exception {
+            CreateTransitRouterRouteTableRequestRouteTableOptions self = new CreateTransitRouterRouteTableRequestRouteTableOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateTransitRouterRouteTableRequestRouteTableOptions setMultiRegionECMP(String multiRegionECMP) {
+            this.multiRegionECMP = multiRegionECMP;
+            return this;
+        }
+        public String getMultiRegionECMP() {
+            return this.multiRegionECMP;
+        }
+
+    }
+
     public static class CreateTransitRouterRouteTableRequestTag extends TeaModel {
+        /**
+         * <p>The tag keys of the resources. </p>
+         * <br>
+         * <p>The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.  </p>
+         * <br>
+         * <p>You can specify at most 20 tag keys.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag values of the resources. </p>
+         * <br>
+         * <p>The tag values can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.  </p>
+         * <br>
+         * <p>Each tag key has a unique tag value. You can specify at most 20 tag values in each call.</p>
+         */
         @NameInMap("Value")
         public String value;
 

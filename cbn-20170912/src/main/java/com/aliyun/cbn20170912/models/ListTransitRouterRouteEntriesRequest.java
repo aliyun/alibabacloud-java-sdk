@@ -4,9 +4,18 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class ListTransitRouterRouteEntriesRequest extends TeaModel {
+    /**
+     * <p>The number of entries to return on each page. Valid values: **1** to **100**. Default value: **20**.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token that determines the start point of the query. Valid values:</p>
+     * <br>
+     * <p>- If this is your first query or no subsequent query is to be sent, ignore this parameter.</p>
+     * <p>- If a subsequent query is to be sent, set the value to the value of **NextToken** that was returned from the last call.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -22,18 +31,47 @@ public class ListTransitRouterRouteEntriesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The destination CIDR block of the route.</p>
+     */
     @NameInMap("TransitRouterRouteEntryDestinationCidrBlock")
     public String transitRouterRouteEntryDestinationCidrBlock;
 
+    /**
+     * <p>The IDs of the route entries.</p>
+     * <br>
+     * <p>You can query at most 20 route entries in each call.</p>
+     * <br>
+     * <p>>  You can call this operation to query only static routes.</p>
+     */
     @NameInMap("TransitRouterRouteEntryIds")
     public java.util.List<String> transitRouterRouteEntryIds;
 
+    /**
+     * <p>The names of the routes.</p>
+     * <br>
+     * <p>The name must be 1 to 128 characters in length, and can contain letters, digits, and the following special characters: `, . ; / @ \_ -`. You can also leave the name empty.</p>
+     * <br>
+     * <p>You can query multiple route entries in each call. Maximum value of **N**: **20**.</p>
+     * <br>
+     * <p>>  You can call this operation to query only static routes.</p>
+     */
     @NameInMap("TransitRouterRouteEntryNames")
     public java.util.List<String> transitRouterRouteEntryNames;
 
+    /**
+     * <p>The status of the route. Valid values: Valid values:</p>
+     * <br>
+     * <p>- **Creating**: The route is being created.</p>
+     * <p>- **Active**: The rule is available.</p>
+     * <p>- **Deleting**: The rule is being deleted.</p>
+     */
     @NameInMap("TransitRouterRouteEntryStatus")
     public String transitRouterRouteEntryStatus;
 
+    /**
+     * <p>The ID of the route table of the Enterprise Edition transit router.</p>
+     */
     @NameInMap("TransitRouterRouteTableId")
     public String transitRouterRouteTableId;
 

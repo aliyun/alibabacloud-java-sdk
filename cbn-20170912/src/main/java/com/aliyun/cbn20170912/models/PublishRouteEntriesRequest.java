@@ -4,21 +4,39 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class PublishRouteEntriesRequest extends TeaModel {
+    /**
+     * <p>The ID of the CEN instance.</p>
+     */
     @NameInMap("CenId")
     public String cenId;
 
+    /**
+     * <p>The ID of the associated network (VPC or VBR).</p>
+     */
     @NameInMap("ChildInstanceId")
     public String childInstanceId;
 
+    /**
+     * <p>The ID of the region to which the associated VBR or VPC belongs.</p>
+     */
     @NameInMap("ChildInstanceRegionId")
     public String childInstanceRegionId;
 
+    /**
+     * <p>The route table ID of the associated VBR or VPC.</p>
+     */
     @NameInMap("ChildInstanceRouteTableId")
     public String childInstanceRouteTableId;
 
+    /**
+     * <p>The type of the associated network. Valid values: **VPC | VBR**</p>
+     */
     @NameInMap("ChildInstanceType")
     public String childInstanceType;
 
+    /**
+     * <p>The destination CIDR block of the route entry to publish.</p>
+     */
     @NameInMap("DestinationCidrBlock")
     public String destinationCidrBlock;
 

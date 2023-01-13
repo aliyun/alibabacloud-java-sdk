@@ -4,15 +4,33 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DescribeCenChildInstanceRouteEntriesRequest extends TeaModel {
+    /**
+     * <p>The ID of the CEN instance.</p>
+     */
     @NameInMap("CenId")
     public String cenId;
 
+    /**
+     * <p>The ID of the network instance.</p>
+     */
     @NameInMap("ChildInstanceId")
     public String childInstanceId;
 
+    /**
+     * <p>The ID of the region where the network instance is deployed.</p>
+     * <br>
+     * <p>You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("ChildInstanceRegionId")
     public String childInstanceRegionId;
 
+    /**
+     * <p>The type of the network instance. Valid values:</p>
+     * <br>
+     * <p>*   **VPC**</p>
+     * <p>*   **VBR**</p>
+     * <p>*   **CCN**</p>
+     */
     @NameInMap("ChildInstanceType")
     public String childInstanceType;
 
@@ -22,9 +40,15 @@ public class DescribeCenChildInstanceRouteEntriesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Default value: **10**. Valid values: **1** to **50**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -34,6 +58,15 @@ public class DescribeCenChildInstanceRouteEntriesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The status of the routes that you want to query. Valid values:</p>
+     * <br>
+     * <p>*   **Active**: active routes</p>
+     * <p>*   **Candidate**: standby routes</p>
+     * <p>*   **Rejected**: rejected routes</p>
+     * <p>*   **Prohibited**: prohibited routes</p>
+     * <p>*   **All** (default value): all routes</p>
+     */
     @NameInMap("Status")
     public String status;
 

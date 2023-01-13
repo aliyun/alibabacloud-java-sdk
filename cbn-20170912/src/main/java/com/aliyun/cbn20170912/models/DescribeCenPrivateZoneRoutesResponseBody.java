@@ -4,24 +4,45 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the CEN instance.</p>
+     */
     @NameInMap("CenId")
     public String cenId;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The IP address of the DNS server used by PrivateZone.</p>
+     */
     @NameInMap("PrivateZoneDnsServers")
     public String privateZoneDnsServers;
 
+    /**
+     * <p>The detailed configuration of PrivateZone.</p>
+     */
     @NameInMap("PrivateZoneInfos")
     public DescribeCenPrivateZoneRoutesResponseBodyPrivateZoneInfos privateZoneInfos;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -87,15 +108,31 @@ public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
     }
 
     public static class DescribeCenPrivateZoneRoutesResponseBodyPrivateZoneInfosPrivateZoneInfo extends TeaModel {
+        /**
+         * <p>The ID of the region where PrivateZone is accessed.</p>
+         */
         @NameInMap("AccessRegionId")
         public String accessRegionId;
 
+        /**
+         * <p>The ID of the region where PrivateZone is deployed.</p>
+         */
         @NameInMap("HostRegionId")
         public String hostRegionId;
 
+        /**
+         * <p>The ID of the virtual private cloud (VPC) that is associated with PrivateZone.</p>
+         */
         @NameInMap("HostVpcId")
         public String hostVpcId;
 
+        /**
+         * <p>The status of PrivateZone. Valid values:</p>
+         * <br>
+         * <p>*   **Creating**</p>
+         * <p>*   **Active**</p>
+         * <p>*   **Deleting**</p>
+         */
         @NameInMap("Status")
         public String status;
 

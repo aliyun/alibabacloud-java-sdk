@@ -4,18 +4,37 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DescribeRouteServicesInCenRequest extends TeaModel {
+    /**
+     * <p>The ID of the region where the cloud service is accessed.</p>
+     */
     @NameInMap("AccessRegionId")
     public String accessRegionId;
 
+    /**
+     * <p>The ID of the CEN instance.</p>
+     */
     @NameInMap("CenId")
     public String cenId;
 
+    /**
+     * <p>The service address of the cloud service.</p>
+     * <br>
+     * <p>You can enter a domain name, an IP address, or a CIDR block.</p>
+     */
     @NameInMap("Host")
     public String host;
 
+    /**
+     * <p>The ID of the region where the cloud service is deployed.</p>
+     * <br>
+     * <p>You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("HostRegionId")
     public String hostRegionId;
 
+    /**
+     * <p>The ID of the virtual private cloud (VPC) that is associated with the cloud service.</p>
+     */
     @NameInMap("HostVpcId")
     public String hostVpcId;
 
@@ -25,9 +44,15 @@ public class DescribeRouteServicesInCenRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return per page. Default value: **10**. Valid values: **1** to **50**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

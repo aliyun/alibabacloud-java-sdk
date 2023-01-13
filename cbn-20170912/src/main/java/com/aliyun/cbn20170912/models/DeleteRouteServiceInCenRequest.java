@@ -4,18 +4,35 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DeleteRouteServiceInCenRequest extends TeaModel {
+    /**
+     * <p>The ID of the region in which the network instance of the cloud service that you want to access is deployed.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("AccessRegionId")
     public String accessRegionId;
 
+    /**
+     * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+     */
     @NameInMap("CenId")
     public String cenId;
 
+    /**
+     * <p>The IP addresses or CIDR blocks of the cloud service.</p>
+     */
     @NameInMap("Host")
     public String host;
 
+    /**
+     * <p>The ID of the region in which the cloud service is deployed.</p>
+     */
     @NameInMap("HostRegionId")
     public String hostRegionId;
 
+    /**
+     * <p>The ID of the virtual private cloud (VPC) that is associated with the cloud service.</p>
+     */
     @NameInMap("HostVpcId")
     public String hostVpcId;
 

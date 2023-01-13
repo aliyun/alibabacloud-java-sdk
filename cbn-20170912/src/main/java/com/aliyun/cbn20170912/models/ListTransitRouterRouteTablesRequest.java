@@ -4,9 +4,18 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class ListTransitRouterRouteTablesRequest extends TeaModel {
+    /**
+     * <p>The number of entries to return on each page. Valid values: **1** to **100**. Default value: **20**.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token that determines the start point of the query. Valid values:</p>
+     * <br>
+     * <p>*   If this is your first query or no subsequent query is to be sent, ignore this parameter.</p>
+     * <p>*   If a next query is to be sent, set the value to the value of **NextToken** that is returned from the last call.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -22,21 +31,57 @@ public class ListTransitRouterRouteTablesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("RouteTableOptions")
+    public ListTransitRouterRouteTablesRequestRouteTableOptions routeTableOptions;
+
+    /**
+     * <p>The tags.</p>
+     * <br>
+     * <p>You can specify at most 20 tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ListTransitRouterRouteTablesRequestTag> tag;
 
+    /**
+     * <p>The ID of the Enterprise Edition transit router.</p>
+     */
     @NameInMap("TransitRouterId")
     public String transitRouterId;
 
+    /**
+     * <p>The IDs of the route tables.</p>
+     * <br>
+     * <p>You can query at most 20 route tables in each call.</p>
+     */
     @NameInMap("TransitRouterRouteTableIds")
     public java.util.List<String> transitRouterRouteTableIds;
 
+    /**
+     * <p>The names of the route tables.</p>
+     * <br>
+     * <p>You can query multiple route tables in each call. Maximum value of **N**: **20**.</p>
+     * <br>
+     * <p>>  If you specify set both **TransitRouterRouteTableNames.N** and **TransitRouterRouteTableIds.N**, make sure that the specified name and ID belong to the same route table.</p>
+     */
     @NameInMap("TransitRouterRouteTableNames")
     public java.util.List<String> transitRouterRouteTableNames;
 
+    /**
+     * <p>The status of the route table. Valid values:</p>
+     * <br>
+     * <p>*   **Creating**: being created</p>
+     * <p>*   **Deleting**: being deleted</p>
+     * <p>*   **Active**: available</p>
+     */
     @NameInMap("TransitRouterRouteTableStatus")
     public String transitRouterRouteTableStatus;
 
+    /**
+     * <p>The type of the route table. Valid values:</p>
+     * <br>
+     * <p>*   **Custom**: a custom route table</p>
+     * <p>*   **System**: the default route table</p>
+     */
     @NameInMap("TransitRouterRouteTableType")
     public String transitRouterRouteTableType;
 
@@ -93,6 +138,14 @@ public class ListTransitRouterRouteTablesRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
+    public ListTransitRouterRouteTablesRequest setRouteTableOptions(ListTransitRouterRouteTablesRequestRouteTableOptions routeTableOptions) {
+        this.routeTableOptions = routeTableOptions;
+        return this;
+    }
+    public ListTransitRouterRouteTablesRequestRouteTableOptions getRouteTableOptions() {
+        return this.routeTableOptions;
+    }
+
     public ListTransitRouterRouteTablesRequest setTag(java.util.List<ListTransitRouterRouteTablesRequestTag> tag) {
         this.tag = tag;
         return this;
@@ -141,10 +194,43 @@ public class ListTransitRouterRouteTablesRequest extends TeaModel {
         return this.transitRouterRouteTableType;
     }
 
+    public static class ListTransitRouterRouteTablesRequestRouteTableOptions extends TeaModel {
+        @NameInMap("MultiRegionECMP")
+        public String multiRegionECMP;
+
+        public static ListTransitRouterRouteTablesRequestRouteTableOptions build(java.util.Map<String, ?> map) throws Exception {
+            ListTransitRouterRouteTablesRequestRouteTableOptions self = new ListTransitRouterRouteTablesRequestRouteTableOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public ListTransitRouterRouteTablesRequestRouteTableOptions setMultiRegionECMP(String multiRegionECMP) {
+            this.multiRegionECMP = multiRegionECMP;
+            return this;
+        }
+        public String getMultiRegionECMP() {
+            return this.multiRegionECMP;
+        }
+
+    }
+
     public static class ListTransitRouterRouteTablesRequestTag extends TeaModel {
+        /**
+         * <p>The tag keys of the resources. </p>
+         * <br>
+         * <p>The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.  </p>
+         * <br>
+         * <p>You can specify at most 20 tag keys.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag values of the resources.</p>
+         * <br>
+         * <p>The tag values can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
+         * <br>
+         * <p>Each tag key has a unique tag value. You can specify at most 20 tag values in each call.</p>
+         */
         @NameInMap("Value")
         public String value;
 

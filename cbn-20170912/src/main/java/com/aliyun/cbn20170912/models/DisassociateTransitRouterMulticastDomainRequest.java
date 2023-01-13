@@ -4,9 +4,20 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DisassociateTransitRouterMulticastDomainRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>Specifies whether only to check the request. Valid values:</p>
+     * <br>
+     * <p>*   **true**: prechecks the request but does not disassociate the vSwitch from the multicast domain. The system checks the required parameters, the request format, and the service limits. If the request fails to pass the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.</p>
+     * <p>*   **false** (default): sends the request. The vSwitch is disassociated from the multicast domain after the request passes the precheck.</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
@@ -22,12 +33,25 @@ public class DisassociateTransitRouterMulticastDomainRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the virtual private cloud (VPC) connection.</p>
+     * <br>
+     * <p>A connection ID is generated after a VPC to which the vSwitch belongs is connected to a transit router.</p>
+     */
     @NameInMap("TransitRouterAttachmentId")
     public String transitRouterAttachmentId;
 
+    /**
+     * <p>The ID of the multicast domain.</p>
+     */
     @NameInMap("TransitRouterMulticastDomainId")
     public String transitRouterMulticastDomainId;
 
+    /**
+     * <p>The IDs of the vSwitches.</p>
+     * <br>
+     * <p>You can specify at most five vSwitch IDs in each call.</p>
+     */
     @NameInMap("VSwitchIds")
     public java.util.List<String> vSwitchIds;
 

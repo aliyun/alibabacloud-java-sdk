@@ -4,12 +4,33 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DescribeCenGeographicSpanRemainingBandwidthRequest extends TeaModel {
+    /**
+     * <p>The ID of the Cloud Enterprise Network (CEN) instance to which the bandwidth plan is associated.</p>
+     */
     @NameInMap("CenId")
     public String cenId;
 
+    /**
+     * <p>The ID of one of the connected areas of the bandwidth plan. Valid values:</p>
+     * <br>
+     * <p>*   **China**: the Chinese mainland</p>
+     * <p>*   **North-America**: North America</p>
+     * <p>*   **Asia-Pacific**: Asia Pacific</p>
+     * <p>*   **Europe**: Europe</p>
+     * <p>*   **Australia**: Australia</p>
+     */
     @NameInMap("GeographicRegionAId")
     public String geographicRegionAId;
 
+    /**
+     * <p>The ID of the other connected area of the bandwidth plan. Valid values:</p>
+     * <br>
+     * <p>*   **China**: the Chinese mainland</p>
+     * <p>*   **North-America**: North America</p>
+     * <p>*   **Asia-Pacific**: Asia Pacific</p>
+     * <p>*   **Europe**: Europe</p>
+     * <p>*   **Australia**: Australia</p>
+     */
     @NameInMap("GeographicRegionBId")
     public String geographicRegionBId;
 
@@ -19,9 +40,15 @@ public class DescribeCenGeographicSpanRemainingBandwidthRequest extends TeaModel
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return per page. Default value: **10**. Valid values: **1** to **50**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

@@ -4,24 +4,70 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class ListTransitRouterMulticastGroupsRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The IP address of the multicast group.</p>
+     * <br>
+     * <p>Each multicast group is identified by its IP address.</p>
+     */
     @NameInMap("GroupIpAddress")
     public String groupIpAddress;
 
+    /**
+     * <p>Whether to query multicast members.</p>
+     * <br>
+     * <p>- **false**: No.</p>
+     * <p>- **true**: Yes.</p>
+     * <br>
+     * <p>> Used in conjunction with IsGroupMember.</p>
+     * <p>> - If neither is configured, the multicast source and members will be queried by default.</p>
+     * <p>> - If only one or both are configured, the configuration parameters shall prevail.</p>
+     */
     @NameInMap("IsGroupMember")
     public Boolean isGroupMember;
 
+    /**
+     * <p>Whether to query the multicast source.</p>
+     * <br>
+     * <p>- **false**: No.</p>
+     * <p>- **true**: Yes.</p>
+     * <br>
+     * <p>> Used in conjunction with IsGroupMember.</p>
+     * <p>> - If neither is configured, the multicast source and members will be queried by default.</p>
+     * <p>> - If only one or both are configured, the configuration parameters shall prevail.</p>
+     */
     @NameInMap("IsGroupSource")
     public Boolean isGroupSource;
 
+    /**
+     * <p>The number of entries to return on each page. Default value: **20**.</p>
+     */
     @NameInMap("MaxResults")
     public Long maxResults;
 
+    /**
+     * <p>The IDs of the ENIs.</p>
+     * <br>
+     * <p>You can create only one multicast source in a multicast group.</p>
+     * <br>
+     * <p>>  This parameter is required.</p>
+     */
     @NameInMap("NetworkInterfaceIds")
     public java.util.List<String> networkInterfaceIds;
 
+    /**
+     * <p>The token that is used for the next query. Valid values:</p>
+     * <br>
+     * <p>*   If this is your first query or no next query is to be sent, ignore this parameter.</p>
+     * <p>*   If a next query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -31,9 +77,17 @@ public class ListTransitRouterMulticastGroupsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The IDs of the inter-region multicast domains.</p>
+     * <br>
+     * <p>You can specify at most 20 inter-region multicast domain IDs.</p>
+     */
     @NameInMap("PeerTransitRouterMulticastDomains")
     public java.util.List<String> peerTransitRouterMulticastDomains;
 
+    /**
+     * <p>The ID of the resource associated with the multicast resource.</p>
+     */
     @NameInMap("ResourceId")
     public String resourceId;
 
@@ -43,15 +97,32 @@ public class ListTransitRouterMulticastGroupsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The type of the multicast resource. Valid values:</p>
+     * <br>
+     * <p>*   **VPC**: queries multicast resources by VPC.</p>
+     * <p>*   **TR**: queries multicast resources that are also deployed in a different region.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The ID of the network instance connection.</p>
+     */
     @NameInMap("TransitRouterAttachmentId")
     public String transitRouterAttachmentId;
 
+    /**
+     * <p>The ID of the multicast domain.</p>
+     */
     @NameInMap("TransitRouterMulticastDomainId")
     public String transitRouterMulticastDomainId;
 
+    /**
+     * <p>The IDs of the vSwitches.</p>
+     * <br>
+     * <p>You can specify at most 20 IDs.</p>
+     */
     @NameInMap("VSwitchIds")
     public java.util.List<String> vSwitchIds;
 

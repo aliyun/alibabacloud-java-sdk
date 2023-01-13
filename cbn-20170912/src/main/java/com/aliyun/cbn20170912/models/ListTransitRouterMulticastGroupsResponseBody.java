@@ -4,18 +4,36 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class ListTransitRouterMulticastGroupsResponseBody extends TeaModel {
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token that is used for the next query. Valid values:</p>
+     * <br>
+     * <p>*   If the value returned of **NextToken** is empty, it indicates that no next query is to be sent.</p>
+     * <p>*   If **NextToken** is not empty, the value indicates the token that is used for the next query.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>The information about the multicast group.</p>
+     */
     @NameInMap("TransitRouterMulticastGroups")
     public java.util.List<ListTransitRouterMulticastGroupsResponseBodyTransitRouterMulticastGroups> transitRouterMulticastGroups;
 
@@ -65,45 +83,104 @@ public class ListTransitRouterMulticastGroupsResponseBody extends TeaModel {
     }
 
     public static class ListTransitRouterMulticastGroupsResponseBodyTransitRouterMulticastGroups extends TeaModel {
+        /**
+         * <p>The IP address of the multicast group to which the multicast resource belongs.</p>
+         */
         @NameInMap("GroupIpAddress")
         public String groupIpAddress;
 
+        /**
+         * <p>Indicates whether the multicast resource is a multicast member. Valid values:</p>
+         * <br>
+         * <p>*   **true**: yes</p>
+         * <p>*   **false**: no</p>
+         */
         @NameInMap("GroupMember")
         public Boolean groupMember;
 
+        /**
+         * <p>Indicates whether the multicast resource is a multicast source. Valid values:</p>
+         * <br>
+         * <p>*   **true**: yes</p>
+         * <p>*   **false**: no</p>
+         */
         @NameInMap("GroupSource")
         public Boolean groupSource;
 
+        /**
+         * <p>The type of the multicast source.</p>
+         * <br>
+         * <p>If the value is **Static**, the multicast source is manually specified.</p>
+         */
         @NameInMap("MemberType")
         public String memberType;
 
+        /**
+         * <p>The ID of the ENI, which is a multicast resource.</p>
+         */
         @NameInMap("NetworkInterfaceId")
         public String networkInterfaceId;
 
+        /**
+         * <p>The ID of the multicast domain associated with the multicast resource that is deployed across regions.</p>
+         */
         @NameInMap("PeerTransitRouterMulticastDomainId")
         public String peerTransitRouterMulticastDomainId;
 
+        /**
+         * <p>The ID of the resource associated with the multicast resource.</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account to which the multicast resource belongs.</p>
+         */
         @NameInMap("ResourceOwnerId")
         public Long resourceOwnerId;
 
+        /**
+         * <p>The type of the multicast resource. Valid values:</p>
+         * <br>
+         * <p>*   **VPC**: The multicast resource is in a VPC.</p>
+         * <p>*   **TR**: The multicast resource is deployed across regions.</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
+        /**
+         * <p>The type of the multicast member.</p>
+         * <br>
+         * <p>If the value is **Static**, the multicast member is manually specified.</p>
+         */
         @NameInMap("SourceType")
         public String sourceType;
 
+        /**
+         * <p>The status of the multicast resource. Valid values:</p>
+         * <br>
+         * <p>*   **Registering**: being created</p>
+         * <p>*   **Registered**: available</p>
+         * <p>*   **Deregistering**: being deleted</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The ID of the network instance connection.</p>
+         */
         @NameInMap("TransitRouterAttachmentId")
         public String transitRouterAttachmentId;
 
+        /**
+         * <p>The ID of the multicast domain.</p>
+         */
         @NameInMap("TransitRouterMulticastDomainId")
         public String transitRouterMulticastDomainId;
 
+        /**
+         * <p>The ID of the vSwitch to which the multicast resource belongs.</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 

@@ -10,6 +10,13 @@ public class DescribeChildInstanceRegionsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The network instance type. Valid values:</p>
+     * <br>
+     * <p>*   **VPC**: virtual private cloud (VPC)</p>
+     * <p>*   **VBR**: virtual border router (VBR)</p>
+     * <p>*   **CCN**: Cloud Connect Network (CCN) instance</p>
+     */
     @NameInMap("ProductType")
     public String productType;
 
