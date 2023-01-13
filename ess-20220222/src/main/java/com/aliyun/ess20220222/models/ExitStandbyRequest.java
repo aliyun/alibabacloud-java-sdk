@@ -4,24 +4,41 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class ExitStandbyRequest extends TeaModel {
+    /**
+     * <p>The region ID of the scaling group.</p>
+     */
     @NameInMap("Async")
     public Boolean async;
 
+    /**
+     * <p>The IDs of the ECS instances. The value of this parameter can be a JSON array that consists of up to 20 instance IDs. Separate multiple instance IDs with commas (,).</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The IDs of the ECS instances. The value of this parameter can be a JSON array that consists of up to 20 instance IDs. Separate multiple instance IDs with commas (,).</p>
+     */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests.</p>
+     * <br>
+     * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25965~~).</p>
+     */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;
 

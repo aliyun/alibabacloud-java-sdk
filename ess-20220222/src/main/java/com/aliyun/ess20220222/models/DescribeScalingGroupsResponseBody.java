@@ -4,18 +4,33 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class DescribeScalingGroupsResponseBody extends TeaModel {
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Information about the scaling groups.</p>
+     */
     @NameInMap("ScalingGroups")
     public java.util.List<DescribeScalingGroupsResponseBodyScalingGroups> scalingGroups;
 
+    /**
+     * <p>The total number of scaling groups.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,12 +80,21 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeScalingGroupsResponseBodyScalingGroupsAlbServerGroups extends TeaModel {
+        /**
+         * <p>The ID of the ALB server group.</p>
+         */
         @NameInMap("AlbServerGroupId")
         public String albServerGroupId;
 
+        /**
+         * <p>The port number used by the ECS instance after the instance is added to the ALB server group.</p>
+         */
         @NameInMap("Port")
         public Integer port;
 
+        /**
+         * <p>The weight of the ECS instance as a backend server after the instance is added to the ALB server group.</p>
+         */
         @NameInMap("Weight")
         public Integer weight;
 
@@ -106,9 +130,18 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeScalingGroupsResponseBodyScalingGroupsLaunchTemplateOverrides extends TeaModel {
+        /**
+         * <p>The instance type. The instance type that is specified by using the InstanceType parameter overwrites the instance type specified in the launch template.</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
+        @NameInMap("SpotPriceLimit")
+        public Float spotPriceLimit;
+
+        /**
+         * <p>The weight of the instance type. The value of this parameter indicates the capacity of a single instance of this instance type in the scaling group. A higher weight specifies that a smaller number of instances of the specified instance type are required to meet the expected capacity.</p>
+         */
         @NameInMap("WeightedCapacity")
         public Integer weightedCapacity;
 
@@ -125,6 +158,14 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
             return this.instanceType;
         }
 
+        public DescribeScalingGroupsResponseBodyScalingGroupsLaunchTemplateOverrides setSpotPriceLimit(Float spotPriceLimit) {
+            this.spotPriceLimit = spotPriceLimit;
+            return this;
+        }
+        public Float getSpotPriceLimit() {
+            return this.spotPriceLimit;
+        }
+
         public DescribeScalingGroupsResponseBodyScalingGroupsLaunchTemplateOverrides setWeightedCapacity(Integer weightedCapacity) {
             this.weightedCapacity = weightedCapacity;
             return this;
@@ -136,12 +177,21 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeScalingGroupsResponseBodyScalingGroupsVServerGroupsVServerGroupAttributes extends TeaModel {
+        /**
+         * <p>The port number used by the CLB instance to provide external services.</p>
+         */
         @NameInMap("Port")
         public Integer port;
 
+        /**
+         * <p>The ID of the vServer group.</p>
+         */
         @NameInMap("VServerGroupId")
         public String VServerGroupId;
 
+        /**
+         * <p>The weight of the vServer group.</p>
+         */
         @NameInMap("Weight")
         public Integer weight;
 
@@ -177,9 +227,15 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeScalingGroupsResponseBodyScalingGroupsVServerGroups extends TeaModel {
+        /**
+         * <p>The ID of the CLB instance to which the vServer group belongs.</p>
+         */
         @NameInMap("LoadBalancerId")
         public String loadBalancerId;
 
+        /**
+         * <p>Details of the vServer group attributes.</p>
+         */
         @NameInMap("VServerGroupAttributes")
         public java.util.List<DescribeScalingGroupsResponseBodyScalingGroupsVServerGroupsVServerGroupAttributes> VServerGroupAttributes;
 
@@ -207,159 +263,377 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeScalingGroupsResponseBodyScalingGroups extends TeaModel {
+        /**
+         * <p>The number of ECS instances that are added to the scaling group and provide services as expected.</p>
+         */
         @NameInMap("ActiveCapacity")
         public Integer activeCapacity;
 
+        /**
+         * <p>The ID of the active scaling configuration in the scaling group.</p>
+         */
         @NameInMap("ActiveScalingConfigurationId")
         public String activeScalingConfigurationId;
 
+        /**
+         * <p>Details of the ALB server groups.</p>
+         */
         @NameInMap("AlbServerGroups")
         public java.util.List<DescribeScalingGroupsResponseBodyScalingGroupsAlbServerGroups> albServerGroups;
 
+        /**
+         * <p>The allocation policy. Auto Scaling selects instance types based on the allocation policy to create the required number of instances. The policy can be applied to pay-as-you-go instances and preemptible instances at the same time. This parameter takes effect only when `MultiAZPolicy` parameter is set to `COMPOSABLE`. Valid values:</p>
+         * <br>
+         * <p>*   priority: Auto Scaling selects instance types based on the specified order to create the required number of instances.</p>
+         * <p>*   lowestPrice: Auto Scaling selects instance types that have the lowest unit price of vCPUs to create the required number of instances.</p>
+         */
         @NameInMap("AllocationStrategy")
         public String allocationStrategy;
 
+        /**
+         * <p>Indicates whether instances in the scaling group are evenly distributed across zones. This parameter takes effect only when `MultiAZPolicy` is set to `COMPOSABLE`. Valid values:</p>
+         * <br>
+         * <p>*   true: Instances in the scaling group are evenly distributed across zones.</p>
+         * <p>*   false: Instances in the scaling group are unevenly distributed across zones.</p>
+         */
         @NameInMap("AzBalance")
         public Boolean azBalance;
 
+        /**
+         * <p>Indicates whether pay-as-you-go instances are automatically created to meet the requirements on the number of ECS instances when the expected capacity of preemptible instances cannot be provided due to reasons such as costs and insufficient resources. This parameter takes effect only when MultiAZPolicy is set to COST_OPTIMIZED. Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
+         */
         @NameInMap("CompensateWithOnDemand")
         public Boolean compensateWithOnDemand;
 
+        /**
+         * <p>The time when the scaling group was created.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>> This parameter is unavailable.</p>
+         */
         @NameInMap("CurrentHostName")
         public String currentHostName;
 
+        /**
+         * <p>The ARN of the custom scaling policy (Function). This parameter takes effect only if you specify CustomPolicy as the first step of the instance removal policy.</p>
+         */
         @NameInMap("CustomPolicyARN")
         public String customPolicyARN;
 
+        /**
+         * <p>The IDs of the ApsaraDB RDS instances that are associated with the scaling group.</p>
+         */
         @NameInMap("DBInstanceIds")
         public java.util.List<String> DBInstanceIds;
 
+        /**
+         * <p>The default cooldown time of the scaling group. During the default cooldown time, Auto Scaling executes only the scaling activities that are triggered by event-triggered tasks associated with [CloudMonitor](~~35170~~).</p>
+         */
         @NameInMap("DefaultCooldown")
         public Integer defaultCooldown;
 
+        /**
+         * <p>The expected number of ECS instances in the scaling group. Auto Scaling automatically maintains the expected number of ECS instances that you specified.</p>
+         */
         @NameInMap("DesiredCapacity")
         public Integer desiredCapacity;
 
+        /**
+         * <p>Indicates whether deletion protection is enabled for the scaling group. Valid values:</p>
+         * <br>
+         * <p>*   true: Deletion protection is enabled for the scaling group. The scaling group cannot be deleted.</p>
+         * <p>*   false: Deletion protection is disabled for the scaling group.</p>
+         */
         @NameInMap("GroupDeletionProtection")
         public Boolean groupDeletionProtection;
 
+        /**
+         * <p>The type of instances that are managed by the scaling group.</p>
+         */
         @NameInMap("GroupType")
         public String groupType;
 
+        /**
+         * <p>The health check mode of the scaling group. Valid values:</p>
+         * <br>
+         * <p>*   NONE: Auto Scaling does not perform health checks on instances in the scaling group.</p>
+         * <p>*   ECS: Auto Scaling performs health checks on ECS instances in the scaling group.</p>
+         */
         @NameInMap("HealthCheckType")
         public String healthCheckType;
 
+        @NameInMap("InitCapacity")
+        public Integer initCapacity;
+
+        /**
+         * <p>> This parameter is unavailable.</p>
+         */
         @NameInMap("IsElasticStrengthInAlarm")
         public Boolean isElasticStrengthInAlarm;
 
+        /**
+         * <p>The ID of the launch template used by the scaling group.</p>
+         */
         @NameInMap("LaunchTemplateId")
         public String launchTemplateId;
 
+        /**
+         * <p>Details of the instance types that are specified in the extended configurations of the launch template.</p>
+         */
         @NameInMap("LaunchTemplateOverrides")
         public java.util.List<DescribeScalingGroupsResponseBodyScalingGroupsLaunchTemplateOverrides> launchTemplateOverrides;
 
+        /**
+         * <p>The version of the launch template used by the scaling group.</p>
+         */
         @NameInMap("LaunchTemplateVersion")
         public String launchTemplateVersion;
 
+        /**
+         * <p>The status of the scaling group. Valid values:</p>
+         * <br>
+         * <p>*   Active: The scaling group is active. Active scaling groups can receive requests to execute scaling rules and trigger scaling activities.</p>
+         * <p>*   Inactive: The scaling group is inactive. Inactive scaling groups cannot receive requests to execute scaling rules.</p>
+         * <p>*   Deleting: The scaling group is being deleted. Scaling groups that are being deleted cannot receive requests to execute scaling rules, and the parameter settings of the scaling groups cannot be modified.</p>
+         */
         @NameInMap("LifecycleState")
         public String lifecycleState;
 
+        /**
+         * <p>The IDs of the CLB instances that are associated with the scaling group.</p>
+         */
         @NameInMap("LoadBalancerIds")
         public java.util.List<String> loadBalancerIds;
 
+        /**
+         * <p>The maximum life span of the instance in the scaling group. Unit: seconds.</p>
+         * <br>
+         * <p>Valid values: 86400 to Integer.maxValue. You can also set this parameter to 0.`` A value of 0 indicates that the instance has unlimited life span in the scaling group.</p>
+         * <br>
+         * <p>Default value: null.</p>
+         * <br>
+         * <p>> You cannot specify this parameter for scaling groups that manage elastic container instances or scaling groups whose ScalingPolicy is set to recycle.</p>
+         */
         @NameInMap("MaxInstanceLifetime")
         public Integer maxInstanceLifetime;
 
+        /**
+         * <p>The maximum number of ECS instances in the scaling group.</p>
+         */
         @NameInMap("MaxSize")
         public Integer maxSize;
 
+        /**
+         * <p>The minimum number of ECS instances in the scaling group.</p>
+         */
         @NameInMap("MinSize")
         public Integer minSize;
 
+        /**
+         * <p>The time when the scaling group was modified.</p>
+         */
         @NameInMap("ModificationTime")
         public String modificationTime;
 
+        /**
+         * <p>The ID of the CloudMonitor application group that is associated with the scaling group.</p>
+         */
         @NameInMap("MonitorGroupId")
         public String monitorGroupId;
 
+        /**
+         * <p>The scaling policy for the multi-zone scaling group that contains ECS instances. Valid values:</p>
+         * <br>
+         * <p>*   PRIORITY: ECS instances are created based on the VSwitchIds.N parameter. If Auto Scaling fails to create ECS instances in the zone where the vSwitch that has the highest priority resides, Auto Scaling creates ECS instances in the zone where the vSwitch that has the next highest priority resides.</p>
+         * <br>
+         * <p>*   COST_OPTIMIZED: ECS instances are created based on the unit price of their vCPUs. Auto Scaling preferentially creates ECS instances that have vCPUs provided at the lowest price. Auto Scaling preferentially creates preemptible instances when preemptible instance types are specified in the scaling configuration. You can use the CompensateWithOnDemand parameter to specify whether to automatically create pay-as-you-go instances when preemptible instances cannot be created due to insufficient resources.</p>
+         * <br>
+         * <p>    **</p>
+         * <br>
+         * <p>    **Note**The COST_OPTIMIZED setting takes effect only when multiple instance types are specified or at least one instance type is specified for preemptible instances.</p>
+         * <br>
+         * <p>*   BALANCE: ECS instances are evenly distributed across zones that are specified in the scaling group. If ECS instances are unevenly distributed across the specified zones due to insufficient resources, you can call the RebalanceInstance operation to evenly distribute the instances across the zones.</p>
+         */
         @NameInMap("MultiAZPolicy")
         public String multiAZPolicy;
 
+        /**
+         * <p>The minimum number of pay-as-you-go instances that must be included in the scaling group. Valid values: 0 to 1000. If the number of pay-as-you-go instances is less than the value of this parameter, Auto Scaling preferentially creates pay-as-you-go instances.</p>
+         */
         @NameInMap("OnDemandBaseCapacity")
         public Integer onDemandBaseCapacity;
 
+        /**
+         * <p>The expected percentage of pay-as-you-go instances in the excess instances when the minimum number of pay-as-you-go instances reaches the requirement. Valid values: 0 to 100.</p>
+         */
         @NameInMap("OnDemandPercentageAboveBaseCapacity")
         public Integer onDemandPercentageAboveBaseCapacity;
 
+        /**
+         * <p>The number of ECS instances that are being added to the scaling group and still being configured.</p>
+         */
         @NameInMap("PendingCapacity")
         public Integer pendingCapacity;
 
+        /**
+         * <p>The number of ECS instances that are in the Pending Add state in the scaling group.</p>
+         */
         @NameInMap("PendingWaitCapacity")
         public Integer pendingWaitCapacity;
 
+        /**
+         * <p>The number of ECS instances that are in the Protected state in the scaling group.</p>
+         */
         @NameInMap("ProtectedCapacity")
         public Integer protectedCapacity;
 
+        /**
+         * <p>The region ID of the scaling group.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>Details of the policies used to remove ECS instances from the scaling group. Valid values:</p>
+         * <br>
+         * <p>*   OldestInstance: Auto Scaling removes ECS instances that are added to the scaling group at the earliest point in time.</p>
+         * <p>*   NewestInstance: Auto Scaling removes ECS instances that are most recently added to the scaling group.</p>
+         * <p>*   OldestScalingConfiguration: Auto Scaling removes ECS instances that are created based on the earliest scaling configuration.</p>
+         */
         @NameInMap("RemovalPolicies")
         public java.util.List<String> removalPolicies;
 
+        /**
+         * <p>The number of ECS instances that are being removed from the scaling group.</p>
+         */
         @NameInMap("RemovingCapacity")
         public Integer removingCapacity;
 
+        /**
+         * <p>The number of ECS instances that are in the Pending Remove state in the scaling group.</p>
+         */
         @NameInMap("RemovingWaitCapacity")
         public Integer removingWaitCapacity;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        /**
+         * <p>The ID of the scaling group.</p>
+         */
         @NameInMap("ScalingGroupId")
         public String scalingGroupId;
 
+        /**
+         * <p>The name of the scaling group.</p>
+         */
         @NameInMap("ScalingGroupName")
         public String scalingGroupName;
 
+        /**
+         * <p>The reclaim mode of the scaling group. Valid values:</p>
+         * <br>
+         * <p>*   recycle: economical mode.</p>
+         * <p>*   release: release mode.</p>
+         */
         @NameInMap("ScalingPolicy")
         public String scalingPolicy;
 
+        /**
+         * <p>The allocation policy of preemptible instances. You can use this parameter to individually specify the allocation policy of preemptible instances. This parameter takes effect only when `MultiAZPolicy` is set to `COMPOSABLE`. Valid values:</p>
+         * <br>
+         * <p>*   priority: Auto Scaling selects instance types based on the specified order to create the required number of preemptible instances.</p>
+         * <p>*   lowestPrice: Auto Scaling selects instance types that have the lowest unit price of vCPUs to create the required number of preemptible instances.</p>
+         * <br>
+         * <p>Default value: priority.</p>
+         */
         @NameInMap("SpotAllocationStrategy")
         public String spotAllocationStrategy;
 
+        /**
+         * <p>The number of instance types that you specified. Auto Scaling creates preemptible instances of multiple instance types that are provided at the lowest price. Valid values: 0 to 10.</p>
+         */
         @NameInMap("SpotInstancePools")
         public Integer spotInstancePools;
 
+        /**
+         * <p>Indicates whether preemptible instances can be supplemented. If this parameter is set to true, Auto Scaling creates an instance to replace a preemptible instance when Auto Scaling receives the system message that the preemptible instance is to be reclaimed.</p>
+         */
         @NameInMap("SpotInstanceRemedy")
         public Boolean spotInstanceRemedy;
 
+        /**
+         * <p>The number of instances that are in the Standby state in the scaling group.</p>
+         */
         @NameInMap("StandbyCapacity")
         public Integer standbyCapacity;
 
+        /**
+         * <p>The number of instances that are in economical mode in the scaling group.</p>
+         */
         @NameInMap("StoppedCapacity")
         public Integer stoppedCapacity;
 
+        /**
+         * <p>The process that is suspended. If no process is suspended, null is returned. Valid values:</p>
+         * <br>
+         * <p>*   ScaleIn</p>
+         * <p>*   ScaleOut</p>
+         * <p>*   HealthCheck</p>
+         * <p>*   AlarmNotification</p>
+         * <p>*   ScheduledAction</p>
+         */
         @NameInMap("SuspendedProcesses")
         public java.util.List<String> suspendedProcesses;
 
+        /**
+         * <p>Indicates whether Auto Scaling stops executing scaling activities in the scaling group. Valid values:</p>
+         * <br>
+         * <p>*   true: Auto Scaling stops executing scaling activities in the scaling group if the scaling activities failed for more than seven consecutive days. You must modify the scaling group or scaling configuration to resume the execution of scaling activities.</p>
+         * <p>*   false: Auto Scaling does not stop executing scaling activities in the scaling group.</p>
+         */
         @NameInMap("SystemSuspended")
         public Boolean systemSuspended;
 
+        /**
+         * <p>The total weighted capacity of all ECS instances in the scaling group if the WeightedCapacity parameter is specified. In other cases, this parameter specifies the total number of ECS instances in the scaling group.</p>
+         */
         @NameInMap("TotalCapacity")
         public Integer totalCapacity;
 
+        /**
+         * <p>The total number of ECS instances in the scaling group.</p>
+         */
         @NameInMap("TotalInstanceCount")
         public Integer totalInstanceCount;
 
+        /**
+         * <p>The vServer groups.</p>
+         */
         @NameInMap("VServerGroups")
         public java.util.List<DescribeScalingGroupsResponseBodyScalingGroupsVServerGroups> VServerGroups;
 
+        /**
+         * <p>The ID of the vSwitch that is associated with the scaling group.</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <p>The IDs of the vSwitches that are associated with the scaling group. If you specify the VSwitchIds parameter, the VSwitchId parameter is ignored.</p>
+         */
         @NameInMap("VSwitchIds")
         public java.util.List<String> vSwitchIds;
 
+        /**
+         * <p>The ID of the virtual private cloud (VPC) in which the scaling group resides.</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
@@ -486,6 +760,14 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
         }
         public String getHealthCheckType() {
             return this.healthCheckType;
+        }
+
+        public DescribeScalingGroupsResponseBodyScalingGroups setInitCapacity(Integer initCapacity) {
+            this.initCapacity = initCapacity;
+            return this;
+        }
+        public Integer getInitCapacity() {
+            return this.initCapacity;
         }
 
         public DescribeScalingGroupsResponseBodyScalingGroups setIsElasticStrengthInAlarm(Boolean isElasticStrengthInAlarm) {
@@ -654,6 +936,14 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
         }
         public Integer getRemovingWaitCapacity() {
             return this.removingWaitCapacity;
+        }
+
+        public DescribeScalingGroupsResponseBodyScalingGroups setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public DescribeScalingGroupsResponseBodyScalingGroups setScalingGroupId(String scalingGroupId) {

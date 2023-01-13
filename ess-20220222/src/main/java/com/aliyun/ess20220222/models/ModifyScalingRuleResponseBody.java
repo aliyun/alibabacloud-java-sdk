@@ -4,6 +4,9 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class ModifyScalingRuleResponseBody extends TeaModel {
+    /**
+     * <p>4454</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

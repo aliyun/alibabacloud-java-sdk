@@ -3,19 +3,16 @@ package com.aliyun.ess20220222.models;
 
 import com.aliyun.tea.*;
 
-public class ResumeProcessesResponseBody extends TeaModel {
-    /**
-     * <p>auditing</p>
-     */
+public class ChangeResourceGroupResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static ResumeProcessesResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        ResumeProcessesResponseBody self = new ResumeProcessesResponseBody();
+    public static ChangeResourceGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ChangeResourceGroupResponseBody self = new ChangeResourceGroupResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ResumeProcessesResponseBody setRequestId(String requestId) {
+    public ChangeResourceGroupResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

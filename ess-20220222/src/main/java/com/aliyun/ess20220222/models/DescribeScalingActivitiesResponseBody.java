@@ -4,18 +4,33 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class DescribeScalingActivitiesResponseBody extends TeaModel {
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Details of the scaling activities.</p>
+     */
     @NameInMap("ScalingActivities")
     public java.util.List<DescribeScalingActivitiesResponseBodyScalingActivities> scalingActivities;
 
+    /**
+     * <p>The total number of scaling activities.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,42 +80,122 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
     }
 
     public static class DescribeScalingActivitiesResponseBodyScalingActivities extends TeaModel {
+        /**
+         * <p>The total number of instances that were manually added to the scaling group after the scaling activity was complete.</p>
+         */
         @NameInMap("AttachedCapacity")
         public String attachedCapacity;
 
+        /**
+         * <p>The total number of instances that were created by Auto Scaling after the scaling activity was complete.</p>
+         */
         @NameInMap("AutoCreatedCapacity")
         public String autoCreatedCapacity;
 
+        /**
+         * <p>The cause that triggered the scaling activity.</p>
+         */
         @NameInMap("Cause")
         public String cause;
 
+        @NameInMap("CreatedCapacity")
+        public Integer createdCapacity;
+
+        @NameInMap("CreatedInstances")
+        public java.util.List<String> createdInstances;
+
+        /**
+         * <p>The description of the scaling activity.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("DestroyedCapacity")
+        public Integer destroyedCapacity;
+
+        @NameInMap("DestroyedInstances")
+        public java.util.List<String> destroyedInstances;
+
+        @NameInMap("Detail")
+        public String detail;
+
+        /**
+         * <p>The time when the scaling activity was complete.</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        @NameInMap("ErrorCode")
+        public String errorCode;
+
+        @NameInMap("ErrorMessage")
+        public String errorMessage;
+
+        /**
+         * <p>The execution progress of the scaling activity.</p>
+         */
         @NameInMap("Progress")
         public Integer progress;
 
+        /**
+         * <p>The ID of the scaling activity.</p>
+         */
         @NameInMap("ScalingActivityId")
         public String scalingActivityId;
 
+        /**
+         * <p>The ID of the scaling group.</p>
+         */
         @NameInMap("ScalingGroupId")
         public String scalingGroupId;
 
+        /**
+         * <p>The number of instances that were created or restarted from the economical mode during the scale-out activity.</p>
+         * <br>
+         * <p>The number of instances that were deleted or put into the economical mode during the scale-in activity.</p>
+         */
         @NameInMap("ScalingInstanceNumber")
         public Integer scalingInstanceNumber;
 
+        /**
+         * <p>The time when the scaling activity started.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        @NameInMap("StartedCapacity")
+        public Integer startedCapacity;
+
+        @NameInMap("StartedInstances")
+        public java.util.List<String> startedInstances;
+
+        /**
+         * <p>The status of the scaling activity. Valid values:</p>
+         * <br>
+         * <p>*   Successful: The scaling activity is successful.</p>
+         * <p>*   Warning: The scaling activity is partially successful.</p>
+         * <p>*   Failed: The scaling activity failed.</p>
+         * <p>*   InProgress: The scaling activity is in progress.</p>
+         * <p>*   Rejected: The request to trigger the scaling activity is rejected.</p>
+         */
         @NameInMap("StatusCode")
         public String statusCode;
 
+        /**
+         * <p>The status message of the scaling activity.</p>
+         */
         @NameInMap("StatusMessage")
         public String statusMessage;
 
+        @NameInMap("StoppedCapacity")
+        public Integer stoppedCapacity;
+
+        @NameInMap("StoppedInstances")
+        public java.util.List<String> stoppedInstances;
+
+        /**
+         * <p>The total number of instances in the scaling group after the scaling activity was complete.</p>
+         */
         @NameInMap("TotalCapacity")
         public String totalCapacity;
 
@@ -133,6 +228,22 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             return this.cause;
         }
 
+        public DescribeScalingActivitiesResponseBodyScalingActivities setCreatedCapacity(Integer createdCapacity) {
+            this.createdCapacity = createdCapacity;
+            return this;
+        }
+        public Integer getCreatedCapacity() {
+            return this.createdCapacity;
+        }
+
+        public DescribeScalingActivitiesResponseBodyScalingActivities setCreatedInstances(java.util.List<String> createdInstances) {
+            this.createdInstances = createdInstances;
+            return this;
+        }
+        public java.util.List<String> getCreatedInstances() {
+            return this.createdInstances;
+        }
+
         public DescribeScalingActivitiesResponseBodyScalingActivities setDescription(String description) {
             this.description = description;
             return this;
@@ -141,12 +252,52 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             return this.description;
         }
 
+        public DescribeScalingActivitiesResponseBodyScalingActivities setDestroyedCapacity(Integer destroyedCapacity) {
+            this.destroyedCapacity = destroyedCapacity;
+            return this;
+        }
+        public Integer getDestroyedCapacity() {
+            return this.destroyedCapacity;
+        }
+
+        public DescribeScalingActivitiesResponseBodyScalingActivities setDestroyedInstances(java.util.List<String> destroyedInstances) {
+            this.destroyedInstances = destroyedInstances;
+            return this;
+        }
+        public java.util.List<String> getDestroyedInstances() {
+            return this.destroyedInstances;
+        }
+
+        public DescribeScalingActivitiesResponseBodyScalingActivities setDetail(String detail) {
+            this.detail = detail;
+            return this;
+        }
+        public String getDetail() {
+            return this.detail;
+        }
+
         public DescribeScalingActivitiesResponseBodyScalingActivities setEndTime(String endTime) {
             this.endTime = endTime;
             return this;
         }
         public String getEndTime() {
             return this.endTime;
+        }
+
+        public DescribeScalingActivitiesResponseBodyScalingActivities setErrorCode(String errorCode) {
+            this.errorCode = errorCode;
+            return this;
+        }
+        public String getErrorCode() {
+            return this.errorCode;
+        }
+
+        public DescribeScalingActivitiesResponseBodyScalingActivities setErrorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
+        public String getErrorMessage() {
+            return this.errorMessage;
         }
 
         public DescribeScalingActivitiesResponseBodyScalingActivities setProgress(Integer progress) {
@@ -189,6 +340,22 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             return this.startTime;
         }
 
+        public DescribeScalingActivitiesResponseBodyScalingActivities setStartedCapacity(Integer startedCapacity) {
+            this.startedCapacity = startedCapacity;
+            return this;
+        }
+        public Integer getStartedCapacity() {
+            return this.startedCapacity;
+        }
+
+        public DescribeScalingActivitiesResponseBodyScalingActivities setStartedInstances(java.util.List<String> startedInstances) {
+            this.startedInstances = startedInstances;
+            return this;
+        }
+        public java.util.List<String> getStartedInstances() {
+            return this.startedInstances;
+        }
+
         public DescribeScalingActivitiesResponseBodyScalingActivities setStatusCode(String statusCode) {
             this.statusCode = statusCode;
             return this;
@@ -203,6 +370,22 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
         }
         public String getStatusMessage() {
             return this.statusMessage;
+        }
+
+        public DescribeScalingActivitiesResponseBodyScalingActivities setStoppedCapacity(Integer stoppedCapacity) {
+            this.stoppedCapacity = stoppedCapacity;
+            return this;
+        }
+        public Integer getStoppedCapacity() {
+            return this.stoppedCapacity;
+        }
+
+        public DescribeScalingActivitiesResponseBodyScalingActivities setStoppedInstances(java.util.List<String> stoppedInstances) {
+            this.stoppedInstances = stoppedInstances;
+            return this;
+        }
+        public java.util.List<String> getStoppedInstances() {
+            return this.stoppedInstances;
         }
 
         public DescribeScalingActivitiesResponseBodyScalingActivities setTotalCapacity(String totalCapacity) {

@@ -4,15 +4,39 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class CompleteLifecycleActionRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests.</p>
+     * <br>
+     * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25965~~).</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The action that you want Auto Scaling to perform after the lifecycle hook ends. Valid values:</p>
+     * <br>
+     * <p>*   CONTINUE: Auto Scaling continues to add Elastic Compute Service (ECS) instances to the scaling group, or continues to remove ECS instances from the scaling group.</p>
+     * <p>*   ABANDON: Auto Scaling stops adding ECS instances to the scaling group and releases the ECS instances, or continues to respond to scale-in requests and remove ECS instances from the scaling group.</p>
+     * <br>
+     * <p>Default value: CONTINUE.</p>
+     * <br>
+     * <p>If multiple lifecycle hooks exist in a scaling group and are triggered at the same time, the following rules apply:</p>
+     * <br>
+     * <p>*   If you set the LifecycleActionResult parameter to ABANDON for the lifecycle hook that is applied to a scale-in activity, Auto Scaling immediately removes ECS instances from the scaling group after the lifecycle hook ends, without the need to wait for the last lifecycle hook to end.</p>
+     * <p>*   If you set the LifecycleActionResult parameter to CONTINUE for the lifecycle hook that is applied to a scale-in or scale-out activity, Auto Scaling performs the next action until the last lifecycle hook in the scaling group ends. The action that Auto Scaling performs varies based on the value that you specify for the LifecycleActionResult parameter of the last lifecycle hook.</p>
+     */
     @NameInMap("LifecycleActionResult")
     public String lifecycleActionResult;
 
+    /**
+     * <p>The token of the lifecycle hook. You can obtain this token by using a Message Service (MNS) queue or an MNS topic that is specified for the lifecycle hook.</p>
+     */
     @NameInMap("LifecycleActionToken")
     public String lifecycleActionToken;
 
+    /**
+     * <p>The ID of the lifecycle hook.</p>
+     */
     @NameInMap("LifecycleHookId")
     public String lifecycleHookId;
 
@@ -22,6 +46,9 @@ public class CompleteLifecycleActionRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the scaling group.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
