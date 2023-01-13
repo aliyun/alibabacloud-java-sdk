@@ -4,22 +4,30 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class AddLogicTableRouteConfigRequest extends TeaModel {
-    // The routing algorithm expression. For more information about how to configure a routing algorithm expression, see [Configure a routing algorithm](https://www.alibabacloud.com/help/en/data-management-service/latest/configure-a-routing-algorithm).
+    /**
+     * <p>The routing algorithm expression. For more information about how to configure a routing algorithm expression, see [Configure a routing algorithm](https://www.alibabacloud.com/help/en/data-management-service/latest/configure-a-routing-algorithm).</p>
+     */
     @NameInMap("RouteExpr")
     public String routeExpr;
 
-    // The unique key of the routing algorithm. 
-    // 
-    // > - You can create a custom unique key for the routing algorithm. No requirements are imposed on custom unique keys.
-    // - The unique key of the routing algorithm in the same logical table must be unique.
+    /**
+     * <p>The unique key of the routing algorithm. </p>
+     * <br>
+     * <p>> - You can create a custom unique key for the routing algorithm. No requirements are imposed on custom unique keys.</p>
+     * <p>> - The unique key of the routing algorithm in the same logical table must be unique.</p>
+     */
     @NameInMap("RouteKey")
     public String routeKey;
 
-    // The ID of the logical table. You can call the [ListLogicTables](https://www.alibabacloud.com/help/en/data-management-service/latest/listlogictables) operation to query the ID of the logical table.
+    /**
+     * <p>The ID of the logical table. You can call the [ListLogicTables](https://www.alibabacloud.com/help/en/data-management-service/latest/listlogictables) operation to query the ID of the logical table.</p>
+     */
     @NameInMap("TableId")
     public Long tableId;
 
-    // The ID of the tenant. You can call the [GetUserActiveTenant](https://www.alibabacloud.com/help/en/data-management-service/latest/getuseractivetenant) operation to query the tenant ID.
+    /**
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](https://www.alibabacloud.com/help/en/data-management-service/latest/getuseractivetenant) operation to query the tenant ID.</p>
+     */
     @NameInMap("Tid")
     public Long tid;
 

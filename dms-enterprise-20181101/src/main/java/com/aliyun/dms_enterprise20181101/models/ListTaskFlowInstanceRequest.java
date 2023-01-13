@@ -4,34 +4,48 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListTaskFlowInstanceRequest extends TeaModel {
-    // The ID of the task flow. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to obtain the ID of the task flow.
+    /**
+     * <p>The ID of the task flow. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to obtain the ID of the task flow.</p>
+     */
     @NameInMap("DagId")
     public Long dagId;
 
-    // The number of the page to return.
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("PageIndex")
     public Integer pageIndex;
 
-    // The number of entries to return on each page.
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The beginning of the time range to query the execution records of the task flow. Specify the time in the yyyy-MM-DD format.
+    /**
+     * <p>The beginning of the time range to query the execution records of the task flow. Specify the time in the yyyy-MM-DD format.</p>
+     */
     @NameInMap("StartTimeBegin")
     public String startTimeBegin;
 
-    // The end of the time range to query the execution records of the task flow. Specify the time in the yyyy-MM-DD format.
+    /**
+     * <p>The end of the time range to query the execution records of the task flow. Specify the time in the yyyy-MM-DD format.</p>
+     */
     @NameInMap("StartTimeEnd")
     public String startTimeEnd;
 
-    // The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
+    /**
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.</p>
+     */
     @NameInMap("Tid")
     public Long tid;
 
-    // The mode in which the task flow is triggered. Valid values:
-    // 
-    // *   **0**: The task flow is automatically triggered based on periodic scheduling.
-    // *   **1**: The task flow is manually triggered.
+    /**
+     * <p>The mode in which the task flow is triggered. Valid values:</p>
+     * <br>
+     * <p>*   **0**: The task flow is automatically triggered based on periodic scheduling.</p>
+     * <p>*   **1**: The task flow is manually triggered.</p>
+     */
     @NameInMap("TriggerType")
     public Integer triggerType;
 

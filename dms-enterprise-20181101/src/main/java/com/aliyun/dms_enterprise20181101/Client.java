@@ -191,6 +191,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.addLogicTableRouteConfigWithOptions(request, runtime);
     }
 
+    /**
+      * When you add directed edges for a task node, take note of the following limits:
+      * 1. The endpoints of the specified edge exist in the Directed Acyclic Graph (DAG) of the task flow specified by DagId.
+      * 2. After a backward edge is added, the DAG does not contain loops.
+      *
+      * @param tmpReq AddTaskFlowEdgesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return AddTaskFlowEdgesResponse
+     */
     public AddTaskFlowEdgesResponse addTaskFlowEdgesWithOptions(AddTaskFlowEdgesRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         AddTaskFlowEdgesShrinkRequest request = new AddTaskFlowEdgesShrinkRequest();
@@ -229,6 +238,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AddTaskFlowEdgesResponse());
     }
 
+    /**
+      * When you add directed edges for a task node, take note of the following limits:
+      * 1. The endpoints of the specified edge exist in the Directed Acyclic Graph (DAG) of the task flow specified by DagId.
+      * 2. After a backward edge is added, the DAG does not contain loops.
+      *
+      * @param request AddTaskFlowEdgesRequest
+      * @return AddTaskFlowEdgesResponse
+     */
     public AddTaskFlowEdgesResponse addTaskFlowEdges(AddTaskFlowEdgesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.addTaskFlowEdgesWithOptions(request, runtime);
@@ -276,7 +293,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Description
       * During a data backfill, task flows are run in sequence based on their dates. You can specify whether task flows are run in chronological or reverse chronological order. After the data backfill is complete, you can specify a date or date range, and a node range to run task flows.
       *
       * @param tmpReq BackFillRequest
@@ -350,7 +366,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Description
       * During a data backfill, task flows are run in sequence based on their dates. You can specify whether task flows are run in chronological or reverse chronological order. After the data backfill is complete, you can specify a date or date range, and a node range to run task flows.
       *
       * @param request BackFillRequest
@@ -1864,7 +1879,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ### Usage notes
       * When you call this operation, make sure that no task flow is specified in the business scenario.
       *
       * @param request DeleteScenarioRequest
@@ -1900,7 +1914,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ### Usage notes
       * When you call this operation, make sure that no task flow is specified in the business scenario.
       *
       * @param request DeleteScenarioRequest
@@ -2929,6 +2942,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getInstanceWithOptions(request, runtime);
     }
 
+    /**
+      * The scheduling cycle of a task flow must be greater than the minimum scheduling cycle configured in the SLA rule for the task flow.
+      *
+      * @param request GetIntervalLimitOfSLARequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetIntervalLimitOfSLAResponse
+     */
     public GetIntervalLimitOfSLAResponse getIntervalLimitOfSLAWithOptions(GetIntervalLimitOfSLARequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2957,6 +2977,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetIntervalLimitOfSLAResponse());
     }
 
+    /**
+      * The scheduling cycle of a task flow must be greater than the minimum scheduling cycle configured in the SLA rule for the task flow.
+      *
+      * @param request GetIntervalLimitOfSLARequest
+      * @return GetIntervalLimitOfSLAResponse
+     */
     public GetIntervalLimitOfSLAResponse getIntervalLimitOfSLA(GetIntervalLimitOfSLARequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getIntervalLimitOfSLAWithOptions(request, runtime);
@@ -6569,8 +6595,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Prerequisites:
-      * You are a DMS administrator or a database administrator (DBA). You can call the [ListUsers](~~141938~~) or [GetUser](~~147098~~) operation to obtain your user role from the RoleIdList parameter that is returned.
+      * Prerequisites: You are a DMS administrator or a database administrator (DBA). You can call the [ListUsers](~~141938~~) or [GetUser](~~147098~~) operation to query your user role from the RoleIdList parameter that is returned.
       *
       * @param request RegisterInstanceRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -6697,8 +6722,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Prerequisites:
-      * You are a DMS administrator or a database administrator (DBA). You can call the [ListUsers](~~141938~~) or [GetUser](~~147098~~) operation to obtain your user role from the RoleIdList parameter that is returned.
+      * Prerequisites: You are a DMS administrator or a database administrator (DBA). You can call the [ListUsers](~~141938~~) or [GetUser](~~147098~~) operation to query your user role from the RoleIdList parameter that is returned.
       *
       * @param request RegisterInstanceRequest
       * @return RegisterInstanceResponse
@@ -6807,6 +6831,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.restartDataCorrectSQLJobWithOptions(request, runtime);
     }
 
+    /**
+      * You can call this operation only for task flows that are suspended.
+      *
+      * @param request ResumeTaskFlowInstanceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ResumeTaskFlowInstanceResponse
+     */
     public ResumeTaskFlowInstanceResponse resumeTaskFlowInstanceWithOptions(ResumeTaskFlowInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6843,6 +6874,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ResumeTaskFlowInstanceResponse());
     }
 
+    /**
+      * You can call this operation only for task flows that are suspended.
+      *
+      * @param request ResumeTaskFlowInstanceRequest
+      * @return ResumeTaskFlowInstanceResponse
+     */
     public ResumeTaskFlowInstanceResponse resumeTaskFlowInstance(ResumeTaskFlowInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.resumeTaskFlowInstanceWithOptions(request, runtime);
@@ -7457,6 +7494,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateInstanceWithOptions(request, runtime);
     }
 
+    /**
+      * SLA rules take effect after task flows are deployed and published.
+      *
+      * @param tmpReq UpdateSLARulesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateSLARulesResponse
+     */
     public UpdateSLARulesResponse updateSLARulesWithOptions(UpdateSLARulesRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         UpdateSLARulesShrinkRequest request = new UpdateSLARulesShrinkRequest();
@@ -7495,6 +7539,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateSLARulesResponse());
     }
 
+    /**
+      * SLA rules take effect after task flows are deployed and published.
+      *
+      * @param request UpdateSLARulesRequest
+      * @return UpdateSLARulesResponse
+     */
     public UpdateSLARulesResponse updateSLARules(UpdateSLARulesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateSLARulesWithOptions(request, runtime);
@@ -7541,6 +7591,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateScenarioWithOptions(request, runtime);
     }
 
+    /**
+      * You can call this operation to configure a failed task or rerun a task.
+      *
+      * @param request UpdateTaskConfigRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateTaskConfigResponse
+     */
     public UpdateTaskConfigResponse updateTaskConfigWithOptions(UpdateTaskConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -7573,6 +7630,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateTaskConfigResponse());
     }
 
+    /**
+      * You can call this operation to configure a failed task or rerun a task.
+      *
+      * @param request UpdateTaskConfigRequest
+      * @return UpdateTaskConfigResponse
+     */
     public UpdateTaskConfigResponse updateTaskConfig(UpdateTaskConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateTaskConfigWithOptions(request, runtime);
@@ -7715,11 +7778,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Usage notes
       * The edges can be updated only when the following conditions are met:
-      * 1\\. The specified edge exists in the Directed Acyclic Graph (DAG) of the task flow. The DAG is identified by DagId.
-      * 2\\. The end points of the specified edge exist in the DAG of the task flow. The DAG is identified by DagId.
-      * 3\\. After the update, no loop appears in the DAG.
+      * 1. The specified edge exists in the Directed Acyclic Graph (DAG) of the task flow. The DAG is identified by DagId.
+      * 2. The end points of the specified edge exist in the DAG of the task flow. The DAG is identified by DagId.
+      * 3. After the update, no loop appears in the DAG.
       *
       * @param tmpReq UpdateTaskFlowEdgesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -7764,11 +7826,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Usage notes
       * The edges can be updated only when the following conditions are met:
-      * 1\\. The specified edge exists in the Directed Acyclic Graph (DAG) of the task flow. The DAG is identified by DagId.
-      * 2\\. The end points of the specified edge exist in the DAG of the task flow. The DAG is identified by DagId.
-      * 3\\. After the update, no loop appears in the DAG.
+      * 1. The specified edge exists in the Directed Acyclic Graph (DAG) of the task flow. The DAG is identified by DagId.
+      * 2. The end points of the specified edge exist in the DAG of the task flow. The DAG is identified by DagId.
+      * 3. After the update, no loop appears in the DAG.
       *
       * @param request UpdateTaskFlowEdgesRequest
       * @return UpdateTaskFlowEdgesResponse
@@ -7970,6 +8031,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateTaskFlowRelationsWithOptions(request, runtime);
     }
 
+    /**
+      * You can call this operation to update the scheduling properties for a task flow in the editing state. You can configure a **timed scheduling** task flow or an **event scheduling** task flow. When you configure a **timed scheduling** task flow, you can choose from one-time scheduling or periodic scheduling. When you configure an **event scheduling** task flow, you can subscribe to task flows or task flow nodes.****\\
+      * After you update the scheduling properties, you need to publish and deploy the task flow again. The new task flow instance will run based on the updated scheduling properties.
+      *
+      * @param request UpdateTaskFlowScheduleRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateTaskFlowScheduleResponse
+     */
     public UpdateTaskFlowScheduleResponse updateTaskFlowScheduleWithOptions(UpdateTaskFlowScheduleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -8030,6 +8099,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateTaskFlowScheduleResponse());
     }
 
+    /**
+      * You can call this operation to update the scheduling properties for a task flow in the editing state. You can configure a **timed scheduling** task flow or an **event scheduling** task flow. When you configure a **timed scheduling** task flow, you can choose from one-time scheduling or periodic scheduling. When you configure an **event scheduling** task flow, you can subscribe to task flows or task flow nodes.****\\
+      * After you update the scheduling properties, you need to publish and deploy the task flow again. The new task flow instance will run based on the updated scheduling properties.
+      *
+      * @param request UpdateTaskFlowScheduleRequest
+      * @return UpdateTaskFlowScheduleResponse
+     */
     public UpdateTaskFlowScheduleResponse updateTaskFlowSchedule(UpdateTaskFlowScheduleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateTaskFlowScheduleWithOptions(request, runtime);
@@ -8110,7 +8186,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Usage notes
       * Only nodes of single-instance SQL assignment, script code, and ECS remote command have output variables.
       *
       * @param request UpdateTaskOutputRequest
@@ -8150,7 +8225,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Usage notes
       * Only nodes of single-instance SQL assignment, script code, and ECS remote command have output variables.
       *
       * @param request UpdateTaskOutputRequest

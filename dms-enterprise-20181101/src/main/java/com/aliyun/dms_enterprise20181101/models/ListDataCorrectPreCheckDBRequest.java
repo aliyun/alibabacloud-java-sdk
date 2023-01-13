@@ -4,23 +4,31 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListDataCorrectPreCheckDBRequest extends TeaModel {
-    // The ID of the ticket for the data change.
+    /**
+     * <p>The ID of the ticket for the data change.</p>
+     */
     @NameInMap("OrderId")
     public Long orderId;
 
-    // The number of the page to return.
-    // 
-    // Valid values: an integer that is greater than 0.
-    // 
-    // Default value: 1.
+    /**
+     * <p>The number of the page to return.</p>
+     * <br>
+     * <p>Valid values: an integer that is greater than 0.</p>
+     * <br>
+     * <p>Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
-    // The number of entries to return on each page.
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
-    // The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to query the ID of the tenant.
+    /**
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to query the ID of the tenant.</p>
+     */
     @NameInMap("Tid")
     public Long tid;
 

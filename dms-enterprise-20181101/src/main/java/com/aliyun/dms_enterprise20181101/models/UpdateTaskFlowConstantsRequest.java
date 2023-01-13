@@ -4,15 +4,21 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class UpdateTaskFlowConstantsRequest extends TeaModel {
-    // The constants for the task flow.
+    /**
+     * <p>The constants for the task flow.</p>
+     */
     @NameInMap("DagConstants")
     public java.util.List<UpdateTaskFlowConstantsRequestDagConstants> dagConstants;
 
-    // The ID of the task flow. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to query the task flow ID.
+    /**
+     * <p>The ID of the task flow. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to query the task flow ID.</p>
+     */
     @NameInMap("DagId")
     public Long dagId;
 
-    // The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to query the tenant ID.
+    /**
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to query the tenant ID.</p>
+     */
     @NameInMap("Tid")
     public Long tid;
 
@@ -46,11 +52,15 @@ public class UpdateTaskFlowConstantsRequest extends TeaModel {
     }
 
     public static class UpdateTaskFlowConstantsRequestDagConstants extends TeaModel {
-        // The key name of a constant for the task flow.
+        /**
+         * <p>The key name of a constant for the task flow.</p>
+         */
         @NameInMap("Key")
         public String key;
 
-        // The key value of a constant for the task flow.
+        /**
+         * <p>The key value of a constant for the task flow.</p>
+         */
         @NameInMap("Value")
         public String value;
 

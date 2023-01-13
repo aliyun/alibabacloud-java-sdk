@@ -4,30 +4,42 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListOrdersResponseBody extends TeaModel {
-    // The error code.
+    /**
+     * <p>The error code.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // The error message.
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    // The details about the tickets.
+    /**
+     * <p>The details about the tickets.</p>
+     */
     @NameInMap("Orders")
     public ListOrdersResponseBodyOrders orders;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request was successful. Valid values:
-    // 
-    // - **true**: The request was successful.
-    // - **false**: The request failed.
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>- **true**: The request was successful.</p>
+     * <p>- **false**: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
-    // The total number of entries that are returned.
+    /**
+     * <p>The total number of entries that are returned.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -85,48 +97,66 @@ public class ListOrdersResponseBody extends TeaModel {
     }
 
     public static class ListOrdersResponseBodyOrdersOrder extends TeaModel {
-        // The remarks of the ticket.
+        /**
+         * <p>The remarks of the ticket.</p>
+         */
         @NameInMap("Comment")
         public String comment;
 
-        // The user who submitted the ticket.
+        /**
+         * <p>The user who submitted the ticket.</p>
+         */
         @NameInMap("Committer")
         public String committer;
 
-        // The ID of the user who submitted the ticket.
+        /**
+         * <p>The ID of the user who submitted the ticket.</p>
+         */
         @NameInMap("CommitterId")
         public Long committerId;
 
-        // The time when the ticket was created.
+        /**
+         * <p>The time when the ticket was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        // The time when the ticket was last modified.
+        /**
+         * <p>The time when the ticket was last modified.</p>
+         */
         @NameInMap("LastModifyTime")
         public String lastModifyTime;
 
-        // The ID of the ticket.
+        /**
+         * <p>The ID of the ticket.</p>
+         */
         @NameInMap("OrderId")
         public Long orderId;
 
-        // The type of the ticket.
+        /**
+         * <p>The type of the ticket.</p>
+         */
         @NameInMap("PluginType")
         public String pluginType;
 
-        // The status code of the ticket. Valid values:
-        // 
-        // *   **fail**: The ticket fails to be executed.
-        // *   **toaudit**: The ticket is waiting for approval.
-        // *   **cancel**: The ticket is cancelled.
-        // *   **processing**: The ticket is being executed.
-        // *   **approved**: The ticket is approved.
-        // *   **reject**: The ticket is rejected.
-        // *   **success**: The ticket is executed.
-        // *   **closed**: The ticket is closed.
+        /**
+         * <p>The status code of the ticket. Valid values:</p>
+         * <br>
+         * <p>*   **fail**: The ticket fails to be executed.</p>
+         * <p>*   **toaudit**: The ticket is waiting for approval.</p>
+         * <p>*   **cancel**: The ticket is cancelled.</p>
+         * <p>*   **processing**: The ticket is being executed.</p>
+         * <p>*   **approved**: The ticket is approved.</p>
+         * <p>*   **reject**: The ticket is rejected.</p>
+         * <p>*   **success**: The ticket is executed.</p>
+         * <p>*   **closed**: The ticket is closed.</p>
+         */
         @NameInMap("StatusCode")
         public String statusCode;
 
-        // The status description of the ticket.
+        /**
+         * <p>The status description of the ticket.</p>
+         */
         @NameInMap("StatusDesc")
         public String statusDesc;
 

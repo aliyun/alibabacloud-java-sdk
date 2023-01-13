@@ -4,30 +4,42 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListSensitiveColumnsResponseBody extends TeaModel {
-    // The error code.
+    /**
+     * <p>The error code.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // The error message.
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The sensitive fields.
+    /**
+     * <p>The sensitive fields.</p>
+     */
     @NameInMap("SensitiveColumnList")
     public ListSensitiveColumnsResponseBodySensitiveColumnList sensitiveColumnList;
 
-    // Indicates whether the request is successful. Valid values:
-    // 
-    // - true: The request is successful.
-    // - false: The request fails.
+    /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <br>
+     * <p>- true: The request is successful.</p>
+     * <p>- false: The request fails.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
-    // The total number of returned entries.
+    /**
+     * <p>The total number of returned entries.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -85,34 +97,46 @@ public class ListSensitiveColumnsResponseBody extends TeaModel {
     }
 
     public static class ListSensitiveColumnsResponseBodySensitiveColumnListSensitiveColumn extends TeaModel {
-        // The number of sensitive fields.
+        /**
+         * <p>The number of sensitive fields.</p>
+         */
         @NameInMap("ColumnCount")
         public Long columnCount;
 
-        // The name of the field.
+        /**
+         * <p>The name of the field.</p>
+         */
         @NameInMap("ColumnName")
         public String columnName;
 
-        // The type of the de-identification algorithm. Valid values:
-        // 
-        // *   DEFAULT: All characters are masked. This is the default value.
-        // *   FIX_POS: The characters at specific positions are masked.
-        // *   FIX_CHAR: Specific characters are masked.
+        /**
+         * <p>The type of the de-identification algorithm. Valid values:</p>
+         * <br>
+         * <p>*   DEFAULT: All characters are masked. This is the default value.</p>
+         * <p>*   FIX_POS: The characters at specific positions are masked.</p>
+         * <p>*   FIX_CHAR: Specific characters are masked.</p>
+         */
         @NameInMap("FunctionType")
         public String functionType;
 
-        // The name of the database.
+        /**
+         * <p>The name of the database.</p>
+         */
         @NameInMap("SchemaName")
         public String schemaName;
 
-        // The sensitivity level of the field. Valid values:
-        // 
-        // *   SENSITIVE
-        // *   CONFIDENTIAL
+        /**
+         * <p>The sensitivity level of the field. Valid values:</p>
+         * <br>
+         * <p>*   SENSITIVE</p>
+         * <p>*   CONFIDENTIAL</p>
+         */
         @NameInMap("SecurityLevel")
         public String securityLevel;
 
-        // The name of the table.
+        /**
+         * <p>The name of the table.</p>
+         */
         @NameInMap("TableName")
         public String tableName;
 

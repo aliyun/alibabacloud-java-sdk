@@ -4,30 +4,42 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetOpLogResponseBody extends TeaModel {
-    // The error code returned if the request fails.
+    /**
+     * <p>The error code returned if the request fails.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // The error message returned if the request fails.
+    /**
+     * <p>The error message returned if the request fails.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    // The details of the operation log.
+    /**
+     * <p>The details of the operation log.</p>
+     */
     @NameInMap("OpLogDetails")
     public GetOpLogResponseBodyOpLogDetails opLogDetails;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request is successful. Valid values:
-    // 
-    // - **true**: The request is successful.
-    // - **false**: The request fails.
+    /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <br>
+     * <p>- **true**: The request is successful.</p>
+     * <p>- **false**: The request fails.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
-    // The total number of operation logs that are returned.
+    /**
+     * <p>The total number of operation logs that are returned.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -85,40 +97,56 @@ public class GetOpLogResponseBody extends TeaModel {
     }
 
     public static class GetOpLogResponseBodyOpLogDetailsOpLogDetail extends TeaModel {
-        // The endpoint of the database instance.
-        // 
-        // > *   This parameter is valid only for database instances of the LocalInstance type.
-        // *   This parameter is valid only for operations on the functional modules related to tasks.
+        /**
+         * <p>The endpoint of the database instance.</p>
+         * <br>
+         * <p>> * This parameter is valid only for database instances of the LocalInstance type.</p>
+         * <p>> * This parameter is valid only for operations on the functional modules related to tasks.</p>
+         */
         @NameInMap("Database")
         public String database;
 
-        // The functional module for which the operation log is queried.
+        /**
+         * <p>The functional module for which the operation log is queried.</p>
+         */
         @NameInMap("Module")
         public String module;
 
-        // The details of the operation.
+        /**
+         * <p>The details of the operation.</p>
+         */
         @NameInMap("OpContent")
         public String opContent;
 
-        // The time when the operation was performed.
+        /**
+         * <p>The time when the operation was performed.</p>
+         */
         @NameInMap("OpTime")
         public String opTime;
 
-        // The ID of the user who performed the operation.
+        /**
+         * <p>The ID of the user who performed the operation.</p>
+         */
         @NameInMap("OpUserId")
         public Long opUserId;
 
-        // The ID of the ticket or task.
-        // 
-        // >  This parameter is valid only for operations on the functional modules related to tasks and the task management module in system management.
+        /**
+         * <p>The ID of the ticket or task.</p>
+         * <br>
+         * <p>>  This parameter is valid only for operations on the functional modules related to tasks and the task management module in system management.</p>
+         */
         @NameInMap("OrderId")
         public Long orderId;
 
-        // The UID of the Alibaba Cloud account.
+        /**
+         * <p>The UID of the Alibaba Cloud account.</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
-        // The display name of the user.
+        /**
+         * <p>The display name of the user.</p>
+         */
         @NameInMap("UserNick")
         public String userNick;
 

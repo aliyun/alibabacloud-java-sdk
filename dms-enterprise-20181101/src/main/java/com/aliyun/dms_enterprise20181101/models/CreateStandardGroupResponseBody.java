@@ -4,26 +4,36 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class CreateStandardGroupResponseBody extends TeaModel {
-    // The error code returned if the request fails.
+    /**
+     * <p>The error code returned if the request fails.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // The error message returned if the request fails.
+    /**
+     * <p>The error message returned if the request fails.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The created security rule set.
+    /**
+     * <p>The created security rule set.</p>
+     */
     @NameInMap("StandardGroup")
     public CreateStandardGroupResponseBodyStandardGroup standardGroup;
 
-    // Indicates whether the request was successful. Valid values:
-    // 
-    // *   **true**: The request was successful.
-    // *   **false**: The request failed.
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The request was successful.</p>
+     * <p>*   **false**: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -73,27 +83,37 @@ public class CreateStandardGroupResponseBody extends TeaModel {
     }
 
     public static class CreateStandardGroupResponseBodyStandardGroup extends TeaModel {
-        // The type of the database engine. For more information about the valid values of this parameter, see [DbType parameter](~~198106~~).
+        /**
+         * <p>The type of the database engine. For more information about the valid values of this parameter, see [DbType parameter](~~198106~~).</p>
+         */
         @NameInMap("DbType")
         public String dbType;
 
-        // The description of the security rule set.
+        /**
+         * <p>The description of the security rule set.</p>
+         */
         @NameInMap("Description")
         public String description;
 
-        // The control mode. Valid values:
-        // 
-        // *   **NONE_CONTROL**: Flexible Management
-        // *   **STABLE**: Stable Change
-        // *   **COMMON**: Security Collaboration
+        /**
+         * <p>The control mode. Valid values:</p>
+         * <br>
+         * <p>*   **NONE_CONTROL**: Flexible Management</p>
+         * <p>*   **STABLE**: Stable Change</p>
+         * <p>*   **COMMON**: Security Collaboration</p>
+         */
         @NameInMap("GroupMode")
         public String groupMode;
 
-        // The name of the security rule set.
+        /**
+         * <p>The name of the security rule set.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
-        // The ID of the user who creates the security rule set.
+        /**
+         * <p>The ID of the user who creates the security rule set.</p>
+         */
         @NameInMap("LastMenderId")
         public Long lastMenderId;
 

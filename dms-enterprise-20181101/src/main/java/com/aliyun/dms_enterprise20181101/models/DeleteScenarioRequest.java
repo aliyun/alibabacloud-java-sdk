@@ -4,13 +4,17 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class DeleteScenarioRequest extends TeaModel {
-    // The ID of the business scenario.
+    /**
+     * <p>The ID of the business scenario.</p>
+     */
     @NameInMap("ScenarioId")
     public Long scenarioId;
 
-    // The ID of the tenant.
-    // 
-    // >  To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](~~181330~~) topic.
+    /**
+     * <p>The ID of the tenant.</p>
+     * <br>
+     * <p>>  To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](~~181330~~) topic.</p>
+     */
     @NameInMap("Tid")
     public Long tid;
 

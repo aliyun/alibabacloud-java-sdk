@@ -4,26 +4,36 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetTaskFlowGraphResponseBody extends TeaModel {
-    // The error code returned if the request failed.
+    /**
+     * <p>The error code returned if the request failed.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // The error message returned if the request failed.
+    /**
+     * <p>The error message returned if the request failed.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request was successful. Valid values:
-    // 
-    // *   **true**: The request was successful.
-    // *   **false**: The request failed.
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The request was successful.</p>
+     * <p>*   **false**: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
-    // The list of DAG variables of the task flow.
+    /**
+     * <p>The list of DAG variables of the task flow.</p>
+     */
     @NameInMap("TaskFlowGraph")
     public GetTaskFlowGraphResponseBodyTaskFlowGraph taskFlowGraph;
 
@@ -73,19 +83,27 @@ public class GetTaskFlowGraphResponseBody extends TeaModel {
     }
 
     public static class GetTaskFlowGraphResponseBodyTaskFlowGraphEdgesEdge extends TeaModel {
-        // The ID of the task flow.
+        /**
+         * <p>The ID of the task flow.</p>
+         */
         @NameInMap("DagId")
         public Long dagId;
 
-        // The ID of the task flow edge.
+        /**
+         * <p>The ID of the task flow edge.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
-        // The ID of the end node on the edge.
+        /**
+         * <p>The ID of the end node on the edge.</p>
+         */
         @NameInMap("NodeEnd")
         public Long nodeEnd;
 
-        // The ID of the start node on the edge.
+        /**
+         * <p>The ID of the start node on the edge.</p>
+         */
         @NameInMap("NodeFrom")
         public Long nodeFrom;
 
@@ -148,35 +166,51 @@ public class GetTaskFlowGraphResponseBody extends TeaModel {
     }
 
     public static class GetTaskFlowGraphResponseBodyTaskFlowGraphNodesNode extends TeaModel {
-        // The ID of the task flow.
+        /**
+         * <p>The ID of the task flow.</p>
+         */
         @NameInMap("DagId")
         public Long dagId;
 
-        // The position of the node in the DAG.
+        /**
+         * <p>The position of the node in the DAG.</p>
+         */
         @NameInMap("GraphParam")
         public String graphParam;
 
-        // The advanced configuration of the node.
+        /**
+         * <p>The advanced configuration of the node.</p>
+         */
         @NameInMap("NodeConfig")
         public String nodeConfig;
 
-        // The configuration of the node.
+        /**
+         * <p>The configuration of the node.</p>
+         */
         @NameInMap("NodeContent")
         public String nodeContent;
 
-        // The ID of the node.
+        /**
+         * <p>The ID of the node.</p>
+         */
         @NameInMap("NodeId")
         public Long nodeId;
 
-        // The name of the node.
+        /**
+         * <p>The name of the node.</p>
+         */
         @NameInMap("NodeName")
         public String nodeName;
 
-        // The type of the node. For more information about the valid values for this parameter, see [NodeType parameter](~~424705~~).
+        /**
+         * <p>The type of the node. For more information about the valid values for this parameter, see [NodeType parameter](~~424705~~).</p>
+         */
         @NameInMap("NodeType")
         public Long nodeType;
 
-        // The time variables for the node.
+        /**
+         * <p>The time variables for the node.</p>
+         */
         @NameInMap("TimeVariables")
         public String timeVariables;
 
@@ -271,30 +305,40 @@ public class GetTaskFlowGraphResponseBody extends TeaModel {
     }
 
     public static class GetTaskFlowGraphResponseBodyTaskFlowGraph extends TeaModel {
-        // Indicates whether the task flow is editable. Valid values:
-        // 
-        // - **true**: editable
-        // - **false**: non-editable
+        /**
+         * <p>Indicates whether the task flow is editable. Valid values:</p>
+         * <br>
+         * <p>- **true**: editable</p>
+         * <p>- **false**: non-editable</p>
+         */
         @NameInMap("CanEdit")
         public Boolean canEdit;
 
-        // The name of the task flow.
+        /**
+         * <p>The name of the task flow.</p>
+         */
         @NameInMap("DagName")
         public String dagName;
 
-        // The list of task flow edges.
+        /**
+         * <p>The list of task flow edges.</p>
+         */
         @NameInMap("Edges")
         public GetTaskFlowGraphResponseBodyTaskFlowGraphEdges edges;
 
-        // The node list of the task flow.
+        /**
+         * <p>The node list of the task flow.</p>
+         */
         @NameInMap("Nodes")
         public GetTaskFlowGraphResponseBodyTaskFlowGraphNodes nodes;
 
-        // The status of the task flow. Valid values:
-        // 
-        // - **0**: invalid
-        // - **1**: not scheduled
-        // - **2**: to be scheduled
+        /**
+         * <p>The status of the task flow. Valid values:</p>
+         * <br>
+         * <p>- **0**: invalid</p>
+         * <p>- **1**: not scheduled</p>
+         * <p>- **2**: to be scheduled</p>
+         */
         @NameInMap("Status")
         public Long status;
 

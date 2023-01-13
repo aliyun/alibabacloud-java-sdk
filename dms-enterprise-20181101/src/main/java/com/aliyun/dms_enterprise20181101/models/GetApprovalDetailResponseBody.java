@@ -4,26 +4,36 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetApprovalDetailResponseBody extends TeaModel {
-    // The approval details of the ticket.
+    /**
+     * <p>The approval details of the ticket.</p>
+     */
     @NameInMap("ApprovalDetail")
     public GetApprovalDetailResponseBodyApprovalDetail approvalDetail;
 
-    // The error code returned if the request fails.
+    /**
+     * <p>The error code returned if the request fails.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // The error message returned if the request fails.
+    /**
+     * <p>The error message returned if the request fails.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request was successful. Valid values:
-    // 
-    // - **true**: The request was successful.
-    // - **false**: The request failed.
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>- **true**: The request was successful.</p>
+     * <p>- **false**: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -73,11 +83,15 @@ public class GetApprovalDetailResponseBody extends TeaModel {
     }
 
     public static class GetApprovalDetailResponseBodyApprovalDetailCurrentHandlersCurrentHandler extends TeaModel {
-        // The ID of the user.
+        /**
+         * <p>The ID of the user.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
-        // The nickname of the user.
+        /**
+         * <p>The nickname of the user.</p>
+         */
         @NameInMap("NickName")
         public String nickName;
 
@@ -162,32 +176,44 @@ public class GetApprovalDetailResponseBody extends TeaModel {
     }
 
     public static class GetApprovalDetailResponseBodyApprovalDetailWorkflowNodesWorkflowNode extends TeaModel {
-        // The IDs of the approvers.
+        /**
+         * <p>The IDs of the approvers.</p>
+         */
         @NameInMap("AuditUserIdList")
         public GetApprovalDetailResponseBodyApprovalDetailWorkflowNodesWorkflowNodeAuditUserIdList auditUserIdList;
 
-        // The name of the approval node.
+        /**
+         * <p>The name of the approval node.</p>
+         */
         @NameInMap("NodeName")
         public String nodeName;
 
-        // The remarks of the approval.
+        /**
+         * <p>The remarks of the approval.</p>
+         */
         @NameInMap("OperateComment")
         public String operateComment;
 
-        // The time when the ticket was submitted.
+        /**
+         * <p>The time when the ticket was submitted.</p>
+         */
         @NameInMap("OperateTime")
         public String operateTime;
 
-        // The ID of the user who submitted the ticket.
+        /**
+         * <p>The ID of the user who submitted the ticket.</p>
+         */
         @NameInMap("OperatorId")
         public Long operatorId;
 
-        // The approval status of the ticket. Valid values:
-        // 
-        // *   **AUDITING**: The ticket is being processed.
-        // *   **REJECT**: The ticket was rejected.
-        // *   **CANCEL**: The ticket was revoked.
-        // *   **APPROVED**: The ticket was approved.
+        /**
+         * <p>The approval status of the ticket. Valid values:</p>
+         * <br>
+         * <p>*   **AUDITING**: The ticket is being processed.</p>
+         * <p>*   **REJECT**: The ticket was rejected.</p>
+         * <p>*   **CANCEL**: The ticket was revoked.</p>
+         * <p>*   **APPROVED**: The ticket was approved.</p>
+         */
         @NameInMap("WorkflowInsCode")
         public String workflowInsCode;
 
@@ -266,63 +292,85 @@ public class GetApprovalDetailResponseBody extends TeaModel {
     }
 
     public static class GetApprovalDetailResponseBodyApprovalDetail extends TeaModel {
-        // The ID of the approval process.
+        /**
+         * <p>The ID of the approval process.</p>
+         */
         @NameInMap("AuditId")
         public Long auditId;
 
-        // The time when the approval process was created.
+        /**
+         * <p>The time when the approval process was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        // The information about the approver.
+        /**
+         * <p>The information about the approver.</p>
+         */
         @NameInMap("CurrentHandlers")
         public GetApprovalDetailResponseBodyApprovalDetailCurrentHandlers currentHandlers;
 
-        // The description of the approval process.
+        /**
+         * <p>The description of the approval process.</p>
+         */
         @NameInMap("Description")
         public String description;
 
-        // The ID of the ticket.
+        /**
+         * <p>The ID of the ticket.</p>
+         */
         @NameInMap("OrderId")
         public Long orderId;
 
-        // The type of the ticket. Valid values:
-        // 
-        // - **NDDL**: The ticket is used to change the schema design.
-        // - **DATA_TRACK**: The ticket is used to track data.
-        // - **TABLE_SYNC**: The ticket is used to synchronize databases and tables.
-        // - **PERM_APPLY**: The ticket is used to apply for permissions.
-        // - **DATA_EXPORT**: The ticket is used to export data.
-        // - **DATA_CORRECT**: The ticket is used to change data.
-        // - **OWNER_APPLY**: The ticket is used to apply for the owner role of a resource.
-        // - **SENSITIVITY**: The ticket is used to change column sensitivity levels.
+        /**
+         * <p>The type of the ticket. Valid values:</p>
+         * <br>
+         * <p>- **NDDL**: The ticket is used to change the schema design.</p>
+         * <p>- **DATA_TRACK**: The ticket is used to track data.</p>
+         * <p>- **TABLE_SYNC**: The ticket is used to synchronize databases and tables.</p>
+         * <p>- **PERM_APPLY**: The ticket is used to apply for permissions.</p>
+         * <p>- **DATA_EXPORT**: The ticket is used to export data.</p>
+         * <p>- **DATA_CORRECT**: The ticket is used to change data.</p>
+         * <p>- **OWNER_APPLY**: The ticket is used to apply for the owner role of a resource.</p>
+         * <p>- **SENSITIVITY**: The ticket is used to change column sensitivity levels.</p>
+         */
         @NameInMap("OrderType")
         public String orderType;
 
-        // The reason for the approval.
+        /**
+         * <p>The reason for the approval.</p>
+         */
         @NameInMap("ReasonList")
         public GetApprovalDetailResponseBodyApprovalDetailReasonList reasonList;
 
-        // The ID of the approval template.
+        /**
+         * <p>The ID of the approval template.</p>
+         */
         @NameInMap("TemplateId")
         public Long templateId;
 
-        // The title of the approval process.
+        /**
+         * <p>The title of the approval process.</p>
+         */
         @NameInMap("Title")
         public String title;
 
-        // The approval status of the ticket. Valid values:
-        // 
-        // - **AUDITING**: The ticket is being processed.
-        // - **REJECT**: The ticket was rejected.
-        // - **CANCEL**: The ticket was revoked.
-        // - **APPROVED**: The ticket was approved.
-        // 
-        // >  If an approval process contains multiple approval nodes, this parameter is returned for each approval node.
+        /**
+         * <p>The approval status of the ticket. Valid values:</p>
+         * <br>
+         * <p>- **AUDITING**: The ticket is being processed.</p>
+         * <p>- **REJECT**: The ticket was rejected.</p>
+         * <p>- **CANCEL**: The ticket was revoked.</p>
+         * <p>- **APPROVED**: The ticket was approved.</p>
+         * <br>
+         * <p>>  If an approval process contains multiple approval nodes, this parameter is returned for each approval node.</p>
+         */
         @NameInMap("WorkflowInsCode")
         public String workflowInsCode;
 
-        // The details of approval nodes.
+        /**
+         * <p>The details of approval nodes.</p>
+         */
         @NameInMap("WorkflowNodes")
         public GetApprovalDetailResponseBodyApprovalDetailWorkflowNodes workflowNodes;
 

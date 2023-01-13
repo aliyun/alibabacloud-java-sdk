@@ -4,56 +4,76 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListOrdersRequest extends TeaModel {
-    // The end of the time range to query.
+    /**
+     * <p>The end of the time range to query.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
-    // The scope of the tickets that you want to query. Valid values:
-    // 
-    // *   **AS_ADMIN**: all tickets.
-    // *   **AS_COMMITTER**: the tickets that are submitted by the current user.
-    // *   **AS_HANDLER**: the tickets to be processed by the current user.
-    // *   **AS_OWNER**: the tickets that are processed by the current user.
-    // *   **AS_Related**: the tickets that are related to the current user.
+    /**
+     * <p>The scope of the tickets that you want to query. Valid values:</p>
+     * <br>
+     * <p>*   **AS_ADMIN**: all tickets.</p>
+     * <p>*   **AS_COMMITTER**: the tickets that are submitted by the current user.</p>
+     * <p>*   **AS_HANDLER**: the tickets to be processed by the current user.</p>
+     * <p>*   **AS_OWNER**: the tickets that are processed by the current user.</p>
+     * <p>*   **AS_Related**: the tickets that are related to the current user.</p>
+     */
     @NameInMap("OrderResultType")
     public String orderResultType;
 
-    // The status of the tickets that you want to query. Valid values:
-    // 
-    // *   **ALL**: queries the tickets of all statuses.
-    // *   **FINISHED**: queries the tickets that are completed.
-    // *   **RUNNING**: queries the tickets that are being processed.
+    /**
+     * <p>The status of the tickets that you want to query. Valid values:</p>
+     * <br>
+     * <p>*   **ALL**: queries the tickets of all statuses.</p>
+     * <p>*   **FINISHED**: queries the tickets that are completed.</p>
+     * <p>*   **RUNNING**: queries the tickets that are being processed.</p>
+     */
     @NameInMap("OrderStatus")
     public String orderStatus;
 
-    // The number of the page to return.
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // The number of entries to return on each page.
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The type of the tickets that you want to query. For more information, see [PluginType parameter](~~429109~~).
+    /**
+     * <p>The type of the tickets that you want to query. For more information, see [PluginType parameter](~~429109~~).</p>
+     */
     @NameInMap("PluginType")
     public String pluginType;
 
-    // The keyword that is used to query tickets.
+    /**
+     * <p>The keyword that is used to query tickets.</p>
+     */
     @NameInMap("SearchContent")
     public String searchContent;
 
-    // The time condition based on which you want to query tickets. Valid values:
-    // 
-    // *   **CREATE_TIME**: the time when a ticket was created.
-    // *   **MODIFY_TIME**: the time when a ticket was last modified.
+    /**
+     * <p>The time condition based on which you want to query tickets. Valid values:</p>
+     * <br>
+     * <p>*   **CREATE_TIME**: the time when a ticket was created.</p>
+     * <p>*   **MODIFY_TIME**: the time when a ticket was last modified.</p>
+     */
     @NameInMap("SearchDateType")
     public String searchDateType;
 
-    // The beginning of the time range to query.
+    /**
+     * <p>The beginning of the time range to query.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
-    // The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
+    /**
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.</p>
+     */
     @NameInMap("Tid")
     public Long tid;
 

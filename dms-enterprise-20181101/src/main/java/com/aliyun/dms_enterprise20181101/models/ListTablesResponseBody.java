@@ -4,30 +4,42 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListTablesResponseBody extends TeaModel {
-    // The error code that is returned if the request fails.
+    /**
+     * <p>The error code that is returned if the request fails.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // The error message returned if the request fails.
+    /**
+     * <p>The error message returned if the request fails.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request was successful. Valid values:
-    // 
-    // - **true**: The request was successful.
-    // - **false**: The request failed.
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>- **true**: The request was successful.</p>
+     * <p>- **false**: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
-    // The details of the tables.
+    /**
+     * <p>The details of the tables.</p>
+     */
     @NameInMap("TableList")
     public ListTablesResponseBodyTableList tableList;
 
-    // The total number of tables that meet the query conditions.
+    /**
+     * <p>The total number of tables that meet the query conditions.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -123,55 +135,81 @@ public class ListTablesResponseBody extends TeaModel {
     }
 
     public static class ListTablesResponseBodyTableListTable extends TeaModel {
-        // The ID of the physical database.
+        /**
+         * <p>The ID of the physical database.</p>
+         */
         @NameInMap("DatabaseId")
         public String databaseId;
 
-        // The description of the table.
+        /**
+         * <p>The description of the table.</p>
+         */
         @NameInMap("Description")
         public String description;
 
-        // The encoding format of the table.
+        /**
+         * <p>The encoding format of the table.</p>
+         */
         @NameInMap("Encoding")
         public String encoding;
 
-        // The engine of the table.
+        /**
+         * <p>The engine of the table.</p>
+         */
         @NameInMap("Engine")
         public String engine;
 
-        // The number of rows in the table. This is a statistical value and does not indicate the actual number of rows.
+        /**
+         * <p>The number of rows in the table. This is a statistical value and does not indicate the actual number of rows.</p>
+         */
         @NameInMap("NumRows")
         public Long numRows;
 
-        // The IDs of the owners of the table.
+        /**
+         * <p>The IDs of the owners of the table.</p>
+         */
         @NameInMap("OwnerIdList")
         public ListTablesResponseBodyTableListTableOwnerIdList ownerIdList;
 
-        // The nicknames of the owners of the table.
+        /**
+         * <p>The nicknames of the owners of the table.</p>
+         */
         @NameInMap("OwnerNameList")
         public ListTablesResponseBodyTableListTableOwnerNameList ownerNameList;
 
-        // The storage space that is occupied by the table. This is a statistical value and does not indicate the accurate storage space. Unit: MB.
+        /**
+         * <p>The storage space that is occupied by the table. This is a statistical value and does not indicate the accurate storage space. Unit: MB.</p>
+         */
         @NameInMap("StoreCapacity")
         public Long storeCapacity;
 
-        // The GUID of the table in DMS.
+        /**
+         * <p>The GUID of the table in DMS.</p>
+         */
         @NameInMap("TableGuid")
         public String tableGuid;
 
-        // The ID of the table.
+        /**
+         * <p>The ID of the table.</p>
+         */
         @NameInMap("TableId")
         public String tableId;
 
-        // The name of the table.
+        /**
+         * <p>The name of the table.</p>
+         */
         @NameInMap("TableName")
         public String tableName;
 
-        // The database in which the table resides.
+        /**
+         * <p>The database in which the table resides.</p>
+         */
         @NameInMap("TableSchemaName")
         public String tableSchemaName;
 
-        // The type of the table. Default value: NORMAL.
+        /**
+         * <p>The type of the table. Default value: NORMAL.</p>
+         */
         @NameInMap("TableType")
         public String tableType;
 

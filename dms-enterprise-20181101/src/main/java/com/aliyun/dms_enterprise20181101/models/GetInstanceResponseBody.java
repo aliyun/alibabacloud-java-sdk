@@ -4,26 +4,36 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceResponseBody extends TeaModel {
-    // The error code that is returned.
+    /**
+     * <p>The error code that is returned.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // The error message that is returned.
+    /**
+     * <p>The error message that is returned.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    // The details of the database instance.
+    /**
+     * <p>The details of the database instance.</p>
+     */
     @NameInMap("Instance")
     public GetInstanceResponseBodyInstance instance;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request was successful. Valid values:
-    // 
-    // - **true**: The request was successful.
-    // - **false**: The request failed.
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>- **true**: The request was successful.</p>
+     * <p>- **false**: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -111,15 +121,19 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     public static class GetInstanceResponseBodyInstanceStandardGroup extends TeaModel {
-        // The type of the control mode. Valid values:
-        // 
-        // *   **COMMON**: Security Collaboration
-        // *   **NONE_CONTROL**: Flexible Management
-        // *   **STABLE**: Stable Change
+        /**
+         * <p>The type of the control mode. Valid values:</p>
+         * <br>
+         * <p>*   **COMMON**: Security Collaboration</p>
+         * <p>*   **NONE_CONTROL**: Flexible Management</p>
+         * <p>*   **STABLE**: Stable Change</p>
+         */
         @NameInMap("GroupMode")
         public String groupMode;
 
-        // The name of the security rule set corresponding to the control mode.
+        /**
+         * <p>The name of the security rule set corresponding to the control mode.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
@@ -147,121 +161,171 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     public static class GetInstanceResponseBodyInstance extends TeaModel {
-        // The name of the database link for the database instance.
+        /**
+         * <p>The name of the database link for the database instance.</p>
+         */
         @NameInMap("DataLinkName")
         public String dataLinkName;
 
-        // The password that is used to log on to the database.
+        /**
+         * <p>The password that is used to log on to the database.</p>
+         */
         @NameInMap("DatabasePassword")
         public String databasePassword;
 
-        // The account that is used to log on to the database instance.
+        /**
+         * <p>The account that is used to log on to the database instance.</p>
+         */
         @NameInMap("DatabaseUser")
         public String databaseUser;
 
-        // The ID of the database administrator (DBA) for the database instance.
+        /**
+         * <p>The ID of the database administrator (DBA) for the database instance.</p>
+         */
         @NameInMap("DbaId")
         public String dbaId;
 
-        // The nickname of the DBA for the database instance.
+        /**
+         * <p>The nickname of the DBA for the database instance.</p>
+         */
         @NameInMap("DbaNickName")
         public String dbaNickName;
 
-        // Indicates whether the lock-free schema change feature is enabled for the database instance.
+        /**
+         * <p>Indicates whether the lock-free schema change feature is enabled for the database instance.</p>
+         */
         @NameInMap("DdlOnline")
         public Integer ddlOnline;
 
-        // The ID of the Elastic Compute Service (ECS) instance on which the database instance is deployed.
+        /**
+         * <p>The ID of the Elastic Compute Service (ECS) instance on which the database instance is deployed.</p>
+         */
         @NameInMap("EcsInstanceId")
         public String ecsInstanceId;
 
-        // The ID of the region in which the database instance resides.
+        /**
+         * <p>The ID of the region in which the database instance resides.</p>
+         */
         @NameInMap("EcsRegion")
         public String ecsRegion;
 
-        // The type of the environment to which the database instance belongs. Valid values:
-        // 
-        // *   **product**: production environment
-        // *   **dev**: development environment
-        // *   **pre**: staging environment
-        // *   **test**: test environment
-        // *   **sit**: system integration testing (SIT) environment
-        // *   **uat**: user acceptance testing (UAT) environment
-        // *   **pet**: stress testing environment
-        // *   **stag**: STAG environment
+        /**
+         * <p>The type of the environment to which the database instance belongs. Valid values:</p>
+         * <br>
+         * <p>*   **product**: production environment</p>
+         * <p>*   **dev**: development environment</p>
+         * <p>*   **pre**: staging environment</p>
+         * <p>*   **test**: test environment</p>
+         * <p>*   **sit**: system integration testing (SIT) environment</p>
+         * <p>*   **uat**: user acceptance testing (UAT) environment</p>
+         * <p>*   **pet**: stress testing environment</p>
+         * <p>*   **stag**: STAG environment</p>
+         */
         @NameInMap("EnvType")
         public String envType;
 
-        // The timeout period for exporting data from the database instance.
+        /**
+         * <p>The timeout period for exporting data from the database instance.</p>
+         */
         @NameInMap("ExportTimeout")
         public Integer exportTimeout;
 
-        // The host address that is used to connect to the database instance.
+        /**
+         * <p>The host address that is used to connect to the database instance.</p>
+         */
         @NameInMap("Host")
         public String host;
 
-        // The alias of the database instance.
+        /**
+         * <p>The alias of the database instance.</p>
+         */
         @NameInMap("InstanceAlias")
         public String instanceAlias;
 
-        // The ID of the database instance.
+        /**
+         * <p>The ID of the database instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        // The source of the database instance.
+        /**
+         * <p>The source of the database instance.</p>
+         */
         @NameInMap("InstanceSource")
         public String instanceSource;
 
-        // The type of the database instance.
+        /**
+         * <p>The type of the database instance.</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
-        // The IDs of the owners for the database instance.
+        /**
+         * <p>The IDs of the owners for the database instance.</p>
+         */
         @NameInMap("OwnerIdList")
         public GetInstanceResponseBodyInstanceOwnerIdList ownerIdList;
 
-        // The nicknames of the owners for the database instance.
+        /**
+         * <p>The nicknames of the owners for the database instance.</p>
+         */
         @NameInMap("OwnerNameList")
         public GetInstanceResponseBodyInstanceOwnerNameList ownerNameList;
 
-        // The port number that is used to connect to the database instance.
+        /**
+         * <p>The port number that is used to connect to the database instance.</p>
+         */
         @NameInMap("Port")
         public Integer port;
 
-        // The timeout period for querying data in the database instance.
+        /**
+         * <p>The timeout period for querying data in the database instance.</p>
+         */
         @NameInMap("QueryTimeout")
         public Integer queryTimeout;
 
-        // The ID of the security rule set for the database instance.
+        /**
+         * <p>The ID of the security rule set for the database instance.</p>
+         */
         @NameInMap("SafeRuleId")
         public String safeRuleId;
 
         @NameInMap("SellSitd")
         public String sellSitd;
 
-        // The SID of the database instance.
+        /**
+         * <p>The SID of the database instance.</p>
+         */
         @NameInMap("Sid")
         public String sid;
 
-        // The control mode of the database instance.
+        /**
+         * <p>The control mode of the database instance.</p>
+         */
         @NameInMap("StandardGroup")
         public GetInstanceResponseBodyInstanceStandardGroup standardGroup;
 
-        // The status of the database instance. Valid values:
-        // 
-        // *   **NORMAL**: normal
-        // *   **DISABLE**: disabled
+        /**
+         * <p>The status of the database instance. Valid values:</p>
+         * <br>
+         * <p>*   **NORMAL**: normal</p>
+         * <p>*   **DISABLE**: disabled</p>
+         */
         @NameInMap("State")
         public String state;
 
-        // Indicates whether the cross-database query feature is enabled for the database instance. Valid values:
-        // 
-        // *   **0**: disabled
-        // *   **1**: enabled
+        /**
+         * <p>Indicates whether the cross-database query feature is enabled for the database instance. Valid values:</p>
+         * <br>
+         * <p>*   **0**: disabled</p>
+         * <p>*   **1**: enabled</p>
+         */
         @NameInMap("UseDsql")
         public Integer useDsql;
 
-        // The ID of the virtual private cloud (VPC) to which the database instance belongs.
+        /**
+         * <p>The ID of the virtual private cloud (VPC) to which the database instance belongs.</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 

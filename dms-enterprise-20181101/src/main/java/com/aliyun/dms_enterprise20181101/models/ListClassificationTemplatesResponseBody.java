@@ -4,18 +4,36 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListClassificationTemplatesResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the request failed.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message returned if the request failed.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The request was successful.</p>
+     * <p>*   **false**: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The list of templates.</p>
+     */
     @NameInMap("TemplateList")
     public java.util.List<ListClassificationTemplatesResponseBodyTemplateList> templateList;
 
@@ -65,15 +83,30 @@ public class ListClassificationTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListClassificationTemplatesResponseBodyTemplateList extends TeaModel {
+        /**
+         * <p>The name of the classification template.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The remarks.</p>
+         */
         @NameInMap("Remark")
         public String remark;
 
+        /**
+         * <p>The ID of the classification template.</p>
+         */
         @NameInMap("TemplateId")
         public Long templateId;
 
+        /**
+         * <p>The type of the classification template. Valid values:</p>
+         * <br>
+         * <p>*   **INNER**: built-in template</p>
+         * <p>*   **USER_DEFINE**: custom template</p>
+         */
         @NameInMap("TemplateType")
         public String templateType;
 

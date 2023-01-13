@@ -4,30 +4,42 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListDesensitizationRuleResponseBody extends TeaModel {
-    // The list of masking rules.
+    /**
+     * <p>The list of masking rules.</p>
+     */
     @NameInMap("DesensitizationRuleList")
     public java.util.List<ListDesensitizationRuleResponseBodyDesensitizationRuleList> desensitizationRuleList;
 
-    // The error code returned if the request failed.
+    /**
+     * <p>The error code returned if the request failed.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // The error message returned if the request failed.
+    /**
+     * <p>The error message returned if the request failed.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request was successful. Valid values:
-    // 
-    // *   true: The request was successful.
-    // *   false: The request failed.
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   true: The request was successful.</p>
+     * <p>*   false: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
-    // The total number of entries returned. By default, this parameter is not returned.
+    /**
+     * <p>The total number of entries returned. By default, this parameter is not returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -85,43 +97,63 @@ public class ListDesensitizationRuleResponseBody extends TeaModel {
     }
 
     public static class ListDesensitizationRuleResponseBodyDesensitizationRuleList extends TeaModel {
-        // The parameter.
+        /**
+         * <p>The parameter.</p>
+         */
         @NameInMap("FuncParams")
         public String funcParams;
 
-        // The example.
+        /**
+         * <p>The example.</p>
+         */
         @NameInMap("FuncSample")
         public String funcSample;
 
-        // The algorithm type.
+        /**
+         * <p>The algorithm type.</p>
+         */
         @NameInMap("FunctionType")
         public String functionType;
 
-        // The ID of the user who last modified the masking rule.
+        /**
+         * <p>The ID of the user who last modified the masking rule.</p>
+         */
         @NameInMap("LastModifierId")
         public String lastModifierId;
 
-        // The name of the user who last modified the masking rule.
+        /**
+         * <p>The name of the user who last modified the masking rule.</p>
+         */
         @NameInMap("LastModifierName")
         public String lastModifierName;
 
-        // The number of times that the masking was used.
+        /**
+         * <p>The number of times that the masking was used.</p>
+         */
         @NameInMap("ReferenceCount")
         public Integer referenceCount;
 
-        // The description of the rule.
+        /**
+         * <p>The description of the rule.</p>
+         */
         @NameInMap("RuleDesc")
         public String ruleDesc;
 
-        // The ID of the masking rule.
+        /**
+         * <p>The ID of the masking rule.</p>
+         */
         @NameInMap("RuleId")
         public Integer ruleId;
 
-        // The name of the masking rule.
+        /**
+         * <p>The name of the masking rule.</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 
-        // The algorithm used for masking.
+        /**
+         * <p>The algorithm used for masking.</p>
+         */
         @NameInMap("RuleType")
         public String ruleType;
 

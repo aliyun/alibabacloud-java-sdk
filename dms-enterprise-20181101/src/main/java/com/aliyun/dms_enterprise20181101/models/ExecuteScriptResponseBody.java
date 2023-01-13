@@ -4,23 +4,33 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ExecuteScriptResponseBody extends TeaModel {
-    // The error code.
+    /**
+     * <p>The error code.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // The error message about the gateway.
+    /**
+     * <p>The error message about the gateway.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The results of the SQL statements that are executed, in the format of an array. Each entry in the array indicates the result of an SQL statement.
+    /**
+     * <p>The results of the SQL statements that are executed, in the format of an array. Each entry in the array indicates the result of an SQL statement.</p>
+     */
     @NameInMap("Results")
     public java.util.List<ExecuteScriptResponseBodyResults> results;
 
-    // Indicates whether the request is successful.
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -70,23 +80,33 @@ public class ExecuteScriptResponseBody extends TeaModel {
     }
 
     public static class ExecuteScriptResponseBodyResults extends TeaModel {
-        // The fields that are queried after the SQL statement is executed.
+        /**
+         * <p>The fields that are queried after the SQL statement is executed.</p>
+         */
         @NameInMap("ColumnNames")
         public java.util.List<String> columnNames;
 
-        // The error message that is returned if the SQL statement fails to be executed. For example, an error message is returned because the SQL statement is invalid.
+        /**
+         * <p>The error message that is returned if the SQL statement fails to be executed. For example, an error message is returned because the SQL statement is invalid.</p>
+         */
         @NameInMap("Message")
         public String message;
 
-        // The total number of entries that are returned.
+        /**
+         * <p>The total number of entries that are returned.</p>
+         */
         @NameInMap("RowCount")
         public Long rowCount;
 
-        // The rows that are queried after the SQL statement is executed.
+        /**
+         * <p>The rows that are queried after the SQL statement is executed.</p>
+         */
         @NameInMap("Rows")
         public java.util.List<java.util.Map<String, ?>> rows;
 
-        // Indicates whether the SQL statement is executed.
+        /**
+         * <p>Indicates whether the SQL statement is executed.</p>
+         */
         @NameInMap("Success")
         public Boolean success;
 

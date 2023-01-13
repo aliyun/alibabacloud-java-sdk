@@ -4,27 +4,53 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class CreateTaskRequest extends TeaModel {
+    /**
+     * <p>The ID of the task flow. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to query the task flow ID.</p>
+     */
     @NameInMap("DagId")
     public Long dagId;
 
+    /**
+     * <p>The position of the node on the Directed Acyclic Graph (DAG).</p>
+     */
     @NameInMap("GraphParam")
     public String graphParam;
 
+    /**
+     * <p>The configuration for the node.</p>
+     */
     @NameInMap("NodeContent")
     public String nodeContent;
 
+    /**
+     * <p>The name of the node you want to create.</p>
+     */
     @NameInMap("NodeName")
     public String nodeName;
 
+    /**
+     * <p>The output variables for the task.</p>
+     */
     @NameInMap("NodeOutput")
     public String nodeOutput;
 
+    /**
+     * <p>The type of the node you want to create. For more information about the valid values for this parameter, see [NodeType parameter](~~424705~~).</p>
+     */
     @NameInMap("NodeType")
     public String nodeType;
 
+    /**
+     * <p>The ID of the tenant.</p>
+     * <br>
+     * <p>> To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).</p>
+     */
     @NameInMap("Tid")
     public Long tid;
 
+    /**
+     * <p>The time variables configured for the node.</p>
+     */
     @NameInMap("TimeVariables")
     public String timeVariables;
 

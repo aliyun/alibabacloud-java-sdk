@@ -4,30 +4,42 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListSQLExecAuditLogResponseBody extends TeaModel {
-    // The error code returned.
+    /**
+     * <p>The error code returned.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // The error message returned.
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The entries returned.
+    /**
+     * <p>The entries returned.</p>
+     */
     @NameInMap("SQLExecAuditLogList")
     public ListSQLExecAuditLogResponseBodySQLExecAuditLogList SQLExecAuditLogList;
 
-    // Indicates whether the request was successful. Valid values:
-    // 
-    // *   **true**: The request was successful.
-    // *   **false**: The request failed.
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The request was successful.</p>
+     * <p>*   **false**: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
-    // The number of entries returned.
+    /**
+     * <p>The number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -85,77 +97,105 @@ public class ListSQLExecAuditLogResponseBody extends TeaModel {
     }
 
     public static class ListSQLExecAuditLogResponseBodySQLExecAuditLogListSQLExecAuditLog extends TeaModel {
-        // The number of rows affected by the SQL statement. For example, if you execute an SQL statement to query data, the number of retrieved rows is returned.
+        /**
+         * <p>The number of rows affected by the SQL statement. For example, if you execute an SQL statement to query data, the number of retrieved rows is returned.</p>
+         */
         @NameInMap("AffectRows")
         public Long affectRows;
 
-        // The ID of the database.
+        /**
+         * <p>The ID of the database.</p>
+         */
         @NameInMap("DbId")
         public Long dbId;
 
-        // The amount of time consumed by the execution of the SQL statement. Unit: milliseconds.
+        /**
+         * <p>The amount of time consumed by the execution of the SQL statement. Unit: milliseconds.</p>
+         */
         @NameInMap("ElapsedTime")
         public Long elapsedTime;
 
-        // The execution status of the SQL statement. Valid values:
-        // 
-        // *   **FAIL**: The SQL statement fails to be executed.
-        // *   **NOEXE**: The SQL statement has not been executed.
-        // *   **RUNNING**: The SQL statement is being executed.
-        // *   **CANCEL**: The execution of the SQL statement is canceled.
-        // *   **SUCCESS**: The SQL statement is executed.
+        /**
+         * <p>The execution status of the SQL statement. Valid values:</p>
+         * <br>
+         * <p>*   **FAIL**: The SQL statement fails to be executed.</p>
+         * <p>*   **NOEXE**: The SQL statement has not been executed.</p>
+         * <p>*   **RUNNING**: The SQL statement is being executed.</p>
+         * <p>*   **CANCEL**: The execution of the SQL statement is canceled.</p>
+         * <p>*   **SUCCESS**: The SQL statement is executed.</p>
+         */
         @NameInMap("ExecState")
         public String execState;
 
-        // The ID of the instance.
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public Long instanceId;
 
-        // The name of the database.
-        // 
-        // >  If the SQL statement takes effect on an instance, the name of the instance is returned.
+        /**
+         * <p>The name of the database.</p>
+         * <br>
+         * <p>>  If the SQL statement takes effect on an instance, the name of the instance is returned.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
-        // Indicates whether the database is a logical database. Valid values:
-        // 
-        // *   **true**: The database is a logical database.
-        // *   **false**: The database is a physical database.
+        /**
+         * <p>Indicates whether the database is a logical database. Valid values:</p>
+         * <br>
+         * <p>*   **true**: The database is a logical database.</p>
+         * <p>*   **false**: The database is a physical database.</p>
+         */
         @NameInMap("Logic")
         public Boolean logic;
 
-        // The time when the operation specified by the SQL statement was performed on the instance or database.
+        /**
+         * <p>The time when the operation specified by the SQL statement was performed on the instance or database.</p>
+         */
         @NameInMap("OpTime")
         public String opTime;
 
-        // The comment on the SQL statement.
+        /**
+         * <p>The comment on the SQL statement.</p>
+         */
         @NameInMap("Remark")
         public String remark;
 
-        // The SQL statement that was written.
+        /**
+         * <p>The SQL statement that was written.</p>
+         */
         @NameInMap("SQL")
         public String SQL;
 
-        // The type of the SQL statement. Valid values:
-        // 
-        // *   **SELECT**: the SQL statement that is used to query data.
-        // *   **INSERT**: the SQL statement that is used to insert data.
-        // *   **DELETE**: the SQL statement that is used to delete data.
-        // *   **CREATE_TABLE**: the SQL statement that is used to create tables.
-        // 
-        // >  To view more types of SQL statements, log on to the DMS console and click Security and Specifications. In the left-side navigation pane, click **Operation Audit**. Then, you can view all supported types of SQL statements from the **SQL type** drop-down list.
+        /**
+         * <p>The type of the SQL statement. Valid values:</p>
+         * <br>
+         * <p>*   **SELECT**: the SQL statement that is used to query data.</p>
+         * <p>*   **INSERT**: the SQL statement that is used to insert data.</p>
+         * <p>*   **DELETE**: the SQL statement that is used to delete data.</p>
+         * <p>*   **CREATE_TABLE**: the SQL statement that is used to create tables.</p>
+         * <br>
+         * <p>>  To view more types of SQL statements, log on to the DMS console and click Security and Specifications. In the left-side navigation pane, click **Operation Audit**. Then, you can view all supported types of SQL statements from the **SQL type** drop-down list.</p>
+         */
         @NameInMap("SQLType")
         public String SQLType;
 
-        // The name of the database.
+        /**
+         * <p>The name of the database.</p>
+         */
         @NameInMap("SchemaName")
         public String schemaName;
 
-        // The ID of the user who wrote the SQL statement.
+        /**
+         * <p>The ID of the user who wrote the SQL statement.</p>
+         */
         @NameInMap("UserId")
         public Long userId;
 
-        // The nickname of the user who wrote the SQL statement.
+        /**
+         * <p>The nickname of the user who wrote the SQL statement.</p>
+         */
         @NameInMap("UserName")
         public String userName;
 

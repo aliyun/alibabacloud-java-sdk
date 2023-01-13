@@ -4,26 +4,36 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetLhSpaceByNameResponseBody extends TeaModel {
-    // The error code returned if the request fails.
+    /**
+     * <p>The error code returned if the request fails.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // The error message returned if the request fails.
+    /**
+     * <p>The error message returned if the request fails.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    // The workspace for data warehouse development.
+    /**
+     * <p>The workspace for data warehouse development.</p>
+     */
     @NameInMap("LakehouseSpace")
     public GetLhSpaceByNameResponseBodyLakehouseSpace lakehouseSpace;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request is successful. Valid values:
-    // 
-    // *   **true**: The request is successful.
-    // *   **false**: The request fails.
+    /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The request is successful.</p>
+     * <p>*   **false**: The request fails.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -73,59 +83,81 @@ public class GetLhSpaceByNameResponseBody extends TeaModel {
     }
 
     public static class GetLhSpaceByNameResponseBodyLakehouseSpace extends TeaModel {
-        // The ID of the user who creates the workspace.
+        /**
+         * <p>The ID of the user who creates the workspace.</p>
+         */
         @NameInMap("CreatorId")
         public String creatorId;
 
-        // The description of the workspace.
+        /**
+         * <p>The description of the workspace.</p>
+         */
         @NameInMap("Description")
         public String description;
 
-        // The ID of the development database.
+        /**
+         * <p>The ID of the development database.</p>
+         */
         @NameInMap("DevDbId")
         public Integer devDbId;
 
-        // The type of the database. Valid values:
-        // 
-        // *   **14**: AnalyticDB for MySQL
-        // *   **18**: AnalyticDB for PostgreSQL
+        /**
+         * <p>The type of the database. Valid values:</p>
+         * <br>
+         * <p>*   **14**: AnalyticDB for MySQL</p>
+         * <p>*   **18**: AnalyticDB for PostgreSQL</p>
+         */
         @NameInMap("DwDbType")
         public String dwDbType;
 
-        // The ID of the workspace.
+        /**
+         * <p>The ID of the workspace.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
-        // Indicates whether the workspace is deleted. Valid values:
-        // 
-        // *   **true**: The workspace is deleted.
-        // *   **false**: The workspace is not deleted.
+        /**
+         * <p>Indicates whether the workspace is deleted. Valid values:</p>
+         * <br>
+         * <p>*   **true**: The workspace is deleted.</p>
+         * <p>*   **false**: The workspace is not deleted.</p>
+         */
         @NameInMap("IsDeleted")
         public Boolean isDeleted;
 
-        // The mode in which the workspace runs. Valid values:
-        // 
-        // *   **0**: basic mode
-        // *   **1**: standard mode
+        /**
+         * <p>The mode in which the workspace runs. Valid values:</p>
+         * <br>
+         * <p>*   **0**: basic mode</p>
+         * <p>*   **1**: standard mode</p>
+         */
         @NameInMap("Mode")
         public Integer mode;
 
-        // The ID of the production database.
+        /**
+         * <p>The ID of the production database.</p>
+         */
         @NameInMap("ProdDbId")
         public Integer prodDbId;
 
-        // The configuration of the workspace. Valid values:
-        // 
-        // *   **skipManualRunCheck**: No security rule check is required in the trial run phase.
-        // *   **skipPublishApprove**: No approval is required for publishing and O\&M.
+        /**
+         * <p>The configuration of the workspace. Valid values:</p>
+         * <br>
+         * <p>*   **skipManualRunCheck**: No security rule check is required in the trial run phase.</p>
+         * <p>*   **skipPublishApprove**: No approval is required for publishing and O\&M.</p>
+         */
         @NameInMap("SpaceConfig")
         public String spaceConfig;
 
-        // The name of the workspace.
+        /**
+         * <p>The name of the workspace.</p>
+         */
         @NameInMap("SpaceName")
         public String spaceName;
 
-        // The ID of the tenant to which the workspace belongs.
+        /**
+         * <p>The ID of the tenant to which the workspace belongs.</p>
+         */
         @NameInMap("TenantId")
         public String tenantId;
 

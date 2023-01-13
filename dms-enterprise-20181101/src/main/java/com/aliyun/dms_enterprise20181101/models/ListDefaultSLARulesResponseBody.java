@@ -4,26 +4,36 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListDefaultSLARulesResponseBody extends TeaModel {
-    // The error code returned if the request failed.
+    /**
+     * <p>The error code returned if the request failed.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // The error message returned if the request failed.
+    /**
+     * <p>The error message returned if the request failed.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    // The ID of the request. You can use the ID to query logs and troubleshoot issues.
+    /**
+     * <p>The ID of the request. You can use the ID to query logs and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The list of SLA rules.
+    /**
+     * <p>The list of SLA rules.</p>
+     */
     @NameInMap("SLARuleList")
     public ListDefaultSLARulesResponseBodySLARuleList SLARuleList;
 
-    // Indicates whether the request was successful. Valid values:
-    // 
-    // *   **true**: The request was successful.
-    // *   **false**: The request failed.
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The request was successful.</p>
+     * <p>*   **false**: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -73,26 +83,36 @@ public class ListDefaultSLARulesResponseBody extends TeaModel {
     }
 
     public static class ListDefaultSLARulesResponseBodySLARuleListSLARule extends TeaModel {
-        // The ID of the task flow.
+        /**
+         * <p>The ID of the task flow.</p>
+         */
         @NameInMap("DagId")
         public Long dagId;
 
-        // The ID of the SLA rule.
+        /**
+         * <p>The ID of the SLA rule.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
-        // The timeout period. Unit: minutes.
+        /**
+         * <p>The timeout period. Unit: minutes.</p>
+         */
         @NameInMap("IntervalMinutes")
         public Integer intervalMinutes;
 
-        // The ID of the task node.
+        /**
+         * <p>The ID of the task node.</p>
+         */
         @NameInMap("NodeId")
         public Long nodeId;
 
-        // The type of the rule. Valid values:
-        // 
-        // *   **0**: an SLA rule for a task flow
-        // *   **1**: an SLA rule for a task node
+        /**
+         * <p>The type of the rule. Valid values:</p>
+         * <br>
+         * <p>*   **0**: an SLA rule for a task flow</p>
+         * <p>*   **1**: an SLA rule for a task node</p>
+         */
         @NameInMap("RuleType")
         public Integer ruleType;
 

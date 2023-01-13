@@ -4,30 +4,42 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListDBTaskSQLJobDetailResponseBody extends TeaModel {
-    // The details of SQL tasks.
+    /**
+     * <p>The details of SQL tasks.</p>
+     */
     @NameInMap("DBTaskSQLJobDetailList")
     public java.util.List<ListDBTaskSQLJobDetailResponseBodyDBTaskSQLJobDetailList> DBTaskSQLJobDetailList;
 
-    // The error code that is returned.
+    /**
+     * <p>The error code that is returned.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // The error message that is returned.
+    /**
+     * <p>The error message that is returned.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request is successful. Valid values:
-    // 
-    // *   **true**: The request is successful.
-    // *   **false**: The request fails.
+    /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The request is successful.</p>
+     * <p>*   **false**: The request fails.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
-    // The total number of SQL tasks.
+    /**
+     * <p>The total number of SQL tasks.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -85,74 +97,102 @@ public class ListDBTaskSQLJobDetailResponseBody extends TeaModel {
     }
 
     public static class ListDBTaskSQLJobDetailResponseBodyDBTaskSQLJobDetailList extends TeaModel {
-        // The number of rows affected by the SQL task.
+        /**
+         * <p>The number of rows affected by the SQL task.</p>
+         */
         @NameInMap("AffectRows")
         public Long affectRows;
 
-        // The SQL statement that was executed in the SQL task.
+        /**
+         * <p>The SQL statement that was executed in the SQL task.</p>
+         */
         @NameInMap("CurrentSql")
         public String currentSql;
 
-        // The ID of the physical database.
+        /**
+         * <p>The ID of the physical database.</p>
+         */
         @NameInMap("DbId")
         public Long dbId;
 
-        // The point in time when the SQL task ended.
+        /**
+         * <p>The point in time when the SQL task ended.</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
-        // The number of times that the SQL statement was executed.
+        /**
+         * <p>The number of times that the SQL statement was executed.</p>
+         */
         @NameInMap("ExecuteCount")
         public Long executeCount;
 
-        // The ID of the details of the SQL task.
+        /**
+         * <p>The ID of the details of the SQL task.</p>
+         */
         @NameInMap("JobDetailId")
         public Long jobDetailId;
 
-        // The ID of the SQL task.
+        /**
+         * <p>The ID of the SQL task.</p>
+         */
         @NameInMap("JobId")
         public Long jobId;
 
-        // The details of the operational log.
+        /**
+         * <p>The details of the operational log.</p>
+         */
         @NameInMap("Log")
         public String log;
 
-        // Indicates whether the database is a logical database. Valid values:
-        // 
-        // *   **true**: The database is a logical database.
-        // *   **false**: The database is a physical database.
+        /**
+         * <p>Indicates whether the database is a logical database. Valid values:</p>
+         * <br>
+         * <p>*   **true**: The database is a logical database.</p>
+         * <p>*   **false**: The database is a physical database.</p>
+         */
         @NameInMap("Logic")
         public Boolean logic;
 
-        // Indicates whether the SQL statement was skipped. Valid values:
-        // 
-        // *   **true**: The SQL statement was skipped.
-        // *   **false**: The SQL statement was not skipped.
+        /**
+         * <p>Indicates whether the SQL statement was skipped. Valid values:</p>
+         * <br>
+         * <p>*   **true**: The SQL statement was skipped.</p>
+         * <p>*   **false**: The SQL statement was not skipped.</p>
+         */
         @NameInMap("Skip")
         public Boolean skip;
 
-        // The type of the SQL statement, such as DELETE, UPDATE, or ALTER_TABLE.
+        /**
+         * <p>The type of the SQL statement, such as DELETE, UPDATE, or ALTER_TABLE.</p>
+         */
         @NameInMap("SqlType")
         public String sqlType;
 
-        // The point in time when the SQL task started.
+        /**
+         * <p>The point in time when the SQL task started.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
-        // The status of the SQL task. Valid values:
-        // 
-        // *   **INIT**: The SQL task was initialized.
-        // *   **PENDING**: The SQL task waited to be run.
-        // *   **BE_SCHEDULED**: The SQL task waited to be scheduled.
-        // *   **FAIL**: The SQL task failed.
-        // *   **SUCCESS**: The SQL task was successful.
-        // *   **PAUSE**: The SQL task was paused.
-        // *   **DELETE**: The SQL task was deleted.
-        // *   **RUNNING**: The SQL task was being run.
+        /**
+         * <p>The status of the SQL task. Valid values:</p>
+         * <br>
+         * <p>*   **INIT**: The SQL task was initialized.</p>
+         * <p>*   **PENDING**: The SQL task waited to be run.</p>
+         * <p>*   **BE_SCHEDULED**: The SQL task waited to be scheduled.</p>
+         * <p>*   **FAIL**: The SQL task failed.</p>
+         * <p>*   **SUCCESS**: The SQL task was successful.</p>
+         * <p>*   **PAUSE**: The SQL task was paused.</p>
+         * <p>*   **DELETE**: The SQL task was deleted.</p>
+         * <p>*   **RUNNING**: The SQL task was being run.</p>
+         */
         @NameInMap("Status")
         public String status;
 
-        // The duration of the SQL task. Unit: milliseconds.
+        /**
+         * <p>The duration of the SQL task. Unit: milliseconds.</p>
+         */
         @NameInMap("TimeDelay")
         public Long timeDelay;
 

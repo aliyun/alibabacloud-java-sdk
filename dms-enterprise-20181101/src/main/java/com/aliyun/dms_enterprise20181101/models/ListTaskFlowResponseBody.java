@@ -4,26 +4,36 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListTaskFlowResponseBody extends TeaModel {
-    // The error code.
+    /**
+     * <p>The error code.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // The error message.
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request was successful. Valid values:
-    // 
-    // *   **true**: The request was successful.
-    // *   **false**: The request failed.
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The request was successful.</p>
+     * <p>*   **false**: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
-    // The information about the task flows returned.
+    /**
+     * <p>The information about the task flows returned.</p>
+     */
     @NameInMap("TaskFlowList")
     public ListTaskFlowResponseBodyTaskFlowList taskFlowList;
 
@@ -73,43 +83,59 @@ public class ListTaskFlowResponseBody extends TeaModel {
     }
 
     public static class ListTaskFlowResponseBodyTaskFlowListTaskFlow extends TeaModel {
-        // The ID of the user who creates the task flow.
+        /**
+         * <p>The ID of the user who creates the task flow.</p>
+         */
         @NameInMap("CreatorId")
         public String creatorId;
 
-        // The name of the user who creates the task flow.
+        /**
+         * <p>The name of the user who creates the task flow.</p>
+         */
         @NameInMap("CreatorNickName")
         public String creatorNickName;
 
-        // The name of the task flow owner.
+        /**
+         * <p>The name of the task flow owner.</p>
+         */
         @NameInMap("DagOwnerNickName")
         public String dagOwnerNickName;
 
-        // The ID of the latest deployment record.
+        /**
+         * <p>The ID of the latest deployment record.</p>
+         */
         @NameInMap("DeployId")
         public Long deployId;
 
-        // The ID of the task flow.
+        /**
+         * <p>The ID of the task flow.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
-        // The status of the latest execution. Valid values:
-        // 
-        // *   **0**: invalid.
-        // *   **1**: scheduling disabled.
-        // *   **2**: waiting to be scheduled.
+        /**
+         * <p>The status of the latest execution. Valid values:</p>
+         * <br>
+         * <p>*   **0**: invalid.</p>
+         * <p>*   **1**: scheduling disabled.</p>
+         * <p>*   **2**: waiting to be scheduled.</p>
+         */
         @NameInMap("LatestInstanceStatus")
         public Integer latestInstanceStatus;
 
-        // The time when the latest execution record was generated.
+        /**
+         * <p>The time when the latest execution record was generated.</p>
+         */
         @NameInMap("LatestInstanceTime")
         public String latestInstanceTime;
 
-        // The status of the task flow. Valid values:
-        // 
-        // *   **0**: The task flow is invalid.
-        // *   **1**: Scheduling is disabled for the task flow.
-        // *   **2**: The task flow is waiting to be scheduled.
+        /**
+         * <p>The status of the task flow. Valid values:</p>
+         * <br>
+         * <p>*   **0**: The task flow is invalid.</p>
+         * <p>*   **1**: Scheduling is disabled for the task flow.</p>
+         * <p>*   **2**: The task flow is waiting to be scheduled.</p>
+         */
         @NameInMap("Status")
         public Integer status;
 

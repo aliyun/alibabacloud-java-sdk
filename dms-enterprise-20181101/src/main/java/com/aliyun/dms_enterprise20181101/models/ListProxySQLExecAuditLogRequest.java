@@ -4,50 +4,68 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListProxySQLExecAuditLogRequest extends TeaModel {
-    // The end of the time range to query. The value of this parameter must be a timestamp that follows the UNIX time format.
+    /**
+     * <p>The end of the time range to query. The value of this parameter must be a timestamp that follows the UNIX time format.</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
-    // The execution status of the SQL statement. Valid values:
-    // 
-    // *   **FAIL**: The execution of the SQL statement fails.
-    // *   **CANCEL**: The execution of the SQL statement is canceled.
-    // *   **SUCCESS**: The SQL statement is executed.
+    /**
+     * <p>The execution status of the SQL statement. Valid values:</p>
+     * <br>
+     * <p>*   **FAIL**: The execution of the SQL statement fails.</p>
+     * <p>*   **CANCEL**: The execution of the SQL statement is canceled.</p>
+     * <p>*   **SUCCESS**: The SQL statement is executed.</p>
+     */
     @NameInMap("ExecState")
     public String execState;
 
-    // The alias of the user.
+    /**
+     * <p>The alias of the user.</p>
+     */
     @NameInMap("OpUserName")
     public String opUserName;
 
-    // The number of the page to return.
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // The number of entries to return on each page. Maximum values: 100.
+    /**
+     * <p>The number of entries to return on each page. Maximum values: 100.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The type of SQL statement. Valid values:
-    // 
-    // *   **SELECT**
-    // *   **INSERT**
-    // *   **DELETE**
-    // *   **CREATE_TABLE**
-    // 
-    // >  You can choose Operation Audit > Secure Access Proxy in the top navigation bar of the DMS console to view more types of SQL statements.
+    /**
+     * <p>The type of SQL statement. Valid values:</p>
+     * <br>
+     * <p>*   **SELECT**</p>
+     * <p>*   **INSERT**</p>
+     * <p>*   **DELETE**</p>
+     * <p>*   **CREATE_TABLE**</p>
+     * <br>
+     * <p>>  You can choose Operation Audit > Secure Access Proxy in the top navigation bar of the DMS console to view more types of SQL statements.</p>
+     */
     @NameInMap("SQLType")
     public String SQLType;
 
-    // The name of the database instance.
+    /**
+     * <p>The name of the database instance.</p>
+     */
     @NameInMap("SearchName")
     public String searchName;
 
-    // The beginning of the time range to query. The value of this parameter must be a timestamp that follows the UNIX time format.
+    /**
+     * <p>The beginning of the time range to query. The value of this parameter must be a timestamp that follows the UNIX time format.</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 
-    // The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the tenant ID.
+    /**
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the tenant ID.</p>
+     */
     @NameInMap("Tid")
     public Long tid;
 

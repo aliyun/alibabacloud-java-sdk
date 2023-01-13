@@ -4,23 +4,31 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ApproveOrderRequest extends TeaModel {
-    // The action that you want to perform on the ticket. Valid values:
-    // 
-    // *   AGREE: approve
-    // *   CANCEL: cancel
-    // *   REJECT: reject
+    /**
+     * <p>The action that you want to perform on the ticket. Valid values:</p>
+     * <br>
+     * <p>*   AGREE: approve</p>
+     * <p>*   CANCEL: cancel</p>
+     * <p>*   REJECT: reject</p>
+     */
     @NameInMap("ApprovalType")
     public String approvalType;
 
-    // The description of the ticket.
+    /**
+     * <p>The description of the ticket.</p>
+     */
     @NameInMap("Comment")
     public String comment;
 
-    // The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to obtain the tenant ID.
+    /**
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to obtain the tenant ID.</p>
+     */
     @NameInMap("Tid")
     public Long tid;
 
-    // The ID of the approval process. You can call the [GetOrderBaseInfo](~~144642~~) operation to obtain the ID of the approval process.
+    /**
+     * <p>The ID of the approval process. You can call the [GetOrderBaseInfo](~~144642~~) operation to obtain the ID of the approval process.</p>
+     */
     @NameInMap("WorkflowInstanceId")
     public Long workflowInstanceId;
 

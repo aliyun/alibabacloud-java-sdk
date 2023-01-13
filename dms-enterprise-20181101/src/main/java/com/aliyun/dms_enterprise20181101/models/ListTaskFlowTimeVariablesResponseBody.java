@@ -4,18 +4,36 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListTaskFlowTimeVariablesResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the request failed.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message returned if the request failed.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The request was successful.</p>
+     * <p>*   **false**: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The time variables for the task flow.</p>
+     */
     @NameInMap("TimeVariables")
     public ListTaskFlowTimeVariablesResponseBodyTimeVariables timeVariables;
 
@@ -65,9 +83,15 @@ public class ListTaskFlowTimeVariablesResponseBody extends TeaModel {
     }
 
     public static class ListTaskFlowTimeVariablesResponseBodyTimeVariablesTimeVariable extends TeaModel {
+        /**
+         * <p>The name of the time variable.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The format of the time variable.</p>
+         */
         @NameInMap("Pattern")
         public String pattern;
 

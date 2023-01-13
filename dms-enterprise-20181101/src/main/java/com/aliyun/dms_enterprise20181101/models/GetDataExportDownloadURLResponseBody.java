@@ -4,26 +4,36 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetDataExportDownloadURLResponseBody extends TeaModel {
-    // The details about the download URL of the file that records the export results for the ticket.
+    /**
+     * <p>The details about the download URL of the file that records the export results for the ticket.</p>
+     */
     @NameInMap("DownloadURLResult")
     public GetDataExportDownloadURLResponseBodyDownloadURLResult downloadURLResult;
 
-    // The error code.
+    /**
+     * <p>The error code.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // The error message.
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request was successful. Valid values:
-    // 
-    // *   **true**: The request was successful.
-    // *   **false**: The request failed.
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The request was successful.</p>
+     * <p>*   **false**: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -73,18 +83,24 @@ public class GetDataExportDownloadURLResponseBody extends TeaModel {
     }
 
     public static class GetDataExportDownloadURLResponseBodyDownloadURLResult extends TeaModel {
-        // Indicates whether export results are available for download. Valid values:
-        // 
-        // *   **true**: Export results are available for download.
-        // *   **false**: No export results are available for download.
+        /**
+         * <p>Indicates whether export results are available for download. Valid values:</p>
+         * <br>
+         * <p>*   **true**: Export results are available for download.</p>
+         * <p>*   **false**: No export results are available for download.</p>
+         */
         @NameInMap("HasResult")
         public Boolean hasResult;
 
-        // The message that indicates an exception.
+        /**
+         * <p>The message that indicates an exception.</p>
+         */
         @NameInMap("TipMessage")
         public String tipMessage;
 
-        // The download URL of the file that records the export results for the ticket.
+        /**
+         * <p>The download URL of the file that records the export results for the ticket.</p>
+         */
         @NameInMap("URL")
         public String URL;
 

@@ -4,41 +4,53 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListUsersRequest extends TeaModel {
-    // The number of the page to return.
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // The number of entries to return on each page.
-    // 
-    // >  Valid values: 10, 20, 50, and 100. Default value: 10.
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>>  Valid values: 10, 20, 50, and 100. Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The role that is assigned to the user. Valid values:
-    // 
-    // *   **USER**: a regular user role.
-    // *   **DBA**: a database administrator (DBA) role.
-    // *   **ADMIN**: a Data Management (DMS) administrator role.
-    // *   **SECURITY_ADMIN**: a security administrator role.
-    // *   **STRUCT_READ_ONLY**: a schema read-only user role.
-    // 
-    // >  To check your role, move the pointer over the profile picture in the upper-right corner of the DMS console.
+    /**
+     * <p>The role that is assigned to the user. Valid values:</p>
+     * <br>
+     * <p>*   **USER**: a regular user role.</p>
+     * <p>*   **DBA**: a database administrator (DBA) role.</p>
+     * <p>*   **ADMIN**: a Data Management (DMS) administrator role.</p>
+     * <p>*   **SECURITY_ADMIN**: a security administrator role.</p>
+     * <p>*   **STRUCT\_READ\_ONLY**: a schema read-only user role.</p>
+     * <br>
+     * <p>>  To check your role, move the pointer over the profile picture in the upper-right corner of the DMS console.</p>
+     */
     @NameInMap("Role")
     public String role;
 
-    // The search keyword. Fuzzy match is supported.
+    /**
+     * <p>The search keyword. Fuzzy match is supported.</p>
+     */
     @NameInMap("SearchKey")
     public String searchKey;
 
-    // The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the ID of the tenant.
+    /**
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the ID of the tenant.</p>
+     */
     @NameInMap("Tid")
     public Long tid;
 
-    // The status of the user. Valid values:
-    // 
-    // *   **NORMAL**: The user is normal.
-    // *   **DISABLE**: The user is disabled.
-    // *   **DELETE**: The user is deleted.
+    /**
+     * <p>The status of the user. Valid values:</p>
+     * <br>
+     * <p>*   **NORMAL**: The user is normal.</p>
+     * <p>*   **DISABLE**: The user is disabled.</p>
+     * <p>*   **DELETE**: The user is deleted.</p>
+     */
     @NameInMap("UserState")
     public String userState;
 
