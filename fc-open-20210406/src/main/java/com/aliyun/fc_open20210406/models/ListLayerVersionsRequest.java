@@ -4,11 +4,15 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class ListLayerVersionsRequest extends TeaModel {
-    // The maximum number of resources to return. Default value: 20. Maximum value: 100. The number of returned resources is less than or equal to the specified number.
+    /**
+     * <p>The maximum number of resources to return. Default value: 20. Maximum value: 100. The number of returned resources is less than or equal to the specified number.</p>
+     */
     @NameInMap("limit")
     public Integer limit;
 
-    // The initial version of the layer.
+    /**
+     * <p>The initial version of the layer.</p>
+     */
     @NameInMap("startVersion")
     public Integer startVersion;
 

@@ -4,7 +4,9 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class GetFunctionOnDemandConfigRequest extends TeaModel {
-    // The alias of the service or LATEST.
+    /**
+     * <p>The alias of the service or LATEST.</p>
+     */
     @NameInMap("qualifier")
     public String qualifier;
 

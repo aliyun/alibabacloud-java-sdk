@@ -4,7 +4,9 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class GetProvisionConfigRequest extends TeaModel {
-    // The name of the alias.
+    /**
+     * <p>The name of the alias.</p>
+     */
     @NameInMap("qualifier")
     public String qualifier;
 

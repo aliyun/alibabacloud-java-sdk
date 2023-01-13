@@ -4,11 +4,15 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class RegisterEventSourceRequest extends TeaModel {
-    // The Alibaba Cloud Resource Name (ARN) of the event source.
+    /**
+     * <p>The Alibaba Cloud Resource Name (ARN) of the event source.</p>
+     */
     @NameInMap("sourceArn")
     public String sourceArn;
 
-    // The version or alias of the service.
+    /**
+     * <p>The version or alias of the service.</p>
+     */
     @NameInMap("qualifier")
     public String qualifier;
 

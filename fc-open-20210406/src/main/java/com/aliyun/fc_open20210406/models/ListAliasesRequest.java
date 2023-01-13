@@ -4,19 +4,27 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class ListAliasesRequest extends TeaModel {
-    // The maximum number of resources to return.
+    /**
+     * <p>The maximum number of resources to return.</p>
+     */
     @NameInMap("limit")
     public Integer limit;
 
-    // The token used to obtain more results.
+    /**
+     * <p>The token used to obtain more results.</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
-    // The prefix.
+    /**
+     * <p>The prefix.</p>
+     */
     @NameInMap("prefix")
     public String prefix;
 
-    // The starting position of the result list.
+    /**
+     * <p>The starting position of the result list.</p>
+     */
     @NameInMap("startKey")
     public String startKey;
 

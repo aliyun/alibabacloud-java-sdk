@@ -4,43 +4,63 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class CreateLayerVersionResponseBody extends TeaModel {
-    // The access mode of the layer.
+    /**
+     * <p>The access mode of the layer.</p>
+     */
     @NameInMap("acl")
     public Integer acl;
 
-    // The name of the layer.
+    /**
+     * <p>The name of the layer.</p>
+     */
     @NameInMap("arn")
     public String arn;
 
-    // The information about the layer code package.
+    /**
+     * <p>The information about the layer code package.</p>
+     */
     @NameInMap("code")
     public OutputCodeLocation code;
 
-    // The checksum of the layer code package.
+    /**
+     * <p>The checksum of the layer code package.</p>
+     */
     @NameInMap("codeChecksum")
     public String codeChecksum;
 
-    // The size of the layer code package. Unit: Byte.
+    /**
+     * <p>The size of the layer code package. Unit: Byte.</p>
+     */
     @NameInMap("codesize")
     public Long codesize;
 
-    // The list of runtime environments that are supported by the layer.
+    /**
+     * <p>The list of runtime environments that are supported by the layer.</p>
+     */
     @NameInMap("compatibleRuntime")
     public java.util.List<String> compatibleRuntime;
 
-    // The time when the layer version was created. The time follows the **yyyy-MM-ddTHH:mm:ssZ** format.
+    /**
+     * <p>The time when the layer version was created. The time follows the **yyyy-MM-ddTHH:mm:ssZ** format.</p>
+     */
     @NameInMap("createTime")
     public String createTime;
 
-    // The description of the layer version.
+    /**
+     * <p>The description of the layer version.</p>
+     */
     @NameInMap("description")
     public String description;
 
-    // The name of the layer.
+    /**
+     * <p>The name of the layer.</p>
+     */
     @NameInMap("layerName")
     public String layerName;
 
-    // The version of the layer.
+    /**
+     * <p>The version of the layer.</p>
+     */
     @NameInMap("version")
     public Integer version;
 

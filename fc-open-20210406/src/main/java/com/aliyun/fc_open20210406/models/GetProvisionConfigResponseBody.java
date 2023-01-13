@@ -4,31 +4,45 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class GetProvisionConfigResponseBody extends TeaModel {
-    // Specifies whether to always allocate CPU to a function instance.
+    /**
+     * <p>Specifies whether to always allocate CPU to a function instance.</p>
+     */
     @NameInMap("alwaysAllocateCPU")
     public Boolean alwaysAllocateCPU;
 
-    // The actual number of provisioned instances.
+    /**
+     * <p>The actual number of provisioned instances.</p>
+     */
     @NameInMap("current")
     public Long current;
 
-    // The error message returned if a provisioned instance fails to be created.
+    /**
+     * <p>The error message returned if a provisioned instance fails to be created.</p>
+     */
     @NameInMap("currentError")
     public String currentError;
 
-    // The description of the resource.
+    /**
+     * <p>The description of the resource.</p>
+     */
     @NameInMap("resource")
     public String resource;
 
-    // The configurations of scheduled auto scaling.
+    /**
+     * <p>The configurations of scheduled auto scaling.</p>
+     */
     @NameInMap("scheduledActions")
     public java.util.List<ScheduledActions> scheduledActions;
 
-    // The expected number of provisioned instances.
+    /**
+     * <p>The expected number of provisioned instances.</p>
+     */
     @NameInMap("target")
     public Long target;
 
-    // The configurations of metric-based auto scaling.
+    /**
+     * <p>The configurations of metric-based auto scaling.</p>
+     */
     @NameInMap("targetTrackingPolicies")
     public java.util.List<TargetTrackingPolicies> targetTrackingPolicies;
 

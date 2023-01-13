@@ -4,42 +4,60 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class PutFunctionAsyncInvokeConfigResponseBody extends TeaModel {
-    // The creation time.
+    /**
+     * <p>The creation time.</p>
+     */
     @NameInMap("createdTime")
     public String createdTime;
 
-    // The configuration structure of the destination for asynchronous invocation.
+    /**
+     * <p>The configuration structure of the destination for asynchronous invocation.</p>
+     */
     @NameInMap("destinationConfig")
     public DestinationConfig destinationConfig;
 
-    // The name of the function.
+    /**
+     * <p>The name of the function.</p>
+     */
     @NameInMap("function")
     public String function;
 
-    // The time when the configuration was last modified.
+    /**
+     * <p>The time when the configuration was last modified.</p>
+     */
     @NameInMap("lastModifiedTime")
     public String lastModifiedTime;
 
-    // The maximum validity period of messages.
+    /**
+     * <p>The maximum validity period of messages.</p>
+     */
     @NameInMap("maxAsyncEventAgeInSeconds")
     public Long maxAsyncEventAgeInSeconds;
 
-    // The maximum number of retries allowed after an asynchronous invocation fails.
+    /**
+     * <p>The maximum number of retries allowed after an asynchronous invocation fails.</p>
+     */
     @NameInMap("maxAsyncRetryAttempts")
     public Long maxAsyncRetryAttempts;
 
-    // The qualifier.
+    /**
+     * <p>The qualifier.</p>
+     */
     @NameInMap("qualifier")
     public String qualifier;
 
-    // The name of the service.
+    /**
+     * <p>The name of the service.</p>
+     */
     @NameInMap("service")
     public String service;
 
-    // Specifies whether to enable the asynchronous task feature. 
-    // 
-    // - **true**: enables the asynchronous task feature. 
-    // - **false**: does not enable the asynchronous task feature.
+    /**
+     * <p>Specifies whether to enable the asynchronous task feature. </p>
+     * <br>
+     * <p>- **true**: enables the asynchronous task feature. </p>
+     * <p>- **false**: does not enable the asynchronous task feature.</p>
+     */
     @NameInMap("statefulInvocation")
     public Boolean statefulInvocation;
 

@@ -4,19 +4,27 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class ListServicesRequest extends TeaModel {
-    // The maximum number of resources to return. Default value: 20. Maximum value: 100. The number of returned configurations is less than or equal to the specified number.
+    /**
+     * <p>The maximum number of resources to return. Default value: 20. Maximum value: 100. The number of returned configurations is less than or equal to the specified number.</p>
+     */
     @NameInMap("limit")
     public Integer limit;
 
-    // The starting position of the query. If this parameter is left empty, the query starts from the beginning. You do not need to specify this parameter in the first query. If the number of asynchronous tasks exceeds the limit, the nextToken parameter is returned, the value of which can be used in subsequent calls to obtain more results.
+    /**
+     * <p>The starting position of the query. If this parameter is left empty, the query starts from the beginning. You do not need to specify this parameter in the first query. If the number of asynchronous tasks exceeds the limit, the nextToken parameter is returned, the value of which can be used in subsequent calls to obtain more results.</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
-    // The prefix that the names of returned resources must contain. If the name prefix is a, the names of returned resources must start with a.
+    /**
+     * <p>The prefix that the names of returned resources must contain. If the name prefix is a, the names of returned resources must start with a.</p>
+     */
     @NameInMap("prefix")
     public String prefix;
 
-    // The returned resources are sorted in alphabetical order, and the resources that include and follow the resource specified by the startKey parameter are returned.
+    /**
+     * <p>The returned resources are sorted in alphabetical order, and the resources that include and follow the resource specified by the startKey parameter are returned.</p>
+     */
     @NameInMap("startKey")
     public String startKey;
 

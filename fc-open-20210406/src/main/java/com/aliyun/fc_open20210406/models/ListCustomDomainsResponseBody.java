@@ -4,11 +4,15 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class ListCustomDomainsResponseBody extends TeaModel {
-    // The information about custom domain names.
+    /**
+     * <p>The information about custom domain names.</p>
+     */
     @NameInMap("customDomains")
     public java.util.List<ListCustomDomainsResponseBodyCustomDomains> customDomains;
 
-    // The token used to obtain more results. If the number of resources exceeds the limit, the nextToken parameter is returned. You can include the parameter in subsequent calls to obtain more results. You do not need to provide this parameter in the first call.
+    /**
+     * <p>The token used to obtain more results. If the number of resources exceeds the limit, the nextToken parameter is returned. You can include the parameter in subsequent calls to obtain more results. You do not need to provide this parameter in the first call.</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
@@ -34,45 +38,66 @@ public class ListCustomDomainsResponseBody extends TeaModel {
     }
 
     public static class ListCustomDomainsResponseBodyCustomDomains extends TeaModel {
-        // The ID of the account.
+        /**
+         * <p>The ID of the account.</p>
+         */
         @NameInMap("accountId")
         public String accountId;
 
-        // The version of the API.
+        /**
+         * <p>The version of the API.</p>
+         */
         @NameInMap("apiVersion")
         public String apiVersion;
 
-        // The configurations of the HTTPS certificate.
+        /**
+         * <p>The configurations of the HTTPS certificate.</p>
+         */
         @NameInMap("certConfig")
         public CertConfig certConfig;
 
-        // The time when the domain name was added.
+        /**
+         * <p>The time when the domain name was added.</p>
+         */
         @NameInMap("createdTime")
         public String createdTime;
 
-        // The domain name.
+        /**
+         * <p>The domain name.</p>
+         */
         @NameInMap("domainName")
         public String domainName;
 
-        // The time when the domain name was last modified.
+        /**
+         * <p>The time when the domain name was last modified.</p>
+         */
         @NameInMap("lastModifiedTime")
         public String lastModifiedTime;
 
-        // The protocol types supported by the domain name. Valid values: 
-        // 
-        // - **HTTP**: Only HTTP is supported. 
-        // - **HTTPS**: Only HTTPS is supported. 
-        // - **HTTP,HTTPS**: Both HTTP and HTTPS are supported.
+        /**
+         * <p>The protocol types supported by the domain name. Valid values: </p>
+         * <br>
+         * <p>- **HTTP**: Only HTTP is supported. </p>
+         * <p>- **HTTPS**: Only HTTPS is supported. </p>
+         * <p>- **HTTP,HTTPS**: Both HTTP and HTTPS are supported.</p>
+         */
         @NameInMap("protocol")
         public String protocol;
 
-        // The route table that maps the paths to functions when the functions are invoked by using the custom domain name.
+        /**
+         * <p>The route table that maps the paths to functions when the functions are invoked by using the custom domain name.</p>
+         */
         @NameInMap("routeConfig")
         public RouteConfig routeConfig;
 
-        // The configurations of the TLS.
+        /**
+         * <p>The configurations of the TLS.</p>
+         */
         @NameInMap("tlsConfig")
         public TLSConfig tlsConfig;
+
+        @NameInMap("wafConfig")
+        public WAFConfig wafConfig;
 
         public static ListCustomDomainsResponseBodyCustomDomains build(java.util.Map<String, ?> map) throws Exception {
             ListCustomDomainsResponseBodyCustomDomains self = new ListCustomDomainsResponseBodyCustomDomains();
@@ -149,6 +174,14 @@ public class ListCustomDomainsResponseBody extends TeaModel {
         }
         public TLSConfig getTlsConfig() {
             return this.tlsConfig;
+        }
+
+        public ListCustomDomainsResponseBodyCustomDomains setWafConfig(WAFConfig wafConfig) {
+            this.wafConfig = wafConfig;
+            return this;
+        }
+        public WAFConfig getWafConfig() {
+            return this.wafConfig;
         }
 
     }

@@ -4,42 +4,81 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class ClaimGPUInstanceRequest extends TeaModel {
+    /**
+     * <p>The disk performance level of the GPU rendering instance.</p>
+     */
     @NameInMap("diskPerformanceLevel")
     public String diskPerformanceLevel;
 
+    /**
+     * <p>The system disk space of the GPU rendering instance.</p>
+     */
     @NameInMap("diskSizeGigabytes")
     public String diskSizeGigabytes;
 
+    /**
+     * <p>The image ID of the GPU-rendered instance.</p>
+     */
     @NameInMap("imageId")
     public String imageId;
 
+    /**
+     * <p>The specifications of the GPU rendering instance.</p>
+     */
     @NameInMap("instanceType")
     public String instanceType;
 
+    /**
+     * <p>The outbound Internet bandwidth of the GPU rendering instance.</p>
+     */
     @NameInMap("internetBandwidthOut")
     public String internetBandwidthOut;
 
+    /**
+     * <p>The password of the GPU rendering instance.</p>
+     */
     @NameInMap("password")
     public String password;
 
+    /**
+     * <p>The role of the user.</p>
+     */
     @NameInMap("role")
     public String role;
 
+    /**
+     * <p>The ID of the security group.</p>
+     */
     @NameInMap("sgId")
     public String sgId;
 
+    /**
+     * <p>The source IPv4 CIDR block of the GPU rendering instance.</p>
+     */
     @NameInMap("sourceCidrIp")
     public String sourceCidrIp;
 
+    /**
+     * <p>The range of TCP ports that are open to the security group of the GPU-rendered instance.</p>
+     */
     @NameInMap("tcpPortRange")
     public java.util.List<String> tcpPortRange;
 
+    /**
+     * <p>The range of UDP ports that are open to the security group of the GPU rendering instance.</p>
+     */
     @NameInMap("udpPortRange")
     public java.util.List<String> udpPortRange;
 
+    /**
+     * <p>The ID of the virtual private cloud (VPC).</p>
+     */
     @NameInMap("vpcId")
     public String vpcId;
 
+    /**
+     * <p>The ID of the vSwitch.</p>
+     */
     @NameInMap("vswId")
     public String vswId;
 
