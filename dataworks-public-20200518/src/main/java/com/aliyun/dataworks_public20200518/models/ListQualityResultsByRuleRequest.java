@@ -17,7 +17,7 @@ public class ListQualityResultsByRuleRequest extends TeaModel {
     public String projectName;
 
     @NameInMap("RuleId")
-    public Integer ruleId;
+    public Long ruleId;
 
     @NameInMap("StartDate")
     public String startDate;
@@ -59,11 +59,11 @@ public class ListQualityResultsByRuleRequest extends TeaModel {
         return this.projectName;
     }
 
-    public ListQualityResultsByRuleRequest setRuleId(Integer ruleId) {
+    public ListQualityResultsByRuleRequest setRuleId(Long ruleId) {
         this.ruleId = ruleId;
         return this;
     }
-    public Integer getRuleId() {
+    public Long getRuleId() {
         return this.ruleId;
     }
 

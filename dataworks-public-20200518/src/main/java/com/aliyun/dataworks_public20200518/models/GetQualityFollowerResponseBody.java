@@ -79,6 +79,9 @@ public class GetQualityFollowerResponseBody extends TeaModel {
         @NameInMap("AlarmMode")
         public Integer alarmMode;
 
+        @NameInMap("CreateTime")
+        public Long createTime;
+
         @NameInMap("EntityId")
         public String entityId;
 
@@ -90,6 +93,9 @@ public class GetQualityFollowerResponseBody extends TeaModel {
 
         @NameInMap("Id")
         public Long id;
+
+        @NameInMap("ModifyTime")
+        public Long modifyTime;
 
         @NameInMap("ProjectName")
         public String projectName;
@@ -108,6 +114,14 @@ public class GetQualityFollowerResponseBody extends TeaModel {
         }
         public Integer getAlarmMode() {
             return this.alarmMode;
+        }
+
+        public GetQualityFollowerResponseBodyData setCreateTime(Long createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public Long getCreateTime() {
+            return this.createTime;
         }
 
         public GetQualityFollowerResponseBodyData setEntityId(String entityId) {
@@ -140,6 +154,14 @@ public class GetQualityFollowerResponseBody extends TeaModel {
         }
         public Long getId() {
             return this.id;
+        }
+
+        public GetQualityFollowerResponseBodyData setModifyTime(Long modifyTime) {
+            this.modifyTime = modifyTime;
+            return this;
+        }
+        public Long getModifyTime() {
+            return this.modifyTime;
         }
 
         public GetQualityFollowerResponseBodyData setProjectName(String projectName) {

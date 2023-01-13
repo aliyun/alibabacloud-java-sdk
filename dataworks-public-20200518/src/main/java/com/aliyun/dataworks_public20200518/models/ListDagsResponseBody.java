@@ -85,14 +85,18 @@ public class ListDagsResponseBody extends TeaModel {
         @NameInMap("CreateUser")
         public String createUser;
 
-        // DagId。
+        /**
+         * <p>DagId。</p>
+         */
         @NameInMap("DagId")
         public Long dagId;
 
         @NameInMap("FinishTime")
         public Long finishTime;
 
-        // Gmtdate。
+        /**
+         * <p>Gmtdate。</p>
+         */
         @NameInMap("Gmtdate")
         public Long gmtdate;
 

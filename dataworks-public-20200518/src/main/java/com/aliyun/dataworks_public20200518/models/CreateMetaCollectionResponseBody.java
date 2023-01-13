@@ -16,7 +16,9 @@ public class CreateMetaCollectionResponseBody extends TeaModel {
     @NameInMap("QualifiedName")
     public String qualifiedName;
 
-    // Id of the request
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
