@@ -1380,6 +1380,21 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
     }
 
     public static class CreateAutoProvisioningGroupRequestLaunchTemplateConfig extends TeaModel {
+        @NameInMap("Architectures")
+        public java.util.List<String> architectures;
+
+        @NameInMap("BurstablePerformance")
+        public String burstablePerformance;
+
+        @NameInMap("Cores")
+        public java.util.List<Integer> cores;
+
+        @NameInMap("ExcludedInstanceTypes")
+        public java.util.List<String> excludedInstanceTypes;
+
+        @NameInMap("InstanceFamilyLevel")
+        public String instanceFamilyLevel;
+
         /**
          * <p>The instance type in extended configuration N. Valid values of N: 1 to 20. For more information about the valid values of this parameter, see [Instance families](~~25378~~).</p>
          */
@@ -1393,6 +1408,12 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
          */
         @NameInMap("MaxPrice")
         public Double maxPrice;
+
+        @NameInMap("MaxQuantity")
+        public Integer maxQuantity;
+
+        @NameInMap("Memories")
+        public java.util.List<Float> memories;
 
         /**
          * <p>The priority of extended configuration N. A value of 0 indicates the highest priority. Valid values: 0 to ∞.</p>
@@ -1424,6 +1445,46 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public CreateAutoProvisioningGroupRequestLaunchTemplateConfig setArchitectures(java.util.List<String> architectures) {
+            this.architectures = architectures;
+            return this;
+        }
+        public java.util.List<String> getArchitectures() {
+            return this.architectures;
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchTemplateConfig setBurstablePerformance(String burstablePerformance) {
+            this.burstablePerformance = burstablePerformance;
+            return this;
+        }
+        public String getBurstablePerformance() {
+            return this.burstablePerformance;
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchTemplateConfig setCores(java.util.List<Integer> cores) {
+            this.cores = cores;
+            return this;
+        }
+        public java.util.List<Integer> getCores() {
+            return this.cores;
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchTemplateConfig setExcludedInstanceTypes(java.util.List<String> excludedInstanceTypes) {
+            this.excludedInstanceTypes = excludedInstanceTypes;
+            return this;
+        }
+        public java.util.List<String> getExcludedInstanceTypes() {
+            return this.excludedInstanceTypes;
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchTemplateConfig setInstanceFamilyLevel(String instanceFamilyLevel) {
+            this.instanceFamilyLevel = instanceFamilyLevel;
+            return this;
+        }
+        public String getInstanceFamilyLevel() {
+            return this.instanceFamilyLevel;
+        }
+
         public CreateAutoProvisioningGroupRequestLaunchTemplateConfig setInstanceType(String instanceType) {
             this.instanceType = instanceType;
             return this;
@@ -1438,6 +1499,22 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         }
         public Double getMaxPrice() {
             return this.maxPrice;
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchTemplateConfig setMaxQuantity(Integer maxQuantity) {
+            this.maxQuantity = maxQuantity;
+            return this;
+        }
+        public Integer getMaxQuantity() {
+            return this.maxQuantity;
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchTemplateConfig setMemories(java.util.List<Float> memories) {
+            this.memories = memories;
+            return this;
+        }
+        public java.util.List<Float> getMemories() {
+            return this.memories;
         }
 
         public CreateAutoProvisioningGroupRequestLaunchTemplateConfig setPriority(Integer priority) {
