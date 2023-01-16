@@ -7,6 +7,9 @@ public class AddPublicIpAddressPoolCidrBlockRequest extends TeaModel {
     @NameInMap("CidrBlock")
     public String cidrBlock;
 
+    @NameInMap("CidrMask")
+    public Integer cidrMask;
+
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -42,6 +45,14 @@ public class AddPublicIpAddressPoolCidrBlockRequest extends TeaModel {
     }
     public String getCidrBlock() {
         return this.cidrBlock;
+    }
+
+    public AddPublicIpAddressPoolCidrBlockRequest setCidrMask(Integer cidrMask) {
+        this.cidrMask = cidrMask;
+        return this;
+    }
+    public Integer getCidrMask() {
+        return this.cidrMask;
     }
 
     public AddPublicIpAddressPoolCidrBlockRequest setClientToken(String clientToken) {
