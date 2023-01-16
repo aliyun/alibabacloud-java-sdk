@@ -97,36 +97,6 @@ public class TagResourcesForExpressConnectRequest extends TeaModel {
         return this.tag;
     }
 
-    public static class ListTagResourcesForExpressConnectRequestTag extends TeaModel {
-        @NameInMap("Key")
-        public String key;
-
-        @NameInMap("Value")
-        public String value;
-
-        public static ListTagResourcesForExpressConnectRequestTag build(java.util.Map<String, ?> map) throws Exception {
-            ListTagResourcesForExpressConnectRequestTag self = new ListTagResourcesForExpressConnectRequestTag();
-            return TeaModel.build(map, self);
-        }
-
-        public ListTagResourcesForExpressConnectRequestTag setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public ListTagResourcesForExpressConnectRequestTag setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
-    }
-
     public static class TagResourcesForExpressConnectRequestTag extends TeaModel {
         @NameInMap("Key")
         public String key;
