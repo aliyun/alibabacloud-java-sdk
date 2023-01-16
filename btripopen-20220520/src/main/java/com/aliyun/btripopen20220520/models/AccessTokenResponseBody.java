@@ -19,7 +19,9 @@ public class AccessTokenResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
-    // traceId
+    /**
+     * <p>traceId</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 

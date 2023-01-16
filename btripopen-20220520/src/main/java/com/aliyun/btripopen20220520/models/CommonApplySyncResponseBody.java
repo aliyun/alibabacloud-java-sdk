@@ -10,7 +10,9 @@ public class CommonApplySyncResponseBody extends TeaModel {
     @NameInMap("message")
     public String message;
 
-    // module。
+    /**
+     * <p>module。</p>
+     */
     @NameInMap("module")
     public Boolean module;
 

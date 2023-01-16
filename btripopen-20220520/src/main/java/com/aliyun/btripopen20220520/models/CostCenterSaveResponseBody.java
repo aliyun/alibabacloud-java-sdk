@@ -19,7 +19,9 @@ public class CostCenterSaveResponseBody extends TeaModel {
     @NameInMap("success")
     public Boolean success;
 
-    // traceId
+    /**
+     * <p>traceId</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
